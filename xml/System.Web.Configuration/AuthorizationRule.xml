@@ -1,0 +1,450 @@
+<Type Name="AuthorizationRule" FullName="System.Web.Configuration.AuthorizationRule">
+  <TypeSignature Language="C#" Value="public sealed class AuthorizationRule : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AuthorizationRule extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.AuthorizationRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.Web.Configuration.AuthorizationRule" /> permite que você acesse e modifique programaticamente a seção <see langword="authorization" /> de um arquivo de configuração. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AuthorizationRule> classe fornece uma maneira de acessar e modificar programaticamente o `authorization` seção de um arquivo de configuração.  
+  
+ Esse tipo é parte de um grupo que inclui o <xref:System.Web.Configuration.AuthorizationSection>, o <xref:System.Web.Configuration.AuthorizationRuleCollection>e o <xref:System.Web.Configuration.AuthorizationRuleAction> tipos.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.AuthorizationSection> pode atualizar as informações de configuração em qualquer nível na hierarquia de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.AuthorizationRule>.  
+  
+> [!NOTE]
+>  Se você usar o `credentials` seção, certifique-se de seguir as diretrizes explicadas em [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Escalabilidade e melhor capacidade de segurança, é recomendável que você use um banco de dados externo para armazenar as credenciais do usuário. Para obter mais informações sobre como criar aplicativos ASP.NET seguros, procure o site da Microsoft MSDN (msdn.microsoft.com) "Protegendo seu aplicativo ASP.NET" e "aplicativos ASP.NET seguros de construção: autenticação, autorização e seguro Comunicação".  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#4)]
+ [!code-vb[System.Web.Configuration.Authorization#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#4)]  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#6)]
+ [!code-vb[System.Web.Configuration.Authorization#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationRule (System.Web.Configuration.AuthorizationRuleAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.Configuration.AuthorizationRuleAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRule.#ctor(System.Web.Configuration.AuthorizationRuleAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Web.Configuration.AuthorizationRuleAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">O <see cref="T:System.Web.Configuration.AuthorizationRule" /> objeto a ser usado para inicializar a nova instância.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.Configuration.AuthorizationRule" /> classe usando o objeto passado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AuthorizationRule.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.AuthorizationRuleAction Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.AuthorizationRuleAction Action" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthorizationRule.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.AuthorizationRuleAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.AuthorizationRule" /> ação.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Configuration.AuthorizationRuleAction" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em tempo de execução, o módulo de autorização itera `allow` e `deny` elementos até encontrar o primeiro acesso a regra que se ajusta a um usuário específico. Ele então concede ou nega acesso a um recurso de URL, dependendo se a primeira regra de acesso encontrada é `allow` ou `deny`. O acesso é permitido por padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar essa propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#6)]
+ [!code-vb[System.Web.Configuration.Authorization#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRule.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com o objeto atual.</param>
+        <summary>Determina se o objeto especificado é igual ao objeto atual.</summary>
+        <returns>
+          <see langword="true" /> se os objetos forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRule.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para este objeto.</summary>
+        <returns>Um inteiro que representa o código hash para o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModified">
+      <MemberSignature Language="C#" Value="protected override bool IsModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRule.IsModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostDeserialize">
+      <MemberSignature Language="C#" Value="protected override void PostDeserialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostDeserialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRule.PostDeserialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreSerialize">
+      <MemberSignature Language="C#" Value="protected override void PreSerialize (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreSerialize(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRule.PreSerialize(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthorizationRule.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected override void Reset (System.Configuration.ConfigurationElement parentElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Reset(class System.Configuration.ConfigurationElement parentElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRule.Reset(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetModified">
+      <MemberSignature Language="C#" Value="protected override void ResetModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ResetModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRule.ResetModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Roles">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection Roles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection Roles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthorizationRule.Roles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.CommaDelimitedStringCollectionConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("roles")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as funções associadas ao recurso.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.StringCollection" /> coleção que contém as funções cuja autorização deve ser verificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AuthorizationRule.Roles%2A> propriedade é uma lista de funções que é concedido ou negado acesso ao recurso. Deve haver pelo menos um valor em ambos o <xref:System.Web.Configuration.AuthorizationRule.Users%2A> coleção de propriedades ou o <xref:System.Web.Configuration.AuthorizationRule.Roles%2A> coleção de propriedades, ou ambos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar essa propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#6)]
+ [!code-vb[System.Web.Configuration.Authorization#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeElement">
+      <MemberSignature Language="C#" Value="protected override bool SerializeElement (System.Xml.XmlWriter writer, bool serializeCollectionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool SerializeElement(class System.Xml.XmlWriter writer, bool serializeCollectionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRule.SerializeElement(System.Xml.XmlWriter,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="serializeCollectionKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <param name="serializeCollectionKey">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="protected override void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRule.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unmerge">
+      <MemberSignature Language="C#" Value="protected override void Unmerge (System.Configuration.ConfigurationElement sourceElement, System.Configuration.ConfigurationElement parentElement, System.Configuration.ConfigurationSaveMode saveMode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Unmerge(class System.Configuration.ConfigurationElement sourceElement, class System.Configuration.ConfigurationElement parentElement, valuetype System.Configuration.ConfigurationSaveMode saveMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthorizationRule.Unmerge(System.Configuration.ConfigurationElement,System.Configuration.ConfigurationElement,System.Configuration.ConfigurationSaveMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+        <Parameter Name="saveMode" Type="System.Configuration.ConfigurationSaveMode" />
+      </Parameters>
+      <Docs>
+        <param name="sourceElement">To be added.</param>
+        <param name="parentElement">To be added.</param>
+        <param name="saveMode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Users">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection Users { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection Users" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthorizationRule.Users" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.CommaDelimitedStringCollectionConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("users")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os usuários associados com o recurso.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.StringCollection" /> coleção que contém os usuários cuja autorização deve ser verificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AuthorizationRule.Users%2A> propriedade é uma lista de usuários que é concedido ou negado acesso ao recurso. Deve haver pelo menos um valor em ambos o <xref:System.Web.Configuration.AuthorizationRule.Users%2A> coleção de propriedades ou o <xref:System.Web.Configuration.AuthorizationRule.Roles%2A> coleção de propriedades, ou ambos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar essa propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#6)]
+ [!code-vb[System.Web.Configuration.Authorization#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthorizationRule.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.CommaDelimitedStringCollectionConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("verbs")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os verbos associados ao recurso.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.StringCollection" /> coleção que contém os verbos cuja autorização deve ser verificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AuthorizationRule.Verbs%2A> propriedade é uma lista separada por vírgulas dos métodos de transmissão HTTP que é concedido ou negado acesso ao recurso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar essa propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.Authorization#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.Authorization/CS/authorization.cs#6)]
+ [!code-vb[System.Web.Configuration.Authorization#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.Authorization/VB/authorization.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

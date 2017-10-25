@@ -1,0 +1,889 @@
+<Type Name="IVector&lt;TValue&gt;" FullName="Microsoft.VisualC.StlClr.IVector&lt;TValue&gt;">
+  <TypeSignature Language="C#" Value="public interface IVector&lt;TValue&gt; : ICloneable, Microsoft.VisualC.StlClr.Generic.IRandomAccessContainer&lt;TValue&gt;, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IVector`1&lt;TValue&gt; implements class Microsoft.VisualC.StlClr.Generic.IRandomAccessContainer`1&lt;!TValue&gt;, class System.Collections.ICollection, class System.Collections.IEnumerable, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualC.StlClr.IVector`1" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualC.StlClr.Generic.IRandomAccessContainer&lt;TValue&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TValue">O tipo de um elemento na sequência controlada.</typeparam>
+    <summary>Define a interface para um STL/CLR [vetor](http://msdn.microsoft.com/library/f90060d5-097a-4e9d-9a26-a634b5b9c6c2) objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[unnamed_parm](~/includes/unnamed-parm-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="assign">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Substitui todos os elementos de contêiner com os elementos especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Assign (STL/CLR)](http://msdn.microsoft.com/library/945e2048-6c61-4701-b13c-8241cbee3fa1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="assign">
+      <MemberSignature Language="C#" Value="public void assign (System.Collections.IEnumerable _Right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void assign(class System.Collections.IEnumerable _Right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.assign(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Right" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="_Right">A enumeração cujos elementos serão inseridos no contêiner.</param>
+        <summary>Substitui todos os elementos de contêiner com os elementos na enumeração especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Assign (STL/CLR)](http://msdn.microsoft.com/library/945e2048-6c61-4701-b13c-8241cbee3fa1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="assign">
+      <MemberSignature Language="C#" Value="public void assign (Microsoft.VisualC.StlClr.Generic.IInputIterator&lt;TValue&gt; _First, Microsoft.VisualC.StlClr.Generic.IInputIterator&lt;TValue&gt; _Last);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void assign(class Microsoft.VisualC.StlClr.Generic.IInputIterator`1&lt;!TValue&gt; _First, class Microsoft.VisualC.StlClr.Generic.IInputIterator`1&lt;!TValue&gt; _Last) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.assign(Microsoft.VisualC.StlClr.Generic.IInputIterator{`0},Microsoft.VisualC.StlClr.Generic.IInputIterator{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_First" Type="Microsoft.VisualC.StlClr.Generic.IInputIterator&lt;TValue&gt;" />
+        <Parameter Name="_Last" Type="Microsoft.VisualC.StlClr.Generic.IInputIterator&lt;TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="_First">A posição de início do intervalo de elementos para inserir.</param>
+        <param name="_Last">A primeira posição além do fim do intervalo de elementos para inserir.</param>
+        <summary>Substitui todos os elementos de contêiner com os elementos entre os iteradores determinados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Assign (STL/CLR)](http://msdn.microsoft.com/library/945e2048-6c61-4701-b13c-8241cbee3fa1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="assign">
+      <MemberSignature Language="C#" Value="public void assign (int _Count, TValue _Val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void assign(int32 _Count, !TValue _Val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.assign(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Count" Type="System.Int32" />
+        <Parameter Name="_Val" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="_Count">O número de elementos para inserir o contêiner.</param>
+        <param name="_Val">O valor do elemento a ser inserido.</param>
+        <summary>Substitui todos os elementos de contêiner com o número especificado de elementos que têm determinados valores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Assign (STL/CLR)](http://msdn.microsoft.com/library/945e2048-6c61-4701-b13c-8241cbee3fa1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="at">
+      <MemberSignature Language="C#" Value="public TValue at (int _Pos);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TValue at(int32 _Pos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.at(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue@</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Pos" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="_Pos">A posição do elemento para acessar.</param>
+        <summary>Acessa um elemento em uma posição especificada no contêiner.</summary>
+        <returns>O elemento de sequência controlada na posição <paramref name="_Pos" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: AT (STL/CLR)](http://msdn.microsoft.com/library/9af9f829-48b8-4906-ba4a-b43454acb2c7).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="back">
+      <MemberSignature Language="C#" Value="public TValue back ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TValue back() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.back" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue@</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Acessa o último elemento do contêiner.</summary>
+        <returns>O último elemento da sequência controlada, que deve ser não vazio.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: back (STL/CLR)](http://msdn.microsoft.com/library/5edb3fcc-74c5-4f04-b8dd-edab49ba45a0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="back_item">
+      <MemberSignature Language="C#" Value="public TValue back_item { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TValue back_item" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualC.StlClr.IVector`1.back_item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Acessa o último elemento do contêiner.</summary>
+        <value>O último elemento da sequência controlada, que deve ser não vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [vector::back_item (STL/CLR)](http://msdn.microsoft.com/library/9658ffa8-7bde-4242-9ed9-ca42be0d1433).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="begin">
+      <MemberSignature Language="C#" Value="public void begin (ref Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator&lt;TValue&gt; );" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Void modreq(System.Runtime.CompilerServices.IsUdtReturn) begin(class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1&lt;!TValue&gt;&amp; ) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.begin(Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator&lt;TValue&gt;&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="">To be added.</param>
+        <summary>Designa o início da sequência controlada.</summary>
+        <returns>Um iterador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Begin (STL/CLR)](http://msdn.microsoft.com/library/f9cdf854-0770-4334-a3dd-7f4d728a42bd).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="capacity">
+      <MemberSignature Language="C#" Value="public int capacity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 capacity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.capacity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Informa o tamanho de armazenamento alocado para o contêiner.</summary>
+        <returns>O armazenamento alocado no momento para manter a sequência controlada, um valor de pelo menos tão grande quanto <see cref="M:Microsoft.VisualC.StlClr.IVector`1.size" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Capacity (STL/CLR)](http://msdn.microsoft.com/library/f82d8da9-8b4d-4288-8d18-8e9ca5911d87).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="clear">
+      <MemberSignature Language="C#" Value="public void clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os elementos de contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector (STL/CLR)](http://msdn.microsoft.com/library/4ed20ec8-3089-4c36-b68f-1b51c639041f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="empty">
+      <MemberSignature Language="C#" Value="public bool empty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool empty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.empty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Testa se o contêiner não tem elementos.</summary>
+        <returns>
+          <see langword="true" />Se o contêiner não tem elementos; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Empty (STL/CLR)](http://msdn.microsoft.com/library/c09fc4a3-bd79-4458-9a36-1d9c82ac36b1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="end">
+      <MemberSignature Language="C#" Value="public void end (ref Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator&lt;TValue&gt; );" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Void modreq(System.Runtime.CompilerServices.IsUdtReturn) end(class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1&lt;!TValue&gt;&amp; ) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.end(Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator&lt;TValue&gt;&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="">To be added.</param>
+        <summary>Designa o fim da sequência controlada.</summary>
+        <returns>Um iterador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: end (STL/CLR)](http://msdn.microsoft.com/library/21fcaf1b-7f14-4dc4-a312-fa30e631ea0d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="erase">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Remove elementos posições especificadas no contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Erase (STL/CLR)](http://msdn.microsoft.com/library/624905eb-83c0-499b-a07a-c10aebd7acc3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="erase">
+      <MemberSignature Language="C#" Value="public void erase (ref Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator&lt;TValue&gt; , Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator _Where);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Void modreq(System.Runtime.CompilerServices.IsUdtReturn) erase(class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1&lt;!TValue&gt;&amp; , class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1 modreq(System.Runtime.CompilerServices.IsByValue) _Where) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.erase(Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}@,Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}|System.Runtime.CompilerServices.IsByValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator&lt;TValue&gt;&amp;" RefType="ref" />
+        <Parameter Name="_Where" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator" />
+      </Parameters>
+      <Docs>
+        <param name="">To be added.</param>
+        <param name="_Where">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="erase">
+      <MemberSignature Language="C#" Value="public void erase (ref Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator&lt;TValue&gt; , Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator _First_iter, Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator _Last_iter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Void modreq(System.Runtime.CompilerServices.IsUdtReturn) erase(class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1&lt;!TValue&gt;&amp; , class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1 modreq(System.Runtime.CompilerServices.IsByValue) _First_iter, class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1 modreq(System.Runtime.CompilerServices.IsByValue) _Last_iter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.erase(Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}@,Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}|System.Runtime.CompilerServices.IsByValue,Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}|System.Runtime.CompilerServices.IsByValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator&lt;TValue&gt;&amp;" RefType="ref" />
+        <Parameter Name="_First_iter" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator" />
+        <Parameter Name="_Last_iter" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator" />
+      </Parameters>
+      <Docs>
+        <param name="">To be added.</param>
+        <param name="_First_iter">To be added.</param>
+        <param name="_Last_iter">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="front">
+      <MemberSignature Language="C#" Value="public TValue front ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TValue front() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.front" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue@</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Acessa o primeiro elemento do contêiner.</summary>
+        <returns>O primeiro elemento da sequência controlada, que deve ser não vazio.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector (STL/CLR)](http://msdn.microsoft.com/library/37a36157-8220-4d5b-85b5-c6a63211a322).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="front_item">
+      <MemberSignature Language="C#" Value="public TValue front_item { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TValue front_item" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualC.StlClr.IVector`1.front_item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Acessa o primeiro elemento do contêiner.</summary>
+        <value>O primeiro elemento da sequência controlada, que deve ser não vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [vector::front_item (STL/CLR)](http://msdn.microsoft.com/library/7db87868-3e54-4c67-a06b-01bcfff3128d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="insert">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adiciona os elementos para o contêiner em uma posição especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Insert (STL/CLR)](http://msdn.microsoft.com/library/f240cabf-f9d1-40c1-9cfb-975a90955546).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="insert">
+      <MemberSignature Language="C#" Value="public void insert (Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator _Where_iter, System.Collections.IEnumerable _Right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void insert(class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1 modreq(System.Runtime.CompilerServices.IsByValue) _Where_iter, class System.Collections.IEnumerable _Right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.insert(Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}|System.Runtime.CompilerServices.IsByValue,System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Where_iter" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator" />
+        <Parameter Name="_Right" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="_Where_iter">To be added.</param>
+        <param name="_Right">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="insert">
+      <MemberSignature Language="C#" Value="public void insert (Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator _Where, Microsoft.VisualC.StlClr.Generic.IInputIterator&lt;TValue&gt; _First, Microsoft.VisualC.StlClr.Generic.IInputIterator&lt;TValue&gt; _Last);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void insert(class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1 modreq(System.Runtime.CompilerServices.IsByValue) _Where, class Microsoft.VisualC.StlClr.Generic.IInputIterator`1&lt;!TValue&gt; _First, class Microsoft.VisualC.StlClr.Generic.IInputIterator`1&lt;!TValue&gt; _Last) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.insert(Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}|System.Runtime.CompilerServices.IsByValue,Microsoft.VisualC.StlClr.Generic.IInputIterator{`0},Microsoft.VisualC.StlClr.Generic.IInputIterator{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Where" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator" />
+        <Parameter Name="_First" Type="Microsoft.VisualC.StlClr.Generic.IInputIterator&lt;TValue&gt;" />
+        <Parameter Name="_Last" Type="Microsoft.VisualC.StlClr.Generic.IInputIterator&lt;TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="_Where">To be added.</param>
+        <param name="_First">To be added.</param>
+        <param name="_Last">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="insert">
+      <MemberSignature Language="C#" Value="public void insert (Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator _Where, int _Count, TValue _Val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void insert(class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1 modreq(System.Runtime.CompilerServices.IsByValue) _Where, int32 _Count, !TValue _Val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.insert(Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}|System.Runtime.CompilerServices.IsByValue,System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Where" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator" />
+        <Parameter Name="_Count" Type="System.Int32" />
+        <Parameter Name="_Val" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="_Where">To be added.</param>
+        <param name="_Count">To be added.</param>
+        <param name="_Val">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="insert">
+      <MemberSignature Language="C#" Value="public void insert (ref Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator&lt;TValue&gt; , Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator _Where, TValue _Val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Void modreq(System.Runtime.CompilerServices.IsUdtReturn) insert(class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1&lt;!TValue&gt;&amp; , class Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator`1 modreq(System.Runtime.CompilerServices.IsByValue) _Where, !TValue _Val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.insert(Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}@,Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator{`0}|System.Runtime.CompilerServices.IsByValue,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator&lt;TValue&gt;&amp;" RefType="ref" />
+        <Parameter Name="_Where" Type="Microsoft.VisualC.StlClr.Generic.ContainerRandomAccessIterator" />
+        <Parameter Name="_Val" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="">To be added.</param>
+        <param name="_Where">To be added.</param>
+        <param name="_Val">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public TValue this[int _Pos] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TValue Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualC.StlClr.IVector`1.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Pos" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="_Pos">A posição do elemento para acessar.</param>
+        <summary>Acessa um elemento em uma posição especificada no contêiner.</summary>
+        <value>O elemento na posição <paramref name="_Pos" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [vector::operator(STL/CLR)](http://msdn.microsoft.com/library/379a7029-460d-4de8-918b-c79e3e13b9d4).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="pop_back">
+      <MemberSignature Language="C#" Value="public void pop_back ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void pop_back() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.pop_back" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o último elemento do contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: pop_back (STL/CLR)](http://msdn.microsoft.com/library/7e9fb72c-e733-4434-a71c-e4389629a821).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="push_back">
+      <MemberSignature Language="C#" Value="public void push_back (TValue _Val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void push_back(!TValue _Val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.push_back(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Val" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="_Val">O valor do elemento para inserir o contêiner.</param>
+        <summary>Adiciona um novo elemento ao final do contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: push_back (STL/CLR)](http://msdn.microsoft.com/library/4a4c302b-e29f-4b68-b759-2f831814d896).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="rbegin">
+      <MemberSignature Language="C#" Value="public void rbegin (ref Microsoft.VisualC.StlClr.Generic.ReverseRandomAccessIterator&lt;TValue&gt; );" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Void modreq(System.Runtime.CompilerServices.IsUdtReturn) rbegin(class Microsoft.VisualC.StlClr.Generic.ReverseRandomAccessIterator`1&lt;!TValue&gt;&amp; ) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.rbegin(Microsoft.VisualC.StlClr.Generic.ReverseRandomAccessIterator{`0}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="" Type="Microsoft.VisualC.StlClr.Generic.ReverseRandomAccessIterator&lt;TValue&gt;&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="">To be added.</param>
+        <summary>Designa o início da sequência controlada invertida.</summary>
+        <returns>Um iterador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: rbegin (STL/CLR)](http://msdn.microsoft.com/library/fad410b9-fe79-4820-9be5-6b7e0219a1af).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="rend">
+      <MemberSignature Language="C#" Value="public void rend (ref Microsoft.VisualC.StlClr.Generic.ReverseRandomAccessIterator&lt;TValue&gt; );" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Void modreq(System.Runtime.CompilerServices.IsUdtReturn) rend(class Microsoft.VisualC.StlClr.Generic.ReverseRandomAccessIterator`1&lt;!TValue&gt;&amp; ) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.rend(Microsoft.VisualC.StlClr.Generic.ReverseRandomAccessIterator{`0}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="" Type="Microsoft.VisualC.StlClr.Generic.ReverseRandomAccessIterator&lt;TValue&gt;&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="">To be added.</param>
+        <summary>Designa o fim da sequência controlada invertida.</summary>
+        <returns>Um iterador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: rend (STL/CLR)](http://msdn.microsoft.com/library/8dc1927f-9214-468d-877e-eda20c03e90d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="reserve">
+      <MemberSignature Language="C#" Value="public void reserve (int _Capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void reserve(int32 _Capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.reserve(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="_Capacity">A nova capacidade mínima do contêiner.</param>
+        <summary>Se a reserva de armazenamento para garantir a capacidade de crescimento mínimo para o contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Reserve (STL/CLR)](http://msdn.microsoft.com/library/d1d5ede9-9628-4b55-95ec-f087a57205f2).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="resize">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Altera o número de elementos que o contêiner pode manter.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Resize (STL/CLR)](http://msdn.microsoft.com/library/a3556fbc-67d9-463a-9ffc-cb43ee15657f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="resize">
+      <MemberSignature Language="C#" Value="public void resize (int _Newsize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void resize(int32 _Newsize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.resize(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Newsize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="_Newsize">O novo tamanho de sequência controlada.</param>
+        <summary>Altera o número de elementos no contêiner para o tamanho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Resize (STL/CLR)](http://msdn.microsoft.com/library/a3556fbc-67d9-463a-9ffc-cb43ee15657f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="resize">
+      <MemberSignature Language="C#" Value="public void resize (int _Newsize, TValue _Val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void resize(int32 _Newsize, !TValue _Val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.resize(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Newsize" Type="System.Int32" />
+        <Parameter Name="_Val" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="_Newsize">O novo tamanho de sequência controlada.</param>
+        <param name="_Val">O valor dos elementos para inserir.</param>
+        <summary>Altera o número de elementos no contêiner para o tamanho especificado. Se o novo tamanho for maior que o tamanho anterior, o método anexa elementos que têm o valor <paramref name="_Val" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: Resize (STL/CLR)](http://msdn.microsoft.com/library/a3556fbc-67d9-463a-9ffc-cb43ee15657f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="size">
+      <MemberSignature Language="C#" Value="public int size ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 size() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.size" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Conta o número de elementos no contêiner.</summary>
+        <returns>O comprimento da sequência controlada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector (STL/CLR)](http://msdn.microsoft.com/library/3d2a156e-5871-4441-9307-21a20cd1430f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="swap">
+      <MemberSignature Language="C#" Value="public void swap (Microsoft.VisualC.StlClr.IVector&lt;TValue&gt; A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void swap(class Microsoft.VisualC.StlClr.IVector`1&lt;!TValue&gt; A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IVector`1.swap(Microsoft.VisualC.StlClr.IVector{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="Microsoft.VisualC.StlClr.IVector&lt;TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">O contêiner para conteúdo de troca.</param>
+        <summary>Alterna o conteúdo de dois contêineres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Vector:: swap (STL/CLR)](http://msdn.microsoft.com/library/9ad083fe-f79b-4b97-8013-581fd00c059a).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

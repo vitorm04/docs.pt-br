@@ -1,0 +1,83 @@
+<Type Name="VisualDiagnostics" FullName="System.Windows.Diagnostics.VisualDiagnostics">
+  <TypeSignature Language="C#" Value="public static class VisualDiagnostics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit VisualDiagnostics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Diagnostics.VisualDiagnostics" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que ferramentas para analisar árvores visual de XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[internalonly_netframework_type](~/includes/internalonly-netframework-type-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetXamlSourceInfo">
+      <MemberSignature Language="C#" Value="public static System.Windows.Diagnostics.XamlSourceInfo GetXamlSourceInfo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Diagnostics.XamlSourceInfo GetXamlSourceInfo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Diagnostics.XamlSourceInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto localizar a origem XAML.</param>
+        <summary>Retorna uma instância de <see cref="T:System.Windows.Diagnostics.XamlSourceInfo" /> que contém informações sobre o documento XAML de origem para o objeto especificado.</summary>
+        <returns>Informações sobre o documento de origem XAML, se disponível. Caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informações sobre a fonte está disponível somente para assemblies de depuração e somente se a variável de ambiente ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO é definida como algo diferente de 0 ou `false`.  
+  
+ [!INCLUDE[internalonly_netframework_member](~/includes/internalonly-netframework-member-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualTreeChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Windows.Diagnostics.VisualTreeChangeEventArgs&gt; VisualTreeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Diagnostics.VisualTreeChangeEventArgs&gt; VisualTreeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Diagnostics.VisualDiagnostics.VisualTreeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Diagnostics.VisualTreeChangeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um depurador gerenciado é conectado e qualquer elemento é adicionado ou removido da árvore visual de outro elemento, independentemente de qualquer um dos elementos descendentes de qualquer outro elemento específico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre somente quando um depurador gerenciado é conectado.  
+  
+ [!INCLUDE[internalonly_netframework_member](~/includes/internalonly-netframework-member-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

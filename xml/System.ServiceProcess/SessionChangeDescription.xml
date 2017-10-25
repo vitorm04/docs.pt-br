@@ -1,0 +1,235 @@
+<Type Name="SessionChangeDescription" FullName="System.ServiceProcess.SessionChangeDescription">
+  <TypeSignature Language="C#" Value="public struct SessionChangeDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit SessionChangeDescription extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceProcess.SessionChangeDescription" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceProcess</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Identifica o motivo da alteração de uma sessão de Serviços de Terminal.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceProcess.SessionChangeDescription> uma implementação da classe a <xref:System.ServiceProcess.ServiceBase.OnSessionChange%2A> método em uma classe derivada de <xref:System.ServiceProcess.ServiceBase>.  Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ServiceProcess.ServiceBase> classe.  
+  
+ [!code-csharp[ServiceBase_Commands#9](~/samples/snippets/csharp/VS_Snippets_CLR/ServiceBase_Commands/CS/simpleservice.cs#9)]
+ [!code-vb[ServiceBase_Commands#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/ServiceBase_Commands/VB/simpleservice.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.SessionChangeDescription.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado ao atual <see cref="T:System.ServiceProcess.SessionChangeDescription" /> estrutura.</param>
+        <summary>Determina se o objeto especificado é igual a descrição da alteração de sessão atual.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é igual à atual <see cref="T:System.ServiceProcess.SessionChangeDescription" /> estrutura; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno é `false` se `obj` não é um <xref:System.ServiceProcess.SessionChangeDescription> ou se ele for `null`. Igualdade é determinada comparando o <xref:System.ServiceProcess.SessionChangeDescription.Reason%2A> e <xref:System.ServiceProcess.SessionChangeDescription.SessionId%2A> propriedades especificada <xref:System.ServiceProcess.SessionChangeDescription> estrutura para o <xref:System.ServiceProcess.SessionChangeDescription.Reason%2A> e <xref:System.ServiceProcess.SessionChangeDescription.SessionId%2A> propriedades do atual <xref:System.ServiceProcess.SessionChangeDescription> estrutura. As duas estruturas são consideradas iguais se suas propriedades são iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.ServiceProcess.SessionChangeDescription changeDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.ServiceProcess.SessionChangeDescription changeDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.SessionChangeDescription.Equals(System.ServiceProcess.SessionChangeDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="changeDescription" Type="System.ServiceProcess.SessionChangeDescription" />
+      </Parameters>
+      <Docs>
+        <param name="changeDescription">O <see cref="T:System.ServiceProcess.SessionChangeDescription" /> estrutura a ser comparado ao atual <see cref="T:System.ServiceProcess.SessionChangeDescription" /> estrutura.</param>
+        <summary>Determina se a descrição da alteração de sessão especificada é igual a descrição da alteração de sessão atual.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="changeDescription" /> é igual à atual <see cref="T:System.ServiceProcess.SessionChangeDescription" /> estrutura; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Igualdade é determinada comparando o <xref:System.ServiceProcess.SessionChangeDescription.Reason%2A> e <xref:System.ServiceProcess.SessionChangeDescription.SessionId%2A> propriedades especificada <xref:System.ServiceProcess.SessionChangeDescription> estrutura para o <xref:System.ServiceProcess.SessionChangeDescription.Reason%2A> e <xref:System.ServiceProcess.SessionChangeDescription.SessionId%2A> propriedades do atual <xref:System.ServiceProcess.SessionChangeDescription> estrutura. As duas estruturas são consideradas iguais se suas propriedades são iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.SessionChangeDescription.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código hash para a descrição da alteração de sessão atual.</summary>
+        <returns>Descrição da alteração de um código hash para a sessão atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código hash retornado é calculado a partir de valores da <xref:System.ServiceProcess.SessionChangeDescription.Reason%2A> e <xref:System.ServiceProcess.SessionChangeDescription.SessionId%2A> propriedades. O código de hash não deve ser usado para comparar <xref:System.ServiceProcess.SessionChangeDescription> instâncias.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.ServiceProcess.SessionChangeDescription a, System.ServiceProcess.SessionChangeDescription b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.ServiceProcess.SessionChangeDescription a, valuetype System.ServiceProcess.SessionChangeDescription b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.SessionChangeDescription.op_Equality(System.ServiceProcess.SessionChangeDescription,System.ServiceProcess.SessionChangeDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.ServiceProcess.SessionChangeDescription" />
+        <Parameter Name="b" Type="System.ServiceProcess.SessionChangeDescription" />
+      </Parameters>
+      <Docs>
+        <param name="a">Uma estrutura <see cref="T:System.ServiceProcess.SessionChangeDescription" />.</param>
+        <param name="b">Uma estrutura <see cref="T:System.ServiceProcess.SessionChangeDescription" />.</param>
+        <summary>Retorna um valor que indica se dois <see cref="T:System.ServiceProcess.SessionChangeDescription" /> estruturas são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="a" /> e <paramref name="b" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse operador é implementado usando o <xref:System.ServiceProcess.SessionChangeDescription.Equals%28System.Object%29> método.  
+  
+ O método equivalente para esse operador é<xref:System.ServiceProcess.SessionChangeDescription.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.ServiceProcess.SessionChangeDescription a, System.ServiceProcess.SessionChangeDescription b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.ServiceProcess.SessionChangeDescription a, valuetype System.ServiceProcess.SessionChangeDescription b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.SessionChangeDescription.op_Inequality(System.ServiceProcess.SessionChangeDescription,System.ServiceProcess.SessionChangeDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.ServiceProcess.SessionChangeDescription" />
+        <Parameter Name="b" Type="System.ServiceProcess.SessionChangeDescription" />
+      </Parameters>
+      <Docs>
+        <param name="a">Uma estrutura <see cref="T:System.ServiceProcess.SessionChangeDescription" />.</param>
+        <param name="b">Uma estrutura <see cref="T:System.ServiceProcess.SessionChangeDescription" />.</param>
+        <summary>Retorna um valor que indica se dois <see cref="T:System.ServiceProcess.SessionChangeDescription" /> estruturas não são iguais.</summary>
+        <returns>
+          <see langword="true" /> caso <paramref name="a" /> e <paramref name="b" /> não sejam iguais; do contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse operador é implementado usando o <xref:System.ServiceProcess.SessionChangeDescription.Equals%28System.Object%29> método.  
+  
+ O método equivalente para esse operador é<xref:System.ServiceProcess.SessionChangeDescription.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public System.ServiceProcess.SessionChangeReason Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceProcess.SessionChangeReason Reason" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.SessionChangeDescription.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.SessionChangeReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o motivo para a alteração da sessão.</summary>
+        <value>Um dos valores de <see cref="T:System.ServiceProcess.SessionChangeReason" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceProcess.SessionChangeDescription.Reason%2A> propriedade em uma implementação do <xref:System.ServiceProcess.ServiceBase.OnSessionChange%2A> método em uma classe derivada de <xref:System.ServiceProcess.ServiceBase>.  Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ServiceProcess.ServiceBase> classe.  
+  
+ [!code-csharp[ServiceBase_Commands#10](~/samples/snippets/csharp/VS_Snippets_CLR/ServiceBase_Commands/CS/simpleservice.cs#10)]
+ [!code-vb[ServiceBase_Commands#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/ServiceBase_Commands/VB/simpleservice.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionId">
+      <MemberSignature Language="C#" Value="public int SessionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SessionId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.SessionChangeDescription.SessionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID da sessão para a sessão associada.</summary>
+        <value>A ID de sessão para a sessão associada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceProcess.SessionChangeDescription.SessionId%2A> propriedade em uma implementação do <xref:System.ServiceProcess.ServiceBase.OnSessionChange%2A> método em uma classe derivada de <xref:System.ServiceProcess.ServiceBase>.  Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ServiceProcess.ServiceBase> classe.  
+  
+ [!code-csharp[ServiceBase_Commands#10](~/samples/snippets/csharp/VS_Snippets_CLR/ServiceBase_Commands/CS/simpleservice.cs#10)]
+ [!code-vb[ServiceBase_Commands#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/ServiceBase_Commands/VB/simpleservice.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,59 @@
+<Namespace Name="System.Transactions">
+  <Docs>
+    <summary>O <see cref="N:System.Transactions" /> namespace contém classes que permitem que você escreva seu próprio Gerenciador de recursos e dos aplicativos transacional. Especificamente, você pode criar e participar de uma transação (local ou distribuída) com um ou vários participantes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Você só pode criar aplicativos que usam esse namespace sob as plataformas Windows 2000, Windows XP e Windows 2003. Criar uma transação sob a gera de plataformas Windows 98 e Windows ME um <xref:System.PlatformNotSupportedException> .  
+  
+ O <xref:System.Transactions> infraestrutura torna transacional de programação simples e eficiente em toda a plataforma, dando suporte a transações iniciadas no SQL Server, ADO.NET, MSMQ e Microsoft Distributed Transaction coordenador (MSDTC). Ele fornece dois um modelo de programação explícito com base no <xref:System.Transactions.Transaction> classe, bem como um modelo de programação implícito usando a <xref:System.Transactions.TransactionScope> classe, no qual as transações são automaticamente gerenciadas pela infraestrutura. É altamente recomendável que você use o modelo implícito mais fácil para desenvolvimento. Para começar, consulte o [implementando um implícita transação usando o escopo da transação](http://msdn.microsoft.com/en-us/1ddba95e-7587-48b2-8838-708c275e7199) tópico. Para obter mais informações sobre como escrever um aplicativo transacional, consulte.  
+  
+ <xref:System.Transactions>também fornece tipos para implementar um Gerenciador de recursos. O Gerenciador de transações nativo para o <xref:System.Transactions> infraestrutura permite que recursos voláteis ou inscrição um único recurso durável para confirmar ou reverter com eficiência. Para obter mais informações sobre como implementar um Gerenciador de recursos, consulte [implementar um Gerenciador de recursos](http://msdn.microsoft.com/en-us/81509719-d579-4530-831e-42e1acdef63e).  
+  
+ O Gerenciador de transações também aumenta a transações locais a transações distribuídas através da coordenação por meio de um Gerenciador de transações baseadas em disco como o DTC, quando um Gerenciador de recursos adicionais de durável inscreve-se com uma transação. Há duas maneiras principais que o <xref:System.Transactions> infra-estrutura proporciona um desempenho aprimorado.  
+  
+-   Escalonamento de bloqueios dinâmico, o que significa que o <xref:System.Transactions> infraestrutura apenas emprega o MSDTC quando ele é realmente necessário para uma transação. Essa área é abordada em detalhes no [escalonamento de bloqueios de gerenciamento de transação](http://msdn.microsoft.com/en-us/5b87ae58-8ccf-4b9b-9715-41e4aade89b7) tópico.  
+  
+-   Podem ser promovidas inscrições, que permite que um recurso, como um banco de dados, apropriar-se da transação se for a única entidade participa da transação. Posteriormente, se necessário, o <xref:System.Transactions> infraestrutura ainda pode escalonar o gerenciamento da transação para o MSDTC. Isso reduz ainda mais a possibilidade de usar o MSDTC. Essa área é abordada em detalhes no [otimização usando única fase de confirmação e notificação de fase única passível de promoção](http://msdn.microsoft.com/en-us/653d51d1-b4bf-4e34-9a6f-aec073f0f5bb) tópico.  
+  
+ <xref:System.Transactions>define três níveis de confiança que restringem o acesso sobre os tipos de recursos expõe. Especificamente, o <xref:System.Transactions> assembly pode ser chamado por código parcialmente confiável conforme ela foi marcada com o `AllowPartiallyTrustedCallers` atributo (APTCA). Basicamente, esse atributo remove implícito <xref:System.Security.Permissions.SecurityAction.LinkDemand> para o `FullTrust` permissão conjunto contrário colocado automaticamente em cada método publicamente acessível em cada tipo. No entanto, alguns tipos e membros ainda requerem permissões mais fortes.  
+  
+ A seguir está uma lista de tipos e membros que não podem ser chamados por parcialmente confiável código porque elas são decoradas com o atributo de segurança declarativa a seguir:  
+  
+ `PermissionSetAttribute(SecurityAction.LinkDemand, Name := "FullTrust")`  
+  
+ System.Transactions.Transaction.EnlistDurable  
+  
+ System.Transactions.Transaction.EnlistPromotableSinglePhase  
+  
+ System.Transactions.TransactionInterop  
+  
+ System.Transactions.TransactionManager.DistributedTransactionStarted  
+  
+ System.Transactions.TransactionManager.HostCurrentTransactionCallback  
+  
+ System.Transactions.TransactionManager.Reenlist  
+  
+ System.Transactions.TransactionManager.RecoveryComplete  
+  
+ System.Transactions.TransactionScope.TransactionScope (System.Transactions.Transaction,System.TimeSpan,System.Transactions.EnterpriseServicesInteropOption)  
+  
+ M:System.Transactions.TransactionScope.TransactionScope(System.Transactions.TransactionScopeOption,System.Transactions.TransactionOptions,System.Transactions.EnterpriseServicesInteropOption)  
+  
+ Para obter mais informações sobre os vários níveis de confiança, consulte [níveis de confiança de segurança acessando recursos](http://msdn.microsoft.com/en-us/8e45acbc-0d81-4f64-9da7-8f766aebff51).  
+  
+ Núcleo desenvolvimento Technologies\Data Access\Transaction Processing\  
+  
+ Para obter mais informações sobre como usar o <xref:System.Transactions> namespace, você pode consultar a documentação conceitual [processamento de transações](http://msdn.microsoft.com/en-us/ac1637bf-4032-493b-a4e8-0380e54f82f9), localizado sob a "Core desenvolvimento Technologies\Data Access\Transaction processamento\\" seção na documentação do. Especificamente, você pode encontrar mais informações nos tópicos a seguir.  
+  
+ [Recursos fornecidos pelo System. Transactions](http://msdn.microsoft.com/en-us/99cc5ce0-b7fd-4d78-a553-a3dd3f17ed45)  
+  
+ [Implementar um Gerenciador de recursos](http://msdn.microsoft.com/en-us/81509719-d579-4530-831e-42e1acdef63e)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

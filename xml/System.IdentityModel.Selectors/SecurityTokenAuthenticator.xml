@@ -1,0 +1,181 @@
+<Type Name="SecurityTokenAuthenticator" FullName="System.IdentityModel.Selectors.SecurityTokenAuthenticator">
+  <TypeSignature Language="C#" Value="public abstract class SecurityTokenAuthenticator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityTokenAuthenticator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.SecurityTokenAuthenticator" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Autentica um token de segurança.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> e as classes que dela derivam autenticam tokens de segurança. Normalmente, você somente deve derivar uma classe diretamente do <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> quando você cria um token de segurança personalizada. Se você quiser substituir os comportamentos padrão de autorização ou autenticação de tokens de segurança internas, derivar de uma das classes que derivam de <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>, como <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+  
+ Quando você derivar uma classe de <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>, substitua os dois métodos a seguir: <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> e <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A>. O <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> método determina se o autenticador de token de segurança pode autenticar um token de segurança específico. O <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> método autentica o token de segurança e estabelece um conjunto de políticas de autorização para autorização. As políticas de autorização mapeiam as declarações encontradas no token de segurança para declarações exigidas pelo aplicativo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityTokenAuthenticator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenAuthenticator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Selectors.SecurityTokenAuthenticator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateToken">
+      <MemberSignature Language="C#" Value="public bool CanValidateToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanValidateToken(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> a ser validado.</param>
+        <summary>Obtém um valor que indica se o token de segurança especificado pode ser validado pelo autenticador de token de segurança.</summary>
+        <returns>
+          <see langword="true" />Quando o token pode ser validado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%2A> método verifica se o parâmetro de token é `null` e, em seguida, chama o <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> método para determinar se o autenticador de token de segurança pode autenticar o tipo de token de segurança para `token`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected abstract bool CanValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> a ser validado.</param>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o token de segurança especificado pode ser validado pelo autenticador de token de segurança.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="token" /> pode ser validado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> método é chamado pelo <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%2A> método para determinar se o autenticador de token de segurança pode autenticar o tipo de token de segurança para `token`. Isso não autentica o token de segurança; que é executada pelo <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateToken%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateToken">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateToken(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateToken(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> a ser validado.</param>
+        <summary>Autentica o token de segurança especificado e retorna o conjunto de diretivas de autorização para o token de segurança.</summary>
+        <returns>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" /> que contém o conjunto de políticas de autorização em vigor para este aplicativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateToken%2A> método verifica se o `token` parâmetro é `null`, chamadas a <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%2A> método para determinar se o autenticador de token de segurança pode autenticar esse token de segurança e, em seguida, se for possível, chama o <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenValidationException">
+          <paramref name="token" />não pode ser autenticada pela autenticador de token de segurança  
+  
+ -ou-  
+  
+ <paramref name="token" />não está autenticada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTokenCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; ValidateTokenCore(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> a ser validado.</param>
+        <summary>Quando substituído em uma classe derivada, autentica o token de segurança especificado e retorna o conjunto de diretivas de autorização para o token de segurança.</summary>
+        <returns>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" /> que contém o conjunto de políticas de autorização em vigor para este aplicativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> método para autenticar um tipo de token de segurança específico.  
+  
+ Quando o <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> método é substituído, siga estas diretrizes:  
+  
+-   Quando o token de segurança é passado para o `token` parâmetro não pode ser validada, gerar o <xref:System.IdentityModel.Tokens.SecurityTokenValidationException> exceção.  
+  
+-   Quando não houver nenhuma política de autorização em vigor para este aplicativo, retornar vazio <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> do tipo <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
+  
+ Quando `null` é retornado por esse método, [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] gera o <xref:System.IdentityModel.Tokens.SecurityTokenValidationException> exceção.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> método é chamado pelo <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateToken%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

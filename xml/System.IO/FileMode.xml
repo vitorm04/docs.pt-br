@@ -1,0 +1,230 @@
+<Type Name="FileMode" FullName="System.IO.FileMode">
+  <TypeSignature Language="C#" Value="public enum FileMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed FileMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.FileMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica como o sistema operacional deve abrir um arquivo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter um exemplo de criação de um arquivo e gravar texto em um arquivo, consulte [como: gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md). Para obter um exemplo de texto de leitura de um arquivo, consulte [como: ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md). Para obter um exemplo de leitura e gravação em um arquivo binário, consulte [como: ler e gravar um recentemente criado arquivo de dados](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md).  
+  
+ Um `FileMode` parâmetro é especificado em muitos dos construtores para <xref:System.IO.FileStream>, <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>e no `Open` métodos de <xref:System.IO.File> e <xref:System.IO.FileInfo> para controlar como um arquivo é aberto.  
+  
+ `FileMode`controle de parâmetros se um arquivo for substituído, criar, abrir, ou uma combinação de ambos. Use `Open` para abrir um arquivo existente. Para anexar a um arquivo, use `Append`. Para truncar um arquivo ou criar um arquivo se ele não existir, use `Create`.  
+  
+   
+  
+## Examples  
+ O seguinte `FileStream` construtor abre um arquivo existente (`FileMode.Open`).  
+  
+ [!code-cpp[Classic FileAccess Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileAccess Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileAccess Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileAccess Example/CS/source.cs#1)]
+ [!code-vb[Classic FileAccess Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileAccess Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="Append" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileMode Append = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileMode.Append" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abre o arquivo, caso ele exista, e busca o final do arquivo ou cria um novo arquivo. Isso requer a permissão <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Append" />. <see langword="FileMode.Append" /> pode ser usado apenas em conjunto com <see langword="FileAccess.Write" />. Tentar buscar uma posição antes do final do arquivo gera uma exceção <see cref="T:System.IO.IOException" /> e qualquer tentativa de leitura falha e gera uma exceção <see cref="T:System.NotSupportedException" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="Create" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileMode Create = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileMode.Create" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o sistema operacional deve criar um novo arquivo. Se o arquivo já existir, ele será substituído. Isso requer a permissão <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" />. <see langword="FileMode.Create" /> é equivalente a solicitar que, se o arquivo não existir, <see cref="F:System.IO.FileMode.CreateNew" /> seja usado; caso contrário, <see cref="F:System.IO.FileMode.Truncate" /> deverá ser usado. Se o arquivo já existir, mas for um arquivo oculto, será gerada uma exceção <see cref="T:System.UnauthorizedAccessException" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNew">
+      <MemberSignature Language="C#" Value="CreateNew" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileMode CreateNew = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileMode.CreateNew" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o sistema operacional deve criar um novo arquivo. Isso requer a permissão <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" />. Se o arquivo já existir, será gerada uma exceção <see cref="T:System.IO.IOException" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="Open" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileMode Open = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileMode.Open" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o sistema operacional deve abrir um arquivo existente. A capacidade de abrir o arquivo depende do valor especificado pela enumeração <see cref="T:System.IO.FileAccess" />. Uma exceção <see cref="T:System.IO.FileNotFoundException" /> será gerada se o arquivo não existir.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenOrCreate">
+      <MemberSignature Language="C#" Value="OpenOrCreate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileMode OpenOrCreate = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileMode.OpenOrCreate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o sistema operacional deverá abrir um arquivo, se ele existir; caso contrário, um novo arquivo deverá ser criado. Se o arquivo for aberto com <see langword="FileAccess.Read" />, a permissão <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /> será necessária. Se o acesso ao arquivo for <see langword="FileAccess.Write" />, a permissão <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /> será necessária. Se o arquivo for aberto com <see langword="FileAccess.ReadWrite" />, as permissões <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /> e <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /> serão necessárias.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Truncate">
+      <MemberSignature Language="C#" Value="Truncate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.FileMode Truncate = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileMode.Truncate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o sistema operacional deve abrir um arquivo existente. Quando o arquivo é aberto, ele deve ser truncado para que seu tamanho seja de zero byte. Isso requer a permissão <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" />. As tentativas de ler de um arquivo aberto com <see langword="FileMode.Truncate" /> causam uma exceção <see cref="T:System.ArgumentException" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

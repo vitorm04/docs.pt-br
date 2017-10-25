@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.Contracts">
+  <Docs>
+    <summary>O <see cref="N:System.Diagnostics.Contracts" /> namespace contém classes estáticas para representação de contratos de programa, como pré-condições, pós-condições e invariáveis.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

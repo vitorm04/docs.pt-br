@@ -1,0 +1,178 @@
+<Type Name="CheckForUpdateCompletedEventArgs" FullName="System.Deployment.Application.CheckForUpdateCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class CheckForUpdateCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CheckForUpdateCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Deployment.Application.CheckForUpdateCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Deployment</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa informações de atualização detalhadas obtidas por meio de uma chamada para <see cref="M:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs>, você pode decidir se deseja atualizar seu aplicativo ClickOnce com base nas informações sobre a versão mais recente. <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.UpdateAvailable%2A>Retorna um valor booliano que indica se há uma nova atualização em todos os. O <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.AvailableVersion%2A> propriedade fornece o número de versão da nova versão, enquanto <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.MinimumRequiredVersion%2A> fornece a versão mais antiga que o usuário deve ter instalado no computador. <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.IsUpdateRequired%2A>expressa se a atualização mais recente é exigida do usuário. Por fim, <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.UpdateSizeBytes%2A> expressa o tamanho total da atualização.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.UpdateAvailable%2A> para determinar se há uma nova atualização do aplicativo, e <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.IsUpdateRequired%2A> para determinar se deve pedir ao usuário para instalar a atualização.  
+  
+ [!code-cpp[ClickOnceAPI#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp#1)]
+ [!code-csharp[ClickOnceAPI#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ClickOnceAPI/CS/Form1.cs#1)]
+ [!code-vb[ClickOnceAPI#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AvailableVersion">
+      <MemberSignature Language="C#" Value="public Version AvailableVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version AvailableVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.AvailableVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão da versão mais recente instalado.</summary>
+        <value>O <see cref="T:System.Version" /> expressar principais, secundária, os números de compilação e revisão da versão mais recente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.AvailableVersion%2A> para decidir se deseja instalar a atualização com base na gravidade da atualização. Por exemplo, se apenas o <xref:System.Version.Build%2A> ou <xref:System.Version.Revision%2A> propriedades de versão foram alteradas, o aplicativo não seja necessário atualizar até que o <xref:System.Version.Minor%2A> ou <xref:System.Version.Major%2A> alteração de propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUpdateRequired">
+      <MemberSignature Language="C#" Value="public bool IsUpdateRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUpdateRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.IsUpdateRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a atualização deve ser instalada.</summary>
+        <value>
+          <see langword="true" />Se a atualização é necessária; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você implanta uma atualização para o seu aplicativo ClickOnce, você pode ser marcado como atualização obrigatória, sinalização para seu aplicativo, deve atualizar imediatamente. Você deseja marcar a atualização se a versão mais recente contém uma atualização crítica, ou se ele é incompatível com formatos de arquivo ou fontes de dados de back-end usados por versões anteriores.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.IsUpdateRequired%2A> para determinar se deve pedir ao usuário para instalar a atualização ou instalá-lo sem avisar.  
+  
+ [!code-cpp[ClickOnceAPI#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp#1)]
+ [!code-csharp[ClickOnceAPI#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ClickOnceAPI/CS/Form1.cs#1)]
+ [!code-vb[ClickOnceAPI#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumRequiredVersion">
+      <MemberSignature Language="C#" Value="public Version MinimumRequiredVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version MinimumRequiredVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.MinimumRequiredVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão mínima que o usuário deve ter instalado no computador.</summary>
+        <value>Um <see cref="T:System.Version" /> objeto expressar a versão mais antiga que todos os usuários devem instalar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicativos podem perder atualizações necessárias quando um usuário entra em uma atribuição especial ou está longe do computador para semanas ou meses. Use  
+  
+ <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.MinimumRequiredVersion%2A>para determinar se o usuário não tiver atualizado o aplicativo em um tempo e perdeu uma ou mais atualizações necessárias.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync%2A>e força uma atualização do aplicativo se <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.MinimumRequiredVersion%2A> é maior do que <xref:System.Deployment.Application.ApplicationDeployment.CurrentVersion%2A>.  
+  
+ [!code-csharp[ClickOnceAPI#10](~/samples/snippets/csharp/VS_Snippets_Winforms/ClickOnceAPI/CS/Form1.cs#10)]
+ [!code-vb[ClickOnceAPI#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateAvailable">
+      <MemberSignature Language="C#" Value="public bool UpdateAvailable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UpdateAvailable" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.UpdateAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se uma atualização desinstalada está disponível.</summary>
+        <value>
+          <see langword="true" />Se a nova versão do aplicativo está disponível. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir inspeciona <xref:System.Deployment.Application.CheckForUpdateCompletedEventArgs.UpdateAvailable%2A> para determinar se há ou não uma atualização para instalar.  
+  
+ [!code-cpp[ClickOnceAPI#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp#1)]
+ [!code-csharp[ClickOnceAPI#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ClickOnceAPI/CS/Form1.cs#1)]
+ [!code-vb[ClickOnceAPI#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSizeBytes">
+      <MemberSignature Language="C#" Value="public long UpdateSizeBytes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 UpdateSizeBytes" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CheckForUpdateCompletedEventArgs.UpdateSizeBytes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho da atualização disponível.</summary>
+        <value>Um <see cref="T:System.Int64" /> que descreve o tamanho, em bytes, da atualização disponível. Se nenhuma atualização estiver disponível, retornará 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

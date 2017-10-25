@@ -1,0 +1,119 @@
+<Type Name="DataGridViewRowHeadersWidthSizeMode" FullName="System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode">
+  <TypeSignature Language="C#" Value="public enum DataGridViewRowHeadersWidthSizeMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewRowHeadersWidthSizeMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os valores para especificar como a largura do cabeçalho de linha é ajustada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, os usuários podem redimensionar a largura dos cabeçalhos de linha. Você pode desabilitar esse recurso para definir uma largura fixa, ou você pode usar um modo de dimensionamento automático com base em conteúdo que também desabilita o redimensionamento de usuário.  
+  
+ O <xref:System.Windows.Forms.DataGridView> controle pode ajustar a largura dos seus cabeçalhos de linha, de acordo com seu conteúdo, somente o conteúdo do cabeçalho do primeiro ou apenas o conteúdo do exibido atualmente cabeçalhos. Calcular a nova largura usando um subconjunto de cabeçalhos é útil para evitar uma penalidade de desempenho ao trabalhar com muitas linhas de dados.  
+  
+ Essa enumeração é usada pelo <xref:System.Windows.Forms.DataGridView> controle <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A> propriedade e <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A> método.  
+  
+ Para obter mais informações sobre modos de dimensionamento, consulte [opções de dimensionamento no controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso dessa enumeração em uma exibição somente não interativos <xref:System.Windows.Forms.DataGridView> controle.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewStyleDemo#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewStyleDemo/VB/form1.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoSizeToAllHeaders">
+      <MemberSignature Language="C#" Value="AutoSizeToAllHeaders" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode AutoSizeToAllHeaders = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura do cabeçalho de linha será ajustada para caber o conteúdo de todas as células de cabeçalho de linha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeToDisplayedHeaders">
+      <MemberSignature Language="C#" Value="AutoSizeToDisplayedHeaders" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode AutoSizeToDisplayedHeaders = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura do cabeçalho de linha será ajustada para caber o conteúdo de todos os cabeçalho de linha nas linhas exibidas no momento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeToFirstHeader">
+      <MemberSignature Language="C#" Value="AutoSizeToFirstHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode AutoSizeToFirstHeader = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura do cabeçalho de linha será ajustada para caber o conteúdo do primeiro cabeçalho de linha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableResizing">
+      <MemberSignature Language="C#" Value="DisableResizing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode DisableResizing = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os usuários não podem ajustar a largura do cabeçalho de coluna com o mouse.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableResizing">
+      <MemberSignature Language="C#" Value="EnableResizing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode EnableResizing = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.EnableResizing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os usuários podem ajustar a largura do cabeçalho de coluna com o mouse.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

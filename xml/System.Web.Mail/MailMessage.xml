@@ -1,0 +1,421 @@
+<Type Name="MailMessage" FullName="System.Web.Mail.MailMessage">
+  <TypeSignature Language="C#" Value="public class MailMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MailMessage extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Mail.MailMessage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The recommended alternative is System.Net.Mail.MailMessage. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece propriedades e métodos para a criação de uma mensagem de email. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Mail.MailMessage> classe.  
+  
+> [!IMPORTANT]
+>  Este controle tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Mail.MailMessage#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Mail.MailMessage/CS/mailformcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Mail.MailMessage#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Mail.MailMessage/VB/mailformvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MailMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Mail.MailMessage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Mail.MailMessage" />. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attachments">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Attachments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList Attachments" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.Attachments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a coleção de anexos que são transmitidos com a mensagem. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>Uma coleção <see cref="T:System.Collections.IList" /> de objetos <see cref="T:System.Web.Mail.MailAttachment" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Novos anexos podem ser adicionados à mensagem de email por uma chamada para `Message.Attachments.Add(MyMailMessage)`. Consulte <xref:System.Web.Mail.SmtpMail.Send%2A> para obter um exemplo de <xref:System.Web.Mail.SmtpMail> uso.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Web.Mail.MailMessage.Attachments#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Mail.MailMessage.Attachments/CS/attachmentsample.cs#1)]
+ [!code-vb[System.Web.Mail.MailMessage.Attachments#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Mail.MailMessage.Attachments/VB/attachmentsample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bcc">
+      <MemberSignature Language="C#" Value="public string Bcc { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Bcc" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.Bcc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista de endereços de email delimitados por ponto-e-vírgula que recebem uma mensagem BCC (com cópia oculta) do email. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>Uma lista de endereços de email delimitados por ponto-e-vírgula que recebem uma mensagem BCC (com cópia oculta) do email.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os destinatários da lista delimitada por ponto e vírgula podem ser que um email endereços ou endereço de nomes de exibição de catálogo.  
+  
+ O principal e uma cópia carbono (<xref:System.Web.Mail.MailMessage.Cc%2A>) destinatários não ver os endereços no `Bcc` campo.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Web.Mail.MailMessage.Bcc#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Mail.MailMessage.Bcc/CS/systemwebmailmailmessagebcc.cs#1)]
+ [!code-vb[System.Web.Mail.MailMessage.Bcc#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Mail.MailMessage.Bcc/VB/systemwebmailmailmessagebcc.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public string Body { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Body" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o corpo da mensagem de email. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>O corpo da mensagem de email.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding BodyEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding BodyEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.BodyEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de codificação do corpo da mensagem de email. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>Um dos valores <see cref="T:System.Text.Encoding" /> que indica o tipo de codificação do corpo da mensagem de email.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[System.Web.Mail.MailMessage.BodyEncoding#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Mail.MailMessage.BodyEncoding/CS/systemwebmailmailmessagebodyencoding.cs#1)]
+ [!code-vb[System.Web.Mail.MailMessage.BodyEncoding#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Mail.MailMessage.BodyEncoding/VB/systemwebmailmailmessagebodyencoding.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyFormat">
+      <MemberSignature Language="C#" Value="public System.Web.Mail.MailFormat BodyFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Mail.MailFormat BodyFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.BodyFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Mail.MailFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de conteúdo do corpo da mensagem de email. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Mail.MailFormat" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[System.Web.Mail.MailMessage.BodyFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Mail.MailMessage.BodyFormat/CS/systemwebmailmailmessagebodyformat.cs#1)]
+ [!code-vb[System.Web.Mail.MailMessage.BodyFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Mail.MailMessage.BodyFormat/VB/systemwebmailmailmessagebodyformat.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cc">
+      <MemberSignature Language="C#" Value="public string Cc { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Cc" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.Cc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista de endereços de email delimitados por ponto-e-vírgula que recebem uma CC (cópia carbono) da mensagem de email. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>Uma lista de endereços de email delimitados por ponto-e-vírgula que recebem uma CC (cópia carbono) da mensagem de email.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os destinatários da lista delimitada por ponto e vírgula podem ser que um email endereços ou endereço de nomes de exibição de catálogo.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Web.Mail.MailMessage.Cc#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Mail.MailMessage.Cc/CS/systemwebmailmailmessagecc.cs#1)]
+ [!code-vb[System.Web.Mail.MailMessage.Cc#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Mail.MailMessage.Cc/VB/systemwebmailmailmessagecc.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fields">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Fields { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Fields" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.Fields" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos que são mapeados para campos de CDO (Collaboration Data Objects) da Microsoft. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>Uma coleção <see cref="T:System.Collections.IDictionary" /> de objetos que são mapeados em campos de CDO (Collaboration Data Objects).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Mail.MailMessage.Fields%2A> propriedade é usada para definir as propriedades estendidas para objetos de dados de colaboração (CDO). Para obter mais informações sobre CDO, consulte "Collaboration Data Objects" e "Configuration CoClass" na biblioteca MSDN em http://msdn.microsoft.com/library.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Mail.MailMessage.Fields%2A> propriedade para enviar seu nome de usuário e senha para um servidor SMTP Simple Mail Transfer Protocol () para autenticação.  
+  
+ [!code-csharp[System.Web.Mail.MailMessage.Fields#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Mail.MailMessage.Fields/CS/MailMessageFieldscs.aspx#1)]
+ [!code-vb[System.Web.Mail.MailMessage.Fields#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Mail.MailMessage.Fields/VB/MailMessageFieldsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="From">
+      <MemberSignature Language="C#" Value="public string From { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string From" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.From" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço de email do remetente. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>O endereço de email do remetente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[SystemWebMailMailMessageFrom#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebMailMailMessageFrom/CS/systemwebmailmailmessagefrom.cs#1)]
+ [!code-vb[SystemWebMailMailMessageFrom#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebMailMailMessageFrom/VB/systemwebmailmailmessagefrom.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica os cabeçalhos personalizados que são transmitidos com a mensagem de email. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> coleção de cabeçalhos personalizados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public System.Web.Mail.MailPriority Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Mail.MailPriority Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Mail.MailPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade da mensagem de email. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Mail.MailPriority" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[System.Web.Mail.MailMessage.Priority#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Mail.MailMessage.Priority/CS/systemwebmailmailmessagepriority.cs#1)]
+ [!code-vb[System.Web.Mail.MailMessage.Priority#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Mail.MailMessage.Priority/VB/systemwebmailmailmessagepriority.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public string Subject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.Subject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a linha de assunto da mensagem de email. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>A linha de assunto da mensagem de email.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public string To { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string To" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.To" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista delimitada por ponto-e-vírgula de endereços de email de destinatário. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>Uma lista delimitada por ponto-e-vírgula de endereços de email.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os destinatários da lista delimitada por ponto e vírgula podem ser que um email endereços ou endereço de nomes de exibição de catálogo.  
+  
+   
+  
+## Examples  
+ [!code-csharp[SystemWebMailMailMessageTo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebMailMailMessageTo/CS/systemwebmailmailmessageto.cs#1)]
+ [!code-vb[SystemWebMailMailMessageTo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebMailMailMessageTo/VB/systemwebmailmailmessageto.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlContentBase">
+      <MemberSignature Language="C#" Value="public string UrlContentBase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UrlContentBase" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.UrlContentBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see langword="Content-Base" /> cabeçalho HTTP, a URL base de todas as URLs relativas usado no corpo da mensagem de email codificada em HTML. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>A URL base.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[System.Web.Mail.MailMessage.UrlContentBase#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Mail.MailMessage.UrlContentBase/CS/systemwebmailmailmessageurlcontentbase.cs#1)]
+ [!code-vb[System.Web.Mail.MailMessage.UrlContentBase#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Mail.MailMessage.UrlContentBase/VB/systemwebmailmailmessageurlcontentbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlContentLocation">
+      <MemberSignature Language="C#" Value="public string UrlContentLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UrlContentLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Mail.MailMessage.UrlContentLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see langword="Content-Location" /> cabeçalho HTTP para a mensagem de email. Alternativa recomendada: <see cref="N:System.Net.Mail" />.</summary>
+        <value>O <see langword="content-base" /> cabeçalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-aspx-csharp[System.Web.Mail.MailMessage#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Mail.MailMessage/CS/mailformcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Mail.MailMessage#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Mail.MailMessage/VB/mailformvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

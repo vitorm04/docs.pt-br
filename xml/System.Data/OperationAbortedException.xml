@@ -1,0 +1,30 @@
+<Type Name="OperationAbortedException" FullName="System.Data.OperationAbortedException">
+  <TypeSignature Language="C#" Value="public sealed class OperationAbortedException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit OperationAbortedException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OperationAbortedException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa exceção é gerada quando uma operação em andamento é anulada pelo usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta exceção indica que uma operação foi anulada pelo consumidor de uma API. Por exemplo, se o manipulador de eventos do <xref:System.Data.SqlClient.SqlBulkCopy.SqlRowsCopied> conjuntos de eventos o **anular** propriedade `true` no <xref:System.Data.SqlClient.SqlRowsCopiedEventArgs> objeto passado para o manipulador, o <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServer%2A> método para enviar linhas para o servidor e gera um <xref:System.Data.OperationAbortedException>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

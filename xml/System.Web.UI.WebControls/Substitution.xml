@@ -1,0 +1,228 @@
+<Type Name="Substitution" FullName="System.Web.UI.WebControls.Substitution">
+  <TypeSignature Language="C#" Value="public class Substitution : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Substitution extends System.Web.UI.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Substitution" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("MethodName")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.SubstitutionDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica uma seção em uma página da Web em cache de saída que é isenta de cache. Nesse local, o conteúdo dinâmico é recuperado e substituído pelo controle <see cref="T:System.Web.UI.WebControls.Substitution" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ Use o <xref:System.Web.UI.WebControls.Substitution> controle para especificar uma seção em uma página de Web de cache de saída onde você deseja conteúdo dinâmico substituído para o controle. O <xref:System.Web.UI.WebControls.Substitution> controle oferece uma solução simplificada para página com cache parcial para páginas em que a maioria do conteúdo é armazenado em cache. Você pode o cache de saída a página inteira e, em seguida, usar <xref:System.Web.UI.WebControls.Substitution> controles para especificar as partes da página que estão isentas do cache. Regiões de cache executam apenas uma vez e são reproduzidas a partir do cache até que a entrada de cache expire ou seja removida. Regiões dinâmicas executam sempre que a página é solicitada. Esse modelo de armazenamento em cache simplifica o código para páginas que são basicamente estáticas, porque você não precisa encapsular as seções em cache em controles de usuário da Web. Por exemplo, esse modelo de armazenamento em cache é útil em um cenário onde você tem uma página que contém o conteúdo estático, como artigos de notícias e um <xref:System.Web.UI.WebControls.AdRotator> controle que exibe anúncios. Os textos de notícias não forem alterados, o que significa que eles podem ser armazenados em cache. No entanto, cada vez que um usuário solicita a página que você deseja exibir um novo anúncio. O <xref:System.Web.UI.WebControls.AdRotator> controle oferece suporte à substituição post-cache diretamente e processa um novo anúncio cada vez que a página envia de volta, independentemente se a página é armazenada em cache.  
+  
+> [!NOTE]
+>  Você pode colocar um <xref:System.Web.UI.WebControls.Substitution> controle em um controle de usuário que está contido em uma página em cache. No entanto, você não pode colocar um <xref:System.Web.UI.WebControls.Substitution> controle em um controle de usuário de cache de saída.  
+  
+ Quando o <xref:System.Web.UI.WebControls.Substitution> controle é executado, ele chama um método que retorna uma cadeia de caracteres. O método retorna a cadeia de caracteres é o conteúdo a ser exibido na página no local do <xref:System.Web.UI.WebControls.Substitution> controle. Use o <xref:System.Web.UI.WebControls.Substitution.MethodName%2A> propriedade para especificar o nome do método de retorno de chamada para invocar quando o <xref:System.Web.UI.WebControls.Substitution> controle executa. O método de retorno de chamada que você especificar deve ser um método estático do controle de usuário ou a página que contém o <xref:System.Web.UI.WebControls.Substitution> controle. A assinatura para o método de retorno de chamada deve corresponder a assinatura para um <xref:System.Web.HttpResponseSubstitutionCallback> delegado que utiliza um <xref:System.Web.HttpContext> parâmetro e retorna uma cadeia de caracteres.  
+  
+ Para manipular o cache de saída para uma página, você pode usar o [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) diretiva, o <xref:System.Web.HttpCachePolicy> classe, ou o <xref:System.Web.HttpResponse.Cache%2A> propriedade. Para obter mais informações sobre cache de páginas, consulte [Caching ASP.NET Pages](http://msdn.microsoft.com/library/e9666a1b-88df-4931-af0b-a754fc65660b) e [cache de partes de uma página ASP.NET](http://msdn.microsoft.com/library/cdd8e523-7305-4685-a456-c5be1de1367e).  
+  
+ Como uma alternativa ao uso de <xref:System.Web.UI.WebControls.Substitution> controle, você também pode obter armazenamento em cache usando o comportamento de substituição um <xref:System.Web.HttpResponseSubstitutionCallback> delegate. Além disso, você pode obter a substituição de cache de comportamento em controles, como o <xref:System.Web.UI.WebControls.AdRotator> controle, que oferecem suporte a esse recurso diretamente. Para obter mais informações, consulte [dinamicamente atualizando partes de uma página em cache](http://msdn.microsoft.com/library/09c9bd9a-0d68-4a5c-aa6f-1b461c208795).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:Substitution  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    MethodName="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Visible="True|False"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como adicionar um <xref:System.Web.UI.WebControls.Substitution> controle declarativamente para uma página da Web de cache de saída. Quando a página for carregada, a data e hora atuais são exibidos para o usuário em um rótulo. Esta seção da página é armazenada em cache e atualizada a cada 60 segundos. Quando o <xref:System.Web.UI.WebControls.Substitution> controle é executado, ele chama o `GetCurrentDateTime` método. A cadeia de caracteres retornada por `GetCurrentDateTime` é exibido ao usuário. Esta seção da página não é armazenado em cache e é atualizada sempre que a página for atualizada.  
+  
+ [!code-aspx-csharp[SubstitutionsClass1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SubstitutionsClass1/CS/substitutionclass1cs.aspx#1)]
+ [!code-aspx-vb[SubstitutionsClass1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SubstitutionsClass1/VB/substitutionclass1vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Substitution ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Substitution.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.Substitution" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.Substitution.%23ctor%2A> construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.Substitution> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como adicionar um <xref:System.Web.UI.WebControls.Substitution> controle programaticamente a uma página da Web de cache de saída. Quando a página for carregada, a data e hora atuais são exibidos para o usuário em um rótulo. Esta seção da página é armazenada em cache e atualizada a cada 60 segundos. Quando o <xref:System.Web.UI.WebControls.Substitution> controle é executado, ele chama o `GetCurrentDateTime` método. A cadeia de caracteres retornada por `GetCurrentDateTime` é exibido ao usuário. Esta seção da página não é armazenado em cache e é atualizada sempre que a página for atualizada.  
+  
+ [!code-aspx-csharp[SubstitutionCstr#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SubstitutionCstr/CS/substitutioncstrcs.aspx#1)]
+ [!code-aspx-vb[SubstitutionCstr#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SubstitutionCstr/VB/substitutioncstrvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Substitution.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Web.UI.EmptyControlCollection" /> objeto, indicando que o <see cref="T:System.Web.UI.WebControls.Substitution" /> controle não dá suporte a controles filho.</summary>
+        <returns>Um <see cref="T:System.Web.UI.EmptyControlCollection" />, indicando que o controle não oferece suporte a controles filho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Substitution.CreateControlCollection%2A> método normalmente é usado para criar um <xref:System.Web.UI.ControlCollection> objeto para armazenar os controles filho de um controle. A implementação do <xref:System.Web.UI.WebControls.Substitution.CreateControlCollection%2A> método para um <xref:System.Web.UI.WebControls.Substitution> controle sempre retorna um <xref:System.Web.UI.EmptyControlCollection> objeto, para indicar que o <xref:System.Web.UI.WebControls.Substitution> controle não dá suporte a controles filho.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao estender o <see cref="T:System.Web.UI.WebControls.Substitution" /> controle, você pode substituir o <see cref="M:System.Web.UI.WebControls.Substitution.CreateControlCollection" /> método em uma classe derivada para oferecer suporte a controles filho.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public virtual string MethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Substitution.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método de retorno de chamada para invocar quando o <see cref="T:System.Web.UI.WebControls.Substitution" /> controle executa.</summary>
+        <value>Uma cadeia de caracteres que representa o nome do método a ser invocado quando o <see cref="T:System.Web.UI.WebControls.Substitution" /> controle executa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.Substitution.MethodName%2A> propriedade para especificar o nome do método de retorno de chamada para invocar quando o <xref:System.Web.UI.WebControls.Substitution> controle executa. O método de retorno de chamada que você especificar deve ser um método estático do controle de usuário ou a página que contém o <xref:System.Web.UI.WebControls.Substitution> controle. A assinatura para o método de retorno de chamada deve corresponder a assinatura para um <xref:System.Web.HttpResponseSubstitutionCallback> delegado que utiliza um <xref:System.Web.HttpContext> parâmetro e retorna uma cadeia de caracteres. A cadeia de caracteres que retorna o método de retorno é o conteúdo a ser exibido na página no local do <xref:System.Web.UI.WebControls.Substitution> controle.  
+  
+ O <xref:System.Web.HttpContext> parâmetro encapsula todas as informações específicas a HTTP sobre uma solicitação HTTP individual. Você pode usá-lo para acessar variáveis de sessão, informações de autorização e detalhes de personalização. Para obter mais informações, consulte <xref:System.Web.HttpResponseSubstitutionCallback>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como adicionar um <xref:System.Web.UI.WebControls.Substitution> controle declarativamente para uma página da Web de cache de saída. Quando a página for carregada, uma lista com marcadores estática é exibida ao usuário. Esta seção da página é armazenada em cache e atualizada a cada 60 segundos. Quando o <xref:System.Web.UI.WebControls.Substitution> controle é executado, ele chama o `GetUser` método, que retorna uma cadeia de caracteres que representa o usuário atual. Essa cadeia de caracteres é exibida no local do <xref:System.Web.UI.WebControls.Substitution> controle na página. Esta seção da página não é armazenado em cache e é atualizada sempre que a página for atualizada.  
+  
+ [!code-aspx-csharp[Substitution.MethodName#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Substitution.MethodName/CS/substitution.methodnamecs.aspx#1)]
+ [!code-aspx-vb[Substitution.MethodName#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Substitution.MethodName/VB/substitution.methodnamevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Substitution.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.PreRender" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">O pai controle ou página mestra é armazenado em cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Substitution.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O objeto <see cref="T:System.Web.UI.HtmlTextWriter" /> que recebe o conteúdo do controle do servidor.</param>
+        <summary>Envia o conteúdo do servidor de controle para um fornecido <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto, que grava o conteúdo a ser renderizado na Web</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

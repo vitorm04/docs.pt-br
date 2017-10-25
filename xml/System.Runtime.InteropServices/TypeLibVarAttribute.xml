@@ -1,0 +1,119 @@
+<Type Name="TypeLibVarAttribute" FullName="System.Runtime.InteropServices.TypeLibVarAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TypeLibVarAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeLibVarAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.TypeLibVarAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém o <see cref="T:System.Runtime.InteropServices.VARFLAGS" /> que foram originalmente importados para o campo da biblioteca de tipos COM.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [Tlbimp.exe (importador da biblioteca)](~/docs/framework/tools/tlbimp-exe-type-library-importer.md) aplica esse atributo para campos.  
+  
+ Esse atributo é aplicado quando uma biblioteca de tipos é importada e nunca deve ser alterada. Ele só será aplicado quando o método `VARFLAGS` são avaliadas como diferente de zero. O atributo foi projetado para ser usada por ferramentas que precisa saber como original `VARFLAGS` foram definidas. O common language runtime não usa esse atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como obter o <xref:System.Runtime.InteropServices.TypeLibVarAttribute> valor de um campo.  
+  
+ [!code-cpp[TypeLibVar#1](~/samples/snippets/cpp/VS_Snippets_CLR/TypeLibVar/CPP/codefile6.cpp#1)]
+ [!code-csharp[TypeLibVar#1](~/samples/snippets/csharp/VS_Snippets_CLR/TypeLibVar/CS/codefile6.cs#1)]
+ [!code-vb[TypeLibVar#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TypeLibVar/VB/codefile6.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeLibVarAttribute (short flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int16 flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.TypeLibVarAttribute.#ctor(System.Int16)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="flags">O <see cref="T:System.Runtime.InteropServices.TypeLibVarFlags" /> valor para o campo atribuído como encontrado na biblioteca de tipos do qual foi importado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.TypeLibVarAttribute" /> com o valor <see cref="T:System.Runtime.InteropServices.TypeLibVarFlags" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeLibVarAttribute (System.Runtime.InteropServices.TypeLibVarFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.InteropServices.TypeLibVarFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.TypeLibVarAttribute.#ctor(System.Runtime.InteropServices.TypeLibVarFlags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Runtime.InteropServices.TypeLibVarFlags" />
+      </Parameters>
+      <Docs>
+        <param name="flags">O <see cref="T:System.Runtime.InteropServices.TypeLibVarFlags" /> valor para o campo atribuído como encontrado na biblioteca de tipos do qual foi importado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.TypeLibVarAttribute" /> com o valor <see cref="T:System.Runtime.InteropServices.TypeLibVarFlags" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.TypeLibVarFlags Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.TypeLibVarFlags Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.TypeLibVarAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibVarFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Runtime.InteropServices.TypeLibVarFlags" /> valor desse campo.</summary>
+        <value>O <see cref="T:System.Runtime.InteropServices.TypeLibVarFlags" /> valor desse campo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

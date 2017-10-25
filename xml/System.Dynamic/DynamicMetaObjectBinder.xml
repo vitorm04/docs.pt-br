@@ -1,0 +1,293 @@
+<Type Name="DynamicMetaObjectBinder" FullName="System.Dynamic.DynamicMetaObjectBinder">
+  <TypeSignature Language="C#" Value="public abstract class DynamicMetaObjectBinder : System.Runtime.CompilerServices.CallSiteBinder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DynamicMetaObjectBinder extends System.Runtime.CompilerServices.CallSiteBinder" />
+  <TypeSignature Language="DocId" Value="T:System.Dynamic.DynamicMetaObjectBinder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.CompilerServices.CallSiteBinder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O associador de site de chamada dinâmica que participa de <see cref="T:System.Dynamic.DynamicMetaObject" /> associação de protocolo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.CompilerServices.CallSiteBinder> executa a associação da operação dinâmica usando os valores de tempo de execução como entrada. Por outro lado, o <xref:System.Dynamic.DynamicMetaObjectBinder> participa de <xref:System.Dynamic.DynamicMetaObject> associação de protocolo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DynamicMetaObjectBinder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObjectBinder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Dynamic.DynamicMetaObjectBinder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bind">
+      <MemberSignature Language="C#" Value="public abstract System.Dynamic.DynamicMetaObject Bind (System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject Bind(class System.Dynamic.DynamicMetaObject target, class System.Dynamic.DynamicMetaObject[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObjectBinder.Bind(System.Dynamic.DynamicMetaObject,System.Dynamic.DynamicMetaObject[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Dynamic.DynamicMetaObject" />
+        <Parameter Name="args" Type="System.Dynamic.DynamicMetaObject[]" />
+      </Parameters>
+      <Docs>
+        <param name="target">O destino da operação dinâmica.</param>
+        <param name="args">Uma matriz de argumentos da operação dinâmica.</param>
+        <summary>Quando substituído na classe derivada, executa a associação da operação dinâmica.</summary>
+        <returns>O <see cref="T:System.Dynamic.DynamicMetaObject" /> que representa o resultado da associação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bind">
+      <MemberSignature Language="C#" Value="public override sealed System.Linq.Expressions.Expression Bind (object[] args, System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.ParameterExpression&gt; parameters, System.Linq.Expressions.LabelTarget returnLabel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.Expressions.Expression Bind(object[] args, class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Linq.Expressions.ParameterExpression&gt; parameters, class System.Linq.Expressions.LabelTarget returnLabel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObjectBinder.Bind(System.Object[],System.Collections.ObjectModel.ReadOnlyCollection{System.Linq.Expressions.ParameterExpression},System.Linq.Expressions.LabelTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="parameters" Type="System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.ParameterExpression&gt;" />
+        <Parameter Name="returnLabel" Type="System.Linq.Expressions.LabelTarget" />
+      </Parameters>
+      <Docs>
+        <param name="args">Uma matriz de argumentos para a operação dinâmica.</param>
+        <param name="parameters">A matriz de <see cref="T:System.Linq.Expressions.ParameterExpression" /> instâncias que representam os parâmetros do site de chamada no processo de associação.</param>
+        <param name="returnLabel">Um LabelTarget usado para retornar o resultado da associação dinâmica.</param>
+        <summary>Executa a associação de tempo de execução da operação dinâmica em um conjunto de argumentos.</summary>
+        <returns>Uma expressão que executa testes dos argumentos de operação dinâmica e executa a operação dinâmica se os testes forem válidos. Se os testes falham em ocorrências subsequentes da operação dinâmica, ligação será chamada novamente para gerar um novo <see cref="T:System.Linq.Expressions.Expression" /> para os novos tipos de argumento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Defer">
+      <MemberSignature Language="C#" Value="public System.Dynamic.DynamicMetaObject Defer (params System.Dynamic.DynamicMetaObject[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Dynamic.DynamicMetaObject Defer(class System.Dynamic.DynamicMetaObject[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObjectBinder.Defer(System.Dynamic.DynamicMetaObject[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Dynamic.DynamicMetaObject[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="args">Uma matriz de argumentos da operação dinâmica.</param>
+        <summary>Transfere a associação da operação até um momento posterior quando os valores de tempo de execução de todos os argumentos de operação dinâmica forem computados.</summary>
+        <returns>O <see cref="T:System.Dynamic.DynamicMetaObject" /> que representa o resultado da associação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Defer">
+      <MemberSignature Language="C#" Value="public System.Dynamic.DynamicMetaObject Defer (System.Dynamic.DynamicMetaObject target, params System.Dynamic.DynamicMetaObject[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Dynamic.DynamicMetaObject Defer(class System.Dynamic.DynamicMetaObject target, class System.Dynamic.DynamicMetaObject[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObjectBinder.Defer(System.Dynamic.DynamicMetaObject,System.Dynamic.DynamicMetaObject[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Dynamic.DynamicMetaObject" />
+        <Parameter Name="args" Type="System.Dynamic.DynamicMetaObject[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="target">O destino da operação dinâmica.</param>
+        <param name="args">Uma matriz de argumentos da operação dinâmica.</param>
+        <summary>Transfere a associação da operação até um momento posterior quando os valores de tempo de execução de todos os argumentos de operação dinâmica forem computados.</summary>
+        <returns>O <see cref="T:System.Dynamic.DynamicMetaObject" /> que representa o resultado da associação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUpdateExpression">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression GetUpdateExpression (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Linq.Expressions.Expression GetUpdateExpression(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.DynamicMetaObjectBinder.GetUpdateExpression(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="P:System.Linq.Expressions.Expression.Type" /> propriedade da expressão resultante; qualquer tipo é permitido.</param>
+        <summary>Obtém uma expressão que fará com que a associação a ser atualizado. Ele indica que a associação da expressão não é válida. Isso normalmente é usado quando a "versão" de um objeto dinâmico foi alterada.</summary>
+        <returns>A expressão de atualização.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public virtual Type ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Dynamic.DynamicMetaObjectBinder.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tipo de resultado da operação.</summary>
+        <value>O <see cref="T:System.Type" /> objeto que representa o tipo de resultado da operação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

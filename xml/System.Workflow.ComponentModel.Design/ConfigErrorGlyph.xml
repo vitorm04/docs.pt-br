@@ -1,0 +1,170 @@
+<Type Name="ConfigErrorGlyph" FullName="System.Workflow.ComponentModel.Design.ConfigErrorGlyph">
+  <TypeSignature Language="C#" Value="public class ConfigErrorGlyph : System.Workflow.ComponentModel.Design.DesignerGlyph" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConfigErrorGlyph extends System.Workflow.ComponentModel.Design.DesignerGlyph" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ConfigErrorGlyph" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Design.DesignerGlyph</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um glifo para um <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> a ser exibido quando um usuário não executou as ações necessárias de designer em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Usam designers de atividade <xref:System.Workflow.ComponentModel.Design.ConfigErrorGlyph> para exibir as ações associadas a marcas inteligentes na superfície do designer. Por exemplo, se uma atividade exige que os usuários definir uma propriedade, o designer de atividade exibe <xref:System.Workflow.ComponentModel.Design.ConfigErrorGlyph> para notificá-lo de que eles são necessários para definir a propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigErrorGlyph ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ConfigErrorGlyph.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Design.ConfigErrorGlyph" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBeActivated">
+      <MemberSignature Language="C#" Value="public override bool CanBeActivated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanBeActivated" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ConfigErrorGlyph.CanBeActivated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Workflow.ComponentModel.Design.ConfigErrorGlyph" /> pode ter o foco na <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> à qual ele está associado.</summary>
+        <value>
+          <see langword="true" />Se o glifo designer pode ser ativado; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBounds">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Rectangle GetBounds (System.Workflow.ComponentModel.Design.ActivityDesigner designer, bool activated);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Rectangle GetBounds(class System.Workflow.ComponentModel.Design.ActivityDesigner designer, bool activated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ConfigErrorGlyph.GetBounds(System.Workflow.ComponentModel.Design.ActivityDesigner,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+        <Parameter Name="activated" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="designer">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> à qual o glifo está associado.</param>
+        <param name="activated">
+          <see langword="true" />para indicar se o glifo aparece na superfície do designer de atividade; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna os limites do glifo no especificado <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />.</summary>
+        <returns>Um <see cref="T:System.Drawing.Rectangle" /> que representa os limites do glifo.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="designer" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivate">
+      <MemberSignature Language="C#" Value="protected override void OnActivate (System.Workflow.ComponentModel.Design.ActivityDesigner designer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnActivate(class System.Workflow.ComponentModel.Design.ActivityDesigner designer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ConfigErrorGlyph.OnActivate(System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="designer">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> no qual o glifo é desenhado.</param>
+        <summary>Notifica o glifo que uma ação foi executada que ativou o glifo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Workflow.ComponentModel.Design.ConfigErrorGlyph.OnActivate%2A> é chamado, o designer associados com o símbolo de verbos são exibidos na superfície do designer de atividade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Drawing.Graphics graphics, bool activated, System.Workflow.ComponentModel.Design.AmbientTheme ambientTheme, System.Workflow.ComponentModel.Design.ActivityDesigner designer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Drawing.Graphics graphics, bool activated, class System.Workflow.ComponentModel.Design.AmbientTheme ambientTheme, class System.Workflow.ComponentModel.Design.ActivityDesigner designer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ConfigErrorGlyph.OnPaint(System.Drawing.Graphics,System.Boolean,System.Workflow.ComponentModel.Design.AmbientTheme,System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="activated" Type="System.Boolean" />
+        <Parameter Name="ambientTheme" Type="System.Workflow.ComponentModel.Design.AmbientTheme" />
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O <see cref="T:System.Drawing.Graphics" /> para executar tarefas de desenho e preenchimento.</param>
+        <param name="activated">
+          <see langword="true" />para indicar que o símbolo aparece na superfície de design; Caso contrário, <see langword="false" />.</param>
+        <param name="ambientTheme">O <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> para usar para acessar configurações de propriedade de ambiente.</param>
+        <param name="designer">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> do qual obter informações sobre ações do usuário.</param>
+        <summary>Executa as tarefas necessárias para renderizar o glifo na superfície do designer de atividade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public override int Priority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ConfigErrorGlyph.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a configuração de prioridade do glifo na superfície do designer de atividade.</summary>
+        <value>Um valor inteiro que representa a configuração de prioridade para a <see cref="T:System.Workflow.ComponentModel.Design.ConfigErrorGlyph" /> na superfície de design de atividade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

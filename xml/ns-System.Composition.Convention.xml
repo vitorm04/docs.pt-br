@@ -1,0 +1,6 @@
+<Namespace Name="System.Composition.Convention">
+  <Docs>
+    <summary>O <see cref="N:System.Composition.Convention" /> namespace contém classes que representam os construtores de convenção para construir regras usadas para configurar objetos CLR como partes de MEF.</summary>
+    <remarks></remarks>
+  </Docs>
+</Namespace>

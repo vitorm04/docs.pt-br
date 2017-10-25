@@ -1,0 +1,37 @@
+<Type Name="NetworkAvailableEventHandler" FullName="Microsoft.VisualBasic.Devices.NetworkAvailableEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void NetworkAvailableEventHandler(object sender, NetworkAvailableEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NetworkAvailableEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Devices.NetworkAvailableEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um objeto de <see cref="T:Microsoft.VisualBasic.Devices.NetworkAvailableEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o <see langword="My.Application.NetworkAvailabilityChanged" /> ou <see langword="My.Computer.Network.NetworkAvailabilityChanged" /> eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No Visual Basic, você não precisa trabalhar com este delegado explicitamente. Para obter mais informações, consulte o <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged?displayProperty=nameWithType> evento ou <xref:Microsoft.VisualBasic.Devices.Network.NetworkAvailabilityChanged?displayProperty=nameWithType> eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

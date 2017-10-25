@@ -1,0 +1,213 @@
+<Type Name="ControlBuilderAttribute" FullName="System.Web.UI.ControlBuilderAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ControlBuilderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ControlBuilderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ControlBuilderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica um <see cref="T:System.Web.UI.ControlBuilder" /> classe para criar um controle personalizado no analisador de ASP.NET. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo especifica o construtor <xref:System.Type> a ser usado para criar um controle personalizado, como mostrado no código a seguir:  
+  
+```  
+[ControlBuilderAttribute(typeof(ControlBuilderType))]  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma lista de seleção personalizada que é usada para exibir uma mensagem com base no `SelectedIndex` e `Message` valores definidos em tempo de execução. A linha de comando a seguir é usada para criar o arquivo executável.  
+  
+```vb  
+vbc /r:System.dll /r:System.Web.dll /r:System.Drawing.dll /t:library /out:myWebAppPath/Bin/vb_MyControlBuilderAtt.dll ControlBuilderAtt.vb  
+```  
+  
+```csharp  
+csc /t:library /out:myWebAppPath/Bin/cs_MyControlBuilderAtt.dll ControlBuilderAtt.cs  
+```  
+  
+ [!code-csharp[SystemWebUI_ControlBuilderAttribute_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_ControlBuilderAttribute_2/CS/controlbuilderattribute_2.cs#1)]
+ [!code-vb[SystemWebUI_ControlBuilderAttribute_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_ControlBuilderAttribute_2/VB/controlbuilderattribute_2.vb#1)]  
+  
+ O exemplo a seguir usa o controle personalizado definido acima. Em particular, ele atribui o `SelectedIndex` e `Message` valores em tempo de execução para determinar a mensagem a ser processado. Observe que os valores mostrados na `Register` diretiva refletir a linha de comando anterior.  
+  
+```vb  
+<%@ Register TagPrefix="custom" Assembly="myControlBuilderAtt" Namespace="CustomControls" %>  
+ <h4>Using ControlBuilderAttribute Class<h4>  
+ <form runat="server">  
+  <custom:MyVB_CustomParse SelectedIndex="3" runat=server>  
+  <customitem Message="Visual Basic version. Item One selected"/>  
+  <customitem Message="Visual Basic version. Item Two selected"/>  
+  <customitem Message="Visual Basic version. Item Three selected"/>  
+  <customitem Message="Visual Basic version. Item Four selected"/>  
+  </custom:MyVB_CustomParse>  
+ </form>  
+```  
+  
+```csharp  
+<%@ Register TagPrefix="custom" Assembly="myControlBuilderAtt" Namespace="CustomControls" %>  
+ <h4>Using ControlBuilderAttribute Class<h4>  
+ <form runat="server">  
+  <custom:MyCS_CustomParse SelectedIndex="2" runat=server>  
+  <customitem Message="C# version. Item One selected"/>  
+  <customitem Message="C# version. Item Two selected"/>  
+  <customitem Message="C# version. Item Three selected"/>  
+  <customitem Message="C# version. Item Four selected"/>  
+  </custom:MyCS_CustomParse>  
+ </form>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlBuilderAttribute (Type builderType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type builderType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilderAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="builderType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="builderType">O tipo de construtor do controle</param>
+        <summary>Especifica o construtor de controle para um controle personalizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A associação do tipo de construtor do controle com um controle personalizado é obtida, precedendo a classe do construtor de controle personalizado com a seguinte definição de atributo:  
+  
+```  
+[ControlBuilderAttribute(typeof(controlbuildertype))]  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuilderType">
+      <MemberSignature Language="C#" Value="public Type BuilderType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BuilderType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilderAttribute.BuilderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> do controle associado ao atributo. Esta propriedade é somente para leitura.</summary>
+        <value>O <see cref="T:System.Type" /> do controle associado ao atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ControlBuilderSamples_1#5](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_1/CS/ctrlbuilder_1.cs#5)]
+ [!code-vb[ControlBuilderSamples_1#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_1/VB/ctrlbuilder_1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.ControlBuilderAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.ControlBuilderAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ControlBuilderAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlBuilderAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o novo <see cref="T:System.Web.UI.ControlBuilderAttribute" /> objeto. Por padrão, o novo objeto é definido como null. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilderAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado ao atual <see cref="T:System.Web.UI.ControlBuilderAttribute" />.</param>
+        <summary>Obtém um valor que indica se o atual <see cref="T:System.Web.UI.ControlBuilderAttribute" /> é idêntico ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é um <see cref="T:System.Web.UI.ControlBuilderAttribute" /> e é idêntica à atual <see cref="T:System.Web.UI.ControlBuilderAttribute" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilderAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash de <see cref="T:System.Web.UI.ControlBuilderAttribute" /> objeto.</summary>
+        <returns>Um inteiro assinado de 32 bits que representa o código de hash; Caso contrário, 0, se o <see cref="P:System.Web.UI.ControlBuilderAttribute.BuilderType" /> é <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilderAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o construtor atual do controle é o padrão.</summary>
+        <returns>
+          <see langword="true" />Se o construtor atual do controle é o padrão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,98 @@
+<Type Name="WizardStepType" FullName="System.Web.UI.WebControls.WizardStepType">
+  <TypeSignature Language="C#" Value="public enum WizardStepType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WizardStepType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WizardStepType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os tipos de navegação da interface do usuário que pode ser exibida para uma etapa em um <see cref="T:System.Web.UI.WebControls.Wizard" /> controle.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WizardStepType Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WizardStepType.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WizardStepType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A interface do usuário que é renderizado para a etapa de navegação é determinada automaticamente pela ordem na qual a etapa é declarada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="Complete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WizardStepType Complete = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WizardStepType.Complete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WizardStepType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A etapa é o último apareça. Não há botões de navegação são renderizados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Finish">
+      <MemberSignature Language="C#" Value="Finish" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WizardStepType Finish = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WizardStepType.Finish" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WizardStepType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A etapa é a etapa de coleta de dados final. **Concluir** e **anterior** botões são renderizados para navegação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="Start" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WizardStepType Start = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WizardStepType.Start" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WizardStepType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A etapa é o primeiro que aparecem. Um **próximo** botão é processado, mas um **anterior** botão não é processado para esta etapa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Step">
+      <MemberSignature Language="C#" Value="Step" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WizardStepType Step = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WizardStepType.Step" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WizardStepType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A etapa é qualquer etapa entre o início e as etapas de término. **Anterior** e **próximo** botões são renderizados para navegação. Esse tipo de etapa é útil para a substituição de <see cref="F:System.Web.UI.WebControls.WizardStepType.Auto" /> tipo de etapa.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

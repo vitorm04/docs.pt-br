@@ -1,0 +1,115 @@
+<Type Name="RayHitTestParameters" FullName="System.Windows.Media.Media3D.RayHitTestParameters">
+  <TypeSignature Language="C#" Value="public sealed class RayHitTestParameters : System.Windows.Media.Media3D.HitTestParameters3D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RayHitTestParameters extends System.Windows.Media.Media3D.HitTestParameters3D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.RayHitTestParameters" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Media3D.HitTestParameters3D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os parâmetros de um teste de clique ao longo de um raio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que a camada visual oferece suporte a teste de clique contra todos os objetos em um ponto ou geometria, não apenas o objeto mais alto.  Um teste de hit 2D também retornará os resultados diretamente sob o ponto especificado ou geometria 3D.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RayHitTestParameters (System.Windows.Media.Media3D.Point3D origin, System.Windows.Media.Media3D.Vector3D direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Media3D.Point3D origin, valuetype System.Windows.Media.Media3D.Vector3D direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.RayHitTestParameters.#ctor(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="origin" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="direction" Type="System.Windows.Media.Media3D.Vector3D" />
+      </Parameters>
+      <Docs>
+        <param name="origin">Point3D na qual se origina o raio.</param>
+        <param name="direction">Vector3D que indica a direção do raio.</param>
+        <summary>Cria uma instância do objeto que especifica a origem e a direção do raio ao longo do qual o teste.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que a camada visual oferece suporte a teste de clique contra todos os objetos em um ponto ou geometria, não apenas o objeto mais alto.  Um teste de hit 2D também retornará os resultados diretamente sob o ponto especificado ou geometria 3D.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Vector3D Direction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Vector3D Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RayHitTestParameters.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Vector3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Media.Media3D.Vector3D" /> que indica a direção (de origem) de raio ao longo do qual o teste.</summary>
+        <value>Vector3D que indica a direção do raio ao longo do qual o teste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que a camada visual oferece suporte a teste de clique contra todos os objetos em um ponto ou geometria, não apenas o objeto mais alto.  Um teste de hit 2D também retornará os resultados diretamente sob o ponto especificado ou geometria 3D.  
+  
+   
+  
+## Examples  
+ [!code-csharp[hittest3d#HitTest3D3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn4)]
+ [!code-vb[hittest3d#HitTest3D3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Origin">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Point3D Origin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Point3D Origin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.RayHitTestParameters.Origin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a origem do raio ao longo do qual o teste.</summary>
+        <value>Origem do raio ao longo do qual ocorrências de teste.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que a camada visual oferece suporte a teste de clique contra todos os objetos em um ponto ou geometria, não apenas o objeto mais alto.  Um teste de hit 2D também retornará os resultados diretamente sob o ponto especificado ou geometria 3D.  
+  
+   
+  
+## Examples  
+ [!code-csharp[hittest3d#HitTest3D3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn4)]
+ [!code-vb[hittest3d#HitTest3D3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

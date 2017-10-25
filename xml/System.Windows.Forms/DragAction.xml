@@ -1,0 +1,95 @@
+<Type Name="DragAction" FullName="System.Windows.Forms.DragAction">
+  <TypeSignature Language="C#" Value="public enum DragAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DragAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DragAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica como e se uma operação do tipo "arrastar e soltar" deve continuar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por <xref:System.Windows.Forms.QueryContinueDragEventArgs>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma operação de arrastar e soltar entre duas <xref:System.Windows.Forms.ListBox> controles. O exemplo chama o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método quando a ação de arrastar inicia. A ação de arrastar inicia se moveu o mouse mais de <xref:System.Windows.Forms.SystemInformation.DragSize%2A?displayProperty=nameWithType> do local do mouse durante o <xref:System.Windows.Forms.Control.MouseDown> evento. O <xref:System.Windows.Forms.ListBox.IndexFromPoint%2A> método é usado para determinar o índice do item a arrastar durante o `MouseDown` evento.  
+  
+ O exemplo também demonstra como usar cursores personalizados para a operação de arrastar e soltar. O exemplo supõe que dois arquivos de cursor, `3dwarro.cur` e `3dwno.cur`, existe no diretório de aplicativo para a operação de arrastar personalizado e não-drop cursores, respectivamente. Os cursores personalizados serão usados se o `UseCustomCursorsCheck` <xref:System.Windows.Forms.CheckBox> é verificada. Os cursores personalizados são definidos <xref:System.Windows.Forms.Control.GiveFeedback> manipulador de eventos.  
+  
+ O estado do teclado é avaliado no <xref:System.Windows.Forms.Control.DragOver> manipulador de eventos para a direita `ListBox`, para determinar qual será a operação de arrastar com base no estado das teclas SHIFT, CTRL, ALT e CTRL + ALT. O local no `ListBox` onde ocorreria o descarte também é determinado durante a `DragOver` eventos. Se os dados para remover não são um `String`, em seguida, o <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> é definido como <xref:System.Windows.Forms.DragDropEffects?displayProperty=nameWithType>. Por fim, o status de menu é exibido no `DropLocationLabel` <xref:System.Windows.Forms.Label>.  
+  
+ Os dados para remover à direita `ListBox` é determinado no <xref:System.Windows.Forms.Control.DragDrop> manipulador de eventos e o `String` valor é adicionado no local apropriado no `ListBox`. Se a operação de arrastar é movido para fora dos limites do formulário, a operação de arrastar e soltar foi cancelada no <xref:System.Windows.Forms.Control.QueryContinueDrag> manipulador de eventos.  
+  
+ Esse trecho de código demonstra como usar o <xref:System.Windows.Forms.DragAction> enumeração. Consulte o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.Control.DoDragDrop#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CPP/form1.cpp#6)]
+ [!code-csharp[System.Windows.Forms.Control.DoDragDrop#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CS/form1.cs#6)]
+ [!code-vb[System.Windows.Forms.Control.DoDragDrop#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/VB/form1.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="Cancel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragAction Cancel = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragAction.Cancel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação é cancelada sem mensagem de soltar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Continue">
+      <MemberSignature Language="C#" Value="Continue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragAction Continue = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragAction.Continue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação continuará.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Drop">
+      <MemberSignature Language="C#" Value="Drop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragAction Drop = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragAction.Drop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação será interrompida ao soltar.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

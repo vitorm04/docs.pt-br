@@ -1,0 +1,113 @@
+<Type Name="EventLogPermissionEntry" FullName="System.Diagnostics.EventLogPermissionEntry">
+  <TypeSignature Language="C#" Value="public class EventLogPermissionEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit EventLogPermissionEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventLogPermissionEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define a menor unidade de uma permissão de segurança de acesso do código que é definida para um <see cref="T:System.Diagnostics.EventLog" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a segurança de acesso do código, consulte [Code Access Security](~/docs/framework/misc/code-access-security.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogPermissionEntry (System.Diagnostics.EventLogPermissionAccess permissionAccess, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.EventLogPermissionAccess permissionAccess, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntry.#ctor(System.Diagnostics.EventLogPermissionAccess,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccess" Type="System.Diagnostics.EventLogPermissionAccess" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccess">Uma combinação bit a bit dos valores <see cref="T:System.Diagnostics.EventLogPermissionAccess" />. O <see cref="P:System.Diagnostics.EventLogPermissionEntry.PermissionAccess" /> propriedade é definida para esse valor.</param>
+        <param name="machineName">O nome do computador em que os eventos devem ser lidos ou gravados. O <see cref="P:System.Diagnostics.EventLogPermissionEntry.MachineName" /> propriedade é definida para esse valor.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.EventLogPermissionEntry" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o aplicativo é executado em uma zona de alta confiança, solicitar permissão para a máquina local deve se referir ao nome de computador como COMPUTERNAME ou ".", em vez do nome completo do computador. Nome do computador completo não é aceito por motivos de segurança. Além disso, o nome do computador deve ser tratada como diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O nome do computador é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public string MachineName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogPermissionEntry.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do computador no qual ler ou gravar eventos.</summary>
+        <value>O nome do computador em que os eventos devem ser lidos ou gravados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o aplicativo é executado em uma zona de alta confiança, solicitar permissão para a máquina local deve se referir ao nome de computador como COMPUTERNAME ou ".", em vez do nome completo do computador. Nome do computador completo não é aceito por motivos de segurança. Além disso, o nome do computador deve ser tratada como diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionAccess">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.EventLogPermissionAccess PermissionAccess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.EventLogPermissionAccess PermissionAccess" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogPermissionEntry.PermissionAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os níveis de permissão de acesso usados na solicitação de permissões.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Diagnostics.EventLogPermissionAccess" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

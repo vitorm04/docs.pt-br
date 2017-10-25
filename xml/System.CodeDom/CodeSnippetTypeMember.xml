@@ -1,0 +1,123 @@
+<Type Name="CodeSnippetTypeMember" FullName="System.CodeDom.CodeSnippetTypeMember">
+  <TypeSignature Language="C#" Value="public class CodeSnippetTypeMember : System.CodeDom.CodeTypeMember" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeSnippetTypeMember extends System.CodeDom.CodeTypeMember" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeSnippetTypeMember" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeTypeMember</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um membro de um tipo usando um fragmento de código literal.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeSnippetTypeMember>pode representar um membro de um tipo usando um fragmento de código literal incluído diretamente na fonte sem modificação. Esse código pode ser incluído na declaração de tipo.  
+  
+ Um <xref:System.CodeDom.CodeSnippetTypeMember> armazena uma seção de código, exatamente em seu formato original, como uma cadeia de caracteres. O CodeDOM não converte fragmentos de código literal. Fragmentos de código literal são armazenados e de saída em seu formato original. Objetos de codeDOM que contêm código literal são fornecidos para que os desenvolvedores podem encapsular o código que já está no idioma de destino.  
+  
+ O <xref:System.CodeDom.CodeSnippetTypeMember.Text%2A> propriedade contém o código literal para o tipo de membro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso da <xref:System.CodeDom.CodeSnippetTypeMember> classe para armazenar código literal em um formato de cadeia de caracteres. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromMember%2A> método.  
+  
+ [!code-csharp[CodeDom_GenerateCodeFromMember#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_GenerateCodeFromMember/cs/program.cs#3)]
+ [!code-vb[CodeDom_GenerateCodeFromMember#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_GenerateCodeFromMember/vb/module1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeSnippetTypeMember ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeSnippetTypeMember.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeSnippetTypeMember" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeSnippetTypeMember (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeSnippetTypeMember.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O fragmento de código literal para o membro de tipo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeSnippetTypeMember" /> classe usando o texto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do <xref:System.CodeDom.CodeSnippetTypeMember.%23ctor%2A> construtor para criar uma instância do <xref:System.CodeDom.CodeSnippetTypeMember> classe. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromMember%2A> método.  
+  
+ [!code-csharp[CodeDom_GenerateCodeFromMember#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_GenerateCodeFromMember/cs/program.cs#3)]
+ [!code-vb[CodeDom_GenerateCodeFromMember#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_GenerateCodeFromMember/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeSnippetTypeMember.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o fragmento de código literal para o membro de tipo.</summary>
+        <value>O fragmento de código literal para o membro de tipo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

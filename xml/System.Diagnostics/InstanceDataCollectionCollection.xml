@@ -1,0 +1,229 @@
+<Type Name="InstanceDataCollectionCollection" FullName="System.Diagnostics.InstanceDataCollectionCollection">
+  <TypeSignature Language="C#" Value="public class InstanceDataCollectionCollection : System.Collections.DictionaryBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstanceDataCollectionCollection extends System.Collections.DictionaryBase" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.InstanceDataCollectionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.DictionaryBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma coleção fortemente tipada de objetos <see cref="T:System.Diagnostics.InstanceDataCollection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.InstanceDataCollectionCollection> classe representa a coleção retornada do <xref:System.Diagnostics.PerformanceCounterCategory.ReadCategory%2A> método. Esta coleção contém todos os dados de contador e instância. A coleção contém um <xref:System.Diagnostics.InstanceDataCollection> objeto para cada contador. Cada <xref:System.Diagnostics.InstanceDataCollection> objeto contém os dados de desempenho para todos os contadores para essa instância. Portanto, os dados forem indexados pelo nome do contador e, em seguida, pelo nome da instância.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os dados da instância para um determinado <xref:System.Diagnostics.PerformanceCounterCategory> no computador local. Exibe uma lista numerada de primeiro <xref:System.Diagnostics.PerformanceCounterCategory> nomes. Depois que o usuário insere o número de uma das categorias, o exemplo obtém o <xref:System.Diagnostics.InstanceDataCollectionCollection> para que <xref:System.Diagnostics.PerformanceCounterCategory>. Ele converte a coleção retornada pelo <xref:System.Diagnostics.InstanceDataCollectionCollection.Values%2A> propriedade para uma matriz de <xref:System.Diagnostics.InstanceDataCollection> objetos. O exemplo exibe os dados da instância associados a cada <xref:System.Diagnostics.InstanceData> de cada <xref:System.Diagnostics.InstanceDataCollection>.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.KeysValues#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/CS/instdatakeysvalues.cs#1)]
+ [!code-vb[System.Diagnostics.InstanceData.KeysValues#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/VB/instdatakeysvalues.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceDataCollectionCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.InstanceDataCollectionCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use PerformanceCounterCategory.ReadCategory()")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.InstanceDataCollectionCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string counterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string counterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.InstanceDataCollectionCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">O nome do contador de desempenho.</param>
+        <summary>Determina se uma coleção de dados de instância para o contador especificado (identificado por um do indexada <see cref="T:System.Diagnostics.InstanceDataCollection" /> objetos) existe na coleção.</summary>
+        <returns>
+          <see langword="true" />Se uma coleção de dados de instância que contém o contador especificado existir na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `counterName` parâmetro diferencia maiusculas de minúsculas.  
+  
+ Cada <xref:System.Diagnostics.InstanceDataCollection> objeto na coleção contém os dados de desempenho para todos os contadores para uma instância. Os dados forem indexados pelo nome do contador e, em seguida, pelo nome da instância. <xref:System.Diagnostics.InstanceDataCollectionCollection.Contains%2A>Retorna `true` se houver um <xref:System.Diagnostics.InstanceDataCollection> cujo contador associado com o nome do objeto especificado pelo `counterName` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir aceita um <xref:System.Diagnostics.PerformanceCounter> nome da categoria e o nome do contador na linha de comando. Obtém o <xref:System.Diagnostics.InstanceDataCollectionCollection> para o <xref:System.Diagnostics.PerformanceCounterCategory> e, em seguida, usa o <xref:System.Diagnostics.InstanceDataCollectionCollection.Contains%2A> método para determinar se o contador especificado existe. Se o contador de existir, o exemplo obtém associado <xref:System.Diagnostics.InstanceDataCollection> e exibe os nomes de instância da coleção.  
+  
+ [!code-csharp[System.Diagnostics.InstanceDataCollectionCollection.ItemContains#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceDataCollectionCollection.ItemContains/CS/instdatacolcolitermcontains.cs#2)]
+ [!code-vb[System.Diagnostics.InstanceDataCollectionCollection.ItemContains#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceDataCollectionCollection.ItemContains/VB/instdatacolcolitemcontains.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="counterName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Diagnostics.InstanceDataCollection[] counters, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Diagnostics.InstanceDataCollection[] counters, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.InstanceDataCollectionCollection.CopyTo(System.Diagnostics.InstanceDataCollection[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counters" Type="System.Diagnostics.InstanceDataCollection[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="counters">Uma matriz de <see cref="T:System.Diagnostics.InstanceDataCollection" /> instâncias (identificadas pelos contadores que eles contêm) para adicionar à coleção.</param>
+        <param name="index">O local no qual você deseja adicionar as novas instâncias.</param>
+        <summary>Copia uma matriz de <see cref="T:System.Diagnostics.InstanceDataCollection" /> instâncias à coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Diagnostics.InstanceDataCollectionCollection.CopyTo%2A> método para converter um <xref:System.Diagnostics.InstanceDataCollectionCollection> em uma matriz de <xref:System.Diagnostics.InstanceDataCollection> objetos. Cada elemento do <xref:System.Diagnostics.InstanceDataCollection> matriz é passada para uma função para processamento adicional.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.CopyTo#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/CS/instdatacopyto.cs#5)]
+ [!code-vb[System.Diagnostics.InstanceData.CopyTo#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/VB/instdatacopyto.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.InstanceDataCollection this[string counterName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.InstanceDataCollection Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.InstanceDataCollectionCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.InstanceDataCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">O nome do contador de desempenho.</param>
+        <summary>Obtém os dados da instância para o contador especificado.</summary>
+        <value>Um <see cref="T:System.Diagnostics.InstanceDataCollection" /> item pelo qual o <see cref="T:System.Diagnostics.InstanceDataCollectionCollection" /> objeto está sendo indexado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `counterName` parâmetro diferencia maiusculas de minúsculas.  
+  
+ Cada <xref:System.Diagnostics.InstanceDataCollection> objeto na coleção contém os dados de desempenho para todos os contadores para uma instância. Os dados forem indexados pelo nome do contador e, em seguida, pelo nome da instância. O indexador usa o `counterName` parâmetro para percorrer os contadores associados a esta coleção de dados da instância.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir aceita um <xref:System.Diagnostics.PerformanceCounter> nome da categoria e o nome do contador na linha de comando. Obtém o <xref:System.Diagnostics.InstanceDataCollectionCollection> para o <xref:System.Diagnostics.PerformanceCounterCategory>. Em seguida, se o <xref:System.Diagnostics.PerformanceCounter> existir, o exemplo usa o <xref:System.Diagnostics.InstanceDataCollectionCollection.Item%2A> propriedade (referenciado como um indexador) para obter o associado <xref:System.Diagnostics.InstanceDataCollection> e exibe os nomes de instância da coleção.  
+  
+ [!code-csharp[System.Diagnostics.InstanceDataCollectionCollection.ItemContains#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceDataCollectionCollection.ItemContains/CS/instdatacolcolitermcontains.cs#2)]
+ [!code-vb[System.Diagnostics.InstanceDataCollectionCollection.ItemContains#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceDataCollectionCollection.ItemContains/VB/instdatacolcolitemcontains.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="counterName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.InstanceDataCollectionCollection.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as chaves de registro de objeto e um contador para os objetos associados a esta coleção de dados de instância.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que representa um conjunto de chaves do registro específicas do objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada componente de software cria chaves para seus objetos e contadores quando ele está instalado e grava dados do contador durante sua execução. Você pode acessar esses dados como acesso a quaisquer outros dados de registro. No entanto, apesar de você usa o registro para coletar dados de desempenho, os dados não são armazenados no banco de dados do registro. Em vez disso, o sistema de coleta os dados dos gerenciadores de objetos de sistema apropriado.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Diagnostics.InstanceDataCollectionCollection.Keys%2A> propriedade de um <xref:System.Diagnostics.InstanceDataCollectionCollection> para retornar uma coleção de nomes de contador, ele converte em uma matriz de <xref:System.String>. Ele gera uma matriz de <xref:System.Diagnostics.InstanceDataCollection> objetos usando o <xref:System.Diagnostics.InstanceDataCollectionCollection.Values%2A> propriedade. Para cada elemento na matriz de nomes de contador, ele exibe o nome e chama uma função para processar associado <xref:System.Diagnostics.InstanceDataCollection>.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.KeysValues#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/CS/instdatakeysvalues.cs#4)]
+ [!code-vb[System.Diagnostics.InstanceData.KeysValues#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/VB/instdatakeysvalues.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.InstanceDataCollectionCollection.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância de valores de dados que compõem a coleção de instâncias do contador.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que representa instâncias do contador e seus valores de dados associados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Diagnostics.InstanceDataCollectionCollection.Values%2A> propriedade de um <xref:System.Diagnostics.InstanceDataCollectionCollection> para retornar uma coleção de <xref:System.Diagnostics.InstanceDataCollection> objetos, que converte em uma matriz. Ele gera uma matriz de nomes de contadores usando o <xref:System.Diagnostics.InstanceDataCollectionCollection.Keys%2A> propriedade. Para cada elemento na matriz de <xref:System.Diagnostics.InstanceDataCollection> objetos, ele exibe o nome do contador associado e chama uma função para processar o <xref:System.Diagnostics.InstanceDataCollection>.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.KeysValues#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/CS/instdatakeysvalues.cs#4)]
+ [!code-vb[System.Diagnostics.InstanceData.KeysValues#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.KeysValues/VB/instdatakeysvalues.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

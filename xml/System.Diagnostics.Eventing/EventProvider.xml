@@ -1,0 +1,742 @@
+<Type Name="EventProvider" FullName="System.Diagnostics.Eventing.EventProvider">
+  <TypeSignature Language="C#" Value="public class EventProvider : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventProvider extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.EventProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Use essa classe para gravar eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para consumir eventos gravados usando o <xref:System.Diagnostics.Eventing.EventProvider.WriteEvent%2A> e <xref:System.Diagnostics.Eventing.EventProvider.WriteTransferEvent%2A> métodos, os eventos devem ser definidos em um manifesto; eventos gravados usando o <xref:System.Diagnostics.Eventing.EventProvider.WriteMessageEvent%2A> método não exigem um manifesto.  
+  
+ Eventos podem conter os seguintes tipos de dados gerenciados:  
+  
+-   bool  
+  
+-   Boolean  
+  
+-   byte  
+  
+-   char  
+  
+-   decimal  
+  
+-   double  
+  
+-   float  
+  
+-   GUID  
+  
+-   int  
+  
+-   IntPtr  
+  
+-   long  
+  
+-   sbyte  
+  
+-   short  
+  
+-   cadeia de caracteres  
+  
+-   uint  
+  
+-   UInt64  
+  
+ Se um evento em seu manifesto usa o `Boolean` em tipo, você não pode gravar o elemento de dados usando um `Boolean` tipo de dados no seu código gerenciado. O `Boolean` no tipo em seu manifesto espera um valor de 4 bytes e um `Boolean` tipo de dados em código gerenciado é de 1 byte. Em vez disso, você deve usar um `int` tipo de dados para gravar o valor. Se você desejar fazer uma `Boolean` valor, use o UInt8 no tipo em seu manifesto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventProvider (Guid providerGuid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid providerGuid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="providerGuid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="providerGuid">GUID que identifica exclusivamente o provedor.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.Eventing.EventProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Registra o provedor. Para remover o registro quando terminar, chame o <xref:System.Diagnostics.Eventing.EventProvider.Close%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InsufficientMemoryException">Não há memória suficiente para concluir a operação.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">As classes de <see cref="N:System.Diagnostics.Eventing" /> trabalho namespace somente no Windows Vista.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="providerGuid" /> não pode ser nulo.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Um erro retornado pelo subsistema ETW.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o registro do provedor do subsistema de ETW e libera todos os recursos não gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar este método quando terminar em vez de esperar o sistema descartar os recursos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Um erro retornado pelo subsistema ETW.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateActivityId">
+      <MemberSignature Language="C#" Value="public static Guid CreateActivityId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Guid CreateActivityId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.CreateActivityId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um identificador de atividade exclusivo para o provedor.</summary>
+        <returns>Um Guid exclusivo que você usa ao chamar o <see cref="M:System.Diagnostics.Eventing.EventProvider.SetActivityId(System.Guid@)" /> método para definir o identificador da atividade para o provedor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um método estático.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados por este <see cref="T:System.Diagnostics.Eventing.EventProvider" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Esse parâmetro é ignorado por esse método, já que não existem recursos não gerenciados.</param>
+        <summary>Libera os recursos usados por este <see cref="T:System.Diagnostics.Eventing.EventProvider" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~EventProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera recursos e realiza a limpeza interna antes da instância é recuperada pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLastWriteEventError">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.Eventing.EventProvider.WriteEventErrorCode GetLastWriteEventError ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Diagnostics.Eventing.EventProvider/WriteEventErrorCode GetLastWriteEventError() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.GetLastWriteEventError" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.EventProvider+WriteEventErrorCode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o último erro associado a uma falha de gravação do evento.</summary>
+        <returns>Use o valor para determinar a causa de uma falha de gravação do evento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.Eventing.EventProvider.WriteEvent%2A>, <xref:System.Diagnostics.Eventing.EventProvider.WriteMessageEvent%2A>, e <xref:System.Diagnostics.Eventing.EventProvider.WriteTransferEvent%2A> métodos para definir esse valor se houver falha na gravação do evento.  
+  
+ Este é um método estático.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEnabled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.IsEnabled" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se qualquer sessão habilitado o provedor, independentemente dos valores de nível e a palavra-chave usada para habilitar o provedor.</summary>
+        <returns>É <see langword="true" /> se o provedor estiver habilitada para qualquer sessão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, um provedor não chama esse método para determinar se o provedor foi habilitado por uma sessão; o provedor simplesmente grava o evento e ETW determina se o evento é registrado para a sessão. Um provedor pode querer chamar essa função se o provedor precisa para executar o trabalho extra para gerar o evento. Nesse caso, chamar essa função primeiro pode salvar tempo e recursos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled (byte level, long keywords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEnabled(unsigned int8 level, int64 keywords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.IsEnabled(System.Byte,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="level" Type="System.Byte" />
+        <Parameter Name="keywords" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="level">Nível de detalhe incluído no evento.</param>
+        <param name="keywords">Máscara de bits que especifica a categoria de evento. Essa máscara deve ser a mesma máscara de palavra-chave que é definida no manifesto para o evento.</param>
+        <summary>Determina se qualquer sessão está solicitando o evento especificado do provedor.</summary>
+        <returns>É <see langword="true" /> se qualquer sessão está solicitando o evento especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, um provedor não chama esse método para determinar se uma sessão solicitado o evento especificado; o provedor simplesmente grava o evento e ETW determina se o evento é registrado para uma sessão. Um provedor pode querer chamar essa função se o provedor precisa para executar o trabalho extra para gerar o evento. Nesse caso, a chamar essa função primeiro para determinar se uma sessão solicitada o evento ou não, pode salvar a tempo e recursos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetActivityId">
+      <MemberSignature Language="C#" Value="public static void SetActivityId (ref Guid id);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetActivityId(valuetype System.Guid&amp; id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.SetActivityId(System.Guid@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Guid&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="id">Um identificador de atividade exclusivo que o <see cref="M:System.Diagnostics.Eventing.EventProvider.CreateActivityId" /> método retorna.</param>
+        <summary>Define o identificador da atividade atual usado pelo <see cref="Overload:System.Diagnostics.Eventing.EventProvider.WriteEvent" /> métodos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador é armazenado no contexto de thread.  
+  
+ Observe que, na versão 3.5 do .NET framework, você precisava definir a `id` parâmetro deste método e o <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> valor da propriedade com o mesmo valor de identificador. No entanto, na versão 4.0 do framework, o <xref:System.Diagnostics.Eventing.EventProvider.SetActivityId%2A> método define o identificador de correlação da atividade automaticamente para você.  
+  
+ Este é um método estático.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="WriteEvent">
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Grava um evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esses métodos se você usar um manifesto para definir seus eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="WriteEvent">
+      <MemberSignature Language="C#" Value="public bool WriteEvent (ref System.Diagnostics.Eventing.EventDescriptor eventDescriptor, params object[] eventPayload);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteEvent(valuetype System.Diagnostics.Eventing.EventDescriptor&amp; eventDescriptor, object[] eventPayload) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.WriteEvent(System.Diagnostics.Eventing.EventDescriptor@,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventDescriptor" Type="System.Diagnostics.Eventing.EventDescriptor&amp;" RefType="ref" />
+        <Parameter Name="eventPayload" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventDescriptor">Uma instância de <see cref="T:System.Diagnostics.Eventing.EventDescriptor" /> que identifica o evento para gravação.</param>
+        <param name="eventPayload">Uma matriz de objetos que contêm os dados de evento para gravação. O objeto deve ser na ordem especificada no manifesto. A matriz é limitada a 32 objetos, dos quais somente oito podem ser cadeias de caracteres. O tamanho máximo de dados para o evento é limitado a 64 KB, menos o tamanho dos cabeçalhos de eventos. O tamanho do evento é menor, se o tamanho do buffer da sessão é menor e a sessão inclui itens de dados estendidos com o evento.  
+  
+ Este parâmetro pode ser nulo.</param>
+        <summary>Grava um evento. Os dados de evento são especificados como uma matriz de objetos.</summary>
+        <returns>É <see langword="true" /> se o evento é escrito; caso contrário, <see langword="false" />. Se for false, chame o <see cref="M:System.Diagnostics.Eventing.EventProvider.GetLastWriteEventError" /> método para determinar a causa da falha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você chamar o <xref:System.Diagnostics.Eventing.EventProvider.SetActivityId%2A> método para especificar um identificador de atividade para o evento, esse método recupera o identificador do contexto de thread e inclui-lo com o evento.  
+  
+ Se não há suporte para o tipo de objeto, o método grava o valor do objeto <xref:System.Object.ToString%2A?displayProperty=nameWithType> método na carga. Para obter uma lista de tipos de objetos com suporte, consulte os comentários para o <xref:System.Diagnostics.Eventing.EventProvider> classe.  
+  
+   
+  
+## Examples  
+  
+```  
+private static Guid providerId = new Guid("{FB33FDA8-45FB-4df0-8A55-EEB4BA88E7E7}");  
+  
+enum Keyword  
+{  
+    Read = 0x1,  
+    Write = 0x2,  
+    Local = 0x4,  
+    Remote = 0x8  
+}  
+  
+enum Level  
+{  
+    Critical = 1,  
+    Error,  
+    Warning,  
+    Information,  
+    Verbose  
+}  
+  
+    EventProvider provider = new EventProvider(providerId);  
+    EventDescriptor readEvent;  
+    string path = @"<PATHGOESHERE>";  
+    UInt64 bytesRead = <ASSIGNVALUE>;  
+  
+    if (provider.IsEnabled(Level.Information, (long)Keyword.Read))  
+    {  
+        unchecked  
+        {  
+            readEvent = new EventDescriptor(0x1, 0x0, 0x10, 0x4, 0x0, 0x0, (long)0x8000000000000005);  
+        }  
+  
+        if (!provider.WriteEvent(ref readEvent, new object[] { path, bytesRead }))  
+            Console.WriteLine(EventProvider.GetLastWriteEventError());  
+    }  
+  
+    provider.Close();  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="eventPayload" /> parâmetro contém muitos objetos ou cadeias de caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEvent">
+      <MemberSignature Language="C#" Value="public bool WriteEvent (ref System.Diagnostics.Eventing.EventDescriptor eventDescriptor, string data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteEvent(valuetype System.Diagnostics.Eventing.EventDescriptor&amp; eventDescriptor, string data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.WriteEvent(System.Diagnostics.Eventing.EventDescriptor@,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventDescriptor" Type="System.Diagnostics.Eventing.EventDescriptor&amp;" RefType="ref" />
+        <Parameter Name="data" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventDescriptor">Uma instância de <see cref="T:System.Diagnostics.Eventing.EventDescriptor" /> que identifica o evento para gravação.</param>
+        <param name="data">A cadeia de caracteres para gravar como os dados do evento.</param>
+        <summary>Grava um evento. Os dados de evento são especificados como uma cadeia de caracteres.</summary>
+        <returns>É <see langword="true" /> se o evento é escrito; caso contrário, <see langword="false" />. Se for false, chame o <see cref="M:System.Diagnostics.Eventing.EventProvider.GetLastWriteEventError" /> método para determinar a causa da falha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você chamar o <xref:System.Diagnostics.Eventing.EventProvider.SetActivityId%2A> método para especificar um identificador de atividade para o evento, esse método recupera o identificador do contexto de thread e inclui-lo com o evento.  
+  
+ O comprimento máximo da cadeia de caracteres é limitado a 64 KB, menos o tamanho dos cabeçalhos de eventos. O tamanho do evento é menor, se o tamanho do buffer da sessão é menor e a sessão inclui itens de dados estendidos com o evento.  
+  
+   
+  
+## Examples  
+  
+```  
+private static Guid providerId = new Guid("{FB33FDA8-45FB-4df0-8A55-EEB4BA88E7E7}");  
+  
+EventProvider provider = new EventProvider(providerId);  
+EventDescriptor writeEvent;  
+  
+if (provider.IsEnabled())  
+{  
+     unchecked  
+     {  
+          writeEvent = new EventDescriptor(0x2, 0x0, 0x10, 0x3, 0x0, 0x0, (long)0x8000000000000006);  
+     }  
+  
+     if (!provider.WriteEvent(ref writeEvent, "Write event."))  
+          Console.WriteLine(EventProvider.GetLastWriteEventError());  
+}  
+  
+provider.Close();  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="data" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEvent">
+      <MemberSignature Language="C#" Value="protected bool WriteEvent (ref System.Diagnostics.Eventing.EventDescriptor eventDescriptor, int dataCount, IntPtr data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool WriteEvent(valuetype System.Diagnostics.Eventing.EventDescriptor&amp; eventDescriptor, int32 dataCount, native int data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.WriteEvent(System.Diagnostics.Eventing.EventDescriptor@,System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventDescriptor" Type="System.Diagnostics.Eventing.EventDescriptor&amp;" RefType="ref" />
+        <Parameter Name="dataCount" Type="System.Int32" />
+        <Parameter Name="data" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="eventDescriptor">Uma instância de <see cref="T:System.Diagnostics.Eventing.EventDescriptor" /> que identifica o evento para gravação.</param>
+        <param name="dataCount">Tamanho dos dados do evento ao qual o <c>dados</c> pontos de parâmetro. O tamanho de dados de evento máximo é limitado a 64 KB, menos o tamanho dos cabeçalhos de eventos. O tamanho do evento é menor, se o tamanho do buffer da sessão é menor e a sessão inclui itens de dados estendidos com o evento.</param>
+        <param name="data">Ponteiro para os dados de evento para gravação.</param>
+        <summary>Grava um evento. Os dados de evento são especificados como um bloco de memória.</summary>
+        <returns>É <see langword="true" /> se o evento é escrito; caso contrário, <see langword="false" />. Se for false, chame o <see cref="M:System.Diagnostics.Eventing.EventProvider.GetLastWriteEventError" /> método para determinar a causa da falha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você chamar o <xref:System.Diagnostics.Eventing.EventProvider.SetActivityId%2A> método para especificar um identificador de atividade para o evento, esse método recupera o identificador do contexto de thread e inclui-lo com o evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="WriteMessageEvent">
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Grava um evento que contém uma cadeia de caracteres como seus dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses métodos não exigem um manifesto para consumir o evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="WriteMessageEvent">
+      <MemberSignature Language="C#" Value="public bool WriteMessageEvent (string eventMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteMessageEvent(string eventMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.WriteMessageEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventMessage">Cadeia de caracteres para gravar como os dados do evento.</param>
+        <summary>Grava um evento que contém uma cadeia de caracteres como seus dados.</summary>
+        <returns>É <see langword="true" /> se o evento é escrito; caso contrário, <see langword="false" />. Se for false, chame o <see cref="M:System.Diagnostics.Eventing.EventProvider.GetLastWriteEventError" /> método para determinar a causa da falha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comprimento máximo da cadeia de caracteres é limitado a 64 KB, menos o tamanho dos cabeçalhos de eventos. O tamanho do evento é menor, se o tamanho do buffer da sessão é menor e a sessão inclui itens de dados estendidos com o evento.  
+  
+   
+  
+## Examples  
+  
+```  
+if (!provider.WriteMessageEvent("Event string."))  
+    Console.WriteLine(EventProvider.GetLastWriteEventError());  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="eventMessage" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteMessageEvent">
+      <MemberSignature Language="C#" Value="public bool WriteMessageEvent (string eventMessage, byte eventLevel, long eventKeywords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteMessageEvent(string eventMessage, unsigned int8 eventLevel, int64 eventKeywords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.WriteMessageEvent(System.String,System.Byte,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventMessage" Type="System.String" />
+        <Parameter Name="eventLevel" Type="System.Byte" />
+        <Parameter Name="eventKeywords" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="eventMessage">Cadeia de caracteres para gravar como os dados do evento.</param>
+        <param name="eventLevel">Nível de detalhe incluído no evento. Se o provedor usa um manifesto para definir o evento, defina esse valor para o mesmo nível definido no manifesto.</param>
+        <param name="eventKeywords">Máscara de bits que especifica a categoria de evento. Se o provedor usa um manifesto para definir o evento, defina esse valor para a mesma máscara de palavra-chave definida no manifesto.</param>
+        <summary>Grava um evento que contém uma cadeia de caracteres como seus dados, se o valor de nível e a palavra-chave corresponde os eventos solicitados pela sessão.</summary>
+        <returns>É <see langword="true" /> se o evento é escrito; caso contrário, <see langword="false" />. Se for false, chame o <see cref="M:System.Diagnostics.Eventing.EventProvider.GetLastWriteEventError" /> método para determinar a causa da falha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comprimento máximo da cadeia de caracteres é limitado a 64 KB, menos o tamanho dos cabeçalhos de eventos. O tamanho do evento é menor, se o tamanho do buffer da sessão é menor e a sessão inclui itens de dados estendidos com o evento.  
+  
+   
+  
+## Examples  
+  
+```  
+// Calling this method with level and keyword set to zero is the same  
+// as calling WriteMessageEvent(string); the event is always written.  
+if (!provider.WriteMessageEvent("Event string.", 0, 0))  
+    Console.WriteLine(EventProvider.GetLastWriteEventError());  
+  
+// Event is written if the level value of the session is less than or equal to 3, and bit 1 of the session  
+// keyword bit-mask is set.  
+if (!provider.WriteMessageEvent("Event string.", 3, 2))  
+    Console.WriteLine(EventProvider.GetLastWriteEventError());  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="eventMessage" /> for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTransferEvent">
+      <MemberSignature Language="C#" Value="public bool WriteTransferEvent (ref System.Diagnostics.Eventing.EventDescriptor eventDescriptor, Guid relatedActivityId, params object[] eventPayload);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteTransferEvent(valuetype System.Diagnostics.Eventing.EventDescriptor&amp; eventDescriptor, valuetype System.Guid relatedActivityId, object[] eventPayload) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.WriteTransferEvent(System.Diagnostics.Eventing.EventDescriptor@,System.Guid,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventDescriptor" Type="System.Diagnostics.Eventing.EventDescriptor&amp;" RefType="ref" />
+        <Parameter Name="relatedActivityId" Type="System.Guid" />
+        <Parameter Name="eventPayload" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventDescriptor">Uma instância de <see cref="T:System.Diagnostics.Eventing.EventDescriptor" /> que identifica o evento para gravação.</param>
+        <param name="relatedActivityId">Identificador de atividade do componente anterior. Use esse parâmetro para vincular os eventos do componente para eventos do componente anterior.</param>
+        <param name="eventPayload">Uma matriz de objetos que contêm os dados de evento para gravação. Os dados devem estar na ordem especificada no manifesto. A matriz é limitada a 32 objetos, dos quais somente oito podem ser cadeias de caracteres. O tamanho máximo de dados para o evento é limitado a 64 KB, menos o tamanho dos cabeçalhos de eventos. O tamanho do evento é menor, se o tamanho do buffer da sessão é menor e a sessão inclui itens de dados estendidos com o evento.</param>
+        <summary>Vincula eventos durante o rastreamento de eventos em um cenário de ponta a ponta. Os dados de evento são especificados como uma matriz de objetos.</summary>
+        <returns>É <see langword="true" /> se o evento é escrito; caso contrário, <see langword="false" />. Se for false, chame o <see cref="M:System.Diagnostics.Eventing.EventProvider.GetLastWriteEventError" /> método para determinar a causa da falha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método usa a ID de atividade definida no contexto de thread para identificar esse componente. Para definir a ID de atividade, chame o <xref:System.Diagnostics.Eventing.EventProvider.SetActivityId%2A> método.  
+  
+ Se você usar o <xref:System.Diagnostics.Trace> classe, você não usar o <xref:System.Diagnostics.Eventing.EventProvider.SetActivityId%2A> método para especificar a ID de atividade. Em vez disso, acessar o <xref:System.Diagnostics.Trace.CorrelationManager%2A> propriedade para obter o <xref:System.Diagnostics.CorrelationManager> objeto. Em seguida, defina o <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> propriedade à ID da atividade. Você também deve definir o `relatedActivityId` para um <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Se <paramref name="eventPayload" /> contém muitos objetos ou cadeias de caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTransferEvent">
+      <MemberSignature Language="C#" Value="protected bool WriteTransferEvent (ref System.Diagnostics.Eventing.EventDescriptor eventDescriptor, Guid relatedActivityId, int dataCount, IntPtr data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool WriteTransferEvent(valuetype System.Diagnostics.Eventing.EventDescriptor&amp; eventDescriptor, valuetype System.Guid relatedActivityId, int32 dataCount, native int data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProvider.WriteTransferEvent(System.Diagnostics.Eventing.EventDescriptor@,System.Guid,System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventDescriptor" Type="System.Diagnostics.Eventing.EventDescriptor&amp;" RefType="ref" />
+        <Parameter Name="relatedActivityId" Type="System.Guid" />
+        <Parameter Name="dataCount" Type="System.Int32" />
+        <Parameter Name="data" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="eventDescriptor">Uma instância de <see cref="T:System.Diagnostics.Eventing.EventDescriptor" /> que identifica o evento para gravação.</param>
+        <param name="relatedActivityId">Identificador de atividade do componente anterior. Use esse parâmetro para vincular os eventos do componente para eventos do componente anterior.</param>
+        <param name="dataCount">Tamanho dos dados do evento ao qual o <c>dados</c> pontos de parâmetro. O tamanho de dados de evento máximo é limitado a 64 KB, menos o tamanho dos cabeçalhos de eventos. O tamanho do evento é menor, se o tamanho do buffer da sessão é menor e a sessão inclui itens de dados estendidos com o evento.</param>
+        <param name="data">Ponteiro para os dados de evento para gravação.</param>
+        <summary>Vincula eventos durante o rastreamento de eventos em um cenário de ponta a ponta. Os dados de evento são especificados como um bloco de memória.</summary>
+        <returns>É <see langword="true" /> se o evento é escrito; caso contrário, <see langword="false" />. Se for false, chame o <see cref="M:System.Diagnostics.Eventing.EventProvider.GetLastWriteEventError" /> método para determinar a causa da falha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método usa a ID de atividade definida no contexto de thread para identificar esse componente. Para definir a ID de atividade, chame o <xref:System.Diagnostics.Eventing.EventProvider.SetActivityId%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

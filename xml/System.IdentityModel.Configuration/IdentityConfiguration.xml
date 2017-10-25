@@ -1,0 +1,791 @@
+<Type Name="IdentityConfiguration" FullName="System.IdentityModel.Configuration.IdentityConfiguration">
+  <TypeSignature Language="C#" Value="public class IdentityConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IdentityConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Configuration.IdentityConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define a coleção de propriedades configuráveis que controlam o comportamento do Windows Identity Foundation.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentityConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityConfiguration.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Configuration.IdentityConfiguration" />. As configurações são carregadas de configuração padrão, se ele existir.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores de propriedade são carregados sem o nome `<identityConfiguration>` elemento no arquivo de configuração, se esse elemento existir; caso contrário, propriedades são definidas para seus valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentityConfiguration (bool loadConfig);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool loadConfig) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityConfiguration.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="loadConfig" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="loadConfig">
+          <see langword="true" />para carregar as configurações do arquivo de configuração; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Configuration.IdentityConfiguration" /> classe usando um valor que especifica se devem carregar as configurações da configuração padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `loadConfig` é `true`, valores de propriedade são carregados sem o nome `<identityConfiguration>` elemento no arquivo de configuração; caso contrário, as propriedades são definidas para seus valores padrão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="loadConfig" />é <see langword="true" />, mas não há nenhum <see langword="&lt;system.identityModel&gt;" /> elemento de configuração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentityConfiguration (System.Security.Cryptography.X509Certificates.X509Certificate2 serviceCertificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 serviceCertificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityConfiguration.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceCertificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="serviceCertificate">O certificado de serviço. Define a propriedade <see cref="P:System.IdentityModel.Configuration.IdentityConfiguration.ServiceCertificate" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Configuration.IdentityConfiguration" /> classe que tem o certificado de serviço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores de propriedade são carregados sem o nome `<identityConfiguration>` elemento no arquivo de configuração, se esse elemento existir; caso contrário, propriedades são definidas para seus valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentityConfiguration (string identityConfigurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identityConfigurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityConfiguration.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identityConfigurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identityConfigurationName">O nome do <see langword="&lt;identityConfiguration&gt;" /> elemento do qual as configurações devem ser carregados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Configuration.IdentityConfiguration" />. As configurações são carregadas da configuração nomeada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se este construtor é chamado de uma seção de configuração System. IdentityModel com o nome fornecido deve existir no arquivo de configuração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há nenhum <see langword="&lt;system.identityModel&gt;" /> elemento de configuração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentityConfiguration (bool loadConfig, System.Security.Cryptography.X509Certificates.X509Certificate2 serviceCertificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool loadConfig, class System.Security.Cryptography.X509Certificates.X509Certificate2 serviceCertificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityConfiguration.#ctor(System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="loadConfig" Type="System.Boolean" />
+        <Parameter Name="serviceCertificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="loadConfig">
+          <see langword="true" />para carregar as configurações do arquivo de configuração; Caso contrário, <see langword="false" />.</param>
+        <param name="serviceCertificate">O certificado de serviço. Define a propriedade <see cref="P:System.IdentityModel.Configuration.IdentityConfiguration.ServiceCertificate" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Configuration.IdentityConfiguration" /> classe que tem o certificado de serviço especificado. Configurações opcionalmente estiver carregando a configuração padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `loadConfig` é `true`, valores de propriedade são carregados sem o nome `<identityConfiguration>` elemento no arquivo de configuração; caso contrário, as propriedades são definidas para seus valores padrão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="loadConfig" />é <see langword="true" />, mas não há nenhum <see langword="&lt;system.identityModel&gt;" /> elemento de configuração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IdentityConfiguration (string identityConfigurationName, System.Security.Cryptography.X509Certificates.X509Certificate2 serviceCertificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identityConfigurationName, class System.Security.Cryptography.X509Certificates.X509Certificate2 serviceCertificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityConfiguration.#ctor(System.String,System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identityConfigurationName" Type="System.String" />
+        <Parameter Name="serviceCertificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="identityConfigurationName">O nome do <see langword="&lt;service&gt;" /> é o elemento de configuração a ser carregado</param>
+        <param name="serviceCertificate">O certificado de serviço. Define a propriedade <see cref="P:System.IdentityModel.Configuration.IdentityConfiguration.ServiceCertificate" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Configuration.IdentityConfiguration" /> classe que tem o certificado de serviço especificado, ao carregar a configuração nomeada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Não há nenhum <see langword="&lt;System.IdentityModel&gt;" /> elemento de configuração</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AudienceRestriction">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.AudienceRestriction AudienceRestriction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.AudienceRestriction AudienceRestriction" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.AudienceRestriction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.AudienceRestriction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o configurado <see cref="T:System.IdentityModel.Tokens.AudienceRestriction" />.</summary>
+        <value>Configurado <see cref="T:System.IdentityModel.Tokens.AudienceRestriction" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caches">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Configuration.IdentityModelCaches Caches { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Configuration.IdentityModelCaches Caches" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.Caches" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Configuration.IdentityModelCaches</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o configurado <see cref="T:System.IdentityModel.Configuration.IdentityModelCaches" />.</summary>
+        <value>Os caches configurados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Configuration.IdentityModelCaches> contém o cache de reprodução de token e o cache de token de sessão que estão configurados para essa instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateValidationMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.X509CertificateValidationMode CertificateValidationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Security.X509CertificateValidationMode CertificateValidationMode" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.CertificateValidationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.X509CertificateValidationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de validação de certificado usado por manipuladores para validar certificados do emissor.</summary>
+        <value>O modo de validação de certificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateValidator">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.X509CertificateValidator CertificateValidator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.X509CertificateValidator CertificateValidator" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.CertificateValidator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.X509CertificateValidator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o validador de certificado usado pelo manipuladores para validar certificados do emissor.</summary>
+        <value>O validador de certificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimsAuthenticationManager">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsAuthenticationManager ClaimsAuthenticationManager { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsAuthenticationManager ClaimsAuthenticationManager" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsAuthenticationManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o Gerenciador de autenticação de declarações. O padrão é uma instância do <see cref="T:System.Security.Claims.ClaimsAuthenticationManager" /> classe.</summary>
+        <value>O Gerenciador de autenticação de declarações.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Uma tentativa de definir a propriedade como <see langword="null" /> ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimsAuthorizationManager">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsAuthorizationManager ClaimsAuthorizationManager { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsAuthorizationManager ClaimsAuthorizationManager" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsAuthorizationManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o Gerenciador de autorização de declarações.</summary>
+        <value>O Gerenciador de autorização de declarações.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Uma tentativa de definir a propriedade como <see langword="null" /> ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCertificateValidationMode">
+      <MemberSignature Language="C#" Value="public static readonly System.ServiceModel.Security.X509CertificateValidationMode DefaultCertificateValidationMode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.ServiceModel.Security.X509CertificateValidationMode DefaultCertificateValidationMode" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Configuration.IdentityConfiguration.DefaultCertificateValidationMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.X509CertificateValidationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O modo de validação do certificado padrão x. 509, <see cref="F:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultIssuerNameRegistryType">
+      <MemberSignature Language="C#" Value="public static readonly Type DefaultIssuerNameRegistryType;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Type DefaultIssuerNameRegistryType" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Configuration.IdentityConfiguration.DefaultIssuerNameRegistryType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tipo de registro de nome do emissor padrão; o <see cref="T:System.Type" /> do <see cref="T:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMaxClockSkew">
+      <MemberSignature Language="C#" Value="public static readonly TimeSpan DefaultMaxClockSkew;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan DefaultMaxClockSkew" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Configuration.IdentityConfiguration.DefaultMaxClockSkew" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Distorção máxima do relógio padrão; 5 minutos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRevocationMode">
+      <MemberSignature Language="C#" Value="public static readonly System.Security.Cryptography.X509Certificates.X509RevocationMode DefaultRevocationMode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Security.Cryptography.X509Certificates.X509RevocationMode DefaultRevocationMode" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Configuration.IdentityConfiguration.DefaultRevocationMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509RevocationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O modo de revogação de x. 509 padrão; <see cref="F:System.Security.Cryptography.X509Certificates.X509RevocationMode.Online" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultServiceName">
+      <MemberSignature Language="C#" Value="public const string DefaultServiceName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DefaultServiceName" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Configuration.IdentityConfiguration.DefaultServiceName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do serviço padrão; uma cadeia de caracteres vazia.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTrustedStoreLocation">
+      <MemberSignature Language="C#" Value="public static readonly System.Security.Cryptography.X509Certificates.StoreLocation DefaultTrustedStoreLocation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Security.Cryptography.X509Certificates.StoreLocation DefaultTrustedStoreLocation" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Configuration.IdentityConfiguration.DefaultTrustedStoreLocation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O local de armazenamento padrão confiável para certificados; <see cref="F:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetectReplayedTokens">
+      <MemberSignature Language="C#" Value="public bool DetectReplayedTokens { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DetectReplayedTokens" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.DetectReplayedTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor na configuração do manipulador padrão que indica se os manipuladores devem detectar tokens reproduzidos.</summary>
+        <value>
+          <see langword="true" />Se os manipuladores devem detectar tokens reproduzidos; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityConfiguration.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza as propriedades no <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" /> objetos para o <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollection" /> objetos contidos no <see cref="P:System.IdentityModel.Configuration.IdentityConfiguration.SecurityTokenHandlerCollectionManager" /> para ser consistente com os valores de propriedade neste <see cref="T:System.IdentityModel.Configuration.IdentityConfiguration" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método deve ser chamado antes de usar os manipuladores de token para processar tokens. O <xref:System.IdentityModel.Configuration.IdentityConfiguration.SecurityTokenHandlerCollectionManager%2A> propriedade especifica o <xref:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager> que contém os manipuladores de token de segurança configurados para essa instância.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Esse método é chamado mais de uma vez.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitialized">
+      <MemberSignature Language="C#" Value="public virtual bool IsInitialized { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitialized" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.IsInitialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="M:System.IdentityModel.Configuration.IdentityConfiguration.Initialize" /> método foi chamado.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="M:System.IdentityModel.Configuration.IdentityConfiguration.Initialize" /> método foi chamado; caso contrário <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerNameRegistry">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.IssuerNameRegistry IssuerNameRegistry { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.IssuerNameRegistry IssuerNameRegistry" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.IssuerNameRegistry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.IssuerNameRegistry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o emissor do registro do nome usado para resolver nomes de emissor.</summary>
+        <value>O registro de nome do emissor.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Uma tentativa de definir a propriedade como <see langword="null" /> ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerTokenResolver">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.SecurityTokenResolver IssuerTokenResolver { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.SecurityTokenResolver IssuerTokenResolver" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.IssuerTokenResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o resolvedor de token do emissor.</summary>
+        <value>O resolvedor de token do emissor.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Uma tentativa de definir a propriedade como <see langword="null" /> ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadConfiguration">
+      <MemberSignature Language="C#" Value="protected void LoadConfiguration (System.IdentityModel.Configuration.IdentityConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void LoadConfiguration(class System.IdentityModel.Configuration.IdentityConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityConfiguration.LoadConfiguration(System.IdentityModel.Configuration.IdentityConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.IdentityModel.Configuration.IdentityConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.IdentityModel.Configuration.IdentityConfigurationElement" /> do arquivo de configuração.</param>
+        <summary>Carrega as configurações para este <see cref="T:System.IdentityModel.Configuration.IdentityConfiguration" /> instância do aplicativo ou arquivo de configuração Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhum arquivo de configuração, se a seção nomeada não existir ou se `element` é `null`, em seguida, nenhuma exceção é lançada; em vez disso, a instância é carregada com um conjunto de valores padrão. Este método chama o <xref:System.IdentityModel.Configuration.IdentityConfiguration.LoadHandlers%2A> método ao carregar a configuração do manipulador de token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadHandlerConfiguration">
+      <MemberSignature Language="C#" Value="protected System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration LoadHandlerConfiguration (System.IdentityModel.Configuration.IdentityConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration LoadHandlerConfiguration(class System.IdentityModel.Configuration.IdentityConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityConfiguration.LoadHandlerConfiguration(System.IdentityModel.Configuration.IdentityConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.IdentityModel.Configuration.IdentityConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see langword="&lt;identityConfiguration&gt;" /> elemento do arquivo de configuração do qual carregar as configurações.</param>
+        <summary>Carrega um <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" /> usando os elementos diretamente sob especificado <see cref="T:System.IdentityModel.Configuration.IdentityConfigurationElement" />.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" /> carregados a partir de elementos no arquivo de configuração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadHandlerConfiguration">
+      <MemberSignature Language="C#" Value="protected System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration LoadHandlerConfiguration (System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration baseConfiguration, System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration LoadHandlerConfiguration(class System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration baseConfiguration, class System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityConfiguration.LoadHandlerConfiguration(System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration,System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseConfiguration" Type="System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" />
+        <Parameter Name="element" Type="System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="baseConfiguration">A base <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" /> da qual herdar valores padrão.</param>
+        <param name="element">O <see cref="T:System.IdentityModel.Configuration.SecurityTokenHandlerConfigurationElement" /> do arquivo de configuração.</param>
+        <summary>Carrega os elementos de configuração referentes ao <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollection" />.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration" /> carregados a partir de elementos no arquivo de configuração e o <paramref name="baseConfiguration" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadHandlers">
+      <MemberSignature Language="C#" Value="protected System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager LoadHandlers (System.IdentityModel.Configuration.IdentityConfigurationElement serviceElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager LoadHandlers(class System.IdentityModel.Configuration.IdentityConfigurationElement serviceElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.IdentityConfiguration.LoadHandlers(System.IdentityModel.Configuration.IdentityConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceElement" Type="System.IdentityModel.Configuration.IdentityConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="serviceElement">O <see langword="&lt;identityConfiguration&gt;" /> elemento usado para configurar essa instância.</param>
+        <summary>Carrega o <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" /> definido para o serviço especificado.</summary>
+        <returns>O Gerenciador de coleção do manipulador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.IdentityModel.Configuration.IdentityConfiguration.LoadHandlerConfiguration%2A> métodos para definir os manipuladores de token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxClockSkew">
+      <MemberSignature Language="C#" Value="public TimeSpan MaxClockSkew { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaxClockSkew" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.MaxClockSkew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a diferença máxima permitida de tempo entre os relógios do sistema das duas partes que estão se comunicando.</summary>
+        <value>O relógio máximo distorção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do serviço dessa configuração.</summary>
+        <value>O nome do serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevocationMode">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509RevocationMode RevocationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.X509RevocationMode RevocationMode" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.RevocationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509RevocationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de revogação usado por manipuladores para validar certificados do emissor.</summary>
+        <value>O modo de revogação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveBootstrapContext">
+      <MemberSignature Language="C#" Value="public bool SaveBootstrapContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SaveBootstrapContext" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.SaveBootstrapContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.IdentityModel.Tokens.BootstrapContext" /> objeto é salvo no <see cref="T:System.Security.Claims.ClaimsIdentity" /> e sessões após a validação de token.</summary>
+        <value>
+          <see langword="true" />Se o contexto de inicialização é salvo; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenHandlerCollectionManager">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager SecurityTokenHandlerCollectionManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager SecurityTokenHandlerCollectionManager" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.SecurityTokenHandlerCollectionManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager" /> que contém o conjunto de <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" /> objetos que são usados para serializar e validar tokens encontrados em mensagens WS-Trust.</summary>
+        <value>O Gerenciador de coleção do manipulador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenHandlers">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandlerCollection SecurityTokenHandlers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandlerCollection SecurityTokenHandlers" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.SecurityTokenHandlers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandlerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" /> usados para serializar e validar os tokens de objetos encontrados em mensagens WS-Trust.</summary>
+        <value>A coleção de manipuladores de token.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para registrar seu próprio manipulador de token, adicione-a esta coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 ServiceCertificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 ServiceCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.ServiceCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o certificado de serviço.</summary>
+        <value>O certificado x. 509 a ser usado como o certificado de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse é o certificado de serviço é usado para inicializar o <xref:System.IdentityModel.Selectors.SecurityTokenResolver> especificado no <xref:System.IdentityModel.Configuration.IdentityConfiguration.ServiceTokenResolver%2A> propriedade e o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceTokenResolver">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.SecurityTokenResolver ServiceTokenResolver { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.SecurityTokenResolver ServiceTokenResolver" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.ServiceTokenResolver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenResolver</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o resolvedor de token de serviço.</summary>
+        <value>O resolvedor de token de serviço.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Uma tentativa de definir a propriedade como <see langword="null" /> ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenReplayCacheExpirationPeriod">
+      <MemberSignature Language="C#" Value="public TimeSpan TokenReplayCacheExpirationPeriod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TokenReplayCacheExpirationPeriod" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.TokenReplayCacheExpirationPeriod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período de validade de itens colocados no <see cref="T:System.IdentityModel.Tokens.TokenReplayCache" />.</summary>
+        <value>O período de validade para itens colocados no cache de reprodução de token.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedStoreLocation">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.StoreLocation TrustedStoreLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.StoreLocation TrustedStoreLocation" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.IdentityConfiguration.TrustedStoreLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local de armazenamento confiável usado pelo manipuladores para validar certificados do emissor.</summary>
+        <value>O local de armazenamento confiável.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,905 @@
+<Type Name="ServiceModelSecurityTokenRequirement" FullName="System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement">
+  <TypeSignature Language="C#" Value="public abstract class ServiceModelSecurityTokenRequirement : System.IdentityModel.Selectors.SecurityTokenRequirement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServiceModelSecurityTokenRequirement extends System.IdentityModel.Selectors.SecurityTokenRequirement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenRequirement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe abstrata que quando implementada Especifica os requisitos de propriedade de segurança do token que está sendo solicitada ou autenticado que são específicos para o Windows Communication Foundation (WCF). O Gerenciador de token de segurança constrói provedores de token de segurança e autenticadores de token de segurança que são usadas pelo processador de segurança do WCF com base no requisito de token.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um token de segurança é uma unidade de dados criptografada que transfere as informações de autenticação e autorização, com base em uma credencial. A classe derivada é usada por um Gerenciador de token de segurança para especificar o que é necessário um token de segurança, como a chave de tamanho, tipo de chave e como a chave pode ser usada. Quando um token de segurança pode ser identificado que corresponde aos critérios especificados, um <xref:System.IdentityModel.Selectors.SecurityTokenProvider> e <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> podem ser criadas para fornecer tokens de segurança SOAP para mensagens de saída e para autenticar tokens de segurança para mensagens SOAP de entrada, respectivamente. Por exemplo, o Gerenciador de token de segurança padrão para enviar mensagens de SOAP tem o `CreateSecurityTokenProvider` método que utiliza um <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parâmetro que pode ser chamado para obter um provedor de token de segurança que coincide com o provedor de token de segurança.  
+  
+ Essa classe base, <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, contém um dicionário, <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties%2A>, que mapeia nomes de propriedade para seus valores. Essa classe tem várias propriedades, cujo nome termina na palavra "Property". Essas propriedades retornar uma cadeia de caracteres, que é a chave usada para `get` ou `set` o valor correspondente do dicionário. Por exemplo, <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.AuditLogLocationProperty%2A> é a chave para o valor de <xref:System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement.AuditLogLocation%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServiceModelSecurityTokenRequirement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SupportSecurityContextCancellationProperty%2A> é definido como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditLogLocationProperty">
+      <MemberSignature Language="C#" Value="public static string AuditLogLocationProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AuditLogLocationProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.AuditLogLocationProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de propriedade do requisito de token cujo valor é o local do log de auditoria para uso ao registrar os resultados da autenticação (serviço).</summary>
+        <value>A chave para AuditLogLocation no dicionário de propriedades do requisito de token.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a este nome de propriedade é do tipo <xref:System.ServiceModel.AuditLogLocation>, que é uma enumeração com os seguintes membros:  
+  
+-   <xref:System.ServiceModel.AuditLogLocation.Application>: O log de aplicativo no Log de eventos do sistema operacional.  
+  
+-   <xref:System.ServiceModel.AuditLogLocation.Default>: O local padrão, que é determinado pelo sistema operacional.  
+  
+-   <xref:System.ServiceModel.AuditLogLocation.Security>: O log de segurança no Log de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelParametersCollectionProperty">
+      <MemberSignature Language="C#" Value="public static string ChannelParametersCollectionProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ChannelParametersCollectionProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.ChannelParametersCollectionProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de propriedade do requisito de token cujo valor é a coleção de parâmetros de canal (somente cliente).</summary>
+        <value>A chave para o <see langword="ChannelParametersCollection" /> no dicionário de propriedades do requisito de token.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a este nome de propriedade é do tipo <xref:System.ServiceModel.Channels.ChannelParameterCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DuplexClientLocalAddressProperty">
+      <MemberSignature Language="C#" Value="public static string DuplexClientLocalAddressProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string DuplexClientLocalAddressProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.DuplexClientLocalAddressProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica o nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see langword="DuplexClientLocalAddress" /> propriedade.</summary>
+        <value>O nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see langword="DuplexClientLocalAddress" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No caso do canal que produz o requisito de token é um canal duplex, esta propriedade contém o endereço de ponto de extremidade no qual o canal duplex está escutando para mensagens de entrada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointFilterTableProperty">
+      <MemberSignature Language="C#" Value="public static string EndpointFilterTableProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string EndpointFilterTableProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.EndpointFilterTableProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é a tabela de filtro de ponto de extremidade que contém os filtros para mensagens que aceita um ponto de extremidade de serviço. Esta é uma propriedade de serviço.</summary>
+        <value>A chave para a propriedade de tabela de filtro de ponto de extremidade do requisito de token.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a essa chave é do tipo <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601>, onde o tipo genérico é <xref:System.ServiceModel.EndpointAddress>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedProtectionPolicy">
+      <MemberSignature Language="C#" Value="public static string ExtendedProtectionPolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ExtendedProtectionPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.ExtendedProtectionPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a política de proteção usada pelo servidor para validar as conexões de cliente de entrada.</summary>
+        <value>A política de proteção usada pelo servidor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpAuthenticationSchemeProperty">
+      <MemberSignature Language="C#" Value="public static string HttpAuthenticationSchemeProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string HttpAuthenticationSchemeProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.HttpAuthenticationSchemeProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave da propriedade requisito de token cujo valor é o esquema de autenticação HTTP se essa solicitação para um provedor de token ou o autenticador de token a ser usado na autenticação HTTP.</summary>
+        <value>A chave da propriedade de esquema de autenticação de HTTP do requisito de token.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a essa chave é do tipo <xref:System.Net.AuthenticationSchemes>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitiator">
+      <MemberSignature Language="C#" Value="public bool IsInitiator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitiator" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.IsInitiator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o ponto de extremidade que está criando o requisito de token de segurança é um iniciador ou um destinatário.</summary>
+        <value>
+          <see langword="true" />Se a solicitação é feita pelo iniciador de canal. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitiatorProperty">
+      <MemberSignature Language="C#" Value="public static string IsInitiatorProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string IsInitiatorProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.IsInitiatorProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor que indica se a solicitação é feita com o iniciador do canal ou o destinatário do canal.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor que indica se o ponto de extremidade que cria o requisito é o iniciador ou o destinatário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a essa chave de requisito de token é do tipo booliano.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOutOfBandTokenProperty">
+      <MemberSignature Language="C#" Value="public static string IsOutOfBandTokenProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string IsOutOfBandTokenProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.IsOutOfBandTokenProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor que indica se esta é a solicitação para um token que é configurado no cliente ou serviço.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor que indica se esta é a solicitação para um token que é configurado no cliente ou serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuedSecurityTokenParametersProperty">
+      <MemberSignature Language="C#" Value="public static string IssuedSecurityTokenParametersProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string IssuedSecurityTokenParametersProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.IssuedSecurityTokenParametersProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> que contém informações sobre o token se o requisito é para um token emitido.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é o <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> que contém informações sobre o token se o requisito é para um token emitido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a essa chave é do tipo <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress IssuerAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress IssuerAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.IssuerAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se o requisito de token é para um token emitido, esta propriedade contém o endereço do ponto de extremidade do emissor.</summary>
+        <value>O endereço de ponto de extremidade para o emissor do token. Isso é usado para tipos de token emitidos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerAddressProperty">
+      <MemberSignature Language="C#" Value="public static string IssuerAddressProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string IssuerAddressProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.IssuerAddressProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o <see cref="T:System.ServiceModel.EndpointAddress" /> da emissão parte se o requisito é para um token emitido.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é o <see cref="T:System.ServiceModel.EndpointAddress" /> da parte de emissão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a essa chave é do tipo <xref:System.ServiceModel.EndpointAddress>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerBinding">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Binding IssuerBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.Binding IssuerBinding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.IssuerBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se o requisito de token é para um token emitido, esta propriedade contém a associação a ser usada para se comunicar com o emissor.</summary>
+        <value>A associação usada para se comunicar com o usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna a associação a ser usada para se comunicar com o emissor do token de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerBindingContextProperty">
+      <MemberSignature Language="C#" Value="public static string IssuerBindingContextProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string IssuerBindingContextProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.IssuerBindingContextProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o <see cref="T:System.ServiceModel.Channels.BindingContext" /> usar para se comunicar com a parte de emissão, se o requisito é para um token emitido.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é <see cref="T:System.ServiceModel.Channels.BindingContext" /> usar para se comunicar com a parte de emissão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a essa chave é do tipo <xref:System.ServiceModel.Channels.BindingContext>. Essa propriedade é adicionada aos requisitos de token relacionadas à conversa segura e autenticação SPNEGO/TLSNEGO.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerBindingProperty">
+      <MemberSignature Language="C#" Value="public static string IssuerBindingProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string IssuerBindingProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.IssuerBindingProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é a associação a ser usada para se comunicar com a parte de emissão quando o requisito é para um token emitido.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é a associação a ser usada para se comunicar com a parte de emissão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor correspondente a essa chave é do tipo <xref:System.ServiceModel.Channels.Binding>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenUriProperty">
+      <MemberSignature Language="C#" Value="public static string ListenUriProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ListenUriProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.ListenUriProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o URI que o ponto de extremidade de serviço fazendo a solicitação está escutando em (serviço).</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é o URI que o ponto de extremidade de serviço fazendo a solicitação está escutando no.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageAuthenticationAuditLevelProperty">
+      <MemberSignature Language="C#" Value="public static string MessageAuthenticationAuditLevelProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string MessageAuthenticationAuditLevelProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.MessageAuthenticationAuditLevelProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o nível de auditoria a ser usado ao gravar os resultados da autenticação (serviço).</summary>
+        <value>Obtém a chave para a propriedade do requisito de token cujo valor é o nível de auditoria a ser usado ao gravar os resultados da autenticação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a essa chave é do tipo <xref:System.ServiceModel.AuditLevel>, que é uma enumeração com os seguintes membros:  
+  
+-   <xref:System.ServiceModel.AuditLevel.Failure>: Somente falha relacionadas à segurança eventos são registrados.  
+  
+-   <xref:System.ServiceModel.AuditLevel.None>: Nenhum evento é registrado.  
+  
+-   <xref:System.ServiceModel.AuditLevel.Success>: Apenas bem-sucedida relacionadas à segurança eventos são registrados.  
+  
+-   <xref:System.ServiceModel.AuditLevel.SuccessOrFailure>: Ambos falha e bem-sucedida eventos relacionados à segurança são registrados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageDirectionProperty">
+      <MemberSignature Language="C#" Value="public static string MessageDirectionProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string MessageDirectionProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.MessageDirectionProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o membro do <see cref="T:System.ServiceModel.Description.MessageDirection" /> enumeração para uso e que indica se o provedor de token é necessária para as mensagens enviadas do cliente ao servidor ou cliente.</summary>
+        <value>Obtém a chave para a propriedade do requisito de token cujo valor é o membro do <see cref="T:System.ServiceModel.Description.MessageDirection" /> enumeração usar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a essa chave é do tipo <xref:System.ServiceModel.Description.MessageDirection>. Essa propriedade pode ser usada por implementações de credencial para fornecer tokens de diferentes para processar a solicitação e resposta. Um exemplo é uma implementação de credencial onde o ponto de extremidade pode especificar um certificado diferente que ele faz com mensagens de saída e um certificado diferente para ser usado por outros participantes para criptografar mensagens para ela.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageSecurityVersion">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.SecurityTokenVersion MessageSecurityVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.SecurityTokenVersion MessageSecurityVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.MessageSecurityVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.SecurityTokenVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão de segurança de mensagem a ser usada (se necessário).</summary>
+        <value>A versão de segurança de mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.MessageSecurityVersion> contém várias propriedades que especificam os números de versão dos diferentes componentes de uma mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageSecurityVersionProperty">
+      <MemberSignature Language="C#" Value="public static string MessageSecurityVersionProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string MessageSecurityVersionProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.MessageSecurityVersionProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que o canal está configurado com.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é o <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que o canal está configurado com.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.MessageSecurityVersion> contém várias propriedades que especificam os números de versão dos diferentes componentes de uma mensagem. O <xref:System.ServiceModel.Channels.MessageVersion> pode ser usado pelo provedor de token e implementações do autenticador de token para obter um token do ponto de extremidade (por exemplo, para uma conversa segura).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="protected const string Namespace;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal string Namespace" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.Namespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o namespace atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferSslCertificateAuthenticatorProperty">
+      <MemberSignature Language="C#" Value="public static string PreferSslCertificateAuthenticatorProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PreferSslCertificateAuthenticatorProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.PreferSslCertificateAuthenticatorProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é usado para criar um autenticador de token de segurança do SSL.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é usado para criar um autenticador de token de segurança do SSL.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivacyNoticeUriProperty">
+      <MemberSignature Language="C#" Value="public static string PrivacyNoticeUriProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PrivacyNoticeUriProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.PrivacyNoticeUriProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o link para o URI que aponta para a política de privacidade do serviço se o serviço tiver uma.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é um link para o URI que aponta para a política de privacidade do serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a essa chave é do tipo <xref:System.Uri>. Essa propriedade pode ser usada para exibir o link na interface do usuário (UI) de modo semelhante ao [!INCLUDE[infocard](~/includes/infocard-md.md)] does.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivacyNoticeVersionProperty">
+      <MemberSignature Language="C#" Value="public static string PrivacyNoticeVersionProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PrivacyNoticeVersionProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.PrivacyNoticeVersionProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é uma cadeia de caracteres que representa a versão do aviso de privacidade.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor representa a versão do aviso de privacidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a essa chave é do tipo <xref:System.Int32>. Essa propriedade pode ser usada para exibir o link na interface do usuário (UI) de modo semelhante ao [!INCLUDE[infocard](~/includes/infocard-md.md)] does.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecureConversationSecurityBindingElement">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.SecurityBindingElement SecureConversationSecurityBindingElement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.SecurityBindingElement SecureConversationSecurityBindingElement" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SecureConversationSecurityBindingElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um elemento de associação de segurança usado para proteger mensagens de inicialização de conversa segura.</summary>
+        <value>Um elemento de associação de segurança usado para proteger mensagens de inicialização de conversa segura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna o elemento de associação de segurança a ser usado para proteger mensagens de inicialização de conversa segura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecureConversationSecurityBindingElementProperty">
+      <MemberSignature Language="C#" Value="public static string SecureConversationSecurityBindingElementProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SecureConversationSecurityBindingElementProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SecureConversationSecurityBindingElementProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o elemento de associação de segurança usado para proteger a conversa segura mensagens de inicialização.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor representa o elemento de associação de segurança a ser usado para proteger mensagens de inicialização de conversa segura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor que corresponde a essa chave é do tipo <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityAlgorithmSuite">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityAlgorithmSuite SecurityAlgorithmSuite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityAlgorithmSuite SecurityAlgorithmSuite" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SecurityAlgorithmSuite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conjunto de algoritmos de segurança a ser usada (se necessário).</summary>
+        <value>O conjunto de algoritmos de segurança a ser usado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> objeto retornado contém várias propriedades que especificam os algoritmos de segurança a ser usado em condições específicas. Ele também descreve vários recursos de segurança do serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityAlgorithmSuiteProperty">
+      <MemberSignature Language="C#" Value="public static string SecurityAlgorithmSuiteProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SecurityAlgorithmSuiteProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SecurityAlgorithmSuiteProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o conjunto de algoritmos que o canal usa para executar a segurança de mensagem.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityBindingElement">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.SecurityBindingElement SecurityBindingElement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.SecurityBindingElement SecurityBindingElement" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SecurityBindingElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.SecurityBindingElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento de associação de segurança.</summary>
+        <value>O elemento de associação de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No caso de segurança de mensagens SOAP, esta propriedade contém o elemento de associação de segurança da associação que produz o requisito de token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityBindingElementProperty">
+      <MemberSignature Language="C#" Value="public static string SecurityBindingElementProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SecurityBindingElementProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SecurityBindingElementProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o elemento de associação de segurança usado para criar o canal.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é o <see cref="T:System.ServiceModel.Channels.SecurityBindingElement" /> usado para criar o canal.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportingTokenAttachmentModeProperty">
+      <MemberSignature Language="C#" Value="public static string SupportingTokenAttachmentModeProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SupportingTokenAttachmentModeProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SupportingTokenAttachmentModeProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é associado <see cref="T:System.ServiceModel.Security.SecurityTokenAttachmentMode" /> membro de enumeração se a solicitação for para um token de suporte.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é associado <see cref="T:System.ServiceModel.Security.SecurityTokenAttachmentMode" /> membro de enumeração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `SupportingTokenAttachmentMode` propriedade é um membro do <xref:System.ServiceModel.Security.SecurityTokenAttachmentMode> membro de enumeração se a solicitação for para um token de suporte. Tokens de suporte fornecem declarações adicionais além daqueles contidos nos tokens principais para a associação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportSecurityContextCancellationProperty">
+      <MemberSignature Language="C#" Value="public static string SupportSecurityContextCancellationProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SupportSecurityContextCancellationProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SupportSecurityContextCancellationProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor que indica se o token de conversa segura é para uma sessão de segurança (caso em que seu tempo de vida é vinculado ao tempo de vida do canal do usuário) ou para um canal de segurança de datagrama.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor indica se o token de conversa segura deve ser cancelável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o requisito é para um token de conversa segura, `SupportSecurityContextCancellation` contém um valor que indica se o token de conversa segura é para uma sessão de segurança (caso em que seu tempo de vida é vinculado ao tempo de vida do canal do usuário) ou para um canal de segurança de datagrama.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressAuditFailureProperty">
+      <MemberSignature Language="C#" Value="public static string SuppressAuditFailureProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SuppressAuditFailureProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.SuppressAuditFailureProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor indica se deve ignorar erros que ocorrem ao gravar os resultados da autenticação (serviço).</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor indica se deve ignorar erros que ocorrem ao gravar os resultados da autenticação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetAddressProperty">
+      <MemberSignature Language="C#" Value="public static string TargetAddressProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string TargetAddressProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.TargetAddressProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o endereço de ponto de extremidade que o canal está se comunicando com (somente cliente).</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é o <see cref="T:System.ServiceModel.EndpointAddress" /> que está se comunicando com o canal.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportScheme">
+      <MemberSignature Language="C#" Value="public string TransportScheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransportScheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.TransportScheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o esquema de transporte.</summary>
+        <value>O esquema de transporte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No caso de segurança de transporte, esta propriedade contém o esquema de transporte do `TransportBindingElement` que produz o requisito de token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportSchemeProperty">
+      <MemberSignature Language="C#" Value="public static string TransportSchemeProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string TransportSchemeProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.TransportSchemeProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se a solicitação for feita para um provedor/autenticador de token a ser usado com segurança de transporte, essa cadeia de caracteres é a chave para a propriedade do requisito de token cujo valor é o esquema de transporte.</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é o esquema de transporte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViaProperty">
+      <MemberSignature Language="C#" Value="public static string ViaProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ViaProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenRequirement.ViaProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave para a propriedade do requisito de token cujo valor é o URI de por que o canal está se conectando ao (somente cliente).</summary>
+        <value>A chave para a propriedade do requisito de token cujo valor é o URI por meio de que o canal está se conectando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Security.Tokens.InitiatorServiceModelSecurityTokenRequirement.Via%2A> propriedade contém o URI de um destino intermediário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

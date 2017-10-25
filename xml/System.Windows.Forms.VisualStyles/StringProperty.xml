@@ -1,0 +1,41 @@
+<Type Name="StringProperty" FullName="System.Windows.Forms.VisualStyles.StringProperty">
+  <TypeSignature Language="C#" Value="public enum StringProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StringProperty extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.StringProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifica as propriedades de cadeia de caracteres de um elemento de estilo visual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.StringProperty> enumeração representa um conjunto de propriedades de cadeia de caracteres que descrevem os elementos de estilo visual. O <xref:System.Windows.Forms.VisualStyles.StringProperty> valores são usados como um argumento no <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetString%2A?displayProperty=nameWithType> método para especificar qual valor de propriedade para recuperar para o elemento que o <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> representa atualmente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.StringProperty Text = int32(3201)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.StringProperty.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.StringProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O texto que será exibido com o elemento.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

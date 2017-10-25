@@ -1,0 +1,15 @@
+<Namespace Name="System.Web.UI">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI" /> namespace fornece classes e interfaces que permitem a criação de controles de servidor ASP.NET e páginas da Web ASP.NET para a interface de usuário de seus aplicativos Web do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este namespace inclui o <xref:System.Web.UI.Control> classe, que fornece um conjunto comum de funcionalidade para todos os controles de servidor, que inclui controles de servidor HTML, controles de servidor Web e controles de usuário. Ele também inclui o <xref:System.Web.UI.Page> classe. Essa classe é gerada automaticamente sempre que uma solicitação é feita para um arquivo. aspx em um aplicativo Web ASP.NET. É possível herdar essas duas classes.  
+  
+ O namespace também inclui classes que fornecem os controles de servidor com funcionalidade de associação de dados, a capacidade de salvar o estado de exibição de um determinado controle ou página e a funcionalidade de análise.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

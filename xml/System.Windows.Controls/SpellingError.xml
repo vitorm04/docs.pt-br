@@ -1,0 +1,88 @@
+<Type Name="SpellingError" FullName="System.Windows.Controls.SpellingError">
+  <TypeSignature Language="C#" Value="public class SpellingError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SpellingError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.SpellingError" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma palavra escrita incorretamente em um controle de edição (isto é, <see cref="T:System.Windows.Controls.TextBox" /> ou <see cref="T:System.Windows.Controls.RichTextBox" />).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Correct">
+      <MemberSignature Language="C#" Value="public void Correct (string correctedText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Correct(string correctedText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.SpellingError.Correct(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="correctedText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="correctedText">O texto usado para substituir o texto digitado incorretamente.</param>
+        <summary>Substitui o texto de erro de ortografia com a correção especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método reposiciona o cursor para a posição imediatamente após o texto corrigido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreAll">
+      <MemberSignature Language="C#" Value="public void IgnoreAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void IgnoreAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.SpellingError.IgnoreAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Instrui o controle para ignorar esse erro e as duplicatas para o restante do tempo de vida do controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Suggestions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; Suggestions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; Suggestions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.SpellingError.Suggestions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Windows.Controls.SpellingError/&lt;get_Suggestions&gt;d__4))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de substituições de ortografia sugerido para a palavra incorreta.</summary>
+        <value>A coleção de sugestões de ortografia para a palavra incorreta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

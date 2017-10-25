@@ -1,0 +1,41 @@
+<Type Name="IFieldControl" FullName="System.Web.UI.WebControls.IFieldControl">
+  <TypeSignature Language="C#" Value="public interface IFieldControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFieldControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.IFieldControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um contrato que expõe propriedades que geram automaticamente os campos que são baseados nos dados em um controle associado a dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface fornece métodos para o <xref:System.Web.UI.WebControls.DetailsView> e <xref:System.Web.UI.WebControls.GridView> controles associados a dados. Esses controles de associação de dados geram automaticamente os campos com base nos dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FieldsGenerator">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IAutoFieldGenerator FieldsGenerator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.IAutoFieldGenerator FieldsGenerator" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IFieldControl.FieldsGenerator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IAutoFieldGenerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.UI.IAutoFieldGenerator" /> interface, que é a interface que gera os campos em um controle associado a dados.</summary>
+        <value>A interface que gera campos em controles associados a dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

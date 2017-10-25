@@ -1,0 +1,238 @@
+<Type Name="ReceiveReply" FullName="System.ServiceModel.Activities.ReceiveReply">
+  <TypeSignature Language="C#" Value="public sealed class ReceiveReply : System.Activities.Activity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReceiveReply extends System.Activities.Activity" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.ReceiveReply" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Activity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Content")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Uma atividade que recebe uma mensagem como parte de um padrão de troca de mensagem de solicitação/resposta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.ServiceModel.Activities.ReceiveReply> atividade. Um <xref:System.ServiceModel.Activities.Send> atividade é criada e adicionada a um <xref:System.Activities.Statements.Sequence>. Um <xref:System.ServiceModel.Activities.ReceiveReply> atividade é adicionada para o <xref:System.Activities.Statements.Sequence> para receber a resposta do <xref:System.ServiceModel.Activities.Send> atividade.  
+  
+```  
+static void CreateClientWorkflow()  
+{  
+   Variable<string> message = new Variable<string>("message", "Hello!");  
+   Variable<string> result = new Variable<string> { Name = "result" };  
+  
+   Endpoint endpoint = new Endpoint  
+   {  
+      AddressUri = new Uri(Microsoft.Samples.WorkflowServicesSamples.Common.Constants.ServiceBaseAddress), Binding = new BasicHttpBinding(),  
+   };  
+  
+   Send requestEcho = new Send  
+   {  
+      ServiceContractName = XName.Get("Echo", "http://tempuri.org/"),  
+                Endpoint = endpoint,  
+                OperationName = "Echo",  
+      //parameters for send  
+      Content = new SendParametersContent  
+      {  
+         Parameters =   
+            {   
+               { "message", new InArgument<string>(message) }  
+            }  
+        }  
+    };  
+    workflow = new CorrelationScope  
+    {  
+       Body = new Sequence  
+       {  
+          Variables = { message, result },  
+                    Activities =  
+                    {  
+                        new WriteLine {  
+                            Text = new InArgument<string>("Client is ready!")  
+                        },  
+                        requestEcho,  
+  
+                        new WriteLine {  
+                            Text = new InArgument<string>("Message sent: Hello!")  
+                        },  
+  
+                        new ReceiveReply  
+                        {  
+                            Request = requestEcho,  
+                            //parameters for the reply  
+                            Content = new ReceiveParametersContent                              
+                            {  
+                                Parameters =   
+                                {  
+                                    { "echo", new OutArgument<string>(result) }  
+                                }  
+                            }  
+                        },                                                  
+                        new WriteLine {  
+                            Text = new InArgument<string>(env => "Message received: "+result.Get(env))  
+                        }  
+                    }  
+                }  
+            };  
+        }  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReceiveReply ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.ReceiveReply.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activities.ReceiveReply" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.ReceiveReply.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do cabeçalho da mensagem de ação.</summary>
+        <value>A ação da mensagem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.ActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.ActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.ReceiveReply.CacheMetadata(System.Activities.ActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.ActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Activities.ReceiveContent Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Activities.ReceiveContent Content" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.ReceiveReply.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.ReceiveContent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo recebido pelo <see cref="T:System.ServiceModel.Activities.ReceiveReply" /> atividade</summary>
+        <value>O conteúdo foi recebido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo pode ser um dos seguintes tipos: <xref:System.ServiceModel.Activities.ReceiveMessageContent> ou <xref:System.ServiceModel.Activities.ReceiveParametersContent>. Use <xref:System.ServiceModel.Activities.ReceiveMessageContent> quando receber uma mensagem <xref:System.ServiceModel.Channels.Message> ou uma tipo de contrato de mensagem. Use <xref:System.ServiceModel.Activities.ReceiveParametersContent> quando tipos de contrato de recebimento de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationInitializers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Activities.CorrelationInitializer&gt; CorrelationInitializers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Activities.CorrelationInitializer&gt; CorrelationInitializers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.ReceiveReply.CorrelationInitializers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Activities.CorrelationInitializer&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de inicializadores de correlação.</summary>
+        <value>Uma coleção de inicializadores de correlação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]Consulte correlação [correlação](~/docs/framework/wcf/feature-details/correlation.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Activities.Send Request { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Activities.Send Request" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.ReceiveReply.Request" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.Send</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência para o <see cref="T:System.ServiceModel.Activities.Send" /> atividade combinada com isso <see cref="T:System.ServiceModel.Activities.ReceiveReply" /> atividade.</summary>
+        <value>A atividade de envio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Activities.Send>e <xref:System.ServiceModel.Activities.ReceiveReply> atividades são usadas em conjunto para modelar um padrão de troca de mensagem de solicitação/resposta. Essa propriedade especifica qual <xref:System.ServiceModel.Activities.Send> atividade de <xref:System.ServiceModel.Activities.ReceiveReply> é associada a atividade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

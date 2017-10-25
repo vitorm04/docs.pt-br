@@ -1,0 +1,321 @@
+<Type Name="StorageInfo" FullName="System.IO.Packaging.StorageInfo">
+  <TypeSignature Language="C#" Value="public class StorageInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StorageInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.StorageInfo" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso e informações para a manipulação de repositórios de dados em um <see cref="T:System.IO.Packaging.Package" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateStream">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.StreamInfo CreateStream (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.StreamInfo CreateStream(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.StorageInfo.CreateStream(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.StreamInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do novo fluxo.</param>
+        <summary>Cria um novo fluxo com um determinado nome.</summary>
+        <returns>O novo fluxo com especificado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.IO.Packaging.StorageInfo.CreateStream%2A> método cria um novo fluxo com <xref:System.IO.Packaging.StreamInfo> configurações padrão definidas para CompressionOption.<xref:System.IO.Packaging.CompressionOption.NotCompressed> e EncryptionOption.<xref:System.IO.Packaging.EncryptionOption.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateStream">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.StreamInfo CreateStream (string name, System.IO.Packaging.CompressionOption compressionOption, System.IO.Packaging.EncryptionOption encryptionOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.StreamInfo CreateStream(string name, valuetype System.IO.Packaging.CompressionOption compressionOption, valuetype System.IO.Packaging.EncryptionOption encryptionOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.StorageInfo.CreateStream(System.String,System.IO.Packaging.CompressionOption,System.IO.Packaging.EncryptionOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.StreamInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="compressionOption" Type="System.IO.Packaging.CompressionOption" />
+        <Parameter Name="encryptionOption" Type="System.IO.Packaging.EncryptionOption" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do novo fluxo.</param>
+        <param name="compressionOption">A opção de compactação do fluxo de dados.</param>
+        <param name="encryptionOption">A opção de criptografia para o fluxo de dados.</param>
+        <summary>Cria um novo fluxo com um determinado nome <see cref="T:System.IO.Packaging.CompressionOption" />, e <see cref="T:System.IO.Packaging.EncryptionOption" />.</summary>
+        <returns>O novo fluxo com especificado <paramref name="name" />, <paramref name="compressionOption" />, e <paramref name="encryptionOption" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubStorage">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.StorageInfo CreateSubStorage (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.StorageInfo CreateSubStorage(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.StorageInfo.CreateSubStorage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.StorageInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome para o novo repositório de dados filho.</param>
+        <summary>Cria um novo filho <see cref="T:System.IO.Packaging.StorageInfo" /> com essa <see cref="T:System.IO.Packaging.StorageInfo" /> como pai.</summary>
+        <returns>O novo repositório de dados filho.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteStream">
+      <MemberSignature Language="C#" Value="public void DeleteStream (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteStream(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.StorageInfo.DeleteStream(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="T:System.IO.Packaging.StreamInfo" /> nome do fluxo para excluir.</param>
+        <summary>Exclui o fluxo com um nome especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteSubStorage">
+      <MemberSignature Language="C#" Value="public void DeleteSubStorage (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteSubStorage(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.StorageInfo.DeleteSubStorage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do repositório de subtipo para excluir.</param>
+        <summary>Exclui um repositório de subsistema especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o repositório de subdiretório especificado se contém repositórios de sub filhos, <xref:System.IO.Packaging.StorageInfo.DeleteSubStorage%2A> também recursivamente exclui todas as lojas sub descendentes.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStreamInfo">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.StreamInfo GetStreamInfo (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.StreamInfo GetStreamInfo(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.StorageInfo.GetStreamInfo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.StreamInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.IO.Packaging.StreamInfo" /> instância a ser retornada.</param>
+        <summary>Retorna o <see cref="T:System.IO.Packaging.StreamInfo" /> instância com o nome fornecido.</summary>
+        <returns>O fluxo com especificado <paramref name="name" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStreams">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.StreamInfo[] GetStreams ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.StreamInfo[] GetStreams() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.StorageInfo.GetStreams" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.StreamInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma matriz do <see cref="T:System.IO.Packaging.StreamInfo" /> instâncias que atualmente estão contidas nesse armazenamento.</summary>
+        <returns>Uma matriz do <see cref="T:System.IO.Packaging.StreamInfo" /> objetos, cada uma apontando para um fluxo de e/s definidos dentro desse armazenamento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.StorageInfo.GetStreams%2A>sempre retornará um <xref:System.IO.Packaging.StreamInfo> matriz, mas a matriz pode ser vazio (comprimento zero) se não houver nenhum fluxos definido no repositório.  
+  
+ <xref:System.IO.Packaging.StorageInfo.GetStreams%2A>Fornece um instantâneo dos fluxos atualmente definidos no repositório.  A pessoa <xref:System.IO.Packaging.StreamInfo> objetos refletirá o estado atualizado de seus respectivos fluxos, mas a matriz retornada não será atualizada com quaisquer adições ou exclusões.  Chamar <xref:System.IO.Packaging.StorageInfo.GetStreams%2A> novamente para obter uma matriz atualizada como fluxos adicionadas ou excluídas para o repositório.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSubStorageInfo">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.StorageInfo GetSubStorageInfo (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.StorageInfo GetSubStorageInfo(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.StorageInfo.GetSubStorageInfo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.StorageInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do repositório de subtipo para retornar.</param>
+        <summary>Retorna o repositório sub filhos com um determinado nome.</summary>
+        <returns>O repositório de sub filhos com especificado <paramref name="name" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSubStorages">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.StorageInfo[] GetSubStorages ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.StorageInfo[] GetSubStorages() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.StorageInfo.GetSubStorages" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.StorageInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma matriz do filho repositórios sub que atualmente estão contidos nesse armazenamento.</summary>
+        <returns>Uma matriz de <see cref="T:System.IO.Packaging.StorageInfo" /> objetos, cada uma apontando para um repositório sub definido dentro desse armazenamento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.StorageInfo.GetSubStorages%2A>sempre retornará um <xref:System.IO.Packaging.StorageInfo> matriz, mas a matriz pode estar vazia (comprimento zero) se não houver nenhum subdiretório repositórios.  
+  
+ <xref:System.IO.Packaging.StorageInfo.GetSubStorages%2A>Fornece um instantâneo dos repositórios de subseção atualmente definidos no repositório.  A pessoa <xref:System.IO.Packaging.StorageInfo> objetos refletirá o estado atualizado de suas respectivas lojas, mas a matriz retornada não será atualizada com quaisquer adições ou exclusões.  Chamar <xref:System.IO.Packaging.StorageInfo.GetSubStorages%2A> novamente para obter uma matriz atualizada como repositórios de subseção adicionadas ou excluídas para o repositório.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.StorageInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do repositório.</summary>
+        <value>O nome desse armazenamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome de um repositório de subsistema é especificado para o <xref:System.IO.Packaging.StorageInfo.CreateSubStorage%2A> método e não pode ser alterado depois de criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamExists">
+      <MemberSignature Language="C#" Value="public bool StreamExists (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool StreamExists(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.StorageInfo.StreamExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="T:System.IO.Packaging.StreamInfo" /> nome para verificar.</param>
+        <summary>Retorna um valor que indica se um determinado fluxo existe.</summary>
+        <returns>
+          <see langword="true" />Se um fluxo com especificado <paramref name="name" /> existir; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubStorageExists">
+      <MemberSignature Language="C#" Value="public bool SubStorageExists (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SubStorageExists(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.StorageInfo.SubStorageExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O filho <see cref="T:System.IO.Packaging.StorageInfo" /> nome para verificar.</param>
+        <summary>Retorna um valor que indica se um repositório sub filho especificado existe.</summary>
+        <returns>
+          <see langword="true" />Se um repositório sub filhos com especificado <paramref name="name" /> existir; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

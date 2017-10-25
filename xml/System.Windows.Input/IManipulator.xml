@@ -1,0 +1,114 @@
+<Type Name="IManipulator" FullName="System.Windows.Input.IManipulator">
+  <TypeSignature Language="C#" Value="public interface IManipulator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IManipulator" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.IManipulator" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a posição de entrada que é necessário para criar uma manipulação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada ponto de toque é um <xref:System.Windows.Input.IManipulator> objeto.  Por exemplo, se você usar dois dedos para redimensionar um objeto, um <xref:System.Windows.Input.TouchDevice>, que implementa <xref:System.Windows.Input.IManipulator>, é criado para cada dedo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Point GetPosition (System.Windows.IInputElement relativeTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Point GetPosition(class System.Windows.IInputElement relativeTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.IManipulator.GetPosition(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">O elemento a ser usado como o quadro de referência para calcular a posição do <see cref="T:System.Windows.Input.IManipulator" />.</param>
+        <summary>Retorna a posição do <see cref="T:System.Windows.Input.IManipulator" /> objeto.</summary>
+        <returns>A posição do <see cref="T:System.Windows.Input.IManipulator" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.IManipulator.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um identificador exclusivo para o objeto.</summary>
+        <value>Um identificador exclusivo para o objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.IManipulator.Id%2A> propriedade deve ser exclusiva para cada objeto de um determinado tipo.  Por exemplo, se os tipos de `Manipulator1` e `Manipulator2` implementar <xref:System.Windows.Input.IManipulator>, todos os objetos do tipo `Maniplulator1` devem ter exclusivo <xref:System.Windows.Input.IManipulator.Id%2A> valores, mas um objeto do tipo `Manipulator1` pode ter o mesmo <xref:System.Windows.Input.IManipulator.Id%2A> como um objeto do tipo `Manipulator2`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManipulationEnded">
+      <MemberSignature Language="C#" Value="public void ManipulationEnded (bool cancel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ManipulationEnded(bool cancel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.IManipulator.ManipulationEnded(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cancel">
+          <see langword="true" />Se a manipulação for cancelada; Caso contrário, <see langword="false" />.</param>
+        <summary>Chamado quando a manipulação termina.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Updated">
+      <MemberSignature Language="C#" Value="public event EventHandler Updated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Updated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.IManipulator.Updated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Windows.Input.IManipulator" /> objeto muda de posição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

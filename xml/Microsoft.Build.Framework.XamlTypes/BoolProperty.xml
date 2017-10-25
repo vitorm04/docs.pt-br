@@ -1,0 +1,52 @@
+<Type Name="BoolProperty" FullName="Microsoft.Build.Framework.XamlTypes.BoolProperty">
+  <TypeSignature Language="C#" Value="public sealed class BoolProperty : Microsoft.Build.Framework.XamlTypes.BaseProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BoolProperty extends Microsoft.Build.Framework.XamlTypes.BaseProperty" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.XamlTypes.BoolProperty" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.XamlTypes.BaseProperty</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o esquema de uma propriedade booleana.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BoolProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.BoolProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O construtor padrão para uma propriedade booleana.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReverseSwitch">
+      <MemberSignature Language="C#" Value="public string ReverseSwitch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReverseSwitch" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.BoolProperty.ReverseSwitch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que força a negação lógica do valor de um comutador Boolean.</summary>
+        <value>Retorna <see langword="true" /> se o valor é logicamente negado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

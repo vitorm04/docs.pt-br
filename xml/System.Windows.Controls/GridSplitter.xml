@@ -1,0 +1,550 @@
+<Type Name="GridSplitter" FullName="System.Windows.Controls.GridSplitter">
+  <TypeSignature Language="C#" Value="public class GridSplitter : System.Windows.Controls.Primitives.Thumb" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi GridSplitter extends System.Windows.Controls.Primitives.Thumb" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.GridSplitter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.Thumb</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="PreviewStyle", StyleTargetType=typeof(System.Windows.Controls.Control))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o controle que redistribui espaço entre colunas e linhas de um controle de <see cref="T:System.Windows.Controls.Grid" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.GridSplitter> controle redistribui espaço entre linhas ou colunas em um <xref:System.Windows.Controls.Grid>, sem alterar as dimensões do <xref:System.Windows.Controls.Grid>. Por exemplo, quando um <xref:System.Windows.Controls.GridSplitter> redimensiona duas colunas, o <xref:System.Windows.Controls.ColumnDefinition.ActualWidth%2A> propriedade de uma coluna é aumentada e, ao mesmo tempo o <xref:System.Windows.Controls.ColumnDefinition.ActualWidth%2A> propriedade da outra coluna é reduzida pela mesma quantia.  
+  
+ A tabela a seguir mostra como definir um horizontal ou vertical <xref:System.Windows.Controls.GridSplitter> definindo o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propriedades e deixando o <xref:System.Windows.Controls.GridSplitter.ResizeDirection%2A> e <xref:System.Windows.Controls.GridSplitter.ResizeBehavior%2A> propriedades definidas para seus valores padrão.  
+  
+ **Como criar controles de GridSplitter verticais e horizontais**  
+  
+|Tipo de GridSplitter|Valor <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>|Valor <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>|  
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Linhas redimensiona|<xref:System.Windows.HorizontalAlignment.Stretch>|<xref:System.Windows.VerticalAlignment.Top>, <xref:System.Windows.VerticalAlignment.Bottom>, <xref:System.Windows.VerticalAlignment.Center>|  
+|Redimensiona as colunas|<xref:System.Windows.HorizontalAlignment.Left>, <xref:System.Windows.HorizontalAlignment.Right>, <xref:System.Windows.HorizontalAlignment.Center>|<xref:System.Windows.VerticalAlignment.Stretch>|  
+|Se <xref:System.Windows.FrameworkElement.ActualHeight%2A> é maior que ou igual a <xref:System.Windows.FrameworkElement.ActualWidth%2A>, isso redimensiona as colunas.<br /><br /> Se <xref:System.Windows.FrameworkElement.ActualHeight%2A> é menor que <xref:System.Windows.FrameworkElement.ActualWidth%2A>, isso redimensiona linhas.|<xref:System.Windows.HorizontalAlignment.Stretch>|<xref:System.Windows.VerticalAlignment.Stretch>|  
+  
+ Um <xref:System.Windows.Controls.GridSplitter> pode sobrepor uma linha ou coluna que contém outros tipos de conteúdo ou ele pode ocupar uma linha ou coluna por si só. Para obter mais informações sobre como definir um <xref:System.Windows.Controls.GridSplitter>, consulte [como: redimensionar linhas com um GridSplitter](~/docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md) e [como: redimensionar colunas com um GridSplitter](~/docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md).  
+  
+ Se o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> as configurações de propriedade não obtêm desejado <xref:System.Windows.Controls.GridSplitter> comportamento, você pode alterar o <xref:System.Windows.Controls.GridSplitter.ResizeDirection%2A> e <xref:System.Windows.Controls.GridSplitter.ResizeBehavior%2A> as configurações de propriedade.  
+  
+ Um <xref:System.Windows.Controls.GridSplitter> podem ser encobertas por outros objetos que estão contidos no <xref:System.Windows.Controls.Panel.Children%2A> coleção do <xref:System.Windows.Controls.Grid>. Para obter informações sobre como evitar essa situação, consulte [como: Verifique se um GridSplitter é visível](~/docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.GridSplitter> que redimensiona as colunas em um <xref:System.Windows.Controls.Grid> sobrepondo a borda de uma coluna.  
+  
+ [!code-csharp[GridSplitterSnips#GridSplitterSimpleExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml.cs#gridsplittersimpleexample)]
+ [!code-vb[GridSplitterSnips#GridSplitterSimpleExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridSplitterSnips/visualbasic/window1.xaml.vb#gridsplittersimpleexample)]
+ [!code-xaml[GridSplitterSnips#GridSplitterSimpleExample](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplittersimpleexample)]  
+  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.GridSplitter> que redimensiona as colunas em um <xref:System.Windows.Controls.Grid> e que ocupa uma coluna no <xref:System.Windows.Controls.Grid>.  
+  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridSplitter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridSplitter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.GridSplitter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragIncrement">
+      <MemberSignature Language="C#" Value="public double DragIncrement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DragIncrement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GridSplitter.DragIncrement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância mínima que um usuário deve arrastar o mouse para redimensionar linhas ou colunas com um <see cref="T:System.Windows.Controls.GridSplitter" /> controle.</summary>
+        <value>Um valor que representa a distância mínima que um usuário deve usar o mouse para arrastar um <see cref="T:System.Windows.Controls.GridSplitter" /> para redimensionar linhas ou colunas. O padrão é 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A distância mínima que é definida por <xref:System.Windows.Controls.GridSplitter.DragIncrement%2A> é reinicializado continuamente como o usuário arrasta o mouse. Por exemplo, quando você arrasta o <xref:System.Windows.Controls.GridSplitter> pelo <xref:System.Windows.Controls.GridSplitter.DragIncrement%2A> quantidade, as linhas ou colunas são redimensionadas. Para redimensionar linhas e colunas mais, você deve arrastar o <xref:System.Windows.Controls.GridSplitter> o mesmo valor. Portanto, as alterações nos tamanhos de coluna e linha são feitos usando o mouse ou o teclado para mover o <xref:System.Windows.Controls.GridSplitter> são feitas em múltiplos do <xref:System.Windows.Controls.GridSplitter.DragIncrement%2A>.  
+  
+<a name="dependencyPropertyInfo_DragIncrement"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.GridSplitter.DragIncrementProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.GridSplitter.DragIncrement%2A> propriedade.  
+  
+ [!code-csharp[GridSplitterSnips#DragIncrement](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml.cs#dragincrement)]
+ [!code-vb[GridSplitterSnips#DragIncrement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridSplitterSnips/visualbasic/window1.xaml.vb#dragincrement)]
+ [!code-xaml[GridSplitterSnips#DragIncrement](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#dragincrement)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragIncrementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DragIncrementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DragIncrementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridSplitter.DragIncrementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.GridSplitter.DragIncrement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyboardIncrement">
+      <MemberSignature Language="C#" Value="public double KeyboardIncrement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 KeyboardIncrement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GridSplitter.KeyboardIncrement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância em que cada que você pressiona uma tecla de seta move um <see cref="T:System.Windows.Controls.GridSplitter" /> controle.</summary>
+        <value>A distância que o <see cref="T:System.Windows.Controls.GridSplitter" /> move para cada que você pressiona uma tecla de seta. O padrão é 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_KeyboardIncrement"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.GridSplitter.KeyboardIncrementProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.GridSplitter.KeyboardIncrement%2A> propriedade.  
+  
+ [!code-csharp[GridSplitterSnips#KeyboardIncrement](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml.cs#keyboardincrement)]
+ [!code-vb[GridSplitterSnips#KeyboardIncrement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridSplitterSnips/visualbasic/window1.xaml.vb#keyboardincrement)]
+ [!code-xaml[GridSplitterSnips#KeyboardIncrement](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#keyboardincrement)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyboardIncrementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty KeyboardIncrementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty KeyboardIncrementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridSplitter.KeyboardIncrementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.GridSplitter.KeyboardIncrement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridSplitter.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria a implementação de <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> para o <see cref="T:System.Windows.Controls.GridSplitter" /> controle.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Automation.Peers.GridSplitterAutomationPeer" /> para este <see cref="T:System.Windows.Controls.ToolTip" /> controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridSplitter.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Input.KeyEventArgs" /> que contém os dados do evento.</param>
+        <summary>Chamado quando uma tecla é pressionada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLostKeyboardFocus">
+      <MemberSignature Language="C#" Value="protected override void OnLostKeyboardFocus (System.Windows.Input.KeyboardFocusChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLostKeyboardFocus(class System.Windows.Input.KeyboardFocusChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridSplitter.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyboardFocusChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Input.KeyboardFocusChangedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Chamado quando o <see cref="T:System.Windows.Controls.GridSplitter" /> controle perde o foco do teclado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderSizeChanged">
+      <MemberSignature Language="C#" Value="protected override void OnRenderSizeChanged (System.Windows.SizeChangedInfo sizeInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnRenderSizeChanged(class System.Windows.SizeChangedInfo sizeInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridSplitter.OnRenderSizeChanged(System.Windows.SizeChangedInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sizeInfo" Type="System.Windows.SizeChangedInfo" />
+      </Parameters>
+      <Docs>
+        <param name="sizeInfo">Informações sobre a alteração no tamanho do <see cref="T:System.Windows.Controls.GridSplitter" />.</param>
+        <summary>Responde a uma alteração nas dimensões do <see cref="T:System.Windows.Controls.GridSplitter" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.GridSplitter> controle determina que tipo de ponteiro para exibir após seu <xref:System.Windows.Size> está definido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style PreviewStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style PreviewStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GridSplitter.PreviewStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo que personaliza a aparência, efeitos ou outras características de estilo para o <see cref="T:System.Windows.Controls.GridSplitter" /> indicador de visualização de controle que é exibida quando o <see cref="P:System.Windows.Controls.GridSplitter.ShowsPreview" /> está definida como <see langword="true" />.</summary>
+        <value>Retorna o <see cref="T:System.Windows.Style" /> para o indicador de visualização que mostra a possibilidade de alterar em <see cref="T:System.Windows.Controls.Grid" /> dimensões à medida que você move o <see cref="T:System.Windows.Controls.GridSplitter" /> controle. O padrão é o estilo que fornece o tema atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define estilos, há algumas restrições. Para obter mais informações, consulte [Estilo e modelagem](~/docs/framework/wpf/controls/styling-and-templating.md).  
+  
+<a name="xamlAttributeUsage_PreviewStyle"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object PreviewStyle="{ResourceExtension StyleResourceKey}"/>  
+```  
+  
+<a name="xamlValues_Style"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ `ResourceExtension`  
+ Um dos seguintes: `StaticResource` ou `DynamicResource`. Consulte [recursos XAML](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ `StyleResourceKey`  
+ A chave que identifica o estilo que está sendo solicitado. A chave refere-se a um recurso existente em um <xref:System.Windows.ResourceDictionary>.  
+  
+> [!NOTE]
+>  Sintaxe de elemento de propriedade é tecnicamente possível, mas não é recomendado. Consulte [modelos e estilos in-line](~/docs/framework/wpf/advanced/inline-styles-and-templates.md). Uma referência de associação usando ou <xref:System.Windows.Data.Binding> também é possível, mas não é comum.  
+  
+<a name="dependencyPropertyInfo_PreviewStyle"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.GridSplitter.PreviewStyleProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ Uma visualização das alterações dos limites de linha ou coluna é exibida enquanto a usuário arrasta a <xref:System.Windows.Controls.GridSplitter> controle e o <xref:System.Windows.Controls.GridSplitter.ShowsPreview%2A> está definida como `true`. Os limites de linha e coluna são definidos quando o usuário libera o botão do mouse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PreviewStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PreviewStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridSplitter.PreviewStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.GridSplitter.PreviewStyle" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.GridSplitter.PreviewStyle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.GridResizeBehavior ResizeBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.GridResizeBehavior ResizeBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GridSplitter.ResizeBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define quais colunas ou linhas são redimensionadas em relação às colunas ou linhas para as quais o controle <see cref="T:System.Windows.Controls.GridSplitter" /> está definido.</summary>
+        <value>Um dos valores de enumeração que indica quais colunas ou linhas são redimensionadas por esse controle <see cref="T:System.Windows.Controls.GridSplitter" />. O padrão é <see cref="F:System.Windows.Controls.GridResizeBehavior.BasedOnAlignment" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para especificar um <xref:System.Windows.Controls.GridSplitter> que redimensiona linhas ou colunas, defina o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propriedades. Se você não pode obter o comportamento desejado, definindo o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propriedades, altere o <xref:System.Windows.Controls.GridSplitter.ResizeDirection%2A> ou <xref:System.Windows.Controls.GridSplitter.ResizeBehavior%2A> valores padrão. Para obter mais informações, consulte [como: redimensionar linhas com um GridSplitter](~/docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md) e [como: redimensionar colunas com um GridSplitter](~/docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md).  
+  
+<a name="dependencyPropertyInfo_ResizeBehavior"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.GridSplitter.ResizeBehaviorProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.GridSplitter.ResizeBehavior%2A> propriedade.  
+  
+ [!code-csharp[GridSplitterSnips#ResizeBehavior](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml.cs#resizebehavior)]
+ [!code-vb[GridSplitterSnips#ResizeBehavior](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridSplitterSnips/visualbasic/window1.xaml.vb#resizebehavior)]
+ [!code-xaml[GridSplitterSnips#ResizeBehavior](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#resizebehavior)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeBehaviorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ResizeBehaviorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ResizeBehaviorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridSplitter.ResizeBehaviorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.GridSplitter.ResizeBehavior" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.GridSplitter.ResizeBehavior%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.GridResizeDirection ResizeDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.GridResizeDirection ResizeDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GridSplitter.ResizeDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.GridResizeDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle <see cref="T:System.Windows.Controls.GridSplitter" /> redimensiona linhas ou colunas.</summary>
+        <value>Um dos valores de enumeração que especifica se é necessário redimensionar linhas ou colunas. O padrão é <see cref="F:System.Windows.Controls.GridResizeDirection.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para especificar um <xref:System.Windows.Controls.GridSplitter> que redimensiona linhas ou colunas, defina o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propriedades. Se você não pode obter o comportamento desejado, definindo o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propriedades, altere o <xref:System.Windows.Controls.GridSplitter.ResizeDirection%2A> ou <xref:System.Windows.Controls.GridSplitter.ResizeBehavior%2A> valores padrão. Para obter mais informações, consulte [como: redimensionar linhas com um GridSplitter](~/docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md) e [como: redimensionar colunas com um GridSplitter](~/docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md).  
+  
+<a name="dependencyPropertyInfo_ResizeDirection"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.GridSplitter.ResizeDirectionProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.GridSplitter.ResizeDirection%2A> propriedade.  
+  
+ [!code-csharp[GridSplitterSnips#ResizeDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml.cs#resizedirection)]
+ [!code-vb[GridSplitterSnips#ResizeDirection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridSplitterSnips/visualbasic/window1.xaml.vb#resizedirection)]
+ [!code-xaml[GridSplitterSnips#ResizeDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#resizedirection)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ResizeDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ResizeDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridSplitter.ResizeDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.GridSplitter.ResizeDirection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowsPreview">
+      <MemberSignature Language="C#" Value="public bool ShowsPreview { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowsPreview" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.GridSplitter.ShowsPreview" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle <see cref="T:System.Windows.Controls.GridSplitter" /> atualiza o tamanho da coluna ou da linha conforme o usuário arrasta o controle.</summary>
+        <value>
+          <see langword="true" /> se uma visualização <see cref="T:System.Windows.Controls.GridSplitter" /> for exibida; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.GridSplitter> requer um <xref:System.Windows.Documents.AdornerDecorator> esteja presente na árvore de seu pai para exibir comentários de visualização de arrastar. Esse requisito é atendido normalmente com o <xref:System.Windows.Documents.AdornerDecorator> objeto que está disponível no estilo padrão para o <xref:System.Windows.Window> ou o <xref:System.Windows.Documents.AdornerDecorator> objeto criado por um <xref:System.Windows.Controls.ScrollViewer> objeto. No entanto, se nenhuma desses estiver disponível, o <xref:System.Windows.Controls.GridSplitter> controle deve definir seu próprio <xref:System.Windows.Documents.AdornerDecorator> objeto.  
+  
+<a name="dependencyPropertyInfo_ShowsPreview"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.GridSplitter.ShowsPreviewProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ Quando o <xref:System.Windows.Controls.GridSplitter.ShowsPreview%2A> está definida como `true`, é mostrada uma visualização da alteração nos tamanhos de linha ou coluna. O tamanho real é alterado quando o <xref:System.Windows.Controls.GridSplitter> é liberado. Se a propriedade é definida como `false`, os tamanhos de coluna ou linha são atualizados em tempo real quando a usuário arrasta a <xref:System.Windows.Controls.GridSplitter> controle.  
+  
+ Se o teclado é usado para mover o <xref:System.Windows.Controls.GridSplitter> tamanhos de controle, a coluna ou linha são atualizados em tempo real, mesmo se o <xref:System.Windows.Controls.GridSplitter.ShowsPreview%2A> está definida como `true`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.GridSplitter.ShowsPreview%2A> propriedade.  
+  
+ [!code-csharp[GridSplitterSnips#ShowsPreview](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml.cs#showspreview)]
+ [!code-vb[GridSplitterSnips#ShowsPreview](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridSplitterSnips/visualbasic/window1.xaml.vb#showspreview)]
+ [!code-xaml[GridSplitterSnips#ShowsPreview](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#showspreview)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowsPreviewProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShowsPreviewProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShowsPreviewProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.GridSplitter.ShowsPreviewProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.GridSplitter.ShowsPreview" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

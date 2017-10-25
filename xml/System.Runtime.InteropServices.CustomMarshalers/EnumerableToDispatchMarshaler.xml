@@ -1,0 +1,203 @@
+<Type Name="EnumerableToDispatchMarshaler" FullName="System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler">
+  <TypeSignature Language="C#" Value="public class EnumerableToDispatchMarshaler : System.Runtime.InteropServices.ICustomMarshaler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EnumerableToDispatchMarshaler extends System.Object implements class System.Runtime.InteropServices.ICustomMarshaler" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler" />
+  <AssemblyInfo>
+    <AssemblyName>CustomMarshalers</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices.ICustomMarshaler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Realiza marshal da interface <see langword="IDispatch" /> COM para a interface <see cref="T:System.Collections.IEnumerable" /> do .NET Framework e vice-versa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Realiza marshaling este marshaler personalizado `IDispatch` para <xref:System.Collections.IEnumerable> e empacota <xref:System.Collections.IEnumerable> para `IDispatch` quando existe um membro com um DISPID de -4. Quando você usa o importador da biblioteca (Tlbimp.exe) para criar uma classe que implementa <xref:System.Collections.IEnumerable> , o CLR usa esse marshaler personalizado automaticamente para enumeradores de ponte COM e enumeradores de .NET. Chamando <xref:System.Collections.IEnumerable.GetEnumerator%2A> resulta em `IDispatch.Invoke` que está sendo chamado com um DISPID de -4 e vice-versa.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CleanUpManagedData">
+      <MemberSignature Language="C#" Value="public virtual void CleanUpManagedData (object pManagedObj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CleanUpManagedData(object pManagedObj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.CleanUpManagedData(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>CustomMarshalers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pManagedObj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="pManagedObj">O objeto gerenciado a ser destruído.</param>
+        <summary>Executa a limpeza necessária dos dados gerenciados quando ele não for mais necessário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O CLR chama esse método para limpar os dados gerenciados alocados a <xref:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.MarshalNativeToManaged%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CleanUpNativeData">
+      <MemberSignature Language="C#" Value="public virtual void CleanUpNativeData (IntPtr pNativeData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CleanUpNativeData(native int pNativeData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.CleanUpNativeData(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>CustomMarshalers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pNativeData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pNativeData">Um ponteiro para os dados não gerenciados a serem destruídos.</param>
+        <summary>Executa a limpeza necessária dos dados não gerenciados quando ele não for mais necessário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O CLR chama esse método para limpar os dados não gerenciados alocados a <xref:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.MarshalManagedToNative%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInstance">
+      <MemberSignature Language="C#" Value="public static System.Runtime.InteropServices.ICustomMarshaler GetInstance (string pstrCookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.InteropServices.ICustomMarshaler GetInstance(string pstrCookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.GetInstance(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>CustomMarshalers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ICustomMarshaler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pstrCookie" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pstrCookie">Parâmetro “cookie” de cadeia de caracteres que pode ser usado pelo empacotador personalizado.</param>
+        <summary>Retorna uma instância do empacotador personalizado.</summary>
+        <returns>Uma instância do empacotador personalizado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os empacotadores personalizados devem implementar esse método, embora não seja parte do <xref:System.Runtime.InteropServices.ICustomMarshaler> definição de interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNativeDataSize">
+      <MemberSignature Language="C#" Value="public virtual int GetNativeDataSize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetNativeDataSize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.GetNativeDataSize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>CustomMarshalers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o tamanho em bytes dos dados marshaling não gerenciados.</summary>
+        <returns>-1 para indicar o tipo que manipula esta marshaler não é um tipo de valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque não há suporte para empacotamento personalizado de tipos de valor no .NET Framework, esse método sempre retornará -1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarshalManagedToNative">
+      <MemberSignature Language="C#" Value="public virtual IntPtr MarshalManagedToNative (object pManagedObj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance native int MarshalManagedToNative(object pManagedObj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.MarshalManagedToNative(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>CustomMarshalers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pManagedObj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="pManagedObj">O objeto gerenciado a ser convertido.</param>
+        <summary>Realiza marshaling de um objeto de código gerenciado para código não gerenciado.</summary>
+        <returns>Um ponteiro para o objeto não gerenciado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O CLR chama esse método com a instância especificada de um objeto gerenciado para converter esse objeto de código gerenciado para código não gerenciado e retorna um ponteiro para o objeto não gerenciado apropriado, que representa o modo de exibição do objeto COM.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pManagedObj" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MarshalNativeToManaged">
+      <MemberSignature Language="C#" Value="public virtual object MarshalNativeToManaged (IntPtr pNativeData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object MarshalNativeToManaged(native int pNativeData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.CustomMarshalers.EnumerableToDispatchMarshaler.MarshalNativeToManaged(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>CustomMarshalers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pNativeData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pNativeData">Um ponteiro para o objeto não gerenciado a ser convertido.</param>
+        <summary>Realiza marshaling de um objeto de código não gerenciado para código gerenciado.</summary>
+        <returns>Um objeto gerenciado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O CLR chama esse método com o ponteiro especificado para um objeto não gerenciado para converter esse objeto de código não gerenciado para código gerenciado e retorna um objeto gerenciado que representa a exibição gerenciada de dados não gerenciados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pNativeData" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

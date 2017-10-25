@@ -1,0 +1,293 @@
+<Type Name="DeviceElement" FullName="System.Web.UI.MobileControls.DeviceElement">
+  <TypeSignature Language="C#" Value="public sealed class DeviceElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DeviceElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.DeviceElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Mapeia adaptadores específicos para controles móveis específicos para um determinado dispositivo. Essa classe não pode ser herdada. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa um `device` elemento em um arquivo de configuração XML.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeviceElement (string name, string inheritsFrom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string inheritsFrom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceElement.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="inheritsFrom" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O identificador exclusivo da configuração de dispositivo do adaptador.</param>
+        <param name="inheritsFrom">O adaptador de dispositivo configurado que este conjunto de adaptador de dispositivo herda.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.MobileControls.DeviceElement" /> classe com o identificador especificado e definido como herdam o adaptador de dispositivo. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeviceElement (string name, Type predicateClass, string predicateMethod, Type pageAdapter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type predicateClass, string predicateMethod, class System.Type pageAdapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceElement.#ctor(System.String,System.Type,System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="predicateClass" Type="System.Type" />
+        <Parameter Name="predicateMethod" Type="System.String" />
+        <Parameter Name="pageAdapter" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O identificador exclusivo da configuração de dispositivo do adaptador.</param>
+        <param name="predicateClass">A classe à qual o método especificado pelo <c>predicateMethod</c> pertence.</param>
+        <param name="predicateMethod">Um método usado para detectar a atual <see cref="T:System.Web.HttpContext" /> se a configuração de dispositivo do adaptador é aplicável.</param>
+        <param name="pageAdapter">Identifica a classe de adaptador de página para o conjunto de dispositivos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.MobileControls.DeviceElement" /> classe com o identificador especificado e o adaptador de página. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeviceElement (string name, string inheritsFrom, Type predicateClass, string predicateMethod, Type pageAdapter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string inheritsFrom, class System.Type predicateClass, string predicateMethod, class System.Type pageAdapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.DeviceElement.#ctor(System.String,System.String,System.Type,System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="inheritsFrom" Type="System.String" />
+        <Parameter Name="predicateClass" Type="System.Type" />
+        <Parameter Name="predicateMethod" Type="System.String" />
+        <Parameter Name="pageAdapter" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O identificador exclusivo da configuração de dispositivo do adaptador.</param>
+        <param name="inheritsFrom">O adaptador de dispositivo configurado que este conjunto de adaptador de dispositivo herda.</param>
+        <param name="predicateClass">A classe à qual o método especificado pelo <c>predicateMethod</c> pertence.</param>
+        <param name="predicateMethod">Um método usado para detectar a atual <see cref="T:System.Web.HttpContext" /> se a configuração de dispositivo do adaptador é aplicável.</param>
+        <param name="pageAdapter">Identifica a classe de adaptador de página para o conjunto de dispositivos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.MobileControls.DeviceElement" /> classe com o identificador especificado, o adaptador de página e definir herde o adaptador de dispositivo. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ControlElementCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ControlElementCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceElement.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", IsDefaultCollection=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ControlElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de elementos de controle para este elemento de dispositivo. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A coleção de elementos de controle para este elemento de dispositivo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementProperty">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElementProperty ElementProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationElementProperty ElementProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceElement.ElementProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritsFrom">
+      <MemberSignature Language="C#" Value="public string InheritsFrom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InheritsFrom" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceElement.InheritsFrom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("inheritsFrom")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do conjunto de adaptador de dispositivo que este conjunto de adaptador de dispositivo herda. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O nome do adaptador de dispositivo definido que este conjunto de adaptador de dispositivo herda.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de cadeia de caracteres que identifica exclusivamente o conjunto de adaptador de dispositivo. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O valor de cadeia de caracteres que identifica exclusivamente o conjunto de adaptador de dispositivo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageAdapter">
+      <MemberSignature Language="C#" Value="public Type PageAdapter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PageAdapter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceElement.PageAdapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.MobileControls.MobileTypeNameConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("pageAdapter")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.SubclassTypeValidator(typeof(System.Web.UI.MobileControls.IPageAdapter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de classe de adaptador de página para este conjunto de adaptador de dispositivo. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Defina o tipo de classe de adaptador de página para este adaptador de dispositivo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PredicateClass">
+      <MemberSignature Language="C#" Value="public Type PredicateClass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PredicateClass" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceElement.PredicateClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.MobileControls.MobileTypeNameConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("predicateClass")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a classe que contém o método usado para detectar se a configuração de dispositivo do adaptador é aplicável. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A classe à qual o método especificado pelo <paramref name="predicateMethod" /> parâmetro pertence.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PredicateMethod">
+      <MemberSignature Language="C#" Value="public string PredicateMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PredicateMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceElement.PredicateMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("predicateMethod")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método usado para detectar a atual <see cref="T:System.Web.HttpContext" /> instância se o conjunto de adaptador de dispositivo é aplicável. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O método usado para detectar a atual <see cref="T:System.Web.HttpContext" /> se a configuração de dispositivo do adaptador é aplicável.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.DeviceElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

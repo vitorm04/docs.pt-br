@@ -1,0 +1,357 @@
+<Type Name="GridLength" FullName="System.Windows.GridLength">
+  <TypeSignature Language="C#" Value="public struct GridLength : IEquatable&lt;System.Windows.GridLength&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit GridLength extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Windows.GridLength&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.GridLength" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Windows.GridLength&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.GridLengthConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o tamanho dos elementos que oferecem suporte explicitamente aos tipos de unidade <see cref="F:System.Windows.GridUnitType.Star" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementos como <xref:System.Windows.Controls.ColumnDefinition> e <xref:System.Windows.Controls.RowDefinition> use esse tipo para descrever a largura e altura para dar suporte à distribuição de variável de espaço disponível.  
+  
+<a name="xamlAttributeUsage_GridLength"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="doubleLength"/>  
+- or -  
+<object property="autoValue"/>  
+```  
+  
+<a name="xamlValues_GridLength"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *doubleLength*  
+ Comprimento do elemento, descrito como um <xref:System.Double> valor que especifica um [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] medidas, ou como um *qualifiedDouble* (veja abaixo).  
+  
+ *autoValue*  
+ Comprimento do elemento, descrito pelo valor Auto ou *. Consulte <xref:System.Windows.GridUnitType> para obter mais informações sobre os valores automaticamente e *.  
+  
+ *qualifiedDouble*  
+ Um *duplo* valor conforme descrito acima para qualquer uma das medidas, seguido por um dos seguintes unidade declaração cadeias de caracteres: `px`, `in`, `cm`, `pt`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ `cm`centímetros; 1cm==(96/2.54) px  
+  
+ `pt`pontos; 1pt==(96/72) px  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridLength (double pixels);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 pixels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.GridLength.#ctor(System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pixels" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="pixels">O número de pixels independentes de dispositivo (96 pixels por polegada).</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Windows.GridLength" /> usando o valor absoluto especificado em pixels.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Pixels" /> é igual a <see cref="F:System.Double.NegativeInfinity" />, <see cref="F:System.Double.PositiveInfinity" /> ou <see cref="F:System.Double.NaN" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridLength (double value, System.Windows.GridUnitType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value, valuetype System.Windows.GridUnitType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.GridLength.#ctor(System.Double,System.Windows.GridUnitType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.GridUnitType" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor inicial desta instância de <see cref="T:System.Windows.GridLength" />.</param>
+        <param name="type">O <see cref="T:System.Windows.GridUnitType" /> mantido por esta instância de <see cref="T:System.Windows.GridLength" />.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Windows.GridLength" /> e especifica o tipo de valor que ela contém.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> é igual a <see cref="F:System.Double.NegativeInfinity" />, <see cref="F:System.Double.PositiveInfinity" /> ou <see cref="F:System.Double.NaN" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="public static System.Windows.GridLength Auto { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.GridLength Auto" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.GridLength.Auto" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.GridLength</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma instância de <see cref="T:System.Windows.GridLength" /> que contém um valor cujo tamanho é determinado pelas propriedades de tamanho do objeto de conteúdo.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.GridLength" /> cujo <see cref="P:System.Windows.GridLength.GridUnitType" /> está definida como <see cref="F:System.Windows.GridUnitType.Auto" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object oCompare);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object oCompare) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.GridLength.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oCompare" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oCompare">O objeto a ser comparado com a instância atual.</param>
+        <summary>Determina se o objeto especificado é igual ao atual <see cref="T:System.Windows.GridLength" /> instância.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado tem o mesmo valor e <see cref="T:System.Windows.GridUnitType" /> como a instância atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.GridLength gridLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Windows.GridLength gridLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.GridLength.Equals(System.Windows.GridLength)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gridLength" Type="System.Windows.GridLength" />
+      </Parameters>
+      <Docs>
+        <param name="gridLength">O <see cref="T:System.Windows.GridLength" /> estrutura a ser comparado com a instância atual.</param>
+        <summary>Determina se o <see cref="T:System.Windows.GridLength" /> especificado é igual ao <see cref="T:System.Windows.GridLength" /> atual.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Windows.GridLength" /> tem o mesmo valor e <see cref="P:System.Windows.GridLength.GridUnitType" /> como a instância atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.GridLength.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código hash para o <see cref="T:System.Windows.GridLength" />.</summary>
+        <returns>Um código hash para a atual <see cref="T:System.Windows.GridLength" /> estrutura.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridUnitType">
+      <MemberSignature Language="C#" Value="public System.Windows.GridUnitType GridUnitType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.GridUnitType GridUnitType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.GridLength.GridUnitType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.GridUnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.GridUnitType" /> associado do <see cref="T:System.Windows.GridLength" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.GridUnitType" />. O padrão é <see cref="F:System.Windows.GridUnitType.Auto" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAbsolute">
+      <MemberSignature Language="C#" Value="public bool IsAbsolute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAbsolute" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.GridLength.IsAbsolute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.GridLength" /> contém um valor que é expresso em pixels.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Windows.GridLength.GridUnitType" /> é de propriedade <see cref="F:System.Windows.GridUnitType.Pixel" />; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuto">
+      <MemberSignature Language="C#" Value="public bool IsAuto { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuto" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.GridLength.IsAuto" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.GridLength" /> contém um valor cujo tamanho é determinado pelas propriedades de tamanho do objeto de conteúdo.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Windows.GridLength.GridUnitType" /> é de propriedade <see cref="F:System.Windows.GridUnitType.Auto" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão <xref:System.Windows.GridLength.GridUnitType%2A> valor é <xref:System.Windows.GridUnitType?displayProperty=nameWithType>. Portanto, essa propriedade retorna `true` se você não especificar um <xref:System.Windows.GridUnitType> ao criar a instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStar">
+      <MemberSignature Language="C#" Value="public bool IsStar { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStar" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.GridLength.IsStar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.GridLength" /> contém um valor que é expresso como uma proporção ponderada do espaço disponível.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Windows.GridLength.GridUnitType" /> é de propriedade <see cref="F:System.Windows.GridUnitType.Star" />; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.GridLength gl1, System.Windows.GridLength gl2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.GridLength gl1, valuetype System.Windows.GridLength gl2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.GridLength.op_Equality(System.Windows.GridLength,System.Windows.GridLength)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gl1" Type="System.Windows.GridLength" />
+        <Parameter Name="gl2" Type="System.Windows.GridLength" />
+      </Parameters>
+      <Docs>
+        <param name="gl1">A primeira instância do <see cref="T:System.Windows.GridLength" /> para comparar.</param>
+        <param name="gl2">A segunda instância de <see cref="T:System.Windows.GridLength" /> para comparar.</param>
+        <summary>Compara a igualdade de duas estruturas <see cref="T:System.Windows.GridLength" />.</summary>
+        <returns>
+          <see langword="true" />Se as duas instâncias de <see cref="T:System.Windows.GridLength" /> têm o mesmo valor e <see cref="T:System.Windows.GridUnitType" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.GridLength gl1, System.Windows.GridLength gl2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.GridLength gl1, valuetype System.Windows.GridLength gl2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.GridLength.op_Inequality(System.Windows.GridLength,System.Windows.GridLength)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gl1" Type="System.Windows.GridLength" />
+        <Parameter Name="gl2" Type="System.Windows.GridLength" />
+      </Parameters>
+      <Docs>
+        <param name="gl1">A primeira instância do <see cref="T:System.Windows.GridLength" /> para comparar.</param>
+        <param name="gl2">A segunda instância de <see cref="T:System.Windows.GridLength" /> para comparar.</param>
+        <summary>Compara dois <see cref="T:System.Windows.GridLength" /> estruturas para determinar se elas não forem iguais.</summary>
+        <returns>
+          <see langword="true" />Se as duas instâncias de <see cref="T:System.Windows.GridLength" /> não têm o mesmo valor e <see cref="T:System.Windows.GridUnitType" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.GridLength.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> representação do <see cref="T:System.Windows.GridLength" />.</summary>
+        <returns>Um <see cref="T:System.String" /> representação do atual <see cref="T:System.Windows.GridLength" /> estrutura.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.GridLength.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Double" /> que representa o valor da <see cref="T:System.Windows.GridLength" />.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o valor da instância atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

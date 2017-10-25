@@ -1,0 +1,68 @@
+<Type Name="RegionData" FullName="System.Drawing.Drawing2D.RegionData">
+  <TypeSignature Language="C#" Value="public sealed class RegionData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegionData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.RegionData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula os dados que compõem um objeto <see cref="T:System.Drawing.Region" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do `Paint` manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um retângulo e desenhar seus na tela em preto.  
+  
+-   Cria uma região usando o retângulo.  
+  
+-   Obtém o RegionData.  
+  
+-   Desenha os dados da região (uma matriz de bytes) para a tela, usando a função auxiliar DisplayRegionData.  
+  
+ [!code-cpp[System.Drawing.ClassicRegionExamples#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ClassicRegionExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ClassicRegionExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicRegionExamples/VB/form1.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public byte[] Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Data" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.RegionData.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma matriz de bytes que especifica o objeto <see cref="T:System.Drawing.Region" />.</summary>
+        <value>Uma matriz de bytes que especifica o objeto <see cref="T:System.Drawing.Region" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+  
+-   O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do `Paint` manipulador de eventos. O exemplo de código demonstra como usar o <xref:System.Drawing.Drawing2D.RegionData.Data%2A> um <xref:System.Drawing.Drawing2D.RegionData> objeto para definir o <xref:System.Drawing.Drawing2D.RegionData.Data%2A> para outro <xref:System.Drawing.Drawing2D.RegionData>.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#13](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#13)]
+ [!code-csharp[System.Drawing.MiscExamples#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#13)]
+ [!code-vb[System.Drawing.MiscExamples#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1401 @@
+<Type Name="GlyphTypeface" FullName="System.Windows.Media.GlyphTypeface">
+  <TypeSignature Language="C#" Value="public class GlyphTypeface : System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GlyphTypeface extends System.Object implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.GlyphTypeface" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Especifica uma face de fonte física que corresponde a um arquivo de fonte no disco.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.GlyphTypeface> objeto é um objeto de texto de nível baixo que corresponde a uma única face de uma fonte família representados por um arquivo de fonte OpenType ou serializada como um bloco de memória em um documento. Corretas <xref:System.Windows.Media.GlyphTypeface> a ser usado para uma execução de caracteres em uma determinada fonte lógica normalmente é determinado pelo [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sistema de fonte e gravado no <xref:System.Windows.Media.GlyphRun> objetos gerados pelo <xref:System.Windows.Media.FormattedText> do objeto e formatação de texto de linha [!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)].  
+  
+ O <xref:System.Windows.Media.GlyphTypeface> fornece propriedades e métodos para:  
+  
+-   Obtendo font face métricas mais comuns, como a taxa de ascendente e descendente de tamanho em.  
+  
+-   Obtendo métricas, estruturas e bitmaps marcas individuais.  
+  
+-   Serialização em um documento.  
+  
+ A lista a seguir descreve o tipo de aplicativo controlam cenários que ilustram o valor de uso de baixo nível que o <xref:System.Windows.Media.GlyphTypeface> objeto fornece.  
+  
+-   Um gerador de documento de formato fixo pode usar o <xref:System.Windows.Media.GlyphTypeface> para obter uma imagem binária da fonte para inserir em um contêiner de documento  
+  
+-   Um driver de impressora pode usar o <xref:System.Windows.Media.GlyphTypeface> obter contornos de glifos da fonte ou bitmaps ou a imagem inteira de fonte para enviar para a impressora.  
+  
+-   Um <xref:System.Windows.Media.GlyphTypeface> aplicativo visualizador pode usar o <xref:System.Windows.Media.GlyphTypeface> para obter informações de métrica e bitmap.  
+  
+ Cada glifo define métricas que especificam como ele se alinha com outros <xref:System.Windows.Documents.Glyphs>. O gráfico a seguir define os valores da métrica para caracteres de glifo.  
+  
+ ![Diagrama de gráfico de medidas de glifo](~/add/media/glyph-example.png "Diagrama gráfico de medidas de glifo")  
+Valores da métrica de caracteres de glifo  
+  
+<a name="xamlTextUsage_GlyphTypeface"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GlyphTypeface ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphTypeface.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.GlyphTypeface" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GlyphTypeface (Uri typefaceSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri typefaceSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphTypeface.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typefaceSource" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="typefaceSource">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] que especifica o local do arquivo fonte.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.GlyphTypeface" />, usando o local do arquivo de fonte especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um novo <xref:System.Windows.Media.GlyphTypeface> objeto a partir de um tipo de fonte OpenType especificado pelo `typefaceSource`. O construído <xref:System.Windows.Media.GlyphTypeface> objeto não usa simulações de estilo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma nova instância do <xref:System.Windows.Media.GlyphTypeface> classe especificando um local de arquivo de fonte.  
+  
+ [!code-csharp[GlyphTypefaceSnippets#GlyphTypefaceSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphTypefaceSnippets/CSharp/Window1.xaml.cs#glyphtypefacesnippet1)]
+ [!code-vb[GlyphTypefaceSnippets#GlyphTypefaceSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GlyphTypefaceSnippets/visualbasic/window1.xaml.vb#glyphtypefacesnippet1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GlyphTypeface (Uri typefaceSource, System.Windows.Media.StyleSimulations styleSimulations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri typefaceSource, valuetype System.Windows.Media.StyleSimulations styleSimulations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphTypeface.#ctor(System.Uri,System.Windows.Media.StyleSimulations)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typefaceSource" Type="System.Uri" />
+        <Parameter Name="styleSimulations" Type="System.Windows.Media.StyleSimulations" />
+      </Parameters>
+      <Docs>
+        <param name="typefaceSource">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] que especifica o local do arquivo fonte.</param>
+        <param name="styleSimulations">Um dos valores de <see cref="T:System.Windows.Media.StyleSimulations" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.GlyphTypeface" /> classe usando o local do arquivo fonte especificada e <see cref="T:System.Windows.Media.StyleSimulations" /> valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um novo <xref:System.Windows.Media.GlyphTypeface> objeto a partir de um tipo de fonte OpenType especificado por `typefaceSource` e `styleSimulations`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdvanceHeights">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;ushort,double&gt; AdvanceHeights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;unsigned int16, float64&gt; AdvanceHeights" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.AdvanceHeights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.UInt16,System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura de avanço para os glifos representados pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> essas informações a altura antecipada representa os glifos pares de objeto que contém a chave-valor. A chave é um <see cref="T:System.UInt16" /> que identifica o índice de glifo. O valor é um <see cref="T:System.Double" /> que representa a altura de avanço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.GlyphTypeface.AdvanceHeights%2A> propriedade é usada para calcular o layout vertical.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como retornar a coleção de níveis mais altos de adiantamento de glifos na fonte.  
+  
+ [!code-csharp[GlyphTypefaceSnippets#GlyphTypefaceSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphTypefaceSnippets/CSharp/Window1.xaml.cs#glyphtypefacesnippet2)]
+ [!code-vb[GlyphTypefaceSnippets#GlyphTypefaceSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GlyphTypefaceSnippets/visualbasic/window1.xaml.vb#glyphtypefacesnippet2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdvanceWidths">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;ushort,double&gt; AdvanceWidths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;unsigned int16, float64&gt; AdvanceWidths" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.AdvanceWidths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.UInt16,System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as larguras de avanço para os glifos representados pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> essas informações a largura antecipada representa os glifos pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.UInt16" /> que identifica o índice de glifo. O valor é um <see cref="T:System.Double" /> que representa a largura de avanço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.GlyphTypeface.AdvanceHeights%2A> propriedade é usada para calcular o layout horizontal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Baseline">
+      <MemberSignature Language="C#" Value="public double Baseline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Baseline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Baseline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de linha de base para o <see cref="T:System.Windows.Media.GlyphTypeface" />.</summary>
+        <value>Um valor do tipo <see cref="T:System.Double" /> que representa a linha de base.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de linha de base representa a distância da parte superior da célula para a linha de base em inglês em relação ao tamanho em.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomSideBearings">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;ushort,double&gt; BottomSideBearings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;unsigned int16, float64&gt; BottomSideBearings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.BottomSideBearings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.UInt16,System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a distância da borda inferior da caixa preta para a extremidade inferior do vetor avançado para os glifos representado pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> essas informações de distância representam pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.UInt16" /> que identifica o glifo. O valor é um <see cref="T:System.Double" /> que representa a distância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.GlyphTypeface.BottomSideBearings%2A> valor é positivo quando a parte inferior da caixa preta está dentro do retângulo de alinhamento definido pela altura da célula antecipada largura e a fonte. A altura da célula fonte é uma dimensão horizontal em layout vertical.  
+  
+ O <xref:System.Windows.Media.GlyphTypeface.BottomSideBearings%2A> valor é negativo, quando a parte inferior da caixa preta overhangs o retângulo de alinhamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CapsHeight">
+      <MemberSignature Language="C#" Value="public double CapsHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CapsHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.CapsHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a distância da linha de base para a parte superior de um capital em inglês, relativo ao tamanho em, para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Double" /> que indica a distância da linha de base para a parte superior de uma letra maiuscula em inglês, expressada como uma fração do tamanho da fonte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharacterToGlyphMap">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;int,ushort&gt; CharacterToGlyphMap { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;int32, unsigned int16&gt; CharacterToGlyphMap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.CharacterToGlyphMap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Int32,System.UInt16&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o mapeamento nominal de um ponto de código Unicode para um índice de glifo, conforme definido pela tabela “CMAP” da fonte.</summary>
+        <value>Um objeto <see cref="T:System.Collections.Generic.IDictionary`2" /> que contém o mapeamento de um código Unicode aponta para índices de glifo em todos os glifos no objeto <see cref="T:System.Windows.Media.GlyphTypeface" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeSubset">
+      <MemberSignature Language="C#" Value="public byte[] ComputeSubset (System.Collections.Generic.ICollection&lt;ushort&gt; glyphs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ComputeSubset(class System.Collections.Generic.ICollection`1&lt;unsigned int16&gt; glyphs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphTypeface.ComputeSubset(System.Collections.Generic.ICollection{System.UInt16})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="glyphs" Type="System.Collections.Generic.ICollection&lt;System.UInt16&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="glyphs">A coleção de índices de glyph devem ser incluídos no subconjunto.</param>
+        <summary>Retorna a imagem binária do subconjunto fonte com base em uma coleção especificada de glifos.</summary>
+        <returns>A <see cref="T:System.Byte" /> matriz que representa a imagem binária do subconjunto de fonte.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para ler o conteúdo do <paramref name="glyphs" />. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Copyrights">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; Copyrights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; Copyrights" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Copyrights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de copyright de <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> essas informações de direitos autorais representam pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres de informações de direitos autorais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.GlyphTypeface.Copyrights%2A> propriedade é separada das informações de marca comercial é o acesso pelo <xref:System.Windows.Media.GlyphTypeface.Trademarks%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como retornar a coleção de informações de direitos autorais do <xref:System.Windows.Media.GlyphTypeface> objeto.  
+  
+ [!code-csharp[GlyphTypefaceSnippets#GlyphTypefaceSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphTypefaceSnippets/CSharp/Window1.xaml.cs#glyphtypefacesnippet3)]
+ [!code-vb[GlyphTypefaceSnippets#GlyphTypefaceSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GlyphTypefaceSnippets/visualbasic/window1.xaml.vb#glyphtypefacesnippet3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Descriptions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; Descriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; Descriptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Descriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de descrição para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> objeto que contém pares chave/valor que a chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres de informações de descrição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações de descrição de um <xref:System.Windows.Media.GlyphTypeface> objeto pode incluir notas de revisão, recomendações de uso, histórico, recursos, bem como outras informações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; DesignerNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; DesignerNames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.DesignerNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de designer do <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> pares de objeto que contém a chave/valor que representam informações do designer. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres de informações do designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerUrls">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; DesignerUrls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; DesignerUrls" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.DesignerUrls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de URL designer o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> pares de objeto que contém a chave/valor que representam informações do designer. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres que faz referência a um designer de URL.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistancesFromHorizontalBaselineToBlackBoxBottom">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;ushort,double&gt; DistancesFromHorizontalBaselineToBlackBoxBottom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;unsigned int16, float64&gt; DistancesFromHorizontalBaselineToBlackBoxBottom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.DistancesFromHorizontalBaselineToBlackBoxBottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.UInt16,System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de deslocamento da linha de base Ocidental horizontal para a parte inferior da caixa preta glifo os glifos representado pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> objeto que contém pares chave/valor que representam deslocamentos para os glifos. A chave é um <see cref="T:System.UInt16" /> que identifica o índice de glifo. O valor é um <see cref="T:System.Double" /> que representa o valor de deslocamento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmbeddingRights">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FontEmbeddingRight EmbeddingRights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.FontEmbeddingRight EmbeddingRights" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.EmbeddingRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a fonte inserindo permissão para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Uma da <see cref="T:System.Windows.Media.FontEmbeddingRight" /> valores que representa a permissão de incorporação de fonte</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphTypeface.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</param>
+        <summary>Determina se o objeto especificado é igual ao atual <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="o" /> é um <see cref="T:System.Windows.Media.GlyphTypeface" /> e é igual à atual <see cref="T:System.Windows.Media.GlyphTypeface" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Windows.Media.GlyphTypeface> objetos são considerados iguais se o <xref:System.Windows.Media.GlyphTypeface.StyleSimulations%2A> propriedades são iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaceNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; FaceNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; FaceNames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.FaceNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> essas informações de nome de face representam pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres que contém o nome de face.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o arquivo de fonte não fornecer um nome para o idioma especificado, o <xref:System.Windows.Media.GlyphTypeface.FaceNames%2A> propriedade retorna o nome de face em inglês. O nome de face pode identificar o peso, estilo, e/ou alongar informações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FamilyNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; FamilyNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; FamilyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.FamilyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da família para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> essas informações de nome de família representam pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres que contém o nome da família.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o arquivo de fonte não fornecer um nome de família para o idioma especificado, o <xref:System.Windows.Media.GlyphTypeface.FamilyNames%2A> propriedade retorna o nome de família em inglês. O nome da família exclui peso, estilo e ampliar as informações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontUri">
+      <MemberSignature Language="C#" Value="public Uri FontUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri FontUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.FontUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_FontUri"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para obter o original [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do <see cref="T:System.Windows.Media.GlyphTypeface" />. O original [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] pode revelar informações do sistema de arquivos local. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetFontStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream GetFontStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphTypeface.GetFontStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o fluxo de arquivos de fonte representado pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <returns>Um <see cref="T:System.IO.Stream" /> valor que representa o arquivo de fonte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlyphOutline">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry GetGlyphOutline (ushort glyphIndex, double renderingEmSize, double hintingEmSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Geometry GetGlyphOutline(unsigned int16 glyphIndex, float64 renderingEmSize, float64 hintingEmSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphTypeface.GetGlyphOutline(System.UInt16,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="glyphIndex" Type="System.UInt16" />
+        <Parameter Name="renderingEmSize" Type="System.Double" />
+        <Parameter Name="hintingEmSize" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="glyphIndex">O índice do glifo para o qual obter a estrutura de tópicos.</param>
+        <param name="renderingEmSize">O tamanho da fonte em unidades de superfície de desenho.</param>
+        <param name="hintingEmSize">O tamanho para a dica para em pontos.</param>
+        <summary>Retorna um valor <see cref="T:System.Windows.Media.Geometry" /> que descreve o caminho para um único glifo na fonte.</summary>
+        <returns>Um valor <see cref="T:System.Windows.Media.Geometry" /> que representa o caminho do glifo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O caminho representa o glifo sem ajuste de grade aplicado para renderização em uma resolução específica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphTypeface.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para <see cref="T:System.Windows.Media.GlyphTypeface" />.</summary>
+        <returns>Um código hash do objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlyphCount">
+      <MemberSignature Language="C#" Value="public int GlyphCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 GlyphCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.GlyphCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de glifos para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>O número total de glifos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public double Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura da célula em relação o tamanho em caracteres.</summary>
+        <value>Um <see cref="T:System.Double" /> valor que representa a altura da célula de caractere.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftSideBearings">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;ushort,double&gt; LeftSideBearings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;unsigned int16, float64&gt; LeftSideBearings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.LeftSideBearings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.UInt16,System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a distância da extremidade à esquerda do vetor de adiantamento com a borda esquerda da caixa preta para os glifos representado pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> essas informações a distância representam os glifos pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.UInt16" /> que identifica o índice de glifo. O valor é um <see cref="T:System.Double" /> que representa a distância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.GlyphTypeface.LeftSideBearings%2A> valor é positivo quando a borda esquerda da caixa preta está dentro do retângulo de alinhamento definido pela altura da célula antecipada largura e a fonte.  
+  
+ O <xref:System.Windows.Media.GlyphTypeface.LeftSideBearings%2A> valor é negativo, quando a borda esquerda da caixa preta overhangs o retângulo de alinhamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LicenseDescriptions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; LicenseDescriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; LicenseDescriptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.LicenseDescriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de descrição de licença de fonte para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> informações de licença de fonte de pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres que descreve as informações de licença de fonte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManufacturerNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; ManufacturerNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; ManufacturerNames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.ManufacturerNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações do fabricante de fonte para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> pares de objeto que contém a chave/valor para as informações do fabricante de fonte. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres que descreve as informações do fabricante de fonte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightSideBearings">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;ushort,double&gt; RightSideBearings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;unsigned int16, float64&gt; RightSideBearings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.RightSideBearings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.UInt16,System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a distância da borda direita da caixa preta para a extremidade direita do vetor avançado para os glifos representado pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> essas informações de distância representam pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.UInt16" /> que identifica o índice de glifo. O valor é um <see cref="T:System.Double" /> que representa a distância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.GlyphTypeface.RightSideBearings%2A> valor é positivo quando a borda direita da caixa preta está dentro do retângulo de alinhamento definido pela altura da célula antecipada largura e a fonte.  
+  
+ O <xref:System.Windows.Media.GlyphTypeface.RightSideBearings%2A> valor é negativo, quando a borda direita da caixa preta overhangs o retângulo de alinhamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleTexts">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; SampleTexts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; SampleTexts" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.SampleTexts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de texto de exemplo para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> informações de texto de exemplo de pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres que descreve as informações de texto de exemplo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.GlyphTypeface.SampleTexts%2A> valor pode ser o nome da fonte ou qualquer outro texto que o designer considera o melhor exemplo para exibir a fonte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stretch">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStretch Stretch { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStretch Stretch" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Stretch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.FontStretch" /> valor para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Windows.FontStretch" /> valor que representa a ampliação da fonte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrikethroughPosition">
+      <MemberSignature Language="C#" Value="public double StrikethroughPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 StrikethroughPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.StrikethroughPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a distância da linha de base para o tachado para a face de tipos.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a posição de tachado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da posição tachado é positivo geralmente porque o tachado geralmente está acima da linha de base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrikethroughThickness">
+      <MemberSignature Language="C#" Value="public double StrikethroughThickness { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 StrikethroughThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.StrikethroughThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a espessura do tachado em relação ao tamanho da fonte.</summary>
+        <value>Um <see cref="T:System.Double" /> que indica a espessura tachado, expressada como uma fração do tamanho da fonte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStyle Style { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estilo para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Windows.FontStyle" /> valor que representa o valor de estilo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StyleSimulations">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.StyleSimulations StyleSimulations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.StyleSimulations StyleSimulations" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.StyleSimulations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.StyleSimulations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Media.StyleSimulations" /> para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Uma da <see cref="T:System.Windows.Media.StyleSimulations" /> valores que representa a simulação de estilo da fonte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_StyleSimulations"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Symbol">
+      <MemberSignature Language="C#" Value="public bool Symbol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Symbol" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Symbol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Media.GlyphTypeface" /> fonte está em conformidade com a codificação Unicode.</summary>
+        <value>
+          <see langword="true" />Se a fonte está em conformidade com a codificação Unicode; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte pode ser considerada como uma coleção simples de símbolos indexado por um ponto de código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.BeginInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphTypeface.System#ComponentModel#ISupportInitialize#BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ISupportInitialize.BeginInit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.EndInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.GlyphTypeface.System#ComponentModel#ISupportInitialize#EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopSideBearings">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;ushort,double&gt; TopSideBearings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;unsigned int16, float64&gt; TopSideBearings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.TopSideBearings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.UInt16,System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a distância da extremidade superior do vetor de avanço vertical na borda superior da caixa preta para os glifos representado pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> essas informações de distância representam pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.UInt16" /> que identifica o índice de glifo. O valor é um <see cref="T:System.Double" /> que representa a distância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.GlyphTypeface.TopSideBearings%2A> valor é positivo quando a borda superior da caixa preta está dentro do retângulo de alinhamento definido pela altura antecipada e a altura da célula fonte. A altura da célula fonte é uma dimensão horizontal em layout vertical.  
+  
+ O <xref:System.Windows.Media.GlyphTypeface.TopSideBearings%2A> valor é negativo, quando a borda superior da caixa preta overhangs o retângulo de alinhamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trademarks">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; Trademarks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; Trademarks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Trademarks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de aviso de marca comercial para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> essas informações de aviso de marcas representam pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres que marca comercial Observe informações.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.GlyphTypeface.Trademarks%2A> propriedade é separada dos direitos autorais informações de acesso a <xref:System.Windows.Media.GlyphTypeface.Copyrights%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlinePosition">
+      <MemberSignature Language="C#" Value="public double UnderlinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 UnderlinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.UnderlinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição do sublinhado no <see cref="T:System.Windows.Media.GlyphTypeface" />.</summary>
+        <value>Um <see cref="T:System.Double" /> valor que representa a posição do sublinhado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A posição do sublinhado é relativo a linha de base e em relação o tamanho em. O valor da posição retornado é geralmente negativo, pois um sublinhado geralmente está abaixo da linha de base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlineThickness">
+      <MemberSignature Language="C#" Value="public double UnderlineThickness { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 UnderlineThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.UnderlineThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a espessura do sublinhado em relação ao tamanho em.</summary>
+        <value>Um valor do tipo <see cref="T:System.Double" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VendorUrls">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; VendorUrls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; VendorUrls" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.VendorUrls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o fornecedor de informações de URL para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> informações de URL do fornecedor que representam pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres que faz referência a uma URL de fornecedor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um fornecedor de fontes pode inserir um número de série exclusivo na URL, que pode ser usado para registrar a fonte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public double Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de face de fonte interpretada da tabela de 'NAME' da fonte.</summary>
+        <value>Um <see cref="T:System.Double" /> valor que representa a versão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VersionStrings">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; VersionStrings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; VersionStrings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.VersionStrings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de cadeia de caracteres de versão para o <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto interpretados da tabela de 'NAME' da fonte.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> informações de cadeia de caracteres de versão que representam pares de objeto que contém a chave/valor. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres que representa a versão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeias de caracteres de versão variam significativamente no formato. Para obter a versão como um valor numérico, use o <xref:System.Windows.Media.GlyphTypeface.Version%2A>— não tentar analisar o valor da <xref:System.Windows.Media.GlyphTypeface.VersionStrings%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Weight">
+      <MemberSignature Language="C#" Value="public System.Windows.FontWeight Weight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontWeight Weight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Weight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o peso projetado da fonte representado pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um valor do tipo <see cref="T:System.Windows.FontWeight" /> que representa a espessura da fonte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Win32FaceNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; Win32FaceNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; Win32FaceNames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Win32FaceNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de face do Win32 para a fonte representado pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> objeto que contém pares chave/valor que representam informações de nome de face de Win32. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres que representa o nome de face de Win32.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a fonte não fornecer um nome para o idioma especificado, ele retorna o nome de face em inglês. O nome de face do Win32 pode identificar pesos (que não sejam normais ou negrito) e/ou o estilo, mas não pode identificar stretch ou outros pesos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Win32FamilyNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,string&gt; Win32FamilyNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Globalization.CultureInfo, string&gt; Win32FamilyNames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.Win32FamilyNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Globalization.CultureInfo,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da família Win32 para a fonte representada pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> objeto que contém pares chave/valor que representam informações de nome de família Win32. A chave é um <see cref="T:System.Globalization.CultureInfo" /> objeto que identifica a cultura. O valor é uma cadeia de caracteres que representa o nome da família Win32.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a fonte não fornecer um nome de família para o idioma especificado, o <xref:System.Windows.Media.GlyphTypeface.Win32FamilyNames%2A> propriedade retorna o nome de família em inglês. O nome da família Win32 exclui pesos normais ou negrito e o estilo, mas ele inclui outros pesos e stretch.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XHeight">
+      <MemberSignature Language="C#" Value="public double XHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 XHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.GlyphTypeface.XHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura x Ocidental em relação ao tamanho em da fonte representado pelo <see cref="T:System.Windows.Media.GlyphTypeface" /> objeto.</summary>
+        <value>Um valor do tipo <see cref="T:System.Double" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

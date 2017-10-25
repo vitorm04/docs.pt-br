@@ -1,0 +1,46 @@
+<Type Name="XmlSerializationFixupCallback" FullName="System.Xml.Serialization.XmlSerializationFixupCallback">
+  <TypeSignature Language="C#" Value="public delegate void XmlSerializationFixupCallback(object fixup);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlSerializationFixupCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSerializationFixupCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="fixup" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="fixup">Uma instância do <see cref="T:System.Xml.Serialization.XmlSerializationReader.Fixup" /> classe que contém o objeto a ser corrigido e a matriz de identificadores de cadeia de caracteres para os itens preencher.</param>
+    <summary>Delegado usado pelo <see cref="T:System.Xml.Serialization.XmlSerializer" /> classe para desserialização de dados XML de codificação SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a desserialização de documentos XML em objetos do .NET Framework, a infraestrutura de serialização de XML do .NET Framework dinamicamente instancia os métodos de correção que implementam o <xref:System.Xml.Serialization.XmlSerializationFixupCallback> delegate. A infraestrutura de assim matrizes codificadas em SOAP cujos tipos de dados do mapa para o .NET Framework de tipos de referência. Em seguida, se necessário, um método de correção é chamado para preencher os objetos na matriz.  
+  
+ Além disso, durante a inicialização, a infraestrutura de serialização de XML do .NET Framework dinamicamente gera e compila uma classe temporária para desserialização derivado de <xref:System.Xml.Serialization.XmlSerializationReader> classe. Durante esse processo, a infraestrutura gera <xref:System.Xml.Serialization.XmlSerializationFixupCallback> métodos para codificação SOAP, referenciada por vários dados XML. Os métodos, em seguida, são chamados durante a desserialização.  
+  
+ Não crie uma instância do diretamente a <xref:System.Xml.Serialization.XmlSerializationFixupCallback> classe.  
+  
+ Codificação de SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

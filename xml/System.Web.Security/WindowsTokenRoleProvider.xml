@@ -1,0 +1,525 @@
+<Type Name="WindowsTokenRoleProvider" FullName="System.Web.Security.WindowsTokenRoleProvider">
+  <TypeSignature Language="C#" Value="public class WindowsTokenRoleProvider : System.Web.Security.RoleProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WindowsTokenRoleProvider extends System.Web.Security.RoleProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.WindowsTokenRoleProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Security.RoleProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Obtém informações de função para um aplicativo ASP.NET da associação ao grupo do Windows.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.WindowsTokenRoleProvider> é um provedor de associação de função somente leitura que recupera informações de função para um usuário do Windows com base em grupos de segurança do Windows. É mais útil com aplicativos ASP.NET que usam o modo de autenticação do Windows em que as configurações de autenticação do IIS desabilitar a autenticação anônima. Você pode configurar aplicativos ASP.NET para permitir ou negar acesso com base na associação do usuário em um grupo específico do Windows.  
+  
+ Não é possível usar o <xref:System.Web.Security.WindowsTokenRoleProvider> classe para criar ou excluir funções ou modificar a associação de uma função que é baseada na associação de grupo do Windows. Essa funcionalidade é gerenciada pelo sistema operacional Windows. O <xref:System.Web.Security.WindowsTokenRoleProvider> classe oferece suporte somente a <xref:System.Web.Security.WindowsTokenRoleProvider.IsUserInRole%2A> e <xref:System.Web.Security.WindowsTokenRoleProvider.GetRolesForUser%2A> métodos do <xref:System.Web.Security.RoleProvider> classe abstrata.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o arquivo Web. config para um aplicativo ASP.NET. Especifica que o aplicativo usa autenticação do Windows e o <xref:System.Web.Security.WindowsTokenRoleProvider> classe para recuperar informações de função para os usuários do Windows. O elemento Especifica que somente usuários no grupo BUILTIN\Administrators têm permissão para acessar o aplicativo.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <authentication mode="Windows" />  
+  
+    <authorization>  
+      <allow roles="BUILTIN\Administrators" />  
+        <deny users="*" />  
+      </authorization>  
+  
+    <roleManager defaultProvider="WindowsProvider"   
+      enabled="true"  
+      cacheRolesInCookie="false">  
+      <providers>  
+        <add  
+          name="WindowsProvider"  
+          type="System.Web.Security.WindowsTokenRoleProvider" />  
+      </providers>  
+    </roleManager>  
+  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsTokenRoleProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Web.Security.WindowsTokenRoleProvider" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.WindowsTokenRoleProvider.%23ctor%2A> construtor é chamado pelo ASP.NET para criar uma instância do <xref:System.Web.Security.WindowsTokenRoleProvider> classe conforme especificado na configuração do aplicativo. Este construtor não se destina a ser usado em seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUsersToRoles">
+      <MemberSignature Language="C#" Value="public override void AddUsersToRoles (string[] usernames, string[] roleNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddUsersToRoles(string[] usernames, string[] roleNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.AddUsersToRoles(System.String[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+        <Parameter Name="roleNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Uma matriz de cadeias de caracteres de nomes de usuário a serem adicionados às funções especificadas.</param>
+        <param name="roleNames">Uma matriz de cadeia de caracteres de nomes de função à qual adicionar os nomes de usuário.</param>
+        <summary>Este método não é suportado pelo provedor de funções de token do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método não é suportado pelo <xref:System.Web.Security.WindowsTokenRoleProvider> classe e sempre gera um <xref:System.Configuration.Provider.ProviderException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um método sem suporte foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public override string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.WindowsTokenRoleProvider.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do aplicativo.</summary>
+        <value>O nome do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de outros provedores de função, como o <xref:System.Web.Security.SqlRoleProvider>, o <xref:System.Web.Security.WindowsTokenRoleProvider> classe não associar informações da função de um aplicativo. Em vez disso, as informações de função são obtidas os grupos do Windows no computador local. Vários aplicativos no mesmo servidor que usam o <xref:System.Web.Security.WindowsTokenRoleProvider> classe sempre compartilham as mesmas informações de função. Embora o `applicationName` pode ser configurado no arquivo Web. config para o aplicativo, o <xref:System.Web.Security.WindowsTokenRoleProvider.ApplicationName%2A> propriedade não é usada para recuperar informações de função.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o elemento de `system.web` seção do arquivo Web. config para um aplicativo ASP.NET. Especifica o aplicativo <xref:System.Web.Security.WindowsTokenRoleProvider> instância e conjuntos de <xref:System.Web.Security.WindowsTokenRoleProvider.ApplicationName%2A> propriedade `MyApplication`.  
+  
+```  
+<roleManager defaultProvider="WindowsProvider"   
+  enabled="true"  
+  cacheRolesInCookie="false">  
+  <providers>  
+    <add  
+      name="WindowsProvider"  
+      type="System.Web.Security.WindowsTokenRoleProvider"   
+      applicationName="MyApplication" />  
+  </providers>  
+</roleManager>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Foi feita uma tentativa para definir o <see cref="P:System.Web.Security.WindowsTokenRoleProvider.ApplicationName" /> propriedade por um chamador que não tenha <see cref="F:System.Web.AspNetHostingPermissionLevel.High" /> ASP.NET permissão de hospedagem.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Foi feita uma tentativa para definir o <see cref="P:System.Web.Security.WindowsTokenRoleProvider.ApplicationName" /> para uma cadeia de caracteres que é maior do que 256 caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRole">
+      <MemberSignature Language="C#" Value="public override void CreateRole (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CreateRole(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.CreateRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função a ser criada.</param>
+        <summary>Este método não é suportado pelo provedor de funções de token do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método não é suportado pelo <xref:System.Web.Security.WindowsTokenRoleProvider> classe e sempre gera um <xref:System.Configuration.Provider.ProviderException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um método sem suporte foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteRole">
+      <MemberSignature Language="C#" Value="public override bool DeleteRole (string roleName, bool throwOnPopulatedRole);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool DeleteRole(string roleName, bool throwOnPopulatedRole) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.DeleteRole(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+        <Parameter Name="throwOnPopulatedRole" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função a ser excluída.</param>
+        <param name="throwOnPopulatedRole">Se <see langword="true" />, uma exceção será lançada em uma tentativa para excluir uma função que contém um ou mais membros.</param>
+        <summary>Este método não é suportado pelo provedor de funções de token do Windows.</summary>
+        <returns>nenhuma. O método não é suportado pelo <see cref="T:System.Web.Security.WindowsTokenRoleProvider" /> classe e sempre gera um <see cref="T:System.Configuration.Provider.ProviderException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um método sem suporte foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindUsersInRole">
+      <MemberSignature Language="C#" Value="public override string[] FindUsersInRole (string roleName, string usernameToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] FindUsersInRole(string roleName, string usernameToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.FindUsersInRole(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">A função a ser pesquisada.</param>
+        <param name="usernameToMatch">O nome de usuário para localizar a função.</param>
+        <summary>Este método não é suportado pelo provedor de funções de token do Windows.</summary>
+        <returns>nenhuma. O método não é suportado pelo <see cref="T:System.Web.Security.WindowsTokenRoleProvider" /> classe e sempre gera um <see cref="T:System.Configuration.Provider.ProviderException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um método sem suporte foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllRoles">
+      <MemberSignature Language="C#" Value="public override string[] GetAllRoles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetAllRoles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.GetAllRoles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este método não é suportado pelo provedor de funções de token do Windows.</summary>
+        <returns>nenhuma. O método não é suportado pelo <see cref="T:System.Web.Security.WindowsTokenRoleProvider" /> classe e sempre gera um <see cref="T:System.Configuration.Provider.ProviderException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um método sem suporte foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRolesForUser">
+      <MemberSignature Language="C#" Value="public override string[] GetRolesForUser (string username);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetRolesForUser(string username) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.GetRolesForUser(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">O usuário ao qual a lista de grupos do Windows será retornada no formato DOMÍNIO\nome de usuário.</param>
+        <summary>Obtém uma lista dos grupos do Windows de que um usuário faz parte.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todos os grupos do Windows que o usuário especificado está em.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Web.Security.Roles> classe para recuperar do sistema operacional Windows de uma lista dos grupos do Windows que o usuário especificado está em. O <xref:System.Web.Security.WindowsTokenRoleProvider.GetRolesForUser%2A> método pode ser chamado somente para o usuário conectado no momento, conforme identificado pela variável de servidor LOGON_USER. Se o valor fornecido no `username` parâmetro não é o nome do usuário conectado no momento, um <xref:System.Configuration.Provider.ProviderException?displayProperty=nameWithType> é gerada.  
+  
+ Para obter mais informações sobre um ASP.NET e autenticação do Windows, consulte [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Security.WindowsTokenRoleProvider.GetRolesForUser%2A> método para recuperar uma lista de funções de um usuário específico e associa a lista de funções para um <xref:System.Web.UI.WebControls.GridView> controle. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.WindowsTokenRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.WindowsTokenRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.WindowsTokenRoleProvider/CS/viewrolescs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.WindowsTokenRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.WindowsTokenRoleProvider/VB/viewrolesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">O usuário atualmente em execução não tem um autenticado <see cref="T:System.Security.Principal.WindowsIdentity" /> anexado ao <see cref="P:System.Web.UI.Page.User" />. Para cenários diferentes de HTTP, o usuário atualmente em execução não tem um autenticado <see cref="T:System.Security.Principal.WindowsIdentity" /> anexado ao <see cref="P:System.Threading.Thread.CurrentPrincipal" />.  
+  
+ -ou-  
+  
+ <paramref name="username" />não coincide com o <see cref="P:System.Security.Principal.WindowsIdentity.Name" /> do atual <see cref="T:System.Security.Principal.WindowsIdentity" />.  
+  
+ -ou-  
+  
+ Ocorreu uma falha ao recuperar as informações do grupo do Windows do usuário.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">O nível de confiança é menor que <see cref="F:System.Web.AspNetHostingPermissionLevel.Low" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUsersInRole">
+      <MemberSignature Language="C#" Value="public override string[] GetUsersInRole (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetUsersInRole(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.GetUsersInRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função para a qual a lista de usuários será obtida.</param>
+        <summary>Este método não é suportado pelo provedor de funções de token do Windows.</summary>
+        <returns>nenhuma. O método não é suportado pelo <see cref="T:System.Web.Security.WindowsTokenRoleProvider" /> classe e sempre gera um <see cref="T:System.Configuration.Provider.ProviderException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um método sem suporte foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da instância de <see cref="T:System.Web.Security.WindowsTokenRoleProvider" /> a ser inicializada.</param>
+        <param name="config">Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> construtor que contém os nomes e valores de configuração de opções para o <see cref="T:System.Web.Security.WindowsTokenRoleProvider" /> classe.</param>
+        <summary>Inicializa o provedor de funções de token do Windows com os valores de propriedade especificados no arquivo de configuração para o aplicativo ASP.NET. Esse método não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.WindowsTokenRoleProvider.Initialize%2A> método inicializa a <xref:System.Web.Security.WindowsTokenRoleProvider> classe com os valores de propriedade especificado no arquivo de configuração do aplicativo ASP.NET (Web. config) e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="config" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">O <see langword="applicationName" /> atributo na configuração é mais de 256 caracteres.  
+  
+ -ou-  
+  
+ O arquivo de configuração do aplicativo para este <see cref="T:System.Web.Security.WindowsTokenRoleProvider" /> instância contém um atributo não reconhecido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserInRole">
+      <MemberSignature Language="C#" Value="public bool IsUserInRole (string username, System.Security.Principal.WindowsBuiltInRole role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsUserInRole(string username, valuetype System.Security.Principal.WindowsBuiltInRole role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.IsUserInRole(System.String,System.Security.Principal.WindowsBuiltInRole)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="role" Type="System.Security.Principal.WindowsBuiltInRole" />
+      </Parameters>
+      <Docs>
+        <param name="username">O nome de usuário a ser pesquisado no formato DOMAIN\username.</param>
+        <param name="role">A função do Windows para pesquisar.</param>
+        <summary>Obtém um valor que indica se o usuário especificado está na função interna do Windows especificada.</summary>
+        <returns>
+          <see langword="true" />Se o usuário especificado está na função especificada do Windows. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.WindowsTokenRoleProvider.IsUserInRole%2A> método permite que você verifique se um usuário está em uma das funções comuns Windows descritas pelo <xref:System.Security.Principal.WindowsBuiltInRole> enumeração. Esse método é útil para aplicativos que estão localizados em vários idiomas. Essa sobrecarga do <xref:System.Web.Security.WindowsTokenRoleProvider.IsUserInRole%2A> método não é parte do <xref:System.Web.Security.RoleProvider> classe base e só pode ser acessado por conversão a <xref:System.Web.Security.Roles.Provider%2A> propriedade do <xref:System.Web.Security.Roles> da classe como o <xref:System.Web.Security.WindowsTokenRoleProvider> tipo.  
+  
+ Você pode chamar o <xref:System.Web.Security.WindowsTokenRoleProvider.IsUserInRole%2A> método apenas para o usuário conectado no momento, conforme identificado pela variável de servidor LOGON_USER. Se o valor fornecido no `username` parâmetro não é o nome do usuário conectado no momento, um <xref:System.Web.HttpException> é gerada.  
+  
+ <xref:System.Web.Security.WindowsTokenRoleProvider.IsUserInRole%2A>método só pode ser chamado para o usuário conectado no momento identificado pela variável de servidor LOGON_USER. O usuário conectado no momento deve ser um usuário autenticado do Windows. Para obter mais informações sobre autenticação do ASP.NET e Windows, consulte [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir programaticamente verifica se o usuário conectado no momento é a função de administradores antes de permitir que o usuário exibir informações de funções para o aplicativo. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.WindowsTokenRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.WindowsTokenRoleProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.WindowsTokenRoleProvider/CS/ViewRoles2cs.aspx#2)]
+ [!code-aspx-vb[System.Web.Security.WindowsTokenRoleProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.WindowsTokenRoleProvider/VB/ViewRoles2vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">O usuário atualmente em execução não tem um autenticado <see cref="T:System.Security.Principal.WindowsIdentity" /> anexado ao <see cref="P:System.Web.UI.Page.User" />. Para cenários diferentes de HTTP, o usuário atualmente em execução não tem um autenticado <see cref="T:System.Security.Principal.WindowsIdentity" /> anexado ao <see cref="P:System.Threading.Thread.CurrentPrincipal" />.  
+  
+ -ou-  
+  
+ <paramref name="username" />não coincide com o <see cref="P:System.Security.Principal.WindowsIdentity.Name" /> do atual <see cref="T:System.Security.Principal.WindowsIdentity" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserInRole">
+      <MemberSignature Language="C#" Value="public override bool IsUserInRole (string username, string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsUserInRole(string username, string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.IsUserInRole(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">O nome de usuário a ser pesquisado no formato DOMAIN\username.</param>
+        <param name="roleName">O grupo do Windows para pesquisar no formulário DOMAIN\rolename.</param>
+        <summary>Obtém um valor que indica se o usuário especificado está no grupo do Windows especificado.</summary>
+        <returns>
+          <see langword="true" />Se o nome de usuário especificado estiver no grupo especificado do Windows; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.WindowsTokenRoleProvider.IsUserInRole%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe e o <xref:System.Security.Principal.IPrincipal.IsInRole%2A> método o <xref:System.Web.UI.Page.User%2A> propriedade para determinar se um usuário está em um grupo do Windows. Você pode chamar o <xref:System.Web.Security.WindowsTokenRoleProvider.IsUserInRole%2A> método apenas para o usuário conectado no momento, conforme identificado pela variável de servidor LOGON_USER. O usuário de logon atual deve ser um usuário autenticado do Windows. Para obter mais informações sobre autenticação do ASP.NET e Windows, consulte [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir programaticamente verifica se o usuário conectado no momento é a função de administradores antes de permitir que o usuário exibir informações de funções para o aplicativo. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.WindowsTokenRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.WindowsTokenRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.WindowsTokenRoleProvider/CS/viewrolescs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.WindowsTokenRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.WindowsTokenRoleProvider/VB/viewrolesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="roleName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">O usuário atualmente em execução não tem um autenticado <see cref="T:System.Security.Principal.WindowsIdentity" /> anexado ao <see cref="P:System.Web.UI.Page.User" />. Para cenários diferentes de HTTP, o usuário atualmente em execução não tem um autenticado <see cref="T:System.Security.Principal.WindowsIdentity" /> anexado ao <see cref="P:System.Threading.Thread.CurrentPrincipal" />.  
+  
+ -ou-  
+  
+ <paramref name="username" />não coincide com o <see cref="P:System.Security.Principal.WindowsIdentity.Name" /> do atual <see cref="T:System.Security.Principal.WindowsIdentity" />.  
+  
+ -ou-  
+  
+ Ocorreu uma falha ao recuperar as informações do grupo do Windows do usuário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveUsersFromRoles">
+      <MemberSignature Language="C#" Value="public override void RemoveUsersFromRoles (string[] usernames, string[] roleNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveUsersFromRoles(string[] usernames, string[] roleNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.RemoveUsersFromRoles(System.String[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+        <Parameter Name="roleNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Uma matriz de cadeias de caracteres de nomes de usuário a serem adicionados às funções especificadas.</param>
+        <param name="roleNames">Uma matriz de cadeia de caracteres de nomes de função à qual adicionar os nomes de usuário.</param>
+        <summary>Este método não é suportado pelo provedor de funções de token do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método não é suportado pelo <xref:System.Web.Security.WindowsTokenRoleProvider> classe e sempre gera um <xref:System.Configuration.Provider.ProviderException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um método sem suporte foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleExists">
+      <MemberSignature Language="C#" Value="public override bool RoleExists (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool RoleExists(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.WindowsTokenRoleProvider.RoleExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função pela qual pesquisar na fonte de dados.</param>
+        <summary>Este método não é suportado pelo provedor de funções de token do Windows.</summary>
+        <returns>nenhuma. O método não é suportado pelo <see cref="T:System.Web.Security.WindowsTokenRoleProvider" /> classe e sempre gera um <see cref="T:System.Configuration.Provider.ProviderException" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um método sem suporte foi chamado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

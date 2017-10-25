@@ -1,0 +1,564 @@
+<Type Name="ReliableSessionBindingElement" FullName="System.ServiceModel.Channels.ReliableSessionBindingElement">
+  <TypeSignature Language="C#" Value="public sealed class ReliableSessionBindingElement : System.ServiceModel.Channels.BindingElement, System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReliableSessionBindingElement extends System.ServiceModel.Channels.BindingElement implements class System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ReliableSessionBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.BindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa o elemento de associação que pode produzir os canais de envio e recebimento necessários para uma sessão confiável entre os pontos de extremidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornece sessões e, opcionalmente, entrega de mensagens ordenadas. Esta sessão implementada pode cruzar com intermediários SOAP e transporte.  
+  
+ Cada elemento de associação representa uma etapa de processamento ao enviar ou receber mensagens. Em tempo de execução, os elementos de associação criam as fábricas de canais e ouvintes que são necessários para construir as pilhas de canal de entrada e saída necessárias para enviar e receber mensagens. O <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> fornece uma camada opcional na pilha que pode estabelecer uma sessão confiável entre os pontos de extremidade e configurar o comportamento da sessão.  
+  
+ O <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> são fornecidas as associações padrão na tabela a seguir.  
+  
+|Associação|Padrão|  
+|-------------|-------------|  
+|<xref:System.ServiceModel.NetTcpBinding>|Off|  
+|<xref:System.ServiceModel.WSHttpBinding>|Off|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|No (obrigatório)|  
+  
+   
+  
+## Examples  
+ O <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> pode ser adicionado a qualquer associação personalizada. Isso é feito usando os seguintes elementos de configuração.  
+  
+```  
+<bindings>  
+    <customBinding>  
+        <binding configurationName="ReliabilityHTTP">  
+            <reliableSession/>  
+        </binding>  
+    </customBinding>  
+</bindings>  
+```  
+  
+ O código de exemplo a seguir demonstra como usar <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> no código.  
+  
+ [!code-csharp[S_Imperative#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
+ [!code-vb[S_Imperative#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReliableSessionBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReliableSessionBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.ReliableSessionBindingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReliableSessionBindingElement (bool ordered);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool ordered) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReliableSessionBindingElement.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ordered" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ordered">
+          <see langword="true" />Se as mensagens devem ser entregues na ordem em que são enviados; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.ReliableSessionBindingElement" /> classe que especifica se a entrega de mensagens deve preservar a ordem na qual as mensagens são enviadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcknowledgementInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan AcknowledgementInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan AcknowledgementInterval" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ReliableSessionBindingElement.AcknowledgementInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de tempo que um destino aguarda antes de enviar uma confirmação para a origem da mensagem em canais confiáveis que são criados pela fábrica.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo que um serviço espera até enviar uma confirmação para a origem da mensagem. O valor padrão é 2 segundos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O destino que recebe mensagens em um canal confiável agrupa confirmações para essas mensagens juntas em uma única mensagem para reduzir o tráfego de rede e aumentar a densidade de informações em mensagens. Agrupamento dimensiona melhor como o tráfego aumenta. Ele não tenta enviar uma confirmação para cada mensagem recebe assim que possível, mas em vez disso, aguarda até que um intervalo de tempo, agrupa as confirmações recebidas durante esse intervalo e os envia todos juntos. A primeira mensagem é recebida é a exceção. ela é reconhecida como ele é distribuído. Além disso, se as sessões confiáveis são usadas com as conexões HTTP único, como é o caso, por exemplo, com o <xref:System.ServiceModel.WSHttpBinding> mas não <xref:System.ServiceModel.WSDualHttpBinding>, em seguida, essa configuração não é usada.  
+  
+ O valor é definido com o <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.AcknowledgementInterval%2A> propriedade é uma recomendação para a infraestrutura e não um limite rígido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor definido é menor ou igual a zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Cria o tipo de fábrica de canal.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> que contém as informações necessárias para criar as fábricas que podem produzir canais de tipo <c>TChannel</c>.</param>
+        <summary>Retorna uma fábrica que cria um canal de um tipo especificado que dá suporte a uma sessão confiável.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> do tipo <see cref="T:System.ServiceModel.Channels.IChannel" /> inicializada a partir de <paramref name="context" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.IChannel> produzida pela fábrica é do tipo `TChannel`. Os tipos de `TChannel` com suporte no cliente é dependente dos tipos de canais subjacentes que se conectam ao serviço. A tabela a seguir indica quais tipos de canal de sessão confiável têm suporte como uma função de canais subjacente.  
+  
+|Suporte para a sessão confiável `TChannel` tipos de canais de tipos por subjacente|IRequestChannel|IRequestSessionChannel|IDuplexChannel|IDuplexSessionChannel|  
+|-------------------------------------------------------------------------------|---------------------|----------------------------|--------------------|---------------------------|  
+|IOutputSessionChannel|Sim|Sim|Sim|Sim|  
+|IRequestSessionChannel|Sim|Sim|Não|Não|  
+|IDuplexSessionChannel|Não|Não|Sim|Sim|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="TChannel" /> não é suportado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O <see cref="T:System.ServiceModel.Channels.IChannel" /> que o ouvinte é criado para aceitar.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> que contém as informações necessárias para criar os ouvintes que podem aceitar canais de tipo <c>TChannel</c>.</param>
+        <summary>Retorna um ouvinte que aceita um canal de um tipo especificado que dá suporte a uma sessão confiável.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> do tipo <see cref="T:System.ServiceModel.Channels.IChannel" /> inicializada a partir de <paramref name="context" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.IChannel> aceito pelo ouvinte é do tipo `TChannel`. Os tipos de `TChannel` com suporte no servidor que hospeda o serviço é dependente dos tipos de canais subjacentes usados para conexão com o cliente. A tabela a seguir indica quais tipos de canal de sessão confiável têm suporte como uma função de canais subjacente.  
+  
+|Suporte para a sessão confiável `TChannel` tipos de canais de tipos por subjacente|IReplyChannel|IReplySessionChannel|IDuplexChannel|IDuplexSessionChannel|  
+|-------------------------------------------------------------------------------|-------------------|--------------------------|--------------------|---------------------------|  
+|IInputSessionChannel|Sim|Sim|Sim|Sim|  
+|IReplySessionChannel|Sim|Sim|Não|Não|  
+|IDuplexSessionChannel|Não|Não|Sim|Sim|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="TChannel" /> não é suportado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReliableSessionBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Cria o tipo de fábrica de canal.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> que contém as informações necessárias para criar as fábricas que podem produzir canais de tipo <c>TChannel</c>.</param>
+        <summary>Retorna um valor que indica se a fábrica de canais pode ser criada para o canal e o contexto fornecido que possa dar suporte a uma sessão confiável.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> do tipo <paramref name="TChannel" /> pode ser criada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `true` ou `false` para um `TChannel` acordo com a tabela de valores fornecidos no <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReliableSessionBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O <see cref="T:System.ServiceModel.Channels.IChannel" /> que o ouvinte de canal, se criar, aceita.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> que contém as informações necessárias para criar os ouvintes que podem aceitar canais de tipo <c>TChannel</c>.</param>
+        <summary>Retorna um valor que indica se o ouvinte de canal pode ser criado para o canal e o contexto fornecido que possa dar suporte a uma sessão confiável.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ServiceModel.Channels.ChannelListenerBase`1" /> que pode produzir um <see cref="T:System.ServiceModel.Channels.IChannel" /> do tipo <paramref name="TChannel" /> pode ser criada para o elemento de associação; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pilhas de canal são tipicamente criadas usando um padrão de fábrica em que uma associação cria a pilha de canais. Ao enviar mensagens, uma associação é usada para criar uma fábrica de canais que por sua vez, cria uma pilha de canais e retorna uma referência para o canal superior na pilha. O aplicativo, em seguida, pode usar esse canal para enviar mensagens. Da mesma forma durante o recebimento de mensagens, uma associação é usada para criar um ouvinte de canal que monitora mensagens de entrada. O ouvinte de canal fornece mensagens para o aplicativo de escuta criando pilhas de canal e entregar o aplicativo de uma referência para o canal superior.  
+  
+ Este método retorna `true` ou `false` para um `TChannel` acordo com a tabela de valores fornecidos no <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReliableSessionBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do elemento de associação atual sessão confiável.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.BindingElement" /> que é um clone do elemento de associação atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowControlEnabled">
+      <MemberSignature Language="C#" Value="public bool FlowControlEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FlowControlEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a sessão confiável tem controle de fluxo habilitado.</summary>
+        <value>
+          <see langword="true" />Se a sessão confiável foi habilitado; o controle de fluxo Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controle de fluxo é um mecanismo que implementam sessões confiáveis para garantir que os remetentes não envia mais mensagens do que um destinatário pode manipular. Têm um buffer de mensagens que é usado para acomodar picos de mensagem e fora de ordem. Receptores de anúncio para remetentes a quantidade de espaço que permanece nesse buffer em cada uma das suas confirmações. Remetentes podem usar essas informações para parar de enviar novas mensagens sempre que o destinatário não tem buffer espaço à esquerda.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReliableSessionBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo da propriedade é recuperado.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> que contém as informações necessárias para recuperar o canal do tipo <c>T</c>.</param>
+        <summary>Obtém uma propriedade do tipo especificado de seu contexto de associação.</summary>
+        <returns>A propriedade do tipo <paramref name="T" /> com especificado <paramref name="context" /> ou <see langword="null" /> se nenhuma propriedade do tipo <paramref name="T" /> foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InactivityTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan InactivityTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan InactivityTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ReliableSessionBindingElement.InactivityTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um intervalo de tempo durante o qual um serviço permanece inativo antes de ser fechado.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo que um serviço permanece inativo antes de ser fechado. O valor padrão é 10 minutos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atividade em um canal é definida como receber uma mensagem de infraestrutura ou de aplicativo. O parâmetro de tempo limite de inatividade controla a quantidade máxima de tempo para manter uma sessão inativa ativa. Se mais de <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.InactivityTimeout%2A> passa de intervalo de tempo sem nenhuma atividade, a sessão será anulada, a infraestrutura e as falhas de canal. A sessão confiável é subdividida forma unilateral.  
+  
+ Se o aplicativo enviar nenhuma mensagem a enviar, em seguida, a sessão confiável normalmente não apresentou falha devido a inatividade; em vez disso, um mecanismo keep-alive mantém a sessão ativa indefinidamente. Observe que a sessão confiável independentemente pode anular o dispatcher se nenhuma mensagem de aplicativo é enviadas ou recebidas. Portanto, o tempo limite de inatividade normalmente expira se as condições de rede, de modo que nenhuma mensagem é recebida ou se houver uma falha no remetente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor definido é menor ou igual a zero ou maior que <see cref="F:System.Int32.MaxValue" /> ou <see cref="F:System.TimeSpan.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingChannels">
+      <MemberSignature Language="C#" Value="public int MaxPendingChannels { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingChannels" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxPendingChannels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o maior número de canais que podem estar pendentes durante a sessão confiável.</summary>
+        <value>O maior número de canais que podem estar pendentes. O valor padrão é 4.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os canais estão pendentes quando estão aguardando para serem aceitos. Quando esse limite é atingido, nenhum canal é criadas e enfileirados pendentes modo até que esse número chegar para baixo (aceitando pendentes canais). Este é um limite para cada ouvinte.  
+  
+ Quando o limite for atingido, e um aplicativo remoto tenta estabelecer uma nova sessão confiável, a solicitação será negada e a operação de abertura que gerou este falhas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor definido é menor ou igual a zero ou maior que 16384.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRetryCount">
+      <MemberSignature Language="C#" Value="public int MaxRetryCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxRetryCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxRetryCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de vezes que uma mensagem tenta ser transferidos durante a sessão confiável.</summary>
+        <value>O número máximo de vezes que uma mensagem de tentativas de reenvio. O valor mínimo é 1; o máximo é <see cref="F:System.Int32.MaxValue" />; e o valor padrão é 8.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma mensagem é considerada a serem transferidos se sua entrega no destinatário foi reconhecida pelo destinatário.  
+  
+ Se uma confirmação não foi recebida dentro de um determinado período de tempo para uma mensagem que foi transmitida, a infraestrutura retransmite automaticamente a mensagem. A infraestrutura tenta enviar a mensagem para, no máximo, um <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxRetryCount%2A> número de vezes. Não receber uma confirmação antes de atingir esse limite é considerado uma falha de comunicação fatal e faz com que o evento de falha de canal a ser gerado.  
+  
+ A infraestrutura usa um algoritmo de retirada exponencial para determinar quando retransmitir, com base em um tempo de ida e volta média calculado. O tempo de repetição inicial é calculado com base no tempo de ida e volta a medida do estabelecimento da sessão. O algoritmo de retransmissão dobra o atraso com cada tentativa, o que resulta em aproximadamente 8,5 minutos passar entre a primeira tentativa de transmissão e a última tentativa de retransmissão. O tempo para a primeira tentativa de retransmissão é ajustado de acordo com o tempo de ida e volta calculado e a ampliação resultante de tempo que levam as tentativas varia de acordo. Isso permite que o tempo de retransmissão para adaptar-se dinamicamente a condições variáveis de rede.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor definido é menor ou igual a zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTransferWindowSize">
+      <MemberSignature Language="C#" Value="public int MaxTransferWindowSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxTransferWindowSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o maior número de mensagens que podem existir no buffer de envio ou o buffer de recebimento.</summary>
+        <value>O maior número de mensagens que podem ser armazenados em buffer. O valor mínimo é 1; o valor máximo é 4096; e o valor padrão é 32.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> propriedade pode ser definida no remetente e o receptor. Esse valor é incluído na política de associação da WSDL, portanto, se você usar o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para construir o cliente, ele tem o mesmo valor. Caso contrário, esse valor é o que você definir ser no cliente.  
+  
+ Quando esse limite for atingido no remetente, chamadas adicionais para enviar são bloqueadas. Quando esse limite é atingido o receptor, novas mensagens que chegam no canal subjacente não são aceitas.  
+  
+ Uma sessão confiável usa um protocolo para ajudar a melhorar a utilização da rede. A quantidade de buffer necessário diretamente é derivada do tamanho da janela de transmissão. Ao ajustar esse valor, observe que a janela de transmissão ideal está relacionada a largura de banda e a latência de maneira direta. O tamanho máximo da janela ideal é a largura de banda, vezes a latência. Nada menor resulta em menor do que a utilização de rede de 100%; qualquer coisa maior é o espaço desperdiçado apenas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O conjunto de valor é menor ou igual a um ou maior do que 4096.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Ordered">
+      <MemberSignature Language="C#" Value="public bool Ordered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Ordered" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ReliableSessionBindingElement.Ordered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a entrega de mensagens deve preservar a ordem na qual as mensagens são enviadas.</summary>
+        <value>
+          <see langword="true" />Se as mensagens devem ser entregues na ordem em que são enviados; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter as mensagens enviadas em ordem, você também deve definir o <xref:System.ServiceModel.ConcurrencyMode> para <xref:System.ServiceModel.ConcurrencyMode.Single>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReliableMessagingVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ReliableMessagingVersion ReliableMessagingVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.ReliableMessagingVersion ReliableMessagingVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ReliableSessionBindingElement.ReliableMessagingVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReliableMessagingVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão do WS-ReliableMessaging especificado pelo elemento de associação.</summary>
+        <value>Derivado de uma instância de <see cref="T:System.ServiceModel.ReliableMessagingVersion" /> que representa a versão do protocolo WS-ReliableMessaging usada pelo elemento de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atualmente, há duas versões do protocolo WS-ReliableMessaging suportados pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)]: WS-ReliableMessaging1.1 e WS-ReliableMessagingFebruary2005. A versão padrão é WS-ReliableMessagingFebruary2005.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyExportExtension.ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReliableSessionBindingElement.System#ServiceModel#Description#IPolicyExportExtension#ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">O <see cref="T:System.ServiceModel.Description.MetadataExporter" /> que exporta as informações de associação no elemento de associação de sessão confiável aos elementos WSDL.</param>
+        <param name="context">O <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> que fornece o mapeamento de elementos WSDL exportados para a descrição do ponto de extremidade.</param>
+        <summary>Mapeia as informações contidas no elemento de associação de sessão confiável nos elementos WSDL que permitem que um ponto de extremidade remoto acessar o serviço com uma sessão confiável.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

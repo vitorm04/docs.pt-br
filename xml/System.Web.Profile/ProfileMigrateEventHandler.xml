@@ -1,0 +1,68 @@
+<Type Name="ProfileMigrateEventHandler" FullName="System.Web.Profile.ProfileMigrateEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ProfileMigrateEventHandler(object sender, ProfileMigrateEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProfileMigrateEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileMigrateEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.Profile.ProfileMigrateEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O <see cref="T:System.Web.Profile.ProfileModule" /> que gerou o <see cref="E:System.Web.Profile.ProfileModule.MigrateAnonymous" /> evento.</param>
+    <param name="e">Um <see cref="T:System.Web.Profile.ProfileMigrateEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento <see cref="E:System.Web.Profile.ProfileModule.MigrateAnonymous" /> da classe <see cref="T:System.Web.Profile.ProfileModule" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileMigrateEventHandler> delegado é definido para o <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento o <xref:System.Web.Profile.ProfileModule> classe. Você pode acessar o <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento o <xref:System.Web.Profile.ProfileModule> classe no arquivo global. asax para seu aplicativo ASP.NET, conforme mostrado no exemplo deste tópico.  
+  
+ Você pode usar o <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento para copiar a propriedade de perfil de valores de um perfil anônimo a um perfil autenticado quando alguém que tenha sido anonimamente usando seu aplicativo fizer.  
+  
+ Quando um aplicativo que tenha habilitado o perfil do usuário é iniciado, o ASP.NET cria uma nova classe de tipo `ProfileCommon`, que herda de <xref:System.Web.Profile.ProfileBase> classe. Quando o `ProfileCommon` classe é gerada, com base nas propriedades do perfil especificadas no arquivo Web. config, uma `GetProfile` método é adicionado, que permite que você recupere um `ProfileCommon` objeto com base em um nome de usuário. Você pode usar o `GetProfile` método do perfil atual para recuperar os valores de propriedade do perfil anônimo. Os valores de propriedade anônimas, em seguida, podem ser copiados para o perfil atual para o usuário autenticado.  
+  
+   
+  
+## Examples  
+ Os exemplos de código a seguir mostram um arquivo Web. config que permite a autenticação anônima e o <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento incluído no arquivo global asax para um aplicativo ASP.NET.  
+  
+ O exemplo de código a seguir mostra um arquivo Web. config que permite a identificação anônima e propriedades de perfil que dão suporte a usuários anônimos.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="login.aspx" name=".ASPXFORMSAUTH" />  
+    </authentication>  
+  
+    <anonymousIdentification enabled="true" />  
+  
+    <profile enabled="true" defaultProvider="AspNetSqlProvider">  
+      <properties>  
+        <add name="ZipCode" allowAnonymous="true" />  
+        <add name="CityAndState" allowAnonymous="true" />  
+        <add name="StockSymbols" type="System.Collections.ArrayList" allowAnonymous="true" />  
+      </properties>  
+    </profile>  
+   </system.web>  
+</configuration>  
+```  
+  
+ O seguinte exemplo de código mostra o <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento incluído no arquivo global asax para um aplicativo ASP.NET. O <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento copia os valores de propriedade do perfil do perfil anônimo para o perfil do usuário atual.  
+  
+ [!code-csharp[System.Web.Profile.ProfileManager#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/global.asax#1)]
+ [!code-vb[System.Web.Profile.ProfileManager#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

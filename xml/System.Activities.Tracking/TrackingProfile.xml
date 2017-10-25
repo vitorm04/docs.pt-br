@@ -1,0 +1,152 @@
+<Type Name="TrackingProfile" FullName="System.Activities.Tracking.TrackingProfile">
+  <TypeSignature Language="C#" Value="public class TrackingProfile" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrackingProfile extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.TrackingProfile" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Queries")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Cria uma assinatura para registros de controle de fluxo de trabalho um <see cref="T:System.Activities.Tracking.TrackingParticipant" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As consultas definidas no perfil de rastreamento definem os tipos de eventos que são retornados pela assinatura.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackingProfile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.TrackingProfile.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Tracking.TrackingProfile" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityDefinitionId">
+      <MemberSignature Language="C#" Value="public string ActivityDefinitionId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActivityDefinitionId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.TrackingProfile.ActivityDefinitionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ID de definição de atividade do perfil de rastreamento.</summary>
+        <value>A ID de definição de atividade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplementationVisibility">
+      <MemberSignature Language="C#" Value="public System.Activities.Tracking.ImplementationVisibility ImplementationVisibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.Tracking.ImplementationVisibility ImplementationVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.TrackingProfile.ImplementationVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.ImplementationVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que filtra os registros de rastreamento emitidos a partir de atividades aninhadas dentro de uma atividade de nível superior (atividades que compõem a implementação de outra atividade.)</summary>
+        <value>Um <see cref="T:System.Activities.Tracking.ImplementationVisibility" /> objeto que indica o escopo de registros a ser filtrada.  
+  
+ O valor padrão é <see cref="F:System.Activities.Tracking.ImplementationVisibility.RootScope" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Registros de rastreamento pode ser filtrado usando dois modos de visibilidade dentro de um perfil de rastreamento. O modo de visibilidade Especifica as atividades que estão sendo rastreadas no fluxo de trabalho. Os modos de visibilidade especificados pela configuração do implementationVisibility no perfil de rastreamento são:  
+  
+-   <xref:System.Activities.Tracking.ImplementationVisibility.RootScope>  
+  
+-   <xref:System.Activities.Tracking.ImplementationVisibility.All>  
+  
+ Essa configuração se aplica à filtragem de acompanhar os registros de atividades compostas (atividades que contêm outras atividades dentro de sua implementação.)  
+  
+ Se **implementationVisibility** é **RootScope** e a atividade composta não é a atividade raiz para o fluxo de trabalho, apenas a atividade de nível superior dentro da atividade composta é rastreada. Quando definido como **RootScope**, este sinalizador suprime os registros de rastreamento de atividades que não estão visíveis na raiz do fluxo de trabalho. Somente a atividade raiz e sua implementação são rastreadas. Se a implementação contém atividades que são atividades compostas, em seguida, a atividade composta é rastreada, mas não sua implementação.  
+  
+ Por exemplo, se uma atividade composta é criada e é implementado como "MyActivity" com uma implementação que contém "Atividade1" e "Atividade2", e **implementationVisibility** é definido como **RootScope**, quando essa atividade é adicionada a um controle de fluxo de trabalho registros são emitidos apenas para "MyActivity" e não "Atividade1" ou "Atividade2". Se **implementationVisibility** é definido como **todos os**, os registros de controle, em seguida, para "MyActivity", "Atividade1" e "Atividade2" são emitidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.TrackingProfile.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome para exibição do perfil de rastreamento.</summary>
+        <value>O nome do perfil.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Queries">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Activities.Tracking.TrackingQuery&gt; Queries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.Tracking.TrackingQuery&gt; Queries" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.TrackingProfile.Queries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Activities.Tracking.TrackingQuery&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de <see cref="T:System.Activities.Tracking.TrackingQuery" /> assina objetos que definem os registros para o qual o perfil de rastreamento.</summary>
+        <value>A coleção de consultas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

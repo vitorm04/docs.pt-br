@@ -1,0 +1,302 @@
+<Type Name="DecoderReplacementFallback" FullName="System.Text.DecoderReplacementFallback">
+  <TypeSignature Language="C#" Value="public sealed class DecoderReplacementFallback : System.Text.DecoderFallback" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DecoderReplacementFallback extends System.Text.DecoderFallback" />
+  <TypeSignature Language="DocId" Value="T:System.Text.DecoderReplacementFallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encoding</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.DecoderFallback</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um mecanismo de tratamento de falha, chamado um fallback, para uma sequência de bytes codificados de entrada que não pode ser convertida em um caractere de saída. O fallback emite uma cadeia de caracteres de substituição especificada pelo usuário, em vez de uma sequência de bytes de entrada decodificada. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um motivo comum para uma codificação ou decodificação de operação falhar é se a classe de codificação de base não fornece um mapeamento entre um caractere e uma sequência de bytes equivalente. Por exemplo, um <xref:System.Text.ASCIIEncoding> objeto não é possível decodificar um valor de byte maior que 0x7F. Se uma sequência de bytes de entrada não pode ser convertida em um caractere de saída, um <xref:System.Text.DecoderReplacementFallback> objeto emite uma cadeia de caracteres de substituição para a saída para representar a sequência de bytes de entrada original. Em seguida, continua o processo de conversão decodificar o restante da entrada original.  
+  
+ A cadeia de caracteres de substituição usada por um <xref:System.Text.DecoderReplacementFallback> objeto é determinado pela chamada para o construtor de classe. Duas opções estão disponíveis:  
+  
+-   Substituição com o caractere padrão. Se você chamar o <xref:System.Text.DecoderReplacementFallback.%23ctor> construtor, o caractere de substituição é "?" (U + 003F).  
+  
+-   Substituição com uma cadeia de caracteres de sua escolha. Se você chamar o <xref:System.Text.DecoderReplacementFallback.%23ctor%28System.String%29> construtor, que você fornecer a cadeia de caracteres de substituição.  
+  
+ Essa classe é uma das duas classes do .NET Framework que implementam diferentes estratégias alternativas para lidar com falhas de conversão de decodificação. A outra classe é o <xref:System.Text.DecoderExceptionFallback> de classe que lança um <xref:System.Text.DecoderFallbackException> quando uma sequência de bytes inválido é encontrada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Text.DecoderReplacementFallback> classe.  
+  
+ [!code-cpp[sys.txt.fallbackDecRpl#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.txt.fallbackDecRpl/cpp/fallDecRpl.cpp#1)]
+ [!code-csharp[sys.txt.fallbackDecRpl#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.txt.fallbackDecRpl/cs/fallDecRpl.cs#1)]
+ [!code-vb[sys.txt.fallbackDecRpl#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.txt.fallbackDecRpl/vb/fallDecRpl.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DecoderReplacementFallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderReplacementFallback.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Text.DecoderReplacementFallback" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a substituição de cadeia de caracteres que é o valor deste <xref:System.Text.DecoderReplacementFallback> objeto é "?".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DecoderReplacementFallback (string replacement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string replacement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderReplacementFallback.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="replacement" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="replacement">Uma cadeia de caracteres que é emitida em uma operação de decodificação no lugar de uma sequência de bytes de entrada que não pode ser decodificada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Text.DecoderReplacementFallback" /> classe usando uma cadeia de caracteres de substituição especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `replacement` parâmetro inicia a cadeia de caracteres de substituição que é o valor da <xref:System.Text.DecoderReplacementFallback> objeto. Um valor de uso geral é o Unicode "Caractere de substituição" (U + FFFD), que foi desenvolvido especificamente para substituir um caractere de entrada com um valor que é desconhecido ou unrepresentable em Unicode.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="replacement" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="replacement" />contém um par substituto inválido. Em outras palavras, o par substituto não consistem em um componente do substituto alto seguido por um componente de alternativo baixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFallbackBuffer">
+      <MemberSignature Language="C#" Value="public override System.Text.DecoderFallbackBuffer CreateFallbackBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Text.DecoderFallbackBuffer CreateFallbackBuffer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderReplacementFallback.CreateFallbackBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.DecoderFallbackBuffer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Text.DecoderFallbackBuffer" /> objeto que é inicializado com a cadeia de caracteres de substituição desse <see cref="T:System.Text.DecoderReplacementFallback" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Text.DecoderFallbackBuffer" /> objeto que especifica uma cadeia de caracteres a ser usado em vez da operação de decodificação original de entrada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultString">
+      <MemberSignature Language="C#" Value="public string DefaultString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultString" />
+      <MemberSignature Language="DocId" Value="P:System.Text.DecoderReplacementFallback.DefaultString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres de substituição que é o valor da <see cref="T:System.Text.DecoderReplacementFallback" /> objeto.</summary>
+        <value>Uma cadeia de caracteres de substituição é emitida no lugar de uma sequência de bytes de entrada que não pode ser decodificada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderReplacementFallback.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto <see cref="T:System.Text.DecoderReplacementFallback" />.</param>
+        <summary>Indica se o valor de um objeto especificado é igual de <see cref="T:System.Text.DecoderReplacementFallback" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="value" /> é um <see cref="T:System.Text.DecoderReplacementFallback" /> objeto com um <see cref="P:System.Text.DecoderReplacementFallback.DefaultString" /> propriedade é igual de <see cref="P:System.Text.DecoderReplacementFallback.DefaultString" /> propriedade <see cref="T:System.Text.DecoderReplacementFallback" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.DecoderReplacementFallback.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o código hash para o valor de <see cref="T:System.Text.DecoderReplacementFallback" /> objeto.</summary>
+        <returns>O código hash do valor do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de um <xref:System.Text.DecoderReplacementFallback> objeto é o valor do seu <xref:System.Text.DecoderReplacementFallback.DefaultString%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCharCount">
+      <MemberSignature Language="C#" Value="public override int MaxCharCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxCharCount" />
+      <MemberSignature Language="DocId" Value="P:System.Text.DecoderReplacementFallback.MaxCharCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de caracteres na cadeia de caracteres de substituição para o <see cref="T:System.Text.DecoderReplacementFallback" /> objeto.</summary>
+        <value>O número de caracteres na cadeia de caracteres que é emitida no lugar de uma sequência de bytes não pode ser decodificada, ou seja, o comprimento da cadeia de caracteres retornada pelo <see cref="P:System.Text.DecoderReplacementFallback.DefaultString" /> propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,89 @@
+<Type Name="HostObjectInitializationStatus" FullName="Microsoft.Build.Utilities.HostObjectInitializationStatus">
+  <TypeSignature Language="C#" Value="public enum HostObjectInitializationStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HostObjectInitializationStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.HostObjectInitializationStatus" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define a próxima ação para <see cref="T:Microsoft.Build.Utilities.ToolTask" /> após uma tentativa de inicializar o objeto de host.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.Utilities.HostObjectInitializationStatus>é o tipo de retorno de <xref:Microsoft.Build.Utilities.ToolTask.InitializeHostObject%2A> método o <xref:Microsoft.Build.Utilities.ToolTask> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NoActionReturnFailure">
+      <MemberSignature Language="C#" Value="NoActionReturnFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Utilities.HostObjectInitializationStatus NoActionReturnFailure = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.NoActionReturnFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.HostObjectInitializationStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que alguns dos parâmetros que está sendo passados para a tarefa são inválidos e que a tarefa deve falhar imediatamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoActionReturnSuccess">
+      <MemberSignature Language="C#" Value="NoActionReturnSuccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Utilities.HostObjectInitializationStatus NoActionReturnSuccess = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.NoActionReturnSuccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.HostObjectInitializationStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o objeto de host está atualizado e que nenhuma ação adicional é necessária.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAlternateToolToExecute">
+      <MemberSignature Language="C#" Value="UseAlternateToolToExecute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Utilities.HostObjectInitializationStatus UseAlternateToolToExecute = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseAlternateToolToExecute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.HostObjectInitializationStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um objeto de host não está disponível ou o objeto de host não é capaz de dar suporte a todos os recursos necessários para esta compilação. Portanto, <see cref="T:Microsoft.Build.Utilities.ToolTask" /> deve fazer fallback para um meio alternativo de fazer a compilação, como invocar a ferramenta de linha de comando.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseHostObjectToExecute">
+      <MemberSignature Language="C#" Value="UseHostObjectToExecute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Utilities.HostObjectInitializationStatus UseHostObjectToExecute = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Utilities.HostObjectInitializationStatus.UseHostObjectToExecute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.HostObjectInitializationStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que existe um objeto de host apropriado para essa tarefa, que pode dar suporte a todos os parâmetros passados e deve ser chamado para fazer o trabalho real da tarefa.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

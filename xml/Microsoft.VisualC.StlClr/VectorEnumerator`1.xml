@@ -1,0 +1,158 @@
+<Type Name="VectorEnumerator&lt;TValue&gt;" FullName="Microsoft.VisualC.StlClr.VectorEnumerator&lt;TValue&gt;">
+  <TypeSignature Language="C#" Value="public class VectorEnumerator&lt;TValue&gt; : Microsoft.VisualC.StlClr.VectorEnumeratorBase&lt;TValue&gt;, System.Collections.Generic.IEnumerator&lt;TValue&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VectorEnumerator`1&lt;TValue&gt; extends Microsoft.VisualC.StlClr.VectorEnumeratorBase`1&lt;!TValue&gt; implements class System.Collections.Generic.IEnumerator`1&lt;!TValue&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualC.StlClr.VectorEnumerator`1" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>Microsoft.VisualC.StlClr.VectorEnumeratorBase&lt;TValue&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TValue">TValue</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerator&lt;TValue&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TValue">O tipo de um elemento na sequência controlada.</typeparam>
+    <summary>Dá suporte à iteração simples sobre qualquer objeto STL/CLR que implementa o <see cref="T:Microsoft.VisualC.StlClr.IVector`1" /> interface.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[unnamed_parm](~/includes/unnamed-parm-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VectorEnumerator (Microsoft.VisualC.StlClr.IVector&lt;TValue&gt; _Cont, int _First);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.VisualC.StlClr.IVector`1&lt;!TValue&gt; _Cont, int32 _First) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.VectorEnumerator`1.#ctor(Microsoft.VisualC.StlClr.IVector{`0},System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="_Cont" Type="Microsoft.VisualC.StlClr.IVector&lt;TValue&gt;" />
+        <Parameter Name="_First" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="_Cont">O contêiner pela qual iterar.</param>
+        <param name="_First">O deslocamento do primeiro elemento no contêiner atual.</param>
+        <summary>Aloca e inicializa um novo <see cref="T:Microsoft.VisualC.StlClr.VectorEnumerator`1" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public virtual TValue Current { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TValue Current" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualC.StlClr.VectorEnumerator`1.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento atual na coleção.</summary>
+        <value>O elemento atual na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.VectorEnumerator`1.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera ou redefine os recursos não gerenciados usados pelo objeto <see cref="T:Microsoft.VisualC.StlClr.VectorEnumerator`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.VectorEnumerator`1.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">
+          <see langword="true" /> para descarte de objetos gerenciados; <see langword="false" /> para descarte de objetos não gerenciados.</param>
+        <summary>Libera ou redefine os recursos não gerenciados usados pelo objeto <see cref="T:Microsoft.VisualC.StlClr.VectorEnumerator`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public override bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.VectorEnumerator`1.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Avança o enumerador para o próximo elemento da coleção.</summary>
+        <returns>
+          <see langword="true" /> se o enumerador foi avançado com êxito para o próximo elemento; <see langword="false" /> se o enumerador passou o final da coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.VectorEnumerator`1.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o enumerador com sua posição inicial, que é antes do primeiro elemento da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

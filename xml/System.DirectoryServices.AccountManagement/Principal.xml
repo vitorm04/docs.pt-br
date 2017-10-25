@@ -1,0 +1,1058 @@
+<Type Name="Principal" FullName="System.DirectoryServices.AccountManagement.Principal">
+  <TypeSignature Language="C#" Value="public abstract class Principal : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Principal extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.AccountManagement.Principal" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Name ( {Name} )")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula os dados da conta e as operações comuns a todas as entidades de segurança. Esta é a classe base abstrata da qual todas as entidades de segurança são derivadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes de extensão personalizada que derivar desta classe pode chamar o construtor do construtor de classe derivada para inicializar a classe base. Para obter mais informações, consulte o [Principal extensões](http://msdn.microsoft.com/en-us/49d1b257-d652-4224-bdae-2edabced8f00) tópico de visão geral.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Principal ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.DirectoryServices.AccountManagement.Principal" />. Este construtor é chamado por construtores de classe derivada para inicializar a classe base e não se destina a ser chamado diretamente no seu código.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes de extensão personalizada que derivar desta classe pode chamar o construtor do construtor de classe derivada para inicializar a classe base. Para obter mais informações, consulte o [Principal extensões](http://msdn.microsoft.com/en-us/49d1b257-d652-4224-bdae-2edabced8f00) tópico de visão geral.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckDisposedOrDeleted">
+      <MemberSignature Language="C#" Value="protected void CheckDisposedOrDeleted ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckDisposedOrDeleted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.CheckDisposedOrDeleted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o <see cref="M:System.DirectoryServices.AccountManagement.Principal.Dispose" /> ou <see cref="M:System.DirectoryServices.AccountManagement.Principal.Delete" /> tem sido chamados métodos nessa classe. Este método é chamado por classes que derivam da classe entidade de segurança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método verifica se o objeto foi descartado antes que ela determina se ele foi excluído.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="M:System.DirectoryServices.AccountManagement.Principal.Dispose" /> método foi chamado neste objeto principal.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="M:System.DirectoryServices.AccountManagement.Principal.Delete" /> método foi chamado neste objeto principal.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.AccountManagement.PrincipalContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.AccountManagement.PrincipalContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.PrincipalContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um contexto de entidade que está associado à entidade.</summary>
+        <value>Um objeto <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> que contém o contexto associado a essa entidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextRaw">
+      <MemberSignature Language="C#" Value="protected System.DirectoryServices.AccountManagement.PrincipalContext ContextRaw { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.AccountManagement.PrincipalContext ContextRaw" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.ContextRaw" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.PrincipalContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um contexto de entidade que está associado essa entidade.</summary>
+        <value>Um objeto <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> que contém o contexto associado a essa entidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextType">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.AccountManagement.ContextType ContextType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.AccountManagement.ContextType ContextType" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.ContextType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.ContextType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de enumeração do tipo de contexto que especifica o tipo de contexto de entidade de segurança associado a essa entidade de segurança.</summary>
+        <value>Um valor de enumeração <see cref="T:System.DirectoryServices.AccountManagement.ContextType" /> que especifica o tipo de contexto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo de contexto é definido no objeto de contexto principal no <xref:System.DirectoryServices.AccountManagement.PrincipalContext> construtor. O valor armazenado nesta classe está associado a <xref:System.DirectoryServices.AccountManagement.PrincipalContext.ContextType%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exclui o objeto de entidade de segurança do repositório.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O objeto que não é persistido no repositório.  
+  
+ O objeto já foi excluído.  
+  
+ O tipo de contexto de destino deve corresponder ao tipo de contexto da entidade de segurança atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição da entidade de segurança.</summary>
+        <value>O texto de descrição para essa entidade de segurança ou null se não houver nenhuma descrição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de exibição dessa entidade de segurança.</summary>
+        <value>O nome de exibição dessa entidade de segurança ou nulo se não houver nenhum nome de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarta a instância atual do <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistinguishedName">
+      <MemberSignature Language="C#" Value="public string DistinguishedName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DistinguishedName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.DistinguishedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o DN (nome diferenciado) dessa entidade de segurança.</summary>
+        <value>O DN dessa entidade de segurança ou nulo se não houver um DN.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objeto que é comparado com a instância atual.</param>
+        <summary>Retorna um valor booleano que especifica se o objeto fornecido é igual ao objeto atual.</summary>
+        <returns>
+          <see langword="true" />Se o objeto fornecido e objetos de entidade de segurança atuais representam a mesma entidade subjacente em armazenamento. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionGet">
+      <MemberSignature Language="C#" Value="protected object[] ExtensionGet (string attribute);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object[] ExtensionGet(string attribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.ExtensionGet(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribute" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attribute">O nome do atributo a ser recuperado.</param>
+        <summary>Recupera um atributo de um objeto de classe estendido.</summary>
+        <returns>Retorna uma matriz de objetos ou <see langword="null" />, se não existir nenhum atributo com esse nome. Consulte [Extensões de Princípio System.DirectoryServices.AccountManagement](http://msdn.microsoft.com/en-us/49d1b257-d652-4224-bdae-2edabced8f00) para obter um exemplo de como usar essa função.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionSet">
+      <MemberSignature Language="C#" Value="protected void ExtensionSet (string attribute, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ExtensionSet(string attribute, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.ExtensionSet(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribute" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="attribute">O nome do atributo.</param>
+        <param name="value">O objeto que contém o valor do atributo.</param>
+        <summary>Define o valor de um atributo em uma classe estendida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [System.DirectoryServices.AccountManagement princípio extensões](http://msdn.microsoft.com/en-us/49d1b257-d652-4224-bdae-2edabced8f00) para obter um exemplo dessa função.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByIdentity">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.AccountManagement.Principal FindByIdentity (System.DirectoryServices.AccountManagement.PrincipalContext context, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.AccountManagement.Principal FindByIdentity(class System.DirectoryServices.AccountManagement.PrincipalContext context, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.FindByIdentity(System.DirectoryServices.AccountManagement.PrincipalContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.Principal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> que especifica o servidor ou domínio no qual as operações são executadas.</param>
+        <param name="identityValue">A identidade da entidade de segurança. Esse parâmetro pode estar em qualquer formato que esteja contido na enumeração <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" />.</param>
+        <summary>Retorna um objeto de entidade que corresponda ao valor de identidade especificado.</summary>
+        <returns>Um objeto <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> que corresponde ao valor e ao tipo de identidade especificado, ou nulo, se nenhuma correspondência for encontrada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.MultipleMatchesException">Foram encontrados vários objetos de entidade de segurança que correspondem ao objeto atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByIdentity">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.AccountManagement.Principal FindByIdentity (System.DirectoryServices.AccountManagement.PrincipalContext context, System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.AccountManagement.Principal FindByIdentity(class System.DirectoryServices.AccountManagement.PrincipalContext context, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.FindByIdentity(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.Principal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="identityType" Type="System.DirectoryServices.AccountManagement.IdentityType" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> que especifica o servidor ou domínio no qual as operações são executadas.</param>
+        <param name="identityType">Um <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> valor de enumeração que especifica o formato da <c>identityValue</c> parâmetro.</param>
+        <param name="identityValue">A identidade da entidade de segurança. Esse parâmetro pode estar em qualquer formato que esteja contido na enumeração <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" />.</param>
+        <summary>Retorna um objeto de entidade de segurança que corresponde ao tipo de identidade especificado e o valor. Essa versão do método <see cref="M:System.DirectoryServices.AccountManagement.Principal.FindByIdentity(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" /> determina o formato do valor de identidade.</summary>
+        <returns>Um objeto <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> que corresponde ao valor e ao tipo de identidade especificado, ou nulo, se nenhuma correspondência for encontrada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.AccountManagement.MultipleMatchesException">Foram encontrados vários objetos de entidade de segurança que correspondem ao objeto atual.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O tipo de identidade não é um valor de enumeração <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByIdentityWithType">
+      <MemberSignature Language="C#" Value="protected static System.DirectoryServices.AccountManagement.Principal FindByIdentityWithType (System.DirectoryServices.AccountManagement.PrincipalContext context, Type principalType, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.DirectoryServices.AccountManagement.Principal FindByIdentityWithType(class System.DirectoryServices.AccountManagement.PrincipalContext context, class System.Type principalType, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.FindByIdentityWithType(System.DirectoryServices.AccountManagement.PrincipalContext,System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.Principal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="principalType" Type="System.Type" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> que especifica o servidor ou domínio no qual as operações são executadas.</param>
+        <param name="principalType">O tipo de objeto para o qual os resultados são retornados. Isso deve ser do tipo <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> ou um tipo derivado de <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> classe.</param>
+        <param name="identityValue">A identidade da entidade de segurança.</param>
+        <summary>Retorna um objeto de entidade de segurança que corresponde ao tipo de identidade especificado e o valor. Este método é chamado pela implementação de classe derivada **FindByIdentity** método para restringir a pesquisa para o tipo de classe derivada e não se destina a ser chamado diretamente no seu código.</summary>
+        <returns>Um objeto <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> que corresponde ao valor e ao tipo de identidade especificado, ou nulo, se nenhuma correspondência for encontrada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByIdentityWithType">
+      <MemberSignature Language="C#" Value="protected static System.DirectoryServices.AccountManagement.Principal FindByIdentityWithType (System.DirectoryServices.AccountManagement.PrincipalContext context, Type principalType, System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.DirectoryServices.AccountManagement.Principal FindByIdentityWithType(class System.DirectoryServices.AccountManagement.PrincipalContext context, class System.Type principalType, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.FindByIdentityWithType(System.DirectoryServices.AccountManagement.PrincipalContext,System.Type,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.Principal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="principalType" Type="System.Type" />
+        <Parameter Name="identityType" Type="System.DirectoryServices.AccountManagement.IdentityType" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> que especifica o servidor ou domínio no qual as operações são executadas.</param>
+        <param name="principalType">O tipo de objeto para o qual os resultados são retornados. Isso deve ser do tipo <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> ou um tipo derivado de <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> classe.</param>
+        <param name="identityType">Um <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> valor de enumeração que especifica o tipo do valor de identidade.</param>
+        <param name="identityValue">A identidade da entidade de segurança.</param>
+        <summary>Retorna um objeto de entidade de segurança que corresponde ao tipo de identidade especificado e o valor. Este método é chamado pela implementação de classe derivada **FindByIdentity** método para restringir a pesquisa para o tipo de classe derivada e não se destina a ser chamado diretamente no seu código.</summary>
+        <returns>Um objeto <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> que corresponde ao valor e ao tipo de identidade especificado, ou nulo, se nenhuma correspondência for encontrada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetGroups">
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna uma coleção de objetos de grupo que especificam os grupos dos quais a entidade atual é membro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método sobrecarregado retorna apenas os grupos dos quais a entidade é membro direto; Nenhuma pesquisa recursiva é executada. Resultados da pesquisa recursiva estão disponíveis para objetos de usuário. Para obter mais informações, consulte o método <xref:System.DirectoryServices.AccountManagement.UserPrincipal.GetAuthorizationGroups%2A>.  
+  
+ Se o armazenamento principal é o AD DS, a lista de grupos de contém o grupo do usuário primário que é identificado pelo atributo de ID de grupo primário no objeto do AD DS.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetGroups">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;System.DirectoryServices.AccountManagement.Principal&gt; GetGroups ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.AccountManagement.PrincipalSearchResult`1&lt;class System.DirectoryServices.AccountManagement.Principal&gt; GetGroups() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.GetGroups" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;System.DirectoryServices.AccountManagement.Principal&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de objetos de grupo que especificam os grupos dos quais a entidade atual é membro.</summary>
+        <returns>Uma coleção de objetos <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> que especificam os grupos dos quais a entidade atual é membro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna somente os grupos dos quais a entidade é membro direto; Nenhuma pesquisa recursiva é executada. Resultados da pesquisa recursiva estão disponíveis para objetos de usuário. Para obter mais informações, consulte o método <xref:System.DirectoryServices.AccountManagement.UserPrincipal.GetAuthorizationGroups%2A>.  
+  
+ Os grupos que são retornados por este método podem incluir grupos de um escopo diferente e armazenamento que a entidade de segurança. Por exemplo, se a entidade de segurança é um objeto do AD DS que tem um DN de "CN = SpecialGroups, DC = Fabrikam, DC = com, o conjunto retornado pode conter grupos aos quais pertence o" CN = NormalGroups, DC = Fabrikam, DC = com.  
+  
+ Se a entidade atual for uma entidade de segurança do AD DS, os grupos retornados incluem o grupo primário de entidades de segurança, conforme indicado pelo atributo "primaryGroupId" no objeto do AD DS.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGroups">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;System.DirectoryServices.AccountManagement.Principal&gt; GetGroups (System.DirectoryServices.AccountManagement.PrincipalContext contextToQuery);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.AccountManagement.PrincipalSearchResult`1&lt;class System.DirectoryServices.AccountManagement.Principal&gt; GetGroups(class System.DirectoryServices.AccountManagement.PrincipalContext contextToQuery) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.GetGroups(System.DirectoryServices.AccountManagement.PrincipalContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.AccountManagement.PrincipalSearchResult&lt;System.DirectoryServices.AccountManagement.Principal&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextToQuery" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+      </Parameters>
+      <Docs>
+        <param name="contextToQuery">O objeto <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> que especifica o contexto no qual a consulta é realizada.  
+  
+ Quando o contexto está localizado em outro domínio, a consulta é realizada na representação dos objetos da entidade de segurança no contexto especificado.</param>
+        <summary>Retorna uma coleção de objetos de grupo da qual a entidade de segurança é um membro e que existe no repositório fornecido pelo parâmetro de contexto especificado.</summary>
+        <returns>Uma coleção de objetos <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> que especificam os grupos dos quais a entidade atual é membro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna somente os grupos dos quais a entidade é membro direto; Nenhuma pesquisa recursiva é executada. Resultados da pesquisa recursiva estão disponíveis para objetos de usuário. Para obter mais informações, consulte o método <xref:System.DirectoryServices.AccountManagement.UserPrincipal.GetAuthorizationGroups%2A>.  
+  
+ Os grupos que são retornados por este método podem incluir grupos de um escopo diferente e armazenamento que a entidade de segurança. Por exemplo, se a entidade de segurança é um objeto do AD DS que tem um DN de "CN = SpecialGroups, DC = Fabrikam, DC = com, o conjunto retornado pode conter grupos aos quais pertence o" CN = NormalGroups, DC = Fabrikam, DC = com.  
+  
+ Se a entidade atual for uma entidade de segurança do AD DS, os grupos retornados incluem o grupo primário de entidades de segurança conforme indicado pelo atributo de ID de grupo primário no objeto do AD DS.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o hash criado a partir do conteúdo do objeto principal, adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.</summary>
+        <returns>Um código hash para o servidor principal atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnderlyingObject">
+      <MemberSignature Language="C#" Value="public object GetUnderlyingObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetUnderlyingObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.GetUnderlyingObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o objeto <see cref="T:System.DirectoryServices.DirectoryEntry" /> subjacente que fornece os dados de contato para o objeto de entidade de segurança.</summary>
+        <returns>O objeto <see cref="T:System.DirectoryServices.DirectoryEntry" /> subjacente.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationExtension">A entidade de segurança atual não foi persistente e não tem um objeto <see cref="T:System.DirectoryServices.DirectoryEntry" /> associado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnderlyingObjectType">
+      <MemberSignature Language="C#" Value="public Type GetUnderlyingObjectType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetUnderlyingObjectType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.GetUnderlyingObjectType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o tipo de objeto subjacente.</summary>
+        <returns>O tipo de objeto subjacente. Para o AD DS e AD LDS SAM o tipo é <see cref="T:System.DirectoryServices.DirectoryEntry" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Guid">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Guid&gt; Guid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Guid&gt; Guid" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.Guid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID associado a essa entidade de segurança.</summary>
+        <value>O valor <see cref="T:System.Guid" /> que permite valor nulo associado a essa entidade de segurança ou nulo, se não houver nenhum GUID.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna null quando o <xref:System.DirectoryServices.AccountManagement.Principal.ContextType%2A> estiver definida como máquina.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMemberOf">
+      <MemberSignature Language="C#" Value="public bool IsMemberOf (System.DirectoryServices.AccountManagement.GroupPrincipal group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsMemberOf(class System.DirectoryServices.AccountManagement.GroupPrincipal group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.IsMemberOf(System.DirectoryServices.AccountManagement.GroupPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.DirectoryServices.AccountManagement.GroupPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="group">O objeto <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> cuja associação de entidade de segurança é determinada.</param>
+        <summary>Retorna um valor booliano que especifica se a entidade de segurança é membro do grupo especificado.</summary>
+        <returns>
+          <see langword="true" /> se a entidade de segurança for membro do grupo especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a entidade atual for uma entidade de segurança do AD DS, os grupos retornados incluem o grupo primário do servidor principal, conforme indicado pelo atributo de ID de grupo primário no objeto do AD DS.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException">O <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> especificado no parâmetro do grupo não pôde ser encontrado.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.MultipleMatchesException">Mais de um <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> correspondente foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMemberOf">
+      <MemberSignature Language="C#" Value="public bool IsMemberOf (System.DirectoryServices.AccountManagement.PrincipalContext context, System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsMemberOf(class System.DirectoryServices.AccountManagement.PrincipalContext context, valuetype System.DirectoryServices.AccountManagement.IdentityType identityType, string identityValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.IsMemberOf(System.DirectoryServices.AccountManagement.PrincipalContext,System.DirectoryServices.AccountManagement.IdentityType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+        <Parameter Name="identityType" Type="System.DirectoryServices.AccountManagement.IdentityType" />
+        <Parameter Name="identityValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> que especifica o servidor ou domínio no qual as operações são executadas.</param>
+        <param name="identityType">Um valor de enumeração <see cref="T:System.DirectoryServices.AccountManagement.IdentityType" /> que especifica o tipo do valor de identidade.</param>
+        <param name="identityValue">A identidade do grupo.</param>
+        <summary>Retorna um valor booliano que especifica se a entidade de segurança é um membro do grupo especificado por valor e tipo de identidade.</summary>
+        <returns>
+          <see langword="true" /> se a entidade de segurança for membro do grupo especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a entidade atual for uma entidade de segurança do AD DS, os grupos retornados incluem o grupo primário do servidor principal, conforme indicado pelo atributo de ID de grupo primário no objeto do AD DS.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException">O tipo de identidade ou o valor não corresponde a um <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" />.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.MultipleMatchesException">Mais de um <see cref="T:System.DirectoryServices.AccountManagement.GroupPrincipal" /> correspondente foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome dessa entidade de segurança.</summary>
+        <value>O nome da entidade de segurança ou null se o atributo de nome não estiver definido.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O aplicativo tentou definir o nome como null.</exception>
+        <exception cref="T:System.InvalidOperationException">O repositório subjacente não dá suporte a essa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SamAccountName">
+      <MemberSignature Language="C#" Value="public string SamAccountName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SamAccountName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.SamAccountName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da conta SAM dessa entidade de segurança.</summary>
+        <value>O nome de conta SAM para essa entidade de segurança ou null se nenhum nome tiver sido definido.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O aplicativo tentou definir o nome da conta SAM como nulo.</exception>
+        <exception cref="T:System.InvalidOperationException">O aplicativo tentou definir o nome da conta SAM em uma entidade de segurança persistente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações feitas no objeto da entidade de segurança no armazenamento. Se esse for um novo objeto de entidade de segurança, esse método o insere no repositório.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">A entidade de segurança ainda não foi associada a um objeto <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" />.  
+  
+ Esse tipo de entidade de segurança não pode ser inserido no repositório.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">Ocorreu uma exceção ao salvar alterações no repositório ou ao atualizar a associação de grupo no repositório.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalExistsException">A entidade de segurança já existe no repositório.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PasswordException">A senha não atende aos requisitos de complexidade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.DirectoryServices.AccountManagement.PrincipalContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.DirectoryServices.AccountManagement.PrincipalContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.Save(System.DirectoryServices.AccountManagement.PrincipalContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.AccountManagement.PrincipalContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" /> que especifica o servidor ou domínio no qual as operações são executadas.</param>
+        <summary>Salva as alterações feitas no objeto da entidade de segurança no armazenamento. Se esse for um novo objeto de entidade de segurança, esse método o insere no contexto especificado. Se a entidade de segurança já tiver sido persistida, ela será movida do contexto original para o contexto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o contexto de entidade especificado é diferente do contexto existente, a entidade de segurança é movida para o contexto especificado e o objeto principal não está localizado no local antigo. Se o contexto especificado é idêntico ao contexto existente, este método salva as atualizações que foram feitas no objeto principal para o armazenamento. O tipo de contexto do contexto especificado deve ser o mesmo tipo que o tipo de contexto atual. Este método não pode ser chamado usando o tipo de contexto do computador.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A entidade de segurança ainda não foi associada a um objeto <see cref="T:System.DirectoryServices.AccountManagement.PrincipalContext" />.  
+  
+ Esse tipo de entidade de segurança não pode ser inserido no armazenamento.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">Ocorreu uma exceção ao salvar alterações no armazenamento ou ao atualizar a associação de grupo no armazenamento.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalExistsException">A entidade de segurança já existe no armazenamento.</exception>
+        <exception cref="T:System.DirectoryServices.AccountManagement.PasswordException">A senha não atende aos requisitos de complexidade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sid">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.SecurityIdentifier Sid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.SecurityIdentifier Sid" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.Sid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.SecurityIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a SID (identificador de segurança) da entidade de segurança.</summary>
+        <value>O <see cref="T:System.Security.Principal.SecurityIdentifier" /> dessa entidade de segurança ou nulo se não houver SID.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StructuralObjectClass">
+      <MemberSignature Language="C#" Value="public string StructuralObjectClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StructuralObjectClass" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.StructuralObjectClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o atributo de diretório da classe do objeto estrutural.</summary>
+        <value>O atributo de diretório da classe do objeto estrutural.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.Principal.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres amigável de usuário do objeto principal atual.</summary>
+        <returns>Uma representação de cadeia de caracteres do atual <see cref="T:System.DirectoryServices.AccountManagement.Principal" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPrincipalName">
+      <MemberSignature Language="C#" Value="public string UserPrincipalName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserPrincipalName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.Principal.UserPrincipalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome UPN associado a essa entidade.</summary>
+        <value>O UPN associado a essa entidade ou nulo se o UPN não foi definido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configurar essa propriedade como null remove o UPN existente, se houver.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O repositório subjacente não dá suporte a essa propriedade.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

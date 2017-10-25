@@ -1,0 +1,53 @@
+<Type Name="SecurityTokenReferenceStyle" FullName="System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle">
+  <TypeSignature Language="C#" Value="public enum SecurityTokenReferenceStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SecurityTokenReferenceStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Esta enumeração define o estilo de referência desejado que é usado para gerar referências de token de segurança (STR) como os tokens de segurança dos elementos da assinatura e criptografia na mensagem.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="External">
+      <MemberSignature Language="C#" Value="External" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle External = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.External" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O STR gerado fará referência o token como se ela estivesse conectada não a própria mensagem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Internal">
+      <MemberSignature Language="C#" Value="Internal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle Internal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O STR gerado fará referência o token como se ele foi incluído na mensagem.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1329 @@
+<Type Name="WorkflowInvoker" FullName="System.Activities.WorkflowInvoker">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowInvoker" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowInvoker extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowInvoker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um meio para invocar um fluxo de trabalho como se ele fosse uma chamada de método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.WorkflowInvoker>contém a instância e métodos estáticos para chamar fluxos de trabalho de forma síncrona e os métodos de instância para chamar fluxos de trabalho de forma assíncrona.  
+  
+ <xref:System.Activities.WorkflowInvoker>não permitir o controle de instância como persistentes, descarregamento ou indicadores de retomada. Se o controle de instância é desejado, use <xref:System.Activities.WorkflowApplication> em vez disso.  
+  
+ Para executar fluxos de trabalho de maneira síncrona com nenhum controle de instância, chame o <xref:System.Activities.WorkflowInvoker.Invoke%2A> método. Para executar um fluxo de trabalho assíncrona com nenhum controle de instância, use o <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> e <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> pares de método, ou o <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca sincronicamente um fluxo de trabalho consiste em um único <xref:System.Activities.Statements.WriteLine> atividade usando <xref:System.Activities.WorkflowInvoker>.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInvoker (System.Activities.Activity workflow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Activity workflow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.#ctor(System.Activities.Activity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="workflow">A definição de fluxo de trabalho do fluxo de trabalho a ser invocado por esta instância do <see cref="T:System.Activities.WorkflowInvoker" /> classe.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.WorkflowInvoker" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.WorkflowInvoker>contém a instância e métodos estáticos para chamar fluxos de trabalho de forma síncrona e os métodos de instância para chamar fluxos de trabalho de forma assíncrona.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um único <xref:System.Activities.Statements.WriteLine> atividade.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="BeginInvoke">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Invoca um fluxo de trabalho de forma assíncrona usando o <see cref="T:System.IAsyncResult" /> padrão de design assíncrono.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral da programação assíncrona](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.BeginInvoke(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O método a ser chamado quando o fluxo de trabalho tiver sido concluído.</param>
+        <param name="state">Um objeto específico do aplicativo opcional que contém informações sobre a operação assíncrona.</param>
+        <summary>Invoca um fluxo de trabalho usando de forma assíncrona o <see cref="T:System.AsyncCallback" /> especificado e o estado fornecido pelo usuário.</summary>
+        <returns>Uma referência à operação invocar assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ser notificado quando o fluxo de trabalho for concluído e recuperar os parâmetros de saída do fluxo de trabalho, chame <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> do `callback` método. Se <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> é chamado antes do fluxo de trabalho for concluído, ele bloqueia até que o fluxo de trabalho seja concluído. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+ Este método invoca um fluxo de trabalho de forma assíncrona usando o <xref:System.IAsyncResult> padrão de design assíncrono. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral da programação assíncrona](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Esses são recuperadas chamando <xref:System.Activities.WorkflowInvoker.EndInvoke%2A>. Quando a chamada para <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> retorna, cada argumento de saída é retornado no dicionário de saídas, chaveado segundo o nome do argumento.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.BeginInvoke(System.Collections.Generic.IDictionary{System.String,System.Object},System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <param name="callback">O método a ser chamado quando o fluxo de trabalho tiver sido concluído.</param>
+        <param name="state">Um objeto específico do aplicativo opcional que contém informações sobre a operação assíncrona.</param>
+        <summary>Invoca um fluxo de trabalho assincronamente usando especificado <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada, <see cref="T:System.AsyncCallback" />e o estado fornecido pelo usuário.</summary>
+        <returns>Uma referência à operação invocar assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ser notificado quando o fluxo de trabalho for concluído e recuperar os parâmetros de saída do fluxo de trabalho, chame <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> do `callback` método. Se <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> é chamado antes do fluxo de trabalho for concluído, ele bloqueia até que o fluxo de trabalho seja concluído.  Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+ Este método invoca um fluxo de trabalho de forma assíncrona usando o <xref:System.IAsyncResult> padrão de design assíncrono. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral da programação assíncrona](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Esses são recuperadas chamando <xref:System.Activities.WorkflowInvoker.EndInvoke%2A>. Quando a chamada para <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> retorna, cada argumento de saída é retornado no dicionário de saídas, chaveado segundo o nome do argumento.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.BeginInvoke(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <param name="callback">O método a ser chamado quando o fluxo de trabalho tiver sido concluído.</param>
+        <param name="state">Um objeto específico do aplicativo opcional que contém informações sobre a operação assíncrona.</param>
+        <summary>Invoca um fluxo de trabalho de forma assíncrona usando o intervalo de tempo limite, a <see cref="T:System.AsyncCallback" /> e o estado fornecido pelo usuário especificados.</summary>
+        <returns>Uma referência à operação invocar assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ser notificado quando o fluxo de trabalho for concluído e recuperar os parâmetros de saída do fluxo de trabalho, chame <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> do `callback` método. Se <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> é chamado antes do fluxo de trabalho for concluído, ele bloqueia até que o fluxo de trabalho seja concluído. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é gerada quando o <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> método é chamado.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que recebe mais tempo do intervalo de tempo limite especificado para concluir concluída com êxito se o fluxo de trabalho não se torna ocioso.  
+  
+ Este método invoca um fluxo de trabalho de forma assíncrona usando o <xref:System.IAsyncResult> padrão de design assíncrono. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral da programação assíncrona](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Esses são recuperadas chamando <xref:System.Activities.WorkflowInvoker.EndInvoke%2A>. Quando a chamada para <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> retorna, cada argumento de saída é retornado no dicionário de saídas, chaveado segundo o nome do argumento.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInvoke(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.BeginInvoke(System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <param name="callback">O método a ser chamado quando o fluxo de trabalho tiver sido concluído.</param>
+        <param name="state">Um objeto específico do aplicativo opcional que contém informações sobre a operação assíncrona.</param>
+        <summary>Invoca um fluxo de trabalho assincronamente usando especificado <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada, o intervalo de tempo limite, <see cref="T:System.AsyncCallback" />e o estado fornecido pelo usuário.</summary>
+        <returns>Uma referência à operação invocar assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ser notificado quando o fluxo de trabalho for concluído e recuperar os parâmetros de saída do fluxo de trabalho, chame <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> do `callback` método. Se <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> é chamado antes do fluxo de trabalho for concluído, ele bloqueia até que o fluxo de trabalho seja concluído. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é lançada quando <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> é chamado.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que recebe mais tempo do intervalo de tempo limite especificado para concluir concluída com êxito se o fluxo de trabalho não se torna ocioso.  
+  
+ Este método invoca um fluxo de trabalho de forma assíncrona usando o <xref:System.IAsyncResult> padrão de design assíncrono. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral da programação assíncrona](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Esses são recuperadas chamando <xref:System.Activities.WorkflowInvoker.EndInvoke%2A>. Quando a chamada para <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> retorna, cada argumento de saída é retornado no dicionário de saídas, chaveado segundo o nome do argumento.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAsync">
+      <MemberSignature Language="C#" Value="public void CancelAsync (object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelAsync(object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.CancelAsync(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userState">O token para o fluxo de trabalho Cancelar.</param>
+        <summary>Tentativas de cancelar o fluxo de trabalho que foi invocado com especificado <paramref name="userState" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Apenas um fluxo de trabalho invocado por um do <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> sobrecargas que leva um `userState` parâmetro pode ser cancelado.  
+  
+ Se o cancelamento for bem-sucedida, o <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> propriedade o <xref:System.Activities.InvokeCompletedEventArgs> passado para o <xref:System.Activities.WorkflowInvoker.InvokeCompleted> manipulador está configurado para `true`; caso contrário, é definido como `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Depois que o fluxo de trabalho é chamado, o host tenta cancelar o fluxo de trabalho.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#34](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInvoke">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; EndInvoke (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; EndInvoke(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.EndInvoke(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> que faz referência a <see cref="Overload:System.Activities.WorkflowInvoker.BeginInvoke" /> operação que o fluxo de trabalho foi iniciado.</param>
+        <summary>Retorna os resultados de um fluxo de trabalho que foi chamado usando um do <see cref="Overload:System.Activities.WorkflowInvoker.BeginInvoke" /> sobrecargas.</summary>
+        <returns>Um dicionário dos valores <see cref="T:System.Activities.OutArgument" /> e <see cref="T:System.Activities.InOutArgument" /> da atividade raiz inseridos pelo nome do argumento que representam as saídas do fluxo de trabalho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ser notificado quando o fluxo de trabalho for concluído e recuperar os parâmetros de saída do fluxo de trabalho, chame <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> do `callback` método especificado pelo <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>. Se <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> é chamado antes do fluxo de trabalho for concluído, ele bloqueia até que o fluxo de trabalho seja concluído.  
+  
+ Esse método retorna o resultado de um fluxo de trabalho invocado de forma assíncrona usando o <xref:System.IAsyncResult> padrão de design assíncrono. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral da programação assíncrona](http://go.microsoft.com/fwlink/?LinkId=141764).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Esses são recuperadas chamando <xref:System.Activities.WorkflowInvoker.EndInvoke%2A>. Quando a chamada para <xref:System.Activities.WorkflowInvoker.EndInvoke%2A> retorna, cada argumento de saída é retornado no dicionário de saídas, chaveado segundo o nome do argumento.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.Activities.Hosting.WorkflowInstanceExtensionManager Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Hosting.WorkflowInstanceExtensionManager Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowInvoker.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Hosting.WorkflowInstanceExtensionManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Collections.ObjectModel.Collection`1" /> de extensões que estão disponíveis para fluxos de trabalho invocados por um <see cref="T:System.Activities.WorkflowInvoker" /> instância.</summary>
+        <value>O <see cref="T:System.Collections.ObjectModel.Collection`1" /> de extensões que estão disponíveis para fluxos de trabalho invocados por um <see cref="T:System.Activities.WorkflowInvoker" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada por autores de host de fluxo de trabalho para adicionar extensões para a <xref:System.Activities.WorkflowInvoker> instância para que estejam disponíveis para fluxos de trabalho invocados por ele.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir registra um personalizado <xref:System.Activities.Tracking.TrackingParticipant> com o <xref:System.Activities.WorkflowInvoker.Extensions%2A> coleção de um <xref:System.Activities.WorkflowInvoker> instância. Este exemplo de código é parte do [controle personalizado](~/docs/framework/windows-workflow-foundation/samples/custom-tracking.md) exemplo.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#40](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Invoke">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Invoca um fluxo de trabalho de forma síncrona e retorna um dicionário da atividade raiz <see cref="T:System.Activities.OutArgument" /> e <see cref="T:System.Activities.InOutArgument" /> valores chaveados segundo argumento de nome que representam as saídas do fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.Invoke%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invoca um fluxo de trabalho usando a definição de fluxo de trabalho passada para o <see cref="M:System.Activities.WorkflowInvoker.#ctor(System.Activities.Activity)" /> construtor.</summary>
+        <returns>Um dicionário dos valores <see cref="T:System.Activities.OutArgument" /> e <see cref="T:System.Activities.InOutArgument" /> da atividade raiz inseridos pelo nome do argumento que representam as saídas do fluxo de trabalho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.Invoke%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um único `DiceRoll` atividade. A atividade de `DiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando a chamada para `Invoke` retorna, cada argumento de saída é retornado no dicionário de saídas, chaveado segundo o nome do argumento. O fluxo de trabalho é chamado duas vezes, usando a definição de fluxo de trabalho transmitida para o `WorkflowInvoker` construtor.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#130](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#130)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#31](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#31)]  
+  
+ Se a atividade de raiz do fluxo de trabalho não tiver nenhum argumento de saída ou eles não são necessários pelo host, ele podem ser ignorados. O exemplo a seguir invoca um fluxo de trabalho consiste em um único <xref:System.Activities.Statements.WriteLine> argumentos de saída da atividade que não tem nenhum.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Activities.Activity workflow);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Activities.Activity workflow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="workflow">A definição de fluxo de trabalho do fluxo de trabalho a ser invocado.</param>
+        <summary>Invoca um fluxo de trabalho usando a definição de fluxo de trabalho especificada.</summary>
+        <returns>Um dicionário dos valores <see cref="T:System.Activities.OutArgument" /> e <see cref="T:System.Activities.InOutArgument" /> da atividade raiz inseridos pelo nome do argumento que representam as saídas do fluxo de trabalho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.Invoke%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um único `DiceRoll` atividade. A atividade de `DiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando a chamada para `Invoke` retorna, cada argumento de saída é retornado no dicionário de saídas, chaveado segundo o nome do argumento.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#130](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#130)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#30](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#30)]  
+  
+ Se a atividade de raiz do fluxo de trabalho não tiver nenhum argumento de saída ou eles não são necessários pelo host, ele podem ser ignorados. O exemplo a seguir invoca um fluxo de trabalho consiste em um único <xref:System.Activities.Statements.WriteLine> argumentos de saída da atividade que não tem nenhum.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <summary>Invoca a atividade passada para o construtor <see cref="M:System.Activities.WorkflowInvoker.#ctor(System.Activities.Activity)" /> de forma síncrona com o <see cref="T:System.Collections.Generic.IDictionary`2" /> especificado dos parâmetros de entrada.</summary>
+        <returns>Um dicionário dos valores <see cref="T:System.Activities.OutArgument" /> e <see cref="T:System.Activities.InOutArgument" /> da atividade raiz inseridos pelo nome do argumento que representam as saídas do fluxo de trabalho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.Invoke%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama um fluxo de trabalho que consiste em uma única atividade de `Divide` que tem dois argumentos conectados e dois argumentos de saída. Quando o fluxo de trabalho é chamado, o dicionário de `arguments` é passado que contém os valores para cada argumento de entrada, fechado pelo nome do argumento. Quando o `Invoke` a chamada retorna, cada argumento de saída é retornado no dicionário de `outputs` , também fechado pelo nome do argumento.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#120](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#120)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#22](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#22)]  
+  
+ Se o fluxo de trabalho é derivado de <xref:System.Activities.ActivityWithResult>, como `CodeActivity<TResult>` ou `Activity<TResult>`, e os argumentos de saída além bem definido <xref:System.Activities.Activity%601.Result%2A> saída argumento, uma sobrecarga não genérica de `Invoke`, como este, deve ser usado em ordem para recuperar os argumentos adicionais. Para fazer isso, a definição de fluxo de trabalho é passado para o `WorkflowInvoker` construtor deve ser do tipo <xref:System.Activities.Activity>. Neste exemplo o `Divide` atividade deriva `CodeActivity<int>`, mas é declarado como <xref:System.Activities.Activity> para que essa sobrecarga de `Invoke`, que retorna um dicionário de argumentos, em vez de um único valor de retorno, é usado.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#121](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#121)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#23](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <summary>Invoca um fluxo de trabalho de maneira síncrona com o intervalo de tempo limite especificado.</summary>
+        <returns>Um dicionário dos valores <see cref="T:System.Activities.OutArgument" /> e <see cref="T:System.Activities.InOutArgument" /> da atividade raiz inseridos pelo nome do argumento que representam as saídas do fluxo de trabalho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é gerada.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que recebe mais tempo do intervalo de tempo limite especificado para concluir concluída com êxito se o fluxo de trabalho não se torna ocioso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho que contém duas <xref:System.Activities.Statements.WriteLine> atividades e um <xref:System.Activities.Statements.Delay> atividade configurada com um <xref:System.Activities.Statements.Delay.Duration%2A> de um minuto. Este fluxo de trabalho é chamado duas vezes; na primeira vez com um intervalo de tempo limite de dois minutos e a segunda vez com um intervalo de tempo limite de 30 segundos. O primeiro fluxo de trabalho for concluído com êxito, mas o outro não e um <xref:System.TimeoutException> é gerada e a seguinte mensagem é exibida.  
+  
+```Output  
+The operation did not complete within the allotted timeout of 00:00:30.   
+The time allotted to this operation may have been a portion of a longer timeout.  
+```  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#51](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#51)]  
+  
+ Para obter um exemplo do uso de `Invoke` com argumentos de saída, consulte a sobrecarga do <xref:System.Activities.WorkflowInvoker.Invoke%2A> com os mesmos parâmetros que essa sobrecarga sem o intervalo de tempo limite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Activities.Activity workflow, System.Collections.Generic.IDictionary&lt;string,object&gt; inputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Activities.Activity workflow, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Activities.Activity,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity" />
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="workflow">A definição de fluxo de trabalho do fluxo de trabalho a ser invocado.</param>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <summary>Invoca um fluxo de trabalho de forma síncrona usando a definição de fluxo de trabalho especificada e <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada.</summary>
+        <returns>Um dicionário dos valores <see cref="T:System.Activities.OutArgument" /> e <see cref="T:System.Activities.InOutArgument" /> da atividade raiz inseridos pelo nome do argumento que representam as saídas do fluxo de trabalho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.Invoke%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama um fluxo de trabalho que consiste em uma única atividade de `Divide` que tem dois argumentos conectados e dois argumentos de saída. Quando o fluxo de trabalho é chamado, o dicionário de `arguments` é passado que contém os valores para cada argumento de entrada, fechado pelo nome do argumento. Quando o `Invoke` a chamada retorna, cada argumento de saída é retornado no dicionário de `outputs` , também fechado pelo nome do argumento.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#120](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#120)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#20](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#20)]  
+  
+ Se o fluxo de trabalho é derivado de <xref:System.Activities.ActivityWithResult>, como `CodeActivity<TResult>` ou `Activity<TResult>`, e os argumentos de saída além bem definido <xref:System.Activities.Activity%601.Result%2A> saída argumento, uma sobrecarga não genérica de `Invoke`, como este, deve ser usado em ordem para recuperar os argumentos adicionais. Para fazer isso, a definição de fluxo de trabalho passada em `Invoke` deve ser do tipo <xref:System.Activities.Activity>. Neste exemplo o `Divide` atividade deriva `CodeActivity<int>`, mas é declarado como <xref:System.Activities.Activity> para que essa sobrecarga de `Invoke`, que retorna um dicionário de argumentos, em vez de um único valor de retorno, é usado.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#121](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#121)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#21](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Activities.Activity workflow, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Activities.Activity workflow, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Activities.Activity,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="workflow">A definição de fluxo de trabalho do fluxo de trabalho a ser invocado.</param>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <summary>Invoca um fluxo de trabalho usando a definição de fluxo de trabalho especificado e o intervalo de tempo limite.</summary>
+        <returns>Um dicionário dos valores <see cref="T:System.Activities.OutArgument" /> e <see cref="T:System.Activities.InOutArgument" /> da atividade raiz inseridos pelo nome do argumento que representam as saídas do fluxo de trabalho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é gerada.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que recebe mais tempo do intervalo de tempo limite especificado para concluir concluída com êxito se o fluxo de trabalho não se torna ocioso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho que contém duas <xref:System.Activities.Statements.WriteLine> atividades e um <xref:System.Activities.Statements.Delay> atividade configurada com um <xref:System.Activities.Statements.Delay.Duration%2A> de um minuto. Este fluxo de trabalho é chamado duas vezes; na primeira vez com um intervalo de tempo limite de dois minutos e a segunda vez com um intervalo de tempo limite de 30 segundos. O primeiro fluxo de trabalho for concluído com êxito, mas o outro não e um <xref:System.TimeoutException> é gerada.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#50](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#50)]  
+  
+ Para obter um exemplo do uso de `Invoke` com argumentos de saída, consulte a sobrecarga do <xref:System.Activities.WorkflowInvoker.Invoke%2A> com os mesmos parâmetros que essa sobrecarga sem o intervalo de tempo limite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <summary>Invoca a atividade passada para o <see cref="M:System.Activities.WorkflowInvoker.#ctor(System.Activities.Activity)" /> construtor sincronicamente com especificado <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada e o intervalo de tempo limite especificado.</summary>
+        <returns>Um dicionário dos valores <see cref="T:System.Activities.OutArgument" /> e <see cref="T:System.Activities.InOutArgument" /> da atividade raiz inseridos pelo nome do argumento que representam as saídas do fluxo de trabalho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é gerada.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que recebe mais tempo do intervalo de tempo limite especificado para concluir concluída com êxito se o fluxo de trabalho não se torna ocioso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho que contém duas <xref:System.Activities.Statements.WriteLine> atividades e um <xref:System.Activities.Statements.Delay> atividade configurada com um <xref:System.Activities.Statements.Delay.Duration%2A> de um minuto. Este fluxo de trabalho é chamado duas vezes; na primeira vez com um intervalo de tempo limite de dois minutos e a segunda vez com um intervalo de tempo limite de 30 segundos. O primeiro fluxo de trabalho for concluído com êxito, mas o outro não e um <xref:System.TimeoutException> é gerada e a seguinte mensagem é exibida.  
+  
+```Output  
+The operation did not complete within the allotted timeout of 00:00:30.   
+The time allotted to this operation may have been a portion of a longer timeout.  
+```  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#51](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#51)]  
+  
+ Para obter um exemplo do uso de `Invoke` com argumentos de entrada e saídos, consulte a sobrecarga do <xref:System.Activities.WorkflowInvoker.Invoke%2A> com os mesmos parâmetros que essa sobrecarga sem o intervalo de tempo limite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IDictionary&lt;string,object&gt; Invoke (System.Activities.Activity workflow, System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Invoke(class System.Activities.Activity workflow, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke(System.Activities.Activity,System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity" />
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="workflow">A definição de fluxo de trabalho do fluxo de trabalho a ser invocado.</param>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <summary>Invoca um fluxo de trabalho usando a definição de fluxo de trabalho especificado, <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada e o intervalo de tempo limite.</summary>
+        <returns>Um dicionário dos valores <see cref="T:System.Activities.OutArgument" /> e <see cref="T:System.Activities.InOutArgument" /> da atividade raiz inseridos pelo nome do argumento que representam as saídas do fluxo de trabalho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é gerada.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que recebe mais tempo do intervalo de tempo limite especificado para concluir concluída com êxito se o fluxo de trabalho não se torna ocioso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho que contém duas <xref:System.Activities.Statements.WriteLine> atividades e um <xref:System.Activities.Statements.Delay> atividade configurada com um <xref:System.Activities.Statements.Delay.Duration%2A> de um minuto. Este fluxo de trabalho é chamado duas vezes; na primeira vez com um intervalo de tempo limite de dois minutos e a segunda vez com um intervalo de tempo limite de 30 segundos. O primeiro fluxo de trabalho for concluído com êxito, mas o outro não e um <xref:System.TimeoutException> é gerada.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#50](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#50)]  
+  
+ Para obter um exemplo do uso de `Invoke` com argumentos de entrada e saídos, consulte a sobrecarga do <xref:System.Activities.WorkflowInvoker.Invoke%2A> com os mesmos parâmetros que essa sobrecarga sem o intervalo de tempo limite.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static TResult Invoke&lt;TResult&gt; (System.Activities.Activity&lt;TResult&gt; workflow);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TResult Invoke&lt;TResult&gt;(class System.Activities.Activity`1&lt;!!TResult&gt; workflow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke``1(System.Activities.Activity{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity&lt;TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo do fluxo de trabalho.</typeparam>
+        <param name="workflow">A definição de fluxo de trabalho do fluxo de trabalho a ser invocado. A definição de fluxo de trabalho deve derivar de <see cref="T:System.Activities.ActivityWithResult" />.</param>
+        <summary>Invoca um fluxo de trabalho usando a definição de fluxo de trabalho passada para o <see cref="M:System.Activities.WorkflowInvoker.#ctor(System.Activities.Activity)" /> construtor.</summary>
+        <returns>Um valor do tipo TResult com o resultado da execução da atividade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.Invoke%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um único `Add` atividade que tem dois argumentos de entrada e como ela deriva de `CodeActivity<int>` tiver um bem definido <xref:System.Activities.Activity%601.Result%2A> argumento de saída. Quando o fluxo de trabalho é chamado, o dicionário de `arguments` é passado que contém os valores para cada argumento de entrada, fechado pelo nome do argumento. Quando a chamada para `Invoke` retorna o valor da <xref:System.Activities.Activity%601.Result%2A> argumento de saída é retornado. Este exemplo de código baseia-se do [usando a classe de WorkflowInvoker](~/docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md) exemplo.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#110](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#110)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static TResult Invoke&lt;TResult&gt; (System.Activities.Activity&lt;TResult&gt; workflow, System.Collections.Generic.IDictionary&lt;string,object&gt; inputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TResult Invoke&lt;TResult&gt;(class System.Activities.Activity`1&lt;!!TResult&gt; workflow, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke``1(System.Activities.Activity{``0},System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity&lt;TResult&gt;" />
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo do fluxo de trabalho.</typeparam>
+        <param name="workflow">A definição de fluxo de trabalho do fluxo de trabalho a ser invocado.</param>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <summary>Invoca um fluxo de trabalho de forma síncrona usando a definição de fluxo de trabalho especificada e <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada.</summary>
+        <returns>Um valor do tipo TResult com o resultado da execução da atividade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.Invoke%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que demora mais do que o intervalo de tempo limite especificado para ser concluída, é concluída com êxito se o fluxo de trabalho não estiverem ocioso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um único `Add` atividade que tem dois argumentos de entrada e como ela deriva de `CodeActivity<int>` tiver um bem definido <xref:System.Activities.Activity%601.Result%2A> argumento de saída. Quando o fluxo de trabalho é chamado, o dicionário de `arguments` é passado que contém os valores para cada argumento de entrada, fechado pelo nome do argumento. Quando a chamada para `Invoke` retorna o valor da <xref:System.Activities.Activity%601.Result%2A> argumento de saída é retornado. Este exemplo de código baseia-se do [usando a classe de WorkflowInvoker](~/docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md) exemplo.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#110](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#110)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static TResult Invoke&lt;TResult&gt; (System.Activities.Activity&lt;TResult&gt; workflow, System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TResult Invoke&lt;TResult&gt;(class System.Activities.Activity`1&lt;!!TResult&gt; workflow, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke``1(System.Activities.Activity{``0},System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity&lt;TResult&gt;" />
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo do fluxo de trabalho.</typeparam>
+        <param name="workflow">A definição de fluxo de trabalho do fluxo de trabalho a ser invocado.</param>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <summary>Invoca um fluxo de trabalho usando a definição de fluxo de trabalho especificado, <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada e o intervalo de tempo limite.</summary>
+        <returns>Um valor do tipo TResult com o resultado da execução da atividade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é gerada.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que demora mais do que o intervalo de tempo limite especificado para ser concluída, é concluída com êxito se o fluxo de trabalho não estiverem ocioso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um único `Add` atividade que tem dois argumentos de entrada e como ela deriva de `CodeActivity<int>` tiver um bem definido <xref:System.Activities.Activity%601.Result%2A> argumento de saída. Quando o fluxo de trabalho é chamado, o dicionário de `arguments` é passado que contém os valores para cada argumento de entrada, fechado pelo nome do argumento. Quando a chamada para `Invoke` retorna o valor da <xref:System.Activities.Activity%601.Result%2A> argumento de saída é retornado. Este exemplo de código baseia-se do [usando a classe de WorkflowInvoker](~/docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md) exemplo.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#110](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#110)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static TResult Invoke&lt;TResult&gt; (System.Activities.Activity&lt;TResult&gt; workflow, System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, out System.Collections.Generic.IDictionary&lt;string,object&gt; additionalOutputs, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TResult Invoke&lt;TResult&gt;(class System.Activities.Activity`1&lt;!!TResult&gt; workflow, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, [out] class System.Collections.Generic.IDictionary`2&lt;string, object&gt;&amp; additionalOutputs, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.Invoke``1(System.Activities.Activity{``0},System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IDictionary{System.String,System.Object}@,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="workflow" Type="System.Activities.Activity&lt;TResult&gt;" />
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="additionalOutputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;&amp;" RefType="out" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo do fluxo de trabalho.</typeparam>
+        <param name="workflow">A definição de fluxo de trabalho do fluxo de trabalho a ser invocado.</param>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <param name="additionalOutputs">O dicionário de parâmetros de saída do fluxo de trabalho, chaveado segundo o nome do argumento.</param>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <summary>Invoca um fluxo de trabalho usando a definição de fluxo de trabalho especificado, <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada, <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de saída adicionais e o intervalo de tempo limite.</summary>
+        <returns>Um valor do tipo TResult com o resultado da execução da atividade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que o fluxo de trabalho for concluída, incluindo o tempo ocioso. Todos os execução de fluxo de trabalho é garantida para executar no thread de chamada. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é gerada.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que demora mais do que o intervalo de tempo limite especificado para ser concluída, é concluída com êxito se o fluxo de trabalho não estiverem ocioso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um único `Add` atividade que tem dois argumentos de entrada e como ela deriva de `CodeActivity<int>` tiver um bem definido <xref:System.Activities.Activity%601.Result%2A> argumento de saída. Quando o fluxo de trabalho é chamado, o dicionário de `arguments` é passado que contém os valores para cada argumento de entrada, fechado pelo nome do argumento. Quando a chamada para `Invoke` retorna o valor da <xref:System.Activities.Activity%601.Result%2A> argumento de saída é retornado. Este exemplo de código baseia-se do [usando a classe de WorkflowInvoker](~/docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md) exemplo.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#110](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#110)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="InvokeAsync">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Invoca um fluxo de trabalho usando o padrão de design assíncrono baseado em evento de forma assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ser notificado quando o fluxo de trabalho for concluído, lidar com <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+ Este método invoca um fluxo de trabalho usando o padrão de design assíncrono baseado em evento de forma assíncrona. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral do padrão assíncrono baseado em evento](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invoca um fluxo de trabalho de forma assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ser notificado quando o fluxo de trabalho for concluído, lidar com <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+ Este método invoca um fluxo de trabalho usando o padrão de design assíncrono baseado em evento de forma assíncrona. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral do padrão assíncrono baseado em evento](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando o fluxo de trabalho for concluído essas são recuperados a <xref:System.Activities.WorkflowInvoker.InvokeCompleted> manipulador.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <summary>Invoca um fluxo de trabalho assincronamente usando especificado <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ser notificado quando o fluxo de trabalho for concluído, lidar com <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+ Este método invoca um fluxo de trabalho usando o padrão de design assíncrono baseado em evento de forma assíncrona. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral do padrão assíncrono baseado em evento](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando o fluxo de trabalho for concluído essas são recuperados a <xref:System.Activities.WorkflowInvoker.InvokeCompleted> manipulador.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userState">Um objeto fornecido pelo usuário usado para distinguir específico assíncrona invocar a operação de outros atual assíncrona invocar operações.</param>
+        <summary>Invoca um fluxo de trabalho de forma assíncrona usando o identificador exclusivo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `userState` parâmetro deve ser exclusivo entre todos os em execução <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> operações para a atividade atual. Se o `userState` parâmetro não é exclusivo, uma <xref:System.ArgumentException> é gerada. `userState`é usado para identificar o fluxo de trabalho <xref:System.Activities.WorkflowInvoker.InvokeCompleted>e cancelar o fluxo de trabalho usando <xref:System.Activities.WorkflowInvoker.CancelAsync%2A>.  
+  
+ Para ser notificado quando o fluxo de trabalho for concluído, lidar com <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+ Este método invoca um fluxo de trabalho usando o padrão de design assíncrono baseado em evento de forma assíncrona. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral do padrão assíncrono baseado em evento](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando o fluxo de trabalho for concluído essas são recuperados a <xref:System.Activities.WorkflowInvoker.InvokeCompleted> manipulador.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <summary>Invoca o fluxo de trabalho de forma assíncrona com o intervalo de tempo limite especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ser notificado quando o fluxo de trabalho for concluído, lidar com <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é gerada.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que recebe mais tempo do intervalo de tempo limite especificado para concluir concluída com êxito se o fluxo de trabalho não se torna ocioso.  
+  
+ Este método invoca um fluxo de trabalho usando o padrão de design assíncrono baseado em evento de forma assíncrona. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral do padrão assíncrono baseado em evento](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando o fluxo de trabalho for concluído essas são recuperados a <xref:System.Activities.WorkflowInvoker.InvokeCompleted> manipulador.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.Collections.Generic.IDictionary{System.String,System.Object},System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <param name="userState">Um objeto fornecido pelo usuário usado para distinguir específico assíncrona invocar a operação de outros atual assíncrona invocar operações.</param>
+        <summary>Invoca um fluxo de trabalho assincronamente usando especificado <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada e um identificador exclusivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `userState` parâmetro deve ser exclusivo entre todos os em execução <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> operações para a atividade atual. Se `userState` não é exclusivo, uma <xref:System.ArgumentException> é gerada. `userState`é usado para identificar o fluxo de trabalho <xref:System.Activities.WorkflowInvoker.InvokeCompleted>e cancelar o fluxo de trabalho usando <xref:System.Activities.WorkflowInvoker.CancelAsync%2A>.  
+  
+ Para ser notificado quando o fluxo de trabalho for concluído, lidar com <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Para configurar um intervalo de tempo limite no qual deve concluir o fluxo de trabalho, use um do <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> sobrecargas que usam um <xref:System.TimeSpan>.  
+  
+ Este método invoca um fluxo de trabalho usando o padrão de design assíncrono baseado em evento de forma assíncrona. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral do padrão assíncrono baseado em evento](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando o fluxo de trabalho for concluído essas são recuperados a <xref:System.Activities.WorkflowInvoker.InvokeCompleted> manipulador.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <summary>Invoca um fluxo de trabalho assíncrona com especificado <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada e o intervalo de tempo limite especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ser notificado quando o fluxo de trabalho for concluído, lidar com <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é gerada.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que recebe mais tempo do intervalo de tempo limite especificado para concluir concluída com êxito se o fluxo de trabalho não se torna ocioso.  
+  
+ Este método invoca um fluxo de trabalho usando o padrão de design assíncrono baseado em evento de forma assíncrona. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral do padrão assíncrono baseado em evento](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando o fluxo de trabalho for concluído essas são recuperados a <xref:System.Activities.WorkflowInvoker.InvokeCompleted> manipulador.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (TimeSpan timeout, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(valuetype System.TimeSpan timeout, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.TimeSpan,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <param name="userState">Um objeto fornecido pelo usuário usado para distinguir específico assíncrona invocar a operação de outros atual assíncrona invocar operações.</param>
+        <summary>Invoca um fluxo de trabalho de modo assíncrono com o intervalo de tempo limite especificado e um identificador exclusivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `userState` parâmetro deve ser exclusivo entre todos os em execução <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> operações para a atividade atual. Se `userState` não é exclusivo, uma <xref:System.ArgumentException> é gerada. `userState`é usado para identificar o fluxo de trabalho <xref:System.Activities.WorkflowInvoker.InvokeCompleted>e cancelar o fluxo de trabalho usando <xref:System.Activities.WorkflowInvoker.CancelAsync%2A>.  
+  
+ Para ser notificado quando o fluxo de trabalho for concluído, lidar com <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é gerada.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que recebe mais tempo do intervalo de tempo limite especificado para concluir concluída com êxito se o fluxo de trabalho não se torna ocioso.  
+  
+ Este método invoca um fluxo de trabalho usando o padrão de design assíncrono baseado em evento de forma assíncrona. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral do padrão assíncrono baseado em evento](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando o fluxo de trabalho for concluído essas são recuperados a <xref:System.Activities.WorkflowInvoker.InvokeCompleted> manipulador.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeAsync">
+      <MemberSignature Language="C#" Value="public void InvokeAsync (System.Collections.Generic.IDictionary&lt;string,object&gt; inputs, TimeSpan timeout, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvokeAsync(class System.Collections.Generic.IDictionary`2&lt;string, object&gt; inputs, valuetype System.TimeSpan timeout, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowInvoker.InvokeAsync(System.Collections.Generic.IDictionary{System.String,System.Object},System.TimeSpan,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputs" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="inputs">O dicionário de parâmetros de entrada para o fluxo de trabalho, inseridos por nome de argumento.</param>
+        <param name="timeout">O intervalo no qual o fluxo de trabalho deve ser concluído antes de ele ser anulado e um <see cref="T:System.TimeoutException" /> ser gerado.</param>
+        <param name="userState">Um objeto fornecido pelo usuário usado para distinguir específico assíncrona invocar a operação de outros atual assíncrona invocar operações.</param>
+        <summary>Invoca um fluxo de trabalho assíncrona com especificado <see cref="T:System.Collections.Generic.IDictionary`2" /> de parâmetros de entrada, o intervalo de tempo limite especificado e um identificador exclusivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `userState` parâmetro deve ser exclusivo entre todos os em execução <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> operações para a atividade atual. Se `userState` não é exclusivo, uma <xref:System.ArgumentException> é gerada. `userState`é usado para identificar o fluxo de trabalho <xref:System.Activities.WorkflowInvoker.InvokeCompleted>e cancelar o fluxo de trabalho usando <xref:System.Activities.WorkflowInvoker.CancelAsync%2A>.  
+  
+ Para ser notificado quando o fluxo de trabalho for concluído, lidar com <xref:System.Activities.WorkflowInvoker.InvokeCompleted>. Se o fluxo de trabalho não for concluída dentro do intervalo de tempo limite especificado o fluxo de trabalho foi anulado e um <xref:System.TimeoutException> é gerada.  
+  
+> [!NOTE]
+>  <xref:System.TimeoutException> é acionada somente se o intervalo de tempo limite decorre e fluxo de trabalho se torna ocioso durante a execução. Um fluxo de trabalho que recebe mais tempo do intervalo de tempo limite especificado para concluir concluída com êxito se o fluxo de trabalho não se torna ocioso.  
+  
+ Este método invoca um fluxo de trabalho usando o padrão de design assíncrono baseado em evento de forma assíncrona. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Visão geral do padrão assíncrono baseado em evento](http://go.microsoft.com/fwlink/?LinkId=141765).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando o fluxo de trabalho for concluído essas são recuperados a <xref:System.Activities.WorkflowInvoker.InvokeCompleted> manipulador.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Activities.InvokeCompletedEventArgs&gt; InvokeCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Activities.InvokeCompletedEventArgs&gt; InvokeCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.WorkflowInvoker.InvokeCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Activities.InvokeCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o fluxo de trabalho é invocado por um do <see cref="Overload:System.Activities.WorkflowInvoker.InvokeAsync" /> sobrecargas é concluída ou cancelada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lidar com essa opção para determinar se um fluxo de trabalho chamada com uma da <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> sobrecargas foi concluídas com êxito e recuperar os argumentos de saída do fluxo de trabalho concluído.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir invoca um fluxo de trabalho consiste em um `LongRunningDiceRoll` atividade. A atividade de `LongRunningDiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando o fluxo de trabalho for concluído essas são recuperados a <xref:System.Activities.WorkflowInvoker.InvokeCompleted> manipulador.  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#131](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#131)]  
+  
+ [!code-csharp[CFX_WorkflowInvokerExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

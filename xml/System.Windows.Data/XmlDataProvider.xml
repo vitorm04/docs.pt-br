@@ -1,0 +1,503 @@
+<Type Name="XmlDataProvider" FullName="System.Windows.Data.XmlDataProvider">
+  <TypeSignature Language="C#" Value="public class XmlDataProvider : System.Windows.Data.DataSourceProvider, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDataProvider extends System.Windows.Data.DataSourceProvider implements class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.XmlDataProvider" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Data.DataSourceProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("XmlSerializer")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite declarativo acesso a dados XML para associação de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Em uma área restrita de confiança parcial, <xref:System.Windows.Data.XmlDataProvider> falha quando não tem permissões para acessar os dados fornecidos. Para obter mais informações sobre a segurança de confiança parcial, consulte [segurança de confiança parcial do WPF](~/docs/framework/wpf/wpf-partial-trust-security.md).  
+  
+ <xref:System.Windows.Data.XmlDataProvider>expõe as seguintes maneiras de acessar [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] dados.  
+  
+-   Você pode inserir embutido [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] dados usando o <xref:System.Windows.Data.XmlDataProvider> classe.  
+  
+-   Você pode definir o <xref:System.Windows.Data.XmlDataProvider.Source%2A> propriedade para o <xref:System.Uri> de um [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] arquivo de dados.  
+  
+-   Você pode definir o <xref:System.Windows.Data.XmlDataProvider.Document%2A> propriedade para um <xref:System.Xml.XmlDocument>.  
+  
+ <xref:System.Windows.Data.XmlDataProvider>executa uma atualização completa de todas as associações quando um <xref:System.Xml.XmlDocument.NodeChanged?displayProperty=nameWithType> evento ocorre. Não há nenhum otimizações para nós específicos.  
+  
+ O <xref:System.Windows.Data.XmlDataProvider.IsAsynchronous%2A?displayProperty=nameWithType> está definida como `true` por padrão, o que significa que o <xref:System.Windows.Data.XmlDataProvider> recupera os dados e gera a coleção de [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] nós de forma assíncrona por padrão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDataProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlDataProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Data.XmlDataProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="protected virtual Uri BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlDataProvider.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <value>O URI de base.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginQuery">
+      <MemberSignature Language="C#" Value="protected override void BeginQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlDataProvider.BeginQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Prepara o carregamento do embutido [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] ou externo [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] arquivo para produzir uma coleção de [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] nós.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A execução for imediata ou em um thread em segundo plano, com base no valor da <xref:System.Windows.Data.XmlDataProvider.IsAsynchronous%2A> propriedade.  
+  
+ Este método é chamado pelo <xref:System.Windows.Data.DataSourceProvider.InitialLoad%2A> e <xref:System.Windows.Data.DataSourceProvider.Refresh%2A> métodos da classe base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDocument Document { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDocument Document" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlDataProvider.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Xml.XmlDocument" /> a ser usado como a origem da associação.</summary>
+        <value>O <see cref="T:System.Xml.XmlDocument" /> a ser usado como a origem da associação. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Data.XmlDataProvider>expõe as seguintes maneiras de acessar [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] dados.  
+  
+-   Você pode inserir embutido [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] dados usando o <xref:System.Windows.Data.XmlDataProvider> classe.  
+  
+-   Você pode definir o <xref:System.Windows.Data.XmlDataProvider.Source%2A> propriedade para o <xref:System.Uri> de um [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] arquivo de dados.  
+  
+-   Você pode definir essa propriedade um <xref:System.Xml.XmlDocument>.  
+  
+ <xref:System.Windows.Data.XmlDataProvider>executa uma atualização completa de todas as associações em quando um <xref:System.Xml.XmlDocument.NodeChanged?displayProperty=nameWithType> evento ocorre. Não há nenhum otimizações para nós específicos.  
+  
+ Se o <xref:System.Windows.Data.XmlDataProvider.Source%2A> propriedade é definido, em qualquer linha [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] dados serão descartados. Se o <xref:System.Windows.Data.XmlDataProvider.Document%2A> propriedade for definida, o <xref:System.Windows.Data.XmlDataProvider.Source%2A> propriedade está desmarcada e qualquer embutido [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] dados serão descartados.  
+  
+ Definir as propriedades a seguir implicitamente fará isso <xref:System.Windows.Data.XmlDataProvider> objeto para atualizar: <xref:System.Windows.Data.XmlDataProvider.Source%2A>, <xref:System.Windows.Data.XmlDataProvider.Document%2A>, <xref:System.Windows.Data.XmlDataProvider.XmlNamespaceManager%2A>, e <xref:System.Windows.Data.XmlDataProvider.XPath%2A>. Ao alterar as propriedades de fazendo com que a atualização várias, o uso de <xref:System.Windows.Data.DataSourceProvider.DeferRefresh%2A> é recomendado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="protected override void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlDataProvider.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica que a inicialização deste elemento foi concluída; Isso faz com que um <see cref="M:System.Windows.Data.DataSourceProvider.Refresh" /> se nenhum outro <see cref="M:System.Windows.Data.DataSourceProvider.DeferRefresh" /> está pendente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsynchronous">
+      <MemberSignature Language="C#" Value="public bool IsAsynchronous { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAsynchronous" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlDataProvider.IsAsynchronous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a criação do conjunto de nó será executada em um thread de trabalho ou no contexto de ativo.</summary>
+        <value>
+          <see langword="true" />para executar a criação do conjunto de nós em um thread de trabalho; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSource">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlDataProvider.ShouldSerializeSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Data.XmlDataProvider.Source" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `ShouldSerialize` método é fornecido, pois o <xref:System.Windows.Data.XmlDataProvider.Source%2A> propriedade não tem um valor padrão simples. Este método indica se a propriedade foi alterado do valor padrão. Normalmente você invoca esse método se você estiver desenvolvendo ou um designer para o <xref:System.Windows.Data.XmlDataProvider> ou desenvolver seu próprio controle incorporando o <xref:System.Windows.Data.XmlDataProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeXmlSerializer">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeXmlSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeXmlSerializer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlDataProvider.ShouldSerializeXmlSerializer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Data.XmlDataProvider.XmlSerializer" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `ShouldSerialize` método é fornecido, pois o <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A> propriedade não tem um valor padrão simples. Este método indica se a propriedade foi alterado do valor padrão. Normalmente você invoca esse método se você estiver desenvolvendo ou um designer para o <xref:System.Windows.Data.XmlDataProvider> ou desenvolver seu próprio controle incorporando o <xref:System.Windows.Data.XmlDataProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeXPath">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeXPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeXPath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.XmlDataProvider.ShouldSerializeXPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Data.XmlDataProvider.XPath" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `ShouldSerialize` método é fornecido, pois o <xref:System.Windows.Data.XmlDataProvider.XPath%2A> propriedade não tem um valor padrão simples. Este método indica se a propriedade foi alterado do valor padrão. Normalmente você invoca esse método se você estiver desenvolvendo ou um designer para o <xref:System.Windows.Data.XmlDataProvider> ou desenvolver seu próprio controle incorporando o <xref:System.Windows.Data.XmlDataProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlDataProvider.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Uri" /> do arquivo de dados [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] a usar como a origem da associação.</summary>
+        <value>O <see cref="T:System.Uri" /> do arquivo de dados [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] a usar como a origem da associação. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Data.XmlDataProvider>expõe as seguintes maneiras de acessar [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] dados.  
+  
+-   Você pode inserir embutido [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] dados usando o <xref:System.Windows.Data.XmlDataProvider> classe.  
+  
+-   Você pode definir essa propriedade o <xref:System.Uri> de um [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] arquivo de dados.  
+  
+-   Você pode definir o <xref:System.Windows.Data.XmlDataProvider.Document%2A> propriedade para um <xref:System.Xml.XmlDocument>.  
+  
+ Se o <xref:System.Windows.Data.XmlDataProvider.Source%2A> propriedade é definido, em qualquer linha [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] dados serão descartados. Se o <xref:System.Windows.Data.XmlDataProvider.Document%2A> propriedade for definida, o <xref:System.Windows.Data.XmlDataProvider.Source%2A> propriedade está desmarcada e qualquer embutido [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] dados serão descartados.  
+  
+ Definir as propriedades a seguir implicitamente fará isso <xref:System.Windows.Data.XmlDataProvider> objeto para atualizar: <xref:System.Windows.Data.XmlDataProvider.Source%2A>, <xref:System.Windows.Data.XmlDataProvider.Document%2A>, <xref:System.Windows.Data.XmlDataProvider.XmlNamespaceManager%2A>, e <xref:System.Windows.Data.XmlDataProvider.XPath%2A>. Ao alterar as propriedades de fazendo com que a atualização várias, o uso de <xref:System.Windows.Data.DataSourceProvider.DeferRefresh%2A> é recomendado.  
+  
+   
+  
+## Examples  
+ Em alguns aplicativos, inserindo o [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] embutido dentro de [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] página pode ser inconveniente porque o conteúdo exato dos dados deve ser conhecido em tempo de compilação. Portanto, você pode obter os dados de um externo [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] arquivo, como no exemplo a seguir.  
+  
+ [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
+  
+ Se o [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] dados residem em um controle remoto [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] arquivo, você define o acesso aos dados, atribuindo um apropriado [!INCLUDE[TLA2#tla_url](~/includes/tla2sharptla-url-md.md)] para o <xref:System.Windows.Data.XmlDataProvider.Source%2A> atributo da seguinte maneira:  
+  
+```  
+<XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IUriContext.BaseUri">
+      <MemberSignature Language="C#" Value="Uri System.Windows.Markup.IUriContext.BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri System.Windows.Markup.IUriContext.BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlDataProvider.System#Windows#Markup#IUriContext#BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <value>O URI de base.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNamespaceManager">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNamespaceManager XmlNamespaceManager { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNamespaceManager XmlNamespaceManager" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlDataProvider.XmlNamespaceManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNamespaceManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Xml.XmlNamespaceManager" /> usada para executar <see cref="P:System.Windows.Data.XmlDataProvider.XPath" /> consultas.</summary>
+        <value>O <see cref="T:System.Xml.XmlNamespaceManager" /> usada para executar <see cref="P:System.Windows.Data.XmlDataProvider.XPath" /> consultas. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir as propriedades a seguir implicitamente fará isso <xref:System.Windows.Data.XmlDataProvider> objeto para atualizar: <xref:System.Windows.Data.XmlDataProvider.Source%2A>, <xref:System.Windows.Data.XmlDataProvider.Document%2A>, <xref:System.Windows.Data.XmlDataProvider.XmlNamespaceManager%2A>, e <xref:System.Windows.Data.XmlDataProvider.XPath%2A>. Ao alterar as propriedades de fazendo com que a atualização várias, o uso de <xref:System.Windows.Data.DataSourceProvider.DeferRefresh%2A> é recomendado.  
+  
+<a name="xamlAttributeUsage_XmlNamespaceManager"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object XmlNamespaceManager="mappingCollection"/>  
+```  
+  
+<a name="xamlValues_XmlNamespaceManager"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *mappingCollection*  
+ Um <xref:System.Windows.Data.XmlNamespaceMappingCollection>. Para se referir a um <xref:System.Windows.Data.XmlNamespaceMappingCollection>, use o [extensões de marcação e WPF XAML](~/docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar essa propriedade.  
+  
+ [!code-xaml[XmlnsBindSnippet#XmlNamespaceMapping](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBindSnippet/CS/Window1.xaml#xmlnamespacemapping)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSerializer">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.IXmlSerializable XmlSerializer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.IXmlSerializable XmlSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlDataProvider.XmlSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.IXmlSerializable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o embutido [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] conteúdo.</summary>
+        <value>Embutido [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] conteúdo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada pelo analisador para compilar o conteúdo literal do embedded [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] ilha de dados.  
+  
+<a name="xamlPropertyElementUsage_XmlSerializer"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<XmlDataProvider>  
+  <XmlDataProvider.XmlSerializer>  
+    <x:XData>  
+       <elementDataRoot>  
+          <elementData/>  
+       <elementDataRoot>  
+    </x:XData>  
+  </XmlDataProvider.XmlSerializer>  
+</XmlDataProvider>  
+--or--  
+<XmlDataProvider>  
+    <x:XData>  
+       <elementDataRoot>  
+          <elementData/>  
+       <elementDataRoot>  
+    </x:XData>  
+</XmlDataProvider>  
+```  
+  
+<a name="xamlValues_XmlSerializer"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *elementDataRoot*  
+ Necessário. O elemento raiz único da ilha de dados incluídos. Sem uma raiz única, o `x:XData` é inválido como uma fonte de dados.  
+  
+ *elementData*  
+ Opcional. XML que representa os dados. Qualquer número de elementos pode ser contido como dados de elemento, elementos aninhados podem estar contidos em outros elementos e assim por diante, sujeito às regras gerais do XML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="public string XPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.XmlDataProvider.XPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DesignerSerializationOptions(System.Windows.Markup.DesignerSerializationOptions.SerializeAsAttribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a consulta <see langword="XPath" /> usada para gerar a coleção de dados.</summary>
+        <value>A consulta <see langword="XPath" /> usada para gerar a coleção de dados. O padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.XmlNode.SelectNodes%2A?displayProperty=nameWithType> método trata o `XPath` expressões do <xref:System.Windows.Data.Binding.XPath%2A> propriedade. `XPath`Não há suporte para funções. Para `XPath` informações de expressão, consulte o <xref:System.Xml.XmlNode.SelectNodes%2A> documentação e exemplos fornecidos na seção de exemplo.  
+  
+ Definir as propriedades a seguir implicitamente fará isso <xref:System.Windows.Data.XmlDataProvider> objeto para atualizar: <xref:System.Windows.Data.XmlDataProvider.Source%2A>, <xref:System.Windows.Data.XmlDataProvider.Document%2A>, <xref:System.Windows.Data.XmlDataProvider.XmlNamespaceManager%2A>, e <xref:System.Windows.Data.XmlDataProvider.XPath%2A>. Ao alterar as propriedades de fazendo com que a atualização várias, o uso de <xref:System.Windows.Data.DataSourceProvider.DeferRefresh%2A> é recomendado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

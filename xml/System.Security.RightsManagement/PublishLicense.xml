@@ -1,0 +1,271 @@
+<Type Name="PublishLicense" FullName="System.Security.RightsManagement.PublishLicense">
+  <TypeSignature Language="C#" Value="public class PublishLicense" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PublishLicense extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.RightsManagement.PublishLicense" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical(System.Security.SecurityCriticalScope.Everything)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um assinado direitos gerenciados a licença de publicação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.RightsManagement.PublishLicense>Define os dados de segurança sobre direitos, os usuários e outras informações relacionadas à segurança.  A licença define como um usuário específico em um computador específico pode usar conteúdo gerenciado de direitos especificado.  
+  
+ O processo de publicação começa com o autor do documento, que define as informações de direitos em um <xref:System.Security.RightsManagement.UnsignedPublishLicense>.  Em seguida, o autor cria um <xref:System.Security.RightsManagement.PublishLicense> chamando o <xref:System.Security.RightsManagement.UnsignedPublishLicense.Sign%2A> método o <xref:System.Security.RightsManagement.UnsignedPublishLicense>.  O formato serializado assinado do <xref:System.Security.RightsManagement.PublishLicense> , em seguida, podem ser fornecidos para os usuários finais que pode ser usado para adquirir um <xref:System.Security.RightsManagement.UseLicense> chamando o <xref:System.Security.RightsManagement.PublishLicense.AcquireUseLicense%2A> método o <xref:System.Security.RightsManagement.PublishLicense>.  Retornado <xref:System.Security.RightsManagement.UseLicense> , em seguida, permite que o aplicativo cliente exercer os direitos que foram concedidos ao usuário.  
+  
+ Assim como com outros <xref:System.Security.RightsManagement> tipos, <xref:System.Security.RightsManagement.PublishLicense> só é útil em aplicativos de confiança total.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como inicializar um <xref:System.Security.RightsManagement.PublishLicense> usando o <xref:System.Security.RightsManagement.UnsignedPublishLicense.Sign%2A> método.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubencrypt)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubencrypt)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PublishLicense (string signedPublishLicense);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string signedPublishLicense) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.PublishLicense.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signedPublishLicense" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="signedPublishLicense">Licença de publicação de um assinado e serializado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.RightsManagement.PublishLicense" /> classe de um serializado e assinado <see cref="T:System.Security.RightsManagement.PublishLicense" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="signedPublishLicense" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.RightsManagement.RightsManagementException">A licença é inválida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireUseLicense">
+      <MemberSignature Language="C#" Value="public System.Security.RightsManagement.UseLicense AcquireUseLicense (System.Security.RightsManagement.SecureEnvironment secureEnvironment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.RightsManagement.UseLicense AcquireUseLicense(class System.Security.RightsManagement.SecureEnvironment secureEnvironment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.PublishLicense.AcquireUseLicense(System.Security.RightsManagement.SecureEnvironment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.UseLicense</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="secureEnvironment" Type="System.Security.RightsManagement.SecureEnvironment" />
+      </Parameters>
+      <Docs>
+        <param name="secureEnvironment">Um ambiente seguro para ativação de licença e associação.</param>
+        <summary>Tenta adquirir um <see cref="T:System.Security.RightsManagement.UseLicense" /> para um usuário ou grupo de usuários em um especificado <see cref="T:System.Security.RightsManagement.SecureEnvironment" />.</summary>
+        <returns>O <see cref="T:System.Security.RightsManagement.UseLicense" /> para um usuário ou grupo de usuário especificado na <paramref name="secureEnvironment" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="secureEnvironment" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.RightsManagement.RightsManagementException">Falha de autenticação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquireUseLicenseNoUI">
+      <MemberSignature Language="C#" Value="public System.Security.RightsManagement.UseLicense AcquireUseLicenseNoUI (System.Security.RightsManagement.SecureEnvironment secureEnvironment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.RightsManagement.UseLicense AcquireUseLicenseNoUI(class System.Security.RightsManagement.SecureEnvironment secureEnvironment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.PublishLicense.AcquireUseLicenseNoUI(System.Security.RightsManagement.SecureEnvironment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.UseLicense</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="secureEnvironment" Type="System.Security.RightsManagement.SecureEnvironment" />
+      </Parameters>
+      <Docs>
+        <param name="secureEnvironment">Um ambiente seguro para ativação de licença e associação.</param>
+        <summary>Tenta adquirir um <see cref="T:System.Security.RightsManagement.UseLicense" /> para um usuário ou grupo de usuários em um especificado <see cref="T:System.Security.RightsManagement.SecureEnvironment" />.</summary>
+        <returns>O <see cref="T:System.Security.RightsManagement.UseLicense" /> para um usuário ou grupo de usuário especificado na <paramref name="secureEnvironment" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.RightsManagement.PublishLicense.AcquireUseLicenseNoUI%2A> método suprime a caixa de diálogo de autenticação de rede do Windows. Se a solicitação de licença é negada porque o usuário não tem permissão, <xref:System.Security.RightsManagement.PublishLicense.AcquireUseLicenseNoUI%2A> impede a exibição da caixa de diálogo de autenticação de rede. Use aquisição silenciosa durante a tentativa de obter licenças em uma tarefa em segundo plano ou na interface de usuário não pode exibir caixas de diálogo confuso.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="secureEnvironment" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.RightsManagement.RightsManagementException">Falha de autenticação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentId">
+      <MemberSignature Language="C#" Value="public Guid ContentId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ContentId" />
+      <MemberSignature Language="DocId" Value="P:System.Security.RightsManagement.PublishLicense.ContentId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de conteúdo criado pelo publicador.</summary>
+        <value>O identificador de conteúdo criado pelo publicador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Editores de criar um <xref:System.Security.RightsManagement.UnsignedPublishLicense.ContentId%2A> para identificar o conteúdo protegido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptUnsignedPublishLicense">
+      <MemberSignature Language="C#" Value="public System.Security.RightsManagement.UnsignedPublishLicense DecryptUnsignedPublishLicense (System.Security.RightsManagement.CryptoProvider cryptoProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.RightsManagement.UnsignedPublishLicense DecryptUnsignedPublishLicense(class System.Security.RightsManagement.CryptoProvider cryptoProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.PublishLicense.DecryptUnsignedPublishLicense(System.Security.RightsManagement.CryptoProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.RightsManagement.UnsignedPublishLicense</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cryptoProvider" Type="System.Security.RightsManagement.CryptoProvider" />
+      </Parameters>
+      <Docs>
+        <param name="cryptoProvider">O serviço de gerenciamento de direitos para usar para descriptografar a licença.</param>
+        <summary>Retorna um descriptografado <see cref="T:System.Security.RightsManagement.UnsignedPublishLicense" /> versão assinado <see cref="T:System.Security.RightsManagement.PublishLicense" />.</summary>
+        <returns>Uma versão descriptografada, não assinada da licença.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.RightsManagement.PublishLicense.DecryptUnsignedPublishLicense%2A> método permite que o proprietário de licença e os usuários que foram concedidos <xref:System.Security.RightsManagement.ContentRight.ViewRightsData> para extrair as informações originais que foi criptografado quando o <xref:System.Security.RightsManagement.PublishLicense> foi criado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="cryptoProvider" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferralInfoName">
+      <MemberSignature Language="C#" Value="public string ReferralInfoName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReferralInfoName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.RightsManagement.PublishLicense.ReferralInfoName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de contato para o autor ou Editor do conteúdo.</summary>
+        <value>O nome de contato para o autor ou Editor do conteúdo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres retornada pelo <xref:System.Security.RightsManagement.PublishLicense.ReferralInfoName%2A> propriedade não é criptografada e podem ser acessada, mesmo quando o usuário ainda não tem um <xref:System.Security.RightsManagement.UseLicense>.  A cadeia de caracteres retornada permite que os usuários para entrar em contato com o publicador para solicitar um <xref:System.Security.RightsManagement.UseLicense>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferralInfoUri">
+      <MemberSignature Language="C#" Value="public Uri ReferralInfoUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ReferralInfoUri" />
+      <MemberSignature Language="DocId" Value="P:System.Security.RightsManagement.PublishLicense.ReferralInfoUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contato [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] para o autor ou Editor do conteúdo.</summary>
+        <value>O contato [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] para o autor ou Editor do conteúdo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres retornada pelo <xref:System.Security.RightsManagement.PublishLicense.ReferralInfoUri%2A> propriedade não é criptografada e podem ser acessada, mesmo quando o usuário ainda não tem um <xref:System.Security.RightsManagement.UseLicense>.  A cadeia de caracteres retornada permite que os usuários para entrar em contato com o publicador para solicitar um <xref:System.Security.RightsManagement.UseLicense>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.RightsManagement.PublishLicense.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o serializado [!INCLUDE[TLA2#tla_xrml](~/includes/tla2sharptla-xrml-md.md)] cadeia de caracteres que foi usada para criar esta licença.</summary>
+        <returns>O serializado [!INCLUDE[TLA#tla_xrml](~/includes/tlasharptla-xrml-md.md)] cadeia de caracteres que foi usada para criar esta licença.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseLicenseAcquisitionUrl">
+      <MemberSignature Language="C#" Value="public Uri UseLicenseAcquisitionUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri UseLicenseAcquisitionUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Security.RightsManagement.PublishLicense.UseLicenseAcquisitionUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] a ser usado para adquirir um <see cref="T:System.Security.RightsManagement.UseLicense" />.</summary>
+        <value>O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] a ser usado para adquirir um <see cref="T:System.Security.RightsManagement.UseLicense" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.RightsManagement.PublishLicense.UseLicenseAcquisitionUrl%2A> propriedade é usada pelo <xref:System.Security.RightsManagement.PublishLicense.AcquireUseLicense%2A> método quando um usuário adquire um <xref:System.Security.RightsManagement.UseLicense>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

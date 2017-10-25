@@ -1,0 +1,450 @@
+<Type Name="EnumerableRowCollectionExtensions" FullName="System.Data.EnumerableRowCollectionExtensions">
+  <TypeSignature Language="C#" Value="public static class EnumerableRowCollectionExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit EnumerableRowCollectionExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.EnumerableRowCollectionExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém os métodos de extensão para as classes de coleção de linha de dados. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.EnumerableRowCollectionExtensions> classe contém métodos de extensão estático que definem o <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A> método e operações de consulta padrão para o <xref:System.Data.EnumerableRowCollection%601> e <xref:System.Data.OrderedEnumerableRowCollection%601> classes.  
+  
+ Esta classe não pode ser herdada e não pode ser instanciado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cast&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.EnumerableRowCollection&lt;TResult&gt; Cast&lt;TResult&gt; (this System.Data.EnumerableRowCollection source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.EnumerableRowCollection`1&lt;!!TResult&gt; Cast&lt;TResult&gt;(class System.Data.EnumerableRowCollection source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.Cast``1(System.Data.EnumerableRowCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EnumerableRowCollection&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.EnumerableRowCollection" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo para converter os elementos de origem para.</typeparam>
+        <param name="source">O <see cref="T:System.Data.EnumerableRowCollection" /> que contém os elementos a serem convertidos.</param>
+        <summary>Converte os elementos de um <see cref="T:System.Data.EnumerableRowCollection" /> para o tipo especificado. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Data.EnumerableRowCollection" /> que contém cada elemento da sequência de origem convertido para o tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado usando a execução adiada. O imediata valor de retorno é um objeto que armazena todas as informações necessárias para executar a ação. A consulta representada por esse método não é executada até que o objeto é enumerado ou chamando seu `GetEnumerator` método diretamente ou usando `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">Um elemento na sequência não pode ser convertido para o tipo <paramref name="TResult" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderBy&lt;TRow,TKey&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; OrderBy&lt;TRow,TKey&gt; (this System.Data.EnumerableRowCollection&lt;TRow&gt; source, Func&lt;TRow,TKey&gt; keySelector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; OrderBy&lt;TRow, TKey&gt;(class System.Data.EnumerableRowCollection`1&lt;!!TRow&gt; source, class System.Func`2&lt;!!TRow, !!TKey&gt; keySelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.OrderBy``2(System.Data.EnumerableRowCollection{``0},System.Func{``0,``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TRow" />
+        <TypeParameter Name="TKey" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.EnumerableRowCollection&lt;TRow&gt;" RefType="this" />
+        <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TRow">O tipo dos elementos de linha no <c>fonte</c>, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">O tipo de chave retornada pelo <c>keySelector</c>.</typeparam>
+        <param name="source">Um <see cref="T:System.Data.EnumerableRowCollection" /> que contém o <see cref="T:System.Data.DataRow" /> elementos sejam ordenados.</param>
+        <param name="keySelector">Uma função para extrair uma chave de um elemento.</param>
+        <summary>Classifica as linhas de uma <see cref="T:System.Data.EnumerableRowCollection" /> em crescente de ordem de acordo com a chave especificada. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> cujos elementos são classificados pela chave especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado usando a execução adiada. O imediata valor de retorno é um objeto que armazena todas as informações necessárias para executar a ação. A consulta representada por esse método não é executada até que o objeto é enumerado ou chamando seu `GetEnumerator` método diretamente ou usando `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderBy&lt;TRow,TKey&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; OrderBy&lt;TRow,TKey&gt; (this System.Data.EnumerableRowCollection&lt;TRow&gt; source, Func&lt;TRow,TKey&gt; keySelector, System.Collections.Generic.IComparer&lt;TKey&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; OrderBy&lt;TRow, TKey&gt;(class System.Data.EnumerableRowCollection`1&lt;!!TRow&gt; source, class System.Func`2&lt;!!TRow, !!TKey&gt; keySelector, class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.OrderBy``2(System.Data.EnumerableRowCollection{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TRow" />
+        <TypeParameter Name="TKey" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.EnumerableRowCollection&lt;TRow&gt;" RefType="this" />
+        <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TRow">O tipo dos elementos de linha no <c>fonte</c>, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">O tipo de chave retornada pelo <c>keySelector</c>.</typeparam>
+        <param name="source">Um <see cref="T:System.Data.EnumerableRowCollection" /> que contém o <see cref="T:System.Data.DataRow" /> elementos sejam ordenados.</param>
+        <param name="keySelector">Uma função para extrair uma chave de um elemento.</param>
+        <param name="comparer">Um <see cref="T:System.Collections.Generic.IComparer`1" /> para comparar chaves.</param>
+        <summary>Classifica as linhas de uma <see cref="T:System.Data.EnumerableRowCollection" /> em ordem de acordo com a chave especificada e o comparador crescente. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> cujos elementos são classificados pela chave especificada e comparador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado usando a execução adiada. O imediata valor de retorno é um objeto que armazena todas as informações necessárias para executar a ação. A consulta representada por esse método não é executada até que o objeto é enumerado ou chamando seu `GetEnumerator` método diretamente ou usando `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderByDescending&lt;TRow,TKey&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; OrderByDescending&lt;TRow,TKey&gt; (this System.Data.EnumerableRowCollection&lt;TRow&gt; source, Func&lt;TRow,TKey&gt; keySelector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; OrderByDescending&lt;TRow, TKey&gt;(class System.Data.EnumerableRowCollection`1&lt;!!TRow&gt; source, class System.Func`2&lt;!!TRow, !!TKey&gt; keySelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.OrderByDescending``2(System.Data.EnumerableRowCollection{``0},System.Func{``0,``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TRow" />
+        <TypeParameter Name="TKey" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.EnumerableRowCollection&lt;TRow&gt;" RefType="this" />
+        <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TRow">O tipo dos elementos de linha no <c>fonte</c>, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">O tipo de chave retornada pelo <c>keySelector</c>.</typeparam>
+        <param name="source">Um <see cref="T:System.Data.EnumerableRowCollection" /> que contém o <see cref="T:System.Data.DataRow" /> elementos sejam ordenados.</param>
+        <param name="keySelector">Uma função para extrair uma chave de um elemento.</param>
+        <summary>Classifica as linhas de uma <see cref="T:System.Data.EnumerableRowCollection" /> em ordem de acordo com a chave especificada decrescente. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> cujos elementos são classificados pela chave especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado usando a execução adiada. O imediata valor de retorno é um objeto que armazena todas as informações necessárias para executar a ação. A consulta representada por esse método não é executada até que o objeto é enumerado ou chamando seu `GetEnumerator` método diretamente ou usando `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderByDescending&lt;TRow,TKey&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; OrderByDescending&lt;TRow,TKey&gt; (this System.Data.EnumerableRowCollection&lt;TRow&gt; source, Func&lt;TRow,TKey&gt; keySelector, System.Collections.Generic.IComparer&lt;TKey&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; OrderByDescending&lt;TRow, TKey&gt;(class System.Data.EnumerableRowCollection`1&lt;!!TRow&gt; source, class System.Func`2&lt;!!TRow, !!TKey&gt; keySelector, class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.OrderByDescending``2(System.Data.EnumerableRowCollection{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TRow" />
+        <TypeParameter Name="TKey" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.EnumerableRowCollection&lt;TRow&gt;" RefType="this" />
+        <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TRow">O tipo dos elementos de linha no <c>fonte</c>, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">O tipo de chave retornada pelo <c>keySelector</c>.</typeparam>
+        <param name="source">Um <see cref="T:System.Data.EnumerableRowCollection" /> que contém o <see cref="T:System.Data.DataRow" /> elementos sejam ordenados.</param>
+        <param name="keySelector">Uma função para extrair uma chave de um elemento.</param>
+        <param name="comparer">Um <see cref="T:System.Collections.Generic.IComparer`1" /> para comparar chaves.</param>
+        <summary>Classifica as linhas de uma <see cref="T:System.Data.EnumerableRowCollection" /> em ordem de acordo com a chave especificada e o comparador decrescente. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> cujos elementos são classificados pela chave especificada e comparador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado usando a execução adiada. O imediata valor de retorno é um objeto que armazena todas as informações necessárias para executar a ação. A consulta representada por esse método não é executada até que o objeto é enumerado ou chamando seu `GetEnumerator` método diretamente ou usando `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select&lt;TRow,S&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.EnumerableRowCollection&lt;S&gt; Select&lt;TRow,S&gt; (this System.Data.EnumerableRowCollection&lt;TRow&gt; source, Func&lt;TRow,S&gt; selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.EnumerableRowCollection`1&lt;!!S&gt; Select&lt;TRow, S&gt;(class System.Data.EnumerableRowCollection`1&lt;!!TRow&gt; source, class System.Func`2&lt;!!TRow, !!S&gt; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.Select``2(System.Data.EnumerableRowCollection{``0},System.Func{``0,``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EnumerableRowCollection&lt;S&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TRow" />
+        <TypeParameter Name="S" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.EnumerableRowCollection&lt;TRow&gt;" RefType="this" />
+        <Parameter Name="selector" Type="System.Func&lt;TRow,S&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TRow">O tipo dos elementos de linha no <c>fonte</c>, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="S">O tipo que <c>TRow</c> será transformado em.</typeparam>
+        <param name="source">Um <see cref="T:System.Data.EnumerableRowCollection`1" /> que contém o <see cref="T:System.Data.DataRow" /> elementos para invocar uma transformação funcionam.</param>
+        <param name="selector">Uma função de transformação a ser aplicada a cada elemento.</param>
+        <summary>Projeta cada elemento de um <see cref="T:System.Data.EnumerableRowCollection`1" /> em um novo formulário. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Data.EnumerableRowCollection`1" /> cujos elementos são o resultado da invocação da função de transformação em cada elemento de <paramref name="source" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado usando a execução adiada. O imediata valor de retorno é um objeto que armazena todas as informações necessárias para executar a ação. A consulta representada por esse método não é executada até que o objeto é enumerado ou chamando seu `GetEnumerator` método diretamente ou usando `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ Esse método de projeção requer que a função de transformação, `selector`, para produzir um valor para cada valor na sequência de origem, `source`. Se `selector` retorna um valor que é uma coleção, é até o consumidor para atravessar as subsequências manualmente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThenBy&lt;TRow,TKey&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; ThenBy&lt;TRow,TKey&gt; (this System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; source, Func&lt;TRow,TKey&gt; keySelector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; ThenBy&lt;TRow, TKey&gt;(class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; source, class System.Func`2&lt;!!TRow, !!TKey&gt; keySelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.ThenBy``2(System.Data.OrderedEnumerableRowCollection{``0},System.Func{``0,``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TRow" />
+        <TypeParameter Name="TKey" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;" RefType="this" />
+        <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TRow">O tipo dos elementos de linha no <c>fonte</c>, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">O tipo de chave retornada pelo <c>keySelector</c>.</typeparam>
+        <param name="source">Um <see cref="T:System.Data.EnumerableRowCollection" /> que contém o <see cref="T:System.Data.DataRow" /> elementos sejam ordenados.</param>
+        <param name="keySelector">Uma função para extrair uma chave de um elemento.</param>
+        <summary>Executa uma ordenação secundário das linhas de uma <see cref="T:System.Data.EnumerableRowCollection" /> em crescente de ordem de acordo com a chave especificada. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> cujos elementos são classificados pela chave especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O uso de um <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A> operação exige uma existente primário classificação operação usando <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>.  
+  
+ Esse método é implementado usando a execução adiada. O imediata valor de retorno é um objeto que armazena todas as informações necessárias para executar a ação. A consulta representada por esse método não é executada até que o objeto é enumerado ou chamando seu `GetEnumerator` método diretamente ou usando `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThenBy&lt;TRow,TKey&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; ThenBy&lt;TRow,TKey&gt; (this System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; source, Func&lt;TRow,TKey&gt; keySelector, System.Collections.Generic.IComparer&lt;TKey&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; ThenBy&lt;TRow, TKey&gt;(class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; source, class System.Func`2&lt;!!TRow, !!TKey&gt; keySelector, class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.ThenBy``2(System.Data.OrderedEnumerableRowCollection{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TRow" />
+        <TypeParameter Name="TKey" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;" RefType="this" />
+        <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TRow">O tipo dos elementos de linha no <c>fonte</c>, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">O tipo de chave retornada pelo <c>keySelector</c>.</typeparam>
+        <param name="source">Um <see cref="T:System.Data.EnumerableRowCollection" /> que contém o <see cref="T:System.Data.DataRow" /> elementos sejam ordenados.</param>
+        <param name="keySelector">Uma função para extrair uma chave de um elemento.</param>
+        <param name="comparer">Um <see cref="T:System.Collections.Generic.IComparer`1" /> para comparar chaves.</param>
+        <summary>Executa uma ordenação secundário das linhas de uma <see cref="T:System.Data.EnumerableRowCollection" /> em ordem de acordo com a chave especificada e o comparador crescente. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> cujos elementos são classificados pela chave especificada e comparador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O uso de um <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A> operação exige uma existente primário classificação operação usando <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>.  
+  
+ Esse método é implementado usando a execução adiada. O imediata valor de retorno é um objeto que armazena todas as informações necessárias para executar a ação. A consulta representada por esse método não é executada até que o objeto é enumerado ou chamando seu `GetEnumerator` método diretamente ou usando `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThenByDescending&lt;TRow,TKey&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; ThenByDescending&lt;TRow,TKey&gt; (this System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; source, Func&lt;TRow,TKey&gt; keySelector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; ThenByDescending&lt;TRow, TKey&gt;(class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; source, class System.Func`2&lt;!!TRow, !!TKey&gt; keySelector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.ThenByDescending``2(System.Data.OrderedEnumerableRowCollection{``0},System.Func{``0,``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TRow" />
+        <TypeParameter Name="TKey" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;" RefType="this" />
+        <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TRow">O tipo dos elementos de linha no <c>fonte</c>, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">O tipo de chave retornada pelo <c>keySelector</c>.</typeparam>
+        <param name="source">Um <see cref="T:System.Data.EnumerableRowCollection" /> que contém o <see cref="T:System.Data.DataRow" /> elementos sejam ordenados.</param>
+        <param name="keySelector">Uma função para extrair uma chave de um elemento.</param>
+        <summary>Executa uma ordenação secundário das linhas de uma <see cref="T:System.Data.EnumerableRowCollection" /> em ordem de acordo com a chave especificada decrescente. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> cujos elementos são classificados pela chave especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O uso de um <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A> operação exige uma existente primário classificação operação usando <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>.  
+  
+ Esse método é implementado usando a execução adiada. O imediata valor de retorno é um objeto que armazena todas as informações necessárias para executar a ação. A consulta representada por esse método não é executada até que o objeto é enumerado ou chamando seu `GetEnumerator` método diretamente ou usando `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThenByDescending&lt;TRow,TKey&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; ThenByDescending&lt;TRow,TKey&gt; (this System.Data.OrderedEnumerableRowCollection&lt;TRow&gt; source, Func&lt;TRow,TKey&gt; keySelector, System.Collections.Generic.IComparer&lt;TKey&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; ThenByDescending&lt;TRow, TKey&gt;(class System.Data.OrderedEnumerableRowCollection`1&lt;!!TRow&gt; source, class System.Func`2&lt;!!TRow, !!TKey&gt; keySelector, class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.ThenByDescending``2(System.Data.OrderedEnumerableRowCollection{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TRow" />
+        <TypeParameter Name="TKey" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.OrderedEnumerableRowCollection&lt;TRow&gt;" RefType="this" />
+        <Parameter Name="keySelector" Type="System.Func&lt;TRow,TKey&gt;" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TRow">O tipo dos elementos de linha no <c>fonte</c>, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+        <typeparam name="TKey">O tipo de chave retornada pelo <c>keySelector</c>.</typeparam>
+        <param name="source">Um <see cref="T:System.Data.EnumerableRowCollection" /> que contém o <see cref="T:System.Data.DataRow" /> elementos sejam ordenados.</param>
+        <param name="keySelector">Uma função para extrair uma chave de um elemento.</param>
+        <param name="comparer">Um <see cref="T:System.Collections.Generic.IComparer`1" /> para comparar chaves.</param>
+        <summary>Executa uma ordenação secundário das linhas de uma <see cref="T:System.Data.EnumerableRowCollection" /> em ordem de acordo com a chave especificada e o comparador decrescente. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> cujos elementos são classificados pela chave especificada e comparador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O uso de um <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A> operação exige uma existente primário classificação operação usando <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>.  
+  
+ Esse método é implementado usando a execução adiada. O imediata valor de retorno é um objeto que armazena todas as informações necessárias para executar a ação. A consulta representada por esse método não é executada até que o objeto é enumerado ou chamando seu `GetEnumerator` método diretamente ou usando `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Where&lt;TRow&gt;">
+      <MemberSignature Language="C#" Value="public static System.Data.EnumerableRowCollection&lt;TRow&gt; Where&lt;TRow&gt; (this System.Data.EnumerableRowCollection&lt;TRow&gt; source, Func&lt;TRow,bool&gt; predicate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.EnumerableRowCollection`1&lt;!!TRow&gt; Where&lt;TRow&gt;(class System.Data.EnumerableRowCollection`1&lt;!!TRow&gt; source, class System.Func`2&lt;!!TRow, bool&gt; predicate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollectionExtensions.Where``1(System.Data.EnumerableRowCollection{``0},System.Func{``0,System.Boolean})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EnumerableRowCollection&lt;TRow&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TRow" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Data.EnumerableRowCollection&lt;TRow&gt;" RefType="this" />
+        <Parameter Name="predicate" Type="System.Func&lt;TRow,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TRow">O tipo dos elementos de linha no <c>fonte</c>, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+        <param name="source">Um <see cref="T:System.Data.EnumerableRowCollection" /> que contém o <see cref="T:System.Data.DataRow" /> elementos para filtrar.</param>
+        <param name="predicate">Uma função para testar cada elemento em relação a uma condição.</param>
+        <summary>Filtra uma sequência de linhas com base em predicado especificado. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Data.OrderedEnumerableRowCollection`1" /> que contém linhas que satisfazem a condição da sequência de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é implementado usando a execução adiada. O imediata valor de retorno é um objeto que armazena todas as informações necessárias para executar a ação. A consulta representada por esse método não é executada até que o objeto é enumerado ou chamando seu `GetEnumerator` método diretamente ou usando `foreach` na [!INCLUDE[csprcs](~/includes/csprcs-md.md)] ou `For Each` em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

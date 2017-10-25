@@ -1,0 +1,78 @@
+<Type Name="FederationConfigurationCreatedEventArgs" FullName="System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs">
+  <TypeSignature Language="C#" Value="public class FederationConfigurationCreatedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FederationConfigurationCreatedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> evento é gerado quando o módulo HTTP do primeiro no aplicativo web faz referência a <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> propriedade. O primeiro acesso da propriedade faz com que um <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto a ser criados e inicializados da configuração. O <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> , em seguida, é gerado. Você pode acessar o recém-criado <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto por meio de <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> propriedade em um manipulador de eventos para examinar ou modificá-lo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FederationConfigurationCreatedEventArgs (System.IdentityModel.Services.Configuration.FederationConfiguration config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Services.Configuration.FederationConfiguration config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.#ctor(System.IdentityModel.Services.Configuration.FederationConfiguration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="config" Type="System.IdentityModel.Services.Configuration.FederationConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="config">O objeto de configuração de Federação. Um <see cref="T:System.IdentityModel.Services.Configuration.FederationConfiguration" /> objeto contém as propriedades configuráveis para o módulo de autenticação do WS-Federation (<see cref="T:System.IdentityModel.Services.WSFederationAuthenticationModule" />) e o módulo de autenticação de sessão (<see cref="T:System.IdentityModel.Services.SessionAuthenticationModule" />) em um aplicativo web.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs" /> classe com o objeto de configuração de Federação especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializa o <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A> o objeto de configuração de Federação especificado pela propriedade `config`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FederationConfiguration">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.Configuration.FederationConfiguration FederationConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Services.Configuration.FederationConfiguration FederationConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.Configuration.FederationConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de configuração de federação que foi inicializado no arquivo de configuração.</summary>
+        <value>O objeto de configuração de federação que foi inicializado de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto contém as propriedades configuráveis para o módulo de autenticação do WS-Federation (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>) e o módulo de autenticação de sessão (<xref:System.IdentityModel.Services.SessionAuthenticationModule>) em um aplicativo web.  
+  
+ Para modificar as definições de configuração, você pode definir propriedades no <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto referenciado por essa propriedade, ou você pode fornecer um novo <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,61 @@
+<Type Name="IDataKeysControl" FullName="System.Web.UI.IDataKeysControl">
+  <TypeSignature Language="C#" Value="public interface IDataKeysControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataKeysControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IDataKeysControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define propriedades que especificam como o ASP.NET cria cliente IDs para um controle associado a dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IDataKeysControl> interface define duas propriedades que implementam controles de associação de dados para permitir que você especificar como uma ID de cliente é criada. Um controle associado a dados que exibe várias instâncias de um controle deve criar uma ID para cada instância do controle. O ID deve ser exclusivo para habilitar o acesso para o controle de script de cliente.  
+  
+ O <xref:System.Web.UI.IDataKeysControl.ClientIDRowSuffix%2A> propriedade permite que você especifique o nome ou nomes de campos de dados cujos valores são incluídos no valor gerado para o <xref:System.Web.UI.Control.ClientID%2A> propriedade. Esses valores são usados para identificar exclusivamente cada instância do controle de forma que corresponde a um valor de dados significativos, em vez de para um valor arbitrário como a ordem na qual os controles são processadas na página. Por exemplo, quando você exibir registros de uma tabela de dados de produtos, você pode atribuir `ProductID` para o <xref:System.Web.UI.IDataKeysControl.ClientIDRowSuffix%2A> propriedade. Nesse caso, cada instância do controle associado a dados pode ser identificada pelo valor da `ProductID` campo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClientIDRowSuffix">
+      <MemberSignature Language="C#" Value="public string[] ClientIDRowSuffix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ClientIDRowSuffix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataKeysControl.ClientIDRowSuffix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os nomes dos campos de dados cujos valores são usados para identificar exclusivamente cada instância de um controle associado a dados quando o ASP.NET gera o <see cref="P:System.Web.UI.Control.ClientID" /> valor usando o <see cref="F:System.Web.UI.ClientIDMode.Predictable" /> algoritmo.</summary>
+        <value>Uma coleção de nomes de campo de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientIDRowSuffixDataKeys">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataKeyArray ClientIDRowSuffixDataKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataKeyArray ClientIDRowSuffixDataKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataKeysControl.ClientIDRowSuffixDataKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataKeyArray</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção dos valores de dados que são usados para identificar exclusivamente cada instância de um controle associado a dados quando o ASP.NET gera o <see cref="P:System.Web.UI.Control.ClientID" /> valor.</summary>
+        <value>Uma coleção de valores de campo de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

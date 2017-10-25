@@ -1,0 +1,303 @@
+<Type Name="DataContractAttribute" FullName="System.Runtime.Serialization.DataContractAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DataContractAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataContractAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.DataContractAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que o tipo define ou implementa um contrato de dados e pode ser serializado por um serializador, como o <see cref="T:System.Runtime.Serialization.DataContractSerializer" />. Para tornar seu tipo serializável, os autores de tipo devem definir um contrato de dados para seu tipo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicar o <xref:System.Runtime.Serialization.DataContractAttribute> atributo tipos (classes, estruturas ou enumerações) que são usados em operações de serialização e desserialização, o <xref:System.Runtime.Serialization.DataContractSerializer>. Se você enviar ou receber mensagens usando o [!INCLUDE[indigo1](~/includes/indigo1-md.md)] infra-estrutura, você também deve aplicar o <xref:System.Runtime.Serialization.DataContractAttribute> para todas as classes que manterem e manipulam os dados enviados em mensagens. [!INCLUDE[crabout](~/includes/crabout-md.md)]contratos de dados, consulte [usando contratos de dados](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+ Você também deve aplicar o <xref:System.Runtime.Serialization.DataMemberAttribute> para qualquer campo, propriedade ou evento que contém os valores que deseja serializar. Aplicando o <xref:System.Runtime.Serialization.DataContractAttribute>, habilitar explicitamente o <xref:System.Runtime.Serialization.DataContractSerializer> para serializar e desserializar os dados.  
+  
+> [!CAUTION]
+>  Você pode aplicar o <xref:System.Runtime.Serialization.DataMemberAttribute> para campos particulares. Lembre-se de que os dados retornados pelo campo (mesmo se ele é privado) são serializados e desserializado e, portanto, podem ser exibidos ou interceptado por um usuário mal-intencionado ou processo.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]contratos de dados, consulte os tópicos listados em [usando contratos de dados](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+## <a name="data-contracts"></a>Contratos de dados  
+ Um *contrato de dados* é uma descrição abstrata de um conjunto de campos com um nome e tipo de dados para cada campo. O contrato de dados existe fora de qualquer implementação único para permitir que os serviços em diferentes plataformas para fins de interoperabilidade. Como os dados passados entre os serviços está de acordo com o mesmo contrato, todos os serviços podem processar os dados. Esse processamento é também conhecido como um *acoplados de forma flexível sistema*. Um contrato de dados também é semelhante a uma interface em que o contrato especifica como os dados devem ser enviados para que possa ser processada por um aplicativo. Por exemplo, o contrato de dados pode chamar para um tipo de dados chamado "Pessoa" que tem dois campos de texto, chamados "Nome" e "Sobrenome". Para criar um contrato de dados, aplicar o <xref:System.Runtime.Serialization.DataContractAttribute> à classe e aplicar o <xref:System.Runtime.Serialization.DataMemberAttribute> para todos os campos ou propriedades que devem ser serializadas. Quando serializados, os dados está em conformidade com o contrato de dados é criado implicitamente no tipo.  
+  
+> [!NOTE]
+>  Um contrato de dados difere significativamente de uma interface real de seu comportamento de herança. Interfaces são herdadas por qualquer tipos derivados. Quando você aplica o <xref:System.Runtime.Serialization.DataContractAttribute> a uma classe base, os tipos derivados não herdam o atributo ou o comportamento. No entanto, se um tipo derivado tem um contrato de dados, os membros de dados da classe base são serializados. No entanto, você deve aplicar o <xref:System.Runtime.Serialization.DataMemberAttribute> para novos membros em uma classe derivada para torná-los serializável.  
+  
+## <a name="xml-schema-documents-and-the-svcutil-tool"></a>Documentos de esquema XML e a ferramenta SvcUtil  
+ Se você estiver trocando dados com outros serviços, você deve descrever o contrato de dados. Para a versão atual do <xref:System.Runtime.Serialization.DataContractSerializer>, um esquema XML pode ser usado para definir contratos de dados. (Outras formas de metadados/descrição podem ser usadas para a mesma finalidade.) Para criar um esquema XML de seu aplicativo, use o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) com o **/dconly.** opção de linha de comando. Quando a entrada para a ferramenta é um assembly, por padrão, a ferramenta gera um conjunto de esquemas XML que define todos os tipos de contrato de dados encontrados no assembly. Por outro lado, você também pode usar a ferramenta Svcutil.exe para criar definições de classe do Visual Basic ou c# em conformidade com os requisitos de esquemas XML que usam construções que podem ser expressos por contratos de dados. Nesse caso, o **/dconly.** opção de linha de comando não é necessária.  
+  
+ Se a entrada para a ferramenta Svcutil.exe é um esquema XML, por padrão, a ferramenta cria um conjunto de classes. Se você examinar essas classes, você perceberá que o <xref:System.Runtime.Serialization.DataContractAttribute> foi aplicada. Você pode usar essas classes para criar um novo aplicativo para processar os dados que devem ser trocados com outros serviços.  
+  
+ Você também pode executar a ferramenta em um ponto de extremidade que retorna um documento WSDL Web Services Description Language () para gerar automaticamente o código e configuração para criar um [!INCLUDE[indigo1](~/includes/indigo1-md.md)] cliente. O código gerado contém tipos que são marcados com o <xref:System.Runtime.Serialization.DataContractAttribute>.  
+  
+## <a name="reusing-existing-types"></a>Reutilizando os tipos existentes  
+ Um contrato de dados tem dois requisitos básicos: um nome estável e uma lista de membros. O nome estável consiste em namespace uniform resource identifier (URI) e o nome local do contrato. Por padrão, quando você aplicar o <xref:System.Runtime.Serialization.DataContractAttribute> a uma classe, ele usa o nome da classe como o nome local e o namespace da classe (prefixado com "http://schemas.datacontract.org/2004/07/") como o URI de namespace. Você pode substituir os padrões, definindo o <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> e <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> propriedades. Você também pode alterar o namespace, aplicando o <xref:System.Runtime.Serialization.ContractNamespaceAttribute> ao namespace. Use esse recurso quando você tem um tipo existente que processa os dados exatamente como você exige mas tem um namespace diferente e um nome de classe de contrato de dados. Substituindo os valores padrão, você pode reutilizar o tipo existente e fazer com que os dados serializados estão de acordo com o contrato de dados.  
+  
+> [!NOTE]
+>  Em qualquer código, você pode usar a palavra `DataContract` em vez do mais <xref:System.Runtime.Serialization.DataContractAttribute>.  
+  
+## <a name="versioning"></a>Controle de versão  
+ Um contrato de dados também pode acomodar versões posteriores de si mesma. Ou seja, quando uma versão posterior do contrato inclui dados extras, esses dados são armazenados e retornados para um remetente inalterados. Para fazer isso, implemente o <xref:System.Runtime.Serialization.IExtensibleDataObject> interface.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]controle de versão, consulte [controle de versão de contrato de dados](~/docs/framework/wcf/feature-details/data-contract-versioning.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa e desserializa uma classe denominada `Person` ao qual o <xref:System.Runtime.Serialization.DataContractAttribute> foi aplicada. Observe que o <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> e <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> propriedades foram definidas como valores que substituem as configurações padrão.  
+  
+ [!code-csharp[DataContractAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/datacontractattribute/cs/overview.cs#1)]
+ [!code-vb[DataContractAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/datacontractattribute/vb/overview.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataContractAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.DataContractAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Serialization.DataContractAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNameSetExplicitly">
+      <MemberSignature Language="C#" Value="public bool IsNameSetExplicitly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNameSetExplicitly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.DataContractAttribute.IsNameSetExplicitly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se <see cref="P:System.Runtime.Serialization.DataContractAttribute.Name" /> tiver sido definido explicitamente.</summary>
+        <value>Retorna <see langword="true" /> se o nome tiver sido explicitamente definido; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNamespaceSetExplicitly">
+      <MemberSignature Language="C#" Value="public bool IsNamespaceSetExplicitly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNamespaceSetExplicitly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.DataContractAttribute.IsNamespaceSetExplicitly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se <see cref="P:System.Runtime.Serialization.DataContractAttribute.Namespace" /> tiver sido definido explicitamente.</summary>
+        <value>Retorna <see langword="true" /> se o namespace foi explicitamente definido; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReference">
+      <MemberSignature Language="C#" Value="public bool IsReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReference" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.DataContractAttribute.IsReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve preservar os dados de referência do objeto.</summary>
+        <value>
+          <see langword="true" /> para manter os dados de referência de objeto usando XML padrão, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `IsReference` propriedade para instruir o <xref:System.Runtime.Serialization.DataContractSerializer> inserir construções XML que preservam as informações de referência de objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReferenceSetExplicitly">
+      <MemberSignature Language="C#" Value="public bool IsReferenceSetExplicitly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReferenceSetExplicitly" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.DataContractAttribute.IsReferenceSetExplicitly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se <see cref="P:System.Runtime.Serialization.DataContractAttribute.IsReference" /> tiver sido definido explicitamente.</summary>
+        <value>
+          <see langword="true" />Se a referência foi definida explicitamente; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.DataContractAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do contrato de dados para o tipo.</summary>
+        <value>O nome local de um contrato de dados. O padrão é o nome da classe ao qual o atributo foi aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> propriedade é usada para atribuir um nome a um contrato de dados, que é o nome do tipo no esquema XML. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Nomes de contrato de dados](~/docs/framework/wcf/feature-details/data-contract-names.md).  
+  
+ Por padrão, o nome de um contrato de dados é o nome do tipo que o <xref:System.Runtime.Serialization.DataContractAttribute> é aplicado a. No entanto, pode haver razões para alterar esse nome padrão. Uma razão para isso é permitir que um tipo existente para processar os dados que estão de acordo com um contrato de dados existente. Por exemplo, existe um tipo denominado `Person` , mas o contrato de dados incorporado em um esquema XML, requer que o nome seja `Customer`. O contrato pode ser atendido, definindo o valor da propriedade para `Customer`.  
+  
+ Uma segunda razão é permitir a geração de nomes que são inválidos, como nomes de tipo. Por exemplo, se um contrato de dados exige um nome que não é permitido como um nome de tipo, defina o valor da propriedade para o nome não permitido. Por exemplo, a cadeia de caracteres "$value" não é permitida como um nome de tipo, mas é permitida como um <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> o valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.DataContractAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace para o contrato de dados para o tipo.</summary>
+        <value>O namespace do contrato.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para especificar um namespace específico se seu tipo deve retornar dados que esteja em conformidade com um contrato de dados específico.  
+  
+> [!TIP]
+>  Para os dados sejam transmitidos com êxito, o nome dos dados em um contrato de dados deve ser o mesmo no cliente e o servidor. Projetos do Visual Basic, por padrão, adicionam um prefixo para o namespace definido em cada arquivo (chamado de "namespace raiz," o nome do projeto). Adicionar esse prefixo faz com que o cliente e servidor namespaces diferentes para o mesmo tipo. A solução é definir o <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> propriedade como "", ou para definir explicitamente o namespace de contrato de dados nessa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

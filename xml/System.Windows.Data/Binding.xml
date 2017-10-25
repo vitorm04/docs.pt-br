@@ -1,0 +1,1269 @@
+<Type Name="Binding" FullName="System.Windows.Data.Binding">
+  <TypeSignature Language="C#" Value="public class Binding : System.Windows.Data.BindingBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Binding extends System.Windows.Data.BindingBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.Binding" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Data.BindingBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso de alto nível para a definição de uma associação, que conecta as propriedades de objetos de destino da associação (normalmente, elementos WPF) e qualquer fonte de dados (por exemplo, um banco de dados, um arquivo XML ou qualquer objeto que contém dados).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Associação de dados permite que você sincronize os valores das propriedades de dois objetos diferentes.  
+  
+ Para estabelecer uma associação, use o <xref:System.Windows.Data.Binding> classe ou uma das outras classes que herdam <xref:System.Windows.Data.BindingBase>. Independentemente de qual objeto de associação e da natureza da sua fonte de dados, cada associação segue o modelo ilustrado pela figura a seguir.  
+  
+ ![Diagrama de associação de dados básico](~/add/media/databindingmostbasic.png "diagrama de associação de dados básicos")  
+  
+ A figura demonstra os seguintes conceitos fundamentais de [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] conceitos de associação de dados.  
+  
+-   Cada associação normalmente possui estes quatro componentes: um objeto de destino de associação, uma propriedade de destino, uma fonte de associação e um <xref:System.Windows.Data.Binding.Path%2A> para o valor da fonte de associação a ser usado. Por exemplo, se você deseja associar o conteúdo de um <xref:System.Windows.Controls.TextBox> para a propriedade de nome de um objeto de funcionário, o objeto de destino é o <xref:System.Windows.Controls.TextBox>, a propriedade de destino é o <xref:System.Windows.Controls.TextBox.Text%2A> propriedade, o valor a ser usado é o nome e o objeto de origem é o objeto de funcionário.  
+  
+-   A propriedade de destino deve ser uma propriedade de dependência. Isso também significa que você não pode vincular um campo. A maioria das propriedades de <xref:System.Windows.UIElement> objetos são propriedades de dependência e a maioria das propriedades de dependência, exceto as somente leitura, oferecem suporte à associação de dados por padrão. (Somente <xref:System.Windows.DependencyObject> tipos podem definir propriedades de dependência e todos os <xref:System.Windows.UIElement> objetos derivam <xref:System.Windows.DependencyObject>.)  
+  
+-   Embora não especificado na figura, deve-se observar que o objeto de origem da associação não é restrito a ser um objeto [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] personalizado. A vinculação de dados do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] dá suporte a dados na forma de objetos [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)]. Para fornecer alguns exemplos, sua fonte de associação pode ser um <xref:System.Windows.UIElement>, qualquer objeto da lista, um [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] objeto que está associado com [!INCLUDE[TLA#tla_adonet](~/includes/tlasharptla-adonet-md.md)] dados ou serviços da Web ou um XmlNode que contém seu [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] dados.  
+  
+ Use o <xref:System.Windows.Data.Binding.Mode%2A> propriedade para especificar a direção do fluxo de dados. Para detectar mudanças nas associações unidirecionais ou bidirecionais, a fonte deve implementar um mecanismo de notificação de alteração de propriedade adequado, como <xref:System.ComponentModel.INotifyPropertyChanged>. Para obter um exemplo, consulte [como: implementar notificação de alteração de propriedade](~/docs/framework/wpf/data/how-to-implement-property-change-notification.md). O <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriedade especifica o intervalo das atualizações de origem. Para obter mais informações, consulte "Dados de associação conceitos básicos" [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+<a name="xamlAttributeUsage_PriorityBinding"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="{Binding  declaration}"/>  
+```  
+  
+<a name="xamlValues_PriorityBinding"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *declaration*  
+ Zero ou mais cláusulas de atribuições de atributo separadas por vírgulas (,). Para obter mais informações, consulte [associação de extensão de marcação](~/docs/framework/wpf/advanced/binding-markup-extension.md) ou [visão geral de declarações de associação](~/docs/framework/wpf/data/binding-declarations-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.Binding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Data.Binding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Binding (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.Binding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho <see cref="P:System.Windows.Data.Binding.Path" /> inicial da associação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Data.Binding" /> com um caminho inicial.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSourceUpdatedHandler">
+      <MemberSignature Language="C#" Value="public static void AddSourceUpdatedHandler (System.Windows.DependencyObject element, EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddSourceUpdatedHandler(class System.Windows.DependencyObject element, class System.EventHandler`1&lt;class System.Windows.Data.DataTransferEventArgs&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.Binding.AddSourceUpdatedHandler(System.Windows.DependencyObject,System.EventHandler{System.Windows.Data.DataTransferEventArgs})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> que escuta o evento.</param>
+        <param name="handler">O manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador para o <see cref="E:System.Windows.Data.Binding.SourceUpdated" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte ao uso de evento anexado em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTargetUpdatedHandler">
+      <MemberSignature Language="C#" Value="public static void AddTargetUpdatedHandler (System.Windows.DependencyObject element, EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddTargetUpdatedHandler(class System.Windows.DependencyObject element, class System.EventHandler`1&lt;class System.Windows.Data.DataTransferEventArgs&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.Binding.AddTargetUpdatedHandler(System.Windows.DependencyObject,System.EventHandler{System.Windows.Data.DataTransferEventArgs})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> que escuta o evento.</param>
+        <param name="handler">O manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador para o <see cref="E:System.Windows.Data.Binding.TargetUpdated" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte ao uso de evento anexado em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncState">
+      <MemberSignature Language="C#" Value="public object AsyncState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object AsyncState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.AsyncState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define dados opacos passados para o dispatcher de dados assíncronos.</summary>
+        <value>Os dados passados para o dispatcher de dados assíncronos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindsDirectlyToSource">
+      <MemberSignature Language="C#" Value="public bool BindsDirectlyToSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BindsDirectlyToSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.BindsDirectlyToSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se é necessário avaliar o <see cref="P:System.Windows.Data.Binding.Path" /> relativo ao item de dados ou o objeto <see cref="T:System.Windows.Data.DataSourceProvider" />.</summary>
+        <value>
+          <see langword="false" /> para avaliar o caminho relativo ao item de dados em si; caso contrário, <see langword="true" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento normal (quando essa propriedade é `false`) inclui um tratamento especial para <xref:System.Windows.Data.DataSourceProvider> objetos. Nesse caso, o mecanismo de associação avalia o <xref:System.Windows.Data.Binding.Path%2A> relativa ao objeto obtido o <xref:System.Windows.Data.DataSourceProvider.Data%2A> propriedade. Além disso, a associação de escuta para o <xref:System.Windows.Data.DataSourceProvider.DataChanged> eventos e reage adequadamente. Definir essa propriedade como `true` substitui esse comportamento e fornece o acesso de associação a propriedades do <xref:System.Windows.Data.DataSourceProvider> objeto propriamente dito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Converter">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.IValueConverter Converter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.IValueConverter Converter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.Converter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.IValueConverter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conversor a ser usado.</summary>
+        <value>Um valor do tipo <see cref="T:System.Windows.Data.IValueConverter" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma associação usa implicitamente um conversor padrão que tenta fazer uma conversão de tipo entre o valor de origem e o valor de destino. Se a conversão não puder ser realizada, o conversor padrão retornará `null`.  
+  
+ Se você deseja associar um conversor de valor personalizado com uma associação, você deve criar uma classe que implementa o <xref:System.Windows.Data.IValueConverter> de interface e fornecer implementações para o <xref:System.Windows.Data.IValueConverter.Convert%2A> e <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> métodos. Conversores de valor podem alterar dados de um tipo para outro, converter entre culturais detalhes como conjuntos de caracteres ou modificar os outros aspectos da sua apresentação. Para obter exemplos de cenários típicos de conversão, consulte "Conversão de dados" a [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+<a name="xamlAttributeUsage_Converter"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Converter="myConverter"/>  
+```  
+  
+<a name="xamlValues_Converter"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *myConverter*  
+ Uma referência de recurso a uma classe que implementa o <xref:System.Windows.Data.IValueConverter> interface, que inclui implementações de <xref:System.Windows.Data.IValueConverter.Convert%2A> e <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> métodos. Para consultar um conversor de valor, use o [StaticResource Markup Extension](~/docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConverterCulture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo ConverterCulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo ConverterCulture" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.ConverterCulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.CultureInfoIetfLanguageTagConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cultura na qual o conversor será avaliado.</summary>
+        <value>O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não definir essa propriedade, o mecanismo de associação usa o `Language` propriedade do objeto de destino de associação. Em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] esse padrão é "en-US" ou herda o valor do elemento raiz (ou qualquer elemento) da página, se um tiver sido definido explicitamente.  
+  
+ Para obter informações sobre conversão de dados, consulte a seção conversão de dados de [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConverterParameter">
+      <MemberSignature Language="C#" Value="public object ConverterParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ConverterParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.ConverterParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro a ser passado para o <see cref="P:System.Windows.Data.Binding.Converter" />.</summary>
+        <value>O parâmetro a ser passado para o <see cref="P:System.Windows.Data.Binding.Converter" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Data.Binding.ConverterParameter%2A> propriedade para especificar como um objeto é convertido.  Essa propriedade passa informações adicionais para um conversor que você usa em uma associação.  Quando você especifica um <xref:System.Windows.Data.Binding.ConverterParameter%2A>, o valor é passado para o <xref:System.Windows.Data.IValueConverter.Convert%2A> e <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> métodos como o `parameter` parâmetro.  
+  
+ Para obter um exemplo, consulte [como: produzir um valor com base na lista de itens associados](~/docs/framework/wpf/data/how-to-produce-a-value-based-on-a-list-of-bound-items.md). Esse exemplo mostra uma implementação de um <xref:System.Windows.Data.IMultiValueConverter> , mas o uso ainda se aplica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoNothing">
+      <MemberSignature Language="C#" Value="public static readonly object DoNothing;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object DoNothing" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.Binding.DoNothing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usado como um valor retornado para instruir o mecanismo de associação para não executar nenhuma ação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma propriedade de fonte de associação ou um conversor pode retornar <xref:System.Windows.Data.Binding.DoNothing?displayProperty=nameWithType> para orientar o mecanismo de associação não para realizar qualquer ação. Por exemplo, para instruir o mecanismo de associação não para transferir um valor para o destino de associação, não para mover para o próximo <xref:System.Windows.Data.Binding> em uma <xref:System.Windows.Data.PriorityBinding>, ou não usar o `FallBackValue` ou o valor padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementName">
+      <MemberSignature Language="C#" Value="public string ElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.ElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do elemento a ser usado como o objeto de origem de associação.</summary>
+        <value>O valor da propriedade <see langword="Name" /> ou [x:Name Directive](~/docs/framework/xaml-services/x-name-directive.md) do elemento de interesse. Você poderá consultar elementos em código somente se eles estiverem registrados no <see cref="T:System.Windows.NameScope" /> ao <see langword="RegisterName" /> apropriados. Para obter mais informações, consulte [Namescopes WPF XAML](~/docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
+  
+ O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é útil quando você deseja associar a propriedade de outro elemento em seu aplicativo. Por exemplo, se você quiser usar um <xref:System.Windows.Controls.Slider> para controlar a altura do controle de outro em seu aplicativo, ou se você deseja vincular a <xref:System.Windows.Controls.ContentControl.Content%2A> de seu controle o <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> propriedade do seu <xref:System.Windows.Controls.ListBox> controle.  
+  
+ Por padrão, associações herdam o contexto de dados especificado pelo `DataContext` propriedade, caso uma tenha sido definida. No entanto, o <xref:System.Windows.Data.Binding.ElementName%2A> propriedade é uma das maneiras que você pode definir explicitamente a origem de um <xref:System.Windows.Data.Binding> e substituir o contexto de dados herdado. Para obter mais informações, consulte [como: especificar a origem da associação](~/docs/framework/wpf/data/how-to-specify-the-binding-source.md).  
+  
+ O <xref:System.Windows.Data.Binding.Source%2A> e <xref:System.Windows.Data.Binding.RelativeSource%2A> propriedades da <xref:System.Windows.Data.Binding> classe também permitem que você defina a origem da associação explicitamente. No entanto, apenas uma das três propriedades, <xref:System.Windows.Data.Binding.ElementName%2A>, <xref:System.Windows.Data.Binding.Source%2A>, e <xref:System.Windows.Data.Binding.RelativeSource%2A>, deve ser definida para cada associação ou poderá ocorrer um conflito. Essa propriedade gera uma exceção se houver um conflito de origem da associação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXmlNamespaceManager">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlNamespaceManager GetXmlNamespaceManager (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlNamespaceManager GetXmlNamespaceManager(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.Binding.GetXmlNamespaceManager(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNamespaceManager</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">O objeto do qual obter informações de namespace.</param>
+        <summary>Retorna um [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] objeto do Gerenciador de namespace usado pela associação anexada ao objeto especificado.</summary>
+        <returns>Um objeto retornado usado para exibição [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] namespaces que se relacionam com a associação no elemento de objeto passado. Este objeto deve ser convertido como <see cref="T:System.Xml.XmlNamespaceManager" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte ao uso de propriedades anexadas para o <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A> propriedade anexada.  
+  
+ [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)]gerentes de namespace são relevantes apenas se os dados na associação proveniente de um [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)] origem de associação (<xref:System.Windows.Data.XmlDataProvider> objeto).  
+  
+ Se um Gerenciador de namespace não foi aplicado especificamente na criação de fonte de dados original ou subsequentemente chamando <xref:System.Windows.Data.Binding.SetXmlNamespaceManager%2A> na associação, em seguida, esse método retornará `null`.  
+  
+ Esse método sempre retornará `null` se os dados por trás da associação não são [!INCLUDE[TLA2#tla_xml](~/includes/tla2sharptla-xml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="target" /> não pode ser <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexerName">
+      <MemberSignature Language="C#" Value="public const string IndexerName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string IndexerName" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.Binding.IndexerName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usado como o <see cref="P:System.ComponentModel.PropertyChangedEventArgs.PropertyName" /> de <see cref="T:System.ComponentModel.PropertyChangedEventArgs" /> para indicar que uma propriedade do indexador foi alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsync">
+      <MemberSignature Language="C#" Value="public bool IsAsync { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAsync" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.IsAsync" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Data.Binding" /> deve obter e definir valores de forma assíncrona.</summary>
+        <value>O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Data.Binding.IsAsync%2A> propriedade quando o `get` acessador da propriedade de fonte de associação pode levar muito tempo. Um exemplo é uma propriedade de imagem com um `get` acessador que baixa da Web. Configuração <xref:System.Windows.Data.Binding.IsAsync%2A> para `true` evita bloqueio a [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] enquanto o download ocorre.  
+  
+ Enquanto aguarda o valor para chegar, a associação informa o <xref:System.Windows.Data.BindingBase.FallbackValue%2A>, se disponível, ou o valor padrão da associação de propriedade de destino.  
+  
+ No entanto, não deve haver muitos cenários em que você precisa usar o <xref:System.Windows.Data.Binding.IsAsync%2A> propriedade. As diretrizes de [!INCLUDE[TLA2#tla_net](~/includes/tla2sharptla-net-md.md)] recomendam não definir propriedades que são ordens de magnitude mais lentas do que seria um conjunto de campos. Quando você estiver criando sua classe, considere extremamente lentas operações fora de manipulação de `get` acessador e o resultados em cache. Para obter mais informações, consulte [NIB: escolhendo entre propriedades e métodos](http://msdn.microsoft.com/en-us/55825e8f-7e2e-448a-9505-7217cc91b1af).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.BindingMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Data.BindingMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a direção do fluxo de dados na associação.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Data.BindingMode" />. O padrão é <see cref="F:System.Windows.Data.BindingMode.Default" />, que retorna o valor do modo de associação padrão da propriedade de dependência de destino. No entanto, o valor padrão varia de acordo com cada propriedade de dependência. Em geral, as propriedades de controle editáveis pelo usuário, como caixas de texto e caixas de seleção, usam vinculações bidirecionais como padrão, enquanto a maioria das outras propriedades usa vinculações unidirecionais como padrão.  
+  
+ Uma maneira programática de determinar se uma propriedade de dependência é associada de forma unidirecional ou bidirecional por padrão é obter os metadados de propriedade da propriedade usando <see cref="M:System.Windows.DependencyProperty.GetMetadata(System.Type)" /> e verificar o valor booliano da propriedade <see cref="P:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para dar suporte a <xref:System.Windows.Data.BindingMode.OneWay> e <xref:System.Windows.Data.BindingMode.TwoWay> associações, os dados subjacentes devem implementar <xref:System.ComponentModel.INotifyPropertyChanged>. Para obter detalhes, consulte [como: implementar notificação de alteração de propriedade](~/docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
+  
+ Para <xref:System.Windows.Data.BindingMode.TwoWay> ou <xref:System.Windows.Data.BindingMode.OneWayToSource> associações, você pode controlar as atualizações de fonte de destino, definindo o <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propriedade. Para obter mais informações, consulte <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
+  
+ Para obter mais informações sobre os modos diferentes de associação, consulte [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyOnSourceUpdated">
+      <MemberSignature Language="C#" Value="public bool NotifyOnSourceUpdated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NotifyOnSourceUpdated" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.NotifyOnSourceUpdated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o evento <see cref="E:System.Windows.Data.Binding.SourceUpdated" /> deve ser gerado quando um valor é transferido do destino da associação para a origem da associação.</summary>
+        <value>
+          <see langword="true" /> se o evento <see cref="E:System.Windows.Data.Binding.SourceUpdated" /> precisar ser gerado quando o valor da origem da associação for atualizado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyOnTargetUpdated">
+      <MemberSignature Language="C#" Value="public bool NotifyOnTargetUpdated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NotifyOnTargetUpdated" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.NotifyOnTargetUpdated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o evento <see cref="E:System.Windows.Data.Binding.TargetUpdated" /> deve ser gerado quando um valor é transferido da origem de associação para o destino de associação.</summary>
+        <value>
+          <see langword="true" /> se o evento <see cref="E:System.Windows.Data.Binding.TargetUpdated" /> precisar ser gerado quando o valor de destino da associação for atualizado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyOnValidationError">
+      <MemberSignature Language="C#" Value="public bool NotifyOnValidationError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NotifyOnValidationError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.NotifyOnValidationError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve gerar o <see cref="E:System.Windows.Controls.Validation.Error" /> anexa o objeto associado.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="E:System.Windows.Controls.Validation.Error" /> evento anexado deve ser gerado no objeto ligado quando há um erro de validação durante as atualizações de origem; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a associação tem <xref:System.Windows.Data.Binding.ValidationRules%2A> associados a ele, o mecanismo de associação verifica cada regra sempre que transfere o valor da propriedade de destino para a propriedade de origem. Se uma regra invalida um valor, o mecanismo de associação cria um <xref:System.Windows.Controls.ValidationError> de objeto e adiciona-o para o <xref:System.Windows.Controls.Validation>.<xref:System.Windows.Controls.Validation.Errors%2A> coleção do objeto associado. Quando o <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> propriedade não estiver vazia, o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada do objeto é definida como `true`. Se o <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A> propriedade do <xref:System.Windows.Data.Binding> é definido como `true`, em seguida, gera o mecanismo de associação a <xref:System.Windows.Controls.Validation.Error?displayProperty=nameWithType> anexa o objeto.  
+  
+ Para obter uma discussão detalhada sobre o processo de validação, consulte a seção de validação de dados no [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public System.Windows.PropertyPath Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.PropertyPath Path" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.PropertyPath</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho para a propriedade de origem da associação.</summary>
+        <value>O caminho para a origem da associação. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada associação normalmente possui estes quatro componentes: um objeto de destino de associação, uma propriedade de destino, uma origem de associação e um caminho para o valor da fonte de associação a ser usado. Para obter mais informações sobre esses conceitos de associação de dados, consulte [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ Use o <xref:System.Windows.Data.Binding.Path%2A> propriedade para especificar o valor de origem que você deseja associar a:  
+  
+-   No caso mais simples, o <xref:System.Windows.Data.Binding.Path%2A> o valor da propriedade é o nome da propriedade do objeto fonte a ser usada para a associação, como `Path=PropertyName`.  
+  
+-   Subpropriedades de uma propriedade podem ser especificadas com uma sintaxe semelhante àquela usada em [!INCLUDE[TLA#tla_cshrp](~/includes/tlasharptla-cshrp-md.md)]. Por exemplo, a cláusula `Path=ShoppingCart.Order` define a associação com a subpropriedade `Order` do objeto ou da propriedade `ShoppingCart`.  
+  
+-   Para associar a uma propriedade anexada, coloque parênteses na propriedade anexada. Por exemplo, para associar a propriedade anexada <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, a sintaxe é `Path=(DockPanel.Dock)`.  
+  
+-   Os indexadores de uma propriedade podem ser especificados dentro de colchetes após o nome da propriedade na qual o indexador é aplicado. Por exemplo, a cláusula `Path=ShoppingCart[0]` define a associação ao índice que corresponde a como a indexação interna de sua propriedade lida com a cadeia de caracteres literal "0". Também há suporte para vários indexadores.  
+  
+-   Os indexadores e as subpropriedades podem ser combinados em uma cláusula `Path`. Por exemplo,`Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+  
+-   Dentro dos indexadores, você pode ter vários parâmetros de indexador separados por vírgulas (,). O tipo de cada parâmetro pode ser especificado com parênteses. Por exemplo, você pode ter `Path="[(sys:Int32)42,(sys:Int32)24]"`, em que `sys` é mapeado para o namespace `System`.  
+  
+-   Quando a fonte é uma exibição de coleção, o item atual pode ser especificado com uma barra (/). Por exemplo, a cláusula `Path=/` define a associação ao item atual no modo de exibição. Quando a fonte é uma coleção, essa sintaxe especifica o item atual da exibição de coleção padrão.  
+  
+-   Barras e nomes de propriedade podem ser combinados para percorrer as propriedades que são coleções. Por exemplo, `Path=/Offices/ManagerName` especifica o item atual da coleção de origem, que contém uma propriedade `Offices` que também é uma coleção. O item atual é um objeto que contém uma propriedade `ManagerName`.  
+  
+-   Opcionalmente, um caminho de ponto (.) pode ser usado para associação à fonte atual. Por exemplo, `Text="{Binding}"` equivale a `Text="{Binding Path=.}"`.  
+  
+ Para obter informações sobre a sintaxe de caminho, consulte [visão geral de declarações de associação](~/docs/framework/wpf/data/binding-declarations-overview.md) ou [sintaxe XAML de PropertyPath](~/docs/framework/wpf/advanced/propertypath-xaml-syntax.md).  
+  
+ Para [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] associações, consulte o <xref:System.Windows.Data.Binding.XPath%2A> propriedade.  
+  
+ Para vincular a um objeto inteiro, você não precisa especificar o <xref:System.Windows.Data.Binding.Path%2A> propriedade. Para obter mais informações, consulte "Especificando o caminho para o valor" [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um gatilho de estilo que cria um <xref:System.Windows.Controls.ToolTip> que relata uma mensagem de erro de validação. Associa o valor do setter para o conteúdo de erro do atual <xref:System.Windows.Controls.TextBox> (o <xref:System.Windows.Controls.TextBox> usando o estilo) usando o <xref:System.Windows.Data.Binding.RelativeSource%2A> propriedade. Para obter mais informações sobre este exemplo, consulte [como: implementar a validação de associação](~/docs/framework/wpf/data/how-to-implement-binding-validation.md).  
+  
+ [!code-xaml[BindValidation#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativeSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.RelativeSource RelativeSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.RelativeSource RelativeSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.RelativeSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.RelativeSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a origem da associação, especificando seu local com relação à posição do destino da associação.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Data.RelativeSource" /> que especifica o local relativo da origem da associação a ser usada. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade normalmente é usada para associar uma propriedade de um objeto para outra propriedade do mesmo objeto, ou para definir uma associação em um estilo ou modelo.  
+  
+ Por padrão, associações herdam o contexto de dados especificado pelo `DataContext` propriedade, caso uma tenha sido definida. No entanto, o <xref:System.Windows.Data.Binding.RelativeSource%2A> propriedade é uma das maneiras que você pode definir explicitamente a origem de um <xref:System.Windows.Data.Binding> e substituir o contexto de dados herdado. Para obter mais informações, consulte [como: especificar a origem da associação](~/docs/framework/wpf/data/how-to-specify-the-binding-source.md).  
+  
+ O <xref:System.Windows.Data.Binding.ElementName%2A?displayProperty=nameWithType> e <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> propriedades também permitem que você defina a origem da associação explicitamente. No entanto, apenas uma das três propriedades, <xref:System.Windows.Data.Binding.ElementName%2A>, <xref:System.Windows.Data.Binding.Source%2A>, e <xref:System.Windows.Data.Binding.RelativeSource%2A>, deve ser definida para cada associação ou um conflito pode ocorrer. Essa propriedade gera uma exceção se houver um conflito de origem da associação.  
+  
+ Para [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] informações, consulte [RelativeSource MarkupExtension](~/docs/framework/wpf/advanced/relativesource-markupextension.md).  
+  
+<a name="xamlTextUsage_RelativeSource"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um gatilho de estilo que cria um <xref:System.Windows.Controls.ToolTip> que relata uma mensagem de erro de validação. Associa o valor do setter para o conteúdo de erro do atual <xref:System.Windows.Controls.TextBox> (o <xref:System.Windows.Controls.TextBox> usando o estilo) usando o <xref:System.Windows.Data.Binding.RelativeSource%2A> propriedade. Para obter mais informações sobre este exemplo, consulte [como: implementar a validação de associação](~/docs/framework/wpf/data/how-to-implement-binding-validation.md).  
+  
+ [!code-xaml[BindValidation#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
+  
+ Para ver o exemplo completo, consulte [exemplo de validação de associação](http://go.microsoft.com/fwlink/?LinkID=159972).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSourceUpdatedHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveSourceUpdatedHandler (System.Windows.DependencyObject element, EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveSourceUpdatedHandler(class System.Windows.DependencyObject element, class System.EventHandler`1&lt;class System.Windows.Data.DataTransferEventArgs&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.Binding.RemoveSourceUpdatedHandler(System.Windows.DependencyObject,System.EventHandler{System.Windows.Data.DataTransferEventArgs})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> que escuta o evento.</param>
+        <param name="handler">O manipulador a ser removido.</param>
+        <summary>Remove um manipulador para o <see cref="E:System.Windows.Data.Binding.SourceUpdated" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte ao uso de evento anexado em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveTargetUpdatedHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveTargetUpdatedHandler (System.Windows.DependencyObject element, EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt; handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveTargetUpdatedHandler(class System.Windows.DependencyObject element, class System.EventHandler`1&lt;class System.Windows.Data.DataTransferEventArgs&gt; handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.Binding.RemoveTargetUpdatedHandler(System.Windows.DependencyObject,System.EventHandler{System.Windows.Data.DataTransferEventArgs})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.EventHandler&lt;System.Windows.Data.DataTransferEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> que escuta o evento.</param>
+        <param name="handler">O manipulador a ser removido.</param>
+        <summary>Remove um manipulador para o <see cref="E:System.Windows.Data.Binding.TargetUpdated" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte ao uso de evento anexado em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetXmlNamespaceManager">
+      <MemberSignature Language="C#" Value="public static void SetXmlNamespaceManager (System.Windows.DependencyObject target, System.Xml.XmlNamespaceManager value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetXmlNamespaceManager(class System.Windows.DependencyObject target, class System.Xml.XmlNamespaceManager value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.Binding.SetXmlNamespaceManager(System.Windows.DependencyObject,System.Xml.XmlNamespaceManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Xml.XmlNamespaceManager" />
+      </Parameters>
+      <Docs>
+        <param name="target">O objeto do qual obter informações de namespace.</param>
+        <param name="value">O <see cref="T:System.Xml.XmlNamespaceManager" /> a ser usado para avaliação de namespace no elemento passado.</param>
+        <summary>Define um objeto do Gerenciador de namespace usado pela associação anexada ao elemento fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte ao uso de propriedades anexadas para o <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A> propriedade anexada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializePath">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializePath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializePath() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.Binding.ShouldSerializePath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Data.Binding.Path" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `ShouldSerialize` método é fornecido, pois o <xref:System.Windows.Data.Binding.Path%2A> propriedade não tem um valor padrão simples. Este método indica se a propriedade foi alterado do valor padrão. Normalmente você invoca esse método se você estiver desenvolvendo ou um designer para o <xref:System.Windows.Data.Binding> ou desenvolver seu próprio controle incorporando o <xref:System.Windows.Data.Binding>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSource">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.Binding.ShouldSerializeSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Data.Binding.Source" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `ShouldSerialize` método é fornecido, pois o <xref:System.Windows.Data.Binding.Source%2A> propriedade não tem um valor padrão simples. Este método indica se a propriedade foi alterado do valor padrão. Normalmente você invoca esse método se você estiver desenvolvendo ou um designer para o <xref:System.Windows.Data.Binding> ou desenvolver seu próprio controle incorporando o <xref:System.Windows.Data.Binding>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeValidationRules">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeValidationRules ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeValidationRules() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.Binding.ShouldSerializeValidationRules" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Data.Binding.ValidationRules" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `ShouldSerialize` método é fornecido, pois o <xref:System.Windows.Data.Binding.ValidationRules%2A> propriedade não tem um valor padrão simples. Este método indica se a propriedade foi alterado do valor padrão. Normalmente você invoca esse método se você estiver desenvolvendo ou um designer para o <xref:System.Windows.Data.Binding> ou desenvolver seu próprio controle incorporando o <xref:System.Windows.Data.Binding>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public object Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto a ser usado como a origem da associação.</summary>
+        <value>O objeto a ser usado como a origem da associação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, associações herdam o contexto de dados especificado pelo `DataContext` propriedade, caso uma tenha sido definida. No entanto, o <xref:System.Windows.Data.Binding.Source%2A> propriedade é uma das maneiras que você pode definir explicitamente a origem de um <xref:System.Windows.Data.Binding> e substituir o contexto de dados herdado. Se você não precisar da funcionalidade de estabelecer um escopo no qual diversas propriedades herdam o mesmo contexto de dados, você pode usar o <xref:System.Windows.Data.Binding.Source%2A> propriedade em vez do `DataContext` propriedade.  
+  
+ O <xref:System.Windows.Data.Binding.ElementName%2A?displayProperty=nameWithType> e <xref:System.Windows.Data.Binding.RelativeSource%2A?displayProperty=nameWithType> propriedades também permitem que você defina a origem da associação explicitamente. No entanto, apenas uma das três propriedades, <xref:System.Windows.Data.Binding.ElementName%2A>, <xref:System.Windows.Data.Binding.Source%2A>, e <xref:System.Windows.Data.Binding.RelativeSource%2A>, deve ser definida para cada associação ou um conflito pode ocorrer. Essa propriedade gera uma exceção se houver um conflito de origem da associação.  
+  
+ Para limpar essa propriedade, defina-a como <xref:System.Windows.DependencyProperty.UnsetValue?displayProperty=nameWithType>.  
+  
+<a name="xamlAttributeUsage_Source"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Source="object"/>  
+```  
+  
+<a name="xamlValues_Source"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *object*  
+ Um objeto existente. Para se referir a um objeto existente, use o [StaticResource Markup Extension](~/docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+  
+   
+  
+## Examples  
+ Neste exemplo, você tem uma `Person` objeto com uma propriedade de cadeia de caracteres denominada `PersonName`. O objeto `Person` é definido no namespace chamado `SDKSample`.  
+  
+ O exemplo a seguir cria uma instância de `Person` do objeto com um `PersonName` valor da propriedade `Joe`. Isso é feito o `Resources` seção e atribuído um `x:Key`.  
+  
+ [!code-xaml[SimpleBinding#Instantiation](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#instantiation)]  
+[!code-xaml[SimpleBinding#2](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#2)]  
+[!code-xaml[SimpleBinding#EndWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#endwindow)]  
+  
+ Para associar o `PersonName` propriedade que você faça o seguinte:  
+  
+ [!code-xaml[SimpleBinding#BDO1](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+  
+ Como resultado, o <xref:System.Windows.Controls.TextBlock> é exibida com o valor "Joe".  
+  
+ No exemplo a seguir, o <xref:System.Windows.Data.Binding.Source%2A> valores a <xref:System.Windows.Data.Binding> objetos são definidos para o `static` propriedade <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType>:  
+  
+ [!code-xaml[DataBindingLab#ComboBoxMultiBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#comboboxmultibinding)]  
+  
+ Para o exemplo completo, consulte [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceUpdatedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SourceUpdatedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SourceUpdatedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.Binding.SourceUpdatedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.Data.Binding.SourceUpdated" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetUpdatedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent TargetUpdatedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent TargetUpdatedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.Binding.TargetUpdatedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.Data.Binding.TargetUpdated" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSourceExceptionFilter">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.UpdateSourceExceptionFilterCallback UpdateSourceExceptionFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.UpdateSourceExceptionFilterCallback UpdateSourceExceptionFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.UpdateSourceExceptionFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceExceptionFilterCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um manipulador que você pode usar para fornecer lógica personalizada para lidar com exceções que o mecanismo de associação encontra durante a atualização do valor de origem da associação. Isso será aplicável somente se você tiver associado um <see cref="T:System.Windows.Controls.ExceptionValidationRule" /> à associação.</summary>
+        <value>Um método que fornece lógica personalizada para lidar com exceções que o mecanismo de associação encontra durante a atualização do valor de origem da associação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.ExceptionValidationRule> é uma regra de validação interna que verifica para exceções geradas durante a atualização da propriedade de fonte de associação. Se você tiver associado a <xref:System.Windows.Controls.ExceptionValidationRule> com seu <xref:System.Windows.Data.Binding> do objeto, você pode usar essa propriedade para definir um manipulador para fornecer lógica personalizada para tratar essas exceções. Se um <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> não está especificado no <xref:System.Windows.Data.Binding>, o mecanismo de associação cria um <xref:System.Windows.Controls.ValidationError> com a exceção e adiciona-o para o <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> coleção do elemento associado.  
+  
+   
+  
+## Examples  
+ O <xref:System.Windows.Controls.TextBox.Text%2A> propriedade das seguintes <xref:System.Windows.Controls.TextBox> dados associados a uma propriedade de origem `Age3` que é do tipo `int`. O <xref:System.Windows.Controls.ExceptionValidationRule> verificações para exceções geradas durante a atualização da propriedade de origem (por exemplo, quando o usuário insere um valor que não pode ser convertido em um número inteiro).  
+  
+ [!code-xaml[BindValidation#tbExceptionFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#tbexceptionfilter)]  
+  
+ Você pode fornecer lógica personalizada para tratar essas exceções. O exemplo a seguir mostra como usar o <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> propriedade para definir um <xref:System.Windows.Data.UpdateSourceExceptionFilterCallback>.  
+  
+ [!code-csharp[BindValidation#filtercallback](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#filtercallback)]  
+  
+ A seguir está um exemplo de implementação de um <xref:System.Windows.Data.UpdateSourceExceptionFilterCallback>.  
+  
+ [!code-csharp[BindValidation#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml.cs#handler)]  
+  
+ O <xref:System.Windows.Data.UpdateSourceExceptionFilterCallback> também pode retornar `null`, a exceção em si, ou um <xref:System.Windows.Controls.ValidationError>. Para obter mais informações, consulte <xref:System.Windows.Data.UpdateSourceExceptionFilterCallback>.  
+  
+ Para o exemplo completo, consulte [exemplo de validação de associação](http://go.microsoft.com/fwlink/?LinkID=159972).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSourceTrigger">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.UpdateSourceTrigger UpdateSourceTrigger { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Data.UpdateSourceTrigger UpdateSourceTrigger" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.UpdateSourceTrigger" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.UpdateSourceTrigger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina o intervalo das atualizações da origem de associação.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Data.UpdateSourceTrigger" />. O padrão é <see cref="F:System.Windows.Data.UpdateSourceTrigger.Default" />, que retorna o valor <see cref="T:System.Windows.Data.UpdateSourceTrigger" /> padrão da propriedade de dependência de destino. No entanto, o valor padrão para a maioria das propriedades de dependência é <see cref="F:System.Windows.Data.UpdateSourceTrigger.PropertyChanged" />, enquanto a propriedade <see cref="P:System.Windows.Controls.TextBox.Text" /> tem um valor padrão de <see cref="F:System.Windows.Data.UpdateSourceTrigger.LostFocus" />.  
+  
+ Uma maneira programática de determinar se o valor <see cref="P:System.Windows.Data.Binding.UpdateSourceTrigger" /> padrão de uma propriedade de dependência deve obter os metadados da propriedade usando <see cref="M:System.Windows.DependencyProperty.GetMetadata(System.Type)" /> e verificar o valor booliano da propriedade <see cref="P:System.Windows.FrameworkPropertyMetadata.DefaultUpdateSourceTrigger" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Associações que são <xref:System.Windows.Data.BindingMode.TwoWay> ou <xref:System.Windows.Data.BindingMode.OneWayToSource> as alterações na propriedade de destino e propagá-los de volta para a fonte. Isso é conhecido como atualização da origem. Geralmente, essas atualizações ocorrem sempre que a propriedade de destino é alterado. Isso é bom para caixas de seleção e outros controles simples, mas geralmente não é apropriado para campos de texto. Atualizando após cada pressionamento de tecla pode reduzir o desempenho e ela impede que o usuário da oportunidade de voltar e corrigir erros de digitação antes de confirmar o novo valor. Portanto, o padrão <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor o <xref:System.Windows.Controls.TextBox.Text%2A> é de propriedade <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> e não <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
+  
+ Se você definir o <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, você deve chamar o <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> método ou as alterações não serão propagadas para a origem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatesOnDataErrors">
+      <MemberSignature Language="C#" Value="public bool ValidatesOnDataErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidatesOnDataErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.ValidatesOnDataErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a <see cref="T:System.Windows.Controls.DataErrorValidationRule" /> deve ser incluída.</summary>
+        <value>
+          <see langword="true" /> para incluir o <see cref="T:System.Windows.Controls.DataErrorValidationRule" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esta propriedade fornece uma alternativa ao uso de <xref:System.Windows.Controls.DataErrorValidationRule> elemento explicitamente. O <xref:System.Windows.Controls.DataErrorValidationRule> é uma regra de validação interna que verifica os erros que são gerados pelo <xref:System.ComponentModel.IDataErrorInfo> implementação do objeto de origem. Se um erro for gerado, o mecanismo de associação cria um <xref:System.Windows.Controls.ValidationError> com o erro e adiciona-o para o <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> coleção do elemento associado. A falta de um erro limpa esses comentários de validação, a menos que outra regra gera um problema de validação.  
+  
+ <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>é introduzido no .NET Framework versão 3.5.  Para obter mais informações, confira [Versões e dependências do .NET Framework](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir usa <xref:System.ComponentModel.IDataErrorInfo> e <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> para validar a entrada do usuário em um <xref:System.Windows.Controls.TextBox>. O primeiro exemplo cria um tipo de dados que implementa <xref:System.ComponentModel.IDataErrorInfo> para relatar erros de validação.  
+  
+ [!code-csharp[BindingValidationAttributesSnippets#IDataErrorInfoData](~/samples/snippets/csharp/VS_Snippets_Wpf/bindingvalidationattributessnippets/csharp/data.cs#idataerrorinfodata)]
+ [!code-vb[BindingValidationAttributesSnippets#IDataErrorInfoData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/bindingvalidationattributessnippets/visualbasic/window1.xaml.vb#idataerrorinfodata)]  
+  
+ O exemplo a seguir associa o `Age` propriedade para o <xref:System.Windows.Controls.TextBox> e define <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> para `true` no <xref:System.Windows.Data.Binding>.  Quando o usuário insere um valor inválido, uma borda vermelha aparece no <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.ToolTip> relata a mensagem de erro.  
+  
+ [!code-xaml[BindingValidationAttributesSnippets#IDataErrorInfoXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/bindingvalidationattributessnippets/csharp/window1.xaml#idataerrorinfoxaml)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatesOnExceptions">
+      <MemberSignature Language="C#" Value="public bool ValidatesOnExceptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidatesOnExceptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.ValidatesOnExceptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a <see cref="T:System.Windows.Controls.ExceptionValidationRule" /> deve ser incluída.</summary>
+        <value>
+          <see langword="true" /> para incluir o <see cref="T:System.Windows.Controls.ExceptionValidationRule" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir esta propriedade fornece uma alternativa ao uso de <xref:System.Windows.Controls.ExceptionValidationRule> elemento explicitamente. O <xref:System.Windows.Controls.ExceptionValidationRule> é uma regra de validação interna que verifica para exceções geradas durante a atualização da propriedade de origem. Se uma exceção for lançada, o mecanismo de associação cria um <xref:System.Windows.Controls.ValidationError> com a exceção e adiciona-o para o <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> coleção do elemento associado. A falta de um erro limpa esses comentários de validação, a menos que outra regra gera um problema de validação.  
+  
+ <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>é introduzido no .NET Framework versão 3.5.  Para obter mais informações, confira [Versões e dependências do .NET Framework](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Os exemplos seguintes usam <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> para validar a entrada do usuário em um <xref:System.Windows.Controls.TextBox>. O primeiro exemplo cria um tipo de dados que lança uma exceção quando o `Age` propriedade é definida como uma propriedade inválida.  
+  
+ [!code-csharp[BindingValidationAttributesSnippets#ThrowExceptionData](~/samples/snippets/csharp/VS_Snippets_Wpf/bindingvalidationattributessnippets/csharp/data.cs#throwexceptiondata)]
+ [!code-vb[BindingValidationAttributesSnippets#ThrowExceptionData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/bindingvalidationattributessnippets/visualbasic/window1.xaml.vb#throwexceptiondata)]  
+  
+ O exemplo a seguir associa o `Age` propriedade para o <xref:System.Windows.Controls.TextBox> e define <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> para `true` no <xref:System.Windows.Data.Binding>. Quando o usuário insere um valor inválido, uma borda vermelha aparece no <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.ToolTip> relata a mensagem de erro.  
+  
+ [!code-xaml[BindingValidationAttributesSnippets#ThrowExceptionXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/bindingvalidationattributessnippets/csharp/window1.xaml#throwexceptionxaml)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatesOnNotifyDataErrors">
+      <MemberSignature Language="C#" Value="public bool ValidatesOnNotifyDataErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidatesOnNotifyDataErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.ValidatesOnNotifyDataErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a <see cref="T:System.Windows.Controls.NotifyDataErrorValidationRule" /> deve ser incluída.</summary>
+        <value>
+          <see langword="true" /> para incluir o <see cref="T:System.Windows.Controls.NotifyDataErrorValidationRule" />; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Data.Binding.ValidatesOnNotifyDataErrors%2A> é `true`, a associação verifica e relata erros que são gerados por uma fonte de dados que implementa <xref:System.ComponentModel.INotifyDataErrorInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationRules">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Windows.Controls.ValidationRule&gt; ValidationRules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Windows.Controls.ValidationRule&gt; ValidationRules" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.ValidationRules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Windows.Controls.ValidationRule&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de regras que verificam a validade da entrada do usuário.</summary>
+        <value>Uma coleção de objetos <see cref="T:System.Windows.Controls.ValidationRule" /> .</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] modelo de associação de dados permite que você associe <xref:System.Windows.Data.Binding.ValidationRules%2A> com seus <xref:System.Windows.Data.Binding> ou <xref:System.Windows.Data.MultiBinding> objeto. Você pode criar regras personalizadas derivando a <xref:System.Windows.Controls.ValidationRule> classe e implementando o <xref:System.Windows.Controls.ValidationRule.Validate%2A> método, ou você pode usar o interno <xref:System.Windows.Controls.ExceptionValidationRule>, que invalida um valor se houver exceções durante as atualizações de fonte.  
+  
+ O mecanismo de associação verifica cada <xref:System.Windows.Controls.ValidationRule> associados com uma associação de cada vez que um valor de entrada (o associação propriedade valor de destino) é transferido para a propriedade de origem da associação. Para obter uma discussão detalhada sobre o processo de validação, consulte a seção de validação de dados no [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+> [!NOTE]
+>  Essa propriedade pode ser definida [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] usando a sintaxe de coleção mostrada ou acessar o objeto de coleção e usando seus vários métodos, como `Add`. A propriedade para acessar o objeto de coleção é somente leitura, enquanto a coleção em si é leitura / gravação.  
+  
+<a name="xamlPropertyElementUsage_ValidationRules"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<object>  
+  <object.ValidationRules>  
+    oneOrMoreValidationRules  
+  </object.ValidationRules>  
+</object>  
+  
+```  
+  
+<a name="xamlValues_ValidationRules"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *oneOrMoreValidationRules*  
+ Um ou mais <xref:System.Windows.Controls.ValidationRule> objetos. Você pode usar o <xref:System.Windows.Controls.ExceptionValidationRule> classe ou criar regras personalizadas, subclassificação o <xref:System.Windows.Controls.ValidationRule> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNamespaceManagerProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty XmlNamespaceManagerProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty XmlNamespaceManagerProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.Binding.XmlNamespaceManagerProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Data.Binding.XmlNamespaceManager" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="public string XPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.Binding.XPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see langword="XPath" /> consulta que retorna o valor de [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] fonte de associação a ser usada.</summary>
+        <value>A consulta <see langword="XPath" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a fonte de associação é [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] dados em vez de um [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] objeto, o <xref:System.Windows.Data.Binding.XPath%2A> propriedade é usada em vez do <xref:System.Windows.Data.Binding.Path%2A> propriedade para indicar o caminho para o valor na fonte de associação a ser usado.  
+  
+ Definindo o <xref:System.Windows.Data.Binding.XPath%2A> propriedade, você está criando uma `XPath` consulta para selecionar um nó ou uma coleção de nós (<xref:System.Xml.XmlElement?displayProperty=nameWithType> e <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> ambos derivam <xref:System.Xml.XmlNode?displayProperty=nameWithType>). <xref:System.Xml.XmlNode?displayProperty=nameWithType>é um [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] objeto, o que significa que você pode vincular a suas propriedades usando o <xref:System.Windows.Data.Binding.Path%2A> propriedade.  
+  
+ O <xref:System.Xml.XmlNode.SelectNodes%2A?displayProperty=nameWithType> método trata o `XPath` expressões do <xref:System.Windows.Data.Binding.XPath%2A> propriedade. `XPath`Não há suporte para funções. Para `XPath` informações de expressão, consulte o <xref:System.Xml.XmlNode.SelectNodes%2A> documentação e exemplos fornecidos na seção de exemplo.  
+  
+ LINQ para XML objetos <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement> não use `XPath`. Para obter detalhes, consulte [como: associar a XDocument, XElement ou LINQ para XML resultados da consulta](~/docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

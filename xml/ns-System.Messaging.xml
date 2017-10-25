@@ -1,0 +1,53 @@
+<Namespace Name="System.Messaging">
+  <Docs>
+    <summary>O <see cref="N:System.Messaging" /> namespace fornece classes que permitem que você se conectar, monitorar e administrar as filas de mensagens na rede e enviar, recebem, ou inspecionar mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Membros de <xref:System.Messaging.MessageQueue> classe inclui os seguintes métodos para ler e gravar mensagens em fila:  
+  
+-   O <xref:System.Messaging.MessageQueue.Send%2A> método permite que seu aplicativo gravar mensagens na fila. Sobrecargas do método permitem que você especifique se deseja enviar a mensagem usando um <xref:System.Messaging.Message> (que fornece controle sobre as informações que você enviar detalhado) ou qualquer outro objeto gerenciado, incluindo classes específicas de aplicativo. O método também oferece suporte ao envio de mensagens como parte de uma transação.  
+  
+-   O <xref:System.Messaging.MessageQueue.Receive%2A>, <xref:System.Messaging.MessageQueue.ReceiveById%2A>, e <xref:System.Messaging.MessageQueue.ReceiveByCorrelationId%2A> métodos fornecem funcionalidade para ler mensagens de uma fila. Como o <xref:System.Messaging.MessageQueue.Send%2A> método, esses métodos fornecem sobrecargas que dão suporte ao processamento de fila transacional. Esses métodos também fornecem sobrecargas com o tempo limite.  
+  
+     Parâmetros de saída que habilitar o processamento continuará se a fila está vazia. Como esses métodos são exemplos de processamento síncrono, interromperem o thread atual até que uma mensagem esteja disponível, a menos que você especifique um tempo limite.  
+  
+-   O <xref:System.Messaging.MessageQueue.Peek%2A> método é semelhante ao <xref:System.Messaging.MessageQueue.Receive%2A>, mas não faz com que uma mensagem a ser removida da fila quando ela é lida. Porque <xref:System.Messaging.MessageQueue.Peek%2A> não altera o conteúdo da fila, não há nenhuma sobrecarga para dar suporte ao processamento transacional. No entanto, como <xref:System.Messaging.MessageQueue.Peek%2A>, como <xref:System.Messaging.MessageQueue.Receive%2A>, lê mensagens da fila de forma síncrona, sobrecargas do método dão suporte a especificação de um tempo limite para evitar que o thread de espera indefinidamente.  
+  
+-   O <xref:System.Messaging.MessageQueue.BeginPeek%2A>, <xref:System.Messaging.MessageQueue.EndPeek%28System.IAsyncResult%29>, <xref:System.Messaging.MessageQueue.BeginReceive%2A>, e <xref:System.Messaging.MessageQueue.EndReceive%28System.IAsyncResult%29> métodos fornecem maneiras de modo assíncrono ler mensagens da fila. Eles não interrompam o thread atual enquanto aguarda uma mensagem para chegar na fila.  
+  
+ Os seguintes métodos do <xref:System.Messaging.MessageQueue> classe fornecem funcionalidade para recuperar a lista de filas pelos critérios especificados e determinar se existem filas específicas:  
+  
+-   <xref:System.Messaging.MessageQueue.GetPrivateQueuesByMachine%28System.String%29>permite a recuperação das filas privadas em um computador.  
+  
+-   <xref:System.Messaging.MessageQueue.GetPublicQueuesByCategory%28System.Guid%29>, <xref:System.Messaging.MessageQueue.GetPublicQueuesByLabel%28System.String%29>, e <xref:System.Messaging.MessageQueue.GetPublicQueuesByMachine%28System.String%29> fornecem maneiras de recuperar filas públicas com critérios comuns. Uma sobrecarga de <xref:System.Messaging.MessageQueue.GetPublicQueues%2A> fornece ainda mais detalhes para a seleção de filas com base em um número de critérios de pesquisa.  
+  
+ Outros métodos de <xref:System.Messaging.MessageQueue> classe fornecer a seguinte funcionalidade:  
+  
+-   Criar e excluir filas do enfileiramento de mensagens.  
+  
+-   Usando um enumerador de mensagem para percorrer as mensagens em uma fila.  
+  
+-   Usando um enumerador de fila para iteração por meio de filas no sistema.  
+  
+-   Configurar direitos de acesso com base em ACL.  
+  
+-   Trabalhando com o cache de conexão.  
+  
+ O <xref:System.Messaging.Message> classe fornece controle detalhado sobre as informações enviadas para uma fila e o objeto é usado quando receber ou exibir as mensagens de uma fila. Além do corpo da mensagem, as propriedades da <xref:System.Messaging.Message> classe incluem configurações de confirmação, seleção de formatador, informações de identificação, autenticação e criptografia, os carimbos de hora, indicações sobre como usar o rastreamento, registro em log do servidor e filas de mensagens mortas e dados da transação.  
+  
+ O <xref:System.Messaging.MessageQueue> componente está associado com os seguintes três formatadores, que permitem a você serializar e desserializar mensagens enviadas e recebidas das filas:  
+  
+-   O <xref:System.Messaging.XmlMessageFormatter> fornece mensagens acoplados de forma flexível, permitindo que o controle de versão independente dos tipos serializados no cliente e no servidor.  
+  
+-   O <xref:System.Messaging.ActiveXMessageFormatter> é compatível com o controle COM MSMQ. Ele permite que você para tipos que podem ser recebidos pelo controle de enviar e receber tipos que foram enviados pelo controle.  
+  
+-   O <xref:System.Messaging.BinaryMessageFormatter> fornece uma alternativa mais rápida para o <xref:System.Messaging.XmlMessageFormatter>, mas sem o benefício de mensagens acoplados de forma flexível.  
+  
+ Outras classes de `Messaging` namespace dão suporte a acesso a código e segurança baseada em ACL, filtragem <xref:System.Messaging.Message> propriedades quando ler mensagens de uma fila e uso de transações quando enviar e receber mensagens.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

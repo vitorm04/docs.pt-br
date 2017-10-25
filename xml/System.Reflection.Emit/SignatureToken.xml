@@ -1,0 +1,193 @@
+<Type Name="SignatureToken" FullName="System.Reflection.Emit.SignatureToken">
+  <TypeSignature Language="C#" Value="public struct SignatureToken" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit SignatureToken extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.SignatureToken" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o <see langword="Token" /> retornado pelos metadados para representar uma assinatura.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Reflection.Emit.SignatureToken Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Reflection.Emit.SignatureToken Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.SignatureToken.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.SignatureToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O padrão <see langword="SignatureToken" /> com <see cref="P:System.Reflection.Emit.SignatureToken.Token" /> valor 0.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureToken.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com esse <see langword="SignatureToken" />.</param>
+        <summary>Verifica se o objeto fornecido é uma instância de <see langword="SignatureToken" /> e é igual a esta instância.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é uma instância de <see langword="SignatureToken" /> e é igual a este objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Reflection.Emit.SignatureToken obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Reflection.Emit.SignatureToken obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureToken.Equals(System.Reflection.Emit.SignatureToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Reflection.Emit.SignatureToken" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Reflection.Emit.SignatureToken" /> para comparar com a instância atual.</param>
+        <summary>Indica se a instância atual é igual ao especificado <see cref="T:System.Reflection.Emit.SignatureToken" />.</summary>
+        <returns>
+          <see langword="true" />Se o valor de <paramref name="obj" /> é igual ao valor da instância atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureToken.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera o código hash para essa assinatura.</summary>
+        <returns>Retorna o código hash para essa assinatura.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Reflection.Emit.SignatureToken a, System.Reflection.Emit.SignatureToken b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Reflection.Emit.SignatureToken a, valuetype System.Reflection.Emit.SignatureToken b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureToken.op_Equality(System.Reflection.Emit.SignatureToken,System.Reflection.Emit.SignatureToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Reflection.Emit.SignatureToken" />
+        <Parameter Name="b" Type="System.Reflection.Emit.SignatureToken" />
+      </Parameters>
+      <Docs>
+        <param name="a">O <see cref="T:System.Reflection.Emit.SignatureToken" /> para comparar com <c>b</c>.</param>
+        <param name="b">O <see cref="T:System.Reflection.Emit.SignatureToken" /> para comparar com <c>um</c>.</param>
+        <summary>Indica se duas estruturas <see cref="T:System.Reflection.Emit.SignatureToken" /> são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="a" /> for igual a <paramref name="b" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.Reflection.Emit.SignatureToken.Equals%28System.Reflection.Emit.SignatureToken%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Reflection.Emit.SignatureToken a, System.Reflection.Emit.SignatureToken b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Reflection.Emit.SignatureToken a, valuetype System.Reflection.Emit.SignatureToken b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.SignatureToken.op_Inequality(System.Reflection.Emit.SignatureToken,System.Reflection.Emit.SignatureToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Reflection.Emit.SignatureToken" />
+        <Parameter Name="b" Type="System.Reflection.Emit.SignatureToken" />
+      </Parameters>
+      <Docs>
+        <param name="a">O <see cref="T:System.Reflection.Emit.SignatureToken" /> para comparar com <c>b</c>.</param>
+        <param name="b">O <see cref="T:System.Reflection.Emit.SignatureToken" /> para comparar com <c>um</c>.</param>
+        <summary>Indica se dois <see cref="T:System.Reflection.Emit.SignatureToken" /> estruturas não são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="a" /> não for igual a <paramref name="b" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.Reflection.Emit.SignatureToken.Equals%28System.Reflection.Emit.SignatureToken%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Token">
+      <MemberSignature Language="C#" Value="public int Token { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Token" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.SignatureToken.Token" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupera o token de metadados para a assinatura de variável local para esse método.</summary>
+        <value>Somente leitura. Recupera o token de metadados desta assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso retorna uma representação numérica do token de metadados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,238 @@
+<Type Name="FontStyle" FullName="System.Windows.FontStyle">
+  <TypeSignature Language="C#" Value="public struct FontStyle : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit FontStyle extends System.ValueType implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontStyle" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.FontStyleConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define uma estrutura que representa o estilo de um tipo de fonte como normal, itálico ou oblíquo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Três termos categorizam a inclinação de uma fonte: normal, itálico e oblíquo.  
+  
+|Estilo da fonte|Descrição|  
+|----------------|-----------------|  
+|Normal|Os caracteres em uma fonte normal ou roman, são vertical.|  
+|Italic|Os caracteres em uma fonte em itálico são realmente inclinados e aparecem como eles foram criados.|  
+|Oblíqua|Os caracteres em uma fonte oblíqua são inclinados artificialmente. A inclinação é obtida executando uma transformação de distorção de caracteres de uma fonte normal. Quando uma fonte em itálico real não está disponível em um computador ou impressora, um estilo oblíqua pode gerados a partir da fonte normal e usados para simular uma fonte em itálico.|  
+  
+ Você pode usar os valores enumerados do <xref:System.Windows.FontStyles> classe para definir o <xref:System.Windows.FontStyle> estrutura.  
+  
+<a name="xamlAttributeUsage_FontWeight"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object fontStyleProperty="fontStylesValue"/>  
+```  
+  
+<a name="xamlValues_FontWeight"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *fontStylesValue*  
+ Um <xref:System.Windows.FontStyles> valor, como "Normal", "Itálico" ou "Oblíqua".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define `"Italic"` como o <xref:System.Windows.FontStyle>.  
+  
+ [!code-xaml[FontSnippets#FontStyleSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontStyleSnippets.xaml#fontstylesnippet5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyle.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> valor que representa o <see cref="T:System.Windows.FontStyle" /> para comparação de igualdade.</param>
+        <summary>Compara uma <see cref="T:System.Object" /> com atual <see cref="T:System.Windows.FontStyle" /> instância para igualdade.</summary>
+        <returns>
+          <see langword="true" />para mostrar que as duas instâncias forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.FontStyle obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.FontStyle obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyle.Equals(System.Windows.FontStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Windows.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Uma instância de <see cref="T:System.Windows.FontStyle" /> para comparação de igualdade.</param>
+        <summary>Compara uma <see cref="T:System.Windows.FontStyle" /> com atual <see cref="T:System.Windows.FontStyle" /> instância para igualdade.</summary>
+        <returns>
+          <see langword="true" />para mostrar que as duas instâncias forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyle.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o código hash para esse objeto.</summary>
+        <returns>Um código hash de 32 bits, que é um inteiro com sinal.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A valor retornado atua como uma função de hash para um tipo específico, adequada para uso em algoritmos de hash e dados estruturas de como uma tabela de hash.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.FontStyle left, System.Windows.FontStyle right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.FontStyle left, valuetype System.Windows.FontStyle right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyle.op_Equality(System.Windows.FontStyle,System.Windows.FontStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontStyle" />
+        <Parameter Name="right" Type="System.Windows.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="left">A primeira instância do <see cref="T:System.Windows.FontStyle" /> para comparar.</param>
+        <param name="right">A segunda instância de <see cref="T:System.Windows.FontStyle" /> para comparar.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Windows.FontStyle" /> para igualdade.</summary>
+        <returns>
+          <see langword="true" />para mostrar especificado <see cref="T:System.Windows.FontStyle" /> objetos forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.FontStyle left, System.Windows.FontStyle right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.FontStyle left, valuetype System.Windows.FontStyle right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyle.op_Inequality(System.Windows.FontStyle,System.Windows.FontStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.FontStyle" />
+        <Parameter Name="right" Type="System.Windows.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="left">A primeira instância do <see cref="T:System.Windows.FontStyle" /> para comparar.</param>
+        <param name="right">A segunda instância de <see cref="T:System.Windows.FontStyle" /> para comparar.</param>
+        <summary>Avalia as duas instâncias de <see cref="T:System.Windows.FontStyle" /> para determinar o operador de desigualdade.</summary>
+        <returns>
+          <see langword="false" />para mostrar <paramref name="left" /> é igual a <paramref name="right" />; caso contrário, <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyle.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">O <see cref="T:System.String" /> especificando o formato a ser usado.  
+  
+ -ou-  
+  
+ <see langword="null" />Para usar o formato padrão definido para o tipo do <see cref="T:System.IFormattable" /> implementação.</param>
+        <param name="provider">O <see cref="T:System.IFormatProvider" /> usado para formatar o valor.  
+  
+ -ou-  
+  
+ <see langword="null" />Para obter as informações de formato numérico da configuração de localidade atual do sistema operacional.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém o valor da instância atual no formato especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.FontStyle.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.String" /> que representa o atual <see cref="T:System.Windows.FontStyle" /> de objeto e se baseia o <see cref="P:System.Globalization.CultureInfo.CurrentCulture" /> informações de propriedade.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o valor da <see cref="T:System.Windows.FontStyle" /> objeto, como "Normal", "Itálico" ou "Oblíqua".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

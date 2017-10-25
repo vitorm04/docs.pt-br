@@ -1,0 +1,297 @@
+<Type Name="DirectorySynchronization" FullName="System.DirectoryServices.DirectorySynchronization">
+  <TypeSignature Language="C#" Value="public class DirectorySynchronization" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DirectorySynchronization extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.DirectorySynchronization" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica como sincronizar um diretório em um domínio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo c# a seguir mostra como sincronizar um diretório.  
+  
+```csharp  
+DirectorySearcher src = new DirectorySearcher("…");   
+src.DirectorySynchornization= new DirectorySynchronization(); // Initiate dirsync,   
+                                                              // this means a full synch  
+  
+foreach(SearchResult res in src.FindAll() )  
+{  
+    Console.WriteLine(…");  
+}  
+  
+// Restart the dirsync   
+foreach(SearchResult res in src.FindAll() )  
+{  
+    Console.WriteLine(…");  
+}  
+  
+```  
+  
+ O exemplo c# a seguir mostra como sincronizar um diretório por persistir para um arquivo.  
+  
+```csharp  
+DirectorySearcher src = new DirectorySearcher("…");   
+src.DirectorySynchornization= new DirectorySynchronization(); // Initiate dirsync,   
+                                                              // this means a full synch  
+  
+foreach(SearchResult res in src.FindAll() )  
+{  
+    Console.WriteLine(…");  
+}  
+  
+// Now they should be able to persist the dirSync cookie, by serializing to a file.   
+FileStream myStream = File.Create("dirsync.data");  
+BinaryFormatter fmt = new BinaryFormatter();  
+fmt.Serialize(myStream, src.DirectorySynchronization);  
+myStream.Close();  
+… ….  
+  
+// At some point in time, we wake up and read by de-serializing the dirSync cookie,   
+// and resume the  dirSync   
+FileStream myStream = FileCreate("dirsync.data");  
+BinaryFormatter fmt = new BinaryFormatter();  
+DirectorySynchronization dirSync = fmt.Deserialize(myStream);  
+  
+DirectorySearcher src = new DirectorySearcher(…);  
+src.DirectorySynchronization = dirSync;  
+  
+foreach(SearchResult res in src.FindAll() )  
+{  
+    Console.WriteLine(…");  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySynchronization ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySynchronization.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do objeto <see cref="T:System.DirectoryServices.DirectorySynchronization" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySynchronization (byte[] cookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] cookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySynchronization.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cookie" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="cookie">Um objeto de tipo de dados de bytes que especifica o cookie de pesquisa de sincronização de diretório.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.DirectorySynchronization" /> objeto com um cookie.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySynchronization (System.DirectoryServices.DirectorySynchronization sync);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.DirectorySynchronization sync) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySynchronization.#ctor(System.DirectoryServices.DirectorySynchronization)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sync" Type="System.DirectoryServices.DirectorySynchronization" />
+      </Parameters>
+      <Docs>
+        <param name="sync">Um <see cref="T:System.DirectoryServices.DirectorySynchronization" /> objeto do tipo de dados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.DirectorySynchronization" /> objeto com um objeto de sincronização de diretório.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySynchronization (System.DirectoryServices.DirectorySynchronizationOptions option);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DirectoryServices.DirectorySynchronizationOptions option) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySynchronization.#ctor(System.DirectoryServices.DirectorySynchronizationOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="option" Type="System.DirectoryServices.DirectorySynchronizationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="option">Um <see cref="T:System.DirectoryServices.DirectorySynchronizationOptions" /> objeto de tipo de dados que especifica como uma pesquisa de sincronização de diretório é executada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.DirectorySynchronization" /> objeto com uma opção de sincronização de diretório.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectorySynchronization (System.DirectoryServices.DirectorySynchronizationOptions option, byte[] cookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DirectoryServices.DirectorySynchronizationOptions option, unsigned int8[] cookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySynchronization.#ctor(System.DirectoryServices.DirectorySynchronizationOptions,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="option" Type="System.DirectoryServices.DirectorySynchronizationOptions" />
+        <Parameter Name="cookie" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="option">Um <see cref="T:System.DirectoryServices.DirectorySynchronizationOptions" /> objeto de tipo de dados que especifica como uma pesquisa de sincronização de diretório é executada.</param>
+        <param name="cookie">Um objeto de tipo de dados de bytes que especifica o cookie de pesquisa de sincronização de diretório.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.DirectorySynchronization" /> objeto com uma opção de sincronização de diretório e o cookie.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectorySynchronization Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.DirectorySynchronization Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySynchronization.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronization</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cópia do atual <see cref="T:System.DirectoryServices.DirectorySynchronization" /> instância.</summary>
+        <returns>Retorna um objeto <see cref="T:System.DirectoryServices.DirectorySynchronization" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectorySynchronizationCookie">
+      <MemberSignature Language="C#" Value="public byte[] GetDirectorySynchronizationCookie ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetDirectorySynchronizationCookie() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySynchronization.GetDirectorySynchronizationCookie" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o cookie de pesquisa de sincronização de diretório.</summary>
+        <returns>O objeto de cookie de pesquisa de sincronização de diretório.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os resultados da pesquisa devem ser enumerados antes que o cookie pode ser recuperado. Para obter mais informações, consulte o exemplo de código [tirar um instantâneo de uma pesquisa de DirSync posteriormente](http://msdn.microsoft.com/msdnmag/issues/05/12/DirectoryServices/default.aspx?loc=&fig=true).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Option">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectorySynchronizationOptions Option { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.DirectorySynchronizationOptions Option" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectorySynchronization.Option" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.DirectoryServices.DSDescription("DSDirectorySynchronizationFlag")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as opções para a pesquisa de sincronização de diretório.</summary>
+        <value>Um objeto <see cref="T:System.DirectoryServices.DirectorySynchronizationOptions" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As opções que podem ser usadas com essa propriedade são encontradas no <xref:System.DirectoryServices.DirectorySynchronizationOptions> enumeração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor não é um dos valores <see cref="T:System.DirectoryServices.DirectorySynchronizationOptions" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetDirectorySynchronizationCookie">
+      <MemberSignature Language="C#" Value="public void ResetDirectorySynchronizationCookie ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetDirectorySynchronizationCookie() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySynchronization.ResetDirectorySynchronizationCookie" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Resetss o cookie de pesquisa de sincronização de diretório.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetDirectorySynchronizationCookie">
+      <MemberSignature Language="C#" Value="public void ResetDirectorySynchronizationCookie (byte[] cookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetDirectorySynchronizationCookie(unsigned int8[] cookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectorySynchronization.ResetDirectorySynchronizationCookie(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cookie" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="cookie">Um objeto de tipo de dados de bytes que contém um cookie de pesquisa de sincronização de diretório.  Este método redefine o cookie para este <see cref="T:System.DirectoryServices.DirectorySynchronization" /> instância de objeto para esse valor.</param>
+        <summary>Redefine o cookie de pesquisa de sincronização de diretório.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

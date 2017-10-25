@@ -1,0 +1,67 @@
+<Type Name="ConflictMode" FullName="System.Data.Linq.ConflictMode">
+  <TypeSignature Language="C#" Value="public enum ConflictMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConflictMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.ConflictMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica quando os conflitos de simultaneidade devem ser relatados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+  
+```vb  
+db.SubmitChanges(ConflictMode.FailOnFirstConflict)  
+```  
+  
+```csharp  
+db.SubmitChanges(ConflictMode.FailOnFirstConflict);  
+```  
+  
+ [!code-csharp[System.Data.Linq.ConflictModeEnumeration#1](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.conflictmodeenumeration/cs/program.cs#1)]
+ [!code-vb[System.Data.Linq.ConflictModeEnumeration#1](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.conflictmodeenumeration/vb/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContinueOnConflict">
+      <MemberSignature Language="C#" Value="ContinueOnConflict" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Linq.ConflictMode ContinueOnConflict = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Linq.ConflictMode.ContinueOnConflict" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.ConflictMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que todas as atualizações para o banco de dados devem ser tentadas e que conflitos de simultaneidade devem ser acumulados e retornados no final do processo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FailOnFirstConflict">
+      <MemberSignature Language="C#" Value="FailOnFirstConflict" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Linq.ConflictMode FailOnFirstConflict = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Linq.ConflictMode.FailOnFirstConflict" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.ConflictMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as tentativas de atualizar o banco de dados devem parar imediatamente quando o primeiro erro de conflito de simultaneidade é detectado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

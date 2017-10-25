@@ -1,0 +1,36 @@
+<Type Name="DependencyPropertyChangedEventHandler" FullName="System.Windows.DependencyPropertyChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DependencyPropertyChangedEventHandler(object sender, DependencyPropertyChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DependencyPropertyChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DependencyPropertyChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa o método que manipulará os eventos gerados quando um <see cref="T:System.Windows.DependencyProperty" /> for alterado em uma implementação <see cref="T:System.Windows.DependencyObject" /> específica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este delegado é a assinatura de manipulador de eventos específicos que as alterações de propriedade de dependência de relatório.  
+  
+ Um evento que usa esse manipulador é exposto como um [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] evento, não como um evento roteado. Normalmente, esses eventos seguem o padrão de nomenclatura `Is(` *PropertyName*`)Changed`, onde *PropertyName* é o <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> da propriedade que foram alteradas. Os argumentos do evento são usados para consultar o valor antigo e novo da propriedade, conforme relatado pelo evento específico. Normalmente há uma correspondência 1:1 entre propriedades de alteração e um evento específico que relata a alteração. Também é possível, embora incomum, ter as mesmas alterações de relatório de eventos para mais de uma propriedade. Nesse caso, o <xref:System.Windows.DependencyPropertyChangedEventArgs> devem ser verificados para determinar a propriedade alterada.  
+  
+ A classe de dados de evento <xref:System.Windows.DependencyPropertyChangedEventArgs> possui um uso mais amplo que apenas este delegado. <xref:System.Windows.DependencyPropertyChangedEventArgs>também é usado para comunicação de dados para <xref:System.Windows.PropertyChangedCallback> implementações, que fazem parte dos recursos de personalização e recursos internos do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sistema de propriedade e o <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> método virtual, o que pode ser substituído para fornecer notificações específicas de classe, sempre que qualquer propriedade de dependência no objeto é alterado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

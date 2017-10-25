@@ -1,0 +1,174 @@
+<Type Name="SelectionRules" FullName="System.Windows.Forms.Design.SelectionRules">
+  <TypeSignature Language="C#" Value="public enum SelectionRules" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SelectionRules extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.SelectionRules" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define os identificadores que são usados para indicar as regras de seleção de um componente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses identificadores indicam se um componente tem alguma forma de interface de usuário visível e se o usuário pode executar ações de mover ou alterar o tamanho do componente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllSizeable">
+      <MemberSignature Language="C#" Value="AllSizeable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.SelectionRules AllSizeable = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.SelectionRules.AllSizeable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o componente oferece suporte ao dimensionamento em todas as direções.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomSizeable">
+      <MemberSignature Language="C#" Value="BottomSizeable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.SelectionRules BottomSizeable = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.SelectionRules.BottomSizeable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o oferece suporte ao componente redimensionar na parte inferior.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftSizeable">
+      <MemberSignature Language="C#" Value="LeftSizeable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.SelectionRules LeftSizeable = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.SelectionRules.LeftSizeable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o oferece suporte ao componente redimensionar da esquerda.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Locked">
+      <MemberSignature Language="C#" Value="Locked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.SelectionRules Locked = int32(-2147483648)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.SelectionRules.Locked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o componente está bloqueado para seu contêiner. Substitui o <see cref="F:System.Windows.Forms.Design.SelectionRules.Moveable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.AllSizeable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.BottomSizeable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.LeftSizeable" />, <see cref="F:System.Windows.Forms.Design.SelectionRules.RightSizeable" />, e <see cref="F:System.Windows.Forms.Design.SelectionRules.TopSizeable" /> sinalizadores dessa enumeração de bit.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Moveable">
+      <MemberSignature Language="C#" Value="Moveable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.SelectionRules Moveable = int32(268435456)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.SelectionRules.Moveable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o componente dá suporte a uma propriedade de local que permite que ele seja movido na tela.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.SelectionRules None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.SelectionRules.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não indica que nenhum atributo de seleção especiais.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightSizeable">
+      <MemberSignature Language="C#" Value="RightSizeable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.SelectionRules RightSizeable = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.SelectionRules.RightSizeable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o oferece suporte ao componente redimensionar da direita.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopSizeable">
+      <MemberSignature Language="C#" Value="TopSizeable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.SelectionRules TopSizeable = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.SelectionRules.TopSizeable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o oferece suporte ao componente redimensionar da parte superior.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="Visible" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.Design.SelectionRules Visible = int32(1073741824)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.SelectionRules.Visible" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.SelectionRules</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o componente tem alguma forma de interface de usuário visível e o serviço de seleção é desenhar uma borda de seleção ao redor essa interface do usuário. Se um componente selecionado tiver essa regra definida, você pode assumir que o componente implementa <see cref="T:System.ComponentModel.IComponent" /> e que está associada uma instância correspondente do designer.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

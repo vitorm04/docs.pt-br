@@ -1,0 +1,169 @@
+<Type Name="Saml2Conditions" FullName="System.IdentityModel.Tokens.Saml2Conditions">
+  <TypeSignature Language="C#" Value="public class Saml2Conditions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Saml2Conditions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.Saml2Conditions" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento de condições especificado em [Saml2Core 2.5.1].</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o elemento que essa classe representa, consulte a especificação principal do SAML v 2.0.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2Conditions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2Conditions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.Saml2Conditions" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudienceRestrictions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.Saml2AudienceRestriction&gt; AudienceRestrictions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.IdentityModel.Tokens.Saml2AudienceRestriction&gt; AudienceRestrictions" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Conditions.AudienceRestrictions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.IdentityModel.Tokens.Saml2AudienceRestriction&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção que especifica o público-alvo ao qual se destina a asserção. 2.5.1 [Saml2Core]</summary>
+        <value>Uma coleção de tipo <see cref="T:System.IdentityModel.Tokens.Saml2AudienceRestriction" /> que especifica o público-alvo a asserção. Se a coleção está vazia se aplicam a nenhuma restrição sobre o público-alvo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento AudienceRestrictions.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotBefore">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; NotBefore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; NotBefore" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Conditions.NotBefore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a hora mais antiga instantânea no qual a asserção é válida. 2.5.1 [Saml2Core]</summary>
+        <value>Um valor nulo <see cref="T:System.DateTime" /> que contém o tempo de instantâneo em UTC. Um <see langword="null" /> valor indica que o atributo não está presente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O atributo NotBefore.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.IdentityModel.Tokens.Saml2Conditions.NotOnOrAfter" /> propriedade não é <see langword="null" /> e uma tentativa de definir um valor que ocorre em ou após o instantâneo de tempo especificado pelo <see cref="P:System.IdentityModel.Tokens.Saml2Conditions.NotOnOrAfter" /> propriedade ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NotOnOrAfter">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; NotOnOrAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; NotOnOrAfter" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Conditions.NotOnOrAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo de instantâneo no qual a asserção expirou. 2.5.1 [Saml2Core]</summary>
+        <value>Um valor nulo <see cref="T:System.DateTime" /> que contém o tempo de instantâneo em UTC. Um <see langword="null" /> valor indica que o atributo não está presente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O atributo NotOnOrAfter.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.IdentityModel.Tokens.Saml2Conditions.NotBefore" /> propriedade não é <see langword="null" /> e uma tentativa de definir um valor que ocorre antes da hora instantânea especificada pelo <see cref="P:System.IdentityModel.Tokens.Saml2Conditions.NotBefore" /> propriedade ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OneTimeUse">
+      <MemberSignature Language="C#" Value="public bool OneTimeUse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OneTimeUse" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Conditions.OneTimeUse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se a declaração deve ser usada imediatamente e não deve ser mantida para uso futuro. 2.5.1 [Saml2Core]</summary>
+        <value>
+          <see langword="true" />Se a declaração deve ser usada imediatamente. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento OneTimeUse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyRestriction">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.Saml2ProxyRestriction ProxyRestriction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.Saml2ProxyRestriction ProxyRestriction" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2Conditions.ProxyRestriction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.Saml2ProxyRestriction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as limitações que impõe a parte afirmação terceiras partes confiáveis que deseja subsequentemente atuar como partes de afirmação próprios e asserções de problema de seus próprios com base nas informações contidas na asserção original. 2.5.1 [Saml2Core]</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.Saml2ProxyRestriction" /> que contém as restrições colocadas em partes de afirmação subsequentes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento ProxyRestriction.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,77 @@
+<Type Name="ApplicationVersionMatch" FullName="System.Security.Policy.ApplicationVersionMatch">
+  <TypeSignature Language="C#" Value="public enum ApplicationVersionMatch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ApplicationVersionMatch extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.ApplicationVersionMatch" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica como fazer a correspondência de versões quando localizar aplicativo confia em uma coleção.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Policy.ApplicationTrustCollection.Remove%2A> e <xref:System.Security.Policy.ApplicationTrustCollection.Find%2A> métodos de um <xref:System.Security.Policy.ApplicationTrustCollection> pode agir em todas as versões de um aplicativo ou a versão exata. O <xref:System.Security.Policy.ApplicationVersionMatch> enumeração permite que o chamador especificar o comportamento desejado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MatchAllVersions">
+      <MemberSignature Language="C#" Value="MatchAllVersions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Policy.ApplicationVersionMatch MatchAllVersions = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Policy.ApplicationVersionMatch.MatchAllVersions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.ApplicationVersionMatch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Corresponder em todas as versões.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchExactVersion">
+      <MemberSignature Language="C#" Value="MatchExactVersion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Policy.ApplicationVersionMatch MatchExactVersion = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Policy.ApplicationVersionMatch.MatchExactVersion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.ApplicationVersionMatch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Corresponder a versão exata.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

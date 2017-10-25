@@ -1,0 +1,238 @@
+<Type Name="GetIndexBinder" FullName="System.Dynamic.GetIndexBinder">
+  <TypeSignature Language="C#" Value="public abstract class GetIndexBinder : System.Dynamic.DynamicMetaObjectBinder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit GetIndexBinder extends System.Dynamic.DynamicMetaObjectBinder" />
+  <TypeSignature Language="DocId" Value="T:System.Dynamic.GetIndexBinder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Dynamic.DynamicMetaObjectBinder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a operação de índice de obtenção dinâmica no site de chamada, fornecendo a semântica de associação e os detalhes sobre a operação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected GetIndexBinder (System.Dynamic.CallInfo callInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Dynamic.CallInfo callInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.GetIndexBinder.#ctor(System.Dynamic.CallInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callInfo" Type="System.Dynamic.CallInfo" />
+      </Parameters>
+      <Docs>
+        <param name="callInfo">A assinatura dos argumentos no site de chamada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Dynamic.GetIndexBinder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bind">
+      <MemberSignature Language="C#" Value="public override sealed System.Dynamic.DynamicMetaObject Bind (System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Dynamic.DynamicMetaObject Bind(class System.Dynamic.DynamicMetaObject target, class System.Dynamic.DynamicMetaObject[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.GetIndexBinder.Bind(System.Dynamic.DynamicMetaObject,System.Dynamic.DynamicMetaObject[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Dynamic.DynamicMetaObject" />
+        <Parameter Name="args" Type="System.Dynamic.DynamicMetaObject[]" />
+      </Parameters>
+      <Docs>
+        <param name="target">O destino da operação de índice de obtenção dinâmico.</param>
+        <param name="args">Uma matriz de argumentos da operação de índice de obtenção dinâmico.</param>
+        <summary>Executa a associação da operação de índice de obtenção dinâmico.</summary>
+        <returns>O <see cref="T:System.Dynamic.DynamicMetaObject" /> que representa o resultado da associação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallInfo">
+      <MemberSignature Language="C#" Value="public System.Dynamic.CallInfo CallInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Dynamic.CallInfo CallInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Dynamic.GetIndexBinder.CallInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.CallInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a assinatura dos argumentos no site de chamada.</summary>
+        <value>A assinatura dos argumentos no site de chamada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackGetIndex">
+      <MemberSignature Language="C#" Value="public System.Dynamic.DynamicMetaObject FallbackGetIndex (System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] indexes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Dynamic.DynamicMetaObject FallbackGetIndex(class System.Dynamic.DynamicMetaObject target, class System.Dynamic.DynamicMetaObject[] indexes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.GetIndexBinder.FallbackGetIndex(System.Dynamic.DynamicMetaObject,System.Dynamic.DynamicMetaObject[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Dynamic.DynamicMetaObject" />
+        <Parameter Name="indexes" Type="System.Dynamic.DynamicMetaObject[]" />
+      </Parameters>
+      <Docs>
+        <param name="target">O destino da operação de índice de obtenção dinâmico.</param>
+        <param name="indexes">Os argumentos de dinâmico obtém a operação de índice.</param>
+        <summary>Executa a associação da operação de índice de obtenção dinâmico se não é possível associar o objeto de destino dinâmico.</summary>
+        <returns>O <see cref="T:System.Dynamic.DynamicMetaObject" /> que representa o resultado da associação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FallbackGetIndex">
+      <MemberSignature Language="C#" Value="public abstract System.Dynamic.DynamicMetaObject FallbackGetIndex (System.Dynamic.DynamicMetaObject target, System.Dynamic.DynamicMetaObject[] indexes, System.Dynamic.DynamicMetaObject errorSuggestion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject FallbackGetIndex(class System.Dynamic.DynamicMetaObject target, class System.Dynamic.DynamicMetaObject[] indexes, class System.Dynamic.DynamicMetaObject errorSuggestion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.GetIndexBinder.FallbackGetIndex(System.Dynamic.DynamicMetaObject,System.Dynamic.DynamicMetaObject[],System.Dynamic.DynamicMetaObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Dynamic.DynamicMetaObject" />
+        <Parameter Name="indexes" Type="System.Dynamic.DynamicMetaObject[]" />
+        <Parameter Name="errorSuggestion" Type="System.Dynamic.DynamicMetaObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">O destino da operação de índice de obtenção dinâmico.</param>
+        <param name="indexes">Os argumentos de dinâmico obtém a operação de índice.</param>
+        <param name="errorSuggestion">O resultado da associação a ser usado se a falha de associação, ou nulo.</param>
+        <summary>Quando substituído na classe derivada, executa a associação da operação de índice de obtenção dinâmico se não é possível associar o objeto de destino dinâmico.</summary>
+        <returns>O <see cref="T:System.Dynamic.DynamicMetaObject" /> que representa o resultado da associação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public override sealed Type ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Dynamic.GetIndexBinder.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tipo de resultado da operação.</summary>
+        <value>O <see cref="T:System.Type" /> objeto que representa o tipo de resultado da operação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

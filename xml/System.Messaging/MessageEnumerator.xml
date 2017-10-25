@@ -1,0 +1,576 @@
+<Type Name="MessageEnumerator" FullName="System.Messaging.MessageEnumerator">
+  <TypeSignature Language="C#" Value="public class MessageEnumerator : MarshalByRefObject, IDisposable, System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageEnumerator extends System.MarshalByRefObject implements class System.Collections.IEnumerator, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece um cursor somente de avanço para enumerar por meio de mensagens em uma fila de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Messaging.MessageEnumerator> para dinâmica interação com as mensagens em uma fila. Métodos disponíveis por meio de <xref:System.Messaging.MessageQueue> classe pode retornar um <xref:System.Messaging.MessageEnumerator> apontando para uma lista dinâmica de mensagens na fila, ou uma matriz que contém uma cópia em um dado momento - um instantâneo - da fila no momento em que o método especificado foi chamado.  
+  
+ Ao contrário de um instantâneo estático, um enumerador permite modificar a coleção. Usando um <xref:System.Messaging.MessageEnumerator>, você pode remover mensagens da fila e a alteração será refletida imediatamente na fila.  
+  
+ Um enumerador não remove as mensagens da fila quando a consulta a fila. Retorna informações sobre a mensagem na posição atual do cursor, mas deixa a mensagem na fila.  
+  
+ Um <xref:System.Messaging.MessageEnumerator> é um cursor, inicializado para o início de uma lista dinâmica. A ordem da lista é igual à ordem das mensagens na fila, de acordo com a prioridade da mensagem. Você pode mover o cursor para a primeira mensagem na fila chamando <xref:System.Messaging.MessageEnumerator.MoveNext%2A>. Depois que o enumerador foi inicializado, você pode usar <xref:System.Messaging.MessageEnumerator.MoveNext%2A> para percorrer as mensagens restantes para a frente. Você pode especificar se deseja aguardar uma mensagem se torne disponível, passando um tempo limite para o <xref:System.Messaging.MessageEnumerator.MoveNext%2A> método.  
+  
+ Como o enumerador é dinâmico, uma mensagem que é anexada além a posição atual do cursor (por exemplo, devido à baixa prioridade), pode ser acessado pelo enumerador. Uma mensagem que é inserida antes da posição atual do cursor não pode ser acessada. Não é possível retroceder uma etapa com um <xref:System.Messaging.MessageEnumerator>. Um cursor permite a movimentação de somente avanço. O <xref:System.Messaging.MessageEnumerator.Reset%2A> método permite que você coloque o cursor no início da fila.  
+  
+ Instâncias de <xref:System.Messaging.MessageEnumerator> para uma determinada fila trabalhar de forma independente. Você pode criar dois <xref:System.Messaging.MessageEnumerator> instâncias que se aplicam à mesma fila. As alterações que um <xref:System.Messaging.MessageEnumerator> faz para as mensagens na fila serão refletidas imediatamente em um segundo enumerador se o segundo enumerador está posicionado antes da primeira. No entanto, se duas enumeradores têm a mesma posição e um deles remove a mensagem da posição, uma exceção será lançada se o enumerador outros tenta obter o valor da <xref:System.Messaging.MessageEnumerator.Current%2A> propriedade na mensagem excluída agora.  
+  
+> [!NOTE]
+>  Se você criar uma instância de <xref:System.Messaging.MessageQueue> com <xref:System.Messaging.MessageQueue.DenySharedReceive%2A?displayProperty=nameWithType> definida como `true`, nenhum outro aplicativo pode modificar as mensagens na sua enumerador enquanto você tem a conexão para a fila.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém uma lista dinâmica de mensagens em uma fila e contagens de todas as mensagens com o <xref:System.Messaging.Message.Priority%2A> propriedade definida como <xref:System.Messaging.MessagePriority?displayProperty=nameWithType>.  
+  
+ [!code-cpp[MessageQueue.GetMessageEnumerator#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueue.GetMessageEnumerator/CPP/mqgetmessageenumerator.cpp#1)]
+ [!code-csharp[MessageQueue.GetMessageEnumerator#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueue.GetMessageEnumerator/CS/mqgetmessageenumerator.cs#1)]
+ [!code-vb[MessageQueue.GetMessageEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageQueue.GetMessageEnumerator/VB/mqgetmessageenumerator.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos associados com o enumerador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema operacional retém um identificador aberto para a fila durante o tempo de vida do cursor. Quando você terminar de trabalhar com o enumerador, chame <xref:System.Messaging.MessageEnumerator.Close%2A> para liberar os recursos associados com o identificador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.Message Current" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual <see cref="T:System.Messaging.Message" /> que este enumerador aponta para.</summary>
+        <value>A mensagem atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o enumerador é criado, ele aponta para o início da fila em um local antes da primeira mensagem. Nesse caso, <xref:System.Messaging.MessageEnumerator.Current%2A> não é válido e lançará uma exceção se ele for acessado. Você deve chamar <xref:System.Messaging.MessageEnumerator.MoveNext%2A> para posicionar o cursor a primeira mensagem na fila.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Você chamou <see cref="P:System.Messaging.MessageEnumerator.Current" /> antes da primeira chamada para <see cref="M:System.Messaging.MessageEnumerator.MoveNext" />. O cursor está localizado antes do primeiro elemento da enumeração de mensagem.  
+  
+ -ou-  
+  
+ Você chamou <see cref="P:System.Messaging.MessageEnumerator.Current" /> após uma chamada para <see cref="M:System.Messaging.MessageEnumerator.MoveNext" /> retornou <see langword="false" /> (indicando que o cursor está localizado depois do último elemento da enumeração de mensagem.)</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">A mensagem que o enumerador está apontando atualmente não existe. Ele pode ter sido excluído.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorHandle">
+      <MemberSignature Language="C#" Value="public IntPtr CursorHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int CursorHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageEnumerator.CursorHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de cursor enfileiramento nativo usado para procurar mensagens na fila.</summary>
+        <value>O identificador nativo do cursor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade contém o identificador nativo para a enumeração. Quando você terminar de trabalhar com o enumerador, chame <xref:System.Messaging.MessageEnumerator.Close%2A> para liberar esse recurso.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Messaging.MessageQueueException">O identificador não existe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Messaging.MessageEnumerator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Messaging.MessageEnumerator.Dispose%2A> permite que os recursos usados pelo <xref:System.Messaging.MessageEnumerator> para ser realocada para outros fins. Para obter mais informações sobre <xref:System.Messaging.MessageEnumerator.Dispose%2A>, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Messaging.MessageEnumerator" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público <xref:System.Messaging.MessageEnumerator.Dispose%2A> e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Messaging.MessageEnumerator> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tome cuidado para não referenciar objetos que tenham sido descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see langword="Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~MessageEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Avança o enumerador para a próxima mensagem na fila, se houver um disponível no momento.</summary>
+        <returns>
+          <see langword="true" />Se o enumerador foi avançado para a próxima mensagem; de com êxito <see langword="false" /> se o enumerador atingiu o final da fila.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga retorna imediatamente se não há nenhuma mensagem na fila. Há outra sobrecarga que espera um especificado <xref:System.TimeSpan> a chegada de uma mensagem.  
+  
+ Se uma mensagem não está disponível no momento porque a fila está vazia ou porque você ultrapassou o último elemento da coleção, <xref:System.Messaging.MessageEnumerator.MoveNext%2A> retorna `false` para o método de chamada.  
+  
+ Após a criação, um enumerador é conceitualmente posicionado antes da primeira mensagem da fila e a primeira chamada para <xref:System.Messaging.MessageEnumerator.MoveNext%2A> traz a primeira mensagem da fila para o modo de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Messaging.MessageQueueException">Foi lançada uma exceção específica de enfileiramento de mensagens.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MoveNext(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.MoveNext(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> ao aguardar uma mensagem esteja disponível se o enumerador está posicionado no final da fila.</param>
+        <summary>Avança o enumerador para a próxima mensagem na fila. Se o enumerador está posicionado no final da fila, <see cref="M:System.Messaging.MessageEnumerator.MoveNext" /> aguardará até uma mensagem está disponível ou o tempo limite determinado.</summary>
+        <returns>
+          <see langword="true" />Se o enumerador foi avançado com êxito para a próxima mensagem; <see langword="false" /> se o enumerador atingiu o fim da fila e uma mensagem não ficar disponível dentro do tempo especificado o <paramref name="timeout" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga de espera se não houver nenhuma mensagem na fila ou se o cursor atingiu o final da fila. Se uma mensagem não está disponível no momento porque a fila está vazia ou porque você ultrapassou o último elemento da coleção, <xref:System.Messaging.MessageEnumerator.MoveNext%2A> aguarda o tempo limite especificado.  
+  
+ Se o cursor estiver no final da fila, <xref:System.Messaging.MessageEnumerator.MoveNext%2A> retorna apenas `true` se a nova mensagem chega no intervalo de tempo especificado, tem prioridade inferior todas as mensagens atualmente na fila e é colocado no final da fila. Uma sobrecarga sem nenhum parâmetro retorna imediatamente se nenhuma outra mensagem está na fila.  
+  
+ Após a criação, um enumerador é conceitualmente posicionado antes da primeira mensagem de enumeração e a primeira chamada para <xref:System.Messaging.MessageEnumerator.MoveNext%2A> coloca a primeira mensagem da enumeração em modo de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado para o parâmetro de tempo limite é inválido. Ele pode representar um número negativo.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">Foi lançada uma exceção específica de enfileiramento de mensagens.  
+  
+ -ou-  
+  
+ O tempo limite expirou.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="RemoveCurrent">
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Remove a mensagem atual da fila e retorna a mensagem para o aplicativo de chamada. Removendo a mensagem, ele exclui da fila.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento descrito para essas sobrecargas é aplicável somente se o <xref:System.Messaging.MessageEnumerator> instância é recuperada usando o <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A>. Não use <xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A> para recuperar uma instância de <xref:System.Messaging.MessageEnumerator> como esse método foi substituído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove a mensagem atual de uma fila transacional ou não transacional e retorna a mensagem para o aplicativo de chamada. Não há nenhum tempo limite especificado para uma mensagem chegar na fila.</summary>
+        <returns>Uma <see cref="T:System.Messaging.Message" /> que faz referência à primeira mensagem disponível na fila.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>Remove e retorna a mensagem no local atual do cursor.  
+  
+ Se você estiver usando o diário da fila, removendo a mensagem faz com que uma cópia sejam mantidas na fila do diário, assim como o <xref:System.Messaging.MessageQueue> da classe <xref:System.Messaging.MessageQueue.Receive%2A> método.  
+  
+ Quando você remove a mensagem atual, o cursor é movido para a próxima mensagem. Você não precisa chamar <xref:System.Messaging.MessageEnumerator.MoveNext%2A> depois de chamar <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ Se você chamar essa sobrecarga em uma fila transacional, enfileiramento de mensagens cria uma única transação interna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent (System.Messaging.MessageQueueTransaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent(class System.Messaging.MessageQueueTransaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent(System.Messaging.MessageQueueTransaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Messaging.MessageQueueTransaction" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">O <see cref="T:System.Messaging.MessageQueueTransaction" /> objeto que especifica a transação na qual a mensagem será removida.</param>
+        <summary>Remove a mensagem atual de uma fila transacional e retorna a mensagem para o aplicativo de chamada. Não há nenhum tempo limite especificado para uma mensagem chegar na fila.</summary>
+        <returns>Uma <see cref="T:System.Messaging.Message" /> que faz referência à primeira mensagem disponível na fila.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>Remove e retorna a mensagem no local do cursor atual, usando o contexto de transação interna definido pelo `transaction` parâmetro.  
+  
+ Se você estiver usando o diário da fila, removendo a mensagem faz com que uma cópia sejam mantidas na fila do diário, assim como o <xref:System.Messaging.MessageQueue> da classe <xref:System.Messaging.MessageQueue.Receive%2A> método.  
+  
+ Ao trabalhar com filas transacionais, uma reversão de uma transação faz com que todas as mensagens removidas por uma chamada para <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A> a ser retornado para a fila. A remoção não é irreversível até que a transação é confirmada.  
+  
+ Quando você remove a mensagem atual, o cursor é movido para a próxima mensagem. Você não precisa chamar <xref:System.Messaging.MessageEnumerator.MoveNext%2A> depois de chamar <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="transaction" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent (System.Messaging.MessageQueueTransactionType transactionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent(valuetype System.Messaging.MessageQueueTransactionType transactionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent(System.Messaging.MessageQueueTransactionType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transactionType" Type="System.Messaging.MessageQueueTransactionType" />
+      </Parameters>
+      <Docs>
+        <param name="transactionType">Um dos valores de <see cref="T:System.Messaging.MessageQueueTransactionType" />, que descreve o tipo de contexto de transação associado à mensagem.</param>
+        <summary>Remove a mensagem atual de uma fila e retorna a mensagem para o aplicativo de chamada. Não há nenhum tempo limite especificado para uma mensagem chegar na fila.</summary>
+        <returns>Uma <see cref="T:System.Messaging.Message" /> que faz referência à primeira mensagem disponível na fila.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>Remove e retorna a mensagem o local atual do cursor, usando um contexto de transação definido pelo `transactionType` parâmetro.  
+  
+ Especifique `Automatic` para o `transactionType` parâmetro se já houver um contexto de transação externa é anexado ao thread que você deseja usar para receber a mensagem. Especificar `Single` se você deseja receber a mensagem como uma única transação interna. Você pode especificar `None` se você quiser receber uma mensagem de uma fila transacional fora de um contexto de transação.  
+  
+ Se você estiver usando o diário da fila, removendo a mensagem faz com que uma cópia sejam mantidas na fila do diário, assim como o <xref:System.Messaging.MessageQueue> da classe <xref:System.Messaging.MessageQueue.Receive%2A> método.  
+  
+ Ao trabalhar com filas transacionais, uma reversão de uma transação faz com que todas as mensagens removidas por uma chamada para <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A> a ser retornado para a fila. A remoção não é irreversível até que a transação é confirmada.  
+  
+ Quando você remove a mensagem atual, o cursor é movido para a próxima mensagem. Você não precisa chamar <xref:System.Messaging.MessageEnumerator.MoveNext%2A> depois de chamar <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O parâmetro <paramref name="transactionType" /> não é um dos membros do <see cref="T:System.Messaging.MessageQueueTransactionType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O intervalo de tempo de espera por uma mensagem para chegar na fila.</param>
+        <summary>Remove a mensagem atual da fila e retorna a mensagem para o aplicativo de chamada. Se houver uma mensagem a ser removido, o método retorna imediatamente. Caso contrário, o método aguarda o tempo limite especificado para uma nova mensagem chegue.</summary>
+        <returns>Uma <see cref="T:System.Messaging.Message" /> que faz referência à primeira mensagem disponível na fila.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>Remove e retorna a mensagem no local atual do cursor. Se o cursor estiver no final da fila, essa sobrecarga do método aguarda uma mensagem está disponível ou o intervalo especificado pelo `timeout` parâmetro expirou.  
+  
+ Se você estiver usando o diário da fila, removendo a mensagem faz com que uma cópia sejam mantidas na fila do diário, assim como o <xref:System.Messaging.MessageQueue> da classe <xref:System.Messaging.MessageQueue.Receive%2A> método.  
+  
+ Quando você remove a mensagem atual, o cursor é movido para a próxima mensagem. Você não precisa chamar <xref:System.Messaging.MessageEnumerator.MoveNext%2A> depois de chamar <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ Se você chamar essa sobrecarga em uma fila transacional, enfileiramento de mensagens cria uma única transação interna.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado para o <paramref name="timeout" /> parâmetro é inválido.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">O tempo limite expirou.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent (TimeSpan timeout, System.Messaging.MessageQueueTransaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent(valuetype System.TimeSpan timeout, class System.Messaging.MessageQueueTransaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent(System.TimeSpan,System.Messaging.MessageQueueTransaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="transaction" Type="System.Messaging.MessageQueueTransaction" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O intervalo de tempo de espera para a mensagem a ser removido.</param>
+        <param name="transaction">O <see cref="T:System.Messaging.MessageQueueTransaction" /> objeto que especifica o contexto de transação para a mensagem.</param>
+        <summary>Remove a mensagem atual de uma fila transacional e retorna a mensagem para o aplicativo de chamada. Se houver uma mensagem a ser removido, o método retorna imediatamente. Caso contrário, o método aguarda o tempo limite especificado para uma nova mensagem chegue.</summary>
+        <returns>Uma <see cref="T:System.Messaging.Message" /> que faz referência à primeira mensagem disponível na fila.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>Remove e retorna a mensagem no local atual do cursor. Se o cursor estiver no final da fila, essa sobrecarga do método aguarda uma mensagem está disponível ou o intervalo especificado pelo `timeout` parâmetro expirou.  
+  
+ Ao trabalhar com filas transacionais, uma reversão de uma transação faz com que todas as mensagens removidas por uma chamada para <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A> a ser retornado para a fila. A remoção não é irreversível até que a transação é confirmada.  
+  
+ Se você estiver usando o diário da fila, removendo a mensagem faz com que uma cópia sejam mantidas na fila do diário, assim como o <xref:System.Messaging.MessageQueue> da classe <xref:System.Messaging.MessageQueue.Receive%2A> método.  
+  
+ Quando você remove a mensagem atual, o cursor é movido para a próxima mensagem. Você não precisa chamar <xref:System.Messaging.MessageEnumerator.MoveNext%2A> depois de chamar <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado para o <paramref name="timeout" /> parâmetro é inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="transaction" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">O tempo limite expirou.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCurrent">
+      <MemberSignature Language="C#" Value="public System.Messaging.Message RemoveCurrent (TimeSpan timeout, System.Messaging.MessageQueueTransactionType transactionType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Messaging.Message RemoveCurrent(valuetype System.TimeSpan timeout, valuetype System.Messaging.MessageQueueTransactionType transactionType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.RemoveCurrent(System.TimeSpan,System.Messaging.MessageQueueTransactionType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="transactionType" Type="System.Messaging.MessageQueueTransactionType" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O intervalo de tempo de espera para a mensagem a ser removido.</param>
+        <param name="transactionType">Um dos valores de <see cref="T:System.Messaging.MessageQueueTransactionType" />, que descreve o tipo de contexto de transação associado à mensagem.</param>
+        <summary>Remove a mensagem atual de uma fila e retorna a mensagem para o aplicativo de chamada. Se houver uma mensagem a ser removido, o método retorna imediatamente. Caso contrário, o método aguarda o tempo limite especificado para uma nova mensagem chegue.</summary>
+        <returns>Uma <see cref="T:System.Messaging.Message" /> que faz referência à primeira mensagem disponível na fila.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>Remove e retorna a mensagem o local atual do cursor, usando um contexto de transação definido pelo `transactionType` parâmetro. Se o cursor estiver no final da fila, essa sobrecarga do método aguarda uma mensagem está disponível ou o intervalo especificado pelo `timeout` parâmetro expirou.  
+  
+ Especifique `Automatic` para o `transactionType` parâmetro se já houver um contexto de transação externa é anexado ao thread que você deseja usar para receber a mensagem. Especificar `Single` se você deseja receber a mensagem como uma única transação interna. Você pode especificar `None` se você quiser receber uma mensagem de uma fila transacional fora de um contexto de transação.  
+  
+ Se você estiver usando o diário da fila, removendo a mensagem faz com que uma cópia sejam mantidas na fila do diário, assim como o <xref:System.Messaging.MessageQueue> da classe <xref:System.Messaging.MessageQueue.Receive%2A> método.  
+  
+ Ao trabalhar com filas transacionais, uma reversão de uma transação faz com que todas as mensagens removidas por uma chamada para <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A> a ser retornado para a fila. A remoção não é irreversível até que a transação é confirmada.  
+  
+ Quando você remove a mensagem atual, o cursor é movido para a próxima mensagem. Você não precisa chamar <xref:System.Messaging.MessageEnumerator.MoveNext%2A> depois de chamar <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado para o <paramref name="timeout" /> parâmetro é inválido.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">O tempo limite expirou.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O parâmetro <paramref name="transactionType" /> não é um dos membros do <see cref="T:System.Messaging.MessageQueueTransactionType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o enumerador atual para que ele aponta para o início da fila.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um enumerador só poderá mover avançando. Use esse método para recomeçar no início da fila.  
+  
+ Depois de chamar <xref:System.Messaging.MessageEnumerator.Reset%2A>, o cursor aponta para a primeira mensagem. Você não precisa chamar <xref:System.Messaging.MessageEnumerator.MoveNext%2A> depois de chamar <xref:System.Messaging.MessageEnumerator.Reset%2A> para mover o cursor para frente para a primeira mensagem na fila.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageEnumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Messaging.Message" /> que faz referência a mensagem na posição atual do cursor.</summary>
+        <value>Um <see cref="T:System.Messaging.Message" /> que faz referência a mensagem na posição atual do cursor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

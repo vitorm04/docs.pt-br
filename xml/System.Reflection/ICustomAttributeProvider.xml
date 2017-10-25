@@ -1,0 +1,176 @@
+<Type Name="ICustomAttributeProvider" FullName="System.Reflection.ICustomAttributeProvider">
+  <TypeSignature Language="C#" Value="public interface ICustomAttributeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICustomAttributeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ICustomAttributeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece atributos personalizados para objetos de reflexão que dão suporte a esses atributos personalizados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quase todas as classes de reflexão podem ter atributos associados a eles. Os atributos podem ser padrão (público, privado, HelpString) ou personalizado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ICustomAttributeProvider.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">Quando <see langword="true" />, pesquisar a cadeia de hierarquia de atributo herdado personalizado.</param>
+        <summary>Retorna uma matriz de todos os atributos personalizados definidos neste membro, excluindo atributos nomeados, ou uma matriz vazia se não houver nenhum atributo personalizado.</summary>
+        <returns>Uma matriz de objetos que representam os atributos personalizados, ou uma matriz vazia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Reflection.ICustomAttributeProvider.GetCustomAttributes%2A?displayProperty=nameWithType> na <xref:System.Reflection.PropertyInfo> ou <xref:System.Reflection.EventInfo> quando o `inherit` parâmetro de `GetCustomAttributes` é `true` não mostram a hierarquia de tipo. Use <xref:System.Attribute?displayProperty=nameWithType> para herdar atributos personalizados.  
+  
+ Esse método retorna atributos personalizados definidos diretamente em um membro herdado não apenas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.TypeLoadException">Não é possível carregar o tipo de atributo personalizado.</exception>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Não há mais de um atributo de tipo <paramref name="attributeType" /> definido neste membro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ICustomAttributeProvider.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">O tipo dos atributos personalizados.</param>
+        <param name="inherit">Quando <see langword="true" />, pesquisar a cadeia de hierarquia de atributo herdado personalizado.</param>
+        <summary>Retorna uma matriz de atributos personalizados definidos neste membro, identificados por tipo, ou uma matriz vazia se não houver nenhum atributo personalizado desse tipo.</summary>
+        <returns>Uma matriz de objetos que representam os atributos personalizados, ou uma matriz vazia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `attributeType` é uma classe base ou interface, esse método retorna qualquer implementação do tipo.  
+  
+ Esse método retorna atributos personalizados definidos diretamente em um membro herdado não apenas.  
+  
+ Chamando <xref:System.Reflection.ICustomAttributeProvider.GetCustomAttributes%2A?displayProperty=nameWithType> na <xref:System.Reflection.PropertyInfo> ou <xref:System.Reflection.EventInfo> quando o `inherit` parâmetro de `GetCustomAttributes` é `true` não mostram a hierarquia de tipo. Use <xref:System.Attribute?displayProperty=nameWithType> para herdar atributos personalizados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.TypeLoadException">Não é possível carregar o tipo de atributo personalizado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="attributeType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ICustomAttributeProvider.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">O tipo dos atributos personalizados.</param>
+        <param name="inherit">Quando <see langword="true" />, pesquisar a cadeia de hierarquia de atributo herdado personalizado.</param>
+        <summary>Indica se uma ou mais instância de <paramref name="attributeType" /> está definido neste membro.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="attributeType" /> está definido neste membro; <see langword="false" /> caso contrário.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

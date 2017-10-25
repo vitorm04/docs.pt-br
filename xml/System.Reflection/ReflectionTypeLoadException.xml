@@ -1,0 +1,238 @@
+<Type Name="ReflectionTypeLoadException" FullName="System.Reflection.ReflectionTypeLoadException">
+  <TypeSignature Language="C#" Value="public sealed class ReflectionTypeLoadException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ReflectionTypeLoadException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ReflectionTypeLoadException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção que é lançada pelo método <see cref="M:System.Reflection.Module.GetTypes" /> se alguma das classes em um módulo não puder ser carregada. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `ReflectionTypeLoadException`usa o HRESULT COR_E_REFLECTIONTYPELOAD que tem o valor 0x80131602.  
+  
+ Uma instância contém a matriz de classes (propriedade de tipos) que foram definidas no módulo e que foram carregados. A matriz pode conter alguns valores nulos. Também há outro conjunto de exceções (`LoaderExceptions` propriedade). Essa matriz de exceção representa as exceções que foram lançadas pelo carregador de classes. Falhas na matriz de classe alinharem com as exceções.  
+  
+ Essa exceção expõe tanto a matriz de classes e a matriz de `TypeLoadExceptions`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReflectionTypeLoadException (Type[] classes, Exception[] exceptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type[] classes, class System.Exception[] exceptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ReflectionTypeLoadException.#ctor(System.Type[],System.Exception[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="classes" Type="System.Type[]" />
+        <Parameter Name="exceptions" Type="System.Exception[]" />
+      </Parameters>
+      <Docs>
+        <param name="classes">Uma matriz do tipo <see langword="Type" /> que contém as classes que foram definidas no módulo e carregadas. Esta matriz pode conter uma referência nula (<see langword="Nothing" /> no Visual Basic) valores.</param>
+        <param name="exceptions">Uma matriz do tipo <see langword="Exception" /> que contém as exceções que foram lançadas pelo carregador de classes. A referência nula (<see langword="Nothing" /> no Visual Basic) valores no <c>classes</c> matriz linha backup com as exceções neste <c>exceções</c> matriz.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Reflection.ReflectionTypeLoadException" /> classe com as classes de determinado e suas exceções associadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReflectionTypeLoadException (Type[] classes, Exception[] exceptions, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type[] classes, class System.Exception[] exceptions, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ReflectionTypeLoadException.#ctor(System.Type[],System.Exception[],System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="classes" Type="System.Type[]" />
+        <Parameter Name="exceptions" Type="System.Exception[]" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="classes">Uma matriz do tipo <see langword="Type" /> que contém as classes que foram definidas no módulo e carregadas. Esta matriz pode conter uma referência nula (<see langword="Nothing" /> no Visual Basic) valores.</param>
+        <param name="exceptions">Uma matriz do tipo <see langword="Exception" /> que contém as exceções que foram lançadas pelo carregador de classes. A referência nula (<see langword="Nothing" /> no Visual Basic) valores no <c>classes</c> matriz linha backup com as exceções neste <c>exceções</c> matriz.</param>
+        <param name="message">Um <see langword="String" /> que descreve o motivo pelo qual a exceção foi lançada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Reflection.ReflectionTypeLoadException" /> classe com as classes de determinado, exceções associadas e descrições de exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ReflectionTypeLoadException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">As informações e os dados necessários para serializar ou desserializar um objeto.</param>
+        <param name="context">O contexto para a serialização.</param>
+        <summary>Fornece um <see cref="T:System.Runtime.Serialization.ISerializable" /> implementação para objetos serializados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see langword="info" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LoaderExceptions">
+      <MemberSignature Language="C#" Value="public Exception[] LoaderExceptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception[] LoaderExceptions" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ReflectionTypeLoadException.LoaderExceptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a matriz de exceções geradas pelo carregador de classe.</summary>
+        <value>Uma matriz do tipo <see langword="Exception" /> que contém as exceções geradas pelo carregador de classe. Os valores nulos na matriz <see cref="P:System.Reflection.ReflectionTypeLoadException.Types" /> desta sequência de instância com as exceções nesta matriz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.ReflectionTypeLoadException.LoaderExceptions%2A> propriedade recupera uma matriz do tipo `Exception` que é paralela à <xref:System.Reflection.ReflectionTypeLoadException.Types%2A> matriz. Essa matriz conterá valores nulos, sempre que a reflexão não é possível carregar uma classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Types">
+      <MemberSignature Language="C#" Value="public Type[] Types { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] Types" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ReflectionTypeLoadException.Types" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a matriz de classes que foram definidos no módulo e carregados.</summary>
+        <value>Uma matriz do tipo <see langword="Type" /> que contém as classes que foram definidas no módulo e carregadas. Esta matriz pode conter algumas <see langword="null" /> valores.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.ReflectionTypeLoadException.LoaderExceptions%2A> propriedade recupera uma matriz do tipo `Exception` que é paralela a isso `Types` matriz. Essa matriz conterá valores nulos, sempre que a reflexão não é possível carregar uma classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

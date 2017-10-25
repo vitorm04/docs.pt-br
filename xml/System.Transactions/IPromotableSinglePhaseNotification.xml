@@ -1,0 +1,157 @@
+<Type Name="IPromotableSinglePhaseNotification" FullName="System.Transactions.IPromotableSinglePhaseNotification">
+  <TypeSignature Language="C#" Value="public interface IPromotableSinglePhaseNotification : System.Transactions.ITransactionPromoter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPromotableSinglePhaseNotification implements class System.Transactions.ITransactionPromoter" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.IPromotableSinglePhaseNotification" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Transactions.ITransactionPromoter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Descreve um objeto que atua como um representante de confirmação de uma transação distribuída não interno para um Gerenciador de recursos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inscrições passível de promoção (PSPE) permitem que um recurso, como um banco de dados para se apropriar da transação se for a única entidade participando da transação. Posteriormente, se necessário, o <xref:System.Transactions> infraestrutura ainda pode escalonar a transação MSDTC. Para obter mais informações, consulte [otimização usando única fase de confirmação e notificação de fase única passível de promoção](http://msdn.microsoft.com/en-us/653d51d1-b4bf-4e34-9a6f-aec073f0f5bb).  
+  
+ Um Gerenciador de recursos que implementa essa interface delega o controle da confirmação da sua não distribuídos transação interna para uma inscrição em um <xref:System.Transactions> transação por meio de <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> método no <xref:System.Transactions.Transaction> classe.  
+  
+ Se o <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> método é chamado, sua implementação desta interface deve produzir uma transação distribuída na forma de um token de propagação e retorná-la para <xref:System.Transactions>.  
+  
+ Depois que você se inscrever em um objeto que implementa essa interface como um participante de uma transação usando o <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> método, o Gerenciador de transações notifica o participante quando a transação é promovida, confirmada ou revertida invocando o <xref:System.Transactions.ITransactionPromoter.Promote%2A> método, o <xref:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit%2A> método, ou o <xref:System.Transactions.IPromotableSinglePhaseNotification.Rollback%2A> método do objeto.  
+  
+ Para obter mais informações, consulte [otimização usando única fase de confirmação e notificação de fase única passível de promoção](http://msdn.microsoft.com/en-us/653d51d1-b4bf-4e34-9a6f-aec073f0f5bb).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.IPromotableSinglePhaseNotification.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica um participante da transação que a inscrição foi concluída com êxito.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a lógica de inicialização é necessária para preparar um objeto inscrito para participar de uma transação, é preferível para implementar essa lógica nesse método, em vez de em um construtor. Dessa forma, a inicialização ocorre somente se o objeto com êxito é inscrita como um participante da transação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Transactions.TransactionException">Uma tentativa de se inscrever ou serializar uma transação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public void Rollback (System.Transactions.SinglePhaseEnlistment enlistment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Rollback(class System.Transactions.SinglePhaseEnlistment enlistment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.IPromotableSinglePhaseNotification.Rollback(System.Transactions.SinglePhaseEnlistment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="singlePhaseEnlistment" Type="System.Transactions.SinglePhaseEnlistment" />
+      </Parameters>
+      <Docs>
+        <param name="enlistment">To be added.</param>
+        <summary>Notifica um objeto inscrito que a transação está sendo revertida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao receber esta notificação, o PSPE deve sempre reversão é transação interna e, em seguida, responder com o <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A> método de retorno de chamada no `singlePhaseEnlistment` parâmetro.  Se o PSPE responde com <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A> ou <xref:System.Transactions.SinglePhaseEnlistment.InDoubt%2A>, uma <xref:System.InvalidOperationException> é gerada no retorno de chamada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SinglePhaseCommit">
+      <MemberSignature Language="C#" Value="public void SinglePhaseCommit (System.Transactions.SinglePhaseEnlistment enlistment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SinglePhaseCommit(class System.Transactions.SinglePhaseEnlistment enlistment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit(System.Transactions.SinglePhaseEnlistment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="singlePhaseEnlistment" Type="System.Transactions.SinglePhaseEnlistment" />
+      </Parameters>
+      <Docs>
+        <param name="enlistment">To be added.</param>
+        <summary>Notifica um inscrita objeto que a transação está sendo confirmada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método notifica um objeto inscrito que a transação é confirmada.  
+  
+ O `singlePhaseEnlistment` parâmetros conter retornos de chamada que permitem a implementação dessa interface para notificar a transação Gerenciador do resultado da transação, pois o Gerenciador de transações tenha recebido controle da transação. No caso de uma transação promovida, o Gerenciador de transações escuta para o resultado da transação e substitui a resposta sendo enviada.  
+  
+ Ao receber esta notificação, o Gerenciador de recursos deve tentar confirmar sua transação interna (ou a transação distribuída se ela for escalonada) e chame um dos métodos de retorno de chamada no `singlePhaseEnlistment` parâmetro com base no resultado da confirmação de transação de TI.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

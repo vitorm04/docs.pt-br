@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Input.StylusPlugIns">
+  <Docs>
+    <summary>Fornece classes que oferecem suporte a manipulação de dados de uma caneta na plataforma Windows Presentation Foundation (WPF).  Essas classes de controle de nível de offerlow pela <see cref="T:System.Windows.Input.Stylus" /> de entrada e a criação de tinta digital <see cref="T:System.Windows.Ink.Stroke" /> objetos. O <see cref="T:System.Windows.Input.StylusPlugIns.StylusPlugIn" /> classe fornece um mecanismo para implementar o comportamento personalizado e aplicar esse comportamento para o fluxo de dados provenientes do dispositivo de estilo para o desempenho ideal.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

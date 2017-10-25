@@ -1,0 +1,242 @@
+<Type Name="AttributeUsageAttribute" FullName="System.AttributeUsageAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AttributeUsageAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit AttributeUsageAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.AttributeUsageAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o uso de outra classe de atributo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao definir sua própria classe de atributo, você pode controlar a maneira na qual ele é usado, colocando uma <xref:System.AttributeUsageAttribute> em sua classe de atributo. A classe de atributo indicado deve derivar de <xref:System.Attribute>, direta ou indiretamente.  
+  
+ Classes de atributos têm parâmetros nomeados e posicionais. Cada construtor público para uma classe de atributo define uma sequência válida de parâmetros posicionais para essa classe. Parâmetros nomeados são definidos por campos não-estático, públicos e leitura / gravação ou propriedades da classe de atributo.  
+  
+ As três propriedades de <xref:System.AttributeUsageAttribute> são definidos, definindo os seguintes parâmetros:  
+  
+-   <xref:System.AttributeUsageAttribute.ValidOn%2A>  
+  
+ Esse parâmetro posicional Especifica os elementos do programa que o atributo indicado pode ser colocado em. O conjunto de todos os elementos possíveis que você pode colocar um atributo está listado no <xref:System.AttributeTargets> enumeração. Você pode combinar várias <xref:System.AttributeTargets> valores usando uma operação OR bit a bit para obter a combinação desejada de elementos de programa válido.  
+  
+-   <xref:System.AttributeUsageAttribute.AllowMultiple%2A>  
+  
+ Esse parâmetro nomeado Especifica se o atributo indicado pode ser especificado mais de uma vez para um elemento do programa especificado.  
+  
+-   <xref:System.AttributeUsageAttribute.Inherited%2A>  
+  
+ Esse parâmetro nomeado Especifica se o atributo indicado pode ser herdado por classes derivadas e substituindo membros.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte <xref:System.Attribute> e [atributos](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AttributeUsageAttribute (AttributeTargets validOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.AttributeTargets validOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AttributeUsageAttribute.#ctor(System.AttributeTargets)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validOn" Type="System.AttributeTargets" />
+      </Parameters>
+      <Docs>
+        <param name="validOn">O conjunto de valores combinados usando uma operação OR bit a bit para indicar quais elementos do programa são válidos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.AttributeUsageAttribute" /> com a lista especificada de <see cref="T:System.AttributeTargets" />, o valor <see cref="P:System.AttributeUsageAttribute.AllowMultiple" /> e o valor <see cref="P:System.AttributeUsageAttribute.Inherited" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode combinar várias <xref:System.AttributeTargets> valores usando uma operação OR bit a bit para obter a combinação desejada de elementos de programa válido.  
+  
+ Para obter valores de propriedade padrão, consulte o <xref:System.AttributeUsageAttribute.ValidOn%2A>, <xref:System.AttributeUsageAttribute.AllowMultiple%2A>, e <xref:System.AttributeUsageAttribute.Inherited%2A> propriedades.  
+  
+   
+  
+## Examples  
+ A definição do atributo DispId ilustra o uso de uma operação OR bit a bit para combinar vários <xref:System.AttributeTargets> valores.  
+  
+ [!code-cpp[Classic AttributeUsageAttribute.AttributeUsageAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic AttributeUsageAttribute.AttributeUsageAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic AttributeUsageAttribute.AttributeUsageAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic AttributeUsageAttribute.AttributeUsageAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic AttributeUsageAttribute.AttributeUsageAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic AttributeUsageAttribute.AttributeUsageAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowMultiple">
+      <MemberSignature Language="C#" Value="public bool AllowMultiple { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowMultiple" />
+      <MemberSignature Language="DocId" Value="P:System.AttributeUsageAttribute.AllowMultiple" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se mais de uma instância do atributo indicado pode ser especificada a um elemento de programa único.</summary>
+        <value>
+          <see langword="true" /> se mais de uma instância pode ser especificada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um atributo que pode ser especificado mais de uma vez para um elemento do programa é chamado de atributo de múltiplos uso. Um atributo que pode ser especificado somente uma vez é chamado de atributo de uso único.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inherited">
+      <MemberSignature Language="C#" Value="public bool Inherited { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Inherited" />
+      <MemberSignature Language="DocId" Value="P:System.AttributeUsageAttribute.Inherited" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor <see cref="T:System.Boolean" /> que determina se o atributo indicado é herdado por classes derivadas e pela substituição de membros.</summary>
+        <value>
+          <see langword="true" /> se o atributo pode ser herdado por classes derivadas e pela substituição de membros; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AttributeUsageAttribute.Inherited%2A> propriedade determina:  
+  
+-   Se as classes derivadas de uma classe base marcadas com o atributo ao qual o <xref:System.AttributeUsageAttribute> atributo é aplicado herdam o atributo.  
+  
+-   Se os métodos das classes derivadas que substituem um método de classe base marcadas com o atributo ao qual o <xref:System.AttributeUsageAttribute> atributo é aplicado herdam o atributo.  (Se uma classe herdada de um membro da classe base, ele também herda todos os atributos aplicados a esse membro.)  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra a diferença entre um atributo para o qual um <xref:System.AttributeUsageAttribute> atributo com um <xref:System.AttributeUsageAttribute.Inherited%2A> valor da propriedade `true` é aplicada e que <xref:System.AttributeUsageAttribute> atributo com um <xref:System.AttributeUsageAttribute.Inherited%2A> valor da propriedade `false` é aplicado. O exemplo define dois atributos, `InheritedAttribute` e `NotInheritedAttribute`. Ambos os atributos podem ser aplicados a classes e métodos. Porque o <xref:System.AttributeUsageAttribute.Inherited%2A> propriedade o <xref:System.AttributeUsageAttribute> atributo aplicado ao `InheritedAttribute` é `true`, ela é herdada por classes derivadas e os membros das classes derivadas que substituem o método de classe base.  Por outro lado, porque o <xref:System.AttributeUsageAttribute.Inherited%2A> propriedade o <xref:System.AttributeUsageAttribute> atributo aplicado ao `NotInheritedAttribute` é `false`, ela não será herdada por classes derivadas e os membros das classes derivadas que substituem o método de classe base.  
+  
+ [!code-csharp[System.AttributeUsageAttribute.Inherited#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.AttributeUsageAttribute.Inherited/cs/Inherited1.cs#1)]
+ [!code-vb[System.AttributeUsageAttribute.Inherited#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.AttributeUsageAttribute.Inherited/vb/Inherited1.vb#1)]  
+  
+ O exemplo define duas classes base. A primeira, `BaseA`, tem um único método, `MethodA`.  O segundo, `BaseB`, tem um único método, `MethodB`. `BaseA`e `MethodA` são marcadas com o `InheritedAttribute` atributo, e `BaseB` e `MethodB` são marcadas com o `NotInheritedAttribute` atributo. `DerivedA`herda de `BaseA` e substitui seus `MethodA` método. `DerivedB`herda de `BaseB` e substitui seus `MethodB` método.  
+  
+ [!code-csharp[System.AttributeUsageAttribute.Inherited#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.AttributeUsageAttribute.Inherited/cs/Inherited1.cs#2)]
+ [!code-vb[System.AttributeUsageAttribute.Inherited#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.AttributeUsageAttribute.Inherited/vb/Inherited1.vb#2)]  
+  
+ Como a saída de exemplo mostra, `DerivedA` e `DerivedA.MethodA` herdam o `InheritedAttribute` atributo, mas `DerivedB` e `DerivedB.MethodB` não herdam a `NotInheritedAttribute` atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidOn">
+      <MemberSignature Language="C#" Value="public AttributeTargets ValidOn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.AttributeTargets ValidOn" />
+      <MemberSignature Language="DocId" Value="P:System.AttributeUsageAttribute.ValidOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AttributeTargets</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um conjunto de valores para identificar a quais elementos de programa o atributo indicado pode ser aplicado.</summary>
+        <value>Um ou vários valores <see cref="T:System.AttributeTargets" />. O padrão é <see langword="All" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,222 @@
+<Type Name="CustomAce" FullName="System.Security.AccessControl.CustomAce">
+  <TypeSignature Language="C#" Value="public sealed class CustomAce : System.Security.AccessControl.GenericAce" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CustomAce extends System.Security.AccessControl.GenericAce" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.CustomAce" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.GenericAce</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um controle entrada acesso (ACE) que não está definido por um dos membros a <see cref="T:System.Security.AccessControl.AceType" /> enumeração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Security.AccessControl.CustomAce> objeto contém um cabeçalho ACE e um blob opaco de dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomAce (System.Security.AccessControl.AceType type, System.Security.AccessControl.AceFlags flags, byte[] opaque);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.AccessControl.AceType type, valuetype System.Security.AccessControl.AceFlags flags, unsigned int8[] opaque) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CustomAce.#ctor(System.Security.AccessControl.AceType,System.Security.AccessControl.AceFlags,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Security.AccessControl.AceType" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AceFlags" />
+        <Parameter Name="opaque" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="type">Tipo de entrada de controle de acesso (ACE) novo. Esse valor deve ser maior que <see cref="F:System.Security.AccessControl.AceType.MaxDefinedAceType" />.</param>
+        <param name="flags">Sinalizadores que especificam informações sobre a herança, a propagação de herança e condições para a nova ACE de auditoria.</param>
+        <param name="opaque">Uma matriz de valores de bytes que contém os dados para o novo ACE. Este valor pode ser <see langword="null" />. O comprimento dessa matriz não deve ser maior que o valor de <see cref="F:System.Security.AccessControl.CustomAce.MaxOpaqueLength" /> campo e deve ser um múltiplo de quatro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.AccessControl.CustomAce" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `opaque` dados não são clonados. Os dados devem ser fechados antes de chamar este construtor se o chamador não confiar na fonte de dados não modificar os dados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor da <paramref name="type" /> parâmetro não é maior do que <see cref="F:System.Security.AccessControl.AceType.MaxDefinedAceType" /> ou o comprimento do <paramref name="opaque" /> matriz é maior que o valor da <see cref="F:System.Security.AccessControl.CustomAce.MaxOpaqueLength" /> campo ou não é um múltiplo de quatro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinaryLength">
+      <MemberSignature Language="C#" Value="public override int BinaryLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BinaryLength" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CustomAce.BinaryLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento, em bytes, da representação binária da atual <see cref="T:System.Security.AccessControl.CustomAce" /> objeto. Esse comprimento deve ser usado antes de empacotamento a ACL em uma matriz binária com o <see cref="M:System.Security.AccessControl.CustomAce.GetBinaryForm(System.Byte[],System.Int32)" /> método.</summary>
+        <value>O comprimento, em bytes, da representação binária da atual <see cref="T:System.Security.AccessControl.CustomAce" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBinaryForm">
+      <MemberSignature Language="C#" Value="public override void GetBinaryForm (byte[] binaryForm, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetBinaryForm(unsigned int8[] binaryForm, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CustomAce.GetBinaryForm(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binaryForm" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="binaryForm">A matriz de bytes no qual o conteúdo do <see cref="T:System.Security.AccessControl.CustomAce" /> é empacotada.</param>
+        <param name="offset">O deslocamento no qual iniciar a realização de marshaling.</param>
+        <summary>Empacota o conteúdo de <see cref="T:System.Security.AccessControl.CustomAce" /> o objeto para o início da matriz de bytes especificada no deslocamento especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />é negativa ou muito alto para permitir todo o <see cref="T:System.Security.AccessControl.CustomAce" /> a serem copiados na <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOpaque">
+      <MemberSignature Language="C#" Value="public byte[] GetOpaque ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetOpaque() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CustomAce.GetOpaque" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna os dados opacos associados a esta <see cref="T:System.Security.AccessControl.CustomAce" /> objeto.</summary>
+        <returns>Uma matriz de valores de byte que representa os dados opacos associados a esta <see cref="T:System.Security.AccessControl.CustomAce" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxOpaqueLength">
+      <MemberSignature Language="C#" Value="public static readonly int MaxOpaqueLength;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 MaxOpaqueLength" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.CustomAce.MaxOpaqueLength" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o comprimento máximo permitido de um blob de dados opaco para este <see cref="T:System.Security.AccessControl.CustomAce" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpaqueLength">
+      <MemberSignature Language="C#" Value="public int OpaqueLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OpaqueLength" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.CustomAce.OpaqueLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento dos dados opacos associados a esta <see cref="T:System.Security.AccessControl.CustomAce" /> objeto.</summary>
+        <value>O comprimento dos dados de retorno de chamada opaco.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOpaque">
+      <MemberSignature Language="C#" Value="public void SetOpaque (byte[] opaque);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOpaque(unsigned int8[] opaque) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CustomAce.SetOpaque(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="opaque" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="opaque">Uma matriz de valores de byte que representa os dados de retorno de chamada opaco para este <see cref="T:System.Security.AccessControl.CustomAce" /> objeto.</param>
+        <summary>Define os dados de retorno de chamada opaco associados a esta <see cref="T:System.Security.AccessControl.CustomAce" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

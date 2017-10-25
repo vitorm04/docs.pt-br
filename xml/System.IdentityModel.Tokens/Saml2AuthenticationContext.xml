@@ -1,0 +1,180 @@
+<Type Name="Saml2AuthenticationContext" FullName="System.IdentityModel.Tokens.Saml2AuthenticationContext">
+  <TypeSignature Language="C#" Value="public class Saml2AuthenticationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Saml2AuthenticationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.Saml2AuthenticationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento AuthnContext especificado em [Saml2Core 2.7.2.2].</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe base não dá suporte diretamente a qualquer declaração de contexto de autenticação por valor (representada pelo elemento AuthnContextDecl em XML). Para dar suporte a declarações de por valor, estenda a classe para dar suporte ao modelo de dados e estender o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe, substituindo o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler.ReadAuthenticationContext%2A> e <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler.WriteAuthenticationContext%2A> métodos para ler e gravar a declaração de por valor.  
+  
+ Para obter mais informações sobre o elemento que essa classe representa, consulte a especificação principal do SAML v 2.0.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2AuthenticationContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2AuthenticationContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.Saml2AuthenticationContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.Saml2AuthenticationContext.ClassReference%2A> e <xref:System.IdentityModel.Tokens.Saml2AuthenticationContext.DeclarationReference%2A> propriedades são definidas como `null` no novo <xref:System.IdentityModel.Tokens.Saml2AuthenticationContext> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2AuthenticationContext (Uri classReference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri classReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2AuthenticationContext.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="classReference" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="classReference">A referência de classe de contexto de autenticação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.Saml2AuthenticationContext" /> classe com a referência de classe especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.Saml2AuthenticationContext.DeclarationReference%2A> está definida como `null` no novo <xref:System.IdentityModel.Tokens.Saml2AuthenticationContext> instância.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="classReference" /> não é <see langword="null" /> e não é um URI absoluto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2AuthenticationContext (Uri classReference, Uri declarationReference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri classReference, class System.Uri declarationReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2AuthenticationContext.#ctor(System.Uri,System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="classReference" Type="System.Uri" />
+        <Parameter Name="declarationReference" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="classReference">A referência de classe de contexto de autenticação.</param>
+        <param name="declarationReference">A referência de declaração do contexto de autenticação</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.Saml2AuthenticationContext" /> classe com a referência de declaração e referência de classe especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="classReference" /> não é <see langword="null" /> e não é um URI absoluto.  
+  
+ -ou-  
+  
+ <paramref name="declarationReference" /> não é <see langword="null" /> e não é um URI absoluto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticatingAuthorities">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Uri&gt; AuthenticatingAuthorities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Uri&gt; AuthenticatingAuthorities" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthenticationContext.AuthenticatingAuthorities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de zero ou mais identificadores exclusivos (URIs) de autoridades de autenticação que foram envolvidas na autenticação da entidade de segurança (não incluindo o emissor de declaração, que é provável que foram envolvidas sem explicitamente sejam incluídos na coleção). [Saml2Core, 2.7.2.2]</summary>
+        <value>Retorna uma coleção do tipo <see cref="T:System.Uri" /> que identifica as autoridades de autenticação que foram envolvidas na autenticação da entidade de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento AuthenticationAuthorities.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassReference">
+      <MemberSignature Language="C#" Value="public Uri ClassReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ClassReference" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthenticationContext.ClassReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a referência URI que identifica uma classe de contexto de autenticação que descreve a declaração de contexto de autenticação que segue. [Saml2Core, 2.7.2.2]</summary>
+        <value>Um <see cref="T:System.Uri" /> que identifica a classe de contexto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento ClassReference. Isso pode ser uma das constantes URI definidas no [AuthenticationContextClasses](https://referencesource.microsoft.com/#System.IdentityModel/System/IdentityModel/Tokens/Saml2Constants.cs,77) classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Tentativa de definir um valor que não é <see langword="null" /> e não é um URI absoluto ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclarationReference">
+      <MemberSignature Language="C#" Value="public Uri DeclarationReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri DeclarationReference" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2AuthenticationContext.DeclarationReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência URI que identifica uma declaração de contexto de autenticação. [Saml2Core, 2.7.2.2]</summary>
+        <value>Um <see cref="T:System.Uri" /> que identifica uma declaração de contexto de autenticação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento AuthnContextDeclRef. A implementação base não dá suporte a declarações de por valor. Consulte comentários no <xref:System.IdentityModel.Tokens.Saml2AuthenticationContext> tópico para obter mais informações sobre a classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Tentativa de definir um valor que não é <see langword="null" /> e não é um URI absoluto ocorre.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

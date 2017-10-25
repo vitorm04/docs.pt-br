@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Mail">
+  <Docs>
+    <summary>As classes neste namespace foram preteridas. Use o <see cref="N:System.Net.Mail" /> namespace em vez disso. O <see cref="N:System.Web.Mail" /> namespace contém classes que permitem criar e enviar mensagens usando o componente de mensagem CDOSYS (colaboração dados objetos para o Windows 2000). A mensagem de email é fornecida por meio do serviço de email SMTP integrado ao Microsoft Windows 2000 ou um servidor SMTP arbitrário. As classes nesse namespace podem ser usadas de ASP.NET ou de qualquer aplicativo gerenciado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

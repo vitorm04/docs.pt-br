@@ -1,0 +1,470 @@
+<Type Name="SendPacketsElement" FullName="System.Net.Sockets.SendPacketsElement">
+  <TypeSignature Language="C#" Value="public class SendPacketsElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SendPacketsElement extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.SendPacketsElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um elemento em uma matriz <see cref="T:System.Net.Sockets.SendPacketsElement" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.SendPacketsElement> classe é usada para aprimorar o <xref:System.Net.Sockets.Socket> classe para uso por aplicativos de servidor que usam a e/s de rede assíncrona para obter o melhor desempenho. O <xref:System.Net.Sockets.SendPacketsElement> classe é usada com a <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> propriedade para obter ou definir um buffer de dados ou arquivo a ser enviada usando o <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>As instâncias dessa classe serão thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendPacketsElement (byte[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.SendPacketsElement.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz de bytes de dados a serem enviados usando o <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> método.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.Sockets.SendPacketsElement" /> classe usando o buffer especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.SendPacketsElement.%23ctor%28System.Byte%5B%5D%29> construtor inicializa uma nova instância do <xref:System.Net.Sockets.SendPacketsElement> classe com uma matriz de bytes de dados. O <xref:System.Net.Sockets.SendPacketsElement> classe é usada com a <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> propriedade para obter ou definir um buffer de dados ou arquivo a ser enviada usando o <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="buffer" /> parâmetro não pode ser nulo</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendPacketsElement (string filepath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filepath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.SendPacketsElement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filepath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filepath">O nome do arquivo do arquivo a ser transmitidos usando o <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> método.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.Sockets.SendPacketsElement" /> classe usando o arquivo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.SendPacketsElement.%23ctor%28System.String%29> construtor inicializa uma nova instância do <xref:System.Net.Sockets.SendPacketsElement> classe com um nome de arquivo de um arquivo. O <xref:System.Net.Sockets.SendPacketsElement> classe é usada com a <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> propriedade para obter ou definir um buffer de dados ou arquivo a ser enviada usando o <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> método.  
+  
+ Caminhos de convenção de nomenclatura (UNC) universal são suportados pelo `filepath` parâmetro. Se o arquivo estiver no diretório de trabalho atual, nenhuma informação de caminho deve ser especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="filepath" /> parâmetro não pode ser nulo</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendPacketsElement (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.SendPacketsElement.#ctor(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz de bytes de dados a serem enviados usando o <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> método.</param>
+        <param name="offset">O deslocamento, em bytes, do início do <c>buffer</c> para o local no <c>buffer</c> para começar a enviar os dados especificados no <c>buffer</c> parâmetro.</param>
+        <param name="count">O número de bytes a enviar a partir de <c>deslocamento</c> parâmetro. Se <c>contagem</c> for zero, não os bytes são enviados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.Sockets.SendPacketsElement" /> usando o buffer especificado, o deslocamento de buffer e a contagem de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.SendPacketsElement.%23ctor%28System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32%29> construtor inicializa uma nova instância do <xref:System.Net.Sockets.SendPacketsElement> classe com uma matriz de bytes de dados. O <xref:System.Net.Sockets.SendPacketsElement> classe é usada com a <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> propriedade para obter ou definir um buffer de dados ou arquivo a ser enviada usando o <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="buffer" /> parâmetro não pode ser nulo</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="offset" /> e <paramref name="count" /> parâmetros devem ser maior que ou igual a zero.  
+  
+ O <paramref name="offset" /> e <paramref name="count" /> deve ser menor que o tamanho do buffer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendPacketsElement (string filepath, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filepath, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.SendPacketsElement.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filepath" Type="System.String" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="filepath">O nome do arquivo do arquivo a ser transmitidos usando o <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> método.</param>
+        <param name="offset">O deslocamento, em bytes, do início do arquivo para o local do arquivo para começar a enviar o arquivo especificado no <c>filepath</c> parâmetro.</param>
+        <param name="count">O número de bytes a enviar a partir de <c>deslocamento</c> parâmetro. Se <c>contagem</c> for zero, o arquivo inteiro é enviado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.Sockets.SendPacketsElement" /> classe usando o caminho de nome de arquivo especificado, deslocamento e contagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.SendPacketsElement.%23ctor%28System.String%2CSystem.Int32%2CSystem.Int32%29> construtor inicializa uma nova instância do <xref:System.Net.Sockets.SendPacketsElement> classe com um nome de arquivo de um arquivo. O <xref:System.Net.Sockets.SendPacketsElement> classe é usada com a <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> propriedade para obter ou definir um buffer de dados ou arquivo a ser enviada usando o <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> método.  
+  
+ Caminhos de convenção de nomenclatura (UNC) universal são suportados pelo `filepath` parâmetro. Se o arquivo estiver no diretório de trabalho atual, nenhuma informação de caminho deve ser especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="filepath" /> parâmetro não pode ser nulo</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="offset" /> e <paramref name="count" /> parâmetros devem ser maior que ou igual a zero.  
+  
+ O <paramref name="offset" /> e <paramref name="count" /> deve ser menor que o tamanho do arquivo indicado pelo <paramref name="filepath" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendPacketsElement (byte[] buffer, int offset, int count, bool endOfPacket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] buffer, int32 offset, int32 count, bool endOfPacket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.SendPacketsElement.#ctor(System.Byte[],System.Int32,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="endOfPacket" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz de bytes de dados a serem enviados usando o <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> método.</param>
+        <param name="offset">O deslocamento, em bytes, do início do <c>buffer</c> para o local no <c>buffer</c> para começar a enviar os dados especificados no <c>buffer</c> parâmetro.</param>
+        <param name="count">Os bytes de números para enviar a partir de <c>deslocamento</c> parâmetro. Se <c>contagem</c> for zero, não os bytes são enviados.</param>
+        <param name="endOfPacket">Um valor booleano que especifica se esse elemento não deve ser combinado com o próximo elemento em uma única enviar solicitação do protocolo SSL para o transporte. Este sinalizador é usado para um controle granular do conteúdo de cada mensagem em um datagrama ou soquete orientado a mensagens.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.Sockets.SendPacketsElement" /> classe usando o buffer especificado, o deslocamento de buffer e a contagem com uma opção para combinar esse elemento com o próximo elemento em uma solicitação de envio único do protocolo SSL para o transporte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.SendPacketsElement.%23ctor%28System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%29> construtor inicializa uma nova instância do <xref:System.Net.Sockets.SendPacketsElement> classe com uma matriz de bytes de dados. O <xref:System.Net.Sockets.SendPacketsElement> classe é usada com a <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> propriedade para obter ou definir um buffer de dados ou arquivo a ser enviada usando o <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="buffer" /> parâmetro não pode ser nulo</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="offset" /> e <paramref name="count" /> parâmetros devem ser maior que ou igual a zero.  
+  
+ O <paramref name="offset" /> e <paramref name="count" /> deve ser menor que o tamanho do buffer</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendPacketsElement (string filepath, int offset, int count, bool endOfPacket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filepath, int32 offset, int32 count, bool endOfPacket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.SendPacketsElement.#ctor(System.String,System.Int32,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filepath" Type="System.String" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="endOfPacket" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filepath">O nome do arquivo do arquivo a ser transmitidos usando o <see cref="M:System.Net.Sockets.Socket.SendPacketsAsync(System.Net.Sockets.SocketAsyncEventArgs)" /> método.</param>
+        <param name="offset">O deslocamento, em bytes, do início do arquivo para o local do arquivo para começar a enviar o arquivo especificado no <c>filepath</c> parâmetro.</param>
+        <param name="count">O número de bytes a enviar a partir de <c>deslocamento</c> parâmetro. Se <c>contagem</c> for zero, o arquivo inteiro é enviado.</param>
+        <param name="endOfPacket">Um valor booleano que especifica se esse elemento não deve ser combinado com o próximo elemento em uma única enviar solicitação do protocolo SSL para o transporte. Este sinalizador é usado para um controle granular do conteúdo de cada mensagem em um datagrama ou soquete orientado a mensagens.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.Sockets.SendPacketsElement" /> classe usando o caminho de nome de arquivo especificado, o deslocamento de buffer e a contagem com uma opção para combinar esse elemento com o próximo elemento em uma solicitação de envio único do protocolo SSL para o transporte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.SendPacketsElement.%23ctor%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%29> construtor inicializa uma nova instância do <xref:System.Net.Sockets.SendPacketsElement> classe com um nome de arquivo de um arquivo. O <xref:System.Net.Sockets.SendPacketsElement> classe é usada com a <xref:System.Net.Sockets.SocketAsyncEventArgs.SendPacketsElements%2A?displayProperty=nameWithType> propriedade para obter ou definir um buffer de dados ou arquivo a ser enviada usando o <xref:System.Net.Sockets.Socket.SendPacketsAsync%2A?displayProperty=nameWithType> método.  
+  
+ Caminhos de convenção de nomenclatura (UNC) universal são suportados pelo `filepath` parâmetro. Se o arquivo estiver no diretório de trabalho atual, nenhuma informação de caminho deve ser especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="filepath" /> parâmetro não pode ser nulo</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="offset" /> e <paramref name="count" /> parâmetros devem ser maior que ou igual a zero.  
+  
+ O <paramref name="offset" /> e <paramref name="count" /> deve ser menor que o tamanho do arquivo indicado pelo <paramref name="filepath" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Buffer">
+      <MemberSignature Language="C#" Value="public byte[] Buffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Buffer" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.SendPacketsElement.Buffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o buffer a ser enviada se a <see cref="T:System.Net.Sockets.SendPacketsElement" /> classe foi inicializada com um <paramref name="buffer" /> parâmetro.</summary>
+        <value>O buffer de bytes a ser enviada se a <see cref="T:System.Net.Sockets.SendPacketsElement" /> classe foi inicializada com um <paramref name="buffer" /> parâmetro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão para o <xref:System.Net.Sockets.SendPacketsElement.Buffer%2A> propriedade é uma matriz de comprimento zero se o <xref:System.Net.Sockets.SendPacketsElement> classe não foi inicializada com um `buffer` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.SendPacketsElement.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a contagem de bytes a ser enviado.</summary>
+        <value>A contagem de bytes a ser enviada se a <see cref="T:System.Net.Sockets.SendPacketsElement" /> classe foi inicializada com um <paramref name="count" /> parâmetro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão para o <xref:System.Net.Sockets.SendPacketsElement.Count%2A> propriedade é zero se o <xref:System.Net.Sockets.SendPacketsElement> classe não foi inicializada com um `count` parâmetro.  
+  
+ Se <xref:System.Net.Sockets.SendPacketsElement.Count%2A> é zero para um arquivo, o arquivo inteiro é enviado. Se <xref:System.Net.Sockets.SendPacketsElement.Count%2A> é zero para um buffer, sem os bytes são enviados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndOfPacket">
+      <MemberSignature Language="C#" Value="public bool EndOfPacket { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EndOfPacket" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.SendPacketsElement.EndOfPacket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se esse elemento não deve ser combinado com o próximo elemento em uma solicitação de envio único do protocolo SSL para o transporte.</summary>
+        <value>Um valor booliano que indica se esse elemento não deve ser combinado com o próximo elemento em uma única enviar a solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão para o <xref:System.Net.Sockets.SendPacketsElement.EndOfPacket%2A> propriedade é false se o <xref:System.Net.Sockets.SendPacketsElement> classe não foi inicializada com um `endOfPacket` como verdadeiro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilePath">
+      <MemberSignature Language="C#" Value="public string FilePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilePath" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.SendPacketsElement.FilePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do arquivo a ser enviada se a <see cref="T:System.Net.Sockets.SendPacketsElement" /> classe foi inicializada com um <paramref name="filepath" /> parâmetro.</summary>
+        <value>O nome do arquivo a ser enviada se a <see cref="T:System.Net.Sockets.SendPacketsElement" /> classe foi inicializada com um <paramref name="filepath" /> parâmetro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Caminhos de convenção de nomenclatura (UNC) universal são suportados pelo <xref:System.Net.Sockets.SendPacketsElement.FilePath%2A> propriedade. Se o arquivo estiver no diretório de trabalho atual, nenhuma informação de caminho deve ser especificado.  
+  
+ O valor padrão para o <xref:System.Net.Sockets.SendPacketsElement.FilePath%2A> propriedade é uma cadeia de caracteres vazia se o <xref:System.Net.Sockets.SendPacketsElement> classe não foi inicializada com um `filepath` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public int Offset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.SendPacketsElement.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento, em bytes, do início do buffer de dados ou arquivo para o local no buffer ou arquivo para começar a enviar os dados.</summary>
+        <value>O deslocamento, em bytes, do início do buffer de dados ou arquivo para o local no buffer ou arquivo para começar a enviar os dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão para o <xref:System.Net.Sockets.SendPacketsElement.Offset%2A> propriedade é zero se o <xref:System.Net.Sockets.SendPacketsElement> classe não foi inicializada com um `offset` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

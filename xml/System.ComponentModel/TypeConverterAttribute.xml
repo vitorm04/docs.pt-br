@@ -1,0 +1,285 @@
+<Type Name="TypeConverterAttribute" FullName="System.ComponentModel.TypeConverterAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TypeConverterAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeConverterAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.TypeConverterAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o tipo a ser usado como um conversor para o objeto ao qual este atributo está associado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe que você usa para conversão deve herdar de <xref:System.ComponentModel.TypeConverter>. Use o <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> propriedade para obter o nome da classe que fornece a conversão de dados para o objeto este atributo está vinculada.  
+  
+ Para obter mais informações sobre atributos, consulte [Atributos](~/docs/standard/attributes/index.md). Para obter mais informações sobre conversores de tipo, consulte o <xref:System.ComponentModel.TypeConverter> classe base e [como: implementar um conversor de tipo](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56).  
+  
+ Para estabelecer um conversor de tipo em uma classe personalizada que fornece o comportamento de conversão de tipo para XAML, você deve aplicar o <xref:System.ComponentModel.TypeConverterAttribute> para seu tipo de atributo. O argumento do atributo faz referência a sua implementação de conversor de tipo. O conversor de tipo deve ser capaz de aceitar valores de uma cadeia de caracteres que é usado para atributos ou texto de inicialização na marcação XAML e converter a cadeia de caracteres em seu tipo de destino pretendido. Para obter mais informações, consulte[TypeConverters and XAML](~/docs/framework/wpf/advanced/typeconverters-and-xaml.md).  
+  
+ Em vez de aplicar a todos os valores de um tipo, também é possível estabelecer um comportamento de conversor de tipo para XAML em uma propriedade específica. Nesse caso, você aplicar <xref:System.ComponentModel.TypeConverterAttribute> à definição da propriedade (a definição externa, não específicas `get` e `set` definições).  
+  
+ Um comportamento de conversor de tipo para uso em XAML de um membro anexável personalizado pode ser atribuído aplicando <xref:System.ComponentModel.TypeConverterAttribute> para o `get` método de acessador que suporta o uso XAML. Para obter mais informações, consulte [Visão geral das propriedades anexadas](~/docs/framework/wpf/advanced/attached-properties-overview.md).  
+  
+ Para casos complexos de serialização XAML que exigem estado adicional do tempo de execução do objeto, considere a possibilidade de definir um serializador de valor além de um conversor de tipo e um atributo ambas as classes de suporte em seus tipos personalizados ou membros personalizados. Para obter mais informações, consulte <xref:System.Windows.Markup.ValueSerializer>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir declara `MyClass` para usar o conversor de tipo chamado `MyClassConverter`. Este exemplo supõe que `MyClassConverter` foi implementado em outro lugar. A classe que implementa o conversor (`MyClassConverter`) herde de <xref:System.ComponentModel.TypeConverter> classe.  
+  
+ [!code-cpp[Classic TypeConverterAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TypeConverterAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TypeConverterAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TypeConverterAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic TypeConverterAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TypeConverterAttribute Example/VB/source.vb#1)]  
+  
+ O exemplo a seguir cria uma instância de `MyClass`. Em seguida, ele obtém os atributos para a classe e imprime o nome do conversor de tipo usado pelo `MyClass`.  
+  
+ [!code-cpp[Classic TypeConverterAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic TypeConverterAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic TypeConverterAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic TypeConverterAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic TypeConverterAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic TypeConverterAttribute Example/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeConverterAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverterAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.TypeConverterAttribute" /> classe com o conversor de tipo padrão, que é uma cadeia de caracteres vazia ("").</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe que fornece a conversão de dados deve herdar de <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeConverterAttribute (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome totalmente qualificado da classe a ser usado para conversão de dados para o objeto este atributo está associado ao.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.TypeConverterAttribute" /> de classe, usando o nome do tipo especificado como o conversor de dados para este atributo está associado ao objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe que fornece a conversão de dados deve herdar de <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeConverterAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Type" /> que representa o tipo de conversor de classe a ser usado para conversão de dados para este atributo está associado ao objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.TypeConverterAttribute" /> classe usando o tipo especificado como o conversor de dados para este atributo está associado ao objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe que fornece a conversão de dados deve herdar de <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConverterTypeName">
+      <MemberSignature Language="C#" Value="public string ConverterTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConverterTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.TypeConverterAttribute.ConverterTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de tipo totalmente qualificado de <see cref="T:System.Type" /> para usar como um conversor para esse atributo está associado ao objeto.</summary>
+        <value>O nome de tipo totalmente qualificado do <see cref="T:System.Type" /> a ser usado como um conversor para o objeto este atributo está associado a, ou uma cadeia de caracteres vazia ("") se não houver nenhum. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.TypeConverterAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.TypeConverterAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.TypeConverterAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverterAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o tipo a ser usado como um conversor para esse atributo está associado ao objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverterAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto para testar a igualdade de valor de.</param>
+        <summary>Retorna se o valor do objeto especificado é igual ao atual <see cref="T:System.ComponentModel.TypeConverterAttribute" />.</summary>
+        <returns>
+          <see langword="true" />Se o valor do objeto especificado é igual do atual <see cref="T:System.ComponentModel.TypeConverterAttribute" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverterAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código hash do <see cref="T:System.ComponentModel.TypeConverterAttribute" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

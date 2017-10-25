@@ -1,0 +1,175 @@
+<Type Name="EditorZone" FullName="System.Web.UI.WebControls.WebParts.EditorZone">
+  <TypeSignature Language="C#" Value="public class EditorZone : System.Web.UI.WebControls.WebParts.EditorZoneBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EditorZone extends System.Web.UI.WebControls.WebParts.EditorZoneBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.EditorZone" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.EditorZoneBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.EditorZoneDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como o controle principal no conjunto de controles de Web Parts para hospedar controles <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> em uma página da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dentro do conjunto de controle de Web Parts, uma zona é um controle composto que abrange uma região definida em uma página da Web e contém controles de servidor. As funções principais de uma zona são para dispor os controles que ele contém e para fornecer uma interface de usuário (UI) comum para esses controles. Para obter informações gerais sobre zonas e como eles são usados em aplicativos Web Parts, consulte a documentação de referência para a base de <xref:System.Web.UI.WebControls.WebParts.WebZone> classe, e [Web Parts Control Set Overview](http://msdn.microsoft.com/library/ff0149e4-695a-401a-8cda-53df6d7d2668).  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle é um dos controles fundamentais no conjunto de controle de Web Parts. Um recurso importante de Web Parts é a capacidade de usuários finais para modificar (ou personalizar) em páginas da Web de acordo com suas preferências e salvar suas configurações personalizadas para sessões futuras do navegador. Um aspecto da modificação de páginas de Web Parts inclui edição; os usuários podem editar a aparência, layout, comportamento e outras propriedades de visíveis <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Vários controles no conjunto de controle de Web Parts fornecem os recursos de edição, incluindo o <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle.  
+  
+ Um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle fica visível quando uma página de Web Parts entra em modo de edição e disponibiliza várias <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles que podem ser usados para personalizar <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. O <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle é muito semelhante ao seu pai, o <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> classe, com uma diferença importante: O <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle fornece um modelo de zona, referenciado na sua <xref:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate%2A> propriedade. O modelo de zona adiciona a capacidade de declarar o conteúdo no formato de persistência de página. Os desenvolvedores de páginas podem colocar um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle na marcação declarativa de uma página da Web, adiciona um filho `<zonetemplate>` elemento e dentro do `<zonetemplate>` elemento, adicionar referências declarativas para <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle também tem um método <xref:System.Web.UI.WebControls.WebParts.EditorZone.CreateEditorParts%2A>, que substitui um método de base de <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> classe. Esse método é necessário para que um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle pode criar o modelo de zona para conter nenhum <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles que são adicionados à zona declarativamente.  
+  
+> [!NOTE]
+>  Os botões a <xref:System.Web.UI.WebControls.WebParts.EditorZone> UI exigem scripts do lado do cliente para funcionar corretamente. Se o script está desabilitado no navegador, o usuário não poderá executar ações por meio de <xref:System.Web.UI.WebControls.WebParts.EditorZone> interface do usuário.  
+  
+## <a name="accessibility"></a>Acessibilidade  
+ A marcação processada por padrão para este controle pode não estar de acordo com os padrões de acessibilidade, como as diretrizes de prioridade 1 conteúdo WCAG Web Accessibility Guidelines 1.0 (). Para obter detalhes sobre o suporte de acessibilidade para este controle, consulte [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra várias declarativa e usa programático do <xref:System.Web.UI.WebControls.WebParts.EditorZone> classe. O exemplo cria uma zona de editor personalizado que herda de <xref:System.Web.UI.WebControls.WebParts.EditorZone> classe e usa-o em uma página de Web Parts.  
+  
+ O exemplo de código tem três partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição na página da Web.  
+  
+-   Uma página da Web que faz referência a custom <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle.  
+  
+-   Obter uma explicação de como funciona o exemplo.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Para obter mais detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_EditorZone_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorZone_Overview/CS/displaymodecs.ascx#4)]
+ [!code-aspx-vb[WebParts_EditorZone_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorZone_Overview/VB/displaymodevb.ascx#4)]  
+  
+ A segunda parte do exemplo de código é uma página da Web. Na parte superior da página é uma `Register` diretiva para o controle de usuário. A marca de controle de usuário é declarada na página com um `uc1:` prefixo para o elemento. Observe que abaixo o `<asp:WebPartZone>` elemento é um `<asp:EditorZone>` elemento que contém vários <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles, com algumas marcas e propriedades definidas para determinar sua aparência e comportamento. Também há um número de métodos que acessam vários membros do <xref:System.Web.UI.WebControls.WebParts.EditorZone> controlar programaticamente.  
+  
+ [!code-aspx-csharp[WebParts_EditorZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorZone_Overview/CS/editorzonecs.aspx#1)]
+ [!code-aspx-vb[WebParts_EditorZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorZone_Overview/VB/editorzonevb.aspx#1)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **modo de edição** na lista suspensa para alternar para modo de edição. Para exibir a interface do usuário de edição, você pode clicar no menu de verbos (seta para baixo) na barra de título de um dos dois controles e clique em **editar** para o controle de edição. Com a edição da interface do usuário visível, você pode ver os efeitos sobre os usos programáticos e declarativos de <xref:System.Web.UI.WebControls.WebParts.EditorZone> membros de classe.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Se você quiser criar um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.EditorZone" /> zona para ter maior controle sobre o processamento da interface do usuário de edição, você pode herdar diretamente o <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> classe, desde que você não precisa fornecer suporte de modelo de zona para desenvolvedores de página Adicionar <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> Controla a zona declarativamente. Nesse caso, você adicionaria todas <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controles a uma zona programaticamente. Se você quiser oferecer suporte a modelo de região, você deve herdar do <see cref="T:System.Web.UI.WebControls.WebParts.EditorZone" /> classe.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorZone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorZone.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.EditorZone" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEditorParts">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorZone.CreateEditorParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.EditorPartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria todos os <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controles declarada dentro de um modelo de zona no formato de persistência de página.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> que contém referências a todos os <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controles declarados dentro do modelo de zona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorZone.CreateEditorParts%2A> método substitui o método base para criar somente o <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles que são declarados dentro do modelo de zona. Qualquer outro <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles adicionados à zona devem ser adicionados por meio de programação. Isso pode ser feito, por exemplo, Implementando a <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface em um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. Em seguida, no substituído <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método, você pode adicionar uma coleção de personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles a uma zona.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Atual <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle não tem uma identificação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoneTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate ZoneTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ZoneTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.WebParts.EditorZone))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateInstance(System.Web.UI.TemplateInstance.Single)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um modelo para conter controles filho dentro de um <see cref="T:System.Web.UI.WebControls.WebParts.EditorZone" /> controle no formato de persistência de página.</summary>
+        <value>Um <see cref="T:System.Web.UI.ITemplate" /> modelo da zona que atua como um contêiner para controles filho na zona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate%2A> propriedade é a principal diferença entre o <xref:System.Web.UI.WebControls.WebParts.EditorZone> classe e a base de <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> classe. Adicionando suporte para um modelo de zona, o <xref:System.Web.UI.WebControls.WebParts.EditorZone> classe permite que os desenvolvedores de página colocar o filho <xref:System.Web.UI.WebControls.WebParts.EditorPart> controla dentro de um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle na marcação declarativa de uma página da Web. O modelo de zona atua como um contêiner para os controles filho.  
+  
+> [!NOTE]
+>  O acessador set para a <xref:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate%2A> chamadas de propriedade de <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.InvalidateEditorParts%2A> método, o que força a coleção de <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles declarados no modelo a ser recriado. Isso faz com que as alterações no conteúdo do modelo a ser reconhecido.  
+  
+ Para usar um modelo de zona declarativamente dentro um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle, que você adicione um par de `<zonetemplate>` marcas e referência <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles entre as marcas. Modelo de apenas uma zona é processado por instância de um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle (portanto, não há nenhum motivo para adicionar vários `<zonetemplate>` elementos para um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle). Além disso, o modelo de zona de um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle pode conter somente os controles de parte que derivam de <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso declarativo do <xref:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate%2A> propriedade. O código completo para o exemplo é encontrado na seção de exemplo do <xref:System.Web.UI.WebControls.WebParts.EditorZone> visão geral da classe.  
+  
+ O exemplo de código demonstra como <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles podem ser colocados em um `<zonetemplate>` elemento em um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle.  
+  
+ [!code-aspx-csharp[WebParts_EditorZone_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorZone_Overview/CS/editorzonecs.aspx#2)]
+ [!code-aspx-vb[WebParts_EditorZone_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorZone_Overview/VB/editorzonevb.aspx#2)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **modo de edição** na lista suspensa para alternar para modo de edição. Para exibir a interface do usuário (UI) edição, você pode clicar no menu de verbos (seta para baixo) na barra de título de um dos dois controles e clique em **editar** para o controle de edição. Com a edição da interface do usuário visível, você pode ver as várias <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles que são declarados dentro de `<zonetemplate>` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

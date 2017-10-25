@@ -1,0 +1,125 @@
+<Type Name="LogExtent" FullName="System.IO.Log.LogExtent">
+  <TypeSignature Language="C#" Value="public sealed class LogExtent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LogExtent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.LogExtent" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma extensão de disco que contém dados de log.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IO.Log.LogStore> instância armazena seus dados em uma coleção de extensões do disco, representado pelo <xref:System.IO.Log.LogExtent> instâncias. Um determinado <xref:System.IO.Log.LogExtent> é associado a exatamente uma <xref:System.IO.Log.LogStore>, e <xref:System.IO.Log.LogExtent> objetos na mesma <xref:System.IO.Log.LogStore> são de tamanho idêntico. Espaço é adicionado a e removido de um <xref:System.IO.Log.LogStore> instância em incrementos de extensão.  
+  
+ Embora <xref:System.IO.Log.LogExtent> objetos são representados no disco como arquivos, eles não devem ser movidos ou excluídos como arquivos normais. Para excluir um <xref:System.IO.Log.LogExtent> da instância, removê-lo a <xref:System.IO.Log.LogExtentCollection> que o contém.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogExtent> classe para adicionar e emular extensões em uma sequência de log.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogExtent.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho totalmente qualificado deste <see cref="T:System.IO.Log.LogExtent" /> instância.</summary>
+        <value>O caminho totalmente qualificado deste <see cref="T:System.IO.Log.LogExtent" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora <xref:System.IO.Log.LogExtent> objetos são representados no disco como arquivos, eles não devem ser movidos ou excluídos como arquivos normais. Para excluir um <xref:System.IO.Log.LogExtent> da instância, removê-lo a <xref:System.IO.Log.LogExtentCollection> que o contém.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogExtent> classe para adicionar e emular extensões em uma sequência de log.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public long Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Size" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogExtent.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho desse <see cref="T:System.IO.Log.LogExtent" /> instância, em bytes.</summary>
+        <value>O tamanho deste <see cref="T:System.IO.Log.LogExtent" /> instância, em bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogExtent> classe para adicionar e emular extensões em uma sequência de log.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.IO.Log.LogExtentState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.LogExtentState State" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogExtent.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.LogExtentState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado deste <see cref="T:System.IO.Log.LogExtent" /> instância.</summary>
+        <value>O estado deste <see cref="T:System.IO.Log.LogExtent" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogExtent> classe para adicionar e emular extensões em uma sequência de log.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

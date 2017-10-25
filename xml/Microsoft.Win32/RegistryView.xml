@@ -1,0 +1,101 @@
+<Type Name="RegistryView" FullName="Microsoft.Win32.RegistryView">
+  <TypeSignature Language="C#" Value="public enum RegistryView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed RegistryView extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.RegistryView" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica qual exibição do Registro será o destino em um sistema operacional de 64 bits.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na versão de 64 bits do Windows, as partes do registro são armazenadas separadamente para aplicativos de 32 bits e 64 bits.  Há um modo de exibição de 32 bits para aplicativos de 32 bits e um modo de exibição de 64 bits para aplicativos de 64 bits.  
+  
+ Você pode especificar um modo de exibição de registro ao usar o <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> e <xref:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey%28Microsoft.Win32.RegistryHive%2CSystem.String%2CMicrosoft.Win32.RegistryView%29> métodos e o <xref:Microsoft.Win32.RegistryKey.FromHandle%2A> propriedade em uma <xref:Microsoft.Win32.RegistryKey> objeto.  
+  
+ Se você solicitar um modo de exibição de 64 bits em um sistema operacional de 32 bits, as chaves retornadas será no modo de exibição de 32 bits.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryView Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryView.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A exibição padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Registry32">
+      <MemberSignature Language="C#" Value="Registry32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryView Registry32 = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryView.Registry32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A exibição de 32 bits.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Registry64">
+      <MemberSignature Language="C#" Value="Registry64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.RegistryView Registry64 = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.RegistryView.Registry64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A exibição de 64 bits.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

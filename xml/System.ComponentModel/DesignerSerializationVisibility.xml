@@ -1,0 +1,123 @@
+<Type Name="DesignerSerializationVisibility" FullName="System.ComponentModel.DesignerSerializationVisibility">
+  <TypeSignature Language="C#" Value="public enum DesignerSerializationVisibility" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DesignerSerializationVisibility extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DesignerSerializationVisibility" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a visibilidade que uma propriedade tem em relação ao serializador de tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um designer visual usa um <xref:System.ComponentModel.DesignerSerializationVisibility> valor para indicar quais aspectos da propriedade ou evento devem ser examinados e salvo.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de como usar o <xref:System.ComponentModel.DesignerSerializationVisibility> enumerador, consulte o código de exemplo no ttribute.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="Content" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DesignerSerializationVisibility Content = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignerSerializationVisibility.Content" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerSerializationVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O gerador de código produz código para o conteúdo do objeto, em vez do objeto propriamente dito.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hidden">
+      <MemberSignature Language="C#" Value="Hidden" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DesignerSerializationVisibility Hidden = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignerSerializationVisibility.Hidden" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerSerializationVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O gerador de código não produz código para o objeto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="Visible" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DesignerSerializationVisibility Visible = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DesignerSerializationVisibility.Visible" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerSerializationVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O gerador de código produz código para o objeto.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

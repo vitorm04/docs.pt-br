@@ -1,0 +1,200 @@
+<Type Name="IServerChannelSink" FullName="System.Runtime.Remoting.Channels.IServerChannelSink">
+  <TypeSignature Language="C#" Value="public interface IServerChannelSink : System.Runtime.Remoting.Channels.IChannelSinkBase" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IServerChannelSink implements class System.Runtime.Remoting.Channels.IChannelSinkBase" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IServerChannelSink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IChannelSinkBase</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos usados para Coletores de transporte e segurança.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coletores de canal fornecem um ponto de plug-in que permite o acesso às mensagens subjacentes que fluem através do canal, bem como o fluxo usado pelo mecanismo de transporte para enviar mensagens para um objeto remoto. Coletores de canal vinculadas em uma cadeia de provedores de coletor de canal, e todas as mensagens de canal fluem por meio dessa cadeia de Coletores antes que a mensagem seja serializada e transportada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra uma implementação de <xref:System.Runtime.Remoting.Channels.IServerChannelSink> interface.  
+  
+ [!code-cpp[Remoting_Sinks#60](~/samples/snippets/cpp/VS_Snippets_Remoting/Remoting_Sinks/CPP/serversink.cpp#60)]
+ [!code-csharp[Remoting_Sinks#60](~/samples/snippets/csharp/VS_Snippets_Remoting/Remoting_Sinks/CS/serversink.cs#60)]  
+  
+ Consulte o <xref:System.Runtime.Remoting.Channels.IServerChannelSinkProvider> interface documentação para obter um exemplo da implementação do provedor de coletor do servidor correspondente.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName="AsyncProcessResponse">
+      <MemberSignature Language="C#" Value="public void AsyncProcessResponse (System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Channels.ITransportHeaders headers, System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AsyncProcessResponse(class System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, class System.Runtime.Remoting.Messaging.IMessage msg, class System.Runtime.Remoting.Channels.ITransportHeaders headers, class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IServerChannelSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Uma pilha de Coletores à esquerda para o coletor de transporte do servidor.</param>
+        <param name="state">Informações geradas no lado de solicitação que está associado este coletor.</param>
+        <param name="msg">A mensagem de resposta.</param>
+        <param name="headers">Os cabeçalhos para adicionar ao cabeçalho da mensagem de retorno ao cliente.</param>
+        <param name="stream">O cabeçalho de fluxo de volta para o coletor de transporte.</param>
+        <summary>Solicitações de processamento do coletor atual da resposta de uma chamada de método enviada de forma assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `state` parâmetro contém informações que foi inseridas na pilha de coletor de canal e associadas com o coletor atual.  
+  
+   
+  
+## Examples  
+ [!code-cpp[CommonTransportKeys#1](~/samples/snippets/cpp/VS_Snippets_Remoting/CommonTransportKeys/CPP/commontransportkeys.cpp#1)]
+ [!code-csharp[CommonTransportKeys#1](~/samples/snippets/csharp/VS_Snippets_Remoting/CommonTransportKeys/CS/commontransportkeys.cs#1)]
+ [!code-vb[CommonTransportKeys#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CommonTransportKeys/VB/commontransportkeys.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResponseStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetResponseStream (System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, System.Runtime.Remoting.Messaging.IMessage msg, System.Runtime.Remoting.Channels.ITransportHeaders headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetResponseStream(class System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack sinkStack, object state, class System.Runtime.Remoting.Messaging.IMessage msg, class System.Runtime.Remoting.Channels.ITransportHeaders headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IServerChannelSink.GetResponseStream(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Uma pilha de Coletores à esquerda para o coletor de transporte do servidor.</param>
+        <param name="state">O estado que foi introduzido para a pilha por esse coletor.</param>
+        <param name="msg">A mensagem de resposta para serializar.</param>
+        <param name="headers">Os cabeçalhos para colocar no fluxo de resposta ao cliente.</param>
+        <summary>Retorna o <see cref="T:System.IO.Stream" /> até que a mensagem de resposta fornecida é a ser serializado.</summary>
+        <returns>O <see cref="T:System.IO.Stream" /> até que a mensagem de resposta fornecida é a ser serializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado quando um fluxo de resposta deve ser criada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="NextChannelSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IServerChannelSink NextChannelSink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Channels.IServerChannelSink NextChannelSink" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.IServerChannelSink.NextChannelSink" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IServerChannelSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o próximo servidor coletor de canal da cadeia de coletor do servidor.</summary>
+        <value>O próximo canal do servidor do coletor da cadeia de coletor do servidor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coletores de canal vinculadas em uma cadeia de provedores de coletor, e todas as mensagens de canal fluem por meio dessa cadeia antes que a mensagem seja serializada e transportada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem necessários <see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /> permissão.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMessage">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.ServerProcessing ProcessMessage (System.Runtime.Remoting.Channels.IServerChannelSinkStack sinkStack, System.Runtime.Remoting.Messaging.IMessage requestMsg, System.Runtime.Remoting.Channels.ITransportHeaders requestHeaders, System.IO.Stream requestStream, out System.Runtime.Remoting.Messaging.IMessage responseMsg, out System.Runtime.Remoting.Channels.ITransportHeaders responseHeaders, out System.IO.Stream responseStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Runtime.Remoting.Channels.ServerProcessing ProcessMessage(class System.Runtime.Remoting.Channels.IServerChannelSinkStack sinkStack, class System.Runtime.Remoting.Messaging.IMessage requestMsg, class System.Runtime.Remoting.Channels.ITransportHeaders requestHeaders, class System.IO.Stream requestStream, [out] class System.Runtime.Remoting.Messaging.IMessage&amp; responseMsg, [out] class System.Runtime.Remoting.Channels.ITransportHeaders&amp; responseHeaders, [out] class System.IO.Stream&amp; responseStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IServerChannelSink.ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Messaging.IMessage@,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.ServerProcessing</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sinkStack" Type="System.Runtime.Remoting.Channels.IServerChannelSinkStack" />
+        <Parameter Name="requestMsg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+        <Parameter Name="requestHeaders" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+        <Parameter Name="requestStream" Type="System.IO.Stream" />
+        <Parameter Name="responseMsg" Type="System.Runtime.Remoting.Messaging.IMessage&amp;" RefType="out" />
+        <Parameter Name="responseHeaders" Type="System.Runtime.Remoting.Channels.ITransportHeaders&amp;" RefType="out" />
+        <Parameter Name="responseStream" Type="System.IO.Stream&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="sinkStack">Uma pilha de canal coletores que chamou o coletor atual.</param>
+        <param name="requestMsg">A mensagem que contém a solicitação.</param>
+        <param name="requestHeaders">Cabeçalhos recuperado da mensagem de entrada do cliente.</param>
+        <param name="requestStream">O fluxo que precisa ser para processar e passados para o coletor de desserialização.</param>
+        <param name="responseMsg">Quando este método retorna, contém um <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> que contém a mensagem de resposta. Este parâmetro é passado não inicializado.</param>
+        <param name="responseHeaders">Quando este método retorna, contém um <see cref="T:System.Runtime.Remoting.Channels.ITransportHeaders" /> que contém os cabeçalhos que devem ser adicionadas para retornar o cabeçalho da mensagem ao cliente. Este parâmetro é passado não inicializado.</param>
+        <param name="responseStream">Quando este método retorna, contém um <see cref="T:System.IO.Stream" /> que é o título para o coletor de transporte. Este parâmetro é passado não inicializado.</param>
+        <summary>Mensagem de solicitações de processamento do coletor atual.</summary>
+        <returns>Um <see cref="T:System.Runtime.Remoting.Channels.ServerProcessing" /> valor de status que fornece informações sobre como a mensagem foi processada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O trabalho de um proxy é converter uma chamada de método invocada nela em um objeto de mensagem. Este objeto de mensagem, que implementa o <xref:System.Runtime.Remoting.Messaging.IMessage> interface, é passado do lado do cliente para o final do servidor invocando <xref:System.Runtime.Remoting.Channels.IServerChannelSink.ProcessMessage%2A> em objetos de coletor de mensagem. Coletores de mensagem são encadeadas no sentido de que o coletor de cada mensagem é responsável por chamar <xref:System.Runtime.Remoting.Channels.IServerChannelSink.ProcessMessage%2A> no coletor próxima mensagem depois que ele tiver executado seu trabalho. Por exemplo, um coletor de mensagens relacionadas a sincronização pode causar um bloqueio adquirido ou liberado e, em seguida, delegado para o coletor de mensagem downstream.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

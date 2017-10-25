@@ -1,0 +1,1120 @@
+<Type Name="SemanticValue" FullName="System.Speech.Recognition.SemanticValue">
+  <TypeSignature Language="C#" Value="public sealed class SemanticValue : System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;string,System.Speech.Recognition.SemanticValue&gt;&gt;, System.Collections.Generic.IDictionary&lt;string,System.Speech.Recognition.SemanticValue&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,System.Speech.Recognition.SemanticValue&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SemanticValue extends System.Object implements class System.Collections.Generic.ICollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Speech.Recognition.SemanticValue&gt;&gt;, class System.Collections.Generic.IDictionary`2&lt;string, class System.Speech.Recognition.SemanticValue&gt;, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Speech.Recognition.SemanticValue&gt;&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SemanticValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("'{_keyName}'= {Value}  -  Children = {_dictionary.Count}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Speech.Recognition.SemanticValue/SemanticValueDebugDisplay))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a organização semântica de uma frase reconhecida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Speech.Recognition.SemanticValue>é o objeto principal que implementa a tecnologia de semântica de Speech. Interpretação semântica permite gramáticas definir regras para uso por um mecanismo de reconhecimento interprete corretamente a entrada de áudio. Interpretação semântica também permite que os mecanismos de reconhecimento de organizar seus resultados para que possam ser processados mais facilmente, em vez de retornar reconhecida apenas palavras e as sequências de palavras.  
+  
+ Por exemplo, o mecanismo de reconhecimento de saída "Alterar o plano de fundo para vermelho" precisa ser analisada e interpretada por um aplicativo antes que ele possa ser usado. Um <xref:System.Speech.Recognition.Grammar> objeto pode especificar uma interpretação semântica para tornar o processamento mais clara, especificando a frase tem dois subestruturas semânticas, um para selecionar o plano de fundo ou primeiro plano (representado pelo texto "em segundo plano") e o outro para selecionar cor (representado pelo texto "red").  
+  
+ Speech representa a semântica de uma operação de reconhecimento em uma árvore de <xref:System.Speech.Recognition.SemanticValue> objetos.  
+  
+ Cada <xref:System.Speech.Recognition.SemanticValue> instância inclui o seguinte:  
+  
+-   Um <xref:System.Object>, acessado por meio do <xref:System.Speech.Recognition.SemanticValue.Value%2A> propriedade, usada para a instância de chave de <xref:System.Speech.Recognition.SemanticValue>.  
+  
+-   Uma medida de precisão de análise semântica, retornado pelo <xref:System.Speech.Recognition.SemanticValue.Confidence%2A> propriedade.  
+  
+-   Uma coleção de pares nome/valor (<xref:System.Collections.Generic.KeyValuePair%602>) de objetos filho, que também são <xref:System.Speech.Recognition.SemanticValue> instâncias. Nós filho são acessíveis por meio de <xref:System.Speech.Recognition.SemanticValue> implementação de <xref:System.Collections.Generic.IDictionary%602> usando uma chave de pesquisa de cadeia de caracteres e um <xref:System.Speech.Recognition.SemanticValue> instância, como no exemplo a seguir.  
+  
+    ```csharp  
+    foreach (KeyValuePair<String, SemanticValue> child in semantics)   
+    {  
+      Utils.CreateSemanticsTreeNodes(semanticsNode.Nodes, child.Value, child.Key);  
+    }  
+    ```  
+  
+ Mecanismos de reconhecimento de com base em Speech fornecem instâncias válidas de <xref:System.Speech.Recognition.SemanticValue> para toda a saída de reconhecimento, mesmo para frases com nenhuma estrutura de semântica explícita.  
+  
+ O <xref:System.Speech.Recognition.SemanticValue> instância para uma frase é obtida por meio de <xref:System.Speech.Recognition.RecognizedPhrase.Semantics%2A> propriedade no <xref:System.Speech.Recognition.RecognizedPhrase> objeto (ou objetos que herdam a ele, como <xref:System.Speech.Recognition.RecognitionResult>).  
+  
+ <xref:System.Speech.Recognition.SemanticValue>objetos obtidos para frases reconhecidos sem estrutura semântica são caracterizados por:  
+  
+-   A falta de filhos (<xref:System.Speech.Recognition.SemanticValue.Count%2A> é 0).  
+  
+-   A propriedade <xref:System.Speech.Recognition.SemanticValue.Value%2A> é `null`.  
+  
+-   Um nível de confiança de semântica artificial do 1.0 (retornado por <xref:System.Speech.Recognition.SemanticValue.Confidence%2A>).  
+  
+ Normalmente, criam aplicativos <xref:System.Speech.Recognition.SemanticValue> instâncias indiretamente, adicioná-los para <xref:System.Speech.Recognition.Grammar> objetos usando <xref:System.Speech.Recognition.SemanticResultValue> e <xref:System.Speech.Recognition.SemanticResultKey> instâncias, em conjunto com <xref:System.Speech.Recognition.Choices> e <xref:System.Speech.Recognition.GrammarBuilder> objetos.  
+  
+ Direcionar a construção de um <xref:System.Speech.Recognition.SemanticValue> instância é útil durante a criação de gramáticas fortemente tipada.  
+  
+ <xref:System.Speech.Recognition.SemanticValue>implementa o <xref:System.Collections.Generic.IDictionary%602>, <xref:System.Collections.Generic.ICollection%601>, e <xref:System.Collections.Generic.IEnumerable%601> interfaces.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador para um <xref:System.Speech.Recognition.Grammar.SpeechRecognized> evento projetado para lidar com os comandos para alterar a cor de primeiro plano e plano de fundo.  
+  
+ O manipulador identifica reconhecidos frases com nenhuma estrutura subjacente de semântica detectando um <xref:System.Speech.Recognition.SemanticValue.Count%2A> de zero e um <xref:System.Speech.Recognition.SemanticValue.Value%2A> de `null`. Esta saída de reconhecimento é processada diretamente ao analisar o texto não processado.  
+  
+ Em outros casos, o manipulador utiliza chaves para obter os componentes RGB de um nome de cor, para determinar se o comando alterará o primeiro ou segundo plano ou para indicar que nenhuma chave válida foi encontrado.  
+  
+```csharp  
+  
+newGrammar.SpeechRecognized +=  
+  delegate(object sender, SpeechRecognizedEventArgs eventArgs)   
+  {  
+  
+    // Retrieve the value of the semantic property.  
+    bool changeBackGround = true;  
+    string errorString = "";  
+    SemanticValue semantics = eventArgs.Result.Semantics;  
+  
+    Color newColor = Color.Empty;  
+  
+    try   
+    {  
+      if (semantics.Count == 0 && semantics.Value==null)  
+      {  
+        // Signifies recognition by a grammar with no semantics.  
+        // Parse the string, assuming that the last word is color,  
+        // and search for "background" or "foreground" in the input.  
+        if (eventArgs.Result.Text.Contains("foreground"))   
+        {  
+          changeBackGround = false;  
+        }  
+        string cName = eventArgs.Result.Words[eventArgs.Result.Words.Count - 1].Text;  
+        newColor = Color.FromName(cName);  
+  
+      }  
+      else if (semantics.ContainsKey("colorStringList") ^ semantics.ContainsKey("colorRGBValueList"))   
+      {  
+  
+        // Determine whether to change background or foreground.  
+        if (semantics.ContainsKey("applyChgToBackground"))   
+        {  
+          changeBackGround = semantics["applyChgToBackground"].Value is bool;  
+        }  
+  
+        // Get the RGB color value.  
+        if (semantics.ContainsKey("colorStringList"))   
+        {  
+          newColor = Color.FromName((string)semantics["colorStringList"].Value);  
+        }  
+        if (semantics.ContainsKey("colorRGBValueList"))   
+        {  
+          newColor = System.Drawing.Color.FromArgb((int)semantics["colorRGBValueList"].Value);  
+        }  
+      }  
+      else   
+      {  
+  
+        // Throw an exception if the semantics do not contain the keys we  
+        // support.  
+        throw(new Exception("Unsupported semantics keys found."));  
+      }  
+    }  
+  
+    catch (Exception exp)   
+    {  
+      MessageBox.Show(String.Format("Unable to process color semantics.:\n{0}\n", exp.Message));  
+      return;  
+    }  
+  
+    // Change colors, either foreground or background.  
+    if (changeBackGround)   
+    {  
+      BackColor = newColor;  
+      float Bright = BackColor.GetBrightness();  
+      float Hue = BackColor.GetHue();  
+      float Sat = BackColor.GetSaturation();  
+  
+      // Make sure that text is readable regardless of the background.  
+      if (BackColor.GetBrightness() <= .50)   
+      {  
+        ForeColor = Color.White;  
+      }  
+      else   
+      {  
+        ForeColor = Color.Black;  
+      }  
+    }  
+    else   
+    {  
+      ForeColor = newColor;  
+      float Bright = ForeColor.GetBrightness();  
+      float Hue = ForeColor.GetHue();  
+      float Sat = ForeColor.GetSaturation();  
+  
+      // Make sure that text is readable regardless of Foreground.  
+      if (ForeColor.GetBrightness() <= .50)   
+      {  
+        BackColor = Color.White;  
+      }  
+      else   
+      {  
+        BackColor = Color.Black;  
+      }  
+    }  
+    return;  
+  };  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Speech.Recognition.SemanticValue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não criará <xref:System.Speech.Recognition.SemanticValue> objetos explicitamente, exceto to oferecer suporte à criação de gramáticas fortemente tipada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SemanticValue (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">As informações sejam armazenadas no <see cref="T:System.Speech.Recognition.SemanticValue" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.SemanticValue" /> classe e especifica um valor semântico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não existem restrições no tipo de `value` a ser armazenado.  
+  
+ Um aplicativo pode recuperar `value` usando o <xref:System.Speech.Recognition.SemanticValue.Value%2A> propriedade em um <xref:System.Speech.Recognition.SemanticValue> instância.  
+  
+ O valor da <xref:System.Speech.Recognition.SemanticValue.Confidence%2A> propriedade para a <xref:System.Speech.Recognition.SemanticValue> instância será definida como -1.  
+  
+ Um <xref:System.Speech.Recognition.SemanticValue> construído com esse método não pode ser referenciado pelo nome da chave.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SemanticValue (string keyName, object value, float confidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string keyName, object value, float32 confidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.#ctor(System.String,System.Object,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="confidence" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">Uma chave que pode ser usada para referenciar essa <see cref="T:System.Speech.Recognition.SemanticValue" /> instância.</param>
+        <param name="value">Um objeto que contém informações sejam armazenadas no <see cref="T:System.Speech.Recognition.SemanticValue" /> objeto.</param>
+        <param name="confidence">Um <see langword="float" /> que contém uma estimativa de certeza da análise semântica.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.SemanticValue" /> classe e especifica um valor semântico, um nome de chave e um nível de confiança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não existem restrições no tipo de `value` a ser armazenado.  
+  
+ Um aplicativo pode recuperar `value` usando o <xref:System.Speech.Recognition.SemanticValue.Value%2A> propriedade em um <xref:System.Speech.Recognition.SemanticValue> instância.  
+  
+ O `confidence` parâmetro (retornado pelo <xref:System.Speech.Recognition.SemanticValue.Confidence%2A> propriedade em um <xref:System.Speech.Recognition.SemanticValue> instância), deve estar entre 0,0 e 1,0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Confidence">
+      <MemberSignature Language="C#" Value="public float Confidence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Confidence" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.Confidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma medida relativa de certeza quanto à precisão de análise semântica que retornou a instância atual do <see cref="T:System.Speech.Recognition.SemanticValue" />.</summary>
+        <value>Retorna um <see langword="float" /> que é uma medida relativa de certeza da análise semântica que retornou a instância atual do <see cref="T:System.Speech.Recognition.SemanticValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Recognition.SemanticValue.Confidence%2A?displayProperty=nameWithType> propriedade, que retorna uma medida de exatidão de análise semântica, não deve ser confundida com o <xref:System.Speech.Recognition.RecognizedPhrase.Confidence%2A?displayProperty=nameWithType> propriedade, que retorna uma medida de precisão do reconhecimento de fala.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é usado para desviar recursivamente e exibir informações (incluindo confiança) como um <xref:System.Windows.Forms.TreeNodeCollection>, ou como os nós que compõem a estrutura de árvore de semântica de usadas para reconhecer uma frase.  
+  
+```csharp  
+internal static void CreateSemanticsTreeNodes(  
+        TreeNodeCollection nodes,  
+        SemanticValue semantics,  
+        String name)   
+{  
+  string semanticsText =   
+      String.Format("  {0}  (Confidence {1})", name,semantics.Confidence);  
+  
+  // Format integers as hexadecimal.  
+  if (semantics.Value == null )  
+  {  
+    semanticsText = semanticsText + " = null";  
+  }  
+  else if (semantics.Value.GetType() == typeof(int))   
+  {  
+    semanticsText = String.Format("{0} = {1:X} ", semanticsText, semantics.Value);  
+  }   
+  else   
+  {  
+    semanticsText = semanticsText + " = " + semantics.Value.ToString();  
+  }  
+  
+  TreeNode semanticsNode = new TreeNode(semanticsText);  
+  foreach (KeyValuePair<String, SemanticValue> child in semantics)   
+  {  
+    CreateSemanticsTreeNodes(semanticsNode.Nodes, child.Value, child.Key);  
+  }  
+  nodes.Add(semanticsNode);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Collections.Generic.KeyValuePair&lt;string,System.Speech.Recognition.SemanticValue&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Speech.Recognition.SemanticValue&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.Contains(System.Collections.Generic.KeyValuePair{System.String,System.Speech.Recognition.SemanticValue})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">Uma instância de <see cref="T:System.Collections.Generic.KeyValuePair`2" /> instanciado para um determinado valor de uma cadeia de caracteres de chave e um <see cref="T:System.Speech.Recognition.SemanticValue" /> instância.</param>
+        <summary>Indica se o atual <see cref="T:System.Speech.Recognition.SemanticValue" /> coleção de instâncias contém uma chave específica e uma instância específica do <see cref="T:System.Speech.Recognition.SemanticValue" /> expresso como um par chave/valor.</summary>
+        <returns>Retorna um <see langword="bool" /> que é <see langword="true" /> se atual <see cref="T:System.Speech.Recognition.SemanticValue" /> contém uma instância de <c>KeyValuePair&lt;cadeia de caracteres, SemanticValue&gt; </c> para um valor especificado da cadeia de caracteres chave e o <see cref="T:System.Speech.Recognition.SemanticValue" />. Caso contrário, <see langword="false" /> será retornado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">
+          <see cref="T:System.String" />que contém a cadeia de caracteres chave usada para identificar uma instância do filho do <see cref="T:System.Speech.Recognition.SemanticValue" /> em atual <see cref="T:System.Speech.Recognition.SemanticValue" />.</param>
+        <summary>Indica se o atual <see cref="T:System.Speech.Recognition.SemanticValue" /> coleção de instâncias contém um filho <see cref="T:System.Speech.Recognition.SemanticValue" /> instância com uma determinada cadeia de caracteres de chave.</summary>
+        <returns>Retorna um <see langword="bool" />, <see langword="true" /> se uma instância de filho <see cref="T:System.Speech.Recognition.SemanticValue" /> marcados com a cadeia de caracteres <paramref name="key" /> for encontrado, <see langword="false" /> se não for.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode acessar somente os dados pelo valor de chave no tempo de execução, por exemplo, para verificar *semântico ["myKey"]. Valor*, e isso gera uma exceção. É recomendável que você consultar o objeto com <xref:System.Speech.Recognition.SemanticValue.ContainsKey%2A> antes de usar <xref:System.Speech.Recognition.SemanticValue.Item%2A> com uma determinada instância do <xref:System.Speech.Recognition.SemanticValue>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador para um <xref:System.Speech.Recognition.Grammar.SpeechRecognized> evento projetado para lidar com os comandos para alterar a cor de primeiro plano e plano de fundo.  
+  
+ Depois de tratar frases que são reconhecidos mas nenhuma estrutura semântica, o manipulador verifica a presença de chaves apropriadas usando <xref:System.Speech.Recognition.SemanticValue.ContainsKey%2A> (`applyChgToBackground`, `colorRGBValueList`, ou `colorStringList)`e, em seguida, processa os dados semanticamente organizados.  
+  
+```csharp  
+  
+newGrammar.SpeechRecognized +=  
+  delegate(object sender, SpeechRecognizedEventArgs eventArgs)   
+  {  
+  
+    // Retrieve the value of the semantic property.  
+    bool changeBackGround = true;  
+    string errorString = "";  
+    SemanticValue semantics = eventArgs.Result.Semantics;  
+  
+    Color newColor = Color.Empty;  
+  
+    try   
+    {  
+      if (semantics.Count == 0 && semantics.Value==null)  
+      {  
+  
+        // Signifies recognition by a grammar with no semantics.  
+        // Parse the string, assuming that the last word is color,  
+        // searching for background or foreground in input.  
+        if (eventArgs.Result.Text.Contains("foreground"))   
+        {  
+          changeBackGround = false;  
+        }  
+        string cName = eventArgs.Result.Words[eventArgs.Result.Words.Count - 1].Text;  
+        newColor = Color.FromName(cName);  
+  
+      }  
+      else if (semantics.ContainsKey("colorStringList") ^ semantics.ContainsKey("colorRGBValueList"))   
+      {  
+  
+        // Determine whether to change background or foreground.  
+        if (semantics.ContainsKey("applyChgToBackground"))   
+        {  
+          changeBackGround = semantics["applyChgToBackground"].Value is bool;  
+        }  
+  
+        // Get the RGB color value.  
+        if (semantics.ContainsKey("colorStringList"))   
+        {  
+          newColor = Color.FromName((string)semantics["colorStringList"].Value);  
+        }  
+        if (semantics.ContainsKey("colorRGBValueList"))   
+        {  
+          newColor = System.Drawing.Color.FromArgb((int)semantics["colorRGBValueList"].Value);  
+        }  
+      }  
+      else   
+      {  
+  
+        // Throw an exception if the semantics do not contain the keys we  
+        // support.  
+        throw(new Exception("Unsupported semantics keys found."));  
+      }  
+    }  
+  
+    catch (Exception exp)   
+    {  
+      MessageBox.Show(String.Format("Unable to process color semantics.:\n{0}\n", exp.Message));  
+      return;  
+    }  
+  
+    // Change colors, either foreground or background.  
+    if (changeBackGround)   
+    {  
+      BackColor = newColor;  
+      float Bright = BackColor.GetBrightness();  
+      float Hue = BackColor.GetHue();  
+      float Sat = BackColor.GetSaturation();  
+      // Make sure that text is readable regardless of background.  
+      if (BackColor.GetBrightness() <= .50)   
+      {  
+        ForeColor = Color.White;  
+      }  
+      else   
+      {  
+        ForeColor = Color.Black;  
+      }  
+    }  
+    else   
+    {  
+      ForeColor = newColor;  
+      float Bright = ForeColor.GetBrightness();  
+      float Hue = ForeColor.GetHue();  
+      float Sat = ForeColor.GetSaturation();  
+      // Make sure that text is readable regardless of Foreground.  
+      if (ForeColor.GetBrightness() <= .50)   
+      {  
+        BackColor = Color.White;  
+      }  
+      else   
+      {  
+        BackColor = Color.Black;  
+      }  
+    }  
+    return;  
+  };  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o número de filhos <see cref="T:System.Speech.Recognition.SemanticValue" /> objetos sob atual <see cref="T:System.Speech.Recognition.SemanticValue" /> instância.</summary>
+        <value>O número de filhos <see cref="T:System.Speech.Recognition.SemanticValue" /> objetos sob atual <see cref="T:System.Speech.Recognition.SemanticValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Resultados do reconhecimento que não fazem usam de análise semântica sempre têm um <xref:System.Speech.Recognition.SemanticValue.Count%2A> valor igual a zero, bem como um <xref:System.Speech.Recognition.SemanticValue.Value%2A> de `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador para um <xref:System.Speech.Recognition.Grammar.SpeechRecognized> evento projetado para lidar com os comandos para alterar a cor de primeiro plano e plano de fundo.  
+  
+ O manipulador identifica reconhecidos frases com nenhuma estrutura subjacente de semântica detectando um <xref:System.Speech.Recognition.SemanticValue.Count%2A> de zero e um <xref:System.Speech.Recognition.SemanticValue.Value%2A> de `null`. Esta saída de reconhecimento é processada diretamente ao analisar o texto não processado.  
+  
+ Em outros casos, o manipulador utiliza chaves para obter os componentes RGB de um nome de cor, para determinar se o comando alterará o primeiro ou segundo plano ou para indicar que nenhuma chave válida foi encontrado.  
+  
+```csharp  
+  
+newGrammar.SpeechRecognized +=  
+  delegate(object sender, SpeechRecognizedEventArgs eventArgs)   
+  {  
+  
+    // Retrieve the value of the semantic property.  
+    bool changeBackGround = true;  
+    string errorString = "";  
+    SemanticValue semantics = eventArgs.Result.Semantics;  
+  
+    Color newColor = Color.Empty;  
+  
+    try   
+    {  
+      if (semantics.Count == 0 && semantics.Value==null)  
+      {  
+        // Signifies recognition by a grammar with no semantics.  
+        // Parse the string, assuming that the last word is color,  
+        //  searching for background or foreground in input.  
+        if (eventArgs.Result.Text.Contains("foreground"))   
+        {  
+          changeBackGround = false;  
+        }  
+        string cName = eventArgs.Result.Words[eventArgs.Result.Words.Count - 1].Text;  
+        newColor = Color.FromName(cName);  
+  
+      }  
+      else if (semantics.ContainsKey("colorStringList") ^ semantics.ContainsKey("colorRGBValueList"))   
+      {  
+  
+        // Determine whether to change background or foreground.  
+        if (semantics.ContainsKey("applyChgToBackground"))   
+        {  
+          changeBackGround = semantics["applyChgToBackground"].Value is bool;  
+        }  
+  
+        // Get the RGB color value.  
+        if (semantics.ContainsKey("colorStringList"))   
+        {  
+          newColor = Color.FromName((string)semantics["colorStringList"].Value);  
+        }  
+        if (semantics.ContainsKey("colorRGBValueList"))   
+        {  
+          newColor = System.Drawing.Color.FromArgb((int)semantics["colorRGBValueList"].Value);  
+        }  
+      }  
+      else   
+      {  
+  
+        // Throw an exception if the semantics do not contain the keys we  
+        // support.  
+        throw(new Exception("Unsupported semantics keys found."));  
+      }  
+    }  
+  
+    catch (Exception exp)   
+    {  
+      MessageBox.Show(String.Format("Unable to process color semantics.:\n{0}\n", exp.Message));  
+      return;  
+    }  
+  
+    // Change colors, either foreground or background.  
+    if (changeBackGround)   
+    {  
+      BackColor = newColor;  
+      float Bright = BackColor.GetBrightness();  
+      float Hue = BackColor.GetHue();  
+      float Sat = BackColor.GetSaturation();  
+      // Make sure that text is readable regardless of background.  
+      if (BackColor.GetBrightness() <= .50)   
+      {  
+        ForeColor = Color.White;  
+      }  
+      else   
+      {  
+        ForeColor = Color.Black;  
+      }  
+    }  
+    else   
+    {  
+      ForeColor = newColor;  
+      float Bright = ForeColor.GetBrightness();  
+      float Hue = ForeColor.GetHue();  
+      float Sat = ForeColor.GetSaturation();  
+  
+      // Make sure that text is readable regardless of Foreground.  
+      if (ForeColor.GetBrightness() <= .50)   
+      {  
+        BackColor = Color.White;  
+      }  
+      else   
+      {  
+        BackColor = Color.Black;  
+      }  
+    }  
+    return;  
+  };  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser avaliada.</param>
+        <summary>Determina se um objeto especificado é uma instância de <c>SemanticValue</c> e igual à instância atual do <c>SemanticValue</c>.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado for igual ao objeto atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um código hash para um <c>SemanticValue</c> objeto.</summary>
+        <returns>Um código hash para a atual <see cref="T:System.Speech.Recognition.SemanticValue" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Speech.Recognition.SemanticValue this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Speech.Recognition.SemanticValue Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SemanticValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Uma chave para um <see langword="KeyValuePair&lt;String, SemanticValue&gt;" /> contidos na instância atual do <see cref="T:System.Speech.Recognition.SemanticValue" />.</param>
+        <summary>Filho retorna <see cref="T:System.Speech.Recognition.SemanticValue" /> instâncias que pertencem a atual <see cref="T:System.Speech.Recognition.SemanticValue" />.</summary>
+        <value>Retorna um filho do atual <see cref="T:System.Speech.Recognition.SemanticValue" /> que podem ser indexadas como parte de um par chave-valor: <c>KeyValuePair&lt;cadeia de caracteres,</c><c>SemanticValue&gt;</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Recognition.SemanticValue.Item%2A> é somente leitura e gera exceções se membros forem modificados.  
+  
+ Você pode acessar somente os dados pelo valor de chave em tempo de execução, não em tempo de compilação, por exemplo, para verificar `semantic["myKey"].Value`. Especificação de uma chave que não está presente gera uma exceção.  
+  
+ Para detectar a presença de uma determinada chave, use o <xref:System.Speech.Recognition.SemanticValue.ContainsKey%2A> propriedade em um <xref:System.Speech.Recognition.SemanticValue> instância.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador para um <xref:System.Speech.Recognition.Grammar.SpeechRecognized> evento projetado para lidar com os comandos para alterar a cor de primeiro plano e plano de fundo.  
+  
+ Depois de tratar reconhecidos frases com nenhuma estrutura semântica, o manipulador verifica a presença de chaves apropriadas usando <xref:System.Speech.Recognition.SemanticValue.ContainsKey%2A> (`applyChgToBackground`, `colorRGBValueList`, ou `colorStringList)`e, em seguida, usa o <xref:System.Speech.Recognition.SemanticValue.Item%2A> propriedade para obter os nós com as informações necessárias.  
+  
+ O uso de <xref:System.Speech.Recognition.SemanticValue.Item%2A> está realçado abaixo.  
+  
+```csharp  
+  
+newGrammar.SpeechRecognized +=  
+  delegate(object sender, SpeechRecognizedEventArgs eventArgs)   
+  {  
+  
+    // Retrieve the value of the semantic property.  
+    bool changeBackGround = true;  
+    string errorString = "";  
+    SemanticValue semantics = eventArgs.Result.Semantics;  
+  
+    Color newColor = Color.Empty;  
+  
+    try   
+    {  
+      if (semantics.Count == 0 && semantics.Value==null)  
+      {  
+        // Signifies recognition by a grammar with no semantics.  
+        // Parse the string, assuming that the last word is color,  
+        //  searching for background or foreground in input.  
+        if (eventArgs.Result.Text.Contains("foreground"))   
+        {  
+          changeBackGround = false;  
+        }  
+        string cName = eventArgs.Result.Words[eventArgs.Result.Words.Count - 1].Text;  
+        newColor = Color.FromName(cName);  
+  
+      }  
+      else if (semantics.ContainsKey("colorStringList") ^ semantics.ContainsKey("colorRGBValueList"))   
+      {  
+  
+        // Determine whether to change background or foreground.  
+        if (semantics.ContainsKey("applyChgToBackground"))   
+        {  
+          changeBackGround = semantics["applyChgToBackground"].Value is bool;  
+        }  
+  
+        // Get the RGB color value.  
+        if (semantics.ContainsKey("colorStringList"))   
+        {  
+          newColor = Color.FromName((string)semantics["colorStringList"].Value);  
+        }  
+        if (semantics.ContainsKey("colorRGBValueList"))   
+        {  
+          newColor = System.Drawing.Color.FromArgb((int)semantics["colorRGBValueList"].Value);  
+        }  
+      }  
+      else   
+      {  
+  
+        // Throw an exception if the semantics do not contain the keys we  
+        // support.  
+        throw(new Exception("Unsupported semantic keys found."));  
+      }  
+    }  
+  
+    catch (Exception exp)   
+    {  
+      MessageBox.Show(String.Format("Unable to process color semantics.:\n{0}\n", exp.Message));  
+      return;  
+    }  
+  
+    // Change colors, either foreground or background.  
+    if (changeBackGround)   
+    {  
+      BackColor = newColor;  
+      float Bright = BackColor.GetBrightness();  
+      float Hue = BackColor.GetHue();  
+      float Sat = BackColor.GetSaturation();  
+      // Make sure that text is readable regardless of background.  
+      if (BackColor.GetBrightness() <= .50)   
+      {  
+        ForeColor = Color.White;  
+      }  
+      else   
+      {  
+        ForeColor = Color.Black;  
+      }  
+    }  
+    else   
+    {  
+      ForeColor = newColor;  
+      float Bright = ForeColor.GetBrightness();  
+      float Hue = ForeColor.GetHue();  
+      float Sat = ForeColor.GetSaturation();  
+  
+      // Make sure that text is readable regardless of the foreground.  
+      if (ForeColor.GetBrightness() <= .50)   
+      {  
+        BackColor = Color.White;  
+      }  
+      else   
+      {  
+        BackColor = Color.Black;  
+      }  
+    }  
+    return;  
+  };  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">Gerada se nenhum membro filho da instância atual do <see cref="T:System.Speech.Recognition.SemanticValue" /> tem a chave que corresponde a <paramref name="key" /> parâmetro.</exception>
+        <exception cref="T:System.InvalidOperationException">Gerada se o código tenta alterar o <see cref="T:System.Speech.Recognition.SemanticValue" /> de um determinado índice.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.Add">
+      <MemberSignature Language="C#" Value="void ICollection&lt;KeyValuePair&lt;string,SemanticValue&gt;&gt;.Add (System.Collections.Generic.KeyValuePair&lt;string,System.Speech.Recognition.SemanticValue&gt; key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.Add(valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Speech.Recognition.SemanticValue&gt; key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;System#String,System#Speech#Recognition#SemanticValue&gt;&gt;#Add(System.Collections.Generic.KeyValuePair{System.String,System.Speech.Recognition.SemanticValue})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.Clear">
+      <MemberSignature Language="C#" Value="void ICollection&lt;KeyValuePair&lt;string,SemanticValue&gt;&gt;.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;System#String,System#Speech#Recognition#SemanticValue&gt;&gt;#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection&lt;KeyValuePair&lt;string,SemanticValue&gt;&gt;.CopyTo (System.Collections.Generic.KeyValuePair&lt;string,System.Speech.Recognition.SemanticValue&gt;[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.CopyTo(valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Speech.Recognition.SemanticValue&gt;[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;System#String,System#Speech#Recognition#SemanticValue&gt;&gt;#CopyTo(System.Collections.Generic.KeyValuePair{System.String,System.Speech.Recognition.SemanticValue}[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;System#String,System#Speech#Recognition#SemanticValue&gt;&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.Remove">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;KeyValuePair&lt;string,SemanticValue&gt;&gt;.Remove (System.Collections.Generic.KeyValuePair&lt;string,System.Speech.Recognition.SemanticValue&gt; key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.Remove(valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Speech.Recognition.SemanticValue&gt; key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;System#String,System#Speech#Recognition#SemanticValue&gt;&gt;#Remove(System.Collections.Generic.KeyValuePair{System.String,System.Speech.Recognition.SemanticValue})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Add">
+      <MemberSignature Language="C#" Value="void IDictionary&lt;string,SemanticValue&gt;.Add (string key, System.Speech.Recognition.SemanticValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Add(string key, class System.Speech.Recognition.SemanticValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.System#Collections#Generic#IDictionary&lt;System#String,System#Speech#Recognition#SemanticValue&gt;#Add(System.String,System.Speech.Recognition.SemanticValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Speech.Recognition.SemanticValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Keys">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.ICollection&lt;string&gt; System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.System#Collections#Generic#IDictionary&lt;System#String,System#Speech#Recognition#SemanticValue&gt;#Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Remove">
+      <MemberSignature Language="C#" Value="bool IDictionary&lt;string,SemanticValue&gt;.Remove (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Remove(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.System#Collections#Generic#IDictionary&lt;System#String,System#Speech#Recognition#SemanticValue&gt;#Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.TryGetValue">
+      <MemberSignature Language="C#" Value="bool IDictionary&lt;string,SemanticValue&gt;.TryGetValue (string key, out System.Speech.Recognition.SemanticValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.TryGetValue(string key, [out] class System.Speech.Recognition.SemanticValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.System#Collections#Generic#IDictionary&lt;System#String,System#Speech#Recognition#SemanticValue&gt;#TryGetValue(System.String,System.Speech.Recognition.SemanticValue@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Speech.Recognition.SemanticValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Values">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.ICollection&lt;System.Speech.Recognition.SemanticValue&gt; System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Speech.Recognition.SemanticValue&gt; System.Collections.Generic.IDictionary&lt;System.String,System.Speech.Recognition.SemanticValue&gt;.Values" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.System#Collections#Generic#IDictionary&lt;System#String,System#Speech#Recognition#SemanticValue&gt;#Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Speech.Recognition.SemanticValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;string,System.Speech.Recognition.SemanticValue&gt;&gt; IEnumerable&lt;KeyValuePair&lt;string,SemanticValue&gt;&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, class System.Speech.Recognition.SemanticValue&gt;&gt; System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.System#Collections#Generic#IEnumerable&lt;System#Collections#Generic#KeyValuePair&lt;System#String,System#Speech#Recognition#SemanticValue&gt;&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Speech.Recognition.SemanticValue&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SemanticValue.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera em uma coleção.</summary>
+        <returns>Retorna um enumerador que itera em uma coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SemanticValue.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma propriedade somente leitura que retorna as informações contidas no atual <see cref="T:System.Speech.Recognition.SemanticValue" />.</summary>
+        <value>Retorna um <see cref="T:System.Object" /> instância que contém as informações armazenadas no atual <see cref="T:System.Speech.Recognition.SemanticValue" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Resultados de reconhecimento que não fazem usam de análise semântica sempre têm um <xref:System.Speech.Recognition.SemanticValue.Value%2A> de `null` e um <xref:System.Speech.Recognition.SemanticValue.Count%2A> propriedade igual a zero.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é usado para desviar recursivamente e exibir informações (incluindo confiança) como um <xref:System.Windows.Forms.TreeNodeCollection>, ou como os nós que compõem a estrutura de árvore de semântica de usadas para reconhecer uma frase.  
+  
+```csharp  
+internal static void CreateSemanticsTreeNodes(  
+          TreeNodeCollection nodes,  
+          SemanticValue semantics,  
+          String name)   
+{  
+  string semanticsText =   
+      String.Format("  {0} ( Confidence {1})", name,semantics.Confidence);  
+  
+  // Format integers as hexadecimal.  
+  if (semantics.Value == null )  
+  {  
+    semanticsText = semanticsText + " = null";  
+  }  
+  else if (semantics.Value.GetType() == typeof(int))   
+  {  
+    semanticsText = String.Format("{0} = {1:X} ", semanticsText, semantics.Value);  
+  }  
+  else   
+  {  
+    semanticsText = semanticsText + " = " + semantics.Value.ToString();  
+  }  
+  
+  TreeNode semanticsNode = new TreeNode(semanticsText);  
+  foreach (KeyValuePair<String, SemanticValue> child in semantics)   
+  {  
+    CreateSemanticsTreeNodes(semanticsNode.Nodes, child.Value, child.Key);  
+  }  
+  nodes.Add(semanticsNode);  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

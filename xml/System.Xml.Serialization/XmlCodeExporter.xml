@@ -1,0 +1,330 @@
+<Type Name="XmlCodeExporter" FullName="System.Xml.Serialization.XmlCodeExporter">
+  <TypeSignature Language="C#" Value="public class XmlCodeExporter : System.Xml.Serialization.CodeExporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlCodeExporter extends System.Xml.Serialization.CodeExporter" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlCodeExporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Serialization.CodeExporter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gera tipos e declarações de atributos de informações de mapeamento de tipo interno para declarações de elemento de esquema XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlCodeExporter> classe gera tipos do .NET Framework ou declarações de atributo de mapeamentos internos para tipos do .NET Framework. Esses mapeamentos internos são gerados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> classe para elementos definidos em um documento XSD ou como partes de um documento WSDL Web Services Description Language (). <xref:System.Xml.Serialization.XmlCodeExporter>não é usada diretamente. ele é usado com a ferramenta Web Services Description Language (Wsdl.exe) ou a ferramenta de definição de esquema XML (Xsd.exe).  
+  
+ WSDL.exe usa tipos ou declarações de atributo que são geradas pelo <xref:System.Xml.Serialization.XmlCodeExporter> e os mapeamentos internos gerados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> classe para gerar classes proxy do cliente ou classes abstratas de servidor de um documento WSDL. Usa WSDL.exe <xref:System.Xml.Serialization.XmlCodeExporter> e <xref:System.Web.Services.Description.ServiceDescriptionImporter> classe quando Especifica um documento WSDL:  
+  
+-   Use literal, indicando que o conteúdo de SOAP mensagem parâmetros e valores de retorno (ou documentos de solicitação e resposta) literalmente é especificado com definições de esquema XML.  
+  
+-   SOAP não implementações de serviços Web usando as operações HTTP GET e POST HTTP.  
+  
+-   XSD.exe usa <xref:System.Xml.Serialization.XmlCodeExporter> para gerar classes de documentos de definição de esquema XML (XSD).  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlCodeExporter (System.CodeDom.CodeNamespace codeNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeNamespace codeNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlCodeExporter.#ctor(System.CodeDom.CodeNamespace)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="codeNamespace" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="codeNamespace">O namespace de tipos para gerar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.XmlCodeExporter" /> classe usando o namespace especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vez de criar uma instância do <xref:System.Xml.Serialization.XmlCodeExporter> classe diretamente, use a ferramenta Web Services Description Language (Wsdl.exe) ou a ferramenta de definição de esquema XML (Xsd.exe).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlCodeExporter (System.CodeDom.CodeNamespace codeNamespace, System.CodeDom.CodeCompileUnit codeCompileUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeNamespace codeNamespace, class System.CodeDom.CodeCompileUnit codeCompileUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlCodeExporter.#ctor(System.CodeDom.CodeNamespace,System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="codeNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="codeNamespace">O namespace de tipos para gerar.</param>
+        <param name="codeCompileUnit">Um contêiner de gráfico CodeDOM ao qual usado automaticamente são adicionadas referências de assembly.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.XmlCodeExporter" /> classe usando o espaço para nome especificado e o código de unidade de compilação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vez de criar uma instância do <xref:System.Xml.Serialization.XmlCodeExporter> classe diretamente, use a ferramenta Web Services Description Language (Wsdl.exe) ou a ferramenta de definição de esquema XML (Xsd.exe).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlCodeExporter (System.CodeDom.CodeNamespace codeNamespace, System.CodeDom.CodeCompileUnit codeCompileUnit, System.Xml.Serialization.CodeGenerationOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeNamespace codeNamespace, class System.CodeDom.CodeCompileUnit codeCompileUnit, valuetype System.Xml.Serialization.CodeGenerationOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlCodeExporter.#ctor(System.CodeDom.CodeNamespace,System.CodeDom.CodeCompileUnit,System.Xml.Serialization.CodeGenerationOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="codeNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="options" Type="System.Xml.Serialization.CodeGenerationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="codeNamespace">O namespace de tipos para gerar.</param>
+        <param name="codeCompileUnit">Um <see cref="T:System.CodeDom.CodeCompileUnit" /> contêiner de gráfico do programa para o qual as referências de assembly usado são adicionadas automaticamente.</param>
+        <param name="options">Um valor de enumeração que fornece opções para gerar tipos do .NET Framework de tipos de dados personalizados de esquema XML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.XmlCodeExporter" /> classe usando o namespace especificado, unidade de compilação de código e as opções de geração de código.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vez de criar uma instância do <xref:System.Xml.Serialization.XmlCodeExporter> classe diretamente, use a ferramenta Web Services Description Language (Wsdl.exe) ou a ferramenta de definição de esquema XML (Xsd.exe).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlCodeExporter (System.CodeDom.CodeNamespace codeNamespace, System.CodeDom.CodeCompileUnit codeCompileUnit, System.Xml.Serialization.CodeGenerationOptions options, System.Collections.Hashtable mappings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeNamespace codeNamespace, class System.CodeDom.CodeCompileUnit codeCompileUnit, valuetype System.Xml.Serialization.CodeGenerationOptions options, class System.Collections.Hashtable mappings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlCodeExporter.#ctor(System.CodeDom.CodeNamespace,System.CodeDom.CodeCompileUnit,System.Xml.Serialization.CodeGenerationOptions,System.Collections.Hashtable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="codeNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="options" Type="System.Xml.Serialization.CodeGenerationOptions" />
+        <Parameter Name="mappings" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="codeNamespace">O namespace de tipos para gerar.</param>
+        <param name="codeCompileUnit">Um <see cref="T:System.CodeDom.CodeCompileUnit" /> contêiner de gráfico do programa para o qual as referências de assembly usado são adicionadas automaticamente.</param>
+        <param name="options">Um valor de enumeração que fornece opções para gerar tipos do .NET Framework de tipos de dados personalizados de esquema XML.</param>
+        <param name="mappings"><see cref="T:System.Collections.Hashtable" /> que contém objetos de <see cref="T:System.Xml.Serialization.XmlMapping" /> .</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.XmlCodeExporter" /> classe usando o namespace especificado do .NET Framework, que contém o gráfico de objetos, um objeto que representa as opções de geração de código e uma coleção de objetos de mapeamento de unidade de compilação de código.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlCodeExporter (System.CodeDom.CodeNamespace codeNamespace, System.CodeDom.CodeCompileUnit codeCompileUnit, System.CodeDom.Compiler.CodeDomProvider codeProvider, System.Xml.Serialization.CodeGenerationOptions options, System.Collections.Hashtable mappings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeNamespace codeNamespace, class System.CodeDom.CodeCompileUnit codeCompileUnit, class System.CodeDom.Compiler.CodeDomProvider codeProvider, valuetype System.Xml.Serialization.CodeGenerationOptions options, class System.Collections.Hashtable mappings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlCodeExporter.#ctor(System.CodeDom.CodeNamespace,System.CodeDom.CodeCompileUnit,System.CodeDom.Compiler.CodeDomProvider,System.Xml.Serialization.CodeGenerationOptions,System.Collections.Hashtable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="codeNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="options" Type="System.Xml.Serialization.CodeGenerationOptions" />
+        <Parameter Name="mappings" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="codeNamespace">O namespace de tipos para gerar.</param>
+        <param name="codeCompileUnit">Um <see cref="T:System.CodeDom.CodeCompileUnit" /> contêiner de gráfico do programa para o qual as referências de assembly usado são adicionadas automaticamente.</param>
+        <param name="codeProvider">Um valor de enumeração que fornece opções para gerar tipos do .NET Framework de tipos de dados personalizados de esquema XML.</param>
+        <param name="options">Um <see cref="T:System.Xml.Serialization.CodeGenerationOptions" /> que contém instruções especiais para a criação de código.</param>
+        <param name="mappings"><see cref="T:System.Collections.Hashtable" /> que contém objetos de <see cref="T:System.Xml.Serialization.XmlMapping" /> .</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.XmlCodeExporter" /> classe usando o namespace especificado do .NET Framework, que contém o gráfico de objetos, uma enumeração que especifica as opções de código e uma coleção de objetos de mapeamento de unidade de compilação de código.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddMappingMetadata">
+      <MemberSignature Language="C#" Value="public void AddMappingMetadata (System.CodeDom.CodeAttributeDeclarationCollection metadata, System.Xml.Serialization.XmlMemberMapping member, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddMappingMetadata(class System.CodeDom.CodeAttributeDeclarationCollection metadata, class System.Xml.Serialization.XmlMemberMapping member, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlCodeExporter.AddMappingMetadata(System.CodeDom.CodeAttributeDeclarationCollection,System.Xml.Serialization.XmlMemberMapping,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.CodeDom.CodeAttributeDeclarationCollection" />
+        <Parameter Name="member" Type="System.Xml.Serialization.XmlMemberMapping" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">A coleção de <see cref="T:System.CodeDom.CodeAttributeDeclaration" /> objetos para o tipo gerado para o qual o método adiciona uma declaração de atributo.</param>
+        <param name="member">Um mapeamento de tipo interno do .NET Framework para a parte um único elemento de uma definição de mensagem WSDL.</param>
+        <param name="ns">O namespace XML do SOAP da mensagem parte para o qual as informações de mapeamento de tipo no parâmetro membro foi geradas.</param>
+        <summary>Adiciona um <see cref="T:System.Xml.Serialization.XmlElementAttribute" /> declaração para um valor de parâmetro ou retornado do método que corresponde a um <see langword="&lt;part&gt;" /> elemento de uma definição de mensagem SOAP em um documento WSDL Web Services Description Language ().</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado pela ferramenta Web Services Description Language (Wsdl.exe) quando um documento WSDL Especifica o uso de literal, indicando que o conteúdo de SOAP mensagem parâmetros e valores de retorno (ou documentos de solicitação e resposta) literalmente é especificado com definições de esquema XML.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddMappingMetadata">
+      <MemberSignature Language="C#" Value="public void AddMappingMetadata (System.CodeDom.CodeAttributeDeclarationCollection metadata, System.Xml.Serialization.XmlTypeMapping mapping, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddMappingMetadata(class System.CodeDom.CodeAttributeDeclarationCollection metadata, class System.Xml.Serialization.XmlTypeMapping mapping, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlCodeExporter.AddMappingMetadata(System.CodeDom.CodeAttributeDeclarationCollection,System.Xml.Serialization.XmlTypeMapping,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.CodeDom.CodeAttributeDeclarationCollection" />
+        <Parameter Name="mapping" Type="System.Xml.Serialization.XmlTypeMapping" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">A coleção de <see cref="T:System.CodeDom.CodeAttributeDeclaration" /> objetos para o tipo gerado para o qual o método adiciona uma declaração de atributo.</param>
+        <param name="mapping">As interno do .NET Framework tipo informações de mapeamento para um elemento de esquema XML.</param>
+        <param name="ns">O namespace XML do SOAP da mensagem parte para o qual as informações de mapeamento de tipo no parâmetro membro foi geradas.</param>
+        <summary>Adiciona um <see cref="T:System.Xml.Serialization.XmlElementAttribute" /> declaração para um método de retornar o valor que corresponde a um <see langword="&lt;part&gt;" /> elemento de uma definição de mensagem SOAP não em um documento WSDL Web Services Description Language ().</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ferramenta Web Services Description Language (Wsdl.exe) usa esse método quando um documento WSDL Especifica implementações de SOAP não do .NET Framework do Web services usando as operações HTTP GET e POST HTTP.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddMappingMetadata">
+      <MemberSignature Language="C#" Value="public void AddMappingMetadata (System.CodeDom.CodeAttributeDeclarationCollection metadata, System.Xml.Serialization.XmlMemberMapping member, string ns, bool forceUseMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddMappingMetadata(class System.CodeDom.CodeAttributeDeclarationCollection metadata, class System.Xml.Serialization.XmlMemberMapping member, string ns, bool forceUseMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlCodeExporter.AddMappingMetadata(System.CodeDom.CodeAttributeDeclarationCollection,System.Xml.Serialization.XmlMemberMapping,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.CodeDom.CodeAttributeDeclarationCollection" />
+        <Parameter Name="member" Type="System.Xml.Serialization.XmlMemberMapping" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="forceUseMemberName" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">A coleção de <see cref="T:System.CodeDom.CodeAttributeDeclaration" /> objetos para o tipo gerado para o qual o método adiciona uma declaração de atributo.</param>
+        <param name="member">Um mapeamento de tipo interno do .NET Framework para a parte um único elemento de uma definição de mensagem WSDL.</param>
+        <param name="ns">O namespace XML do SOAP da mensagem parte para o qual as informações de mapeamento de tipo no parâmetro membro foi geradas.</param>
+        <param name="forceUseMemberName">Sinalizador que ajuda a determinar se deseja adicionar um argumento inicial que contém o nome do elemento XML para a declaração de atributo que está sendo gerado.</param>
+        <summary>Adiciona um <see cref="T:System.Xml.Serialization.XmlElementAttribute" /> declaração para um valor de parâmetro ou retornado do método que corresponde a um <see langword="&lt;part&gt;" /> elemento de uma definição de mensagem SOAP em um documento WSDL Web Services Description Language ().</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ferramenta Web Services Description Language (Wsdl.exe) usa este método quando um documento WSDL Especifica o uso de literal, indicando que o conteúdo dos parâmetros de mensagem SOAP e valores de retorno (ou documentos de solicitação e resposta) literalmente são especificados com definições de esquema XML.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExportMembersMapping">
+      <MemberSignature Language="C#" Value="public void ExportMembersMapping (System.Xml.Serialization.XmlMembersMapping xmlMembersMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExportMembersMapping(class System.Xml.Serialization.XmlMembersMapping xmlMembersMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlCodeExporter.ExportMembersMapping(System.Xml.Serialization.XmlMembersMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlMembersMapping" Type="System.Xml.Serialization.XmlMembersMapping" />
+      </Parameters>
+      <Docs>
+        <param name="xmlMembersMapping">Os mapeamentos de tipo internos do .NET Framework para as partes do elemento de uma definição de mensagem WSDL.</param>
+        <summary>Gera um tipo .NET Framework, além de declarações de atributo para cada uma das partes que pertencem a uma definição de mensagem SOAP em um documento WSDL Web Services Description Language ().</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ferramenta Web Services Description Language (Wsdl.exe) usa este método quando um documento WSDL Especifica o uso de literal, indicando que o conteúdo dos parâmetros de mensagem SOAP e valores de retorno (ou documentos de solicitação e resposta) literalmente são especificados com definições de esquema XML.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExportTypeMapping">
+      <MemberSignature Language="C#" Value="public void ExportTypeMapping (System.Xml.Serialization.XmlTypeMapping xmlTypeMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExportTypeMapping(class System.Xml.Serialization.XmlTypeMapping xmlTypeMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlCodeExporter.ExportTypeMapping(System.Xml.Serialization.XmlTypeMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlTypeMapping" Type="System.Xml.Serialization.XmlTypeMapping" />
+      </Parameters>
+      <Docs>
+        <param name="xmlTypeMapping">As interno do .NET Framework tipo informações de mapeamento para um elemento de esquema XML.</param>
+        <summary>Gera um tipo .NET Framework, além de declarações de atributo para um elemento de esquema XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ferramenta Web Services Description Language (Wsdl.exe) usa esse método para gerar os cabeçalhos de mensagem SOAP e tipos de retorno quando um documento WSDL Web Services Description Language () especifica não SOAP implementações de serviços Web usando as operações de HTTP POST e HTTP GET. A ferramenta de definição de esquema XML (Xsd.exe) usa esse método para gerar cada uma das declarações de elemento de esquema XML em um documento de definição de esquema XML (XSD).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

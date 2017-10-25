@@ -1,0 +1,130 @@
+<Type Name="CheckedListBox+ObjectCollection" FullName="System.Windows.Forms.CheckedListBox+ObjectCollection">
+  <TypeSignature Language="C#" Value="public class CheckedListBox.ObjectCollection : System.Windows.Forms.ListBox.ObjectCollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit CheckedListBox/ObjectCollection extends System.Windows.Forms.ListBox/ObjectCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CheckedListBox.ObjectCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ListBox+ObjectCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a coleção de itens em um <see cref="T:System.Windows.Forms.CheckedListBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção é acessada do controle pai, <xref:System.Windows.Forms.CheckedListBox>, pelo <xref:System.Windows.Forms.CheckedListBox.Items%2A> propriedade. Para criar uma coleção de objetos para exibir o <xref:System.Windows.Forms.CheckedListBox> controle, você pode adicionar ou remover os itens individualmente usando o <xref:System.Windows.Forms.CheckedListBox.ObjectCollection.Add%2A> e <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir enumera os itens a <xref:System.Windows.Forms.CheckedListBox> e verifica se todos os outros itens na lista. O exemplo demonstra como usar o <xref:System.Windows.Forms.CheckedListBox.Items%2A> propriedade para obter o <xref:System.Windows.Forms.CheckedListBox.ObjectCollection> para obter o <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> de itens.  
+  
+ O exemplo também demonstra como usar o <xref:System.Windows.Forms.CheckedListBox.SetItemCheckState%2A> e <xref:System.Windows.Forms.CheckedListBox.SetItemChecked%2A> métodos para definir o estado de seleção de um item. Para todos os outros itens que deve ser verificada, <xref:System.Windows.Forms.CheckedListBox.SetItemCheckState%2A> é chamado para definir o <xref:System.Windows.Forms.CheckState> para `Indeterminate`, enquanto <xref:System.Windows.Forms.CheckedListBox.SetItemChecked%2A> é chamado no item para definir o estado de ativação para `Checked`.  
+  
+ [!code-cpp[CheckedListBox#3](~/samples/snippets/cpp/VS_Snippets_Winforms/CheckedListBox/CPP/source.cpp#3)]
+ [!code-csharp[CheckedListBox#3](~/samples/snippets/csharp/VS_Snippets_Winforms/CheckedListBox/CS/source.cs#3)]
+ [!code-vb[CheckedListBox#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CheckedListBox/VB/source.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectCollection (System.Windows.Forms.CheckedListBox owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.CheckedListBox owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.ObjectCollection.#ctor(System.Windows.Forms.CheckedListBox)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.CheckedListBox" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.CheckedListBox" /> que é o proprietário da coleção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.CheckedListBox.ObjectCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (object item, bool isChecked);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(object item, bool isChecked) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.ObjectCollection.Add(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="isChecked" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um objeto que representa o item a ser adicionado à coleção.</param>
+        <param name="isChecked">
+          <see langword="true" /> para verificar se o item; caso contrário, <see langword="false" />.</param>
+        <summary>Adiciona um item à lista de itens para um <see cref="T:System.Windows.Forms.CheckedListBox" />, especificando o objeto a ser adicionado e se ele foi verificado.</summary>
+        <returns>O índice do item adicionado recentemente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona um item à lista. Para obter uma lista, o item é adicionado ao final da lista de itens existente. Para uma caixa de lista classificada de selecionados, o item é inserido para a lista de acordo com sua posição classificada. A `SystemException` ocorre se houver espaço suficiente disponível para armazenar o novo item.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a inicializar um <xref:System.Windows.Forms.CheckedListBox> controle definindo o <xref:System.Windows.Forms.CheckedListBox.CheckOnClick%2A>, <xref:System.Windows.Forms.CheckedListBox.SelectionMode%2A>, e <xref:System.Windows.Forms.CheckedListBox.ThreeDCheckBoxes%2A> propriedades. O exemplo preenche a <xref:System.Windows.Forms.CheckedListBox> com controles e conjuntos de <xref:System.Windows.Forms.CheckedListBox.DisplayMember%2A> para o <xref:System.Windows.Forms.Control.Name%2A?displayProperty=nameWithType> propriedade do controle.  
+  
+ Para executar o exemplo, cole o seguinte código em um formulário que contém um <xref:System.Windows.Forms.CheckedListBox> chamado CheckedListBox1 e chame o `InitializeCheckListBox` método de construtor do formulário ou `Load` método.  
+  
+ [!code-cpp[System.Windows.Forms.PropertyGridExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PropertyGridExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PropertyGridExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PropertyGridExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PropertyGridExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PropertyGridExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (object item, System.Windows.Forms.CheckState check);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(object item, valuetype System.Windows.Forms.CheckState check) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckedListBox.ObjectCollection.Add(System.Object,System.Windows.Forms.CheckState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="check" Type="System.Windows.Forms.CheckState" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um objeto que representa o item a ser adicionado à coleção.</param>
+        <param name="check">Inicial <see cref="T:System.Windows.Forms.CheckState" /> para a parte marcada do item.</param>
+        <summary>Adiciona um item à lista de itens para um <see cref="T:System.Windows.Forms.CheckedListBox" />, especificando o objeto a ser adicionado e o valor inicial de ativação.</summary>
+        <returns>O índice do item adicionado recentemente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona um item à caixa de lista selecionados. Para uma caixa de lista não classificada de marcada, o item é adicionado ao final da lista de itens existente. Para uma caixa de lista classificada de selecionados, o item é inserido para a lista de acordo com sua posição classificada. A `SystemException` ocorre se houver espaço suficiente disponível para armazenar o novo item.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O <paramref name="check" /> parâmetro não é um dos válidos <see cref="T:System.Windows.Forms.CheckState" /> valores.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

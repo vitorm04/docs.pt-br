@@ -1,0 +1,393 @@
+<Type Name="BasicHttpBinding" FullName="System.ServiceModel.BasicHttpBinding">
+  <TypeSignature Language="C#" Value="public class BasicHttpBinding : System.ServiceModel.HttpBindingBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BasicHttpBinding extends System.ServiceModel.HttpBindingBase implements class System.ServiceModel.Channels.IBindingRuntimePreferences" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.BasicHttpBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Http</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.HttpBindingBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma associação que um serviço do Windows Communication Foundation (WCF) pode usar para configurar e expor pontos de extremidade que podem se comunicar com serviços Web baseados em ASMX e clientes e outros serviços que estão em conformidade com o WS-I Basic Profile 1.1.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.BasicHttpBinding> usa HTTP como o transporte para enviar mensagens de SOAP 1.1. Um serviço pode usar essa associação para expor pontos de extremidade que está de acordo com WS-I BP 1.1, como aqueles que o cliente ASMX acessar. Da mesma forma, um cliente pode usar o <xref:System.ServiceModel.BasicHttpBinding> para se comunicar com serviços expor pontos de extremidade que está de acordo com WS-I BP 1.1, como serviços Web ASMX ou [!INCLUDE[indigo1](~/includes/indigo1-md.md)] serviços configurados com o <xref:System.ServiceModel.BasicHttpBinding>.  
+  
+ A segurança é desativada por padrão, mas pode ser adicionada a configuração de <xref:System.ServiceModel.BasicHttpSecurityMode> com um valor diferente de <xref:System.ServiceModel.BasicHttpSecurityMode.None> no <xref:System.ServiceModel.BasicHttpBinding.%23ctor%28System.ServiceModel.BasicHttpSecurityMode%29> construtor. Ele usa um "Texto" mensagem codificação e UTF-8 codificação de texto por padrão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como configurar o <xref:System.ServiceModel.BasicHttpBinding> em um arquivo de configuração do aplicativo.  
+  
+  
+  
+ O exemplo a seguir mostra como configurar programaticamente <xref:System.ServiceModel.BasicHttpBinding>.  
+  
+ [!code-csharp[S_UEBasicHttpBinding#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebasichttpbinding/cs/service.cs#1)]
+ [!code-vb[S_UEBasicHttpBinding#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uebasichttpbinding/vb/service.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BasicHttpBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.BasicHttpBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.BasicHttpBinding" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:System.ServiceModel.BasicHttpSecurityMode> usado é <xref:System.ServiceModel.BasicHttpSecurityMode.None>, que especifica que a mensagem SOAP não é protegida e o cliente não está autenticado.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEBasicHttpBinding#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebasichttpbinding/cs/service.cs#2)]
+ [!code-vb[S_UEBasicHttpBinding#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uebasichttpbinding/vb/service.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BasicHttpBinding (System.ServiceModel.BasicHttpSecurityMode securityMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.BasicHttpSecurityMode securityMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.BasicHttpBinding.#ctor(System.ServiceModel.BasicHttpSecurityMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.BasicHttpSecurityMode" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">O valor de <see cref="T:System.ServiceModel.BasicHttpSecurityMode" /> que especifica o tipo de segurança usado com a mensagem SOAP e para o cliente.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.BasicHttpBinding" /> com um tipo de segurança especificado usado pela associação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:System.ServiceModel.BasicHttpSecurityMode> usado é <xref:System.ServiceModel.BasicHttpSecurityMode.None>, que especifica que a mensagem SOAP não é protegida e o cliente não está autenticado.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEBasicHttpBinding#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebasichttpbinding/cs/snippets.cs#3)]
+ [!code-vb[S_UEBasicHttpBinding#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uebasichttpbinding/vb/snippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BasicHttpBinding (string configurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.BasicHttpBinding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configurationName">O nome da configuração da associação do <see cref="T:System.ServiceModel.Configuration.BasicHttpBindingElement" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.BasicHttpBinding" /> com uma associação especificada pelo seu nome de configuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo inicializa um novo <xref:System.ServiceModel.BasicHttpBinding> classe com uma associação especificada pelo nome da configuração `BasicBinding`. Você deve criar uma seção de associações no arquivo de configuração do serviço.  
+  
+ [!code-csharp[S_UEBasicHttpBinding#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebasichttpbinding/cs/snippets.cs#5)]
+ [!code-vb[S_UEBasicHttpBinding#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uebasichttpbinding/vb/snippets.vb#5)]  
+  
+ O nome da configuração de associação é especificado na chamada para o <xref:System.ServiceModel.BasicHttpBinding> construtor.  
+  
+ [!code-csharp[S_UEBasicHttpBinding#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebasichttpbinding/cs/snippets.cs#4)]
+ [!code-vb[S_UEBasicHttpBinding#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uebasichttpbinding/vb/snippets.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">A associação com o nome da configuração <paramref name="configurationName" /> não foi encontrada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.BasicHttpBinding.BuildChannelFactory``1(System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal que produz a fábrica de canais.</typeparam>
+        <param name="parameters">Especifica os requisitos para a fábrica de canais criados.</param>
+        <summary>Amplia a pilha de fábrica de canais do cliente que cria um tipo de canal especificado e que satisfaça os recursos especificados por uma coleção de parâmetros de associação.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> do tipo <paramref name="TChannel" /> que satisfaça os recursos especificados pela coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElements">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElementCollection CreateBindingElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElementCollection CreateBindingElements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.BasicHttpBinding.CreateBindingElements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma coleção ordenada de elementos contidos na associação atual de associação.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.BindingElementCollection" /> que contém a pilha ordenada de elementos descritos por de associação a <see cref="T:System.ServiceModel.BasicHttpBinding" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos elementos de associação é importante. Ela reflete a ordem na qual os canais de transporte e de protocolo são construídos e empilhados. Esta coleção de elementos de associação é uma nova coleção e pode ser modificada e, em seguida, usada para criar um <xref:System.ServiceModel.Channels.CustomBinding>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma coleção ordenada de elementos de associação na associação atual.  
+  
+ [!code-csharp[S_UEBasicHttpBinding#26](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebasichttpbinding/cs/client.cs#26)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableHttpCookieContainer">
+      <MemberSignature Language="C#" Value="public bool EnableHttpCookieContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableHttpCookieContainer" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property is obsolete. To enable Http CookieContainer, use the AllowCookies property instead.", false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o contêiner de cookie HTTP está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o contêiner de cookie HTTP estiver habilitado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageEncoding">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.WSMessageEncoding MessageEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.WSMessageEncoding MessageEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.BasicHttpBinding.MessageEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WSMessageEncoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se MTOM ou Text é usado para codificar mensagens SOAP.</summary>
+        <value>O valor de <see cref="T:System.ServiceModel.WSMessageEncoding" /> que indica se o MTOM ou texto/XML é usado para codificar mensagens SOAP. O valor padrão é <see cref="F:System.ServiceModel.WSMessageEncoding.Text" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir define MessageEncoding como texto.  
+  
+ [!code-csharp[S_UEBasicHttpBinding#19](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebasichttpbinding/cs/client.cs#19)]  
+  
+ O valor dessa propriedade também pode ser definido no arquivo de configuração.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public override string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.BasicHttpBinding.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Security">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.BasicHttpSecurity Security { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.BasicHttpSecurity Security" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.BasicHttpBinding.Security" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Http</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.BasicHttpSecurity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de segurança usado com esta associação.</summary>
+        <value>O <see cref="T:System.ServiceModel.BasicHttpSecurity" /> que é usado com esta associação. O valor padrão é <see cref="F:System.ServiceModel.BasicHttpSecurityMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a mensagem SOAP não é protegida e o cliente não está autenticado. Para usar um tipo diferente do padrão de segurança, use o <xref:System.ServiceModel.BasicHttpBinding.%23ctor%28System.ServiceModel.BasicHttpSecurityMode%29> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o `Security` propriedade.  
+  
+ [!code-csharp[S_UEBasicHttpBinding#23](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebasichttpbinding/cs/client.cs#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeEnableHttpCookieContainer">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeEnableHttpCookieContainer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeEnableHttpCookieContainer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.BasicHttpBinding.ShouldSerializeEnableHttpCookieContainer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o contêiner de cookie http deve habilitar a serialização.</summary>
+        <returns>
+          <see langword="true" />Se o contêiner de cookie http deve habilitar a serialização; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSecurity">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeSecurity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.BasicHttpBinding.ShouldSerializeSecurity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna as configurações de segurança devem ser serializadas com base em se serialização já ocorre, por exemplo no nível de transporte ou mensagem.</summary>
+        <returns>
+          <see langword="true" />Se a segurança deve ser serializada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

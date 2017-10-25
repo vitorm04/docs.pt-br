@@ -1,0 +1,353 @@
+<Type Name="WebScriptEnablingBehavior" FullName="System.ServiceModel.Description.WebScriptEnablingBehavior">
+  <TypeSignature Language="C#" Value="public sealed class WebScriptEnablingBehavior : System.ServiceModel.Description.WebHttpBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebScriptEnablingBehavior extends System.ServiceModel.Description.WebHttpBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.WebScriptEnablingBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Description.WebHttpBehavior</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte para o comportamento que permite que os pontos de extremidade do Windows Communication Foundation (WCF) receber solicitações HTTP de um cliente do ASP.NET AJAX com base em navegador. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando aplicado a um ponto de extremidade, o <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> habilita comportamento [!INCLUDE[indigo2](~/includes/indigo2-md.md)] e integração de AJAX do ASP.NET, exceto para o suporte necessário para a codificação JSON JavaScript Object Notation (). Vários tipos de codificação, incluindo o JSON, são habilitados pelo <xref:System.ServiceModel.Configuration.WebMessageEncodingElement> ou por um adequadamente configurado <xref:System.ServiceModel.WebHttpBinding>. O <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> comportamento implementa o <xref:System.ServiceModel.Description.IEndpointBehavior> e herda do <xref:System.ServiceModel.Description.WebHttpBehavior>, que permite que o modelo de programação da Web mais geral para [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviços expor pontos de extremidade SOAP não.  
+  
+ Especificamente, o <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>:  
+  
+-   Permite que o modelo de programação HTTP, incluindo o envio para operações com base em um sufixo de URL, o suporte para seleção de verbo HTTP (POST ou GET) e controle de duração do cache HTTP. [!INCLUDE[crabout](~/includes/crabout-md.md)]a programação HTTP do modelo, consulte [WCF Web HTTP de programação visão geral do modelo](~/docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md). Observe que o verbo HTTP padrão é POST ao usar esse comportamento.  
+  
+-   Permite que o formatador correto para solicitação e resposta mensagens de cada operação - por exemplo, o suporte para parâmetros de URL.  
+  
+-   Permite que o ponto de extremidade de JavaScript Proxy.  
+  
+ Para chamar um [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviço de um cliente do ASP.NET AJAX, o serviço deve ser configurado com o <xref:System.ServiceModel.WebHttpBinding> associação e o <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> deve ser adicionado à coleção de comportamento de ponto de extremidade. Isso pode ser feito na configuração adicionando o <xref:System.ServiceModel.Configuration.WebScriptEnablingElement> ou sem usar a configuração ativando o ponto de extremidade AJAX com o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> em vez de fábrica padrão no [ @ServiceHost ](~/docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) diretiva no arquivo. svc.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]diferentes maneiras de habilitar um [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviço para responder aos clientes do ASP.NET AJAX, consulte [criando serviços WCF para o ASP.NET AJAX](~/docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebScriptEnablingBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebScriptEnablingBehavior.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Description.WebScriptEnablingBehavior" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conjuntos de <xref:System.ServiceModel.Description.WebScriptEnablingBehavior.DefaultBodyStyle%2A> para o <xref:System.ServiceModel.Web.WebMessageBodyStyle.WrappedRequest> valor.  
+  
+ Conjuntos de <xref:System.ServiceModel.Description.WebScriptEnablingBehavior.DefaultOutgoingRequestFormat%2A> e <xref:System.ServiceModel.Description.WebScriptEnablingBehavior.DefaultOutgoingResponseFormat%2A> para o <xref:System.ServiceModel.Web.WebMessageBodyStyle.WrappedRequest> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddClientErrorInspector">
+      <MemberSignature Language="C#" Value="protected override void AddClientErrorInspector (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime clientRuntime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddClientErrorInspector(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.ClientRuntime clientRuntime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebScriptEnablingBehavior.AddClientErrorInspector(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="clientRuntime" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">To be added.</param>
+        <param name="clientRuntime">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServerErrorHandlers">
+      <MemberSignature Language="C#" Value="protected override void AddServerErrorHandlers (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddServerErrorHandlers(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebScriptEnablingBehavior.AddServerErrorHandlers(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="endpointDispatcher" Type="System.ServiceModel.Dispatcher.EndpointDispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">To be added.</param>
+        <param name="endpointDispatcher">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="public override void ApplyClientBehavior (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime clientRuntime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ApplyClientBehavior(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.ClientRuntime clientRuntime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebScriptEnablingBehavior.ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="clientRuntime" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> que expõe o contrato.</param>
+        <param name="clientRuntime">O <see cref="T:System.ServiceModel.Dispatcher.ClientRuntime" /> aos quais o comportamento personalizado que é aplicado.</param>
+        <summary>Aplica o comportamento para o cliente em um ponto de extremidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementa o <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%28System.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.ClientRuntime%29> método para exibir, modificar ou Adicionar extensão personalizada para o tempo de execução do cliente em todas as mensagens usadas com um ponto de extremidade ou para operações específicas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="public override void ApplyDispatchBehavior (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebScriptEnablingBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="endpointDispatcher" Type="System.ServiceModel.Dispatcher.EndpointDispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> que expõe o contrato.</param>
+        <param name="endpointDispatcher">O <see cref="T:System.ServiceModel.Dispatcher.EndpointDispatcher" /> aos quais o comportamento personalizado que é aplicado.</param>
+        <summary>Aplica o comportamento de ponto de extremidade de serviço.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é chamado pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] automaticamente quando o comportamento é aplicado a um ponto de extremidade. Não é necessário para chamar esse método manualmente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticFormatSelectionEnabled">
+      <MemberSignature Language="C#" Value="public override bool AutomaticFormatSelectionEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutomaticFormatSelectionEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebScriptEnablingBehavior.AutomaticFormatSelectionEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se a seleção automática de formato está habilitada.</summary>
+        <value>
+          <see langword="true" /> se a seleção automática de formato estiver habilitada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]seleção automática de formato, consulte [formatação do WCF Web HTTP](~/docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultBodyStyle">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Web.WebMessageBodyStyle DefaultBodyStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Web.WebMessageBodyStyle DefaultBodyStyle" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebScriptEnablingBehavior.DefaultBodyStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Web.WebMessageBodyStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de corpo de mensagem padrão.</summary>
+        <value>O valor <see cref="F:System.ServiceModel.Web.WebMessageBodyStyle.WrappedRequest" />. O valor padrão é o único valor válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Web.WebMessageBodyStyle.WrappedRequest> valor é o único <xref:System.ServiceModel.Web.WebMessageBodyStyle> com suporte e configuração qualquer outro valor resulta em um <xref:System.NotSupportedException> que está sendo gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para o conjunto de estilo de corpo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOutgoingRequestFormat">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Web.WebMessageFormat DefaultOutgoingRequestFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Web.WebMessageFormat DefaultOutgoingRequestFormat" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebScriptEnablingBehavior.DefaultOutgoingRequestFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Web.WebMessageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o formato de mensagem de solicitação saída padrão.</summary>
+        <value>O <see cref="T:System.ServiceModel.Web.WebMessageFormat" /> usado por mensagens de solicitação de saída. O valor padrão é <see cref="F:System.ServiceModel.Web.WebMessageFormat.Json" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O conjunto de formato de mensagem não é um valor válido de <see cref="T:System.ServiceModel.Web.WebMessageFormat" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOutgoingResponseFormat">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Web.WebMessageFormat DefaultOutgoingResponseFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Web.WebMessageFormat DefaultOutgoingResponseFormat" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebScriptEnablingBehavior.DefaultOutgoingResponseFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Web.WebMessageFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o formato de mensagem de resposta saída padrão.</summary>
+        <value>O <see cref="T:System.ServiceModel.Web.WebMessageFormat" /> usado por mensagens de resposta de saída. O valor padrão é <see cref="F:System.ServiceModel.Web.WebMessageFormat.Json" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O conjunto de formato de mensagem não é um valor válido de <see cref="T:System.ServiceModel.Web.WebMessageFormat" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultExceptionEnabled">
+      <MemberSignature Language="C#" Value="public override bool FaultExceptionEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FaultExceptionEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebScriptEnablingBehavior.FaultExceptionEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o sinalizador que especifica se uma FaultException é gerada quando um erro de servidor interno (código de status HTTP: 500) ocorre.</summary>
+        <value>Retorna <see langword="true" /> se o sinalizador estiver habilitado; caso contrário, retornará <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueryStringConverter">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Dispatcher.QueryStringConverter GetQueryStringConverter (System.ServiceModel.Description.OperationDescription operationDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Dispatcher.QueryStringConverter GetQueryStringConverter(class System.ServiceModel.Description.OperationDescription operationDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebScriptEnablingBehavior.GetQueryStringConverter(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.QueryStringConverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationDescription" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="operationDescription">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpEnabled">
+      <MemberSignature Language="C#" Value="public override bool HelpEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HelpEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WebScriptEnablingBehavior.HelpEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] página de Ajuda do REST está habilitada.</summary>
+        <value>
+          <see langword="true" />Se o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] página de Ajuda do REST estiver habilitada; caso contrário <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] página de Ajuda do REST, consulte [página de ajuda de serviço do WCF Web HTTP](~/docs/framework/wcf/feature-details/wcf-web-http-service-help-page.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override void Validate (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Validate(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WebScriptEnablingBehavior.Validate(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> que expõe o contrato.</param>
+        <summary>Confirma que o ponto de extremidade atende aos requisitos que permitem que ele funcione como um ponto de extremidade do ASP.NET AJAX.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verifica se o ponto de extremidade não é `null`, usa o esquema HTTP ou HTTPS, não use o <xref:System.Xml.Serialization.XmlSerializer>, usa o verbo de HTTP GET ou POST, que o <xref:System.ServiceModel.Channels.MessageVersion> da associação é definido como <xref:System.ServiceModel.Channels.MessageVersion.None%2A>, e que a ligação contém um <xref:System.ServiceModel.Channels.TransportBindingElement> onde <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> é definido como `true`. Esse método também verifica que não existem cabeçalhos SOAP ou nomes de wrapper em métodos ou outros aspectos sem suporte das operações.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O ponto de extremidade não atende a um dos requisitos para ser um ponto de extremidade do ASP.NET AJAX.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

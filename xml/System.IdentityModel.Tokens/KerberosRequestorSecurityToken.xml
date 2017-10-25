@@ -1,0 +1,361 @@
+<Type Name="KerberosRequestorSecurityToken" FullName="System.IdentityModel.Tokens.KerberosRequestorSecurityToken">
+  <TypeSignature Language="C#" Value="public class KerberosRequestorSecurityToken : System.IdentityModel.Tokens.SecurityToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KerberosRequestorSecurityToken extends System.IdentityModel.Tokens.SecurityToken" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityToken</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um token de segurança baseado em um tíquete Kerberos enviado em uma solicitação SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, os desenvolvedores de aplicativos não precisam usar o <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken> de classe, a menos que um serviço Web deve obter o nome principal do serviço associado com o tíquete Kerberos. Para obter o valor do nome principal do serviço, obtenha o valor de <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.ServicePrincipalName%2A> propriedade.  
+  
+ Há duas classes que representam os tokens de segurança que se baseiam em um tíquete Kerberos: <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken> e <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken>. O <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken> token de segurança é usado por clientes que usam o <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken> mensagens de token de segurança em um SOAP de saída, enquanto o <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken> token de segurança é usado por um serviço Web que recebe mensagens SOAP que contém o token de segurança.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosRequestorSecurityToken (string servicePrincipalName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string servicePrincipalName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="servicePrincipalName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="servicePrincipalName">O nome principal do serviço para o <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança. Define a propriedade <see cref="P:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.ServicePrincipalName" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> classe usando um serviço que está associado com o nome da entidade de serviço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome da entidade de serviço deve estar em um dos seguintes formatos: `host/<hostname>@<domain>` ou `<hostname>`, onde `hostname` é o nome do computador que hospeda o serviço Web de destino e `domain` é o nome de domínio totalmente qualificado do Kerberos no qual reside o computador host. O nome da entidade de serviço está associado uma conta que está executando o serviço e esse mapeamento é armazenado no controlador de domínio Kerberos (KDC).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="servicePrincipalName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">Não é possível obter um tíquete Kerberos para o usuário atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosRequestorSecurityToken (string servicePrincipalName, System.Security.Principal.TokenImpersonationLevel tokenImpersonationLevel, System.Net.NetworkCredential networkCredential, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string servicePrincipalName, valuetype System.Security.Principal.TokenImpersonationLevel tokenImpersonationLevel, class System.Net.NetworkCredential networkCredential, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.#ctor(System.String,System.Security.Principal.TokenImpersonationLevel,System.Net.NetworkCredential,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="servicePrincipalName" Type="System.String" />
+        <Parameter Name="tokenImpersonationLevel" Type="System.Security.Principal.TokenImpersonationLevel" />
+        <Parameter Name="networkCredential" Type="System.Net.NetworkCredential" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="servicePrincipalName">O nome principal do serviço para o <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança. Define a propriedade <see cref="P:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.ServicePrincipalName" />.</param>
+        <param name="tokenImpersonationLevel">Uma da <see cref="T:System.Security.Principal.TokenImpersonationLevel" /> valores que especifica como o cliente permite que o <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança a ser representado.</param>
+        <param name="networkCredential">Um <see cref="T:System.Net.NetworkCredential" /> que especifica o usuário para obter um <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança para.</param>
+        <param name="id">Um identificador exclusivo do token de segurança. Define o valor da propriedade <see cref="P:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.Id" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome da entidade de serviço deve estar em um dos seguintes formatos: `host/<hostname>@<domain>` ou `<hostname>`, onde `hostname` é o nome do computador que hospeda o serviço Web de destino e `domain` é o nome de domínio totalmente qualificado do Kerberos no qual reside o computador host. O nome da entidade de serviço está associado uma conta que está executando o serviço e esse mapeamento é armazenado no controlador de domínio Kerberos (KDC).  
+  
+ Quando `null` é passado para o `networkCredential` parâmetro, um <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken> é obter o token de segurança para o usuário atual.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="servicePrincipalName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="id" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="networkCredential" />não é <see langword="null" />, não é igual a <see cref="P:System.Net.CredentialCache.DefaultNetworkCredentials" /> e <see cref="P:System.Net.NetworkCredential.UserName" /> propriedade está vazia ou <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">Não é possível obter um tíquete Kerberos para o usuário especificado.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="tokenImpersonationLevel" /> não é <see langword="Impersonation" /> ou <see langword="Identity" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanCreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanCreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.CanCreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que especifica o identificador de chave para criar.</typeparam>
+        <summary>Obtém um valor que indica se esse token de segurança é capaz de criar o identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="T" /> é do tipo <see cref="T:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar a cláusula de identificador de chave, chame o <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.CreateKeyIdentifierClause%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T CreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T CreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.CreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que especifica o identificador de chave para criar.</typeparam>
+        <summary>Cria a cláusula de identificador de chave especificado.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que é uma cláusula de identificador de chave para o token de segurança.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para determinar se o <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken> classe pode criar a cláusula de identificador de chave especificado, chame o <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.CanCreateKeyIdentifierClause%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequest">
+      <MemberSignature Language="C#" Value="public byte[] GetRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetRequest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.GetRequest" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a solicitação de tíquete Kerberos.</summary>
+        <returns>Uma matriz de <see cref="T:System.Byte" /> que contém a solicitação de tíquete do Kerberos de resultado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A solicitação de tíquete Kerberos é feita usando o `InitializeSecurityContext` API.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public override string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador exclusivo do token de segurança.</summary>
+        <value>Um identificador exclusivo do token de segurança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override bool MatchesKeyIdentifierClause (System.IdentityModel.Tokens.SecurityKeyIdentifierClause skiClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MatchesKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause skiClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.MatchesKeyIdentifierClause(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="skiClause">To be added.</param>
+        <summary>Retorna um valor que indica se o identificador de chave para essa instância coincide com o identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="skiClause" /> é do tipo <see cref="T:System.IdentityModel.Tokens.KerberosTicketHashKeyIdentifierClause" /> e os resultados da correspondência de solicitação de tíquete Kerberos; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityKey">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SymmetricSecurityKey SecurityKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SymmetricSecurityKey SecurityKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.SecurityKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SymmetricSecurityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave da sessão simétrica para o tíquete Kerberos que está associado esse token de segurança.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SymmetricSecurityKey" /> que contém a chave da sessão simétrica para o tíquete Kerberos que está associado esse token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.SecurityKey%2A> propriedade é definida quando um dos construtores é chamado com a chave de sessão simétrica, para que o tíquete Kerberos que é obtido para o usuário especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityKeys">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.SecurityKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as chaves criptográficas associadas ao token de segurança.</summary>
+        <value>Uma <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Tokens.SecurityKey" /> que contém o conjunto de chaves associadas com o token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.SecurityKeys%2A> propriedade contém a chave de sessão simétrica no <xref:System.IdentityModel.Tokens.KerberosReceiverSecurityToken.SecurityKey%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServicePrincipalName">
+      <MemberSignature Language="C#" Value="public string ServicePrincipalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServicePrincipalName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.ServicePrincipalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome principal do serviço para o <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança.</summary>
+        <value>O nome principal do serviço para o <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome da entidade de serviço pode estar em um dos seguintes formatos: `host/<hostname>@<domain>` ou `<hostname>`, onde `hostname` é o nome do computador que hospeda o serviço Web de destino e `domain` é o nome de domínio totalmente qualificado do Kerberos no qual reside o computador host.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidFrom">
+      <MemberSignature Language="C#" Value="public override DateTime ValidFrom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidFrom" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.ValidFrom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o primeiro instantâneo na hora em que esse token de segurança é válido.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o momento no tempo em que esse token de segurança primeiro é válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.ValidFrom%2A> propriedade é definida para o momento no tempo em que o tíquete Kerberos é obtido em tempo Universal Coordenado (UTC).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidTo">
+      <MemberSignature Language="C#" Value="public override DateTime ValidTo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidTo" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.ValidTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o último no momento em que esse token de segurança é válido.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o último no momento em que esse token de segurança é válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken.ValidFrom%2A> propriedade é definida para o momento no tempo em que o tíquete Kerberos expira em tempo Universal Coordenado (UTC).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

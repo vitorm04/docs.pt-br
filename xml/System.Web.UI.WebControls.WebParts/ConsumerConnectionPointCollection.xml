@@ -1,0 +1,254 @@
+<Type Name="ConsumerConnectionPointCollection" FullName="System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection">
+  <TypeSignature Language="C#" Value="public sealed class ConsumerConnectionPointCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConsumerConnectionPointCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de pontos de conexão para um controle em uma zona de Web Parts que atua como um consumidor. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle em uma zona de Web Parts que atua como um consumidor pode se conectar a apenas um provedor padrão. No entanto, quando o <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.AllowsMultipleConnections%2A> está definida como `true`, vários provedores podem se conectar ao consumidor.  
+  
+ Observe que essa classe herda o <xref:System.Collections.ReadOnlyCollectionBase> classe, tornando esta coleção uma coleção fortemente tipada não genéricas, somente leitura. Você não pode adicionar ou remover membros após uma instância foi criada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsumerConnectionPointCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma nova instância do <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection> classe sem itens na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsumerConnectionPointCollection (System.Collections.ICollection connectionPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection connectionPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionPoints" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="connectionPoints">Uma coleção de pontos de conexão do consumidor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" /> classe usando a coleção de pontos de conexão especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma nova instância do <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection> classe e adiciona os pontos de conexão dentro do `connectionPoints` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="connectionPoints" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A coleção contém um ponto de conexão inválido.  
+  
+ \- ou -  
+  
+ A coleção contém um item com uma identificação duplicada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint connectionPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint connectionPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.Contains(System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionPoint" Type="System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" />
+      </Parameters>
+      <Docs>
+        <param name="connectionPoint">O ponto de conexão para pesquisar.</param>
+        <summary>Determina se o objeto <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> especificado está na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o ponto de conexão do consumidor estiver contido na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar se um <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto está contido no atual <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection> coleção. Esse método é geralmente usado para testar a existência de uma <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto antes de executar uma tarefa, como adicionar um item de menu ou remover um item de menu da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.CopyTo(System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz de base zero de objetos <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> que recebe os itens copiados do <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" /> atual.</param>
+        <param name="index">A posição na matriz de destino na qual começar a receber o conteúdo copiado.</param>
+        <summary>Copia todos os itens do <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" /> coleção para uma matriz unidimensional compatível de <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> objetos, iniciando no índice especificado na matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para copiar o conteúdo do atual <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection> objeto na matriz de base zero especificado. Itens são copiados iniciando no índice especificado da matriz de destino. Com a matriz, você pode usar sintaxe de matriz para acessar os itens a <xref:System.Array> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint Default" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a conexão de cliente padrão ponto.</summary>
+        <value>A <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece uma maneira rápida de localizar a conexão do consumidor do ponto em uma coleção que é o ponto de conexão padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint connectionPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint connectionPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.IndexOf(System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionPoint" Type="System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" />
+      </Parameters>
+      <Docs>
+        <param name="connectionPoint">O <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> a ser localizado.</param>
+        <summary>Determina o índice especificado <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> objeto na coleção.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência de <paramref name="connectionPoint" /> no atual <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection" />, se encontrado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o item de ponto de conexão do consumidor especificada aparece várias vezes na coleção, o índice da primeira ocorrência será retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de um determinado <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> item na coleção.</param>
+        <summary>Obtém o item na coleção no local especificado pelo valor inteiro.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para recuperar um ponto de conexão da coleção, se você souber que seu valor de índice.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint this[string id] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConsumerConnectionPointCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Um valor de cadeia de caracteres que representa a ID de ponto de conexão do ponto de conexão a ser recuperado.</param>
+        <summary>Obtém o ponto de conexão com a especificada <see cref="P:System.Web.UI.WebControls.WebParts.ConnectionPoint.ID" /> propriedade.</summary>
+        <value>A primeira <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> na coleção cuja ID corresponde ao valor do <paramref name="id" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para recuperar um ponto de conexão da coleção, se você souber sua ID de ponto de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

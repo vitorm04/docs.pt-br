@@ -1,0 +1,191 @@
+<Type Name="FormsIdentity" FullName="System.Web.Security.FormsIdentity">
+  <TypeSignature Language="C#" Value="public class FormsIdentity : System.Security.Claims.ClaimsIdentity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit FormsIdentity extends System.Security.Claims.ClaimsIdentity" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.FormsIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Claims.ClaimsIdentity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma identidade de usuário autenticada usando a autenticação de formulários. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.FormsIdentity> classe é usada pelo <xref:System.Web.Security.FormsAuthenticationModule> quando um usuário é autenticado com autenticação de formulários. Uma instância do <xref:System.Web.Security.FormsIdentity> classe é criada usando o <xref:System.Web.Security.FormsAuthenticationTicket> que é descriptografada do cookie de autenticação de formulários ou da URL. A nova instância do <xref:System.Web.Security.FormsIdentity> classe é usada para construir uma nova <xref:System.Security.Principal.GenericPrincipal> que é definido como o valor do objeto de <xref:System.Web.HttpContext.User%2A> propriedade atual <xref:System.Web.HttpContext>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir gera um <xref:System.Web.Security.FormsAuthenticationTicket> e, em seguida, usa-o para criar uma instância do <xref:System.Web.Security.FormsIdentity> classe, com base em se o usuário fornece o nome correto do usuário e a senha no formulário.  
+  
+ [!code-aspx-csharp[System.Web.UI.FormsIdentity#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.FormsIdentity/CS/FormsIdentity.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.FormsIdentity#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.FormsIdentity/VB/FormsIdentity.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormsIdentity (System.Web.Security.FormsAuthenticationTicket ticket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.Security.FormsAuthenticationTicket ticket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.FormsIdentity.#ctor(System.Web.Security.FormsAuthenticationTicket)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ticket" Type="System.Web.Security.FormsAuthenticationTicket" />
+      </Parameters>
+      <Docs>
+        <param name="ticket">O tíquete de autenticação nos quais essa identidade é baseada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Security.FormsIdentity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FormsIdentity (System.Web.Security.FormsIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.Security.FormsIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.FormsIdentity.#ctor(System.Web.Security.FormsIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Web.Security.FormsIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="identity">A identidade na qual essa identidade se baseia.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Security.FormsIdentity" /> classe com base na identidade especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationType">
+      <MemberSignature Language="C#" Value="public override string AuthenticationType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.FormsIdentity.AuthenticationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de identidade autenticada.</summary>
+        <value>O tipo de identidade autenticada. Essa propriedade sempre retorna "Formulários".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Claims">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; Claims { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; Claims" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.FormsIdentity.Claims" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de declarações que estão associados essa identidade.</summary>
+        <value>A coleção de declarações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.Security.Claims.ClaimsIdentity Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Claims.ClaimsIdentity Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.FormsIdentity.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma cópia do atual <see cref="T:System.Web.Security.FormsIdentity" /> instância.</summary>
+        <returns>Uma cópia do atual <see cref="T:System.Web.Security.FormsIdentity" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthenticated">
+      <MemberSignature Language="C#" Value="public override bool IsAuthenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.FormsIdentity.IsAuthenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a autenticação foi feita.</summary>
+        <value>Essa propriedade sempre retorna <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.FormsIdentity.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de usuário da identidade de formulários.</summary>
+        <value>O nome de usuário da identidade de formulários.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.FormsIdentity.Name%2A> propriedade retorna o valor da <xref:System.Web.Security.FormsAuthenticationTicket.Name%2A> propriedade o <xref:System.Web.Security.FormsAuthenticationTicket> fornecidos para o construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ticket">
+      <MemberSignature Language="C#" Value="public System.Web.Security.FormsAuthenticationTicket Ticket { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Security.FormsAuthenticationTicket Ticket" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.FormsIdentity.Ticket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.FormsAuthenticationTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Security.FormsAuthenticationTicket" /> para a identidade do usuário de autenticação de formulários.</summary>
+        <value>O <see cref="T:System.Web.Security.FormsAuthenticationTicket" /> fornecido para o <see cref="M:System.Web.Security.FormsIdentity.#ctor(System.Web.Security.FormsAuthenticationTicket)" /> construtor para o objeto atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

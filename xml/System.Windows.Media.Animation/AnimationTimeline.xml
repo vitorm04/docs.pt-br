@@ -1,0 +1,269 @@
+<Type Name="AnimationTimeline" FullName="System.Windows.Media.Animation.AnimationTimeline">
+  <TypeSignature Language="C#" Value="public abstract class AnimationTimeline : System.Windows.Media.Animation.Timeline" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AnimationTimeline extends System.Windows.Media.Animation.Timeline" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.AnimationTimeline" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Timeline</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um segmento de tempo em que os valores de saída são produzidos. Esses valores são usados para animar uma propriedade de destino.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Media.Animation.AnimationTimeline> é um tipo de <xref:System.Windows.Media.Animation.Timeline> objeto que gera valores de saída com base no seu progresso de tempo. Todos os tipos de animação herdam <xref:System.Windows.Media.Animation.AnimationTimeline>.  
+  
+ **Recursos Freezable:** porque ele herda o <xref:System.Windows.Freezable> classe, o <xref:System.Windows.Media.Animation.AnimationTimeline> classe fornece vários recursos especiais: <xref:System.Windows.Media.Animation.AnimationTimeline> objetos podem ser declarados como, compartilhados entre vários objetos, somente leitura para melhorar o desempenho, clonados e tornados thread-safe. Para obter mais informações sobre os diferentes recursos fornecidos pelo <xref:System.Windows.Freezable> objetos, consulte o [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Para criar uma animação personalizada, substituir ou implementar os seguintes membros:  
+  
+-   <see cref="M:System.Windows.Freezable.CreateInstanceCore" />– Se sua nova classe é concreta, você deve substituir <see cref="M:System.Windows.Freezable.CreateInstanceCore" /> para retornar uma nova instância da classe.  
+  
+-   <see cref="M:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue(System.Object,System.Object,System.Windows.Media.Animation.AnimationClock)" />– Substitua este método para retornar o valor atual da sua animação. Ele usa três parâmetros: um valor de origem padrão, um valor padrão de destino e um <see cref="T:System.Windows.Media.Animation.AnimationClock" />. Use o <see cref="T:System.Windows.Media.Animation.AnimationClock" /> para obter a hora atual ou o progresso da animação. Você pode optar por usar os valores padrão de origem e destino.  
+  
+-   <see cref="P:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault" />– Ignorar esta propriedade para indicar se sua animação utiliza o valor de destino padrão especificado pelo <see cref="M:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue(System.Object,System.Object,System.Windows.Media.Animation.AnimationClock)" /> método.  
+  
+-   <see cref="P:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType" />– Substituir essa propriedade para indicar o <see cref="T:System.Type" /> da saída da sua animação produz.  
+  
+ Se a classe não usar propriedades de dependência para armazenar seus dados ou requer inicialização extra após a criação, talvez seja necessário substituir métodos adicionais; Consulte a [Visão geral de objetos congeláveis](~/docs/framework/wpf/advanced/freezable-objects-overview.md) para obter mais informações.  
+  
+ Para obter mais informações sobre como criar animações personalizadas, consulte o [visão geral de animações personalizadas](~/docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AnimationTimeline ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.AnimationTimeline.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.AnimationTimeline" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllocateClock">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Animation.Clock AllocateClock ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Windows.Media.Animation.Clock AllocateClock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.AnimationTimeline.AllocateClock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Clock</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Windows.Media.Animation.Clock" /> para este <see cref="T:System.Windows.Media.Animation.AnimationTimeline" />.</summary>
+        <returns>Um relógio para este <see cref="T:System.Windows.Media.Animation.AnimationTimeline" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> método e não deve ser chamado diretamente por seu código.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Os implementadores de <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> devem substituir este método quando ele tem um relógio personalizado correspondente que deve ser usado com a classe. O método substituído deve criar e retornar uma nova instância da classe que herda de <see cref="T:System.Windows.Media.Animation.Clock" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.AnimationTimeline Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.AnimationTimeline Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.AnimationTimeline.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.AnimationTimeline</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse <see cref="T:System.Windows.Media.Animation.AnimationTimeline" />, fazendo cópias em profundidade dos valores do objeto. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> era de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateClock">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.AnimationClock CreateClock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.AnimationClock CreateClock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.AnimationTimeline.CreateClock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.AnimationClock</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo <see cref="T:System.Windows.Media.Animation.AnimationClock" /> deste <see cref="T:System.Windows.Media.Animation.AnimationTimeline" />.</summary>
+        <returns>Um relógio de novo, criado neste <see cref="T:System.Windows.Media.Animation.AnimationTimeline" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método sombreia a herdadas <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A?displayProperty=nameWithType> método com uma implementação fortemente tipada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValue">
+      <MemberSignature Language="C#" Value="public virtual object GetCurrentValue (object defaultOriginValue, object defaultDestinationValue, System.Windows.Media.Animation.AnimationClock animationClock);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetCurrentValue(object defaultOriginValue, object defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue(System.Object,System.Object,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Object" />
+        <Parameter Name="defaultDestinationValue" Type="System.Object" />
+        <Parameter Name="animationClock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">O valor de origem fornecido para a animação se a animação não tiver seu próprio valor de início. Se a animação é o primeiro em uma cadeia de composição será o valor base da propriedade que está sendo animada; Caso contrário, será o valor retornado pela animação anterior na cadeia.</param>
+        <param name="defaultDestinationValue">O valor de destino fornecido na animação se a animação não tiver seu próprio valor de destino.</param>
+        <param name="animationClock">O <see cref="T:System.Windows.Media.Animation.AnimationClock" /> que pode gerar o <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> ou <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> valor a ser usado pela animação para gerar o valor de saída.</param>
+        <summary>Obtém o valor atual da animação.</summary>
+        <returns>O valor acredita que a animação deve ser o valor atual da propriedade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNaturalDurationCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Duration GetNaturalDurationCore (System.Windows.Media.Animation.Clock clock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Duration GetNaturalDurationCore(class System.Windows.Media.Animation.Clock clock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.AnimationTimeline.GetNaturalDurationCore(System.Windows.Media.Animation.Clock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Duration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clock" Type="System.Windows.Media.Animation.Clock" />
+      </Parameters>
+      <Docs>
+        <param name="clock">O relógio do que foi criado para este <see cref="T:System.Windows.Media.Animation.AnimationTimeline" />.</param>
+        <summary>Retorna o comprimento de uma única iteração deste <see cref="T:System.Windows.Media.Animation.AnimationTimeline" />.</summary>
+        <returns>A duração da animação natural. Esse método sempre retorna um <see cref="T:System.Windows.Duration" /> de 1 segundo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método fornece a implementação para <xref:System.Windows.Media.Animation.Timeline.GetNaturalDuration%2A> e não deve ser chamado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método deve ser implementado por classes que precisam para fornecer uma ordenação personalizada <see cref="T:System.Windows.Duration" /> quando o <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> está definida como <see cref="P:System.Windows.Duration.Automatic" />. Se a duração natural não pode ser determinada, esse método deve retornar <see cref="P:System.Windows.Duration.Automatic" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAdditiveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsAdditiveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsAdditiveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.AnimationTimeline.IsAdditiveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência IsAdditive.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCumulativeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsCumulativeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsCumulativeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.AnimationTimeline.IsCumulativeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência IsCumulative.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDestinationDefault">
+      <MemberSignature Language="C#" Value="public virtual bool IsDestinationDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDestinationDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a animação usa o *defaultDestinationValue* parâmetro o <see cref="M:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue(System.Object,System.Object,System.Windows.Media.Animation.AnimationClock)" /> método como seu valor de destino.</summary>
+        <value>**True** se o *defaultDesintationValue* parâmetro do <see cref="M:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue(System.Object,System.Object,System.Windows.Media.Animation.AnimationClock)" /> método é o valor dessa animação quando atingir o final de sua duração simple (seu relógio tem um <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> de 1); caso contrário, **false**. A implementação padrão sempre retorna **false**.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetPropertyType">
+      <MemberSignature Language="C#" Value="public abstract Type TargetPropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TargetPropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o <see cref="T:System.Type" /> de propriedade que pode ser animada.</summary>
+        <value>O tipo de propriedade que pode ser animada por esta animação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,349 @@
+<Type Name="KeyValueConfigurationCollection" FullName="System.Configuration.KeyValueConfigurationCollection">
+  <TypeSignature Language="C#" Value="public class KeyValueConfigurationCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyValueConfigurationCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.KeyValueConfigurationCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Configuration.KeyValueConfigurationElement), CollectionType=System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMap)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém uma coleção de objetos <see cref="T:System.Configuration.KeyValueConfigurationElement" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa uma coleção de pares, onde cada par consiste em uma cadeia de caracteres que serve como uma coleção de chaves e um valor de cadeia de caracteres. Como o primeiro elemento é uma chave, ele deve ser exclusivo na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.KeyValueConfigurationCollection> tipo.  
+  
+ [!code-csharp[System.Configuration.KeyValueConfigurationCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/CS/KeyValueConfigurationCollection.cs#1)]
+ [!code-vb[System.Configuration.KeyValueConfigurationCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/VB/KeyValueConfigurationCollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyValueConfigurationCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.KeyValueConfigurationCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.KeyValueConfigurationCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.KeyValueConfigurationCollection.%23ctor%2A> construtor. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Configuration.KeyValueConfigurationCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Configuration.KeyValueConfigurationCollection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/CS/KeyValueConfigurationCollection.cs#4)]
+ [!code-vb[System.Configuration.KeyValueConfigurationCollection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/VB/KeyValueConfigurationCollection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Configuration.KeyValueConfigurationElement keyValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Configuration.KeyValueConfigurationElement keyValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.KeyValueConfigurationCollection.Add(System.Configuration.KeyValueConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyValue" Type="System.Configuration.KeyValueConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="keyValue">Um <see cref="T:System.Configuration.KeyValueConfigurationElement" />.</param>
+        <summary>Adiciona um <see cref="T:System.Configuration.KeyValueConfigurationElement" /> objeto à coleção com base nos parâmetros fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Configuration.KeyValueConfigurationCollection.Add%2A> método para adicionar um novo <xref:System.Configuration.KeyValueConfigurationElement> objeto à coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.KeyValueConfigurationCollection.Add%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Configuration.KeyValueConfigurationCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Configuration.KeyValueConfigurationCollection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/CS/KeyValueConfigurationCollection.cs#6)]
+ [!code-vb[System.Configuration.KeyValueConfigurationCollection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.KeyValueConfigurationCollection/VB/KeyValueConfigurationCollection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.KeyValueConfigurationCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Uma cadeia de caracteres que especifica a chave.</param>
+        <param name="value">Uma cadeia de caracteres especificando o valor.</param>
+        <summary>Adiciona um <see cref="T:System.Configuration.KeyValueConfigurationElement" /> objeto à coleção com base nos parâmetros fornecidos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.KeyValueConfigurationCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as chaves para todos os itens contidos no <see cref="T:System.Configuration.KeyValueConfigurationCollection" /> coleção.</summary>
+        <value>Uma matriz de cadeia de caracteres.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.KeyValueConfigurationCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa o <see cref="T:System.Configuration.KeyValueConfigurationCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Configuration.KeyValueConfigurationCollection.Clear%2A> método é chamado, ele remove todas as <xref:System.Configuration.KeyValueConfigurationElement> objetos da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.KeyValueConfigurationCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, o <see cref="M:System.Configuration.KeyValueConfigurationCollection.CreateNewElement" /> método cria um novo <see cref="T:System.Configuration.KeyValueConfigurationElement" /> objeto.</summary>
+        <returns>Criada uma nova <see cref="T:System.Configuration.KeyValueConfigurationElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Configuration.KeyValueConfigurationCollection.CreateNewElement%2A> método para criar um personalizado <xref:System.Configuration.KeyValueConfigurationElement> objetos. Quando uma coleção é carregada do arquivo de configuração, o <xref:System.Configuration.KeyValueConfigurationCollection.CreateNewElement%2A> método é chamado para criar elementos individuais. O <xref:System.Configuration.KeyValueConfigurationCollection.CreateNewElement%2A> método deve ser substituído nas classes que derivam de <xref:System.Configuration.KeyValueConfigurationCollection> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.KeyValueConfigurationCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Configuration.KeyValueConfigurationElement" /> para que a chave deve ser retornada.</param>
+        <summary>Obtém a chave de elemento para um elemento de configuração especificado quando substituído em uma classe derivada.</summary>
+        <returns>Um objeto que atua como a chave especificada <see cref="T:System.Configuration.KeyValueConfigurationElement" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Configuration.KeyValueConfigurationElement this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.KeyValueConfigurationElement Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.KeyValueConfigurationCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.KeyValueConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do <see cref="T:System.Configuration.KeyValueConfigurationElement" /> contidos na coleção.</param>
+        <summary>Obtém o <see cref="T:System.Configuration.KeyValueConfigurationElement" /> objeto com base no parâmetro fornecido.</summary>
+        <value>Um elemento de configuração, ou <see langword="null" /> se a chave não existir na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Configuration.KeyValueConfigurationCollection.Item%2A> propriedade para obter um <xref:System.Configuration.KeyValueConfigurationElement> objeto da coleção com base no `key` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.KeyValueConfigurationCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de propriedades de configuração.</summary>
+        <value>Uma coleção de propriedades de configuração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.KeyValueConfigurationCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Uma cadeia de caracteres que especifica o <c>chave</c>.</param>
+        <summary>Remove um <see cref="T:System.Configuration.KeyValueConfigurationElement" /> objeto da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnDuplicate">
+      <MemberSignature Language="C#" Value="protected override bool ThrowOnDuplicate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowOnDuplicate" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.KeyValueConfigurationCollection.ThrowOnDuplicate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma tentativa de adicionar uma duplicata <see cref="T:System.Configuration.KeyValueConfigurationElement" /> o objeto para o <see cref="T:System.Configuration.KeyValueConfigurationCollection" /> coleção fará com que uma exceção seja lançada.</summary>
+        <value>
+          <see langword="true" />Se uma tentativa de adicionar uma duplicata <see cref="T:System.Configuration.KeyValueConfigurationElement" /> para o <see cref="T:System.Configuration.KeyValueConfigurationCollection" /> fará com que uma exceção seja lançada; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

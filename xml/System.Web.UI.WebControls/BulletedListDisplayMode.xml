@@ -1,0 +1,87 @@
+<Type Name="BulletedListDisplayMode" FullName="System.Web.UI.WebControls.BulletedListDisplayMode">
+  <TypeSignature Language="C#" Value="public enum BulletedListDisplayMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BulletedListDisplayMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.BulletedListDisplayMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os comportamentos de exibição que você pode aplicar para o conteúdo do item de lista em um <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletedListDisplayMode> enumeração representa os comportamentos de exibição que você pode aplicar o conteúdo dos itens na lista um <xref:System.Web.UI.WebControls.BulletedList> controle. O <xref:System.Web.UI.WebControls.BulletedList.DisplayMode%2A> propriedade usa esses valores de enumeração para definir o comportamento de exibição da lista de item conteúdo em um <xref:System.Web.UI.WebControls.BulletedList> controle. Por exemplo, se você definir o <xref:System.Web.UI.WebControls.BulletedList.DisplayMode%2A> propriedade para o valor de HyperLink, o conteúdo de cada item de lista no <xref:System.Web.UI.WebControls.BulletedListDisplayMode.HyperLink> controle renderiza como um hiperlink.  
+  
+ O valor de texto permite que você exiba o conteúdo do item de lista como texto normal com nenhuma funcionalidade adicional.  
+  
+ O valor de HyperLink permite exibir o conteúdo do item de lista como hiperlinks. Quando clicado, um hiperlink navega para uma URL. Use o <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade para especificar a URL de um hiperlink navega para.  
+  
+ O valor de LinkButton permite exibir o conteúdo do item de lista como botões de link. Use o <xref:System.Web.UI.WebControls.BulletedList.Click?displayProperty=nameWithType> evento postar de volta para o servidor quando o usuário clica em um botão de link. Usar os dados do evento de <xref:System.Web.UI.WebControls.BulletedListEventArgs> classe para determinar o índice do botão de link em um <xref:System.Web.UI.WebControls.BulletedList> que o usuário clicou.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.BulletedListDisplayMode.LinkButton> controle e defina o <xref:System.Web.UI.WebControls.BulletedList.DisplayMode%2A> propriedade. Um <xref:System.Web.UI.WebControls.ListBox> controle é preenchido com o <xref:System.Web.UI.WebControls.BulletedListDisplayMode> valores. O formato de lista item das alterações de conteúdo com base no modo de exibição que o usuário seleciona a caixa de listagem.  
+  
+ [!code-aspx-csharp[BulletedListStylesExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListStylesExample/CS/bulletedliststylescs.aspx#1)]
+ [!code-aspx-vb[BulletedListStylesExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListStylesExample/VB/bulletedliststylesvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HyperLink">
+      <MemberSignature Language="C#" Value="HyperLink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletedListDisplayMode HyperLink = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletedListDisplayMode.HyperLink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletedListDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exibe o conteúdo do item de lista como hiperlinks.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkButton">
+      <MemberSignature Language="C#" Value="LinkButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletedListDisplayMode LinkButton = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletedListDisplayMode.LinkButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletedListDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exibe o conteúdo do item de lista como botões de link.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletedListDisplayMode Text = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletedListDisplayMode.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletedListDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exibe o conteúdo do item de lista como texto.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

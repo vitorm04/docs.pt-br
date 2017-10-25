@@ -1,0 +1,221 @@
+<Type Name="SerializerProvider" FullName="System.Windows.Documents.Serialization.SerializerProvider">
+  <TypeSignature Language="C#" Value="public sealed class SerializerProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SerializerProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Serialization.SerializerProvider" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia a serialização plug-ins criados, usando <see cref="T:System.Windows.Documents.Serialization.ISerializerFactory" /> e <see cref="T:System.Windows.Documents.Serialization.SerializerDescriptor" />, pelos fabricantes que têm seus próprios formatos de serialização de proprietário.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerializerProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.Serialization.SerializerProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente confiáveis chamadores podem criar um <xref:System.Windows.Documents.Serialization.SerializerProvider>.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir mostram o uso do <xref:System.Windows.Documents.Serialization.SerializerProvider> construtor.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSerializerWriter">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Serialization.SerializerWriter CreateSerializerWriter (System.Windows.Documents.Serialization.SerializerDescriptor serializerDescriptor, System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.Serialization.SerializerWriter CreateSerializerWriter(class System.Windows.Documents.Serialization.SerializerDescriptor serializerDescriptor, class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter(System.Windows.Documents.Serialization.SerializerDescriptor,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.SerializerWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializerDescriptor" Type="System.Windows.Documents.Serialization.SerializerDescriptor" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="serializerDescriptor">Um <see cref="T:System.Windows.Documents.Serialization.SerializerDescriptor" /> que contém informações de serialização para o <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" />.</param>
+        <param name="stream">O <see cref="T:System.IO.Stream" /> para que grava o objeto retornado.</param>
+        <summary>Inicializa um objeto derivado de abstrata <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" /> classe especificado <see cref="T:System.IO.Stream" /> que usará o descritor especificado.</summary>
+        <returns>Um objeto de uma classe derivada de <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente confiáveis os aplicativos podem chamar <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso de <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> para retornar um gravador de plug-in de serialização para salvar um arquivo.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um dos parâmetros é nulo.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="serializerDescriptor" /> é especificar a versão errada.  
+  
+ -ou-  
+  
+ Ele não está registrado.  
+  
+ -ou-  
+  
+ O arquivo de assembly não pode ser encontrado.  
+  
+ -ou-  
+  
+ O assembly não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstalledSerializers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Documents.Serialization.SerializerDescriptor&gt; InstalledSerializers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Documents.Serialization.SerializerDescriptor&gt; InstalledSerializers" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Serialization.SerializerProvider.InstalledSerializers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Documents.Serialization.SerializerDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de plug-in serializadores instalados.</summary>
+        <value>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do <see cref="T:System.Windows.Documents.Serialization.SerializerDescriptor" /> objetos já registrados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Os exemplos a seguir mostram como usar <xref:System.Windows.Documents.Serialization.SerializerProvider.InstalledSerializers%2A> para enumerar os serializadores plug-in ao salvar um arquivo.  
+  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterSerializer">
+      <MemberSignature Language="C#" Value="public static void RegisterSerializer (System.Windows.Documents.Serialization.SerializerDescriptor serializerDescriptor, bool overwrite);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterSerializer(class System.Windows.Documents.Serialization.SerializerDescriptor serializerDescriptor, bool overwrite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer(System.Windows.Documents.Serialization.SerializerDescriptor,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializerDescriptor" Type="System.Windows.Documents.Serialization.SerializerDescriptor" />
+        <Parameter Name="overwrite" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serializerDescriptor">O <see cref="T:System.Windows.Documents.Serialization.SerializerDescriptor" /> para o plug-in.</param>
+        <param name="overwrite">
+          <see langword="true" />para substituir um registro existente para o plug-in; mesmo Caso contrário, <see langword="false" />.</param>
+        <summary>Registra um serializador de plug-in.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Apenas chamadores totalmente confiáveis podem usar esse método.  
+  
+ O método interpretará já registrado plug-in como o mesmo se ele for o mesmo em todas essas propriedades: <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>, <xref:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyName%2A>, <xref:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyVersion%2A>, e <xref:System.Windows.Documents.Serialization.SerializerDescriptor.WinFXVersion%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializerDescriptor" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="overwrite" />é <see langword="false" /> e o plug-in já está registrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterSerializer">
+      <MemberSignature Language="C#" Value="public static void UnregisterSerializer (System.Windows.Documents.Serialization.SerializerDescriptor serializerDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UnregisterSerializer(class System.Windows.Documents.Serialization.SerializerDescriptor serializerDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer(System.Windows.Documents.Serialization.SerializerDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializerDescriptor" Type="System.Windows.Documents.Serialization.SerializerDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="serializerDescriptor">O <see cref="T:System.Windows.Documents.Serialization.SerializerDescriptor" /> para o plug-in.</param>
+        <summary>Exclui um serializador de plug-in do registro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Apenas chamadores totalmente confiáveis podem usar esse método.  
+  
+ O método irá interpretar um registrado plug-in como o mesmo um passado para este método somente se ele for o mesmo em todas essas propriedades: <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>, <xref:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyName%2A>, <xref:System.Windows.Documents.Serialization.SerializerDescriptor.AssemblyVersion%2A>, e <xref:System.Windows.Documents.Serialization.SerializerDescriptor.WinFXVersion%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializerDescriptor" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentException">O plug-in não está registrado. Consulte **comentários**.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

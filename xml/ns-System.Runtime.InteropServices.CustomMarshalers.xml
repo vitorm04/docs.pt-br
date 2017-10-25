@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.InteropServices.CustomMarshalers">
+  <Docs>
+    <summary>Fornece suporte interno de empacotamento para o .NET Framework.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

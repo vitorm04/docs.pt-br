@@ -1,0 +1,149 @@
+<Type Name="EventLogPermission" FullName="System.Diagnostics.EventLogPermission">
+  <TypeSignature Language="C#" Value="public sealed class EventLogPermission : System.Security.Permissions.ResourcePermissionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit EventLogPermission extends System.Security.Permissions.ResourcePermissionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventLogPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.ResourcePermissionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Controla as permissões de acesso de código para o log de eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não conceda <xref:System.Diagnostics.EventLogPermission> para código parcialmente confiável. A capacidade de ler e gravar no log de eventos permite que o código executar ações como emitir mensagens de log de eventos no nome de outro aplicativo.  
+  
+> [!NOTE]
+>  Se o evento de origem que é especificado pelo <xref:System.Diagnostics.EventLog.Source%2A?displayProperty=nameWithType> propriedade para o log de eventos não existe, uma nova fonte de evento é criada. Para criar uma fonte de evento no Windows Vista e versões posteriores do Windows ou Windows Server 2003, você deve ter privilégios administrativos.  
+>   
+>  O motivo disso é que todos os logs de eventos, incluindo segurança, devem ser pesquisados para determinar se a origem do evento é exclusiva. Começando com o Windows Vista, os usuários não tem permissão para acessar o log de segurança; Portanto, um <xref:System.Security.SecurityException> é gerada.  
+>   
+>  Começando com o Windows Vista, o controle de conta de usuário (UAC) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa o log de segurança, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogPermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermission.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.EventLogPermission" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogPermission (System.Diagnostics.EventLogPermissionEntry[] permissionAccessEntries);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.EventLogPermissionEntry[] permissionAccessEntries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermission.#ctor(System.Diagnostics.EventLogPermissionEntry[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccessEntries" Type="System.Diagnostics.EventLogPermissionEntry[]" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccessEntries">Uma matriz de objetos que representam as entradas de permissão. O <see cref="P:System.Diagnostics.EventLogPermission.PermissionEntries" /> propriedade é definida para esse valor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.EventLogPermission" /> classe com as entradas de permissão especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="permissionAccessEntries" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um dos valores de enumeração que especifica o estado de permissão (acesso total ou sem acesso aos recursos).</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.EventLogPermission" /> classe com o estado de permissão especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="state" /> não é um valor válido de <see cref="T:System.Security.Permissions.PermissionState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogPermission (System.Diagnostics.EventLogPermissionAccess permissionAccess, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.EventLogPermissionAccess permissionAccess, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermission.#ctor(System.Diagnostics.EventLogPermissionAccess,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccess" Type="System.Diagnostics.EventLogPermissionAccess" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccess">Um dos valores de enumeração que especifica um nível de acesso.</param>
+        <param name="machineName">O nome do computador em que os eventos devem ser lidos ou gravados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.EventLogPermission" /> com os níveis de acesso especificados e o nome do computador a ser usado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionEntries">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.EventLogPermissionEntryCollection PermissionEntries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.EventLogPermissionEntryCollection PermissionEntries" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogPermission.PermissionEntries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogPermissionEntryCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de entradas de permissão para esta solicitação de permissões.</summary>
+        <value>Uma coleção que contém as entradas de permissão para esta solicitação de permissões.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

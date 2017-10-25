@@ -1,0 +1,452 @@
+<Type Name="HttpMethod" FullName="System.Net.Http.HttpMethod">
+  <TypeSignature Language="C#" Value="public class HttpMethod : IEquatable&lt;System.Net.Http.HttpMethod&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpMethod extends System.Object implements class System.IEquatable`1&lt;class System.Net.Http.HttpMethod&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.HttpMethod" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Net.Http.HttpMethod&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Uma classe auxiliar para recuperação e comparação de métodos HTTP padrão e para a criação de novos métodos HTTP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O uso mais comum de <xref:System.Net.Http.HttpMethod> é usar uma das propriedades estáticas nessa classe.  No entanto, se um aplicativo precisa ter um valor diferente para o método HTTP, o <xref:System.Net.Http.HttpMethod.%23ctor%2A> construtor inicializa uma nova instância do <xref:System.Net.Http.HttpMethod> com um método HTTP que especifica o aplicativo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpMethod (string method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMethod.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="method" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="method">O método HTTP.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.Http.HttpMethod" /> classe com um método HTTP específico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um aplicativo precisa ter um valor diferente para o método HTTP de uma das propriedades estáticas, o <xref:System.Net.Http.HttpMethod.%23ctor%2A> construtor inicializa uma nova instância do <xref:System.Net.Http.HttpMethod> com um método HTTP que especifica o aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.HttpMethod Delete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.Http.HttpMethod Delete" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpMethod.Delete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um método de protocolo HTTP DELETE.</summary>
+        <value>Retorna <see cref="T:System.Net.Http.HttpMethod" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Net.Http.HttpMethod other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Net.Http.HttpMethod other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMethod.Equals(System.Net.Http.HttpMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Net.Http.HttpMethod" />
+      </Parameters>
+      <Docs>
+        <param name="other">O método HTTP a ser comparado com o objeto atual.</param>
+        <summary>Determina se o <see cref="T:System.Net.Http.HttpMethod" /> especificado é igual ao <see cref="T:System.Object" /> atual.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado for igual ao objeto atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMethod.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com o objeto atual.</param>
+        <summary>Determina se o <see cref="T:System.Object" /> especificado é igual ao <see cref="T:System.Object" /> atual.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado for igual ao objeto atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.HttpMethod Get { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.Http.HttpMethod Get" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpMethod.Get" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um método de protocolo HTTP GET.</summary>
+        <value>Retorna <see cref="T:System.Net.Http.HttpMethod" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMethod.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para este tipo.</summary>
+        <returns>Um código hash do <see cref="T:System.Object" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um código de hash é um valor numérico que é usado para identificar um objeto durante o teste de igualdade. Ela também poderá servir como um índice de um objeto em uma coleção. O <xref:System.Net.Http.HttpMethod.GetHashCode%2A> método é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Head">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.HttpMethod Head { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.Http.HttpMethod Head" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpMethod.Head" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um método de protocolo HTTP HEAD. O método HEAD é idêntico ao GET, exceto que o servidor retorna apenas cabeçalhos de mensagem na resposta, sem um corpo de mensagem.</summary>
+        <value>Retorna <see cref="T:System.Net.Http.HttpMethod" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public string Method { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Method" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpMethod.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um método HTTP.</summary>
+        <value>Um método HTTP é representado como um <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Net.Http.HttpMethod left, System.Net.Http.HttpMethod right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Net.Http.HttpMethod left, class System.Net.Http.HttpMethod right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMethod.op_Equality(System.Net.Http.HttpMethod,System.Net.Http.HttpMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Net.Http.HttpMethod" />
+        <Parameter Name="right" Type="System.Net.Http.HttpMethod" />
+      </Parameters>
+      <Docs>
+        <param name="left">À esquerda <see cref="T:System.Net.Http.HttpMethod" /> para um operador de igualdade.</param>
+        <param name="right">O direito de <see cref="T:System.Net.Http.HttpMethod" /> para um operador de igualdade.</param>
+        <summary>O operador de igualdade para comparar dois <see cref="T:System.Net.Http.HttpMethod" /> objetos.</summary>
+        <returns>
+          <see langword="true" />Se especificado <paramref name="left" /> e <paramref name="right" /> parâmetros forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Net.Http.HttpMethod left, System.Net.Http.HttpMethod right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Net.Http.HttpMethod left, class System.Net.Http.HttpMethod right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMethod.op_Inequality(System.Net.Http.HttpMethod,System.Net.Http.HttpMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Net.Http.HttpMethod" />
+        <Parameter Name="right" Type="System.Net.Http.HttpMethod" />
+      </Parameters>
+      <Docs>
+        <param name="left">À esquerda <see cref="T:System.Net.Http.HttpMethod" /> a um operador de desigualdade.</param>
+        <param name="right">O direito de <see cref="T:System.Net.Http.HttpMethod" /> a um operador de desigualdade.</param>
+        <summary>Operador de desigualdade para comparar dois <see cref="T:System.Net.Http.HttpMethod" /> objetos.</summary>
+        <returns>
+          <see langword="true" />Se especificado <paramref name="left" /> e <paramref name="right" /> parâmetros são inequal; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.HttpMethod Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.Http.HttpMethod Options" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpMethod.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um método de protocolo HTTP OPTIONS.</summary>
+        <value>Retorna <see cref="T:System.Net.Http.HttpMethod" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Post">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.HttpMethod Post { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.Http.HttpMethod Post" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpMethod.Post" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um método de protocolo HTTP POST que é usado para postar uma nova entidade como uma adição a um URI.</summary>
+        <value>Retorna <see cref="T:System.Net.Http.HttpMethod" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Put">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.HttpMethod Put { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.Http.HttpMethod Put" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpMethod.Put" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um método de protocolo HTTP PUT que é usado para substituir uma entidade identificada por um URI.</summary>
+        <value>Retorna <see cref="T:System.Net.Http.HttpMethod" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpMethod.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o objeto atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trace">
+      <MemberSignature Language="C#" Value="public static System.Net.Http.HttpMethod Trace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Net.Http.HttpMethod Trace" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpMethod.Trace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.HttpMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um método de protocolo HTTP TRACE.</summary>
+        <value>Retorna <see cref="T:System.Net.Http.HttpMethod" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

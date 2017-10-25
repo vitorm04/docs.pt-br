@@ -1,0 +1,81 @@
+<Type Name="IHttpModule" FullName="System.Web.IHttpModule">
+  <TypeSignature Language="C#" Value="public interface IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.IHttpModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece eventos de inicialização e descarte de módulo para a classe de implementação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de um módulo personalizado que implementa <xref:System.Web.IHttpModule>, consulte [passo a passo: Criando e registrando um módulo HTTP personalizado](http://msdn.microsoft.com/library/7787d5be-40a4-4072-9075-c2b767428453).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IHttpModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarta os recursos (exceto a memória) usados pelo módulo que implementa <see cref="T:System.Web.IHttpModule" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.IHttpModule.Dispose%2A> método realiza qualquer trabalho de limpeza final antes da remoção do módulo do pipeline de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Web.HttpApplication context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.HttpApplication context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IHttpModule.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Web.HttpApplication" /> que fornece acesso a métodos, propriedades e eventos comuns a todos os objetos de aplicativo em um aplicativo ASP.NET</param>
+        <summary>Inicializa um módulo e o prepara para manipular solicitações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.IHttpModule.Init%2A> método para registrar os métodos com eventos específicos de manipulação de eventos.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de um módulo personalizado que implementa <xref:System.Web.IHttpModule>, consulte [passo a passo: Criando e registrando um módulo HTTP personalizado](http://msdn.microsoft.com/library/7787d5be-40a4-4072-9075-c2b767428453).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

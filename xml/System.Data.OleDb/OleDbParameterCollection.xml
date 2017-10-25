@@ -1,0 +1,938 @@
+<Type Name="OleDbParameterCollection" FullName="System.Data.OleDb.OleDbParameterCollection">
+  <TypeSignature Language="C#" Value="public sealed class OleDbParameterCollection : System.Data.Common.DbParameterCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OleDbParameterCollection extends System.Data.Common.DbParameterCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbParameterCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbParameterCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Design.DBParametersEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de parâmetros relevantes a um <see cref="T:System.Data.OleDb.OleDbCommand" />, além de seus respectivos mapeamentos para colunas em um <see cref="T:System.Data.DataSet" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número de parâmetros na coleção deve ser igual ao número de espaços reservados de parâmetro dentro do texto de comando, caso contrário, o provedor de dados .NET Framework para OLE DB pode gerar um erro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria várias instâncias do <xref:System.Data.OleDb.OleDbParameter> por meio de <xref:System.Data.OleDb.OleDbParameterCollection> coleção dentro de <xref:System.Data.OleDb.OleDbDataAdapter>. Esses parâmetros são usados para selecionar os dados na fonte de dados e colocar os dados de <xref:System.Data.DataSet>. Este exemplo supõe que um <xref:System.Data.DataSet> e um <xref:System.Data.OleDb.OleDbDataAdapter> já foram criados com o esquema apropriado, comandos e conexão.  
+  
+ [!code-csharp[Classic WebData OleDbParameter Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbParameter Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbParameter Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbParameter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbParameter Add (System.Data.OleDb.OleDbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbParameter Add(class System.Data.OleDb.OleDbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Add(System.Data.OleDb.OleDbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.OleDb.OleDbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Data.OleDb.OleDbParameter" /> a adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Data.OleDb.OleDbParameter" /> especificado ao <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <returns>O índice do novo objeto <see cref="T:System.Data.OleDb.OleDbParameter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.OleDb.OleDbParameterCollection> e adiciona um <xref:System.Data.OleDb.OleDbParameter>.  
+  
+ [!code-csharp[Classic WebData OleDbParameterCollection.Add5 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.Add5 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbParameterCollection.Add5 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.Add5 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Data.OleDb.OleDbParameter" /> especificado no parâmetro <paramref name="value" /> já foi adicionado a este ou a outro <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="value" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override int Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Object" />.</param>
+        <summary>Adiciona o objeto especificado <see cref="T:System.Data.OleDb.OleDbParameter" /> ao <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <returns>O índice do novo <see cref="T:System.Data.OleDb.OleDbParameter" /> objeto na coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbParameter Add (string parameterName, System.Data.OleDb.OleDbType oleDbType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbParameter Add(string parameterName, valuetype System.Data.OleDb.OleDbType oleDbType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Add(System.String,System.Data.OleDb.OleDbType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="oleDbType" Type="System.Data.OleDb.OleDbType" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">O nome do parâmetro.</param>
+        <param name="oleDbType">Um dos valores de <see cref="T:System.Data.OleDb.OleDbType" />.</param>
+        <summary>Adiciona um <see cref="T:System.Data.OleDb.OleDbParameter" /> para o <see cref="T:System.Data.OleDb.OleDbParameterCollection" />, considerando o tipo de dados e o nome do parâmetro.</summary>
+        <returns>O índice do novo objeto <see cref="T:System.Data.OleDb.OleDbParameter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.OleDb.OleDbParameterCollection> e adiciona um <xref:System.Data.OleDb.OleDbParameter>.  
+  
+ [!code-csharp[Classic WebData OleDbParameterCollection.Add6 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.Add6 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbParameterCollection.Add6 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.Add6 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbParameter Add (string parameterName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbParameter Add(string parameterName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Add(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("Add(String parameterName, Object value) has been deprecated.  Use AddWithValue(String parameterName, Object value).  http://go.microsoft.com/fwlink/?linkid=14202", false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">O nome do parâmetro.</param>
+        <param name="value">O <see cref="P:System.Data.OleDb.OleDbParameter.Value" /> do <see cref="T:System.Data.OleDb.OleDbParameter" /> para adicionar à coleção.</param>
+        <summary>Adiciona um <see cref="T:System.Data.OleDb.OleDbParameter" /> para o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> fornecido o nome de parâmetro e valor.</summary>
+        <returns>O índice do novo objeto <see cref="T:System.Data.OleDb.OleDbParameter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tenha cuidado ao usar essa sobrecarga do <xref:System.Data.OleDb.OleDbParameterCollection.Add%2A> método para especificar valores de parâmetro de número inteiro. Porque essa sobrecarga toma uma `value` do tipo <xref:System.Object>, você deve converter o valor para um <xref:System.Object> digite quando o valor for zero, como o exemplo c# a seguir demonstra.  
+  
+```  
+parameters.Add("@pname", Convert.ToInt32(0));  
+```  
+  
+ Se você não realizar essa conversão, o compilador assumirá que você está tentando chamar o <xref:System.Data.OleDb.OleDbParameterCollection.Add%2A> sobrecarga.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">O <paramref name="value" /> parâmetro não é um <see cref="T:System.Data.OleDb.OleDbParameter" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbParameter Add (string parameterName, System.Data.OleDb.OleDbType oleDbType, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbParameter Add(string parameterName, valuetype System.Data.OleDb.OleDbType oleDbType, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Add(System.String,System.Data.OleDb.OleDbType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="oleDbType" Type="System.Data.OleDb.OleDbType" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">O nome do parâmetro.</param>
+        <param name="oleDbType">Um dos valores de <see cref="T:System.Data.OleDb.OleDbType" />.</param>
+        <param name="size">O tamanho da coluna.</param>
+        <summary>Adiciona um <see cref="T:System.Data.OleDb.OleDbParameter" /> para o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> fornecido o nome do parâmetro, o tipo de dados e o comprimento da coluna.</summary>
+        <returns>O índice do novo objeto <see cref="T:System.Data.OleDb.OleDbParameter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.OleDb.OleDbParameterCollection>, adiciona uma instância de <xref:System.Data.OleDb.OleDbParameter> à coleção e retorna uma referência para o novo <xref:System.Data.OleDb.OleDbParameter>.  
+  
+ [!code-csharp[Classic WebData OleDbParameterCollection.Add3 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.Add3 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbParameterCollection.Add3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.Add3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbParameter Add (string parameterName, System.Data.OleDb.OleDbType oleDbType, int size, string sourceColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbParameter Add(string parameterName, valuetype System.Data.OleDb.OleDbType oleDbType, int32 size, string sourceColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Add(System.String,System.Data.OleDb.OleDbType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="oleDbType" Type="System.Data.OleDb.OleDbType" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="sourceColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">O nome do parâmetro.</param>
+        <param name="oleDbType">Um dos valores de <see cref="T:System.Data.OleDb.OleDbType" />.</param>
+        <param name="size">O tamanho da coluna.</param>
+        <param name="sourceColumn">O nome da coluna de origem.</param>
+        <summary>Adiciona um <see cref="T:System.Data.OleDb.OleDbParameter" /> ao <see cref="T:System.Data.OleDb.OleDbParameterCollection" />, considerando o nome de parâmetro, tipo de dados, tamanho da coluna e nome da coluna de origem.</summary>
+        <returns>O índice do novo objeto <see cref="T:System.Data.OleDb.OleDbParameter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.OleDb.OleDbParameterCollection>, adiciona uma instância de <xref:System.Data.OleDb.OleDbParameter> à coleção e retorna uma referência para o novo <xref:System.Data.OleDb.OleDbParameter>.  
+  
+ [!code-csharp[Classic WebData OleDbParameterCollection.Add4 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.Add4 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbParameterCollection.Add4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.Add4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public override void AddRange (Array values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddRange(class System.Array values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.AddRange(System.Array)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Array" />
+      </Parameters>
+      <Docs>
+        <param name="values">Os valores <see cref="T:System.Array" /> a serem adicionados.</param>
+        <summary>Adiciona uma matriz de valores ao final do <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Data.OleDb.OleDbParameter[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Data.OleDb.OleDbParameter[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.AddRange(System.Data.OleDb.OleDbParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Data.OleDb.OleDbParameter[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Os valores <see cref="T:System.Data.OleDbParameter" /> a serem adicionados.</param>
+        <summary>Adiciona uma matriz de valores <see cref="T:System.Data.OleDb.OleDbParameter" /> ao final do <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddWithValue">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbParameter AddWithValue (string parameterName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbParameter AddWithValue(string parameterName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.AddWithValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">O nome do parâmetro.</param>
+        <param name="value">O valor a ser adicionado.</param>
+        <summary>Adiciona um valor ao final do <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <returns>Um objeto <see cref="T:System.Data.OleDb.OleDbParameter" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public override void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Data.OleDb.OleDbParameter" /> de objetos a partir de <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Data.OleDb.OleDbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Data.OleDb.OleDbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Contains(System.Data.OleDb.OleDbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.OleDb.OleDbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor <see cref="T:System.Data.OleDb.OleDbParameter" />.</param>
+        <summary>Determina se o especificado <see cref="T:System.Data.OleDb.OleDbParameter" /> é neste <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Data.OleDb.OleDbParameter" /> está na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public override bool Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor <see cref="T:System.Object" />.</param>
+        <summary>Determina se o especificado <see cref="T:System.Object" /> é neste <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> contém <paramref name="value" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public override bool Contains (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Contains(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor <see cref="T:System.String" />.</param>
+        <summary>Determina se o especificado <see cref="T:System.String" /> é neste <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> contém o valor; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public override void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados do <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> atual.</param>
+        <param name="index">Um inteiro de 32 bits que representa o índice no <see cref="T:System.Array" /> no qual a cópia é iniciada.</param>
+        <summary>Copia todos os elementos do <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> atual para o <see cref="T:System.Array" /> unidimensional especificado, começando no índice <see cref="T:System.Array" /> de destino especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.OleDb.OleDbParameter[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Data.OleDb.OleDbParameter[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.CopyTo(System.Data.OleDb.OleDbParameter[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.OleDb.OleDbParameter[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> que é o destino dos elementos copiados do <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> atual.</param>
+        <param name="index">Um inteiro de 32 bits que representa o índice no <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> no qual a cópia é iniciada.</param>
+        <summary>Copia todos os elementos do <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> atual para o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> especificado, começando no índice de destino especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbParameterCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um inteiro que contém o número de elementos de <see cref="T:System.Data.OleDb.OleDbParameterCollection" />. Somente leitura.</summary>
+        <value>O número de elementos no <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> como um inteiro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerator" /> para o <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameter">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbParameter GetParameter (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbParameter GetParameter(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.GetParameter(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameter">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbParameter GetParameter (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbParameter GetParameter(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.GetParameter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Data.OleDb.OleDbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Data.OleDb.OleDbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.IndexOf(System.Data.OleDb.OleDbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.OleDb.OleDbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Data.OleDb.OleDbParameter" /> objeto na coleção para localizar.</param>
+        <summary>Obtém a localização especificada <see cref="T:System.Data.OleDb.OleDbParameter" /> dentro da coleção.</summary>
+        <returns>O local com base em zero do <see cref="T:System.Data.OleDb.OleDbParameter" /> que é um <see cref="T:System.Data.OleDb.OleDbParameter" /> dentro da coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public override int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> para localizar.</param>
+        <summary>O local especificado <see cref="T:System.Object" /> dentro da coleção.</summary>
+        <returns>O local com base em zero do <see cref="T:System.Object" /> que é um <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> dentro da coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public override int IndexOf (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 IndexOf(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">O nome diferencia maiusculas e minúsculas do <see cref="T:System.Data.OleDb.OleDbParameter" /> localizar.</param>
+        <summary>Obtém o local do <see cref="T:System.Data.OleDb.OleDbParameter" /> com o nome especificado.</summary>
+        <returns>O local com base em zero do <see cref="T:System.Data.OleDb.OleDbParameter" /> com o nome especificado de maiusculas e minúsculas.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Data.OleDb.OleDbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Data.OleDb.OleDbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Insert(System.Int32,System.Data.OleDb.OleDbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.OleDb.OleDbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero no qual o valor deve ser inserido.</param>
+        <param name="value">Um <see cref="T:System.Data.OleDb.OleDbParameter" /> o objeto a ser inserido no <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</param>
+        <summary>Insere um <see cref="T:System.Data.OleDb.OleDbParameter" /> objeto para o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public override void Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero no qual o valor deve ser inserido.</param>
+        <param name="value">Um <see cref="T:System.Object" /> a serem inseridas no <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</param>
+        <summary>Insere um <see cref="T:System.Object" /> para o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public override bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbParameterCollection.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> tem um tamanho fixo. Somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> tem um fixa tamanho; caso contrário <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbParameterCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> é somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public override bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbParameterCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> está sincronizado. Somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> for sincronizado; caso contrário <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbParameter this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbParameter Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbParameterCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do parâmetro a ser recuperado.</param>
+        <summary>Obtém ou define o <see cref="T:System.Data.OleDb.OleDbParameter" /> no índice especificado.</summary>
+        <value>O <see cref="T:System.Data.OleDb.OleDbParameter" /> no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.OleDb.OleDbParameterCollection>, adiciona as instâncias da <xref:System.Data.OleDb.OleDbParameter> à coleção, exibe os nomes dos seus <xref:System.Data.OleDb.OleDbParameter> objetos e, em seguida, limpa a coleção.  
+  
+ [!code-csharp[Classic WebData OleDbParameterCollection.Count Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.Count Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbParameterCollection.Count Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.Count Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O índice especificado não existe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbParameter this[string parameterName] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbParameter Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbParameterCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">O nome do parâmetro a ser recuperado.</param>
+        <summary>Obtém ou define o <see cref="T:System.Data.OleDb.OleDbParameter" /> com o nome especificado.</summary>
+        <value>O <see cref="T:System.Data.OleDb.OleDbParameter" /> com o nome especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir procura uma <xref:System.Data.OleDb.OleDbParameter> com um determinado <xref:System.Data.OleDb.OleDbParameter.ParameterName%2A> dentro de um <xref:System.Data.OleDb.OleDbParameterCollection>. Se o parâmetro existe, o exemplo exibe o nome e o índice do parâmetro. Se o parâmetro não existir, o exemplo exibe um erro. Este exemplo supõe que um <xref:System.Data.OleDb.OleDbParameterCollection> já foi criado.  
+  
+ [!code-csharp[Classic WebData OleDbParameterCollection.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbParameterCollection.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbParameterCollection.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O nome especificado não existe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Data.OleDb.OleDbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Data.OleDb.OleDbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Remove(System.Data.OleDb.OleDbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Data.OleDb.OleDbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Data.OleDb.OleDbParameter" /> objeto a ser removido da coleção.</param>
+        <summary>Remove o <see cref="T:System.Data.OleDb.OleDbParameter" /> do <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidCastException">O parâmetro não é um <see cref="T:System.Data.OleDb.OleDbParameter" />.</exception>
+        <exception cref="T:System.SystemException">O parâmetro não existe na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override void Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Object" /> a ser removido do <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</param>
+        <summary>Remove o <see cref="T:System.Object" /> de objeto o <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public override void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.Data.OleDb.OleDbParameter" /> objeto a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Data.OleDb.OleDbParameter" /> do <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public override void RemoveAt (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveAt(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.RemoveAt(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">O nome do <see cref="T:System.Data.OleDb.OleDbParameter" /> objeto a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Data.OleDb.OleDbParameter" /> do <see cref="T:System.Data.OleDb.OleDbParameterCollection" /> no nome do parâmetro especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameter">
+      <MemberSignature Language="C#" Value="protected override void SetParameter (int index, System.Data.Common.DbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetParameter(int32 index, class System.Data.Common.DbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.SetParameter(System.Int32,System.Data.Common.DbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Data.Common.DbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameter">
+      <MemberSignature Language="C#" Value="protected override void SetParameter (string parameterName, System.Data.Common.DbParameter value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetParameter(string parameterName, class System.Data.Common.DbParameter value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbParameterCollection.SetParameter(System.String,System.Data.Common.DbParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="value" Type="System.Data.Common.DbParameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public override object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbParameterCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Data.OleDb.OleDbParameterCollection" />. Somente leitura.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Data.OleDb.OleDbParameterCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

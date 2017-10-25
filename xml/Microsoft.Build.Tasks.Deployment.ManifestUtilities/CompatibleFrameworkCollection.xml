@@ -1,0 +1,133 @@
+<Type Name="CompatibleFrameworkCollection" FullName="Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection">
+  <TypeSignature Language="C#" Value="public sealed class CompatibleFrameworkCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CompatibleFrameworkCollection extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de versões do que um aplicativo prefere ser executado .NET Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um aplicativo pode ser executado em várias versões do .NET Framework, as versões devem ser listadas em ordem de prioridade de mais preferencial para menos preferencial. Se uma versão do .NET Framework listado no <xref:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection> classe está instalada no computador do usuário final, instalar e executar o aplicativo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework compatibleFramework);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework compatibleFramework) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.Add(Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="compatibleFramework" Type="Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework" />
+      </Parameters>
+      <Docs>
+        <param name="compatibleFramework">A estrutura para adicionar.</param>
+        <summary>Adiciona uma estrutura para a <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versões do .NET Framework listadas no <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection" /> coleção.</summary>
+        <value>Um <see cref="T:System.Int32" /> objeto que representa o número de versões do .NET Framework listadas no <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection" /> coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o enumerador para a coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> interface que pode iterar pela coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFrameworkCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A versão do .NET Framework para verificar se há no computador do usuário final.</param>
+        <summary>Obtém uma versão do .NET Framework que um aplicativo prefere ser executado.</summary>
+        <value>Um <see cref="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.CompatibleFramework" /> que representa as versões do .NET Framework que um aplicativo prefere ser executado objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

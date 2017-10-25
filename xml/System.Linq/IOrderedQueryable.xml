@@ -1,0 +1,45 @@
+<Type Name="IOrderedQueryable" FullName="System.Linq.IOrderedQueryable">
+  <TypeSignature Language="C#" Value="public interface IOrderedQueryable : System.Collections.IEnumerable, System.Linq.IQueryable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOrderedQueryable implements class System.Collections.IEnumerable, class System.Linq.IQueryable" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.IOrderedQueryable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IQueryable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa o resultado de uma operação de classificação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Linq.IOrderedQueryable> interface destina implementação por provedores de consulta.  
+  
+ Essa interface representa o resultado de uma consulta de classificação que chama o método <xref:System.Linq.Queryable.OrderBy%2A>, <xref:System.Linq.Queryable.OrderByDescending%2A>, <xref:System.Linq.Queryable.ThenBy%2A> ou <xref:System.Linq.Queryable.ThenByDescending%2A>. Quando <xref:System.Linq.IQueryProvider.CreateQuery%2A> é chamado e passado a uma árvore de expressão que representa uma consulta de classificação resultante <xref:System.Linq.IQueryable> objeto deve ser de um tipo que implementa <xref:System.Linq.IOrderedQueryable>.  
+  
+ Para obter mais informações sobre como criar seu próprio provedor LINQ, consulte [LINQ: Criando um provedor IQueryable](http://go.microsoft.com/fwlink/?LinkID=112370) blogs do MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

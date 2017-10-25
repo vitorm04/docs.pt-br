@@ -1,0 +1,73 @@
+<Type Name="TextAntiAliasingQuality" FullName="System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality">
+  <TypeSignature Language="C#" Value="public enum TextAntiAliasingQuality" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextAntiAliasingQuality extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o nível de qualidade de suavização para ser usado com o TextAntiAliasingQuality&amp;nbsp; propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A enumeração TextAntiAliasingQuality representa um intervalo de qualidade&nbsp;para texto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality High = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alta qualidade de suavização.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualidade de suavização normal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemDefault">
+      <MemberSignature Language="C#" Value="SystemDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality SystemDefault = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Qualidade de suavização padrão do sistema.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

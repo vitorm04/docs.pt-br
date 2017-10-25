@@ -1,0 +1,357 @@
+<Type Name="TraceContext" FullName="System.Web.TraceContext">
+  <TypeSignature Language="C#" Value="public sealed class TraceContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TraceContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.TraceContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Captura e apresenta detalhes de execução de uma solicitação da Web. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa classe para acrescentar mensagens às categorias de rastreamento específico. Por exemplo, se você estiver criando uma instância do <xref:System.Web.UI.WebControls.Calendar> classe para seu aplicativo, você pode incluir a mensagem de rastreamento "Começando a processar" em um procedimento de renderização e "Gerar evento OnChange" em um procedimento de manipulador de eventos.  
+  
+ Você também pode usar o <xref:System.Web.TraceContext> classe para obter um conjunto de registros de rastreamento no final da execução da solicitação para processamento personalizado. Para obter mais informações, consulte [visão geral do rastreamento ASP.NET](http://msdn.microsoft.com/library/1552561d-887c-4002-8770-f92662cdf416).  
+  
+ Para habilitar o rastreamento, defina o `Trace` atributo no [@ Page](http://msdn.microsoft.com/en-us/f06cf9e5-22bb-461d-8b8f-549e53ff40a4) diretiva ou o <xref:System.Web.TraceContext.IsEnabled%2A> propriedade `true`. Quando o rastreamento estiver habilitado, além de mostrar o conteúdo de rastreamento fornecida pelo usuário, a <xref:System.Web.UI.Page> classe inclui automaticamente os dados de desempenho, informações de estrutura de árvore de controle e conteúdo de gerenciamento de estado para cada solicitação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceContext (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.TraceContext.#ctor(System.Web.HttpContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Web.HttpContext" /> que contém informações sobre a solicitação da Web atual.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.TraceContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContext.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o rastreamento está habilitado para a solicitação da Web atual.</summary>
+        <value>
+          <see langword="true" />Se o rastreamento estiver habilitado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este sinalizador para verificar se seu aplicativo ou página deve gerar informações de rastreamento antes de qualquer coisa grava no log de rastreamento.  
+  
+ O valor da <xref:System.Web.TraceContext.IsEnabled%2A> propriedade depende das configurações na seção do `system.web` seção de configuração e o valor da `trace` atributo da diretiva. A opção de rastreamento definida na diretiva de página tem precedência sobre a opção definida no arquivo de configuração. Definindo o <xref:System.Web.TraceContext.IsEnabled%2A> valor programaticamente tem precedência sobre o atributo da diretiva de página e a configuração.  
+  
+> [!NOTE]
+>  Se você definir o <xref:System.Web.TraceContext.IsEnabled%2A> propriedade `true` explicitamente para um aplicativo inteiro, você deve definir essa propriedade `false` para qualquer página no aplicativo para o qual deseja que as informações de rastreamento exibidas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode determinar se o rastreamento está habilitado para uma página. O código itera pelas linhas em um conjunto de dados, escrever instruções de rastreamento para cada linha no conjunto de dados.  
+  
+ [!code-csharp[Classic TraceContext.IsEnabled Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TraceContext.IsEnabled Example/CS/source.cs#1)]
+ [!code-vb[Classic TraceContext.IsEnabled Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TraceContext.IsEnabled Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceFinished">
+      <MemberSignature Language="C#" Value="public event System.Web.TraceContextEventHandler TraceFinished;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.TraceContextEventHandler TraceFinished" />
+      <MemberSignature Language="DocId" Value="E:System.Web.TraceContext.TraceFinished" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.TraceContextEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Emitindo o <see cref="T:System.Web.TraceContext" /> objeto para expor o rastreamento de mensagens após a coleta de todas as informações de solicitação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.TraceContext.TraceFinished> é gerado durante o `EndRequest` estágio de processamento de solicitação HTTP. Ele é gerado por uma <xref:System.Web.TraceContext> objeto após a coleta de todas as informações de solicitação, para expor a coleção de <xref:System.Web.TraceContextRecord> mensagens registrado <xref:System.Web.TraceContextEventHandler> delegados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode registrar um <xref:System.Web.TraceContextEventHandler> para lidar com o <xref:System.Web.TraceContext.TraceFinished> evento. Neste exemplo, o representante itera as mensagens de rastreamento e os grava no fluxo de resposta; No entanto, você poderia escrever as mesmas informações para um banco de dados ou um consumidor de ferramenta de criação de perfil.  
+  
+ [!code-aspx-csharp[System.Web.Trace_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_3/CS/form3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_3/VB/form3vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceMode">
+      <MemberSignature Language="C#" Value="public System.Web.TraceMode TraceMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.TraceMode TraceMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContext.TraceMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.TraceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ordem de classificação na qual as mensagens de rastreamento devem ser gerados para um navegador solicitante.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.TraceMode" />. O padrão é a configuração especificada pelo <see langword="traceMode" /> atributo o <see langword="trace" /> seção de um arquivo de configuração, cujo padrão é <see langword="SortByTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagens de rastreamento podem ser classificadas na ordem em que elas foram processadas ou em ordem alfabética por categoria definida pelo usuário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode classificar as instruções de rastreamento de uma página em ordem alfabética, as categorias que você atribuiu para as instruções.  
+  
+ [!code-aspx-csharp[Classic TraceContext.TraceMode Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TraceContext.TraceMode Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic TraceContext.TraceMode Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TraceContext.TraceMode Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor selecionado não é um dos valores de enumeração <see cref="T:System.Web.TraceMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Warn">
+      <MemberSignature Language="C#" Value="public void Warn (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Warn(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.TraceContext.Warn(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de rastreamento para gravar no log.</param>
+        <summary>Grava uma mensagem de rastreamento no log de rastreamento. Todos os avisos aparecem no log como texto vermelho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Toda vez que o <xref:System.Web.TraceContext.Warn%2A> método é chamado, um <xref:System.Web.TraceContext> mensagem de rastreamento é adicionada ao <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> mensagens de coleção, que é acessível ao manipular o <xref:System.Web.TraceContext.TraceFinished> evento. A mensagem foi adicionada com seu <xref:System.Web.TraceContextRecord.IsWarning%2A> propriedade definida como `true` e sua <xref:System.Web.TraceContextRecord.ErrorInfo%2A> propriedade definida como `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Warn">
+      <MemberSignature Language="C#" Value="public void Warn (string category, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Warn(string category, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.TraceContext.Warn(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="category">A categoria de rastreamento que recebe a mensagem.</param>
+        <param name="message">A mensagem de rastreamento para gravar no log.</param>
+        <summary>Grava informações no log de rastreamento, incluindo quaisquer categorias definidas pelo usuário de rastreamento e mensagens de rastreamento. Todos os avisos aparecem no log como texto vermelho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Toda vez que o <xref:System.Web.TraceContext.Warn%2A> método é chamado, um <xref:System.Web.TraceContext> mensagem de rastreamento é adicionada ao <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> mensagens de coleção, que é acessível ao manipular o <xref:System.Web.TraceContext.TraceFinished> evento. A mensagem foi adicionada com seu <xref:System.Web.TraceContextRecord.IsWarning%2A> propriedade definida como `true` e sua <xref:System.Web.TraceContextRecord.ErrorInfo%2A> propriedade definida como `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Warn">
+      <MemberSignature Language="C#" Value="public void Warn (string category, string message, Exception errorInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Warn(string category, string message, class System.Exception errorInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.TraceContext.Warn(System.String,System.String,System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="errorInfo" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="category">A categoria de rastreamento que recebe a mensagem.</param>
+        <param name="message">A mensagem de rastreamento para gravar no log.</param>
+        <param name="errorInfo">Um <see cref="T:System.Exception" /> que contém informações sobre o erro.</param>
+        <summary>Grava informações no log de rastreamento, incluindo quaisquer categorias definidas pelo usuário, as mensagens de rastreamento e informações de erro de rastreamento. Todos os avisos aparecem no log como texto vermelho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Toda vez que o <xref:System.Web.TraceContext.Warn%2A> método é chamado, um <xref:System.Web.TraceContext> mensagem de rastreamento é adicionada ao <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> mensagens de coleção, que é acessível ao manipular o <xref:System.Web.TraceContext.TraceFinished> evento. A mensagem foi adicionada com seu <xref:System.Web.TraceContextRecord.IsWarning%2A> propriedade definida como `true`e o <xref:System.Web.TraceContextRecord.ErrorInfo%2A> propriedade é definida para o objeto passado `errorInfo` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Web.TraceContext.Write%2A> método para gravar uma mensagem de rastreamento de erro no log de rastreamento. Neste exemplo, as exceções diferentes são rastreadas como erros e avisos. Quando a página gera um <xref:System.ArgumentException>, ele grava uma mensagem de aviso usando o <xref:System.Web.TraceContext.Warn%2A> método. Quando a página gera um <xref:System.InvalidOperationException>, ele grava uma mensagem de erro usando o <xref:System.Web.TraceContext.Write%2A> método.  
+  
+ [!code-aspx-csharp[System.Web.Trace_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_4/CS/form4cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_4/VB/form4vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.TraceContext.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de rastreamento para gravar no log.</param>
+        <summary>Grava uma mensagem de rastreamento no log de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Toda vez que o <xref:System.Web.TraceContext.Write%2A> método é chamado, um <xref:System.Web.TraceContext> mensagem de rastreamento é adicionada ao <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> mensagens de coleção, que é acessível ao manipular o <xref:System.Web.TraceContext.TraceFinished> evento. A mensagem foi adicionada com seu <xref:System.Web.TraceContextRecord.IsWarning%2A> propriedade definida como `false` e sua <xref:System.Web.TraceContextRecord.ErrorInfo%2A> propriedade definida como `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string category, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(string category, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.TraceContext.Write(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="category">A categoria de rastreamento que recebe a mensagem.</param>
+        <param name="message">A mensagem de rastreamento para gravar no log.</param>
+        <summary>Grava informações de rastreamento no log de rastreamento, incluindo uma mensagem e as categorias definidas pelo usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Toda vez que o <xref:System.Web.TraceContext.Write%2A> método é chamado, um <xref:System.Web.TraceContext> mensagem de rastreamento é adicionada ao <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> mensagens de coleção, que é acessível ao manipular o <xref:System.Web.TraceContext.TraceFinished> evento. A mensagem foi adicionada com seu <xref:System.Web.TraceContextRecord.IsWarning%2A> propriedade definida como `false` e sua <xref:System.Web.TraceContextRecord.ErrorInfo%2A> propriedade definida como `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Web.TraceContext.Write%2A> método para gravar uma mensagem de rastreamento de erro no log de rastreamento. Neste exemplo, o delegado itera as mensagens de rastreamento e grava-as como uma tabela HTML; No entanto, você pode escrever as mesmas informações para um banco de dados ou um consumidor de ferramenta de criação de perfil.  
+  
+ [!code-aspx-csharp[System.Web.Trace_5#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_5/CS/form5cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_5#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_5/VB/form5vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string category, string message, Exception errorInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(string category, string message, class System.Exception errorInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.TraceContext.Write(System.String,System.String,System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="errorInfo" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="category">A categoria de rastreamento que recebe a mensagem.</param>
+        <param name="message">A mensagem de rastreamento para gravar no log.</param>
+        <param name="errorInfo">Um <see cref="T:System.Exception" /> que contém informações sobre o erro.</param>
+        <summary>Grava informações no log de rastreamento, incluindo quaisquer categorias definidas pelo usuário, as mensagens de rastreamento e informações de erro de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Toda vez que o <xref:System.Web.TraceContext.Write%2A> método é chamado, um <xref:System.Web.TraceContext> mensagem de rastreamento é adicionada ao <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> mensagens de coleção, que é acessível ao manipular o <xref:System.Web.TraceContext.TraceFinished> evento. A mensagem foi adicionada com seu <xref:System.Web.TraceContextRecord.IsWarning%2A> propriedade definida como `false`e o <xref:System.Web.TraceContextRecord.ErrorInfo%2A> propriedade é definida para o objeto passado `errorInfo` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Web.TraceContext.Write%2A> método para gravar uma mensagem de rastreamento de erro no log de rastreamento. Neste exemplo, as exceções diferentes são rastreadas como erros e avisos. Quando a página gera um <xref:System.ArgumentException>, ele grava uma mensagem de aviso usando o <xref:System.Web.TraceContext.Warn%2A> método. Quando a página gera um <xref:System.InvalidOperationException>, ele grava uma mensagem de erro usando o <xref:System.Web.TraceContext.Write%2A> método.  
+  
+ [!code-aspx-csharp[System.Web.Trace_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_4/CS/form4cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_4/VB/form4vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

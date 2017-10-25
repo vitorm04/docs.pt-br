@@ -1,0 +1,246 @@
+<Type Name="ColorContext" FullName="System.Windows.Media.ColorContext">
+  <TypeSignature Language="C#" Value="public class ColorContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ColorContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.ColorContext" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o perfil de cor internacional cor Consortium ICC () ou gerenciamento de cores de imagem (ICM) que está associado uma imagem de bitmap.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os espaços de cores padrão com suporte são sRGB, ScRGB, RGB, CMYK, cinza, multicanal e desconhecido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o perfil de cor que está associado uma imagem de bitmap.  
+  
+ [!code-csharp[bitmapimageprops#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#3)]
+ [!code-vb[bitmapimageprops#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColorContext (Uri profileUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri profileUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ColorContext.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="profileUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="profileUri">O <see cref="T:System.Uri" /> que identifica o local do perfil de cor desejada.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Windows.Media.ColorContext" /> com o [!INCLUDE[TLA#tla_icc](~/includes/tlasharptla-icc-md.md)] ou [!INCLUDE[TLA#tla_icm](~/includes/tlasharptla-icm-md.md)] perfil de cor localizado em um determinado <see cref="T:System.Uri" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para usar qualquer um dos perfis de cor sem suporte, você deve instalar um e usar seu URI para inicializar o <xref:System.Windows.Media.ColorContext> usando o <xref:System.Windows.Media.ColorContext.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColorContext (System.Windows.Media.PixelFormat pixelFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.PixelFormat pixelFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ColorContext.#ctor(System.Windows.Media.PixelFormat)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="pixelFormat" Type="System.Windows.Media.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="pixelFormat">O <see cref="T:System.Windows.Media.PixelFormat" /> do qual o <see cref="T:System.Windows.Media.ColorContext" /> é derivado.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.Windows.Media.ColorContext" /> com o perfil de cor padrão (sRGB ou RGB) que mais se aproxima fornecido <see cref="T:System.Windows.Media.PixelFormat" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma nova instância da <xref:System.Windows.Media.ColorContext>.  
+  
+ [!code-csharp[bitmapimageprops#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapImageProps/CSharp/BitmapImageProps.cs#3)]
+ [!code-vb[bitmapimageprops#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapImageProps/VB/BitmapImageProps.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ColorContext.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Identifica o <see cref="T:System.Object" /> para comparação de igualdade.</param>
+        <summary>Determina se um <see cref="T:System.Object" /> é igual a uma instância de <see cref="T:System.Windows.Media.ColorContext" />.</summary>
+        <returns>
+          <see langword="true" />Se fornecido <see cref="T:System.Object" /> é igual a esta instância do <see cref="T:System.Windows.Media.ColorContext" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ColorContext.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o código hash para esta instância de <see cref="T:System.Windows.Media.ColorContext" />.</summary>
+        <returns>Um <see cref="T:System.Int32" /> que representa o código hash para o objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Media.ColorContext context1, System.Windows.Media.ColorContext context2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Windows.Media.ColorContext context1, class System.Windows.Media.ColorContext context2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ColorContext.op_Equality(System.Windows.Media.ColorContext,System.Windows.Media.ColorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context1" Type="System.Windows.Media.ColorContext" />
+        <Parameter Name="context2" Type="System.Windows.Media.ColorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context1">A primeira instância do <see cref="T:System.Windows.Media.ColorContext" /> para comparar.</param>
+        <param name="context2">A segunda instância de <see cref="T:System.Windows.Media.ColorContext" /> para comparar.</param>
+        <summary>Opera em duas instâncias de <see cref="T:System.Windows.Media.ColorContext" /> para determinar igualdade.</summary>
+        <returns>
+          <see langword="true" />Se as instâncias do <see cref="T:System.Windows.Media.ColorContext" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Media.ColorContext context1, System.Windows.Media.ColorContext context2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Windows.Media.ColorContext context1, class System.Windows.Media.ColorContext context2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ColorContext.op_Inequality(System.Windows.Media.ColorContext,System.Windows.Media.ColorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context1" Type="System.Windows.Media.ColorContext" />
+        <Parameter Name="context2" Type="System.Windows.Media.ColorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context1">A primeira instância do <see cref="T:System.Windows.Media.ColorContext" /> para comparar.</param>
+        <param name="context2">A segunda instância de <see cref="T:System.Windows.Media.ColorContext" /> para comparar.</param>
+        <summary>Opera em duas instâncias de <see cref="T:System.Windows.Media.ColorContext" /> para determinar se elas não forem iguais.</summary>
+        <returns>
+          <see langword="true" />Se as instâncias do <see cref="T:System.Windows.Media.ColorContext" /> não forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenProfileStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OpenProfileStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream OpenProfileStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.ColorContext.OpenProfileStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um legível <see cref="T:System.IO.Stream" /> dos dados de perfil de cor bruto.</summary>
+        <returns>Um legível <see cref="T:System.IO.Stream" /> dos dados de perfil de cor bruto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProfileUri">
+      <MemberSignature Language="C#" Value="public Uri ProfileUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ProfileUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.ColorContext.ProfileUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Uri" /> que representa o local de um [!INCLUDE[TLA#tla_icc](~/includes/tlasharptla-icc-md.md)] ou [!INCLUDE[TLA#tla_icm](~/includes/tlasharptla-icm-md.md)] perfil de cor.</summary>
+        <value>Um <see cref="T:System.Uri" /> que representa o local de um [!INCLUDE[TLA#tla_icc](~/includes/tlasharptla-icc-md.md)] ou [!INCLUDE[TLA#tla_icm](~/includes/tlasharptla-icm-md.md)] perfil de cor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

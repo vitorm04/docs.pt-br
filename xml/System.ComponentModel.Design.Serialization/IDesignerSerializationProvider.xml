@@ -1,0 +1,76 @@
+<Type Name="IDesignerSerializationProvider" FullName="System.ComponentModel.Design.Serialization.IDesignerSerializationProvider">
+  <TypeSignature Language="C#" Value="public interface IDesignerSerializationProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerSerializationProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.IDesignerSerializationProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface que permite o acesso a um serializador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface possui apenas um método, <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationProvider.GetSerializer%2A>e não propriedades ou eventos. Essa interface e este método existem para que o Gerenciador de serialização e outros objetos podem obter um serializador para um determinado tipo de objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSerializer">
+      <MemberSignature Language="C#" Value="public object GetSerializer (System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object currentSerializer, Type objectType, Type serializerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetSerializer(class System.ComponentModel.Design.Serialization.IDesignerSerializationManager manager, object currentSerializer, class System.Type objectType, class System.Type serializerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerSerializationProvider.GetSerializer(System.ComponentModel.Design.Serialization.IDesignerSerializationManager,System.Object,System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+        <Parameter Name="currentSerializer" Type="System.Object" />
+        <Parameter Name="objectType" Type="System.Type" />
+        <Parameter Name="serializerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O Gerenciador de serialização solicitando o serializador.</param>
+        <param name="currentSerializer">Uma instância do serializador atual do tipo especificado. Isso pode ser <see langword="null" /> se nenhum serializador do tipo especificado existe.</param>
+        <param name="objectType">O tipo de dados do objeto para serializar.</param>
+        <param name="serializerType">O tipo de dados do serializador para criar.</param>
+        <summary>Obtém um serializador usando os atributos especificados.</summary>
+        <returns>Uma instância de um serializador do tipo solicitado, ou <see langword="null" /> se a solicitação não pode ser atendida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Gerenciador de serialização chama este método quando ele está tentando localizar um serializador para um tipo de objeto. Se este provedor de serialização pode fornecer um serializador do tipo correto, esse provedor retorna. Caso contrário, retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

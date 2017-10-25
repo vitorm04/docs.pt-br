@@ -1,0 +1,34 @@
+<Type Name="WritingPrintTicketRequiredEventHandler" FullName="System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void WritingPrintTicketRequiredEventHandler(object sender, WritingPrintTicketRequiredEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WritingPrintTicketRequiredEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa o método que manipula o evento <see cref="E:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired" /> de um <see cref="T:System.Windows.Xps.XpsDocumentWriter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre quando o <xref:System.Windows.Xps.XpsDocumentWriter> precisa o <xref:System.Printing.PrintTicket> de um trabalho de impressão.  
+  
+ Quando você cria um <xref:System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler> delegado, você identificar o método que manipula o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

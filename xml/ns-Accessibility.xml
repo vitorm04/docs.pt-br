@@ -1,0 +1,13 @@
+<Namespace Name="Accessibility">
+  <Docs>
+    <summary>O <see cref="N:Accessibility" /> e todos os seus membros expostos fazem parte de um wrapper gerenciado da interface de acessibilidade COM (Component Object Model).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre <xref:Accessibility>, consulte a documentação do Microsoft Active Accessibility na biblioteca MSDN em http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

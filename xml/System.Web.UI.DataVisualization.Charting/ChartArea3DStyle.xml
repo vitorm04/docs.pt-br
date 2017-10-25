@@ -1,0 +1,442 @@
+<Type Name="ChartArea3DStyle" FullName="System.Web.UI.DataVisualization.Charting.ChartArea3DStyle">
+  <TypeSignature Language="C#" Value="public class ChartArea3DStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChartArea3DStyle extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia os atributos de exibição para áreas tridimensionais (3D) do gráfico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece os estilos de áreas de gráfico 3D e é exposta usando o <xref:System.Web.UI.DataVisualization.Charting.ChartArea.Area3DStyle%2A> propriedade.  
+  
+ Para habilitar 3D para uma área do gráfico, defina o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Enable3D%2A> propriedade `true`. Isso faz com que 3D para ser aplicado a todas as séries de dados desenhadas em uma área do gráfico.  
+  
+ Uma projeção isométrica de uma área do gráfico pode ser exibida, definindo a <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.IsRightAngleAxes%2A> propriedade `true`, que é o padrão. Modos de exibição isométricos não são realmente 3D, porque os exibidos ângulos de rotação podem não corresponder os reais ângulos de rotação em torno dos eixos horizontais e verticais. Os ângulos reais são controlados usando o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Rotation%2A> e <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Inclination%2A> propriedades, respectivamente.  
+  
+ Para obter mais informações sobre as projeções isométricos, consulte a seção comentários a <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.IsRightAngleAxes%2A> propriedade.  
+  
+ Você também pode usar essa classe para:  
+  
+-   Barra de cluster e a série de dados de gráfico de coluna usando o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.IsClustered%2A> propriedade.  
+  
+-   Controlar os efeitos de iluminação usando o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.LightStyle%2A> propriedade.  
+  
+-   Definir a largura das paredes da área de gráfico usando o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.WallWidth%2A> propriedade.  
+  
+-   Definir a quantidade de perspectiva com o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Perspective%2A> propriedade.  
+  
+-   Controlar a profundidade de pontos de dados e a distância entre as linhas de dados usando o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.PointDepth%2A> e <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.PointGapDepth%2A> propriedades, respectivamente.  
+  
+-   Girar uma área do gráfico usando o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Inclination%2A> e <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Rotation%2A> propriedades.  
+  
+ Para trabalhar com as coordenadas dos pontos 3D, use o <xref:System.Web.UI.DataVisualization.Charting.Point3D> classe.  
+  
+ Quando um gráfico é definido como 3D, os recursos de gráfico a seguir não são válidos:  
+  
+-   Quebras de escala  
+  
+-   Gradientes  
+  
+-   Rolagem e zoom  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChartArea3DStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ChartArea3DStyle (System.Web.UI.DataVisualization.Charting.ChartArea chartArea);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.DataVisualization.Charting.ChartArea chartArea) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.#ctor(System.Web.UI.DataVisualization.Charting.ChartArea)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="chartArea" Type="System.Web.UI.DataVisualization.Charting.ChartArea" />
+      </Parameters>
+      <Docs>
+        <param name="chartArea">Um objeto <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle" /> classe usando o <paramref name="chartArea" /> parâmetro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enable3D">
+      <MemberSignature Language="C#" Value="public bool Enable3D { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enable3D" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Enable3D" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o sinalizador alterna 3D e desativar para uma área do gráfico.</summary>
+        <value>
+          <see langword="true" />a área do gráfico é exibida usando 3D, <see langword="false" /> se a área do gráfico é exibida em 2D. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alterna a exibição tridimensional de uma área do gráfico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inclination">
+      <MemberSignature Language="C#" Value="public int Inclination { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Inclination" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Inclination" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(30)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ângulo de rotação em torno dos eixos horizontais para as áreas do gráfico 3D.</summary>
+        <value>Um <see langword="integer" /> que representa o ângulo de rotação em torno dos eixos horizontais para as áreas do gráfico 3D.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClustered">
+      <MemberSignature Language="C#" Value="public bool IsClustered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClustered" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.IsClustered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que determina se as séries de dados para uma barra ou coluna gráfico estão clusterizados; ou seja, exibidos em linhas distintas.</summary>
+        <value>
+          <see langword="true" />Se a série de dados para uma barra ou coluna gráfico estão clusterizados; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRightAngleAxes">
+      <MemberSignature Language="C#" Value="public bool IsRightAngleAxes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRightAngleAxes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.IsRightAngleAxes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que determina se uma área do gráfico é exibida usando uma projeção isométrica.</summary>
+        <value>
+          <see langword="true" />Se a área do gráfico é exibida usando uma projeção isométrica; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Modos de exibição isométricos não são realmente 3D, porque os exibidos ângulos de rotação podem não corresponder os reais ângulos de rotação em torno dos eixos horizontais e verticais. Os ângulos reais são controlados usando o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Rotation%2A> e <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Inclination%2A> propriedades, respectivamente.  
+  
+ Observe os seguintes pontos sobre projeção isométrica:  
+  
+-   Não é "real" 3D. Ou seja, o ângulo de rotação ao redor do eixo não usa true ângulos de rotação.  
+  
+-   Ele é ideal para exibir gráficos 3D com alguma profundidade.  
+  
+-   Se seu aplicativo permite que os usuários finais girar os gráficos, a rotação não será suave. Nesse caso, não é recomendável usar modos de exibição isométricos.  
+  
+-   Com a projeção isométrica, não há suporte para perspectiva.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LightStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.LightStyle LightStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.LightStyle LightStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.LightStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.DataVisualization.Charting.LightStyle), "Simplistic")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LightStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de iluminação para uma área do gráfico 3D.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Web.UI.DataVisualization.Charting.LightStyle" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Perspective">
+      <MemberSignature Language="C#" Value="public int Perspective { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Perspective" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Perspective" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a porcentagem de perspectiva para uma área do gráfico 3D.</summary>
+        <value>Um <see langword="integer" /> valor que representa a porcentagem de perspectiva para uma área do gráfico 3D. O intervalo permitido é de 0 a 100 por cento e o padrão é zero (0) por cento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma projeção de perspectiva de qualquer conjunto de linhas paralelas que não são paralela do plano de projeção converge para um ponto de fuga.  
+  
+ Se você definir o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Perspective%2A> propriedade, o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.IsRightAngleAxes%2A> propriedade será definida automaticamente como `false`, porque essas propriedades são mutuamente exclusivas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointDepth">
+      <MemberSignature Language="C#" Value="public int PointDepth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PointDepth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.PointDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a profundidade dos pontos de dados exibida em uma área do gráfico 3D.</summary>
+        <value>Um <see langword="integer" /> valor que representa a profundidade dos pontos de dados. O intervalo permitido é de 0 a 1000 por cento. O padrão é 100 por cento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina a profundidade dos pontos de dados e é representada como uma porcentagem da largura do ponto de dados.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.PointDepth%2A> propriedade pode ser aplicada a profundidade de barras, colunas, apenas de pontos de dados de gráfico de linha, de pizza e de spline. Se você definir essa propriedade para outros tipos de gráfico (por exemplo, gráficos de bolhas e ponto) que não podem ter seus intensidades ponto "alongadas", reservará espaço extra para os pontos de dados, mas não aumenta sua profundidade.  
+  
+ Você pode exibir o gráfico como uma projeção isométrica definindo o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.IsRightAngleAxes%2A> propriedade `true`, que é ao valor padrão. Isso fará com que a profundidade de ponto para parecem ser maior ou menor que a porcentagem definida por esta propriedade, dependendo do gráfico que está sendo exibido.  
+  
+ Para controlar o espaçamento entre linhas de dados, use o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.PointGapDepth%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointGapDepth">
+      <MemberSignature Language="C#" Value="public int PointGapDepth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PointGapDepth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.PointGapDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância entre as linhas de série em uma área do gráfico 3D.</summary>
+        <value>Um <see langword="integer" /> valor que representa a distância entre as linhas de dados (ou seja, a série de dados) na área do gráfico 3D. O intervalo permitido é de 0 a 1000 por cento e o padrão é 100 por cento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina a distância entre as linhas de dados, com cada linha correspondente a uma série de dados. A unidade de medida é expressa como uma porcentagem da distância entre pontos de dados em uma linha.  
+  
+ Alterar o intervalo entre as colunas ou barras para tipos de coluna e o gráfico de barras usando o `PointWidth` propriedade personalizada afetará o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.PointGapDepth%2A> o valor da propriedade.  
+  
+ Definir o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.IsRightAngleAxes%2A> propriedade `true` (o valor padrão) para exibir o gráfico como uma projeção isométrica. Isso fará com que a profundidade da lacuna ponto apareça ser maior ou menor que a porcentagem definida por esta propriedade, dependendo do gráfico que está sendo exibido.  
+  
+ Para controlar a profundidade dos pontos de dados, use o <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.PointDepth%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotation">
+      <MemberSignature Language="C#" Value="public int Rotation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Rotation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.Rotation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(30)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ângulo de rotação em torno dos eixos verticais para as áreas do gráfico 3D.</summary>
+        <value>Um <see langword="integer" /> valor que representa o ângulo de rotação em torno dos eixos verticais para as áreas do gráfico 3D.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WallWidth">
+      <MemberSignature Language="C#" Value="public int WallWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WallWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.WallWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(7)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura das paredes exibido em uma área do gráfico 3D.</summary>
+        <value>Um <see langword="integer" /> valor que representa a largura, em pixels, das paredes exibidas em uma área do gráfico 3D.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina a largura das paredes (por exemplo, o backup total, paredes lado e assim por diante) que são exibidos nas áreas de gráfico 3D. O intervalo permitido é de 0 a 30 pixels.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

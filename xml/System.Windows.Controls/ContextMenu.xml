@@ -1,0 +1,1061 @@
+<Type Name="ContextMenu" FullName="System.Windows.Controls.ContextMenu">
+  <TypeSignature Language="C#" Value="public class ContextMenu : System.Windows.Controls.Primitives.MenuBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ContextMenu extends System.Windows.Controls.Primitives.MenuBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ContextMenu" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.MenuBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Opened")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um menu pop-up que habilita um controle para expor a funcionalidade que é específica para o contexto do controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.ContextMenu>é um <xref:System.Windows.Controls.ItemsControl>, que significa que ele pode conter uma coleção de objetos de qualquer tipo (como cadeia de caracteres, imagem ou painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.ItemsControl>.  
+  
+ As propriedades do <xref:System.Windows.Controls.ContextMenu> classe são usadas para definir a posição e o comportamento do <xref:System.Windows.Controls.ContextMenu>.  
+  
+ Um <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement> pode ter um <xref:System.Windows.Controls.ContextMenu>.  Se você atribuir um <xref:System.Windows.Controls.ContextMenu> para o <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType> ou <xref:System.Windows.FrameworkContentElement.ContextMenu%2A?displayProperty=nameWithType> propriedade, a <xref:System.Windows.Controls.ContextMenuService> classe manipula as operações de menu de contexto em resposta à interação do usuário. Parte do trabalho de <xref:System.Windows.Controls.ContextMenuService> does está abrindo o <xref:System.Windows.Controls.ContextMenu> quando o usuário clica no botão direito do mouse sobre o controle.  
+  
+ As seguintes propriedades são definidas pelo <xref:System.Windows.Controls.ContextMenu> e <xref:System.Windows.Controls.ContextMenuService> classes.  Se qualquer uma dessas propriedades são definidas em ambos os <xref:System.Windows.Controls.ContextMenu> e <xref:System.Windows.Controls.ContextMenuService>, o valor de propriedade de <xref:System.Windows.Controls.ContextMenuService> é usado.  
+  
+-   <xref:System.Windows.Controls.ContextMenu.Placement%2A>  
+  
+-   <xref:System.Windows.Controls.ContextMenu.PlacementRectangle%2A>  
+  
+-   <xref:System.Windows.Controls.ContextMenu.PlacementTargetProperty>  
+  
+-   <xref:System.Windows.Controls.ContextMenu.HorizontalOffset%2A>  
+  
+-   <xref:System.Windows.Controls.ContextMenu.VerticalOffsetProperty>  
+  
+-   <xref:System.Windows.Controls.ContextMenu.HasDropShadow%2A>  
+  
+ Um <xref:System.Windows.Controls.ContextMenu> é automaticamente colocado dentro de um <xref:System.Windows.Controls.Primitives.Popup> controle. Esse comportamento não pode ser alterado.  
+  
+## <a name="customizing-the-contextmenu-control"></a>Personalizando o controle de menu de contexto  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Controls.ContextMenu> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Controls.ContextMenu>, consulte [ContextMenu estilos e modelos](~/docs/framework/wpf/controls/contextmenu-styles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade estiver presente em ambos <xref:System.Windows.Controls.ContextMenu> controle do modelo padrão e é definido usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ContextMenu> que manipula o texto de um <xref:System.Windows.Controls.TextBox>.  O exemplo demonstra como se inscrever e manipular os eventos de <xref:System.Windows.Controls.MenuItem> objetos em um <xref:System.Windows.Controls.ContextMenu>.  
+  
+ [!code-xaml[ContextMenu#Events](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#events)]  
+  
+ [!code-csharp[MenuItemCommandsAndEvents#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[MenuItemCommandsAndEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextMenu ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenu.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.ContextMenu" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Closed">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Closed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Closed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.ContextMenu.Closed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando determinada instância de um <see cref="T:System.Windows.Controls.ContextMenu" /> é fechada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_Closed"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContextMenu.ClosedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ContextMenu> eventos: <xref:System.Windows.Controls.ContextMenu.Opened> e <xref:System.Windows.Controls.ContextMenu.Closed>.  
+  
+ [!code-xaml[ContextMenu#ContextMenuEvents](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#contextmenuevents)]  
+  
+ [!code-csharp[ContextMenu#ContextMenuEventHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml.cs#contextmenueventhandlers)]
+ [!code-vb[ContextMenu#ContextMenuEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContextMenu/VisualBasic/Pane1.xaml.vb#contextmenueventhandlers)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClosedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ClosedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ClosedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenu.ClosedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.ContextMenu.Closed" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomPopupPlacementCallback">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.CustomPopupPlacementCallback CustomPopupPlacementCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Primitives.CustomPopupPlacementCallback CustomPopupPlacementCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContextMenu.CustomPopupPlacementCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.CustomPopupPlacementCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um retorno de chamada que indica onde uma <see cref="T:System.Windows.Controls.ContextMenu" /> devem ser colocados na tela.</summary>
+        <value>Especifica o local de um retorno de chamada a <see cref="T:System.Windows.Controls.ContextMenu" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.ContextMenu.Placement%2A> propriedade deve ser definida como <xref:System.Windows.Controls.Primitives.PlacementMode.Custom> do representante de retorno de chamada a ser usado.  
+  
+ O <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegado retorna uma matriz de pontos possíveis que são definidos em relação ao <xref:System.Windows.Controls.ContextMenu.PlacementTarget%2A>. Quando o menu de contexto é exibido, um ponto é escolhido que maximiza a quantidade do <xref:System.Windows.Controls.ToolTip> janela está visível.  
+  
+ O comportamento é o mesmo, assim como para o pop-up.  Para obter mais informações, consulte [como: especificar uma posição de pop-up personalizado](~/docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md) e [exemplo de posicionamento de pop-up](http://go.microsoft.com/fwlink/?LinkID=160032).  
+  
+<a name="dependencyPropertyInfo_CustomPopupPlacementCallback"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContextMenu.CustomPopupPlacementCallbackProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomPopupPlacementCallbackProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CustomPopupPlacementCallbackProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CustomPopupPlacementCallbackProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenu.CustomPopupPlacementCallbackProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContextMenu.CustomPopupPlacementCallback" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlesScrolling">
+      <MemberSignature Language="C#" Value="protected override bool HandlesScrolling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HandlesScrolling" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContextMenu.HandlesScrolling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle oferece suporte a rolagem.</summary>
+        <value>Sempre <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o controle tiver um <xref:System.Windows.Controls.ScrollViewer> no seu estilo e tem um teclado personalizado rolagem comportamento, <xref:System.Windows.Controls.ListBox.HandlesScrolling%2A> deve retornar `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDropShadow">
+      <MemberSignature Language="C#" Value="public bool HasDropShadow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasDropShadow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContextMenu.HasDropShadow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o menu de contexto é exibido com uma sombra.</summary>
+        <value>
+          <see langword="true" /> se o menu de contexto for exibido com uma sombra; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Controls.ContextMenu> é aberta, o valor é definido como o valor de <xref:System.Windows.SystemParameters.DropShadow%2A?displayProperty=nameWithType>. Definir essa propriedade como `true` não tem efeito se a <xref:System.Windows.SystemParameters.DropShadow%2A?displayProperty=nameWithType> é de propriedade `false`.  
+  
+<a name="dependencyPropertyInfo_"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContextMenu.HasDropShadowProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ContextMenu.HasDropShadow%2A> propriedade.  
+  
+ [!code-xaml[ContextMenu#ContextMenuProps](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#contextmenuprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDropShadowProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HasDropShadowProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HasDropShadowProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenu.HasDropShadowProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContextMenu.HasDropShadow" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffset">
+      <MemberSignature Language="C#" Value="public double HorizontalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContextMenu.HorizontalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância horizontal entre a origem de destino e o ponto de alinhamento de pop-up.</summary>
+        <value>A distância horizontal entre a origem de destino e o ponto de alinhamento de pop-up. Para obter informações sobre o ponto de alinhamento de origem e o pop-up de destino, consulte [comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md). O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode posicionar um <xref:System.Windows.Controls.ContextMenu> definindo o <xref:System.Windows.Controls.ContextMenu.PlacementTarget%2A>, <xref:System.Windows.Controls.ContextMenu.PlacementRectangle%2A>, <xref:System.Windows.Controls.ContextMenu.Placement%2A>, <xref:System.Windows.Controls.ContextMenu.HorizontalOffset%2A>, e <xref:System.Windows.Controls.ContextMenu.VerticalOffsetProperty> propriedades.  Essas propriedades se comportam o mesmo que um <xref:System.Windows.Controls.Primitives.Popup>. Para mais informações, consulte [Comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_HorizontalOffset"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContextMenu.HorizontalOffsetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+<a name="xamlAttributeUsage_HorizontalOffset"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object HorizontalOffset="double"/>  
+- or –  
+<object HorizontalOffset ="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_HorizontalOffset"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *double*  
+ <xref:System.Double>  
+  
+ Representação de cadeia de caracteres um <xref:System.Double> valor. Isso é interpretado como um [!INCLUDE[TLA#tla_dipixel](~/includes/tlasharptla-dipixel-md.md)] medida. Cadeias de caracteres não precisam explicitamente incluir pontos decimais. Por exemplo, um valor de `1` é aceitável.  
+  
+ O mesmo <xref:System.Double> aplicam restrições de intervalo conforme mencionado na seção do valor da propriedade.  
+  
+ *qualifiedDouble*  
+ Um *duplo* valor conforme descrito acima, seguido por um dos seguintes unidade declaração cadeias de caracteres: `px`, `in`, `cm`, `pt`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ `cm`centímetros; 1cm==(96/2.54) px  
+  
+ `pt`pontos; 1pt==(96/72) px  
+  
+ **Observação** em muitos casos, um duplo pode ser definido como automático, mas um <xref:System.Windows.Controls.ContextMenu> não será exibida se os deslocamentos são definidos como automático.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ContextMenu.HorizontalOffset%2A> propriedade para fazer com que um <xref:System.Windows.Controls.ContextMenu> para abrir em um local especificado em relação ao seu pai do botão.  
+  
+ [!code-xaml[ContextMenu#ContextMenuProps](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#contextmenuprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HorizontalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HorizontalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenu.HorizontalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContextMenu.HorizontalOffset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOpen">
+      <MemberSignature Language="C#" Value="public bool IsOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContextMenu.IsOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Controls.ContextMenu" /> está visível.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.ContextMenu" /> estiver visível; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Controls.ContextMenu.IsOpen%2A> é definido como `true`, captura do mouse está definida como o <xref:System.Windows.Controls.ContextMenu> e sua subárvore.  
+  
+<a name="dependencyPropertyInfo_IsOpen"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContextMenu.IsOpenProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como verificar para determinar se o <xref:System.Windows.Controls.ContextMenu.IsOpen%2A> está definida como `true`.  
+  
+ [!code-csharp[ContextMenu#ContextMenuIsOpen](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml.cs#contextmenuisopen)]
+ [!code-vb[ContextMenu#ContextMenuIsOpen](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContextMenu/VisualBasic/Pane1.xaml.vb#contextmenuisopen)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOpenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsOpenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsOpenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenu.IsOpenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContextMenu.IsOpen" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected virtual void OnClosed (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClosed(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenu.OnClosed(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Controls.ContextMenu.Closed" />.</param>
+        <summary>Chamado quando o evento <see cref="E:System.Windows.Controls.ContextMenu.Closed" /> ocorre.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenu.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um <see cref="T:System.Windows.Automation.Peers.ContextMenuAutomationPeer" /> objeto para este <see cref="T:System.Windows.Controls.ContextMenu" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.ContextMenuAutomationPeer" /> objeto para este <see cref="T:System.Windows.Controls.ContextMenu" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsKeyboardFocusWithinChanged">
+      <MemberSignature Language="C#" Value="protected override void OnIsKeyboardFocusWithinChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnIsKeyboardFocusWithinChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenu.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.IsKeyboardFocusWithinChanged" />.</param>
+        <summary>Relata que o <see cref="P:System.Windows.UIElement.IsKeyboardFocusWithin" /> propriedade alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenu.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.KeyDown" />.</param>
+        <summary>Chamado quando um <see cref="E:System.Windows.ContentElement.KeyDown" /> é gerado por um objeto dentro de <see cref="T:System.Windows.Controls.ContextMenu" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyUp">
+      <MemberSignature Language="C#" Value="protected override void OnKeyUp (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyUp(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenu.OnKeyUp(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.KeyUp" />.</param>
+        <summary>Responde a <see cref="E:System.Windows.ContentElement.KeyUp" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpened">
+      <MemberSignature Language="C#" Value="protected virtual void OnOpened (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnOpened(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenu.OnOpened(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Controls.ContextMenu.Opened" />.</param>
+        <summary>Chamado quando o evento <see cref="E:System.Windows.Controls.ContextMenu.Opened" /> ocorre.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisualParentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisualParentChanged (System.Windows.DependencyObject oldParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnVisualParentChanged(class System.Windows.DependencyObject oldParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenu.OnVisualParentChanged(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldParent" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="oldParent">O objeto que o menu de contexto foi conectado anteriormente a.</param>
+        <summary>Chamado quando o pai de um menu de contexto visual é alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opened">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Opened;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Opened" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.ContextMenu.Opened" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando determinada instância de um menu de contexto é aberta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_Opened"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContextMenu.OpenedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ContextMenu> eventos: <xref:System.Windows.Controls.ContextMenu.Opened> e <xref:System.Windows.Controls.ContextMenu.Closed>.  
+  
+ [!code-xaml[ContextMenu#ContextMenuEvents](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#contextmenuevents)]  
+  
+ [!code-csharp[ContextMenu#ContextMenuEventHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml.cs#contextmenueventhandlers)]
+ [!code-vb[ContextMenu#ContextMenuEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContextMenu/VisualBasic/Pane1.xaml.vb#contextmenueventhandlers)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent OpenedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent OpenedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenu.OpenedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.ContextMenu.Opened" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Placement">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.PlacementMode Placement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.PlacementMode Placement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContextMenu.Placement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.PlacementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a propriedade <see cref="P:System.Windows.Controls.ContextMenu.Placement" /> de um <see cref="T:System.Windows.Controls.ContextMenu" />.</summary>
+        <value>Uma das enumerações <see cref="T:System.Windows.Controls.Primitives.PlacementMode" />. O padrão é <see cref="F:System.Windows.Controls.Primitives.PlacementMode.MousePoint" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Controls.ContextMenu> é atribuído para o <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType> ou <xref:System.Windows.FrameworkContentElement.ContextMenu%2A?displayProperty=nameWithType> propriedade, o <xref:System.Windows.Controls.ContextMenuService> altera esse valor dessa propriedade quando o <xref:System.Windows.Controls.ContextMenu> abre. Se o usuário abre o <xref:System.Windows.Controls.ContextMenu> usando o mouse, <xref:System.Windows.Controls.ContextMenu.Placement%2A> é definido como <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>.  Se o usuário abre o <xref:System.Windows.Controls.ContextMenu> usando o teclado, <xref:System.Windows.Controls.ContextMenu.Placement%2A> é definido como <xref:System.Windows.Controls.Primitives.PlacementMode.Center>.  Se você quiser alterar a posição do <xref:System.Windows.Controls.ContextMenu>, defina o <xref:System.Windows.Controls.ContextMenuService.Placement%2A?displayProperty=nameWithType> propriedade o <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement>.  
+  
+ Você pode posicionar um <xref:System.Windows.Controls.ContextMenu> definindo o <xref:System.Windows.Controls.ContextMenu.PlacementTarget%2A>, <xref:System.Windows.Controls.ContextMenu.PlacementRectangle%2A>, <xref:System.Windows.Controls.ContextMenu.Placement%2A>, <xref:System.Windows.Controls.ContextMenu.HorizontalOffset%2A>, e <xref:System.Windows.Controls.ContextMenu.VerticalOffsetProperty> propriedades.  Essas propriedades se comportam o mesmo que um <xref:System.Windows.Controls.Primitives.Popup>. Para mais informações, consulte [Comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_Placement"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContextMenu.PlacementProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ContextMenu.Placement%2A> propriedade e um modo de posicionamento para especificar onde o <xref:System.Windows.Controls.ContextMenu> é colocado.  
+  
+ [!code-xaml[ContextMenu#ContextMenuPlacement](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#contextmenuplacement)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenu.PlacementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContextMenu.Placement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementRectangle">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect PlacementRectangle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect PlacementRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContextMenu.PlacementRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a área em relação ao qual o menu de contexto é posicionado quando é aberto.</summary>
+        <value>A área que define o retângulo que é usado para posicionar o menu de contexto. O padrão é <see cref="P:System.Windows.Rect.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode posicionar um <xref:System.Windows.Controls.ContextMenu> definindo o <xref:System.Windows.Controls.ContextMenu.PlacementTarget%2A>, <xref:System.Windows.Controls.ContextMenu.PlacementRectangle%2A>, <xref:System.Windows.Controls.ContextMenu.Placement%2A>, <xref:System.Windows.Controls.ContextMenu.HorizontalOffset%2A>, e <xref:System.Windows.Controls.ContextMenu.VerticalOffsetProperty> propriedades.  Essas propriedades se comportam o mesmo que um <xref:System.Windows.Controls.Primitives.Popup>. Para mais informações, consulte [Comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_PlacementRectangle"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContextMenu.PlacementRectangleProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ContextMenu.PlacementRectangle%2A> propriedade e especificar onde o <xref:System.Windows.Controls.ContextMenu> é colocado.  
+  
+ [!code-xaml[ContextMenu#ContextMenuPlacement](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#contextmenuplacement)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementRectangleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementRectangleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementRectangleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenu.PlacementRectangleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContextMenu.PlacementRectangle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementTarget">
+      <MemberSignature Language="C#" Value="public System.Windows.UIElement PlacementTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.UIElement PlacementTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContextMenu.PlacementTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.UIElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.UIElement" /> relativo ao qual o <see cref="T:System.Windows.Controls.ContextMenu" /> é posicionado quando é aberto.</summary>
+        <value>O elemento relativo ao qual o <see cref="T:System.Windows.Controls.ContextMenu" /> é posicionado quando é aberto. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Controls.ContextMenu> é atribuído para o <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType> ou <xref:System.Windows.FrameworkContentElement.ContextMenu%2A?displayProperty=nameWithType> propriedade, o <xref:System.Windows.Controls.ContextMenuService> altera esse valor dessa propriedade para a propriedade <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement> quando o <xref:System.Windows.Controls.ContextMenu> abre. Para usar outro <xref:System.Windows.UIElement>, defina o <xref:System.Windows.Controls.ContextMenuService.PlacementTarget%2A?displayProperty=nameWithType> propriedade.  
+  
+<a name="dependencyPropertyInfo_PlacementTarget"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContextMenu.PlacementTargetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O destino de um <xref:System.Windows.Controls.ContextMenu> é seu pai. Os exemplos a seguir mostram como usar o <xref:System.Windows.Controls.ContextMenu.PlacementTarget%2A> propriedade para localizar o pai de um <xref:System.Windows.Controls.ContextMenu>.  
+  
+ [!code-csharp[TabControlwithContextMenu#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TabControlwithContextMenu/CSharp/Pane1.xaml.cs#3)]
+ [!code-vb[TabControlwithContextMenu#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TabControlwithContextMenu/visualbasic/pane1.xaml.vb#3)]  
+  
+ [!code-csharp[TabControlContextMenu_snip#FromItemContainer](~/samples/snippets/csharp/VS_Snippets_Wpf/TabControlContextMenu_snip/CSharp/Pane1.xaml.cs#fromitemcontainer)]
+ [!code-vb[TabControlContextMenu_snip#FromItemContainer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TabControlContextMenu_snip/visualbasic/pane1.xaml.vb#fromitemcontainer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlacementTargetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PlacementTargetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PlacementTargetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenu.PlacementTargetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContextMenu.PlacementTarget" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override void PrepareContainerForItemOverride (System.Windows.DependencyObject element, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PrepareContainerForItemOverride(class System.Windows.DependencyObject element, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ContextMenu.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Elemento usado para exibir o item especificado.</param>
+        <param name="item">Item especificado.</param>
+        <summary>Prepara o elemento especificado para exibir o item especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Preparar o elemento pode envolver a aplicação de estilos, associações, de configuração e assim por diante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaysOpen">
+      <MemberSignature Language="C#" Value="public bool StaysOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StaysOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContextMenu.StaysOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Controls.ContextMenu" /> deve fechar automaticamente.</summary>
+        <value>
+          <see langword="true" /> se o menu deve permanecer aberto até que a propriedade <see cref="P:System.Windows.Controls.ContextMenu.IsOpen" /> seja alterada para <see langword="false" />; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_StaysOpen"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContextMenu.StaysOpenProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Windows.Controls.ContextMenu.StaysOpen%2A> propriedade para tornar um menu de contexto que permanecerá aberto até que ocorra um evento que altera o <xref:System.Windows.Controls.ContextMenu.IsOpen%2A> propriedade `false`.  
+  
+ [!code-xaml[ContextMenu#ContextMenuEvents](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#contextmenuevents)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaysOpenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StaysOpenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StaysOpenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenu.StaysOpenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContextMenu.StaysOpen" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffset">
+      <MemberSignature Language="C#" Value="public double VerticalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ContextMenu.VerticalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância vertical entre a origem de destino e o alinhamento de pop-up do ponto.</summary>
+        <value>A distância vertical entre a origem de destino e o ponto de alinhamento do pop-up. Para obter informações sobre o ponto de alinhamento de origem e o pop-up de destino, consulte [comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md). O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode posicionar um <xref:System.Windows.Controls.ContextMenu> definindo o <xref:System.Windows.Controls.ContextMenu.PlacementTarget%2A>, <xref:System.Windows.Controls.ContextMenu.PlacementRectangle%2A>, <xref:System.Windows.Controls.ContextMenu.Placement%2A>, <xref:System.Windows.Controls.ContextMenu.HorizontalOffset%2A>, e <xref:System.Windows.Controls.ContextMenu.VerticalOffsetProperty> propriedades.  Essas propriedades se comportam o mesmo que um <xref:System.Windows.Controls.Primitives.Popup>. Para mais informações, consulte [Comportamento de posicionamento de pop-up](~/docs/framework/wpf/controls/popup-placement-behavior.md).  
+  
+<a name="dependencyPropertyInfo_VerticalOffset"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ContextMenu.VerticalOffsetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+<a name="xamlAttributeUsage_VerticalOffset"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object VerticalOffset="double"/>  
+- or –  
+<object VerticalOffset ="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_VerticalOffset"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *double*  
+ <xref:System.Double>  
+  
+ Representação de cadeia de caracteres um <xref:System.Double> valor. Isso é interpretado como um [!INCLUDE[TLA#tla_dipixel](~/includes/tlasharptla-dipixel-md.md)] medida. Cadeias de caracteres não precisam explicitamente incluir pontos decimais. Por exemplo, um valor de `1` é aceitável. O mesmo <xref:System.Double> aplicam restrições de intervalo conforme mencionado na seção do valor da propriedade.  
+  
+ *qualifiedDouble*  
+ Um *duplo* valor conforme descrito acima, seguido por um dos seguintes unidade declaração cadeias de caracteres: `px`, `in`, `cm`, `pt`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ `cm`centímetros; 1cm==(96/2.54) px  
+  
+ `pt`pontos; 1pt==(96/72) px  
+  
+> [!NOTE]
+>  Em muitos casos, um duplo pode ser definido como automático, mas um <xref:System.Windows.Controls.ContextMenu> não será exibida se os deslocamentos são definidos como automático.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.ContextMenu.VerticalOffset%2A> propriedade para fazer com que um <xref:System.Windows.Controls.ContextMenu> para abrir em um local especificado em relação ao seu pai do botão.  
+  
+ [!code-xaml[ContextMenu#ContextMenuProps](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#contextmenuprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VerticalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VerticalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ContextMenu.VerticalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ContextMenu.VerticalOffset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,125 @@
+<Type Name="HashAlgorithm" FullName="System.Messaging.HashAlgorithm">
+  <TypeSignature Language="C#" Value="public enum HashAlgorithm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed HashAlgorithm extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.HashAlgorithm" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o algoritmo de hash usado pelo Serviço de Enfileiramento de Mensagens na autenticação de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autenticação de mensagens fornece dois serviços. Ele fornece uma maneira de garantir a integridade da mensagem e uma maneira de verificar que enviou a mensagem. Para solicitar a autenticação, o aplicativo de envio deve definir o nível de autenticação da mensagem a ser autenticado e anexar um certificado de segurança para a mensagem.  
+  
+ Para autenticar mensagens, a DLL de tempo de execução do enfileiramento de mensagens no computador de origem usa um algoritmo de hash durante a criação de uma assinatura digital de uma mensagem. O Gerenciador de filas de destino, em seguida, usa o mesmo algoritmo de hash para autenticar a mensagem quando ela é recebida.  
+  
+ Para obter mais informações sobre o processo de autenticação, consulte os tópicos de autenticação de enfileiramento de mensagens na biblioteca MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Mac">
+      <MemberSignature Language="C#" Value="Mac" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.HashAlgorithm Mac = int32(32773)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.HashAlgorithm.Mac" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Algoritmo de hash com chave MAC.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Md2">
+      <MemberSignature Language="C#" Value="Md2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.HashAlgorithm Md2 = int32(32769)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.HashAlgorithm.Md2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Algoritmo de hash MD2.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Md4">
+      <MemberSignature Language="C#" Value="Md4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.HashAlgorithm Md4 = int32(32770)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.HashAlgorithm.Md4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Algoritmo de hash MD4.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Md5">
+      <MemberSignature Language="C#" Value="Md5" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.HashAlgorithm Md5 = int32(32771)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.HashAlgorithm.Md5" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Algoritmo de hash MD5.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.HashAlgorithm None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.HashAlgorithm.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum algoritmo de hash.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sha">
+      <MemberSignature Language="C#" Value="Sha" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.HashAlgorithm Sha = int32(32772)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.HashAlgorithm.Sha" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Algoritmo de hash SHA.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

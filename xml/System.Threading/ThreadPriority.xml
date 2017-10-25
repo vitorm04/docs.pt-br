@@ -1,0 +1,178 @@
+<Type Name="ThreadPriority" FullName="System.Threading.ThreadPriority">
+  <TypeSignature Language="C#" Value="public enum ThreadPriority" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ThreadPriority extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ThreadPriority" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Thread</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a prioridade de agendamento de um <see cref="T:System.Threading.Thread" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.ThreadPriority>Define o conjunto de todos os valores possíveis para uma prioridade de thread. Prioridades de thread especifique a prioridade relativa de um thread em vez de outro.  
+  
+ Cada thread tem uma prioridade atribuída. Threads criados no tempo de execução são atribuídas inicialmente o `Normal` prioridade, enquanto os threads criados fora do tempo de execução retêm sua prioridade anterior quando eles entram o tempo de execução. Você pode obter e definir a prioridade de thread, acessando seu <xref:System.Threading.Thread.Priority%2A> propriedade.  
+  
+ Threads são agendados para execução com base em sua prioridade. O algoritmo de programação usado para determinar a ordem de execução de thread varia de acordo com cada sistema operacional. O sistema operacional também pode ajustar a prioridade de thread dinamicamente conforme o foco da interface do usuário é movido entre o primeiro plano e o plano de fundo.  
+  
+ A prioridade de thread não afeta o estado do segmento; o estado do segmento deve ser <xref:System.Threading.ThreadState.Running> antes do sistema operacional pode agendá-la.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o resultado da alteração da prioridade de thread. Três threads são criados, a prioridade de um thread é definida como normal e a prioridade de segundo é definida como normal. Cada thread incrementa uma variável em um `while` loop e é executado por um período definido.  
+  
+ [!code-csharp[System.Threading.ThreadPriority#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Threading.ThreadPriority/cs/Example1.cs#1)]
+ [!code-vb[System.Threading.ThreadPriority#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Threading.ThreadPriority/vb/Example1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AboveNormal">
+      <MemberSignature Language="C#" Value="AboveNormal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadPriority AboveNormal = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadPriority.AboveNormal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Threading.Thread" /> pode ser agendado depois dos threads com a prioridade <see langword="Highest" /> e antes deles com a <see langword="Normal" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BelowNormal">
+      <MemberSignature Language="C#" Value="BelowNormal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadPriority BelowNormal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadPriority.BelowNormal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Threading.Thread" /> pode ser agendado depois dos threads com a prioridade <see langword="Normal" /> e antes deles com a <see langword="Lowest" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Highest">
+      <MemberSignature Language="C#" Value="Highest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadPriority Highest = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadPriority.Highest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Threading.Thread" /> pode ser agendado antes dos threads com qualquer outra prioridade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Lowest">
+      <MemberSignature Language="C#" Value="Lowest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadPriority Lowest = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadPriority.Lowest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Threading.Thread" /> pode ser agendado depois dos threads com qualquer outra prioridade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ThreadPriority Normal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ThreadPriority.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Threading.Thread" /> pode ser agendado depois dos threads com a prioridade <see langword="AboveNormal" /> e antes deles com a <see langword="BelowNormal" />. Os threads têm a prioridade <see langword="Normal" /> por padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

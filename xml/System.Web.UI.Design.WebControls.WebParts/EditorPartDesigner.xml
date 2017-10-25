@@ -1,0 +1,127 @@
+<Type Name="EditorPartDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner">
+  <TypeSignature Language="C#" Value="public class EditorPartDesigner : System.Web.UI.Design.WebControls.WebParts.PartDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EditorPartDesigner extends System.Web.UI.Design.WebControls.WebParts.PartDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.WebParts.PartDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de tempo de design para <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controles.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner>é uma implementação pública do <xref:System.Web.UI.Design.WebControls.WebParts.PartDesigner> classe para fins de renderização base <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles em tempo de design. Ele adiciona a capacidade de carregar informações de zona do controle associado ao modo de design, mas tem alterações não precisam ter a funcionalidade do controle pai.  
+  
+ Como com outros designers de controle, você pode alterar o processamento de tempo de design de personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles herdando de <xref:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner> e substituindo o <xref:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner.GetDesignTimeHtml%2A> método. Se você deseja substituir o <xref:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner.CreateViewControl%2A> método, certifique-se de incluir a implementação base para reter informações de zona.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um simple personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle que permite que o usuário altere a <xref:System.Web.UI.WebControls.WebControl.ToolTip%2A> propriedade do controle de destino. O associado <xref:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner> valida o controle e substitui a caixa de texto de entrada do usuário em tempo de design com um rótulo explicando que ele está oculto.  
+  
+ [!code-csharp[WebPartsDesigners_EditorPartDesigner_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebPartsDesigners_EditorPartDesigner_Overview/CS/SecretEditorPart.cs#1)]
+ [!code-vb[WebPartsDesigners_EditorPartDesigner_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebPartsDesigners_EditorPartDesigner_Overview/vb/secreteditorpart.vb#1)]  
+  
+ Para o controle personalizado processar, a página deve ter uma <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle, um <xref:System.Web.UI.WebControls.WebParts.EditorZone> com um <xref:System.Web.UI.WebControls.WebParts.EditorZone.ZoneTemplate%2A> para o controle deve residir no e um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> que contém um controle para personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> para agir em, conforme mostrado a seguir exemplo de código.  
+  
+ [!code-aspx-csharp[WebPartsDesigners_EditorPartDesigner_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebPartsDesigners_EditorPartDesigner_Overview/CS/Default.aspx#2)]
+ [!code-aspx-vb[WebPartsDesigners_EditorPartDesigner_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebPartsDesigners_EditorPartDesigner_Overview/vb/default.aspx#2)]  
+  
+ Para o <xref:System.Web.UI.WebControls.WebParts.EditorPart> ser usado em tempo de execução, o modo de edição deve ser habilitado na página. O exemplo de código a seguir demonstra como fazer isso com um arquivo code-behind.  
+  
+ [!code-csharp[WebPartsDesigners_EditorPartDesigner_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebPartsDesigners_EditorPartDesigner_Overview/CS/Default.aspx.cs#3)]
+ [!code-vb[WebPartsDesigners_EditorPartDesigner_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebPartsDesigners_EditorPartDesigner_Overview/vb/default.aspx.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EditorPartDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewControl">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.Control CreateViewControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.Control CreateViewControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner.CreateViewControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do associado <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle processar em tempo de design.</summary>
+        <returns>Uma cópia do associado <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é substituído para copiar informações de zona para o controle de exibição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica se o controle reside em uma zona do tipo <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" />e, em seguida, obtém a marcação que é usada para representar o controle em tempo de design.</summary>
+        <returns>A marcação que é usada para representar o controle em tempo de design, ou marcação de erro se o controle não reside em um <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle associado com o designer.</param>
+        <summary>Associa o designer associados <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,184 @@
+<Type Name="InstanceKey" FullName="System.Runtime.DurableInstancing.InstanceKey">
+  <TypeSignature Language="C#" Value="public class InstanceKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstanceKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DurableInstancing.InstanceKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma chave de instância e contém um identificador e metadados associados com a chave de instância. Uma chave de instância atua como um alias não é exclusivo para uma instância.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceKey (Guid value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKey.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="value">O GUID associado à chave de instância. Não deve ser GUID. Empty.</param>
+        <summary>Inicializa uma instância do <see cref="T:System.Runtime.DurableInstancing.InstanceKey" /> classe usando o GUID associado à chave de instância passada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceKey (Guid value, System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid value, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKey.#ctor(System.Guid,System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Guid" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">O GUID associado à chave de instância. Não deve ser GUID. Empty.</param>
+        <param name="metadata">O dicionário que contém metadados associados com a instância de chave ou nulo.</param>
+        <summary>Inicializa uma instância do <see cref="T:System.Runtime.DurableInstancing.InstanceKey" /> usando o GUID e metadados associados com a chave de instância de classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKey.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Runtime.DurableInstancing.InstanceKey" /> objeto que precisa ser comparado com o objeto atual.  Não deve ser nulo.</param>
+        <summary>Compara o GUID associado ao objeto atual (armazenados no <see cref="P:System.Runtime.DurableInstancing.InstanceKey.Value" /> propriedade) com o GUID associado a <see cref="T:System.Runtime.DurableInstancing.InstanceKey" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se os objetos são os mesmos; Caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DurableInstancing.InstanceKey.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um código hash exclusivo para a atual <see cref="T:System.Runtime.DurableInstancing.InstanceKey" /> GUID do objeto (armazenado na propriedade de valor).</summary>
+        <returns>O código hash exclusivo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidKey">
+      <MemberSignature Language="C#" Value="public static System.Runtime.DurableInstancing.InstanceKey InvalidKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Runtime.DurableInstancing.InstanceKey InvalidKey" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceKey.InvalidKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.DurableInstancing.InstanceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um inválido <see cref="T:System.Runtime.DurableInstancing.InstanceKey" /> objeto. Inválido <see cref="T:System.Runtime.DurableInstancing.InstanceKey" /> objeto tem valor Empty para o <see cref="P:System.Runtime.DurableInstancing.InstanceKey.Value" /> propriedade e uma <see langword="false" /> valor para o <see cref="P:System.Runtime.DurableInstancing.InstanceKey.IsValid" /> propriedade.</summary>
+        <value>Uma chave de instância inválida.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceKey.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a chave de instância é válida.</summary>
+        <value>
+          <see langword="true" />Se a chave de instância é válida. Caso contrário, <see langword="false" />.  Uma chave de instância é válida somente se o GUID (armazenado na propriedade Value) não é GUID. Empty.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt; Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceKey.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o dicionário que contém metadados associados com a chave de instância.</summary>
+        <value>O dicionário que contém metadados associados com a chave de instância. Esse dicionário é um dicionário somente leitura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public Guid Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DurableInstancing.InstanceKey.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor GUID associado com a chave de instância atual.</summary>
+        <value>O valor GUID associado com a chave de instância atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chave de instância é válida somente se o GUID (armazenado na propriedade Value) não é GUID. Empty.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

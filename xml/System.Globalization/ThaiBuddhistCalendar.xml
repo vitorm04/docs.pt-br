@@ -1,0 +1,1418 @@
+<Type Name="ThaiBuddhistCalendar" FullName="System.Globalization.ThaiBuddhistCalendar">
+  <TypeSignature Language="C#" Value="public class ThaiBuddhistCalendar : System.Globalization.Calendar" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ThaiBuddhistCalendar extends System.Globalization.Calendar" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.ThaiBuddhistCalendar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Calendars</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Globalization.Calendar</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o calendário tailandês budista.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Calendário tailandês budista funciona exatamente como o calendário gregoriano, exceto que o ano e era são diferentes.  
+  
+> [!NOTE]
+>  Para obter informações sobre como usar o <xref:System.Globalization.ThaiBuddhistCalendar> classe e outras classes do Framework .NET de calendário, consulte [trabalhando com calendários](~/docs/standard/datetime/working-with-calendars.md).  
+  
+ O <xref:System.Globalization.ThaiBuddhistCalendar> classe reconhece somente o era atual.  
+  
+ Anos bissextos no Calendário tailandês budista correspondem do mesmo anos bissextos no calendário gregoriano. Um ano bissexto no calendário gregoriano é definido como um ano gregoriano divisível por quatro, exceto se ela for divisível por 100. No entanto, os anos de calendário gregoriano que são divisíveis por 400 são bissextos. Um ano comum tem 365 dias e um ano bissexto tem 366 dias.  
+  
+ O Calendário tailandês budista tem 12 meses com 28 a 31 dias a cada:  
+  
+|Valor GetMonth|Mês|Dias em anos comuns|Dias em anos leap|  
+|--------------------|-----------|--------------------------|------------------------|  
+|1|มกราคม (janeiro)|31|31|  
+|2|กุมภาพันธ์ (fevereiro)|28|29|  
+|3|มีนาคม (março)|31|31|  
+|4|เมษายน (abril)|30|30|  
+|5|พฤษภาคม (maio)|31|31|  
+|6|มิถุนายน (junho)|30|30|  
+|7|กรกฎาคม (julho)|31|31|  
+|8|สิงหาคม (agosto)|31|31|  
+|9|กันยายน (setembro)|30|30|  
+|10|ตุลาคม (outubro)|31|31|  
+|11|พฤศจิกายน (novembro)|30|30|  
+|12|ธันวาคม (dezembro)|31|31|  
+  
+ Fevereiro tem 29 dias durante os anos bissextos e 28 durante anos comuns.  
+  
+ A data de 1º de janeiro de 2001. no calendário gregoriano é equivalente a 1º de janeiro do ano 2544 da era atual no Calendário tailandês budista.  
+  
+ Cada <xref:System.Globalization.CultureInfo> suporta um conjunto de calendários. O <xref:System.Globalization.CultureInfo.Calendar%2A> propriedade retorna o calendário padrão para a cultura e o <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> propriedade retorna uma matriz que contém todos os calendários suportados pela cultura. Para alterar o calendário usado por um <xref:System.Globalization.CultureInfo>, o aplicativo deve definir o <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> para um novo <xref:System.Globalization.Calendar>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThaiBuddhistCalendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Globalization.ThaiBuddhistCalendar" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMonths">
+      <MemberSignature Language="C#" Value="public override DateTime AddMonths (DateTime time, int months);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime AddMonths(valuetype System.DateTime time, int32 months) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.AddMonths(System.DateTime,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="months" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> ao qual os meses serão adicionados.</param>
+        <param name="months">O número de meses a serem adicionados.</param>
+        <summary>Retorna um <see cref="T:System.DateTime" /> que é o número especificado de meses longe especificado <see cref="T:System.DateTime" />.</summary>
+        <returns>O <see cref="T:System.DateTime" /> resultante da adição do número especificado de meses ao <see cref="T:System.DateTime" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A parte do dia de resultante <xref:System.DateTime> é afetado se o dia resultante não é um dia válido no mês do ano resultante resultante. Ele é alterado para o último dia válido no mês do ano resultante resultante. A parte do ano de resultante <xref:System.DateTime> é afetado se o mês resultante está fora do ano especificado <xref:System.DateTime>. Essa implementação oferece suporte somente a era atual. Portanto, <xref:System.ArgumentException> é gerada se o ano resultante é fora era especificada <xref:System.DateTime>. A parte de hora do dia de resultante <xref:System.DateTime> permanece o mesmo que o especificado <xref:System.DateTime>.  
+  
+ Por exemplo, se o mês especificado for outubro, que tem 31 dias, o dia especificado é o dia 31 do mês e o valor da `months` parâmetro for 6, o ano resultante é um mais do que o ano especificado, o mês resultante é abril e o dia resultante é de 30 dias, o que é o último dia em abril.  
+  
+ Se o valor da `months` parâmetro for negativo, o resultante <xref:System.DateTime> é anterior ao especificado <xref:System.DateTime>.  
+  
+ O <xref:System.DateTime.Kind%2A> propriedade retornado <xref:System.DateTime> sempre valor for igual a <xref:System.DateTimeKind?displayProperty=nameWithType>. Você pode preservar o <xref:System.DateTime.Kind%2A> propriedade do `time` parâmetro ao chamar o <xref:System.DateTime.SpecifyKind%2A?displayProperty=nameWithType> método, como mostra o exemplo a seguir.  
+  
+ [!code-csharp[System.Globalization.Calendar.AddMethods#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/cs/add1.cs#5)]
+ [!code-vb[System.Globalization.Calendar.AddMethods#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/vb/add1.vb#5)]  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método <xref:System.Globalization.ThaiBuddhistCalendar.AddMonths%2A>.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CPP/thaibuddhistcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CS/thaibuddhistcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/VB/thaibuddhistcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O resultante <see cref="T:System.DateTime" /> está fora do intervalo com suporte.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="months" />é menor que-120000.  
+  
+ -ou-  
+  
+ <paramref name="months" />é maior que 120000.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddYears">
+      <MemberSignature Language="C#" Value="public override DateTime AddYears (DateTime time, int years);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime AddYears(valuetype System.DateTime time, int32 years) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.AddYears(System.DateTime,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="years" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> ao qual adicionar anos.</param>
+        <param name="years">O número de anos a ser adicionado.</param>
+        <summary>Retorna um <see cref="T:System.DateTime" /> que é o número especificado de anos longe especificado <see cref="T:System.DateTime" />.</summary>
+        <returns>O <see cref="T:System.DateTime" /> resultante da adição do número especificado de anos indicado ao <see cref="T:System.DateTime" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A parte do dia de resultante <xref:System.DateTime> é afetado se o dia resultante não é um dia válido no mês do ano resultante resultante. Ele é alterado para o último dia válido no mês do ano resultante resultante. A parte do mês de resultante <xref:System.DateTime> permanece o mesmo que o especificado <xref:System.DateTime>. Essa implementação oferece suporte somente a era atual. Portanto, <xref:System.ArgumentException> é gerada se o ano resultante é fora era especificada <xref:System.DateTime>. A parte de hora do dia de resultante <xref:System.DateTime> permanece o mesmo que o especificado <xref:System.DateTime>.  
+  
+ Por exemplo, fevereiro tem 28 dias, exceto durante os anos bissextos, quando ele tem 29 dias. Se a data especificada é o dia 29 de fevereiro em um ano bissexto e o valor de `years` é 1, a data resultante é o dia em 28 de fevereiro do ano seguinte.  
+  
+ Se `years` for negativo, o resultante <xref:System.DateTime> é anterior ao especificado <xref:System.DateTime>.  
+  
+ O <xref:System.DateTime.Kind%2A> propriedade retornado <xref:System.DateTime> sempre valor for igual a <xref:System.DateTimeKind?displayProperty=nameWithType>. Você pode preservar o <xref:System.DateTime.Kind%2A> propriedade do `time` parâmetro ao chamar o <xref:System.DateTime.SpecifyKind%2A?displayProperty=nameWithType> método, como mostra o exemplo a seguir.  
+  
+ [!code-csharp[System.Globalization.Calendar.AddMethods#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/cs/add1.cs#8)]
+ [!code-vb[System.Globalization.Calendar.AddMethods#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/vb/add1.vb#8)]  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método <xref:System.Globalization.ThaiBuddhistCalendar.AddYears%2A>.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CPP/thaibuddhistcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CS/thaibuddhistcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/VB/thaibuddhistcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O resultante <see cref="T:System.DateTime" /> está fora do intervalo com suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmType">
+      <MemberSignature Language="C#" Value="public override System.Globalization.CalendarAlgorithmType AlgorithmType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Globalization.CalendarAlgorithmType AlgorithmType" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.ThaiBuddhistCalendar.AlgorithmType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarAlgorithmType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o calendário atual é solar baseado, lunar ou uma combinação de ambos.</summary>
+        <value>Sempre retorna <see cref="F:System.Globalization.CalendarAlgorithmType.SolarCalendar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa reflexão para criar uma instância de cada <xref:System.Globalization.Calendar> tipo encontrado no .NET Framework e exibe o valor da sua <xref:System.Globalization.Calendar.AlgorithmType%2A> propriedade.  
+  
+ [!code-csharp[System.Globalization.Calendar.AlgorithmType#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.algorithmtype/cs/algorithmtype1.cs#1)]
+ [!code-vb[System.Globalization.Calendar.AlgorithmType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.algorithmtype/vb/algorithmtype1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eras">
+      <MemberSignature Language="C#" Value="public override int[] Eras { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] Eras" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.ThaiBuddhistCalendar.Eras" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de eras no <see cref="T:System.Globalization.ThaiBuddhistCalendar" /> classe.</summary>
+        <value>Uma matriz que consiste em um único elemento com um valor que é sempre a era atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores na matriz retornada por essa propriedade são números que variam de 1 para o maior número de era. O maior número era é retornado no primeiro elemento da matriz e o número era menor é retornado no último elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfMonth">
+      <MemberSignature Language="C#" Value="public override int GetDayOfMonth (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDayOfMonth(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.GetDayOfMonth(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o dia do mês especificado na <see cref="T:System.DateTime" />.</summary>
+        <returns>Um inteiro de 1 a 31 que representa o dia do mês especificado na <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método <xref:System.Globalization.ThaiBuddhistCalendar.GetDayOfMonth%2A>.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CPP/thaibuddhistcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CS/thaibuddhistcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/VB/thaibuddhistcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfWeek">
+      <MemberSignature Language="C#" Value="public override DayOfWeek GetDayOfWeek (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DayOfWeek GetDayOfWeek(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.GetDayOfWeek(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DayOfWeek</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o dia da semana especificado na <see cref="T:System.DateTime" />.</summary>
+        <returns>Um <see cref="T:System.DayOfWeek" /> valor que representa o dia da semana especificado na <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DayOfWeek> valores são os seguintes:  
+  
+|Valor de DayOfWeek|Que indica|  
+|---------------------|---------------------|  
+|Domingo|อาทิตย์|  
+|Segunda-feira|จันทร์|  
+|Terça-feira|อังคาร|  
+|Quarta-feira|พุธ|  
+|Quinta-feira|พฤหัสบดี|  
+|Sexta-feira|ศุกร์|  
+|Sábado|เสาร์|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método <xref:System.Globalization.ThaiBuddhistCalendar.GetDayOfWeek%2A>.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CPP/thaibuddhistcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CS/thaibuddhistcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/VB/thaibuddhistcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfYear">
+      <MemberSignature Language="C#" Value="public override int GetDayOfYear (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDayOfYear(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.GetDayOfYear(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o dia do ano especificado na <see cref="T:System.DateTime" />.</summary>
+        <returns>Um inteiro de 1 a 366 que representa o dia do ano especificado na <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O dia do ano é definido como o número de dias desde o primeiro dia do ano. Por exemplo, <xref:System.Globalization.ThaiBuddhistCalendar.GetDayOfYear%2A> para o primeiro dia do primeiro mês retorna 1, e <xref:System.Globalization.ThaiBuddhistCalendar.GetDayOfYear%2A> para o último dia do mês anterior retorna o número total de dias no ano. O total é o mesmo que o valor retornado por <xref:System.Globalization.ThaiBuddhistCalendar.GetDaysInYear%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método <xref:System.Globalization.ThaiBuddhistCalendar.GetDayOfYear%2A>.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CPP/thaibuddhistcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CS/thaibuddhistcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/VB/thaibuddhistcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDaysInMonth">
+      <MemberSignature Language="C#" Value="public override int GetDaysInMonth (int year, int month, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDaysInMonth(int32 year, int32 month, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.GetDaysInMonth(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 12 que representa o mês.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Retorna o número de dias no mês do ano especificado na especificado era especificado.</summary>
+        <returns>O número de dias do mês especificado no ano especificado na era especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, este método retorna 28 ou 29 de fevereiro (`month` = 2), dependendo se `year` é um ano bissexto.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Globalization.ThaiBuddhistCalendar.GetDaysInMonth%2A> para o segundo mês em cada um dos cinco anos em cada era.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar.GetDaysInMonth#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.GetDaysInMonth/CPP/thaibuddhistcalendar_getdaysinmonth.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar.GetDaysInMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.GetDaysInMonth/CS/thaibuddhistcalendar_getdaysinmonth.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar.GetDaysInMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.GetDaysInMonth/VB/thaibuddhistcalendar_getdaysinmonth.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="month" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="era" /> está fora do intervalo com suporte do calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDaysInYear">
+      <MemberSignature Language="C#" Value="public override int GetDaysInYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDaysInYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.GetDaysInYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Retorna o número de dias do ano especificado na era especificado.</summary>
+        <returns>O número de dias do ano especificado na era especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, este método retorna 365 ou 366, dependendo se `year` é um ano bissexto.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Globalization.ThaiBuddhistCalendar.GetDaysInYear%2A> por cinco anos em cada era.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar.GetDaysInYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.GetDaysInYear/CPP/thaibuddhistcalendar_getdaysinyear.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar.GetDaysInYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.GetDaysInYear/CS/thaibuddhistcalendar_getdaysinyear.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar.GetDaysInYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.GetDaysInYear/VB/thaibuddhistcalendar_getdaysinyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="era" /> está fora do intervalo com suporte do calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEra">
+      <MemberSignature Language="C#" Value="public override int GetEra (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetEra(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.GetEra(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna a era no <see cref="T:System.DateTime" /> especificado.</summary>
+        <returns>Um inteiro que representa a era no <see cref="T:System.DateTime" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Globalization.ThaiBuddhistCalendar> classe reconhece somente o era atual.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método <xref:System.Globalization.ThaiBuddhistCalendar.GetEra%2A>.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CPP/thaibuddhistcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CS/thaibuddhistcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/VB/thaibuddhistcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLeapMonth">
+      <MemberSignature Language="C#" Value="public override int GetLeapMonth (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetLeapMonth(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.GetLeapMonth(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um ano.</param>
+        <param name="era">Uma época.</param>
+        <summary>Calcula o mês de salto para um ano especificado e era.</summary>
+        <returns>O valor de retorno é sempre 0 porque a <see cref="T:System.Globalization.ThaiBuddhistCalendar" /> classe não oferece suporte a noção de um mês de salto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um calendário que oferece suporte a noção de um mês de salto, o mês de salto pode ocorrer depois de um determinado mês ou depois de qualquer mês em um ano. Por exemplo, o <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%28System.DateTime%29?displayProperty=nameWithType> método retorna um número entre 1 e 13 que indica o mês associado a uma data especificada. Se houver um mês bissexto entre os oitavo e o nono meses do ano, o <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%28System.DateTime%29?displayProperty=nameWithType> método retorna 8 oitavo mês, 9 para o passo oitavo mês e 10 para o nono mês.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMonth">
+      <MemberSignature Language="C#" Value="public override int GetMonth (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMonth(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.GetMonth(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o mês na <see cref="T:System.DateTime" /> especificada.</summary>
+        <returns>Um inteiro de 1 a 12 que representa o mês na <see cref="T:System.DateTime" /> especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método <xref:System.Globalization.ThaiBuddhistCalendar.GetMonth%2A>.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CPP/thaibuddhistcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CS/thaibuddhistcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/VB/thaibuddhistcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMonthsInYear">
+      <MemberSignature Language="C#" Value="public override int GetMonthsInYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMonthsInYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.GetMonthsInYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Retorna o número de meses do ano especificado na era especificado.</summary>
+        <returns>O número de meses do ano especificado na era especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Globalization.ThaiBuddhistCalendar.GetMonthsInYear%2A> por cinco anos em cada era.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar.GetMonthsInYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.GetMonthsInYear/CPP/thaibuddhistcalendar_getmonthsinyear.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar.GetMonthsInYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.GetMonthsInYear/CS/thaibuddhistcalendar_getmonthsinyear.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar.GetMonthsInYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.GetMonthsInYear/VB/thaibuddhistcalendar_getmonthsinyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="era" /> está fora do intervalo com suporte do calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWeekOfYear">
+      <MemberSignature Language="C#" Value="public override int GetWeekOfYear (DateTime time, System.Globalization.CalendarWeekRule rule, DayOfWeek firstDayOfWeek);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetWeekOfYear(valuetype System.DateTime time, valuetype System.Globalization.CalendarWeekRule rule, valuetype System.DayOfWeek firstDayOfWeek) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.GetWeekOfYear(System.DateTime,System.Globalization.CalendarWeekRule,System.DayOfWeek)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="rule" Type="System.Globalization.CalendarWeekRule" />
+        <Parameter Name="firstDayOfWeek" Type="System.DayOfWeek" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <param name="rule">Uma da <see cref="T:System.Globalization.CalendarWeekRule" /> valores que define uma semana de calendário.</param>
+        <param name="firstDayOfWeek">Uma da <see cref="T:System.DayOfWeek" /> valores que representa o primeiro dia da semana.</param>
+        <summary>Retorna a semana do ano que inclui a data do <see cref="T:System.DateTime" />.</summary>
+        <returns>Um inteiro positivo com base 1 que representa a semana do ano que inclui a data no <paramref name="time" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para determinar o número de semanas do ano, definindo o `time` parâmetro para o último dia do ano.  
+  
+ <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>contém valores específicos de cultura que podem ser usados para o `rule` e `firstDayOfWeek` parâmetros.  
+  
+ O <xref:System.Globalization.DateTimeFormatInfo.FirstDayOfWeek%2A> propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> contém o padrão <xref:System.DayOfWeek> valor que representa o primeiro dia da semana para uma cultura específica, usando o calendário especificado no <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> propriedade de <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
+  
+ O <xref:System.Globalization.DateTimeFormatInfo.CalendarWeekRule%2A> propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> contém o padrão <xref:System.Globalization.CalendarWeekRule> valor que define uma semana para uma cultura específica, usando o calendário especificado no <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> propriedade de <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
+  
+ Por exemplo, em <xref:System.Globalization.GregorianCalendar>, <xref:System.Globalization.Calendar.GetWeekOfYear%2A> para 1 de janeiro retorna 1.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra como o resultado da <xref:System.Globalization.ThaiBuddhistCalendar.GetWeekOfYear%2A> método varia dependendo do <xref:System.Globalization.DateTimeFormatInfo.FirstDayOfWeek%2A> e <xref:System.Globalization.CalendarWeekRule> valores usados. Se a data especificada é o último dia do ano, <xref:System.Globalization.ThaiBuddhistCalendar.GetWeekOfYear%2A> retorna o número total de semanas nesse ano.  
+  
+ [!code-cpp[System.Globalization.Calendar.GetWeekOfYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.Calendar.GetWeekOfYear/CPP/yslin_calendar_getweekofyear.cpp#1)]
+ [!code-csharp[System.Globalization.Calendar.GetWeekOfYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.Calendar.GetWeekOfYear/CS/yslin_calendar_getweekofyear.cs#1)]
+ [!code-vb[System.Globalization.Calendar.GetWeekOfYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.Calendar.GetWeekOfYear/VB/yslin_calendar_getweekofyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" />ou <paramref name="firstDayOfWeek" /> está fora do intervalo com suporte pelo calendário.  
+  
+ -ou-  
+  
+ <paramref name="rule" /> não é um valor <see cref="T:System.Globalization.CalendarWeekRule" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetYear">
+      <MemberSignature Language="C#" Value="public override int GetYear (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetYear(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.GetYear(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o ano especificado na <see cref="T:System.DateTime" />.</summary>
+        <returns>Um inteiro que representa o ano especificado na <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do <xref:System.Globalization.ThaiBuddhistCalendar.GetYear%2A> método.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CPP/thaibuddhistcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/CS/thaibuddhistcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_AddGet/VB/thaibuddhistcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapDay">
+      <MemberSignature Language="C#" Value="public override bool IsLeapDay (int year, int month, int day, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapDay(int32 year, int32 month, int32 day, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.IsLeapDay(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 12 que representa o mês.</param>
+        <param name="day">Um inteiro de 1 a 31 que representa o dia.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Determina se a data especificada na era especificado é um dia bissexto.</summary>
+        <returns>
+          <see langword="true" />Se o dia especificado é um dia bissexto; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anos bissextos no Calendário tailandês budista correspondem do mesmo anos bissextos no calendário gregoriano. Um ano bissexto no calendário gregoriano é definido como um ano gregoriano divisível por quatro, exceto se ela for divisível por 100. No entanto, os anos de calendário gregoriano que são divisíveis por 400 são bissextos. Um ano comum tem 365 dias e um ano bissexto tem 366 dias.  
+  
+ Um dia de salto é um dia em que ocorre apenas em um ano bissexto. Por exemplo, o dia 29 de fevereiro será a única bissexto.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Globalization.ThaiBuddhistCalendar.IsLeapDay%2A> para o último dia do mês segundo (fevereiro) por cinco anos em cada uma das eras.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar.IsLeapDay#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.IsLeapDay/CPP/thaibuddhistcalendar_isleapday.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar.IsLeapDay#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.IsLeapDay/CS/thaibuddhistcalendar_isleapday.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar.IsLeapDay#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.IsLeapDay/VB/thaibuddhistcalendar_isleapday.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="month" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="day" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="era" /> está fora do intervalo com suporte do calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapMonth">
+      <MemberSignature Language="C#" Value="public override bool IsLeapMonth (int year, int month, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapMonth(int32 year, int32 month, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.IsLeapMonth(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 12 que representa o mês.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Determina se o mês do ano especificado na especificado era especificado é um mês de salto.</summary>
+        <returns>Esse método sempre retornará <see langword="false" />, a menos que substituído por uma classe derivada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anos bissextos no Calendário tailandês budista correspondem do mesmo anos bissextos no calendário gregoriano. Um ano bissexto no calendário gregoriano é definido como um ano gregoriano divisível por quatro, exceto se ela for divisível por 100. No entanto, os anos de calendário gregoriano que são divisíveis por 400 são bissextos. Um ano comum tem 365 dias e um ano bissexto tem 366 dias.  
+  
+ Um mês de salto é um mês inteiro ocorre apenas em um ano bissexto. O Calendário tailandês budista não tem qualquer meses bissexto.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Globalization.ThaiBuddhistCalendar.IsLeapMonth%2A> para todos os meses em cinco anos na era atual.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar.IsLeapMonth#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.IsLeapMonth/CPP/thaibuddhistcalendar_isleapmonth.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar.IsLeapMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.IsLeapMonth/CS/thaibuddhistcalendar_isleapmonth.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar.IsLeapMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.IsLeapMonth/VB/thaibuddhistcalendar_isleapmonth.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="month" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="era" /> está fora do intervalo com suporte do calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapYear">
+      <MemberSignature Language="C#" Value="public override bool IsLeapYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.IsLeapYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Determina se o ano especificado na era especificado é um ano bissexto.</summary>
+        <returns>
+          <see langword="true" />Se o ano especificado é um ano bissexto; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Anos bissextos no Calendário tailandês budista correspondem do mesmo anos bissextos no calendário gregoriano. Um ano bissexto no calendário gregoriano é definido como um ano gregoriano divisível por quatro, exceto se ela for divisível por 100. No entanto, os anos de calendário gregoriano que são divisíveis por 400 são bissextos. Um ano comum tem 365 dias e um ano bissexto tem 366 dias.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Globalization.ThaiBuddhistCalendar.IsLeapYear%2A> por cinco anos em cada uma das eras.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar.IsLeapYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.IsLeapYear/CPP/thaibuddhistcalendar_isleapyear.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar.IsLeapYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.IsLeapYear/CS/thaibuddhistcalendar_isleapyear.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar.IsLeapYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar.IsLeapYear/VB/thaibuddhistcalendar_isleapyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="era" /> está fora do intervalo com suporte do calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MaxSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MaxSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.ThaiBuddhistCalendar.MaxSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e hora com suporte a mais recente do <see cref="T:System.Globalization.ThaiBuddhistCalendar" /> classe.</summary>
+        <value>Na última data e hora com suporte a <see cref="T:System.Globalization.ThaiBuddhistCalendar" /> classe, que é equivalente ao último momento de 31 de dezembro de 9999 C.E. no calendário gregoriano.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir obtém o valor mínimo e o valor máximo do calendário.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar_MinMax#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_MinMax/CPP/thaibuddhistcalendar_minmax.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar_MinMax#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_MinMax/CS/thaibuddhistcalendar_minmax.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar_MinMax#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_MinMax/VB/thaibuddhistcalendar_minmax.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MinSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MinSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.ThaiBuddhistCalendar.MinSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e hora com suporte a mais antiga a <see cref="T:System.Globalization.ThaiBuddhistCalendar" /> classe.</summary>
+        <value>Data e hora com suporte mais recente do <see cref="T:System.Globalization.ThaiBuddhistCalendar" /> classe, que é equivalente para o primeiro momento de 1º de janeiro, 0001 C.E. no calendário gregoriano.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir obtém o valor mínimo e o valor máximo do calendário.  
+  
+ [!code-cpp[System.Globalization.ThaiBuddhistCalendar_MinMax#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_MinMax/CPP/thaibuddhistcalendar_minmax.cpp#1)]
+ [!code-csharp[System.Globalization.ThaiBuddhistCalendar_MinMax#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_MinMax/CS/thaibuddhistcalendar_minmax.cs#1)]
+ [!code-vb[System.Globalization.ThaiBuddhistCalendar_MinMax#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.ThaiBuddhistCalendar_MinMax/VB/thaibuddhistcalendar_minmax.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThaiBuddhistEra">
+      <MemberSignature Language="C#" Value="public const int ThaiBuddhistEra = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ThaiBuddhistEra = (1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.ThaiBuddhistCalendar.ThaiBuddhistEra" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Representa a era atual. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Globalization.ThaiBuddhistCalendar> classe reconhece somente o era atual. Esse campo sempre retorna 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime ToDateTime (int year, int month, int day, int hour, int minute, int second, int millisecond, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime ToDateTime(int32 year, int32 month, int32 day, int32 hour, int32 minute, int32 second, int32 millisecond, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="hour" Type="System.Int32" />
+        <Parameter Name="minute" Type="System.Int32" />
+        <Parameter Name="second" Type="System.Int32" />
+        <Parameter Name="millisecond" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 12 que representa o mês.</param>
+        <param name="day">Um inteiro de 1 a 31 que representa o dia.</param>
+        <param name="hour">Um inteiro de 0 a 23 que representa a hora.</param>
+        <param name="minute">Um inteiro de 0 a 59 que representa o minuto.</param>
+        <param name="second">Um inteiro de 0 a 59 que representa o segundo.</param>
+        <param name="millisecond">Um inteiro de 0 a 999 que representa o milissegundo.</param>
+        <param name="era">Um inteiro que representa a era.</param>
+        <summary>Retorna um <see cref="T:System.DateTime" /> que é definido como a data e hora especificadas na era especificado.</summary>
+        <returns>O <see cref="T:System.DateTime" /> que é definido como a data e hora especificadas na era atual.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="month" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="day" /> está fora do intervalo com suporte do calendário.  
+  
+ -ou-  
+  
+ <paramref name="hour" /> é menor que zero ou maior que 23.  
+  
+ - ou -  
+  
+ <paramref name="minute" /> é menor que zero ou maior que 59.  
+  
+ -ou-  
+  
+ <paramref name="second" /> é menor que zero ou maior que 59.  
+  
+ -ou-  
+  
+ <paramref name="millisecond" /> é menor que zero ou maior que 999.  
+  
+ -ou-  
+  
+ <paramref name="era" /> está fora do intervalo com suporte do calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToFourDigitYear">
+      <MemberSignature Language="C#" Value="public override int ToFourDigitYear (int year);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ToFourDigitYear(int32 year) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.ThaiBuddhistCalendar.ToFourDigitYear(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro de dois ou quatro dígitos que representa o ano a ser convertido.</param>
+        <summary>Converte o ano especificado em um ano de quatro dígitos usando a propriedade <see cref="P:System.Globalization.ThaiBuddhistCalendar.TwoDigitYearMax" /> para determinar o século apropriado.</summary>
+        <returns>Um inteiro que contém a representação de quatro dígitos de <paramref name="year" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Globalization.ThaiBuddhistCalendar.TwoDigitYearMax%2A>é o último ano no intervalo de 100 anos que pode ser representado por um ano de dois dígitos. O século é determinado pelo localizar a ocorrência exclusiva de dois dígitos `year` dentro desse intervalo de 100 anos. Por exemplo, se <xref:System.Globalization.ThaiBuddhistCalendar.TwoDigitYearMax%2A> está definido para 2029, é o intervalo de 100 anos de 1930 a 2029. Portanto, um valor de 2 dígitos de 30 anos é interpretado como 1930, enquanto um valor de 2 dígitos de 29 é interpretado como 2029.  
+  
+ <xref:System.Globalization.ThaiBuddhistCalendar.ToFourDigitYear%2A>oferece suporte a um ano de dois dígitos ou um ano de quatro dígitos. Passando um valor de ano de dois dígitos (menos de 100) faz com que o método converter o valor para um valor de quatro dígitos de acordo com o <xref:System.Globalization.ThaiBuddhistCalendar.TwoDigitYearMax%2A> valor que representa o século apropriado. Se o aplicativo fornece um valor de ano de quatro dígitos que está dentro do intervalo de calendário com suporte para <xref:System.Globalization.ThaiBuddhistCalendar.ToFourDigitYear%2A>, o método retorna o valor de entrada real. Se o aplicativo fornece um valor de quatro dígitos que está fora do intervalo de calendário com suporte, ou se ele fornece um valor negativo, o método gera uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" /> está fora do intervalo com suporte do calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoDigitYearMax">
+      <MemberSignature Language="C#" Value="public override int TwoDigitYearMax { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TwoDigitYearMax" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.ThaiBuddhistCalendar.TwoDigitYearMax" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o último ano de um intervalo de 100 anos que pode ser representado por um ano de dois dígitos.</summary>
+        <value>O último ano de um intervalo de 100 anos que pode ser representado por um ano de dois dígitos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade permite que um ano de 2 dígitos ser convertido corretamente em um ano de 4 dígitos. Por exemplo, no calendário gregoriano, se essa propriedade é definida como 2029, o intervalo de 100 anos é de 1930 2029. Portanto, um valor de 2 dígitos de 30 anos é interpretado como 1930, enquanto um valor de 2 dígitos de 29 é interpretado como 2029.  
+  
+ O valor inicial dessa propriedade é derivado das configurações na parte de opções regionais e de idioma do painel de controle. No entanto, essas informações podem alterar durante a vida do <xref:System.AppDomain>. O <xref:System.Globalization.ThaiBuddhistCalendar> classe não detecta alterações nas configurações do sistema automaticamente.  
+  
+ O aplicativo deve definir esse valor a 99 para indicar que os anos de 2 dígitos são deve ser considerado literalmente. Por exemplo, se essa propriedade é definida como 99, o intervalo de 100 anos é de 0 (não um valor válido para a maioria dos calendários) a 99. Portanto, um valor de 2 dígitos de 30 anos é interpretado como 30.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor especificado em uma operação de definição é menor que 99.  
+  
+ -ou-  
+  
+ O valor especificado em uma operação de definição é maior do que <see langword="MaxSupportedDateTime.Year" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Em uma operação de definição, a instância atual é somente leitura.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

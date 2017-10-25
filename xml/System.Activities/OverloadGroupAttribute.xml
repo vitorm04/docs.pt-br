@@ -1,0 +1,106 @@
+<Type Name="OverloadGroupAttribute" FullName="System.Activities.OverloadGroupAttribute">
+  <TypeSignature Language="C#" Value="public sealed class OverloadGroupAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OverloadGroupAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.OverloadGroupAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um método para indicar quais combinações de argumentos são válidas em uma atividade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Argumentos podem ser agrupados para formar grupos de sobrecargas válido. Um grupo de sobrecarga não pode ser um subconjunto ou um conjunto equivalente de outro grupo de sobrecarga. A única exceção a essa regra é um subconjunto que contém apenas argumentos onde <xref:System.Activities.RuntimeArgument.IsRequired%2A> é `false`. Grupos de sobrecargas podem se sobrepor, mas é um erro se a interseção dos grupos de contém todos os argumentos necessários de um ou ambos os grupos de sobrecargas.  
+  
+ Um grupo de sobrecarga está sendo associado se todos os argumentos de <xref:System.Activities.RuntimeArgument.IsRequired%2A> no grupo são associados. Se um grupo tem os argumentos de <xref:System.Activities.RuntimeArgument.IsRequired%2A> zero e pelo menos um argumento associado, então o grupo está sendo associado. É um erro se nenhum dos grupos associados, a menos que um grupo de sobrecargas não tiver nenhuma <xref:System.Activities.RuntimeArgument.IsRequired%2A> argumentos nele. Associação <xref:System.Activities.RuntimeArgument.IsRequired%2A> argumentos de mais de um grupo de sobrecarga não é permitido. É um erro para ter mais de um grupo de sobrecarga associada, isto é, todos os argumentos necessários em um grupo de sobrecarga é limitado e qualquer argumento em outro grupo de sobrecarga está associado também.  
+  
+ Regras de qualquer violação dos resultados em um <xref:System.Activities.InvalidWorkflowException> que está sendo gerada quando a atividade que contém está preparada para a execução.  
+  
+ O <xref:System.Activities.RuntimeArgument.IsRequired%2A?displayProperty=nameWithType> é definido como `true` se o <xref:System.Activities.RequiredArgumentAttribute?displayProperty=nameWithType> é aplicado a um argumento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OverloadGroupAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OverloadGroupAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.OverloadGroupAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OverloadGroupAttribute (string groupName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string groupName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.OverloadGroupAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="groupName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="groupName">O nome do grupo de argumentos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.OverloadGroupAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupName">
+      <MemberSignature Language="C#" Value="public string GroupName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.OverloadGroupAttribute.GroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do <see cref="T:System.Activities.OverloadGroupAttribute" />.</summary>
+        <value>O nome do grupo de argumentos relacionados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.OverloadGroupAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador exclusivo para este atributo.</summary>
+        <value>Um identificador exclusivo para este atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

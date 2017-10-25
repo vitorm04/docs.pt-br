@@ -1,0 +1,562 @@
+<Type Name="Attachment" FullName="System.Net.Mail.Attachment">
+  <TypeSignature Language="C#" Value="public class Attachment : System.Net.Mail.AttachmentBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Attachment extends System.Net.Mail.AttachmentBase" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mail.Attachment" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Mail</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Mail.AttachmentBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um anexo de um email.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Mail.Attachment> classe é usada com a <xref:System.Net.Mail.MailMessage> classe. Todas as mensagens incluem um <xref:System.Net.Mail.MailMessage.Body%2A>, que contém o conteúdo da mensagem. Além do corpo, você talvez queira enviar arquivos adicionais. Esses são enviados como anexos e são representados como <xref:System.Net.Mail.Attachment> instâncias. Para adicionar um anexo a uma mensagem de email, adicione-o para o <xref:System.Net.Mail.MailMessage.Attachments?displayProperty=nameWithType> coleção.  
+  
+ Conteúdo do anexo pode ser um <xref:System.String>, <xref:System.IO.Stream>, ou nome de arquivo. Você pode especificar o conteúdo em um anexo usando o <xref:System.Net.Mail.Attachment.%23ctor%2A> construtores.  
+  
+ As informações de cabeçalho de tipo de conteúdo MIME do anexo são representadas pelo <xref:System.Net.Mail.AttachmentBase.ContentType%2A> propriedade. O cabeçalho Content-Type especifica o tipo de mídia e subtipo e quaisquer parâmetros associados. Use <xref:System.Net.Mail.AttachmentBase.ContentType%2A> para obter a instância associada a um anexo.  
+  
+ O cabeçalho de disposição de conteúdo de MIME é representado pelo <xref:System.Net.Mail.Attachment.ContentDisposition%2A> propriedade. O cabeçalho Content-Disposition Especifica a apresentação e carimbos de hora do arquivo anexo. Um cabeçalho de disposição do conteúdo é enviado somente se o anexo é um arquivo. Use o <xref:System.Net.Mail.Attachment.ContentDisposition%2A> propriedade para obter a instância associada a um anexo.  
+  
+ O cabeçalho de codificação de transferência de conteúdo de MIME é representado pelo <xref:System.Net.Mail.AttachmentBase.TransferEncoding%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como anexar um arquivo a uma mensagem de email.  
+  
+ [!code-cpp[NclMailSync#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#6)]
+ [!code-csharp[NclMailSync#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Attachment (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.Attachment.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que contém um caminho de arquivo para criar esse anexo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Mail.Attachment" /> com a cadeia de caracteres de conteúdo especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades são definidas da seguinte maneira:  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Net.Mime.ContentType.MediaType%2A>|<xref:System.Net.Mime.MediaTypeNames.Text.Plain>.|  
+|<xref:System.Net.Mail.AttachmentBase.TransferEncoding%2A>|<xref:System.Net.Mime.TransferEncoding.QuotedPrintable>.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar este construtor.  
+  
+ [!code-cpp[NclMailSync#13](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#13)]
+ [!code-csharp[NclMailSync#13](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="fileName" /> está vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Attachment (System.IO.Stream contentStream, System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream, class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.Attachment.#ctor(System.IO.Stream,System.Net.Mime.ContentType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Um <see cref="T:System.IO.Stream" /> legível que contém o conteúdo deste anexo.</param>
+        <param name="contentType">Um <see cref="T:System.Net.Mime.ContentType" /> que descreve os dados em <c>fluxo</c>.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Mail.Attachment" /> com o fluxo e o tipo de conteúdo especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade <xref:System.Net.Mail.AttachmentBase.TransferEncoding%2A> é definida como <xref:System.Net.Mime.TransferEncoding.Base64>.  
+  
+ Se o fluxo <xref:System.IO.Stream.CanSeek%2A> é de propriedade `false`, o anexo e <xref:System.Net.Mail.MailMessage> que o contém não são reutilizáveis. Você deve fornecer um fluxo que pode ser pesquisado para reutilizar um anexo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar este construtor.  
+  
+ [!code-cpp[NclMailSync#14](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#14)]
+ [!code-csharp[NclMailSync#14](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#14)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentType" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="contentStream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Attachment (System.IO.Stream contentStream, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.Attachment.#ctor(System.IO.Stream,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Um <see cref="T:System.IO.Stream" /> legível que contém o conteúdo deste anexo.</param>
+        <param name="name">Um <see cref="T:System.String" /> que contém o valor da propriedade <see cref="P:System.Net.Mime.ContentType.Name" /> do <see cref="T:System.Net.Mime.ContentType" /> associado a esse anexo. Este valor pode ser <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Mail.Attachment" /> com o fluxo e o nome especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `name` não é `null` ou igual a <xref:System.String?displayProperty=nameWithType> (""), o <xref:System.Net.Mime.ContentType> para este anexo é construído com a <xref:System.Net.Mime.ContentType.Name%2A> propriedade definida como `name`. A propriedade <xref:System.Net.Mail.AttachmentBase.TransferEncoding%2A> é definida como <xref:System.Net.Mime.TransferEncoding.Base64>.  
+  
+ Se o fluxo <xref:System.IO.Stream.CanSeek%2A> é de propriedade `false`, o anexo e <xref:System.Net.Mail.MailMessage> que o contém não são reutilizáveis. Você deve fornecer um fluxo que pode ser pesquisado para reutilizar um anexo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar este construtor.  
+  
+ [!code-cpp[NclMailSync#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#15)]
+ [!code-csharp[NclMailSync#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contentStream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Attachment (string fileName, System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.Attachment.#ctor(System.String,System.Net.Mime.ContentType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que contém um caminho de arquivo para criar esse anexo.</param>
+        <param name="contentType">Um <see cref="T:System.Net.Mime.ContentType" /> que descreve os dados em <c>cadeia de caracteres</c>.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Mail.Attachment" /> com a cadeia de caracteres de conteúdo especificada e <see cref="T:System.Net.Mime.ContentType" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mediaType" /> não está no formato correto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Attachment (string fileName, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.Attachment.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Uma <see cref="T:System.String" /> que contém o conteúdo deste anexo.</param>
+        <param name="mediaType">Um <see cref="T:System.String" /> que contém as informações de cabeçalho do conteúdo MIME deste anexo. Este valor pode ser <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Mail.Attachment" /> com a cadeia de caracteres de conteúdo e informações do tipo MIME especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `mediaType` é `null` ou igual a <xref:System.String?displayProperty=nameWithType> (""), o <xref:System.Net.Mime.ContentType.MediaType%2A> propriedade este anexo é definida como <xref:System.Net.Mime.MediaTypeNames.Text.Plain>. Se `mediaType` não é `null` e não é uma cadeia de caracteres de comprimento zero, ele é usado para construir o <xref:System.Net.Mime.ContentType> associado a este anexo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar este construtor.  
+  
+ [!code-cpp[NclMailSync#12](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#12)]
+ [!code-csharp[NclMailSync#12](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="mediaType" /> não está no formato correto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Attachment (System.IO.Stream contentStream, string name, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream contentStream, string name, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.Attachment.#ctor(System.IO.Stream,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentStream" Type="System.IO.Stream" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contentStream">Um <see cref="T:System.IO.Stream" /> legível que contém o conteúdo deste anexo.</param>
+        <param name="name">Um <see cref="T:System.String" /> que contém o valor da propriedade <see cref="P:System.Net.Mime.ContentType.Name" /> do <see cref="T:System.Net.Mime.ContentType" /> associado a esse anexo. Este valor pode ser <see langword="null" />.</param>
+        <param name="mediaType">Um <see cref="T:System.String" /> que contém as informações de cabeçalho do conteúdo MIME deste anexo. Este valor pode ser <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Mail.Attachment" /> com o fluxo, nome e informações do tipo MIME especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `mediaType` não é `null` ou igual a <xref:System.String?displayProperty=nameWithType> (""), ele é usado para construir o <xref:System.Net.Mime.ContentType> classe associada a este anexo.  
+  
+ Se `mediaType` e `name` contêm <xref:System.Net.Mime.ContentType.Name%2A> informações, o valor especificado em `name` é usado. A propriedade <xref:System.Net.Mail.AttachmentBase.TransferEncoding%2A> é definida como <xref:System.Net.Mime.TransferEncoding.Base64>.  
+  
+ Se o fluxo <xref:System.IO.Stream.CanSeek%2A> é de propriedade `false`, o anexo e <xref:System.Net.Mail.MailMessage> que o contém não são reutilizáveis. Você deve fornecer um fluxo que pode ser pesquisado para reutilizar um anexo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar este construtor.  
+  
+ [!code-cpp[NclMailSync#16](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#16)]
+ [!code-csharp[NclMailSync#16](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="mediaType" /> não está no formato correto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentDisposition">
+      <MemberSignature Language="C#" Value="public System.Net.Mime.ContentDisposition ContentDisposition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Mime.ContentDisposition ContentDisposition" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.Attachment.ContentDisposition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mime.ContentDisposition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a disposição de conteúdo MIME para este anexo.</summary>
+        <value>Um <see cref="T:System.Net.Mime.ContentDisposition" /> que fornece as informações de apresentação para este anexo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações de <xref:System.Net.Mime.ContentDisposition> classe representa o cabeçalho de disposição de conteúdo de MIME. Esse cabeçalho é descrito na RFC 2183, disponível em [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém o <xref:System.Net.Mime.ContentDisposition> para um anexo e exibe suas propriedades.  
+  
+ [!code-cpp[NclMailSync#11](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#11)]
+ [!code-csharp[NclMailSync#11](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAttachmentFromString">
+      <MemberSignature Language="C#" Value="public static System.Net.Mail.Attachment CreateAttachmentFromString (string content, System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Mail.Attachment CreateAttachmentFromString(string content, class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.Attachment.CreateAttachmentFromString(System.String,System.Net.Mime.ContentType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.Attachment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="content">Uma <see cref="T:System.String" /> que contém o conteúdo deste anexo.</param>
+        <param name="contentType">Um objeto <see cref="T:System.Net.Mime.ContentType" /> que representa o cabeçalho de Tipo de conteúdo de protocolo MIME (Multipurpose Internet Mail Exchange) a ser usado.</param>
+        <summary>Cria um anexo de email usando o conteúdo da cadeia de caracteres especificada e o <see cref="T:System.Net.Mime.ContentType" /> especificado.</summary>
+        <returns>Um objeto do tipo <see cref="T:System.Net.Mail.Attachment" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAttachmentFromString">
+      <MemberSignature Language="C#" Value="public static System.Net.Mail.Attachment CreateAttachmentFromString (string content, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Mail.Attachment CreateAttachmentFromString(string content, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.Attachment.CreateAttachmentFromString(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.Attachment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">Uma <see cref="T:System.String" /> que contém o conteúdo deste anexo.</param>
+        <param name="name">O valor de nome do tipo de conteúdo MIME no tipo de conteúdo associado a este anexo.</param>
+        <summary>Cria um anexo de email usando o conteúdo da cadeia de caracteres especificada e o nome do tipo de conteúdo MIME especificado.</summary>
+        <returns>Um objeto do tipo <see cref="T:System.Net.Mail.Attachment" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o conteúdo está no formato ASCII, em seguida, a codificação de caracteres é definida como ASCII. A codificação de caracteres é definida para todos os outros formatos, como utf-8. O tipo de mídia padrão é texto sem formatação.  
+  
+ Se o conteúdo não está no formato ASCII e a codificação for null, a codificação utf-8 é usado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAttachmentFromString">
+      <MemberSignature Language="C#" Value="public static System.Net.Mail.Attachment CreateAttachmentFromString (string content, string name, System.Text.Encoding contentEncoding, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Mail.Attachment CreateAttachmentFromString(string content, string name, class System.Text.Encoding contentEncoding, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.Attachment.CreateAttachmentFromString(System.String,System.String,System.Text.Encoding,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.Attachment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="contentEncoding" Type="System.Text.Encoding" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="content">Uma <see cref="T:System.String" /> que contém o conteúdo deste anexo.</param>
+        <param name="name">O valor de nome do tipo de conteúdo MIME no tipo de conteúdo associado a este anexo.</param>
+        <param name="contentEncoding">Um <see cref="T:System.Text.Encoding" />. Este valor pode ser <see langword="null" />.</param>
+        <param name="mediaType">Um <see cref="T:System.String" /> que contém as informações de cabeçalho do conteúdo MIME deste anexo. Este valor pode ser <see langword="null" />.</param>
+        <summary>Cria um anexo de email usando o conteúdo da cadeia de caracteres especificada, o nome do tipo de conteúdo MIME especificado, a codificação de caracteres e as informações de cabeçalho MIME do anexo.</summary>
+        <returns>Um objeto do tipo <see cref="T:System.Net.Mail.Attachment" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.Attachment.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de nome do tipo de conteúdo MIME no tipo de conteúdo associado a este anexo.</summary>
+        <value>Uma <see cref="T:System.String" /> que contém o valor para o tipo de conteúdo <paramref name="name" /> representado pela propriedade <see cref="P:System.Net.Mime.ContentType.Name" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Mail.Attachment.Name%2A> propriedade é usada no cabeçalho de Content-Type gerado para este anexo. O <xref:System.Net.Mail.Attachment.Name%2A> é exibido como o nome do anexo quando o email com anexo é recebido. Uma gramática que fornece detalhes sobre a sintaxe do cabeçalho Content-Type é descrita na seção de RFC 2045 5.1. RFC 2046 fornece informações detalhadas sobre os tipos de mídia MIME e seus parâmetros. Essas RFCs estão disponíveis em [http://www.ietf.org](http://www.ietf.org/).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir informações sobre um anexo.  
+  
+ [!code-cpp[NclMailSync#19](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#19)]
+ [!code-csharp[NclMailSync#19](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor especificado para uma operação de definição é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O valor especificado para uma operação de definição é <see cref="F:System.String.Empty" /> ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NameEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding NameEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding NameEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.Attachment.NameEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a codificação para o <see cref="T:System.Net.Mail.Attachment" /><see cref="P:System.Net.Mail.Attachment.Name" />.</summary>
+        <value>Um valor <see cref="T:System.Text.Encoding" /> que especifica o tipo de codificação de nome. O valor padrão é determinado com base no nome do anexo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

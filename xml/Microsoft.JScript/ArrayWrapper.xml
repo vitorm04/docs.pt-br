@@ -1,0 +1,66 @@
+<Type Name="ArrayWrapper" FullName="Microsoft.JScript.ArrayWrapper">
+  <TypeSignature Language="C#" Value="public class ArrayWrapper : Microsoft.JScript.ArrayObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArrayWrapper extends Microsoft.JScript.ArrayObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.ArrayWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.ArrayObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula uma matriz para criar um JScript <see cref="T:Microsoft.JScript.ArrayObject" />. Essa classe encapsula um .NET Framework <see cref="T:System.Array" /> objeto ou um JScript <see cref="T:Microsoft.JScript.ArrayObject" /> objeto.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ArrayWrapper.GetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o tipo da matriz.</summary>
+        <returns>O tipo de <see cref="T:System.Array" /> ou <see cref="T:Microsoft.JScript.ArrayObject" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="length">
+      <MemberSignature Language="C#" Value="public override object length { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object length" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.ArrayWrapper.length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento da matriz.</summary>
+        <value>O comprimento da matriz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade gerará uma <xref:Microsoft.JScript.JSError.AssignmentToReadOnly> exceção se você tentar defini-la.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

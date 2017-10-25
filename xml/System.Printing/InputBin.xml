@@ -1,0 +1,140 @@
+<Type Name="InputBin" FullName="System.Printing.InputBin">
+  <TypeSignature Language="C#" Value="public enum InputBin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed InputBin extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.InputBin" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a bandeja de entrada que é usada como a fonte do papel em branco ou outra mídia de impressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores desse tipo são usados principalmente para esses fins:  
+  
+-   Como membros do <xref:System.Printing.PrintCapabilities.InputBinCapability%2A> coleção, uma propriedade de <xref:System.Printing.PrintCapabilities>, elas indicam os tipos de entrada compartimentos que oferece suporte a impressora.  
+  
+-   Como o valor da <xref:System.Printing.PrintTicket.InputBin%2A> propriedade de um <xref:System.Printing.PrintTicket>, eles instruem a impressora para usar o agrupamento especificado.  
+  
+ O valor Unknown nunca é usado nas propriedades de <xref:System.Printing.PrintCapabilities> objetos.  
+  
+ Você nunca deve definir um <xref:System.Printing.PrintTicket> propriedade desconhecida. Se algum outro <xref:System.Printing.PrintTicket> produzir aplicativo tiver criado um documento PrintTicket que define o recurso de entrada bin como uma opção não reconhecida, (ou seja, uma opção que não está definida no [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397), uma <xref:System.Printing.PrintTicket> objeto em um aplicativo que é construído com esse documento terá desconhecido como o valor da <xref:System.Printing.PrintTicket.InputBin%2A> propriedade.  
+  
+ Embora o <xref:System.Printing.PrintTicket> e <xref:System.Printing.PrintCapabilities> classes não podem ser herdadas, você pode estender o [imprimir esquema](http://go.microsoft.com/fwlink/?LinkId=186397) para reconhecer os recursos de dispositivo de impressão que não são tratados do <xref:System.Printing.PrintTicket.InputBin%2A> ou <xref:System.Printing.PrintCapabilities> classes. Para obter mais informações, consulte [NOTINBUILD: como: estender o esquema de impressão e criar novas Classes de sistema de impressão](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como determinar os recursos de impressora e configurar o trabalho de impressão para tirar proveito deles.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoSelect">
+      <MemberSignature Language="C#" Value="AutoSelect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.InputBin AutoSelect = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.InputBin.AutoSelect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.InputBin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A seleção automática de uma bandeja de entrada de acordo com o tamanho da página e o tipo da mídia de saída.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSheetFeeder">
+      <MemberSignature Language="C#" Value="AutoSheetFeeder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.InputBin AutoSheetFeeder = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.InputBin.AutoSheetFeeder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.InputBin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O alimentador de folhas automático é usado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Cassette">
+      <MemberSignature Language="C#" Value="Cassette" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.InputBin Cassette = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.InputBin.Cassette" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.InputBin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma bandeja de papel removível é usada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Manual">
+      <MemberSignature Language="C#" Value="Manual" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.InputBin Manual = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.InputBin.Manual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.InputBin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A bandeja de entrada manual é usada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tractor">
+      <MemberSignature Language="C#" Value="Tractor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.InputBin Tractor = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.InputBin.Tractor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.InputBin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Será usado um alimentador de tração (também chamado de alimentador de arrasto) do papel de alimentação contínua.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.InputBin Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.InputBin.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.InputBin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O recurso (cujas opções são representadas por esta enumeração) é definido como uma opção não definida no [impressão esquema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,121 @@
+<Type Name="ScrollBarButtonType" FullName="System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType">
+  <TypeSignature Language="C#" Value="public enum ScrollBarButtonType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ScrollBarButtonType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o botão clicado pelo usuário no <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked" /> evento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType> enumeração é usada com a <xref:System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs.ButtonType%2A> propriedade, e permite que o desenvolvedor determinar que tipo de botão de barra de rolagem clicado no usuário final.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LargeDecrement">
+      <MemberSignature Language="C#" Value="LargeDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType LargeDecrement = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.LargeDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O modo de exibição de rolagem foi reduzido por um decremento grande, clicando na área abaixo uma prática de rolagem de uma barra de rolagem vertical ou à esquerda de uma prática de rolagem de uma barra de rolagem horizontal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeIncrement">
+      <MemberSignature Language="C#" Value="LargeIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType LargeIncrement = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.LargeIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O modo de exibição de rolagem foi aumentado em um grande incremento, clicando na área acima uma prática de rolagem de uma barra de rolagem vertical ou à direita de uma prática de rolagem de uma barra de rolagem horizontal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallDecrement">
+      <MemberSignature Language="C#" Value="SmallDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType SmallDecrement = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.SmallDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um baixo ou o botão de seta para a esquerda foi clicado para diminuir a exibição da rolagem por um decremento pequeno.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallIncrement">
+      <MemberSignature Language="C#" Value="SmallIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType SmallIncrement = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.SmallIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um backup ou botão de seta para a direita foi clicado para aumentar a exibição de rolagem em um pequeno incremento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThumbTracker">
+      <MemberSignature Language="C#" Value="ThumbTracker" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType ThumbTracker = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.ThumbTracker" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controlador (também conhecido como a miniatura da barra de rolagem) foi clicada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomReset">
+      <MemberSignature Language="C#" Value="ZoomReset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType ZoomReset = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType.ZoomReset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ScrollBarButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O botão zoom ou a redefinição foi clicado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

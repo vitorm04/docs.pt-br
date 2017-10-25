@@ -1,0 +1,167 @@
+<Type Name="TablePattern+TablePatternInformation" FullName="System.Windows.Automation.TablePattern+TablePatternInformation">
+  <TypeSignature Language="C#" Value="public struct TablePattern.TablePatternInformation" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit TablePattern/TablePatternInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TablePattern.TablePatternInformation" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso aos valores de propriedade de um <see cref="T:System.Windows.Automation.TablePattern" /> objeto usando seu <see cref="P:System.Windows.Automation.TablePattern.Current" /> ou <see cref="P:System.Windows.Automation.TablePattern.Cached" /> acessadores.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnCount">
+      <MemberSignature Language="C#" Value="public int ColumnCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TablePattern.TablePatternInformation.ColumnCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de colunas em uma tabela.</summary>
+        <value>O número total de colunas em uma tabela. O valor padrão é zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TablePattern> objeto obtido de um controle de destino é passado para uma função que recupera atual <xref:System.Windows.Automation.TablePattern> valores de propriedade.  
+  
+ [!code-csharp[UIATablePattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATablePattern_snip/CSharp/UIATablePattern_snippets.cs#103)]
+ [!code-vb[UIATablePattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATablePattern_snip/VisualBasic/UIATablePattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnHeaders">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement[] GetColumnHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement[] GetColumnHeaders() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TablePattern.TablePatternInformation.GetColumnHeaders" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma coleção de <see cref="T:System.Windows.Automation.AutomationElement" />s que representa todos os cabeçalhos de coluna em uma tabela.</summary>
+        <returns>Uma coleção de <see cref="T:System.Windows.Automation.AutomationElement" />s. O padrão é uma matriz vazia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir, o cabeçalho de linha ou coluna é recuperado de um item específico da tabela.  
+  
+ Para os fins deste exemplo, uma relação entre o <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> itens de cabeçalho de propriedade e a linha e coluna é demonstrado. No entanto, uma tabela pode ter cabeçalhos de linha e coluna, independentemente do <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> propriedade da tabela.  
+  
+ [!code-csharp[UIATablePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATablePattern_snip/CSharp/UIATablePattern_snippets.cs#102)]
+ [!code-vb[UIATablePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATablePattern_snip/VisualBasic/UIATablePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRowHeaders">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElement[] GetRowHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.AutomationElement[] GetRowHeaders() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TablePattern.TablePatternInformation.GetRowHeaders" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElement[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma coleção de <see cref="T:System.Windows.Automation.AutomationElement" />s que representa todos os cabeçalhos de linha em uma tabela.</summary>
+        <returns>Uma coleção de <see cref="T:System.Windows.Automation.AutomationElement" />s. O padrão é uma matriz vazia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir, o cabeçalho de linha ou coluna é recuperado de um item específico da tabela.  
+  
+ Para os fins deste exemplo, uma relação entre o <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> itens de cabeçalho de propriedade e a linha e coluna é demonstrado. No entanto, uma tabela pode ter cabeçalhos de linha e coluna, independentemente do <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> propriedade da tabela.  
+  
+ [!code-csharp[UIATablePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATablePattern_snip/CSharp/UIATablePattern_snippets.cs#102)]
+ [!code-vb[UIATablePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATablePattern_snip/VisualBasic/UIATablePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowCount">
+      <MemberSignature Language="C#" Value="public int RowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TablePattern.TablePatternInformation.RowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de linhas em uma tabela.</summary>
+        <value>O número total de linhas em uma tabela. O valor padrão é zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TablePattern> objeto obtido de um controle de destino é passado para uma função que recupera atual <xref:System.Windows.Automation.TablePattern> valores de propriedade.  
+  
+ [!code-csharp[UIATablePattern_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATablePattern_snip/CSharp/UIATablePattern_snippets.cs#103)]
+ [!code-vb[UIATablePattern_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATablePattern_snip/VisualBasic/UIATablePattern_snippets.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowOrColumnMajor">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.RowOrColumnMajor RowOrColumnMajor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.RowOrColumnMajor RowOrColumnMajor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.RowOrColumnMajor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupera a direção primária de passagem (<see cref="F:System.Windows.Automation.RowOrColumnMajor.ColumnMajor" />, <see cref="F:System.Windows.Automation.RowOrColumnMajor.RowMajor" />, <see cref="F:System.Windows.Automation.RowOrColumnMajor.Indeterminate" />) para a tabela.</summary>
+        <value>A direção primária da passagem. O padrão é <see cref="F:System.Windows.Automation.RowOrColumnMajor.Indeterminate" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir, o cabeçalho de linha ou coluna é recuperado de um item específico da tabela.  
+  
+ Para os fins deste exemplo, uma relação entre o <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> itens de cabeçalho de propriedade e a linha e coluna é demonstrado. No entanto, uma tabela pode ter cabeçalhos de linha e coluna, independentemente do <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> propriedade da tabela.  
+  
+ [!code-csharp[UIATablePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATablePattern_snip/CSharp/UIATablePattern_snippets.cs#102)]
+ [!code-vb[UIATablePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATablePattern_snip/VisualBasic/UIATablePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

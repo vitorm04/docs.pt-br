@@ -1,0 +1,382 @@
+<Type Name="StoryFragment" FullName="System.Windows.Documents.DocumentStructures.StoryFragment">
+  <TypeSignature Language="C#" Value="public class StoryFragment : System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt;, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StoryFragment extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Documents.DocumentStructures.BlockElement&gt;, class System.Collections.IEnumerable, class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.DocumentStructures.StoryFragment" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("BlockElementList")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa todo ou parte de um texto dentro de um documento XPS.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma história XPS em um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento é quase análogo a um texto em um jornal ou revista. É um bloco de texto e conteúdo de gráfico, normalmente em um único tópico, dentro de um único [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento. Normalmente, ele abrange várias páginas, mas pode ser menor do que uma página como uma barra lateral — história demarcada — em uma revista. Uma história também pode ser descontínua como uma história de jornal de página frontal continua na página 4. Consequentemente, uma determinada página pode ter mais de uma história e partes de mais de uma história. Um cabeçalho ou rodapé de página também é um tipo especial de texto é totalmente contido em uma única página.  
+  
+ Um <xref:System.Windows.Documents.DocumentStructures.StoryFragment> representa todas ou uma parte de um texto. Isso nunca pode abranger mais de uma página, mas pode ocupar uma página inteira ou compartilhar uma página com outros fragmentos. Se um texto estiver em mais de uma página, cada parte em cada página é um fragmento de separado. Embora histórias podem ter descontínuos conjuntos de fragmentos, nenhum fragmento pode ser descontínuo.  
+  
+ Somente um <xref:System.Windows.Documents.DocumentStructures.StoryFragments> elemento pode ser um pai de um <xref:System.Windows.Documents.DocumentStructures.StoryFragment>.  O local do <xref:System.Windows.Documents.DocumentStructures.StoryBreak> elementos dentro de um <xref:System.Windows.Documents.DocumentStructures.StoryFragment> indica se o texto estiver contido em vários fragmentos, e se os fragmentos adicionais precedem ou execute o fragmento atual.  
+  
+ Quando um <xref:System.Windows.Documents.DocumentStructures.StoryFragment> termina no meio de alguns elementos estruturais; diga um `<TableRowGroupStructure>`, em seguida, [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] aplicativos de produção de documento devem inserir uma marca de fim apropriado para o elemento (nesse caso `</TableRowGroupStructure>`) antes do `</StoryFragment>` marca, mesmo que a estrutura continua em um fragmento posterior. (Isso é necessário para garantir que a árvore de elementos dentro de <xref:System.Windows.Documents.DocumentStructures.StoryFragment> é um XML válido.) O fragmento que continua a história deve começar com uma marca de abertura para a estrutura interrompida. Toda a árvore de estruturas interrompidas deve ser tratada da mesma forma (com uma exceção, discutida abaixo): as marcas de término devem ser adicionadas para cada marca de início não correspondentes acima do ponto de interrupção.  
+  
+ A exceção se aplica quando a interrupção da história vem imediatamente após um `</TableCellStructure>` marca, em seguida, o aplicativo de produção deve inserir uma estrutura de célula de tabela vazia (`<TableCellStructure></TableCellStructure>`) no ponto correspondente no fragmento que continua a história. Isso é necessário para que os aplicativos de consumo que precisa para todos os fragmentos de um determinado artigo de mesclagem podem usar um algoritmo simples para fazer isso.  
+  
+ Por exemplo, suponha que um aplicativo quiser adicionar o material a seguir para um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento:  
+  
+```  
+<SectionStructure>  
+   <TableStructure>  
+      <TableRowGroupStructure>  
+         <TableRowStructure>  
+            <TableCellStructure>  
+               <ParagraphStructure>  
+                  <NamedElement NameReference="SomeContent" />  
+               </ParagraphStructure>  
+            </TableCellStructure>  
+            <TableCellStructure>  
+               <ParagraphStructure>  
+                  <NamedElement NameReference="MoreContent" />  
+               </ParagraphStructure>  
+            </TableCellStructure>  
+         </TableRowStructure>  
+         <TableRowStructure>  
+            <TableCellStructure>  
+               <ParagraphStructure>  
+                  <NamedElement NameReference="EvenMoreContent" />  
+               </ParagraphStructure>  
+            </TableCellStructure>  
+            <TableCellStructure>  
+               <ParagraphStructure>  
+                  <NamedElement NameReference="LastContent" />  
+               </ParagraphStructure>  
+            </TableCellStructure>  
+         </TableRowStructure>  
+      </TableRowGroupStructure>  
+   </TableStructure>  
+</SectionStructure>  
+```  
+  
+ Se uma quebra de página força um final para o fragmento logo após o `</TableCellStructure>` para "SomeContent", o aplicativo deve criar a divisão conforme mostrado no exemplo a seguir:  
+  
+```  
+<StoryFragment StoryName="MyStory" FragmentType="Content">  
+ <SectionStructure>  
+    <TableStructure>  
+       <TableRowGroupStructure>  
+          <TableRowStructure>  
+             <TableCellStructure>  
+                <ParagraphStructure>  
+                   <NamedElement NameReference="SomeContent" />  
+                </ParagraphStructure>   
+             </TableCellStructure>  
+<!-- lines from here to end of fragment added by producer-->  
+          </TableRowStructure>  
+       </TableRowGroupStructure>  
+    </TableStructure>  
+ </SectionStructure>  
+</StoryFragment>  
+  
+<StoryFragment StoryName="MyStory" FragmentType="Content">  
+ <SectionStructure>  
+    <TableStructure>  
+       <TableRowGroupStructure>  
+          <TableRowStructure>  
+             <TableCellStructure>   
+              <!-- extra cell added by producer-->  
+             </TableCellStructure>  
+<!-- lines from here to start of fragment added by producer-->  
+             <TableCellStructure>  
+                <ParagraphStructure>  
+                   <NamedElement NameReference="MoreContent" />  
+                </ParagraphStructure>  
+             </TableCellStructure>  
+          </TableRowStructure>  
+          <TableRowStructure>  
+             <TableCellStructure>  
+                <ParagraphStructure>  
+                   <NamedElement NameReference="EvenMoreContent" />  
+                </ParagraphStructure>  
+             </TableCellStructure>  
+             <TableCellStructure>  
+                <ParagraphStructure>  
+                   <NamedElement NameReference="LastContent" />  
+                </ParagraphStructure>  
+             </TableCellStructure>  
+          </TableRowStructure>  
+       </TableRowGroupStructure>  
+    </TableStructure>  
+ </SectionStructure>  
+</StoryFragment>  
+```  
+  
+ Um aplicativo que lê o documento talvez seja necessário mesclar esse conteúdo. Considere, por exemplo, um visualizador XPS com uma **história completa de copiar para área de transferência** botão; ou um **XPS para a Blind** aplicativo que transmita histórias de um sintetizador de voz.  Alguns aplicativos que leiam o documento talvez seja necessário um subconjunto dos fragmentos de um artigo de mesclagem. Por exemplo, um recurso que copia um parágrafo inteiro para a área de transferência, clique três vezes precisa fazer uma mesclagem sempre que o parágrafo estendidos uma quebra de página, porque esse é um parágrafo seria dividido entre dois <xref:System.Windows.Documents.DocumentStructures.StoryFragment>s.  
+  
+ **Para mesclar usar esse algoritmo:**  
+  
+1.  Excluir o `</StoryFragment>` do final do primeiro fragmento a ser mesclado e exclua o `<StoryFragment>` desde o início da segunda.  
+  
+2.  Se a última marca de fechamento do primeiro fragmento é do mesmo tipo que a primeira marca de abertura do fragmento de segundo (e não são `<NamedElement>` marcas), exclua-os.  
+  
+3.  Repita a etapa 2 até que os dois fragmentos estão em *ou* destes estados:  
+  
+    -   Não é uma correspondência de tipo entre a última marca de fim do fragmento à esquerda da primeira marca de início do fragmento à direita.  
+  
+    -   A última marca de fim dos principais fragmento da primeira marca de início do fragmento à direita são ambos `<NamedElement>` marcas.  
+  
+ No exemplo acima, se a célula vazia não tivesse sido adicionada pelo aplicativo de produção, em seguida, uma fusão dos fragmentos pode produzir uma tabela cuja primeira linha teve uma única célula que contém as referências "SomeContent" e "MoreContent" em vez da primeira linha original com duas células, cada uma contendo uma referência de  
+  
+ Quando todo o texto está sendo mesclado, o algoritmo deve ser repetido para cada fragmento subsequente que faz parte do mesmo texto. Os fragmentos que pertencem a uma história são indexados no `<Story>` elemento. Consulte a seção 9.1.15 o [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] especificação que pode ser obtido em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx). O último fragmento para um determinado texto terá um <xref:System.Windows.Documents.DocumentStructures.StoryBreak> elemento como seu último filho.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra o `<StoryFragment>` faz parte de um [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] documento.  
+  
+ [!code-xaml[DocumentStructure#DocStructStoryFragContent1](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentStructure/CSharp/Content/FixedPage1_structure.xaml#docstructstoryfragcontent1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StoryFragment ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.StoryFragment.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.DocumentStructures.StoryFragment" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Windows.Documents.DocumentStructures.BlockElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Windows.Documents.DocumentStructures.BlockElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.StoryFragment.Add(System.Windows.Documents.DocumentStructures.BlockElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Documents.DocumentStructures.BlockElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O bloco para adicionar.</param>
+        <summary>Adicione um bloco para o fragmento de história.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O bloco passado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FragmentName">
+      <MemberSignature Language="C#" Value="public string FragmentName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FragmentName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DocumentStructures.StoryFragment.FragmentName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do fragmento de história.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o nome desse fragmento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o `FragmentName` atributo do `</StoryFragment>` faz parte de um [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] documento, consulte o capítulo 9 a [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] especificação que pode ser obtido em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FragmentType">
+      <MemberSignature Language="C#" Value="public string FragmentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FragmentType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DocumentStructures.StoryFragment.FragmentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de fragmento.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o tipo de fragmento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores possíveis incluem "Cabeçalho", "Rodapé" e "Conteúdo".  
+  
+ Para obter mais informações sobre o `FragmentType` atributo do `</StoryFragment>` faz parte de um [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] documento, consulte o capítulo 9 a [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] especificação que pode ser obtido em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra o `FragmentType` atributo do `<StoryFragment>` faz parte de um [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] documento.  
+  
+ [!code-xaml[DocumentStructure#DocStructStoryFragContent1](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentStructure/CSharp/Content/FixedPage1_structure.xaml#docstructstoryfragcontent1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoryName">
+      <MemberSignature Language="C#" Value="public string StoryName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StoryName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DocumentStructures.StoryFragment.StoryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do artigo.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o nome do artigo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os fragmentos de um determinado texto devem ter o mesmo valor para essa propriedade. Ele deve corresponder a `StoryName` atributo do `<Story>` elemento. Consulte a seção 9.1.15 o [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] especificação que pode ser obtido em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ Essa propriedade pode ser especificada se <xref:System.Windows.Documents.DocumentStructures.StoryFragment.FragmentType%2A> é o cabeçalho ou rodapé de página.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra o `StoryName` atributo do `<StoryFragment>` faz parte de um [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] documento.  
+  
+ [!code-xaml[DocumentStructure#DocStructStoryFragContent1](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentStructure/CSharp/Content/FixedPage1_structure.xaml#docstructstoryfragcontent1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt; IEnumerable&lt;BlockElement&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Windows.Documents.DocumentStructures.BlockElement&gt; System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.StoryFragment.System#Collections#Generic#IEnumerable&lt;System#Windows#Documents#DocumentStructures#BlockElement&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este método não foi implementado.</summary>
+        <returns>Sempre gera <see cref="T:System.NotSupportedException" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.StoryFragment.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este método não foi implementado.</summary>
+        <returns>Sempre gera <see cref="T:System.NotSupportedException" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.StoryFragment.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O filho <see cref="T:System.Object" /> que é adicionado.</param>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winfx](~/includes/tlasharptla-winfx-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adiciona um objeto filho para o <xref:System.Windows.Documents.DocumentStructures.StoryFragment>.  
+  
+ Deve haver pelo menos um filho do <xref:System.Windows.Documents.DocumentStructures.StoryFragment> e os filhos só podem ser destes tipos: <xref:System.Windows.Documents.DocumentStructures.ParagraphStructure>, <xref:System.Windows.Documents.DocumentStructures.FigureStructure>, <xref:System.Windows.Documents.DocumentStructures.ListStructure>, <xref:System.Windows.Documents.DocumentStructures.TableStructure>, <xref:System.Windows.Documents.DocumentStructures.SectionStructure>, e <xref:System.Windows.Documents.DocumentStructures.StoryBreak>.  
+  
+ Um <xref:System.Windows.Documents.DocumentStructures.StoryBreak> só pode ser o primeiro ou último filho de um <xref:System.Windows.Documents.DocumentStructures.StoryFragment>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />não é um dos tipos que podem ser um filho dessa classe. Consulte **comentários**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.StoryFragment.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser adicionado ao objeto.</param>
+        <summary>Adiciona o conteúdo do texto de um nó ao objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

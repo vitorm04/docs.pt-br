@@ -1,0 +1,166 @@
+<Type Name="LIBFLAGS" FullName="System.Runtime.InteropServices.ComTypes.LIBFLAGS">
+  <TypeSignature Language="C#" Value="public enum LIBFLAGS" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed LIBFLAGS extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComTypes.LIBFLAGS" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define os sinalizadores que se aplicam às bibliotecas de tipos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações adicionais sobre o `LIBFLAGS` enumeração, consulte a biblioteca MSDN.  
+  
+ O common language runtime lança uma exceção quando um método COM em código nativo retorna um HRESULT. Para obter mais informações, consulte [como: mapear HRESULTs e exceções](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LIBFLAG_FCONTROL">
+      <MemberSignature Language="C#" Value="LIBFLAG_FCONTROL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.LIBFLAGS LIBFLAG_FCONTROL = int16(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.LIBFLAGS.LIBFLAG_FCONTROL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.LIBFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A biblioteca de tipos descreve controles e não deve ser exibida em navegadores de tipo destinados para objetos não visuais.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LIBFLAG_FHASDISKIMAGE">
+      <MemberSignature Language="C#" Value="LIBFLAG_FHASDISKIMAGE" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.LIBFLAGS LIBFLAG_FHASDISKIMAGE = int16(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.LIBFLAGS.LIBFLAG_FHASDISKIMAGE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.LIBFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Existe a biblioteca de tipos de forma persistente no disco.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LIBFLAG_FHIDDEN">
+      <MemberSignature Language="C#" Value="LIBFLAG_FHIDDEN" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.LIBFLAGS LIBFLAG_FHIDDEN = int16(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.LIBFLAGS.LIBFLAG_FHIDDEN" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.LIBFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A biblioteca de tipos não deve ser exibida aos usuários, embora seu uso não é restrito. A biblioteca de tipos deve ser usada por controles. Hosts devem criar uma nova biblioteca de tipos que encapsula o controle com as propriedades estendidas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LIBFLAG_FRESTRICTED">
+      <MemberSignature Language="C#" Value="LIBFLAG_FRESTRICTED" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.ComTypes.LIBFLAGS LIBFLAG_FRESTRICTED = int16(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.ComTypes.LIBFLAGS.LIBFLAG_FRESTRICTED" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.LIBFLAGS</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A biblioteca de tipos é restrita e não deve ser exibida aos usuários.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

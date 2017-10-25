@@ -1,0 +1,166 @@
+<Type Name="EventWatcherOptions" FullName="System.Management.EventWatcherOptions">
+  <TypeSignature Language="C#" Value="public class EventWatcherOptions : System.Management.ManagementOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventWatcherOptions extends System.Management.ManagementOptions" />
+  <TypeSignature Language="DocId" Value="T:System.Management.EventWatcherOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ManagementOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica opções para observação de evento de gerenciamento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como o cliente recebe a notificação quando uma instância do **Win32_Process** é criado porque a classe de evento é **InstanceCreationEvent**. Para obter mais informações, consulte a documentação da instrumentação de gerenciamento do Windows na biblioteca MSDN em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library). O cliente recebe eventos de forma síncrona, chamando o <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A> método. Este exemplo pode ser testado iniciando um processo, como o bloco de notas, enquanto o código de exemplo está em execução.  
+  
+ [!code-csharp[wminet_EventWatcherOptions#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventWatcherOptions/cs/EventWatcherOptions.cs#1)]
+ [!code-vb[wminet_EventWatcherOptions#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventWatcherOptions/vb/EventWatcherOptions.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventWatcherOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EventWatcherOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.EventWatcherOptions" /> de classe para assistir a eventos, usando valores padrão. Esse é o construtor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como o cliente recebe a notificação quando uma instância do **Win32_Process** é criado porque a classe de evento é **InstanceCreationEvent**. Para obter mais informações, consulte a documentação da instrumentação de gerenciamento do Windows na biblioteca MSDN em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library). O cliente recebe eventos de forma síncrona, chamando o <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A> método. Este exemplo pode ser testado iniciando um processo, como o bloco de notas, enquanto o código de exemplo está em execução.  
+  
+ [!code-csharp[wminet_EventWatcherOptions()#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventWatcherOptions()/cs/EventWatcherOptions().cs#1)]
+ [!code-vb[wminet_EventWatcherOptions()#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventWatcherOptions()/vb/EventWatcherOptions().vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventWatcherOptions (System.Management.ManagementNamedValueCollection context, TimeSpan timeout, int blockSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.ManagementNamedValueCollection context, valuetype System.TimeSpan timeout, int32 blockSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EventWatcherOptions.#ctor(System.Management.ManagementNamedValueCollection,System.TimeSpan,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Management.ManagementNamedValueCollection" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="blockSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="context">O objeto de contexto de opções que contém informações específicas do provedor deve ser passado para o provedor.</param>
+        <param name="timeout">O tempo limite de espera para os próximos eventos.</param>
+        <param name="blockSize">O número de eventos para aguardar em cada bloco.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.EventWatcherOptions" /> classe com os valores fornecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como o cliente recebe a notificação quando uma instância do **Win32_Process** é criado porque a classe de evento é **InstanceCreationEvent**. Para obter mais informações, consulte a documentação da instrumentação de gerenciamento do Windows na biblioteca MSDN em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library). O cliente recebe eventos de forma síncrona, chamando o <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A> método. Este exemplo pode ser testado iniciando um processo, como o bloco de notas, enquanto o código de exemplo está em execução.  
+  
+ [!code-csharp[wminet_EventWatcherOptions-3#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventWatcherOptions-3/cs/EventWatcherOptions-3.cs#1)]
+ [!code-vb[wminet_EventWatcherOptions-3#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventWatcherOptions-3/vb/EventWatcherOptions-3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockSize">
+      <MemberSignature Language="C#" Value="public int BlockSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BlockSize" />
+      <MemberSignature Language="DocId" Value="P:System.Management.EventWatcherOptions.BlockSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho do bloco para operações de bloco. Ao esperar eventos, esse valor Especifica quantos eventos para aguardar antes de retornar.</summary>
+        <value>Retorna um <see cref="T:System.Int32" /> valor que indica o tamanho do bloco de um bloco de operações.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ O valor padrão é 1.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como o cliente recebe a notificação quando uma instância do **Win32_Process** é criado porque a classe de evento é **InstanceCreationEvent**. Para obter mais informações, consulte a documentação da instrumentação de gerenciamento do Windows na biblioteca MSDN em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library). O cliente recebe eventos de forma síncrona, chamando o <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A> método. Este exemplo pode ser testado iniciando um processo, como o bloco de notas, enquanto o código de exemplo está em execução.  
+  
+ [!code-csharp[wminet_EventWatcherOptions_BlockSize#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventWatcherOptions_BlockSize/cs/EventWatcherOptions_BlockSize.cs#1)]
+ [!code-vb[wminet_EventWatcherOptions_BlockSize#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventWatcherOptions_BlockSize/vb/EventWatcherOptions_BlockSize.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EventWatcherOptions.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cópia do objeto.</summary>
+        <returns>O objeto clonado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

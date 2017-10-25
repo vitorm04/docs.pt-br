@@ -1,0 +1,166 @@
+<Type Name="VisualStyleElement+Page+DownHorizontal" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+Page+DownHorizontal">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.Page.DownHorizontal" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/Page/DownHorizontal extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> objetos para cada estado de um indicador com versões anteriores de página em um controle de pager. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada propriedade do <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal> classe retorna um <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> para um estado diferente de um indicador para trás da página de um controle de pager.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Normal%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Page_DownHorizontal1` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#45](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#45)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#45](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#45)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Disabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Disabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Disabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um indicador para trás da página de um controle de pager em um estado desabilitado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um indicador para trás da página de um controle de pager em um estado desabilitado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Disabled%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Disabled%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Page_DownHorizontal4` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#48](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#48)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#48](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Hot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Hot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Hot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um indicador para trás da página de um controle de pager no estado ativo.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um indicador de página com versões anteriores de um controle de pager no estado ativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Hot%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Hot%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Page_DownHorizontal2` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#46](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#46)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#46](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#46)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Normal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Normal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um indicador para trás da página de um controle de pager no estado normal.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa um indicador de página com versões anteriores de um controle de pager no estado normal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Normal%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Normal%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Page_DownHorizontal1` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#45](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#45)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#45](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#45)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pressed">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.VisualStyles.VisualStyleElement Pressed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.VisualStyles.VisualStyleElement Pressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Pressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento de estilo visual que representa um indicador para trás da página de um controle de pager no estado pressionado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> que representa a página indicador com versões anteriores de um controle de pager no estado pressionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Pressed%2A> propriedade para criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> com o <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> retornado pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Page.DownHorizontal.Pressed%2A> propriedade. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `DrawVisualStyleElement_Page_DownHorizontal3` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Windows.Forms.VisualStyleElementsExamples#47](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/CS/Form1.cs#47)]
+ [!code-vb[System.Windows.Forms.VisualStyleElementsExamples#47](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyleElementsExamples/VB/Form1.vb#47)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

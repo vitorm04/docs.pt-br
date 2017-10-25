@@ -1,0 +1,292 @@
+<Type Name="ResolveKeySource" FullName="Microsoft.Build.Tasks.ResolveKeySource">
+  <TypeSignature Language="C#" Value="public class ResolveKeySource : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveKeySource extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.ResolveKeySource" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa o <c>ResolveKeySource</c> tarefa. Use o <c>ResolveKeySource</c> elemento no arquivo de projeto para criar e executar essa tarefa. Para obter informações de uso e de parâmetro, consulte [tarefa ResolveKeySource](http://msdn.microsoft.com/library/449f06c2-e9aa-4236-ab1e-c45c25452b2e).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveKeySource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveKeySource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Tasks.ResolveKeySource" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AutoClosePasswordPromptShow">
+      <MemberSignature Language="C#" Value="public int AutoClosePasswordPromptShow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AutoClosePasswordPromptShow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveKeySource.AutoClosePasswordPromptShow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo, em segundos, para exibir a contagem de mensagem de inatividade.</summary>
+        <value>A quantidade de tempo, em segundos, para exibir a contagem de mensagem de inatividade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é 15 segundos.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AutoClosePasswordPromptTimeout">
+      <MemberSignature Language="C#" Value="public int AutoClosePasswordPromptTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AutoClosePasswordPromptTimeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveKeySource.AutoClosePasswordPromptTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período de tempo, em segundos, a esperar antes de fechar a caixa de diálogo de aviso de senha.</summary>
+        <value>A quantidade de tempo, em segundos, a esperar antes de fechar a caixa de diálogo prompt de senha.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é 20 segundos.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateFile">
+      <MemberSignature Language="C#" Value="public string CertificateFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CertificateFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveKeySource.CertificateFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do arquivo do certificado.</summary>
+        <value>O caminho do arquivo do certificado.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateThumbprint">
+      <MemberSignature Language="C#" Value="public string CertificateThumbprint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CertificateThumbprint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveKeySource.CertificateThumbprint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a impressão digital do certificado.</summary>
+        <value>A impressão digital do certificado.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.ResolveKeySource.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o <c>ResolveKeySource</c> tarefa.</summary>
+        <returns>
+          <see langword="true" /> caso a execução da tarefa seja bem-sucedida; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="KeyFile">
+      <MemberSignature Language="C#" Value="public string KeyFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveKeySource.KeyFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do arquivo da chave.</summary>
+        <value>O caminho do arquivo de chave.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedKeyContainer">
+      <MemberSignature Language="C#" Value="public string ResolvedKeyContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResolvedKeyContainer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveKeySource.ResolvedKeyContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contêiner de chave resolvido.</summary>
+        <value>O contêiner de chave resolvido.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedKeyFile">
+      <MemberSignature Language="C#" Value="public string ResolvedKeyFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResolvedKeyFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveKeySource.ResolvedKeyFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contêiner de arquivo resolvido.</summary>
+        <value>O arquivo de chave resolvido.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResolvedThumbprint">
+      <MemberSignature Language="C#" Value="public string ResolvedThumbprint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResolvedThumbprint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveKeySource.ResolvedThumbprint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a impressão digital do certificado resolvido.</summary>
+        <value>A impressão digital do certificado resolvido.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ShowImportDialogDespitePreviousFailures">
+      <MemberSignature Language="C#" Value="public bool ShowImportDialogDespitePreviousFailures { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowImportDialogDespitePreviousFailures" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveKeySource.ShowImportDialogDespitePreviousFailures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que especifica se deve mostrar a caixa de diálogo de importação apesar das falhas anteriores.</summary>
+        <value>
+          <see langword="true" />Se a tarefa deve mostrar a caixa de diálogo de importação apesar das falhas anteriores; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressAutoClosePasswordPrompt">
+      <MemberSignature Language="C#" Value="public bool SuppressAutoClosePasswordPrompt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressAutoClosePasswordPrompt" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.ResolveKeySource.SuppressAutoClosePasswordPrompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que especifica se a caixa de diálogo de aviso de senha deve não fechamento automático.</summary>
+        <value>
+          <see langword="true" />a caixa de diálogo de aviso de senha deve não fechamento automático; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

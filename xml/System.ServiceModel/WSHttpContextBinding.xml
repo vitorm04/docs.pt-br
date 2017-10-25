@@ -1,0 +1,223 @@
+<Type Name="WSHttpContextBinding" FullName="System.ServiceModel.WSHttpContextBinding">
+  <TypeSignature Language="C#" Value="public class WSHttpContextBinding : System.ServiceModel.WSHttpBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WSHttpContextBinding extends System.ServiceModel.WSHttpBinding" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.WSHttpContextBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.WSHttpBinding</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma associação habilitada para contexto para o <see cref="T:System.ServiceModel.WSHttpContextBinding" /></summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.WSHttpContextBinding> adiciona um <xref:System.ServiceModel.Channels.ContextBindingElement> para a pilha de <xref:System.ServiceModel.Channels.BindingElement> objetos do sistema fornecida <xref:System.ServiceModel.WSHttpBinding>. Isso permite que os cabeçalhos SOAP a ser usada para trocar o contexto quando cookies HTTP não estão habilitados.  
+  
+> [!NOTE]
+>  Ao chamar um [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviço criado com [!INCLUDE[netfx40_long](~/includes/netfx40-long-md.md)] de um aplicativo de cliente WCF criado com [!INCLUDE[netfx35_long](~/includes/netfx35-long-md.md)] ou anterior, o arquivo de configuração gerado svcutil.exe ou adicionando uma referência de serviço do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] contém o `contextManagementEnabled` atributo na configuração de associação. Esse atributo não é reconhecido pelo [!INCLUDE[netfx35_short](~/includes/netfx35-short-md.md)] tempo de execução e o aplicativo gera um <xref:System.Configuration.ConfigurationErrorsException> com a mensagem "atributo não reconhecido ' contextManagementEnabled". Para solucionar esse problema, remova o `contextManagementEnabled` atributo da configuração de associação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSHttpContextBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSHttpContextBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.WSHttpContextBinding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSHttpContextBinding (System.ServiceModel.SecurityMode securityMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.SecurityMode securityMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSHttpContextBinding.#ctor(System.ServiceModel.SecurityMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.SecurityMode" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">O modo de segurança.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.WSHttpContextBinding" /> usando o <see cref="T:System.ServiceModel.SecurityMode" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor quando você deseja configurar a segurança, mas não habilitar sessões confiáveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSHttpContextBinding (string configName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSHttpContextBinding.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configName">O nome da configuração de associação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.WSHttpContextBinding" /> classe com a configuração de associação especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `configName` parâmetro deve ser definido como o nome do `<binding>` elemento no arquivo de configuração que configura essa associação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSHttpContextBinding (System.ServiceModel.SecurityMode securityMode, bool reliableSessionEnabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.SecurityMode securityMode, bool reliableSessionEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSHttpContextBinding.#ctor(System.ServiceModel.SecurityMode,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="securityMode" Type="System.ServiceModel.SecurityMode" />
+        <Parameter Name="reliableSessionEnabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="securityMode">O modo de segurança.</param>
+        <param name="reliableSessionEnabled">
+          <see langword="true" />Para habilitar sessões confiáveis; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.WSHttpContextBinding" /> classe com especificado <see cref="T:System.ServiceModel.SecurityMode" /> e configuração de sessão confiável.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor quando você deseja configurar a segurança e habilitar sessões confiáveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCallbackAddress">
+      <MemberSignature Language="C#" Value="public Uri ClientCallbackAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ClientCallbackAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço de retorno de chamada de cliente.</summary>
+        <value>O endereço de retorno de chamada do cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextManagementEnabled">
+      <MemberSignature Language="C#" Value="public bool ContextManagementEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContextManagementEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WSHttpContextBinding.ContextManagementEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o gerenciamento de contexto está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o gerenciamento de contexto estiver habilitado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ContextProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ContextProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WSHttpContextBinding.ContextProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de proteção de contexto para esta associação.</summary>
+        <value>O nível de proteção para a associação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElements">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElementCollection CreateBindingElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElementCollection CreateBindingElements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSHttpContextBinding.CreateBindingElements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma coleção ordenada de elementos contidos na associação atual de associação.</summary>
+        <returns>A pilha ordenada de elementos descritos por de associação a <see cref="T:System.ServiceModel.WSHttpContextBinding" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção contém o <xref:System.ServiceModel.Channels.ContextBindingElement>, que permite que os cabeçalhos SOAP a ser usada para trocar o contexto quando cookies HTTP não estão habilitados; caso contrário, usar cookies HTTP para troca de contexto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

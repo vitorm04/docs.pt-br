@@ -1,0 +1,150 @@
+<Type Name="HelpNavigator" FullName="System.Windows.Forms.HelpNavigator">
+  <TypeSignature Language="C#" Value="public enum HelpNavigator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HelpNavigator extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HelpNavigator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica as constantes que indicam quais elementos do arquivo de ajuda serão exibidos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelo <xref:System.Windows.Forms.Help> e <xref:System.Windows.Forms.HelpProvider> classes para fornecer acesso aos elementos específicos de um arquivo de Ajuda. Por exemplo, quando usado com o <xref:System.Windows.Forms.HelpProvider> componente que fornece Ajuda F1, o TopicId ou tópico valor poderá ser especificada para abrir a Ajuda para um tópico de contexto específico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário com três botões que pode ser usado para interagir com o arquivo de ajuda mspaint.chm. O **Mostrar índice da Ajuda** botão exibe o **índice** guia para o arquivo de Ajuda. O **Mostrar Ajuda** botão exibe o conteúdo do arquivo de ajuda com base no valor selecionado no **navegador Ajuda** lista. O **palavra-chave Mostrar** botão exibe o conteúdo do arquivo de ajuda com a palavra-chave especificada no **palavra-chave** caixa de texto.  
+  
+ Por exemplo, para mostrar a página de ajuda de elipses pelo valor de índice, selecione o valor de KeywordIndex no **navegador Ajuda** lista suspensa, digite **ovais** no **parâmetro** caixa de texto e, em seguida, clique no **Mostrar Ajuda** botão. Para exibir o tópico da Ajuda "para pintar com um pincel" da palavra-chave, digite **mspaint.chm::/paint_brush.htm** no **palavra-chave** caixa de texto e clique o **palavra-chave Mostrar** botão.  
+  
+ O exemplo usa o <xref:System.Windows.Forms.Help.ShowHelp%2A> método para exibir as diferentes guias de Ajuda e os tópicos da Ajuda e o <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> método para exibir o índice da Ajuda.  
+  
+ [!code-cpp[System.Windows.Forms.Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Help/CPP/helpsnippet.cpp#1)]
+ [!code-csharp[System.Windows.Forms.Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Help/CS/helpsnippet.cs#1)]
+ [!code-vb[System.Windows.Forms.Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Help/VB/helpsnippet.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssociateIndex">
+      <MemberSignature Language="C#" Value="AssociateIndex" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator AssociateIndex = int32(-2147483643)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.AssociateIndex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O arquivo de ajuda abre para a entrada de índice para a primeira letra de um tópico especificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="Find" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator Find = int32(-2147483644)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.Find" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O arquivo de ajuda abre para a página de pesquisa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="Index" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator Index = int32(-2147483645)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.Index" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O arquivo de ajuda abre para o índice.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KeywordIndex">
+      <MemberSignature Language="C#" Value="KeywordIndex" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator KeywordIndex = int32(-2147483642)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.KeywordIndex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O arquivo de ajuda abre para o tópico com a entrada de índice especificada, se houver; caso contrário, a entrada de índice mais próxima d palavra-chave especificada é exibida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TableOfContents">
+      <MemberSignature Language="C#" Value="TableOfContents" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator TableOfContents = int32(-2147483646)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.TableOfContents" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O arquivo de ajuda abre o sumário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Topic">
+      <MemberSignature Language="C#" Value="Topic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator Topic = int32(-2147483647)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.Topic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O arquivo de ajuda abrirá um tópico especificado, se houver o tópico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopicId">
+      <MemberSignature Language="C#" Value="TopicId" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.HelpNavigator TopicId = int32(-2147483641)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.HelpNavigator.TopicId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HelpNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O arquivo de ajuda abre para um tópico indicado por um identificador numérico do tópico.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

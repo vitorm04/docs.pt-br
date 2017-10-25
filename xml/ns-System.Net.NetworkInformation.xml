@@ -1,0 +1,6 @@
+<Namespace Name="System.Net.NetworkInformation">
+  <Docs>
+    <summary>O <see cref="N:System.Net.NetworkInformation" /> namespace fornece acesso a dados de tráfego de rede, informações de endereço de rede e notificação de alterações de endereço para o computador local. O namespace também contém classes que implementam o utilitário Ping. Você pode usar <see cref="T:System.Net.NetworkInformation.Ping" /> e classes para verificar se um computador está acessível pela rede relacionadas.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

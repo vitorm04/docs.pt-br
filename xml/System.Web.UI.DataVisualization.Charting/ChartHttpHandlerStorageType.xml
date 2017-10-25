@@ -1,0 +1,66 @@
+<Type Name="ChartHttpHandlerStorageType" FullName="System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType">
+  <TypeSignature Language="C#" Value="public enum ChartHttpHandlerStorageType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ChartHttpHandlerStorageType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica um tipo de armazenamento para imagens de gráfico.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="File">
+      <MemberSignature Language="C#" Value="File" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType File = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType.File" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Imagens do gráfico são armazenadas em um arquivo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InProcess">
+      <MemberSignature Language="C#" Value="InProcess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType InProcess = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType.InProcess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gráfico de imagens são armazenadas na memória do processo particular. Você não pode usar essa opção em um ambiente de vários processos ou farm.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="Session" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType Session = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType.Session" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Imagens do gráfico são armazenadas na sessão do ASP.NET.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

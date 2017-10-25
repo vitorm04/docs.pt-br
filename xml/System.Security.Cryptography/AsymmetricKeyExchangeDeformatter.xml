@@ -1,0 +1,214 @@
+<Type Name="AsymmetricKeyExchangeDeformatter" FullName="System.Security.Cryptography.AsymmetricKeyExchangeDeformatter">
+  <TypeSignature Language="C#" Value="public abstract class AsymmetricKeyExchangeDeformatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AsymmetricKeyExchangeDeformatter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base da qual derivam todas as deformatters de troca de chave assimétrica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Deformatters de troca de chave assimétrica descriptografar os dados de troca de chaves.  
+  
+ Troca de chaves permite que um remetente criar informações secretas, como dados aleatórios que podem ser usados como uma chave em um algoritmo de criptografia simétrica e usam a criptografia para enviar ao destinatário pretendido.  
+  
+> [!CAUTION]
+>  É altamente recomendável que você não tentar criar seu próprio método de troca de chaves de funcionalidade básica fornecida, porque muitos detalhes da operação devem ser realizados com cuidado para a troca de chave seja bem-sucedida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como estender o <xref:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.AsymmetricKeyExchangeDeformatter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter/CS/contosodeformatter.cs#1)]
+ [!code-vb[System.Security.Cryptography.AsymmetricKeyExchangeDeformatter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter/VB/contosodeformatter.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AsymmetricKeyExchangeDeformatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância de uma classe abstrata. Código do aplicativo criará uma nova instância de uma classe derivada.  
+  
+ Use uma implementação de <xref:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.SetKey%2A> para estabelecer a chave antes de chamar uma implementação de <xref:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.DecryptKeyExchange%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptKeyExchange">
+      <MemberSignature Language="C#" Value="public abstract byte[] DecryptKeyExchange (byte[] rgb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] DecryptKeyExchange(unsigned int8[] rgb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.DecryptKeyExchange(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgb" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgb">Os dados de troca de chave dentro do qual as informações secretas está oculto.</param>
+        <summary>Quando substituído em uma classe derivada, extrai informações secretas dos dados de troca de chave criptografada.</summary>
+        <returns>As informações secretas derivado dos dados de troca de chaves.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve especificar uma chave antes de chamar uma implementação deste método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.DecryptKeyExchange%2A> método para criar uma troca de chave criptografada para os dados de entrada especificados. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.AsymmetricKeyExchangeDeformatter#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter/CS/contosodeformatter.cs#4)]
+ [!code-vb[System.Security.Cryptography.AsymmetricKeyExchangeDeformatter#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter/VB/contosodeformatter.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public abstract string Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém ou define os parâmetros para a troca de chave assimétrica.</summary>
+        <value>Uma cadeia de caracteres em formato XML que contém os parâmetros da operação de troca de chave assimétrica.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.Parameters%2A> propriedade para impedir o acesso aos parâmetros do formatador. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.AsymmetricKeyExchangeDeformatter#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter/CS/contosodeformatter.cs#3)]
+ [!code-vb[System.Security.Cryptography.AsymmetricKeyExchangeDeformatter#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter/VB/contosodeformatter.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKey">
+      <MemberSignature Language="C#" Value="public abstract void SetKey (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetKey(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.SetKey(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">A instância da implementação do <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" /> que contém a chave privada.</param>
+        <summary>Quando substituído em uma classe derivada, define a chave privada a ser usado para descriptografar as informações secretas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve definir uma chave antes de chamar um <xref:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.DecryptKeyExchange%2A> implementação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter.SetKey%2A> para definir a chave pública para operações de criptografia. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.AsymmetricKeyExchangeDeformatter> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.AsymmetricKeyExchangeDeformatter#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter/CS/contosodeformatter.cs#5)]
+ [!code-vb[System.Security.Cryptography.AsymmetricKeyExchangeDeformatter#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Security.Cryptography.AsymmetricKeyExchangeDeformatter/VB/contosodeformatter.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

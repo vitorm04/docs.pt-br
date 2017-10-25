@@ -1,0 +1,95 @@
+<Type Name="FrameworkElementAdapters" FullName="System.AddIn.Pipeline.FrameworkElementAdapters">
+  <TypeSignature Language="C#" Value="public static class FrameworkElementAdapters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit FrameworkElementAdapters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Pipeline.FrameworkElementAdapters" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+      <see cref="T:System.AddIn.Pipeline.FrameworkElementAdapters" />é usado pelos suplementos do Windows Presentation Foundation (WPF) para converter entre uma <see cref="T:System.Windows.FrameworkElement" /> e um <see cref="T:System.AddIn.Contract.INativeHandleContract" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]estende o [!INCLUDE[TLA#tla_winfx](~/includes/tlasharptla-winfx-md.md)] modelo de suplemento para permitir [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](~/includes/tla2sharptla-uisharpplural-md.md)] para ser transmitidos entre aplicativos host e suplementos [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] requer que o [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](~/includes/tla2sharptla-uisharpplural-md.md)] que o recebem diretamente ou indiretamente derivar de <xref:System.Windows.FrameworkElement>. No entanto, suplementos e host de aplicativos são geralmente executados em domínios de aplicativo separados e são, consequentemente, separados por um limite de isolamento. Por esse motivo, a [!INCLUDE[TLA2#tla_winfx](~/includes/tla2sharptla-winfx-md.md)] suplemento modelo exige que os tipos que são transmitidos pelo limite de isolamento para ser remotos. Um tipo permite acesso remoto está em conformidade com um dos seguintes:  
+  
+-   Implementa o <xref:System.Runtime.Serialization.ISerializable> interface.  
+  
+-   Tem o <xref:System.SerializableAttribute> atributo aplicado.  
+  
+-   Deriva a <xref:System.MarshalByRefObject> classe.  
+  
+ <xref:System.Windows.FrameworkElement>não é remota e deve ser convertido em um tipo de remoto antes de ser passada através dos limites de isolamento entre um suplemento e um aplicativo host. Para essa finalidade, você precisa chamar estático <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> método para converter o <xref:System.Windows.FrameworkElement> a uma instância do remoto <xref:System.AddIn.Contract.INativeHandleContract>.  
+  
+ Uma vez o <xref:System.AddIn.Contract.INativeHandleContract> é passado pelo limite de isolamento, ele deve ser convertido para um tipo que pode ser exibido, o aplicativo de host ou o suplemento. Nesse caso, estático <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> método é chamado para converter um <xref:System.AddIn.Contract.INativeHandleContract> para um <xref:System.Windows.FrameworkElement>.  
+  
+ Para obter mais feira do [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] suplementos, consulte [visão geral de suplementos WPF](~/docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContractToViewAdapter">
+      <MemberSignature Language="C#" Value="public static System.Windows.FrameworkElement ContractToViewAdapter (System.AddIn.Contract.INativeHandleContract nativeHandleContract);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.FrameworkElement ContractToViewAdapter(class System.AddIn.Contract.INativeHandleContract nativeHandleContract) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter(System.AddIn.Contract.INativeHandleContract)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nativeHandleContract" Type="System.AddIn.Contract.INativeHandleContract" />
+      </Parameters>
+      <Docs>
+        <param name="nativeHandleContract">O <see cref="T:System.AddIn.Contract.INativeHandleContract" /> que foi passado pelo limite de isolamento entre o aplicativo de host e o suplemento.</param>
+        <summary>Retorna um <see cref="T:System.Windows.FrameworkElement" /> que foi convertido de um <see cref="T:System.AddIn.Contract.INativeHandleContract" />.</summary>
+        <returns>Um <see cref="T:System.Windows.FrameworkElement" /> que serão exibidas do aplicativo de host ou suplemento, dependendo da direção em que o [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] é passados entre os dois.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewToContractAdapter">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Contract.INativeHandleContract ViewToContractAdapter (System.Windows.FrameworkElement root);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.AddIn.Contract.INativeHandleContract ViewToContractAdapter(class System.Windows.FrameworkElement root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.INativeHandleContract</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="root">O <see cref="T:System.Windows.FrameworkElement" /> para ultrapassar o limite de isolamento entre o aplicativo de host e o suplemento.</param>
+        <summary>Retorna um <see cref="T:System.AddIn.Contract.INativeHandleContract" /> que foi convertido de um <see cref="T:System.Windows.FrameworkElement" />.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.INativeHandleContract" /> que é passado do aplicativo de host ou o suplemento, dependendo da direção em que o [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] é passados entre os dois.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="root" />não é o elemento raiz de uma árvore de elementos.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

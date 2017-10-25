@@ -1,0 +1,773 @@
+<Type Name="Size" FullName="System.Drawing.Size">
+  <TypeSignature Language="C#" Value="public struct Size" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Size extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Size" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Docs>
+    <summary>Armazena um par ordenado de inteiros, que especificam um <see cref="P:System.Drawing.Size.Height" /> e <see cref="P:System.Drawing.Size.Width" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Size> classe é usada para especificar uma altura e largura por meio de <xref:System.Drawing.Rectangle.Size%2A> propriedade <xref:System.Drawing.Rectangle>, <xref:System.Drawing.RectangleF>, <xref:System.Drawing.Image>, <xref:System.Drawing.Icon> e outras classes de elementos gráficos. Você pode executar operações em um <xref:System.Drawing.Size> usando os operadores sobrecarregados como <xref:System.Drawing.Size.op_Addition%2A>, <xref:System.Drawing.Size.op_Subtraction%2A>, e <xref:System.Drawing.Size.op_Equality%2A>. A unidade para o <xref:System.Drawing.Size.Height%2A> e <xref:System.Drawing.Size.Width%2A> do <xref:System.Drawing.Size> estrutura dependem de <xref:System.Drawing.Graphics.PageUnit%2A> e <xref:System.Drawing.Graphics.PageScale%2A> configurações para o <xref:System.Drawing.Graphics> objeto que é usado para desenhar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Size (System.Drawing.Point pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Point pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.#ctor(System.Drawing.Point)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pt">A estrutura <see cref="T:System.Drawing.Point" /> da qual inicializar esta estrutura <see cref="T:System.Drawing.Size" />.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Drawing.Size" /> da estrutura <see cref="T:System.Drawing.Point" /> especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Size (int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="width">O componente de largura do novo <see cref="T:System.Drawing.Size" />.</param>
+        <param name="height">O componente de altura do novo <see cref="T:System.Drawing.Size" />.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Drawing.Size" /> das dimensões especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Point.%23ctor%2A?displayProperty=nameWithType> e <xref:System.Drawing.Size.%23ctor%2A> construtores e <xref:System.Drawing.ContentAlignment?displayProperty=nameWithType> enumeração. Para executar este exemplo, cole este código em um formulário do Windows que contenha um rótulo chamado `Label1` e chamar o `IntializeLabel1` método no construtor do formulário.  
+  
+ [!code-cpp[System.Drawing.PointsAndSizes#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.PointsAndSizes#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.PointsAndSizes#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size Add (System.Drawing.Size sz1, System.Drawing.Size sz2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size Add(valuetype System.Drawing.Size sz1, valuetype System.Drawing.Size sz2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.Add(System.Drawing.Size,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sz1" Type="System.Drawing.Size" />
+        <Parameter Name="sz2" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="sz1">A primeira estrutura <see cref="T:System.Drawing.Size" /> a ser adicionada.</param>
+        <param name="sz2">A segunda estrutura <see cref="T:System.Drawing.Size" /> a ser adicionada.</param>
+        <summary>Adiciona a largura e altura de uma estrutura <see cref="T:System.Drawing.Size" /> à largura e altura de outra estrutura <see cref="T:System.Drawing.Size" />.</summary>
+        <returns>Uma estrutura <see cref="T:System.Drawing.Size" /> que é o resultado da operação de adição.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Size.Add%2A> método. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `AddSizes` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#11)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ceiling">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size Ceiling (System.Drawing.SizeF value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size Ceiling(valuetype System.Drawing.SizeF value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.Ceiling(System.Drawing.SizeF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Drawing.SizeF" />
+      </Parameters>
+      <Docs>
+        <param name="value">A estrutura <see cref="T:System.Drawing.SizeF" /> a ser convertida.</param>
+        <summary>Converte especificado <see cref="T:System.Drawing.SizeF" /> estrutura para um <see cref="T:System.Drawing.Size" /> estrutura, arredondando os valores da <see cref="T:System.Drawing.Size" /> estrutura para os valores de inteiro mais próximos.</summary>
+        <returns>A estrutura <see cref="T:System.Drawing.Size" /> para a qual esse método converte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.Size Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Drawing.Size Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Size.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Drawing.Size" /> estrutura que tem um <see cref="P:System.Drawing.Size.Height" /> e <see cref="P:System.Drawing.Size.Width" /> valor de 0.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Drawing.Size other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Drawing.Size other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.Equals(System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> a ser testado.</param>
+        <summary>Testes para verificar se o objeto especificado é um <see cref="T:System.Drawing.Size" /> estrutura com as mesmas dimensões como isso <see cref="T:System.Drawing.Size" /> estrutura.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é um <see cref="T:System.Drawing.Size" /> e tem a mesma largura e altura como isso <see cref="T:System.Drawing.Size" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash desta estrutura <see cref="T:System.Drawing.Size" />.</summary>
+        <returns>Um valor inteiro que especifica um valor de hash para este <see cref="T:System.Drawing.Size" /> estrutura.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve evitar dependendo <xref:System.Drawing.Size.GetHashCode%2A> de valores exclusivos, como dois <xref:System.Drawing.Size> objetos com os mesmos valores para seus <xref:System.Drawing.Size.Width%2A> e <xref:System.Drawing.Size.Height%2A> propriedades podem retornar o mesmo código de hash. Esse comportamento foi alterado em uma versão futura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Size.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o componente vertical desta estrutura de <see cref="T:System.Drawing.Size" />.</summary>
+        <value>O componente vertical desta estrutura de <see cref="T:System.Drawing.Size" />, geralmente medido em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A unidade para o <xref:System.Drawing.Size.Height%2A> e <xref:System.Drawing.Size.Width%2A> do <xref:System.Drawing.Size> estrutura dependem de <xref:System.Drawing.Graphics.PageUnit%2A> e <xref:System.Drawing.Graphics.PageScale%2A> configurações para o <xref:System.Drawing.Graphics> objeto que é usado para desenhar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Size.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Testa se essa estrutura <see cref="T:System.Drawing.Size" /> tem a altura e largura de 0.</summary>
+        <value>Essa propriedade retorna <see langword="true" /> quando essa estrutura <see cref="T:System.Drawing.Size" /> tem a largura e a altura de 0; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size operator + (System.Drawing.Size sz1, System.Drawing.Size sz2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Drawing.Size op_Addition(valuetype System.Drawing.Size sz1, valuetype System.Drawing.Size sz2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.op_Addition(System.Drawing.Size,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sz1" Type="System.Drawing.Size" />
+        <Parameter Name="sz2" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="sz1">A primeira <see cref="T:System.Drawing.Size" /> para adicionar.</param>
+        <param name="sz2">O segundo <see cref="T:System.Drawing.Size" /> para adicionar.</param>
+        <summary>Adiciona a largura e altura de uma estrutura <see cref="T:System.Drawing.Size" /> à largura e altura de outra estrutura <see cref="T:System.Drawing.Size" />.</summary>
+        <returns>Uma estrutura <see cref="T:System.Drawing.Size" /> que é o resultado da operação de adição.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Drawing.Size.op_Addition%2A> operador. O exemplo foi projetado para ser usado com o Windows Forms. Para executar este exemplo, cole-o em um formulário que contém um botão chamado `addButton` e associar o `addButton_Click` método com o botão <xref:System.Windows.Forms.Control.Click> eventos.  
+  
+ [!code-cpp[System.Drawing.PointsAndSizes#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.PointsAndSizes#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.PointsAndSizes#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Drawing.Size sz1, System.Drawing.Size sz2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Drawing.Size sz1, valuetype System.Drawing.Size sz2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.op_Equality(System.Drawing.Size,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sz1" Type="System.Drawing.Size" />
+        <Parameter Name="sz2" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="sz1">A estrutura <see cref="T:System.Drawing.Size" /> no lado esquerdo do operador de igualdade.</param>
+        <param name="sz2">A estrutura <see cref="T:System.Drawing.Size" /> no lado direito do operador de igualdade.</param>
+        <summary>Testa se duas estruturas <see cref="T:System.Drawing.Size" /> são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="sz1" /> e <paramref name="sz2" /> tiverem a mesma largura e altura; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria pontos e tamanhos usando vários dos operadores sobrecarregados definidos para esses tipos. Ele também demonstra como usar o <xref:System.Drawing.SystemPens> classe.  
+  
+ Este exemplo é projetado para ser usado com o Windows Forms. Criar um formulário que contém um <xref:System.Windows.Forms.Button> chamado `subtractButton`. Cole o código para o formulário e chamar o `CreatePointsAndSizes` método do formulário de <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.PointsAndSizes#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.PointsAndSizes#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.PointsAndSizes#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Drawing.Point (System.Drawing.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Drawing.Point op_Explicit(valuetype System.Drawing.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.op_Explicit(System.Drawing.Size)~System.Drawing.Point" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Drawing.SizeF (System.Drawing.Size p);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Drawing.SizeF op_Implicit(valuetype System.Drawing.Size p) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.op_Implicit(System.Drawing.Size)~System.Drawing.SizeF" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.SizeF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="p">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Drawing.Size sz1, System.Drawing.Size sz2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Drawing.Size sz1, valuetype System.Drawing.Size sz2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.op_Inequality(System.Drawing.Size,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sz1" Type="System.Drawing.Size" />
+        <Parameter Name="sz2" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="sz1">O <see cref="T:System.Drawing.Size" /> estrutura à esquerda do operador de desigualdade.</param>
+        <param name="sz2">O <see cref="T:System.Drawing.Size" /> estrutura à direita do operador de desigualdade.</param>
+        <summary>Testa se dois <see cref="T:System.Drawing.Size" /> estruturas são diferentes.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="sz1" /> e <paramref name="sz2" /> diferem em largura ou altura; <see langword="false" /> se <paramref name="sz1" /> e <paramref name="sz2" /> são iguais.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size operator - (System.Drawing.Size sz1, System.Drawing.Size sz2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Drawing.Size op_Subtraction(valuetype System.Drawing.Size sz1, valuetype System.Drawing.Size sz2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.op_Subtraction(System.Drawing.Size,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sz1" Type="System.Drawing.Size" />
+        <Parameter Name="sz2" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="sz1">A estrutura <see cref="T:System.Drawing.Size" /> no lado esquerdo do operador de subtração.</param>
+        <param name="sz2">A estrutura <see cref="T:System.Drawing.Size" /> no lado direito do operador de subtração.</param>
+        <summary>Subtrai a largura e altura de uma estrutura <see cref="T:System.Drawing.Size" /> da largura e altura de outra estrutura <see cref="T:System.Drawing.Size" />.</summary>
+        <returns>Um <see cref="T:System.Drawing.Size" /> estrutura que é o resultado da operação de subtração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Drawing.Size.op_Subtraction%2A> operador. O exemplo foi projetado para ser usado com o Windows Forms. Para executar o exemplo, cole-o em um formulário que contém um botão chamado `subtractionButton` e associar o `subtractButton_Click` método com o botão <xref:System.Windows.Forms.Control.Click> eventos.  
+  
+ [!code-cpp[System.Drawing.PointsAndSizes#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.PointsAndSizes#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.PointsAndSizes#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Round">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size Round (System.Drawing.SizeF value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size Round(valuetype System.Drawing.SizeF value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.Round(System.Drawing.SizeF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Drawing.SizeF" />
+      </Parameters>
+      <Docs>
+        <param name="value">A estrutura <see cref="T:System.Drawing.SizeF" /> a ser convertida.</param>
+        <summary>Converte a estrutura <see cref="T:System.Drawing.SizeF" /> especificada em uma estrutura <see cref="T:System.Drawing.Size" />, arredondando os valores da estrutura <see cref="T:System.Drawing.SizeF" /> para os valores inteiros mais próximos.</summary>
+        <returns>A estrutura <see cref="T:System.Drawing.Size" /> para a qual esse método converte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar estático <xref:System.Drawing.Size.Round%2A> e <xref:System.Drawing.Size.Truncate%2A> métodos para converter um <xref:System.Drawing.SizeF> para um <xref:System.Drawing.Size>. Este exemplo é projetado para ser usado com o Windows Forms. Para executar este exemplo, cole-o em um formulário que contém duas <xref:System.Windows.Forms.Label> objetos nomeados `Label1` e `Label2`e, em seguida, chamar este método de construtor do formulário.  
+  
+ [!code-cpp[System.Drawing.PointsAndSizes#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.PointsAndSizes#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.PointsAndSizes#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size Subtract (System.Drawing.Size sz1, System.Drawing.Size sz2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size Subtract(valuetype System.Drawing.Size sz1, valuetype System.Drawing.Size sz2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.Subtract(System.Drawing.Size,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sz1" Type="System.Drawing.Size" />
+        <Parameter Name="sz2" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="sz1">A estrutura <see cref="T:System.Drawing.Size" /> no lado esquerdo do operador de subtração.</param>
+        <param name="sz2">A estrutura <see cref="T:System.Drawing.Size" /> no lado direito do operador de subtração.</param>
+        <summary>Subtrai a largura e altura de uma estrutura <see cref="T:System.Drawing.Size" /> da largura e altura de outra estrutura <see cref="T:System.Drawing.Size" />.</summary>
+        <returns>Uma estrutura <see cref="T:System.Drawing.Size" /> que é um resultado da operação de subtração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Size.Subtract%2A> método. Para executar este exemplo, cole-o em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas de `SubtractSizes` método do <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.MiscWhidbeySnippets#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/CS/Form1.cs#12)]
+ [!code-vb[System.Drawing.MiscWhidbeySnippets#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscWhidbeySnippets/VB/Form1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cadeia de caracteres legível que representa esta <see cref="T:System.Drawing.Size" /> estrutura.</summary>
+        <returns>Uma cadeia de caracteres que representa este <see cref="T:System.Drawing.Size" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Truncate">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size Truncate (System.Drawing.SizeF value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size Truncate(valuetype System.Drawing.SizeF value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Size.Truncate(System.Drawing.SizeF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Drawing.SizeF" />
+      </Parameters>
+      <Docs>
+        <param name="value">A estrutura <see cref="T:System.Drawing.SizeF" /> a ser convertida.</param>
+        <summary>Converte especificado <see cref="T:System.Drawing.SizeF" /> estrutura para um <see cref="T:System.Drawing.Size" /> estrutura truncando os valores da <see cref="T:System.Drawing.SizeF" /> estrutura para os próximos valores de inteiro inferiores.</summary>
+        <returns>A estrutura <see cref="T:System.Drawing.Size" /> para a qual esse método converte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar estático <xref:System.Drawing.Size.Round%2A> e <xref:System.Drawing.Size.Truncate%2A> métodos para converter um <xref:System.Drawing.SizeF> para um <xref:System.Drawing.Size>. Este exemplo é projetado para ser usado com o Windows Forms. Para executar este exemplo, cole-o em um formulário que contém duas <xref:System.Windows.Forms.Label> objetos nomeados `Label1` e `Label2`e, em seguida, chamar este método de construtor do formulário.  
+  
+ [!code-cpp[System.Drawing.PointsAndSizes#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.PointsAndSizes#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.PointsAndSizes#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.PointsAndSizes/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Size.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o componente horizontal desta estrutura de <see cref="T:System.Drawing.Size" />.</summary>
+        <value>O componente horizontal desta estrutura de <see cref="T:System.Drawing.Size" />, geralmente medido em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A unidade para o <xref:System.Drawing.Size.Height%2A> e <xref:System.Drawing.Size.Width%2A> do <xref:System.Drawing.Size> estrutura dependem de <xref:System.Drawing.Graphics.PageUnit%2A> e <xref:System.Drawing.Graphics.PageScale%2A> configurações para o <xref:System.Drawing.Graphics> objeto usado para desenhar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,123 @@
+<Type Name="MessageQueueAccessControlEntry" FullName="System.Messaging.MessageQueueAccessControlEntry">
+  <TypeSignature Language="C#" Value="public class MessageQueueAccessControlEntry : System.Messaging.AccessControlEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageQueueAccessControlEntry extends System.Messaging.AccessControlEntry" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueAccessControlEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Messaging.AccessControlEntry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os direitos de acesso para um objeto de confiança (usuário, grupo ou computador) para executar tarefas de enfileiramento de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Messaging.MessageQueueAccessControlEntry> classe para especificar os direitos para aplicar a um objeto de confiança. Esses direitos incluem inspecionar, receber ou enviar mensagens. Exibir ou modificar propriedades de fila ou permissões; e excluir filas. O <xref:System.Messaging.MessageQueue> da classe <xref:System.Messaging.MessageQueue.SetPermissions%2A> método fornece sobrecargas para passar uma instância dessa classe diretamente para o método ou adicioná-la a uma instância de <xref:System.Messaging.AccessControlList> para que você possa adicionar direitos para mais de um objeto de confiança por vez. O direito de acesso novo é acrescentado ao final da lista de controle da fila acesso discricionário (DACL) que identifica os usuários e grupos que podem acessar a fila.  
+  
+ Há algumas exceções para esta generalização sobre onde o direito de novo é adicionado e seus efeitos. Para obter mais informações, consulte <xref:System.Messaging>.  
+  
+ Uma sobrecarga de <xref:System.Messaging.MessageQueueAccessControlEntry.%23ctor%2A> construtor permite que você especificar um <xref:System.Messaging.AccessControlEntryType> membro para indicar se deseja permitir ou negar direitos para o objeto de confiança. A ordem na qual os direitos são permitidos ou negados DACL do recurso afeta se o objeto de confiança tem os direitos especificados. Por exemplo, se direitos já tem sido concedidos para o objeto de confiança e mais tarde você adicionar uma entrada que as negações, o sistema localiza os direitos concedidos pela primeira vez, para que o usuário recebe direitos esperado eles será negado. Você pode usar dois tipos de entrada para substituir esse comportamento: `Set` e `Revoke`. Para obter mais informações sobre como controlar a maneira na qual o acesso direitos são determinados, consulte o <xref:System.Messaging.AccessControlEntryType> tópico de enumeração.  
+  
+ O <xref:System.Messaging.MessageQueueAccessControlEntry> classe está associada a segurança baseada em listas de controle de acesso (ACLs), que você pode usar para fornecer aos usuários acesso ao sistema de enfileiramento de mensagens em si. Isso é diferente da segurança de acesso de código, que é implementada por meio de <xref:System.Messaging.MessageQueuePermission> e classes relacionadas. Segurança de acesso do código de enfileiramento de mensagem define operações específicas de fila ou o acesso à fila que pode precisar de um aplicativo que está sujeito ao controle de segurança; ele não representa um direito para o aplicativo executar essas operações ou receber acesso por si só. Consulte o tópico [&#91;\< Topic://cpconcodeaccesssecurity > &#93; ](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03) para obter mais informações sobre a segurança de acesso do código.  
+  
+ Para definir as permissões da fila de mensagens para um objeto de confiança, crie uma nova instância do <xref:System.Messaging.AccessControlEntry.Trustee%2A> classe e passá-lo em uma sobrecarga de <xref:System.Messaging.MessageQueueAccessControlEntry.%23ctor%2A> construtor. Especifique o acesso de fila de mensagem de direitos, passando uma instância do <xref:System.Messaging.MessageQueueAccessRights> no construtor ou definindo o <xref:System.Messaging.MessageQueueAccessControlEntry.MessageQueueAccessRights%2A> propriedade em uma <xref:System.Messaging.MessageQueueAccessControlEntry> instância.  
+  
+ Você pode passar o <xref:System.Messaging.MessageQueueAccessControlEntry> instância diretamente para o <xref:System.Messaging.MessageQueue.SetPermissions%2A?displayProperty=nameWithType> método, ou como alternativa, adicione a entrada a uma instância de <xref:System.Messaging.AccessControlList> antes de chamar <xref:System.Messaging.MessageQueue.SetPermissions%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueueAccessControlEntry (System.Messaging.Trustee trustee, System.Messaging.MessageQueueAccessRights rights);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Messaging.Trustee trustee, valuetype System.Messaging.MessageQueueAccessRights rights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueAccessControlEntry.#ctor(System.Messaging.Trustee,System.Messaging.MessageQueueAccessRights)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trustee" Type="System.Messaging.Trustee" />
+        <Parameter Name="rights" Type="System.Messaging.MessageQueueAccessRights" />
+      </Parameters>
+      <Docs>
+        <param name="trustee">Um <see cref="T:System.Messaging.Trustee" /> que especifica um usuário, grupo, computador, domínio ou alias.</param>
+        <param name="rights">Uma combinação bit a bit do <see cref="T:System.Messaging.MessageQueueAccessRights" /> valores que define a combinação de direitos de conceder ao objeto de confiança.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.MessageQueueAccessControlEntry" /> classe, concedendo direitos de acesso a especificado enfileiramento de mensagens para o objeto de confiança especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga de construtor para conceder direitos para o objeto de confiança especificado. Os direitos que você especificar na `rights` parâmetro são uma combinação bit a bit de membros a <xref:System.Messaging.MessageQueueAccessRights> sinalizador de bit, o que inclui esses direitos de recebimento de mensagens, excluir filas e definir propriedades de fila. O construtor usa os direitos que você transmitir para definir essa instância <xref:System.Messaging.MessageQueueAccessControlEntry.MessageQueueAccessRights%2A> propriedade.  
+  
+ Passar essa instância do <xref:System.Messaging.MessageQueueAccessControlEntry> diretamente em uma sobrecarga o <xref:System.Messaging.MessageQueue.SetPermissions%2A> método para conceder direitos somente para esse objeto de confiança ou adicionar essa instância para uma <xref:System.Messaging.AccessControlList> antes de chamar <xref:System.Messaging.MessageQueue.SetPermissions%2A> para conceder ou negar direitos para vários objetos de confiança ao mesmo tempo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueueAccessControlEntry (System.Messaging.Trustee trustee, System.Messaging.MessageQueueAccessRights rights, System.Messaging.AccessControlEntryType entryType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Messaging.Trustee trustee, valuetype System.Messaging.MessageQueueAccessRights rights, valuetype System.Messaging.AccessControlEntryType entryType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueAccessControlEntry.#ctor(System.Messaging.Trustee,System.Messaging.MessageQueueAccessRights,System.Messaging.AccessControlEntryType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trustee" Type="System.Messaging.Trustee" />
+        <Parameter Name="rights" Type="System.Messaging.MessageQueueAccessRights" />
+        <Parameter Name="entryType" Type="System.Messaging.AccessControlEntryType" />
+      </Parameters>
+      <Docs>
+        <param name="trustee">Um <see cref="T:System.Messaging.Trustee" /> que especifica um usuário, grupo, computador, domínio ou alias.</param>
+        <param name="rights">Uma combinação bit a bit do <see cref="T:System.Messaging.MessageQueueAccessRights" /> valores que define a combinação de direitos de conceder ao objeto de confiança.</param>
+        <param name="entryType">Uma da <see cref="T:System.Messaging.AccessControlEntryType" /> valores, que especifica se deve permitir, negar, defina ou revogar os direitos especificados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.MessageQueueAccessControlEntry" /> classe com o objeto de confiança especificado e direitos de acesso de enfileiramento de mensagens. O tipo de acesso (como <see langword="Allow" /> ou <see langword="Deny" />) é definido pelo tipo de entrada que você transmitir.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga de construtor para conceder ou negar direitos para o objeto de confiança especificado. Os direitos que você especificar na `rights` parâmetro são uma combinação bit a bit de membros a <xref:System.Messaging.MessageQueueAccessRights> sinalizador de bit, o que inclui esses direitos de recebimento de mensagens, excluir filas e definir propriedades de fila. O construtor usa os direitos que você transmitir para definir essa instância <xref:System.Messaging.MessageQueueAccessControlEntry.MessageQueueAccessRights%2A> propriedade.  
+  
+ Para obter mais informações sobre como conceder ou negar direitos, consulte o <xref:System.Messaging.AccessControlEntryType> tópico. Para dois membros, `Allow` e `Deny`, pode haver preexistentes e possivelmente contraditório os direitos de acesso, portanto a ordem na qual os direitos aparecem na lista de controle de acesso discricionário (DACL) da fila afeta se o direito é concedido, por fim. Dois membros, `Set` e `Revoke`, substituir quaisquer direitos existentes. Use o membro cujo comportamento é aplicável ao seu aplicativo.  
+  
+ Passar essa instância do <xref:System.Messaging.MessageQueueAccessControlEntry> diretamente em uma sobrecarga o <xref:System.Messaging.MessageQueue.SetPermissions%2A> método para conceder ou negar direitos somente para esse objeto de confiança ou adicionar essa instância para uma <xref:System.Messaging.AccessControlList> antes de chamar <xref:System.Messaging.MessageQueue.SetPermissions%2A> para conceder ou negar direitos para vários objetos de confiança ao mesmo tempo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageQueueAccessRights">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueueAccessRights MessageQueueAccessRights { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.MessageQueueAccessRights MessageQueueAccessRights" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueAccessControlEntry.MessageQueueAccessRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conjunto de direitos específicos de enfileiramento de mensagens de mensagem para aplicar ao objeto de confiança.</summary>
+        <value>Uma combinação bit a bit do <see cref="T:System.Messaging.MessageQueueAccessRights" /> membros. O padrão é definido pelo <paramref name="rights" /> parâmetro passado para o construtor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.MessageQueueAccessControlEntry.MessageQueueAccessRights%2A> propriedade permite que você especifique o Message Queuing direitos de objeto específicos como receber, inspecionar, ou gravar mensagens ou definir propriedades de fila. O valor dessa propriedade é definido pelo <xref:System.Messaging.MessageQueueAccessControlEntry.%23ctor%2A> construtor, mas você pode alterá-la a qualquer momento antes de usar essa instância do <xref:System.Messaging.MessageQueueAccessControlEntry> em uma chamada para <xref:System.Messaging.MessageQueue.SetPermissions%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.WebControls.WebParts">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.WebControls.WebParts" /> namespace contém classes e interfaces conhecidas coletivamente como o conjunto de controles de Web Parts. Você pode usar essas classes para criar páginas da Web cuja aparência e o comportamento pode ser modificadas (personalizadas) pelos usuários finais. Configurações personalizadas de cada usuário para uma página são salvas para sessões futuras do navegador.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

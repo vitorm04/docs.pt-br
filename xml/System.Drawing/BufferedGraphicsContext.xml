@@ -1,0 +1,263 @@
+<Type Name="BufferedGraphicsContext" FullName="System.Drawing.BufferedGraphicsContext">
+  <TypeSignature Language="C#" Value="public sealed class BufferedGraphicsContext : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BufferedGraphicsContext extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.BufferedGraphicsContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece métodos para criação de buffers gráficos que podem ser usados para buffer duplo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.BufferedGraphicsContext> classe permite que você implemente o buffer duplo personalizado para seus elementos gráficos. Elementos gráficos que usam o buffer duplo podem reduzir ou eliminar a cintilação causado redesenhando uma superfície de exibição.  
+  
+> [!NOTE]
+>  A maneira mais simples de usar buffer duplo é definir o <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> controlar o sinalizador de estilo em um controle usando o <xref:System.Windows.Forms.Control.SetStyle%2A> método. Definindo o <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> sinalizador de estilos de controle para um controle redireciona toda a pintura para o controle por meio de um buffer de gráfico padrão, sem a necessidade de qualquer código adicional. Este sinalizador é definido como `true` por padrão.  
+  
+ O <xref:System.Drawing.BufferedGraphicsContext> classe fornece métodos para criar e configurar um buffer de gráficos. O <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> método cria um <xref:System.Drawing.BufferedGraphics>, que é um wrapper para um buffer de gráficos que também fornece métodos que você pode usar para gravar no buffer e processar seu conteúdo para um dispositivo de saída.  
+  
+ Você pode recuperar o <xref:System.Drawing.BufferedGraphicsContext> para o domínio de aplicativo atual de estático <xref:System.Drawing.BufferedGraphicsManager.Current%2A?displayProperty=nameWithType> propriedade. Para aplicativos com muitos elementos gráficos, como animação, você pode criar um dedicado <xref:System.Drawing.BufferedGraphicsContext> usando o construtor, mas para a maioria dos aplicativos de <xref:System.Drawing.BufferedGraphicsManager.Current%2A?displayProperty=nameWithType> propriedade será suficiente.  
+  
+ Para obter mais informações sobre o desenho de elementos gráficos em buffer e implementações personalizadas de buffer, consulte [gráficos em buffer duplo](~/docs/framework/winforms/advanced/double-buffered-graphics.md) e [como: manualmente gerenciar gráficos em buffer](~/docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como adquirir o <xref:System.Drawing.BufferedGraphicsContext> para o domínio de aplicativo atual. Esse código é parte de um exemplo maior fornecido para a <xref:System.Drawing.BufferedGraphics> classe.  
+  
+ [!code-cpp[BufferingExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/BufferingExamples/CPP/bufferingexamples.cpp#1)]
+ [!code-csharp[BufferingExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/BufferingExamples/CS/bufferingexamples.cs#1)]
+ [!code-vb[BufferingExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BufferingExamples/VB/bufferingexamples.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BufferedGraphicsContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BufferedGraphicsContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.BufferedGraphicsContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para aplicativos com muitos elementos gráficos, como animação, você às vezes pode melhorar o desempenho usando um dedicado <xref:System.Drawing.BufferedGraphicsContext> em vez da instância padrão fornecida pelo <xref:System.Drawing.BufferedGraphicsManager>. Isso permite que você crie e gerencie os buffers de gráficos individualmente.  
+  
+> [!NOTE]
+>  Você sempre deve chamar <xref:System.Drawing.BufferedGraphicsContext.Dispose%2A> quando você terminar de usar um dedicado <xref:System.Drawing.BufferedGraphicsContext>.  
+  
+ Para obter mais informações sobre buffers de gráficos dedicado, consulte [como: manualmente gerenciar gráficos em buffer](~/docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Allocate">
+      <MemberSignature Language="C#" Value="public System.Drawing.BufferedGraphics Allocate (System.Drawing.Graphics targetGraphics, System.Drawing.Rectangle targetRectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.BufferedGraphics Allocate(class System.Drawing.Graphics targetGraphics, valuetype System.Drawing.Rectangle targetRectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BufferedGraphicsContext.Allocate(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.BufferedGraphics</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetGraphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="targetRectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="targetGraphics">O <see cref="T:System.Drawing.Graphics" /> para o qual corresponder o formato de pixel para o novo buffer.</param>
+        <param name="targetRectangle">Um <see cref="T:System.Drawing.Rectangle" /> que indica o tamanho do buffer para criar.</param>
+        <summary>Cria um buffer de gráficos do tamanho especificado usando o formato de pixel do <see cref="T:System.Drawing.Graphics" /> especificado.</summary>
+        <returns>Um <see cref="T:System.Drawing.BufferedGraphics" /> que pode ser usado para desenhar em um buffer das dimensões especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> método com um retângulo cujo tamanho excede o valor da <xref:System.Drawing.BufferedGraphicsContext.MaximumBuffer%2A> propriedade, um temporário <xref:System.Drawing.BufferedGraphicsContext> é criado para alocar o buffer e fornecer um contexto temporário para o buffer. O novo <xref:System.Drawing.BufferedGraphicsContext> é diferente de <xref:System.Drawing.BufferedGraphicsContext> para o aplicativo de domínio e ele é descartado automaticamente quando o <xref:System.Drawing.BufferedGraphics> retornado pelo <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> método é descartado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um buffer de gráficos usando o <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> método. Esse código é parte de um exemplo maior fornecido para a <xref:System.Drawing.BufferedGraphics> classe.  
+  
+ [!code-cpp[BufferingExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/BufferingExamples/CPP/bufferingexamples.cpp#3)]
+ [!code-csharp[BufferingExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/BufferingExamples/CS/bufferingexamples.cs#3)]
+ [!code-vb[BufferingExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BufferingExamples/VB/bufferingexamples.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Allocate">
+      <MemberSignature Language="C#" Value="public System.Drawing.BufferedGraphics Allocate (IntPtr targetDC, System.Drawing.Rectangle targetRectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.BufferedGraphics Allocate(native int targetDC, valuetype System.Drawing.Rectangle targetRectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BufferedGraphicsContext.Allocate(System.IntPtr,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.BufferedGraphics</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetDC" Type="System.IntPtr" />
+        <Parameter Name="targetRectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="targetDC">Um <see cref="T:System.IntPtr" /> em um contexto de dispositivo para corresponder ao formato de pixel do buffer ao novo.</param>
+        <param name="targetRectangle">Um <see cref="T:System.Drawing.Rectangle" /> que indica o tamanho do buffer para criar.</param>
+        <summary>Cria um buffer de gráficos do tamanho especificado usando o formato de pixel do <see cref="T:System.Drawing.Graphics" /> especificado.</summary>
+        <returns>Um <see cref="T:System.Drawing.BufferedGraphics" /> que pode ser usado para desenhar em um buffer das dimensões especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> método com um retângulo cujo tamanho excede o valor da <xref:System.Drawing.BufferedGraphicsContext.MaximumBuffer%2A> propriedade, um temporário <xref:System.Drawing.BufferedGraphicsContext> é criado para alocar o buffer e fornecer um contexto temporário para o buffer. O novo <xref:System.Drawing.BufferedGraphicsContext> é diferente de <xref:System.Drawing.BufferedGraphicsContext> para o aplicativo de domínio e ele é descartado automaticamente quando o <xref:System.Drawing.BufferedGraphics> retornado pelo <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> método é descartado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um buffer de gráficos usando o <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> método. Esse código é parte de um exemplo maior fornecido para a <xref:System.Drawing.BufferedGraphics> classe.  
+  
+ [!code-cpp[BufferingExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/BufferingExamples/CPP/bufferingexamples.cpp#4)]
+ [!code-csharp[BufferingExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/BufferingExamples/CS/bufferingexamples.cs#4)]
+ [!code-vb[BufferingExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BufferingExamples/VB/bufferingexamples.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BufferedGraphicsContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Drawing.BufferedGraphicsContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Drawing.BufferedGraphicsContext.Dispose%2A> quando tiver terminado de usar o <xref:System.Drawing.BufferedGraphicsContext>. O <xref:System.Drawing.BufferedGraphicsContext.Dispose%2A> método deixa o <xref:System.Drawing.BufferedGraphicsContext> em um estado inutilizável. Depois de chamar <xref:System.Drawing.BufferedGraphicsContext.Dispose%2A>, você deve liberar todas as referências para o <xref:System.Drawing.BufferedGraphicsContext> para o coletor de lixo possa recuperar a memória que o <xref:System.Drawing.BufferedGraphicsContext> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Drawing.BufferedGraphicsContext.Dispose%2A> antes de liberar sua última referência para o <xref:System.Drawing.BufferedGraphicsContext>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Object.Finalize%2A> método o <xref:System.Drawing.BufferedGraphicsContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~BufferedGraphicsContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BufferedGraphicsContext.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que um objeto tente liberar recursos e executar outras operações de limpeza antes de ser recuperado pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invalidate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BufferedGraphicsContext.Invalidate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarta o buffer de gráficos atual, se um buffer foi alocado e ainda não foi descartado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o buffer de gráficos está em uso, ele será marcado para descarte assim que é gratuito; Caso contrário, ele será descartado imediatamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumBuffer">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size MaximumBuffer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size MaximumBuffer" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.BufferedGraphicsContext.MaximumBuffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo do buffer a ser usado.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> que indica o tamanho máximo das dimensões de buffer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade permite que você obtenha ou defina as dimensões máximas por um buffer que deve ser mantido na memória. Você pode alocar um buffer de qualquer tamanho, no entanto, qualquer buffer com dimensões maior do que o <xref:System.Drawing.BufferedGraphicsContext.MaximumBuffer%2A> tamanho será usada temporariamente e, em seguida, é descartada quando o <xref:System.Drawing.BufferedGraphics> objeto é liberado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra definindo o tamanho máximo para o buffer para um <xref:System.Drawing.BufferedGraphicsContext>. Esse código é parte de um exemplo maior fornecido para a <xref:System.Drawing.BufferedGraphics> classe.  
+  
+ [!code-cpp[BufferingExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/BufferingExamples/CPP/bufferingexamples.cpp#2)]
+ [!code-csharp[BufferingExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/BufferingExamples/CS/bufferingexamples.cs#2)]
+ [!code-vb[BufferingExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BufferingExamples/VB/bufferingexamples.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A altura ou largura do tamanho é menor ou igual a zero.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para permitir o acesso de usuário para todas as janelas. Enumeração relacionada:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

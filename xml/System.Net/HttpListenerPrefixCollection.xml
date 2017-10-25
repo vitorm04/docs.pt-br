@@ -1,0 +1,552 @@
+<Type Name="HttpListenerPrefixCollection" FullName="System.Net.HttpListenerPrefixCollection">
+  <TypeSignature Language="C#" Value="public class HttpListenerPrefixCollection : System.Collections.Generic.ICollection&lt;string&gt;, System.Collections.Generic.IEnumerable&lt;string&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpListenerPrefixCollection extends System.Object implements class System.Collections.Generic.ICollection`1&lt;string&gt;, class System.Collections.Generic.IEnumerable`1&lt;string&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.HttpListenerPrefixCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.HttpListener</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.String&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.String&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a coleção usada para armazenar os prefixos de URI (Uniform Resource Identifier) para objetos <see cref="T:System.Net.HttpListener" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.HttpListener.Prefixes%2A> propriedade retorna instâncias desta coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Net.HttpListener> e adiciona prefixos especificado pelo usuário para sua <xref:System.Net.HttpListenerPrefixCollection>.  
+  
+ [!code-csharp[Net_Listener_Basic#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string uriPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(string uriPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerPrefixCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uriPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uriPrefix">Um <see cref="T:System.String" /> que identifica as informações de URI que são comparadas em solicitações de entrada. O prefixo deve terminar com uma barra "/".</param>
+        <summary>Adiciona um prefixo de URI (Uniform Resource Identifier) à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona um prefixo URI para o conjunto de prefixos gerenciados pelo associado <xref:System.Net.HttpListener> objeto. Ao verificar `uriPrefix` para garantir que ele é válido, caso é ignorado.  
+  
+ Uma cadeia de caracteres de prefixo do URI é composta de um esquema (http ou https), um host, uma porta opcional e um caminho opcional, por exemplo, "`http://www.contoso.com:8080/customerData``/`". O prefixo deve terminar com uma barra "/". O <xref:System.Net.HttpListener> com o prefixo que mais se aproxima um URI solicitado a responder à solicitação. Vários <xref:System.Net.HttpListener> objetos não é possível adicionar o mesmo prefixo. Um <xref:System.Net.HttpListenerException> exceção é gerada se um <xref:System.Net.HttpListener> adiciona um prefixo que já está em uso.  
+  
+ Quando uma porta for especificada, o elemento host pode ser substituído por "`*`" para indicar que o <xref:System.Net.HttpListener> aceita solicitações enviadas para a porta se o URI solicitado não corresponde a qualquer outro prefixo. Por exemplo, para receber todas as solicitações enviadas a porta 8080 quando o URI solicitado não é tratado por qualquer outra <xref:System.Net.HttpListener>, é o prefixo "`http://*:8080``/`". Da mesma forma, para especificar que o <xref:System.Net.HttpListener> aceita todas as solicitações enviadas a uma porta, substitua o elemento de host com o "`+`"caractere"`https://+:8080`/". O "`*`"e"`+`" caracteres podem estar presentes em prefixos que caminhos de inclusão.  
+  
+ Começando com o .NET 4.5.3 e Windows 10, subdomínios curinga têm suporte em prefixos URI que são gerenciados por um <xref:System.Net.HttpListener> objeto. Para especificar um subdomínio de curinga, use o "*" caractere como parte do nome de host em um prefixo URI: por exemplo, `http://*.foo.com/`e a passa como argumento para o método HttpListenerPrefixCollection. Isso funcionará em .NET 4.5.3 e Windows 10; em versões anteriores, isso poderia gerar uma<xref:System.Net.HttpListenerException>  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Net.HttpListener> e adiciona prefixos especificado pelo usuário para sua <xref:System.Net.HttpListenerPrefixCollection>.  
+  
+ [!code-csharp[Net_Listener_Basic#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uriPrefix" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="uriPrefix" /> não usa o esquema http:// ou https://. Esses são os únicos esquemas com suporte para objetos <see cref="T:System.Net.HttpListener" />.  
+  
+ -ou-  
+  
+ <paramref name="uriPrefix" /> não é um prefixo URI formatado corretamente. Verifique se a cadeia de caracteres termina com um "/".</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.HttpListener" /> associado a esta coleção está fechado.</exception>
+        <exception cref="T:System.Net.HttpListenerException">Falha de uma chamada de função do Windows. Verifique a propriedade <see cref="P:System.Net.HttpListenerException.ErrorCode" /> da exceção para determinar a causa da exceção. Essa exceção será lançada se outro <see cref="T:System.Net.HttpListener" /> já tiver adicionado o prefixo <paramref name="uriPrefix" />.</exception>
+        <permission cref="T:System.Net.WebPermission">Para aceitar conexões de rede. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Accept" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerPrefixCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os prefixos de identificador de recurso uniforme (URI) da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de chamar esse método, você não pode iniciar associado <xref:System.Net.HttpListener> sem adicionar novos prefixos; se você tentar fazer isso, uma exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir remove todos os prefixos de um <xref:System.Net.HttpListenerPrefixCollection>.  
+  
+ [!code-csharp[Net_Listener_Basic#6](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.HttpListenerException">Falha de uma chamada de função do Windows. Verifique a propriedade <see cref="P:System.Net.HttpListenerException.ErrorCode" /> da exceção para determinar a causa da exceção.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.HttpListener" /> associado a esta coleção está fechado.</exception>
+        <block subset="none" type="usage">
+          <para>Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string uriPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(string uriPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerPrefixCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uriPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uriPrefix">Um <see cref="T:System.String" /> que contém o prefixo do identificador de recurso uniforme (URI) para testar.</param>
+        <summary>Retorna um <see cref="T:System.Boolean" /> valor que indica se o prefixo especificado está contido na coleção.</summary>
+        <returns>
+          <see langword="true" />Se esta coleção contém o prefixo especificado por <paramref name="uriPrefix" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O prefixo especificado deve corresponder exatamente um valor existente.  
+  
+   
+  
+## Examples  
+ O seguinte código de exemplo verifica se um prefixo especificado pelo usuário está contido na coleção de prefixo de um <xref:System.Net.HttpListener>.  
+  
+ [!code-csharp[Net_Listener_Basic#4](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uriPrefix" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CopyTo">
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Copia o conteúdo de um <see cref="T:System.Net.HttpListenerPrefixCollection" /> na matriz especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz deve ser capaz de conter cadeias de caracteres e não pode ser multidimensional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Array array, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerPrefixCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um dimensional <see cref="T:System.Array" /> que recebe as cadeias de caracteres de prefixo do identificador de recurso uniforme (URI) nesta coleção.</param>
+        <param name="offset">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia o conteúdo de um <see cref="T:System.Net.HttpListenerPrefixCollection" /> na matriz especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz deve ser capaz de conter cadeias de caracteres e não pode ser multidimensional.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir copia os prefixos de um <xref:System.Net.HttpListenerPrefixCollection>.  
+  
+ [!code-csharp[Net_Listener_Basic#7](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" />tem mais de uma dimensão.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Esta coleção contém mais elementos que podem ser armazenados em <paramref name="array" /> começando em <paramref name="offset" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.HttpListener" /> associado a esta coleção está fechado.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="array" />não é possível armazenar valores de cadeia de caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (string[] array, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(string[] array, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerPrefixCollection.CopyTo(System.String[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.String[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz de cadeia de caracteres dimensional que recebe as cadeias de caracteres de prefixo do identificador de recurso uniforme (URI) nesta coleção.</param>
+        <param name="offset">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia o conteúdo de um <see cref="T:System.Net.HttpListenerPrefixCollection" /> para a matriz de cadeia de caracteres especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz deve ser capaz de conter cadeias de caracteres e não pode ser multidimensional.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir copia os prefixos de um <xref:System.Net.HttpListenerPrefixCollection>.  
+  
+ [!code-csharp[Net_Listener_Basic#7](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" />tem mais de uma dimensão.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Esta coleção contém mais elementos que podem ser armazenados em <paramref name="array" /> começando em <paramref name="offset" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.HttpListener" /> associado a esta coleção está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerPrefixCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de prefixos contidos na coleção.</summary>
+        <value>Um <see cref="T:System.Int32" /> que contém o número de prefixos nesta coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe os prefixos em uma coleção.  
+  
+ [!code-csharp[Net_Listener_Basic#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;string&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;string&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerPrefixCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto que pode ser usado para iterar pela coleção.</summary>
+        <returns>Um objeto que implementa o <see cref="T:System.Collections.IEnumerator" /> interface e fornece acesso para as cadeias de caracteres na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto que é retornado por esse método é inicialmente posicionado antes do primeiro elemento na coleção. Você deve chamar o <xref:System.Collections.IEnumerator.MoveNext%2A> método antes de poder acessar o primeiro elemento. Para acessar o elemento da posição atual, chame o <xref:System.Collections.IEnumerator.Current%2A> propriedade.  
+  
+ Não modifique a coleção ao usar o enumerador. Se a coleção é modificada enquanto um enumerador está em usar, uma tentativa de definir a posição chamando <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> faz com que um <xref:System.InvalidOperationException>.  
+  
+ Para obter uma descrição detalhada dos enumeradores, consulte a documentação para o <xref:System.Collections.IEnumerator> classe e o <xref:System.Collections.IEnumerable.GetEnumerator%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como enumerar através de uma coleção. Observe que os exemplos de Visual Basic e c# usam instruções específicas do idioma para enumerar através da coleção em vez de recuperar o enumerador.  
+  
+ [!code-csharp[Net_Listener_Basic#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerPrefixCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção é somente leitura.</summary>
+        <value>Sempre retorna <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerPrefixCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção é sincronizado (thread-safe).</summary>
+        <value>Essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir a segurança de thread durante a enumeração, você pode bloquear a coleção durante toda a enumeração ou capture as exceções que são provenientes de alterações feitas por outros threads.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (string uriPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(string uriPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerPrefixCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uriPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uriPrefix">Um <see cref="T:System.String" /> que contém o prefixo URI a ser removido.</param>
+        <summary>Remove o especificado identificador URI (Uniform Resource) da lista de prefixos tratadas pelo <see cref="T:System.Net.HttpListener" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="uriPrefix" /> foi encontrado no <see cref="T:System.Net.HttpListenerPrefixCollection" /> e removido; caso contrário <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `uriPrefix` é não está na coleção, esse método não fará nada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uriPrefix" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Net.HttpListenerException">Falha de uma chamada de função do Windows. Para determinar a causa da exceção, verifique o código de erro da exceção.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.HttpListener" /> associado a esta coleção está fechado.</exception>
+        <block subset="none" type="usage">
+          <para>Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerPrefixCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto que pode ser usado para iterar pela coleção.</summary>
+        <returns>Um objeto que implementa o <see cref="T:System.Collections.IEnumerator" /> interface e fornece acesso para as cadeias de caracteres na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto que é retornado por esse método é inicialmente posicionado antes do primeiro elemento na coleção. Você deve chamar o <xref:System.Collections.IEnumerator.MoveNext%2A> método antes de poder acessar o primeiro elemento. Para acessar o elemento da posição atual, chame o <xref:System.Collections.IEnumerator.Current%2A> propriedade.  
+  
+ Não modifique a coleção ao usar o enumerador. Se a coleção é modificada enquanto um enumerador está em usar, uma tentativa de definir a posição chamando <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> faz com que um <xref:System.InvalidOperationException>.  
+  
+ Para obter uma descrição detalhada dos enumeradores, consulte a documentação para o <xref:System.Collections.IEnumerator> classe e o <xref:System.Collections.IEnumerable.GetEnumerator%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

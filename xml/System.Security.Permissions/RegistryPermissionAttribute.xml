@@ -1,0 +1,326 @@
+<Type Name="RegistryPermissionAttribute" FullName="System.Security.Permissions.RegistryPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class RegistryPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit RegistryPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.RegistryPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que as ações de segurança para <see cref="T:System.Security.Permissions.RegistryPermission" /> sejam aplicadas ao código usando a segurança declarativa. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O escopo da declaração que é permitido depende do <xref:System.Security.Permissions.SecurityAction> que é usado.  
+  
+ As informações de segurança declaradas por um atributo de segurança são armazenadas nos metadados do atributo de destino e são acessadas pelo sistema em tempo de execução. Atributos de segurança são usados apenas para a segurança declarativa. Para segurança obrigatória, use a classe de permissão correspondente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistryPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Um dos valores de <see cref="T:System.Security.Permissions.SecurityAction" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.RegistryPermissionAttribute" /> com o <see cref="T:System.Security.Permissions.SecurityAction" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="action" /> não é um <see cref="T:System.Security.Permissions.SecurityAction" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="public string All { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string All" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.RegistryPermissionAttribute.All" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("use newer properties")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o acesso total para as chaves do Registro especificada.</summary>
+        <value>Uma lista separada por vírgulas de caminhos de chave do registro, para acesso completo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Acesso à chave implica acesso a todas as subchaves e todos os valores.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O acessador get é chamado; ele é fornecido apenas para compatibilidade do compilador c#.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeAccessControl">
+      <MemberSignature Language="C#" Value="public string ChangeAccessControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChangeAccessControl" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.RegistryPermissionAttribute.ChangeAccessControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o controle de acesso de alteração para as chaves do registro especificado.</summary>
+        <value>Uma lista separada por vírgulas de caminhos de chave do registro, altere para controle de acesso. .</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Acesso à chave implica acesso a todos os valores que ele contém e todas as variáveis sob ele.  
+  
+> [!IMPORTANT]
+>  Uma lista de controle de acesso (ACL) descreve a indivíduos ou grupos que têm ou não tem direitos para ações específicas para as chaves do registro especificado.  A capacidade de alterar uma ACL é uma permissão importante e deve ser concedida com cuidado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public string Create { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Create" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.RegistryPermissionAttribute.Create" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de criar acesso para as chaves do Registro especificada.</summary>
+        <value>Uma lista separada por vírgulas de caminhos de chave do registro, para acesso de nível de criar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Acesso à chave implica acesso a todos os valores que ele contém e todas as variáveis sob ele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.RegistryPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um novo <see cref="T:System.Security.Permissions.RegistryPermission" />.</summary>
+        <returns>Um <see cref="T:System.Security.Permissions.RegistryPermission" /> que corresponde a este atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método só deve ser chamado pelo sistema de segurança, nunca pelo código do aplicativo.  
+  
+ Em tempo de compilação, atributos convertem declarações de segurança para um formato serializado em metadados. Dados de segurança declarativa em metadados são criados a partir da permissão que esse método retorna que corresponde a este atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public string Read { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Read" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.RegistryPermissionAttribute.Read" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o acesso de leitura para as chaves do registro especificado.</summary>
+        <value>Uma lista separada por vírgulas de caminhos de chave do registro, para acesso de leitura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Acesso à chave implica acesso a todos os valores que ele contém e todas as variáveis sob ele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewAccessControl">
+      <MemberSignature Language="C#" Value="public string ViewAccessControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ViewAccessControl" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.RegistryPermissionAttribute.ViewAccessControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de exibição de controle de acesso para as chaves do Registro especificada.</summary>
+        <value>Uma lista separada por vírgulas de caminhos de chave do registro, para controle de acesso de modo de exibição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Acesso à chave implica acesso a todos os valores que ele contém e todas as variáveis sob ele.  
+  
+> [!IMPORTANT]
+>  Uma lista de controle de acesso (ACL) descreve a indivíduos ou grupos que têm ou não tem direitos para ações específicas para as chaves do registro especificado.  A capacidade de exibir uma ACL é uma permissão importante e deve ser concedida com cuidado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewAndModify">
+      <MemberSignature Language="C#" Value="public string ViewAndModify { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ViewAndModify" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.RegistryPermissionAttribute.ViewAndModify" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um conjunto de chaves do registro que podem ser exibidas e modificadas especificado.</summary>
+        <value>Uma lista separada por vírgulas de caminhos de chave do registro, para criar, ler e acesso de gravação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Acesso à chave implica acesso a todos os valores que ele contém e todas as variáveis sob ele.  
+  
+ Essa propriedade especifica <xref:System.Security.Permissions.RegistryPermissionAttribute.Create%2A>, <xref:System.Security.Permissions.RegistryPermissionAttribute.Read%2A>, e <xref:System.Security.Permissions.RegistryPermissionAttribute.Write%2A> direitos de acesso para as chaves especificadas e seus valores. São os direitos de acesso para os dados de registro. elas não incluem os direitos de controle de acesso <xref:System.Security.Permissions.RegistryPermissionAttribute.ChangeAccessControl%2A> ou <xref:System.Security.Permissions.RegistryPermissionAttribute.ViewAccessControl%2A>.  
+  
+> [!NOTE]
+>  O acessador get é fornecido para compatibilidade do compilador c#. O compilador c# requer propriedades de atributo para ser leitura/gravação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O acessador get é chamado; ele é fornecido apenas para compatibilidade do compilador c#.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public string Write { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Write" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.RegistryPermissionAttribute.Write" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o acesso de gravação para as chaves do registro especificado.</summary>
+        <value>Uma lista separada por vírgulas de caminhos de chave do registro, para acesso de gravação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Acesso à chave implica acesso a todos os valores que ele contém e todas as variáveis sob ele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

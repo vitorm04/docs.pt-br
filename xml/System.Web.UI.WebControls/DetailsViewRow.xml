@@ -1,0 +1,228 @@
+<Type Name="DetailsViewRow" FullName="System.Web.UI.WebControls.DetailsViewRow">
+  <TypeSignature Language="C#" Value="public class DetailsViewRow : System.Web.UI.WebControls.TableRow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewRow extends System.Web.UI.WebControls.TableRow" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewRow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.TableRow</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma linha dentro de um <see cref="T:System.Web.UI.WebControls.DetailsView" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DetailsViewRow> classe é usada para representar uma linha individual em um <xref:System.Web.UI.WebControls.DetailsView> controle. Cada linha de <xref:System.Web.UI.WebControls.DetailsView> controle tem um tipo de linha designado. A tabela a seguir lista os tipos de linha que são válidos para o <xref:System.Web.UI.WebControls.DetailsView> controle.  
+  
+|Tipo de linha|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.DataRow>|Uma linha de dados no <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.EmptyDataRow>|Linha de dados vazios no <xref:System.Web.UI.WebControls.DetailsView> controle. A linha de dados vazio é exibida em um <xref:System.Web.UI.WebControls.DetailsView> controle quando não houver registros a exibir.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.Footer>|A linha de rodapé no <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.Header>|Linha de cabeçalho no <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.Pager>|Uma linha de pager no <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+  
+ Para determinar o tipo de linha de um <xref:System.Web.UI.WebControls.DetailsViewRow> de objeto, use o <xref:System.Web.UI.WebControls.DetailsViewRow.RowType%2A> propriedade. Um <xref:System.Web.UI.WebControls.DetailsViewRow> objeto também tem um estado associado a ele. O estado pode ser uma combinação bit a bit dos valores na tabela a seguir.  
+  
+|Valor de estado|Descrição|  
+|-----------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlRowState.Alternate>|O <xref:System.Web.UI.WebControls.DetailsViewRow> objeto está em uma linha alternativa o <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|<xref:System.Web.UI.WebControls.DataControlRowState.Edit>|O <xref:System.Web.UI.WebControls.DetailsViewRow> objeto está no modo de edição.|  
+|<xref:System.Web.UI.WebControls.DataControlRowState.Insert>|O <xref:System.Web.UI.WebControls.DetailsViewRow> objeto está no modo de inserção.|  
+|<xref:System.Web.UI.WebControls.DataControlRowState.Normal>|O <xref:System.Web.UI.WebControls.DetailsViewRow> objeto estiver no estado normal (padrão).|  
+  
+ Para determinar o estado de um <xref:System.Web.UI.WebControls.DetailsViewRow> de objeto, use o <xref:System.Web.UI.WebControls.DetailsViewRow.RowState%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.DetailsView> controle armazena todas as suas linhas de dados a <xref:System.Web.UI.WebControls.DetailsView.Rows%2A> coleção. Para determinar o índice de um <xref:System.Web.UI.WebControls.DetailsViewRow> objeto o <xref:System.Web.UI.WebControls.DetailsView.Rows%2A> coleção, use o <xref:System.Web.UI.WebControls.DetailsViewRow.RowIndex%2A> propriedade.  
+  
+ Você pode acessar as células individuais do <xref:System.Web.UI.WebControls.DetailsViewRow> objeto usando o <xref:System.Web.UI.WebControls.TableRow.Cells%2A> propriedade. Se uma célula contiver controles, você pode recuperar um controle de célula usando o <xref:System.Web.UI.Control.Controls%2A> coleção da célula. Você também pode usar o <xref:System.Web.UI.Control.FindControl%2A> método da célula para localizar o controle, se o controle tiver um <xref:System.Web.UI.Control.ID%2A> propriedade especificada.  
+  
+ Para recuperar um valor de campo de um <xref:System.Web.UI.WebControls.BoundField> campo coluna ou um campo gerado automaticamente, use o <xref:System.Web.UI.WebControls.TableCell.Text%2A> propriedade da célula. Para recuperar um valor de campo de outros tipos de coluna do campo em que o valor do campo está associado a um controle, recuperar o controle de célula apropriada e, em seguida, a propriedade apropriada do controle de acesso.  
+  
+> [!NOTE]
+>  É possível usar uma expressão de associação de dados diretamente em um <xref:System.Web.UI.WebControls.TemplateField> coluna campo sem associação o valor a uma propriedade de um controle. Nesse caso, o valor do campo é automaticamente colocado em um <xref:System.Web.UI.DataBoundLiteralControl> controle. Para recuperar o valor do campo, você deve recuperar o <xref:System.Web.UI.DataBoundLiteralControl> controle de célula apropriada e, em seguida, use seu <xref:System.Web.UI.DataBoundLiteralControl.Text%2A> propriedade.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.DetailsViewRow> de classe, consulte o <xref:System.Web.UI.WebControls.DetailsViewRow.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como recuperar o valor de um campo de um <xref:System.Web.UI.WebControls.DetailsViewRow> objeto.  
+  
+ [!code-aspx-csharp[DetailsViewRowText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewRowText/CS/detailsviewrowcs.aspx#1)]
+ [!code-aspx-vb[DetailsViewRowText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewRowText/VB/detailsviewrowvb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como recuperar um <xref:System.Web.UI.WebControls.Image> controlar do <xref:System.Web.UI.WebControls.DetailsViewRow> objeto que representa a linha de cabeçalho. O <xref:System.Web.UI.WebControls.Image> controle é declarado no modelo de cabeçalho.  
+  
+ [!code-aspx-csharp[DetailsViewRowFindControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewRowFindControl/CS/detailsviewrow2cs.aspx#1)]
+ [!code-aspx-vb[DetailsViewRowFindControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewRowFindControl/VB/detailsviewrow2vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewRow (int rowIndex, System.Web.UI.WebControls.DataControlRowType rowType, System.Web.UI.WebControls.DataControlRowState rowState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex, valuetype System.Web.UI.WebControls.DataControlRowType rowType, valuetype System.Web.UI.WebControls.DataControlRowState rowState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewRow.#ctor(System.Int32,System.Web.UI.WebControls.DataControlRowType,System.Web.UI.WebControls.DataControlRowState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="rowType" Type="System.Web.UI.WebControls.DataControlRowType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha de <see cref="P:System.Web.UI.WebControls.DetailsView.Rows" /> coleção do <see cref="T:System.Web.UI.WebControls.DetailsView" /> controle.</param>
+        <param name="rowType">Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.DataControlRowType" />.</param>
+        <param name="rowState">Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.DataControlRowState" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.DetailsViewRow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.DetailsViewRow> classe.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.DetailsViewRow> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DetailsViewRow.RowIndex%2A>|O valor especificado pelo `itemIndex` parâmetro.|  
+|<xref:System.Web.UI.WebControls.DetailsViewRow.RowType%2A>|O valor especificado pelo `rowType` parâmetro.|  
+|<xref:System.Web.UI.WebControls.DetailsViewRow.RowState%2A>|O valor especificado pelo `rowState` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewRow.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Determina se deve transmitir um evento a hierarquia de controle de servidor ASP.NET da página.</summary>
+        <returns>
+          <see langword="true" />Se o evento foi cancelado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public virtual int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewRow.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> objeto o <see cref="P:System.Web.UI.WebControls.DetailsView.Rows" /> coleção do <see cref="T:System.Web.UI.WebControls.DetailsView" /> controle.</summary>
+        <value>O índice do <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> no <see cref="P:System.Web.UI.WebControls.DetailsView.Rows" /> coleção do <see cref="T:System.Web.UI.WebControls.DetailsView" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DetailsViewRow.RowIndex%2A> propriedade para determinar o índice de um <xref:System.Web.UI.WebControls.DetailsViewRow> objeto o <xref:System.Web.UI.WebControls.DetailsView.Rows%2A> coleção do <xref:System.Web.UI.WebControls.DetailsView> controle.  
+  
+> [!NOTE]
+>  Essa propriedade se aplica somente às linhas de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowState">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.DataControlRowState RowState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataControlRowState RowState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewRow.RowState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do objeto <see cref="T:System.Web.UI.WebControls.DetailsViewRow" />.</summary>
+        <value>Uma combinação bit a bit dos valores de enumeração <see cref="T:System.Web.UI.WebControls.DataControlRowState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DetailsViewRow.RowState%2A> propriedade para determinar o estado da linha. O estado pode ser uma combinação bit a bit dos valores na tabela a seguir.  
+  
+|Valor de estado|Descrição|  
+|-----------------|-----------------|  
+|`DataControlRowState.Alternate`|O <xref:System.Web.UI.WebControls.DetailsViewRow> objeto está em uma linha alternativa o <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|`DataControlRowState.Edit`|O <xref:System.Web.UI.WebControls.DetailsViewRow> objeto está no modo de edição.|  
+|`DataControlRowState.Insert`|O <xref:System.Web.UI.WebControls.DetailsViewRow> objeto está no modo de inserção.|  
+|`DataControlRowState.Normal`|O <xref:System.Web.UI.WebControls.DetailsViewRow> objeto estiver no estado normal (padrão).|  
+  
+ Essa propriedade normalmente é usada para determinar o estado de uma linha antes de executar uma operação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.DataControlRowType RowType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataControlRowType RowType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewRow.RowType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de linha do objeto <see cref="T:System.Web.UI.WebControls.DetailsViewRow" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.DataControlRowType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DetailsViewRow.RowType%2A> propriedade para determinar o tipo de linha que o <xref:System.Web.UI.WebControls.DetailsViewRow> objeto representa. A tabela a seguir lista os valores de tipo de linha válido.  
+  
+|Tipo de linha|Descrição|  
+|--------------|-----------------|  
+|`DataControlRowType.DataRow`|Uma linha de dados no <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|`DataControlRowType.EmptyDataRow`|Linha de dados vazios no <xref:System.Web.UI.WebControls.DetailsView> controle. A linha de dados vazio é exibida em um <xref:System.Web.UI.WebControls.DetailsView> controle quando não houver registros a exibir.|  
+|`DataControlRowType.Footer`|A linha de rodapé no <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|`DataControlRowType.Header`|Linha de cabeçalho no <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+|`DataControlRowType.Pager`|Uma linha de pager no <xref:System.Web.UI.WebControls.DetailsView> controle.|  
+  
+ Essa propriedade normalmente é usada para determinar o tipo da linha antes de executar uma operação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

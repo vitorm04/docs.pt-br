@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.DynamicData.Design">
+  <Docs>
+    <summary>O <see cref="N:System.Web.DynamicData.Design" /> namespace contém classes que oferecem suporte em tempo de design para as classes de <see cref="N:System.Web.DynamicData" /> namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,399 @@
+<Type Name="X509AsymmetricSecurityKey" FullName="System.IdentityModel.Tokens.X509AsymmetricSecurityKey">
+  <TypeSignature Language="C#" Value="public class X509AsymmetricSecurityKey : System.IdentityModel.Tokens.AsymmetricSecurityKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509AsymmetricSecurityKey extends System.IdentityModel.Tokens.AsymmetricSecurityKey" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.X509AsymmetricSecurityKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.AsymmetricSecurityKey</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma chave assimétrica para certificados X.509.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509AsymmetricSecurityKey (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">O <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> que representa o certificado x. 509.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.X509AsymmetricSecurityKey" />, usando o certificado X.509 especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptKey">
+      <MemberSignature Language="C#" Value="public override byte[] DecryptKey (string algorithm, byte[] keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] DecryptKey(string algorithm, unsigned int8[] keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.DecryptKey(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="keyData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo de criptografia para descriptografar a chave.</param>
+        <param name="keyData">Uma matriz de <see cref="T:System.Byte" /> que contém a chave criptografada.</param>
+        <summary>Descriptografa a chave criptografada especificada usando o algoritmo de criptografia especificado.</summary>
+        <returns>Uma matriz de <see cref="T:System.Byte" /> que contém a chave descriptografada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSA15Url> ou <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSAOAEPUrl> campos para especificar o algoritmo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O certificado x. 509 especificado no construtor não tem uma chave privada.  
+  
+ -ou-  
+  
+ O certificado x. 509 tem uma chave privada, mas não foi gerado usando o <see cref="T:System.Security.Cryptography.RSA" /> algoritmo.  
+  
+ -ou-  
+  
+ O certificado x. 509 tem uma chave privada, ele foi gerado usando o <see cref="T:System.Security.Cryptography.RSA" /> algoritmo, mas o <see cref="P:System.Security.Cryptography.AsymmetricAlgorithm.KeyExchangeAlgorithm" /> é de propriedade <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="algorithm" /> não há suporte para o parâmetro. Os algoritmos com suporte são <see cref="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSA15Url" /> e <see cref="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSAOAEPUrl" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptKey">
+      <MemberSignature Language="C#" Value="public override byte[] EncryptKey (string algorithm, byte[] keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] EncryptKey(string algorithm, unsigned int8[] keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.EncryptKey(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="keyData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo de criptografia para criptografar a chave.</param>
+        <param name="keyData">Uma matriz de <see cref="T:System.Byte" /> que contém a chave para criptografar.</param>
+        <summary>Criptografa a chave criptografada especificada usando o algoritmo de criptografia especificado.</summary>
+        <returns>Uma matriz de <see cref="T:System.Byte" /> que contém a chave criptografada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSA15Url> ou <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSAOAEPUrl> campos para especificar o algoritmo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O certificado x. 509 especificado no construtor tem uma chave pública que não foi gerada usando o <see cref="T:System.Security.Cryptography.RSA" /> algoritmo.  
+  
+ -ou-  
+  
+ O <paramref name="algorithm" /> não há suporte para o parâmetro. Os algoritmos com suporte são <see cref="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSA15Url" /> e <see cref="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSAOAEPUrl" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsymmetricAlgorithm">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.AsymmetricAlgorithm GetAsymmetricAlgorithm (string algorithm, bool privateKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.AsymmetricAlgorithm GetAsymmetricAlgorithm(string algorithm, bool privateKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.GetAsymmetricAlgorithm(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="privateKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo assimétrico para criar.</param>
+        <param name="privateKey">
+          <see langword="true" />Quando uma chave privada é necessária para criar o algoritmo; Caso contrário, <see langword="false" />.</param>
+        <summary>Obtém o algoritmo de criptografia assimétrico especificado.</summary>
+        <returns>Um <see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" /> que representa o algoritmo de criptografia assimétrico especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl>, <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSA15Url>, <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSAOAEPUrl>, <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url> ou <xref:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature> campos para especificar o `algorithm` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="privateKey" />é <see langword="true" /> e o certificado x. 509 especificado no construtor não tem uma chave privada.  
+  
+ -ou-  
+  
+ <paramref name="algorithm" />é <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl" /> e a chave pública ou privada para o certificado x. 509 especificado no construtor não é do tipo <see cref="T:System.Security.Cryptography.DSA" />.  
+  
+ -ou-  
+  
+ <paramref name="algorithm" />é <see cref="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSA15Url" />, <see cref="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSAOAEPUrl" />, <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url" /> ou <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature" /> e a chave pública ou privada para o certificado x. 509 especificado no construtor não é do tipo <see cref="T:System.Security.Cryptography.RSA" />.  
+  
+ -ou-  
+  
+ <paramref name="algorithm" /> não é suportado. Os algoritmos com suporte são <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl" />, <see cref="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSA15Url" />, <see cref="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSAOAEPUrl" />, <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url" />, e <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashAlgorithmForSignature">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.HashAlgorithm GetHashAlgorithmForSignature (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.HashAlgorithm GetHashAlgorithmForSignature(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.GetHashAlgorithmForSignature(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo hash.</param>
+        <summary>Obtém um algoritmo de criptografia que gera um hash de uma assinatura digital.</summary>
+        <returns>Um <see cref="T:System.Security.Cryptography.HashAlgorithm" /> que gera hashes para assinaturas digitais.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl>, <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url> ou <xref:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature> campos para especificar o `algorithm` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="algorithm" /> não é suportado. Os algoritmos com suporte são <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl" />, <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url" />, e <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignatureDeformatter">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.AsymmetricSignatureDeformatter GetSignatureDeformatter (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.AsymmetricSignatureDeformatter GetSignatureDeformatter(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.GetSignatureDeformatter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricSignatureDeformatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo de formatador para a assinatura digital obter uma instância do.</param>
+        <summary>Obtém o algoritmo de formatador para a assinatura digital.</summary>
+        <returns>Um <see cref="T:System.Security.Cryptography.AsymmetricSignatureDeformatter" /> que representa o algoritmo de formatador para a assinatura digital.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl>, <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url> ou <xref:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature> campos para especificar o `algorithm` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="algorithm" />é <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl" /> e a chave pública do certificado x. 509 especificado no construtor não é do tipo <see cref="T:System.Security.Cryptography.DSA" />.  
+  
+ -ou-  
+  
+ <paramref name="algorithm" />é <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url" /> ou <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature" /> e a chave pública do certificado x. 509 especificado no construtor não é do tipo <see cref="T:System.Security.Cryptography.RSA" />.  
+  
+ -ou-  
+  
+ <paramref name="algorithm" /> não é suportado. Os algoritmos com suporte são <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl" />,  
+  
+ <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url" /> e <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSignatureFormatter">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.AsymmetricSignatureFormatter GetSignatureFormatter (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Cryptography.AsymmetricSignatureFormatter GetSignatureFormatter(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.GetSignatureFormatter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricSignatureFormatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo de formatador para a assinatura digital obter uma instância do.</param>
+        <summary>Obtém o algoritmo de formatador para a assinatura digital.</summary>
+        <returns>Um <see cref="T:System.Security.Cryptography.AsymmetricSignatureDeformatter" /> que representa o algoritmo de formatador para a assinatura digital.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl>, <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url> ou <xref:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature> campos para especificar o `algorithm` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O certificado x. 509 especificado no construtor não tem uma chave privada.  
+  
+ -ou-  
+  
+ <paramref name="algorithm" />é <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl" /> e a chave privada do certificado x. 509 especificado no construtor não é do tipo <see cref="T:System.Security.Cryptography.DSA" />.  
+  
+ -ou-  
+  
+ <paramref name="algorithm" />é <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url" /> ou <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature" /> e a chave privada do certificado x. 509 especificado no construtor não é do tipo <see cref="T:System.Security.Cryptography.RSA" />.  
+  
+ -ou-  
+  
+ <paramref name="algorithm" /> não é suportado. Os algoritmos com suporte são <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl" />,  
+  
+ <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url" /> e <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPrivateKey">
+      <MemberSignature Language="C#" Value="public override bool HasPrivateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool HasPrivateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.HasPrivateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se a chave privada é um disponível.</summary>
+        <returns>
+          <see langword="true" />Quando a chave privada está disponível. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAsymmetricAlgorithm">
+      <MemberSignature Language="C#" Value="public override bool IsAsymmetricAlgorithm (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsAsymmetricAlgorithm(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.IsAsymmetricAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo de criptografia.</param>
+        <summary>Obtém um valor que indica se o algoritmo especificado usa chaves assimétricas.</summary>
+        <returns>
+          <see langword="true" />Quando o algoritmo especificado é <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.DsaSha1Signature" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha1Signature" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaOaepKeyWrap" />, ou <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaV15KeyWrap" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupportedAlgorithm">
+      <MemberSignature Language="C#" Value="public override bool IsSupportedAlgorithm (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSupportedAlgorithm(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.IsSupportedAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo de criptografia.</param>
+        <summary>Obtém um valor que indica se esta classe oferece suporte para o algoritmo especificado.</summary>
+        <returns>
+          <see langword="true" />Quando o algoritmo especificado é <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl" />, <see cref="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSA15Url" />, <see cref="F:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSAOAEPUrl" />, <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url" />, ou <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature" /> e a chave pública é do tipo correto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.IsSupportedAlgorithm%2A> método retorna `true` quando uma das seguintes condições for verdadeira:  
+  
+-   O `algorithm` parâmetro é <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigDSAUrl> e a chave pública do certificado x. 509 especificado no construtor é do tipo <xref:System.Security.Cryptography.DSA>.  
+  
+-   O `algorithm` parâmetro é <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSA15Url>, <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncRSAOAEPUrl>, <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA1Url> ou <xref:System.IdentityModel.Tokens.SecurityAlgorithms.RsaSha256Signature> e a chave pública do certificado x. 509 especificado no construtor é do tipo <xref:System.Security.Cryptography.RSA>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSymmetricAlgorithm">
+      <MemberSignature Language="C#" Value="public override bool IsSymmetricAlgorithm (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSymmetricAlgorithm(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.IsSymmetricAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo de criptografia.</param>
+        <summary>Obtém um valor que indica se o algoritmo especificado usa chaves simétricas.</summary>
+        <returns>
+          <see langword="true" />when the specified algorithm is <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.HmacSha1Signature" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.Aes128Encryption" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.Aes192Encryption" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.Aes256Encryption" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.TripleDesEncryption" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.Aes128KeyWrap" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.Aes192KeyWrap" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.Aes256KeyWrap" />, <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.TripleDesKeyWrap" />, or <see cref="F:System.IdentityModel.Tokens.SecurityAlgorithms.Psha1KeyDerivation" />; otherwise, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public override int KeySize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509AsymmetricSecurityKey.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho, em bits, da chave pública associado ao certificado x. 509.</summary>
+        <value>O tamanho, em bits, da chave pública associado ao certificado x. 509.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

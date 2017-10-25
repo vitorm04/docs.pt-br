@@ -1,0 +1,400 @@
+<Type Name="XmlSchemaInfo" FullName="System.Xml.Schema.XmlSchemaInfo">
+  <TypeSignature Language="C#" Value="public class XmlSchemaInfo : System.Xml.Schema.IXmlSchemaInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaInfo extends System.Object implements class System.Xml.Schema.IXmlSchemaInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.Schema.IXmlSchemaInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa o infoset de validação pós-esquema de um nó XML validado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir valida o `contosoBooks.xml` arquivo em relação a `contosoBooks.xsd` esquema. O exemplo usa a classe de <xref:System.Xml.Serialization.XmlSerializer> para desserializar o arquivo de `contosoBooks.xml` e passar o valor de nós métodos de classe de <xref:System.Xml.Schema.XmlSchemaValidator> .  
+  
+ [!code-csharp[XmlSchemaValidatorExamples#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
+ [!code-vb[XmlSchemaValidatorExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]  
+  
+ O exemplo usa o arquivo `contosoBooks.xml` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#2](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
+  
+ O exemplo também usa `contosoBooks.xsd` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#3](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de <xref:System.Xml.Schema.XmlSchemaInfo.%23ctor%2A> construtor, consulte o <xref:System.Xml.Schema.XmlSchemaInfo> tópico de referência de classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaContentType ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaContentType ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaInfo.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaContentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Xml.Schema.XmlSchemaContentType" /> validados de objeto que corresponde ao tipo de conteúdo desse nó XML.</summary>
+        <value>Um objeto <see cref="T:System.Xml.Schema.XmlSchemaContentType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefault">
+      <MemberSignature Language="C#" Value="public bool IsDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaInfo.IsDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se este nó XML validado foi definido como o resultado de um padrão que está sendo aplicado durante a validação de esquema de linguagem de definição de esquema XML (XSD).</summary>
+        <value>Um valor <see langword="bool" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlSchemaInfo.IsDefault%2A> propriedade não relata os padrões DTD.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNil">
+      <MemberSignature Language="C#" Value="public bool IsNil { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNil" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaInfo.IsNil" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o valor para este nó XML validado é nil.</summary>
+        <value>Um valor <see langword="bool" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de um nó XML é nil se seu `xsi:nil` atributo é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaSimpleType MemberType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaSimpleType MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaInfo.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaSimpleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de esquema dinâmico para este nó XML validado.</summary>
+        <value>Um objeto <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlSchemaInfo.MemberType%2A> propriedade é definida somente se o tipo estático do nó XML é um tipo de união caso em que o <xref:System.Xml.Schema.XmlSchemaInfo.MemberType%2A> propriedade retornará o tipo da união o nó XML validado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaAttribute">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaAttribute SchemaAttribute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaAttribute SchemaAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaInfo.SchemaAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o compilados <see cref="T:System.Xml.Schema.XmlSchemaAttribute" /> validados de objeto que corresponde a este nó XML.</summary>
+        <value>Um objeto <see cref="T:System.Xml.Schema.XmlSchemaAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir valida o `contosoBooks.xml` arquivo em relação a `contosoBooks.xsd` esquema. O exemplo usa a classe de <xref:System.Xml.Serialization.XmlSerializer> para desserializar o arquivo de `contosoBooks.xml` e passar o valor de nós métodos de classe de <xref:System.Xml.Schema.XmlSchemaValidator> .  
+  
+ [!code-csharp[XmlSchemaValidatorExamples#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
+ [!code-vb[XmlSchemaValidatorExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]  
+  
+ O exemplo usa o arquivo `contosoBooks.xml` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#2](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
+  
+ O exemplo também usa `contosoBooks.xsd` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#3](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaElement">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaElement SchemaElement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaElement SchemaElement" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaInfo.SchemaElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o compilados <see cref="T:System.Xml.Schema.XmlSchemaElement" /> validados de objeto que corresponde a este nó XML.</summary>
+        <value>Um objeto <see cref="T:System.Xml.Schema.XmlSchemaElement" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir valida o `contosoBooks.xml` arquivo em relação a `contosoBooks.xsd` esquema. O exemplo usa a classe de <xref:System.Xml.Serialization.XmlSerializer> para desserializar o arquivo de `contosoBooks.xml` e passar o valor de nós métodos de classe de <xref:System.Xml.Schema.XmlSchemaValidator> .  
+  
+ [!code-csharp[XmlSchemaValidatorExamples#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
+ [!code-vb[XmlSchemaValidatorExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]  
+  
+ O exemplo usa o arquivo `contosoBooks.xml` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#2](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
+  
+ O exemplo também usa `contosoBooks.xsd` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#3](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaType SchemaType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaType SchemaType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaInfo.SchemaType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de esquema de linguagem de definição de esquema XML (XSD) estático deste nó XML validado.</summary>
+        <value>Um objeto <see cref="T:System.Xml.Schema.XmlSchemaType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo estático de um nó XML é o tipo que foi declarado no esquema XSD.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir valida o `contosoBooks.xml` arquivo em relação a `contosoBooks.xsd` esquema. O exemplo usa a classe de <xref:System.Xml.Serialization.XmlSerializer> para desserializar o arquivo de `contosoBooks.xml` e passar o valor de nós métodos de classe de <xref:System.Xml.Schema.XmlSchemaValidator> .  
+  
+ [!code-csharp[XmlSchemaValidatorExamples#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
+ [!code-vb[XmlSchemaValidatorExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]  
+  
+ O exemplo usa o arquivo `contosoBooks.xml` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#2](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
+  
+ O exemplo também usa `contosoBooks.xsd` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#3](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validity">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaValidity Validity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaValidity Validity" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaInfo.Validity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Xml.Schema.XmlSchemaValidity" /> validados de valor deste nó XML.</summary>
+        <value>Um valor <see cref="T:System.Xml.Schema.XmlSchemaValidity" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os possíveis <xref:System.Xml.Schema.XmlSchemaValidity> valores para este nó XML são <xref:System.Xml.Schema.XmlSchemaValidity.Valid>, <xref:System.Xml.Schema.XmlSchemaValidity.Invalid>, e <xref:System.Xml.Schema.XmlSchemaValidity.NotKnown>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir valida o `contosoBooks.xml` arquivo em relação a `contosoBooks.xsd` esquema. O exemplo usa a classe de <xref:System.Xml.Serialization.XmlSerializer> para desserializar o arquivo de `contosoBooks.xml` e passar o valor de nós métodos de classe de <xref:System.Xml.Schema.XmlSchemaValidator> .  
+  
+ [!code-csharp[XmlSchemaValidatorExamples#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
+ [!code-vb[XmlSchemaValidatorExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]  
+  
+ O exemplo usa o arquivo `contosoBooks.xml` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#2](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
+  
+ O exemplo também usa `contosoBooks.xsd` como entrada.  
+  
+ [!code-xml[XPathXMLExamples#3](~/samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

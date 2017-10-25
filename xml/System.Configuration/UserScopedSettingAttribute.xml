@@ -1,0 +1,74 @@
+<Type Name="UserScopedSettingAttribute" FullName="System.Configuration.UserScopedSettingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class UserScopedSettingAttribute : System.Configuration.SettingAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UserScopedSettingAttribute extends System.Configuration.SettingAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.UserScopedSettingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.SettingAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que um grupo de configurações do aplicativo ou a propriedade contém valores distintos para cada usuário de um aplicativo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades de configurações do aplicativo tem um escopo que é baseado no aplicativo ou no nível do usuário. Como as categorias implicam, propriedades do escopo do aplicativo apresentam valores uniformes para todos os usuários do aplicativo, enquanto as propriedades do escopo do usuário têm dedicados valores para cada usuário do aplicativo.  
+  
+ O <xref:System.Configuration.UserScopedSettingAttribute> indica que uma propriedade deve ser considerada uma configuração de nível de usuário e que as decisões de armazenamento apropriado devem ser feitas adequadamente pelo provedor de configurações.  
+  
+ Um atributo de escopo é necessário para cada propriedade de configurações do aplicativo. Se uma propriedade não é aplicada com o um <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>, a propriedade é ignorada pelo provedor de configurações — não é serializado. No entanto, é inválido, se aplicam a ambos os atributos para a mesma propriedade de configurações. Uma tentativa de fazer isso fará com que um <xref:System.Configuration.ConfigurationErrorsException> seja gerada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Configuration.UserScopedSettingAttribute> aplicada a todas as quatro propriedades do `FormSettings` classe wrapper, que é derivado do <xref:System.Configuration.ApplicationSettingsBase> classe. Essa classe é usada para manter o local, tamanho, cor do plano de fundo e texto do formulário. O exemplo de código completo está listado no <xref:System.Configuration.ApplicationSettingsBase> visão geral da classe.  
+  
+ [!code-cpp[AppSettingsSample#9](~/samples/snippets/cpp/VS_Snippets_Winforms/AppSettingsSample/cpp/AppSettingsSample.cpp#9)]
+ [!code-csharp[AppSettingsSample#9](~/samples/snippets/csharp/VS_Snippets_Winforms/AppSettingsSample/CS/AppSettingsSample.cs#9)]
+ [!code-vb[AppSettingsSample#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AppSettingsSample/VB/Form1.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserScopedSettingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.UserScopedSettingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.UserScopedSettingAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada propriedade de configurações do aplicativo deve ser aplicada com um único atributo de escopo para que ele seja reconhecido e serializado pelo provedor de configurações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

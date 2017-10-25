@@ -1,0 +1,96 @@
+<Type Name="FullTrustAssembliesSection" FullName="System.Web.Configuration.FullTrustAssembliesSection">
+  <TypeSignature Language="C#" Value="public sealed class FullTrustAssembliesSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FullTrustAssembliesSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.FullTrustAssembliesSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura um conjunto de assemblies de confiança total. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.FullTrustAssembliesSection> classe permite que você especifique os assemblies de confiança total em um domínio de aplicativo de confiança parcial do ASP.NET.  
+  
+ Para configurar um assembly, você deve ter a representação de cadeia de caracteres hexadecimal de sua chave pública. Você pode obter essa chave usando a ferramenta de nome forte (Sn.exe). Essa ferramenta gera a representação de cadeia de caracteres hexadecimal de chave pública que você usa na configuração. Ele também produz o token de chave pública. Para saber mais, veja [Sn.exe (Ferramenta de Nome Forte)](~/docs/framework/tools/sn-exe-strong-name-tool.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como especificar um assembly de confiança total usando o `fullTrustAssemblies` seção em um arquivo de configuração.  
+  
+```  
+<fullTrustAssemblies>  
+  <add assemblyName="MyAssembly" version="1.0.0.0"   
+    publicKey="hex_key_representation" />  
+</fullTrustAssemblies>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FullTrustAssembliesSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.FullTrustAssembliesSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.FullTrustAssembliesSection" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullTrustAssemblies">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.FullTrustAssemblyCollection FullTrustAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.FullTrustAssemblyCollection FullTrustAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FullTrustAssembliesSection.FullTrustAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", IsDefaultCollection=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FullTrustAssemblyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.FullTrustAssemblyCollection" /> coleção de assemblies totalmente confiáveis.</summary>
+        <value>Uma coleção de assemblies totalmente confiáveis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FullTrustAssembliesSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

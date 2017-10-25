@@ -1,0 +1,663 @@
+<Type Name="XamlDirective" FullName="System.Xaml.XamlDirective">
+  <TypeSignature Language="C#" Value="public class XamlDirective : System.Xaml.XamlMember" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlDirective extends System.Xaml.XamlMember" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlDirective" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xaml.XamlMember</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece o identificador do sistema de tipo XAML para um membro, se o membro também for uma diretiva XAML. Leitores XAML e gravadores XAML usam o <see cref="T:System.Xaml.XamlDirective" /> identificador durante o processamento de nós de membro. O identificador é usado quando o leitor XAML é posicionado em uma <see cref="F:System.Xaml.XamlNodeType.StartMember" /> e <see cref="P:System.Xaml.XamlMember.IsDirective" /> é <see langword="true" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlDirective>fornece valores esperados para o sistema de tipo XAML quando o membro é uma diretiva XAML. Por definição, uma diretiva XAML tem características que sempre retornam os mesmos resultados para um subconjunto de <xref:System.Xaml.XamlMember> propriedades e as mesmas informações de sistema de tipo XAML é relatado para todas as diretivas XAML possíveis. O relatório de características do sistema de tipo de XAML são específicas para diretivas é realizado pelo comportamento interno ou por meio de substituições de <xref:System.Xaml.XamlMember> `Lookup*` membros virtuais no <xref:System.Xaml.XamlDirective> classe.  
+  
+ A lista a seguir mostra os resultados retornados de uma diretiva XAML para <xref:System.Xaml.XamlMember> quando o membro é realmente um <xref:System.Xaml.XamlDirective>:  
+  
+-   <xref:System.Xaml.XamlMember.LookupCustomAttributeProvider%2A>é sempre `null`.  
+  
+-   <xref:System.Xaml.XamlMember.DeferringLoader%2A>é sempre `null`.  
+  
+-   <xref:System.Xaml.XamlMember.DependsOn%2A>é sempre `null`.  
+  
+-   <xref:System.Xaml.XamlMember.IsAmbient%2A>é sempre `false`.  
+  
+-   <xref:System.Xaml.XamlMember.IsAttachable%2A>é sempre `false`.  
+  
+-   <xref:System.Xaml.XamlMember.IsDirective%2A>é sempre `true`.  
+  
+-   <xref:System.Xaml.XamlMember.IsEvent%2A>é sempre `false`.  
+  
+-   <xref:System.Xaml.XamlMember.IsReadOnly%2A>é sempre `false`.  
+  
+-   <xref:System.Xaml.XamlMember.IsReadPublic%2A>é sempre `true`.  
+  
+-   <xref:System.Xaml.XamlMember.IsWritePublic%2A>é sempre `true`.  
+  
+ Além disso, o suporte interno para <xref:System.Xaml.XamlMember.DeclaringType%2A> mantém indefinido e retorna `null`.  
+  
+> [!IMPORTANT]
+>  <xref:System.Xaml.XamlDirective>é um <xref:System.Xaml.XamlMember> subclasse. Assim como acontece com <xref:System.Xaml.XamlMember>, <xref:System.Xaml.XamlDirective> tem considerações de segurança sobre como o sistema de tipo XAML relatórios acesso. Consulte <xref:System.Xaml.XamlMember>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlDirective (string xamlNamespace, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string xamlNamespace, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xamlNamespace" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xamlNamespace">O namespace XAML primário onde isso <see cref="T:System.Xaml.XamlDirective" /> pode existir.</param>
+        <param name="name">O nome de identificação do <see cref="T:System.Xaml.XamlDirective" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlDirective" /> classe, especificando valores para um nome e um único namespace XAML. Use esta assinatura somente quando você deseja ou espera <see cref="P:System.Xaml.XamlMember.IsUnknown" /> relatório <see langword="true" /> para a diretiva.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Essa assinatura do construtor sempre gera um identificador para a diretiva onde <xref:System.Xaml.XamlMember.IsUnknown%2A> relatórios `true` sistema de tipos para a linguagem XAML. Se as informações necessárias estão disponíveis (o tipo de backup e um item de informação de sintaxe do texto para conversão) e desejar que um identificador que pode aplicar a diretiva, use o <xref:System.Xaml.XamlDirective.%23ctor%2A?displayProperty=nameWithType> assinatura de construtor em vez disso.  
+  
+ Se você usar essa assinatura, o <xref:System.Xaml.XamlDirective.AllowedLocation%2A> valor para a instância é <xref:System.Xaml.Schema.AllowedMemberLocations.Any>; e o <xref:System.Xaml.XamlMember.Type%2A> valor e <xref:System.Xaml.XamlMember.TypeConverter%2A> valor são ambos `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlDirective (System.Collections.Generic.IEnumerable&lt;string&gt; xamlNamespaces, string name, System.Xaml.XamlType xamlType, System.Xaml.Schema.XamlValueConverter&lt;System.ComponentModel.TypeConverter&gt; typeConverter, System.Xaml.Schema.AllowedMemberLocations allowedLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; xamlNamespaces, string name, class System.Xaml.XamlType xamlType, class System.Xaml.Schema.XamlValueConverter`1&lt;class System.ComponentModel.TypeConverter&gt; typeConverter, valuetype System.Xaml.Schema.AllowedMemberLocations allowedLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.#ctor(System.Collections.Generic.IEnumerable{System.String},System.String,System.Xaml.XamlType,System.Xaml.Schema.XamlValueConverter{System.ComponentModel.TypeConverter},System.Xaml.Schema.AllowedMemberLocations)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xamlNamespaces" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="xamlType" Type="System.Xaml.XamlType" />
+        <Parameter Name="typeConverter" Type="System.Xaml.Schema.XamlValueConverter&lt;System.ComponentModel.TypeConverter&gt;" />
+        <Parameter Name="allowedLocation" Type="System.Xaml.Schema.AllowedMemberLocations" />
+      </Parameters>
+      <Docs>
+        <param name="xamlNamespaces">Um conjunto de namespaces XAML onde isso <see cref="T:System.Xaml.XamlDirective" /> podem existir, passado como um conjunto enumerável de cadeias de caracteres de identificador.</param>
+        <param name="name">O nome de identificação do <see cref="T:System.Xaml.XamlDirective" />.</param>
+        <param name="xamlType">O tipo de XAML que faz o <see cref="T:System.Xaml.XamlDirective" />.</param>
+        <param name="typeConverter">O conversor de tipo que este <see cref="T:System.Xaml.XamlDirective" /> usa para conversão de sintaxe do texto.</param>
+        <param name="allowedLocation">Um valor de <see cref="T:System.Xaml.Schema.AllowedMemberLocations" /> enumeração.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlDirective" /> classe, especificando valores para cada valor por caso de um <see cref="T:System.Xaml.XamlDirective" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve usar esse construtor para gerar um <xref:System.Xaml.XamlDirective> que não relata <xref:System.Xaml.XamlMember.IsUnknown%2A> como `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="xamlType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowedLocation">
+      <MemberSignature Language="C#" Value="public System.Xaml.Schema.AllowedMemberLocations AllowedLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xaml.Schema.AllowedMemberLocations AllowedLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlDirective.AllowedLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.AllowedMemberLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica os tipos de nós XAML em que a diretiva pode ser especificada.</summary>
+        <value>Um valor da enumeração. O padrão é o padrão de enumeração, que é <see cref="F:System.Xaml.Schema.AllowedMemberLocations.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir esse valor <xref:System.Xaml.XamlDirective.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.String%7D%2CSystem.String%2CSystem.Xaml.XamlType%2CSystem.Xaml.Schema.XamlValueConverter%7BSystem.ComponentModel.TypeConverter%7D%2CSystem.Xaml.Schema.AllowedMemberLocations%29> assinatura de construtor. Se você criar usando o <xref:System.Xaml.XamlDirective.%23ctor%28System.String%2CSystem.String%29> assinatura de construtor, o <xref:System.Xaml.XamlDirective.AllowedLocation%2A> valor para a instância é <xref:System.Xaml.Schema.AllowedMemberLocations.Any>. No entanto, a instância de relatórios sempre <xref:System.Xaml.XamlMember.IsUnknown%2A> como `true`. Normalmente, esse comportamento afeta tenta gravar objeto gráficos e também afeta outros usos práticos de um <xref:System.Xaml.XamlMember> valor.  
+  
+ Você normalmente não poderia construir um caso de diretiva de XAML onde <xref:System.Xaml.XamlDirective.AllowedLocation%2A> é <xref:System.Xaml.Schema.AllowedMemberLocations?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este objeto.</summary>
+        <returns>Um código de hash de número inteiro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXamlNamespaces">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;string&gt; GetXamlNamespaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IList`1&lt;string&gt; GetXamlNamespaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.GetXamlNamespaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma lista de namespaces XAML onde esse membro XAML pode existir.</summary>
+        <returns>Uma lista de identificadores de namespace XAML, como cadeias de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os identificadores de namespace XAML são cadeias de caracteres que geralmente aparecem no formato de cadeia de caracteres de identificador de recurso uniforme (URI) acordo com as convenções habituais para namespaces XML e XAML. Se a lista contiver mais de um item, o primeiro item no conjunto de geralmente é o namespace XAML primário relevante para fins de processamento e outros itens são alternativas. <xref:System.Xaml.XamlMember.PreferredXamlNamespace%2A?displayProperty=nameWithType>conta com essa classificação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupCustomAttributeProvider">
+      <MemberSignature Language="C#" Value="protected override sealed System.Reflection.ICustomAttributeProvider LookupCustomAttributeProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Reflection.ICustomAttributeProvider LookupCustomAttributeProvider() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupCustomAttributeProvider" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ICustomAttributeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Reflection.ICustomAttributeProvider" /> implementação. Essa implementação sempre retorna <see langword="null" />.</summary>
+        <returns>Sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como uma diretiva XAML não pode ter atributos personalizados, essa implementação sempre retorna `null`. <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupDeferringLoader">
+      <MemberSignature Language="C#" Value="protected override sealed System.Xaml.Schema.XamlValueConverter&lt;System.Xaml.XamlDeferringLoader&gt; LookupDeferringLoader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xaml.Schema.XamlValueConverter`1&lt;class System.Xaml.XamlDeferringLoader&gt; LookupDeferringLoader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupDeferringLoader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlValueConverter&lt;System.Xaml.XamlDeferringLoader&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> objeto, que é usado durante o carregamento adiado dos objetos declarado em XAML. Essa implementação sempre retorna <see langword="null" />.</summary>
+        <returns>Sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como uma diretiva não pode ter adiadas carregamento, essa implementação sempre retorna `null`. <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupDependsOn">
+      <MemberSignature Language="C#" Value="protected override sealed System.Collections.Generic.IList&lt;System.Xaml.XamlMember&gt; LookupDependsOn ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.IList`1&lt;class System.Xaml.XamlMember&gt; LookupDependsOn() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupDependsOn" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Xaml.XamlMember&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma lista de objetos <see cref="T:System.Xaml.XamlMember" />. A lista reporta os membros em que relações de dependência para ordem de inicialização existem em relação a esse <see cref="T:System.Xaml.XamlMember" />. Essa implementação sempre retorna <see langword="null" />.</summary>
+        <returns>Sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como uma diretiva XAML não pode ter a ordem de inicialização, essa implementação sempre retorna `null`. <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupInvoker">
+      <MemberSignature Language="C#" Value="protected override sealed System.Xaml.Schema.XamlMemberInvoker LookupInvoker ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xaml.Schema.XamlMemberInvoker LookupInvoker() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupInvoker" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlMemberInvoker</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> que está associado com um <see cref="T:System.Xaml.XamlDirective" />.</summary>
+        <returns>O <see cref="T:System.Xaml.Schema.XamlMemberInvoker" /> informações para este <see cref="T:System.Xaml.XamlMember" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser chamado por chamadas para <xref:System.Xaml.XamlMember.Invoker%2A>.  
+  
+ Essa implementação retorna um estático interno <xref:System.Xaml.Schema.XamlMemberInvoker> valor específico para diretivas do sistema de tipo XAML. <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsAmbient">
+      <MemberSignature Language="C#" Value="protected override sealed bool LookupIsAmbient ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool LookupIsAmbient() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupIsAmbient" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se isso <see cref="T:System.Xaml.XamlMember" /> será relatado como uma propriedade de ambiente.</summary>
+        <returns>Sempre retorna <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como uma diretiva XAML não pode ser um tipo de ambiente, essa implementação sempre retorna `false`. <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsEvent">
+      <MemberSignature Language="C#" Value="protected override sealed bool LookupIsEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool LookupIsEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupIsEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se isso <see cref="T:System.Xaml.XamlDirective" /> representa um evento.</summary>
+        <returns>Sempre retorna <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsReadOnly">
+      <MemberSignature Language="C#" Value="protected override sealed bool LookupIsReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool LookupIsReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupIsReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se isso <see cref="T:System.Xaml.XamlDirective" /> representa uma propriedade somente leitura pretendida.</summary>
+        <returns>Sempre retorna <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por definição, as diretivas são configuráveis. <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsReadPublic">
+      <MemberSignature Language="C#" Value="protected override sealed bool LookupIsReadPublic ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool LookupIsReadPublic() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupIsReadPublic" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se isso <see cref="T:System.Xaml.XamlDirective" /> representa uma propriedade que tem um público <see langword="get" /> acessador.</summary>
+        <returns>Sempre retorna <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsUnknown">
+      <MemberSignature Language="C#" Value="protected override sealed bool LookupIsUnknown ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool LookupIsUnknown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupIsUnknown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se isso <see cref="T:System.Xaml.XamlDirective" /> representa um membro que não pode ser resolvido pelo sistema de backup que é usado para resolução de tipo e membro.</summary>
+        <returns>
+          <see langword="true" />Se este <see cref="T:System.Xaml.XamlDirective" /> representa um membro não pode ser resolvido; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xaml.XamlDirective> implementação apenas chama base e não faz nada mais. A implementação base retorna os resultados nesta ordem: os resultados são baseados em reflexão interno; ou os resultados com base na verificação de um valor nulo a <xref:System.Xaml.XamlMember.UnderlyingMember%2A>. O <xref:System.Xaml.XamlDirective> implementação lacra isso virtual membro; portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsWriteOnly">
+      <MemberSignature Language="C#" Value="protected override sealed bool LookupIsWriteOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool LookupIsWriteOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupIsWriteOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se isso <see cref="T:System.Xaml.XamlDirective" /> representa uma propriedade somente gravação pretendida.</summary>
+        <returns>Sempre retorna <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupIsWritePublic">
+      <MemberSignature Language="C#" Value="protected override sealed bool LookupIsWritePublic ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool LookupIsWritePublic() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupIsWritePublic" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se isso <see cref="T:System.Xaml.XamlDirective" /> representa uma propriedade que tem um público <see langword="set" /> acessador.</summary>
+        <returns>Sempre retorna <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupTargetType">
+      <MemberSignature Language="C#" Value="protected override sealed System.Xaml.XamlType LookupTargetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xaml.XamlType LookupTargetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupTargetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see cref="T:System.Xaml.XamlType" /> do tipo onde o <see cref="T:System.Xaml.XamlMember" /> podem existir. Essa implementação sempre retorna <see langword="null" />.</summary>
+        <returns>Sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos de destino não são relevantes para diretivas; Portanto, essa implementação sempre retorna `null`. <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupType">
+      <MemberSignature Language="C#" Value="protected override sealed System.Xaml.XamlType LookupType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xaml.XamlType LookupType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see cref="T:System.Xaml.XamlType" /> do tipo que é usado pelo membro.</summary>
+        <returns>O <see cref="T:System.Xaml.XamlType" /> do tipo que é usado pelo membro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xaml.XamlDirective> implementação apenas chama base e não faz nada mais. A implementação base retorna resultados com base em reflexão interno ou procurando um valor nulo de <xref:System.Xaml.XamlMember.UnderlyingMember%2A>, o processamento nessa ordem. <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ Consulte comentários em <xref:System.Xaml.XamlMember.LookupType%2A?displayProperty=nameWithType> para obter mais informações sobre quais informações <xref:System.Xaml.XamlMember.Type%2A> executa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupTypeConverter">
+      <MemberSignature Language="C#" Value="protected override sealed System.Xaml.Schema.XamlValueConverter&lt;System.ComponentModel.TypeConverter&gt; LookupTypeConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xaml.Schema.XamlValueConverter`1&lt;class System.ComponentModel.TypeConverter&gt; LookupTypeConverter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupTypeConverter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.XamlValueConverter&lt;System.ComponentModel.TypeConverter&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma implementação de conversor de tipo que é associada a essa <see cref="T:System.Xaml.XamlDirective" />.</summary>
+        <returns>Um <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> instância tem <see cref="T:System.ComponentModel.TypeConverter" /> restrição; ou <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xaml.XamlDirective> implementação apenas chama base e não faz nada mais. Consulte <xref:System.Xaml.XamlMember.LookupTypeConverter%2A?displayProperty=nameWithType>. <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupUnderlyingGetter">
+      <MemberSignature Language="C#" Value="protected override sealed System.Reflection.MethodInfo LookupUnderlyingGetter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Reflection.MethodInfo LookupUnderlyingGetter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupUnderlyingGetter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see langword="get" /> acessador que está associado a essa <see cref="T:System.Xaml.XamlDirective" />. Essa implementação sempre retorna <see langword="null" />.</summary>
+        <returns>Sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupUnderlyingMember">
+      <MemberSignature Language="C#" Value="protected override sealed System.Reflection.MemberInfo LookupUnderlyingMember ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Reflection.MemberInfo LookupUnderlyingMember() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupUnderlyingMember" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um reflexo de CLR <see cref="T:System.Reflection.MemberInfo" /> que é associada a essa <see cref="T:System.Xaml.XamlDirective" />. Essa implementação sempre retorna <see langword="null" />.</summary>
+        <returns>Sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupUnderlyingSetter">
+      <MemberSignature Language="C#" Value="protected override sealed System.Reflection.MethodInfo LookupUnderlyingSetter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Reflection.MethodInfo LookupUnderlyingSetter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.LookupUnderlyingSetter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see langword="set" /> acessador que está associado a essa <see cref="T:System.Xaml.XamlDirective" />. Essa implementação sempre retorna <see langword="null" />.</summary>
+        <returns>Sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.XamlDirective>lacra esse membro virtual; Portanto, todos os <xref:System.Xaml.XamlDirective> todas as diretivas XAML predefinidas e tipos devem usar esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlDirective.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres deste <see cref="T:System.Xaml.XamlDirective" />.</summary>
+        <returns>Uma representação de cadeia de caracteres deste <see cref="T:System.Xaml.XamlDirective" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver informações do namespace XAML, essa implementação retorna uma combinação de cadeia de caracteres de <xref:System.Xaml.XamlMember.PreferredXamlNamespace%2A> e <xref:System.Xaml.XamlMember.Name%2A>. Se as informações de namespace XAML não estiverem disponíveis, essa implementação retorna <xref:System.Xaml.XamlMember.Name%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

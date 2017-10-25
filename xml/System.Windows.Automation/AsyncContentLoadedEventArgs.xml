@@ -1,0 +1,82 @@
+<Type Name="AsyncContentLoadedEventArgs" FullName="System.Windows.Automation.AsyncContentLoadedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class AsyncContentLoadedEventArgs : System.Windows.Automation.AutomationEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AsyncContentLoadedEventArgs extends System.Windows.Automation.AutomationEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.AsyncContentLoadedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.AutomationEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para um <see cref="F:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsyncContentLoadedEventArgs (System.Windows.Automation.AsyncContentLoadedState asyncContentState, double percentComplete);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Automation.AsyncContentLoadedState asyncContentState, float64 percentComplete) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.AsyncContentLoadedEventArgs.#ctor(System.Windows.Automation.AsyncContentLoadedState,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="asyncContentState" Type="System.Windows.Automation.AsyncContentLoadedState" />
+        <Parameter Name="percentComplete" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="asyncContentState">O estado de carregamento de conteúdo.</param>
+        <param name="percentComplete">Porcentagem do conteúdo que foi carregado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Automation.AsyncContentLoadedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `percentComplete`deve ser 0,0 quando `asyncContentState` é <xref:System.Windows.Automation.AsyncContentLoadedState.Beginning> e 100.0 quando é <xref:System.Windows.Automation.AsyncContentLoadedState.Completed>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncContentLoadedState">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AsyncContentLoadedState AsyncContentLoadedState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.AsyncContentLoadedState AsyncContentLoadedState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AsyncContentLoadedEventArgs.AsyncContentLoadedState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AsyncContentLoadedState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado de carregamento de conteúdo.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Automation.AsyncContentLoadedState" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentComplete">
+      <MemberSignature Language="C#" Value="public double PercentComplete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PercentComplete" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AsyncContentLoadedEventArgs.PercentComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o percentual de conteúdo que foi carregado.</summary>
+        <value>A porcentagem de conteúdo que foi carregado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

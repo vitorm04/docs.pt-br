@@ -1,0 +1,13 @@
+<Namespace Name="XamlGeneratedNamespace">
+  <Docs>
+    <summary>Contém tipos gerados pelo compilador que não se destina a ser usado diretamente no seu código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não use ou incluir esse namespace. A finalidade desse namespace é um contêiner para o <xref:XamlGeneratedNamespace.GeneratedInternalTypeHelper> classe <xref:XamlGeneratedNamespace.GeneratedInternalTypeHelper> é um auxiliar interno que produz o compilador de marcação XAML para resolução de tipo XAML em assemblies.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,91 @@
+<Type Name="OnDeserializingAttribute" FullName="System.Runtime.Serialization.OnDeserializingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class OnDeserializingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OnDeserializingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.OnDeserializingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Quando aplicado a um método, especifica que o método é chamado durante a desserialização de um objeto em um grafo de objeto. A ordem de desserialização em relação a outros objetos no gráfico é não determinística.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.Serialization.OnDeserializingAttribute> para definir valores padrão durante a desserialização. Por exemplo, se o tipo que são desserialização não contém um construtor, crie um método para definir valores de todos os campos na instância e aplique o atributo ao método.  
+  
+ Para usar o <xref:System.Runtime.Serialization.OnDeserializingAttribute>, o método deve conter um <xref:System.Runtime.Serialization.StreamingContext> parâmetro. O atributo marcar o método a ser chamado pela infraestrutura de serialização e o <xref:System.Runtime.Serialization.StreamingContext> fornece dados adicionais sobre o tipo de serialização ocorrendo.  O uso é mostrado no código a seguir:  
+  
+ [!code-csharp[System.Runtime.Serialization.OnSerialization#4](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Serialization.OnSerialization/CS/OnSerializationOnDeserializationExample.cs#4)]
+ [!code-vb[System.Runtime.Serialization.OnSerialization#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Serialization.OnSerialization/VB/OnSerializationOnDeserializationExample.vb#4)]  
+  
+> [!NOTE]
+>  No seu código, você pode usar a palavra `OnDeserializing` em vez do mais <xref:System.Runtime.Serialization.OnDeserializingAttribute>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir se aplica a <xref:System.Runtime.Serialization.OnDeserializedAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>, <xref:System.Runtime.Serialization.OnSerializedAttribute>, e <xref:System.Runtime.Serialization.OnDeserializingAttribute> métodos em uma classe de atributos.  
+  
+ [!code-csharp[System.Runtime.Serialization.OnSerialization#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Serialization.OnSerialization/CS/OnSerializationOnDeserializationExample.cs#1)]
+ [!code-vb[System.Runtime.Serialization.OnSerialization#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Serialization.OnSerialization/VB/OnSerializationOnDeserializationExample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OnDeserializingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.OnDeserializingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Serialization.OnDeserializingAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

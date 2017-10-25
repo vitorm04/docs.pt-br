@@ -1,0 +1,233 @@
+<Type Name="CallbackDebugBehavior" FullName="System.ServiceModel.Description.CallbackDebugBehavior">
+  <TypeSignature Language="C#" Value="public class CallbackDebugBehavior : System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallbackDebugBehavior extends System.Object implements class System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.CallbackDebugBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IEndpointBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Habilita a depuração de serviço para um objeto de retorno de chamada do Windows Communication Foundation (WCF).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> propriedade `true` de um arquivo de configuração do aplicativo ou por meio de programação para habilitar o fluxo de exceção gerenciada informações em um objeto de retorno de chamada de cliente de volta para o serviço para fins de depuração.  
+  
+> [!CAUTION]
+>  Retornando informações de exceção gerenciada nos serviços podem ser um risco de segurança porque os detalhes da exceção expõem informações sobre a implementação do cliente interno que pode ser usada por serviços não autorizados. Além disso, embora o <xref:System.ServiceModel.Description.CallbackDebugBehavior> propriedades também podem ser definidas programaticamente, é fácil esquecer de desabilitar <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> durante a implantação.  
+  
+ Devido a problemas de segurança envolvida, é altamente recomendável que:  
+  
+-   Usar um arquivo de configuração do aplicativo para definir o valor da <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> propriedade `true`.  
+  
+-   Você só fazer para que somente em controlado cenários de depuração.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]os problemas de segurança relacionados às informações de exceção gerenciado, consulte [especificando e tratamento de falhas em contratos e serviços](~/docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+  
+ Você também pode definir os valores deste atributo usando o [ &lt;callbackDebug&gt; ](~/docs/framework/configure-apps/file-schema/wcf/callbackdebug.md) elemento em um arquivo de configuração do aplicativo cliente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um cliente de arquivo de configuração que instrui o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para retornar informações de exceção gerenciada de um cliente de objeto de retorno de chamada nas mensagens de SOAP.  
+  
+ [!code-xml[SCA.CallbackContract#4](~/samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallbackDebugBehavior (bool includeExceptionDetailInFaults);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool includeExceptionDetailInFaults) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.CallbackDebugBehavior.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="includeExceptionDetailInFaults" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includeExceptionDetailInFaults">Controla se um [!INCLUDE[indigo2](~/includes/indigo2-md.md)] objeto de retorno de chamada inclui informações de exceção gerenciada em detalhes das falhas SOAP enviada de volta para o serviço.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Description.CallbackDebugBehavior" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor cria um <xref:System.ServiceModel.Description.CallbackDebugBehavior> objeto no qual o valor da <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> propriedade é o valor de `includeExceptionDetailInFaults`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeExceptionDetailInFaults">
+      <MemberSignature Language="C#" Value="public bool IncludeExceptionDetailInFaults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeExceptionDetailInFaults" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que controla se os objetos de retorno de chamada de cliente retornam informações de exceção gerenciada em falhas SOAP para o serviço.</summary>
+        <value>
+          <see langword="true" />Se [!INCLUDE[indigo2](~/includes/indigo2-md.md)] retorna informações de exceção de retorno de chamada de cliente de falhas de SOAP para fins de comunicação duplex; de depuração do serviço de gerenciado caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> propriedade `true` de um arquivo de configuração do aplicativo ou por meio de programação para habilitar o fluxo de exceção gerenciada informações em um objeto de retorno de chamada de cliente de volta para o serviço para fins de depuração.  
+  
+> [!CAUTION]
+>  Retornando informações de exceção gerenciada nos serviços podem ser um risco de segurança porque os detalhes da exceção expõem informações sobre a implementação do cliente interno que pode ser usada por serviços não autorizados. Além disso, embora o <xref:System.ServiceModel.Description.CallbackDebugBehavior> propriedades também podem ser definidas programaticamente, é fácil esquecer de desabilitar <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> durante a implantação.  
+  
+ Devido a problemas de segurança envolvida, é altamente recomendável que:  
+  
+-   Usar um arquivo de configuração do aplicativo para definir o valor da <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> propriedade `true`.  
+  
+-   Você só fazer para que somente em controlado cenários de depuração.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]os problemas de segurança relacionados às informações de exceção gerenciado, consulte [especificando e tratamento de falhas em contratos e serviços](~/docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+  
+### <a name="to-enable-or-disable-a-feature-of-callbackdebugbehavior-using-a-configuration-file"></a>Para habilitar ou desabilitar um recurso do CallbackDebugBehavior usando um arquivo de configuração  
+  
+1.  Adicionar um `behaviorConfiguration` de atributo para o cliente [ \<ponto de extremidade >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento para sua [!INCLUDE[indigo2](~/includes/indigo2-md.md)] aplicativo cliente. O <xref:System.ServiceModel.Description.CallbackDebugBehavior> comportamento é um comportamento de ponto de extremidade. Comportamentos de ponto de extremidade são configurados no `<endpoint>` elementos; serviço comportamentos são configurados no [ &lt;service&gt; ](~/docs/framework/configure-apps/file-schema/wcf/service.md) elementos.  
+  
+2.  Adicionar a ou criar um [ &lt;endpointBehaviors&gt; ](~/docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) seção e adicione um [ &lt;comportamento&gt; ](~/docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento para que com o nome que corresponde a `behaviorConfiguration`valor do atributo da etapa 1. Comportamentos de ponto de extremidade são adicionados para uso em um cliente [ \<ponto de extremidade >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento usando um [ &lt;endpointBehaviors&gt; ](~/docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elemento.  
+  
+3.  Adicionar um [ &lt;callbackDebug&gt; ](~/docs/framework/configure-apps/file-schema/wcf/callbackdebug.md) elemento para o [ &lt;comportamento&gt; ](~/docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento da etapa 2 e habilitar ou desabilitar as várias propriedades apropriadas para seu cenário.  
+  
+ Para obter um exemplo específico, consulte a seção de exemplo. Você também pode definir os valores deste atributo usando o [ &lt;callbackDebug&gt; ](~/docs/framework/configure-apps/file-schema/wcf/callbackdebug.md) elemento em um arquivo de configuração do aplicativo cliente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um cliente de arquivo de configuração que instrui o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para retornar informações de exceção gerenciada de um cliente de objeto de retorno de chamada nas mensagens de SOAP.  
+  
+ [!code-xml[SCA.CallbackContract#4](~/samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.AddBindingParameters (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.CallbackDebugBehavior.System#ServiceModel#Description#IEndpointBehavior#AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">O ponto de extremidade a ser modificado.</param>
+        <param name="bindingParameters">Os objetos que os elementos de associação necessitam para oferecer suporte ao comportamento.</param>
+        <summary>Implementa o <see cref="M:System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" /> método para dar suporte o comportamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.ApplyClientBehavior (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Dispatcher.ClientRuntime behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, class System.ServiceModel.Dispatcher.ClientRuntime behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.CallbackDebugBehavior.System#ServiceModel#Description#IEndpointBehavior#ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="behavior" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">O ponto de extremidade que deve ser personalizado.</param>
+        <param name="behavior">O tempo de execução do cliente a ser personalizado.</param>
+        <summary>Implementa o <see cref="M:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" /> para suporte ao comportamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atribui o valor da <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> propriedade para o <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, class System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.CallbackDebugBehavior.System#ServiceModel#Description#IEndpointBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="endpointDispatcher" Type="System.ServiceModel.Dispatcher.EndpointDispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">O ponto de extremidade que expõe o contrato.</param>
+        <param name="endpointDispatcher">O dispatcher do ponto de extremidade a ser modificado ou estendido.</param>
+        <summary>Implementa o <see cref="M:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" /> para suporte ao comportamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gera um <xref:System.InvalidOperationException?displayProperty=nameWithType>; esse comportamento só pode ser usado em um aplicativo cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.Validate (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.Validate(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.CallbackDebugBehavior.System#ServiceModel#Description#IEndpointBehavior#Validate(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">O ponto de extremidade para validar.</param>
+        <summary>Implementa <see cref="M:System.ServiceModel.Description.IEndpointBehavior.Validate(System.ServiceModel.Description.ServiceEndpoint)" /> para suporte ao comportamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

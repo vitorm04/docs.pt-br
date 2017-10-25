@@ -1,0 +1,102 @@
+<Type Name="EdmScalarPropertyAttribute" FullName="System.Data.Objects.DataClasses.EdmScalarPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EdmScalarPropertyAttribute : System.Data.Objects.DataClasses.EdmPropertyAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EdmScalarPropertyAttribute extends System.Data.Objects.DataClasses.EdmPropertyAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Objects.DataClasses.EdmPropertyAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Atributo que indica que a propriedade representa uma propriedade escalar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.IsNullable%2A> e <xref:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.EntityKeyProperty%2A> propriedades não podem ser `true` como membros de chave não podem ser `null`.  
+  
+ O <xref:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute> vincula uma propriedade escalar em uma classe de dados para uma propriedade de um tipo de entidade ou tipo complexo que é definido no modelo conceitual.  
+  
+ Esse atributo é aplicado a propriedades que retornam tipos escalares.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EdmScalarPropertyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityKeyProperty">
+      <MemberSignature Language="C#" Value="public bool EntityKeyProperty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EntityKeyProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.EntityKeyProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor que indica se a propriedade é parte da chave de entidade.</summary>
+        <value>O valor que indica se a propriedade faz parte da chave de entidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como uma chave de entidade pode conter mais de uma propriedade, o <xref:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.EntityKeyProperty%2A> pode ser definido como verdadeiro para mais de uma propriedade de um tipo de entidade.  
+  
+ O <xref:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.IsNullable%2A> e <xref:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.EntityKeyProperty%2A> propriedades não podem ser `true` como membros de chave não podem ser `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNullable">
+      <MemberSignature Language="C#" Value="public bool IsNullable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNullable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.IsNullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor que indica se a propriedade pode ter um <see langword="null" /> valor.</summary>
+        <value>O valor que indica se a propriedade pode ter um <see langword="null" /> valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.IsNullable%2A> e <xref:System.Data.Objects.DataClasses.EdmScalarPropertyAttribute.EntityKeyProperty%2A> propriedades não podem ser `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

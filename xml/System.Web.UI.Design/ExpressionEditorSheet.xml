@@ -1,0 +1,183 @@
+<Type Name="ExpressionEditorSheet" FullName="System.Web.UI.Design.ExpressionEditorSheet">
+  <TypeSignature Language="C#" Value="public abstract class ExpressionEditorSheet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ExpressionEditorSheet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ExpressionEditorSheet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma folha de editor de tempo de design para uma expressão personalizada. Essa classe deve ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma folha de editor de expressão personalizada permite que um desenvolvedor definir propriedades em uma expressão personalizada em tempo de design. Valores de propriedade de controle podem ser definidos usando cadeias de caracteres de expressão; as cadeias de caracteres de expressão são avaliadas em tempo de execução por um construtor de expressões e em tempo de design, um editor de expressão.  
+  
+ Quando você procura a <xref:System.Web.UI.Design.HtmlControlDesigner.Expressions%2A> propriedade para um controle na grade de propriedades de tempo de design, o designer visual exibe uma caixa de diálogo para definir as expressões que fornecem o valor para uma propriedade de controle. Você pode selecionar o tipo de expressão com base em uma lista de prefixos de expressão. Quando você seleciona um prefixo de expressão da lista, o designer visual usa associado <xref:System.Web.UI.Design.ExpressionEditor> e <xref:System.Web.UI.Design.ExpressionEditorSheet> objetos para avaliar e converter a cadeia de caracteres de expressão com base na sintaxe para esse tipo de expressão. O designer visual usa propriedades de folha do editor de expressão para solicitar um ou mais cadeias de caracteres que combinam na cadeia de caracteres de expressão personalizada.  
+  
+ Normalmente, para fornecer um novo tipo de expressão em tempo de design, você definir um prefixo de expressão exclusivo e fornecer personalizado <xref:System.Web.Compilation.ExpressionBuilder> e <xref:System.Web.UI.Design.ExpressionEditor> implementações. Opcionalmente, você pode fornecer um personalizado <xref:System.Web.UI.Design.ExpressionEditorSheet> implementação que define as propriedades que são usadas para formar a expressão. Para associar um prefixo de expressão com um construtor de expressão e um editor de expressão, aplicar o <xref:System.Web.Compilation.ExpressionEditorAttribute> atributo e um <xref:System.Web.Compilation.ExpressionPrefixAttribute> atributo personalizado <xref:System.Web.Configuration.ExpressionBuilder> classe e, em seguida, configurar o prefixo de expressão para um construtor de expressões a `expressionBuilders` elemento no arquivo de configuração da Web.  
+  
+ A implementação padrão da <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> método retorna uma folha de editor básico, que usa uma única cadeia de caracteres de entrada para formar a expressão. Editores de expressão personalizada que derivam o <xref:System.Web.UI.Design.ExpressionEditor> pode substituir o <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> método para retornar um editor personalizado de implementação de folha. Normalmente, uma folha de um editor personalizado contiver várias propriedades que são usadas para construir a cadeia de caracteres de expressão. O <xref:System.Web.UI.Design.ExpressionEditorSheet.GetExpression%2A> método retorna a cadeia de caracteres de expressão resultante com base nas propriedades de expressão atual.  
+  
+ Por exemplo, o <xref:System.Web.UI.Design.ResourceExpressionEditor> classe deriva de <xref:System.Web.UI.Design.ExpressionEditor> classe e fornece uma implementação para avaliar e associar uma referência de cadeia de caracteres de recurso uma propriedade de controle em tempo de design. O <xref:System.Web.Compilation.ResourceExpressionBuilder> classe está associada com o prefixo de expressão `Resources` e <xref:System.Web.UI.Design.ResourceExpressionEditor> implementação. O <xref:System.Web.UI.Design.ResourceExpressionEditor.GetExpressionEditorSheet%2A> método retorna um <xref:System.Web.UI.Design.ResourceExpressionEditorSheet>, que define as propriedades individuais que formam uma expressão de referência de recurso.  
+  
+ Quando você herda o <xref:System.Web.UI.Design.ExpressionEditorSheet> classe, você deve substituir os seguintes membros:  
+  
+-   O <xref:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet%2A> método para retornar um editor personalizado de implementação de folha.  
+  
+-   O <xref:System.Web.UI.Design.ExpressionEditorSheet.%23ctor%2A> construtor para implementar as ações de inicialização personalizada para sua implementação de folha do editor de expressão.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Derivar uma folha de editor de expressão personalizada do <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> classe, se você estiver definindo um novo tipo de expressão para valores de propriedade de controle e você deseja criar a cadeia de caracteres de expressão com base em vários valores de propriedade de expressão. Uma implementação de classe derivada deve conter o seguinte:  
+  
+-   Uma propriedade pública de cada valor distinto na cadeia de expressão que pode ser definida em tempo de design.  
+  
+-   Uma implementação de <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.GetExpression" /> método que a cadeia de caracteres de expressão personalizada dos valores de propriedade de folha do editor de formulários.  
+  
+-   Opcionalmente, uma implementação de construtor que define os valores iniciais do editor de propriedades de folha.  
+  
+ A classe do editor de expressão personalizado associada cria uma instância da planilha no editor derivada de <see cref="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> método, inicializa essa instância com a cadeia de caracteres de expressão atual definido para a propriedade de controle e retorna a instância para o designer visual. O designer visual permite que você defina a expressão de propriedades de folha e, em seguida, chama o <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.GetExpression" /> método para formar a cadeia de caracteres de expressão de valores de propriedade de folha de expressão de entrada.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExpressionEditorSheet (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditorSheet.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Uma implementação de provedor de serviço fornecida pelo host do designer, usado para obter os serviços de tempo de design adicionais.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.Design.ExpressionEditorSheet> classe é abstrata, não é possível criar uma instância de um <xref:System.Web.UI.Design.ExpressionEditorSheet> diretamente usando o <xref:System.Web.UI.Design.ExpressionEditorSheet.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao derivar do <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> classe, substitua o <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.#ctor(System.IServiceProvider)" /> construtor para implementar as ações de inicialização personalizada para sua implementação de folha do editor de expressão.  
+  
+ Por exemplo, uma classe de folha de editor de expressão personalizada que implementa propriedades adicionais de expressão pode definir os valores padrão para as propriedades de expressão no <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.#ctor(System.IServiceProvider)" /> construtor. Uma classe de folha do editor de expressão personalizada pode definir sobrecargas de construtor público adicionais que usam valores de parâmetro de entrada para definir os valores iniciais para as propriedades de expressão.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpression">
+      <MemberSignature Language="C#" Value="public abstract string GetExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetExpression() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ExpressionEditorSheet.GetExpression" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna a cadeia de caracteres de expressão que é formada pelos valores de propriedade de folha de editor de expressão.</summary>
+        <returns>A cadeia de caracteres de expressão personalizado para os valores de propriedade atuais.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma folha de editor de expressão personalizada contém configurações de tempo de design para várias propriedades de expressão, que são combinadas para formar uma cadeia de caracteres de expressão. Valores de propriedade de controle podem ser definidos usando cadeias de caracteres de expressão; as cadeias de caracteres de expressão são avaliadas em tempo de execução por um construtor de expressões.  
+  
+ O <xref:System.Web.UI.Design.ExpressionEditorSheet.GetExpression%2A> método retorna uma cadeia de caracteres de expressão que é criada das propriedades de expressão atual. O designer visual permite que você defina a expressão de propriedades de folha e, em seguida, chama o <xref:System.Web.UI.Design.ExpressionEditorSheet.GetExpression%2A> método para obter a cadeia de caracteres de expressão e definir o valor da propriedade de controle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Derivar uma folha de editor de expressão personalizada do <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> classe, se você estiver definindo um novo tipo de expressão para valores de propriedade de controle e você deseja criar a cadeia de caracteres de expressão com base em vários valores de propriedade de expressão. Uma implementação de classe derivada deve conter o seguinte:  
+  
+-   Uma propriedade pública de cada valor distinto na cadeia de expressão que pode ser definida em tempo de design.  
+  
+-   Uma implementação de <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.GetExpression" /> método que a cadeia de caracteres de expressão personalizada dos valores de propriedade de folha do editor de formulários.  
+  
+-   Opcionalmente, uma implementação de construtor que define os valores iniciais do editor de propriedades de folha.  
+  
+ A classe do editor de expressão personalizado associada cria uma instância da planilha no editor derivada de <see cref="M:System.Web.UI.Design.ExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" /> método, inicializa essa instância com a cadeia de caracteres de expressão atual definido para a propriedade de controle e, em seguida, retorna a instância para o visual Designer. O designer visual permite que você defina a expressão de propriedades de folha e, em seguida, chama o <see cref="M:System.Web.UI.Design.ExpressionEditorSheet.GetExpression" /> método para formar a cadeia de caracteres de expressão de valores de propriedade de folha de expressão de entrada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public virtual bool IsValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ExpressionEditorSheet.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a cadeia de caracteres de expressão é válida.</summary>
+        <value>
+          <see langword="true" />, se a cadeia de caracteres de expressão é válida. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação base sempre retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceProvider">
+      <MemberSignature Language="C#" Value="public IServiceProvider ServiceProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IServiceProvider ServiceProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ExpressionEditorSheet.ServiceProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IServiceProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a implementação de provedor de serviço que é usada pela folha do editor de expressão.</summary>
+        <value>Um <see cref="T:System.IServiceProvider" />, normalmente é fornecido pelo host de design, que pode ser usado para obter os serviços de tempo de design adicionais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.Design.ExpressionEditorSheet.%23ctor%2A> construtor para definir o <xref:System.Web.UI.Design.ExpressionEditorSheet.ServiceProvider%2A> implementação de uma planilha do editor de expressão personalizada.  
+  
+ O <xref:System.Web.UI.Design.ExpressionEditorSheet.ServiceProvider%2A> propriedade pode ser usada para acessar os serviços que são fornecidos pelo host do designer. Por exemplo, chamar o <xref:System.IServiceProvider.GetService%2A> método com o <xref:System.Web.UI.Design.IWebApplication> interface para acessar itens do projeto, documentos ou detalhes de arquivo de configuração que são fornecidos por meio do designer visual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

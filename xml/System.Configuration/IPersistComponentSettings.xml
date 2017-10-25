@@ -1,0 +1,219 @@
+<Type Name="IPersistComponentSettings" FullName="System.Configuration.IPersistComponentSettings">
+  <TypeSignature Language="C#" Value="public interface IPersistComponentSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPersistComponentSettings" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.IPersistComponentSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a funcionalidade padrão para controles ou bibliotecas que armazenam e recuperam as configurações de aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você pode adicionar suporte de configurações de aplicativo para um aplicativo, criando uma classe de invólucro de configurações, que é derivada de <xref:System.Configuration.ApplicationSettingsBase>e, em seguida, acrescentar propriedades especiais para essa classe. No entanto, essa abordagem não suficientemente encapsular as configurações de aplicativo para um controle para que seu contêiner está protegido contra os detalhes. O <xref:System.Configuration.IPersistComponentSettings> interface fornece um aplicativo com uma interface padrão para solicitações de alteração de estado de configurações de aplicativo para um módulo de controle, do componente ou biblioteca de comunicação. Ferramentas de tempo de design também dependem dessa interface para gerenciar adequadamente os controles e componentes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LoadComponentSettings">
+      <MemberSignature Language="C#" Value="public void LoadComponentSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadComponentSettings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IPersistComponentSettings.LoadComponentSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê as configurações de aplicativo do controle em suas propriedades correspondentes e atualiza o estado do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em geral, o <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> método executa duas operações essenciais:  
+  
+-   Faz com que cada instância de configurações do aplicativo contida no controle para atualizar os valores de suas propriedades de configurações do aplicativo, normalmente chamando seus <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> métodos.  
+  
+-   Conforme necessário, ele atualiza as propriedades gerais que dependem dessas configurações recarregadas propriedades. Por exemplo, se a classe de configurações contidas um `location` propriedade de configurações, <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> deve garantir que o controle <xref:System.Windows.Forms.Control.Location%2A> propriedade é atualizada para refletir essa configuração recarregada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetComponentSettings">
+      <MemberSignature Language="C#" Value="public void ResetComponentSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetComponentSettings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IPersistComponentSettings.ResetComponentSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine as propriedades de configurações do aplicativo do controle para seus valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação do <xref:System.Configuration.IPersistComponentSettings.ResetComponentSettings%2A> método normalmente chama o <xref:System.Configuration.ApplicationSettingsBase.Reset%2A> método em cada instância de uma classe de configurações de aplicativo contém.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveComponentSettings">
+      <MemberSignature Language="C#" Value="public void SaveComponentSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveComponentSettings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IPersistComponentSettings.SaveComponentSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Mantém as propriedades de configurações do aplicativo do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> método grava os valores das propriedades de configurações do aplicativo do controle para o repositório de dados associado. A técnica de serialização e armazenamento de dados usa o método é determinada pelo provedor de configurações associado a cada classe de configurações por meio de <xref:System.Configuration.SettingsProviderAttribute>. Você pode substituir a opção de provedor de configurações usando o <xref:System.Configuration.ISettingsProviderService> interface.  
+  
+> [!NOTE]
+>  Se o <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> é de propriedade `true`, o controle deve chamar <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> em seu próprio <xref:System.Windows.Forms.Control.Dispose%2A> método para que os dados de configuração do controle são armazenados automaticamente antes do aplicativo terminar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveSettings">
+      <MemberSignature Language="C#" Value="public bool SaveSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SaveSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.IPersistComponentSettings.SaveSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle deve persistir automaticamente suas propriedades de configurações do aplicativo.</summary>
+        <value>
+          <see langword="true" />Se o controle deve persistir automaticamente seu estado. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um controle contém dados de configuração, isso geralmente será mantido esses dados em resposta a uma chamada explícita para o <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> método ou implicitamente, às vezes, quando o controle <xref:System.Windows.Forms.Control.Dispose%2A> método é invocado. O <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> propriedade determina se um controle persiste automaticamente os dados de configuração quando ele é descartado.  
+  
+ O valor padrão de <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> depende da implementação do controle. A documentação para o controle deve indicar se ele usa as configurações do aplicativo, quais dados são mantidos e que o valor padrão de <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> é de propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o modo adequado para verificar o valor de um controle de <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> propriedade antes de tentar manter automaticamente seus dados de configuração.  
+  
+ `protected override void Dispose( bool disposing ) {`  
+  
+ `if(disposing) {`  
+  
+ `try {`  
+  
+ `if (SaveSettings) {`  
+  
+ `SaveComponentSettings();`  
+  
+ `}`  
+  
+ `}`  
+  
+ `finally {`  
+  
+ `//...`  
+  
+ `}`  
+  
+ `}`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SettingsKey">
+      <MemberSignature Language="C#" Value="public string SettingsKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SettingsKey" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.IPersistComponentSettings.SettingsKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da chave de configurações do aplicativo para a instância atual do controle.</summary>
+        <value>Um <see cref="T:System.String" /> que contém a chave de configurações para a instância atual do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> propriedade para resolver a ambiguidade de grupos de propriedades de configurações do aplicativo quando há várias instâncias da mesma classe wrapper. Por exemplo, se um controle contém uma classe wrapper associados, em seguida, colocar as várias instâncias do mesmo controle no mesmo aplicativo normalmente resultará em várias instâncias da classe wrapper. É necessária uma chave de configurações somente quando os dados de configuração é diferente em uma base por instância; Por exemplo, o local dos controles dinamicamente posicionados.  
+  
+ As seguintes regras gerais se aplicam ao uso de <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>:  
+  
+-   Um controle, como qualquer classe pode conter zero ou mais classes configurações do aplicativo, derivada de <xref:System.Configuration.ApplicationSettingsBase>. Cada classe de configurações contém sua própria <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A?displayProperty=nameWithType> propriedade, que ajuda a resolver a ambiguidade de várias instâncias dessa classe.  
+  
+-   Um controle deve separar seus dados por instância e seus dados compartilhados em classes de configurações diferentes.  
+  
+-   Para um controle com os dados de configuração por instância, o `get` acessador do <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> propriedade deve usar como padrão para o <xref:System.Windows.Forms.Control.Name%2A> do controle. Na maioria dos casos, o nome do controle será exclusivo dentro de um aplicativo. Se o controle contém apenas dados de configuração, compartilhados `get` devem padrão `null`.  
+  
+-   O `set` acessador para essa propriedade deve ser implementado para distinguir entre classes de configurações que contém dados de configuração compartilhada e por instância. Para cada classe de configurações que contêm dados por instância, `set` deve apenas passagem para o <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A?displayProperty=nameWithType> propriedade da classe de configurações. Para classes de configurações que contém dados compartilhados, `set` não devem executar nenhuma ação para essa classe de configurações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

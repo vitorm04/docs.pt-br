@@ -1,0 +1,285 @@
+<Type Name="OutputCacheParameters" FullName="System.Web.UI.OutputCacheParameters">
+  <TypeSignature Language="C#" Value="public sealed class OutputCacheParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OutputCacheParameters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.OutputCacheParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula as configurações de inicialização do cache de saída analisadas com base em uma diretiva da página [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) pelo ASP.NET. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.OutputCacheParameters> classe não é usada por desenvolvedores de controle ou página ASP.NET. Ele fornece uma estrutura de dados usada para armazenar configurações de cache analisadas a partir de um [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) diretiva de página por página ASP.NET e analisadores de controle, como <xref:System.Web.UI.PageParser> e <xref:System.Web.UI.TemplateControlParser>. O <xref:System.Web.UI.OutputCacheParameters> objeto é usado com o <xref:System.Web.UI.Page.InitOutputCache%2A?displayProperty=nameWithType> método para inicializar o cache de saída para uma página e seu conteúdo em tempo de execução.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutputCacheParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.OutputCacheParameters.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.OutputCacheParameters" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheProfile">
+      <MemberSignature Language="C#" Value="public string CacheProfile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CacheProfile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.CacheProfile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Web.Configuration.OutputCacheProfile" /> nome que está associado com as configurações da entrada do cache de saída.</summary>
+        <value>Um <see cref="T:System.Web.Configuration.OutputCacheProfile" /> nome que está associado com as configurações da entrada do cache de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O perfil identifica um conjunto de configurações de cache no `<outputCacheSettings>` configuração que é usada como base para a entrada de cache de saída.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public int Duration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Duration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.Duration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo que uma entrada de cache permanece no cache de saída.</summary>
+        <value>A quantidade de tempo, em segundos, que uma entrada de cache permanece no cache de saída. O padrão é 0, que indica uma duração infinita.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o cache de saída está habilitado para o conteúdo atual.</summary>
+        <value>
+          <see langword="true" />Se o cache de saída está habilitado para o conteúdo atual; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Web.UI.OutputCacheLocation Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.OutputCacheLocation Location" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.OutputCacheLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina o local da entrada de cache.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.OutputCacheLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoStore">
+      <MemberSignature Language="C#" Value="public bool NoStore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoStore" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.NoStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se o HTTP <see langword="Cache-Control: no-store" /> diretiva for definida.</summary>
+        <value>
+          <see langword="true" />Se o <see langword="Cache-Control: no-store" /> diretiva for definida em <see cref="T:System.Web.HttpResponse" />; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlDependency">
+      <MemberSignature Language="C#" Value="public string SqlDependency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SqlDependency" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.SqlDependency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um conjunto de pares de nome de banco de dados e a tabela que depende da entrada de cache.</summary>
+        <value>Uma cadeia de caracteres que identifica um conjunto de pares de nome de banco de dados e a tabela que depende da entrada de cache. A entrada de cache expirou quando os dados da tabela são atualizados ou alteram.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.OutputCacheParameters.SqlDependency%2A> cadeia de caracteres identifica os bancos de dados e tabelas de acordo com o nome de uma dependência de cache do SQL Server em sua configuração (normalmente adicionada usando o `<sqlcachedependency>` elementos de configuração). Se você usar o SQL Server 2005, você pode definir o <xref:System.Web.UI.OutputCacheParameters.SqlDependency%2A> propriedade para "CommandNotification", que instrui o ASP.NET para criar dependências em nível de linha para todos os comandos SQL emitidos dentro do contexto da página atual do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByContentEncoding">
+      <MemberSignature Language="C#" Value="public string VaryByContentEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByContentEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.VaryByContentEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um conjunto delimitado por vírgulas de conjuntos de caracteres (codificações de conteúdo) usados para variar a entrada de cache.</summary>
+        <value>Define uma lista de caracteres pelo qual variar o conteúdo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida para vários conjuntos de caracteres, o cache de saída contém uma versão diferente do que o documento solicitado para cada conjunto especificado.  
+  
+ <xref:System.Web.UI.OutputCacheParameters.VaryByContentEncoding%2A>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByControl">
+      <MemberSignature Language="C#" Value="public string VaryByControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.VaryByControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um conjunto delimitado por ponto-e-vírgula dos identificadores de controle contidos na página atual ou no controle de usuário usados para variar a entrada de cache atual.</summary>
+        <value>Uma lista separada por ponto-e-vírgula de cadeias de caracteres usadas para variar o cache de saída de uma entrada. A propriedade <see cref="P:System.Web.UI.OutputCacheParameters.VaryByControl" /> está definida com identificadores de controle totalmente qualificados, em que o identificador é uma concatenação das IDs de controle começando do controle pai de nível superior e delimitado com um caractere de cifrão ($).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByCustom">
+      <MemberSignature Language="C#" Value="public string VaryByCustom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByCustom" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.VaryByCustom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de cadeias de caracteres personalizadas que o cache de saída usa para variar a entrada de cache.</summary>
+        <value>A lista de cadeias de caracteres personalizadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você especificar "browser" para essa propriedade, a entrada do cache será variar por tipo de navegador e o número de versão principal. Se uma cadeia de caracteres personalizada for inserida, você deverá substituir o método <xref:System.Web.HttpApplication.GetVaryByCustomString%2A?displayProperty=nameWithType> no arquivo Global.asax do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByHeader">
+      <MemberSignature Language="C#" Value="public string VaryByHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.VaryByHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um conjunto delimitado por vírgula de nomes de cabeçalho usados para variar a entrada de cache. Os nomes de cabeçalho identificam os cabeçalhos HTTP associados à solicitação.</summary>
+        <value>Uma lista de cabeçalhos pelos quais o conteúdo será variado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida para vários cabeçalhos, o cache de saída contém uma versão diferente do que o documento solicitado para cada cabeçalho especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByParam">
+      <MemberSignature Language="C#" Value="public string VaryByParam { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByParam" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.OutputCacheParameters.VaryByParam" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista delimitada por ponto e vírgula de cadeia de caracteres de consulta ou parâmetros POST do formulário que o cache de saída usa para variar a entrada de cache.</summary>
+        <value>A lista de parâmetros POST de formulário ou de cadeia de caracteres de consulta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida para vários parâmetros, o cache de saída contém uma versão diferente do que o documento solicitado para cada parâmetro especificado. Os valores possíveis incluem "none", "*" e qualquer cadeia de caracteres de consulta válida ou o nome do parâmetro de POSTAGEM.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

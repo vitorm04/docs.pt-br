@@ -1,0 +1,56 @@
+<Type Name="IWorkflowInstanceExtension" FullName="System.Activities.Hosting.IWorkflowInstanceExtension">
+  <TypeSignature Language="C#" Value="public interface IWorkflowInstanceExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWorkflowInstanceExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Hosting.IWorkflowInstanceExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Essa interface é implementada por extensões compostas ou extensões que precisam acessar a instância de fluxo de trabalho. Implementadores dessa interface serão chamados pelo <see cref="T:System.Activities.Hosting.WorkflowInstance" /> antes da execução para fornecer extensões adicionais ou obter acesso ao <see cref="T:System.Activities.Hosting.WorkflowInstance" /> por meio de <see cref="T:System.Activities.Hosting.WorkflowInstanceProxy" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAdditionalExtensions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;object&gt; GetAdditionalExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;object&gt; GetAdditionalExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.IWorkflowInstanceExtension.GetAdditionalExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementado, retorna qualquer extensão adicional que requer que a classe de implementação.</summary>
+        <returns>Uma coleção de extensões de fluxo de trabalho adicional.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetInstance">
+      <MemberSignature Language="C#" Value="public void SetInstance (System.Activities.Hosting.WorkflowInstanceProxy instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetInstance(class System.Activities.Hosting.WorkflowInstanceProxy instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.IWorkflowInstanceExtension.SetInstance(System.Activities.Hosting.WorkflowInstanceProxy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Activities.Hosting.WorkflowInstanceProxy" />
+      </Parameters>
+      <Docs>
+        <param name="instance">A instância de fluxo de trabalho de destino definido.</param>
+        <summary>Define o destino especificado <see cref="T:System.Activities.Hosting.WorkflowInstanceProxy" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,176 @@
+<Type Name="DefaultCacheCapabilities" FullName="System.Runtime.Caching.DefaultCacheCapabilities">
+  <TypeSignature Language="C#" Value="public enum DefaultCacheCapabilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DefaultCacheCapabilities extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.DefaultCacheCapabilities" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um conjunto de recursos que uma implementação de cache fornece.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.DefaultCacheCapabilities> classe é uma enumeração de sinalizador. Os valores de campo são bits e podem ser combinados como um conjunto de sinalizadores que descrevem os recursos do cache.  
+  
+ O <xref:System.Runtime.Caching.DefaultCacheCapabilities> enumeração pode ser usada para definir o comportamento da implementação do cache. Esse comportamento é com base na combinação de recursos que implementa um cache específico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AbsoluteExpirations">
+      <MemberSignature Language="C#" Value="AbsoluteExpirations" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Caching.DefaultCacheCapabilities AbsoluteExpirations = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Caching.DefaultCacheCapabilities.AbsoluteExpirations" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.DefaultCacheCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma implementação de cache dá suporte à capacidade de remover automaticamente as entradas de cache em uma determinada data e hora.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheEntryChangeMonitors">
+      <MemberSignature Language="C#" Value="CacheEntryChangeMonitors" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Caching.DefaultCacheCapabilities CacheEntryChangeMonitors = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Caching.DefaultCacheCapabilities.CacheEntryChangeMonitors" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.DefaultCacheCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma implementação de cache dá suporte à capacidade de criar monitores de alteração que monitoram as entradas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheEntryRemovedCallback">
+      <MemberSignature Language="C#" Value="CacheEntryRemovedCallback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Caching.DefaultCacheCapabilities CacheEntryRemovedCallback = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Caching.DefaultCacheCapabilities.CacheEntryRemovedCallback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.DefaultCacheCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma implementação de cache pode disparar uma notificação de que uma entrada foi removida do cache.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheEntryUpdateCallback">
+      <MemberSignature Language="C#" Value="CacheEntryUpdateCallback" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Caching.DefaultCacheCapabilities CacheEntryUpdateCallback = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Caching.DefaultCacheCapabilities.CacheEntryUpdateCallback" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.DefaultCacheCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma implementação de cache pode disparar uma notificação de que uma entrada está prestes a ser removida do cache. Essa configuração também indica que uma implementação de cache dá suporte à capacidade de substituir automaticamente a entrada sendo removida por uma nova entrada de cache.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheRegions">
+      <MemberSignature Language="C#" Value="CacheRegions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Caching.DefaultCacheCapabilities CacheRegions = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Caching.DefaultCacheCapabilities.CacheRegions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.DefaultCacheCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma implementação de cache dá suporte à capacidade de particionar seu armazenamento em regiões de cache e dá suporte à capacidade de inserir entradas de cache nessas regiões e recuperar as entradas de cache delas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InMemoryProvider">
+      <MemberSignature Language="C#" Value="InMemoryProvider" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Caching.DefaultCacheCapabilities InMemoryProvider = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Caching.DefaultCacheCapabilities.InMemoryProvider" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.DefaultCacheCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma implementação de cache é executada pelo menos parcialmente na memória. Um cache distribuído não definiria esse sinalizador, enquanto um cache na memória como a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> o faria.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Caching.DefaultCacheCapabilities None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Caching.DefaultCacheCapabilities.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.DefaultCacheCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma implementação de cache não fornece nenhum dos recursos descritos na enumeração <see cref="T:System.Runtime.Caching.DefaultCacheCapabilities" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OutOfProcessProvider">
+      <MemberSignature Language="C#" Value="OutOfProcessProvider" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Caching.DefaultCacheCapabilities OutOfProcessProvider = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Caching.DefaultCacheCapabilities.OutOfProcessProvider" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.DefaultCacheCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma implementação de cache é executada fora do processo. Um cache distribuído definiria esse sinalizador, enquanto um cache na memória como a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não o faria.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SlidingExpirations">
+      <MemberSignature Language="C#" Value="SlidingExpirations" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.Caching.DefaultCacheCapabilities SlidingExpirations = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Caching.DefaultCacheCapabilities.SlidingExpirations" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.DefaultCacheCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma implementação de cache dá suporte à capacidade de remover automaticamente as entradas de cache que não foram acessadas em um intervalo de tempo especificado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

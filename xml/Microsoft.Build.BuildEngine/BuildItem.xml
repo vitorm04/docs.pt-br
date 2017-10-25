@@ -1,0 +1,525 @@
+<Type Name="BuildItem" FullName="Microsoft.Build.BuildEngine.BuildItem">
+  <TypeSignature Language="C#" Value="public class BuildItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.BuildItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("BuildItem (Name = { Name }, Include = { Include }, FinalItemSpec = { FinalItemSpec }, Condition = { Condition } )")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um único item em um projeto do MSBuild.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um elemento em um projeto pode representar vários itens com o uso de curingas. Portanto, cada <xref:Microsoft.Build.BuildEngine.BuildItem> objeto não representa necessariamente um `Item` elemento no projeto.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo cria um objeto <xref:Microsoft.Build.BuildEngine.Project> e usa o método <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> para adicionar conteúdo ao projeto. As classes <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup> e <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> são usadas para adicionar, remover e alterar itens no projeto.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildItem (string itemName, Microsoft.Build.Framework.ITaskItem taskItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string itemName, class Microsoft.Build.Framework.ITaskItem taskItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItem.#ctor(System.String,Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+        <Parameter Name="taskItem" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">O <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> propriedade o <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</param>
+        <param name="taskItem">O <see cref="T:Microsoft.Build.Framework.ITaskItem" /> do qual criar o <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> propriedade o <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> classe com base em um <see cref="T:Microsoft.Build.Framework.ITaskItem" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildItem (string itemName, string itemInclude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string itemName, string itemInclude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItem.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemName" Type="System.String" />
+        <Parameter Name="itemInclude" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="itemName">O <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> propriedade o <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</param>
+        <param name="itemInclude">O <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> propriedade o <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> classe com especificado <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Name" /> e <see cref="P:Microsoft.Build.BuildEngine.BuildItem.Include" /> valores de propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.BuildEngine.BuildItem Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.BuildEngine.BuildItem Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItem.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.BuildItem</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia superficial do <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</summary>
+        <returns>Uma cópia do <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public string Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItem.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <c>condição</c> valor do item do atributo.</summary>
+        <value>O <c>condição</c> valor do item do atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyCustomMetadataTo">
+      <MemberSignature Language="C#" Value="public void CopyCustomMetadataTo (Microsoft.Build.BuildEngine.BuildItem destinationItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyCustomMetadataTo(class Microsoft.Build.BuildEngine.BuildItem destinationItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItem.CopyCustomMetadataTo(Microsoft.Build.BuildEngine.BuildItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationItem" Type="Microsoft.Build.BuildEngine.BuildItem" />
+      </Parameters>
+      <Docs>
+        <param name="destinationItem">O <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> no qual copiar os metadados do item.</param>
+        <summary>Copia todos os metadados de item nesta <see cref="T:Microsoft.Build.BuildEngine.BuildItem" /> especificado <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomMetadataCount">
+      <MemberSignature Language="C#" Value="public int CustomMetadataCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CustomMetadataCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItem.CustomMetadataCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de atributos personalizados definidos neste item.</summary>
+        <value>Um inteiro que indica quantos atributos personalizados são definidos neste item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado por <xref:Microsoft.Build.BuildEngine.BuildItem.CustomMetadataCount%2A> incluem predefinidos ou reservados modificadores de especificação de item, pois eles não são atributos personalizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomMetadataNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection CustomMetadataNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection CustomMetadataNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItem.CustomMetadataNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todos os nomes de atributo definido pelo usuário ou personalizados.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém nomes de cadeia de caracteres de todos os atributos definidos pelo usuário ou personalizados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.BuildEngine.BuildItem.CustomMetadataNames%2A>não inclui os nomes dos atributos definidos pelo usuário ou não-personalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="public string Exclude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Exclude" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItem.Exclude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <c>excluir</c> valor do item do atributo.</summary>
+        <value>Obtém ou define o <c>excluir</c> valor do item do atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalItemSpec">
+      <MemberSignature Language="C#" Value="public string FinalItemSpec { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FinalItemSpec" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItem.FinalItemSpec" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a especificação final do item depois que todos os caracteres curinga e propriedades foi avaliadas.</summary>
+        <value>A especificação final do item depois que todos os caracteres curinga e propriedades foi avaliadas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvaluatedMetadata">
+      <MemberSignature Language="C#" Value="public string GetEvaluatedMetadata (string metadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetEvaluatedMetadata(string metadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItem.GetEvaluatedMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">O nome de metadados do item.</param>
+        <summary>Retorna o valor dos metadados do item especificado após depois que todas as referências de item e a propriedade foram avaliadas.</summary>
+        <returns>O valor dos metadados do item especificado após após todas as referências de item e a propriedade tenham sido avaliados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadata">
+      <MemberSignature Language="C#" Value="public string GetMetadata (string metadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetMetadata(string metadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItem.GetMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">O nome de metadados do item.</param>
+        <summary>Retorna o valor dos metadados do item especificado.</summary>
+        <returns>O valor dos metadados do item especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo cria um objeto <xref:Microsoft.Build.BuildEngine.Project> e usa o método <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> para adicionar conteúdo ao projeto. As classes <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup> e <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> são usadas para adicionar, remover e alterar itens no projeto.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasMetadata">
+      <MemberSignature Language="C#" Value="public bool HasMetadata (string metadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasMetadata(string metadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItem.HasMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">O nome de metadados do item.</param>
+        <summary>Indica se o item tem os metadados do item especificado.</summary>
+        <returns>
+          <see langword="true" />Se o item tiver os metadados do item especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Include">
+      <MemberSignature Language="C#" Value="public string Include { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Include" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItem.Include" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <c>incluir</c> de atributo que criou o <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</summary>
+        <value>O <c>incluir</c> de atributo que criou o <see cref="T:Microsoft.Build.BuildEngine.BuildItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo cria um objeto <xref:Microsoft.Build.BuildEngine.Project> e usa o método <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> para adicionar conteúdo ao projeto. As classes <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup> e <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> são usadas para adicionar, remover e alterar itens no projeto.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImported">
+      <MemberSignature Language="C#" Value="public bool IsImported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsImported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItem.IsImported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o item foi importado para o projeto.</summary>
+        <value>
+          <see langword="true" />Se o item foi importado para o projeto; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataCount">
+      <MemberSignature Language="C#" Value="public int MetadataCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MetadataCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItem.MetadataCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de metadados definidas no item</summary>
+        <value>Um inteiro que representa o número de itens de metadados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado por <xref:Microsoft.Build.BuildEngine.BuildItem.MetadataCount%2A> inclui predefinidos ou reservados modificadores de especificação de item, bem como outros metadados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection MetadataNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection MetadataNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItem.MetadataNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os nomes de metadados de item, incluindo predefinidos ou reservados modificadores de especificação de item.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> contendo cadeias de caracteres de nome de todos os metadados do item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado por <xref:Microsoft.Build.BuildEngine.BuildItem.MetadataNames%2A> inclui os nomes de todos os metadados, incluindo os atributos personalizados e definidas pelo usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.BuildItem.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da coleção de itens ao qual o item pertence.</summary>
+        <value>O nome da coleção de itens ao qual o item pertence.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo cria um objeto <xref:Microsoft.Build.BuildEngine.Project> e usa o método <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> para adicionar conteúdo ao projeto. As classes <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup> e <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> são usadas para adicionar, remover e alterar itens no projeto.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMetadata">
+      <MemberSignature Language="C#" Value="public void RemoveMetadata (string metadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveMetadata(string metadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItem.RemoveMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">O nome de metadados do item.</param>
+        <summary>Remove os metadados do item especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SetMetadata">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Atribui o valor especificado para os metadados do item especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo cria um objeto <xref:Microsoft.Build.BuildEngine.Project> e usa o método <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> para adicionar conteúdo ao projeto. As classes <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup> e <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> são usadas para adicionar, remover e alterar itens no projeto.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SetMetadata">
+      <MemberSignature Language="C#" Value="public void SetMetadata (string metadataName, string metadataValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMetadata(string metadataName, string metadataValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItem.SetMetadata(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+        <Parameter Name="metadataValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">O nome de metadados do item.</param>
+        <param name="metadataValue">O valor de metadados do item.</param>
+        <summary>Atribui o valor especificado para os metadados do item especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo cria um objeto <xref:Microsoft.Build.BuildEngine.Project> e usa o método <xref:Microsoft.Build.BuildEngine.Project.LoadXml%2A> para adicionar conteúdo ao projeto. As classes <xref:Microsoft.Build.BuildEngine.BuildItem>, <xref:Microsoft.Build.BuildEngine.BuildItemGroup> e <xref:Microsoft.Build.BuildEngine.BuildItemGroupCollection> são usadas para adicionar, remover e alterar itens no projeto.  
+  
+ [!code-csharp[msbuild_AddNewItem#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_AddNewItem/CS/Program.cs#1)]
+ [!code-vb[msbuild_AddNewItem#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_AddNewItem/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMetadata">
+      <MemberSignature Language="C#" Value="public void SetMetadata (string metadataName, string metadataValue, bool treatMetadataValueAsLiteral);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMetadata(string metadataName, string metadataValue, bool treatMetadataValueAsLiteral) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.BuildItem.SetMetadata(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+        <Parameter Name="metadataValue" Type="System.String" />
+        <Parameter Name="treatMetadataValueAsLiteral" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">O nome de metadados do item.</param>
+        <param name="metadataValue">O valor de metadados do item.</param>
+        <param name="treatMetadataValueAsLiteral">
+          <see langword="true" />para tratar os metadados como um valor literal escape todos [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] caracteres especiais; caso contrário, <see langword="false" />.</param>
+        <summary>Atribui o valor especificado para os metadados do item especificado e, opcionalmente, trata os metadados como um valor literal.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

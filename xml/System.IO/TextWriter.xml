@@ -1,0 +1,3164 @@
+<Type Name="TextWriter" FullName="System.IO.TextWriter">
+  <TypeSignature Language="C#" Value="public abstract class TextWriter : MarshalByRefObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit TextWriter extends System.MarshalByRefObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.TextWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um gravador que pode gravar uma série sequencial de caracteres. Esta classe é abstrata.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.TextWriter>é a classe base abstrata de <xref:System.IO.StreamWriter> e <xref:System.IO.StringWriter>, que gravar caracteres em fluxos e cadeias de caracteres, respectivamente. Criar uma instância de <xref:System.IO.TextWriter> para gravar um objeto em uma cadeia de caracteres, gravar cadeias de caracteres em um arquivo ou para serializar o XML. Você também pode usar uma instância de <xref:System.IO.TextWriter> para gravar texto em um repositório de backup personalizado usando as mesmas APIs que você usaria para uma cadeia de caracteres ou um fluxo, ou para adicionar suporte para formatação de texto.  
+  
+ Todos os `Write` métodos de <xref:System.IO.TextWriter> ter tipos de dados primitivos como parâmetros de escrever os valores como cadeias de caracteres.  
+  
+ Por padrão, um <xref:System.IO.TextWriter> não é thread-safe. Consulte <xref:System.IO.TextWriter.Synchronized%2A?displayProperty=nameWithType> para um wrapper thread-safe.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar qualquer tipo derivado desse tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IO.TextWriter.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte Dispose e a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O <xref:System.IO.TextWriter> classe é uma classe abstrata. Portanto, você não instanciá-la em seu código. O <xref:System.IO.StreamWriter> classe derivada de <xref:System.IO.TextWriter> e fornece implementações dos membros para gravar em um fluxo. O exemplo a seguir mostra como gravar duas linhas que consistem em valores de cadeia de caracteres para um arquivo de texto usando o <xref:System.IO.StreamWriter.WriteLineAsync%28System.String%29> método.  
+  
+ Substitua Dispose em uma classe derivada para fornecer  
+  
+ [!code-csharp[System.IO.StreamWriter#23](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example23.cs#23)]
+ [!code-vb[System.IO.StreamWriter#23](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example23.vb#23)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Uma classe derivada deve implementar no mínimo o <see cref="M:System.IO.TextWriter.Write(System.Char)" /> método para tornar uma instância útil de <see cref="T:System.IO.TextWriter" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.TextWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga de construtor quando não quiser fornecer um valor para o <xref:System.IO.TextWriter.FormatProvider%2A> propriedade. Quando o <xref:System.IO.TextWriter.FormatProvider%2A> é de propriedade `null`, a cultura do thread atual é usada para formatação.  
+  
+ Use este construtor para classes derivadas.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextWriter (IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.#ctor(System.IFormatProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="formatProvider">Um objeto <see cref="T:System.IFormatProvider" /> que controla a formatação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.TextWriter" /> com o provedor de formato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga de construtor para fornecer um valor para o <xref:System.IO.TextWriter.FormatProvider%2A> propriedade. O valor da <xref:System.IO.TextWriter.FormatProvider%2A> propriedade especifica a formatação de específicos de cultura que é usado quando você chama o <xref:System.IO.TextWriter.Write%2A> e <xref:System.IO.TextWriter.WriteLine%2A> métodos. Se você não quiser fornecer um provedor de formato, você cria uma instância usando o <xref:System.IO.TextWriter.%23ctor> construtor, que define o <xref:System.IO.TextWriter.FormatProvider%2A> propriedade `null`. Quando o <xref:System.IO.TextWriter.FormatProvider%2A> é de propriedade `null`, a cultura do thread atual é usada para formatação.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o gravador atual e libera os recursos de sistema associados ao gravador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação de `Close` chama o <xref:System.IO.TextWriter.Dispose%28System.Boolean%29?displayProperty=nameWithType> método e o transmite um `true` valor.  
+  
+ Liberando o fluxo não liberar seu codificador subjacente, a menos que você chamar explicitamente <xref:System.IO.TextWriter.Flush%2A> ou `Close`. Definindo o <xref:System.IO.StreamWriter.AutoFlush%2A?displayProperty=nameWithType> propriedade `true` significa que os dados serão liberados do buffer no fluxo, mas o estado de codificador não será liberado. Isso permite que o codificador deve manter o estado (parcial caracteres) para que ele pode codificar o próximo bloco de caracteres corretamente. Este cenário afeta UTF8 e UTF7 onde determinados caracteres podem ser codificados somente depois que o codificador recebe adjacentes ou mais caracteres.  
+  
+> [!NOTE]
+>  Em classes derivadas, não substituem o <xref:System.IO.TextWriter.Close%2A> método. Em vez disso, substituir o <xref:System.IO.TextWriter.Dispose%28System.Boolean%29?displayProperty=nameWithType> método para adicionar código para liberar recursos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CoreNewLine">
+      <MemberSignature Language="C#" Value="protected char[] CoreNewLine;" />
+      <MemberSignature Language="ILAsm" Value=".field family char[] CoreNewLine" />
+      <MemberSignature Language="DocId" Value="F:System.IO.TextWriter.CoreNewLine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena os caracteres de nova linha usados para esse <see langword="TextWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo objeto <see cref="T:System.IO.TextWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.IO.TextWriter.Dispose%2A> quando tiver terminado de usar o <xref:System.IO.TextWriter>. O <xref:System.IO.TextWriter.Dispose%2A> método deixa o <xref:System.IO.TextWriter> em um estado inutilizável. Depois de chamar <xref:System.IO.TextWriter.Dispose%2A>, você deve liberar todas as referências para o <xref:System.IO.TextWriter> para o coletor de lixo possa recuperar a memória que o <xref:System.IO.TextWriter> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ **Observação** sempre chamada <xref:System.IO.TextWriter.Dispose%2A> antes de liberar sua última referência para o <xref:System.IO.TextWriter>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.IO.TextWriter> do objeto <xref:System.Object.Finalize%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.IO.TextWriter" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo `Dispose` e <xref:System.Object.Finalize%2A>. Por padrão, esse método Especifica o `disposing` parâmetro como `true`. <xref:System.Object.Finalize%2A>Especifica o `disposing` parâmetro como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.IO.TextWriter> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.IO.TextWriter.Dispose(System.Boolean)" /> pode ser chamado várias vezes por outros objetos. Ao substituir esse método, tenha cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar esse método, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see cref="M:System.IDisposable.Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public abstract System.Text.Encoding Encoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.IO.TextWriter.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna a codificação de caracteres na qual a saída é gravada.</summary>
+        <value>A codificação de caracteres na qual a saída é gravada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é necessária para alguns cenários XML em que um cabeçalho deve ser escrito que contém a codificação usada pelo `TextWriter`. Isso permite que o código XML consumir um arbitrário `TextWriter` e gerar o cabeçalho XML correto.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public virtual void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os buffers do gravador atual e faz com que todos os dados armazenados em buffer sejam gravados no dispositivo subjacente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método padrão não faz nada, mas as classes derivadas podem substituir o método para fornecer a funcionalidade apropriada.  
+  
+ Liberando o fluxo não liberar seu codificador subjacente, a menos que você chamar explicitamente `Flush` ou <xref:System.IO.TextWriter.Close%2A>. Configuração <xref:System.IO.StreamWriter.AutoFlush%2A> para `true` significa que os dados serão liberados do buffer no fluxo, mas o estado de codificador não será liberado. Isso permite que o codificador deve manter o estado (parcial caracteres) para que ele pode codificar o próximo bloco de caracteres corretamente. Este cenário afeta UTF8 e UTF7 onde determinados caracteres podem ser codificados somente depois que o codificador recebe adjacentes ou mais caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task FlushAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task FlushAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.FlushAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa, de maneira assíncrona, todos os buffers do gravador atual e faz com que todos os dados armazenados em buffer sejam gravados no dispositivo subjacente.</summary>
+        <returns>Uma tarefa que representa a operação de liberação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de texto é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatProvider">
+      <MemberSignature Language="C#" Value="public virtual IFormatProvider FormatProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IFormatProvider FormatProvider" />
+      <MemberSignature Language="DocId" Value="P:System.IO.TextWriter.FormatProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IFormatProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que controla a formatação.</summary>
+        <value>Um objeto <see cref="T:System.IFormatProvider" /> para uma cultura específica ou a formatação da cultura atual, se nenhuma outra cultura for especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.IO.TextWriter.FormatProvider%2A> propriedade especifica a formatação de específicos de cultura que é usado quando você chama o <xref:System.IO.TextWriter.Write%2A> e <xref:System.IO.TextWriter.WriteLine%2A> métodos. Se você não quiser fornecer um provedor de formato, você cria uma instância usando o <xref:System.IO.TextWriter.%23ctor> construtor, que define o <xref:System.IO.TextWriter.FormatProvider%2A> propriedade `null`. Quando o <xref:System.IO.TextWriter.FormatProvider%2A> propriedade contém `null`, a cultura do thread atual é usada para formatação.  
+  
+ Para obter um exemplo de criação de um arquivo e gravar texto em um arquivo, consulte [como: gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md). Para obter um exemplo de texto de leitura de um arquivo, consulte [como: ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md). Para obter um exemplo de leitura e gravação em um arquivo binário, consulte [como: ler e gravar um recentemente criado arquivo de dados](~/docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md).  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewLine">
+      <MemberSignature Language="C#" Value="public virtual string NewLine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NewLine" />
+      <MemberSignature Language="DocId" Value="P:System.IO.TextWriter.NewLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de terminador de linha usada pelo <see langword="TextWriter" /> atual.</summary>
+        <value>A cadeia de caracteres de terminador de linha <see langword="TextWriter" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres do terminador de linha padrão é um retorno de carro seguido por uma linha de feed ("\r\n").  
+  
+ A cadeia de caracteres de terminador de linha é gravada para o fluxo de texto sempre que uma da `WriteLine` métodos é chamado. Texto escrito pelo `TextWriter` para ser lido por um <xref:System.IO.TextReader>, apenas "\n" ou "\r\n" deve ser usado como cadeias de caracteres de terminador. Se `NewLine` é definido como `null`, o caractere de nova linha padrão será usado.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.IO.TextWriter Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.IO.TextWriter Null" />
+      <MemberSignature Language="DocId" Value="F:System.IO.TextWriter.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um <see langword="TextWriter" /> sem nenhum repositório de backup que pode ser gravado, mas não lido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use `Null` para redirecionar a saída para um fluxo que não consumirá quaisquer recursos do sistema operacional.  
+  
+ Quando o <xref:System.IO.TextWriter.Write%2A?displayProperty=nameWithType> métodos são chamados em `Null`, simplesmente retorna a chamada, e não é realmente gravar dados a qualquer armazenamento de backup.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronized">
+      <MemberSignature Language="C#" Value="public static System.IO.TextWriter Synchronized (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.TextWriter Synchronized(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Synchronized(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see langword="TextWriter" /> a ser sincronizado.</param>
+        <summary>Cria um wrapper thread-safe em torno do <see langword="TextWriter" /> especificado.</summary>
+        <returns>Um wrapper thread-safe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as gravação operações para o wrapper retornado será thread-safe. Chame este método para garantir que apenas um thread por vez pode executar os métodos no <xref:System.IO.TextWriter> instância que é retornada. Para obter mais informações sobre sincronização e threading, consulte [sincronizando dados para Multithreading](~/docs/standard/threading/synchronizing-data-for-multithreading.md).  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor <see langword="Boolean" /> a ser gravado.</param>
+        <summary>Grava a representação de texto de um valor <see langword="Boolean" /> no fluxo ou cadeia de caracteres de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.Boolean.ToString%2A?displayProperty=nameWithType> método.  
+  
+ Este método gera uma <xref:System.Boolean.TrueString?displayProperty=nameWithType> ou <xref:System.Boolean.FalseString?displayProperty=nameWithType>.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">O caractere a ser gravado no fluxo de texto.</param>
+        <summary>Grava um caractere na cadeia ou no fluxo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método padrão não faz nada, mas as classes derivadas podem substituir o método para fornecer a funcionalidade apropriada.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (char[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(char[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caracteres a ser gravada no fluxo de texto.</param>
+        <summary>Grava uma matriz de caracteres ou no fluxo ou na cadeia de caracteres de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método não pesquisar a cadeia de caracteres especificada para caracteres de nova linha individual (hexadecimal 0x000a) e substituí-los por <xref:System.IO.TextWriter.NewLine%2A>.  
+  
+ Este método padrão chama o <xref:System.IO.TextWriter.Write%28System.Char%5B%5D%2CSystem.Int32%2CSystem.Int32%29> método e passa a matriz de caracteres inteira. Se a matriz de caracteres é `null`, nada será gravado.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor decimal para gravação.</param>
+        <summary>Grava a representação de texto de um valor decimal para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.TextWriter.FormatProvider%2A> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor de ponto flutuante de 8 bytes a ser gravado.</param>
+        <summary>Grava a representação de texto de um valor de ponto flutuante de 8 bytes na cadeia de texto ou no fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.Double.ToString%2A?displayProperty=nameWithType> método. O <xref:System.IO.TextWriter.FormatProvider%2A?displayProperty=nameWithType> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O inteiro com sinal de 4 bytes a ser gravado.</param>
+        <summary>Grava a representação de texto de um inteiro com sinal de 4 bytes na cadeia de texto ou no fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.Int32.ToString%2A?displayProperty=nameWithType> método. O <xref:System.IO.TextWriter.FormatProvider%2A?displayProperty=nameWithType> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O inteiro assinado de 8 bytes para gravação.</param>
+        <summary>Grava a representação de texto de um inteiro assinado de 8 bytes para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.Int64.ToString%2A?displayProperty=nameWithType> método. O <xref:System.IO.TextWriter.FormatProvider%2A?displayProperty=nameWithType> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ [Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser gravado.</param>
+        <summary>Grava a representação de texto de um objeto na cadeia de caracteres de texto ou no fluxo chamando o método <see langword="ToString" /> nesse objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga é equivalente a <xref:System.IO.TextWriter.Write%28System.String%29> de sobrecarga.  
+  
+ Se o objeto especificado for `null`, nenhuma ação é executada e nenhuma exceção é lançada. Caso contrário, o objeto `ToString` método é chamado para gerar a representação de cadeia de caracteres e a cadeia de caracteres resultante é gravada no fluxo de saída. O <xref:System.IO.TextWriter.FormatProvider%2A> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor de ponto flutuante de 4 bytes a ser gravado.</param>
+        <summary>Grava a representação de texto de um valor de ponto flutuante de 4 bytes para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.Single.ToString%2A?displayProperty=nameWithType> método. O <xref:System.IO.TextWriter.FormatProvider%2A?displayProperty=nameWithType> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser gravada.</param>
+        <summary>Grava uma cadeia de caracteres na cadeia de caracteres de texto ou fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga é equivalente a <xref:System.IO.TextWriter.Write%28System.Char%5B%5D%29> de sobrecarga.  
+  
+ Este método não pesquisar a cadeia de caracteres especificada para caracteres de nova linha individual (hexadecimal 0x000a) e substituí-los por <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType>.  
+  
+ Se `value` for `null`, nada será gravado no fluxo de texto.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O inteiro sem sinal de 4 bytes para gravação.</param>
+        <summary>Grava a representação de um inteiro sem sinal de 4 bytes para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.UInt32.ToString%2A?displayProperty=nameWithType> método. O <xref:System.IO.TextWriter.FormatProvider%2A?displayProperty=nameWithType> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O inteiro sem sinal de 8 bytes para gravação.</param>
+        <summary>Grava a representação de um inteiro não assinado de 8 bytes para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.UInt64.ToString%2A?displayProperty=nameWithType> método. O <xref:System.IO.TextWriter.FormatProvider%2A?displayProperty=nameWithType> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (string format, object arg0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string format, object arg0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg0" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato composto.</param>
+        <param name="arg0">O objeto a ser formatado e gravado.</param>
+        <summary>Grava uma cadeia de caracteres formatada para a cadeia de caracteres de texto ou o fluxo, usando a mesma semântica do método <see cref="M:System.String.Format(System.String,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa formatação composta para converter o valor de um objeto em sua representação de cadeia de caracteres e inserir essa representação em uma cadeia de caracteres. .NET fornece amplo suporte para formatação, que é descrita mais detalhadamente nos tópicos de formatação a seguir:  
+  
+-   Para obter mais informações sobre o recurso de formatação composta, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+-   Para obter mais informações sobre especificadores de formato numérico, consulte [cadeias de caracteres de formato numérico padrão](~/docs/standard/base-types/standard-numeric-format-strings.md) e [cadeias de caracteres de formato numérico personalizado](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+-   Para obter mais informações sobre data e hora especificadores de formato, consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md) e [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+-   Para obter mais informações sobre especificadores de formato de enumeração, consulte [cadeias de caracteres de formato de enumeração](~/docs/standard/base-types/enumeration-format-strings.md).  
+  
+-   Para obter mais informações sobre a formatação, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+ O parâmetro `format` consiste em zero ou mais execuções de texto combinadas com zero ou mais espaços reservados indexados, chamados de itens de formato, que correspondem a um objeto na lista de parâmetros desse método. O processo de formatação substitui cada item de formato com a representação de cadeia de caracteres do valor do objeto correspondente.  
+  
+ A sintaxe de um item de formato é o seguinte:  
+  
+ {*índice*[,*comprimento*] [:*formatString*]}  
+  
+ Os elementos entre colchetes são opcionais. A tabela a seguir descreve cada elemento. Para obter mais informações sobre a composição de formatação de recurso, incluindo a sintaxe de um item de formato, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+|Elemento|Descrição|  
+|-------------|-----------------|  
+|índice|A posição de base zero na lista de parâmetros do objeto a ser formatado. Se o objeto especificado por *índice* é `null`, o item de formato é substituído pelo <xref:System.String?displayProperty=nameWithType>. Como essa sobrecarga tem apenas um único objeto no seu parâmetro de lista, o valor de *índice* deve ser sempre 0. Se não houver nenhum parâmetro no *índice* posição, um <xref:System.FormatException> é gerada.|  
+|,*comprimento*|O número mínimo de caracteres na representação de cadeia de caracteres do parâmetro. Em caso positivo, o parâmetro é alinhado à direita; Se for negativo, será alinhado à esquerda.|  
+|:*formatString*|Uma cadeia de caracteres de formato personalizado ou padrão que é compatível com o objeto a ser formatado. Os valores possíveis para *formatString* são os mesmos que os valores com suporte do objeto `ToString(string format)` método. Se *formatString* não for especificado e o objeto a ser formatado implementa o <xref:System.IFormattable> interface, `null` é passado como o valor da `format` parâmetro que é usado como o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> cadeia de caracteres de formato.|  
+  
+ À esquerda e à direita de caracteres, de chave "{" e "}", são necessários. Para especificar um caractere único chave literal em `format`, especifique duas à esquerda ou à direita de colchetes caracteres; ou seja, "{{" ou "}}".  
+  
+ . Este método não pesquisar a cadeia de caracteres especificada para caracteres de nova linha individual (hexadecimal 0x000a) e substituí-los por <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType>.  
+  
+ Se um objeto especificado não é referenciado na cadeia de caracteres de formato, ele será ignorado.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> não é uma cadeia de caracteres de formato de composição válida.  
+  
+ -ou-  
+  
+ O índice de um item de formato é menor que 0 (zero) ou maior ou igual ao número de objetos a serem formatados (que, para essa sobrecarga de método, é um).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (string format, params object[] arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string format, object[] arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato composto.</param>
+        <param name="arg">Uma matriz de objetos que contém zero ou mais objetos a serem formatados e gravados.</param>
+        <summary>Grava uma cadeia de caracteres formatada para a cadeia de caracteres de texto ou o fluxo, usando a mesma semântica do método <see cref="M:System.String.Format(System.String,System.Object[])" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa formatação composta para converter o valor de um objeto em sua representação de cadeia de caracteres e inserir essa representação em uma cadeia de caracteres. .NET fornece amplo suporte para formatação, que é descrita mais detalhadamente nos tópicos de formatação a seguir:  
+  
+-   Para obter mais informações sobre o recurso de formatação composta, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+-   Para obter mais informações sobre especificadores de formato numérico, consulte [cadeias de caracteres de formato numérico padrão](~/docs/standard/base-types/standard-numeric-format-strings.md) e [cadeias de caracteres de formato numérico personalizado](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+-   Para obter mais informações sobre data e hora especificadores de formato, consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md) e [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+-   Para obter mais informações sobre especificadores de formato de enumeração, consulte [cadeias de caracteres de formato de enumeração](~/docs/standard/base-types/enumeration-format-strings.md).  
+  
+-   Para obter mais informações sobre a formatação, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+ O parâmetro `format` consiste em zero ou mais execuções de texto combinadas com zero ou mais espaços reservados indexados, chamados de itens de formato, que correspondem a um objeto na lista de parâmetros desse método. O processo de formatação substitui cada item de formato com a representação de cadeia de caracteres do valor do objeto correspondente.  
+  
+ A sintaxe de um item de formato é o seguinte:  
+  
+ {*índice*[,*comprimento*] [:*formatString*]}  
+  
+ Os elementos entre colchetes são opcionais. A tabela a seguir descreve cada elemento. Para obter mais informações sobre a composição de formatação de recurso, incluindo a sintaxe de um item de formato, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+|Elemento|Descrição|  
+|-------------|-----------------|  
+|índice|A posição de base zero na lista de parâmetros do objeto a ser formatado. Se o objeto especificado por *índice* é `null`, o item de formato é substituído pelo <xref:System.String?displayProperty=nameWithType>. Como essa sobrecarga tem uma matriz no seu parâmetro de lista, o valor de *índice* sempre deve ser menor que o comprimento da matriz. Se não houver nenhum parâmetro no *índice* posição, um <xref:System.FormatException> é gerada.|  
+|,*comprimento*|O número mínimo de caracteres na representação de cadeia de caracteres do parâmetro. Em caso positivo, o parâmetro é alinhado à direita; Se for negativo, será alinhado à esquerda.|  
+|:*formatString*|Uma cadeia de caracteres de formato personalizado ou padrão que é compatível com o objeto a ser formatado. Os valores possíveis para *formatString* são os mesmos que os valores com suporte do objeto `ToString(string format)` método. Se *formatString* não for especificado e o objeto a ser formatado implementa o <xref:System.IFormattable> interface, `null` é passado como o valor da `format` parâmetro que é usado como o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> cadeia de caracteres de formato.|  
+  
+ À esquerda e à direita de caracteres, de chave "{" e "}", são necessários. Para especificar um caractere único chave literal em `format`, especifique duas à esquerda ou à direita de colchetes caracteres; ou seja, "{{" ou "}}".  
+  
+ Este método não pesquisar a cadeia de caracteres especificada para caracteres de nova linha individual (hexadecimal 0x000a) e substituí-los por <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType>.  
+  
+ Se um objeto especificado não é referenciado na cadeia de caracteres de formato, ele será ignorado.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> ou <paramref name="arg" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> não é uma cadeia de caracteres de formato de composição válida.  
+  
+ - ou -  
+  
+ O índice de um item de formato é menor que 0 (zero) ou maior ou igual ao tamanho da matriz <paramref name="arg" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caractere para gravar dados.</param>
+        <param name="index">A posição do caractere no buffer no qual iniciar a recuperação de dados.</param>
+        <param name="count">O número de caracteres a serem gravados.</param>
+        <summary>Grava uma submatriz de caracteres para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método gravará `count` caracteres de dados a esta `TextWriter` do `buffer` matriz de caracteres começando na posição `index`.  
+  
+ Essa sobrecarga é equivalente a <xref:System.IO.TextWriter.Write%28System.Char%5B%5D%29> de sobrecarga para cada caractere na `buffer` entre `index` e (`index` + `count`).  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tamanho do buffer menos <paramref name="index" /> é menor que <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (string format, object arg0, object arg1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string format, object arg0, object arg1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.String,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg0" Type="System.Object" />
+        <Parameter Name="arg1" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato composto.</param>
+        <param name="arg0">O primeiro objeto a ser formatado e gravado.</param>
+        <param name="arg1">O segundo objeto a ser formatado e gravado.</param>
+        <summary>Grava uma cadeia de caracteres formatada para a cadeia de caracteres de texto ou o fluxo, usando a mesma semântica do método <see cref="M:System.String.Format(System.String,System.Object,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa formatação composta para converter o valor de um objeto em sua representação de cadeia de caracteres e inserir essa representação em uma cadeia de caracteres. .NET fornece amplo suporte para formatação, que é descrita mais detalhadamente nos tópicos de formatação a seguir:  
+  
+-   Para obter mais informações sobre o recurso de formatação composta, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+-   Para obter mais informações sobre especificadores de formato numérico, consulte [cadeias de caracteres de formato numérico padrão](~/docs/standard/base-types/standard-numeric-format-strings.md) e [cadeias de caracteres de formato numérico personalizado](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+-   Para obter mais informações sobre data e hora especificadores de formato, consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md) e [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+-   Para obter mais informações sobre especificadores de formato de enumeração, consulte [cadeias de caracteres de formato de enumeração](~/docs/standard/base-types/enumeration-format-strings.md).  
+  
+-   Para obter mais informações sobre a formatação, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+ O parâmetro `format` consiste em zero ou mais execuções de texto combinadas com zero ou mais espaços reservados indexados, chamados de itens de formato, que correspondem a um objeto na lista de parâmetros desse método. O processo de formatação substitui cada item de formato com a representação de cadeia de caracteres do valor do objeto correspondente.  
+  
+ A sintaxe de um item de formato é o seguinte:  
+  
+ {*índice*[,*comprimento*] [:*formatString*]}  
+  
+ Os elementos entre colchetes são opcionais. A tabela a seguir descreve cada elemento. Para obter mais informações sobre a composição de formatação de recurso, incluindo a sintaxe de um item de formato, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+|Elemento|Descrição|  
+|-------------|-----------------|  
+|índice|A posição de base zero na lista de parâmetros do objeto a ser formatado. Se o objeto especificado por *índice* é `null`, o item de formato é substituído pelo <xref:System.String?displayProperty=nameWithType>. Como essa sobrecarga tem dois objetos no seu parâmetro de lista, o valor de *índice* sempre deve ser 0 ou 1. Se não houver nenhum parâmetro no *índice* posição, um <xref:System.FormatException> é gerada.|  
+|,*comprimento*|O número mínimo de caracteres na representação de cadeia de caracteres do parâmetro. Em caso positivo, o parâmetro é alinhado à direita; Se for negativo, será alinhado à esquerda.|  
+|:*formatString*|Uma cadeia de caracteres de formato personalizado ou padrão que é compatível com o objeto a ser formatado. Os valores possíveis para *formatString* são os mesmos que os valores com suporte do objeto `ToString(string format)` método. Se *formatString* não for especificado e o objeto a ser formatado implementa o <xref:System.IFormattable> interface, `null` é passado como o valor da `format` parâmetro que é usado como o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> cadeia de caracteres de formato.|  
+  
+ À esquerda e à direita de caracteres, de chave "{" e "}", são necessários. Para especificar um caractere único chave literal em `format`, especifique duas à esquerda ou à direita de colchetes caracteres; ou seja, "{{" ou "}}".  
+  
+ Este método não pesquisar a cadeia de caracteres especificada para caracteres de nova linha individual (hexadecimal 0x000a) e substituí-los por <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType>.  
+  
+ Se um objeto especificado não é referenciado na cadeia de caracteres de formato, ele será ignorado.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> não é uma cadeia de caracteres de formato de composição válida.  
+  
+ -ou-  
+  
+ O índice de um item de formato é menor que 0 (zero) ou maior ou igual ao número de objetos a serem formatados (que, para essa sobrecarga de método, é dois).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (string format, object arg0, object arg1, object arg2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string format, object arg0, object arg1, object arg2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.Write(System.String,System.Object,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg0" Type="System.Object" />
+        <Parameter Name="arg1" Type="System.Object" />
+        <Parameter Name="arg2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato composto.</param>
+        <param name="arg0">O primeiro objeto a ser formatado e gravado.</param>
+        <param name="arg1">O segundo objeto a ser formatado e gravado.</param>
+        <param name="arg2">O terceiro objeto a ser formatado e gravado.</param>
+        <summary>Grava uma cadeia de caracteres formatada para a cadeia de caracteres de texto ou o fluxo, usando a mesma semântica do método <see cref="M:System.String.Format(System.String,System.Object,System.Object,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa formatação composta para converter o valor de um objeto em sua representação de cadeia de caracteres e inserir essa representação em uma cadeia de caracteres. .NET fornece amplo suporte para formatação, que é descrita mais detalhadamente nos tópicos de formatação a seguir:  
+  
+-   Para obter mais informações sobre o recurso de formatação composta, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+-   Para obter mais informações sobre especificadores de formato numérico, consulte [cadeias de caracteres de formato numérico padrão](~/docs/standard/base-types/standard-numeric-format-strings.md) e [cadeias de caracteres de formato numérico personalizado](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+-   Para obter mais informações sobre data e hora especificadores de formato, consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md) e [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+-   Para obter mais informações sobre especificadores de formato de enumeração, consulte [cadeias de caracteres de formato de enumeração](~/docs/standard/base-types/enumeration-format-strings.md).  
+  
+-   Para obter mais informações sobre a formatação, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+ O parâmetro `format` consiste em zero ou mais execuções de texto combinadas com zero ou mais espaços reservados indexados, chamados de itens de formato, que correspondem a um objeto na lista de parâmetros desse método. O processo de formatação substitui cada item de formato com a representação de cadeia de caracteres do valor do objeto correspondente.  
+  
+ A sintaxe de um item de formato é o seguinte:  
+  
+ {*índice*[,*comprimento*] [:*formatString*]}  
+  
+ Os elementos entre colchetes são opcionais. A tabela a seguir descreve cada elemento. Para obter mais informações sobre a composição de formatação de recurso, incluindo a sintaxe de um item de formato, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+|Elemento|Descrição|  
+|-------------|-----------------|  
+|índice|A posição de base zero na lista de parâmetros do objeto a ser formatado. Se o objeto especificado por *índice* é `null`, o item de formato é substituído pelo <xref:System.String?displayProperty=nameWithType>. Como essa sobrecarga tem três objetos no seu parâmetro de lista, o valor de *índice* sempre deve ser 0, 1 ou 2. Se não houver nenhum parâmetro no *índice* posição, um <xref:System.FormatException> é gerada.|  
+|,*comprimento*|O número mínimo de caracteres na representação de cadeia de caracteres do parâmetro. Em caso positivo, o parâmetro é alinhado à direita; Se for negativo, será alinhado à esquerda.|  
+|:*formatString*|Uma cadeia de caracteres de formato personalizado ou padrão que é compatível com o objeto a ser formatado. Os valores possíveis para *formatString* são os mesmos que os valores com suporte do objeto `ToString(string format)` método. Se *formatString* não for especificado e o objeto a ser formatado implementa o <xref:System.IFormattable> interface, `null` é passado como o valor da `format` parâmetro que é usado como o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> cadeia de caracteres de formato.|  
+  
+ À esquerda e à direita de caracteres, de chave "{" e "}", são necessários. Para especificar um caractere único chave literal em `format`, especifique duas à esquerda ou à direita de colchetes caracteres; ou seja, "{{" ou "}}".  
+  
+ Este método não pesquisar a cadeia de caracteres especificada para caracteres de nova linha individual (hexadecimal 0x000a) e substituí-los por <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType>.  
+  
+ Se um objeto especificado não é referenciado na cadeia de caracteres de formato, ele será ignorado.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> não é uma cadeia de caracteres de formato de composição válida.  
+  
+ -ou-  
+  
+ O índice de um item de formato é menor que 0 (zero) ou maior ou igual ao número de objetos a serem formatados (que, para essa sobrecarga de método, é três).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task WriteAsync (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task WriteAsync(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteAsync(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">O caractere a ser gravado no fluxo de texto.</param>
+        <summary>Grava um caractere no texto de cadeia de caracteres ou fluxo de forma assíncrona.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.TextWriter> classe é uma classe abstrata. Portanto, você não instanciá-la em seu código. Para obter um exemplo de como usar o <xref:System.IO.TextWriter.WriteAsync%2A> método, consulte o <xref:System.IO.StreamWriter.WriteAsync%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de texto é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de texto está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task WriteAsync (char[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task WriteAsync(char[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteAsync(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caracteres a ser gravada no fluxo de texto. Se <c>buffer</c> é <see langword="null" />, nada será gravado.</param>
+        <summary>Grava um caractere de matriz para a cadeia de caracteres de texto ou de fluxo de forma assíncrona.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de texto é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de texto está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task WriteAsync (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task WriteAsync(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser gravada. Se <c>valor</c> é <see langword="null" />, nada será gravado no fluxo de texto.</param>
+        <summary>Grava uma cadeia de caracteres na cadeia de caracteres de texto ou fluxo de forma assíncrona.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.TextWriter> classe é uma classe abstrata. Portanto, você não instanciá-la em seu código. Para obter um exemplo de como usar o <xref:System.IO.TextWriter.WriteAsync%2A> método, consulte o <xref:System.IO.StreamWriter.WriteAsync%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de texto é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de texto está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task WriteAsync (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task WriteAsync(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteAsync(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caractere para gravar dados.</param>
+        <param name="index">A posição do caractere no buffer no qual iniciar a recuperação de dados.</param>
+        <param name="count">O número de caracteres a serem gravados.</param>
+        <summary>Grava uma submatriz de caracteres para o texto da cadeia de caracteres ou fluxo de forma assíncrona.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.TextWriter> classe é uma classe abstrata. Portanto, você não instanciá-la em seu código. Para obter um exemplo de como usar o <xref:System.IO.TextWriter.WriteAsync%2A> método, consulte o <xref:System.IO.StreamWriter.WriteAsync%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="index" /> mais <paramref name="count" /> é maior que o comprimento do buffer.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O gravador de texto é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de texto está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava um terminador de linha para a cadeia de caracteres de texto ou fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor <see langword="Boolean" /> a ser gravado.</param>
+        <summary>Grava a representação de texto de um valor <see langword="Boolean" /> seguido por um terminador de linha na cadeia ou no fluxo de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.Boolean.ToString%2A?displayProperty=nameWithType> método.  
+  
+ Este método gera uma <xref:System.Boolean.TrueString?displayProperty=nameWithType> ou <xref:System.Boolean.FalseString?displayProperty=nameWithType>.  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">O caractere a ser gravado no fluxo de texto.</param>
+        <summary>Grava um caractere seguido por um terminador de linha na cadeia de texto ou no fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga é equivalente a <xref:System.IO.TextWriter.Write%28System.Char%29> seguido por <xref:System.IO.TextWriter.WriteLine> .  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (char[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(char[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caracteres da qual os dados são lidos.</param>
+        <summary>Grava uma matriz de caracteres seguida por um terminador de linha no fluxo ou na cadeia de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os caracteres em `buffer` são gravados no fluxo subjacente. Se a matriz de caracteres é `null`, o terminador de linha é gravado.  
+  
+ Essa sobrecarga é equivalente a <xref:System.IO.TextWriter.Write%28System.Char%5B%5D%29> seguido por <xref:System.IO.TextWriter.WriteLine> .  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor decimal para gravação.</param>
+        <summary>Grava a representação de texto de um valor decimal seguido por um terminador de linha para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.TextWriter.FormatProvider%2A> propriedade, se não `null`, especifica a formatação de cultura específica. Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor de ponto flutuante de 8 bytes a ser gravado.</param>
+        <summary>Grava a representação de texto de um valor de ponto flutuante de 8 bytes seguido por um terminador de linha para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.TextWriter.FormatProvider%2A> propriedade, se não `null`, especifica a formatação de cultura específica. Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O inteiro com sinal de 4 bytes a ser gravado.</param>
+        <summary>Grava a representação de um inteiro de 4 bytes seguido por um terminador de linha para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.Int32.ToString%2A?displayProperty=nameWithType> método. O <xref:System.IO.TextWriter.FormatProvider%2A?displayProperty=nameWithType> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O inteiro assinado de 8 bytes para gravação.</param>
+        <summary>Grava a representação de texto de um inteiro assinado de 8 bytes seguido por um terminador de linha para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.Int64.ToString%2A?displayProperty=nameWithType> método. O <xref:System.IO.TextWriter.FormatProvider%2A?displayProperty=nameWithType> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser gravado. Se <c>valor</c> é <see langword="null" />, o terminador de linha é gravado.</param>
+        <summary>Grava a representação de texto de um objeto chamando o método <see langword="ToString" /> nesse objeto, seguido por um terminador de linha para a cadeia de texto ou fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga é equivalente a <xref:System.IO.TextWriter.Write%28System.String%2CSystem.Object%29> de sobrecarga. O <xref:System.IO.TextWriter.FormatProvider%2A> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor de ponto flutuante de 4 bytes a ser gravado.</param>
+        <summary>Grava a representação de texto de um valor de ponto flutuante de 4 bytes seguido por um terminador de linha para a cadeia de caracteres de texto ou fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.TextWriter.FormatProvider%2A> propriedade, se não `null`, especifica a formatação de cultura específica. Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser gravada. Se <c>valor</c> é <see langword="null" />, o terminador de linha é gravado.</param>
+        <summary>Grava uma cadeia de caracteres seguida por um terminador de linha para a cadeia de caracteres de texto ou fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga é equivalente a <xref:System.IO.TextWriter.Write%28System.Char%5B%5D%29> de sobrecarga.  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Este método não pesquisar a cadeia de caracteres especificada para caracteres de nova linha individual (hexadecimal 0x000a) e substituí-los por <xref:System.IO.TextWriter.NewLine%2A>.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O inteiro sem sinal de 4 bytes para gravação.</param>
+        <summary>Grava a representação de um inteiro sem sinal de 4 bytes seguido por um terminador de linha para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.UInt32.ToString%2A?displayProperty=nameWithType> método. O <xref:System.IO.TextWriter.FormatProvider%2A> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O inteiro sem sinal de 8 bytes para gravação.</param>
+        <summary>Grava a representação de um inteiro não assinado de 8 bytes seguido por um terminador de linha para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de texto do valor especificado é gerada por chamar o <xref:System.UInt64.ToString%2A?displayProperty=nameWithType> método. O <xref:System.IO.TextWriter.FormatProvider%2A> propriedade, se não `null`, especifica a formatação de cultura específica.  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (string format, object arg0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string format, object arg0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg0" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato composto.</param>
+        <param name="arg0">O objeto a ser formatado e gravado.</param>
+        <summary>Grava uma cadeia de caracteres formatada e uma nova linha na cadeia de texto ou no fluxo, usando a mesma semântica que o método <see cref="M:System.String.Format(System.String,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa formatação composta para converter o valor de um objeto em sua representação de cadeia de caracteres e inserir essa representação em uma cadeia de caracteres. .NET fornece amplo suporte para formatação, que é descrita mais detalhadamente nos tópicos de formatação a seguir:  
+  
+-   Para obter mais informações sobre o recurso de formatação composta, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+-   Para obter mais informações sobre especificadores de formato numérico, consulte [cadeias de caracteres de formato numérico padrão](~/docs/standard/base-types/standard-numeric-format-strings.md) e [cadeias de caracteres de formato numérico personalizado](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+-   Para obter mais informações sobre data e hora especificadores de formato, consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md) e [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+-   Para obter mais informações sobre especificadores de formato de enumeração, consulte [cadeias de caracteres de formato de enumeração](~/docs/standard/base-types/enumeration-format-strings.md).  
+  
+-   Para obter mais informações sobre a formatação, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+ O parâmetro `format` consiste em zero ou mais execuções de texto combinadas com zero ou mais espaços reservados indexados, chamados de itens de formato, que correspondem a um objeto na lista de parâmetros desse método. O processo de formatação substitui cada item de formato com a representação de cadeia de caracteres do valor do objeto correspondente.  
+  
+ A sintaxe de um item de formato é o seguinte:  
+  
+ {*índice*[,*comprimento*] [:*formatString*]}  
+  
+ Os elementos entre colchetes são opcionais. A tabela a seguir descreve cada elemento. Para obter mais informações sobre a composição de formatação de recurso, incluindo a sintaxe de um item de formato, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+|Elemento|Descrição|  
+|-------------|-----------------|  
+|índice|A posição de base zero na lista de parâmetros do objeto a ser formatado. Se o objeto especificado por *índice* é `null`, o item de formato é substituído pelo <xref:System.String?displayProperty=nameWithType>. Como essa sobrecarga tem apenas um único objeto no seu parâmetro de lista, o valor de *índice* deve ser sempre 0. Se não houver nenhum parâmetro no *índice* posição, um <xref:System.FormatException> é gerada.|  
+|,*comprimento*|O número mínimo de caracteres na representação de cadeia de caracteres do parâmetro. Em caso positivo, o parâmetro é alinhado à direita; Se for negativo, será alinhado à esquerda.|  
+|:*formatString*|Uma cadeia de caracteres de formato personalizado ou padrão que é compatível com o objeto a ser formatado. Os valores possíveis para *formatString* são os mesmos que os valores com suporte do objeto `ToString(string format)` método. Se *formatString* não for especificado e o objeto a ser formatado implementa o <xref:System.IFormattable> interface, `null` é passado como o valor da `format` parâmetro que é usado como o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> cadeia de caracteres de formato.|  
+  
+ À esquerda e à direita de caracteres, de chave "{" e "}", são necessários. Para especificar um caractere único chave literal em `format`, especifique duas à esquerda ou à direita de colchetes caracteres; ou seja, "{{" ou "}}".  
+  
+ Este método não pesquisar a cadeia de caracteres especificada para caracteres de nova linha individual (hexadecimal 0x000a) e substituí-los por <xref:System.IO.TextWriter.NewLine%2A>.  
+  
+ Se um objeto especificado não é referenciado na cadeia de caracteres de formato, ele será ignorado.  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> não é uma cadeia de caracteres de formato de composição válida.  
+  
+ -ou-  
+  
+ O índice de um item de formato é menor que 0 (zero) ou maior ou igual ao número de objetos a serem formatados (que, para essa sobrecarga de método, é um).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (string format, params object[] arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string format, object[] arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato composto.</param>
+        <param name="arg">Uma matriz de objetos que contém zero ou mais objetos a serem formatados e gravados.</param>
+        <summary>Grava uma cadeia de caracteres formatada e uma nova linha usando a mesma semântica que <see cref="M:System.String.Format(System.String,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa formatação composta para converter o valor de um objeto em sua representação de cadeia de caracteres e inserir essa representação em uma cadeia de caracteres. .NET fornece amplo suporte para formatação, que é descrita mais detalhadamente nos tópicos de formatação a seguir:  
+  
+-   Para obter mais informações sobre o recurso de formatação composta, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+-   Para obter mais informações sobre especificadores de formato numérico, consulte [cadeias de caracteres de formato numérico padrão](~/docs/standard/base-types/standard-numeric-format-strings.md) e [cadeias de caracteres de formato numérico personalizado](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+-   Para obter mais informações sobre data e hora especificadores de formato, consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md) e [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+-   Para obter mais informações sobre especificadores de formato de enumeração, consulte [cadeias de caracteres de formato de enumeração](~/docs/standard/base-types/enumeration-format-strings.md).  
+  
+-   Para obter mais informações sobre a formatação, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+ O parâmetro `format` consiste em zero ou mais execuções de texto combinadas com zero ou mais espaços reservados indexados, chamados de itens de formato, que correspondem a um objeto na lista de parâmetros desse método. O processo de formatação substitui cada item de formato com a representação de cadeia de caracteres do valor do objeto correspondente.  
+  
+ A sintaxe de um item de formato é o seguinte:  
+  
+ {*índice*[,*comprimento*] [:*formatString*]}  
+  
+ Os elementos entre colchetes são opcionais. A tabela a seguir descreve cada elemento. Para obter mais informações sobre a composição de formatação de recurso, incluindo a sintaxe de um item de formato, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+|Elemento|Descrição|  
+|-------------|-----------------|  
+|índice|A posição de base zero na lista de parâmetros do objeto a ser formatado. Se o objeto especificado por *índice* é `null`, o item de formato é substituído pelo <xref:System.String?displayProperty=nameWithType>. Como essa sobrecarga tem uma matriz no seu parâmetro de lista, o valor de *índice* sempre deve ser menor que o comprimento da matriz. Se não houver nenhum parâmetro no *índice* posição, um <xref:System.FormatException> é gerada.|  
+|,*comprimento*|O número mínimo de caracteres na representação de cadeia de caracteres do parâmetro. Em caso positivo, o parâmetro é alinhado à direita; Se for negativo, será alinhado à esquerda.|  
+|:*formatString*|Uma cadeia de caracteres de formato personalizado ou padrão que é compatível com o objeto a ser formatado. Os valores possíveis para *formatString* são os mesmos que os valores com suporte do objeto `ToString(string format)` método. Se *formatString* não for especificado e o objeto a ser formatado implementa o <xref:System.IFormattable> interface, `null` é passado como o valor da `format` parâmetro que é usado como o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> cadeia de caracteres de formato.|  
+  
+ À esquerda e à direita de caracteres, de chave "{" e "}", são necessários. Para especificar um caractere único chave literal em `format`, especifique duas à esquerda ou à direita de colchetes caracteres; ou seja, "{{" ou "}}".  
+  
+ Este método não pesquisar a cadeia de caracteres especificada para caracteres de nova linha individual (hexadecimal 0x000a) e substituí-los por <xref:System.IO.TextWriter.NewLine%2A>.  
+  
+ Se um objeto especificado não é referenciado na cadeia de caracteres de formato, ele será ignorado.  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Uma cadeia de caracteres ou objeto é passado como <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> não é uma cadeia de caracteres de formato de composição válida.  
+  
+ - ou -  
+  
+ O índice de um item de formato é menor que 0 (zero) ou maior ou igual ao tamanho da matriz <paramref name="arg" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caracteres da qual os dados são lidos.</param>
+        <param name="index">A posição do caractere em <c>buffer</c> no qual iniciar a leitura de dados.</param>
+        <param name="count">O número máximo de caracteres a serem gravados.</param>
+        <summary>Grava uma submatriz de caracteres seguida por um terminador de linha na cadeia de texto ou no fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método gravará `count` caracteres de dados a esta `TextWriter` do `buffer` matriz de caracteres começando na posição `index`.  
+  
+ Essa sobrecarga é equivalente a chamar o <xref:System.IO.TextWriter.Write%28System.Char%5B%5D%29> método seguido por <xref:System.IO.TextWriter.WriteLine%2A> para cada caractere na `buffer` entre `index` e (`index` + `count`).  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tamanho do buffer menos <paramref name="index" /> é menor que <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (string format, object arg0, object arg1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string format, object arg0, object arg1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg0" Type="System.Object" />
+        <Parameter Name="arg1" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato composto.</param>
+        <param name="arg0">O primeiro objeto a ser formatado e gravado.</param>
+        <param name="arg1">O segundo objeto a ser formatado e gravado.</param>
+        <summary>Grava uma cadeia de caracteres formatada e uma nova linha na cadeia de texto ou no fluxo, usando a mesma semântica que o método <see cref="M:System.String.Format(System.String,System.Object,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa formatação composta para converter o valor de um objeto em sua representação de cadeia de caracteres e inserir essa representação em uma cadeia de caracteres. .NET fornece amplo suporte para formatação, que é descrita mais detalhadamente nos tópicos de formatação a seguir:  
+  
+-   Para obter mais informações sobre o recurso de formatação composta, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+-   Para obter mais informações sobre especificadores de formato numérico, consulte [cadeias de caracteres de formato numérico padrão](~/docs/standard/base-types/standard-numeric-format-strings.md) e [cadeias de caracteres de formato numérico personalizado](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+-   Para obter mais informações sobre data e hora especificadores de formato, consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md) e [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+-   Para obter mais informações sobre especificadores de formato de enumeração, consulte [cadeias de caracteres de formato de enumeração](~/docs/standard/base-types/enumeration-format-strings.md).  
+  
+-   Para obter mais informações sobre a formatação, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+ O parâmetro `format` consiste em zero ou mais execuções de texto combinadas com zero ou mais espaços reservados indexados, chamados de itens de formato, que correspondem a um objeto na lista de parâmetros desse método. O processo de formatação substitui cada item de formato com a representação de cadeia de caracteres do valor do objeto correspondente.  
+  
+ A sintaxe de um item de formato é o seguinte:  
+  
+ {*índice*[,*comprimento*] [:*formatString*]}  
+  
+ Os elementos entre colchetes são opcionais. A tabela a seguir descreve cada elemento. Para obter mais informações sobre a composição de formatação de recurso, incluindo a sintaxe de um item de formato, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+|Elemento|Descrição|  
+|-------------|-----------------|  
+|índice|A posição de base zero na lista de parâmetros do objeto a ser formatado. Se o objeto especificado por *índice* é `null`, o item de formato é substituído pelo <xref:System.String?displayProperty=nameWithType>. Como essa sobrecarga tem dois objetos no seu parâmetro de lista, o valor de *índice* sempre deve ser 0 ou 1. Se não houver nenhum parâmetro no *índice* posição, um <xref:System.FormatException> é gerada.|  
+|,*comprimento*|O número mínimo de caracteres na representação de cadeia de caracteres do parâmetro. Em caso positivo, o parâmetro é alinhado à direita; Se for negativo, será alinhado à esquerda.|  
+|:*formatString*|Uma cadeia de caracteres de formato personalizado ou padrão que é compatível com o objeto a ser formatado. Os valores possíveis para *formatString* são os mesmos que os valores com suporte do objeto `ToString(string format)` método. Se *formatString* não for especificado e o objeto a ser formatado implementa o <xref:System.IFormattable> interface, `null` é passado como o valor da `format` parâmetro que é usado como o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> cadeia de caracteres de formato.|  
+  
+ À esquerda e à direita de caracteres, de chave "{" e "}", são necessários. Para especificar um caractere único chave literal em `format`, especifique duas à esquerda ou à direita de colchetes caracteres; ou seja, "{{" ou "}}".  
+  
+ Este método não pesquisar a cadeia de caracteres especificada para caracteres de nova linha individual (hexadecimal 0x000a) e substituí-los por <xref:System.IO.TextWriter.NewLine%2A>.  
+  
+ Se um objeto especificado não é referenciado na cadeia de caracteres de formato, ele será ignorado.  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> não é uma cadeia de caracteres de formato de composição válida.  
+  
+ - ou -  
+  
+ O índice de um item de formato é menor que 0 (zero) ou maior ou igual ao número de objetos a serem formatados (que, para essa sobrecarga de método, é dois).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public virtual void WriteLine (string format, object arg0, object arg1, object arg2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteLine(string format, object arg0, object arg1, object arg2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLine(System.String,System.Object,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="arg0" Type="System.Object" />
+        <Parameter Name="arg1" Type="System.Object" />
+        <Parameter Name="arg2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato composto.</param>
+        <param name="arg0">O primeiro objeto a ser formatado e gravado.</param>
+        <param name="arg1">O segundo objeto a ser formatado e gravado.</param>
+        <param name="arg2">O terceiro objeto a ser formatado e gravado.</param>
+        <summary>Grava uma cadeia de caracteres formatada e uma nova linha usando a mesma semântica que <see cref="M:System.String.Format(System.String,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa formatação composta para converter o valor de um objeto em sua representação de cadeia de caracteres e inserir essa representação em uma cadeia de caracteres. .NET fornece amplo suporte para formatação, que é descrita mais detalhadamente nos tópicos de formatação a seguir:  
+  
+-   Para obter mais informações sobre o recurso de formatação composta, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+-   Para obter mais informações sobre especificadores de formato numérico, consulte [cadeias de caracteres de formato numérico padrão](~/docs/standard/base-types/standard-numeric-format-strings.md) e [cadeias de caracteres de formato numérico personalizado](~/docs/standard/base-types/custom-numeric-format-strings.md).  
+  
+-   Para obter mais informações sobre data e hora especificadores de formato, consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md) e [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+-   Para obter mais informações sobre especificadores de formato de enumeração, consulte [cadeias de caracteres de formato de enumeração](~/docs/standard/base-types/enumeration-format-strings.md).  
+  
+-   Para obter mais informações sobre a formatação, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+ O parâmetro `format` consiste em zero ou mais execuções de texto combinadas com zero ou mais espaços reservados indexados, chamados de itens de formato, que correspondem a um objeto na lista de parâmetros desse método. O processo de formatação substitui cada item de formato com a representação de cadeia de caracteres do valor do objeto correspondente.  
+  
+ A sintaxe de um item de formato é o seguinte:  
+  
+ {*índice*[,*comprimento*] [:*formatString*]}  
+  
+ Os elementos entre colchetes são opcionais. A tabela a seguir descreve cada elemento. Para obter mais informações sobre a composição de formatação de recurso, incluindo a sintaxe de um item de formato, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+|Elemento|Descrição|  
+|-------------|-----------------|  
+|índice|A posição de base zero na lista de parâmetros do objeto a ser formatado. Se o objeto especificado por *índice* é `null`, o item de formato é substituído pelo <xref:System.String?displayProperty=nameWithType>. Como essa sobrecarga tem três objetos no seu parâmetro de lista, o valor de *índice* sempre deve ser 0, 1 ou 2. Se não houver nenhum parâmetro no *índice* posição, um <xref:System.FormatException> é gerada.|  
+|,*comprimento*|O número mínimo de caracteres na representação de cadeia de caracteres do parâmetro. Em caso positivo, o parâmetro é alinhado à direita; Se for negativo, será alinhado à esquerda.|  
+|:*formatString*|Uma cadeia de caracteres de formato personalizado ou padrão que é compatível com o objeto a ser formatado. Os valores possíveis para *formatString* são os mesmos que os valores com suporte do objeto `ToString(string format)` método. Se *formatString* não for especificado e o objeto a ser formatado implementa o <xref:System.IFormattable> interface, `null` é passado como o valor da `format` parâmetro que é usado como o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> cadeia de caracteres de formato.|  
+  
+ À esquerda e à direita de caracteres, de chave "{" e "}", são necessários. Para especificar um caractere único chave literal em `format`, especifique duas à esquerda ou à direita de colchetes caracteres; ou seja, "{{" ou "}}".  
+  
+ Este método não pesquisar a cadeia de caracteres especificada para caracteres de nova linha individual (hexadecimal 0x000a) e substituí-los por <xref:System.IO.TextWriter.NewLine%2A>.  
+  
+ Se um objeto especificado não é referenciado na cadeia de caracteres de formato, ele será ignorado.  
+  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.TextWriter" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> não é uma cadeia de caracteres de formato de composição válida.  
+  
+ -ou-  
+  
+ O índice de um item de formato é menor que 0 (zero) ou maior ou igual ao número de objetos a serem formatados (que, para essa sobrecarga de método, é três).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task WriteLineAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task WriteLineAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLineAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava um terminador de linha de forma assíncrona para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de texto é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de texto está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task WriteLineAsync (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task WriteLineAsync(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLineAsync(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">O caractere a ser gravado no fluxo de texto.</param>
+        <summary>Grava um caractere seguido por um terminador de linha assíncrona para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ O <xref:System.IO.TextWriter> classe é uma classe abstrata. Portanto, você não instanciá-la em seu código. Para obter um exemplo de como usar o <xref:System.IO.TextWriter.WriteLineAsync%2A> método, consulte o <xref:System.IO.StreamWriter.WriteLineAsync%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de texto é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de texto está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task WriteLineAsync (char[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task WriteLineAsync(char[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLineAsync(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caracteres a ser gravada no fluxo de texto. Se a matriz de caracteres é <see langword="null" />, o terminador de linha é gravado.</param>
+        <summary>Grava uma matriz de caracteres seguidos por um terminador de linha assíncrona para a cadeia de caracteres de texto ou o fluxo.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de texto é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de texto está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task WriteLineAsync (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task WriteLineAsync(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLineAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser gravada. Se o valor for <see langword="null" />, somente um terminador de linha será gravado.</param>
+        <summary>Grava uma cadeia de caracteres seguida por um terminador de linha, de forma assíncrona, na cadeia de texto ou no fluxo.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ O <xref:System.IO.TextWriter> classe é uma classe abstrata. Portanto, você não instanciá-la em seu código. Para obter um exemplo de como usar o <xref:System.IO.TextWriter.WriteLineAsync%2A> método, consulte o <xref:System.IO.StreamWriter.WriteLineAsync%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de texto é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de texto está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task WriteLineAsync (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task WriteLineAsync(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.TextWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caractere para gravar dados.</param>
+        <param name="index">A posição do caractere no buffer no qual iniciar a recuperação de dados.</param>
+        <param name="count">O número de caracteres a serem gravados.</param>
+        <summary>Grava uma submatriz seguido por um terminador de linha assíncrona para a cadeia de caracteres de texto ou o fluxo de caracteres.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.CoreNewLine> campo.  
+  
+ O <xref:System.IO.TextWriter> classe é uma classe abstrata. Portanto, você não instanciá-la em seu código. Para obter um exemplo de como usar o <xref:System.IO.TextWriter.WriteLineAsync%2A> método, consulte o <xref:System.IO.StreamWriter.WriteLineAsync%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="index" /> mais <paramref name="count" /> é maior que o comprimento do buffer.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O gravador de texto é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de texto está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

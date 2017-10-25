@@ -1,0 +1,413 @@
+<Type Name="CacheRequest" FullName="System.Windows.Automation.CacheRequest">
+  <TypeSignature Language="C#" Value="public sealed class CacheRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CacheRequest extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.CacheRequest" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica as propriedades e padrões que a estrutura de automação de interface do usuário armazena em cache quando um <see cref="T:System.Windows.Automation.AutomationElement" /> é obtido.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recuperando propriedades e padrões por meio de [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] exige chamadas entre processos que lento o desempenho. Armazenando valores de propriedades e padrões em uma operação em lote, você pode melhorar o desempenho do seu aplicativo.  
+  
+ Crie uma nova solicitação de cache chamando o construtor da classe. A solicitação é preenchida por chamadas repetidas para o <xref:System.Windows.Automation.CacheRequest.Add%2A> método.  
+  
+ Um único <xref:System.Windows.Automation.CacheRequest> pode estar ativa. Há duas maneiras de ativar uma solicitação:  
+  
+-   Chamar <xref:System.Windows.Automation.CacheRequest.Activate%2A> na solicitação. Isso envia a solicitação para a pilha e a solicitação é exibida quando o objeto é descartado. Para garantir o descarte mesmo se uma exceção é gerada, use o valor de retorno <xref:System.Windows.Automation.CacheRequest.Activate%2A> dentro de um `using` bloco (`Using` em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).  
+  
+-   Colocar a solicitação para a pilha interna ao chamar <xref:System.Windows.Automation.CacheRequest.Push%2A>. Somente a solicitação de nível superior na pilha está ativa e deve ser um removida da pilha por <xref:System.Windows.Automation.CacheRequest.Pop%2A>. Exibir a solicitação desativa a ele.  
+  
+ [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]elementos obtidos enquanto a solicitação está ativa serão armazenaram em cache os valores para as propriedades e os padrões especificados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Windows.Automation.CacheRequest.Activate%2A> para propriedades e padrões de cache.  
+  
+ [!code-csharp[UIAClient_snip#107](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#107)]
+ [!code-vb[UIAClient_snip#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#107)]  
+  
+ O exemplo a seguir mostra como usar <xref:System.Windows.Automation.CacheRequest.Push%2A> e <xref:System.Windows.Automation.CacheRequest.Pop%2A> às propriedades e padrões de cache.  
+  
+ [!code-csharp[UIAClient_snip#108](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
+ [!code-vb[UIAClient_snip#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.CacheRequest.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Automation.CacheRequest" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Automation.CacheRequest> é criado, o <xref:System.Windows.Automation.AutomationElement.RuntimeIdProperty> identificador é adicionado como uma propriedade padrão para o cache.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate">
+      <MemberSignature Language="C#" Value="public IDisposable Activate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IDisposable Activate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.CacheRequest.Activate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define esta <see cref="T:System.Windows.Automation.CacheRequest" /> como a especificação de ativa para os itens que são retornados quando um <see cref="T:System.Windows.Automation.AutomationElement" /> é solicitado no mesmo thread.</summary>
+        <returns>O objeto que pode ser usado para descartar o <see cref="T:System.Windows.Automation.CacheRequest" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando esse método é geralmente preferível usando <xref:System.Windows.Automation.CacheRequest.Push%2A> e <xref:System.Windows.Automation.CacheRequest.Pop%2A> como um meio de ativar o <xref:System.Windows.Automation.CacheRequest>. O objeto é inserido na pilha quando <xref:System.Windows.Automation.CacheRequest.Activate%2A> é chamado e, em seguida, retirado quando ele é descartado. Para garantir o descarte, coloque o valor de retorno dentro de um `using` bloco (`Using` em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Windows.Automation.CacheRequest.Activate%2A> para propriedades e padrões de cache.  
+  
+ [!code-csharp[UIAClient_snip#107](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#107)]
+ [!code-vb[UIAClient_snip#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#107)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Add">
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adiciona um identificador de propriedade ou padrão para um <see cref="T:System.Windows.Automation.CacheRequest" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Automation.CacheRequest> objeto é criado, o <xref:System.Windows.Automation.AutomationElement.RuntimeIdProperty> identificador é adicionado como uma propriedade padrão para o cache.  
+  
+ Adicionar um objeto que já está na solicitação de cache não tem nenhum efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Windows.Automation.AutomationPattern pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Windows.Automation.AutomationPattern pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.CacheRequest.Add(System.Windows.Automation.AutomationPattern)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.Windows.Automation.AutomationPattern" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">Um identificador que especifica um padrão para o cache.</param>
+        <summary>Adiciona o <see cref="T:System.Windows.Automation.AutomationPattern" /> identificador para este <see cref="T:System.Windows.Automation.CacheRequest" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adicionar um padrão que já está na solicitação de cache não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como construir um <xref:System.Windows.Automation.CacheRequest> e adicione um padrão a ser armazenado em cache.  
+  
+ [!code-csharp[UIAClient_snip#202](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#202)]
+ [!code-vb[UIAClient_snip#202](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#202)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Automation.CacheRequest" /> está ativa.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Windows.Automation.AutomationProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Windows.Automation.AutomationProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.CacheRequest.Add(System.Windows.Automation.AutomationProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.Windows.Automation.AutomationProperty" />
+      </Parameters>
+      <Docs>
+        <param name="property">Um identificador que especifica um valor de propriedade em cache.</param>
+        <summary>Adiciona o <see cref="T:System.Windows.Automation.AutomationProperty" /> identificador para este <see cref="T:System.Windows.Automation.CacheRequest" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Automation.CacheRequest> é criado, o <xref:System.Windows.Automation.AutomationElement.RuntimeIdProperty> identificador é adicionado como uma propriedade padrão para o cache.  
+  
+ Adicionando uma propriedade que já está na solicitação de cache não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como construir um <xref:System.Windows.Automation.CacheRequest> e adicionar uma propriedade a ser armazenado em cache.  
+  
+ [!code-csharp[UIAClient_snip#202](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#202)]
+ [!code-vb[UIAClient_snip#202](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#202)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Automation.CacheRequest" /> está ativa.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomationElementMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.AutomationElementMode AutomationElementMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.AutomationElementMode AutomationElementMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.CacheRequest.AutomationElementMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se os elementos retornados devem conter referências completas para subjacente [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)], ou apenas informações em cache.</summary>
+        <value>
+          <see cref="F:System.Windows.Automation.AutomationElementMode.Full" />Se os elementos retornados tiverem uma referência completa a subjacente [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)]; caso contrário, <see cref="F:System.Windows.Automation.AutomationElementMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.AutomationElementMode.Full>é o valor padrão e especifica que os elementos retornados contém uma referência completa a subjacente [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)]. <xref:System.Windows.Automation.AutomationElementMode.None>Especifica que os elementos retornados não tem nenhuma referência de subjacente [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)]e contêm somente informações armazenadas em cache.  
+  
+ Algumas operações nos elementos, incluindo <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>, e <xref:System.Windows.Automation.AutomationElement.SetFocus%2A>, exigem uma referência completa; tentando executar estas em um elemento que não possui nenhum resulta em um <xref:System.InvalidOperationException>.  
+  
+ Usando <xref:System.Windows.Automation.AutomationElementMode.None> pode ser mais eficiente quando são necessárias apenas as propriedades, pois evita a sobrecarga envolvida na configuração de referências completas.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> é definido como <xref:System.Windows.Automation.AutomationElementMode.None>, com o resultado que em cache somente propriedades e padrões estão disponíveis para o objeto recuperado.  
+  
+ [!code-csharp[UIAClient_snip#108](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
+ [!code-vb[UIAClient_snip#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.CacheRequest Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.CacheRequest Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.CacheRequest.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.CacheRequest</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia deste <see cref="T:System.Windows.Automation.CacheRequest" />.</summary>
+        <returns>Uma cópia modificável do objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.Windows.Automation.CacheRequest Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Automation.CacheRequest Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.CacheRequest.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.CacheRequest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Automation.CacheRequest" /> que está ativa no thread atual.</summary>
+        <value>Ativo <see cref="T:System.Windows.Automation.CacheRequest" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pop">
+      <MemberSignature Language="C#" Value="public void Pop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Pop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.CacheRequest.Pop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o ativo <see cref="T:System.Windows.Automation.CacheRequest" /> da pilha interna para o thread atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente a solicitação ativa no momento pode ser removida usando o <xref:System.Windows.Automation.CacheRequest.Pop%2A> método. Tentativa de remover uma solicitação que é não os resultados de um atual em uma exceção.  
+  
+ A menos que o aninhamento de solicitações de cache, é preferível usar <xref:System.Windows.Automation.CacheRequest.Activate%2A> para fazer a solicitação na pilha. O motivo é que você pode usar <xref:System.Windows.Automation.CacheRequest.Activate%2A> dentro de um `using` bloco (`Using` em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), garantindo que a solicitação é retirada da pilha mesmo se uma exceção é gerada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como desativar um <xref:System.Windows.Automation.CacheRequest> usando <xref:System.Windows.Automation.CacheRequest.Pop%2A>.  
+  
+ [!code-csharp[UIAClient_snip#108](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
+ [!code-vb[UIAClient_snip#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de remover uma solicitação de cache que não era o último deles inserido na pilha.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Push">
+      <MemberSignature Language="C#" Value="public void Push ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Push() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.CacheRequest.Push" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Coloca o <see cref="T:System.Windows.Automation.CacheRequest" /> na pilha de estado interno, tornando-a solicitação ativa no thread atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vários <xref:System.Windows.Automation.CacheRequest> objetos podem ser colocados na pilha do estado. Solicitações de cache devem ser removidas da pilha na ordem em que elas foram enviadas. Caso contrário, um <xref:System.InvalidOperationException> exceção será gerada.  
+  
+ A menos que o aninhamento de solicitações de cache, é preferível usar <xref:System.Windows.Automation.CacheRequest.Activate%2A> para fazer a solicitação na pilha. O motivo é que você pode usar <xref:System.Windows.Automation.CacheRequest.Activate%2A> dentro de um `using` bloco (`Using` em [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]), garantindo que a solicitação é retirada da pilha mesmo se uma exceção é gerada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como ativar um <xref:System.Windows.Automation.CacheRequest> usando <xref:System.Windows.Automation.CacheRequest.Push%2A>.  
+  
+ [!code-csharp[UIAClient_snip#108](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
+ [!code-vb[UIAClient_snip#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TreeFilter">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Condition TreeFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Condition TreeFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.CacheRequest.TreeFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Condition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o modo de exibição do [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] árvore do elemento a ser usado ao armazenar em cache.</summary>
+        <value>O modo de exibição do [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] árvore do elemento. A exibição padrão é <see cref="F:System.Windows.Automation.Automation.ControlViewCondition" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações adicionais sobre modos de exibição da [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] árvore de elementos, consulte [visão geral de árvore de automação de interface do usuário](~/docs/framework/ui-automation/ui-automation-tree-overview.md).  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> é definido como <xref:System.Windows.Automation.Automation.RawViewCondition> para que o cache é feito para todos os elementos, independentemente de estarem parte da exibição do conteúdo ou a exibição de controle.  
+  
+ [!code-csharp[UIAClient_snip#108](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
+ [!code-vb[UIAClient_snip#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TreeScope">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.TreeScope TreeScope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.TreeScope TreeScope" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.CacheRequest.TreeScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TreeScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o cache é feito apenas para a raiz da subárvore ou também para seus filhos ou descendentes.</summary>
+        <value>Um ou mais dos <see cref="F:System.Windows.Automation.TreeScope.Element" />, <see cref="F:System.Windows.Automation.TreeScope.Children" />, <see cref="F:System.Windows.Automation.TreeScope.Descendants" />, ou <see cref="F:System.Windows.Automation.TreeScope.Subtree" />. O valor padrão é <see cref="F:System.Windows.Automation.TreeScope.Element" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O escopo de armazenamento em cache é em relação a um ou mais objetos que estão sendo buscado, não em relação ao objeto no qual <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> ou <xref:System.Windows.Automation.AutomationElement.FindAll%2A> é chamado. Consulte o exemplo.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um elemento de caixa de listagem é obtido do elemento de janela pai, enquanto um <xref:System.Windows.Automation.CacheRequest> está ativo e <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> é <xref:System.Windows.Automation.TreeScope.Children>. As propriedades especificadas dos elementos filho (ou seja, os itens de lista) são armazenadas no cache e podem ser recuperadas do <xref:System.Windows.Automation.AutomationElement.CachedChildren%2A> da caixa de listagem.  
+  
+ [!code-csharp[UIAClient_snip#119](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#119)]
+ [!code-vb[UIAClient_snip#119](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#119)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Foi feita uma tentativa de definir a propriedade <see cref="F:System.Windows.Automation.TreeScope.Parent" /> ou <see cref="F:System.Windows.Automation.TreeScope.Ancestors" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

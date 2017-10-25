@@ -1,0 +1,123 @@
+<Type Name="TaskCommandLineEventArgs" FullName="Microsoft.Build.Framework.TaskCommandLineEventArgs">
+  <TypeSignature Language="C#" Value="public class TaskCommandLineEventArgs : Microsoft.Build.Framework.BuildMessageEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TaskCommandLineEventArgs extends Microsoft.Build.Framework.BuildMessageEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.TaskCommandLineEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildMessageEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:Microsoft.Build.Framework.IEventSource.MessageRaised" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.Framework.TaskCommandLineEventArgs>estende <xref:Microsoft.Build.Framework.BuildMessageEventArgs> para que a cadeia de caracteres de linha de comando usada por uma tarefa para executar um programa subjacente pode ser registrada como uma mensagem. Log de uma cadeia de caracteres de linha de comando é relevante apenas para tarefas que encapsular um programa subjacente ou emulam um comando do shell. Tarefas que não têm nenhum equivalente de linha de comando não devem gerar esse evento de mensagem estendida.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TaskCommandLineEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskCommandLineEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Framework.TaskCommandLineEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskCommandLineEventArgs (string commandLine, string taskName, Microsoft.Build.Framework.MessageImportance importance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string commandLine, string taskName, valuetype Microsoft.Build.Framework.MessageImportance importance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskCommandLineEventArgs.#ctor(System.String,System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandLine" Type="System.String" />
+        <Parameter Name="taskName" Type="System.String" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">A linha de comando usada pela tarefa para executar o programa subjacente.</param>
+        <param name="taskName">O nome da tarefa que gera o evento.</param>
+        <param name="importance">O <see cref="T:Microsoft.Build.Framework.MessageImportance" /> da mensagem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Build.Framework.TaskCommandLineEventArgs" /> classe com a linha de comando especificada e <see cref="T:Microsoft.Build.Framework.MessageImportance" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskCommandLineEventArgs (string commandLine, string taskName, Microsoft.Build.Framework.MessageImportance importance, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string commandLine, string taskName, valuetype Microsoft.Build.Framework.MessageImportance importance, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TaskCommandLineEventArgs.#ctor(System.String,System.String,Microsoft.Build.Framework.MessageImportance,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandLine" Type="System.String" />
+        <Parameter Name="taskName" Type="System.String" />
+        <Parameter Name="importance" Type="Microsoft.Build.Framework.MessageImportance" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">A linha de comando usada pela tarefa para executar o programa subjacente.</param>
+        <param name="taskName">O nome da tarefa que gera o evento.</param>
+        <param name="importance">O <see cref="T:Microsoft.Build.Framework.MessageImportance" /> da mensagem.</param>
+        <param name="eventTimestamp">A hora em que o evento ocorreu.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Build.Framework.TaskCommandLineEventArgs" /> classe com a linha de comando especificada, nome da tarefa e <see cref="T:Microsoft.Build.Framework.MessageImportance" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandLine">
+      <MemberSignature Language="C#" Value="public string CommandLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandLine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskCommandLineEventArgs.CommandLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a linha de comando usada pela tarefa para executar o programa subjacente.</summary>
+        <value>A linha de comando usada pela tarefa para executar o programa subjacente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskName">
+      <MemberSignature Language="C#" Value="public string TaskName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TaskCommandLineEventArgs.TaskName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da tarefa que gerou o evento.</summary>
+        <value>O nome da tarefa que gerou o evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

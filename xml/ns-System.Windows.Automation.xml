@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Automation">
+  <Docs>
+    <summary>Fornece suporte para clientes de automação de interface do usuário do Windows Presentation Foundation (WPF).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

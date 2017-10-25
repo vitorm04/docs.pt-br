@@ -1,0 +1,947 @@
+<Type Name="ObjectQuery&lt;T&gt;" FullName="System.Data.Objects.ObjectQuery&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class ObjectQuery&lt;T&gt; : System.Data.Objects.ObjectQuery, System.Collections.Generic.IEnumerable&lt;T&gt;, System.ComponentModel.IListSource, System.Linq.IOrderedQueryable&lt;T&gt;, System.Linq.IQueryable&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectQuery`1&lt;T&gt; extends System.Data.Objects.ObjectQuery implements class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.IEnumerable, class System.ComponentModel.IListSource, class System.Linq.IOrderedQueryable, class System.Linq.IOrderedQueryable`1&lt;!T&gt;, class System.Linq.IQueryable, class System.Linq.IQueryable`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.ObjectQuery`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Data.Objects.ObjectQuery</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IListSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IOrderedQueryable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IQueryable&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">O tipo de entidade da consulta.</typeparam>
+    <summary>Representa uma consulta digitada em um modelo conceitual no contexto de um objeto determinado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.ObjectQuery%601> classe genérica representa uma consulta que retorna uma coleção de zero ou mais objetos de um tipo específico. O <xref:System.Data.Objects.ObjectContext> deve ser definida para uma consulta de objeto possa ser executada. Esse contexto fornece a conexão e as informações de metadados necessárias para compor e executar a consulta. Uma consulta de objeto é executada nos seguintes cenários:  
+  
+-   Quando ele é tratado, como durante um `foreach` (c#) ou `For Each` enumeração (Visual Basic).  
+  
+-   Quando ele é atribuído para preencher um <xref:System.Collections.Generic.List%601> coleção.  
+  
+-   Quando o <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> método é chamado explicitamente.  
+  
+ A consulta em si pode ser criada usando um [!INCLUDE[esql](~/includes/esql-md.md)] instrução ou uma consulta LINQ ou incrementalmente podem ser criado usando os métodos de construtor de consulta incluídos na classe. Em cada caso, o resultado é um novo <xref:System.Data.Objects.ObjectQuery%601> instância que, quando executada explicitamente ou enumerada sobre, envie a consulta à fonte de dados para execução e retornar os resultados.  
+  
+ Um <xref:System.Data.Objects.ObjectQuery%601> é frequentemente de um tipo de entidade, mas também pode ser de <xref:System.Data.Common.DbDataRecord> tipo para projeções de um tipo anônimo, ou de um tipo primitivo, como um inteiro ou uma cadeia de caracteres. Para obter mais informações, consulte [consultas de objeto](http://msdn.microsoft.com/en-us/0768033c-876f-471d-85d5-264884349276).  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+  
+ O exemplo mostra como construir uma instância do <xref:System.Data.Objects.ObjectQuery%601> classe.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Objects.ObjectQuery`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Data.Objects.ObjectQuery%601> podem ser inicializados de forma que ele representa um único resultado escalar e não um conjunto de resultados de escalares. Alguns métodos de extensão exigem resultados de coleção como entrada. Nesse caso, um <xref:System.ArgumentException> é lançada quando um desses métodos é chamado. Para obter mais informações, consulte [consultas de objeto](http://msdn.microsoft.com/en-us/0768033c-876f-471d-85d5-264884349276).  
+  
+ Quando o aplicativo gerar consultas de Entity SQL em tempo de execução, você deve conhecer as limitações de comprimento de comando da fonte de dados. Entidade SQL não impõe limitações de comprimento do texto de comando em consultas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectQuery (string commandText, System.Data.Objects.ObjectContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string commandText, class System.Data.Objects.ObjectContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.#ctor(System.String,System.Data.Objects.ObjectContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandText" Type="System.String" />
+        <Parameter Name="context" Type="System.Data.Objects.ObjectContext" />
+      </Parameters>
+      <Docs>
+        <param name="commandText">A consulta [!INCLUDE[esql](~/includes/esql-md.md)].</param>
+        <param name="context">O <see cref="T:System.Data.Objects.ObjectContext" /> na qual executar a consulta.</param>
+        <summary>Cria um novo <see cref="T:System.Data.Objects.ObjectQuery`1" /> instância usando especificado [!INCLUDE[esql](~/includes/esql-md.md)] comando como a consulta inicial.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o aplicativo gerar consultas de Entity SQL em tempo de execução, você deve conhecer as limitações de comprimento de comando da fonte de dados. Entidade SQL não impõe limitações de comprimento do texto de comando em consultas.  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo mostra como construir uma instância do <xref:System.Data.Objects.ObjectQuery%601> classe.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectQuery (string commandText, System.Data.Objects.ObjectContext context, System.Data.Objects.MergeOption mergeOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string commandText, class System.Data.Objects.ObjectContext context, valuetype System.Data.Objects.MergeOption mergeOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.#ctor(System.String,System.Data.Objects.ObjectContext,System.Data.Objects.MergeOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandText" Type="System.String" />
+        <Parameter Name="context" Type="System.Data.Objects.ObjectContext" />
+        <Parameter Name="mergeOption" Type="System.Data.Objects.MergeOption" />
+      </Parameters>
+      <Docs>
+        <param name="commandText">A consulta [!INCLUDE[esql](~/includes/esql-md.md)].</param>
+        <param name="context">O <see cref="T:System.Data.Objects.ObjectContext" /> na qual executar a consulta.</param>
+        <param name="mergeOption">Especifica como as entidades que são recuperadas por meio dessa consulta deverão ser mescladas com as entidades que foram retornadas de consultas anteriores na mesma <see cref="T:System.Data.Objects.ObjectContext" />.</param>
+        <summary>Cria um novo <see cref="T:System.Data.Objects.ObjectQuery`1" /> instância usando especificado [!INCLUDE[esql](~/includes/esql-md.md)] como a consulta inicial e a opção de mesclagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o aplicativo gerar consultas de Entity SQL em tempo de execução, você deve conhecer as limitações de comprimento de comando da fonte de dados. Entidade SQL não impõe limitações de comprimento do texto de comando em consultas.  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O <xref:System.Data.Objects.ObjectQuery%601> é inicializada com a consulta especificada <xref:System.Data.Objects.ObjectContext>, e <xref:System.Data.Objects.MergeOption>.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Select](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_select)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Select](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_select)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Distinct">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;T&gt; Distinct ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!T&gt; Distinct() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.Distinct" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limita a consulta a resultados únicos.</summary>
+        <returns>Uma nova instância do <see cref="T:System.Data.Objects.ObjectQuery`1" /> equivalente à instância original com [SELECT DISTINCT](~/docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) aplicado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método de construtor de consulta retorna um <xref:System.Data.Objects.ObjectQuery%601> instância que é equivalente à consulta original com [SELECT DISTINCT](~/docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) aplicado.  
+  
+ O `DISTINCT` operador não pode ser aplicado a um objeto que inclui um mapeamento para uma coluna não comparáveis na fonte de dados (como ntext).  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo usa <xref:System.Data.Objects.ObjectQuery%601.UnionAll%2A> método para criar um novo <xref:System.Data.Objects.ObjectQuery%601> objeto. Em seguida, ele chama <xref:System.Data.Objects.ObjectQuery%601.Distinct%2A> no novo <xref:System.Data.Objects.ObjectQuery%601> objeto para obter os resultados exclusivos desta consulta.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Distinct_UnionAll](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_distinct_unionall)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Distinct_UnionAll](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_distinct_unionall)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Except">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;T&gt; Except (System.Data.Objects.ObjectQuery&lt;T&gt; query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!T&gt; Except(class System.Data.Objects.ObjectQuery`1&lt;!T&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.Except(System.Data.Objects.ObjectQuery{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.Data.Objects.ObjectQuery&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="query">Um <see cref="T:System.Data.Objects.ObjectQuery`1" /> que representa os resultados excluídos da consulta.</param>
+        <summary>Limita os resultados da consulta excluindo resultados com base nos resultados de outra consulta de objeto.</summary>
+        <returns>Uma nova instância <see cref="T:System.Data.Objects.ObjectQuery`1" /> que é equivalente à instância original com [EXCEPT](~/docs/framework/data/adonet/ef/language-reference/except-entity-sql.md) aplicado com base no <paramref name="query" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornecido `query` que define os resultados para excluir deve ser do mesmo tipo ou de um tipo que é compatível com o <xref:System.Data.Objects.ObjectQuery%601>.  
+  
+ Parâmetros que são definidos em fornecido `query` são mesclados com os parâmetros que são definidos no <xref:System.Data.Objects.ObjectQuery%601> instância. Os parâmetros devem ser exclusivos na combinado <xref:System.Data.Objects.ObjectParameterCollection>. Não pode haver dois parâmetros na coleção combinada com o mesmo nome. Para obter mais informações, consulte [métodos do construtor de consulta](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+ A consulta resultante herda a conexão do <xref:System.Data.Objects.ObjectQuery%601> instância na qual <xref:System.Data.Objects.ObjectQuery%601.Except%2A> foi chamado.  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo usa <xref:System.Data.Objects.ObjectQuery%601.Except%2A> método para criar um novo <xref:System.Data.Objects.ObjectQuery%601> do objeto e, em seguida, itera o resultado da consulta nova.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Except](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_except)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Except](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_except)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="query" /> é <see langword="null" /> ou uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectResult&lt;T&gt; Execute (System.Data.Objects.MergeOption mergeOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectResult`1&lt;!T&gt; Execute(valuetype System.Data.Objects.MergeOption mergeOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.Execute(System.Data.Objects.MergeOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectResult&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mergeOption" Type="System.Data.Objects.MergeOption" />
+      </Parameters>
+      <Docs>
+        <param name="mergeOption">O <see cref="T:System.Data.Objects.MergeOption" /> para usar ao executar a consulta. O padrão é <see cref="F:System.Data.Objects.MergeOption.AppendOnly" />.</param>
+        <summary>Executa a consulta de objeto com a opção de mesclagem especificada.</summary>
+        <returns>Um <see cref="T:System.Data.Objects.ObjectResult`1" /> que contém uma coleção de objetos de entidade retornados pela consulta.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A opção de mesclagem padrão para consultas de objeto é <xref:System.Data.Objects.MergeOption.AppendOnly>. Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0).  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo retorna um <xref:System.Data.Objects.ObjectResult%601> de <xref:System.Data.Objects.ObjectQuery.Execute%2A> método. Em seguida, ele obtém um enumerador e itera os resultados da consulta. No final, ele libera o enumerador e <xref:System.Data.Objects.ObjectResult%601> objeto.  
+  
+ [!code-csharp[DP ObjectServices Concepts#QueryResult](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#queryresult)]
+ [!code-vb[DP ObjectServices Concepts#QueryResult](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#queryresult)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupBy">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;System.Data.Common.DbDataRecord&gt; GroupBy (string keys, string projection, params System.Data.Objects.ObjectParameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;class System.Data.Common.DbDataRecord&gt; GroupBy(string keys, string projection, class System.Data.Objects.ObjectParameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.GroupBy(System.String,System.String,System.Data.Objects.ObjectParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;System.Data.Common.DbDataRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.String" />
+        <Parameter Name="projection" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Data.Objects.ObjectParameter[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="keys">As colunas de chave pela qual agrupar os resultados.</param>
+        <param name="projection">Uma lista das propriedades selecionadas que define a projeção.</param>
+        <param name="parameters">Zero ou mais parâmetros que são usados neste método.</param>
+        <summary>Agrupa os resultados da consulta pelos critérios especificados.</summary>
+        <returns>Um novo <see cref="T:System.Data.Objects.ObjectQuery`1" /> instância do tipo <see cref="T:System.Data.Common.DbDataRecord" /> que é equivalente à instância original com [GROUP BY](~/docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) aplicado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectQuery%601.GroupBy%2A>aplica-se a projeção especificada pelo `projection` parâmetro. Isso significa que o <xref:System.Data.Objects.ObjectQuery%601> retornado pelo <xref:System.Data.Objects.ObjectQuery%601.GroupBy%2A> método sempre é do tipo <xref:System.Data.Common.DbDataRecord>. Para obter mais informações, consulte [consultas de objeto](http://msdn.microsoft.com/en-us/0768033c-876f-471d-85d5-264884349276).  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+  
+ Este exemplo cria um novo <xref:System.Data.Objects.ObjectQuery%601> objeto que contém os resultados da consulta existente, agrupados por nome de produto.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_GroupBy](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_groupby)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_GroupBy](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_groupby)]  
+  
+ Este exemplo retorna um conjunto de registros de dados aninhadas que contêm o `Contact.LastName` coluna, agrupados e classificados em ordem alfabética pela primeira letra de `Contact.LastName`.  
+  
+ [!code-csharp[DP ObjectServices Concepts#Projection_GroupBy](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#projection_groupby)]
+ [!code-vb[DP ObjectServices Concepts#Projection_GroupBy](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#projection_groupby)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="query" /> é <see langword="null" /> ou uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="projection" /> é <see langword="null" /> ou uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Include">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;T&gt; Include (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!T&gt; Include(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.Include(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Lista separada por pontos de objetos relacionados para serem retornados nos resultados da consulta.</param>
+        <summary>Especifica os objetos relacionados para inclusão nos resultados da consulta.</summary>
+        <returns>Um novo <see cref="T:System.Data.Objects.ObjectQuery`1" /> com o caminho da consulta definido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Caminhos de consulta podem ser usados com consultas de Entity SQL e LINQ.  
+  
+ Os caminhos estão completos. Por exemplo, se uma chamada de inclusão indica `Include("Orders.OrderLines")`, não só será `OrderLines` ser incluída, mas também `Orders`. Para obter mais informações, consulte [objetos relacionados ao carregar](http://msdn.microsoft.com/en-us/452347d2-7b3b-44cd-9001-231299a28cb1).  
+  
+ Quando você chama o <xref:System.Data.Objects.ObjectQuery%601.Include%2A> método, o caminho da consulta é válido somente na instância retornada do <xref:System.Data.Objects.ObjectQuery%601>. Outras instâncias do <xref:System.Data.Objects.ObjectQuery%601> e o contexto de objeto em si não são afetados.  
+  
+ Porque o <xref:System.Data.Objects.ObjectQuery%601.Include%2A> método retorna o objeto de consulta, você pode chamar esse método várias vezes em um <xref:System.Data.Objects.ObjectQuery%601> para especificar vários caminhos para a consulta, como no exemplo a seguir:  
+  
+ [!code-csharp[DP ObjectServices Concepts#SpanOnlyWithMultiplePaths](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#spanonlywithmultiplepaths)]
+ [!code-vb[DP ObjectServices Concepts#SpanOnlyWithMultiplePaths](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#spanonlywithmultiplepaths)]  
+  
+   
+  
+## Examples  
+ [!code-csharp[DP ObjectServices Concepts#QueryWithSpan](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#querywithspan)]
+ [!code-vb[DP ObjectServices Concepts#QueryWithSpan](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#querywithspan)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é <see langword="empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;T&gt; Intersect (System.Data.Objects.ObjectQuery&lt;T&gt; query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!T&gt; Intersect(class System.Data.Objects.ObjectQuery`1&lt;!T&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.Intersect(System.Data.Objects.ObjectQuery{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.Data.Objects.ObjectQuery&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="query">Um <see cref="T:System.Data.Objects.ObjectQuery`1" /> que representa os resultados a incluir na consulta.</param>
+        <summary>Limita os resultados da consulta, incluindo apenas os resultados que existem em outra consulta de objeto.</summary>
+        <returns>Uma nova instância <see cref="T:System.Data.Objects.ObjectQuery`1" /> que é equivalente à instância original com [INTERSECT](~/docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md) aplicado com base no <paramref name="query" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornecido `query` que define os resultados para incluir deve ser do mesmo tipo ou de um tipo que é compatível com o <xref:System.Data.Objects.ObjectQuery%601>.  
+  
+ Parâmetros que são definidos em fornecido `query` são mesclados com os parâmetros que são definidos no <xref:System.Data.Objects.ObjectQuery%601> instância. Os parâmetros devem ser exclusivos na combinado <xref:System.Data.Objects.ObjectParameterCollection>. Não pode haver dois parâmetros na coleção combinada com o mesmo nome. Para obter mais informações, consulte [métodos do construtor de consulta](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+ A consulta resultante herda a conexão do <xref:System.Data.Objects.ObjectQuery%601> instância na qual o <xref:System.Data.Objects.ObjectQuery%601.Intersect%2A> método foi chamado.  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). Este exemplo cria um novo <xref:System.Data.Objects.ObjectQuery%601> objeto que contém os resultados das duas outras consultas.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Intersect](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_intersect)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Intersect](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_intersect)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="query" /> é <see langword="null" /> ou uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectQuery`1.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da consulta neste objeto.</summary>
+        <value>Um <see langword="string" /> valor que é o nome deste <see cref="T:System.Data.Objects.ObjectQuery`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome da consulta de objeto identifica a consulta ao objeto atual na sequência por nome ao construir os métodos de construtor de consultas. Por padrão, o nome da consulta é `it`. Isso pode ser útil quando se referem à sequência de atual em junções dentro de < xref:System.Data.Objects.ObjectQuery`1.Where*> method or in the <xref:System.Data.Objects.ObjectQuery`1.SelectValue''1* > método. Para obter mais informações, consulte [métodos do construtor de consulta](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+ Quando você define o <xref:System.Data.Objects.ObjectQuery%601.Name%2A> propriedade de um <xref:System.Data.Objects.ObjectQuery%601>, esse valor será o alias em métodos sucessivos.  
+  
+ O valor de <xref:System.Data.Objects.ObjectQuery%601.Name%2A> propriedade deve começar com uma letra e pode conter letras, dígitos e sublinhados.  
+  
+   
+  
+## Examples  
+ Este exemplo define o nome do primeiro <xref:System.Data.Objects.ObjectQuery%601> "produto" e, em seguida, usa nesse alias em telas <xref:System.Data.Objects.ObjectQuery%601.OrderBy%2A> método. O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+  
+ [!code-csharp[DP ObjectServices Concepts#QueryWithAliasNamed](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#querywithaliasnamed)]
+ [!code-vb[DP ObjectServices Concepts#QueryWithAliasNamed](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#querywithaliasnamed)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado em conjunto não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OfType&lt;TResultType&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;TResultType&gt; OfType&lt;TResultType&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!!TResultType&gt; OfType&lt;TResultType&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.OfType``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;TResultType&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResultType" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TResultType">O tipo do <see cref="T:System.Data.Objects.ObjectResult`1" /> retornado quando a consulta é executada com o filtro aplicado.</typeparam>
+        <summary>Limita a consulta apenas aos resultados de um tipo específico.</summary>
+        <returns>Uma nova instância <see cref="T:System.Data.Objects.ObjectQuery`1" /> que é equivalente à instância original com [OFTYPE](~/docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) aplicado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectQuery`1.OfType``1*>é usado para filtrar resultados de consulta por uma entidade específica ou um tipo complexo. Isso dá suporte a um modelo conceitual com herança do objeto. Para obter mais informações, consulte [herança de modelo de dados de entidade (cenários de aplicativo)](http://msdn.microsoft.com/en-us/5de40bf8-527f-4f2e-96e3-61164f429caa). O  
+  
+ <xref:System.Data.Objects.ObjectQuery`1.OfType``1*>método só pode ser aplicado a um <xref:System.Data.Objects.ObjectQuery%601> de um tipo de entidade ou tipo complexo que é definido no EDM.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.EntitySqlException">O tipo especificado não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderBy">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;T&gt; OrderBy (string keys, params System.Data.Objects.ObjectParameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!T&gt; OrderBy(string keys, class System.Data.Objects.ObjectParameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.OrderBy(System.String,System.Data.Objects.ObjectParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Data.Objects.ObjectParameter[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="keys">As colunas de chave pelas quais os resultados serão ordenados.</param>
+        <param name="parameters">Zero ou mais parâmetros que são usados neste método.</param>
+        <summary>Ordena os resultados da consulta pelos critérios especificados.</summary>
+        <returns>Uma nova instância <see cref="T:System.Data.Objects.ObjectQuery`1" /> que é equivalente à instância original com [ORDER BY](~/docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) aplicado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordenação de resultados de uma consulta aninhada não pode ser garantida.  
+  
+ <xref:System.Data.Objects.ObjectQuery%601.OrderBy%2A>sempre deve ser o método de construtor de consulta final na sequência.  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo cria um novo <xref:System.Data.Objects.ObjectQuery%601> objeto que contém os resultados da ordem de consulta existente pela `ProductID`.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_OrderBy](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_orderby)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_OrderBy](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_orderby)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="keys" /> ou <paramref name="parameters" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="key" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;System.Data.Common.DbDataRecord&gt; Select (string projection, params System.Data.Objects.ObjectParameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;class System.Data.Common.DbDataRecord&gt; Select(string projection, class System.Data.Objects.ObjectParameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.Select(System.String,System.Data.Objects.ObjectParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;System.Data.Common.DbDataRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projection" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Data.Objects.ObjectParameter[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="projection">Uma lista das propriedades selecionadas que define a projeção.</param>
+        <param name="parameters">Zero ou mais parâmetros que são usados neste método.</param>
+        <summary>Limita os resultados de consulta para somente as propriedades que são definidas na projeção especificada.</summary>
+        <returns>Uma nova instância de <see cref="T:System.Data.Objects.ObjectQuery`1" /> do tipo <see cref="T:System.Data.Common.DbDataRecord" /> que é equivalente à instância original com [SELECT](~/docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) aplicado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectQuery%601.Select%2A>aplica-se a projeção especificada pelo `projection` parâmetro. O <xref:System.Data.Objects.ObjectQuery%601> retornado pelo <xref:System.Data.Objects.ObjectQuery%601.Select%2A> método sempre é um tipo de linha de <xref:System.Data.Common.DbDataRecord>. Use o <xref:System.Data.Objects.ObjectQuery`1.SelectValue``1*> método para retornar valores que são tipos simples, os tipos de entidade ou tipos complexos. Para obter mais informações, consulte [LINQ to Entities](~/docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  
+  
+ Quando uma propriedade de navegação é incluída na projeção, os resultados da consulta incluem uma coleção de aninhada <xref:System.Data.Common.DbDataRecord> objetos. Para obter mais informações, consulte [como: navegar relações usando propriedades de navegação](http://msdn.microsoft.com/en-us/b1d71c7d-16a7-4b46-96ac-690176bd5057).  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo cria um novo <xref:System.Data.Objects.ObjectQuery%601> cujos resultados são registros de dados que contêm o `ProductID` campos dos resultados dessa consulta.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Select](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_select)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Select](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_select)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="projection" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="parameters" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="projection" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectValue&lt;TResultType&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;TResultType&gt; SelectValue&lt;TResultType&gt; (string projection, params System.Data.Objects.ObjectParameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!!TResultType&gt; SelectValue&lt;TResultType&gt;(string projection, class System.Data.Objects.ObjectParameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.SelectValue``1(System.String,System.Data.Objects.ObjectParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;TResultType&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResultType" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="projection" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Data.Objects.ObjectParameter[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TResultType">O tipo do <see cref="T:System.Data.Objects.ObjectQuery`1" /> retornado pelo <see cref="M:System.Data.Objects.ObjectQuery`1.SelectValue``1(System.String,System.Data.Objects.ObjectParameter[])" /> método.</typeparam>
+        <param name="projection">A lista de projeção.</param>
+        <param name="parameters">Um conjunto opcional de parâmetros de consulta que deve estar no escopo durante a análise.</param>
+        <summary>Limita os resultados da consulta à propriedade especificada na projeção.</summary>
+        <returns>Um novo <see cref="T:System.Data.Objects.ObjectQuery`1" /> instância de um tipo compatível com a projeção específica. Retornado <see cref="T:System.Data.Objects.ObjectQuery`1" /> é equivalente à instância original com [Selecionar valor](~/docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) aplicado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectQuery`1.SelectValue``1*>é usado para retornar valores de tipos simples, os tipos de entidade ou tipos complexos. Use o <xref:System.Data.Objects.ObjectQuery%601.Select%2A> método para projeções que exigem um tipo de linha em vez de um tipo de valor. Para obter mais informações, consulte [consultas de objeto](http://msdn.microsoft.com/en-us/0768033c-876f-471d-85d5-264884349276).  
+  
+ O < xref:System.Data.Objects.ObjectQuery`1.SelectValue``1*> method applies the projection specified by the `projeção` parameter. The <xref:System.Data.Objects.ObjectQuery%601> returned by the <xref:System.Data.Objects.ObjectQuery`1. SelectValue``1*> method must be of a value type that is compatible with the projection and must be the same type as the type of <xref:System.Data.Objects.ObjectQuery`1.SelectValue``1 * >.  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo cria um novo <xref:System.Data.Objects.ObjectQuery%601> que contém os resultados que são uma sequência de `ProductID` valores projetado dos resultados da consulta existente.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_SelectValue](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_selectvalue)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_SelectValue](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_selectvalue)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="projection" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="parameters" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="projection" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Skip">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;T&gt; Skip (string keys, string count, params System.Data.Objects.ObjectParameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!T&gt; Skip(string keys, string count, class System.Data.Objects.ObjectParameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.Skip(System.String,System.String,System.Data.Objects.ObjectParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.String" />
+        <Parameter Name="count" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Data.Objects.ObjectParameter[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="keys">As colunas de chave pelas quais os resultados serão ordenados.</param>
+        <param name="count">O número de resultados para ignorar. Isso deve ser uma constante ou uma referência de parâmetro.</param>
+        <param name="parameters">Um conjunto opcional de parâmetros de consulta que deve estar no escopo durante a análise.</param>
+        <summary>Classifica a consulta resultados pelos critérios especificados e ignora um número especificado de resultados.</summary>
+        <returns>Um novo <see cref="T:System.Data.Objects.ObjectQuery`1" /> instância que é equivalente à instância original com ambos [ORDER BY](~/docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) e [ignorar](~/docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) aplicado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.ObjectQuery%601.Skip%2A> método não pode ser usado após o <xref:System.Data.Objects.ObjectQuery%601.Top%2A> método. Quando você usa <xref:System.Data.Objects.ObjectQuery%601.Top%2A> depois <xref:System.Data.Objects.ObjectQuery%601.Skip%2A>, ele funciona como o [limite](~/docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) instrução de uma cláusula.  
+  
+   
+  
+## Examples  
+ Este exemplo obtém os cinco `Product` objetos depois de ignorar os três primeiros no resultado da consulta, classificado por `Product.ListPrice`.  
+  
+ [!code-csharp[DP ObjectServices Concepts#Projection_SkipLimit](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#projection_skiplimit)]
+ [!code-vb[DP ObjectServices Concepts#Projection_SkipLimit](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#projection_skiplimit)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Qualquer argumento for <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="keys" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="count" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;T&gt; IEnumerable&lt;T&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.System#Collections#Generic#IEnumerable&lt;T&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera através dos resultados da consulta.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerator`1" /> objeto que pode ser usado para iterar pelos resultados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Data.Objects.ObjectQuery%601.System%23Collections%23Generic%23IEnumerable%7BT%7D%23GetEnumerator%2A> executa a consulta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;T&gt; Top (string count, params System.Data.Objects.ObjectParameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!T&gt; Top(string count, class System.Data.Objects.ObjectParameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.Top(System.String,System.Data.Objects.ObjectParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="count" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Data.Objects.ObjectParameter[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="count">O número de itens nos resultados como uma cadeia de caracteres.</param>
+        <param name="parameters">Um conjunto opcional de parâmetros de consulta que deve estar no escopo durante a análise.</param>
+        <summary>Limita os resultados da consulta para um número especificado de itens.</summary>
+        <returns>Um novo <see cref="T:System.Data.Objects.ObjectQuery`1" /> instância que é equivalente à instância original com [superior](~/docs/framework/data/adonet/ef/language-reference/top-entity-sql.md) aplicado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectQuery%601.Top%2A>é não determinística, a menos que a consulta é classificada.  
+  
+ Quando você usa o <xref:System.Data.Objects.ObjectQuery%601.Top%2A> método após o <xref:System.Data.Objects.ObjectQuery%601.Skip%2A> método, ele funciona como o [limite](~/docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) declaração de um [ORDER BY](~/docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) cláusula.  
+  
+   
+  
+## Examples  
+ Estes exemplos se baseiam o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+  
+ Este exemplo cria um novo <xref:System.Data.Objects.ObjectQuery%601> que contém os dois primeiros resultados da consulta existente.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Top](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_top)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Top](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_top)]  
+  
+ Este exemplo obtém os cinco `Product` objetos depois de ignorar os três primeiros no resultado da consulta, classificado por `Product.ListPrice`. <xref:System.Data.Objects.ObjectQuery%601.Top%2A>em vez de [limite](~/docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) para paginação.  
+  
+ [!code-csharp[DP ObjectServices Concepts#Projection_SkipLimit](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#projection_skiplimit)]
+ [!code-vb[DP ObjectServices Concepts#Projection_SkipLimit](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#projection_skiplimit)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="count" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="count" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;T&gt; Union (System.Data.Objects.ObjectQuery&lt;T&gt; query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!T&gt; Union(class System.Data.Objects.ObjectQuery`1&lt;!T&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.Union(System.Data.Objects.ObjectQuery{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.Data.Objects.ObjectQuery&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="query">Um <see cref="T:System.Data.Objects.ObjectQuery`1" /> que representa os resultados a serem adicionados.</param>
+        <summary>Combina os resultados da consulta aos resultados de outra consulta de objeto, sem duplicatas.</summary>
+        <returns>Uma nova instância de <see cref="T:System.Data.Objects.ObjectQuery`1" /> que é equivalente à instância original com [UNION](~/docs/framework/data/adonet/ef/language-reference/union-entity-sql.md) aplicado para adicionar os resultados ao <paramref name="query" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectQuery%601.Union%2A>Adiciona os resultados de fornecido `query` sem duplicatas.  
+  
+ Fornecido `query` que define os resultados para adicionar deve ser do mesmo tipo ou de um tipo que pode ser promovido para o tipo deste <xref:System.Data.Objects.ObjectQuery%601>. Por exemplo, o seguinte é válido porque `DiscontinuedProducts` pode ser promovido para `Products`:  
+  
+```  
+ObjectQuery<Product>.Union(ObjectQuery<DiscontinuedProduct>)  
+```  
+  
+ A seguir lançará uma exceção porque `Products` não pode ser promovido para `DiscontinuedProducts`.  
+  
+```  
+ObjectQuery <DiscontinuedProduct>.Union(ObjectQuery<Product>)   
+```  
+  
+ Para um <xref:System.Data.Objects.ObjectQuery%601> do tipo <xref:System.Data.Common.DbDataRecord>, os registros em ambas as consultas devem ter o mesmo número de colunas e os tipos nas colunas da <xref:System.Data.Common.DbDataRecord> de transmitido `query` deve ser passível de promoção para os tipos de colunas no <xref:System.Data.Common.DbDataRecord> do <xref:System.Data.Objects.ObjectQuery%601>.  
+  
+ Parâmetros que são definidos em fornecido `query` são mesclados com os parâmetros que são definidos no <xref:System.Data.Objects.ObjectQuery%601> instância. Os parâmetros devem ser exclusivos na combinado <xref:System.Data.Objects.ObjectParameterCollection>. Não pode haver dois parâmetros na coleção combinada com o mesmo nome. Para obter mais informações, consulte [métodos do construtor de consulta](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+ A consulta resultante herda a conexão do <xref:System.Data.Objects.ObjectQuery%601> instância na qual <xref:System.Data.Objects.ObjectQuery%601.Union%2A> foi chamado.  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo usa <xref:System.Data.Objects.ObjectQuery%601.Union%2A> método cria um novo <xref:System.Data.Objects.ObjectQuery%601> objeto.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Distinct_Union](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_distinct_union)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Distinct_Union](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_distinct_union)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="query" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnionAll">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;T&gt; UnionAll (System.Data.Objects.ObjectQuery&lt;T&gt; query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!T&gt; UnionAll(class System.Data.Objects.ObjectQuery`1&lt;!T&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.UnionAll(System.Data.Objects.ObjectQuery{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.Data.Objects.ObjectQuery&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="query">Um <see cref="T:System.Data.Objects.ObjectQuery`1" /> que representa os resultados a serem adicionados.</param>
+        <summary>Combina os resultados da consulta com os resultados de outra consulta de objeto, incluindo todas as duplicatas.</summary>
+        <returns>Um novo <see cref="T:System.Data.Objects.ObjectQuery`1" /> instância que é equivalente à instância original com [UNION ALL](~/docs/framework/data/adonet/ef/language-reference/union-entity-sql.md) aplicado para adicionar os resultados do <paramref name="query" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectQuery%601.UnionAll%2A>Adiciona os resultados de fornecido `query` incluindo todas as duplicatas.  
+  
+ Fornecido `query` que define os resultados para adicionar deve ser do mesmo tipo ou de um tipo que pode ser promovido para o tipo deste <xref:System.Data.Objects.ObjectQuery%601>. Por exemplo, o seguinte é válido porque `DiscontinuedProducts` pode ser promovido para `Products`:  
+  
+```  
+ObjectQuery<Product>.Union(ObjectQuery<DiscontinuedProduct>)  
+```  
+  
+ A seguir lançará uma exceção porque `Products` não pode ser promovido para `DiscontinuedProducts`.  
+  
+```  
+ObjectQuery <DiscontinuedProduct>.Union(ObjectQuery<Product>)   
+```  
+  
+ Para um <xref:System.Data.Objects.ObjectQuery%601> do tipo <xref:System.Data.Common.DbDataRecord>, os registros em ambas as consultas devem ter o mesmo número de colunas e os tipos nas colunas da <xref:System.Data.Common.DbDataRecord> de transmitido `query` deve ser passível de promoção para os tipos de colunas no <xref:System.Data.Common.DbDataRecord> do <xref:System.Data.Objects.ObjectQuery%601>.  
+  
+ Parâmetros que são definidos em fornecido `query` são mesclados com os parâmetros que são definidos no <xref:System.Data.Objects.ObjectQuery%601> instância. Os parâmetros devem ser exclusivos na combinado <xref:System.Data.Objects.ObjectParameterCollection>. Não pode haver dois parâmetros na coleção combinada com o mesmo nome. Para obter mais informações, consulte [métodos do construtor de consulta](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+ A consulta resultante herda a conexão do <xref:System.Data.Objects.ObjectQuery%601> instância na qual <xref:System.Data.Objects.ObjectQuery%601.UnionAll%2A> foi chamado.  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo usa o <xref:System.Data.Objects.ObjectQuery%601.UnionAll%2A> método para criar um novo <xref:System.Data.Objects.ObjectQuery%601> objeto. Em seguida, ele chama o <xref:System.Data.Objects.ObjectQuery%601.Distinct%2A> método no novo <xref:System.Data.Objects.ObjectQuery%601> objeto para obter os resultados exclusivos desta consulta.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Distinct_UnionAll](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_distinct_unionall)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Distinct_UnionAll](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_distinct_unionall)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="query" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Where">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;T&gt; Where (string predicate, params System.Data.Objects.ObjectParameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!T&gt; Where(string predicate, class System.Data.Objects.ObjectParameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectQuery`1.Where(System.String,System.Data.Objects.ObjectParameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="predicate" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Data.Objects.ObjectParameter[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="predicate">O predicado do filtro.</param>
+        <param name="parameters">Zero ou mais parâmetros que são usados neste método.</param>
+        <summary>Limita a consulta a resultados que correspondam aos critérios de filtragem especificados.</summary>
+        <returns>Uma nova instância <see cref="T:System.Data.Objects.ObjectQuery`1" /> que é equivalente à instância original com [WHERE](~/docs/framework/data/adonet/ef/language-reference/where-entity-sql.md) aplicado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo cria um novo <xref:System.Data.Objects.ObjectQuery%601> que contém os resultados da consulta existente filtrados pelos seguintes critérios: `"it.ProductID = 900"`.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectQuery_Where](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectquery_where)]
+ [!code-vb[DP ObjectServices Concepts#ObjectQuery_Where](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectquery_where)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="predicate" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="parameters" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="predicate" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

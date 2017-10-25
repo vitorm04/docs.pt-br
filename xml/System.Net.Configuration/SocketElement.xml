@@ -1,0 +1,171 @@
+<Type Name="SocketElement" FullName="System.Net.Configuration.SocketElement">
+  <TypeSignature Language="C#" Value="public sealed class SocketElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SocketElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.SocketElement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa informações usadas para configurar <see cref="T:System.Net.Sockets.Socket" /> objetos. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe corresponde do [ &lt;soquete&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md) elemento de configuração.  
+  
+ Essa classe fornece acesso programático a informações que podem ser armazenados em arquivos de configuração.  
+  
+ Essa classe é usada para especificar se as portas de conclusão são usadas para conectar-se de que, se as portas de conclusão são usadas para aceitar conexões e o nível de proteção de IP padrão para um soquete de IPv6.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SocketElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.SocketElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Configuration.SocketElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor adiciona o <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> e <xref:System.Net.Configuration.ConnectionManagementElement.MaxConnection%2A> propriedades para o <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlwaysUseCompletionPortsForAccept">
+      <MemberSignature Language="C#" Value="public bool AlwaysUseCompletionPortsForAccept { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AlwaysUseCompletionPortsForAccept" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("alwaysUseCompletionPortsForAccept", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que especifica se as portas de conclusão são usadas ao aceitar conexões.</summary>
+        <value>
+          <see langword="true" />Para usar portas de conclusão; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlwaysUseCompletionPortsForConnect">
+      <MemberSignature Language="C#" Value="public bool AlwaysUseCompletionPortsForConnect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AlwaysUseCompletionPortsForConnect" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("alwaysUseCompletionPortsForConnect", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que especifica se as portas de conclusão são usadas ao fazer conexões.</summary>
+        <value>
+          <see langword="true" />Para usar portas de conclusão; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Sockets.IPProtectionLevel IPProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Sockets.IPProtectionLevel IPProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SocketElement.IPProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("ipProtectionLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IPProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o padrão <see cref="T:System.Net.Sockets.IPProtectionLevel" /> a ser usado para um soquete.</summary>
+        <value>O valor de <see cref="T:System.Net.Sockets.IPProtectionLevel" /> para a instância atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> propriedade permite a configuração de uma restrição para um soquete do IPv6 a um escopo especificado, como endereços com o mesmo locais do link ou prefixo local do site. Essa opção permite que os aplicativos colocar as restrições de acesso em soquetes IPv6. Essas restrições permitem que um aplicativo em execução em uma LAN privada proteja-se de modo simples e robusto contra ataques externos. Essa opção será ampliada ou limita o escopo de um soquete de escuta, permitindo acesso irrestrito de usuários públicos e privados, quando apropriado, ou restringir o acesso somente para o mesmo site, conforme necessário. Essa opção tem três níveis de proteção definido especificados no <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostDeserialize">
+      <MemberSignature Language="C#" Value="protected override void PostDeserialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostDeserialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.SocketElement.PostDeserialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.SocketElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

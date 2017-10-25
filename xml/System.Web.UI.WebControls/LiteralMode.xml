@@ -1,0 +1,88 @@
+<Type Name="LiteralMode" FullName="System.Web.UI.WebControls.LiteralMode">
+  <TypeSignature Language="C#" Value="public enum LiteralMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LiteralMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LiteralMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como o conteúdo em um <see cref="T:System.Web.UI.WebControls.Literal" /> controle é processado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LiteralMode> enumeração representa os modos que você pode especificar como o conteúdo em um <xref:System.Web.UI.WebControls.Literal> controle é processado. O <xref:System.Web.UI.WebControls.Literal.Mode%2A> propriedade usa esses valores de enumeração para definir o comportamento do conteúdo do <xref:System.Web.UI.WebControls.Literal.Text%2A> propriedade em um <xref:System.Web.UI.WebControls.Literal> controle.  
+  
+ Se você especificar `PassThrough`, todo o conteúdo do <xref:System.Web.UI.WebControls.Literal.Text%2A> propriedade são passados para o dispositivo ou navegador sem modificações. Por exemplo, se o <xref:System.Web.UI.WebControls.Literal.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.Literal> controle contém um `<hr>` marca, ela é enviada a todos os dispositivos e navegadores, independentemente se há suporte.  
+  
+ Se você especificar `Encode`, o conteúdo para o <xref:System.Web.UI.WebControls.Literal.Text%2A> propriedade são convertidos em uma cadeia de caracteres codificada em HTML antes do processamento. Por exemplo, se o <xref:System.Web.UI.WebControls.Literal.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.Literal> controle contém um `<hr>` marca, ele será convertido em `&lt;hr&gt;` e enviados para o dispositivo ou navegador.  
+  
+ Se você especificar `Transform`, o comportamento de renderização de <xref:System.Web.UI.WebControls.Literal.Text%2A> propriedade depende do tipo de marcação que está sendo processada. Quando o <xref:System.Web.UI.WebControls.Literal> controle é processado para um dispositivo ou navegador que ofereça suporte a HTML ou XHTML, especificando a transformação produz o mesmo comportamento que a especificação de passagem. Todas as marcas e os elementos para o <xref:System.Web.UI.WebControls.Literal.Text%2A> propriedade são renderizados para o navegador solicitante.  
+  
+ Quando o <xref:System.Web.UI.WebControls.LiteralMode.PassThrough> controle é processado para uma linguagem de marcação que não seja HTML ou XHTML, como WML ou cHTML, você pode usar o valor de transformação para remover elementos de marcação sem suporte. Nesse caso, nenhum elemento de linguagem de marcação do <xref:System.Web.UI.WebControls.Literal.Text%2A> propriedade que não há suporte para a linguagem de marcação de destino não são renderizados para o controle. Por exemplo, se o <xref:System.Web.UI.WebControls.Literal.Text%2A> propriedade de um <xref:System.Web.UI.WebControls.LiteralMode.Transform> controle contém um `<hr>` marca, a marca é removida antes do conteúdo é enviado para um dispositivo WML. Se uma marca sem suporte contém conteúdo, somente a marca é removida e o conteúdo é enviado para o dispositivo ou navegador. Por exemplo, se o <xref:System.Web.UI.WebControls.Literal.Text%2A> propriedade contém o conteúdo `<XYZ>Test</XYZ>`, o `<XYZ>` e `</XYZ>` marcas são removidas enquanto o texto `Test` é enviada para o dispositivo ou navegador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir um <xref:System.Web.UI.WebControls.Literal.Text%2A> do controle <xref:System.Web.UI.WebControls.Literal.Mode%2A> propriedade. O <xref:System.Web.UI.WebControls.Literal.Mode%2A> propriedade é definida inicialmente como `Encode` na sintaxe declarativa para o controle. Depois que a página for carregada, o usuário pode clicar em um botão para definir o <xref:System.Web.UI.WebControls.Literal.Mode%2A> propriedade `PassThrough`. Isso faz com que o conteúdo de <xref:System.Web.UI.WebControls.Literal.Text%2A> propriedade para processar de forma diferente.  
+  
+ [!code-aspx-vb[Literal.Mode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Literal.Mode/VB/literal.modevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="Encode" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.LiteralMode Encode = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.LiteralMode.Encode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LiteralMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conteúdo do controle literal está codificada em HTML.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PassThrough">
+      <MemberSignature Language="C#" Value="PassThrough" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.LiteralMode PassThrough = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.LiteralMode.PassThrough" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LiteralMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conteúdo do controle literal não é modificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="Transform" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.LiteralMode Transform = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.LiteralMode.Transform" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LiteralMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Elementos de linguagem de marcação sem suporte do controle literal são removidos. Se o controle literal é processado em um navegador que ofereça suporte a HTML ou XHTML, o conteúdo do controle não é modificado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

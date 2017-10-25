@@ -1,0 +1,138 @@
+<Type Name="SessionStateStoreData" FullName="System.Web.SessionState.SessionStateStoreData">
+  <TypeSignature Language="C#" Value="public class SessionStateStoreData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionStateStoreData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.SessionStateStoreData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os dados de estado de sessão para um armazenamento de sessão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateStoreData> classe é usada pelo ASP.NET e implementadores de um armazenamento de estado de sessão personalizado para passar informações de estado de sessão de e para o <xref:System.Web.SessionState.SessionStateModule>.  
+  
+ O <xref:System.Web.SessionState.SessionStateStoreData> classe é usada para representar dados de estado de sessão para um armazenamento de sessão para o <xref:System.Web.SessionState.SessionStateModule>. O <xref:System.Web.SessionState.SessionStateStoreData> objeto contém os nomes de variável de estado de sessão e valores, referências de objeto static e <xref:System.Web.SessionState.SessionStateStoreData.Timeout%2A> informações para a sessão atual.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionStateStoreData (System.Web.SessionState.ISessionStateItemCollection sessionItems, System.Web.HttpStaticObjectsCollection staticObjects, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.SessionState.ISessionStateItemCollection sessionItems, class System.Web.HttpStaticObjectsCollection staticObjects, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateStoreData.#ctor(System.Web.SessionState.ISessionStateItemCollection,System.Web.HttpStaticObjectsCollection,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sessionItems" Type="System.Web.SessionState.ISessionStateItemCollection" />
+        <Parameter Name="staticObjects" Type="System.Web.HttpStaticObjectsCollection" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sessionItems">As variáveis de sessão e os valores para a sessão atual.</param>
+        <param name="staticObjects">O <see cref="T:System.Web.HttpStaticObjectsCollection" /> para a sessão atual.</param>
+        <param name="timeout">O <see cref="P:System.Web.SessionState.SessionStateStoreData.Timeout" /> para a sessão atual.</param>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.SessionState.SessionStateStoreData" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateStoreData> classe é usada para representar dados de estado de sessão para um armazenamento de sessão para o <xref:System.Web.SessionState.SessionStateModule>. O <xref:System.Web.SessionState.SessionStateStoreData> objeto contém os nomes de variável de estado de sessão e valores, referências de objeto static e <xref:System.Web.SessionState.SessionStateStoreData.Timeout%2A> informações para a sessão atual.  
+  
+ O <xref:System.Web.SessionState.SessionStateStoreData> classe é usada pelo ASP.NET e implementadores de um armazenamento de estado de sessão personalizado para passar informações de estado de sessão de e para o <xref:System.Web.SessionState.SessionStateModule>.  
+  
+ Do armazenamento de sessão personalizado implementadores construção um <xref:System.Web.SessionState.SessionStateStoreData> objeto em implementações do <xref:System.Web.SessionState.SessionStateStoreProviderBase.GetItem%2A>, <xref:System.Web.SessionState.SessionStateStoreProviderBase.GetItemExclusive%2A>, e <xref:System.Web.SessionState.SessionStateStoreProviderBase.CreateNewStoreData%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public virtual System.Web.SessionState.ISessionStateItemCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SessionState.ISessionStateItemCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.SessionStateStoreData.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.ISessionStateItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As variáveis de sessão e os valores para a sessão atual.</summary>
+        <value>Um <see cref="T:System.Web.SessionState.ISessionStateItemCollection" /> objeto que contém variáveis e valores para a sessão atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateStoreData.Items%2A> propriedade faz referência as variáveis de estado de sessão que são expostas para código de aplicativo do ASP.NET usando o <xref:System.Web.SessionState.HttpSessionState> classe, que pode é acessada usando a <xref:System.Web.HttpContext.Session%2A> propriedade <xref:System.Web.HttpContext> ou <xref:System.Web.UI.Page> instância.  
+  
+ Por padrão, as variáveis de estado de sessão são gerenciadas usando o <xref:System.Web.SessionState.SessionStateItemCollection> objeto. Implementadores de sessão-armazenamento personalizado pode fornecer sua própria implementação do <xref:System.Web.SessionState.ISessionStateItemCollection> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaticObjects">
+      <MemberSignature Language="C#" Value="public virtual System.Web.HttpStaticObjectsCollection StaticObjects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpStaticObjectsCollection StaticObjects" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.SessionStateStoreData.StaticObjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpStaticObjectsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos declarados por <see langword="&lt;object Runat=&quot;Server&quot; Scope=&quot;Session&quot;/&gt;" /> marcas dentro do arquivo de aplicativo do ASP.NET global. asax.</summary>
+        <value>Um <see cref="T:System.Web.HttpStaticObjectsCollection" /> que contém objetos declarado no arquivo global. asax.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O  
+  
+ <xref:System.Web.SessionState.SessionStateStoreData.StaticObjects%2A>propriedade é fornecida para compatibilidade com versões anteriores do ASP.  
+  
+ Implementadores de sessão-armazenamento personalizado pode obter uma referência para o <xref:System.Web.HttpStaticObjectsCollection> classe atual <xref:System.Web.HttpContext> instância usando o <xref:System.Web.SessionState.SessionStateUtility.GetSessionStaticObjects%2A> método.  
+  
+> [!NOTE]
+>  Objetos personalizados armazenados no <xref:System.Web.SessionState.SessionStateStoreData.StaticObjects%2A> coleção deve oferecer suporte a serialização binária. Para obter mais informações, consulte [serialização binária](~/docs/standard/serialization/binary-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public virtual int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.SessionStateStoreData.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define a quantidade de tempo, em minutos, permitida entre solicitações antes que o provedor de estado de sessão termine a sessão.</summary>
+        <value>O período de tempo limite em minutos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

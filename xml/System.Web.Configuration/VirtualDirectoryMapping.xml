@@ -1,0 +1,142 @@
+<Type Name="VirtualDirectoryMapping" FullName="System.Web.Configuration.VirtualDirectoryMapping">
+  <TypeSignature Language="C#" Value="public sealed class VirtualDirectoryMapping" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit VirtualDirectoryMapping extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.VirtualDirectoryMapping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica uma hierarquia de diretório virtual personalizada para um aplicativo Web. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VirtualDirectoryMapping (string physicalDirectory, bool isAppRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string physicalDirectory, bool isAppRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.VirtualDirectoryMapping.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="physicalDirectory" Type="System.String" />
+        <Parameter Name="isAppRoot" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="physicalDirectory">Um valor de cadeia de caracteres que especifica o caminho absoluto para um diretório físico.</param>
+        <param name="isAppRoot">Um valor booliano que indica se o diretório virtual é a raiz do aplicativo do aplicativo Web.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> com base em fornecidos parâmetros.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VirtualDirectoryMapping (string physicalDirectory, bool isAppRoot, string configFileBaseName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string physicalDirectory, bool isAppRoot, string configFileBaseName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.VirtualDirectoryMapping.#ctor(System.String,System.Boolean,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="physicalDirectory" Type="System.String" />
+        <Parameter Name="isAppRoot" Type="System.Boolean" />
+        <Parameter Name="configFileBaseName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="physicalDirectory">Um valor de cadeia de caracteres que especifica o caminho absoluto para um diretório físico.</param>
+        <param name="isAppRoot">Um valor booliano que indica se o diretório virtual é a raiz do aplicativo do aplicativo Web.</param>
+        <param name="configFileBaseName">O nome do arquivo de configuração.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> com base em fornecidos parâmetros.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigFileBaseName">
+      <MemberSignature Language="C#" Value="public string ConfigFileBaseName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigFileBaseName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.VirtualDirectoryMapping.ConfigFileBaseName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do arquivo de configuração.</summary>
+        <value>Um valor que indica o nome do arquivo de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o nome do arquivo de configuração não for especificado, o Web. config é usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor selecionado é nulo ou uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAppRoot">
+      <MemberSignature Language="C#" Value="public bool IsAppRoot { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAppRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.VirtualDirectoryMapping.IsAppRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o diretório virtual deve ser tratado como a raiz do aplicativo.</summary>
+        <value>Um valor que indica se o diretório virtual deve ser tratado como a raiz do aplicativo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalDirectory">
+      <MemberSignature Language="C#" Value="public string PhysicalDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhysicalDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.VirtualDirectoryMapping.PhysicalDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o caminho completo de um aplicativo Web.</summary>
+        <value>Um valor que indica o caminho completo de um aplicativo Web.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O valor selecionado é inválido ou a falha na validação de segurança interna.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualDirectory">
+      <MemberSignature Language="C#" Value="public string VirtualDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VirtualDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.VirtualDirectoryMapping.VirtualDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica o diretório virtual em relação à raiz do servidor Web.</summary>
+        <value>Um valor que indica o diretório de aplicativo Web relativo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

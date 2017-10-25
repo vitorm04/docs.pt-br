@@ -1,0 +1,554 @@
+<Type Name="RequestSecurityToken" FullName="System.IdentityModel.Protocols.WSTrust.RequestSecurityToken">
+  <TypeSignature Language="C#" Value="public class RequestSecurityToken : System.IdentityModel.Protocols.WSTrust.WSTrustMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequestSecurityToken extends System.IdentityModel.Protocols.WSTrust.WSTrustMessage" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Protocols.WSTrust.WSTrustMessage</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento wst:RequestSecurityToken (RST), que é usado para solicitar um token de segurança.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento wst:RequestSecurityToken (mensagem) contém os parâmetros e propriedades usadas para solicitar um token de segurança de um serviço de token de segurança (STS). A mensagem (ou elemento) é abreviado como primeira. O <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> classe contém propriedades que representam os elementos da primeira. Uma primeira pode formar uma solicitação que corresponde a qualquer uma das associações de solicitação definidas pelo WS-Trust; Por exemplo, a associação de emissão, a associação de renovação, a associação de validar ou a associação de cancelamento. Muitas das propriedades de <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> classe correspondem aos elementos que estão presentes somente em tipos específicos de solicitações, conforme definido por essas associações. Dependendo do tipo de solicitação de um determinado <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> objeto representa ou parâmetros presentes na solicitação específica que ele representa, algumas propriedades do objeto podem ser `null`.  
+  
+ O STS retorna uma resposta para a solicitação em uma mensagem que contém um elemento wst:RequestSecurityTokenResponse (RSTR). Esta mensagem é representada pela <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse> classe.  
+  
+ [!INCLUDE[wif_wstrust_ref](~/includes/wif-wstrust-ref-md.md)]  
+  
+   
+  
+## Examples  
+ O exemplo de código que é usado neste tópico é obtido a `Custom Token` exemplo. Este exemplo fornece classes personalizadas que permitem que o processamento do Simple Web Tokens (SWT) e inclui uma implementação de um STS passivo é capaz de atender a um token SWT. O STS é implementado por uma classe derivada de <xref:System.IdentityModel.SecurityTokenService>. Muitos dos métodos do <xref:System.IdentityModel.SecurityTokenService> classe são chamados de seu take de pipeline de emissão de token uma <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> objeto como um de seus parâmetros. Para obter informações sobre esse exemplo e outros exemplos disponíveis para o WIF e onde baixá-las, consulte [índice de exemplo de código do WIF](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ O exemplo de código a seguir mostra uma implementação do <xref:System.IdentityModel.SecurityTokenService.GetScope%2A?displayProperty=nameWithType> método. O método usa um <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> como um de seus parâmetros e propriedades desse parâmetro são usados para definir propriedades no <xref:System.IdentityModel.Scope> objeto que é retornado pelo método.  
+  
+ [!code-csharp[WIFCustomTokenSTS#4](~/samples/snippets/csharp/VS_Snippets_Misc/wifcustomtokensts/cs/passivests/customsecuritytokenservice.cs#4)]  
+[!code-csharp[WIFCustomTokenSTS#5](~/samples/snippets/csharp/VS_Snippets_Misc/wifcustomtokensts/cs/passivests/customsecuritytokenservice.cs#5)]  
+[!code-csharp[WIFCustomTokenSTS#7](~/samples/snippets/csharp/VS_Snippets_Misc/wifcustomtokensts/cs/passivests/customsecuritytokenservice.cs#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestSecurityToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.RequestType%2A> propriedade e <xref:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeyType%2A> propriedade são inicializados para `null`.  
+  
+ Este construtor é geralmente usado pelo receptor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestSecurityToken (string requestType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string requestType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="requestType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="requestType">Uma cadeia de caracteres que contém o tipo de solicitação URI.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> classe com o tipo de solicitação especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade <xref:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeyType%2A> é inicializada com `null`.  
+  
+ Este construtor é geralmente usado pelo remetente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestSecurityToken (string requestType, string keyType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string requestType, string keyType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="requestType" Type="System.String" />
+        <Parameter Name="keyType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="requestType">Uma cadeia de caracteres que contém o tipo de solicitação URI.</param>
+        <param name="keyType">Uma cadeia de caracteres que contém o URI do tipo de chave. Isso deve ser uma das constantes definidas pelo <see cref="T:System.IdentityModel.Protocols.WSTrust.KeyTypes" /> classe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> classe com o tipo de solicitação especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra o valor inicial de <xref:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeySizeInBits%2A> propriedade para valores específicos do `keyType` parâmetro.  
+  
+|Parâmetro `keyType`|Propriedade <xref:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeySizeInBits%2A>|  
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|<xref:System.IdentityModel.Protocols.WSTrust.KeyTypes.Asymmetric>|1024|  
+|<xref:System.IdentityModel.Protocols.WSTrust.KeyTypes.Bearer>|0|  
+|<xref:System.IdentityModel.Protocols.WSTrust.KeyTypes.Symmetric>|256|  
+  
+ Este construtor é geralmente usado pelo remetente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActAs">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenElement ActAs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenElement ActAs" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ActAs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o token de segurança para a identidade do solicitante está tentando atuar como.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityTokenElement" /> que representa a identidade do solicitante está tentando atuar como. Pode ser <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento wst:ActAs. Esse elemento opcional oferece suporte a cenários de delegação e indica que o solicitante está fazendo a solicitação para atuar como identidade de outra. Esse elemento é introduzido no WS-Trust 1.4. Esta propriedade é `null` em solicitações que não envolvem a delegação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalContext">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.AdditionalContext AdditionalContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.AdditionalContext AdditionalContext" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.AdditionalContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.AdditionalContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de contexto adicional para a solicitação.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.AdditionalContext" /> que contém as informações de contexto adicional para a solicitação. Pode ser <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento auth:AdditionalContext. Esse elemento opcional fornece informações adicionais que pode usar o serviço de token de segurança (STS) no processo de emissão de token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelTarget">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenElement CancelTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenElement CancelTarget" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.CancelTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o token a ser cancelada em uma solicitação de cancelamento de WS-Trust.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityTokenElement" /> que contém o token de cancelamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo de um elemento wst:CancelTarget. Esse elemento contém as informações sobre o token de cancelamento de uma solicitação de cancelamento de WS-Trust.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Claims">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.RequestClaimCollection Claims { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.RequestClaimCollection Claims" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Claims" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.RequestClaimCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os tipos de declaração solicitados pelo cliente (solicitante).</summary>
+        <value>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestClaimCollection" /> que contém as declarações solicitadas. O padrão é uma coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento wst:Claims. Esse elemento opcional solicita o conjunto de tipos de declaração específico solicitado pelo cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputedKeyAlgorithm">
+      <MemberSignature Language="C#" Value="public string ComputedKeyAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ComputedKeyAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ComputedKeyAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um URI que representa o algoritmo desejado a ser usado ao computada chaves são usadas para tokens emitidos.</summary>
+        <value>Uma cadeia de caracteres que contém o URI que representa o algoritmo de chave computada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o elemento wst:ComputedKeyAlgorithm. Este elemento opcional especifica um URI que representa o algoritmo desejado a ser usado ao computada chaves são usadas para tokens emitidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delegatable">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; Delegatable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; Delegatable" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Delegatable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o token emitido deve ser marcado como delegatable.</summary>
+        <value>
+          <see langword="true" />Se o token emitido é delegatable; Caso contrário, <see langword="false" />. Pode ser <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do wst: elemento Delegatable. Esse elemento opcional indica que o token retornado pode ser delegatable para outra parte. Esse elemento é introduzido no WS-Trust 1.4. Essa propriedade usada em conjunto com o <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.DelegateTo%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelegateTo">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenElement DelegateTo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenElement DelegateTo" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.DelegateTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a identidade para o qual o token emitido deve ser delegado.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityTokenElement" /> que representa a identidade para o qual o token emitido deve ser delegado. Pode ser <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento wst:DelegateTo. Esse elemento opcional indica que o token emitido ser delegadas para a identidade especificada. Esse elemento é introduzido no WS-Trust 1.4. Esta propriedade é `null` em solicitações que não envolvem a delegação. Esta propriedade é usada em conjunto com o <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.DelegateTo%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encryption">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenElement Encryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenElement Encryption" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Encryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações sobre o token e a chave a ser usado ao criptografar.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityTokenElement" /> que contém as informações de criptografia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento wst:Encryption. Esse elemento opcional indica que nenhum retornado segredo em tokens de segurança emitidos deve ser criptografado para o token especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Forwardable">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; Forwardable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; Forwardable" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Forwardable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o token emitido deve ser marcado como encaminhável.</summary>
+        <value>
+          <see langword="true" />Se o token emitido é encaminhável; Caso contrário, <see langword="false" />. Pode ser <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do wst: elemento encaminhável. Esse elemento opcional que indica se o token retornado está vinculado ao computador ou o serviço do solicitante (indicado por um `false` valor). Esse elemento é introduzido no WS-Trust 1.4. Essa propriedade usada em conjunto com o <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.DelegateTo%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Issuer">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.EndpointReference Issuer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.EndpointReference Issuer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Issuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.EndpointReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o emissor do token wst:OnBehalfOf.</summary>
+        <value>Um <see cref="T:System.ServiceModel.EndpointAddress" /> que contém o endereço do emissor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento wst:Issuer. Esse elemento opcional identifica o emissor do token que é especificado no elemento wst:OnBehalfOf.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBehalfOf">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenElement OnBehalfOf { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenElement OnBehalfOf" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.OnBehalfOf" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o token para a identidade em nome do qual a solicitação está sendo feita.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityTokenElement" /> que contém o token de identidade para o qual a solicitação está sendo feita.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento wst:OnBehalfOf. Esse elemento opcional indica que o solicitante está fazendo a solicitação em nome de outra identidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Participants">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.Participants Participants { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.Participants Participants" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Participants" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.Participants</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os participantes que estão autorizados a usar o token emitido.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.Participants" /> que contém os participantes que estão autorizados a usar o token emitido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento wst:Participants. Esse elemento opcional identifica participantes adicionais que estão autorizados a usar o token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProofEncryption">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenElement ProofEncryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenElement ProofEncryption" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ProofEncryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o token a ser usada para criptografar o token de prova.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityTokenElement" /> que contém o token.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento wst:ProofEncryption. Esse elemento opcional contém o token a ser usada para criptografar a chave de prova.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Renewing">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.Renewing Renewing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.Renewing Renewing" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Renewing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.Renewing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a semântica de renovação para uma solicitação de renovação de WS-Trust.</summary>
+        <value>Retorna <see cref="T:System.IdentityModel.Protocols.WSTrust.Renewing" /> que contém a semântica de renovação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do wst: elemento de renovação. Este elemento opcional especifica a semântica de renovação para uma solicitação de renovação de WS-Trust.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenewTarget">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenElement RenewTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenElement RenewTarget" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.RenewTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o token seja renovado em um WS-Trust renovação de solicitação.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityTokenElement" /> que contém o token seja renovado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo de um elemento wst:RenewTarget. Esse elemento contém as informações sobre o token seja renovado em um WS-Trust renovar a solicitação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecondaryParameters">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.RequestSecurityToken SecondaryParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.RequestSecurityToken SecondaryParameters" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.SecondaryParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.RequestSecurityToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os parâmetros para os quais o solicitante não é o remetente.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> que contém parâmetros de secundários para a solicitação; ou seja, os parâmetros para os quais o solicitante não é o remetente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo de um elemento wst:SecondaryParameters. Esse elemento opcional contém parâmetros para os quais o solicitante não é o remetente. Um STS pode optar por usar os valores encontrados no elemento com base em sua política.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateTarget">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenElement ValidateTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenElement ValidateTarget" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.ValidateTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o token a ser validado em um WS-Trust validar solicitação.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityTokenElement" /> que contém o token a ser validado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo de um elemento wst:ValidateTarget. Esse elemento contém as informações sobre o token a ser validado em um WS-Trust validar a solicitação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

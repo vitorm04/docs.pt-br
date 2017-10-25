@@ -1,0 +1,72 @@
+<Type Name="ExtensibleClassFactory" FullName="System.Runtime.InteropServices.ExtensibleClassFactory">
+  <TypeSignature Language="C#" Value="public sealed class ExtensibleClassFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExtensibleClassFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ExtensibleClassFactory" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite a personalização de objetos gerenciados que se estendem de objetos não gerenciados durante a criação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `ExtensibleClassFactory` permite que os usuários especifiquem um `delegate` que é chamado durante a construção de um RCW runtime callable wrapper () que fornece uma instância do objeto COM subjacente. Na verdade, o retorno de chamada atua como a fábrica de classes para o objeto COM encapsulados pelo RCW. Sem retorno de chamada, o common language runtime cria o objeto de COM subjacentes chamando `CoCreateInstance`. Esse retorno de chamada fornece uma maneira alternativa de ativação de objeto subjacente, como com um moniker COM ou fornecendo um objeto de singleton. O <xref:System.Runtime.InteropServices.ExtensibleClassFactory.RegisterObjectCreationCallback%2A> método deve ser chamado de `static` inicializador da classe que está estendendo o RCW. Retorno de chamada de criação de apenas um objeto é permitido por tipo de objeto. Quando o RCW extensível é ativado, o retorno de chamada está registrado. Quando o objeto COM base precisa ser criado, o retorno de chamada é chamado para fornecer uma referência ao objeto. O retorno de chamada deve retornar um `IUnknown` ponteiro de interface para o objeto base.  
+  
+   
+  
+## Examples  
+ Registra um `delegate` que será chamado sempre que uma instância de um tipo gerenciado que se estende de um tipo não gerenciado precisa alocar o objeto não gerenciado agregado. Isso `delegate` deve alocar e agregar o objeto não gerenciado e é chamado no lugar de um `CoCreateInstance`. Esta rotina deve ser chamada no contexto da `static` inicializador para a classe para a qual os retornos de chamada serão feitos.  
+  
+ [!code-cpp[Classic ExtensibleClassFactory Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ExtensibleClassFactory Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ExtensibleClassFactory Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ExtensibleClassFactory Example/CS/source.cs#1)]
+ [!code-vb[Classic ExtensibleClassFactory Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ExtensibleClassFactory Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RegisterObjectCreationCallback">
+      <MemberSignature Language="C#" Value="public static void RegisterObjectCreationCallback (System.Runtime.InteropServices.ObjectCreationDelegate callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterObjectCreationCallback(class System.Runtime.InteropServices.ObjectCreationDelegate callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ExtensibleClassFactory.RegisterObjectCreationCallback(System.Runtime.InteropServices.ObjectCreationDelegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Runtime.InteropServices.ObjectCreationDelegate" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Um <see langword="delegate" /> que é chamado no lugar de <see langword="CoCreateInstance" />.</param>
+        <summary>Registra um <see langword="delegate" /> que é chamado quando uma instância de um tipo gerenciado, que se estende de um tipo não gerenciado, precisa alocar o objeto não gerenciado agregado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `delegate` aloca e agrega o objeto não gerenciado e é chamado no lugar de `CoCreateInstance`. Isso `delegate` devem ser registrados no contexto da `static` inicializador de classe para a qual os retornos de chamada serão feitos.  
+  
+ Somente uma classe em uma hierarquia deve registrar um `delegate` retorno de chamada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

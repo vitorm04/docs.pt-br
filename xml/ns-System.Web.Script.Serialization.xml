@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Script.Serialization">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Script.Serialization" /> namespace contém classes que fornecem a serialização JSON JavaScript Object Notation () e a desserialização de tipos gerenciados. Ele também fornece recursos de extensibilidade para personalizar o comportamento de serialização.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

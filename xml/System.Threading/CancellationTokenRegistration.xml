@@ -1,0 +1,277 @@
+<Type Name="CancellationTokenRegistration" FullName="System.Threading.CancellationTokenRegistration">
+  <TypeSignature Language="C#" Value="public struct CancellationTokenRegistration : IDisposable, IEquatable&lt;System.Threading.CancellationTokenRegistration&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CancellationTokenRegistration extends System.ValueType implements class System.IDisposable, class System.IEquatable`1&lt;valuetype System.Threading.CancellationTokenRegistration&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.CancellationTokenRegistration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Threading.CancellationTokenRegistration&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um delegado de retorno de chamada que foi registrado com um <see cref="T:System.Threading.CancellationToken" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O retorno de chamada é chamado quando o token é cancelado. Para cancelar o registro de um retorno de chamada, descarte a instância de registro correspondente. Para mais informações e exemplos de código, consulte [cancelamento em Threads gerenciados](~/docs/standard/threading/cancellation-in-managed-threads.md).  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Todos os membros protegidos e públicos da <see cref="T:System.Threading.CancellationTokenRegistration" /> são thread-safe e podem ser usados simultaneamente em vários segmentos, com exceção de Dispose, que só deve ser usado quando todas as outras operações no <see cref="T:System.Threading.CancellationTokenRegistration" /> concluiu.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenRegistration.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Threading.CancellationTokenRegistration" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.Threading.CancellationTokenRegistration>. O `Dispose` método deixa o <xref:System.Threading.CancellationTokenRegistration> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.Threading.CancellationTokenRegistration> para o coletor de lixo possa recuperar a memória que o <xref:System.Threading.CancellationTokenRegistration> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.Threading.CancellationTokenRegistration>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Threading.CancellationTokenRegistration> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenRegistration.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O outro objeto para o qual comparar essa instância.</param>
+        <summary>Determina se o atual <see cref="T:System.Threading.CancellationTokenRegistration" /> instância é igual ao especificado <see cref="T:System.Threading.CancellationTokenRegistration" />.</summary>
+        <returns>Se verdadeiro, este e <paramref name="obj" /> são iguais. FALSO, caso contrário.  
+  
+ Dois <see cref="T:System.Threading.CancellationTokenRegistration" /> instâncias são iguais se os dois se referirem a saída de uma única chamada para o mesmo método de registro de um <see cref="T:System.Threading.CancellationToken" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Threading.CancellationTokenRegistration other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Threading.CancellationTokenRegistration other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenRegistration.Equals(System.Threading.CancellationTokenRegistration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Threading.CancellationTokenRegistration" />
+      </Parameters>
+      <Docs>
+        <param name="other">O outro <see cref="T:System.Threading.CancellationTokenRegistration" /> para o qual comparar essa instância.</param>
+        <summary>Determina se o atual <see cref="T:System.Threading.CancellationTokenRegistration" /> instância é igual ao especificado <see cref="T:System.Threading.CancellationTokenRegistration" />.</summary>
+        <returns>Se verdadeiro, este e <paramref name="other" /> são iguais. FALSO, caso contrário.  
+  
+ Dois <see cref="T:System.Threading.CancellationTokenRegistration" /> instâncias são iguais se os dois se referirem a saída de uma única chamada para o mesmo método de registro de um <see cref="T:System.Threading.CancellationToken" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenRegistration.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para um <see cref="T:System.Threading.CancellationTokenRegistration" />.</summary>
+        <returns>Um código hash para a atual <see cref="T:System.Threading.CancellationTokenRegistration" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Threading.CancellationTokenRegistration left, System.Threading.CancellationTokenRegistration right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Threading.CancellationTokenRegistration left, valuetype System.Threading.CancellationTokenRegistration right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenRegistration.op_Equality(System.Threading.CancellationTokenRegistration,System.Threading.CancellationTokenRegistration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Threading.CancellationTokenRegistration" />
+        <Parameter Name="right" Type="System.Threading.CancellationTokenRegistration" />
+      </Parameters>
+      <Docs>
+        <param name="left">A primeira instância.</param>
+        <param name="right">A segunda instância.</param>
+        <summary>Determina se duas instâncias <see cref="T:System.Threading.CancellationTokenRegistration" /> são iguais.</summary>
+        <returns>True se as instâncias forem iguais; Caso contrário, false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Threading.CancellationTokenRegistration left, System.Threading.CancellationTokenRegistration right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Threading.CancellationTokenRegistration left, valuetype System.Threading.CancellationTokenRegistration right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.CancellationTokenRegistration.op_Inequality(System.Threading.CancellationTokenRegistration,System.Threading.CancellationTokenRegistration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Threading.CancellationTokenRegistration" />
+        <Parameter Name="right" Type="System.Threading.CancellationTokenRegistration" />
+      </Parameters>
+      <Docs>
+        <param name="left">A primeira instância.</param>
+        <param name="right">A segunda instância.</param>
+        <summary>Determina se dois <see cref="T:System.Threading.CancellationTokenRegistration" /> instâncias não são iguais.</summary>
+        <returns>True se as instâncias não forem iguais; Caso contrário, false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

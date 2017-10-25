@@ -1,0 +1,82 @@
+<Type Name="IInvokeProvider" FullName="System.Windows.Automation.Provider.IInvokeProvider">
+  <TypeSignature Language="C#" Value="public interface IInvokeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInvokeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IInvokeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("54fcb24b-e18e-47a2-b4d3-eccbe77599a2")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe métodos e propriedades para oferecer suporte ao acesso de cliente à Automação da Interface do Usuário para controles que iniciam ou executam uma ação única e não ambígua e não mantêm o estado quando ativados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementado em um provedor de automação de interface do usuário que deve dar suporte a <xref:System.Windows.Automation.InvokePattern> padrão de controle.  
+  
+ Implementam controles <xref:System.Windows.Automation.Provider.IInvokeProvider> se o mesmo comportamento não é exposto por meio de outro provedor de padrão de controle. Por exemplo, se o <xref:System.Windows.Automation.InvokePattern.Invoke%2A> método em um controle executa a mesma ação que o <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> método, o controle não deve implementar <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IInvokeProvider.Invoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Envia uma solicitação para ativar um controle e iniciar sua ação única não ambígua.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>é uma chamada assíncrona e deve retornar imediatamente sem bloqueio.  
+  
+> [!NOTE]
+>  Esse comportamento é particularmente importante para controles que, direta ou indiretamente, iniciam uma caixa de diálogo modal quando invocado. Qualquer cliente de automação de interface do usuário que atraiu o evento permanecerá bloqueado até que a caixa de diálogo modal está fechada.  
+  
+ <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>gera o <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> evento. Se possível, o evento deve ser gerado após o controle a ação associada.  
+  
+ <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>deve ser gerado antes que a manutenção de <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> solicitação nos seguintes cenários:  
+  
+-   Não é possível ou prático esperar até que a ação seja concluída.  
+  
+-   A ação requer interação do usuário.  
+  
+-   A ação é demorada e fará com que o cliente da chamada por um período de tempo significativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa a <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> método no manipulador de eventos MouseDown de um controle. Suponha que `providerControl` é uma variável de membro que foi inicializada quando a classe foi construída.  
+  
+ [!code-csharp[UIAProvider_snip#106](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/Invoker.cs#106)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Windows.Automation.ElementNotEnabledException">Se o controle não está habilitado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

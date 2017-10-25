@@ -1,0 +1,198 @@
+<Type Name="RegularExpressionAttribute" FullName="System.ComponentModel.DataAnnotations.RegularExpressionAttribute">
+  <TypeSignature Language="C#" Value="public class RegularExpressionAttribute : System.ComponentModel.DataAnnotations.ValidationAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RegularExpressionAttribute extends System.ComponentModel.DataAnnotations.ValidationAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.RegularExpressionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.DataAnnotations.ValidationAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que o valor de um campo de dados no Dados Dinâmicos do ASP.NET deve corresponder à expressão regular especificada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar o atributo de RegularExpressionAttribute a uma propriedade quando precisar validar valores de propriedade em uma expressão regular. A expressão regular habilita a especificar muito precisamente o formato de valores válidos. A propriedade padrão contém a expressão regular. Se o valor da propriedade é nulo ou uma cadeia de caracteres vazia (""), o valor passa a validação para o atributo RegularExpressionAttribute automaticamente. Para validar que o valor não é `null` ou uma cadeia de caracteres vazia, use o **RequiredAttribute** atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ComponentModel.DataAnnotations.RegularExpressionAttribute> atributo para validar os campos de dados FirstName e LastName. A expressão regular permite até 40 caracteres maiusculos e minúsculos. O exemplo executa as seguintes tarefas:  
+  
+-   Implementa uma classe parcial de metadados e a classe de metadados associados.  
+  
+-   Na classe de metadados associados, aplica-se a <xref:System.ComponentModel.DataAnnotations.RegularExpressionAttribute> de atributo para os campos de dados FirstName e LastName, especificando o padrão e mensagens de erro personalizadas.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.RegularExpressionAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RegularExpressionAttribute/CS/Customer.cs#1)]
+ [!code-vb[System.ComponentModel.DataAnnotations.RegularExpressionAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RegularExpressionAttribute/VB/Customer.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegularExpressionAttribute (string pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.RegularExpressionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">A expressão regular que é usada para validar o valor do campo de dados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.DataAnnotations.RegularExpressionAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como aplicar o <xref:System.ComponentModel.DataAnnotations.RegularExpressionAttribute> para um campo de dados. Se a validação falhar, o código de exemplo exibe a mensagem de erro de validação que é fornecida por dados dinâmicos.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.RegularExpressionAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RegularExpressionAttribute/CS/Customer.cs#2)]
+ [!code-vb[System.ComponentModel.DataAnnotations.RegularExpressionAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.RegularExpressionAttribute/VB/Customer.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pattern" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatErrorMessage">
+      <MemberSignature Language="C#" Value="public override string FormatErrorMessage (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string FormatErrorMessage(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.RegularExpressionAttribute.FormatErrorMessage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do campo que causou a falha de validação.</param>
+        <summary>Formata a mensagem de erro para exibir se a expressão regular de validação falhar.</summary>
+        <returns>A mensagem de erro formatada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.DataAnnotations.RegularExpressionAttribute.FormatErrorMessage%2A> cria a mensagem de erro usando o nome do campo de dados que causou a falha de validação. Você pode substituir esse método em atributos de validação personalizada para personalizar como os erros são criados ou para fornecer uma mensagem mais complexa que contém parâmetros que são avaliadas em tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public override bool IsValid (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsValid(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.RegularExpressionAttribute.IsValid(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor do campo de dados a ser validado.</param>
+        <summary>Verifica se o valor inserido pelo usuário corresponde ao padrão de expressão regular.</summary>
+        <returns>
+          <see langword="true" /> se a validação for bem-sucedida; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">O valor do campo de dados não correspondeu ao padrão da expressão regular.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchTimeoutInMilliseconds">
+      <MemberSignature Language="C#" Value="public int MatchTimeoutInMilliseconds { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MatchTimeoutInMilliseconds" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.RegularExpressionAttribute.MatchTimeoutInMilliseconds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo, em milissegundos, para executar uma única operação correspondente antes da operação atingir o tempo limite.</summary>
+        <value>A quantidade de tempo em milissegundos para executar uma única operação correspondente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public string Pattern { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Pattern" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.RegularExpressionAttribute.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o padrão da expressão regular.</summary>
+        <value>O padrão a ser correspondido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

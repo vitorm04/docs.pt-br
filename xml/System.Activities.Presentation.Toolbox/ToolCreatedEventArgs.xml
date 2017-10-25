@@ -1,0 +1,45 @@
+<Type Name="ToolCreatedEventArgs" FullName="System.Activities.Presentation.Toolbox.ToolCreatedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ToolCreatedEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ToolCreatedEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Toolbox.ToolCreatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os argumentos do evento para a ferramenta que criou o evento na caixa de ferramentas hospedado novamente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os argumentos do evento contêm dados sobre o evento que é passado para o <xref:System.Activities.Presentation.Toolbox.ToolCreatedEventHandler>.  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Components">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent[] Components { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent[] Components" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Toolbox.ToolCreatedEventArgs.Components" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna os componentes a serem incluídos no evento de criação de ferramenta na caixa de ferramentas hospedado novamente.</summary>
+        <value>O <see cref="T:System.Array" /> do tipo <see cref="T:System.ComponentModel.IComponent" /> que contém os dados passados para o <see cref="T:System.Activities.Presentation.Toolbox.ToolCreatedEventHandler" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,284 @@
+<Type Name="GenericParameterAttributes" FullName="System.Reflection.GenericParameterAttributes">
+  <TypeSignature Language="C#" Value="public enum GenericParameterAttributes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GenericParameterAttributes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.GenericParameterAttributes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve as restrições em um parâmetro de tipo genérico de um método ou tipo genérico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros de <xref:System.Reflection.GenericParameterAttributes> enumeração são divididos em dois grupos, o grupo de variação e o grupo de restrições especiais. Para testar um <xref:System.Reflection.GenericParameterAttributes> valor sinalizadores de variação, primeiro execute uma operação AND de bit a bit com VarianceMask. Se o resultado for nenhum, não há nenhum sinalizadores de variação. Da mesma forma, use SpecialConstraintMask para testar sinalizadores de restrição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um tipo genérico `Test` com dois parâmetros de tipo. O segundo parâmetro de tipo tem uma restrição de classe base e uma restrição de tipo de referência. Quando o programa é executado, as restrições são examinadas usando o <xref:System.Type.GenericParameterAttributes%2A?displayProperty=nameWithType> propriedade e o <xref:System.Type.GetGenericParameterConstraints%2A?displayProperty=nameWithType> método.  
+  
+ [!code-cpp[System.Type.GetGenericParameterConstraints#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Type.GetGenericParameterConstraints/CPP/source.cpp#1)]
+ [!code-csharp[System.Type.GetGenericParameterConstraints#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Type.GetGenericParameterConstraints/CS/source.cs#1)]
+ [!code-vb[System.Type.GetGenericParameterConstraints#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Type.GetGenericParameterConstraints/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contravariant">
+      <MemberSignature Language="C#" Value="Contravariant" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.GenericParameterAttributes Contravariant = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.GenericParameterAttributes.Contravariant" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.GenericParameterAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O parâmetro de tipo genérico é contravariante. Um parâmetro de tipo contravariante pode aparecer como um tipo de parâmetro em assinaturas de método.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Covariant">
+      <MemberSignature Language="C#" Value="Covariant" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.GenericParameterAttributes Covariant = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.GenericParameterAttributes.Covariant" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.GenericParameterAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O parâmetro de tipo genérico é covariante. Um parâmetro de tipo covariante pode aparecer como o tipo resultante de um método, o tipo de um campo somente leitura, um tipo base declarado ou uma interface implementada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultConstructorConstraint">
+      <MemberSignature Language="C#" Value="DefaultConstructorConstraint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.GenericParameterAttributes DefaultConstructorConstraint = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.GenericParameterAttributes.DefaultConstructorConstraint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.GenericParameterAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo poderá ser substituído para o parâmetro de tipo genérico somente se ele for um construtor sem parâmetro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.GenericParameterAttributes None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.GenericParameterAttributes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.GenericParameterAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há nenhum sinalizador especial.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotNullableValueTypeConstraint">
+      <MemberSignature Language="C#" Value="NotNullableValueTypeConstraint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.GenericParameterAttributes NotNullableValueTypeConstraint = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.GenericParameterAttributes.NotNullableValueTypeConstraint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.GenericParameterAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo poderá ser substituído para o parâmetro de tipo genérico somente se ele for um tipo de valor e não for anulável.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferenceTypeConstraint">
+      <MemberSignature Language="C#" Value="ReferenceTypeConstraint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.GenericParameterAttributes ReferenceTypeConstraint = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.GenericParameterAttributes.ReferenceTypeConstraint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.GenericParameterAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo poderá ser substituído para o parâmetro de tipo genérico somente se ele for um tipo de referência.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecialConstraintMask">
+      <MemberSignature Language="C#" Value="SpecialConstraintMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.GenericParameterAttributes SpecialConstraintMask = int32(28)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.GenericParameterAttributes.SpecialConstraintMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.GenericParameterAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Seleciona a combinação de todos os sinalizadores de restrição especiais. Esse valor é o resultado do uso do OR lógico para combinar os seguintes sinalizadores: <see cref="F:System.Reflection.GenericParameterAttributes.DefaultConstructorConstraint" />, <see cref="F:System.Reflection.GenericParameterAttributes.ReferenceTypeConstraint" /> e <see cref="F:System.Reflection.GenericParameterAttributes.NotNullableValueTypeConstraint" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VarianceMask">
+      <MemberSignature Language="C#" Value="VarianceMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.GenericParameterAttributes VarianceMask = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.GenericParameterAttributes.VarianceMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.GenericParameterAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Seleciona a combinação de todos os sinalizadores de variação. Esse valor é o resultado do uso do OR lógico para combinar os seguintes sinalizadores: <see cref="F:System.Reflection.GenericParameterAttributes.Contravariant" /> e <see cref="F:System.Reflection.GenericParameterAttributes.Covariant" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

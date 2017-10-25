@@ -1,0 +1,1705 @@
+<Type Name="MemoryMappedFile" FullName="System.IO.MemoryMappedFiles.MemoryMappedFile">
+  <TypeSignature Language="C#" Value="public class MemoryMappedFile : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MemoryMappedFile extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.MemoryMappedFiles.MemoryMappedFile" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um arquivo mapeado em memória.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um arquivo de memória mapeada mapeia o conteúdo de um arquivo para o espaço de endereçamento lógico de um aplicativo. Arquivos mapeados na memória permitem aos programadores trabalhar com arquivos muito grandes, porque a memória pode ser gerenciada simultaneamente e permitir acesso aleatório, completo para um arquivo sem a necessidade de busca. Arquivos mapeados na memória também podem ser compartilhados entre vários processos.  
+  
+ O <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> métodos de criam um arquivo de mapeamento de memória de um caminho especificado ou um <xref:System.IO.FileStream> de um arquivo existente no disco. As alterações são propagadas automaticamente para disco quando o arquivo não está mapeado.  
+  
+ O <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> métodos criam um arquivo de mapeamento de memória que não está mapeado para um arquivo existente no disco; e são adequados para a criação de memória compartilhada para comunicação entre processos (IPC).  
+  
+ Um arquivo de mapeamento de memória está associado um nome.  
+  
+ Você pode criar vários modos de exibição do arquivo mapeado em memória, incluindo modos de exibição de partes do arquivo. Você pode mapear a mesma parte de um arquivo para mais de um endereço para criar simultâneas de memória. Dois modos de exibição permanecer simultâneas, precisam ser criados a partir do mesmo arquivo de memória mapeada. Criar mapeamentos de dois arquivos do mesmo arquivo de dois modos de exibição não fornece a simultaneidade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma exibição de mapeamento de memória de uma parte de um arquivo muito grande e manipula uma parte dele.  
+  
+ [!code-csharp[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](~/samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#1)]
+ [!code-vb[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para o arquivo a ser mapeado.</param>
+        <summary>Cria um arquivo mapeado em memória de um arquivo no disco.</summary>
+        <returns>Um arquivo mapeado em memória.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> método para criar um arquivo de mapeamento de memória e, em seguida, cria uma exibição de memória mapeada para uma parte de um arquivo muito grande.  
+  
+ [!code-csharp[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](~/samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#1)]
+ [!code-vb[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é uma cadeia de caracteres vazia, contém somente espaço em branco ou tem um ou mais caracteres inválidos, conforme definido pelo método <see cref="M:System.IO.Path.GetInvalidFileNameChars" />.  
+  
+ -ou-  
+  
+ <paramref name="path" /> refere-se a um dispositivo inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S.</exception>
+        <exception cref="T:System.IO.PathTooLongException">
+          <paramref name="path" /> excede o tamanho máximo definido pelo sistema operacional. No Windows, os caminhos devem conter menos de 248 caracteres e os nomes de arquivo devem conter menos de 260 caracteres.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem as permissões necessárias para o arquivo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (string path, System.IO.FileMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(string path, valuetype System.IO.FileMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.String,System.IO.FileMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para o arquivo a ser mapeado.</param>
+        <param name="mode">Modo de acesso; deve ser <see cref="F:System.IO.FileMode.Open" />.</param>
+        <summary>Cria, de um arquivo no disco, um arquivo mapeado na memória que tem o modo de acesso especificado.</summary>
+        <returns>Um arquivo mapeado na memória que tem o modo de acesso especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `mode` parâmetro está relacionado ao arquivo de origem no disco. Você pode usar apenas o <xref:System.IO.FileMode.Open> valor de enumeração para criar o arquivo de memória mapeada do arquivo de origem no disco.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é uma cadeia de caracteres vazia, contém somente espaço em branco ou tem um ou mais caracteres inválidos, conforme definido pelo método <see cref="M:System.IO.Path.GetInvalidFileNameChars" />.  
+  
+ -ou-  
+  
+ <paramref name="path" /> refere-se a um dispositivo inválido.  
+  
+ - ou -  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.FileMode.Append" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="mode" /> é <see cref="F:System.IO.FileMode.Create" />, <see cref="F:System.IO.FileMode.CreateNew" /> ou <see cref="F:System.IO.FileMode.Truncate" />.  
+  
+ -ou-  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.FileMode.OpenOrCreate" /> e o arquivo em disco não existe.  
+  
+ - ou -  
+  
+ Ocorreu um erro de E/S.</exception>
+        <exception cref="T:System.IO.PathTooLongException">
+          <paramref name="path" /> excede o tamanho máximo definido pelo sistema operacional. No Windows, os caminhos devem conter menos de 248 caracteres e os nomes de arquivo devem conter menos de 260 caracteres.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem as permissões necessárias para o arquivo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (string path, System.IO.FileMode mode, string mapName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(string path, valuetype System.IO.FileMode mode, string mapName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.String,System.IO.FileMode,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="mapName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para o arquivo a ser mapeado.</param>
+        <param name="mode">Modo de acesso; deve ser <see cref="F:System.IO.FileMode.Open" />.</param>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <summary>Cria, de um arquivo no disco, um arquivo mapeado em memória que tem o modo de acesso e o nome especificados.</summary>
+        <returns>Um arquivo mapeado em memória que tem o nome e o modo de acesso especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `mode` parâmetro está relacionado ao arquivo de origem no disco. Você pode usar apenas o <xref:System.IO.FileMode.Open> valor de enumeração para criar o arquivo de memória mapeada do arquivo de origem no disco.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é uma cadeia de caracteres vazia, contém somente espaço em branco ou tem um ou mais caracteres inválidos, conforme definido pelo método <see cref="M:System.IO.Path.GetInvalidFileNameChars" />.  
+  
+ -ou-  
+  
+ <paramref name="path" /> refere-se a um dispositivo inválido.  
+  
+ -ou-  
+  
+ <paramref name="mapName" /> é uma cadeia de caracteres vazia.  
+  
+ - ou -  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.FileMode.Append" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ou <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="mode" /> é <see cref="F:System.IO.FileMode.Create" />, <see cref="F:System.IO.FileMode.CreateNew" /> ou <see cref="F:System.IO.FileMode.Truncate" />.  
+  
+ -ou-  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.FileMode.OpenOrCreate" /> e o arquivo em disco não existe.  
+  
+ - ou -  
+  
+ Ocorreu um erro de E/S.</exception>
+        <exception cref="T:System.IO.PathTooLongException">
+          <paramref name="path" /> excede o tamanho máximo definido pelo sistema operacional. No Windows, os caminhos devem conter menos de 248 caracteres e os nomes de arquivo devem conter menos de 260 caracteres.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem as permissões necessárias para o arquivo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (string path, System.IO.FileMode mode, string mapName, long capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(string path, valuetype System.IO.FileMode mode, string mapName, int64 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.String,System.IO.FileMode,System.String,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para o arquivo a ser mapeado.</param>
+        <param name="mode">Modo de acesso; pode ser qualquer um dos valores de enumeração de <see cref="T:System.IO.FileMode" />, exceto <see cref="F:System.IO.FileMode.Append" />.</param>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória. Especifique 0 para definir a capacidade para o tamanho do arquivo no disco.</param>
+        <summary>Cria, de um arquivo no disco, um arquivo mapeado em memória que tem o modo de acesso, o nome e a capacidade especificados.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `mode` parâmetro está relacionado ao arquivo de origem no disco.  
+  
+ Se `capacity` é maior do que o tamanho do arquivo no disco, o arquivo no disco é aumentado para corresponder a capacidade especificada, mesmo que nenhum dado é gravado no arquivo de mapeamento de memória. Para evitar que isso ocorra, especifique 0 (zero) para a capacidade padrão, que definirá internamente `capacity` para o tamanho do arquivo no disco.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é uma cadeia de caracteres vazia, contém somente espaço em branco ou tem um ou mais caracteres inválidos, conforme definido pelo método <see cref="M:System.IO.Path.GetInvalidFileNameChars" />.  
+  
+ -ou-  
+  
+ <paramref name="path" /> refere-se a um dispositivo inválido.  
+  
+ -ou-  
+  
+ <paramref name="mapName" /> é uma cadeia de caracteres vazia.  
+  
+ - ou -  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.FileMode.Append" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ou <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é maior que o tamanho do espaço de endereçamento lógico.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é menor que o tamanho do arquivo (mas não zero).  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é zero e o tamanho do arquivo em disco também é zero.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S.</exception>
+        <exception cref="T:System.IO.PathTooLongException">
+          <paramref name="path" /> excede o tamanho máximo definido pelo sistema operacional. No Windows, os caminhos devem conter menos de 248 caracteres e os nomes de arquivo devem conter menos de 260 caracteres.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem as permissões necessárias para o arquivo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (string path, System.IO.FileMode mode, string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(string path, valuetype System.IO.FileMode mode, string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.String,System.IO.FileMode,System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para o arquivo a ser mapeado.</param>
+        <param name="mode">Modo de acesso; pode ser qualquer um dos valores de enumeração de <see cref="T:System.IO.FileMode" />, exceto <see cref="F:System.IO.FileMode.Append" />.</param>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória. Especifique 0 para definir a capacidade para o tamanho do arquivo no disco.</param>
+        <param name="access">Um dos valores de enumeração que especifica o tipo de acesso permitido para o arquivo mapeado na memória.</param>
+        <summary>Cria um arquivo mapeado na memória que tem o modo de acesso, o nome, a capacidade e o tipo de acesso especificados de um arquivo no disco.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `mode` parâmetro está relacionado ao arquivo de origem no disco.  
+  
+ Se `capacity` é maior do que o tamanho do arquivo no disco, o arquivo no disco é aumentado para corresponder a capacidade especificada, mesmo que nenhum dado é gravado no arquivo de mapeamento de memória. Para evitar que isso ocorra, especifique 0 (zero) para a capacidade padrão, que definirá internamente `capacity` para o tamanho do arquivo no disco.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="access" /> não é um valor permitido.  
+  
+ -ou-  
+  
+ <paramref name="path" /> especifica um arquivo vazio.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é especificado como <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Read" /> e capacidade é maior que o tamanho do arquivo indicado por <paramref name="path" />.  
+  
+ - ou -  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.FileMode.Append" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ou <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é maior que o tamanho do espaço de endereçamento lógico.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é menor que o tamanho do arquivo (mas não zero).  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é zero e o tamanho do arquivo em disco também é zero.  
+  
+ -ou-  
+  
+ <paramref name="access" /> não um valor de <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" /> definido.  
+  
+ -ou-  
+  
+ O tamanho do arquivo indicado por <paramref name="path" /> é maior do que <paramref name="capacity" />.</exception>
+        <exception cref="T:System.IO.IOException">-ou-  
+  
+ Ocorreu um erro de E/S.</exception>
+        <exception cref="T:System.IO.PathTooLongException">
+          <paramref name="path" /> excede o tamanho máximo definido pelo sistema operacional. No Windows, os caminhos devem conter menos de 248 caracteres e os nomes de arquivo devem conter menos de 260 caracteres.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem as permissões necessárias para o arquivo.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (System.IO.FileStream fileStream, string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.HandleInheritability inheritability, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(class System.IO.FileStream fileStream, string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, valuetype System.IO.HandleInheritability inheritability, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.IO.FileStream,System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.HandleInheritability,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileStream" Type="System.IO.FileStream" />
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fileStream">O fluxo de arquivo do arquivo existente.</param>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória. Especifique 0 para definir a capacidade para o tamanho do <c>filestream</c>.</param>
+        <param name="access">Um dos valores de enumeração que especifica o tipo de acesso permitido para o arquivo mapeado na memória.  
+  
+ Esse parâmetro não pode ser definido como <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />.</param>
+        <param name="inheritability">Um dos valores de enumeração que especifica se um identificador para o arquivo mapeado na memória pode ser herdado por um processo filho. O padrão é <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <param name="leaveOpen">Um valor que indica se deve fechar o fluxo do arquivo de origem quando o <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFile" /> é descartado.</param>
+        <summary>Cria um arquivo mapeado na memória de um arquivo existente com o modo de acesso, nome, herdabilidade e capacidade especificados.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia.  
+  
+ - ou -  
+  
+ <paramref name="capacity" /> e o tamanho do arquivo são zero.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é definido como o valor de enumeração <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> ou <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />, o que não é permitido.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é definido como <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Read" /> e <paramref name="capacity" /> é maior do que o comprimento de <see langword="filestream" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileStream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é menor que o tamanho do arquivo.  
+  
+ -ou-  
+  
+ <paramref name="access" /> não é um valor de enumeração <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="inheritability" /> não é um valor de enumeração <see cref="T:System.IO.HandleInheritability" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile (System.IO.FileStream fileStream, string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, System.IO.HandleInheritability inheritability, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateFromFile(class System.IO.FileStream fileStream, string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, class System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, valuetype System.IO.HandleInheritability inheritability, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile(System.IO.FileStream,System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.MemoryMappedFiles.MemoryMappedFileSecurity,System.IO.HandleInheritability,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileStream" Type="System.IO.FileStream" />
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="memoryMappedFileSecurity" Type="System.IO.MemoryMappedFiles.MemoryMappedFileSecurity" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fileStream">O <c>fileStream</c> para o arquivo de mapa.</param>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória. Especifique 0 para definir a capacidade para o tamanho do arquivo no disco.</param>
+        <param name="access">Um dos valores de enumeração que especifica o tipo de acesso permitido para o arquivo mapeado na memória.  
+  
+ Esse parâmetro não pode ser definido como <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />.</param>
+        <param name="memoryMappedFileSecurity">As permissões que podem ser concedidas para acesso a arquivos e operações em arquivos mapeados na memória.  
+  
+ Esse parâmetro pode ser <see langword="null" />.</param>
+        <param name="inheritability">Um dos valores de enumeração que especifica se um identificador para o arquivo mapeado em memória pode ser herdado por um processo filho. O padrão é <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <param name="leaveOpen">
+          <see langword="true" />para descartar <c>fileStream</c> depois que o <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFile" /> é fechado; <see langword="false" /> descartar <c>fileStream</c>.</param>
+        <summary>Cria um arquivo mapeado na memória que tem o nome, a capacidade, o tipo de acesso, as permissões de segurança, a herdabilidade e o requisito de descarte especificados.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `capacity` é maior do que o tamanho do arquivo no disco, o arquivo no disco é aumentado para corresponder a capacidade especificada, mesmo que nenhum dado é gravado no arquivo de mapeamento de memória. Para evitar que isso ocorra, especifique 0 (zero) para a capacidade padrão, que definirá internamente `capacity` para o tamanho do arquivo no disco.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> e o tamanho do arquivo são zero.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é definido como o valor de enumeração <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Read" /> ou <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />, o que não é permitido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileStream" /> ou <paramref name="mapname" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é menor que o tamanho do arquivo.  
+  
+ -ou-  
+  
+ <paramref name="access" /> não é um valor de enumeração <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="inheritability" /> não é um valor de enumeração <see cref="T:System.IO.HandleInheritability" /> válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <paramref name="fileStream" /> foi fechado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">
+          <paramref name="access" /> é definido como <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" /> quando o acesso de <paramref name="fileStream" /> é definido como <see cref="F:System.IO.FileAccess.Read" /> ou <see cref="F:System.IO.FileAccess.Write" />.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="mapName" /> já existe.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNew">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew (string mapName, long capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew(string mapName, int64 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew(System.String,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória.</param>
+        <summary>Cria um arquivo mapeado em memória que tem a capacidade especificada na memória do sistema.</summary>
+        <returns>Um arquivo mapeado em memória que tem o nome e a capacidade especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar um arquivo de mapeamento de memória que não é persistido (ou seja, não associado com um arquivo no disco), que pode ser usado para compartilhar dados entre processos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é composto de três processos separados (aplicativos de console) que gravam `Boolean` valores em um arquivo de mapeamento de memória. A seguinte sequência de ações ocorrem:  
+  
+1.  Processo cria o arquivo de mapeamento de memória e grava um valor para ele.  
+  
+2.  Processo B abre o arquivo de mapeamento de memória e grava um valor para ele.  
+  
+3.  Processo C abre o arquivo de mapeamento de memória e grava um valor para ele.  
+  
+4.  Um processo lê e exibe os valores do arquivo de mapeamento de memória.  
+  
+5.  Após um processo com o arquivo de mapeamento de memória, o arquivo imediatamente é recuperado pela coleta de lixo.  
+  
+ Para executar este exemplo, faça o seguinte:  
+  
+1.  Compilar aplicativos e abra três janelas de comando.  
+  
+2.  Na primeira janela de comando, execute a processo.  
+  
+3.  Na segunda janela de comando, execute o processo b  
+  
+4.  Retornar para processar A e pressione ENTER.  
+  
+5.  Na terceira janela de comando, execute o processo c  
+  
+6.  Retornar para processar A e pressione ENTER.  
+  
+ A saída de um processo é o seguinte:  
+  
+```  
+Start Process B and press ENTER to continue.  
+Start Process C and press ENTER to continue.  
+Process A says: True  
+Process B says: False  
+Process C says: True  
+```  
+  
+ **Processo**  
+  
+ [!code-csharp[System.IO.MemoryMappedFiles_IPC_X#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/cs/program.cs#1)]
+ [!code-vb[System.IO.MemoryMappedFiles_IPC_X#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/vb/program.vb#1)]  
+  
+ **Processo B**  
+  
+ [!code-csharp[System.IO.MemoryMappedFiles_IPC_A#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_a/cs/program.cs#1)]
+ [!code-vb[System.IO.MemoryMappedFiles_IPC_A#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_a/vb/program.vb#1)]  
+  
+ **Processo C**  
+  
+ [!code-csharp[System.IO.MemoryMappedFiles_IPC_B#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/cs/program.cs#1)]
+ [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que ou igual a zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNew">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória.</param>
+        <param name="access">Um dos valores de enumeração que especifica o tipo de acesso permitido para o arquivo mapeado na memória. O padrão é <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <summary>Cria um arquivo mapeado em memória que tem a capacidade e tipo de acesso especificados na memória do sistema.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar um arquivo de mapeamento de memória que não é persistido (ou seja, não associado com um arquivo no disco), que pode ser usado para compartilhar dados entre processos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é definido como somente gravação com o valor de enumeração <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que ou igual a zero.  
+  
+ -ou-  
+  
+ <paramref name="access" /> não é um valor de enumeração <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNew">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.MemoryMappedFiles.MemoryMappedFileOptions,System.IO.HandleInheritability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="options" Type="System.IO.MemoryMappedFiles.MemoryMappedFileOptions" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória.</param>
+        <param name="access">Um dos valores de enumeração que especifica o tipo de acesso permitido para o arquivo mapeado na memória. O padrão é <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <param name="options">Uma combinação bit a bit dos valores de enumeração que especifica opções de alocação de memória para o arquivo mapeado na memória.</param>
+        <param name="inheritability">Um valor que especifica se um identificador para o arquivo de mapeamento de memória pode ser herdado por um processo filho. O padrão é <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <summary>Cria um arquivo de mapeamento de memória que tem o nome especificado, capacidade, tipo de acesso, as opções de alocação de memória e inheritability.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é definido como somente gravação com o valor de enumeração <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que ou igual a zero.  
+  
+ -ou-  
+  
+ <paramref name="access" /> não é um valor de enumeração <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" /> válido.  
+  
+ -ou-  
+  
+ <paramref name="inheritability" /> não é um valor <see cref="T:System.IO.HandleInheritability" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNew">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateNew(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, class System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.MemoryMappedFiles.MemoryMappedFileOptions,System.IO.MemoryMappedFiles.MemoryMappedFileSecurity,System.IO.HandleInheritability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="options" Type="System.IO.MemoryMappedFiles.MemoryMappedFileOptions" />
+        <Parameter Name="memoryMappedFileSecurity" Type="System.IO.MemoryMappedFiles.MemoryMappedFileSecurity" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória.</param>
+        <param name="access">Um dos valores de enumeração que especifica o tipo de acesso permitido para o arquivo mapeado na memória. O padrão é <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <param name="options">Uma combinação bit a bit dos valores de enumeração que especifica opções de alocação de memória para o arquivo mapeado na memória.</param>
+        <param name="memoryMappedFileSecurity">As permissões que podem ser concedidas para acesso a arquivos e operações em arquivos mapeados em memória.  
+  
+ Esse parâmetro pode ser <see langword="null" />.</param>
+        <param name="inheritability">Um dos valores de enumeração que especifica se um identificador para o arquivo mapeado em memória pode ser herdado por um processo filho. O padrão é <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <summary>Cria um arquivo mapeado em memória que tem a capacidade, o tipo de acesso, a alocação de memória, as permissões de segurança e a herdabilidade especificadas na memória do sistema.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar um arquivo de mapeamento de memória que não é persistido (ou seja, não associado com um arquivo no disco), que pode ser usado para compartilhar dados entre processos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é definido como somente gravação com o valor de enumeração <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que ou igual a zero.  
+  
+ -ou-  
+  
+ <paramref name="access" /> não é um valor de enumeração <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="inheritability" /> não é um valor de enumeração <see cref="T:System.IO.HandleInheritability" /> válido.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrOpen">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen (string mapName, long capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen(string mapName, int64 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen(System.String,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória.</param>
+        <summary>Cria ou abre um arquivo mapeado em memória que tem a capacidade especificada na memória do sistema.</summary>
+        <returns>Um arquivo mapeado em memória que tem o nome e o tamanho especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar ou abrir um arquivo de mapeamento de memória que não é persistido (ou seja, não associado com um arquivo no disco), que pode ser usado para compartilhar dados entre processos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é maior que o tamanho do espaço de endereçamento lógico.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é menor que ou igual a zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrOpen">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória.</param>
+        <param name="access">Um dos valores de enumeração que especifica o tipo de acesso permitido para o arquivo mapeado na memória. O padrão é <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <summary>Cria ou abre um arquivo mapeado na memória que tem a capacidade e tipo de acesso especificados na memória do sistema.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar ou abrir um arquivo de mapeamento de memória que não é persistido (ou seja, não associado com um arquivo no disco), que pode ser usado para compartilhar dados entre processos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é definido como somente gravação com o valor de enumeração <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é maior que o tamanho do espaço de endereçamento lógico.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é menor que ou igual a zero.  
+  
+ -ou-  
+  
+ <paramref name="access" /> não é um valor de enumeração <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" /> válido.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O sistema operacional negou o acesso especificado ao arquivo, por exemplo, o acesso está definido como <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> ou <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />, mas o arquivo ou diretório é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrOpen">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.MemoryMappedFiles.MemoryMappedFileOptions,System.IO.HandleInheritability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="options" Type="System.IO.MemoryMappedFiles.MemoryMappedFileOptions" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória.</param>
+        <param name="access">Um dos valores de enumeração que especifica o tipo de acesso permitido para o arquivo mapeado na memória. O padrão é <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <param name="options">Uma combinação bit a bit de valores que indicam as opções de alocação de memória para aplicar ao arquivo.</param>
+        <param name="inheritability">Um valor que especifica se um identificador para o arquivo de mapeamento de memória pode ser herdado por um processo filho. O padrão é <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <summary>Cria um novo arquivo mapeada de memória vazia ou abre um arquivo de memória mapeada existente, se existir um com o mesmo nome. Se abrir um arquivo existente, os argumentos de capacidade e opções de memória serão ignorados.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é definido como somente gravação com o valor de enumeração <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é maior que o tamanho do espaço de endereçamento lógico.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é menor que ou igual a zero.  
+  
+ -ou-  
+  
+ <paramref name="access" /> não é um valor de enumeração <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="inheritability" /> não é um valor de enumeração <see cref="T:System.IO.HandleInheritability" /> válido.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O sistema operacional negou o acesso especificado ao arquivo, por exemplo, o acesso está definido como <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> ou <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />, mas o arquivo ou diretório é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrOpen">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen (string mapName, long capacity, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile CreateOrOpen(string mapName, int64 capacity, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileOptions options, class System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen(System.String,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess,System.IO.MemoryMappedFiles.MemoryMappedFileOptions,System.IO.MemoryMappedFiles.MemoryMappedFileSecurity,System.IO.HandleInheritability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="capacity" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+        <Parameter Name="options" Type="System.IO.MemoryMappedFiles.MemoryMappedFileOptions" />
+        <Parameter Name="memoryMappedFileSecurity" Type="System.IO.MemoryMappedFiles.MemoryMappedFileSecurity" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">Um nome a ser atribuído ao arquivo mapeado em memória.</param>
+        <param name="capacity">O tamanho máximo, em bytes, a ser alocado para o arquivo mapeado em memória.</param>
+        <param name="access">Um dos valores de enumeração que especifica o tipo de acesso permitido para o arquivo mapeado na memória. O padrão é <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <param name="options">Uma combinação bit a bit dos valores de enumeração que especifica opções de alocação de memória para o arquivo mapeado na memória.</param>
+        <param name="memoryMappedFileSecurity">As permissões que podem ser concedidas para acesso a arquivos e operações em arquivos mapeados em memória.  
+  
+ Esse parâmetro pode ser <see langword="null" />.</param>
+        <param name="inheritability">Um dos valores de enumeração que especifica se um identificador para o arquivo mapeado em memória pode ser herdado por um processo filho. O padrão é <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <summary>Cria ou abre um arquivo mapeado na memória que tem a capacidade, o tipo de acesso, a alocação de memória, as permissões de segurança e a herdabilidade especificadas na memória do sistema.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar ou abrir um arquivo de mapeamento de memória que não é persistido (ou seja, não associado com um arquivo no disco), que pode ser usado para compartilhar dados entre processos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é definido como somente gravação com o valor de enumeração <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é maior que o tamanho do espaço de endereçamento lógico.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é menor que ou igual a zero.  
+  
+ -ou-  
+  
+ <paramref name="access" /> não é um valor de enumeração <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="inheritability" /> não é um valor de enumeração <see cref="T:System.IO.HandleInheritability" /> válido.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O sistema operacional negou o <paramref name="access" /> especificado para o arquivo, por exemplo, <paramref name="access" /> está definido como <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> ou <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />, mas o arquivo ou o diretório é somente leitura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewAccessor">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewAccessor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor" /> que é mapeado para uma exibição do arquivo mapeado na memória.</summary>
+        <returns>Um bloco de memória acessível aleatoriamente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o modo de exibição retornado por este método para acesso aleatório em um arquivo de mapeamento de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso ao arquivo mapeado na memória não está autorizado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewAccessor">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor (long offset, long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor(int64 offset, int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewAccessor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="offset">O byte no qual a exibição é iniciada.</param>
+        <param name="size">O tamanho da exibição. Especificar zero (0) para criar uma exibição que começa em <c>deslocamento</c> e termina aproximadamente no final do arquivo de mapeamento de memória.</param>
+        <summary>Cria um <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor" /> que é mapeado para uma exibição do arquivo mapeado em memória e que tem o deslocamento e tamanho especificados.</summary>
+        <returns>Um bloco de memória acessível aleatoriamente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o modo de exibição retornado por este método para acesso aleatório em um arquivo de mapeamento de memória.  
+  
+ Para criar uma exibição completa do arquivo de memória mapeada, especifique 0 (zero) para o `size` parâmetro. Se você fizer isso, o tamanho do modo de exibição pode ser menor ou maior que o tamanho do arquivo de origem no disco. Isso ocorre porque os modos de exibição são fornecidos em unidades de páginas de sistema e o tamanho da exibição é arredondado para o próximo tamanho de página do sistema.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma exibição de um arquivo de mapeamento de memória e editá-lo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> classe.  
+  
+ [!code-csharp[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#2](~/samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#2)]
+ [!code-vb[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="size" /> é um valor negativo.  
+  
+ -ou-  
+  
+ <paramref name="size" /> é maior que o espaço de endereço lógico.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso ao arquivo mapeado na memória não está autorizado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewAccessor">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor (long offset, long size, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewAccessor CreateViewAccessor(int64 offset, int64 size, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor(System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewAccessor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="size" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="offset">O byte no qual a exibição é iniciada.</param>
+        <param name="size">O tamanho da exibição. Especificar zero (0) para criar uma exibição que começa em <c>deslocamento</c> e termina aproximadamente no final do arquivo de mapeamento de memória.</param>
+        <param name="access">Um dos valores de enumeração que especifica o tipo de acesso permitido para o arquivo mapeado na memória. O padrão é <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <summary>Cria um <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor" /> que mapeia para uma exibição do arquivo com mapeamento em memória e que tem o deslocamento, o tamanho e as restrições de acesso especificados.</summary>
+        <returns>Um bloco de memória acessível aleatoriamente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o modo de exibição retornado por este método para acesso aleatório em um arquivo de mapeamento de memória.  
+  
+ Para criar uma exibição completa do arquivo de memória mapeada, especifique 0 (zero) para o `size` parâmetro. Se você fizer isso, o tamanho do modo de exibição pode ser menor ou maior que o tamanho do arquivo de origem no disco. Isso ocorre porque os modos de exibição são fornecidos em unidades de páginas de sistema e o tamanho da exibição é arredondado para o próximo tamanho de página do sistema.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="size" /> é um valor negativo.  
+  
+ -ou-  
+  
+ <paramref name="size" /> é maior que o espaço de endereço lógico.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">
+          <paramref name="access" /> é inválido para o arquivo com mapeamento em memória.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewStream">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewStream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um fluxo que mapeia uma exibição do arquivo mapeado na memória.</summary>
+        <returns>Um fluxo de memória.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o fluxo retornado por esse método de acesso sequencial para um arquivo de mapeamento de memória, como para comunicações entre processos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um fluxo e grava um valor para ele. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> método.  
+  
+ [!code-csharp[System.IO.MemoryMappedFiles_IPC_X#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/cs/program.cs#2)]
+ [!code-vb[System.IO.MemoryMappedFiles_IPC_X#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso ao arquivo mapeado na memória não está autorizado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewStream">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream (long offset, long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream(int64 offset, int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="offset">O byte no qual a exibição é iniciada.</param>
+        <param name="size">O tamanho da exibição. Especificar zero (0) para criar uma exibição que começa em <c>deslocamento</c> e termina aproximadamente no final do arquivo de mapeamento de memória.</param>
+        <summary>Cria um fluxo que é mapeado para uma exibição do arquivo mapeado em memória e que tem o deslocamento e tamanho especificados.</summary>
+        <returns>Um fluxo de memória que tem o deslocamento e tamanho especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o fluxo retornado por esse método de acesso sequencial para um arquivo de mapeamento de memória, como para comunicações entre processos.  
+  
+ Para criar uma exibição completa do arquivo de memória mapeada, especifique 0 (zero) para o `size` parâmetro. Se você fizer isso, o tamanho do modo de exibição pode ser menor ou maior que o tamanho do arquivo de origem no disco. Isso ocorre porque os modos de exibição são fornecidos em unidades de páginas de sistema e o tamanho da exibição é arredondado para o próximo tamanho de página do sistema.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="size" /> é um valor negativo.  
+  
+ -ou-  
+  
+ <paramref name="size" /> é maior que o espaço de endereço lógico.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso ao arquivo mapeado na memória não está autorizado.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="size" /> é maior que a memória virtual total.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateViewStream">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream (long offset, long size, System.IO.MemoryMappedFiles.MemoryMappedFileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedViewStream CreateViewStream(int64 offset, int64 size, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream(System.Int64,System.Int64,System.IO.MemoryMappedFiles.MemoryMappedFileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedViewStream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="size" Type="System.Int64" />
+        <Parameter Name="access" Type="System.IO.MemoryMappedFiles.MemoryMappedFileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="offset">O byte no qual a exibição é iniciada.</param>
+        <param name="size">O tamanho da exibição. Especificar zero (0) para criar uma exibição que começa em <c>deslocamento</c> e termina aproximadamente no final do arquivo de mapeamento de memória.</param>
+        <param name="access">Um dos valores de enumeração que especifica o tipo de acesso permitido para o arquivo mapeado na memória. O padrão é <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.ReadWrite" />.</param>
+        <summary>Cria um fluxo que é mapeado para uma exibição do arquivo mapeado em memória e que tem o deslocamento, tamanho e tipo de acesso especificados.</summary>
+        <returns>Um fluxo de memória que tem as características especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o fluxo retornado por esse método de acesso sequencial para um arquivo de mapeamento de memória, como para comunicações entre processos.  
+  
+ Para criar uma exibição completa do arquivo de memória mapeada, especifique 0 (zero) para o `size` parâmetro. Se você fizer isso, o tamanho do modo de exibição pode ser menor ou maior que o tamanho do arquivo de origem no disco. Isso ocorre porque os modos de exibição são fornecidos em unidades de páginas de sistema e o tamanho da exibição é arredondado para o próximo tamanho de página do sistema.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="size" /> é um valor negativo.  
+  
+ -ou-  
+  
+ <paramref name="size" /> é maior que o espaço de endereço lógico.  
+  
+ -ou-  
+  
+ <paramref name="access" /> não é um valor de enumeração <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileAccess" /> válido.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">
+          <paramref name="access" /> é inválido para o arquivo com mapeamento em memória.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="size" /> é maior que a memória virtual total.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é inválido para o arquivo com mapeamento em memória.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFile" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFile" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessControl">
+      <MemberSignature Language="C#" Value="public System.IO.MemoryMappedFiles.MemoryMappedFileSecurity GetAccessControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.MemoryMappedFiles.MemoryMappedFileSecurity GetAccessControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.GetAccessControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFileSecurity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o controle de acesso para o recurso de arquivos mapeados na memória.</summary>
+        <returns>As permissões que podem ser concedidas para acesso a arquivos e operações em arquivos mapeados em memória.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Falha em uma chamada subjacente ao definir informações de segurança.</exception>
+        <exception cref="T:System.NotSupportedException">Falha em uma chamada subjacente ao definir informações de segurança.</exception>
+        <exception cref="T:System.ObjectDisposedException">O arquivo de mapeamento de memória é fechado.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">A plataforma atual é o Windows 98 ou anterior.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Falha em uma chamada subjacente ao definir informações de segurança.  
+  
+ -ou-  
+  
+ O arquivo de mapeamento de memória foi aberto como <see cref="F:System.IO.MemoryMappedFiles.MemoryMappedFileAccess.Write" /> somente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExisting">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting (string mapName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting(string mapName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">O nome do arquivo mapeado na memória para ser aberto.</param>
+        <summary>Abre um arquivo mapeado na memória existente que tem o nome especificado na memória do sistema.</summary>
+        <returns>Um arquivo mapeado na memória que tem o nome especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo de mapeamento de memória pode ser um persistente mapeados por memória arquivo (associado a um arquivo no disco) ou não persistente.  
+  
+   
+  
+## Examples  
+ **Abrir um arquivo de mapeamento de memória persistente**  
+  
+ O exemplo a seguir abre um arquivo de mapeamento de memória denominado `ImgA` que já foi criado de um arquivo em disco (conforme mostrado no exemplo para o <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%28System.String%29> método).  
+  
+ [!code-csharp[memorymappedfiles.memorymappedfile.openexisting#1](~/samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/cs/program.cs#1)]
+ [!code-vb[memorymappedfiles.memorymappedfile.openexisting#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
+  
+ **Abrir um arquivo de mapeamento de memória persistentes**  
+  
+ O exemplo a seguir abre um arquivo de mapeamento de memória usado para comunicação entre processos. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%28System.String%2CSystem.Int64%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo especificado para <paramref name="mapName" /> não existe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExisting">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting (string mapName, System.IO.MemoryMappedFiles.MemoryMappedFileRights desiredAccessRights);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting(string mapName, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileRights desiredAccessRights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting(System.String,System.IO.MemoryMappedFiles.MemoryMappedFileRights)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="desiredAccessRights" Type="System.IO.MemoryMappedFiles.MemoryMappedFileRights" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">O nome do arquivo mapeado na memória para ser aberto.</param>
+        <param name="desiredAccessRights">Um dos valores de enumeração que especifica os direitos de acesso a serem aplicados ao arquivo mapeado em memória.</param>
+        <summary>Abre um arquivo mapeado em memória existente que tem o nome especificado e os direitos de acesso na memória do sistema.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="desiredAccessRights" /> não é um valor de enumeração <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileRights" /> válido.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo especificado para <paramref name="mapName" /> não existe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExisting">
+      <MemberSignature Language="C#" Value="public static System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting (string mapName, System.IO.MemoryMappedFiles.MemoryMappedFileRights desiredAccessRights, System.IO.HandleInheritability inheritability);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.MemoryMappedFiles.MemoryMappedFile OpenExisting(string mapName, valuetype System.IO.MemoryMappedFiles.MemoryMappedFileRights desiredAccessRights, valuetype System.IO.HandleInheritability inheritability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting(System.String,System.IO.MemoryMappedFiles.MemoryMappedFileRights,System.IO.HandleInheritability)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.MemoryMappedFiles.MemoryMappedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mapName" Type="System.String" />
+        <Parameter Name="desiredAccessRights" Type="System.IO.MemoryMappedFiles.MemoryMappedFileRights" />
+        <Parameter Name="inheritability" Type="System.IO.HandleInheritability" />
+      </Parameters>
+      <Docs>
+        <param name="mapName">O nome do arquivo mapeado na memória para ser aberto.</param>
+        <param name="desiredAccessRights">Um dos valores de enumeração que especifica os direitos de acesso a serem aplicados ao arquivo mapeado em memória.</param>
+        <param name="inheritability">Um dos valores de enumeração que especifica se um identificador para o arquivo mapeado em memória pode ser herdado por um processo filho. O padrão é <see cref="F:System.IO.HandleInheritability.None" />.</param>
+        <summary>Abre um arquivo de mapeamento de memória existente que tem o nome especificado, direitos de acesso e inheritability na memória do sistema.</summary>
+        <returns>Um arquivo mapeado na memória que tem as características especificadas.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mapName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="desiredAccessRights" /> não é um valor de enumeração <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileRights" /> válido.  
+  
+ - ou -  
+  
+ <paramref name="inheritability" /> não é um valor de enumeração <see cref="T:System.IO.HandleInheritability" /> válido.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso solicitado é inválido para o arquivo de mapeamento de memória.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo especificado para <paramref name="mapName" /> não existe.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeMemoryMappedFileHandle">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle SafeMemoryMappedFileHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle SafeMemoryMappedFileHandle" />
+      <MemberSignature Language="DocId" Value="P:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.MemoryMappedFiles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de arquivo de um arquivo mapeado em memória.</summary>
+        <value>O identificador do arquivo mapeado em memória.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessControl">
+      <MemberSignature Language="C#" Value="public void SetAccessControl (System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessControl(class System.IO.MemoryMappedFiles.MemoryMappedFileSecurity memoryMappedFileSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFile.SetAccessControl(System.IO.MemoryMappedFiles.MemoryMappedFileSecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="memoryMappedFileSecurity" Type="System.IO.MemoryMappedFiles.MemoryMappedFileSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="memoryMappedFileSecurity">As permissões que podem ser concedidas para acesso a arquivos e operações em arquivos mapeados em memória.</param>
+        <summary>Define o controle de acesso para o recurso de arquivos mapeados na memória.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="memoryMappedFileSecurity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Falha em uma chamada subjacente ao definir informações de segurança.</exception>
+        <exception cref="T:System.NotSupportedException">Falha em uma chamada subjacente ao definir informações de segurança.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Falha em uma chamada subjacente ao definir informações de segurança.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

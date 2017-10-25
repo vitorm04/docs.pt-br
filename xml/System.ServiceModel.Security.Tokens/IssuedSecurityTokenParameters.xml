@@ -1,0 +1,662 @@
+<Type Name="IssuedSecurityTokenParameters" FullName="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters">
+  <TypeSignature Language="C#" Value="public class IssuedSecurityTokenParameters : System.ServiceModel.Security.Tokens.SecurityTokenParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IssuedSecurityTokenParameters extends System.ServiceModel.Security.Tokens.SecurityTokenParameters" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Security.Tokens.SecurityTokenParameters</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os parâmetros de um token de segurança emitido em um cenário de segurança federada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe é uma coleção de métodos e propriedades do token e é usado na criação de tokens e elementos de associação de segurança.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A diferença entre essas sobrecargas é de onde vêm os valores de propriedade de instância. <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.%23ctor%2A>defini-las com seus valores padrão. <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.%23ctor%2A>leva da instância referenciada pelo parâmetro de entrada.  
+  
+ Outros construtores defini-las com seus valores padrão e, em seguida, definir outras propriedades com base em parâmetros de entrada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IssuedSecurityTokenParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os novos valores de propriedade de instância são definidos como seus padrões:  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> é definido como <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> é definido como <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> é definido como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected IssuedSecurityTokenParameters (System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters other);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.#ctor(System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />
+      </Parameters>
+      <Docs>
+        <param name="other">A outra instância dessa classe.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os novos valores de propriedade de instância são definidos para os valores correspondentes em `other`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IssuedSecurityTokenParameters (string tokenType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tokenType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tokenType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tokenType">O tipo de token.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> classe usando o tipo de token especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os novos valores de propriedade de instância são definidos como seus padrões:  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> é definido como <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> é definido como <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> é definido como `true`.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType%2A> é definido como `tokenType`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IssuedSecurityTokenParameters (string tokenType, System.ServiceModel.EndpointAddress issuerAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tokenType, class System.ServiceModel.EndpointAddress issuerAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.#ctor(System.String,System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tokenType" Type="System.String" />
+        <Parameter Name="issuerAddress" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="tokenType">O tipo de token.</param>
+        <param name="issuerAddress">O endereço do ponto de extremidade que emite o token.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> classe usando o endereço do emissor e de tipo de token especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os novos valores de propriedade de instância são definidos como seus padrões:  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> é definido como <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> é definido como <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> é definido como `true`.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType%2A> é definido como `tokenType`.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress%2A> é definido como `issuerAddress`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IssuedSecurityTokenParameters (string tokenType, System.ServiceModel.EndpointAddress issuerAddress, System.ServiceModel.Channels.Binding issuerBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tokenType, class System.ServiceModel.EndpointAddress issuerAddress, class System.ServiceModel.Channels.Binding issuerBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.#ctor(System.String,System.ServiceModel.EndpointAddress,System.ServiceModel.Channels.Binding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tokenType" Type="System.String" />
+        <Parameter Name="issuerAddress" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="issuerBinding" Type="System.ServiceModel.Channels.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="tokenType">O tipo de token.</param>
+        <param name="issuerAddress">O endereço do ponto de extremidade que emite o token.</param>
+        <param name="issuerBinding">A associação do emissor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters" /> classe usando o tipo de token especificado, o endereço do emissor e a associação de emissor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os novos valores de propriedade de instância são definidos como seus padrões:  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> é definido como <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient>.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.ReferenceStyle%2A> é definido como <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle.Internal>.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.RequireDerivedKeys%2A> é definido como `true`.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType%2A> é definido como `tokenType`.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress%2A> é definido como `issuerAddress`.  
+  
+-   <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerBinding%2A> é definido como `issuerBinding`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalRequestParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Xml.XmlElement&gt; AdditionalRequestParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Xml.XmlElement&gt; AdditionalRequestParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.AdditionalRequestParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.XmlElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de parâmetros de solicitação adicionais</summary>
+        <value>Um <see cref="T:System.Collections.ObjectModel.Collection`1" /> do tipo <see cref="T:System.Xml.XmlElement" /> que contém os parâmetros de solicitação adicionais.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimTypeRequirements">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt; ClaimTypeRequirements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt; ClaimTypeRequirements" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Security.Tokens.ClaimTypeRequirement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de declaração de requisitos de tipo.</summary>
+        <value>Um <see cref="T:System.Collections.ObjectModel.Collection`1" /> do tipo <see cref="T:System.ServiceModel.Security.Tokens.ClaimTypeRequirement" /> que contém os requisitos de tipo de declaração adicionais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um cenário federado, serviços de estado os requisitos de credenciais de entrada. Por exemplo, as credenciais de entrada devem ter um determinado conjunto de tipos de declaração. Cada <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement> na coleção retornada Especifica os tipos de declarações obrigatórias e opcionais deve aparecer em uma credencial federada.  
+  
+ Um requisito de tipo de declaração consiste o URI do tipo de declaração solicitado no token emitido junto com um parâmetro booliano que indica se essa declaração de tipo é necessária no token emitido ou é opcional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Security.Tokens.SecurityTokenParameters CloneCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Security.Tokens.SecurityTokenParameters CloneCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CloneCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenParameters</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Clona a outra instância desta instância da classe.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Security.Tokens.SecurityTokenParameters" /> que representa a cópia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.Clone%2A> e <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> métodos seguem o padrão de design principal.  
+  
+ <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A>é um `abstract` classe que é substituído pelo <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CloneCore%2A>.  
+  
+ O <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CloneCore%2A> chamadas de método de <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="protected override System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClause (System.IdentityModel.Tokens.SecurityToken token, System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle referenceStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause CreateKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityToken token, valuetype System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle referenceStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CreateKeyIdentifierClause(System.IdentityModel.Tokens.SecurityToken,System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="referenceStyle" Type="System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle" />
+      </Parameters>
+      <Docs>
+        <param name="token">O token.</param>
+        <param name="referenceStyle">O estilo de referência de token de segurança.</param>
+        <summary>Cria uma cláusula de identificador de chave para um token.</summary>
+        <returns>A cláusula de identificador de chave de segurança.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria uma cláusula de identificador de chave usando o <xref:System.IdentityModel.Tokens.SecurityToken.CreateKeyIdentifierClause%2A> método, com `referenceStyle` como um parâmetro genérico.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="referenceStyle" /> não é <see langword="External" /> ou <see langword="Internal" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRequestParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Xml.XmlElement&gt; CreateRequestParameters (System.ServiceModel.MessageSecurityVersion messageSecurityVersion, System.IdentityModel.Selectors.SecurityTokenSerializer securityTokenSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class System.Xml.XmlElement&gt; CreateRequestParameters(class System.ServiceModel.MessageSecurityVersion messageSecurityVersion, class System.IdentityModel.Selectors.SecurityTokenSerializer securityTokenSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CreateRequestParameters(System.ServiceModel.MessageSecurityVersion,System.IdentityModel.Selectors.SecurityTokenSerializer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.XmlElement&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageSecurityVersion" Type="System.ServiceModel.MessageSecurityVersion" />
+        <Parameter Name="securityTokenSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="messageSecurityVersion">A versão de segurança de mensagem.</param>
+        <param name="securityTokenSerializer">O serializador de token de segurança.</param>
+        <summary>Cria uma coleção de elementos XML de parâmetro de solicitação de token que serão incluídos na solicitação enviada pelo cliente para o serviço de token de segurança de emitido.</summary>
+        <returns>Um <see cref="T:System.Collections.ObjectModel.Collection`1" /> que contém elementos XML que representam os parâmetros de solicitação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMessageSecurityVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MessageSecurityVersion DefaultMessageSecurityVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.MessageSecurityVersion DefaultMessageSecurityVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.DefaultMessageSecurityVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageSecurityVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conjunto padrão de segurança em versões de especificações.</summary>
+        <value>Um <see cref="T:System.ServiceModel.MessageSecurityVersion" /> que representa o conjunto padrão de versões de especificações de segurança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAsymmetricKey">
+      <MemberSignature Language="C#" Value="protected override bool HasAsymmetricKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAsymmetricKey" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.HasAsymmetricKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o token emitido tem uma chave assimétrica.</summary>
+        <value>
+          <see langword="true" />Se o token emitido tem uma chave assimétrica; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As chaves assimétricas são usadas na criptografia de chave pública, que usa duas chaves, uma chave pública e uma chave privada, que estão relacionadas matematicamente. A chave pública é distribuída amplamente, mas a chave privada é mantida em segredo. Criptografia de chave pública, não há nenhum requisito para trocar uma chave comum.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeSecurityTokenRequirement">
+      <MemberSignature Language="C#" Value="protected override void InitializeSecurityTokenRequirement (System.IdentityModel.Selectors.SecurityTokenRequirement requirement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeSecurityTokenRequirement(class System.IdentityModel.Selectors.SecurityTokenRequirement requirement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.InitializeSecurityTokenRequirement(System.IdentityModel.Selectors.SecurityTokenRequirement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requirement" Type="System.IdentityModel.Selectors.SecurityTokenRequirement" />
+      </Parameters>
+      <Docs>
+        <param name="requirement">O requisito de token de segurança para inicializar.</param>
+        <summary>Quando implementada, inicializa um requisito de token baseia-se as propriedades definidas de segurança a <see langword="IssuedSecurityTokenParameters" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As seguintes propriedades de <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> são inicializados:  
+  
+-   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenType%2A>é definido como o valor na instância atual dessa classe.  
+  
+-   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicToken%2A> = `true`.  
+  
+-   <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType%2A>é definido como o valor na instância atual dessa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress IssuerAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress IssuerAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço do emissor do token.</summary>
+        <value>O <see cref="T:System.ServiceModel.EndpointAddress" /> do emissor do token.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerBinding">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Binding IssuerBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.Binding IssuerBinding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a associação do emissor de token, a ser usado pelo cliente.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.Binding" /> do emissor do token a ser usado pelo cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que essa propriedade não precisa ser preenchida no serviço, porque ele é acessado somente pelo cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerMetadataAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress IssuerMetadataAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress IssuerMetadataAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerMetadataAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço de metadados do emissor do token.</summary>
+        <value>O endereço de metadados do emissor do token.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public int KeySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho de chave de token emitido.</summary>
+        <value>O tamanho da chave de token.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Foi feita uma tentativa para <see langword="set" /> um valor menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyType">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyType KeyType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IdentityModel.Tokens.SecurityKeyType KeyType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de chave de token emitido.</summary>
+        <value>Um dos valores de <see cref="T:System.IdentityModel.Tokens.SecurityKeyType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsClientAuthentication">
+      <MemberSignature Language="C#" Value="protected override bool SupportsClientAuthentication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsClientAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsClientAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada, obtém um valor que indica se o token dá suporte à autenticação de cliente.</summary>
+        <value>
+          <see langword="true" />Se o token dá suporte à autenticação de cliente; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsClientWindowsIdentity">
+      <MemberSignature Language="C#" Value="protected override bool SupportsClientWindowsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsClientWindowsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsClientWindowsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada, obtém um valor que indica se o token dá suporte a uma identidade do Windows para autenticação.</summary>
+        <value>
+          <see langword="true" />Se o token dá suporte a uma identidade do Windows para a autenticação. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsServerAuthentication">
+      <MemberSignature Language="C#" Value="protected override bool SupportsServerAuthentication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsServerAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.SupportsServerAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada, obtém um valor que indica se o token dá suporte à autenticação de servidor.</summary>
+        <value>
+          <see langword="true" />Se o token dá suporte à autenticação de servidor; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenType">
+      <MemberSignature Language="C#" Value="public string TokenType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TokenType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de token emitido.</summary>
+        <value>O tipo de token.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exibe uma representação de texto dessa instância da classe.</summary>
+        <returns>Uma representação de texto dessa instância dessa classe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método exibe o nome desta classe <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.TokenType%2A>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeySize%2A>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerAddress%2A>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerMetadataAddress%2A>, <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.IssuerBinding%2A> (se não `null`) e elementos de associação e <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A> (se não for 0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseStrTransform">
+      <MemberSignature Language="C#" Value="public bool UseStrTransform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseStrTransform" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.UseStrTransform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o parâmetro de token emitido usa transformação STR.</summary>
+        <value>
+          <see langword="true" />Se o parâmetro de token emitido usa transformação STR; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

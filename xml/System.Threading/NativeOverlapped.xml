@@ -1,0 +1,190 @@
+<Type Name="NativeOverlapped" FullName="System.Threading.NativeOverlapped">
+  <TypeSignature Language="C#" Value="public struct NativeOverlapped" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit NativeOverlapped extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.NativeOverlapped" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Overlapped</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um layout explícito que é visível do código não gerenciado e que terá o mesmo layout que a estrutura OVERLAPPED Win32 com campos reservados adicionais no final.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Threading.NativeOverlapped>tipo de valor do .NET Framework representa uma versão não gerenciada da estrutura OVERLAPPED Win32. O layout desta estrutura deve ser idêntico ao OVERLAPPED. Quatro DWORDs adicionais são reservados no final.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EventHandle">
+      <MemberSignature Language="C#" Value="public IntPtr EventHandle;" />
+      <MemberSignature Language="ILAsm" Value=".field public native int EventHandle" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.NativeOverlapped.EventHandle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o identificador para um evento definido para o estado sinalizado quando a operação for concluída. O processo de chamada deve definir este membro para zero ou um evento válido tratar antes de chamar quaisquer funções sobrepostas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalHigh">
+      <MemberSignature Language="C#" Value="public IntPtr InternalHigh;" />
+      <MemberSignature Language="ILAsm" Value=".field public native int InternalHigh" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.NativeOverlapped.InternalHigh" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o comprimento dos dados transferidos. Reservado para uso do sistema operacional.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalLow">
+      <MemberSignature Language="C#" Value="public IntPtr InternalLow;" />
+      <MemberSignature Language="ILAsm" Value=".field public native int InternalLow" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.NativeOverlapped.InternalLow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um status dependente do sistema. Reservado para uso do sistema operacional.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetHigh">
+      <MemberSignature Language="C#" Value="public int OffsetHigh;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 OffsetHigh" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.NativeOverlapped.OffsetHigh" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a palavra alta do deslocamento de bytes no qual iniciar a transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse membro é ignorado quando a leitura ou gravação para dispositivos de comunicações e pipes nomeados e nesses casos, seu valor deve ser zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetLow">
+      <MemberSignature Language="C#" Value="public int OffsetLow;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 OffsetLow" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.NativeOverlapped.OffsetLow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Overlapped</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma posição de arquivo no qual iniciar a transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A posição do arquivo é um deslocamento de bytes do início do arquivo. O processo de chamada define esse membro antes de chamar a função OR. Esse membro é ignorado quando a leitura ou gravação para dispositivos de comunicações e pipes nomeados e, nesses casos, seu valor deve ser zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

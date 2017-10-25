@@ -1,0 +1,525 @@
+<Type Name="XsdDataContractExporter" FullName="System.Runtime.Serialization.XsdDataContractExporter">
+  <TypeSignature Language="C#" Value="public class XsdDataContractExporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XsdDataContractExporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.XsdDataContractExporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que a transformação de um conjunto de tipos do .NET Framework que são usadas em contratos de dados em um arquivo de esquema XML (. xsd).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.Serialization.XsdDataContractExporter> classe quando você criou um serviço Web que incorpora os dados representados por tipos common language runtime (CLR) e quando você precisa exportar esquemas XML para cada tipo a ser consumida por outros serviços da Web. Ou seja, <xref:System.Runtime.Serialization.XsdDataContractExporter> transforma um conjunto de tipos CLR em esquemas XML. (Para obter mais informações sobre os tipos que podem ser usados, consulte [tipos suportados pelo serializador de contrato de dados](~/docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).) Os esquemas, em seguida, podem ser expostos por meio de um documento WSDL Web Services Description Language () para uso por outras pessoas que precisam interagir com seu serviço.  
+  
+ Por outro lado, se você estiver criando um serviço Web que deve interoperar com um serviço da Web existente, use o <xref:System.Runtime.Serialization.XsdDataContractImporter> para transformar os esquemas XML e criar os tipos CLR que representam os dados em uma linguagem de programação selecionada.  
+  
+ O <xref:System.Runtime.Serialization.XsdDataContractExporter> gera um <xref:System.Xml.Schema.XmlSchemaSet> objeto que contém a coleção de esquemas. Acessar o conjunto de esquemas por meio de <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> propriedade.  
+  
+> [!NOTE]
+>  Para gerar rapidamente arquivos XSD (definição) do esquema XML que podem consumir outros serviços da Web, use o <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
+  
+## <a name="exporting-schemas-into-an-xmlschemaset"></a>Exportando esquemas em um XmlSchemaSet  
+ Para criar uma instância do <xref:System.Xml.Schema.XmlSchemaSet> classe que contém os arquivos de esquema XML, você deve estar ciente do seguinte.  
+  
+ O conjunto de tipos que você está exportando são registradas como um conjunto interno de contratos de dados. Assim, você pode chamar o <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> método várias vezes para adicionar novos tipos para o esquema definido sem afetar o desempenho porque apenas os novos tipos serão adicionados ao conjunto. Durante o <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> operação, os esquemas existentes são comparados com os novos esquemas que está sendo adicionados. Se houver conflitos, uma exceção será lançada. Um conflito é detectado geralmente se dois tipos com os mesmos dados de contrato de nome, mas diferentes contratos (membros diferentes) são exportados pelo mesmo <xref:System.Runtime.Serialization.XsdDataContractExporter> instância.  
+  
+## <a name="using-the-exporter"></a>Usando o exportador  
+ Uma forma recomendada de usar essa classe é o seguinte:  
+  
+1.  Use um do <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> sobrecargas para determinar se o tipo especificado ou o conjunto de tipos pode ser exportado. Use uma das sobrecargas que seja apropriada para suas necessidades.  
+  
+2.  Chamar correspondente <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> método.  
+  
+3.  Recuperar os esquemas do <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância do <xref:System.Runtime.Serialization.XsdDataContractExporter> e chama o <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%28System.Type%29> método.  
+  
+ [!code-csharp[XsdDataContractExporter#0](~/samples/snippets/csharp/VS_Snippets_CFX/xsddatacontractexporter/cs/overview.cs#0)]
+ [!code-vb[XsdDataContractExporter#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractexporter/vb/overview.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XsdDataContractExporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractExporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Serialization.XsdDataContractExporter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XsdDataContractExporter (System.Xml.Schema.XmlSchemaSet schemas);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Schema.XmlSchemaSet schemas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractExporter.#ctor(System.Xml.Schema.XmlSchemaSet)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> que contém os esquemas a serem exportados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Serialization.XsdDataContractExporter" /> classe com o conjunto especificado de esquemas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga quando você tiver uma <xref:System.Xml.Schema.XmlSchemaSet> à qual você deseja adicionar novos esquemas. Depois de construir um <xref:System.Runtime.Serialization.XsdDataContractExporter> com essa sobrecarga, chame o <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> método para adicionar novos tipos para o conjunto existente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CanExport">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém um valor que indica se um common language runtime (CLR) tipo (ou conjunto de tipos de) pode ser exportado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nem todos os tipos CLR podem ser usados em contratos de dados. Para obter mais informações sobre o que pode ser serializado, consulte [tipos suportados pelo serializador de contrato de dados](~/docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CanExport">
+      <MemberSignature Language="C#" Value="public bool CanExport (System.Collections.Generic.ICollection&lt;System.Reflection.Assembly&gt; assemblies);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanExport(class System.Collections.Generic.ICollection`1&lt;class System.Reflection.Assembly&gt; assemblies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractExporter.CanExport(System.Collections.Generic.ICollection{System.Reflection.Assembly})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblies" Type="System.Collections.Generic.ICollection&lt;System.Reflection.Assembly&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="assemblies">Um <see cref="T:System.Collections.Generic.ICollection`1" /> de <see cref="T:System.Reflection.Assembly" /> que contém os assemblies com os tipos para exportação.</param>
+        <summary>Obtém um valor que indica se o conjunto de tipos de .common language runtime (CLR) contidos em um conjunto de módulos (assemblies) pode ser exportado.</summary>
+        <returns>
+          <see langword="true" />Se os tipos podem ser exportados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExport">
+      <MemberSignature Language="C#" Value="public bool CanExport (System.Collections.Generic.ICollection&lt;Type&gt; types);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanExport(class System.Collections.Generic.ICollection`1&lt;class System.Type&gt; types) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractExporter.CanExport(System.Collections.Generic.ICollection{System.Type})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="types" Type="System.Collections.Generic.ICollection&lt;System.Type&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="types">Um <see cref="T:System.Collections.Generic.ICollection`1" /> que contém os tipos especificados para exportar.</param>
+        <summary>Obtém um valor que indica se o conjunto de tipos do .common language runtime (CLR) contidos em um <see cref="T:System.Collections.Generic.ICollection`1" /> podem ser exportados.</summary>
+        <returns>
+          <see langword="true" />Se os tipos podem ser exportados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExport">
+      <MemberSignature Language="C#" Value="public bool CanExport (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanExport(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractExporter.CanExport(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> para exportar.</param>
+        <summary>Obtém um valor que indica se o tipo common language runtime (CLR) especificado pode ser exportado.</summary>
+        <returns>
+          <see langword="true" />Se o tipo pode ser exportado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%28System.Type%29> método antes de chamar o <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%28System.Type%29> método.  
+  
+ [!code-csharp[XsdDataContractExporter#1](~/samples/snippets/csharp/VS_Snippets_CFX/xsddatacontractexporter/cs/overview.cs#1)]
+ [!code-vb[XsdDataContractExporter#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractexporter/vb/overview.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Export">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Transforma o tipo language runtime (CLR) comum ou conjunto de tipos, em um conjunto de esquemas XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como prática recomendada, use um do <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> sobrecargas para determinar se o tipo especificado ou o conjunto de tipos pode ser exportado.  
+  
+ Depois de chamar o <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> método, recuperar os esquemas do <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public void Export (System.Collections.Generic.ICollection&lt;System.Reflection.Assembly&gt; assemblies);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Export(class System.Collections.Generic.ICollection`1&lt;class System.Reflection.Assembly&gt; assemblies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractExporter.Export(System.Collections.Generic.ICollection{System.Reflection.Assembly})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblies" Type="System.Collections.Generic.ICollection&lt;System.Reflection.Assembly&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="assemblies">Um <see cref="T:System.Collections.Generic.ICollection`1" /> (de <see cref="T:System.Reflection.Assembly" />) que contém os tipos para exportação.</param>
+        <summary>Transforma os tipos contidos na coleção especificada de assemblies.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="assemblies" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um <see cref="T:System.Reflection.Assembly" /> na coleção é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public void Export (System.Collections.Generic.ICollection&lt;Type&gt; types);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Export(class System.Collections.Generic.ICollection`1&lt;class System.Type&gt; types) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractExporter.Export(System.Collections.Generic.ICollection{System.Type})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="types" Type="System.Collections.Generic.ICollection&lt;System.Type&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="types">Um <see cref="T:System.Collections.Generic.ICollection`1" /> (de <see cref="T:System.Type" />) que contém os tipos para exportação.</param>
+        <summary>Transforma os tipos contidos no <see cref="T:System.Collections.Generic.ICollection`1" /> passado para este método.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="types" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um tipo na coleção é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public void Export (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Export(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractExporter.Export(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> transformar em um esquema XML.</param>
+        <summary>Transforma especificado [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] tipo em um esquema de linguagem XSD de definição de esquema XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> para determinar se o tipo pode ser exportado. Depois de chamar o <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> método, o esquema pode ser recuperado por meio de <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootElementName">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName GetRootElementName (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlQualifiedName GetRootElementName(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> a ser consultado.</param>
+        <summary>Retorna o nome de nível superior e o namespace para o <see cref="T:System.Type" />.</summary>
+        <returns>O <see cref="T:System.Xml.XmlQualifiedName" /> que representa o nome de nível superior e o namespace para este <see cref="T:System.Type" />, que é gravado no fluxo durante a gravação desse objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaType GetSchemaType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlSchemaType GetSchemaType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo para retornar um esquema.</param>
+        <summary>Retorna o tipo de esquema XML para o tipo especificado.</summary>
+        <returns>Um <see cref="T:System.Xml.Schema.XmlSchemaType" /> que contém o esquema XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O principal objetivo desse método é permitir tipos anônimos no esquema XML para ser representado. Como tipos anônimos não tem um nome de contrato e um namespace, eles não podem ser pesquisados usando a <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A>. Esse método retorna o <xref:System.Xml.Schema.XmlSchemaType> definição para esses tipos. Os tipos para os quais o <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> método retorna um nome válido, esse método retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaTypeName">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName GetSchemaTypeName (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlQualifiedName GetSchemaTypeName(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> que foi exportado.</param>
+        <summary>Retorna o namespace do nome e contrato do contrato para o <see cref="T:System.Type" />.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlQualifiedName" /> que representa o nome do contrato do tipo e seu namespace.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.ExportOptions Options { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.ExportOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.XsdDataContractExporter.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ExportOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Runtime.Serialization.ExportOptions" /> que contém opções que podem ser definidas para a operação de exportação.</summary>
+        <value>Um <see cref="T:System.Runtime.Serialization.ExportOptions" /> que contém as opções usadas para personalizar como os tipos são exportados para esquemas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schemas">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaSet Schemas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaSet Schemas" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.XsdDataContractExporter.Schemas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de esquemas do XML exportados.</summary>
+        <value>Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> que contém os esquemas transformados do conjunto de tipos common language runtime (CLR) depois de chamar o <see cref="Overload:System.Runtime.Serialization.XsdDataContractExporter.Export" /> método.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

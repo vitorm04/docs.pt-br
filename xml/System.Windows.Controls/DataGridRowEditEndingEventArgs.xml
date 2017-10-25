@@ -1,0 +1,94 @@
+<Type Name="DataGridRowEditEndingEventArgs" FullName="System.Windows.Controls.DataGridRowEditEndingEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridRowEditEndingEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridRowEditEndingEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridRowEditEndingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Controls.DataGrid.RowEditEnding" /> .</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridRowEditEndingEventArgs (System.Windows.Controls.DataGridRow row, System.Windows.Controls.DataGridEditAction editAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Controls.DataGridRow row, valuetype System.Windows.Controls.DataGridEditAction editAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridRowEditEndingEventArgs.#ctor(System.Windows.Controls.DataGridRow,System.Windows.Controls.DataGridEditAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="row" Type="System.Windows.Controls.DataGridRow" />
+        <Parameter Name="editAction" Type="System.Windows.Controls.DataGridEditAction" />
+      </Parameters>
+      <Docs>
+        <param name="row">A linha para a qual o evento ocorreu.</param>
+        <param name="editAction">Um valor que indica se a edição foi cancelada ou confirmada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.DataGridRowEditEndingEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cancel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRowEditEndingEventArgs.Cancel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o evento deve ser cancelado.</summary>
+        <value>
+          <see langword="true" /> se o evento deve ser cancelado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditAction">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataGridEditAction EditAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.DataGridEditAction EditAction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRowEditEndingEventArgs.EditAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridEditAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a edição foi cancelada ou confirmada.</summary>
+        <value>Um valor que indica se a edição foi cancelada ou confirmada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Row">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.DataGridRow Row { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.DataGridRow Row" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridRowEditEndingEventArgs.Row" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.DataGridRow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a linha para a qual o evento ocorreu.</summary>
+        <value>A linha para a qual o evento ocorreu.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

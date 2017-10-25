@@ -1,0 +1,191 @@
+<Type Name="AxImporter" FullName="System.Windows.Forms.Design.AxImporter">
+  <TypeSignature Language="C#" Value="public class AxImporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AxImporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.AxImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Importa os controles ActiveX e gera um wrapper que pode ser acessado por um designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para gerar um wrapper do ActiveX para um controle ActiveX, primeiro crie ou obtenha uma instância do <xref:System.Windows.Forms.Design.AxImporter> classe. O <xref:System.Windows.Forms.Design.AxImporter> construtor aceita um <xref:System.Windows.Forms.Design.AxImporter.Options> objeto, que define as opções para o importador, como o nome do arquivo para o arquivo. dll do wrapper para gerar e para gerar o wrapper para o diretório de saída. Para gerar o wrapper do ActiveX, chame o método apropriado de gerar. Para gerar a partir de um arquivo, chame <xref:System.Windows.Forms.Design.AxImporter.GenerateFromFile%2A>. Para gerar a partir de uma biblioteca de tipos, chame <xref:System.Windows.Forms.Design.AxImporter.GenerateFromTypeLibrary%2A>. A cadeia de caracteres que é retornada consistirá em um nome qualificado de assembly (exemplo: "Namespace.Type,Assembly") para o tipo de um wrapper do ActiveX foi gerado. O wrapper para o controle ActiveX será gerado no arquivo. dll especificado no <xref:System.Windows.Forms.Design.AxImporter.Options.outputName> propriedade o <xref:System.Windows.Forms.Design.AxImporter.Options> passado para o <xref:System.Windows.Forms.Design.AxImporter> construtor. O tipo pode ser carregado ou consultado usando <xref:System.Reflection> e tratada como um tipo gerenciado comum. Você também pode chamar o `GetOcx` método do tipo para recuperar uma interface COM para o objeto, se o objeto der suporte a isso.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AxImporter (System.Windows.Forms.Design.AxImporter.Options options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Design.AxImporter/Options options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AxImporter.#ctor(System.Windows.Forms.Design.AxImporter.Options)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="System.Windows.Forms.Design.AxImporter+Options" />
+      </Parameters>
+      <Docs>
+        <param name="options">Um <see cref="T:System.Windows.Forms.Design.AxImporter.Options" /> que indica as opções para o importador de controle ActiveX usar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.AxImporter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratedAssemblies">
+      <MemberSignature Language="C#" Value="public string[] GeneratedAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] GeneratedAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.AxImporter.GeneratedAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os nomes dos assemblies que são gerados para o controle.</summary>
+        <value>Uma matriz de nomes dos assemblies gerados ou uma matriz de cadeia de caracteres vazia se nenhum assembly tiver sido gerado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratedSources">
+      <MemberSignature Language="C#" Value="public string[] GeneratedSources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] GeneratedSources" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.AxImporter.GeneratedSources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os nomes dos arquivos de origem que foram gerados.</summary>
+        <value>Uma matriz de nomes de arquivo dos arquivos de origem gerado, ou <see langword="null" /> se não houver nenhum.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratedTypeLibAttributes">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.TYPELIBATTR[] GeneratedTypeLibAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.InteropServices.TYPELIBATTR[] GeneratedTypeLibAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.AxImporter.GeneratedTypeLibAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TYPELIBATTR[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos para a biblioteca de tipos gerados.</summary>
+        <value>Uma matriz do tipo <see cref="T:System.Runtime.InteropServices.TYPELIBATTR" /> que indica os atributos para a biblioteca de tipos gerados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFromFile">
+      <MemberSignature Language="C#" Value="public string GenerateFromFile (System.IO.FileInfo file);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GenerateFromFile(class System.IO.FileInfo file) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AxImporter.GenerateFromFile(System.IO.FileInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="file" Type="System.IO.FileInfo" />
+      </Parameters>
+      <Docs>
+        <param name="file">Um <see cref="T:System.IO.FileInfo" /> indicando que o arquivo que contém o controle.</param>
+        <summary>Gera um wrapper para um controle ActiveX para uso no ambiente de tempo de design.</summary>
+        <returns>Um nome qualificado do assembly para o tipo de controle ActiveX para o qual um wrapper foi gerado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">Não foi possível carregar uma biblioteca de tipos de <paramref name="file" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFromTypeLibrary">
+      <MemberSignature Language="C#" Value="public string GenerateFromTypeLibrary (System.Runtime.InteropServices.UCOMITypeLib typeLib);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GenerateFromTypeLibrary(class System.Runtime.InteropServices.UCOMITypeLib typeLib) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AxImporter.GenerateFromTypeLibrary(System.Runtime.InteropServices.UCOMITypeLib)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeLib" Type="System.Runtime.InteropServices.UCOMITypeLib" />
+      </Parameters>
+      <Docs>
+        <param name="typeLib">Um <see cref="T:System.Runtime.InteropServices.UCOMITypeLib" /> que indica a biblioteca de tipos para gerar do controle.</param>
+        <summary>Gera um wrapper para um controle ActiveX para uso no ambiente de tempo de design.</summary>
+        <returns>Um nome qualificado do assembly para o tipo de controle ActiveX para o qual um wrapper foi gerado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">Nenhum controle ActiveX registrado foi encontrado no <paramref name="typeLib" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFromTypeLibrary">
+      <MemberSignature Language="C#" Value="public string GenerateFromTypeLibrary (System.Runtime.InteropServices.UCOMITypeLib typeLib, Guid clsid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GenerateFromTypeLibrary(class System.Runtime.InteropServices.UCOMITypeLib typeLib, valuetype System.Guid clsid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AxImporter.GenerateFromTypeLibrary(System.Runtime.InteropServices.UCOMITypeLib,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeLib" Type="System.Runtime.InteropServices.UCOMITypeLib" />
+        <Parameter Name="clsid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="typeLib">Um <see cref="T:System.Runtime.InteropServices.UCOMITypeLib" /> que indica a biblioteca de tipos para gerar do controle.</param>
+        <param name="clsid">O <see cref="T:System.Guid" /> para o wrapper do controle.</param>
+        <summary>Gera um wrapper para um controle ActiveX para uso no ambiente de tempo de design.</summary>
+        <returns>Um nome qualificado do assembly para o tipo de controle ActiveX para o qual um wrapper foi gerado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">Nenhum controle ActiveX registrado foi encontrado no <paramref name="typeLib" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileOfTypeLib">
+      <MemberSignature Language="C#" Value="public static string GetFileOfTypeLib (ref System.Runtime.InteropServices.TYPELIBATTR tlibattr);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFileOfTypeLib(valuetype System.Runtime.InteropServices.TYPELIBATTR&amp; tlibattr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AxImporter.GetFileOfTypeLib(System.Runtime.InteropServices.TYPELIBATTR@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tlibattr" Type="System.Runtime.InteropServices.TYPELIBATTR&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="tlibattr">Um <see cref="T:System.Runtime.InteropServices.TYPELIBATTR" /> que indica a biblioteca de tipos para recuperar o nome de arquivo.</param>
+        <summary>Obtém o nome de arquivo e caminho para a biblioteca de tipo especificado.</summary>
+        <returns>O caminho e nome de arquivo para a biblioteca de tipo especificado, ou <see langword="null" /> se a biblioteca não pôde ser localizada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

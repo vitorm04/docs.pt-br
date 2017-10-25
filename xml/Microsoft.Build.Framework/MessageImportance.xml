@@ -1,0 +1,75 @@
+<Type Name="MessageImportance" FullName="Microsoft.Build.Framework.MessageImportance">
+  <TypeSignature Language="C#" Value="public enum MessageImportance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MessageImportance extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.MessageImportance" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica constantes que definem a importância de uma mensagem de compilação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como gravar um agente básico que responde a eventos de compilação.  
+  
+ [!code-csharp[msbuild_BasicLogger#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BasicLogger/CS/msbuild_BasicLogger.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.MessageImportance High = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.MessageImportance.High" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MessageImportance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma mensagem de alta prioridade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Low">
+      <MemberSignature Language="C#" Value="Low" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.MessageImportance Low = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.MessageImportance.Low" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MessageImportance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma mensagem de baixa prioridade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Framework.MessageImportance Normal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.MessageImportance.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MessageImportance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma mensagem de prioridade normal.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,107 @@
+<Type Name="FilterEventArgs" FullName="System.Windows.Data.FilterEventArgs">
+  <TypeSignature Language="C#" Value="public class FilterEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FilterEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.FilterEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados de eventos e informações que estão associados com o <see cref="E:System.Windows.Data.CollectionViewSource.Filter" /> evento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como definir um manipulador de eventos para o <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType> evento. Neste exemplo, `listingDataView` é uma instância de <xref:System.Windows.Data.CollectionViewSource>.  
+  
+ [!code-csharp[DataBindingLab#10](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
+ [!code-vb[DataBindingLab#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
+  
+ O exemplo a seguir mostra a implementação do exemplo `ShowOnlyBargainsFilter` manipulador de eventos de filtro. Este manipulador de eventos usa o <xref:System.Windows.Data.FilterEventArgs.Accepted%2A?displayProperty=nameWithType> propriedade filtrar `AuctionItem` objetos que têm um `CurrentPrice` de $25,00 ou superior.  
+  
+ [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
+ [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
+  
+ Para o exemplo completo, consulte [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accepted">
+      <MemberSignature Language="C#" Value="public bool Accepted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Accepted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.FilterEventArgs.Accepted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o item passa o filtro.</summary>
+        <value>
+          <see langword="true" />Se o item passa o filtro. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como definir um manipulador de eventos para o <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType> evento. Neste exemplo, `listingDataView` é uma instância de <xref:System.Windows.Data.CollectionViewSource>.  
+  
+ [!code-csharp[DataBindingLab#10](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
+ [!code-vb[DataBindingLab#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
+  
+ O exemplo a seguir mostra a implementação do exemplo `ShowOnlyBargainsFilter` manipulador de eventos de filtro. Este manipulador de eventos usa o <xref:System.Windows.Data.FilterEventArgs.Accepted%2A?displayProperty=nameWithType> propriedade filtrar `AuctionItem` objetos que têm um `CurrentPrice` de $25,00 ou superior.  
+  
+ [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
+ [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
+  
+ Para o exemplo completo, consulte [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.FilterEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que o filtro deve testar.</summary>
+        <value>O objeto que o filtro deve testar. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como definir um manipulador de eventos para o <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType> evento. Neste exemplo, `listingDataView` é uma instância de <xref:System.Windows.Data.CollectionViewSource>.  
+  
+ [!code-csharp[DataBindingLab#10](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
+ [!code-vb[DataBindingLab#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
+  
+ O exemplo a seguir mostra a implementação do exemplo `ShowOnlyBargainsFilter` manipulador de eventos de filtro. Este manipulador de eventos usa o <xref:System.Windows.Data.FilterEventArgs.Accepted%2A?displayProperty=nameWithType> propriedade filtrar `AuctionItem` objetos que têm um `CurrentPrice` de $25,00 ou superior.  
+  
+ [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
+ [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
+  
+ Para o exemplo completo, consulte [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

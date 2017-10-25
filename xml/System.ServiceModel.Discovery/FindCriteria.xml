@@ -1,0 +1,366 @@
+<Type Name="FindCriteria" FullName="System.ServiceModel.Discovery.FindCriteria">
+  <TypeSignature Language="C#" Value="public class FindCriteria" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FindCriteria extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.FindCriteria" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os critérios a serem usados ao pesquisar serviços.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]usando <xref:System.ServiceModel.Discovery.FindCriteria> e a operação de localização, consulte [FindCriteria e descoberta localizar](~/docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FindCriteria ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.FindCriteria.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Discovery.FindCriteria" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FindCriteria (Type contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.FindCriteria.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contractType">O nome do tipo de contrato a ser pesquisado.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Discovery.FindCriteria" /> classe com o nome especificado de um tipo de contrato.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractTypeNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Xml.XmlQualifiedName&gt; ContractTypeNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Xml.XmlQualifiedName&gt; ContractTypeNames" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.FindCriteria.ContractTypeNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.XmlQualifiedName&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de nomes de tipo de contrato a ser pesquisado.</summary>
+        <value>Os nomes de tipo de contrato a ser pesquisado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se mais de um nome de contrato for especificado, somente pontos de extremidade correspondente a todos os contratos responderá.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMetadataExchangeEndpointCriteria">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Discovery.FindCriteria CreateMetadataExchangeEndpointCriteria ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Discovery.FindCriteria CreateMetadataExchangeEndpointCriteria() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.FindCriteria.CreateMetadataExchangeEndpointCriteria" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.FindCriteria</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria os critérios de ponto de extremidade de exchange metadados a ser usado ao procurar serviços.</summary>
+        <returns>Os critérios de ponto de extremidade a ser usado para localizar serviços.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMetadataExchangeEndpointCriteria">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Discovery.FindCriteria CreateMetadataExchangeEndpointCriteria (System.Collections.Generic.IEnumerable&lt;System.Xml.XmlQualifiedName&gt; contractTypeNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Discovery.FindCriteria CreateMetadataExchangeEndpointCriteria(class System.Collections.Generic.IEnumerable`1&lt;class System.Xml.XmlQualifiedName&gt; contractTypeNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.FindCriteria.CreateMetadataExchangeEndpointCriteria(System.Collections.Generic.IEnumerable{System.Xml.XmlQualifiedName})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.FindCriteria</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractTypeNames" Type="System.Collections.Generic.IEnumerable&lt;System.Xml.XmlQualifiedName&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="contractTypeNames">Uma coleção de enumerações que representam os nomes de tipo de contrato.</param>
+        <summary>Cria um objeto que contém os critérios de ponto de extremidade do exchange metadados derivados de uma coleção de nomes qualificados XML especificada.</summary>
+        <returns>Os critérios de ponto de extremidade a ser usado para localizar serviços.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Xml.XmlQualifiedName> é um nome local qualificado de namespace no formato de `namespace:localname`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMetadataExchangeEndpointCriteria">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Discovery.FindCriteria CreateMetadataExchangeEndpointCriteria (Type contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Discovery.FindCriteria CreateMetadataExchangeEndpointCriteria(class System.Type contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.FindCriteria.CreateMetadataExchangeEndpointCriteria(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.FindCriteria</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contractType">Um tipo de contrato de serviço.</param>
+        <summary>Cria um objeto que contém os critérios de ponto de extremidade de troca de metadados derivados do tipo de contrato especificado.</summary>
+        <returns>Os critérios de ponto de extremidade a ser usado para localizar serviços.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Discovery.FindCriteria> informações são usadas para criar um ponto de extremidade que pode procurar serviços.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public TimeSpan Duration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Duration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.FindCriteria.Duration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.TimeSpan" /> que especifica o período de tempo limite de operação de localizar.</summary>
+        <value>O período de tempo limite da operação de localização.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Xml.Linq.XElement&gt; Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Xml.Linq.XElement&gt; Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.FindCriteria.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Xml.Linq.XElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de extensões no <see cref="T:System.ServiceModel.Discovery.FindCriteria" /> instância.</summary>
+        <value>As extensões XML.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMatch">
+      <MemberSignature Language="C#" Value="public bool IsMatch (System.ServiceModel.Discovery.EndpointDiscoveryMetadata endpointDiscoveryMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsMatch(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata endpointDiscoveryMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.FindCriteria.IsMatch(System.ServiceModel.Discovery.EndpointDiscoveryMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpointDiscoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="endpointDiscoveryMetadata">Os metadados de descoberta do ponto de extremidade que descreve o serviço em questão.</param>
+        <summary>Determina se um conjunto de critérios coincide com o serviço descrito pelo especificado <see cref="T:System.ServiceModel.Discovery.EndpointDiscoveryMetadata" /> instância.</summary>
+        <returns>
+          <see langword="true" />Se o serviço corresponde aos critérios, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResults">
+      <MemberSignature Language="C#" Value="public int MaxResults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxResults" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.FindCriteria.MaxResults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de respostas necessárias da operação de localização.</summary>
+        <value>O número máximo de resposta necessária da operação de localização.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeMatchBy">
+      <MemberSignature Language="C#" Value="public Uri ScopeMatchBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ScopeMatchBy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um URI que especifica como os escopos são correspondidos.</summary>
+        <value>O URI que especifica como os escopos são correspondidos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeMatchByExact">
+      <MemberSignature Language="C#" Value="public static readonly Uri ScopeMatchByExact;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Uri ScopeMatchByExact" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os escopos sejam correspondidos usando uma comparação diferencia maiusculas de minúsculas (http://schemas.xmlsoap.org/ws/2004/10/discovery/strcmp0), conforme definido pelo [especificação WS-Discovery](http://go.microsoft.com/fwlink/?LinkId=122347).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeMatchByLdap">
+      <MemberSignature Language="C#" Value="public static readonly Uri ScopeMatchByLdap;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Uri ScopeMatchByLdap" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os escopos são correspondência usando o método LDAP (http://schemas.xmlsoap.org/ws/2004/10/discovery/ldap), conforme definido pelo [especificação WS-Discovery](http://go.microsoft.com/fwlink/?LinkId=122347).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeMatchByNone">
+      <MemberSignature Language="C#" Value="public static readonly Uri ScopeMatchByNone;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Uri ScopeMatchByNone" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os escopos são ignorados conforme definido pelo [especificação WS-Discovery](http://go.microsoft.com/fwlink/?LinkId=122347).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeMatchByPrefix">
+      <MemberSignature Language="C#" Value="public static readonly Uri ScopeMatchByPrefix;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Uri ScopeMatchByPrefix" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os escopos são correspondência usando o método de prefixo (http://schemas.xmlsoap.org/ws/2004/10/discovery/rfc2396), conforme definido pelo [especificação WS-Discovery](http://go.microsoft.com/fwlink/?LinkId=122347).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeMatchByUuid">
+      <MemberSignature Language="C#" Value="public static readonly Uri ScopeMatchByUuid;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Uri ScopeMatchByUuid" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os escopos são correspondência usando o método UUID (http://schemas.xmlsoap.org/ws/2004/10/discovery/uuid), conforme definido pelo [especificação WS-Discovery](http://go.microsoft.com/fwlink/?LinkId=122347).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scopes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Uri&gt; Scopes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Uri&gt; Scopes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.FindCriteria.Scopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de URIs absolutos que representa os escopos usados para pesquisar um serviço.</summary>
+        <value>Uma coleção de URIs absolutos usados para procurar um serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se mais de um escopo for especificado, somente pontos de extremidade correspondente a todos os escopos responderá.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

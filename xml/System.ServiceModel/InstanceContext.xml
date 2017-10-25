@@ -1,0 +1,833 @@
+<Type Name="InstanceContext" FullName="System.ServiceModel.InstanceContext">
+  <TypeSignature Language="C#" Value="public class InstanceContext : System.ServiceModel.Channels.CommunicationObject, System.ServiceModel.IExtensibleObject&lt;System.ServiceModel.InstanceContext&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstanceContext extends System.ServiceModel.Channels.CommunicationObject implements class System.ServiceModel.IExtensibleObject`1&lt;class System.ServiceModel.InstanceContext&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.InstanceContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.CommunicationObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IExtensibleObject&lt;System.ServiceModel.InstanceContext&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa as informações de contexto para uma instância de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir ilustra como obter as informações de contexto de instância de um serviço:  
+  
+ [!code-csharp[S_ServiceInstanceContext#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/service.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceContext (object implementation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object implementation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="implementation" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="implementation">O objeto que implementa a instância do serviço.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.InstanceContext" /> classe para um objeto que implementa a instância do serviço.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso define o host de serviço associado ao contexto de instância para `null`.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como construir um <xref:System.ServiceModel.InstanceContext> objeto passando um <xref:System.ServiceModel.ServiceHost> instância:  
+  
+ [!code-csharp[S_ServiceInstanceContext#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceContext (System.ServiceModel.ServiceHostBase host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.ServiceHostBase host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.#ctor(System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="host" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="host">O <see cref="T:System.ServiceModel.ServiceHostBase" /> que hospeda o serviço.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.InstanceContext" /> classe para um serviço hospedado por um host especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como construir um <xref:System.ServiceModel.InstanceContext> objeto passando um <xref:System.ServiceModel.ServiceHost> instância:  
+  
+ [!code-csharp[S_ServiceInstanceContext#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="host" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceContext (System.ServiceModel.ServiceHostBase host, object implementation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.ServiceHostBase host, object implementation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.#ctor(System.ServiceModel.ServiceHostBase,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="host" Type="System.ServiceModel.ServiceHostBase" />
+        <Parameter Name="implementation" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="host">O <see cref="T:System.ServiceModel.ServiceHostBase" /> que hospeda o serviço.</param>
+        <param name="implementation">O objeto que implementa a instância do serviço.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.InstanceContext" /> classe para um objeto que implementa a instância de serviço e é hospedado por um host especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir ilustra como criar um <xref:System.ServiceModel.InstanceContext> objeto criando primeiro o objeto de serviço e <xref:System.ServiceModel.ServiceHost> objeto:  
+  
+ [!code-csharp[S_ServiceInstanceContext#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCloseTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultCloseTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultCloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.InstanceContext.DefaultCloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOpenTimeout">
+      <MemberSignature Language="C#" Value="protected override TimeSpan DefaultOpenTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultOpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.InstanceContext.DefaultOpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.IExtensionCollection&lt;System.ServiceModel.InstanceContext&gt; Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.IExtensionCollection`1&lt;class System.ServiceModel.InstanceContext&gt; Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.InstanceContext.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.IExtensionCollection&lt;System.ServiceModel.InstanceContext&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de extensão, se houver, associado com a instância do serviço.</summary>
+        <value>O <see cref="T:System.ServiceModel.IExtensionCollection`1" /> do tipo <see cref="T:System.ServiceModel.InstanceContext" /> que contém os contextos da instância para as extensões da instância do serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como acessar o <xref:System.ServiceModel.InstanceContext.Extensions%2A> propriedade:  
+  
+ [!code-csharp[S_ServiceInstanceContext#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância do serviço associada a este contexto é fechada, mas não foi anulada.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">A instância do serviço associada a este contexto está em um estado de falha.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetServiceInstance">
+      <MemberSignature Language="C#" Value="public object GetServiceInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetServiceInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.GetServiceInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a instância do serviço para o contexto da instância.</summary>
+        <returns>O objeto que representa a instância do serviço.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_ServiceInstanceContext#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A instância de serviço está em um estado de criação ou abertura ou não foi inicializada.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectAbortedException">A instância do serviço será anulada.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância de serviço foi fechada já e não pode ser modificada em um desses estados.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">A instância do serviço está com defeito e não pode ser modificada em um desses estados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetServiceInstance">
+      <MemberSignature Language="C#" Value="public object GetServiceInstance (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetServiceInstance(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.GetServiceInstance(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de entrada que disparou a criação de um objeto de serviço.</param>
+        <summary>Retorna a instância do serviço para o contexto da instância em resposta a uma mensagem de entrada.</summary>
+        <returns>O objeto que representa a instância do serviço.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ideia geral é criar uma instância do serviço apenas quando uma mensagem direcionada ele chega, chamando <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>; assim, se nenhuma mensagem chega, não <xref:System.ServiceModel.InstanceContext> é criado e nenhum objeto de serviço é criado, e então recursos não são implantados até que realmente necessário.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_ServiceInstanceContext#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A instância de serviço está em um estado de criação ou abertura ou não foi inicializada.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectAbortedException">A instância do serviço será anulada.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância de serviço foi fechada já e não pode ser modificada em um desses estados.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">A instância do serviço está com defeito e não pode ser modificada em um desses estados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ServiceHostBase Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.ServiceHostBase Host" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.InstanceContext.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHostBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o host para a instância do serviço.</summary>
+        <value>O <see cref="T:System.ServiceModel.ServiceHostBase" /> que hospeda a instância de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como acessar o <xref:System.ServiceModel.InstanceContext.Host%2A> propriedade:  
+  
+ [!code-csharp[S_ServiceInstanceContext#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância do serviço associada a este contexto é fechada, mas não foi anulada.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">A instância do serviço associada a este contexto está em um estado de falha.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingChannels">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.ServiceModel.Channels.IChannel&gt; IncomingChannels { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Channels.IChannel&gt; IncomingChannels" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.InstanceContext.IncomingChannels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.ServiceModel.Channels.IChannel&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os canais de sessão são recebidos para a instância do serviço.</summary>
+        <value>O <see cref="T:System.Collections.Generic.ICollection`1" /> do tipo <see cref="T:System.ServiceModel.Channels.IChannel" /> que contém a entrada de canais de sessão para a instância do serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir ilustra como acessar o <xref:System.ServiceModel.InstanceContext.IncomingChannels%2A> propriedade:  
+  
+ [!code-csharp[S_ServiceInstanceContext#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/service.cs#6)]
+ [!code-csharp[S_ServiceInstanceContext#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância de serviço é fechada e não pode ser usada.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">A instância de serviço está em um estado de falha.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementManualFlowControlLimit">
+      <MemberSignature Language="C#" Value="public int IncrementManualFlowControlLimit (int incrementBy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IncrementManualFlowControlLimit(int32 incrementBy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.IncrementManualFlowControlLimit(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="incrementBy" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="incrementBy">O número adicional de mensagens que podem ser processadas pela instância de serviço.</param>
+        <summary>Aumenta o número de mensagens que podem ser processadas pela instância de serviço.</summary>
+        <returns>O novo limite no número de mensagens, depois de <paramref name="incrementBy" /> é adicionado, que podem ser processados pela instância de serviço.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_ServiceInstanceContext#12](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManualFlowControlLimit">
+      <MemberSignature Language="C#" Value="public int ManualFlowControlLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ManualFlowControlLimit" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.InstanceContext.ManualFlowControlLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um limite para o número de mensagens que podem ser processadas pelo contexto da instância.</summary>
+        <value>O número de mensagens que podem ser processadas pelo contexto da instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.ServiceModel.InstanceContext.ManualFlowControlLimit%2A> valor atinge zero não mais mensagens podem ser processadas.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_ServiceInstanceContext#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAbort">
+      <MemberSignature Language="C#" Value="protected override void OnAbort ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAbort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.OnAbort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginClose">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult OnBeginClose (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IAsyncResult OnBeginClose(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.OnBeginClose(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">To be added.</param>
+        <param name="callback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginOpen">
+      <MemberSignature Language="C#" Value="protected override IAsyncResult OnBeginOpen (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IAsyncResult OnBeginOpen(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.OnBeginOpen(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">To be added.</param>
+        <param name="callback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClose">
+      <MemberSignature Language="C#" Value="protected override void OnClose (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClose(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.OnClose(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected override void OnClosed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClosed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.OnClosed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndClose">
+      <MemberSignature Language="C#" Value="protected override void OnEndClose (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndClose(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.OnEndClose(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndOpen">
+      <MemberSignature Language="C#" Value="protected override void OnEndOpen (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEndOpen(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.OnEndOpen(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFaulted">
+      <MemberSignature Language="C#" Value="protected override void OnFaulted ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFaulted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.OnFaulted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpen">
+      <MemberSignature Language="C#" Value="protected override void OnOpen (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpen(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.OnOpen(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpened">
+      <MemberSignature Language="C#" Value="protected override void OnOpened ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpened() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.OnOpened" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnOpening">
+      <MemberSignature Language="C#" Value="protected override void OnOpening ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnOpening() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.OnOpening" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutgoingChannels">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.ServiceModel.Channels.IChannel&gt; OutgoingChannels { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Channels.IChannel&gt; OutgoingChannels" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.InstanceContext.OutgoingChannels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.ServiceModel.Channels.IChannel&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os canais de sessão que estão saindo da instância do serviço.</summary>
+        <value>O <see cref="T:System.Collections.Generic.ICollection`1" /> do tipo <see cref="T:System.ServiceModel.Channels.IChannel" /> que contém os canais de sessão de saída da instância do serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir ilustra como acessar o <xref:System.ServiceModel.InstanceContext.OutgoingChannels%2A> propriedade:  
+  
+ [!code-csharp[S_ServiceInstanceContext#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/service.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância de serviço é fechada e não pode ser usada.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">A instância de serviço está em um estado de falha.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseServiceInstance">
+      <MemberSignature Language="C#" Value="public void ReleaseServiceInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReleaseServiceInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.InstanceContext.ReleaseServiceInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera a instância de serviço.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_ServiceInstanceContext#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A instância de serviço está em um estado de criação ou abertura e não pode ser usada.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectAbortedException">A instância de serviço foi cancelada.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância do serviço está sendo fechado ou foi fechada já e não pode ser modificada.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">A instância do serviço está com defeito e não pode ser modificada em um desses estados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronizationContext">
+      <MemberSignature Language="C#" Value="public System.Threading.SynchronizationContext SynchronizationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.SynchronizationContext SynchronizationContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.InstanceContext.SynchronizationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.SynchronizationContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contexto usado para sincronização de thread com o contexto da instância atual.</summary>
+        <value>O <see cref="T:System.Threading.SynchronizationContext" /> usado para sincronização de thread com o contexto da instância atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_ServiceInstanceContext#13](~/samples/snippets/csharp/VS_Snippets_CFX/s_serviceinstancecontext/cs/snippets.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O objeto de comunicação está aberto ou fechar e não pode ser modificada em um desses estados.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectAbortedException">O objeto de comunicação foi anulado e não pode ser modificado em um desses estados.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto de comunicação foi fechado já e não pode ser modificado em um desses estados.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">O objeto de comunicação está com defeito e não pode ser modificado em um desses estados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.IExtensibleObject&lt;System.ServiceModel.InstanceContext&gt;.Extensions">
+      <MemberSignature Language="C#" Value="System.ServiceModel.IExtensionCollection&lt;System.ServiceModel.InstanceContext&gt; System.ServiceModel.IExtensibleObject&lt;System.ServiceModel.InstanceContext&gt;.Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.IExtensionCollection`1&lt;class System.ServiceModel.InstanceContext&gt; System.ServiceModel.IExtensibleObject&lt;System.ServiceModel.InstanceContext&gt;.Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.InstanceContext.System#ServiceModel#IExtensibleObject&lt;System#ServiceModel#InstanceContext&gt;#Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.IExtensionCollection&lt;System.ServiceModel.InstanceContext&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

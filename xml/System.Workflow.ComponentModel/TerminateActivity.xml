@@ -1,0 +1,216 @@
+<Type Name="TerminateActivity" FullName="System.Workflow.ComponentModel.TerminateActivity">
+  <TypeSignature Language="C#" Value="public sealed class TerminateActivity : System.Workflow.ComponentModel.Activity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TerminateActivity extends System.Workflow.ComponentModel.Activity" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.TerminateActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Activity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Workflow.ComponentModel.Design.TerminateDesigner), typeof(System.ComponentModel.Design.IDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(typeof(System.Workflow.ComponentModel.Design.ActivityToolboxItem))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Workflow.ComponentModel.TerminateActivity), "Resources.Terminate.png")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encerra a instância de fluxo de trabalho em execução quando ocorre uma situação anormal. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.TerminateActivity>Interrompe a execução da instância do fluxo de trabalho atual. Ao contrário de uma instância de fluxo de trabalho suspenso, uma instância de fluxo de trabalho encerrado nunca poderá ser retomada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TerminateActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.TerminateActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.TerminateActivity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Workflow.ComponentModel.TerminateActivity> classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Workflow.ComponentModel.TerminateActivity.Error%2A>|nulo (`Nothing` no Visual Basic).|  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra o uso do construtor para um <xref:System.Workflow.ComponentModel.TerminateActivity>e outros itens discutidos em outro lugar dentro desse tipo.  
+  
+ Este exemplo de código é parte do exemplo suspender e encerrar SDK e do arquivo de SuspendAndTerminateWorkflow.Designer.cs. Para obter mais informações, consulte [usando suspender e terminar](http://msdn.microsoft.com/en-us/f4dffa58-d01e-44fb-b5a1-3b283d2c4517).  
+  
+ [!code-csharp[WF_Samples#173](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#173)]
+ [!code-vb[WF_Samples#173](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#173)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TerminateActivity (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.TerminateActivity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome definido pelo usuário da atividade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.TerminateActivity" /> classe usando o nome da atividade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public string Error { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Error" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.TerminateActivity.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma mensagem de erro para informar aos administradores, fornecendo o motivo do término.</summary>
+        <value>Uma mensagem de erro que fornece o motivo para a terminação de instância de fluxo de trabalho. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade é definida quando a atividade está no modo de tempo de execução (o <xref:System.Workflow.ComponentModel.DependencyObject.DesignMode%2A> está definida como `false`) um <xref:System.Data.ReadOnlyException> é gerada.  
+  
+ Propagação dessa mensagem de erro é determinada pelo host (o Gerenciador de instância ou o provedor de persistência).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como definir a propriedade de erro.  Este exemplo é do exemplo de suspender e encerrar SDK.  Para obter mais informações, consulte [suspender e encerrar exemplo](http://msdn.microsoft.com/en-us/f4dffa58-d01e-44fb-b5a1-3b283d2c4517).  
+  
+ [!code-csharp[WF_Samples#176](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#176)]
+ [!code-vb[WF_Samples#176](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#176)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty ErrorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty ErrorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.TerminateActivity.ErrorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que tem como destino o <see cref="P:System.Workflow.ComponentModel.TerminateActivity.Error" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo ilustra Inicializando o <xref:System.Workflow.ComponentModel.TerminateActivity.Error%2A> propriedade para um <xref:System.Workflow.ComponentModel.TerminateActivity>e outros itens discutidos em outro lugar dentro desse tipo.  
+  
+ Este exemplo de código é parte do exemplo suspender e encerrar SDK e do arquivo de SuspendAndTerminateWorkflow.Designer.cs. Para obter mais informações, consulte [usando suspender e terminar](http://msdn.microsoft.com/en-us/f4dffa58-d01e-44fb-b5a1-3b283d2c4517).  
+  
+ [!code-csharp[WF_Samples#173](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#173)]
+ [!code-vb[WF_Samples#173](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#173)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override sealed System.Workflow.ComponentModel.ActivityExecutionStatus Execute (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Execute(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.TerminateActivity.Execute(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Initialize(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.TerminateActivity.Initialize(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

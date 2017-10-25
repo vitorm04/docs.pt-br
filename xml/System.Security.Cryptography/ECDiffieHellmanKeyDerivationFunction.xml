@@ -1,0 +1,103 @@
+<Type Name="ECDiffieHellmanKeyDerivationFunction" FullName="System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction">
+  <TypeSignature Language="C#" Value="public enum ECDiffieHellmanKeyDerivationFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ECDiffieHellmanKeyDerivationFunction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a função de derivação de chaves que a classe <see cref="T:System.Security.Cryptography.ECDiffieHellmanCng" /> usará para converter os acordos secretos no material de chave.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction> enumeração define o tipo de algoritmo que será usado para transformar um acordo secreto bruto no material de chave. O acordo secreto é o valor que é gerado a partir de uma chave privada e uma chave pública de outros fabricantes, como parte da troca de chave. É o valor de semente para o material da chave que é gerado pelo <xref:System.Security.Cryptography.ECDiffieHellmanCng.DeriveKeyMaterial%2A> método.  
+  
+ O <xref:System.Security.Cryptography.ECDiffieHellmanCng.KeyDerivationFunction%2A> propriedade usa esta enumeração para obter a função de derivação de chave para o <xref:System.Security.Cryptography.ECDiffieHellmanCng> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hash">
+      <MemberSignature Language="C#" Value="Hash" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction Hash = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hash" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um algoritmo de hash é usado para gerar o material de chave. O <see cref="P:System.Security.Cryptography.ECDiffieHellmanCng.HashAlgorithm" /> propriedade especifica o nome do algoritmo para usar. Se o nome do algoritmo não for especificado, <see cref="T:System.Security.Cryptography.SHA256" /> será usado como o algoritmo padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode especificar o <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretPrepend%2A> e <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretAppend%2A> propriedades, mas eles não são necessários.  
+  
+ A quantidade de material de chave é gerada é equivalente ao tamanho do valor de hash para o algoritmo especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hmac">
+      <MemberSignature Language="C#" Value="Hmac" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction Hmac = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um algoritmo de HMAC (Hash-based Message Authentication Code) é usado para gerar o material de chave. O <see cref="P:System.Security.Cryptography.ECDiffieHellmanCng.HmacKey" /> propriedade especifica a chave a ser usado. Ou esta propriedade deve ser definida ou o <see cref="P:System.Security.Cryptography.ECDiffieHellmanCng.UseSecretAgreementAsHmacKey" /> propriedade deve ser definida como <see langword="true" />; caso contrário, um <see cref="T:System.Security.Cryptography.CryptographicException" /> é gerada quando você usar <see cref="F:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Hmac" />. Se ambas as propriedades estiverem definidas, o contrato secreto será usado como a chave de HMAC.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode especificar o <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretPrepend%2A> e <xref:System.Security.Cryptography.ECDiffieHellmanCng.SecretAppend%2A> propriedades, mas eles não são necessários.  
+  
+ A quantidade de material de chave é gerada é equivalente ao tamanho do valor HMAC.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tls">
+      <MemberSignature Language="C#" Value="Tls" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction Tls = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Tls" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O protocolo TLS é usado para gerar o material de chave. As propriedades <see cref="P:System.Security.Cryptography.ECDiffieHellmanCng.Seed" /> e <see cref="P:System.Security.Cryptography.ECDiffieHellmanCng.Label" /> devem ser definidas, caso contrário, uma <see cref="T:System.Security.Cryptography.CryptographicException" /> será gerada quando você usar <see cref="F:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction.Tls" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor gera 160 bits de material de chave.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

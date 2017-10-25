@@ -1,0 +1,644 @@
+<Type Name="DomainUpDown" FullName="System.Windows.Forms.DomainUpDown">
+  <TypeSignature Language="C#" Value="public class DomainUpDown : System.Windows.Forms.UpDownBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DomainUpDown extends System.Windows.Forms.UpDownBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DomainUpDown" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.UpDownBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultBindingProperty("SelectedItem")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("SelectedItemChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Items")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma caixa de rotação do Windows (também conhecida como um controle superior/inferior) que exibe valores da cadeia de caracteres.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.DomainUpDown> controle exibe um valor de cadeia de caracteres único é selecionado de um <xref:System.Object> coleção clicando em cima ou para baixo de botões do controle. O usuário também pode inserir texto no controle, a menos que o <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> está definida como `true` (a cadeia de caracteres digitada deve corresponder a um item da coleção a ser aceito). Quando um item é selecionado, o objeto é convertido em um valor de cadeia de caracteres para que ele pode ser exibido na caixa de rotação.  
+  
+ Para criar uma coleção de objetos para exibir o <xref:System.Windows.Forms.DomainUpDown> controle, você pode adicionar ou remover os itens individualmente usando o <xref:System.Collections.ArrayList.Add%2A> e <xref:System.Collections.ArrayList.Remove%2A> métodos. Isso pode ser chamado em um manipulador de eventos, como o <xref:System.Windows.Forms.Control.Click> evento de um botão. A coleção de objetos pode ser classificada em ordem alfabética, definindo o <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> propriedade `true`. Quando o <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> está definida como `true`, se você rola após o último ou o primeiro objeto na coleção, a lista será iniciar com o primeiro ou último objeto respectivamente e aparecer a reversão em uma lista contínua.  
+  
+ Quando o <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> ou <xref:System.Windows.Forms.DomainUpDown.DownButton%2A> métodos são chamados no código ou com o clique de cima ou para baixo botões, <xref:System.Windows.Forms.DomainUpDown.UpdateEditText%2A> é chamado para atualizar o controle com a nova cadeia de caracteres. Se <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> é definido como `true`, a cadeia de caracteres corresponde a um dos valores da coleção antes de atualizar a exibição de texto do controle.  
+  
+ Começando com o [!INCLUDE[net_2015](~/includes/net-2015-md.md)], o <xref:System.Windows.Forms.DomainUpDown> controle será redimensionado com base na configuração de DPI do sistema quando o arquivo App. config contém a seguinte entrada:  
+  
+```  
+<appSettings>  
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />  
+</appSettings>  
+  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Windows.Forms.DomainUpDown> controle. O exemplo permite que você definir algumas de suas propriedades e criar uma coleção de cadeias de caracteres para exibição na caixa de rotação. O código supõe que um <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, e <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário. O exemplo também pressupõe que você tenha uma variável de membro no nível de classe declarado como um inteiro assinado de 32 bits chamado `myCounter`. Você pode inserir uma cadeia de caracteres na caixa de texto e adicioná-lo para o <xref:System.Windows.Forms.DomainUpDown.Items%2A> coleção quando o botão é clicado. Clicando na caixa de seleção, você pode alternar o <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> propriedade e observar a diferença na coleção de itens na caixa de rotação.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DomainUpDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DomainUpDown" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Windows.Forms.DomainUpDown> controle. O exemplo permite que você definir algumas de suas propriedades e criar uma coleção de cadeias de caracteres para exibição na caixa de rotação (também conhecido como um controle acima-abaixo). O código supõe que um <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, e <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário. O exemplo também pressupõe que você tenha uma variável de membro no nível de classe declarado como um inteiro assinado de 32 bits chamado `myCounter`. Você pode inserir uma cadeia de caracteres na caixa de texto e adicioná-lo para o <xref:System.Windows.Forms.DomainUpDown.Items%2A> coleção quando o botão é clicado. Clicando na caixa de seleção, você pode alternar o <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> propriedade e observar a diferença na coleção de itens na caixa de rotação.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto de acessibilidade para o <see cref="T:System.Windows.Forms.DomainUpDown" /> controle.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Forms.DomainUpDown.DomainUpDownAccessibleObject" /> para o controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não chamar explicitamente o <xref:System.Windows.Forms.DomainUpDown.CreateAccessibilityInstance%2A> método, ele será chamado quando o <xref:System.Windows.Forms.Control.AccessibilityObject%2A> propriedade é referenciada.  
+  
+> [!NOTE]
+>  Para obter ou definir o <xref:System.Windows.Forms.Control.AccessibilityObject%2A> propriedade, você deve adicionar uma referência para o assembly de acessibilidade instalado com o .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DomainUpDown.CreateAccessibilityInstance" /> em uma classe derivada, você não deve chamar a classe base <see cref="M:System.Windows.Forms.DomainUpDown.CreateAccessibilityInstance" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DownButton">
+      <MemberSignature Language="C#" Value="public override void DownButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DownButton() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.DownButton" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exibe o próximo item da coleção do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como percorrer a coleção de itens no <xref:System.Windows.Forms.DomainUpDown> controlar usando o botão para baixo, você eventualmente atingirá o último item na coleção. Se você continuar, e <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> é definido como `true`, a lista irá iniciar com o primeiro item na coleção e parecem ser contínua. Esse comportamento também ocorre quando você percorrer a coleção usando o botão de cima.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DomainUpDown/DomainUpDownItemCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.StringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DomainUpDown+DomainUpDownItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma coleção de objetos atribuídos à caixa de rotação (também conhecida como um controle superior/inferior).</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection" /> que contém uma coleção <see cref="T:System.Object" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Object> coleção pode ser criada e disponibilizada para o <xref:System.Windows.Forms.DomainUpDown> controle de duas maneiras. Você pode adicionar itens à coleção usando o <xref:System.Collections.ArrayList.Add%2A> ou <xref:System.Collections.ArrayList.Insert%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Windows.Forms.DomainUpDown> controle. O exemplo permite que você definir algumas de suas propriedades e criar uma coleção de cadeias de caracteres para exibição na caixa de rotação. O código supõe que um <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, e <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário. O exemplo também pressupõe que você tenha uma variável de membro no nível de classe declarado como um inteiro assinado de 32 bits chamado `myCounter`. Você pode inserir uma cadeia de caracteres na caixa de texto e adicioná-lo para o <xref:System.Windows.Forms.DomainUpDown.Items%2A> coleção quando o botão é clicado. Clicando na caixa de seleção, você pode alternar o <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> propriedade e observar a diferença na coleção de itens na caixa de rotação.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanged">
+      <MemberSignature Language="C#" Value="protected override void OnChanged (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnChanged(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.OnChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DomainUpDown.SelectedItemChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectedItemChanged">
+      <MemberSignature Language="C#" Value="protected void OnSelectedItemChanged (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnSelectedItemChanged(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.OnSelectedItemChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DomainUpDown.SelectedItemChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.DomainUpDown.OnSelectedItemChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Windows.Forms.DomainUpDown> controle. O exemplo permite que você definir algumas de suas propriedades e criar uma coleção de cadeias de caracteres para exibição na caixa de rotação (também conhecido como um controle acima-abaixo). O código supõe que um <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, e <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário. O exemplo também pressupõe que você tenha uma variável de membro no nível de classe declarado como um inteiro assinado de 32 bits chamado `myCounter`. Você pode inserir uma cadeia de caracteres na caixa de texto e adicioná-lo para o <xref:System.Windows.Forms.DomainUpDown.Items%2A> coleção quando o botão é clicado. Clicando na caixa de seleção, você pode alternar o <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> propriedade e observar a diferença na coleção de itens na caixa de rotação.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DomainUpDown.OnSelectedItemChanged(System.Object,System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DomainUpDown.OnSelectedItemChanged(System.Object,System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextBoxKeyPress">
+      <MemberSignature Language="C#" Value="protected override void OnTextBoxKeyPress (object source, System.Windows.Forms.KeyPressEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextBoxKeyPress(object source, class System.Windows.Forms.KeyPressEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.OnTextBoxKeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.Windows.Forms.KeyPressEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.Windows.Forms.KeyPressEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.KeyPress" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> está definida como `true`, o <xref:System.Windows.Forms.DomainUpDown> controle escolhe o item da lista que começa com o caractere. Se mais de um item na coleção começa com o mesmo caractere, o <xref:System.Windows.Forms.DomainUpDown> controle seleciona o próximo item que começa com o caractere digitado, a partir da posição selecionada no momento.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.DomainUpDown.OnTextBoxKeyPress%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DomainUpDown.OnTextBoxKeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DomainUpDown.OnTextBoxKeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o espaçamento entre o conteúdo do controle <see cref="T:System.Windows.Forms.DomainUpDown" /> e suas bordas.</summary>
+        <value>
+          <see cref="F:System.Windows.Forms.Padding.Empty" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mesmo que você defina o <xref:System.Windows.Forms.DomainUpDown.Padding%2A> propriedade, ele terá um valor de <xref:System.Windows.Forms.Padding.Empty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DomainUpDown.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DomainUpDown.Padding" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndex">
+      <MemberSignature Language="C#" Value="public int SelectedIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectedIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.SelectedIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de índice do item selecionado.</summary>
+        <value>O valor de índice baseado em zero do item selecionado. O valor padrão é -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DomainUpDown.SelectedIndex%2A> propriedade contém o valor de índice do item na coleção que está selecionada atualmente na caixa de rotação (também conhecido como um controle acima-abaixo). Itens de coleção podem ser reatribuídos novos valores de índice se o <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> propriedade foi alterada de `false` para `true`. Como a coleção novamente é classificada em ordem alfabética, os itens serão atribuídos um novo valor de índice.  
+  
+> [!NOTE]
+>  Se o usuário tiver inserido um item na caixa de rotação, ou se nenhum item foi selecionado, o <xref:System.Windows.Forms.DomainUpDown.SelectedIndex%2A> valor será o valor padrão, -1.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Windows.Forms.DomainUpDown> controle. O exemplo permite que você definir algumas de suas propriedades e criar uma coleção de cadeias de caracteres para exibição na caixa de rotação. O código supõe que um <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, e <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário. O exemplo também pressupõe que você tenha uma variável de membro no nível de classe declarado como um inteiro assinado de 32 bits chamado `myCounter`. Você pode inserir uma cadeia de caracteres na caixa de texto e adicioná-lo para o <xref:System.Windows.Forms.DomainUpDown.Items%2A> coleção quando o botão é clicado. Clicando na caixa de seleção, você pode alternar o <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> propriedade e observar a diferença na coleção de itens na caixa de rotação.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor atribuído é menor que o padrão, -1.  
+  
+ -ou-  
+  
+ O valor atribuído é maior que a contagem <see cref="P:System.Windows.Forms.DomainUpDown.Items" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItem">
+      <MemberSignature Language="C#" Value="public object SelectedItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SelectedItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.SelectedItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o item selecionado com base no valor do índice do item selecionado na coleção.</summary>
+        <value>O item selecionado com base no valor <see cref="P:System.Windows.Forms.DomainUpDown.SelectedIndex" />. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade for definida, o valor é validado para ser um dos itens na coleção e o <xref:System.Windows.Forms.DomainUpDown.SelectedIndex%2A> propriedade é definida como o valor de índice apropriado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Windows.Forms.DomainUpDown> controle. O exemplo permite que você definir algumas de suas propriedades e criar uma coleção de cadeias de caracteres para exibição na caixa de rotação (também conhecido como um controle acima-abaixo). O código supõe que um <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, e <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário. O exemplo também pressupõe que você tenha uma variável de membro no nível de classe declarado como um inteiro assinado de 32 bits chamado `myCounter`. Você pode inserir uma cadeia de caracteres na caixa de texto e adicioná-lo para o <xref:System.Windows.Forms.DomainUpDown.Items%2A> coleção quando o botão é clicado. Clicando na caixa de seleção, você pode alternar o <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> propriedade e observar a diferença na coleção de itens na caixa de rotação.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItemChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectedItemChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectedItemChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DomainUpDown.SelectedItemChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DomainUpDown.SelectedItem" /> propriedade foi alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o <xref:System.Windows.Forms.DomainUpDown.SelectedItemChanged> evento ocorra, o <xref:System.Windows.Forms.DomainUpDown.SelectedItem%2A> propriedade pode ser alterada no código, o usuário digitar um novo valor ou clicando em cima do controle ou para baixo de botões.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DomainUpDown.SelectedItemChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DomainUpDown> chamado `DomainUpDown1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DomainUpDown.SelectedItemChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#381](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#381)]
+ [!code-vb[System.Windows.Forms.EventExamples#381](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#381)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sorted">
+      <MemberSignature Language="C#" Value="public bool Sorted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Sorted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.Sorted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a coleção de itens é classificada.</summary>
+        <value>
+          <see langword="true" />Se a coleção de itens é classificada; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> é definido como `true`, a coleção é classificada em ordem alfabética.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Windows.Forms.DomainUpDown> controle. O exemplo permite que você definir algumas de suas propriedades e criar uma coleção de cadeias de caracteres para exibição na caixa de rotação (também conhecido como um controle acima-abaixo). O código supõe que um <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, e <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário. O exemplo também pressupõe que você tenha uma variável de membro no nível de classe declarado como um inteiro assinado de 32 bits chamado `myCounter`. Você pode inserir uma cadeia de caracteres na caixa de texto e adicioná-lo para o <xref:System.Windows.Forms.DomainUpDown.Items%2A> coleção quando o botão é clicado. Clicando na caixa de seleção, você pode alternar o <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> propriedade e observar a diferença na coleção de itens na caixa de rotação.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o controle <see cref="T:System.Windows.Forms.DomainUpDown" />.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.DomainUpDown" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres de retorno inclui o tipo e os valores para o <xref:System.Collections.ArrayList.Count%2A> e <xref:System.Windows.Forms.DomainUpDown.SelectedIndex%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpButton">
+      <MemberSignature Language="C#" Value="public override void UpButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void UpButton() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.UpButton" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exibe o item anterior na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como percorrer a coleção de itens no <xref:System.Windows.Forms.DomainUpDown> controlar usando o botão de cima, você eventualmente atingirá o primeiro item na coleção. Se você continuar, e <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> é definido como `true`, a lista irá iniciar com o último item na coleção e parecem ser contínua. Esse comportamento também ocorre quando você percorrer a coleção usando o botão para baixo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateEditText">
+      <MemberSignature Language="C#" Value="protected override void UpdateEditText ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void UpdateEditText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.UpdateEditText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza o texto na caixa de rotação (também conhecido como um controle acima-abaixo) para exibir o item selecionado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="public bool Wrap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Wrap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.Wrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a coleção de itens continua o primeiro ou último item se o usuário continua após o fim da lista.</summary>
+        <value>
+          <see langword="true" />Se a lista comece novamente quando o usuário atinge o início ou fim da coleção; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> está definida como `true`, se você atingir o último item na coleção e continuar, a lista irá iniciar com o primeiro item e parecem ser contínua. Esse comportamento funciona no sentido inverso também.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Windows.Forms.DomainUpDown> controle. O exemplo permite que você definir algumas de suas propriedades e criar uma coleção de cadeias de caracteres para exibição na caixa de rotação (também conhecido como um controle acima-abaixo). O código supõe que um <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.CheckBox>, e <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário. O exemplo também pressupõe que você tenha uma variável de membro no nível de classe declarado como um inteiro assinado de 32 bits chamado `myCounter`. Você pode inserir uma cadeia de caracteres na caixa de texto e adicioná-lo para o <xref:System.Windows.Forms.DomainUpDown.Items%2A> coleção quando o botão é clicado. Clicando na caixa de seleção, você pode alternar o <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> propriedade e observar a diferença na coleção de itens na caixa de rotação.  
+  
+ [!code-cpp[Classic DomainUpDown Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DomainUpDown Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DomainUpDown Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DomainUpDown Example/CS/source.cs#1)]
+ [!code-vb[Classic DomainUpDown Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DomainUpDown Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

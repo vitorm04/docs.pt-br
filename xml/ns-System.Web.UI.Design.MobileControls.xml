@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.Design.MobileControls">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.Design.MobileControls" /> namespace contém classes que oferecem suporte em tempo de design para as classes de <see cref="N:System.Web.UI.MobileControls" /> namespace.  Para obter informações sobre como desenvolver aplicativos móveis, consulte o <see href="http://go.microsoft.com/fwlink/?LinkID=182900">www.asp.net/mobile</see> site da Web.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

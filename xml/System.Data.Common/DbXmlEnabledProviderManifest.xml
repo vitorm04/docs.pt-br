@@ -1,0 +1,195 @@
+<Type Name="DbXmlEnabledProviderManifest" FullName="System.Data.Common.DbXmlEnabledProviderManifest">
+  <TypeSignature Language="C#" Value="public abstract class DbXmlEnabledProviderManifest : System.Data.Common.DbProviderManifest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbXmlEnabledProviderManifest extends System.Data.Common.DbProviderManifest" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DbXmlEnabledProviderManifest" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbProviderManifest</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma classe base que implementa o <see cref="T:System.Data.Common.DbProviderManifest" /> com base em uma definição de XML. Você pode usar o <see cref="T:System.Data.Common.DbXmlEnabledProviderManifest" /> classe para obter informações específicas do provedor em tempo de execução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Common.DbXmlEnabledProviderManifest> classe é especialmente apropriada para os provedores de mapeamento cujo tipo EDM é simétrico. Em cenários de mapeamento de tipo simétrico, cada tipo de armazenamento mapeia para um único tipo de modelo de dados de entidade (EDM), independentemente da direção de mapeamento. Em outras palavras, o mapeamento de tipo de EDM para o provedor é o mesmo que o mapeamento de tipo de provedor para EDM.  
+  
+ Em cenários de mapeamento simétrica, você pode derivar sua classe de provedor personalizado do <xref:System.Data.Common.DbXmlEnabledProviderManifest> classe ou o <xref:System.Data.Common.DbProviderManifest> classe. É recomendável que você deriva a classe de provedor personalizado do <xref:System.Data.Common.DbXmlEnabledProviderManifest> classe para cenários de mapeamento simétrica porque o <xref:System.Data.Common.DbXmlEnabledProviderManifest> classe permitirá que você especifique os manifestos declarativamente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DbXmlEnabledProviderManifest (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbXmlEnabledProviderManifest.#ctor(System.Xml.XmlReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.Xml.XmlReader" /> objeto que fornece acesso aos dados XML no arquivo de manifesto do provedor.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Common.DbXmlEnabledProviderManifest" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Entity Framework fornece uma implementação padrão que cria o provedor de informação do XmlReader determinado do manifesto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFacetDescriptions">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.FacetDescription&gt; GetFacetDescriptions (System.Data.Metadata.Edm.EdmType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.FacetDescription&gt; GetFacetDescriptions(class System.Data.Metadata.Edm.EdmType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbXmlEnabledProviderManifest.GetFacetDescriptions(System.Data.Metadata.Edm.EdmType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.FacetDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Data.Metadata.Edm.EdmType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Data.Metadata.Edm.EdmType" /> para que as descrições da faceta devem ser recuperados.</param>
+        <summary>Retorna a lista de descrições de faceta para o tipo de modelo de dados de entidade (EDM) especificado.</summary>
+        <returns>Uma coleção de tipo <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> que contém a lista de descrições de faceta para o tipo EDM especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStoreFunctions">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt; GetStoreFunctions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.EdmFunction&gt; GetStoreFunctions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbXmlEnabledProviderManifest.GetStoreFunctions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.EdmFunction&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a lista de funções de suporte para o provedor.</summary>
+        <returns>Uma coleção de tipo <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> que contém a lista de funções de suporte para o provedor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método (não permite valor nulo) não retorna as funções definidas pelo usuário. Se o provedor não oferece suporte a todas as funções, esse método retorna uma coleção vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStoreTypes">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.PrimitiveType&gt; GetStoreTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Data.Metadata.Edm.PrimitiveType&gt; GetStoreTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbXmlEnabledProviderManifest.GetStoreTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Data.Metadata.Edm.PrimitiveType&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a lista de tipos primitivos com suporte pelo provedor de armazenamento.</summary>
+        <returns>Uma coleção de tipo <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> que contém a lista de tipos primitivos com suporte pelo provedor de armazenamento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o repositório não oferece suporte a qualquer tipo, esse método (não permite valor nulo) retorna uma coleção vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceName">
+      <MemberSignature Language="C#" Value="public override string NamespaceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbXmlEnabledProviderManifest.NamespaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do namespace com suporte neste manifesto do provedor.</summary>
+        <value>O nome do namespace com suporte neste manifesto do provedor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreTypeNameToEdmPrimitiveType">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;string,System.Data.Metadata.Edm.PrimitiveType&gt; StoreTypeNameToEdmPrimitiveType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Data.Metadata.Edm.PrimitiveType&gt; StoreTypeNameToEdmPrimitiveType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbXmlEnabledProviderManifest.StoreTypeNameToEdmPrimitiveType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Data.Metadata.Edm.PrimitiveType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o melhor mapeado tipo equivalente do modelo de dados de entidade (EDM) para um nome de tipo de armazenamento especificado.</summary>
+        <value>A melhor mapeado tipo EDM equivalente para um nome de tipo de armazenamento especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade (não permite valor nulo) retorna o <xref:System.Collections.Generic.Dictionary`2> objeto, que aceita um nome de tipo de armazenamento como uma chave e retorna seu valor associado do tipo EDM.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreTypeNameToStorePrimitiveType">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;string,System.Data.Metadata.Edm.PrimitiveType&gt; StoreTypeNameToStorePrimitiveType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Data.Metadata.Edm.PrimitiveType&gt; StoreTypeNameToStorePrimitiveType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.DbXmlEnabledProviderManifest.StoreTypeNameToStorePrimitiveType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Data.Metadata.Edm.PrimitiveType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o melhor tipo primitivo de armazenamento equivalente mapeada para um nome de tipo de armazenamento especificado.</summary>
+        <value>A melhor mapeado tipo primitivo de armazenamento equivalente para um nome de tipo de armazenamento especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade (não permite valor nulo) retorna o <xref:System.Collections.Generic.Dictionary`2> objeto, que aceita um nome de tipo de armazenamento como uma chave e retorna seu valor de tipo primitivo de armazenamento associadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

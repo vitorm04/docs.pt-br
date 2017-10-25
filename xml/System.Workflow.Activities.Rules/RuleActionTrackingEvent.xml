@@ -1,0 +1,90 @@
+<Type Name="RuleActionTrackingEvent" FullName="System.Workflow.Activities.Rules.RuleActionTrackingEvent">
+  <TypeSignature Language="C#" Value="public class RuleActionTrackingEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RuleActionTrackingEvent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleActionTrackingEvent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém o nome, a ID de instância e o resultado da condição de uma regra que foi avaliada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent> classe. Este exemplo de código é parte do exemplo RuleActionTrackingEventSample SDK do arquivo ConsoleTrackingService.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][RuleActionTrackingEvent exemplo](http://msdn.microsoft.com/en-us/cea1192f-82e2-4c8a-acc0-5f8ed462de73).  
+  
+ [!code-csharp[wf_samples#162](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#162)]
+ [!code-vb[wf_samples#162](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#162)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConditionResult">
+      <MemberSignature Language="C#" Value="public bool ConditionResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConditionResult" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleActionTrackingEvent.ConditionResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o resultado da avaliação da condição.</summary>
+        <value>O resultado da condição de regra: <see langword="true" /> ou <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent> classe e imprimir o valor da <xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent.ConditionResult%2A> propriedade para o console após a execução da regra. Este exemplo de código é parte do exemplo RuleActionTrackingEventSample SDK do arquivo ConsoleTrackingService.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][RuleActionTrackingEvent exemplo](http://msdn.microsoft.com/en-us/cea1192f-82e2-4c8a-acc0-5f8ed462de73).  
+  
+ [!code-csharp[wf_samples#162](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#162)]
+ [!code-vb[wf_samples#162](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#162)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuleName">
+      <MemberSignature Language="C#" Value="public string RuleName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RuleName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleActionTrackingEvent.RuleName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do <see cref="T:System.Workflow.Activities.Rules.Rule" /> que causou o <see cref="T:System.Workflow.Activities.Rules.RuleActionTrackingEvent" /> a ser gerado.</summary>
+        <value>O <see cref="T:System.Workflow.Activities.Rules.Rule" /> que causou uma ou mais ações executar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent> classe e imprimir o valor da <xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent.RuleName%2A> propriedade para o console após a execução da regra. Este exemplo de código é parte do exemplo RuleActionTrackingEventSample SDK do arquivo ConsoleTrackingService.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][RuleActionTrackingEvent exemplo](http://msdn.microsoft.com/en-us/cea1192f-82e2-4c8a-acc0-5f8ed462de73).  
+  
+ [!code-csharp[wf_samples#162](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#162)]
+ [!code-vb[wf_samples#162](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#162)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,650 @@
+<Type Name="ClientOperation" FullName="System.ServiceModel.Dispatcher.ClientOperation">
+  <TypeSignature Language="C#" Value="public sealed class ClientOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ClientOperation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.ClientOperation" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.ClientOperationCompatBase</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="xamarinandroid-7.1">System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado para modificar ou estender o comportamento de execução de uma operação em um objeto do cliente ou objeto do canal do cliente. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Dispatcher.ClientOperation> classe é o local para modificações de tempo de execução do cliente e a inserção de ponto para extensões personalizadas que têm o escopo para apenas uma operação de serviço. (Para modificar o comportamento de tempo de execução do cliente para todas as mensagens em um contrato, use o <xref:System.ServiceModel.Dispatcher.ClientRuntime> classe. )  
+  
+ Instalar <xref:System.ServiceModel.Dispatcher.ClientOperation> modificações usando um objeto de comportamento do cliente personalizado, do tipo <xref:System.ServiceModel.Description.IContractBehavior> (para localizar uma determinada operação modificar) ou de tipo <xref:System.ServiceModel.Description.IOperationBehavior> (que, em seguida, podem ser aplicado por meio da criação de um atributo personalizado).  
+  
+ Use o <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> propriedade para localizar o <xref:System.ServiceModel.Dispatcher.ClientOperation> objeto que representa uma operação de serviço específico.  
+  
+ Para obter mais informações sobre os clientes e a arquitetura do cliente, consulte [Acessando serviços usando um cliente WCF](~/docs/framework/wcf/feature-details/accessing-services-using-a-client.md) e [arquitetura do cliente WCF](~/docs/framework/wcf/feature-details/client-architecture.md). Para obter mais informações sobre como personalizar o tempo de execução do cliente, consulte [estendendo clientes](~/docs/framework/wcf/extending/extending-clients.md). Para obter mais informações sobre como usar comportamentos, consulte [Configurando e estendendo o tempo de execução com comportamentos](~/docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+  
+ As propriedades a seguir permitem que você inserir objetos personalizados ou modificar o comportamento de execução do cliente:  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> propriedade para inserir um personalizado <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> implementação de uma operação ou modificar o formatador atual.  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A> propriedade para inserir um personalizado <xref:System.ServiceModel.Dispatcher.IParameterInspector> implementação ou para modificar o atual.  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A> propriedade para controlar quem serializa uma mensagem de saída.  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A> propriedade para controlar quem desserializa uma mensagem de entrada.  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A> propriedade para acessar a ação WS-Addressing da mensagem de solicitação e o <xref:System.ServiceModel.Dispatcher.ClientOperation.ReplyAction%2A> propriedade para acessar a ação de mensagem de resposta.  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> e <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> para especificar quais métodos de cliente são associados uma operação assíncrona.  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A> como o tipo de detalhe de falhas de propriedade para obter uma coleção de tipos especificados que podem aparecer em SOAP.  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating%2A> e <xref:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating%2A> propriedades para controlar se uma sessão é iniciada ou interrompida para baixo, respectivamente, quando a operação é chamada.  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay%2A> propriedade para controlar se o cliente aguardará por uma resposta antes da conclusão da invocação.  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.Parent%2A> propriedade para obter o contendo <xref:System.ServiceModel.Dispatcher.ClientRuntime> objeto.  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.Name%2A> propriedade para obter o nome da operação.  
+  
+-   Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> propriedade para controlar qual método é mapeado para a operação.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra uma <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> inserindo um Inspetor de parâmetro personalizado em cada <xref:System.ServiceModel.Dispatcher.ClientOperation> no <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-csharp[Interceptors#2](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#2)]
+ [!code-vb[Interceptors#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientOperation (System.ServiceModel.Dispatcher.ClientRuntime parent, string name, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Dispatcher.ClientRuntime parent, string name, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ClientOperation.#ctor(System.ServiceModel.Dispatcher.ClientRuntime,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parent" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O que contém <see cref="T:System.ServiceModel.Dispatcher.ClientRuntime" /> objeto.</param>
+        <param name="name">O nome da operação.</param>
+        <param name="action">A ação da operação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.ClientOperation" /> classe usando especificado <see cref="T:System.ServiceModel.Dispatcher.ClientRuntime" />, nome e valores de ação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientOperation (System.ServiceModel.Dispatcher.ClientRuntime parent, string name, string action, string replyAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Dispatcher.ClientRuntime parent, string name, string action, string replyAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.ClientOperation.#ctor(System.ServiceModel.Dispatcher.ClientRuntime,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parent" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="replyAction" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O que contém <see cref="T:System.ServiceModel.Dispatcher.ClientRuntime" /> objeto.</param>
+        <param name="name">O nome da operação.</param>
+        <param name="action">A ação da operação.</param>
+        <param name="replyAction">A ação da mensagem de resposta.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.ClientOperation" /> classe usando especificado <see cref="T:System.ServiceModel.Dispatcher.ClientRuntime" />, nome, ação, e valores de ação de resposta.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ação da operação.</summary>
+        <value>A ação da operação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, esse valor corresponde ao valor de <xref:System.ServiceModel.OperationContractAttribute.Action%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo BeginMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo BeginMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método associado a uma operação assíncrona.</summary>
+        <value>Um <see cref="T:System.Reflection.MethodInfo" /> objeto que representa o método que manipula a parte inicial de um par de método assíncrono ou <see langword="null" /> se a operação não é parte de um par de método assíncrono.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientParameterInspectors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.IParameterInspector&gt; ClientParameterInspectors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.IParameterInspector&gt; ClientParameterInspectors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.ClientParameterInspectors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.IParameterInspector&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos do Inspetor de parâmetro usados para exibir ou modificar os parâmetros antes ou após uma chamada de cliente.</summary>
+        <value>Uma coleção de objetos do Inspetor de parâmetro usados para exibir ou modificar os parâmetros antes ou após uma chamada de cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ClientParameterInspectors é uma coleção thread-safe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeReply">
+      <MemberSignature Language="C#" Value="public bool DeserializeReply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DeserializeReply" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="P:System.ServiceModel.Dispatcher.ClientOperation.Formatter" /> o valor da propriedade é usado para desserializar a mensagem de resposta.</summary>
+        <value>
+          <see langword="true" />Se o tipo de retorno não é um <see cref="T:System.ServiceModel.Channels.Message" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A> propriedade para controlar se o formatador desserializa o valor de retorno de uma mensagem de entrada ou se a mensagem de entrada é retornada diretamente como o valor de retorno.  
+  
+-   **Observação** se `false`, o tipo de retorno deve ser do tipo <xref:System.ServiceModel.Channels.Message> e não pode haver nenhum parâmetro out ou um <xref:System.InvalidCastException> é gerada em tempo de execução. Se a mensagem for `null`, um <xref:System.InvalidOperationException> é gerada em tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo EndMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo EndMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.EndMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método que implementa o método end assíncrono para a operação.</summary>
+        <value>Um <see cref="T:System.Reflection.MethodInfo" /> que representa o método final para a operação, ou <see langword="null" /> se a operação não é assíncrona.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultContractInfos">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.FaultContractInfo&gt; FaultContractInfos { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.Dispatcher.FaultContractInfo&gt; FaultContractInfos" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.FaultContractInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.ServiceModel.Dispatcher.FaultContractInfo" /> objetos que representam as falhas SOAP especificadas para esta operação.</summary>
+        <value>Uma coleção de falhas de SOAP especificado para esta operação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A> propriedade para obter uma coleção de todas as falhas SOAP especificadas CONTRATUALMENTE.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Formatter">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.IClientMessageFormatter Formatter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.IClientMessageFormatter Formatter" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.Formatter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IClientMessageFormatter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o formatador que serializa objetos em mensagens e desserializa mensagens em objetos.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Dispatcher.IClientMessageFormatter" /> implementação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> propriedade para inserir um personalizado <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> implementação de uma operação ou modificar o formatador atual. O uso do formatador pode ser controlado pelo <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A> e <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A> propriedades.  
+  
+ O <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> interface define o <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> e <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> métodos, que são usados para converter um conjunto de parâmetros de objeto de uma mensagem e uma mensagem para um conjunto de valores de retorno, respectivamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitiating">
+      <MemberSignature Language="C#" Value="public bool IsInitiating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitiating" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma sessão pode ser iniciada por uma mensagem para esta operação.</summary>
+        <value>
+          <see langword="true" />Se uma mensagem para essa operação pode iniciar uma sessão. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, esse valor corresponde ao valor de <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOneWay">
+      <MemberSignature Language="C#" Value="public bool IsOneWay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOneWay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a operação é uma operação unidirecional.</summary>
+        <value>
+          <see langword="true" />Se o cliente indigo2 não deve esperar uma resposta; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, esse valor corresponde ao valor de <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType>. Para problemas relacionados a operações unidirecionais, consulte [unidirecional serviços](~/docs/framework/wcf/feature-details/one-way-services.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTerminating">
+      <MemberSignature Language="C#" Value="public bool IsTerminating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTerminating" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se esta operação é o último em uma sessão.</summary>
+        <value>
+          <see langword="true" />Se a sessão associada é fechada depois que a operação é invocada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, esse valor corresponde ao valor de <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da operação.</summary>
+        <value>O nome da operação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, esse valor corresponde ao valor de <xref:System.ServiceModel.OperationContractAttribute.Name%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterInspectors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IParameterInspector&gt; ParameterInspectors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.SynchronizedCollection`1&lt;class System.ServiceModel.Dispatcher.IParameterInspector&gt; ParameterInspectors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.SynchronizedCollection&lt;System.ServiceModel.Dispatcher.IParameterInspector&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de <see cref="T:System.ServiceModel.Dispatcher.IParameterInspector" /> objetos que podem inspecionar e modificar objetos de entrada e saídos para um método de cliente específico.</summary>
+        <value>Uma coleção de implementações <see cref="T:System.ServiceModel.Dispatcher.IParameterInspector" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A> propriedade para inserir um personalizado <xref:System.ServiceModel.Dispatcher.IParameterInspector> implementação ou para modificar o atual. Inspetores de parâmetro são invocadas na ordem em que eles são adicionados à coleção de solicitações e na ordem inversa para respostas.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra uma <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> inserindo um Inspetor de parâmetro personalizado em cada <xref:System.ServiceModel.Dispatcher.ClientOperation> no <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-csharp[Interceptors#2](~/samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#2)]
+ [!code-vb[Interceptors#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.ClientRuntime Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.ClientRuntime Parent" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.ClientRuntime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contendo <see cref="T:System.ServiceModel.Dispatcher.ClientRuntime" /> objeto.</summary>
+        <value>O que contém <see cref="T:System.ServiceModel.Dispatcher.ClientRuntime" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplyAction">
+      <MemberSignature Language="C#" Value="public string ReplyAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReplyAction" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.ReplyAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ação da mensagem de resposta para esta operação.</summary>
+        <value>A ação de resposta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, esse valor corresponde ao valor de <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeRequest">
+      <MemberSignature Language="C#" Value="public bool SerializeRequest { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SerializeRequest" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o <see cref="P:System.ServiceModel.Dispatcher.ClientOperation.Formatter" /> objeto serializa uma mensagem de saída.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.ServiceModel.Dispatcher.ClientOperation.Formatter" /> propriedade serializa os valores de retorno em uma mensagem de resposta; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A> propriedade para indicar se o formatador serializa os parâmetros de operação em uma mensagem de resposta ou para determinar se o primeiro parâmetro é enviado como mensagem de saída.  
+  
+> [!NOTE]
+>  Se definido como `false`, a operação deve ter exatamente um parâmetro de tipo <xref:System.ServiceModel.Channels.Message> ou uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo SyncMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo SyncMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método que está associado esta operação.</summary>
+        <value>Um <see cref="T:System.Reflection.MethodInfo" /> que representa o método que implementa a operação. Se a operação é assíncrona, esse valor é <see langword="null" /> e os métodos de implementação são armazenados na <see cref="P:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod" /> e <see cref="P:System.ServiceModel.Dispatcher.ClientOperation.EndMethod" /> propriedades.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo TaskMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo TaskMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.TaskMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método associado a uma tarefa.</summary>
+        <value>Um <see cref="T:System.Reflection.MethodInfo" /> objeto que representa o método associado a uma tarefa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskTResult">
+      <MemberSignature Language="C#" Value="public Type TaskTResult { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TaskTResult" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.ClientOperation.TaskTResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo do resultado do método que está associado uma tarefa.</summary>
+        <value>O <see cref="T:System.Type" /> do resultado do método que está associado uma tarefa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

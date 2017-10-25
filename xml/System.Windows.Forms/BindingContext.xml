@@ -1,0 +1,742 @@
+<Type Name="BindingContext" FullName="System.Windows.Forms.BindingContext">
+  <TypeSignature Language="C#" Value="public class BindingContext : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BindingContext extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.BindingContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("CollectionChanged")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gerencia a coleção de objetos <see cref="T:System.Windows.Forms.BindingManagerBase" /> para qualquer objeto que herda da classe <see cref="T:System.Windows.Forms.Control" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada formulário do Windows tem pelo menos um <xref:System.Windows.Forms.BindingContext> objeto que gerencia o <xref:System.Windows.Forms.BindingManagerBase> objetos para o formulário. Porque o <xref:System.Windows.Forms.BindingManagerBase> classe é abstrata, o tipo de retorno de <xref:System.Windows.Forms.BindingContext.Item%2A> propriedade é um <xref:System.Windows.Forms.CurrencyManager> ou um <xref:System.Windows.Forms.PropertyManager>. Se a fonte de dados é um objeto que pode retornar apenas uma única propriedade (em vez de uma lista de objetos), o <xref:System.Type> é um <xref:System.Windows.Forms.PropertyManager>. Por exemplo, se você especificar um <xref:System.Windows.Forms.TextBox> como fonte de dados, um <xref:System.Windows.Forms.PropertyManager> será retornado. Por outro lado, se a fonte de dados é um objeto que implementa <xref:System.Collections.IList> ou <xref:System.ComponentModel.IBindingList>, um <xref:System.Windows.Forms.CurrencyManager> será retornado.  
+  
+ Para cada fonte de dados em um formulário do Windows, há um único <xref:System.Windows.Forms.CurrencyManager> ou <xref:System.Windows.Forms.PropertyManager>. Como pode haver várias fontes de dados associados a um formulário do Windows, o <xref:System.Windows.Forms.BindingContext> permite que você recupere qualquer <xref:System.Windows.Forms.CurrencyManager> associado a uma fonte de dados.  
+  
+> [!NOTE]
+>  Ao usar o <xref:System.Windows.Forms.BindingContext.Item%2A> propriedade, o <xref:System.Windows.Forms.BindingContext> cria um novo <xref:System.Windows.Forms.BindingManagerBase> se ainda não existir. Isso pode levar a alguma confusão, como o objeto retornado não pode gerenciar a lista (ou qualquer lista) que você pretende. Para evitar o retorno inválido <xref:System.Windows.Forms.BindingManagerBase>, use o <xref:System.Windows.Forms.BindingContext.Contains%2A> método para determinar se o pretendido <xref:System.Windows.Forms.BindingManagerBase> já existe.  
+  
+ Se você usar um controle de contêiner, como um <xref:System.Windows.Forms.GroupBox>, <xref:System.Windows.Forms.Panel>, ou <xref:System.Windows.Forms.TabControl>, para conter controles associados a dados, você pode criar um <xref:System.Windows.Forms.BindingContext> para apenas esse contêiner e seus controles. Em seguida, cada parte do formulário pode ser gerenciado por sua própria <xref:System.Windows.Forms.BindingManagerBase>. Consulte o <xref:System.Windows.Forms.BindingContext.%23ctor%2A> construtor para obter mais informações sobre como criar vários <xref:System.Windows.Forms.BindingManagerBase> objetos para a mesma fonte de dados.  
+  
+ Se você adicionar um <xref:System.Windows.Forms.TextBox> controle a um formulário e vincular a uma coluna de uma tabela em um conjunto de dados, o controle se comunica com o <xref:System.Windows.Forms.BindingContext> desse formulário. O <xref:System.Windows.Forms.BindingContext>, por sua vez, se comunica com específico <xref:System.Windows.Forms.CurrencyManager> para essa associação de dados. Se você consultar o `Position` propriedade do <xref:System.Windows.Forms.CurrencyManager>, ela poderia informar o registro atual para a associação que <xref:System.Windows.Forms.TextBox> controle. No exemplo de código a seguir, um <xref:System.Windows.Forms.TextBox> controle está vinculado a `FirstName` coluna de um `Customers` tabela o `dataSet1` conjunto de dados por meio do <xref:System.Windows.Forms.BindingContext> para o formulário está em.  
+  
+```vb  
+TextBox1.DataBindings.Add("Text", dataSet1, "Customers.FirstName")  
+  
+```  
+  
+```csharp  
+textBox1.DataBindings.Add("Text", dataSet1, "Customers.FirstName");  
+  
+```  
+  
+```cpp  
+textBox1->DataBindings->Add("Text", dataSet1, "Customers.FirstName");  
+```  
+  
+ Você pode adicionar um segundo <xref:System.Windows.Forms.TextBox> controle (`TextBox2`) para o formulário e associá-lo para o `LastName` coluna o `Customers` tabela no mesmo conjunto de dados. O <xref:System.Windows.Forms.BindingContext> está ciente da primeira associação (`TextBox1` para `Customers.FirstName`), portanto, ele deve usar o mesmo <xref:System.Windows.Forms.CurrencyManager>, como as duas caixas de texto associadas ao mesmo conjunto de dados (`DataSet1`).  
+  
+```vb  
+TextBox2.DataBindings.Add("Text", dataSet1, "Customers.LastName")  
+  
+```  
+  
+```csharp  
+textBox2.DataBindings.Add("Text", dataSet1, "Customers.LastName");  
+  
+```  
+  
+```cpp  
+textBox2->DataBindings->Add("Text", dataSet1, "Customers.LastName");  
+```  
+  
+ Se você associar `TextBox2` para um conjunto de dados diferente, o <xref:System.Windows.Forms.BindingContext> cria e gerencia um segundo <xref:System.Windows.Forms.CurrencyManager>.  
+  
+ É importante ser consistente sobre como definir o <xref:System.Windows.Forms.ListControl.DataSource%2A> e <xref:System.Windows.Forms.ListControl.DisplayMember%2A> propriedades; caso contrário, o <xref:System.Windows.Forms.BindingContext> cria moeda vários gerenciadores de para o mesmo conjunto de dados, que resulta em erros. O exemplo de código a seguir mostra algumas maneiras de definir as propriedades e seus respectivos <xref:System.Windows.Forms.BindingContext> objetos. Você pode definir as propriedades usando um dos métodos a seguir, desde que seja consistente em todo o código.  
+  
+```vb  
+ComboBox1.DataSource = DataSet1  
+ComboBox1.DisplayMember = "Customers.FirstName"  
+Me.BindingContext(dataSet1, "Customers").Position = 1  
+  
+```  
+  
+```csharp  
+comboBox1.DataSource = DataSet1;  
+comboBox1.DisplayMember = "Customers.FirstName";  
+this.BindingContext[dataSet1, "Customers"].Position = 1;  
+  
+```  
+  
+```cpp  
+comboBox1->DataSource = dataSet1;  
+comboBox1->DisplayMember = "Customers.FirstName";  
+this->BindingContext->get_Item(dataSet1, "Customers")->Position = 1;  
+  
+```  
+  
+```vb  
+ComboBox1.DataSource = DataSet1.Customers  
+ComboBox1.DisplayMember = "FirstName"  
+Me.BindingContext(dataSet1.Customers).Position = 1  
+  
+```  
+  
+```csharp  
+comboBox1.DataSource = DataSet1.Customers;  
+comboBox1.DisplayMember = "FirstName";  
+this.BindingContext[dataSet1.Customers].Position = 1;  
+  
+```  
+  
+```cpp  
+comboBox1->DataSource = dataSet1->Customers;  
+comboBox1->DisplayMember = "FirstName";  
+this->BindingContext->get_Item(dataSet1->Customers)->Position = 1;  
+  
+```  
+  
+> [!NOTE]
+>  Associar a maioria dos aplicativos de formulários do Windows por meio de um <xref:System.Windows.Forms.BindingSource>. O <xref:System.Windows.Forms.BindingSource> componente encapsula uma <xref:System.Windows.Forms.CurrencyManager> e expõe o <xref:System.Windows.Forms.CurrencyManager> interface de programação. Ao usar um <xref:System.Windows.Forms.BindingSource> para associação, você deve usar os membros expostos pelo <xref:System.Windows.Forms.BindingSource> para manipular "moeda" (ou seja, `Position`) em vez de percorrer o <xref:System.Windows.Forms.BindingContext>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria quatro <xref:System.Windows.Forms.Binding> objetos para associar controles dos cinco — um <xref:System.Windows.Forms.DateTimePicker> e quatro <xref:System.Windows.Forms.TextBox> controles — para várias fontes de dados. O <xref:System.Windows.Forms.BindingContext> é usado para obter o <xref:System.Windows.Forms.BindingManagerBase> para cada fonte de dados.  
+  
+ [!code-cpp[Classic BindingContext Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingContext Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingContext Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingContext Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingContext Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingContext Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.BindingContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você quiser ter vários <xref:System.Windows.Forms.BindingManagerBase> instâncias da mesma fonte de dados, criar um novo <xref:System.Windows.Forms.BindingContext> e defina-a como o <xref:System.Windows.Forms.Control.BindingContext%2A> propriedade de um objeto que herda do <xref:System.Windows.Forms.Control> classe. Por exemplo, se você tiver dois <xref:System.Windows.Forms.BindingManagerBase> objetos (de duas diferentes <xref:System.Windows.Forms.BindingContext> objetos), você pode definir o <xref:System.Windows.Forms.BindingManagerBase.Position%2A> propriedades de cada <xref:System.Windows.Forms.BindingManagerBase> como valores diferentes. Isso faz com que cada conjunto de controles associados a dados para exibir valores diferentes da mesma fonte de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria dois novos <xref:System.Windows.Forms.BindingContext> objetos e atribui cada objeto para o <xref:System.Windows.Forms.BindingContext> propriedade de um <xref:System.Windows.Forms.GroupBox> controle. `GroupBox1`contém `TextBox1`, e `GroupBox2` contém `TextBox2` (que é realizado usando o <xref:System.Windows.Forms.Control.ControlCollection.AddRange%2A> método o <xref:System.Windows.Forms.Control.ControlCollection> classe). O exemplo adiciona <xref:System.Windows.Forms.Binding> objetos para os dois <xref:System.Windows.Forms.TextBox> controles de associação de cada um para o mesmo membro de dados e fonte de dados. O exemplo também mostra dois manipuladores de eventos que usam o <xref:System.Windows.Forms.BindingContext> do <xref:System.Windows.Forms.GroupBox> controles para definir o <xref:System.Windows.Forms.BindingManagerBase.Position%2A> propriedade em diferentes <xref:System.Windows.Forms.BindingManagerBase> objetos.  
+  
+ [!code-cpp[Classic BindingContext.BindingContext Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingContext.BindingContext Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingContext.BindingContext Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingContext.BindingContext Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingContext.BindingContext Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingContext.BindingContext Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="protected void Add (object dataSource, System.Windows.Forms.BindingManagerBase listManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void Add(object dataSource, class System.Windows.Forms.BindingManagerBase listManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.Add(System.Object,System.Windows.Forms.BindingManagerBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="listManager" Type="System.Windows.Forms.BindingManagerBase" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">O <see cref="T:System.Object" /> associado ao <see cref="T:System.Windows.Forms.BindingManagerBase" />.</param>
+        <param name="listManager">O <see cref="T:System.Windows.Forms.BindingManagerBase" /> a ser adicionado.</param>
+        <summary>Adiciona o <see cref="T:System.Windows.Forms.BindingManagerBase" /> associado a uma fonte de dados específicos à coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCore">
+      <MemberSignature Language="C#" Value="protected virtual void AddCore (object dataSource, System.Windows.Forms.BindingManagerBase listManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddCore(object dataSource, class System.Windows.Forms.BindingManagerBase listManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.AddCore(System.Object,System.Windows.Forms.BindingManagerBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="listManager" Type="System.Windows.Forms.BindingManagerBase" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">O objeto associado a <see cref="T:System.Windows.Forms.BindingManagerBase" />.</param>
+        <param name="listManager">O <see cref="T:System.Windows.Forms.BindingManagerBase" /> a ser adicionado.</param>
+        <summary>Adiciona o <see cref="T:System.Windows.Forms.BindingManagerBase" /> associado a uma fonte de dados específicos à coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dataSource" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="listManager" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="protected void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a coleção de qualquer <see cref="T:System.Windows.Forms.BindingManagerBase" /> objetos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearCore">
+      <MemberSignature Language="C#" Value="protected virtual void ClearCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ClearCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.ClearCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CollectionChangeEventHandler CollectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CollectionChangeEventHandler CollectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.BindingContext.CollectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CollectionChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sempre gera um <see cref="T:System.NotImplementedException" /> quando tratado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.BindingContext.CollectionChanged> evento está obsoleto e sempre gera um <xref:System.NotImplementedException> quando tratado. Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Ocorre em todos os casos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(object dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Forms.BindingContext" /> contém o <see cref="T:System.Windows.Forms.BindingManagerBase" /> associado à fonte de dados especificado.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Windows.Forms.BindingContext" /> contiver o <see cref="T:System.Windows.Forms.BindingManagerBase" /> especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte o <xref:System.Windows.Forms.Binding> classe para obter uma lista de possíveis fontes de dados e informações sobre como criar associações entre os controles e fontes de dados.  
+  
+ Consulte o <xref:System.Windows.Forms.BindingContext.Item%2A> propriedade para obter informações sobre como retornar um <xref:System.Windows.Forms.BindingManagerBase> usando apenas uma fonte de dados.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.BindingContext.Contains%2A> método para determinar se um <xref:System.Windows.Forms.BindingManagerBase> existe para cada controle em um formulário. O exemplo passa cada <xref:System.Data.DataTable> em um <xref:System.Data.DataSet> para o método.  
+  
+ [!code-cpp[Classic BindingContext.Contains Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingContext.Contains Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingContext.Contains Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingContext.Contains Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingContext.Contains Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingContext.Contains Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object dataSource, string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(object dataSource, string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.Contains(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">As informações necessárias para resolver para um determinado <see cref="T:System.Windows.Forms.BindingManagerBase" />.</param>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Forms.BindingContext" /> contém o <see cref="T:System.Windows.Forms.BindingManagerBase" /> associado com a fonte de dados especificado e o membro de dados.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Windows.Forms.BindingContext" /> contiver o <see cref="T:System.Windows.Forms.BindingManagerBase" /> especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte o <xref:System.Windows.Forms.Binding> classe para uma lista de possíveis fontes de dados e para obter informações sobre como criar associações entre os controles e fontes de dados.  
+  
+ Consulte o <xref:System.Windows.Forms.BindingContext.Item%2A> propriedade para obter informações sobre como retornar um <xref:System.Windows.Forms.BindingManagerBase> usando uma fonte de dados e um membro de dados.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.BindingContext.Contains%2A> método para testar se um determinado <xref:System.Windows.Forms.BindingManagerBase> existe antes de tentar obtê-lo por meio de <xref:System.Windows.Forms.BindingContext.Item%2A> propriedade.  
+  
+ [!code-cpp[Classic BindingContext.Contains1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingContext.Contains1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingContext.Contains1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingContext.Contains1 Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingContext.Contains1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingContext.Contains1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingContext.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se a coleção for somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é derivada de <xref:System.Collections.ICollection>e é substituído para retornar sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BindingManagerBase this[object dataSource] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingManagerBase Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingContext.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingManagerBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados associada a um <see cref="T:System.Windows.Forms.BindingManagerBase" /> em particular.</param>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.BindingManagerBase" /> que está associado com a fonte de dados especificado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.BindingManagerBase" /> da fonte de dados especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga se o <xref:System.Windows.Forms.BindingManagerBase> desejado não requer um caminho de navegação. Por exemplo, se o <xref:System.Windows.Forms.BindingManagerBase> gerencia um conjunto de <xref:System.Windows.Forms.Binding> objetos que usam um <xref:System.Collections.ArrayList> ou <xref:System.Data.DataTable> como o <xref:System.Windows.Forms.Binding.DataSource%2A>, não é necessário nenhum caminho de navegação.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.BindingContext.Item%2A> propriedade sempre retornará uma <xref:System.Windows.Forms.BindingManagerBase>e nunca retornará `null`.  
+  
+ Consulte o <xref:System.Windows.Forms.Binding> classe para uma lista de possíveis fontes de dados e para obter informações sobre como criar associações entre os controles e fontes de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir retorna três <xref:System.Windows.Forms.BindingManagerBase> objetos: um para um <xref:System.Data.DataView>, um para um <xref:System.Collections.ArrayList>e outro para o <xref:System.Windows.Forms.Binding.DataSource%2A> de um <xref:System.Windows.Forms.Binding> que pertence a um <xref:System.Windows.Forms.TextBox> controle.  
+  
+ [!code-cpp[Classic BindingContext.this Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingContext.this Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingContext.this Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingContext.this Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingContext.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingContext.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BindingManagerBase this[object dataSource, string dataMember] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingManagerBase Item(object, string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingContext.Item(System.Object,System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingManagerBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados associada a um <see cref="T:System.Windows.Forms.BindingManagerBase" /> em particular.</param>
+        <param name="dataMember">Um caminho de navegação que contém as informações que são resolvidas como um <see cref="T:System.Windows.Forms.BindingManagerBase" /> específico.</param>
+        <summary>Obtém um <see cref="T:System.Windows.Forms.BindingManagerBase" /> associado à fonte de dados e ao membro de dados associados.</summary>
+        <value>O <see cref="T:System.Windows.Forms.BindingManagerBase" /> da fonte de dados e do membro de dados associados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga quando o <xref:System.Windows.Forms.BindingManagerBase> gerencia um conjunto de <xref:System.Windows.Forms.Binding> objetos para o qual a fonte de dados contém vários objetos. Por exemplo, um <xref:System.Data.DataSet> pode conter vários <xref:System.Data.DataTable> objetos vinculados por <xref:System.Data.DataRelation> objetos. Nesse caso, o caminho de navegação é necessário para habilitar o <xref:System.Windows.Forms.BindingContext> para retornar o correto <xref:System.Windows.Forms.BindingManagerBase>.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.BindingContext.Item%2A> propriedade sempre retornará uma <xref:System.Windows.Forms.BindingManagerBase>, quando o `dataMember` parâmetro é válido. Nunca retornarão `null`.  
+  
+ Consulte o <xref:System.Windows.Forms.Binding> classe para uma lista de possíveis fontes de dados e para obter informações sobre como criar associações entre os controles e fontes de dados.  
+  
+ Se desejado <xref:System.Windows.Forms.BindingManagerBase> gerencia uma lista, o caminho de navegação também deve terminar com uma lista. Por exemplo, o código c# a seguir associa um <xref:System.Windows.Forms.TextBox> controle para a data do pedido em uma tabela de pedidos. O caminho de navegação inclui o <xref:System.Data.DataTable.TableName%2A>, o <xref:System.Data.DataRelation.RelationName%2A>e o <xref:System.Data.DataColumn.ColumnName%2A>. No entanto, o <xref:System.Windows.Forms.BindingManagerBase> devem ser recuperados usando apenas o <xref:System.Data.DataTable.TableName%2A> e <xref:System.Data.DataRelation.RelationName%2A> (que resolve para uma lista).  
+  
+```  
+// The navigation path for a Binding ends with a property.  
+textBox1.DataBindings.Add  
+("Text", dataSet1, "Customers.custToOrders.OrderDate");  
+// The navigation path for the BindingManagerBase ends with a list.  
+BindingManagerBase bmOrders = this.BindingContext  
+[dataSet1, "Customers.custToOrders"];  
+```  
+  
+ Ao retornar um <xref:System.Windows.Forms.BindingManagerBase>, você deve usar a mesma fonte de dados como o <xref:System.Windows.Forms.Binding> e modificar o caminho de navegação.  
+  
+ Use o <xref:System.Windows.Forms.BindingContext.Contains%2A> método para determinar se os detalhes desejados <xref:System.Windows.Forms.BindingManagerBase> já existe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.BindingContext.Item%2A> para recuperar o <xref:System.Windows.Forms.BindingManagerBase> para uma associação específica. Ele também mostra como tratar o <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> eventos para o <xref:System.Windows.Forms.BindingManagerBase> para garantir que vários controles associados à mesma fonte de dados permaneçam sincronizados quando um dos valores de controle é alterado. Para executar este exemplo, cole o código em um formulário do Windows e a chamada a `InitializeControlsAndData` método de construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">O <paramref name="dataMember" /> especificado não existe na fonte de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCollectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnCollectionChanged (System.ComponentModel.CollectionChangeEventArgs ccevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCollectionChanged(class System.ComponentModel.CollectionChangeEventArgs ccevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.OnCollectionChanged(System.ComponentModel.CollectionChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ccevent" Type="System.ComponentModel.CollectionChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="ccevent">Um <see cref="T:System.ComponentModel.CollectionChangeEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.BindingContext.CollectionChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.BindingContext.OnCollectionChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.BindingContext.OnCollectionChanged(System.ComponentModel.CollectionChangeEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.BindingContext.OnCollectionChanged(System.ComponentModel.CollectionChangeEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="protected void Remove (object dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void Remove(object dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados associado a <see cref="T:System.Windows.Forms.BindingManagerBase" /> para remover.</param>
+        <summary>Exclui o <see cref="T:System.Windows.Forms.BindingManagerBase" /> associado à fonte de dados especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCore">
+      <MemberSignature Language="C#" Value="protected virtual void RemoveCore (object dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RemoveCore(object dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.RemoveCore(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados associado a <see cref="T:System.Windows.Forms.BindingManagerBase" /> para remover.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.BindingManagerBase" /> associado à fonte de dados especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array ar, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array ar, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ar" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ar">Um <see cref="T:System.Array" /> para copiar para.</param>
+        <param name="index">O índice de coleção para iniciar a cópia do.</param>
+        <summary>Copia os elementos da coleção em uma matriz especificada, começando no índice de coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[Classic BindingContext.ICollection.CopyTo Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingContext.ICollection.CopyTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingContext.ICollection.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingContext.ICollection.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingContext.ICollection.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingContext.ICollection.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingContext.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de <see cref="T:System.Windows.Forms.CurrencyManager" /> objetos gerenciados pelo <see cref="T:System.Windows.Forms.BindingContext" />.</summary>
+        <value>O número de fontes de dados gerenciados pelo <see cref="T:System.Windows.Forms.BindingContext" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir retorna o número de <xref:System.Windows.Forms.CurrencyManager> objetos gerenciados pelo <xref:System.Windows.Forms.BindingContext>.  
+  
+ [!code-cpp[Classic BindingContext.ICollection.Count Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingContext.ICollection.Count Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingContext.ICollection.Count Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingContext.ICollection.Count Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingContext.ICollection.Count Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingContext.ICollection.Count Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingContext.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é sincronizada.</summary>
+        <value>
+          <see langword="true" />Se a coleção é thread-safe; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é derivada de <xref:System.Collections.ICollection>e é substituído para retornar sempre `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.BindingContext.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto a ser usado para sincronização (segurança de thread).</summary>
+        <value>Essa propriedade é derivada de <see cref="T:System.Collections.ICollection" />e é substituído para retornar sempre <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um enumerador para a coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para a coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.IEnumerator> retornado pelo <xref:System.Windows.Forms.BindingContext.System%23Collections%23IEnumerable%23GetEnumerator%2A> método permite que você iterar pela coleção gerenciada pelo <xref:System.Windows.Forms.BindingContext>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.BindingContext.System%23Collections%23IEnumerable%23GetEnumerator%2A> método para retornar um <xref:System.Collections.IEnumerator> para o <xref:System.Windows.Forms.BindingContext>.  
+  
+ [!code-cpp[Classic BindingContext.IEnumerable.GetEnumerator Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BindingContext.IEnumerable.GetEnumerator Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BindingContext.IEnumerable.GetEnumerator Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BindingContext.IEnumerable.GetEnumerator Example/CS/source.cs#1)]
+ [!code-vb[Classic BindingContext.IEnumerable.GetEnumerator Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BindingContext.IEnumerable.GetEnumerator Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateBinding">
+      <MemberSignature Language="C#" Value="public static void UpdateBinding (System.Windows.Forms.BindingContext newBindingContext, System.Windows.Forms.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UpdateBinding(class System.Windows.Forms.BindingContext newBindingContext, class System.Windows.Forms.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.BindingContext.UpdateBinding(System.Windows.Forms.BindingContext,System.Windows.Forms.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newBindingContext" Type="System.Windows.Forms.BindingContext" />
+        <Parameter Name="binding" Type="System.Windows.Forms.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="newBindingContext">O novo <see cref="T:System.Windows.Forms.BindingContext" /> para associar o <see cref="T:System.Windows.Forms.Binding" />.</param>
+        <param name="binding">O <see cref="T:System.Windows.Forms.Binding" /> para associar o novo <see cref="T:System.Windows.Forms.BindingContext" />.</param>
+        <summary>Associa um <see cref="T:System.Windows.Forms.Binding" /> com um novo <see cref="T:System.Windows.Forms.BindingContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método destina-se atualizar as associações dos componentes que implementam <xref:System.Windows.Forms.IBindableComponent>, quando seu <xref:System.Windows.Forms.BindingContext> alterações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,110 @@
+<Type Name="ExportLifetimeContext&lt;T&gt;" FullName="System.ComponentModel.Composition.ExportLifetimeContext&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class ExportLifetimeContext&lt;T&gt; : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExportLifetimeContext`1&lt;T&gt; extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.ExportLifetimeContext`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">O tipo do valor exportado.</typeparam>
+    <summary>Mantém um valor exportado criado por um <see cref="T:System.ComponentModel.Composition.ExportFactory`1" /> objeto e uma referência a um método para liberar esse objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExportLifetimeContext (T value, Action disposeAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T value, class System.Action disposeAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ExportLifetimeContext`1.#ctor(`0,System.Action)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+        <Parameter Name="disposeAction" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor exportado.</param>
+        <param name="disposeAction">Uma referência a um método para liberar o objeto.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.ExportLifetimeContext`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ExportLifetimeContext`1.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual do <see cref="T:System.ComponentModel.Composition.ExportLifetimeContext`1" /> classe, incluindo sua exportação associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o `Dispose` método de um <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> objeto chama o método referenciado para liberar sua exportação associado.  
+  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.ComponentModel.Composition.ExportLifetimeContext%601>. O `Dispose` método deixa o <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> para o coletor de lixo possa recuperar a memória que o <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](http://go.microsoft.com/fwlink/?LinkId=187455) e [implementar um método Dispose](http://go.microsoft.com/fwlink/?LinkId=187456).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.ComponentModel.Composition.ExportLifetimeContext%601>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.ComponentModel.Composition.ExportLifetimeContext%601> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public T Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Value" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ExportLifetimeContext`1.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor exportado de um <see cref="T:System.ComponentModel.Composition.ExportFactory`1" /> objeto.</summary>
+        <value>O valor exportado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

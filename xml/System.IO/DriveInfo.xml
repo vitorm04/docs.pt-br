@@ -1,0 +1,616 @@
+<Type Name="DriveInfo" FullName="System.IO.DriveInfo">
+  <TypeSignature Language="C#" Value="public sealed class DriveInfo : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DriveInfo extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.DriveInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece acesso às informações de uma unidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe modela uma unidade e fornece métodos e propriedades para consultar informações sobre a unidade. Use <xref:System.IO.DriveInfo> para determinar quais unidades estão disponíveis e o tipo de unidades são. Você também pode consultar para determinar a capacidade e o espaço livre disponível na unidade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.IO.DriveInfo> classe para exibir informações sobre todas as unidades no sistema atual.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.FileIOPermission">para acessar informações de diretório. O construtor de classe exige essa permissão. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DriveInfo (string driveName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string driveName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DriveInfo.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="driveName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="driveName">Um caminho válido da unidade ou a letra da unidade. Isso pode ser em maiúsculas ou minúsculas, de “a” a “z”. Um valor nulo não é válido.</param>
+        <summary>Fornece acesso às informações de uma unidade especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa classe para obter informações sobre unidades. O nome da unidade deve ser uma letra em maiuscula ou minúscula de 'a' a 'z'. Você não pode usar esse método para obter informações sobre nomes de unidades que são `null` ou usar UNC (\\\server\share) caminhos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A letra da unidade não pode ser <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A primeira letra de <paramref name="driveName" /> não é uma letra maiúscula ou minúscula de “a” a “z”.  
+  
+ -ou-  
+  
+ <paramref name="driveName" /> não faz referência a uma unidade válida.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para acessar informações de diretório. O construtor de classe exige essa permissão. Enumeração associada: <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailableFreeSpace">
+      <MemberSignature Language="C#" Value="public long AvailableFreeSpace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AvailableFreeSpace" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.AvailableFreeSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o valor do espaço livre disponível em uma unidade, em bytes.</summary>
+        <value>A quantidade de espaço livre disponível em uma unidade, em bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica a quantidade de espaço livre disponível na unidade. Observe que esse número pode ser diferente de <xref:System.IO.DriveInfo.TotalFreeSpace%2A> número porque essa propriedade leva em cotas de disco de conta.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.IO.DriveInfo> classe para exibir informações sobre todas as unidades no sistema atual.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso a informações da unidade é negado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S (por exemplo, um erro de disco ou uma unidade não estava pronta).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DriveFormat">
+      <MemberSignature Language="C#" Value="public string DriveFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DriveFormat" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.DriveFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do sistema de arquivos, como NTFS ou FAT32.</summary>
+        <value>O nome do sistema de arquivos na unidade especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.IO.DriveInfo.DriveFormat%2A> para determinar qual formatar uma unidade usa.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.IO.DriveInfo> classe para exibir informações sobre todas as unidades no sistema atual.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso a informações da unidade é negado.</exception>
+        <exception cref="T:System.IO.DriveNotFoundException">A unidade não existe ou não está mapeada.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S (por exemplo, um erro de disco ou uma unidade não estava pronta).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DriveType">
+      <MemberSignature Language="C#" Value="public System.IO.DriveType DriveType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.DriveType DriveType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.DriveType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DriveType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de unidade, como CD-ROM, removível, de rede ou fixa.</summary>
+        <value>Um dos valores de enumeração que especifica um tipo de unidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.DriveInfo.DriveType%2A> propriedade indica se uma unidade é um dos seguintes: `CDRom`, `Fixed`, `Network`, `NoRootDirectory`, `Ram`, `Removable`, ou `Unknown`. Esses valores são descritos no <xref:System.IO.DriveType> enumeração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.IO.DriveInfo> classe para exibir informações sobre todas as unidades no sistema atual.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDrives">
+      <MemberSignature Language="C#" Value="public static System.IO.DriveInfo[] GetDrives ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.DriveInfo[] GetDrives() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DriveInfo.GetDrives" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DriveInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera os nomes de unidade de todas as unidades lógicas em um computador.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.IO.DriveInfo" /> que representa as unidades lógicas em um computador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método recupera todos os nomes de unidades lógicas em um computador. Você pode usar essas informações para iterar por meio da matriz e obter informações sobre as unidades usando outros <xref:System.IO.DriveInfo> métodos e propriedades. Use o <xref:System.IO.DriveInfo.IsReady%2A> propriedade para testar se uma unidade está pronta porque usando esse método em uma unidade que não está pronta lançará um <xref:System.IO.IOException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.IO.DriveInfo> classe para exibir informações sobre todas as unidades no sistema atual.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S (por exemplo, um erro de disco ou uma unidade não estava pronta).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado, como chamar código nativo com a plataforma invoke ou interoperabilidade COM. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReady">
+      <MemberSignature Language="C#" Value="public bool IsReady { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReady" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.IsReady" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma unidade está pronta.</summary>
+        <value>
+          <see langword="true" /> se a unidade estiver pronta, <see langword="false" /> se não estiver.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.DriveInfo.IsReady%2A>Indica se uma unidade está pronta. Por exemplo, indica se um CD está em uma unidade de CD ou se um dispositivo de armazenamento removível está pronto para operações de leitura/gravação. Se você não testar se uma unidade está pronta e não está pronto, consultando a unidade usando <xref:System.IO.DriveInfo> gerará um <xref:System.IO.IOException>.  
+  
+ Não confie na <xref:System.IO.DriveInfo.IsReady%2A> para evitar capturar exceções de outros membros, como <xref:System.IO.DriveInfo.TotalSize%2A>, <xref:System.IO.DriveInfo.TotalFreeSpace%2A>, e <xref:System.IO.DriveInfo.DriveFormat%2A>. Entre a hora em que seu código verifica <xref:System.IO.DriveInfo.IsReady%2A> e, em seguida, acessa uma das outras propriedades (mesmo que o acesso ocorra imediatamente após a verificação), uma unidade pode ter sido desconectada ou um disco pode ter sido removido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.IO.DriveInfo> classe para exibir informações sobre todas as unidades no sistema atual.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de uma unidade, como c:\\.</summary>
+        <value>O nome da unidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é o nome atribuído à unidade, como C:\ ou e:\\.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.IO.DriveInfo> classe para exibir informações sobre todas as unidades no sistema atual.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootDirectory">
+      <MemberSignature Language="C#" Value="public System.IO.DirectoryInfo RootDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.DirectoryInfo RootDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.RootDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.DirectoryInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o diretório raiz de uma unidade.</summary>
+        <value>Um objeto que contém o diretório raiz da unidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DriveInfo.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto a ser preenchido com dados.</param>
+        <param name="context">O destino (consulte <see cref="T:System.Runtime.Serialization.StreamingContext" />) desta serialização.</param>
+        <summary>Preenche uma <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com os dados necessários para serializar o objeto de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os objetos incluídos no <xref:System.Runtime.Serialization.SerializationInfo> objeto automaticamente são rastreadas e serializado pelo formatador.  
+  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.IO.DriveInfo> é convertida em uma interface de <xref:System.Runtime.Serialization.ISerializable>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.DriveInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome da unidade como uma cadeia de caracteres.</summary>
+        <returns>O nome da unidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o <xref:System.IO.DriveInfo.Name%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalFreeSpace">
+      <MemberSignature Language="C#" Value="public long TotalFreeSpace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TotalFreeSpace" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.TotalFreeSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a quantidade total de espaço livre disponível em uma unidade, em bytes.</summary>
+        <value>O total de espaço livre disponível em uma unidade, em bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica a quantidade total de espaço livre disponível na unidade, não apenas o que está disponível para o usuário atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.IO.DriveInfo> classe para exibir informações sobre todas as unidades no sistema atual.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso a informações da unidade é negado.</exception>
+        <exception cref="T:System.IO.DriveNotFoundException">A unidade não está mapeada ou não existe.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S (por exemplo, um erro de disco ou uma unidade não estava pronta).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalSize">
+      <MemberSignature Language="C#" Value="public long TotalSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TotalSize" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.TotalSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho total do espaço de armazenamento em uma unidade, em bytes.</summary>
+        <value>O tamanho total da unidade em bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica o tamanho total da unidade em bytes, não apenas o que está disponível para o usuário atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.IO.DriveInfo> classe para exibir informações sobre todas as unidades no sistema atual.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso a informações da unidade é negado.</exception>
+        <exception cref="T:System.IO.DriveNotFoundException">A unidade não está mapeada ou não existe.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S (por exemplo, um erro de disco ou uma unidade não estava pronta).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VolumeLabel">
+      <MemberSignature Language="C#" Value="public string VolumeLabel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VolumeLabel" />
+      <MemberSignature Language="DocId" Value="P:System.IO.DriveInfo.VolumeLabel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.DriveInfo</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o rótulo do volume de uma unidade.</summary>
+        <value>Rótulo do volume.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do rótulo é determinado pelo sistema operacional. Por exemplo, o NTFS permite que um rótulo de volume para ser até 32 caracteres. Observe que `null` é válido <xref:System.IO.DriveInfo.VolumeLabel%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso da <xref:System.IO.DriveInfo> classe para exibir informações sobre todas as unidades no sistema atual.  
+  
+ [!code-csharp[System.IO.DriveInfo#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.DriveInfo/cs/DriveInfo.cs#00)]
+ [!code-vb[System.IO.DriveInfo#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.DriveInfo/vb/DriveInfo.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S (por exemplo, um erro de disco ou uma unidade não estava pronta).</exception>
+        <exception cref="T:System.IO.DriveNotFoundException">A unidade não está mapeada ou não existe.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O rótulo do volume está sendo definido em uma rede ou a unidade de CD-ROM.  
+  
+ -ou-  
+  
+ O acesso a informações da unidade é negado.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para definir o rótulo do volume. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

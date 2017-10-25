@@ -1,0 +1,158 @@
+<Type Name="IEnumConnections" FullName="Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections">
+  <TypeSignature Language="C#" Value="public interface IEnumConnections" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEnumConnections" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("B196B287-BAB4-101A-B69C-00AA00341D07")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gerencia a definição da interface <see langword="IEnumConnections" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para novos desenvolvimentos, use <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections>.  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public void Clone (out Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections ec);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void Clone([out] class Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections&amp; ec) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections.Clone(Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ec" Type="Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ec">Quando este método retorna, contém uma referência para o enumerador recém-criado. Este parâmetro é passado não inicializado.</param>
+        <summary>Cria um novo enumerador que contém o mesmo estado de enumeração do ano atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public void Next (int cConnections, out Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA[] cd, out int cFetched);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void Next([in]int32 cConnections, [out] valuetype Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA[]&amp; cd, [out] int32&amp; cFetched) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections.Next(System.Int32,Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA[]@,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cConnections" Type="System.Int32" />
+        <Parameter Name="cd" Type="Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA[]&amp;" RefType="out" />
+        <Parameter Name="cFetched" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="cConnections">O número de <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.CONNECTDATA" /> estruturas para retornar em <c>cd</c>.</param>
+        <param name="cd">Quando este método retorna, contém uma referência para as conexões enumeradas. Este parâmetro é passado não inicializado.</param>
+        <param name="cFetched">Quando este método retorna, contém uma referência para o número real de conexões enumerados na <c>cd</c>.</param>
+        <summary>Recupera um número especificado de itens na sequência de enumeração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a sequência de enumeração para o início.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Skip">
+      <MemberSignature Language="C#" Value="public void Skip (int cConnections);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void Skip([in]int32 cConnections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IEnumConnections.Skip(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cConnections" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="cConnections">O número de elementos a serem ignorados na enumeração.</param>
+        <summary>Ignora um número especificado de itens na sequência de enumeração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

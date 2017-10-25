@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Win32">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.Win32" /> namespace fornece dois tipos de classes: aqueles que tratam os eventos gerados pelo sistema operacional e aqueles que manipulam o registro do sistema.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

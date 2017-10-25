@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.Composition">
+  <Docs>
+    <summary>Este namespace fornece classes que constituem o núcleo do Managed Extensibility Framework ou MEF.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

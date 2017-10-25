@@ -1,0 +1,3122 @@
+<Type Name="Chart" FullName="System.Windows.Forms.DataVisualization.Charting.Chart">
+  <TypeSignature Language="C#" Value="public class Chart : System.Windows.Forms.Control, IDisposable, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Chart extends System.Windows.Forms.Control implements class System.ComponentModel.ISupportInitialize, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.Chart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer("System.Windows.Forms.Design.DataVisualization.Charting.ChartWinDesignerSerializer, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.ComponentModel.Design.Serialization.CodeDomSerializer, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.DataVisualization.Charting.ChartWinDesigner, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DisplayName("Chart")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Windows.Forms.DataVisualization.Charting.Chart), "ChartControl.ico")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como a classe raiz do controle <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe expõe todas as propriedades, métodos e eventos de controle do Windows do gráfico.  
+  
+ Duas propriedades importantes do <xref:System.Windows.Forms.DataVisualization.Charting.Chart> classe o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Series%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.Chart.ChartAreas%2A> propriedades, que são propriedades de coleção. O <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Series%2A> repositórios de propriedades de coleção <xref:System.Windows.Forms.DataVisualization.Charting.Series> objetos, que são usados para armazenar dados a ser exibida, juntamente com os atributos dos dados. O <xref:System.Windows.Forms.DataVisualization.Charting.Chart.ChartAreas%2A> repositórios de propriedades de coleção <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> objetos, que são usados principalmente para desenhar um ou mais gráficos usando um conjunto de eixos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Chart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse construtor para criar uma nova instância do <xref:System.Windows.Forms.DataVisualization.Charting.Chart> classe em tempo de execução.  
+  
+ No entanto, para simplificar, é recomendável que você crie um <xref:System.Windows.Forms.DataVisualization.Charting.Chart> instância em tempo de design.  
+  
+ Este é o objeto raiz do <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignDataPointsByAxisLabel">
+      <MemberSignature Language="C#" Value="public void AlignDataPointsByAxisLabel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AlignDataPointsByAxisLabel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.AlignDataPointsByAxisLabel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Alinha os pontos de dados ao longo do eixo X usando seus rótulos de eixo. Aplicável quando várias séries são indexadas e seus valores de X são cadeias de caracteres.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignDataPointsByAxisLabel">
+      <MemberSignature Language="C#" Value="public void AlignDataPointsByAxisLabel (string series);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AlignDataPointsByAxisLabel(string series) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.AlignDataPointsByAxisLabel(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="series" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="series">Uma lista de séries separada por vírgula que terá seus pontos de dados alinhados com o eixo X usando rótulos de eixo do ponto de dados.</param>
+        <summary>Alinha os pontos de dados de séries diferentes ao longo do eixo X usando seus rótulos de eixo. A série especificada no gráfico é alinhada usando uma ordem de classificação crescente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para alinhar pontos de dados de séries diferentes ao longo do eixo X usando seus rótulos de eixo e é aplicável quando:  
+  
+-   Várias séries são exibidos e são indexados; ou seja, todos os pontos de dados têm um <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint.XValue%2A> 0, ou o <xref:System.Windows.Forms.DataVisualization.Charting.Series.IsXValueIndexed%2A> é de propriedade `true`.  
+  
+-   Todos os pontos de dados têm rótulos do eixo de não vazio, que são exclusivos para seus <xref:System.Windows.Forms.DataVisualization.Charting.Series>. Se eles não forem exclusivos, uma exceção será lançada.  
+  
+ Essa situação é muito comum quando a associação de dados resulta na criação de várias séries, e `string` valores são usados para valores do eixo x.  
+  
+ Dois problemas podem surgir quando vários indexado séries são plotadas e os valores de X são definidos usando `string` valores:  
+  
+-   Não é garantir que os pontos de dados de séries diferentes com a mesma cadeia de valores de X serão plotados no mesmo índice ao longo do eixo X.  
+  
+-   Somente o rótulo do eixo dos pontos de dados na primeira série será exibido, mesmo que os pontos de dados de outras séries com o mesmo índice tenham rótulos de eixo muito.  
+  
+ Por padrão, os pontos são plotados na ordem em que eles são armazenados em sua série. Para especificar uma ordem de classificação, use um `AlignDataPointsByAxisLabel` sobrecarga do método que tem um `sortingOrder` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignDataPointsByAxisLabel">
+      <MemberSignature Language="C#" Value="public void AlignDataPointsByAxisLabel (System.Windows.Forms.DataVisualization.Charting.PointSortOrder sortingOrder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AlignDataPointsByAxisLabel(valuetype System.Windows.Forms.DataVisualization.Charting.PointSortOrder sortingOrder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.AlignDataPointsByAxisLabel(System.Windows.Forms.DataVisualization.Charting.PointSortOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sortingOrder" Type="System.Windows.Forms.DataVisualization.Charting.PointSortOrder" />
+      </Parameters>
+      <Docs>
+        <param name="sortingOrder">Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.PointSortOrder" /> que indica se a ordem de classificação crescente ou decrescente é usada em rótulos de eixo, que, por sua vez, determina a ordem na qual os pontos que ocupavam anteriormente o mesmo espaço de eixo são exibidos.</param>
+        <summary>Alinha os pontos de dados usando seus rótulos de eixo. Todas as séries do gráfico são alinhadas, usando a ordem de classificação especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignDataPointsByAxisLabel">
+      <MemberSignature Language="C#" Value="public void AlignDataPointsByAxisLabel (string series, System.Windows.Forms.DataVisualization.Charting.PointSortOrder sortingOrder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AlignDataPointsByAxisLabel(string series, valuetype System.Windows.Forms.DataVisualization.Charting.PointSortOrder sortingOrder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.AlignDataPointsByAxisLabel(System.String,System.Windows.Forms.DataVisualization.Charting.PointSortOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="series" Type="System.String" />
+        <Parameter Name="sortingOrder" Type="System.Windows.Forms.DataVisualization.Charting.PointSortOrder" />
+      </Parameters>
+      <Docs>
+        <param name="series">Uma lista separada por vírgulas de séries que devem ser alinhada por rótulo de eixo.</param>
+        <param name="sortingOrder">Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.PointSortOrder" /> que determina se a ordem de classificação crescente ou decrescente é usada em rótulos de eixo, que, por sua vez, determina a ordem na qual os pontos que ocupavam anteriormente o mesmo espaço de eixo são exibidos.</param>
+        <summary>Alinha os pontos de dados usando seus rótulos de eixo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para alinhar pontos de dados de séries diferentes ao longo do eixo X usando seus rótulos de eixo e é aplicável quando:  
+  
+-   Várias séries são exibidos e são indexados; ou seja, todos os pontos de dados têm um <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint.XValue%2A> 0, ou o <xref:System.Windows.Forms.DataVisualization.Charting.Series.IsXValueIndexed%2A> é de propriedade `true`.  
+  
+-   Todos os pontos de dados têm rótulos do eixo de não vazio, que são exclusivos para seus <xref:System.Windows.Forms.DataVisualization.Charting.Series>. Se eles não forem exclusivos, uma exceção será lançada.  
+  
+ Essa situação é muito comum quando a associação de dados resulta na criação de várias séries, e `string` valores são usados para valores do eixo x.  
+  
+ Dois problemas podem surgir quando vários indexado séries são plotadas e os valores de X são definidos usando `string` valores:  
+  
+-   Não é garantir que os pontos de dados de séries diferentes com a mesma cadeia de valores de X serão plotados no mesmo índice ao longo do eixo X.  
+  
+-   Somente o rótulo do eixo dos pontos de dados na primeira série será exibido, mesmo que os pontos de dados de outras séries com o mesmo índice tenham rótulos de eixo muito.  
+  
+ Por padrão, os pontos são plotados na ordem em que eles são armazenados em sua série. Para especificar uma ordem de classificação, use um `AlignDataPointsByAxisLabel` sobrecarga do método que tem um `sortingOrder` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationPlaced">
+      <MemberSignature Language="C#" Value="public event EventHandler AnnotationPlaced;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AnnotationPlaced" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.AnnotationPlaced" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário final coloca uma anotação no gráfico.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationPositionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AnnotationPositionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AnnotationPositionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.AnnotationPositionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a posição da anotação é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationPositionChanging">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.AnnotationPositionChangingEventArgs&gt; AnnotationPositionChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.AnnotationPositionChangingEventArgs&gt; AnnotationPositionChanging" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.AnnotationPositionChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.AnnotationPositionChangingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a posição da anotação está prestes a ser alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.AnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.AnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.AnnotationCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção que armazena as anotações de gráfico.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.AnnotationCollection" /> que é usado para armazenar anotações de gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as anotações de gráfico são armazenadas na propriedade de coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationSelectionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AnnotationSelectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AnnotationSelectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.AnnotationSelectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma seleção da anotação é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnnotationTextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AnnotationTextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AnnotationTextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.AnnotationTextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o texto da anotação é alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AntiAliasing">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.AntiAliasingStyles AntiAliasing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.AntiAliasingStyles AntiAliasing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.AntiAliasing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.AntiAliasingStyles), "All")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.FlagsEnumUITypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AntiAliasingStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se a suavização é usada quando texto e elementos gráficos são desenhados.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.AntiAliasingStyles" /> que determina se a suavização é usada quando texto e elementos gráficos são desenhados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Suavização suaviza out "bordas irregulares" preenchendo os pixels com cores intermediárias e é especialmente eficiente para suavizar as bordas de gráficos que não são desenhados como retângulos. Por exemplo, a suavização é muito eficiente para gráficos de pizza e gráficos de linhas, mas não é tão eficiente de barra e gráficos de colunas.  
+  
+ A suavização pode ser aplicada a tipos primitivos de texto e/ou elementos gráficos como retângulos, círculos e assim por diante.  
+  
+ Observe que a suavização afetará o desempenho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyPaletteColors">
+      <MemberSignature Language="C#" Value="public void ApplyPaletteColors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyPaletteColors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.ApplyPaletteColors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define as cores de ponto de série e dados atribuídas automaticamente, para permitir o acesso programático em tempo de execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> as cores são atribuídas automaticamente em tempo de execução, não há nenhuma maneira de saber quais serão as cores antes da hora de quando o gráfico renderizado; o `Color` retornará a propriedade de um valor atribuído automaticamente <xref:System.Drawing.Color.Empty> neste momento.  
+  
+ Se você chamar o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.ApplyPaletteColors%2A> método, as cores para a série e pontos de dados serão definidas, o que permite acesso programático.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisScrollBarClicked">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs&gt; AxisScrollBarClicked;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs&gt; AxisScrollBarClicked" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.AxisScrollBarClicked" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ScrollBarEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a barra de rolagem do eixo é clicada pelo usuário final.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisViewChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ViewEventArgs&gt; AxisViewChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.ViewEventArgs&gt; AxisViewChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.AxisViewChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ViewEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a posição de exibição ou tamanho da escala do eixo é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisViewChanging">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ViewEventArgs&gt; AxisViewChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.ViewEventArgs&gt; AxisViewChanging" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.AxisViewChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ViewEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o tamanho ou posição de exibição de escala do eixo está prestes a ser alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "White")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da tela de fundo do objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</summary>
+        <value>Um valor <see cref="T:System.Drawing.Color" /> usado para desenhar a cor da tela de fundo do gráfico. A cor padrão é <see cref="System.Drawing.Color.White" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir essa propriedade para qualquer valor ARGB (alfa, vermelho, verde, azul) válido. Observe que para o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> do objeto, o componente alfa não pode ser definido como um valor diferente de 255. Isso também significa que, para o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto apenas, um <xref:System.Drawing.Color.Transparent%2A> valor não pode ser usado.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackColor%2A> valor será a primeira cor usada se você estiver usando cores de gradiente do plano de fundo.  
+  
+ O valor alfa controla a opacidade da cor. Se você definir essa cor como "transparente" — ou seja, se você usar um valor alfa de 0, nenhuma cor será atribuído ao plano de fundo do título. Como resultado, o plano de fundo será transparente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackGradientStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.GradientStyle BackGradientStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.GradientStyle BackGradientStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BackGradientStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.GradientEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.GradientStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a orientação do gradiente da tela de fundo de um controle <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />. Também determina se um gradiente é usado.</summary>
+        <value>Uma enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.GradientStyle" /> que especifica a orientação do gradiente da tela de fundo de um gráfico e se um gradiente é usado. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.GradientStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackGradientStyle%2A> propriedade para determinar se um <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle exibirá um gradiente e é usado determinar a orientação do gradiente se houver um.  
+  
+ Para obter uma lista de padrões disponíveis, consulte o <xref:System.Windows.Forms.DataVisualization.Charting.GradientStyle> enumeração.  
+  
+ Para usar cores de gradiente:  
+  
+ Definir a cor primária do plano de fundo do gráfico com o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackColor%2A> propriedade.  
+  
+ Definir a cor secundária do plano de fundo do gráfico com o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackSecondaryColor%2A> propriedade.  
+  
+ Defina <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackGradientStyle%2A> propriedade para o estilo de gradiente desejado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade <see cref="P:System.Windows.Forms.DataVisualization.Charting.Chart.BackgroundImage" /> não é usada. Use a propriedade <see cref="P:System.Windows.Forms.DataVisualization.Charting.Chart.BackImage" /> em seu lugar.</summary>
+        <value>Um objeto <see cref="T:System.Drawing.Image" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackHatchStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle BackHatchStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle BackHatchStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BackHatchStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.HatchStyleEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de hachura do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle" /> enumeração que especifica o estilo de hachura do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle> enumeração Especifica o padrão de hachura usado por um pincel de tipo <xref:System.Drawing.Drawing2D.HatchBrush>. O padrão de hachura consiste em uma cor de plano de fundo sólida e as linhas desenhadas no plano de fundo.  
+  
+ Para obter uma lista de estilos de hachurado disponíveis, consulte o <xref:System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle> enumeração.  
+  
+ **Observação** a cor das linhas de hachura é determinada pelo <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackSecondaryColor%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImage">
+      <MemberSignature Language="C#" Value="public string BackImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BackImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ImageValueEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem de tela de fundo do controle <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</summary>
+        <value>Um valor <see langword="string" /> que representa a URL de um arquivo de imagem. O valor padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade define um caminho para uma imagem de plano de fundo para um <xref:System.Windows.Forms.DataVisualization.Charting.Chart> legenda, e pode ser uma URL absoluta ou relativa.  
+  
+ Para posicionar a imagem, use o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackImageAlignment%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackImageWrapMode%2A> propriedades.  
+  
+ Você também pode especificar uma das cores exibidas pela imagem como "transparente", definindo o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackImageTransparentColor%2A> propriedade.  
+  
+ Uma imagem pode ser originado de qualquer arquivo de gráficos válido com suporte pelo .NET Framework, incluindo ícones.  
+  
+ Imagens de plano de fundo têm precedência sobre outras propriedades do plano de fundo, como a cor do gradiente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle BackImageAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle BackImageAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BackImageAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento da imagem de plano de fundo usada para o <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Unscaled" /> modo de desenho.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle" /> valor de enumeração que especifica o alinhamento da imagem de plano de fundo do gráfico. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.TopLeft" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina o alinhamento da imagem do plano de fundo para o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle; ele só é aplicada quando o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackImageWrapMode%2A> está definida como <xref:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageTransparentColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackImageTransparentColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackImageTransparentColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BackImageTransparentColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle que será exibido como transparente.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que será exibido como transparente quando a imagem do gráfico é desenhada. O valor padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageWrapMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode BackImageWrapMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode BackImageWrapMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BackImageWrapMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de desenho da imagem de plano de fundo do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode" /> valor de enumeração que especifica o modo de desenho da imagem de plano de fundo do gráfico. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Tile" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina como a imagem é exibida, por exemplo, lado a lado, escala e assim por diante.  
+  
+ Se uma imagem é dimensionada, ela será estendida para se ajustar dentro dos limites do gráfico. Se a imagem é colocada lado a lado, ele é repetidamente desenhado, a partir do canto superior esquerdo do gráfico.  
+  
+ Para obter mais informações sobre os modos de encapsulamento disponíveis, consulte o <xref:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode> tópico de enumeração.  
+  
+ Se o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackImageWrapMode%2A> está definida como <xref:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode>, o local onde a imagem é desenhada é determinado pelo <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackImageAlignment%2A> configuração de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackSecondaryColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackSecondaryColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackSecondaryColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BackSecondaryColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor secundária do plano de fundo do gráfico.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa a cor secundária do plano de fundo do gráfico. O valor padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackSecondaryColor%2A> propriedade determina a cor do plano de fundo secundária de muitos <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objetos e é usado quando as cores de gradiente estão sendo aplicadas.  
+  
+ Você pode definir <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackSecondaryColor%2A> para qualquer valor ARGB (alfa, vermelho, verde, azul) válido.  
+  
+ Se a hachura for usada, o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackSecondaryColor%2A> propriedade determina a cor das linhas de hachura do gráfico.  
+  
+ Para usar cores de gradiente do plano de fundo de um gráfico:  
+  
+-   Definir a cor primária com a <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackColor%2A> propriedade.  
+  
+-   Definir a cor secundária com o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackSecondaryColor%2A> propriedade.  
+  
+-   Definir o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackGradientStyle%2A> propriedade para o estilo de gradiente desejado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sinais para o objeto que a inicialização está iniciando.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "White")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da borda do gráfico.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor usado para desenhar a borda do gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter ou definir a cor da borda, use <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BorderlineColor%2A> em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderDashStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartDashStyle BorderDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartDashStyle BorderDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BorderDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da borda.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartDashStyle" /> que especifica o estilo da borda.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderlineColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BorderlineColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BorderlineColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BorderlineColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "White")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da linha de borda.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor usado para desenhar a linha de borda.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderlineDashStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartDashStyle BorderlineDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartDashStyle BorderlineDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BorderlineDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da linha de borda.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartDashStyle" /> valor de enumeração que especifica o estilo da linha de borda.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderlineWidth">
+      <MemberSignature Language="C#" Value="public int BorderlineWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BorderlineWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BorderlineWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da linha de borda.</summary>
+        <value>Um <see langword="integer" /> valor que especifica a largura da linha de borda.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderSkin">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.BorderSkin BorderSkin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.BorderSkin BorderSkin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BorderSkin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.LegendConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.BorderSkin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Forms.DataVisualization.Charting.BorderSkin" /> objeto, que fornece a funcionalidade de capa de borda para o <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.BorderSkin" /> objeto que fornece funcionalidade de capa da borda do gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para especificar uma capa de borda do gráfico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderWidth">
+      <MemberSignature Language="C#" Value="public int BorderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da borda do gráfico.</summary>
+        <value>Um valor <see langword="integer" /> que determina a largura da borda, em pixels, do gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter ou defina a largura da borda, use <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BorderlineWidth%2A> em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildNumber">
+      <MemberSignature Language="C#" Value="public string BuildNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BuildNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.BuildNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de compilação de <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle.</summary>
+        <value>Um <see langword="string" /> que representa o número de compilação do controle do gráfico.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartAreas">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartAreaCollection ChartAreas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.ChartAreaCollection ChartAreas" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.ChartAreas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartAreaCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartAreaCollection" /> somente leitura que é usado para armazenar objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" />.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartAreaCollection" /> somente leitura que contém a coleção de objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este permite de propriedade de coleção acessar o <xref:System.Windows.Forms.DataVisualization.Charting.ChartAreaCollection> objeto, que armazena <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> objetos e também fornece métodos e propriedades usados para manipular a coleção.  
+  
+ <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea>objetos são usados para plotar uma ou mais gráficos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna personalizado <see cref="T:System.Windows.Forms.AccessibleObject" /> para o gráfico inteiro.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.AccessibleObject" /> para o gráfico.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorPositionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt; CursorPositionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt; CursorPositionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a posição do cursor é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorPositionChanging">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt; CursorPositionChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt; CursorPositionChanging" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a posição do cursor está prestes a ser alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Customize">
+      <MemberSignature Language="C#" Value="public event EventHandler Customize;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Customize" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.Customize" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre pouco antes da imagem do gráfico é desenhada. Use este evento para personalizar a imagem do gráfico.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomizeLegend">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.CustomizeLegendEventArgs&gt; CustomizeLegend;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.CustomizeLegendEventArgs&gt; CustomizeLegend" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.CustomizeLegend" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.CustomizeLegendEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a legenda do gráfico deve ser personalizada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="public void DataBind ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBind() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.DataBind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Associa dados do controle <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> a uma fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método associará o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle à fonte de dados especificado.  
+  
+ Em casos em que uma fonte de dados é definida como um gráfico e sem outras operações de dados são necessárias, o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.DataBind%2A> método não precisa ser chamado explicitamente. Nesses casos, o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> próprio dados associará a fonte de dados antes que está sendo processado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindCrossTable">
+      <MemberSignature Language="C#" Value="public void DataBindCrossTable (System.Collections.IEnumerable dataSource, string seriesGroupByField, string xField, string yFields, string otherFields);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindCrossTable(class System.Collections.IEnumerable dataSource, string seriesGroupByField, string xField, string yFields, string otherFields) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.DataBindCrossTable(System.Collections.IEnumerable,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+        <Parameter Name="seriesGroupByField" Type="System.String" />
+        <Parameter Name="xField" Type="System.String" />
+        <Parameter Name="yFields" Type="System.String" />
+        <Parameter Name="otherFields" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados que é associada a dados em um gráfico.</param>
+        <param name="seriesGroupByField">O nome do campo usado para agrupar os dados da série.</param>
+        <param name="xField">O nome do campo para valores de X.</param>
+        <param name="yFields">Uma lista separada por vírgulas de nomes dos campos para os valores Y.</param>
+        <param name="otherFields">As outras propriedades de ponto de dados podem ser associadas.</param>
+        <summary>Os dados associam um gráfico à tabela com uma série criada por um valor exclusivo em uma determinada coluna.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Série será automaticamente adicionada ao gráfico, dependendo do número de valores exclusivos da determinado `seriesGroupByField` coluna da fonte de dados; em outras palavras, a criação da série depende de agrupamento de uma coluna.  
+  
+ A fonte de dados pode ser um <xref:System.Data.OleDb.OleDbDataReader>, <xref:System.Data.SqlClient.SqlDataReader> ou um <xref:System.Data.DataView> objeto. Observe que todas as coleções que implementam o <xref:System.Collections.IEnumerable> interface pode ser usada.  
+  
+ Propriedades do ponto de outros dados além de X e Y podem ser vinculados. O formato é: PointProperty = campo [{formato}] [, PointProperty = campo [{formato}]]. Por exemplo: "dica de ferramenta = preço {C1} Href = WebSiteName".  
+  
+Essas propriedades de ponto de dados são: 
+
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.AxisLabel%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.ToolTip%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.Label%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.LegendText%2A?displayProperty=nameWithType> 
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.LegendToolTip%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.CustomProperties%2A?displayProperty=nameWithType>, que são os nomes das propriedades personalizadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindCrossTable">
+      <MemberSignature Language="C#" Value="public void DataBindCrossTable (System.Collections.IEnumerable dataSource, string seriesGroupByField, string xField, string yFields, string otherFields, System.Windows.Forms.DataVisualization.Charting.PointSortOrder sortingOrder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindCrossTable(class System.Collections.IEnumerable dataSource, string seriesGroupByField, string xField, string yFields, string otherFields, valuetype System.Windows.Forms.DataVisualization.Charting.PointSortOrder sortingOrder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.DataBindCrossTable(System.Collections.IEnumerable,System.String,System.String,System.String,System.String,System.Windows.Forms.DataVisualization.Charting.PointSortOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+        <Parameter Name="seriesGroupByField" Type="System.String" />
+        <Parameter Name="xField" Type="System.String" />
+        <Parameter Name="yFields" Type="System.String" />
+        <Parameter Name="otherFields" Type="System.String" />
+        <Parameter Name="sortingOrder" Type="System.Windows.Forms.DataVisualization.Charting.PointSortOrder" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados que é associada a dados em um gráfico.</param>
+        <param name="seriesGroupByField">O nome do campo usado para agrupar os dados da série.</param>
+        <param name="xField">O nome do campo para valores de X.</param>
+        <param name="yFields">Uma lista separada por vírgulas de nomes dos campos para os valores Y.</param>
+        <param name="otherFields">As outras propriedades de ponto de dados podem ser associadas.</param>
+        <param name="sortingOrder">A ordem na qual a série será classificada pelos valores de campo de grupo.</param>
+        <summary>Os dados associam um gráfico à tabela com uma série criada por um valor exclusivo em uma determinada coluna.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Série será automaticamente adicionada ao gráfico, dependendo do número de valores exclusivos da determinado `seriesGroupByField` coluna da fonte de dados; em outras palavras, a criação da série depende de agrupamento de uma coluna.  
+  
+ A fonte de dados pode ser um <xref:System.Data.OleDb.OleDbDataReader>, <xref:System.Data.SqlClient.SqlDataReader> ou um <xref:System.Data.DataView> objeto.  
+  
+ Observe que todas as coleções que implementam o <xref:System.Collections.IEnumerable> interface pode ser usada.  
+  
+ Propriedades do ponto de outros dados além de X e Y podem ser vinculados. O formato é: PointProperty = campo [{formato}] [, PointProperty = campo [{formato}]]. Por exemplo: "dica de ferramenta = preço {C1} Href = WebSiteName".  
+  
+Essas propriedades de ponto de dados são: 
+
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.AxisLabel%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.ToolTip%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.Label%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.LegendText%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.LegendToolTip%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.CustomProperties%2A>, que são os nomes das propriedades personalizadas  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindTable">
+      <MemberSignature Language="C#" Value="public void DataBindTable (System.Collections.IEnumerable dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindTable(class System.Collections.IEnumerable dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.DataBindTable(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados que é associada a dados por um gráfico, que pode ser qualquer objeto <see cref="T:System.Collections.IEnumerable" />.</param>
+        <summary>Cria e associa automaticamente dados da série para a tabela de dados especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada coluna da tabela torna-se um valor de Y para uma série, com uma série por coluna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindTable">
+      <MemberSignature Language="C#" Value="public void DataBindTable (System.Collections.IEnumerable dataSource, string xField);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindTable(class System.Collections.IEnumerable dataSource, string xField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.DataBindTable(System.Collections.IEnumerable,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+        <Parameter Name="xField" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados que é associada a dados por um gráfico, que pode ser qualquer objeto <see cref="T:System.Collections.IEnumerable" />.</param>
+        <param name="xField">O nome do campo usado para os valores de X da série.</param>
+        <summary>Cria e associa automaticamente dados da série à tabela de dados especificada e opcionalmente popula os valores de X.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada coluna da tabela torna-se um valor de Y para uma série, com uma série por coluna.  
+  
+ Também é possível fornecer o campo de valor de X da série.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataManipulator">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataManipulator DataManipulator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.DataManipulator DataManipulator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.DataManipulator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataManipulator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataManipulator" /> objeto que fornece métodos e propriedades que lidam com dados.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataManipulator" /> objeto que fornece métodos e propriedades que lidam com dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade em tempo de execução para:  
+  
+-   Copie os valores de Y.  
+  
+-   Filtre dados.  
+  
+-   Agrupar dados.  
+  
+-   Substitua dados ausentes por pontos vazios.  
+  
+-   Exportar dados para um <xref:System.Data.DataSet> objeto.  
+  
+-   Classificar os dados.  
+  
+-   Aplica uma fórmula financeira aos dados.  
+  
+ Consulte o <xref:System.Windows.Forms.DataVisualization.Charting.DataManipulator> visão geral da classe para obter mais detalhes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public object DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.AttributeProvider(typeof(System.ComponentModel.IListSource))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte de dados do objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa a fonte de dados do objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os pontos de dados em uma série podem ser associados a uma fonte de dados a qualquer momento usando o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.DataSource%2A> propriedade.  
+  
+ Para forçar o gráfico para associar à fonte de dados, chame o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.DataBind%2A> método.  
+  
+ A seguir está uma lista de objetos que você pode usar como a fonte de dados:  
+  
+-   DataView  
+  
+-   Leitores de dados (SQL, OleDB)  
+  
+-   DataSet  
+  
+-   DataTable  
+  
+-   Origem da associação  
+  
+-   IDataSource  
+  
+-   Matrizes  
+  
+-   Listas  
+  
+-   Todos os objetos enumeráveis  
+  
+-   SqlCommand / OleDbCommand (fonte de dados-associação de dados somente)  
+  
+-   SqlDataAdapter / OleDbDataAdapter (fonte de dados-associação de dados somente)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho padrão do controle.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> objeto que representa o tamanho padrão do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />para liberar recursos gerenciados e não; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Versões não gerenciados e, opcionalmente, gerenciados recursos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sinaliza para o <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> do objeto que a inicialização for concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Font), "Microsoft Sans Serif, 8pt")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as propriedades de fonte do controle.</summary>
+        <value>Um objeto <see cref="T:System.Drawing.Font" /> que representa a fonte do texto do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor do texto de <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que especifica a cor do texto do gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é aplicável a essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatNumber">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.FormatNumberEventArgs&gt; FormatNumber;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.FormatNumberEventArgs&gt; FormatNumber" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.FormatNumber" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.FormatNumberEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um valor numérico deve ser convertido em uma cadeia de caracteres.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChartElementOutline">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartElementOutline GetChartElementOutline (object element, System.Windows.Forms.DataVisualization.Charting.ChartElementType elementType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.ChartElementOutline GetChartElementOutline(object element, valuetype System.Windows.Forms.DataVisualization.Charting.ChartElementType elementType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.GetChartElementOutline(System.Object,System.Windows.Forms.DataVisualization.Charting.ChartElementType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartElementOutline</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Object" />
+        <Parameter Name="elementType" Type="System.Windows.Forms.DataVisualization.Charting.ChartElementType" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</param>
+        <param name="elementType">O tipo do elemento.</param>
+        <summary>Retorna o contorno do elemento gráfico.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartElementOutline" /> objeto que contém:  
+  
+-   Uma matriz de pontos em coordenadas absolutos que podem ser usados como marcadores de estrutura de tópicos em torno deste elemento gráfico.  
+  
+-   Um <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> objeto para desenhar uma estrutura de tópicos em torno deste elemento gráfico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `chartElement` não é parte do gráfico, ou o `elementType` não pode ser combinado com `chartElement`, o resultado conterá uma matriz vazia de pontos de marcador. Os pontos de marcador são classificados no sentido horário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço solicitada do gráfico.</param>
+        <summary>Retorna o serviço solicitado de gráfico.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o tipo de serviço, ou <see langword="null" /> se o serviço não pode ser encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolTipText">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs&gt; GetToolTipText;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs&gt; GetToolTipText" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes de mostrar a dica de ferramenta para obter o texto da dica de ferramenta.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="HitTest">
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Determina o elemento do gráfico, se houver, que está localizado em um ponto definido por determinadas coordenadas X e Y.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para determinar o elemento do gráfico, se houver, que está localizado em um momento específico.  
+  
+ Esse método é geralmente usado em algum evento de mouse — por exemplo, <xref:System.Windows.Forms.DataVisualization.Charting.Chart.OnMouseDown%2A>— determinar qual gráfico elemento, o usuário final clicado. As coordenadas X e Y do mouse obtidas os parâmetros de evento são usadas para o `x` e `y` valores de parâmetro desta chamada de método.   
+  
+ As propriedades do <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> objeto que é retornado pode ser usado para determinar qual elemento de gráfico foi clicado; o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> objeto também fornece uma instância do objeto real selecionado, se houver.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.HitTestResult HitTest (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.HitTestResult HitTest(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.HitTest(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.HitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">O valor da coordenada X do ponto em que o usuário clicou.</param>
+        <param name="y">O valor da coordenada Y do ponto em que o usuário clicou.</param>
+        <summary>Determina o elemento do gráfico, se houver, que está localizado em um ponto definido por determinadas coordenadas X e Y.</summary>
+        <returns>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" />, que fornece informações sobre o elemento gráfico, se houver, que está no local especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para determinar o elemento do gráfico, se houver, que está localizado em um momento específico.  
+  
+ As propriedades do <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> objeto que é retornado pode ser usado para determinar qual elemento de gráfico foi clicado; o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> objeto também fornece uma instância do objeto real selecionado, se houver.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.HitTestResult HitTest (int x, int y, bool ignoreTransparent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.HitTestResult HitTest(int32 x, int32 y, bool ignoreTransparent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.HitTest(System.Int32,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.HitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="ignoreTransparent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">O valor da coordenada X do ponto do usuário clicou.</param>
+        <param name="y">O valor da coordenada Y do ponto do usuário clicou.</param>
+        <param name="ignoreTransparent">
+          <see langword="true" />para ignorar elementos transparentes; Caso contrário, <see langword="false" />.</param>
+        <summary>Determina o elemento de gráfico, se houver, que está localizado em um ponto definido pelas coordenadas X e Y de dado. Elementos transparentes, opcionalmente, podem ser ignorados.</summary>
+        <returns>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" />, que fornece informações sobre o elemento gráfico, se houver, que está no local especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para determinar o elemento do gráfico, se houver, que está localizado em um momento específico.  
+  
+ Para ignorar elementos transparentes, defina a `ignoreTransparent` parâmetro `true`.  
+  
+ As propriedades do <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> objeto que é retornado pode ser usado para determinar qual elemento de gráfico foi clicado; o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> objeto também fornece uma instância do objeto real selecionado, se houver.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.HitTestResult HitTest (int x, int y, System.Windows.Forms.DataVisualization.Charting.ChartElementType requestedElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.HitTestResult HitTest(int32 x, int32 y, valuetype System.Windows.Forms.DataVisualization.Charting.ChartElementType requestedElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.HitTest(System.Int32,System.Int32,System.Windows.Forms.DataVisualization.Charting.ChartElementType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.HitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="requestedElement" Type="System.Windows.Forms.DataVisualization.Charting.ChartElementType" />
+      </Parameters>
+      <Docs>
+        <param name="x">O valor da coordenada X do ponto do usuário clicou.</param>
+        <param name="y">O valor da coordenada Y do ponto do usuário clicou.</param>
+        <param name="requestedElement">Um sinalizador que determina o tipo de elemento gráfico a ser testada.</param>
+        <summary>Determina se um elemento gráfico de um determinado tipo está localizado em um ponto definido pelas coordenadas X e Y de dado.</summary>
+        <returns>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" />, que fornece informações sobre o elemento gráfico, se houver, que está no local especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame este método para determinar se um elemento gráfico do tipo em questão está localizado em um momento específico.  
+  
+ As propriedades do <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> objeto que é retornado pode ser usado para determinar qual elemento de gráfico foi clicado; o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> objeto também fornece uma instância do objeto real selecionado, se houver.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.HitTestResult[] HitTest (int x, int y, bool ignoreTransparent, params System.Windows.Forms.DataVisualization.Charting.ChartElementType[] requestedElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.HitTestResult[] HitTest(int32 x, int32 y, bool ignoreTransparent, valuetype System.Windows.Forms.DataVisualization.Charting.ChartElementType[] requestedElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.HitTest(System.Int32,System.Int32,System.Boolean,System.Windows.Forms.DataVisualization.Charting.ChartElementType[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.HitTestResult[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="ignoreTransparent" Type="System.Boolean" />
+        <Parameter Name="requestedElement" Type="System.Windows.Forms.DataVisualization.Charting.ChartElementType[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada X do ponto de dados especificado.</param>
+        <param name="y">A coordenada Y do ponto de dados especificado.</param>
+        <param name="ignoreTransparent">
+          <see langword="true" />para ignorar elementos transparentes; Caso contrário, <see langword="false" />.</param>
+        <param name="requestedElement">Uma matriz de <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartElementType" /> objetos que especificam os tipos para testar, para filtrar o resultados. Se omitido, procurando tipos de elemento será ignorado e todos os tipos de elemento serão válidos.</param>
+        <summary>Determina que se um elemento gráfico que é um dos tipos especificados está localizado em um ponto definido por coordenadas X e Y determinadas.</summary>
+        <returns>Uma matriz de <see cref="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" /> objetos que fornece informações sobre o elemento de gráfico, se houver, encontrada no local especificado. A matriz contém pelo menos um elemento, que pode ser <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartElementType.Nothing" />. Os objetos no resultado são classificados de cima para baixo de diferentes camadas de controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para determinar o elemento de medidor, se houver, que está localizado em um momento específico. Esse método é geralmente usado em alguns eventos relacionados ao mouse, por exemplo, <xref:System.Windows.Forms.DataVisualization.Charting.Chart.OnMouseDown%2A>, para determinar qual clicou o usuário final do elemento do medidor. As coordenadas X e Y do mouse obtidas os parâmetros de evento são usadas para os valores de parâmetro X e Y desta chamada de método.   
+  
+ As propriedades de retornado <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> objeto pode ser usado para determinar qual elemento de gráfico foi clicado; o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> objeto também fornece uma instância do objeto real selecionado, se houver.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Images">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection Images { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection Images" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.Images" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection" /> que armazena objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImage" /> para o gráfico.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection" /> que contém a coleção de objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.NamedImage" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para adicionar <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> objetos e remover <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> objetos do <xref:System.Windows.Forms.DataVisualization.Charting.NamedImagesCollection> objeto do <xref:System.Windows.Forms.DataVisualization.Charting.Chart>. Essa propriedade de coleção está disponível em tempo de execução apenas.  
+  
+ Uma imagem — ou seja, um objeto é derivado do tipo <xref:System.Drawing.Image>, como <xref:System.Drawing.Bitmap>, que é criada dinamicamente — podem ser armazenados na coleção e, em seguida, são atribuídos em um momento posterior para qualquer relacionadas à imagem de <xref:System.Windows.Forms.DataVisualization.Charting.Chart> propriedade, como <xref:System.Windows.Forms.DataVisualization.Charting.Chart.BackImage%2A>.  
+  
+ Quando você atribui um <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> objeto a uma propriedade relacionadas à imagem no <xref:System.Windows.Forms.DataVisualization.Charting.Chart> classe, use o nome do <xref:System.Windows.Forms.DataVisualization.Charting.NamedImage> de objeto para o `string` valor da propriedade de imagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invalidate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.Invalidate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invalida a superfície inteira do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> e faz com que o <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> seja redesenhado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate (System.Drawing.Rectangle rectangle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invalidate(valuetype System.Drawing.Rectangle rectangle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.Invalidate(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rectangle" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rectangle">Um <see cref="T:System.Drawing.Rectangle" /> objeto que especifica a área para invalidar.</param>
+        <summary>Invalida a área especificada do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona a área especificada para o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> área de atualização do controle, que é a área será pintada novamente na próxima operação de pintura. Esse método também faz com que uma mensagem de pintura sejam enviados para o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSoftShadows">
+      <MemberSignature Language="C#" Value="public bool IsSoftShadows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSoftShadows" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.IsSoftShadows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que determina se uma gradação suave é aplicada quando as sombras são desenhadas.</summary>
+        <value>
+          <see langword="true" />Se as sombras são desenhadas usando suavização; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor da `ShadowOffset` propriedade para uma série de ponto de dados, área do gráfico ou legenda é diferente de zero, uma sombra será aplicada usando uma cor definida pelo seu `ShadowColor` propriedade.  
+  
+ Se o valor da <xref:System.Windows.Forms.DataVisualization.Charting.Chart.IsSoftShadows%2A> é de propriedade `true`, uma gradação suave será aplicada a sombra.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Legends">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.LegendCollection Legends { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.LegendCollection Legends" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.Legends" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.LegendCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LegendCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCollection" /> que armazena todos os objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.Legend" /> usados pelo controle <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendCollection" /> que contém os objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.Legend" /> usados pelo gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade de coleção armazena todos os <xref:System.Windows.Forms.DataVisualization.Charting.Legend> objetos usados pelo <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadTemplate">
+      <MemberSignature Language="C#" Value="public void LoadTemplate (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadTemplate(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.LoadTemplate(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo para carregar do.</param>
+        <summary>Carrega um modelo para o <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle de um fluxo de imagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você deseja carregar um modelo de um fluxo, como um fluxo de memória, o fluxo de arquivos e assim por diante.  
+  
+ Certifique-se de definir o <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsTemplateMode%2A> propriedade `true` antes de salvar o modelo com o <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save%2A> método.  
+  
+ Se um modelo carregado tem duas séries de dados, as propriedades de aparência da série são aplicadas sequencialmente ao gráfico. Em outras palavras, as propriedades de aparência da série do primeiro modelo são atribuídas à primeira série do gráfico, as propriedades de aparência do segundo modelo série são aplicadas para a segunda série do gráfico e a primeira série do modelo é usada novamente para a terceira série do gráfico e assim por diante. O mesmo é verdadeiro para áreas do gráfico e todas as coleções que têm propriedades de aparência.  
+  
+ Modelos podem ser usados para simular paletas personalizadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadTemplate">
+      <MemberSignature Language="C#" Value="public void LoadTemplate (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadTemplate(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.LoadTemplate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do arquivo do modelo a ser carregado. Você deve especificar o caminho completo do modelo a ser carregado do disco.</param>
+        <summary>Carrega um modelo com o nome especificado do disco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `name` parâmetro deve usar um caminho completo, por exemplo, C:\MyPic.jpg. Observe que você também deve especificar a extensão de arquivo.  
+  
+ Esse método carrega um modelo de disco que foi salvo usando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save%2A> método.  
+  
+ Certifique-se de definir o <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.IsTemplateMode%2A> propriedade `true` antes de salvar o modelo com o <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer.Save%2A> método.  
+  
+ Se um modelo carregado tem duas séries de dados, as propriedades de aparência da série são aplicadas sequencialmente ao gráfico. Em outras palavras, as propriedades de aparência da série do primeiro modelo são atribuídas à primeira série do gráfico, as propriedades de aparência do segundo modelo série são aplicadas para a segunda série do gráfico e a primeira série do modelo é usada novamente para a terceira série do gráfico e assim por diante. O mesmo é verdadeiro para áreas do gráfico e todas as coleções que têm propriedades de aparência.  
+  
+ Modelos podem ser usados para simular paletas personalizadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCursorChanged">
+      <MemberSignature Language="C#" Value="protected override void OnCursorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCursorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnCursorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Substitui o <see cref="M:System.Windows.Forms.Control.OnCursorChanged(System.EventArgs)" /> método e gera o <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging" /> e <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanged" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCustomize">
+      <MemberSignature Language="C#" Value="protected virtual void OnCustomize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCustomize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnCustomize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.Customize" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCustomizeLegend">
+      <MemberSignature Language="C#" Value="protected virtual void OnCustomizeLegend (System.Windows.Forms.DataVisualization.Charting.LegendItemsCollection legendItems, string legendName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCustomizeLegend(class System.Windows.Forms.DataVisualization.Charting.LegendItemsCollection legendItems, string legendName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnCustomizeLegend(System.Windows.Forms.DataVisualization.Charting.LegendItemsCollection,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="legendItems" Type="System.Windows.Forms.DataVisualization.Charting.LegendItemsCollection" />
+        <Parameter Name="legendName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="legendItems">Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.LegendItemsCollection" />.</param>
+        <param name="legendName">O nome da legenda.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.CustomizeLegend" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDoubleClick">
+      <MemberSignature Language="C#" Value="protected override void OnDoubleClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDoubleClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnDoubleClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> objeto que contém os argumentos do evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnDoubleClick(System.EventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFormatNumber">
+      <MemberSignature Language="C#" Value="protected virtual void OnFormatNumber (System.Windows.Forms.DataVisualization.Charting.FormatNumberEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFormatNumber(class System.Windows.Forms.DataVisualization.Charting.FormatNumberEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnFormatNumber(System.Windows.Forms.DataVisualization.Charting.FormatNumberEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.DataVisualization.Charting.FormatNumberEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto de <see cref="T:System.Windows.Forms.DataVisualization.Charting.FormatNumberEventArgs" /> que contém os argumentos de evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.FormatNumber" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLocationChanged">
+      <MemberSignature Language="C#" Value="protected override void OnLocationChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLocationChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnLocationChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> objeto que contém os argumentos do evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnLocationChanged(System.EventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto de <see cref="T:System.MouseEventArgs" /> que contém os argumentos de evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnMouseMove(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto de <see cref="T:System.MouseEventArgs" /> que contém os argumentos de evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnMouseMove(System.Windows.Forms.MouseEventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto de <see cref="T:System.MouseEventArgs" /> que contém os argumentos de evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto de <see cref="T:System.PaintEventArgs" /> que contém os argumentos de evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnPaint(System.Windows.Forms.PaintEventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaintBackground">
+      <MemberSignature Language="C#" Value="protected override void OnPaintBackground (System.Windows.Forms.PaintEventArgs pevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaintBackground(class System.Windows.Forms.PaintEventArgs pevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pevent" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="pevent">Um objeto de <see cref="T:System.PaintEventArgs" /> que contém os argumentos de evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPostPaint">
+      <MemberSignature Language="C#" Value="protected virtual void OnPostPaint (System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPostPaint(class System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnPostPaint(System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto de <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs" /> que contém os argumentos de evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.PostPaint" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPrePaint">
+      <MemberSignature Language="C#" Value="protected virtual void OnPrePaint (System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPrePaint(class System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnPrePaint(System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto de <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs" /> que contém os argumentos de evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.PrePaint" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResize">
+      <MemberSignature Language="C#" Value="protected override void OnResize (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnResize(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnResize(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> objeto que contém os argumentos do evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnResize(System.EventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftChanged">
+      <MemberSignature Language="C#" Value="protected override void OnRightToLeftChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRightToLeftChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnRightToLeftChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> objeto que contém os argumentos do evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnRightToLeftChanged(System.EventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSystemColorsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSystemColorsChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSystemColorsChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.OnSystemColorsChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnSystemColorsChanged(System.EventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Palette">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartColorPalette Palette { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartColorPalette Palette" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.Palette" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ColorPaletteEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartColorPalette</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a paleta para o controle <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartColorPalette" /> que determina a paleta a ser usada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma paleta é usada para atribuir automaticamente as cores para elementos de dados se ambas as seguintes condições forem atendidas:  
+  
+-   os pontos de dados em si não têm cores atribuídas a eles.  
+  
+-   os pontos de dados pertencentes a série de dados também não tem uma cor atribuída.  
+  
+ Se nenhuma cor de ponto de dados ou de série é especificados explicitamente, as cores usadas dependem do tipo de gráfico e o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> paleta do objeto ou a paleta de uma série associada, se um for especificado.  
+  
+> [!NOTE]
+>  Se o `Palette` propriedade para ambas as <xref:System.Windows.Forms.DataVisualization.Charting.Chart> e <xref:System.Windows.Forms.DataVisualization.Charting.Series> objetos é definido como <xref:System.Windows.Forms.DataVisualization.Charting.ChartColorPalette>e nenhuma cor será atribuída à série de dados relevantes ou pontos de dados, os pontos de dados não serão desenhados e serão exibidos como "empty" áreas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaletteCustomColors">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color[] PaletteCustomColors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color[] PaletteCustomColors" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.PaletteCustomColors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.ColorArrayConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma matriz de cores de paleta personalizada.</summary>
+        <value>Uma matriz de objetos <see cref="T:System.Drawing.Color" /> que representa o conjunto de cores usado para as séries no gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se precisar de mais de 16 cores ou se você deseja aplicar suas próprias cores ao gráfico, você deve definir uma paleta personalizada. Uma paleta personalizada permitem que você adicione suas próprias cores na ordem em que você deseja que apareçam no gráfico. Esse tipo de paleta é especialmente útil se o número de séries do gráfico é desconhecido no tempo de design.  
+  
+ Essa propriedade não tiver nenhuma efeito quando o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Palette%2A> é de propriedade *não* definido como  
+  
+ <xref:System.Windows.Forms.DataVisualization.Charting.ChartColorPalette>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostPaint">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs&gt; PostPaint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs&gt; PostPaint" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.PostPaint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o elemento do gráfico é pintado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrePaint">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs&gt; PrePaint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs&gt; PrePaint" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.PrePaint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o plano de fundo do elemento de gráfico é pintado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Printing">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.PrintingManager Printing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.PrintingManager Printing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.Printing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.PrintingManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.PrintingManager" /> somente leitura usado para imprimir um gráfico.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.PrintingManager" /> usado para imprimir um gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um gráfico é impresso, todos os elementos de gráfico, exceto as barras de rolagem serão impressas.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.PrintingManager> objeto contém os métodos a seguir, que são usados para operações básicas de impressão:  
+  
+ <xref:System.Windows.Forms.DataVisualization.Charting.PrintingManager.PageSetup%2A>: Exibe uma caixa de diálogo Configurar página, que permite que o usuário final selecionar o tamanho do papel, origem do papel, orientação da página e assim por diante.  
+  
+ <xref:System.Windows.Forms.DataVisualization.Charting.PrintingManager.PrintPreview%2A>: Exibe uma caixa de diálogo Visualização de impressão, que permite que o usuário final aplicar zoom, o gráfico de impressão e assim por diante.  
+  
+ <xref:System.Windows.Forms.DataVisualization.Charting.PrintingManager.Print%2A>: Imprime o <xref:System.Windows.Forms.DataVisualization.Charting.Chart>; a caixa de diálogo de impressão, opcionalmente, pode ser exibida antes da impressão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public override void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Força o controle a invalidar a área de cliente e redesenhar imediatamente a si mesmo e a todos os controles filho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderingDpiX">
+      <MemberSignature Language="C#" Value="public double RenderingDpiX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 RenderingDpiX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.RenderingDpiX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(96)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a resolução horizontal do renderizador <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</summary>
+        <value>Um valor <see langword="double" /> que representa a resolução horizontal do renderizador do gráfico.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderingDpiY">
+      <MemberSignature Language="C#" Value="public double RenderingDpiY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 RenderingDpiY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.RenderingDpiY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(96)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a resolução vertical do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> renderizador.</summary>
+        <value>Um <see langword="double" /> valor que representa a resolução vertical do renderizador do gráfico.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetAutoValues">
+      <MemberSignature Language="C#" Value="public void ResetAutoValues ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetAutoValues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.ResetAutoValues" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine os valores da propriedade de gráfico calculados automaticamente para “Automático”.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Várias propriedades do gráfico podem ser definidas como "Auto" — por exemplo, <xref:System.Windows.Forms.DataVisualization.Charting.Axis.Minimum%2A>; essas propriedades são calculadas antes do gráfico está sendo processado. "Auto" geralmente é representado como um <xref:System.Double.NaN> valor.  
+  
+ Chame esse método para redefinir essas propriedades de seu valor calculado como "Automático" (<xref:System.Double.NaN>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveImage">
+      <MemberSignature Language="C#" Value="public void SaveImage (System.IO.Stream imageStream, System.Drawing.Imaging.ImageFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveImage(class System.IO.Stream imageStream, class System.Drawing.Imaging.ImageFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.SaveImage(System.IO.Stream,System.Drawing.Imaging.ImageFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageStream" Type="System.IO.Stream" />
+        <Parameter Name="format" Type="System.Drawing.Imaging.ImageFormat" />
+      </Parameters>
+      <Docs>
+        <param name="imageStream">O fluxo no qual a imagem é salva.</param>
+        <param name="format">O formato de imagem.</param>
+        <summary>Salva a imagem no fluxo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveImage">
+      <MemberSignature Language="C#" Value="public void SaveImage (System.IO.Stream imageStream, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveImage(class System.IO.Stream imageStream, valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.SaveImage(System.IO.Stream,System.Windows.Forms.DataVisualization.Charting.ChartImageFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageStream" Type="System.IO.Stream" />
+        <Parameter Name="format" Type="System.Windows.Forms.DataVisualization.Charting.ChartImageFormat" />
+      </Parameters>
+      <Docs>
+        <param name="imageStream">O fluxo no qual a imagem é salva.</param>
+        <param name="format">O formato de imagem do gráfico.</param>
+        <summary>Salva a imagem do gráfico no fluxo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveImage">
+      <MemberSignature Language="C#" Value="public void SaveImage (string imageFileName, System.Drawing.Imaging.ImageFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveImage(string imageFileName, class System.Drawing.Imaging.ImageFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.SaveImage(System.String,System.Drawing.Imaging.ImageFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageFileName" Type="System.String" />
+        <Parameter Name="format" Type="System.Drawing.Imaging.ImageFormat" />
+      </Parameters>
+      <Docs>
+        <param name="imageFileName">O nome do arquivo no qual imagem é salvo.</param>
+        <param name="format">O formato de imagem.</param>
+        <summary>Salva uma imagem no arquivo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveImage">
+      <MemberSignature Language="C#" Value="public void SaveImage (string imageFileName, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveImage(string imageFileName, valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.SaveImage(System.String,System.Windows.Forms.DataVisualization.Charting.ChartImageFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageFileName" Type="System.String" />
+        <Parameter Name="format" Type="System.Windows.Forms.DataVisualization.Charting.ChartImageFormat" />
+      </Parameters>
+      <Docs>
+        <param name="imageFileName">O nome do arquivo no qual imagem é salvo.</param>
+        <param name="format">O formato de imagem do gráfico.</param>
+        <summary>Salva a imagem do gráfico no arquivo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionRangeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt; SelectionRangeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt; SelectionRangeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a posição inicial ou final da seleção é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionRangeChanging">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt; SelectionRangeChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt; SelectionRangeChanging" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.DataVisualization.Charting.CursorEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a seleção de posição inicial ou final está prestes a ser alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serializer">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartSerializer Serializer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.ChartSerializer Serializer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.Serializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartSerializer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartSerializer" /> objeto que é usado para serialização de gráfico.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartSerializer" /> objeto que é usado para serialização de gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade em tempo de design ou de execução para serializar o gráfico.  
+  
+ Para uma discussão detalhada sobre o <xref:System.Windows.Forms.DataVisualization.Charting.ChartSerializer> de classe, consulte a visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Series">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.SeriesCollection Series { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.SeriesCollection Series" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.Series" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.SeriesCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.SeriesCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.SeriesCollection" /> que contém objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" />.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.SeriesCollection" /> que contém objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade de coleção permite que você acesse o <xref:System.Windows.Forms.DataVisualization.Charting.SeriesCollection> classe quais repositórios <xref:System.Windows.Forms.DataVisualization.Charting.Series> objetos e também fornece métodos e propriedades usados para manipular a esta coleção.  
+  
+ <xref:System.Windows.Forms.DataVisualization.Charting.Series>repositório de objetos <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objetos, bem como os atributos de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Size), "300, 300")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho do controle <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</summary>
+        <value>Um objeto <see cref="T:System.Drawing.Size" /> que representa o tamanho do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressExceptions">
+      <MemberSignature Language="C#" Value="public bool SuppressExceptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressExceptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.SuppressExceptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que determina se as exceções não críticas devem ser suprimidas.</summary>
+        <value>
+          <see langword="true" />Se as exceções não críticas devem ser suprimidas; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir essa propriedade como `true`, as exceções não críticas serão suprimidas.  
+  
+ Quando o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle corretamente não pode plotar o gráfico usando os dados e outras configurações fornecidas, uma exceção será lançada. Embora seja útil exibir exceções durante o teste do aplicativo, eles não devem ser mostrados quando o aplicativo é liberado.  
+  
+> [!NOTE]
+>  Definir essa propriedade como `true` pode ocultar problemas sérios no código de origem do aplicativo de usuário. Essa configuração também pode causar uma imagem de gráfico a ser gerado que pode falsificar seus dados. É altamente recomendável que esse modo ser apenas a versão usada em compilações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAntiAliasingQuality">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality TextAntiAliasingQuality { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality TextAntiAliasingQuality" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.TextAntiAliasingQuality" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality), "High")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality" /> tipo a ser usado ao aplicar a suavização ao texto.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality" /> usado para aplicar a suavização ao texto do valor de enumeração. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.High" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a suavização é aplicada ao texto, o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle usará essa propriedade para determinar o tipo de textual suavização para aplicar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Titles">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.TitleCollection Titles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.TitleCollection Titles" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Chart.Titles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TitleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.TitleCollection" /> usado para armazenar todos os objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.Title" /> usados pelo controle <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.TitleCollection" /> usado para armazenar todos os objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.Title" /> usados pelo controle do gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Titles%2A> propriedade armazena todos os <xref:System.Windows.Forms.DataVisualization.Charting.Title> objetos usados pelo <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateAnnotations">
+      <MemberSignature Language="C#" Value="public void UpdateAnnotations ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateAnnotations() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.UpdateAnnotations" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza as anotações no <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateCursor">
+      <MemberSignature Language="C#" Value="public void UpdateCursor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateCursor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Chart.UpdateCursor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza o cursor no <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

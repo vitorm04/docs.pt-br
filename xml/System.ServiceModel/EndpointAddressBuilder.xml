@@ -1,0 +1,381 @@
+<Type Name="EndpointAddressBuilder" FullName="System.ServiceModel.EndpointAddressBuilder">
+  <TypeSignature Language="C#" Value="public class EndpointAddressBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EndpointAddressBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.EndpointAddressBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma fábrica para produzir novos endereços de ponto de extremidade (imutáveis) com valores de propriedade específicos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O novo endereço de ponto de extremidade pode ter seus valores de propriedade inicializadas a partir de valores de propriedade de um endereço ponto de extremidade existente usando o <xref:System.ServiceModel.EndpointAddressBuilder.%23ctor%28System.ServiceModel.EndpointAddress%29> construtor.  
+  
+ Os endereços de ponto de extremidade criados podem ter seus valores URI e identidade definidos usando o <xref:System.ServiceModel.EndpointAddressBuilder.Uri%2A> e <xref:System.ServiceModel.EndpointAddressBuilder.Identity%2A> propriedades do construtor de endereço de ponto de extremidade. Observe que <xref:System.ServiceModel.EndpointAddress> é uma classe imutável.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEndpointAddressBuilder#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueendpointaddressbuilder/cs/program.cs#0)]
+ [!code-vb[S_UEEndpointAddressBuilder#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueendpointaddressbuilder/vb/module1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointAddressBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.EndpointAddressBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UEEndpointAddressBuilder#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueendpointaddressbuilder/cs/program.cs#1)]
+ [!code-vb[S_UEEndpointAddressBuilder#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueendpointaddressbuilder/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointAddressBuilder (System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressBuilder.#ctor(System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">O <see cref="T:System.ServiceModel.EndpointAddress" /> cujos valores de propriedade são usados para inicializar os valores de propriedade dessa instância.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.EndpointAddressBuilder" /> classe a partir de um endereço de ponto de extremidade existente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores inicializados para o construtor de ponto de extremidade do endereço de ponto de extremidade são o endereço de ponto de extremidade em si e a identidade, os cabeçalhos e o URI.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEndpointAddressBuilder#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueendpointaddressbuilder/cs/program.cs#2)]
+ [!code-vb[S_UEEndpointAddressBuilder#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueendpointaddressbuilder/vb/module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReaderAtExtensions">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReader GetReaderAtExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlDictionaryReader GetReaderAtExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressBuilder.GetReaderAtExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o leitor de dicionário XML que contém as extensões do endereço do ponto de extremidade.</summary>
+        <returns>O <see cref="T:System.Xml.XmlDictionaryReader" /> que lê as extensões do endereço do ponto de extremidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O leitor fornece acesso às informações que não estão contidos no modelo da referência do ponto de extremidade definido pelo WS-Addressing.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEndpointAddressBuilder#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueendpointaddressbuilder/cs/program.cs#5)]
+ [!code-vb[S_UEEndpointAddressBuilder#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueendpointaddressbuilder/vb/module1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReaderAtMetadata">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReader GetReaderAtMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlDictionaryReader GetReaderAtMetadata() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressBuilder.GetReaderAtMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o leitor que contém os metadados associados ao endereço de ponto de extremidade.</summary>
+        <returns>O <see cref="T:System.Xml.XmlDictionaryReader" /> que lê os metadados associados o endereço do ponto de extremidade, se houver alguns; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UEEndpointAddressBuilder#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueendpointaddressbuilder/cs/program.cs#8)]
+ [!code-vb[S_UEEndpointAddressBuilder#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueendpointaddressbuilder/vb/module1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Channels.AddressHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Channels.AddressHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointAddressBuilder.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Channels.AddressHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de cabeçalhos de endereço para os pontos de extremidade que o construtor pode criar.</summary>
+        <value>O <see cref="T:System.Collections.Generic.List`1" /> do tipo <see cref="T:System.ServiceModel.Channels.AddressHeader" /> que contém os cabeçalhos de endereço para o construtor pode criar os pontos de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cabeçalhos de endereço para os pontos de extremidade podem ser definidos usando o <xref:System.ServiceModel.EndpointAddressBuilder.%23ctor%28System.ServiceModel.EndpointAddress%29> construtor.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEndpointAddressBuilder#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueendpointaddressbuilder/cs/program.cs#3)]
+ [!code-vb[S_UEEndpointAddressBuilder#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueendpointaddressbuilder/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointIdentity Identity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointIdentity Identity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointAddressBuilder.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a identidade para os pontos de extremidade que o construtor pode criar.</summary>
+        <value>O <see cref="T:System.ServiceModel.EndpointIdentity" /> do ponto de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A identidade é usada por um ponto de extremidade para autenticar outros pontos de extremidade para trocar mensagens com eles.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEndpointAddressBuilder#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueendpointaddressbuilder/cs/program.cs#4)]
+ [!code-vb[S_UEEndpointAddressBuilder#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueendpointaddressbuilder/vb/module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetExtensionReader">
+      <MemberSignature Language="C#" Value="public void SetExtensionReader (System.Xml.XmlDictionaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetExtensionReader(class System.Xml.XmlDictionaryReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressBuilder.SetExtensionReader(System.Xml.XmlDictionaryReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlDictionaryReader" /> que lê as extensões do ponto de extremidade.</param>
+        <summary>Especifica o leitor de dicionário XML que contém as extensões do endereço do ponto de extremidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UEEndpointAddressBuilder#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueendpointaddressbuilder/cs/program.cs#6)]
+ [!code-vb[S_UEEndpointAddressBuilder#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueendpointaddressbuilder/vb/module1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMetadataReader">
+      <MemberSignature Language="C#" Value="public void SetMetadataReader (System.Xml.XmlDictionaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMetadataReader(class System.Xml.XmlDictionaryReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressBuilder.SetMetadataReader(System.Xml.XmlDictionaryReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlDictionaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlDictionaryReader" /> que lê os metadados associados com o ponto de extremidade.</param>
+        <summary>Especifica o leitor de dicionário XML que contém os metadados associados ao endereço de ponto de extremidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UEEndpointAddressBuilder#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueendpointaddressbuilder/cs/program.cs#9)]
+ [!code-vb[S_UEEndpointAddressBuilder#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueendpointaddressbuilder/vb/module1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToEndpointAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress ToEndpointAddress ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.EndpointAddress ToEndpointAddress() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressBuilder.ToEndpointAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo endereço de ponto de extremidade inicializado com os valores de propriedade do construtor de endereço de ponto de extremidade atual.</summary>
+        <returns>O <see cref="T:System.ServiceModel.EndpointAddress" /> cuja propriedade são inicializadas com os valores do construtor de endereço de ponto de extremidade atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores inicializados do endereço de ponto de extremidade são a identidade, a coleção de cabeçalhos de endereço, o URI e o buffer de extensão.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEndpointAddressBuilder#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueendpointaddressbuilder/cs/program.cs#7)]
+ [!code-vb[S_UEEndpointAddressBuilder#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueendpointaddressbuilder/vb/module1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.EndpointAddressBuilder.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o URI para o construtor pode criar os pontos de extremidade.</summary>
+        <value>O <see cref="T:System.Uri" /> que especifica o endereço do ponto de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permite que o programador definir ou obter o URI associado ao endereço de ponto de extremidade.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEEndpointAddressBuilder#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueendpointaddressbuilder/cs/program.cs#3)]
+ [!code-vb[S_UEEndpointAddressBuilder#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ueendpointaddressbuilder/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

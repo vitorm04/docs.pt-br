@@ -1,0 +1,684 @@
+<Type Name="TcpStatistics" FullName="System.Net.NetworkInformation.TcpStatistics">
+  <TypeSignature Language="C#" Value="public abstract class TcpStatistics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TcpStatistics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.TcpStatistics" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados estatísticos do protocolo TCP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As instâncias dessa classe são retornadas pelo <xref:System.Net.NetworkInformation.IPGlobalProperties.GetTcpIPv4Statistics%2A> e <xref:System.Net.NetworkInformation.IPGlobalProperties.GetTcpIPv6Statistics%2A> métodos, para fornecer acesso de aplicativos para obter informações de tráfego TCP.  
+  
+ As informações desta classe se correlaciona com os objetos de informações de gerenciamento descritos no [http://www.ietf.org/rfc/rfc2012.txt](http://www.ietf.org/rfc/rfc2012.txt).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as estatísticas TCP para a família de endereços especificado.  
+  
+ [!code-cpp[NCLNetInfoReport#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#2)]
+ [!code-csharp[NCLNetInfoReport#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TcpStatistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.TcpStatistics.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.TcpStatistics" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser chamado somente por classes que derivam de <xref:System.Net.NetworkInformation.TcpStatistics> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionsAccepted">
+      <MemberSignature Language="C#" Value="public abstract long ConnectionsAccepted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ConnectionsAccepted" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.ConnectionsAccepted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de solicitações de conexão de protocolo de controle de transmissão (TCP) aceitas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de solicitações de conexão TCP aceitas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ IETF RFC 2012 formalmente define esse valor como "O número de vezes que conexões TCP fizeram uma transição direta para o estado de SYN Recebidos do estado de ESCUTA."  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de conexão.  
+  
+ [!code-cpp[NCLNetInfo2#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#6)]
+ [!code-csharp[NCLNetInfo2#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#6)]
+ [!code-vb[NCLNetInfo2#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionsInitiated">
+      <MemberSignature Language="C#" Value="public abstract long ConnectionsInitiated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ConnectionsInitiated" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.ConnectionsInitiated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de solicitações de conexão de protocolo de controle de transmissão (TCP) feitas pelos clientes.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de conexões TCP iniciadas por clientes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ IETF RFC 2012 formalmente define esse valor como "O número de vezes que conexões TCP fizeram uma transição direta ao estado SYN-SENT do estado CLOSED".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de conexão.  
+  
+ [!code-cpp[NCLNetInfo2#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#6)]
+ [!code-csharp[NCLNetInfo2#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#6)]
+ [!code-vb[NCLNetInfo2#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CumulativeConnections">
+      <MemberSignature Language="C#" Value="public abstract long CumulativeConnections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 CumulativeConnections" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.CumulativeConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o número total de conexões estabelecidas com o protocolo de controle de transmissão (TCP).</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de conexões estabelecidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de conexão.  
+  
+ [!code-cpp[NCLNetInfo2#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#6)]
+ [!code-csharp[NCLNetInfo2#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#6)]
+ [!code-vb[NCLNetInfo2#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentConnections">
+      <MemberSignature Language="C#" Value="public abstract long CurrentConnections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 CurrentConnections" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.CurrentConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de conexões de protocolo de controle de transmissão (TCP) atual.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de conexões de TCP atuais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ IETF RFC 2012 formalmente define esse valor como "O número de conexões TCP para o qual o estado atual é estabelecido ou CLOSE-WAIT."  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de conexão.  
+  
+ [!code-cpp[NCLNetInfo2#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#6)]
+ [!code-csharp[NCLNetInfo2#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#6)]
+ [!code-vb[NCLNetInfo2#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorsReceived">
+      <MemberSignature Language="C#" Value="public abstract long ErrorsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ErrorsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.ErrorsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de erros de protocolo de controle de transmissão (TCP) recebido.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de erros TCP recebidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de conexão.  
+  
+ [!code-cpp[NCLNetInfo2#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#6)]
+ [!code-csharp[NCLNetInfo2#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#6)]
+ [!code-vb[NCLNetInfo2#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailedConnectionAttempts">
+      <MemberSignature Language="C#" Value="public abstract long FailedConnectionAttempts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 FailedConnectionAttempts" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.FailedConnectionAttempts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de tentativas de conexão de protocolo de controle de transmissão (TCP).</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de tentativas de conexão TCP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ IETF RFC 2012 formalmente define esse valor como "o número de vezes que conexões TCP fizeram uma transição direta para o estado fechado de um estado SYN-SENT ou o estado de SYN Recebidos, mais o número de vezes que as conexões TCP fizeram uma transição direta para o estado de ESCUTA do estado SYN Recebidos."  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de conexão.  
+  
+ [!code-cpp[NCLNetInfo2#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#6)]
+ [!code-csharp[NCLNetInfo2#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#6)]
+ [!code-vb[NCLNetInfo2#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumConnections">
+      <MemberSignature Language="C#" Value="public abstract long MaximumConnections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaximumConnections" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.MaximumConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número máximo de conexões de protocolo de controle de transmissão (TCP) com suporte.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de conexões TCP que podem ter suporte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o número máximo de conexões é dinâmico, essa propriedade retornará -1.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de conexão máximo e de tempo limite.  
+  
+ [!code-cpp[NCLNetInfo2#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#5)]
+ [!code-csharp[NCLNetInfo2#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#5)]
+ [!code-vb[NCLNetInfo2#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumTransmissionTimeout">
+      <MemberSignature Language="C#" Value="public abstract long MaximumTransmissionTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaximumTransmissionTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.MaximumTransmissionTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de tempo limite de retransmissão máximo para segmentos de protocolo de controle de transmissão (TCP).</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número máximo de milissegundos permitido por uma implementação de TCP para o valor de tempo limite de retransmissão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ TCP inicia um timer de retransmissão quando cada segmento de saída é passado para a camada de rede (IP). Se nenhuma confirmação for recebida para os dados no segmento antes do timer expira, o segmento é retransmitido. O temporizador pode ser definido como qualquer valor entre o <xref:System.Net.NetworkInformation.TcpStatistics.MinimumTransmissionTimeout%2A> valor e o <xref:System.Net.NetworkInformation.TcpStatistics.MaximumTransmissionTimeout%2A> valor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de conexão máximo e de tempo limite.  
+  
+ [!code-cpp[NCLNetInfo2#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#5)]
+ [!code-csharp[NCLNetInfo2#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#5)]
+ [!code-vb[NCLNetInfo2#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumTransmissionTimeout">
+      <MemberSignature Language="C#" Value="public abstract long MinimumTransmissionTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MinimumTransmissionTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.MinimumTransmissionTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de tempo limite mínimo de retransmissão para segmentos de protocolo de controle de transmissão (TCP).</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número mínimo de milissegundos permitido por uma implementação de TCP para o valor de tempo limite de retransmissão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ TCP inicia um timer de retransmissão quando cada segmento de saída é passado para a camada de rede (IP). Se nenhuma confirmação for recebida para os dados no segmento antes do timer expira, o segmento é retransmitido. O timer o temporizador pode ser definido como qualquer valor entre o <xref:System.Net.NetworkInformation.TcpStatistics.MinimumTransmissionTimeout%2A> valor e o <xref:System.Net.NetworkInformation.TcpStatistics.MaximumTransmissionTimeout%2A> valor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de conexão máximo e de tempo limite.  
+  
+ [!code-cpp[NCLNetInfo2#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#5)]
+ [!code-csharp[NCLNetInfo2#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#5)]
+ [!code-vb[NCLNetInfo2#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetConnections">
+      <MemberSignature Language="C#" Value="public abstract long ResetConnections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ResetConnections" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.ResetConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pacotes de primeira recebidas por conexões de protocolo de controle de transmissão (TCP).</summary>
+        <value>Um <see cref="T:System.Int64" /> redefinição de valor que especifica o número total de conexões TCP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ IETF RFC 2012 formalmente define esse valor como "O número de vezes que as conexões TCP fizeram uma transição direta para o estado fechado o estado de estabelecido ou o estado de espera de fechamento".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de conexão.  
+  
+ [!code-cpp[NCLNetInfo2#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#6)]
+ [!code-csharp[NCLNetInfo2#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#6)]
+ [!code-vb[NCLNetInfo2#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetsSent">
+      <MemberSignature Language="C#" Value="public abstract long ResetsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ResetsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.ResetsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de segmentos de protocolo de controle de transmissão (TCP) enviado com o redefinir sinalizador definido.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de segmentos TCP enviado com o redefinir sinalizador definido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Redefinições TCP são especificadas usando o bit de controle de redefinição (primeira) no cabeçalho de TCP.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de segmento.  
+  
+ [!code-cpp[NCLNetInfo2#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#7)]
+ [!code-csharp[NCLNetInfo2#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#7)]
+ [!code-vb[NCLNetInfo2#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SegmentsReceived">
+      <MemberSignature Language="C#" Value="public abstract long SegmentsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 SegmentsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.SegmentsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de segmentos de protocolo de controle de transmissão (TCP) recebido.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de segmentos TCP recebidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses dados incluem segmentos com erros e recebidos nas conexões estabelecidas atualmente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de segmento.  
+  
+ [!code-cpp[NCLNetInfo2#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#7)]
+ [!code-csharp[NCLNetInfo2#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#7)]
+ [!code-vb[NCLNetInfo2#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SegmentsResent">
+      <MemberSignature Language="C#" Value="public abstract long SegmentsResent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 SegmentsResent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.SegmentsResent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de segmentos de protocolo de controle de transmissão (TCP) enviadas novamente.</summary>
+        <value>Um <see cref="T:System.Int64" /> retransmitido de valor que especifica o número total de segmentos TCP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Segmentos TCP que não são reconhecidos como sendo recebidos no destino são retransmitidos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de segmento.  
+  
+ [!code-cpp[NCLNetInfo2#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#7)]
+ [!code-csharp[NCLNetInfo2#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#7)]
+ [!code-vb[NCLNetInfo2#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SegmentsSent">
+      <MemberSignature Language="C#" Value="public abstract long SegmentsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 SegmentsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.TcpStatistics.SegmentsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de segmentos de protocolo de controle de transmissão (TCP) enviados.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de segmentos TCP enviado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses dados incluem segmentos enviados para as conexões estabelecidas no momento, mas não incluem segmentos contendo apenas retransmitidos octetos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de segmento.  
+  
+ [!code-cpp[NCLNetInfo2#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#7)]
+ [!code-csharp[NCLNetInfo2#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#7)]
+ [!code-vb[NCLNetInfo2#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

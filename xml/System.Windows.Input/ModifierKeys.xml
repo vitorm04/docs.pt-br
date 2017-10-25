@@ -1,0 +1,140 @@
+<Type Name="ModifierKeys" FullName="System.Windows.Input.ModifierKeys">
+  <TypeSignature Language="C#" Value="public enum ModifierKeys" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ModifierKeys extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ModifierKeys" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Input.ModifierKeysConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Input.ModifierKeysValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o conjunto de chaves de modificador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Keyboard.Modifiers%2A> propriedade o <xref:System.Windows.Input.Keyboard> classe é o conjunto das teclas modificadoras que atualmente são pressionados.  
+  
+ Alguns [!INCLUDE[TLA#tla_api#plural](~/includes/tlasharptla-apisharpplural-md.md)] na [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] que tornam o uso do <xref:System.Windows.Input.ModifierKeys> enumeração são o <xref:System.Windows.Input.Keyboard.Modifiers%2A> propriedades no <xref:System.Windows.Input.Keyboard>, <xref:System.Windows.Input.KeyBinding>, <xref:System.Windows.Input.KeyGesture>, e <xref:System.Windows.Input.MouseGesture> classes.  
+  
+<a name="xamlAttributeUsage_ModifierKeys"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="oneOrMoreModifierKeys"/>  
+```  
+  
+<a name="xamlValues_ModifierKeys"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *oneOrMoreModifierKeys*  
+ Um ou mais teclas modificadoras, definidas pelo <xref:System.Windows.Input.ModifierKeys> enumeração, delimitada por um caractere "+".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Windows.Input.KeyBinding> que associa um <xref:System.Windows.Input.KeyGesture> com um <xref:System.Windows.Input.RoutedCommand>.  O <xref:System.Windows.Input.KeyBinding> usa o <xref:System.Windows.Input.ModifierKeys> enumeração para especificar a chave de modificador do gesto.  
+  
+ [!code-xaml[commandWithHandler#CommandHandlerKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlerkeybinding)]  
+  
+ [!code-csharp[commandhandlerprocedural#CommandHandlerKeyBindingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerkeybindingcodebehind)]
+ [!code-vb[commandhandlerprocedural#CommandHandlerKeyBindingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerkeybindingcodebehind)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alt">
+      <MemberSignature Language="C#" Value="Alt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.ModifierKeys Alt = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.ModifierKeys.Alt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ModifierKeys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A tecla ALT.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="Control" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.ModifierKeys Control = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.ModifierKeys.Control" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ModifierKeys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A tecla CTRL.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.ModifierKeys None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.ModifierKeys.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ModifierKeys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum modificador está pressionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Shift">
+      <MemberSignature Language="C#" Value="Shift" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.ModifierKeys Shift = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.ModifierKeys.Shift" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ModifierKeys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A tecla SHIFT.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Windows">
+      <MemberSignature Language="C#" Value="Windows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.ModifierKeys Windows = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.ModifierKeys.Windows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ModifierKeys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Pressione a tecla do logotipo do Windows.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

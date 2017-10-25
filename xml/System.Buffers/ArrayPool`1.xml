@@ -1,0 +1,203 @@
+<Type Name="ArrayPool&lt;T&gt;" FullName="System.Buffers.ArrayPool&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public abstract class ArrayPool&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ArrayPool`1&lt;T&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Buffers.ArrayPool`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Buffers</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">O tipo dos objetos que estão no pool de recursos.</typeparam>
+    <summary>Fornece um pool de recursos que permite a reutilização de instâncias do tipo <see cref="T:T[]" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+ Usando o <see cref="T:System.Buffers.ArrayPool{T}"/> classe alugar e retornar buffers (usando o <see cref="M:System.Buffers.ArrayPool`1.Rent(System.Int32)"/> e <see cref="M:System.Buffers.ArrayPool`1.Return(`0[],System.Boolean)"/> métodos) pode melhorar o desempenho em situações onde matrizes são criadas e destruídas com frequência, resultando na pressão de memória significativa no coletor de lixo.
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Essa classe é thread-safe. Todos os membros podem ser usados por vários threads ao mesmo tempo.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ArrayPool ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffers.ArrayPool`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="ArrayPool{T}" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+Observe que este construtor é protegido; ele só pode ser chamado por classes derivadas do <see cref="ArrayPool{T}"/> classe. 
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Buffers.ArrayPool&lt;T&gt; Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Buffers.ArrayPool`1&lt;!T&gt; Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffers.ArrayPool`1.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Buffers.ArrayPool&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="ArrayPool{T}" />.</summary>
+        <returns>Uma nova instância da classe <see cref="ArrayPool{T}" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Buffers.ArrayPool&lt;T&gt; Create (int maxArrayLength, int maxArraysPerBucket);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Buffers.ArrayPool`1&lt;!T&gt; Create(int32 maxArrayLength, int32 maxArraysPerBucket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffers.ArrayPool`1.Create(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Buffers.ArrayPool&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxArrayLength" Type="System.Int32" />
+        <Parameter Name="maxArraysPerBucket" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxArrayLength">O comprimento máximo de uma instância de matriz pode ser armazenado no pool.</param>
+        <param name="maxArraysPerBucket">O número máximo de instâncias de matriz que podem ser armazenados em cada partição de memória no pool. O pool de grupos de matrizes de tamanhos semelhantes em buckets para acesso mais rápido.</param>
+        <summary>Cria uma nova instância do <see cref="ArrayPool{T}" /> classe usando a configuração especificada.</summary>
+        <returns>Uma nova instância do <see cref="ArrayPool{T}" /> classe com a configuração especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+A instância do <see cref="ArrayPool{T}"/> classe criada por este método agrupará matrizes em blocos, sem nenhum mais de <paramref name="maxArraysPerBucket"/> em cada bucket e com as matrizes não exceda <paramref name="maxArrayLength"/> de comprimento.
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rent">
+      <MemberSignature Language="C#" Value="public abstract T[] Rent (int minimumLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !T[] Rent(int32 minimumLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffers.ArrayPool`1.Rent(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minimumLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="minimumLength">O comprimento mínimo da matriz.</param>
+        <summary>Recupera um buffer que tenha pelo menos o comprimento solicitado.</summary>
+        <returns>Uma matriz do tipo <see cref="T:T[]" /> que seja pelo menos <paramref name="minimumLength" /> de comprimento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+
+Esse buffer está emprestado ao chamador e deve ser retornado para o mesmo pool usando o <see cref="Return"/> método, de forma que ele pode ser reutilizado em chamadas subsequentes para o <see cref="Rent"/> método. Falha ao retornar um buffer alugado não é um erro fatal. No entanto, pode levar ao desempenho reduzido do aplicativo, como o pool pode precisar criar um novo buffer para substituir aquele perdidas.
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Return">
+      <MemberSignature Language="C#" Value="public abstract void Return (T[] array, bool clearArray = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Return(!T[] array, bool clearArray) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Buffers.ArrayPool`1.Return(`0[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="clearArray" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um buffer para retornar para o pool que foi obtido anteriormente usando o <see cref="Rent" /> método.</param>
+        <param name="clearArray">Indica se o conteúdo do buffer deve ser apagado antes de reutilização. Se <paramref name="bufferLength" /> é definido como <see langword="true" />, e se o pool armazenará o buffer para habilitar a reutilização subsequente, o <see cref="Return" /> método limpará o <paramref name="array" /> seu conteúdo para que um chamador subsequente usando o <see cref="Rent" /> método não verá o conteúdo o chamador anterior. Se <paramref name="bufferLength" /> é definido como <see langword="false" /> ou se o pool irá liberar o buffer, o conteúdo da matriz permanecem inalterados.</param>
+        <summary>Retorna uma matriz para o pool que foi obtido anteriormente usando o <see cref="Rent" /> método na mesma <see cref="ArrayPool{T}" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+
+Depois que um buffer foi retornado para o pool, o chamador desistir todas as propriedade do buffer e não deve usá-lo. A referência retornada de uma determinada chamada para o <see cref="Rent"/> método deve ser retornado apenas usando o <see cref="Return"/> método uma vez. O padrão <see cref="ArrayPool{T}"/> pode manter o buffer retornado para alugar-a novamente, ou ele pode liberar o buffer retornado se for determinado que o pool já tiver buffers suficientes armazenados.
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="public static System.Buffers.ArrayPool&lt;T&gt; Shared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Buffers.ArrayPool`1&lt;!T&gt; Shared" />
+      <MemberSignature Language="DocId" Value="P:System.Buffers.ArrayPool`1.Shared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Buffers</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Buffers.ArrayPool&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um compartilhado <see cref="ArrayPool{T}" /> instância.</summary>
+        <value>Compartilhado <see cref="ArrayPool{T}" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+
+O pool compartilhado fornece uma implementação padrão da <see cref="ArrayPool{T}"/> classe que é destinado a aplicabilidade geral. Uma classe compartilhada mantém matrizes de vários tamanhos e pode devolver um array maior que, na verdade, foi solicitado, mas ele nunca dará retornar uma matriz de menor do que o solicitado. Alugar um buffer de uma classe compartilhada usando o <see cref="Rent"/> método resultará em um buffer existente que está sendo executado no pool de se um buffer apropriado está disponível ou em um novo buffer alocada se um não está disponível.
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

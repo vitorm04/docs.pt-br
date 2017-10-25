@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Remoting.Channels.Tcp">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting.Channels.Tcp" /> namespace contém canais que usam o protocolo TCP para mensagens de transporte e objetos para e de locais remotos. Por padrão, os canais TCP codificar objetos e chamadas de método em formato binário para transmissão, mas outros coletores de formatador de codificação e decodificação podem ser especificados nas propriedades de configuração de um canal. Uma das classes mais importantes do <see cref="N:System.Runtime.Remoting.Channels.Tcp" /> namespace é o <see cref="T:System.Runtime.Remoting.Channels.Tcp.TcpChannel" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Channels.Tcp.TcpChannel> classe combina o <xref:System.Runtime.Remoting.Channels.Tcp.TcpClientChannel> classe e o <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel> de classe e pode ser usado para receber e enviar mensagens usando o protocolo TCP.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,142 @@
+<Type Name="DbSkipExpression" FullName="System.Data.Common.CommandTrees.DbSkipExpression">
+  <TypeSignature Language="C#" Value="public sealed class DbSkipExpression : System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DbSkipExpression extends System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.CommandTrees.DbSkipExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.CommandTrees.DbExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Ignora um número especificado de elementos no conjunto de entrada. <see cref="T:System.Data.Common.CommandTrees.DbSkipExpression" />só pode ser usado depois que a coleção de entrada foram classificada conforme especificado pelas chaves de classificação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Common.CommandTrees.DbSkipExpression>requer sua coleção de entrada já tenham sido classificados. A ordem de classificação é representada como o <xref:System.Data.Common.CommandTrees.DbSkipExpression.SortOrder%2A> propriedade. <xref:System.Data.Common.CommandTrees.DbSkipExpression.SortOrder%2A>é uma lista de <xref:System.Data.Common.CommandTrees.DbSortClause> objetos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public override void Accept (System.Data.Common.CommandTrees.DbExpressionVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Accept(class System.Data.Common.CommandTrees.DbExpressionVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbSkipExpression.Accept(System.Data.Common.CommandTrees.DbExpressionVisitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Data.Common.CommandTrees.DbExpressionVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">Uma instância de <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />.</param>
+        <summary>Implementa o padrão do visitante para expressões que não produzem um valor de resultado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visitor" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept&lt;TResultType&gt;">
+      <MemberSignature Language="C#" Value="public override TResultType Accept&lt;TResultType&gt; (System.Data.Common.CommandTrees.DbExpressionVisitor&lt;TResultType&gt; visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResultType Accept&lt;TResultType&gt;(class System.Data.Common.CommandTrees.DbExpressionVisitor`1&lt;!!TResultType&gt; visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbSkipExpression.Accept``1(System.Data.Common.CommandTrees.DbExpressionVisitor{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResultType" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Data.Common.CommandTrees.DbExpressionVisitor&lt;TResultType&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResultType">O tipo do resultado produzido por <c>visitante</c>.</typeparam>
+        <param name="visitor">Uma instância de um tipo <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" /> que produz um valor de resultado de um tipo específico.</param>
+        <summary>Implementa o padrão do visitante para expressões que produz um valor de resultado de um tipo específico.</summary>
+        <returns>Um valor de um tipo específico de resultado produzido por <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visitor" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpression Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpression Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbSkipExpression.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma expressão que especifica o número de elementos para ignorar da coleção de entrada.</summary>
+        <value>Uma expressão que especifica o número de elementos para ignorar da coleção de entrada.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">A expressão é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A expressão não está associada com a árvore de comandos do <see cref="T:System.Data.Common.CommandTrees.DbSkipExpression" />; a expressão não é um uma <see cref="T:System.Data.Common.CommandTrees.DbConstantExpression" /> ou <see cref="T:System.Data.Common.CommandTrees.DbParameterReferenceExpression" />;  
+  
+ ou o tipo de resultado da expressão não é passível de promoção ou igual a um tipo de inteiro de 64 bits.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpressionBinding Input { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpressionBinding Input" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbSkipExpression.Input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpressionBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.Common.CommandTrees.DbExpressionBinding" /> que especifica o conjunto de entrada.</summary>
+        <value>O <see cref="T:System.Data.Common.CommandTrees.DbExpressionBinding" /> que especifica o conjunto de entrada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortOrder">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbSortClause&gt; SortOrder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Data.Common.CommandTrees.DbSortClause&gt; SortOrder" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbSkipExpression.SortOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Common.CommandTrees.DbSortClause&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Data.Common.CommandTrees.DbSortClause" /> lista que define a ordem de classificação.</summary>
+        <value>Um <see cref="T:System.Data.Common.CommandTrees.DbSortClause" /> lista que define a ordem de classificação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Common.CommandTrees.DbSkipExpression>requer sua coleção de entrada já tenham sido classificados. A ordem de classificação é representada como o <xref:System.Data.Common.CommandTrees.DbSkipExpression.SortOrder%2A> propriedade. <xref:System.Data.Common.CommandTrees.DbSkipExpression.SortOrder%2A>é uma lista de <xref:System.Data.Common.CommandTrees.DbSortClause> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

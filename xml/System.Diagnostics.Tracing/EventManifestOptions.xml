@@ -1,0 +1,176 @@
+<Type Name="EventManifestOptions" FullName="System.Diagnostics.Tracing.EventManifestOptions">
+  <TypeSignature Language="C#" Value="public enum EventManifestOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EventManifestOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Tracing.EventManifestOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica como o manifesto ETW para a fonte do evento é gerado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma combinação bit a bit desses valores determinam como o manifesto é gravado para a origem do evento. Por exemplo, você pode especificar se os arquivos de recurso são gerados e como strict a validação do manifesto é.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllCultures">
+      <MemberSignature Language="C#" Value="AllCultures" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventManifestOptions AllCultures = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventManifestOptions.AllCultures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventManifestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gera um nó de recursos sob a pasta de localização para cada assembly satélite fornecido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowEventSourceOverride">
+      <MemberSignature Language="C#" Value="AllowEventSourceOverride" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventManifestOptions AllowEventSourceOverride = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventManifestOptions.AllowEventSourceOverride" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventManifestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui o comportamento padrão que atual <see cref="T:System.Diagnostics.Tracing.EventSource" /> deve ser a classe base do tipo definido pelo usuário passada para o método write. Isso permite que a validação das fontes de evento do .NET.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventManifestOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventManifestOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventManifestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há opções são especificadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyIfNeededForRegistration">
+      <MemberSignature Language="C#" Value="OnlyIfNeededForRegistration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventManifestOptions OnlyIfNeededForRegistration = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventManifestOptions.OnlyIfNeededForRegistration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventManifestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um manifesto é gerado apenas a origem do evento deve ser registrada no computador host.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strict">
+      <MemberSignature Language="C#" Value="Strict" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Tracing.EventManifestOptions Strict = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Tracing.EventManifestOptions.Strict" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Tracing.EventManifestOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gera uma exceção a ser gerado se as inconsistências ocorrem ao gravar o arquivo de manifesto.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

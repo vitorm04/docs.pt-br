@@ -1,0 +1,80 @@
+<Type Name="UserControl" FullName="System.Windows.Controls.UserControl">
+  <TypeSignature Language="C#" Value="public class UserControl : System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi UserControl extends System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.UserControl" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Simplifica a criação de um controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] suporte a conteúdo rico, estilos, gatilhos e modelos. Em muitos casos, esses recursos permitem que você crie experiências personalizadas e consistentes sem a necessidade de criar um novo controle. Para obter mais informações, consulte [Estilo e modelagem](~/docs/framework/wpf/controls/styling-and-templating.md).  
+  
+ Se você precisar criar um novo controle, a maneira mais simples é criar uma classe que deriva de <xref:System.Windows.Controls.UserControl>. Antes de fazer isso, considere a possibilidade de que o controle não dará suporte a modelos e, portanto, não dará suporte a personalização complexas. No entanto, derivando de <xref:System.Windows.Controls.UserControl> é um modelo de adequado, se você quiser criar um controle com a adição de elementos existentes a ele, semelhante a como você cria um aplicativo, e se não é necessário dar suporte a personalização complexas. (Se você quiser usar modelos com o controle, derive de <xref:System.Windows.Controls.Control> em vez disso.) Para obter mais informações sobre os modelos diferentes para a criação de controles, consulte [visão geral de criação do controle](~/docs/framework/wpf/controls/control-authoring-overview.md).  
+  
+ Um <xref:System.Windows.Controls.UserControl> é um <xref:System.Windows.Controls.ContentControl>, que significa que ele pode conter um único objeto de qualquer tipo (como uma cadeia de caracteres, uma imagem ou um painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.ContentControl>.  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um simples `NumericUpDown` <xref:System.Windows.Controls.UserControl>.  
+  
+ [!code-xaml[UserControlNumericUpDown#Markup](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml#markup)]  
+  
+ A seguir mostra a lógica deste <xref:System.Windows.Controls.UserControl>:  
+  
+ [!code-csharp[UserControlNumericUpDown#CodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#codebehind)]
+ [!code-vb[UserControlNumericUpDown#CodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#codebehind)]  
+  
+ Para obter mais informações, consulte [Visão geral da criação de controle](~/docs/framework/wpf/controls/control-authoring-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.UserControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.UserControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.UserControl.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> para este <see cref="T:System.Windows.Controls.UserControl" />.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Automation.Peers.UserControlAutomationPeer" /> para este <see cref="T:System.Windows.Controls.UserControl" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

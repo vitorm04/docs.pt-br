@@ -1,0 +1,340 @@
+<Type Name="Message" FullName="System.Windows.Forms.Message">
+  <TypeSignature Language="C#" Value="public struct Message" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Message extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Message" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa uma mensagem do Windows.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Message> estrutura encapsula as mensagens que o Windows envia. Você pode usar essa estrutura envolver uma mensagem e atribuí-lo para o procedimento de janela deve ser distribuída. Você também pode usar essa estrutura para obter informações sobre uma mensagem de que o sistema envia para seu aplicativo ou controles. Para obter mais informações sobre mensagens do Windows, consulte [mensagens e filas de mensagens](http://go.microsoft.com/fwlink/?LinkId=198815).  
+  
+ Não é possível criar o <xref:System.Windows.Forms.Message> diretamente. Em vez disso, use o <xref:System.Windows.Forms.Message.Create%2A> método. Para manter a eficiência, o <xref:System.Windows.Forms.Message> usa seu pool de existentes <xref:System.Windows.Forms.Message>s em vez de criar uma instância de um novo, se possível. No entanto, se um <xref:System.Windows.Forms.Message> é não está disponível no pool, uma nova instância é criada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra substituindo o <xref:System.Windows.Forms.Control.WndProc%2A> método para lidar com mensagens de sistema operacional identificadas no <xref:System.Windows.Forms.Message>. A mensagem de sistema operacional WM_ACTIVATEAPP é tratada neste exemplo saber quando outro aplicativo está se torne ativo. Para obter informações sobre o disponíveis <xref:System.Windows.Forms.Message.Msg%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Message.LParam%2A?displayProperty=nameWithType>, e <xref:System.Windows.Forms.Message.WParam%2A?displayProperty=nameWithType> valores, consulte o [estrutura MSG](http://go.microsoft.com/fwlink/?LinkId=198816) documentação. Para obter informações sobre os valores de constantes reais, consulte [mensagem constantes](http://go.microsoft.com/fwlink/?LinkId=198817).  
+  
+ [!code-cpp[System.Windows.Forms.Control.WndProc#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.WndProc/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.Control.WndProc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.WndProc/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.Control.WndProc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.WndProc/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.Message Create (IntPtr hWnd, int msg, IntPtr wparam, IntPtr lparam);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Forms.Message Create(native int hWnd, int32 msg, native int wparam, native int lparam) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Message.Create(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hWnd" Type="System.IntPtr" />
+        <Parameter Name="msg" Type="System.Int32" />
+        <Parameter Name="wparam" Type="System.IntPtr" />
+        <Parameter Name="lparam" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hWnd">O identificador de janela para qual é a mensagem.</param>
+        <param name="msg">A ID da mensagem.</param>
+        <param name="wparam">A mensagem <c>wparam</c> campo.</param>
+        <param name="lparam">A mensagem <c>lparam</c> campo.</param>
+        <summary>Cria um novo <see cref="T:System.Windows.Forms.Message" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.Message" /> que representa a mensagem que foi criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.Message.Create%2A> método para criar um <xref:System.Windows.Forms.Message> para envolver uma mensagem enviada pelo Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Message.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser comparado com o objeto atual.</param>
+        <summary>Determina se o objeto especificado é igual ao objeto atual.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado for igual ao objeto atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Message.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um inteiro com sinal de 32 bits que é o código hash para esta instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLParam">
+      <MemberSignature Language="C#" Value="public object GetLParam (Type cls);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetLParam(class System.Type cls) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Message.GetLParam(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cls" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="cls">O tipo a ser usado para criar uma instância. Esse tipo deve ser declarado como um tipo de estrutura.</param>
+        <summary>Obtém o valor <see cref="P:System.Windows.Forms.Message.LParam" /> e converte-o em um objeto.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa uma instância da classe especificada pelo parâmetro <paramref name="cls" />, com os dados do campo <see cref="P:System.Windows.Forms.Message.LParam" /> da mensagem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.Message.GetLParam%2A> método para recuperar informações do <xref:System.Windows.Forms.Message.LParam%2A> campo de uma mensagem e convertê-lo em um objeto. Você pode usar esse método para acessar objetos passados em uma mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HWnd">
+      <MemberSignature Language="C#" Value="public IntPtr HWnd { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int HWnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Message.HWnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de janela da mensagem.</summary>
+        <value>O identificador de janela da mensagem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LParam">
+      <MemberSignature Language="C#" Value="public IntPtr LParam { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int LParam" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Message.LParam" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o campo <see cref="P:System.Windows.Forms.Message.LParam" /> da mensagem.</summary>
+        <value>O campo <see cref="P:System.Windows.Forms.Message.LParam" /> da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor do campo depende da mensagem. Use o <xref:System.Windows.Forms.Message.LParam%2A> campo para obter informações que são importantes para lidar com a mensagem. <xref:System.Windows.Forms.Message.LParam%2A>normalmente é usado para armazenar um objeto se ele é necessário para a mensagem. Use o <xref:System.Windows.Forms.Message.GetLParam%2A> método para recuperar e converter as informações da <xref:System.Windows.Forms.Message.LParam%2A> campo em um objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Msg">
+      <MemberSignature Language="C#" Value="public int Msg { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Msg" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Message.Msg" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da ID da mensagem.</summary>
+        <value>O número da ID da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra substituindo o <xref:System.Windows.Forms.Control.WndProc%2A> método para lidar com mensagens de sistema operacional identificadas no <xref:System.Windows.Forms.Message>. A mensagem de sistema operacional WM_ACTIVATEAPP é tratada neste exemplo saber quando outro aplicativo está se torne ativo. Para obter informações sobre o disponíveis <xref:System.Windows.Forms.Message.Msg%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Message.LParam%2A?displayProperty=nameWithType>, e <xref:System.Windows.Forms.Message.WParam%2A?displayProperty=nameWithType> valores, consulte o [estrutura MSG](http://go.microsoft.com/fwlink/?LinkId=198816) documentação. Para obter informações sobre os valores de constantes reais, consulte [mensagem constantes](http://go.microsoft.com/fwlink/?LinkId=198817).  
+  
+ [!code-cpp[System.Windows.Forms.Control.WndProc#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.WndProc/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.Control.WndProc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.WndProc/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.Control.WndProc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.WndProc/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Forms.Message a, System.Windows.Forms.Message b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Forms.Message a, valuetype System.Windows.Forms.Message b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Message.op_Equality(System.Windows.Forms.Message,System.Windows.Forms.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Windows.Forms.Message" />
+        <Parameter Name="b" Type="System.Windows.Forms.Message" />
+      </Parameters>
+      <Docs>
+        <param name="a">Um <see cref="T:System.Windows.Forms.Message" /> para comparar com <c>b</c>.</param>
+        <param name="b">Um <see cref="T:System.Windows.Forms.Message" /> para comparar com <c>um</c>.</param>
+        <summary>Determina se duas instâncias de <see cref="T:System.Windows.Forms.Message" /> são iguais.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="a" /> e <paramref name="b" /> representar o mesmo <see cref="T:System.Windows.Forms.Message" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Windows.Forms.Message.Equals%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Forms.Message a, System.Windows.Forms.Message b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Forms.Message a, valuetype System.Windows.Forms.Message b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Message.op_Inequality(System.Windows.Forms.Message,System.Windows.Forms.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Windows.Forms.Message" />
+        <Parameter Name="b" Type="System.Windows.Forms.Message" />
+      </Parameters>
+      <Docs>
+        <param name="a">Um <see cref="T:System.Windows.Forms.Message" /> para comparar com <c>b</c>.</param>
+        <param name="b">Um <see cref="T:System.Windows.Forms.Message" /> para comparar com <c>um</c>.</param>
+        <summary>Determina se duas instâncias de <see cref="T:System.Windows.Forms.Message" /> não são iguais.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="a" /> e <paramref name="b" /> não representarem o mesmo <see cref="T:System.Windows.Forms.Message" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é a negação de<xref:System.Windows.Forms.Message.Equals%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public IntPtr Result { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Result" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Message.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o valor retornado para o Windows em resposta para lidar com a mensagem.</summary>
+        <value>O valor retornado da mensagem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Message.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> que representa o atual <see cref="T:System.Windows.Forms.Message" />.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o atual <see cref="T:System.Windows.Forms.Message" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WParam">
+      <MemberSignature Language="C#" Value="public IntPtr WParam { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int WParam" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Message.WParam" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o campo <see cref="P:System.Windows.Forms.Message.WParam" /> da mensagem.</summary>
+        <value>O campo <see cref="P:System.Windows.Forms.Message.WParam" /> da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor do campo depende da mensagem. Use o <xref:System.Windows.Forms.Message.WParam%2A> campo para obter informações que são importantes para lidar com a mensagem. Normalmente, esse campo é usado para armazenar pequenas partes de informações, como sinalizadores.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra substituindo o <xref:System.Windows.Forms.Control.WndProc%2A> método para lidar com mensagens de sistema operacional identificadas no <xref:System.Windows.Forms.Message>. A mensagem de sistema operacional WM_ACTIVATEAPP é tratada neste exemplo saber quando outro aplicativo está se torne ativo. Para obter informações sobre o disponíveis <xref:System.Windows.Forms.Message.Msg%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Message.LParam%2A?displayProperty=nameWithType>, e <xref:System.Windows.Forms.Message.WParam%2A?displayProperty=nameWithType> valores, consulte o [estrutura MSG](http://go.microsoft.com/fwlink/?LinkId=198816) documentação. Para obter informações sobre os valores de constantes reais, consulte [mensagem constantes](http://go.microsoft.com/fwlink/?LinkId=198817).  
+  
+ [!code-cpp[System.Windows.Forms.Control.WndProc#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.WndProc/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.Control.WndProc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.WndProc/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.Control.WndProc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.WndProc/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

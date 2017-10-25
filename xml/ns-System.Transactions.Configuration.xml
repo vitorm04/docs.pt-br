@@ -1,0 +1,27 @@
+<Namespace Name="System.Transactions.Configuration">
+  <Docs>
+    <summary>O <see cref="N:System.Transactions.Configuration" /> namespace contém classes que descrevem as opções de configuração usadas pelo <see cref="N:System.Transactions" /> classes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Um arquivo de configuração de exemplo usado pelo seu aplicativo de transação pode ser da seguinte maneira  
+  
+ `<configuration>`  
+  
+ `<system.transactions>`  
+  
+ `<defaultSettings distributedTransactionManagerName="F04M25" timeout="02:00:00"/>`  
+  
+ `<machineSettings maxTimeout="02:00:00"/>`  
+  
+ `</system.transactions>`  
+  
+ `</configuration>`  
+  
+ Este exemplo especifica os valores padrão de uma transação. Especificamente, ele define o o nome do computador o distribuído transação MSDTC (coordenador) que é responsável por coordenação de transações distribuídas todos iniciado localmente e a hora padrão após o qual uma transação de tempo limite. Além disso, ele especifica uma configuração que pode ser modificada somente no nível do computador, que é a quantidade máxima de tempo permitido antes de uma transação de tempo limite.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

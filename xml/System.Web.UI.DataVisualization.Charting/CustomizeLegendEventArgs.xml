@@ -1,0 +1,116 @@
+<Type Name="CustomizeLegendEventArgs" FullName="System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs">
+  <TypeSignature Language="C#" Value="public class CustomizeLegendEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomizeLegendEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.CustomizeLegend" /> do controle <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs> classe é usada no <xref:System.Web.UI.DataVisualization.Charting.Chart.CustomizeLegend> evento.  
+  
+ Há apenas duas propriedades dessa classe. O <xref:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs.LegendItems%2A> propriedade permite que você excluir ou modificar itens de legenda personalizada e padrão e adicionar itens de legenda personalizado. Essa propriedade também pode ser usada para alterar a ordem dos itens de legenda.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs.LegendName%2A> propriedade é usada para identificar a legenda que gerou esse evento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomizeLegendEventArgs (System.Web.UI.DataVisualization.Charting.LegendItemsCollection legendItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.DataVisualization.Charting.LegendItemsCollection legendItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs.#ctor(System.Web.UI.DataVisualization.Charting.LegendItemsCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="legendItems" Type="System.Web.UI.DataVisualization.Charting.LegendItemsCollection" />
+      </Parameters>
+      <Docs>
+        <param name="legendItems">O <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItemsCollection" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs" /> com o <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItemsCollection" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomizeLegendEventArgs (System.Web.UI.DataVisualization.Charting.LegendItemsCollection legendItems, string legendName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.DataVisualization.Charting.LegendItemsCollection legendItems, string legendName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs.#ctor(System.Web.UI.DataVisualization.Charting.LegendItemsCollection,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="legendItems" Type="System.Web.UI.DataVisualization.Charting.LegendItemsCollection" />
+        <Parameter Name="legendName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="legendItems">O <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItemsCollection" />.</param>
+        <param name="legendName">O nome da legenda.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs" /> classe com especificado <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItemsCollection" /> e o nome da legenda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegendItems">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.LegendItemsCollection LegendItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.LegendItemsCollection LegendItems" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs.LegendItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LegendItemsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usado para remover, modificar ou alterar a ordem dos personalizadas e padrão de itens de legenda no <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.CustomizeLegend" /> evento. Também pode ser usado para adicionar itens de legenda personalizado.</summary>
+        <value>Um objeto <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItemsCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs.LegendItems%2A> propriedade permite que você exclua ou modifique o padrão e itens de legenda personalizado no <xref:System.Web.UI.DataVisualization.Charting.Chart.CustomizeLegend> evento e adicionar itens de legenda personalizado. A ordem dos itens de legenda também pode ser alterada.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.DataVisualization.Charting.LegendItem.SeriesPointIndex%2A> e <xref:System.Web.UI.DataVisualization.Charting.LegendItem.SeriesName> propriedades podem ser usadas para determinar o elemento de dados que está associado um item de legenda padrão. Essas propriedades retorna cadeias de caracteres de comprimento zero para itens de legenda personalizado, como itens personalizados não são associados aos dados do gráfico.  
+  
+ Essa propriedade permite que você determine qual <xref:System.Web.UI.DataVisualization.Charting.Legend> o evento foi gerado, que permite que você personalize a um indivíduo <xref:System.Web.UI.DataVisualization.Charting.Legend>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegendName">
+      <MemberSignature Language="C#" Value="public string LegendName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LegendName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.CustomizeLegendEventArgs.LegendName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do <see cref="T:System.Web.UI.DataVisualization.Charting.Legend" /> objeto, que pode ser usado para determinar qual legenda foi o remetente a <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.CustomizeLegend" /> eventos.</summary>
+        <value>Um <see langword="string" /> valor que representa o nome do associado <see cref="T:System.Web.UI.DataVisualization.Charting.Legend" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

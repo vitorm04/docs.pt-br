@@ -1,0 +1,57 @@
+<Type Name="IEntityWithChangeTracker" FullName="System.Data.Objects.DataClasses.IEntityWithChangeTracker">
+  <TypeSignature Language="C#" Value="public interface IEntityWithChangeTracker" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEntityWithChangeTracker" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.IEntityWithChangeTracker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um tipo de entidade que implementa o controle de alterações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um tipo de entidade deve implementar <xref:System.Data.Objects.DataClasses.IEntityWithChangeTracker> para rastrear as alterações. <xref:System.Data.Objects.DataClasses.EntityObject>é a classe base para todos os tipos de entidade são gerados pelas ferramentas do modelo de dados de entidade. <xref:System.Data.Objects.DataClasses.EntityObject>implementa <xref:System.Data.Objects.DataClasses.IEntityWithChangeTracker>.  
+  
+ Serviços de objetos fornece objetos com uma referência a uma instância do <xref:System.Data.Objects.DataClasses.IEntityChangeTracker> interface para permitir objetos para alterações no relatório. Métodos de <xref:System.Data.Objects.DataClasses.IEntityChangeTracker> são usados para alterações no relatório.  
+  
+ Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) e [de controle de alterações em entidades POCO](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SetChangeTracker">
+      <MemberSignature Language="C#" Value="public void SetChangeTracker (System.Data.Objects.DataClasses.IEntityChangeTracker changeTracker);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetChangeTracker(class System.Data.Objects.DataClasses.IEntityChangeTracker changeTracker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IEntityWithChangeTracker.SetChangeTracker(System.Data.Objects.DataClasses.IEntityChangeTracker)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="changeTracker" Type="System.Data.Objects.DataClasses.IEntityChangeTracker" />
+      </Parameters>
+      <Docs>
+        <param name="changeTracker">O <see cref="T:System.Data.Objects.DataClasses.IEntityChangeTracker" /> usada para alterações no relatório.</param>
+        <summary>Obtém ou define o <see cref="T:System.Data.Objects.DataClasses.IEntityChangeTracker" /> usada para alterações no relatório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Métodos no <xref:System.Data.Objects.DataClasses.IEntityChangeTracker> são usados por <xref:System.Data.Objects.DataClasses.EntityObject> para alterações no relatório.  
+  
+ Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) e [de controle de alterações em entidades POCO](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

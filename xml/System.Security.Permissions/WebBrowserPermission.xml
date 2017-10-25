@@ -1,0 +1,373 @@
+<Type Name="WebBrowserPermission" FullName="System.Security.Permissions.WebBrowserPermission">
+  <TypeSignature Language="C#" Value="public sealed class WebBrowserPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit WebBrowserPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.WebBrowserPermission" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>O objeto <see cref="T:System.Security.Permissions.WebBrowserPermission" /> controla a capacidade de criar o controle WebBrowser.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No Windows Presentation Foundation (WPF), o controle de navegador da Web permite quadros navegar HTML. Essa permissão usa os valores da <xref:System.Security.Permissions.WebBrowserPermission> enumerações.  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Essa classe não é usada normalmente em XAML.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowserPermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermission.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.WebBrowserPermission" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o valor de <xref:System.Security.Permissions.WebBrowserPermission.Level%2A> está definida como <xref:System.Security.Permissions.WebBrowserPermissionLevel.Safe>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowserPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um valor enumerado de <see cref="T:System.Security.Permissions.PermissionState" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.WebBrowserPermission" /> classe especificando um estado de permissão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `state` é definido como <xref:System.Security.Permissions.PermissionState.Unrestricted>, o valor da <xref:System.Security.Permissions.WebBrowserPermission.Level%2A> está definida como <xref:System.Security.Permissions.WebBrowserPermissionLevel.Unrestricted>. Se `state` é definido como <xref:System.Security.Permissions.PermissionState.None>, o valor da <xref:System.Security.Permissions.WebBrowserPermission.Level%2A> está definida como <xref:System.Security.Permissions.WebBrowserPermissionLevel.None>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Security.Permissions.WebBrowserPermission> com um <xref:System.Security.Permissions.PermissionState> valor.  
+  
+ [!code-csharp[WebBrowserPermissionsSnippets#WebBrowserPermission1](~/samples/snippets/csharp/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/CSharp/Window1.xaml.cs#webbrowserpermission1)]
+ [!code-vb[WebBrowserPermissionsSnippets#WebBrowserPermission1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/visualbasic/window1.xaml.vb#webbrowserpermission1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowserPermission (System.Security.Permissions.WebBrowserPermissionLevel webBrowserPermissionLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.WebBrowserPermissionLevel webBrowserPermissionLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermission.#ctor(System.Security.Permissions.WebBrowserPermissionLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webBrowserPermissionLevel" Type="System.Security.Permissions.WebBrowserPermissionLevel" />
+      </Parameters>
+      <Docs>
+        <param name="webBrowserPermissionLevel">Um valor enumerado de <see cref="T:System.Security.Permissions.WebBrowserPermissionLevel" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.WebBrowserPermission" /> classe especificando o nível de permissão do navegador da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Security.Permissions.WebBrowserPermission> com um <xref:System.Security.Permissions.WebBrowserPermissionLevel> valor.  
+  
+ [!code-csharp[WebBrowserPermissionsSnippets#WebBrowserPermission2](~/samples/snippets/csharp/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/CSharp/Window1.xaml.cs#webbrowserpermission2)]
+ [!code-vb[WebBrowserPermissionsSnippets#WebBrowserPermission2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/visualbasic/window1.xaml.vb#webbrowserpermission2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma cópia idêntica da permissão atual.</summary>
+        <returns>Uma cópia da permissão atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia de uma permissão representa o mesmo acesso a recursos como a permissão original.  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe não são normalmente usados em XAML ou não podem ser usados em XAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement securityElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement securityElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityElement" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="securityElement">O XML de codificação a ser usada para reconstruir a permissão.</param>
+        <summary>Reconstrói uma permissão com um estado especificado de uma codificação de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe não são normalmente usados em XAML ou não podem ser usados em XAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a interseção com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria e retorna uma permissão que é a interseção de permissão atual e da permissão especificada.</summary>
+        <returns>A interseção de duas permissões é uma permissão que descreve o estado que ambas descrevem em comum. Somente uma demanda que passa as permissões originais serão válida para a permissão cruzada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe não são normalmente usados em XAML ou não podem ser usados em XAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a ser testado para a relação de subconjunto. Essa permissão deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Determina se a permissão atual é um subconjunto de permissão especificada.</summary>
+        <returns>
+          <see langword="true" />Se a permissão atual é um subconjunto da permissão especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A permissão atual é um subconjunto de permissão especificada se a permissão atual especifica um conjunto de operações é totalmente contido pelo conjunto de permissões especificado. Por exemplo, uma permissão que representa acesso à C:\example.txt é um subconjunto de uma permissão que representa acesso na unidade c:\\.  
+  
+ Se esse método retornar `true`, a permissão atual não representa nenhum mais acesso ao recurso protegido que a permissão especificada.  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe não são normalmente usados em XAML ou não podem ser usados em XAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se a permissão atual é irrestrita.</summary>
+        <returns>
+          <see langword="true" /> se a propriedade <see cref="P:System.Security.Permissions.WebBrowserPermission.Level" /> estiver definida como <see cref="F:System.Security.Permissions.WebBrowserPermissionLevel.Unrestricted" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma permissão irrestrita representa acesso a todos os recursos protegidos pela permissão.  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe não são normalmente usados em XAML ou não podem ser usados em XAML.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Permissions.WebBrowserPermission.IsUnrestricted%2A> método.  
+  
+ [!code-csharp[WebBrowserPermissionsSnippets#WebBrowserPermission5](~/samples/snippets/csharp/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/CSharp/Window1.xaml.cs#webbrowserpermission5)]
+ [!code-vb[WebBrowserPermissionsSnippets#WebBrowserPermission5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/visualbasic/window1.xaml.vb#webbrowserpermission5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.WebBrowserPermissionLevel Level { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.WebBrowserPermissionLevel Level" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.WebBrowserPermission.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.WebBrowserPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor atual do nível de permissão do navegador da Web.</summary>
+        <value>O valor atual do nível de permissão do navegador da Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe ou não são geralmente usados em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], ou não pode ser usado em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como recuperar o <xref:System.Security.Permissions.WebBrowserPermissionLevel> valor para o <xref:System.Security.Permissions.WebBrowserPermission>.  
+  
+ [!code-csharp[WebBrowserPermissionsSnippets#WebBrowserPermission6](~/samples/snippets/csharp/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/CSharp/Window1.xaml.cs#webbrowserpermission6)]
+ [!code-vb[WebBrowserPermissionsSnippets#WebBrowserPermission6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WebBrowserPermissionsSnippets/visualbasic/window1.xaml.vb#webbrowserpermission6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML de permissão e seu estado atual.</summary>
+        <returns>Uma codificação de XML de permissão, incluindo quaisquer informações de estado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe não são normalmente usados em XAML ou não podem ser usados em XAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.WebBrowserPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão para combinar com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria uma permissão que é a união de permissão atual e a permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a união de permissão atual e a permissão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ Membros dessa classe não são normalmente usados em XAML ou não podem ser usados em XAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

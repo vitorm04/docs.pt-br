@@ -1,0 +1,1110 @@
+<Type Name="PrintServer" FullName="System.Printing.PrintServer">
+  <TypeSignature Language="C#" Value="public class PrintServer : System.Printing.PrintSystemObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi PrintServer extends System.Printing.PrintSystemObject" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintServer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Printing.PrintSystemObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia as filas de impressão em um servidor de impressão, que normalmente é um computador, mas pode ser um dispositivo de servidor de impressão de hardware dedicado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o seu programa grava um valor a uma propriedade de <xref:System.Printing.PrintServer>, que alteração não terá efeito até que ela é transmitida para o computador que é representado pelo <xref:System.Printing.PrintServer> objeto. Para confirmar as alterações, use o <xref:System.Printing.PrintServer.Commit%2A> método do objeto.  
+  
+ Da mesma forma, outros aplicativos podem alterar as propriedades do serviço de impressão real do computador. Para certificar-se de que o <xref:System.Printing.PrintServer> objeto para o seu programa tem os valores mais recentes, use o <xref:System.Printing.PrintServer.Refresh%2A> método do objeto.  
+  
+> [!CAUTION]
+>  Classes dentro de <xref:System.Printing> namespace não têm suporte para uso dentro de um serviço do Windows ou serviço ou aplicativo ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ Se você quiser imprimir a partir de um aplicativo Windows Forms, consulte o <xref:System.Drawing.Printing> namespace.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma instância de <xref:System.Printing.PrintServer>.  
+  
+ [!code-csharp[PrintServerCreate#_CreatePrintServer](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintServerCreate/CSharp/PrintServerCreate.cs#_createprintserver)]
+ [!code-vb[PrintServerCreate#_CreatePrintServer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintServerCreate/visualbasic/printservercreate.vb#_createprintserver)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintServer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Printing.PrintServer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintServer (System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.#ctor(System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="desiredAccess">Um valor que especifica o tipo de acesso do servidor de impressão que seu programa necessita.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PrintServer" /> classe que representa o servidor de impressão local e o atribui especificado <see cref="T:System.Printing.PrintSystemDesiredAccess" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Printing.PrintServer> será inicializado com as propriedades do servidor de impressão local, como <xref:System.Printing.PrintServer.Name%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintServerException">
+          <paramref name="desiredAccess" /> é um valor que pode ser aplicado apenas a um objeto <see cref="T:System.Printing.PrintQueue" />, não a um objeto <see cref="T:System.Printing.LocalPrintServer" />. Por exemplo, <see cref="F:System.Printing.PrintSystemDesiredAccess.UsePrinter" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintServer (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O nome e o caminho completo do servidor de impressão.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Printing.PrintServer" /> que tem o caminho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `path` é `null`, o <xref:System.Printing.PrintServer> representa o servidor de impressão local e será inicializado com suas propriedades, como <xref:System.Printing.PrintServer.Name%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o construtor para criar uma instância de <xref:System.Printing.PrintServer>.  
+  
+ [!code-csharp[PrintServerCreate#_CreatePrintServer](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintServerCreate/CSharp/PrintServerCreate.cs#_createprintserver)]
+ [!code-vb[PrintServerCreate#_CreatePrintServer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintServerCreate/visualbasic/printservercreate.vb#_createprintserver)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintServer (string path, System.Printing.PrintServerIndexedProperty[] propertiesFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.Printing.PrintServerIndexedProperty[] propertiesFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.#ctor(System.String,System.Printing.PrintServerIndexedProperty[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertiesFilter" Type="System.Printing.PrintServerIndexedProperty[]" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho completo e o nome do servidor de impressão</param>
+        <param name="propertiesFilter">As propriedades que o construtor inicializa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PrintServer" /> classe usando especificado <see cref="T:System.Printing.PrintServerIndexedProperty" /> matriz para determinar quais propriedades serão inicializadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `path` é `null`, o <xref:System.Printing.PrintServer> representa o servidor de impressão local e será inicializado com suas propriedades, como <xref:System.Printing.PrintServer.Name%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintServer (string path, System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.#ctor(System.String,System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="path">O nome e o caminho completo do servidor de impressão.</param>
+        <param name="desiredAccess">Um valor que especifica o tipo de acesso do servidor de impressão que seu programa necessita.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Printing.PrintServer" /> que tem o caminho especificado e o acesso necessário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `path` é `null`, o <xref:System.Printing.PrintServer> representa o servidor de impressão local e será inicializado com suas propriedades, como <xref:System.Printing.PrintServer.Name%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o construtor para a pesquisa todas as impressoras para status de erro possível.  
+  
+ [!code-cpp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#surveyqueues)]
+ [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
+ [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintServerException">
+          <paramref name="desiredAccess" /> é um valor que pode ser aplicado apenas a um objeto <see cref="T:System.Printing.PrintQueue" />, não a um objeto <see cref="T:System.Printing.LocalPrintServer" />. Por exemplo, <see cref="F:System.Printing.PrintSystemDesiredAccess.UsePrinter" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintServer (string path, string[] propertiesFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, string[] propertiesFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.#ctor(System.String,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertiesFilter" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="path">O nome e o caminho completo do servidor de impressão.</param>
+        <param name="propertiesFilter">Uma matriz de nomes de propriedades que o construtor inicializa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PrintServer" /> classe que tem o filtro de propriedades e o caminho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `path` é `null`, o <xref:System.Printing.PrintServer> representa o servidor de impressão local e será inicializado com suas propriedades, como <xref:System.Printing.PrintServer.Name%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintServer (string path, System.Printing.PrintServerIndexedProperty[] propertiesFilter, System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.Printing.PrintServerIndexedProperty[] propertiesFilter, valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.#ctor(System.String,System.Printing.PrintServerIndexedProperty[],System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertiesFilter" Type="System.Printing.PrintServerIndexedProperty[]" />
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho completo e o nome do servidor de impressão</param>
+        <param name="propertiesFilter">As propriedades que o construtor inicializa.</param>
+        <param name="desiredAccess">Um valor que especifica o tipo de acesso do servidor de impressão que seu programa necessita.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PrintServer" /> classe e fornece o caminho especificado, o <see cref="T:System.Printing.PrintServerIndexedProperty" /> matriz e o acesso necessário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `path` é `null`, o <xref:System.Printing.PrintServer> representa o servidor de impressão local e será inicializado com suas propriedades, como <xref:System.Printing.PrintServer.Name>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintServerException">
+          <paramref name="desiredAccess" /> é um valor que pode ser aplicado apenas a um objeto <see cref="T:System.Printing.PrintQueue" />, não a um objeto <see cref="T:System.Printing.LocalPrintServer" />. Por exemplo, <see cref="F:System.Printing.PrintSystemDesiredAccess.UsePrinter" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintServer (string path, string[] propertiesFilter, System.Printing.PrintSystemDesiredAccess desiredAccess);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, string[] propertiesFilter, valuetype System.Printing.PrintSystemDesiredAccess desiredAccess) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.#ctor(System.String,System.String[],System.Printing.PrintSystemDesiredAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="propertiesFilter" Type="System.String[]" />
+        <Parameter Name="desiredAccess" Type="System.Printing.PrintSystemDesiredAccess" />
+      </Parameters>
+      <Docs>
+        <param name="path">O nome e o caminho completo do servidor de impressão.</param>
+        <param name="propertiesFilter">Uma matriz de nomes de propriedades que o construtor inicializa.</param>
+        <param name="desiredAccess">Um valor que especifica o tipo de acesso do servidor de impressão que seu programa necessita.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PrintServer" /> classe que tem o caminho especificado, o filtro de propriedades e o acesso necessário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `path` é `null`, o <xref:System.Printing.PrintServer> representa o servidor de impressão local e será inicializado com suas propriedades, como <xref:System.Printing.PrintServer.Name%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintServerException">
+          <paramref name="desiredAccess" /> é um valor que pode ser aplicado apenas a um objeto <see cref="T:System.Printing.PrintQueue" />, não a um objeto <see cref="T:System.Printing.LocalPrintServer" />. Por exemplo, <see cref="F:System.Printing.PrintSystemDesiredAccess.UsePrinter" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeepEnabled">
+      <MemberSignature Language="C#" Value="public bool BeepEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BeepEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.BeepEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o servidor de impressão emite um aviso sonoro em resposta a uma condição de erro na impressora.</summary>
+        <value>
+          <see cref="T:System.Boolean" />
+          <see langword="true" />Se o servidor de impressão emite um aviso sonoro em resposta a um erro; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public override void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Confirma as alterações que seu programa feito nas propriedades do objeto de servidor de impressão por gravá-los para o servidor de impressão que representa o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método requer que o <xref:System.Printing.PrintServer> objeto ser criado com <xref:System.Printing.PrintSystemDesiredAccess.AdministrateServer> direitos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintSystemException">Algumas das propriedades não são confirmadas.</exception>
+        <exception cref="T:System.Printing.PrintCommitAttributesException">Algumas das propriedades não puderam ser confirmadas.  
+  
+ \- ou -  
+  
+ O objeto <see cref="T:System.Printing.PrintServer" /> não foi criado com direitos suficientes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPortThreadPriority">
+      <MemberSignature Language="C#" Value="public System.Threading.ThreadPriority DefaultPortThreadPriority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.ThreadPriority DefaultPortThreadPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.DefaultPortThreadPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não use.</summary>
+        <value>A prioridade de thread.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSchedulerPriority">
+      <MemberSignature Language="C#" Value="public System.Threading.ThreadPriority DefaultSchedulerPriority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.ThreadPriority DefaultSchedulerPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.DefaultSchedulerPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não use.</summary>
+        <value>A prioridade de thread do agendador padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSpoolDirectory">
+      <MemberSignature Language="C#" Value="public string DefaultSpoolDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultSpoolDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.DefaultSpoolDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho onde estão localizados os arquivos de spool de impressão do servidor.</summary>
+        <value>Um <see cref="T:System.String" /> que identifica o caminho completo da pasta para os arquivos de spool.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeletePrintQueue">
+      <MemberSignature Language="C#" Value="public static bool DeletePrintQueue (System.Printing.PrintQueue printQueue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool DeletePrintQueue(class System.Printing.PrintQueue printQueue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.DeletePrintQueue(System.Printing.PrintQueue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printQueue" Type="System.Printing.PrintQueue" />
+      </Parameters>
+      <Docs>
+        <param name="printQueue">A fila é excluída.</param>
+        <summary>Remove o <see cref="T:System.Printing.PrintQueue" /> do servidor de impressão.</summary>
+        <returns>
+          <see langword="true" />Se a fila é excluída com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeletePrintQueue">
+      <MemberSignature Language="C#" Value="public static bool DeletePrintQueue (string printQueueName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool DeletePrintQueue(string printQueueName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.DeletePrintQueue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printQueueName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="printQueueName">O nome da fila que será excluída.</param>
+        <summary>Remove a fila de impressão com o nome especificado do servidor de impressão.</summary>
+        <returns>
+          <see langword="true" />Se a fila é excluída com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventLog">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintServerEventLoggingTypes EventLog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Printing.PrintServerEventLoggingTypes EventLog" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.EventLog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintServerEventLoggingTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de evento que faz o servidor de impressão.</summary>
+        <value>Um valor de <see cref="T:System.Printing.PrintServerEventLoggingTypes" /> que identifica o tipo de log de evento que é fornecido pelo servidor de impressão. O padrão é <see cref="F:System.Printing.PrintServerEventLoggingTypes.LogPrintingErrorEvents" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintQueue">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueue GetPrintQueue (string printQueueName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueue GetPrintQueue(string printQueueName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.GetPrintQueue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printQueueName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="printQueueName">O nome da fila de impressão.</param>
+        <summary>Obtém uma referência à fila de impressão nomeada do servidor de impressão.</summary>
+        <returns>O <see cref="T:System.Printing.PrintQueue" /> com o nome especificado no servidor de impressão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintQueue">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueue GetPrintQueue (string printQueueName, string[] propertiesFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueue GetPrintQueue(string printQueueName, string[] propertiesFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.GetPrintQueue(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="propertiesFilter" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="printQueueName">O nome da fila de impressão.</param>
+        <param name="propertiesFilter">Os nomes das propriedades que são inicializadas na fila retornada.</param>
+        <summary>Obtém uma fila de impressão especificada do servidor de impressão.</summary>
+        <returns>O <see cref="T:System.Printing.PrintQueue" /> com o nome especificado no servidor de impressão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintQueues">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueueCollection GetPrintQueues ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueueCollection GetPrintQueues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.GetPrintQueues" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a coleção de filas de impressão que o servidor de impressão hospeda.</summary>
+        <returns>O <see cref="T:System.Printing.PrintQueueCollection" /> de filas de impressão no servidor de impressão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para listar as filas de impressão hospedadas por um <xref:System.Printing.PrintServer>.  
+  
+ [!code-csharp[PrintServerCreate#_CreatePrintServer](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintServerCreate/CSharp/PrintServerCreate.cs#_createprintserver)]
+ [!code-vb[PrintServerCreate#_CreatePrintServer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintServerCreate/visualbasic/printservercreate.vb#_createprintserver)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintQueues">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueueCollection GetPrintQueues (System.Printing.EnumeratedPrintQueueTypes[] enumerationFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueueCollection GetPrintQueues(valuetype System.Printing.EnumeratedPrintQueueTypes[] enumerationFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.GetPrintQueues(System.Printing.EnumeratedPrintQueueTypes[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumerationFlag" Type="System.Printing.EnumeratedPrintQueueTypes[]" />
+      </Parameters>
+      <Docs>
+        <param name="enumerationFlag">Uma matriz de valores que representam os tipos de filas de impressão que estão na coleção.</param>
+        <summary>Obtém a coleção de filas de impressão dos tipos especificados que serão nomeados no <see cref="T:System.Printing.EnumeratedPrintQueueTypes" /> e hospedados pelo servidor de impressão.</summary>
+        <returns>O <see cref="T:System.Printing.PrintQueueCollection" /> de filas de impressão dos tipos especificados no servidor de impressão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para obter um subconjunto de filas de impressão disponíveis.  
+  
+ [!code-cpp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CPP/Program.cpp#listsubsetofprintqueues)]
+ [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
+ [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintQueues">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueueCollection GetPrintQueues (System.Printing.PrintQueueIndexedProperty[] propertiesFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueueCollection GetPrintQueues(valuetype System.Printing.PrintQueueIndexedProperty[] propertiesFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.GetPrintQueues(System.Printing.PrintQueueIndexedProperty[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertiesFilter" Type="System.Printing.PrintQueueIndexedProperty[]" />
+      </Parameters>
+      <Docs>
+        <param name="propertiesFilter">As propriedades que o construtor inicializa.</param>
+        <summary>Obtém uma coleção de filas de impressão que são hospedados pelo servidor de impressão e inicializados somente nas propriedades que são especificadas no <see cref="T:System.Printing.PrintQueueIndexedProperty" /> matriz.</summary>
+        <returns>Um <see cref="T:System.Printing.PrintQueueCollection" /> cujos membros são inicializados somente nas propriedades especificadas por <paramref name="propertiesFilter" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintQueues">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueueCollection GetPrintQueues (string[] propertiesFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueueCollection GetPrintQueues(string[] propertiesFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.GetPrintQueues(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertiesFilter" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="propertiesFilter">Os nomes das propriedades de fila são inicializadas.</param>
+        <summary>Obtém uma coleção de filas de impressão que são hospedados pelo servidor de impressão e que são inicializados somente nas propriedades especificadas.</summary>
+        <returns>O <see cref="T:System.Printing.PrintQueueCollection" /> de filas de impressão no servidor de impressão; cada fila de impressão é inicializada somente nas propriedades que são especificadas em <paramref name="propertiesFilter" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintQueues">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueueCollection GetPrintQueues (System.Printing.PrintQueueIndexedProperty[] propertiesFilter, System.Printing.EnumeratedPrintQueueTypes[] enumerationFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueueCollection GetPrintQueues(valuetype System.Printing.PrintQueueIndexedProperty[] propertiesFilter, valuetype System.Printing.EnumeratedPrintQueueTypes[] enumerationFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.GetPrintQueues(System.Printing.PrintQueueIndexedProperty[],System.Printing.EnumeratedPrintQueueTypes[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertiesFilter" Type="System.Printing.PrintQueueIndexedProperty[]" />
+        <Parameter Name="enumerationFlag" Type="System.Printing.EnumeratedPrintQueueTypes[]" />
+      </Parameters>
+      <Docs>
+        <param name="propertiesFilter">As propriedades que o construtor inicializa.</param>
+        <param name="enumerationFlag">Uma matriz de valores que representam os tipos de filas de impressão na coleção.</param>
+        <summary>Obtém uma coleção de filas de impressão dos tipos especificados. Essas filas de impressão são inicializadas somente nas propriedades que são especificadas no <see cref="T:System.Printing.PrintQueueIndexedProperty" /> matriz.</summary>
+        <returns>O <see cref="T:System.Printing.PrintQueueCollection" /> do servidor de impressão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As filas na coleção são inicializadas somente nas propriedades que são listadas na <xref:System.Printing.PrintQueueIndexedProperty> matriz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrintQueues">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueueCollection GetPrintQueues (string[] propertiesFilter, System.Printing.EnumeratedPrintQueueTypes[] enumerationFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueueCollection GetPrintQueues(string[] propertiesFilter, valuetype System.Printing.EnumeratedPrintQueueTypes[] enumerationFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.GetPrintQueues(System.String[],System.Printing.EnumeratedPrintQueueTypes[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertiesFilter" Type="System.String[]" />
+        <Parameter Name="enumerationFlag" Type="System.Printing.EnumeratedPrintQueueTypes[]" />
+      </Parameters>
+      <Docs>
+        <param name="propertiesFilter">Os nomes das propriedades de fila são inicializadas.</param>
+        <param name="enumerationFlag">Uma matriz de valores que representam os tipos de filas de impressão que são retornados na coleção.</param>
+        <summary>Obtém a coleção de filas de impressão, que são especificada <see cref="T:System.Printing.EnumeratedPrintQueueTypes" /> e são inicializados somente nas propriedades especificadas.</summary>
+        <returns>Um <see cref="T:System.Printing.PrintQueueCollection" /> de filas de impressão dos tipos especificados; cada fila de impressão tem apenas as propriedades especificadas inicializadas.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallPrintQueue">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueue InstallPrintQueue (string printQueueName, string driverName, string[] portNames, string printProcessorName, System.Printing.IndexedProperties.PrintPropertyDictionary initialParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueue InstallPrintQueue(string printQueueName, string driverName, string[] portNames, string printProcessorName, class System.Printing.IndexedProperties.PrintPropertyDictionary initialParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.InstallPrintQueue(System.String,System.String,System.String[],System.String,System.Printing.IndexedProperties.PrintPropertyDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="driverName" Type="System.String" />
+        <Parameter Name="portNames" Type="System.String[]" />
+        <Parameter Name="printProcessorName" Type="System.String" />
+        <Parameter Name="initialParameters" Type="System.Printing.IndexedProperties.PrintPropertyDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="printQueueName">O nome da nova fila.</param>
+        <param name="driverName">O caminho e o nome do driver de impressora.</param>
+        <param name="portNames">As IDs das portas que a nova fila usa.</param>
+        <param name="printProcessorName">O nome do processador de impressão.</param>
+        <param name="initialParameters">Os parâmetros que são inicializados.</param>
+        <summary>Instala uma fila de impressão e o driver de impressora associado no servidor de impressão.</summary>
+        <returns>O novo <see cref="T:System.Printing.PrintQueue" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método (chamado de <xref:System.Printing.LocalPrintServer> objeto que herda o método de <xref:System.Printing.PrintServer>) para instalar uma segunda impressora que difere em suas propriedades de uma impressora existente apenas no local, porta e status compartilhado.  
+  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallPrintQueue">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueue InstallPrintQueue (string printQueueName, string driverName, string[] portNames, string printProcessorName, System.Printing.PrintQueueAttributes printQueueAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueue InstallPrintQueue(string printQueueName, string driverName, string[] portNames, string printProcessorName, valuetype System.Printing.PrintQueueAttributes printQueueAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.InstallPrintQueue(System.String,System.String,System.String[],System.String,System.Printing.PrintQueueAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="driverName" Type="System.String" />
+        <Parameter Name="portNames" Type="System.String[]" />
+        <Parameter Name="printProcessorName" Type="System.String" />
+        <Parameter Name="printQueueAttributes" Type="System.Printing.PrintQueueAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="printQueueName">O nome da nova fila.</param>
+        <param name="driverName">O caminho e o nome do driver de impressora.</param>
+        <param name="portNames">As IDs das portas que a nova fila usa.</param>
+        <param name="printProcessorName">O nome do processador de impressão.</param>
+        <param name="printQueueAttributes">Os atributos, como sinalizadores da nova fila.</param>
+        <summary>Instala uma fila de impressão e o driver de impressora associado no servidor de impressão.</summary>
+        <returns>O <see cref="T:System.Printing.PrintQueue" /> recém-criado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallPrintQueue">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueue InstallPrintQueue (string printQueueName, string driverName, string[] portNames, string printProcessorName, System.Printing.PrintQueueAttributes printQueueAttributes, System.Printing.PrintQueueStringProperty printQueueProperty, int printQueuePriority, int printQueueDefaultPriority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueue InstallPrintQueue(string printQueueName, string driverName, string[] portNames, string printProcessorName, valuetype System.Printing.PrintQueueAttributes printQueueAttributes, class System.Printing.PrintQueueStringProperty printQueueProperty, int32 printQueuePriority, int32 printQueueDefaultPriority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.InstallPrintQueue(System.String,System.String,System.String[],System.String,System.Printing.PrintQueueAttributes,System.Printing.PrintQueueStringProperty,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="driverName" Type="System.String" />
+        <Parameter Name="portNames" Type="System.String[]" />
+        <Parameter Name="printProcessorName" Type="System.String" />
+        <Parameter Name="printQueueAttributes" Type="System.Printing.PrintQueueAttributes" />
+        <Parameter Name="printQueueProperty" Type="System.Printing.PrintQueueStringProperty" />
+        <Parameter Name="printQueuePriority" Type="System.Int32" />
+        <Parameter Name="printQueueDefaultPriority" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="printQueueName">O nome da nova fila.</param>
+        <param name="driverName">O caminho e o nome do driver de impressora.</param>
+        <param name="portNames">As IDs das portas que a nova fila usa.</param>
+        <param name="printProcessorName">O nome do processador de impressão.</param>
+        <param name="printQueueAttributes">Os atributos, como sinalizadores da nova fila.</param>
+        <param name="printQueueProperty">O comentário, local ou nome de compartilhamento da nova fila.</param>
+        <param name="printQueuePriority">Um valor de 1 a 99 que especifica a prioridade dessa fila de impressão em relação a outras filas hospedadas pelo servidor de impressão.</param>
+        <param name="printQueueDefaultPriority">Um valor de 1 a 99 que especifica a prioridade padrão dos trabalhos de impressão que são enviadas para a fila.</param>
+        <summary>Instala uma fila de impressão com prioridade e driver de impressora associada, no servidor de impressão.</summary>
+        <returns>O <see cref="T:System.Printing.PrintQueue" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `printQueueProperty` parâmetro para inicializar um e somente um, da fila de <xref:System.Printing.PrintQueue.ShareName%2A>, <xref:System.Printing.PrintQueue.Comment%2A>, ou <xref:System.Printing.PrintQueue.Location%2A> propriedades. Se você deseja inicializar a mais de um, use o <xref:System.Printing.PrintServer.InstallPrintQueue%28System.String%2CSystem.String%2CSystem.String%5B%5D%2CSystem.String%2CSystem.Printing.PrintQueueAttributes%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Int32%2CSystem.Int32%29> sobrecarga desse método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallPrintQueue">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueue InstallPrintQueue (string printQueueName, string driverName, string[] portNames, string printProcessorName, System.Printing.PrintQueueAttributes printQueueAttributes, string printQueueShareName, string printQueueComment, string printQueueLocation, string printQueueSeparatorFile, int printQueuePriority, int printQueueDefaultPriority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintQueue InstallPrintQueue(string printQueueName, string driverName, string[] portNames, string printProcessorName, valuetype System.Printing.PrintQueueAttributes printQueueAttributes, string printQueueShareName, string printQueueComment, string printQueueLocation, string printQueueSeparatorFile, int32 printQueuePriority, int32 printQueueDefaultPriority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.InstallPrintQueue(System.String,System.String,System.String[],System.String,System.Printing.PrintQueueAttributes,System.String,System.String,System.String,System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printQueueName" Type="System.String" />
+        <Parameter Name="driverName" Type="System.String" />
+        <Parameter Name="portNames" Type="System.String[]" />
+        <Parameter Name="printProcessorName" Type="System.String" />
+        <Parameter Name="printQueueAttributes" Type="System.Printing.PrintQueueAttributes" />
+        <Parameter Name="printQueueShareName" Type="System.String" />
+        <Parameter Name="printQueueComment" Type="System.String" />
+        <Parameter Name="printQueueLocation" Type="System.String" />
+        <Parameter Name="printQueueSeparatorFile" Type="System.String" />
+        <Parameter Name="printQueuePriority" Type="System.Int32" />
+        <Parameter Name="printQueueDefaultPriority" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="printQueueName">O nome da nova fila.</param>
+        <param name="driverName">O caminho e o nome do driver de impressora.</param>
+        <param name="portNames">As IDs das portas que a nova fila usa.</param>
+        <param name="printProcessorName">O nome do processador de impressão.</param>
+        <param name="printQueueAttributes">Os atributos, como sinalizadores da nova fila.</param>
+        <param name="printQueueShareName">O nome do compartilhamento da nova fila.</param>
+        <param name="printQueueComment">Um comentário sobre a fila que é visível para os usuários a [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] interface do usuário.</param>
+        <param name="printQueueLocation">O local da nova fila.</param>
+        <param name="printQueueSeparatorFile">O caminho de um arquivo que é inserido no início de cada trabalho de impressão.</param>
+        <param name="printQueuePriority">Um valor de 1 a 99 que especifica a prioridade da fila em relação a outras filas hospedadas pelo servidor de impressão.</param>
+        <param name="printQueueDefaultPriority">Um valor de 1 a 99 que especifica a prioridade padrão de novos trabalhos de impressão que são enviadas para a fila.</param>
+        <summary>Instala uma fila de impressão compartilhada, prioridade e driver de impressora associada, no servidor de impressão.</summary>
+        <returns>O <see cref="T:System.Printing.PrintQueue" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não deseja inicializar a fila de todos os três <xref:System.Printing.PrintQueue.ShareName%2A>, <xref:System.Printing.PrintQueue.Comment%2A>, ou <xref:System.Printing.PrintQueue.Location%2A> propriedades; você pode passar uma cadeia de caracteres vazia para um ou mais dos `printQueueShareName`, `printQueueComment`, e `printQueueLocation`. Se você quiser inicializar apenas uma dessas propriedades, use o <xref:System.Printing.PrintServer.InstallPrintQueue%28System.String%2CSystem.String%2CSystem.String%5B%5D%2CSystem.String%2CSystem.Printing.PrintQueueAttributes%2CSystem.Printing.PrintQueueStringProperty%2CSystem.Int32%2CSystem.Int32%29> sobrecarga desse método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalDispose">
+      <MemberSignature Language="C#" Value="protected override sealed void InternalDispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InternalDispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.InternalDispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Printing.PrintServer" /> e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDelayInitialized">
+      <MemberSignature Language="C#" Value="protected bool IsDelayInitialized { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDelayInitialized" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.IsDelayInitialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a inicialização do <see cref="T:System.Printing.PrintServer" /> propriedades foi adiada.</summary>
+        <value>
+          <see langword="true" />Se a inicialização é adiada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MajorVersion">
+      <MemberSignature Language="C#" Value="public int MajorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MajorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.MajorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão principal do sistema operacional.</summary>
+        <value>Um <see cref="T:System.Int32" /> que identifica a versão principal do sistema operacional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As versões do Windows na qual [!INCLUDE[TLA#tla_winfx](~/includes/tlasharptla-winfx-md.md)] podem ser executados tem as seguintes principais (à direita da vírgula decimal) e pequenas (à esquerda da vírgula decimal) números de versão:  
+  
+-   [!INCLUDE[TLA#tla_winxp](~/includes/tlasharptla-winxp-md.md)]: 5.1  
+  
+-   [!INCLUDE[TLA#tla_winnetsvrfam](~/includes/tlasharptla-winnetsvrfam-md.md)]: 5.2  
+  
+-   [!INCLUDE[TLA#tla_winvista](~/includes/tlasharptla-winvista-md.md)]: 6.0  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinorVersion">
+      <MemberSignature Language="C#" Value="public int MinorVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinorVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.MinorVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão secundária dentro da versão principal do sistema operacional.</summary>
+        <value>Um <see cref="T:System.Int32" /> que identifica a versão secundária do sistema operacional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As versões do Windows na qual [!INCLUDE[TLA#tla_winfx](~/includes/tlasharptla-winfx-md.md)] podem ser executados tem as seguintes principais (à direita da vírgula decimal) e pequenas (à esquerda da vírgula decimal) números de versão:  
+  
+-   [!INCLUDE[TLA#tla_winxp](~/includes/tlasharptla-winxp-md.md)]: 5.1  
+  
+-   [!INCLUDE[TLA#tla_winnetsvrfam](~/includes/tlasharptla-winnetsvrfam-md.md)]: 5.2  
+  
+-   [!INCLUDE[TLA#tla_winvista](~/includes/tlasharptla-winvista-md.md)]: 6.0  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override sealed string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do servidor de impressão.</summary>
+        <value>O nome do servidor de impressão.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Printing.PrintSystemException">A propriedade não foi inicializada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NetPopup">
+      <MemberSignature Language="C#" Value="public bool NetPopup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NetPopup" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.NetPopup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se são enviadas notificações que um trabalho de impressão foi concluído para o servidor de impressão ou o computador cliente.</summary>
+        <value>
+          <see langword="true" />Se as notificações são enviadas para o computador cliente. <see langword="false" /> se as notificações são enviadas ao servidor de impressão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PortThreadPriority">
+      <MemberSignature Language="C#" Value="public System.Threading.ThreadPriority PortThreadPriority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.ThreadPriority PortThreadPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.PortThreadPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade de thread para o processo que gerencia e/s por meio da impressora portas.</summary>
+        <value>Um <see cref="T:System.Threading.ThreadPriority" /> valor de enumeração que identifica a prioridade de thread para o processo que gerencia as portas de impressora. O padrão é <see cref="F:System.Threading.ThreadPriority.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O thread de porta para o servidor lê o arquivo de spool, processa os dados e envia os dados para um monitor de porta, que envia os dados para a impressora.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public override void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintServer.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza as propriedades do <see cref="T:System.Printing.PrintServer" /> para que o valor de atributo correspondente do servidor de impressão que representa o objeto corresponde a cada valor de propriedade do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As alterações feitas nas propriedades de um <xref:System.Printing.PrintServer> podem ser perdidas quando o <xref:System.Printing.PrintServer.Refresh%2A> método é executado. Essa perda ocorre se você não ainda gravou as alterações para o servidor de impressão que representa o objeto com <xref:System.Printing.PrintServer.Commit%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Printing.PrintSystemException">Algumas das propriedades não podem ser atualizadas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RestartJobOnPoolEnabled">
+      <MemberSignature Language="C#" Value="public bool RestartJobOnPoolEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RestartJobOnPoolEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.RestartJobOnPoolEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os usuários podem reiniciar trabalhos depois de ocorrer um erro se o pool de impressão estiver habilitado.</summary>
+        <value>
+          <see langword="true" />Se os trabalhos podem ser reiniciados quando o pool de impressão estiver habilitado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um programa de chamada deve ter permissões administrativas para definir esse valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RestartJobOnPoolTimeout">
+      <MemberSignature Language="C#" Value="public int RestartJobOnPoolTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RestartJobOnPoolTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.RestartJobOnPoolTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o tempo de espera antes de um trabalho pode ser reiniciado, caso ocorra um erro quando o pool de impressão também está habilitado.</summary>
+        <value>O tempo de espera, em minutos, antes da reinicialização de um trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um programa de chamada deve ter permissões administrativas para definir esse valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchedulerPriority">
+      <MemberSignature Language="C#" Value="public System.Threading.ThreadPriority SchedulerPriority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.ThreadPriority SchedulerPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.SchedulerPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade de thread para o processo que direciona os trabalhos de impressão de aplicativos para filas de impressão.</summary>
+        <value>Um <see cref="T:System.Threading.ThreadPriority" /> valor de enumeração que identifica a prioridade de thread para o processo de planejamento do servidor de impressão. O padrão é <see cref="F:System.Threading.ThreadPriority.Normal" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubSystemVersion">
+      <MemberSignature Language="C#" Value="public byte SubSystemVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 SubSystemVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintServer.SubSystemVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do sistema spooler de impressão.</summary>
+        <value>Um <see cref="T:System.Byte" /> que identifica a versão do sistema spooler de impressão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na prática, o valor dessa propriedade é sempre o mesmo que o valor de <xref:System.Printing.PrintServer.MajorVersion%2A> exceto que o último é um tipo <xref:System.Int32>.  
+  
+ As versões do Windows na qual [!INCLUDE[TLA#tla_winfx](~/includes/tlasharptla-winfx-md.md)] podem ser executados tem as seguintes principais (à direita da vírgula decimal) e pequenas (à esquerda da vírgula decimal) números de versão:  
+  
+-   [!INCLUDE[TLA#tla_winxp](~/includes/tlasharptla-winxp-md.md)]: 5.1  
+  
+-   [!INCLUDE[TLA#tla_winnetsvrfam](~/includes/tlasharptla-winnetsvrfam-md.md)]: 5.2  
+  
+-   [!INCLUDE[TLA#tla_winvista](~/includes/tlasharptla-winvista-md.md)]: 6.0  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

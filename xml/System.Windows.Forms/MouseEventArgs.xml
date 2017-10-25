@@ -1,0 +1,275 @@
+<Type Name="MouseEventArgs" FullName="System.Windows.Forms.MouseEventArgs">
+  <TypeSignature Language="C#" Value="public class MouseEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MouseEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MouseEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para os eventos <see cref="E:System.Windows.Forms.Control.MouseUp" />, <see cref="E:System.Windows.Forms.Control.MouseDown" /> e <see cref="E:System.Windows.Forms.Control.MouseMove" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Control.MouseDown> evento ocorre quando o usuário pressiona o botão do mouse enquanto o ponteiro está sobre um controle. O <xref:System.Windows.Forms.Control.MouseUp> evento ocorre quando o usuário libera o botão do mouse enquanto o ponteiro permanece sobre o controle. O <xref:System.Windows.Forms.Control.MouseMove> evento ocorre quando o usuário move o ponteiro do mouse sobre um controle. Um <xref:System.Windows.Forms.MouseEventArgs> Especifica qual botão do mouse é pressionado, quantas vezes o botão do mouse foi pressionado e liberado, as coordenadas do mouse e o valor a roda do mouse é movida.  
+  
+ É possível receber um <xref:System.Windows.Forms.Control.MouseDown> evento sem correspondente <xref:System.Windows.Forms.Control.MouseUp>, se o usuário alternar o foco para outro aplicativo antes de liberar o botão do mouse.  
+  
+ Esses três eventos existem para o <xref:System.Windows.Forms.Control>, <xref:System.Windows.Forms.AxHost>, e <xref:System.Windows.Forms.NotifyIcon> classes.  
+  
+ Para obter informações sobre o modelo de evento, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ Identificadores de exemplos de código a seguir a <xref:System.Windows.Forms.Control.MouseDown> evento em um <xref:System.Windows.Forms.TextBox> controlar de forma que clicar no botão direito do mouse seleciona todo o texto no controle. Este exemplo requer que você tenha um formulário que contém um <xref:System.Windows.Forms.TextBox> controle chamado `textBox1`.  
+  
+ [!code-csharp[MouseEventArgs#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MouseEventArgs/CS/Form1.cs#1)]
+ [!code-vb[MouseEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MouseEventArgs/VB/Form1.vb#1)]  
+  
+ O seguinte exemplo de código usa o `Location` propriedade para acompanhar clica do botão esquerdo do mouse e para desenhar uma série de segmentos de linha reta em resposta à entrada do usuário. O exemplo não atualiza as linhas se você ocultar o formulário e, em seguida, exibi-la novamente; Este código foi omitido para manter a simplicidade.  
+  
+ [!code-csharp[MouseEventArgs#2](~/samples/snippets/csharp/VS_Snippets_Winforms/MouseEventArgs/CS/Form1.cs#2)]
+ [!code-vb[MouseEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MouseEventArgs/VB/Form1.vb#2)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.MouseEventArgs.X%2A> e <xref:System.Windows.Forms.MouseEventArgs.Y%2A> propriedades para exibir a posição atual do ponteiro do mouse em um <xref:System.Windows.Forms.ToolTip> janela.  
+  
+ [!code-csharp[MouseEventArgs#3](~/samples/snippets/csharp/VS_Snippets_Winforms/MouseEventArgs/CS/Form1.cs#3)]
+ [!code-vb[MouseEventArgs#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MouseEventArgs/VB/Form1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MouseEventArgs (System.Windows.Forms.MouseButtons button, int clicks, int x, int y, int delta);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.MouseButtons button, int32 clicks, int32 x, int32 y, int32 delta) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.MouseEventArgs.#ctor(System.Windows.Forms.MouseButtons,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+        <Parameter Name="clicks" Type="System.Int32" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="delta" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="button">Uma da <see cref="T:System.Windows.Forms.MouseButtons" /> valores que indicam qual botão do mouse foi pressionado.</param>
+        <param name="clicks">O número de vezes que um botão do mouse foi pressionado.</param>
+        <param name="x">A coordenada x de um clique do mouse, em pixels.</param>
+        <param name="y">A coordenada y de um clique do mouse, em pixels.</param>
+        <param name="delta">Uma contagem com sinal do número de detentores que o botão de rolagem girou.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.MouseEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Button">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MouseButtons Button { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.MouseButtons Button" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MouseEventArgs.Button" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseButtons</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o botão do mouse que foi pressionado.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.MouseButtons" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte código exemplo manipula o <xref:System.Windows.Forms.Control.MouseDown> evento em um <xref:System.Windows.Forms.TextBox> controlar de forma que clicar no botão direito do mouse seleciona todo o texto no controle. Este exemplo requer que você tenha um formulário que contém um <xref:System.Windows.Forms.TextBox> controle chamado `textBox1`.  
+  
+ [!code-csharp[MouseEventArgs#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MouseEventArgs/CS/Form1.cs#1)]
+ [!code-vb[MouseEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MouseEventArgs/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clicks">
+      <MemberSignature Language="C#" Value="public int Clicks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Clicks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MouseEventArgs.Clicks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de vezes que o botão do mouse foi pressionado ou liberado.</summary>
+        <value>Um <see cref="T:System.Int32" /> que contém o número de vezes que o botão do mouse foi pressionado ou liberado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora define a interface do Windows padrão eventos do mouse como cliques único ou clicar duas vezes, aplicativos individuais podem interpretar um grande número de cliques como um único evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Control.MouseClick?displayProperty=nameWithType> eventos. Esse relatório ajuda a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.Control>, como um <xref:System.Windows.Forms.Button> ou <xref:System.Windows.Forms.ComboBox>. Em seguida, nomear a instância `Control1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Control.MouseClick?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#54](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#54)]
+ [!code-vb[System.Windows.Forms.EventExamples#54](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#54)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delta">
+      <MemberSignature Language="C#" Value="public int Delta { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Delta" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MouseEventArgs.Delta" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma contagem com sinal do número de detentores que a roda do mouse girou, multiplicado pela constante WHEEL_DELTA. Um detentor é um ponto da roda do mouse.</summary>
+        <value>Uma contagem com sinal do número de detentores que a roda do mouse girou, multiplicado pela constante WHEEL_DELTA.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A roda do mouse combina os recursos de um disco e um botão do mouse. O disco tem cortes discretas, com espaçamento uniforme. Quando você gira a roda, uma mensagem de roda é enviada cada entalhe for encontrado. Um ponto de roda, um detentor é definido pela constante de windows WHEEL_DELTA, que é 120. Um valor positivo indica que a roda foi girada para a frente (afastada de usuário); um valor negativo indica que o disco foi girado para trás (em direção ao usuário).  
+  
+ Atualmente, um valor de 120 é o padrão para um detentor. Se foram introduzidos mouses de resolução mais altas, a definição de WHEEL_DELTA pode se tornar menor. A maioria dos aplicativos deve verificar um valor positivo ou negativo, em vez de um total de agregação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Control.MouseClick?displayProperty=nameWithType> eventos. Esse relatório ajuda a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.Control>, como um <xref:System.Windows.Forms.Button> ou <xref:System.Windows.Forms.ComboBox>. Em seguida, nomear a instância `Control1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Control.MouseClick?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#54](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#54)]
+ [!code-vb[System.Windows.Forms.EventExamples#54](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#54)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point Location" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MouseEventArgs.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do mouse durante o evento de geração do mouse.</summary>
+        <value>Um <see cref="T:System.Drawing.Point" /> que contém as coordenadas de x e y do mouse, em pixels, relativas ao canto superior esquerdo da tela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.MouseEventArgs.Location%2A> propriedade controle de cliques do mouse esquerdo e desenhar uma série de segmentos de linha reta em resposta à entrada do usuário. O exemplo não mantém as linhas desenhadas se você ocultar o formulário e, em seguida, exibi-la novamente; Este código foi omitido para manter a simplicidade.  
+  
+ [!code-csharp[MouseEventArgs#2](~/samples/snippets/csharp/VS_Snippets_Winforms/MouseEventArgs/CS/Form1.cs#2)]
+ [!code-vb[MouseEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MouseEventArgs/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public int X { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MouseEventArgs.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coordenada X do mouse durante o evento de mouse gerador.</summary>
+        <value>A coordenada X do mouse, em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As coordenadas do mouse variam de acordo com o evento que está sendo gerado. Por exemplo, quando o <xref:System.Windows.Forms.Control.MouseMove?displayProperty=nameWithType> evento é manipulado, os valores de coordenada de mouse são relativas às coordenadas do controle que disparou o evento. Alguns eventos relacionados às operações de arrastar e soltar associou valores de coordenada do mouse em relação à origem de formulário ou a origem da tela.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.MouseEventArgs.X%2A> e <xref:System.Windows.Forms.MouseEventArgs.Y%2A> propriedades para exibir a posição atual do ponteiro do mouse em um <xref:System.Windows.Forms.ToolTip> janela.  
+  
+ [!code-csharp[MouseEventArgs#3](~/samples/snippets/csharp/VS_Snippets_Winforms/MouseEventArgs/CS/Form1.cs#3)]
+ [!code-vb[MouseEventArgs#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MouseEventArgs/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public int Y { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.MouseEventArgs.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coordenada y do mouse durante o evento de mouse gerador.</summary>
+        <value>A coordenada y do mouse, em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As coordenadas do mouse variam de acordo com o evento que está sendo gerado. Por exemplo, quando o <xref:System.Windows.Forms.Control.MouseMove?displayProperty=nameWithType> evento é manipulado, os valores de coordenada de mouse são relativas às coordenadas do controle que disparou o evento. Alguns eventos relacionados às operações de arrastar e soltar associou valores de coordenada de mouse são relativas à origem de formulário ou a origem da tela.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.MouseEventArgs.X%2A> e <xref:System.Windows.Forms.MouseEventArgs.Y%2A> propriedades para exibir a posição atual do ponteiro do mouse em um <xref:System.Windows.Forms.ToolTip> janela. Para usar esse código, chame `TrackCoordinates` do construtor de formulário.  
+  
+ [!code-csharp[MouseEventArgs#3](~/samples/snippets/csharp/VS_Snippets_Winforms/MouseEventArgs/CS/Form1.cs#3)]
+ [!code-vb[MouseEventArgs#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MouseEventArgs/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

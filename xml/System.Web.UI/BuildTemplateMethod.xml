@@ -1,0 +1,31 @@
+<Type Name="BuildTemplateMethod" FullName="System.Web.UI.BuildTemplateMethod">
+  <TypeSignature Language="C#" Value="public delegate void BuildTemplateMethod(Control control);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BuildTemplateMethod extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.BuildTemplateMethod" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="control" Type="System.Web.UI.Control" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="control">Um <see cref="T:System.Web.UI.Control" /> que representa o contêiner usado para armazenar os controles filho no modelo.</param>
+    <summary>Oferece suporte ao ASP.NET durante a criação de um modelo para um controle de modelo de código da classe gerada. O <see cref="T:System.Web.UI.BuildTemplateMethod" /> delegar identificadores de <see cref="M:System.Web.UI.CompiledTemplateBuilder.InstantiateIn(System.Web.UI.Control)" /> método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.BuildTemplateMethod> delegado é usado em conjunto com o <xref:System.Web.UI.CompiledTemplateBuilder> classe, que cria um modelo para um controle de modelo de código da classe gerada.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

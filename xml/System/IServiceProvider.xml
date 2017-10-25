@@ -1,0 +1,73 @@
+<Type Name="IServiceProvider" FullName="System.IServiceProvider">
+  <TypeSignature Language="C#" Value="public interface IServiceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.IServiceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um mecanismo para recuperar um objeto de serviço, ou seja, um objeto que dá suporte personalizado a outros objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é implementada por um tipo de valor ou classe que fornece um serviço a outros objetos.  
+  
+ O <xref:System.IServiceProvider.GetService%2A> método desta interface obtém o objeto que fornece o serviço.  
+  
+ O <xref:System.IServiceProvider> interface é implementada por um número de tipos, incluindo <xref:System.Web.HttpContext?displayProperty=nameWithType>, <xref:System.ComponentModel.LicenseContext?displayProperty=nameWithType>, <xref:System.ComponentModel.MarshalByValueComponent?displayProperty=nameWithType>, e <xref:System.ComponentModel.Design.ServiceContainer?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IServiceProvider.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Um objeto que especifica o tipo de objeto de serviço a ser obtido.</param>
+        <summary>Obtém o objeto de serviço do tipo especificado.</summary>
+        <returns>Um objeto de serviço do tipo <paramref name="serviceType" />.  
+  
+ -ou-  
+  
+ <see langword="null" /> se não houver nenhum objeto de serviço do tipo <paramref name="serviceType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,185 @@
+<Type Name="ITypeProvider" FullName="System.Workflow.ComponentModel.Compiler.ITypeProvider">
+  <TypeSignature Language="C#" Value="public interface ITypeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.ITypeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o comportamento de um serviço que atua como um contêiner de tipos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Compiler.ITypeProvider>pode ser enviado como um <xref:System.Workflow.Runtime.WorkflowRuntime> para descobrir os tipos de dados que são necessárias para a ativação de fluxo de trabalho extensible Application Markup Language (XAML).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ITypeProvider.GetType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uma cadeia de caracteres que contém o nome da entidade.</param>
+        <summary>Obtém o <see cref="T:System.Type" /> da entidade nomeada.</summary>
+        <returns>O <see cref="T:System.Type" /> da entidade nomeada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType (string name, bool throwOnError);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType(string name, bool throwOnError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ITypeProvider.GetType(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="throwOnError" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uma cadeia de caracteres que contém o nome da entidade.</param>
+        <param name="throwOnError">Um valor que indica se deve lançar uma exceção se <c>nome</c> não for resolvida.</param>
+        <summary>Obtém o <see cref="T:System.Type" /> da entidade nomeada.</summary>
+        <returns>O <see cref="T:System.Type" /> da entidade nomeada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypes">
+      <MemberSignature Language="C#" Value="public Type[] GetTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type[] GetTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ITypeProvider.GetTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma matriz que contém cada <see cref="T:System.Type" /> conhecido para essa instância.</summary>
+        <returns>Uma matriz que contém cada <see cref="T:System.Type" /> conhecido para essa instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly LocalAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly LocalAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.ITypeProvider.LocalAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Assembly temporário que é gerado durante o processo de compilação para validar os tipos no projeto ativo que está sendo compilado.</summary>
+        <value>Local <see cref="T:System.Reflection.Assembly" /> definido por essa instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferencedAssemblies">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.Reflection.Assembly&gt; ReferencedAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.Reflection.Assembly&gt; ReferencedAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.ITypeProvider.ReferencedAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Reflection.Assembly&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de todos os assemblies referenciados pelo <see cref="T:System.Type" />.</summary>
+        <value>Uma coleção de todos os assemblies referenciados pelo <see cref="T:System.Type" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeLoadErrors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;object,Exception&gt; TypeLoadErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;object, class System.Exception&gt; TypeLoadErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.ITypeProvider.TypeLoadErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Object,System.Exception&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.IDictionary" /> de exceções de erro de carga chaveadas segundo o <see cref="T:System.Object" /> fazendo com que o <see cref="T:System.Exception" />.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> de exceções de erro de carga chaveadas segundo o <see cref="T:System.Object" /> fazendo com que o <see cref="T:System.Exception" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeLoadErrorsChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TypeLoadErrorsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TypeLoadErrorsChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.ComponentModel.Compiler.ITypeProvider.TypeLoadErrorsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a coleção <see cref="P:System.Workflow.ComponentModel.Compiler.TypeProvider.TypeLoadErrors" /> é modificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TypesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TypesChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.ComponentModel.Compiler.ITypeProvider.TypesChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando os tipos no provedor de tipo que implementa essa interface for alterado. Isso pode acontecer quando um assembly ou <see cref="T:System.CodeDom.CodeCompileUnit" /> é adicionado ou removido do provedor de tipos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

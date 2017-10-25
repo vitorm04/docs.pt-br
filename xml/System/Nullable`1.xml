@@ -1,0 +1,533 @@
+<Type Name="Nullable&lt;T&gt;" FullName="System.Nullable&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public struct Nullable&lt;T&gt; where T : struct" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Nullable`1&lt;struct .ctor (class System.ValueType) T&gt; extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Nullable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+        <BaseTypeName>System.ValueType</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">O tipo de valor subjacente do tipo genérico <see cref="T:System.Nullable`1" />.</typeparam>
+    <summary>Representa um tipo de valor que pode receber <see langword="null" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um tipo deve ser anulável se ele pode ser atribuído um valor ou pode ser atribuído `null`, que significa que o tipo não tem nenhum valor de qualquer tipo. Por padrão, todos os tipos de referência, como <xref:System.String>, são anulável, mas o valor de todos os tipos, como <xref:System.Int32>, não são.  
+  
+ Em c# e Visual Basic, você marca um tipo de valor anuláveis usando o `?` notação após o tipo de valor. Por exemplo, `int?` em c# ou `Integer?` no Visual Basic declara um tipo de valor inteiro que pode ser atribuído `null`.  
+  
+ O <xref:System.Nullable%601> estrutura oferece suporte ao uso de um tipo de valor como um tipo anulável como tipos de referência são nulas por design.  
+  
+ O <xref:System.Nullable> classe oferece suporte complementar para o <xref:System.Nullable%601> estrutura. O <xref:System.Nullable> classe oferece suporte à obtenção do tipo subjacente de um tipo anulável, e operações de comparação e de igualdade em pares de tipos anuláveis, tipo de valor cujos subjacente não oferece suporte a operações de comparação e de igualdade genéricas.  
+  
+## <a name="fundamental-properties"></a>Propriedades fundamentais  
+ Os dois membros fundamentais do <xref:System.Nullable%601> estrutura são o <xref:System.Nullable%601.HasValue%2A> e <xref:System.Nullable%601.Value%2A> propriedades. Se o <xref:System.Nullable%601.HasValue%2A> propriedade para um <xref:System.Nullable%601> objeto `true`, o valor do objeto pode ser acessado com o <xref:System.Nullable%601.Value%2A> propriedade. Se o <xref:System.Nullable%601.HasValue%2A> é de propriedade `false`, o valor do objeto não está definido e uma tentativa de acessar o <xref:System.Nullable%601.Value%2A> propriedade lança um <xref:System.InvalidOperationException>.  
+  
+## <a name="boxing-and-unboxing"></a>Conversão boxing e unboxing  
+ Quando um tipo anulável é demarcado, o common language runtime caixas automaticamente o valor subjacente do <xref:System.Nullable%601> do objeto, não o <xref:System.Nullable%601> objeto propriamente dito. Ou seja, se o <xref:System.Nullable%601.HasValue%2A> é de propriedade `true`, o conteúdo do <xref:System.Nullable%601.Value%2A> propriedade é demarcada. Quando o valor subjacente de um tipo anulável estiver não demarcado, o common language runtime cria um novo <xref:System.Nullable%601> estrutura inicializada com o valor subjacente.  
+  
+ Se o `HasValue` é de propriedade de um tipo anulável `false`, o resultado de uma operação de conversão boxing é `null`. Consequentemente, se um tipo anulável box é passado para um método que espera um argumento de objeto, esse método deve estar preparado para lidar com o caso em que o argumento é `null`. Quando `null` é desencaixotado em um tipo anulável, o common language runtime cria um novo <xref:System.Nullable%601> estrutura e inicializa o `HasValue` propriedade `false`.  
+  
+## <a name="includenetv451includesnet-v451-mdmd-and-windows-runtime-components"></a>[!INCLUDE[net_v451](~/includes/net-v451-md.md)]e componentes de tempo de execução do Windows  
+ Começando com o [!INCLUDE[net_v451](~/includes/net-v451-md.md)], você pode incluir um <xref:System.Nullable%601> tipo como um membro de uma estrutura exportado em uma biblioteca de WinMD. Anteriormente, isso não era suportado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define três linhas de uma tabela no banco de dados de exemplo Pubs Microsoft. A tabela contém duas colunas que não permitem valor nulo e duas colunas que permitem valor nulo.  
+  
+ [!code-cpp[system.nullableOfT.class#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.nullableOfT.class/cpp/tarow.cpp#1)]
+ [!code-csharp[system.nullableOfT.class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.nullableOfT.class/cs/tarow.cs#1)]
+ [!code-vb[system.nullableOfT.class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.nullableOfT.class/vb/tarow.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Nullable (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Nullable`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um tipo de valor.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Nullable`1" /> para o valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Nullable%601.%23ctor%2A> construtor inicializa o <xref:System.Nullable%601.HasValue%2A> propriedade do novo <xref:System.Nullable%601> do objeto para `true`e o <xref:System.Nullable%601.Value%2A> o valor da propriedade a `value` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Nullable`1.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">Um objeto.</param>
+        <summary>Indica se o objeto <see cref="T:System.Nullable`1" /> atual é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se o parâmetro <paramref name="other" /> for igual ao objeto <see cref="T:System.Nullable`1" /> atual, caso contrário, <see langword="false" />.  
+  
+ Esta tabela descreve como a igualdade é definida para os valores comparados:  
+  
+ <list type="table"><listheader><term>Valor de retorno  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term><see langword="true" /></term><description>O <see cref="P:System.Nullable`1.HasValue" /> é de propriedade <see langword="false" />e o <paramref name="other" /> parâmetro é <see langword="null" />. Ou seja, dois valores nulos são iguais por definição.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Nullable`1.HasValue" /> é <see langword="true" /> e o valor retornado pela propriedade <see cref="P:System.Nullable`1.Value" /> é igual ao parâmetro <paramref name="other" />.  
+  
+ </description></item><item><term><see langword="false" /></term><description>O <see cref="P:System.Nullable`1.HasValue" /> propriedade atual <see cref="T:System.Nullable`1" /> estrutura é <see langword="true" />e o <paramref name="other" /> parâmetro é <see langword="null" />.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Nullable`1.HasValue" /> da estrutura <see cref="T:System.Nullable`1" /> atual é <see langword="false" /> e o parâmetro <paramref name="other" /> não é <see langword="null" />.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Nullable`1.HasValue" /> da estrutura <see cref="T:System.Nullable`1" /> atual é <see langword="true" /> e o valor retornado pela propriedade <see cref="P:System.Nullable`1.Value" /> não é igual ao parâmetro <paramref name="other" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Nullable%601.HasValue%2A> propriedade <xref:System.Nullable%601> estrutura é `true` e `other` argumento não é `null`, igualdade é determinada, passando o `other` parâmetro para o `Equals` método do valor subjacente do atual <xref:System.Nullable%601> estrutura.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se um objeto e um <xref:System.Nullable%601> objeto são iguais ao atual <xref:System.Nullable%601> objeto.  
+  
+ [!code-csharp[system.nullableOfT.Equals#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.nullableOfT.Equals/cs/eq.cs#1)]
+ [!code-vb[system.nullableOfT.Equals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.nullableOfT.Equals/vb/eq.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Nullable`1.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o código hash do objeto retornado pela propriedade <see cref="P:System.Nullable`1.Value" />.</summary>
+        <returns>O código hash do objeto retornado pela propriedade <see cref="P:System.Nullable`1.Value" /> se a propriedade <see cref="P:System.Nullable`1.HasValue" /> for <see langword="true" /> ou zero se a propriedade <see cref="P:System.Nullable`1.HasValue" /> for <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueOrDefault">
+      <MemberSignature Language="C#" Value="public T GetValueOrDefault ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T GetValueOrDefault() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Nullable`1.GetValueOrDefault" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o valor do atual objeto <see cref="T:System.Nullable`1" /> ou o valor padrão do objeto.</summary>
+        <returns>O valor da propriedade <see cref="P:System.Nullable`1.Value" /> se a propriedade <see cref="P:System.Nullable`1.HasValue" /> for <see langword="true" />; caso contrário, o valor padrão do atual objeto <see cref="T:System.Nullable`1" />. O tipo do valor padrão é o argumento de tipo do atual objeto <see cref="T:System.Nullable`1" /> e o valor do valor padrão consiste apenas em zeros binários.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Nullable%601.GetValueOrDefault%2A> método retorna um valor, mesmo se o <xref:System.Nullable%601.HasValue%2A> é de propriedade `false` (ao contrário de <xref:System.Nullable%601.Value%2A> propriedade, que gera uma exceção).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir recupera o valor de um <xref:System.Nullable%601> se esse valor for definido; caso contrário, ele recupera o valor padrão ou um valor padrão específico do objeto.  
+  
+ [!code-csharp[system.nullableOfT.GetValueOrDefault#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.nullableOfT.GetValueOrDefault/cs/gvod.cs#1)]
+ [!code-vb[system.nullableOfT.GetValueOrDefault#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.nullableOfT.GetValueOrDefault/vb/gvod.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueOrDefault">
+      <MemberSignature Language="C#" Value="public T GetValueOrDefault (T defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T GetValueOrDefault(!T defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Nullable`1.GetValueOrDefault(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">Um valor a ser retornado se a propriedade <see cref="P:System.Nullable`1.HasValue" /> for <see langword="false" />.</param>
+        <summary>Recupera o valor do objeto <see cref="T:System.Nullable`1" /> atual ou o valor padrão especificado.</summary>
+        <returns>O valor da propriedade <see cref="P:System.Nullable`1.Value" /> se a propriedade <see cref="P:System.Nullable`1.HasValue" /> for <see langword="true" />; caso contrário, o parâmetro <paramref name="defaultValue" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Nullable%601.GetValueOrDefault%2A> método retorna um valor, mesmo se o <xref:System.Nullable%601.HasValue%2A> é de propriedade `false` (ao contrário de <xref:System.Nullable%601.Value%2A> propriedade, que gera uma exceção).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir recupera o valor de um <xref:System.Nullable%601> se esse valor for definido; caso contrário, ele recupera o valor padrão ou um valor padrão específico do objeto.  
+  
+ [!code-csharp[system.nullableOfT.GetValueOrDefault#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.nullableOfT.GetValueOrDefault/cs/gvod.cs#1)]
+ [!code-vb[system.nullableOfT.GetValueOrDefault#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.nullableOfT.GetValueOrDefault/vb/gvod.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasValue">
+      <MemberSignature Language="C#" Value="public bool HasValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasValue" />
+      <MemberSignature Language="DocId" Value="P:System.Nullable`1.HasValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto <see cref="T:System.Nullable`1" /> atual tem um valor válido de seu tipo subjacente.</summary>
+        <value>
+          <see langword="true" /> se o objeto <see cref="T:System.Nullable`1" /> atual tiver um valor; <see langword="false" /> se objeto <see cref="T:System.Nullable`1" /> atual não tiver valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Nullable%601.HasValue%2A> é de propriedade `true`, o valor atual <xref:System.Nullable%601> objeto pode ser acessado com o <xref:System.Nullable%601.Value%2A> propriedade. Caso contrário, a tentativa de acessar o seu valor lança um <xref:System.InvalidOperationException> exceção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Nullable%601.HasValue%2A> propriedade de um `Nullable<Integer>` objeto para determinar se deve exibir o objeto <xref:System.Nullable%601.Value%2A> propriedade ou seus <xref:System.Nullable%601.GetValueOrDefault%2A> propriedade.  
+  
+ [!code-csharp[System.Nullable~1.HasValue#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.nullable~1.hasvalue/cs/hasvalue2.cs#1)]
+ [!code-vb[System.Nullable~1.HasValue#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.nullable~1.hasvalue/vb/hasvalue2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator T (Nullable&lt;T&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname !T op_Explicit(valuetype System.Nullable`1&lt;!T&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Nullable`1.op_Explicit(System.Nullable{`0})~`0" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Nullable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator Nullable&lt;T&gt; (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Nullable`1&lt;!T&gt; op_Implicit(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Nullable`1.op_Implicit(`0)~System.Nullable{`0}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Nullable`1.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação de texto do valor do atual objeto <see cref="T:System.Nullable`1" />.</summary>
+        <returns>A representação de texto do valor do atual objeto <see cref="T:System.Nullable`1" /> se a propriedade <see cref="P:System.Nullable`1.HasValue" /> for <see langword="true" />, ou uma cadeia de caracteres vazia (""), se a propriedade <see cref="P:System.Nullable`1.HasValue" /> for <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Nullable%601.ToString%2A> propriedade retorna a cadeia de caracteres gerada chamando o `ToString` propriedade do objeto retornado pelo <xref:System.Nullable%601.Value%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor atual <xref:System.Nullable%601> objeto.  
+  
+ [!code-csharp[system.nullableOfT.ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.nullableOfT.ToString/cs/ts.cs#1)]
+ [!code-vb[system.nullableOfT.ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.nullableOfT.ToString/vb/ts.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public T Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Value" />
+      <MemberSignature Language="DocId" Value="P:System.Nullable`1.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do objeto <see cref="T:System.Nullable`1" /> atual se a ele foi atribuído um valor subjacente válido.</summary>
+        <value>O valor do objeto <see cref="T:System.Nullable`1" /> atual se a propriedade <see cref="P:System.Nullable`1.HasValue" /> for <see langword="true" />. Uma exceção será gerada se a propriedade <see cref="P:System.Nullable`1.HasValue" /> for <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um valor do tipo `T` não foi atribuído ao <xref:System.Nullable%601> do objeto, você pode comparar a `null` e recuperar seus <xref:System.Nullable%601.HasValue%2A> propriedade, mas você não pode acessar seu <xref:System.Nullable%601.Value%2A> propriedade ou chamada de seus outros membros.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Nullable%601.HasValue%2A> propriedade de um `Nullable<Integer>` objeto para determinar se deve exibir o objeto <xref:System.Nullable%601.Value%2A> propriedade ou seus <xref:System.Nullable%601.GetValueOrDefault%2A> propriedade.  
+  
+ [!code-csharp[System.Nullable~1.HasValue#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.nullable~1.hasvalue/cs/hasvalue2.cs#1)]
+ [!code-vb[System.Nullable~1.HasValue#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.nullable~1.hasvalue/vb/hasvalue2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Nullable`1.HasValue" /> é <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

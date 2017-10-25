@@ -1,0 +1,150 @@
+<Type Name="CalendarAlgorithmType" FullName="System.Globalization.CalendarAlgorithmType">
+  <TypeSignature Language="C#" Value="public enum CalendarAlgorithmType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CalendarAlgorithmType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.CalendarAlgorithmType" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se um calendário é baseado em solar, lunar com base em ou Lunissolar com base em.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um cálculo de data para um calendário específico depende se o calendário é baseado em solar, lunar com base em ou Lunissolar com base em. Por exemplo, o <xref:System.Globalization.GregorianCalendar>, <xref:System.Globalization.JapaneseCalendar>, e <xref:System.Globalization.JulianCalendar> classes são solar baseado o <xref:System.Globalization.HijriCalendar> e <xref:System.Globalization.UmAlQuraCalendar> classes são lunar baseado, e o <xref:System.Globalization.HebrewCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar> classes são Lunissolar baseados, dessa forma usando solar cálculos para o ano e lunares cálculos para o mês e dia.  
+  
+ Um <xref:System.Globalization.CalendarAlgorithmType> valor, que é retornado por um membro de calendário, como o <xref:System.Globalization.Calendar.AlgorithmType%2A?displayProperty=nameWithType> propriedade especifica a base para um calendário específico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Globalization.Calendar.AlgorithmType%2A> propriedade e o <xref:System.Globalization.CalendarAlgorithmType> enumeração.  
+  
+ [!code-cpp[sys.glob.calendartype#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.glob.calendartype/CPP/caltype.cpp#1)]
+ [!code-csharp[sys.glob.calendartype#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.calendartype/CS/caltype.cs#1)]
+ [!code-vb[sys.glob.calendartype#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.calendartype/VB/caltype.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LunarCalendar">
+      <MemberSignature Language="C#" Value="LunarCalendar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CalendarAlgorithmType LunarCalendar = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CalendarAlgorithmType.LunarCalendar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarAlgorithmType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um calendário lunar com base em.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LunisolarCalendar">
+      <MemberSignature Language="C#" Value="LunisolarCalendar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CalendarAlgorithmType LunisolarCalendar = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CalendarAlgorithmType.LunisolarCalendar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarAlgorithmType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um calendário Lunissolar com base em.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SolarCalendar">
+      <MemberSignature Language="C#" Value="SolarCalendar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CalendarAlgorithmType SolarCalendar = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CalendarAlgorithmType.SolarCalendar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarAlgorithmType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um calendário com base solar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CalendarAlgorithmType Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CalendarAlgorithmType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarAlgorithmType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma base de calendário desconhecido.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

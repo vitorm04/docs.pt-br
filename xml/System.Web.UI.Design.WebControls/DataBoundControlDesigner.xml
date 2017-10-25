@@ -1,0 +1,469 @@
+<Type Name="DataBoundControlDesigner" FullName="System.Web.UI.Design.WebControls.DataBoundControlDesigner">
+  <TypeSignature Language="C#" Value="public class DataBoundControlDesigner : System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner, System.Web.UI.Design.IDataBindingSchemaProvider, System.Web.UI.Design.IDataSourceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataBoundControlDesigner extends System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner implements class System.Web.UI.Design.IDataBindingSchemaProvider, class System.Web.UI.Design.IDataSourceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.DataBoundControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.BaseDataBoundControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.Design.IDataBindingSchemaProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.Design.IDataSourceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma classe base para suporte de tempo de design para controles que derivam de <see cref="T:System.Web.UI.WebControls.DataBoundControl" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estender o <xref:System.Web.UI.Design.WebControls.DataBoundControlDesigner> classe se você quiser criar um designer para o <xref:System.Web.UI.WebControls.DataBoundControl> controle de servidor Web ou para uma classe que estende o <xref:System.Web.UI.WebControls.DataBoundControl>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataBoundControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.DataBoundControlDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataBoundControlDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> objeto para este designer.</summary>
+        <value>O <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> objeto associado a este designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectToDataSource">
+      <MemberSignature Language="C#" Value="protected override bool ConnectToDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ConnectToDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.ConnectToDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desconecta eventos da fonte de dados anterior e conecta-se à fonte de dados atual.</summary>
+        <returns>
+          <see langword="true" />Se o controle de associação de dados conectada a uma nova fonte de dados; <see langword="false" /> se a fonte de dados não foi alterada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDataSource">
+      <MemberSignature Language="C#" Value="protected override void CreateDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.CreateDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chama a caixa de diálogo padrão para criar um novo controle de fonte de dados e define a ID da nova origem do controle de dados o <see cref="P:System.Web.UI.WebControls.BaseDataBoundControl.DataSourceID" /> propriedade do controle associado a dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="protected override void DataBind (System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DataBind(class System.Web.UI.WebControls.BaseDataBoundControl dataBoundControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.DataBind(System.Web.UI.WebControls.BaseDataBoundControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataBoundControl" Type="System.Web.UI.WebControls.BaseDataBoundControl" />
+      </Parameters>
+      <Docs>
+        <param name="dataBoundControl">O <see cref="T:System.Web.UI.WebControls.DataBoundControl" /> objeto para associar à fonte de dados.</param>
+        <summary>Associa o <see cref="T:System.Web.UI.WebControls.DataBoundControl" /> objeto para a fonte de dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataBoundControlDesigner.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o sombreado <see cref="P:System.Web.UI.WebControls.DataBoundControl.DataMember" /> propriedade do controle de associação de dados subjacente.</summary>
+        <value>O sombreado <see cref="P:System.Web.UI.WebControls.DataBoundControl.DataMember" /> do controle de associação de dados subjacente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceDesigner">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceDesigner DataSourceDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IDataSourceDesigner DataSourceDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataBoundControlDesigner.DataSourceDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o designer da fonte de dados do controle de associação de dados subjacente.</summary>
+        <value>O designer da fonte de dados do controle de associação de dados subjacente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerView">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.DesignerDataSourceView DesignerView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerDataSourceView DesignerView" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataBoundControlDesigner.DesignerView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerDataSourceView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.Design.DesignerDataSourceView" /> objeto associado com a fonte de dados deste Designer.</summary>
+        <value>O <see cref="T:System.Web.UI.Design.DesignerDataSourceView" /> objeto associado com a fonte de dados deste Designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisconnectFromDataSource">
+      <MemberSignature Language="C#" Value="protected override void DisconnectFromDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DisconnectFromDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.DisconnectFromDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desconecta o controle associado a dados de eventos de fonte de dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Web.UI.Design.WebControls.DataBoundControlDesigner" /> de objeto e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.DataBoundControlDesigner.Dispose%2A> método cancela o registro de manipuladores de eventos do designer de todos os eventos de fonte de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeDataSource">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.IEnumerable GetDesignTimeDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.IEnumerable GetDesignTimeDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.GetDesignTimeDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a fonte de dados de tempo de design do associado <see langword="DataSourceDesigner" /> ou <see langword="DataSource" /> propriedade.</summary>
+        <returns>Um objeto que implementa um <see cref="T:System.Collections.IEnumerable" /> interface referenciando a fonte de dados de tempo de design.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSampleDataSource">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.IEnumerable GetSampleDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.IEnumerable GetSampleDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.GetSampleDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os dados de exemplo fictício para renderizar o controle de associação de dados na superfície de design se dados de exemplo não não possível criar o <see langword="DataSourceDesigner" /> ou <see langword="DataSource" /> propriedades.</summary>
+        <returns>Um objeto que implementa o <see cref="T:System.Collections.IEnumerable" /> interface que contém dados de exemplo fictício usados para renderizar o controle associado a dados na superfície de design.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Um <see cref="T:System.Collections.IDictionary" /> objeto que contém as propriedades para filtrar.</param>
+        <summary>Substituído pelo designer para propriedades de tempo de execução de sombra do controle associado a dados com propriedades correspondentes implementadas pelo designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Web.UI.Design.WebControls.DataBoundControlDesigner.PreFilterProperties%2A> método para executar nenhuma ação adicional necessária quando a fonte de dados do controle de associação de dados subjacente é alterado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir o <see cref="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.PreFilterProperties(System.Collections.IDictionary)" /> método, chame a implementação base antes de executar outro processamento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleRowCount">
+      <MemberSignature Language="C#" Value="protected virtual int SampleRowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SampleRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataBoundControlDesigner.SampleRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linhas que exibe o controle associado a dados na superfície de design.</summary>
+        <value>O número de linhas que exibe o controle associado a dados na superfície de design.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Para alterar o número de linhas que exibe o controle associado a dados na superfície de design, substituir o <see cref="P:System.Web.UI.Design.WebControls.DataBoundControlDesigner.SampleRowCount" /> propriedade para retornar o número de linhas que você deseja exibidas.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataBindingSchemaProvider.CanRefreshSchema">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.Design.IDataBindingSchemaProvider.CanRefreshSchema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.Design.IDataBindingSchemaProvider.CanRefreshSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataBoundControlDesigner.System#Web#UI#Design#IDataBindingSchemaProvider#CanRefreshSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.Design.IDataBindingSchemaProvider.CanRefreshSchema" />.</summary>
+        <value>
+          <see langword="true" />Se o designer pode atualizar a fonte de dados; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.Design.WebControls.DataBoundControlDesigner> é convertida em uma interface de <xref:System.Web.UI.Design.IDataBindingSchemaProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataBindingSchemaProvider.RefreshSchema">
+      <MemberSignature Language="C#" Value="void IDataBindingSchemaProvider.RefreshSchema (bool preferSilent);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.Design.IDataBindingSchemaProvider.RefreshSchema(bool preferSilent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.System#Web#UI#Design#IDataBindingSchemaProvider#RefreshSchema(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="preferSilent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="preferSilent">Indica se deve ser suprimida quaisquer eventos gerados ao atualizar o esquema.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.Design.IDataBindingSchemaProvider.RefreshSchema(System.Boolean)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.Design.WebControls.DataBoundControlDesigner> é convertida em uma interface de <xref:System.Web.UI.Design.IDataBindingSchemaProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataBindingSchemaProvider.Schema">
+      <MemberSignature Language="C#" Value="System.Web.UI.Design.IDataSourceViewSchema System.Web.UI.Design.IDataBindingSchemaProvider.Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IDataSourceViewSchema System.Web.UI.Design.IDataBindingSchemaProvider.Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataBoundControlDesigner.System#Web#UI#Design#IDataBindingSchemaProvider#Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.Design.IDataBindingSchemaProvider.Schema" />.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" /> objeto que descreve a fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.Design.WebControls.DataBoundControlDesigner> é convertida em uma interface de <xref:System.Web.UI.Design.IDataBindingSchemaProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataSourceProvider.GetResolvedSelectedDataSource">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerable IDataSourceProvider.GetResolvedSelectedDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerable System.Web.UI.Design.IDataSourceProvider.GetResolvedSelectedDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.System#Web#UI#Design#IDataSourceProvider#GetResolvedSelectedDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.Design.IDataSourceProvider.GetResolvedSelectedDataSource" />.</summary>
+        <returns>O membro de dados selecionados da fonte de dados selecionada, se o controle permite que o usuário selecione um <see langword="IListSource" /> objeto (como uma <see cref="T:System.Data.DataSet" /> objeto) para a fonte de dados e fornece um <see cref="P:System.Web.UI.WebControls.DataBoundControl.DataMember" /> propriedade para selecionar uma lista específica (ou <see cref="T:System.Data.DataTable" /> objeto) na fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.Design.WebControls.DataBoundControlDesigner> é convertida em uma interface de <xref:System.Web.UI.Design.IDataSourceProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.Design.IDataSourceProvider.GetSelectedDataSource">
+      <MemberSignature Language="C#" Value="object IDataSourceProvider.GetSelectedDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.Design.IDataSourceProvider.GetSelectedDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataBoundControlDesigner.System#Web#UI#Design#IDataSourceProvider#GetSelectedDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.Design.IDataSourceProvider.GetSelectedDataSource" />.</summary>
+        <returns>Um objeto que implementa um <see cref="T:System.Collections.IEnumerable" /> que contém o tempo de design de interface <see cref="P:System.Web.UI.WebControls.BaseDataBoundControl.DataSource" /> propriedade do controle associado, ou <see langword="null" /> se uma fonte de dados não foi encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.Design.WebControls.DataBoundControlDesigner> é convertida em uma interface de <xref:System.Web.UI.Design.IDataSourceProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDataSourcePickerActionList">
+      <MemberSignature Language="C#" Value="protected virtual bool UseDataSourcePickerActionList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDataSourcePickerActionList" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataBoundControlDesigner.UseDataSourcePickerActionList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o designer deve incluir "Escolha uma fonte de dados" em sua lista de ação.</summary>
+        <value>
+          <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Você talvez queira substituir essa propriedade para fornecer uma caixa de diálogo para selecionar um controle de fonte de dados ou desabilitar o usuário altere o controle de fonte de dados associado ao controle de associação de dados.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

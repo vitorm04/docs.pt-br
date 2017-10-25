@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Media">
+  <Docs>
+    <summary>Fornece tipos que permitem a integração de mídia avançados, incluindo desenhos, texto e conteúdo de áudio/vídeo em aplicativos do Windows Presentation Foundation (WPF).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

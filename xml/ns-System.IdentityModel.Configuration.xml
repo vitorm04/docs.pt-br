@@ -1,0 +1,6 @@
+<Namespace Name="System.IdentityModel.Configuration">
+  <Docs>
+    <summary>O <see cref="N:System.IdentityModel.Configuration" /> namespace contém classes que fornecem a configuração para aplicativos e serviços criados com o Windows Identity Foundation (WIF). As classes neste namespace representam as configurações com o [ &lt;identityConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento. Classes de configurar a federação usando o protocolo WS-Federation contidos principalmente no <see cref="N:System.IdentityModel.Services.Configuration" /> namespace. Essas configurações aparecem sob o [ &lt;System&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) elemento em um arquivo de configuração.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

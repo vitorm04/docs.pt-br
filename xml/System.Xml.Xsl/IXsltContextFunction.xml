@@ -1,0 +1,182 @@
+<Type Name="IXsltContextFunction" FullName="System.Xml.Xsl.IXsltContextFunction">
+  <TypeSignature Language="C#" Value="public interface IXsltContextFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXsltContextFunction" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.IXsltContextFunction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface para uma determinada função definida em linguagem XSL de folha de estilos de transformações (XSLT) durante a execução de tempo de execução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como usar <xref:System.Xml.Xsl.IXsltContextFunction>, consulte o artigo Q324899, "Como implementar e usar personalizado funções quando você executar XPath consultas em Visual Basic .NET" na Base de dados de Conhecimento Microsoft em http://support.microsoft.com.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ArgTypes">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathResultType[] ArgTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XPath.XPathResultType[] ArgTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.IXsltContextFunction.ArgTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathResultType[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os tipos de XML Path Language (XPath) fornecidos para a lista de argumentos da função. Essas informações podem ser usadas para descobrir a assinatura da função que lhe permite diferenciar entre funções sobrecarregadas.</summary>
+        <value>Uma matriz de <see cref="T:System.Xml.XPath.XPathResultType" /> que representa os tipos de lista de argumentos da função.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (System.Xml.Xsl.XsltContext xsltContext, object[] args, System.Xml.XPath.XPathNavigator docContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Invoke(class System.Xml.Xsl.XsltContext xsltContext, object[] args, class System.Xml.XPath.XPathNavigator docContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.IXsltContextFunction.Invoke(System.Xml.Xsl.XsltContext,System.Object[],System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xsltContext" Type="System.Xml.Xsl.XsltContext" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="docContext" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="xsltContext">O contexto XSLT para a chamada de função.</param>
+        <param name="args">Os argumentos da chamada de função. Cada argumento é um elemento na matriz.</param>
+        <param name="docContext">O nó de contexto para a chamada de função.</param>
+        <summary>Fornece o método para invocar a função com os argumentos fornecidos no contexto fornecido.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor de retorno da função.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `docContext` parâmetro é necessário para que as funções que requerem um conjunto de nó podem ser fornecido pelo nó de contexto atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maxargs">
+      <MemberSignature Language="C#" Value="public int Maxargs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Maxargs" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.IXsltContextFunction.Maxargs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número máximo de argumentos para a função. Isso permite que o usuário diferenciar entre funções sobrecarregadas.</summary>
+        <value>O número máximo de argumentos para a função.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minargs">
+      <MemberSignature Language="C#" Value="public int Minargs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Minargs" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.IXsltContextFunction.Minargs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número mínimo de argumentos para a função. Isso permite que o usuário diferenciar entre funções sobrecarregadas.</summary>
+        <value>O número mínimo de argumentos para a função.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathResultType ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XPath.XPathResultType ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.IXsltContextFunction.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathResultType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xml.XPath.XPathResultType" /> que representa o tipo de XPath retornado pela função.</summary>
+        <value>Um <see cref="T:System.Xml.XPath.XPathResultType" /> que representa o tipo de XPath retornado pela função</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

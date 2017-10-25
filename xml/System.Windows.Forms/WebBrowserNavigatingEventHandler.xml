@@ -1,0 +1,40 @@
+<Type Name="WebBrowserNavigatingEventHandler" FullName="System.Windows.Forms.WebBrowserNavigatingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void WebBrowserNavigatingEventHandler(object sender, WebBrowserNavigatingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebBrowserNavigatingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.WebBrowserNavigatingEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.WebBrowserNavigatingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Forms.WebBrowserNavigatingEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento <see cref="E:System.Windows.Forms.WebBrowser.Navigating" /> de um controle <see cref="T:System.Windows.Forms.WebBrowser" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Windows.Forms.WebBrowserNavigatingEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um manipulador para o <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType> evento para cancelar a navegação quando um formulário da Web não foi preenchido. O <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType> propriedade é usada para determinar se o campo de formulário de entrada contém um valor. Este exemplo requer que o formulário contém um <xref:System.Windows.Forms.WebBrowser> controle chamado `webBrowser1`.  
+  
+ [!code-csharp[WebBrowserMisc#30](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#30)]
+ [!code-vb[WebBrowserMisc#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#30)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

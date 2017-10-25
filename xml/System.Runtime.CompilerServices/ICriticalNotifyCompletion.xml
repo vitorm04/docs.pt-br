@@ -1,0 +1,82 @@
+<Type Name="ICriticalNotifyCompletion" FullName="System.Runtime.CompilerServices.ICriticalNotifyCompletion">
+  <TypeSignature Language="C#" Value="public interface ICriticalNotifyCompletion : System.Runtime.CompilerServices.INotifyCompletion" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICriticalNotifyCompletion implements class System.Runtime.CompilerServices.INotifyCompletion" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.ICriticalNotifyCompletion" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.CompilerServices.INotifyCompletion</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um aguardador que agenda continuações quando uma operação de espera é concluída.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="UnsafeOnCompleted">
+      <MemberSignature Language="C#" Value="public void UnsafeOnCompleted (Action continuation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnsafeOnCompleted(class System.Action continuation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ICriticalNotifyCompletion.UnsafeOnCompleted(System.Action)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="continuation" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="continuation">A ação a ser invocada quando a operação é concluída.</param>
+        <summary>Agenda a ação de continuação invocada quando a instância é concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de OnCompleted, UnsafeOnCompleted não tem que propagar as informações de ExecutionContext.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="continuation" /> é nulo (Nothing no Visual Basic).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

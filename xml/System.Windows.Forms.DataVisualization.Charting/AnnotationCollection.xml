@@ -1,0 +1,53 @@
+<Type Name="AnnotationCollection" FullName="System.Windows.Forms.DataVisualization.Charting.AnnotationCollection">
+  <TypeSignature Language="C#" Value="public class AnnotationCollection : System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.Annotation&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AnnotationCollection extends System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1&lt;class System.Windows.Forms.DataVisualization.Charting.Annotation&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.AnnotationCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.Annotation&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Windows.Forms.DataVisualization.Charting.Annotation</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena objetos de anotação de gráfico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as anotações de gráfico são armazenadas na coleção.  
+  
+ Essa classe inclui métodos para adicionar, inserir, percorrer e remova as anotações da coleção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FindByName">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataVisualization.Charting.Annotation FindByName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.DataVisualization.Charting.Annotation FindByName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.AnnotationCollection.FindByName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Annotation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da anotação a encontrar.</param>
+        <summary>Localiza uma anotação na coleção por nome.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.Annotation" /> objeto, ou <see langword="null" /> se o objeto não existe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

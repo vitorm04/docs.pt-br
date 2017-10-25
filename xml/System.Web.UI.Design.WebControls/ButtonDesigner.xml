@@ -1,0 +1,108 @@
+<Type Name="ButtonDesigner" FullName="System.Web.UI.Design.WebControls.ButtonDesigner">
+  <TypeSignature Language="C#" Value="public class ButtonDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ButtonDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.ButtonDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.Design.SupportsPreviewControl(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Usado para fornecer suporte em tempo de design em um designer visual para o <see cref="T:System.Web.UI.WebControls.Button" /> controle de servidor Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um designer visual, quando você alternar de origem para o modo de Design, o código-fonte marcação que descreve o <xref:System.Web.UI.WebControls.Button> controle é analisado e uma versão de tempo de design do controle é criada na superfície de design. Quando você alternar de volta à exibição da fonte, o controle de tempo de design é persistente para o código-fonte marcação e editado na marcação da página da Web.  
+  
+   
+  
+## Examples  
+ Esta seção fornece dois exemplos de código. A primeira demonstra como estender o <xref:System.Web.UI.Design.WebControls.ButtonDesigner> classe. O segundo demonstra como estender o <xref:System.Web.UI.WebControls.Button> classe e associá-la com a classe que é criada no primeiro exemplo de código.  
+  
+ O exemplo de código a seguir mostra como criar uma classe do designer personalizada que estende o <xref:System.Web.UI.Design.WebControls.ButtonDesigner> classe e substituições de <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> método. Se o <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> propriedade não foi definida anteriormente (ou seja, tem o <xref:System.Web.UI.WebControls.BorderStyle.NotSet> valor do campo), uma chamada para o <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> método define como uma borda tracejada azul com uma largura de três pixels e, em seguida, exibe a borda na superfície de design. Se o <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> propriedade foi definida, os valores de propriedade de borda existentes são exibidos.  
+  
+ Normalmente, o <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> chama o método base, <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A?displayProperty=nameWithType>, que chama o <xref:System.Web.UI.Control.RenderControl%2A?displayProperty=nameWithType> método do controle associado para gerar a marcação.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls_ButtonDesignerSamples#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls_ButtonDesignerSamples/VB/custombutton.vb#1)]  
+  
+ O exemplo de código a seguir mostra como usar uma classe simples que estende o <xref:System.Web.UI.WebControls.Button> classe e está associado a `SampleButtonDesigner` classe, criada no exemplo anterior, por meio de <xref:System.ComponentModel.DesignerAttribute> objeto.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls_ButtonDesignerSamples#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls_ButtonDesignerSamples/VB/custombutton.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ButtonDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ButtonDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.ButtonDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.Design.WebControls.ButtonDesigner> classe quando ele cria associado <xref:System.Web.UI.WebControls.Button> controle ou uma cópia desse controle na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a marcação que é usada para renderizar o controle associado em tempo de design.</summary>
+        <returns>Um <see cref="T:System.String" /> contendo a marcação usada para renderizar o <see cref="T:System.Web.UI.WebControls.Button" /> em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> substitui o método o <xref:System.Web.UI.WebControls.Button.Text%2A> propriedade com o <xref:System.Web.UI.Control.ID%2A> propriedade o <xref:System.Web.UI.WebControls.Button> controlar se o <xref:System.Web.UI.WebControls.Button.Text%2A> não contém nenhum caractere pode ser exibido. Em seguida, o <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> método chama o método base, <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A?displayProperty=nameWithType>, que chama o <xref:System.Web.UI.Control.RenderControl%2A?displayProperty=nameWithType> método para gerar a marcação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> método para alterar a marcação gerada.  
+  
+ Se o <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> propriedade não foi definida anteriormente (ou seja, tem o <xref:System.Web.UI.WebControls.BorderStyle.NotSet> valor do campo), uma chamada para o <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> método define como uma borda tracejada azul com uma largura de três pixels e, em seguida, exibe a borda na superfície de design. Se o <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> propriedade foi definida, os valores de propriedade de borda existentes são exibidos.  
+  
+ Normalmente, o <xref:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml%2A> chama o método base, <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A?displayProperty=nameWithType>, que chama o <xref:System.Web.UI.Control.RenderControl%2A?displayProperty=nameWithType> método do controle associado para gerar a marcação.  
+  
+ [!code-vb[System.Web.UI.Design.WebControls_ButtonDesignerSamples#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls_ButtonDesignerSamples/VB/custombutton.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você está substituindo o <see cref="M:System.Web.UI.Design.WebControls.ButtonDesigner.GetDesignTimeHtml" /> método, normalmente você modificar valores de propriedade selecionada, e em seguida, chamar o método base para gerar a marcação e, em seguida, restaure as propriedades para seus valores originais.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

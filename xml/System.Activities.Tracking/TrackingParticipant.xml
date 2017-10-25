@@ -1,0 +1,159 @@
+<Type Name="TrackingParticipant" FullName="System.Activities.Tracking.TrackingParticipant">
+  <TypeSignature Language="C#" Value="public abstract class TrackingParticipant" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TrackingParticipant extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.TrackingParticipant" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe base para as extensões de fluxo de trabalho que interagem com o infraestrutura e os registros de controle de acesso de controle de fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um participante de rastreamento está registrado para receber os registros do controle. Atualmente, qualquer classe que implementa o participante de rastreamento pode ser registrado com a instância de fluxo de trabalho para receber os registros do controle. Se o participante de rastreamento é um código de terceiros, certifique-se de que isso não é um código mal-intencionado. Os participantes de rastreamento executados no mesmo processo da instância de fluxo de trabalho e no caso de participantes de rastreamento mal-intencionado, esse código pode afetar a execução de fluxo de trabalho geral. Os registros de rastreamento são entregues para os participantes de rastreamento registrado como o fluxo de trabalho é executado, para que o desenvolvedor deve garantir que o participante de rastreamento não afeta o fluxo de trabalho em execução por operações não intencional de dentro do método de controle. Exemplos disso podem ser a alteração de variáveis de fluxo de trabalho ou as operações que levam muito tempo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TrackingParticipant ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.TrackingParticipant.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, cria uma nova instância da classe derivada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTrack">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult BeginTrack (System.Activities.Tracking.TrackingRecord record, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.IAsyncResult BeginTrack(class System.Activities.Tracking.TrackingRecord record, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.TrackingParticipant.BeginTrack(System.Activities.Tracking.TrackingRecord,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="System.Activities.Tracking.TrackingRecord" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="record">O registro de rastreamento gerado.</param>
+        <param name="timeout">O período de tempo após o qual o provedor anula a tentativa.</param>
+        <param name="callback">O método a ser chamado após a conclusão da operação.</param>
+        <param name="state">Um objeto definido pelo usuário que identifica exclusivamente essa operação assíncrona.</param>
+        <summary>Quando implementada em uma classe derivada, inicia o processamento assíncrono do registro de rastreamento.</summary>
+        <returns>O resultado da operação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os participantes são esperados para iniciar um trabalho para processar os registros e retornar um <xref:System.IAsyncResult> que o tempo de execução do fluxo de trabalho usa para aguardar a conclusão. A implementação padrão é chamar <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> e retornar um status concluído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTrack">
+      <MemberSignature Language="C#" Value="protected virtual void EndTrack (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void EndTrack(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.TrackingParticipant.EndTrack(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O status da operação.</param>
+        <summary>Quando implementada em uma classe derivada, representa o final de uma operação assíncrona do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é esperado para bloquear até que a operação de rastreamento for concluída.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Track">
+      <MemberSignature Language="C#" Value="protected abstract void Track (System.Activities.Tracking.TrackingRecord record, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Track(class System.Activities.Tracking.TrackingRecord record, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.TrackingParticipant.Track(System.Activities.Tracking.TrackingRecord,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="System.Activities.Tracking.TrackingRecord" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="record">O registro de rastreamento gerado.</param>
+        <param name="timeout">O período de tempo após o qual o provedor anula a tentativa.</param>
+        <summary>Quando implementada em uma classe derivada, usado para processar sincronicamente o registro de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método de faixa é chamado quando a instância de fluxo de trabalho emite um registro de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackingProfile">
+      <MemberSignature Language="C#" Value="public virtual System.Activities.Tracking.TrackingProfile TrackingProfile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Tracking.TrackingProfile TrackingProfile" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.TrackingParticipant.TrackingProfile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.TrackingProfile</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle de perfil usado pelo participante de rastreamento do objeto. Antes de adicionar o participante de rastreamento para as extensões de fluxo de trabalho, o perfil de rastreamento é definido no participante.</summary>
+        <value>O perfil de rastreamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O perfil de rastreamento define quais eventos de rastreamento são enviados para esse participante de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

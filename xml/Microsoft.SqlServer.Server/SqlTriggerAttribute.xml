@@ -1,0 +1,150 @@
+<Type Name="SqlTriggerAttribute" FullName="Microsoft.SqlServer.Server.SqlTriggerAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SqlTriggerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SqlTriggerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlTriggerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Usado para marcar uma definição de método em um assembly como um gatilho no SQL Server. As propriedades do atributo refletem os atributos físicos usados quando o tipo é registrado no SQL Server. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte "Gatilhos CLR" nos Manuais Online do SQL Server 2005 para obter mais informações sobre gatilhos CLR e exemplos.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra o <xref:Microsoft.SqlServer.Server.SqlTriggerAttribute> especificando o nome do gatilho, tabela de destino e o evento que acionará o gatilho. Consulte <xref:Microsoft.SqlServer.Server.SqlTriggerContext> para o exemplo completo de gatilho.  
+  
+ [!code-csharp[DataWorks SqlTriggerAttribute Sample#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTriggerAttribute Sample/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlTriggerAttribute Sample#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTriggerAttribute Sample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlTriggerAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlTriggerAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Um atributo em uma definição de método em um assembly, usado para marcar o método como um gatilho no SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir especifica que o disparador é ativado ao atualizar dados existentes (`UPDATE`) na tabela `authors`.  
+  
+   
+  
+## Examples  
+ [!code-csharp[VbRaddataSQLObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSQLObjects/CS/Trigger1.cs#8)]
+ [!code-vb[VbRaddataSQLObjects#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSQLObjects/VB/Trigger1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Event">
+      <MemberSignature Language="C#" Value="public string Event { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Event" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlTriggerAttribute.Event" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tipo de gatilho e qual ação de DML (linguagem) de manipulação de dados ativa o disparador.</summary>
+        <value>Um <see cref="T:System.String" /> valor que representa o tipo de gatilho e qual ação de DML (linguagem) de manipulação de dados ativa o disparador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ação DML que ativa o gatilho pode ser uma ação de inserção, exclusão ou uma atualização. O tipo do gatilho pode ser AFTER ou INSTEAD OF. Especificando para o tipo de disparador é o mesmo como especificando depois.  
+  
+ O <xref:Microsoft.SqlServer.Server.SqlTriggerAttribute.Event%2A> propriedade é necessária.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlTriggerAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do gatilho.</summary>
+        <value>Um <see cref="T:System.String" /> valor que representa o nome do gatilho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlTriggerAttribute.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A tabela à qual o gatilho se aplica.</summary>
+        <value>Um <see cref="T:System.String" /> valor que representa o nome da tabela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:Microsoft.SqlServer.Server.SqlTriggerAttribute.Target%2A> propriedade é necessária.  
+  
+ O exemplo a seguir especifica que o disparador é referenciado usando o nome `trig_onpubinsert`. O gatilho é ativado, adicionando novos dados (`INSERT`) para a tabela `publishers`.  
+  
+   
+  
+## Examples  
+ [!code-csharp[VbRaddataSQLObjects#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSQLObjects/CS/Trigger1.cs#9)]
+ [!code-vb[VbRaddataSQLObjects#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSQLObjects/VB/Trigger1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

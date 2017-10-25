@@ -1,0 +1,495 @@
+<Type Name="Int32Rect" FullName="System.Windows.Int32Rect">
+  <TypeSignature Language="C#" Value="public struct Int32Rect : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Int32Rect extends System.ValueType implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Int32Rect" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Int32RectConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Converters.Int32RectValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve a largura, altura e local de um retângulo inteiro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Duration"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="X,Y,Width,Height"/>  
+- or   
+<object property="Empty"/>  
+```  
+  
+<a name="xamlValues_MinWidth"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *X*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ A coordenada X do canto superior esquerdo do retângulo.  
+  
+ *Y*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ A coordenada y do canto superior esquerdo do retângulo.  
+  
+ *Largura*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ A largura do retângulo.  
+  
+ *Altura*  
+ <xref:System.Int32?displayProperty=nameWithType>  
+  
+ A altura do retângulo.  
+  
+<a name="xamlTextUsage_Int32Rect"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Você também pode usar o espaço em branco em vez de vírgulas para delimitar valores. Espaço em branco também pode ser usado com um conjunto de valores delimitados por vírgulas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Int32Rect (int x, int y, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 x, int32 y, int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Int32Rect.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">O <see cref="P:System.Windows.Int32Rect.X" /> da nova instância <see cref="T:System.Windows.Int32Rect" /> que especifica a coordenada X do canto superior esquerdo do retângulo.</param>
+        <param name="y">O <see cref="P:System.Windows.Int32Rect.Y" /> da nova instância <see cref="T:System.Windows.Int32Rect" /> que especifica a coordenada Y do canto superior esquerdo do retângulo.</param>
+        <param name="width">O <see cref="P:System.Windows.Int32Rect.Width" /> da nova instância <see cref="T:System.Windows.Int32Rect" /> que especifica a largura do retângulo.</param>
+        <param name="height">O <see cref="P:System.Windows.Int32Rect.Height" /> da nova instância <see cref="T:System.Windows.Int32Rect" /> que especifica a altura do retângulo.</param>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Windows.Int32Rect" /> com as coordenadas <see cref="P:System.Windows.Int32Rect.X" /> e <see cref="P:System.Windows.Int32Rect.Y" /> especificadas e o <see cref="P:System.Windows.Int32Rect.Width" /> e <see cref="P:System.Windows.Int32Rect.Height" /> especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Windows.Int32Rect Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Int32Rect Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Int32Rect.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Int32Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o retângulo vazio, um valor especial que representa um retângulo sem posição ou área.</summary>
+        <value>Um retângulo vazio sem posição ou área.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é igual a chamar o construtor usa 0 para todos os valores de parâmetro.  
+  
+<a name="xamlAttributeUsage_Automatic"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Empty" />  
+```  
+  
+<a name="xamlValues_Automatic"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *propriedade*  
+ Uma propriedade que aceita um <xref:System.Windows.Int32Rect> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Int32Rect.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser comparado com o retângulo atual.</param>
+        <summary>Determina se o retângulo especificado é igual a esse retângulo.</summary>
+        <returns>**True** se *o* é um <see cref="T:System.Windows.Int32Rect" /> e o mesmo <see cref="P:System.Windows.Int32Rect.X" />, <see cref="P:System.Windows.Int32Rect.Y" />, <see cref="P:System.Windows.Int32Rect.Width" />, e <see cref="P:System.Windows.Int32Rect.Height" /> como esse retângulo; caso contrário, **false**.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação testa a igualdade de objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Int32Rect value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.Int32Rect value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Int32Rect.Equals(System.Windows.Int32Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Int32Rect" />
+      </Parameters>
+      <Docs>
+        <param name="value">O retângulo a ser comparado com o retângulo atual.</param>
+        <summary>Determina se o retângulo especificado é igual a esse retângulo.</summary>
+        <returns>**True** se ambos os retângulos tiverem o mesmo <see cref="P:System.Windows.Int32Rect.X" />, <see cref="P:System.Windows.Int32Rect.Y" />, <see cref="P:System.Windows.Int32Rect.Width" />, e <see cref="P:System.Windows.Int32Rect.Height" /> como esse retângulo; caso contrário, **false**.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação testa a igualdade de objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Int32Rect int32Rect1, System.Windows.Int32Rect int32Rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.Windows.Int32Rect int32Rect1, valuetype System.Windows.Int32Rect int32Rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Int32Rect.Equals(System.Windows.Int32Rect,System.Windows.Int32Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="int32Rect1" Type="System.Windows.Int32Rect" />
+        <Parameter Name="int32Rect2" Type="System.Windows.Int32Rect" />
+      </Parameters>
+      <Docs>
+        <param name="int32Rect1">O primeiro retângulo a ser comparado.</param>
+        <param name="int32Rect2">O segundo retângulo para comparar.</param>
+        <summary>Determina se os retângulos especificados são iguais.</summary>
+        <returns>**True** se *int32Rect1* e *int32Rect2* têm o mesmo <see cref="P:System.Windows.Int32Rect.X" />, <see cref="P:System.Windows.Int32Rect.Y" />, <see cref="P:System.Windows.Int32Rect.Width" />, e <see cref="P:System.Windows.Int32Rect.Height" />; caso contrário, **false**.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação testa a igualdade de objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Int32Rect.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um código hash deste retângulo <see cref="P:System.Windows.Int32Rect.X" />, <see cref="P:System.Windows.Int32Rect.Y" />, <see cref="P:System.Windows.Int32Rect.Width" />, e <see cref="P:System.Windows.Int32Rect.Height" /> valores.</summary>
+        <returns>Código de hash desse retângulo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasArea">
+      <MemberSignature Language="C#" Value="public bool HasArea { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasArea" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Int32Rect.HasArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Windows.Int32Rect.Width" /> e <see cref="P:System.Windows.Int32Rect.Height" /> propriedades do <see cref="T:System.Windows.Int32Rect" /> são maiores que 0.</summary>
+        <value>True se o <see cref="P:System.Windows.Int32Rect.Width" /> e <see cref="P:System.Windows.Int32Rect.Height" /> propriedades do <see cref="T:System.Windows.Int32Rect" /> maior que 0; caso contrário, <paramref name="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Int32Rect.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura do retângulo.</summary>
+        <value>A altura do retângulo. O valor padrão é <c>0</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Int32Rect.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o retângulo está vazio.</summary>
+        <value>**True** se o retângulo estiver vazia; caso contrário, **false**. O valor padrão é **true**.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Int32Rect int32Rect1, System.Windows.Int32Rect int32Rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Int32Rect int32Rect1, valuetype System.Windows.Int32Rect int32Rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Int32Rect.op_Equality(System.Windows.Int32Rect,System.Windows.Int32Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="int32Rect1" Type="System.Windows.Int32Rect" />
+        <Parameter Name="int32Rect2" Type="System.Windows.Int32Rect" />
+      </Parameters>
+      <Docs>
+        <param name="int32Rect1">O primeiro retângulo a ser comparado.</param>
+        <param name="int32Rect2">O segundo retângulo para comparar.</param>
+        <summary>Compara a igualdade exata de dois retângulos.</summary>
+        <returns>**True** se *int32Rect1* e *int32Rect2* têm o mesmo <see cref="P:System.Windows.Int32Rect.X" />, <see cref="P:System.Windows.Int32Rect.Y" />, <see cref="P:System.Windows.Int32Rect.Width" />, e <see cref="P:System.Windows.Int32Rect.Height" />; caso contrário, **false**.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Windows.Int32Rect.Equals%28System.Windows.Int32Rect%2CSystem.Windows.Int32Rect%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Int32Rect int32Rect1, System.Windows.Int32Rect int32Rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Int32Rect int32Rect1, valuetype System.Windows.Int32Rect int32Rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Int32Rect.op_Inequality(System.Windows.Int32Rect,System.Windows.Int32Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="int32Rect1" Type="System.Windows.Int32Rect" />
+        <Parameter Name="int32Rect2" Type="System.Windows.Int32Rect" />
+      </Parameters>
+      <Docs>
+        <param name="int32Rect1">O primeiro retângulo a ser comparado.</param>
+        <param name="int32Rect2">O segundo retângulo para comparar.</param>
+        <summary>Compara dois retângulos desigualdade.</summary>
+        <returns>**False** se *int32Rect1* e *int32Rect2* têm o mesmo <see cref="P:System.Windows.Int32Rect.X" />, <see cref="P:System.Windows.Int32Rect.Y" />, <see cref="P:System.Windows.Int32Rect.Width" />, e <see cref="P:System.Windows.Int32Rect.Height" />; caso contrário, se todos esses valores são iguais, em seguida **true**.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é a negação de <xref:System.Windows.Int32Rect.Equals%2A>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Windows.Int32Rect Parse (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Int32Rect Parse(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Int32Rect.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Int32Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Uma representação de cadeia de caracteres de um <see cref="T:System.Windows.Int32Rect" />.</param>
+        <summary>Cria um <see cref="T:System.Windows.Int32Rect" /> estrutura especificado <see cref="T:System.String" /> representação.</summary>
+        <returns>A estrutura <see cref="T:System.Windows.Int32Rect" /> equivalente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Int32Rect.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato a ser usado.</param>
+        <param name="provider">O provedor a ser usado para formatar o valor</param>
+        <summary>Formata o valor da instância atual usando o formato especificado.</summary>
+        <returns>O valor da instância atual no formato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Int32Rect> é convertida em uma interface de <xref:System.IFormattable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Int32Rect.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma representação de cadeia de caracteres deste <see cref="T:System.Windows.Int32Rect" />.</summary>
+        <returns>Uma cadeia de caracteres que contém o mesmo <see cref="P:System.Windows.Int32Rect.X" />, <see cref="P:System.Windows.Int32Rect.Y" />, <see cref="P:System.Windows.Int32Rect.Width" />, e <see cref="P:System.Windows.Int32Rect.Height" /> valores deste <see cref="T:System.Windows.Int32Rect" /> estrutura.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Int32Rect.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O provedor de formato a ser usado. Se o provedor estiver <see langword="null" />, a cultura atual é usada.</param>
+        <summary>Cria uma representação de cadeia de caracteres deste <see cref="T:System.Windows.Int32Rect" /> com base em fornecido <see cref="T:System.IFormatProvider" />.</summary>
+        <returns>Uma representação de cadeia de caracteres desta instância do <see cref="T:System.Windows.Int32Rect" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Int32Rect.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura do retângulo.</summary>
+        <value>A largura do retângulo. O valor padrão é <c>0</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public int X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Int32Rect.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada x do canto superior esquerdo do retângulo.</summary>
+        <value>A coordenada X do canto superior esquerdo do retângulo. O valor padrão é <c>0</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public int Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Int32Rect.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada y do canto superior esquerdo do retângulo.</summary>
+        <value>A coordenada y do canto superior esquerdo do retângulo. O valor padrão é <c>0</c>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

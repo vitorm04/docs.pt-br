@@ -1,0 +1,185 @@
+<Type Name="BasePartialCachingControl" FullName="System.Web.UI.BasePartialCachingControl">
+  <TypeSignature Language="C#" Value="public abstract class BasePartialCachingControl : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BasePartialCachingControl extends System.Web.UI.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.BasePartialCachingControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a funcionalidade básica para o <see cref="T:System.Web.UI.StaticPartialCachingControl" /> e <see cref="T:System.Web.UI.PartialCachingControl" /> classes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.BasePartialCachingControl> classe representa um controle de usuário que tem o cache em cenários de programação de saída. O ASP.NET fornece várias maneiras de habilitar o cache de saída para um controle. A lista a seguir descreve os métodos que você pode usar para habilitar o cache de saída:  
+  
+-   Use o `@ OutputCache` diretiva para habilitar o cache em cenários declarativos de saída.  
+  
+-   Use o <xref:System.Web.UI.PartialCachingAttribute> classe para habilitar o cache para um controle de usuário em um arquivo code-behind.  
+  
+-   Use o <xref:System.Web.UI.ControlCachePolicy> classe para especificar as configurações de cache em cenários de programação na qual você está trabalhando com <xref:System.Web.UI.BasePartialCachingControl> instâncias.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma referência para o <xref:System.Web.UI.BasePartialCachingControl> classe e o configura para o valor da <xref:System.Web.UI.Control.Parent%2A> propriedade. O código define o <xref:System.Web.UI.BasePartialCachingControl.Dependency%2A> propriedade para um <xref:System.Web.Caching.CacheDependency> objeto que faz com que o controle depende de um arquivo de texto.  
+  
+ [!code-csharp[BasePartialCachingControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BasePartialCachingControl/CS/dep1cs.ascx#1)]
+ [!code-vb[BasePartialCachingControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BasePartialCachingControl/VB/dep1vb.ascx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BasePartialCachingControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BasePartialCachingControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.BasePartialCachingControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CachePolicy">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ControlCachePolicy CachePolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCachePolicy CachePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.BasePartialCachingControl.CachePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCachePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.ControlCachePolicy" /> objeto que está associado com o controle de usuário encapsulado.</summary>
+        <value>Um <see cref="T:System.Web.UI.ControlCachePolicy" /> que armazena propriedades relacionadas ao cache de saída do controle de usuário encapsulado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.BasePartialCachingControl.CachePolicy%2A> propriedade permite que o acesso programático a <xref:System.Web.UI.ControlCachePolicy> objeto associado com o controle de usuário contido pelo <xref:System.Web.UI.BasePartialCachingControl> instância. O <xref:System.Web.UI.ControlCachePolicy> objeto pode ser manipulado por meio de programação para influenciar o comportamento e as configurações de cache do controle de usuário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como um controle de usuário pode ser carregado dinamicamente e manipulado programaticamente no tempo de execução. Este exemplo tem três partes:  
+  
+-   Uma classe parcial, `LogOnControl`, que herda o <xref:System.Web.UI.UserControl> classe base e para o qual o <xref:System.Web.UI.PartialCachingAttribute> atributo é aplicado.  
+  
+-   Um controle de usuário que é usado com o `LogOnControl` classe parcial.  
+  
+-   Uma página de formulários da Web que hospeda o controle de usuário.  
+  
+ Para executar esse exemplo com êxito, verifique se o arquivo de controle de usuário (. ascx), seu arquivo code-behind (. cs ou. vb) e a página de formulários da Web que hospeda o controle de usuário (. aspx) estão no mesmo diretório.  
+  
+ A primeira parte do exemplo demonstra como o <xref:System.Web.UI.PartialCachingAttribute> é aplicado a um controle de usuário chamado `LogOnControl`, que significa que o controle de usuário é encapsulado por um <xref:System.Web.UI.PartialCachingControl> controle em tempo de execução. O `LogOnControl` configurações de cache do objeto podem ser programaticamente manipulados por meio de seus associados <xref:System.Web.UI.ControlCachePolicy> objeto, que está disponível por meio de uma referência para o <xref:System.Web.UI.PartialCachingControl> que ele encapsula. Neste exemplo, configurações de cache são examinadas durante a inicialização da página e alteradas se algumas condições forem atendidas.  
+  
+ [!code-csharp[System.Web.UI.ControlCachePolicy#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/CS/LogonControl.cs#2)]
+ [!code-vb[System.Web.UI.ControlCachePolicy#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/VB/logoncontrol.vb#2)]  
+  
+ A segunda parte do exemplo mostra um controle de usuário que é usado com o exemplo anterior para demonstrar o cache de controle de usuário.  
+  
+ [!code-aspx-csharp[System.Web.UI.ControlCachePolicy#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/CS/Logonformcs.ascx#3)]
+ [!code-aspx-vb[System.Web.UI.ControlCachePolicy#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/VB/Logonformvb.ascx#3)]  
+  
+ A terceira parte do exemplo demonstra como usar o `LogOnControl` controle de usuário de uma página de Web Forms.  
+  
+ [!code-aspx-csharp[System.Web.UI.ControlCachePolicy#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/CS/controlcachepolicy_loadcontrolcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.ControlCachePolicy#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlCachePolicy/VB/controlcachepolicy_loadcontrolvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dependency">
+      <MemberSignature Language="C#" Value="public System.Web.Caching.CacheDependency Dependency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Caching.CacheDependency Dependency" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.BasePartialCachingControl.Dependency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.CacheDependency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma instância do <see cref="T:System.Web.Caching.CacheDependency" /> classe associada com a saída de controle de usuário em cache.</summary>
+        <value>O <see cref="T:System.Web.Caching.CacheDependency" /> associado ao controle de servidor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você remova a saída de controle de usuário do cache de saída quando altera a dependência de cache associada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Web.UI.BasePartialCachingControl.Dependency%2A> propriedade para um <xref:System.Web.Caching.CacheDependency> objeto que faz com que o controle depende de um arquivo de texto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.BasePartialCachingControl> classe.  
+  
+ [!code-csharp[BasePartialCachingControl#2](~/samples/snippets/csharp/VS_Snippets_WebNet/BasePartialCachingControl/CS/dep1cs.ascx#2)]
+ [!code-vb[BasePartialCachingControl#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BasePartialCachingControl/VB/dep1vb.ascx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BasePartialCachingControl.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela classe <see cref="T:System.Web.UI.BasePartialCachingControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BasePartialCachingControl.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="output">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que grava o controle em cache para a página.</param>
+        <summary>Gera o conteúdo do controle de usuário especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> fluxo de saída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

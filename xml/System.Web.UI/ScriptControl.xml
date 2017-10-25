@@ -1,0 +1,174 @@
+<Type Name="ScriptControl" FullName="System.Web.UI.ScriptControl">
+  <TypeSignature Language="C#" Value="public abstract class ScriptControl : System.Web.UI.WebControls.WebControl, System.Web.UI.IScriptControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ScriptControl extends System.Web.UI.WebControls.WebControl implements class System.Web.UI.IScriptControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ScriptControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IScriptControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma classe base abstrata para um controle de script.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.ScriptControl>herda o <xref:System.Web.UI.WebControls.WebControl> classe e implemente o <xref:System.Web.UI.IScriptControl> interface. O <xref:System.Web.UI.WebControls.WebControl> classe é uma classe base para controles de servidor Web do ASP.NET. O <xref:System.Web.UI.ScriptControl> é uma classe abstrata, você não pode instanciar diretamente. Em vez disso, você derivar uma classe com base em sua classe abstrata.  
+  
+ O <xref:System.Web.UI.ScriptControl> classe base testa a página de um <xref:System.Web.UI.ScriptManager> controlar durante o `PreRender` estágio do controle derivado. O <xref:System.Web.UI.ScriptControl> classe base também garante que o controle derivado chama métodos do <xref:System.Web.UI.ScriptManager> controle para registrar o script durante o `Render` evento. Isso inclui o registro <xref:System.Web.UI.ScriptDescriptor> objetos para o <xref:System.Web.UI.ScriptControl> quando o <xref:System.Web.UI.ScriptControl.Render%2A> método é chamado. O <xref:System.Web.UI.ScriptControl.Render%2A> método garante que <xref:System.Web.UI.ScriptDescriptor> objetos não são processados, a menos que o <xref:System.Web.UI.ScriptControl> em si é renderizado. Isso permite que um <xref:System.Web.UI.ScriptControl> trabalhar dentro de um fechado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ Você pode adicionar quantos descritores e tipos conforme necessário para qualquer classe que deriva de <xref:System.Web.UI.ScriptControl>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ScriptControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.ScriptControl" /> classe em uma classe derivada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptDescriptors">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptControl.GetScriptDescriptors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna o <see cref="T:System.Web.UI.ScriptDescriptor" /> objetos para o controle.</summary>
+        <returns>Uma coleção <see cref="T:System.Collections.IEnumerable" /> de objetos <see cref="T:System.Web.UI.ScriptDescriptor" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptReferences">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt; GetScriptReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptReference&gt; GetScriptReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptControl.GetScriptReferences" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna os arquivos de script para o controle.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerable" /> inseridos de coleção que contém os arquivos de ECMAScript (JavaScript) que foram registrados como recursos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptControl.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" /> evento e registra o script controlar com o <see cref="T:System.Web.UI.ScriptManager" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após o <xref:System.Web.UI.Control.PreRender> da classe base é gerado, o <xref:System.Web.UI.Control.OnPreRender%2A> método registra o controle de script com o <xref:System.Web.UI.ScriptManager> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptControl.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O objeto <see cref="T:System.Web.UI.HtmlTextWriter" /> que recebe o conteúdo do controle do servidor.</param>
+        <summary>Gera o <see cref="M:System.Web.UI.Control.Render(System.EventArgs)" /> eventos e envia conteúdo de controle de servidor a um fornecido <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto, que grava o conteúdo a ser renderizado no navegador.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IScriptControl.GetScriptDescriptors">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt; IScriptControl.GetScriptDescriptors ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptDescriptor&gt; System.Web.UI.IScriptControl.GetScriptDescriptors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptControl.System#Web#UI#IScriptControl#GetScriptDescriptors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, registra o <see cref="T:System.Web.UI.ScriptDescriptor" /> objetos para o controle.</summary>
+        <returns>Uma coleção <see cref="T:System.Collections.IEnumerable" /> de objetos <see cref="T:System.Web.UI.ScriptDescriptor" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IScriptControl.GetScriptReferences">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt; IScriptControl.GetScriptReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptReference&gt; System.Web.UI.IScriptControl.GetScriptReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptControl.System#Web#UI#IScriptControl#GetScriptReferences" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, registra os arquivos de script para o controle.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerable" /> inseridos de coleção que contém os arquivos de ECMAScript (JavaScript) que foram registrados como recursos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

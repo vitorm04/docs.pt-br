@@ -1,0 +1,115 @@
+<Type Name="JSLocalField" FullName="Microsoft.JScript.JSLocalField">
+  <TypeSignature Language="C#" Value="public sealed class JSLocalField : Microsoft.JScript.JSVariableField" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit JSLocalField extends Microsoft.JScript.JSVariableField" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.JSLocalField" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.JSVariableField</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma variável local.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JSLocalField (string name, RuntimeTypeHandle handle, int slotNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.RuntimeTypeHandle handle, int32 slotNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSLocalField.#ctor(System.String,System.RuntimeTypeHandle,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="handle" Type="System.RuntimeTypeHandle" />
+        <Parameter Name="slotNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do campo.</param>
+        <param name="handle">Um identificador para a representação interna de metadados do campo.</param>
+        <param name="slotNumber">O número de slot da variável.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.JSLocalField" /> de classe, usando o nome especificado, o identificador e o número do slot.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FieldType">
+      <MemberSignature Language="C#" Value="public override Type FieldType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type FieldType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.JSLocalField.FieldType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do campo.</summary>
+        <value>O tipo do campo.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override object GetValue (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetValue(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSLocalField.GetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto cujo valor do campo será retornado.</param>
+        <summary>Obtém o valor do campo.</summary>
+        <returns>O valor do campo.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public override void SetValue (object obj, object value, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Globalization.CultureInfo locale);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetValue(object obj, object value, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, class System.Globalization.CultureInfo locale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.JSLocalField.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="locale" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto cujo valor de campo será definido.</param>
+        <param name="value">O valor a ser atribuído ao campo.</param>
+        <param name="invokeAttr">Uma combinação bit a bit dos valores de enumeração que controlam a ligação.</param>
+        <param name="binder">Um conjunto de propriedades que habilita a associação, coerção de tipos de argumento e invocação de membros usando a reflexão.</param>
+        <param name="locale">Fornece informações sobre uma cultura específica ou a localidade. Usado para formatar números, datas e cadeias de caracteres corretamente.</param>
+        <summary>Define o valor do campo, usando o valor especificado, cultura e informações de associação.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.AddIn.Pipeline">
+  <Docs>
+    <summary>O <see cref="N:System.AddIn.Pipeline" /> namespace fornece classes para construir o pipeline de comunicação entre um aplicativo de host e um suplemento.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

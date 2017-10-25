@@ -1,0 +1,86 @@
+<Type Name="QueryCorrelationInitializer" FullName="System.ServiceModel.Activities.QueryCorrelationInitializer">
+  <TypeSignature Language="C#" Value="public sealed class QueryCorrelationInitializer : System.ServiceModel.Activities.CorrelationInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit QueryCorrelationInitializer extends System.ServiceModel.Activities.CorrelationInitializer" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.QueryCorrelationInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activities.CorrelationInitializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("MessageQuerySet")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Inicializa associado <see cref="P:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle" /> com base nos resultados de <see cref="P:System.ServiceModel.Activities.QueryCorrelationInitializer.MessageQuerySet" /> quando a mensagem é enviada ou recebida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> classe para definir a correlação inicializar para um <xref:System.ServiceModel.Activities.SendReply> atividade.  
+  
+ [!code-csharp[ImplicitExplicitCorrelation#0](~/samples/snippets/csharp/VS_Snippets_CFX/implicitexplicitcorrelation/cs/service/pharmacyservice.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryCorrelationInitializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.QueryCorrelationInitializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activities.QueryCorrelationInitializer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar este construtor.  
+  
+ [!code-csharp[ImplicitExplicitCorrelation#1](~/samples/snippets/csharp/VS_Snippets_CFX/implicitexplicitcorrelation/cs/service/pharmacyservice.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageQuerySet">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MessageQuerySet MessageQuerySet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.MessageQuerySet MessageQuerySet" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.QueryCorrelationInitializer.MessageQuerySet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageQuerySet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.MessageQuerySet" /> que é usada para executar o <see cref="T:System.ServiceModel.Channels.CorrelationKey" /> cálculo.</summary>
+        <value>O <see cref="T:System.ServiceModel.MessageQuerySet" /> que é usada para executar o <see cref="T:System.ServiceModel.Channels.CorrelationKey" /> cálculo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ServiceModel.Activities.QueryCorrelationInitializer.MessageQuerySet%2A> propriedade.  
+  
+ [!code-csharp[ImplicitExplicitCorrelation#2](~/samples/snippets/csharp/VS_Snippets_CFX/implicitexplicitcorrelation/cs/service/pharmacyservice.cs#2)]  
+  
+ [!code-csharp[ImplicitExplicitCorrelation#1](~/samples/snippets/csharp/VS_Snippets_CFX/implicitexplicitcorrelation/cs/service/pharmacyservice.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,257 @@
+<Type Name="PrefixEndpointAddressMessageFilter" FullName="System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter">
+  <TypeSignature Language="C#" Value="public class PrefixEndpointAddressMessageFilter : System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PrefixEndpointAddressMessageFilter extends System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.MessageFilter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma consulta que testa se uma mensagem corresponde a um EndpointAddress usando um *correspondência de prefixo mais longa* para o componente URI.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ServiceModel.EndpointAddress> objeto inclui um URI e um conjunto opcional de cabeçalhos de endereçamento. Os cabeçalhos de endereçamento e mensagens são padronizados para ser comparadas quanto à igualdade. Se um parâmetro é exibido mais de uma vez em um <xref:System.ServiceModel.EndpointAddress>, o cabeçalho deve aparecer na mensagem de, pelo menos, que muitas vezes.  
+  
+ Esse filtro executa a mesma consulta <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, exceto que o teste para se uma mensagem corresponde a um endereço de ponto de extremidade é feito um *correspondência de prefixo mais longa*. Isso significa que o URI especificado no filtro não tem que corresponder exatamente o URI da mensagem, mas deve estar contido nesse URI como um prefixo. Por exemplo, se um filtro especifica o endereço "www.foo.com", e uma mensagem é endereçada como "www.foo.com/customerA", em seguida, a parte do URI da condição de consulta de filtro será atendida. No entanto, a parte do cabeçalho da consulta de filtro ainda precisa ser feito.  
+  
+ Serviços de informações da Internet (IIS) e o sistema de arquivos subjacente (NTFS ou FAT) diferenciam maiusculas de minúsculas. Comparações de URI feitas por essa classe também diferenciam maiusculas de minúsculas. Portanto, por exemplo, http://www.microsoft.com é avaliada como iguais para http://WWW.microsoft.com.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrefixEndpointAddressMessageFilter (System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.#ctor(System.ServiceModel.EndpointAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">O <see cref="T:System.ServiceModel.EndpointAddress" /> em relação a quais mensagens são testadas.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrefixEndpointAddressMessageFilter (System.ServiceModel.EndpointAddress address, bool includeHostNameInComparison);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address, bool includeHostNameInComparison) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.#ctor(System.ServiceModel.EndpointAddress,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="includeHostNameInComparison" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="address">O <see cref="T:System.ServiceModel.EndpointAddress" /> em relação a quais mensagens são testadas.</param>
+        <param name="includeHostNameInComparison">
+          <see langword="true" />Se o nome do host está incluído na comparação de endereço de ponto de extremidade. Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tiver um serviço web instalado em seu computador local, há muitas maneiras equivalentes para fazer referência a ela, incluindo o seguinte:  
+  
+-   http://localhost/foo.svc  
+  
+-   http://192.168.1.100/foo.svc  
+  
+-   http://[My-Machine-Name]/foo.svc  
+  
+-   http://[My-Machine-Name]. [my-company].com/foo.svc.  
+  
+ Se o valor de `includeHostNameInComparison` parâmetro é `false`, o acima URIs todos resolver para o mesmo ponto de extremidade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress Address" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço do ponto de extremidade que o <see cref="T:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter" /> testes de mensagens.</summary>
+        <value>O <see cref="T:System.ServiceModel.EndpointAddress" /> que o <see cref="T:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter" /> testes de mensagens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFilterTable&lt;FilterData&gt;">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Dispatcher.IMessageFilterTable&lt;FilterData&gt; CreateFilterTable&lt;FilterData&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.ServiceModel.Dispatcher.IMessageFilterTable`1&lt;!!FilterData&gt; CreateFilterTable&lt;FilterData&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.CreateFilterTable``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IMessageFilterTable&lt;FilterData&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="FilterData" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="FilterData">Dados associados com os filtros na tabela.</typeparam>
+        <summary>Cria uma nova tabela de filtro que testa uma mensagem com vários endereços de ponto de extremidade simultaneamente.</summary>
+        <returns>Um objeto que implementa o <see cref="T:System.ServiceModel.Dispatcher.IMessageFilterTable`1" /> interface que pode conter <see cref="T:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter" />s com associados <paramref name="FilterData" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método retorna uma instância de <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601> que é otimizado para testar a pontos de extremidade de mensagem específica.  
+  
+ Esse método se destina a ser usado por <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeHostNameInComparison">
+      <MemberSignature Language="C#" Value="public bool IncludeHostNameInComparison { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeHostNameInComparison" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o nome do host está incluído na comparação de endereço de ponto de extremidade.</summary>
+        <value>
+          <see langword="true" />Se o nome do host está incluído na comparação de endereço de ponto de extremidade. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tiver um serviço web instalado em seu computador local, há muitas maneiras equivalentes para fazer referência a ela, incluindo o seguinte:  
+  
+-   http://localhost/foo.svc  
+  
+-   http://192.168.1.100/foo.svc  
+  
+-   http://[My-Machine-Name]/foo.svc  
+  
+-   http://[My-Machine-Name]. [my-company].com/foo.svc.  
+  
+ O valor padrão dessa propriedade é `false`, portanto, os URIs acima para todos os resolver para o mesmo ponto de extremidade, a menos que você alterar essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Match">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Testa se uma mensagem ou mensagens em buffer satisfaz os critérios do filtro de ponto de extremidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As duas sobrecargas do método são equivalentes porque este filtro não examina o corpo da mensagem, somente o endereço, fazer uma correspondência de prefixo mais longo e, em seguida, os cabeçalhos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.Match(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O objeto <see cref="T:System.ServiceModel.Channels.Message" /> a ser testado.</param>
+        <summary>Testa se uma mensagem que satisfaz o endereço do ponto de extremidade especificado.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ServiceModel.Channels.Message" /> objeto satisfaz o endereço de ponto de extremidade especificado no filtro; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As duas sobrecargas do método são equivalentes porque este filtro não examina o corpo da mensagem, somente o endereço, fazer uma correspondência de prefixo mais longo e, em seguida, os cabeçalhos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.MessageBuffer messageBuffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.MessageBuffer messageBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.Match(System.ServiceModel.Channels.MessageBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+      </Parameters>
+      <Docs>
+        <param name="messageBuffer">O objeto <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> a ser testado.</param>
+        <summary>Testa se uma mensagem em buffer satisfaz o endereço do ponto de extremidade especificado.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> objeto satisfaz o endereço do ponto de extremidade; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As duas sobrecargas do método são equivalentes porque este filtro não examina o corpo da mensagem, somente o endereço, fazer uma correspondência de prefixo mais longo e, em seguida, os cabeçalhos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageBuffer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

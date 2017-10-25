@@ -1,0 +1,645 @@
+<Type Name="SubMenuStyle" FullName="System.Web.UI.WebControls.SubMenuStyle">
+  <TypeSignature Language="C#" Value="public class SubMenuStyle : System.Web.UI.WebControls.Style, System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SubMenuStyle extends System.Web.UI.WebControls.Style implements class System.ComponentModel.ICustomTypeDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SubMenuStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Style</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ICustomTypeDescriptor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa o estilo de um submenu em um <see cref="T:System.Web.UI.WebControls.Menu" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.SubMenuStyle> classe que representa o estilo de um submenu no <xref:System.Web.UI.WebControls.Menu> controle. Um submenu pode ser exibido em um menu estático ou um menu dinâmico. Um menu estático está sempre visível em um <xref:System.Web.UI.WebControls.Menu> controlar, enquanto um menu dinâmico é exibido somente quando o usuário posiciona o ponteiro do mouse sobre um item de menu pai que contém um submenu dinâmico. Você pode especificar as características de estilo diferente (como o tamanho da fonte e cor) para os submenus dentro de um menu estático e um menu dinâmico por meio das propriedades na tabela a seguir.  
+  
+|Propriedade de estilo do item de submenu|Descrição|  
+|---------------------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.Menu.DynamicMenuStyle%2A>|As configurações de estilo para um submenu dentro de um menu dinâmico.|  
+|<xref:System.Web.UI.WebControls.Menu.StaticMenuStyle%2A>|As configurações de estilo para um submenu dentro de um menu estático.|  
+  
+ O <xref:System.Web.UI.WebControls.SubMenuStyle> maioria de seus membros de classe é herdada de `Style` classe. Ele estende o `Style` classe fornecendo propriedades que controlam a quantidade de espaço ao redor do texto de um item de menu. Use o <xref:System.Web.UI.WebControls.SubMenuStyle.HorizontalPadding%2A> propriedade para controlar a quantidade de espaço à esquerda e à direita do texto do item de menu. Da mesma forma, o <xref:System.Web.UI.WebControls.SubMenuStyle.VerticalPadding%2A> propriedade controla a quantidade de espaço acima e abaixo do texto do item de menu.  
+  
+ Para obter mais informações sobre as configurações de estilo herdado, consulte <xref:System.Web.UI.WebControls.Style>.  
+  
+> [!NOTE]
+>  Definir o `z-index` de objetos HTML que estão associados um submenu definindo o <xref:System.Web.UI.WebControls.Style.CssClass%2A> propriedade de estilo do submenu. O `z-index` atributo define a ordem de empilhamento de objetos HTML renderizados. Por padrão, os itens de menu dinâmico serão exibida acima de qualquer objeto HTML com o padrão z-index (0).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como especificar um estilo personalizado para um submenu dentro de um menu dinâmico.  
+  
+ [!code-aspx-csharp[MenuDynamicMenuStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuDynamicMenuStyle/CS/menudynamicmenustylecs.aspx#1)]
+ [!code-aspx-vb[MenuDynamicMenuStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuDynamicMenuStyle/VB/menudynamicmenustylevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SubMenuStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.SubMenuStyle" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma nova instância do <xref:System.Web.UI.WebControls.SubMenuStyle> classe. Este construtor é usado normalmente ao popular dinamicamente o <xref:System.Web.UI.WebControls.Menu.LevelSubMenuStyles%2A> coleção. Ele também é usado ao estender o <xref:System.Web.UI.WebControls.Menu> classe ao inicializar as propriedades de estilo do item de submenu, tais como <xref:System.Web.UI.WebControls.Menu.DynamicMenuStyle%2A> ou <xref:System.Web.UI.WebControls.Menu.StaticMenuStyle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SubMenuStyle (System.Web.UI.StateBag bag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.StateBag bag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.#ctor(System.Web.UI.StateBag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bag" Type="System.Web.UI.StateBag" />
+      </Parameters>
+      <Docs>
+        <param name="bag">As informações de estado de exibição da solicitação atual.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> classe com as informações de estado de exibição especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar um novo <xref:System.Web.UI.WebControls.SubMenuStyle> objeto com as informações contidas no estado de exibição da solicitação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.CopyFrom(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">O <see cref="T:System.Web.UI.WebControls.Style" /> objeto a ser copiado.</param>
+        <summary>Copia as propriedades de estilo do <see cref="T:System.Web.UI.WebControls.Style" /> a instância atual do objeto de <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.SubMenuStyle.CopyFrom%2A> método para duplicar as propriedades de estilo do <xref:System.Web.UI.WebControls.Style> objeto o <xref:System.Web.UI.WebControls.SubMenuStyle> objeto que chama esse método.  
+  
+> [!CAUTION]
+>  Todas as propriedades na instância atual do <xref:System.Web.UI.WebControls.SubMenuStyle> classe será substituída pelas propriedades correspondentes especificado na <xref:System.Web.UI.WebControls.Style> objeto.  
+  
+ Para copiar as propriedades de estilo sem substituir quaisquer valores de conjunto, use o <xref:System.Web.UI.WebControls.SubMenuStyle.MergeWith%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillStyleAttributes">
+      <MemberSignature Language="C#" Value="protected override void FillStyleAttributes (System.Web.UI.CssStyleCollection attributes, System.Web.UI.IUrlResolutionService urlResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void FillStyleAttributes(class System.Web.UI.CssStyleCollection attributes, class System.Web.UI.IUrlResolutionService urlResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.FillStyleAttributes(System.Web.UI.CssStyleCollection,System.Web.UI.IUrlResolutionService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Web.UI.CssStyleCollection" />
+        <Parameter Name="urlResolver" Type="System.Web.UI.IUrlResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">O <see cref="T:System.Web.UI.CssStyleCollection" /> objeto ao qual adicionar as propriedades de estilo.</param>
+        <param name="urlResolver">O <see cref="T:System.Web.UI.IUrlResolutionService" />-implementado o objeto que contém as informações de contexto para o local atual (URL).</param>
+        <summary>Adiciona as propriedades de estilo de <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto especificado <see cref="T:System.Web.UI.CssStyleCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.SubMenuStyle.FillStyleAttributes%2A> método para adicionar as propriedades de estilo da instância atual do <xref:System.Web.UI.WebControls.SubMenuStyle> classe especificado <xref:System.Web.UI.CssStyleCollection?displayProperty=nameWithType> objeto.  
+  
+> [!NOTE]
+>  Esse método é usado somente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalPadding">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit HorizontalPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit HorizontalPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SubMenuStyle.HorizontalPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de espaço à esquerda e à direita de um submenu.</summary>
+        <value>A quantidade de espaço à esquerda e à direita do texto de um submenu. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.SubMenuStyle.HorizontalPadding%2A> propriedade para controlar a quantidade de espaço entre o texto do item de submenu e o lado do menu recipiente. Para controlar o espaço vertical entre os itens de submenu, use o <xref:System.Web.UI.WebControls.SubMenuStyle.VerticalPadding%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor selecionado é de <see cref="P:System.Web.UI.WebControls.Unit.Type" /> <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" /> ou é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeWith">
+      <MemberSignature Language="C#" Value="public override void MergeWith (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MergeWith(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.MergeWith(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">O <see cref="T:System.Web.UI.WebControls.Style" /> objeto combinar as configurações de com.</param>
+        <summary>Combina as propriedades de estilo do <see cref="T:System.Web.UI.WebControls.Style" /> aqueles da instância atual do objeto de <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.SubMenuStyle.MergeWith%2A> método para combinar as propriedades de estilo do <xref:System.Web.UI.WebControls.Style> objeto com as propriedades de estilo a <xref:System.Web.UI.WebControls.SubMenuStyle> que este método é chamado de objeto.  
+  
+> [!CAUTION]
+>  Esse método une as propriedades de estilo, definindo cada propriedade que não está definida no atual <xref:System.Web.UI.WebControls.SubMenuStyle> objeto com o valor correspondente especificado na <xref:System.Web.UI.WebControls.Style> objeto. Apenas as propriedades que não foram definidas serão atualizadas. Se uma propriedade do <xref:System.Web.UI.WebControls.Style> objeto não for definida, a propriedade correspondente no atual <xref:System.Web.UI.WebControls.SubMenuStyle> objeto não é alterado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a instância atual do <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> classe ao seu estado original.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.SubMenuStyle.Reset%2A> método para remover qualquer definido elementos de estilo do conjunto de estado e redefinir o <xref:System.Web.UI.WebControls.SubMenuStyle> objeto ao seu estado original.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetAttributes">
+      <MemberSignature Language="C#" Value="System.ComponentModel.AttributeCollection ICustomTypeDescriptor.GetAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.AttributeCollection System.ComponentModel.ICustomTypeDescriptor.GetAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetAttributes" />.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.AttributeCollection" /> que contém os atributos para este objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetClassName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetClassName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetClassName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetClassName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetClassName" />.</summary>
+        <returns>O nome da classe do objeto, ou <see langword="null" /> se a classe não tem um nome.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetComponentName">
+      <MemberSignature Language="C#" Value="string ICustomTypeDescriptor.GetComponentName ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.ICustomTypeDescriptor.GetComponentName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetComponentName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetComponentName" />.</summary>
+        <returns>O nome do objeto ou <see langword="null" /> se o objeto não tiver um nome.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetConverter">
+      <MemberSignature Language="C#" Value="System.ComponentModel.TypeConverter ICustomTypeDescriptor.GetConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.TypeConverter System.ComponentModel.ICustomTypeDescriptor.GetConverter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetConverter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetConverter" />.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter" /> que é o conversor para esse objeto, ou <see langword="null" /> se não houver nenhum <see cref="T:System.ComponentModel.TypeConverter" /> para este objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptor ICustomTypeDescriptor.GetDefaultEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetDefaultEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent" />.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.EventDescriptor" /> objeto que representa o evento padrão para o objeto, ou <see langword="null" /> se o objeto não possui eventos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptor ICustomTypeDescriptor.GetDefaultProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptor System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetDefaultProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty" />.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> objeto que representa a propriedade padrão para esse objeto, ou <see langword="null" /> se o objeto não tem propriedades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEditor">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetEditor (Type editorBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetEditor(class System.Type editorBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetEditor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="editorBaseType">Um <see cref="T:System.Type" /> que representa o editor desse objeto.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetEditor(System.Type)" />.</summary>
+        <returns>Um <see cref="T:System.Object" /> do tipo especificado que é o editor para esse objeto, ou <see langword="null" /> se o editor não pode ser encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="Overload:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetEvents" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetEvents" />.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.EventDescriptorCollection" /> que contém os eventos para essa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetEvents">
+      <MemberSignature Language="C#" Value="System.ComponentModel.EventDescriptorCollection ICustomTypeDescriptor.GetEvents (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetEvents(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetEvents(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Uma matriz do tipo <see cref="T:System.Attribute" /> que é usado como um filtro.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetEvents(System.Attribute[])" />.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.EventDescriptorCollection" /> que contém os eventos filtrados para esta instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="Overload:System.ComponentModel.ICustomTypeDescriptor.GetProperties" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetProperties" />.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que contém as propriedades para esta instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetProperties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection ICustomTypeDescriptor.GetProperties (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.ICustomTypeDescriptor.GetProperties(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetProperties(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Uma matriz do tipo <see cref="T:System.Attribute" /> que é usado como um filtro.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetProperties(System.Attribute[])" />.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> objeto que contém as propriedades filtradas para essa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner">
+      <MemberSignature Language="C#" Value="object ICustomTypeDescriptor.GetPropertyOwner (System.ComponentModel.PropertyDescriptor pd);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner(class System.ComponentModel.PropertyDescriptor pd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyle.System#ComponentModel#ICustomTypeDescriptor#GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pd" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="pd">Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> que representa a propriedade cujo proprietário deve ser encontrado.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o proprietário da propriedade especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é convertida para o <xref:System.ComponentModel.ICustomTypeDescriptor> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalPadding">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit VerticalPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit VerticalPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SubMenuStyle.VerticalPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de espaço acima e abaixo de um submenu.</summary>
+        <value>A quantidade de espaço acima e abaixo de um submenu. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.SubMenuStyle.VerticalPadding%2A> propriedade para controlar a quantidade de espaçamento vertical entre o texto dos itens de submenu. Para controlar o espaço horizontal ao redor do texto do submenu, use o <xref:System.Web.UI.WebControls.SubMenuStyle.HorizontalPadding%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor selecionado é de <see cref="P:System.Web.UI.WebControls.Unit.Type" /> <see cref="F:System.Web.UI.WebControls.UnitType.Percentage" /> ou é menor que 0.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

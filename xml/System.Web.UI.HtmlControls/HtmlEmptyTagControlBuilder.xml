@@ -1,0 +1,75 @@
+<Type Name="HtmlEmptyTagControlBuilder" FullName="System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder">
+  <TypeSignature Language="C#" Value="public sealed class HtmlEmptyTagControlBuilder : System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HtmlEmptyTagControlBuilder extends System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Interage com o analisador de página para criar controles de servidor HTML que não têm um corpo ou uma marca de fechamento. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder> controle interage com o analisador de página para criar controles de servidor HTML que não têm um corpo ou uma marca de fechamento, como `<img>`, `<link>`, `<input>`, e `<meta>`. O <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder.HasBody%2A> propriedade sempre retorna `false`, indicando que os controles criados com o <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder> controle não tem marcas de fechamento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlEmptyTagControlBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder.%23ctor%2A> método é usado internamente pela estrutura de página ASP.NET e não se destina a ser chamado a partir do código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public override bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica que os controles criados com o <see cref="T:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder" /> controle não tem marcas de fechamento.</summary>
+        <returns>
+          <see langword="false" /> em todos os casos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder.HasBody%2A> método substitui a classe base <xref:System.Web.UI.ControlBuilder.HasBody%2A> método sempre retornará `false`, pois o <xref:System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder> classe representa os controles que não têm marcas de fechamento. O <xref:System.Web.UI.ControlBuilder.HasBody%2A> método o <xref:System.Web.UI.ControlBuilder> classe determina se um controle tiver uma abertura e uma marca de fechamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

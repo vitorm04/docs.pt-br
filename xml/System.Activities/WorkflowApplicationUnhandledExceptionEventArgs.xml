@@ -1,0 +1,129 @@
+<Type Name="WorkflowApplicationUnhandledExceptionEventArgs" FullName="System.Activities.WorkflowApplicationUnhandledExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public class WorkflowApplicationUnhandledExceptionEventArgs : System.Activities.WorkflowApplicationEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowApplicationUnhandledExceptionEventArgs extends System.Activities.WorkflowApplicationEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.WorkflowApplicationEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre uma exceção não tratada ocorrida em uma instância de fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma exceção é acionada por uma atividade e é não tratada, o comportamento padrão é finalizar a instância de fluxo de trabalho. Se um <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> manipulador estiver presente, ele pode substituir esse comportamento padrão. Esse manipulador fornece o autor do host de fluxo de trabalho uma oportunidade para fornecer tratamento apropriado, como o log personalizado, anulando o fluxo de trabalho, cancelar o fluxo de trabalho, ou de terminação o fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama um fluxo de trabalho que gerencia uma exceção. A exceção é não tratados pelo fluxo de trabalho e o manipulador de <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> é chamado. <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> é inspecionado para fornecer informações sobre a exceção, e fluxo de trabalho é encerrado.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExceptionSource">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity ExceptionSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity ExceptionSource" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.ExceptionSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atividade que é a origem da exceção sem tratamento.</summary>
+        <value>Uma atividade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma exceção é acionada por uma atividade e é não tratada, o comportamento padrão é finalizar a instância de fluxo de trabalho. Se um <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> manipulador estiver presente, ele pode substituir esse comportamento padrão. Esse manipulador fornece o autor do host de fluxo de trabalho uma oportunidade para fornecer tratamento apropriado, como o log personalizado, anulando o fluxo de trabalho, cancelar o fluxo de trabalho, ou de terminação o fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama um fluxo de trabalho que gerencia uma exceção. A exceção é não tratados pelo fluxo de trabalho e o manipulador de <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> é chamado. <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> é inspecionado para fornecer informações sobre a exceção, e fluxo de trabalho é encerrado.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionSourceInstanceId">
+      <MemberSignature Language="C#" Value="public string ExceptionSourceInstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExceptionSourceInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.ExceptionSourceInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador exclusivo da instância de atividade que é a origem da exceção sem tratamento.</summary>
+        <value>Um identificador de instância de atividade que é a origem da exceção sem tratamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma exceção é acionada por uma atividade e é não tratada, o comportamento padrão é finalizar a instância de fluxo de trabalho. Se um <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> manipulador estiver presente, ele pode substituir esse comportamento padrão. Esse manipulador fornece o autor do host de fluxo de trabalho uma oportunidade para fornecer tratamento apropriado, como o log personalizado, anulando o fluxo de trabalho, cancelar o fluxo de trabalho, ou de terminação o fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama um fluxo de trabalho que gerencia uma exceção. A exceção é não tratados pelo fluxo de trabalho e o manipulador de <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> é chamado. <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> é inspecionado para fornecer informações sobre a exceção, e fluxo de trabalho é encerrado.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnhandledException">
+      <MemberSignature Language="C#" Value="public Exception UnhandledException { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception UnhandledException" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs.UnhandledException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Exception" /> que não foi tratada pela instância de fluxo de trabalho.</summary>
+        <value>O <see cref="T:System.Exception" /> que não foi tratada pela instância de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma exceção é acionada por uma atividade e é não tratada, o comportamento padrão é finalizar a instância de fluxo de trabalho. Se um <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> manipulador estiver presente, ele pode substituir esse comportamento padrão. Esse manipulador fornece o autor do host de fluxo de trabalho uma oportunidade para fornecer tratamento apropriado, como o log personalizado, anulando o fluxo de trabalho, cancelar o fluxo de trabalho, ou de terminação o fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama um fluxo de trabalho que gerencia uma exceção. A exceção é não tratados pelo fluxo de trabalho e o manipulador de <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> é chamado. <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> é inspecionado para fornecer informações sobre a exceção, e fluxo de trabalho é encerrado.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

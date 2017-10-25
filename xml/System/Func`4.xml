@@ -1,0 +1,111 @@
+<Type Name="Func&lt;T1,T2,T3,TResult&gt;" FullName="System.Func&lt;T1,T2,T3,TResult&gt;">
+  <TypeSignature Language="C#" Value="public delegate TResult Func&lt;in T1,in T2,in T3,out TResult&gt;(T1 arg1, T2 arg2, T3 arg3);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Func`4&lt;- T1, - T2, - T3, + TResult&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Func`4" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T1">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T2">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T3">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TResult">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="arg1" Type="T1" />
+    <Parameter Name="arg2" Type="T2" />
+    <Parameter Name="arg3" Type="T3" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>TResult</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="T1">O tipo do primeiro parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="T2">O tipo do segundo parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="T3">O tipo do terceiro parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="TResult">O tipo do valor retornado do método encapsulado por esse delegado.</typeparam>
+    <param name="arg1">O primeiro parâmetro do método encapsulado por esse delegado.</param>
+    <param name="arg2">O segundo parâmetro do método encapsulado por esse delegado.</param>
+    <param name="arg3">O terceiro parâmetro do método encapsulado por esse delegado.</param>
+    <summary>Encapsula um método que tem três parâmetros e retorna um valor do tipo especificado pelo parâmetro <paramref name="TResult" />.</summary>
+    <returns>O valor retornado do método encapsulado por esse delegado.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar este delegado para representar um método que pode ser passado como um parâmetro sem declarar explicitamente um delegado personalizado. O método encapsulado deve corresponder à assinatura do método que é definida por este delegado. Isso significa que o método encapsulado deve ter três parâmetros, cada um deles é passada a ele por valor, e que ele deve retornar um valor.  
+  
+> [!NOTE]
+>  Para fazer referência a um método que tem três parâmetros e retorna `void` (ou no Visual Basic, que é declarado como um `Sub` em vez de como um `Function`), use o genérico <xref:System.Action%603> delegado em vez disso.  
+  
+ Quando você usa o <xref:System.Func%604> delegado, você não precisa definir explicitamente um delegado que encapsula um método com três parâmetros. Por exemplo, o código a seguir declara um delegate genérico chamado explicitamente `ParseNumber` e atribui uma referência para o <xref:System.Int32.Parse%2A> método para sua instância de delegado.  
+  
+ [!code-csharp[System.Func~4#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~4/cs/Delegate.cs#1)]
+ [!code-vb[System.Func~4#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~4/vb/Delegate.vb#1)]  
+  
+ O exemplo a seguir simplifica esse código instanciando a <xref:System.Func%604> delegado em vez de definir um novo delegado explicitamente e atribuí-lo um método nomeado.  
+  
+ [!code-csharp[System.Func~4#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~4/cs/Func4.cs#2)]
+ [!code-vb[System.Func~4#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~4/vb/Func4.vb#2)]  
+  
+ Você pode usar o <xref:System.Func%604> delegar com métodos anônimos em c#, como mostra o exemplo a seguir. (Para obter uma introdução aos métodos anônimos, consulte [métodos anônimos](~/docs/csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).)  
+  
+ [!code-csharp[System.Func~4#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~4/cs/Anon.cs#3)]  
+  
+ Você também pode atribuir uma expressão lambda para uma <xref:System.Func%604> delegado, como mostra o exemplo a seguir. (Para obter uma introdução a expressões lambda, consulte [expressões Lambda](~/docs/visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) e [expressões Lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).)  
+  
+ [!code-csharp[System.Func~4#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~4/cs/Lambda.cs#4)]
+ [!code-vb[System.Func~4#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~4/vb/Lambda.vb#4)]  
+  
+ O tipo subjacente de uma expressão lambda é um dos genérica `Func` delegados. Isso torna possível passar uma expressão lambda como um parâmetro sem explicitamente atribuí-lo a um delegado. Em particular, porque muitos métodos de tipos no <xref:System.Linq> namespace ter `Func` parâmetros, você pode passar esses métodos de uma expressão lambda sem instanciar explicitamente um `Func` delegar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como declarar e usar um <xref:System.Func%603> delegate. Este exemplo declara um <xref:System.Func%603> variável e atribui uma expressão lambda que leva um <xref:System.String> valor e um <xref:System.Int32> valor como parâmetros. Retorna a expressão lambda `true` se o comprimento do <xref:System.String> parâmetro for igual ao valor da <xref:System.Int32> parâmetro. O delegado que encapsula esse método é usado posteriormente em uma consulta em cadeias de caracteres de filtro em uma matriz de cadeias de caracteres.  
+  
+ [!code-csharp[System.Func~3#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Func~3/cs/Example.cs#5)]
+ [!code-vb[System.Func~3#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Func~3/vb/Example.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

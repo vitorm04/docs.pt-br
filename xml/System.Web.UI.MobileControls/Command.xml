@@ -1,0 +1,674 @@
+<Type Name="Command" FullName="System.Web.UI.MobileControls.Command">
+  <TypeSignature Language="C#" Value="public class Command : System.Web.UI.MobileControls.TextControl, System.Web.UI.IPostBackDataHandler, System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Command extends System.Web.UI.MobileControls.TextControl implements class System.Web.UI.IPostBackDataHandler, class System.Web.UI.IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.Command" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.TextControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackDataHandler</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Click")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Web.UI.Design.MobileControls.CommandDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.TextDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.DesignerAdapter(typeof(System.Web.UI.Design.MobileControls.Adapters.DesignerCommandAdapter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:Command runat="server"&gt;Command&lt;/{0}:Command&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Cria um elemento de interface do usuário que habilita os usuários a invocar manipuladores de eventos do ASP.NET e fornece um meio para lançar a entrada do usuário dos elementos de interface do usuário de volta para o servidor. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Command> controle é exibido como um elemento de interface do usuário interativo do dispositivo solicitante. O rótulo do elemento de interface do usuário é proveniente do <xref:System.Web.UI.MobileControls.TextControl.Text%2A> propriedade, que é herdada do <xref:System.Web.UI.MobileControls.TextControl> classe base.  
+  
+> [!CAUTION]
+>  Evite usar caracteres especiais em URLs de página da Web móvel do ASP.NET. As marcas HREF geradas para lançamento `Command` eventos de volta para o servidor não são estritamente validados. Por exemplo, uma URL que inclui espaços resulta na geração de WML não pode ser manipulada por alguns navegadores WML.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como conectar eventos de comando. Clicar em qualquer um de <xref:System.Web.UI.MobileControls.Command> botões gera o <xref:System.Web.UI.MobileControls.Command.OnItemCommand%2A> evento. A função definida pelo usuário usa o `CommandEventArgs` argumento para ver quais <xref:System.Web.UI.MobileControls.Command> botão foi clicado.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileCommandExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCommandExample/CS/default.aspx#1)]
+ [!code-aspx-vb[MobileCommandExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCommandExample/VB/default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Command ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Command.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Web.UI.MobileControls.Command" /> classe. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Command.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o controle especificado faz com que a validação do lado do servidor ocorrer em todos os controles no formulário. O valor padrão é <see langword="true" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="true" />Se o controle especificado faz com que a validação do lado do servidor ocorrer em todos os controles no formulário; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para a validação ocorrer em um formulário, o formulário deve ser enviado com um controle que gera a validação e deve ter seu <xref:System.Web.UI.MobileControls.Command.CausesValidation%2A> propriedade definida como `true`. O <xref:System.Web.UI.MobileControls.Command> controle atualmente é o único controle que gera a validação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.Command.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário ativa um <see cref="T:System.Web.UI.MobileControls.Command" /> controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Web.UI.MobileControls.Command> controle é ativado, ele gera o <xref:System.Web.UI.MobileControls.Command.OnClick%2A> evento. Para obter mais informações, consulte as seções "Processamento específico do dispositivo" e "Comportamento específico do dispositivo" <xref:System.Web.UI.MobileControls.Command?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como conectar eventos de comando. Clicar em qualquer um de <xref:System.Web.UI.MobileControls.Command> botões gera o <xref:System.Web.UI.MobileControls.Command.OnItemCommand%2A> evento. A função definida pelo usuário usa o `CommandEventArgs` argumento para ver quais <xref:System.Web.UI.MobileControls.Command> botão foi clicado.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileCommandExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileCommandExample/CS/default.aspx#1)]
+ [!code-aspx-vb[MobileCommandExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileCommandExample/VB/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandArgument">
+      <MemberSignature Language="C#" Value="public string CommandArgument { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandArgument" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Command.CommandArgument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou retorna um argumento associado ao comando no evento <see cref="E:System.Web.UI.MobileControls.Command.ItemCommand" />. O valor padrão é uma cadeia de caracteres vazia (""). Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O argumento associado ao comando associado no <see cref="E:System.Web.UI.MobileControls.Command.ItemCommand" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.MobileControls.Command.CommandArgument%2A> propriedade para exibir um valor.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileItemCommandSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileItemCommandSample/cs/default.aspx#1)]
+ [!code-aspx-vb[MobileItemCommandSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileItemCommandSample/vb/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandName">
+      <MemberSignature Language="C#" Value="public string CommandName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Command.CommandName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de comando associado ao controle <see cref="T:System.Web.UI.MobileControls.Command" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O nome do <see cref="T:System.Web.UI.MobileControls.Command" /> que gerou o evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.CommandFormat Format { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.CommandFormat Format" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Command.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.CommandFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de renderização para o <see cref="T:System.Web.UI.MobileControls.Command" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Um <see cref="T:System.Web.UI.MobileControls.CommandFormat" /> valor que indica o estilo de renderização para o <see cref="T:System.Web.UI.MobileControls.Command" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os dois tipos disponíveis por meio de acesso a <xref:System.Web.UI.MobileControls.CommandFormat> enumeração.  
+  
+ <xref:System.Web.UI.MobileControls.CommandFormat?displayProperty=nameWithType> (padrão)  
+ O comando é processado como um botão.  
+  
+ <xref:System.Web.UI.MobileControls.CommandFormat?displayProperty=nameWithType>  
+ O comando é processado como um link.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.MobileControls.Command.Format%2A> propriedade dá suporte ao <xref:System.Web.UI.MobileControls.CommandFormat?displayProperty=nameWithType> valor somente em dispositivos que oferecem suporte a JavaScript conforme indicado pelo <xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.MobileControls.Command.Format%2A> propriedade para processar o comando como um link ou um botão.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileItemCommandSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileItemCommandSample/cs/default.aspx#1)]
+ [!code-aspx-vb[MobileItemCommandSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileItemCommandSample/vb/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageUrl">
+      <MemberSignature Language="C#" Value="public string ImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Command.ImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.MobileControls.ImageUrlEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou retorna a URL da fonte de imagem para o <see cref="T:System.Web.UI.MobileControls.Command" /> controlar quando o controle é processado como um botão de imagem. O valor padrão é <see cref="F:System.String.Empty" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A URL da fonte de imagem para o <see cref="T:System.Web.UI.MobileControls.Command" /> quando o controle é processado como um botão de imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade não for <xref:System.String.Empty> e o dispositivo pode lidar com botões de imagem, o <xref:System.Web.UI.MobileControls.Command> controle usa a imagem em vez de um botão ou link de texto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFormSubmitControl">
+      <MemberSignature Language="C#" Value="protected override bool IsFormSubmitControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsFormSubmitControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Command.IsFormSubmitControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o controle envia o formulário. O padrão é <see langword="false" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>
+          <see langword="true" />Se o controle envia o formulário; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles móveis, como o <xref:System.Web.UI.MobileControls.Command>, pode substituir este método para determinar se esse é um controle usado para o envio do formulário. Outros controles que podem ser estendidos, fornecendo a lógica para determinar programaticamente se eles devem enviar controles, por exemplo, verificando as propriedades específicas.  
+  
+> [!NOTE]
+>  Um controle é considerado como um controle form-submit somente se ele implementa <xref:System.Web.UI.IPostBackEventHandler> método para capturar o evento de postback. Caso contrário, ele não está registrado para o manipulador de eventos padrão, mesmo que o método retornará `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCommand">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.CommandEventHandler ItemCommand;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.CommandEventHandler ItemCommand" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.Command.ItemCommand" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CommandEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário seleciona um comando que está associado com um <see cref="T:System.Web.UI.MobileControls.ObjectList" /> item. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Web.UI.MobileControls.Command.ItemCommand> manipulador de eventos é definido, o <xref:System.Web.UI.MobileControls.Command> controle notifica o manipulador quando um item de evento é gerado por meio da interação do usuário.  
+  
+ Ao contrário de <xref:System.Web.UI.MobileControls.Command.Click> evento, o <xref:System.Web.UI.MobileControls.Command.ItemCommand> evento é transferido até os controles pai. O <xref:System.Web.UI.MobileControls.Command.ItemCommand> processamento de eventos é específico do dispositivo e é discutido em detalhes na seção "Comportamento específico do dispositivo" <xref:System.Web.UI.MobileControls.Command?displayProperty=nameWithType>.  
+  
+ O <xref:System.Web.UI.MobileControls.Command.OnItemCommand%2A> é gerado após um <xref:System.Web.UI.MobileControls.Command.OnClick%2A> eventos. Em um cenário onde você repetir o mesmo conjunto de ações de cada vez que um botão de comando é clicado, você pode usar o <xref:System.Web.UI.MobileControls.Command.CommandName%2A> ou <xref:System.Web.UI.MobileControls.Command.CommandArgument%2A> propriedade o <xref:System.Web.UI.MobileControls.Command> controle para identificar qual comando botão o usuário clicou.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.MobileControls.Command.ItemCommand> evento para vários comandos em uma página.  
+  
+ [!code-aspx-csharp[MobileItemCommandSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileItemCommandSample/cs/default.aspx#1)]
+ [!code-aspx-vb[MobileItemCommandSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileItemCommandSample/vb/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPostData">
+      <MemberSignature Language="C#" Value="protected bool LoadPostData (string key, System.Collections.Specialized.NameValueCollection data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool LoadPostData(string key, class System.Collections.Specialized.NameValueCollection data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Command.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="data" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="key">Uma referência ao nome de uma coleção de parâmetros.</param>
+        <param name="data">Uma coleção de parâmetro de dados de postagem.</param>
+        <summary>Obtém um valor que indica se o adaptador associado com o <see cref="T:System.Web.UI.MobileControls.Command" /> controle tratou carregar os dados de postagem. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>
+          <see langword="true" />Se o adaptador associado a este controle tratou carregar os dados de postagem; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Web.UI.IPostBackDataHandler.LoadPostData%2A?displayProperty=nameWithType> método.  
+  
+> [!NOTE]
+>  Diferentes dispositivos podem fornecer seus dados de volta para o servidor de chamada de maneiras diferentes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Command.OnClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto definido por um <see cref="T:System.EventArgs" /> que contém dados do evento.</param>
+        <summary>Chamado quando o usuário ativa o controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão da <xref:System.Web.UI.MobileControls.Command.OnClick%2A> método gera o <xref:System.Web.UI.MobileControls.Command.Click> evento. Classes de herança pode substituir o <xref:System.Web.UI.MobileControls.Command.OnClick%2A> método para executar outras tarefas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemCommand (System.Web.UI.WebControls.CommandEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemCommand(class System.Web.UI.WebControls.CommandEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Command.OnItemCommand(System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> que contém dados do evento.</param>
+        <summary>Chamado quando o usuário ativa o controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A padrão implementação gera o <xref:System.Web.UI.MobileControls.Command.ItemCommand> evento. Classes de herança pode substituir este método para executar outras tarefas.  
+  
+ O <xref:System.Web.UI.MobileControls.Command.OnItemCommand%2A> é gerado após o <xref:System.Web.UI.MobileControls.Command.OnClick%2A> evento. Isso é útil quando você deve realizar as mesmas ações para várias <xref:System.Web.UI.MobileControls.Command> botões. Você pode usar o <xref:System.Web.UI.MobileControls.Command.CommandName%2A> ou <xref:System.Web.UI.MobileControls.Command.CommandArgument%2A> propriedade o <xref:System.Web.UI.MobileControls.Command> controle para identificar qual <xref:System.Web.UI.MobileControls.Command> botão foi clicado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Command.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.PreRender" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected void RaisePostBackEvent (string argument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaisePostBackEvent(string argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Command.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="argument">O argumento para o evento.</param>
+        <summary>Aciona eventos para o controle <see cref="T:System.Web.UI.MobileControls.Command" /> quando ele executa um postback para o servidor. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Command.RaisePostBackEvent%2A> método é usado internamente pelo <xref:System.Web.UI.MobileControls.Command> controlar quando ele for clicado para gerar um <xref:System.Web.UI.MobileControls.Command.Click> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="protected void RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Command.RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o aplicativo ASP.NET que o estado do <see cref="T:System.Web.UI.MobileControls.Command" /> controle foi alterado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Command.RaisePostDataChangedEvent%2A> método pode ser substituído em uma classe derivada para gerar eventos de alteração para o <xref:System.Web.UI.MobileControls.Command> controlar quando ele envia de volta para o servidor. Esse método é usado principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoftkeyLabel">
+      <MemberSignature Language="C#" Value="public string SoftkeyLabel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SoftkeyLabel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.Command.SoftkeyLabel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou retorna o rótulo usado quando uma tecla de função é exibida. O valor padrão é uma cadeia de caracteres vazia (""). Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O rótulo usado quando uma chave de software é exibida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é usada somente para dispositivos que oferecem suporte a teclas.  
+  
+ Se essa propriedade estiver vazia, o <xref:System.Web.UI.MobileControls.TextControl.Text%2A> propriedade do controle é usada. Se o <xref:System.Web.UI.MobileControls.TextControl.Text%2A> propriedade está vazia ou seu tamanho é menor que 9, o <xref:System.Web.UI.MobileControls.TextControl.Text%2A> propriedade é usada para o rótulo de tecla de função. Caso contrário, a palavra `Go` (se ele é um comando de controle de envio) é exibido.  
+  
+ O valor de <xref:System.Web.UI.MobileControls.Command.SoftkeyLabel%2A> propriedade será truncada para 12 caracteres (o padrão comprimento máximo de uma tecla de função).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.MobileControls.Command.SoftkeyLabel%2A> propriedade.  
+  
+<!-- TODO: review snippet reference  [!CODE [MobileCommandSample#3](MobileCommandSample#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.LoadPostData">
+      <MemberSignature Language="C#" Value="bool IPostBackDataHandler.LoadPostData (string key, System.Collections.Specialized.NameValueCollection data);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Web.UI.IPostBackDataHandler.LoadPostData(string key, class System.Collections.Specialized.NameValueCollection data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Command.System#Web#UI#IPostBackDataHandler#LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="data" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="key">Uma referência ao nome de uma coleção de parâmetros.</param>
+        <param name="data">Uma coleção de parâmetro de dados de postagem.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IPostBackDataHandler.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>
+          <see langword="true" />Se o adaptador trata de carregar os dados de postagem; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.MobileControls.Command> é convertida em uma interface de <xref:System.Web.UI.IPostBackDataHandler?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="void IPostBackDataHandler.RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Command.System#Web#UI#IPostBackDataHandler#RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.MobileControls.Command> é convertida em uma interface de <xref:System.Web.UI.IPostBackDataHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.Command.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">O argumento para o evento.</param>
+        <summary>Aciona eventos para o controle <see cref="T:System.Web.UI.MobileControls.Command" /> quando ele executa um postback para o servidor. Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.Command.RaisePostBackEvent%2A> método é usado internamente pelo <xref:System.Web.UI.MobileControls.Command> controlar quando ele for clicado para gerar um <xref:System.Web.UI.MobileControls.Command.Click> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

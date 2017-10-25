@@ -1,0 +1,343 @@
+<Type Name="StylusPointDescription" FullName="System.Windows.Input.StylusPointDescription">
+  <TypeSignature Language="C#" Value="public class StylusPointDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StylusPointDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusPointDescription" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica as propriedades que estão em um <see cref="T:System.Windows.Input.StylusPoint" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Input.StylusPointDescription> Especifica quais propriedades estão associadas com um <xref:System.Windows.Input.StylusPoint>. Para cada propriedade em uma <xref:System.Windows.Input.StylusPoint>, o <xref:System.Windows.Input.StylusPointDescription> contém um <xref:System.Windows.Input.StylusPointPropertyInfo> objeto que especifica as restrições, como os valores mínimo e máximo da propriedade. Use o <xref:System.Windows.Input.StylusPointDescription.HasProperty%2A> e <xref:System.Windows.Input.StylusPointDescription.GetPropertyInfo%2A> métodos para verificar essas propriedades no <xref:System.Windows.Input.StylusPointDescription>.  
+  
+ Todos os <xref:System.Windows.Input.StylusPoint> objetos em um <xref:System.Windows.Input.StylusPointCollection> devem compartilhar o mesmo <xref:System.Windows.Input.StylusPointDescription>. Se você tentar adicionar um <xref:System.Windows.Input.StylusPoint> para um <xref:System.Windows.Input.StylusPointCollection> que tem um diferentes <xref:System.Windows.Input.StylusPointDescription>, uma exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o <xref:System.Windows.Input.StylusPointDescription> para um <xref:System.Windows.Input.StylusPointCollection> e obtém as informações para cada <xref:System.Windows.Input.StylusPointPropertyInfo> no <xref:System.Windows.Input.StylusPointDescription>.  
+  
+ [!code-csharp[PacketSpy#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[PacketSpy#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#2)]  
+[!code-csharp[PacketSpy#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#4)]
+[!code-vb[PacketSpy#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StylusPointDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPointDescription.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.StylusPointDescription" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão cria um <xref:System.Windows.Input.StylusPointDescription> que contém informações para as propriedades <xref:System.Windows.Input.StylusPointProperties.X>, <xref:System.Windows.Input.StylusPointProperties.Y>, e <xref:System.Windows.Input.StylusPointProperties.NormalPressure>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Input.StylusPointDescription> do objeto e o usa para criar um <xref:System.Windows.Input.StylusPoint>.  
+  
+ [!code-csharp[PacketSpy#5](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#5)]
+ [!code-vb[PacketSpy#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StylusPointDescription (System.Collections.Generic.IEnumerable&lt;System.Windows.Input.StylusPointPropertyInfo&gt; stylusPointPropertyInfos);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Input.StylusPointPropertyInfo&gt; stylusPointPropertyInfos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPointDescription.#ctor(System.Collections.Generic.IEnumerable{System.Windows.Input.StylusPointPropertyInfo})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stylusPointPropertyInfos" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Input.StylusPointPropertyInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPointPropertyInfos">Um IEnumerable genérico do tipo <see cref="T:System.Windows.Input.StylusPointPropertyInfo" /> que especifica as propriedades de <see cref="T:System.Windows.Input.StylusPointDescription" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Input.StylusPointDescription" /> classe com especificado <see cref="T:System.Windows.Input.StylusPointPropertyInfo" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deverá passar <xref:System.Windows.Input.StylusPointPropertyInfo> objetos para as propriedades <xref:System.Windows.Input.StylusPointProperties.X>, <xref:System.Windows.Input.StylusPointProperties.Y>, e <xref:System.Windows.Input.StylusPointProperties.NormalPressure>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Input.StylusPointDescription> do objeto e o usa para criar um <xref:System.Windows.Input.StylusPoint>.  
+  
+ [!code-csharp[PacketSpy#5](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#5)]
+ [!code-vb[PacketSpy#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AreCompatible">
+      <MemberSignature Language="C#" Value="public static bool AreCompatible (System.Windows.Input.StylusPointDescription stylusPointDescription1, System.Windows.Input.StylusPointDescription stylusPointDescription2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool AreCompatible(class System.Windows.Input.StylusPointDescription stylusPointDescription1, class System.Windows.Input.StylusPointDescription stylusPointDescription2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPointDescription.AreCompatible(System.Windows.Input.StylusPointDescription,System.Windows.Input.StylusPointDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPointDescription1" Type="System.Windows.Input.StylusPointDescription" />
+        <Parameter Name="stylusPointDescription2" Type="System.Windows.Input.StylusPointDescription" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPointDescription1">A primeira <see cref="T:System.Windows.Input.StylusPointDescription" /> para verificar.</param>
+        <param name="stylusPointDescription2">O segundo <see cref="T:System.Windows.Input.StylusPointDescription" /> para verificar.</param>
+        <summary>Retorna um valor que indica se o especificado <see cref="T:System.Windows.Input.StylusPointDescription" /> objetos são idênticos.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Windows.Input.StylusPointDescription" /> objetos são idênticas; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Windows.Input.StylusPointDescription> objetos são compatíveis, se eles contêm o mesmo <xref:System.Windows.Input.StylusPointPropertyInfo> objetos na mesma ordem.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir verifica se duas <xref:System.Windows.Input.StylusPointDescription> objetos são compatíveis.  
+  
+ [!code-csharp[PacketSpy#22](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#22)]
+ [!code-vb[PacketSpy#22](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#22)]  
+[!code-csharp[PacketSpy#23](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#23)]
+[!code-vb[PacketSpy#23](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCommonDescription">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.StylusPointDescription GetCommonDescription (System.Windows.Input.StylusPointDescription stylusPointDescription, System.Windows.Input.StylusPointDescription stylusPointDescriptionPreserveInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Input.StylusPointDescription GetCommonDescription(class System.Windows.Input.StylusPointDescription stylusPointDescription, class System.Windows.Input.StylusPointDescription stylusPointDescriptionPreserveInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPointDescription.GetCommonDescription(System.Windows.Input.StylusPointDescription,System.Windows.Input.StylusPointDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPointDescription" Type="System.Windows.Input.StylusPointDescription" />
+        <Parameter Name="stylusPointDescriptionPreserveInfo" Type="System.Windows.Input.StylusPointDescription" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPointDescription">A primeira <see cref="T:System.Windows.Input.StylusPointDescription" /> para intersect.</param>
+        <param name="stylusPointDescriptionPreserveInfo">O segundo <see cref="T:System.Windows.Input.StylusPointDescription" /> para intersect.</param>
+        <summary>Retorna a interseção de especificado <see cref="T:System.Windows.Input.StylusPointDescription" /> objetos.</summary>
+        <returns>Um <see cref="T:System.Windows.Input.StylusPointDescription" /> que contém as propriedades que estão presentes se especificada <see cref="T:System.Windows.Input.StylusPointDescription" /> objetos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `StylusPointDescription1`e `stylusPointDescriptionPreserveInfo` pode ter uma propriedade comum, mas as restrições especificadas nas suas respectivas <xref:System.Windows.Input.StylusPointPropertyInfo> objetos são diferentes. Se as restrições forem diferentes, o <xref:System.Windows.Input.StylusPointDescription.GetCommonDescription%2A> método usa o <xref:System.Windows.Input.StylusPointPropertyInfo> de `stylusPointDescriptionPreserveInfo`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como localizar comuns <xref:System.Windows.Input.StylusPointDescription> de duas diferentes <xref:System.Windows.Input.StylusPointDescription> objetos.  
+  
+ [!code-csharp[PacketSpy#26](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#26)]
+ [!code-vb[PacketSpy#26](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyInfo">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.StylusPointPropertyInfo GetPropertyInfo (System.Windows.Input.StylusPointProperty stylusPointProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Input.StylusPointPropertyInfo GetPropertyInfo(class System.Windows.Input.StylusPointProperty stylusPointProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPointDescription.GetPropertyInfo(System.Windows.Input.StylusPointProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.StylusPointPropertyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPointProperty" Type="System.Windows.Input.StylusPointProperty" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPointProperty">O <see cref="T:System.Windows.Input.StylusPointProperty" /> que especifica a propriedade de desejado <see cref="T:System.Windows.Input.StylusPointPropertyInfo" />.</param>
+        <summary>Obtém o <see cref="T:System.Windows.Input.StylusPointPropertyInfo" /> para a propriedade especificada.</summary>
+        <returns>O <see cref="T:System.Windows.Input.StylusPointPropertyInfo" /> especificado <see cref="T:System.Windows.Input.StylusPointProperty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como obter informações sobre uma propriedade de um <xref:System.Windows.Input.StylusPointDescription>. Este exemplo supõe que o <xref:System.Windows.UIElement.StylusMove> evento foi conectado ao manipulador de eventos abaixo.  
+  
+ [!code-csharp[PacketSpy#21](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#21)]
+ [!code-vb[PacketSpy#21](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStylusPointProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Input.StylusPointPropertyInfo&gt; GetStylusPointProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Input.StylusPointPropertyInfo&gt; GetStylusPointProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPointDescription.GetStylusPointProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Input.StylusPointPropertyInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém todas as propriedades do <see cref="T:System.Windows.Input.StylusPointDescription" />.</summary>
+        <returns>Uma coleção que contém todos os <see cref="T:System.Windows.Input.StylusPointPropertyInfo" /> objetos no <see cref="T:System.Windows.Input.StylusPointDescription" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir obtém o <xref:System.Windows.Input.StylusPointDescription> para um <xref:System.Windows.Input.StylusPointCollection> junto com as informações para cada <xref:System.Windows.Input.StylusPointPropertyInfo> no <xref:System.Windows.Input.StylusPointDescription>.  
+  
+ [!code-csharp[PacketSpy#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[PacketSpy#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#2)]  
+[!code-csharp[PacketSpy#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#4)]
+[!code-vb[PacketSpy#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasProperty">
+      <MemberSignature Language="C#" Value="public bool HasProperty (System.Windows.Input.StylusPointProperty stylusPointProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasProperty(class System.Windows.Input.StylusPointProperty stylusPointProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPointDescription.HasProperty(System.Windows.Input.StylusPointProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPointProperty" Type="System.Windows.Input.StylusPointProperty" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPointProperty">O <see cref="T:System.Windows.Input.StylusPointProperty" /> para verificar a <see cref="T:System.Windows.Input.StylusPointDescription" />.</param>
+        <summary>Retorna um valor que indica se o atual <see cref="T:System.Windows.Input.StylusPointDescription" /> tem a propriedade especificada.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Windows.Input.StylusPointDescription" /> foi especificado <see cref="T:System.Windows.Input.StylusPointProperty" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como obter informações sobre uma propriedade de um <xref:System.Windows.Input.StylusPointDescription>. Este exemplo supõe que o <xref:System.Windows.UIElement.StylusMove> evento foi conectado ao manipulador de eventos.  
+  
+ [!code-csharp[PacketSpy#21](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#21)]
+ [!code-vb[PacketSpy#21](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public bool IsSubsetOf (System.Windows.Input.StylusPointDescription stylusPointDescriptionSuperset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsSubsetOf(class System.Windows.Input.StylusPointDescription stylusPointDescriptionSuperset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPointDescription.IsSubsetOf(System.Windows.Input.StylusPointDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stylusPointDescriptionSuperset" Type="System.Windows.Input.StylusPointDescription" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPointDescriptionSuperset">O <see cref="T:System.Windows.Input.StylusPointDescription" /> para verificar se o atual <see cref="T:System.Windows.Input.StylusPointDescription" /> é um subconjunto.</param>
+        <summary>Retorna um valor que indica se o atual <see cref="T:System.Windows.Input.StylusPointDescription" /> é um subconjunto do <see cref="T:System.Windows.Input.StylusPointDescription" />.</summary>
+        <returns>
+          <see langword="true" />Se o atual <see cref="T:System.Windows.Input.StylusPointDescription" /> é um subconjunto do <see cref="T:System.Windows.Input.StylusPointDescription" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A exemplo a seguir verifica se `description2` é um subconjunto de `description1`.  
+  
+ [!code-csharp[PacketSpy#22](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#22)]
+ [!code-vb[PacketSpy#22](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#22)]  
+[!code-csharp[PacketSpy#24](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#24)]
+[!code-vb[PacketSpy#24](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyCount">
+      <MemberSignature Language="C#" Value="public int PropertyCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PropertyCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPointDescription.PropertyCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de propriedades de <see cref="T:System.Windows.Input.StylusPointDescription" />.</summary>
+        <value>O número de propriedades de <see cref="T:System.Windows.Input.StylusPointDescription" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como obter as propriedades de cada <xref:System.Windows.Input.StylusPoint> em um <xref:System.Windows.Input.StylusPointCollection>. Este exemplo supõe que haja uma <xref:System.Windows.Controls.TextBlock> chamado `packetOutput`.  
+  
+ [!code-csharp[PacketSpy#3](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[PacketSpy#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#3)]  
+[!code-csharp[PacketSpy#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#4)]
+[!code-vb[PacketSpy#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

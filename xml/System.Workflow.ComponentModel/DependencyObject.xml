@@ -1,0 +1,769 @@
+<Type Name="DependencyObject" FullName="System.Workflow.ComponentModel.DependencyObject">
+  <TypeSignature Language="C#" Value="public abstract class DependencyObject : IDisposable, System.ComponentModel.IComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DependencyObject extends System.Object implements class System.ComponentModel.IComponent, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.DependencyObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IComponent</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer(typeof(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer), typeof(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer(typeof(System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer), typeof(System.ComponentModel.Design.Serialization.CodeDomSerializer))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A classe base de todos os objetos que têm propriedades de dependência. Essa classe deve ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DependencyObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddHandler">
+      <MemberSignature Language="C#" Value="public void AddHandler (System.Workflow.ComponentModel.DependencyProperty dependencyEvent, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddHandler(class System.Workflow.ComponentModel.DependencyProperty dependencyEvent, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.AddHandler(System.Workflow.ComponentModel.DependencyProperty,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyEvent" Type="System.Workflow.ComponentModel.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyEvent">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <param name="value">O <see cref="T:System.Object" /> que representa o valor dessa propriedade. Nesse caso, um <see cref="T:System.Delegate" /> tipo.</param>
+        <summary>Adiciona um manipulador para um evento de um <see cref="T:System.Workflow.ComponentModel.DependencyObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um delegado, você pode identificar o método que manipula o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. A menos que você remova o representante, o manipulador de eventos é chamado sempre que o evento ocorre. Vários representantes podem ser adicionados para manipular um evento. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Manipuladores são adicionados e removidos usando o código a seguir. Este exemplo de código é parte do exemplo enviar email SDK e do arquivo de SendMailActivity.cs. Para obter mais informações, consulte [enviar exemplo de atividade de email](http://msdn.microsoft.com/en-us/bfb5939e-60a9-4037-af4e-2cea9e654669).  
+  
+ [!code-csharp[WF_Samples#232](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#232)]
+ [!code-vb[WF_Samples#232](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#232)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um dos argumentos for uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="dependencyEvent" /> representa um não-evento de <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignMode">
+      <MemberSignature Language="C#" Value="protected bool DesignMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DesignMode" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyObject.DesignMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que indica se esta instância é no design ou modo de tempo de execução.</summary>
+        <value>
+          <see langword="true" />Se esta instância está no modo de design; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Workflow.ComponentModel.DependencyObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados e, opcionalmente, libera os recursos gerenciados usados pelo <see cref="T:System.Workflow.ComponentModel.DependencyObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~DependencyObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornecido como uma substituição para <see cref="M:System.Object.Finalize" /> para limpar todos os recursos não gerenciados de forma determinista.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, isso é necessário somente quando os manipuladores de arquivos de recursos não gerenciados, como HWNDS bruto, Win32, e outros são liberados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBinding">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.ActivityBind GetBinding (System.Workflow.ComponentModel.DependencyProperty dependencyProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.ComponentModel.ActivityBind GetBinding(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.GetBinding(System.Workflow.ComponentModel.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityBind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyProperty" Type="System.Workflow.ComponentModel.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyProperty">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <summary>Fornece acesso para o <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> associado específico <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</summary>
+        <returns>O <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> associado específico <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoundValue">
+      <MemberSignature Language="C#" Value="protected virtual object GetBoundValue (System.Workflow.ComponentModel.ActivityBind bind, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetBoundValue(class System.Workflow.ComponentModel.ActivityBind bind, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.GetBoundValue(System.Workflow.ComponentModel.ActivityBind,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bind" Type="System.Workflow.ComponentModel.ActivityBind" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="bind">O <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</param>
+        <param name="targetType">O <see cref="T:System.Type" /> do destino do <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</param>
+        <summary>Recupera o <see cref="T:System.Object" /> que é o assunto de um <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</summary>
+        <returns>O <see cref="T:System.Object" /> que é o assunto de um <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Object> que é o assunto de um <xref:System.Workflow.ComponentModel.ActivityBind>. Quando substituído em uma classe derivada, esse método pode ser usado para personalizar a maneira em que uma associação especificada é resolvida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetType" />é uma referência nula (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInvocationList&lt;T&gt;">
+      <MemberSignature Language="C#" Value="protected T[] GetInvocationList&lt;T&gt; (System.Workflow.ComponentModel.DependencyProperty dependencyEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance !!T[] GetInvocationList&lt;T&gt;(class System.Workflow.ComponentModel.DependencyProperty dependencyEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.GetInvocationList``1(System.Workflow.ComponentModel.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T[]</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="dependencyEvent" Type="System.Workflow.ComponentModel.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo retornado delegados.</typeparam>
+        <param name="dependencyEvent">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> especificado.</param>
+        <summary>Obtém uma matriz que contém os delegados especificado <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</summary>
+        <returns>Uma matriz que contém os delegados especificado <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dependencyEvent" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="dependencyEvent" />não corresponde a um evento.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (System.Workflow.ComponentModel.DependencyProperty dependencyProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.GetValue(System.Workflow.ComponentModel.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyProperty" Type="System.Workflow.ComponentModel.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyProperty">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <summary>Fornece acesso ao valor do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> designado.</summary>
+        <returns>O objeto que representa o valor do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> designado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse membro é usado na propriedade obtém para fornecer o valor de dependência nomeada.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como usar <xref:System.Workflow.ComponentModel.DependencyObject.GetValue%2A> para retornar o valor representado por uma propriedade de dependência nomeada no contexto de get e set. Este exemplo de código é parte do exemplo enviar email SDK e do arquivo de SendMailActivity.cs. Para obter mais informações, consulte [enviar exemplo de atividade de email](http://msdn.microsoft.com/en-us/bfb5939e-60a9-4037-af4e-2cea9e654669).  
+  
+ [!code-csharp[WF_Samples#231](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#231)]
+ [!code-vb[WF_Samples#231](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#231)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueBase">
+      <MemberSignature Language="C#" Value="public object GetValueBase (System.Workflow.ComponentModel.DependencyProperty dependencyProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValueBase(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.GetValueBase(System.Workflow.ComponentModel.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyProperty" Type="System.Workflow.ComponentModel.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyProperty">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> para obter o valor de.</param>
+        <summary>Fornece acesso ao objeto associado de um <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> e ignora o <see cref="M:System.Workflow.ComponentModel.DependencyObject.GetValue(System.Workflow.ComponentModel.DependencyProperty)" /> substituir.</summary>
+        <returns>O objeto associado de um <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />. Isso ignora o <see cref="M:System.Workflow.ComponentModel.DependencyObject.GetValue(System.Workflow.ComponentModel.DependencyProperty)" /> substituir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é útil dentro de <xref:System.Workflow.ComponentModel.DependencyObject.GetValue%2A> substituir a implementação. Normalmente, o <xref:System.Workflow.ComponentModel.DependencyObject.GetValue%2A> substituir o código invoca o <xref:System.Workflow.ComponentModel.DependencyObject.GetValueBase%2A>e, em seguida, adiciona o código adicional.  
+  
+ Para implementar o <xref:System.Workflow.ComponentModel.DependencyObject.GetValue%2A> substituir, <xref:System.Workflow.ComponentModel.PropertyMetadata> pode ser usado em <xref:System.Workflow.ComponentModel.DependencyProperty.Register%2A> / <xref:System.Workflow.ComponentModel.DependencyProperty.RegisterAttached%2A> chamadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dependencyProperty" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeProperties">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.InitializeProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a inicialização nas propriedades de dependência Quando substituído em uma classe derivada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamado pelo mecanismo de tempo de execução de fluxo de trabalho durante a inicialização da atividade em tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBindingSet">
+      <MemberSignature Language="C#" Value="public bool IsBindingSet (System.Workflow.ComponentModel.DependencyProperty dependencyProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsBindingSet(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.IsBindingSet(System.Workflow.ComponentModel.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyProperty" Type="System.Workflow.ComponentModel.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyProperty">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> a ser testado.</param>
+        <summary>Indica se o valor de um <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> é definido como uma associação. Consulte <see cref="M:System.Workflow.ComponentModel.DependencyObject.SetBinding(System.Workflow.ComponentModel.DependencyProperty,System.Workflow.ComponentModel.ActivityBind)" />.</summary>
+        <returns>
+          <see langword="true" />Se definido como uma associação; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dependencyProperty" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MetaEquals">
+      <MemberSignature Language="C#" Value="public bool MetaEquals (System.Workflow.ComponentModel.DependencyObject dependencyObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MetaEquals(class System.Workflow.ComponentModel.DependencyObject dependencyObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.MetaEquals(System.Workflow.ComponentModel.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Workflow.ComponentModel.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">O <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> para comparação de igualdade.</param>
+        <summary>Determina se o <see langword="metaproperties" /> deste <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> é igual a <see langword="metaproperties" /> de com os parâmetros <see cref="T:System.Workflow.ComponentModel.DependencyObject" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see langword="metaproperties" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso usa o `==` operador conforme definido para o tipo de membro particular `metaproperties`, que é <xref:System.Collections.IDictionary>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentDependencyObject">
+      <MemberSignature Language="C#" Value="protected System.Workflow.ComponentModel.DependencyObject ParentDependencyObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.DependencyObject ParentDependencyObject" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyObject.ParentDependencyObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> no <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> gráfico.</summary>
+        <value>O pai <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> no <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> gráfico.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveHandler">
+      <MemberSignature Language="C#" Value="public void RemoveHandler (System.Workflow.ComponentModel.DependencyProperty dependencyEvent, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveHandler(class System.Workflow.ComponentModel.DependencyProperty dependencyEvent, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.RemoveHandler(System.Workflow.ComponentModel.DependencyProperty,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyEvent" Type="System.Workflow.ComponentModel.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyEvent">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <param name="value">O <see cref="T:System.Object" /> que representa o valor dessa propriedade. Nesse caso, um <see cref="T:System.Delegate" /> tipo.</param>
+        <summary>Remove um <see cref="T:System.EventHandler" /> de um tipo de <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornecido como um método conveniente para a remoção de um representante do evento.  
+  
+ Quando você cria um delegado, você pode identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. A menos que você remova o representante, o manipulador de eventos é chamado sempre que o evento ocorre. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Manipuladores são adicionados e removidos usando o código a seguir. Para obter mais informações, consulte [enviar exemplo de atividade de email](http://msdn.microsoft.com/en-us/bfb5939e-60a9-4037-af4e-2cea9e654669).  
+  
+ [!code-csharp[WF_Samples#232](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#232)]
+ [!code-vb[WF_Samples#232](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#232)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um dos argumentos for uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="dependencyEvent" /> não é um evento.</exception>
+        <exception cref="T:System.Data.ReadOnlyException">O <paramref name="value" /> é um <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> e essa instância não está em <see cref="P:System.Workflow.ComponentModel.DependencyObject.DesignMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveProperty">
+      <MemberSignature Language="C#" Value="public bool RemoveProperty (System.Workflow.ComponentModel.DependencyProperty dependencyProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveProperty(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.RemoveProperty(System.Workflow.ComponentModel.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyProperty" Type="System.Workflow.ComponentModel.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyProperty">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> a ser removido.</param>
+        <summary>Remove um <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> do <see cref="T:System.Workflow.ComponentModel.DependencyObject" />.</summary>
+        <returns>
+          <see langword="true" />Se a operação foi bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBinding">
+      <MemberSignature Language="C#" Value="public void SetBinding (System.Workflow.ComponentModel.DependencyProperty dependencyProperty, System.Workflow.ComponentModel.ActivityBind bind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBinding(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty, class System.Workflow.ComponentModel.ActivityBind bind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.SetBinding(System.Workflow.ComponentModel.DependencyProperty,System.Workflow.ComponentModel.ActivityBind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyProperty" Type="System.Workflow.ComponentModel.DependencyProperty" />
+        <Parameter Name="bind" Type="System.Workflow.ComponentModel.ActivityBind" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyProperty">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <param name="bind">O <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> para definir como.</param>
+        <summary>Conjuntos de <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> especificado <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.DependencyObject.SetValue%2A>Define o valor diretamente para o <xref:System.Workflow.ComponentModel.DependencyProperty>. Da mesma forma, <xref:System.Workflow.ComponentModel.DependencyObject.AddHandler%2A> adiciona um manipulador diretamente às propriedades de evento de tipo.  
+  
+ Esses métodos são exclusivos quando eles são chamados para a mesma propriedade. Se <xref:System.Workflow.ComponentModel.DependencyObject.SetBinding%2A> é chamado, os valores definidos anteriormente usando <xref:System.Workflow.ComponentModel.DependencyObject.SetValue%2A> (<xref:System.Workflow.ComponentModel.DependencyObject.AddHandler%2A> em eventos) são desconsiderados. O mesmo é verdadeiro o oposto: <xref:System.Workflow.ComponentModel.DependencyObject.SetValue%2A> (<xref:System.Workflow.ComponentModel.DependencyObject.AddHandler%2A>) redefine a associação atribuída com <xref:System.Workflow.ComponentModel.DependencyObject.SetBinding%2A>.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como criar atividades e adicioná-los como filhos a uma atividade composta e inclui a configuração de <xref:System.Workflow.ComponentModel.CompositeActivity.CanModifyActivities%2A> permissão para este tipo.  
+  
+ Além disso, o uso do <xref:System.Workflow.ComponentModel.DependencyObject.SetBinding%2A> método é ilustrado.  
+  
+ Este exemplo de código é parte do exemplo Throw SDK e do arquivo de ThrowWorkFlow.cs. Para obter mais informações, consulte [usando Throw](http://msdn.microsoft.com/en-us/aa5b9546-ec95-4e43-8337-20e26f8d71cc).  
+  
+ [!code-csharp[WF_Samples#215](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#215)]
+ [!code-vb[WF_Samples#215](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#215)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um dos argumentos for uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Workflow.ComponentModel.PropertyMetadata" /> associados a <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> não é associável.</exception>
+        <exception cref="T:System.InvalidOperationException">Esta instância não está em <see cref="P:System.Workflow.ComponentModel.DependencyObject.DesignMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundValue">
+      <MemberSignature Language="C#" Value="protected virtual void SetBoundValue (System.Workflow.ComponentModel.ActivityBind bind, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetBoundValue(class System.Workflow.ComponentModel.ActivityBind bind, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.SetBoundValue(System.Workflow.ComponentModel.ActivityBind,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bind" Type="System.Workflow.ComponentModel.ActivityBind" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="bind">O <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</param>
+        <param name="value">O <see cref="T:System.Object" /> para definir o destino do <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</param>
+        <summary>Define o valor de destino <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bind" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnlyPropertyValue">
+      <MemberSignature Language="C#" Value="protected void SetReadOnlyPropertyValue (System.Workflow.ComponentModel.DependencyProperty dependencyProperty, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void SetReadOnlyPropertyValue(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.SetReadOnlyPropertyValue(System.Workflow.ComponentModel.DependencyProperty,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyProperty" Type="System.Workflow.ComponentModel.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyProperty">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <param name="value">A <see cref="T:System.Object" /> que representa o valor.</param>
+        <summary>Define o valor de um <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />, que é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <see langword="Nothing" /> é uma referência nula (<paramref name="dependencyProperty" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (System.Workflow.ComponentModel.DependencyProperty dependencyProperty, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.SetValue(System.Workflow.ComponentModel.DependencyProperty,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyProperty" Type="System.Workflow.ComponentModel.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyProperty">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> a ser definido.</param>
+        <param name="value">O <see cref="T:System.Object" /> para definir o valor.</param>
+        <summary>Define o valor da <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> ao objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.DependencyObject.SetBinding%2A>define uma associação para a propriedade de dependência.  
+  
+ <xref:System.Workflow.ComponentModel.DependencyObject.SetValue%2A>define um valor diretamente para o <xref:System.Workflow.ComponentModel.DependencyProperty> (da mesma forma, <xref:System.Workflow.ComponentModel.DependencyObject.AddHandler%2A> adiciona um manipulador diretamente às propriedades de evento de tipo).  
+  
+ Esses métodos são exclusivos quando eles são chamados para a mesma propriedade. Se <xref:System.Workflow.ComponentModel.DependencyObject.SetBinding%2A> é chamado, os valores definidos anteriormente usando <xref:System.Workflow.ComponentModel.DependencyObject.SetValue%2A> (<xref:System.Workflow.ComponentModel.DependencyObject.AddHandler%2A> em eventos) são desconsiderados. O mesmo é verdadeiro o oposto: <xref:System.Workflow.ComponentModel.DependencyObject.SetValue%2A> (<xref:System.Workflow.ComponentModel.DependencyObject.AddHandler%2A>) redefine a associação atribuída com <xref:System.Workflow.ComponentModel.DependencyObject.SetBinding%2A>.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como uma propriedade de dependência é definida dentro de um objeto de dependência usando <xref:System.Workflow.ComponentModel.DependencyObject.SetValue%2A>.  
+  
+ [!code-csharp[WF_Samples#166](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#166)]
+ [!code-vb[WF_Samples#166](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#166)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValueBase">
+      <MemberSignature Language="C#" Value="public void SetValueBase (System.Workflow.ComponentModel.DependencyProperty dependencyProperty, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValueBase(class System.Workflow.ComponentModel.DependencyProperty dependencyProperty, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyObject.SetValueBase(System.Workflow.ComponentModel.DependencyProperty,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyProperty" Type="System.Workflow.ComponentModel.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyProperty">O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> seja definida como o <see cref="T:System.Object" />.</param>
+        <param name="value">O <see cref="T:System.Object" /> que se tornará o valor de <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <summary>Define o valor da <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> especificado <see cref="T:System.Object" />, ignorando o <see cref="M:System.Workflow.ComponentModel.DependencyObject.SetValue(System.Workflow.ComponentModel.DependencyProperty,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é útil dentro de <xref:System.Workflow.ComponentModel.DependencyObject.SetValue%2A> substituir a implementação. Normalmente, o <xref:System.Workflow.ComponentModel.DependencyObject.SetValue%2A> substituição código faria alguma lógica personalizada antes de chamar o <xref:System.Workflow.ComponentModel.DependencyObject.SetValueBase%2A> método.  
+  
+ Para configuração de um <xref:System.Workflow.ComponentModel.DependencyObject.SetValue%2A> substituir, <xref:System.Workflow.ComponentModel.PropertyMetadata> pode ser usado em <xref:System.Workflow.ComponentModel.DependencyProperty>, <xref:System.Workflow.ComponentModel.DependencyProperty.Register%2A>, ou <xref:System.Workflow.ComponentModel.DependencyProperty.RegisterAttached%2A> chamadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dependencyProperty" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ISite Site { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISite Site" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyObject.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência para o <see cref="P:System.Workflow.ComponentModel.DependencyObject.Site" /> componente do <see cref="T:System.Workflow.ComponentModel.DependencyObject" />.</summary>
+        <value>O <see cref="P:System.Workflow.ComponentModel.DependencyObject.Site" /> componente do <see cref="T:System.Workflow.ComponentModel.DependencyObject" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserData">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary UserData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary UserData" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyObject.UserData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.IDictionary" /> que associa dados personalizados essa instância de classe.</summary>
+        <value>Um dicionário que atua como um gancho de extensibilidade para desenvolvedores manipular <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> declarações para um design de ferramenta e associar dados personalizados a declarações de atividades individuais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é um `metaproperty`, que significa que ele é imutável em tempo de execução. `Metaproperties`Não altere o após uma instância de propriedade é criada em tempo de execução para a propriedade deve ser definida como um valor literal em tempo de design.  
+  
+ Esta propriedade não é usada no padrão <xref:System.Workflow.ComponentModel.Activity> implementações de declaração fornecidas pelo Windows Workflow Foundation. Esta coleção não é serializada; dados que contém a coleção não são persistidos de tempo de design para tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

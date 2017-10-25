@@ -1,0 +1,121 @@
+<Type Name="HideDisabledControlAdapter" FullName="System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter">
+  <TypeSignature Language="C#" Value="public class HideDisabledControlAdapter : System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HideDisabledControlAdapter extends System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Adapters.WebControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece recursos de renderização para o controle de Web associado modificar a marcação padrão ou o comportamento de um navegador específico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> classe adapta associado <xref:System.Web.UI.WebControls.WebControl> controle para modificar a marcação padrão ou o comportamento de um navegador específico. Você pode estender o <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> classe para personalizar a renderização de formatos de <xref:System.Web.UI.WebControls.WebControl> controle.  
+  
+ Adaptadores são componentes compilados do .NET Framework que assumem uma ou mais fases do ciclo de vida de uma página ou controle. Estendendo o <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> classe fornecerá acesso para os estágios do ciclo de vida de <xref:System.Web.UI.WebControls.WebControl> controle. Para obter mais informações, consulte [arquitetura visão geral do controle comportamento adaptável](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ A solicitação inicial de um adaptador faz com que o .NET Framework pesquisar um adaptador mapeado para o controle recebe as características do navegador solicitante. Arquivos de definição de navegador são usados pela <xref:System.Web.HttpBrowserCapabilities> classe para identificar as características do navegador do cliente e mapear o adaptador para o tipo de navegador. Para obter mais informações, consulte [arquitetura visão geral do controle comportamento adaptável](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ Para obter uma descrição da arquitetura de renderização adaptável do ASP.NET e instruções passo a passo que mostra como implementar um adaptador de controle e mapeá-la para um controle, consulte "Criação ASP.NET Server controle adaptadores: uma introdução" na biblioteca MSDN em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como estender o <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> classe para exibir um <xref:System.Web.UI.WebControls.Label> controle em um estado desabilitado e habilitado. Este exemplo contém três partes:  
+  
+-   Um adaptador é derivado de <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> classe.  
+  
+-   O arquivo. aspx que incorpora o <xref:System.Web.UI.WebControls.Label> controle e o conteúdo específico ao dispositivo.  
+  
+-   Um arquivo de navegador para vincular o adaptador a um tipo de dispositivo.  
+  
+ O exemplo de código a seguir demonstra como estender o <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/CS/hidedisabledcontrolcontosoadapter.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/VB/hidedisabledcontrolcontosoadapter.vb#1)]  
+  
+ O exemplo de código a seguir demonstra como declarar uma <xref:System.Web.UI.WebControls.Label> controle com conteúdo específico ao dispositivo.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/CS/implcs.aspx#3)]
+ [!code-aspx-vb[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/VB/implvb.aspx#3)]  
+  
+ O exemplo de código a seguir mostra como vincular a <xref:System.Web.UI.WebControls.Label> controle para o adaptador personalizado para navegadores em execução no Windows CE .NET.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HideDisabledControlAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework constrói uma instância do <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> classe. A solicitação inicial de um adaptador faz com que o .NET Framework pesquisar um adaptador mapeado para o controle recebe as características do navegador solicitante. Uma vez encontrada, o controle contém uma referência para a instância do adaptador mapeado no seu <xref:System.Web.UI.Control.Adapter%2A> propriedade. Para obter informações sobre mapeamentos de adaptador e arquivos de definição de navegador, consulte [arquitetura visão geral do controle comportamento adaptável](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém métodos para criar e processar a saída específica do dispositivo.</param>
+        <summary>Grava o controle da Web associado ao fluxo de saída como HTML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render%2A> método grava associado <xref:System.Web.UI.WebControls.WebControl> controle o fluxo de saída como HTML.  
+  
+ Por padrão, o .NET Framework chama o controle de servidor Web próprio <xref:System.Web.UI.Control.Render%2A> método. No entanto, depois que o <xref:System.Web.UI.Control.Adapter%2A> propriedade do controle é definida, o .NET Framework executará a implementação do adaptador do <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render%2A> eventos em que o controle associado.  
+  
+ O <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render%2A> eventos é usado para executar modificações no código de marcação que é renderizado em um navegador de dispositivo. Propriedades de controle devem ser definidas antes desta fase do ciclo de vida e apenas a criação de marcação real para o controle aqui. As alterações feitas ao controle neste estágio do ciclo de vida não são salvas em estado de exibição. Para salvar as alterações feitas ao controle, substituir o <xref:System.Web.UI.Adapters.ControlAdapter.OnPreRender%2A> evento.  
+  
+ O <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render%2A> evento também permite que classes derivadas manipular o evento sem anexar um delegado, que é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter.Render%2A> método para passar o <xref:System.Web.UI.HtmlTextWriter> objeto para o controle pai para a renderização de se o controle associado está habilitado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/CS/hidedisabledcontrolcontosoadapter.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HideDisabledControlAdapter/VB/hidedisabledcontrolcontosoadapter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

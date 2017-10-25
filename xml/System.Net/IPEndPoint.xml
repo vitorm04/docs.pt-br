@@ -1,0 +1,538 @@
+<Type Name="IPEndPoint" FullName="System.Net.IPEndPoint">
+  <TypeSignature Language="C#" Value="public class IPEndPoint : System.Net.EndPoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit IPEndPoint extends System.Net.EndPoint" />
+  <TypeSignature Language="DocId" Value="T:System.Net.IPEndPoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.EndPoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um ponto de extremidade de rede como um endereço IP e um número de porta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.IPEndPoint> classe contém as informações de porta local ou remoto necessitados a um aplicativo para se conectar a um serviço em um host e o host. Combinando o endereço IP do host e número da porta de um serviço, o <xref:System.Net.IPEndPoint> classe formulários uma conexão ponto a um serviço.  
+  
+   
+  
+## Examples  
+ [!code-cpp[System.Net.IPEndPoint#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPEndPoint/CPP/ipendpoint.cpp#1)]
+ [!code-csharp[System.Net.IPEndPoint#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPEndPoint/CS/ipendpoint.cs#1)]
+ [!code-vb[System.Net.IPEndPoint#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPEndPoint/VB/ipendpoint.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IPEndPoint (long address, int port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 address, int32 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPEndPoint.#ctor(System.Int64,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.Int64" />
+        <Parameter Name="port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="address">O endereço IP do host da Internet.</param>
+        <param name="port">O número de porta associado a <c>endereço</c>, ou 0 para especificar uma porta disponível. <c>porta</c> está na ordem de host.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.IPEndPoint" /> com o endereço e o número da porta especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o número de porta e endereço IP especificado para criar um <xref:System.Net.IPEndPoint>.  
+  
+ [!code-cpp[IPEndPoint_Properties#4](~/samples/snippets/cpp/VS_Snippets_Remoting/IPEndPoint_Properties/CPP/ipendpoint_properties.cpp#4)]
+ [!code-csharp[IPEndPoint_Properties#4](~/samples/snippets/csharp/VS_Snippets_Remoting/IPEndPoint_Properties/CS/ipendpoint_properties.cs#4)]
+ [!code-vb[IPEndPoint_Properties#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPEndPoint_Properties/VB/ipendpoint_properties.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="port" /> é menor que <see cref="F:System.Net.IPEndPoint.MinPort" />.  
+  
+ -ou-  
+  
+ <paramref name="port" /> é maior que <see cref="F:System.Net.IPEndPoint.MaxPort" />.  
+  
+ -ou-  
+  
+ <paramref name="address" /> é menor que 0 ou maior que 0x00000000FFFFFFFF.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IPEndPoint (System.Net.IPAddress address, int port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.IPAddress address, int32 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPEndPoint.#ctor(System.Net.IPAddress,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.Net.IPAddress" />.</param>
+        <param name="port">O número de porta associado a <c>endereço</c>, ou 0 para especificar uma porta disponível. <c>porta</c> está na ordem de host.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.IPEndPoint" /> com o endereço e o número da porta especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[System.Net.IPEndPoint#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPEndPoint/CPP/ipendpoint.cpp#2)]
+ [!code-csharp[System.Net.IPEndPoint#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPEndPoint/CS/ipendpoint.cs#2)]
+ [!code-vb[System.Net.IPEndPoint#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPEndPoint/VB/ipendpoint.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="port" /> é menor que <see cref="F:System.Net.IPEndPoint.MinPort" />.  
+  
+ -ou-  
+  
+ <paramref name="port" /> é maior que <see cref="F:System.Net.IPEndPoint.MaxPort" />.  
+  
+ -ou-  
+  
+ <paramref name="address" /> é menor que 0 ou maior que 0x00000000FFFFFFFF.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress Address" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPEndPoint.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço IP do ponto de extremidade.</summary>
+        <value>Uma instância de <see cref="T:System.Net.IPAddress" /> que contém o endereço IP do ponto de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir define o <xref:System.Net.IPEndPoint.Address%2A> propriedade usando o <xref:System.Net.IPAddress> especificado.  
+  
+ [!code-cpp[System.Net.IPEndPoint#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPEndPoint/CPP/ipendpoint.cpp#3)]
+ [!code-csharp[System.Net.IPEndPoint#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPEndPoint/CS/ipendpoint.cs#3)]
+ [!code-vb[System.Net.IPEndPoint#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPEndPoint/VB/ipendpoint.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressFamily">
+      <MemberSignature Language="C#" Value="public override System.Net.Sockets.AddressFamily AddressFamily { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Sockets.AddressFamily AddressFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPEndPoint.AddressFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.AddressFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a família de endereços do protocolo IP.</summary>
+        <value>Retorna <see cref="F:System.Net.Sockets.AddressFamily.InterNetwork" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.IPEndPoint.AddressFamily%2A> propriedade para retornar o <xref:System.Net.Sockets.AddressFamily> ao qual o <xref:System.Net.IPEndPoint> pertence. Nesse caso é o <xref:System.Net.Sockets.AddressFamily.InterNetwork> <xref:System.Net.Sockets.AddressFamily>.  
+  
+ [!code-cpp[System.Net.IPEndPoint#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPEndPoint/CPP/ipendpoint.cpp#3)]
+ [!code-csharp[System.Net.IPEndPoint#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPEndPoint/CS/ipendpoint.cs#3)]
+ [!code-vb[System.Net.IPEndPoint#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPEndPoint/VB/ipendpoint.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public override System.Net.EndPoint Create (System.Net.SocketAddress socketAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Net.EndPoint Create(class System.Net.SocketAddress socketAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPEndPoint.Create(System.Net.SocketAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.EndPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="socketAddress" Type="System.Net.SocketAddress" />
+      </Parameters>
+      <Docs>
+        <param name="socketAddress">O <see cref="T:System.Net.SocketAddress" /> a ser usado para o ponto de extremidade.</param>
+        <summary>Cria um ponto de extremidade de um endereço de soquete.</summary>
+        <returns>Uma instância de <see cref="T:System.Net.EndPoint" /> usando o endereço do soquete especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa especificado <xref:System.Net.SocketAddress> para criar um <xref:System.Net.IPEndPoint>.  
+  
+ [!code-cpp[System.Net.IPEndPoint#5](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPEndPoint/CPP/ipendpoint.cpp#5)]
+ [!code-csharp[System.Net.IPEndPoint#5](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPEndPoint/CS/ipendpoint.cs#5)]
+ [!code-vb[System.Net.IPEndPoint#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPEndPoint/VB/ipendpoint.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O AddressFamily de <paramref name="socketAddress" /> não é igual ao AddressFamily da instância atual.  
+  
+ -ou-  
+  
+ <paramref name="socketAddress" />. Tamanho &lt; 8.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPEndPoint.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparand" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="comparand">O <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Object" />.</param>
+        <summary>Determina se o <see cref="T:System.Object" /> especificado é igual ao <see cref="T:System.Object" /> atual.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Object" /> especificado for igual ao <see cref="T:System.Object" /> atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPEndPoint.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor de hash para um <see cref="T:System.Net.IPEndPoint" /> instância.</summary>
+        <returns>Um valor de hash inteiro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.IPEndPoint.GetHashCode%2A> método retorna um código hash da instância de ponto de extremidade do IP. Esse valor pode ser usado como uma chave em tabelas de hash.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPort">
+      <MemberSignature Language="C#" Value="public const int MaxPort = 65535;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 MaxPort = (65535)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.IPEndPoint.MaxPort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>65535</MemberValue>
+      <Docs>
+        <summary>Especifica o valor máximo que pode ser atribuído à propriedade <see cref="P:System.Net.IPEndPoint.Port" />. O valor MaxPort foi definido como 0x0000FFFF. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.IPEndPoint.MaxPort> propriedade para imprimir o valor máximo que pode ser atribuído para o <xref:System.Net.IPEndPoint.Port%2A> propriedade.  
+  
+ [!code-cpp[IPEndPoint_Properties#4](~/samples/snippets/cpp/VS_Snippets_Remoting/IPEndPoint_Properties/CPP/ipendpoint_properties.cpp#4)]
+ [!code-csharp[IPEndPoint_Properties#4](~/samples/snippets/csharp/VS_Snippets_Remoting/IPEndPoint_Properties/CS/ipendpoint_properties.cs#4)]
+ [!code-vb[IPEndPoint_Properties#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPEndPoint_Properties/VB/ipendpoint_properties.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinPort">
+      <MemberSignature Language="C#" Value="public const int MinPort = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 MinPort = (0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.IPEndPoint.MinPort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Especifica o valor mínimo que pode ser atribuído à propriedade <see cref="P:System.Net.IPEndPoint.Port" />. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.IPEndPoint.MinPort> propriedade para imprimir o valor mínimo que pode ser atribuído para o <xref:System.Net.IPEndPoint.Port%2A> propriedade.  
+  
+ [!code-cpp[IPEndPoint_Properties#4](~/samples/snippets/cpp/VS_Snippets_Remoting/IPEndPoint_Properties/CPP/ipendpoint_properties.cpp#4)]
+ [!code-csharp[IPEndPoint_Properties#4](~/samples/snippets/csharp/VS_Snippets_Remoting/IPEndPoint_Properties/CS/ipendpoint_properties.cs#4)]
+ [!code-vb[IPEndPoint_Properties#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPEndPoint_Properties/VB/ipendpoint_properties.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPEndPoint.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da porta do ponto de extremidade.</summary>
+        <value>Um valor inteiro no intervalo de <see cref="F:System.Net.IPEndPoint.MinPort" /> a <see cref="F:System.Net.IPEndPoint.MaxPort" /> que indica o número da porta do ponto de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.IPEndPoint.Port%2A> propriedade para definir o número da porta TCP a <xref:System.Net.EndPoint>.  
+  
+ [!code-cpp[System.Net.IPEndPoint#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPEndPoint/CPP/ipendpoint.cpp#3)]
+ [!code-csharp[System.Net.IPEndPoint#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPEndPoint/CS/ipendpoint.cs#3)]
+ [!code-vb[System.Net.IPEndPoint#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPEndPoint/VB/ipendpoint.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor que foi especificado para uma operação de conjuntos é menor que <see cref="F:System.Net.IPEndPoint.MinPort" /> ou maior que <see cref="F:System.Net.IPEndPoint.MaxPort" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public override System.Net.SocketAddress Serialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Net.SocketAddress Serialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPEndPoint.Serialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.SocketAddress</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serializa informações do ponto de extremidade em uma instância de <see cref="T:System.Net.SocketAddress" />.</summary>
+        <returns>Uma instância de <see cref="T:System.Net.SocketAddress" /> que contém o endereço do soquete do ponto de extremidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.IPEndPoint.Serialize%2A> método para serializar informações de ponto de extremidade em um <xref:System.Net.SocketAddress> instância.  
+  
+ [!code-cpp[System.Net.IPEndPoint#4](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPEndPoint/CPP/ipendpoint.cpp#4)]
+ [!code-csharp[System.Net.IPEndPoint#4](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPEndPoint/CS/ipendpoint.cs#4)]
+ [!code-vb[System.Net.IPEndPoint#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPEndPoint/VB/ipendpoint.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPEndPoint.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o número da porta e endereço IP do ponto de extremidade especificado.</summary>
+        <returns>Uma cadeia de caracteres que contém o endereço IP e o número da porta do ponto de extremidade especificado (por exemplo, 192.168.1.2:80).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir retorna uma representação de cadeia de caracteres do número de porta e endereço de IP especificada <xref:System.Net.IPEndPoint>.  
+  
+ [!code-cpp[System.Net.IPEndPoint#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.IPEndPoint/CPP/ipendpoint.cpp#3)]
+ [!code-csharp[System.Net.IPEndPoint#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.IPEndPoint/CS/ipendpoint.cs#3)]
+ [!code-vb[System.Net.IPEndPoint#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.IPEndPoint/VB/ipendpoint.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

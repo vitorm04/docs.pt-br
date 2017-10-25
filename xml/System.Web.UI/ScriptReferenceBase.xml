@@ -1,0 +1,283 @@
+<Type Name="ScriptReferenceBase" FullName="System.Web.UI.ScriptReferenceBase">
+  <TypeSignature Language="C#" Value="public abstract class ScriptReferenceBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ScriptReferenceBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ScriptReferenceBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Path")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A classe base para todas as classes de referência de script.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ScriptReferenceBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReferenceBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ScriptReferenceBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUrl">
+      <MemberSignature Language="C#" Value="protected abstract string GetUrl (System.Web.UI.ScriptManager scriptManager, bool zip);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string GetUrl(class System.Web.UI.ScriptManager scriptManager, bool zip) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReferenceBase.GetUrl(System.Web.UI.ScriptManager,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+        <Parameter Name="zip" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">O controle <see langword="ScriptManager" /> na página da Web de destino.</param>
+        <param name="zip">
+          <see langword="true" />para compactar o script; Caso contrário, <see langword="false" />.</param>
+        <summary>Recupera a URL que é processada como o valor do atributo <see langword="src" /> do elemento <see langword="script" />.</summary>
+        <returns>Uma cadeia de caracteres que contém a URL que é processada como o valor do atributo <see langword="src" /> do elemento <see langword="script" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAjaxFrameworkScript">
+      <MemberSignature Language="C#" Value="protected virtual bool IsAjaxFrameworkScript (System.Web.UI.ScriptManager scriptManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool IsAjaxFrameworkScript(class System.Web.UI.ScriptManager scriptManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReferenceBase.IsAjaxFrameworkScript(System.Web.UI.ScriptManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scriptManager" Type="System.Web.UI.ScriptManager" />
+      </Parameters>
+      <Docs>
+        <param name="scriptManager">Um objeto <see cref="T:System.Web.UI.ScriptManager" />.</param>
+        <summary>Determina se a referência de script especificado é um script do ASP.NET AJAX.</summary>
+        <returns>
+          <see langword="true" />Se a referência de script é um script do ASP.NET AJAX; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFromSystemWebExtensions">
+      <MemberSignature Language="C#" Value="protected abstract bool IsFromSystemWebExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool IsFromSystemWebExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReferenceBase.IsFromSystemWebExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use IsAjaxFrameworkScript(ScriptManager)")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o script compostas contém uma referência a um script do ASP.NET AJAX framework.</summary>
+        <returns>
+          <see langword="true" />Se o script compostas contém uma referência a um script do ASP.NET AJAX framework; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyScriptLoaded">
+      <MemberSignature Language="C#" Value="public bool NotifyScriptLoaded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NotifyScriptLoaded" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("NotifyScriptLoaded is no longer required in script references.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Web.Handlers.ScriptResourceHandler" /> objeto adiciona automaticamente o código no final do arquivo ECMAScript (JavaScript) para chamar o cliente <see cref="P:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded" /> método o [sys](http://msdn.microsoft.com/library/cd901c0f-51e2-4c63-9963-158f4a88b008) classe.</summary>
+        <value>
+          <see langword="true" />Se o [Sys.Application.notifyScriptLoaded](http://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) método é chamado automaticamente no final de um arquivo JavaScript, ou <see langword="false" /> se o código do usuário chamar o [Sys.Application.notifyScriptLoaded](http://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) método já está no arquivo de JavaScript. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A> propriedade `false` se fazer referência a um arquivo de script em um assembly e o arquivo de script já contém código para chamar [Sys.Application.notifyScriptLoaded](http://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6). Um erro será gerado se [Sys.Application.notifyScriptLoaded](http://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) método é chamado mais de uma vez a partir de um arquivo de script.  
+  
+ Se você fizer referência a um arquivo de script autônomo que não é inserido em um assembly, você deve incluir o código no final do arquivo de script para chamar o [Sys.Application.notifyScriptLoaded](http://msdn.microsoft.com/library/dd95aa94-34bb-45b6-ac06-1cb4031469c6) método. O exemplo a seguir mostra o código para incluir no final do arquivo de script.  
+  
+```  
+if(typeof(Sys) !== "undefined) Sys.Application.notifyScriptLoaded();  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReferenceBase.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty("*.js")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do arquivo de script de cliente referenciado, relativa à página da Web.</summary>
+        <value>O caminho do script de cliente referenciado</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceExtension">
+      <MemberSignature Language="C#" Value="protected static string ReplaceExtension (string pathOrName);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig string ReplaceExtension(string pathOrName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptReferenceBase.ReplaceExtension(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathOrName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pathOrName">O caminho completo do script para renomear. O caminho deve terminar com ". js".</param>
+        <summary>Substitui a extensão de nome de arquivo no caminho de script especificado para designar um script de depuração.</summary>
+        <returns>Uma cadeia de caracteres que contém o caminho do script com a extensão de depuração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método assume que o script tem uma extensão ". js". Ele substitui a extensão ". Debug".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceUICultures">
+      <MemberSignature Language="C#" Value="public string[] ResourceUICultures { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ResourceUICultures" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReferenceBase.ResourceUICultures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.StringArrayConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista delimitada por vírgulas de culturas de interface do usuário que são suportados pelo <see cref="P:System.Web.UI.ScriptReferenceBase.Path" /> propriedade.</summary>
+        <value>Uma cadeia de caracteres que contém uma lista delimitada por vírgulas de culturas de interface do usuário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ScriptMode ScriptMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.ScriptMode ScriptMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptReferenceBase.ScriptMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ScriptMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão do arquivo de script de cliente (versão ou depuração) a ser usado.</summary>
+        <value>Um <see cref="T:System.Web.UI.ScriptMode" /> valor que indica qual versão do arquivo de script de cliente para fazer referência. O padrão é <see cref="F:System.Web.UI.ScriptMode.Auto" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

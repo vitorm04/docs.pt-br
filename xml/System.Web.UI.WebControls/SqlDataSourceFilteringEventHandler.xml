@@ -1,0 +1,42 @@
+<Type Name="SqlDataSourceFilteringEventHandler" FullName="System.Web.UI.WebControls.SqlDataSourceFilteringEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SqlDataSourceFilteringEventHandler(object sender, SqlDataSourceFilteringEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlDataSourceFilteringEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SqlDataSourceFilteringEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A origem do evento, um <see cref="T:System.Web.UI.WebControls.SqlDataSource" />.</param>
+    <param name="e">Um <see cref="T:System.Web.UI.WebControls.SqlDataSourceFilteringEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o <see cref="E:System.Web.UI.WebControls.SqlDataSource.Filtering" /> evento o <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há suporte para filtragem quando o <xref:System.Web.UI.WebControls.SqlDataSource.DataSourceMode%2A> está definida como o <xref:System.Web.UI.WebControls.SqlDataSourceMode.DataSet> valor.  
+  
+ Quando você cria um <xref:System.Web.UI.WebControls.SqlDataSourceFilteringEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como recuperar dados do banco de dados Northwind e filtrá-los usando um <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> e <xref:System.Web.UI.WebControls.SqlDataSource.FilterParameters%2A>. O <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> do <xref:System.Web.UI.WebControls.SqlDataSource> é aplicado a qualquer momento o <xref:System.Web.UI.WebControls.SqlDataSource.Select%2A> o método é executado para recuperar dados. Neste exemplo, o <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> contém um espaço reservado para um parâmetro de filtro, que está contido no <xref:System.Web.UI.WebControls.SqlDataSource.FilterParameters%2A> coleção. No <xref:System.Web.UI.WebControls.SqlDataSource.Filtering> evento, o parâmetro de filtro é exibido em um <xref:System.Web.UI.WebControls.Label> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSourceFiltering#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceFiltering/CS/SDCFilteringCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSourceFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceFiltering/VB/SDCFilteringVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

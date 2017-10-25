@@ -1,0 +1,82 @@
+<Type Name="StrokeCollectionChangedEventArgs" FullName="System.Windows.Ink.StrokeCollectionChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class StrokeCollectionChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StrokeCollectionChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Ink.StrokeCollectionChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Ink.StrokeCollection.StrokesChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Ink.StrokeCollection.StrokesChanged> evento ocorre sempre que um <xref:System.Windows.Ink.Stroke> é adicionado ou removido de um <xref:System.Windows.Ink.StrokeCollection>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StrokeCollectionChangedEventArgs (System.Windows.Ink.StrokeCollection added, System.Windows.Ink.StrokeCollection removed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Ink.StrokeCollection added, class System.Windows.Ink.StrokeCollection removed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.StrokeCollectionChangedEventArgs.#ctor(System.Windows.Ink.StrokeCollection,System.Windows.Ink.StrokeCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="added" Type="System.Windows.Ink.StrokeCollection" />
+        <Parameter Name="removed" Type="System.Windows.Ink.StrokeCollection" />
+      </Parameters>
+      <Docs>
+        <param name="added">Um <see cref="T:System.Windows.Ink.StrokeCollection" /> que contém os traços adicionados.</param>
+        <param name="removed">Um <see cref="T:System.Windows.Ink.StrokeCollection" /> que contém os traços removidos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Ink.StrokeCollectionChangedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Added">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.StrokeCollection Added { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Ink.StrokeCollection Added" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Ink.StrokeCollectionChangedEventArgs.Added" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StrokeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os traços que foram adicionados para o <see cref="T:System.Windows.Ink.StrokeCollection" />.</summary>
+        <value>Um <see cref="T:System.Windows.Ink.StrokeCollection" /> que contém os traços adicionados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Removed">
+      <MemberSignature Language="C#" Value="public System.Windows.Ink.StrokeCollection Removed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Ink.StrokeCollection Removed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Ink.StrokeCollectionChangedEventArgs.Removed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Ink.StrokeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os traços que foram removidos do <see cref="T:System.Windows.Ink.StrokeCollection" />.</summary>
+        <value>Um <see cref="T:System.Windows.Ink.StrokeCollection" /> que contém os traços removidos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

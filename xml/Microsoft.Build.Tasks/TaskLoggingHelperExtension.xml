@@ -1,0 +1,111 @@
+<Type Name="TaskLoggingHelperExtension" FullName="Microsoft.Build.Tasks.TaskLoggingHelperExtension">
+  <TypeSignature Language="C#" Value="public class TaskLoggingHelperExtension : Microsoft.Build.Utilities.TaskLoggingHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TaskLoggingHelperExtension extends Microsoft.Build.Utilities.TaskLoggingHelper" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.TaskLoggingHelperExtension" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Utilities.TaskLoggingHelper</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Habilita o log de várias mensagens. Além disso, permite que o carregamento e a formatação de recursos.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TaskLoggingHelperExtension (Microsoft.Build.Framework.ITask taskInstance, System.Resources.ResourceManager primaryResources, System.Resources.ResourceManager sharedResources, string helpKeywordPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITask taskInstance, class System.Resources.ResourceManager primaryResources, class System.Resources.ResourceManager sharedResources, string helpKeywordPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.TaskLoggingHelperExtension.#ctor(Microsoft.Build.Framework.ITask,System.Resources.ResourceManager,System.Resources.ResourceManager,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="taskInstance" Type="Microsoft.Build.Framework.ITask" />
+        <Parameter Name="primaryResources" Type="System.Resources.ResourceManager" />
+        <Parameter Name="sharedResources" Type="System.Resources.ResourceManager" />
+        <Parameter Name="helpKeywordPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskInstance">Uma tarefa que contém uma instância do <see cref="T:Microsoft.Build.Tasks.TaskLoggingHelperExtension" /> classe.</param>
+        <param name="primaryResources">Recursos de interface do usuário e a cadeia de caracteres.</param>
+        <param name="sharedResources">Interface do usuário e a cadeia de caracteres de recursos compartilhados.</param>
+        <param name="helpKeywordPrefix">O prefixo para compor as palavras-chave de Ajuda.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Build.Tasks.TaskLoggingHelperExtension" /> classe com a instância da tarefa, os recursos principais, recursos compartilhados e um prefixo de palavra-chave da Ajuda.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FormatResourceString">
+      <MemberSignature Language="C#" Value="public override string FormatResourceString (string resourceName, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string FormatResourceString(string resourceName, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.TaskLoggingHelperExtension.FormatResourceString(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceName" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="resourceName">O nome de recurso da cadeia de caracteres a ser carregado.</param>
+        <param name="args">Argumentos opcionais para a formatação de cadeia de caracteres carregada, ou <see langword="null" />.</param>
+        <summary>Carrega a cadeia de caracteres do recurso especificado e, opcionalmente, formata usando argumentos determinados. Cultura do thread atual é usada para formatação.</summary>
+        <returns>A cadeia de caracteres formatada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método requer a tarefa de proprietário para registrar seus recursos por meio de <xref:Microsoft.Build.Utilities.Task> base do construtor de classe ou uma das seguintes propriedades: <xref:Microsoft.Build.Utilities.Task.TaskResources%2A> ou <xref:Microsoft.Build.Utilities.AppDomainIsolatedTask.TaskResources%2A>.  
+  
+ Esse método é thread-safe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TaskSharedResources">
+      <MemberSignature Language="C#" Value="public System.Resources.ResourceManager TaskSharedResources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Resources.ResourceManager TaskSharedResources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.TaskLoggingHelperExtension.TaskSharedResources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResourceManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os recursos compartilhados de interface do usuário e a cadeia de caracteres.</summary>
+        <value>Os recursos compartilhados de interface do usuário e a cadeia de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada para carregar os recursos específicos de cultura. Classes derivadas devem registrar seus recursos durante a construção ou por meio dessa propriedade, se ele tiveram localizado cadeias de caracteres.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

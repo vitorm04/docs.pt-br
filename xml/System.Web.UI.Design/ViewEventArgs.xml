@@ -1,0 +1,172 @@
+<Type Name="ViewEventArgs" FullName="System.Web.UI.Design.ViewEventArgs">
+  <TypeSignature Language="C#" Value="public class ViewEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ViewEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ViewEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.Design.IControlDesignerView.ViewEvent" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> é gerado pelo host de designer para determinadas ações em um controle na superfície de design. O <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> é tratado por um <xref:System.Web.UI.Design.ViewEventHandler> Delegar método, que usa uma <xref:System.Web.UI.Design.ViewEventArgs> objeto como um parâmetro.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner> classe fornece um delegado de padrão para manipular o <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent>. Designers de controle personalizado substituem o <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A>, <xref:System.Web.UI.Design.ControlDesigner.OnPaint%2A>, e <xref:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged%2A> métodos para processar os eventos para o controle na superfície de design.  
+  
+ Inicializa o host de designer uma <xref:System.Web.UI.Design.ViewEventArgs> de objeto para o tipo de ação na superfície de design e, em seguida, passa o objeto para o <xref:System.Web.UI.Design.ViewEventHandler> delegar. O <xref:System.Web.UI.Design.ViewEventArgs.Region%2A> propriedade representa a região de designer de controle que o evento se aplica. O <xref:System.Web.UI.Design.ViewEventArgs.EventType%2A> propriedade o <xref:System.Web.UI.Design.ViewEventArgs> objeto indica que tipo de ação:  
+  
+-   Um <xref:System.Web.UI.Design.ViewEvent.Click> eventos.  
+  
+-   Um <xref:System.Web.UI.Design.ViewEvent.Paint> eventos.  
+  
+-   Um <xref:System.Web.UI.Design.ViewEvent.TemplateModeChanged> eventos.  
+  
+ O <xref:System.Web.UI.Design.ViewEventArgs.EventArgs%2A> propriedade fornece os argumentos de evento que são específicos para o tipo de ação.  
+  
+ Por exemplo, o designer host inicializa <xref:System.Web.UI.Design.ViewEventArgs> objetos da seguinte maneira:  
+  
+-   Um <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs> quando você clica em uma região do objeto.  
+  
+-   Um <xref:System.Windows.Forms.PaintEventArgs> quando um controle é desenhado na superfície de design do objeto.  
+  
+-   Um <xref:System.Web.UI.Design.TemplateModeChangedEventArgs> quando altera o modo de edição de modelo para o controle na superfície de design do objeto.  
+  
+ Para obter mais informações sobre eventos e delegados, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ViewEventArgs (System.Web.UI.Design.ViewEvent eventType, System.Web.UI.Design.DesignerRegion region, EventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.ViewEvent eventType, class System.Web.UI.Design.DesignerRegion region, class System.EventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ViewEventArgs.#ctor(System.Web.UI.Design.ViewEvent,System.Web.UI.Design.DesignerRegion,System.EventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Web.UI.Design.ViewEvent" />
+        <Parameter Name="region" Type="System.Web.UI.Design.DesignerRegion" />
+        <Parameter Name="eventArgs" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventType">O tipo de ação que disparou o evento; usado para inicializar o <see cref="P:System.Web.UI.Design.ViewEventArgs.EventType" />.</param>
+        <param name="region">O designer região em que a ação se aplica; usado para inicializar o <see cref="P:System.Web.UI.Design.ViewEventArgs.Region" />.</param>
+        <param name="eventArgs">Os argumentos de evento associados <c>eventType</c>; usado para inicializar o <see cref="P:System.Web.UI.Design.ViewEventArgs.EventArgs" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Design.ViewEventArgs" /> classe para o tipo de evento de exibição na superfície de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ViewEventArgs.%23ctor%2A> construtor é usado pelo host de designer para inicializar um <xref:System.Web.UI.Design.ViewEventArgs> de objeto para o <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> evento. O designer host passa o inicializado <xref:System.Web.UI.Design.ViewEventArgs> o objeto para o <xref:System.Web.UI.Design.ViewEventHandler> delegar.  
+  
+ Normalmente, `region` está definido para <xref:System.Web.UI.Design.ViewEvent.Click> eventos, e `null` (`Nothing` no Visual Basic) para <xref:System.Web.UI.Design.ViewEvent.Paint> e <xref:System.Web.UI.Design.ViewEvent.TemplateModeChanged> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventArgs">
+      <MemberSignature Language="C#" Value="public EventArgs EventArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EventArgs EventArgs" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ViewEventArgs.EventArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os argumentos de eventos que estão associados com a ação que gerou o evento.</summary>
+        <value>Um <see cref="P:System.Web.UI.Design.ViewEventArgs.EventArgs" /> que contém os dados de evento adicional que são específicos para o tipo de evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ViewEventArgs.EventArgs%2A> propriedade fornece os argumentos de evento que são específicos para o tipo de ação que é especificado no <xref:System.Web.UI.Design.ViewEventArgs.EventType%2A> propriedade.  
+  
+ Por exemplo, quando você clica em uma região, o designer host inicializa o <xref:System.Web.UI.Design.ViewEventArgs.EventType%2A> como um <xref:System.Web.UI.Design.ViewEvent.Click> evento e, em seguida, inicializa o <xref:System.Web.UI.Design.ViewEventArgs.EventArgs%2A> a propriedade como um <xref:System.Web.UI.Design.DesignerRegionMouseEventArgs> objeto.  
+  
+ Da mesma forma, o designer host inicializa o <xref:System.Web.UI.Design.ViewEventArgs.EventArgs%2A> propriedade com um <xref:System.Windows.Forms.PaintEventArgs> de objeto para um <xref:System.Web.UI.Design.ViewEvent.Paint> evento, ou um <xref:System.Web.UI.Design.TemplateModeChangedEventArgs> de objeto para um <xref:System.Web.UI.Design.ViewEvent.TemplateModeChanged> eventos.  
+  
+ O <xref:System.Web.UI.Design.ViewEventArgs.EventArgs%2A> propriedade é inicializada através de <xref:System.Web.UI.Design.ViewEventArgs.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.ViewEvent EventType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.ViewEvent EventType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ViewEventArgs.EventType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ViewEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de ação que gerou o evento.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.ViewEvent" /> que especifica o tipo de ação que gerou o evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ViewEventArgs.EventType%2A> propriedade o <xref:System.Web.UI.Design.ViewEventArgs> objeto indica que tipo de ação gerou o evento:  
+  
+-   Um <xref:System.Web.UI.Design.ViewEvent.Click> eventos.  
+  
+-   Um <xref:System.Web.UI.Design.ViewEvent.Paint> eventos.  
+  
+-   Um <xref:System.Web.UI.Design.ViewEvent.TemplateModeChanged> eventos.  
+  
+ O <xref:System.Web.UI.Design.ViewEventArgs.EventArgs%2A> propriedade fornece os argumentos de evento que são específicos para o tipo de ação.  
+  
+ O <xref:System.Web.UI.Design.ViewEventArgs.EventType%2A> propriedade é inicializada através de <xref:System.Web.UI.Design.ViewEventArgs.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Region">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.DesignerRegion Region { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerRegion Region" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ViewEventArgs.Region" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerRegion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a região designer que o evento se aplica.</summary>
+        <value>O <see cref="T:System.Web.UI.Design.DesignerRegion" /> se aplica a ação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ViewEventArgs.Region%2A> propriedade representa a região de designer de controle que o evento se aplica. Normalmente, o <xref:System.Web.UI.Design.ViewEventArgs.Region%2A> propriedade está definida para <xref:System.Web.UI.Design.ViewEvent.Click> eventos, e `null` (`Nothing` no Visual Basic) para <xref:System.Web.UI.Design.ViewEvent.Paint> e <xref:System.Web.UI.Design.ViewEvent.TemplateModeChanged> eventos.  
+  
+ O <xref:System.Web.UI.Design.ViewEventArgs.Region%2A> propriedade é inicializada através de <xref:System.Web.UI.Design.ViewEventArgs.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

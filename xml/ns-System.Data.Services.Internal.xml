@@ -1,0 +1,15 @@
+<Namespace Name="System.Data.Services.Internal">
+  <Docs>
+    <summary>Essa classe não é para uso público e é usada internamente pelo sistema para implementar o suporte para consultas com carregamento adiantado de entidades relacionadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O namespace inclui um número de variações o `ExpandedWrapper` classe.  
+  
+ © 2009 Microsoft Corporation. Todos os direitos reservados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

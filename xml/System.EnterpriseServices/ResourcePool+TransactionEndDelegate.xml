@@ -1,0 +1,30 @@
+<Type Name="ResourcePool+TransactionEndDelegate" FullName="System.EnterpriseServices.ResourcePool+TransactionEndDelegate">
+  <TypeSignature Language="C#" Value="public delegate void ResourcePool.TransactionEndDelegate(object resource);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ResourcePool/TransactionEndDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ResourcePool.TransactionEndDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="resource" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="resource">O objeto que é passado de volta para o representante.</param>
+    <summary>Representa o método que manipula o final de uma transação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.EnterpriseServices.ResourcePool.TransactionEndDelegate> delegado, você identificar o método que manipulará o evento. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

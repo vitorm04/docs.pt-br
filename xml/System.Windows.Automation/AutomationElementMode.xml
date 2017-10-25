@@ -1,0 +1,69 @@
+<Type Name="AutomationElementMode" FullName="System.Windows.Automation.AutomationElementMode">
+  <TypeSignature Language="C#" Value="public enum AutomationElementMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AutomationElementMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.AutomationElementMode" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Contém valores que especificam o tipo de referência a ser usado ao retornar elementos de automação de interface do usuário. Esses valores são usados no <see cref="P:System.Windows.Automation.CacheRequest.AutomationElementMode" /> propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Total é o padrão e especifica que os elementos retornados contém uma referência completa a subjacente [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)]. NONE especifica que os elementos retornados não tem nenhuma referência na interface do usuário subjacente e contêm somente informações armazenadas em cache.  
+  
+ Algumas operações nos elementos, como <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> ou <xref:System.Windows.Automation.AutomationElement.SetFocus%2A>, exigem uma referência completa; tentando executar estas em um elemento que não possui nenhum resulta em um <xref:System.InvalidOperationException>.  
+  
+ Usar nenhum pode ser mais eficiente quando são necessárias apenas as propriedades, pois evita a sobrecarga envolvida na configuração de referências completas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o modo de um <xref:System.Windows.Automation.CacheRequest>.  
+  
+ [!code-csharp[UIAClient_snip#183](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#183)]
+ [!code-vb[UIAClient_snip#183](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#183)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.AutomationElementMode Full = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.AutomationElementMode.Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os elementos retornados têm uma referência completa a subjacente [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.AutomationElementMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.AutomationElementMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationElementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os elementos retornados não tem nenhuma referência de subjacente [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] e conter somente informações armazenadas em cache. Esse modo pode ser usado, por exemplo, para recuperar os nomes dos itens em uma caixa de listagem sem obter referências para os itens em si.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

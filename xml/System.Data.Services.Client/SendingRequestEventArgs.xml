@@ -1,0 +1,59 @@
+<Type Name="SendingRequestEventArgs" FullName="System.Data.Services.Client.SendingRequestEventArgs">
+  <TypeSignature Language="C#" Value="public class SendingRequestEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SendingRequestEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.SendingRequestEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado com o <see cref="E:System.Data.Services.Client.DataServiceContext.SendingRequest" /> eventos para fornecer acesso para a <see cref="T:System.Net.HttpWebRequest" /> instância que o cliente está prestes a enviar para o serviço de dados de destino.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public System.Net.WebRequest Request { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebRequest Request" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.SendingRequestEventArgs.Request" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Net.HttpWebRequest" /> instância prestes a ser enviado pela biblioteca de cliente para o serviço de dados.</summary>
+        <value>
+          <see cref="T:System.Net.HttpWebRequest" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestHeaders">
+      <MemberSignature Language="C#" Value="public System.Net.WebHeaderCollection RequestHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebHeaderCollection RequestHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.SendingRequestEventArgs.RequestHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebHeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de cabeçalhos de protocolo associados a solicitação para o serviço de dados.</summary>
+        <value>Uma coleção de cabeçalhos de protocolo associados com a solicitação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

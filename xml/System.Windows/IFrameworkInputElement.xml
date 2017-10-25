@@ -1,0 +1,45 @@
+<Type Name="IFrameworkInputElement" FullName="System.Windows.IFrameworkInputElement">
+  <TypeSignature Language="C#" Value="public interface IFrameworkInputElement : System.Windows.IInputElement" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFrameworkInputElement implements class System.Windows.IInputElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.IFrameworkInputElement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.IInputElement</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Declara um contrato de namescopes para elementos da estrutura.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta interface não se destina a implementação. Sua finalidade é oferecer suporte a infraestrutura de nível de framework do WPF. Para implementar um namescope, consulte <xref:System.Windows.Markup.INameScope>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IFrameworkInputElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de um elemento.</summary>
+        <value>O nome do elemento, que é exclusivo no namescope e que pode ser usado como um identificador para determinadas operações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

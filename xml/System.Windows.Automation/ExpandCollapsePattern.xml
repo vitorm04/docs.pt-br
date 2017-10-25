@@ -1,0 +1,232 @@
+<Type Name="ExpandCollapsePattern" FullName="System.Windows.Automation.ExpandCollapsePattern">
+  <TypeSignature Language="C#" Value="public class ExpandCollapsePattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExpandCollapsePattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ExpandCollapsePattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa controles que são expandidos visualmente para exibir o conteúdo e recolhidos para ocultá-lo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles agregados — criados com objetos filho que fornecem a interface do usuário para a funcionalidade de expandir/recolher — devem oferecer suporte a <xref:System.Windows.Automation.ExpandCollapsePattern> padrão de controle e seus elementos filho não recebam. Por exemplo, um controle de caixa de combinação é criado com uma combinação de caixa de listagem, um botão e controles de edição, mas é apenas a caixa de combinação pai que deve oferecer suporte a <xref:System.Windows.Automation.ExpandCollapsePattern>.  
+  
+> [!NOTE]
+>  Um menu de controle, mesmo que uma agregação de itens de menu individuais, é uma exceção a essa regra. Os itens de menu suporte o <xref:System.Windows.Automation.ExpandCollapsePattern> padrão de controle, mas o controle de menu pai não. Uma exceção similar se aplica a árvore e controles de item de árvore.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.ExpandCollapsePattern/ExpandCollapsePatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ExpandCollapsePattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ExpandCollapsePattern+ExpandCollapsePatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.ExpandCollapsePattern" />.</summary>
+        <value>Uma estrutura que contém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores de propriedade em cache devem ser anteriormente solicitados usando um <xref:System.Windows.Automation.CacheRequest>. Use <xref:System.Windows.Automation.SelectionPattern.Current%2A> para obter o valor atual de uma propriedade.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade solicitada não está no cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapse">
+      <MemberSignature Language="C#" Value="public void Collapse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Collapse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ExpandCollapsePattern.Collapse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Oculta todos os nós descendentes, controles ou conteúdo do <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse é um método de bloqueio que retorna após o elemento de automação de interface do usuário foi recolhido.  
+  
+ Há casos em que um elemento de automação de interface do usuário que está marcado como um nó folha poderá não saber se ele tiver filhos até que o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> ou <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> método é chamado. Esse comportamento é possível com um controle de exibição árvore que o carregamento atrasado de seus itens filho. Por exemplo, [!INCLUDE[TLA#tla_winexpl](~/includes/tlasharptla-winexpl-md.md)] pode exibir o ícone de expansão de um nó, mesmo que no momento, não existem itens filho; quando você clica no ícone, o controle de pesquisa para itens filho, encontra nenhum e remove o ícone de expansão. Nesses casos os clientes devem ouvir para um evento de propriedade alterada a <xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> propriedade Registrando um manipulador de eventos com o <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> método.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um elemento de automação de interface do usuário que representa um item de menu é passado para uma função que tenta expandir ou recolher o item de menu com base na atual <xref:System.Windows.Automation.ExpandCollapseState>.  
+  
+ [!code-csharp[UIAExpandCollapsePattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/CSharp/UIAExpandCollapsePattern_snippets.cs#101)]
+ [!code-vb[UIAExpandCollapsePattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/VisualBasic/UIAExpandCollapsePattern_snippets.vb#101)]  
+[!code-csharp[UIAExpandCollapsePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/CSharp/UIAExpandCollapsePattern_snippets.cs#102)]
+[!code-vb[UIAExpandCollapsePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/VisualBasic/UIAExpandCollapsePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.Automation.ExpandCollapsePattern.Collapse" />chamado quando o <see cref="T:System.Windows.Automation.ExpandCollapseState" />  =  <see cref="F:System.Windows.Automation.ExpandCollapseState.LeafNode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.ExpandCollapsePattern/ExpandCollapsePatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ExpandCollapsePattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ExpandCollapsePattern+ExpandCollapsePatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.ExpandCollapsePattern" />.</summary>
+        <value>Uma estrutura que contém atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse padrão deve ser de um <xref:System.Windows.Automation.AutomationElement> com um <xref:System.Windows.Automation.AutomationElementMode.Full> referência para obter os valores atuais. Se o <xref:System.Windows.Automation.AutomationElement> foi obtida usando <xref:System.Windows.Automation.AutomationElementMode.None>, ele contém somente dados armazenados em cache e tentar obter o valor atual de qualquer propriedade gera uma exceção. Use <xref:System.Windows.Automation.ExpandCollapsePattern.Cached%2A> para obter o valor armazenado em cache de uma propriedade que tenha sido especificado usando um <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expand">
+      <MemberSignature Language="C#" Value="public void Expand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Expand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ExpandCollapsePattern.Expand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exibe todos os nós filho, controles ou conteúdo do <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um método de bloqueio que retorna após o <xref:System.Windows.Automation.AutomationElement> foi expandido.  
+  
+ Há casos, quando um <xref:System.Windows.Automation.AutomationElement> que está marcado como um nó folha poderá não saber se ele tiver filhos até que o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> ou <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> método é chamado. Esse comportamento é possível com um controle de exibição árvore que o carregamento atrasado de seus itens filho. Por exemplo, [!INCLUDE[TLA#tla_winexpl](~/includes/tlasharptla-winexpl-md.md)] pode exibir o ícone de expansão de um nó, mesmo que no momento, não existem itens filho; quando você clica no ícone, o controle de pesquisa para itens filho, encontra nenhum e remove o ícone de expansão. Nesses casos os clientes devem ouvir para um evento de propriedade alterada a <xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> propriedade Registrando um manipulador de eventos com o <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> método.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.AutomationElement> que representa um item de menu é passado para uma função que tenta expandir ou recolher o item de menu com base na atual <xref:System.Windows.Automation.ExpandCollapseState>.  
+  
+ [!code-csharp[UIAExpandCollapsePattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/CSharp/UIAExpandCollapsePattern_snippets.cs#101)]
+ [!code-vb[UIAExpandCollapsePattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/VisualBasic/UIAExpandCollapsePattern_snippets.vb#101)]  
+[!code-csharp[UIAExpandCollapsePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/CSharp/UIAExpandCollapsePattern_snippets.cs#102)]
+[!code-vb[UIAExpandCollapsePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/VisualBasic/UIAExpandCollapsePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.Automation.ExpandCollapsePattern.Expand" />chamado quando o <see cref="T:System.Windows.Automation.ExpandCollapseState" />  =  <see cref="F:System.Windows.Automation.ExpandCollapseState.LeafNode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandCollapseStateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty ExpandCollapseStateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty ExpandCollapseStateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapseStateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers>.  
+  
+ <xref:System.Windows.Automation.ExpandCollapseState>refere-se a visibilidade dos objetos de filho imediatos. ele não faz referência a visibilidade de todos os objetos descendentes.  
+  
+ O valor padrão é <xref:System.Windows.Automation.ExpandCollapseState.Expanded>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um elemento raiz é passado para uma função que retorna uma coleção de [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elementos que são descendentes da raiz e atendem a um conjunto de condições de propriedade.  
+  
+ [!code-csharp[UIAExpandCollapsePattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/CSharp/UIAExpandCollapsePattern_snippets.cs#100)]
+ [!code-vb[UIAExpandCollapsePattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/VisualBasic/UIAExpandCollapsePattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ExpandCollapsePattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.ExpandCollapsePattern" /> padrão de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers>.  
+  
+ O padrão de [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)] é passado para métodos como <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar o padrão de controle de interesse especificado <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um <xref:System.Windows.Automation.ExpandCollapsePattern> padrão de controle é obtido de um elemento de automação de interface do usuário.  
+  
+ [!code-csharp[UIAExpandCollapsePattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/CSharp/UIAExpandCollapsePattern_snippets.cs#101)]
+ [!code-vb[UIAExpandCollapsePattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/VisualBasic/UIAExpandCollapsePattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

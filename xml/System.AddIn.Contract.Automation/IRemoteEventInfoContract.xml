@@ -1,0 +1,107 @@
+<Type Name="IRemoteEventInfoContract" FullName="System.AddIn.Contract.Automation.IRemoteEventInfoContract">
+  <TypeSignature Language="C#" Value="public interface IRemoteEventInfoContract : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemoteEventInfoContract implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Automation.IRemoteEventInfoContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define um contrato que componentes podem usar para acessar informações sobre um evento nos limites de domínio e o processo do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.AddIn.Contract.Automation.IRemoteEventInfoContract> fornece informações sobre um evento de um objeto remoto que implementa o <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> interface.  
+  
+ Para acessar um ou mais eventos de um objeto remoto, use o <xref:System.AddIn.Contract.Automation.IRemoteObjectContract.GetRemoteType%2A> método para obter um <xref:System.AddIn.Contract.Automation.IRemoteTypeContract> que representa o tipo do objeto remoto. Em seguida, chame o <xref:System.AddIn.Contract.Automation.IRemoteTypeContract.GetEvent%2A> ou <xref:System.AddIn.Contract.Automation.IRemoteTypeContract.GetEvents%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAddMethod">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.IRemoteMethodInfoContract GetAddMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.Automation.IRemoteMethodInfoContract GetAddMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemoteEventInfoContract.GetAddMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.IRemoteMethodInfoContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o método usado para adicionar um manipulador de eventos delegado para o evento que este <see cref="T:System.AddIn.Contract.Automation.IRemoteEventInfoContract" /> identifica.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.Automation.IRemoteMethodInfoContract" /> que representa o método que foi usado para adicionar um manipulador de eventos delegado para o evento que este <see cref="T:System.AddIn.Contract.Automation.IRemoteEventInfoContract" /> identifica.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para adicionar um delegado para o evento, chame o <xref:System.AddIn.Contract.Automation.IRemoteMethodInfoContract.Invoke%2A> método o <xref:System.AddIn.Contract.Automation.IRemoteMethodInfoContract> que <xref:System.AddIn.Contract.Automation.IRemoteEventInfoContract.GetAddMethod%2A> retorna. Passar um <xref:System.AddIn.Contract.Automation.IRemoteDelegateContract> que representa o representante para a `parameters` parâmetro <xref:System.AddIn.Contract.Automation.IRemoteMethodInfoContract.Invoke%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMemberData">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.RemoteMemberData GetMemberData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.Automation.RemoteMemberData GetMemberData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemoteEventInfoContract.GetMemberData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.RemoteMemberData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna informações sobre o evento que este <see cref="T:System.AddIn.Contract.Automation.IRemoteEventInfoContract" /> identifica.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.Automation.RemoteMemberData" /> que fornece informações sobre o evento que este <see cref="T:System.AddIn.Contract.Automation.IRemoteEventInfoContract" /> identifica.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações fornecidas pelo <xref:System.AddIn.Contract.Automation.RemoteMemberData> estrutura inclui o nome do evento e o tipo que declara o evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemoveMethod">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.IRemoteMethodInfoContract GetRemoveMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.Automation.IRemoteMethodInfoContract GetRemoveMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemoteEventInfoContract.GetRemoveMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.IRemoteMethodInfoContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o método usado para remover um manipulador de eventos que este delegado do evento <see cref="T:System.AddIn.Contract.Automation.IRemoteEventInfoContract" /> identifica.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.Automation.IRemoteMethodInfoContract" /> que representa o método que foi usado para remover um manipulador de eventos que este delegado do evento <see cref="T:System.AddIn.Contract.Automation.IRemoteEventInfoContract" /> identifica.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para remover um delegado do evento, chame o <xref:System.AddIn.Contract.Automation.IRemoteMethodInfoContract.Invoke%2A> método o <xref:System.AddIn.Contract.Automation.IRemoteMethodInfoContract> que <xref:System.AddIn.Contract.Automation.IRemoteEventInfoContract.GetRemoveMethod%2A> retorna. Passar um <xref:System.AddIn.Contract.Automation.IRemoteDelegateContract> que representa o representante para a `parameters` parâmetro <xref:System.AddIn.Contract.Automation.IRemoteMethodInfoContract.Invoke%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

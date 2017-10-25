@@ -1,0 +1,2450 @@
+<Type Name="Message" FullName="System.Messaging.Message">
+  <TypeSignature Language="C#" Value="public class Message : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Message extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.Message" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Messaging.Design.MessageDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Concede acesso às propriedades necessárias para definir uma mensagem de Enfileiramento de Mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Messaging.Message> classe inspecionar ou receber mensagens de uma fila ou ter controle refinado sobre propriedades de mensagens ao enviar uma mensagem para uma fila.  
+  
+ <xref:System.Messaging.MessageQueue>usa o <xref:System.Messaging.Message> classe quando ele exibe ou recebe mensagens de filas, porque tanto o <xref:System.Messaging.MessageQueue.Peek%2A?displayProperty=nameWithType> e <xref:System.Messaging.MessageQueue.Receive%2A?displayProperty=nameWithType> métodos criam uma nova instância do <xref:System.Messaging.Message> classe e definir as propriedades da instância. O <xref:System.Messaging.Message> aplicam propriedades da classe de somente leitura para recuperar mensagens de uma fila, enquanto as propriedades de leitura/gravação se aplicam para enviar e recuperar mensagens. Quando <xref:System.Messaging.MessageQueue> exibe ou recebe uma mensagem de uma fila, seu <xref:System.Messaging.MessageQueue.MessageReadPropertyFilter%2A> propriedade determina quais propriedades da mensagem são recuperados.  
+  
+ O <xref:System.Messaging.MessageQueue> da classe <xref:System.Messaging.MessageQueue.Send%2A> método permite que você especificar qualquer tipo de objeto para uma mensagem que está sendo enviada para essa fila. Você pode usar o <xref:System.Messaging.MessageQueue> da instância <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A> propriedade para especificar configurações para genéricas mensagens enviadas à fila. Os tipos de configurações incluem o formatador, rótulo, criptografia e autenticação. Você também pode especificar valores para as <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A> membros quando coordenar seu aplicativo de mensagens para responder às mensagens de confirmação e relatório. Usando um <xref:System.Messaging.Message> instância para enviar uma mensagem à fila oferece a flexibilidade para acessar e modificar muitas dessas propriedades — em uma única mensagem ou em uma base por mensagem. <xref:System.Messaging.Message>propriedades têm precedência sobre <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A>.  
+  
+ Dados da mensagem são armazenados no <xref:System.Messaging.Message.Body%2A> propriedade e uma extensão menor, o <xref:System.Messaging.Message.AppSpecific%2A> e <xref:System.Messaging.Message.Extension%2A> propriedades. Quando os dados da mensagem são criptografados, serializados ou desserializados, somente o conteúdo do <xref:System.Messaging.Message.Body%2A> propriedade são afetados.  
+  
+ O conteúdo do <xref:System.Messaging.Message.Body%2A> propriedade são serializados quando a mensagem é enviada usando o <xref:System.Messaging.Message.Formatter%2A> propriedade que você especificar. O conteúdo serializado é encontrado no <xref:System.Messaging.Message.BodyStream%2A> propriedade. Você também pode definir o <xref:System.Messaging.Message.BodyStream%2A> propriedade diretamente, por exemplo, para enviar um arquivo como o conteúdo de dados de uma mensagem. Você pode alterar o <xref:System.Messaging.Message.Body%2A> ou <xref:System.Messaging.Message.Formatter%2A> propriedades a qualquer momento antes de enviar a mensagem e os dados poderão ser serializadas adequadamente quando você chamar <xref:System.Messaging.MessageQueue.Send%2A>.  
+  
+ As propriedades definidas pelo <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A?displayProperty=nameWithType> propriedade se aplica apenas às mensagens que não são do tipo <xref:System.Messaging.Message>. Se você especificar o <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A> propriedade para um <xref:System.Messaging.MessageQueue>, o nomes idênticos de propriedades em um <xref:System.Messaging.Message> instância enviou a causa dessa fila essas propriedades padrão para ser ignorada.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Messaging.Message>, consulte o <xref:System.Messaging.Message.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a formatação de um corpo de mensagem usando <xref:System.Messaging.BinaryMessageFormatter>.  
+  
+ [!code-cpp[MessagingBinaryFormatter#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagingBinaryFormatter/CPP/message_binaryformatter.cpp#1)]
+ [!code-csharp[MessagingBinaryFormatter#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagingBinaryFormatter/CS/message_binaryformatter.cs#1)]
+ [!code-vb[MessagingBinaryFormatter#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessagingBinaryFormatter/VB/message_binaryformatter.vb#1)]  
+  
+ O exemplo de código a seguir demonstra a formatação de um corpo de mensagem usando <xref:System.Messaging.XmlMessageFormatter>.  
+  
+ [!code-cpp[Message.Body#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Body/CPP/message_sendreceive.cpp#1)]
+ [!code-csharp[Message.Body#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Body/CS/message_sendreceive.cs#1)]
+ [!code-vb[Message.Body#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Body/VB/message_sendreceive.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Message ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Message.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Messaging.Message" /> com um corpo vazio.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga para criar uma nova instância do <xref:System.Messaging.Message> classe que tem um corpo vazio.  
+  
+ Especifique o <xref:System.Messaging.Message.Body%2A> propriedade ou o <xref:System.Messaging.Message.BodyStream%2A> propriedade antes de enviar o <xref:System.Messaging.Message> objeto. O <xref:System.Messaging.Message.Body%2A> propriedade pode ser qualquer objeto que pode ser serializado, como uma cadeia de caracteres de texto, um objeto de estrutura, uma instância da classe ou um objeto inserido.  
+  
+ A menos que você gravar o conteúdo da mensagem diretamente para o <xref:System.Messaging.Message.BodyStream%2A> propriedade, defina o <xref:System.Messaging.Message.Formatter%2A> propriedade antes de enviar a mensagem. O corpo é serializado usando o <xref:System.Messaging.Message.Formatter%2A> o valor da propriedade no momento em que o <xref:System.Messaging.MessageQueue.Send%2A> método é chamado no <xref:System.Messaging.MessageQueue> instância.  
+  
+ O <xref:System.Messaging.XmlMessageFormatter> é flexível, portanto, não é necessário ter o mesmo objeto de tipo no remetente e destinatário, ao usar esse formato. O <xref:System.Messaging.ActiveXMessageFormatter> e <xref:System.Messaging.BinaryMessageFormatter> serializar os dados em representação binária. O <xref:System.Messaging.ActiveXMessageFormatter> é usado ao enviar ou receber componentes COM.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Messaging.Message>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Messaging.Message.AcknowledgeType%2A>|`AcknowledgeType.None`|  
+|<xref:System.Messaging.Message.AdministrationQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.AppSpecific%2A>|0|  
+|<xref:System.Messaging.Message.AttachSenderId%2A>|`true`|  
+|<xref:System.Messaging.Message.AuthenticationProviderName%2A>|Microsoft Base Cryptographic Provider versão 1.0|  
+|<xref:System.Messaging.Message.AuthenticationProviderType%2A>|`CryptoProviderType.RSA_FULL`|  
+|<xref:System.Messaging.Message.Body%2A>|`null`|  
+|<xref:System.Messaging.Message.BodyStream%2A>|`Stream.null`|  
+|<xref:System.Messaging.Message.BodyType%2A>|0|  
+|<xref:System.Messaging.Message.ConnectorType%2A>|`Guid.Empty`|  
+|<xref:System.Messaging.Message.CorrelationId%2A>|Uma cadeia de caracteres vazia ("")|  
+|<xref:System.Messaging.Message.DestinationSymmetricKey%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.DigitalSignature%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.EncryptionAlgorithm%2A>|`EncryptionAlgorithm.RC2`|  
+|<xref:System.Messaging.Message.Extension%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.Formatter%2A>|`XmlMessageFormatter`|  
+|<xref:System.Messaging.Message.HashAlgorithm%2A>|`HashAlgorithm.MD5`|  
+|<xref:System.Messaging.Message.Label%2A>|Uma cadeia de caracteres vazia ("")|  
+|<xref:System.Messaging.Message.Priority%2A>|`MessagePriority.Normal`|  
+|<xref:System.Messaging.Message.Recoverable%2A>|`false`|  
+|<xref:System.Messaging.Message.ResponseQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.SenderCertificate%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.TimeToBeReceived%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TimeToReachQueue%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TransactionStatusQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.UseAuthentication%2A>|`false`|  
+|<xref:System.Messaging.Message.UseDeadLetterQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseEncryption%2A>|`false`|  
+|<xref:System.Messaging.Message.UseJournalQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseTracing%2A>|`false`|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir envia duas mensagens de prioridades diferentes para a fila e recuperá-los posteriormente.  
+  
+ [!code-cpp[Message.DefaultPropertiesToSend#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CPP/message_defaultandpriority.cpp#1)]
+ [!code-csharp[Message.DefaultPropertiesToSend#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CS/message_defaultandpriority.cs#1)]
+ [!code-vb[Message.DefaultPropertiesToSend#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/VB/message_defaultandpriority.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Message (object body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Message.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="body" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="body">O objeto a ser serializado no corpo da mensagem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.Message" /> classe usando o <see cref="T:System.Messaging.XmlMessageFormatter" /> para serializar o objeto especificado no corpo da mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga para criar uma nova instância do <xref:System.Messaging.Message> classe que contém o <xref:System.Messaging.Message.Body%2A> especificado pelo `body` parâmetro. O `body` parâmetro pode ser qualquer objeto que pode ser serializado, como uma cadeia de caracteres de texto, um objeto de estrutura, uma instância da classe ou um objeto inserido. O corpo é serializado usando o <xref:System.Messaging.XmlMessageFormatter> a menos que você altere o <xref:System.Messaging.Message.Formatter%2A> propriedade antes do <xref:System.Messaging.Message> é enviada. Se você alterar o <xref:System.Messaging.Message.Body%2A> ou <xref:System.Messaging.Message.Formatter%2A> propriedade a qualquer momento antes de chamar <xref:System.Messaging.MessageQueue.Send%2A>, a mensagem será serializada de acordo com o novo valor da propriedade.  
+  
+ O <xref:System.Messaging.XmlMessageFormatter> é flexível, portanto, não é necessário ter o mesmo objeto de tipo no remetente e destinatário, ao usar esse formato. O <xref:System.Messaging.ActiveXMessageFormatter> e <xref:System.Messaging.BinaryMessageFormatter> serializar os dados em representação binária. O <xref:System.Messaging.ActiveXMessageFormatter> é usado ao enviar ou receber componentes COM.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Messaging.Message>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Messaging.Message.AcknowledgeType%2A>|`AcknowledgeType.None`|  
+|<xref:System.Messaging.Message.AdministrationQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.AppSpecific%2A>|0|  
+|<xref:System.Messaging.Message.AttachSenderId%2A>|`true`|  
+|<xref:System.Messaging.Message.AuthenticationProviderName%2A>|Microsoft Base Cryptographic Provider versão 1.0|  
+|<xref:System.Messaging.Message.AuthenticationProviderType%2A>|`CryptoProviderType.RSA_FULL`|  
+|<xref:System.Messaging.Message.Body%2A>|O `body` parâmetro.|  
+|<xref:System.Messaging.Message.BodyStream%2A>|`Stream.null`|  
+|<xref:System.Messaging.Message.BodyType%2A>|0|  
+|<xref:System.Messaging.Message.ConnectorType%2A>|`Guid.Empty`|  
+|<xref:System.Messaging.Message.CorrelationId%2A>|Uma cadeia de caracteres vazia ("")|  
+|<xref:System.Messaging.Message.DestinationSymmetricKey%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.DigitalSignature%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.EncryptionAlgorithm%2A>|`EncryptionAlgorithm.RC2`|  
+|<xref:System.Messaging.Message.Extension%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.Formatter%2A>|`XmlMessageFormatter`|  
+|<xref:System.Messaging.Message.HashAlgorithm%2A>|`HashAlgorithm.MD5`|  
+|<xref:System.Messaging.Message.Label%2A>|Uma cadeia de caracteres vazia ("")|  
+|<xref:System.Messaging.Message.Priority%2A>|`MessagePriority.Normal`|  
+|<xref:System.Messaging.Message.Recoverable%2A>|`false`|  
+|<xref:System.Messaging.Message.ResponseQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.SenderCertificate%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.TimeToBeReceived%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TimeToReachQueue%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TransactionStatusQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.UseAuthentication%2A>|`false`|  
+|<xref:System.Messaging.Message.UseDeadLetterQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseEncryption%2A>|`false`|  
+|<xref:System.Messaging.Message.UseJournalQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseTracing%2A>|`false`|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova fila, envia uma mensagem que contém um pedido para ele e, em seguida, recupera.  
+  
+ [!code-cpp[Message.Body#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Body/CPP/message_sendreceive.cpp#1)]
+ [!code-csharp[Message.Body#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Body/CS/message_sendreceive.cs#1)]
+ [!code-vb[Message.Body#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Body/VB/message_sendreceive.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Message (object body, System.Messaging.IMessageFormatter formatter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object body, class System.Messaging.IMessageFormatter formatter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Message.#ctor(System.Object,System.Messaging.IMessageFormatter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="body" Type="System.Object" />
+        <Parameter Name="formatter" Type="System.Messaging.IMessageFormatter" />
+      </Parameters>
+      <Docs>
+        <param name="body">O objeto a ser serializado no corpo da mensagem.</param>
+        <param name="formatter">Um <see cref="T:System.Messaging.IMessageFormatter" /> que especifica o formatador com o qual o corpo da mensagem é serializado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Messaging.Message" /> usando o formatador especificado para serializar o objeto especificado no corpo da mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga para criar uma nova instância do <xref:System.Messaging.Message> classe que contém o <xref:System.Messaging.Message.Body%2A> especificado pelo `body` parâmetro e que usa qualquer formatador válido para serializar o corpo. O `body` parâmetro é qualquer objeto que pode ser serializado, como uma cadeia de caracteres de texto, um objeto de estrutura, uma instância da classe ou um objeto inserido. Se você alterar o <xref:System.Messaging.Message.Body%2A> ou <xref:System.Messaging.Message.Formatter%2A> propriedade a qualquer momento antes de chamar <xref:System.Messaging.MessageQueue.Send%2A>, a mensagem será serializada de acordo com o novo valor da propriedade.  
+  
+ O <xref:System.Messaging.XmlMessageFormatter> é flexível, portanto, não é necessário ter o mesmo objeto de tipo no remetente e destinatário, ao usar esse formato. O <xref:System.Messaging.ActiveXMessageFormatter> e <xref:System.Messaging.BinaryMessageFormatter> serializar os dados em representação binária. O <xref:System.Messaging.ActiveXMessageFormatter> é usado ao enviar ou receber componentes COM.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Messaging.Message>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Messaging.Message.AcknowledgeType%2A>|`AcknowledgeType.None`|  
+|<xref:System.Messaging.Message.AdministrationQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.AppSpecific%2A>|0|  
+|<xref:System.Messaging.Message.AttachSenderId%2A>|`true`|  
+|<xref:System.Messaging.Message.AuthenticationProviderName%2A>|Microsoft Base Cryptographic Provider versão 1.0|  
+|<xref:System.Messaging.Message.AuthenticationProviderType%2A>|`CryptoProviderType.RSA_FULL`|  
+|<xref:System.Messaging.Message.Body%2A>|O `body` parâmetro.|  
+|<xref:System.Messaging.Message.BodyStream%2A>|`Stream.null`|  
+|<xref:System.Messaging.Message.BodyType%2A>|0|  
+|<xref:System.Messaging.Message.ConnectorType%2A>|`Guid.Empty`|  
+|<xref:System.Messaging.Message.CorrelationId%2A>|Uma cadeia de caracteres vazia ("")|  
+|<xref:System.Messaging.Message.DestinationSymmetricKey%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.DigitalSignature%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.EncryptionAlgorithm%2A>|`EncryptionAlgorithm.RC2`|  
+|<xref:System.Messaging.Message.Extension%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.Formatter%2A>|O `formatter` parâmetro.|  
+|<xref:System.Messaging.Message.HashAlgorithm%2A>|`HashAlgorithm.MD5`|  
+|<xref:System.Messaging.Message.Label%2A>|Uma cadeia de caracteres vazia ("")|  
+|<xref:System.Messaging.Message.Priority%2A>|`MessagePriority.Normal`|  
+|<xref:System.Messaging.Message.Recoverable%2A>|`false`|  
+|<xref:System.Messaging.Message.ResponseQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.SenderCertificate%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.Message.TimeToBeReceived%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TimeToReachQueue%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.Message.TransactionStatusQueue%2A>|`null`|  
+|<xref:System.Messaging.Message.UseAuthentication%2A>|`false`|  
+|<xref:System.Messaging.Message.UseDeadLetterQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseEncryption%2A>|`false`|  
+|<xref:System.Messaging.Message.UseJournalQueue%2A>|`false`|  
+|<xref:System.Messaging.Message.UseTracing%2A>|`false`|  
+  
+   
+  
+## Examples  
+ [!code-cpp[MessagingBinaryFormatter#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagingBinaryFormatter/CPP/message_binaryformatter.cpp#1)]
+ [!code-csharp[MessagingBinaryFormatter#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagingBinaryFormatter/CS/message_binaryformatter.cs#1)]
+ [!code-vb[MessagingBinaryFormatter#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessagingBinaryFormatter/VB/message_binaryformatter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcknowledgeType">
+      <MemberSignature Language="C#" Value="public System.Messaging.AcknowledgeTypes AcknowledgeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.AcknowledgeTypes AcknowledgeType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AcknowledgeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAcknowledgeType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de mensagem de confirmação a ser retornada para o aplicativo de envio.</summary>
+        <value>Um dos valores <see cref="T:System.Messaging.AcknowledgeTypes" /> que representa ambos os tipos de mensagens de confirmação postadas pelo sistema na fila de administração e as condições nas quais as confirmações são retornadas para o aplicativo de envio. O padrão é <see langword="None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.AcknowledgeType%2A> propriedade especifica o tipo solicitado pelo aplicativo de envio de mensagens de confirmação. Definir o <xref:System.Messaging.Message.AcknowledgeType%2A> propriedade antes de enviar a mensagem de solicitação de notificação de determinadas ocorrências — por exemplo, uma mensagem atingir sua fila de destino, uma mensagem que está sendo recuperado ou um tempo limite impedindo uma mensagem atingir ou que está sendo recuperada da fila de destino.  
+  
+ O Message Queuing retorna notificação enviando mensagens de confirmação para o <xref:System.Messaging.Message.AdministrationQueue%2A> propriedade especificada pela mensagem original. Uma mensagem de confirmação <xref:System.Messaging.Message.Acknowledgment%2A> propriedade indica o tipo de confirmação de que ele representa. Por exemplo, se uma mensagem de confirmação foi enviada como uma mensagem não alcançaram o destino antes do <xref:System.Messaging.Message.TimeToReachQueue%2A> intervalo expirou, o <xref:System.Messaging.Message.Acknowledgment%2A> propriedade da mensagem de confirmação contém o valor `ReachQueueTimeout`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir envia e recebe uma mensagem contendo um pedido de e para uma fila. Ele solicita uma confirmação positiva especificamente quando a mensagem original atinge ou é recuperada da fila.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.AcknowledgeType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Acknowledgment">
+      <MemberSignature Language="C#" Value="public System.Messaging.Acknowledgment Acknowledgment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.Acknowledgment Acknowledgment" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Acknowledgment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAcknowledgement")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.Acknowledgment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a classificação da confirmação que esta mensagem representa.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Messaging.Acknowledgment" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você recebe uma mensagem de uma fila de administração, leia o <xref:System.Messaging.Message.Acknowledgment%2A> propriedade para verificar o status da mensagem original.  
+  
+ Quando uma mensagem é enviada para a sua fila de destino, o enfileiramento de mensagens pode ser solicitado para postar uma mensagem de confirmação. Esta mensagem pode indicar, por exemplo, se a mensagem chegou e se foi recuperada no tempo limite especificado, ou pode indicar que deu errado em caso de falha de entrega. A fila de destino retorna mensagens de confirmação e envia-os para a fila de administração especificada na mensagem original <xref:System.Messaging.Message.AdministrationQueue%2A> propriedade. O <xref:System.Messaging.Message.Id%2A> propriedade de uma mensagem de confirmação identifica a mensagem de confirmação, não na mensagem original. Você pode encontrar o identificador da mensagem original em que a confirmação <xref:System.Messaging.Message> da instância <xref:System.Messaging.Message.CorrelationId%2A> propriedade.  
+  
+ Se este <xref:System.Messaging.Message> instância representa uma mensagem de confirmação, o <xref:System.Messaging.Message.Acknowledgment%2A> propriedade especifica o tipo de confirmação. Caso contrário, o <xref:System.Messaging.Message.Acknowledgment%2A> propriedade contém o valor `Normal`.  
+  
+ Use o <xref:System.Messaging.Message.AcknowledgeType%2A> propriedade da mensagem original para especificar as circunstâncias sob a qual as confirmações serão retornadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.MessagePropertyFilter.Acknowledgment" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AdministrationQueue">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue AdministrationQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue AdministrationQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AdministrationQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAdministrationQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fila que recebe as mensagens de confirmação que gera de enfileiramento de mensagens.</summary>
+        <value>O <see cref="T:System.Messaging.MessageQueue" /> que especifica a fila de administração usada para mensagens de confirmação geradas pelo sistema. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fila especificada no <xref:System.Messaging.Message.AdministrationQueue%2A> propriedade pode ser qualquer fila não transacional. As mensagens de confirmação enviadas para a fila de administração podem indicar se a mensagem original alcançou sua fila de destino e se ela foi removida da fila.  
+  
+ Quando o <xref:System.Messaging.Message.AcknowledgeType%2A> propriedade tem qualquer valor diferente de `None`, o aplicativo de envio deve especificar a fila a ser usada como a fila de administração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir envia e recebe uma mensagem contendo um pedido de e para uma fila. Ele solicita uma confirmação positiva especificamente quando a mensagem original atinge ou é recuperada da fila.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.AdministrationQueue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppSpecific">
+      <MemberSignature Language="C#" Value="public int AppSpecific { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AppSpecific" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AppSpecific" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAppSpecific")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações adicionais específicas do aplicativo.</summary>
+        <value>Informações que são específicas para o aplicativo. O padrão é zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.AppSpecific%2A> propriedade contém informações específicas de aplicativo que você pode usar para organizar os diferentes tipos de mensagens. Por exemplo, você pode usar índices específicos do aplicativo. É responsabilidade do aplicativo para interpretar <xref:System.Messaging.Message.AppSpecific%2A> informações de propriedade.  
+  
+ Sempre que possível, você deve incluir dados de mensagem no corpo da mensagem, em vez do <xref:System.Messaging.Message.AppSpecific%2A> propriedade.  
+  
+ Ao trabalhar com filas externas, use o <xref:System.Messaging.Message.Extension%2A> propriedade para especificar propriedades de mensagem que não existem no serviço de enfileiramento de mensagens. Assim como acontece com o <xref:System.Messaging.Message.AppSpecific%2A> propriedade, é responsabilidade do aplicativo para entender o conteúdo do <xref:System.Messaging.Message.Extension%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.AppSpecific" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrivedTime">
+      <MemberSignature Language="C#" Value="public DateTime ArrivedTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ArrivedTime" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.ArrivedTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgArrivedTime")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a hora em que a mensagem chegou na fila de destino.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa a hora de chegada da mensagem na fila de destino. O tempo é ajustado de GMT para a hora local do computador no qual reside a fila de destino.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A mensagem <xref:System.Messaging.Message.TimeToBeReceived%2A> propriedade indica a rapidez a mensagem deve ser recebida da fila de destino. O <xref:System.Messaging.Message.TimeToBeReceived%2A> timer de propriedade inicia quando a mensagem é enviada, não quando a mensagem chega na fila.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.ArrivedTime%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.ArrivedTime" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachSenderId">
+      <MemberSignature Language="C#" Value="public bool AttachSenderId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AttachSenderId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AttachSenderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAttachSenderId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a ID do remetente deve ser anexada à mensagem.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Messaging.Message.SenderId" /> devem ser anexados à mensagem; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.SenderId%2A> propriedade é uma matriz de bytes que representa o identificador do usuário envio. A ID do remetente é definida pelo enfileiramento de mensagens e é usada pelo Gerenciador de fila de recebimento para verificar se o remetente tem direitos de acesso a uma fila.  
+  
+ A ausência do remetente que ID é uma indicação pelo aplicativo de envio que Message Queuing não deve validar o remetente da mensagem nem verificar o acesso do remetente de direitos para a fila de recebimento. O <xref:System.Messaging.Message.SenderId%2A> é confiável somente se a mensagem foi autenticada quando atingiu a fila de destino. A mensagem foi rejeitada quando atingir a fila de destino se a fila aceita apenas mensagens autenticadas e qualquer um de <xref:System.Messaging.DefaultPropertiesToSend.UseAuthentication%2A> ou o <xref:System.Messaging.DefaultPropertiesToSend.AttachSenderId%2A> é de propriedade `false`.  
+  
+> [!CAUTION]
+>  Se uma mensagem for rejeitada, é enviadas para a fila de mensagens mortas (se <xref:System.Messaging.Message.UseDeadLetterQueue%2A> é `true`), ou ele será ignorado. Você pode solicitar confirmações quando uma mensagem de falha ao acessar uma fila. Caso contrário, quando <xref:System.Messaging.Message.UseDeadLetterQueue%2A> é `false` a mensagem pode ser perdida sem aviso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de uma mensagem <xref:System.Messaging.Message.AttachSenderId%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.AttachSenderId" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticated">
+      <MemberSignature Language="C#" Value="public bool Authenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Authenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Authenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAuthenticated")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a mensagem foi autenticada.</summary>
+        <value>
+          <see langword="true" />Se a autenticação foi solicitada para a mensagem quando inserida fila; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.Authenticated%2A> propriedade é usada somente pelo aplicativo enquanto ele está interagindo com a mensagem e tentar determinar se a autenticação foi solicitada. Se a mensagem está na fila, a mensagem foi autenticada. Por outro lado, se o <xref:System.Messaging.Message.Authenticated%2A> é de propriedade `true`, Gerenciador de fila de recebimento autenticado a mensagem quando ele recebeu essa mensagem.  
+  
+ Você não pode determinar se uma mensagem de falha na autenticação examinando suas propriedades. O Message Queuing descarta mensagens de falham de autenticação antes que sejam enviadas para a fila. No entanto, você pode solicitar que uma mensagem de confirmação enviada se uma falha de entrega impede que a mensagem que chega na fila.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.Authenticated%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.Authenticated" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationProviderName">
+      <MemberSignature Language="C#" Value="public string AuthenticationProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AuthenticationProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAuthenticationProviderName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do provedor criptográfico usado para gerar a assinatura digital da mensagem.</summary>
+        <value>O nome do provedor criptográfico usado para gerar a assinatura digital da mensagem. O padrão é Microsoft Base Cryptographic Provider versão 1.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa o <xref:System.Messaging.Message.AuthenticationProviderName%2A> ao trabalhar com filas externas. O Message Queuing requer o nome do provedor de autenticação e o tipo de provedor de autenticação do provedor criptográfico (provedor de autenticação) para validar as assinaturas digitais de mensagens enviadas para uma fila externa e mensagens passadas para enfileiramento de mensagens de uma fila externa.  
+  
+ Ao enviar uma mensagem, defina sempre o <xref:System.Messaging.Message.AuthenticationProviderName%2A> e <xref:System.Messaging.Message.ConnectorType%2A> propriedades juntas. Quando a mensagem é enviada, enfileiramento de mensagens ignora o nome do provedor de autenticação, se o tipo de conector também não é definido.  
+  
+ O <xref:System.Messaging.Message.AuthenticationProviderName%2A> propriedade não pode ser `null`, mas pode ser uma cadeia de caracteres vazia ("").  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Messaging.Message.AuthenticationProviderName" /> não foi possível definir a propriedade.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.AuthenticationProviderName" />.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Messaging.Message.AuthenticationProviderName" /> foi definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationProviderType">
+      <MemberSignature Language="C#" Value="public System.Messaging.CryptographicProviderType AuthenticationProviderType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.CryptographicProviderType AuthenticationProviderType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.AuthenticationProviderType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAuthenticationProviderType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.CryptographicProviderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de provedor de criptografia usado para gerar a assinatura digital da mensagem.</summary>
+        <value>Um dos valores de <see cref="T:System.Messaging.CryptographicProviderType" />. O padrão é <see langword="RSA_FULL" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa o <xref:System.Messaging.Message.AuthenticationProviderType%2A> propriedade ao trabalhar com filas externas para especificar quais serviços de criptografia provedor está associado uma mensagem. O Message Queuing requer o nome do provedor de autenticação e o tipo de provedor de autenticação do provedor criptográfico (provedor de autenticação) para validar as assinaturas digitais de mensagens enviadas para uma fila externa e mensagens passadas para enfileiramento de mensagens de uma fila externa.  
+  
+ Somente `RsaFull` se destina a ser usado com o sistema de mensagens.  
+  
+ Ao enviar uma mensagem, defina sempre o <xref:System.Messaging.Message.AuthenticationProviderType%2A> e <xref:System.Messaging.Message.ConnectorType%2A> propriedades juntas. Quando a mensagem é enviada, enfileiramento de mensagens ignora o tipo de provedor de autenticação, se o tipo de conector também não é definido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Messaging.Message.AuthenticationProviderType" /> não foi possível definir a propriedade.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.AuthenticationProviderType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public object Body { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Body" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo da mensagem.</summary>
+        <value>Um objeto que especifica os conteúdos da mensagem. O objeto pode ser uma cadeia de caracteres, uma data, uma moeda, um número, uma matriz de bytes ou qualquer objeto gerenciado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A mensagem <xref:System.Messaging.Message.Body%2A> propriedade normalmente contém os dados associados com a mensagem. Embora você também pode enviar dados específicos do aplicativo <xref:System.Messaging.Message.AppSpecific%2A> e <xref:System.Messaging.Message.Extension%2A> propriedades, você deve incluir dados de mensagem no <xref:System.Messaging.Message.Body%2A> da mensagem sempre que possível. Somente o <xref:System.Messaging.Message.Body%2A> conteúdo de propriedade é serializado ou criptografado.  
+  
+ O <xref:System.Messaging.Message.Body%2A> propriedade pode conter qualquer objeto cujo tamanho não exceder 4 MB. Se você usar <xref:System.Messaging.MessageQueue.Send%2A?displayProperty=nameWithType> para enviar qualquer objeto que não é do tipo <xref:System.Messaging.Message> para o <xref:System.Messaging.MessageQueue>, esse objeto estarão localizado no <xref:System.Messaging.Message.Body%2A> propriedade do <xref:System.Messaging.Message> instância retornada por <xref:System.Messaging.MessageQueue.Peek%2A> ou <xref:System.Messaging.MessageQueue.Receive%2A>.  
+  
+ O argumento de cadeia de caracteres em `MessageQueue.Send("hello.")` é um exemplo de tal um objeto genérico.  
+  
+ O <xref:System.Messaging.Message.BodyType%2A> propriedade indica o tipo de informação que é armazenada no corpo da mensagem. O Message Queuing usa essas informações para identificar o tipo do <xref:System.Messaging.Message.Body%2A> conteúdo da propriedade.  
+  
+ Especifique o <xref:System.Messaging.Message.Body%2A> propriedade ou o <xref:System.Messaging.Message.BodyStream%2A> propriedade antes de enviar o <xref:System.Messaging.Message> objeto. O <xref:System.Messaging.Message.Body%2A> propriedade pode ser qualquer objeto serializável, como uma cadeia de caracteres de texto, o objeto de estrutura, a instância da classe ou o objeto inserido.  
+  
+ A menos que você gravar o conteúdo da mensagem diretamente para o <xref:System.Messaging.Message.BodyStream%2A> propriedade, defina o <xref:System.Messaging.Message.Formatter%2A> propriedade antes de enviar a mensagem. Quando o <xref:System.Messaging.MessageQueue.Send%2A> método é chamado no <xref:System.Messaging.MessageQueue> instância, o corpo é serializada usando o formatador contido o <xref:System.Messaging.Message.Formatter%2A> propriedade. Se você enviar a mensagem sem especificar um valor para o <xref:System.Messaging.Message.Formatter%2A> propriedade, o formatador padrão é <xref:System.Messaging.XmlMessageFormatter>.  
+  
+> [!NOTE]
+>  Tentativa de definir o corpo de uma mensagem para <xref:System.Decimal.MaxValue> fará com que uma <xref:System.OverflowException> quando o `Send` método do <xref:System.Messaging.MessageQueue> classe é chamada e o <xref:System.Messaging.ActiveXMessageFormatter> é usado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir envia duas mensagens de prioridades diferentes para a fila e recuperá-los posteriormente.  
+  
+ [!code-cpp[Message.DefaultPropertiesToSend#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CPP/message_defaultandpriority.cpp#1)]
+ [!code-csharp[Message.DefaultPropertiesToSend#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CS/message_defaultandpriority.cs#1)]
+ [!code-vb[Message.DefaultPropertiesToSend#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/VB/message_defaultandpriority.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Messaging.Message.Formatter" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.Body" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream BodyStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream BodyStream" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.BodyStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.BinaryEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgBodyStream")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações no corpo da mensagem.</summary>
+        <value>Um <see cref="T:System.IO.Stream" /> que contém as informações serializadas incluídas no <see cref="P:System.Messaging.Message.Body" /> da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O corpo de uma mensagem pode consistir em qualquer tipo de informação — por exemplo, uma cadeia de caracteres, uma data, moeda, um número, uma matriz de bytes ou qualquer objeto gerenciado. Essa informação é serializada em um <xref:System.IO.Stream> a serem passados para a fila.  
+  
+ Especifique o <xref:System.Messaging.Message.Body%2A> propriedade ou o <xref:System.Messaging.Message.BodyStream%2A> propriedade antes de enviar o <xref:System.Messaging.Message> objeto. Se você definir o <xref:System.Messaging.Message.Body%2A> propriedade, o conteúdo é serializado no <xref:System.Messaging.Message.BodyStream%2A> propriedade. No entanto, você pode optar por gravar o <xref:System.Messaging.Message.BodyStream%2A> propriedade diretamente. Isso é útil, por exemplo, quando desejar abrir uma conexão para um arquivo e transmitir seu conteúdo no corpo da mensagem.  
+  
+ A menos que você gravar o conteúdo da mensagem diretamente para o <xref:System.Messaging.Message.BodyStream%2A> propriedade, defina o <xref:System.Messaging.Message.Formatter%2A> propriedade antes de enviar a mensagem. Quando o <xref:System.Messaging.MessageQueue.Send%2A> método é chamado no <xref:System.Messaging.MessageQueue> instância, o corpo é serializada usando o formatador contido o <xref:System.Messaging.Message.Formatter%2A> propriedade. Se você enviar a mensagem sem especificar um valor para o <xref:System.Messaging.Message.Formatter%2A> propriedade, o formatador padrão é <xref:System.Messaging.XmlMessageFormatter>.  
+  
+ Se você definir o <xref:System.Messaging.Message.UseEncryption%2A> propriedade `true` para o corpo da mensagem, a mensagem será criptografada quando enviada, não quando você definir o <xref:System.Messaging.Message.Body%2A> propriedade. Portanto, o <xref:System.Messaging.Message.BodyStream%2A> propriedade nunca será criptografada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.Body" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyType">
+      <MemberSignature Language="C#" Value="public int BodyType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BodyType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.BodyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgBodyType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de dados que o corpo da mensagem contém.</summary>
+        <value>O verdadeiro tipo do corpo da mensagem, como uma cadeia de caracteres, uma data, uma moeda ou um número.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Message Queuing reconhece os conteúdos do corpo como um objeto ou como um fluxo serializado. O <xref:System.Messaging.Message.BodyType%2A> propriedade indica o tipo do objeto dentro do <xref:System.Messaging.Message.Body%2A> propriedade da mensagem.  
+  
+ O <xref:System.Messaging.XmlMessageFormatter> executa a associação entre tipos nativos e o objeto no corpo da mensagem. Se você usar o <xref:System.Messaging.XmlMessageFormatter>, os conjuntos de formatador de <xref:System.Messaging.Message.BodyType%2A> propriedade para você.  
+  
+ Outros formatadores podem fornecer funcionalidade de associação também, como mostra o código c# a seguir.  
+  
+```  
+message.Formatter = new ActiveXMessageFormatter();  
+object myObject message.Body;  
+if (myObject is string) {  
+}  
+if (myObject is int) {  
+}  
+if (myObject is float) {  
+}  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.BodyType%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.Body" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectorType">
+      <MemberSignature Language="C#" Value="public Guid ConnectorType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ConnectorType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.ConnectorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgConnectorType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se algumas propriedades de mensagem geralmente definidas pelo enfileiramento de mensagens foram definidas pelo aplicativo de envio.</summary>
+        <value>Um <see cref="T:System.Guid" /> definido pelo aplicativo e usado em conjunto com aplicativos do conector ou criptografia de mensagens. Isso <see cref="T:System.Guid" /> permite que um aplicativo de recebimento interpretar as propriedades de mensagens que foram definidas pelo aplicativo de envio, mas que geralmente são definidas pelo enfileiramento de mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Message Queuing requer o <xref:System.Messaging.Message.ConnectorType%2A> propriedade ser definida sempre que um aplicativo define uma propriedade de mensagem que é geralmente definida pelo enfileiramento de mensagens. Um aplicativo normalmente usa um <xref:System.Messaging.Message.ConnectorType%2A> nos seguintes casos:  
+  
+-   Sempre que um aplicativo conector transmite uma mensagem. O <xref:System.Messaging.Message.ConnectorType%2A> informa os aplicativos de envio e recebimento como interpretar as propriedades de segurança e de confirmação da mensagem.  
+  
+-   Sempre que o aplicativo de envio, em vez de enfileiramento de mensagens, criptografa uma mensagem. O <xref:System.Messaging.Message.ConnectorType%2A> informa o enfileiramento de mensagens para usar o <xref:System.Messaging.Message.DestinationSymmetricKey%2A> valor da propriedade para descriptografar a mensagem.  
+  
+ Você deve definir o <xref:System.Messaging.Message.ConnectorType%2A> propriedade se você definir qualquer uma das seguintes propriedades (caso contrário, a fila ignora essas propriedades quando a mensagem é enviada):  
+  
+-   <xref:System.Messaging.Message.AuthenticationProviderName%2A>  
+  
+-   <xref:System.Messaging.Message.AuthenticationProviderType%2A>  
+  
+-   <xref:System.Messaging.Message.DestinationSymmetricKey%2A>  
+  
+-   <xref:System.Messaging.Message.DigitalSignature%2A>  
+  
+-   <xref:System.Messaging.Message.MessageType%2A>  
+  
+-   <xref:System.Messaging.Message.SenderId%2A>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.ConnectorType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationId">
+      <MemberSignature Language="C#" Value="public string CorrelationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CorrelationId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.CorrelationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgCorrelationId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de mensagem usado por mensagens de confirmação, relatório e resposta para fazer referência à mensagem original.</summary>
+        <value>O identificador de mensagem especificado pela propriedade <see cref="P:System.Messaging.Message.Id" /> da mensagem original. O identificador de correlação é usado pelo serviço de enfileiramento de mensagens ao gerar uma mensagem de confirmação ou de relatório e por um aplicativo quando ele gera uma mensagem de resposta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o enfileiramento de mensagens gera uma mensagem de confirmação ou de relatório, ele usa a propriedade do identificador de correlação para especificar o identificador da mensagem da mensagem original. Dessa maneira, o identificador de correlação vincula a mensagem de confirmação ou de relatório à mensagem original.  
+  
+ O aplicativo de envio, em seguida, pode corresponder a confirmação ou relatório com a mensagem original usando o <xref:System.Messaging.Message.CorrelationId%2A> propriedade para identificar a mensagem original <xref:System.Messaging.Message.Id%2A> propriedade.  
+  
+ Aplicativos do conector também devem definir o <xref:System.Messaging.Message.CorrelationId%2A> propriedade das mensagens de confirmação e o relatório para o identificador de mensagem da mensagem original.  
+  
+ Quando o aplicativo envia uma mensagem de resposta para o aplicativo de envio, você pode definir o <xref:System.Messaging.Message.CorrelationId%2A> propriedade da mensagem de resposta para o identificador de mensagem da mensagem original. O aplicativo de envio, em seguida, pode corresponder a mensagem de resposta para a mensagem foi enviada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir envia e recebe uma mensagem que contém um pedido de e para uma fila. Ele solicita uma confirmação positiva especificamente quando a mensagem original atinge ou é recuperada da fila.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.CorrelationId" />.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Messaging.Message.CorrelationId" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationQueue">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue DestinationQueue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue DestinationQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.DestinationQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDestinationQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a fila de destino pretendido para uma mensagem.</summary>
+        <value>Um <see cref="T:System.Messaging.MessageQueue" /> que especifica a fila de destino pretendido para a mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.DestinationQueue%2A> propriedade geralmente é usada para determinar o destino original de uma mensagem que chegaram em uma fila de mensagens mortas ou de diário. Normalmente, você não precisa examinar essa propriedade, porque você normalmente recuperar a mensagem da fila de destino.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.DestinationQueue%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.DestinationQueue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationSymmetricKey">
+      <MemberSignature Language="C#" Value="public byte[] DestinationSymmetricKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] DestinationSymmetricKey" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.DestinationSymmetricKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDestinationSymmetricKey")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a chave simétrica usada para criptografar mensagens criptografadas por aplicativos ou as mensagens enviadas para filas externas.</summary>
+        <value>Uma matriz de valores de byte que especifica a chave simétrica de destino usada para criptografar a mensagem. O padrão é uma matriz de comprimento zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois cenários exigem que você use o <xref:System.Messaging.Message.DestinationSymmetricKey%2A> propriedade. A primeira é quando o seu aplicativo, em vez de enfileiramento de mensagens, criptografa uma mensagem. O segundo é quando você enviar uma mensagem criptografada para um sistema de enfileiramento de mensagens diferente de enfileiramento de mensagens.  
+  
+ Antes de você define essa propriedade, você deve criptografar a chave simétrica com a chave pública do Gerenciador de fila de recebimento. Quando você envia uma mensagem criptografada pelo aplicativo, o Gerenciador de fila de recebimento usa a chave simétrica para descriptografar a mensagem antes de enviá-la para a sua fila de destino.  
+  
+ Se você enviar uma mensagem para uma fila externa, a mensagem é recebida primeiro pelo aplicativo conector apropriado, que encaminha a mensagem criptografada com a chave simétrica anexada para o aplicativo receptor. Em seguida, é responsabilidade do aplicativo de recebimento para descriptografar a mensagem usando a chave simétrica.  
+  
+ Quando você define o <xref:System.Messaging.Message.DestinationSymmetricKey%2A> propriedade, você também deve definir o <xref:System.Messaging.Message.ConnectorType%2A> propriedade. Quando a mensagem é enviada, enfileiramento de mensagens ignora o <xref:System.Messaging.Message.DestinationSymmetricKey%2A> propriedade se o <xref:System.Messaging.Message.ConnectorType%2A> propriedade também não é definida.  
+  
+ O <xref:System.Messaging.Message.DestinationSymmetricKey%2A> propriedade tem um tamanho de matriz máximo de 256.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.DestinationSymmetricKey" />.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Messaging.Message.DestinationSymmetricKey" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DigitalSignature">
+      <MemberSignature Language="C#" Value="public byte[] DigitalSignature { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] DigitalSignature" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.DigitalSignature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgDigitalSignature")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a assinatura digital que o enfileiramento de mensagens usa ao autenticar a mensagem.</summary>
+        <value>Uma matriz de valores de byte que especifica a assinatura digital do Message Queuing 1.0 usada para autenticar a mensagem. O padrão é uma matriz de comprimento zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Message Queuing usa a assinatura digital na autenticação de mensagens que foram enviadas por versão 1.0 do enfileiramento de mensagens. Na maioria dos casos, enfileiramento de mensagens gera e define o <xref:System.Messaging.Message.DigitalSignature%2A> propriedade quando o aplicativo de envio solicita autenticação. O aplicativo de recebimento usa essa propriedade para recuperar a assinatura digital anexada à mensagem.  
+  
+ Você só pode usar o <xref:System.Messaging.Message.DigitalSignature%2A> propriedade ao executar a versão 2.0 do enfileiramento de mensagens. O aplicativo de envio deve especificar o Message Queuing assinaturas da versão 1.0 ao solicitar a autenticação. Se o aplicativo de envio envia uma assinatura de versão 2.0 do enfileiramento de mensagens, esta propriedade contém um buffer de quatro bytes, cada contém zero.  
+  
+ O <xref:System.Messaging.Message.DigitalSignature%2A> propriedade, junto com o <xref:System.Messaging.Message.SenderCertificate%2A> propriedade, também é usado por aplicativos de conector quando uma mensagem é enviada. Nesse cenário, o aplicativo conector — em vez de enfileiramento de mensagens, gera a assinatura digital, ele se baseia no certificado de usuário que está enviando a mensagem.  
+  
+ O <xref:System.Messaging.Message.DigitalSignature%2A> propriedade tem um tamanho de matriz máximo de 256.  
+  
+ Quando você define o <xref:System.Messaging.Message.DigitalSignature%2A> propriedade, você também deve definir o <xref:System.Messaging.Message.ConnectorType%2A> propriedade. Quando uma mensagem é enviada, enfileiramento de mensagens ignora o <xref:System.Messaging.Message.DigitalSignature%2A> propriedade se o <xref:System.Messaging.Message.ConnectorType%2A> propriedade também não é definida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.DigitalSignature" />.</exception>
+        <exception cref="T:System.ArgumentException">A propriedade <see cref="P:System.Messaging.Message.DigitalSignature" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Messaging.EncryptionAlgorithm EncryptionAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.EncryptionAlgorithm EncryptionAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.EncryptionAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgEncryptionAlgorithm")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.EncryptionAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o algoritmo de criptografia usado para criptografar o corpo de uma mensagem particular.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Messaging.EncryptionAlgorithm" />. O padrão é <see langword="RC2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma mensagem é particular (criptografada), ele é criptografado antes de ser enviado e descriptografado após o recebimento. O <xref:System.Messaging.Message.EncryptionAlgorithm%2A> propriedade especifica o algoritmo usado para criptografar o corpo da mensagem de uma mensagem particular.  
+  
+ Uma fila pode exigir que entrada mensagens ser criptografadas. Se um aplicativo envia uma mensagem de (não-particular) não criptografado para uma fila que aceita somente mensagens particulares ou envia uma mensagem particular para uma fila que aceita somente mensagens de não-particular, a fila rejeitará a mensagem. O aplicativo de envio pode solicitar que uma mensagem de confirmação negativa retornado nesse caso.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.EncryptionAlgorithm" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public byte[] Extension { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Extension" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgExtension")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações adicionais, definido pelo aplicativo associadas à mensagem.</summary>
+        <value>Uma matriz de valores de byte que fornece informações definidas pelo aplicativo associadas à mensagem. O padrão é uma matriz de comprimento zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.Extension%2A> propriedade fornece mais informações definido pelo aplicativo, como um objeto binário grande, que está associado com a mensagem. É responsabilidade do aplicativo de recebimento para interpretar o conteúdo de <xref:System.Messaging.Message.Extension%2A> propriedade.  
+  
+ Sempre que possível, você deve incluir dados de mensagem no <xref:System.Messaging.Message.Body%2A> propriedade da mensagem, em vez do <xref:System.Messaging.Message.Extension%2A> propriedade.  
+  
+ Ao trabalhar com filas externas, use o <xref:System.Messaging.Message.Extension%2A> propriedade para especificar propriedades de mensagem que não existem no serviço de enfileiramento de mensagens.  
+  
+ Existe uma fila externa em um sistema de enfileiramento de mensagens diferente de enfileiramento de mensagens da Microsoft. O Message Queuing se comunica com essas filas por meio de um aplicativo conector.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.Extension" />.</exception>
+        <exception cref="T:System.ArgumentException">A propriedade <see cref="P:System.Messaging.Message.Extension" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Formatter">
+      <MemberSignature Language="C#" Value="public System.Messaging.IMessageFormatter Formatter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.IMessageFormatter Formatter" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Formatter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.IMessageFormatter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o formatador usado para serializar ou desserializar um objeto do corpo da mensagem.</summary>
+        <value>O <see cref="T:System.Messaging.IMessageFormatter" /> que produz um fluxo a ser gravado ou lido do corpo da mensagem. O padrão é <see cref="T:System.Messaging.XmlMessageFormatter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Messaging.Message.Formatter%2A> propriedade ao ler e gravar uma mensagem. Quando uma mensagem é enviada para a fila, o formatador serializa o <xref:System.Messaging.Message.Body%2A> propriedade em um fluxo que pode ser enviado para a fila de mensagens. Ao ler de uma fila, o formatador desserializa os dados da mensagem para o <xref:System.Messaging.Message.Body%2A> propriedade.  
+  
+ A menos que você gravar o conteúdo da mensagem diretamente para o <xref:System.Messaging.Message.BodyStream%2A> propriedade, defina o <xref:System.Messaging.Message.Formatter%2A> propriedade antes de enviar a mensagem. Quando o <xref:System.Messaging.MessageQueue.Send%2A> método é chamado no <xref:System.Messaging.MessageQueue> instância, o corpo é serializada usando o formatador contido o <xref:System.Messaging.Message.Formatter%2A> propriedade. Se você enviar a mensagem sem especificar um valor para o <xref:System.Messaging.Message.Formatter%2A> propriedade, o formatador padrão é <xref:System.Messaging.XmlMessageFormatter>.  
+  
+ O <xref:System.Messaging.XmlMessageFormatter> é flexível, portanto, não é necessário ter o mesmo objeto de tipo no remetente e destinatário, ao usar esse formato. O <xref:System.Messaging.ActiveXMessageFormatter> e <xref:System.Messaging.BinaryMessageFormatter> serializar os dados em representação binária. O <xref:System.Messaging.ActiveXMessageFormatter> é usado ao enviar ou receber componentes COM.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a formatação de um corpo de mensagem usando <xref:System.Messaging.BinaryMessageFormatter>.  
+  
+ [!code-cpp[MessagingBinaryFormatter#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagingBinaryFormatter/CPP/message_binaryformatter.cpp#1)]
+ [!code-csharp[MessagingBinaryFormatter#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagingBinaryFormatter/CS/message_binaryformatter.cs#1)]
+ [!code-vb[MessagingBinaryFormatter#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessagingBinaryFormatter/VB/message_binaryformatter.vb#1)]  
+  
+ O exemplo de código a seguir demonstra a formatação de um corpo de mensagem usando <xref:System.Messaging.XmlMessageFormatter>.  
+  
+ [!code-cpp[Message.Body#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Body/CPP/message_sendreceive.cpp#1)]
+ [!code-csharp[Message.Body#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Body/CS/message_sendreceive.cs#1)]
+ [!code-vb[Message.Body#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Body/VB/message_sendreceive.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade <see cref="P:System.Messaging.Message.Formatter" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Messaging.HashAlgorithm HashAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.HashAlgorithm HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgHashAlgorithm")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o algoritmo que o enfileiramento de mensagens usa ao autenticar uma mensagem de hash ou criando uma assinatura digital de uma mensagem.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Messaging.HashAlgorithm" />. Para o Windows XP, o padrão é <see langword="SHA" />. Caso contrário, o padrão é <see langword="MD5" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No computador de origem, o enfileiramento de mensagens usa o algoritmo de hash durante a criação de uma assinatura digital de uma mensagem. O Gerenciador de filas de destino, em seguida, usa o mesmo algoritmo de hash para autenticar a mensagem quando ela é recebida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.HashAlgorithm" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador da mensagem.</summary>
+        <value>O identificador exclusivo da mensagem, que é gerado pelo Enfileiramento de Mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Message Queuing gera um identificador de mensagem quando a mensagem é enviada. O identificador é composto de 20 bytes e inclui dois itens: a máquina <xref:System.Guid> do computador de envio e um identificador exclusivo para a mensagem no computador. A combinação dos dois itens produz um identificador de mensagem que é exclusivo na rede.  
+  
+ Mensagem de enfileiramento de mensagens gera identificadores de mensagem para todas as mensagens, incluindo mensagens de confirmação e relatório. Geralmente, uma mensagem de confirmação é enviada pelo enfileiramento de mensagens em reação a chegada ou falha de uma mensagem original, enviada. Você pode encontrar o <xref:System.Messaging.Message.Id%2A> da mensagem original no valor da propriedade de <xref:System.Messaging.Message.CorrelationId%2A> propriedade de uma mensagem de confirmação.  
+  
+ Você também pode usar o <xref:System.Messaging.Message.Id%2A> propriedade ao enviar uma mensagem de resposta para uma fila de resposta. Para incluir o identificador da mensagem original em uma mensagem de resposta, defina o <xref:System.Messaging.Message.CorrelationId%2A> propriedade da mensagem de resposta para o <xref:System.Messaging.Message.Id%2A> propriedade da mensagem original. O aplicativo que lê a mensagem de resposta, em seguida, pode usar o identificador de correlação da mensagem de resposta para identificar a mensagem original.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir envia e recebe uma mensagem contendo um pedido de e para uma fila. Ele solicita uma confirmação positiva especificamente quando a mensagem original atinge ou é recuperada da fila.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.Id" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InfiniteTimeout">
+      <MemberSignature Language="C#" Value="public static readonly TimeSpan InfiniteTimeout;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan InfiniteTimeout" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.Message.InfiniteTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que nenhum tempo limite existe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.Message.TimeToBeReceived%2A>e <xref:System.Messaging.Message.TimeToReachQueue%2A> requer um valor que especifica um tempo limite. Para o primeiro, o tempo limite é o tempo máximo permitido para uma mensagem a ser recebida da fila. Para o último, o tempo limite é o tempo permitido para uma mensagem chegar à fila. Em ambos os casos, você pode especificar o tempo limite como um número de segundos ou usar <xref:System.Messaging.Message.InfiniteTimeout> para indicar que não existe nenhum tempo limite.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Messaging.Message.InfiniteTimeout> campo.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFirstInTransaction">
+      <MemberSignature Language="C#" Value="public bool IsFirstInTransaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFirstInTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.IsFirstInTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgIsFirstInTransaction")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a mensagem foi a primeira mensagem enviada em uma transação.</summary>
+        <value>
+          <see langword="true" />Se a mensagem foi a primeira mensagem enviada em uma transação; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recebendo os aplicativos usam o <xref:System.Messaging.Message.IsFirstInTransaction%2A> propriedade para verificar se uma mensagem foi a primeira mensagem enviada em uma única transação para uma única fila.  
+  
+ Essa propriedade está disponível somente com o enfileiramento de mensagens versão 2.0 e posterior.  
+  
+ Para verificar limites de transação, você pode usar o <xref:System.Messaging.Message.IsFirstInTransaction%2A> propriedade junto com duas outras propriedades: <xref:System.Messaging.Message.IsLastInTransaction%2A> e <xref:System.Messaging.Message.TransactionId%2A>. Use o primeiro para verificar se uma mensagem foi a última mensagem enviada na transação e usar o segundo para recuperar o identificador da transação.  
+  
+ Se apenas uma mensagem é enviada em uma transação, o <xref:System.Messaging.Message.IsFirstInTransaction%2A> e <xref:System.Messaging.Message.IsLastInTransaction%2A> propriedades são definidas como `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.IsFirstInTransaction%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.IsFirstInTransaction" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLastInTransaction">
+      <MemberSignature Language="C#" Value="public bool IsLastInTransaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLastInTransaction" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.IsLastInTransaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgIsLastInTransaction")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a mensagem foi a última mensagem enviada em uma transação.</summary>
+        <value>
+          <see langword="true" />Se a mensagem foi a última mensagem enviada em uma única transação; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recebendo os aplicativos usam o <xref:System.Messaging.Message.IsLastInTransaction%2A> propriedade para verificar se uma mensagem foi a última mensagem enviada em uma única transação para uma única fila.  
+  
+ Essa propriedade está disponível somente com o enfileiramento de mensagens versão 2.0 e posterior.  
+  
+ Para verificar limites de transação, você pode usar o <xref:System.Messaging.Message.IsLastInTransaction%2A> propriedade junto com duas outras propriedades: <xref:System.Messaging.Message.IsFirstInTransaction%2A> e <xref:System.Messaging.Message.TransactionId%2A>. Use o primeiro para verificar se uma mensagem foi a primeira mensagem enviada na transação e usar o segundo para recuperar o identificador da transação.  
+  
+ Se apenas uma mensagem é enviada em uma transação, o <xref:System.Messaging.Message.IsFirstInTransaction%2A> e <xref:System.Messaging.Message.IsLastInTransaction%2A> propriedades são definidas como `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.IsLastInTransaction%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.IsLastInTransaction" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgLabel")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres Unicode definida pelo aplicativo que descreve a mensagem.</summary>
+        <value>O rótulo da mensagem. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar um rótulo de mensagem para várias finalidades. Por exemplo, você pode usar isso para fins de exibição ou seletivamente processar mensagens com base no valor do rótulo. O rótulo não precisa ser exclusivo entre as mensagens.  
+  
+ Fila de mensagens e mensagem rótulos representam um valor definido pelo aplicativo que pode ajudar a identificam a fila ou a mensagem em termos legível. É responsabilidade do aplicativo para interpretar o conteúdo de rótulo, que não têm nenhum significado intrínseco para o aplicativo do serviço de enfileiramento de mensagens.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de uma mensagem <xref:System.Messaging.Message.Label%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.Label" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupId">
+      <MemberSignature Language="C#" Value="public long LookupId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 LookupId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.LookupId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Introduzido no MSMQ 3.0. Obtém o identificador de pesquisa da mensagem.</summary>
+        <value>O identificador de pesquisa da mensagem, que é gerado pelo Enfileiramento de Mensagens e é exclusivo da fila em que a mensagem reside.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.LookupId%2A> propriedade fornece acesso somente leitura ao identificador de pesquisa da mensagem. O identificador de pesquisa, introduzido no MSMQ 3.0, é um identificador de 64 bits que é gerado pelo serviço de enfileiramento de mensagens e atribuído a cada mensagem quando a mensagem é colocada na fila. O identificador de pesquisa não é o mesmo que o identificador da mensagem que é gerado quando a mensagem é enviada.  
+  
+ O Message Queuing gera um identificador de pesquisa para todas as mensagens são colocadas em qualquer fila, incluindo os gerados pelo aplicativo de destino, administração e filas de relatórios, bem como diário gerado pelo sistema, mensagens mortas, conector e filas de saída. Em outras palavras, isso inclui as duas mensagens enviadas por aplicativos de envio e pelo enfileiramento de mensagens. O identificador de pesquisa é exclusivo para a fila e não tem nenhum significado fora da fila.  
+  
+ Se uma mensagem é enviada para várias filas de destino, ou se uma cópia de uma mensagem é armazenada em um diário de computador ou fila, cada cópia da mensagem terá seu próprio identificador de pesquisa quando ele é colocado na respectiva fila.  
+  
+ O <xref:System.Messaging.Message.LookupId%2A> propriedade só pode ser lida em mensagens recuperadas da fila.  
+  
+ Um identificador de pesquisa é usado para ler uma mensagem específica na fila. Depois que o identificador de pesquisa de uma mensagem é conhecido, o aplicativo receptor pode chamar o <xref:System.Messaging.MessageQueue.PeekByLookupId%2A> ou <xref:System.Messaging.MessageQueue.ReceiveByLookupId%2A> função para ir diretamente para essa mensagem e inspecionar ou recuperá-la da fila, ao contrário de cursores que deve começar no início da fila e navegue até o final da fila  
+  
+ Obter os identificadores de pesquisa de mensagens na fila é responsabilidade do aplicativo. Uma maneira possível para obter os identificadores de pesquisa é criar um gatilho para a fila de destino que invoca um componente que armazena em cache os identificadores de cada mensagem conforme eles são colocados em fila.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">O MSMQ 3.0 não está instalado.</exception>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.LookupId" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageType">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageType MessageType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.MessageType MessageType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.MessageType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgMessageType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de mensagem: <see langword="Normal" />, <see langword="Acknowledgment" /> ou <see langword="Report" />.</summary>
+        <value>Um dos valores de <see cref="P:System.Messaging.Message.MessageType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Message Queuing normalmente define essa propriedade quando ele envia a mensagem. Uma mensagem de enfileiramento de mensagens pode ser um dos seguintes tipos:  
+  
+-   `Normal`, que é uma mensagem típica enviada de um aplicativo para uma fila ou uma mensagem de resposta retornados para o aplicativo de envio.  
+  
+-   `Acknowledgement`, enfileiramento de mensagens gerado sempre que o aplicativo de envio solicita um. Por exemplo, enfileiramento de mensagens pode gerar mensagens positivas ou negativas para indicar que a mensagem original chegou ou foi lido. O Message Queuing retorna a mensagem de confirmação apropriada para a fila de administração especificada pelo aplicativo de envio.  
+  
+-   `Report`, enfileiramento de mensagens gerado sempre que uma fila de relatórios está definida na fonte de Gerenciador de fila. Quando o rastreamento estiver habilitado, enfileiramento de mensagens envia uma mensagem de relatório para a fila de enfileiramento de mensagens de relatório sempre que a mensagem original entra ou sai de um servidor de enfileiramento de mensagens.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.MessageType%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.MessageType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessagePriority Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.MessagePriority Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgPriority")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessagePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade da mensagem, que determina o local na fila em que a mensagem foi colocada.</summary>
+        <value>Um dos valores <see cref="T:System.Messaging.MessagePriority" /> que representa os níveis de prioridade de mensagens não transacionais. O padrão é <see langword="Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.Priority%2A> propriedade afeta como enfileiramento trata a mensagem enquanto ele estiver em trânsito e depois de atingir o destino. Mensagens de prioridade mais alta são recebem preferência durante o roteamento e inseridas em direção à frente da fila de destino. Mensagens com a mesma prioridade são colocadas na fila de acordo com a hora de chegada.  
+  
+ Você pode definir uma prioridade significativa somente para mensagens não transacionais. O Message Queuing automaticamente define a prioridade de mensagens transacionais para `Lowest`, que faz com que a prioridade da mensagem transacional ser ignorada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir envia duas mensagens de prioridades diferentes para a fila e recuperá-los posteriormente.  
+  
+ [!code-cpp[Message.DefaultPropertiesToSend#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CPP/message_defaultandpriority.cpp#1)]
+ [!code-csharp[Message.DefaultPropertiesToSend#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/CS/message_defaultandpriority.cs#1)]
+ [!code-vb[Message.DefaultPropertiesToSend#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.DefaultPropertiesToSend/VB/message_defaultandpriority.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.Priority" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Recoverable">
+      <MemberSignature Language="C#" Value="public bool Recoverable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Recoverable" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.Recoverable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgRecoverable")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se há garantia de que a mensagem seja entregue no caso de um problema de rede ou falha do computador.</summary>
+        <value>
+          <see langword="true" /> se a entrega da mensagem for assegurada (por meio do salvamento da mensagem em disco enquanto trafegam); <see langword="false" /> se a entrega não for assegurada. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.Recoverable%2A> propriedade indica se a entrega de uma mensagem é — mesmo que um computador trave enquanto a mensagem estiver a caminho para a fila de destino.  
+  
+ Se a garantia de entrega de uma mensagem, a mensagem é armazenada localmente em cada etapa na rota, até que a mensagem é encaminhada com êxito para o próximo computador. Definindo o <xref:System.Messaging.Message.Recoverable%2A> propriedade `true` pode afetar a taxa de transferência.  
+  
+ Se a mensagem for transacional, enfileiramento de mensagens automaticamente trata a mensagem como recuperável, independentemente do valor de <xref:System.Messaging.Message.Recoverable%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de uma mensagem <xref:System.Messaging.Message.Recoverable%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.Recoverable" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseQueue">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue ResponseQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue ResponseQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.ResponseQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgResponseQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fila que recebe mensagens de resposta geradas por aplicativo.</summary>
+        <value>O <see cref="T:System.Messaging.MessageQueue" /> qual resposta geradas pelo aplicativo, as mensagens são retornadas. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.ResponseQueue%2A> propriedade identifica a fila que recebe mensagens de resposta geradas por aplicativo, que retorna o aplicativo de recebimento para o aplicativo de envio. O aplicativo de envio Especifica filas de resposta quando o aplicativo envia suas mensagens. Qualquer fila disponível pode ser especificada como uma fila de resposta.  
+  
+ As mensagens retornadas para a fila de resposta são específicas do aplicativo. O aplicativo deve definir o conteúdo de mensagens, bem como a ação seja após o recebimento de uma mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de uma mensagem <xref:System.Messaging.Message.ResponseQueue%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.ResponseQueue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityContext">
+      <MemberSignature Language="C#" Value="public System.Messaging.SecurityContext SecurityContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.SecurityContext SecurityContext" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SecurityContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.SecurityContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contexto de segurança para uma mensagem.</summary>
+        <value>Um <see cref="T:System.Messaging.SecurityContext" /> objeto que contém o contexto de segurança para uma mensagem, se a propriedade foi definida anteriormente; caso contrário, nulo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderCertificate">
+      <MemberSignature Language="C#" Value="public byte[] SenderCertificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SenderCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SenderCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSenderCertificate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o certificado de segurança usado para autenticar mensagens.</summary>
+        <value>Uma matriz de valores de byte que representa um certificado de segurança, enfileiramento de mensagens usa para verificar o remetente da mensagem. O padrão é uma matriz de comprimento zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O aplicativo receptor usa o <xref:System.Messaging.Message.SenderCertificate%2A> propriedade quando a mensagem inclui um certificado de segurança externas.  
+  
+ O Message Queuing pode autenticar uma mensagem usando um certificado de segurança internos ou externos. O Message Queuing fornece certificados internos, que são usados para verificar a integridade de mensagem. Uma autoridade de certificação fornece um certificado externo, você pode acessar por meio do <xref:System.Messaging.Message.SenderCertificate%2A> propriedade da mensagem. Além de permitir que o enfileiramento de mensagens autenticar a mensagem, um certificado externo permite que o aplicativo de recebimento verificar o remetente. Um certificado interno não tem utilizável valor para um aplicativo de recebimento.  
+  
+ Um certificado externo deve ser registrado com o serviço de diretório do sistema de enfileiramento de mensagens. Um certificado externo contém informações sobre a autoridade de certificação, o usuário do certificado, o período de validade do certificado, a chave pública do usuário de certificado e assinatura da autoridade de certificação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.SenderCertificate" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderId">
+      <MemberSignature Language="C#" Value="public byte[] SenderId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SenderId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SenderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSenderId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador do usuário remetente.</summary>
+        <value>Uma matriz de valores de bytes que identifica o remetente. O Gerenciador de Fila de recebimento usa o identificador quando autentica a mensagem para verificar o remetente da mensagem e os direitos de acesso do remetente à fila.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Messaging.Message.AttachSenderId%2A> é de propriedade `false`, o identificador de remetente especificado no <xref:System.Messaging.Message.SenderId%2A> propriedade não está anexada à mensagem quando ela é enviada. Isso indica ao enfileiramento de mensagens que o remetente não deve ser validado quando ele envia a mensagem à fila de destino. Se o <xref:System.Messaging.Message.AttachSenderId%2A> é de propriedade `true`, o <xref:System.Messaging.Message.SenderId%2A> o valor da propriedade é confiável somente se a mensagem foi autenticada. Use o <xref:System.Messaging.Message.Authenticated%2A> propriedade em conjunto com o <xref:System.Messaging.Message.SenderId%2A> propriedade para verificar os direitos de acesso do remetente.  
+  
+ Um aplicativo conector é um aplicativo que usa um servidor de conector para fornecer comunicação entre o enfileiramento de mensagens e outros sistemas de enfileiramento de mensagens. O Message Queuing requer aplicativos de conector para a identificação do remetente. Você deve definir o <xref:System.Messaging.Message.ConnectorType%2A> propriedade ao enviar uma mensagem por meio de um aplicativo conector.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.SenderId" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderVersion">
+      <MemberSignature Language="C#" Value="public long SenderVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 SenderVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SenderVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSenderVersion")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do serviço de enfileiramento de mensagens usado para enviar a mensagem.</summary>
+        <value>A versão do serviço de enfileiramento de mensagens usado para enviar a mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.SenderVersion%2A> propriedade é importante para determinados recursos. Por exemplo, o processamento de transações é suportado somente pelo Message Queuing 2.0 e posteriores, e assinaturas digitais são usadas para autenticar mensagens enviadas pelo MSMQ 1.0.  
+  
+ Os conjuntos de Gerenciador de fila de envio de <xref:System.Messaging.Message.SenderVersion%2A> propriedade quando a mensagem é enviada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.SenderVersion%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.SenderVersion" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SentTime">
+      <MemberSignature Language="C#" Value="public DateTime SentTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime SentTime" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SentTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSentTime")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e hora no computador de envio que a mensagem foi enviada pelo Gerenciador de fila de origem.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa a hora em que a mensagem foi enviada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.SentTime%2A> propriedade é ajustada à hora local do computador no qual essa instância do <xref:System.Messaging.Message> classe foi criada. Este fuso horário pode ser diferente das filas de origem e de destino.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.SentTime%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.SentTime" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceMachine">
+      <MemberSignature Language="C#" Value="public string SourceMachine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceMachine" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.SourceMachine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgSourceMachine")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o computador que originou a mensagem.</summary>
+        <value>O nome do computador do qual a mensagem foi enviada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formato da <xref:System.Messaging.Message.SourceMachine%2A> propriedade não tem precedentes duas barras (\\\\). Por exemplo, `myServer` é válido <xref:System.Messaging.Message.SourceMachine%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.SourceMachine%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.SourceMachine" />.</exception>
+        <exception cref="T:System.Messaging.MessageQueueException">Não foi possível acessar o serviço de diretório ou de informações do computador.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToBeReceived">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeToBeReceived { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeToBeReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.TimeToBeReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Messaging.TimeoutConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTimeToBeReceived")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade máxima de tempo para a mensagem a ser recebida da fila de destino.</summary>
+        <value>O tempo total para uma mensagem enviada ser recebida da fila de destino. O padrão é <see cref="F:System.Messaging.Message.InfiniteTimeout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.TimeToBeReceived%2A> propriedade especifica o tempo total para uma mensagem enviada ser recebida da fila de destino. O limite de tempo inclui o tempo gasto Obtendo a fila de destino e o tempo gasto aguardando na fila antes da mensagem for recebida.  
+  
+> [!CAUTION]
+>  Ao usar computadores cliente dependentes, certifique-se de que o relógio no computador cliente está sincronizado com o relógio do servidor que está executando o enfileiramento de mensagens. Caso contrário, o comportamento imprevisível pode resultar ao enviar uma mensagem cujo <xref:System.Messaging.Message.TimeToBeReceived%2A> propriedade não é <xref:System.Messaging.Message.InfiniteTimeout>.  
+  
+ Se o intervalo especificado pelo <xref:System.Messaging.Message.TimeToBeReceived%2A> propriedade expira antes que a mensagem é removida da fila, enfileiramento de mensagens descartará a mensagem em uma das duas maneiras. Se a mensagem <xref:System.Messaging.Message.UseDeadLetterQueue%2A> é de propriedade `true`, a mensagem é enviada para a fila de mensagens mortas. Se <xref:System.Messaging.Message.UseDeadLetterQueue%2A> é `false`, a mensagem será ignorada.  
+  
+ Você pode definir a mensagem <xref:System.Messaging.Message.AcknowledgeType%2A> propriedade para solicitar que o serviço de enfileiramento de mensagens envia uma mensagem de confirmação negativa de volta para o aplicativo de envio se a mensagem não foi recuperada antes do timer expira.  
+  
+ Se o valor especificado pelo <xref:System.Messaging.Message.TimeToBeReceived%2A> propriedade é menor que o valor especificado pelo <xref:System.Messaging.Message.TimeToReachQueue%2A> propriedade <xref:System.Messaging.Message.TimeToBeReceived%2A> terá precedência.  
+  
+ Quando várias mensagens são enviadas em uma única transação, enfileiramento de mensagens usa o <xref:System.Messaging.Message.TimeToBeReceived%2A> propriedade da primeira mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de uma mensagem <xref:System.Messaging.Message.TimeToBeReceived%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.TimeToBeReceived" />.</exception>
+        <exception cref="T:System.ArgumentException">O valor especificado para <see cref="P:System.Messaging.Message.TimeToBeReceived" /> é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToReachQueue">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeToReachQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeToReachQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.TimeToReachQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Messaging.TimeoutConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTimeToReachQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade máxima de tempo para a mensagem chegar à fila.</summary>
+        <value>O tempo limite para a mensagem chegar à fila de destino, a partir do momento a mensagem é enviada. O padrão é <see cref="F:System.Messaging.Message.InfiniteTimeout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o intervalo especificado pelo <xref:System.Messaging.Message.TimeToReachQueue%2A> propriedade expira antes que a mensagem chega ao seu destino, enfileiramento de mensagens descartará a mensagem em uma das duas maneiras. Se a mensagem <xref:System.Messaging.Message.UseDeadLetterQueue%2A> é de propriedade `true`, a mensagem é enviada para a fila de mensagens mortas. Se <xref:System.Messaging.Message.UseDeadLetterQueue%2A> é `false`, a mensagem será ignorada  
+  
+ Você pode definir da mensagem he <xref:System.Messaging.Message.AcknowledgeType%2A> propriedade para solicitar que o serviço de enfileiramento de mensagens envia uma mensagem de confirmação negativa de volta para o aplicativo de envio se a mensagem não chegou antes do timer expira.  
+  
+ Se o <xref:System.Messaging.Message.TimeToReachQueue%2A> propriedade for definida como 0 segundos, o enfileiramento de mensagens tenta uma vez para enviar a mensagem para o destino — se a fila está esperando a mensagem. Se a fila for local, a mensagem chega sempre-lo.  
+  
+ Se o valor especificado pelo <xref:System.Messaging.Message.TimeToReachQueue%2A> propriedade é maior que o valor especificado pelo <xref:System.Messaging.Message.TimeToBeReceived%2A> propriedade <xref:System.Messaging.Message.TimeToBeReceived%2A> terá precedência.  
+  
+ Quando várias mensagens são enviadas em uma única transação, enfileiramento de mensagens usa o <xref:System.Messaging.Message.TimeToReachQueue%2A> propriedade da primeira mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de uma mensagem <xref:System.Messaging.Message.TimeToReachQueue%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.TimeToReachQueue" />.</exception>
+        <exception cref="T:System.ArgumentException">O valor especificado para <see cref="P:System.Messaging.Message.TimeToReachQueue" /> é inválido. Ele pode representar um número negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionId">
+      <MemberSignature Language="C#" Value="public string TransactionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransactionId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.TransactionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTransactionId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador para a transação da qual a mensagem fazia parte.</summary>
+        <value>O identificador da transação associada à mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recebendo os aplicativos usam o <xref:System.Messaging.Message.TransactionId%2A> propriedade para verificar se uma mensagem foi enviada como parte de uma transação específica. O identificador da transação contém o identificador do computador de envio (primeiros 16 bits) seguido por um número de sequência da transação de 4 bytes.  
+  
+ Essa propriedade está disponível somente para enfileiramento de mensagens versão 2.0 e posterior.  
+  
+ Não há garantia de identificadores de transação seja exclusivo, como números de sequência de transação não são persistentes, e eles recomeçar novamente em 2 <sup>20</sup>. O Message Queuing apenas garante que as transações subsequentes terá números de sequência de transação diferente.  
+  
+ Você pode usar o <xref:System.Messaging.Message.TransactionId%2A> propriedade juntamente com o <xref:System.Messaging.Message.IsFirstInTransaction%2A> e <xref:System.Messaging.Message.IsLastInTransaction%2A> propriedades para verificar limites de transação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.TransactionId%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.TransactionId" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionStatusQueue">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue TransactionStatusQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue TransactionStatusQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.TransactionStatusQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTransactionStatusQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a fila de status de transação no computador de origem.</summary>
+        <value>A fila de status de transação no computador de origem, que é usado para enviar mensagens de confirmação de volta para o aplicativo de envio. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.TransactionStatusQueue%2A> propriedade identifica a fila transacional no computador de origem que recebe as confirmações de confirmação de leitura de aplicativos do conector. O Message Queuing define a propriedade e os aplicativos de conector para usar a propriedade ao recuperar mensagens transacionais enviadas para filas externas.  
+  
+ Existe uma fila externa em um sistema de enfileiramento de mensagens diferente de enfileiramento de mensagens da Microsoft. O Message Queuing se comunica com essas filas por meio de um aplicativo conector.  
+  
+ O aplicativo do conector pode usar a fila de status de transação para enviar mensagens de confirmação de volta para o aplicativo de envio. A fila de status de transação deve receber essas confirmações, mesmo se o aplicativo de envio não solicita outras confirmações.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem <xref:System.Messaging.Message.TransactionStatusQueue%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A mensagem não foi enviada. Essa propriedade só pode ser lida em mensagens recuperadas de uma fila.  
+  
+ -ou-  
+  
+ A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.TransactionStatusQueue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAuthentication">
+      <MemberSignature Language="C#" Value="public bool UseAuthentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.UseAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseAuthentication")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a mensagem foi (ou deve ser) autenticada antes de ser enviada.</summary>
+        <value>
+          <see langword="true" /> se o aplicativo de envio tiver solicitado a autenticação para a mensagem; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.UseAuthentication%2A> propriedade especifica se a mensagem precisa ser autenticada. Se o aplicativo de envio solicita autenticação, enfileiramento de mensagens cria uma assinatura digital e o utiliza para assinar a mensagem quando ela é enviada e autenticar a mensagem quando ela é recebida.  
+  
+ Se <xref:System.Messaging.Message.UseAuthentication%2A> é `false` e uma mensagem é enviada a uma fila que aceita apenas mensagens autenticadas, a mensagem será rejeitada quando atingir a fila.  
+  
+ Você não pode determinar se uma mensagem de falha na autenticação examinando suas propriedades. O Message Queuing descarta tais mensagens antes que sejam enviadas para a fila. No entanto, você pode solicitar que uma mensagem de confirmação enviada se uma falha de entrega impede que uma mensagem que chega na fila.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.UseAuthentication" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDeadLetterQueue">
+      <MemberSignature Language="C#" Value="public bool UseDeadLetterQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDeadLetterQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.UseDeadLetterQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseDeadLetterQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma cópia da mensagem não pôde ser entregue deve ser enviada a uma fila de mensagens mortas.</summary>
+        <value>
+          <see langword="true" />Se a entrega de mensagens deve resultar em uma cópia da mensagem está sendo enviada para uma fila de mensagens mortas; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.UseJournalQueue%2A> e <xref:System.Messaging.Message.UseDeadLetterQueue%2A> propriedades que especificam como o enfileiramento de mensagens rastreia uma mensagem. Se <xref:System.Messaging.Message.UseDeadLetterQueue%2A> é `true`, falha de entrega (de uma mensagem não transacional), faz com que a mensagem a ser enviada para a fila de mensagens mortas não transacional no computador que não foi possível entregar a mensagem. Falha de entrega pode ser causada por um timer de mensagem expirar, por exemplo.  
+  
+ No caso de falha de entrega para uma mensagem transacional, enfileiramento de mensagens envia a mensagem para a fila de mensagens mortas transacional no computador de origem em todos os casos negativos e em dúvida.  
+  
+ Quando você armazena mensagens em uma fila de mensagens mortas, você deve limpar a fila periodicamente para remover as mensagens que não são mais necessários. Mensagens armazenadas na contagem de filas de mensagens mortas em relação à cota de tamanho para o computador em que a fila reside. A cota do computador é definida pelo administrador e refere-se ao tamanho alocado para o armazenamento de mensagens no computador inteiro, não apenas em uma única fila.  
+  
+ Você não criar uma fila de mensagens mortas ou diário. Esses são ambas as filas do sistema que gera enfileiramento de mensagens.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de uma mensagem <xref:System.Messaging.Message.UseDeadLetterQueue%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.UseDeadLetterQueue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseEncryption">
+      <MemberSignature Language="C#" Value="public bool UseEncryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseEncryption" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.UseEncryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseEncryption")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a mensagem privada.</summary>
+        <value>
+          <see langword="true" />para exigir que o enfileiramento de mensagens criptografar a mensagem. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma mensagem for privada, o corpo é criptografado antes de ser enviado e descriptografado quando é recebido. Para enviar uma mensagem particular, o aplicativo de envio deve especificar que a criptografia usado e, opcionalmente, o algoritmo de criptografia.  
+  
+ Ao enviar mensagens particulares, seu aplicativo não precisa executar a criptografia de mensagem. O Message Queuing pode criptografar o corpo da mensagem para você, se seu aplicativo está enviando mensagens dentro de uma empresa, Microsoft Windows 2000, que tem acesso ao serviço de diretório. Ao receber mensagens particulares, o Gerenciador de fila de recebimento sempre descriptografa o corpo da mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de uma mensagem <xref:System.Messaging.Message.UseEncryption%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.UseEncryption" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseJournalQueue">
+      <MemberSignature Language="C#" Value="public bool UseJournalQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseJournalQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.UseJournalQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseJournalQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma cópia da mensagem deve ser mantida em um diário de máquina no computador de origem.</summary>
+        <value>
+          <see langword="true" />para exigir que uma cópia de uma mensagem ser mantida no diário de máquina do computador de origem após a mensagem tiver sido transmitidos com êxito (a partir do computador de origem para o próximo servidor); Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.UseJournalQueue%2A> e <xref:System.Messaging.Message.UseDeadLetterQueue%2A> propriedades que especificam como o enfileiramento de mensagens rastreia uma mensagem. Se <xref:System.Messaging.Message.UseJournalQueue%2A> é `true`, em seguida, uma cópia é mantida no diário do computador no computador de origem em cada etapa que uma mensagem é transmitida.  
+  
+ A mensagem enviada somente é copiada para a fila de diário, se a fila de destino estiver em um computador remoto. Se o destino estiver no computador local, a mensagem é enviada diretamente para a fila; Não há nenhuma etapa intermediária para exigir o registro em log.  
+  
+ Quando você armazenar mensagens em uma fila do diário, limpe a fila periodicamente para remover as mensagens que não são mais necessários. Mensagens armazenadas na contagem de filas de diário em relação à cota para o computador em que a fila reside. (A cota do computador é definida pelo administrador).  
+  
+ Você não criar uma fila de mensagens mortas ou diário. Esses são ambas as filas do sistema que gera enfileiramento de mensagens.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de uma mensagem <xref:System.Messaging.Message.UseJournalQueue%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.UseJournalQueue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseTracing">
+      <MemberSignature Language="C#" Value="public bool UseTracing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseTracing" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Message.UseTracing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseTracing")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma mensagem deve ser rastreada enquanto ela se aproxima da sua fila de destino.</summary>
+        <value>
+          <see langword="true" /> se cada etapa intermediária feita pela mensagem original for roteada para a fila de destino, será gerado um relatório a ser enviado para a fila de relatórios do sistema; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Message.UseTracing%2A> propriedade especifica se é controlar a rota de uma mensagem à medida que se aproxima sua fila de destino. Se `true`, uma mensagem de relatório (gerada pelo enfileiramento de mensagens) é enviada para uma fila de relatórios sempre que a mensagem passa por um servidor de roteamento de enfileiramento de mensagens. A fila de relatórios é especificada pela fonte do Gerenciador de fila. Filas de relatórios não se limitam a mensagens de relatório geradas pelo enfileiramento de mensagens; as mensagens geradas pelo aplicativo também podem ser enviadas para filas de relatórios.  
+  
+ Usando rastreamento envolve a configuração do Active Directory e especificando uma fila de relatórios para a empresa de enfileiramento de mensagens. O administrador configura essas configurações.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de uma mensagem <xref:System.Messaging.Message.UseTracing%2A> propriedade.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A fila de mensagens é filtrada para ignorar a propriedade <see cref="P:System.Messaging.Message.UseTracing" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

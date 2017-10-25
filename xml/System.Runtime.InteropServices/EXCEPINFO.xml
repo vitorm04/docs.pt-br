@@ -1,0 +1,176 @@
+<Type Name="EXCEPINFO" FullName="System.Runtime.InteropServices.EXCEPINFO">
+  <TypeSignature Language="C#" Value="public struct EXCEPINFO" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential sealed beforefieldinit EXCEPINFO extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.EXCEPINFO" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Use <see cref="T:System.Runtime.InteropServices.ComTypes.EXCEPINFO" /> em seu lugar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações adicionais sobre `EXCEPINFO`, consulte a biblioteca MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="bstrDescription">
+      <MemberSignature Language="C#" Value="public string bstrDescription;" />
+      <MemberSignature Language="ILAsm" Value=".field public string bstrDescription" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.EXCEPINFO.bstrDescription" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Descreve o erro para o cliente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="bstrHelpFile">
+      <MemberSignature Language="C#" Value="public string bstrHelpFile;" />
+      <MemberSignature Language="ILAsm" Value=".field public string bstrHelpFile" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.EXCEPINFO.bstrHelpFile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém a unidade totalmente qualificado, o caminho e o nome de um arquivo de ajuda com mais informações sobre o erro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="bstrSource">
+      <MemberSignature Language="C#" Value="public string bstrSource;" />
+      <MemberSignature Language="ILAsm" Value=".field public string bstrSource" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.EXCEPINFO.bstrSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o nome da origem da exceção. Normalmente, isso é um nome de aplicativo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="dwHelpContext">
+      <MemberSignature Language="C#" Value="public int dwHelpContext;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 dwHelpContext" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.EXCEPINFO.dwHelpContext" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a ID do contexto de Ajuda do tópico no arquivo da Ajuda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="pfnDeferredFillIn">
+      <MemberSignature Language="C#" Value="public IntPtr pfnDeferredFillIn;" />
+      <MemberSignature Language="ILAsm" Value=".field public native int pfnDeferredFillIn" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.EXCEPINFO.pfnDeferredFillIn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um ponteiro para uma função que usa um <see cref="T:System.Runtime.InteropServices.EXCEPINFO" /> estrutura como um argumento e retorna um valor HRESULT. Se não for desejado o preenchimento adiado, esse campo é definido como <see langword="null" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="pvReserved">
+      <MemberSignature Language="C#" Value="public IntPtr pvReserved;" />
+      <MemberSignature Language="ILAsm" Value=".field public native int pvReserved" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.EXCEPINFO.pvReserved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este campo é reservado; deve ser definido como <see langword="null" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="wCode">
+      <MemberSignature Language="C#" Value="public short wCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public int16 wCode" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.EXCEPINFO.wCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um código de erro que identifica o erro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="wReserved">
+      <MemberSignature Language="C#" Value="public short wReserved;" />
+      <MemberSignature Language="ILAsm" Value=".field public int16 wReserved" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.EXCEPINFO.wReserved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este campo é reservado; deve ser definido como 0.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

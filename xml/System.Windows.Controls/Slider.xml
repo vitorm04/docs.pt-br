@@ -1,0 +1,1726 @@
+<Type Name="Slider" FullName="System.Windows.Controls.Slider">
+  <TypeSignature Language="C#" Value="public class Slider : System.Windows.Controls.Primitives.RangeBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Slider extends System.Windows.Controls.Primitives.RangeBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Slider" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.RangeBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ValueChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Value")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Ignore)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_Track", Type=typeof(System.Windows.Controls.Primitives.Track))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_SelectionRange", Type=typeof(System.Windows.FrameworkElement))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um controle que permite ao usuário selecionar dentre um intervalo de valores movendo um controle <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> em um <see cref="T:System.Windows.Controls.Primitives.Track" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.Slider> controle permite que os usuários selecionem um valor de um intervalo de valores. A ilustração a seguir mostra um exemplo de um <xref:System.Windows.Controls.Slider> controle.  
+  
+ **Exemplo de um controle deslizante**  
+  
+ ![Ilustração de controle deslizante](~/add/media/genericslider.png "ilustração de controle deslizante")  
+  
+ Você pode personalizar um <xref:System.Windows.Controls.Slider> controle definindo suas propriedades. A lista a seguir descreve alguns dos atributos de um <xref:System.Windows.Controls.Slider> que você pode personalizar:  
+  
+-   A orientação do <xref:System.Windows.Controls.Slider>, horizontal ou vertical.  
+  
+-   Os locais de marca de escala ao longo do <xref:System.Windows.Controls.Slider> rastrear.  
+  
+-   A exibição de dicas de ferramenta para mostrar o valor atual de <xref:System.Windows.Controls.Slider>.  
+  
+-   A capacidade do <xref:System.Windows.Controls.Primitives.Thumb> para qualquer um dos snap para marcas de escala ou deve ser posicionado em qualquer ponto de <xref:System.Windows.Controls.Slider>.  
+  
+-   A direção de aumento do valor ao longo do <xref:System.Windows.Controls.Slider>.  
+  
+ Para obter mais informações sobre como personalizar um <xref:System.Windows.Controls.Slider> , consulte o membro individual.  
+  
+ <xref:System.Windows.Controls.Slider>substitui os metadados da <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> propriedade e define seu padrão de 10. Para obter mais informações, consulte [Visão geral sobre propriedades de dependência](~/docs/framework/wpf/advanced/dependency-properties-overview.md).  
+  
+> [!NOTE]
+>  Se o valor da <xref:System.Windows.Controls.Slider> é animada, o usuário pode não ser capaz de interagir com o <xref:System.Windows.Controls.Slider> controlar após a conclusão da animação. Consulte [como: definir uma propriedade após animação-a com um Storyboard](~/docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md) para opções de como você pode restaurar o controle de usuário de um <xref:System.Windows.Controls.Slider> após ser animado.  
+  
+## <a name="customizing-the-slider-control"></a>Personalizando o controle deslizante  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Controls.Slider> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Controls.Slider>, consulte [modelos e estilos de controle deslizante](~/docs/framework/wpf/controls/slider-styles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade estiver presente em ambos <xref:System.Windows.Controls.Slider> controle do modelo padrão e é definido usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir mostra como associar o <xref:System.Windows.FrameworkElement.Height%2A> propriedade de um <xref:System.Windows.Shapes.Rectangle> para o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> de um <xref:System.Windows.Controls.Slider> controle.  
+  
+ O exemplo a seguir define uma <xref:System.Windows.Controls.Slider> controle chamado `RectangeHeight` que pode ter um <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> entre 0 e 200.  
+  
+ [!code-xaml[SliderwithDataBinding#Minimum](~/samples/snippets/csharp/VS_Snippets_Wpf/SliderwithDataBinding/CS/Pane1.xaml#minimum)]   
+  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Shapes.Rectangle> que associa sua <xref:System.Windows.FrameworkElement.Height%2A> propriedade para o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> do <xref:System.Windows.Controls.Slider> controle. (No exemplo completo, uma associação semelhante é criada para o <xref:System.Windows.FrameworkElement.Width%2A> propriedade.)  
+  
+ [!code-xaml[SliderwithDataBinding#BindingRectangle](~/samples/snippets/csharp/VS_Snippets_Wpf/SliderwithDataBinding/CS/Pane1.xaml#bindingrectangle)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Slider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size finalSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size finalSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="finalSize">O computada <see cref="T:System.Windows.Size" /> que é usado para organizar o controle.</param>
+        <summary>Organiza o conteúdo de um <see cref="T:System.Windows.Controls.Slider" /> e determina sua <see cref="T:System.Windows.Size" />.</summary>
+        <returns>O computada <see cref="T:System.Windows.Size" /> do <see cref="T:System.Windows.Controls.Slider" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoToolTipPlacement">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.AutoToolTipPlacement AutoToolTipPlacement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.AutoToolTipPlacement AutoToolTipPlacement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.AutoToolTipPlacement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.AutoToolTipPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se uma dica de ferramenta que contém o valor atual do <see cref="T:System.Windows.Controls.Slider" /> é exibida quando o <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> é pressionado. Se uma dica de ferramenta é exibida, essa propriedade também especifica o posicionamento da dica de ferramenta.</summary>
+        <value>Uma da <see cref="T:System.Windows.Controls.Primitives.AutoToolTipPlacement" /> valores que determina onde exibir a dica de ferramenta com relação ao <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> do <see cref="T:System.Windows.Controls.Slider" />, ou que especifica para não mostrar uma dica de ferramenta. O padrão é <see cref="F:System.Windows.Controls.Primitives.AutoToolTipPlacement.None" />, que especifica que uma dica de ferramenta não será exibida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_AutoToolTipPlacement"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.AutoToolTipPlacementProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como definir a <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> propriedade.  
+  
+ [!code-csharp[Slider#Basic](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#basic)]
+ [!code-vb[Slider#Basic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#basic)]
+ [!code-xaml[Slider#Basic](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#basic)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoToolTipPlacementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AutoToolTipPlacementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AutoToolTipPlacementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.AutoToolTipPlacementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.AutoToolTipPlacement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoToolTipPrecision">
+      <MemberSignature Language="C#" Value="public int AutoToolTipPrecision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AutoToolTipPrecision" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.AutoToolTipPrecision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de dígitos exibidos à direita da vírgula decimal para o <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> do <see cref="T:System.Windows.Controls.Slider" /> em uma dica de ferramenta.</summary>
+        <value>A precisão do <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> exibido na dica de ferramenta, especificado como o número de dígitos que aparecem à direita da vírgula decimal. O padrão é zero (0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade deve ser um inteiro não negativo. Se essa propriedade é definida como um valor diferente de um inteiro não negativo, ocorre uma exceção.  
+  
+<a name="dependencyPropertyInfo_AutoToolTipPrecision"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.AutoToolTipPrecisionProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.AutoToolTipPrecision%2A> propriedade.  
+  
+ [!code-csharp[Slider#SelectionRange](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#selectionrange)]
+ [!code-vb[Slider#SelectionRange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#selectionrange)]
+ [!code-xaml[Slider#SelectionRange](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#selectionrange)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Controls.Slider.AutoToolTipPrecision" /> é definido como um valor diferente de um inteiro não negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoToolTipPrecisionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AutoToolTipPrecisionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AutoToolTipPrecisionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.AutoToolTipPrecisionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.AutoToolTipPrecision" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.AutoToolTipPrecision%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseLarge">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedCommand DecreaseLarge { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedCommand DecreaseLarge" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.DecreaseLarge" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um comando que diminui o valor da <see cref="T:System.Windows.Controls.Slider" /> o mesmo valor como o <see cref="P:System.Windows.Controls.Primitives.RangeBase.LargeChange" /> propriedade.</summary>
+        <value>O <see cref="T:System.Windows.Input.RoutedCommand" /> que diminui o valor da <see cref="T:System.Windows.Controls.Slider" /> o mesmo valor como o <see cref="P:System.Windows.Controls.Primitives.RangeBase.LargeChange" /> propriedade. O padrão <see cref="T:System.Windows.Input.InputGesture" /> é <see cref="F:System.Windows.Input.Key.PageDown" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> está definida como `true`, o <xref:System.Windows.Input.InputGesture> para esse comando é <xref:System.Windows.Input.Key.PageUp>.  
+  
+ O valor padrão de <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> é de propriedade (0,1).  
+  
+<a name="xamlAttributeUsage_DecreaseLarge"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <code><<em>object</em> <em>property</em>="Slider.DecreaseLarge"/></code>
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecreaseSmall">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedCommand DecreaseSmall { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedCommand DecreaseSmall" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.DecreaseSmall" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um comando que diminui o valor da <see cref="T:System.Windows.Controls.Slider" /> o mesmo valor como o <see cref="P:System.Windows.Controls.Primitives.RangeBase.SmallChange" /> propriedade.</summary>
+        <value>O <see cref="T:System.Windows.Input.RoutedCommand" /> que diminui o valor da <see cref="T:System.Windows.Controls.Slider" /> o mesmo valor como o <see cref="P:System.Windows.Controls.Primitives.RangeBase.SmallChange" /> propriedade. O padrão <see cref="T:System.Windows.Input.InputGesture" /> são objetos <see cref="F:System.Windows.Input.Key.Down" /> e <see cref="F:System.Windows.Input.Key.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> está definida como `true`, o <xref:System.Windows.Input.InputGesture> são objetos <xref:System.Windows.Input.Key.Up> e <xref:System.Windows.Input.Key.Right>.  
+  
+ O valor padrão de <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> é de propriedade (0,1).  
+  
+<a name="xamlAttributeUsage_DecreaseSmall"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <code><<em>object</em> <em>property</em>="Slider.DecreaseSmall"/></code>
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delay">
+      <MemberSignature Language="C#" Value="public int Delay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Delay" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.Delay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo em milissegundos que uma <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> espera, enquanto ela é pressionada, antes de um comando para mover o <see cref="T:System.Windows.Controls.Primitives.Thumb" /> for executado, como um comando <see cref="P:System.Windows.Controls.Slider.DecreaseLarge" />.</summary>
+        <value>Um tempo de atraso em milissegundos. O padrão é o atraso de pressionamento de tecla do sistema. Para obter mais informações, consulte <see cref="P:System.Windows.SystemParameters.KeyboardDelay" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é usada quando um <xref:System.Windows.Controls.Primitives.RepeatButton> está incluído no estilo de um <xref:System.Windows.Controls.Slider>. O estilo padrão para o <xref:System.Windows.Controls.Slider> inclui dois invisível <xref:System.Windows.Controls.Primitives.RepeatButton> controles que usam o espaço entre o <xref:System.Windows.Controls.Primitives.Thumb> e ambas as extremidades do <xref:System.Windows.Controls.Primitives.Track>. Quando você pressiona um dos botões invisíveis, o <xref:System.Windows.Controls.Slider> responde movendo o <xref:System.Windows.Controls.Primitives.Thumb> nessa direção após o <xref:System.Windows.Controls.Slider.Delay%2A> propriedade é aplicada.  
+  
+<a name="dependencyPropertyInfo_Delay"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.DelayProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelayProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DelayProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DelayProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.DelayProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.Delay" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.Delay%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseLarge">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedCommand IncreaseLarge { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedCommand IncreaseLarge" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.IncreaseLarge" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um comando que aumenta o valor do controle deslizante no mesmo valor como o <see cref="P:System.Windows.Controls.Primitives.RangeBase.LargeChange" /> propriedade.</summary>
+        <value>O <see cref="T:System.Windows.Input.RoutedCommand" /> que aumenta o valor da <see cref="F:System.Windows.Controls.Slider.SelectionStartProperty" /> o mesmo valor como o <see cref="P:System.Windows.Controls.Primitives.RangeBase.LargeChange" /> propriedade. O padrão <see cref="T:System.Windows.Input.InputGesture" /> para esse comando é <see cref="F:System.Windows.Input.Key.PageUp" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> está definida como `true`, o <xref:System.Windows.Input.InputGesture> para esse comando é <xref:System.Windows.Input.Key.PageDown>.  
+  
+ O valor padrão de <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> é de propriedade (1).  
+  
+<a name="xamlAttributeUsage_IncreaseLarge"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <code><<em>object</em> <em>property</em>="Slider.IncreaseLarge"/></code>
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncreaseSmall">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedCommand IncreaseSmall { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedCommand IncreaseSmall" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.IncreaseSmall" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um comando que aumenta o valor do controle deslizante no mesmo valor como o <see cref="P:System.Windows.Controls.Primitives.RangeBase.SmallChange" /> propriedade.</summary>
+        <value>Retorna o <see cref="T:System.Windows.Input.RoutedCommand" /> que aumenta o valor do controle deslizante no mesmo valor como o <see cref="P:System.Windows.Controls.Primitives.RangeBase.SmallChange" /> propriedade. O padrão <see cref="T:System.Windows.Input.InputGesture" /> objetos para esse comando são <see cref="F:System.Windows.Input.Key.Up" /> e <see cref="F:System.Windows.Input.Key.Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> está definida como `true`, o <xref:System.Windows.Input.InputGesture> objetos para esse comando são <xref:System.Windows.Input.Key.Down> e <xref:System.Windows.Input.Key.Left> e <xref:System.Windows.Controls.Slider>.  
+  
+ O valor padrão de <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> é de propriedade (0,1).  
+  
+<a name="xamlAttributeUsage_IncreaseSmall"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <code><<em>object</em> <em>property</em>="Slider.IncreaseSmall"/></code>
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interval">
+      <MemberSignature Language="C#" Value="public int Interval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Interval" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.Interval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo em milissegundos entre aumentar ou diminuir comandos quando um usuário clica em <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> de um <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <value>Um tempo em milissegundos entre comandos que alteram <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> de um <see cref="T:System.Windows.Controls.Slider" />. O padrão é a taxa de repetição da chave do sistema. Para obter mais informações, consulte [SystemParametersInfo](http://msdn.microsoft.com/library/default.asp?url=/library/sysinfo/base/systemparametersinfo.asp) (SPI_GETKEYBOARDSPEED).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é usada quando um <xref:System.Windows.Controls.Primitives.RepeatButton> está incluído no <xref:System.Windows.Style> do <xref:System.Windows.Controls.Slider>.  
+  
+<a name="dependencyPropertyInfo_Interval"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.IntervalProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IntervalProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IntervalProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.IntervalProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.Interval" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.Interval%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirectionReversed">
+      <MemberSignature Language="C#" Value="public bool IsDirectionReversed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirectionReversed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.IsDirectionReversed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a direção de aumento do valor.</summary>
+        <value>
+          <see langword="true" />Se a direção de aumento do valor é à esquerda de um controle deslizante horizontal ou para baixo para um slider vertical; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade determina a direção de aumento do valor de um <xref:System.Windows.Controls.Slider>. Por exemplo, quando você move o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> de controle para cima na vertical <xref:System.Windows.Controls.Slider> quando o <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> está definida como `false`, o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> do <xref:System.Windows.Controls.Slider> aumenta. Se o valor da <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> propriedade é alterada para `true`, o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> do <xref:System.Windows.Controls.Slider> diminui conforme o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> move para cima.  
+  
+ Essa propriedade associa ao <xref:System.Windows.Controls.Primitives.Track.IsDirectionReversed%2A> propriedade para o <xref:System.Windows.Controls.Primitives.Track> controle que ele implementa.  
+  
+<a name="dependencyPropertyInfo_IsDirectionReversed"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.IsDirectionReversedProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A> propriedade.  
+  
+ [!code-csharp[Slider#SelectionRange](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#selectionrange)]
+ [!code-vb[Slider#SelectionRange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#selectionrange)]
+ [!code-xaml[Slider#SelectionRange](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#selectionrange)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirectionReversedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsDirectionReversedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsDirectionReversedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.IsDirectionReversedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.IsDirectionReversed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.IsDirectionReversed%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMoveToPointEnabled">
+      <MemberSignature Language="C#" Value="public bool IsMoveToPointEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMoveToPointEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.IsMoveToPointEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> de um <see cref="T:System.Windows.Controls.Slider" /> se move imediatamente para o local do clique do mouse que ocorre enquanto o ponteiro do mouse passa sobre a faixa <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> move-se imediatamente para o local de um clique do mouse; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `false` e ocorre um clique do mouse ao longo de <xref:System.Windows.Controls.Slider> fora do <xref:System.Windows.Controls.Primitives.Track.Thumb%2A>, o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> move na direção do mouse de clique. Em vez de mover imediatamente para o mouse clique local, o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> move uma distância definida pelo <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> propriedade para cada mouse clique em.  
+  
+ O efeito de vários cliques do mouse pode ser emulado pressionando e mantendo o botão esquerdo do mouse até o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> é reposicionado para o local desejado.  
+  
+<a name="dependencyPropertyInfo_IsMoveToPointEnabled"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.IsMoveToPointEnabledProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.IsMoveToPointEnabled%2A> propriedade.  
+  
+ [!code-csharp[Slider#SelectionRange](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#selectionrange)]
+ [!code-vb[Slider#SelectionRange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#selectionrange)]
+ [!code-xaml[Slider#SelectionRange](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#selectionrange)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMoveToPointEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsMoveToPointEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsMoveToPointEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.IsMoveToPointEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.IsMoveToPointEnabled" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.IsMoveToPointEnabled%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionRangeEnabled">
+      <MemberSignature Language="C#" Value="public bool IsSelectionRangeEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelectionRangeEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.IsSelectionRangeEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Controls.Slider" /> exibe um intervalo de seleção junto ao <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <value>
+          <see langword="true" /> se um intervalo de seleção for exibido; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Slider.SelectionStart%2A> e <xref:System.Windows.Controls.Slider.SelectionEnd%2A> propriedades definem um intervalo de seleção e deve ser definidas para o intervalo de seleção aparecer quando <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> é definido como `true`.  
+  
+ A ilustração a seguir mostra um <xref:System.Windows.Controls.Slider> com um intervalo de seleção definido.  
+  
+ **Um intervalo de seleção definido para um controle deslizante**  
+  
+ ![Intervalo de seleção do controle deslizante](~/add/media/sliderselectionrange.GIF "intervalo de seleção do controle deslizante")  
+  
+ Esta propriedade é associada ao <xref:System.Windows.Controls.Primitives.TickBar.IsSelectionRangeEnabled%2A> propriedade o <xref:System.Windows.Controls.Primitives.TickBar> controle que ele implementa.  
+  
+<a name="dependencyPropertyInfo_IsSelectionRangeEnabled"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.IsSelectionRangeEnabledProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> propriedade.  
+  
+ [!code-csharp[Slider#SelectionRange](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#selectionrange)]
+ [!code-vb[Slider#SelectionRange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#selectionrange)]
+ [!code-xaml[Slider#SelectionRange](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#selectionrange)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionRangeEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectionRangeEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectionRangeEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.IsSelectionRangeEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.IsSelectionRangeEnabled" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSnapToTickEnabled">
+      <MemberSignature Language="C#" Value="public bool IsSnapToTickEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSnapToTickEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.IsSnapToTickEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Controls.Slider" /> move automaticamente o <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> para a marca de escala mais próxima.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.Slider" /> exigir que a posição do <see cref="P:System.Windows.Controls.Primitives.Track.Thumb" /> seja uma marca de escala; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a posição de um <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> for alterado e o <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> está definida como `true`, o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> será movida automaticamente para a marca de escala mais próxima.  
+  
+<a name="dependencyPropertyInfo_IsSnapToTickEnabled"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.IsSnapToTickEnabledProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> propriedade.  
+  
+ [!code-csharp[Slider#Basic](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#basic)]
+ [!code-vb[Slider#Basic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#basic)]
+ [!code-xaml[Slider#Basic](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#basic)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSnapToTickEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSnapToTickEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSnapToTickEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.IsSnapToTickEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.IsSnapToTickEnabled" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximizeValue">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedCommand MaximizeValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedCommand MaximizeValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.MaximizeValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um comando que define o <see cref="T:System.Windows.Controls.Slider" /> <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> para o <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> valor.</summary>
+        <value>O <see cref="T:System.Windows.Input.RoutedCommand" /> a ser usado. O padrão é <see cref="F:System.Windows.Input.Key.End" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_MaximizeValue"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <code><<em>object</em> <em>property</em>="Slider.MaximizeValue"/></code>
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimizeValue">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedCommand MinimizeValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedCommand MinimizeValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.MinimizeValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um comando que define o <see cref="T:System.Windows.Controls.Slider" /> <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> para o <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" /> valor.</summary>
+        <value>O <see cref="T:System.Windows.Input.RoutedCommand" /> a ser usado. O padrão é <see cref="F:System.Windows.Input.Key.Home" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_MinimizeValue"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <code><<em>object</em> <em>property</em>="Slider.MinimizeValue"/></code>
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria a árvore visual para o <see cref="T:System.Windows.Controls.Slider" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> para o <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.SliderAutomationPeer" /> para o <see cref="T:System.Windows.Controls.Slider" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDecreaseLarge">
+      <MemberSignature Language="C#" Value="protected virtual void OnDecreaseLarge ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDecreaseLarge() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnDecreaseLarge" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Responde a <see cref="P:System.Windows.Controls.Slider.DecreaseLarge" /> comando.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método diminui o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> do <xref:System.Windows.Controls.Slider> por <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> e move o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> para refletir a alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDecreaseSmall">
+      <MemberSignature Language="C#" Value="protected virtual void OnDecreaseSmall ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDecreaseSmall() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnDecreaseSmall" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Responde a um <see cref="P:System.Windows.Controls.Slider.DecreaseSmall" /> comando.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método diminui o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> do <xref:System.Windows.Controls.Slider> por <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> e move o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> para refletir a alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIncreaseLarge">
+      <MemberSignature Language="C#" Value="protected virtual void OnIncreaseLarge ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnIncreaseLarge() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnIncreaseLarge" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Responde a um <see cref="P:System.Windows.Controls.Slider.IncreaseLarge" /> comando.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método aumenta o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> do <xref:System.Windows.Controls.Slider> por <xref:System.Windows.Controls.Primitives.RangeBase.LargeChange%2A> e move o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> para refletir a alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIncreaseSmall">
+      <MemberSignature Language="C#" Value="protected virtual void OnIncreaseSmall ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnIncreaseSmall() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnIncreaseSmall" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Responde a um <see cref="P:System.Windows.Controls.Slider.IncreaseSmall" /> comando.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método aumenta o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> do <xref:System.Windows.Controls.Slider> por <xref:System.Windows.Controls.Primitives.RangeBase.SmallChange%2A> e move o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> para refletir a alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMaximizeValue">
+      <MemberSignature Language="C#" Value="protected virtual void OnMaximizeValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMaximizeValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnMaximizeValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Responde a <see cref="P:System.Windows.Controls.Slider.MaximizeValue" /> comando.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método altera o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> do <xref:System.Windows.Controls.Slider> para <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> e move o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> para refletir a alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMaximumChanged">
+      <MemberSignature Language="C#" Value="protected override void OnMaximumChanged (double oldMaximum, double newMaximum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMaximumChanged(float64 oldMaximum, float64 newMaximum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnMaximumChanged(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldMaximum" Type="System.Double" />
+        <Parameter Name="newMaximum" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="oldMaximum">O valor antigo do <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> propriedade.</param>
+        <param name="newMaximum">O novo valor da propriedade <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" />.</param>
+        <summary>Responde a uma alteração no valor da <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o novo <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> valor é menor do que o <xref:System.Windows.Controls.Slider.SelectionStart%2A> valor, esta implementação define o <xref:System.Windows.Controls.Slider.SelectionStart%2A> o valor para o <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> valor. Se o novo <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> valor é menor do que o <xref:System.Windows.Controls.Slider.SelectionEnd%2A> valor, o <xref:System.Windows.Controls.Slider.SelectionEnd%2A> valor é definido como o <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMinimizeValue">
+      <MemberSignature Language="C#" Value="protected virtual void OnMinimizeValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMinimizeValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnMinimizeValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Responde a um <see cref="P:System.Windows.Controls.Slider.MinimizeValue" /> comando.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método altera o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> do <xref:System.Windows.Controls.Slider> para <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> e move o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> para refletir a alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMinimumChanged">
+      <MemberSignature Language="C#" Value="protected override void OnMinimumChanged (double oldMinimum, double newMinimum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMinimumChanged(float64 oldMinimum, float64 newMinimum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnMinimumChanged(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldMinimum" Type="System.Double" />
+        <Parameter Name="newMinimum" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="oldMinimum">O valor antigo do <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" /> propriedade.</param>
+        <param name="newMinimum">O novo valor da propriedade <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" />.</param>
+        <summary>Responde a uma alteração no valor da <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação garante que o <xref:System.Windows.Controls.Slider.SelectionStart%2A> valor é maior que ou igual à nova <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> valor. Se o <xref:System.Windows.Controls.Slider.SelectionStart%2A> valor é menor do que o <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> valor, o <xref:System.Windows.Controls.Slider.SelectionStart%2A> valor é definido como o <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> valor. O <xref:System.Windows.Controls.Slider.SelectionEnd%2A> valor também é verificado para certificar-se de que é maior que ou igual a <xref:System.Windows.Controls.Slider.SelectionStart%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.ContentElement.PreviewMouseLeftButtonDown" /> eventos roteados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Controls.Slider.IsMoveToPointEnabled%2A> é de propriedade `true`, essa implementação move o <xref:System.Windows.Controls.Primitives.Track.Thumb%2A> para o local do mouse, clique em.  
+  
+ Essa implementação marca o <xref:System.Windows.ContentElement.PreviewMouseLeftButtonDown> eventos como manipulada, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade dos dados do evento para `true`. O evento é tratado por este método assim que o <xref:System.Windows.Controls.Primitives.RepeatButton> controla do <xref:System.Windows.Controls.Slider> não tratar o evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.Slider.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Slider.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnThumbDragCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnThumbDragCompleted (System.Windows.Controls.Primitives.DragCompletedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnThumbDragCompleted(class System.Windows.Controls.Primitives.DragCompletedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnThumbDragCompleted(System.Windows.Controls.Primitives.DragCompletedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.Primitives.DragCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.Controls.Primitives.Thumb.DragCompleted" /> evento que ocorre quando o usuário para de arrastar o <see cref="T:System.Windows.Controls.Primitives.Thumb" /> do <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta implementação não altera o estado manipulado (o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade) da <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> dados de evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método pode ser substituído para personalizar a forma como uma <see cref="T:System.Windows.Controls.Slider" /> processos <see cref="T:System.Windows.Controls.Primitives.Thumb" /> movimentações. Se você substituir <see cref="M:System.Windows.Controls.Slider.OnThumbDragCompleted(System.Windows.Controls.Primitives.DragCompletedEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Slider.OnThumbDragCompleted(System.Windows.Controls.Primitives.DragCompletedEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnThumbDragDelta">
+      <MemberSignature Language="C#" Value="protected virtual void OnThumbDragDelta (System.Windows.Controls.Primitives.DragDeltaEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnThumbDragDelta(class System.Windows.Controls.Primitives.DragDeltaEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnThumbDragDelta(System.Windows.Controls.Primitives.DragDeltaEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.Primitives.DragDeltaEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.Controls.Primitives.Thumb.DragDelta" /> evento que ocorre quando o usuário arrasta a <see cref="T:System.Windows.Controls.Primitives.Thumb" /> do <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta implementação não altera o estado manipulado (o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade) da <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> dados de evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método pode ser substituído para personalizar a forma como uma <see cref="T:System.Windows.Controls.Slider" /> processos <see cref="T:System.Windows.Controls.Primitives.Thumb" /> movimentações. Se você substituir <see cref="M:System.Windows.Controls.Slider.OnThumbDragDelta(System.Windows.Controls.Primitives.DragDeltaEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.Slider.OnThumbDragDelta(System.Windows.Controls.Primitives.DragDeltaEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnThumbDragStarted">
+      <MemberSignature Language="C#" Value="protected virtual void OnThumbDragStarted (System.Windows.Controls.Primitives.DragStartedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnThumbDragStarted(class System.Windows.Controls.Primitives.DragStartedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnThumbDragStarted(System.Windows.Controls.Primitives.DragStartedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.Primitives.DragStartedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.Controls.Primitives.Thumb.DragStarted" /> evento que ocorre quando o usuário começa a arrastar o <see cref="T:System.Windows.Controls.Primitives.Thumb" /> do <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Além do processamento padrão da <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> evento, essa implementação exibe uma dica de ferramenta mostra o <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> do <xref:System.Windows.Controls.Slider> quando o <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> propriedade não está definida como <xref:System.Windows.Controls.Primitives.AutoToolTipPlacement.None>.  
+  
+ Esta implementação não manipula o <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> evento. O valor da <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade o <xref:System.Windows.Controls.Primitives.DragCompletedEventArgs> não é alterado.  
+  
+ Esse método pode ser substituído para personalizar a forma como uma <xref:System.Windows.Controls.Slider> processos <xref:System.Windows.Controls.Primitives.Thumb> movimentações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValueChanged">
+      <MemberSignature Language="C#" Value="protected override void OnValueChanged (double oldValue, double newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValueChanged(float64 oldValue, float64 newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Slider.OnValueChanged(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldValue" Type="System.Double" />
+        <Parameter Name="newValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="oldValue">O antigo <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> do <see cref="T:System.Windows.Controls.Slider" />.</param>
+        <param name="newValue">O novo <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> do <see cref="T:System.Windows.Controls.Slider" />.</param>
+        <summary>Atualiza a posição atual do <see cref="T:System.Windows.Controls.Slider" /> quando a propriedade <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Orientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Orientation Orientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Orientation Orientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.Orientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Orientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a orientação de um <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <value>Um dos valores de <see cref="P:System.Windows.Controls.Slider.Orientation" />. O padrão é <see cref="F:System.Windows.Controls.Orientation.Horizontal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade associa ao <xref:System.Windows.Controls.Primitives.Track.Orientation%2A> propriedade para o <xref:System.Windows.Controls.Primitives.Track> de controle que o <xref:System.Windows.Controls.Slider> implementa.  
+  
+<a name="dependencyPropertyInfo_Orientation"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.OrientationProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.Orientation%2A> propriedade.  
+  
+ [!code-csharp[Slider#Basic](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#basic)]
+ [!code-vb[Slider#Basic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#basic)]
+ [!code-xaml[Slider#Basic](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#basic)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrientationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OrientationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OrientationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.OrientationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.Orientation" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.Orientation%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionEnd">
+      <MemberSignature Language="C#" Value="public double SelectionEnd { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelectionEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.SelectionEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o maior valor de uma seleção especificada para um <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <value>O maior valor de um intervalo de valores de selecionado um <see cref="T:System.Windows.Controls.Slider" />. O padrão é zero (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.Windows.Controls.Slider.SelectionEnd%2A> propriedade não pode ser maior que o valor da <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> propriedade e não pode ser menor que o valor da <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> propriedade. O valor de <xref:System.Windows.Controls.Slider.SelectionEnd%2A> propriedade também deve ser maior ou igual ao valor da <xref:System.Windows.Controls.Slider.SelectionStart%2A> propriedade. Se o valor da <xref:System.Windows.Controls.Slider.SelectionEnd%2A> propriedade é maior que o valor da <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> propriedade ou menor que o valor da <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> propriedade, o valor é definido como o valor da <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> ou <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> propriedade respectivamente.  
+  
+<a name="dependencyPropertyInfo_SelectionEnd"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.SelectionEndProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.SelectionEnd%2A> propriedade.  
+  
+ [!code-csharp[Slider#SelectionRange](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#selectionrange)]
+ [!code-vb[Slider#SelectionRange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#selectionrange)]
+ [!code-xaml[Slider#SelectionRange](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#selectionrange)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionEndProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionEndProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionEndProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.SelectionEndProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.SelectionEnd" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.SelectionEnd%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionStart">
+      <MemberSignature Language="C#" Value="public double SelectionStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SelectionStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.SelectionStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o menor valor de uma seleção especificada para um <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <value>O maior valor de um intervalo de valores de selecionado um <see cref="T:System.Windows.Controls.Slider" />. O padrão é zero (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.Windows.Controls.Slider.SelectionStart%2A> propriedade não pode ser menor que o valor da <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> propriedade e não pode ser maior que o valor da <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> propriedade. O valor de <xref:System.Windows.Controls.Slider.SelectionEnd%2A> propriedade também deve ser maior ou igual ao valor da <xref:System.Windows.Controls.Slider.SelectionStart%2A> propriedade. Se <xref:System.Windows.Controls.Slider.SelectionStart%2A> é menor que <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> ou maior que <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A>, <xref:System.Windows.Controls.Slider.SelectionStart%2A> é definido como o valor de <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> ou <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> respectivamente.  
+  
+<a name="dependencyPropertyInfo_SelectionStart"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.SelectionStartProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.SelectionEnd%2A> propriedade.  
+  
+ [!code-csharp[Slider#SelectionRange](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#selectionrange)]
+ [!code-vb[Slider#SelectionRange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#selectionrange)]
+ [!code-xaml[Slider#SelectionRange](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#selectionrange)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionStartProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectionStartProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectionStartProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.SelectionStartProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.SelectionStart" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.SelectionStart%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickFrequency">
+      <MemberSignature Language="C#" Value="public double TickFrequency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 TickFrequency" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.TickFrequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo entre marcas de escala.</summary>
+        <value>A distância entre as marcas de escala. O padrão é 1,0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Controls.Slider.Ticks%2A> propriedade é definida como um valor que não seja `null`, o <xref:System.Windows.Controls.Slider.TickFrequency%2A> propriedade não é usada.  
+  
+ O <xref:System.Windows.Controls.Slider.TickPlacement%2A> propriedade deve ser definida como um valor diferente de <xref:System.Windows.Controls.Primitives.TickPlacement.None> para marcas para aparecem ao longo de <xref:System.Windows.Controls.Slider>.  
+  
+ Marcas de escala são desenhadas em um intervalo especificado pelo <xref:System.Windows.Controls.Slider.TickFrequency%2A> propriedade. O início de marcas de escala no valor da <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> propriedade e continuar até que o valor da <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> propriedade for atingida.  
+  
+<a name="dependencyPropertyInfo_TickFrequency"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.TickFrequencyProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.TickFrequency%2A> propriedade.  
+  
+ [!code-csharp[Slider#Basic](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#basic)]
+ [!code-vb[Slider#Basic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#basic)]
+ [!code-xaml[Slider#Basic](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#basic)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickFrequencyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TickFrequencyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TickFrequencyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.TickFrequencyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.TickFrequency" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.TickFrequency%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickPlacement">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.TickPlacement TickPlacement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.TickPlacement TickPlacement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.TickPlacement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição das marcas de escala com relação ao <see cref="T:System.Windows.Controls.Primitives.Track" /> do <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <value>Um valor <see cref="P:System.Windows.Controls.Slider.TickPlacement" /> que define como posicionar as marcas de escala em um <see cref="T:System.Windows.Controls.Slider" /> com relação ao controle deslizante. O padrão é <see cref="F:System.Windows.Controls.Primitives.TickPlacement.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Slider.TickPlacement%2A> propriedade deve ser definida como um valor diferente de <xref:System.Windows.Controls.Primitives.TickPlacement.None> para marcas para aparecer.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.TickPlacement%2A> propriedade.  
+  
+ [!code-csharp[Slider#Basic](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#basic)]
+ [!code-vb[Slider#Basic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#basic)]
+ [!code-xaml[Slider#Basic](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#basic)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickPlacementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TickPlacementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TickPlacementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.TickPlacementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.TickPlacement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.TickPlacement%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ticks">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DoubleCollection Ticks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.DoubleCollection Ticks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Slider.Ticks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DoubleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as posições das marcas de escala a serem exibidas em um <see cref="T:System.Windows.Controls.Slider" />.</summary>
+        <value>Um conjunto de marcas de escala a serem exibidas em um <see cref="T:System.Windows.Controls.Slider" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Marcas que estão fora do intervalo definido pelo <xref:System.Windows.Controls.Primitives.RangeBase.Minimum%2A> e <xref:System.Windows.Controls.Primitives.RangeBase.Maximum%2A> valores de propriedade são ignorados.  
+  
+ O <xref:System.Windows.Controls.Slider.TickPlacement%2A> propriedade deve ser definida como um valor diferente de <xref:System.Windows.Controls.Primitives.TickPlacement.None> para marcas para aparecer.  
+  
+<a name="dependencyPropertyInfo_Ticks"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Slider.TicksProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.Ticks%2A> propriedade.  
+  
+ [!code-csharp[Slider#SelectionRange](~/samples/snippets/csharp/VS_Snippets_Wpf/Slider/CSharp/Pane1.xaml.cs#selectionrange)]
+ [!code-vb[Slider#SelectionRange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Slider/VisualBasic/Pane1.xaml.vb#selectionrange)]
+ [!code-xaml[Slider#SelectionRange](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#selectionrange)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TicksProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TicksProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TicksProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Slider.TicksProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Slider.Ticks" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Slider.Ticks%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

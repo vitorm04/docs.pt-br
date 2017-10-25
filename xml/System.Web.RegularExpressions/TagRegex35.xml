@@ -1,0 +1,72 @@
+<Type Name="TagRegex35" FullName="System.Web.RegularExpressions.TagRegex35">
+  <TypeSignature Language="C#" Value="public class TagRegex35 : System.Text.RegularExpressions.Regex" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi TagRegex35 extends System.Text.RegularExpressions.Regex" />
+  <TypeSignature Language="DocId" Value="T:System.Web.RegularExpressions.TagRegex35" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.RegularExpressions.Regex</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma expressão regular para analisar a marca de abertura de um elemento HTML, um elemento XML ou uma marca de controle de servidor Web do ASP.NET, para aplicativos voltados para o .NET Framework 3.5 SP1 e versões anteriores.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.RegularExpressions.TagRegex35> classe fornece uma expressão regular que o ASP.NET usa internamente para analisar a marca de abertura de um elemento HTML, um elemento XML ou uma marca de controle de servidor da Web do ASP.NET, para aplicativos voltados para o [!INCLUDE[net_v35SP1_short](~/includes/net-v35sp1-short-md.md)] e versões anteriores. O ASP.NET usa o <xref:System.Web.RegularExpressions.TagRegex?displayProperty=nameWithType> classe para aplicativos que têm como destino o [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] e versões posteriores.  
+  
+> [!NOTE]
+>  O <xref:System.Web.RegularExpressions> classes são usadas internamente pelo .NET Framework para analisar as páginas ASP.NET.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TagRegex35 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.RegularExpressions.TagRegex35.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.RegularExpressions.TagRegex35" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TagRegex35 (TimeSpan A_1);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(valuetype System.TimeSpan A_1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.RegularExpressions.TagRegex35.#ctor(System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="A_1" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="A_1">Um intervalo de tempo limite ou <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> se operações de correspondência deve sem tempo limite.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.RegularExpressions.TagRegex35" /> classe com um valor de tempo limite especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `A_1` parâmetro representa o intervalo de tempo máximo durante o qual o mecanismo de expressão regular tenta localizar uma correspondência antes da operação expira e um <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

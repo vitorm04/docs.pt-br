@@ -1,0 +1,3058 @@
+<Type Name="HttpResponse" FullName="System.Web.HttpResponse">
+  <TypeSignature Language="C#" Value="public sealed class HttpResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpResponse extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpResponse" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula informações de resposta HTTP de uma operação do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os métodos e propriedades do <xref:System.Web.HttpResponse> classe são expostas por meio de <xref:System.Web.HttpApplication.Response%2A> propriedade do <xref:System.Web.HttpApplication>, <xref:System.Web.HttpContext>, <xref:System.Web.UI.Page>, e <xref:System.Web.UI.UserControl> classes.  
+  
+ Os seguintes métodos do <xref:System.Web.HttpResponse> classe têm suporte apenas em cenários de postagem e não na postagem assíncrona fazer cenários:  
+  
+-   <xref:System.Web.HttpResponse.BinaryWrite%2A>  
+  
+-   <xref:System.Web.HttpResponse.Clear%2A>  
+  
+-   <xref:System.Web.HttpResponse.ClearContent%2A>  
+  
+-   <xref:System.Web.HttpResponse.ClearHeaders%2A>  
+  
+-   <xref:System.Web.HttpResponse.Close%2A>  
+  
+-   <xref:System.Web.HttpResponse.End%2A>  
+  
+-   <xref:System.Web.HttpResponse.Flush%2A>  
+  
+-   <xref:System.Web.HttpResponse.TransmitFile%2A>  
+  
+-   <xref:System.Web.HttpResponse.Write%2A>  
+  
+-   <xref:System.Web.HttpResponse.WriteFile%2A>  
+  
+-   <xref:System.Web.HttpResponse.WriteSubstitution%2A>  
+  
+ Atualizações parciais de página são habilitadas quando você usar <xref:System.Web.UI.UpdatePanel> controles para atualizar regiões selecionadas de uma página em vez de atualizar a página inteira com um postback. Para obter mais informações, consulte [visão geral do controle UpdatePanel](http://msdn.microsoft.com/library/29a2265d-9674-4c19-b70e-e5560ee9689a) e [visão geral de renderização de página parcial](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir desenha três retângulos sobrepostos quando a página é solicitada. O código começa definindo o <xref:System.Web.HttpResponse.ContentType%2A> propriedade como imagem/jpeg, para que a página inteira será renderizada como uma imagem JPEG. O código, em seguida, chama o <xref:System.Web.HttpResponse.Clear%2A> método para garantir que nenhum conteúdo externo é enviado com essa resposta. Em seguida, o código define o <xref:System.Web.HttpResponse.BufferOutput%2A> a propriedade como true para que a página seja completamente processada antes de serem enviado ao cliente solicitante. Dois objetos usados para desenhar retângulos, em seguida, são criados: um <xref:System.Drawing.Bitmap> e um <xref:System.Drawing.Graphics> objeto. As variáveis criadas na página são usadas como coordenadas para desenhar retângulos e uma cadeia de caracteres que é exibido dentro do retângulo maior.  
+  
+ Quando os três retângulos e a cadeia de caracteres que aparece dentro deles são desenhadas, o <xref:System.Drawing.Bitmap> é salvo o <xref:System.IO.Stream> objeto que está associado com o <xref:System.Web.HttpResponse.OutputStream%2A> propriedade e seu formato é definido como JPEG. O código chama o <xref:System.Drawing.Image.Dispose%2A> e <xref:System.Drawing.Graphics.Dispose%2A> métodos para liberar os recursos usados por dois objetos de desenho. Por fim, o código chama o <xref:System.Web.HttpResponse.Flush%2A> para enviar a resposta em buffer para o cliente solicitante.  
+  
+> [!NOTE]
+>  No código, o <xref:System.Web.HttpResponse> objeto é referenciado pela palavra-chave `Response`. Por exemplo, `Response.Clear()` refere-se para o <xref:System.Web.HttpResponse.Clear%2A?displayProperty=nameWithType> método. O <xref:System.Web.UI.Page> classe tem uma propriedade denominada <xref:System.Web.UI.Page.Response%2A> que expõe a instância atual do <xref:System.Web.HttpResponse>.  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse_Samples1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/CS/responsesamplescs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpResponse_Samples1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/VB/responsesamplesvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpResponse (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.#ctor(System.IO.TextWriter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um objeto <see cref="T:System.IO.TextWriter" /> que permite a saída de HTTP personalizada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.HttpResponse" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse membro oferece suporte à infraestrutura .NET Framework e não se destina à utilização diretamente no seu código.  
+  
+ Os métodos e propriedades do <xref:System.Web.HttpResponse> classe são expostas por meio de intrínseca <xref:System.Web.HttpContext.Response%2A> objeto no ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCacheDependency">
+      <MemberSignature Language="C#" Value="public void AddCacheDependency (params System.Web.Caching.CacheDependency[] dependencies);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCacheDependency(class System.Web.Caching.CacheDependency[] dependencies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AddCacheDependency(System.Web.Caching.CacheDependency[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencies" Type="System.Web.Caching.CacheDependency[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="dependencies">Um arquivo, chave de cache ou <see cref="T:System.Web.Caching.CacheDependency" /> para ser adicionado à lista de dependências do aplicativo.</param>
+        <summary>Associa um conjunto de dependências de cache com a resposta para facilitar a invalidação da resposta se esta for armazenada no cache de saída e as dependências especificadas mudarem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse.AddCacheDependency%2A> método permite que as dependências ser criada entre as respostas em cache e uma <xref:System.Web.Caching.CacheDependency> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar uma dependência de cache usando o <xref:System.Web.HttpResponse.AddCacheDependency%2A> método e uma <xref:System.Web.Caching.CacheDependency> objeto.  
+  
+ [!code-aspx-csharp[HttpResponse.AddCacheDependency#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HttpResponse.AddCacheDependency/CS/httpresponse.addcachedependency_cs.aspx#1)]
+ [!code-aspx-vb[HttpResponse.AddCacheDependency#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HttpResponse.AddCacheDependency/VB/httpresponse.addcachedependency_vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="dependencies" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Esse método foi chamado tarde demais no pipeline de processamento do cache, depois que a resposta em cache já tinha sido criada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCacheItemDependencies">
+      <MemberSignature Language="C#" Value="public void AddCacheItemDependencies (System.Collections.ArrayList cacheKeys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCacheItemDependencies(class System.Collections.ArrayList cacheKeys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AddCacheItemDependencies(System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cacheKeys" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="cacheKeys">O <see cref="T:System.Collections.ArrayList" /> que contém as chaves dos itens que a resposta armazenada em cache atual é dependente.</param>
+        <summary>Torna a validade de uma resposta em cache dependem de outros itens no cache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando os itens mencionados no `cacheKeys` parâmetro são removidos do cache, a resposta armazenada em cache do item atual não é válida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar uma página ASP.NET que é armazenado em cache de saída. O código para a página cria um <xref:System.Collections.ArrayList> objeto de chaves que estão associados a itens que são armazenados no <xref:System.Web.Caching.Cache> objeto. Em seguida, o código passa o <xref:System.Collections.ArrayList> como o parâmetro em uma chamada para o <xref:System.Web.HttpResponse.AddCacheItemDependencies%2A> método. Isso torna a resposta armazenada em cache de saída não é válido, se qualquer um dos arquivos especificados no <xref:System.Collections.ArrayList> alterar.  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse_Samples2#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Samples2/CS/cacheitemsdepscs.aspx#5)]
+ [!code-aspx-vb[System.Web.HttpResponse_Samples2#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Samples2/VB/cacheitemsdepsvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCacheItemDependencies">
+      <MemberSignature Language="C#" Value="public void AddCacheItemDependencies (string[] cacheKeys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCacheItemDependencies(string[] cacheKeys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AddCacheItemDependencies(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cacheKeys" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="cacheKeys">Uma matriz de chaves de item que a resposta armazenada em cache é dependente.</param>
+        <summary>Torna a validade de um item em cache dependente de outro item no cache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando qualquer um do `cacheKey`s são removidos do cache, a resposta armazenada em cache do item atual é inválida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCacheItemDependency">
+      <MemberSignature Language="C#" Value="public void AddCacheItemDependency (string cacheKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCacheItemDependency(string cacheKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AddCacheItemDependency(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cacheKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cacheKey">A chave do item que a resposta armazenada em cache é dependente.</param>
+        <summary>Torna a validade de uma resposta em cache dependente de outro item no cache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o item correspondente a `cacheKey` parâmetro é removido do cache, a resposta armazenada em cache do item atual é inválida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é um controle de usuário do ASP.NET que é armazenado em cache de saída. O código para o controle chama o <xref:System.Web.HttpResponse.AddCacheItemDependency%2A> método com a chave de um item armazenado na <xref:System.Web.Caching.Cache> objeto passado como parâmetro. Se o item não existe no cache, a resposta do controle que foi armazenada no cache de saída é invalidada. Isso significa que na solicitação subsequente, uma nova versão da resposta do controle será adicionada ao cache de saída.  
+  
+ Em seguida, o código verifica se um item associado com um `bookData` chave é armazenada no `Cache` objeto e, em seguida, exibe uma das duas linhas de texto de acordo com o resultado. Em seguida, o código define o <xref:System.Web.UI.WebControls.BaseDataList.DataSource%2A> propriedade de um <xref:System.Web.UI.WebControls.DataGrid> controle, que é chamado `dgBooks`, com uma chamada para um personalizado `DataHelper` compartilhado classe `GetBookData` método e preenche o <xref:System.Web.UI.WebControls.DataGrid> com o <xref:System.Web.UI.Control.DataBind%2A> método.  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse_Samples2#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Samples2/CS/bookscs.ascx#3)]
+ [!code-aspx-vb[System.Web.HttpResponse_Samples2#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Samples2/VB/booksvb.ascx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFileDependencies">
+      <MemberSignature Language="C#" Value="public void AddFileDependencies (System.Collections.ArrayList filenames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFileDependencies(class System.Collections.ArrayList filenames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AddFileDependencies(System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filenames" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="filenames">A coleção de arquivos a serem adicionados.</param>
+        <summary>Adiciona um grupo de nomes de arquivo para a coleção de nomes de arquivo no qual a resposta atual é dependente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir é uma página ASP.NET que é armazenado em cache de saída. O código para a página cria um <xref:System.Collections.ArrayList> de caminhos de arquivo e, em seguida, passa o <xref:System.Collections.ArrayList> como o parâmetro em uma chamada para o <xref:System.Web.HttpResponse.AddFileDependencies%2A> método. Isso faz com que a saída de resposta em cache inválido se qualquer um dos arquivos especificados no <xref:System.Collections.ArrayList> alterações.  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse_Samples2#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Samples2/CS/responsefiledepscs.aspx#6)]
+ [!code-aspx-vb[System.Web.HttpResponse_Samples2#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Samples2/VB/responsefiledepsvb.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFileDependencies">
+      <MemberSignature Language="C#" Value="public void AddFileDependencies (string[] filenames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFileDependencies(string[] filenames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AddFileDependencies(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filenames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="filenames">Uma matriz de arquivos a serem adicionados.</param>
+        <summary>Adiciona uma matriz de nomes de arquivo para a coleção de nomes de arquivo no qual a resposta atual é dependente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir adiciona uma matriz de nomes de arquivo para o <xref:System.Web.HttpResponse.AddFileDependencies%2A> lista de dependências de arquivo. Se os arquivos forem alterados, a resposta armazenada em cache é invalidada.  
+  
+ [!code-aspx-csharp[Response.AddFileDependency#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Response.AddFileDependency/CS/addfiledependency_cs.aspx#1)]
+ [!code-aspx-vb[Response.AddFileDependency#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Response.AddFileDependency/VB/addfiledependency_vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFileDependency">
+      <MemberSignature Language="C#" Value="public void AddFileDependency (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFileDependency(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AddFileDependency(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome do arquivo a ser adicionado.</param>
+        <summary>Adiciona um único nome de arquivo à coleção de nomes de arquivo da qual a resposta atual depende.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usa o <xref:System.Web.HttpResponse.AddFileDependency%2A> método para adicionar uma dependência de arquivo, você também deve especificar o cache de saída por meio de programação ou declarativamente. Por exemplo, para especificar declarativamente do cache de saída, use a diretiva. Para obter mais informações, consulte [como: Cache de saída de página com dependências de arquivo](http://msdn.microsoft.com/library/95ad1c54-329e-45af-9343-a03a1d2ce9db).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um único nome de arquivo para o <xref:System.Web.HttpResponse.AddFileDependency%2A> lista de dependências de arquivo. Se o arquivo for alterado, a resposta armazenada em cache é invalidada.  
+  
+ [!code-csharp[Classic HttpResponse.AddFileDependency Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.AddFileDependency Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.AddFileDependency Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.AddFileDependency Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddHeader">
+      <MemberSignature Language="C#" Value="public void AddHeader (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddHeader(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AddHeader(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cabeçalho HTTP para adicionar <c>valor</c> para.</param>
+        <param name="value">A cadeia de caracteres a ser adicionada ao cabeçalho.</param>
+        <summary>Adiciona um cabeçalho HTTP ao fluxo de saída. <see cref="M:System.Web.HttpResponse.AddHeader(System.String,System.String)" /> é fornecido para compatibilidade com versões anteriores do ASP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpResponse.AddHeader%2A>é o mesmo que <xref:System.Web.HttpResponse.AppendHeader%2A> e é fornecida somente para compatibilidade com versões anteriores do ASP. Com o ASP.NET, use <xref:System.Web.HttpResponse.AppendHeader%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnSendingHeaders">
+      <MemberSignature Language="C#" Value="public System.Web.ISubscriptionToken AddOnSendingHeaders (Action&lt;System.Web.HttpContext&gt; callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.ISubscriptionToken AddOnSendingHeaders(class System.Action`1&lt;class System.Web.HttpContext&gt; callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AddOnSendingHeaders(System.Action{System.Web.HttpContext})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ISubscriptionToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action&lt;System.Web.HttpContext&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O método de retorno de chamada.</param>
+        <summary>[Com suporte no .NET Framework 4.5.2 e versões posteriores]  
+  
+ Registra um retorno de chamada que o tempo de execução do ASP.NET invocará imediatamente antes dos cabeçalhos de resposta serem enviados para esta solicitação.</summary>
+        <returns>Um objeto <see cref="T:System.Web.ISubscriptionToken" /> que representa a assinatura do pseudoevento OnSendingHeaders.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O método AddOnSendingHeaders não é invocado se o módulo nativo libera a resposta pela primeira vez.  
+  
+ O evento pseudo OnSendingHeaders difere do evento de pipeline de IHttpModule nível em que é uma assinatura por solicitação, em vez de uma assinatura por aplicativo. A intenção é que o retorno de chamada pode modificar o código de status de resposta ou pode definir um cookie de resposta ou um cabeçalho. Outras observações de uso e limitações:  
+  
+-   Este método é eficaz apenas quando o IIS é executado no pipeline de modo de pipeline integrado e somente se ainda não foram enviados cabeçalhos de resposta para a solicitação atual.  
+  
+-   O tempo de execução do ASP.NET não garante nada sobre o que o retorno de chamada é invocado no thread. Por exemplo, o retorno de chamada pode ser invocado de forma síncrona em um thread em segundo plano se uma limpeza de plano de fundo está sendo executada. <xref:System.Web.HttpContext.Current%2A>não é garantida para esse thread.  
+  
+-   O retorno de chamada não deve chamar qualquer método que manipula o corpo da entidade de resposta ou que resulta em uma liberação. Por exemplo, o retorno de chamada não deve chamar <xref:System.Web.HttpResponse.Redirect%2A>, como esse método pode manipular o corpo da entidade de resposta.  
+  
+-   O retorno de chamada deve conter somente código síncrono de curta execução. Tentativa de invocar uma operação assíncrona ou esperar por essa operação pode resultar em um deadlock.  
+  
+-   O retorno de chamada não deve lançar uma exceção; Caso contrário, o comportamento será indefinido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendCookie">
+      <MemberSignature Language="C#" Value="public void AppendCookie (System.Web.HttpCookie cookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendCookie(class System.Web.HttpCookie cookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AppendCookie(System.Web.HttpCookie)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cookie" Type="System.Web.HttpCookie" />
+      </Parameters>
+      <Docs>
+        <param name="cookie">O <see cref="T:System.Web.HttpCookie" /> a ser adicionado ao fluxo de saída.</param>
+        <summary>Adiciona um cookie HTTP à coleção de cookies intrínsecos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um novo cookie chamado `LastVisit`, define o valor do cookie para a data e hora atuais e anexa o cookie para o conjunto atual de cookie. Todos os cookies na coleção de cookie são enviados para o cliente a `Set-Cookie` fluxo de saída de cabeçalho com o HTTP.  
+  
+ [!code-csharp[Classic HttpResponse.AppendCookie Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.AppendCookie Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.AppendCookie Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.AppendCookie Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Um cookie será acrescentado depois que os cabeçalhos HTTP forem enviados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendHeader">
+      <MemberSignature Language="C#" Value="public void AppendHeader (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendHeader(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AppendHeader(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cabeçalho HTTP para adicionar ao fluxo de saída.</param>
+        <param name="value">A cadeia de caracteres a ser acrescentada ao cabeçalho.</param>
+        <summary>Adiciona um cabeçalho HTTP ao fluxo de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você usar o <xref:System.Web.HttpResponse.AppendHeader%2A> método para enviar cabeçalhos específicos de cache e ao mesmo tempo, use o modelo de objeto de cache (<xref:System.Web.HttpResponse.Cache%2A>) para definir a política de cache, os cabeçalhos de resposta HTTP que pertencem ao cache (`Cache-Control`, `Expires`, `Last-Modified`, `Pragma`, e `Vary`) pode ser excluído quando o modelo de objeto do cache é usado. Esse comportamento permite que o ASP.NET manter as configurações mais restritivas. Por exemplo, considere uma página que inclui controles de usuário. Se esses controles tem políticas conflitantes do cache, a política de cache mais restritiva será usada. Se um controle de usuário define o cabeçalho "`Cache-Control: Public`"e outro controle de usuário define o cabeçalho mais restritivo"`Cache-Control: Private`" por meio de chamadas para <xref:System.Web.HttpCachePolicy.SetCacheability%2A>, em seguida, o "`Cache-Control: Private`" cabeçalho será enviado com a resposta.  
+  
+ Para obter uma lista de cabeçalhos HTTP/1.1 padrão, consulte a seção 14, "Definições de campo de cabeçalho", no [Hypertext Transfer Protocol--HTTP/1.1](http://go.microsoft.com/fwlink/?LinkID=73147) especificação no site da World Wide Web Consortium (W3C).  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Web.HttpResponse.AppendHeader%2A> método para adicionar um cabeçalho personalizado para o <xref:System.Web.HttpResponse> objeto enviado ao cliente solicitante.  
+  
+ [!code-csharp[System.Web.HttpResponse.AppendHeader_Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse.AppendHeader_Example/CS/responseappendheader.cs.aspx#1)]
+ [!code-vb[System.Web.HttpResponse.AppendHeader_Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse.AppendHeader_Example/VB/responseappendheader.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O cabeçalho será anexado depois que os cabeçalhos HTTP tiverem sido enviados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendToLog">
+      <MemberSignature Language="C#" Value="public void AppendToLog (string param);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendToLog(string param) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.AppendToLog(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="param" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="param">O texto a ser adicionado ao arquivo de log.</param>
+        <summary>Adiciona informações de log personalizado ao arquivo de log de IIS (Serviços de Informações da Internet).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para permitir a cadeia de caracteres especificada ser gravado no arquivo de log, você deve primeiro habilitar o **consulta URI** opção do **propriedades de log estendido** caixa de diálogo para o site que você deseja registrar a atividade no IIS.  
+  
+ Para personalizar o registro em log estendidos no IIS 6.0, siga estas etapas:  
+  
+1.  No Gerenciador do IIS, expanda o nó do computador local, expanda a pasta da Web ou Sites de FTP, com o botão direito no site da Web ou FTP e, em seguida, clique em **propriedades**.  
+  
+2.  Clique o **Web ou FTP Site** guia e, em seguida, selecione o **habilitar registro em log** caixa de seleção (se não já estiver selecionada).  
+  
+3.  No **formato do log ativo** , clique em **formato do arquivo de Log estendido do W3C**.  
+  
+4.  Clique em **propriedades**.  
+  
+5.  Clique o **avançado** , selecione as propriedades que você deseja fazer logon e, em seguida, clique em **Okey**.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acrescentar uma cadeia de caracteres no log.  
+  
+ [!code-csharp[Classic HttpResponse.AppendToLog Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.AppendToLog Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.AppendToLog Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.AppendToLog Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyAppPathModifier">
+      <MemberSignature Language="C#" Value="public string ApplyAppPathModifier (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ApplyAppPathModifier(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.ApplyAppPathModifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual para um recurso.</param>
+        <summary>Adiciona uma ID de sessão para o caminho virtual se a sessão estiver usando o estado de sessão <see cref="P:System.Web.Configuration.SessionStateSection.Cookieless" /> retornar o caminho combinado. Se o estado de sessão <see cref="P:System.Web.Configuration.SessionStateSection.Cookieless" /> não for usado, <see cref="M:System.Web.HttpResponse.ApplyAppPathModifier(System.String)" /> retornará caminho virtual original.</summary>
+        <returns>O <paramref name="virtualPath" /> com a ID de sessão inserida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpResponse.ApplyAppPathModifier%2A>é usado apenas com sessões sem cookies para construir HREFs absolutos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir declara uma variável de cadeia de caracteres denominada `urlConverted`e o define como o resultado de uma <xref:System.Web.HttpResponse.ApplyAppPathModifier%2A> chamada de método. O código, em seguida, passa o valor da variável para um <xref:System.Web.UI.WebControls.HyperLink> do controle <xref:System.Web.UI.WebControls.HyperLink.NavigateUrl%2A> propriedade.  
+  
+ [!code-csharp[System.Web.HttpResponse_Sample5#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/CS/responseapppathmodifiercs.aspx#5)]
+ [!code-vb[System.Web.HttpResponse_Sample5#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/VB/responseapppathmodifiervb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginFlush">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginFlush (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginFlush(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.BeginFlush(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O objeto de retorno de chamada.</param>
+        <param name="state">O estado de resposta.</param>
+        <summary>Envia a resposta em buffer no momento para o cliente.</summary>
+        <returns>O objeto de resultado assíncrono.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se subjacente <xref:System.Web.HttpWorkerRequest> objeto oferece suporte a operações assíncronas de liberação e esse método é chamado a partir de um evento de módulo assíncrono ou um manipulador assíncrono, a operação de limpeza é executada de forma assíncrona. Caso contrário, a operação de limpeza é executada de forma síncrona. Movimento assíncrono tem suporte para o IIS 6.0 e posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A resposta já foi concluída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinaryWrite">
+      <MemberSignature Language="C#" Value="public void BinaryWrite (byte[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BinaryWrite(unsigned int8[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.BinaryWrite(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Os bytes a serem gravados no fluxo de saída.</param>
+        <summary>Grava uma cadeia de caracteres binários no fluxo de saída HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir lê um arquivo de texto em um buffer e grava o buffer de fluxo de saída HTTP.  
+  
+ [!code-csharp[Classic HttpResponse.BinaryWrite Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.BinaryWrite Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.BinaryWrite Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.BinaryWrite Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Buffer">
+      <MemberSignature Language="C#" Value="public bool Buffer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Buffer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.Buffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a saída deve ser armazenada em buffer e enviada depois que a resposta completa tiver o processamento concluído.</summary>
+        <value>
+          <see langword="true" /> se a saída para o cliente for armazenada em buffer, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse.Buffer%2A> propriedade foi preterida em favor do <xref:System.Web.HttpResponse.BufferOutput%2A> propriedade e é fornecida somente para compatibilidade com versões anteriores do ASP. Com o ASP.NET, use <xref:System.Web.HttpResponse.BufferOutput%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferOutput">
+      <MemberSignature Language="C#" Value="public bool BufferOutput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BufferOutput" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.BufferOutput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deseja armazenar a saída em buffer e enviá-la depois que a página concluída concluiu o processamento.</summary>
+        <value>
+          <see langword="true" /> se a saída para o cliente é armazenada em buffer; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir define o <xref:System.Web.HttpResponse.ContentType%2A> propriedade para a resposta a imagem/jpeg, chama o <xref:System.Web.HttpResponse.Clear%2A> método para remover outros tipos de conteúdo que podem ser anexado à resposta e, em seguida, define o <xref:System.Web.HttpResponse.BufferOutput%2A> a propriedade como true para que a página inteira será processado antes que qualquer conteúdo que é enviado ao cliente solicitante.  
+  
+ Para obter um exemplo completo, consulte o <xref:System.Web.HttpResponse> classe.  
+  
+ [!code-csharp[System.Web.HttpResponse_Samples1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/CS/responsesamplescs.aspx#2)]
+ [!code-vb[System.Web.HttpResponse_Samples1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/VB/responsesamplesvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cache">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCachePolicy Cache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCachePolicy Cache" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.Cache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCachePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a política de cache (como a data de validade, as configurações de privacidade e cláusulas vary) de uma página da Web.</summary>
+        <value>Um objeto <see cref="T:System.Web.HttpCachePolicy" /> que contém informações sobre a política de cache da resposta atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir grava as propriedades da política de cache atual para o fluxo de saída HTTP.  
+  
+ [!code-csharp[Classic HttpResponse.Cache Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.Cache Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.Cache Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.Cache Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheControl">
+      <MemberSignature Language="C#" Value="public string CacheControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CacheControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.CacheControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o cabeçalho HTTP <see langword="Cache-Control" />, que corresponde a um dos valores de enumeração <see cref="T:System.Web.HttpCacheability" />.</summary>
+        <value>Uma representação de cadeia de caracteres do valor de enumeração <see cref="T:System.Web.HttpCacheability" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores para `Private`, `Public`, e `No-Cache` são cadeias de caracteres e devem ser colocados entre aspas (""). Se o <xref:System.Web.HttpResponse.CacheControl%2A> propriedade é definida como um valor que não coincide com um do <xref:System.Web.HttpCacheability> valores de enumeração, então um <xref:System.ArgumentException> é gerada. Se o <xref:System.Web.HttpResponse.CacheControl%2A> propriedade não for definida, a capacidade de cache da resposta é definida como <xref:System.Web.HttpCacheability.NoCache>.  
+  
+ O `CacheControl`, <xref:System.Web.HttpResponse.Expires%2A>, e <xref:System.Web.HttpResponse.ExpiresAbsolute%2A> propriedades foram preteridas. Em vez disso, os métodos do <xref:System.Web.HttpCachePolicy> classe estão disponíveis por meio de <xref:System.Web.HttpResponse.Cache%2A> cache de cliente e cache de saída de objeto intrínseco para controlar o Internet Information Services (IIS).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O conjunto de valores de cadeia de caracteres não corresponde a um dos valores de enumeração <see cref="T:System.Web.HttpCacheability" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Charset">
+      <MemberSignature Language="C#" Value="public string Charset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Charset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.Charset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conjunto de caracteres HTTP do fluxo de saída.</summary>
+        <value>O conjunto de caracteres HTTP do fluxo de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Charset` propriedade pode ser definida como `null` para suprimir o HTTP `Content-Type` cabeçalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir verifica se o conjunto de caracteres do fluxo de saída é Europeu Central (ISO).  
+  
+ [!code-csharp[System.Web.HttpResponse.Charset#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse.Charset/cs/default.aspx#1)]
+ [!code-vb[System.Web.HttpResponse.Charset#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse.Charset/vb/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A propriedade <see langword="Charset" /> foi definida depois que os cabeçalhos foram enviados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa toda a saída do conteúdo do fluxo de buffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse.Clear%2A> método não limpa as informações de cabeçalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o <xref:System.Web.HttpResponse.ContentType%2A> propriedade para a resposta a imagem/jpeg, chama o <xref:System.Web.HttpResponse.Clear%2A> método para remover outros tipos de conteúdo que podem ser anexado à resposta e, em seguida, define o <xref:System.Web.HttpResponse.BufferOutput%2A> a propriedade como true para que a página concluída processado antes que qualquer conteúdo que é enviado ao cliente solicitante.  
+  
+ Para obter um exemplo completo, consulte o <xref:System.Web.HttpResponse> classe.  
+  
+ [!code-csharp[System.Web.HttpResponse_Samples1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/CS/responsesamplescs.aspx#2)]
+ [!code-vb[System.Web.HttpResponse_Samples1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/VB/responsesamplesvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearContent">
+      <MemberSignature Language="C#" Value="public void ClearContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.ClearContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa toda a saída do conteúdo do fluxo de buffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse.ClearContent%2A> método não limpa as informações de cabeçalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir limpa todo o conteúdo do fluxo de buffer.  
+  
+ [!code-csharp[Classic HttpResponse.ClearContent Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.ClearContent Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.ClearContent Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.ClearContent Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearHeaders">
+      <MemberSignature Language="C#" Value="public void ClearHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearHeaders() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.ClearHeaders" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os cabeçalhos do fluxo de buffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Web.HttpResponse.ClearHeaders%2A> método para garantir que nenhum cabeçalho seja enviado com a resposta atual. Essa técnica pode ser especialmente importante se a resposta do ASP.NET está gerando uma imagem, como um arquivo JPEG. Neste exemplo o <xref:System.Web.HttpResponse.ContentType%2A> estiver definida como imagem/jpeg.  
+  
+ [!code-csharp[System.Web.HttpResponse_Sample5#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/CS/httpresponseclearheaderscs.aspx#2)]
+ [!code-vb[System.Web.HttpResponse_Sample5#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/VB/httpresponseclearheadersvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Os cabeçalhos serão limpos depois que os cabeçalhos HTTP tiverem sido enviados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientDisconnectedToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken ClientDisconnectedToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken ClientDisconnectedToken" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.ClientDisconnectedToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Threading.CancellationToken" /> que é disparado quando o cliente se desconecta.</summary>
+        <value>O token de cancelamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa API é thread-safe. No entanto, há algumas restrições sobre como o token de cancelamento deve ser usado. Usá-la incorretamente pode levar a condições de corrida, deadlocks ou outros comportamentos inesperados. Tenha em mente as seguintes diretrizes:  
+  
+-   Certifique-se de que você não chama essa API fora dos limites de uma única solicitação, porque o ASP.NET será descartar o token de cancelamento ao final da solicitação. Não há nenhuma garantia de que o token nunca fará a transição para um estado cancelado antes de ser descartado. Por exemplo, se a solicitação termina sem o cliente ter desconectado, o token será descartado sem primeiro ter foi cancelada.  
+  
+-   Aguardar o <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType>, pois isso anula a finalidade de uma notificação assíncrona e pode causar deadlocks.  
+  
+-   Não chame o <xref:System.Threading.CancellationToken.Register%2A?displayProperty=nameWithType> sobrecargas que chamam o retorno de chamada no original <xref:System.Threading.SynchronizationContext> objeto.  
+  
+-   Não use o <xref:System.Web.HttpContext> objeto ou non-thread-safe ASP.NET intrínseco de outros objetos no retorno de chamada fornecido para o <xref:System.Threading.CancellationToken.Register%2A?displayProperty=nameWithType> método. O retorno de chamada pode estar em execução simultaneamente com outras ASP.NET ou código de aplicativo.  
+  
+-   Manter os métodos de retorno de chamada execução rápida e sem bloqueio.  
+  
+-   Verifique todos os esforços para evitar gerar exceções de dentro do método de retorno de chamada.  
+  
+ Essa propriedade só é aplicável para os serviços de informações da Internet (IIS) 7.5 no modo integrado. Se você chamá-lo sem o IIS versão ou pipeline de modo certo, um <xref:System.PlatformNotSupportedException> é gerada. Para determinar a versão do IIS, use <xref:System.Web.HttpRuntime.IISVersion%2A>. Para determinar o modo de pipeline, use <xref:System.Web.HttpRuntime.UsingIntegratedPipeline%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha a conexão de soquete para um cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método encerra a conexão para o cliente de uma maneira que inesperado e não se destina ao processamento de solicitação HTTP normal. O método envia um pacote de redefinição para o cliente, o que pode fazer com que os dados de resposta são armazenados em buffer no servidor, cliente ou em algum lugar entre a ser removido.  
+  
+ No entanto, normalmente você deve chamar <xref:System.Web.HttpApplication.CompleteRequest%2A> em vez disso, se você quiser pular para o <xref:System.Web.HttpApplication.EndRequest> eventos e enviar uma resposta ao cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding ContentEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding ContentEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.ContentEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conjunto de caracteres HTTP do fluxo de saída.</summary>
+        <value>Um objeto <see cref="T:System.Text.Encoding" /> que contém informações sobre o conjunto de caracteres da resposta atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Padrão `ContentEncoding` pode ser especificado em um arquivo de configuração do ASP.NET no [globalização Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7) seção. Se <xref:System.Web.HttpResponse.ContentEncoding%2A> é especificado pelo cliente, as configurações padrão são substituídas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir grava uma descrição legível do conjunto de codificação para o fluxo de saída de caracteres.  
+  
+ [!code-csharp[Classic HttpResponse.ContentEncoding Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.ContentEncoding Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.ContentEncoding Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.ContentEncoding Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Tentativa de definir <see cref="P:System.Web.HttpResponse.ContentEncoding" /> como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo MIME de HTTP do fluxo de saída.</summary>
+        <value>O tipo MIME de HTTP do fluxo de saída. O valor padrão é "<see langword="text/html" />".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir define o <xref:System.Web.HttpResponse.ContentType%2A> propriedade para a resposta a imagem/jpeg, chama o <xref:System.Web.HttpResponse.Clear%2A> método para remover outros tipos de conteúdo que podem ser anexado à resposta e, em seguida, define o <xref:System.Web.HttpResponse.BufferOutput%2A> a propriedade como true para que a página concluída processado antes que qualquer conteúdo que é enviado ao cliente solicitante.  
+  
+ Para obter um exemplo completo, consulte o <xref:System.Web.HttpResponse> classe.  
+  
+ [!code-csharp[System.Web.HttpResponse_Samples1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/CS/responsesamplescs.aspx#2)]
+ [!code-vb[System.Web.HttpResponse_Samples1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/VB/responsesamplesvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A propriedade <see cref="P:System.Web.HttpResponse.ContentType" /> é definida como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookies">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookieCollection Cookies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpCookieCollection Cookies" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.Cookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de cookies de resposta.</summary>
+        <value>A coleção de cookies de resposta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ASP.NET inclui duas coleções de cookie intrínseco. A coleção acessada por meio de <xref:System.Web.HttpRequest.Cookies%2A> coleção de <xref:System.Web.HttpRequest> contém cookies transmitidos pelo cliente para o servidor no `Cookie` cabeçalho. A coleção acessada por meio de <xref:System.Web.HttpResponse.Cookies%2A> coleção de <xref:System.Web.HttpResponse> contém novos cookies criado no servidor e transmitidos para o cliente no `Set-Cookie` cabeçalho.  
+  
+ Depois de adicionar um cookie usando o <xref:System.Web.HttpResponse.Cookies%2A?displayProperty=nameWithType> coleção, o cookie é imediatamente disponível no <xref:System.Web.HttpRequest.Cookies%2A?displayProperty=nameWithType> coleção, mesmo se a resposta não foi enviada ao cliente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo cookie chamado `LastVisit`, define o valor do cookie para a data e hora atuais e adiciona o cookie para o conjunto atual de cookie. Todos os cookies na coleção de cookie são enviados para o cliente a `Set-Cookie` fluxo de saída de cabeçalho com o HTTP.  
+  
+ [!code-csharp[Classic HttpResponse.Cookies Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.Cookies Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.Cookies Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.Cookies Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableKernelCache">
+      <MemberSignature Language="C#" Value="public void DisableKernelCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisableKernelCache() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.DisableKernelCache" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desabilita o cache de kernel para a resposta atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não há suporte para o cache de kernel, esse método não terá efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableUserCache">
+      <MemberSignature Language="C#" Value="public void DisableUserCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisableUserCache() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.DisableUserCache" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desabilita o cache de modo de usuário do IIS para esta resposta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não há suporte para o cache de modo de usuário do IIS, esse método retornará sem executar nenhuma ação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="public void End ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void End() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.End" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Envia todas as saídas em buffer no momento para o cliente, interrompe a execução da página e gera o evento <see cref="E:System.Web.HttpApplication.EndRequest" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é fornecido somente para compatibilidade com o ASP — ou seja, para compatibilidade com a tecnologia de programação da Web COM base em que o precederam ASP.NET. Se você quiser pular para o <xref:System.Web.HttpApplication.EndRequest> eventos e enviar uma resposta ao cliente, geralmente é preferível para chamar <xref:System.Web.HttpApplication.CompleteRequest%2A> em vez disso.  
+  
+ Para simular o comportamento do `End` método ASP, esse método tenta gerar um <xref:System.Threading.ThreadAbortException> exceção. Se essa tentativa for bem-sucedida, o thread de chamada será anulado, que é negativo no desempenho do seu site. Nesse caso, nenhum código após a chamada para o <xref:System.Web.HttpResponse.End%2A> o método é executado.  
+  
+ Se o <xref:System.Web.HttpResponse.End%2A> método não é capaz de gerar um <xref:System.Threading.ThreadAbortException>, em vez disso, ele libera os bytes de resposta ao cliente. Ele faz isso de forma síncrona, que também pode ser prejudicial ao desempenho do seu site.  
+  
+ Em ambos os casos (ou não um <xref:System.Threading.ThreadAbortException> exceção é gerada com êxito), o pipeline de resposta volta para o <xref:System.Web.HttpApplication.EndRequest> evento.  
+  
+ O <xref:System.Web.HttpApplication.CompleteRequest%2A> método não gerar uma exceção de código após a chamada para o <xref:System.Web.HttpApplication.CompleteRequest%2A> método pode ser executado. Se sua intenção é evitar a execução de código subsequente e se a penalidade de desempenho de <xref:System.Web.HttpResponse.End%2A> é aceitável, você pode chamar <xref:System.Web.HttpResponse.End%2A> em vez de <xref:System.Web.HttpApplication.CompleteRequest%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Threading.ThreadAbortException">A chamada para <see cref="M:System.Web.HttpResponse.End" /> encerrou a solicitação atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndFlush">
+      <MemberSignature Language="C#" Value="public void EndFlush (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndFlush(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.EndFlush(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">O objeto de resultado assíncrono.</param>
+        <summary>Conclui uma operação de liberação assíncrona.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">A liberação assíncrona não tem suporte e o parâmetro <paramref name="asyncResult" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Não há suporte para o movimento assíncrono e o <paramref name="asyncResult" /> parâmetro não pode ser convertido em um <c>FlushAsyncResult</c> objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Expires">
+      <MemberSignature Language="C#" Value="public int Expires { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Expires" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.Expires" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de minutos antes de uma página armazenada em cache em um navegador expirar. Se o usuário retornar para a mesma página antes de expirar, a versão em cache será exibida. <see cref="P:System.Web.HttpResponse.Expires" /> é fornecido para compatibilidade com versões anteriores do ASP.</summary>
+        <value>O número de minutos antes da expiração da página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Expires`, <xref:System.Web.HttpResponse.ExpiresAbsolute%2A> e <xref:System.Web.HttpResponse.CacheControl%2A> propriedades foram preteridas em favor de métodos do <xref:System.Web.HttpCachePolicy> disponíveis por meio da classe de <xref:System.Web.HttpResponse.Cache%2A> cache de cliente e cache de saída de objeto intrínseco para controlar o Internet Information Services (IIS).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpiresAbsolute">
+      <MemberSignature Language="C#" Value="public DateTime ExpiresAbsolute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ExpiresAbsolute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.ExpiresAbsolute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a data absoluta e a hora em que remover as informações em cache do cache. <see cref="P:System.Web.HttpResponse.ExpiresAbsolute" /> é fornecido para compatibilidade com versões anteriores do ASP.</summary>
+        <value>A data e hora em que a página expira.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `ExpiresAbsolute`, <xref:System.Web.HttpResponse.Expires%2A>, e <xref:System.Web.HttpResponse.CacheControl%2A> propriedades foram preteridas em favor de métodos do <xref:System.Web.HttpCachePolicy> disponíveis por meio da classe de <xref:System.Web.HttpResponse.Cache%2A> cache de cliente e cache de saída de objeto intrínseco para controlar o Internet Information Services (IIS).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto de filtro de encapsulamento usado para modificar o corpo da entidade HTTP antes da transmissão.</summary>
+        <value>O objeto <see cref="T:System.IO.Stream" /> que atua como o filtro de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um `Stream` do objeto e defina o <xref:System.Web.HttpResponse.Filter%2A> propriedade para o `Stream` objeto, todos os HTTP saída enviada por <xref:System.Web.HttpResponse.Write%2A> transmite o filtro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é uma página ASP.NET que define o <xref:System.Web.HttpResponse.Filter%2A> propriedade para uma nova instância do `UpperCaseFilter` classe um personalizado <xref:System.IO.Stream> classe que converte todo o texto que transmite em maiusculas. As informações sobre a solicitação é salvo em um arquivo de texto e, em seguida, o <xref:System.Web.HttpResponse.Filter%2A> está definida. Depois que o filtro de resposta estiver em vigor, o código chama o <xref:System.Web.HttpRequest.MapPath%2A> método para obter o caminho absoluto para um arquivo de texto chamado `TestFile.txt` que serve como a fonte para o conteúdo da resposta. O código, em seguida, cria um novo <xref:System.IO.StreamReader> objeto para ler o arquivo de texto do início ao fim e, em seguida, chama o <xref:System.Web.HttpResponse.Write%2A> método para exibir o conteúdo do arquivo na página.  
+  
+ [!code-aspx-csharp[System.Web.HttpRequest_Samples2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpRequest_Samples2/CS/requestsamples2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpRequest_Samples2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpRequest_Samples2/VB/requestsamples2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A filtragem não é permitida com a entidade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Envia toda a saída em buffer no momento para o cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Força todas as em buffer de saída a ser enviado ao cliente. O <xref:System.Web.HttpResponse.Flush%2A> método pode ser chamado várias vezes durante o processamento da solicitação.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Drawing.Graphics.Save%2A> método para salvar um <xref:System.Drawing.Bitmap> o objeto para o <xref:System.Web.HttpResponse.OutputStream%2A> propriedade e converte a imagem JPEG Formatar. O código, em seguida, chama o `Dispose` método no <xref:System.Drawing.Bitmap> objeto e um <xref:System.Drawing.Graphics> objeto, liberando os recursos que eles estavam usando. Depois, ele chama o <xref:System.Web.HttpResponse.Flush%2A> para enviar o conteúdo da resposta ao cliente solicitante.  
+  
+ Para obter um exemplo completo, consulte o <xref:System.Web.HttpResponse> classe.  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse_Samples1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/CS/responsesamplescs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpResponse_Samples1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/VB/responsesamplesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O cache é limpo liberado depois que a resposta foi enviada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task FlushAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task FlushAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.FlushAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Envia de forma assíncrona toda a saída em buffer atual para o cliente.</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.Task" /> que representa a operação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderEncoding">
+      <MemberSignature Language="C#" Value="public System.Text.Encoding HeaderEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding HeaderEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.HeaderEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto <see cref="T:System.Text.Encoding" /> que representa a codificação para o fluxo de saída do cabeçalho atual.</summary>
+        <value>Um <see cref="T:System.Text.Encoding" /> que contém informações sobre o conjunto de caracteres para o cabeçalho atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse.HeaderEncoding%2A> propriedade fornece a capacidade de desabilitar ou alterar o <xref:System.Text.Encoding> objeto em um cabeçalho de resposta usando o <xref:System.Text.ASCIIEncoding>, <xref:System.Text.UnicodeEncoding>, <xref:System.Text.UTF7Encoding>, ou <xref:System.Text.UTF8Encoding> objeto. O valor de codificação padrão é a <xref:System.Text.UTF8Encoding> classe.  
+  
+ Alterando o tipo do <xref:System.Web.HttpResponse.HeaderEncoding%2A> propriedade, você pode aumentar potencialmente o risco de determinados ataques mal-intencionados ou dados confidenciais de causa a ser enviado através do cabeçalho de resposta. Ataques de injeção de cabeçalho podem ser evitados, em parte, deixando o <xref:System.Web.HttpResponse.HeaderEncoding%2A> propriedade de uma resposta para a configuração padrão. Um ataque contra um aplicativo vulnerável pode ecoar confiados novamente os dados como parte de um cabeçalho de resposta. Se o <xref:System.Web.HttpResponse.HeaderEncoding%2A> está desabilitado devido a um requisito para acompanhamento de linhas em um cabeçalho ou se qualquer cabeçalho é construído com base no resultado de dados não confiáveis, os dados do cabeçalho devem ser validados antes de enviar o fluxo de resposta.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor de codificação é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">O valor de codificação é <see cref="P:System.Text.Encoding.Unicode" />.  
+  
+ \- ou -  
+  
+ Os cabeçalhos já foram enviados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de cabeçalhos de resposta.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> de cabeçalhos de resposta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse.Headers%2A> propriedade só tem suporte com o [!INCLUDE[iisver](~/includes/iisver-md.md)] modo de pipeline integrado e pelo menos o .NET Framework 3.0. Quando você tenta acessar o <xref:System.Web.HttpResponse.Headers%2A> propriedade e uma dessas duas condições não for atendida, uma <xref:System.PlatformNotSupportedException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">A operação requer o modo de pipeline integrado no [!INCLUDE[iisver](~/includes/iisver-md.md)] e pelo menos o .NET Framework versão 3.0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HeadersWritten">
+      <MemberSignature Language="C#" Value="public bool HeadersWritten { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HeadersWritten" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.HeadersWritten" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>[Com suporte no .NET Framework 4.5.2 e versões posteriores]  
+  
+ Obtém um valor que indica se os cabeçalhos de resposta foram gravados.</summary>
+        <value>
+          <see langword="true" /> se os cabeçalhos de resposta tiverem sido gravados; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClientConnected">
+      <MemberSignature Language="C#" Value="public bool IsClientConnected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClientConnected" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.IsClientConnected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o cliente ainda está conectado ao servidor.</summary>
+        <value>
+          <see langword="true" /> se o cliente está conectado no momento; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse.IsClientConnected%2A> propriedade retorna `false` quando as seguintes condições forem verdadeiras:  
+  
+-   A conexão para o cliente foi encerrada. Isso pode ocorrer se o <xref:System.Web.HttpResponse.Close%2A> método é invocado, ou se o cliente parou a execução da página da Web ou navegar até outra página.  
+  
+-   O <xref:System.Web.HttpWorkerRequest> objeto que está tratando a solicitação é `null` ou <xref:System.Web.HttpWorkerRequest.IsClientConnected%2A?displayProperty=nameWithType> método retornará `false`. Se um personalizado <xref:System.Web.HttpWorkerRequest> objeto manipula a solicitação, em seguida, o <xref:System.Web.HttpWorkerRequest.IsClientConnected%2A?displayProperty=nameWithType> método pode ser definido com base em critérios personalizados. Por exemplo, a solicitação de trabalho personalizado pode forçar um tempo limite após um período de tempo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Web.HttpResponse.IsClientConnected%2A> propriedade para verificar se o cliente que está solicitando a página permanece conectado ao servidor. Se <xref:System.Web.HttpResponse.IsClientConnected%2A> for true, o código chama o <xref:System.Web.HttpResponse.Redirect%2A> método e o cliente exibirá outra página. Se <xref:System.Web.HttpResponse.IsClientConnected%2A> é false, em seguida, o código chama o <xref:System.Web.HttpResponse.End%2A> método e todo o processamento de página será finalizado.  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse_Sample4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Sample4/CS/page1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpResponse_Sample4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Sample4/VB/page1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequestBeingRedirected">
+      <MemberSignature Language="C#" Value="public bool IsRequestBeingRedirected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRequestBeingRedirected" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.IsRequestBeingRedirected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se o cliente está sendo transferido para um novo local.</summary>
+        <value>
+          <see langword="true" /> se o valor do cabeçalho de resposta do local for diferente do local atual; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.HttpResponse.IsRequestBeingRedirected%2A> propriedade com o <xref:System.Web.HttpResponse.RedirectLocation%2A> propriedade para testar e determinar se o URI absoluto que é transmitida para o cliente em HTTP `Location` cabeçalho é diferente do URI atual e o que será o novo URI pretendido que está sendo transferido para.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="public System.IO.TextWriter Output { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.TextWriter Output" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita a saída de texto para o fluxo de resposta HTTP de saída.</summary>
+        <value>Um objeto <see cref="T:System.IO.TextWriter" /> que permite a saída personalizada para o cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir é uma página ASP.NET que contém um <xref:System.Web.UI.WebControls.TextBox> controle que tem seu <xref:System.Web.UI.WebControls.TextBox.TextMode%2A> propriedade definida como <xref:System.Web.UI.WebControls.TextBoxMode.MultiLine>. O código da página leva o texto que um usuário insere no <xref:System.Web.UI.WebControls.TextBox.TextMode%2A>, usa o <xref:System.Web.HttpServerUtility.HtmlEncode%2A> método HTML codificá-lo e o <xref:System.Web.HttpResponse.Output%2A> propriedade para exibir a cadeia de caracteres codificada para a página.  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse.Output_Sample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse.Output_Sample/CS/responseoutputcs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpResponse.Output_Sample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse.Output_Sample/VB/responseoutputvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OutputStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream OutputStream" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.OutputStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita a saída binária para o corpo de conteúdo HTTP saída.</summary>
+        <value>Uma E/S <see cref="T:System.IO.Stream" /> que representa o conteúdo bruto do corpo do conteúdo HTTP de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Iniciando com o .NET Framework versão 2.0, quando você usa o <xref:System.IO.Stream.Write%28System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32%29?displayProperty=nameWithType> método do fluxo de e/s retornado pelo <xref:System.Web.HttpResponse.OutputStream%2A> propriedade, as exceções a seguir podem ser geradas:  
+  
+-   <xref:System.ArgumentOutOfRangeException>, se o `offset` ou `count` parâmetro for negativo ou se o `buffer` comprimento do parâmetro menos o `offset` parâmetro é menor ou igual a zero.  
+  
+-   <xref:System.ArgumentNullException>, se o `buffer` parâmetro é `null`.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Drawing.Image.Save%2A> método para salvar um <xref:System.Drawing.Bitmap> o objeto para o <xref:System.Web.HttpResponse.OutputStream%2A> propriedade e converte a imagem no formato JPEG. O código, em seguida, chama o método Dispose no <xref:System.Drawing.Bitmap> objeto e um <xref:System.Drawing.Graphics> objeto, liberando os recursos que eles estavam usando. Finalmente, o código chama o <xref:System.Web.HttpResponse.Flush%2A> para enviar o conteúdo da resposta ao cliente solicitante.  
+  
+ Para obter um exemplo completo, consulte o <xref:System.Web.HttpResponse> classe.  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse_Samples1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/CS/responsesamplescs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpResponse_Samples1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Samples1/VB/responsesamplesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="OutputStream" /> não está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pics">
+      <MemberSignature Language="C#" Value="public void Pics (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Pics(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.Pics(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser adicionada ao cabeçalho <see langword="PICS-Label" />.</param>
+        <summary>Acrescenta um cabeçalho <see langword="PICS-Label" /> HTTP ao fluxo de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Plataforma para seleção de conteúdo da Internet (imagens) é um padrão de World Wide Web Consortium (W3C) para rotular os conteúdo. IMG é essencialmente uma linguagem para a criação de um sistema de classificação.  
+  
+ Qualquer valor pode ser um rótulo img; ASP.NET não valida o rótulo. O comprimento máximo da cadeia de caracteres é de 255 caracteres. Para obter mais informações sobre a sintaxe e os padrões de imagens, consulte o [World Wide Web Consortium](http://go.microsoft.com/fwlink/?LinkID=37125) site da Web.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é uma página que exibe uma imagem. O código de página chama o <xref:System.Web.HttpResponse.Pics%2A> método para definir o HTTP `PICS-Label` cabeçalho para a resposta. A cadeia de caracteres que é passada como parâmetro para o <xref:System.Web.HttpResponse.Pics%2A> método representa um rótulo de classificação gerado do site da Internet conteúdo classificação ICRA (associação).  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse_Sample4#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Sample4/CS/page2cs.aspx#2)]
+ [!code-aspx-vb[System.Web.HttpResponse_Sample4#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Sample4/VB/page2vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushPromise">
+      <MemberSignature Language="C#" Value="public void PushPromise (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PushPromise(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.PushPromise(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">A URL da solicitação por push. Esta deve ser o caminho virtual do recurso relativo que o servidor deseja enviar por push para o cliente.</param>
+        <summary>Essa API serve para dar suporte a aplicativos que enviam promessas por push para clientes HTTP 2.0. Você pode encontrar mais detalhes sobre como Http2 push de servidor em [8.2 de seção de especificação de HTTP/2: servidor Push](http://http2.github.io/http2-spec/#PushResources).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ PushPromise é não determinística e aplicativos não devem ter lógica que depende dele. Sua única finalidade é uma vantagem de desempenho em alguns casos. Há muitas condições (protocolo e implementação) que podem causar para ignorar as solicitações de envio por push completamente. A expectativa é baseada em disparar e esquecer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushPromise">
+      <MemberSignature Language="C#" Value="public void PushPromise (string path, string method, System.Collections.Specialized.NameValueCollection headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PushPromise(string path, string method, class System.Collections.Specialized.NameValueCollection headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.PushPromise(System.String,System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="method" Type="System.String" />
+        <Parameter Name="headers" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="path">A URL da solicitação por push. Esta deve ser o caminho virtual do recurso relativo que o servidor deseja enviar por push para o cliente.</param>
+        <param name="method">O método da solicitação HTTP que seria usado pela solicitação de envio por push.</param>
+        <param name="headers">O cabeçalho da solicitação HTTP que seria usado pela solicitação de envio por push.</param>
+        <summary>Essa API serve para dar suporte a aplicativos que enviam promessas por push para clientes HTTP 2.0. Você pode encontrar mais detalhes sobre como Http2 push de servidor em [8.2 de seção de especificação de HTTP/2: servidor Push](http://http2.github.io/http2-spec/#PushResources).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ PushPromise é não determinística e aplicativos não devem ter lógica que depende dele. Sua única finalidade é uma vantagem de desempenho em alguns casos. Há muitas condições (protocolo e implementação) que podem causar para ignorar as solicitações de envio por push completamente. A expectativa é baseada em disparar e esquecer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Redirect">
+      <MemberSignature Language="C#" Value="public void Redirect (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Redirect(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.Redirect(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">O local de destino.</param>
+        <summary>Redireciona uma solicitação para uma nova URL e especifica a nova URL.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Web.HttpResponse.Redirect%2A> é equivalente a chamar <xref:System.Web.HttpResponse.Redirect%2A> com o segundo parâmetro definido `true`.  
+  
+ <xref:System.Web.HttpResponse.Redirect%2A>chamadas <xref:System.Web.HttpResponse.End%2A> que lança um <xref:System.Threading.ThreadAbortException> exceção após a conclusão. Essa exceção tem um efeito negativo no desempenho do aplicativo Web. Portanto, é recomendável que essa sobrecarga em vez de usar o <xref:System.Web.HttpResponse.Redirect%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> de sobrecarga e passar `false` para o `endResponse` parâmetro e, em seguida, chame o <xref:System.Web.HttpApplication.CompleteRequest%2A> método. Para obter mais informações, consulte o método <xref:System.Web.HttpResponse.End%2A>.  
+  
+> [!NOTE]
+>  Para páginas móveis apenas, se seu aplicativo depende de sessões sem cookies ou pode receber solicitações de dispositivos móveis que requerem sessões sem cookies, usar um til (~) em um caminho pode resultar na criação de uma nova sessão e potencialmente perder dados da sessão. Para definir uma propriedade em um controle móvel com um caminho, como "~ / caminho", resolver o caminho usando <xref:System.Web.UI.MobileControls.MobileControl.ResolveUrl%2A> "~ / caminho" antes de atribuí-la à propriedade.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 302. Uma maneira alternativa para transferir controle para outra página é a <xref:System.Web.HttpServerUtility.Transfer%2A> método. O <xref:System.Web.HttpServerUtility.Transfer%2A> método é geralmente mais eficiente, porque ela não causa uma viagem de ida e ao cliente. Para obter mais informações, consulte [como: redirecionar usuários para outra página](http://msdn.microsoft.com/library/daef3f43-e018-43aa-b43c-46b27bac599e).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir força um redirecionamento incondicional para outro site da Web.  
+  
+ [!code-csharp[Classic HttpResponse.Redirect Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.Redirect Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.Redirect Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.Redirect Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Redirect">
+      <MemberSignature Language="C#" Value="public void Redirect (string url, bool endResponse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Redirect(string url, bool endResponse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.Redirect(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="endResponse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="url">O local do destino.</param>
+        <param name="endResponse">Indica se a execução da página atual deve ser terminada.</param>
+        <summary>Redireciona um cliente para uma nova URL. Especifica a nova URL e se a execução da página atual deve ser terminada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma URL absoluta (por exemplo, http://www.contoso.com/default.aspx) ou uma URL relativa (por exemplo, Default.aspx) pode ser especificada para o local de destino, mas alguns navegadores podem recusar uma URL relativa.  
+  
+ Quando você usa este método em um manipulador de página para encerrar uma solicitação para uma página e iniciar uma nova solicitação para outra página, defina `endResponse` para `false` e, em seguida, chamar o <xref:System.Web.HttpApplication.CompleteRequest%2A> método. Se você especificar `true` para o `endResponse` parâmetro, este método chama o <xref:System.Web.HttpResponse.End%2A> método para a solicitação original, o que gera um <xref:System.Threading.ThreadAbortException> exceção quando ela for concluída. Essa exceção tem um efeito negativo no desempenho do aplicativo Web, por isso, passando `false` para o `endResponse` parâmetro é recomendado. Para obter mais informações, consulte o método <xref:System.Web.HttpResponse.End%2A>.  
+  
+> [!NOTE]
+>  Para páginas móveis, se seu aplicativo depende de sessões sem cookies ou pode receber solicitações de dispositivos móveis que requerem sessões sem cookies, usando um til (~) em um caminho pode criar uma nova sessão e potencialmente perder dados da sessão. Para definir uma propriedade em um controle móvel com um caminho, como "~ / caminho", resolver o caminho usando <xref:System.Web.UI.MobileControls.MobileControl.ResolveUrl%2A> "~ / caminho" antes de atribuí-la à propriedade.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 302. Uma maneira alternativa para transferir controle para outra página é a <xref:System.Web.HttpServerUtility.Transfer%2A> método. O <xref:System.Web.HttpServerUtility.Transfer%2A> método é geralmente mais eficiente, porque ela não causa uma viagem de ida e ao cliente. Para obter mais informações, consulte [como: redirecionar usuários para outra página](http://msdn.microsoft.com/library/daef3f43-e018-43aa-b43c-46b27bac599e).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Web.HttpResponse.IsClientConnected%2A> propriedade para verificar se o cliente que está solicitando a página permanece conectado ao servidor. Se <xref:System.Web.HttpResponse.IsClientConnected%2A> for true, o código chama o <xref:System.Web.HttpResponse.Redirect%2A> método e o cliente exibirá outra página. Se <xref:System.Web.HttpResponse.IsClientConnected%2A> é false, em seguida, o código chama o <xref:System.Web.HttpResponse.End%2A> método e todo o processamento de página será finalizado.  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse_Sample4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Sample4/CS/page1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpResponse_Sample4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Sample4/VB/page1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="url" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="url" /> contém um caractere de nova linha.</exception>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+        <exception cref="T:System.ApplicationException">A solicitação de página é o resultado de um retorno de chamada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectLocation">
+      <MemberSignature Language="C#" Value="public string RedirectLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RedirectLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.RedirectLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do cabeçalho HTTP <see langword="Location" />.</summary>
+        <value>O URI absoluto transmitido ao cliente no cabeçalho HTTP <see langword="Location" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade para especificar a URL de redirecionamento quando você codifica um redirecionamento permanente usando o código de resposta HTTP 301.  
+  
+```csharp  
+Response.StatusCode = 301;  
+Response.Status = "301 Moved Permanently";  
+Response.RedirectLocation = "http://www.newurl.com ";  
+Response.End();  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Os cabeçalhos HTTP já foram gravados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectPermanent">
+      <MemberSignature Language="C#" Value="public void RedirectPermanent (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectPermanent(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectPermanent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">A localização para a qual a solicitação deve ser redirecionada.</param>
+        <summary>Executa um redirecionamento permanente da URL solicitada para a URL especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse.RedirectPermanent%28System.String%29> sobrecarga do método fornece um código de status HTTP 301 na resposta e inclui a URL para redirecionar a solicitação. Um código de status HTTP 301 é um código padrão em uma resposta HTTP. Ele indica que existe um redirecionamento permanente e fornece o local de redirecionamento.  
+  
+ Chamando o <xref:System.Web.HttpResponse.RedirectPermanent%28System.String%29> sobrecarga do método encerra a resposta.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="url" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="url" />inclui um caractere de nova linha (<c>\n</c>).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectPermanent">
+      <MemberSignature Language="C#" Value="public void RedirectPermanent (string url, bool endResponse);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectPermanent(string url, bool endResponse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectPermanent(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="endResponse" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="url">A localização para a qual a solicitação deve ser redirecionada.</param>
+        <param name="endResponse">
+          <see langword="true" /> para finalizar a resposta. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</param>
+        <summary>Executa um redirecionamento permanente da URL solicitada para a URL especificada e oferece a opção de concluir a resposta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse.RedirectPermanent%28System.String%2CSystem.Boolean%29> sobrecarga do método fornece um código de status HTTP 301 na resposta e inclui a URL para redirecionar a solicitação. Essa sobrecarga de método também fornece a opção de especificar se deseja encerrar ou para a resposta após o redirecionamento foi executado. Um código de status HTTP 301 é um código padrão em uma resposta HTTP. Ele indica que existe um redirecionamento permanente e fornece o local de redirecionamento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="url" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="url" />inclui um caractere de nova linha (<c>\n</c>).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToRoute">
+      <MemberSignature Language="C#" Value="public void RedirectToRoute (object routeValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToRoute(object routeValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectToRoute(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeValues" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="routeValues">Os valores de parâmetro de rota.</param>
+        <summary>Redireciona uma solicitação para uma nova URL usando valores de parâmetro de rota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para a conveniência de codificação. É equivalente a chamar o <xref:System.Web.HttpResponse.Redirect%28System.String%2CSystem.Boolean%29> método com o segundo parâmetro definido `false`.  
+  
+ Este método converte o objeto que é transmitido `routeValues` para um <xref:System.Web.Routing.RouteValueDictionary?displayProperty=nameWithType> objeto usando o <xref:System.Web.Routing.RouteValueDictionary.%23ctor%28System.Object%29?displayProperty=nameWithType> construtor. O <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A?displayProperty=nameWithType> método é chamado para determinar a URL.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 302.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar esse método para redirecionar para uma rota que tem parâmetros que são nomeados `productid` e `category`.  
+  
+```vb  
+Response.RedirectToRoute(  
+  New With {.productid = "1", .category = "widgets"})  
+```  
+  
+```csharp  
+Response.RedirectToRoute(  
+  new { productid = "1", category = "widgets" });  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma rota corresponde aos parâmetros de rotas especificados.</exception>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToRoute">
+      <MemberSignature Language="C#" Value="public void RedirectToRoute (string routeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToRoute(string routeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectToRoute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="routeName">O nome da rota.</param>
+        <summary>Redireciona uma solicitação para uma nova URL usando um nome de rota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para a conveniência de codificação. É equivalente a chamar o <xref:System.Web.HttpResponse.Redirect%28System.String%2CSystem.Boolean%29> método com o segundo parâmetro definido `false`.  
+  
+ Este método converte o nome da rota que é transmitido `routeName` para uma URL usando o <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A?displayProperty=nameWithType> método.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 302.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar esse método para redirecionar para uma rota denominada `Products`.  
+  
+```vb  
+Response.RedirectToRoute("Products")  
+```  
+  
+```csharp  
+Response.RedirectToRoute("Products");  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma rota corresponde aos parâmetros de rotas especificados.</exception>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToRoute">
+      <MemberSignature Language="C#" Value="public void RedirectToRoute (System.Web.Routing.RouteValueDictionary routeValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToRoute(class System.Web.Routing.RouteValueDictionary routeValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectToRoute(System.Web.Routing.RouteValueDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeValues" Type="System.Web.Routing.RouteValueDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="routeValues">Os valores de parâmetro de rota.</param>
+        <summary>Redireciona uma solicitação para uma nova URL usando valores de parâmetro de rota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para a conveniência de codificação. É equivalente a chamar o <xref:System.Web.HttpResponse.Redirect%28System.String%2CSystem.Boolean%29> método com o segundo parâmetro definido `false`.  
+  
+ Este método chama o <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A?displayProperty=nameWithType> método para determinar a URL.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 302.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar esse método para redirecionar para uma rota que tem parâmetros que são nomeados `productid` e `category`.  
+  
+```vb  
+Response.RedirectToRoute(  
+  new RouteValueDictionary {productId="1", category="widgets"})  
+```  
+  
+```csharp  
+Response.RedirectToRoute(  
+  (new RouteValueDictionary {productId="1", category="widgets"});  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma rota corresponde aos parâmetros de rotas especificados.</exception>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToRoute">
+      <MemberSignature Language="C#" Value="public void RedirectToRoute (string routeName, object routeValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToRoute(string routeName, object routeValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectToRoute(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeName" Type="System.String" />
+        <Parameter Name="routeValues" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="routeName">O nome da rota.</param>
+        <param name="routeValues">Os valores de parâmetro de rota.</param>
+        <summary>Redireciona uma solicitação para uma nova URL usando valores de parâmetro de rota e um nome de rota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para a conveniência de codificação. É equivalente a chamar o <xref:System.Web.HttpResponse.Redirect%28System.String%2CSystem.Boolean%29> método com o segundo parâmetro definido `false`.  
+  
+ Este método converte o objeto que é transmitido `routeValues` para um <xref:System.Web.Routing.RouteValueDictionary?displayProperty=nameWithType> objeto usando o <xref:System.Web.Routing.RouteValueDictionary.%23ctor%28System.Object%29?displayProperty=nameWithType> construtor. O <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A?displayProperty=nameWithType> método é chamado para determinar a URL.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 302.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar esse método para redirecionar para uma rota denominada `Product` e que tenha parâmetros que são nomeados `productid` e `category`.  
+  
+```vb  
+Response.RedirectToRoute("Product",  
+  New With {.productid = "1", .category = "widgets"})  
+```  
+  
+```csharp  
+Response.RedirectToRoute("Product",  
+  new { productid = "1", category = "widgets" });  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma rota corresponde aos parâmetros de rotas especificados.</exception>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToRoute">
+      <MemberSignature Language="C#" Value="public void RedirectToRoute (string routeName, System.Web.Routing.RouteValueDictionary routeValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToRoute(string routeName, class System.Web.Routing.RouteValueDictionary routeValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectToRoute(System.String,System.Web.Routing.RouteValueDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeName" Type="System.String" />
+        <Parameter Name="routeValues" Type="System.Web.Routing.RouteValueDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="routeName">O nome da rota.</param>
+        <param name="routeValues">Os valores de parâmetro de rota.</param>
+        <summary>Redireciona uma solicitação para uma nova URL usando valores de parâmetro de rota e um nome de rota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para a conveniência de codificação. É equivalente a chamar o <xref:System.Web.HttpResponse.Redirect%28System.String%2CSystem.Boolean%29> método com o segundo parâmetro definido `false`.  
+  
+ O <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A?displayProperty=nameWithType> método é chamado para determinar a URL.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 302.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar esse método para redirecionar para uma rota denominada `Product` e que tenha parâmetros que são nomeados `productid` e `category`.  
+  
+```vb  
+Response.RedirectToRoute("Product",  
+  new RouteValueDictionary {productId="1", category="widgets"})  
+```  
+  
+```csharp  
+Response.RedirectToRoute("Product",  
+  (new RouteValueDictionary {productId="1", category="widgets"});  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma rota corresponde aos parâmetros de rotas especificados.</exception>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToRoutePermanent">
+      <MemberSignature Language="C#" Value="public void RedirectToRoutePermanent (object routeValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToRoutePermanent(object routeValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectToRoutePermanent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeValues" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="routeValues">Os valores de parâmetro de rota.</param>
+        <summary>Realiza um redirecionamento permanente de uma URL solicitada para uma nova URL usando valores de parâmetro de rota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para a conveniência de codificação. É equivalente a chamar o <xref:System.Web.HttpResponse.RedirectPermanent%28System.String%2CSystem.Boolean%29> método com o segundo parâmetro definido `false`.  
+  
+ Este método converte o objeto que é transmitido `routeValues` para um <xref:System.Web.Routing.RouteValueDictionary?displayProperty=nameWithType> objeto usando o <xref:System.Web.Routing.RouteValueDictionary.%23ctor%28System.Object%29?displayProperty=nameWithType> construtor. O <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A?displayProperty=nameWithType> método é chamado para determinar a URL.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 301.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar esse método para redirecionar para uma rota que tem parâmetros que são nomeados `productid` e `category`.  
+  
+```vb  
+Response.RedirectToRoutePermanent(  
+  New With {.productid = "1", .category = "widgets"})  
+```  
+  
+```csharp  
+Response.RedirectToRoutePermanent(  
+  new { productid = "1", category = "widgets" });  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma rota corresponde aos parâmetros de rotas especificados.</exception>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToRoutePermanent">
+      <MemberSignature Language="C#" Value="public void RedirectToRoutePermanent (string routeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToRoutePermanent(string routeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectToRoutePermanent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="routeName">O nome da rota.</param>
+        <summary>Executa um redirecionamento permanente de uma URL solicitada para uma nova URL, usando um nome de rota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para a conveniência de codificação. É equivalente a chamar o <xref:System.Web.HttpResponse.RedirectPermanent%28System.String%2CSystem.Boolean%29> método com o segundo parâmetro definido `false`.  
+  
+ Este método converte o nome da rota que é transmitido `routeName` para uma URL usando o <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A?displayProperty=nameWithType> método.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 301.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar esse método para redirecionar para uma rota denominada `Products`.  
+  
+```vb  
+Response.RedirectToRoutePermanent("Products")  
+```  
+  
+```csharp  
+Response.RedirectToRoutePermanent("Products");  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma rota corresponde aos parâmetros de rotas especificados.</exception>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToRoutePermanent">
+      <MemberSignature Language="C#" Value="public void RedirectToRoutePermanent (System.Web.Routing.RouteValueDictionary routeValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToRoutePermanent(class System.Web.Routing.RouteValueDictionary routeValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectToRoutePermanent(System.Web.Routing.RouteValueDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeValues" Type="System.Web.Routing.RouteValueDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="routeValues">Os valores de parâmetro de rota.</param>
+        <summary>Realiza um redirecionamento permanente de uma URL solicitada para uma nova URL usando valores de parâmetro de rota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para a conveniência de codificação. É equivalente a chamar o <xref:System.Web.HttpResponse.Redirect%28System.String%2CSystem.Boolean%29> método com o segundo parâmetro definido `false`.  
+  
+ Este método chama o <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A?displayProperty=nameWithType> método para determinar a URL.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 301.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar esse método para redirecionar para uma rota que tem parâmetros que são nomeados `productid` e `category`.  
+  
+```vb  
+Response.RedirectToRoutePermanent(  
+  new RouteValueDictionary {productId="1", category="widgets"})  
+```  
+  
+```csharp  
+Response.RedirectToRoutePermanent(  
+  new RouteValueDictionary {productId="1", category="widgets"});  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma rota corresponde aos parâmetros de rotas especificados.</exception>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToRoutePermanent">
+      <MemberSignature Language="C#" Value="public void RedirectToRoutePermanent (string routeName, object routeValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToRoutePermanent(string routeName, object routeValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectToRoutePermanent(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeName" Type="System.String" />
+        <Parameter Name="routeValues" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="routeName">O nome da rota.</param>
+        <param name="routeValues">Os valores de parâmetro de rota.</param>
+        <summary>Executa um redirecionamento permanente de uma URL solicitada para uma nova URL, usando os valores de parâmetro de rota e o nome da rota que corresponde à nova URL.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para a conveniência de codificação. É equivalente a chamar o <xref:System.Web.HttpResponse.RedirectPermanent%2A> método com o segundo parâmetro definido `false`.  
+  
+ Este método converte o objeto que é transmitido `routeValues` para um <xref:System.Web.Routing.RouteValueDictionary?displayProperty=nameWithType> objeto usando o <xref:System.Web.Routing.RouteValueDictionary.%23ctor%28System.Object%29?displayProperty=nameWithType> construtor. O <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A?displayProperty=nameWithType> método é chamado para determinar a URL.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 301.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar esse método para redirecionar para uma rota denominada `Product` e que tenha parâmetros que são nomeados `productid` e `category`.  
+  
+```vb  
+Response.RedirectToRoutePermanent("Product",  
+  New With {.productid = "1", .category = "widgets"})  
+```  
+  
+```csharp  
+Response.RedirectToRoutePermanent("Product",  
+  new { productid = "1", category = "widgets" });  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma rota corresponde aos parâmetros de rotas especificados.</exception>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectToRoutePermanent">
+      <MemberSignature Language="C#" Value="public void RedirectToRoutePermanent (string routeName, System.Web.Routing.RouteValueDictionary routeValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RedirectToRoutePermanent(string routeName, class System.Web.Routing.RouteValueDictionary routeValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RedirectToRoutePermanent(System.String,System.Web.Routing.RouteValueDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeName" Type="System.String" />
+        <Parameter Name="routeValues" Type="System.Web.Routing.RouteValueDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="routeName">O nome da rota.</param>
+        <param name="routeValues">Os valores de parâmetro de rota.</param>
+        <summary>Realiza um redirecionamento permanente de uma URL solicitada para uma nova URL usando valores de parâmetro de rota e um nome de rota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para a conveniência de codificação. É equivalente a chamar o <xref:System.Web.HttpResponse.Redirect%28System.String%2CSystem.Boolean%29> método com o segundo parâmetro definido `false`.  
+  
+ Este método chama o <xref:System.Web.Routing.RouteCollection.GetVirtualPath%2A?displayProperty=nameWithType> método para determinar a URL.  
+  
+ ASP.NET executa o redirecionamento, retornando um código de status HTTP 301.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar esse método para redirecionar para uma rota denominada `Product` e que tenha parâmetros que são nomeados `productid` e `category`.  
+  
+```vb  
+Response.RedirectToRoutePermanent("Product",  
+  new RouteValueDictionary {productId="1", category="widgets"})  
+```  
+  
+```csharp  
+Response.RedirectToRoutePermanent("Product",  
+  new RouteValueDictionary {productId="1", category="widgets"});  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma rota corresponde aos parâmetros de rotas especificados.</exception>
+        <exception cref="T:System.Web.HttpException">Houve uma tentativa de redirecionamento após o envio dos cabeçalhos HTTP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveOutputCacheItem">
+      <MemberSignature Language="C#" Value="public static void RemoveOutputCacheItem (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveOutputCacheItem(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RemoveOutputCacheItem(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho virtual absoluto para os itens que foram removidos do cache.</param>
+        <summary>Remove do cache todos os itens em cache que estão associados com o provedor de cache de saída padrão. Esse método é estático.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame este método para remover os itens de cache de saída que estão associados com o provedor de cache de saída padrão. Chamar o <xref:System.Web.HttpResponse.RemoveOutputCacheItem%2A> método para remover itens de cache de saída que estão associados a provedores personalizados de cache de saída que são especificados no arquivo de configuração de site da Web.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> não é um caminho virtual absoluto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveOutputCacheItem">
+      <MemberSignature Language="C#" Value="public static void RemoveOutputCacheItem (string path, string providerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveOutputCacheItem(string path, string providerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.RemoveOutputCacheItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="providerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho virtual absoluto para os itens que foram removidos do cache.</param>
+        <param name="providerName">O provedor usado para remover os artefatos de cache de saída associados ao caminho especificado.</param>
+        <summary>Usa o provedor de cache de saída especificado para remover todos os itens de cache de saída associados ao caminho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame este método para remover os itens de cache de saída que estão associados com os provedores personalizados de cache de saída que são especificados no arquivo de configuração de site da Web. Para remover itens de cache de saída que estão associados com o provedor de cache de saída padrão, chame o <xref:System.Web.HttpResponse.RemoveOutputCacheItem%28System.String%29> sobrecarga do método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é um caminho inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCookie">
+      <MemberSignature Language="C#" Value="public void SetCookie (System.Web.HttpCookie cookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCookie(class System.Web.HttpCookie cookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.SetCookie(System.Web.HttpCookie)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cookie" Type="System.Web.HttpCookie" />
+      </Parameters>
+      <Docs>
+        <param name="cookie">O cookie da coleção a ser atualizado.</param>
+        <summary>Porque o <b>HttpResponse.SetCookie</b> método destina-se somente para uso interno, você não deve chamá-lo em seu código. Em vez disso, você pode chamar o <b>HttpResponse.Cookies.Set</b> método, como mostra o exemplo a seguir.<br /> Atualiza um cookie existente na coleção de cookie.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir atualiza o valor de um cookie existente.  
+  
+ [!code-csharp[Classic HttpResponse.SetCookie Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.SetCookie Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.SetCookie Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.SetCookie Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Tentativa de definir o cookie após os cabeçalhos HTTP serem enviados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public string Status { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Status" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define a linha de <see langword="Status" /> que é retornada ao cliente.</summary>
+        <value>Definir o código de status faz com que uma cadeia de caracteres que descreve o status da saída HTTP seja retornada ao cliente. O valor padrão é 200 (OK).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpResponse.Status%2A>foi preterida em favor de <xref:System.Web.HttpResponse.StatusDescription%2A> e é fornecida somente para compatibilidade com versões anteriores do ASP. Com o ASP.NET, use <xref:System.Web.HttpResponse.StatusDescription%2A> em vez disso.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O status é definido como um código de status inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public int StatusCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StatusCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.StatusCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o código de status HTTP da saída retornada ao cliente.</summary>
+        <value>Um inteiro que representa o status da saída HTTP retornada ao cliente. O valor padrão é 200 (OK). Para obter uma lista dos códigos de status válidos, consulte [códigos de Status Http](http://go.microsoft.com/fwlink/?LinkId=73157).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir verifica o código de status do fluxo de saída. Se o código de status não for igual a 200, o código adicional é executado.  
+  
+ [!code-csharp[System.Web.HttpResponse.StatusCode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse.StatusCode/cs/default.aspx#1)]
+ [!code-vb[System.Web.HttpResponse.StatusCode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse.StatusCode/vb/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          <see cref="P:System.Web.HttpResponse.StatusCode" /> será definido depois que os cabeçalhos HTTP tiverem sido enviados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusDescription">
+      <MemberSignature Language="C#" Value="public string StatusDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StatusDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.StatusDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de status de HTTP da saída retornada ao cliente.</summary>
+        <value>Uma cadeia de caracteres que descreve o status da saída HTTP retornada ao cliente. O valor padrão é "OK". Para obter uma lista dos códigos de status válidos, consulte [códigos de Status Http](http://go.microsoft.com/fwlink/?LinkId=73157).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir verifica a cadeia de caracteres de status do fluxo de saída. Se o status não for igual a "Okey", código adicional será executado.  
+  
+ [!code-csharp[System.Web.HttpResponse.StatusDescription#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse.StatusDescription/cs/default.aspx#1)]
+ [!code-vb[System.Web.HttpResponse.StatusDescription#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse.StatusDescription/vb/default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="StatusDescription" /> será definido depois que os cabeçalhos HTTP tiverem sido enviados.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor selecionado tem um comprimento maior que 512.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubStatusCode">
+      <MemberSignature Language="C#" Value="public int SubStatusCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SubStatusCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.SubStatusCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que qualifica o código de status da resposta.</summary>
+        <value>Um valor inteiro que representa o código do substatus [!INCLUDE[iisver](~/includes/iisver-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse.SubStatusCode%2A> propriedade só tem suporte com o modo de pipeline integrado no [!INCLUDE[iisver](~/includes/iisver-md.md)] e pelo menos o .NET Framework versão 3.0. Quando você define o <xref:System.Web.HttpResponse.SubStatusCode%2A> propriedade, o status é registrado [!INCLUDE[iisver](~/includes/iisver-md.md)] se o rastreamento de solicitação com falha é configurado. Independentemente de se o rastreamento é configurado, o código nunca será enviado como parte da resposta final para a solicitação. Para obter mais informações, consulte [de solução de problemas de solicitações falhas usando rastreamento de solicitação falha no IIS 7.0](http://www.iis.net/default.aspx?tabid=2&subtabid=25&i=969&p=1).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o <xref:System.Web.HttpResponse.SubStatusCode%2A> propriedade em um manipulador de eventos para o <xref:System.Web.HttpApplication> instância do <xref:System.Web.HttpApplication.PostAuthenticateRequest> evento. Coloque o arquivo de código na pasta App_Code do seu aplicativo Web e configurar o arquivo Web. config para registrar o módulo. Para obter mais informações, consulte [passo a passo: Criando e registrando um módulo de HTTP personalizado](http://msdn.microsoft.com/library/7787d5be-40a4-4072-9075-c2b767428453).  
+  
+ [!code-csharp[System.Web.HttpResponse.SubStatusCode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse.SubStatusCode/CS/App_Code/TestModule.cs#1)]
+ [!code-vb[System.Web.HttpResponse.SubStatusCode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse.SubStatusCode/VB/App_Code/TestModule.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">A operação requer o modo de pipeline integrado no [!INCLUDE[iisver](~/includes/iisver-md.md)] e pelo menos o .NET Framework versão 3.0.</exception>
+        <exception cref="T:System.Web.HttpException">O código de status é definido depois que todos os cabeçalhos HTTP são enviados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsAsyncFlush">
+      <MemberSignature Language="C#" Value="public bool SupportsAsyncFlush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsAsyncFlush" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.SupportsAsyncFlush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a conexão dá suporte a operações assíncronas de liberação.</summary>
+        <value>
+          <see langword="true" />Se a conexão dá suporte a operações assíncronas de liberação; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna o valor da <xref:System.Web.HttpWorkerRequest.SupportsAsyncFlush%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressContent">
+      <MemberSignature Language="C#" Value="public bool SuppressContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressContent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.SuppressContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o conteúdo HTTP será enviado para o cliente.</summary>
+        <value>
+          <see langword="true" /> para suprimir a saída; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A exemplo a seguir verifica se o <xref:System.Web.HttpRequest.IsSecureConnection%2A> estiver definida como false. Se for, o <xref:System.Web.HttpResponse.SuppressContent%2A> propriedade é definida como true para interromper a resposta sendo enviada.  
+  
+ [!code-csharp[System.Web.HttpResponse_Sample5#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/CS/httpresponsesuppresscontentcs.aspx#3)]
+ [!code-vb[System.Web.HttpResponse_Sample5#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/VB/httpresponsesuppresscontentvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressDefaultCacheControlHeader">
+      <MemberSignature Language="C#" Value="public bool SuppressDefaultCacheControlHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressDefaultCacheControlHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.SuppressDefaultCacheControlHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>[Com suporte no .NET Framework 4.5.2 e versões posteriores]  
+  
+ Obtém ou define um valor que indica se deve ser suprimida padrão <c>controle de Cache: privada</c> cabeçalho de resposta HTTP atual.</summary>
+        <value>
+          <see langword="true" />Para suprimir o padrão <c>controle de Cache: privada</c> cabeçalho de resposta HTTP atual; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o ASP.NET envia um `Cache-Control: private` cabeçalho de resposta, a menos que uma política de cache explícito foi especificada para esta resposta. Esta propriedade permite suprimir esse cabeçalho de resposta padrão em uma base por solicitação. O cabeçalho ainda pode ser suprimido para todo o aplicativo definindo <xref:System.Web.Configuration.HttpRuntimeSection.SendCacheControlHeader%2A> na [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) ou [outputCache elemento para armazenar em cache (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
+  
+ Tenha cuidado ao suprimir o padrão `Cache-Control: private` cabeçalho, como proxies e outros intermediários podem tratar respostas sem esse cabeçalho como armazenável em cache por padrão. Esse tratamento pode causar o armazenamento em cache inadvertido de informações confidenciais. Consulte [RFC 2616, SEC 13.4](http://tools.ietf.org/html/rfc2616) para obter mais informações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressFormsAuthenticationRedirect">
+      <MemberSignature Language="C#" Value="public bool SuppressFormsAuthenticationRedirect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressFormsAuthenticationRedirect" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.SuppressFormsAuthenticationRedirect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o redirecionamento de autenticação de formulários para a página de logon deve ser suprimido.</summary>
+        <value>
+          <see langword="true" /> para suprimir o redirecionamento de autenticação; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a autenticação de formulários converte os códigos de status HTTP 401 para 302 para redirecionar para a página de logon. Isso não é apropriado para determinadas classes de erros, como quando a autenticação tiver êxito, mas a autorização falhar, ou quando a solicitação atual é uma solicitação de serviço web ou de AJAX. Esta propriedade fornece uma maneira para suprimir o comportamento de redirecionamento e enviar o código de status original para o cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmitFile">
+      <MemberSignature Language="C#" Value="public void TransmitFile (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TransmitFile(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.TransmitFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome do arquivo no qual a saída HTTP será gravada.</param>
+        <summary>Grava o arquivo especificado diretamente em um fluxo de saída de resposta HTTP, sem armazená-lo em buffer na memória.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="filename" /> é <see langword="null" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmitFile">
+      <MemberSignature Language="C#" Value="public void TransmitFile (string filename, long offset, long length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TransmitFile(string filename, int64 offset, int64 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.TransmitFile(System.String,System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="length" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome do arquivo no qual a saída HTTP será gravada.</param>
+        <param name="offset">A posição no arquivo para começar a gravar a saída HTTP.</param>
+        <param name="length">O número de bytes a serem transmitidos.</param>
+        <summary>Grava a parte especificada de um arquivo diretamente em um fluxo de saída de resposta HTTP, sem armazená-lo em buffer na memória.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você especificar 0 como o `offset` parâmetro e -1 como o `length` parâmetro, todo o arquivo é enviado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="offset" /> é menor que zero.  
+  
+ \- ou -  
+  
+ O parâmetro <paramref name="length" /> é menor que -1.  
+  
+ \- ou -  
+  
+ O parâmetro <paramref name="length" /> especifica um número de bytes maior do que o número de bytes que o arquivo contém menos o deslocamento.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Não há suporte para a solicitação de trabalho fora de processo.  
+  
+ \- ou -  
+  
+ A resposta não está usando um objeto <see cref="T:System.Web.HttpWriter" />.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="offset" /> é menor que zero ou maior que o tamanho do arquivo.  
+  
+ \- ou -  
+  
+ O parâmetro <paramref name="length" /> é menor que -1 ou maior ou igual ao valor do parâmetro <paramref name="offset" /> mais o tamanho do arquivo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TrySkipIisCustomErrors">
+      <MemberSignature Language="C#" Value="public bool TrySkipIisCustomErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrySkipIisCustomErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpResponse.TrySkipIisCustomErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se [!INCLUDE[iisver](~/includes/iisver-md.md)] erros personalizados estão desabilitados.</summary>
+        <value>
+          <see langword="true" /> para desabilitar erros personalizados do IIS; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpResponse.TrySkipIisCustomErrors%2A> propriedade é usada somente quando o aplicativo está hospedado no IIS 7.0. Quando executado no modo clássico no IIS 7.0 a <xref:System.Web.HttpResponse.TrySkipIisCustomErrors%2A> é o valor padrão da propriedade `true`. Quando executado no modo integrado, a <xref:System.Web.HttpResponse.TrySkipIisCustomErrors%2A> é o valor padrão da propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (char ch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(char ch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.Write(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ch" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="ch">O caractere a ser gravado no fluxo de saída HTTP.</param>
+        <summary>Grava um caractere em um fluxo de saída de resposta HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma série de constantes que são gravados em uma página ASP.NET usando o método Write. O código chama esta versão do método Write para gravar as constantes de caractere individual na página.  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse_Sample5#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/CS/httpresponsewritecharscs.aspx#4)]
+ [!code-aspx-vb[System.Web.HttpResponse_Sample5#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/VB/httpresponsewritecharsvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.Write(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> a ser gravado no fluxo de saída HTTP.</param>
+        <summary>Grava um <see cref="T:System.Object" /> em um fluxo de resposta HTTP.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres a ser gravada no fluxo de saída HTTP.</param>
+        <summary>Grava uma cadeia de caracteres em um fluxo de saída de resposta HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Páginas HTML geradas dinamicamente podem introduzir riscos de segurança se recebidas dos clientes da Web de entrada não é validada quando é recebido de um cliente ou quando ele é transmitido para um cliente. Script mal-intencionado é inserido na entrada enviada para um site da Web e posteriormente gravados novamente para um cliente poderá parecer ser provenientes de uma fonte confiável. Esse risco de segurança é conhecido como um ataque de script entre sites. Você sempre deve validar os dados recebidos de um cliente quando ele será transmitido do seu site para os navegadores cliente.  
+  
+ Além disso, sempre que você escrever como HTML quaisquer dados que foi recebidos como entrada, você deve codificá-lo usando uma técnica como <xref:System.Web.HttpServerUtility.HtmlEncode%2A> ou <xref:System.Web.HttpServerUtility.UrlEncode%2A> para impedir a execução do script mal-intencionado. Essa técnica é útil para dados que não foram validados quando ela foi recebida.  
+  
+ Quando você codifica ou filtra dados, você deve especificar um conjunto de caracteres para suas páginas da Web para que o filtro pode identificar e remover qualquer sequências de bytes que não pertencem ao conjunto (como sequências não alfanuméricos) e potencialmente podem ter o script mal-intencionado incorporado a eles.  
+  
+ Para obter mais informações sobre ataques de scripts entre sites, consulte o artigo Q252985, "Como para impedir Cross Site Scripting problemas de segurança" sobre o [da Base de dados de Conhecimento Microsoft](http://go.microsoft.com/fwlink/?LinkID=37115) site da Web.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o nome do cliente para o navegador do cliente. O <xref:System.Web.HttpServerUtility.HtmlEncode%2A> método remove qualquer script mal-intencionado e caracteres inválidos que foram enviados no `UserName` campo de entrada.  
+  
+ [!code-csharp[System.Web.HttpResponse.Write#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse.Write/CS/systemwebhttpresponsewrite.cs#1)]
+ [!code-vb[System.Web.HttpResponse.Write#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse.Write/vb/systemwebhttpresponsewrite.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.Write(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caracteres a ser gravada.</param>
+        <param name="index">A posição na matriz de caracteres em que a gravação começa.</param>
+        <param name="count">O número de caracteres para escrever, começando no <c>índice</c>.</param>
+        <summary>Grava uma matriz de caracteres em um fluxo de saída de resposta HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma série de constantes que são gravados em uma página ASP.NET usando o método Write. O código chama esta versão do método Write para gravar as constantes de caractere individual na página.  
+  
+ [!code-aspx-csharp[System.Web.HttpResponse_Sample5#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/CS/httpresponsewritecharscs.aspx#4)]
+ [!code-aspx-vb[System.Web.HttpResponse_Sample5#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpResponse_Sample5/VB/httpresponsewritecharsvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteFile">
+      <MemberSignature Language="C#" Value="public void WriteFile (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteFile(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.WriteFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome do arquivo no qual a saída HTTP será gravada.</param>
+        <summary>Grava o conteúdo do arquivo especificado diretamente em um fluxo de saída de resposta HTTP como um bloco de arquivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando esse método é usado com arquivos grandes, chamando o método pode lançar uma exceção. O tamanho do arquivo que pode ser usado com esse método depende da configuração de hardware do servidor Web. Para obter mais informações, consulte o artigo 812406, "PRB: WriteFile não é possível baixar um arquivo grande" sobre o [da Base de dados de Conhecimento Microsoft](http://go.microsoft.com/fwlink/?linkid=149903) site da Web.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir grava todo o conteúdo de um arquivo de texto denominado `Login.txt` (que pode conter controles de entrada e de texto HTML literal) diretamente para o fluxo de saída.  
+  
+ [!code-csharp[Classic HttpResponse.WriteFile Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.WriteFile Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.WriteFile Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.WriteFile Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="filename" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteFile">
+      <MemberSignature Language="C#" Value="public void WriteFile (string filename, bool readIntoMemory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteFile(string filename, bool readIntoMemory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.WriteFile(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="readIntoMemory" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome do arquivo para gravar em um bloco de memória.</param>
+        <param name="readIntoMemory">Indica se o arquivo será gravado em um bloco de memória.</param>
+        <summary>Grava o conteúdo do arquivo especificado diretamente em um fluxo de saída de resposta HTTP como um bloco de memória.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando esse método é usado com arquivos grandes, chamando o método pode lançar uma exceção. O tamanho do arquivo que pode ser usado com esse método depende da configuração de hardware do servidor Web. Para obter mais informações, consulte o artigo 812406, "PRB: WriteFile não é possível baixar um arquivo grande" sobre o [da Base de dados de Conhecimento Microsoft](http://go.microsoft.com/fwlink/?linkid=149903) site da Web.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir grava um arquivo de memória.  
+  
+ [!code-csharp[Classic HttpResponse.WriteFile1 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.WriteFile1 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.WriteFile1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.WriteFile1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="filename" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteFile">
+      <MemberSignature Language="C#" Value="public void WriteFile (IntPtr fileHandle, long offset, long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteFile(native int fileHandle, int64 offset, int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.WriteFile(System.IntPtr,System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileHandle" Type="System.IntPtr" />
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="fileHandle">O identificador de arquivo do arquivo a ser gravado no fluxo de saída HTTP.</param>
+        <param name="offset">A posição de byte no arquivo em que a gravação será iniciada.</param>
+        <param name="size">O número de bytes a serem gravados no fluxo de saída.</param>
+        <summary>Grava o arquivo especificado diretamente em um fluxo de saída de resposta HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando esse método é usado com arquivos grandes, chamando o método pode lançar uma exceção. O tamanho do arquivo que pode ser usado com esse método depende da configuração de hardware do servidor Web. Para obter mais informações, consulte o artigo 812406, "PRB: WriteFile não é possível baixar um arquivo grande" sobre o [da Base de dados de Conhecimento Microsoft](http://go.microsoft.com/fwlink/?linkid=149903) site da Web.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir grava todo o conteúdo de um arquivo de texto denominado `Login.txt` (que pode conter controles de entrada e de texto HTML literal) diretamente para o fluxo de saída.  
+  
+ [!code-csharp[Classic HttpResponse.WriteFile3 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.WriteFile3 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.WriteFile3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.WriteFile3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileHandler" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="offset" /> é menor que 0.  
+  
+ \- ou -  
+  
+ <paramref name="size" /> é maior que o tamanho do arquivo menos <paramref name="offset" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteFile">
+      <MemberSignature Language="C#" Value="public void WriteFile (string filename, long offset, long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteFile(string filename, int64 offset, int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.WriteFile(System.String,System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome do arquivo a ser gravado no fluxo de saída HTTP.</param>
+        <param name="offset">A posição de byte no arquivo em que a gravação será iniciada.</param>
+        <param name="size">O número de bytes a serem gravados no fluxo de saída.</param>
+        <summary>Grava o arquivo especificado diretamente em um fluxo de saída de resposta HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando esse método é usado com arquivos grandes, chamando o método pode lançar uma exceção. O tamanho do arquivo que pode ser usado com esse método depende da configuração de hardware do servidor Web. Para obter mais informações, consulte o artigo 812406, "PRB: WriteFile não é possível baixar um arquivo grande" sobre o [da Base de dados de Conhecimento Microsoft](http://go.microsoft.com/fwlink/?linkid=149903) site da Web.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir grava todo o conteúdo de um arquivo de texto denominado `Login.txt` (que pode conter texto literal e HTML controles de entrada) diretamente para o fluxo de saída.  
+  
+ [!code-csharp[Classic HttpResponse.WriteFile2 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpResponse.WriteFile2 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpResponse.WriteFile2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpResponse.WriteFile2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="offset" /> é menor que 0.  
+  
+ \- ou -  
+  
+ <paramref name="size" /> é maior que o tamanho do arquivo menos <paramref name="offset" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="filename" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteSubstitution">
+      <MemberSignature Language="C#" Value="public void WriteSubstitution (System.Web.HttpResponseSubstitutionCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteSubstitution(class System.Web.HttpResponseSubstitutionCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpResponse.WriteSubstitution(System.Web.HttpResponseSubstitutionCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Web.HttpResponseSubstitutionCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O método, o controle de usuário ou o objeto a ser substituído.</param>
+        <summary>Permite a inserção de blocos de substituição de resposta na resposta, o que permite a geração dinâmica de regiões de resposta especificadas para respostas de saída em cache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.HttpResponse.WriteSubstitution%2A> método de substituição post-cache em suas páginas de cache de saída. Passando um <xref:System.Web.HttpContext> objeto para um método de retorno de chamada com um determinado <xref:System.Web.HttpResponseSubstitutionCallback> assinatura, você pode substituir a saída em cache conteúdo em qualquer local determinado no cache da página. Para iniciar a substituição, chame o <xref:System.Web.HttpResponse.WriteSubstitution%2A> método, passando-o método de retorno de chamada, que deve ser thread-safe e pode ser um dos seguintes:  
+  
+-   Um método estático no controle de usuário ou a página de contêiner.  
+  
+-   Estático ou instância de método em outro objeto arbitrário.  
+  
+ Na primeira solicitação para a página, o <xref:System.Web.HttpResponse.WriteSubstitution%2A> chama o <xref:System.Web.HttpResponseSubstitutionCallback> delegado para produzir a saída. Em seguida, ele adiciona um buffer de substituição para a resposta, que mantém o delegado para chamar em solicitações futuras. Por fim, degrada do lado do cliente de armazenamento em cache de pública somente do servidor, garantindo futuras solicitações para a página novamente invocar o delegado ao não armazenar em cache no cliente.  
+  
+> [!NOTE]
+>  Não há suporte para a substituição post-cache para um controle de usuário em cache em que o cache de saída é aplicado no nível de controle de usuário. Isso também é conhecido como cache de fragmento. Para obter mais informações, consulte [cache de partes de uma página ASP.NET](http://msdn.microsoft.com/library/cdd8e523-7305-4685-a456-c5be1de1367e).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O destino do parâmetro <paramref name="callback" /> é do tipo <see cref="T:System.Web.UI.Control" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

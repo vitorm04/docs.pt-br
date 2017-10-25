@@ -1,0 +1,83 @@
+<Type Name="IFilterResolutionService" FullName="System.Web.UI.IFilterResolutionService">
+  <TypeSignature Language="C#" Value="public interface IFilterResolutionService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFilterResolutionService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IFilterResolutionService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface que os desenvolvedores podem usar para avaliar filtros de dispositivo por nome de designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os desenvolvedores de páginas e autores de controle não usam o <xref:System.Web.UI.IFilterResolutionService> interface. O <xref:System.Web.UI.IFilterResolutionService> interface é implementada por desenvolvedores de designer para fornecer serviços de filtro de dispositivo quando a análise e persistência de controles no ambiente de designer.  
+  
+ O <xref:System.Web.UI.IFilterResolutionService> interface é usada quando um desenvolvedor designer precisa dar suporte à edição de propriedades filtradas.  
+  
+ O <xref:System.Web.UI.IFilterResolutionService> interface é específica para o uso de controles de filtros de dispositivo em um ambiente de designer. Quando controles são analisados ou persistentes no ambiente de designer fora do contexto de uma solicitação do navegador, o <xref:System.Web.UI.IFilterResolutionService> interface fornece uma maneira de determinar se o controle atual é afetado por um filtro nomeado e se um filtro é parte de uma hierarquia de filtro de dispositivo específico.  
+  
+ A classe <xref:System.Web.Configuration.HttpCapabilitiesBase> implementa a interface <xref:System.Web.UI.IFilterResolutionService>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompareFilters">
+      <MemberSignature Language="C#" Value="public int CompareFilters (string filter1, string filter2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareFilters(string filter1, string filter2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IFilterResolutionService.CompareFilters(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter1" Type="System.String" />
+        <Parameter Name="filter2" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filter1">Um nome de filtro de dispositivo.</param>
+        <param name="filter2">Nome de um filtro de dispositivo</param>
+        <summary>Retorna um valor que indica que se existe uma relação pai-filho entre duas especificadas filtros de dispositivo.</summary>
+        <returns>1 se o filtro de dispositivo identificado por <paramref name="filter1" /> é um pai do filtro identificado por <paramref name="filter2" />, -1 se o filtro de dispositivo identificado por <paramref name="filter2" /> é um pai do filtro identificado por <paramref name="filter1" />e 0 se não houver nenhuma relação pai-filho entre os dois filtros.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateFilter">
+      <MemberSignature Language="C#" Value="public bool EvaluateFilter (string filterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EvaluateFilter(string filterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IFilterResolutionService.EvaluateFilter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filterName">O nome de um filtro de dispositivo.</param>
+        <summary>Retorna um valor que indica se o filtro especificado é um tipo de objeto de filtro atual.</summary>
+        <returns>
+          <see langword="true" />Se o filtro especificado é um tipo aplicável para o objeto de filtro atual. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IFilterResolutionService.EvaluateFilter%2A> método determina se um filtro de dispositivo nomeado é um tipo de filtro com suporte a <xref:System.Web.UI.IFilterResolutionService> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,125 @@
+<Type Name="RefreshInfo" FullName="System.ServiceModel.PeerResolvers.RefreshInfo">
+  <TypeSignature Language="C#" Value="public class RefreshInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RefreshInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.RefreshInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.MessageContract(IsWrapped=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define as informações para a atualização de uma entrada de registro por um serviço resolvedor de pares.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um serviço resolvedor de pares atualiza uma entrada, ele define uma expiração de novo na entrada. Uma instância do objeto deve ser fornecida para o serviço de resolvedor peer para cada nó par que deve ter sua validade atualizado; Caso contrário, a entrada está marcada como obsoleto e será excluída após um determinado intervalo de limpeza.  
+  
+ As instâncias dessa classe são usadas principalmente para passar informações para o serviço de resolução de um cliente de rede desse serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RefreshInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RefreshInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.ServiceModel.PeerResolvers.RefreshInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RefreshInfo (string meshId, Guid regId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string meshId, valuetype System.Guid regId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RefreshInfo.#ctor(System.String,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="meshId" Type="System.String" />
+        <Parameter Name="regId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="meshId">Um <see cref="T:System.String" /> que identifica a malha na qual o nó par participa.</param>
+        <param name="regId">Um <see cref="T:System.Guid" /> que identifica exclusivamente a entrada de registro para o nó par.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.PeerResolvers.RefreshInfo" /> classe fornecido com o ID de malha e ID de registro exclusivo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RefreshInfo.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o corpo da mensagem que contém uma instância serializada desse tipo é formado corretamente.</summary>
+        <returns>True se o corpo da mensagem de informações de atualização está formado corretamente pelo remetente (o cliente do serviço); False se não for.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeshId">
+      <MemberSignature Language="C#" Value="public string MeshId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MeshId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.RefreshInfo.MeshId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID de malha da entrada do registro para atualizar.</summary>
+        <value>
+          <see cref="T:System.String" />que contém a ID de malha da entrada do registro que será atualizada na tabela de pesquisa de registro par resolvedor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistrationId">
+      <MemberSignature Language="C#" Value="public Guid RegistrationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid RegistrationId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.RefreshInfo.RegistrationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID exclusiva do registro da entrada de registro para atualizar.</summary>
+        <value>
+          <see cref="T:System.Guid" />que contém a ID de registro do nó par cuja entrada será atualizada na tabela de pesquisa de registro par resolvedor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

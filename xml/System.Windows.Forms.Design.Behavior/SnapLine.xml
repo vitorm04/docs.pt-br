@@ -1,0 +1,426 @@
+<Type Name="SnapLine" FullName="System.Windows.Forms.Design.Behavior.SnapLine">
+  <TypeSignature Language="C#" Value="public sealed class SnapLine" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SnapLine extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.Behavior.SnapLine" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os segmentos de linha horizontal e vertical que são criados dinamicamente na interface do usuário (UI) para auxiliar no layout de controles em um contêiner de tempo de design. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir lista os modos comuns que oferecem suporte a ferramentas de design visual para ajudá-lo com o posicionamento e dimensionando controles em uma superfície de design.  
+  
+|Modo|Descrição|  
+|----------|-----------------|  
+|Forma livre|Permite que você livremente dispor controles.|  
+|Grade|Exibe uma grade sobreposta estática que auxilia no layout de controles.|  
+|Guia de alinhamento|Exibe linhas de guia que ajudam você a dispor os controles do contêiner relação umas às outras. Guias de alinhamento provenientes de controles e seus contêineres.|  
+  
+ O <xref:System.Windows.Forms.Design.Behavior.SnapLine> suporte ao modo de Snapline de ajuda de classe e tipos relacionados.  
+  
+ Guias de alinhamento são gerados dinamicamente e automaticamente como um controle de borda move perto de outro controle ou próximo os limites de seu contêiner. Isso pode ocorrer quando um controle é adicionado na caixa de ferramentas, ou movido ou redimensionado por operações de mouse ou comandos de teclado. Controles normalmente têm horizontais e verticais guias de alinhamento definidos; para controles retangulares, esses geralmente se estendem de todas as quatro bordas.  
+  
+ O <xref:System.Windows.Forms.Design.Behavior.SnapLine> classe usa apenas algumas propriedades para descrever cada snapline, conforme mostrado na tabela a seguir.  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Windows.Forms.Design.Behavior.SnapLine.SnapLineType%2A>|Especifica o local e a direção da linha em relação ao seu controle associado. Normalmente, somente guias de alinhamento de tipos semelhantes de autom-alinhará uns aos outros.|  
+|<xref:System.Windows.Forms.Design.Behavior.SnapLine.Offset%2A>|Especifica a distância em pixels da origem, que é o canto superior esquerdo do controle, para onde a snapline começa.|  
+|<xref:System.Windows.Forms.Design.Behavior.SnapLine.Priority%2A>|Especifica a importância relativa do guia de alinhamento. Durante a qualquer ponto de decisão de layout fornecido, somente as linhas de ajuste que estão ativas e tem a prioridade mais alta são exibidas.|  
+|<xref:System.Windows.Forms.Design.Behavior.SnapLine.Filter%2A>|Define as categorias personalizadas de guias de alinhamento. Isso é uma cadeia de caracteres opcional.|  
+|<xref:System.Windows.Forms.Design.Behavior.SnapLine.IsHorizontal%2A> e <xref:System.Windows.Forms.Design.Behavior.SnapLine.IsVertical%2A>|Indica se um snapline tem orientação horizontal ou vertical, respectivamente.|  
+  
+ O <xref:System.Windows.Forms.Design.ControlDesigner> classe armazena guias de alinhamento para seu tipo de controle correspondente no <xref:System.Windows.Forms.Design.ControlDesigner.SnapLines%2A> propriedade. Esse tratamento de classe base de guias de alinhamento será suficiente para a maioria dos controles, como ele define o <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Left>, <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Right>, <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Top>, e <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Bottom> guias de alinhamento, que são alinhados ao longo das bordas do controle. Quando você estiver desenvolvendo um controle personalizado, se a organização padrão não é suficiente, substituir o <xref:System.Windows.Forms.Design.ControlDesigner.SnapLines%2A> propriedade da classe derivada de <xref:System.Windows.Forms.Design.ControlDesigner>. Por exemplo, você talvez queira alinhar os guias de alinhamento horizontais dos controles com base em texto, como rótulos, com a parte superior e linhas de base do texto (em vez de bordas superior e inferior do controle).  
+  
+ O <xref:System.Windows.Forms.Design.Behavior.SnapLine.SnapLineType%2A> classe não pode ser derivada de.  
+  
+ Há suporte abrangente para este recurso no Visual Studio, consulte [passo a passo: Organizando controles no Windows Forms usando o ajuste](~/docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve criar apenas explicitamente guias de alinhamento para substituir ou complementar o comportamento de snapline padrão oferecido pelo designer visual. Para criar um guia de alinhamento, você deve um guia de alinhamento da instância e, em seguida, adicioná-lo para o <xref:System.Windows.Forms.Design.ControlDesigner.SnapLines%2A> propriedade o <xref:System.Windows.Forms.Design.ControlDesigner> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SnapLine (System.Windows.Forms.Design.Behavior.SnapLineType type, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.Design.Behavior.SnapLineType type, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.#ctor(System.Windows.Forms.Design.Behavior.SnapLineType,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.Design.Behavior.SnapLineType" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Windows.Forms.Design.Behavior.SnapLineType" /> para criar. Descreve a posição relativa e a orientação do guia de alinhamento.</param>
+        <param name="offset">A posição da guia de alinhamento, em pixels, relativa à origem da parte superior esquerda do controle proprietário.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> classe usando o tipo de guia de alinhamento especificado e o deslocamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.Windows.Forms.Design.Behavior.SnapLine.Filter%2A> propriedade `null` e o <xref:System.Windows.Forms.Design.Behavior.SnapLine.Priority%2A> propriedade <xref:System.Windows.Forms.Design.Behavior.SnapLinePriority.Low>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SnapLine (System.Windows.Forms.Design.Behavior.SnapLineType type, int offset, string filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.Design.Behavior.SnapLineType type, int32 offset, string filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.#ctor(System.Windows.Forms.Design.Behavior.SnapLineType,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.Design.Behavior.SnapLineType" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="filter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Windows.Forms.Design.Behavior.SnapLineType" /> para criar. Descreve a posição relativa e a orientação do guia de alinhamento.</param>
+        <param name="offset">A posição da guia de alinhamento, em pixels, relativa à origem da parte superior esquerda do controle proprietário.</param>
+        <param name="filter">Um <see cref="T:System.String" /> usado para especificar uma categoria definida pelo programador de guias de alinhamento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> classe usando o tipo de guia de alinhamento especificado, o deslocamento e o nome do filtro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.Windows.Forms.Design.Behavior.SnapLine.Priority%2A> propriedade <xref:System.Windows.Forms.Design.Behavior.SnapLinePriority.Low>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SnapLine (System.Windows.Forms.Design.Behavior.SnapLineType type, int offset, System.Windows.Forms.Design.Behavior.SnapLinePriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.Design.Behavior.SnapLineType type, int32 offset, valuetype System.Windows.Forms.Design.Behavior.SnapLinePriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.#ctor(System.Windows.Forms.Design.Behavior.SnapLineType,System.Int32,System.Windows.Forms.Design.Behavior.SnapLinePriority)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.Design.Behavior.SnapLineType" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="priority" Type="System.Windows.Forms.Design.Behavior.SnapLinePriority" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Windows.Forms.Design.Behavior.SnapLineType" /> para criar. Descreve a posição relativa e a orientação do guia de alinhamento.</param>
+        <param name="offset">A posição da guia de alinhamento, em pixels, relativa à origem da parte superior esquerda do controle proprietário.</param>
+        <param name="priority">O <see cref="T:System.Windows.Forms.Design.Behavior.SnapLinePriority" /> do guia de alinhamento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> classe usando o tipo de guia de alinhamento especificado, o deslocamento e a prioridade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.Windows.Forms.Design.Behavior.SnapLine.Filter%2A> propriedade `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SnapLine (System.Windows.Forms.Design.Behavior.SnapLineType type, int offset, string filter, System.Windows.Forms.Design.Behavior.SnapLinePriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.Design.Behavior.SnapLineType type, int32 offset, string filter, valuetype System.Windows.Forms.Design.Behavior.SnapLinePriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.#ctor(System.Windows.Forms.Design.Behavior.SnapLineType,System.Int32,System.String,System.Windows.Forms.Design.Behavior.SnapLinePriority)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.Design.Behavior.SnapLineType" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="priority" Type="System.Windows.Forms.Design.Behavior.SnapLinePriority" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Windows.Forms.Design.Behavior.SnapLineType" /> para criar. Descreve a posição relativa e a orientação do guia de alinhamento.</param>
+        <param name="offset">A posição da guia de alinhamento, em pixels, relativa à origem da parte superior esquerda do controle proprietário.</param>
+        <param name="filter">Um <see cref="T:System.String" /> usado para especificar uma categoria definida pelo programador de guias de alinhamento.</param>
+        <param name="priority">O <see cref="T:System.Windows.Forms.Design.Behavior.SnapLinePriority" /> do guia de alinhamento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> classe usando o tipo de snapline especificado, o deslocamento, o nome do filtro e a prioridade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor define todas as propriedades de um guia de alinhamento fornecido pelo programador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdjustOffset">
+      <MemberSignature Language="C#" Value="public void AdjustOffset (int adjustment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AdjustOffset(int32 adjustment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.AdjustOffset(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adjustment" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="adjustment">O número de pixels para alterar o deslocamento snapline por.</param>
+        <summary>Ajusta o <see cref="P:System.Windows.Forms.Design.Behavior.SnapLine.Offset" /> propriedade o guia de alinhamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O deslocamento de um guia de alinhamento é a distância, em pixels, que a snapline está localizada na origem da parte superior esquerda do controle associado. Embora o deslocamento pode ser definido como qualquer valor inteiro, normalmente as linhas de ajuste reter as relações espaciais indicadas por seus <xref:System.Windows.Forms.Design.Behavior.SnapLine.SnapLineType%2A> valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a categoria de filtro definido pelo programador associada com este guia de alinhamento.</summary>
+        <value>Um <see cref="T:System.String" /> que define a categoria de filtro. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.SnapLine.Filter%2A> propriedade é usada para definir as categorias personalizadas de guias de alinhamento. Somente guias de alinhamento com o mesmo nome de filtro são capazes de ajustar-se entre si. Essa propriedade pode ser usada em designers de controle personalizado para expor categorias diferentes de acordo com o estado do controle ou o tipo de operação que está sendo executada de guias de alinhamento. Por exemplo, controles round podem oferecem um snapline personalizada com o valor do filtro do "Centro".  
+  
+ Essa propriedade é inicializada durante a construção e não pode ser alterada posteriormente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHorizontal">
+      <MemberSignature Language="C#" Value="public bool IsHorizontal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHorizontal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.IsHorizontal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o guia de alinhamento tem uma orientação horizontal.</summary>
+        <value>
+          <see langword="true" />Se o guia de alinhamento horizontal; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os seguintes tipos de snapline estão horizontais: <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Top>, <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Bottom>, <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Horizontal>, e <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Baseline>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVertical">
+      <MemberSignature Language="C#" Value="public bool IsVertical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVertical" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.IsVertical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o guia de alinhamento tem uma orientação vertical.</summary>
+        <value>
+          <see langword="true" />Se o guia de alinhamento vertical; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os seguintes tipos de snapline estão verticais: <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Left>, <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Right>, e <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Vertical>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public int Offset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pixels que o guia de alinhamento é deslocado em relação à origem do controle associado.</summary>
+        <value>O deslocamento, em pixels, do guia de alinhamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A origem de um controle é o ponto superior esquerdo do controle. Um desvio único pode descrever a posição de um guia de alinhamento, como guias de alinhamento verticais podem ter apenas um deslocamento do eixo x diferente de zero, enquanto os guias de alinhamento horizontais só podem ter um eixo y diferente de zero deslocamento.  
+  
+ O <xref:System.Windows.Forms.Design.Behavior.SnapLine.Offset%2A> propriedade é inicializada em tempo de construção, mas pode ser alterado posteriormente com o <xref:System.Windows.Forms.Design.Behavior.SnapLine.AdjustOffset%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.Behavior.SnapLinePriority Priority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Design.Behavior.SnapLinePriority Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.SnapLinePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a importância relativa do guia de alinhamento.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Design.Behavior.SnapLinePriority" /> que representa a categoria de prioridade de uma guia de alinhamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.SnapLine.Priority%2A> propriedade estabelece categorias de importância para as linhas de ajuste associadas ao controle.  
+  
+ O Designer de formulários do Windows usa essa propriedade para determinar quais linhas de ajuste para exibir durante a adição de um controle, redimensionar ou mover a operação. Para obter mais informações, consulte a enumeração <xref:System.Windows.Forms.Design.Behavior.SnapLinePriority>.  
+  
+ Essa propriedade é inicializada durante a construção e não pode ser alterada posteriormente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSnap">
+      <MemberSignature Language="C#" Value="public static bool ShouldSnap (System.Windows.Forms.Design.Behavior.SnapLine line1, System.Windows.Forms.Design.Behavior.SnapLine line2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ShouldSnap(class System.Windows.Forms.Design.Behavior.SnapLine line1, class System.Windows.Forms.Design.Behavior.SnapLine line2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.ShouldSnap(System.Windows.Forms.Design.Behavior.SnapLine,System.Windows.Forms.Design.Behavior.SnapLine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="line1" Type="System.Windows.Forms.Design.Behavior.SnapLine" />
+        <Parameter Name="line2" Type="System.Windows.Forms.Design.Behavior.SnapLine" />
+      </Parameters>
+      <Docs>
+        <param name="line1">O <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> especificado.</param>
+        <param name="line2">O <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> ao qual especificado <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> deve ajustar.</param>
+        <summary>Retorna um valor que indica se o especificado <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" /> devem ser ajustados para outro <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" />.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="line1" /> devem ser ajustados para <paramref name="line2" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SnapLineType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.Behavior.SnapLineType SnapLineType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Design.Behavior.SnapLineType SnapLineType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.SnapLine.SnapLineType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.SnapLineType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de guia de alinhamento, que indica o local geral e a orientação.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Design.Behavior.SnapLineType" /> que representa a orientação e o local geral, em relação às bordas de controle, de um guia de alinhamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usam designers visuais de <xref:System.Windows.Forms.Design.Behavior.SnapLine.SnapLineType%2A> propriedade para direcionar as operações de alinhamento de snap. Normalmente apenas linhas de ajuste são da mesma forma orientadas podem encaixar uns aos outros. Por exemplo, duas linhas de ajuste do tipo <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Horizontal> podem ser ajustadas em conjunto, mas um <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Horizontal> e um <xref:System.Windows.Forms.Design.Behavior.SnapLineType.Vertical> snapline não é possível.  
+  
+ Essa propriedade é inicializada durante a construção e não pode ser alterada posteriormente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.SnapLine.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres da snapline atual.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o atual <see cref="T:System.Windows.Forms.Design.Behavior.SnapLine" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna uma cadeia de caracteres que contém detalhes sobre o tipo, deslocamento, prioridade e valores de filtro do guia de alinhamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

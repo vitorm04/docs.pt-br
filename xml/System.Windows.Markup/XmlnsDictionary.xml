@@ -1,0 +1,820 @@
+<Type Name="XmlnsDictionary" FullName="System.Windows.Markup.XmlnsDictionary">
+  <TypeSignature Language="C#" Value="public class XmlnsDictionary : System.Collections.IDictionary, System.Xaml.IXamlNamespaceResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlnsDictionary extends System.Object implements class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable, class System.Xaml.IXamlNamespaceResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XmlnsDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Xaml.IXamlNamespaceResolver</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um dicionário que contém mapeamentos de xmlns para XAML namespaces no WPF.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.XmlnsDictionary>prefixos de namespace XAML é mapeado para o URI do namespace XAML completo. Para uso em aplicativos em XAML e namespaces XAML em geral, o URI geralmente não é um URI de estilo de esquema que inclui `http://`. Em vez disso, é um mapeamento definido pelo usuário para um namespace CLR e o assembly. Assembly contém o backup tipos está sendo referenciada. Para obter detalhes, consulte [Namespaces XAML e o mapeamento de Namespace para WPF XAML](~/docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+  
+ O <xref:System.Windows.Markup.XmlnsDictionary> adiciona o conceito de escopo para um namespace XAML. Um padrão <xref:System.Collections.IDictionary> podem conter chaves do prefixo e valores URI de namespace XML. O conceito de escopo em <xref:System.Windows.Markup.XmlnsDictionary> comparável ao conceito XML que pode ser redefinido um prefixo. Nesse caso, a redefinição só se aplica no nível ou abaixo em uma exibição do DOM do XML (se aplica a definição anterior no nível mais alto no DOM). O conceito de escopo é principalmente abstraído no <xref:System.Windows.Markup.XmlnsDictionary> API, por exemplo, você pode chamar APIs como <xref:System.Windows.Markup.XmlnsDictionary.LookupNamespace%2A> sem se preocupar sobre o escopo. No entanto, <xref:System.Windows.Markup.XmlnsDictionary> expor <xref:System.Windows.Markup.XmlnsDictionary.PushScope%2A> e <xref:System.Windows.Markup.XmlnsDictionary.PopScope%2A> para que um personalizado <xref:System.Windows.Markup.ParserContext> implementação que altera o escopo pode sincronizar com o escopo para o <xref:System.Windows.Markup.XmlnsDictionary>.  
+  
+<a name="xamlTextUsage_XmlnsDictionary"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlnsDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlnsDictionary (System.Windows.Markup.XmlnsDictionary xmlnsDictionary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Markup.XmlnsDictionary xmlnsDictionary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.#ctor(System.Windows.Markup.XmlnsDictionary)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlnsDictionary" Type="System.Windows.Markup.XmlnsDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="xmlnsDictionary">O dicionário no qual basear o novo <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.XmlnsDictionary" /> classe usando o dicionário especificado como a origem de cópia.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os valores da fonte de `xmlnsDictionary` incluindo as entradas de índice são copiados exceto <xref:System.Windows.Markup.XmlnsDictionary.Sealed%2A>, que está definido como `false` na nova instância.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlnsDictionary" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (object prefix, object xmlNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(object prefix, object xmlNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.Object" />
+        <Parameter Name="xmlNamespace" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">O prefixo do namespace XAML deve ser adicionado.</param>
+        <param name="xmlNamespace">O URI o prefixo do namespace XAML mapeia para.</param>
+        <summary>Adiciona um par de prefixo URI a este <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de inicial-verificação de tipo, essa implementação encaminha para o método de tipo seguro <xref:System.Windows.Markup.XmlnsDictionary.Add%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="prefix" />ou <paramref name="xmlNamespace" /> não é uma cadeia de caracteres.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="prefix" /> ou <paramref name="xmlNamespace" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Markup.XmlnsDictionary" /> está lacrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string prefix, string xmlNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string prefix, string xmlNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+        <Parameter Name="xmlNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">O prefixo desse namespace de XML.</param>
+        <param name="xmlNamespace">O URI o prefixo do namespace XML mapeia para.</param>
+        <summary>Adiciona um par de prefixo URI a este <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="prefix" /> ou <paramref name="xmlNamespace" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Markup.XmlnsDictionary" /> está lacrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as entradas neste <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Markup.XmlnsDictionary" /> está lacrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave de prefixo para pesquisar.</param>
+        <summary>Retorna um valor que indica se a chave de prefixo especificado está na <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <returns>
+          <see langword="true" />Se a chave solicitada prefixo está no dicionário. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz para copiar os dados da tabela.</param>
+        <param name="index">O índice baseado em zero na matriz de destino onde a cópia inicia.</param>
+        <summary>Copia as entradas na <see cref="T:System.Windows.Markup.XmlnsDictionary" /> na matriz especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Collections.DictionaryEntry[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(valuetype System.Collections.DictionaryEntry[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.CopyTo(System.Collections.DictionaryEntry[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.DictionaryEntry[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz para copiar os dados da tabela.</param>
+        <param name="index">O índice baseado em zero na matriz de destino onde a cópia inicia.</param>
+        <summary>Copia as entradas na <see cref="T:System.Windows.Markup.XmlnsDictionary" /> especificado <see cref="T:System.Collections.DictionaryEntry" /> matriz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDictionary.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens de <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <value>O número de itens no <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultNamespace">
+      <MemberSignature Language="C#" Value="public string DefaultNamespace ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string DefaultNamespace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.DefaultNamespace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Procura o namespace XAML que corresponde ao namespace XAML padrão.</summary>
+        <returns>O namespace que corresponde ao namespace XML padrão se um existe; Caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ De uma perspectiva de mapeamento, o namespace XML padrão é o namespace XML que é mapeado para a cadeia de caracteres vazia. WPF XAML análise para fins de aplicativo, a ação padrão namespace identificador é [!INCLUDE[TLA#tla_wpfxmlnsv1](~/includes/tlasharptla-wpfxmlnsv1-md.md)], mas esse valor não é explicitamente retornado por essa API.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDictionaryEnumerator">
+      <MemberSignature Language="C#" Value="protected System.Collections.IDictionaryEnumerator GetDictionaryEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.IDictionaryEnumerator GetDictionaryEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.GetDictionaryEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um dicionário enumerador que itera por meio <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <returns>O enumerador de dicionário para este dicionário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa API existe para que as classes derivadas podem obter um enumerador onde o conceito de escopo para os namespaces XML será relatado como uma dimensão do enumerador dicionário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="protected System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <returns>O enumerador para este dicionário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa API existe para que as classes derivadas podem obter um enumerador. Este enumerador fornece enumeração em relação a <xref:System.Windows.Markup.XmlnsDictionary.Keys%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamespace">
+      <MemberSignature Language="C#" Value="public string GetNamespace (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetNamespace(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.GetNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">O prefixo para recuperar o namespace XAML.</param>
+        <summary>Recupera um namespace XAML para a cadeia de caracteres de prefixo fornecido.</summary>
+        <returns>O namespace XAML solicitado URI.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamespacePrefixes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Xaml.NamespaceDeclaration&gt; GetNamespacePrefixes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Xaml.NamespaceDeclaration&gt; GetNamespacePrefixes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.GetNamespacePrefixes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Windows.Markup.XmlnsDictionary/&lt;GetNamespacePrefixes&gt;d__15))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Xaml.NamespaceDeclaration&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna todas as possíveis de XAML de prefixo mapeamentos de namespace (<see cref="T:System.Xaml.NamespaceDeclaration" /> valores) que estão disponíveis no contexto de esquema ativa.</summary>
+        <returns>Um conjunto enumerável de <see cref="T:System.Xaml.NamespaceDeclaration" /> valores. Para obter as cadeias de caracteres de prefixo, especificamente, obtenha o <see cref="P:System.Xaml.NamespaceDeclaration.Prefix" /> valor de cada valor retornado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDictionary.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o tamanho do <see cref="T:System.Windows.Markup.XmlnsDictionary" /> é fixo.</summary>
+        <value>
+          <see langword="true" />Se o tamanho é fixo; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação sempre retorna `false`, mesmo se <xref:System.Windows.Markup.XmlnsDictionary.IsReadOnly%2A> é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDictionary.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Markup.XmlnsDictionary" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o dicionário for somente leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Markup.XmlnsDictionary> é somente leitura depois <xref:System.Windows.Markup.XmlnsDictionary.Seal%2A> é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDictionary.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso a este <see cref="T:System.Windows.Markup.XmlnsDictionary" /> é segura para thread.</summary>
+        <value>
+          <see langword="true" />Se o acesso a esse dicionário é thread-safe; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[object prefix] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDictionary.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">O prefixo do qual obter ou definir o URI de namespace XML associado.</param>
+        <summary>Obtém ou define o namespace XAML que URI associado com o prefixo especificado.</summary>
+        <value>O namespace XAML correspondente URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Object"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="prefix" />não é uma cadeia de caracteres  
+  
+ -ou-  
+  
+ Para definir o valor não é uma cadeia de caracteres.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="prefix" /> é <see langword="null" />  
+  
+ -ou-  
+  
+ O valor para definir <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string prefix] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDictionary.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">O prefixo do qual obter ou definir o namespace associado.</param>
+        <summary>Obtém ou define o namespace XAML que URI associado com o prefixo especificado.</summary>
+        <value>O namespace XML correspondente URI.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="prefix" /> é <see langword="null" />  
+  
+ -ou-  
+  
+ O valor para definir <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDictionary.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de todas as chaves no <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <value>A coleção de todas as chaves no dicionário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Keys"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupNamespace">
+      <MemberSignature Language="C#" Value="public string LookupNamespace (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string LookupNamespace(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.LookupNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">O prefixo do namespace XAML para pesquisar.</param>
+        <summary>Retorna o URI correspondente do namespace XAML para o prefixo de namespace XML especificado.</summary>
+        <returns>URI correspondente para o prefixo especificado se ele existe no namespace XAML <see cref="T:System.Windows.Markup.XmlnsDictionary" />; caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="prefix" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupPrefix">
+      <MemberSignature Language="C#" Value="public string LookupPrefix (string xmlNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string LookupPrefix(string xmlNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.LookupPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNamespace">O URI para pesquisar do namespace XAML.</param>
+        <summary>Retorna o prefixo correspondente para o URI do namespace XAML especificado.</summary>
+        <returns>O prefixo XML que corresponde ao namespace fornecido; Caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você solicitar o prefixo de namespace padrão, uma cadeia de caracteres vazia é retornada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlNamespace" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PopScope">
+      <MemberSignature Language="C#" Value="public void PopScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PopScope() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.PopScope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>POPs do escopo de <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método somente se você estiver implementando um <xref:System.Windows.Markup.ParserContext> que também funciona em um nível de escopo do elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Markup.XmlnsDictionary" /> está lacrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PushScope">
+      <MemberSignature Language="C#" Value="public void PushScope ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PushScope() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.PushScope" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Envia o escopo de <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método somente se você estiver implementando um <xref:System.Windows.Markup.ParserContext> que também funciona em um nível de escopo do elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Markup.XmlnsDictionary" /> está lacrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">A chave de prefixo a ser removido.</param>
+        <summary>Remove o item com a chave de prefixo especificado a partir de <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação encaminha para o método de tipo seguro <xref:System.Windows.Markup.XmlnsDictionary.Remove%28System.String%29?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Markup.XmlnsDictionary" /> está lacrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">A chave de prefixo a ser removido.</param>
+        <summary>Remove o item com a chave de prefixo especificado a partir de <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Markup.XmlnsDictionary" /> está lacrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Seal">
+      <MemberSignature Language="C#" Value="public void Seal ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Seal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.Seal" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Bloqueia o dicionário de forma que ele não pode ser alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso deve ser feito antes de definir o <xref:System.Windows.Markup.XmlnsDictionary> para uma propriedade (normalmente em um <xref:System.Windows.Markup.ParserContext>). Tentando modificar o dicionário após o <xref:System.Windows.Markup.XmlnsDictionary> está lacrado lança um <xref:System.InvalidOperationException>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sealed">
+      <MemberSignature Language="C#" Value="public bool Sealed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Sealed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDictionary.Sealed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Markup.XmlnsDictionary" /> está lacrado.</summary>
+        <value>
+          <see langword="true" />Se o dicionário for fechado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é um alias para <xref:System.Windows.Markup.XmlnsDictionary.IsReadOnly%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDictionary.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IDictionaryEnumerator IDictionary.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator System.Collections.IDictionary.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.System#Collections#IDictionary#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IDictionary.GetEnumerator" />.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.IDictionaryEnumerator" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDictionary.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IEnumerable.GetEnumerator" />.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDictionary.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de todos os valores de <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</summary>
+        <value>Uma coleção de todos os valores de <see cref="T:System.Windows.Markup.XmlnsDictionary" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

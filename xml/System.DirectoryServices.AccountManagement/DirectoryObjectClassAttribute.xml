@@ -1,0 +1,82 @@
+<Type Name="DirectoryObjectClassAttribute" FullName="System.DirectoryServices.AccountManagement.DirectoryObjectClassAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DirectoryObjectClassAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DirectoryObjectClassAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.AccountManagement.DirectoryObjectClassAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o objeto de esquema usado para criar um objeto desse tipo no diretório. Esse atributo é necessário em extensões de entidade de segurança e pode ser definido apenas em classes.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryObjectClassAttribute (string objectClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string objectClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.DirectoryObjectClassAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="objectClass" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="objectClass">A cadeia de caracteres que contém o valor de classe de objeto. A propriedade <see cref="P:System.DirectoryServices.AccountManagement.DirectoryObjectClassAttribute.ObjectClass" /> é inicializada com esse valor. A cadeia de caracteres de classe de objeto representa o atributo de classe para o diretório de aplicativos e diretórios do domínio.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.AccountManagement.DirectoryObjectClassAttribute" /> classe com o valor de classe do objeto especificado. O objeto criado no diretório será criado com esse tipo de classe de objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.DirectoryServices.AccountManagement.ContextType&gt; Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DirectoryServices.AccountManagement.ContextType&gt; Context" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.DirectoryObjectClassAttribute.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DirectoryServices.AccountManagement.ContextType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não está implementada e sempre retorna null.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.AccountManagement.ContextType" /> valor de enumeração que especifica o tipo de armazenamento ao qual se aplica o atributo, ou nulo se nenhum contexto for definido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectClass">
+      <MemberSignature Language="C#" Value="public string ObjectClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ObjectClass" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.DirectoryObjectClassAttribute.ObjectClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o valor de classe de objeto para a classe estendida.</summary>
+        <value>O valor de classe de objeto para a classe estendida.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

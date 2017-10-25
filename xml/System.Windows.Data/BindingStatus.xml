@@ -1,0 +1,156 @@
+<Type Name="BindingStatus" FullName="System.Windows.Data.BindingStatus">
+  <TypeSignature Language="C#" Value="public enum BindingStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BindingStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.BindingStatus" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve o status de uma associação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_BindingStatus"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Você normalmente não usar essa enumeração em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Active">
+      <MemberSignature Language="C#" Value="Active" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingStatus Active = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingStatus.Active" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A associação foi ativada com êxito. Isso significa que a associação foi anexada à sua propriedade de destino da associação (destino) e localizou a origem da associação (origem), resolveu o <see langword="Path" /> e/ou <see langword="XPath" /> e iniciou a transferência de valores.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncRequestPending">
+      <MemberSignature Language="C#" Value="AsyncRequestPending" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingStatus AsyncRequestPending = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingStatus.AsyncRequestPending" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A associação está aguardando a conclusão de uma operação assíncrona.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Detached">
+      <MemberSignature Language="C#" Value="Detached" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingStatus Detached = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingStatus.Detached" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A associação foi desanexada de sua propriedade de destino.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inactive">
+      <MemberSignature Language="C#" Value="Inactive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingStatus Inactive = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingStatus.Inactive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A associação não foi ativada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PathError">
+      <MemberSignature Language="C#" Value="PathError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingStatus PathError = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingStatus.PathError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A associação não pôde resolver o caminho de origem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unattached">
+      <MemberSignature Language="C#" Value="Unattached" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingStatus Unattached = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingStatus.Unattached" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A associação ainda não foi anexada à sua propriedade de destino.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSourceError">
+      <MemberSignature Language="C#" Value="UpdateSourceError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingStatus UpdateSourceError = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingStatus.UpdateSourceError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A associação não pôde enviar o valor para a propriedade de origem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateTargetError">
+      <MemberSignature Language="C#" Value="UpdateTargetError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingStatus UpdateTargetError = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingStatus.UpdateTargetError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A associação não pôde retornar um valor de origem com êxito para atualizar o valor de destino. Para obter mais informações, consulte <see cref="P:System.Windows.Data.BindingBase.FallbackValue" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

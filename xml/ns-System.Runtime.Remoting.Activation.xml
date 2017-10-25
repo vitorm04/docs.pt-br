@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.Remoting.Activation">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting.Activation" /> namespace fornece classes e objetos que dão suporte a ativação do servidor e cliente de objetos remotos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

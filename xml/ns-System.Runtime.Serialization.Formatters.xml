@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.Serialization.Formatters">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Serialization.Formatters" /> namespace fornece comuns enumerações, interfaces e classes que são usadas por formatadores de serialização.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

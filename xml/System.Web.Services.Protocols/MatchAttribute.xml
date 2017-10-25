@@ -1,0 +1,229 @@
+<Type Name="MatchAttribute" FullName="System.Web.Services.Protocols.MatchAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MatchAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MatchAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.MatchAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa os atributos de uma correspondência feita usando a correspondência de padrões de texto. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Correspondência de padrões de texto permite que um serviço Web XML aproveitar o código HTML existente conteúdo analisando usando expressões regulares. um serviço Web XML Especifica o conteúdo que deseja analisar uma descrição do serviço usando os elementos de correspondência. Eles correspondem a elementos de especificar vários itens: a expressão regular para analisar o conteúdo de um HTML existente, página, se a análise deve diferenciar maiusculas de minúsculas e quantas instâncias de conteúdo que corresponde à expressão regular devem ser retornadas. Quando um cliente cria uma classe de proxy usando a ferramenta Wsdl.exe, os métodos da classe proxy incluem um <xref:System.Web.Services.Protocols.MatchAttribute> detalhar os elementos de correspondência encontrada na descrição do serviço.  
+  
+ Para obter mais informações sobre correspondência de padrões de texto, consulte [&#91;\< Topic://cpconcreatingclientsthatparsecontentofotherwebpages > &#93; ](http://msdn.microsoft.com/en-us/7a3be8ac-c770-43fa-8525-e318a1c9f0bf).  
+  
+   
+  
+## Examples  
+ [!code-cpp[MatchAttribute#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MatchAttribute/CPP/SvcClient_MatchAttribute.cpp#1)]
+ [!code-csharp[MatchAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MatchAttribute/CS/SvcClient_MatchAttribute.cs#1)]
+ [!code-vb[MatchAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MatchAttribute/VB/SvcClient_MatchAttribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MatchAttribute (string pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.MatchAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">Uma cadeia de caracteres que representa o padrão para correspondência.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.MatchAttribute" /> classe com o padrão especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.Services.Protocols.MatchAttribute> classe usando o padrão especificado.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância do <xref:System.Web.Services.Protocols.MatchAttribute>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|Padrão|O valor de `pattern` parâmetro.|  
+  
+   
+  
+## Examples  
+ [!code-cpp[MatchAttribute#2](~/samples/snippets/cpp/VS_Snippets_Remoting/MatchAttribute/CPP/SvcClient_MatchAttribute.cpp#2)]
+ [!code-csharp[MatchAttribute#2](~/samples/snippets/csharp/VS_Snippets_Remoting/MatchAttribute/CS/SvcClient_MatchAttribute.cs#2)]
+ [!code-vb[MatchAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MatchAttribute/VB/SvcClient_MatchAttribute.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capture">
+      <MemberSignature Language="C#" Value="public int Capture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Capture" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.MatchAttribute.Capture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que representa o índice de correspondência dentro de um agrupamento.</summary>
+        <value>Um valor que representa o índice de correspondência dentro de um agrupamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[MatchAttribute#5](~/samples/snippets/cpp/VS_Snippets_Remoting/MatchAttribute/CPP/SvcClient_MatchAttribute.cpp#5)]
+ [!code-csharp[MatchAttribute#5](~/samples/snippets/csharp/VS_Snippets_Remoting/MatchAttribute/CS/SvcClient_MatchAttribute.cs#5)]
+ [!code-vb[MatchAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MatchAttribute/VB/SvcClient_MatchAttribute.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="public int Group { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Group" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.MatchAttribute.Group" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que representa um agrupamento de correspondências relacionadas.</summary>
+        <value>Um valor que representa um agrupamento de correspondências relacionadas</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.Services.Protocols.MatchAttribute.Group%2A> propriedade para especificar um grupo ao qual pertence uma correspondência.  
+  
+   
+  
+## Examples  
+ [!code-cpp[MatchAttribute#6](~/samples/snippets/cpp/VS_Snippets_Remoting/MatchAttribute/CPP/SvcClient_MatchAttribute.cpp#6)]
+ [!code-csharp[MatchAttribute#6](~/samples/snippets/csharp/VS_Snippets_Remoting/MatchAttribute/CS/SvcClient_MatchAttribute.cs#6)]
+ [!code-vb[MatchAttribute#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MatchAttribute/VB/SvcClient_MatchAttribute.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreCase">
+      <MemberSignature Language="C#" Value="public bool IgnoreCase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreCase" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.MatchAttribute.IgnoreCase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o padrão para fazer a correspondência diferencia maiusculas de minúsculas.</summary>
+        <value>
+          <see langword="true" />Se a correspondência diferencia maiusculas de minúsculas; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[MatchAttribute#3](~/samples/snippets/cpp/VS_Snippets_Remoting/MatchAttribute/CPP/SvcClient_MatchAttribute.cpp#3)]
+ [!code-csharp[MatchAttribute#3](~/samples/snippets/csharp/VS_Snippets_Remoting/MatchAttribute/CS/SvcClient_MatchAttribute.cs#3)]
+ [!code-vb[MatchAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MatchAttribute/VB/SvcClient_MatchAttribute.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRepeats">
+      <MemberSignature Language="C#" Value="public int MaxRepeats { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxRepeats" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.MatchAttribute.MaxRepeats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de valores a ser retornado da correspondência.</summary>
+        <value>O número máximo de valores a ser retornado da correspondência. O valor padrão é -1, que se refere ao retorno de todos os valores.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor de 1 retorna apenas a primeira correspondência. Um valor de -1 retorna todas as correspondências. Além disso, um valor de -1 é igual a um ' *' em uma expressão regular.  
+  
+   
+  
+## Examples  
+ [!code-cpp[MatchAttribute#7](~/samples/snippets/cpp/VS_Snippets_Remoting/MatchAttribute/CPP/SvcClient_MatchAttribute.cpp#7)]
+ [!code-csharp[MatchAttribute#7](~/samples/snippets/csharp/VS_Snippets_Remoting/MatchAttribute/CS/SvcClient_MatchAttribute.cs#7)]
+ [!code-vb[MatchAttribute#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MatchAttribute/VB/SvcClient_MatchAttribute.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public string Pattern { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Pattern" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.MatchAttribute.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma expressão regular que representa o padrão para correspondência.</summary>
+        <value>Uma expressão regular que representa o padrão para correspondência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.Services.Protocols.MatchAttribute.Pattern%2A> propriedade para especificar uma expressão regular que representa o valor a corresponder.  
+  
+   
+  
+## Examples  
+ [!code-cpp[MatchAttribute#4](~/samples/snippets/cpp/VS_Snippets_Remoting/MatchAttribute/CPP/SvcClient_MatchAttribute.cpp#4)]
+ [!code-csharp[MatchAttribute#4](~/samples/snippets/csharp/VS_Snippets_Remoting/MatchAttribute/CS/SvcClient_MatchAttribute.cs#4)]
+ [!code-vb[MatchAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MatchAttribute/VB/SvcClient_MatchAttribute.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

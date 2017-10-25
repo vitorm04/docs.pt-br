@@ -1,0 +1,56 @@
+<Type Name="XmlHierarchicalDataSourceView" FullName="System.Web.UI.WebControls.XmlHierarchicalDataSourceView">
+  <TypeSignature Language="C#" Value="public class XmlHierarchicalDataSourceView : System.Web.UI.HierarchicalDataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlHierarchicalDataSourceView extends System.Web.UI.HierarchicalDataSourceView" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.XmlHierarchicalDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HierarchicalDataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma exibição de dados em um nó XML ou uma coleção de nós XML para um <see cref="T:System.Web.UI.WebControls.XmlDataSource" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.XmlDataSource> controle pode apresentar os dados subjacentes em formato tabular e hierárquico para controles de servidor Web que se associar a ele. Controla como <xref:System.Web.UI.WebControls.GridView> ou <xref:System.Web.UI.WebControls.DropDownList> usar o <xref:System.Web.UI.WebControls.XmlDataSource> para associar a dados XML e apresentá-lo na lista ou formato de tabela, enquanto os controles que derivam de <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> classe, como <xref:System.Web.UI.WebControls.TreeView>, associar a dados XML e apresentá-los de forma hierárquica.  
+  
+ O <xref:System.Web.UI.WebControls.XmlDataSource> cria cada tipo de exibição internamente por meio de caminhos de código diferente. Se o <xref:System.Web.UI.IDataSource.GetView%2A> método é chamado no <xref:System.Web.UI.WebControls.XmlDataSource> controle, uma <xref:System.Web.UI.WebControls.XmlDataSourceView> objeto é criado pelo <xref:System.Web.UI.WebControls.XmlDataSource> controle. Se o <xref:System.Web.UI.WebControls.XmlDataSource.GetHierarchicalView%2A> método é chamado, um <xref:System.Web.UI.WebControls.XmlHierarchicalDataSourceView> objeto é criado. O <xref:System.Web.UI.WebControls.XmlDataSourceView> classe é fornecida para controles de servidor Web que derivam de <xref:System.Web.UI.WebControls.DataBoundControl> e vincula a listas e dados tabulares, enquanto o <xref:System.Web.UI.WebControls.XmlHierarchicalDataSourceView> é fornecido para controles de servidor Web que derivam de <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> e associar a dados hierárquicos. Internamente, o <xref:System.Web.UI.WebControls.DataBoundControl> e <xref:System.Web.UI.WebControls.CompositeDataBoundControl> classes chamada a <xref:System.Web.UI.WebControls.XmlDataSourceView.Select%2A> método <xref:System.Web.UI.WebControls.XmlDataSourceView> objeto de exibição para recuperar dados de uma fonte de dados, enquanto uma classe derivada de <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> chamadas a <xref:System.Web.UI.WebControls.XmlHierarchicalDataSourceView.Select%2A> método.  
+  
+ Como todos os <xref:System.Web.UI.HierarchicalDataSourceView> objetos auxiliares de <xref:System.Web.UI.WebControls.XmlHierarchicalDataSourceView> define as operações que pode ser executadas a fonte de dados com os dados subjacentes. Porque o <xref:System.Web.UI.WebControls.XmlHierarchicalDataSourceView> apenas substituições de classe a <xref:System.Web.UI.WebControls.XmlHierarchicalDataSourceView.Select%2A> método, o associado <xref:System.Web.UI.WebControls.XmlDataSource> controle não oferece suporte expressões de classificação ou executar, excluir ou operações de atualização.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.IHierarchicalEnumerable Select ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.IHierarchicalEnumerable Select() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.XmlHierarchicalDataSourceView.Select" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchicalEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma lista dos itens de dados da fonte de dados subjacente.</summary>
+        <returns>Um <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> coleção de itens de dados com base no nível hierárquico do modo de exibição atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IHierarchicalEnumerable> que é retornado por <xref:System.Web.UI.HierarchicalDataSourceView.Select%2A> é um <xref:System.Xml.XmlNodeList> e pode ser usado como qualquer <xref:System.Collections.IEnumerable> coleção. Chamar o <xref:System.Collections.IEnumerable.GetEnumerator%2A> método para obter um <xref:System.Collections.IEnumerator> e iterar através da coleção de <xref:System.Xml.XmlNode> nós ou use `foreach` (em c#) ou `For Each` (Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

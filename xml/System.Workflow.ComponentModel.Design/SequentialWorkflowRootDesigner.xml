@@ -1,0 +1,494 @@
+<Type Name="SequentialWorkflowRootDesigner" FullName="System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner">
+  <TypeSignature Language="C#" Value="public class SequentialWorkflowRootDesigner : System.Workflow.ComponentModel.Design.SequentialActivityDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SequentialWorkflowRootDesigner extends System.Workflow.ComponentModel.Design.SequentialActivityDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Design.SequentialActivityDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém propriedades e métodos para fornecer aparência consistente para todos os designers de raiz em uma superfície de design do fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Normalmente, uma instância de uma classe designer do fluxo de trabalho sequencial raiz é criada quando um fluxo de trabalho é criado em um designer de fluxo de trabalho e representa a superfície do designer em que os usuários podem adicionar e editar atividades. Um designer de fluxo de trabalho raiz não tem um designer de pai, a menos que ele é o filho de um <xref:System.Workflow.Activities.InvokeWorkflowActivity> atividade. Todos os designers de raiz de fluxo de trabalho devem ser derivado de <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SequentialWorkflowRootDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBeParentedTo">
+      <MemberSignature Language="C#" Value="public override bool CanBeParentedTo (System.Workflow.ComponentModel.Design.CompositeActivityDesigner parentActivityDesigner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBeParentedTo(class System.Workflow.ComponentModel.Design.CompositeActivityDesigner parentActivityDesigner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.CanBeParentedTo(System.Workflow.ComponentModel.Design.CompositeActivityDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentActivityDesigner" Type="System.Workflow.ComponentModel.Design.CompositeActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="parentActivityDesigner">O <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> a ser verificado.</param>
+        <summary>Retorna um valor que indica se um <see cref="T:System.Workflow.ComponentModel.CompositeActivity" /> pode ser definido como o pai da atividade associada com o designer.</summary>
+        <returns>
+          <see langword="true" />para permitir que a atividade associada <paramref name="parentActivityDesigner" /> para ser o pai da atividade associada com o <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Designers de raiz não podem ter um designer de atividade pai em uma superfície de design do fluxo de trabalho. A menos que substituída em uma classe de herança, <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.CanBeParentedTo%2A> retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExpandCollapse">
+      <MemberSignature Language="C#" Value="public override bool CanExpandCollapse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanExpandCollapse" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.CanExpandCollapse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o designer pode ser expandido e recolhido.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" /> podem ser expandidos e recolhidos; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que substituída em uma classe derivada, <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.CanExpandCollapse%2A> é sempre definido como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Footer">
+      <MemberSignature Language="C#" Value="protected virtual System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter Footer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter Footer" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Footer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o rodapé associado com o designer raiz.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" /> que representa o rodapé associado a <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo de <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Footer%2A> aparecem na parte inferior do designer raiz na superfície de design de fluxo de trabalho. Ícones e o texto podem ser exibidas no rodapé, incluindo os ícones de botão Alterar o modo de exibição designer quando um usuário seleciona um deles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInnerConnections">
+      <MemberSignature Language="C#" Value="protected override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Drawing.Point&gt; GetInnerConnections (System.Workflow.ComponentModel.Design.DesignerEdges edges);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Drawing.Point&gt; GetInnerConnections(valuetype System.Workflow.ComponentModel.Design.DesignerEdges edges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.GetInnerConnections(System.Workflow.ComponentModel.Design.DesignerEdges)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Drawing.Point&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edges" Type="System.Workflow.ComponentModel.Design.DesignerEdges" />
+      </Parameters>
+      <Docs>
+        <param name="edges">O <see cref="T:System.Workflow.ComponentModel.Design.DesignerEdges" /> no qual obter a coleção de pontos de conexão.</param>
+        <summary>Retorna uma coleção somente leitura de pontos que representam a conexão interna do designer.</summary>
+        <returns>Uma coleção que contém o <see cref="T:System.Workflow.ComponentModel.Design.ConnectionPoint" /> objetos usados para um designer conectável.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um designer pode ter conectores dentro dele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Glyphs">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection Glyphs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection Glyphs" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Glyphs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de glifos que são exibidos no <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection" /> que contém os glifos exibidos no <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="protected virtual System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter Header { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter Header" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cabeçalho associado com o designer raiz.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" /> que representa o cabeçalho associado a <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo de <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Header%2A> aparecem na parte superior do designer raiz na superfície de design de fluxo de trabalho. Ícones e texto podem ser exibidos no cabeçalho, incluindo o texto que indica o modo de exibição designer que está sendo exibido na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image Image { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a imagem associada com o designer.</summary>
+        <value>O <see cref="T:System.Drawing.Image" /> para associar com o designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Image%2A>propriedade é definida como o <xref:System.Drawing.Image> para exibir. Você pode fazer isso em tempo de design ou em tempo de execução.  
+  
+ A menos que substituída em uma classe derivada, <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Image%2A> retorna uma referência nula (`Nothing` no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageRectangle">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle ImageRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle ImageRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.ImageRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor para os limites da imagem associada com o designer em coordenadas lógicas do delimitadores.</summary>
+        <value>Um <see cref="T:System.Drawing.Rectangle" /> que inclui o <see cref="T:System.Drawing.Image" /> exibido para o <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.ImageRectangle%2A> para recuperar as coordenadas para o retângulo que contém a imagem associada com o designer. Você pode usar essas coordenadas para desenhar conectores ou sobreposição de elementos gráficos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como substituir o <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.ImageRectangle%2A> propriedade. Neste exemplo, o <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.ImageRectangle%2A> é calculado usando os limites do <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner>.  
+  
+ [!code-csharp[wf_samples#74](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#74)]
+ [!code-vb[wf_samples#74](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#74)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokingDesigner">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.Design.CompositeActivityDesigner InvokingDesigner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.CompositeActivityDesigner InvokingDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.InvokingDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.CompositeActivityDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> que solicitou o designer de raiz de fluxo de trabalho sequencial seja inicializada.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> que solicitou o designer de raiz de fluxo de trabalho a ser inicializado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size MinimumSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size MinimumSize" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.MinimumSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho mínimo para o <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> que representa o tamanho mínimo do designer de fluxo de trabalho sequencial.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.MinimumSize%2A>representa o tamanho do menor para o qual um usuário pode redimensionar o <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayoutSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size OnLayoutSize (System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Size OnLayoutSize(class System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.OnLayoutSize(System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" /> que contém os argumentos de layout.</param>
+        <summary>Define o tamanho das indicações visuais sobre os designers de dentro do <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Size" /> que representa o tamanho das indicações visuais no <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.OnPaint(System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Desenha os cabeçalhos e rodapés associados a <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.OnPaint%2A>Desenha um texto para incluir em cabeçalhos e rodapés com as configurações apropriadas do tema. Ele também se baseia as imagens para incluir nos cabeçalhos e rodapés.  
+  
+ **Observação** quando você substituir <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.OnPaint%2A> em uma classe derivada, certifique-se de chamar o <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.OnPaint%2A> método da classe base, de modo que registrado delegados receber o evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSmartTagVisibilityChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSmartTagVisibilityChanged (bool visible);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSmartTagVisibilityChanged(bool visible) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.OnSmartTagVisibilityChanged(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visible" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="visible">
+          <see langword="true" />Para exibir as marcas inteligentes na superfície do designer; Caso contrário, <see langword="false" />.</param>
+        <summary>Notifica o designer se as marcas inteligentes devem ser mostrados ou ocultados no <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando chamado, <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.OnSmartTagVisibilityChanged%2A> invalida o retângulo do texto associado a <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Header%2A>.  
+  
+ **Observação** quando você substituir <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.OnSmartTagVisibilityChanged%2A> em uma classe derivada, certifique-se de chamar a classe base <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.OnSmartTagVisibilityChanged%2A> método para que registrado delegados receber o evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSmartTag">
+      <MemberSignature Language="C#" Value="protected override bool ShowSmartTag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowSmartTag" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.ShowSmartTag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o designer raiz exibe as marcas inteligentes.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" /> exibe marcas inteligentes; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Header%2A> propriedade não está definida como uma referência nula (`Nothing` no Visual Basic) e o correspondente <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.Text%2A> propriedade não está vazio de cadeia de caracteres ou definido como uma referência nula (`Nothing`), <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.ShowSmartTag%2A> retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmartTagRectangle">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle SmartTagRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle SmartTagRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.SmartTagRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o retângulo na superfície do designer de exibição de uma marca inteligente.</summary>
+        <value>Um <see cref="T:System.Drawing.Rectangle" /> que define os limites de exibição de marcas inteligentes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.ShowSmartTag%2A> e <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.SmartTagVerbs%2A> para exibir uma marca inteligente de disponíveis <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.DesignerActions%2A> no local especificado por <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.SmartTagRectangle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição associada com o designer.</summary>
+        <value>Uma cadeia de caracteres que contém a descrição associada com o designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que substituída em uma classe de herança, <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Text%2A> retorna <xref:System.String?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleHeight">
+      <MemberSignature Language="C#" Value="protected override int TitleHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TitleHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.TitleHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura da área de título do designer.</summary>
+        <value>Um inteiro que representa a altura da área de título do <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma área de título designer raiz normalmente contém o cabeçalho e qualquer ícone associado com o designer.  
+  
+ <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.TitleHeight%2A>calcula o número de inteiro retorna obtendo o valor de sua implementação de base e adicionando o inteiro de altura definido para o <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner.Header%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

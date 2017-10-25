@@ -1,0 +1,218 @@
+<Type Name="ScriptResourceDefinition" FullName="System.Web.UI.ScriptResourceDefinition">
+  <TypeSignature Language="C#" Value="public class ScriptResourceDefinition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScriptResourceDefinition extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ScriptResourceDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define o local de um recurso de script.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.ScriptResourceDefinition> objeto representa um recurso de script lógico único. Esse recurso pode ter várias representações físicas diferentes, como uma versão de depuração, uma versão de lançamento e uma versão em uma rede de fornecimento de conteúdo (CDN).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptResourceDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ScriptResourceDefinition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ScriptResourceDefinition" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CdnDebugPath">
+      <MemberSignature Language="C#" Value="public string CdnDebugPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CdnDebugPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptResourceDefinition.CdnDebugPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do modo de depuração do recurso de script em uma rede de fornecimento de conteúdo (CDN).</summary>
+        <value>O caminho de uma CDN que contém recursos de script de depuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você faz referência a um caminho CDN, você pode habilitar o suporte CDN para a página definindo a <xref:System.Web.UI.ScriptManager.EnableCdn%2A> propriedade <xref:System.Web.UI.ScriptManager> para `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CdnPath">
+      <MemberSignature Language="C#" Value="public string CdnPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CdnPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptResourceDefinition.CdnPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do modo de versão de um recurso de script em uma rede de fornecimento de conteúdo (CDN).</summary>
+        <value>O caminho de uma CDN.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você faz referência a um caminho CDN, você pode habilitar o suporte CDN para a página definindo a <xref:System.Web.UI.ScriptManager.EnableCdn%2A> propriedade <xref:System.Web.UI.ScriptManager> para `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CdnSupportsSecureConnection">
+      <MemberSignature Language="C#" Value="public bool CdnSupportsSecureConnection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CdnSupportsSecureConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptResourceDefinition.CdnSupportsSecureConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica para o <see cref="T:System.Web.UI.ScriptManager" /> se um recurso de script deve ser acessado usando uma conexão segura para o caminho de rede (CDN) do fornecimento de conteúdo quando a página é acessada usando HTTPS.</summary>
+        <value>
+          <see langword="true" />Se o CDN deve ser acessada usando HTTPS. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.ScriptResourceDefinition.CdnSupportsSecureConnection%2A> propriedade para verificar se o recurso de script associados deve ser acessado pelo <xref:System.Web.UI.ScriptManager> usando uma conexão segura (SSL) para uma CDN. Usando o <xref:System.Web.UI.ScriptResourceDefinition.CdnSupportsSecureConnection%2A> propriedade, você pode evitar uma mensagem de aviso do navegador quando o aplicativo da Web tenta solicitar conteúdo seguro de uma CDN que oferece suporte a SSL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugPath">
+      <MemberSignature Language="C#" Value="public string DebugPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DebugPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptResourceDefinition.DebugPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do modo de depuração do recurso de script que é usado quando o modo de depuração está habilitado.</summary>
+        <value>O caminho de um recurso de script que é usado quando o modo de depuração está habilitado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadSuccessExpression">
+      <MemberSignature Language="C#" Value="public string LoadSuccessExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LoadSuccessExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptResourceDefinition.LoadSuccessExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma expressão JavaScript usada para detectar se um arquivo JavaScript foi carregado com êxito.</summary>
+        <value>A expressão JavaScript. O padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é usada em conjunto com o <xref:System.Web.UI.ScriptManager.EnableCdnFallback%2A?displayProperty=nameWithType> propriedade para renderizar o script embutido que será revertido para carregar a biblioteca de um local de servidor local se o script falhar ao carregar da CDN.  
+  
+ Para bibliotecas de scripts da Microsoft, este valor já está definido. Se você quiser registrar um script e obter suporte de fallback de CDN, você deve definir essa propriedade como uma expressão. Por exemplo, para testar se uma biblioteca jQuery foi carregada, você pode usar uma expressão como o seguinte:  
+  
+ `typeof(window.jQuery) !== "undefined"`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptResourceDefinition.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do modo de versão do recurso de script.</summary>
+        <value>O caminho de um recurso de script.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly ResourceAssembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly ResourceAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptResourceDefinition.ResourceAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto de assembly que contém o recurso de script.</summary>
+        <value>Um objeto de assembly que contém um recurso de script.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceName">
+      <MemberSignature Language="C#" Value="public string ResourceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResourceName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ScriptResourceDefinition.ResourceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do recurso de script no assembly de recursos especificado.</summary>
+        <value>O nome de um recurso de script.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,281 @@
+<Type Name="ProfileModule" FullName="System.Web.Profile.ProfileModule">
+  <TypeSignature Language="C#" Value="public sealed class ProfileModule : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProfileModule extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Gerencia a criação do perfil de usuário e dos eventos de perfil. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o perfil de usuário estiver habilitado, o ASP.NET usa o <xref:System.Web.Profile.ProfileModule> para criar o perfil de usuário e armazená-la na <xref:System.Web.HttpContext.Profile%2A> propriedade <xref:System.Web.HttpContext>.  
+  
+ O <xref:System.Web.Profile.ProfileModule> expõe os seguintes eventos que você pode manipular para configurar a autenticação em seu aplicativo:  
+  
+-   O <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento para migrar as configurações de perfil de um perfil de anônimo para um perfil de autenticado quando um usuário anônimo faz logon no.  
+  
+-   O <xref:System.Web.Profile.ProfileModule.Personalize> evento para personalizar como o perfil de usuário é criado.  
+  
+-   O <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> eventos para controlar como o perfil de usuário é salvo quando o <xref:System.Web.Profile.ProfileManager.AutomaticSaveEnabled%2A> está definida como `true`.  
+  
+ Para obter informações sobre como habilitar o perfil de usuário, consulte [perfil Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/ccb9bf3a-a044-464d-b89b-5cb5a3d389dd).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um arquivo Web. config que permite que propriedades de perfil que dão suporte a usuários anônimos e identificação anônima.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="login.aspx" name=".ASPXFORMSAUTH" />  
+    </authentication>  
+  
+    <anonymousIdentification enabled="true" />  
+  
+    <profile enabled="true" defaultProvider="AspNetSqlProvider">  
+      <properties>  
+        <add name="ZipCode" allowAnonymous="true" />  
+        <add name="CityAndState" allowAnonymous="true" />  
+        <add name="StockSymbols" type="System.Collections.ArrayList" allowAnonymous="true" />  
+      </properties>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+ O seguinte exemplo de código mostra o <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento incluído no arquivo global asax para um aplicativo ASP.NET. O <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento copia os valores de propriedade do perfil do perfil anônimo para o perfil do usuário atual.  
+  
+ [!code-csharp[System.Web.Profile.ProfileManager#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/global.asax#1)]
+ [!code-vb[System.Web.Profile.ProfileManager#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Profile.ProfileModule" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não se destina a ser chamado no código do aplicativo.  
+  
+ Um <xref:System.Web.HttpApplication> é criado quando um aplicativo ASP.NET é iniciado. O <xref:System.Web.HttpApplication> chama o <xref:System.Web.Profile.ProfileModule> construtor para criar o <xref:System.Web.Profile.ProfileModule> para o aplicativo. O <xref:System.Web.Profile.ProfileModule> é especificado na configuração de um aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Web.Profile.ProfileModule" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ Um <xref:System.Web.HttpApplication> é criado quando um aplicativo ASP.NET é iniciado. O <xref:System.Web.HttpApplication> cria e inicializa o <xref:System.Web.Profile.ProfileModule> para o aplicativo e chama o <xref:System.Web.Profile.ProfileModule.Dispose%2A> método quando o objeto é liberado. O <xref:System.Web.Profile.ProfileModule> é especificado na configuração de um aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Web.HttpApplication app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.HttpApplication app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileModule.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="app" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="app">O aplicativo atual.</param>
+        <summary>Chama a inicialização de código quando um <see cref="T:System.Web.Profile.ProfileModule" /> objeto é criado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado no código do aplicativo.  
+  
+ Um <xref:System.Web.HttpApplication> é criado quando um aplicativo ASP.NET é iniciado. O <xref:System.Web.HttpApplication> chama o <xref:System.Web.Profile.ProfileModule.Init%2A> método quando ele cria o <xref:System.Web.Profile.ProfileModule> para o aplicativo. O <xref:System.Web.Profile.ProfileModule> é especificado na configuração de um aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MigrateAnonymous">
+      <MemberSignature Language="C#" Value="public event System.Web.Profile.ProfileMigrateEventHandler MigrateAnonymous;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.Profile.ProfileMigrateEventHandler MigrateAnonymous" />
+      <MemberSignature Language="DocId" Value="E:System.Web.Profile.ProfileModule.MigrateAnonymous" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileMigrateEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário anônimo de um perfil faz logon.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode acessar o <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento o <xref:System.Web.Profile.ProfileModule> classe no arquivo global. asax para seu aplicativo ASP.NET usando o `Profile_MigrateAnonymous` evento global, conforme mostrado no exemplo para este tópico.  
+  
+ Você pode usar o <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento para copiar a propriedade de perfil valores de um perfil de anônimo para um perfil de autenticado quando um usuário que tenha sido anonimamente usando seu aplicativo fizer.  
+  
+ Quando um aplicativo que tenha habilitado o perfil do usuário é iniciado, o ASP.NET cria uma nova classe de tipo `ProfileCommon`, que herda de <xref:System.Web.Profile.ProfileBase> classe. Acessadores fortemente tipados são adicionados para o `ProfileCommon` classe para cada propriedade definida na seção de configuração. Um `GetProfile` método permite que você recupere um `ProfileCommon` objeto com base em um nome de usuário. Você pode usar o `GetProfile` método do perfil atual, autenticado para recuperar os valores de propriedade do perfil anônimo. Os valores de propriedade anônimas, em seguida, podem ser copiados para o perfil atual para o usuário autenticado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um arquivo Web. config que permite que propriedades de perfil que dão suporte a usuários anônimos e identificação anônima.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="login.aspx" name=".ASPXFORMSAUTH" />  
+    </authentication>  
+  
+    <anonymousIdentification enabled="true" />  
+  
+    <profile enabled="true" defaultProvider="AspNetSqlProvider">  
+      <properties>  
+        <add name="ZipCode" allowAnonymous="true" />  
+        <add name="CityAndState" allowAnonymous="true" />  
+        <add name="StockSymbols" type="System.Collections.ArrayList" allowAnonymous="true" />  
+      </properties>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+ O seguinte exemplo de código mostra o <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento incluído no arquivo global asax para um aplicativo ASP.NET. O <xref:System.Web.Profile.ProfileModule.MigrateAnonymous> evento copia os valores de propriedade do perfil do perfil anônimo para o perfil do usuário atual.  
+  
+ [!code-csharp[System.Web.Profile.ProfileManager#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/global.asax#1)]
+ [!code-vb[System.Web.Profile.ProfileManager#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Personalize">
+      <MemberSignature Language="C#" Value="public event System.Web.Profile.ProfileEventHandler Personalize;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.Profile.ProfileEventHandler Personalize" />
+      <MemberSignature Language="DocId" Value="E:System.Web.Profile.ProfileModule.Personalize" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes que o perfil de usuário é criado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileModule.Personalize> é gerado durante o <xref:System.Web.HttpApplication.AcquireRequestState?displayProperty=nameWithType> evento. Você pode acessar o <xref:System.Web.Profile.ProfileModule.Personalize> evento o <xref:System.Web.Profile.ProfileModule> classe no arquivo global. asax para seu aplicativo ASP.NET usando o `Profile_Personalize` evento global, conforme mostrado no exemplo para este tópico.  
+  
+ Você pode usar o <xref:System.Web.Profile.ProfileModule.Personalize> evento para especificar um perfil de usuário personalizada. Se o <xref:System.Web.Profile.ProfileEventArgs.Profile%2A?displayProperty=nameWithType> especificado para o valor da propriedade a <xref:System.Web.Profile.ProfileEventHandler> manipulador de eventos para o <xref:System.Web.Profile.ProfileModule.Personalize> evento é definido como um valor que não é `null` quando o <xref:System.Web.Profile.ProfileModule.Personalize> extremidades de evento, o <xref:System.Web.Profile.ProfileModule> usará o valor especificado do <xref:System.Web.Profile.ProfileEventArgs.Profile%2A?displayProperty=nameWithType> a propriedade como o valor da <xref:System.Web.HttpContext.Profile%2A> propriedade <xref:System.Web.HttpContext>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra o <xref:System.Web.Profile.ProfileModule.Personalize> evento declarado no arquivo global. asax para um aplicativo. O código de evento carrega um perfil de usuário para um usuário com base na associação de função.  
+  
+ [!code-csharp[System.Web.Profile.ProfileManager.Personalize#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.Personalize/CS/global.asax#12)]
+ [!code-vb[System.Web.Profile.ProfileManager.Personalize#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.Personalize/VB/global.asax#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProfileAutoSaving">
+      <MemberSignature Language="C#" Value="public event System.Web.Profile.ProfileAutoSaveEventHandler ProfileAutoSaving;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.Profile.ProfileAutoSaveEventHandler ProfileAutoSaving" />
+      <MemberSignature Language="DocId" Value="E:System.Web.Profile.ProfileModule.ProfileAutoSaving" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileAutoSaveEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre no final da execução da página se salvar perfil automático está habilitado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> evento é gerado no final da execução da página, se o <xref:System.Web.Profile.ProfileManager.AutomaticSaveEnabled%2A?displayProperty=nameWithType> é de propriedade `true`. Você pode acessar o <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> evento o <xref:System.Web.Profile.ProfileModule> classe no arquivo global. asax para seu aplicativo ASP.NET usando o `Profile_ProfileAutoSaving` evento global, conforme mostrado no exemplo para este tópico.  
+  
+ O <xref:System.Configuration.SettingsBase.Save%2A?displayProperty=nameWithType> método verifica o <xref:System.Configuration.SettingsPropertyValue.IsDirty%2A> para cada valor da propriedade <xref:System.Configuration.SettingsPropertyValue> no perfil do usuário para determinar se as propriedades que devem compostos de tipos primitivos, cadeias de caracteres, ou <xref:System.DateTime> objetos foram alterados. O <xref:System.Configuration.SettingsBase.Save%2A> método explicitamente não pode determinar se uma classe personalizada foi alterado. Você pode usar o <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> evento para determinar se um objeto personalizado foi alterado e, em seguida, para continuar com o automático salvar objetos modificados ou para cancelar o salvamento automático, se nenhum objeto foi modificado.  
+  
+ Para cancelar o perfil automático de operação de gravação, defina o <xref:System.Web.Profile.ProfileAutoSaveEventArgs.ContinueWithProfileAutoSave%2A> propriedade `false` no <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> evento; caso contrário, defina o <xref:System.Web.Profile.ProfileAutoSaveEventArgs.ContinueWithProfileAutoSave%2A> propriedade `true`.  
+  
+ Pode haver vários assinantes para o <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> evento. O <xref:System.Web.Profile.ProfileModule> será usado o último valor que o <xref:System.Web.Profile.ProfileAutoSaveEventArgs.ContinueWithProfileAutoSave%2A> estiver definida como. Como resultado, é recomendável que você definir explicitamente o <xref:System.Web.Profile.ProfileAutoSaveEventArgs.ContinueWithProfileAutoSave%2A> propriedade o <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> evento Cancelar ou continuar com o automático termos de salvar, como talvez seja necessário substituir o valor definido por um assinante anterior.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra o <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> evento incluído no arquivo global asax para um aplicativo ASP.NET.  
+  
+ [!code-csharp[System.Web.Profile.ProfileManager.ProfileAutoSaving#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.ProfileAutoSaving/CS/global.asax#11)]
+ [!code-vb[System.Web.Profile.ProfileManager.ProfileAutoSaving#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager.ProfileAutoSaving/VB/global.asax#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

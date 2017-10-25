@@ -1,0 +1,661 @@
+<Type Name="ControlAdapter" FullName="System.Web.UI.Adapters.ControlAdapter">
+  <TypeSignature Language="C#" Value="public abstract class ControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ControlAdapter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Adapters.ControlAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Personaliza a renderização do controle derivado ao qual o adaptador está anexado, para modificar o comportamento ou marcação padrão para navegadores específicos e é a classe base que todos os adaptadores de controle herdam.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adaptadores de controle são componentes que substituem certos <xref:System.Web.UI.Control> classe métodos e eventos de execução do ciclo de vida para permitir que o navegador ou manipulação de marcação específica. O .NET Framework mapeia um adaptador de controle derivada única para um <xref:System.Web.UI.Control> objeto para cada solicitação de cliente.  
+  
+ Um adaptador modifica um controle para uma classe de navegadores ou um navegador específico ou atua como um filtro arbitrário em algum recurso. Normalmente o adaptador é definido pela linguagem de marcação que usa o navegador (por exemplo, XHTML ou HTML 3.2). Grande parte da capacidade de adaptação no comportamento de renderização pode ser encapsulado nas classes especializadas que derivam de <xref:System.Web.UI.HtmlTextWriter> classe. Portanto, é provável que um único adaptador pode ser usado para um número de comportamentos de classe do navegador ou que inclusão de capacidade de adaptação no <xref:System.Web.UI.HtmlTextWriter> classes podem tornar o uso de um adaptador de controle desnecessária.  
+  
+ Um adaptador para uma classe de controle se aplica a todos os controles que herdam da classe, a menos que mais especializadas adaptadores estão presentes. Por exemplo, um adaptador para o <xref:System.Web.UI.WebControls.BaseValidator> classe pode ser usada para todos os `Validator` objetos.  
+  
+ Adaptadores normalmente não herdam diretamente a <xref:System.Web.UI.Adapters.ControlAdapter> classe, mas de um adaptador de destino específico classes que fornecem funcionalidades adicionais específicas para o navegador de destino e de tipo de controle de base ou a renderização específica é necessária.  
+  
+ Controles em si não exigem necessariamente um adaptador. Se os controles são estendidos por meio da composição, geralmente os adaptadores de controle filho são suficientes.  
+  
+ Cada controle tem mapeamentos explícitos para adaptadores através dos arquivos de definição. browser. Portanto, qualquer acesso ao <xref:System.Web.UI.Control.Adapter%2A?displayProperty=nameWithType> propriedade usa o <xref:System.Web.HttpBrowserCapabilities> objeto extraído dos arquivos de definição de navegador para executar a pesquisa para o mapeamento do adaptador de controle.  
+  
+ Durante o processamento, o .NET Framework intercepta chamadas para os métodos substituíveis de um controle que pode ser um destino específico. Se estiver conectado a um adaptador de controle, o .NET Framework chama os métodos de adaptador associado.  
+  
+ O adaptador executa a renderização do controle por meio de <xref:System.Web.UI.Adapters.ControlAdapter.Render%2A> método. Se substituído, <xref:System.Web.UI.Adapters.ControlAdapter.Render%2A> potencialmente não devem chamar a implementação da classe base porque que executa uma chamada novamente o <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType> método. Isso pode causar o processamento ocorra duas vezes, uma vez pelo adaptador e uma vez pelo controle.  
+  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.Render%2A> basear chamadas de método de <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType> método do controle. Portanto, se você substituir <xref:System.Web.UI.Adapters.ControlAdapter.Render%2A>, você não deve chamar a implementação da classe base, a menos que o processamento é implementa além é fornecido pelo <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType> do controle.  
+  
+ Certifique-se de que o .NET Framework realiza a interceptação para adaptadores de controles filho. Você pode fazer isso chamando o <xref:System.Web.UI.Adapters.ControlAdapter.RenderChildren%2A> base do método, que chama o <xref:System.Web.UI.Control.RenderChildren%2A?displayProperty=nameWithType> método do controle, de seu <xref:System.Web.UI.Adapters.ControlAdapter.Render%2A> substituir.  
+  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.BeginRender%2A> e <xref:System.Web.UI.Adapters.ControlAdapter.EndRender%2A> métodos são chamados pelo controle imediatamente antes e depois (respectivamente) das chamadas de controle de <xref:System.Web.UI.Adapters.ControlAdapter.Render%2A> método. Se pré e pós-processamento são específicos do navegador apenas tarefas de processamento necessárias, usando <xref:System.Web.UI.Adapters.ControlAdapter.BeginRender%2A> e <xref:System.Web.UI.Adapters.ControlAdapter.EndRender%2A> pode tornar desnecessários substituir <xref:System.Web.UI.Adapters.ControlAdapter.Render%2A>. O comportamento padrão da <xref:System.Web.UI.Adapters.ControlAdapter.BeginRender%2A> e <xref:System.Web.UI.Adapters.ControlAdapter.EndRender%2A> métodos é chamar os métodos correspondentes do <xref:System.Web.UI.HtmlTextWriter>.  
+  
+ Para manter suas informações de estado, um adaptador de controle pode substituir o <xref:System.Web.UI.Adapters.ControlAdapter.SaveAdapterControlState%2A>, <xref:System.Web.UI.Adapters.ControlAdapter.LoadAdapterControlState%2A>, <xref:System.Web.UI.Adapters.ControlAdapter.SaveAdapterViewState%2A>, e <xref:System.Web.UI.Adapters.ControlAdapter.LoadAdapterViewState%2A> métodos. <xref:System.Web.UI.Adapters.ControlAdapter.SaveAdapterControlState%2A>, <xref:System.Web.UI.Adapters.ControlAdapter.SaveAdapterViewState%2A>, <xref:System.Web.UI.Adapters.ControlAdapter.LoadAdapterControlState%2A>, e <xref:System.Web.UI.Adapters.ControlAdapter.LoadAdapterViewState%2A> são chamadas quando os estados de controle e exibição privados são salvos e carregados, respectivamente.  
+  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.OnInit%2A>, <xref:System.Web.UI.Adapters.ControlAdapter.OnLoad%2A>, <xref:System.Web.UI.Adapters.ControlAdapter.OnPreRender%2A>, e <xref:System.Web.UI.Adapters.ControlAdapter.OnUnload%2A> base chamada de métodos em correspondente <xref:System.Web.UI.Control> métodos de classe. Portanto, qualquer um desses <xref:System.Web.UI.Adapters.ControlAdapter> métodos que são substituídos devem chamar métodos base; caso contrário, o evento associado a <xref:System.Web.UI.Control> método de classe não será gerado.  
+  
+ Opcionalmente, implementam controles e adaptadores de <xref:System.Web.UI.IPostBackDataHandler> e <xref:System.Web.UI.IPostBackEventHandler> interfaces. O .NET Framework determina se um adaptador existe e se o adaptador implementa essas interfaces. Em caso afirmativo, o adaptador deve substituir o <xref:System.Web.UI.IPostBackDataHandler.LoadPostData%2A>, <xref:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent%2A>, e <xref:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent%2A> métodos, conforme necessário. Se os dados de postagem não são reconhecidos no adaptador, ele deverá chamar novamente no controle processá-la. Manipuladores de eventos subsequentes também devem chamar novamente no controle.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você herda o <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> classe, um controle que requeira uma funcionalidade geral do adaptador deve ter um adaptador correspondente chamado no padrão de classe base <paramref name="ControlType" /> <see langword="Adapter" /> (por exemplo, <see langword="TextBoxAdapter" />). O adaptador deve no mínimo retornar uma instância fortemente tipada de controle por meio de seu <see cref="P:System.Web.UI.Adapters.ControlAdapter.Control" /> propriedade.  
+  
+1.  Adaptadores de controle para uma linguagem de marcação e de tipo de controle fornecido deve ser nomeada no padrão de <paramref name="MarkupControlType" /> <see langword="Adapter" /> (por exemplo, <see langword="XhtmlTextBoxAdapter" />). Adaptadores para um controle devem ser implementados em um <see langword="Adapters" /> subnamespace.  
+  
+ Adaptadores de controle devem herdar da classe base apropriada e siga o mesmo modelo de herança de controle. Por exemplo, um adaptador para um controle herdando a <see cref="T:System.Web.UI.Control" /> classe base deve herdar de uma a <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> relevante ou classe <paramref name="ControlType" /> <see langword="Adapter" /> classe.  
+  
+ Todos os adaptadores de especializada devem ser definidos para o controle especializado em todos os nós de dispositivo nos arquivos. browser de configuração.  
+  
+ Um controle implementado corretamente não deve presumir que um adaptador está conectado ou que o adaptador anexado implementa uma interface específica. Em vez disso, ele deve verificar isso antes de chamar.  
+  
+ É possível simular a substituição de métodos de evento protegido no controle, como o <see cref="M:System.Web.UI.WebControls.LinkButton.OnClick(System.EventArgs)" /> método o <see cref="T:System.Web.UI.WebControls.LinkButton" />. Primeiro, crie uma classe de adaptador com um <c>OnClick</c> método. Em seguida, crie um novo controle derivado <see cref="T:System.Web.UI.WebControls.LinkButton" /> e substituir o <see cref="M:System.Web.UI.WebControls.LinkButton.OnClick(System.EventArgs)" /> método. A substituída <see cref="M:System.Web.UI.WebControls.LinkButton.OnClick(System.EventArgs)" /> chamadas de método de <c>OnClick</c> método do adaptador. O objeto de adaptador está disponível por meio do método <see cref="P:System.Web.UI.Control.Adapter" /> propriedade o <see cref="T:System.Web.UI.Control" /> classe. O <see cref="P:System.Web.UI.Control.Adapter" /> é de propriedade do controle <see langword="null" /> quando não há nenhum adaptador associado, portanto qualquer código deve verificar dessa condição antes de chamar métodos do adaptador.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ControlAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Adapters.ControlAdapter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói esse adaptador quando ele cria correspondente <xref:System.Web.UI.Control> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRender">
+      <MemberSignature Language="C#" Value="protected virtual void BeginRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void BeginRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.BeginRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém métodos para processar a saída de destino específico.</param>
+        <summary>Chamado antes do processamento de um controle. Em uma classe derivada de adaptador, gera marcações de abertura que são necessários para um destino específico, mas não é necessário por navegadores HTML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.BeginRender%2A> método é chamado antes de <xref:System.Web.UI.Adapters.ControlAdapter.Render%2A> método e é usado para executar o pré-processamento antes da renderização do controle de destino específico.  
+  
+ Use o <xref:System.Web.UI.Adapters.ControlAdapter.BeginRender%2A> método em combinação com o <xref:System.Web.UI.Adapters.ControlAdapter.EndRender%2A> método para garantir a abertura e fechamento de consistência de marca.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> classe, o <see cref="M:System.Web.UI.Adapters.ControlAdapter.BeginRender(System.Web.UI.HtmlTextWriter)" /> chamadas de método de base de <see cref="M:System.Web.UI.HtmlTextWriter.BeginRender" /> método. Assim, substituições do <see cref="M:System.Web.UI.Adapters.ControlAdapter.BeginRender(System.Web.UI.HtmlTextWriter)" /> método deve chamar o <see cref="M:System.Web.UI.Adapters.ControlAdapter.BeginRender(System.Web.UI.HtmlTextWriter)" /> base método somente se o processamento for além, em vez de em vez do <see cref="M:System.Web.UI.HtmlTextWriter.BeginRender" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Browser">
+      <MemberSignature Language="C#" Value="protected System.Web.HttpBrowserCapabilities Browser { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpBrowserCapabilities Browser" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Adapters.ControlAdapter.Browser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpBrowserCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para os recursos do navegador do cliente que está fazendo a solicitação HTTP atual.</summary>
+        <value>Um <see cref="T:System.Web.HttpBrowserCapabilities" /> especificando recursos de navegador e marcação de cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.Adapters.ControlAdapter> objeto determina os recursos do navegador do cliente do <xref:System.Web.HttpBrowserCapabilities> objeto que é retornado pelo <xref:System.Web.UI.Adapters.ControlAdapter.Browser%2A> propriedade. Isso permite que o <xref:System.Web.UI.Adapters.ControlAdapter> objeto para renderizar a marcação de navegador específico ou modificar o comportamento do <xref:System.Web.UI.Control>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.UI.Adapters.ControlAdapter.Browser%2A> propriedade para acessar os detalhes do navegador solicitante. Neste exemplo, o código verifica para determinar se o navegador é compatível com JavaScript e, em seguida, permite que o desenvolvedor processar a saída personalizada nesse caso.  
+  
+ [!code-cpp[ControlAdapter_Browser#1](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlAdapter_Browser/CPP/controladapter_browser.cpp#1)]
+ [!code-csharp[ControlAdapter_Browser#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlAdapter_Browser/CS/controladapter_browser.cs#1)]
+ [!code-vb[ControlAdapter_Browser#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlAdapter_Browser/VB/controladapter_browser.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Control Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Adapters.ControlAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o controle ao qual este adaptador de controle está anexado.</summary>
+        <value>O <see cref="T:System.Web.UI.Control" /> ao qual este <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> está anexado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um adaptador de controle derivada é anexado a um controle, o .NET Framework chama a certos membros de adaptador em vez dos membros de controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como derivar um controle personalizado do <xref:System.Web.UI.Control> classe e, em seguida, criar um adaptador correspondente que herda o <xref:System.Web.UI.Adapters.ControlAdapter> classe. O adaptador substitui o <xref:System.Web.UI.Adapters.ControlAdapter.Control%2A> propriedade e retorna uma referência fortemente tipados para o controle.  
+  
+ [!code-cpp[ControlAdapter.Control#1](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlAdapter.Control/CPP/controladapter.control.cpp#1)]
+ [!code-csharp[ControlAdapter.Control#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlAdapter.Control/CS/controladapter.control.cs#1)]
+ [!code-vb[ControlAdapter.Control#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlAdapter.Control/VB/controladapter.control.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> classe, no mínimo, você deve implementar um <see langword="Control" /> propriedade para retornar uma instância fortemente tipado do controle, como mostrado na seção de exemplo.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected virtual void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria o filho de destino específico controles para um controle composto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver um adaptador de controle derivado conectado a um <xref:System.Web.UI.Control> objeto e o <xref:System.Web.UI.Adapters.ControlAdapter.CreateChildControls%2A> método é substituído, a substituição é chamada em vez do <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType> método. Portanto, <xref:System.Web.UI.Adapters.ControlAdapter.CreateChildControls%2A> pode ser usado para criar um conjunto de controles filho de destino específico.  
+  
+ Para obter mais informações sobre como combinar os controles para criar um novo controle, consulte [controles compostos](http://msdn.microsoft.com/en-us/fb174677-d845-467c-8bf3-cc096b2490b0).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você criar uma classe de herança e substituir o <see cref="M:System.Web.UI.Adapters.ControlAdapter.CreateChildControls" /> método, execute o método base, a menos que você deseja adicionar controles aos criado pelo método de base não é chamada. Caso contrário, você pode criar dois conjuntos de filho controles.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRender">
+      <MemberSignature Language="C#" Value="protected virtual void EndRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void EndRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.EndRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém métodos para processar a saída de destino específico.</param>
+        <summary>Chamado após o processamento de um controle. Em uma classe derivada de adaptador, gera as marcas de fechamento que são necessários para um destino específico, mas não é necessário por navegadores HTML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.EndRender%2A> método é chamado logo após o <xref:System.Web.UI.Adapters.ControlAdapter.Render%2A> método e é usada para executar o pós-processamento de destino específico após o processamento do controle.  
+  
+ Use o <xref:System.Web.UI.Adapters.ControlAdapter.EndRender%2A> método em combinação com o <xref:System.Web.UI.Adapters.ControlAdapter.BeginRender%2A> método para garantir a abertura e fechamento de consistência de marca.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> classe, o <see cref="M:System.Web.UI.Adapters.ControlAdapter.EndRender(System.Web.UI.HtmlTextWriter)" /> chamadas de método de base de <see cref="M:System.Web.UI.HtmlTextWriter.EndRender" /> método. Assim, substituições do <see cref="M:System.Web.UI.Adapters.ControlAdapter.EndRender(System.Web.UI.HtmlTextWriter)" /> método deve chamar o <see cref="M:System.Web.UI.Adapters.ControlAdapter.EndRender(System.Web.UI.HtmlTextWriter)" /> base método somente se o processamento for além, em vez de em vez do <see cref="M:System.Web.UI.HtmlTextWriter.EndRender" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAdapterControlState">
+      <MemberSignature Language="C#" Value="protected virtual void LoadAdapterControlState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void LoadAdapterControlState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.LoadAdapterControlState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um <see cref="T:System.Object" /> que contém informações de estado de controle do adaptador como um <see cref="T:System.Web.UI.StateBag" />.</param>
+        <summary>Carrega informações de estado de controle de adaptador que foi salvo pelo <see cref="M:System.Web.UI.Adapters.ControlAdapter.SaveAdapterControlState" /> durante uma solicitação anterior para a página em que reside o controle associado a este adaptador de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estado do controle é a informação de estado essencial necessária até mesmo quando o estado de exibição está desabilitado. Quando um adaptador precisa manter suas informações de estado de controle, ele pode substituir o <xref:System.Web.UI.Adapters.ControlAdapter.LoadAdapterControlState%2A> e <xref:System.Web.UI.Adapters.ControlAdapter.SaveAdapterControlState%2A> métodos.  
+  
+ Talvez seja necessário um adaptador manter informações de estado do controle quando não há recursos que precisam ter o estado mantido entre solicitações, independentemente do estado do controle associado. Por exemplo, um controle composto consiste em uma exibição textual grande e um grupo de <xref:System.Web.UI.WebControls.RadioButton> controles podem processar como uma única exibição em navegadores de área de trabalho do computador. Em outros navegadores, ele pode dividir seu processamento — um modo de exibição para a exibição textual e outro para o grupo de botões de opção. O adaptador precisa manter suas informações de destino específico sobre a exibição ativa no momento.  
+  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.LoadAdapterControlState%2A> método é chamado imediatamente após o <xref:System.Web.UI.Control.LoadControlState%2A?displayProperty=nameWithType> método, no `LoadState` estágio do ciclo de vida. O estado de controle do adaptador é separada e além do estado de controle do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAdapterViewState">
+      <MemberSignature Language="C#" Value="protected virtual void LoadAdapterViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void LoadAdapterViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.LoadAdapterViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um <see cref="T:System.Object" /> que contém as informações de estado de exibição do adaptador como um <see cref="T:System.Web.UI.StateBag" />.</param>
+        <summary>Carrega informações de estado de exibição de adaptador que foi salvo pelo <see cref="M:System.Web.UI.Adapters.ControlAdapter.SaveAdapterViewState" /> durante uma solicitação anterior para a página em que reside o controle associado a este adaptador de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um adaptador precisa manter suas informações de estado de exibição, pode anular o <xref:System.Web.UI.Adapters.ControlAdapter.LoadAdapterViewState%2A> e <xref:System.Web.UI.Adapters.ControlAdapter.SaveAdapterViewState%2A> métodos.  
+  
+ Precisa de um adaptador manter informações de estado de exibição quando há dados que devem ser mantidos nas solicitações, independentemente do estado de exibição do controle associado. Por exemplo, um controle de grade em navegadores de desktop compatíveis pode processar como uma única exibição de linhas e colunas de valores. Em outros navegadores, ele pode dividir seu processamento em várias exibições separados, como uma lista de linhas e detalhes de uma única linha. O adaptador seria necessário manter os dados para os modos de exibição que não estão atualmente ativos em estado de exibição.  
+  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.LoadAdapterViewState%2A> método é chamado imediatamente antes do <xref:System.Web.UI.Control.LoadViewState%2A?displayProperty=nameWithType> método o `LoadState` estágio do ciclo de vida. O estado de exibição do adaptador é separada e além do estado de exibição do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected virtual void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Substitui o <see cref="M:System.Web.UI.Control.OnInit(System.EventArgs)" /> método para o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver um adaptador conectado a um <xref:System.Web.UI.Control> objeto e o <xref:System.Web.UI.Adapters.ControlAdapter.OnInit%2A> método for substituído, o método de substituição é chamado em vez do <xref:System.Web.UI.Control.OnInit%2A?displayProperty=nameWithType> método.  
+  
+ Substituir <xref:System.Web.UI.Adapters.ControlAdapter.OnInit%2A> para executar o processamento de destino específico no `Initialize` estágio do ciclo de vida do controle. Normalmente, essas são funções que são executadas quando um controle é criado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um adaptador de controle personalizado do derivado de <xref:System.Web.UI.Adapters.ControlAdapter> classe. Em seguida, substitui o <xref:System.Web.UI.Adapters.ControlAdapter.OnInit%2A> método para definir uma propriedade para o controle associado e chamar o método base para concluir a inicialização do controle.  
+  
+ [!code-cpp[ControlAdapter_OnInit#1](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlAdapter_OnInit/CPP/controladapter_oninit.cpp#1)]
+ [!code-csharp[ControlAdapter_OnInit#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlAdapter_OnInit/CS/controladapter_oninit.cs#1)]
+ [!code-vb[ControlAdapter_OnInit#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlAdapter_OnInit/VB/controladapter_oninit.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> classe e as substituições de adaptador de <see cref="M:System.Web.UI.Adapters.ControlAdapter.OnInit(System.EventArgs)" /> método, o adaptador deve chamar o método de classe base correspondente, que por sua vez chama o <see cref="M:System.Web.UI.Control.OnInit(System.EventArgs)" /> método. Se o <see cref="M:System.Web.UI.Control.OnInit(System.EventArgs)" /> método não for chamado, o <see cref="E:System.Web.UI.Control.Init" /> evento não será gerado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Substitui o <see cref="M:System.Web.UI.Control.OnLoad(System.EventArgs)" /> método para o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver um adaptador conectado a um <xref:System.Web.UI.Control> objeto e o <xref:System.Web.UI.Adapters.ControlAdapter.OnLoad%2A> método for substituído, o método de substituição é chamado em vez do <xref:System.Web.UI.Control.OnLoad%2A?displayProperty=nameWithType> método.  
+  
+ Substituir o <xref:System.Web.UI.Adapters.ControlAdapter.OnLoad%2A> método para executar o processamento de destino específico no `Load` estágio do ciclo de vida do controle. Normalmente, essas são funções que devem ser executadas para cada solicitação de cliente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> classe e as substituições de adaptador de <see cref="M:System.Web.UI.Adapters.ControlAdapter.OnLoad(System.EventArgs)" /> método, o adaptador deve chamar o método de classe base correspondente, que por sua vez chama o <see cref="M:System.Web.UI.Control.OnLoad(System.EventArgs)" /> método. Se <see cref="M:System.Web.UI.Control.OnLoad(System.EventArgs)" /> não for chamado, o <see cref="E:System.Web.UI.Control.Load" /> evento não será gerado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected virtual void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Substitui o <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" /> método para o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver um adaptador conectado a um <xref:System.Web.UI.Control> objeto e o <xref:System.Web.UI.Adapters.ControlAdapter.OnPreRender%2A> método for substituído, o método de substituição é chamado em vez do <xref:System.Web.UI.Control.OnPreRender%2A?displayProperty=nameWithType> método.  
+  
+ Substituir o <xref:System.Web.UI.Adapters.ControlAdapter.OnPreRender%2A> método para executar o processamento de destino específico no `PreRender` estágio do ciclo de vida do controle. Normalmente, essas são funções que deve preceder imediatamente a renderização de saída do controle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> classe e as substituições de adaptador de <see cref="M:System.Web.UI.Adapters.ControlAdapter.OnPreRender(System.EventArgs)" /> método, o adaptador deve chamar o método de classe base correspondente, que por sua vez chama o <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" /> método. Se o <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" /> método não for chamado, o <see cref="E:System.Web.UI.Control.PreRender" /> evento não será gerado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnload">
+      <MemberSignature Language="C#" Value="protected virtual void OnUnload (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnUnload(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.OnUnload(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Substitui o <see cref="M:System.Web.UI.Control.OnUnload(System.EventArgs)" /> método para o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver um adaptador conectado a um <xref:System.Web.UI.Control> objeto e o <xref:System.Web.UI.Adapters.ControlAdapter.OnUnload%2A> método for substituído, o método de substituição é chamado em vez do <xref:System.Web.UI.Control.OnUnload%2A?displayProperty=nameWithType> método.  
+  
+ Substituir o <xref:System.Web.UI.Adapters.ControlAdapter.OnUnload%2A> método para fazer o processamento de destino específico no `Unload` estágio do ciclo de vida do controle. Normalmente, essas são funções de limpeza que precedem o descarte do controle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> classe e as substituições de adaptador de <see cref="M:System.Web.UI.Adapters.ControlAdapter.OnUnload(System.EventArgs)" /> método, o adaptador deve chamar o método de classe base correspondente, que por sua vez chama o <see cref="M:System.Web.UI.Control.OnUnload(System.EventArgs)" /> método. Se <see cref="M:System.Web.UI.Control.OnUnload(System.EventArgs)" /> não for chamado, o <see cref="E:System.Web.UI.Control.Unload" /> evento não será gerado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Page Page { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Page Page" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Adapters.ControlAdapter.Page" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Page</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para a página em que reside o controle associado a esse adaptador.</summary>
+        <value>Um <see cref="T:System.Web.UI.Page" /> que fornece acesso à instância de página em que o controle associado está localizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.Page%2A> propriedade fornece acesso para o <xref:System.Web.UI.Page?displayProperty=nameWithType> objeto em que o controle está localizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageAdapter">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Adapters.PageAdapter PageAdapter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Adapters.PageAdapter PageAdapter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Adapters.ControlAdapter.PageAdapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Adapters.PageAdapter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o adaptador de página para a página em que reside o controle associado.</summary>
+        <value>Um <see cref="T:System.Web.UI.Adapters.PageAdapter" /> para a página onde o controle associado ao atual <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> está localizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.PageAdapter%2A> propriedade fornece acesso para o <xref:System.Web.UI.Adapters.PageAdapter?displayProperty=nameWithType> de objeto para o <xref:System.Web.UI.Page> objeto onde o <xref:System.Web.UI.Control> objeto associado atual <xref:System.Web.UI.Adapters.ControlAdapter> objeto está localizado.  
+  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.PageAdapter%2A> propriedade pode ser usada para acessar outros itens no nível de adaptador de página, como funções comuns de destino específico que pode aplicar a vários tipos de controle na página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected virtual void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> para renderizar a saída de destino específico.</param>
+        <summary>Gera a marcação de destino específico para o controle ao qual o adaptador de controle está anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Web.UI.Adapters.ControlAdapter.Render%2A> método para gerar marcação de destino específico para enviar para o navegador do cliente. O <xref:System.Web.UI.Adapters.ControlAdapter.Render%2A> método é chamado em vez do <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType> método se um <xref:System.Web.UI.Adapters.ControlAdapter> o objeto é anexado a um <xref:System.Web.UI.Control> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> classe, o <see cref="M:System.Web.UI.Adapters.ControlAdapter.Render(System.Web.UI.HtmlTextWriter)" /> chamadas de método de base de <see cref="M:System.Web.UI.Control.Render(System.Web.UI.HtmlTextWriter)" /> método. Assim, substituições do <see cref="M:System.Web.UI.Adapters.ControlAdapter.Render(System.Web.UI.HtmlTextWriter)" /> método deve chamar o <see cref="M:System.Web.UI.Adapters.ControlAdapter.Render(System.Web.UI.HtmlTextWriter)" /> base método somente se o processamento for além, em vez de em vez do <see cref="M:System.Web.UI.Control.Render(System.Web.UI.HtmlTextWriter)" /> método.  
+  
+ Para um controle composto, o desenvolvedor do adaptador deve garantir que os controles filho são renderizados. Se o <see cref="M:System.Web.UI.Control.Render(System.Web.UI.HtmlTextWriter)" /> método faz com que o filho controles para ser processada, mas não gera marcação, pode ser apropriado para o <see cref="M:System.Web.UI.Adapters.ControlAdapter.Render(System.Web.UI.HtmlTextWriter)" /> método para chamar o método base. Se específicas do destino de renderização de controles filho for necessária, o adaptador deve implementar o <see cref="M:System.Web.UI.Adapters.ControlAdapter.RenderChildren(System.Web.UI.HtmlTextWriter)" /> método e a chamada a <see cref="M:System.Web.UI.Adapters.ControlAdapter.RenderChildren(System.Web.UI.HtmlTextWriter)" /> método do <see cref="M:System.Web.UI.Adapters.ControlAdapter.Render(System.Web.UI.HtmlTextWriter)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderChildren">
+      <MemberSignature Language="C#" Value="protected virtual void RenderChildren (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderChildren(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.RenderChildren(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> para renderizar a saída de destino específico.</param>
+        <summary>Gera a marcação de destino específico para os controles filho em um controle composto para o qual o adaptador de controle está anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Web.UI.Adapters.ControlAdapter.RenderChildren%2A> método quando é necessário gerar marcação de destino específico para o conjunto de controles filho de um controle composto, além disso, a marcação para os controles filho individuais.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando você herda o <see cref="T:System.Web.UI.Adapters.ControlAdapter" /> classe para um controle composto, o desenvolvedor do adaptador deve assegurar que os controles filho são renderizados. Se substituir o adaptador de <see cref="M:System.Web.UI.Adapters.ControlAdapter.RenderChildren(System.Web.UI.HtmlTextWriter)" /> método, ele deve chamar o <see cref="M:System.Web.UI.Adapters.ControlAdapter.RenderChildren(System.Web.UI.HtmlTextWriter)" /> método de uma substituição do <see cref="M:System.Web.UI.Adapters.ControlAdapter.Render(System.Web.UI.HtmlTextWriter)" /> método.  
+  
+ Se o <see cref="M:System.Web.UI.Control.Render(System.Web.UI.HtmlTextWriter)" /> método faz com que o filho controles para ser processada, mas em si não gera marcação, pode ser apropriado para o <see cref="M:System.Web.UI.Adapters.ControlAdapter.Render(System.Web.UI.HtmlTextWriter)" /> método para chamar o método base, que chama o <see cref="M:System.Web.UI.Control.Render(System.Web.UI.HtmlTextWriter)" /> método, em vez de implementar uma substituição para o o <see cref="M:System.Web.UI.Adapters.ControlAdapter.RenderChildren(System.Web.UI.HtmlTextWriter)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAdapterControlState">
+      <MemberSignature Language="C#" Value="protected virtual object SaveAdapterControlState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance object SaveAdapterControlState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.SaveAdapterControlState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva informações de estado para o adaptador de controle de controle.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém informações de estado de controle do adaptador como um <see cref="T:System.Web.UI.StateBag" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estado do controle é a informação de estado essencial necessária até mesmo quando o estado de exibição está desabilitado. Quando um adaptador precisa manter suas informações de estado de controle, ele pode substituir o <xref:System.Web.UI.Adapters.ControlAdapter.SaveAdapterControlState%2A> e <xref:System.Web.UI.Adapters.ControlAdapter.LoadAdapterControlState%2A> métodos.  
+  
+ Talvez seja necessário um adaptador manter informações de estado do controle quando não há recursos que precisam ter o estado mantido entre solicitações, independentemente do estado do controle associado. Por exemplo, um controle composto consiste em uma exibição textual grande e um grupo de <xref:System.Web.UI.WebControls.RadioButton> controles podem processar como uma única exibição em navegadores de área de trabalho do computador. Em outros navegadores, ele pode dividir seu processamento — um modo de exibição para a exibição textual e outro para o grupo de botões de opção. O adaptador precisa manter suas informações de destino específico sobre a exibição ativa no momento.  
+  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.SaveAdapterControlState%2A> método é chamado imediatamente após o <xref:System.Web.UI.Control.SaveControlState%2A?displayProperty=nameWithType> método o `SaveState` estágio do ciclo de vida. O estado de controle do adaptador é separada e além do estado de controle do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAdapterViewState">
+      <MemberSignature Language="C#" Value="protected virtual object SaveAdapterViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance object SaveAdapterViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Adapters.ControlAdapter.SaveAdapterViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva exibe informações de estado para o adaptador de controle.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém as informações de estado de exibição do adaptador como um <see cref="T:System.Web.UI.StateBag" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um adaptador precisa manter suas informações de estado de exibição, pode anular o <xref:System.Web.UI.Adapters.ControlAdapter.SaveAdapterViewState%2A> e <xref:System.Web.UI.Adapters.ControlAdapter.LoadAdapterViewState%2A> métodos.  
+  
+ Precisa de um adaptador manter informações de estado de exibição quando há dados que devem ser mantidos nas solicitações, independentemente do estado de exibição associada do controle. Por exemplo, um controle de grade em navegadores de desktop compatíveis pode processar como uma única exibição de linhas e colunas de valores. Em outros navegadores, ele pode dividir seu processamento em várias exibições separados, como uma lista de linhas e detalhes de uma única linha. O adaptador seria necessário manter os dados para os modos de exibição que não estão atualmente ativos em estado de exibição.  
+  
+ O <xref:System.Web.UI.Adapters.ControlAdapter.SaveAdapterViewState%2A> método é chamado imediatamente antes do <xref:System.Web.UI.Control.SaveViewState%2A?displayProperty=nameWithType> método o `SaveState` estágio do ciclo de vida. O estado de exibição do adaptador é separada e além do estado de exibição do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

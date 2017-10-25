@@ -1,0 +1,319 @@
+<Type Name="SessionStateUtility" FullName="System.Web.SessionState.SessionStateUtility">
+  <TypeSignature Language="C#" Value="public static class SessionStateUtility" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit SessionStateUtility extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.SessionStateUtility" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos auxiliares usados pelos módulos de estado de sessão e o estado de sessão armazenam provedores para gerenciar informações de sessão para um aplicativo ASP.NET. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateUtility> classe fornece métodos auxiliares estáticos que são usados por um módulo de estado de sessão ou um provedor de armazenamento de estado de sessão. Os desenvolvedores de aplicativos não precisará chamar esses métodos de seu código.  
+  
+ A tabela a seguir descreve as maneiras como os métodos de usar o módulo de estado de sessão e o provedor de armazenamento de estado de sessão.  
+  
+|Método|Use|  
+|------------|---------|  
+|Método <xref:System.Web.SessionState.SessionStateUtility.GetHttpSessionStateFromContext%2A>|Pode ser usado por módulos personalizados de estado de sessão para recuperar informações de sessão para uma sessão existente ou criar informações de sessão para uma nova sessão.|  
+|Método <xref:System.Web.SessionState.SessionStateUtility.AddHttpSessionStateToContext%2A>|Chamado pelo módulo de estado de sessão para adicionar os dados da sessão para o atual <xref:System.Web.HttpContext> e disponibilizá-lo no código do aplicativo por meio de <xref:System.Web.HttpContext.Session%2A> propriedade.|  
+|Método <xref:System.Web.SessionState.SessionStateUtility.RemoveHttpSessionStateFromContext%2A>|Chamado pelo módulo de estado da sessão durante o <xref:System.Web.HttpApplication.ReleaseRequestState> ou <xref:System.Web.HttpApplication.EndRequest> eventos no final de uma solicitação, para limpar dados de sessão de atual <xref:System.Web.HttpContext>.|  
+|Método <xref:System.Web.SessionState.SessionStateUtility.GetSessionStaticObjects%2A>|Chamado pelo módulo de estado de sessão para obter uma referência para o <xref:System.Web.SessionState.HttpSessionState.StaticObjects%2A> coleção com base nos objetos definidos no arquivo global. asax. O <xref:System.Web.HttpStaticObjectsCollection> coleção retornada é incluída com os dados da sessão adicionados ao atual <xref:System.Web.HttpContext>.|  
+  
+ Dados de sessão são passados para e recuperados do atual <xref:System.Web.HttpContext> como um <xref:System.Web.SessionState.HttpSessionStateContainer> objeto ou qualquer implementação válida do <xref:System.Web.SessionState.IHttpSessionState> interface.  
+  
+ Para obter informações sobre como implementar um provedor de armazenamento de estado de sessão, consulte [implementando um provedor de armazenamento de estado de sessão](http://msdn.microsoft.com/library/baadfec5-c881-468a-9681-7d8796b05a66).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de módulo de estado de sessão personalizado que armazena informações de sessão na memória usando um <xref:System.Collections.Hashtable>. O módulo usa o <xref:System.Web.SessionState.SessionStateUtility> classe para fazer referência a atual <xref:System.Web.HttpContext> e <xref:System.Web.SessionState.SessionIDManager>, recuperar atual <xref:System.Web.HttpStaticObjectsCollection>e gerar o **Session_OnEnd** evento definido no arquivo global asax para o ASP.NET aplicativo. Este aplicativo não impede que solicitações simultâneas de Web usando o mesmo identificador de sessão.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateUtility#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/CS/mysessionstatemodule.cs#1)]
+ [!code-vb[System.Web.SessionState.SessionStateUtility#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/VB/mysessionstatemodule.vb#1)]  
+  
+ Para usar este módulo de estado de sessão personalizado em um aplicativo ASP.NET, você pode substituir o <xref:System.Web.SessionState.SessionStateModule> referência no arquivo Web. config, conforme mostrado no exemplo a seguir.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <httpModules>  
+      <remove name="Session" />  
+      <add name="Session"  
+      type="Samples.AspNet.SessionState.MySessionStateModule" />  
+    </httpModules>  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddHttpSessionStateToContext">
+      <MemberSignature Language="C#" Value="public static void AddHttpSessionStateToContext (System.Web.HttpContext context, System.Web.SessionState.IHttpSessionState container);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddHttpSessionStateToContext(class System.Web.HttpContext context, class System.Web.SessionState.IHttpSessionState container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateUtility.AddHttpSessionStateToContext(System.Web.HttpContext,System.Web.SessionState.IHttpSessionState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="container" Type="System.Web.SessionState.IHttpSessionState" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> objeto ao qual adicionar o <see cref="T:System.Web.SessionState.HttpSessionState" /> objeto.</param>
+        <param name="container">O <see cref="T:System.Web.SessionState.IHttpSessionState" /> instância de implementação para adicionar ao contexto HTTP especificado.</param>
+        <summary>Aplica-se os dados da sessão para o contexto da solicitação atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateUtility.AddHttpSessionStateToContext%2A> método é usado por um módulo de estado de sessão para aplicar os dados da sessão para a solicitação atual. Isso ocorre durante o <xref:System.Web.HttpApplication.AcquireRequestState> evento no início de uma solicitação. Dados de sessão para a solicitação atual está recuperados de uma sessão existente ou criados para uma nova sessão. Os dados da sessão são encapsulados em uma <xref:System.Web.SessionState.IHttpSessionState> instância de implementação, o que é passada para o <xref:System.Web.SessionState.SessionStateUtility.AddHttpSessionStateToContext%2A> método junto com a atual <xref:System.Web.HttpContext>. Os dados da sessão fornecido, em seguida, ficam disponíveis para o código do aplicativo por meio de <xref:System.Web.HttpContext.Session%2A> propriedade do contexto atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o manipulador para o <xref:System.Web.HttpApplication.AcquireRequestState> eventos em um módulo de estado de sessão personalizado. O módulo personalizado recupera informações de sessão existente ou cria informações de nova sessão e usa o <xref:System.Web.SessionState.SessionStateUtility.AddHttpSessionStateToContext%2A> método para adicioná-lo para o <xref:System.Web.HttpContext> da solicitação atual. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.SessionState.SessionStateUtility> classe.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateUtility#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/CS/mysessionstatemodule.cs#4)]
+ [!code-vb[System.Web.SessionState.SessionStateUtility#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/VB/mysessionstatemodule.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Um <see cref="T:System.Web.SessionState.HttpSessionState" /> do objeto para a sessão atual já foi adicionada ao especificado <paramref name="context" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHttpSessionStateFromContext">
+      <MemberSignature Language="C#" Value="public static System.Web.SessionState.IHttpSessionState GetHttpSessionStateFromContext (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.SessionState.IHttpSessionState GetHttpSessionStateFromContext(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateUtility.GetHttpSessionStateFromContext(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.IHttpSessionState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> da qual recuperar dados da sessão.</param>
+        <summary>Recupera dados da sessão do contexto da solicitação atual.</summary>
+        <returns>Um <see cref="T:System.Web.SessionState.IHttpSessionState" /> instância de implementação preenchida com dados de sessão da solicitação atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateUtility.GetHttpSessionStateFromContext%2A> método pode ser usado por um módulo de estado de sessão para recuperar dados de sessão da solicitação atual. Isso ocorre durante o <xref:System.Web.HttpApplication.ReleaseRequestState> evento no final de uma solicitação. Os dados de sessão retornado, em seguida, podem ser gravados para o armazenamento de dados de sessão. Se a sessão foi abandonada, os dados da sessão podem ser removidos do repositório de dados e <xref:System.Web.HttpContext>e o **Session_OnEnd** evento pode ser executado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o manipulador para o <xref:System.Web.HttpApplication.ReleaseRequestState> eventos em um módulo de estado de sessão personalizado. O módulo recupera dados da sessão de <xref:System.Web.HttpContext> para a solicitação atual usando o <xref:System.Web.SessionState.SessionStateUtility.GetHttpSessionStateFromContext%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.SessionState.SessionStateUtility> classe.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateUtility#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/CS/mysessionstatemodule.cs#5)]
+ [!code-vb[System.Web.SessionState.SessionStateUtility#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/VB/mysessionstatemodule.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode usar o <see cref="M:System.Web.SessionState.SessionStateUtility.RemoveHttpSessionStateFromContext(System.Web.HttpContext)" /> método para remover os dados da sessão do repositório interno e o <see cref="M:System.Web.SessionState.SessionStateUtility.RaiseSessionEnd(System.Web.SessionState.IHttpSessionState,System.Object,System.EventArgs)" /> método para gerar o <see langword="Session_OnEnd" /> evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSessionStaticObjects">
+      <MemberSignature Language="C#" Value="public static System.Web.HttpStaticObjectsCollection GetSessionStaticObjects (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.HttpStaticObjectsCollection GetSessionStaticObjects(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateUtility.GetSessionStaticObjects(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpStaticObjectsCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> da qual obter a coleção de objetos estáticos.</param>
+        <summary>Obtém uma referência à coleção de objetos estáticos para o contexto especificado.</summary>
+        <returns>Um <see cref="T:System.Web.HttpStaticObjectsCollection" /> coleção é preenchida com o <see cref="P:System.Web.SessionState.HttpSessionState.StaticObjects" /> valor da propriedade especificado <see cref="T:System.Web.HttpContext" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateUtility.GetSessionStaticObjects%2A> método é usado para recuperar a coleção de objetos estáticos definidos no arquivo global. asax para o aplicativo ASP.NET. Uma implementação de módulo de estado de sessão fornecerá retornado <xref:System.Web.HttpStaticObjectsCollection> coleção para o <xref:System.Web.SessionState.IHttpSessionState> instância de implementação que é adicionada ao contexto atual usando o <xref:System.Web.SessionState.SessionStateUtility.AddHttpSessionStateToContext%2A> método.  
+  
+ Um <xref:System.Web.SessionState.SessionStateStoreProviderBase> também pode usar o <xref:System.Web.SessionState.SessionStateUtility.GetSessionStaticObjects%2A> método ao criar um <xref:System.Web.SessionState.SessionStateStoreData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o manipulador para o <xref:System.Web.HttpApplication.AcquireRequestState> eventos em um módulo de estado de sessão personalizado. O módulo recupera informações de sessão existente ou cria informações de nova sessão, incluindo o <xref:System.Web.HttpStaticObjectsCollection> coleção retornada do <xref:System.Web.SessionState.SessionStateUtility.GetSessionStaticObjects%2A> método e adiciona-o para o <xref:System.Web.HttpContext> da solicitação atual. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.SessionState.SessionStateUtility> classe.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateUtility#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/CS/mysessionstatemodule.cs#4)]
+ [!code-vb[System.Web.SessionState.SessionStateUtility#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/VB/mysessionstatemodule.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSessionStateReadOnly">
+      <MemberSignature Language="C#" Value="public static bool IsSessionStateReadOnly (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsSessionStateReadOnly(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Especifica o <see cref="T:System.Web.HttpContext" /> para verificar.</param>
+        <summary>Obtém um valor que indica se o estado da sessão é somente leitura especificado <see cref="T:System.Web.HttpContext" />.</summary>
+        <returns>
+          <see langword="true" />Se o estado da sessão é somente leitura; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSessionStateRequired">
+      <MemberSignature Language="C#" Value="public static bool IsSessionStateRequired (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsSessionStateRequired(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Especifica o <see cref="T:System.Web.HttpContext" /> para verificar.</param>
+        <summary>Obtém um valor que indica se o estado da sessão é necessário para especificado <see cref="T:System.Web.HttpContext" />.</summary>
+        <returns>
+          <see langword="true" />Se o estado da sessão é obrigatório. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseSessionEnd">
+      <MemberSignature Language="C#" Value="public static void RaiseSessionEnd (System.Web.SessionState.IHttpSessionState session, object eventSource, EventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RaiseSessionEnd(class System.Web.SessionState.IHttpSessionState session, object eventSource, class System.EventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateUtility.RaiseSessionEnd(System.Web.SessionState.IHttpSessionState,System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="session" Type="System.Web.SessionState.IHttpSessionState" />
+        <Parameter Name="eventSource" Type="System.Object" />
+        <Parameter Name="eventArgs" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="session">O <see cref="T:System.Web.SessionState.IHttpSessionState" /> instância de implementação para a sessão foi encerrada.</param>
+        <param name="eventSource">O objeto de origem do evento para fornecer o <see langword="Session_OnEnd" /> evento.</param>
+        <param name="eventArgs">O <see cref="T:System.EventArgs" /> objeto para fornecer o <see langword="Session_OnEnd" /> evento.</param>
+        <summary>Executa o **Session_OnEnd** evento definido no arquivo global asax para o aplicativo ASP.NET.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateUtility.RaiseSessionEnd%2A> método é usado por um módulo de estado de sessão para executar o **Session_OnEnd** evento definido no arquivo global asax para um aplicativo ASP.NET. Um módulo de estado de sessão chamará o <xref:System.Web.SessionState.SessionStateUtility.RaiseSessionEnd%2A> método quando uma sessão foi abandonada ou se a sessão expirar.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o manipulador para o <xref:System.Web.HttpApplication.ReleaseRequestState> eventos em um módulo de estado de sessão personalizado. Se a sessão foi abandonada, o módulo é executado o **Session_OnEnd** evento definido no arquivo global asax para o aplicativo usando o <xref:System.Web.SessionState.SessionStateUtility.RaiseSessionEnd%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.SessionState.SessionStateUtility> classe.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateUtility#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/CS/mysessionstatemodule.cs#5)]
+ [!code-vb[System.Web.SessionState.SessionStateUtility#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/VB/mysessionstatemodule.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveHttpSessionStateFromContext">
+      <MemberSignature Language="C#" Value="public static void RemoveHttpSessionStateFromContext (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveHttpSessionStateFromContext(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateUtility.RemoveHttpSessionStateFromContext(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> do qual remover os dados da sessão.</param>
+        <summary>Remove os dados da sessão do contexto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateUtility.RemoveHttpSessionStateFromContext%2A> método limpa os dados de sessão especificado <xref:System.Web.HttpContext>. Um módulo de estado de sessão chamará o <xref:System.Web.SessionState.SessionStateUtility.RemoveHttpSessionStateFromContext%2A> método no manipulador para o <xref:System.Web.HttpApplication.ReleaseRequestState> evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o manipulador para o <xref:System.Web.HttpApplication.ReleaseRequestState> eventos em um módulo de estado de sessão personalizado. O manipulador de eventos remove dados da sessão atual <xref:System.Web.HttpContext>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.SessionState.SessionStateUtility> classe.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateUtility#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/CS/mysessionstatemodule.cs#5)]
+ [!code-vb[System.Web.SessionState.SessionStateUtility#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateUtility/VB/mysessionstatemodule.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationSurrogateSelector">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Serialization.ISurrogateSelector SerializationSurrogateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Runtime.Serialization.ISurrogateSelector SerializationSurrogateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.SessionStateUtility.SerializationSurrogateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ISurrogateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um seletor de substitutos de serialização é usado para personalização de serialização de sessão.</summary>
+        <value>Um seletor de substitutos de serialização.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

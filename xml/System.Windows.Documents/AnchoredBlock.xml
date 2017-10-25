@@ -1,0 +1,732 @@
+<Type Name="AnchoredBlock" FullName="System.Windows.Documents.AnchoredBlock">
+  <TypeSignature Language="C#" Value="public abstract class AnchoredBlock : System.Windows.Documents.Inline" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AnchoredBlock extends System.Windows.Documents.Inline" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.AnchoredBlock" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Inline</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Blocks")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Uma classe abstrata que fornece uma base para elementos <see cref="T:System.Windows.Documents.Inline" /> usados para ancorar elementos <see cref="T:System.Windows.Documents.Block" /> ao conteúdo de fluxo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AnchoredBlock (System.Windows.Documents.Block block, System.Windows.Documents.TextPointer insertionPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Block block, class System.Windows.Documents.TextPointer insertionPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AnchoredBlock.#ctor(System.Windows.Documents.Block,System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="block" Type="System.Windows.Documents.Block" />
+        <Parameter Name="insertionPosition" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="block">Um <see cref="T:System.Windows.Documents.Block" /> especificando o conteúdo inicial do novo elemento de objeto.  Esse parâmetro pode ser <see langword="null" />, caso em que nenhum <see cref="T:System.Windows.Documents.Block" /> é inserido.</param>
+        <param name="insertionPosition">Um <see cref="T:System.Windows.Documents.TextPointer" /> especificando uma posição de inserção no qual inserir o elemento depois que ele é criado, ou <see langword="null" /> para nenhuma inserção automática.</param>
+        <summary>Quando chamado por uma classe derivada, levando a especificada de valores de classe de base inicializa <see cref="T:System.Windows.Documents.Block" /> objeto como o conteúdo inicial do novo descendente do <see cref="T:System.Windows.Documents.AnchoredBlock" />e um <see cref="T:System.Windows.Documents.TextPointer" /> especificando uma posição de inserção para o novo <see cref="T:System.Windows.Documents.AnchoredBlock" /> descendente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Blocks">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.BlockCollection Blocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.BlockCollection Blocks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AnchoredBlock.Blocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.BlockCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Documents.BlockCollection" /> que contém o nível superior <see cref="T:System.Windows.Documents.Block" /> elementos que compõem o conteúdo do elemento.</summary>
+        <value>Um <see cref="T:System.Windows.Documents.BlockCollection" /> que contém o <see cref="T:System.Windows.Documents.Block" /> elementos que compõem o conteúdo do elemento.  
+  
+ Esta propriedade não tem valor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush BorderBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush BorderBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AnchoredBlock.BorderBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Media.Brush" /> para usar ao pintar a borda do elemento.</summary>
+        <value>O pincel usado para aplicar a borda do elemento.  
+  
+ O valor padrão é um **nulo** pincel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma tabela de amostras que mostram as cores do pincel predefinidos disponíveis, consulte <xref:System.Windows.Media.Brushes>.  
+  
+<a name="dependencyPropertyInfo_BorderBrush"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.AnchoredBlock.BorderBrushProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.BorderBrush%2A> atributo de um elemento (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_BordersXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_bordersxaml)]  
+  
+ A figura a seguir mostra como esse exemplo é renderizado.  
+  
+ ![Captura de tela: Azul, 1 &#47; 4 polegadas borda em torno do bloco](~/add/media/block-borders.png "captura de tela: borda azul, de 1/4 polegadas em torno do bloco")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.BorderBrush%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_Borders](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_borders)]
+ [!code-vb[BlockSnippets#_Block_Borders](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_borders)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.AnchoredBlock.BorderBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.AnchoredBlock.BorderBrush" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThickness">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness BorderThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness BorderThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AnchoredBlock.BorderThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a espessura da borda do elemento.</summary>
+        <value>Uma estrutura <see cref="T:System.Windows.Thickness" /> que especifica a quantidade de borda a ser aplicada, em pixels independentes de dispositivo.  
+  
+ O valor padrão é uma espessura uniforme zero (**0,0**).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_BorderThickness"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object BorderThickness="uniformThickness"/>  
+- or -  
+<object BorderThickness="independentThickness"/>  
+- or -  
+<object BorderThickness="qualifiedUniformThickness"/>  
+- or -  
+<object BorderThickness="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_BorderThickness"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *uniformThickness*  
+ Representação de uma única cadeia de caracteres <xref:System.Double> valor a ser aplicado uniformemente para todas as dimensões de espessura de quatro.  Por exemplo, um valor de `"10"` é equivalente a um valor de `"10,10,10,10"`.  Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *independentThickness*  
+ Representação de quatro ordenados de cadeia de caracteres <xref:System.Double> valores correspondentes para dimensões de espessura independente para esquerda, superior, direita e inferior, nessa ordem.  Os quatro valores devem ser separados por vírgulas. não são permitidos espaços.  Por exemplo, "5,10,15,20" resulta em 5 pixels da borda à esquerda do conteúdo, 10 pixels da borda acima conteúdo, 15 pixels da borda direita do conteúdo e 20 pixels da borda abaixo do conteúdo.  
+  
+ *qualifiedUniformThickness*  
+ Um valor descrito por *uniformThickness* seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1in"` fornece borda uniforme de 1 polegada em todas as direções.  
+  
+ *qualifiedIndependentThickness*  
+ Um valor descrito por *independentThickness*, com cada valor independente seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1.5in,0.8in,1.5in,0.8in"`.  Especificadores de unidade podem ser combinados ou omitidos de um ou mais valores.  
+  
+<a name="dependencyPropertyInfo_BorderThickness"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.AnchoredBlock.BorderThicknessProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.BorderThickness%2A> atributo de um <xref:System.Windows.Documents.Block> elemento (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_BordersXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_bordersxaml)]  
+  
+ A figura a seguir mostra como esse exemplo é renderizado.  
+  
+ ![Captura de tela: Azul, 1 &#47; 4 polegadas borda em torno do bloco](~/add/media/block-borders.png "captura de tela: borda azul, de 1/4 polegadas em torno do bloco")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.BorderThickness%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_Borders](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_borders)]
+ [!code-vb[BlockSnippets#_Block_Borders](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_borders)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThicknessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderThicknessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderThicknessProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.AnchoredBlock.BorderThicknessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.AnchoredBlock.BorderThickness" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeight">
+      <MemberSignature Language="C#" Value="public double LineHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LineHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AnchoredBlock.LineHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura de cada linha de conteúdo.</summary>
+        <value>Um valor double especificando a altura da linha em pixels independentes de dispositivo.  <see cref="P:System.Windows.Documents.AnchoredBlock.LineHeight" />deve ser maior ou igual a <c>0.0034</c> e igual ou menor, em seguida, <c>160000</c>.  
+  
+ Um valor de <see cref="F:System.Double.NaN" /> (equivalente a um valor de atributo "<c>automática</c>") faz com que a altura da linha é determinada automaticamente das características da fonte atual.  
+  
+ O valor padrão é <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A alteração desse valor não altera a altura do texto associado; em vez disso, ele altera a altura da linha que contém o texto.  
+  
+ Além dessa propriedade, o layout de linhas em uma <xref:System.Windows.Documents.AnchoredBlock> é afetado pelo seu <xref:System.Windows.Documents.AnchoredBlock.LineStackingStrategy%2A> propriedade.  
+  
+<a name="xamlAttributeUsage_LineHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object LineHeight="double"/>  
+- or -  
+<object LineHeight="qualifiedDouble"/>  
+- or -  
+<object LineHeight="Auto"/>  
+```  
+  
+<a name="xamlValues_LineHeight"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *double*  
+ Representação de cadeia de caracteres um <xref:System.Double> valor maior que ou igual a `0.0034` mas igual a ou menor que `160000`. Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *qualifiedDouble*  
+ Um *duplo* valor conforme descrito acima, (com exceção da `Auto`) seguido por um dos seguintes especificadores de unidade: `px`, `in`, `cm`, `pt`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ `cm`centímetros; 1cm==(96/2.54) px  
+  
+ `pt`pontos; 1pt==(96/72) px  
+  
+ Auto  
+ Faz com que a altura da linha é determinada automaticamente das características da fonte atual.  Equivalente a um valor da propriedade <xref:System.Double.NaN>.  
+  
+<a name="dependencyPropertyInfo_LineHeight"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.AnchoredBlock.LineHeightProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.AnchoredBlock.LineHeight%2A> atributo de um <xref:System.Windows.Documents.Block> elemento.  
+  
+ [!code-xaml[BlockSnippets#_Block_LineHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_lineheightxaml)]  
+  
+ A figura a seguir mostra como o exemplo anterior é renderizado.  
+  
+ ![Captura de tela: FlowDocument LineHeight](~/add/media/flowdocument-lineheight.png "captura de tela: LineHeight de FlowDocument")  
+  
+ A figura a seguir mostra como o mesmo exemplo renderizado com a configuração padrão de <xref:System.Windows.Documents.AnchoredBlock.LineHeight%2A> = <xref:System.Double.NaN>.  
+  
+ ![Captura de tela: LineHeight de FlowDocument padrão](~/add/media/flowdocument-lineheightdefault.png "captura de tela: LineHeight de FlowDocument padrão")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.AnchoredBlock.LineHeight%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_LineHeight](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_lineheight)]
+ [!code-vb[BlockSnippets#_Block_LineHeight](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_lineheight)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Gerado se for feita uma tentativa de definir <see cref="P:System.Windows.Controls.TextBlock.LineHeight" /> para um valor não-positivo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.AnchoredBlock.LineHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.AnchoredBlock.LineHeight" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategy">
+      <MemberSignature Language="C#" Value="public System.Windows.LineStackingStrategy LineStackingStrategy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LineStackingStrategy LineStackingStrategy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AnchoredBlock.LineStackingStrategy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineStackingStrategy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o mecanismo pelo qual uma caixa de linha é determinada para cada linha de texto dentro do elemento de texto.</summary>
+        <value>O mecanismo pelo qual uma caixa de linha é determinada para cada linha de texto dentro do elemento de texto. O valor padrão é <see cref="F:System.Windows.LineStackingStrategy.MaxHeight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_LineStackingStrategyProperty"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.AnchoredBlock.LineStackingStrategyProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> propriedade para determinar como as caixas de linha são criadas para as linhas de texto de um <xref:System.Windows.Controls.TextBlock>. A primeira <xref:System.Windows.Controls.TextBlock> tem um <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> valor <xref:System.Windows.LineStackingStrategy.MaxHeight> e a segunda <xref:System.Windows.Controls.TextBlock> tem um valor de <xref:System.Windows.LineStackingStrategy.BlockLineHeight>.  
+  
+ [!code-xaml[FlowMiscSnippets_snip#LineStackingStrategyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/linestackingstrategyexample.xaml#linestackingstrategyexamplewholepage)]  
+  
+ A ilustração a seguir mostra o resultado do código acima.  
+  
+ ![Captura de tela: Comparar valores LineStackingStrategy](~/add/media/flow-linestackingstrategy.gif "captura de tela: LineStackingStrategy comparar valores")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineStackingStrategyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineStackingStrategyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.AnchoredBlock.LineStackingStrategyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.AnchoredBlock.LineStackingStrategy" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Margin">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness Margin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness Margin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AnchoredBlock.Margin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a espessura da margem do elemento.</summary>
+        <value>Um <see cref="T:System.Windows.Thickness" /> estrutura Especifica a quantidade de margem para aplicar, em pixels independentes de dispositivo.  
+  
+ O valor padrão é uma espessura uniforme zero (**0,0**).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.ListItem.Margin%2A>é o espaço de buffer que está fora da área de conteúdo de um elemento, entre as bordas da área de conteúdo do elemento e as bordas do elemento pai.  Compare com <xref:System.Windows.Documents.ListItem.Padding%2A>, que é o espaço de buffer que fica dentro de área de conteúdo de um elemento, entre o conteúdo do elemento e a borda interna do elemento.  
+  
+<a name="xamlAttributeUsage_Margin"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Margin="uniformThickness"/>  
+- or -  
+<object Margin="independentThickness"/>  
+- or -  
+<object Margin="qualifiedUniformThickness"/>  
+- or -  
+<object Margin="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_Margin"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *uniformThickness*  
+ Representação de uma única cadeia de caracteres <xref:System.Double> valor a ser aplicado uniformemente para todas as dimensões de espessura de quatro.  Por exemplo, um valor de `"10"` é equivalente a um valor de `"10,10,10,10"`.  Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *independentThickness*  
+ Representação de quatro ordenados de cadeia de caracteres <xref:System.Double> valores correspondentes para dimensões de espessura independente para esquerda, superior, direita e inferior, nessa ordem.  Os quatro valores devem ser separados por vírgulas. não são permitidos espaços.  Por exemplo, "5,10,15,20" resulta em 5 pixels da margem à esquerda do conteúdo, 10 pixels da margem acima conteúdo, 15 pixels da margem à direita do conteúdo e 20 pixels da margem abaixo do conteúdo.  
+  
+ *qualifiedUniformThickness*  
+ Um valor descrito por *uniformThickness* seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1in"` fornece margem uniforme de 1 polegada em todas as direções.  
+  
+ *qualifiedIndependentThickness*  
+ Um valor descrito por *independentThickness*, com cada valor independente seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1.5in,0.8in,1.5in,0.8in"`.  Especificadores de unidade podem ser combinados ou omitidos de um ou mais valores.  
+  
+<a name="dependencyPropertyInfo_Margin"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.AnchoredBlock.MarginProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.AnchoredBlock.Margin%2A> atributo de um <xref:System.Windows.Documents.Block> elemento (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_MarginPaddingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_marginpaddingxaml)]  
+  
+ A figura a seguir mostra como esse exemplo é renderizado.  Cores e espessuras exageradas são usadas para fins ilustrativos.  
+  
+ ![Captura de tela: Parágrafos com preenchimento e margens](~/add/media/block-marginpadding.png "captura de tela: parágrafos com preenchimento e margens")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.AnchoredBlock.Margin%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_MarginPadding](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_marginpadding)]
+ [!code-vb[BlockSnippets#_Block_MarginPadding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_marginpadding)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarginProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MarginProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MarginProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.AnchoredBlock.MarginProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.AnchoredBlock.Margin" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AnchoredBlock.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a espessura do preenchimento do elemento.</summary>
+        <value>Uma estrutura <see cref="T:System.Windows.Thickness" /> que especifica a quantidade de preenchimento a aplicar, em pixels independentes de dispositivo.  
+  
+ O valor padrão é uma espessura uniforme zero (**0,0**).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.ListItem.Padding%2A>é o espaço de buffer que está dentro da área de conteúdo de um elemento, entre o conteúdo do elemento e a borda interna do elemento.  Compare com <xref:System.Windows.Documents.ListItem.Margin%2A>, que é o espaço de buffer que está fora da área de conteúdo de um elemento, entre as bordas da área de conteúdo do elemento e as bordas do elemento pai.  
+  
+<a name="xamlAttributeUsage_Padding"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Padding="uniformThickness"/>  
+- or -  
+<object Padding="independentThickness"/>  
+- or -  
+<object Padding="qualifiedUniformThickness"/>  
+- or -  
+<object Padding="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_Padding"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *uniformThickness*  
+ Representação de uma única cadeia de caracteres <xref:System.Double> valor a ser aplicado uniformemente para todas as dimensões de espessura de quatro.  Por exemplo, um valor de `"10"` é equivalente a um valor de `"10,10,10,10"`.  Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *independentThickness*  
+ Representação de quatro ordenados de cadeia de caracteres <xref:System.Double> valores correspondentes para dimensões de espessura independente para esquerda, superior, direita e inferior, nessa ordem.  Os quatro valores devem ser separados por vírgulas. não são permitidos espaços.  Por exemplo, "5,10,15,20" resulta em 5 pixels de preenchimento à esquerda do conteúdo, 10 pixels de preenchimento acima de conteúdo, 15 pixels de preenchimento à direita do conteúdo e 20 pixels de preenchimento abaixo do conteúdo.  
+  
+ *qualifiedUniformThickness*  
+ Um valor descrito por *uniformThickness* seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1in"` fornece preenchimento uniforme de 1 polegada em todas as direções.  
+  
+ *qualifiedIndependentThickness*  
+ Um valor descrito por *independentThickness*, com cada valor independente seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1.5in,0.8in,1.5in,0.8in"`.  Especificadores de unidade podem ser combinados ou omitidos de um ou mais valores.  
+  
+<a name="dependencyPropertyInfo_Padding"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.AnchoredBlock.PaddingProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.AnchoredBlock.Padding%2A> atributo de um <xref:System.Windows.Documents.Block> elemento (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_MarginPaddingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_marginpaddingxaml)]  
+  
+ A figura a seguir mostra como esse exemplo é renderizado.  Cores e espessuras exageradas são usadas para fins ilustrativos.  
+  
+ ![Captura de tela: Parágrafos com preenchimento e margens](~/add/media/block-marginpadding.png "captura de tela: parágrafos com preenchimento e margens")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.AnchoredBlock.Padding%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_MarginPadding](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_marginpadding)]
+ [!code-vb[BlockSnippets#_Block_MarginPadding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_marginpadding)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PaddingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PaddingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.AnchoredBlock.PaddingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.AnchoredBlock.Padding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeBlocks">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeBlocks (System.Windows.Markup.XamlDesignerSerializationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeBlocks(class System.Windows.Markup.XamlDesignerSerializationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.AnchoredBlock.ShouldSerializeBlocks(System.Windows.Markup.XamlDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Windows.Markup.XamlDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Um objeto de Gerenciador de serviço de serialização para este objeto.</param>
+        <summary>Retorna um valor que indica se o valor efetivo do <see cref="P:System.Windows.Documents.AnchoredBlock.Blocks" /> propriedade deve ser serializada durante a serialização de um objeto derivando de <see cref="T:System.Windows.Documents.AnchoredBlock" />.</summary>
+        <returns>**True** se o <see cref="P:System.Windows.Documents.AnchoredBlock.Blocks" /> propriedade deve ser serializado; caso contrário, **false**.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NullReferenceException">Acionado quando <paramref name="manager" /> é **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.TextAlignment TextAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.TextAlignment TextAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.AnchoredBlock.TextAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o alinhamento horizontal do conteúdo de texto.</summary>
+        <value>Um membro das enumerações <see cref="T:System.Windows.TextAlignment" /> que especifica o alinhamento desejado.  
+  
+ O valor padrão é <see cref="F:System.Windows.TextAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_TextAlignment"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.AnchoredBlock.TextAlignmentProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.AnchoredBlock.TextAlignment%2A> atributo de um <xref:System.Windows.Documents.Block> elemento.  
+  
+ [!code-xaml[BlockSnippets#_Block_TextAlignmentXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_textalignmentxaml)]  
+  
+ A figura a seguir mostra como o exemplo anterior é renderizado com **esquerda** alinhamento de texto (o padrão).  
+  
+ ![Captura de tela: Valor Left da propriedade TextAlign](~/add/media/flowdoc-textalign-left.png "captura de tela: valor da propriedade TextAlign da esquerda")  
+  
+ A figura a seguir mostra como o mesmo exemplo renderiza com **direita** alinhamento de texto.  
+  
+ ![Captura de tela: Valor TextAlign direita](~/add/media/flowdoc-textalign-right.png "captura de tela: valor da direita TextAlign")  
+  
+ A figura a seguir mostra como o mesmo exemplo renderiza com **Center** alinhamento de texto.  
+  
+ ![Captura de tela: Valor Center da propriedade TextAlign](~/add/media/flowdoc-textalign-center.png "captura de tela: valor da propriedade TextAlign do Centro")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.AnchoredBlock.TextAlignment%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_TextAlignment](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_textalignment)]
+ [!code-vb[BlockSnippets#_Block_TextAlignment](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_textalignment)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignmentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextAlignmentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextAlignmentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.AnchoredBlock.TextAlignmentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.AnchoredBlock.TextAlignment" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

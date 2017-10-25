@@ -1,0 +1,101 @@
+<Type Name="ConfigurationLocation" FullName="System.Configuration.ConfigurationLocation">
+  <TypeSignature Language="C#" Value="public class ConfigurationLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConfigurationLocation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationLocation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um elemento <see langword="location" /> em um arquivo de configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância do <xref:System.Configuration.ConfigurationLocation> classe representa um único `location` elemento dentro de um arquivo de configuração. Locais são usados para especificar as configurações que se aplicam somente a um recurso especificado, como uma página específica, um arquivo ou um subdiretório, dentro de seu aplicativo Web. Use o <xref:System.Configuration.ConfigurationLocation> classe para obter o caminho e o <xref:System.Configuration.Configuration> objeto aplica-se para o recurso especificado.  
+  
+   
+  
+## Examples  
+ No seguinte exemplo de código, a configuração da Web para o aplicativo `MySampleApp` é carregado, e, em seguida, os locais definidos na configuração são exibidos.  
+  
+ [!code-csharp[ConfigurationLocationCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ConfigurationLocationCollection/CS/sample.cs#1)]
+ [!code-vb[ConfigurationLocationCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ConfigurationLocationCollection/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OpenConfiguration">
+      <MemberSignature Language="C#" Value="public System.Configuration.Configuration OpenConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Configuration.Configuration OpenConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationLocation.OpenConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de um objeto de configuração.</summary>
+        <returns>Um objeto de configuração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationLocation.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho relativo para o recurso cujas configurações são representadas por este objeto <see cref="T:System.Configuration.ConfigurationLocation" />.</summary>
+        <value>O caminho relativo para o recurso cujas configurações são representadas por este <see cref="T:System.Configuration.ConfigurationLocation" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O caminho retornado pelo <xref:System.Configuration.ConfigurationLocation.Path%2A> propriedade é relativo à raiz do site.  
+  
+> [!NOTE]
+>  O <xref:System.Configuration.ConfigurationLocation.Path%2A> propriedade pode conter uma lista delimitada por vírgulas de caminhos para o qual a configuração se aplica.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Configuration.ConfigurationLocation.Path%2A> propriedade e exibir o valor retornado para o console.  
+  
+ [!code-csharp[ConfigurationLocationCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ConfigurationLocationCollection/CS/sample.cs#2)]
+ [!code-vb[ConfigurationLocationCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ConfigurationLocationCollection/VB/sample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

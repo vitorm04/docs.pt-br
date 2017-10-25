@@ -1,0 +1,87 @@
+<Type Name="BookmarkOptions" FullName="System.Activities.BookmarkOptions">
+  <TypeSignature Language="C#" Value="public enum BookmarkOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BookmarkOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.BookmarkOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as opções para um <see cref="T:System.Activities.Bookmark" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MultipleResume">
+      <MemberSignature Language="C#" Value="MultipleResume" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.BookmarkOptions MultipleResume = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.BookmarkOptions.MultipleResume" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.BookmarkOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.Activities.Bookmark" /> que pode ser reiniciado várias vezes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o tempo de execução do fluxo de trabalho remove um indicador pendente de sua tabela de indicadores ao retomar o indicador. No entanto se o indicador é especificado como MultipleResume, o indicador não é removido da tabela, e o mesmo indicador pode ser reiniciado várias vezes. É um exemplo de uso de MultipleResume por atividades de loop, como <xref:System.Activities.While>, <xref:System.Activities.ForEach%601>, e <xref:System.Activities.Flowchart>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NonBlocking">
+      <MemberSignature Language="C#" Value="NonBlocking" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.BookmarkOptions NonBlocking = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.BookmarkOptions.NonBlocking" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.BookmarkOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.Activities.Bookmark" /> que não bloqueia o fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o tempo de execução do fluxo de trabalho não considerará uma atividade para concluírem a execução se ele tiver pendentes indicadores. No entanto, se um indicador é especificado como NonBlocking no momento da criação, o tempo de execução do fluxo de trabalho permite que a atividade para concluir a execução mesmo que ele tenha pendente NonBlocking indicadores, desde que ele não tem nenhum outro trabalho pendente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.BookmarkOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.BookmarkOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.BookmarkOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Padrão <see cref="T:System.Activities.Bookmark" /> opções,</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

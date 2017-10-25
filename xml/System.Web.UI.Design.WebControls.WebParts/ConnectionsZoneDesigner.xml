@@ -1,0 +1,151 @@
+<Type Name="ConnectionsZoneDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner">
+  <TypeSignature Language="C#" Value="public class ConnectionsZoneDesigner : System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectionsZoneDesigner extends System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de tempo de design para <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> controles.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner>Fornece uma representação de tempo de design de um <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle com um menu para acessar o <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.AutoFormats%2A> coleção e o <xref:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner.ViewInBrowseMode%2A> propriedade para a conveniência de desenvolvedor de página. É o designer de zona única que não oferece suporte a regiões de designer. Isso ocorre porque <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controles usa links para criar conexões, em vez de uma interface de usuário de arrastar e soltar (IU).  
+  
+ O <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.AutoFormats%2A> coleção e o <xref:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner.ViewInBrowseMode%2A> propriedade aparecem no menu de verbos de <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle. <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.AutoFormats%2A>, quando selecionado, fornece uma seleção de esquemas de cores. O <xref:System.Web.UI.Design.WebControls.WebParts.ToolZoneDesigner.ViewInBrowseMode%2A> caixa de seleção, quando selecionado, exibe o conteúdo do controle como apareceria no navegador, o controle estará vazio até que uma conexão é feita.  
+  
+ Você pode herdar de <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner> para dar suporte a um personalizado <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controlar como com qualquer outro controle de designer. Você pode substituir o <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.GetDesignTimeHtml%2A> método para alterar a marcação que renderiza o controle. Você também pode substituir o <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.AutoFormats%2A> coleção para adicionar um <xref:System.Web.UI.Design.DesignerAutoFormatCollection> com um esquema personalizado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como ocultar propriedades adicionais de um personalizado <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle substituindo o <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.PreFilterProperties%2A> método.  
+  
+ [!code-csharp[WebPartsDesigners_ConnectionsZoneDesigner_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebPartsDesigners_ConnectionsZoneDesigner_Overview/CS/ConnectionsZoneSample.cs#1)]
+ [!code-vb[WebPartsDesigners_ConnectionsZoneDesigner_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebPartsDesigners_ConnectionsZoneDesigner_Overview/vb/connectionszonesample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionsZoneDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFormats">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerAutoFormatCollection AutoFormats" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.AutoFormats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerAutoFormatCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de automático predefinida formatação esquemas para exibir o **AutoFormatação** caixa de diálogo para o controle associado em tempo de design.</summary>
+        <value>Um modelo predefinido <see cref="T:System.Web.UI.Design.DesignerAutoFormatCollection" /> com um esquema de ConnectionZone padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.AutoFormats%2A> propriedade substitui a sua implementação base para obter uma coleção predefinida que é específica para o <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a marcação que é usada para representar o controle em tempo de design.</summary>
+        <returns>Um <see cref="T:System.String" /> que é a marcação para representar o controle em tempo de design.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> controle associado com o designer.</param>
+        <summary>Associa o designer especificado <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Um <see cref="T:System.Collections.IDictionary" /> do conjunto de propriedades associadas com o controle.</param>
+        <summary>Oculta um grupo predefinido de propriedades em tempo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.PreFilterProperties%2A> método substitui o método pai para ocultar o <xref:System.Web.UI.WebControls.WebParts.WebZone.EmptyZoneTextStyle%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeStyle%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.PartStyle%2A>, e <xref:System.Web.UI.WebControls.WebParts.WebZone.PartTitleStyle%2A> propriedades no designer. Isso ocorre porque as propriedades em questão não são processadas pelo <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controles e são, portanto, não é relevante.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de como substituir o <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner.PreFilterProperties%2A> método, consulte o <xref:System.Web.UI.Design.WebControls.WebParts.ConnectionsZoneDesigner> tópico de visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

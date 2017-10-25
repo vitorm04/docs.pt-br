@@ -1,0 +1,183 @@
+<Type Name="BestFitMappingAttribute" FullName="System.Runtime.InteropServices.BestFitMappingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class BestFitMappingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BestFitMappingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.BestFitMappingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Interface, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Controla se os caracteres Unicode são convertidos em caracteres ANSI correspondentes mais próximos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para um assembly, interface, classe ou estrutura.  
+  
+ Por padrão, o common language runtime converte em caracteres ANSI que qualquer gerenciado caracteres Unicode passados para um método não gerenciado em execução no Windows 98 ou Windows Me. Mapeamento de melhor ajuste permite que o marshaler interoperabilidade selecionar um caractere de fechamento correspondente quando não existe nenhuma correspondência exata. Por exemplo, o marshaler converte o caractere Unicode copyright c para não gerenciados métodos que aceitam caracteres ANSI.  
+  
+> [!CAUTION]
+>  Alguns caracteres não têm uma representação de melhor ajuste; Esses caracteres são chamados não mapeável. Caracteres não mapeável geralmente são convertidos para o padrão '?' Caractere ANSI. Determinados caracteres Unicode são convertidos em caracteres perigosos, como a barra invertida '\\' caractere, que pode alterar inadvertidamente um caminho.  
+  
+ <xref:System.Runtime.InteropServices.BestFitMappingAttribute>fornece dois parâmetros para controlar aspectos de mapeamento de melhor ajuste. Você pode usar o primeiro parâmetro para alternar o mapeamento de melhor ajuste e desativar. O valor padrão é `true`, que permite o mapeamento de melhor ajuste no assembly, interface e níveis de classe. Um atributo aplicado a uma interface ou classe substitui um atributo de nível de assembly. Da mesma forma, você pode habilitar ou desabilitar o mapeamento de melhor ajuste para chamadas de invocação de plataforma usando o <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping?displayProperty=nameWithType> campo. Um valor definido pela plataforma invocar campo substitui todos os níveis de <xref:System.Runtime.InteropServices.BestFitMappingAttribute>.  
+  
+ Você pode usar o segundo parâmetro para gerar uma exceção não mapeável caracteres de controle. O valor padrão para o <xref:System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar> campo é `false`, o tempo de execução de tempo que desativa lançar uma exceção encontra um caractere Unicode que deve ser convertido para o '?' Caractere ANSI. Mesmo se o mapeamento de melhor ajuste é `true`, caracteres não mapeável geram uma exceção quando o <xref:System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar> campo é `true`. Para reforçar a segurança, você pode alternar o primeiro parâmetro para `false` e o segundo parâmetro para `true`. Esta combinação de configurações de parâmetro ativa o mapeamento de melhor ajuste desativado, mas permite que o mecanismo geradoras de exceções como uma precaução de segurança.  
+  
+> [!CAUTION]
+>  Você não pode alterar os valores padrão fornecidos pelo <xref:System.Runtime.InteropServices.BestFitMappingAttribute> ao passar uma matriz gerenciada cujos elementos é caracteres ANSI ou LPSTRs para uma matriz segura não gerenciada. Mapeamento de melhor ajuste está sempre habilitado e nenhuma exceção pode ser lançada. Lembre-se de que essa combinação pode comprometer o modelo de segurança.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como desabilitar o mapeamento de ajuste recomendado e lançar uma exceção durante a conversão de caracteres Unicode para o '?' Caractere ANSI. Configuração <xref:System.Runtime.InteropServices.BestFitMappingAttribute> parâmetros dessa maneira proporciona uma medida adicional de segurança.  
+  
+ [!code-cpp[System.Runtime.InteropServices.BestFitMappingAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.bestfitmappingattribute/cpp/source.cpp#1)]
+ [!code-csharp[System.Runtime.InteropServices.BestFitMappingAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.bestfitmappingattribute/cs/source.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.BestFitMappingAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.bestfitmappingattribute/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BestFitMappingAttribute (bool BestFitMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool BestFitMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.BestFitMappingAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="BestFitMapping" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="BestFitMapping">
+          <see langword="true" />para indicar que o mapeamento de melhor ajuste está ativado. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.BestFitMappingAttribute" /> definido como o valor de classe de <see cref="P:System.Runtime.InteropServices.BestFitMappingAttribute.BestFitMapping" /> propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BestFitMapping">
+      <MemberSignature Language="C#" Value="public bool BestFitMapping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BestFitMapping" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.BestFitMappingAttribute.BestFitMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comportamento de mapeamento de melhor ajuste durante a conversão de caracteres Unicode em caracteres ANSI.</summary>
+        <value>
+          <see langword="true" />Se o mapeamento de melhor ajuste está ativado. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o mapeamento de melhor ajuste é `false` e <xref:System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar> é `true`, todos os caracteres Unicode que exigem conversão em formato ANSI gerará uma exceção ao ser passado para código não gerenciado. Alguns caracteres não mapeável, mesmo quando melhor ajuste mapeamento é `true`. Alguns caracteres não têm uma representação de melhor ajuste; Esses caracteres são chamados não mapeável. Caracteres não mapeável geralmente são convertidos para o padrão '?' Caractere ANSI.  
+  
+> [!CAUTION]
+>  Determinados caracteres Unicode são convertidos em caracteres perigosos, como a barra invertida '\\' caractere, que pode alterar inadvertidamente um caminho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnUnmappableChar">
+      <MemberSignature Language="C#" Value="public bool ThrowOnUnmappableChar;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool ThrowOnUnmappableChar" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita ou desabilita o lançamento de uma exceção em um caractere não mapeável de Unicode que é convertido em um ANSI '?' caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `false`, o <xref:System.Runtime.InteropServices.BestFitMappingAttribute.ThrowOnUnmappableChar> campo será desabilitado; caso contrário, uma exceção será gerada cada vez que o marshaler interoperabilidade encontra um caractere não mapeável. A `false` padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

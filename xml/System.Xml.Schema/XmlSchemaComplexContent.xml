@@ -1,0 +1,143 @@
+<Type Name="XmlSchemaComplexContent" FullName="System.Xml.Schema.XmlSchemaComplexContent">
+  <TypeSignature Language="C#" Value="public class XmlSchemaComplexContent : System.Xml.Schema.XmlSchemaContentModel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaComplexContent extends System.Xml.Schema.XmlSchemaContentModel" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaComplexContent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaContentModel</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento <see langword="complexContent" /> do esquema XML, conforme especificado pelo W3C (World Wide Web Consortium). Essa classe representa o modelo de conteúdo complexo para tipos complexos. Ele contém extensões ou restrições em um tipo complexo que tem apenas elementos ou conteúdo misto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um `complexContent` elemento.  
+  
+ [!code-cpp[Classic WebData XmlSchemaComplexContent Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlSchemaComplexContent Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaComplexContent Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlSchemaComplexContent Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaComplexContent Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlSchemaComplexContent Example/VB/source.vb#1)]  
+  
+ O seguinte arquivo XML é gerado para o exemplo de código anterior.  
+  
+ [!code-xml[Classic WebData XmlSchemaComplexContent Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlSchemaComplexContent Example/XML/source.xml#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaComplexContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaComplexContent.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaComplexContent" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public override System.Xml.Schema.XmlSchemaContent Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaContent Content" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaComplexContent.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("restriction", typeof(System.Xml.Schema.XmlSchemaComplexContentRestriction))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("extension", typeof(System.Xml.Schema.XmlSchemaComplexContentExtension))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaContent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo.</summary>
+        <value>Ou o <see cref="T:System.Xml.Schema.XmlSchemaComplexContentRestriction" /> ou <see cref="T:System.Xml.Schema.XmlSchemaComplexContentExtension" /> classes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMixed">
+      <MemberSignature Language="C#" Value="public bool IsMixed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMixed" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaComplexContent.IsMixed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("mixed")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações que determinam se o tipo tem um modelo de conteúdo misto.</summary>
+        <value>Se essa propriedade for <see langword="true" />, dados de caractere são permitidos aparecer entre os elementos filho do tipo complexo (modelo de conteúdo misto). O padrão é <see langword="false" />.  
+  
+ Opcional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `mixed` atributo for omitido do `complexContent` elemento, ele terá o mesmo valor que o `mixed` atributo em que o contém `complexType` elemento. Caso contrário, ele substituirá o `mixed` atributo valor em que o contém `complexType` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

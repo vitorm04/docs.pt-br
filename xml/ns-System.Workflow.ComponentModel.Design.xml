@@ -1,0 +1,6 @@
+<Namespace Name="System.Workflow.ComponentModel.Design">
+  <Docs>
+    <summary>Fornece classes relacionadas aos designers de modelo de componente do Windows Workflow Foundation.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

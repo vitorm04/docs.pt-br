@@ -1,0 +1,91 @@
+<Type Name="JournalOwnership" FullName="System.Windows.Navigation.JournalOwnership">
+  <TypeSignature Language="C#" Value="public enum JournalOwnership" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed JournalOwnership extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.JournalOwnership" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se um <see cref="T:System.Windows.Controls.Frame" /> usa seu próprio diário. <see cref="T:System.Windows.Navigation.JournalOwnership" />é usado pelo <see cref="P:System.Windows.Controls.Frame.JournalOwnership" /> propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Navigation.JournalOwnership> é automático, o comportamento a seguir se aplica:  
+  
+-   Hospedado <xref:System.Windows.Controls.Frame> se comporta como se UsesParentJournal foi definida se for hospedado por um um <xref:System.Windows.Controls.Frame> ou <xref:System.Windows.Navigation.NavigationWindow>.  
+  
+-   Hospedado <xref:System.Windows.Controls.Frame> se comporta como se OwnsJournal foi definido se:  
+  
+    -   Ele não está hospedado diretamente por um <xref:System.Windows.Controls.Frame> ou <xref:System.Windows.Navigation.NavigationWindow>.  
+  
+    -   Está hospedado pelo menos um <xref:System.Windows.Controls.Frame>, onde cada uma contendo <xref:System.Windows.Controls.Frame> tem seu <xref:System.Windows.Controls.Frame.JournalOwnership%2A> está definida como UsesParentJournal.  
+  
+> [!NOTE]
+>  Depois que um <xref:System.Windows.Controls.Frame> cria seu próprio diário, alternando para automático não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra uma <xref:System.Windows.Controls.Frame> resultando em um host de gerenciamento diário <xref:System.Windows.Navigation.NavigationWindow>.  
+  
+ [!code-xaml[FrameJournalOwnershipSnippetSample#SetJournalOwnershipProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/FrameJournalOwnershipSnippetSample/CS/HomePage.xaml#setjournalownershipproperty)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Automatic">
+      <MemberSignature Language="C#" Value="Automatic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Navigation.JournalOwnership Automatic = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.JournalOwnership.Automatic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.JournalOwnership</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se isso <see cref="T:System.Windows.Controls.Frame" /> irá criar e usar seu próprio diário depende de seu pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnsJournal">
+      <MemberSignature Language="C#" Value="OwnsJournal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Navigation.JournalOwnership OwnsJournal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.JournalOwnership.OwnsJournal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.JournalOwnership</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Controls.Frame" /> mantém seu próprio diário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesParentJournal">
+      <MemberSignature Language="C#" Value="UsesParentJournal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Navigation.JournalOwnership UsesParentJournal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.JournalOwnership.UsesParentJournal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.JournalOwnership</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Controls.Frame" /> usa o diário do host disponíveis navegação próximo a árvore de conteúdo, se disponível. Caso contrário, o histórico de navegação não é mantido para o <see cref="T:System.Windows.Controls.Frame" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

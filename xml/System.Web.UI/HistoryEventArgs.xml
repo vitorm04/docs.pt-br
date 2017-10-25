@@ -1,0 +1,69 @@
+<Type Name="HistoryEventArgs" FullName="System.Web.UI.HistoryEventArgs">
+  <TypeSignature Language="C#" Value="public class HistoryEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HistoryEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HistoryEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.ScriptManager.Navigate" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `HistoryEventArgs` classe fornece dados para o <xref:System.Web.UI.ScriptManager.Navigate> evento, que é gerado quando o usuário clicou o navegador **novamente** botão ou **Forward** botão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HistoryEventArgs (System.Collections.Specialized.NameValueCollection state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.NameValueCollection state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HistoryEventArgs.#ctor(System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="state">Uma coleção de pares de nome/valor que representam o estado da página da Web.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.HistoryEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection State" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HistoryEventArgs.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de pares de nome/valor que representam o estado de uma página da Web.</summary>
+        <value>Uma coleção que representa o estado de uma página da Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.HistoryEventArgs.State%2A> propriedade para armazenar os dados necessários para restaurar uma página da Web em um estado de aplicativo especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

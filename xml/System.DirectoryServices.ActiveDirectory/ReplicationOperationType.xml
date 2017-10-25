@@ -1,0 +1,104 @@
+<Type Name="ReplicationOperationType" FullName="System.DirectoryServices.ActiveDirectory.ReplicationOperationType">
+  <TypeSignature Language="C#" Value="public enum ReplicationOperationType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReplicationOperationType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ReplicationOperationType" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica um tipo específico de operação de replicação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="Add" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.ReplicationOperationType Add = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.ReplicationOperationType.Add" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationOperationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a adição de um acordo de replicação para um novo parceiro de replicação direta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.ReplicationOperationType Delete = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.ReplicationOperationType.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationOperationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a remoção de um acordo de replicação para um parceiro de replicação direta existente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Modify">
+      <MemberSignature Language="C#" Value="Modify" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.ReplicationOperationType Modify = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.ReplicationOperationType.Modify" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationOperationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a modificação de um acordo de replicação para um parceiro de replicação direta existente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sync">
+      <MemberSignature Language="C#" Value="Sync" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.ReplicationOperationType Sync = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.ReplicationOperationType.Sync" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationOperationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica uma replicação de entrada por um contrato de replicação existente de um parceiro de replicação direta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateReference">
+      <MemberSignature Language="C#" Value="UpdateReference" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.ReplicationOperationType UpdateReference = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.ReplicationOperationType.UpdateReference" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationOperationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a adição, exclusão ou atualização de dados de notificação de alteração de saída para um parceiro de replicação direta.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

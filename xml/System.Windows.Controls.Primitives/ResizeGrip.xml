@@ -1,0 +1,43 @@
+<Type Name="ResizeGrip" FullName="System.Windows.Controls.Primitives.ResizeGrip">
+  <TypeSignature Language="C#" Value="public class ResizeGrip : System.Windows.Controls.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ResizeGrip extends System.Windows.Controls.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.ResizeGrip" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma implementação de um controle <see cref="T:System.Windows.Controls.Primitives.Thumb" /> que permite que um <see cref="T:System.Windows.Window" /> altere seu tamanho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ResizeGrip é definido como parte da árvore visual de um <xref:System.Windows.Window>.  
+  
+ Essa propriedade só afeta um controle cujo modelo usa o <xref:System.Windows.Controls.Primitives.ResizeGrip> a propriedade como um parâmetro. Em outros controles, essa propriedade não tem efeito.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResizeGrip ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ResizeGrip.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Primitives.ResizeGrip" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

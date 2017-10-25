@@ -1,0 +1,64 @@
+<Type Name="SharedProperty" FullName="System.EnterpriseServices.SharedProperty">
+  <TypeSignature Language="C#" Value="public sealed class SharedProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SharedProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.SharedProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Acessa uma propriedade compartilhada. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma propriedade compartilhada e definir e recuperar o valor armazenado na propriedade compartilhada.  
+  
+ [!code-cpp[EnterpriseServices_SharedProperties#0](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_SharedProperties/CPP/receiptcounterclass.cpp#0)]
+ [!code-csharp[EnterpriseServices_SharedProperties#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_SharedProperties/CS/receiptcounterclass.cs#0)]
+ [!code-vb[EnterpriseServices_SharedProperties#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_SharedProperties/VB/receiptcounterclass.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SharedProperty.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da propriedade compartilhada.</summary>
+        <value>O valor da propriedade compartilhada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o `Value` propriedade para recuperar o valor armazenado em uma propriedade compartilhada.  
+  
+ [!code-cpp[EnterpriseServices_SharedProperties#3](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_SharedProperties/CPP/receiptcounterclass.cpp#3)]
+ [!code-csharp[EnterpriseServices_SharedProperties#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_SharedProperties/CS/receiptcounterclass.cs#3)]
+ [!code-vb[EnterpriseServices_SharedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_SharedProperties/VB/receiptcounterclass.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,243 @@
+<Type Name="IRawElementProviderFragment" FullName="System.Windows.Automation.Provider.IRawElementProviderFragment">
+  <TypeSignature Language="C#" Value="public interface IRawElementProviderFragment : System.Windows.Automation.Provider.IRawElementProviderSimple" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRawElementProviderFragment implements class System.Windows.Automation.Provider.IRawElementProviderSimple" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IRawElementProviderFragment" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IRawElementProviderSimple</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("f7063da8-8359-439c-9297-bbc5299a7d87")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe métodos e propriedades nos elementos de interface do usuário do usuário que fazem parte de uma estrutura de mais de um nível de profundidade, como uma caixa de listagem ou um item de lista. Implementado por provedores de Automação da Interface do Usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nó raiz do fragmento deve oferecer suporte a <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot> interface que herda de <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BoundingRectangle">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect BoundingRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect BoundingRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRawElementProviderFragment.BoundingRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o retângulo delimitador desse elemento.</summary>
+        <value>O retângulo delimitador, em coordenadas da tela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhum recorte é necessário se o elemento é parcialmente obscurecidas ou parcialmente fora da tela. O <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A> propriedade deve ser definida para indicar se o retângulo é realmente visível.  
+  
+ Nem todos os pontos dentro do retângulo delimitador são necessariamente clicáveis.  
+  
+   
+  
+## Examples  
+ No código de exemplo a seguir, o estado interno do retângulo delimitador é mantido em um <xref:System.Drawing.Rectangle?displayProperty=nameWithType>, que é convertido em um <xref:System.Windows.Rect?displayProperty=nameWithType> antes de serem retornados.  
+  
+ [!code-csharp[UIAFragmentProvider_snip#104](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListItemFragment.cs#104)]
+ [!code-vb[UIAFragmentProvider_snip#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListItemFragment.vb#104)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FragmentRoot">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderFragmentRoot FragmentRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Provider.IRawElementProviderFragmentRoot FragmentRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRawElementProviderFragment.FragmentRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderFragmentRoot</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupera o nó raiz do fragmento.</summary>
+        <value>O nó raiz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor que implemente <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot> deve retornar em si.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de um elemento em um fragmento, como um item de lista em uma caixa de listagem.  
+  
+ [!code-csharp[UIAFragmentProvider_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListItemFragment.cs#105)]
+ [!code-vb[UIAFragmentProvider_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListItemFragment.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmbeddedFragmentRoots">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple[] GetEmbeddedFragmentRoots ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple[] GetEmbeddedFragmentRoots() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderFragment.GetEmbeddedFragmentRoots" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma matriz de raízes de fragmento que são incorporados a [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] árvore do elemento raiz no elemento atual.</summary>
+        <returns>Uma matriz de fragmentos de raiz ou <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna uma matriz de fragmentos apenas se o elemento atual está hospedando a outra [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] framework. A maioria dos provedores de retorno `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeId">
+      <MemberSignature Language="C#" Value="public int[] GetRuntimeId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32[] GetRuntimeId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o identificador de tempo de execução de um elemento.</summary>
+        <returns>O identificador exclusivo do tempo de execução do elemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações devem retornar `null` para um elemento que corresponde a um identificador de janela. Outros elementos devem retornar uma matriz que contém <xref:System.Windows.Automation.Provider.AutomationInteropProvider.AppendRuntimeId>, seguido por um valor que seja exclusivo dentro do fragmento.  
+  
+ É responsabilidade do provedor para garantir a exclusividade dentro do fragmento; Por exemplo, cada item em uma lista deve ser numerado individualmente. O [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] mecanismo garante que o identificador é exclusivo entre todas as instâncias, convertendo o <xref:System.Windows.Automation.Provider.AutomationInteropProvider.AppendRuntimeId> valor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação desse método por um elemento dentro de um fragmento, como um item dentro de uma caixa de listagem. O item tem seu próprio identificador exclusivo dentro desta instância do fragmento e o <xref:System.Windows.Automation.Provider.AutomationInteropProvider.AppendRuntimeId> valor garante que o identificador retornado pelo método é exclusivo no [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] árvore.  
+  
+ [!code-csharp[UIAFragmentProvider_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListItemFragment.cs#101)]
+ [!code-vb[UIAFragmentProvider_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListItemFragment.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderFragment Navigate (System.Windows.Automation.Provider.NavigateDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderFragment Navigate(valuetype System.Windows.Automation.Provider.NavigateDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate(System.Windows.Automation.Provider.NavigateDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderFragment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="direction" Type="System.Windows.Automation.Provider.NavigateDirection" />
+      </Parameters>
+      <Docs>
+        <param name="direction">A direção na qual navegar.</param>
+        <summary>Recupera o [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento em uma direção especificada dentro da árvore.</summary>
+        <returns>O elemento na direção especificada, ou <see langword="null" /> se não houver nenhum elemento nessa direção</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] implementações do servidor desse método definem a estrutura do [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] árvore do elemento.  
+  
+ Navegação deve ser irmãos com suporte para cima para o pai, para baixo para o primeiro e o último filho e lateralmente para o próximo e anteriores, conforme aplicável.  
+  
+ Cada nó filho tem apenas um pai e deve ser colocado na cadeia de irmãos atingido do pai por <xref:System.Windows.Automation.Provider.NavigateDirection.FirstChild> e <xref:System.Windows.Automation.Provider.NavigateDirection.LastChild>.  
+  
+ Relações entre irmãos devem ser idênticas em ambas as direções: se um for B <xref:System.Windows.Automation.Provider.NavigateDirection.PreviousSibling>, em seguida, B é A <xref:System.Windows.Automation.Provider.NavigateDirection.NextSibling>. Um <xref:System.Windows.Automation.Provider.NavigateDirection.FirstChild> não tem nenhum <xref:System.Windows.Automation.Provider.NavigateDirection.PreviousSibling>e um <xref:System.Windows.Automation.Provider.NavigateDirection.LastChild> não tem nenhum <xref:System.Windows.Automation.Provider.NavigateDirection.NextSibling>.  
+  
+ Raízes de fragmento não habilitam a navegação para um pai ou irmãos; navegação entre raízes de fragmento é tratada por provedores de janela padrão. Elementos em fragmentos devem navegar apenas para outros elementos dentro desse fragmento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a implementação de <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> por uma raiz de fragmento que tem um único elemento filho. Como o elemento de implementação é uma raiz de fragmento, não permite a navegação para um elemento pai ou elementos irmãos.  
+  
+ [!code-csharp[UIAProvider_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAProvider_snip/CSharp/FragmentRoot.cs#105)]
+ [!code-vb[UIAProvider_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAProvider_snip/VisualBasic/FragmentRoot.vb#105)]  
+  
+ O exemplo a seguir mostra uma implementação por um fragmento que representa um único item dentro de uma caixa de listagem. Nesse caso, o elemento permite a navegação para seu pai e irmãos, mas não para todos os filhos.  
+  
+ [!code-csharp[UIAFragmentProvider_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListItemFragment.cs#103)]
+ [!code-vb[UIAFragmentProvider_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListItemFragment.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFocus">
+      <MemberSignature Language="C#" Value="public void SetFocus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetFocus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderFragment.SetFocus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o foco para esse elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] framework garantirá que a parte da interface que hospeda este fragmento já destina-se antes de chamar esse método. Sua implementação deve atualizar somente seu estado interno foco; Por exemplo, por redesenho um item de lista para mostrar que ele tem o foco. Se você preferir que [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] não concentrar-se a janela pai, defina o <xref:System.Windows.Automation.Provider.ProviderOptions.ProviderOwnsSetFocus> opção <xref:System.Windows.Automation.Provider.ProviderOptions> para a raiz do fragmento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

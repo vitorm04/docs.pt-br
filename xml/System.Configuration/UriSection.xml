@@ -1,0 +1,206 @@
+<Type Name="UriSection" FullName="System.Configuration.UriSection">
+  <TypeSignature Language="C#" Value="public sealed class UriSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UriSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.UriSection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma seção de URI em um arquivo de configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Existente <xref:System.Uri?displayProperty=nameWithType> classe foi estendida para oferecer suporte a identificadores de recursos internacionais (IRI) e nomes de domínio internacionalizados. Os usuários atuais não verão qualquer alteração no comportamento do .NET Framework 2.0, a menos que eles permitem especificamente IRI e IDN. Isso garante a compatibilidade do aplicativo com versões anteriores do .NET Framework.  
+  
+ As definições de configuração IRI e IDN podem ser recuperadas usando o <xref:System.Configuration.UriSection> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.UriSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.UriSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Existente <xref:System.Uri?displayProperty=nameWithType> classe foi estendida para oferecer suporte a identificadores de recursos internacionais (IRI) e nomes de domínio internacionalizados. Os usuários atuais não verão qualquer alteração no comportamento do .NET Framework 2.0, a menos que eles permitem especificamente IRI e IDN. Isso garante a compatibilidade do aplicativo com versões anteriores do .NET Framework.  
+  
+ As definições de configuração IRI e IDN podem ser recuperadas usando o <xref:System.Configuration.UriSection> classe.  
+  
+ Para obter mais informações sobre o suporte IRI, consulte a seção Comentários da classe <xref:System.Uri?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Idn">
+      <MemberSignature Language="C#" Value="public System.Configuration.IdnElement Idn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.IdnElement Idn" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.UriSection.Idn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("idn")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.IdnElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Configuration.IdnElement" /> objeto que contém a definição de configuração para internacional domínio IDN (nome) de processamento no <see cref="T:System.Uri" /> classe.</summary>
+        <value>O parâmetro de configuração para internacional domínio IDN (nome) de processamento no <see cref="T:System.Uri" /> classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Existente <xref:System.Uri?displayProperty=nameWithType> classe foi estendida para oferecer suporte a identificadores de recursos internacionais (IRI) e nomes de domínio internacionalizados. Os usuários atuais não verão qualquer alteração no comportamento do .NET Framework 2.0, a menos que eles permitem especificamente IRI e IDN. Isso garante a compatibilidade do aplicativo com versões anteriores do .NET Framework.  
+  
+ As definições de configuração IRI e IDN podem ser recuperadas usando o <xref:System.Configuration.UriSection> classe. O <xref:System.Configuration.UriSection.Idn%2A> propriedade retorna a configuração IDN processamento o <xref:System.Uri?displayProperty=nameWithType> classe.  
+  
+ O processamento de IRI deve estar habilitado para que o processamento de IDN seja possível. Se o processamento de IRI estiver desabilitado, o processamento de IDN será definido para a configuração padrão, na qual o comportamento do .NET Framework 2.0 será usado para fins de compatibilidade e nomes IDN não serão usados.  
+  
+ O atributo de nome de domínio internacionalizado (IDN) controla apenas o processamento de IDN. Todos os outros processamentos de IRI (normalização de caractere, por exemplo) é executado por padrão.  
+  
+ O parâmetro de configuração para o <xref:System.Configuration.IdnElement> serão lidos uma vez quando o primeiro <xref:System.Uri?displayProperty=nameWithType> classe é criada. Alterações nas configurações depois desse tempo serão ignoradas.  
+  
+ Para obter mais informações sobre o suporte IRI, consulte a seção Comentários da classe <xref:System.Uri?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IriParsing">
+      <MemberSignature Language="C#" Value="public System.Configuration.IriParsingElement IriParsing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.IriParsingElement IriParsing" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.UriSection.IriParsing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("iriParsing")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.IriParsingElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Configuration.IriParsingElement" /> objeto que contém a definição de configuração para identificadores de recursos internacionais (IRI) analisar o <see cref="T:System.Uri" /> classe.</summary>
+        <value>A configuração para identificadores de recursos internacionais (IRI) analisar o <see cref="T:System.Uri" /> classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Existente <xref:System.Uri?displayProperty=nameWithType> classe foi estendida para oferecer suporte a identificadores de recursos internacionais (IRI) e nomes de domínio internacionalizados. Os usuários atuais não verão qualquer alteração no comportamento do .NET Framework 2.0, a menos que eles permitem especificamente IRI e IDN. Isso garante a compatibilidade do aplicativo com versões anteriores do .NET Framework.  
+  
+ As definições de configuração IRI e IDN podem ser recuperadas usando o <xref:System.Configuration.UriSection> classe. O <xref:System.Configuration.UriSection.IriParsing%2A> propriedade retorna a configuração para a análise de IRI no <xref:System.Uri?displayProperty=nameWithType> classe.  
+  
+ O processamento de IRI deve estar habilitado para que o processamento de IDN seja possível. Se o processamento de IRI estiver desabilitado, o processamento de IDN será definido para a configuração padrão, na qual o comportamento do .NET Framework 2.0 será usado para fins de compatibilidade e nomes IDN não serão usados.  
+  
+ O atributo de nome de domínio internacionalizado (IDN) controla apenas o processamento de IDN. Todos os outros processamentos de IRI (normalização de caractere, por exemplo) é executado por padrão.  
+  
+ O parâmetro de configuração para o <xref:System.Configuration.IriParsingElement> serão lidos uma vez quando o primeiro <xref:System.Uri?displayProperty=nameWithType> classe é criada. Alterações nas configurações depois desse tempo serão ignoradas.  
+  
+ Para obter mais informações sobre o suporte IRI, consulte a seção Comentários da classe <xref:System.Uri?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.UriSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemeSettings">
+      <MemberSignature Language="C#" Value="public System.Configuration.SchemeSettingElementCollection SchemeSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SchemeSettingElementCollection SchemeSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.UriSection.SchemeSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("schemeSettings")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SchemeSettingElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Configuration.SchemeSettingElementCollection" /> objeto que contém as definições de configuração para o esquema de análise no <see cref="T:System.Uri" /> classe.</summary>
+        <value>As definições de configuração para o esquema de análise no <see cref="T:System.Uri" /> classe</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.UriSection.SchemeSettings%2A> propriedade não é genérica. Somente o genericUriParserOptions = "DontUnescapePathDotsAndSlashes" configuração para esquemas HTTP e HTTPS são aceitos. Todas as outras configurações são ignoradas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

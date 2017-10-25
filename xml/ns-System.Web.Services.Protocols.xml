@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Services.Protocols">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Services.Protocols" /> namespace consiste das classes que definem os protocolos usados para transmitir dados pela rede durante a comunicação entre clientes de serviço Web XML e XML Web services criados usando o ASP.NET.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

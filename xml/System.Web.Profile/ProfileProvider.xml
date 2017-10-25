@@ -1,0 +1,407 @@
+<Type Name="ProfileProvider" FullName="System.Web.Profile.ProfileProvider">
+  <TypeSignature Language="C#" Value="public abstract class ProfileProvider : System.Configuration.SettingsProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProfileProvider extends System.Configuration.SettingsProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.SettingsProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define o contrato que o ASP.NET implementa para fornecer serviços de perfil usando provedores de criação de perfil personalizados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Perfis do ASP.NET oferecem armazenamento persistente e recuperação de propriedades específicas do usuário. Valores de propriedade de perfil e as informações são armazenadas em uma fonte de dados de uma maneira determinada pelo <xref:System.Web.Profile.ProfileProvider> implementação. Você pode usar os provedores de perfil que são incluídos com o .NET Framework (representado pelas classes que derivam de <xref:System.Web.Profile.ProfileProvider> classe abstrata), ou você pode implementar seu próprio provedor ao criar uma nova classe que deriva de <xref:System.Web.Profile.ProfileProvider>.  
+  
+ Há dois motivos principais para criar um provedor de perfil personalizado.  
+  
+-   Você precisa armazenar informações de perfil em uma fonte de dados que não é suportada pelos provedores de perfil incluídos com o .NET Framework, como um banco de dados FoxPro, um banco de dados Oracle ou outros repositórios de dados.  
+  
+-   Você precisará gerenciar informações de perfil usando um esquema de banco de dados que é diferente do esquema do banco de dados usado pelos provedores fornecidos com o .NET Framework. Um exemplo comum disso seria dados de usuário que já existe um banco de dados do SQL Server para uma rede de empresa ou um site da Web.  
+  
+ O <xref:System.Web.Profile.ProfileProvider> classe abstrata herda o <xref:System.Configuration.SettingsProvider> abstrato de classe que herda do <xref:System.Configuration.Provider.ProviderBase> classe abstrata. As classes que implementam <xref:System.Web.Profile.ProfileProvider> também deve implementar os membros necessários do <xref:System.Configuration.SettingsProvider> e <xref:System.Configuration.Provider.ProviderBase> classes abstratas. Para obter mais informações sobre como implementar um provedor de perfil, consulte [implementando um provedor de perfil](http://msdn.microsoft.com/library/58de6e99-31a7-41b9-93ed-51b9b4a67e98).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de um <xref:System.Web.Profile.ProfileProvider> implementação, consulte [como: compilar e executar o exemplo de provedor de perfil](http://msdn.microsoft.com/library/90f65aa9-82dd-4a86-97e6-911037bd6cfa).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProfileProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Profile.ProfileProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário para implementar um construtor para uma classe que herda de <xref:System.Web.Profile.ProfileProvider> classe abstrata. Valores de inicialização para um <xref:System.Web.Profile.ProfileProvider> implementação são passados para o <xref:System.Configuration.Provider.ProviderBase.Initialize%2A> implementação do método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteInactiveProfiles">
+      <MemberSignature Language="C#" Value="public abstract int DeleteInactiveProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 DeleteInactiveProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileProvider.DeleteInactiveProfiles(System.Web.Profile.ProfileAuthenticationOption,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores, especificando se anônimo, autenticado ou ambos os tipos de perfis são excluídos.</param>
+        <param name="userInactiveSinceDate">Um <see cref="T:System.DateTime" /> que identifica quais perfis de usuário são consideradas inativas. Se o <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> de um perfil de usuário ocorre em ou antes dessa data e hora, o perfil será considerado inativo.</param>
+        <summary>Quando substituído em uma classe derivada, exclui todos os dados de perfil de usuário para os perfis em que a data da última atividade ocorreu antes da data especificada.</summary>
+        <returns>O número de perfis excluídos da fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileProvider.DeleteInactiveProfiles%2A> método é usado para remover dados de perfil não usados da fonte de dados. Somente os dados para o `applicationName` especificado na configuração do arquivo é removido. O `authenticationOption` parâmetro especifica se somente perfis anônimos, apenas perfis autenticados, ou todos os perfis são pesquisados. Perfis no qual o <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> ocorre em ou antes especificado `userInactiveSinceDate` valor de parâmetro são excluídos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a assinatura de uma implementação de método de <xref:System.Web.Profile.ProfileProvider.DeleteInactiveProfiles%2A> método. Para obter um exemplo completo <xref:System.Web.Profile.ProfileProvider> implementação, consulte [como: compilar e executar o exemplo de provedor de perfil](http://msdn.microsoft.com/library/90f65aa9-82dd-4a86-97e6-911037bd6cfa).  
+  
+ [!code-csharp[System.Web.Profile.ProfileProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/CS/odbcprofileprovidersnippets.cs#3)]
+ [!code-vb[System.Web.Profile.ProfileProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/VB/odbcprofileprovidersnippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteProfiles">
+      <MemberSignature Language="C#" Value="public abstract int DeleteProfiles (string[] usernames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 DeleteProfiles(string[] usernames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileProvider.DeleteProfiles(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Uma matriz de cadeia de caracteres de nomes de usuário para os perfis a serem excluídos.</param>
+        <summary>Quando substituído em uma classe derivada, exclui as propriedades de perfil e as informações de perfis que correspondem a lista de nomes de usuário fornecida.</summary>
+        <returns>O número de perfis excluídos da fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileProvider.DeleteProfiles%2A> método exclui os perfis especificados no `usernames` parâmetro. Somente os dados para o `applicationName` especificado na configuração do arquivo é removido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a assinatura de uma implementação de método de <xref:System.Web.Profile.ProfileProvider.DeleteProfiles%2A> método. Para obter um exemplo completo <xref:System.Web.Profile.ProfileProvider> implementação, consulte [como: compilar e executar o exemplo de provedor de perfil](http://msdn.microsoft.com/library/90f65aa9-82dd-4a86-97e6-911037bd6cfa).  
+  
+ [!code-csharp[System.Web.Profile.ProfileProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/CS/odbcprofileprovidersnippets.cs#2)]
+ [!code-vb[System.Web.Profile.ProfileProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/VB/odbcprofileprovidersnippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteProfiles">
+      <MemberSignature Language="C#" Value="public abstract int DeleteProfiles (System.Web.Profile.ProfileInfoCollection profiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 DeleteProfiles(class System.Web.Profile.ProfileInfoCollection profiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileProvider.DeleteProfiles(System.Web.Profile.ProfileInfoCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="profiles" Type="System.Web.Profile.ProfileInfoCollection" />
+      </Parameters>
+      <Docs>
+        <param name="profiles">Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> de informações sobre os perfis serão excluídos.</param>
+        <summary>Quando substituído em uma classe derivada, exclui informações para a lista fornecida de perfis e propriedades de perfil.</summary>
+        <returns>O número de perfis excluídos da fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileProvider.DeleteProfiles%2A> método exclui os perfis especificados no `profiles` parâmetro. Somente os dados para o `applicationName` especificado na configuração do arquivo é removido.  
+  
+ Ao implementar esse método em uma classe derivada, você pode usar o `applicationName` valor e o <xref:System.Web.Profile.ProfileInfo.UserName%2A> propriedade de cada <xref:System.Web.Profile.ProfileInfo> objeto fornecido <xref:System.Web.Profile.ProfileInfoCollection> para determinar quais perfis a serem excluídos da fonte de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a assinatura de uma implementação de método de <xref:System.Web.Profile.ProfileProvider.DeleteProfiles%2A> método. Para obter um exemplo completo <xref:System.Web.Profile.ProfileProvider> implementação, consulte [como: compilar e executar o exemplo de provedor de perfil](http://msdn.microsoft.com/library/90f65aa9-82dd-4a86-97e6-911037bd6cfa).  
+  
+ [!code-csharp[System.Web.Profile.ProfileProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/CS/odbcprofileprovidersnippets.cs#1)]
+ [!code-vb[System.Web.Profile.ProfileProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/VB/odbcprofileprovidersnippets.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindInactiveProfilesByUserName">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Profile.ProfileInfoCollection FindInactiveProfilesByUserName (System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Profile.ProfileInfoCollection FindInactiveProfilesByUserName(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, valuetype System.DateTime userInactiveSinceDate, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileProvider.FindInactiveProfilesByUserName(System.Web.Profile.ProfileAuthenticationOption,System.String,System.DateTime,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="usernameToMatch">O nome de usuário a ser pesquisado.</param>
+        <param name="userInactiveSinceDate">Um <see cref="T:System.DateTime" /> que identifica quais perfis de usuário são consideradas inativas. Se o <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> de um perfil de usuário ocorre em ou antes dessa data e hora, o perfil será considerado inativo.</param>
+        <param name="pageIndex">O índice da página de resultados a serem retornados.</param>
+        <param name="pageSize">O tamanho da página de resultados a ser retornada.</param>
+        <param name="totalRecords">Quando este método retorna, contém o número total de perfis.</param>
+        <summary>Quando substituído em uma classe derivada, recupera informações de perfil para perfis em que a data da última atividade ocorreu em ou antes da data especificada e o nome de usuário corresponde ao nome de usuário especificado.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> que contém informações de perfil de usuário de perfis inativos em que o nome de usuário corresponde fornecido <paramref name="usernameToMatch" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileProvider.FindInactiveProfilesByUserName%2A> método é usado para recuperar as informações de perfil para perfis de usuário não utilizados para perfis na qual o nome de usuário corresponde fornecido `usernameToMatch` parâmetro. Somente os dados para o `applicationName` especificado na configuração do arquivo é retornado. O `authenticationOption` parâmetro especifica se somente perfis anônimos, apenas perfis autenticados, ou todos os perfis são pesquisados. Perfis pesquisados, de qualquer perfil com um <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> que ocorre em ou antes especificado `userInactiveSinceDate` o valor do parâmetro será retornado.  
+  
+ Se sua fonte de dados oferece suporte a recursos de pesquisa adicionais, como caracteres curinga, você pode fornecer recursos de pesquisa mais abrangentes para nomes de usuário.  
+  
+ Os resultados retornados por <xref:System.Web.Profile.ProfileProvider.FindInactiveProfilesByUserName%2A> são restritas pelo `pageIndex` e `pageSize` parâmetros. O `pageSize` parâmetro identifica o número máximo de <xref:System.Web.Profile.ProfileInfo> objetos para retornar o <xref:System.Web.Profile.ProfileInfoCollection>. O `pageIndex` parâmetro identifica qual página de resultados a serem retornados, onde zero identifica a primeira página. O `totalRecords` parâmetro é um `out` parâmetro que é definido como o número total de perfis de usuário inativo configurado `applicationName`, com base no `authenticationOption` e `userInactiveSinceDate` parâmetros. Por exemplo, se houver 13 usuários configurado `applicationName`e o `pageIndex` valor é 1, com um `pageSize` de 5, o <xref:System.Web.Profile.ProfileInfoCollection> retornado contém da sexta os perfis inativos décima retornado. O `totalRecords` parâmetro deve ser definido como 13.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a assinatura de uma implementação de método de <xref:System.Web.Profile.ProfileProvider.FindInactiveProfilesByUserName%2A> método. Para obter um exemplo completo <xref:System.Web.Profile.ProfileProvider> implementação, consulte [como: compilar e executar o exemplo de provedor de perfil](http://msdn.microsoft.com/library/90f65aa9-82dd-4a86-97e6-911037bd6cfa).  
+  
+ [!code-csharp[System.Web.Profile.ProfileProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/CS/odbcprofileprovidersnippets.cs#5)]
+ [!code-vb[System.Web.Profile.ProfileProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/VB/odbcprofileprovidersnippets.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindProfilesByUserName">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Profile.ProfileInfoCollection FindProfilesByUserName (System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Profile.ProfileInfoCollection FindProfilesByUserName(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileProvider.FindProfilesByUserName(System.Web.Profile.ProfileAuthenticationOption,System.String,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="usernameToMatch">O nome de usuário a ser pesquisado.</param>
+        <param name="pageIndex">O índice da página de resultados a serem retornados.</param>
+        <param name="pageSize">O tamanho da página de resultados a ser retornada.</param>
+        <param name="totalRecords">Quando este método retorna, contém o número total de perfis.</param>
+        <summary>Quando substituído em uma classe derivada, recupera informações de perfil para perfis na qual o nome de usuário corresponde os nomes de usuário especificado.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> que contém informações de perfil de usuário para perfis de onde o nome de usuário corresponde fornecido <paramref name="usernameToMatch" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileProvider.FindProfilesByUserName%2A> método retorna uma lista de informações de perfil para perfis na qual o nome de usuário corresponde fornecido `usernameToMatch` parâmetro. Somente os dados para o `applicationName` especificado na configuração do arquivo é retornado. O `authenticationOption` parâmetro especifica se somente perfis anônimos, apenas perfis autenticados, ou todos os perfis são pesquisados.  
+  
+ Se sua fonte de dados oferece suporte a recursos de pesquisa adicionais, como caracteres curinga, você pode fornecer recursos de pesquisa mais abrangentes para nomes de usuário.  
+  
+ Os resultados retornados por <xref:System.Web.Profile.ProfileProvider.FindProfilesByUserName%2A> são restritas pelo `pageIndex` e `pageSize` parâmetros. O `pageSize` parâmetro identifica o número máximo de <xref:System.Web.Profile.ProfileInfo> objetos para retornar o <xref:System.Web.Profile.ProfileInfoCollection>. O `pageIndex` parâmetro identifica qual página de resultados a serem retornados, onde zero identifica a primeira página. O `totalRecords` parâmetro é um `out` parâmetro que é definido como o número total de perfis de usuário inativo configurado `applicationName`, com base no `authenticationOption` e `userInactiveSinceDate` parâmetros. Por exemplo, se houver 13 usuários configurado `applicationName`e o `pageIndex` valor é 1, com um `pageSize` de 5, o <xref:System.Web.Profile.ProfileInfoCollection> retornado contém da sexta os perfis inativos décima retornado. O `totalRecords` parâmetro deve ser definido como 13.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a assinatura de uma implementação de método de <xref:System.Web.Profile.ProfileProvider.FindProfilesByUserName%2A> método. Para obter um exemplo completo <xref:System.Web.Profile.ProfileProvider> implementação, consulte [como: compilar e executar o exemplo de provedor de perfil](http://msdn.microsoft.com/library/90f65aa9-82dd-4a86-97e6-911037bd6cfa).  
+  
+ [!code-csharp[System.Web.Profile.ProfileProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/CS/odbcprofileprovidersnippets.cs#4)]
+ [!code-vb[System.Web.Profile.ProfileProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/VB/odbcprofileprovidersnippets.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllInactiveProfiles">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Profile.ProfileInfoCollection GetAllInactiveProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Profile.ProfileInfoCollection GetAllInactiveProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, valuetype System.DateTime userInactiveSinceDate, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileProvider.GetAllInactiveProfiles(System.Web.Profile.ProfileAuthenticationOption,System.DateTime,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="userInactiveSinceDate">Um <see cref="T:System.DateTime" /> que identifica quais perfis de usuário são consideradas inativas. Se o <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> de um usuário de perfil ocorre em ou antes dessa data e hora, o perfil será considerado inativo.</param>
+        <param name="pageIndex">O índice da página de resultados a serem retornados.</param>
+        <param name="pageSize">O tamanho da página de resultados a ser retornada.</param>
+        <param name="totalRecords">Quando este método retorna, contém o número total de perfis.</param>
+        <summary>Quando substituído em uma classe derivada, recupera dados de perfil de usuário da fonte de dados de perfis em que a data da última atividade ocorreu em ou antes da data especificada.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> que contém informações de perfil do usuário sobre os perfis inativos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileProvider.GetAllInactiveProfiles%2A> método é usado para recuperar as informações de perfil para perfis de usuário não utilizados. Somente os dados para o `applicationName` especificado na configuração do arquivo é retornado. O `authenticationOption` parâmetro especifica se somente perfis anônimos, apenas perfis autenticados, ou todos os perfis são pesquisados. Perfis pesquisados, de qualquer perfil com um <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> que ocorre em ou antes especificado `userInactiveSinceDate` o valor do parâmetro será retornado.  
+  
+ Os resultados retornados por <xref:System.Web.Profile.ProfileProvider.GetAllInactiveProfiles%2A> são restritas pelo `pageIndex` e `pageSize` parâmetros. O `pageSize` parâmetro identifica o número máximo de <xref:System.Web.Profile.ProfileInfo> objetos para retornar o <xref:System.Web.Profile.ProfileInfoCollection>. O `pageIndex` parâmetro identifica qual página de resultados a serem retornados, onde zero identifica a primeira página. O `totalRecords` parâmetro é um `out` parâmetro que é definido como o número total de perfis de usuário inativo configurado `applicationName`, com base no `authenticationOption` e `userInactiveSinceDate` parâmetros. Por exemplo, se houver 13 usuários configurado `applicationName`e o `pageIndex` valor é 1, com um `pageSize` de 5, o <xref:System.Web.Profile.ProfileInfoCollection> retornado contém da sexta os perfis inativos décima retornado. O `totalRecords` parâmetro deve ser definido como 13.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a assinatura de uma implementação de método de <xref:System.Web.Profile.ProfileProvider.GetAllInactiveProfiles%2A> método. Para obter um exemplo completo <xref:System.Web.Profile.ProfileProvider> implementação, consulte [como: compilar e executar o exemplo de provedor de perfil](http://msdn.microsoft.com/library/90f65aa9-82dd-4a86-97e6-911037bd6cfa).  
+  
+ [!code-csharp[System.Web.Profile.ProfileProvider#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/CS/odbcprofileprovidersnippets.cs#7)]
+ [!code-vb[System.Web.Profile.ProfileProvider#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/VB/odbcprofileprovidersnippets.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllProfiles">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Profile.ProfileInfoCollection GetAllProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Profile.ProfileInfoCollection GetAllProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileProvider.GetAllProfiles(System.Web.Profile.ProfileAuthenticationOption,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="pageIndex">O índice da página de resultados a serem retornados.</param>
+        <param name="pageSize">O tamanho da página de resultados a ser retornada.</param>
+        <param name="totalRecords">Quando este método retorna, contém o número total de perfis.</param>
+        <summary>Quando substituído em uma classe derivada, recupera dados de perfil de usuário para todos os perfis na fonte de dados.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> que contém informações de perfil de usuário para todos os perfis na fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileProvider.GetAllProfiles%2A> método é usado para recuperar as informações de perfil para todos os perfis. Somente os dados para o `applicationName` especificado na configuração do arquivo é retornado. O `authenticationOption` parâmetro especifica se somente perfis anônimos, apenas perfis autenticados, ou todos os perfis são pesquisados.  
+  
+ Os resultados retornados por <xref:System.Web.Profile.ProfileProvider.GetAllInactiveProfiles%2A> são restritas pelo `pageIndex` e `pageSize` parâmetros. O `pageSize` parâmetro identifica o número máximo de <xref:System.Web.Profile.ProfileInfo> objetos para retornar o <xref:System.Web.Profile.ProfileInfoCollection>. O `pageIndex` parâmetro identifica qual página de resultados a serem retornados, onde zero identifica a primeira página. O `totalRecords` parâmetro é um `out` parâmetro que é definido como o número total de perfis de usuário inativo configurado `applicationName`, com base no `authenticationOption` e `userInactiveSinceDate` parâmetros. Por exemplo, se houver 13 usuários configurado `applicationName`e o `pageIndex` valor é 1, com um `pageSize` de 5, o <xref:System.Web.Profile.ProfileInfoCollection> retornado contém da sexta os perfis inativos décima retornado. O `totalRecords` parâmetro deve ser definido como 13.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a assinatura de uma implementação de método de <xref:System.Web.Profile.ProfileProvider.GetAllProfiles%2A> método. Para obter um exemplo completo <xref:System.Web.Profile.ProfileProvider> implementação, consulte [como: compilar e executar o exemplo de provedor de perfil](http://msdn.microsoft.com/library/90f65aa9-82dd-4a86-97e6-911037bd6cfa).  
+  
+ [!code-csharp[System.Web.Profile.ProfileProvider#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/CS/odbcprofileprovidersnippets.cs#6)]
+ [!code-vb[System.Web.Profile.ProfileProvider#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/VB/odbcprofileprovidersnippets.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNumberOfInactiveProfiles">
+      <MemberSignature Language="C#" Value="public abstract int GetNumberOfInactiveProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetNumberOfInactiveProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileProvider.GetNumberOfInactiveProfiles(System.Web.Profile.ProfileAuthenticationOption,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="userInactiveSinceDate">Um <see cref="T:System.DateTime" /> que identifica quais perfis de usuário são consideradas inativas. Se o <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> de um usuário de perfil ocorre em ou antes dessa data e hora, o perfil será considerado inativo.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o número de perfis no qual a data da última atividade ocorreu em ou antes da data especificada.</summary>
+        <returns>O número de perfis no qual a data da última atividade ocorreu em ou antes da data especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileProvider.GetNumberOfInactiveProfiles%2A> método é usado para recuperar uma contagem de todos os perfis de usuário não utilizados. Somente os dados para o `applicationName` especificado na configuração do arquivo é retornado. O `authenticationOption` parâmetro especifica se somente perfis anônimos, apenas perfis autenticados, ou todos os perfis são pesquisados. Perfis pesquisados, de qualquer perfil com um <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> que ocorre em ou antes especificado `userInactiveSinceDate` o valor do parâmetro é contado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a assinatura de uma implementação de método de <xref:System.Web.Profile.ProfileProvider.GetNumberOfInactiveProfiles%2A> método. Para obter um exemplo completo <xref:System.Web.Profile.ProfileProvider> implementação, consulte [como: compilar e executar o exemplo de provedor de perfil](http://msdn.microsoft.com/library/90f65aa9-82dd-4a86-97e6-911037bd6cfa).  
+  
+ [!code-csharp[System.Web.Profile.ProfileProvider#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/CS/odbcprofileprovidersnippets.cs#8)]
+ [!code-vb[System.Web.Profile.ProfileProvider#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileProvider/VB/odbcprofileprovidersnippets.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,88 @@
+<Type Name="PartialTrustVisibilityLevel" FullName="System.Security.PartialTrustVisibilityLevel">
+  <TypeSignature Language="C#" Value="public enum PartialTrustVisibilityLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PartialTrustVisibilityLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.PartialTrustVisibilityLevel" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a visibilidade de confiança parcial do padrão para o código que está marcado com o <see cref="T:System.Security.AllowPartiallyTrustedCallersAttribute" /> atributo (APTCA).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.PartialTrustVisibilityLevel>é passado como um parâmetro de configuração de propriedade para o <xref:System.Security.AllowPartiallyTrustedCallersAttribute.%23ctor%2A?displayProperty=nameWithType> construtor. Se nenhum parâmetro for passado para o construtor, o padrão é VisibleToAllHosts.  
+  
+ Habilitar parcialmente confiáveis assemblies que são identificados como NotVisibleByDefault ao adicioná-los para o <xref:System.AppDomainSetup.PartialTrustVisibleAssemblies%2A> propriedade de seus domínios de aplicativo. Se você habilitar um assembly que referencia (direta ou indiretamente) outros parcialmente confiáveis assemblies que são NotVisibleByDefault, esses outros assemblies devem ser habilitados também.  
+  
+ Quando uma biblioteca APTCA que especifica um <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault> e que está qualificado para o compartilhamento de código é carregado pela primeira vez, ele é carregado no domínio compartilhado. Sempre que esse assembly é carregado com o mesmo <xref:System.Security.PartialTrustVisibilityLevel> em outro domínio, ele será compartilhado. No entanto, se o assembly é carregado com outro <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault>, ele não será compartilhado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NotVisibleByDefault">
+      <MemberSignature Language="C#" Value="NotVisibleByDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.PartialTrustVisibilityLevel NotVisibleByDefault = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PartialTrustVisibilityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O assembly tem sido auditado para confiança parcial, mas não é visível ao código parcialmente confiável em todos os hosts. Para tornar o assembly visível ao código de confiança parcial, adicione-o para o <see cref="P:System.AppDomainSetup.PartialTrustVisibleAssemblies" /> propriedade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleToAllHosts">
+      <MemberSignature Language="C#" Value="VisibleToAllHosts" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.PartialTrustVisibilityLevel VisibleToAllHosts = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.PartialTrustVisibilityLevel.VisibleToAllHosts" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PartialTrustVisibilityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O assembly sempre pode ser chamado por código parcialmente confiável.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,314 @@
+<Type Name="ContextStack" FullName="System.ComponentModel.Design.Serialization.ContextStack">
+  <TypeSignature Language="C#" Value="public sealed class ContextStack" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContextStack extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.ContextStack" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um objeto de pilha que pode ser usado por um serializador para torná-las disponíveis para serializadores aninhadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns serializadores exigem informações sobre o contexto de um objeto para manter corretamente seu estado. O <xref:System.ComponentModel.Design.Serialization.ContextStack> classe permite que um serializador definir os dados sobre o contexto de um objeto que está sendo serializado como uma pilha em que outro serializador pode acessá-lo. O valor da <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Context%2A> é fornecida por um <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager> para compartilhar informações de uso para alguns serializadores.  
+  
+ A pilha de contexto é útil porque o processo de serialização de um documento de design pode ser aninhado profundamente e objetos em cada nível de aninhamento podem requerer informações de contexto para manter corretamente o estado do objeto. Um serializador pode definir um objeto de contexto para a pilha antes de chamar um serializador aninhado. Cada objeto definido para a pilha deve ser removido pelo serializador que defini-lo depois de retorna de uma chamada para um serializador aninhada.  
+  
+ Normalmente, os objetos na pilha contêm informações sobre o contexto do objeto atual que está sendo serializada. Um serializador pai adiciona informações de contexto para a pilha sobre o próximo objeto a ser serializado, chama um serializador adequado e, quando o serializador conclui a execução do objeto, remove as informações de contexto da pilha. Cabe a implementação de cada serializador para determinar quais objetos são levados nessa pilha.  
+  
+ Por exemplo, um objeto com uma propriedade denominada `Enabled` tem um tipo de dados <xref:System.Boolean>. Se um serializador grava esse valor em um fluxo de dados, precisará incluir o contexto ou o tipo da propriedade que está gravando. O serializador não tiver essas informações, no entanto, porque ele só é instruído para gravar o <xref:System.Boolean> valor. Para fornecer essas informações para o serializador, o serializador pai pode enviar por push uma <xref:System.ComponentModel.PropertyDescriptor> que aponta para o `Enabled` propriedade na pilha de contexto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.ComponentModel.Design.Serialization.ContextStack> para enviar por push e, em seguida, remover 10 valores.  
+  
+ [!code-cpp[ContextStackExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ContextStackExample/CPP/class1.cpp#1)]
+ [!code-csharp[ContextStackExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ContextStackExample/CS/class1.cs#1)]
+ [!code-vb[ContextStackExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContextStackExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContextStack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.ContextStack.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.Serialization.ContextStack" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.ComponentModel.Design.Serialization.ContextStack> instância.  
+  
+ [!code-cpp[ContextStackExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/ContextStackExample/CPP/class1.cpp#2)]
+ [!code-csharp[ContextStackExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ContextStackExample/CS/class1.cs#2)]
+ [!code-vb[ContextStackExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContextStackExample/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public void Append (object context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Append(object context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.ContextStack.Append(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto de contexto para acrescentar a pilha.</param>
+        <summary>Anexa um objeto para o fim da pilha, em vez de enviá-la para o topo da pilha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que um serializador para se comunicar com outros serializadores adicionando dados contextuais objetos que não devem ser removidas na ordem. Não há nenhuma maneira de remover um objeto que foi acrescentado ao final da pilha sem remover todos os outros objetos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public object Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Current" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.ContextStack.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto atual na pilha.</summary>
+        <value>O objeto atual na pilha, ou <see langword="null" /> se nenhum objeto foram enviado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto atual é o objeto no topo da pilha, ou o objeto último adicionado à pilha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int level] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.ContextStack.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="level" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="level">O nível de objeto a ser recuperada na pilha. Nível 0 é o topo da pilha, nível 1 é a próxima para baixo, e assim por diante. Esse nível deve ser 0 ou maior. Se o nível é maior que o número de níveis na pilha, ele retorna <see langword="null" />.</param>
+        <summary>Obtém o objeto na pilha no nível especificado.</summary>
+        <value>O objeto na pilha no nível especificado, ou <see langword="null" /> se não há nenhum objeto nesse nível.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="level" /> é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[Type type] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(class System.Type)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.ContextStack.Item(System.Type)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um tipo para recuperar da pilha de contexto.</param>
+        <summary>Obtém o primeiro objeto na pilha que herda de ou implementa o tipo especificado.</summary>
+        <value>O primeiro objeto na pilha que herda de ou implementa o tipo especificado, ou <see langword="null" /> se nenhum objeto na pilha implementa o tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma verificação é feita em cada nível da pilha, procurando por um objeto que implementa ou herda `type`. Se uma correspondência for encontrada, será retornado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pop">
+      <MemberSignature Language="C#" Value="public object Pop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Pop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.ContextStack.Pop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o objeto atual da pilha, retornando seu valor.</summary>
+        <returns>O objeto removido da pilha; <see langword="null" /> se nenhum objeto está na pilha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a remoção de um valor de um <xref:System.ComponentModel.Design.Serialization.ContextStack>.  
+  
+ [!code-cpp[ContextStackExample#4](~/samples/snippets/cpp/VS_Snippets_Winforms/ContextStackExample/CPP/class1.cpp#4)]
+ [!code-csharp[ContextStackExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/ContextStackExample/CS/class1.cs#4)]
+ [!code-vb[ContextStackExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContextStackExample/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Push">
+      <MemberSignature Language="C#" Value="public void Push (object context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Push(object context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.ContextStack.Push(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">O objeto de contexto para enviar por push para a pilha.</param>
+        <summary>Envia ou coloca o objeto especificado para a pilha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a colocar valores para um <xref:System.ComponentModel.Design.Serialization.ContextStack>.  
+  
+ [!code-cpp[ContextStackExample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/ContextStackExample/CPP/class1.cpp#3)]
+ [!code-csharp[ContextStackExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ContextStackExample/CS/class1.cs#3)]
+ [!code-vb[ContextStackExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContextStackExample/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

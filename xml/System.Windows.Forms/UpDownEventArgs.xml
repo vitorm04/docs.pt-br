@@ -1,0 +1,91 @@
+<Type Name="UpDownEventArgs" FullName="System.Windows.Forms.UpDownEventArgs">
+  <TypeSignature Language="C#" Value="public class UpDownEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UpDownEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.UpDownEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para controles que derivam de <see cref="T:System.Windows.Forms.UpDownBase" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownEventArgs> é usado quando o usuário clica em um botão em um controle que deriva de <xref:System.Windows.Forms.UpDownBase> controle. O <xref:System.Windows.Forms.UpDownEventArgs> contém informações sobre qual botão foi clicado.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpDownEventArgs (int buttonPushed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 buttonPushed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buttonPushed" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buttonPushed">O botão foi clicado o <see cref="T:System.Windows.Forms.UpDownBase" /> controle.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.UpDownEventArgs" /></summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir descreve os valores válidos para `buttonPushed`.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|0|Nenhum botão foi clicado.|  
+|1|O backup foi clicada.|  
+|2|O baixo botão foi clicado.|  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonID">
+      <MemberSignature Language="C#" Value="public int ButtonID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ButtonID" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownEventArgs.ButtonID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa qual botão o usuário clicou.</summary>
+        <value>Um valor que representa qual botão o usuário clicou.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir descreve os valores que o <xref:System.Windows.Forms.UpDownEventArgs.ButtonID%2A> retorna.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|0|Nenhum botão foi clicado.|  
+|1|O backup foi clicada.|  
+|2|O baixo botão foi clicado.|  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

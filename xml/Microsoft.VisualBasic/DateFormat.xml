@@ -1,0 +1,108 @@
+<Type Name="DateFormat" FullName="Microsoft.VisualBasic.DateFormat">
+  <TypeSignature Language="C#" Value="public enum DateFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DateFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.DateFormat" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica como exibir datas ao chamar a função <see langword="FormatDateTime" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `FormatDateTime` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+> [!NOTE]
+>  Você pode acessar as configurações regionais do computador clicando duas vezes o **opções regionais** ícone, encontrado em **painel de controle**.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GeneralDate">
+      <MemberSignature Language="C#" Value="GeneralDate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DateFormat GeneralDate = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.DateFormat.GeneralDate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DateFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para números reais, exibe uma data e hora. Se o número não tiver nenhuma parte fracionária, exibe apenas uma data. Se o número não tiver nenhuma parte inteira, exibe apenas a hora. A exibição de data e hora é determinada pelas configurações regionais do computador. Esse membro é equivalente à constante <see langword="vbGeneralDate" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LongDate">
+      <MemberSignature Language="C#" Value="LongDate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DateFormat LongDate = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.DateFormat.LongDate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DateFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exibe uma data usando o formato de data completa especificado nas configurações regionais do computador. Esse membro é equivalente à constante <see langword="vbLongDate" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LongTime">
+      <MemberSignature Language="C#" Value="LongTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DateFormat LongTime = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.DateFormat.LongTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DateFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exibe a hora usando o formato de hora completa especificado nas configurações regionais do computador. Esse membro é equivalente à constante <see langword="vbLongTime" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShortDate">
+      <MemberSignature Language="C#" Value="ShortDate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DateFormat ShortDate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.DateFormat.ShortDate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DateFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exibe uma data usando o formato de data abreviada especificado nas configurações regionais do computador. Esse membro é equivalente à constante <see langword="vbShortDate" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShortTime">
+      <MemberSignature Language="C#" Value="ShortTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DateFormat ShortTime = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.DateFormat.ShortTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DateFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exibe a hora usando o formato de hora abreviada especificado nas configurações regionais do computador. Esse membro é equivalente à constante <see langword="vbShortTime" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

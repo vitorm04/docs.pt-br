@@ -1,0 +1,303 @@
+<Type Name="DesignTimeData" FullName="System.Web.UI.Design.DesignTimeData">
+  <TypeSignature Language="C#" Value="public sealed class DesignTimeData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignTimeData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DesignTimeData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos auxiliares que podem ser usados pelos designers de controle para gerar dados de exemplo para as propriedades de associação de dados em tempo de design. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateDummyDataBoundDataTable">
+      <MemberSignature Language="C#" Value="public static System.Data.DataTable CreateDummyDataBoundDataTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.DataTable CreateDummyDataBoundDataTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeData.CreateDummyDataBoundDataTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Data.DataTable" /> objeto que contém três colunas com nomes que indica que as colunas são conectadas a uma fonte de dados.</summary>
+        <returns>Um novo <see cref="T:System.Data.DataTable" /> objeto com três colunas e nenhum dado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela, na verdade, não está associada a uma fonte de dados. Cada nome de coluna simplesmente indica que ela é uma coluna de dados associados. Os tipos de dados de coluna são cadeia de caracteres, inteiro e cadeia de caracteres. O componente designer de chamada deve adicionar linhas e dados para a tabela resultante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDummyDataTable">
+      <MemberSignature Language="C#" Value="public static System.Data.DataTable CreateDummyDataTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.DataTable CreateDummyDataTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeData.CreateDummyDataTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Data.DataTable" /> objeto que contém três colunas com nomes que indicam que as colunas contêm dados de exemplo.</summary>
+        <returns>Um novo <see cref="T:System.Data.DataTable" /> com três colunas. Essas colunas podem conter dados de cadeia de caracteres de tipo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tipos de dados de coluna são cadeia de caracteres. O componente designer de chamada pode chamar o <xref:System.Web.UI.Design.DesignTimeData.GetDesignTimeDataSource%2A> método para adicionar linhas de dados para a tabela resultante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSampleDataTable">
+      <MemberSignature Language="C#" Value="public static System.Data.DataTable CreateSampleDataTable (System.Collections.IEnumerable referenceData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.DataTable CreateSampleDataTable(class System.Collections.IEnumerable referenceData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeData.CreateSampleDataTable(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="referenceData" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="referenceData">Uma fonte de dados com o esquema desejado para usar como o formato para o exemplo <see cref="T:System.Data.DataTable" /> objeto.</param>
+        <summary>Cria um exemplo <see cref="T:System.Data.DataTable" /> objeto com o mesmo esquema como os dados fornecidos.</summary>
+        <returns>Um <see cref="T:System.Data.DataTable" /> objeto que contém colunas com os mesmo nomes e tipos de dados como a fornecida <paramref name="referenceData" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tipos de dados que podem ser criados são os tipos primitivos, como número, cadeia de caracteres e tipos de data. Qualquer outro tipo é substituído por colunas de tipo `String`. O componente designer de chamada pode chamar o <xref:System.Web.UI.Design.DesignTimeData.GetDesignTimeDataSource%2A> método para adicionar linhas de dados para a tabela resultante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSampleDataTable">
+      <MemberSignature Language="C#" Value="public static System.Data.DataTable CreateSampleDataTable (System.Collections.IEnumerable referenceData, bool useDataBoundData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Data.DataTable CreateSampleDataTable(class System.Collections.IEnumerable referenceData, bool useDataBoundData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeData.CreateSampleDataTable(System.Collections.IEnumerable,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="referenceData" Type="System.Collections.IEnumerable" />
+        <Parameter Name="useDataBoundData" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="referenceData">Um <see cref="T:System.Collections.IEnumerable" /> objeto que contém dados.</param>
+        <param name="useDataBoundData">Se <see langword="true" />, os nomes de coluna indicam que contêm dados associados.</param>
+        <summary>Cria um <see cref="T:System.Data.DataTable" /> do objeto com o mesmo esquema como os dados fornecidos e, opcionalmente, que contém nomes de coluna que indica que os dados sejam associados.</summary>
+        <returns>Um objeto <see cref="T:System.Data.DataTable" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tipos de dados que podem ser criados são os tipos primitivos, como número, cadeia de caracteres e tipos de data. Qualquer outro tipo é substituído por colunas de tipo `String`. O componente designer chamado pode usar <xref:System.Web.UI.Design.DesignTimeData.GetDesignTimeDataSource%2A> para adicionar linhas de dados para a tabela resultante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindingHandler">
+      <MemberSignature Language="C#" Value="public static readonly EventHandler DataBindingHandler;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.EventHandler DataBindingHandler" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.Design.DesignTimeData.DataBindingHandler" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um manipulador de eventos de associação de dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataFields">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.PropertyDescriptorCollection GetDataFields (System.Collections.IEnumerable dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.PropertyDescriptorCollection GetDataFields(class System.Collections.IEnumerable dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeData.GetDataFields(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados do qual recuperar os campos de dados.</param>
+        <summary>Obtém uma coleção de descritores de propriedade para os campos de dados da fonte de dados especificado.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> objeto que descreve os campos de dados da fonte de dados especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataMember">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerable GetDataMember (System.ComponentModel.IListSource dataSource, string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerable GetDataMember(class System.ComponentModel.IListSource dataSource, string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeData.GetDataMember(System.ComponentModel.IListSource,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.ComponentModel.IListSource" />
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Um <see cref="T:System.ComponentModel.IListSource" /> que contém os dados no qual localizar o membro.</param>
+        <param name="dataMember">O nome do membro para recuperar dados.</param>
+        <summary>Obtém o membro de dados especificado da fonte de dados especificado.</summary>
+        <returns>Um objeto que implementa <see cref="T:System.Collections.IEnumerable" /> que contém o membro de dados especificado da fonte de dados especificado, se ele existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método pesquisa a fonte de dados especificado para o membro de dados especificado. Se `dataMember` é `null`, o primeiro membro de dados na fonte de dados especificado será retornado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dataSource" /> é <see langword="null" />  
+  
+ -ou-  
+  
+ <paramref name="dataMember" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataMembers">
+      <MemberSignature Language="C#" Value="public static string[] GetDataMembers (object dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] GetDataMembers(object dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeData.GetDataMembers(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados do qual recuperar os nomes dos membros.</param>
+        <summary>Obtém os nomes dos membros de dados na fonte de dados especificado.</summary>
+        <returns>Uma matriz do tipo <see langword="String" /> que contém os nomes dos membros de dados na fonte de dados especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeDataSource">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerable GetDesignTimeDataSource (System.Data.DataTable dataTable, int minimumRows);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerable GetDesignTimeDataSource(class System.Data.DataTable dataTable, int32 minimumRows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeData.GetDesignTimeDataSource(System.Data.DataTable,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataTable" Type="System.Data.DataTable" />
+        <Parameter Name="minimumRows" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dataTable">O <see cref="T:System.Data.DataTable" /> do objeto para a qual as linhas de exemplo são adicionadas.</param>
+        <param name="minimumRows">O número mínimo de linhas a ser adicionado.</param>
+        <summary>Adiciona o número especificado de linhas de amostra à tabela de dados especificado.</summary>
+        <returns>Um objeto que implementa <see cref="T:System.Collections.IEnumerable" /> que contém dados de exemplo para uso em tempo de design.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedDataSource">
+      <MemberSignature Language="C#" Value="public static object GetSelectedDataSource (System.ComponentModel.IComponent component, string dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetSelectedDataSource(class System.ComponentModel.IComponent component, string dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeData.GetSelectedDataSource(System.ComponentModel.IComponent,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="dataSource" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.ComponentModel.IComponent" /> objeto que contém a fonte de dados.</param>
+        <param name="dataSource">O nome da fonte de dados para recuperar.</param>
+        <summary>Obtém uma fonte de dados selecionada pelo nome do host de design, representada pela propriedade do site do componente especificado e identificado pelo nome de fonte de dados especificado.</summary>
+        <returns>Um objeto que implementa o <see cref="T:System.ComponentModel.IListSource" /> ou <see cref="T:System.Collections.IEnumerable" /> que representa a fonte de dados selecionado, ou <see langword="null" /> se a fonte de dados ou o host de designer não pôde ser acessado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedDataSource">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerable GetSelectedDataSource (System.ComponentModel.IComponent component, string dataSource, string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerable GetSelectedDataSource(class System.ComponentModel.IComponent component, string dataSource, string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignTimeData.GetSelectedDataSource(System.ComponentModel.IComponent,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="dataSource" Type="System.String" />
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="component">O objeto que implementa <see cref="T:System.ComponentModel.IComponent" /> que contém a propriedade de origem de dados.</param>
+        <param name="dataSource">A fonte de dados para recuperar.</param>
+        <param name="dataMember">O membro de dados para recuperar.</param>
+        <summary>Obtém uma fonte de dados selecionada pelo nome do host de design, representada pela propriedade do site do componente especificado e identificado pelo nome da fonte de dados especificado e o nome do membro.</summary>
+        <returns>Um objeto que implementa <see cref="T:System.Collections.IEnumerable" /> que contém o membro de dados, ou <see langword="null" /> se a fonte de dados, membro ou site do componente não pôde ser acessado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

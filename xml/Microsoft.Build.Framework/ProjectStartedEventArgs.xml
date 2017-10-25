@@ -1,0 +1,392 @@
+<Type Name="ProjectStartedEventArgs" FullName="Microsoft.Build.Framework.ProjectStartedEventArgs">
+  <TypeSignature Language="C#" Value="public class ProjectStartedEventArgs : Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ProjectStartedEventArgs extends Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.ProjectStartedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildStatusEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectStarted" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ AVISO: a marcação de um tipo [Serializable] sem implementar ISerializable impõe um contrato de serialização -- trata-se uma promessa de nunca alterar os campos do tipo, ou seja, o tipo é imutável; a adição de novos campos na próxima versão do tipo sem seguir determinadas diretrizes especiais de FX pode afetar a compatibilidade com versões anteriores e posteriores  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como gravar um agente básico que responde a eventos de compilação.  
+  
+ [!code-csharp[msbuild_BasicLogger#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BasicLogger/CS/msbuild_BasicLogger.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProjectStartedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectStartedEventArgs (string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string projectFile, string targetNames, class System.Collections.IEnumerable properties, class System.Collections.IEnumerable items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String" />
+        <Parameter Name="properties" Type="System.Collections.IEnumerable" />
+        <Parameter Name="items" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="message">O texto do evento.</param>
+        <param name="helpKeyword">A palavra-chave de ajuda associada ao evento.</param>
+        <param name="projectFile">O nome do arquivo de projeto.</param>
+        <param name="targetNames">Os destinos a serem compilados.</param>
+        <param name="properties">Uma lista de propriedades</param>
+        <param name="items">Uma lista de itens.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" /> classe com os valores especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectStartedEventArgs (string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string projectFile, string targetNames, class System.Collections.IEnumerable properties, class System.Collections.IEnumerable items, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String" />
+        <Parameter Name="properties" Type="System.Collections.IEnumerable" />
+        <Parameter Name="items" Type="System.Collections.IEnumerable" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="message">mensagem de texto</param>
+        <param name="helpKeyword">palavra-chave de ajuda</param>
+        <param name="projectFile">nome do projeto</param>
+        <param name="targetNames">destinos, vamos criar (vazio indica destinos padrão)</param>
+        <param name="properties">lista de propriedades</param>
+        <param name="items">lista de itens</param>
+        <param name="eventTimestamp">hora do evento</param>
+        <summary>Este construtor permite que os dados do evento sejam inicializados. Também o carimbo de hora pode ser definido remetente é considerado como "MSBuild".</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectStartedEventArgs (int projectId, string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, Microsoft.Build.Framework.BuildEventContext parentBuildEventContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 projectId, string message, string helpKeyword, string projectFile, string targetNames, class System.Collections.IEnumerable properties, class System.Collections.IEnumerable items, class Microsoft.Build.Framework.BuildEventContext parentBuildEventContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,Microsoft.Build.Framework.BuildEventContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectId" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String" />
+        <Parameter Name="properties" Type="System.Collections.IEnumerable" />
+        <Parameter Name="items" Type="System.Collections.IEnumerable" />
+        <Parameter Name="parentBuildEventContext" Type="Microsoft.Build.Framework.BuildEventContext" />
+      </Parameters>
+      <Docs>
+        <param name="projectId">O exclusivo <see cref="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectId" /> identificador para o projeto.</param>
+        <param name="message">O texto do evento.</param>
+        <param name="helpKeyword">A palavra-chave de ajuda associada ao evento.</param>
+        <param name="projectFile">O nome do arquivo de projeto.</param>
+        <param name="targetNames">Os destinos a serem compilados.</param>
+        <param name="properties">Uma lista de propriedades.</param>
+        <param name="items">Uma lista de itens.</param>
+        <param name="parentBuildEventContext">Um <see cref="T:Microsoft.Build.Framework.BuildEventContext" /> valor que define as informações contextuais local. Isso está anexado ao log de eventos para definir onde estão localizados em relação o processo, mecanismo, projeto, destino ou tarefas que está executando.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" /> classe com os valores especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectStartedEventArgs (int projectId, string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, Microsoft.Build.Framework.BuildEventContext parentBuildEventContext, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 projectId, string message, string helpKeyword, string projectFile, string targetNames, class System.Collections.IEnumerable properties, class System.Collections.IEnumerable items, class Microsoft.Build.Framework.BuildEventContext parentBuildEventContext, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,Microsoft.Build.Framework.BuildEventContext,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectId" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String" />
+        <Parameter Name="properties" Type="System.Collections.IEnumerable" />
+        <Parameter Name="items" Type="System.Collections.IEnumerable" />
+        <Parameter Name="parentBuildEventContext" Type="Microsoft.Build.Framework.BuildEventContext" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="projectId">id do projeto</param>
+        <param name="message">mensagem de texto</param>
+        <param name="helpKeyword">palavra-chave de ajuda</param>
+        <param name="projectFile">nome do projeto</param>
+        <param name="targetNames">destinos, vamos criar (vazio indica destinos padrão)</param>
+        <param name="properties">lista de propriedades</param>
+        <param name="items">lista de itens</param>
+        <param name="parentBuildEventContext">informações de contexto de evento para o projeto pai</param>
+        <param name="eventTimestamp">hora do evento</param>
+        <summary>Este construtor permite que os dados do evento sejam inicializados. O remetente é considerado “MSBuild”.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProjectStartedEventArgs (int projectId, string message, string helpKeyword, string projectFile, string targetNames, System.Collections.IEnumerable properties, System.Collections.IEnumerable items, Microsoft.Build.Framework.BuildEventContext parentBuildEventContext, System.Collections.Generic.IDictionary&lt;string,string&gt; globalProperties, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 projectId, string message, string helpKeyword, string projectFile, string targetNames, class System.Collections.IEnumerable properties, class System.Collections.IEnumerable items, class Microsoft.Build.Framework.BuildEventContext parentBuildEventContext, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; globalProperties, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ProjectStartedEventArgs.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Collections.IEnumerable,System.Collections.IEnumerable,Microsoft.Build.Framework.BuildEventContext,System.Collections.Generic.IDictionary{System.String,System.String},System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectId" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String" />
+        <Parameter Name="properties" Type="System.Collections.IEnumerable" />
+        <Parameter Name="items" Type="System.Collections.IEnumerable" />
+        <Parameter Name="parentBuildEventContext" Type="Microsoft.Build.Framework.BuildEventContext" />
+        <Parameter Name="globalProperties" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectId">id do projeto</param>
+        <param name="message">mensagem de texto</param>
+        <param name="helpKeyword">palavra-chave de ajuda</param>
+        <param name="projectFile">nome do projeto</param>
+        <param name="targetNames">destinos, vamos criar (vazio indica destinos padrão)</param>
+        <param name="properties">lista de propriedades</param>
+        <param name="items">lista de itens</param>
+        <param name="parentBuildEventContext">informações de contexto de evento para o projeto pai</param>
+        <param name="globalProperties">Uma lista de propriedades globais</param>
+        <param name="toolsVersion">A versão das ferramentas</param>
+        <summary>Este construtor permite que os dados do evento sejam inicializados.  
+  
+ O remetente é considerado “MSBuild”.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; GlobalProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GlobalProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.GlobalProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conjunto de propriedades globais usada para avaliar este projeto.</summary>
+        <value>Retorna <see cref="T:System.Collections.Generic.IDictionary`2" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidProjectId">
+      <MemberSignature Language="C#" Value="public const int InvalidProjectId = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 InvalidProjectId = (-1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Framework.ProjectStartedEventArgs.InvalidProjectId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Um valor que representa uma ID de projeto inválido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable Items" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de itens para o evento.</summary>
+        <value>A lista de itens para o evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os itens e acessados por meio de metadados <xref:Microsoft.Build.Framework.ProjectStartedEventArgs.Items%2A> são mantidos atualizados e podem ser enumeradas durante a compilação do projeto. No entanto, a alteração de um item na lista não afetará o processo de compilação.  
+  
+> [!NOTE]
+>  Esta propriedade não funciona com compilações de proc múltiplo. Para obter resultados adequados, você pode desativar multi-proc criando especificando `/m:1` (que é o padrão).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentProjectBuildEventContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.BuildEventContext ParentProjectBuildEventContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.BuildEventContext ParentProjectBuildEventContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ParentProjectBuildEventContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.BuildEventContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece informações contextuais local, incluindo o projeto se qualquer que invocou a compilação deste projeto.</summary>
+        <value>Um <see cref="T:Microsoft.Build.Framework.BuildEventContext" /> objeto que representa a lista de itens para o evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFile">
+      <MemberSignature Language="C#" Value="public string ProjectFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProjectFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o arquivo de projeto associado ao evento.</summary>
+        <value>O arquivo de projeto associado ao evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectId">
+      <MemberSignature Language="C#" Value="public int ProjectId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProjectId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ProjectId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o arquivo de projeto associado ao evento.</summary>
+        <value>Um inteiro que representa a ID do arquivo de projeto associado ao evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable Properties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de propriedades para o evento.</summary>
+        <value>A lista de propriedades para o evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os nomes de propriedade e acessados por meio de valores <xref:Microsoft.Build.Framework.ProjectStartedEventArgs.Properties%2A> são mantidos atualizados e podem ser enumeradas durante a compilação do projeto. No entanto, a alteração de uma propriedade nessa lista não afetará o processo de compilação.  
+  
+> [!NOTE]
+>  Esta propriedade não funciona com compilações de proc múltiplo. Para obter resultados adequados, você pode ou desative o multi-proc criando especificando `/m:1` (que é o padrão), ou você pode contornar a limitação, definindo uma variável de ambiente. Por exemplo, definindo `MSBuildForwardPropertiesFromChild=configuration;platform` encaminha as propriedades de "configuração" e "plataforma" de filho nós. A menos que essa variável de ambiente é definida, nada será encaminhado. Para obter mais informações, consulte [Como usar variáveis de ambiente em um build](http://msdn.microsoft.com/library/7f9e4469-8865-4b59-aab3-3ff26bd36e77).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetNames">
+      <MemberSignature Language="C#" Value="public string TargetNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.TargetNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de destinos deve ser criada no projeto.</summary>
+        <value>A lista de destinos deve ser criada no projeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsVersion">
+      <MemberSignature Language="C#" Value="public string ToolsVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ProjectStartedEventArgs.ToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão das ferramentas usada para avaliar a este projeto.</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

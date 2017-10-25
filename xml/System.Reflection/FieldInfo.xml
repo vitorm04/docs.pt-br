@@ -1,0 +1,1961 @@
+<Type Name="FieldInfo" FullName="System.Reflection.FieldInfo">
+  <TypeSignature Language="C#" Value="public abstract class FieldInfo : System.Reflection.MemberInfo, System.Runtime.InteropServices._FieldInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit FieldInfo extends System.Reflection.MemberInfo implements class System.Runtime.InteropServices._FieldInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.FieldInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.MemberInfo</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._FieldInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._FieldInfo))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descobre os atributos de um campo e fornece acesso aos metadados de campo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações de campo são obtidas de metadados. O <xref:System.Reflection.FieldInfo> classe não tem um construtor público. <xref:System.Reflection.FieldInfo>objetos são obtidos chamando o <xref:System.Type.GetFields%2A> ou <xref:System.Type.GetField%2A> método de um `Type` objeto.  
+  
+ Os campos são variáveis definidas na classe. <xref:System.Reflection.FieldInfo>fornece acesso aos metadados para um campo dentro de uma classe e fornece funcionalidade de get e o conjunto dinâmico para o campo. A classe não é carregada na memória até invoke ou get é chamado no objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Type.GetFields%2A?displayProperty=nameWithType> método para obter as informações relacionadas do campo do <xref:System.Reflection.FieldInfo> classe e, em seguida, exibe os atributos de campos.  
+  
+ [!code-cpp[FieldInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldInfo/CPP/fieldinfo.cpp#1)]
+ [!code-csharp[FieldInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldInfo/CS/fieldinfo.cs#1)]
+ [!code-vb[FieldInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldInfo/VB/fieldinfo.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Esta classe não pode ser herdada pelo código parcialmente confiável.</permission>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.Reflection.FieldInfo" />, você deve substituir os seguintes membros: <see cref="M:System.Reflection.FieldInfo.GetValue(System.Object)" /> e <see cref="M:System.Reflection.FieldInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FieldInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see langword="FieldInfo" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public abstract System.Reflection.FieldAttributes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.FieldAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos associados a esse campo.</summary>
+        <value>O <see langword="FieldAttributes" /> para esse campo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os membros têm um conjunto de atributos que são definidos em relação do tipo específico de membro. `FieldAttributes`informa ao usuário se este campo é o campo privado, um campo estático e assim por diante.  
+  
+ Para obter o `Attributes` propriedade, primeiro obtenha a classe `Type`. Do `Type`, obter o `FieldInfo`. Do `FieldInfo`, obter o `Attributes`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria três campos e exibe seus atributos de campo. Um `FieldAttributes` valor pode conter mais de um atributo, como ambos `Public` e `Literal`, conforme mostrado no terceiro campo.  
+  
+ [!code-cpp[Classic FieldAttributes Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FieldAttributes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FieldAttributes Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FieldAttributes Example/CS/source.cs#1)]
+ [!code-vb[Classic FieldAttributes Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FieldAttributes Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado com essa instância ou <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldHandle">
+      <MemberSignature Language="C#" Value="public abstract RuntimeFieldHandle FieldHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.RuntimeFieldHandle FieldHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.FieldHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeFieldHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see langword="RuntimeFieldHandle" />, que é um identificador para a representação interna de metadados de um campo.</summary>
+        <value>Um identificador para a representação interna de metadados de um campo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os identificadores são válidos somente no appdomain no qual eles foram obtidos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir recupera informações de campo MyClass.MyField e exibe o campo associado ao identificador de campo.  
+  
+ [!code-cpp[FieldInfo_FieldHandle#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldInfo_FieldHandle/CPP/fieldinfo_fieldhandle.cpp#1)]
+ [!code-csharp[FieldInfo_FieldHandle#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldInfo_FieldHandle/CS/fieldinfo_fieldhandle.cs#1)]
+ [!code-vb[FieldInfo_FieldHandle#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldInfo_FieldHandle/VB/fieldinfo_fieldhandle.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldType">
+      <MemberSignature Language="C#" Value="public abstract Type FieldType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type FieldType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.FieldType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do objeto deste campo.</summary>
+        <value>O tipo deste objeto de campo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo é algum tipo de dados primitivo, como `String`, `Boolean`, ou `GUID`.  
+  
+ Para obter o `FieldType` propriedade, primeiro obtenha a classe `Type`. Do `Type`, obter o `FieldInfo`. Do `FieldInfo`, obter o `FieldType` valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um campo, obtém o tipo e <xref:System.Reflection.FieldInfo>e exibe seu <xref:System.Reflection.FieldInfo.FieldType%2A>.  
+  
+ [!code-cpp[Classic FieldInfo.FieldType Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FieldInfo.FieldType Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FieldInfo.FieldType Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FieldInfo.FieldType Example/CS/source.cs#1)]
+ [!code-vb[Classic FieldInfo.FieldType Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FieldInfo.FieldType Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldFromHandle">
+      <MemberSignature Language="C#" Value="public static System.Reflection.FieldInfo GetFieldFromHandle (RuntimeFieldHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.FieldInfo GetFieldFromHandle(valuetype System.RuntimeFieldHandle handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.GetFieldFromHandle(System.RuntimeFieldHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.RuntimeFieldHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Um <see cref="T:System.RuntimeFieldHandle" /> estrutura que contém o identificador para a representação interna de metadados de um campo.</param>
+        <summary>Obtém um <see cref="T:System.Reflection.FieldInfo" /> para o campo representado pelo identificador especificado.</summary>
+        <returns>Um <see cref="T:System.Reflection.FieldInfo" /> objeto que representa o campo especificado pelo <paramref name="handle" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Identificadores são válidos somente no domínio do aplicativo no qual eles foram obtidos.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Type.GetFields%2A?displayProperty=nameWithType> método para obter <xref:System.Reflection.FieldInfo> objetos para os campos de um tipo, obtém um <xref:System.RuntimeFieldHandle> estrutura para cada campo e, em seguida, recupera o <xref:System.Reflection.FieldInfo> objetos de alças usando essa sobrecarga da <xref:System.Reflection.FieldInfo.GetFieldFromHandle%2A>método.  
+  
+ [!code-cpp[FieldInfo_GetFieldFromHandle#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldInfo_GetFieldFromHandle/CPP/fieldinfo_getfieldfromhandle.cpp#1)]
+ [!code-csharp[FieldInfo_GetFieldFromHandle#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldInfo_GetFieldFromHandle/CS/fieldinfo_getfieldfromhandle.cs#1)]
+ [!code-vb[FieldInfo_GetFieldFromHandle#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldInfo_GetFieldFromHandle/VB/fieldinfo_getfieldfromhandle.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="handle" /> é inválido.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldFromHandle">
+      <MemberSignature Language="C#" Value="public static System.Reflection.FieldInfo GetFieldFromHandle (RuntimeFieldHandle handle, RuntimeTypeHandle declaringType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.FieldInfo GetFieldFromHandle(valuetype System.RuntimeFieldHandle handle, valuetype System.RuntimeTypeHandle declaringType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.GetFieldFromHandle(System.RuntimeFieldHandle,System.RuntimeTypeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.RuntimeFieldHandle" />
+        <Parameter Name="declaringType" Type="System.RuntimeTypeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Um <see cref="T:System.RuntimeFieldHandle" /> estrutura que contém o identificador para a representação interna de metadados de um campo.</param>
+        <param name="declaringType">Um <see cref="T:System.RuntimeTypeHandle" /> estrutura que contém o identificador para o tipo genérico que define o campo.</param>
+        <summary>Obtém um <see cref="T:System.Reflection.FieldInfo" /> para o campo representado pelo identificador especificado, para o tipo genérico especificado.</summary>
+        <returns>Um <see cref="T:System.Reflection.FieldInfo" /> objeto que representa o campo especificado por <paramref name="handle" />, no tipo genérico especificado pelo <paramref name="declaringType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Identificadores são válidos somente no domínio do aplicativo no qual eles foram obtidos.  
+  
+ A prática recomendada é que `declaringType` deve sempre ser o identificador de tipo de tempo de execução do construído tipo `handle` pertence. Ou seja, se `handle` é um identificador de campo de tempo de execução para um campo que pertence a `MyType<int>` (`MyType(Of Integer)` no Visual Basic), `declaringType` é o identificador de tipo de tempo de execução de `MyType<int>`. Não use o identificador de tipo de tempo de execução da definição de tipo genérico, a menos que o identificador de campo de tempo de execução representa um campo na definição de tipo genérico.  
+  
+ Implementações são compatíveis em alguns casos. Por exemplo, uma única implementação é compartilhada por todos os tipos que são construídos a partir de uma definição de tipo genérico particular usando tipos de referência para os argumentos de tipo genérico. Por exemplo, `MyType<string>`, `MyType<object>`, e `MyType<ArrayList>` todos compartilham a mesma implementação. Nessa situação, o <xref:System.Reflection.FieldInfo> objeto retornado representa um campo do tipo que `declaringType` Especifica, independentemente da origem original do `handle`. Essa prática não é recomendada, porque ele só funcionará se os argumentos de tipo genérico do tipo construído são tipos de referência.  
+  
+ Se um argumento genérico é um tipo de valor, o identificador de tipo de tempo de execução do tipo construído não é compatível com identificadores de campo de tempo de execução de construções que têm uma referência de tipo na mesma posição de parâmetro genérico ou que têm um valor diferente de tipo nessa posição. Nesse caso, a única maneira de usar o <xref:System.Reflection.FieldInfo.GetFieldFromHandle%28System.RuntimeFieldHandle%2CSystem.RuntimeTypeHandle%29?displayProperty=nameWithType> sobrecarga é para garantir que `declaringType` é o identificador de tipo de tempo de execução para o tipo de construído `handle` pertence.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como recuperar <xref:System.Reflection.FieldInfo> objetos para campos de classes genéricas construídos. O exemplo define o tipo genérico `Test<T>` (`Test(Of T)` no Visual Basic) com um único campo chamado `TestField`, do tipo `T`. O exemplo obtém o <xref:System.RuntimeFieldHandle> e <xref:System.RuntimeTypeHandle> para o caso onde `T` é <xref:System.String>e demonstra o seguinte:  
+  
+-   Uma exceção será lançada se o <xref:System.Reflection.FieldInfo.GetFieldFromHandle%28System.RuntimeFieldHandle%29> sobrecarga do método é usada. Isso é verdadeiro mesmo se o campo não é do tipo `T`.  
+  
+-   Um <xref:System.Reflection.FieldInfo> é recuperada com êxito se o identificador de tipo de tempo de execução é de construção mesmo como o identificador de campo de tempo de execução, neste caso `Test<string>`.  
+  
+-   Se o identificador de tipo de tempo de execução é de uma construção compatível, neste caso `Test<object>`, um <xref:System.Reflection.FieldInfo> para o campo na construção compatível é recuperado.  
+  
+-   Se o identificador de tipo de tempo de execução não for de uma construção compatível, uma exceção será lançada. Nesse caso, um tipo de valor é especificado para `T`.  
+  
+ [!code-csharp[FieldInfo_GetFieldFromHandle2#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldInfo_GetFieldFromHandle2/cs/source.cs#1)]
+ [!code-vb[FieldInfo_GetFieldFromHandle2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldInfo_GetFieldFromHandle2/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="handle" /> é inválido.  
+  
+ -ou-  
+  
+ <paramref name="declaringType" />não é compatível com <paramref name="handle" />. Por exemplo, <paramref name="declaringType" /> é o identificador de tipo de tempo de execução da definição de tipo genérico, e <paramref name="handle" /> vêm de um tipo construído.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOptionalCustomModifiers">
+      <MemberSignature Language="C#" Value="public virtual Type[] GetOptionalCustomModifiers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type[] GetOptionalCustomModifiers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.GetOptionalCustomModifiers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz de tipos que identificam os modificadores personalizados opcionais do campo.</summary>
+        <returns>Uma matriz de <see cref="T:System.Type" /> objetos que identificam os modificadores personalizados opcionais do campo atual, como <see cref="T:System.Runtime.CompilerServices.IsConst" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.FieldInfo.GetOptionalCustomModifiers%2A> e <xref:System.Reflection.FieldInfo.GetRequiredCustomModifiers%2A> métodos são fornecidos para os designers de compiladores gerenciados. Para obter mais informações sobre modificadores personalizados, consulte <xref:System.Runtime.CompilerServices.IsBoxed> e classes no relacionadas a <xref:System.Runtime.CompilerServices> namespace e a especificação de metadados na documentação do ECMA partição II. A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRawConstantValue">
+      <MemberSignature Language="C#" Value="public virtual object GetRawConstantValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetRawConstantValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.GetRawConstantValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor literal associado ao campo por um compilador.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém o valor literal associado ao campo. Se o valor literal for um tipo de classe com um valor de elemento zero, o valor retornado será <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é fornecido para os designers de compiladores gerenciados e analisadores de código.  
+  
+ Esse método pode ser usado no contexto de execução e o contexto exclusivo de reflexão.  
+  
+ Em metadados não gerenciado, a tabela de constante é usada para armazenar valores de constantes para campos, parâmetros e propriedades. Constante das informações diretamente não influenciam o comportamento de tempo de execução. Compiladores inspecionam essas informações, em tempo de compilação durante a importação de metadados. Se usado, o valor de uma constante é inserido no fluxo Microsoft intermediate language (MSIL) o compilador emite. Não há nenhum instruções da MSIL que podem ser usadas para acessar a tabela constante em tempo de execução.  
+  
+> [!NOTE]
+>  Para obter mais informações sobre valores de constante e a tabela de constante, consulte a documentação do ECMA partição II. A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A tabela Constante nos metadados não gerenciados não contém um valor constante para o campo atual.</exception>
+        <exception cref="T:System.FormatException">O tipo do valor não é um dos tipos permitidos pelo CLS (Common Language Specification). Consulte a especificação ECMA Partição II Metadata Logical Format: Other Structures, Element Types used in Signatures (Formato lógico de metadados: outras estruturas, Tipos de elementos usados em assinaturas).</exception>
+        <exception cref="T:System.NotSupportedException">O valor da constante para o campo não é definido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequiredCustomModifiers">
+      <MemberSignature Language="C#" Value="public virtual Type[] GetRequiredCustomModifiers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type[] GetRequiredCustomModifiers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.GetRequiredCustomModifiers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz de tipos que identificam os modificadores personalizados necessários da propriedade.</summary>
+        <returns>Uma matriz de <see cref="T:System.Type" /> objetos que identificam os modificadores personalizados necessários da propriedade atual, como <see cref="T:System.Runtime.CompilerServices.IsConst" /> ou <see cref="T:System.Runtime.CompilerServices.IsImplicitlyDereferenced" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.FieldInfo.GetOptionalCustomModifiers%2A> e <xref:System.Reflection.FieldInfo.GetRequiredCustomModifiers%2A> métodos são fornecidos para os designers de compiladores gerenciados. Para obter mais informações sobre modificadores personalizados, consulte <xref:System.Runtime.CompilerServices.IsBoxed> e classes no relacionadas a <xref:System.Runtime.CompilerServices> namespace e a especificação de metadados na documentação do ECMA partição II. A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public abstract object GetValue (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValue(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.GetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto cujo valor do campo será retornado.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o valor de um campo com suporte por um determinado objeto.</summary>
+        <returns>Um objeto que contém o valor do campo refletido por essa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o campo for estático, `obj` será ignorado. Para campos de não-estático, `obj` deve ser uma instância de uma classe que herda ou declara o campo. Observe que o tipo de retorno de `GetValue` é `Object`. Por exemplo, se o campo contém um valor booleano primitivo valor, uma instância de `Object` com booliano apropriado o valor será retornado. Antes de retornar o valor `GetValue` verifica se o usuário tem permissão de acesso.  
+  
+> [!NOTE]
+>  Restrições de acesso são ignoradas por código totalmente confiável. Ou seja, propriedades, métodos, campos e construtores privados podem ser acessadas e invocadas pela reflexão sempre que o código é totalmente confiável.  
+  
+> [!NOTE]
+>  Começando por [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], este método pode ser usado para acessar membros não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos membros não públicos esteja restrito ao conjunto de concessões do chamador ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Reflection.FieldInfo.GetValue%2A> método para recuperar o valor de um campo estático. Observe que o valor de `obj` é `null`.  
+  
+ [!code-cpp[getfldval#1](~/samples/snippets/cpp/VS_Snippets_CLR/GetFldVal/CPP/getfldval.cpp#1)]
+ [!code-csharp[getfldval#1](~/samples/snippets/csharp/VS_Snippets_CLR/GetFldVal/CS/getfldval.cs#1)]
+ [!code-vb[getfldval#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetFldVal/VB/getfldval.vb#1)]  
+  
+ O exemplo a seguir recupera uma matriz de <xref:System.Reflection.FieldInfo> objetos que representa os campos do `FieldsClass` tipo e, em seguida, chama o <xref:System.Reflection.FieldInfo.GetValue%2A> para exibir o valor de cada campo para o `fieldsInst` objeto.  
+  
+ [!code-cpp[FieldInfo_GetValue#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldInfo_GetValue/CPP/fieldinfo_getvalue.cpp#1)]
+ [!code-csharp[FieldInfo_GetValue#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldInfo_GetValue/CS/fieldinfo_getvalue.cs#1)]
+ [!code-vb[FieldInfo_GetValue#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldInfo_GetValue/VB/fieldinfo_getvalue.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Reflection.TargetException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou a biblioteca de classes portátil, catch <see cref="T:System.Exception" /> em vez disso.  
+  
+</para>
+          </block>  
+  
+ O campo é não estático e <paramref name="obj" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Um campo é marcado como literal, mas o campo não tem um dos tipos de literal aceitos.</exception>
+        <exception cref="T:System.FieldAccessException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou a biblioteca de classes portátil, capturar a exceção de classe base, <see cref="T:System.MemberAccessException" />, em vez disso.  
+  
+</para>
+          </block>  
+  
+ O chamador não tem permissão para acessar esse campo.</exception>
+        <exception cref="T:System.ArgumentException">O método não está declarado nem é herdado pela classe de <paramref name="obj" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueDirect">
+      <MemberSignature Language="C#" Value="public virtual object GetValueDirect (TypedReference obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValueDirect(valuetype System.TypedReference obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.GetValueDirect(System.TypedReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.TypedReference" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Uma estrutura <see cref="T:System.TypedReference" /> que encapsula um ponteiro gerenciado para um local e uma representação de tempo de execução do tipo que pode ser armazenado nesse local.</param>
+        <summary>Retorna o valor de um campo com suporte no objeto especificado.</summary>
+        <returns>Um <see langword="Object" /> que contém um valor de campo.</returns>
+        <remarks>To be added.</remarks>
+        <altCompliant cref="M:System.Reflection.FieldInfo.GetValue(System.Object)" />
+        <exception cref="T:System.NotSupportedException">O chamador requer a alternativa de CLS (Common Language Specification), mas em vez dela, chamou esse método.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssembly">
+      <MemberSignature Language="C#" Value="public bool IsAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a visibilidade potencial deste campo é descrita por <see cref="F:System.Reflection.FieldAttributes.Assembly" />; ou seja, o campo está visível no máximo para outros tipos no mesmo assembly, e é derivado não é visível para tipos fora do assembly.</summary>
+        <value>
+          <see langword="true" />Se a visibilidade do campo exatamente é descrita por <see cref="F:System.Reflection.FieldAttributes.Assembly" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A visibilidade real de um campo é limitada pela visibilidade de seu tipo. O <xref:System.Reflection.FieldInfo.IsAssembly%2A> propriedade pode ser `true` para um campo, mas se ele for um campo de um tipo aninhado particular e em seguida, o campo não é visível fora do tipo recipiente.  
+  
+ A visibilidade de um campo exatamente é descrita por <xref:System.Reflection.FieldAttributes?displayProperty=nameWithType> se o modificador de visibilidade só é `internal` (`Friend` no Visual Basic). Esta propriedade é `false` para os campos que são `protected internal` em c# (`Protected Friend` no Visual Basic, `protected public` em C++); use o <xref:System.Reflection.FieldInfo.IsFamilyOrAssembly%2A> propriedade para identificar esses campos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define os campos com vários níveis de visibilidade e exibe os valores de suas <xref:System.Reflection.FieldInfo.IsAssembly%2A>, <xref:System.Reflection.FieldInfo.IsFamily%2A>, <xref:System.Reflection.FieldInfo.IsFamilyOrAssembly%2A>, e <xref:System.Reflection.FieldInfo.IsFamilyAndAssembly%2A> propriedades.  
+  
+> [!NOTE]
+>  As linguagens Visual Basic e c#, não é possível definir campos com <xref:System.Reflection.FieldAttributes?displayProperty=nameWithType> visibilidade; que o nível de acesso aparece somente no exemplo C++.  
+  
+ [!code-cpp[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/CS/source.cs#1)]
+ [!code-vb[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFamily">
+      <MemberSignature Language="C#" Value="public bool IsFamily { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a visibilidade do campo é descrita por <see cref="F:System.Reflection.FieldAttributes.Family" />; ou seja, o campo está visível somente dentro de sua classe e classes derivadas.</summary>
+        <value>
+          <see langword="true" />Se o acesso a esse campo é descrito exatamente por <see cref="F:System.Reflection.FieldAttributes.Family" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A visibilidade de um campo exatamente é descrita por <xref:System.Reflection.FieldAttributes?displayProperty=nameWithType> se o modificador de visibilidade só é `protected`. Esta propriedade é `false` para os campos que são `protected internal` em c# (`Protected Friend` no Visual Basic, `protected public` em C++); use o <xref:System.Reflection.FieldInfo.IsFamilyOrAssembly%2A> propriedade para identificar esses campos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define os campos com vários níveis de visibilidade e exibe os valores de suas <xref:System.Reflection.FieldInfo.IsAssembly%2A>, <xref:System.Reflection.FieldInfo.IsFamily%2A>, <xref:System.Reflection.FieldInfo.IsFamilyOrAssembly%2A>, e <xref:System.Reflection.FieldInfo.IsFamilyAndAssembly%2A> propriedades.  
+  
+> [!NOTE]
+>  As linguagens Visual Basic e c#, não é possível definir campos com <xref:System.Reflection.FieldAttributes?displayProperty=nameWithType> visibilidade; que o nível de acesso aparece somente no exemplo C++.  
+  
+ [!code-cpp[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/CS/source.cs#1)]
+ [!code-vb[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFamilyAndAssembly">
+      <MemberSignature Language="C#" Value="public bool IsFamilyAndAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFamilyAndAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsFamilyAndAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a visibilidade do campo é descrita por <see cref="F:System.Reflection.FieldAttributes.FamANDAssem" />; ou seja, o campo pode ser acessado em classes derivadas, mas somente se eles estiverem no mesmo assembly.</summary>
+        <value>
+          <see langword="true" />Se o acesso a esse campo é descrito exatamente por <see cref="F:System.Reflection.FieldAttributes.FamANDAssem" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um campo possuir <xref:System.Reflection.FieldAttributes.FamANDAssem> visibilidade de nível, ele pode ser chamado de qualquer membro em uma classe derivada que também está no mesmo assembly, mas não a partir de qualquer outro tipo.  
+  
+ A visibilidade de um campo exatamente é descrita por <xref:System.Reflection.FieldAttributes?displayProperty=nameWithType> se o modificador de visibilidade é `protected private` em C++. Campos com essa visibilidade não podem ser definidos no Visual Basic ou c#.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define os campos com vários níveis de visibilidade e exibe os valores de suas <xref:System.Reflection.FieldInfo.IsAssembly%2A>, <xref:System.Reflection.FieldInfo.IsFamily%2A>, <xref:System.Reflection.FieldInfo.IsFamilyOrAssembly%2A>, e <xref:System.Reflection.FieldInfo.IsFamilyAndAssembly%2A> propriedades.  
+  
+> [!NOTE]
+>  As linguagens Visual Basic e c#, não é possível definir campos com <xref:System.Reflection.FieldAttributes?displayProperty=nameWithType> visibilidade; que o nível de acesso aparece somente no exemplo C++.  
+  
+ [!code-cpp[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/CS/source.cs#1)]
+ [!code-vb[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFamilyOrAssembly">
+      <MemberSignature Language="C#" Value="public bool IsFamilyOrAssembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFamilyOrAssembly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsFamilyOrAssembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a visibilidade potencial deste campo é descrita por <see cref="F:System.Reflection.FieldAttributes.FamORAssem" />; ou seja, o campo pode ser acessado por classes derivadas independentemente de onde estiverem e classes no mesmo assembly.</summary>
+        <value>
+          <see langword="true" />Se o acesso a esse campo é descrito exatamente por <see cref="F:System.Reflection.FieldAttributes.FamORAssem" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um campo possuir <xref:System.Reflection.FieldAttributes.FamORAssem> visibilidade de nível, ele pode ser chamado de qualquer membro em uma classe derivada ou qualquer membro no mesmo assembly, mas não a partir de qualquer outro tipo.  
+  
+ A visibilidade real de um campo é limitada pela visibilidade de seu tipo. O <xref:System.Reflection.FieldInfo.IsFamilyOrAssembly%2A> propriedade pode ser `true` para um campo, mas se ele for um campo de um tipo aninhado particular e em seguida, o campo não é visível fora do tipo recipiente.  
+  
+ A visibilidade de um campo exatamente é descrita por <xref:System.Reflection.FieldAttributes?displayProperty=nameWithType> se o modificador de visibilidade é `protected internal` em c# (`Protected Friend` no Visual Basic, `protected public` em C++).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define os campos com vários níveis de visibilidade e exibe os valores de suas <xref:System.Reflection.FieldInfo.IsAssembly%2A>, <xref:System.Reflection.FieldInfo.IsFamily%2A>, <xref:System.Reflection.FieldInfo.IsFamilyOrAssembly%2A>, e <xref:System.Reflection.FieldInfo.IsFamilyAndAssembly%2A> propriedades.  
+  
+> [!NOTE]
+>  As linguagens Visual Basic e c#, não é possível definir campos com <xref:System.Reflection.FieldAttributes?displayProperty=nameWithType> visibilidade; que o nível de acesso aparece somente no exemplo C++.  
+  
+ [!code-cpp[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/CS/source.cs#1)]
+ [!code-vb[Classic FieldInfo.IsAssembly Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FieldInfo.IsAssembly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitOnly">
+      <MemberSignature Language="C#" Value="public bool IsInitOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsInitOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o campo só pode ser definido no corpo do construtor.</summary>
+        <value>
+          <see langword="true" /> se o campo tiver o atributo <see langword="InitOnly" /> definido; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor retornado é `true`, o campo só pode ser inicializado e é somente leitura depois disso.  
+  
+ Para obter o `IsInitOnly` propriedade, primeiro obtenha a classe `Type`. Do `Type`, obter o `FieldInfo`. Do `FieldInfo`, obter o `IsInitOnly` propriedade. Para acessar um campo não público, combinar <xref:System.Reflection.BindingFlags?displayProperty=nameWithType> com um ou ambos <xref:System.Reflection.BindingFlags?displayProperty=nameWithType> e <xref:System.Reflection.BindingFlags?displayProperty=nameWithType> no `GetField` método.  
+  
+ O `IsInitOnly` propriedade é definida quando o <xref:System.Reflection.FieldAttributes?displayProperty=nameWithType> atributo está definido.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, dois campos são criados. O segundo campo é somente leitura, não ter nenhum acessador set, e `IsInitOnly` é definido como `true`.  
+  
+ [!code-cpp[Classic FieldInfo.IsInitOnly Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FieldInfo.IsInitOnly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FieldInfo.IsInitOnly Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FieldInfo.IsInitOnly Example/CS/source.cs#1)]
+ [!code-vb[Classic FieldInfo.IsInitOnly Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FieldInfo.IsInitOnly Example/VB/source.vb#1)]  
+  
+ Esse código gera a seguinte saída:  
+  
+ Reflection.FieldInfo  
+  
+ Myfielda - A - modificado, IsInitOnly = False  
+  
+ Myfieldb - campo somente leitura de B, IsInitOnly = True  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiteral">
+      <MemberSignature Language="C#" Value="public bool IsLiteral { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLiteral" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsLiteral" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o valor é gravado no tempo de compilação e não pode ser alterado.</summary>
+        <value>
+          <see langword="true" /> se o campo tiver o atributo <see langword="Literal" /> definido; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `IsLiteral` propriedade é definida quando o `FieldAttributes.Literal` atributo está definido. Se esse atributo for definido, o campo não pode ser alterado e é constante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNotSerialized">
+      <MemberSignature Language="C#" Value="public bool IsNotSerialized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNotSerialized" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsNotSerialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este campo tem o <see langword="NotSerialized" /> atributo.</summary>
+        <value>
+          <see langword="true" /> se o campo tiver o atributo <see langword="NotSerialized" /> definido; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `IsNotSerialized` propriedade retorna `true` quando o campo está marcado com o `FieldAttributes.NotSerialized` sinalizador. Quando esse sinalizador é definido em um campo, ele indica que o campo não precisa ser serializado quando o tipo é remoto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém as informações de campo dos campos de MyClass, determina se os campos podem ser serializados e exibe os resultados.  
+  
+ [!code-cpp[FieldInfo_IsNotSerialized#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldInfo_IsNotSerialized/CPP/fieldinfo_isnotserialized.cpp#1)]
+ [!code-csharp[FieldInfo_IsNotSerialized#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldInfo_IsNotSerialized/CS/fieldinfo_isnotserialized.cs#1)]
+ [!code-vb[FieldInfo_IsNotSerialized#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldInfo_IsNotSerialized/VB/fieldinfo_isnotserialized.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinvokeImpl">
+      <MemberSignature Language="C#" Value="public bool IsPinvokeImpl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPinvokeImpl" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsPinvokeImpl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o correspondente <see langword="PinvokeImpl" /> atributo é definido <see cref="T:System.Reflection.FieldAttributes" />.</summary>
+        <value>
+          <see langword="true" />Se o <see langword="PinvokeImpl" /> atributo é definido <see cref="T:System.Reflection.FieldAttributes" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma classe e exibe o nome, campo e <xref:System.Reflection.FieldInfo.IsPinvokeImpl%2A> valor de propriedade do campo.  
+  
+ [!code-cpp[FieldInfo_IsPInvokeImpl#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldInfo_IsPInvokeImpl/CPP/fieldinfo_ispinvokeimpl.cpp#1)]
+ [!code-csharp[FieldInfo_IsPInvokeImpl#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldInfo_IsPInvokeImpl/CS/fieldinfo_ispinvokeimpl.cs#1)]
+ [!code-vb[FieldInfo_IsPInvokeImpl#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldInfo_IsPInvokeImpl/VB/fieldinfo_ispinvokeimpl.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrivate">
+      <MemberSignature Language="C#" Value="public bool IsPrivate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrivate" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsPrivate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o campo é privado.</summary>
+        <value>
+          <see langword="true" />Se o campo for privado; Caso contrário; <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Campos particulares são acessíveis somente de funções de membro.  
+  
+ O `IsPrivate` propriedade é definida quando o `FieldAttributes.Private` atributo está definido.  
+  
+ Para obter o `IsPrivate` propriedade, primeiro obtenha a classe `Type`. Do `Type`, obter o `FieldInfo`. Do `FieldInfo`, obter o `IsPrivate` propriedade. Para acessar um campo não público, defina o `BindingFlags` para `NonPublic`e `Static` ou `Instance` no `GetField` método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir retorna um valor que indica se o campo da classe é privado ou não.  
+  
+ [!code-cpp[FieldInfo_IsPrivate#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldInfo_IsPrivate/CPP/fieldinfo_isprivate.cpp#1)]
+ [!code-csharp[FieldInfo_IsPrivate#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldInfo_IsPrivate/CS/fieldinfo_isprivate.cs#1)]
+ [!code-vb[FieldInfo_IsPrivate#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldInfo_IsPrivate/VB/fieldinfo_isprivate.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPublic">
+      <MemberSignature Language="C#" Value="public bool IsPublic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPublic" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsPublic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o campo é público.</summary>
+        <value>
+          <see langword="true" />Se esse campo for público; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Campos públicos são acessíveis em todos os lugares que suas classes correspondentes são visíveis.  
+  
+ O `IsPublic` propriedade é definida quando o `FieldAttributes.Public` atributo está definido.  
+  
+ Para obter o `IsPublic` propriedade, primeiro obtenha a classe `Type`. Do `Type`, obter o `FieldInfo`. Do `FieldInfo`, obter o `IsPublic` propriedade. Se o campo for diferente de público, ele é protegido e não pode ser acessada prontamente. Para acessar um campo não público, defina o `BindingFlags` para `NonPublic`, especifique o `BindingFlags.Instance` ou `BindingFlags.Static`e use-a para o `GetField` método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir retorna um valor que indica se o campo da classe é pública ou privada ou não.  
+  
+ [!code-cpp[Classic FieldInfo.IsPublic Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FieldInfo.IsPublic Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FieldInfo.IsPublic Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FieldInfo.IsPublic Example/CS/source.cs#1)]
+ [!code-vb[Classic FieldInfo.IsPublic Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FieldInfo.IsPublic Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecurityCritical">
+      <MemberSignature Language="C#" Value="public virtual bool IsSecurityCritical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecurityCritical" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsSecurityCritical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o campo atual é crítico de segurança ou segurança-crítico para segurança no nível de confiança atual.</summary>
+        <value>
+          <see langword="true" />Se o campo atual for crítico de segurança ou segurança-crítico para segurança no nível de confiança atual; <see langword="false" /> se é transparente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.FieldInfo.IsSecurityCritical%2A>, <xref:System.Reflection.FieldInfo.IsSecuritySafeCritical%2A>, e <xref:System.Reflection.FieldInfo.IsSecurityTransparent%2A> o nível de transparência do campo em seu nível de confiança atual, conforme determinado pelo common language runtime (CLR) de propriedades do relatam. As combinações destas propriedades são mostradas na seguinte tabela:  
+  
+|Nível de segurança|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
+|--------------------|------------------------|----------------------------|---------------------------|  
+|Crítico|`true`|`false`|`false`|  
+|Segurança crítica|`true`|`true`|`false`|  
+|Transparente|`false`|`false`|`true`|  
+  
+ O uso dessas propriedades é muito mais simples do que examinando as anotações de segurança de um assembly e seus tipos e membros, verificando o nível de confiança atual e a tentativa de duplicar as regras do runtime.  
+  
+> [!IMPORTANT]
+>  Para assemblies de confiança parcial, o valor desta propriedade depende do nível de confiança atual do assembly. Se o assembly for carregado em um domínio de aplicativo parcialmente confiável (por exemplo, em um domínio de aplicativo em área restrita), o tempo de execução irá ignorar as anotações de segurança do assembly. O assembly e todos os tipos são tratados como transparentes. O tempo de execução só presta atenção nas anotações de segurança de um assembly de confiança parcial quando o assembly é carregado em um domínio de aplicativo totalmente confiável (por exemplo, no domínio de aplicativo padrão de um aplicativo da área de trabalho). Por outro lado, um assembly confiável (ou seja, um assembly de nome forte que está instalado no cache de assembly global) é sempre carregado com confiança total, independentemente do nível de confiança do domínio do aplicativo, logo, o nível de confiança atual sempre é totalmente confiável. É possível determinar os níveis de confiança atuais de assemblies e de domínios de aplicativo usando-se as propriedades <xref:System.Reflection.Assembly.IsFullyTrusted%2A?displayProperty=nameWithType> e <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType>.  
+  
+ Para obter mais informações sobre reflexão e transparência, consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md). Para obter informações sobre a transparência, consulte [alterações de segurança](~/docs/framework/security/security-changes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecuritySafeCritical">
+      <MemberSignature Language="C#" Value="public virtual bool IsSecuritySafeCritical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecuritySafeCritical" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsSecuritySafeCritical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o campo atual é safe-crítico de segurança no nível de confiança atual.</summary>
+        <value>
+          <see langword="true" />Se o campo atual for safe-crítico de segurança no nível de confiança atual; <see langword="false" /> se ele é crítico de segurança ou transparente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.FieldInfo.IsSecurityCritical%2A>, <xref:System.Reflection.FieldInfo.IsSecuritySafeCritical%2A>, e <xref:System.Reflection.FieldInfo.IsSecurityTransparent%2A> o nível de transparência do campo em seu nível de confiança atual, conforme determinado pelo common language runtime (CLR) de propriedades do relatam. As combinações destas propriedades são mostradas na seguinte tabela:  
+  
+|Nível de segurança|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
+|--------------------|------------------------|----------------------------|---------------------------|  
+|Crítico|`true`|`false`|`false`|  
+|Segurança crítica|`true`|`true`|`false`|  
+|Transparente|`false`|`false`|`true`|  
+  
+ O uso dessas propriedades é muito mais simples do que examinando as anotações de segurança de um assembly e seus tipos e membros, verificando o nível de confiança atual e a tentativa de duplicar as regras do runtime.  
+  
+> [!IMPORTANT]
+>  Para assemblies de confiança parcial, o valor desta propriedade depende do nível de confiança atual do assembly. Se o assembly for carregado em um domínio de aplicativo parcialmente confiável (por exemplo, em um domínio de aplicativo em área restrita), o tempo de execução irá ignorar as anotações de segurança do assembly. O assembly e todos os tipos são tratados como transparentes. O tempo de execução só presta atenção nas anotações de segurança de um assembly de confiança parcial quando o assembly é carregado em um domínio de aplicativo totalmente confiável (por exemplo, no domínio de aplicativo padrão de um aplicativo da área de trabalho). Por outro lado, um assembly confiável (ou seja, um assembly de nome forte que está instalado no cache de assembly global) é sempre carregado com confiança total, independentemente do nível de confiança do domínio do aplicativo, logo, o nível de confiança atual sempre é totalmente confiável. É possível determinar os níveis de confiança atuais de assemblies e de domínios de aplicativo usando-se as propriedades <xref:System.Reflection.Assembly.IsFullyTrusted%2A?displayProperty=nameWithType> e <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType>.  
+  
+ Para obter mais informações sobre reflexão e transparência, consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md). Para obter informações sobre a transparência, consulte [alterações de segurança](~/docs/framework/security/security-changes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecurityTransparent">
+      <MemberSignature Language="C#" Value="public virtual bool IsSecurityTransparent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecurityTransparent" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsSecurityTransparent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o campo atual é transparente no nível de confiança atual.</summary>
+        <value>
+          <see langword="true" />Se o campo é transparente de segurança no nível de confiança atual; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.FieldInfo.IsSecurityCritical%2A>, <xref:System.Reflection.FieldInfo.IsSecuritySafeCritical%2A>, e <xref:System.Reflection.FieldInfo.IsSecurityTransparent%2A> o nível de transparência do campo em seu nível de confiança atual, conforme determinado pelo common language runtime (CLR) de propriedades do relatam. As combinações destas propriedades são mostradas na seguinte tabela:  
+  
+|Nível de segurança|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
+|--------------------|------------------------|----------------------------|---------------------------|  
+|Crítico|`true`|`false`|`false`|  
+|Segurança crítica|`true`|`true`|`false`|  
+|Transparente|`false`|`false`|`true`|  
+  
+ O uso dessas propriedades é muito mais simples do que examinando as anotações de segurança de um assembly e seus tipos e membros, verificando o nível de confiança atual e a tentativa de duplicar as regras do runtime.  
+  
+> [!IMPORTANT]
+>  Para assemblies de confiança parcial, o valor desta propriedade depende do nível de confiança atual do assembly. Se o assembly for carregado em um domínio de aplicativo parcialmente confiável (por exemplo, em um domínio de aplicativo em área restrita), o tempo de execução irá ignorar as anotações de segurança do assembly. O assembly e todos os tipos são tratados como transparentes. O tempo de execução só presta atenção nas anotações de segurança de um assembly de confiança parcial quando o assembly é carregado em um domínio de aplicativo totalmente confiável (por exemplo, no domínio de aplicativo padrão de um aplicativo da área de trabalho). Por outro lado, um assembly confiável (ou seja, um assembly de nome forte que está instalado no cache de assembly global) é sempre carregado com confiança total, independentemente do nível de confiança do domínio do aplicativo, logo, o nível de confiança atual sempre é totalmente confiável. É possível determinar os níveis de confiança atuais de assemblies e de domínios de aplicativo usando-se as propriedades <xref:System.Reflection.Assembly.IsFullyTrusted%2A?displayProperty=nameWithType> e <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType>.  
+  
+ Para obter mais informações sobre reflexão e transparência, consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md). Para obter informações sobre a transparência, consulte [alterações de segurança](~/docs/framework/security/security-changes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSpecialName">
+      <MemberSignature Language="C#" Value="public bool IsSpecialName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSpecialName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsSpecialName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o correspondente <see langword="SpecialName" /> atributo é definido no <see cref="T:System.Reflection.FieldAttributes" /> enumerador.</summary>
+        <value>
+          <see langword="true" />Se o <see langword="SpecialName" /> atributo é definido <see cref="T:System.Reflection.FieldAttributes" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os nomes que começam com ou contenham um caractere de sublinhado (_), acessadores de propriedade e métodos de sobrecarga de operador são exemplos de nomes que podem exigir tratamento especial por alguns compiladores.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir retorna um valor que indica se os campos na classe contêm um atributo como SpecialName ou não.  
+  
+ [!code-cpp[FieldInfo_IsSpecialName#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldInfo_IsSpecialName/CPP/fieldinfo_isspecialname.cpp#1)]
+ [!code-csharp[FieldInfo_IsSpecialName#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldInfo_IsSpecialName/CS/fieldinfo_isspecialname.cs#1)]
+ [!code-vb[FieldInfo_IsSpecialName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldInfo_IsSpecialName/VB/fieldinfo_isspecialname.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStatic">
+      <MemberSignature Language="C#" Value="public bool IsStatic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStatic" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.IsStatic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o campo é estático.</summary>
+        <value>
+          <see langword="true" />Se esse campo é estático; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um campo é estático, uma cópia do campo é compartilhada por todas as instâncias do tipo.  
+  
+ O `IsStatic` propriedade é definida quando o `FieldAttributes.Static` atributo está definido.  
+  
+ Para obter o `IsStatic` propriedade, primeiro obtenha a classe `Type`. Do `Type`, obter o `FieldInfo`. Do `FieldInfo`, obter o `IsStatic` propriedade. Para acessar um campo não público, defina o `BindingFlags` para `NonPublic` no `GetField` método e definir a acessibilidade `Instance` ou `Static`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir determina se o campo especificado é estático e exibe o resultado.  
+  
+ [!code-cpp[Classic FieldInfo.IsStatic Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FieldInfo.IsStatic Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FieldInfo.IsStatic Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FieldInfo.IsStatic Example/CS/source.cs#1)]
+ [!code-vb[Classic FieldInfo.IsStatic Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FieldInfo.IsStatic Example/VB/source.vb#1)]  
+  
+ Esse código gera a seguinte saída:  
+  
+ Reflection.FieldInfo  
+  
+ Myfielda - um campo particular; IsStatic - False  
+  
+ Myfieldb - B campo estático; IsStatic - True  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.FieldInfo.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Reflection.MemberTypes" /> indicando que esse membro é um campo de valor.</summary>
+        <value>Um <see cref="T:System.Reflection.MemberTypes" /> indicando que esse membro é um campo de valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade substitui <xref:System.Reflection.MemberInfo.MemberType%2A>. Portanto, quando você examinar um conjunto de <xref:System.Reflection.MemberInfo> objetos — por exemplo, a matriz retornada por <xref:System.Type.GetMembers%2A> — o <xref:System.Reflection.MemberInfo.MemberType%2A> propriedade retorna <xref:System.Reflection.MemberTypes?displayProperty=nameWithType> somente quando um determinado membro é um campo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir determina se o membro especificado é um campo e exibe o resultado.  
+  
+ [!code-cpp[Classic FieldInfo.MemberType Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FieldInfo.MemberType Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FieldInfo.MemberType Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FieldInfo.MemberType Example/CS/source.cs#1)]
+ [!code-vb[Classic FieldInfo.MemberType Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FieldInfo.MemberType Example/VB/source.vb#1)]  
+  
+ Esse código gera a seguinte saída:  
+  
+ Reflection.FieldInfo  
+  
+ MyField.Field - um campo particular; MemberType é um campo  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Reflection.FieldInfo left, System.Reflection.FieldInfo right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Reflection.FieldInfo left, class System.Reflection.FieldInfo right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.op_Equality(System.Reflection.FieldInfo,System.Reflection.FieldInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.FieldInfo" />
+        <Parameter Name="right" Type="System.Reflection.FieldInfo" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro objeto a ser comparado.</param>
+        <param name="right">O segundo objeto a ser comparado.</param>
+        <summary>Indica se dois objetos <see cref="T:System.Reflection.FieldInfo" /> são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="left" /> for igual a <paramref name="right" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Reflection.FieldInfo left, System.Reflection.FieldInfo right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Reflection.FieldInfo left, class System.Reflection.FieldInfo right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.op_Inequality(System.Reflection.FieldInfo,System.Reflection.FieldInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.FieldInfo" />
+        <Parameter Name="right" Type="System.Reflection.FieldInfo" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro objeto a ser comparado.</param>
+        <param name="right">O segundo objeto a ser comparado.</param>
+        <summary>Indica se dois <see cref="T:System.Reflection.FieldInfo" /> objetos não são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="left" /> não for igual a <paramref name="right" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (object obj, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(object obj, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.SetValue(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto cujo valor de campo será definido.</param>
+        <param name="value">O valor a ser atribuído ao campo.</param>
+        <summary>Define o valor do campo com suporte no objeto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método atribuirá `value` para o campo refletido por esta instância no objeto `obj`. Se o campo for estático, `obj` será ignorado. Para campos de não-estático, `obj` deve ser uma instância de uma classe que herda ou declara o campo. O novo valor é passado como um `Object`. Por exemplo, se o tipo do campo é booliano, uma instância do `Object` com o valor booliano adequado valor é passado. Antes de definir o valor `SetValue` verifica se o usuário tem permissão de acesso. Esse último método é um método conveniente para chamar o seguinte `SetValue` método.  
+  
+> [!NOTE]
+>  O código totalmente confiável tem as permissões necessárias para acessar e chamar construtores privados, métodos, campos e propriedades usando a reflexão.  
+  
+> [!NOTE]
+>  Começando por [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], este método pode ser usado para acessar membros não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos membros não públicos esteja restrito ao conjunto de concessões do chamador ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o valor de um campo, obtém e exibe o valor, modifica o campo e exibe o resultado.  
+  
+ [!code-cpp[FieldInfo_SetValue#1](~/samples/snippets/cpp/VS_Snippets_CLR/FieldInfo_SetValue/CPP/fieldinfo_setvalue.cpp#1)]
+ [!code-csharp[FieldInfo_SetValue#1](~/samples/snippets/csharp/VS_Snippets_CLR/FieldInfo_SetValue/CS/fieldinfo_setvalue.cs#1)]
+ [!code-vb[FieldInfo_SetValue#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FieldInfo_SetValue/VB/fieldinfo_setvalue.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FieldAccessException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou [biblioteca de classes portátil](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), capturar a exceção de classe base, <see cref="T:System.MemberAccessException" />, em vez disso.  
+  
+</para>
+          </block>  
+  
+ O chamador não tem permissão para acessar esse campo.</exception>
+        <exception cref="T:System.Reflection.TargetException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou [biblioteca de classes portátil](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), catch <see cref="T:System.Exception" /> em vez disso.  
+  
+</para>
+          </block>  
+  
+ O parâmetro <paramref name="obj" /> é <see langword="null" /> e o campo é um campo de instância.</exception>
+        <exception cref="T:System.ArgumentException">O campo não existe no objeto.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="value" /> não pode ser convertido e armazenado no campo.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para atualizar campos somente init. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public abstract void SetValue (object obj, object value, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(object obj, object value, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto cujo valor de campo será definido.</param>
+        <param name="value">O valor a ser atribuído ao campo.</param>
+        <param name="invokeAttr">Um campo de <see langword="Binder" /> que especifica o tipo de associação que é desejado (por exemplo, <see langword="Binder.CreateInstance" /> ou <see langword="Binder.ExactBinding" />).</param>
+        <param name="binder">Um conjunto de propriedades que habilita a associação, coerção de tipos de argumento e invocação de membros usando a reflexão. Se <c>associador</c> é <see langword="null" />, em seguida, <see langword="Binder.DefaultBinding" /> é usado.</param>
+        <param name="culture">As preferências de software de uma determinada cultura.</param>
+        <summary>Quando substituído em uma classe derivada, define o valor do campo com suporte por um determinado objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método atribuirá `value` para o campo refletido por esta instância no `obj`. Se o campo for estático, `obj` será ignorado. Para campos de não-estático, `obj` deve ser uma instância de uma classe que herda ou declara o campo. O novo valor é passado como um `Object`. Por exemplo, se o tipo do campo for `Boolean`, uma instância do `Object` com o valor booliano adequado valor é passado. Antes de definir o valor `SetValue` verifica se o usuário tem permissão de acesso.  
+  
+> [!NOTE]
+>  O código totalmente confiável tem as permissões necessárias para acessar e chamar construtores privados, métodos, campos e propriedades usando a reflexão.  
+  
+> [!NOTE]
+>  Começando por [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], este método pode ser usado para acessar membros não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos membros não públicos esteja restrito ao conjunto de concessões do chamador ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FieldAccessException">O chamador não tem permissão para acessar esse campo.</exception>
+        <exception cref="T:System.Reflection.TargetException">O parâmetro <paramref name="obj" /> é <see langword="null" /> e o campo é um campo de instância.</exception>
+        <exception cref="T:System.ArgumentException">O campo não existe no objeto.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="value" /> não pode ser convertido e armazenado no campo.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para atualizar campos somente init. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValueDirect">
+      <MemberSignature Language="C#" Value="public virtual void SetValueDirect (TypedReference obj, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValueDirect(valuetype System.TypedReference obj, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.SetValueDirect(System.TypedReference,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.TypedReference" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Uma estrutura <see cref="T:System.TypedReference" /> que encapsula um ponteiro gerenciado para um local e uma representação de tempo de execução do tipo que pode ser armazenada nesse local.</param>
+        <param name="value">O valor a ser atribuído ao campo.</param>
+        <summary>Define o valor do campo com suporte no objeto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Começando por [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], este método pode ser usado para acessar membros não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos membros não públicos esteja restrito ao conjunto de concessões do chamador ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:System.Reflection.FieldInfo.SetValue(System.Object,System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Globalization.CultureInfo)" />
+        <exception cref="T:System.NotSupportedException">O chamador requer a alternativa de CLS (Common Language Specification), mas em vez dela, chamou esse método.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._FieldInfo.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _FieldInfo.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._FieldInfo.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.System#Runtime#InteropServices#_FieldInfo#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="rgszNames">Matriz passada de nomes a serem mapeados.</param>
+        <param name="cNames">Contagem dos nomes a serem mapeados.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar os nomes.</param>
+        <param name="rgDispId">Matriz alocada pelo chamador que recebe os IDs correspondentes aos nomes.</param>
+        <summary>Mapeia um conjunto de nomes para um conjunto correspondente de identificadores de expedição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetIDsOfNames`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._FieldInfo.GetType">
+      <MemberSignature Language="C#" Value="Type _FieldInfo.GetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Type System.Runtime.InteropServices._FieldInfo.GetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.System#Runtime#InteropServices#_FieldInfo#GetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Type" /> objeto representando o <see cref="T:System.Reflection.FieldInfo" /> tipo.</summary>
+        <returns>Um <see cref="T:System.Type" /> objeto representando o <see cref="T:System.Reflection.FieldInfo" /> tipo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._FieldInfo.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _FieldInfo.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._FieldInfo.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.System#Runtime#InteropServices#_FieldInfo#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">As informações de tipo a serem retornadas.</param>
+        <param name="lcid">O identificador de localidade das informações do tipo.</param>
+        <param name="ppTInfo">Recebe um ponteiro para o objeto de informações de tipo solicitado.</param>
+        <summary>Recupera as informações do tipo de um objeto, que podem ser usadas para obter informações de tipo para uma interface.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfo`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._FieldInfo.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _FieldInfo.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._FieldInfo.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.System#Runtime#InteropServices#_FieldInfo#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Aponta para um local que recebe o número de interfaces de informações de tipo fornecido pelo objeto.</param>
+        <summary>Retorna o número de interfaces de informações do tipo que um objeto fornece (0 ou 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfoCount`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._FieldInfo.Invoke">
+      <MemberSignature Language="C#" Value="void _FieldInfo.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._FieldInfo.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.FieldInfo.System#Runtime#InteropServices#_FieldInfo#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Identifica o membro.</param>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar argumentos.</param>
+        <param name="wFlags">Sinalizadores que descrevem o contexto da chamada.</param>
+        <param name="pDispParams">Ponteiro para uma estrutura contendo uma matriz de argumentos, uma matriz de DISPIDs de argumento para argumentos nomeados e contagens para o número de elementos nas matrizes.</param>
+        <param name="pVarResult">Ponteiro para o local onde o resultado deve ser armazenado.</param>
+        <param name="pExcepInfo">Ponteiro para uma estrutura que contém informações de exceção.</param>
+        <param name="puArgErr">O índice do primeiro argumento que tem um erro.</param>
+        <summary>Fornece acesso a propriedades e métodos expostos por um objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::Invoke`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

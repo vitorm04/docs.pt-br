@@ -1,0 +1,411 @@
+<Type Name="ActiveDirectorySchemaPropertyCollection" FullName="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection">
+  <TypeSignature Language="C#" Value="public class ActiveDirectorySchemaPropertyCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActiveDirectorySchemaPropertyCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection" /> classe é uma coleção somente leitura que contém <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objetos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty schemaProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty schemaProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.Add(System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaProperty" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />
+      </Parameters>
+      <Docs>
+        <param name="schemaProperty">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto a ser acrescentado à coleção.</param>
+        <summary>Acrescenta especificado <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto à coleção.</summary>
+        <returns>O índice de base zero de <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto que é anexado a esta coleção.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">O objeto já existe na coleção.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="schemaProperty" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty[] properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty[] properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.AddRange(System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty[]" />
+      </Parameters>
+      <Docs>
+        <param name="properties">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> matriz que contém os objetos para acrescentar a esta coleção.</param>
+        <summary>Acrescenta o conteúdo do especificado <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> matriz a esta coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">O objeto já existe na coleção.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="properties" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.AddRange(System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection" />
+      </Parameters>
+      <Docs>
+        <param name="properties">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection" /> objeto que contém os objetos para acrescentar a esta coleção.</param>
+        <summary>Acrescenta o conteúdo do especificado <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection" /> objeto à coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">O objeto já existe na coleção.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="properties" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.DirectoryServices.ActiveDirectory.ReadOnlyActiveDirectorySchemaPropertyCollection properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.DirectoryServices.ActiveDirectory.ReadOnlyActiveDirectorySchemaPropertyCollection properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.AddRange(System.DirectoryServices.ActiveDirectory.ReadOnlyActiveDirectorySchemaPropertyCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.DirectoryServices.ActiveDirectory.ReadOnlyActiveDirectorySchemaPropertyCollection" />
+      </Parameters>
+      <Docs>
+        <param name="properties">O <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyActiveDirectorySchemaPropertyCollection" /> objeto que contém os objetos para acrescentar a esta coleção.</param>
+        <summary>Acrescenta o conteúdo do especificado <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyActiveDirectorySchemaPropertyCollection" /> objeto à coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">O objeto já existe na coleção.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="properties" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty schemaProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty schemaProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.Contains(System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaProperty" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />
+      </Parameters>
+      <Docs>
+        <param name="schemaProperty">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Determina se o especificado <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto está nesta coleção.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto está nesta coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="schemaProperty" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty[] properties, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty[] properties, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.CopyTo(System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="properties">A matriz de <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objetos que recebe os elementos desta coleção.</param>
+        <param name="index">O índice de base zero em <c>propriedades</c> onde esse método inicia a cópia desta coleção.</param>
+        <summary>Copia todos os <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objetos na coleção para a matriz especificada, iniciando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="properties" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> especificado está fora do intervalo da matriz de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty schemaProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty schemaProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.IndexOf(System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaProperty" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />
+      </Parameters>
+      <Docs>
+        <param name="schemaProperty">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Retorna a primeira ocorrência de especificado <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto na coleção.</summary>
+        <returns>O índice de base zero do primeiro objeto correspondente. Retornará -1 se nenhum membro dessa coleção é idêntico de <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="schemaProperty" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty schemaProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty schemaProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.Insert(System.Int32,System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="schemaProperty" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero na coleção onde o objeto é inserido.</param>
+        <param name="schemaProperty">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto a ser inserido nesta coleção.</param>
+        <summary>Insere especificado <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto na coleção no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">O objeto já existe na coleção.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="site" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="schemaProperty" /> especificado está fora do intervalo da coleção.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto para get ou set.</param>
+        <summary>Obtém ou define um <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto na coleção.</summary>
+        <value>O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto que existe no índice especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O membro já existe na coleção (aplica-se para definir somente).</exception>
+        <exception cref="T:System.ArgumentNullException">O item especificado é <see langword="null" /> (aplica-se para definir somente).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> especificado está fora do intervalo desta coleção.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto ainda não foram salvas no armazenamento de serviços de domínio Active Directory (aplica-se para definir somente).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClearComplete">
+      <MemberSignature Language="C#" Value="protected override void OnClearComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClearComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.OnClearComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o método <see cref="M:System.Collections.CollectionBase.OnClearComplete" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsertComplete">
+      <MemberSignature Language="C#" Value="protected override void OnInsertComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsertComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.OnInsertComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual o elemento foi inserido.</param>
+        <param name="value">O novo valor do elemento no <c>índice</c>.</param>
+        <summary>Substitui o método <see cref="M:System.Collections.CollectionBase.OnClearComplete" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoveComplete">
+      <MemberSignature Language="C#" Value="protected override void OnRemoveComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemoveComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.OnRemoveComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual o elemento foi removido.</param>
+        <param name="value">O elemento que foi removido desta coleção.</param>
+        <summary>Substitui o método <see cref="M:System.Collections.CollectionBase.OnRemoveComplete(System.Int32,System.Object)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetComplete">
+      <MemberSignature Language="C#" Value="protected override void OnSetComplete (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSetComplete(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.OnSetComplete(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual ocorreu a operação de definição.</param>
+        <param name="oldValue">O elemento que foi substituído pelo <c>newValue</c>.</param>
+        <param name="newValue">O elemento substituído <c>oldValue</c>.</param>
+        <summary>Substitui o método <see cref="M:System.Collections.CollectionBase.OnSetComplete(System.Int32,System.Object,System.Object)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O elemento na coleção para validar.</param>
+        <summary>Substitui o método <see cref="M:System.Collections.CollectionBase.OnValidate(System.Object)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty schemaProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty schemaProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection.Remove(System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaProperty" Type="System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" />
+      </Parameters>
+      <Docs>
+        <param name="schemaProperty">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto a ser removido desta coleção.</param>
+        <summary>Remove a primeira ocorrência de um objeto na coleção que é idêntica ao especificado <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">O objeto não existe na coleção.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="schemaProperty" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

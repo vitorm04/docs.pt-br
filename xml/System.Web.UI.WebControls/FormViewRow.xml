@@ -1,0 +1,241 @@
+<Type Name="FormViewRow" FullName="System.Web.UI.WebControls.FormViewRow">
+  <TypeSignature Language="C#" Value="public class FormViewRow : System.Web.UI.WebControls.TableRow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewRow extends System.Web.UI.WebControls.TableRow" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewRow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.TableRow</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma linha dentro de um <see cref="T:System.Web.UI.WebControls.FormView" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.FormViewRow> classe é usada para representar uma linha individual em um <xref:System.Web.UI.WebControls.FormView> controle. Cada linha de <xref:System.Web.UI.WebControls.FormView> controle tem um tipo de linha designado. A tabela a seguir lista os tipos de linha diferente.  
+  
+|Tipo de linha|Descrição|  
+|--------------|-----------------|  
+|`DataControlRowType.DataRow`|Os dados de linha de <xref:System.Web.UI.WebControls.FormView> controle.|  
+|`DataControlRowType.EmptyDataRow`|Linha de dados vazios no <xref:System.Web.UI.WebControls.FormView> controle. A linha de dados vazio é exibida em um <xref:System.Web.UI.WebControls.FormView> controle quando não houver registros a exibir.|  
+|`DataControlRowType.Footer`|A linha de rodapé no <xref:System.Web.UI.WebControls.FormView> controle.|  
+|`DataControlRowType.Header`|Linha de cabeçalho no <xref:System.Web.UI.WebControls.FormView> controle.|  
+|`DataControlRowType.Pager`|Uma linha de pager no <xref:System.Web.UI.WebControls.FormView> controle.|  
+  
+ Para determinar o tipo de linha de um <xref:System.Web.UI.WebControls.FormViewRow> de objeto, use o <xref:System.Web.UI.WebControls.FormViewRow.RowType%2A> propriedade. Um <xref:System.Web.UI.WebControls.FormViewRow> objeto também tem um estado associado a ele. O estado pode ser uma combinação bit a bit dos valores na tabela a seguir.  
+  
+|Valor de estado|Descrição|  
+|-----------------|-----------------|  
+|`DataControlRowState.Edit`|O <xref:System.Web.UI.WebControls.FormViewRow> objeto está no modo de edição.|  
+|`DataControlRowState.Insert`|O <xref:System.Web.UI.WebControls.FormViewRow> objeto está no modo de inserção.|  
+|`DataControlRowState.Normal`|O <xref:System.Web.UI.WebControls.FormViewRow> objeto estiver no estado normal (padrão).|  
+|`DataControlRowState.Selected`|O <xref:System.Web.UI.WebControls.FormViewRow> objeto é selecionado.|  
+  
+ Para determinar o estado de um <xref:System.Web.UI.WebControls.FormViewRow> de objeto, use o <xref:System.Web.UI.WebControls.FormViewRow.RowState%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.FormView> controle exibe o conteúdo de seu <xref:System.Web.UI.WebControls.FormView.ItemTemplate%2A> propriedade em uma linha de dados. Para acessar a linha de dados, use o <xref:System.Web.UI.WebControls.FormView.Row%2A> propriedade. Para determinar o índice do item de dados na fonte de dados, use o <xref:System.Web.UI.WebControls.FormViewRow.ItemIndex%2A> propriedade.  
+  
+ Você pode acessar as células individuais do <xref:System.Web.UI.WebControls.FormViewRow> objeto usando o <xref:System.Web.UI.WebControls.TableRow.Cells%2A> propriedade. Se uma célula contiver controles, você pode recuperar um controle de célula usando um dos seguintes métodos:  
+  
+-   Use o <xref:System.Web.UI.Control.Controls%2A> coleção da célula para recuperar o controle em um índice específico.  
+  
+-   Use o <xref:System.Web.UI.Control.FindControl%2A> método da célula para recuperar o controle, se o controle tiver seu <xref:System.Web.UI.Control.ID%2A> conjunto de propriedades. Esse é o método preferencial para recuperar um controle de uma célula.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FormViewRow> de classe, consulte o <xref:System.Web.UI.WebControls.FormViewRow.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar um <xref:System.Web.UI.WebControls.Image> controlar do <xref:System.Web.UI.WebControls.FormViewRow> objeto que representa a linha do item. O <xref:System.Web.UI.WebControls.Image> os controles são declarados nos modelos de item e de edição.  
+  
+ [!code-aspx-csharp[FormViewRowClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewRowClass/CS/formviewrowcs.aspx#1)]
+ [!code-aspx-vb[FormViewRowClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewRowClass/VB/formviewrowvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewRow (int itemIndex, System.Web.UI.WebControls.DataControlRowType rowType, System.Web.UI.WebControls.DataControlRowState rowState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 itemIndex, valuetype System.Web.UI.WebControls.DataControlRowType rowType, valuetype System.Web.UI.WebControls.DataControlRowState rowState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewRow.#ctor(System.Int32,System.Web.UI.WebControls.DataControlRowType,System.Web.UI.WebControls.DataControlRowState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+        <Parameter Name="rowType" Type="System.Web.UI.WebControls.DataControlRowType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice do item de dados na fonte de dados.</param>
+        <param name="rowType">Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.DataControlRowType" />.</param>
+        <param name="rowState">Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.DataControlRowState" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.FormViewRow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.FormViewRow> classe.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FormViewRow> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.FormViewRow.ItemIndex%2A>|O valor especificado pelo `itemIndex` parâmetro.|  
+|<xref:System.Web.UI.WebControls.FormViewRow.RowType%2A>|O valor especificado pelo `rowType` parâmetro.|  
+|<xref:System.Web.UI.WebControls.FormViewRow.RowState%2A>|O valor especificado pelo `rowState` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public virtual int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewRow.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do item de dados exibido da fonte de dados.</summary>
+        <value>O índice do item de dados exibido da fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FormViewRow.ItemIndex%2A> propriedade para determinar o índice do item de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewRow.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Os dados do evento.</param>
+        <summary>Determina se deve transmitir um evento a hierarquia de controle de servidor ASP.NET da página.</summary>
+        <returns>
+          <see langword="true" />Se o evento foi cancelado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewRow.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O objeto de gravador de texto HTML que recebe o conteúdo do controle.</param>
+        <summary>Renderiza o controle para o gravador de HTML especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowState">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.DataControlRowState RowState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataControlRowState RowState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewRow.RowState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do objeto <see cref="T:System.Web.UI.WebControls.FormViewRow" />.</summary>
+        <value>Uma combinação bit a bit dos valores de enumeração <see cref="T:System.Web.UI.WebControls.DataControlRowState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FormViewRow.RowState%2A> propriedade para determinar o estado da linha. O estado pode ser uma combinação bit a bit dos valores na tabela a seguir.  
+  
+|Valor de estado|Descrição|  
+|-----------------|-----------------|  
+|`DataControlRowState.Edit`|O <xref:System.Web.UI.WebControls.FormViewRow> objeto está no modo de edição.|  
+|`DataControlRowState.Insert`|O <xref:System.Web.UI.WebControls.FormViewRow> objeto está no modo de inserção.|  
+|`DataControlRowState.Normal`|O <xref:System.Web.UI.WebControls.FormViewRow> objeto está no estado normal, somente leitura.|  
+|`DataControlRowState.Selected`|O <xref:System.Web.UI.WebControls.FormViewRow> objeto é selecionado.|  
+  
+ Essa propriedade normalmente é usada para determinar o estado de uma linha antes de executar uma operação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.DataControlRowType RowType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataControlRowType RowType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewRow.RowType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de linha do objeto <see cref="T:System.Web.UI.WebControls.FormViewRow" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.DataControlRowType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FormViewRow.RowType%2A> propriedade para determinar o tipo de linha que o <xref:System.Web.UI.WebControls.FormViewRow> objeto representa. A tabela a seguir lista os valores de tipo de linha diferente.  
+  
+|Tipo de linha|Descrição|  
+|--------------|-----------------|  
+|`DataControlRowType.DataRow`|Os dados de linha de <xref:System.Web.UI.WebControls.FormView> controle.|  
+|`DataControlRowType.EmptyDataRow`|Linha de dados vazios no <xref:System.Web.UI.WebControls.FormView> controle. A linha de dados vazio é exibida em um <xref:System.Web.UI.WebControls.FormView> controle quando não houver registros a exibir.|  
+|`DataControlRowType.Footer`|A linha de rodapé no <xref:System.Web.UI.WebControls.FormView> controle.|  
+|`DataControlRowType.Header`|Linha de cabeçalho no <xref:System.Web.UI.WebControls.FormView> controle.|  
+|`DataControlRowType.Pager`|Uma linha de pager no <xref:System.Web.UI.WebControls.FormView> controle.|  
+|`DataControlRowType.Separator`|Uma linha de separador a <xref:System.Web.UI.WebControls.FormView> controle.|  
+  
+ Essa propriedade normalmente é usada para determinar o tipo da linha antes de executar uma operação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

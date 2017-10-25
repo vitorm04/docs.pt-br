@@ -1,0 +1,155 @@
+<Type Name="StandardBindingReliableSessionElement" FullName="System.ServiceModel.Configuration.StandardBindingReliableSessionElement">
+  <TypeSignature Language="C#" Value="public class StandardBindingReliableSessionElement : System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StandardBindingReliableSessionElement extends System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.StandardBindingReliableSessionElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a definição de configuração para mensagens WS-Reliable definidos em uma associação padrão.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StandardBindingReliableSessionElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardBindingReliableSessionElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.StandardBindingReliableSessionElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="public void ApplyConfiguration (System.ServiceModel.ReliableSession reliableSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyConfiguration(class System.ServiceModel.ReliableSession reliableSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardBindingReliableSessionElement.ApplyConfiguration(System.ServiceModel.ReliableSession)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reliableSession" Type="System.ServiceModel.ReliableSession" />
+      </Parameters>
+      <Docs>
+        <param name="reliableSession">O elemento de configuração para aplicar.</param>
+        <summary>Aplica-se o conteúdo de um elemento de associação especificada para essa seção de configuração.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reliableSession" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InactivityTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan InactivityTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan InactivityTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.StandardBindingReliableSessionElement.InactivityTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("inactivityTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.TimeSpan" /> valor que especifica a duração máxima que o canal permite que a outra parte da comunicação para não enviar nenhuma mensagem antes de haver falha no canal.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> valor que especifica a duração máxima que o canal permite que a outra parte da comunicação para não enviar nenhuma mensagem antes de haver falha no canal. O padrão é 00:10:00.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atividade em um canal é definida como receber uma mensagem de infraestrutura ou de aplicativo. Essa propriedade controla a quantidade máxima de tempo para manter uma sessão inativa ativa. Se houver mais tempo sem nenhuma atividade, a sessão foi terminada, a infraestrutura e as falhas de canal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeFrom">
+      <MemberSignature Language="C#" Value="public void InitializeFrom (System.ServiceModel.ReliableSession reliableSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitializeFrom(class System.ServiceModel.ReliableSession reliableSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.StandardBindingReliableSessionElement.InitializeFrom(System.ServiceModel.ReliableSession)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reliableSession" Type="System.ServiceModel.ReliableSession" />
+      </Parameters>
+      <Docs>
+        <param name="reliableSession">O elemento de configuração a ser inicializado no.</param>
+        <summary>Inicializa este elemento de configuração com valores da seção especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reliableSession" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Ordered">
+      <MemberSignature Language="C#" Value="public bool Ordered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Ordered" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.StandardBindingReliableSessionElement.Ordered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("ordered", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que especifica se as mensagens são garantidas de chegar na ordem em que foram enviadas.</summary>
+        <value>
+          <see langword="true" />Se as mensagens são garantidas de chegar na ordem em que foram enviadas; <see langword="false" /> se as mensagens podem chegar fora de ordem. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.StandardBindingReliableSessionElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> instância que contém uma coleção de <see cref="T:System.Configuration.ConfigurationProperty" /> objetos que podem ser atributos ou <see cref="T:System.Configuration.ConfigurationElement" /> objetos deste elemento de configuração.</summary>
+        <value>Um <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> instância que contém uma coleção de <see cref="T:System.Configuration.ConfigurationProperty" /> objetos que podem ser atributos ou <see cref="T:System.Configuration.ConfigurationElement" /> objetos deste elemento de configuração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,138 @@
+<Type Name="ValidationConstraints" FullName="System.Windows.Forms.ValidationConstraints">
+  <TypeSignature Language="C#" Value="public enum ValidationConstraints" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ValidationConstraints extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ValidationConstraints" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define constantes que informam o <see cref="M:System.Windows.Forms.ContainerControl.ValidateChildren(System.Windows.Forms.ValidationConstraints)" /> de como ele deve validar os controles filho de um contêiner.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> validará habilitados todos os controles em um contêiner, como um formulário. Use esta enumeração para restringir os tipos de controles cujo <xref:System.Windows.Forms.Control.Validating> é gerado.  
+  
+ Você pode combinar esses valores enumerados junto com uma operação OR bit a bit. Combinação de parâmetros com um operador OR bit a bit resultará em uma operação AND lógica. Por exemplo, chamar `ValidateChildren(ValidationConstraints.ImmediateChildren | ValidationConstraints.Enabled)` gerará somente o <xref:System.Windows.Forms.Control.Validating> evento em controles que são filhos imediatos do contêiner e estão habilitados.  
+  
+ Se você não especificar ImmediateChildren ao chamar <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>, o método exigirá que você valide todos os controles filho na hierarquia do controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir só fará com que o <xref:System.Windows.Forms.Control.Validating> evento a ser gerado para os filhos imediatos do formulário cujo <xref:System.Windows.Forms.Control.Enabled%2A> é de propriedade `true`.  
+  
+ [!code-csharp[ValidateChildrenWithConstraints#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ValidateChildrenWithConstraints/CS/Form1.cs#1)]
+ [!code-vb[ValidateChildrenWithConstraints#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ValidateChildrenWithConstraints/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="Enabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints Enabled = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.Enabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valida os controles filho cuja propriedade <see cref="P:System.Windows.Forms.Control.Enabled" /> está definida como <see langword="true" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImmediateChildren">
+      <MemberSignature Language="C#" Value="ImmediateChildren" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints ImmediateChildren = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.ImmediateChildren" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valida os controles filho que são hospedados diretamente no contêiner. Não validar qualquer um dos filhos desses filhos. Por exemplo, se você tiver um <see cref="T:System.Windows.Forms.Form" /> que contém um <see cref="T:System.Windows.Forms.UserControl" /> personalizado e o <see cref="T:System.Windows.Forms.UserControl" /> contiver um <see cref="T:System.Windows.Forms.Button" />, o uso de <see cref="F:System.Windows.Forms.ValidationConstraints.ImmediateChildren" /> fará com que o evento <see cref="E:System.Windows.Forms.Control.Validating" /> do <see cref="T:System.Windows.Forms.UserControl" /> ocorra, mas não o evento <see cref="E:System.Windows.Forms.Control.Validating" /> do <see cref="T:System.Windows.Forms.Button" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valida todos os controles filho e todos os filhos desses controles filho, independentemente de suas definições de propriedade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Selectable">
+      <MemberSignature Language="C#" Value="Selectable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints Selectable = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.Selectable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valida os controles filho que podem ser selecionados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="TabStop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints TabStop = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.TabStop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valida os controles filho que têm um conjunto de valores <see cref="P:System.Windows.Forms.Control.TabStop" />, o que significa que o usuário pode navegar para o controle usando a tecla TAB.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="Visible" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ValidationConstraints Visible = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ValidationConstraints.Visible" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ValidationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valida os controles filho cuja propriedade <see cref="P:System.Windows.Forms.Control.Visible" /> está definida como <see langword="true" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

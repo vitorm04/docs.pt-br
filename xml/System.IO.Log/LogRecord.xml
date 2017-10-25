@@ -1,0 +1,153 @@
+<Type Name="LogRecord" FullName="System.IO.Log.LogRecord">
+  <TypeSignature Language="C#" Value="public abstract class LogRecord : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LogRecord extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.LogRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um registro de log que foi acrescentado a uma sequência.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LogRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecord.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Log.LogRecord" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Stream Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream Data" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogRecord.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um fluxo que contém os dados de registro.</summary>
+        <value>Um fluxo que contém os dados de registro.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.IO.Log.LogRecord" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public abstract void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecord.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.IO.Log.LogRecord" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar este método quando você terminar de usar o <xref:System.IO.Log.LogRecord> instância. O <xref:System.IO.Log.LogRecord.Dispose%2A> método deixa a <xref:System.IO.Log.LogRecord> instância em um estado inutilizável. Depois de chamar esse método, você deve liberar todas as referências para o <xref:System.IO.Log.LogRecord> instância, para que o coletor de lixo possa recuperar a memória que o <xref:System.IO.Log.LogRecord> instância estava ocupando.  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.IO.Log.LogRecord.Dispose%2A> antes de liberar sua última referência para a <xref:System.IO.Log.LogRecord> instância. Caso contrário, os recursos que está usando não podem ser liberados até que o coletor de lixo chame o <xref:System.IO.Log.LogRecord> da instância `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Previous">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Log.SequenceNumber Previous { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.SequenceNumber Previous" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogRecord.Previous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de sequência do registro anterior.</summary>
+        <value>O número de sequência do registro anterior.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade é o número de sequência que foi fornecido como o `previousUndoRecord` parâmetro o <xref:System.IO.Log.IRecordSequence.Append%2A> método. Além de seu uso na enumeração, esse número de sequência é tratado como opaco pela sequência de registro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SequenceNumber">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Log.SequenceNumber SequenceNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.SequenceNumber SequenceNumber" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogRecord.SequenceNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de sequência deste registro.</summary>
+        <value>O número de sequência deste registro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Log.SequenceNumber User { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.SequenceNumber User" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogRecord.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o número de sequência do próximo registro.</summary>
+        <value>O número de sequência do próximo registro na cadeia especificada pelo usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade é o número de sequência que foi fornecido como o `nextUndoRecord` parâmetro o <xref:System.IO.Log.IRecordSequence.Append%2A> método. Além de seu uso na enumeração, esse número de sequência é tratado como opaco pela sequência de registro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

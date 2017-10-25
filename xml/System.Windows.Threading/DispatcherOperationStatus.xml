@@ -1,0 +1,93 @@
+<Type Name="DispatcherOperationStatus" FullName="System.Windows.Threading.DispatcherOperationStatus">
+  <TypeSignature Language="C#" Value="public enum DispatcherOperationStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DispatcherOperationStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.DispatcherOperationStatus" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve os possíveis valores para o status de um <see cref="T:System.Windows.Threading.DispatcherOperation" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Threading.DispatcherOperation> será retornado após uma chamada para <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>.  O <xref:System.Windows.Threading.DispatcherOperation> pode ser usado para interagir com o delegado no <xref:System.Windows.Threading.Dispatcher> fila, como alterar a prioridade da operação ou anular a operação.  
+  
+ Os estágios de um <xref:System.Windows.Threading.DispatcherOperation> estão aguardando, executando e concluído.  A qualquer momento antes da conclusão da operação, o status pode ser definido para Aborted.  
+  
+<a name="xamlTextUsage_DispatcherOperationStatus"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Aborted">
+      <MemberSignature Language="C#" Value="Aborted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherOperationStatus Aborted = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherOperationStatus.Aborted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperationStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação foi anulada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="Completed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherOperationStatus Completed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherOperationStatus.Completed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperationStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação foi concluída.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Executing">
+      <MemberSignature Language="C#" Value="Executing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherOperationStatus Executing = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherOperationStatus.Executing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperationStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação iniciou a execução, mas não foi concluída.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pending">
+      <MemberSignature Language="C#" Value="Pending" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Threading.DispatcherOperationStatus Pending = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Threading.DispatcherOperationStatus.Pending" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.DispatcherOperationStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação está pendente e ainda está na fila <see cref="T:System.Windows.Threading.Dispatcher" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

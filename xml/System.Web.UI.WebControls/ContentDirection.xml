@@ -1,0 +1,82 @@
+<Type Name="ContentDirection" FullName="System.Web.UI.WebControls.ContentDirection">
+  <TypeSignature Language="C#" Value="public enum ContentDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ContentDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ContentDirection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Representa a direção na qual exibir controles que incluem texto em um controle de contêiner.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ContentDirection> enumeração representa a direção na qual exibir controles que incluem texto em um controle de contêiner. Controles, como o <xref:System.Web.UI.WebControls.Panel> e <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, têm propriedades que usam o <xref:System.Web.UI.WebControls.ContentDirection> valores de enumeração para especificar a direção na qual exibir controles filho que incluem texto.  
+  
+ Se você especificar o valor de LeftToRight, controles filho que incluem texto exibem o texto da esquerda para a direita e justificar o texto no lado esquerdo do controle de contêiner. Se você especificar o valor RightToLeft, controles filho que incluem texto exibem o texto da direita para esquerda e justificam o texto à direita do controle de contêiner. Use o valor de RightToLeft para exibir o texto para idiomas que são escritos da direita para a esquerda, como árabe e hebraico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.ContentDirection.LeftToRight> enumeração para definir o <xref:System.Web.UI.WebControls.Panel.Direction%2A> propriedade. Um <xref:System.Web.UI.WebControls.ListBox> controle é preenchido com o <xref:System.Web.UI.WebControls.ContentDirection> valores de enumeração. A direção de exibição dos rótulo e botões de opção na alteração do painel com base no valor selecionado pelo usuário na caixa de listagem. Como este exemplo usa o texto em inglês, quando o valor de RightToLeft é selecionado, o texto é justificado à direita do <xref:System.Web.UI.WebControls.Panel.Direction%2A> controle, mas a ordem da esquerda para a direita do texto em inglês é mantida. Em um aplicativo do mundo real, não defina o <xref:System.Web.UI.WebControls.Panel.Direction%2A> propriedade para o valor de RightToLeft, se você estivesse exibindo texto para um idioma que usa a ordem da esquerda para direita.  
+  
+ [!code-aspx-vb[Panel.Direction#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Panel.Direction/VB/panel.directionvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LeftToRight">
+      <MemberSignature Language="C#" Value="LeftToRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ContentDirection LeftToRight = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ContentDirection.LeftToRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ContentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esquerda para a direita.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ContentDirection NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ContentDirection.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ContentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não definida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="RightToLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ContentDirection RightToLeft = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ContentDirection.RightToLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ContentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Da direita para a esquerda.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

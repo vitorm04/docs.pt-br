@@ -1,0 +1,6 @@
+<Namespace Name="System.Configuration.Provider">
+  <Docs>
+    <summary>O <see cref="N:System.Configuration.Provider" /> namespace contém as classes base compartilhadas por aplicativos cliente e servidor para dar suporte a um modelo plugável para facilmente adicionar ou remover a funcionalidade.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

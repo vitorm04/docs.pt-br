@@ -1,0 +1,46 @@
+<Type Name="Graphics+EnumerateMetafileProc" FullName="System.Drawing.Graphics+EnumerateMetafileProc">
+  <TypeSignature Language="C#" Value="public delegate bool Graphics.EnumerateMetafileProc(EmfPlusRecordType recordType, int flags, int dataSize, IntPtr data, PlayRecordCallback callbackData);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed Graphics/EnumerateMetafileProc extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Graphics.EnumerateMetafileProc" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="recordType" Type="System.Drawing.Imaging.EmfPlusRecordType" />
+    <Parameter Name="flags" Type="System.Int32" />
+    <Parameter Name="dataSize" Type="System.Int32" />
+    <Parameter Name="data" Type="System.IntPtr" />
+    <Parameter Name="callbackData" Type="System.Drawing.Imaging.PlayRecordCallback" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="recordType">Membro da enumeração <see cref="T:System.Drawing.Imaging.EmfPlusRecordType" /> que especifica o tipo de registro de metarquivo.</param>
+    <param name="flags">Conjunto de sinalizadores que especifica os atributos do registro.</param>
+    <param name="dataSize">Número de bytes nos dados de registro.</param>
+    <param name="data">Ponteiro para um buffer que contém os dados de registro.</param>
+    <param name="callbackData">Não usado.</param>
+    <summary>Fornece um método de retorno de chamada para o método <see cref="Overload:System.Drawing.Graphics.EnumerateMetafile" />.</summary>
+    <returns>Retorne <see langword="true" /> se desejar continuar enumerando registros; caso contrário, <see langword="false" />.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado em conjunto com o <xref:System.Drawing.Graphics.EnumerateMetafile%2A> método o <xref:System.Drawing.Graphics> classe. Determinadas sobrecargas do <xref:System.Drawing.Graphics.EnumerateMetafile%2A> método chamar um método de retorno de chamada definido pelo aplicativo desse tipo para cada registro de metarquivo especificado. A função de retorno de chamada pode exibir cada registro (ou registros selecionados) ao chamar o <xref:System.Drawing.Imaging.Metafile.PlayRecord%2A> método o <xref:System.Drawing.Imaging.Metafile> que está sendo enumerada.  
+  
+ Uma declaração de usuário deste método de retorno de chamada deve ter os mesmos parâmetros que o <xref:System.Drawing.Graphics.EnumerateMetafileProc> delegar a declaração.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo, consulte <xref:System.Drawing.Graphics.EnumerateMetafile%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

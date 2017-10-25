@@ -1,0 +1,68 @@
+<Type Name="ToolBarAppearance" FullName="System.Windows.Forms.ToolBarAppearance">
+  <TypeSignature Language="C#" Value="public enum ToolBarAppearance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolBarAppearance extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolBarAppearance" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de barra de ferramentas para exibir.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por membros como <xref:System.Windows.Forms.ToolBar.Appearance%2A?displayProperty=nameWithType>.  
+  
+ Definir o <xref:System.Windows.Forms.ToolBar.Appearance%2A> propriedade da barra de ferramentas para `ToolBarAppearance.Flat` para que a barra de ferramentas e seus botões uma aparência simples. Como o mouse o ponteiro se move sobre os botões, suas alterações aparência tridimensional. Separadores de botão aparecem como linhas em vez de espaços entre os botões quando a barra de ferramentas tem uma aparência plana.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Forms.ToolBar> controle, define algumas de suas propriedades comuns e adiciona-o a um <xref:System.Windows.Forms.Form>. Delegados também são adicionados para o <xref:System.Windows.Forms.ToolBar.ButtonClick> e <xref:System.Windows.Forms.ToolBar.ButtonDropDown> eventos. Este exemplo pressupõe um <xref:System.Windows.Forms.ToolBar> chamado `toolBar1` e um <xref:System.Windows.Forms.ImageList> chamado `imageList1` foram declarados.  
+  
+ [!code-cpp[ToolBar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolBar/CPP/mytoolbar.cpp#1)]
+ [!code-csharp[ToolBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolBar/CS/mytoolbar.cs#1)]
+ [!code-vb[ToolBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolBar/VB/mytoolbar.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Flat">
+      <MemberSignature Language="C#" Value="Flat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolBarAppearance Flat = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolBarAppearance.Flat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarAppearance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A barra de ferramentas e os botões aparecem simples, mas os botões alteram para tridimensional conforme o ponteiro do mouse se move sobre eles.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolBarAppearance Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolBarAppearance.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarAppearance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A barra de ferramentas e os botões aparecem como controles tridimensionais padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

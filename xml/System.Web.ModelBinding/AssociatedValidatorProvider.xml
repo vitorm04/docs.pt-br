@@ -1,0 +1,108 @@
+<Type Name="AssociatedValidatorProvider" FullName="System.Web.ModelBinding.AssociatedValidatorProvider">
+  <TypeSignature Language="C#" Value="public abstract class AssociatedValidatorProvider : System.Web.ModelBinding.ModelValidatorProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AssociatedValidatorProvider extends System.Web.ModelBinding.ModelValidatorProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.AssociatedValidatorProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.ModelBinding.ModelValidatorProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe abstrata para classes que implementam um provedor de validação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AssociatedValidatorProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.AssociatedValidatorProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Web.ModelBinding.AssociatedValidatorProvider" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeDescriptor">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ComponentModel.ICustomTypeDescriptor GetTypeDescriptor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.AssociatedValidatorProvider.GetTypeDescriptor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ICustomTypeDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo.</param>
+        <summary>Obtém um descritor de tipo para o tipo especificado.</summary>
+        <returns>O descritor de tipo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValidators">
+      <MemberSignature Language="C#" Value="public override sealed System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelValidator&gt; GetValidators (System.Web.ModelBinding.ModelMetadata metadata, System.Web.ModelBinding.ModelBindingExecutionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.ModelBinding.ModelValidator&gt; GetValidators(class System.Web.ModelBinding.ModelMetadata metadata, class System.Web.ModelBinding.ModelBindingExecutionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.AssociatedValidatorProvider.GetValidators(System.Web.ModelBinding.ModelMetadata,System.Web.ModelBinding.ModelBindingExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelValidator&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Web.ModelBinding.ModelMetadata" />
+        <Parameter Name="context" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Os metadados.</param>
+        <param name="context">o contexto de execução.</param>
+        <summary>Obtém os validadores para o modelo usando o contexto de execução e de metadados especificado.</summary>
+        <returns>Os validadores.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="metadata" /> ou <paramref name="context" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O nome da propriedade nos metadados não faz referência a uma das propriedades do tipo de contêiner.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValidators">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelValidator&gt; GetValidators (System.Web.ModelBinding.ModelMetadata metadata, System.Web.ModelBinding.ModelBindingExecutionContext context, System.Collections.Generic.IEnumerable&lt;Attribute&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.ModelBinding.ModelValidator&gt; GetValidators(class System.Web.ModelBinding.ModelMetadata metadata, class System.Web.ModelBinding.ModelBindingExecutionContext context, class System.Collections.Generic.IEnumerable`1&lt;class System.Attribute&gt; attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.AssociatedValidatorProvider.GetValidators(System.Web.ModelBinding.ModelMetadata,System.Web.ModelBinding.ModelBindingExecutionContext,System.Collections.Generic.IEnumerable{System.Attribute})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelValidator&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Web.ModelBinding.ModelMetadata" />
+        <Parameter Name="context" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+        <Parameter Name="attributes" Type="System.Collections.Generic.IEnumerable&lt;System.Attribute&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Os metadados.</param>
+        <param name="context">o contexto de execução.</param>
+        <param name="attributes">Os atributos.</param>
+        <summary>Quando implementado em um tipo derivado, obtém os validadores para o modelo, usando os metadados especificados, o contexto de execução e atributos.</summary>
+        <returns>Os validadores.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

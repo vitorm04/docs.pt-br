@@ -1,0 +1,120 @@
+<Type Name="TemplateVisualStateAttribute" FullName="System.Windows.TemplateVisualStateAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TemplateVisualStateAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TemplateVisualStateAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TemplateVisualStateAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que um controle pode estar em um determinado estado e que um <see cref="T:System.Windows.VisualState" /> é esperado no <see cref="T:System.Windows.Controls.ControlTemplate" /> do controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autores de controle usam esse atributo para especificar o <xref:System.Windows.VisualState> e <xref:System.Windows.VisualStateGroup> objetos que pertencem a seu controle <xref:System.Windows.Controls.ControlTemplate>.  Por exemplo, suponha que você crie um novo controle que tem dois estados visuais denominados `Focused` e `Unfocused`, de que estão em um <xref:System.Windows.VisualStateGroup> chamado `FocusStates`.  Para especificar a <xref:System.Windows.Controls.ControlTemplate> autores que eles podem usar esses estados visuais, adicione dois <xref:System.Windows.TemplateVisualStateAttribute> atributos para a assinatura de classe do controle.  Especifique que o <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> é de propriedade `FocusStates` e que o <xref:System.Windows.TemplateVisualStateAttribute.Name%2A> é de propriedade `Focused` para um e `Unfocused` para os outros.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a assinatura de classe para o `NumericUpDown` controle.  Este exemplo especifica que o `NumericUpDown` controle usa quatro estados visuais.  Dois estados, denominados `Positive` e `Negative`, estão no <xref:System.Windows.VisualStateGroup> chamado `ValueStates`.  Os outros dois estados, nome `Focused` e `Unfocused`, estão no <xref:System.Windows.VisualStateGroup> chamado `FocusedStates`.  Para o exemplo completo, consulte [criando um controle que tem uma aparência personalizável](~/docs/framework/wpf/controls/creating-a-control-that-has-a-customizable-appearance.md).  
+  
+ [!code-csharp[VSMCustomControl#ClassAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#classattributes)]
+ [!code-vb[VSMCustomControl#ClassAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#classattributes)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateVisualStateAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplateVisualStateAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.TemplateVisualStateAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupName">
+      <MemberSignature Language="C#" Value="public string GroupName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TemplateVisualStateAttribute.GroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do grupo ao qual pertence o estado.</summary>
+        <value>O nome do <see cref="T:System.Windows.VisualStateGroup" /> que o estado pertence.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> propriedade corresponde do <xref:System.Windows.VisualStateGroup.Name%2A?displayProperty=nameWithType> propriedade de um <xref:System.Windows.VisualStateGroup> objeto. Para especificar quais <xref:System.Windows.VisualStateGroup> um <xref:System.Windows.VisualState> pertence, defina o <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a assinatura de classe para o `NumericUpDown` controle.  Este exemplo especifica que o `NumericUpDown` controle usa quatro estados visuais.  Dois estados, denominados `Positive` e `Negative`, estão no <xref:System.Windows.VisualStateGroup> chamado `ValueStates`.  Os outros dois estados, nome `Focused` e `Unfocused`, estão no <xref:System.Windows.VisualStateGroup> chamado `FocusedStates`.  Para o exemplo completo, consulte [criando um controle que tem uma aparência personalizável](~/docs/framework/wpf/controls/creating-a-control-that-has-a-customizable-appearance.md).  
+  
+ [!code-csharp[VSMCustomControl#ClassAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#classattributes)]
+ [!code-vb[VSMCustomControl#ClassAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#classattributes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TemplateVisualStateAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do estado que o controle pode ser incluído.</summary>
+        <value>O nome do estado que o controle pode ser incluído.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.TemplateVisualStateAttribute.Name%2A?displayProperty=nameWithType> propriedade corresponde do <xref:System.Windows.VisualState.Name%2A?displayProperty=nameWithType> propriedade de um <xref:System.Windows.VisualState>. Para especificar quais <xref:System.Windows.VisualState> pertence a um controle <xref:System.Windows.Controls.ControlTemplate>, defina o <xref:System.Windows.TemplateVisualStateAttribute.Name%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a assinatura de classe para o `NumericUpDown` controle.  Este exemplo especifica que o `NumericUpDown` controle usa quatro estados visuais.  Dois estados, denominados `Positive` e `Negative`, estão no <xref:System.Windows.VisualStateGroup> chamado `ValueStates`.  Os outros dois estados, nome `Focused` e `Unfocused`, estão no <xref:System.Windows.VisualStateGroup> chamado `FocusedStates`.  Para o exemplo completo, consulte [criando um controle que tem uma aparência personalizável](~/docs/framework/wpf/controls/creating-a-control-that-has-a-customizable-appearance.md).  
+  
+ [!code-csharp[VSMCustomControl#ClassAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#classattributes)]
+ [!code-vb[VSMCustomControl#ClassAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#classattributes)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

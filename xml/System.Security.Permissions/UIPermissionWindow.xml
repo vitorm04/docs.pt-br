@@ -1,0 +1,161 @@
+<Type Name="UIPermissionWindow" FullName="System.Security.Permissions.UIPermissionWindow">
+  <TypeSignature Language="C#" Value="public enum UIPermissionWindow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed UIPermissionWindow extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.UIPermissionWindow" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o tipo de janelas que o código tem permissão para usar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por <xref:System.Security.Permissions.UIPermission>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllWindows">
+      <MemberSignature Language="C#" Value="AllWindows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.UIPermissionWindow AllWindows = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionWindow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os usuários podem usar todas as janelas e os eventos de entrada do usuário sem restrição.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoWindows">
+      <MemberSignature Language="C#" Value="NoWindows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.UIPermissionWindow NoWindows = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.UIPermissionWindow.NoWindows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionWindow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os usuários não podem usar as janelas ou os eventos da interface do usuário. Nenhuma interface do usuário pode ser usada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeSubWindows">
+      <MemberSignature Language="C#" Value="SafeSubWindows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.UIPermissionWindow SafeSubWindows = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionWindow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os usuários só podem usar <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /> para o desenho e só podem usar os eventos de entrada do usuário para a interface do usuário dentro desta subjanela. Exemplos de <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /> são um <see cref="T:System.Windows.Forms.MessageBox" />, controles de caixa de diálogo comuns e um controle exibido dentro de um navegador.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeTopLevelWindows">
+      <MemberSignature Language="C#" Value="SafeTopLevelWindows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.UIPermissionWindow SafeTopLevelWindows = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionWindow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os usuários só podem usar <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows" /> e <see cref="F:System.Security.Permissions.UIPermissionWindow.SafeSubWindows" /> para o desenho e só podem usar os eventos de entrada do usuário para a interface do usuário dentro dessas janelas de nível superior e subjanelas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando executado em SafeTopLevelWindows permissão, seu aplicativo:  
+  
+-   Mostra o nome DNS ou endereço IP do site do qual o aplicativo foi carregado na sua barra de título.  
+  
+-   Exibirá ToolTip de balão quando ele primeiro é exibida, informando ao usuário que está sendo executado em um nível de confiança restrito.  
+  
+-   Exiba sua barra de título em todos os momentos.  
+  
+-   Exiba os controles de janela em seus formulários.  
+  
+-   Não é possível minimizar a janela principal na inicialização.  
+  
+-   Não é possível mover seu windows fora da tela.  
+  
+-   Não é possível usar o <xref:System.Windows.Forms.Form.Opacity%2A> propriedade <xref:System.Windows.Forms.Form.Opacity%2A> para tornar o seu windows menor que 50% transparente.  
+  
+-   Use somente retangulares windows e deve incluir a moldura da janela. Windows Forms não poderão usar a configuração <xref:System.Windows.Forms.Form.FormBorderStyle%2A> para `None`.  
+  
+-   Não é possível tornar invisível windows. Qualquer tentativa feita por aplicativo para definir o <xref:System.Windows.Forms.Control.Visible%2A> propriedade em seu <xref:System.Windows.Forms.Form> objetos `False` será ignorado.  
+  
+-   Deve ter uma entrada na barra de tarefas.  
+  
+-   Terão seus controles não podem acessar o <xref:System.Windows.Forms.Control.Parent%2A> propriedade. Implicitamente, controles serão ser impedidos de acessar irmãos - ou seja, outros controles no mesmo nível de aninhamento.  
+  
+-   Não é possível controlar o foco usando o <xref:System.Windows.Forms.Control.Focus%2A> método.  
+  
+-   Ter teclado restrito digitará acesso, para que um formulário ou controle pode acessar somente os eventos de teclado para si mesmo e seus filhos.  
+  
+-   Terá mouse coordenada acesso restrito, para que um formulário ou controle pode apenas ler as coordenadas do mouse se o mouse estiver sobre a área visível.  
+  
+-   Não é possível definir o <xref:System.Windows.Forms.Form.TopMost%2A> propriedade.  
+  
+-   Não é possível controlar a ordem z de controles no formulário usando o <xref:System.Windows.Forms.Control.BringToFront%2A> e <xref:System.Windows.Forms.Control.SendToBack%2A> métodos.  
+  
+ Essas restrições ajudam a impedir que o código potencialmente prejudicial ataques de falsificação, como imitar caixas de diálogo confiáveis do sistema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

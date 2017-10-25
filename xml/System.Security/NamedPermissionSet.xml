@@ -1,0 +1,456 @@
+<Type Name="NamedPermissionSet" FullName="System.Security.NamedPermissionSet">
+  <TypeSignature Language="C#" Value="public sealed class NamedPermissionSet : System.Security.PermissionSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit NamedPermissionSet extends System.Security.PermissionSet" />
+  <TypeSignature Language="DocId" Value="T:System.Security.NamedPermissionSet" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.PermissionSet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um conjunto de permissões que possui um nome e a descrição associada a ele. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamado conjuntos são usados na administração de política de segurança para especificar as permissões para ser concedida ao código que pertence a determinados grupos de código. Os nomes são cadeias de caracteres alfanuméricos. Cadeias de caracteres de descrição podem consistir em caracteres imprimíveis.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de membros de <xref:System.Security.NamedPermissionSet> classe.  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPermissionSet (System.Security.NamedPermissionSet permSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.NamedPermissionSet permSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.NamedPermissionSet.#ctor(System.Security.NamedPermissionSet)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permSet" Type="System.Security.NamedPermissionSet" />
+      </Parameters>
+      <Docs>
+        <param name="permSet">O conjunto do qual criar a nova instância de permissões nomeado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.NamedPermissionSet" /> classe a partir de outro conjunto de permissões nomeadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPermissionSet (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.NamedPermissionSet.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do novo conjunto de permissões nomeado.</param>
+        <summary>Inicializa uma nova instância vazia do <see cref="T:System.Security.NamedPermissionSet" /> classe com o nome especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando este construtor cria uma permissão nomeada definida com nenhuma permissão, mas com um <xref:System.Security.Permissions.PermissionState.Unrestricted> estado da permissão. Uma permissão nomeada definida em um estado irrestrito efetivamente contém todas as permissões que implementam o <xref:System.Security.Permissions.IUnrestrictedPermission> interface. O conjunto de permissões nomeadas conterá todas as permissões internas, bem como todas as definidas pelo usuário permissões personalizadas que implementam <xref:System.Security.Permissions.IUnrestrictedPermission>. Todas as permissões terá o equivalente de um `Unrestricted` estado da permissão. Permissões que não implementam <xref:System.Security.Permissions.IUnrestrictedPermission> será uma instância vazia.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="name" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPermissionSet (string name, System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.NamedPermissionSet.#ctor(System.String,System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do novo conjunto de permissões nomeado.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Security.Permissions.PermissionState" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.NamedPermissionSet" /> classe com o nome especificado em um estado totalmente restrito ou um irrestrito.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma permissão nomeada definida em um estado irrestrito efetivamente contém todas as permissões que implementam o <xref:System.Security.Permissions.IUnrestrictedPermission> interface. O conjunto de permissões nomeadas conterá todas as permissões internas, bem como todas as permissões personalizadas. Todas as permissões terá um `Unrestricted` <xref:System.Security.Permissions.PermissionState>. Permissões que não implementam <xref:System.Security.Permissions.IUnrestrictedPermission>, como permissões de identidade, será uma instância vazia.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="name" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamedPermissionSet (string name, System.Security.PermissionSet permSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Security.PermissionSet permSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.NamedPermissionSet.#ctor(System.String,System.Security.PermissionSet)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="permSet" Type="System.Security.PermissionSet" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome para o conjunto de permissões nomeadas.</param>
+        <param name="permSet">O conjunto de permissões de que tenha o valor do novo conjunto de permissões nomeadas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.NamedPermissionSet" /> classe com o nome especificado de um conjunto de permissões.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.NamedPermissionSet.%23ctor%2A> construtor para criar um novo <xref:System.Security.NamedPermissionSet> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.NamedPermissionSet> classe.  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="name" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.PermissionSet Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.PermissionSet Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.NamedPermissionSet.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do conjunto de permissões de um conjunto de permissões nomeadas.</summary>
+        <returns>Um conjunto de permissões que é uma cópia das permissões no conjunto de permissões nomeadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.NamedPermissionSet.Copy%2A> método para criar uma cópia do atual <xref:System.Security.NamedPermissionSet>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.NamedPermissionSet> classe.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.Security.NamedPermissionSet Copy (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.NamedPermissionSet Copy(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.NamedPermissionSet.Copy(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.NamedPermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do novo conjunto de permissões nomeado.</param>
+        <summary>Cria uma cópia do conjunto de permissões nomeadas com um nome diferente, mas as mesmas permissões.</summary>
+        <returns>Uma cópia da permissão nomeada com o novo nome.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="name" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Security.NamedPermissionSet.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição de texto do conjunto de permissões nomeadas atual.</summary>
+        <value>Uma descrição de texto do conjunto de permissões nomeadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A descrição ajuda o administrador a entender em palavras que contém o conjunto de permissões e o uso pretendido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.NamedPermissionSet.Description%2A> propriedade para exibir a descrição do atual <xref:System.Security.NamedPermissionSet>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.NamedPermissionSet> classe.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.NamedPermissionSet.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Security.NamedPermissionSet" /> objeto a ser comparado com o atual <see cref="T:System.Security.NamedPermissionSet" />.</param>
+        <summary>Determina se o especificado <see cref="T:System.Security.NamedPermissionSet" /> objeto é igual ao atual <see cref="T:System.Security.NamedPermissionSet" />.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Security.NamedPermissionSet" /> é igual à atual <see cref="T:System.Security.NamedPermissionSet" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte <xref:System.Object.Equals%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.NamedPermissionSet.Equals%2A> método para comparar dois <xref:System.Security.NamedPermissionSet> objetos. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.NamedPermissionSet> classe.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement et);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement et) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.NamedPermissionSet.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="et" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="et">Um elemento de segurança que contém a representação XML do conjunto de permissões nomeadas.</param>
+        <summary>Reconstrói um conjunto de permissões nomeadas com um estado especificado de uma codificação de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método recria o estado de um conjunto de um elemento XML criado anteriormente por de permissões nomeadas <xref:System.Security.NamedPermissionSet.ToXml%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.NamedPermissionSet.FromXml%2A> método para recriar um <xref:System.Security.NamedPermissionSet> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.NamedPermissionSet> classe.  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="et" /> parâmetro não é uma representação válida de um conjunto de permissões nomeadas.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="et" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.NamedPermissionSet.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código hash para o <see cref="T:System.Security.NamedPermissionSet" /> objeto que é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.</summary>
+        <returns>Um código hash para a atual <see cref="T:System.Security.NamedPermissionSet" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código hash para duas instâncias da mesma permissão pode ser diferente, portanto, um código de hash não deve ser usado para comparar dois <xref:System.Security.NamedPermissionSet> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.NamedPermissionSet.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do conjunto de permissões nomeadas atual.</summary>
+        <value>O nome do conjunto de permissões nomeadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Grupos de códigos referem a conjuntos de permissão por nome.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.NamedPermissionSet.Name%2A> propriedade para exibir o nome de um <xref:System.Security.NamedPermissionSet>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.NamedPermissionSet> classe.  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O nome é <see langword="null" /> ou é uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.NamedPermissionSet.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma descrição do elemento XML do conjunto de permissões nomeadas.</summary>
+        <returns>A representação XML do conjunto de permissões nomeadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Security.NamedPermissionSet.FromXml%2A> para recriar o estado representado pelo elemento retornado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.NamedPermissionSet.ToXml%2A> método para recriar um <xref:System.Security.NamedPermissionSet> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.NamedPermissionSet> classe.  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

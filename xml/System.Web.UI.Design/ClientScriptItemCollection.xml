@@ -1,0 +1,60 @@
+<Type Name="ClientScriptItemCollection" FullName="System.Web.UI.Design.ClientScriptItemCollection">
+  <TypeSignature Language="C#" Value="public sealed class ClientScriptItemCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ClientScriptItemCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ClientScriptItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção somente leitura de blocos de script de cliente que estão contidos dentro de um formulário da Web ou controle de usuário em tempo de design. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.Web.UI.Design.ClientScriptItem> objeto o <xref:System.Web.UI.Design.ClientScriptItemCollection> classe representa um `script` bloco contido em um documento (um formulário da Web, Web controle de servidor, uma página de conteúdo ou uma página mestra) em tempo de design.  
+  
+ Use o <xref:System.Web.UI.Design.WebFormsRootDesigner> classe para definir ou examinar os elementos de script de cliente que estão contidos em um documento de formulários da Web na superfície de design. Recuperar a coleção de elementos de script de cliente que estão contidos dentro do documento da Web usando o <xref:System.Web.UI.Design.WebFormsRootDesigner.GetClientScriptsInDocument%2A> método. Adicionar um elemento de script de cliente para o documento da Web usando o <xref:System.Web.UI.Design.WebFormsRootDesigner.AddClientScriptToDocument%2A> método.  
+  
+ Para adicionar elementos de script de cliente em tempo de execução, use o <xref:System.Web.UI.ClientScriptManager> classe.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ClientScriptItemCollection> classe representa os elementos de script em tempo de design que executam no cliente. Porque o `script` elementos que são gerados para <xref:System.Web.UI.Design.ClientScriptItemCollection> objetos não são executados no servidor, os elementos não contêm o `runat="server"` atributo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientScriptItemCollection (System.Web.UI.Design.ClientScriptItem[] clientScriptItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.ClientScriptItem[] clientScriptItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ClientScriptItemCollection.#ctor(System.Web.UI.Design.ClientScriptItem[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="clientScriptItems" Type="System.Web.UI.Design.ClientScriptItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="clientScriptItems">Uma matriz de <see cref="T:System.Web.UI.Design.ClientScriptItem" /> usados para inicializar a coleção de elementos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.ClientScriptItemCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `clientScriptItems` é `null` (`Nothing` no Visual Basic) ou não contém quaisquer elementos, inicializa o construtor um vazio <xref:System.Web.UI.Design.ClientScriptItemCollection> objeto. Caso contrário, os itens a `clientScriptItems` matriz são usadas para definir os itens para o <xref:System.Web.UI.Design.ClientScriptItemCollection>.  
+  
+ O <xref:System.Web.UI.Design.ClientScriptItemCollection.%23ctor%2A> construtor é usado normalmente em classes que derivam de <xref:System.Web.UI.Design.WebFormsRootDesigner> classe. Designers visuais implementam o <xref:System.Web.UI.Design.WebFormsRootDesigner.GetClientScriptsInDocument%2A> método para retornar um <xref:System.Web.UI.Design.ClientScriptItemCollection> objeto para os elementos de script de cliente em um documento da Web em tempo de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

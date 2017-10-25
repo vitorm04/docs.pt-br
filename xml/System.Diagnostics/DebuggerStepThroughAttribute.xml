@@ -1,0 +1,92 @@
+<Type Name="DebuggerStepThroughAttribute" FullName="System.Diagnostics.DebuggerStepThroughAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DebuggerStepThroughAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DebuggerStepThroughAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggerStepThroughAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Instrui o depurador a depurar o código em vez de avançar nele. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo é fornecido para uso por depuradores de código fonte; o common language runtime não é afetado por ele. Por exemplo, o depurador do Visual Studio não parar em um método que é marcado com esse atributo, mesmo se um ponto de interrupção está definido no método.  
+  
+ O <xref:System.Diagnostics.DebuggerStepThroughAttribute> atributo afeta a [Just My Code](http://msdn.microsoft.com/library/0f0df097-bbaf-46ad-9ad1-ef5f40435079) recurso (JMC) do Visual Studio das seguintes maneiras:  
+  
+-   Se o JMC estiver habilitado, o depurador do Visual Studio não irá parar em um ponto de interrupção em um método marcado com o <xref:System.Diagnostics.DebuggerStepThroughAttribute> atributo.  
+  
+-   Se JMC estiver desabilitado, o depurador interrompe no ponto de interrupção, mesmo que o método está marcado com o <xref:System.Diagnostics.DebuggerStepThroughAttribute>.  
+  
+ O código a seguir mostra como o compilador do Visual Basic usa o atributo.  
+  
+```  
+<System.Diagnostics.DebuggerStepThrough()> _  
+    Private Sub InitializeComponent()  
+        components = New System.ComponentModel.Container()  
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font  
+        Me.Text = "Form1"  
+    End Sub  
+```  
+  
+ Esse atributo evita a necessidade para a etapa em código fornecido pelo compilador e etapas de apenas em código fornecido pelo desenvolvedor. Por exemplo, se você estiver percorrendo o código usando o **F11** chave (etapa em), o atributo fará com que a etapa para que atue como um **F10** chave (etapa pela) para o código fornecido pelo compilador. O método não ser entrado em, mas ele será executado.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerStepThroughAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerStepThroughAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.DebuggerStepThroughAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

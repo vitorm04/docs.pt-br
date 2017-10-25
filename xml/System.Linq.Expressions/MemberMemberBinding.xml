@@ -1,0 +1,104 @@
+<Type Name="MemberMemberBinding" FullName="System.Linq.Expressions.MemberMemberBinding">
+  <TypeSignature Language="C#" Value="public sealed class MemberMemberBinding : System.Linq.Expressions.MemberBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MemberMemberBinding extends System.Linq.Expressions.MemberBinding" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.MemberMemberBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Linq.Expressions.MemberBinding</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os membros de inicialização de um membro de um objeto recém-criado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Linq.Expressions.Expression.MemberBind%2A> métodos de fábrica para criar um <xref:System.Linq.Expressions.MemberMemberBinding>.  
+  
+ O valor da <xref:System.Linq.Expressions.MemberBinding.BindingType%2A> propriedade de um <xref:System.Linq.Expressions.MemberMemberBinding> objeto é <xref:System.Linq.Expressions.MemberBindingType.MemberBinding>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bindings">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.MemberBinding&gt; Bindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Linq.Expressions.MemberBinding&gt; Bindings" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.MemberMemberBinding.Bindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Linq.Expressions.MemberBinding&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as associações que descrevem como inicializar os membros de um membro.</summary>
+        <value>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> de <see cref="T:System.Linq.Expressions.MemberBinding" /> objetos que descrevem como inicializar os membros do membro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.MemberMemberBinding Update (System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.MemberBinding&gt; bindings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Linq.Expressions.MemberMemberBinding Update(class System.Collections.Generic.IEnumerable`1&lt;class System.Linq.Expressions.MemberBinding&gt; bindings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.MemberMemberBinding.Update(System.Collections.Generic.IEnumerable{System.Linq.Expressions.MemberBinding})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.MemberMemberBinding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindings" Type="System.Collections.Generic.IEnumerable&lt;System.Linq.Expressions.MemberBinding&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="bindings">A propriedade <see cref="P:System.Linq.Expressions.MemberMemberBinding.Bindings" /> do resultado.</param>
+        <summary>Cria uma nova expressão que é parecida com esta, mas usando os filhos fornecidos. Se todos os filhos forem os mesmos, ela retornará esta expressão.</summary>
+        <returns>Essa expressão se nenhum filho foi alterado ou uma expressão com os filhos atualizados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

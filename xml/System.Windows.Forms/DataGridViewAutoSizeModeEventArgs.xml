@@ -1,0 +1,98 @@
+<Type Name="DataGridViewAutoSizeModeEventArgs" FullName="System.Windows.Forms.DataGridViewAutoSizeModeEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewAutoSizeModeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewAutoSizeModeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewAutoSizeModeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="T:System.Windows.Forms.DataGridView" /> <see cref="E:System.Windows.Forms.DataGridView.AutoSizeRowsModeChanged" /> e <see cref="E:System.Windows.Forms.DataGridView.RowHeadersWidthSizeModeChanged" /> eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView.AutoSizeRowsModeChanged> é gerado quando o valor da <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A> propriedade o <xref:System.Windows.Forms.DataGridView> controlar alterações. O <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeModeChanged> é gerado quando o valor da <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A> alterações de propriedade.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como processar o <xref:System.Windows.Forms.DataGridView.AutoSizeRowsModeChanged> evento. Este exemplo de código é parte de um exemplo maior fornecido no [como: automaticamente redimensionar células quando o conteúdo é alterado no controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.AutoSizing#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CPP/autosizing.cpp#10)]
+ [!code-csharp[System.Windows.Forms.DataGridView.AutoSizing#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CS/autosizing.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView.AutoSizing#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/VB/autosizing.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewAutoSizeModeEventArgs (bool previousModeAutoSized);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool previousModeAutoSized) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewAutoSizeModeEventArgs.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="previousModeAutoSized" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="previousModeAutoSized">
+          <see langword="true" />Se o <see cref="P:System.Windows.Forms.DataGridView.AutoSizeRowsMode" /> propriedade foi definida anteriormente para qualquer <see cref="T:System.Windows.Forms.DataGridViewAutoSizeRowsMode" /> valor diferente de <see cref="F:System.Windows.Forms.DataGridViewAutoSizeRowsMode.None" /> ou <see cref="P:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode" /> propriedade foi definida anteriormente para qualquer <see cref="T:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode" /> valor diferente de <see cref="F:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing" /> ou <see cref="F:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.EnableResizing" />; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewAutoSizeModeEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao implementar uma fonte para <xref:System.Windows.Forms.DataGridView.AutoSizeRowsModeChanged?displayProperty=nameWithType> e <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeModeChanged?displayProperty=nameWithType> eventos, passar `true` para `previousModeAutoSized` se o <xref:System.Windows.Forms.DataGridView> já tinha um modo de redimensionamento automático e o novo modo é diferente. Caso contrário, passe `false` para `previousModeAutoSized`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousModeAutoSized">
+      <MemberSignature Language="C#" Value="public bool PreviousModeAutoSized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PreviousModeAutoSized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewAutoSizeModeEventArgs.PreviousModeAutoSized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o <see cref="T:System.Windows.Forms.DataGridView" /> foi previamente configurado para redimensionar automaticamente.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Windows.Forms.DataGridView.AutoSizeRowsMode" /> propriedade foi definida anteriormente para qualquer <see cref="T:System.Windows.Forms.DataGridViewAutoSizeRowsMode" /> valor diferente de <see cref="F:System.Windows.Forms.DataGridViewAutoSizeRowsMode.None" /> ou <see cref="P:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode" /> propriedade foi definida anteriormente para qualquer <see cref="T:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode" /> valor diferente de <see cref="F:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing" /> ou <see cref="F:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.EnableResizing" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewAutoSizeModeEventArgs> classe é usada com a <xref:System.Windows.Forms.DataGridView.AutoSizeRowsModeChanged?displayProperty=nameWithType> e <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeModeChanged?displayProperty=nameWithType> eventos, portanto, essa propriedade está relacionada especificamente para o estado anterior do <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A?displayProperty=nameWithType> ou <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A?displayProperty=nameWithType> propriedade  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGridViewAutoSizeModeEventArgs.PreviousModeAutoSized%2A> propriedade verificar anterior <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A> valor para um <xref:System.Windows.Forms.DataGridView>. Este exemplo de código é parte de um exemplo maior fornecido no [como: automaticamente redimensionar células quando o conteúdo é alterado no controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.AutoSizing#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CPP/autosizing.cpp#10)]
+ [!code-csharp[System.Windows.Forms.DataGridView.AutoSizing#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/CS/autosizing.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView.AutoSizing#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.AutoSizing/VB/autosizing.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

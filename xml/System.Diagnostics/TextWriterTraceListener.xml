@@ -1,0 +1,627 @@
+<Type Name="TextWriterTraceListener" FullName="System.Diagnostics.TextWriterTraceListener">
+  <TypeSignature Language="C#" Value="public class TextWriterTraceListener : System.Diagnostics.TraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextWriterTraceListener extends System.Diagnostics.TraceListener" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.TextWriterTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Direciona a saída do rastreamento ou da depuração para um <see cref="T:System.IO.TextWriter" /> ou um <see cref="T:System.IO.Stream" />, como <see cref="T:System.IO.FileStream" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TextWriterTraceListener> classe fornece a <xref:System.Diagnostics.TextWriterTraceListener.Writer%2A> propriedade para obter ou definir o gravador de texto que recebe o rastreamento ou a saída de depuração.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ Essa classe também fornece métodos para <xref:System.Diagnostics.TextWriterTraceListener.Close%2A> o <xref:System.Diagnostics.TextWriterTraceListener.Writer%2A> para que ele não receberá mais rastreamento ou depuração da saída, a <xref:System.Diagnostics.TextWriterTraceListener.Flush%2A> o buffer de saída para o <xref:System.Diagnostics.TextWriterTraceListener.Writer%2A>e <xref:System.Diagnostics.TextWriterTraceListener.Write%2A> uma mensagem para o <xref:System.Diagnostics.TextWriterTraceListener.Writer%2A>.  
+  
+ Você deve habilitar o rastreamento ou a depuração para usar um ouvinte de rastreamento. A sintaxe a seguir é específico do compilador. Se você usar compiladores que não seja o c# ou Visual Basic, consulte a documentação para o compilador.  
+  
+-   Para habilitar a depuração em c#, adicione o `/d:DEBUG` sinalizador para a linha de comando do compilador quando você compila o código, ou você pode adicionar `#define DEBUG` à parte superior do seu arquivo. No Visual Basic, adicione o `/d:DEBUG=True` sinalizador para a linha de comando do compilador.  
+  
+-   Para habilitar o rastreamento em c#, adicione o `/d:TRACE` sinalizador para a linha de comando do compilador quando você compila o código ou adiciona `#define TRACE` à parte superior do seu arquivo. No Visual Basic, adicione o `/d:TRACE=True` sinalizador para a linha de comando do compilador.  
+  
+ Para adicionar um ouvinte de rastreamento, edite o arquivo de configuração que corresponde ao nome do seu aplicativo. Nesse arquivo, você pode adicionar um ouvinte, defina seu tipo e definir seu parâmetro, remover um ouvinte ou limpar todos os ouvintes anteriormente definidos pelo aplicativo. O arquivo de configuração deve ser formatado como o exemplo a seguir.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="4">  
+      <listeners>  
+        <add name="myListener"   
+          type="System.Diagnostics.TextWriterTraceListener"   
+          initializeData="TextWriterOutput.log" />  
+        <remove name="Default" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+> [!NOTE]
+>  Se for feita uma tentativa de gravar em um arquivo que está em uso ou indisponível, o nome de arquivo automaticamente é prefixado por um GUID.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa uma instância do <xref:System.Diagnostics.TextWriterTraceListener> classe que usa um <xref:System.IO.StreamWriter> chamado `myOutputWriter` para gravar um arquivo chamado `TestFile.txt`. Primeiro, o exemplo cria um arquivo de saída. Em seguida, ele cria o <xref:System.IO.StreamWriter> para o gravador de texto primeiro, atribui o arquivo de saída e adiciona-o para o <xref:System.Diagnostics.Trace.Listeners%2A>. Em seguida, o código gera uma linha de texto para o arquivo. Por fim, o exemplo libera o buffer de saída.  
+  
+ Depois de executar este exemplo, você pode abrir o `TestFile.txt` arquivo para ver a saída.  
+  
+ [!code-cpp[Classic TextWriterTraceListener Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextWriterTraceListener Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener Example/CS/source.cs#1)]
+ [!code-vb[Classic TextWriterTraceListener Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TextWriterTraceListener Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextWriterTraceListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.TextWriterTraceListener" /> classe com <see cref="T:System.IO.TextWriter" /> como o destinatário de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor usa o <xref:System.IO.TextWriter> fluxo como o destinatário do rastreamento ou a saída de depuração. Seu <xref:System.Diagnostics.TraceListener.Name%2A> propriedade é inicializada para uma cadeia de caracteres vazia ("", ou <xref:System.String.Empty?displayProperty=nameWithType>).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TextWriterTraceListener> usando o <xref:System.Diagnostics.TextWriterTraceListener.%23ctor> construtor. Ele define o <xref:System.Diagnostics.TextWriterTraceListener.Writer%2A> propriedade ao console de saída e, em seguida, adiciona o <xref:System.Diagnostics.TextWriterTraceListener> para o <xref:System.Diagnostics.TraceListenerCollection>. Ele grava uma mensagem em dois segmentos e, em seguida, fecha o <xref:System.Diagnostics.TextWriterTraceListener>.  
+  
+ [!code-cpp[Classic TextWriterTraceListener.WriteLine Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.WriteLine Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextWriterTraceListener.WriteLine Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.WriteLine Example/CS/source.cs#1)]
+ [!code-vb[Classic TextWriterTraceListener.WriteLine Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.WriteLine Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextWriterTraceListener (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que representa o fluxo no qual o <see cref="T:System.Diagnostics.TextWriterTraceListener" /> é gravado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.TextWriterTraceListener" />, usando o fluxo como o destinatário da saída de depuração e de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Diagnostics.TraceListener.Name%2A> propriedade como uma cadeia de caracteres vazia ("").  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.TextWriterTraceListener> usando o <xref:System.Diagnostics.TextWriterTraceListener.%23ctor%28System.IO.Stream%29> construtor e adiciona-o para o <xref:System.Diagnostics.TraceListenerCollection>. O exemplo, em seguida, grava duas mensagens isso <xref:System.Diagnostics.TextWriterTraceListener>e grava uma mensagem a todos os <xref:System.Diagnostics.TraceListener> objetos no <xref:System.Diagnostics.TraceListenerCollection>. Finalmente, ele libera e fecha o <xref:System.Diagnostics.TextWriterTraceListener>.  
+  
+ [!code-csharp[System.Diagnostics.TextWriterTraceListener.Ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TextWriterTraceListener.Ctor/CS/twtlconstream.cs#1)]
+ [!code-vb[System.Diagnostics.TextWriterTraceListener.Ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TextWriterTraceListener.Ctor/VB/twtlconstream.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O fluxo é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextWriterTraceListener (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.#ctor(System.IO.TextWriter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.IO.TextWriter" /> que recebe a saída do <see cref="T:System.Diagnostics.TextWriterTraceListener" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.TextWriterTraceListener" />, usando o gravador especificado como destino da saída de depuração ou rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Diagnostics.TraceListener.Name%2A> propriedade como uma cadeia de caracteres vazia ("").  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.TextWriterTraceListener> usando o <xref:System.Diagnostics.TextWriterTraceListener.%23ctor%28System.IO.TextWriter%29> construtor. O exemplo cria um <xref:System.IO.StreamWriter>, depois referencia o <xref:System.IO.StreamWriter> quando ele cria o <xref:System.Diagnostics.TextWriterTraceListener>, que, em seguida, ele adiciona ao <xref:System.Diagnostics.TraceListenerCollection>. O exemplo grava uma mensagem a todos os <xref:System.Diagnostics.TraceListener> objetos no <xref:System.Diagnostics.TraceListenerCollection>, em seguida, fecha isso <xref:System.Diagnostics.TextWriterTraceListener>.  
+  
+ [!code-cpp[Classic TextWriterTraceListener.Close Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Close Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextWriterTraceListener.Close Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Close Example/CS/source.cs#1)]
+ [!code-vb[Classic TextWriterTraceListener.Close Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Close Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O gravador está <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextWriterTraceListener (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo no qual o <see cref="T:System.Diagnostics.TextWriterTraceListener" /> é gravado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.TextWriterTraceListener" /> usando o arquivo como destinatário da saída da depuração e do rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Diagnostics.TraceListener.Name%2A> propriedade como uma cadeia de caracteres vazia ("").  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.TextWriterTraceListener> usando o <xref:System.Diagnostics.TextWriterTraceListener.%23ctor%28System.String%29> construtor, em seguida, adiciona-o para o <xref:System.Diagnostics.TraceListenerCollection>. O exemplo grava duas mensagens isso <xref:System.Diagnostics.TextWriterTraceListener>, em seguida, grava uma mensagem a todos os <xref:System.Diagnostics.TraceListener> objetos no <xref:System.Diagnostics.TraceListenerCollection>. Finalmente, ele libera e fecha o <xref:System.Diagnostics.TextWriterTraceListener>.  
+  
+ [!code-csharp[System.Diagnostics.TextWriterTraceListener.Ctor#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TextWriterTraceListener.Ctor/CS/twtlconstring.cs#3)]
+ [!code-vb[System.Diagnostics.TextWriterTraceListener.Ctor#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TextWriterTraceListener.Ctor/VB/twtlconstring.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O arquivo é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextWriterTraceListener (System.IO.Stream stream, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.#ctor(System.IO.Stream,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que representa o fluxo no qual o <see cref="T:System.Diagnostics.TextWriterTraceListener" /> é gravado.</param>
+        <param name="name">O nome da nova instância.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.TextWriterTraceListener" /> classe com o nome especificado, usando o fluxo como o destinatário de depuração e rastreamento de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Diagnostics.TraceListener.Name%2A> propriedade para o `name` parâmetro ou uma cadeia de caracteres vazia (""), se o `name` parâmetro é `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.TextWriterTraceListener> usando o <xref:System.Diagnostics.TextWriterTraceListener.%23ctor%28System.IO.Stream%2CSystem.String%29> construtor e adiciona-o para o <xref:System.Diagnostics.TraceListenerCollection>. O exemplo, em seguida, grava duas mensagens isso <xref:System.Diagnostics.TextWriterTraceListener> e grava uma mensagem a todos os <xref:System.Diagnostics.TraceListener> objetos no <xref:System.Diagnostics.TraceListenerCollection>. Finalmente, ele libera e fecha o <xref:System.Diagnostics.TextWriterTraceListener>.  
+  
+ [!code-csharp[System.Diagnostics.TextWriterTraceListener.Ctor#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TextWriterTraceListener.Ctor/CS/twtlconstreamname.cs#2)]
+ [!code-vb[System.Diagnostics.TextWriterTraceListener.Ctor#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TextWriterTraceListener.Ctor/VB/twtlconstreamname.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O fluxo é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextWriterTraceListener (System.IO.TextWriter writer, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.#ctor(System.IO.TextWriter,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.IO.TextWriter" /> que recebe a saída do <see cref="T:System.Diagnostics.TextWriterTraceListener" />.</param>
+        <param name="name">O nome da nova instância.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.TextWriterTraceListener" /> classe com o nome especificado, usando o gravador especificado como destinatário de rastreamento de saída ou a depuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.TextWriterTraceListener> usando o <xref:System.Diagnostics.TextWriterTraceListener.%23ctor%28System.IO.TextWriter%2CSystem.String%29> construtor. O exemplo cria um <xref:System.IO.StreamWriter>, depois referencia o <xref:System.IO.StreamWriter> quando ele cria o <xref:System.Diagnostics.TextWriterTraceListener>, que, em seguida, ele adiciona ao <xref:System.Diagnostics.TraceListenerCollection>. O exemplo grava duas mensagens isso <xref:System.Diagnostics.TextWriterTraceListener>, em seguida, grava uma mensagem a todos os <xref:System.Diagnostics.TraceListener> objetos no <xref:System.Diagnostics.TraceListenerCollection>. Finalmente, ele libera e fecha o <xref:System.Diagnostics.TextWriterTraceListener>.  
+  
+ [!code-csharp[System.Diagnostics.TextWriterTraceListener.Ctor#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TextWriterTraceListener.Ctor/CS/twtlconwritername.cs#5)]
+ [!code-vb[System.Diagnostics.TextWriterTraceListener.Ctor#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TextWriterTraceListener.Ctor/VB/twtlconwritername.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O gravador está <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextWriterTraceListener (string fileName, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo no qual o <see cref="T:System.Diagnostics.TextWriterTraceListener" /> é gravado.</param>
+        <param name="name">O nome da nova instância.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.TextWriterTraceListener" /> com o nome especificado, usando o arquivo como o destinatário da saída de depuração e de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.Diagnostics.TraceListener.Name%2A> propriedade para o `name` parâmetro ou uma cadeia de caracteres vazia (""), se o `name` parâmetro é `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.TextWriterTraceListener> usando o <xref:System.Diagnostics.TextWriterTraceListener.%23ctor%28System.String%2CSystem.String%29> construtor, em seguida, adiciona-o para o <xref:System.Diagnostics.TraceListenerCollection>. O exemplo grava duas mensagens isso <xref:System.Diagnostics.TextWriterTraceListener>, em seguida, grava uma mensagem a todos os <xref:System.Diagnostics.TraceListener> objetos no <xref:System.Diagnostics.TraceListenerCollection>. Finalmente, ele libera e fecha o <xref:System.Diagnostics.TextWriterTraceListener>.  
+  
+ [!code-csharp[System.Diagnostics.TextWriterTraceListener.Ctor#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TextWriterTraceListener.Ctor/CS/twtlconstringname.cs#4)]
+ [!code-vb[System.Diagnostics.TextWriterTraceListener.Ctor#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TextWriterTraceListener.Ctor/VB/twtlconstringname.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O fluxo é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o <see cref="P:System.Diagnostics.TextWriterTraceListener.Writer" /> para que ele não receberá mais rastreamento ou a saída de depuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando um <xref:System.Diagnostics.TextWriterTraceListener.Write%2A> ou <xref:System.Diagnostics.TextWriterTraceListener.WriteLine%2A> método depois de chamar <xref:System.Diagnostics.TextWriterTraceListener.Close%2A> o fluxo é reaberto automaticamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa um <xref:System.Diagnostics.TextWriterTraceListener> chamado `myTextListener`, que usa um <xref:System.IO.StreamWriter> chamado `myOutputWriter` para gravar um arquivo chamado `TestFile.txt`. O exemplo cria o gravador de arquivo, o fluxo e o texto, grava uma linha de texto para o arquivo e, em seguida, libera e fecha o fluxo.  
+  
+ [!code-cpp[Classic TextWriterTraceListener.Close Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Close Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextWriterTraceListener.Close Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Close Example/CS/source.cs#1)]
+ [!code-vb[Classic TextWriterTraceListener.Close Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Close Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />para liberar recursos gerenciados; Se <see langword="false" />, <see cref="M:System.Diagnostics.TextWriterTraceListener.Dispose(System.Boolean)" /> não tem nenhum efeito.</param>
+        <summary>Descarta isso <see cref="T:System.Diagnostics.TextWriterTraceListener" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.TextWriterTraceListener.Close%2A> método o <xref:System.Diagnostics.TextWriterTraceListener> classe para liberar os recursos gerenciados de um <xref:System.Diagnostics.TextWriterTraceListener> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera o buffer de saída para o <see cref="P:System.Diagnostics.TextWriterTraceListener.Writer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir implementa um <xref:System.Diagnostics.TextWriterTraceListener> chamado `myTextListener`, que usa um <xref:System.IO.StreamWriter> chamado `myOutputWriter` para gravar um arquivo chamado `TestFile.txt`. O exemplo cria o gravador de arquivo, o fluxo e o texto, grava uma linha de texto para o arquivo e, em seguida, libera e fecha o fluxo.  
+  
+ [!code-cpp[Classic TextWriterTraceListener.Close Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Close Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextWriterTraceListener.Close Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Close Example/CS/source.cs#1)]
+ [!code-vb[Classic TextWriterTraceListener.Close Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Close Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Grava uma mensagem para esta instância <see cref="P:System.Diagnostics.TextWriterTraceListener.Writer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir implementa um <xref:System.Diagnostics.TextWriterTraceListener> chamado `myWriter` para gravar a tela do console. O exemplo grava duas linhas para a tela do console. Observe que a segunda gravação aparece na mesma linha como a primeira gravação. O exemplo, em seguida, libera e fecha o fluxo.  
+  
+ [!code-cpp[Classic TextWriterTraceListener.Write Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Write Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextWriterTraceListener.Write Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Write Example/CS/source.cs#1)]
+ [!code-vb[Classic TextWriterTraceListener.Write Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Write Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TextWriterTraceListener.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Grava uma mensagem para esta instância <see cref="P:System.Diagnostics.TextWriterTraceListener.Writer" /> seguido por um terminador de linha. O terminador de linha padrão é um retorno de carro seguido por uma alimentação de linha (\r\n).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir implementa um <xref:System.Diagnostics.TextWriterTraceListener> chamado `myWriter` para gravar a tela do console. O exemplo grava duas linhas para a tela do console. Observe que a segunda gravação aparece na mesma linha como a primeira gravação. O exemplo, em seguida, libera e fecha o fluxo.  
+  
+ [!code-cpp[Classic TextWriterTraceListener.WriteLine Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.WriteLine Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextWriterTraceListener.WriteLine Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.WriteLine Example/CS/source.cs#1)]
+ [!code-vb[Classic TextWriterTraceListener.WriteLine Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.WriteLine Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Writer">
+      <MemberSignature Language="C#" Value="public System.IO.TextWriter Writer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.TextWriter Writer" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TextWriterTraceListener.Writer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TextWriterTraceListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o text writer que recebe a saída do rastreamento ou da depuração.</summary>
+        <value>Um <see cref="T:System.IO.TextWriter" /> que representa o gravador que recebe a saída do rastreamento ou da depuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TextWriterTraceListener> que grava a tela do console. Em seguida, o código adiciona o novo ouvinte de rastreamento para o <xref:System.Diagnostics.Trace.Listeners%2A> na classe de rastreamento.  
+  
+ [!code-cpp[Classic TextWriterTraceListener.Writer Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Writer Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic TextWriterTraceListener.Writer Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Writer Example/CS/source.cs#1)]
+ [!code-vb[Classic TextWriterTraceListener.Writer Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic TextWriterTraceListener.Writer Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

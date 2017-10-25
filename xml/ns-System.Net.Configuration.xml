@@ -1,0 +1,6 @@
+<Namespace Name="System.Net.Configuration">
+  <Docs>
+    <summary>O <see cref="N:System.Net.Configuration" /> namespace contém classes que aplicativos usam para acessar através de programação e atualizar configurações para o <see cref="N:System.Net" /> namespaces.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

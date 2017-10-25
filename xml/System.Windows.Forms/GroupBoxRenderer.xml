@@ -1,0 +1,323 @@
+<Type Name="GroupBoxRenderer" FullName="System.Windows.Forms.GroupBoxRenderer">
+  <TypeSignature Language="C#" Value="public sealed class GroupBoxRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GroupBoxRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.GroupBoxRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos usados para renderizar um controle de caixa de grupo com ou sem estilos visuais. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.GroupBoxRenderer> classe fornece um conjunto de `static` métodos que podem ser usados para processar um grupo de controle de caixa. Renderizar um controle refere-se a desenhar a interface do usuário de um controle. Para desenhar uma caixa de grupo, use um do <xref:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox%2A> métodos. Esses métodos fornecem uma variedade de opções de desenho de texto.  
+  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, <xref:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox%2A> desenhará a caixa de grupo com o estilo visual atual. Caso contrário, <xref:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox%2A> desenhará a caixa de grupo com o estilo clássico do Windows. Isso é útil se você estiver desenhando um controle personalizado que automaticamente deve corresponder a configuração de estilo visual atual do sistema operacional.  
+  
+ Essa classe encapsula a funcionalidade de um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer?displayProperty=nameWithType> está definido como um dos elementos expostos pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.GroupBox?displayProperty=nameWithType> classe. Para obter mais informações, consulte [renderização de controles com estilos visuais](~/docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle personalizado que usa o <xref:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox%2A> método para desenhar uma caixa de grupo com uma borda dupla se esses estilos estejam habilitados.  
+  
+ [!code-cpp[System.Windows.Forms.GroupBoxRenderer#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.GroupBoxRenderer/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.GroupBoxRenderer#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GroupBoxRenderer/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.GroupBoxRenderer#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GroupBoxRenderer/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DrawGroupBox">
+      <MemberSignature Language="C#" Value="public static void DrawGroupBox (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.GroupBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawGroupBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.GroupBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.GroupBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.GroupBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a caixa de grupo.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da caixa de grupo.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.GroupBoxState" /> valores que especifica o estado visual da caixa de grupo.</param>
+        <summary>Desenha um controle de caixa de grupo no estado especificado e limites.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará a caixa de grupo com o estilo visual atual. Caso contrário, esse método desenhará a caixa de grupo com o estilo clássico do Windows.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox%28System.Drawing.Graphics%2CSystem.Drawing.Rectangle%2CSystem.Windows.Forms.VisualStyles.GroupBoxState%29> método em um controle personalizado <xref:System.Windows.Forms.Control.OnPaint%2A> método para desenhar uma caixa de grupo com uma borda dupla. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.GroupBoxRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.GroupBoxRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.GroupBoxRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.GroupBoxRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GroupBoxRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.GroupBoxRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GroupBoxRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawGroupBox">
+      <MemberSignature Language="C#" Value="public static void DrawGroupBox (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string groupBoxText, System.Drawing.Font font, System.Windows.Forms.VisualStyles.GroupBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawGroupBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string groupBoxText, class System.Drawing.Font font, valuetype System.Windows.Forms.VisualStyles.GroupBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.VisualStyles.GroupBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="groupBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.GroupBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a caixa de grupo.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da caixa de grupo.</param>
+        <param name="groupBoxText">O <see cref="T:System.String" /> para desenhar a caixa de grupo.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>groupBoxText</c>.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.GroupBoxState" /> valores que especifica o estado visual da caixa de grupo.</param>
+        <summary>Desenha um controle de caixa de grupo no estado especificado e limites, com o texto especificado e a fonte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará a caixa de grupo com o estilo visual atual. Caso contrário, esse método desenhará a caixa de grupo com o estilo clássico do Windows.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox%28System.Drawing.Graphics%2CSystem.Drawing.Rectangle%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Windows.Forms.VisualStyles.GroupBoxState%29> método em um controle personalizado <xref:System.Windows.Forms.Control.OnPaint%2A> método para desenhar uma caixa de grupo com uma borda dupla. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.GroupBoxRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.GroupBoxRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.GroupBoxRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.GroupBoxRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GroupBoxRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.GroupBoxRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GroupBoxRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawGroupBox">
+      <MemberSignature Language="C#" Value="public static void DrawGroupBox (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string groupBoxText, System.Drawing.Font font, System.Drawing.Color textColor, System.Windows.Forms.VisualStyles.GroupBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawGroupBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string groupBoxText, class System.Drawing.Font font, valuetype System.Drawing.Color textColor, valuetype System.Windows.Forms.VisualStyles.GroupBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Color,System.Windows.Forms.VisualStyles.GroupBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="groupBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="textColor" Type="System.Drawing.Color" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.GroupBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a caixa de grupo.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da caixa de grupo.</param>
+        <param name="groupBoxText">O <see cref="T:System.String" /> para desenhar a caixa de grupo.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>groupBoxText</c>.</param>
+        <param name="textColor">O <see cref="T:System.Drawing.Color" /> para aplicar a <c>groupBoxText</c>.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.GroupBoxState" /> valores que especifica o estado visual da caixa de grupo.</param>
+        <summary>Desenha um controle de caixa de grupo no estado especificado e limites, com o texto especificado, fonte e cor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará a caixa de grupo com o estilo visual atual. Caso contrário, esse método desenhará a caixa de grupo com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawGroupBox">
+      <MemberSignature Language="C#" Value="public static void DrawGroupBox (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string groupBoxText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, System.Windows.Forms.VisualStyles.GroupBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawGroupBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string groupBoxText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, valuetype System.Windows.Forms.VisualStyles.GroupBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Windows.Forms.VisualStyles.GroupBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="groupBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.GroupBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a caixa de grupo.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da caixa de grupo.</param>
+        <param name="groupBoxText">O <see cref="T:System.String" /> para desenhar a caixa de grupo.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>groupBoxText</c>.</param>
+        <param name="flags">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.TextFormatFlags" />.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.GroupBoxState" /> valores que especifica o estado visual da caixa de grupo.</param>
+        <summary>Desenha um controle de caixa de grupo no estado especificado e limites, com o texto especificado, a fonte e a formatação de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará a caixa de grupo com o estilo visual atual. Caso contrário, esse método desenhará a caixa de grupo com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawGroupBox">
+      <MemberSignature Language="C#" Value="public static void DrawGroupBox (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string groupBoxText, System.Drawing.Font font, System.Drawing.Color textColor, System.Windows.Forms.TextFormatFlags flags, System.Windows.Forms.VisualStyles.GroupBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawGroupBox(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string groupBoxText, class System.Drawing.Font font, valuetype System.Drawing.Color textColor, valuetype System.Windows.Forms.TextFormatFlags flags, valuetype System.Windows.Forms.VisualStyles.GroupBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawGroupBox(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Color,System.Windows.Forms.TextFormatFlags,System.Windows.Forms.VisualStyles.GroupBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="groupBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="textColor" Type="System.Drawing.Color" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.GroupBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a caixa de grupo.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da caixa de grupo.</param>
+        <param name="groupBoxText">O <see cref="T:System.String" /> para desenhar a caixa de grupo.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>groupBoxText</c>.</param>
+        <param name="textColor">O <see cref="T:System.Drawing.Color" /> para aplicar a <c>groupBoxText</c>.</param>
+        <param name="flags">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.TextFormatFlags" />.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.GroupBoxState" /> valores que especifica o estado visual da caixa de grupo.</param>
+        <summary>Desenha um controle de caixa de grupo no estado especificado e limites, com o texto especificado, fonte, cor e formatação de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará a caixa de grupo com o estilo visual atual. Caso contrário, esse método desenhará a caixa de grupo com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawParentBackground">
+      <MemberSignature Language="C#" Value="public static void DrawParentBackground (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.Control childControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawParentBackground(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.Control childControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.DrawParentBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="childControl" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o plano de fundo do pai do <c>childControl</c>.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> no qual desenhar a tela de fundo do controle pai. Esse retângulo deve ser dentro dos limites do controle filho.</param>
+        <param name="childControl">O controle cuja tela de fundo pai será desenhada.</param>
+        <summary>Desenha a tela de fundo do pai de um controle na área especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBackgroundPartiallyTransparent">
+      <MemberSignature Language="C#" Value="public static bool IsBackgroundPartiallyTransparent (System.Windows.Forms.VisualStyles.GroupBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsBackgroundPartiallyTransparent(valuetype System.Windows.Forms.VisualStyles.GroupBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GroupBoxRenderer.IsBackgroundPartiallyTransparent(System.Windows.Forms.VisualStyles.GroupBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.GroupBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.GroupBoxState" /> valores que especifica o estado visual da caixa de grupo.</param>
+        <summary>Indica se o plano de fundo da caixa de grupo tem quaisquer partes semitransparentes ou combinação alfa.</summary>
+        <returns>
+          <see langword="true" />Se o plano de fundo da caixa de grupo tem partes semitransparentes ou combinação alfa; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderMatchingApplicationState">
+      <MemberSignature Language="C#" Value="public static bool RenderMatchingApplicationState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool RenderMatchingApplicationState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GroupBoxRenderer.RenderMatchingApplicationState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o renderizador usa o estado do aplicativo para determinar o estilo de renderização.</summary>
+        <value>
+          <see langword="true" />Se o estado do aplicativo é usado para determinar o estilo de renderização; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Forms.GroupBoxRenderer.RenderMatchingApplicationState%2A> é `true`, o <xref:System.Windows.Forms.GroupBoxRenderer> usa a configuração de <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> para determinar o estilo de renderização. Se <xref:System.Windows.Forms.GroupBoxRenderer.RenderMatchingApplicationState%2A> é `false`, o renderizador sempre será renderizado com estilos visuais.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.GroupBoxRenderer.RenderMatchingApplicationState%2A> propriedade a ser alterada se uma caixa de grupo é renderizada com estilos visuais. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.GroupBoxRenderer> classe.  
+  
+ [!code-csharp[System.Windows.Forms.GroupBoxRenderer#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GroupBoxRenderer/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.GroupBoxRenderer#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GroupBoxRenderer/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

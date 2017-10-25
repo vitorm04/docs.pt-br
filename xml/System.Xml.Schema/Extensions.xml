@@ -1,0 +1,1873 @@
+<Type Name="Extensions" FullName="System.Xml.Schema.Extensions">
+  <TypeSignature Language="C#" Value="public static class Extensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Extensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.Extensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe contém os métodos de extensão LINQ para XML para validação de XSD.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe também contém métodos para obter infoset post-schema-validação (psvi POST) de um nó XML validado.  
+  
+ Quando você validar um <xref:System.Xml.Linq.XDocument>, <xref:System.Xml.Linq.XElement>, ou <xref:System.Xml.Linq.XAttribute>, você também pode preencher a árvore XML com o infoset post-schema a validação. Informações de psvi POST são adicionadas como uma anotação de tipo <xref:System.Xml.Schema.XmlSchemaInfo?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O XSD em [arquivo XSD de exemplo: clientes e pedidos](http://msdn.microsoft.com/library/8b05efe3-cc5e-4c7b-b322-892dbda41687) contém um esquema que pode ser usado para validar o documento XML [arquivo XML de exemplo: clientes e pedidos (LINQ para XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92). O exemplo a seguir carrega o esquema e o documento, valida o documento, o documento é alterado para que o `xs:key` e `xs:keyref` relação não é válida e, em seguida, tenta validar novamente.  
+  
+```csharp  
+  
+                XmlSchemaSet schemas = new XmlSchemaSet();  
+schemas.Add("", "CustomersOrders.xsd");  
+  
+XDocument custOrd = XDocument.Load("CustomersOrders.xml");  
+  
+Console.WriteLine("Validating custOrd");  
+bool errors = false;  
+custOrd.Validate(schemas, (o, e) =>  
+                     {  
+                         Console.WriteLine("{0}", e.Message);  
+                         errors = true;  
+                     });  
+Console.WriteLine("custOrd {0}", errors ? "did not validate" : "validated");  
+  
+// Modify the custOrd tree so that it is no longer valid.  
+custOrd.Root.Element("Orders").Element("Order").Element("CustomerID").Value = "AAAAA";  
+  
+Console.WriteLine();  
+Console.WriteLine("Validating custOrd");  
+errors = false;  
+custOrd.Validate(schemas, (o, e) =>  
+                     {  
+                         Console.WriteLine("{0}", e.Message);  
+                         errors = true;  
+                     });  
+Console.WriteLine("custOrd {0}", errors ? "did not validate" : "validated");  
+```  
+  
+```vb  
+  
+                Dim errors As Boolean = False  
+  
+Private Sub XSDErrors(ByVal o As Object, ByVal e As ValidationEventArgs)  
+    Console.WriteLine("{0}", e.Message)  
+    errors = True  
+End Sub  
+  
+Sub Main()  
+    Dim schemas As XmlSchemaSet = New XmlSchemaSet()  
+    schemas.Add("", "CustomersOrders.xsd")  
+  
+    Console.WriteLine("Validating custOrd")  
+    Dim custOrd As XDocument = XDocument.Load("CustomersOrders.xml")  
+    errors = False  
+    custOrd.Validate(schemas, AddressOf XSDErrors)  
+    Console.WriteLine("custOrd {0}", IIf(errors, "did not validate", "validated"))  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Validating custOrd")  
+    ' Modify the source document so that it will not validate.  
+    custOrd.Root.Element("Orders").Element("Order").Element("CustomerID").Value = "AAAAA"  
+    errors = False  
+    custOrd.Validate(schemas, AddressOf XSDErrors)  
+    Console.WriteLine("custOrd {0}", IIf(errors, "did not validate", "validated"))  
+End Sub  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Validating custOrd  
+custOrd validated  
+  
+Validating custOrd  
+The key sequence 'AAAAA' in Keyref fails to refer to some key.  
+custOrd did not validate  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="GetSchemaInfo">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém o infoset post-schema-validação (psvi POST) de um nó validado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após validar um <xref:System.Xml.Linq.XDocument>, você pode recuperar infoset post-schema de validação para um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XAttribute> que está contida no documento.  
+  
+ Depois de recuperar o <xref:System.Xml.Schema.IXmlSchemaInfo> do objeto, você pode usar o <xref:System.Xml.Schema.IXmlSchemaInfo.SchemaAttribute%2A> ou <xref:System.Xml.Schema.IXmlSchemaInfo.SchemaElement%2A> propriedades para obter um tipo de validação parcial (<xref:System.Xml.Schema.XmlSchemaElement> ou <xref:System.Xml.Schema.XmlSchemaAttribute>). Você pode usar os tipos de validação parcial para validar um atributo ou uma subárvore.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetSchemaInfo">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.IXmlSchemaInfo GetSchemaInfo (this System.Xml.Linq.XAttribute source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.IXmlSchemaInfo GetSchemaInfo(class System.Xml.Linq.XAttribute source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.Extensions.GetSchemaInfo(System.Xml.Linq.XAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.IXmlSchemaInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Xml.Linq.XAttribute" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um <see cref="T:System.Xml.Linq.XAttribute" /> que foi validado anteriormente.</param>
+        <summary>Obtém o infoset post-schema-validação (psvi POST) de um atributo validado.</summary>
+        <returns>Um <see cref="T:System.Xml.Schema.IXmlSchemaInfo" /> contendo infoset post-schema de validação para um <see cref="T:System.Xml.Linq.XAttribute" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Xml.Schema.IXmlSchemaInfo> retornado por esse método para determinar a certas características de um atributo validado. Por exemplo, você pode determinar se o atributo veio de um valor de atributo padrão em XSD.  
+  
+ Você usa o <xref:System.Xml.Schema.IXmlSchemaInfo.SchemaAttribute%2A> propriedade para obter um tipo de validação parcial (<xref:System.Xml.Schema.XmlSchemaAttribute>). Você pode usá-lo para revalidar um atributo sem validar um documento inteiro.  
+  
+ Para obter um exemplo dessa propriedade, consulte <xref:System.Xml.Schema.Extensions.Validate%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaInfo">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.IXmlSchemaInfo GetSchemaInfo (this System.Xml.Linq.XElement source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.IXmlSchemaInfo GetSchemaInfo(class System.Xml.Linq.XElement source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.Extensions.GetSchemaInfo(System.Xml.Linq.XElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.IXmlSchemaInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Xml.Linq.XElement" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um <see cref="T:System.Xml.Linq.XElement" /> que foi validado anteriormente.</param>
+        <summary>Obtém o PSVI (post-schema-validation infoset) de um elemento validado.</summary>
+        <returns>Uma <see cref="T:System.Xml.Schema.IXmlSchemaInfo" /> que contém o PSVI (post-schema-validation infoset) para um <see cref="T:System.Xml.Linq.XElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Xml.Schema.IXmlSchemaInfo> retornado por esse método para determinar a certas características de um elemento validado. Por exemplo, você pode determinar o tipo de esquema dinâmico do elemento.  
+  
+ Você usa o <xref:System.Xml.Schema.IXmlSchemaInfo.SchemaElement%2A> propriedade para obter um tipo de validação parcial (<xref:System.Xml.Schema.XmlSchemaElement>). Você pode usá-lo para revalidar uma subárvore com um elemento na raiz sem validar um documento inteiro.  
+  
+ Para obter um exemplo dessa propriedade, consulte <xref:System.Xml.Schema.Extensions.Validate%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir preenche a árvore com um psvi POST. Após a validação, imprime todos os elementos e atributos na árvore que são inválidos de acordo com a psvi POST.  
+  
+```csharp  
+  
+                static void DumpInvalidNodes(XElement el)  
+{  
+    if (el.GetSchemaInfo().Validity != XmlSchemaValidity.Valid)  
+        Console.WriteLine("Invalid Element {0}",  
+            el.AncestorsAndSelf()  
+            .InDocumentOrder()  
+            .Aggregate("", (s, i) => s + "/" + i.Name.ToString()));  
+    foreach (XAttribute att in el.Attributes())  
+        if (att.GetSchemaInfo().Validity != XmlSchemaValidity.Valid)  
+            Console.WriteLine("Invalid Attribute {0}",  
+                att  
+                .Parent  
+                .AncestorsAndSelf()  
+                .InDocumentOrder()  
+                .Aggregate("",  
+                    (s, i) => s + "/" + i.Name.ToString()) + "/@" + att.Name.ToString()  
+                );  
+    foreach (XElement child in el.Elements())  
+        DumpInvalidNodes(child);  
+}  
+  
+static void Main(string[] args)  
+{  
+    string xsdMarkup =  
+         @"<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+   <xsd:simpleType name='GCType'>  
+    <xsd:restriction base='xsd:token'>  
+     <xsd:enumeration value='AAA'/>  
+     <xsd:enumeration value='BBB'/>  
+    </xsd:restriction>  
+   </xsd:simpleType>  
+   <xsd:element name='Root'>  
+    <xsd:complexType>  
+     <xsd:sequence>  
+      <xsd:element name='Child1' minOccurs='1' maxOccurs='1'>  
+       <xsd:complexType>  
+        <xsd:sequence>  
+         <xsd:element name='GrandChild1' type='GCType'/>  
+         <xsd:element name='GrandChild2' type='GCType'/>  
+         <xsd:element name='GrandChild3' type='GCType'/>  
+        </xsd:sequence>  
+       </xsd:complexType>  
+      </xsd:element>  
+     </xsd:sequence>  
+    </xsd:complexType>  
+   </xsd:element>  
+  </xsd:schema>";  
+  
+    XmlSchemaSet schemas = new XmlSchemaSet();  
+    schemas.Add("", XmlReader.Create(new StringReader(xsdMarkup)));  
+  
+    XDocument doc1 = new XDocument(  
+        new XElement("Root",  
+            new XElement("Child1",  
+                new XElement("GrandChild1", "AAA"),  
+                new XElement("GrandChild2", "ZZZ"),  
+                new XElement("GrandChild3", "ZZZ")  
+            )  
+        )  
+    );  
+  
+    Console.WriteLine("Validating doc1 ...");  
+    bool errors = false;  
+    doc1.Validate(schemas, (sender, e) =>  
+    {  
+        Console.WriteLine(e.Message);  
+        errors = true;  
+    }, true);  
+    Console.WriteLine("doc1 {0}", errors ? "did not validate" : "validated");  
+    DumpInvalidNodes(doc1.Root);  
+}  
+```  
+  
+```vb  
+  
+                Private Sub DumpInvalidNodes(ByVal el As XElement)  
+    If el.GetSchemaInfo.Validity <> XmlSchemaValidity.Valid Then  
+        Console.WriteLine("Invalid Element {0}", _  
+            el _  
+            .AncestorsAndSelf _  
+            .InDocumentOrder() _  
+            .Aggregate("", _  
+                Function(ByVal s, ByVal i) s + "/" + i.Name.ToString()))  
+    End If  
+    For Each att As XAttribute In el.Attributes()  
+        If att.GetSchemaInfo.Validity <> XmlSchemaValidity.Valid Then  
+            Console.WriteLine("Invalid Attribute {0}", _  
+                att _  
+                .Parent _  
+                .AncestorsAndSelf() _  
+                .InDocumentOrder() _  
+                .Aggregate("", _  
+                    Function(ByVal s, ByVal i) s + "/" + i.Name.ToString()) + _  
+                    "/@" + att.Name.ToString())  
+        End If  
+    Next  
+    For Each child As XElement In el.Elements()  
+        DumpInvalidNodes(child)  
+    Next  
+End Sub  
+  
+Dim errors As Boolean = False  
+  
+Private Sub XSDErrors(ByVal o As Object, ByVal e As ValidationEventArgs)  
+    Console.WriteLine("{0}", e.Message)  
+    errors = True  
+End Sub  
+  
+Sub Main()  
+    Dim xsdMarkup As XDocument = _  
+    <?xml version='1.0'?>  
+    <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+        <xsd:simpleType name='GCType'>  
+            <xsd:restriction base='xsd:token'>  
+                <xsd:enumeration value='AAA'/>  
+                <xsd:enumeration value='BBB'/>  
+            </xsd:restriction>  
+        </xsd:simpleType>  
+        <xsd:element name='Root'>  
+            <xsd:complexType>  
+                <xsd:sequence>  
+                    <xsd:element name='Child1' minOccurs='1' maxOccurs='1'>  
+                        <xsd:complexType>  
+                            <xsd:sequence>  
+                                <xsd:element name='GrandChild1' type='GCType'/>  
+                                <xsd:element name='GrandChild2' type='GCType'/>  
+                                <xsd:element name='GrandChild3' type='GCType'/>  
+                            </xsd:sequence>  
+                        </xsd:complexType>  
+                    </xsd:element>  
+                </xsd:sequence>  
+            </xsd:complexType>  
+        </xsd:element>  
+    </xsd:schema>  
+  
+    Dim schemas As XmlSchemaSet = New XmlSchemaSet()  
+    schemas.Add("", xsdMarkup.CreateReader)  
+  
+    Dim doc1 As XDocument = _  
+    <?xml version='1.0'?>  
+    <Root>  
+        <Child1>  
+            <GrandChild1>AAA</GrandChild1>  
+            <GrandChild2>ZZZ</GrandChild2>  
+            <GrandChild3>ZZZ</GrandChild3>  
+        </Child1>  
+    </Root>  
+  
+    Console.WriteLine("Validating doc1 ...")  
+    errors = False  
+    doc1.Validate(schemas, AddressOf XSDErrors, True)  
+    Console.WriteLine("doc1 {0}", IIf(errors, "did not validate", "validated"))  
+    DumpInvalidNodes(doc1.Root)  
+End Sub  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Validating doc1 ...  
+The 'GrandChild2' element is invalid - The value 'ZZZ' is invalid according to its datatype 'GCType' - The Enumeration constraint failed.  
+The 'GrandChild3' element is invalid - The value 'ZZZ' is invalid according to its datatype 'GCType' - The Enumeration constraint failed.  
+doc1 did not validate  
+Invalid Element /Root  
+Invalid Element /Root/Child1  
+Invalid Element /Root/Child1/GrandChild2  
+Invalid Element /Root/Child1/GrandChild3  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Validate">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Confirma que um <see cref="T:System.Xml.Linq.XDocument" />, uma <see cref="T:System.Xml.Linq.XElement" />, ou um <see cref="T:System.Xml.Linq.XAttribute" /> está de acordo com um XSD em um <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses métodos usam um subjacente <xref:System.Xml.XmlReader> para validar a árvore XML em relação a um XSD.  
+  
+ Erro de validação e mensagens de aviso são tratadas usando a <xref:System.Xml.Schema.ValidationEventHandler> delegate. Se nenhum manipulador de eventos é fornecido para esses métodos, erros de validação são expostos como um <xref:System.Xml.Schema.XmlSchemaValidationException>. Avisos de validação não causam uma <xref:System.Xml.Schema.XmlSchemaValidationException> seja gerada.  
+  
+ Alguns desses métodos de extensão, opcionalmente, permitem que a população do infoset post-schema-validação (psvi POST).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static void Validate (this System.Xml.Linq.XDocument source, System.Xml.Schema.XmlSchemaSet schemas, System.Xml.Schema.ValidationEventHandler validationEventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Validate(class System.Xml.Linq.XDocument source, class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.Schema.ValidationEventHandler validationEventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.Extensions.Validate(System.Xml.Linq.XDocument,System.Xml.Schema.XmlSchemaSet,System.Xml.Schema.ValidationEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Xml.Linq.XDocument" RefType="this" />
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="validationEventHandler" Type="System.Xml.Schema.ValidationEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Xml.Linq.XDocument" /> a ser validado.</param>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> em relação ao qual validar.</param>
+        <param name="validationEventHandler">Um <see cref="T:System.Xml.Schema.ValidationEventHandler" /> para um evento que ocorre quando o leitor encontra erros de validação. Se <see langword="null" />, gera uma exceção nos erros de validação.</param>
+        <summary>Esse método valida se um <see cref="T:System.Xml.Linq.XDocument" /> está em conformidade com um XSD em um <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método de extensão valida que o <xref:System.Xml.Linq.XDocument> está de acordo com o modelo de conteúdo de esquema em <xref:System.Xml.Schema.XmlSchemaSet>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.Schema.XmlSchemaSet> e, em seguida, valida dois objetos <xref:System.Xml.Linq.XDocument> no conjunto de esquemas. Um dos documentos é válido, o outro não.  
+  
+```csharp  
+  
+                string xsdMarkup =  
+    @"<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+       <xsd:element name='Root'>  
+        <xsd:complexType>  
+         <xsd:sequence>  
+          <xsd:element name='Child1' minOccurs='1' maxOccurs='1'/>  
+          <xsd:element name='Child2' minOccurs='1' maxOccurs='1'/>  
+         </xsd:sequence>  
+        </xsd:complexType>  
+       </xsd:element>  
+      </xsd:schema>";  
+XmlSchemaSet schemas = new XmlSchemaSet();  
+schemas.Add("", XmlReader.Create(new StringReader(xsdMarkup)));  
+  
+XDocument doc1 = new XDocument(  
+    new XElement("Root",  
+        new XElement("Child1", "content1"),  
+        new XElement("Child2", "content1")  
+    )  
+);  
+  
+XDocument doc2 = new XDocument(  
+    new XElement("Root",  
+        new XElement("Child1", "content1"),  
+        new XElement("Child3", "content1")  
+    )  
+);  
+  
+Console.WriteLine("Validating doc1");  
+bool errors = false;  
+doc1.Validate(schemas, (o, e) =>  
+                     {  
+                         Console.WriteLine("{0}", e.Message);  
+                         errors = true;  
+                     });  
+Console.WriteLine("doc1 {0}", errors ? "did not validate" : "validated");  
+  
+Console.WriteLine();  
+Console.WriteLine("Validating doc2");  
+errors = false;  
+doc2.Validate(schemas, (o, e) =>  
+                     {  
+                         Console.WriteLine("{0}", e.Message);  
+                         errors = true;  
+                     });  
+Console.WriteLine("doc2 {0}", errors ? "did not validate" : "validated");  
+```  
+  
+```vb  
+  
+                Dim errors As Boolean = False  
+  
+Private Sub XSDErrors(ByVal o As Object, ByVal e As ValidationEventArgs)  
+    Console.WriteLine("{0}", e.Message)  
+    errors = True  
+End Sub  
+  
+Sub Main()  
+    Dim xsdMarkup As XDocument = _  
+    <?xml version='1.0'?>  
+    <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+        <xsd:element name='Root'>  
+            <xsd:complexType>  
+                <xsd:sequence>  
+                    <xsd:element name='Child1' minOccurs='1' maxOccurs='1'/>  
+                    <xsd:element name='Child2' minOccurs='1' maxOccurs='1'/>  
+                </xsd:sequence>  
+            </xsd:complexType>  
+        </xsd:element>  
+    </xsd:schema>  
+  
+    Dim schemas As XmlSchemaSet = New XmlSchemaSet()  
+    schemas.Add("", xsdMarkup.CreateReader)  
+  
+    Dim doc1 As XDocument = _  
+    <?xml version='1.0'?>  
+    <Root>  
+        <Child1>content1</Child1>  
+        <Child2>content2</Child2>  
+    </Root>  
+  
+    Dim doc2 As XDocument = _  
+    <?xml version='1.0'?>  
+    <Root>  
+        <Child1>content1</Child1>  
+        <Child3>content1</Child3>  
+    </Root>  
+  
+    Console.WriteLine("Validating doc1")  
+    errors = False  
+    doc1.Validate(schemas, AddressOf XSDErrors)  
+    Console.WriteLine("doc1 {0}", IIf(errors, "did not validate", "validated"))  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Validating doc2")  
+    errors = False  
+    doc2.Validate(schemas, AddressOf XSDErrors)  
+    Console.WriteLine("doc2 {0}", IIf(errors, "did not validate", "validated"))  
+End Sub  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Validating doc1  
+doc1 validated  
+  
+Validating doc2  
+The element 'Root' has invalid child element 'Child3'. List of possible elements expected: 'Child2'.  
+doc2 did not validate  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaValidationException">Gerado para erros de validação de XSD (linguagem de definição de esquema XML).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static void Validate (this System.Xml.Linq.XAttribute source, System.Xml.Schema.XmlSchemaObject partialValidationType, System.Xml.Schema.XmlSchemaSet schemas, System.Xml.Schema.ValidationEventHandler validationEventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Validate(class System.Xml.Linq.XAttribute source, class System.Xml.Schema.XmlSchemaObject partialValidationType, class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.Schema.ValidationEventHandler validationEventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.Extensions.Validate(System.Xml.Linq.XAttribute,System.Xml.Schema.XmlSchemaObject,System.Xml.Schema.XmlSchemaSet,System.Xml.Schema.ValidationEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Xml.Linq.XAttribute" RefType="this" />
+        <Parameter Name="partialValidationType" Type="System.Xml.Schema.XmlSchemaObject" />
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="validationEventHandler" Type="System.Xml.Schema.ValidationEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Xml.Linq.XAttribute" /> a ser validado.</param>
+        <param name="partialValidationType">Um <see cref="T:System.Xml.Schema.XmlSchemaObject" /> que especifica a subárvore a ser validada.</param>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> em relação ao qual validar.</param>
+        <param name="validationEventHandler">Um <see cref="T:System.Xml.Schema.ValidationEventHandler" /> para um evento que ocorre quando o leitor encontra erros de validação. Se <see langword="null" />, gera uma exceção nos erros de validação.</param>
+        <summary>Esse método valida que um <see cref="T:System.Xml.Linq.XAttribute" /> está em conformidade com a especificada <see cref="T:System.Xml.Schema.XmlSchemaObject" /> e um <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para validar que um <xref:System.Xml.Linq.XAttribute> está em conformidade com um esquema. Você normalmente usa esse método quando você modificou um atributo, e você deseja certificar-se de que ainda está de acordo com seu esquema. Você pode validar o documento inteiro, mas leva menos tempo de processamento para validar apenas o atributo.  
+  
+ Se você passar `null` para `validationEventHandler`, esse método gerará uma exceção após erros de validação. Avisos de validação não gerará uma exceção.  
+  
+ Para validar um atributo, você pode usar uma instância de <xref:System.Xml.Schema.XmlSchemaObject>. Você pode obter essa instância de várias maneiras. Uma maneira fácil é da seguinte maneira:  
+  
+1.  Valide que um documento está de acordo com um esquema.  
+  
+2.  Adicionar validação post-schema infoset (psvi POST) ao chamar o <xref:System.Xml.Schema.Extensions.Validate%2A> método de extensão.  
+  
+3.  Chamar o <xref:System.Xml.Schema.Extensions.GetSchemaInfo%2A> método de extensão para recuperar um objeto que implementa <xref:System.Xml.Schema.IXmlSchemaInfo>. O objeto recuperado, você pode obter um <xref:System.Xml.Schema.XmlSchemaObject>.  
+  
+    -   Se você receber um <xref:System.Xml.Schema.XmlSchemaObject> para um <xref:System.Xml.Linq.XElement>, o tipo será <xref:System.Xml.Schema.XmlSchemaElement>.  
+  
+    -   Se você receber um <xref:System.Xml.Schema.XmlSchemaObject> para um <xref:System.Xml.Linq.XAttribute>, o tipo será <xref:System.Xml.Schema.XmlSchemaAttribute>.  
+  
+ Depois que você tiver uma instância de um <xref:System.Xml.Schema.XmlSchemaObject>, você pode usar esse método para validar um atributo.  
+  
+   
+  
+## Examples  
+  
+```csharp  
+  
+                string xsdMarkup =  
+    @"<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+       <xsd:element name='Root'>  
+        <xsd:complexType>  
+         <xsd:simpleContent>  
+          <xsd:extension base='xsd:string'>  
+           <xsd:attribute name='Lang' use='required'>  
+            <xsd:simpleType>  
+             <xsd:restriction base='xsd:token'>  
+              <xsd:enumeration value='C#'/>  
+              <xsd:enumeration value='VB'/>  
+             </xsd:restriction>  
+            </xsd:simpleType>  
+           </xsd:attribute>  
+          </xsd:extension>  
+         </xsd:simpleContent>  
+        </xsd:complexType>  
+       </xsd:element>  
+      </xsd:schema>";  
+  
+XmlSchemaSet schemas = new XmlSchemaSet();  
+schemas.Add("", XmlReader.Create(new StringReader(xsdMarkup)));  
+  
+XDocument doc1 = new XDocument(  
+    new XElement("Root",  
+        new XAttribute("Lang", "C#")  
+    )  
+);  
+  
+Console.WriteLine("Validating doc1 ...");  
+bool errors = false;  
+doc1.Validate(schemas, (sender, e) =>  
+    {  
+        Console.WriteLine(e.Message);  
+        errors = true;  
+    }, true);  
+Console.WriteLine("doc1 {0}", errors ? "did not validate" : "validated");  
+  
+Console.WriteLine();  
+Console.WriteLine("Validating Lang attribute ...");  
+XAttribute lang = doc1.Root.Attribute("Lang");  
+  
+errors = false;  
+lang.Validate(lang.GetSchemaInfo().SchemaAttribute, schemas, (sender, e) =>  
+    {  
+        Console.WriteLine(e.Message);  
+        errors = true;  
+    });  
+Console.WriteLine("lang {0}", errors ? "did not validate" : "validated");  
+  
+// the following makes the Lang attribute invalid according to the schema  
+lang.Value = "VC";  
+  
+Console.WriteLine();  
+Console.WriteLine("Validating Lang attribute ...");  
+  
+errors = false;  
+lang.Validate(lang.GetSchemaInfo().SchemaAttribute, schemas, (sender, e) =>  
+    {  
+        Console.WriteLine(e.Message);  
+        errors = true;  
+    });  
+Console.WriteLine("lang {0}", errors ? "did not validate" : "validated");  
+```  
+  
+```vb  
+  
+                Dim errors As Boolean = False  
+  
+Private Sub XSDErrors(ByVal o As Object, ByVal e As ValidationEventArgs)  
+    Console.WriteLine("{0}", e.Message)  
+    errors = True  
+End Sub  
+  
+Sub Main()  
+    Dim xsdMarkup As XDocument = _  
+      <?xml version='1.0'?>  
+      <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+          <xsd:element name='Root'>  
+              <xsd:complexType>  
+                  <xsd:simpleContent>  
+                      <xsd:extension base='xsd:string'>  
+                          <xsd:attribute name='Lang' use='required'>  
+                              <xsd:simpleType>  
+                                  <xsd:restriction base='xsd:token'>  
+                                      <xsd:enumeration value='C#'/>  
+                                      <xsd:enumeration value='VB'/>  
+                                  </xsd:restriction>  
+                              </xsd:simpleType>  
+                          </xsd:attribute>  
+                      </xsd:extension>  
+                  </xsd:simpleContent>  
+              </xsd:complexType>  
+          </xsd:element>  
+      </xsd:schema>  
+  
+    Dim schemas As XmlSchemaSet = New XmlSchemaSet()  
+    schemas.Add("", xsdMarkup.CreateReader)  
+  
+    Dim doc1 As XDocument = <?xml version='1.0'?>  
+                            <Root Lang='C#'/>  
+  
+    Console.WriteLine("Validating doc1 ...")  
+    errors = False  
+    doc1.Validate(schemas, AddressOf XSDErrors, True)  
+    Console.WriteLine("doc1 {0}", IIf(errors, "did not validate", "validated"))  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Validating Lang attribute ...")  
+    Dim lang As XAttribute = doc1.Root.Attribute("Lang")  
+  
+    errors = False  
+    lang.Validate(lang.GetSchemaInfo().SchemaAttribute, schemas, AddressOf XSDErrors)  
+    Console.WriteLine("lang {0}", IIf(errors, "did not validate", "validated"))  
+  
+    ' the following makes the Lang attribute invalid according to the schema  
+    lang.Value = "VC"  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Validating Lang attribute ...")  
+  
+    errors = False  
+    lang.Validate(lang.GetSchemaInfo().SchemaAttribute, schemas, AddressOf XSDErrors)  
+    Console.WriteLine("lang {0}", IIf(errors, "did not validate", "validated"))  
+End Sub  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Validating doc1 ...  
+doc1 validated  
+  
+Validating Lang attribute ...  
+lang validated  
+  
+Validating Lang attribute ...  
+The 'Lang' attribute is invalid - The value 'VC' is invalid according to its datatype 'Token' - The Enumeration constraint failed.  
+lang did not validate  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaValidationException">Gerado para erros de validação de XSD (linguagem de definição de esquema XML).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static void Validate (this System.Xml.Linq.XDocument source, System.Xml.Schema.XmlSchemaSet schemas, System.Xml.Schema.ValidationEventHandler validationEventHandler, bool addSchemaInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Validate(class System.Xml.Linq.XDocument source, class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.Schema.ValidationEventHandler validationEventHandler, bool addSchemaInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.Extensions.Validate(System.Xml.Linq.XDocument,System.Xml.Schema.XmlSchemaSet,System.Xml.Schema.ValidationEventHandler,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Xml.Linq.XDocument" RefType="this" />
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="validationEventHandler" Type="System.Xml.Schema.ValidationEventHandler" />
+        <Parameter Name="addSchemaInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Xml.Linq.XDocument" /> a ser validado.</param>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> em relação ao qual validar.</param>
+        <param name="validationEventHandler">Um <see cref="T:System.Xml.Schema.ValidationEventHandler" /> para um evento que ocorre quando o leitor encontra erros de validação. Se <see langword="null" />, gera uma exceção nos erros de validação.</param>
+        <param name="addSchemaInfo">Um <see cref="T:System.Boolean" /> indicando se deve popular o PSVI (post-schema-validation infoset).</param>
+        <summary>Valida que um <see cref="T:System.Xml.Linq.XDocument" /> está em conformidade com um XSD em um <see cref="T:System.Xml.Schema.XmlSchemaSet" />, opcionalmente, preenchendo a árvore XML com o PSVI (post-schema-validation infoset).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método de extensão valida que o <xref:System.Xml.Linq.XDocument> está de acordo com o modelo de conteúdo de esquema em <xref:System.Xml.Schema.XmlSchemaSet>.  
+  
+ Se `addSchemaInfo` é `true`, este método preenche a árvore XML com o infoset de post-schema-validação (psvi POST).  
+  
+ Há duas etapas para popular a árvore XML com a psvi POST.  
+  
+1.  Primeiro, uma anotação é adicionada a todos os nós na árvore para que você possa chamar <xref:System.Xml.Schema.Extensions.GetSchemaInfo%2A?displayProperty=nameWithType> ou <xref:System.Xml.Schema.Extensions.GetSchemaInfo%2A?displayProperty=nameWithType> em um elemento ou atributo na árvore.  
+  
+2.  Em segundo lugar, os elementos padrão e os atributos definidos no XSD são adicionados à árvore XML. Chamando uma da <xref:System.Xml.Schema.Extensions.GetSchemaInfo%2A> métodos, você pode determinar se um atributo ou elemento específico foi adicionado de XSD como um padrão de elemento ou atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir contém um XSD que define o `Child2` elemento com um `Att1` atributo com um valor padrão. Após validar com êxito o documento, o atributo com o valor padrão é adicionado à árvore XML. Observe que o atributo padrão não será adicionado ao `doc2`, que não valida em relação ao esquema.  
+  
+```csharp  
+  
+                string xsdMarkup =  
+    @"<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+       <xsd:element name='Root'>  
+        <xsd:complexType>  
+         <xsd:sequence>  
+          <xsd:element name='Child1' minOccurs='1' maxOccurs='1'/>  
+          <xsd:element name='Child2' minOccurs='1' maxOccurs='1'>  
+           <xsd:complexType>  
+            <xsd:simpleContent>  
+             <xsd:extension base='xsd:string'>  
+              <xsd:attribute name='Att1' default='Att1 Default Value'/>  
+             </xsd:extension>  
+            </xsd:simpleContent>  
+           </xsd:complexType>  
+          </xsd:element>  
+         </xsd:sequence>  
+        </xsd:complexType>  
+       </xsd:element>  
+      </xsd:schema>";  
+XmlSchemaSet schemas = new XmlSchemaSet();  
+schemas.Add("", XmlReader.Create(new StringReader(xsdMarkup)));  
+  
+XDocument doc1 = new XDocument(  
+    new XElement("Root",  
+        new XElement("Child1", "c1"),  
+        new XElement("Child2", "c2")  
+    )  
+);  
+  
+XDocument doc2 = new XDocument(  
+    new XElement("Root",  
+        new XElement("Child1", "content1"),  
+        new XElement("Child3", "content1")  
+    )  
+);  
+  
+Console.WriteLine("Validating doc1");  
+bool errors = false;  
+doc1.Validate(schemas, (o, e) =>  
+                           {  
+                               Console.WriteLine("{0}", e.Message);  
+                               errors = true;  
+                           }, true);  
+Console.WriteLine("doc1 {0}", errors ? "did not validate" : "validated");  
+  
+Console.WriteLine();  
+Console.WriteLine("Validating doc2");  
+errors = false;  
+doc2.Validate(schemas, (o, e) =>  
+                     {  
+                         Console.WriteLine("{0}", e.Message);  
+                         errors = true;  
+                     }, true);  
+Console.WriteLine("doc2 {0}", errors ? "did not validate" : "validated");  
+  
+Console.WriteLine();  
+Console.WriteLine("Contents of doc1:");  
+Console.WriteLine(doc1);  
+  
+Console.WriteLine();  
+Console.WriteLine("Contents of doc2:");  
+Console.WriteLine(doc2);  
+```  
+  
+```vb  
+  
+                Dim errors As Boolean = False  
+  
+Private Sub XSDErrors(ByVal o As Object, ByVal e As ValidationEventArgs)  
+    Console.WriteLine("{0}", e.Message)  
+    errors = True  
+End Sub  
+  
+Sub Main()  
+    Dim xsdMarkup As XDocument = _  
+    <?xml version='1.0'?>  
+    <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+        <xsd:element name='Root'>  
+            <xsd:complexType>  
+                <xsd:sequence>  
+                    <xsd:element name='Child1' minOccurs='1' maxOccurs='1'/>  
+                    <xsd:element name='Child2' minOccurs='1' maxOccurs='1'>  
+                        <xsd:complexType>  
+                            <xsd:simpleContent>  
+                                <xsd:extension base='xsd:string'>  
+                                    <xsd:attribute name='Att1' default='Att1 Default Value'/>  
+                                </xsd:extension>  
+                            </xsd:simpleContent>  
+                        </xsd:complexType>  
+                    </xsd:element>  
+                </xsd:sequence>  
+            </xsd:complexType>  
+        </xsd:element>  
+    </xsd:schema>  
+    Dim schemas As XmlSchemaSet = New XmlSchemaSet()  
+    schemas.Add("", xsdMarkup.CreateReader)  
+  
+    Dim doc1 As XDocument = <?xml version='1.0'?>  
+                            <Root>  
+                                <Child1>c1</Child1>  
+                                <Child2>c2</Child2>  
+                            </Root>  
+    Dim doc2 As XDocument = <?xml version='1.0'?>  
+                            <Root>  
+                                <Child1>content1</Child1>  
+                                <Child3>content1</Child3>  
+                            </Root>  
+  
+    Console.WriteLine("Validating doc1")  
+    errors = False  
+    doc1.Validate(schemas, AddressOf XSDErrors, True)  
+    Console.WriteLine("doc1 {0}", IIf(errors, "did not validate", "validated"))  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Validating doc2")  
+    errors = False  
+    doc2.Validate(schemas, AddressOf XSDErrors, True)  
+    Console.WriteLine("doc2 {0}", IIf(errors, "did not validate", "validated"))  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Contents of doc1:")  
+    Console.WriteLine(doc1)  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Contents of doc2:")  
+    Console.WriteLine(doc2)  
+End Sub  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Validating doc1  
+doc1 validated  
+  
+Validating doc2  
+The element 'Root' has invalid child element 'Child3'. List of possible elements expected: 'Child2'.  
+doc2 did not validate  
+  
+Contents of doc1:  
+<Root>  
+  <Child1>c1</Child1>  
+  <Child2 Att1="Att1 Default Value">c2</Child2>  
+</Root>  
+  
+Contents of doc2:  
+<Root>  
+  <Child1>content1</Child1>  
+  <Child3>content1</Child3>  
+</Root>  
+```  
+  
+ O exemplo a seguir preenche a árvore com psvi POST. Após a validação, imprime todos os elementos e atributos na árvore que são inválidos de acordo com a psvi POST.  
+  
+```csharp  
+  
+                static void DumpInvalidNodes(XElement el)  
+{  
+    if (el.GetSchemaInfo().Validity != XmlSchemaValidity.Valid)  
+        Console.WriteLine("Invalid Element {0}",  
+            el.AncestorsAndSelf()  
+            .InDocumentOrder()  
+            .Aggregate("", (s, i) => s + "/" + i.Name.ToString()));  
+    foreach (XAttribute att in el.Attributes())  
+        if (att.GetSchemaInfo().Validity != XmlSchemaValidity.Valid)  
+            Console.WriteLine("Invalid Attribute {0}",  
+                att  
+                .Parent  
+                .AncestorsAndSelf()  
+                .InDocumentOrder()  
+                .Aggregate("",  
+                    (s, i) => s + "/" + i.Name.ToString()) + "/@" + att.Name.ToString()  
+                );  
+    foreach (XElement child in el.Elements())  
+        DumpInvalidNodes(child);  
+}  
+  
+static void Main(string[] args)  
+{  
+   string xsdMarkup =  
+        @"<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+           <xsd:simpleType name='GCType'>  
+            <xsd:restriction base='xsd:token'>  
+             <xsd:enumeration value='AAA'/>  
+             <xsd:enumeration value='BBB'/>  
+            </xsd:restriction>  
+           </xsd:simpleType>  
+           <xsd:element name='Root'>  
+            <xsd:complexType>  
+             <xsd:sequence>  
+              <xsd:element name='Child1' minOccurs='1' maxOccurs='1'>  
+               <xsd:complexType>  
+                <xsd:sequence>  
+                 <xsd:element name='GrandChild1' type='GCType'/>  
+                 <xsd:element name='GrandChild2' type='GCType'/>  
+                 <xsd:element name='GrandChild3' type='GCType'/>  
+                </xsd:sequence>  
+               </xsd:complexType>  
+              </xsd:element>  
+             </xsd:sequence>  
+            </xsd:complexType>  
+           </xsd:element>  
+          </xsd:schema>";  
+  
+    XmlSchemaSet schemas = new XmlSchemaSet();  
+    schemas.Add("", XmlReader.Create(new StringReader(xsdMarkup)));  
+  
+    XDocument doc1 = new XDocument(  
+        new XElement("Root",  
+            new XElement("Child1",  
+                new XElement("GrandChild1", "AAA"),  
+                new XElement("GrandChild2", "ZZZ"),  
+                new XElement("GrandChild3", "ZZZ")  
+            )  
+        )  
+    );  
+  
+    Console.WriteLine("Validating doc1 ...");  
+    bool errors = false;  
+    doc1.Validate(schemas, (sender, e) =>  
+        {  
+            Console.WriteLine(e.Message);  
+            errors = true;  
+        }, true);  
+    Console.WriteLine("doc1 {0}", errors ? "did not validate" : "validated");  
+    DumpInvalidNodes(doc1.Root);  
+}  
+```  
+  
+```vb  
+  
+                Private Sub DumpInvalidNodes(ByVal el As XElement)  
+    If el.GetSchemaInfo.Validity <> XmlSchemaValidity.Valid Then  
+        Console.WriteLine("Invalid Element {0}", _  
+            el _  
+            .AncestorsAndSelf _  
+            .InDocumentOrder() _  
+            .Aggregate("", _  
+                Function(ByVal s, ByVal i) s + "/" + i.Name.ToString()))  
+    End If  
+    For Each att As XAttribute In el.Attributes()  
+        If att.GetSchemaInfo.Validity <> XmlSchemaValidity.Valid Then  
+            Console.WriteLine("Invalid Attribute {0}", _  
+                att _  
+                .Parent _  
+                .AncestorsAndSelf() _  
+                .InDocumentOrder() _  
+                .Aggregate("", _  
+                    Function(ByVal s, ByVal i) s + "/" + i.Name.ToString()) + _  
+                    "/@" + att.Name.ToString())  
+        End If  
+    Next  
+    For Each child As XElement In el.Elements()  
+        DumpInvalidNodes(child)  
+    Next  
+End Sub  
+  
+Dim errors As Boolean = False  
+  
+Private Sub XSDErrors(ByVal o As Object, ByVal e As ValidationEventArgs)  
+    Console.WriteLine("{0}", e.Message)  
+    errors = True  
+End Sub  
+  
+Sub Main()  
+    Dim xsdMarkup As XDocument = _  
+        <?xml version='1.0'?>  
+        <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+            <xsd:simpleType name='GCType'>  
+                <xsd:restriction base='xsd:token'>  
+                    <xsd:enumeration value='AAA'/>  
+                    <xsd:enumeration value='BBB'/>  
+                </xsd:restriction>  
+            </xsd:simpleType>  
+            <xsd:element name='Root'>  
+                <xsd:complexType>  
+                    <xsd:sequence>  
+                        <xsd:element name='Child1' minOccurs='1' maxOccurs='1'>  
+                            <xsd:complexType>  
+                                <xsd:sequence>  
+                                    <xsd:element name='GrandChild1' type='GCType'/>  
+                                    <xsd:element name='GrandChild2' type='GCType'/>  
+                                    <xsd:element name='GrandChild3' type='GCType'/>  
+                                </xsd:sequence>  
+                            </xsd:complexType>  
+                        </xsd:element>  
+                    </xsd:sequence>  
+                </xsd:complexType>  
+            </xsd:element>  
+        </xsd:schema>  
+  
+    Dim schemas As XmlSchemaSet = New XmlSchemaSet()  
+    schemas.Add("", xsdMarkup.CreateReader)  
+  
+    Dim doc1 As XDocument = _  
+        <?xml version='1.0'?>  
+        <Root>  
+            <Child1>  
+                <GrandChild1>AAA</GrandChild1>  
+                <GrandChild2>ZZZ</GrandChild2>  
+                <GrandChild3>ZZZ</GrandChild3>  
+            </Child1>  
+        </Root>  
+  
+    Console.WriteLine("Validating doc1 ...")  
+    errors = False  
+    doc1.Validate(schemas, AddressOf XSDErrors, True)  
+    Console.WriteLine("doc1 {0}", IIf(errors, "did not validate", "validated"))  
+    DumpInvalidNodes(doc1.Root)  
+End Sub  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Validating doc1 ...  
+The 'GrandChild2' element is invalid - The value 'ZZZ' is invalid according to its datatype 'GCType' - The Enumeration constraint failed.  
+The 'GrandChild3' element is invalid - The value 'ZZZ' is invalid according to its datatype 'GCType' - The Enumeration constraint failed.  
+doc1 did not validate  
+Invalid Element /Root  
+Invalid Element /Root/Child1  
+Invalid Element /Root/Child1/GrandChild2  
+Invalid Element /Root/Child1/GrandChild3  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaValidationException">Gerado para erros de validação de XSD (linguagem de definição de esquema XML).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static void Validate (this System.Xml.Linq.XElement source, System.Xml.Schema.XmlSchemaObject partialValidationType, System.Xml.Schema.XmlSchemaSet schemas, System.Xml.Schema.ValidationEventHandler validationEventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Validate(class System.Xml.Linq.XElement source, class System.Xml.Schema.XmlSchemaObject partialValidationType, class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.Schema.ValidationEventHandler validationEventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.Extensions.Validate(System.Xml.Linq.XElement,System.Xml.Schema.XmlSchemaObject,System.Xml.Schema.XmlSchemaSet,System.Xml.Schema.ValidationEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Xml.Linq.XElement" RefType="this" />
+        <Parameter Name="partialValidationType" Type="System.Xml.Schema.XmlSchemaObject" />
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="validationEventHandler" Type="System.Xml.Schema.ValidationEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Xml.Linq.XElement" /> a ser validado.</param>
+        <param name="partialValidationType">Um <see cref="T:System.Xml.Schema.XmlSchemaObject" /> que especifica a subárvore a ser validada.</param>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> em relação ao qual validar.</param>
+        <param name="validationEventHandler">Um <see cref="T:System.Xml.Schema.ValidationEventHandler" /> para um evento que ocorre quando o leitor encontra erros de validação. Se <see langword="null" />, gera uma exceção nos erros de validação.</param>
+        <summary>Esse método valida que uma subárvore <see cref="T:System.Xml.Linq.XElement" /> está em conformidade com um <see cref="T:System.Xml.Schema.XmlSchemaObject" /> e um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para validar que uma subárvore (com um <xref:System.Xml.Linq.XElement> na raiz) é compatível com um esquema. Você normalmente usa esse método quando você tiver modificado uma subárvore e você deseja certificar-se de que ainda está de acordo com seu esquema. Você pode validar o documento inteiro, mas leva menos tempo de processamento para validar apenas uma subárvore.  
+  
+ Se você passar `null` para `validationEventHandler`, em seguida, esse método gerará uma exceção após erros de validação. Avisos de validação não gerará uma exceção.  
+  
+ Para validar uma subárvore, você pode usar uma instância de <xref:System.Xml.Schema.XmlSchemaObject>. Você pode obter essa instância de várias maneiras. Uma maneira fácil é da seguinte maneira:  
+  
+1.  Valide que um documento está de acordo com um esquema.  
+  
+2.  Adicionar validação post-schema infoset (psvi POST) ao chamar o <xref:System.Xml.Schema.Extensions.Validate%2A> método de extensão.  
+  
+3.  Chamar o <xref:System.Xml.Schema.Extensions.GetSchemaInfo%2A> método de extensão para recuperar um objeto que implementa <xref:System.Xml.Schema.IXmlSchemaInfo>. O objeto recuperado, você pode obter um <xref:System.Xml.Schema.XmlSchemaObject>.  
+  
+    -   Se você receber um <xref:System.Xml.Schema.XmlSchemaObject> para um <xref:System.Xml.Linq.XElement>, o tipo será <xref:System.Xml.Schema.XmlSchemaElement>.  
+  
+    -   Se você receber um <xref:System.Xml.Schema.XmlSchemaObject> para um <xref:System.Xml.Linq.XAttribute>, o tipo será <xref:System.Xml.Schema.XmlSchemaAttribute>.  
+  
+ Depois que você tiver uma instância de um <xref:System.Xml.Schema.XmlSchemaObject>, você pode usar esse método para validar uma subárvore.  
+  
+   
+  
+## Examples  
+  
+```csharp  
+  
+                string xsdMarkup =  
+    @"<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+       <xsd:element name='Root'>  
+        <xsd:complexType>  
+         <xsd:sequence>  
+          <xsd:element name='Child1' minOccurs='1' maxOccurs='1'>  
+           <xsd:complexType>  
+            <xsd:sequence>  
+             <xsd:element name='GrandChild1' minOccurs='1' maxOccurs='1'/>  
+             <xsd:element name='GrandChild2' minOccurs='1' maxOccurs='2'/>  
+            </xsd:sequence>  
+           </xsd:complexType>  
+          </xsd:element>  
+         </xsd:sequence>  
+        </xsd:complexType>  
+       </xsd:element>  
+      </xsd:schema>";  
+  
+XmlSchemaSet schemas = new XmlSchemaSet();  
+schemas.Add("", XmlReader.Create(new StringReader(xsdMarkup)));  
+  
+XDocument doc1 = new XDocument(  
+    new XElement("Root",  
+        new XElement("Child1",  
+            new XElement("GrandChild1", "gc"),  
+            new XElement("GrandChild2", "gc")  
+        )  
+    )  
+);  
+  
+Console.WriteLine("Validating doc1 ...");  
+bool errors = false;  
+doc1.Validate(schemas, (sender, e) =>  
+    {  
+        Console.WriteLine(e.Message);  
+        errors = true;  
+    }, true);  
+Console.WriteLine("doc1 {0}", errors ? "did not validate" : "validated");  
+  
+Console.WriteLine();  
+Console.WriteLine("Validating Child1 after first edit ...");  
+XElement child1 = doc1.Element("Root").Element("Child1");  
+child1.Add(new XElement("GrandChild2", "gc"));  
+errors = false;  
+child1.Validate(child1.GetSchemaInfo().SchemaElement, schemas, (sender, e) =>  
+    {  
+        Console.WriteLine(e.Message);  
+        errors = true;  
+    });  
+Console.WriteLine("child1 {0}", errors ? "did not validate" : "validated");  
+  
+// the following makes the Child1 element invalid according to the schema  
+child1.Add(new XElement("GrandChild3", "gc"));  
+Console.WriteLine();  
+Console.WriteLine("Validating Child1 after second edit ...");  
+child1.Validate(child1.GetSchemaInfo().SchemaElement, schemas, (sender, e) =>  
+    {  
+        Console.WriteLine(e.Message);  
+        errors = true;  
+    });  
+Console.WriteLine("child1 {0}", errors ? "did not validate" : "validated");  
+```  
+  
+```vb  
+  
+                Dim errors As Boolean = False  
+  
+Private Sub XSDErrors(ByVal o As Object, ByVal e As ValidationEventArgs)  
+    Console.WriteLine("{0}", e.Message)  
+    errors = True  
+End Sub  
+  
+Sub Main()  
+  
+    Dim xsdMarkup As XDocument = _  
+        <?xml version='1.0'?>  
+        <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+            <xsd:element name='Root'>  
+                <xsd:complexType>  
+                    <xsd:sequence>  
+                        <xsd:element name='Child1' minOccurs='1' maxOccurs='1'>  
+                            <xsd:complexType>  
+                                <xsd:sequence>  
+                                    <xsd:element name='GrandChild1' minOccurs='1' maxOccurs='1'/>  
+                                    <xsd:element name='GrandChild2' minOccurs='1' maxOccurs='2'/>  
+                                </xsd:sequence>  
+                            </xsd:complexType>  
+                        </xsd:element>  
+                    </xsd:sequence>  
+                </xsd:complexType>  
+            </xsd:element>  
+        </xsd:schema>  
+  
+    Dim schemas As XmlSchemaSet = New XmlSchemaSet()  
+    schemas.Add("", xsdMarkup.CreateReader)  
+  
+    Dim doc1 As XDocument = _  
+        <?xml version='1.0'?>  
+        <Root>  
+            <Child1>  
+                <GrandChild1>gc</GrandChild1>  
+                <GrandChild2>gc</GrandChild2>  
+            </Child1>  
+        </Root>  
+  
+    Console.WriteLine("Validating doc1 ...")  
+    errors = False  
+    doc1.Validate(schemas, AddressOf XSDErrors, True)  
+    Console.WriteLine("doc1 {0}", IIf(errors, "did not validate", "validated"))  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Validating Child1 after first edit ...")  
+    Dim child1 As XElement = doc1.Element("Root").Element("Child1")  
+    child1.Add(<GrandChild2>gc</GrandChild2>)  
+    errors = False  
+    child1.Validate(child1.GetSchemaInfo().SchemaElement, schemas, AddressOf XSDErrors)  
+    Console.WriteLine("child1 {0}", IIf(errors, "did not validate", "validated"))  
+  
+    ' the following makes the Child1 element invalid according to the schema  
+    child1.Add(<GrandChild3>gc</GrandChild3>)  
+    Console.WriteLine()  
+    Console.WriteLine("Validating Child1 after second edit ...")  
+    child1.Validate(child1.GetSchemaInfo().SchemaElement, schemas, AddressOf XSDErrors)  
+    Console.WriteLine("child1 {0}", IIf(errors, "did not validate", "validated"))  
+End Sub  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Validating doc1 ...  
+doc1 validated  
+  
+Validating Child1 after first edit ...  
+child1 validated  
+  
+Validating Child1 after second edit ...  
+The element 'Child1' has invalid child element 'GrandChild3'.  
+child1 did not validate  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaValidationException">Gerado para erros de validação de XSD (linguagem de definição de esquema XML).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static void Validate (this System.Xml.Linq.XAttribute source, System.Xml.Schema.XmlSchemaObject partialValidationType, System.Xml.Schema.XmlSchemaSet schemas, System.Xml.Schema.ValidationEventHandler validationEventHandler, bool addSchemaInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Validate(class System.Xml.Linq.XAttribute source, class System.Xml.Schema.XmlSchemaObject partialValidationType, class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.Schema.ValidationEventHandler validationEventHandler, bool addSchemaInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.Extensions.Validate(System.Xml.Linq.XAttribute,System.Xml.Schema.XmlSchemaObject,System.Xml.Schema.XmlSchemaSet,System.Xml.Schema.ValidationEventHandler,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Xml.Linq.XAttribute" RefType="this" />
+        <Parameter Name="partialValidationType" Type="System.Xml.Schema.XmlSchemaObject" />
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="validationEventHandler" Type="System.Xml.Schema.ValidationEventHandler" />
+        <Parameter Name="addSchemaInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Xml.Linq.XAttribute" /> a ser validado.</param>
+        <param name="partialValidationType">Um <see cref="T:System.Xml.Schema.XmlSchemaObject" /> que especifica a subárvore a ser validada.</param>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> em relação ao qual validar.</param>
+        <param name="validationEventHandler">Um <see cref="T:System.Xml.Schema.ValidationEventHandler" /> para um evento que ocorre quando o leitor encontra erros de validação. Se <see langword="null" />, gera uma exceção nos erros de validação.</param>
+        <param name="addSchemaInfo">Um <see cref="T:System.Boolean" /> indicando se deve popular o PSVI (post-schema-validation infoset).</param>
+        <summary>Confirma que um <see cref="T:System.Xml.Linq.XAttribute" /> está em conformidade com a especificada <see cref="T:System.Xml.Schema.XmlSchemaObject" /> e um <see cref="T:System.Xml.Schema.XmlSchemaSet" />, opcionalmente, populando a árvore XML com o infoset de post-schema-validação (psvi POST).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para validar que um <xref:System.Xml.Linq.XAttribute> está em conformidade com um esquema. Você normalmente usa esse método quando você modificou um atributo, e você deseja certificar-se de que ainda está de acordo com seu esquema. Você pode validar o documento inteiro, mas leva menos tempo de processamento para validar apenas o atributo.  
+  
+ Se `addSchemaInfo` é `true`, este método preenche o atributo com o infoset de post-schema-validação (psvi POST). Após preencher a árvore XML com a psvi POST, você pode chamar <xref:System.Xml.Schema.Extensions.GetSchemaInfo%2A?displayProperty=nameWithType> no atributo validado. Isso é útil se você estiver escrevendo código que depende dos dados retornados por <xref:System.Xml.Schema.Extensions.GetSchemaInfo%2A>.  
+  
+ Se você passar `null` para `validationEventHandler`, em seguida, esse método gerará uma exceção após erros de validação. Avisos de validação não gerará uma exceção.  
+  
+ Para validar um atributo, você pode usar uma instância de <xref:System.Xml.Schema.XmlSchemaObject>. Você pode obter essa instância de várias maneiras. Uma maneira fácil é da seguinte maneira:  
+  
+1.  Valide que um documento está de acordo com um esquema.  
+  
+2.  Adicionar validação post-schema infoset (psvi POST) ao chamar o <xref:System.Xml.Schema.Extensions.Validate%2A> método de extensão.  
+  
+3.  Chamar o <xref:System.Xml.Schema.Extensions.GetSchemaInfo%2A> método de extensão para recuperar um objeto que implementa <xref:System.Xml.Schema.IXmlSchemaInfo>. O objeto recuperado, você pode obter um <xref:System.Xml.Schema.XmlSchemaObject>.  
+  
+    -   Se você receber um <xref:System.Xml.Schema.XmlSchemaObject> para um <xref:System.Xml.Linq.XElement>, o tipo será <xref:System.Xml.Schema.XmlSchemaElement>.  
+  
+    -   Se você receber um <xref:System.Xml.Schema.XmlSchemaObject> para um <xref:System.Xml.Linq.XAttribute>, o tipo será <xref:System.Xml.Schema.XmlSchemaAttribute>.  
+  
+ Depois que você tiver uma instância de um <xref:System.Xml.Schema.XmlSchemaObject>, você pode usar esse método para validar um atributo.  
+  
+   
+  
+## Examples  
+  
+```csharp  
+  
+                static void DumpInvalidNodes(XElement el)  
+{  
+    if (el.GetSchemaInfo().Validity != XmlSchemaValidity.Valid)  
+        Console.WriteLine("Invalid Element {0}",  
+            el.AncestorsAndSelf()  
+            .InDocumentOrder()  
+            .Aggregate("", (s, i) => s + "/" + i.Name.ToString()));  
+    foreach (XAttribute att in el.Attributes())  
+        if (att.GetSchemaInfo().Validity != XmlSchemaValidity.Valid)  
+            Console.WriteLine("Invalid Attribute {0}",  
+                att  
+                .Parent  
+                .AncestorsAndSelf()  
+                .InDocumentOrder()  
+                .Aggregate("",  
+                    (s, i) => s + "/" + i.Name.ToString()) + "/@" + att.Name.ToString()  
+                );  
+    foreach (XElement child in el.Elements())  
+        DumpInvalidNodes(child);  
+}  
+  
+static void Main(string[] args)  
+{  
+    string xsdMarkup =  
+        @"<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+       <xsd:element name='Root'>  
+        <xsd:complexType>  
+         <xsd:simpleContent>  
+          <xsd:extension base='xsd:string'>  
+           <xsd:attribute name='Lang' use='required'>  
+            <xsd:simpleType>  
+             <xsd:restriction base='xsd:token'>  
+              <xsd:enumeration value='C#'/>  
+              <xsd:enumeration value='VB'/>  
+             </xsd:restriction>  
+            </xsd:simpleType>  
+           </xsd:attribute>  
+          </xsd:extension>  
+         </xsd:simpleContent>  
+        </xsd:complexType>  
+       </xsd:element>  
+      </xsd:schema>";  
+  
+    XmlSchemaSet schemas = new XmlSchemaSet();  
+    schemas.Add("", XmlReader.Create(new StringReader(xsdMarkup)));  
+  
+    XDocument doc1 = new XDocument(  
+        new XElement("Root",  
+            new XAttribute("Lang", "C#")  
+        )  
+    );  
+  
+    Console.WriteLine("Validating doc1 ...");  
+    bool errors = false;  
+    doc1.Validate(schemas, (sender, e) =>  
+    {  
+        Console.WriteLine(e.Message);  
+        errors = true;  
+    }, true);  
+    Console.WriteLine("doc1 {0}", errors ? "did not validate" : "validated");  
+    DumpInvalidNodes(doc1.Root);  
+  
+    Console.WriteLine();  
+    Console.WriteLine("Validating Lang attribute ...");  
+    XAttribute lang = doc1.Element("Root").Attribute("Lang");  
+  
+    errors = false;  
+    lang.Validate(lang.GetSchemaInfo().SchemaAttribute, schemas, (sender, e) =>  
+    {  
+        Console.WriteLine(e.Message);  
+        errors = true;  
+    }, true);  
+    Console.WriteLine("lang {0}", errors ? "did not validate" : "validated");  
+    DumpInvalidNodes(doc1.Root);  
+  
+    // the following makes the Lang attribute invalid according to the schema  
+    lang.Value = "VC";  
+  
+    Console.WriteLine();  
+    Console.WriteLine("Validating Lang attribute ...");  
+  
+    errors = false;  
+    lang.Validate(lang.GetSchemaInfo().SchemaAttribute, schemas, (sender, e) =>  
+    {  
+        Console.WriteLine(e.Message);  
+        errors = true;  
+    }, true);  
+    Console.WriteLine("lang {0}", errors ? "did not validate" : "validated");  
+    DumpInvalidNodes(doc1.Root);  
+}  
+```  
+  
+```vb  
+  
+                Private Sub DumpInvalidNodes(ByVal el As XElement)  
+    If el.GetSchemaInfo.Validity <> XmlSchemaValidity.Valid Then  
+        Console.WriteLine("Invalid Element {0}", _  
+            el _  
+            .AncestorsAndSelf _  
+            .InDocumentOrder() _  
+            .Aggregate("", _  
+                Function(ByVal s, ByVal i) s + "/" + i.Name.ToString()))  
+    End If  
+    For Each att As XAttribute In el.Attributes()  
+        If att.GetSchemaInfo.Validity <> XmlSchemaValidity.Valid Then  
+            Console.WriteLine("Invalid Attribute {0}", _  
+                att _  
+                .Parent _  
+                .AncestorsAndSelf() _  
+                .InDocumentOrder() _  
+                .Aggregate("", _  
+                    Function(ByVal s, ByVal i) s + "/" + i.Name.ToString()) + _  
+                    "/@" + att.Name.ToString())  
+        End If  
+    Next  
+    For Each child As XElement In el.Elements()  
+        DumpInvalidNodes(child)  
+    Next  
+End Sub  
+  
+Dim errors As Boolean = False  
+  
+Private Sub XSDErrors(ByVal o As Object, ByVal e As ValidationEventArgs)  
+    Console.WriteLine("{0}", e.Message)  
+    errors = True  
+End Sub  
+  
+Sub Main()  
+  
+    Dim xsdMarkup As XDocument = _  
+        <?xml version='1.0'?>  
+        <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+            <xsd:element name='Root'>  
+                <xsd:complexType>  
+                    <xsd:simpleContent>  
+                        <xsd:extension base='xsd:string'>  
+                            <xsd:attribute name='Lang' use='required'>  
+                                <xsd:simpleType>  
+                                    <xsd:restriction base='xsd:token'>  
+                                        <xsd:enumeration value='C#'/>  
+                                        <xsd:enumeration value='VB'/>  
+                                    </xsd:restriction>  
+                                </xsd:simpleType>  
+                            </xsd:attribute>  
+                        </xsd:extension>  
+                    </xsd:simpleContent>  
+                </xsd:complexType>  
+            </xsd:element>  
+        </xsd:schema>  
+  
+    Dim schemas As XmlSchemaSet = New XmlSchemaSet()  
+    schemas.Add("", xsdMarkup.CreateReader)  
+  
+    Dim doc1 As XDocument = <?xml version='1.0'?>  
+                            <Root Lang='C#'/>  
+  
+    Console.WriteLine("Validating doc1 ...")  
+    errors = False  
+    doc1.Validate(schemas, AddressOf XSDErrors, True)  
+    Console.WriteLine("doc1 {0}", IIf(errors, "did not validate", "validated"))  
+    DumpInvalidNodes(doc1.Root)  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Validating Lang attribute ...")  
+    Dim lang As XAttribute = doc1.Element("Root").Attribute("Lang")  
+  
+    errors = False  
+    lang.Validate(lang.GetSchemaInfo().SchemaAttribute, schemas, AddressOf XSDErrors, True)  
+    Console.WriteLine("lang {0}", IIf(errors, "did not validate", "validated"))  
+    DumpInvalidNodes(doc1.Root)  
+  
+    ' the following makes the Lang attribute invalid according to the schema  
+    lang.Value = "VC"  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Validating Lang attribute ...")  
+  
+    errors = False  
+    lang.Validate(lang.GetSchemaInfo().SchemaAttribute, schemas, AddressOf XSDErrors, True)  
+    Console.WriteLine("lang {0}", IIf(errors, "did not validate", "validated"))  
+    DumpInvalidNodes(doc1.Root)  
+End Sub  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Validating doc1 ...  
+doc1 validated  
+  
+Validating Lang attribute ...  
+lang validated  
+  
+Validating Lang attribute ...  
+The 'Lang' attribute is invalid - The value 'VC' is invalid according to its datatype 'Token' - The Enumeration constraint failed.  
+lang did not validate  
+Invalid Attribute /Root/@Lang  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaValidationException">Gerado para erros de validação de XSD (linguagem de definição de esquema XML).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static void Validate (this System.Xml.Linq.XElement source, System.Xml.Schema.XmlSchemaObject partialValidationType, System.Xml.Schema.XmlSchemaSet schemas, System.Xml.Schema.ValidationEventHandler validationEventHandler, bool addSchemaInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Validate(class System.Xml.Linq.XElement source, class System.Xml.Schema.XmlSchemaObject partialValidationType, class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.Schema.ValidationEventHandler validationEventHandler, bool addSchemaInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.Extensions.Validate(System.Xml.Linq.XElement,System.Xml.Schema.XmlSchemaObject,System.Xml.Schema.XmlSchemaSet,System.Xml.Schema.ValidationEventHandler,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Xml.Linq.XElement" RefType="this" />
+        <Parameter Name="partialValidationType" Type="System.Xml.Schema.XmlSchemaObject" />
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="validationEventHandler" Type="System.Xml.Schema.ValidationEventHandler" />
+        <Parameter Name="addSchemaInfo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Xml.Linq.XElement" /> a ser validado.</param>
+        <param name="partialValidationType">Um <see cref="T:System.Xml.Schema.XmlSchemaObject" /> que especifica a subárvore a ser validada.</param>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> em relação ao qual validar.</param>
+        <param name="validationEventHandler">Um <see cref="T:System.Xml.Schema.ValidationEventHandler" /> para um evento que ocorre quando o leitor encontra erros de validação. Se <see langword="null" />, gera uma exceção nos erros de validação.</param>
+        <param name="addSchemaInfo">Um <see cref="T:System.Boolean" /> indicando se deve popular o PSVI (post-schema-validation infoset).</param>
+        <summary>Valida se uma subárvore <see cref="T:System.Xml.Linq.XElement" /> está em conformidade com um <see cref="T:System.Xml.Schema.XmlSchemaObject" /> e <see cref="T:System.Xml.Schema.XmlSchemaSet" /> especificados, opcionalmente, populando a árvore XML com o PSVI (infoset de validação pós-esquema).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para validar que uma subárvore (com um <xref:System.Xml.Linq.XElement> na raiz da subárvore) está em conformidade com um esquema. Você normalmente usa esse método quando você tiver modificado uma subárvore e você deseja certificar-se de que ainda está de acordo com seu esquema. Você pode validar o documento inteiro, mas leva menos tempo de processamento para validar apenas uma subárvore.  
+  
+ Se `addSchemaInfo` é `true`, em seguida, esse método popula a árvore XML com o infoset de post-schema-validação (psvi POST).  
+  
+ Há dois aspectos de populando a árvore XML com a psvi POST.  
+  
+ Primeiro, uma anotação é adicionada a todos os nós na árvore de modo que você pode chamar <xref:System.Xml.Schema.Extensions.GetSchemaInfo%2A> em um elemento ou atributo na árvore.  
+  
+ Em segundo lugar, os elementos padrão e os atributos definidos no XSD são adicionados à árvore XML. Chamando uma da <xref:System.Xml.Schema.Extensions.GetSchemaInfo%2A> métodos, você pode determinar se um atributo ou elemento específico foi adicionado de XSD como um padrão de elemento ou atributo.  
+  
+ Se você passar `null` para `validationEventHandler`, em seguida, esse método gerará uma exceção após erros de validação. Avisos de validação não gerará uma exceção.  
+  
+ Para validar uma subárvore, você pode usar uma instância de <xref:System.Xml.Schema.XmlSchemaObject>. Você pode obter essa instância de várias maneiras. Uma maneira fácil é da seguinte maneira:  
+  
+1.  Valide que um documento está de acordo com um esquema.  
+  
+2.  Adicionar validação post-schema infoset (psvi POST) ao chamar o <xref:System.Xml.Schema.Extensions.Validate%2A> método de extensão.  
+  
+3.  Chamar o <xref:System.Xml.Schema.Extensions.GetSchemaInfo%2A> método de extensão para recuperar um objeto que implementa <xref:System.Xml.Schema.IXmlSchemaInfo>. O objeto recuperado, você pode obter um <xref:System.Xml.Schema.XmlSchemaObject>.  
+  
+    -   Se você receber um <xref:System.Xml.Schema.XmlSchemaObject> para um <xref:System.Xml.Linq.XElement>, o tipo será <xref:System.Xml.Schema.XmlSchemaElement>.  
+  
+    -   Se você receber um <xref:System.Xml.Schema.XmlSchemaObject> para um <xref:System.Xml.Linq.XAttribute>, o tipo será <xref:System.Xml.Schema.XmlSchemaAttribute>.  
+  
+ Depois que você tiver uma instância de um <xref:System.Xml.Schema.XmlSchemaObject>, você pode usar esse método para validar uma subárvore.  
+  
+   
+  
+## Examples  
+  
+```csharp  
+  
+                string xsdMarkup =  
+    @"<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+       <xsd:element name='Root'>  
+        <xsd:complexType>  
+         <xsd:sequence>  
+          <xsd:element name='Child1' minOccurs='1' maxOccurs='1'/>  
+          <xsd:element name='Child2' minOccurs='1' maxOccurs='1'>  
+           <xsd:complexType>  
+            <xsd:simpleContent>  
+             <xsd:extension base='xsd:string'>  
+              <xsd:attribute name='Att1' default='Att1 Default Value'/>  
+             </xsd:extension>  
+            </xsd:simpleContent>  
+           </xsd:complexType>  
+          </xsd:element>  
+         </xsd:sequence>  
+        </xsd:complexType>  
+       </xsd:element>  
+      </xsd:schema>";  
+XmlSchemaSet schemas = new XmlSchemaSet();  
+schemas.Add("", XmlReader.Create(new StringReader(xsdMarkup)));  
+  
+XDocument doc1 = new XDocument(  
+    new XElement("Root",  
+        new XElement("Child1", "c1"),  
+        new XElement("Child2", "c2")  
+    )  
+);  
+  
+XDocument doc2 = new XDocument(  
+    new XElement("Root",  
+        new XElement("Child1", "content1"),  
+        new XElement("Child3", "content1")  
+    )  
+);  
+  
+Console.WriteLine("Validating doc1");  
+bool errors = false;  
+doc1.Validate(schemas, (o, e) =>  
+                     {  
+                         Console.WriteLine("{0}", e.Message);  
+                         errors = true;  
+                     }, true);  
+Console.WriteLine("doc1 {0}", errors ? "did not validate" : "validated");  
+  
+Console.WriteLine();  
+Console.WriteLine("Validating doc2");  
+errors = false;  
+doc2.Validate(schemas, (o, e) =>  
+                     {  
+                         Console.WriteLine("{0}", e.Message);  
+                         errors = true;  
+                     }, true);  
+Console.WriteLine("doc2 {0}", errors ? "did not validate" : "validated");  
+  
+Console.WriteLine();  
+Console.WriteLine("Contents of doc1:");  
+Console.WriteLine(doc1);  
+  
+Console.WriteLine();  
+Console.WriteLine("Contents of doc2:");  
+Console.WriteLine(doc2);  
+```  
+  
+```vb  
+  
+                Dim errors As Boolean = False  
+  
+Private Sub XSDErrors(ByVal o As Object, ByVal e As ValidationEventArgs)  
+    Console.WriteLine("{0}", e.Message)  
+    errors = True  
+End Sub  
+  
+Sub Main()  
+    Dim xsdMarkup As XDocument = _  
+        <?xml version='1.0'?>  
+        <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>  
+            <xsd:element name='Root'>  
+                <xsd:complexType>  
+                    <xsd:sequence>  
+                        <xsd:element name='Child1' minOccurs='1' maxOccurs='1'/>  
+                        <xsd:element name='Child2' minOccurs='1' maxOccurs='1'>  
+                            <xsd:complexType>  
+                                <xsd:simpleContent>  
+                                    <xsd:extension base='xsd:string'>  
+                                        <xsd:attribute name='Att1' default='Att1 Default Value'/>  
+                                    </xsd:extension>  
+                                </xsd:simpleContent>  
+                            </xsd:complexType>  
+                        </xsd:element>  
+                    </xsd:sequence>  
+                </xsd:complexType>  
+            </xsd:element>  
+        </xsd:schema>  
+    Dim schemas As XmlSchemaSet = New XmlSchemaSet()  
+    schemas.Add("", xsdMarkup.CreateReader)  
+  
+    Dim doc1 As XDocument = _  
+        <?xml version='1.0'?>  
+        <Root>  
+            <Child1>c1</Child1>  
+            <Child2>c2</Child2>  
+        </Root>  
+  
+    Dim doc2 As XDocument = _  
+        <?xml version='1.0'?>  
+        <Root>  
+            <Child1>content1</Child1>  
+            <Child3>content1</Child3>  
+        </Root>  
+  
+    Console.WriteLine("Validating doc1")  
+    errors = False  
+    doc1.Validate(schemas, AddressOf XSDErrors, True)  
+    Console.WriteLine("doc1 {0}", IIf(errors, "did not validate", "validated"))  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Validating doc2")  
+    errors = False  
+    doc2.Validate(schemas, AddressOf XSDErrors, True)  
+    Console.WriteLine("doc2 {0}", IIf(errors, "did not validate", "validated"))  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Contents of doc1:")  
+    Console.WriteLine(doc1)  
+  
+    Console.WriteLine()  
+    Console.WriteLine("Contents of doc2:")  
+    Console.WriteLine(doc2)  
+End Sub  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Validating doc1  
+doc1 validated  
+  
+Validating doc2  
+The element 'Root' has invalid child element 'Child3'. List of possible elements expected: 'Child2'.  
+doc2 did not validate  
+  
+Contents of doc1:  
+<Root>  
+  <Child1>c1</Child1>  
+  <Child2 Att1="Att1 Default Value">c2</Child2>  
+</Root>  
+  
+Contents of doc2:  
+<Root>  
+  <Child1>content1</Child1>  
+  <Child3>content1</Child3>  
+</Root>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.Schema.XmlSchemaValidationException">Gerado para erros de validação de XSD (linguagem de definição de esquema XML).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

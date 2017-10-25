@@ -1,0 +1,339 @@
+<Type Name="CreateParams" FullName="System.Windows.Forms.CreateParams">
+  <TypeSignature Language="C#" Value="public class CreateParams" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CreateParams extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CreateParams" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula as informações necessárias ao criar um controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações em um <xref:System.Windows.Forms.CreateParams> pode ser usado para transmitir informações sobre o estado inicial e a aparência de um controle. A maioria dos <xref:System.Windows.Forms.Control> derivado de substituição de controles de <xref:System.Windows.Forms.Control.CreateParams%2A> propriedade para passar os valores apropriados ou inclua informações adicionais no <xref:System.Windows.Forms.CreateParams>.  
+  
+ Para obter mais informações sobre como criar parâmetros de controle, consulte o `CreateWindow` e `CreateWindowEx` funções e o `CREATESTRUCT` documentação de estrutura na referência do SDK da plataforma Windows localizado na biblioteca MSDN.  
+  
+> [!NOTE]
+>  As constantes usadas para definir o <xref:System.Windows.Forms.CreateParams.Style%2A>, <xref:System.Windows.Forms.CreateParams.ExStyle%2A>, e <xref:System.Windows.Forms.CreateParams.ClassStyle%2A> propriedades são definidas no arquivo de cabeçalho WinUser. Esse arquivo é instalado pelo Visual Studio ou do Platform SDK.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.Button> derivado da classe chamada `MyIconButton` e fornece a implementação necessária para o botão para exibir um ícone em vez de uma imagem. O <xref:System.Windows.Forms.Control.CreateParams%2A> propriedade é estendida e um valor agregado para o <xref:System.Windows.Forms.CreateParams.Style%2A> propriedade que faz com que o botão para exibir um <xref:System.Drawing.Icon> em vez de um <xref:System.Drawing.Image>.  
+  
+ [!code-cpp[CreateParams#1](~/samples/snippets/cpp/VS_Snippets_Winforms/CreateParams/CPP/createparams.cpp#1)]
+ [!code-csharp[CreateParams#1](~/samples/snippets/csharp/VS_Snippets_Winforms/CreateParams/CS/createparams.cs#1)]
+ [!code-vb[CreateParams#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CreateParams/VB/createparams.vb#1)]  
+  
+ O exemplo de código a seguir cria uma instância de um padrão <xref:System.Windows.Forms.Button> controle e uma instância do controle derivada, `MyIconButton`, criado no exemplo acima. Este exemplo requer que haja um <xref:System.Drawing.Icon> arquivo chamado Default.ico no mesmo local que o aplicativo. Quando o aplicativo for iniciado, o `Default` ícone é exibido no `MyIconButton` botão. Se o `Default` ícone não está presente, a face do botão é em branco. Quando o padrão <xref:System.Windows.Forms.Button> é clicado, um <xref:System.Windows.Forms.OpenFileDialog> caixa será exibida para que você pode selecionar um novo ícone para exibir o `MyIconButton`.  
+  
+ [!code-cpp[CreateParams#2](~/samples/snippets/cpp/VS_Snippets_Winforms/CreateParams/CPP/createparams.cpp#2)]
+ [!code-csharp[CreateParams#2](~/samples/snippets/csharp/VS_Snippets_Winforms/CreateParams/CS/createparams.cs#2)]
+ [!code-vb[CreateParams#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CreateParams/VB/createparams.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CreateParams ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CreateParams.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.CreateParams" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="public string Caption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto inicial do controle.</summary>
+        <value>O texto inicial do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassName">
+      <MemberSignature Language="C#" Value="public string ClassName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.ClassName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da classe do Windows da qual derivar o controle.</summary>
+        <value>O nome da classe do Windows da qual derivar o controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão dessa propriedade é `null`, indicando que o controle não é derivado de uma classe de controle existente. Para derivar de uma classe de controle existente, armazene o nome de classe do sistema. Por exemplo, para derivar do padrão <xref:System.Windows.Forms.Button> controlar, defina essa propriedade como "BUTTON".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassStyle">
+      <MemberSignature Language="C#" Value="public int ClassStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ClassStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.ClassStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma combinação bit a bit de valores de classe de estilo.</summary>
+        <value>Uma combinação bit a bit dos valores de estilo de classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.CreateParams.ClassStyle%2A> propriedade será ignorada se o <xref:System.Windows.Forms.CreateParams.ClassName%2A> propriedade não é `null`.  
+  
+ Para obter mais informações sobre como criar parâmetros de controle, consulte o `CreateWindow` e `CreateWindowEx` funções e o `CREATESTRUCT` documentação de estrutura na referência do SDK da plataforma Windows localizado na biblioteca MSDN.  
+  
+> [!NOTE]
+>  As constantes usadas para definir o <xref:System.Windows.Forms.CreateParams.Style%2A>, <xref:System.Windows.Forms.CreateParams.ExStyle%2A>, e <xref:System.Windows.Forms.CreateParams.ClassStyle%2A> propriedades são definidas no arquivo de cabeçalho WinUser. Esse arquivo é instalado pelo Visual Studio ou do Platform SDK.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExStyle">
+      <MemberSignature Language="C#" Value="public int ExStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ExStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.ExStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma combinação bit a bit dos valores de estilo de janela estendidos.</summary>
+        <value>Uma combinação bit a bit dos valores de estilo de janela estendidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.CreateParams.ExStyle%2A> propriedade dá suporte à aparência estendida e os valores de estado inicial para aplicar ao controle.  
+  
+ Para obter mais informações sobre como criar parâmetros de controle, consulte o `CreateWindow` e `CreateWindowEx` funções e o `CREATESTRUCT` documentação de estrutura na referência do SDK da plataforma Windows localizado na biblioteca MSDN.  
+  
+> [!NOTE]
+>  As constantes usadas para definir o <xref:System.Windows.Forms.CreateParams.Style%2A>, <xref:System.Windows.Forms.CreateParams.ExStyle%2A>, e <xref:System.Windows.Forms.CreateParams.ClassStyle%2A> propriedades são definidas no arquivo de cabeçalho WinUser. Esse arquivo é instalado pelo Visual Studio ou do Platform SDK.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura inicial do controle.</summary>
+        <value>O valor numérico que representa a altura inicial do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Param">
+      <MemberSignature Language="C#" Value="public object Param { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Param" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Param" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de parâmetro adicionais necessárias para criar o controle.</summary>
+        <value>O <see cref="T:System.Object" /> que contém informações de parâmetro adicionais necessárias para criar o controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você estiver criando uma janela de cliente de interface MDI documento várias, o <xref:System.Windows.Forms.CreateParams.Param%2A> propriedade deve fazer referência um `CLIENTCREATESTRUCT` estrutura.  
+  
+ Para obter mais informações sobre como criar parâmetros de controle, consulte o `CreateWindow` e `CreateWindowEx` funções e o `CLIENTCREATESTRUCT` documentação de estrutura na referência do SDK da plataforma Windows localizado na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public IntPtr Parent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pai do controle.</summary>
+        <value>Um <see cref="T:System.IntPtr" /> que contém o identificador de janela pai do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public int Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma combinação bit a bit dos valores de estilo de janela.</summary>
+        <value>Uma combinação bit a bit dos valores de estilo de janela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.CreateParams.Style%2A> propriedade controla a aparência do controle e seu estado inicial.  
+  
+ Para obter mais informações sobre como criar parâmetros de controle, consulte o `CreateWindow` e `CreateWindowEx` funções e o `CREATESTRUCT` documentação de estrutura na referência do SDK da plataforma Windows localizado na biblioteca MSDN.  
+  
+> [!NOTE]
+>  As constantes usadas para definir o <xref:System.Windows.Forms.CreateParams.Style%2A>, <xref:System.Windows.Forms.CreateParams.ExStyle%2A>, e <xref:System.Windows.Forms.CreateParams.ClassStyle%2A> propriedades são definidas no arquivo de cabeçalho WinUser. Esse arquivo é instalado pelo Visual Studio ou do Platform SDK.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.Button> derivado da classe chamada `MyIconButton` e fornece a implementação necessária para o botão para exibir um ícone em vez de uma imagem. O <xref:System.Windows.Forms.Control.CreateParams%2A> propriedade é estendida e um valor agregado para o <xref:System.Windows.Forms.CreateParams.Style%2A> propriedade que faz com que o botão para exibir um <xref:System.Drawing.Icon> em vez de um <xref:System.Drawing.Image>.  
+  
+ [!code-cpp[CreateParams#1](~/samples/snippets/cpp/VS_Snippets_Winforms/CreateParams/CPP/createparams.cpp#1)]
+ [!code-csharp[CreateParams#1](~/samples/snippets/csharp/VS_Snippets_Winforms/CreateParams/CS/createparams.cs#1)]
+ [!code-vb[CreateParams#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CreateParams/VB/createparams.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CreateParams.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o objeto atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura inicial do controle.</summary>
+        <value>O valor numérico que representa a largura inicial do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public int X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição inicial esquerda do controle.</summary>
+        <value>O valor numérico que representa a posição inicial esquerda do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public int Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CreateParams.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição superior do local inicial do controle.</summary>
+        <value>O valor numérico que representa a posição superior do local inicial do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,75 @@
+<Type Name="Converter&lt;TInput,TOutput&gt;" FullName="System.Converter&lt;TInput,TOutput&gt;">
+  <TypeSignature Language="C#" Value="public delegate TOutput Converter&lt;in TInput,out TOutput&gt;(TInput input);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Converter`2&lt;- TInput, + TOutput&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Converter`2" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TInput">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TOutput">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="input" Type="TInput" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>TOutput</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TInput">O tipo de objeto a ser convertido.</typeparam>
+    <typeparam name="TOutput">O tipo para o qual o objeto de entrada será convertido.</typeparam>
+    <param name="input">O objeto a ser convertido.</param>
+    <summary>Representa um método que converte um objeto de um tipo em outro tipo.</summary>
+    <returns>O <paramref name="TOutput" /> que representa o <paramref name="TInput" /> convertido.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este delegado é usado pelo <xref:System.Array.ConvertAll%2A> método o <xref:System.Array> classe e o <xref:System.Collections.Generic.List`1.ConvertAll``1*> método do <xref:System.Collections.Generic.List%601> classe para converter cada elemento da coleção de um tipo para outro.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. Demonstra o primeiro o <xref:System.Converter%602> delegar com o <xref:System.Array.ConvertAll%2A> método do <xref:System.Array> classe e a segunda demonstra o delegado com o <xref:System.Collections.Generic.List`1.ConvertAll``1*> método do <xref:System.Collections.Generic.List%601> classe genérica.  
+  
+ Exemplo 1  
+  
+ O exemplo de código a seguir define um método chamado `PointFToPoint` que converte um <xref:System.Drawing.PointF> estrutura para um <xref:System.Drawing.Point> estrutura. O exemplo cria uma matriz de <xref:System.Drawing.PointF> estruturas, cria um `Converter<PointF, Point>` delegar (`Converter(Of PointF, Point)` no Visual Basic) para representar o `PointFToPoint` método e passa o delegado para o <xref:System.Array.ConvertAll%2A> método. O <xref:System.Array.ConvertAll%2A> método passa cada elemento da lista de entrada para o `PointFToPoint` método e coloca os elementos convertidos em uma nova lista de <xref:System.Drawing.Point> estruturas. Ambas as listas são exibidas.  
+  
+ [!code-cpp[Array_ConvertAll#1](~/samples/snippets/cpp/VS_Snippets_CLR/Array_ConvertAll/cpp/source.cpp#1)]
+ [!code-csharp[Array_ConvertAll#1](~/samples/snippets/csharp/VS_Snippets_CLR/Array_ConvertAll/cs/source.cs#1)]
+ [!code-vb[Array_ConvertAll#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Array_ConvertAll/vb/source.vb#1)]  
+  
+ Exemplo 2  
+  
+ O exemplo de código a seguir define um método chamado `PointFToPoint` que converte um <xref:System.Drawing.PointF> estrutura para um <xref:System.Drawing.Point> estrutura. O exemplo cria um <xref:System.Collections.Generic.List%601> de <xref:System.Drawing.PointF> estruturas, cria um `Converter\<PointF, Point>` delegar (`Converter(Of PointF, Point)` no Visual Basic) para representar o `PointFToPoint` método e passa o delegado para o < xref:System.Collections.Generic.List `1.ConvertAll``1*> method. The <xref:System.Collections.Generic.List`1.ConvertAll''1* > método passa cada elemento da lista de entrada para o `PointFToPoint` método e coloca os elementos convertidos em uma nova lista de <xref:System.Drawing.Point> estruturas. Ambas as listas são exibidas.  
+  
+ [!code-cpp[List\`1_ConvertAll#1](~/samples/snippets/cpp/VS_Snippets_CLR/List`1_ConvertAll/cpp/source.cpp#1)]
+ [!code-csharp[List\`1_ConvertAll#1](~/samples/snippets/csharp/VS_Snippets_CLR/List`1_ConvertAll/cs/source.cs#1)]
+ [!code-vb[List\`1_ConvertAll#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/List`1_ConvertAll/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

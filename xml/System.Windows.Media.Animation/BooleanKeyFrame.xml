@@ -1,0 +1,250 @@
+<Type Name="BooleanKeyFrame" FullName="System.Windows.Media.Animation.BooleanKeyFrame">
+  <TypeSignature Language="C#" Value="public abstract class BooleanKeyFrame : System.Windows.Freezable, System.Windows.Media.Animation.IKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BooleanKeyFrame extends System.Windows.Freezable implements class System.Windows.Media.Animation.IKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.BooleanKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Freezable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Media.Animation.IKeyFrame</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Classe abstrata que, quando implementada, define um segmento com seu próprio método de interpolação e de valor de destino para um <see cref="T:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BooleanKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BooleanKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.BooleanKeyFrame" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BooleanKeyFrame (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BooleanKeyFrame.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="P:System.Windows.Media.Animation.BooleanKeyFrame.Value" /> da nova instância <see cref="T:System.Windows.Media.Animation.BooleanKeyFrame" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.BooleanKeyFrame" /> classe que tem o destino especificado <see cref="P:System.Windows.Media.Animation.BooleanKeyFrame.Value" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BooleanKeyFrame (bool value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BooleanKeyFrame.#ctor(System.Boolean,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="P:System.Windows.Media.Animation.BooleanKeyFrame.Value" /> da nova instância <see cref="T:System.Windows.Media.Animation.BooleanKeyFrame" />.</param>
+        <param name="keyTime">O <see cref="P:System.Windows.Media.Animation.BooleanKeyFrame.KeyTime" /> da nova instância <see cref="T:System.Windows.Media.Animation.BooleanKeyFrame" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.BooleanKeyFrame" /> classe que tem o destino especificado <see cref="P:System.Windows.Media.Animation.BooleanKeyFrame.Value" /> e <see cref="P:System.Windows.Media.Animation.BooleanKeyFrame.KeyTime" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValue">
+      <MemberSignature Language="C#" Value="public bool InterpolateValue (bool baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool InterpolateValue(bool baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BooleanKeyFrame.InterpolateValue(System.Boolean,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Boolean" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">O valor para animar do.</param>
+        <param name="keyFrameProgress">Um valor entre 0,0 e 1,0, inclusive, que especifica a porcentagem de tempo decorrido para este quadro-chave.</param>
+        <summary>Retorna o valor interpolado de um quadro-chave específico ao incremento de andamento fornecido.</summary>
+        <returns>O valor de saída de quadro chave recebe o valor de base especificado e o andamento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o valor base é o valor inicial da propriedade que está sendo animada ou o <xref:System.Windows.Media.Animation.BooleanKeyFrame.Value%2A> do quadro chave anterior.  
+  
+ A maioria das implementações retornará o valor de `baseValue` quando `keyFrameProgress` é 0.0.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Ocorre se <paramref name="keyFrameProgress" /> não está entre 0,0 e 1,0, inclusive.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected abstract bool InterpolateValueCore (bool baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool InterpolateValueCore(bool baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.BooleanKeyFrame.InterpolateValueCore(System.Boolean,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Boolean" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">O valor para animar Normalmente, o valor do quadro chave anterior.</param>
+        <param name="keyFrameProgress">Um valor entre 0,0 e 1,0, inclusive, que especifica a porcentagem de tempo decorrido para este quadro-chave.</param>
+        <summary>Calcula o valor de um quadro-chave no incremento de andamento fornecido.</summary>
+        <returns>O valor de saída de quadro chave recebe o valor de base especificado e o andamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTime">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.KeyTime KeyTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Animation.KeyTime KeyTime" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.BooleanKeyFrame.KeyTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeyTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a hora na qual destino do quadro chave <see cref="P:System.Windows.Media.Animation.BooleanKeyFrame.Value" /> devem ser atingido</summary>
+        <value>A hora em que o valor atual do quadro chave deve ser igual ao seu <see cref="P:System.Windows.Media.Animation.BooleanKeyFrame.Value" /> propriedade. O valor padrão é <see cref="P:System.Windows.Media.Animation.KeyTime.Uniform" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_KeyTime"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Animation.BooleanKeyFrame.KeyTimeProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTimeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty KeyTimeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty KeyTimeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.BooleanKeyFrame.KeyTimeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.BooleanKeyFrame.KeyTime" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Media.Animation.IKeyFrame.Value">
+      <MemberSignature Language="C#" Value="object System.Windows.Media.Animation.IKeyFrame.Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Windows.Media.Animation.IKeyFrame.Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.BooleanKeyFrame.System#Windows#Media#Animation#IKeyFrame#Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor associado com um <see cref="T:System.Windows.Media.Animation.KeyTime" /> instância.</summary>
+        <value>O valor atual para essa propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public bool Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.BooleanKeyFrame.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de destino do quadro chave.</summary>
+        <value>O valor de destino do quadro chave, que é o valor desse quadro chave em seu <see cref="P:System.Windows.Media.Animation.BooleanKeyFrame.KeyTime" /> especificado. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Value"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Animation.BooleanKeyFrame.ValueProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ValueProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ValueProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.BooleanKeyFrame.ValueProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.BooleanKeyFrame.Value" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

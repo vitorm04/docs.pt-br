@@ -1,0 +1,156 @@
+<Type Name="DefaultWorkflowCommitWorkBatchService" FullName="System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService">
+  <TypeSignature Language="C#" Value="public class DefaultWorkflowCommitWorkBatchService : System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultWorkflowCommitWorkBatchService extends System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a versão padrão do <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" /> criado pelo mecanismo de tempo de execução de fluxo de trabalho, se nenhum outro serviço WorkflowCommitWorkBatch é adicionado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ O <xref:System.Workflow.Runtime.WorkflowRuntime> classe cria um <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> objeto quando o mecanismo de tempo de execução é iniciado, se nenhum outro serviço WorkflowCommitWorkBatch foi adicionado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultWorkflowCommitWorkBatchService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa um <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultWorkflowCommitWorkBatchService (System.Collections.Specialized.NameValueCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.NameValueCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.#ctor(System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">
+          <see cref="T:System.Collections.Specialized.NameValueCollection" />. O construtor é invocado quando o mecanismo de tempo de execução do fluxo de trabalho carrega os serviços de um arquivo de configuração do aplicativo. A chave válida é <see cref="P:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.EnableRetries" />. Isso solicita a <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" /> novas tentativas no caso de uma conexão de banco de dados com falha.</param>
+        <summary>Inicializa uma classe SharedConnectionWorkflowCommitWorkBatchService usando uma coleção de parâmetros de inicialização.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitWorkBatch">
+      <MemberSignature Language="C#" Value="protected override void CommitWorkBatch (System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback commitWorkBatchCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CommitWorkBatch(class System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService/CommitWorkBatchCallback commitWorkBatchCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.CommitWorkBatch(System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commitWorkBatchCallback" Type="System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService+CommitWorkBatchCallback" />
+      </Parameters>
+      <Docs>
+        <param name="commitWorkBatchCallback">O <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback" /> delegado para chamar a confirmar o lote de trabalho.</param>
+        <summary>Cria um lote de trabalho se ainda não existir.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableRetries">
+      <MemberSignature Language="C#" Value="public bool EnableRetries { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableRetries" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.EnableRetries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define um valor que especifica se o <see cref="T:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService" /> repetirá a confirmação de um lote de trabalho.</summary>
+        <value>
+          <see langword="true" />Se o serviço deverá repetir a confirmar o lote de trabalho; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tentativas de trabalho em lotes confirmações <xref:System.Workflow.ComponentModel.TransactionScopeActivity> atividades devem ser modeladas no fluxo de trabalho (normalmente usando um pouco manipulador de loop e a exceção fora do <xref:System.Workflow.ComponentModel.TransactionScopeActivity>). O <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> não é possível fazer tentativas neste caso porque ele não foi iniciado (e, portanto, não possuir) a transação.  
+  
+ Além do que está sendo definido programaticamente, essa funcionalidade pode ser habilitada por meio de um arquivo de configuração. Para obter mais informações sobre como definir essa propriedade através de um arquivo de configuração, consulte [arquivos de configuração do fluxo de trabalho](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+  
+ Para obter informações gerais sobre repetindo as transações do trabalho em lotes, consulte [informações de estado de processamento em lotes em fluxos de trabalho](http://msdn.microsoft.com/en-us/ecda18ba-9140-4bd7-b13d-6787fdf5959d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStopped">
+      <MemberSignature Language="C#" Value="protected override void OnStopped ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStopped() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.OnStopped" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Representa o método chamado quando o tempo de execução do fluxo de trabalho gera o <see cref="E:System.Workflow.Runtime.WorkflowRuntime.Stopped" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="protected override void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Representa o método chamado para iniciar o serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

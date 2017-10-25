@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Cryptography">
+  <Docs>
+    <summary>O <see cref="N:System.Security.Cryptography" /> namespace fornece serviços de criptografia, incluindo codificação e decodificação de dados, bem como muitas outras operações, como hash, geração de números aleatórios e autenticação de mensagem. Para obter mais informações, consulte [serviços criptográficos](~/docs/standard/security/cryptographic-services.md).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,258 @@
+<Type Name="NonVisualControlAttribute" FullName="System.Web.UI.NonVisualControlAttribute">
+  <TypeSignature Language="C#" Value="public sealed class NonVisualControlAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NonVisualControlAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.NonVisualControlAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o atributo que indica se um controle é tratado como um controle visual ou não visual em tempo de design. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.NonVisualControlAttribute> atributo é aplicado aos controles que não são processados para o cliente, como controles de fonte de dados e o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle. Durante o tempo de design, um desenvolvedor de página pode optar por ocultar todos os controles não visuais. O designer marcará como invisível todos os controles com o <xref:System.Web.UI.NonVisualControlAttribute> atributo definido como `true`.  
+  
+ Exemplos de controles que empregam o <xref:System.Web.UI.NonVisualControlAttribute> atributo são <xref:System.Web.UI.DataSourceControl>, <xref:System.Web.UI.HierarchicalDataSourceControl>, <xref:System.Web.UI.WebControls.HiddenField>, e <xref:System.Web.UI.WebControls.WebParts.WebPartManager>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode aplicar o <xref:System.Web.UI.NonVisualControlAttribute> a uma classe de atributo. Neste exemplo, o padrão <xref:System.Web.UI.NonVisualControlAttribute> atributo é aplicado a um controle de fonte de dados. Isso é equivalente a <xref:System.Web.UI.NonVisualControlAttribute.NonVisual> campo.  
+  
+ [!code-csharp[System.Web.UI.NonVisualControlAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.NonVisualControlAttribute/CS/nonvisualcontrolattribute1.cs#1)]
+ [!code-vb[System.Web.UI.NonVisualControlAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.NonVisualControlAttribute/VB/nonvisualcontrolattribute1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NonVisualControlAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.NonVisualControlAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.NonVisualControlAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância padrão do <xref:System.Web.UI.NonVisualControlAttribute> classe é equivalente a <xref:System.Web.UI.NonVisualControlAttribute.NonVisual> campo ou passando `true` para o <xref:System.Web.UI.NonVisualControlAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode aplicar o <xref:System.Web.UI.NonVisualControlAttribute> a uma classe de atributo. Neste exemplo, o padrão <xref:System.Web.UI.NonVisualControlAttribute> atributo é aplicado a um controle de fonte de dados. Isso é equivalente a <xref:System.Web.UI.NonVisualControlAttribute.NonVisual> campo.  
+  
+ [!code-csharp[System.Web.UI.NonVisualControlAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.NonVisualControlAttribute/CS/nonvisualcontrolattribute1.cs#1)]
+ [!code-vb[System.Web.UI.NonVisualControlAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.NonVisualControlAttribute/VB/nonvisualcontrolattribute1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NonVisualControlAttribute (bool nonVisual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool nonVisual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.NonVisualControlAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="nonVisual" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="nonVisual">
+          <see langword="true" />para inicializar o <see cref="T:System.Web.UI.NonVisualControlAttribute" /> representar um controle da Web que não será renderizado para o cliente em execução tempo; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.NonVisualControlAttribute" /> de classe, usando o valor booliano especificado para determinar se o atributo representa um controle visual ou não visuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Passando `true` para esse construtor é equivalente a usar o <xref:System.Web.UI.NonVisualControlAttribute.NonVisual> campo e passando `false` é equivalente a usar o <xref:System.Web.UI.NonVisualControlAttribute.Visual> campo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode aplicar o <xref:System.Web.UI.NonVisualControlAttribute> a uma classe de atributo. Neste exemplo, um controle de fonte de dados é designado como um controle não visual passando `true` ao atributo.  
+  
+ [!code-csharp[System.Web.UI.NonVisualControlAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.NonVisualControlAttribute/CS/nonvisualcontrolattribute2.cs#2)]
+ [!code-vb[System.Web.UI.NonVisualControlAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.NonVisualControlAttribute/VB/nonvisualcontrolattribute2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.NonVisualControlAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.NonVisualControlAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.NonVisualControlAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.NonVisualControlAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Web.UI.NonVisualControlAttribute" /> instância que representa o valor padrão definido pelo aplicativo do atributo. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância padrão do <xref:System.Web.UI.NonVisualControlAttribute> classe é equivalente a <xref:System.Web.UI.NonVisualControlAttribute.Visual> campo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.NonVisualControlAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> a ser comparado com esta instância ou uma referência nula (<see langword="Nothing" /> no Visual Basic).</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.NonVisualControlAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.NonVisualControlAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se a instância atual é equivalente a uma instância padrão do <see cref="T:System.Web.UI.NonVisualControlAttribute" /> classe.</summary>
+        <returns>
+          <see langword="true" />Se a instância atual é equivalente a uma <see cref="F:System.Web.UI.NonVisualControlAttribute.Default" /> instância da classe; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNonVisual">
+      <MemberSignature Language="C#" Value="public bool IsNonVisual { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNonVisual" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.NonVisualControlAttribute.IsNonVisual" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle é não visual.</summary>
+        <value>
+          <see langword="true" />Se o controle tiver sido marcado como não-visual; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NonVisual">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.NonVisualControlAttribute NonVisual;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.NonVisualControlAttribute NonVisual" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.NonVisualControlAttribute.NonVisual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.NonVisualControlAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Web.UI.NonVisualControlAttribute" /> instância que é aplicada a um controle da Web deve ser tratado como um controle não visual em tempo de design. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.NonVisualControlAttribute.NonVisual> campo é equivalente à criação de uma instância do atributo usando o <xref:System.Web.UI.NonVisualControlAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> construtor e passando `true` como o valor do parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visual">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.NonVisualControlAttribute Visual;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.NonVisualControlAttribute Visual" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.NonVisualControlAttribute.Visual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.NonVisualControlAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.NonVisualControlAttribute" /> instância que é aplicada a um controle de Web para ser tratado como um controle visual em tempo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.NonVisualControlAttribute.Visual> campo é equivalente à criação de uma instância do atributo usando o padrão <xref:System.Web.UI.NonVisualControlAttribute.%23ctor?displayProperty=nameWithType> construtor, ou criar uma instância do atributo usando o <xref:System.Web.UI.NonVisualControlAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> construtor e passando `false` como o valor do parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

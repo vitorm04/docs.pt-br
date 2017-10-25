@@ -1,0 +1,134 @@
+<Type Name="DesignerActionListsChangedEventArgs" FullName="System.ComponentModel.Design.DesignerActionListsChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class DesignerActionListsChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerActionListsChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionListsChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> evento ocorre quando um <xref:System.ComponentModel.Design.DesignerActionList> é adicionado ou removido de uma coleção gerenciada dessas listas. Esse evento não é gerado quando um elemento de lista individual altera seu valor.  
+  
+ O <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> evento é gerado pelo <xref:System.ComponentModel.Design.DesignerActionService> quando seu <xref:System.ComponentModel.Design.DesignerActionService.Remove%2A>, <xref:System.ComponentModel.Design.DesignerActionService.Add%2A>, e <xref:System.ComponentModel.Design.DesignerActionService.Clear%2A> métodos são executados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionListsChangedEventArgs (object relatedObject, System.ComponentModel.Design.DesignerActionListsChangedType changeType, System.ComponentModel.Design.DesignerActionListCollection actionLists);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object relatedObject, valuetype System.ComponentModel.Design.DesignerActionListsChangedType changeType, class System.ComponentModel.Design.DesignerActionListCollection actionLists) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionListsChangedEventArgs.#ctor(System.Object,System.ComponentModel.Design.DesignerActionListsChangedType,System.ComponentModel.Design.DesignerActionListCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="relatedObject" Type="System.Object" />
+        <Parameter Name="changeType" Type="System.ComponentModel.Design.DesignerActionListsChangedType" />
+        <Parameter Name="actionLists" Type="System.ComponentModel.Design.DesignerActionListCollection" />
+      </Parameters>
+      <Docs>
+        <param name="relatedObject">O objeto associado à coleção.</param>
+        <param name="changeType">Um valor que especifica se um <see cref="T:System.ComponentModel.Design.DesignerActionList" /> foi adicionado ou removido da coleção.</param>
+        <param name="actionLists">A coleção de elementos de lista depois que a ação foi aplicada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.DesignerActionListsChangedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> evento, o `relatedObject` parâmetro sempre fará referência a <xref:System.ComponentModel.Component> que o <xref:System.ComponentModel.Design.DesignerActionListCollection> está associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionListsChangedEventArgs.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de <see cref="T:System.ComponentModel.Design.DesignerActionList" /> objetos associados ao evento.</summary>
+        <value>Um <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> que representa o estado atual da coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recuperada <xref:System.ComponentModel.Design.DesignerActionListCollection> representa o estado da coleção depois que o evento, que envolve a adição ou remoção de um elemento, foi aplicado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeType">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.DesignerActionListsChangedType ChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Design.DesignerActionListsChangedType ChangeType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionListsChangedEventArgs.ChangeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListsChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um sinalizador que indica se um elemento foi adicionado ou removido da coleção de <see cref="T:System.ComponentModel.Design.DesignerActionList" /> objetos.</summary>
+        <value>Um <see cref="T:System.ComponentModel.Design.DesignerActionListsChangedType" /> que indica o tipo de alteração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alterando o conteúdo de um objeto existente <xref:System.ComponentModel.Design.DesignerActionList> na coleção não gerará um <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedObject">
+      <MemberSignature Language="C#" Value="public object RelatedObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object RelatedObject" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.DesignerActionListsChangedEventArgs.RelatedObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que está associado com a coleção de <see cref="T:System.ComponentModel.Design.DesignerActionList" /> objetos.</summary>
+        <value>O <see cref="T:System.Object" /> associada gerenciada <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionListsChangedEventArgs.RelatedObject%2A> propriedade permite que o programador associar um objeto para uma instância do <xref:System.ComponentModel.Design.DesignerActionListsChangedEventArgs> classe.  
+  
+ Para o <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> evento, o <xref:System.ComponentModel.Design.DesignerActionListsChangedEventArgs.RelatedObject%2A> propriedade sempre deve fazer referência a <xref:System.ComponentModel.Component?displayProperty=nameWithType> que o <xref:System.ComponentModel.Design.DesignerActionListCollection> está associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

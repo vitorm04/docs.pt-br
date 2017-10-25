@@ -1,0 +1,64 @@
+<Type Name="IResourceUrlGenerator" FullName="System.Web.UI.IResourceUrlGenerator">
+  <TypeSignature Language="C#" Value="public interface IResourceUrlGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IResourceUrlGenerator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IResourceUrlGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define o método que um host de designer deve implementar para fornecer a pesquisa de referência de URL para recursos inseridos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ASP.NET versão 2.0 fornece a capacidade de recuperar recursos incorporados em um conjunto de controles, como o <xref:System.Web.UI.Page> controle. Em tempo de execução, a URL para o recurso inserido pode ser recuperada usando o <xref:System.Web.UI.ClientScriptManager.GetWebResourceUrl%2A> método o <xref:System.Web.UI.ClientScriptManager> classe. Para fornecer significa um tempo de design para gerar uma URL de recurso de um assembly, hosts designers podem oferecer um serviço que implementa o <xref:System.Web.UI.IResourceUrlGenerator> interface. Para saber mais:  
+  
+-   Sobre como usar recursos de localização, consulte [visão geral de recursos de página da Web do ASP.NET](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
+  
+-   Sobre o uso de recursos incorporados, consulte [NIB: como: usar recursos para definir valores de propriedade em controles de servidor Web](http://msdn.microsoft.com/en-us/d8e0e5c0-1958-422b-b4f5-ebe63f6c45cb) e [como: recuperar valores de recurso por programação](http://msdn.microsoft.com/library/7a06d512-6fc3-40ca-9cb6-7f41d1a9fa28).  
+  
+-   Criadores de controle, consulte [visão geral de Designers de controle do ASP.NET](http://msdn.microsoft.com/library/1d5a99d7-0a72-403e-812e-2c1ab595c810).  
+  
+ O <xref:System.Web.UI.IResourceUrlGenerator> interface tem um método, o <xref:System.Web.UI.IResourceUrlGenerator.GetResourceUrl%2A> método, que retorna uma referência de URL para um dado o tipo de recurso e o nome de recurso.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetResourceUrl">
+      <MemberSignature Language="C#" Value="public string GetResourceUrl (Type type, string resourceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetResourceUrl(class System.Type type, string resourceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IResourceUrlGenerator.GetResourceUrl(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="resourceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo no assembly que contém o recurso inserido.</param>
+        <param name="resourceName">O nome do recurso a ser recuperado.</param>
+        <summary>Retorna uma referência de URL para um recurso inserido em um assembly que é usado em tempo de design.</summary>
+        <returns>A referência de URL para o recurso.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em tempo de execução, o <xref:System.Web.UI.ClientScriptManager.GetWebResourceUrl%2A> método retorna uma URL para um recurso. O <xref:System.Web.Handlers.AssemblyResourceLoader> classe define o manipulador HTTP que é usado para carregar recursos inseridos.  
+  
+ Em tempo de design, o <xref:System.Web.UI.ClientScriptManager.GetWebResourceUrl%2A> método o <xref:System.Web.UI.ClientScriptManager> classe detecta o modo de design e delegados para a implementação do serviço de host do designer, que retorna uma URL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

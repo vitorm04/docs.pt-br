@@ -1,0 +1,79 @@
+<Type Name="TableRowSection" FullName="System.Web.UI.WebControls.TableRowSection">
+  <TypeSignature Language="C#" Value="public enum TableRowSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TableRowSection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TableRowSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica onde um objeto <see cref="T:System.Web.UI.WebControls.TableRow" /> é inserido em um controle <see cref="T:System.Web.UI.WebControls.Table" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TableRowSection> enumeração Especifica se um <xref:System.Web.UI.WebControls.TableRow> objeto é colocado no corpo, cabeçalho ou rodapé de um <xref:System.Web.UI.WebControls.Table> controle.  
+  
+ O <xref:System.Web.UI.WebControls.TableRowSection> enumeração representa os possíveis valores para o <xref:System.Web.UI.WebControls.TableRow.TableSection%2A> propriedade o <xref:System.Web.UI.WebControls.TableRow> classe.  
+  
+ O <xref:System.Web.UI.WebControls.TableRowSection> enumeração permite que você crie sites acessíveis usando o <xref:System.Web.UI.WebControls.Table> controle adicionando o `thead`, `tbody`, e `tfoot` elementos HTML que é renderizado para o cliente. Se todas as linhas em uma tabela no `tbody` elemento, as informações da seção não são processadas. Pelo menos uma linha deve estar em um elemento de corpo não.  
+  
+ Ao usar a sintaxe declarativa, as seções devem ser na seguinte ordem: cabeçalho, corpo e, em seguida, rodapé.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TableBody">
+      <MemberSignature Language="C#" Value="TableBody" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableRowSection TableBody = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableRowSection.TableBody" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableRowSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Web.UI.WebControls.TableRow" /> é inserido no corpo do <see cref="T:System.Web.UI.WebControls.Table" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TableFooter">
+      <MemberSignature Language="C#" Value="TableFooter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableRowSection TableFooter = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableRowSection.TableFooter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableRowSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Web.UI.WebControls.TableRow" /> é inserido no rodapé do <see cref="T:System.Web.UI.WebControls.Table" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TableHeader">
+      <MemberSignature Language="C#" Value="TableHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableRowSection TableHeader = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableRowSection.TableHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableRowSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Web.UI.WebControls.TableRow" /> é inserido no cabeçalho do <see cref="T:System.Web.UI.WebControls.Table" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

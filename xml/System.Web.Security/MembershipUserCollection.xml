@@ -1,0 +1,408 @@
+<Type Name="MembershipUserCollection" FullName="System.Web.Security.MembershipUserCollection">
+  <TypeSignature Language="C#" Value="public sealed class MembershipUserCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit MembershipUserCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.MembershipUserCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web, Version=2.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Uma coleção de objetos <see cref="T:System.Web.Security.MembershipUser" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Security.MembershipUserCollection?displayProperty=nameWithType> é retornado a partir de <xref:System.Web.Security.Membership.GetAllUsers%2A>, <xref:System.Web.Security.Membership.FindUsersByName%2A>, e <xref:System.Web.Security.Membership.FindUsersByEmail%2A> métodos do <xref:System.Web.Security.Membership?displayProperty=nameWithType> classe. O <xref:System.Web.Security.MembershipUserCollection> objetos retornados pelo <xref:System.Web.Security.Membership.GetAllUsers%2A>, <xref:System.Web.Security.Membership.FindUsersByName%2A>, e <xref:System.Web.Security.Membership.FindUsersByEmail%2A> métodos contêm um instantâneo de informações de usuário no repositório de dados de associação. Ou seja, altera as informações de usuário de associação em um <xref:System.Web.Security.MembershipUserCollection> não são refletidas no armazenamento de dados de associação. Para modificar informações de usuário de associação no repositório de associação de dados, use o <xref:System.Web.Security.Membership.UpdateUser%2A>, <xref:System.Web.Security.Membership.CreateUser%2A> e <xref:System.Web.Security.Membership.DeleteUser%2A> métodos de <xref:System.Web.Security.Membership?displayProperty=nameWithType> classe.  
+  
+> [!NOTE]
+>  Se você não estiver familiarizado com os recursos de associação do ASP.NET, consulte [Introdução a associação](http://msdn.microsoft.com/library/79184d17-f4c7-4c9f-a073-cec4f5543980) antes de continuar. Para obter uma lista de outros tópicos relacionados a associação, consulte [Gerenciando usuários com o uso de associações](http://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir retorna uma lista de usuários da associação com uma contagem do número de usuários online no momento. Para obter um exemplo de um aplicativo ASP.NET configurado para usar a associação, consulte o <xref:System.Web.Security.Membership> classe.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlMembershipProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/CS/ShowUserscs.aspx#5)]
+ [!code-aspx-vb[System.Web.Security.SqlMembershipProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlMembershipProvider/VB/ShowUsersvb.aspx#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MembershipUserCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipUserCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma coleção de usuário de associação de novo e vazio.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Security.MembershipUserCollection> é construído por implementadores de provedor de associação e retornado do <xref:System.Web.Security.MembershipProvider.GetAllUsers%2A> e <xref:System.Web.Security.MembershipProvider.FindUsersByName%2A> métodos do <xref:System.Web.Security.MembershipProvider> classe abstrata.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um exemplo <xref:System.Web.Security.MembershipProvider.GetAllUsers%2A> implementação.  
+  
+ [!code-csharp[System.Web.Security.IMembershipProvider#15](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IMembershipProvider/CS/imembershipprovidergetallusers.cs#15)]
+ [!code-vb[System.Web.Security.IMembershipProvider#15](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IMembershipProvider/VB/imembershipprovidergetallusers.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Security.MembershipUser user);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Security.MembershipUser user) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipUserCollection.Add(System.Web.Security.MembershipUser)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="user" Type="System.Web.Security.MembershipUser" />
+      </Parameters>
+      <Docs>
+        <param name="user">Um <see cref="T:System.Web.Security.MembershipUser" /> objeto a ser adicionado à coleção.</param>
+        <summary>Adiciona o usuário associado especificado à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.MembershipUserCollection.Add%2A> método é normalmente usado por implementações do provedor de associação do <xref:System.Web.Security.MembershipProvider.GetAllUsers%2A>, <xref:System.Web.Security.MembershipProvider.FindUsersByEmail%2A>, e <xref:System.Web.Security.MembershipProvider.FindUsersByName%2A> métodos do <xref:System.Web.Security.MembershipProvider> classe abstrata.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um exemplo <xref:System.Web.Security.MembershipProvider.GetAllUsers%2A> implementação.  
+  
+ [!code-csharp[System.Web.Security.IMembershipProvider#15](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.IMembershipProvider/CS/imembershipprovidergetallusers.cs#15)]
+ [!code-vb[System.Web.Security.IMembershipProvider#15](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.IMembershipProvider/VB/imembershipprovidergetallusers.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A coleção é somente leitura.</exception>
+        <exception cref="T:System.ArgumentNullException">O <see cref="P:System.Web.Security.MembershipUser.UserName" /> do <paramref name="user" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentException">Um <see cref="T:System.Web.Security.MembershipUser" /> objeto com o mesmo <see cref="P:System.Web.Security.MembershipUser.UserName" /> valor como <paramref name="user" /> já existe na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipUserCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os objetos de usuário de associação da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir exemplo limpa um <xref:System.Web.Security.MembershipUserCollection> antes de substituí-lo com os resultados do <xref:System.Web.Security.Membership.GetAllUsers%2A> método.  
+  
+ [!code-csharp[System.Web.Security.MembershipUserCollection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipUserCollection/CS/snippetscs.aspx#4)]
+ [!code-vb[System.Web.Security.MembershipUserCollection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipUserCollection/VB/snippetsvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.Security.MembershipUser[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.Security.MembershipUser[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipUserCollection.CopyTo(System.Web.Security.MembershipUser[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.Security.MembershipUser[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz unidimensional de tipo <see cref="T:System.Web.Security.MembershipUser" /> que é o destino dos elementos copiados a partir de <see cref="T:System.Web.Security.MembershipUserCollection" />. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero na matriz em que a cópia começa.</param>
+        <summary>Copia a coleção de usuário de associação em uma matriz unidimensional.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.MembershipUserCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de associação de objetos de usuário na coleção.</summary>
+        <value>O número de <see cref="T:System.Web.Security.MembershipUser" /> objetos na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir lista todos os usuários da fonte de dados de usuário associação, incluindo uma contagem do número total de usuários.  
+  
+ [!code-aspx-csharp[System.Web.Security.MembershipUserCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipUserCollection/CS/countcs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.MembershipUserCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipUserCollection/VB/countvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipUserCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um enumerador que pode iterar pela coleção de usuário de associação.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para todo o <see cref="T:System.Web.Security.MembershipUserCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enumeradores permitem apenas ler os dados na coleção. Enumeradores não podem ser usados para modificar a coleção subjacente. Para obter mais informações, consulte <xref:System.Collections.IEnumerator>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Collections.IEnumerator> retornado do <xref:System.Web.Security.MembershipUserCollection.GetEnumerator%2A> método para iterar por meio de um <xref:System.Web.Security.MembershipUserCollection>.  
+  
+ [!code-csharp[System.Web.Security.MembershipUserCollection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipUserCollection/CS/snippetscs.aspx#7)]
+ [!code-vb[System.Web.Security.MembershipUserCollection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipUserCollection/VB/snippetsvb.aspx#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.MembershipUserCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção de usuário de associação é thread safe.</summary>
+        <value>Sempre <see langword="false" /> porque não há suporte para coleções de usuário de associação de thread-safe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o código do aplicativo não usa essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Security.MembershipUser this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Security.MembershipUser Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.MembershipUserCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.MembershipUser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="P:System.Web.Security.MembershipUser.UserName" /> do <see cref="T:System.Web.Security.MembershipUser" /> para recuperar da coleção.</param>
+        <summary>Obtém o usuário da associação da coleção referenciada por nome de usuário especificado.</summary>
+        <value>Um <see cref="T:System.Web.Security.MembershipUser" /> objeto que representa o usuário especificado por <paramref name="name" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.MembershipUser> objeto retornado por <xref:System.Web.Security.MembershipUserCollection.Item%2A> propriedade contém um instantâneo de informações de usuário no repositório de dados de associação. Ou seja, altera as informações de usuário de associação no <xref:System.Web.Security.MembershipUserCollection> não são refletidas no armazenamento de dados de associação. Para modificar informações de usuário de associação no repositório de associação de dados, use o <xref:System.Web.Security.Membership.UpdateUser%2A>, <xref:System.Web.Security.Membership.CreateUser%2A>, e <xref:System.Web.Security.Membership.DeleteUser%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe todos os nomes de usuário de associação em um <xref:System.Web.UI.WebControls.ListBox> e mostra informações de associação específico para o nome de usuário selecionado.  
+  
+ [!code-aspx-csharp[System.Web.Security.MembershipUserCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipUserCollection/CS/itemcs.aspx#2)]
+ [!code-aspx-vb[System.Web.Security.MembershipUserCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipUserCollection/VB/itemvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipUserCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de usuário a <see cref="T:System.Web.Security.MembershipUser" /> objeto a ser removido da coleção.</param>
+        <summary>Remove o objeto de usuário de associação com o nome de usuário especificado da coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">A coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="public void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipUserCollection.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Torna o conteúdo da coleção de usuário de associação somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo de um <xref:System.Web.Security.MembershipUserCollection> são considerados somente leitura, como eles são um instantâneo das informações de usuário de associação no repositório de dados de associação. Informações de usuário de associação são modificadas usando o <xref:System.Web.Security.Membership.UpdateUser%2A>, <xref:System.Web.Security.Membership.CreateUser%2A> e <xref:System.Web.Security.Membership.DeleteUser%2A> métodos. O <xref:System.Web.Security.MembershipUserCollection.SetReadOnly%2A> método marcas a <xref:System.Web.Security.MembershipUserCollection> como somente leitura para que <xref:System.Web.Security.MembershipUser> objetos não podem ser adicionados ou removidos da coleção. Valores de propriedades para o <xref:System.Web.Security.MembershipUser> objetos não são marcados como somente leitura. Ou seja, você pode modificar os valores de propriedade de um <xref:System.Web.Security.MembershipUser> no <xref:System.Web.Security.MembershipUserCollection> independentemente se a coleção foi marcada como somente leitura, o <xref:System.Web.Security.MembershipUserCollection.SetReadOnly%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir retorna todos os usuários do armazenamento de dados de associação. O <xref:System.Web.Security.MembershipUserCollection> retornado está marcado como somente leitura com base em um `Boolean` parâmetro especificado pelo chamador.  
+  
+ [!code-csharp[System.Web.Security.MembershipUserCollection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.MembershipUserCollection/CS/snippetscs.aspx#5)]
+ [!code-vb[System.Web.Security.MembershipUserCollection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.MembershipUserCollection/VB/snippetsvb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.MembershipUserCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a raiz de sincronização.</summary>
+        <value>Sempre <see langword="this" />, porque não há suporte para a sincronização de coleções de usuário de associação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o código do aplicativo não usa essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.MembershipUserCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O unidimensional <see cref="T:System.Array" /> que é o destino para os objetos copiados do <see cref="T:System.Web.Security.MembershipUserCollection" /> objeto. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia o conteúdo do <see cref="T:System.Web.Security.MembershipUserCollection" /> o objeto para um <see cref="T:System.Array" />, a partir de um determinado <see cref="T:System.Array" /> índice.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que 0.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ <paramref name="index" />é maior que ou igual ao comprimento da <paramref name="array" />.  
+  
+ -ou-  
+  
+ O número de elementos na origem <see cref="T:System.Web.Security.MembershipUserCollection" /> é maior que o espaço disponível do <paramref name="index" /> ao final da matriz de destino.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo de origem <see cref="T:System.Web.Security.MembershipUserCollection" /> não pode ser convertido automaticamente para o tipo da matriz de destino.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

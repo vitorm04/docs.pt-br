@@ -1,0 +1,207 @@
+<Type Name="DesignTimeParseData" FullName="System.Web.UI.DesignTimeParseData">
+  <TypeSignature Language="C#" Value="public sealed class DesignTimeParseData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignTimeParseData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DesignTimeParseData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações para o analisador durante o tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DesignTimeParseData> classe é usada para fornecer parâmetros de tempo de design para vários métodos de <xref:System.Web.UI.DesignTimeTemplateParser> classe, que analisa um modelo em um conjunto de controles.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignTimeParseData (System.ComponentModel.Design.IDesignerHost designerHost, string parseText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Design.IDesignerHost designerHost, string parseText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DesignTimeParseData.#ctor(System.ComponentModel.Design.IDesignerHost,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="parseText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">O objeto de gerenciamento de componentes e transações designers.</param>
+        <param name="parseText">O texto a analisar durante o tempo de design.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DesignTimeParseData" /> classe sem o filtro especificado.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignTimeParseData (System.ComponentModel.Design.IDesignerHost designerHost, string parseText, string filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Design.IDesignerHost designerHost, string parseText, string filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DesignTimeParseData.#ctor(System.ComponentModel.Design.IDesignerHost,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="parseText" Type="System.String" />
+        <Parameter Name="filter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">O objeto de gerenciamento de componentes e transações designers.</param>
+        <param name="parseText">O texto a analisar durante o tempo de design.</param>
+        <param name="filter">O filtro a ser aplicado durante o tempo de design.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DesignTimeParseData" /> classe com o filtro especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="parseText" /> é <see langword="null" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindingHandler">
+      <MemberSignature Language="C#" Value="public EventHandler DataBindingHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EventHandler DataBindingHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DesignTimeParseData.DataBindingHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o representante para associação de dados em tempo de design.</summary>
+        <value>Um <see cref="T:System.EventHandler" /> para associação de dados em tempo de design.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerHost">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.IDesignerHost DesignerHost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.IDesignerHost DesignerHost" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DesignTimeParseData.DesignerHost" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.IDesignerHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de gerenciamento de componentes e transações designers.</summary>
+        <value>Um <see cref="T:System.ComponentModel.Design.IDesignerHost" /> objeto para gerenciar transações designers e componentes.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentUrl">
+      <MemberSignature Language="C#" Value="public string DocumentUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DesignTimeParseData.DocumentUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL na qual o documento está localizado.</summary>
+        <value>Um <see cref="T:System.String" /> que contém a URL.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DesignTimeParseData.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o filtro usado em tempo de design.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o filtro.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ParseText">
+      <MemberSignature Language="C#" Value="public string ParseText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParseText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DesignTimeParseData.ParseText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o texto para analisar.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o texto para analisar.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldApplyTheme">
+      <MemberSignature Language="C#" Value="public bool ShouldApplyTheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldApplyTheme" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DesignTimeParseData.ShouldApplyTheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um tema deve ser aplicado.</summary>
+        <value>
+          <see langword="true" />Se um tema seja aplicado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UserControlRegisterEntries">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection UserControlRegisterEntries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection UserControlRegisterEntries" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DesignTimeParseData.UserControlRegisterEntries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de informações sobre os registros de controle de usuário.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém o prefixo de marca, o nome da marca e o local do controle de usuário. A coleção é preenchida automaticamente pelo .NET Framework no momento da análise.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

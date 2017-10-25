@@ -1,0 +1,355 @@
+<Type Name="ServiceModelConfigurationElementCollection&lt;ConfigurationElementType&gt;" FullName="System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection&lt;ConfigurationElementType&gt;">
+  <TypeSignature Language="C#" Value="public abstract class ServiceModelConfigurationElementCollection&lt;ConfigurationElementType&gt; : System.Configuration.ConfigurationElementCollection where ConfigurationElementType : ConfigurationElementnew()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServiceModelConfigurationElementCollection`1&lt;.ctor (class System.Configuration.ConfigurationElement) ConfigurationElementType&gt; extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="ConfigurationElementType">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="ConfigurationElementType">O tipo deste elemento de configuração.</typeparam>
+    <summary>Representa uma classe base abstrata para uma <see cref="T:System.Configuration.ConfigurationElementCollection" /> usados dentro de <see cref="N:System.ServiceModel.Configuration" /> namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (ConfigurationElementType element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(!ConfigurationElementType element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="ConfigurationElementType" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento de configuração a ser adicionado.</param>
+        <summary>Adiciona o elemento de configuração especificado para essa coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseAdd">
+      <MemberSignature Language="C#" Value="protected override void BaseAdd (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BaseAdd(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.BaseAdd(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento de configuração para adicionar.</param>
+        <summary>Adiciona o <see cref="T:System.Configuration.ConfigurationElement" /> objeto à coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" /> ou vazio.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O arquivo de configuração contém um elemento existente idêntico ao <paramref name="element" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os elementos de configuração desta coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionType">
+      <MemberSignature Language="C#" Value="public override System.Configuration.ConfigurationElementCollectionType CollectionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.ConfigurationElementCollectionType CollectionType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.CollectionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementCollectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de coleção de configurações.</summary>
+        <value>Um <see cref="T:System.Configuration.ConfigurationElementCollectionType" /> que especifica o tipo de coleção de configurações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.ContainsKey(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">O elemento de configuração a ser pesquisado na coleção.</param>
+        <summary>Retorna um valor booliano que indica se esta coleção contém um elemento de configuração com a chave especificada.</summary>
+        <returns>
+          <see langword="true" />Se a coleção contém um elemento de configuração com a chave especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (ConfigurationElementType[] array, int start);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(!ConfigurationElementType[] array, int32 start) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="ConfigurationElementType[]" />
+        <Parameter Name="start" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> para copiar os elementos de configuração.</param>
+        <param name="start">O índice baseado em zero relativo em <c>matriz</c> onde a cópia começa.</param>
+        <summary>Copia os elementos de configuração armazenados dessa coleção em uma <see cref="T:System.Array" /> objeto, começando no local do índice especificado no <see cref="T:System.Array" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="start" /> contém um valor inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo <see cref="T:System.Configuration.ConfigurationElement" /> instância do tipo <paramref name="ConfigurationElementType" />.</summary>
+        <returns>Um novo <see cref="T:System.Configuration.ConfigurationElement" /> instância do tipo <paramref name="ConfigurationElementType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementName">
+      <MemberSignature Language="C#" Value="protected override string ElementName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ElementName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.ElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome usado para identificar esta coleção de elementos no arquivo de configuração.</summary>
+        <value>O nome usado para identificar esta coleção de elementos no arquivo de configuração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (ConfigurationElementType element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(!ConfigurationElementType element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.IndexOf(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="ConfigurationElementType" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento de configuração a ser localizado na coleção.</param>
+        <summary>Retorna o índice baseado em zero da primeira ocorrência de um elemento de configuração na coleção.</summary>
+        <returns>O índice do <paramref name="element" /> se encontrado na coleção; caso contrário, de -1.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public ConfigurationElementType this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !ConfigurationElementType Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ConfigurationElementType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do elemento a ser acessado.</param>
+        <summary>Obtém ou define um elemento filho, atributo ou propriedade de um <see cref="T:System.Configuration.ConfigurationElement" /> objeto com o índice especificado.</summary>
+        <value>O item localizado no índice especificado na coleção.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="index" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual ConfigurationElementType this[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !ConfigurationElementType Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ConfigurationElementType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser acessado.</param>
+        <summary>Obtém ou define um elemento filho, atributo ou propriedade de um <see cref="T:System.Configuration.ConfigurationElement" /> objeto com a chave especificada.</summary>
+        <value>O item localizado na chave especificada dentro da coleção.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">
+          <paramref name="key" /> não foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (ConfigurationElementType element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(!ConfigurationElementType element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="ConfigurationElementType" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento de configuração a ser removido da coleção.</param>
+        <summary>Remove a primeira ocorrência de um elemento de configuração específico da coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.  
+  
+ -e-  
+  
+ O arquivo de configuração é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do elemento de configuração a ser removido.</param>
+        <summary>Remove o elemento de configuração no índice especificado desta coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="index" /> é <see langword="null" />.  
+  
+ -e-  
+  
+ O arquivo de configuração é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceModelConfigurationElementCollection`1.RemoveAt(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave especificada do elemento de configuração a ser removido.</param>
+        <summary>Remove o elemento de configuração na chave especificada desta coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.  
+  
+ -e-  
+  
+ O arquivo de configuração é somente leitura.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

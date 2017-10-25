@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.ModelBinding">
+  <Docs>
+    <summary>O <see cref="N:System.Web.ModelBinding" /> namespace fornece classes que permitem associar objetos de dados a controles de servidor de Web Forms do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

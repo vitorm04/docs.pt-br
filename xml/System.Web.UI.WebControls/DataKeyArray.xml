@@ -1,0 +1,457 @@
+<Type Name="DataKeyArray" FullName="System.Web.UI.WebControls.DataKeyArray">
+  <TypeSignature Language="C#" Value="public sealed class DataKeyArray : System.Collections.ICollection, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataKeyArray extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataKeyArray" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.UI.WebControls.DataKey" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataKeyArray> classe é usada para armazenar e gerenciar uma coleção de <xref:System.Web.UI.WebControls.DataKey> objetos. Um <xref:System.Web.UI.WebControls.DataKey> objeto representa a chave primária de um registro em um controle associado a dados. Em geral, controles associados a dados exibidos vários registros (como o <xref:System.Web.UI.WebControls.GridView> controle) use um <xref:System.Web.UI.WebControls.DataKeyArray> objeto para armazenar o <xref:System.Web.UI.WebControls.DataKey> objetos para os registros exibidos no controle.  
+  
+ O <xref:System.Web.UI.WebControls.DataKeyArray> classe oferece suporte a várias maneiras de acessar os itens na coleção:  
+  
+-   Use o <xref:System.Web.UI.WebControls.DataKeyArray.Item%2A> indexador para recuperar diretamente um <xref:System.Web.UI.WebControls.DataKey> objeto da coleção em um índice com base em zero específico.  
+  
+-   Use o <xref:System.Web.UI.WebControls.DataKeyArray.GetEnumerator%2A> método para recuperar um enumerador que pode ser usado para iterar pela coleção.  
+  
+-   Use o <xref:System.Web.UI.WebControls.DataKeyArray.CopyTo%2A> método para copiar os itens na coleção em uma matriz, que pode ser usada para acessar os itens na coleção.  
+  
+ Para determinar o número total de itens na coleção, use o <xref:System.Web.UI.WebControls.DataKeyArray.Count%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o indexador para recuperar um <xref:System.Web.UI.WebControls.DataKey> de objeto um <xref:System.Web.UI.WebControls.DataKeyArray> coleção.  
+  
+ [!code-aspx-csharp[DataKeyArrayItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataKeyArrayItem/CS/DataKeyArrayItemcs.aspx#1)]
+ [!code-aspx-vb[DataKeyArrayItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataKeyArrayItem/VB/DataKeyArrayItemvb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como percorrer uma <xref:System.Web.UI.WebControls.DataKeyArray> coleção.  
+  
+ [!code-aspx-csharp[DataKeyArray#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataKeyArray/CS/DataKeyArraycs.aspx#1)]
+ [!code-aspx-vb[DataKeyArray#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataKeyArray/VB/DataKeyArrayvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataKeyArray (System.Collections.ArrayList keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ArrayList keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKeyArray.#ctor(System.Collections.ArrayList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Um <see cref="T:System.Collections.ArrayList" /> de <see cref="T:System.Web.UI.WebControls.DataKey" /> objetos com o qual preencher a coleção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.DataKeyArray" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.DataKeyArray> classe usando especificado <xref:System.Collections.ArrayList> objeto. O <xref:System.Collections.ArrayList> objeto contém o <xref:System.Web.UI.WebControls.DataKey> objetos com o qual preencher a coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.DataKey[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.DataKey[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKeyArray.CopyTo(System.Web.UI.WebControls.DataKey[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.DataKey[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz com base em zero de <see cref="T:System.Web.UI.WebControls.DataKey" /> objetos que recebe os itens copiados da coleção.</param>
+        <param name="index">O primeiro índice na matriz especificada para receber o conteúdo copiado.</param>
+        <summary>Copia todos os itens desta coleção na matriz especificada de <see cref="T:System.Web.UI.WebControls.DataKey" /> objetos, iniciando no índice especificado na matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataKeyArray.CopyTo%2A> método para copiar os itens da coleção na matriz especificada, iniciando no índice especificado. A matriz, em seguida, pode ser usada para acessar os itens na coleção.  
+  
+> [!NOTE]
+>  Você deve usar uma matriz com base em zero para o `array` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DataKeyArray.CopyTo%2A> método para copiar o <xref:System.Web.UI.WebControls.DataKey> objetos de um <xref:System.Web.UI.WebControls.DataKeyArray> coleção para uma matriz de <xref:System.Web.UI.WebControls.DataKey> objetos.  
+  
+ [!code-aspx-csharp[DataKeyArrayItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataKeyArrayItem/CS/DataKeyArrayItemcs.aspx#1)]
+ [!code-aspx-vb[DataKeyArrayItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataKeyArrayItem/VB/DataKeyArrayItemvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKeyArray.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na coleção.</summary>
+        <value>Número de itens na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataKeyArray.Count%2A> para determinar o número de itens na coleção. O <xref:System.Web.UI.WebControls.DataKeyArray.Count%2A> propriedade normalmente é usada quando a iteração na coleção para determinar seu superior associado. O <xref:System.Web.UI.WebControls.DataKeyArray.Count%2A> propriedade também costuma ser usada para determinar se uma coleção está vazia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DataKeyArray.Count%2A> propriedade para determinar se um <xref:System.Web.UI.WebControls.DataKeyArray> coleção está vazia.  
+  
+ [!code-aspx-csharp[DataKeyArrayGetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataKeyArrayGetEnumerator/CS/DataKeyArrayGetEnumeratorcs.aspx#1)]
+ [!code-aspx-vb[DataKeyArrayGetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataKeyArrayGetEnumerator/VB/DataKeyArrayGetEnumeratorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKeyArray.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que contém todos os <see cref="T:System.Web.UI.WebControls.DataKey" /> objetos na coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" />-implementado o objeto que contém todos os <see cref="T:System.Web.UI.WebControls.DataKey" /> objetos na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataKeyArray.GetEnumerator%2A> método para obter um enumerador que pode ser iterado pelo linearmente para acessar cada item na coleção. Para acessar o item na posição atual do enumerador, use o <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> propriedade. Use o <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método para mover para o próximo item na coleção. Para mover o enumerador como sua posição inicial, use o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método.  
+  
+> [!NOTE]
+>  Quando você inicialmente obter o enumerador ou usar o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método para mover o enumerador para o primeiro item na coleção, você deve chamar o <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método. Caso contrário, o item é representado pelo <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> propriedade está definida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como iterar o enumerador criado pelo <xref:System.Web.UI.WebControls.DataKeyArray.GetEnumerator%2A> método.  
+  
+ [!code-aspx-csharp[DataKeyArrayGetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataKeyArrayGetEnumerator/CS/DataKeyArrayGetEnumeratorcs.aspx#1)]
+ [!code-aspx-vb[DataKeyArrayGetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataKeyArrayGetEnumerator/VB/DataKeyArrayGetEnumeratorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKeyArray.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os itens na coleção podem ser modificados.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataKeyArray.IsReadOnly%2A> propriedade para determinar se os itens a <xref:System.Web.UI.WebControls.DataKeyArray> coleção pode ser modificada.  
+  
+> [!NOTE]
+>  Essa propriedade foi substituída para sempre retornar `false`, para indicar que o <xref:System.Web.UI.WebControls.DataKey> objetos no <xref:System.Web.UI.WebControls.DataKeyArray> objeto pode ser adicionado ou removido. O <xref:System.Web.UI.WebControls.DataKey> objetos em si não podem ser alterados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKeyArray.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.DataKeyArray" /> coleção é sincronizada (thread-safe).</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataKeyArray.IsSynchronized%2A> propriedade para determinar se o <xref:System.Web.UI.WebControls.DataKeyArray> objeto é thread-safe.  
+  
+> [!NOTE]
+>  Essa propriedade foi substituída para sempre retornar `false` para indicar que o <xref:System.Web.UI.WebControls.DataKeyArray> o objeto não é thread-safe.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.DataKeyArray.IsSynchronized%2A> propriedade, consulte o <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataKey this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataKey Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKeyArray.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.UI.WebControls.DataKey" /> para recuperar da coleção.</param>
+        <summary>Obtém o <see cref="T:System.Web.UI.WebControls.DataKey" /> objeto da coleção no índice especificado.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.DataKey" /> no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este indexador para recuperar um <xref:System.Web.UI.WebControls.DataKey> objeto da coleção no índice especificado, usando a notação de matriz. Esta propriedade é somente para leitura.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o indexador para recuperar um <xref:System.Web.UI.WebControls.DataKey> de objeto um <xref:System.Web.UI.WebControls.DataKeyArray> coleção.  
+  
+ [!code-aspx-csharp[DataKeyArrayItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataKeyArrayItem/CS/DataKeyArrayItemcs.aspx#1)]
+ [!code-aspx-vb[DataKeyArrayItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataKeyArrayItem/VB/DataKeyArrayItemvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKeyArray.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto usado para sincronizar o acesso à coleção.</summary>
+        <value>Um <see cref="T:System.Object" /> que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataKeyArray.SyncRoot%2A> propriedade para obter um objeto que pode ser usado para sincronizar o acesso à coleção. O objeto retornado nesta implementação é o <xref:System.Web.UI.WebControls.DataKeyArray> objeto propriamente dito.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.DataKeyArray.SyncRoot%2A> propriedade, consulte o <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKeyArray.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma base zero <see cref="T:System.Array" /> que recebe os itens copiados da coleção.</param>
+        <param name="index">O primeiro índice especificado na <see cref="T:System.Array" /> para receber o conteúdo copiado.</param>
+        <summary>Copia todos os itens desta coleção especificado <see cref="T:System.Array" />, começando no índice especificado no <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação do <xref:System.Web.UI.WebControls.DataKeyArray.System%23Collections%23ICollection%23CopyTo%2A> é um método auxiliar usado pelo <xref:System.Web.UI.WebControls.DataKeyArray> classe para copiar os itens a <xref:System.Web.UI.WebControls.DataKeyArray> coleção especificado <xref:System.Array?displayProperty=nameWithType>, começando no índice especificado. O <xref:System.Array?displayProperty=nameWithType> pode ser usado para acessar os itens na coleção.  
+  
+> [!NOTE]
+>  Você deve usar um com base em zero <xref:System.Array?displayProperty=nameWithType> para o `array` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataKeyArray.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.DataKeyArray" /> objeto acompanhar suas alterações de estado de exibição.</summary>
+        <value>
+          <see langword="true" />para indicar que o <see cref="T:System.Web.UI.WebControls.DataKeyArray" /> para acompanhar suas alterações de estado de exibição; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataKeyArray.System%23Web%23UI%23IStateManager%23IsTrackingViewState%2A> propriedade é usada para determinar se o <xref:System.Web.UI.WebControls.DataKeyArray> objeto acompanhar suas alterações de estado de exibição.  
+  
+> [!NOTE]
+>  Essa propriedade é usada principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKeyArray.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um <see cref="T:System.Object" /> que representa o estado de <see cref="T:System.Web.UI.WebControls.DataKeyArray" />.</param>
+        <summary>Carrega o estado de exibição salvo anteriormente do <see cref="T:System.Web.UI.WebControls.DataKeyArray" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataKeyArray.System%23Web%23UI%23IStateManager%23LoadViewState%2A> método é usado para carregar o estado de exibição salvo anteriormente do <xref:System.Web.UI.WebControls.DataKeyArray> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKeyArray.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva o estado de exibição atual do <see cref="T:System.Web.UI.WebControls.DataKeyArray" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém o estado salvo do <see cref="T:System.Web.UI.WebControls.DataKeyArray" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataKeyArray.System%23Web%23UI%23IStateManager%23SaveViewState%2A> é um método auxiliar usado pelo <xref:System.Web.UI.WebControls.DataKeyArray> classe para salvar o estado do objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataKeyArray.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Marca o ponto de partida no qual começar a controlar e salvar o estado de exibição altera para o <see cref="T:System.Web.UI.WebControls.DataKeyArray" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é substituído para marcar o ponto de partida no qual começar a rastreamento e salvar alterações para o <xref:System.Web.UI.WebControls.DataKeyArray> objeto como parte do estado de exibição do objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

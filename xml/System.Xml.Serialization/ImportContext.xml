@@ -1,0 +1,144 @@
+<Type Name="ImportContext" FullName="System.Xml.Serialization.ImportContext">
+  <TypeSignature Language="C#" Value="public class ImportContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImportContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.ImportContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve o contexto no qual um conjunto de esquema está associado a entidades de código do .NET Framework.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportContext (System.Xml.Serialization.CodeIdentifiers identifiers, bool shareTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Serialization.CodeIdentifiers identifiers, bool shareTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.ImportContext.#ctor(System.Xml.Serialization.CodeIdentifiers,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identifiers" Type="System.Xml.Serialization.CodeIdentifiers" />
+        <Parameter Name="shareTypes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="identifiers">As entidades de código para o qual o contexto se aplica.</param>
+        <param name="shareTypes">Um <see cref="T:System.Boolean" /> valor que determina se tipos personalizados são compartilhados entre o esquema.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.ImportContext" /> classe para os identificadores de código fornecido, com a opção de compartilhamento de tipo determinado.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ShareTypes">
+      <MemberSignature Language="C#" Value="public bool ShareTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShareTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.ImportContext.ShareTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que determina se tipos personalizados são compartilhados.</summary>
+        <value>
+          <see langword="true" />, se tipos personalizados são compartilhados entre o esquema; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TypeIdentifiers">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.CodeIdentifiers TypeIdentifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.CodeIdentifiers TypeIdentifiers" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.ImportContext.TypeIdentifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.CodeIdentifiers</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um conjunto de entidades de código para o qual o contexto se aplica.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.CodeIdentifiers" /> que especifica as entidades de código para o qual o contexto se aplica.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Warnings">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection Warnings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection Warnings" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.ImportContext.Warnings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de avisos que são gerados durante a importação de descrições de códigos de entidade.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.StringCollection" /> que contém os avisos foram gerados durante a importação de descrições de códigos de entidade.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

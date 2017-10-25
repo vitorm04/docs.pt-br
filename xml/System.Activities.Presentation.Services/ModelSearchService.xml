@@ -1,0 +1,105 @@
+<Type Name="ModelSearchService" FullName="System.Activities.Presentation.Services.ModelSearchService">
+  <TypeSignature Language="C#" Value="public abstract class ModelSearchService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ModelSearchService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Services.ModelSearchService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma classe que é responsável por gerar um TextImage e navegando até o ModelItem correspondente no designer de fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ModelSearchService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Services.ModelSearchService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Presentation.Services.ModelSearchService" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateTextImage">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.TextImage GenerateTextImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Presentation.Model.TextImage GenerateTextImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Services.ModelSearchService.GenerateTextImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.TextImage</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera uma imagem de pesquisa de texto com base na árvore de item de modelo.</summary>
+        <returns>Uma imagem de pesquisa de texto com base na árvore de item de modelo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateTo">
+      <MemberSignature Language="C#" Value="public abstract bool NavigateTo (int location);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool NavigateTo(int32 location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Services.ModelSearchService.NavigateTo(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="location">O número de linha no texto da imagem.</param>
+        <summary>Indica se a navegação para um modelo de que item com base no número de linha na imagem de texto for bem-sucedida.</summary>
+        <returns>
+          <see langword="true" />Se a navegação for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigateTo">
+      <MemberSignature Language="C#" Value="public abstract bool NavigateTo (int startLine, int startColumn, int endLine, int endColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool NavigateTo(int32 startLine, int32 startColumn, int32 endLine, int32 endColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Services.ModelSearchService.NavigateTo(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startLine" Type="System.Int32" />
+        <Parameter Name="startColumn" Type="System.Int32" />
+        <Parameter Name="endLine" Type="System.Int32" />
+        <Parameter Name="endColumn" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startLine">A linha inicial.</param>
+        <param name="startColumn">A coluna de início.</param>
+        <param name="endLine">A linha final.</param>
+        <param name="endColumn">A coluna final.</param>
+        <summary>Indica se a navegação para um modelo de Item com base no local de origem no arquivo XAML.</summary>
+        <returns>
+          <see langword="true" />Se a navegação for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

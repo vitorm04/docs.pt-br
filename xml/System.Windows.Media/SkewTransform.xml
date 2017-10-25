@@ -1,0 +1,382 @@
+<Type Name="SkewTransform" FullName="System.Windows.Media.SkewTransform">
+  <TypeSignature Language="C#" Value="public sealed class SkewTransform : System.Windows.Media.Transform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SkewTransform extends System.Windows.Media.Transform" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.SkewTransform" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Transform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma distorção 2D.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Media.SkewTransform> é útil para criar a ilusão de profundidade 3 dimensões em um [!INCLUDE[TLA#tla_2d](~/includes/tlasharptla-2d-md.md)] objeto.  
+  
+ **Recursos Freezable:** porque ele herda o <xref:System.Windows.Freezable> classe, o <xref:System.Windows.Media.SkewTransform> classe fornece vários recursos especiais: <xref:System.Windows.Media.SkewTransform> objetos podem ser declarados como, compartilhados entre vários objetos, somente leitura para melhorar o desempenho, clonados e tornados thread-safe. Para obter mais informações sobre os diferentes recursos fornecidos pelo <xref:System.Windows.Freezable> objetos, consulte [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SkewTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.SkewTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.SkewTransform" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SkewTransform (double angleX, double angleY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 angleX, float64 angleY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.SkewTransform.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="angleX" Type="System.Double" />
+        <Parameter Name="angleY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="angleX">O ângulo de inclinação de eixo x, que é medido em graus no sentido anti-horário do eixo y. Para obter mais informações, consulte a propriedade <see cref="P:System.Windows.Media.SkewTransform.AngleX" />.</param>
+        <param name="angleY">O ângulo de inclinação de eixo y, que é medido em graus no sentido anti-horário do eixo x. Para obter mais informações, consulte a propriedade <see cref="P:System.Windows.Media.SkewTransform.AngleY" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.SkewTransform" /> classe que tem os ângulos especificados eixos x e y - e é centralizada na origem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SkewTransform (double angleX, double angleY, double centerX, double centerY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 angleX, float64 angleY, float64 centerX, float64 centerY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.SkewTransform.#ctor(System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="angleX" Type="System.Double" />
+        <Parameter Name="angleY" Type="System.Double" />
+        <Parameter Name="centerX" Type="System.Double" />
+        <Parameter Name="centerY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="angleX">O ângulo de inclinação de eixo x, que é medido em graus no sentido anti-horário do eixo y. Para obter mais informações, consulte a propriedade <see cref="P:System.Windows.Media.SkewTransform.AngleX" />.</param>
+        <param name="angleY">O ângulo de inclinação de eixo y, que é medido em graus no sentido anti-horário do eixo x. Para obter mais informações, consulte a propriedade <see cref="P:System.Windows.Media.SkewTransform.AngleY" />.</param>
+        <param name="centerX">A coordenada x do centro da transformação. Para obter mais informações, consulte a propriedade <see cref="P:System.Windows.Media.SkewTransform.CenterX" />.</param>
+        <param name="centerY">A coordenada y do centro da transformação. Para obter mais informações, consulte a propriedade <see cref="P:System.Windows.Media.SkewTransform.CenterY" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.SkewTransform" /> classe que tem o centro e os ângulos especificados eixos x e y -.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AngleX">
+      <MemberSignature Language="C#" Value="public double AngleX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 AngleX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.SkewTransform.AngleX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ângulo de inclinação do eixo x, que é medido em graus no sentido anti-horário do eixo y.</summary>
+        <value>O ângulo de inclinação, medido em graus no sentido anti-horário do eixo y. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para distorcer um objeto no local, defina o <xref:System.Windows.Media.SkewTransform.CenterX%2A> e <xref:System.Windows.Media.SkewTransform.CenterY%2A> propriedades para o objeto center ponto.  
+  
+<a name="dependencyPropertyInfo_AngleX"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.SkewTransform.AngleXProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AngleXProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AngleXProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AngleXProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.SkewTransform.AngleXProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.SkewTransform.AngleX" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AngleY">
+      <MemberSignature Language="C#" Value="public double AngleY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 AngleY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.SkewTransform.AngleY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ângulo de inclinação do eixo y, que é medido em graus no sentido anti-horário do eixo x.</summary>
+        <value>O ângulo de inclinação, medido em graus no sentido anti-horário do eixo x. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para distorcer um objeto no local, defina o <xref:System.Windows.Media.SkewTransform.CenterX%2A> e <xref:System.Windows.Media.SkewTransform.CenterY%2A> propriedades para o objeto center ponto.  
+  
+<a name="dependencyPropertyInfo_AngleY"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.SkewTransform.AngleYProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AngleYProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AngleYProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AngleYProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.SkewTransform.AngleYProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.SkewTransform.AngleY" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterX">
+      <MemberSignature Language="C#" Value="public double CenterX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CenterX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.SkewTransform.CenterX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada x do centro da transformação.</summary>
+        <value>A coordenada x do centro da transformação. O padrão é <c>0</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para distorcer um objeto no local, defina o <xref:System.Windows.Media.SkewTransform.CenterX%2A> e <xref:System.Windows.Media.SkewTransform.CenterY%2A> propriedades para o objeto center ponto.  
+  
+<a name="dependencyPropertyInfo_CenterX"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.SkewTransform.CenterXProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterXProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CenterXProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CenterXProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.SkewTransform.CenterXProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.SkewTransform.CenterX" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterY">
+      <MemberSignature Language="C#" Value="public double CenterY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 CenterY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.SkewTransform.CenterY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada y do centro da transformação.</summary>
+        <value>A coordenada y do centro da transformação. O padrão é <c>0</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para distorcer um objeto no local, defina o <xref:System.Windows.Media.SkewTransform.CenterX%2A> e <xref:System.Windows.Media.SkewTransform.CenterY%2A> propriedades para o objeto center ponto.  
+  
+<a name="dependencyPropertyInfo_CenterY"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.SkewTransform.CenterYProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterYProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CenterYProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CenterYProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.SkewTransform.CenterYProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.SkewTransform.CenterY" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.SkewTransform Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.SkewTransform Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.SkewTransform.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.SkewTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia modificável <see cref="T:System.Windows.Media.SkewTransform" /> fazendo cópias profundas de seus valores.</summary>
+        <returns>Uma cópia profunda modificável do objeto atual. O <see cref="P:System.Windows.Freezable.IsFrozen" /> retorna de propriedade do objeto clonado <see langword="false" /> mesmo se o <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade da fonte<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para produzir cópias modificáveis de somente leitura <xref:System.Windows.Freezable> objetos. Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Quando esse método copia as propriedades de dependência, ele copia associações de dados e as referências de recurso embora eles não podem resolver. Ele não copie animações ou seus valores atuais.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.SkewTransform CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.SkewTransform CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.SkewTransform.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.SkewTransform</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia modificável <see cref="T:System.Windows.Media.SkewTransform" /> objeto fazendo cópias profundas de seus valores. Esse método não copiar referências de recurso, associações de dados ou animações, embora ele copia os valores atuais.</summary>
+        <returns>Uma cópia profunda modificável do objeto atual. O <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade do objeto clonado <see langword="false" /> mesmo se o <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade da fonte de <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para produzir cópias modificáveis de somente leitura <xref:System.Windows.Freezable> objetos. Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.SkewTransform.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Matrix Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.SkewTransform.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor atual de transformação como um <see cref="T:System.Windows.Media.Matrix" />.</summary>
+        <value>O valor atual de transformação de inclinação como um <see cref="T:System.Windows.Media.Matrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

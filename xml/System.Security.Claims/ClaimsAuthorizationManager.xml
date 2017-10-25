@@ -1,0 +1,328 @@
+<Type Name="ClaimsAuthorizationManager" FullName="System.Security.Claims.ClaimsAuthorizationManager">
+  <TypeSignature Language="C#" Value="public class ClaimsAuthorizationManager : System.IdentityModel.Configuration.ICustomIdentityConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClaimsAuthorizationManager extends System.Object implements class System.IdentityModel.Configuration.ICustomIdentityConfiguration" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Claims.ClaimsAuthorizationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IdentityModel.Configuration.ICustomIdentityConfiguration</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define a implementação de base para um gerenciador de autorização de declarações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Claims.ClaimsAuthorizationManager> classe fornece a implementação base para um Gerenciador de autorização de declarações. Um Gerenciador de autorização de declarações pode ser usado em dois cenários a seguir:  
+  
+-   Em serviços e aplicativos baseados na web, um Gerenciador de autorização de declarações pode ser adicionado ao pipeline de processamento para fornecer um ponto de extensibilidade do qual você pode autorizar o acesso a um recurso de acordo com o valor de declarações de entrada antes do código de aplicativo que realmente implementa o recurso solicitado é chamado.  
+  
+-   Quando você usa o <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> classe ou o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe para executar o acesso baseado em declarações imperativo ou declarativo verifica no seu código, o Gerenciador de autorização de declarações que está configurado para o seu aplicativo é chamado pelo sistema para executar a verificação. Verificações de acesso baseado em declarações podem ser executadas em aplicativos baseados na web e aplicativos de desktop.  
+  
+ A implementação padrão fornecida pelo <xref:System.Security.Claims.ClaimsAuthorizationManager> classe autoriza o acesso para cada declaração apresentado; no entanto, você pode derivar dessa classe e substituir o <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A> método para fornecer sua própria lógica de autorização.  
+  
+ O uso de um Gerenciador de autorização de declarações é opcional. Você pode configurar seu aplicativo para usar um Gerenciador de autorização de declarações programaticamente usando o <xref:System.IdentityModel.Configuration.IdentityConfiguration> classe ou declarativamente, ao especificar o [ &lt;claimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)elemento, que é um elemento filho do [ &lt;identityConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento no arquivo de configuração de aplicativo. Se o aplicativo é um site da web ou um aplicativo web hospedado no Internet Information Services (IIS), você também deverá adicionar o <xref:System.IdentityModel.Services.ClaimsAuthorizationModule> na coleção de módulos de HTTP do ASP.NET.  
+  
+> [!IMPORTANT]
+>  Quando você usa o <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> classe ou o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe, o Gerenciador de autorização de declarações que é usado para executar a verificação de acesso é aquele que é especificado na configuração de identidade sob a <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> propriedade. Em um arquivo de configuração, é o `<identityConfiguration>` seção referenciado do padrão `<federationConfiguration>` elemento. Isso é verdadeiro mesmo para aplicativos de área de trabalho e serviços Windows Communication Foundation (WCF).  
+  
+ O <xref:System.Security.Claims.ClaimsAuthorizationManager> classe base não tem nenhuma configuração adicional; no entanto, você pode substituir o <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> em classes para fornecer a inicialização do seu Gerenciador de autorização de declarações de elementos filho do derivadas de `<claimsAuthorizationElement>`. O cenário típico é usar esses elementos filho para especificar políticas de autorização que determinam quais tipos de declaração e os valores são necessários para acessar o recurso. Isso não é um requisito rígido, embora você seja livre para definir qualquer uso e sintaxe fazem sentido para sua implementação.  
+  
+   
+  
+## Examples  
+ Os exemplos de código que são usados no <xref:System.Security.Claims.ClaimsAuthorizationManager> tópicos são tirados de `Claims Based Authorization` exemplo. Este exemplo fornece um Gerenciador de autorização de declarações personalizadas que pode autorizar entidades com base em uma política que é especificada na configuração. O Gerenciador de autorização de declarações personalizadas consiste em três componentes básicos: uma classe derivada de <xref:System.Security.Claims.ClaimsAuthorizationManager> que implementa o Gerenciador de `ResourceAction` classe pares de um recurso e uma ação e um leitor de política que lê e compila a política é especificado no arquivo de configuração. Isso compilado política pode então usado pelo Gerenciador de autorização de declarações para avaliar uma entidade de segurança para autorizar o acesso aos recursos. Nem todos os elementos são mostrados por questão de brevidade. Para obter informações sobre esse exemplo e outros exemplos disponíveis para o WIF e onde baixá-las, consulte [índice de exemplo de código do WIF](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ O código a seguir mostra a implementação do Gerenciador de autorização de declarações personalizadas. O <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> método lê e compila a política de configuração usando a classe auxiliar de leitor de diretiva (não mostrada) e o <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A> método concede ou nega o acesso com base nesta política.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#2](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#2)]  
+  
+ O código a seguir mostra o `ResourceAction` classe usada pelo Gerenciador de declarações personalizadas.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/resourceaction.cs#1)]  
+  
+ O XML a seguir mostra como configurar as declarações mostrado acima para um aplicativo web hospedado no IIS 7.5 do Gerenciador de autorização. Somente os elementos específicos da configuração do Gerenciador de autorização de declarações são mostrados. Observe que uma referência para o <xref:System.IdentityModel.Services.ClaimsAuthorizationModule> classe deve ser adicionada ao pipeline sob o `<system.Webserver>` elemento. Para sites e aplicativos hospedados em versões do IIS antes de IIS 7 os módulos podem ser adicionados ao pipeline sob o `<system.Web>` elemento. Essa configuração é mostrada, mas comentada.  
+  
+ A política usada pelo Gerenciador de autorização de declarações é especificada pelo personalizado `<policy>` elementos sob o [ &lt;claimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elemento. Na primeira política, a entidade de segurança deve ter uma das declarações especificadas para executar a ação especificada no recurso especificado. Na segunda política, a entidade de segurança deve ter ambas as declarações para poder executar a ação especificada no recurso especificado. Em todos os outros, a entidade de segurança é concedida automaticamente acesso, independentemente das declarações que ela possui.  
+  
+```  
+<configuration>  
+  <configSections>  
+    <!--WIF 4.5 sections -->  
+    <section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>  
+    ...  
+  
+  </configSections>  
+  
+  ...  
+  
+  <system.web>  
+    <httpModules>  
+      <!--WIF 4.5 modules -->  
+      <!--Not needed here for IIS >= 7 -->  
+      <!--<add name="ClaimsAuthorizationModule" type="System.IdentityModel.Services.ClaimsAuthorizationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>-->  
+    </httpModules>  
+  </system.web>  
+  
+  ...  
+  
+  <system.webServer>  
+    <modules>  
+      <!--WIF 4.5 modules -->  
+      <add name="ClaimsAuthorizationModule" type="System.IdentityModel.Services.ClaimsAuthorizationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>  
+    </modules>  
+  </system.webServer>  
+  
+  ...  
+  
+  <!-- WIF 4.5 s.im section-->  
+  <system.identityModel>  
+    <identityConfiguration>  
+      <claimsAuthorizationManager type="ClaimsAuthorizationLibrary.MyClaimsAuthorizationManager, ClaimsAuthorizationLibrary">  
+        <policy resource="http://localhost:28491/Developers.aspx" action="GET">  
+          <or>  
+            <claim claimType="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" claimValue="developer" />  
+            <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+          </or>  
+        </policy>  
+        <policy resource="http://localhost:28491/Administrators.aspx" action="GET">  
+          <and>  
+            <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+            <claim claimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country" claimValue="USA" />  
+          </and>  
+        </policy>  
+        <policy resource="http://localhost:28491/Default.aspx" action="GET">  
+        </policy>  
+        <policy resource="http://localhost:28491/" action="GET">  
+        </policy>  
+        <policy resource="http://localhost:28491/Claims.aspx" action="GET">  
+        </policy>  
+      </claimsAuthorizationManager>  
+  
+      ...  
+  
+    </identityConfiguration>  
+  </system.identityModel>  
+  ...  
+  
+</configuration><configuration>  
+  <configSections>  
+    <!--WIF 4.5 sections -->  
+    <section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>  
+    ...  
+  
+  </configSections>  
+  
+  ...  
+  
+  <system.web>  
+    <httpModules>  
+      <!--WIF 4.5 modules -->  
+      <!--Not needed here for IIS >= 7 -->  
+      <!--<add name="ClaimsAuthorizationModule" type="System.IdentityModel.Services.ClaimsAuthorizationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>-->  
+    </httpModules>  
+  </system.web>  
+  
+  ...  
+  
+  <system.webServer>  
+    <modules>  
+      <!--WIF 4.5 modules -->  
+      <add name="ClaimsAuthorizationModule" type="System.IdentityModel.Services.ClaimsAuthorizationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>  
+    </modules>  
+  </system.webServer>  
+  
+  ...  
+  
+  <!-- WIF 4.5 s.im section-->  
+  <system.identityModel>  
+    <identityConfiguration>  
+      <claimsAuthorizationManager type="MyClaimsAuthorizationManager.SimpleClaimsAuthoirzationManager, MyClaimsAuthorizationManager" />  
+      ...  
+  
+  </system.identityModel>  
+  ...  
+  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsAuthorizationManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsAuthorizationManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Claims.ClaimsAuthorizationManager" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAccess">
+      <MemberSignature Language="C#" Value="public virtual bool CheckAccess (System.Security.Claims.AuthorizationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CheckAccess(class System.Security.Claims.AuthorizationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess(System.Security.Claims.AuthorizationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Security.Claims.AuthorizationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto de autorização que contém a entidade, os recursos e a ação para os quais a autorização deve ser verificada.</param>
+        <summary>Quando implementado em uma classe derivada, verifica a entidade na autorização no contexto especificado para executar a ação especificada no recurso especificado.</summary>
+        <returns>
+          <see langword="true" /> se a entidade estiver autorizada a executar a ação especificada no recurso especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação base sempre retorna `true`, que autoriza o acesso. Você pode substituir esse método em uma classe derivada para autorizar o acesso com base nos requisitos de seu aplicativo RP. Se esse método retornar `false`, Windows Identity Foundation (WIF) retorna um erro não autorizado ao chamador; caso contrário, a execução é passada para o aplicativo do RP.  
+  
+   
+  
+## Examples  
+ Os exemplos de código que são usados no <xref:System.Security.Claims.ClaimsAuthorizationManager> tópicos são tirados de `Claims Based Authorization` exemplo. Este exemplo fornece um Gerenciador de autorização de declarações personalizadas que pode autorizar entidades com base em uma política que é especificada na configuração. O Gerenciador de autorização de declarações personalizadas consiste em três componentes básicos: uma classe derivada de <xref:System.Security.Claims.ClaimsAuthorizationManager> que implementa o Gerenciador de `ResourceAction` classe pares de um recurso e uma ação e um leitor de política que lê e compila a política é especificado no arquivo de configuração. Isso compilado política pode então usado pelo Gerenciador de autorização de declarações para avaliar uma entidade de segurança para autorizar o acesso aos recursos. Nem todos os elementos são mostrados por questão de brevidade. Para obter informações sobre esse exemplo e outros exemplos disponíveis para o WIF e onde baixá-las, consulte [índice de exemplo de código do WIF](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ O código a seguir mostra a substituição do <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A> método. Esse método concede ou nega o acesso com base em uma política de leitura e compilados do arquivo de configuração.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#3](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#3)]  
+[!code-csharp[WifClaimsBasedAuthorization#5](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#5)]  
+  
+ O código a seguir mostra o `ResourceAction` classe usada pelo Gerenciador de declarações personalizadas.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/resourceaction.cs#1)]  
+  
+ A política usada pelo Gerenciador de autorização de declarações é especificada pelo personalizado `<policy>` elementos sob o [ &lt;claimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elemento. Essa política é lida e compilada pelo <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> método. Na primeira política, a entidade de segurança deve ter uma das declarações especificadas para executar a ação especificada no recurso especificado. Na segunda política, a entidade de segurança deve ter ambas as declarações para poder executar a ação especificada no recurso especificado. Em todos os outros, a entidade de segurança é concedida automaticamente acesso, independentemente das declarações que ela possui.  
+  
+```  
+<system.identityModel>  
+  <identityConfiguration>  
+    <claimsAuthorizationManager type="ClaimsAuthorizationLibrary.MyClaimsAuthorizationManager, ClaimsAuthorizationLibrary">  
+      <policy resource="http://localhost:28491/Developers.aspx" action="GET">  
+        <or>  
+          <claim claimType="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" claimValue="developer" />  
+          <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+        </or>  
+      </policy>  
+      <policy resource="http://localhost:28491/Administrators.aspx" action="GET">  
+        <and>  
+          <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+          <claim claimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country" claimValue="USA" />  
+        </and>  
+      </policy>  
+      <policy resource="http://localhost:28491/Default.aspx" action="GET">  
+      </policy>  
+      <policy resource="http://localhost:28491/" action="GET">  
+      </policy>  
+      <policy resource="http://localhost:28491/Claims.aspx" action="GET">  
+      </policy>  
+    </claimsAuthorizationManager>  
+  
+    ...  
+  
+  </identityConfiguration>  
+</system.identityModel>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public virtual void LoadCustomConfiguration (System.Xml.XmlNodeList nodelist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList nodelist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodelist" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodelist">Os elementos de configuração personalizados. Cada nó na lista é do tipo <see cref="T:System.Xml.XmlElement" />.</param>
+        <summary>Quando substituído em uma classe derivada, carrega a configuração personalizada do XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> método é chamado pela infraestrutura de configuração. Quando este método é chamado, o `nodelist` conterá os elementos filho de nível superior do [ &lt;claimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elemento do arquivo de configuração. Cada um desses elementos pode, por sua vez, contêm atributos ou elementos filho dependendo do esquema de configuração que você definir para a sua classe derivada. Se nenhum elemento filho aparecem sob o `<claimsAuthorizationManager>` elemento no arquivo de configuração, este método não é chamado.  
+  
+ A implementação padrão gera um <xref:System.NotImplementedException>. Substitua este método em sua classe derivada para habilitar a inicialização de seu Gerenciador de autorização de declarações de um arquivo de configuração. Normalmente, os elementos de configuração são usados para expressar uma política de autorização; No entanto, você pode definir elementos e usá-los de qualquer forma que faz sentido, com base nos requisitos de seu aplicativo.  
+  
+   
+  
+## Examples  
+ Os exemplos de código que são usados no <xref:System.Security.Claims.ClaimsAuthorizationManager> tópicos são tirados de `Claims Based Authorization` exemplo. Este exemplo fornece um Gerenciador de autorização de declarações personalizadas que pode autorizar entidades com base em uma política que é especificada na configuração. O Gerenciador de autorização de declarações personalizadas consiste em três componentes básicos: uma classe derivada de <xref:System.Security.Claims.ClaimsAuthorizationManager> que implementa o Gerenciador de `ResourceAction` classe pares de um recurso e uma ação e um leitor de política que lê e compila a política é especificado no arquivo de configuração. Isso compilado política pode então usado pelo Gerenciador de autorização de declarações para avaliar uma entidade de segurança para autorizar o acesso aos recursos. Nem todos os elementos são mostrados por questão de brevidade. Para obter informações sobre esse exemplo e outros exemplos disponíveis para o WIF e onde baixá-las, consulte [índice de exemplo de código do WIF](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ O código a seguir mostra a substituição do <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> método. Esse método usa uma classe auxiliar de leitor de diretiva (não mostrada) para ler e diretivas de autorização especificadas no arquivo de configuração de compilação. Políticas são adicionadas a um dicionário e são acessadas por um `ResourceAction` objeto de chave que é criado a partir de recursos e a ação para a qual eles se destinam.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#3](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#3)]  
+[!code-csharp[WifClaimsBasedAuthorization#4](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#4)]  
+  
+ O código a seguir mostra o `ResourceAction` classe usada pelo Gerenciador de declarações personalizadas.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/resourceaction.cs#1)]  
+  
+ A política usada pelo Gerenciador de autorização de declarações é especificada pelo personalizado `<policy>` elementos sob o [ &lt;claimsAuthorizationManager&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elemento. Essa política é lida e compilada pelo <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> método. Na primeira política, a entidade de segurança deve ter uma das declarações especificadas para executar a ação especificada no recurso especificado. Na segunda política, a entidade de segurança deve ter ambas as declarações para poder executar a ação especificada no recurso especificado. Em todos os outros, a entidade de segurança é concedida automaticamente acesso, independentemente das declarações que ela possui.  
+  
+```  
+<system.identityModel>  
+  <identityConfiguration>  
+    <claimsAuthorizationManager type="ClaimsAuthorizationLibrary.MyClaimsAuthorizationManager, ClaimsAuthorizationLibrary">  
+      <policy resource="http://localhost:28491/Developers.aspx" action="GET">  
+        <or>  
+          <claim claimType="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" claimValue="developer" />  
+          <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+        </or>  
+      </policy>  
+      <policy resource="http://localhost:28491/Administrators.aspx" action="GET">  
+        <and>  
+          <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+          <claim claimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country" claimValue="USA" />  
+        </and>  
+      </policy>  
+      <policy resource="http://localhost:28491/Default.aspx" action="GET">  
+      </policy>  
+      <policy resource="http://localhost:28491/" action="GET">  
+      </policy>  
+      <policy resource="http://localhost:28491/Claims.aspx" action="GET">  
+      </policy>  
+    </claimsAuthorizationManager>  
+  
+    ...  
+  
+  </identityConfiguration>  
+</system.identityModel>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

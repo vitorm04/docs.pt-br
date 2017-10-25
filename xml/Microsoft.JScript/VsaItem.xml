@@ -1,0 +1,201 @@
+<Type Name="VsaItem" FullName="Microsoft.JScript.VsaItem">
+  <TypeSignature Language="C#" Value="public abstract class VsaItem : Microsoft.JScript.Vsa.IJSVsaItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit VsaItem extends System.Object implements class Microsoft.JScript.Vsa.IJSVsaItem" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.VsaItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.JScript.Vsa.IJSVsaItem</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa os itens adicionados ao mecanismo de script do .NET. Isso inclui itens de código, itens de referência e itens globais.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="flag">
+      <MemberSignature Language="C#" Value="protected Microsoft.JScript.Vsa.JSVsaItemFlag flag;" />
+      <MemberSignature Language="ILAsm" Value=".field family valuetype Microsoft.JScript.Vsa.JSVsaItemFlag flag" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.VsaItem.flag" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaItemFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o tipo do item como <see cref="F:Microsoft.Vsa.VsaItemFlag.Class" />, <see cref="F:Microsoft.Vsa.VsaItemFlag.Module" />, ou <see cref="F:Microsoft.Vsa.VsaItemFlag.None" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetOption">
+      <MemberSignature Language="C#" Value="public virtual object GetOption (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetOption(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.VsaItem.GetOption(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">A cadeia de caracteres literal "codebase".</param>
+        <summary>Obtém o **codebase** opção.</summary>
+        <returns>O valor de **codebase** opção.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="isDirty">
+      <MemberSignature Language="C#" Value="protected bool isDirty;" />
+      <MemberSignature Language="ILAsm" Value=".field family bool isDirty" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.VsaItem.isDirty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se a representação na memória atual do item é diferente da representação persistente.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public virtual bool IsDirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.VsaItem.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a representação na memória atual do item é diferente da representação persistente.</summary>
+        <value>
+          <see langword="true" />Se a representação na memória é diferente da representação persistente; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.JSVsaItemType ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.JScript.Vsa.JSVsaItemType ItemType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.VsaItem.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do item.</summary>
+        <value>Um dos valores de enumeração. O valor indica o tipo do item.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="name">
+      <MemberSignature Language="C#" Value="protected string name;" />
+      <MemberSignature Language="ILAsm" Value=".field family string name" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.VsaItem.name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o nome do item.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.VsaItem.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do item.</summary>
+        <value>O nome de literal da cadeia de caracteres do item.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetOption">
+      <MemberSignature Language="C#" Value="public virtual void SetOption (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetOption(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.VsaItem.SetOption(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">A cadeia de caracteres literal "codebase".</param>
+        <param name="value">O novo valor para a opção.</param>
+        <summary>Conjuntos de **codebase** opção.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="type">
+      <MemberSignature Language="C#" Value="protected Microsoft.JScript.Vsa.JSVsaItemType type;" />
+      <MemberSignature Language="ILAsm" Value=".field family valuetype Microsoft.JScript.Vsa.JSVsaItemType type" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.VsaItem.type" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.JSVsaItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o tipo do item como <see cref="F:Microsoft.Vsa.VsaItemType.Code" />, <see cref="F:Microsoft.Vsa.VsaItemType.Reference" />, ou <see cref="F:Microsoft.Vsa.VsaItemType.AppGlobal" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

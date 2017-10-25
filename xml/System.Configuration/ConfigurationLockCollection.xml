@@ -1,0 +1,504 @@
+<Type Name="ConfigurationLockCollection" FullName="System.Configuration.ConfigurationLockCollection">
+  <TypeSignature Language="C#" Value="public sealed class ConfigurationLockCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConfigurationLockCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationLockCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Contém uma coleção de objetos de configuração bloqueada. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um arquivo de configuração, uma seção de configuração contém elementos e atributos. Um <xref:System.Configuration.ConfigurationLockCollection> coleção existe para os atributos bloqueados de uma seção de configuração e é acessada por meio de <xref:System.Configuration.ConfigurationElement.LockAttributes%2A> propriedade do <xref:System.Configuration.ConfigurationElement> classe. Outro <xref:System.Configuration.ConfigurationLockCollection> coleção existe para os elementos bloqueados de uma seção de configuração e é acessada por meio de <xref:System.Configuration.ConfigurationElement.LockElements%2A> propriedade do <xref:System.Configuration.ConfigurationElement> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ConfigurationLockCollection> tipo.  
+  
+ [!code-csharp[System.Configuration.ConfigurationLockCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/CS/ConfigurationLockCollection.cs#1)]
+ [!code-vb[System.Configuration.ConfigurationLockCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/VB/ConfigurationLockCollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationLockCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto de configuração.</param>
+        <summary>Bloqueia um objeto de configuração ao ser adicionado à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adicionar um objeto de configuração para o <xref:System.Configuration.ConfigurationLockCollection> coleção Especifica que o objeto de configuração está bloqueado e não pode ser modificado até que ele foi removido da coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ConfigurationLockCollection.Add%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.ConfigurationLockCollection> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationLockCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/CS/ConfigurationLockCollection.cs#3)]
+ [!code-vb[System.Configuration.ConfigurationLockCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/VB/ConfigurationLockCollection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Ocorre quando o <paramref name="name" /> não corresponde a um objeto de configuração existente dentro da coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeList">
+      <MemberSignature Language="C#" Value="public string AttributeList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AttributeList" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationLockCollection.AttributeList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de objetos de configuração contidos na coleção.</summary>
+        <value>Uma cadeia delimitada por vírgulas que lista os objetos de configuração de bloqueio na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ConfigurationLockCollection.AttributeList%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.ConfigurationLockCollection> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationLockCollection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/CS/ConfigurationLockCollection.cs#5)]
+ [!code-vb[System.Configuration.ConfigurationLockCollection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/VB/ConfigurationLockCollection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationLockCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os objetos de configuração da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ConfigurationLockCollection.Clear%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.ConfigurationLockCollection> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationLockCollection#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/CS/ConfigurationLockCollection.cs#11)]
+ [!code-vb[System.Configuration.ConfigurationLockCollection#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/VB/ConfigurationLockCollection.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationLockCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto de configuração para verificar.</param>
+        <summary>Verifica se um objeto de configuração específico está bloqueado.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Configuration.ConfigurationLockCollection" /> contém o objeto de configuração especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (string[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(string[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationLockCollection.CopyTo(System.String[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.String[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um unidimensional <see cref="T:System.Array" /> que é o destino dos elementos copiados a partir de <see cref="T:System.Configuration.ConfigurationLockCollection" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia todo o <see cref="T:System.Configuration.ConfigurationLockCollection" /> coleção para um unidimensional compatível <see cref="T:System.Array" />, começando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationLockCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de objetos de configuração bloqueada contidos na coleção.</summary>
+        <value>O número de objetos de configuração bloqueada contidos na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ConfigurationLockCollection.Count%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.ConfigurationLockCollection> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationLockCollection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/CS/ConfigurationLockCollection.cs#4)]
+ [!code-vb[System.Configuration.ConfigurationLockCollection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/VB/ConfigurationLockCollection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationLockCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.IEnumerator" /> objeto, que é usado para iterar por meio <see cref="T:System.Configuration.ConfigurationLockCollection" /> coleção.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasParentElements">
+      <MemberSignature Language="C#" Value="public bool HasParentElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasParentElements" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationLockCollection.HasParentElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se a coleção de objetos bloqueados tem elementos pai.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Configuration.ConfigurationLockCollection" /> coleção tem elementos pai; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ConfigurationLockCollection.HasParentElements%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.ConfigurationLockCollection> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationLockCollection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/CS/ConfigurationLockCollection.cs#7)]
+ [!code-vb[System.Configuration.ConfigurationLockCollection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/VB/ConfigurationLockCollection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModified">
+      <MemberSignature Language="C#" Value="public bool IsModified { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsModified" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationLockCollection.IsModified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se a coleção foi modificada.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Configuration.ConfigurationLockCollection" /> coleção foi modificada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ConfigurationLockCollection.IsModified%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.ConfigurationLockCollection> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationLockCollection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/CS/ConfigurationLockCollection.cs#8)]
+ [!code-vb[System.Configuration.ConfigurationLockCollection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/VB/ConfigurationLockCollection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsReadOnly(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationLockCollection.IsReadOnly(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto de configuração para verificar.</param>
+        <summary>Verifica se um objeto de configuração específica é somente leitura.</summary>
+        <returns>
+          <see langword="true" />Se a configuração especificada do objeto no <see cref="T:System.Configuration.ConfigurationLockCollection" /> coleção é somente leitura; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ConfigurationLockCollection.IsReadOnly%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.ConfigurationLockCollection> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationLockCollection#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/CS/ConfigurationLockCollection.cs#9)]
+ [!code-vb[System.Configuration.ConfigurationLockCollection#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/VB/ConfigurationLockCollection.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O objeto de configuração especificado não está na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationLockCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se a coleção é sincronizada.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Configuration.ConfigurationLockCollection" /> coleção for sincronizado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationLockCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto de configuração.</param>
+        <summary>Remove um objeto de configuração da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ConfigurationLockCollection.Remove%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.ConfigurationLockCollection> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationLockCollection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/CS/ConfigurationLockCollection.cs#10)]
+ [!code-vb[System.Configuration.ConfigurationLockCollection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/VB/ConfigurationLockCollection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Ocorre quando o <paramref name="name" /> não corresponde a um objeto de configuração existente dentro da coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFromList">
+      <MemberSignature Language="C#" Value="public void SetFromList (string attributeList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFromList(string attributeList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationLockCollection.SetFromList(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeList">Uma cadeia de caracteres delimitada por vírgulas.</param>
+        <summary>Bloqueia um conjunto de objetos de configuração com base na lista fornecida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.ConfigurationLockCollection.SetFromList%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.ConfigurationLockCollection> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationLockCollection#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/CS/ConfigurationLockCollection.cs#12)]
+ [!code-vb[System.Configuration.ConfigurationLockCollection#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationLockCollection/VB/ConfigurationLockCollection.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Ocorre quando um item de <paramref name="attributeList" /> parâmetro não é um atributo de configuração bloqueáveis válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationLockCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto usado para sincronizar o acesso a este <see cref="T:System.Configuration.ConfigurationLockCollection" /> coleção.</summary>
+        <value>Um objeto usado para sincronizar o acesso a este <see cref="T:System.Configuration.ConfigurationLockCollection" /> coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationLockCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um unidimensional <see cref="T:System.Array" /> que é o destino dos elementos copiados a partir de <see cref="T:System.Configuration.ConfigurationLockCollection" /> coleção. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia todo o <see cref="T:System.Configuration.ConfigurationLockCollection" /> coleção para um unidimensional compatível <see cref="T:System.Array" />, começando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

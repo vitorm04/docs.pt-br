@@ -1,0 +1,98 @@
+<Type Name="IHierarchicalDataSource" FullName="System.Web.UI.IHierarchicalDataSource">
+  <TypeSignature Language="C#" Value="public interface IHierarchicalDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHierarchicalDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IHierarchicalDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma fonte de dados hierárquicos a que controles com associação de dados hierárquicos, como um <see cref="T:System.Web.UI.WebControls.TreeView" />, podem se associar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET oferece suporte a uma arquitetura de associação de dados de controle que permite que os controles de servidor Web associar aos dados e apresentá-lo de forma consistente. Controles de servidor Web que associar aos dados são chamados de controles associados a dados e as classes que facilitam a vinculação são chamadas de controles da fonte de dados. Controles de fonte de dados podem representar qualquer fonte de dados: um arquivo, um fluxo, um banco de dados relacional, um objeto comercial e assim por diante. Fonte de dados controla apresentar dados de uma maneira consistente para controles associados a dados, independentemente da origem ou o formato dos dados subjacentes.  
+  
+ Controles de fonte de dados que representam dados hierárquicos derivam o <xref:System.Web.UI.HierarchicalDataSourceControl> classe, que é a implementação base do ASP.NET do <xref:System.Web.UI.IHierarchicalDataSource> interface. O <xref:System.Web.UI.IHierarchicalDataSource> interface é usada para definir os controles de fonte de dados que expõem dados hierárquicos, em vez de tabela ou dados de estilo de lista, para o servidor Web controles que derivam de <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> classe, como o <xref:System.Web.UI.WebControls.TreeView> controle. A interface define um único método, <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A>, que recupera um fortemente tipada <xref:System.Web.UI.HierarchicalDataSourceView> objeto. Controles de fonte de dados que implementam esta interface oferecem suporte a uma exibição hierárquica para cada nível hierárquico de dados que eles representam. Os modos de exibição de fonte de dados não são nomeados, como <xref:System.Web.UI.DataSourceView> objetos, mas são identificados por seu caminho hierárquico exclusivo, que é o `viewPath` parâmetro passado para o <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A> método.  
+  
+ Você pode pensar em um controle de fonte de dados como a combinação da <xref:System.Web.UI.IHierarchicalDataSource> objeto e seus modos de exibição associados nos dados subjacentes. Cada associado <xref:System.Web.UI.HierarchicalDataSourceView> objeto define os recursos de um controle de fonte de dados para o nível hierárquico representado e, como todos os ASP.NET dados fonte exibir objetos, executa operações como insert, update, delete e classificação.  
+  
+ Controles que expõem apenas dados hierárquicos, como fonte de dados <xref:System.Web.UI.WebControls.SiteMapDataSource>, derivam de <xref:System.Web.UI.HierarchicalDataSourceControl> classe. Outros dados de origem controles que expõem seus dados como dados hierárquicos e dados tabulares, tais como <xref:System.Web.UI.WebControls.XmlDataSource>, são derivadas de <xref:System.Web.UI.HierarchicalDataSourceControl> mas implementa o <xref:System.Web.UI.IDataSource> e <xref:System.ComponentModel.IListSource> interfaces.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como estender o resumo <xref:System.Web.UI.HierarchicalDataSourceControl> de classe que implementa o <xref:System.Web.UI.IHierarchicalDataSource> interface, para criar um controle de fonte de dados que exibe informações do sistema de arquivos. O `FileSystemDataSource` classe fornece uma implementação do <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A> método, que recupera um objeto de exibição fortemente tipado para um caminho de sistema de arquivos especificado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.HierarchicalDataSourceControl> classe.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#1)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataSourceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DataSourceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DataSourceChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.IHierarchicalDataSource.DataSourceChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o armazenamento de dados que o <see cref="T:System.Web.UI.IHierarchicalDataSource" /> representa interface foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IHierarchicalDataSource.DataSourceChanged> evento é gerado quando uma alteração é feita em Propriedades do controle de fonte de dados, como alterar o <xref:System.Web.UI.WebControls.XmlDataSource.DataFile%2A> propriedade de um <xref:System.Web.UI.WebControls.XmlDataSource> controle ou alterar os dados no armazenamento de dados subjacentes, o que acontece quando nós XML são alterados por uma ação de edição executada por um <xref:System.Web.UI.WebControls.XmlDataSource> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHierarchicalView">
+      <MemberSignature Language="C#" Value="public System.Web.UI.HierarchicalDataSourceView GetHierarchicalView (string viewPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.HierarchicalDataSourceView GetHierarchicalView(string viewPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HierarchicalDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewPath">O caminho hierárquico do modo de exibição para recuperar.</param>
+        <summary>Obtém o objeto auxiliar de modo de exibição para o <see cref="T:System.Web.UI.IHierarchicalDataSource" /> interface para o caminho especificado.</summary>
+        <returns>Retorna um <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> que representa uma única exibição dos dados no nível hierárquico identificado pelo <paramref name="viewPath" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IHierarchicalDataSource> interface, como o <xref:System.Web.UI.IDataSource> interface, define um método que os controles de fonte de dados hierárquicos é usado para recuperar uma exibição da fonte de dados. Como todos os <xref:System.Web.UI.DataSourceView> objetos auxiliares que estão associados a controles de fonte de dados, um <xref:System.Web.UI.HierarchicalDataSourceView> objeto define as operações que pode ser executadas a fonte de dados com os dados subjacentes. No entanto, embora os controles de fonte de dados que representam dados tabulares normalmente tem apenas uma exibição nomeada, controles de fonte de dados hierárquicos dão suporte a um modo de exibição para cada nível de dados hierárquicos que representa o controle de fonte de dados. O nível de dados hierárquicos é identificado por um caminho hierárquico exclusivo, passado como o `viewPath` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A> método em uma classe que estende o <xref:System.Web.UI.HierarchicalDataSourceControl> classe para recuperar um fortemente tipada <xref:System.Web.UI.HierarchicalDataSourceView> objeto para um caminho hierárquico exclusivo. O `FileSystemDataSource` implementação da classe de <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A> recupera um `FileSystemDataSourceView` objeto para um caminho de sistema de arquivos especificado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.HierarchicalDataSourceControl> classe.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#1)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

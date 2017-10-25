@@ -1,0 +1,163 @@
+<Type Name="X509ChainElement" FullName="System.Security.Cryptography.X509Certificates.X509ChainElement">
+  <TypeSignature Language="C#" Value="public class X509ChainElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509ChainElement extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509ChainElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um elemento de uma cadeia X.509.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse objeto é construído internamente e é retornado como parte de um <xref:System.Security.Cryptography.X509Certificates.X509ChainElementCollection> ao chamar o <xref:System.Security.Cryptography.X509Certificates.X509Chain.ChainElements%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Certificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509ChainElement.Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o certificado x. 509 em um elemento específico de cadeia.</summary>
+        <value>Um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna um certificado x. 509 para este elemento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir abre o repositório de certificados pessoais do usuário atual, permite que o usuário selecione um certificado, em seguida, grava o certificado e as informações de cadeia de certificado para o console. A saída depende do certificado que o usuário seleciona.  
+  
+ [!code-cpp[x509chaintest#4](~/samples/snippets/cpp/VS_Snippets_CLR/x509chaintest/CPP/x509chaintest.cpp#4)]
+ [!code-csharp[x509chaintest#4](~/samples/snippets/csharp/VS_Snippets_CLR/x509chaintest/CS/x509chaintest.cs#4)]
+ [!code-vb[x509chaintest#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509chaintest/vb/x509chaintest.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChainElementStatus">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509ChainStatus[] ChainElementStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.X509ChainStatus[] ChainElementStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509ChainElement.ChainElementStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatus[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o status de erro do certificado x. 509 atual em uma cadeia.</summary>
+        <value>Uma matriz de objetos de <see cref="T:System.Security.Cryptography.X509Certificates.X509ChainStatus" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna uma matriz de <xref:System.Security.Cryptography.X509Certificates.X509ChainStatus> objetos, cada consiste em um bit de código de erro e uma mensagem de erro localizada descritivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Information">
+      <MemberSignature Language="C#" Value="public string Information { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Information" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509ChainElement.Information" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações de erro adicionais de uma estrutura de cadeia de certificados não gerenciado.</summary>
+        <value>Uma cadeia de caracteres que representa o <see langword="pwszExtendedErrorInfo" /> membro de não gerenciado <see langword="CERT_CHAIN_ELEMENT" /> estrutura na API de criptografia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa cadeia de caracteres está disponível somente em computadores com Windows XP Professional ou sistemas operacionais posteriores. Uma cadeia de caracteres vazia ("") será retornado se o sistema operacional não for o Windows XP Professional ou posterior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir abre o repositório de certificados pessoais do usuário atual, permite que o usuário selecione um certificado, em seguida, grava o certificado e as informações de cadeia de certificado para o console. A saída depende do certificado que o usuário seleciona.  
+  
+ [!code-cpp[x509chaintest#4](~/samples/snippets/cpp/VS_Snippets_CLR/x509chaintest/CPP/x509chaintest.cpp#4)]
+ [!code-csharp[x509chaintest#4](~/samples/snippets/csharp/VS_Snippets_CLR/x509chaintest/CS/x509chaintest.cs#4)]
+ [!code-vb[x509chaintest#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509chaintest/vb/x509chaintest.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

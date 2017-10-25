@@ -1,0 +1,318 @@
+<Type Name="FilteredCatalog" FullName="System.ComponentModel.Composition.Hosting.FilteredCatalog">
+  <TypeSignature Language="C#" Value="public class FilteredCatalog : System.ComponentModel.Composition.Primitives.ComposablePartCatalog, System.ComponentModel.Composition.Hosting.INotifyComposablePartCatalogChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FilteredCatalog extends System.ComponentModel.Composition.Primitives.ComposablePartCatalog implements class System.ComponentModel.Composition.Hosting.INotifyComposablePartCatalogChanged" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Hosting.FilteredCatalog" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Composition.Primitives.ComposablePartCatalog</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Composition.Hosting.INotifyComposablePartCatalogChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um catálogo depois que uma função de filtro é aplicada a ele.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilteredCatalog (System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, Func&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition,bool&gt; filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, class System.Func`2&lt;class System.ComponentModel.Composition.Primitives.ComposablePartDefinition, bool&gt; filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.FilteredCatalog.#ctor(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,System.Func{System.ComponentModel.Composition.Primitives.ComposablePartDefinition,System.Boolean})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="catalog" Type="System.ComponentModel.Composition.Primitives.ComposablePartCatalog" />
+        <Parameter Name="filter" Type="System.Func&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="catalog">O catálogo subjacente.</param>
+        <param name="filter">A função para filtrar as partes.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.Hosting.FilteredCatalog" /> classe com o catálogo de base especificado e o filtro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt; Changed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt; Changed" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Composition.Hosting.FilteredCatalog.Changed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o catálogo subjacente foi alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changing">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt; Changing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt; Changing" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Composition.Hosting.FilteredCatalog.Changing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o catálogo de base está sendo alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complement">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Hosting.FilteredCatalog Complement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Composition.Hosting.FilteredCatalog Complement" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.FilteredCatalog.Complement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Hosting.FilteredCatalog</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um catálogo que contém as partes que estão presentes no catálogo subjacente, mas que foram filtrados pela função de filtro.</summary>
+        <value>Um catálogo que contém o complemento deste catálogo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.FilteredCatalog.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Chamado pelo <see langword="Dispose()" /> e <see langword="Finalize()" /> métodos para liberar os recursos gerenciados e não gerenciados usados pela instância atual do <see cref="T:System.ComponentModel.Composition.Hosting.FilteredCatalog" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado somente pelo público `Dispose()` e `Finalize()` métodos; não chame este método diretamente. Quando você implementa o padrão dispose, o parâmetro booliano do `Dispose(Boolean)` método deve ser usado da seguinte maneira:  
+  
+-   O `Dispose()` deve chamar o método do objeto atual `Dispose(Boolean)` com o parâmetro booliano definido como `true` para liberar recursos gerenciados e não gerenciados.  
+  
+-   O `Finalize()` deve chamar o método do objeto atual `Dispose(Boolean)` com o parâmetro booliano definido como `false` para liberar apenas recursos não gerenciados.  
+  
+ Para obter mais informações, consulte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerator&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.FilteredCatalog.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do catálogo.</summary>
+        <returns>Um enumerador que pode ser usado para iterar por meio do catálogo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExports">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;Tuple&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition,System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt; GetExports (System.ComponentModel.Composition.Primitives.ImportDefinition definition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Tuple`2&lt;class System.ComponentModel.Composition.Primitives.ComposablePartDefinition, class System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt; GetExports(class System.ComponentModel.Composition.Primitives.ImportDefinition definition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.FilteredCatalog.GetExports(System.ComponentModel.Composition.Primitives.ImportDefinition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Tuple&lt;System.ComponentModel.Composition.Primitives.ComposablePartDefinition,System.ComponentModel.Composition.Primitives.ExportDefinition&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">A importação para fazer a correspondência.</param>
+        <summary>Obtém as partes exportadas desse catálogo que correspondem a importação especificada.</summary>
+        <returns>Uma coleção de partes de correspondência.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeDependencies">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Hosting.FilteredCatalog IncludeDependencies ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Hosting.FilteredCatalog IncludeDependencies() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.FilteredCatalog.IncludeDependencies" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Hosting.FilteredCatalog</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma nova <see cref="T:System.ComponentModel.Composition.Hosting.FilteredCatalog" /> objeto que contém todas as partes desse catálogo e todas as suas dependências.</summary>
+        <returns>O novo catálogo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeDependencies">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Hosting.FilteredCatalog IncludeDependencies (Func&lt;System.ComponentModel.Composition.Primitives.ImportDefinition,bool&gt; importFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Hosting.FilteredCatalog IncludeDependencies(class System.Func`2&lt;class System.ComponentModel.Composition.Primitives.ImportDefinition, bool&gt; importFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.FilteredCatalog.IncludeDependencies(System.Func{System.ComponentModel.Composition.Primitives.ImportDefinition,System.Boolean})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Hosting.FilteredCatalog</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importFilter" Type="System.Func&lt;System.ComponentModel.Composition.Primitives.ImportDefinition,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="importFilter">O filtro de importações.</param>
+        <summary>Obtém uma nova <see cref="T:System.ComponentModel.Composition.Hosting.FilteredCatalog" /> objeto que contém todas as partes desse catálogo e todas as dependências que podem ser alcançadas por meio de importações que correspondem ao filtro especificado.</summary>
+        <returns>O novo catálogo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeDependents">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Hosting.FilteredCatalog IncludeDependents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Hosting.FilteredCatalog IncludeDependents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.FilteredCatalog.IncludeDependents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Hosting.FilteredCatalog</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma nova <see cref="T:System.ComponentModel.Composition.Hosting.FilteredCatalog" /> objeto que contém todas as partes desse catálogo e todos os seus dependentes.</summary>
+        <returns>O novo catálogo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeDependents">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Hosting.FilteredCatalog IncludeDependents (Func&lt;System.ComponentModel.Composition.Primitives.ImportDefinition,bool&gt; importFilter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Hosting.FilteredCatalog IncludeDependents(class System.Func`2&lt;class System.ComponentModel.Composition.Primitives.ImportDefinition, bool&gt; importFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.FilteredCatalog.IncludeDependents(System.Func{System.ComponentModel.Composition.Primitives.ImportDefinition,System.Boolean})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Hosting.FilteredCatalog</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importFilter" Type="System.Func&lt;System.ComponentModel.Composition.Primitives.ImportDefinition,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="importFilter">O filtro de importações.</param>
+        <summary>Obtém uma nova <see cref="T:System.ComponentModel.Composition.Hosting.FilteredCatalog" /> objeto que contém todas as partes desse catálogo e todos os dependentes que podem ser alcançados por meio de importações que correspondem ao filtro especificado.</summary>
+        <returns>O novo catálogo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnChanged (System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnChanged(class System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.FilteredCatalog.OnChanged(System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Fornece dados para o evento.</param>
+        <summary>Aciona o evento <see cref="E:System.ComponentModel.Composition.Hosting.FilteredCatalog.Changed" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanging">
+      <MemberSignature Language="C#" Value="protected virtual void OnChanging (System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnChanging(class System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.FilteredCatalog.OnChanging(System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Fornece dados para o evento.</param>
+        <summary>Aciona o evento <see cref="E:System.ComponentModel.Composition.Hosting.FilteredCatalog.Changing" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

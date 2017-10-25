@@ -1,0 +1,166 @@
+<Type Name="Facet" FullName="System.Data.Metadata.Edm.Facet">
+  <TypeSignature Language="C#" Value="public sealed class Facet : System.Data.Metadata.Edm.MetadataItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Facet extends System.Data.Metadata.Edm.MetadataItem" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.Facet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Metadata.Edm.MetadataItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{Name,nq}={Value}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece informações adicionais sobre membros. Na hierarquia de tipos de metadados ADO.NET, facetas fornecem informações adicionais sobre membros por meio do tipo declarado do membro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre membros e facetas, consulte [tipos estruturais](http://msdn.microsoft.com/en-us/c0c54fe0-e0ba-4e1d-8572-dfd2fbf788fa).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuiltInTypeKind">
+      <MemberSignature Language="C#" Value="public override System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.Facet.BuiltInTypeKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.BuiltInTypeKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do tipo interno para este <see cref="T:System.Data.Metadata.Edm.Facet" />.</summary>
+        <value>Um <see cref="T:System.Data.Metadata.Edm.BuiltInTypeKind" /> objeto que representa o tipo do tipo interno para este <see cref="T:System.Data.Metadata.Edm.Facet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.FacetDescription Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.FacetDescription Description" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.Facet.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.FacetDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição deste <see cref="T:System.Data.Metadata.Edm.Facet" />.</summary>
+        <value>O <see cref="T:System.Data.Metadata.Edm.FacetDescription" /> objeto que representa a descrição deste <see cref="T:System.Data.Metadata.Edm.Facet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FacetType">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.EdmType FacetType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.EdmType FacetType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.Facet.FacetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.EdmType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo deste <see cref="T:System.Data.Metadata.Edm.Facet" />.</summary>
+        <value>O <see cref="T:System.Data.Metadata.Edm.EdmType" /> objeto que representa o tipo deste <see cref="T:System.Data.Metadata.Edm.Facet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnbounded">
+      <MemberSignature Language="C#" Value="public bool IsUnbounded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUnbounded" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.Facet.IsUnbounded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o valor da faceta é ilimitado.</summary>
+        <value>
+          <see langword="true" />Se o valor da faceta é não vinculado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Metadata.Edm.Facet.IsUnbounded%2A> indica que o valor da propriedade pode ter o limite máximo permitido no armazenamento subjacente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.Facet.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome deste <see cref="T:System.Data.Metadata.Edm.Facet" />.</summary>
+        <value>O nome deste <see cref="T:System.Data.Metadata.Edm.Facet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Metadata.Edm.Facet.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome deste <see cref="T:System.Data.Metadata.Edm.Facet" />.</summary>
+        <returns>O nome deste <see cref="T:System.Data.Metadata.Edm.Facet" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.Facet.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor deste <see cref="T:System.Data.Metadata.Edm.Facet" />.</summary>
+        <value>O valor deste <see cref="T:System.Data.Metadata.Edm.Facet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

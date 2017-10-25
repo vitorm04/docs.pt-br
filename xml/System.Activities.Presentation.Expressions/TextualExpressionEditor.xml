@@ -1,0 +1,409 @@
+<Type Name="TextualExpressionEditor" FullName="System.Activities.Presentation.Expressions.TextualExpressionEditor">
+  <TypeSignature Language="C#" Value="public abstract class TextualExpressionEditor : System.Activities.Presentation.Expressions.ExpressionActivityEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextualExpressionEditor extends System.Activities.Presentation.Expressions.ExpressionActivityEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Expressions.TextualExpressionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Presentation.Expressions.ExpressionActivityEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um editor de expressão textual.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextualExpressionEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Presentation.Expressions.TextualExpressionEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public string DefaultValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Expressions.TextualExpressionEditor.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor padrão da propriedade.</summary>
+        <value>O valor padrão da propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValueProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DefaultValueProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DefaultValueProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Expressions.TextualExpressionEditor.DefaultValueProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a propriedade de valor padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpressionEditorService">
+      <MemberSignature Language="C#" Value="public virtual System.Activities.Presentation.View.IExpressionEditorService ExpressionEditorService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.View.IExpressionEditorService ExpressionEditorService" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Expressions.TextualExpressionEditor.ExpressionEditorService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.IExpressionEditorService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o serviço do editor de expressão.</summary>
+        <value>O serviço do editor de expressão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLines">
+      <MemberSignature Language="C#" Value="public int MaxLines { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxLines" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Expressions.TextualExpressionEditor.MaxLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de linhas visíveis ao qual deve ser dimensionado.</summary>
+        <value>O número máximo de linhas visíveis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLinesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MaxLinesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MaxLinesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Expressions.TextualExpressionEditor.MaxLinesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a propriedade de dependência de MaxLines.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinLines">
+      <MemberSignature Language="C#" Value="public int MinLines { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinLines" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Expressions.TextualExpressionEditor.MinLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número mínimo de linhas visíveis.</summary>
+        <value>O número mínimo de linhas visíveis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinLinesProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MinLinesProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MinLinesProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Expressions.TextualExpressionEditor.MinLinesProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a propriedade de dependência de MinLines.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCompleteWordCommandCanExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnCompleteWordCommandCanExecute (System.Windows.Input.CanExecuteRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnCompleteWordCommandCanExecute(class System.Windows.Input.CanExecuteRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnCompleteWordCommandCanExecute(System.Windows.Input.CanExecuteRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.CanExecuteRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos em completa palavra comando pode executar roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCompleteWordCommandExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnCompleteWordCommandExecute (System.Windows.Input.ExecutedRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnCompleteWordCommandExecute(class System.Windows.Input.ExecutedRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnCompleteWordCommandExecute(System.Windows.Input.ExecutedRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.ExecutedRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos no completa palavra comando Execute roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDecreaseFilterLevelCommandCanExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnDecreaseFilterLevelCommandCanExecute (System.Windows.Input.CanExecuteRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnDecreaseFilterLevelCommandCanExecute(class System.Windows.Input.CanExecuteRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnDecreaseFilterLevelCommandCanExecute(System.Windows.Input.CanExecuteRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.CanExecuteRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos em diminuir filtro nível comando pode executar roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDecreaseFilterLevelCommandExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnDecreaseFilterLevelCommandExecute (System.Windows.Input.ExecutedRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnDecreaseFilterLevelCommandExecute(class System.Windows.Input.ExecutedRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnDecreaseFilterLevelCommandExecute(System.Windows.Input.ExecutedRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.ExecutedRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos no diminuir filtro nível comando Execute roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGlobalIntellisenseCommandCanExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnGlobalIntellisenseCommandCanExecute (System.Windows.Input.CanExecuteRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnGlobalIntellisenseCommandCanExecute(class System.Windows.Input.CanExecuteRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnGlobalIntellisenseCommandCanExecute(System.Windows.Input.CanExecuteRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.CanExecuteRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos em Global Intellisense comando pode executar roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGlobalIntellisenseCommandExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnGlobalIntellisenseCommandExecute (System.Windows.Input.ExecutedRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnGlobalIntellisenseCommandExecute(class System.Windows.Input.ExecutedRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnGlobalIntellisenseCommandExecute(System.Windows.Input.ExecutedRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.ExecutedRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos no Global Intellisense comando Execute roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIncreaseFilterLevelCommandCanExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnIncreaseFilterLevelCommandCanExecute (System.Windows.Input.CanExecuteRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnIncreaseFilterLevelCommandCanExecute(class System.Windows.Input.CanExecuteRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnIncreaseFilterLevelCommandCanExecute(System.Windows.Input.CanExecuteRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.CanExecuteRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos em aumentar filtro nível comando pode executar roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIncreaseFilterLevelCommandExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnIncreaseFilterLevelCommandExecute (System.Windows.Input.ExecutedRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnIncreaseFilterLevelCommandExecute(class System.Windows.Input.ExecutedRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnIncreaseFilterLevelCommandExecute(System.Windows.Input.ExecutedRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.ExecutedRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos em aumentar filtro nível comando executar roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParameterInfoCommandCanExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnParameterInfoCommandCanExecute (System.Windows.Input.CanExecuteRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnParameterInfoCommandCanExecute(class System.Windows.Input.CanExecuteRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnParameterInfoCommandCanExecute(System.Windows.Input.CanExecuteRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.CanExecuteRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos no parâmetro Info comando pode executar roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParameterInfoCommandExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnParameterInfoCommandExecute (System.Windows.Input.ExecutedRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnParameterInfoCommandExecute(class System.Windows.Input.ExecutedRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnParameterInfoCommandExecute(System.Windows.Input.ExecutedRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.ExecutedRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos no parâmetro Info comando Execute roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQuickInfoCommandCanExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnQuickInfoCommandCanExecute (System.Windows.Input.CanExecuteRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnQuickInfoCommandCanExecute(class System.Windows.Input.CanExecuteRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnQuickInfoCommandCanExecute(System.Windows.Input.CanExecuteRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.CanExecuteRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos em rápido informações comando pode executar roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnQuickInfoCommandExecute">
+      <MemberSignature Language="C#" Value="public virtual void OnQuickInfoCommandExecute (System.Windows.Input.ExecutedRoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnQuickInfoCommandExecute(class System.Windows.Input.ExecutedRoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Expressions.TextualExpressionEditor.OnQuickInfoCommandExecute(System.Windows.Input.ExecutedRoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.ExecutedRoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Representa o método que tratará os eventos no rápido informações comando Execute roteadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

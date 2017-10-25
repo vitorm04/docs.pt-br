@@ -1,0 +1,1177 @@
+<Type Name="DragDrop" FullName="System.Windows.DragDrop">
+  <TypeSignature Language="C#" Value="public static class DragDrop" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DragDrop extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DragDrop" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos e campos auxiliares para iniciar operações do tipo “arrastar e soltar”, incluindo um método para iniciar uma operação desse tipo e recursos para adicionar e remover manipuladores de eventos relacionados a esse tipo de operação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o recurso do tipo "arrastar e soltar" se refere a um método de transferência de dados que envolve o uso de um mouse (ou algum outro dispositivo apontador) para selecionar um ou mais objetos, arrastá-los sobre um destino de soltar desejado na [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] e soltá-los. Uma operação de arrastar e soltar é análoga a uma cópia (ou recortar) - e - colar operação é usada para transferir dados de um objeto ou aplicativo para outro. Operações de arrastar e soltar normalmente envolvem duas partes: uma fonte de que os dados arrastados se origina e um destino que recebe os dados descartados. Os eventos e os métodos necessários para as operações de arrastar e soltar são definidas no <xref:System.Windows.DragDrop> classe. Os eventos de arrastar e soltar são eventos anexados que podem ser anexados a qualquer <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement>. Arraste fonte e destino pode ser elementos de interface do usuário no mesmo aplicativo ou em diferentes aplicativos. No entanto, o destino de soltar deve saber como processar os dados sendo passados por origem do arrasto.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.UIElement> e <xref:System.Windows.ContentElement> classes conter aliases para os eventos de arrastar e soltar para que os eventos são exibidos na lista de membros de classe quando essas classes são herdadas como uma classe base. Quando você anexa um manipulador de eventos para um evento de arrastar e soltar em uma dessas classes, o manipulador é anexado ao subjacente <xref:System.Windows.DragDrop> eventos e eles recebem a mesma instância de dados de evento. Por exemplo, veja <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
+  
+ A origem de arrastar inicia uma operação de arrastar e soltar chamando estático <xref:System.Windows.DragDrop.DoDragDrop%2A> método e passar os dados transferidos para ele. Um elemento normalmente manipula os eventos a seguir quando se trata de uma fonte:  
+  
+-   <xref:System.Windows.DragDrop.GiveFeedback>  
+  
+-   <xref:System.Windows.DragDrop.QueryContinueDrag>  
+  
+ Um elemento normalmente manipula os eventos a seguir quando ele é um destino de soltar:  
+  
+-   <xref:System.Windows.DragDrop.DragEnter>  
+  
+-   <xref:System.Windows.DragDrop.DragLeave>  
+  
+-   <xref:System.Windows.DragDrop.DragOver>  
+  
+-   <xref:System.Windows.DragDrop.Drop>  
+  
+ Para obter mais informações e exemplos, consulte [arrastar e soltar visão de geral](~/docs/framework/wpf/advanced/drag-and-drop-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddDragEnterHandler">
+      <MemberSignature Language="C#" Value="public static void AddDragEnterHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddDragEnterHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddDragEnterHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.DragEnter" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.DragEnter> evento ocorre quando um objeto é arrastado para os limites do elemento.  
+  
+ Este método adiciona um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.DragEnter> evento. Para adicionar um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.AddPreviewDragEnterHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDragLeaveHandler">
+      <MemberSignature Language="C#" Value="public static void AddDragLeaveHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddDragLeaveHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddDragLeaveHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.DragLeave" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.DragLeave> evento ocorre quando um objeto é arrastado para fora dos limites do elemento.  
+  
+ Este método adiciona um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.DragLeave> evento. Para adicionar um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.AddPreviewDragLeaveHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDragOverHandler">
+      <MemberSignature Language="C#" Value="public static void AddDragOverHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddDragOverHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddDragOverHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.DragOver" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.DragOver> evento ocorre quando um objeto é arrastado sobre os limites do elemento.  
+  
+ Este método adiciona um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.DragOver> evento. Para adicionar um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.AddPreviewDragOverHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDropHandler">
+      <MemberSignature Language="C#" Value="public static void AddDropHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddDropHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddDropHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.Drop" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.Drop> evento ocorre quando um objeto é descartado dentro dos limites de um elemento.  
+  
+ Este método adiciona um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.Drop> evento. Para adicionar um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.AddPreviewDropHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddGiveFeedbackHandler">
+      <MemberSignature Language="C#" Value="public static void AddGiveFeedbackHandler (System.Windows.DependencyObject element, System.Windows.GiveFeedbackEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddGiveFeedbackHandler(class System.Windows.DependencyObject element, class System.Windows.GiveFeedbackEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddGiveFeedbackHandler(System.Windows.DependencyObject,System.Windows.GiveFeedbackEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.GiveFeedbackEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.GiveFeedback" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.GiveFeedback> evento ocorrer durante uma operação de arrastar.  
+  
+ Este método adiciona um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.GiveFeedback> evento. Para adicionar um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.AddPreviewGiveFeedbackHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewDragEnterHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewDragEnterHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewDragEnterHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewDragEnterHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.PreviewDragEnter" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDragEnter> evento ocorre quando um objeto é arrastado para os limites do elemento.  
+  
+ Este método adiciona um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewDragEnter> evento. Para adicionar um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.AddDragEnterHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewDragLeaveHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewDragLeaveHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewDragLeaveHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewDragLeaveHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.PreviewDragLeave" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDragLeave> evento ocorre quando um objeto é arrastado para fora dos limites do elemento.  
+  
+ Este método adiciona um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewDragLeave> evento. Para adicionar um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.AddDragLeaveHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewDragOverHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewDragOverHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewDragOverHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewDragOverHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.PreviewDragOver" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDragOver> evento ocorre quando o objeto n é arrastado sobre os limites do elemento.  
+  
+ Este método adiciona um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewDragOver> evento. Para adicionar um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.AddDragOverHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewDropHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewDropHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewDropHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewDropHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.PreviewDrop" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDrop> evento ocorre quando um objeto é descartado dentro dos limites de um elemento.  
+  
+ Este método adiciona um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewDrop> evento. Para adicionar um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.AddDropHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewGiveFeedbackHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewGiveFeedbackHandler (System.Windows.DependencyObject element, System.Windows.GiveFeedbackEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewGiveFeedbackHandler(class System.Windows.DependencyObject element, class System.Windows.GiveFeedbackEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewGiveFeedbackHandler(System.Windows.DependencyObject,System.Windows.GiveFeedbackEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.GiveFeedbackEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.PreviewGiveFeedback" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewGiveFeedback> evento ocorrer durante uma operação de arrastar.  
+  
+ Este método adiciona um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewGiveFeedback> evento. Para adicionar um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.AddGiveFeedbackHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPreviewQueryContinueDragHandler">
+      <MemberSignature Language="C#" Value="public static void AddPreviewQueryContinueDragHandler (System.Windows.DependencyObject element, System.Windows.QueryContinueDragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPreviewQueryContinueDragHandler(class System.Windows.DependencyObject element, class System.Windows.QueryContinueDragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddPreviewQueryContinueDragHandler(System.Windows.DependencyObject,System.Windows.QueryContinueDragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.QueryContinueDragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.PreviewQueryContinueDrag" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> evento ocorrer durante uma operação de arrastar e soltar e permite que a fonte determinar se a operação de arrastar e soltar deve ser cancelada.  
+  
+ Este método adiciona um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> evento. Para adicionar um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.AddQueryContinueDragHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddQueryContinueDragHandler">
+      <MemberSignature Language="C#" Value="public static void AddQueryContinueDragHandler (System.Windows.DependencyObject element, System.Windows.QueryContinueDragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddQueryContinueDragHandler(class System.Windows.DependencyObject element, class System.Windows.QueryContinueDragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.AddQueryContinueDragHandler(System.Windows.DependencyObject,System.Windows.QueryContinueDragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.QueryContinueDragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) ao qual o manipulador de eventos será adicionado.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser adicionado.</param>
+        <summary>Adiciona um manipulador de eventos <see cref="E:System.Windows.DragDrop.QueryContinueDrag" /> a um objeto de dependência especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.QueryContinueDrag> evento ocorrer durante uma operação de arrastar e soltar e permite que a fonte determinar se a operação de arrastar e soltar deve ser cancelada.  
+  
+ Este método adiciona um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.QueryContinueDrag> evento. Para adicionar um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.AddPreviewQueryContinueDragHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDragDrop">
+      <MemberSignature Language="C#" Value="public static System.Windows.DragDropEffects DoDragDrop (System.Windows.DependencyObject dragSource, object data, System.Windows.DragDropEffects allowedEffects);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.DragDropEffects DoDragDrop(class System.Windows.DependencyObject dragSource, object data, valuetype System.Windows.DragDropEffects allowedEffects) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.DoDragDrop(System.Windows.DependencyObject,System.Object,System.Windows.DragDropEffects)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dragSource" Type="System.Windows.DependencyObject" />
+        <Parameter Name="data" Type="System.Object" />
+        <Parameter Name="allowedEffects" Type="System.Windows.DragDropEffects" />
+      </Parameters>
+      <Docs>
+        <param name="dragSource">Uma referência para o objeto de dependência que é a origem dos dados sendo arrastados.</param>
+        <param name="data">Um objeto de dados que contém os dados sendo arrastados.</param>
+        <param name="allowedEffects">Um dos valores <see cref="T:System.Windows.DragDropEffects" /> que especificam os efeitos permitidos da operação do tipo "arrastar e soltar".</param>
+        <summary>Inicia uma operação do tipo "arrastar e soltar".</summary>
+        <returns>Um dos valores <see cref="T:System.Windows.DragDropEffects" /> que especificam o efeito final que foi executado durante a operação do tipo "arrastar e soltar".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É responsabilidade do seu aplicativo para determinar quando ocorre um arrastar e, em seguida, inicie a operação de arrastar e soltar. Normalmente, isso ocorre quando um <xref:System.Windows.UIElement.MouseDown> e <xref:System.Windows.UIElement.MouseMove> a sequência de eventos ocorre sobre o elemento a ser arrastado. Iniciar a operação de arrastar e soltar chamando estático <xref:System.Windows.DragDrop.DoDragDrop%2A> método e passar os dados transferidos para ele. O <xref:System.Windows.DragDrop.DoDragDrop%2A> método ajustará automaticamente os dados em um <xref:System.Windows.DataObject> se necessário. Para maior controle sobre o formato de dados, você pode encapsular os dados em um <xref:System.Windows.DataObject> antes de passá-lo para o <xref:System.Windows.DragDrop.DoDragDrop%2A> método.  
+  
+ O valor retornado do <xref:System.Windows.DragDrop.DoDragDrop%2A> método é o valor da <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> propriedade definida no destino de soltar <xref:System.Windows.DragDrop.Drop> manipulador de eventos. Se o valor de retorno não coincide com um do `allowedEffects` especificado na chamada para <xref:System.Windows.DragDrop.DoDragDrop%2A>, não é possível executar a operação de arrastar e soltar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como iniciar uma operação de arrastar e soltar do <xref:System.Windows.UIElement.MouseMove> manipulador de eventos de um <xref:System.Windows.Shapes.Ellipse> elemento para torná-la uma fonte. Os dados transferidos são a representação de cadeia de caracteres da elipse <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade. Os dados são passados para o <xref:System.Windows.DragDrop.DoDragDrop%2A> método como uma cadeia de caracteres e automaticamente é encapsulado em um <xref:System.Windows.DataObject>.  
+  
+ [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
+ [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dragSource" /> ou <paramref name="data" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DragEnterEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent DragEnterEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent DragEnterEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.DragEnterEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.DragEnter" /> evento anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.DragEnter> evento ocorre quando um objeto é arrastado para os limites do elemento.  
+  
+ Este campo identifica a versão bolha do <xref:System.Windows.DragDrop.DragEnter> evento. Para um identificador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.PreviewDragEnterEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragLeaveEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent DragLeaveEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent DragLeaveEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.DragLeaveEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.DragLeave" /> evento anexado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.DragLeave> evento ocorre quando um objeto é arrastado para fora dos limites do elemento.  
+  
+ Este campo identifica a versão bolha do <xref:System.Windows.DragDrop.DragLeave> evento. Para um identificador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.PreviewDragLeaveEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragOverEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent DragOverEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent DragOverEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.DragOverEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.DragOver" /> evento anexado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.DragOver> evento ocorre quando um objeto é arrastado sobre os limites do elemento.  
+  
+ Este campo identifica a versão bolha do <xref:System.Windows.DragDrop.DragOver> evento. Para um identificador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.PreviewDragOverEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent DropEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent DropEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.DropEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.Drop" /> evento anexado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.Drop> evento ocorre quando um objeto é descartado dentro dos limites de um elemento.  
+  
+ Este campo identifica a versão bolha do <xref:System.Windows.DragDrop.Drop> evento. Para um identificador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.PreviewDropEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GiveFeedbackEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent GiveFeedbackEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent GiveFeedbackEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.GiveFeedbackEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.GiveFeedback" /> evento anexado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.GiveFeedback> evento ocorrer durante uma operação de arrastar.  
+  
+ Este campo identifica a versão bolha do <xref:System.Windows.DragDrop.GiveFeedback> evento. Para um identificador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.PreviewGiveFeedbackEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewDragEnterEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewDragEnterEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewDragEnterEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewDragEnterEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.PreviewDragEnter" /> evento anexado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDragEnter> evento ocorre quando um objeto é arrastado para os limites do elemento.  
+  
+ Este campo identifica a versão de túnel do <xref:System.Windows.DragDrop.PreviewDragEnter> evento. Para um identificador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.DragEnterEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewDragLeaveEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewDragLeaveEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewDragLeaveEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewDragLeaveEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.PreviewDragLeave" /> evento anexado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDragLeave> evento ocorre quando um objeto é arrastado para fora dos limites do elemento.  
+  
+ Este campo identifica a versão de túnel do <xref:System.Windows.DragDrop.PreviewDragLeave> evento. Para um identificador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.DragLeaveEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewDragOverEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewDragOverEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewDragOverEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewDragOverEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.PreviewDragOver" /> evento anexado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDragOver> evento ocorre quando o objeto n é arrastado sobre os limites do elemento.  
+  
+ Este campo identifica a versão de túnel do <xref:System.Windows.DragDrop.PreviewDragOver> evento. Para um identificador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.DragOverEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewDropEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewDropEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewDropEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewDropEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.PreviewDrop" /> evento anexado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDrop> evento ocorre quando um objeto é descartado dentro dos limites de um elemento.  
+  
+ Este campo identifica a versão de túnel do <xref:System.Windows.DragDrop.PreviewDrop> evento. Para um identificador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.DropEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewGiveFeedbackEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewGiveFeedbackEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewGiveFeedbackEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewGiveFeedbackEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.PreviewGiveFeedback" /> evento anexado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewGiveFeedback> evento ocorrer durante uma operação de arrastar.  
+  
+ Este campo identifica a versão de túnel do <xref:System.Windows.DragDrop.PreviewGiveFeedback> evento. Para um identificador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.GiveFeedbackEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewQueryContinueDragEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent PreviewQueryContinueDragEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent PreviewQueryContinueDragEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.PreviewQueryContinueDragEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.PreviewQueryContinueDrag" /> evento anexado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> evento ocorrer durante uma operação de arrastar e soltar e permite que a fonte determinar se a operação de arrastar e soltar deve ser cancelada.  
+  
+ Este campo identifica a versão de túnel do <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> evento. Para um identificador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.QueryContinueDragEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryContinueDragEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent QueryContinueDragEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent QueryContinueDragEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDrop.QueryContinueDragEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.DragDrop.QueryContinueDrag" /> evento anexado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.QueryContinueDrag> evento ocorrer durante uma operação de arrastar e soltar e permite que a fonte determinar se a operação de arrastar e soltar deve ser cancelada.  
+  
+ Este campo identifica a versão bolha do <xref:System.Windows.DragDrop.QueryContinueDrag> evento. Para um identificador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.PreviewQueryContinueDragEvent>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDragEnterHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveDragEnterHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveDragEnterHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveDragEnterHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.DragEnter" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.DragEnter> evento ocorre quando um objeto é arrastado para os limites do elemento.  
+  
+ Este método Remove um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.DragEnter> evento. Para remover um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.RemovePreviewDragEnterHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDragLeaveHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveDragLeaveHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveDragLeaveHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveDragLeaveHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.DragLeave" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.DragLeave> evento ocorre quando um objeto é arrastado para fora dos limites do elemento.  
+  
+ Este método Remove um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.DragLeave> evento. Para remover um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.RemovePreviewDragLeaveHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDragOverHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveDragOverHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveDragOverHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveDragOverHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.DragOver" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.DragOver> evento ocorre quando um objeto é arrastado sobre os limites do elemento.  
+  
+ Este método Remove um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.DragOver> evento. Para remover um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.RemovePreviewDragOverHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDropHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveDropHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveDropHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveDropHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.Drop" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.Drop> evento ocorre quando um objeto é descartado dentro dos limites de um elemento.  
+  
+ Este método Remove um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.Drop> evento. Para remover um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.RemovePreviewDropHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveGiveFeedbackHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveGiveFeedbackHandler (System.Windows.DependencyObject element, System.Windows.GiveFeedbackEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveGiveFeedbackHandler(class System.Windows.DependencyObject element, class System.Windows.GiveFeedbackEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveGiveFeedbackHandler(System.Windows.DependencyObject,System.Windows.GiveFeedbackEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.GiveFeedbackEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.GiveFeedback" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.GiveFeedback> evento ocorrer durante uma operação de arrastar.  
+  
+ Este método Remove um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.GiveFeedback> evento. Para remover um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.RemovePreviewGiveFeedbackHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewDragEnterHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewDragEnterHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewDragEnterHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewDragEnterHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.PreviewDragEnter" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDragEnter> evento ocorre quando um objeto é arrastado para os limites do elemento.  
+  
+ Este método Remove um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewDragEnter> evento. Para remover um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.RemoveDragEnterHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewDragLeaveHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewDragLeaveHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewDragLeaveHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewDragLeaveHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.PreviewDragLeave" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDragLeave> evento ocorre quando um objeto é arrastado para fora dos limites do elemento.  
+  
+ Este método Remove um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewDragLeave> evento. Para remover um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.RemoveDragLeaveHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewDragOverHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewDragOverHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewDragOverHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewDragOverHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.PreviewDragOver" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDragOver> evento ocorre quando o objeto n é arrastado sobre os limites do elemento.  
+  
+ Este método Remove um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewDragOver> evento. Para remover um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.RemoveDragOverHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewDropHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewDropHandler (System.Windows.DependencyObject element, System.Windows.DragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewDropHandler(class System.Windows.DependencyObject element, class System.Windows.DragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewDropHandler(System.Windows.DependencyObject,System.Windows.DragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.DragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.PreviewDrop" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewDrop> evento ocorre quando um objeto é descartado dentro dos limites de um elemento.  
+  
+ Este método Remove um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewDrop> evento. Para remover um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.RemoveDropHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewGiveFeedbackHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewGiveFeedbackHandler (System.Windows.DependencyObject element, System.Windows.GiveFeedbackEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewGiveFeedbackHandler(class System.Windows.DependencyObject element, class System.Windows.GiveFeedbackEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewGiveFeedbackHandler(System.Windows.DependencyObject,System.Windows.GiveFeedbackEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.GiveFeedbackEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.PreviewGiveFeedback" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewGiveFeedback> evento ocorrer durante uma operação de arrastar.  
+  
+ Este método Remove um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewGiveFeedback> evento. Para remover um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.RemoveGiveFeedbackHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePreviewQueryContinueDragHandler">
+      <MemberSignature Language="C#" Value="public static void RemovePreviewQueryContinueDragHandler (System.Windows.DependencyObject element, System.Windows.QueryContinueDragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePreviewQueryContinueDragHandler(class System.Windows.DependencyObject element, class System.Windows.QueryContinueDragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemovePreviewQueryContinueDragHandler(System.Windows.DependencyObject,System.Windows.QueryContinueDragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.QueryContinueDragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.PreviewQueryContinueDrag" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> evento ocorrer durante uma operação de arrastar e soltar e permite que a fonte determinar se a operação de arrastar e soltar deve ser cancelada.  
+  
+ Este método Remove um manipulador para a versão de túnel do <xref:System.Windows.DragDrop.PreviewQueryContinueDrag> evento. Para remover um manipulador para a versão bolha desse evento, consulte <xref:System.Windows.DragDrop.RemoveQueryContinueDragHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveQueryContinueDragHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveQueryContinueDragHandler (System.Windows.DependencyObject element, System.Windows.QueryContinueDragEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveQueryContinueDragHandler(class System.Windows.DependencyObject element, class System.Windows.QueryContinueDragEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragDrop.RemoveQueryContinueDragHandler(System.Windows.DependencyObject,System.Windows.QueryContinueDragEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.QueryContinueDragEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência (um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />) do qual remover o manipulador de eventos.</param>
+        <param name="handler">Um representante que referencia o método do manipulador a ser removido.</param>
+        <summary>Remove um <see cref="E:System.Windows.DragDrop.QueryContinueDrag" /> manipulador de eventos de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DragDrop.QueryContinueDrag> evento ocorrer durante uma operação de arrastar e soltar e permite que a fonte determinar se a operação de arrastar e soltar deve ser cancelada.  
+  
+ Este método Remove um manipulador para a versão de bolha do <xref:System.Windows.DragDrop.QueryContinueDrag> evento. Para remover um manipulador para a versão de túnel desse evento, consulte <xref:System.Windows.DragDrop.RemovePreviewQueryContinueDragHandler%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

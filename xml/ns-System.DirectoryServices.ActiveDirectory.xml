@@ -1,0 +1,19 @@
+<Namespace Name="System.DirectoryServices.ActiveDirectory">
+  <Docs>
+    <summary>O <see cref="N:System.DirectoryServices.ActiveDirectory" /> namespace fornece tarefas de serviços de um modelo de objeto de abstração de nível alto que se baseia em torno do Microsoft Active Directory. Os conceitos de serviço do Active Directory, como a floresta, domínio, site, sub-rede, partição e esquema fazem parte do modelo de objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DirectoryServices.ActiveDirectory> namespace é usado para automatizar tarefas de gerenciamento do Active Directory. <xref:System.DirectoryServices.ActiveDirectory>não é usado para acessar os dados que residem dentro do Active Directory ou qualquer outro serviço de diretório. O <xref:System.DirectoryServices> namespace deve ser usado para essa finalidade.  
+  
+ O <xref:System.DirectoryServices.ActiveDirectory> namespace seja destinado ao uso por desenvolvedores de aplicativos que estão familiarizados com a programação do .NET Framework com Visual Basic .NET ou c#. Conhecimento de programação de serviços de diretório também é útil.  
+  
+ <xref:System.DirectoryServices.ActiveDirectory>faz parte do [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] e tem suporte em qualquer sistema operacional que [!INCLUDE[vsprvsext](~/includes/vsprvsext-md.md)] é compatível com.  
+  
+ Muitas das classes, métodos e propriedades no <xref:System.DirectoryServices.ActiveDirectory> namespace, use o <xref:System.Security.Permissions.SecurityAction.LinkDemand> opção de segurança de acesso de código. Isso significa que a demanda de segurança de acesso do código só ocorre durante a compilação just-in-time e que a demanda é executada somente no assembly de chamada e não a pilha de chamadas inteira. Por isso, os chamadores não devem transmitir objetos criados a partir esse namespace em tempo de execução de código não confiável.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

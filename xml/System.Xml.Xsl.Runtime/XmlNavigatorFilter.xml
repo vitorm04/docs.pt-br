@@ -1,0 +1,255 @@
+<Type Name="XmlNavigatorFilter" FullName="System.Xml.Xsl.Runtime.XmlNavigatorFilter">
+  <TypeSignature Language="C#" Value="public abstract class XmlNavigatorFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlNavigatorFilter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.Runtime.XmlNavigatorFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlXml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <see langword="XmlNavigatorFilter" />Fornece uma abstração de filtragem flexível <see cref="T:System.Xml.XPath.XPathNavigator" />. Os chamadores não souber o tipo de filtragem ocorrerá; eles simplesmente chamam <see cref="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToContent(System.Xml.XPath.XPathNavigator)" /> ou <see cref="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowingSibling(System.Xml.XPath.XPathNavigator)" />. A implementação do filtro invoca a operação apropriada no <see cref="T:System.Xml.XPath.XPathNavigator" /> para ignorar nós filtrados.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlNavigatorFilter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Fornece uma abstração de filtragem flexível <see cref="T:System.Xml.XPath.XPathNavigator" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsFiltered">
+      <MemberSignature Language="C#" Value="public abstract bool IsFiltered (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsFiltered(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.IsFiltered(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Uma instância da classe <see cref="T:System.Xml.XPath.XPathNavigator" />.</param>
+        <summary>Retornar <see langword="true" /> se o navegador atual do nó corresponde a condição de filtro.</summary>
+        <returns>
+          <see langword="true" />Se o nó atual corresponder a condição, caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToContent">
+      <MemberSignature Language="C#" Value="public abstract bool MoveToContent (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveToContent(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToContent(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Uma instância da classe <see cref="T:System.Xml.XPath.XPathNavigator" />.</param>
+        <summary>Reposiciona o navegador para o atributo ou o primeiro nó de conteúdo correspondente e ignora nós filtrados. Se não houver nenhum nó correspondente, o navegador não move e o método retornará false.</summary>
+        <returns>
+          <see langword="true" />Se o navegador é reposicionado em um elemento filho com um nome correspondente, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma classe abstrata e o filtro, como um nome de elemento, usado para reposicionar o navegador não está definido por essa classe, mas pela classe derivada dessa classe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToFollowing">
+      <MemberSignature Language="C#" Value="public abstract bool MoveToFollowing (System.Xml.XPath.XPathNavigator navigator, System.Xml.XPath.XPathNavigator navigatorEnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveToFollowing(class System.Xml.XPath.XPathNavigator navigator, class System.Xml.XPath.XPathNavigator navigatorEnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowing(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="navigatorEnd" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Uma instância do <see cref="T:System.Xml.XPath.XPathNavigator" /> classe que identifica o início do intervalo durante o qual a navegação pode mover.</param>
+        <param name="navigatorEnd">Uma instância do <see cref="T:System.Xml.XPath.XPathNavigator" /> classe que identifica o fim do intervalo durante o qual a navegação pode mover.</param>
+        <summary>Reposiciona o navegador para o seguinte nó de conteúdo correspondente ou um atributo e ignora nós filtrados. Se não houver nenhum nó correspondente, o navegador não move e o método retornará false.</summary>
+        <returns>
+          <see langword="true" />Se o navegador é reposicionado no próximo elemento com um nome correspondente, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma classe abstrata e o filtro, como um nome de elemento, usado para reposicionar o navegador não está definido por essa classe, mas pela classe derivada dessa classe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToFollowingSibling">
+      <MemberSignature Language="C#" Value="public abstract bool MoveToFollowingSibling (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveToFollowingSibling(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToFollowingSibling(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Uma instância da classe <see cref="T:System.Xml.XPath.XPathNavigator" />.</param>
+        <summary>Reposiciona o navegador para o nó de conteúdo correspondente do irmão ou descendentes e ignora nós filtrados. Se não houver nenhum nó correspondente, o navegador não move e o método retornará false.</summary>
+        <returns>
+          <see langword="true" />Se o navegador é reposicionado no próximo irmão do elemento com um nome correspondente, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma classe abstrata e o filtro, como um nome de elemento, usado para reposicionar o navegador não está definido por essa classe, mas pela classe derivada dessa classe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToNextContent">
+      <MemberSignature Language="C#" Value="public abstract bool MoveToNextContent (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveToNextContent(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToNextContent(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Uma instância da classe <see cref="T:System.Xml.XPath.XPathNavigator" />.</param>
+        <summary>Reposiciona o navegador para o próximo nó de conteúdo correspondente ou um atributo e ignora nós filtrados. Se não houver nenhum nó correspondente, o navegador não move e o método retornará false.</summary>
+        <returns>
+          <see langword="true" />Se o navegador é reposicionado no próximo elemento filho com um nome correspondente, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma classe abstrata e o filtro, como um nome de elemento, usado para reposicionar o navegador não está definido por essa classe, mas pela classe derivada dessa classe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveToPreviousSibling">
+      <MemberSignature Language="C#" Value="public abstract bool MoveToPreviousSibling (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveToPreviousSibling(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlNavigatorFilter.MoveToPreviousSibling(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">Uma instância da classe <see cref="T:System.Xml.XPath.XPathNavigator" />.</param>
+        <summary>Reposiciona o navegador para o nó de irmão anterior correspondente e ignora nós filtrados. Se não houver nenhum nó correspondente, o navegador não move e o método retornará false.</summary>
+        <returns>
+          <see langword="true" />Se o navegador é reposicionado no irmão anterior do elemento com um nome correspondente, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma classe abstrata e o filtro, como um nome de elemento, usado para reposicionar o navegador não está definido por essa classe, mas pela classe derivada dessa classe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,959 @@
+<Type Name="TextInfo" FullName="System.Globalization.TextInfo">
+  <TypeSignature Language="C#" Value="public class TextInfo : ICloneable, System.Runtime.Serialization.IDeserializationCallback" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TextInfo extends System.Object implements class System.ICloneable, class System.Runtime.Serialization.IDeserializationCallback" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.TextInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IDeserializationCallback</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define as propriedades e comportamentos do texto, como maiúsculas e minúsculas, que são específicos para um sistema de escrita.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um sistema de escrita é a coleção de scripts e ortográficas regras necessárias para representar o idioma como texto. O <xref:System.Globalization.TextInfo> classe representa um sistema de escrita.  
+  
+ O aplicativo deve usar o <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> propriedade para obter o <xref:System.Globalization.TextInfo> objeto para um determinado <xref:System.Globalization.CultureInfo> objeto. Se uma decisão de segurança depende de uma comparação de cadeia de caracteres ou uma operação de alteração de caso, o aplicativo deve usar o <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> propriedade do objeto retornado pelo <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> propriedade para garantir que o comportamento da operação é consistente, independentemente das configurações de cultura do sistema operacional.  
+  
+## <a name="overrides"></a>Substituições  
+ O usuário pode usar a parte de opções regionais e de idioma do painel de controle para substituir os valores associados com a cultura atual do Windows. Por exemplo, o usuário pode escolher para exibir a data em um formato diferente ou usar uma moeda diferente do padrão para a cultura. Se o <xref:System.Globalization.CultureInfo.UseUserOverride%2A?displayProperty=nameWithType> está definida como `true`, os valores de propriedade dos objetos retornados pelo <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>, <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType>, e <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> propriedades também são recuperadas das configurações de usuário. Se as configurações do usuário são incompatíveis com a cultura associada com o <xref:System.Globalization.CultureInfo>, por exemplo, se o calendário selecionado não é um do <xref:System.Globalization.CultureInfo.OptionalCalendars%2A>, os resultados dos métodos e os valores das propriedades são indefinidos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ANSICodePage">
+      <MemberSignature Language="C#" Value="public virtual int ANSICodePage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ANSICodePage" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.TextInfo.ANSICodePage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a página de código do ANSI (American National Standards Institute) usada pelo sistema de escrita representado pelo <see cref="T:System.Globalization.TextInfo" /> atual.</summary>
+        <value>A página de código do ANSI usada pelo sistema de escrita representado pelo <see cref="T:System.Globalization.TextInfo" /> atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextInfo.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto que é uma cópia do atual <see cref="T:System.Globalization.TextInfo" /> objeto.</summary>
+        <returns>Uma nova instância da <see cref="T:System.Object" /> que é o clone memberwise do atual <see cref="T:System.Globalization.TextInfo" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O novo clone memberwise não é somente leitura.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Globalization.TextInfo.Clone%2A> e <xref:System.Globalization.TextInfo.ReadOnly%2A> métodos.  
+  
+ [!code-csharp[sys.glob.textinfo.clone#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.textinfo.clone/cs/ro.cs#1)]
+ [!code-vb[sys.glob.textinfo.clone#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.textinfo.clone/vb/ro.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureName">
+      <MemberSignature Language="C#" Value="public string CultureName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CultureName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.TextInfo.CultureName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da cultura associado atual <see cref="T:System.Globalization.TextInfo" /> objeto.</summary>
+        <value>O nome de uma cultura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Globalization.TextInfo> objeto é criado a partir de uma cultura específica e o <xref:System.Globalization.TextInfo.CultureName%2A> propriedade retorna o nome da cultura.  
+  
+ O <xref:System.Globalization.TextInfo.CultureName%2A> propriedade sempre reflete uma cultura específica, em vez de uma cultura neutra. Se <xref:System.Globalization.CultureInfo.Name%2A?displayProperty=nameWithType> tem uma cultura neutra como seu valor, em seguida, correspondente <xref:System.Globalization.TextInfo.CultureName%2A> tem como seu valor de uma cultura específica arbitrária que usa o mesmo idioma. Por exemplo, o <xref:System.Globalization.CultureInfo.Name%2A> propriedade retorna "en" para a cultura neutra em inglês, mas correspondente <xref:System.Globalization.TextInfo.CultureName%2A> propriedade pode retornar "en-US" para a cultura do inglês (Estados Unidos). Se o <xref:System.Globalization.TextInfo> objeto está associado uma cultura específica em vez de uma cultura neutra, o valor de seu <xref:System.Globalization.TextInfo.CultureName%2A> propriedade sempre é idêntica de <xref:System.Globalization.CultureInfo.Name%2A> valor de propriedade de seus associados <xref:System.Globalization.CultureInfo> objeto.  
+  
+ Da mesma forma, o <xref:System.Globalization.TextInfo.CultureName%2A> propriedade nunca reflete uma classificação específica. Ele sempre corresponde a uma ordem de classificação padrão. Por exemplo, a ordem de classificação padrão para Espanhol (Espanha) é a ordem de classificação internacional. Se <xref:System.Globalization.CultureInfo.Name%2A?displayProperty=nameWithType> é, em seguida, es-ES_tradnl (espanhol com a ordem de classificação tradicional) correspondente <xref:System.Globalization.TextInfo.CultureName%2A> é es-ES (espanhol com a ordem de classificação internacional padrão).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EBCDICCodePage">
+      <MemberSignature Language="C#" Value="public virtual int EBCDICCodePage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EBCDICCodePage" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.TextInfo.EBCDICCodePage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a página de código Extended Binary Coded Decimal Interchange código (EBCDIC) usada pelo sistema de escrita representado pelo atual <see cref="T:System.Globalization.TextInfo" />.</summary>
+        <value>Página de código EBCDIC usada pelo sistema de escrita representado pelo atual <see cref="T:System.Globalization.TextInfo" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com o <see cref="T:System.Globalization.TextInfo" /> atual.</param>
+        <summary>Determina se o objeto especificado representa o mesmo sistema de escrita atual <see cref="T:System.Globalization.TextInfo" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> representa o mesmo sistema de escrita atual <see cref="T:System.Globalization.TextInfo" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash atual <see cref="T:System.Globalization.TextInfo" />, adequado para o hash de algoritmos e estruturas de dados, como uma tabela de hash.</summary>
+        <returns>Um código hash do <see cref="T:System.Globalization.TextInfo" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>.  
+  
+ Este método gera o mesmo código de hash de dois objetos são iguais de acordo com o <xref:System.Globalization.TextInfo.Equals%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.TextInfo.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o atual <see cref="T:System.Globalization.TextInfo" /> objeto é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o atual <see cref="T:System.Globalization.TextInfo" /> objeto é somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Globalization.TextInfo.IsReadOnly%2A> é de propriedade `true`, o aplicativo não é possível alterar qualquer uma das propriedades do atual <xref:System.Globalization.TextInfo> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRightToLeft">
+      <MemberSignature Language="C#" Value="public bool IsRightToLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRightToLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.TextInfo.IsRightToLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o atual <see cref="T:System.Globalization.TextInfo" /> objeto representa um sistema de escrita em que o texto flui da direita para a esquerda.</summary>
+        <value>
+          <see langword="true" />Se o texto flui da direita para a esquerda; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Globalization.TextInfo.IsRightToLeft%2A> propriedade indica a direção dominante do texto escrito e a posição relativa dos elementos de interface do usuário, como botões e barras de rolagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LCID">
+      <MemberSignature Language="C#" Value="public int LCID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LCID" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.TextInfo.LCID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de cultura para a cultura associada com o atual <see cref="T:System.Globalization.TextInfo" /> objeto.</summary>
+        <value>Um número que identifica a cultura do qual atual <see cref="T:System.Globalization.TextInfo" /> objeto foi criado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Certos predefinidas nomes de cultura e identificadores são usados por essa e outras classes no <xref:System.Globalization?displayProperty=nameWithType> namespace, bem como a API do Windows. As informações de cultura detalhadas são definidas no [tópico de referência de API de suporte de idioma nacional (NLS) no Go Global Developer Center](http://msdn.microsoft.com/goglobal/bb896001.aspx).  
+  
+ O <xref:System.Globalization.TextInfo.LCID%2A> propriedade sempre reflete um identificador de cultura específica em vez de um identificador de cultura neutra. Se <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType> é definido como um identificador de cultura neutra, correspondente <xref:System.Globalization.TextInfo.LCID%2A> tem como seu valor de um identificador de cultura específica arbitrário que usa o mesmo idioma. Por exemplo, o <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType> propriedade retorna 0x0009 para a cultura neutra em inglês, denominada "en". No entanto, o correspondente <xref:System.Globalization.TextInfo.LCID%2A> propriedade pode retornar 0x0409 para a cultura do inglês (Estados Unidos), denominada de en-US.  
+  
+ Da mesma forma, o <xref:System.Globalization.TextInfo.LCID%2A> propriedade sempre corresponde a uma ordem de classificação padrão e nunca reflete uma ordem de classificação específica. Por exemplo, a ordem de classificação padrão para Espanhol (Espanha) é a ordem de classificação internacional. Se <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType> é definido como "0x040A" (espanhol com a ordem de classificação tradicional), correspondente <xref:System.Globalization.TextInfo.LCID%2A> valor é "0x0C0A" (espanhol com a ordem de classificação internacional padrão).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListSeparator">
+      <MemberSignature Language="C#" Value="public virtual string ListSeparator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ListSeparator" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.TextInfo.ListSeparator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres que separa os itens em uma lista.</summary>
+        <value>A cadeia de caracteres que separa os itens em uma lista.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O valor em uma operação definida é null.</exception>
+        <exception cref="T:System.InvalidOperationException">Em uma operação de conjuntos, o objeto <see cref="T:System.Globalization.TextInfo" /> atual é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MacCodePage">
+      <MemberSignature Language="C#" Value="public virtual int MacCodePage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MacCodePage" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.TextInfo.MacCodePage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a página de código Macintosh usada pelo sistema de escrita representado pelo atual <see cref="T:System.Globalization.TextInfo" />.</summary>
+        <value>Página de código Macintosh usada pelo sistema de escrita representado pelo atual <see cref="T:System.Globalization.TextInfo" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OEMCodePage">
+      <MemberSignature Language="C#" Value="public virtual int OEMCodePage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OEMCodePage" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.TextInfo.OEMCodePage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a página de código do fabricante (OEM) usada pelo sistema de escrita representado pelo atual <see cref="T:System.Globalization.TextInfo" />.</summary>
+        <value>Página de código OEM usada pelo sistema de escrita representado pelo atual <see cref="T:System.Globalization.TextInfo" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public static System.Globalization.TextInfo ReadOnly (System.Globalization.TextInfo textInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Globalization.TextInfo ReadOnly(class System.Globalization.TextInfo textInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextInfo.ReadOnly(System.Globalization.TextInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.TextInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textInfo" Type="System.Globalization.TextInfo" />
+      </Parameters>
+      <Docs>
+        <param name="textInfo">Um objeto <see cref="T:System.Globalization.TextInfo" />.</param>
+        <summary>Retorna uma versão somente leitura do <see cref="T:System.Globalization.TextInfo" /> objeto.</summary>
+        <returns>O <see cref="T:System.Globalization.TextInfo" /> o objeto especificado pelo <paramref name="textInfo" /> parâmetro, se <paramref name="textInfo" /> é somente leitura.  
+  
+ -ou-  
+  
+ Um clone de memberwise somente leitura do <see cref="T:System.Globalization.TextInfo" /> o objeto especificado por <paramref name="textInfo" />, se <paramref name="textInfo" /> não é somente leitura.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Globalization.TextInfo.Clone%2A> e <xref:System.Globalization.TextInfo.ReadOnly%2A> métodos.  
+  
+ [!code-csharp[sys.glob.textinfo.clone#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.textinfo.clone/cs/ro.cs#1)]
+ [!code-vb[sys.glob.textinfo.clone#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.textinfo.clone/vb/ro.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textInfo" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.IDeserializationCallback.OnDeserialization">
+      <MemberSignature Language="C#" Value="void IDeserializationCallback.OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.IDeserializationCallback.OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextInfo.System#Runtime#Serialization#IDeserializationCallback#OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento de desserialização.</param>
+        <summary>Gera o evento de desserialização quando desserialização for concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToLower">
+      <MemberSignature Language="C#" Value="public virtual char ToLower (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance char ToLower(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextInfo.ToLower(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">O caractere a ser convertida em minúsculas.</param>
+        <summary>Converte o caractere especificado em minúsculas.</summary>
+        <returns>O caractere especificado é convertida em minúsculas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Semântica de maiusculas e minúsculas depende da cultura em uso. Para a cultura invariável, a semântica de maiusculas e minúsculas não é sensíveis à cultura. Para uma cultura específica, a semântica de maiusculas e minúsculas é confidencial para aquela cultura.  
+  
+ Se uma decisão de segurança depende de uma comparação de cadeia de caracteres ou uma operação de alteração de caso, o aplicativo deve usar o <xref:System.Globalization.CultureInfo.InvariantCulture%2A> para garantir que o comportamento é consistente, independentemente das configurações de cultura do sistema. No entanto, a cultura invariável deve ser usada apenas por processos que exigem resultados independente de cultura, como serviços do sistema. Caso contrário, ele produz resultados que podem ser linguisticamente incorretas ou inadequadas culturalmente.  
+  
+ Para obter mais informações sobre culturas, consulte <xref:System.Globalization.CultureInfo>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir altera o uso de maiusculas e minúsculas de uma cadeia de caracteres com base na cultura do inglês (Estados Unidos), com o nome de cultura en-US.  
+  
+ [!code-cpp[System.Globalization.TextInfo_casing#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/CPP/textinfo_casing.cpp#1)]
+ [!code-csharp[System.Globalization.TextInfo_casing#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/CS/textinfo_casing.cs#1)]
+ [!code-vb[System.Globalization.TextInfo_casing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/VB/textinfo_casing.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToLower">
+      <MemberSignature Language="C#" Value="public virtual string ToLower (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToLower(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextInfo.ToLower(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">A cadeia de caracteres para converter em minúsculas.</param>
+        <summary>Converte a cadeia de caracteres especificada em minúsculas.</summary>
+        <returns>Conversão de cadeia de caracteres especificada em minúsculas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres retornada pode ser diferente de comprimento da cadeia de entrada. Para obter mais informações sobre o uso de maiusculas, consulte o Unicode Technical relatório #21 "Mapeamentos de casos," publicado pelo Consórcio Unicode (http://www.unicode.org). A implementação atual preserva o comprimento da cadeia de caracteres. No entanto, esse comportamento não é garantido e pode mudar em futuras implementações.  
+  
+ Semântica de maiusculas e minúsculas depende da cultura em uso. Para a cultura invariável, a semântica de maiusculas e minúsculas não é sensíveis à cultura. Para uma cultura específica, a semântica de maiusculas e minúsculas é confidencial para aquela cultura.  
+  
+ Se uma decisão de segurança depende de uma comparação de cadeia de caracteres ou uma operação de alteração de caso, o aplicativo deve usar o <xref:System.Globalization.CultureInfo.InvariantCulture%2A> para garantir que o comportamento é consistente, independentemente das configurações de cultura do sistema. No entanto, a cultura invariável deve ser usada apenas por processos que exigem resultados independente de cultura, como serviços do sistema. Caso contrário, ele produz resultados que podem ser linguisticamente incorretas ou inadequadas culturalmente.  
+  
+ Para obter mais informações sobre culturas, consulte <xref:System.Globalization.CultureInfo>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir altera o uso de maiusculas e minúsculas de uma cadeia de caracteres com base na cultura do inglês (Estados Unidos), com o nome de cultura en-US.  
+  
+ [!code-cpp[System.Globalization.TextInfo_casing#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/CPP/textinfo_casing.cpp#1)]
+ [!code-csharp[System.Globalization.TextInfo_casing#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/CS/textinfo_casing.cs#1)]
+ [!code-vb[System.Globalization.TextInfo_casing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/VB/textinfo_casing.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="str" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o <see cref="T:System.Globalization.TextInfo" /> atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Globalization.TextInfo" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToTitleCase">
+      <MemberSignature Language="C#" Value="public string ToTitleCase (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToTitleCase(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextInfo.ToTitleCase(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">A cadeia de caracteres a ser convertida para capitalização de título.</param>
+        <summary>Converte a cadeia de caracteres especificada em capitalização de título (exceto palavras que têm todas as letras maiúsculas, consideradas acrônimos).</summary>
+        <returns>A cadeia de caracteres especificada é convertida em capitalização de título.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em geral, a capitalização de título converte o primeiro caractere de uma palavra em maiuscula e o restante dos caracteres em minúsculas. No entanto, esse método não fornece atualmente maiusculas e minúsculas adequadas para converter uma palavra que está totalmente em letras maiusculas, como um acrônimo. A tabela a seguir mostra a maneira como o método renderiza várias cadeias de caracteres.  
+  
+|Entrada|Linguagem|Resultado esperado|Resultado real|  
+|-----------|--------------|---------------------|-------------------|  
+|WAR e paz|Inglês|WAR e paz|WAR e paz|  
+|Por anhalter durch chip Galaxis|Alemão|Por Anhalter durch chip Galaxis|Por Anhalter Durch chip Galaxis|  
+|LES naufragés d'ythaq|Francês|LES Naufragés d'Ythaq|LES Naufragés D'ythaq|  
+  
+ Conforme ilustrado acima, o <xref:System.Globalization.TextInfo.ToTitleCase%2A> método fornece um comportamento de maiusculas e minúsculas arbitrário que não é necessariamente linguisticamente correto. Uma solução linguisticamente correta exigiria regras adicionais e o algoritmo atual é um pouco mais simples e rápida. Nós reservamos o direito de fazer essa API mais lento no futuro.  
+  
+ A implementação atual do <xref:System.Globalization.TextInfo.ToTitleCase%2A> método gera uma cadeia de caracteres de saída que tem o mesmo tamanho que a cadeia de caracteres de entrada. No entanto, esse comportamento não é garantido e pode alterar uma implementação futura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir altera o uso de maiusculas e minúsculas de uma cadeia de caracteres com base na cultura do inglês (Estados Unidos), com o nome de cultura en-US.  
+  
+ [!code-cpp[System.Globalization.TextInfo_casing#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/CPP/textinfo_casing.cpp#1)]
+ [!code-csharp[System.Globalization.TextInfo_casing#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/CS/textinfo_casing.cs#1)]
+ [!code-vb[System.Globalization.TextInfo_casing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/VB/textinfo_casing.vb#1)]  
+  
+ O exemplo a seguir passa cada cadeia de caracteres em uma matriz para o <xref:System.Globalization.TextInfo.ToTitleCase%2A> método. As cadeias de caracteres incluem cadeias de caracteres de título adequado como acrônimos. As cadeias de caracteres são convertidas em maiusculas/minúsculas usando as convenções de cultura en-US.  
+  
+ [!code-csharp[System.Globalization.TextInfo.ToTitleCase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.textinfo.totitlecase/cs/totitlecase2.cs#1)]
+ [!code-vb[System.Globalization.TextInfo.ToTitleCase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.textinfo.totitlecase/vb/totitlecase2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="str" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUpper">
+      <MemberSignature Language="C#" Value="public virtual char ToUpper (char c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance char ToUpper(char c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextInfo.ToUpper(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="c">O caractere a ser convertida em maiusculas.</param>
+        <summary>Converte o caractere especificado em maiusculas.</summary>
+        <returns>O caractere especificado é convertida em maiusculas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Semântica de maiusculas e minúsculas depende da cultura em uso. Para a cultura invariável, a semântica de maiusculas e minúsculas não é sensíveis à cultura. Para uma cultura específica, a semântica de maiusculas e minúsculas é confidencial para aquela cultura.  
+  
+ Se uma decisão de segurança depende de uma comparação de cadeia de caracteres ou uma operação de alteração de caso, o aplicativo deve usar o <xref:System.Globalization.CultureInfo.InvariantCulture%2A> para garantir que o comportamento é consistente, independentemente das configurações de cultura do sistema. No entanto, a cultura invariável deve ser usada apenas por processos que exigem resultados independente de cultura, como serviços do sistema. Caso contrário, ele produz resultados que podem ser linguisticamente incorretas ou inadequadas culturalmente.  
+  
+ Para obter mais informações sobre culturas, consulte <xref:System.Globalization.CultureInfo>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir altera o uso de maiusculas e minúsculas de uma cadeia de caracteres com base na cultura do inglês (Estados Unidos), com o nome de cultura en-US.  
+  
+ [!code-cpp[System.Globalization.TextInfo_casing#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/CPP/textinfo_casing.cpp#1)]
+ [!code-csharp[System.Globalization.TextInfo_casing#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/CS/textinfo_casing.cs#1)]
+ [!code-vb[System.Globalization.TextInfo_casing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/VB/textinfo_casing.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUpper">
+      <MemberSignature Language="C#" Value="public virtual string ToUpper (string str);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToUpper(string str) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.TextInfo.ToUpper(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="str" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="str">A cadeia de caracteres a ser convertida em maiusculas.</param>
+        <summary>Converte a cadeia de caracteres especificada em maiusculas.</summary>
+        <returns>A cadeia de caracteres especificada é convertida em maiusculas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres retornada pode ser diferente de comprimento da cadeia de entrada. Para obter mais informações sobre o uso de maiusculas, consulte o Unicode Technical relatório #21 "Mapeamentos de casos," publicado pelo Consórcio Unicode (http://www.unicode.org). A implementação atual preserva o comprimento da cadeia de caracteres. No entanto, esse comportamento não é garantido e pode mudar em futuras implementações.  
+  
+ Semântica de maiusculas e minúsculas depende da cultura em uso. Para a cultura invariável, a semântica de maiusculas e minúsculas não é sensíveis à cultura. Para uma cultura específica, a semântica de maiusculas e minúsculas é confidencial para aquela cultura.  
+  
+ Se uma decisão de segurança depende de uma comparação de cadeia de caracteres ou uma operação de alteração de caso, o aplicativo deve usar o <xref:System.Globalization.CultureInfo.InvariantCulture%2A> para garantir que o comportamento é consistente, independentemente das configurações de cultura do sistema. No entanto, a cultura invariável deve ser usada apenas por processos que exigem resultados independente de cultura, como serviços do sistema. Caso contrário, ele produz resultados que podem ser linguisticamente incorretas ou inadequadas culturalmente.  
+  
+ Para obter mais informações sobre culturas, consulte <xref:System.Globalization.CultureInfo>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir altera o uso de maiusculas e minúsculas de uma cadeia de caracteres com base na cultura do inglês (Estados Unidos), com o nome de cultura en-US.  
+  
+ [!code-cpp[System.Globalization.TextInfo_casing#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/CPP/textinfo_casing.cpp#1)]
+ [!code-csharp[System.Globalization.TextInfo_casing#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/CS/textinfo_casing.cs#1)]
+ [!code-vb[System.Globalization.TextInfo_casing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.TextInfo_casing/VB/textinfo_casing.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="str" /> é nulo.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

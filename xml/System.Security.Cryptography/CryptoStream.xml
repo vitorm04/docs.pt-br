@@ -1,0 +1,841 @@
+<Type Name="CryptoStream" FullName="System.Security.Cryptography.CryptoStream">
+  <TypeSignature Language="C#" Value="public class CryptoStream : System.IO.Stream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CryptoStream extends System.IO.Stream implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CryptoStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Stream</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define uma transmissão que liga fluxos de dados a transformações criptográficas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O common language runtime usa um design orientado por fluxo para a criptografia. O núcleo desse design é <xref:System.Security.Cryptography.CryptoStream>. Qualquer criptografia os objetos que implementam <xref:System.Security.Cryptography.CryptoStream> podem ser encadeadas junto com todos os objetos que implementam <xref:System.IO.Stream>, portanto, a saída transmitidos de um objeto pode ser alimentada para a entrada de outro objeto. O resultado intermediário (a saída do primeiro objeto) não precisam ser armazenados separadamente.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente chamando seu <xref:System.Security.Cryptography.CryptoStream.Clear%2A> método, que por sua vez chama seu <xref:System.IDisposable> implementação. Para descartar o tipo diretamente, chame seu <xref:System.Security.Cryptography.CryptoStream.Clear%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ Você sempre deve fechar seu <xref:System.Security.Cryptography.CryptoStream> objeto depois que você usá-lo ao chamar o <xref:System.Security.Cryptography.CryptoStream.Clear%2A> método.  Isso libera o fluxo subjacente e faz com que todos os demais blocos de dados a serem processadas pelo <xref:System.Security.Cryptography.CryptoStream> objeto.  No entanto, se ocorrer uma exceção antes de chamar o <xref:System.IO.Stream.Close%2A> método, o <xref:System.Security.Cryptography.CryptoStream> objeto não pode ser fechado.  Para garantir que o <xref:System.IO.Stream.Close%2A> sempre método é chamado, coloque a chamada para o <xref:System.Security.Cryptography.CryptoStream.Clear%2A> método dentro de `finally` bloco de um `try` / `catch` instrução.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.Security.Cryptography.CryptoStream> para criptografar uma cadeia de caracteres. Esse método usa <xref:System.Security.Cryptography.RijndaelManaged> classe com especificado <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> e vetor de inicialização (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>).  
+  
+ [!code-csharp[Cryptography.Rijndael.Create.File#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.rijndael.create.file/cs/fileexample.cs#1)]
+ [!code-vb[Cryptography.Rijndael.Create.File#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.rijndael.create.file/vb/fileexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptoStream (System.IO.Stream stream, System.Security.Cryptography.ICryptoTransform transform, System.Security.Cryptography.CryptoStreamMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Security.Cryptography.ICryptoTransform transform, valuetype System.Security.Cryptography.CryptoStreamMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.#ctor(System.IO.Stream,System.Security.Cryptography.ICryptoTransform,System.Security.Cryptography.CryptoStreamMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="transform" Type="System.Security.Cryptography.ICryptoTransform" />
+        <Parameter Name="mode" Type="System.Security.Cryptography.CryptoStreamMode" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo no qual a transformação de criptografia será executada.</param>
+        <param name="transform">A transformação criptográfica que devem ser executadas no fluxo.</param>
+        <param name="mode">Um dos valores de <see cref="T:System.Security.Cryptography.CryptoStreamMode" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.CryptoStream" /> com um fluxo de dados de destino, a transformação a ser usada e o modo do fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer objeto derivado de <xref:System.IO.Stream> pode ser passado para o `stream` parâmetro. Qualquer objeto que implementa <xref:System.Security.Cryptography.ICryptoTransform> (como <xref:System.Security.Cryptography.HashAlgorithm>) pode ser passado para o `transform` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" /> é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptoStream (System.IO.Stream stream, System.Security.Cryptography.ICryptoTransform transform, System.Security.Cryptography.CryptoStreamMode mode, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Security.Cryptography.ICryptoTransform transform, valuetype System.Security.Cryptography.CryptoStreamMode mode, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.#ctor(System.IO.Stream,System.Security.Cryptography.ICryptoTransform,System.Security.Cryptography.CryptoStreamMode,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="transform" Type="System.Security.Cryptography.ICryptoTransform" />
+        <Parameter Name="mode" Type="System.Security.Cryptography.CryptoStreamMode" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">To be added.</param>
+        <param name="transform">To be added.</param>
+        <param name="mode">To be added.</param>
+        <param name="leaveOpen">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRead" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CryptoStream.CanRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Security.Cryptography.CryptoStream" /> atual é legível.</summary>
+        <value>
+          <see langword="true" /> se o fluxo atual é legível; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSeek">
+      <MemberSignature Language="C#" Value="public override bool CanSeek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSeek" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CryptoStream.CanSeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se você pode pesquisar em atual <see cref="T:System.Security.Cryptography.CryptoStream" />.</summary>
+        <value>Sempre <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Busca não está habilitado em um <xref:System.Security.Cryptography.CryptoStream>, portanto, esse método sempre retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWrite">
+      <MemberSignature Language="C#" Value="public override bool CanWrite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWrite" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CryptoStream.CanWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o atual <see cref="T:System.Security.Cryptography.CryptoStream" /> é gravável.</summary>
+        <value>
+          <see langword="true" />Se o fluxo atual é gravável; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Security.Cryptography.CryptoStream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método envolve uma chamada para o tipo <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementação.  
+  
+ Chamando `Dispose` permite que os recursos usados pelo <xref:System.Security.Cryptography.CryptoStream> para ser realocada para outros fins. Para obter mais informações sobre `Dispose`, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Security.Cryptography.CryptoStream" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método `Finalize`. `Dispose()`invoca o protegido `Dispose(Boolean)` método com o parâmetro descartando definido como `true`. `Finalize`invoca `Dispose` com disposing definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Security.Cryptography.CryptoStream> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tenha cuidado em não para referenciar objetos que foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see langword="Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os buffers para o fluxo atual e faz com que todos os dados armazenados em buffer a ser gravado no dispositivo subjacente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Liberando o fluxo não liberar seu codificador subjacente, a menos que você chamar explicitamente <xref:System.Security.Cryptography.CryptoStream.Flush%2A> ou <xref:System.IO.Stream.Close%2A>. Configuração <xref:System.IO.StreamWriter.AutoFlush%2A> para `true` significa que os dados serão liberados do buffer no fluxo, mas o estado de codificador não será liberado. Isso permite que o codificador deve manter o estado (parcial caracteres) para que ele pode codificar o próximo bloco de caracteres corretamente. Este cenário afeta UTF8 e UTF7 onde determinados caracteres podem ser codificados somente depois que o codificador recebe adjacentes ou mais caracteres.  
+  
+> [!NOTE]
+>  Você deve chamar o a <xref:System.IO.Stream.Close%2A> método ou o <xref:System.Security.Cryptography.CryptoStream.FlushFinalBlock%2A> método para concluir a liberação de buffer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task FlushAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task FlushAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.FlushAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">O token a se monitorar para solicitações de cancelamento. O valor padrão é <see cref="P:System.Threading.CancellationToken.None" />.</param>
+        <summary>Limpa todos os buffers para o fluxo atual de forma assíncrona, faz com que todos os dados armazenados em buffer a ser gravado no dispositivo subjacente e monitora solicitações de cancelamento.</summary>
+        <returns>Uma tarefa que representa a operação de liberação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve iniciar sua chamada para <xref:System.Security.Cryptography.CryptoStream.FlushAsync%2A> com o `await` (c#) ou `Await` operador (Visual Basic) para suspender a execução do método até que a tarefa seja concluída. Para obter mais informações, consulte [programação assíncrona com Async e Await](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
+  
+ Se a operação foi cancelada antes da conclusão, a tarefa retornada contém o <xref:System.Threading.Tasks.TaskStatus.Canceled> valor para o <xref:System.Threading.Tasks.Task.Status%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O fluxo foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushFinalBlock">
+      <MemberSignature Language="C#" Value="public void FlushFinalBlock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FlushFinalBlock() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.FlushFinalBlock" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza a fonte de dados ou o repositório subjacente com o estado atual do buffer e, em seguida, limpa o buffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.IO.Stream.Close%2A> chamará o método <xref:System.Security.Cryptography.CryptoStream.FlushFinalBlock%2A>. Se você não chama <xref:System.IO.Stream.Close%2A>, chame <xref:System.Security.Cryptography.CryptoStream.FlushFinalBlock%2A> para concluir a liberação de buffer. Chamar <xref:System.Security.Cryptography.CryptoStream.FlushFinalBlock%2A> somente quando todas as atividades de fluxo for concluída.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">A chave está corrompida, o que pode causar um preenchimento inválido no fluxo.</exception>
+        <exception cref="T:System.NotSupportedException">O fluxo atual não é gravável.  
+  
+ -ou-  
+  
+ O bloco final já foi transformado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFlushedFinalBlock">
+      <MemberSignature Language="C#" Value="public bool HasFlushedFinalBlock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasFlushedFinalBlock" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CryptoStream.HasFlushedFinalBlock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o bloco de buffer final foi gravado para o fluxo subjacente.</summary>
+        <value>
+          <see langword="true" />Se o bloco final foi liberado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida `true` quando o <xref:System.Security.Cryptography.CryptoStream.FlushFinalBlock%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public override long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CryptoStream.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho do fluxo em bytes.</summary>
+        <value>Não há suporte para essa propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade existe somente para dar suporte a herança de <xref:System.IO.Stream>e não pode ser usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para essa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public override long Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Position" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CryptoStream.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição dentro do fluxo atual.</summary>
+        <value>Não há suporte para essa propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade existe somente para dar suporte a herança de <xref:System.IO.Stream>e não pode ser usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para essa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read([out] unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz de bytes. Um máximo de <c>contagem</c> bytes são lidos do fluxo atual e armazenados em <c>buffer</c>.</param>
+        <param name="offset">O deslocamento de byte no <c>buffer</c> no qual começar a armazenar os dados lidos do fluxo atual.</param>
+        <param name="count">O número máximo de bytes a serem lidos no fluxo atual.</param>
+        <summary>Lê uma sequência de bytes do fluxo atual e avança a posição no fluxo até o número de bytes lidos.</summary>
+        <returns>O número total de bytes lidos do buffer. Isso pode ser menor que o número de bytes solicitado se que muitos bytes não estão disponíveis no momento ou zero se o fim do fluxo foi atingido.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Security.Cryptography.CryptoStreamMode" /> associado ao objeto <see cref="T:System.Security.Cryptography.CryptoStream" /> atual não corresponde ao fluxo subjacente.  Por exemplo, essa exceção é gerada ao usar <see cref="F:System.Security.Cryptography.CryptoStreamMode.Read" /> com um fluxo subjacente que é somente gravação.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="offset" /> é menor que zero.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">A soma dos parâmetros <paramref name="count" /> e <paramref name="offset" /> é maior do que o tamanho do buffer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;int32&gt; ReadAsync(unsigned int8[] buffer, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer no qual os dados serão gravados.</param>
+        <param name="offset">O deslocamento de byte no <c>buffer</c> no qual começar a gravar dados no fluxo.</param>
+        <param name="count">O número máximo de bytes a serem lidos.</param>
+        <param name="cancellationToken">O token a se monitorar para solicitações de cancelamento. O valor padrão é <see cref="P:System.Threading.CancellationToken.None" />.</param>
+        <summary>Lê uma sequência de bytes do fluxo atual de forma assíncrona, avança a posição dentro do fluxo pelo número de bytes lidos e monitora solicitações de cancelamento.</summary>
+        <returns>Uma tarefa que representa a operação de leitura assíncrona. O valor do objeto de tarefa <paramref name="TResult" /> parâmetro contém o número total de bytes lidos no buffer. O resultado pode ser menor que o número de bytes solicitado se o número de bytes disponíveis atualmente é menor que o número solicitado, ou pode ser 0 (zero) se o fim do fluxo foi atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve iniciar sua chamada para <xref:System.Security.Cryptography.CryptoStream.ReadAsync%2A> com o `await` (c#) ou `Await` operador (Visual Basic) para suspender a execução do método até que a tarefa seja concluída. Para obter mais informações, consulte [programação assíncrona com Async e Await](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
+  
+ Se a operação foi cancelada antes da conclusão, a tarefa retornada contém o <xref:System.Threading.Tasks.TaskStatus.Canceled> valor para o <xref:System.Threading.Tasks.Task.Status%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ArgumentException">A soma de <paramref name="offset" /> e <paramref name="count" /> é maior que o tamanho do buffer.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para leitura no fluxo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O fluxo está sendo usado no momento por uma operação de leitura anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public override int ReadByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.ReadByte" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public override long Seek (long offset, System.IO.SeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 Seek(int64 offset, valuetype System.IO.SeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Um deslocamento de bytes relativo a <c>origem</c> parâmetro.</param>
+        <param name="origin">Um <see cref="T:System.IO.SeekOrigin" /> que indica o ponto de referência usado para obter a nova posição do objeto.</param>
+        <summary>Define a posição no fluxo atual.</summary>
+        <returns>Não há suporte para o método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método existe apenas para oferecer suporte a herança de <xref:System.IO.Stream>e não pode ser usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para o método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLength">
+      <MemberSignature Language="C#" Value="public override void SetLength (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLength(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.SetLength(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O tamanho desejado do fluxo atual em bytes.</param>
+        <summary>Define o comprimento do fluxo atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade existe somente para dar suporte a herança de <xref:System.IO.Stream>e não pode ser usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Essa propriedade existe somente para dar suporte a herança de <see cref="T:System.IO.Stream" />e não pode ser usado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz de bytes. Esse método copia <c>contagem</c> bytes do <c>buffer</c> para o fluxo atual.</param>
+        <param name="offset">O deslocamento de byte no <c>buffer</c> no qual começar a copiar bytes para o fluxo atual.</param>
+        <param name="count">O número de bytes a serem gravados no fluxo atual.</param>
+        <summary>Grava assincronamente uma sequência de bytes no <see cref="T:System.Security.Cryptography.CryptoStream" /> atual e avança a posição atual no fluxo pelo número de bytes gravados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Security.Cryptography.CryptoStreamMode" /> associado ao objeto <see cref="T:System.Security.Cryptography.CryptoStream" /> atual não corresponde ao fluxo subjacente.  Por exemplo, essa exceção é gerada ao usar <see cref="F:System.Security.Cryptography.CryptoStreamMode.Write" /> com um fluxo subjacente que é somente leitura.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="offset" /> é menor que zero.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">A soma dos parâmetros <paramref name="count" /> e <paramref name="offset" /> é maior do que o tamanho do buffer.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(unsigned int8[] buffer, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer do qual os dados serão gravados.</param>
+        <param name="offset">O deslocamento de bytes baseado em zero em <c>buffer</c> da qual iniciar a gravação de bytes no fluxo.</param>
+        <param name="count">O número máximo de bytes a serem gravados.</param>
+        <param name="cancellationToken">O token a se monitorar para solicitações de cancelamento. O valor padrão é <see cref="P:System.Threading.CancellationToken.None" />.</param>
+        <summary>Grava uma sequência de bytes no fluxo atual de forma assíncrona, avança a posição atual dentro do fluxo pelo número de bytes gravados e monitora solicitações de cancelamento.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve iniciar sua chamada para <xref:System.Security.Cryptography.CryptoStream.WriteAsync%2A> com o `await` (c#) ou `Await` operador (Visual Basic) para suspender a execução do método até que a tarefa seja concluída. Para obter mais informações, consulte [programação assíncrona com Async e Await](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
+  
+ Se a operação foi cancelada antes da conclusão, a tarefa retornada contém o <xref:System.Threading.Tasks.TaskStatus.Canceled> valor para o <xref:System.Threading.Tasks.Task.Status%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ArgumentException">A soma de <paramref name="offset" /> e <paramref name="count" /> é maior que o tamanho do buffer.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para gravação no fluxo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O fluxo está em uso no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public override void WriteByte (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteByte(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptoStream.WriteByte(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

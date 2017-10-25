@@ -1,0 +1,379 @@
+<Type Name="OperationBehaviorAttribute" FullName="System.ServiceModel.OperationBehaviorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class OperationBehaviorAttribute : Attribute, System.ServiceModel.Description.IOperationBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OperationBehaviorAttribute extends System.Attribute implements class System.ServiceModel.Description.IOperationBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.OperationBehaviorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IOperationBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o comportamento de execução local de um método de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationBehaviorAttribute> atributo para indicar qual comportamento de execução da operação específica tem a operação quando executado. (Para especificar o comportamento de execução no nível de serviço, use o <xref:System.ServiceModel.ServiceBehaviorAttribute> atributo.)  
+  
+> [!NOTE]
+>  Você também pode usar <xref:System.ServiceModel.OperationBehaviorAttribute> para configurar uma operação do contrato de retorno de chamada em um aplicativo cliente duplex. Quando usado em uma operação de retorno de chamada, o <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A> propriedade deve ser <xref:System.ServiceModel.ReleaseInstanceMode.None> ou um <xref:System.InvalidOperationException> exceção em tempo de execução.  
+  
+ O <xref:System.ServiceModel.OperationBehaviorAttribute> atributo é um [!INCLUDE[indigo1](~/includes/indigo1-md.md)] recurso de modelo de programação que habilita os recursos comuns que os desenvolvedores caso contrário devem implementar a mesmos.  
+  
+-   O <xref:System.ServiceModel.OperationBehaviorAttribute.AutoDisposeParameters%2A> propriedade controla se os objetos de parâmetro passados para uma operação são descartados quando a operação for concluída.  
+  
+-   O <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> propriedade especifica se a transação na qual o método é executado é confirmada automaticamente se nenhuma exceção não tratada ocorrer.  
+  
+-   O <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> propriedade especifica se um método deve ser executado dentro de uma transação.  
+  
+-   O <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propriedade especifica se a operação de serviço deve, ou podem não pode representar a identidade do chamador.  
+  
+-   O <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A> propriedade especifica quando objetos de serviço são reciclados durante o processo de invocação de método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma operação que é executada em uma transação distribuída obrigatória. O <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> propriedade indica que o método é executado na transação do chamador e o <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> propriedade indica que se nenhuma exceção não tratada ocorrer, a transação é confirmada automaticamente. Se uma exceção não tratada ocorrer, a transação será anulada.  
+  
+ [!code-csharp[OperationBehaviorAttribute_Transaction#2](~/samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_transaction/cs/services.cs#2)]
+ [!code-vb[OperationBehaviorAttribute_Transaction#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_transaction/vb/services.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperationBehaviorAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OperationBehaviorAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.OperationBehaviorAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão cria uma instância da classe com os seguintes padrões:  
+  
+-   A propriedade <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> é `true`.  
+  
+-   A propriedade <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> é `false`.  
+  
+-   A propriedade <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A> é <xref:System.ServiceModel.ReleaseInstanceMode.None>.  
+  
+-   O <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> é <xref:System.ServiceModel.ImpersonationOption.NotAllowed>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoDisposeParameters">
+      <MemberSignature Language="C#" Value="public bool AutoDisposeParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoDisposeParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationBehaviorAttribute.AutoDisposeParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se os parâmetros devem ser descartados automaticamente.</summary>
+        <value>
+          <see langword="true" /> caso os parâmetros devam ser descartados automaticamente; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina se o serviço descarta todos os parâmetros descartáveis (parâmetros de entrada, saída ou referência) que foram criados ao processar uma mensagem. O valor padrão é `true`. Defina essa propriedade como `false` se você deseja impedir que o sistema de descarte de recursos e armazenam em cache se necessário.  
+  
+ Por exemplo, se <xref:System.ServiceModel.OperationBehaviorAttribute.AutoDisposeParameters%2A> é `false`, em seguida, o remetente é responsável para fechar o fluxo no lado de envio.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Impersonation">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ImpersonationOption Impersonation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.ImpersonationOption Impersonation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationBehaviorAttribute.Impersonation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ImpersonationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o nível de representação do chamador com suporte pela operação.</summary>
+        <value>Um dos valores de <see cref="T:System.ServiceModel.ImpersonationOption" />. O padrão é <see cref="F:System.ServiceModel.ImpersonationOption.NotAllowed" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propriedade (junto com uma configuração de associação que dá suporte à representação) para habilitar métodos especificados (aqueles marcados com o <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propriedade definida como <xref:System.ServiceModel.ImpersonationOption.Allowed> ou <xref:System.ServiceModel.ImpersonationOption.Required>) para executar sob a identidade do chamador. Para obter detalhes, incluindo como a representação é executada ao usar <xref:System.ServiceModel.ImpersonationOption.Allowed> junto com o <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ImpersonateCallerForAllOperations%2A?displayProperty=nameWithType> propriedade, consulte [delegação e representação](~/docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md) e [como: representar um cliente em um serviço](~/docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
+  
+> [!NOTE]
+>  Ao adicionar programaticamente um ponto de extremidade de serviço que executa representação, você deve usar uma da <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> métodos ou <xref:System.ServiceModel.Description.ContractDescription.GetContract%2A?displayProperty=nameWithType> método a carregar adequadamente o contrato para uma nova <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> objeto. Usar um arquivo de configuração não requer a nenhuma etapa adicional.  
+  
+ Pode haver situações específicas quando não há suporte para a representação. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Cenários sem suporte](~/docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código de serviço requer a representação, definindo o <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propriedade <xref:System.ServiceModel.ImpersonationOption.Required>.  
+  
+ [!code-csharp[OperationBehaviorAttribute_Impersonation#1](~/samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_impersonation/cs/services.cs#1)]
+ [!code-vb[OperationBehaviorAttribute_Impersonation#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_impersonation/vb/services.vb#1)]  
+  
+ O exemplo de código a seguir mostra o uso de <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> propriedade para definir as credenciais de aplicativo antes de invocar a operação que exija essas credenciais para representação de cliente.  
+  
+ [!code-csharp[OperationBehaviorAttribute_Impersonation#3](~/samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_impersonation/cs/client.cs#3)]
+ [!code-vb[OperationBehaviorAttribute_Impersonation#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_impersonation/vb/client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseInstanceMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ReleaseInstanceMode ReleaseInstanceMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.ReleaseInstanceMode ReleaseInstanceMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReleaseInstanceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica quando reciclar o objeto de serviço no curso de uma invocação de operação.</summary>
+        <value>Um dos valores de <see cref="T:System.ServiceModel.ReleaseInstanceMode" />. O padrão é <see cref="F:System.ServiceModel.ReleaseInstanceMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A> propriedade para especificar quando [!INCLUDE[indigo1](~/includes/indigo1-md.md)] se reciclar um objeto de serviço durante a execução de um método. O comportamento padrão é reciclar um objeto de serviço de acordo com o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> valor. Definindo o <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A> propriedade altera o comportamento padrão.  
+  
+ O <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A> não garante threads. Se você deve ter um novo objeto sem modificações quando seu serviço é executado, defina o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> propriedade <xref:System.ServiceModel.InstanceContextMode.PerCall>.  
+  
+ Em cenários de transação, o <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A> propriedade geralmente é usada para garantir que dados antigos associados ao objeto de serviço é limpo antes de processar uma chamada de método. Você também pode garantir que os objetos de serviço associados às transações sejam reciclados depois que a transação seja concluída com êxito, definindo o <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> propriedade `true`.  
+  
+ Você pode escolher os seguintes comportamentos:  
+  
+-   Recicle um objeto de serviço antes de uma operação é chamada.  
+  
+-   Recicle um objeto de serviço depois que uma operação é chamada.  
+  
+-   Recicle um objeto de serviço tanto antes e depois de uma operação é chamada.  
+  
+-   Nenhum comportamento de reciclagem.  
+  
+ Você também pode usar <xref:System.ServiceModel.OperationBehaviorAttribute> para configurar uma operação do contrato de retorno de chamada em um aplicativo cliente duplex. Quando usado em uma operação de retorno de chamada, o <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A> propriedade deve ser <xref:System.ServiceModel.ReleaseInstanceMode.None> ou um <xref:System.InvalidOperationException> exceção em tempo de execução.  
+  
+ Além disso, é importante observar que, se o serviço for criado, passando um objeto de serviço para o <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> construtor, o valor dessa propriedade é tratado como se fosse <xref:System.ServiceModel.ReleaseInstanceMode.None>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de <xref:System.ServiceModel.ReleaseInstanceMode> para reciclar os objetos de serviço antes e depois de uma chamada.  
+  
+ [!code-csharp[OBA.ReleaseInstanceMode#1](~/samples/snippets/csharp/VS_Snippets_CFX/oba.releaseinstancemode/cs/services.cs#1)]
+ [!code-vb[OBA.ReleaseInstanceMode#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/oba.releaseinstancemode/vb/services.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não é um dos valores <see cref="T:System.ServiceModel.ReleaseInstanceMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.AddBindingParameters (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.AddBindingParameters(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OperationBehaviorAttribute.System#ServiceModel#Description#IOperationBehavior#AddBindingParameters(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="description">A descrição da operação de modificação para dar suporte a <see cref="T:System.ServiceModel.OperationBehaviorAttribute" /> propriedades.</param>
+        <param name="parameters">Associação de parâmetros passados para dar suporte a comportamentos de associação.</param>
+        <summary>Implementa o <see cref="M:System.ServiceModel.Description.IOperationBehavior.AddBindingParameters(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Channels.BindingParameterCollection)" /> método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.ApplyClientBehavior (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Dispatcher.ClientOperation proxy);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Dispatcher.ClientOperation proxy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OperationBehaviorAttribute.System#ServiceModel#Description#IOperationBehavior#ApplyClientBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.ClientOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="proxy" Type="System.ServiceModel.Dispatcher.ClientOperation" />
+      </Parameters>
+      <Docs>
+        <param name="description">A descrição da operação de modificação para dar suporte a <see cref="T:System.ServiceModel.OperationBehaviorAttribute" /> propriedades.</param>
+        <param name="proxy">O acesso de extensibilidade aponte para inserir as modificações de cliente personalizadas para esta operação.</param>
+        <summary>Implementa o comportamento da operação de cliente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Dispatcher.DispatchOperation dispatch);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Dispatcher.DispatchOperation dispatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OperationBehaviorAttribute.System#ServiceModel#Description#IOperationBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.DispatchOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="dispatch" Type="System.ServiceModel.Dispatcher.DispatchOperation" />
+      </Parameters>
+      <Docs>
+        <param name="description">A descrição da operação de modificação para dar suporte a <see cref="T:System.ServiceModel.OperationBehaviorAttribute" /> propriedades.</param>
+        <param name="dispatch">O ponto de extensibilidade para inserir as modificações de serviço personalizada para esta operação.</param>
+        <summary>Implementa o comportamento da operação de serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.Validate (System.ServiceModel.Description.OperationDescription description);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.Validate(class System.ServiceModel.Description.OperationDescription description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OperationBehaviorAttribute.System#ServiceModel#Description#IOperationBehavior#Validate(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="description">A descrição da operação validar.</param>
+        <summary>Implementa o comportamento de validação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionAutoComplete">
+      <MemberSignature Language="C#" Value="public bool TransactionAutoComplete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransactionAutoComplete" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o escopo da transação atual deve ser concluído automaticamente, se não ocorrer nenhuma exceção sem tratamento.</summary>
+        <value>
+          <see langword="true" /> para concluir o escopo da transação automaticamente caso a execução da operação seja bem-sucedida; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> propriedade `false` concluir ou cancelar transações diretamente no código para a operação.  
+  
+ Exceções manipuladas podem ser geradas durante a operação sem automaticamente anulando a transação. Somente exceções sem tratamento disparam uma operação de anulação automática.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma operação que é executada em uma transação distribuída obrigatória. O <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> propriedade indica que a operação é executada em um escopo de transação e o <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> propriedade indica que, se nenhuma exceção não tratada ocorrer, o escopo da transação é concluído automaticamente. Se uma exceção não tratada ocorrer, a transação será anulada.  
+  
+ [!code-csharp[OperationBehaviorAttribute_Transaction#2](~/samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_transaction/cs/services.cs#2)]
+ [!code-vb[OperationBehaviorAttribute_Transaction#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_transaction/vb/services.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionScopeRequired">
+      <MemberSignature Language="C#" Value="public bool TransactionScopeRequired { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransactionScopeRequired" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o método requer um escopo de transação para sua execução.</summary>
+        <value>
+          <see langword="true" /> se o método exigir um escopo de transação para ser executado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> para `true` para exigir a operação a ser executada em um escopo de transação. Se uma transação que fluiu estiver disponível, a operação é executada em transação. Se um não estiver disponível, uma nova transação é criada e usada para a execução da operação. A associação especificada no ponto de extremidade controlará se há suporte para o fluxo de transações. Portanto, para obter o comportamento correto você deve compreender a interação entre se o fluxo de transações é permitido pela associação e o <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> propriedade. A tabela a seguir mostra o comportamento possíveis.  
+  
+|TransactionScopeRequired|Permite a associação de fluxo de transações|Transação de fluxos de chamador|Resultado|  
+|-|-|-|-|  
+|False|False|Não|Método é executado sem uma transação.|  
+|verdadeiro|False|Não|Método cria e executa dentro de uma nova transação.|  
+|True ou False|False|Sim|Uma falha SOAP será retornada para o cabeçalho da transação.|  
+|False|verdadeiro|Sim|Método é executado sem uma transação.|  
+|verdadeiro|verdadeiro|Sim|Método é executado sob a transação que fluiu.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma operação que é executada em uma transação distribuída obrigatória. O <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> propriedade indica que a operação é executada em um escopo de transação e o <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> propriedade indica que, se nenhuma exceção não tratada ocorrer, o escopo da transação é concluído automaticamente. Se uma exceção não tratada ocorrer, a transação será anulada.  
+  
+ [!code-csharp[OperationBehaviorAttribute_Transaction#2](~/samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_transaction/cs/services.cs#2)]
+ [!code-vb[OperationBehaviorAttribute_Transaction#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_transaction/vb/services.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

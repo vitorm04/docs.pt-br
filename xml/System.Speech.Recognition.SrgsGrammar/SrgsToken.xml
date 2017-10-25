@@ -1,0 +1,237 @@
+<Type Name="SrgsToken" FullName="System.Speech.Recognition.SrgsGrammar.SrgsToken">
+  <TypeSignature Language="C#" Value="public class SrgsToken : System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SrgsToken extends System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Recognition.SrgsGrammar.SrgsElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{DebuggerDisplayString ()}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma palavra ou frase curta que pode ser reconhecida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando os membros a <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken> classe, você pode especificar três formas de uma palavra: o <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Display%2A> formulário, o <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text%2A> formulário e um personalizado <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation%2A> para o word.  
+  
+ Se várias palavras são armazenadas em um único <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken> do objeto, cada um é tratada como um token diferente internamente e no resultado.  
+  
+ Essa classe representa o `token` elemento definido pelo World Wide Web Consortium (W3C) [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0.](http://go.microsoft.com/fwlink/?LinkId=201761). Para obter informações sobre o SRGS `token` elemento e detalhes sobre o suporte por Speech, consulte [token elemento](http://msdn.microsoft.com/en-us/3a9e8d64-7bd4-4188-a6f4-dbf28ea71632).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsToken (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsToken.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto do novo <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsToken" /> instância da classe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsToken" /> classe e especifica o texto a ser reconhecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria um <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken> do objeto cuja <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text%2A> propriedade é definida inicialmente para o valor da `text` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="text" /> está vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public string Display { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Display" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsToken.Display" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a forma de exibição de texto a ser falado.</summary>
+        <value>Uma representação do token como ela deve ser exibida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora eles normalmente representam o mesmo valor, o <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Display%2A> formulário pode ser diferente de <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text%2A> formam uma palavra ou frase em um <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken>. Por exemplo, o formato de exibição pode ser um acrônimo, como "EUA", enquanto o texto que será falado e ao qual o <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation%2A> aplica-se, é "Estados Unidos da América".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">É feita uma tentativa de definir <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsToken.Display" /> para <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">É feita uma tentativa de atribuir uma cadeia de caracteres vazia a <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsToken.Display" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pronunciation">
+      <MemberSignature Language="C#" Value="public string Pronunciation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Pronunciation" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres que define a pronúncia do token.</summary>
+        <value>Retorna uma cadeia de caracteres que contém os telefones do alfabeto fonético especificado em <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsDocument.PhoneticAlphabet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Telefones são letras ou símbolos que descrevem os sons de fala. Speech suporta três letras do alfabeto fonético para especificar pronúncia personalizada: o Universal telefone definido (no-break), o conjunto de telefone Speech API (SAPI) e o alfabeto fonético de internacional (IPA). Os telefones especificados em <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation%2A> deve coincidir com o alfabeto fonético especificado em <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument.PhoneticAlphabet%2A>. Consulte [dicionários e letras do alfabeto fonético](http://msdn.microsoft.com/en-us/435e3c6f-6834-4e5a-b0f6-c17b2275dc51) para obter mais informações.  
+  
+ Os telefones especificados na <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation%2A> indicar como o conteúdo de <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text%2A> devem ser pronunciados para reconhecimento bem-sucedido.  O mecanismo de reconhecimento de fala usa a pronúncia especificada em <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation%2A> para coincidir com a entrada de voz e retorna a cadeia de caracteres contida por <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text%2A> no resultado de reconhecimento.  
+  
+ Se os telefones não são delimitados por espaços ou cadeia de caracteres especificada contém um telefone não reconhecido, o mecanismo de reconhecimento não reconhece a pronúncia especificada como uma pronúncia válida da palavra contida por <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text%2A>.  
+  
+ Pronúncia especificada em <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation%2A> têm precedência sobre pronúncia especificada em dicionários associados a uma gramática ou um mecanismo de reconhecimento. Além disso, a pronúncia no <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation%2A> propriedade se aplica somente a única ocorrência da palavra ou frase contida por <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text%2A>.  
+  
+   
+  
+## Examples  
+ A gramática no exemplo a seguir contém palavras gíria e também uma palavra incomum: "whatchamacallit". Adicionando uma pronúncia embutido personalizadas, usando o <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation%2A> propriedade do <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken> classe pode melhorar a precisão do reconhecimento para a palavra "whatchamacallit", bem como para toda a frase que o contém. O exemplo usa telefones da Microsoft Universal telefone definido (no-break) para definir a pronúncia personalizada.  
+  
+```  
+using System;  
+using System.Speech.Recognition;  
+using System.Speech.Recognition.SrgsGrammar;  
+  
+namespace SampleRecognition  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+  
+    // Initialize an instance of the in-process recognizer.  
+    {  
+      using (SpeechRecognitionEngine recognizer =  
+         new SpeechRecognitionEngine(new System.Globalization.CultureInfo("en-US")))  
+      {  
+  
+        // Build the SrgsOneOf objects with alternative choices for the slang phrase.  
+        SrgsOneOf gimme = new SrgsOneOf(  
+          new string[] { "give me", "gimme", "hand me", "ha'me" });  
+        SrgsOneOf the = new SrgsOneOf(new string[] { "the", "duh" });  
+  
+        // Build the one-of element that contains the pronunciation.  
+        SrgsItem thing = new SrgsItem("thingamajig");  
+        SrgsItem whatcha = new SrgsItem();  
+        SrgsToken callit = new SrgsToken("whatchamacallit");  
+        callit.Pronunciation = "W AE T CH AE M AE K AA L IH T";  
+        whatcha.Add(callit);  
+        SrgsOneOf what = new SrgsOneOf(new SrgsItem[] {thing, whatcha});  
+  
+        // Create the rule from the SrgsOneOf objects.  
+        SrgsRule slangRule = new SrgsRule("slang", gimme, the, what);  
+  
+        // Build an SrgsDocument object from the rule and set the phonetic alphabet.  
+        SrgsDocument tokenPron = new SrgsDocument(slangRule);  
+        tokenPron.PhoneticAlphabet = SrgsPhoneticAlphabet.Ups;  
+  
+        // Create a Grammar object from the SrgsDocument and load it to the recognizer.  
+        Grammar g_Slang = new Grammar(tokenPron);  
+        g_Slang.Name = ("Slang Pronunciation");  
+        recognizer.LoadGrammarAsync(g_Slang);  
+  
+        // Configure recognizer input.  
+        recognizer.SetInputToDefaultAudioDevice();  
+  
+        // Attach a handler for the SpeechRecognized event.  
+        recognizer.SpeechRecognized +=   
+          new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);  
+  
+        // Start asynchronous recognition.  
+        recognizer.RecognizeAsync();  
+        Console.WriteLine("Starting asynchronous recognition...");  
+  
+        // Keep the console window open.  
+        Console.ReadLine();  
+      }  
+    }  
+  
+    // Handle the SpeechRecognized event.  
+    static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)  
+    {  
+      Console.WriteLine("Recognized phrase: " + e.Result.Text);  
+      Console.WriteLine("Confidence: " + e.Result.Confidence);  
+      Console.WriteLine("  Word summary: ");  
+      foreach (RecognizedWordUnit word in e.Result.Words)  
+      {  
+        Console.WriteLine(  
+          "    Lexical form ({1})" +  
+          " Pronunciation ({0})" +  
+          " Confidence ({2})",  
+          word.Pronunciation, word.LexicalForm, word.Confidence);  
+      }  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">É feita uma tentativa de definir <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation" /> para <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">É feita uma tentativa de atribuir uma cadeia de caracteres vazia a <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a forma escrita da palavra que deve ser ditas.</summary>
+        <value>O texto contido dentro de <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsToken" /> instância da classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora eles normalmente representam o mesmo valor, o <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text%2A> formulário pode ser diferente de <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Display%2A> formam uma palavra ou frase em um <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken>. Por exemplo, o <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Display%2A> formulário pode ser um acrônimo, como "EUA", enquanto o texto que será falado e ao qual o <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Pronunciation%2A> aplica-se, é "Estados Unidos da América".  
+  
+ O valor padrão para o <xref:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text%2A> propriedade é uma cadeia de caracteres vazia, "".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">É feita uma tentativa de definir <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text" /> para <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">É feita uma tentativa de atribuir uma cadeia de caracteres vazia a <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text" />.</exception>
+        <exception cref="T:System.ArgumentException">É feita uma tentativa de atribuir uma cadeia de caracteres que contém um sinal de aspas (") para <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsToken.Text" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

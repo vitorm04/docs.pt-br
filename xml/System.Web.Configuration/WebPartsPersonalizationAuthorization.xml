@@ -1,0 +1,114 @@
+<Type Name="WebPartsPersonalizationAuthorization" FullName="System.Web.Configuration.WebPartsPersonalizationAuthorization">
+  <TypeSignature Language="C#" Value="public sealed class WebPartsPersonalizationAuthorization : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartsPersonalizationAuthorization extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.WebPartsPersonalizationAuthorization" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso programático para o <see langword="authorization" /> seção contida no <see langword="webParts" /> seção da configuração. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.WebPartsPersonalizationAuthorization> classe fornece suporte à configuração de autorizações de personalização das Web Parts. Essa classe pode ser usada para permitir ou negar acesso a recursos de Web Parts.  
+  
+   
+  
+## Examples  
+ O exemplo de arquivo de configuração a seguir mostra como especificar declarativamente valores para propriedades da <xref:System.Web.Configuration.WebPartsPersonalizationAuthorization> classe.  
+  
+```  
+<system.web>  
+  <webParts>  
+    <personalization>  
+      <authorization>  
+        <deny users="*" verbs="enterSharedScope" />  
+        <allow users="*" verbs="modifyState" />  
+      </authorization>  
+    </personalization>  
+  </webParts>  
+</system.web>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartsPersonalizationAuthorization ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebPartsPersonalizationAuthorization.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.WebPartsPersonalizationAuthorization" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Uma instância dessa classe é proveniente do <xref:System.Web.Configuration.WebPartsPersonalizationAuthorization> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebPartsPersonalizationAuthorization.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rules">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.AuthorizationRuleCollection Rules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.AuthorizationRuleCollection Rules" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebPartsPersonalizationAuthorization.Rules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("", IsDefaultCollection=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.AuthorizationRuleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de regras usadas para autorização de personalização relacionada a Web Parts.</summary>
+        <value>Um objeto <see cref="T:System.Web.Configuration.AuthorizationRuleCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AuthorizationRuleCollection> consiste em <xref:System.Web.Configuration.AuthorizationRule> objetos. Um <xref:System.Web.Configuration.AuthorizationRule> objeto contém um <xref:System.Web.Configuration.AuthorizationRule.Action%2A> propriedade, um <xref:System.Web.Configuration.AuthorizationRule.Users%2A> propriedade e um <xref:System.Web.Configuration.AuthorizationRule.Verbs%2A> propriedade. Essas propriedades podem ser definidas para permitir ou negar acesso a um recurso de Web Parts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

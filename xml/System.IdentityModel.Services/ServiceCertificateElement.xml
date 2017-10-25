@@ -1,0 +1,73 @@
+<Type Name="ServiceCertificateElement" FullName="System.IdentityModel.Services.ServiceCertificateElement">
+  <TypeSignature Language="C#" Value="public class ServiceCertificateElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceCertificateElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.ServiceCertificateElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o <see langword="&lt;serviceCertificate&gt;" /> elemento em um arquivo de configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `<serviceCertificate>` é um elemento filho do `<federationConfiguration>` elemento e configura o certificado x. 509, se houver, que é usada para criptografar e descriptografar tokens, ao usar o WS-Federation.  
+  
+ O <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement.ServiceCertificate%2A?displayProperty=nameWithType> propriedade é uma instância de <xref:System.IdentityModel.Services.ServiceCertificateElement>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceCertificateElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.ServiceCertificateElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Services.ServiceCertificateElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateReference">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.CertificateReferenceElement CertificateReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.CertificateReferenceElement CertificateReference" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.ServiceCertificateElement.CertificateReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("certificateReference", IsRequired=false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.CertificateReferenceElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o filho <see langword="&lt;certificateReference&gt;" /> elemento para este <see langword="&lt;serviceCertificate&gt;" /> elemento.</summary>
+        <value>O <see langword="&lt;certificateReference&gt;" /> elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `<certificateReference>` elemento contém configurações que especificam os parâmetros local e a verificação do certificado x. 509 a ser usado para criptografar e descriptografar tokens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

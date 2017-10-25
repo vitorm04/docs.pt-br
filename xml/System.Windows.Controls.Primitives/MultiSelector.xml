@@ -1,0 +1,272 @@
+<Type Name="MultiSelector" FullName="System.Windows.Controls.Primitives.MultiSelector">
+  <TypeSignature Language="C#" Value="public abstract class MultiSelector : System.Windows.Controls.Primitives.Selector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MultiSelector extends System.Windows.Controls.Primitives.Selector" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.MultiSelector" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.Selector</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe abstrata para controles que permitem que vários itens sejam selecionados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você derivar uma classe a partir de <xref:System.Windows.Controls.Primitives.MultiSelector> classe, defina o <xref:System.Windows.Controls.Primitives.MultiSelector.CanSelectMultipleItems%2A> propriedade para `true` para permitir várias seleções em seu controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MultiSelector ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MultiSelector.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Primitives.MultiSelector" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Primitives.MultiSelector>é uma classe abstrata e não pode ser instanciado diretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUpdateSelectedItems">
+      <MemberSignature Language="C#" Value="protected void BeginUpdateSelectedItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void BeginUpdateSelectedItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MultiSelector.BeginUpdateSelectedItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia uma nova transação de seleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.MultiSelector.BeginUpdateSelectedItems%2A> método conjuntos <xref:System.Windows.Controls.Primitives.MultiSelector.IsUpdatingSelectedItems%2A> para `true`. O <xref:System.Windows.Controls.Primitives.MultiSelector.EndUpdateSelectedItems%2A> método conjuntos <xref:System.Windows.Controls.Primitives.MultiSelector.IsUpdatingSelectedItems%2A> para `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.Primitives.MultiSelector.BeginUpdateSelectedItems%2A> método em uma classe derivada de <xref:System.Windows.Controls.Primitives.MultiSelector>.  
+  
+ [!code-csharp[System.Windows.Controls.MultiSelectorEx#2](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Controls.MultiSelectorEx/CS/MyMultiSelector.xaml.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Controls.Primitives.MultiSelector.IsUpdatingSelectedItems" /> é <see langword="true" /> quando este método é chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSelectMultipleItems">
+      <MemberSignature Language="C#" Value="protected bool CanSelectMultipleItems { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSelectMultipleItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.MultiSelector.CanSelectMultipleItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se vários itens do <see cref="T:System.Windows.Controls.Primitives.MultiSelector" /> podem ser selecionados ao mesmo tempo.</summary>
+        <value>
+          <see langword="true" /> se vários itens no <see cref="T:System.Windows.Controls.Primitives.MultiSelector" /> puderem ser selecionados ao mesmo tempo; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Windows.Controls.Primitives.MultiSelector.CanSelectMultipleItems%2A> propriedade `true` em uma classe derivada para permitir várias seleções para essa classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir essa propriedade em uma classe derivada.  
+  
+ [!code-csharp[System.Windows.Controls.MultiSelectorEx#1](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Controls.MultiSelectorEx/CS/MyMultiSelector.xaml.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUpdateSelectedItems">
+      <MemberSignature Language="C#" Value="protected void EndUpdateSelectedItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EndUpdateSelectedItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MultiSelector.EndUpdateSelectedItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Confirma os itens selecionados para o <see cref="T:System.Windows.Controls.Primitives.MultiSelector" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método define <xref:System.Windows.Controls.Primitives.MultiSelector.IsUpdatingSelectedItems%2A> para `false` e atualiza o <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> coleção.  
+  
+ O <xref:System.Windows.Controls.Primitives.MultiSelector.BeginUpdateSelectedItems%2A> método conjuntos <xref:System.Windows.Controls.Primitives.MultiSelector.IsUpdatingSelectedItems%2A> para `true`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.Primitives.MultiSelector.EndUpdateSelectedItems%2A> método em uma classe derivada de <xref:System.Windows.Controls.Primitives.MultiSelector>.  
+  
+ [!code-csharp[System.Windows.Controls.MultiSelectorEx#2](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Controls.MultiSelectorEx/CS/MyMultiSelector.xaml.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Controls.Primitives.MultiSelector.IsUpdatingSelectedItems" /> é <see langword="false" /> quando este método é chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUpdatingSelectedItems">
+      <MemberSignature Language="C#" Value="protected bool IsUpdatingSelectedItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUpdatingSelectedItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.MultiSelector.IsUpdatingSelectedItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Controls.Primitives.MultiSelector" /> está executando uma atualização em massa para a coleção <see cref="P:System.Windows.Controls.Primitives.MultiSelector.SelectedItems" /> no momento.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.Primitives.MultiSelector" /> está executando uma atualização em massa para a coleção <see cref="P:System.Windows.Controls.Primitives.MultiSelector.SelectedItems" /> no momento; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.MultiSelector.BeginUpdateSelectedItems%2A> método conjuntos <xref:System.Windows.Controls.Primitives.MultiSelector.IsUpdatingSelectedItems%2A> para `true`. O <xref:System.Windows.Controls.Primitives.MultiSelector.EndUpdateSelectedItems%2A> método conjuntos <xref:System.Windows.Controls.Primitives.MultiSelector.IsUpdatingSelectedItems%2A> para `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.Primitives.MultiSelector.IsUpdatingSelectedItems%2A> propriedade em uma classe derivada de <xref:System.Windows.Controls.Primitives.MultiSelector>.  
+  
+ [!code-csharp[System.Windows.Controls.MultiSelectorEx#2](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Controls.MultiSelectorEx/CS/MyMultiSelector.xaml.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectAll">
+      <MemberSignature Language="C#" Value="public void SelectAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MultiSelector.SelectAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Seleciona todos os itens no <see cref="T:System.Windows.Controls.Primitives.MultiSelector" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode use esse método somente se <xref:System.Windows.Controls.Primitives.MultiSelector.CanSelectMultipleItems%2A> é `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Controls.Primitives.MultiSelector.CanSelectMultipleItems" /> é <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItems">
+      <MemberSignature Language="C#" Value="public System.Collections.IList SelectedItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList SelectedItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.MultiSelector.SelectedItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os itens no <see cref="T:System.Windows.Controls.Primitives.MultiSelector" /> selecionados.</summary>
+        <value>Os itens no <see cref="T:System.Windows.Controls.Primitives.MultiSelector" /> selecionados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Controls.Primitives.MultiSelector.CanSelectMultipleItems%2A> é `false`, você não pode adicionar mais de um item para o <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A> coleção. Tentar fazer isso fará com que uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnselectAll">
+      <MemberSignature Language="C#" Value="public void UnselectAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnselectAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.MultiSelector.UnselectAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desmarca todos os itens no <see cref="T:System.Windows.Controls.Primitives.MultiSelector" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método independentemente se <xref:System.Windows.Controls.Primitives.MultiSelector.CanSelectMultipleItems%2A> é `true` ou `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

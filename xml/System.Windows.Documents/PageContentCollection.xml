@@ -1,0 +1,135 @@
+<Type Name="PageContentCollection" FullName="System.Windows.Documents.PageContentCollection">
+  <TypeSignature Language="C#" Value="public sealed class PageContentCollection : System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.PageContent&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PageContentCollection extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Documents.PageContent&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.PageContentCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.PageContent&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece suporte de coleção para uma coleção de páginas do documento.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Windows.Documents.PageContent newPageContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Windows.Documents.PageContent newPageContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.PageContentCollection.Add(System.Windows.Documents.PageContent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newPageContent" Type="System.Windows.Documents.PageContent" />
+      </Parameters>
+      <Docs>
+        <param name="newPageContent">A nova página para adicionar à coleção.</param>
+        <summary>Adiciona uma nova página para a coleção de página.</summary>
+        <returns>O índice baseado em zero na coleção em que a página foi adicionada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="newPageContent" />foi passado como <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A página é passado como <paramref name="newPageContent" /> já existia na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.PageContentCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos contidos na coleção de página.</summary>
+        <value>O número de elementos na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Windows.Documents.PageContent&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Windows.Documents.PageContent&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.PageContentCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Windows.Documents.PageContent&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador para iteração na coleção de página.</summary>
+        <returns>Um enumerador que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enumeradores permitem apenas ler os dados na coleção. Enumeradores não podem ser usados para modificar a coleção subjacente.  
+  
+ Consulte <xref:System.Collections.IEnumerable>.<xref:System.Collections.IEnumerable.GetEnumerator%2A> para outros comentários sobre como os enumeradores devem ser usados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.PageContent this[int pageIndex] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.PageContent Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.PageContentCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.PageContent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pageIndex">O índice baseado em zero da página para obter.</param>
+        <summary>Obtém o <see cref="T:System.Windows.Documents.PageContent" /> elemento no índice especificado na coleção.</summary>
+        <value>O elemento de conteúdo da página no índice especificado na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.PageContentCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winfx](~/includes/tlasharptla-winfx-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.  Use a segurança de tipo <see cref="M:System.Windows.Documents.PageContentCollection.GetEnumerator" /> método em vez disso.</summary>
+        <returns>O enumerador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

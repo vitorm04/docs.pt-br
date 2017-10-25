@@ -1,0 +1,773 @@
+<Type Name="LoginView" FullName="System.Web.UI.WebControls.LoginView">
+  <TypeSignature Language="C#" Value="public class LoginView : System.Web.UI.Control, System.Web.UI.INamingContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LoginView extends System.Web.UI.Control implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LoginView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ViewChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("CurrentView")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LoginViewDesigner,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.Themeable(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Exibe o modelo de conteúdo apropriado para determinado usuário, com base na associação à função e no status de autenticação do usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ O <xref:System.Web.UI.WebControls.LoginView> controle exibe diferentes site conteúdo modelos (ou "modos de exibição") para usuários diferentes, com base em se o usuário é autenticado e, se assim, as funções de site Web que ele pertence.  
+  
+> [!NOTE]
+>  Se você não estiver familiarizado com o conjunto de controles de logon disponíveis no ASP.NET, consulte [visão geral dos controles de logon ASP.NET](http://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d) antes de continuar. Para obter uma lista de outros tópicos relacionados a controles de logon e associação, consulte [Gerenciando usuários com o uso de associações](http://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd).  
+  
+ O modelo é armazenado no <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> propriedade é exibida para qualquer visitante do site da Web que não tem logon. Quando um usuário estiver conectado, o site é exibido ou um modelo associado a uma das funções do usuário no <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> propriedade ou o modelo padrão especificado no <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.LoginView> controle gerencia a alternância entre os diversos modelos depois de atribuir modelos para qualquer uma das propriedades de modelo de três a <xref:System.Web.UI.WebControls.LoginView> classe:  
+  
+-   <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A>-Especifica o modelo a ser exibido aos usuários que não estão conectados ao site da Web. Os usuários que estão conectados nunca verá este modelo.  
+  
+-   <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A>-Especifica o modelo padrão para exibir aos usuários que estão conectados a site da Web, mas não pertencer a nenhum grupo de função com modelos definidos.  
+  
+-   <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A>-Especifica o modelo a ser exibida para os usuários autorizados que são membros das funções com modelos de grupo de funções definidas. Conteúdo de modelos estão associados com determinados conjuntos de funções no <xref:System.Web.UI.WebControls.RoleGroup> instâncias.  
+  
+ Modelos de grupo de funções são pesquisados na ordem em que elas são definidas na fonte. O primeiro modelo correspondente do grupo de funções é exibido ao usuário. Se um usuário for membro de mais de uma função, o primeiro modelo de grupo de funções que corresponde a qualquer uma das funções do usuário é usado. Se mais de um modelo é associado uma única função, somente o primeiro modelo definido será usado.  
+  
+ A tabela a seguir descreve o comportamento do <xref:System.Web.UI.WebControls.LoginView> controlar quando várias combinações de modelos são usadas.  
+  
+|Propriedade do modelo de logon efetuado|Propriedade de modelo anônimo|Propriedade RoleGroups|Comportamento de LoginView|  
+|--------------------------------|---------------------------------|-------------------------|------------------------|  
+|Não definido|Não definido|Não definido|Não exibe nenhum conteúdo.|  
+|Definir|Não definido|Não definido|Exibe o conteúdo apenas quando o usuário está conectado.|  
+|Não definido|Definir|Não definido|Exibe o conteúdo apenas quando o usuário não estiver conectado.|  
+|Não definido|Não definido|Definir|Exibe o primeiro modelo o <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> coleção que corresponde a uma das funções do usuário. Não se nenhuma correspondência for encontrada, exibe nenhum conteúdo.|  
+|Definir|Definir|Não definido|Se o usuário estiver conectado, exibe o modelo especificado no <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> propriedade. Se o usuário no não conectado, exibe o modelo especificado no <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> propriedade.|  
+|Definir|Definir|Definir|Se o usuário estiver conectado, exibe o primeiro modelo o <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> coleção que corresponde a uma das funções do usuário. Se nenhuma correspondência for encontrada, exibe o modelo especificado no <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> propriedade. Se o usuário não estiver conectado, exibe o modelo especificado no <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> propriedade.|  
+|Definir|Não definido|Definir|Se o usuário estiver conectado, exibe o primeiro modelo o <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> coleção que corresponde a uma das funções do usuário. Se nenhuma correspondência for encontrada, exibe o modelo especificado no <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> propriedade. Se o usuário não estiver conectado, nada é exibido.|  
+|Não definido|Definir|Definir|Se o usuário estiver conectado, exibe o primeiro modelo o <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> coleção que corresponde a uma das funções do usuário. Se nenhuma correspondência for encontrada, nada será exibido. Se o usuário não estiver conectado, exibe o modelo especificado no <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> propriedade.|  
+  
+ O <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> e <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> pode ser usado com qualquer esquema de autenticação que define o <xref:System.Security.Principal.IIdentity.Name%2A> propriedade o <xref:System.Web.UI.Page> do objeto <xref:System.Web.UI.Page.User%2A> propriedade. Você deve configurar o gerenciamento de função para usar o <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> propriedade para definir modelos com base na função do usuário no site da Web. Para obter mais informações, consulte [Noções básicas sobre gerenciamento de função](http://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6).  
+  
+ O <xref:System.Web.UI.Control.Focus%2A> método não definir o foco inicial da página da Web para o <xref:System.Web.UI.WebControls.LoginView> controle, ou qualquer um de seus controles filhos. Controles contidos no <xref:System.Web.UI.WebControls.LoginView> controle são criados após o <xref:System.Web.UI.Control.PreRender> evento. Para definir o foco para um controle filho contido pelo <xref:System.Web.UI.WebControls.LoginView>, tratar o `On_PreRender` e chame seu <xref:System.Web.UI.Control.Focus%2A> método.  Você também pode usar o <xref:System.Web.UI.WebControls.LoginView.ViewChanging> e <xref:System.Web.UI.WebControls.LoginView.ViewChanged> eventos para acessar programaticamente os controles de <xref:System.Web.UI.WebControls.LoginView> modelos de controle.  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:LoginView  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    OnViewChanged="ViewChanged event handler"  
+    OnViewChanging="ViewChanging event handler"  
+    runat="server"  
+    SkinID="string"  
+    Visible="True|False"  
+>  
+        <AnonymousTemplate>  
+            <!-- child controls -->  
+        </AnonymousTemplate>  
+        <LoggedInTemplate>  
+            <!-- child controls -->  
+        </LoggedInTemplate>  
+        <RoleGroups>  
+                <asp:RoleGroup  
+                    Roles="string"  
+                >  
+                        <ContentTemplate>  
+                            <!-- child controls -->  
+                        </ContentTemplate>  
+                </asp:RoleGroup>  
+        </RoleGroups>  
+</asp:LoginView>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir modelos para cada uma os três tipos de modelos com suporte a <xref:System.Web.UI.WebControls.LoginView> controle.  
+  
+ [!code-aspx-csharp[LoginViewClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginViewClass/CS/loginviewclasscs.aspx#1)]
+ [!code-aspx-vb[LoginViewClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginViewClass/VB/loginviewclassvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoginView ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.LoginView" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnonymousTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate AnonymousTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate AnonymousTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginView.AnonymousTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.LoginView))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo a ser exibido aos usuários que não estão conectados ao site.</summary>
+        <value>O <see cref="T:System.Web.UI.ITemplate" /> a ser exibido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> propriedade especifica o modelo de conteúdo para exibir aos usuários do site da Web quando eles não estiverem conectados ao site da Web. Este modelo é exibido quando o <xref:System.Security.Principal.IIdentity.Name%2A> propriedade o <xref:System.Web.UI.Page> <xref:System.Web.UI.Page.User%2A> é de propriedade `null`.  
+  
+ O <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> modelo nunca será exibido aos usuários autenticados. Se o <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> propriedade estiver vazia, nenhum conteúdo é exibido aos usuários que não estão conectados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa o modelo especificado no <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> personalizados de modelo para exibir um convite para se inscrever para serviços.  
+  
+ [!code-aspx-csharp[LoginViewAnonymousTemplate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginViewAnonymousTemplate/CS/loginviewanonymoustemplatecs.aspx#1)]
+ [!code-aspx-vb[LoginViewAnonymousTemplate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginViewAnonymousTemplate/VB/loginviewanonymoustemplatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginView.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Web.UI.ControlCollection" /> que contém os controles filho para o controle <see cref="T:System.Web.UI.WebControls.LoginView" />.</summary>
+        <value>A coleção de controles filho para o controle <see cref="T:System.Web.UI.WebControls.LoginView" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria os controles que compõem o filho de <see cref="T:System.Web.UI.WebControls.LoginView" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginView.CreateChildControls%2A> método cria os controles individuais que compõem o <xref:System.Web.UI.WebControls.LoginView> controle. O conjunto de controles criados varia de acordo com o modelo de conteúdo exibido para o usuário. Por exemplo, quando um usuário não está conectado ao site da Web, somente os controles contidos no modelo especificado no <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> propriedade são criados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="public override void DataBind ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBind() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.DataBind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Associa uma fonte de dados para <see cref="T:System.Web.UI.WebControls.LoginView" /> e todos os seus controles filhos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.LoginView.DataBind%2A> método para associar os dados de uma fonte para o <xref:System.Web.UI.WebControls.LoginView> controle e seus filhos. Este método resolve todas as expressões de associação de dados no <xref:System.Web.UI.WebControls.LoginView> controle e todos os controles filho do modelo ativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginView.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os temas podem ser aplicados para o <see cref="T:System.Web.UI.WebControls.LoginView" /> controle.</summary>
+        <value>
+          <see langword="true" /> para usar temas; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginView.EnableTheming%2A> propriedade indica se os temas estão habilitados para o <xref:System.Web.UI.WebControls.LoginView> controle. O <xref:System.Web.UI.WebControls.LoginView.EnableTheming%2A> propriedade também afeta a capacidade de temas são habilitados para os controles contidos no seu <xref:System.Web.UI.WebControls.LoginView.Controls%2A> coleção. Quando o <xref:System.Web.UI.WebControls.LoginView.EnableTheming%2A> é de propriedade `true`, diretório de tema do aplicativo é pesquisado capas de controle aplicar. Se nenhuma capa de controle específico existe no diretório do tema, não é aplicada uma capa. Quando o <xref:System.Web.UI.WebControls.LoginView.EnableTheming%2A> é de propriedade `false`, o diretório de tema não é pesquisado e o conteúdo do <xref:System.Web.UI.WebControls.LoginView.SkinID%2A> propriedade não são usados.  
+  
+ Um controle pode substituir o <xref:System.Web.UI.WebControls.LoginView.EnableTheming%2A> valor definido pelo seu controle pai ou o conteúdo da página. Por exemplo, se um controle pai tem <xref:System.Web.UI.WebControls.LoginView.EnableTheming%2A> definida como `false`, você pode aplicar seletivamente os temas para controles filho contidos dentro do pai, definindo a <xref:System.Web.UI.WebControls.LoginView.EnableTheming%2A> propriedade `true` nos controles filho individuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focus">
+      <MemberSignature Language="C#" Value="public override void Focus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Focus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.Focus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o foco de entrada para um controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginView.Focus%2A> método não definir o foco inicial da página da Web para o <xref:System.Web.UI.WebControls.LoginView> controle ou para qualquer um dos seus controles filhos. Controles que estão contidos no <xref:System.Web.UI.WebControls.LoginView> controle são criados após o <xref:System.Web.UI.Control.PreRender> evento. Para definir o foco para um controle filho contido pelo <xref:System.Web.UI.WebControls.LoginView>, tratar o `On_PreRender` e chame seu <xref:System.Web.UI.Control.Focus%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Chamar o <see cref="M:System.Web.UI.WebControls.LoginView.Focus" /> método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadControlState">
+      <MemberSignature Language="C#" Value="protected override void LoadControlState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void LoadControlState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.LoadControlState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Object" /> que representa o estado de controle a ser restaurado.</param>
+        <summary>Esse método implementa <see cref="M:System.Web.UI.Control.LoadControlState(System.Object)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoggedInTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate LoggedInTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate LoggedInTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginView.LoggedInTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.LoginView))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo a ser exibido aos usuários do site da Web que estão conectados ao site da Web, mas que não são membros de um dos grupos de função especificados na propriedade <see cref="P:System.Web.UI.WebControls.LoginView.RoleGroups" />.</summary>
+        <value>O <see cref="T:System.Web.UI.ITemplate" /> a ser exibido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> propriedade é exibida para usuários do site quando as seguintes condições forem atendidas:  
+  
+-   O <xref:System.Security.Principal.IIdentity.Name%2A> propriedade do <xref:System.Web.UI.Page> <xref:System.Web.UI.Page.User%2A> não é de propriedade`null`  
+  
+-   O usuário não pertence a um grupo de função definido no <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> propriedade especifica um modelo padrão para os usuários do site autenticado. Se você não tiver configurado o gerenciamento de função, o <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> é o único modelo disponível para usuários autenticados. Para obter mais informações sobre como configurar o gerenciamento de função, consulte [Noções básicas sobre gerenciamento de função](http://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> modelo para exibir links para informações personalizadas para usuários conectados.  
+  
+ [!code-aspx-csharp[LoginViewAnonymousTemplate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginViewAnonymousTemplate/CS/loginviewanonymoustemplatecs.aspx#1)]
+ [!code-aspx-vb[LoginViewAnonymousTemplate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginViewAnonymousTemplate/VB/loginviewanonymoustemplatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.Init" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginView.OnInit%2A> método realiza a inicialização para o <xref:System.Web.UI.WebControls.LoginView> controle.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.LoginView.OnInit%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.LoginView.OnInit(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.LoginView.OnInit(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Determina qual modelo de grupo de funções para exibir, com base nas funções do usuário conectado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginView.OnPreRender%2A> método é chamado durante o <xref:System.Web.UI.Control.PreRender> evento para determinar qual modelo de conteúdo para exibir para o usuário. Se o <xref:System.Security.Principal.IIdentity.Name%2A> propriedade o <xref:System.Web.UI.Page> <xref:System.Web.UI.Page.User%2A> é de propriedade `null`, o modelo especificado no <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> exibido; caso contrário, o modelo associado à função de usuário é exibido. Se o usuário não pertencer a um grupo de função definido, ou se você não tiver configurado o gerenciamento de função, o <xref:System.Web.UI.WebControls.LoginView> controle exibe o modelo especificado no <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> propriedade. Para obter mais informações sobre como configurar o gerenciamento de função, consulte [provedores de gerenciamento de função](http://msdn.microsoft.com/library/71ddd651-5f91-471b-ad9f-61249b0bf0d5).  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.LoginView.OnPreRender%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.LoginView.OnPreRender(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.LoginView.OnPreRender(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnViewChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnViewChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnViewChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.OnViewChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <see cref="E:System.Web.UI.WebControls.LoginView.ViewChanged" /> evento após o <see cref="T:System.Web.UI.WebControls.LoginView" /> controle alterna os modos de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.LoginView> controle alterna os modos de exibição, ele remove os controles de modelo anterior e cria novos controles filho do novo modelo. O <xref:System.Web.UI.WebControls.LoginView.OnViewChanged%2A> método é chamado depois que os novos controles filho são criados.  
+  
+ Use o <xref:System.Web.UI.WebControls.LoginView.OnViewChanged%2A> método para executar qualquer processamento, como associação, necessários para inicializar os controles na nova exibição de dados.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.LoginView.OnViewChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.LoginView.OnViewChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.LoginView.OnViewChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnViewChanging">
+      <MemberSignature Language="C#" Value="protected virtual void OnViewChanging (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnViewChanging(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.OnViewChanging(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <see cref="E:System.Web.UI.WebControls.LoginView.ViewChanging" /> evento antes do <see cref="T:System.Web.UI.WebControls.LoginView" /> controle alterna os modos de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.LoginView> controles alterna os modos de exibição, ele remove os controles de modelo anterior e cria novos controles filho do novo modelo. O <xref:System.Web.UI.WebControls.LoginView.OnViewChanging%2A> método é chamado antes que os controles anteriores são removidos.  
+  
+ Use o <xref:System.Web.UI.WebControls.LoginView.OnViewChanging%2A> método para executar qualquer processamento necessário, como salvar informações de controle, antes que os controles sejam removidos.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.LoginView.OnViewChanging%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.LoginView.OnViewChanging(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.LoginView.OnViewChanging(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> usado para renderizar o conteúdo do controle de servidor no navegador do cliente.</param>
+        <summary>Renderiza o conteúdo do controle de servidor Web no navegador do cliente usando o objeto <see cref="T:System.Web.UI.HtmlTextWriter" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginView.Render%2A> método é usado para renderizar o conteúdo do controle de servidor para o navegador do cliente usando especificado <xref:System.Web.UI.HtmlTextWriter?displayProperty=nameWithType> objeto.  
+  
+ **Observação** esse método é usado principalmente por desenvolvedores de controle para estender o <xref:System.Web.UI.WebControls.LoginView> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleGroups">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.RoleGroupCollection RoleGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.RoleGroupCollection RoleGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginView.RoleGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Filterable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RoleGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de grupos de funções que associam modelos de conteúdo a funções específicas.</summary>
+        <value>Um objeto <see cref="T:System.Web.UI.WebControls.RoleGroupCollection" /> que contém os modelos de grupos de funções definidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> propriedade contém os modelos de conteúdo associados a várias funções no site da Web. A coleção no <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> propriedade é pesquisada na ordem em que os modelos são definidos na fonte. O primeiro modelo correspondente do grupo de funções é exibido ao usuário. Se um usuário for membro de mais de uma função, o primeiro modelo de grupo de funções que corresponde a qualquer uma das funções do usuário é usado. Se mais de um modelo é associado uma única função, somente o primeiro modelo definido será usado.  
+  
+ Se um usuário conectado não pertencer a alguma função contida na coleção de grupo de funções, o site é exibido o modelo de conteúdo especificado no <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> propriedade. Usuários anônimos nunca são mostrados para qualquer modelo dentro do <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> coleção.  
+  
+ Você deve configurar o gerenciamento de função para usar o <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> propriedade para definir modelos com base na função do usuário no site da Web. Para obter mais informações, consulte [Noções básicas sobre gerenciamento de função](http://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6).  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.LoginView.RoleGroups%2A> coleção. Porque o <xref:System.Web.UI.WebControls.LoginView.AnonymousTemplate%2A> e <xref:System.Web.UI.WebControls.LoginView.LoggedInTemplate%2A> propriedades não forem definidas, o conteúdo é exibido somente para usuários que pertencem a funções com um modelo de conteúdo definido.  
+  
+ [!code-aspx-csharp[LoginViewRoleGroups#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginViewRoleGroups/CS/loginviewrolegroupscs.aspx#1)]
+ [!code-aspx-vb[LoginViewRoleGroups#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginViewRoleGroups/VB/loginviewrolegroupsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveControlState">
+      <MemberSignature Language="C#" Value="protected override object SaveControlState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object SaveControlState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.SaveControlState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações de estado do controle de servidor que ocorreram desde a hora em que ocorreu o postback da página no servidor.</summary>
+        <returns>Retorna o servidor de estado atual do controle. Se não houver nenhum estado associado ao controle, esse método retornará <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDesignModeState">
+      <MemberSignature Language="C#" Value="protected override void SetDesignModeState (System.Collections.IDictionary data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDesignModeState(class System.Collections.IDictionary data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginView.SetDesignModeState(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um <see cref="T:System.Collections.IDictionary" /> que contém os dados de tempo de design para o controle.</param>
+        <summary>Define os dados de tempo de design para um controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkinID">
+      <MemberSignature Language="C#" Value="public override string SkinID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SkinID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginView.SkinID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a capa a ser aplicada ao controle <see cref="T:System.Web.UI.WebControls.LoginView" />.</summary>
+        <value>O nome da capa para aplicar ao <see cref="T:System.Web.UI.WebControls.LoginView" /> controle. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Capas disponíveis para um controle estão contidas em um ou mais arquivos de capa em um diretório do tema. O <xref:System.Web.UI.WebControls.LoginView.SkinID%2A> propriedade especifica qual essas capas para aplicar ao controle. Uma capa é específica para um determinado controle; Você não pode compartilhar configurações de aparência entre os controles de tipos diferentes.  
+  
+ Se você não definir o <xref:System.Web.UI.WebControls.LoginView.SkinID%2A> propriedade, um controle usa a capa padrão se um for definido. Por exemplo, se uma capa sem uma ID é definida para um <xref:System.Web.UI.WebControls.Image> de controle, em seguida, aquela aparência se aplica a todos os <xref:System.Web.UI.WebControls.Image> controles que fazem referência explicitamente uma capa por ID e que não estão definidas como desabilitar temas. Se uma capa com uma ID é definida para um <xref:System.Web.UI.WebControls.Image> controlar, e que aparência se aplica somente ao <xref:System.Web.UI.WebControls.Image> controla cujo <xref:System.Web.UI.WebControls.WebControl.SkinID%2A> está definido para essa ID.  
+  
+ Se os arquivos de capa em um diretório de tema não contêm uma capa com especificado <xref:System.Web.UI.WebControls.LoginView.SkinID%2A>, um <xref:System.ArgumentException> exceção em tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A capa especificada na propriedade <see cref="P:System.Web.UI.WebControls.LoginView.SkinID" /> não existe no tema.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ViewChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ViewChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LoginView.ViewChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre depois que a exibição é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.LoginView> controle alterna os modos de exibição, ele remove os controles de modelo anterior e cria novos controles filho do novo modelo. O <xref:System.Web.UI.WebControls.LoginView.ViewChanged> é gerado depois que os novos controles filho são criados.  
+  
+ Use o <xref:System.Web.UI.WebControls.LoginView.ViewChanged> evento para executar qualquer processamento, como associação, necessários para inicializar os controles na nova exibição de dados.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.LoginView.ViewChanged> evento é gerado apenas se o status de logon para um usuário for alterada durante um postback para a página. O <xref:System.Web.UI.WebControls.LoginView.ViewChanged> evento não será gerado se um usuário fizer logon usando o <xref:System.Web.UI.WebControls.Login> controle, ou se o usuário faz logoff usando o <xref:System.Web.UI.WebControls.LoginStatus> controle. O <xref:System.Web.UI.WebControls.LoginView.ViewChanged> evento também não ocorrerá se um usuário estiver conectado ou out, seguido por um redirecionamento. Um exemplo de quando o <xref:System.Web.UI.WebControls.LoginView.ViewChanged> evento ocorrerá quando um usuário fazer logoff chamando o <xref:System.Web.Security.FormsAuthentication.SignOut%2A> método sem ser redirecionado para outra página. Durante o próximo postback para a página, o <xref:System.Web.UI.WebControls.LoginView> controle detectará a alteração no status de logon para o usuário e, em seguida, gerar o <xref:System.Web.UI.WebControls.LoginView.ViewChanged> evento.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewChanging">
+      <MemberSignature Language="C#" Value="public event EventHandler ViewChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ViewChanging" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LoginView.ViewChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes que a exibição é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.LoginView> controle alterna os modos de exibição, ele remove os controles de modelo anterior e cria novos controles filho do novo modelo. O <xref:System.Web.UI.WebControls.LoginView.ViewChanging> evento é gerado antes que os controles anteriores são removidos.  
+  
+ Use o <xref:System.Web.UI.WebControls.LoginView.ViewChanging> evento para executar qualquer processamento, como salvar informações de controle necessárias antes que os controles sejam removidos.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.LoginView.ViewChanging> evento é gerado apenas se o status de logon para um usuário for alterada durante um postback para a página. O <xref:System.Web.UI.WebControls.LoginView.ViewChanging> evento não será gerado se um usuário fizer logon usando o <xref:System.Web.UI.WebControls.Login> controle, ou se o usuário faz logoff usando o <xref:System.Web.UI.WebControls.LoginStatus> controle. O <xref:System.Web.UI.WebControls.LoginView.ViewChanging> evento também não ocorrerá se um usuário estiver conectado ou out, seguido por um redirecionamento. Um exemplo de quando o <xref:System.Web.UI.WebControls.LoginView.ViewChanging> evento ocorrerá quando um usuário fazer logoff chamando o <xref:System.Web.Security.FormsAuthentication.SignOut%2A> método sem ser redirecionado para outra página. Durante o próximo postback para a página, o <xref:System.Web.UI.WebControls.LoginView> controle detectará a alteração no status de logon para o usuário e, em seguida, gerar o <xref:System.Web.UI.WebControls.LoginView.ViewChanging> evento.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

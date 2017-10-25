@@ -1,0 +1,91 @@
+<Type Name="NullExtension" FullName="System.Windows.Markup.NullExtension">
+  <TypeSignature Language="C#" Value="public class NullExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NullExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.NullExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("PresentationFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Object))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa uma extensão de marcação XAML para retornar um objeto nulo, o que você pode usar para definir explicitamente os valores Nulo em XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em XAML, cadeia de caracteres nula e vazia geralmente não são equivalentes. Você usa o `{x:Null}` uso de extensão para definir um atributo que define a propriedade subjacente para `null`.  Para obter mais informações sobre como definir valores nulos é relevante para cenários em XAML, consulte [extensão de marcação X:Null](~/docs/framework/xaml-services/x-null-markup-extension.md).  
+  
+ Essa classe é uma implementação de extensão de marcação. Classes de extensão de marcação existe principalmente para fornecer suporte à infraestrutura como processadores XAML interpretam uma extensão específica. Os membros que classes de implementação de extensão de marcação expõem não normalmente se destinam a ser chamado a partir do código. Essa classe de extensão de marcação oferece suporte a [extensão de marcação X:Null](~/docs/framework/xaml-services/x-null-markup-extension.md) uso para serviços XAML do .NET.  
+  
+ Em versões anteriores do .NET Framework, essa classe (e o `x:Null` suporte de comportamento XAML de extensão de marcação, bem como o mapeamento de xmlns relevante) existiam no assembly específicos de WPF PresentationFramework. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.NullExtension> está no assembly System. XAML. Isso torna o `x:Null` uso disponível para aplicativos que usam estruturas que fazem referência a serviços XAML do .NET. Você não precisa PresentationFramework como um assembly referenciado, contanto que o destino [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+ Os usos de assembly System <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para mapear todos os tipos no assembly para o namespace XAML para a linguagem XAML ([!INCLUDE[TLA#tla_xamlxmlnsv1](~/includes/tlasharptla-xamlxmlnsv1-md.md)]). Em geral você declara um prefixo de [!INCLUDE[TLA#tla_xamlxmlnsv1](~/includes/tlasharptla-xamlxmlnsv1-md.md)] em um mapeamento de elemento raiz e use o prefixo `x`.  
+  
+## <a name="wpf-usage-notes"></a>Observações de uso do WPF  
+ Para propriedades de dependência do WPF, quando você define um valor de propriedade de dependência `null`, você não está necessariamente definindo a propriedade para seu valor padrão, mesmo se ele é uma propriedade de referência. O valor padrão de uma propriedade de dependência depende de seu registro de propriedade de dependência. Um valor não é necessariamente `null` ; consulte <xref:System.Windows.DependencyProperty.UnsetValue>. Para obter mais informações, consulte <xref:System.Windows.DependencyObject.ClearValue%2A> ou [visão geral de propriedades de dependência](~/docs/framework/wpf/advanced/dependency-properties-overview.md).  
+  
+<a name="xamlTextUsage_NullExtension"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NullExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NullExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.NullExtension" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.NullExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um objeto que pode fornecer serviços para a implementação de extensão de marcação.</param>
+        <summary>Fornece <see langword="null" /> para usar como um valor como a saída dessa extensão de marcação.</summary>
+        <returns>Uma referência nula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte a implementações de processador XAML e não se destina a ser chamado diretamente. Uma implementação de processador XAML usa esse método quando ele cria gráficos de objeto que incluem um `x:Null` uso da extensão. Isso depende de comportamento geral para processadores XAML quando eles processem qualquer <xref:System.Windows.Markup.MarkupExtension> e chame seu `ProvideValue` implementação.  
+  
+ Esta implementação não depende de serviços baseados em transmitido `serviceProvider`. Ele sempre retorna uma referência nula, independentemente do contexto. A implementação de serviços XAML do .NET Framework, o valor a ser retornado é obtido pela referenciação o <xref:System.Xaml.XamlLanguage.Null%2A?displayProperty=nameWithType> valor estático.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

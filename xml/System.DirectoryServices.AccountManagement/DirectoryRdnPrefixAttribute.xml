@@ -1,0 +1,82 @@
+<Type Name="DirectoryRdnPrefixAttribute" FullName="System.DirectoryServices.AccountManagement.DirectoryRdnPrefixAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DirectoryRdnPrefixAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DirectoryRdnPrefixAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.AccountManagement.DirectoryRdnPrefixAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O prefixo RDN usado para construir o RDN para o novo objeto que é inserido no repositório. O prefixo RDN padrão de "CN" é usado pela API de gerenciamento de conta, se esse atributo não for definido. Esse atributo é opcional e pode ser definido apenas em classes de extensão principal.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryRdnPrefixAttribute (string rdnPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string rdnPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.DirectoryRdnPrefixAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rdnPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="rdnPrefix">O prefixo RDN. A propriedade <see cref="P:System.DirectoryServices.AccountManagement.DirectoryRdnPrefixAttribute.RdnPrefix" /> é inicializada com esse valor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.AccountManagement.DirectoryRdnPrefixAttribute" /> classe com o prefixo RDN.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.DirectoryServices.AccountManagement.ContextType&gt; Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DirectoryServices.AccountManagement.ContextType&gt; Context" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.DirectoryRdnPrefixAttribute.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DirectoryServices.AccountManagement.ContextType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não está implementada e sempre retorna null.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.AccountManagement.ContextType" /> valor de enumeração que especifica o tipo de armazenamento ao qual este atributo se aplica ou null não é nenhum contexto é definido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RdnPrefix">
+      <MemberSignature Language="C#" Value="public string RdnPrefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RdnPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.AccountManagement.DirectoryRdnPrefixAttribute.RdnPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o prefixo RDN usado para construir o RDN.</summary>
+        <value>O prefixo RDN usado para construir o RDN.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Annotations.Storage">
+  <Docs>
+    <summary>Fornece tipos que definem a arquitetura de armazenamento e os meios para salvar e recuperar as anotações de usuário criado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,23 @@
+<Type Name="WriteHandler" FullName="Microsoft.Build.Logging.WriteHandler">
+  <TypeSignature Language="C#" Value="public delegate void WriteHandler(string message);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WriteHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.WriteHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="message" Type="System.String" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="message">A mensagem a ser gravada.</param>
+    <summary>Delegado usado para gravar uma cadeia de caracteres para um local como a janela do console ou janela de compilação do IDE.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

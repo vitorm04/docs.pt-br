@@ -1,0 +1,108 @@
+<Type Name="ListViewEditEventArgs" FullName="System.Web.UI.WebControls.ListViewEditEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewEditEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewEditEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewEditEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.ListView.ItemEditing" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListView> controlar gera o <xref:System.Web.UI.WebControls.ListView.ItemEditing> eventos quando um botão de edição é clicado, mas antes de <xref:System.Web.UI.WebControls.ListView> item entra em modo de edição. (Um botão de edição é um botão cujo `CommandName` propriedade definida como "Edit".) Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada sempre que esse evento ocorre, como cancelar a operação de edição.  
+  
+ Um <xref:System.Web.UI.WebControls.ListViewEditEventArgs> objeto é passado para o método de manipulação de eventos. Esse objeto permite que você determine o índice do item que está sendo editado e, para indicar que a operação de edição deve ser cancelada. Para cancelar a operação de edição, defina a <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade o <xref:System.Web.UI.WebControls.ListViewEditEventArgs> do objeto para `true`.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListViewEditEventArgs>, consulte o <xref:System.Web.UI.WebControls.ListViewEditEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewEditEventArgs> objeto para cancelar a operação de edição quando o usuário tenta atualizar um item fora de linha.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListView.ItemEditing#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemEditing/CS/ListViewItemEditingCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListView.ItemEditing#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemEditing/VB/ListViewItemEditingVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewEditEventArgs (int newEditIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 newEditIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewEditEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newEditIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="newEditIndex">O índice do item para editar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListViewEditEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.ListViewEditEventArgs> classe.  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando elas geram eventos.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListViewEditEventArgs>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewEditEventArgs.NewEditIndex%2A>|O valor de `newEditIndex` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewEditIndex">
+      <MemberSignature Language="C#" Value="public int NewEditIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewEditIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewEditEventArgs.NewEditIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do item que está sendo editado.</summary>
+        <value>O índice do item que está sendo editado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewEditEventArgs.NewEditIndex%2A> propriedade para determinar o índice do item que está sendo editado. O índice do item é geralmente usado para recuperar este item do <xref:System.Web.UI.WebControls.ListView.Items%2A> coleção do <xref:System.Web.UI.WebControls.ListView> controle, que permite que você acesse as propriedades do item.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewEditEventArgs.NewEditIndex%2A> propriedade para recuperar o <xref:System.Web.UI.WebControls.ListViewItem> objeto que está sendo editado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.ListViewEditEventArgs> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemEditing#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemEditing/CS/ListViewItemEditingCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemEditing#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemEditing/VB/ListViewItemEditingVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

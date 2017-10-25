@@ -1,0 +1,171 @@
+<Type Name="DispatcherObject" FullName="System.Windows.Threading.DispatcherObject">
+  <TypeSignature Language="C#" Value="public abstract class DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DispatcherObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.DispatcherObject" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto associado a um <see cref="T:System.Windows.Threading.Dispatcher" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente o thread que o <xref:System.Windows.Threading.DispatcherObject.Dispatcher%2A> foi criado na pode acessar o <xref:System.Windows.Threading.DispatcherObject> diretamente.  Para acessar um <xref:System.Windows.Threading.DispatcherObject> de um thread que não seja o thread o <xref:System.Windows.Threading.DispatcherObject> foi criada, chame <xref:System.Windows.Threading.Dispatcher.Invoke%2A> ou <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> no <xref:System.Windows.Threading.Dispatcher> o <xref:System.Windows.Threading.DispatcherObject> está associado.  
+  
+ As subclasses de <xref:System.Windows.Threading.DispatcherObject> que precisa para impor o thread de segurança pode fazer isso chamando <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> em todos os métodos públicos.  Isso garante que o thread de chamada é o que o <xref:System.Windows.Threading.DispatcherObject> foi criado.  
+  
+ Um <xref:System.Windows.Threading.DispatcherObject> não pode ser instanciado independentemente; ou seja, todos os construtores são protegidos.  
+  
+ Objetos que derivam de <xref:System.Windows.Threading.DispatcherObject> têm afinidade de thread.  
+  
+ Objetos que derivam de <xref:System.Windows.Freezable> são free-thread quando eles estiverem congelados.  Para obter mais informações, consulte a [visão geral de objetos congeláveis](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Qualquer público <see langword="static" /> membros desse tipo são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Esse objeto pode ser acessado somente do thread no qual ele foi criado. Tentar acessá-lo de outros threads lançará um <see cref="T:System.InvalidOperationException" />. <see cref="M:System.Windows.Threading.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority,System.Delegate)" />ou <see cref="M:System.Windows.Threading.Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority,System.Delegate)" /> oferecem suporte para o empacotamento de trabalho do thread correto.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DispatcherObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Threading.DispatcherObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAccess">
+      <MemberSignature Language="C#" Value="public bool CheckAccess ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CheckAccess() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherObject.CheckAccess" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o thread de chamada tem acesso a este <see cref="T:System.Windows.Threading.DispatcherObject" />.</summary>
+        <returns>
+          <see langword="true" /> se o thread de chamada tiver acesso a esse objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente o thread de <xref:System.Windows.Threading.DispatcherObject.Dispatcher%2A> foi criado na pode acessar o <xref:System.Windows.Threading.DispatcherObject>.  
+  
+ Qualquer thread pode verificar se ele tem acesso a esse <xref:System.Windows.Threading.DispatcherObject>.  
+  
+ A diferença entre <xref:System.Windows.Threading.DispatcherObject.CheckAccess%2A> e <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> é que <xref:System.Windows.Threading.DispatcherObject.CheckAccess%2A> retorna um valor booleano que especifica se o thread de chamada tem acesso a esse <xref:System.Windows.Threading.DispatcherObject> e <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> lança uma exceção se o thread de chamada não tem acesso a esta <xref:System.Windows.Threading.DispatcherObject>.  
+  
+ Chamar esse método é idêntico ao chamar <xref:System.Windows.Threading.Dispatcher.CheckAccess%2A> em associado <xref:System.Windows.Threading.Dispatcher> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Windows.Threading.DispatcherObject.CheckAccess%2A> para determinar se um thread tem acesso para o thread que um <xref:System.Windows.Controls.Button> foi criado.  O <xref:System.Windows.Threading.DispatcherObject.CheckAccess%2A> método o <xref:System.Windows.Controls.Button> é chamado para verificar o acesso ao segmento.  Se o thread de chamada tem acesso, o <xref:System.Windows.Controls.Button> é atualizada por acessar apenas os membros do <xref:System.Windows.Controls.Button>; caso contrário, um delegado, que aceita um <xref:System.Windows.Controls.Button> como um argumento é postada para o <xref:System.Windows.Threading.Dispatcher> do <xref:System.Windows.Controls.Button>.  
+  
+ [!code-csharp[DispatcherObjectAccessSample#DispatcherObjectAccessCheckAccess](~/samples/snippets/csharp/VS_Snippets_Wpf/DispatcherObjectAccessSample/CSharp/Window1.xaml.cs#dispatcherobjectaccesscheckaccess)]
+ [!code-vb[DispatcherObjectAccessSample#DispatcherObjectAccessCheckAccess](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DispatcherObjectAccessSample/visualbasic/window1.xaml.vb#dispatcherobjectaccesscheckaccess)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispatcher">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.Dispatcher Dispatcher { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Threading.Dispatcher Dispatcher" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.DispatcherObject.Dispatcher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.Dispatcher</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Threading.Dispatcher" /> ao qual este <see cref="T:System.Windows.Threading.DispatcherObject" /> está associado.</summary>
+        <value>O dispatcher.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente o thread que o <xref:System.Windows.Threading.DispatcherObject.Dispatcher%2A> foi criado na pode acessar o <xref:System.Windows.Threading.DispatcherObject> diretamente.  Para acessar um <xref:System.Windows.Threading.DispatcherObject> de um thread que não seja o thread o <xref:System.Windows.Threading.DispatcherObject> foi criada, chame <xref:System.Windows.Threading.Dispatcher.Invoke%2A> e <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> no <xref:System.Windows.Threading.Dispatcher> o <xref:System.Windows.Threading.DispatcherObject> está associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyAccess">
+      <MemberSignature Language="C#" Value="public void VerifyAccess ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void VerifyAccess() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherObject.VerifyAccess" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Impõe que o thread de chamada tenha acesso a este <see cref="T:System.Windows.Threading.DispatcherObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente o thread de <xref:System.Windows.Threading.DispatcherObject.Dispatcher%2A> foi criado na pode acessar o <xref:System.Windows.Threading.DispatcherObject>.  
+  
+ Qualquer thread pode verificar se ele tem acesso a esse <xref:System.Windows.Threading.DispatcherObject>.  
+  
+ A diferença entre <xref:System.Windows.Threading.DispatcherObject.CheckAccess%2A> e <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> é que <xref:System.Windows.Threading.DispatcherObject.CheckAccess%2A> retorna um valor booleano que especifica se o thread de chamada tem acesso a esse <xref:System.Windows.Threading.DispatcherObject> e <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> lança uma exceção se o thread de chamada não tem acesso a esta <xref:System.Windows.Threading.DispatcherObject>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> para determinar se um thread tem acesso para o thread que um <xref:System.Windows.Controls.Button> foi criado.  Se o thread de chamada não tem acesso, um <xref:System.InvalidOperationException> é gerada.  
+  
+ [!code-csharp[DispatcherObjectAccessSample#DispatcherObjectAccessVerifyAccess](~/samples/snippets/csharp/VS_Snippets_Wpf/DispatcherObjectAccessSample/CSharp/Window1.xaml.cs#dispatcherobjectaccessverifyaccess)]
+ [!code-vb[DispatcherObjectAccessSample#DispatcherObjectAccessVerifyAccess](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DispatcherObjectAccessSample/visualbasic/window1.xaml.vb#dispatcherobjectaccessverifyaccess)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O thread de chamada não tem acesso a este <see cref="T:System.Windows.Threading.DispatcherObject" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

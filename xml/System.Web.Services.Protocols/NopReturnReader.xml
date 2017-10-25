@@ -1,0 +1,139 @@
+<Type Name="NopReturnReader" FullName="System.Web.Services.Protocols.NopReturnReader">
+  <TypeSignature Language="C#" Value="public class NopReturnReader : System.Web.Services.Protocols.MimeReturnReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NopReturnReader extends System.Web.Services.Protocols.MimeReturnReader" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.NopReturnReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.MimeReturnReader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Serve como um leitor não agir de resposta de entrada retorna valores para os clientes de serviço Web implementados usando HTTP, mas sem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Protocols.NopReturnReader>e outras classes de <xref:System.Web.Services.Protocols> namespace oferece suporte às implementações do .NET Framework do Web services por meio de operações de HTTP GET e POST HTTP. Os leitores e gravadores de serviço web serializar e desserializar, respectivamente, entre os parâmetros ou objetos de retorno de métodos Web e os fluxos de solicitação ou resposta HTTP. Os leitores e gravadores de serviço da web usam o HTTP para o transporte, mas não trocam mensagens usando o padrão SOAP.  
+  
+ O <xref:System.Web.Services.Protocols.NopReturnReader> classe fornece uma implementação de leitura não da interface da classe abstrata <xref:System.Web.Services.Protocols.MimeReturnReader>.  
+  
+ Você normalmente não precisará usar o <xref:System.Web.Services.Protocols.NopReturnReader> classe. Em vez disso, quando a ferramenta Wsdl.exe gera o código de proxy do cliente de acordo com as implementações de HTTP GET ou POST HTTP, recomendamos que ele se aplica a <xref:System.Web.Services.Protocols.HttpMethodAttribute> para cada método Web e, por padrão, define o atributo <xref:System.Web.Services.Protocols.HttpMethodAttribute.ReturnFormatter%2A> propriedade <xref:System.Web.Services.Protocols.XmlReturnReader>, outra classe derivada de <xref:System.Web.Services.Protocols.MimeReturnReader>. WSDL.exe define a propriedade como <xref:System.Web.Services.Protocols.NopReturnReader> se for outro não é possível determinar um valor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NopReturnReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.NopReturnReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.NopReturnReader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInitializer">
+      <MemberSignature Language="C#" Value="public override object GetInitializer (System.Web.Services.Protocols.LogicalMethodInfo methodInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetInitializer(class System.Web.Services.Protocols.LogicalMethodInfo methodInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.NopReturnReader.GetInitializer(System.Web.Services.Protocols.LogicalMethodInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodInfo" Type="System.Web.Services.Protocols.LogicalMethodInfo" />
+      </Parameters>
+      <Docs>
+        <param name="methodInfo">Um <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> que especifica o método da Web para o qual o inicializador é obtido.</param>
+        <summary>Retorna um inicializador para o método especificado.</summary>
+        <returns>Um inicializador para o método especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um inicializador é um objeto passado como um parâmetro para o <xref:System.Web.Services.Protocols.NopReturnReader.Initialize%2A> método. Para o <xref:System.Web.Services.Protocols.NopReturnReader> o inicializador de classe, é a instância à qual a palavra-chave `this`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (object initializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(object initializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.NopReturnReader.Initialize(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="initializer" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="initializer">Outra instância do <see cref="T:System.Web.Services.Protocols.NopReturnReader" /> classe, no qual o <see cref="M:System.Web.Services.Protocols.NopReturnReader.GetInitializer(System.Web.Services.Protocols.LogicalMethodInfo)" /> método foi chamado anteriormente.</param>
+        <summary>Inicializa uma instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.NopReturnReader.Initialize%2A> método não fará nada. Ele é invocado quando que uma resposta é processada. O parâmetro de entrada, `initializer`, é outra instância da classe que é obtida durante a inicialização do cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override object Read (System.Net.WebResponse response, System.IO.Stream responseStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Read(class System.Net.WebResponse response, class System.IO.Stream responseStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.NopReturnReader.Read(System.Net.WebResponse,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="response" Type="System.Net.WebResponse" />
+        <Parameter Name="responseStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="response">Um <see cref="T:System.Net.WebResponse" /> objeto que contém a mensagem de saída para uma operação.</param>
+        <param name="responseStream">Um <see cref="T:System.IO.Stream" /> cujo conteúdo é o corpo da resposta HTTP representado pelo <c>resposta</c> parâmetro.</param>
+        <summary>Retorna <see langword="null" /> em vez de ao desserializar o fluxo de resposta HTTP para um método Web retorna o valor.</summary>
+        <returns>
+          <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.NopReturnReader> implementação da classe do <xref:System.Web.Services.Protocols.MimeReturnReader.Read%2A> método não faz nenhuma leitura. Em vez disso, ele retorna `null`. Além disso, ele fecha o fluxo de resposta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

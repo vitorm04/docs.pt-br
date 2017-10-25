@@ -1,0 +1,286 @@
+<Type Name="DesignerView" FullName="System.Workflow.ComponentModel.Design.DesignerView">
+  <TypeSignature Language="C#" Value="public class DesignerView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerView extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.DesignerView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como um repositório para obter informações sobre os modos de exibição com suporte a <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> ou classes que herdam a ele.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerView (int viewId, string text, System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 viewId, string text, class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerView.#ctor(System.Int32,System.String,System.Drawing.Image)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="viewId" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="viewId">O identificador de inteiro para a exibição do designer.</param>
+        <param name="text">A cadeia de caracteres que especifica o nome da exibição de designer.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> associado com a exibição do designer.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Design.DesignerView" /> classe usando um número inteiro, uma cadeia de caracteres e um <see cref="T:System.Drawing.Image" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="viewId" />ou <paramref name="text" /> contém <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerView (int viewId, string text, System.Drawing.Image image, System.Workflow.ComponentModel.Design.ActivityDesigner associatedDesigner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 viewId, string text, class System.Drawing.Image image, class System.Workflow.ComponentModel.Design.ActivityDesigner associatedDesigner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerView.#ctor(System.Int32,System.String,System.Drawing.Image,System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="viewId" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="associatedDesigner" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="viewId">O identificador de inteiro para a exibição do designer.</param>
+        <param name="text">A cadeia de caracteres que especifica o nome da exibição de designer.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> associado com a exibição do designer.</param>
+        <param name="associatedDesigner">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> associado com a exibição do designer.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Design.DesignerView" /> classe usando um número inteiro, uma cadeia de caracteres, um <see cref="T:System.Drawing.Image" />e um <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="viewId" />, <paramref name="text" />, ou <paramref name="associatedDesigner" /> contém <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedDesigner">
+      <MemberSignature Language="C#" Value="public virtual System.Workflow.ComponentModel.Design.ActivityDesigner AssociatedDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.ActivityDesigner AssociatedDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerView.AssociatedDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ActivityDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o designer de atividade associado com a exibição do designer.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> associado ao <see cref="T:System.Workflow.ComponentModel.Design.DesignerView" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerView.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Workflow.ComponentModel.Design.DesignerView" />.</param>
+        <summary>Determina se o especificado <see cref="T:System.Object" /> é igual ao modo de exibição designer atual.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> e atual <see cref="T:System.Workflow.ComponentModel.Design.DesignerView" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.DesignerView.Equals%2A>usa o <xref:System.Workflow.ComponentModel.Design.DesignerView.ViewId%2A> propriedade para determinar se os modos de exibição de designers comparados são iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerView.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para o <see cref="T:System.Workflow.ComponentModel.Design.DesignerView" /> e é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.</summary>
+        <returns>Um código hash do <see cref="T:System.Workflow.ComponentModel.Design.DesignerView" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerView.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a imagem associada com o designer de exibição.</summary>
+        <value>O <see cref="T:System.Drawing.Image" /> associado ao <see cref="T:System.Workflow.ComponentModel.Design.DesignerView" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivate">
+      <MemberSignature Language="C#" Value="public virtual void OnActivate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnActivate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerView.OnActivate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o designer quando o modo de exibição é ativado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.DesignerView.OnActivate%2A>não tem nenhum comportamento padrão; classes que herdam de <xref:System.Workflow.ComponentModel.Design.DesignerView> deve implementar sua própria lógica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeactivate">
+      <MemberSignature Language="C#" Value="public virtual void OnDeactivate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnDeactivate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerView.OnDeactivate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o designer quando o modo de exibição é desativado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.DesignerView.OnDeactivate%2A>não tem nenhum comportamento padrão; classes que herdam de <xref:System.Workflow.ComponentModel.Design.DesignerView> deve implementar sua própria lógica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerView.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do modo de exibição designer.</summary>
+        <value>Uma cadeia de caracteres que contém o nome do <see cref="T:System.Workflow.ComponentModel.Design.DesignerView" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserData">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary UserData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary UserData" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerView.UserData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o dicionário de dados do usuário associados com a exibição do designer.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> que contém os dados de usuário associados a <see cref="T:System.Workflow.ComponentModel.Design.DesignerView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.ComponentModel.Design.DesignerView.UserData%2A> é `null`, um <xref:System.Collections.Specialized.HybridDictionary> é criado para manter os dados de usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewId">
+      <MemberSignature Language="C#" Value="public int ViewId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ViewId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerView.ViewId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador associado com a exibição do designer.</summary>
+        <value>Um inteiro que contém o identificador para o <see cref="T:System.Workflow.ComponentModel.Design.DesignerView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade identifica exclusivamente uma exibição associada com o designer. Essa propriedade deve conter um valor exclusivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

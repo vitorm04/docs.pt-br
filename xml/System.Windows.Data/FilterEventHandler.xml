@@ -1,0 +1,42 @@
+<Type Name="FilterEventHandler" FullName="System.Windows.Data.FilterEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void FilterEventHandler(object sender, FilterEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FilterEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.FilterEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Data.FilterEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Windows.Data.CollectionViewSource.Filter" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como definir um manipulador de eventos para o <xref:System.Windows.Data.CollectionViewSource.Filter?displayProperty=nameWithType> evento. Neste exemplo, `listingDataView` é uma instância de <xref:System.Windows.Data.CollectionViewSource>.  
+  
+ [!code-csharp[DataBindingLab#10](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
+ [!code-vb[DataBindingLab#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
+  
+ O exemplo a seguir mostra a implementação do exemplo `ShowOnlyBargainsFilter` manipulador de eventos de filtro. Este manipulador de eventos usa o <xref:System.Windows.Data.FilterEventArgs.Accepted%2A?displayProperty=nameWithType> propriedade filtrar `AuctionItem` objetos que têm um `CurrentPrice` de $25,00 ou superior.  
+  
+ [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
+ [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
+  
+ Para o exemplo completo, consulte [Data Binding Demo](http://go.microsoft.com/fwlink/?LinkID=163703).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

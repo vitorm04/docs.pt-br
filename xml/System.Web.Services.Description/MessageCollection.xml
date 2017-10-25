@@ -1,0 +1,367 @@
+<Type Name="MessageCollection" FullName="System.Web.Services.Description.MessageCollection">
+  <TypeSignature Language="C#" Value="public sealed class MessageCollection : System.Web.Services.Description.ServiceDescriptionBaseCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MessageCollection extends System.Web.Services.Description.ServiceDescriptionBaseCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.MessageCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.ServiceDescriptionBaseCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de instâncias de <see cref="T:System.Web.Services.Description.Message" /> classe. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[DescriptionNamespaceSample1#9](~/samples/snippets/cpp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CPP/descriptionnamespacesample1.cpp#9)]
+ [!code-csharp[DescriptionNamespaceSample1#9](~/samples/snippets/csharp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CS/descriptionnamespacesample1.cs#9)]
+ [!code-vb[DescriptionNamespaceSample1#9](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DescriptionNamespaceSample1/VB/descriptionnamespacesample1.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.Services.Description.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.Services.Description.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MessageCollection.Add(System.Web.Services.Description.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Web.Services.Description.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.Web.Services.Description.Message" /> a adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Web.Services.Description.Message" /> ao final do <see cref="T:System.Web.Services.Description.MessageCollection" />.</summary>
+        <returns>O índice de base zero onde o <paramref name="message" /> parâmetro foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[DescriptionNamespaceSample1#7](~/samples/snippets/cpp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CPP/descriptionnamespacesample1.cpp#7)]
+ [!code-csharp[DescriptionNamespaceSample1#7](~/samples/snippets/csharp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CS/descriptionnamespacesample1.cs#7)]
+ [!code-vb[DescriptionNamespaceSample1#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DescriptionNamespaceSample1/VB/descriptionnamespacesample1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.Services.Description.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.Services.Description.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MessageCollection.Contains(System.Web.Services.Description.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Web.Services.Description.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.Web.Services.Description.Message" /> para o qual verificar a associação da coleção.</param>
+        <summary>Retorna um valor que indica se especificado <see cref="T:System.Web.Services.Description.Message" /> é membro do <see cref="T:System.Web.Services.Description.MessageCollection" />.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="message" /> parâmetro for um membro do <see cref="T:System.Web.Services.Description.MessageCollection" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método `Contains`.  
+  
+ [!code-cpp[MessageCollection#4](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageCollection/CPP/messagecollection.cpp#4)]
+ [!code-csharp[MessageCollection#4](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageCollection/CS/messagecollection.cs#4)]
+ [!code-vb[MessageCollection#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageCollection/VB/messagecollection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.Services.Description.Message[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.Services.Description.Message[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MessageCollection.CopyTo(System.Web.Services.Description.Message[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.Services.Description.Message[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz do tipo <see cref="T:System.Web.Services.Description.Message" /> que serve como o destino para a ação de cópia.</param>
+        <param name="index">O índice baseado em zero no qual começar a colocar a coleção copiada.</param>
+        <summary>Copia todo o <see cref="T:System.Web.Services.Description.MessageCollection" /> para uma matriz unidimensional compatível do tipo <see cref="T:System.Web.Services.Description.Message" />, começando no índice de base zero especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método `CopyTo`.  
+  
+ [!code-cpp[MessageCollection#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageCollection/CPP/messagecollection.cpp#1)]
+ [!code-csharp[MessageCollection#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageCollection/CS/messagecollection.cs#1)]
+ [!code-vb[MessageCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageCollection/VB/messagecollection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="protected override string GetKey (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetKey(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MessageCollection.GetKey(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.Services.Description.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.Services.Description.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MessageCollection.IndexOf(System.Web.Services.Description.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Web.Services.Description.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.Web.Services.Description.Message" /> que deve ser pesquisado na coleção.</param>
+        <summary>Procura especificado <see cref="T:System.Web.Services.Description.Message" /> e retorna o índice baseado em zero da primeira ocorrência na coleção.</summary>
+        <returns>Um inteiro com sinal de 32 bits.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método `IndexOf`.  
+  
+ [!code-cpp[MessageCollection#5](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageCollection/CPP/messagecollection.cpp#5)]
+ [!code-csharp[MessageCollection#5](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageCollection/CS/messagecollection.cs#5)]
+ [!code-vb[MessageCollection#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageCollection/VB/messagecollection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.Services.Description.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.Services.Description.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MessageCollection.Insert(System.Int32,System.Web.Services.Description.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="message" Type="System.Web.Services.Description.Message" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir o <c>mensagem</c> parâmetro.</param>
+        <param name="message">O <see cref="T:System.Web.Services.Description.Message" /> a adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Web.Services.Description.Message" /> para o <see cref="T:System.Web.Services.Description.MessageCollection" /> no índice de base zero especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o número de itens na coleção já for igual a capacidade da coleção, a capacidade é duplicada, automaticamente realocando a matriz interna antes do novo elemento é inserido.  
+  
+ Se o `index` parâmetro for igual ao <xref:System.Collections.CollectionBase.Count%2A>, o `message` parâmetro é adicionado ao final do <xref:System.Web.Services.Description.MessageCollection>.  
+  
+ Os elementos após o ponto de inserção se mover para baixo para acomodar o novo elemento.  
+  
+   
+  
+## Examples  
+ [!code-cpp[DescriptionNamespaceSample1#8](~/samples/snippets/cpp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CPP/descriptionnamespacesample1.cpp#8)]
+ [!code-csharp[DescriptionNamespaceSample1#8](~/samples/snippets/csharp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CS/descriptionnamespacesample1.cs#8)]
+ [!code-vb[DescriptionNamespaceSample1#8](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DescriptionNamespaceSample1/VB/descriptionnamespacesample1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O parâmetro <paramref name="index" /> é menor que zero.  
+  
+ \- ou -  
+  
+ O parâmetro <paramref name="index" /> é maior que <see cref="P:System.Collections.CollectionBase.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Message this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Message Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MessageCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.Web.Services.Description.Message" /> cujo valor é modificado ou retornado.</param>
+        <summary>Obtém ou define o valor de um <see cref="T:System.Web.Services.Description.Message" /> no índice de base zero especificado.</summary>
+        <value>Um <see langword="Message" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso de um índice com base em zero para iterar através dos membros de um `MessageCollection`.  
+  
+ [!code-cpp[MessageCollection#2](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageCollection/CPP/messagecollection.cpp#2)]
+ [!code-csharp[MessageCollection#2](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageCollection/CS/messagecollection.cs#2)]
+ [!code-vb[MessageCollection#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageCollection/VB/messagecollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Message this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Message Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MessageCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Web.Services.Description.Message" /> retornado.</param>
+        <summary>Obtém um <see cref="T:System.Web.Services.Description.Message" /> especificado por seu nome.</summary>
+        <value>Um <see langword="Message" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso de uma cadeia de caracteres para recuperar um `Message`.  
+  
+ [!code-cpp[MessageCollection#3](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageCollection/CPP/messagecollection.cpp#3)]
+ [!code-csharp[MessageCollection#3](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageCollection/CS/messagecollection.cs#3)]
+ [!code-vb[MessageCollection#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageCollection/VB/messagecollection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Services.Description.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Services.Description.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MessageCollection.Remove(System.Web.Services.Description.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.Web.Services.Description.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.Web.Services.Description.Message" /> a ser removido da coleção.</param>
+        <summary>Remove a primeira ocorrência do <see cref="T:System.Web.Services.Description.Message" /> especificado do <see cref="T:System.Web.Services.Description.MessageCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método executa uma pesquisa linear; Portanto, o tempo médio de execução é proporcional ao <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ Os elementos que seguem o removido <xref:System.Web.Services.Description.Message> mover para cima para ocupar o ponto vagas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método `Remove`.  
+  
+ [!code-cpp[MessageCollection#6](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageCollection/CPP/messagecollection.cpp#6)]
+ [!code-csharp[MessageCollection#6](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageCollection/CS/messagecollection.cs#6)]
+ [!code-vb[MessageCollection#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageCollection/VB/messagecollection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParent">
+      <MemberSignature Language="C#" Value="protected override void SetParent (object value, object parent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetParent(object value, object parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MessageCollection.SetParent(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="parent" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <param name="parent">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

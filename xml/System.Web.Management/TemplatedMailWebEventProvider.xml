@@ -1,0 +1,182 @@
+<Type Name="TemplatedMailWebEventProvider" FullName="System.Web.Management.TemplatedMailWebEventProvider">
+  <TypeSignature Language="C#" Value="public sealed class TemplatedMailWebEventProvider : System.Web.Management.MailWebEventProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TemplatedMailWebEventProvider extends System.Web.Management.MailWebEventProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.TemplatedMailWebEventProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.MailWebEventProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa um provedor de eventos que usa modelos para definir e formatar emails envia notificações de evento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management?displayProperty=nameWithType> namespace contém os tipos de evento de integridade responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ Essa classe não se destina a ser usado em seu código. Ele é criado, configurado e usado pelo sistema de monitoramento de integridade do ASP.NET para enviar notificações de eventos por email. Você pode definir um provedor de eventos da Web de email em um arquivo de configuração, conforme demonstrado na seção exemplo deste tópico. Além disso, você pode definir a seção de provedores programaticamente, acessando a <xref:System.Web.Configuration.HealthMonitoringSection.Providers%2A?displayProperty=nameWithType> propriedade.  
+  
+ O email que produz essa classe é definido e formatada usando um modelo. Este modelo consiste em marcação código definido em um arquivo. aspx padrão que gera o texto para o corpo da mensagem. As informações de evento usadas pelo modelo são fornecidas por um <xref:System.Web.Management.MailEventNotificationInfo> objeto que está disponível no estático <xref:System.Web.Management.TemplatedMailWebEventProvider.CurrentNotification%2A> propriedade dessa classe.  
+  
+ Esse provedor tem um conjunto abrangente de atributos de configuração que você pode usar para personalizar a forma como ele funciona.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é um trecho do arquivo de configuração que mostra como especificar um provedor do tipo <xref:System.Web.Management.SimpleMailWebEventProvider> no `<healthMonitoring>` seção o `<add>` elementos o `<rules>` seção especificar que o provedor tratará o processamento de solicitação erros e erros de infraestrutura.  
+  
+```  
+<system.web>  
+  <healthMonitoring  
+    enabled="true"  
+    heartBeatInterval="0">  
+    <bufferModes>  
+      <add name="Critical Notification"  
+        maxBufferSize="100"  
+        maxFlushSize="20"  
+        urgentFlushThreshold="1"  
+        regularFlushInterval="Infinite"  
+        urgentFlushInterval="00:01:00"  
+        maxBufferThreads="1"  
+      />  
+    </bufferModes>  
+    <providers>  
+      <add name="CriticalMailEventProvider"  
+        type="System.Web.Management.TemplatedMailWebEventProvider,   
+        System.Web, Version=%ASSEMBLY_VERSION%, Culture=neutral,   
+        PublicKeyToken=%MICROSOFT_PUBLICKEY%"  
+        template="../mailtemplates/critical.aspx"  
+        from="sender address"  
+        to="someone@example.com"   
+        cc="someone@example.com"  
+        bcc="someone@example.com"  
+        priority="High"  
+        bodyHeader="Warning!"  
+        bodyFooter="Please investigate ASAP."  
+        subjectPrefix="Action required."  
+        buffer="true"  
+        bufferMode="Critical Notification"  
+        maxEventLength="4096"  
+        maxSize="4096"  
+        maxMessagesPerNotification="1"  
+      />  
+    </providers>  
+    <eventMappings>  
+      <add name="Request Processing Events"  
+        type="System.Web.Management.WebRequestEvent, System.Web",   
+        Version=%ASSEMBLY_VERSION%, Culture=neutral,   
+        PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+      />  
+      <add name="Infrastructure Errors"  
+        type="System.Web.Management.WebErrorEvent, System.Web,   
+        Version=%ASSEMBLY_VERSION%, Culture=neutral,   
+        PublicKeyToken=%MICROSOFT_PUBLICKEY%"   
+      />  
+    </eventMappings>  
+    <profiles>  
+      <add name="Default"  
+        minInstances="1"  
+        maxLimit="Infinite"  
+        minInterval="00:10:00"  
+      />  
+      <add name="Critical"  
+        minInstances="1"  
+        maxLimit="1024"  
+        minInterval="00:00:00"  
+      />  
+    </profiles>  
+    <rules>  
+      <add name="Request Processing Errors"  
+        eventName="Request Processing Errors"  
+        provider="CriticalMailEventProvider"  
+        profile="Default"  
+      />  
+      <add name="Infrastructure Notifications"  
+        eventName="Infrastructure Errors"  
+        provider="CriticalMailEventProvider"  
+        profile="Critical"  
+      />  
+    </rules>  
+  </healthMonitoring>   
+</system.web>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentNotification">
+      <MemberSignature Language="C#" Value="public static System.Web.Management.MailEventNotificationInfo CurrentNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Management.MailEventNotificationInfo CurrentNotification" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.TemplatedMailWebEventProvider.CurrentNotification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.MailEventNotificationInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de notificação de evento que fornece as informações de evento usadas pelo modelo de email.</summary>
+        <value>O <see cref="T:System.Web.Management.MailEventNotificationInfo" /> do objeto que está sendo processado no momento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atual <xref:System.Web.Management.MailEventNotificationInfo> objeto é usado dentro do modelo de email para fornecer informações sobre os eventos que estão sendo processados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.TemplatedMailWebEventProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome desse provedor de eventos.</param>
+        <param name="config">Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> objeto que especifica as configurações para este provedor de eventos.</param>
+        <summary>Define os valores iniciais para este objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de monitoramento de integridade do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">
+          <paramref name="config" />não incluir um atributo com nome "modelo".  
+  
+ \- ou -  
+  
+ O atributo do modelo fornecido pelo <paramref name="config" /> tem um <see cref="P:System.String.Length" /> de <see langword="0" />.  
+  
+ \- ou -  
+  
+ A URL especificada pelo atributo de modelo não é uma URL relativa ao aplicativo.  
+  
+ \- ou -  
+  
+ O modelo especificado URL está fora do caminho de domínio de aplicativo.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

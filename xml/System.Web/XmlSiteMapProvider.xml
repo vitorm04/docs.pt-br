@@ -1,0 +1,708 @@
+<Type Name="XmlSiteMapProvider" FullName="System.Web.XmlSiteMapProvider">
+  <TypeSignature Language="C#" Value="public class XmlSiteMapProvider : System.Web.StaticSiteMapProvider, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSiteMapProvider extends System.Web.StaticSiteMapProvider implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.XmlSiteMapProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.StaticSiteMapProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>O <see cref="T:System.Web.XmlSiteMapProvider" /> classe é derivada do <see cref="T:System.Web.SiteMapProvider" /> classe e é o provedor de mapa de site padrão do ASP.NET. A classe <see cref="T:System.Web.XmlSiteMapProvider" /> gera árvores de mapa do site com base em arquivos XML com a extensão de nome de arquivo .sitemap.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> carrega dados de mapa do site de um arquivo XML que segue um esquema conhecido. Os dados de mapa do site são delimitados por `<siteMap>` marcas e consiste em aninhada `<siteMapNode>` marcas. Duas restrições são impostas pelo <xref:System.Web.SiteMapProvider> e <xref:System.Web.XmlSiteMapProvider> dados de mapa de classes na estrutura do site:  
+  
+-   Pode existir apenas um nó raiz.  
+  
+-   Para <xref:System.Web.SiteMapNode> objetos que especificam URLs, as URLs devem ser exclusivos dentro do escopo do provedor. (Para nós que não especificam URLs, todas as chaves devem ser exclusivas.)  
+  
+ O exemplo de código a seguir mostra um exemplo de um arquivo XML que pode ser usado com o <xref:System.Web.XmlSiteMapProvider>.  
+  
+```  
+<siteMap>  
+  <siteMapNode title="RootNode" description="This is the root node of the site map. There can be only one root node." url="Page1.aspx" >  
+    <siteMapNode title="ChildofRootNode" description="Descriptions do not have to be unique." url="Page2.aspx">  
+      <siteMapNode title="ChildOfChildNode" description="SiteMapNode objects can be nested to any level." url="Page3.aspx"/>  
+    </siteMapNode>  
+    <siteMapNode title="ChildofRootNode" description="Descriptions do not have to be unique." url="Page4.aspx"/>  
+  </siteMapNode>  
+</siteMap>  
+```  
+  
+ O <xref:System.Web.XmlSiteMapProvider> é o provedor padrão para o ASP.NET e lê dados XML de um arquivo chamado SiteMap que está localizado dentro da estrutura de diretório do aplicativo ASP.NET. Por padrão, o arquivo de sitemap está localizado na raiz do aplicativo. No entanto, se você deseja alterar o nome ou local do arquivo do qual o <xref:System.Web.XmlSiteMapProvider> carrega dados, você pode substituir a configuração padrão em seu arquivo Web. config. Substituindo as configurações padrão no arquivo Web. config, você pode personalizar o comportamento do <xref:System.Web.XmlSiteMapProvider> para cada aplicativo do ASP.NET, conforme necessário.  
+  
+ O exemplo de código a seguir demonstra um exemplo de arquivo Web. config, onde o <xref:System.Web.XmlSiteMapProvider> é ainda usada, mas outro arquivo de mapa de site é usado. Como todos os provedores em uma <xref:System.Web.SiteMapProviderCollection> objeto deve ser nomeado de forma exclusiva, que é especificado no arquivo Web. config usa um nome diferente do padrão, mas também é definido como o provedor padrão para que ele seja usado em vez da <xref:System.Web.XmlSiteMapProvider> especificada na configuração padrão do ASP.NET.  
+  
+> [!NOTE]
+>  Você pode alterar o nome do arquivo de dados de navegação do site, mas você não pode alterar sua extensão. O <xref:System.Web.XmlSiteMapProvider> apenas lê dados de arquivos que são nomeados com a extensão de nome de arquivo. sitemap.  
+  
+```  
+<siteMap defaultProvider="MyXmlSiteMapProvider" enabled="true">  
+  <providers>  
+    <add name="MyXmlSiteMapProvider"  
+      description="SiteMap provider that reads in .sitemap files."  
+      type="System.Web.XmlSiteMapProvider, System.Web, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"  
+      siteMapFile="CustomWeb.sitemap" />  
+  </providers>  
+</siteMap>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSiteMapProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de sem nome, o <see cref="T:System.Web.XmlSiteMapProvider" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNode">
+      <MemberSignature Language="C#" Value="protected override void AddNode (System.Web.SiteMapNode node, System.Web.SiteMapNode parentNode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void AddNode(class System.Web.SiteMapNode node, class System.Web.SiteMapNode parentNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.AddNode(System.Web.SiteMapNode,System.Web.SiteMapNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Web.SiteMapNode" />
+        <Parameter Name="parentNode" Type="System.Web.SiteMapNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Web.SiteMapNode" /> para adicionar ao provedor.</param>
+        <param name="parentNode">O <see cref="T:System.Web.SiteMapNode" /> sob a qual adicionar <c>nó</c>.</param>
+        <summary>Adiciona um <see cref="T:System.Web.SiteMapNode" /> objeto para as coleções que são mantidas pelo provedor atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `node` parâmetro é adicionado a uma coleção interna, e uma relação pai/filho é criada entre ele e `parentNode`.  
+  
+ O <xref:System.Web.XmlSiteMapProvider> classe derivada do <xref:System.Web.StaticSiteMapProvider> classe e o provedor de mapa de site padrão do ASP.NET, usa o <xref:System.Web.SiteMapNode.Url%2A> propriedade de uma <xref:System.Web.SiteMapNode> objeto como uma chave de pesquisa em suas coleções internas, por padrão. Se o <xref:System.Web.SiteMapNode.Url%2A> propriedade o <xref:System.Web.SiteMapNode> estiver definido, ele deve ser exclusivo dentro do escopo do provedor. O <xref:System.Web.XmlSiteMapProvider.FindSiteMapNode%2A> método tenta recuperar nós com base nos seus <xref:System.Web.SiteMapNode.Url%2A>. Caso contrário, você pode usar o <xref:System.Web.SiteMapNode.Key%2A> propriedade e correspondente <xref:System.Web.XmlSiteMapProvider.FindSiteMapNodeFromKey%2A> método para recuperar nós.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="node" /> ou <paramref name="parentNode" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Atual <see cref="T:System.Web.XmlSiteMapProvider" /> não o provedor é associado <paramref name="node" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Um nó com a mesma URL ou chave já está registrado com o <see cref="T:System.Web.XmlSiteMapProvider" />. - ou -  
+  
+ Foi encontrado um nó de mapa de site duplicado programaticamente, como quando dois sites de vinculação mapeia provedores.  
+  
+ \- ou -  
+  
+ <paramref name="node" />é o nó raiz do <see cref="T:System.Web.XmlSiteMapProvider" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddProvider">
+      <MemberSignature Language="C#" Value="protected virtual void AddProvider (string providerName, System.Web.SiteMapNode parentNode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void AddProvider(string providerName, class System.Web.SiteMapNode parentNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.AddProvider(System.String,System.Web.SiteMapNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+        <Parameter Name="parentNode" Type="System.Web.SiteMapNode" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">O nome de uma da <see cref="T:System.Web.SiteMapProvider" /> objetos atualmente registrados no <see cref="P:System.Web.SiteMap.Providers" />.</param>
+        <param name="parentNode">Um nó de mapa de site do provedor de mapa de site atual sob a qual o nó raiz e todos os nós do provedor filho é adicionado.</param>
+        <summary>Vincula um provedor de mapa do site filho para o provedor atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider.AddProvider%2A> links de método `providerName` para o provedor atual como um filho do provedor atual. O nó raiz de `providerName` é adicionado à hierarquia para o provedor atual como um nó filho do `parentNode`. Porque o provedor pai chama o <xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A> método `providerName`, as exceções que são descritas no <xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A> método pode ser gerado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Web.SiteMapNode.Provider" /> propriedade o <paramref name="parentNode" /> não referencia o provedor atual.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="parentNode" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="providerName" />não pode ser resolvido.</exception>
+        <exception cref="T:System.InvalidOperationException">O arquivo de mapa de site usado pelo <paramref name="providerName" /> já está em uso dentro da hierarquia de provedor.  
+  
+ -ou-  
+  
+ O nó raiz retornado por <paramref name="providerName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O nó raiz retornado por <paramref name="providerName" /> tem uma URL ou a chave que já está registrado com o pai <see cref="T:System.Web.XmlSiteMapProvider" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildSiteMap">
+      <MemberSignature Language="C#" Value="public override System.Web.SiteMapNode BuildSiteMap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.SiteMapNode BuildSiteMap() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.BuildSiteMap" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Carrega as informações de mapa do site de um arquivo XML e compila-as na memória.</summary>
+        <returns>Retorna o <see cref="T:System.Web.SiteMapNode" /> raiz da estrutura de navegação do mapa do site.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A> método é chamado para carregar e compilar o mapa do site do armazenamento persistente.  
+  
+ Para o comportamento padrão quando a restrição de segurança está habilitada, consulte "Comentários" em <xref:System.Web.SiteMapProvider.IsAccessibleToUser%2A>.  
+  
+ Após o <xref:System.Web.XmlSiteMapProvider> objeto analisa e carrega os dados de mapa de site, todos carregados <xref:System.Web.SiteMapNode> objetos e <xref:System.Web.SiteMapNodeCollection> coleções são somente leitura. Quando o <xref:System.Web.XmlSiteMapProvider> analisa o <xref:System.Web.SiteMapNode.Url%2A> propriedade de um arquivo de mapa de site, ele converte URLs relativas de aplicativos, bem como URLs relativas, para caminhos virtuais absoluto do aplicativo.  
+  
+ O <xref:System.Web.XmlSiteMapProvider> se inscreve para notificações de alteração de arquivo para o arquivo de sitemap. Se qualquer alteração for feita para o arquivo de sitemap, o <xref:System.Web.XmlSiteMapProvider> é recarregado, e a estrutura de mapa do site será reconstruída.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma nova instância do <xref:System.Web.XmlSiteMapProvider> classe e inicializá-lo para criar um mapa de site dos dados XML.  
+  
+```csharp  
+<%@ Page Language="c#" %>  
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">  
+ <SCRIPT runat="server">  
+ private void Page_Load(object sender, System.EventArgs e)  
+ {  
+     // Create an instance of the XmlSiteMapProvider class.  
+     XmlSiteMapProvider testXmlProvider = new XmlSiteMapProvider();  
+     NameValueCollection providerAttributes = new NameValueCollection(1);  
+     providerAttributes.Add("siteMapFile","test.sitemap");  
+     // Initialize the provider with a provider name and file name.  
+     testXmlProvider.Initialize("testProvider", providerAttributes);  
+  
+     // The BuildSiteMap method is implicitly called when the   
+     // RootNode propety is accessed.  
+  
+     // Prints "/myvirtualdirectory/WebForm1.aspx"  
+     Response.Write(testXmlProvider.RootNode.Url + "<BR>");  
+     // Prints "/myvirtualdirectory/WebForm2.aspx"  
+     Response.Write(testXmlProvider.CurrentNode.Url + "<BR>");  
+ }  
+```  
+  
+ O exemplo de código anterior usa um arquivo XML que está localizado na raiz virtual do aplicativo ASP.NET. O arquivo tem o seguinte formato:  
+  
+```  
+<siteMap>  
+     <siteMapNode title="RootNode" description="The root page." url="WebForm1.aspx">  
+         <siteMapNode title="CurrentNode" description="Some sub page." url="WebForm2.aspx"/>  
+     </siteMapNode>  
+ </siteMap>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Web.XmlSiteMapProvider" /> não foi inicializado corretamente.  
+  
+ \- ou -  
+  
+ Um <see langword="siteMapFile" /> é analisado em relação a um <see langword="&lt;siteMapNode&gt;" /> que não é exclusivo.  
+  
+ \- ou -  
+  
+ O arquivo especificado por <see langword="siteMapFile" /> não tem a extensão de nome de arquivo .sitemap.  
+  
+ \- ou -  
+  
+ O arquivo especificado por <see langword="siteMapFile" /> não existe.  
+  
+ \- ou -  
+  
+ Um provedor configurado no <see langword="provider" /> de um <see langword="&lt;siteMapNode&gt;" /> retorna um nó raiz nulo.</exception>
+        <exception cref="T:System.ArgumentException">O <see langword="siteMapFile" /> for especificado, mas o caminho está posicionada fora da estrutura de diretório atual para o aplicativo.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Erro ao carregar o arquivo de configuração.  
+  
+ \- ou -  
+  
+ O elemento superior do arquivo de configuração não é <see langword="named &lt;siteMap&gt;" />.  
+  
+ \- ou -  
+  
+ Existe mais de um nó superior no arquivo de configuração.  
+  
+ \- ou -  
+  
+ Um filho de <see langword="&lt;siteMap&gt;" /> tem um nome diferente de <see langword="&lt;siteMapNode&gt;" />.  
+  
+ \- ou -  
+  
+ Um atributo inesperado é analisado em relação ao <see langword="&lt;siteMapNode&gt;" />.  
+  
+ \- ou -  
+  
+ Os subelementos são aninhados sob um <see langword="&lt;siteMapNode&gt;" /> em que o <see langword="provider" /> é definido.  
+  
+ \- ou -  
+  
+ O <see langword="roles" /> do <see langword="&lt;siteMapNode&gt;" /> contêm caracteres que não são válidos.  
+  
+ \- ou -  
+  
+ Um <see langword="url" /> é analisado em relação a um <see langword="&lt;siteMapNode&gt;" /> que não é exclusivo.  
+  
+ \- ou -  
+  
+ Um <see cref="T:System.Web.SiteMapNode" /> foi encontrado com um valor duplicado para <see cref="P:System.Web.SiteMapNode.Key" />.  
+  
+ \- ou -  
+  
+ O <see cref="P:System.Web.SiteMapNode.ResourceKey" /> ou <see cref="P:System.Web.SiteMapNode.Title" /> foi especificado em um <see cref="T:System.Web.SiteMapNode" /> ou um atributo <see langword="custom" /> definido para o nó continha uma expressão de recurso explícita.  
+  
+ \- ou -  
+  
+ Uma expressão explícita de recurso foi aplicada ao <see cref="P:System.Web.SiteMapNode.Title" /> ou <see cref="P:System.Web.SiteMapNode.Description" /> ou a um atributo <see langword="custom" /> de um <see cref="T:System.Web.SiteMapNode" />, mas as informações explícitas não eram válidas.  
+  
+ \- ou -  
+  
+ Erro ao analisar o <see cref="P:System.Web.SiteMapNode.Url" /> de um <see cref="T:System.Web.SiteMapNode" />.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um provedor nomeado não pode ser encontrado na coleção de provedores de mapa do site atual.</exception>
+        <exception cref="T:System.ArgumentNullException">Um <see langword="&lt;siteMapNode&gt;" /> fazendo referência a um arquivo de mapa de site contém uma cadeia de caracteres vazia para o <see langword="siteMapFile" />.</exception>
+        <exception cref="T:System.Web.HttpException">Um <see langword="siteMapFile" /> de um <see langword="&lt;siteMapNode&gt;" /> usa um caminho físico.  
+  
+ \- ou -  
+  
+ Erro ao tentar analisar o caminho virtual para o arquivo especificado no <see langword="siteMapFile" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="protected override void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os elementos na coleção de nós de mapa de site pai e filho e provedores de mapa de site que o <see cref="T:System.Web.XmlSiteMapProvider" /> objeto controla internamente como parte de seu estado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> classe substitui o herdadas <xref:System.Web.XmlSiteMapProvider.Clear%2A> método para fornecer a limpeza de estado adicionais além básica <xref:System.Web.StaticSiteMapProvider.Clear%2A?displayProperty=nameWithType> implementação, inclusive limpar seu provedor de filho de rastreamento e o <xref:System.Web.XmlSiteMapProvider.RootNode%2A> propriedade mecanismos de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentNode">
+      <MemberSignature Language="C#" Value="public override System.Web.SiteMapNode CurrentNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SiteMapNode CurrentNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.XmlSiteMapProvider.CurrentNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Web.SiteMapNode" /> que representa a página atualmente solicitada.</summary>
+        <value>O objeto de mapa de site que representa a página solicitada no momento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o monitoramento de arquivo de sitemap do arquivo que o <see cref="T:System.Web.XmlSiteMapProvider" /> objeto não exige o arquivo a ser monitorado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> classe implementa o <xref:System.IDisposable.Dispose%2A> método o <xref:System.IDisposable> interface para liberar o monitor de arquivo associado ao arquivo de mapa de site é descarregado da memória. Esta sobrecarga do <xref:System.Web.XmlSiteMapProvider.Dispose%2A> método chama a sobrecarga que utiliza um <xref:System.Boolean> parâmetro e define o valor como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Notifica o monitoramento de arquivo de sitemap do arquivo que o <see cref="T:System.Web.XmlSiteMapProvider" /> objeto não exige o arquivo a ser monitorado. O <see cref="M:System.Web.XmlSiteMapProvider.Dispose(System.Boolean)" /> método assume um parâmetro booleano que indica se o método é chamado pelo código do usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider.Dispose%2A> método `true` se o <xref:System.Web.XmlSiteMapProvider.Dispose%2A> método é chamado pelo código do usuário. Caso contrário, ele retorna `false`, se o <xref:System.Web.XmlSiteMapProvider.Dispose%2A> método é chamado pelo thread finalizador durante o tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSiteMapNode">
+      <MemberSignature Language="C#" Value="public override System.Web.SiteMapNode FindSiteMapNode (string rawUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.SiteMapNode FindSiteMapNode(string rawUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.FindSiteMapNode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="rawUrl">Uma URL que identifica a página para o qual recuperar um <see cref="T:System.Web.SiteMapNode" />.</param>
+        <summary>Recupera um <see cref="T:System.Web.SiteMapNode" /> objeto que representa a página na URL especificada.</summary>
+        <returns>Um <see cref="T:System.Web.SiteMapNode" /> que representa a página identificada pela <paramref name="rawURL" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> substituições do objeto de <xref:System.Web.StaticSiteMapProvider.FindSiteMapNode%2A> método para garantir que os provedores de filho vinculados são pesquisados para o nó se a implementação da classe base não retornar um nó para a URL especificada.  
+  
+ O `rawUrl` parâmetro deve ser um caminho virtual absoluto ou um caminho relativo de aplicativo, dependendo de como ele é especificado no arquivo de dados do mapa de site do XML.  
+  
+ O <xref:System.Web.XmlSiteMapProvider> classe e classes derivadas de ele usam a URL de uma <xref:System.Web.SiteMapNode> objeto como uma chave em várias coleções que mantém a classe. Portanto, essas URLs devem ser exclusivas dentro do escopo do mapa do site. Se a URL não foi encontrada dentro dos dados de mapa de site imediata que são gerenciados pelo <xref:System.Web.XmlSiteMapProvider>, chama o <xref:System.Web.XmlSiteMapProvider.FindSiteMapNode%2A> em cada provedor filho que está vinculada a ele por meio de `provider` atributo de seus nós de mapa de site.  
+  
+ O <xref:System.Web.XmlSiteMapProvider.FindSiteMapNode%2A> método indiretamente chama o <xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A> método para recuperar o nó no mapa do site de nível superior. Portanto, todas as exceções que ocorrem para o <xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A> método também pode ocorrer ao chamar o <xref:System.Web.XmlSiteMapProvider.FindSiteMapNode%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um provedor de filho vinculado para o provedor de mapa de site atual retornado de um nó que não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindSiteMapNodeFromKey">
+      <MemberSignature Language="C#" Value="public override System.Web.SiteMapNode FindSiteMapNodeFromKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.SiteMapNode FindSiteMapNodeFromKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.FindSiteMapNodeFromKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Uma chave de pesquisa procurar um <see cref="T:System.Web.SiteMapNode" />.</param>
+        <summary>Recupera um objeto <see cref="T:System.Web.SiteMapNode" /> com base em uma chave especificada.</summary>
+        <returns>Um <see cref="T:System.Web.SiteMapNode" /> que representa a página identificada pela <paramref name="key" />; caso contrário, <see langword="null" />, se a restrição de segurança está habilitada e o nó não pode ser mostrado para o usuário atual ou o nó não for encontrado por <paramref name="key" /> na coleção de nós.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> substituições de classe a <xref:System.Web.StaticSiteMapProvider.FindSiteMapNodeFromKey%2A> método para garantir que os provedores de filho vinculados são pesquisados para o nó, se a implementação da classe base não retornar um nó para `key`.  
+  
+ O <xref:System.Web.XmlSiteMapProvider> objeto derivado a <xref:System.Web.StaticSiteMapProvider> classe e o provedor de mapa de site padrão do ASP.NET, usa o <xref:System.Web.SiteMapNode.Url%2A> propriedade de uma <xref:System.Web.SiteMapNode> objeto como uma chave de pesquisa em suas coleções internas, por padrão. Se o <xref:System.Web.SiteMapNode.Url%2A> propriedade o <xref:System.Web.SiteMapNode> estiver definido, ele deve ser exclusivo dentro do escopo do provedor. Se nenhum <xref:System.Web.SiteMapNode.Url%2A> for especificado, o <xref:System.Web.XmlSiteMapProvider> gera automaticamente um <xref:System.Web.SiteMapNode.Key%2A> para controlar os nós.  
+  
+ O <xref:System.Web.XmlSiteMapProvider.FindSiteMapNodeFromKey%2A> método pode chamar o <xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A> método em qualquer provedor de filho que estão associados com o provedor atual. Portanto, as exceções que são descritas no <xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A> método pode ser gerado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um provedor de filho vinculado para o provedor de mapa de site atual retornado de um nó que não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildNodes">
+      <MemberSignature Language="C#" Value="public override System.Web.SiteMapNodeCollection GetChildNodes (System.Web.SiteMapNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.SiteMapNodeCollection GetChildNodes(class System.Web.SiteMapNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.GetChildNodes(System.Web.SiteMapNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNodeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Web.SiteMapNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Web.SiteMapNode" /> objeto para obter nós filho de.</param>
+        <summary>Retorna o filho de nós do mapa do site.</summary>
+        <returns>Uma coleção de nós de mapa de site.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentNode">
+      <MemberSignature Language="C#" Value="public override System.Web.SiteMapNode GetParentNode (System.Web.SiteMapNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.SiteMapNode GetParentNode(class System.Web.SiteMapNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.GetParentNode(System.Web.SiteMapNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Web.SiteMapNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Web.SiteMapNode" /> objeto para obter o nó pai do.</param>
+        <summary>Retorna o nó pai do mapa do site.</summary>
+        <returns>O nó pai do mapa do site.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRootNodeCore">
+      <MemberSignature Language="C#" Value="protected override System.Web.SiteMapNode GetRootNodeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Web.SiteMapNode GetRootNodeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.GetRootNodeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o nó de nível superior da estrutura de dados de mapa do site atual.</summary>
+        <returns>Um <see cref="T:System.Web.SiteMapNode" /> que representa o nó de nível superior na estrutura de dados de mapa do site atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider.GetRootNodeCore%2A> chamadas de método de <xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A> método para recuperar o nó no mapa do site de nível superior. Portanto, todas as exceções que ocorrem para o <xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A> método também pode ocorrer ao chamar o <xref:System.Web.XmlSiteMapProvider.GetRootNodeCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="T:System.Web.XmlSiteMapProvider" /> a ser inicializado.</param>
+        <param name="attributes">Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> que pode conter atributos adicionais para ajudar a inicializar <c>nome</c>. Esses atributos são lidos por meio da configuração <see cref="T:System.Web.XmlSiteMapProvider" /> no arquivo Web.config.</param>
+        <summary>Inicializa o objeto <see cref="T:System.Web.XmlSiteMapProvider" />. O método <see cref="M:System.Web.XmlSiteMapProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" /> não cria realmente um mapa do site, apenas prepara o estado do <see cref="T:System.Web.XmlSiteMapProvider" /> para fazer isso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> classe substitui o herdadas <xref:System.Web.XmlSiteMapProvider.Initialize%2A> método para aplicar vários atributos, como o `siteMapFile` e `description` atributos, como o `attributes` coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma nova instância do <xref:System.Web.XmlSiteMapProvider> classe e inicializá-lo para criar um mapa de site dos dados XML.  
+  
+```csharp  
+<%@ Page Language="c#" %>  
+<SCRIPT runat="server">  
+ private void Page_Load(object sender, System.EventArgs e) {  
+     // Create an instance of the XmlSiteMapProvider class.  
+     XmlSiteMapProvider testXmlProvider = new XmlSiteMapProvider();  
+     NameValueCollection providerAttributes = new NameValueCollection(1);  
+     providerAttributes.Add("siteMapFile","test.sitemap");  
+  
+     // Initialize the provider with a provider name and file name.  
+     testXmlProvider.Initialize("testProvider", providerAttributes);  
+  
+     // Call the BuildSiteMap to load the site map information into memory.  
+     testXmlProvider.BuildSiteMap();  
+  
+     // Prints "/myvirtualdirectory/WebForm1.aspx"  
+     Response.Write(testXmlProvider.RootNode.Url + "<BR>");  
+  
+     // Prints "/myvirtualdirectory/WebForm2.aspx"  
+     Response.Write(testXmlProvider.CurrentNode.Url + "<BR>");  
+ }  
+ </SCRIPT>  
+```  
+  
+ O exemplo de código anterior usa um arquivo XML que está localizado na raiz virtual do aplicativo ASP.NET. O arquivo tem o seguinte formato:  
+  
+```  
+<siteMap>  
+  <siteMapNode title="RootNode" description="The root page." url="WebForm1.aspx">  
+    <siteMapNode title="CurrentNode" description="Some sub page." url="WebForm2.aspx"/>  
+  </siteMapNode>  
+</siteMap>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Web.XmlSiteMapProvider" /> é inicializado em mais de uma vez.</exception>
+        <exception cref="T:System.Web.HttpException">Um <see cref="T:System.Web.SiteMapNode" /> usou um caminho físico para referenciar um arquivo de mapa do site.  
+  
+ \- ou -  
+  
+ Erro ao tentar analisar o caminho virtual fornecido para o atributo <see langword="siteMapFile" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveNode">
+      <MemberSignature Language="C#" Value="protected override void RemoveNode (System.Web.SiteMapNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RemoveNode(class System.Web.SiteMapNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.RemoveNode(System.Web.SiteMapNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Web.SiteMapNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O nó remova as coleções de nó.</param>
+        <summary>Remove o <see cref="T:System.Web.SiteMapNode" /> objeto a partir de todas as coleções de nó que são controladas pelo provedor.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="node" />é o nó raiz do provedor de mapa do site que o possui.  
+  
+ \- ou -  
+  
+ <paramref name="node" />não é gerenciado pelo provedor ou por um provedor na cadeia de provedores de pai para esse provedor.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="node" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveProvider">
+      <MemberSignature Language="C#" Value="protected virtual void RemoveProvider (string providerName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RemoveProvider(string providerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.XmlSiteMapProvider.RemoveProvider(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerName">O nome de uma da <see cref="T:System.Web.SiteMapProvider" /> objetos atualmente registrados no <see cref="P:System.Web.SiteMap.Providers" />.</param>
+        <summary>Remove um provedor de mapa de site vinculado filho da hierarquia para o provedor atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider.RemoveProvider%2A> método Remove `providerName` da hierarquia para o provedor atual, incluindo todas as relações pai/filho que são estabelecidas pelo <xref:System.Web.XmlSiteMapProvider.AddProvider%2A> método entre nós de mapa de site do provedor atual e o provedor removido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="providerName" />não pode ser resolvido.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="providerName" />não é um provedor de filho registrado do provedor de mapa do site atual.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="providerName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNode">
+      <MemberSignature Language="C#" Value="public override System.Web.SiteMapNode RootNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SiteMapNode RootNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.XmlSiteMapProvider.RootNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó raiz do mapa do site.</summary>
+        <value>Um <see cref="T:System.Web.SiteMapNode" /> que representa o nó raiz do mapa do site; caso contrário, <see langword="null" />, se a restrição de segurança está habilitada e o nó raiz não está acessível para o usuário atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider.RootNode%2A> propriedade chama o <xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A> método para recuperar o nó no mapa do site de nível superior. Portanto, todas as exceções que ocorrem para o <xref:System.Web.XmlSiteMapProvider.BuildSiteMap%2A> método também pode ocorrer ao acessar o <xref:System.Web.XmlSiteMapProvider.RootNode%2A> propriedade.  
+  
+ O <xref:System.Web.SiteMapProvider> e <xref:System.Web.XmlSiteMapProvider> classes permitem somente uma raiz <xref:System.Web.SiteMapNode> objeto em um mapa de site. O <xref:System.Web.XmlSiteMapProvider> substituições de classe abstrata <xref:System.Web.SiteMapProvider.RootNode%2A?displayProperty=nameWithType> propriedade e fornece uma implementação simples para controlar o nó raiz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

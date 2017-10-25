@@ -1,0 +1,242 @@
+<Type Name="XObjectChangeEventArgs" FullName="System.Xml.Linq.XObjectChangeEventArgs">
+  <TypeSignature Language="C#" Value="public class XObjectChangeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XObjectChangeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Linq.XObjectChangeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos de <see cref="E:System.Xml.Linq.XObject.Changing" /> e de <see cref="E:System.Xml.Linq.XObject.Changed" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objetivo dessa classe é reter o argumento passado para um manipulador de eventos quando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gera eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XObjectChangeEventArgs (System.Xml.Linq.XObjectChange objectChange);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Xml.Linq.XObjectChange objectChange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XObjectChangeEventArgs.#ctor(System.Xml.Linq.XObjectChange)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="objectChange" Type="System.Xml.Linq.XObjectChange" />
+      </Parameters>
+      <Docs>
+        <param name="objectChange">Um <see cref="T:System.Xml.Linq.XObjectChange" /> que contém os argumentos de evento para [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eventos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Linq.XObjectChangeEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os campos somente leitura <xref:System.Xml.Linq.XObjectChangeEventArgs.Add>, <xref:System.Xml.Linq.XObjectChangeEventArgs.Remove>, <xref:System.Xml.Linq.XObjectChangeEventArgs.Name>, e <xref:System.Xml.Linq.XObjectChangeEventArgs.Value> fornecer instâncias predefinidas para todos os argumentos do evento que são gerados em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Um usuário típico não será necessário construir os argumentos de evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.Linq.XObjectChangeEventArgs Add;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.Linq.XObjectChangeEventArgs Add" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Linq.XObjectChangeEventArgs.Add" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XObjectChangeEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Argumento do evento para um <see cref="F:System.Xml.Linq.XObjectChange.Add" /> evento de alteração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gera um <xref:System.Xml.Linq.XObjectChange.Add> evento, ele passa a instância retornada por essa propriedade como um argumento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.Linq.XObjectChangeEventArgs Name;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.Linq.XObjectChangeEventArgs Name" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Linq.XObjectChangeEventArgs.Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XObjectChangeEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Argumento do evento para um <see cref="F:System.Xml.Linq.XObjectChange.Name" /> evento de alteração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gera um <xref:System.Xml.Linq.XObjectChange.Name> evento, ele passa a instância retornada por essa propriedade como um argumento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectChange">
+      <MemberSignature Language="C#" Value="public System.Xml.Linq.XObjectChange ObjectChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Linq.XObjectChange ObjectChange" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XObjectChangeEventArgs.ObjectChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XObjectChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de alteração.</summary>
+        <value>Um <see cref="T:System.Xml.Linq.XObjectChange" /> que contém o tipo de alteração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.Linq.XObjectChangeEventArgs Remove;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.Linq.XObjectChangeEventArgs Remove" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Linq.XObjectChangeEventArgs.Remove" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XObjectChangeEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Argumento do evento para um <see cref="F:System.Xml.Linq.XObjectChange.Remove" /> evento de alteração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gera um <xref:System.Xml.Linq.XObjectChange.Remove> evento, ele passa a instância retornada por essa propriedade como um argumento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.Linq.XObjectChangeEventArgs Value;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.Linq.XObjectChangeEventArgs Value" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Linq.XObjectChangeEventArgs.Value" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XObjectChangeEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Argumento do evento para um <see cref="F:System.Xml.Linq.XObjectChange.Value" /> evento de alteração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gera um <xref:System.Xml.Linq.XObjectChange.Value> evento, ele passa a instância retornada por essa propriedade como um argumento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

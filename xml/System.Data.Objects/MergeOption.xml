@@ -1,0 +1,107 @@
+<Type Name="MergeOption" FullName="System.Data.Objects.MergeOption">
+  <TypeSignature Language="C#" Value="public enum MergeOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MergeOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.MergeOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como os objetos carregados no contexto de objeto são mesclados com os objetos que já estão no contexto de objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] mantém apenas uma única instância de um objeto com uma chave de entidade específica no cache. O <xref:System.Data.EntityKey> objetos são imutáveis objetos que que representam a identidade do objeto. As chaves da entidade são usadas para executar a resolução de identidade no contexto do objeto. Para obter mais informações, consulte [trabalhando com chaves de entidade](http://msdn.microsoft.com/en-us/fe3f4206-d277-43a1-a72f-4e86fdf12b9f). Se uma entidade com a mesma identidade já está sendo rastreada, dos dados provenientes da fonte de dados e os dados já no Gerenciador de estado são mesclados de acordo com o <xref:System.Data.Objects.MergeOption> da consulta.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppendOnly">
+      <MemberSignature Language="C#" Value="AppendOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Objects.MergeOption AppendOnly = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Objects.MergeOption.AppendOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.MergeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Objetos que não existem no contexto de objeto são anexados ao contexto. Se um objeto já estiver no contexto, os valores atuais e originais das propriedades do objeto na entrada não serão substituídos pelos valores da fonte de dados. O estado da entrada do objeto e o estado das propriedades do objeto na entrada não são alterados. <see cref="F:System.Data.Objects.MergeOption.AppendOnly" /> é a opção de mesclagem padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoTracking">
+      <MemberSignature Language="C#" Value="NoTracking" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Objects.MergeOption NoTracking = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Objects.MergeOption.NoTracking" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.MergeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os objetos são mantidos em um estado <see cref="F:System.Data.EntityState.Detached" /> e não são acompanhados no <see cref="T:System.Data.Objects.ObjectStateManager" />. No entanto, as entidades geradas por [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] e as entidades POCO com proxies mantêm uma referência ao contexto de objeto para facilitar o carregamento de objetos relacionados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteChanges">
+      <MemberSignature Language="C#" Value="OverwriteChanges" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Objects.MergeOption OverwriteChanges = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Objects.MergeOption.OverwriteChanges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.MergeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Objetos que não existem no contexto de objeto são anexados ao contexto. Se um objeto já estiver no contexto, os valores atuais e originais das propriedades do objeto na entrada serão substituídos pelos valores da fonte de dados. O estado da entrada do objeto é definido como <see cref="F:System.Data.EntityState.Unchanged" /> e nenhuma propriedade é marcada como modificada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreserveChanges">
+      <MemberSignature Language="C#" Value="PreserveChanges" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.Objects.MergeOption PreserveChanges = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Objects.MergeOption.PreserveChanges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.MergeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Objetos que não existem no contexto de objeto são anexados ao contexto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o estado da entidade for <xref:System.Data.EntityState.Unchanged>, os valores atuais e originais na entrada são substituídos com valores de fonte de dados. O estado do permanece entidade <xref:System.Data.EntityState.Unchanged> e nenhuma propriedade está marcada como modificada.  
+  
+ Se o estado da entidade for <xref:System.Data.EntityState.Modified>, os valores atuais das propriedades modificadas não são substituídos por valores de fonte de dados. Os valores originais das propriedades não modificados são substituídos com os valores da fonte de dados.  
+  
+ No [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] versão 4, o [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] compara os valores atuais das propriedades não modificados com os valores que foram retornados da fonte de dados. Se os valores não forem iguais, a propriedade está marcada como modificada.  
+  
+ No [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] versão 3.5 SP1, o [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] não marca a propriedade como modificado, mesmo se o valor da fonte de dados é diferente.  
+  
+ Somente as propriedades modificadas são mantidas para a fonte de dados quando você chamar <xref:System.Data.Objects.ObjectContext.SaveChanges%2A>.  
+  
+ Para preservar o comportamento de SP1 3.5, defina <xref:System.Data.Objects.ObjectContextOptions.UseLegacyPreserveChangesBehavior%2A> para `true`. A opção PreserveChanges pode ser usada para resolver as exceções de simultaneidade otimista, preservando alterações no contexto local. Para obter mais informações, consulte [salvar as alterações e gerenciamento de simultaneidade](http://msdn.microsoft.com/en-us/b8378601-4f26-4a05-a24a-f50aeb68610e).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

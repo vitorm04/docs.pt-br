@@ -1,0 +1,105 @@
+<Type Name="Func&lt;T1,T2,T3,T4,T5,T6,TResult&gt;" FullName="System.Func&lt;T1,T2,T3,T4,T5,T6,TResult&gt;">
+  <TypeSignature Language="C#" Value="public delegate TResult Func&lt;in T1,in T2,in T3,in T4,in T5,in T6,out TResult&gt;(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Func`7&lt;- T1, - T2, - T3, - T4, - T5, - T6, + TResult&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Func`7" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T1">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T2">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T3">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T4">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T5">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T6">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TResult">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="arg1" Type="T1" />
+    <Parameter Name="arg2" Type="T2" />
+    <Parameter Name="arg3" Type="T3" />
+    <Parameter Name="arg4" Type="T4" />
+    <Parameter Name="arg5" Type="T5" />
+    <Parameter Name="arg6" Type="T6" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>TResult</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="T1">O tipo do primeiro parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="T2">O tipo do segundo parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="T3">O tipo do terceiro parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="T4">O tipo do quarto parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="T5">O tipo do quinto parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="T6">O tipo do sexto parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="TResult">O tipo do valor retornado do método encapsulado por esse delegado.</typeparam>
+    <param name="arg1">O primeiro parâmetro do método encapsulado por esse delegado.</param>
+    <param name="arg2">O segundo parâmetro do método encapsulado por esse delegado.</param>
+    <param name="arg3">O terceiro parâmetro do método encapsulado por esse delegado.</param>
+    <param name="arg4">O quarto parâmetro do método encapsulado por esse delegado.</param>
+    <param name="arg5">O quinto parâmetro do método encapsulado por esse delegado.</param>
+    <param name="arg6">O sexto parâmetro do método encapsulado por esse delegado.</param>
+    <summary>Encapsula um método que tem seis parâmetros e retorna um valor do tipo especificado pelo <paramref name="TResult" /> parâmetro.</summary>
+    <returns>O valor retornado do método encapsulado por esse delegado.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar este delegado para representar um método que pode ser passado como um parâmetro sem declarar explicitamente um delegado personalizado. O método encapsulado deve corresponder à assinatura do método que é definida por este delegado. Isso significa que o método encapsulado deve ter seis parâmetros, cada um deles é passada a ele por valor, e que ele deve retornar um valor.  
+  
+> [!NOTE]
+>  Para fazer referência a um método que tem seis parâmetros e retorna `void` (ou no Visual Basic, que é declarado como um `Sub` em vez de como um `Function`), use o genérico <xref:System.Action%606> delegado em vez disso.  
+  
+ Você também pode usar o <xref:System.Func%607> delegar com métodos anônimos e expressões lambda.  
+  
+ O tipo subjacente de uma expressão lambda é um dos genérica `Func` delegados. Isso torna possível passar uma expressão lambda como um parâmetro sem explicitamente atribuí-lo a um delegado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,89 @@
+<Type Name="PerformanceCounterScope" FullName="System.ServiceModel.Diagnostics.PerformanceCounterScope">
+  <TypeSignature Language="C#" Value="public enum PerformanceCounterScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PerformanceCounterScope extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Diagnostics.PerformanceCounterScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se os contadores de desempenho para o assembly estão habilitados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada para configurar o <xref:System.ServiceModel.Configuration.DiagnosticSection.PerformanceCounters%2A> propriedade para indicar se os contadores de desempenho estão habilitados para fins de diagnóstico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Diagnostics.PerformanceCounterScope All = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Diagnostics.PerformanceCounterScope.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Diagnostics.PerformanceCounterScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contadores de desempenho podem ser visualizados em tempo de execução.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Diagnostics.PerformanceCounterScope Default = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Diagnostics.PerformanceCounterScope.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Diagnostics.PerformanceCounterScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um _WCF_Admin de instância do contador de desempenho é criada. Esta instância é usada para habilitar a coleta de dados SQM usado pela infraestrutura. Nenhum dos valores de contador para esta instância são atualizadas e, portanto, permanecerão em zero. Este é o valor padrão se nenhuma configuração estiver presente para [!INCLUDE[indigo1](~/includes/indigo1-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Off">
+      <MemberSignature Language="C#" Value="Off" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Diagnostics.PerformanceCounterScope Off = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Diagnostics.PerformanceCounterScope.Off" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Diagnostics.PerformanceCounterScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contadores de desempenho estão desabilitados. Este é o valor padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceOnly">
+      <MemberSignature Language="C#" Value="ServiceOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Diagnostics.PerformanceCounterScope ServiceOnly = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Diagnostics.PerformanceCounterScope.ServiceOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Diagnostics.PerformanceCounterScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Somente contadores de desempenho relevantes para esse serviço está habilitado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

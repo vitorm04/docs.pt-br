@@ -1,0 +1,96 @@
+<Type Name="DsmlAuthRequest" FullName="System.DirectoryServices.Protocols.DsmlAuthRequest">
+  <TypeSignature Language="C#" Value="public class DsmlAuthRequest : System.DirectoryServices.Protocols.DirectoryRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DsmlAuthRequest extends System.DirectoryServices.Protocols.DirectoryRequest" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.DsmlAuthRequest" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryRequest</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.Protocols.DsmlAuthRequest" /> classe indica que o controle de acesso para as solicitações de ser interpretado como se as solicitações são executadas pela entidade de segurança identificada pelo <see cref="P:System.DirectoryServices.Protocols.DsmlAuthRequest.Principal" /> propriedade.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DsmlAuthRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DsmlAuthRequest.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O construtor <see cref="M:System.DirectoryServices.Protocols.DsmlAuthRequest.#ctor" /> cria uma instância da classe <see cref="T:System.DirectoryServices.Protocols.DsmlAuthRequest" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DsmlAuthRequest (string principal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string principal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DsmlAuthRequest.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="principal" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="principal">A entidade de segurança.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.DsmlAuthRequest.#ctor(System.String)" /> construtor cria uma instância de <see cref="T:System.DirectoryServices.Protocols.DsmlAuthRequest" /> classe usando o parâmetro especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Principal">
+      <MemberSignature Language="C#" Value="public string Principal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Principal" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlAuthRequest.Principal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DsmlAuthRequest.Principal" /> propriedade contém a entidade de segurança.</summary>
+        <value>A entidade de segurança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlNode">
+      <MemberSignature Language="C#" Value="protected override System.Xml.XmlElement ToXmlNode (System.Xml.XmlDocument doc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xml.XmlElement ToXmlNode(class System.Xml.XmlDocument doc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DsmlAuthRequest.ToXmlNode(System.Xml.XmlDocument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doc" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="doc">Um objeto <see cref="T:System.Xml.XmlDocument" />.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.DsmlAuthRequest.ToXmlNode(System.Xml.XmlDocument)" /> método transformações um <see cref="T:System.Xml.XmlDocument" /> objeto em sua representação de XML DSML v2.</summary>
+        <returns>Transformado <see cref="T:System.Xml.XmlElement" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,57 @@
+<Type Name="ImageOrientation" FullName="System.Windows.Forms.VisualStyles.ImageOrientation">
+  <TypeSignature Language="C#" Value="public enum ImageOrientation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ImageOrientation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.ImageOrientation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como várias imagens são organizadas em um único arquivo de imagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.ImageOrientation> valores representam os valores de retorno de <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A?displayProperty=nameWithType> método quando ele é chamado com um valor de argumento de <xref:System.Windows.Forms.VisualStyles.EnumProperty?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Horizontal">
+      <MemberSignature Language="C#" Value="Horizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ImageOrientation Horizontal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ImageOrientation.Horizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ImageOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Imagens são organizadas horizontalmente no arquivo de várias imagens.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Vertical">
+      <MemberSignature Language="C#" Value="Vertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ImageOrientation Vertical = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ImageOrientation.Vertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ImageOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Imagens são organizadas verticalmente no arquivo de várias imagens.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

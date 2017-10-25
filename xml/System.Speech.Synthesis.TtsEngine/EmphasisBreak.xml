@@ -1,0 +1,143 @@
+<Type Name="EmphasisBreak" FullName="System.Speech.Synthesis.TtsEngine.EmphasisBreak">
+  <TypeSignature Language="C#" Value="public enum EmphasisBreak" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EmphasisBreak extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.EmphasisBreak" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera os comprimentos de valores <see langword="EmphasisBreak" /> entre palavras faladas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ênfase de interrupção está definida para <xref:System.Speech.Synthesis.TtsEngine.TextFragment> instâncias por meio de <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Emphasis%2A> propriedade no <xref:System.Speech.Synthesis.TtsEngine.FragmentState> objeto retornado pelo <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> propriedade em uma instância do <xref:System.Speech.Synthesis.TtsEngine.TextFragment>.  
+  
+ Cada mecanismo de fala sintético é livre para determinar como renderizar quebras entre as palavras; a natureza da ênfase difere entre idiomas, dialetos, gêneros ou vozes.  
+  
+ Ambos <xref:System.Speech.Synthesis.TtsEngine.EmphasisBreak> e <xref:System.Speech.Synthesis.TtsEngine.EmphasisWord> pode ser usado ao definir ou obter o <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Emphasis%2A> em um <xref:System.Speech.Synthesis.TtsEngine.FragmentState> instância.  
+  
+ Os dois valores podem ser diferenciados pelo fato de que os valores reais do <xref:System.Speech.Synthesis.TtsEngine.EmphasisBreak> são todos menor que zero e os valores de <xref:System.Speech.Synthesis.TtsEngine.EmphasisWord> são maiores ou iguais a zero; e usando o valor de <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction> retornado pelo <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Action%2A> propriedade no <xref:System.Speech.Synthesis.TtsEngine.FragmentState> objeto retornado pelo <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> propriedade em uma instância. Para mais informações, consulte <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Action%2A>, e <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Emphasis%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisBreak Default = int32(-7)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisBreak.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quebra de palavras normais.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraStrong">
+      <MemberSignature Language="C#" Value="ExtraStrong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisBreak ExtraStrong = int32(-6)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisBreak.ExtraStrong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quebra de palavras mais longa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraWeak">
+      <MemberSignature Language="C#" Value="ExtraWeak" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisBreak ExtraWeak = int32(-2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisBreak.ExtraWeak" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quebra de palavras muito pequeno.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Medium">
+      <MemberSignature Language="C#" Value="Medium" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisBreak Medium = int32(-4)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisBreak.Medium" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quebra de palavras moderada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisBreak None = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisBreak.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sem quebra de palavras.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strong">
+      <MemberSignature Language="C#" Value="Strong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisBreak Strong = int32(-5)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisBreak.Strong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quebra de palavra longos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Weak">
+      <MemberSignature Language="C#" Value="Weak" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisBreak Weak = int32(-3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisBreak.Weak" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisBreak</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quebra de palavras pequenas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

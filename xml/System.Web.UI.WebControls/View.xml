@@ -1,0 +1,290 @@
+<Type Name="View" FullName="System.Web.UI.WebControls.View">
+  <TypeSignature Language="C#" Value="public class View : System.Web.UI.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit View extends System.Web.UI.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.View" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.ViewDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:View runat="server"&gt;&lt;/{0}:View&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um controle que atua como um contêiner para um grupo de controles em um controle <see cref="T:System.Web.UI.WebControls.MultiView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ O <xref:System.Web.UI.WebControls.View> controle é um contêiner para um grupo de controles. Um <xref:System.Web.UI.WebControls.View> controle sempre deve estar contido em um <xref:System.Web.UI.WebControls.MultiView> controle. Apenas uma <xref:System.Web.UI.WebControls.View> controle por vez pode ser definido como modo de exibição ativo em um <xref:System.Web.UI.WebControls.MultiView> controle.  
+  
+ O <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> propriedade especifica o ativo <xref:System.Web.UI.WebControls.View> controle dentro de <xref:System.Web.UI.WebControls.MultiView.Views%2A> coleção de um <xref:System.Web.UI.WebControls.MultiView> controle. O controle de exibição ativo é renderizado para o cliente, contanto que o contendo <xref:System.Web.UI.WebControls.MultiView> controle está visível. Use o <xref:System.Web.UI.WebControls.View.Visible%2A> propriedade para determinar se um <xref:System.Web.UI.WebControls.View> controle e seus controles filhos são visíveis na página e renderizado para o cliente.  
+  
+ Um <xref:System.Web.UI.WebControls.View> controle pode conter controles de qualquer tipo, incluindo outros <xref:System.Web.UI.WebControls.MultiView> controles. Um <xref:System.Web.UI.WebControls.View> controle não oferece suporte a quaisquer propriedades de estilo. Para aplicar estilos a um <xref:System.Web.UI.WebControls.View> controle, adicione um ou mais <xref:System.Web.UI.WebControls.Panel> controles para o <xref:System.Web.UI.WebControls.View> controle.  
+  
+ O <xref:System.Web.UI.WebControls.View> classe fornece a <xref:System.Web.UI.WebControls.View.Activate> e <xref:System.Web.UI.WebControls.View.Deactivate> eventos. O <xref:System.Web.UI.WebControls.View.Activate> é gerado quando o atual <xref:System.Web.UI.WebControls.View> controle torna-se o modo ativo. Isso ocorre quando o valor da <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> alterações de propriedade ou o <xref:System.Web.UI.WebControls.MultiView.SetActiveView%2A> método é chamado para especificar outro <xref:System.Web.UI.WebControls.View> controle. Por exemplo, se `View1` é o modo ativo em um <xref:System.Web.UI.WebControls.MultiView> controle, quando o <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> alterações de propriedade para especificar `View2`, o <xref:System.Web.UI.WebControls.View.Activate> é gerado para `View2` e <xref:System.Web.UI.WebControls.View.Deactivate> é gerado para `View1`.  
+  
+ Para permitir que os usuários navegarem entre vários <xref:System.Web.UI.WebControls.View> controla dentro de um <xref:System.Web.UI.WebControls.MultiView> controle, você pode adicionar uma <xref:System.Web.UI.WebControls.LinkButton> ou <xref:System.Web.UI.WebControls.Button> controlar a cada <xref:System.Web.UI.WebControls.View> controle. Definir o <xref:System.Web.UI.WebControls.LinkButton> ou <xref:System.Web.UI.WebControls.Button> do controle `CommandName` propriedade para a identificação do <xref:System.Web.UI.WebControls.View> controle para navegar até. Para obter um exemplo de código, consulte <xref:System.Web.UI.WebControls.MultiView.ActiveViewChanged>.  
+  
+ Para obter mais informações sobre a manipulação de <xref:System.Web.UI.WebControls.View> controla dentro de um <xref:System.Web.UI.WebControls.MultiView> , consulte o <xref:System.Web.UI.WebControls.MultiView> tópico.  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:View  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    ID="string"  
+    OnActivate="Activate event handler"  
+    OnDataBinding="DataBinding event handler"  
+    OnDeactivate="Deactivate event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Visible="True|False"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.WebControls.MultiView> controle que contém três <xref:System.Web.UI.WebControls.View> controles. Na primeira vez em que a página for carregada, `DefaultView` é definido como modo de exibição ativo. Cada <xref:System.Web.UI.WebControls.View> controle contém botões de link para permitir que o usuário navegar para diferentes modos de exibição. Observe que cada <xref:System.Web.UI.WebControls.View> controle contém um <xref:System.Web.UI.WebControls.Panel> controle para permitir que os estilos a serem aplicados.  
+  
+ [!code-aspx-vb[MultiView Class Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MultiView Class Example/VB/multiviewclass1vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public View ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.View.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.View" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate">
+      <MemberSignature Language="C#" Value="public event EventHandler Activate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Activate" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.View.Activate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle <see cref="T:System.Web.UI.WebControls.View" /> atual se torna a exibição ativa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.View.Activate> é gerado quando o atual <xref:System.Web.UI.WebControls.View> controle torna-se o modo ativo. Isso ocorre quando o valor da <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> alterações de propriedade ou o <xref:System.Web.UI.WebControls.MultiView.SetActiveView%2A> método é chamado para especificar outro <xref:System.Web.UI.WebControls.View> controle. Por exemplo, se `View1` é o modo ativo em um <xref:System.Web.UI.WebControls.MultiView> controle, quando o <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> alterações de propriedade para especificar `View2`, o <xref:System.Web.UI.WebControls.View.Activate> é gerado para `View2` e <xref:System.Web.UI.WebControls.View.Deactivate> é gerado para `View1`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como especificar e codificar um manipulador de eventos para o <xref:System.Web.UI.WebControls.View.Activate> eventos de um <xref:System.Web.UI.WebControls.View> controle. Quando ativo exibir as alterações, será exibida uma mensagem para o usuário Especifica o <xref:System.Web.UI.WebControls.View> controlar que gerou o <xref:System.Web.UI.WebControls.View.Activate> evento e o <xref:System.Web.UI.WebControls.View> controlar que gerou o <xref:System.Web.UI.WebControls.View.Deactivate> evento.  
+  
+ [!code-aspx-csharp[View.Activate Event Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/View.Activate Event Example/cs/viewactivateeventcs.aspx#1)]
+ [!code-aspx-vb[View.Activate Event Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/View.Activate Event Example/VB/viewactivateeventvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deactivate">
+      <MemberSignature Language="C#" Value="public event EventHandler Deactivate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Deactivate" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.View.Deactivate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o ativo atual <see cref="T:System.Web.UI.WebControls.View" /> controle se torna inativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.View.Deactivate> é gerado quando o ativo atual <xref:System.Web.UI.WebControls.View> controle se torna inativo. Um <xref:System.Web.UI.WebControls.View> controle se torna inativo quando o valor da <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> alterações de propriedade ou o <xref:System.Web.UI.WebControls.MultiView.SetActiveView%2A> método é chamado para especificar outro <xref:System.Web.UI.WebControls.View> controle. Por exemplo, se `View1` é o modo ativo em um <xref:System.Web.UI.WebControls.MultiView> controle, quando o <xref:System.Web.UI.WebControls.MultiView.ActiveViewIndex%2A> alterações de propriedade para especificar `View2`, o <xref:System.Web.UI.WebControls.View.Deactivate> é gerado para `View1` e <xref:System.Web.UI.WebControls.View.Activate> é gerado para `View2`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como especificar e codificar um manipulador de eventos para o <xref:System.Web.UI.WebControls.View.Deactivate> eventos de um <xref:System.Web.UI.WebControls.View> controle. Quando ativo exibir as alterações, será exibida uma mensagem para o usuário Especifica o <xref:System.Web.UI.WebControls.View> controlar que gerou o <xref:System.Web.UI.WebControls.View.Activate> evento e o <xref:System.Web.UI.WebControls.View> controlar que gerou o <xref:System.Web.UI.WebControls.View.Deactivate> evento.  
+  
+ [!code-aspx-csharp[View.Activate Event Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/View.Activate Event Example/cs/viewactivateeventcs.aspx#1)]
+ [!code-aspx-vb[View.Activate Event Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/View.Activate Event Example/VB/viewactivateeventvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.View.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os temas se aplicam a esse controle.</summary>
+        <value>
+          <see langword="true" /> para usar temas; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.View.EnableTheming%2A> propriedade indica se os temas estão habilitados para o <xref:System.Web.UI.WebControls.View> controle. O <xref:System.Web.UI.WebControls.View.EnableTheming%2A> propriedade também afeta a capacidade de temas são habilitados para os controles contidos no seu <xref:System.Web.UI.Control.Controls%2A?displayProperty=nameWithType> coleção. Quando o <xref:System.Web.UI.WebControls.View.EnableTheming%2A> é de propriedade `true`, diretório de tema do aplicativo é pesquisado capas de controle aplicar. Se nenhuma capa de controle específico existe no diretório do tema, não é aplicada uma capa. Quando o <xref:System.Web.UI.WebControls.View.EnableTheming%2A> é de propriedade `false`, o diretório de tema não é pesquisado e o conteúdo do <xref:System.Web.UI.Control.SkinID%2A> propriedade não são usados.  
+  
+ Um controle pode substituir o <xref:System.Web.UI.WebControls.View.EnableTheming%2A> valor conjunto seu controle pai ou o conteúdo da página. Por exemplo, se um <xref:System.Web.UI.WebControls.View> tem controle <xref:System.Web.UI.WebControls.View.EnableTheming%2A> definido como `false`, você pode aplicar seletivamente os temas para controles filho contidos no <xref:System.Web.UI.WebControls.View> controle definindo o <xref:System.Web.UI.Control.EnableTheming%2A> propriedade `true` nos controles filho individuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivate">
+      <MemberSignature Language="C#" Value="protected virtual void OnActivate (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnActivate(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.View.OnActivate(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.View.Activate" /> do controle <see cref="T:System.Web.UI.WebControls.View" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.View.Activate> é gerado quando o atual <xref:System.Web.UI.WebControls.View> controle torna-se o modo ativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeactivate">
+      <MemberSignature Language="C#" Value="protected virtual void OnDeactivate (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnDeactivate(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.View.OnDeactivate(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.View.Deactivate" /> do controle <see cref="T:System.Web.UI.WebControls.View" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.View.Deactivate> é gerado quando o ativo atual <xref:System.Web.UI.WebControls.View> controle se torna inativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public override bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.View.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Web.UI.WebControls.View" /> controle está visível.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Web.UI.WebControls.View" /> controle estiver visível; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.View.Visible%2A> propriedade para determinar se o atual <xref:System.Web.UI.WebControls.View> controle está visível ou processado para o cliente. Para uma <xref:System.Web.UI.WebControls.View> controlar para ficar visível na página renderizada, ele deverá ser o modo ativo em que o contém <xref:System.Web.UI.WebControls.MultiView> controle e que o contém <xref:System.Web.UI.WebControls.MultiView> controle deve ser visível. Se o contendo <xref:System.Web.UI.WebControls.MultiView> controle não está visível na página, ou se o <xref:System.Web.UI.WebControls.View> controle não é o modo ativo, o <xref:System.Web.UI.WebControls.View> controle e seus controles filhos não são renderizados.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.View.Visible%2A> propriedade é definida internamente com base no modo de exibição ativo para o controle pai contém e visibilidade. Se você definir essa propriedade em tempo de execução, um <xref:System.InvalidOperationException> exceção será lançada. Se você definir o <xref:System.Web.UI.WebControls.View.Visible%2A> propriedade em tempo de design, as alterações para a propriedade são ignorados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de definir esta propriedade em tempo de execução.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

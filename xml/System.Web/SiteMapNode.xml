@@ -1,0 +1,1419 @@
+<Type Name="SiteMapNode" FullName="System.Web.SiteMapNode">
+  <TypeSignature Language="C#" Value="public class SiteMapNode : ICloneable, System.Web.UI.IHierarchyData, System.Web.UI.INavigateUIData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SiteMapNode extends System.Object implements class System.ICloneable, class System.Web.UI.IHierarchyData, class System.Web.UI.INavigateUIData" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SiteMapNode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IHierarchyData</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.INavigateUIData</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um nó na estrutura hierárquica de mapa do site como a descrita pela classe <see cref="T:System.Web.SiteMap" /> e as classes que implementam a classe <see cref="T:System.Web.SiteMapProvider" /> abstrata.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.SiteMapNode> objeto representa uma página do site da Web em uma estrutura de mapa de site. <xref:System.Web.SiteMapNode>objetos são carregados por estático <xref:System.Web.SiteMap> classe em tempo de execução usando um ou mais provedores de mapa de site para carregar dados de mapa do site de armazenamento persistente na memória. <xref:System.Web.SiteMapNode>objetos são quebrados pelo <xref:System.Web.UI.WebControls.SiteMapNodeItem> classe para uso por controles de servidor da Web, como o <xref:System.Web.UI.WebControls.SiteMapPath> controle.  
+  
+ O <xref:System.Web.SiteMapNode> classe inclui várias propriedades que são usadas para descrever uma única página em um site da Web, incluindo propriedades que descrevem uma página, como o <xref:System.Web.SiteMapNode.Url%2A>, <xref:System.Web.SiteMapNode.Title%2A>, e <xref:System.Web.SiteMapNode.Description%2A> propriedades. Enquanto o <xref:System.Web.SiteMapNode.Url%2A> propriedade é usada pelo <xref:System.Web.XmlSiteMapProvider> classe, que é o provedor de mapa de site padrão do ASP.NET, como uma chave de pesquisa das coleções internas que o provedor usa para acompanhar nós, o <xref:System.Web.SiteMapNode> classe oferece suporte básico <xref:System.Web.SiteMapNode.Key%2A> propriedade que pode ser usada por provedores de mapa de site para controlar nós. Além disso, o <xref:System.Web.SiteMapNode.Url%2A> por controles de navegação, a propriedade é usada para renderizar os hiperlinks para páginas dentro de uma estrutura de navegação. O <xref:System.Web.SiteMapNode.Title%2A> propriedade é um nome amigável para o <xref:System.Web.SiteMapNode>, geralmente é o mesmo que o título do HTML de um formulário da Web e é usado por controles de navegação para processar rótulos simples. Por fim, um <xref:System.Collections.Specialized.NameValueCollection> coleção adicionais <xref:System.Web.SiteMapNode.Attributes%2A> atributos está disponível para provedores de mapa de site que usam <xref:System.Web.SiteMapNode> objetos, mas não requerem propriedades adicionais que não estão disponíveis na base de <xref:System.Web.SiteMapNode> classe.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como criar uma nova coleção de nós de mapa de site e adicionar elementos a ele. O segundo exemplo de código demonstra como carregar dados de mapa do site de um arquivo de texto.  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.SiteMapNodeCollection.%23ctor%2A> construtor para criar um novo <xref:System.Web.SiteMapNodeCollection> coleção e, em seguida, adicione a ele com o <xref:System.Web.SiteMapNodeCollection.Add%2A> método.  
+  
+ [!code-csharp[System.Web.SiteMapNode_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMapNode_2/CS/sitemapnode2acs.aspx.cs#1)]
+ [!code-vb[System.Web.SiteMapNode_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMapNode_2/VB/sitemapnode2avb.aspx.vb#1)]  
+  
+ O exemplo de código a seguir demonstra como o `SimpleTextSiteMapProvider` analisa um arquivo de texto que contém dados de mapa de site em cadeias de caracteres delimitada por vírgulas. Um novo <xref:System.Web.SiteMapNode> objeto é adicionado para as coleções de controle interno da classe para cada linha que é lida do arquivo.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.SiteMapProvider> classe.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.SimpleTextSiteMapProvider_1#9](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.SimpleTextSiteMapProvider_1/CS/simpletextsitemapprovider.cs#9)]
+ [!code-vb[Urtue.Samples.Alexkr.SimpleTextSiteMapProvider_1#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.SimpleTextSiteMapProvider_1/VB/simpletextsitemapprovider.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapNode (System.Web.SiteMapProvider provider, string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.SiteMapProvider provider, string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.#ctor(System.Web.SiteMapProvider,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Web.SiteMapProvider" />
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O <see cref="T:System.Web.SiteMapProvider" /> ao qual o nó está associado.</param>
+        <param name="key">Uma chave específica do provedor de pesquisa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.SiteMapNode" /> classe usando especificado <paramref name="key" /> para identificar a página que representa o nó e o provedor de mapa de site que gerencia o nó.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> classe, que é o padrão <xref:System.Web.SiteMapProvider> implementação de provedor para o ASP.NET, usa o <xref:System.Web.SiteMapNode.Url%2A?displayProperty=nameWithType> a propriedade como uma chave de pesquisa, se um for fornecido para o nó (se uma URL não for fornecido, um identificador de rastreamento é gerado para o nó). Portanto, qualquer <xref:System.Web.SiteMapNode> controle que fornece uma URL e é usado pelo <xref:System.Web.XmlSiteMapProvider> deve ter uma URL exclusiva dentro do escopo do provedor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Web.SiteMapProvider" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapNode (System.Web.SiteMapProvider provider, string key, string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.SiteMapProvider provider, string key, string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.#ctor(System.Web.SiteMapProvider,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Web.SiteMapProvider" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O <see cref="T:System.Web.SiteMapProvider" /> ao qual o nó está associado.</param>
+        <param name="key">Uma chave específica do provedor de pesquisa.</param>
+        <param name="url">A URL da página que representa o nó do site.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.SiteMapNode" /> usando a URL especificada, um <paramref name="key" /> para identificar a página que o nó representa e o provedor de mapa de site que gerencia o nó.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> classe, que é o padrão <xref:System.Web.SiteMapProvider> implementação de provedor para o ASP.NET, usa o <xref:System.Web.SiteMapNode.Url%2A?displayProperty=nameWithType> a propriedade como uma chave de pesquisa, se um for fornecido para o nó (se uma URL não for fornecido, um identificador de rastreamento é gerado para o nó). Portanto, qualquer <xref:System.Web.SiteMapNode> objeto que fornece uma URL e é usado pelo <xref:System.Web.XmlSiteMapProvider> deve ter uma URL exclusiva dentro do escopo do provedor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.SiteMapNodeCollection.%23ctor%2A> construtor para criar um novo <xref:System.Web.SiteMapNodeCollection> coleção e, em seguida, adicione a ele com o <xref:System.Web.SiteMapNodeCollection.Add%2A> método.  
+  
+ [!code-csharp[System.Web.SiteMapNode_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMapNode_2/CS/sitemapnode2acs.aspx.cs#1)]
+ [!code-vb[System.Web.SiteMapNode_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMapNode_2/VB/sitemapnode2avb.aspx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Web.SiteMapProvider" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapNode (System.Web.SiteMapProvider provider, string key, string url, string title);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.SiteMapProvider provider, string key, string url, string title) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.#ctor(System.Web.SiteMapProvider,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Web.SiteMapProvider" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="title" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O <see cref="T:System.Web.SiteMapProvider" /> ao qual o nó está associado.</param>
+        <param name="key">Uma chave específica do provedor de pesquisa.</param>
+        <param name="url">A URL da página que representa o nó do site.</param>
+        <param name="title">Um rótulo para o nó, geralmente exibido por controles de navegação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.SiteMapNode" /> classe usando a URL especificada, um <paramref name="key" /> para identificar a página que o nó representa um título e o provedor de mapa de site que gerencia o nó.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> classe, que é o padrão <xref:System.Web.SiteMapProvider> implementação de provedor para o ASP.NET, usa o <xref:System.Web.SiteMapNode.Url%2A?displayProperty=nameWithType> a propriedade como uma chave de pesquisa, se um for fornecido para o nó (se uma URL não for fornecido, um identificador de rastreamento é gerado para o nó). Portanto, qualquer <xref:System.Web.SiteMapNode> objeto que fornece uma URL e é usado pelo <xref:System.Web.XmlSiteMapProvider> deve ter uma URL exclusiva dentro do escopo do provedor.  
+  
+ Se nenhum `title` é fornecida, chamadas para o <xref:System.Web.SiteMapNode.Title%2A> propriedade retorno de <xref:System.String.Empty?displayProperty=nameWithType> campo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.SiteMapNode.%23ctor%2A> construtor para criar uma nova instância do <xref:System.Web.SiteMapNode> classe. O nó é inicializado com valores de uma linha de banco de dados do Microsoft Access.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Web.StaticSiteMapProvider.BuildSiteMap%2A> método.  
+  
+ [!code-cpp[Urtue.Samples.Alexkr.AccessSiteMapProvider_1#6](~/samples/snippets/cpp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.AccessSiteMapProvider_1/CPP/accesssitemapprovider.cpp#6)]
+ [!code-csharp[Urtue.Samples.Alexkr.AccessSiteMapProvider_1#6](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.AccessSiteMapProvider_1/CS/accesssitemapprovider.cs#6)]
+ [!code-vb[Urtue.Samples.Alexkr.AccessSiteMapProvider_1#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.AccessSiteMapProvider_1/VB/accesssitemapprovider.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Web.SiteMapProvider" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapNode (System.Web.SiteMapProvider provider, string key, string url, string title, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.SiteMapProvider provider, string key, string url, string title, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.#ctor(System.Web.SiteMapProvider,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Web.SiteMapProvider" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O <see cref="T:System.Web.SiteMapProvider" /> ao qual o nó está associado.</param>
+        <param name="key">Uma chave específica do provedor de pesquisa.</param>
+        <param name="url">A URL da página que representa o nó do site.</param>
+        <param name="title">Um rótulo para o nó, geralmente exibido por controles de navegação.</param>
+        <param name="description">Uma descrição da página que o nó representa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.SiteMapNode" /> classe usando a URL especificada, um <paramref name="key" /> para identificar a página que representa o nó, um título e descrição e o provedor de mapa de site que gerencia o nó.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> classe, que é o padrão <xref:System.Web.SiteMapProvider> implementação de provedor para o ASP.NET, usa o <xref:System.Web.SiteMapNode.Url%2A?displayProperty=nameWithType> a propriedade como uma chave de pesquisa, se um for fornecido para o nó (se uma URL não for fornecido, um identificador de rastreamento é gerado para o nó). Portanto, qualquer <xref:System.Web.SiteMapNode> objeto que fornece uma URL e é usado pelo <xref:System.Web.XmlSiteMapProvider> deve ter uma URL exclusiva dentro do escopo do provedor.  
+  
+ Se nenhum `title` ou `description` é fornecida, chamadas para o <xref:System.Web.SiteMapNode.Title%2A> ou <xref:System.Web.SiteMapNode.Description%2A> propriedades retornam um <xref:System.String.Empty?displayProperty=nameWithType> campo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.SiteMapNode.%23ctor%2A> construtor para criar um <xref:System.Web.SiteMapNode> objeto analisando dados de um arquivo de texto simples para criar um mapa de site na memória.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para o resumo de <xref:System.Web.SiteMapProvider> classe.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.SimpleTextSiteMapProvider_1#9](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.SimpleTextSiteMapProvider_1/CS/simpletextsitemapprovider.cs#9)]
+ [!code-vb[Urtue.Samples.Alexkr.SimpleTextSiteMapProvider_1#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.SimpleTextSiteMapProvider_1/VB/simpletextsitemapprovider.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Web.SiteMapProvider" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapNode (System.Web.SiteMapProvider provider, string key, string url, string title, string description, System.Collections.IList roles, System.Collections.Specialized.NameValueCollection attributes, System.Collections.Specialized.NameValueCollection explicitResourceKeys, string implicitResourceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.SiteMapProvider provider, string key, string url, string title, string description, class System.Collections.IList roles, class System.Collections.Specialized.NameValueCollection attributes, class System.Collections.Specialized.NameValueCollection explicitResourceKeys, string implicitResourceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.#ctor(System.Web.SiteMapProvider,System.String,System.String,System.String,System.String,System.Collections.IList,System.Collections.Specialized.NameValueCollection,System.Collections.Specialized.NameValueCollection,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Web.SiteMapProvider" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="roles" Type="System.Collections.IList" />
+        <Parameter Name="attributes" Type="System.Collections.Specialized.NameValueCollection" />
+        <Parameter Name="explicitResourceKeys" Type="System.Collections.Specialized.NameValueCollection" />
+        <Parameter Name="implicitResourceKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O <see cref="T:System.Web.SiteMapProvider" /> ao qual o nó está associado.</param>
+        <param name="key">Uma chave específica do provedor de pesquisa.</param>
+        <param name="url">A URL da página que representa o nó do site.</param>
+        <param name="title">Um rótulo para o nó, geralmente exibido por controles de navegação.</param>
+        <param name="description">Uma descrição da página que o nó representa.</param>
+        <param name="roles">Um <see cref="T:System.Collections.IList" /> das funções que têm permissão para exibir a página representada pelo <see cref="T:System.Web.SiteMapNode" />.</param>
+        <param name="attributes">Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> dos atributos adicionais usados para inicializar o <see cref="T:System.Web.SiteMapNode" />.</param>
+        <param name="explicitResourceKeys">Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> de chaves de recurso explícita usadas para localização.</param>
+        <param name="implicitResourceKey">Uma chave de recurso implícita usada para localização.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.SiteMapNode" /> usando o provedor de mapa de site especificado que gerencia o nó, URL, título, descrição, funções, atributos adicionais e chaves de recurso explícita e implícita para localização de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> classe, que é o padrão <xref:System.Web.SiteMapProvider> implementação de provedor para o ASP.NET, usa o <xref:System.Web.SiteMapNode.Url%2A?displayProperty=nameWithType> a propriedade como uma chave de pesquisa, se um for fornecido para o nó (se uma URL não for fornecido, um identificador de rastreamento é gerado para o nó). Portanto, qualquer <xref:System.Web.SiteMapNode> objeto que fornece uma URL e é usado pelo <xref:System.Web.XmlSiteMapProvider> deve ter uma URL exclusiva dentro do escopo do provedor.  
+  
+ O <xref:System.Collections.Specialized.NameValueCollection> coleção de atributos que o <xref:System.Web.SiteMapNode> é criado com está disponível por meio de <xref:System.Web.SiteMapNode.Attributes%2A> propriedade e a torna fácil aplicar adicionais atributos para um site de mapear o nó e estender seus recursos sem derivar uma classe personalizada para fazer isso.  
+  
+ Forneça um <xref:System.Collections.IList> coleção de funções para fornecer um conjunto de funções que podem exibir o nó quando o <xref:System.Web.SiteMapProvider.SecurityTrimmingEnabled%2A> propriedade retorna `true`.  Para obter mais informações, consulte <xref:System.Web.SiteMapProvider.SecurityTrimmingEnabled%2A>.  
+  
+ O <xref:System.Web.XmlSiteMapProvider> provedor usa o <xref:System.Web.SiteMapNode.Url%2A?displayProperty=nameWithType> a propriedade como uma chave de pesquisa. Portanto, qualquer <xref:System.Web.SiteMapNode> que é usada pelo <xref:System.Web.XmlSiteMapProvider> deve ter uma URL exclusiva dentro do escopo do provedor.  
+  
+ Se nenhum `title` ou `description` é fornecida, chamadas para o <xref:System.Web.SiteMapNode.Title%2A> ou <xref:System.Web.SiteMapNode.Description%2A> propriedades retornam um <xref:System.String.Empty?displayProperty=nameWithType> campo.  
+  
+ Para especificar os recursos para localização de forma programática, defina o valor de `implicitResourceKey` para um nome exclusivo que será usado para identificar os recursos localizados para o nó ou conjunto `explicitResourceKeys` para um <xref:System.Collections.Specialized.NameValueCollection> coleção de `name/value` pares onde `name` é a propriedade de nó ou um atributo personalizado para localizar e `value` contém valores de localização para a propriedade de nó ou um atributo personalizado. Os valores localizados, em seguida, podem ser definidos nos arquivos. resx apropriado. Para obter mais informações sobre como localizar o <xref:System.Web.SiteMapNode.Title%2A>, <xref:System.Web.SiteMapNode.Description%2A>e quaisquer propriedades personalizadas de um <xref:System.Web.SiteMapNode> de objeto, consulte [como: localizar dados do mapa do Site](http://msdn.microsoft.com/library/be63b4a0-fb82-44b4-bdbb-df1d2548cedc). Para os requisitos de sintaxe do `explicitResourceKeys` coleta, consulte <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="T:System.Web.SiteMapProvider" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="protected System.Collections.Specialized.NameValueCollection Attributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de atributos adicionais além das propriedades fortemente tipadas definidas para a classe <see cref="T:System.Web.SiteMapNode" />.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> de atributos adicionais para o <see cref="T:System.Web.SiteMapNode" /> além de <see cref="P:System.Web.SiteMapNode.Title" />, <see cref="P:System.Web.SiteMapNode.Description" />, <see cref="P:System.Web.SiteMapNode.Url" /> e <see cref="P:System.Web.SiteMapNode.Roles" />; caso contrário, <see langword="null" />, se não existir nenhum atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.Attributes%2A> coleção normalmente é usada quando você precisar aplicar atributos adicionais para um nó de mapa de site, mas não quiser derivar uma classe personalizada para fazer isso.  
+  
+ Protegido <xref:System.Web.SiteMapNode.Attributes%2A> atributo não executa da mesma maneira como o <xref:System.Web.SiteMapNode.Title%2A> ou <xref:System.Web.SiteMapNode.Description%2A> propriedades. Para suporte de localização, os desenvolvedores devem usar o indexador padrão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O nó é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildNodes">
+      <MemberSignature Language="C#" Value="public virtual System.Web.SiteMapNodeCollection ChildNodes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SiteMapNodeCollection ChildNodes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.ChildNodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNodeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define todos os nós filho do atual <see cref="T:System.Web.SiteMapNode" /> objeto do associado <see cref="T:System.Web.SiteMapProvider" /> provedor.</summary>
+        <value>Somente leitura <see cref="T:System.Web.SiteMapNodeCollection" /> de nós filho, se houver, para o nó atual; caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode> depende do <xref:System.Web.SiteMapProvider> que está associada a manter o controle de suas relações com outros nós no mapa do site. Esta propriedade chama o <xref:System.Web.SiteMapProvider.GetChildNodes%2A> método, passando uma referência a mesma, para recuperar o <xref:System.Web.SiteMapNodeCollection>.  
+  
+ Se a restrição de segurança está habilitada, somente nós que o usuário atual tem permissão para ver são retornados. Se o usuário não tem permissão para ver todos os nós filho, uma coleção vazia será retornada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O nó é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual System.Web.SiteMapNode Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.SiteMapNode Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo nó que é uma cópia do nó atual.</summary>
+        <returns>Um novo nó que é uma cópia do nó atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamadas de <xref:System.Web.SiteMapNode.Clone%2A> método com o parâmetro definido como `false`. O provedor <xref:System.Web.SiteMapNode.Title%2A>, <xref:System.Web.SiteMapNode.Url%2A>, <xref:System.Web.SiteMapNode.Description%2A>, e <xref:System.Web.SiteMapNode.Key%2A> propriedades são copiadas. O <xref:System.Web.SiteMapNode.Roles%2A> e <xref:System.Web.SiteMapNode.Attributes%2A> coleções serão copiadas para novas coleções. Nós ancestral e filho não são clonados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual System.Web.SiteMapNode Clone (bool cloneParentNodes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.SiteMapNode Clone(bool cloneParentNodes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.Clone(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cloneParentNodes" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cloneParentNodes">
+          <see langword="true" />a clonagem de todos os nós pai e ancestral do nó atual; Caso contrário, <see langword="false" />.</param>
+        <summary>Cria uma nova cópia é uma cópia do nó atual, clonagem, opcionalmente, todos os nós pai e ancestral do nó atual.</summary>
+        <returns>Um novo nó que é uma cópia do nó atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `cloneParentNodes` parâmetro é `true`, o <xref:System.Web.SiteMapNode.Clone%2A> método recursivamente copia todos os nós do ancestral direto e as associa com o nó clonado atual. Nós filho não são clonados.  
+  
+ O <xref:System.Web.SiteMapNode.Roles%2A> e <xref:System.Web.SiteMapNode.Attributes%2A> coleções são aplicadas a novas coleções.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Web.SiteMapNode.Clone%2A> método para criar um nó de mapa de site duplicado do nó atual. O `ExpandForumPaths` método está registrado para manipular o <xref:System.Web.SiteMap.SiteMapResolve> evento. Ele usa o <xref:System.Web.SiteMapNode.Clone%2A> método para criar uma cópia de trabalho do nó de mapa de site atual, modifique os atributos com base nos dados de personalização e retornar a cópia de trabalho.  
+  
+ [!code-csharp[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/CS/sitemapresolve1cs.aspx.cs#1)]
+ [!code-vb[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/VB/sitemapresolve1vb.aspx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public virtual string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma descrição para o <see cref="T:System.Web.SiteMapNode" />.</summary>
+        <value>Uma cadeia de caracteres que representa uma descrição do nó. Caso contrário, <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enquanto o <xref:System.Web.SiteMapNode.Title%2A> de um <xref:System.Web.SiteMapNode> é usado por alguns controles de navegação como um rótulo ou um hiperlink, o <xref:System.Web.SiteMapNode.Description%2A> é usado como um elemento de dica de ferramenta para o mouse sobre eventos.  
+  
+ Um valor localizado do <xref:System.Web.SiteMapNode.Description%2A> propriedade é retornada se o <xref:System.Web.SiteMapProvider.EnableLocalization%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O nó é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado ao atual <see cref="T:System.Web.SiteMapNode" />.</param>
+        <summary>Obtém um valor que indica se o atual <see cref="T:System.Web.SiteMapNode" /> é idêntico ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é um <see cref="T:System.Web.SiteMapNode" /> e idêntica à atual <see cref="T:System.Web.SiteMapNode" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Web.SiteMapNode> objetos são considerados iguais se as seguintes condições forem atendidas:  
+  
+-   Ambos <xref:System.Web.SiteMapNode> objetos têm o mesmo valor para o <xref:System.Web.SiteMapNode.Key%2A> propriedade.  
+  
+-   A comparação diferencia maiusculas de minúsculas, de cultura invariável de ambos <xref:System.Web.SiteMapNode.Url%2A> retorna propriedades `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllNodes">
+      <MemberSignature Language="C#" Value="public System.Web.SiteMapNodeCollection GetAllNodes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.SiteMapNodeCollection GetAllNodes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.GetAllNodes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNodeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma coleção somente leitura de todos os <see cref="T:System.Web.SiteMapNode" /> objetos que são descendentes do nó de chamada, independentemente do nível de separação.</summary>
+        <returns>Somente leitura <see cref="T:System.Web.SiteMapNodeCollection" /> que representa todos os descendentes de um <see cref="T:System.Web.SiteMapNode" /> dentro do escopo do provedor atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método recupera nós filho imediatos e todos os seus nós do filho, recursivamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como recuperar todos os nós filho do <xref:System.Web.SiteMap.RootNode%2A> com o <xref:System.Web.SiteMapNode.GetAllNodes%2A> método.  
+  
+ [!code-csharp[System.Web.SiteMapNodeCollection_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMapNodeCollection_1/CS/webform1smccs.aspx#1)]
+ [!code-vb[System.Web.SiteMapNodeCollection_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMapNodeCollection_1/VB/webform1smcvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataSourceView">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.SiteMapDataSourceView GetDataSourceView (System.Web.UI.WebControls.SiteMapDataSource owner, string viewName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.WebControls.SiteMapDataSourceView GetDataSourceView(class System.Web.UI.WebControls.SiteMapDataSource owner, string viewName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.GetDataSourceView(System.Web.UI.WebControls.SiteMapDataSource,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SiteMapDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.SiteMapDataSource" />
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Um <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> controle a exibição está associada.</param>
+        <param name="viewName">O nome da exibição.</param>
+        <summary>Recupera o <see cref="T:System.Web.UI.WebControls.SiteMapDataSourceView" /> objeto que está associado com o nó atual.</summary>
+        <returns>Um conjunto nomeado <see cref="T:System.Web.UI.WebControls.SiteMapDataSourceView" /> para o nó atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExplicitResourceString">
+      <MemberSignature Language="C#" Value="protected string GetExplicitResourceString (string attributeName, string defaultValue, bool throwIfNotFound);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetExplicitResourceString(string attributeName, string defaultValue, bool throwIfNotFound) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.GetExplicitResourceString(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+        <Parameter Name="defaultValue" Type="System.String" />
+        <Parameter Name="throwIfNotFound" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">O <see cref="T:System.Web.SiteMapNode" /> atributo localizar.</param>
+        <param name="defaultValue">O valor padrão para retornar se um recurso correspondente não foi encontrado.</param>
+        <param name="throwIfNotFound">
+          <see langword="true" />para lançar uma <see cref="T:System.InvalidOperationException" />, se um recurso explícito é definido para <c>attributeName</c>, <c>defaultValue</c> é <see langword="null" />, e um valor localizado não é encontrado; caso contrário, <see langword="false" />.</param>
+        <summary>Recupera uma cadeia de caracteres localizada com base em um <see cref="T:System.Web.SiteMapNode" /> atributo para localizar uma cadeia de caracteres padrão para retornar se nenhum recurso foi encontrado e um valor booliano que indica se deve lançar uma exceção se nenhum recurso foi encontrado.</summary>
+        <returns>Uma cadeia de caracteres que representa o atributo traduzidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.GetExplicitResourceString%2A> método é invocado no `get` acessador do <xref:System.Web.SiteMapNode.Title%2A> propriedade, o <xref:System.Web.SiteMapNode.Description%2A> propriedade e todos os atributos personalizados que são definidos no <xref:System.Web.SiteMapNode.Attributes%2A> propriedade. O <xref:System.Web.SiteMapProvider> objeto pelo qual o <xref:System.Web.SiteMapNode> é rastreado deve ter seu <xref:System.Web.SiteMapProvider.EnableLocalization%2A> propriedade definida como `true` para o <xref:System.Web.SiteMapNode.GetExplicitResourceString%2A> método para retornar uma cadeia de caracteres localizada. Se o <xref:System.Web.SiteMapProvider.EnableLocalization%2A> é definido como `false`, localização não é executada e o <xref:System.Web.SiteMapNode.GetExplicitResourceString%2A> nunca é chamado de método.  
+  
+ O <xref:System.Web.SiteMapNode.Title%2A> propriedade, o <xref:System.Web.SiteMapNode.Description%2A> propriedade e todos os atributos personalizados que são definidos no <xref:System.Web.SiteMapNode.Attributes%2A> propriedade primeiro chamar o <xref:System.Web.SiteMapNode.GetImplicitResourceString%2A> método. Se ele retorna `null`, o <xref:System.Web.SiteMapNode.GetExplicitResourceString%2A> método é invocado com `defaultValue` definido como o valor do valor padrão da expressão de recurso explícita (supondo que isso estiver definido) e `throwIfNotFound` definido como `true`.  
+  
+> [!NOTE]
+>  O <xref:System.Web.XmlSiteMapProvider> classe impõe a restrição de que o <xref:System.Web.SiteMapNode> objeto não é possível definir expressões de recurso implícito e expressões de recurso explícita para atributos. No entanto, uma implementação de provedor personalizado pode optar por permitir ambos.  
+  
+ O <xref:System.Web.SiteMapNode.GetExplicitResourceString%2A> método usa o <xref:System.Collections.Specialized.NameValueCollection> chaves de conjunto de recursos que o <xref:System.Web.SiteMapNode> objeto foi inicializado com. Se uma coleção de chaves de recurso não foi especificada, o <xref:System.Web.SiteMapNode.GetExplicitResourceString%2A> retorna `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="attributeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Um objeto de recurso correspondente não foi encontrado e <paramref name="throwIfNotFound" /> é <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash de <see cref="T:System.Web.SiteMapNode" /> objeto.</summary>
+        <returns>Um inteiro assinado de 32 bits que representa o código de hash.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código hash é gerado usando a chave de pesquisa (ou seja, um hash do <xref:System.Web.SiteMapNode.Key%2A> propriedade) para um nó de mapa de site.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHierarchicalDataSourceView">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView GetHierarchicalDataSourceView ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView GetHierarchicalDataSourceView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.GetHierarchicalDataSourceView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o <see cref="T:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView" /> objeto que está associado com o nó atual.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView" /> para o nó atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImplicitResourceString">
+      <MemberSignature Language="C#" Value="protected string GetImplicitResourceString (string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetImplicitResourceString(string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.GetImplicitResourceString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">O <see cref="T:System.Web.SiteMapNode" /> atributo localizar.</param>
+        <summary>Obtém uma cadeia de caracteres localizada com base no nome do atributo e <see cref="P:System.Web.SiteMapProvider.ResourceKey" /> especificado pela propriedade de <see cref="T:System.Web.SiteMapProvider" /> pelo qual o <see cref="T:System.Web.SiteMapNode" /> é rastreada.</summary>
+        <returns>Uma cadeia de caracteres que representa o atributo traduzidos. O padrão é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.GetImplicitResourceString%2A> método é invocado no acessador get do <xref:System.Web.SiteMapNode.Title%2A> propriedade, o <xref:System.Web.SiteMapNode.Description%2A> propriedade e todos os atributos personalizados que são definidos no <xref:System.Web.SiteMapNode.Attributes%2A> propriedade. O <xref:System.Web.SiteMapProvider> provedor pelo qual o <xref:System.Web.SiteMapNode> objeto é controlado deve ter seu <xref:System.Web.SiteMapProvider.EnableLocalization%2A> propriedade definida como `true` para o <xref:System.Web.SiteMapNode.GetImplicitResourceString%2A> método a ser chamado. Se o <xref:System.Web.SiteMapProvider.EnableLocalization%2A> é definido como `false`, localização não é executada e o <xref:System.Web.SiteMapNode.GetImplicitResourceString%2A> nunca é chamado de método.  
+  
+ Se o <xref:System.Web.SiteMapNode.GetImplicitResourceString%2A> método retorna uma cadeia de caracteres que não esteja vazia, isso se tornará o valor de <xref:System.Web.SiteMapNode.Title%2A>, <xref:System.Web.SiteMapNode.Description%2A>, ou a propriedade de atributo personalizado.  
+  
+ O <xref:System.Web.SiteMapNode.GetImplicitResourceString%2A> método usa o valor de <xref:System.Web.SiteMapNode.ResourceKey%2A> propriedade para localizar o atributo. Se o <xref:System.Web.SiteMapNode.ResourceKey%2A> não for especificado, o <xref:System.Web.SiteMapNode.GetImplicitResourceString%2A> retorna `null`.  
+  
+> [!NOTE]
+>  O <xref:System.Web.XmlSiteMapProvider> classe impõe a restrição de que o <xref:System.Web.SiteMapNode> objeto não é possível definir expressões de recurso implícito e expressões de recurso explícita para atributos. No entanto, uma implementação de provedor personalizado pode optar por permitir ambos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="attributeName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChildNodes">
+      <MemberSignature Language="C#" Value="public virtual bool HasChildNodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasChildNodes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.HasChildNodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o atual <see cref="T:System.Web.SiteMapNode" /> tem nós filho.</summary>
+        <value>
+          <see langword="true" />Se o nó tem filhos; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é uma propriedade de conveniência que chama o <xref:System.Web.SiteMapNode.ChildNodes%2A> propriedade internamente, portanto ele não executará melhor do que se você chamar o <xref:System.Web.SiteMapNode.ChildNodes%2A> propriedade por conta própria e verifique se ele está vazio.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAccessibleToUser">
+      <MemberSignature Language="C#" Value="public virtual bool IsAccessibleToUser (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsAccessibleToUser(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.IsAccessibleToUser(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> que contém informações de usuário.</param>
+        <summary>Obtém um valor que indica se o nó de mapa do site especificado pode ser exibido pelo usuário no contexto especificado.</summary>
+        <returns>
+          <see langword="true" />Se qualquer uma das seguintes condições for atendida: a restrição de segurança está habilitada e o usuário atual é um membro de pelo menos uma das funções que permite o acesso para exibir o nó de mapa de site; o usuário atual está autorizado especificamente para a URL do nó solicitado no elemento de autorização para o aplicativo atual e a URL está localizada dentro da estrutura de diretório para o aplicativo; o thread atual possui um tipo de <see cref="T:System.Security.Principal.WindowsIdentity" /> que tem acesso de arquivo para URL do nó solicitado e a URL está localizada dentro da estrutura de diretório para o aplicativo; ou restrições de segurança não está habilitada e, portanto, qualquer usuário é permitida para exibir o nó de mapa de site; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.IsAccessibleToUser%2A> chamadas de método de <xref:System.Web.SiteMapProvider.IsAccessibleToUser%2A> método do provedor que o nó está associado, passando especificado `context`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O contexto especificado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDescendantOf">
+      <MemberSignature Language="C#" Value="public virtual bool IsDescendantOf (System.Web.SiteMapNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDescendantOf(class System.Web.SiteMapNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.IsDescendantOf(System.Web.SiteMapNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Web.SiteMapNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Web.SiteMapNode" /> para verificar se o nó atual é um filho ou descendente.</param>
+        <summary>Obtém um valor que indica se o nó de mapa de site atual é um filho ou descendente direto do nó especificado.</summary>
+        <returns>
+          <see langword="true" />Se o nó atual é um filho ou descendente do nó especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual string this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Uma cadeia de caracteres que identifica a cadeia de caracteres de atributo ou o recurso para recuperar.</param>
+        <summary>Obtém ou define um atributo personalizado do <see cref="P:System.Web.SiteMapNode.Attributes" /> coleção ou uma cadeia de caracteres de recurso com base na chave especificada.</summary>
+        <value>Uma atributo ou o recurso de cadeia de caracteres personalizada identificada por <paramref name="key" />; caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.Item%2A> propriedade é um indexador que primeiro determina se o provedor que acompanha o <xref:System.Web.SiteMapNode> objeto dá suporte à localização. Nesse caso, o <xref:System.Web.SiteMapNode.Item%2A> chama o  
+  
+ <xref:System.Web.SiteMapNode.GetImplicitResourceString%2A>método, passando o `key` parâmetro. Se nenhum texto localizado for retornado, o <xref:System.Web.SiteMapNode.Item%2A> chama o  
+  
+ Método <xref:System.Web.SiteMapNode.GetExplicitResourceString%2A>.  
+  
+ Se nenhum texto localizado for retornado ou se o provedor não oferece suporte a localização, a <xref:System.Web.SiteMapNode.Item%2A> tenta retornar um elemento do <xref:System.Web.SiteMapNode.Attributes%2A> coleta, uso especificado `key`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O nó é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public string Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Key" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que representa uma chave de pesquisa para um nó de mapa de site.</summary>
+        <value>Uma cadeia de caracteres que representa uma chave de pesquisa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Internamente, classes de navegação do site podem usar essa chave de pesquisa ao procurar por nós de mapa de site, bem como para estabelecer relações entre os nós. O <xref:System.Web.SiteMapProvider> classe também expõe a <xref:System.Web.SiteMapProvider.FindSiteMapNodeFromKey%2A> método como um meio para obter uma referência a um <xref:System.Web.SiteMapNode> objeto que corresponde ao valor de chave.  
+  
+ O valor específico que é usado para a chave é o provedor específico; No entanto, é garantido que ele não seja `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextSibling">
+      <MemberSignature Language="C#" Value="public virtual System.Web.SiteMapNode NextSibling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SiteMapNode NextSibling" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.NextSibling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o próximo <see cref="T:System.Web.SiteMapNode" /> nó no mesmo nível hierárquico do ano atual, relativo a <see cref="P:System.Web.SiteMapNode.ParentNode" /> propriedade (se houver).</summary>
+        <value>O próximo <see cref="T:System.Web.SiteMapNode" />, em série, depois do atual, sob o nó pai; caso contrário, <see langword="null" />, se nenhum pai existe, não há nenhum nó que segue esse um, ou restrições de segurança está habilitada e o usuário não é possível exibir o pai ou os nós irmãos Avançar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.NextSibling%2A> propriedade presume que o <xref:System.Web.SiteMapProvider> objeto implementa suas coleções internas, de modo que quando um nó pai recupera seu <xref:System.Web.SiteMapNode.ChildNodes%2A> propriedade, os nós estão na mesma ordem em que aparecem no mapa do site. Se você usar classes de coleção do .NET Framework em uma implementação de um provedor de mapa de site, escolha as coleções que implementam o <xref:System.Collections.IList> interface, como o <xref:System.Collections.ArrayList> ou <xref:System.Collections.Specialized.ListDictionary> classes. Se você escolher coleções que não implementam a <xref:System.Collections.IList> interface, como o <xref:System.Collections.Hashtable> classe, poderão ocorrer resultados inesperados para operações de navegação de site simples.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentNode">
+      <MemberSignature Language="C#" Value="public virtual System.Web.SiteMapNode ParentNode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SiteMapNode ParentNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.ParentNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.SiteMapNode" /> objeto que é o pai do nó atual.</summary>
+        <value>O pai <see cref="T:System.Web.SiteMapNode" />; caso contrário, <see langword="null" />, se a restrição de segurança está habilitada e o usuário não é possível exibir o nó pai.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode> classe depende do provedor de mapa de site com o qual ele está associado a acompanhar suas relações para outros nós no mapa do site. O <xref:System.Web.SiteMapNode.ParentNode%2A> chamadas de propriedade de <xref:System.Web.SiteMapProvider.GetParentNode%2A> método, passando uma referência a mesma, para recuperar o pai <xref:System.Web.SiteMapNode>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O nó é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousSibling">
+      <MemberSignature Language="C#" Value="public virtual System.Web.SiteMapNode PreviousSibling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SiteMapNode PreviousSibling" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.PreviousSibling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o anterior <see cref="T:System.Web.SiteMapNode" /> do objeto no mesmo nível que o atual, relativo a <see cref="P:System.Web.SiteMapNode.ParentNode" /> objeto (se houver).</summary>
+        <value>Anterior <see cref="T:System.Web.SiteMapNode" />, em série, antes do ano atual, sob o nó pai; caso contrário, <see langword="null" />, se nenhum pai existe, não há nenhum nó anterior, ou restrições de segurança está habilitada e o usuário não é possível exibir o pai ou os nós irmãos anterior.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.PreviousSibling%2A> propriedade presume que o provedor de mapa de site implementa suas coleções internas, de modo que quando um nó pai recupera seu <xref:System.Web.SiteMapNode.ChildNodes%2A> objetos, os nós estão na mesma ordem em que aparecem no mapa do site. Se você usar classes de coleção do .NET Framework em uma implementação de um <xref:System.Web.SiteMapProvider> provedor, escolha as coleções que implementam o <xref:System.Collections.IList> interface, como o <xref:System.Collections.ArrayList> ou <xref:System.Collections.Specialized.ListDictionary> classe. Se você escolher coleções que não implementam a <xref:System.Collections.IList> interface, como o <xref:System.Collections.Hashtable> classe, poderão ocorrer resultados inesperados para operações de navegação de site simples.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Web.SiteMapProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SiteMapProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.SiteMapProvider" /> provedor que o <see cref="T:System.Web.SiteMapNode" /> controlado pelo objeto.</summary>
+        <value>O <see cref="T:System.Web.SiteMapProvider" /> que o <see cref="T:System.Web.SiteMapNode" /> é controlada pelo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor é sempre retornado; passando `null` para o <xref:System.Web.SiteMapNode> construtor resulta em um <xref:System.ArgumentException> exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o nó de mapa de site pode ser modificado.</summary>
+        <value>
+          <see langword="true" />Se o nó de mapa de site pode ser modificado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.SiteMapNode> objeto é modificável por padrão.  
+  
+> [!NOTE]
+>  Todos os nós que são retornados pelo <xref:System.Web.XmlSiteMapProvider> são somente para leitura, por padrão.  
+  
+ O <xref:System.Web.SiteMapNode.Attributes%2A>, <xref:System.Web.SiteMapNode.ChildNodes%2A>, <xref:System.Web.SiteMapNode.Description%2A>, <xref:System.Web.SiteMapNode.ParentNode%2A>, <xref:System.Web.SiteMapNode.Roles%2A>, <xref:System.Web.SiteMapNode.Title%2A>, e <xref:System.Web.SiteMapNode.Url%2A> verificação da propriedade modificadores de <xref:System.Web.SiteMapNode.ReadOnly%2A> propriedade antes de tentar modificar a propriedade de um nó de mapa de site. Se o nó for somente leitura quando um modificador é chamado, o <xref:System.Web.SiteMapNode> objeto lança um <xref:System.InvalidOperationException> exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceKey">
+      <MemberSignature Language="C#" Value="public string ResourceKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResourceKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.ResourceKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a chave de recurso que é usada para localizar o <see cref="T:System.Web.SiteMapNode" />.</summary>
+        <value>Uma cadeia de caracteres que contém o nome da chave de recurso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando o acessador set do <xref:System.Web.SiteMapNode.ResourceKey%2A> propriedade quando o <xref:System.Web.SiteMapNode.ReadOnly%2A> é de propriedade `true` resultará em um <xref:System.InvalidOperationException> exceção. Para definir o <xref:System.Web.SiteMapNode.ResourceKey%2A> para um <xref:System.Web.SiteMapNode> de objeto, use o <xref:System.Web.SiteMapNode.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O nó é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Roles">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Roles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList Roles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.Roles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de funções que estão associadas ao objeto <see cref="T:System.Web.SiteMapNode" /> usado durante a remoção de segurança.</summary>
+        <value>Um <see cref="T:System.Collections.IList" /> de funções.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a restrição de segurança está habilitada, um provedor de mapa de site cria uma árvore de nós de nós que o usuário atual é capaz de exibir, com base em parte se a função do usuário atual está incluído no <xref:System.Web.SiteMapNode.Roles%2A> coleção. Autorização de URL e a autorização do arquivo também são usadas para determinar se um usuário tem direitos para acessar um <xref:System.Web.SiteMapNode> objeto. Para obter mais informações sobre autorização, consulte [autorização ASP.NET](http://msdn.microsoft.com/library/ba7c17d4-f709-4501-8441-2340e2d6db05).  
+  
+ Você pode usar o <xref:System.Web.SiteMapNode.%23ctor%2A> construtor para fornecer uma lista de funções para o <xref:System.Web.SiteMapNode> objeto quando ele é criado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O nó é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNode">
+      <MemberSignature Language="C#" Value="public virtual System.Web.SiteMapNode RootNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SiteMapNode RootNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.RootNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó raiz do provedor raiz em uma hierarquia de provedor de mapa de site. Se nenhuma hierarquia de provedor existir, o <see cref="P:System.Web.SiteMapNode.RootNode" /> propriedade obtém o nó raiz do provedor atual.</summary>
+        <value>Um <see cref="T:System.Web.SiteMapNode" /> que representa o nó raiz da estrutura de navegação do site.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode> classe depende do provedor de mapa de site com o qual ele está associado a acompanhar suas relações para outros nós no mapa do site. O <xref:System.Web.SiteMapNode.RootNode%2A> chamadas de propriedade de <xref:System.Web.SiteMapProvider.RootNode%2A> propriedade do provedor raiz (o <xref:System.Web.SiteMapProvider.RootProvider%2A> propriedade) para recuperar o nó raiz.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não é possível recuperar o nó raiz do provedor raiz.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo nó que é uma cópia do nó atual. Para obter uma descrição desse membro, consulte <see cref="M:System.ICloneable.Clone" />.</summary>
+        <returns>Um novo nó que é uma cópia do nó atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.Roles%2A> e <xref:System.Web.SiteMapNode.Attributes%2A> coleções serão copiadas para novas coleções.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IHierarchyData.GetChildren">
+      <MemberSignature Language="C#" Value="System.Web.UI.IHierarchicalEnumerable IHierarchyData.GetChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Web.UI.IHierarchicalEnumerable System.Web.UI.IHierarchyData.GetChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.System#Web#UI#IHierarchyData#GetChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchicalEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera os itens de dados hierárquica filhos do item atual. Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IHierarchyData.GetChildren" />.</summary>
+        <returns>Um <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> que representa os filhos imediatos do item atual na hierarquia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.System%23Web%23UI%23IHierarchyData%23GetChildren%2A> método delega para o <xref:System.Web.SiteMapNode.ChildNodes%2A> propriedade.  
+  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.SiteMapNode> é convertida em uma interface de <xref:System.Web.UI.IHierarchyData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IHierarchyData.GetParent">
+      <MemberSignature Language="C#" Value="System.Web.UI.IHierarchyData IHierarchyData.GetParent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Web.UI.IHierarchyData System.Web.UI.IHierarchyData.GetParent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.System#Web#UI#IHierarchyData#GetParent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchyData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o pai hierárquico do item atual. Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IHierarchyData.GetParent" />.</summary>
+        <returns>Um <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> que representa o pai do item atual na hierarquia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.System%23Web%23UI%23IHierarchyData%23GetParent%2A> método delega para o <xref:System.Web.SiteMapNode.ParentNode%2A> propriedade.  
+  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.SiteMapNode> é convertida em uma interface de <xref:System.Web.UI.IHierarchyData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IHierarchyData.HasChildren">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IHierarchyData.HasChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IHierarchyData.HasChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.System#Web#UI#IHierarchyData#HasChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o atual <see cref="T:System.Web.SiteMapNode" /> objeto tem nós filho. Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IHierarchyData.HasChildren" />.</summary>
+        <value>
+          <see langword="true" /> se o nó tem nós filho; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.System%23Web%23UI%23IHierarchyData%23HasChildren%2A> propriedade delega para o <xref:System.Web.SiteMapNode.HasChildNodes%2A> propriedade.  
+  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.SiteMapNode> é convertida em uma interface de <xref:System.Web.UI.IHierarchyData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IHierarchyData.Item">
+      <MemberSignature Language="C#" Value="object System.Web.UI.IHierarchyData.Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Web.UI.IHierarchyData.Item" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.System#Web#UI#IHierarchyData#Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item de dados hierárquicos. Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IHierarchyData.Item" />.</summary>
+        <value>Um objeto de nó de dados hierárquicos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.SiteMapNode> é convertida em uma interface de <xref:System.Web.UI.IHierarchyData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IHierarchyData.Path">
+      <MemberSignature Language="C#" Value="string System.Web.UI.IHierarchyData.Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.Web.UI.IHierarchyData.Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.System#Web#UI#IHierarchyData#Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho do item de dados hierárquicos. Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IHierarchyData.Path" />.</summary>
+        <value>O caminho do item de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.System%23Web%23UI%23IHierarchyData%23Path%2A> propriedade delega para o <xref:System.Web.SiteMapNode.Url%2A> propriedade.  
+  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.SiteMapNode> é convertida em uma interface de <xref:System.Web.UI.IHierarchyData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IHierarchyData.Type">
+      <MemberSignature Language="C#" Value="string System.Web.UI.IHierarchyData.Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.Web.UI.IHierarchyData.Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.System#Web#UI#IHierarchyData#Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que representa o nome do tipo do item de dados hierárquicos. Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IHierarchyData.Type" />.</summary>
+        <value>A cadeia de caracteres denominada <c>"SiteMapNode"</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.SiteMapNode> é convertida em uma interface de <xref:System.Web.UI.IHierarchyData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.INavigateUIData.Description">
+      <MemberSignature Language="C#" Value="string System.Web.UI.INavigateUIData.Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.Web.UI.INavigateUIData.Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.System#Web#UI#INavigateUIData#Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Web.SiteMapNode.Description" /> propriedade do nó de mapa do site. Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.INavigateUIData.Description" />.</summary>
+        <value>Texto exibido em uma dica de ferramenta para um nó de um controle de navegação; Caso contrário, <see cref="F:System.String.Empty" />, se nenhum <see cref="P:System.Web.SiteMapNode.Description" /> está definido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.System%23Web%23UI%23INavigateUIData%23Description%2A> propriedade delega para o <xref:System.Web.SiteMapNode.Description%2A> propriedade.  
+  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.SiteMapNode> é convertida em uma interface de <xref:System.Web.UI.INavigateUIData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.INavigateUIData.Name">
+      <MemberSignature Language="C#" Value="string System.Web.UI.INavigateUIData.Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.Web.UI.INavigateUIData.Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.System#Web#UI#INavigateUIData#Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Web.SiteMapNode.Title" /> propriedade do nó de mapa do site. Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.INavigateUIData.Name" />.</summary>
+        <value>Texto que é exibido para um nó de um controle de navegação; Caso contrário, <see cref="F:System.String.Empty" /> se nenhum <see cref="P:System.Web.SiteMapNode.Title" /> está definido para o nó.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.System%23Web%23UI%23INavigateUIData%23Name%2A> propriedade delega para o <xref:System.Web.SiteMapNode.Title%2A> propriedade.  
+  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.SiteMapNode> é convertida em uma interface de <xref:System.Web.UI.INavigateUIData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.INavigateUIData.NavigateUrl">
+      <MemberSignature Language="C#" Value="string System.Web.UI.INavigateUIData.NavigateUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.Web.UI.INavigateUIData.NavigateUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.System#Web#UI#INavigateUIData#NavigateUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Web.SiteMapNode.Url" /> propriedade do nó de mapa do site. Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.INavigateUIData.NavigateUrl" />.</summary>
+        <value>A URL para navegar quando o nó é clicado; Caso contrário, <see cref="F:System.String.Empty" /> se nenhum <see cref="P:System.Web.SiteMapNode.Url" /> está definido para o nó.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.System%23Web%23UI%23INavigateUIData%23NavigateUrl%2A> propriedade delega para o <xref:System.Web.SiteMapNode.Url%2A> propriedade.  
+  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.SiteMapNode> é convertida em uma interface de <xref:System.Web.UI.INavigateUIData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.INavigateUIData.Value">
+      <MemberSignature Language="C#" Value="string System.Web.UI.INavigateUIData.Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.Web.UI.INavigateUIData.Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.System#Web#UI#INavigateUIData#Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Web.SiteMapNode.Title" /> propriedade do nó de mapa do site. Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.INavigateUIData.Value" />.</summary>
+        <value>Um valor que não é exibido; Caso contrário, <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.System%23Web%23UI%23INavigateUIData%23Value%2A> propriedade delega para o <xref:System.Web.SiteMapNode.Title%2A> propriedade e é usado para armazenar dados adicionais sobre o nó de navegação, como os dados que são usados para manipular eventos de postback.  
+  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.SiteMapNode> é convertida em uma interface de <xref:System.Web.UI.INavigateUIData>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public virtual string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o título do <see cref="T:System.Web.SiteMapNode" /> objeto.</summary>
+        <value>Uma cadeia de caracteres que representa o título do nó. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.Title%2A> por controles de navegação, a propriedade é usada para renderizar um rótulo para o nó, em vez de usar o <xref:System.Web.SiteMapNode.Url%2A> propriedade, enquanto o <xref:System.Web.SiteMapNode.Description%2A> propriedade é usada como um elemento de dica de ferramenta para eventos de passar o mouse.  
+  
+ Um valor localizado do <xref:System.Web.SiteMapNode.Title%2A> propriedade é retornada se o <xref:System.Web.SiteMapProvider.EnableLocalization%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O nó é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapNode.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte o valor desta instância do <see cref="T:System.Web.SiteMapNode" /> classe em sua representação de cadeia de caracteres equivalente.</summary>
+        <returns>A representação de cadeia de caracteres do valor deste <see cref="T:System.Web.SiteMapNode" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapNode.ToString%2A> método retorna o <xref:System.Web.SiteMapNode.Title%2A> propriedade de um <xref:System.Web.SiteMapNode> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como comparar o <xref:System.Web.SiteMapNode.ToString%2A> método para o <xref:System.Web.SiteMapNode.Url%2A> e <xref:System.Web.SiteMapNode.Title%2A> propriedades de uma <xref:System.Web.SiteMapNode> objeto.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap_2/CS/catalog2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.SiteMap_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap_2/VB/catalog2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public virtual string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapNode.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL da página que o objeto <see cref="T:System.Web.SiteMapNode" /> representa.</summary>
+        <value>A URL da página que o nó representa. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.XmlSiteMapProvider> classe, que é a implementação de provedor de mapa de site padrão do ASP.NET, usa o <xref:System.Web.SiteMapNode.Url%2A?displayProperty=nameWithType> a propriedade como uma chave de pesquisa. Portanto, qualquer <xref:System.Web.SiteMapNode> que é usado pelo objeto de <xref:System.Web.XmlSiteMapProvider> classe deve ter uma URL exclusiva dentro do escopo do provedor.  
+  
+ À esquerda e caracteres de espaço em branco à direita são ignorados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Web.SiteMapNode.Url%2A> propriedade de um <xref:System.Web.SiteMapNode> objeto. O `AccessSiteMapProvider` armazena o nó raiz como uma linha que não tem `parentnodeid` definido. A linha é retornada usando um <xref:System.Data.OleDb.OleDbDataReader> objeto, e <xref:System.Web.SiteMapNode> propriedades são definidas a partir de valores no leitor de dados.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.SiteMapProvider> classe.  
+  
+ [!code-cpp[Urtue.Samples.Alexkr.AccessSiteMapProvider_1#4](~/samples/snippets/cpp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.AccessSiteMapProvider_1/CPP/accesssitemapprovider.cpp#4)]
+ [!code-csharp[Urtue.Samples.Alexkr.AccessSiteMapProvider_1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.AccessSiteMapProvider_1/CS/accesssitemapprovider.cs#4)]
+ [!code-vb[Urtue.Samples.Alexkr.AccessSiteMapProvider_1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.AccessSiteMapProvider_1/VB/accesssitemapprovider.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O nó é somente leitura.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

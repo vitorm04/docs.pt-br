@@ -1,0 +1,201 @@
+<Type Name="PageMediaSize" FullName="System.Printing.PageMediaSize">
+  <TypeSignature Language="C#" Value="public sealed class PageMediaSize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PageMediaSize extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PageMediaSize" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve o tamanho da página para papel ou outras mídias.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma classe que inclui as mesmas informações sobre o tamanho de mídia como <xref:System.Printing.PageMediaSize> e também inclui informações sobre a área de geração de imagem da página, consulte <xref:System.Printing.PrintDocumentImageableArea>.  
+  
+> [!CAUTION]
+>  Classes dentro de <xref:System.Printing> namespace não têm suporte para uso dentro de um serviço do Windows ou serviço ou aplicativo ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ Se você quiser imprimir a partir de um aplicativo Windows Forms, consulte o <xref:System.Drawing.Printing> namespace.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa classe para dimensionar um elemento visual para caber dentro das margens do papel no qual ele é imprimir.  
+  
+ [!code-csharp[XpsPrint#PageMediaSize](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#pagemediasize)]
+ [!code-vb[XpsPrint#PageMediaSize](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#pagemediasize)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageMediaSize (System.Printing.PageMediaSizeName mediaSizeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Printing.PageMediaSizeName mediaSizeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PageMediaSize.#ctor(System.Printing.PageMediaSizeName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mediaSizeName" Type="System.Printing.PageMediaSizeName" />
+      </Parameters>
+      <Docs>
+        <param name="mediaSizeName">O nome da página de tamanho de papel (ou outra mídia), por exemplo, <see cref="F:System.Printing.PageMediaSizeName.NorthAmericaLetter" /> ou <see cref="F:System.Printing.PageMediaSizeName.ISOA4" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PageMediaSize" /> classe usando especificado <see cref="T:System.Printing.PageMediaSizeName" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageMediaSize (double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PageMediaSize.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">A largura, em pixels, que são unidades de 1/96 polegada.</param>
+        <param name="height">A altura, em pixels, que são unidades de 1/96 polegada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PageMediaSize" /> classe usando a largura e altura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageMediaSize (System.Printing.PageMediaSizeName mediaSizeName, double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Printing.PageMediaSizeName mediaSizeName, float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PageMediaSize.#ctor(System.Printing.PageMediaSizeName,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mediaSizeName" Type="System.Printing.PageMediaSizeName" />
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="mediaSizeName">O nome da página de tamanho de papel (ou outra mídia), por exemplo, <see cref="F:System.Printing.PageMediaSizeName.NorthAmericaLetter" /> ou <see cref="F:System.Printing.PageMediaSizeName.ISOA4" />.</param>
+        <param name="width">A largura, em pixels, que são unidades de 1/96 polegada.</param>
+        <param name="height">A altura, em pixels, que são unidades de 1/96 polegada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PageMediaSize" /> classe usando especificado <see cref="T:System.Printing.PageMediaSizeName" /> e a largura e altura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Height" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PageMediaSize.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura da página.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a altura da página, em pixels, que são unidades de 1/96 polegada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa classe para dimensionar um elemento visual para caber dentro das margens do papel no qual ele é imprimir.  
+  
+ [!code-csharp[XpsPrint#PageMediaSize](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#pagemediasize)]
+ [!code-vb[XpsPrint#PageMediaSize](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#pagemediasize)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageMediaSizeName">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Printing.PageMediaSizeName&gt; PageMediaSizeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Printing.PageMediaSizeName&gt; PageMediaSizeName" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PageMediaSize.PageMediaSizeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Printing.PageMediaSizeName&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do tamanho da página de papel ou outra mídia.</summary>
+        <value>Um <see cref="T:System.Printing.PageMediaSizeName" /> valor que nomeia o tamanho da página.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PageMediaSize.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exibe o tamanho de página de papel ou outra mídia.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o tamanho de papel ou outra mídia de página.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formato de cadeia de caracteres retornada é da seguinte maneira:  
+  
+ <xref:System.Printing.PageMediaSizeName>(<xref:System.Printing.PageMediaSize.Width%2A> x <xref:System.Printing.PageMediaSize.Height%2A>)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public Nullable&lt;double&gt; Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Width" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PageMediaSize.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura da página.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a largura da página, em pixels, que são unidades de 1/96 polegada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa classe para dimensionar um elemento visual para caber dentro das margens do papel no qual ele é imprimir.  
+  
+ [!code-csharp[XpsPrint#PageMediaSize](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#pagemediasize)]
+ [!code-vb[XpsPrint#PageMediaSize](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#pagemediasize)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

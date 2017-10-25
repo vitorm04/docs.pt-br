@@ -1,0 +1,34 @@
+<Type Name="MaskInputRejectedEventHandler" FullName="System.Windows.Forms.MaskInputRejectedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void MaskInputRejectedEventHandler(object sender, MaskInputRejectedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MaskInputRejectedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MaskInputRejectedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.MaskInputRejectedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Forms.MaskInputRejectedEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento <see cref="E:System.Windows.Forms.MaskedTextBox.MaskInputRejected" /> de um controle <see cref="T:System.Windows.Forms.MaskedTextBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> evento o <xref:System.Windows.Forms.MaskedTextBox> classe é gerada sempre que um caractere de entrada não coincide com o elemento correspondente na máscara de entrada. Para obter mais informações, consulte o <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> evento.  
+  
+ Quando você cria um <xref:System.Windows.Forms.MaskInputRejectedEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

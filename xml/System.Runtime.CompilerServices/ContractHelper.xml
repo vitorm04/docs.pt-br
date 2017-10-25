@@ -1,0 +1,138 @@
+<Type Name="ContractHelper" FullName="System.Runtime.CompilerServices.ContractHelper">
+  <TypeSignature Language="C#" Value="public static class ContractHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ContractHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.ContractHelper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos que o regravador binário usa para lidar com falhas de contrato.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RaiseContractFailedEvent">
+      <MemberSignature Language="C#" Value="public static string RaiseContractFailedEvent (System.Diagnostics.Contracts.ContractFailureKind failureKind, string userMessage, string conditionText, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string RaiseContractFailedEvent(valuetype System.Diagnostics.Contracts.ContractFailureKind failureKind, string userMessage, string conditionText, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ContractHelper.RaiseContractFailedEvent(System.Diagnostics.Contracts.ContractFailureKind,System.String,System.String,System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerNonUserCode</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="failureKind" Type="System.Diagnostics.Contracts.ContractFailureKind" />
+        <Parameter Name="userMessage" Type="System.String" />
+        <Parameter Name="conditionText" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="failureKind">Um dos valores de enumeração que especifica o tipo de falha.</param>
+        <param name="userMessage">Informações adicionais do usuário.</param>
+        <param name="conditionText">A descrição da condição que causou a falha.</param>
+        <param name="innerException">A exceção interna que provocou a exceção atual.</param>
+        <summary>Usado pelo regravador binário para ativar o comportamento de falha padrão.</summary>
+        <returns>Uma referência nula (<see langword="Nothing" /> no Visual Basic) se o evento foi manipulado e não deve disparar uma falha; caso contrário, retornará a mensagem localizada falha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O regravador binário chama esse método para notificar os ouvintes sobre uma falha de contrato. O <xref:System.Runtime.CompilerServices.ContractHelper.RaiseContractFailedEvent%2A> método não executa o comportamento de falha (uma declaração ou throw) em si. Se a falha é tratada pelos ouvintes, o método retornará `null`. Se a falha não é tratada pelos ouvintes, é retornada uma mensagem de falha localizada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="failureKind" /> não é um valor <see cref="T:System.Diagnostics.Contracts.ContractFailureKind" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TriggerFailure">
+      <MemberSignature Language="C#" Value="public static void TriggerFailure (System.Diagnostics.Contracts.ContractFailureKind kind, string displayMessage, string userMessage, string conditionText, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void TriggerFailure(valuetype System.Diagnostics.Contracts.ContractFailureKind kind, string displayMessage, string userMessage, string conditionText, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.ContractHelper.TriggerFailure(System.Diagnostics.Contracts.ContractFailureKind,System.String,System.String,System.String,System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerNonUserCode</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.Diagnostics.Contracts.ContractFailureKind" />
+        <Parameter Name="displayMessage" Type="System.String" />
+        <Parameter Name="userMessage" Type="System.String" />
+        <Parameter Name="conditionText" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="kind">Um dos valores de enumeração que especifica o tipo de falha.</param>
+        <param name="displayMessage">A mensagem a ser exibida.</param>
+        <param name="userMessage">Informações adicionais do usuário.</param>
+        <param name="conditionText">A descrição da condição que causou a falha.</param>
+        <param name="innerException">A exceção interna que provocou a exceção atual.</param>
+        <summary>Aciona o comportamento de falha padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento de falha padrão é gerar um <xref:System.Diagnostics.Debug.Assert%2A>, que faz com que o **Assert** caixa de diálogo a ser exibido. Você pode alterar esse comportamento para gerar uma exceção em vez de exibir a caixa de diálogo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

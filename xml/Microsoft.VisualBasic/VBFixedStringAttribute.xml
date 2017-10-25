@@ -1,0 +1,89 @@
+<Type Name="VBFixedStringAttribute" FullName="Microsoft.VisualBasic.VBFixedStringAttribute">
+  <TypeSignature Language="C#" Value="public sealed class VBFixedStringAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VBFixedStringAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.VBFixedStringAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que uma cadeia de caracteres deve ser tratada como se fosse de comprimento fixo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeias de caracteres do Visual Basic são de comprimento variável por padrão. Esse atributo é útil quando Visual Basic usando arquivo de entrada e saída funções, como `FileGet` e `FilePut` que exigem cadeias de caracteres de comprimento fixo.  
+  
+   
+  
+## Examples  
+ [!code-vb[VbCnAttributes#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbCnAttributes/VB/Class2.vb#23)]  
+  
+> [!NOTE]
+>  O `VBFixedStringAttribute` é informativa e não pode ser usado para converter uma cadeia de caracteres de comprimento variável em uma cadeia de caracteres fixa. O objetivo desse atributo é modificar como cadeias de caracteres em estruturas e variáveis locais não são usadas por métodos ou chamadas de API que reconhecem o `VBFixedStringAttribute`. Tenha em mente que esse atributo não altera o comprimento real da cadeia de caracteres em si.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VBFixedStringAttribute (int Length);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(int32 Length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.VBFixedStringAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Length">O comprimento da cadeia de caracteres fixa.</param>
+        <summary>Inicializa o valor de <see langword="SizeConst" /> campo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor é executado quando o `VBFixedStringAttribute` atributo é aplicado a uma cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.VBFixedStringAttribute.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento da cadeia de caracteres.</summary>
+        <value>Retorna o comprimento da cadeia de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor para esse atributo define essa propriedade quando o `VBFixedStringAttribute` é aplicado a uma cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

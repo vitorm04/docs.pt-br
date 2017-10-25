@@ -1,0 +1,73 @@
+<Type Name="PowerModes" FullName="Microsoft.Win32.PowerModes">
+  <TypeSignature Language="C#" Value="public enum PowerModes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PowerModes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.PowerModes" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os identificadores de eventos do modo de energia relatados pelo sistema operacional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração define os identificadores que representam tipos de alterações no modo de energia ou eventos. Os valores da enumeração são usados por um <xref:Microsoft.Win32.PowerModeChangedEventArgs> para indicar o tipo de um <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Resume">
+      <MemberSignature Language="C#" Value="Resume" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.PowerModes Resume = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.PowerModes.Resume" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.PowerModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sistema operacional está prestes a retomar de um estado suspenso.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusChange">
+      <MemberSignature Language="C#" Value="StatusChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.PowerModes StatusChange = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.PowerModes.StatusChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.PowerModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um evento de notificação de status do modo de energia foi gerado pelo sistema operacional. Isso pode indicar uma bateria fraca ou carregando, uma transição entre a fonte de alimentação AC e a bateria ou outra alteração no status da alimentação do sistema.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Suspend">
+      <MemberSignature Language="C#" Value="Suspend" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Win32.PowerModes Suspend = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.PowerModes.Suspend" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.PowerModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sistema operacional está prestes a ser suspenso.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

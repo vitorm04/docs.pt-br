@@ -1,0 +1,573 @@
+<Type Name="CngKeyBlobFormat" FullName="System.Security.Cryptography.CngKeyBlobFormat">
+  <TypeSignature Language="C#" Value="public sealed class CngKeyBlobFormat : IEquatable&lt;System.Security.Cryptography.CngKeyBlobFormat&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit CngKeyBlobFormat extends System.Object implements class System.IEquatable`1&lt;class System.Security.Cryptography.CngKeyBlobFormat&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngKeyBlobFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Security.Cryptography.CngKeyBlobFormat&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Especifica um formato BLOB de chave para uso com objetos CNG (Cryptography Next Generation) da Microsoft.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.CngKeyBlobFormat> classe é uma classe de utilitário. Ele consiste em propriedades estáticas, métodos de comparação e um privado, mantida internamente a cadeia de caracteres que especifica o nome de formato BLOB chave.  
+  
+ O retorno de propriedades estáticas <xref:System.Security.Cryptography.CngKeyBlobFormat> objetos. Nome de cadeia de caracteres interna de cada objeto é inicializado para o nome do formato BLOB chave que corresponde ao nome da propriedade estática.  
+  
+ Você também pode usar essa classe para criar objetos para formatos de BLOB de chave que não são cobertos pelas propriedades estáticas.  
+  
+ Várias classes CNG (como <xref:System.Security.Cryptography.CngKey>) aceitar <xref:System.Security.Cryptography.CngKeyBlobFormat> objetos por meio de um `format` parâmetro. Quando a classe recebe o <xref:System.Security.Cryptography.CngKeyBlobFormat> do objeto, ele recupera o nome inserido do formato BLOB de chave chamando o objeto <xref:System.Security.Cryptography.CngKeyBlobFormat.Format%2A> propriedade.  
+  
+ Portanto, <xref:System.Security.Cryptography.CngKeyBlobFormat> serve como uma enumeração dos formatos BLOB de chave conhecidos. Ele permite identificar um formato bem conhecido de BLOB de chave usando um valor fortemente tipado em vez de uma cadeia de caracteres.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CngKeyBlobFormat (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKeyBlobFormat.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato BLOB de chave ao inicializar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> classe usando o formato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O principal objetivo desse construtor é fornecer um método para criar <xref:System.Security.Cryptography.CngKeyBlobFormat> objetos para os tipos de formato que não são representados por propriedades estáticas do <xref:System.Security.Cryptography.CngKeyBlobFormat> classe. Essa capacidade permite futura [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] versões, service packs e desenvolvedores de terceiros para adicionar novos formatos chave de BLOB, que podem ser acessados como os formatos BLOB de chave que estão disponíveis no momento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="format" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="format" /> comprimento do parâmetro é 0 (zero).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EccFullPrivateBlob">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKeyBlobFormat EccFullPrivateBlob { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngKeyBlobFormat EccFullPrivateBlob" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyBlobFormat.EccFullPrivateBlob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyBlobFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> que especifica um BLOB de chave privada para uma chave de criptografia de curva elíptica (ECC) que contém parâmetros de curva explícita.</summary>
+        <value>Um objeto que descreve um BLOB de chave privada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EccFullPublicBlob">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKeyBlobFormat EccFullPublicBlob { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngKeyBlobFormat EccFullPublicBlob" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyBlobFormat.EccFullPublicBlob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyBlobFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> que especifica um BLOB de chave pública para uma chave de criptografia de curva elíptica (ECC) que contém parâmetros de curva explícita.</summary>
+        <value>Um objeto que descreve um BLOB de chave pública.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EccPrivateBlob">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKeyBlobFormat EccPrivateBlob { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngKeyBlobFormat EccPrivateBlob" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyBlobFormat.EccPrivateBlob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyBlobFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> que especifica um BLOB de chave privada para uma chave ECC (criptografia de curva elíptica).</summary>
+        <value>Um objeto que especifica um BLOB de chaves privadas do ECC.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A chave privada do ECC formato BLOB contém as partes públicas e privadas de uma chave ECC.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EccPublicBlob">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKeyBlobFormat EccPublicBlob { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngKeyBlobFormat EccPublicBlob" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyBlobFormat.EccPublicBlob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyBlobFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> que especifica um BLOB de chave pública para uma chave ECC (criptografia de curva elíptica).</summary>
+        <value>Um objeto que especifica um BLOB de chaves públicas do ECC.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A chave pública do ECC formato BLOB contém somente a parte pública de uma chave ECC.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKeyBlobFormat.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado ao atual <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto.</param>
+        <summary>Compara o objeto especificado ao atual <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="obj" /> parâmetro é um <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto que especifica o mesmo formato BLOB de chave que o objeto atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Security.Cryptography.CngKeyBlobFormat other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Security.Cryptography.CngKeyBlobFormat other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKeyBlobFormat.Equals(System.Security.Cryptography.CngKeyBlobFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Security.Cryptography.CngKeyBlobFormat" />
+      </Parameters>
+      <Docs>
+        <param name="other">Um objeto a ser comparado ao atual <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto.</param>
+        <summary>Compara especificado <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto atual <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="other" /> parâmetro especifica o mesmo formato BLOB de chave que o objeto atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public string Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Format" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyBlobFormat.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do formato BLOB de chave que atual <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto especifica.</summary>
+        <value>O nome do formato BLOB chave inserido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericPrivateBlob">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKeyBlobFormat GenericPrivateBlob { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngKeyBlobFormat GenericPrivateBlob" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyBlobFormat.GenericPrivateBlob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyBlobFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto que especifica uma chave privada genérica BLOB.</summary>
+        <value>Um objeto que especifica uma chave privada genérica BLOB.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma BLOB de chave privada genérica pode conter uma chave privada de qualquer tipo e não necessariamente tem a chave pública correspondente. O tipo de chave que contém o BLOB pode ser determinado examinando o BLOB.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericPublicBlob">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKeyBlobFormat GenericPublicBlob { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngKeyBlobFormat GenericPublicBlob" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyBlobFormat.GenericPublicBlob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyBlobFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto que especifica uma BLOB de chave pública genérica.</summary>
+        <value>Um objeto que especifica um BLOB de chave público genérico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma BLOB de chave pública genérica pode conter uma chave pública de qualquer tipo. O tipo de chave pública que contém o BLOB pode ser determinado examinando o BLOB.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKeyBlobFormat.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera um valor de hash para o formato BLOB de chave inserido no atual <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto.</summary>
+        <returns>O valor de hash do formato BLOB de chave inserido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Security.Cryptography.CngKeyBlobFormat left, System.Security.Cryptography.CngKeyBlobFormat right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Security.Cryptography.CngKeyBlobFormat left, class System.Security.Cryptography.CngKeyBlobFormat right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKeyBlobFormat.op_Equality(System.Security.Cryptography.CngKeyBlobFormat,System.Security.Cryptography.CngKeyBlobFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Cryptography.CngKeyBlobFormat" />
+        <Parameter Name="right" Type="System.Security.Cryptography.CngKeyBlobFormat" />
+      </Parameters>
+      <Docs>
+        <param name="left">Um objeto que especifica um formato BLOB de chave.</param>
+        <param name="right">Um segundo objeto a ser comparado com o objeto identificado pelo <c>esquerdo</c> parâmetro.</param>
+        <summary>Determina se dois <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objetos especificam o mesmo formato BLOB de chave.</summary>
+        <returns>
+          <see langword="true" />Se os dois objetos de especificam o mesmo formato BLOB de chave; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Security.Cryptography.CngKeyBlobFormat left, System.Security.Cryptography.CngKeyBlobFormat right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Security.Cryptography.CngKeyBlobFormat left, class System.Security.Cryptography.CngKeyBlobFormat right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKeyBlobFormat.op_Inequality(System.Security.Cryptography.CngKeyBlobFormat,System.Security.Cryptography.CngKeyBlobFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Cryptography.CngKeyBlobFormat" />
+        <Parameter Name="right" Type="System.Security.Cryptography.CngKeyBlobFormat" />
+      </Parameters>
+      <Docs>
+        <param name="left">Um objeto que especifica um formato BLOB de chave.</param>
+        <param name="right">Um segundo objeto a ser comparado com o objeto identificado pelo <c>esquerdo</c> parâmetro.</param>
+        <summary>Determina se dois <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objetos não especificar o mesmo formato BLOB de chave.</summary>
+        <returns>
+          <see langword="true" />Se os dois objetos não especificar o mesmo formato BLOB de chave; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpaqueTransportBlob">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKeyBlobFormat OpaqueTransportBlob { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngKeyBlobFormat OpaqueTransportBlob" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyBlobFormat.OpaqueTransportBlob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyBlobFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto que especifica uma chave de transporte opaco BLOB.</summary>
+        <value>Um objeto que especifica uma chave de transporte opaco BLOB.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formato de uma chave de transporte opaco BLOB é determinado pelo e associado a cada provedor de armazenamento de chaves. Importando e exportando uma chave no formato de transporte opaco requerem usando o mesmo provedor de armazenamento de chaves para as duas operações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pkcs8PrivateBlob">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.CngKeyBlobFormat Pkcs8PrivateBlob { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.CngKeyBlobFormat Pkcs8PrivateBlob" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.CngKeyBlobFormat.Pkcs8PrivateBlob" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyBlobFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> que especifica um BLOB de chaves PKCS n º 8 (Private Key Information Syntax Standard).</summary>
+        <value>Um objeto que especifica um BLOB de chave privada PKCS n º 8.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chave privada do PKCS n º 8 BLOB contém material de chave pública e privada em formato PKCS n º 8.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CngKeyBlobFormat.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o nome do formato BLOB de chave que atual <see cref="T:System.Security.Cryptography.CngKeyBlobFormat" /> objeto especifica.</summary>
+        <returns>O nome do formato BLOB chave inserido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

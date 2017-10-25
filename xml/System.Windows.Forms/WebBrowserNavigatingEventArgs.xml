@@ -1,0 +1,114 @@
+<Type Name="WebBrowserNavigatingEventArgs" FullName="System.Windows.Forms.WebBrowserNavigatingEventArgs">
+  <TypeSignature Language="C#" Value="public class WebBrowserNavigatingEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebBrowserNavigatingEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.WebBrowserNavigatingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.WebBrowser.Navigating" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType> evento ocorre antes do <xref:System.Windows.Forms.WebBrowser> controle navega para um novo documento. Você pode manipular esse evento para cancelar a navegação antes de começar se determinadas condições não foram atendidas, por exemplo, quando o usuário não tenha sido completamente preenchido um formulário. Para fazer isso, defina o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade o <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs> objeto passado para o manipulador de eventos para `true`. Você também pode usar esse objeto para recuperar o local do novo documento por meio de <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs.Url%2A> propriedade. Se o novo documento será exibido em um quadro de página da Web, você pode recuperar o nome do quadro por meio de <xref:System.Windows.Forms.WebBrowserNavigatingEventArgs.TargetFrameName%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um manipulador para o <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType> evento para cancelar a navegação quando um formulário da Web não foi preenchido. O <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType> propriedade é usada para determinar se o campo de formulário de entrada contém um valor. Este exemplo requer que o formulário contém um <xref:System.Windows.Forms.WebBrowser> controle chamado `webBrowser1`.  
+  
+ [!code-csharp[WebBrowserMisc#30](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#30)]
+ [!code-vb[WebBrowserMisc#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#30)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowserNavigatingEventArgs (Uri url, string targetFrameName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri url, string targetFrameName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.WebBrowserNavigatingEventArgs.#ctor(System.Uri,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="url" Type="System.Uri" />
+        <Parameter Name="targetFrameName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">Um <see cref="T:System.Uri" /> que representa o local do documento para o qual o controle <see cref="T:System.Windows.Forms.WebBrowser" /> está navegando.</param>
+        <param name="targetFrameName">O nome do quadro de página da Web no qual o novo documento será carregado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.WebBrowserNavigatingEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFrameName">
+      <MemberSignature Language="C#" Value="public string TargetFrameName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFrameName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowserNavigatingEventArgs.TargetFrameName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do quadro de página da Web no qual o novo documento será carregado.</summary>
+        <value>O nome do quadro no qual o novo documento será carregado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.WebBrowser> chamado `WebBrowser1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#650](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#650)]
+ [!code-vb[System.Windows.Forms.EventExamples#650](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#650)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">para acessar a URL atual. Enumerações associadas:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public Uri Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Url" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.WebBrowserNavigatingEventArgs.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do documento para o qual o controle <see cref="T:System.Windows.Forms.WebBrowser" /> está navegando.</summary>
+        <value>Um <see cref="T:System.Uri" /> que representa o local do documento para o qual o controle <see cref="T:System.Windows.Forms.WebBrowser" /> está navegando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um manipulador para o <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType> evento para cancelar a navegação quando um formulário da Web não foi preenchido. O <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType> propriedade é usada para determinar se o campo de formulário de entrada contém um valor. Este exemplo requer que o formulário contém um <xref:System.Windows.Forms.WebBrowser> controle chamado `webBrowser1`.  
+  
+ [!code-csharp[WebBrowserMisc#30](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#30)]
+ [!code-vb[WebBrowserMisc#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">para acessar a URL atual. Enumerações associadas:<see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

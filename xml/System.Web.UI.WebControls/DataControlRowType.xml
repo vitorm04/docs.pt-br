@@ -1,0 +1,131 @@
+<Type Name="DataControlRowType" FullName="System.Web.UI.WebControls.DataControlRowType">
+  <TypeSignature Language="C#" Value="public enum DataControlRowType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataControlRowType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataControlRowType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a função de uma linha em um controle de dados, como um controle <see cref="T:System.Web.UI.WebControls.DetailsView" /> ou <see cref="T:System.Web.UI.WebControls.GridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataControlRowType> enumeração identifica a função de linhas em um controle de dados. Ele é usado pelo <xref:System.Web.UI.WebControls.DetailsView> e <xref:System.Web.UI.WebControls.GridView> elementos (UI), como uma linha de cabeçalho, o separador de linha ou botões de pager da interface de controles para distinguir entre linhas que exibem dados e linhas que exibem a outro usuário.  
+  
+ Você pode usar o <xref:System.Web.UI.WebControls.DataControlRowType> enumeração para identificar o tipo de um <xref:System.Web.UI.WebControls.GridViewRow> ou <xref:System.Web.UI.WebControls.DetailsViewRow> ao enumerar através do objeto um <xref:System.Web.UI.WebControls.GridViewRowCollection> ou <xref:System.Web.UI.WebControls.DetailsViewRowCollection> coleção. Se você estiver escrevendo um controle de dados que cria linhas, você pode usar o <xref:System.Web.UI.WebControls.DataControlRowType> enumeração para identificar a função de diferentes linhas no controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DataControlRowType> enumeração para verificar o tipo de uma linha ao trabalhar com um <xref:System.Web.UI.WebControls.GridView> controle. O `AuthorsGridView_RowCreated` método garante que o <xref:System.Web.UI.WebControls.LinkButton.CommandArgument%2A> propriedade de um <xref:System.Web.UI.WebControls.LinkButton> controle é exclusivo para todas as linhas de dados a <xref:System.Web.UI.WebControls.GridView> controle, para que quando uma linha <xref:System.Web.UI.WebControls.LinkButton> controle é clicado, ele pode ser identificado corretamente.  
+  
+ [!code-aspx-csharp[GridViewCommandEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewCommandEventArgs/CS/gridviewcommandeventargscs.aspx#1)]
+ [!code-aspx-vb[GridViewCommandEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewCommandEventArgs/VB/gridviewcommandeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataRow">
+      <MemberSignature Language="C#" Value="DataRow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType DataRow = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.DataRow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma linha de dados de um controle de dados. Somente linhas <see cref="F:System.Web.UI.WebControls.DataControlRowType.DataRow" /> podem ser associadas a dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EmptyDataRow">
+      <MemberSignature Language="C#" Value="EmptyDataRow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType EmptyDataRow = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.EmptyDataRow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A linha vazia de um controle com limite de dados. A linha vazia é exibida quando o controle com limite de dados não tem registros a serem exibidos e o modelo <see langword="EmptyDataTemplate" /> não é <see langword="null" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Footer">
+      <MemberSignature Language="C#" Value="Footer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType Footer = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.Footer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma linha de rodapé de um controle de dados. Linhas de rodapé não podem ser associadas a dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="Header" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType Header = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.Header" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma linha de cabeçalho de um controle de dados. Linhas de cabeçalho não podem ser associadas a dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pager">
+      <MemberSignature Language="C#" Value="Pager" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType Pager = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.Pager" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma linha que exibe botões de pager ou um controle de paginação. Linhas de pager não podem ser associadas a dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Separator">
+      <MemberSignature Language="C#" Value="Separator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowType Separator = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowType.Separator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um separador de linha. Separadores de linha não podem ser associados a dados.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

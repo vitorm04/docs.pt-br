@@ -1,0 +1,1039 @@
+<Type Name="Series" FullName="System.Windows.Forms.DataVisualization.Charting.Series">
+  <TypeSignature Language="C#" Value="public class Series : System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Series extends System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.Series" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Points")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa os atributos de séries e pontos de dados a serem armazenados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.DataVisualization.Charting.Series> objeto representa uma série de dados e é armazenado na <xref:System.Windows.Forms.DataVisualization.Charting.SeriesCollection> classe.  
+  
+ Um <xref:System.Windows.Forms.DataVisualization.Charting.Series> armazena <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objetos usando o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection> classe. Ele também armazena os atributos da série de dados. Por exemplo, uma série de dados tem um atributo de cor, atributo de imagem de plano de fundo, atributo de gradiente do plano de fundo e assim por diante.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objetos que pertencem a uma série também têm seus próprios atributos. Normalmente, se o mesmo atributo é definido para um ponto de dados e a série à qual ele pertence, o atributo de ponto de dados tem precedência.  
+  
+ Uma série não é necessariamente plotada em um gráfico ele pode armazenar valores de ponto de dados que são usados para executar um cálculo do qual outra série é criado e, em seguida, plotado. Por exemplo, série A, que é plotada, pode ser o resultado da adição de pontos de dados de série B e C de série, embora nenhum desse série é plotada. Para desenhar uma <xref:System.Windows.Forms.DataVisualization.Charting.Series> objeto, o <xref:System.Windows.Forms.DataVisualization.Charting.Series.ChartArea%2A> propriedade deve ser definida para o nome do <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> objeto usado para plotar a série.  
+  
+ Quando uma série é criada, ele é atribuído automaticamente para o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> objeto chamado "Padrão", ou para a primeira área de gráfico disponíveis na coleção de área do gráfico, se o objeto "Padrão" não existe.  
+  
+ Para desativar a exibição de uma série, defina seu <xref:System.Windows.Forms.DataVisualization.Charting.Series.ChartArea%2A> propriedade como uma cadeia de caracteres de comprimento zero.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Series.ChartType%2A> propriedade determina o tipo de gráfico que será usado para plotar esta série, se ela é desenhada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Series ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Series (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> objeto será criado. Isso deve ser um nome exclusivo. Caso contrário, uma exceção será lançada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> classe com o nome da série especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser usado para criar uma nova instância do <xref:System.Windows.Forms.DataVisualization.Charting.Series> classe.  
+  
+> [!NOTE]
+>  Esta série só é capaz de armazenar <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objetos que têm um valor de Y. Se um ponto de dados que tenha vários valores de Y é adicionado a esta série, uma exceção será lançada.  
+  
+ Para criar uma série de tempo de execução, use o <xref:System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Series (string name, int yValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, int32 yValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="yValues" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> objeto será criado.</param>
+        <param name="yValues">O número máximo de valores de Y é permitido para o <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> objetos que pertencem a esta série.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> classe com o nome especificado e o número máximo de valores de Y.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Windows.Forms.DataVisualization.Charting.Series> classe.  
+  
+> [!IMPORTANT]
+>  Esta série só poderá armazenar <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objetos que não têm valores de Y mais que o máximo definido pelo `yValues` parâmetro. Se você adicionar um ponto de dados que tem valores de Y mais que o conjunto de máximo, uma exceção será lançada.  
+  
+ Para criar um <xref:System.Windows.Forms.DataVisualization.Charting.Series> objeto em tempo de execução, o `Add` e `Insert` métodos da propriedade de coleção de série também podem ser usados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AxisLabel">
+      <MemberSignature Language="C#" Value="public override string AxisLabel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AxisLabel" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.AxisLabel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto do rótulo do eixo da série.</summary>
+        <value>O texto do rótulo de eixo da série. O valor padrão é uma cadeia de comprimento zero.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartArea">
+      <MemberSignature Language="C#" Value="public string ChartArea { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChartArea" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.ChartArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.SeriesAreaNameConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> usado para plotar a série de dados, se houver.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" />, que é usado para plotar a série.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma série é adicionada no tempo de design e tempo de execução, ele é automaticamente atribuído a "Padrão" <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> objeto ou a primeira área de gráfico disponíveis no <xref:System.Windows.Forms.DataVisualization.Charting.ChartAreaCollection> se "Padrão" não existe.  
+  
+ Defina essa propriedade como uma cadeia de caracteres de comprimento zero se você não quiser que a série a ser exibido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.SeriesChartType ChartType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.SeriesChartType ChartType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.ChartType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartTypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.SeriesChartType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de gráfico de uma série.</summary>
+        <value>Um valor de enumeração de <see cref="T:System.Windows.Forms.DataVisualization.Charting.SeriesChartType" /> que indica o tipo de gráfico que será usado para representar a série. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina o tipo de gráfico do <xref:System.Windows.Forms.DataVisualization.Charting.Series> do objeto; o valor diferencia maiusculas de minúsculas. Consulte o <xref:System.Windows.Forms.DataVisualization.Charting.SeriesChartType> enumeração para obter uma lista de todos os tipos de gráfico possíveis para uma série.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartTypeName">
+      <MemberSignature Language="C#" Value="public string ChartTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChartTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.ChartTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("Column")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartTypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.ChartTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tipo de gráfico usado para desenhar a série.</summary>
+        <value>O nome do tipo de gráfico.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmptyPointStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties EmptyPointStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties EmptyPointStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.EmptyPointStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de desenho de pontos marcados como vazios.</summary>
+        <value>O estilo de desenho de pontos marcados como vazios.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Series.EmptyPointStyle%2A> propriedade determina o estilo de desenho dos pontos marcados como vazios, por exemplo, a cor da borda, em imagens de marcador, cor de plano de fundo ou imagens, etc.  
+  
+ Determinadas propriedades só são aplicáveis para tipos de gráfico específico. Por exemplo, o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.BackImage%2A> propriedade não se aplica a gráficos de linhas, mas se aplicam a um gráfico de área.  
+  
+ Para exibir uma imagem que indica um ponto vazio, use o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.MarkerImage%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.MarkerStyle%2A> propriedades e não o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.BackImage%2A> propriedade.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Series.AxisLabel%2A> propriedade determina o rótulo do eixo para pontos vazios. Observe que, para tipos de gráfico empilhados, o rótulo do eixo é determinado pelo <xref:System.Windows.Forms.DataVisualization.Charting.Series.AxisLabel%2A> propriedade da primeira série plotada com essa propriedade definida.  
+  
+ Pontos de dados podem ser manualmente marcados como vazio, definindo o <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint.IsEmpty%2A> propriedade `true`. Como alternativa, um do `InsertEmptyPoints` métodos de <xref:System.Windows.Forms.DataVisualization.Charting.DataManipulator> classe pode ser usada para procurar dados ausentes e inserir pontos vazios se um ponto de dados está ausente.  
+  
+> [!NOTE]
+>  No caso de gráficos do tipo de linha, a cor da linha para linhas que se conectam a um ponto vazio é determinada pelo <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.Color%2A> configuração de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que indica se a série serão visível no gráfico renderizado.</summary>
+        <value>
+          <see langword="True" />Se a série serão visível no gráfico renderizado; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obtém ou define um valor que determina se a série será visível na renderizado <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsXValueIndexed">
+      <MemberSignature Language="C#" Value="public bool IsXValueIndexed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsXValueIndexed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.IsXValueIndexed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que indica se os índices de pontos de dados serão usados para os valores X.</summary>
+        <value>
+          <see langword="True" /> se os índices de pontos de dados que pertencem à série forem usados para os valores X; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os pontos de dados em uma série de usam índices sequenciais, e se essa propriedade for `true` e pontos de dados serão plotados em sequência, independentemente de seus valores associados de X. Isso significa que não haverá nenhum ponto de dados "ausente".  
+  
+ Por exemplo, suponha que há três (3), pontos de dados em uma série com valores de X-1, 2 e 4. Se essa propriedade foi `false`, deve haver um ponto de dados ausentes no eixo x local rotulado como "3". No entanto, se você definir essa propriedade como `true`, os pontos de dados de três serão plotados em pontos de 1, 2 e 4, em sequência, e não haverá nenhum ponto de dados ausente. O local do eixo x rotulado como "3" não será exibida no gráfico.  
+  
+ Isso é útil quando você não deseja ter pontos de dados ausentes para os intervalos que você sabe que você não terá dados, como finais de semana.  
+  
+> [!IMPORTANT]
+>  Se você estiver exibindo várias séries e pelo menos uma série usa valores de X indexados, todas as séries devem estar alinhadas — ou seja, ter o mesmo número de pontos de dados — e os pontos correspondentes devem ter os mesmos valores de X.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Legend">
+      <MemberSignature Language="C#" Value="public string Legend { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Legend" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.Legend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.SeriesLegendNameConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da série associada ao objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.Legend" />.</summary>
+        <value>O nome de uma <see cref="T:System.Windows.Forms.DataVisualization.Charting.Legend" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma série é adicionada no tempo de design e tempo de execução, ele é atribuído automaticamente para o padrão <xref:System.Windows.Forms.DataVisualization.Charting.Legend> objeto.  
+  
+ Se você não quiser que a série mostrada em uma legenda, defina essa propriedade como uma cadeia de caracteres de comprimento zero, ou defina o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.IsVisibleInLegend%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerStep">
+      <MemberSignature Language="C#" Value="public int MarkerStep { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MarkerStep" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.MarkerStep" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina com que frequência exibir os marcadores de ponto de dados.</summary>
+        <value>Um valor <see langword="integer" /> que determina com que frequência exibir os marcadores de ponto de dados. O valor padrão é um (1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Series.MarkerStep%2A> propriedade especifica a frequência com que os marcadores são exibidos. Por exemplo, se você definir essa propriedade como dois (2), cada outro ponto de dados será usado um marcador.  
+  
+ Esta propriedade é usada somente se os marcadores estão ativados usando o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCustomProperties.MarkerStyle%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome exclusivo de um <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> objeto.</summary>
+        <value>O nome exclusivo da série de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome de uma série de dados deve ser exclusivo; Caso contrário, uma exceção será lançada.  
+  
+ Essa propriedade pode ser usada como o indexador quando você recupera um <xref:System.Windows.Forms.DataVisualization.Charting.Series> de objeto o <xref:System.Windows.Forms.DataVisualization.Charting.SeriesCollection> objeto.  
+  
+ Se essa propriedade é definida como uma cadeia de caracteres de comprimento zero, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Palette">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartColorPalette Palette { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartColorPalette Palette" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.Palette" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ColorPaletteEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartColorPalette</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a paleta de cores um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" />.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartColorPalette" /> que determina a paleta da série de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma paleta é usada para atribuir automaticamente as cores para elementos de dados se os pontos de dados em si não têm cores atribuídas a eles e se os dados <xref:System.Windows.Forms.DataVisualization.Charting.Series> que os pontos de dados pertencem ao objeto também não tem uma cor atribuída.  
+  
+ Se nenhuma série ou ponto de dados explicitamente especificadas cores, as cores usadas dependem do tipo de gráfico e a paleta de controle de gráfico ou paleta de série, se um for especificado. Consulte a tabela abaixo para obter mais detalhes:  
+  
+|Tipo de gráfico|Paleta de série usada?|Cores exibidas por pontos de dados|  
+|----------------|--------------------------|-------------------------------------|  
+|Qualquer gráfico de forma (por exemplo, gráficos de pizza e rosca)|Não|Primeiro cores disponíveis usadas <xref:System.Windows.Forms.DataVisualization.Charting.Chart> paleta de controle. Uma cor por ponto de dados.|  
+|Todos os gráficos exceto os gráficos de forma.|Não|Primeiro cores disponíveis <xref:System.Windows.Forms.DataVisualization.Charting.Chart> paleta de controle. Uma cor por série de dados.|  
+|Qualquer gráfico de forma (por exemplo, gráficos de pizza e rosca)|Sim|Primeiro cores disponíveis usadas <xref:System.Windows.Forms.DataVisualization.Charting.Series> paleta. Uma cor por ponto de dados.|  
+|Todos os gráficos exceto os gráficos de forma.|Sim|Primeiro cores disponíveis usadas <xref:System.Windows.Forms.DataVisualization.Charting.Series> paleta. Uma cor por série de dados.|  
+  
+ Isso <xref:System.Windows.Forms.DataVisualization.Charting.Series.Palette%2A> propriedade tem precedência sobre o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Palette%2A> propriedade da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto em relação à exibição de dados.  
+  
+ Observação: Se o `Palette` propriedade para ambas as <xref:System.Windows.Forms.DataVisualization.Charting.Chart> e <xref:System.Windows.Forms.DataVisualization.Charting.Series> objetos é definida como None, e nenhuma cor será atribuída para os pontos de dados da série/dados relevantes, a paleta padrão "BrightPastel" ou <xref:System.Windows.Forms.DataVisualization.Charting.Chart.PaletteCustomColors%2A> é usado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Points">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPointCollection Points { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.DataPointCollection Points" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.Points" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.DataPointCollectionEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de pontos de dados.</summary>
+        <value>Uma coleção de pontos de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Series.Points%2A> propriedade da coleção permite que você adicionar e remover pontos de dados para uma série. Essa propriedade também fornece métodos e propriedades que podem ser usadas para manipular a esta coleção, como localizar pontos de dados, executar associação de dados e assim por diante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ShadowColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ShadowColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.ShadowColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "128,0,0,0")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da sombra de uma série.</summary>
+        <value>A cor da sombra de uma série. A cor padrão é <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obtém ou define a cor da sombra de uma série, o que pode ser qualquer valor ARGB (alfa, vermelho, verde, azul) válido.  
+  
+ O valor alfa pode ser usado para obter um efeito de sombra realista; Tente usar um valor de cor de "128,0,0,0" de sombras.  
+  
+ Para implementar uma sombra, defina o <xref:System.Windows.Forms.DataVisualization.Charting.Series.ShadowOffset%2A> propriedade para um valor diferente de zero (0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowOffset">
+      <MemberSignature Language="C#" Value="public int ShadowOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ShadowOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.ShadowOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o deslocamento de sombra, em pixels, de uma série.</summary>
+        <value>O deslocamento de sombra da série, em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para implementar o sombreamento, use um valor diferente de zero (0). Um valor positivo resulta em uma sombra que muda para baixo e para a direita. Um valor negativo resulta em uma sombra que muda para cima e para a esquerda.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmartLabelStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle SmartLabelStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle SmartLabelStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.SmartLabelStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de rótulos inteligentes.</summary>
+        <value>O estilo dos rótulos inteligentes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public void Sort (System.Collections.Generic.IComparer&lt;System.Windows.Forms.DataVisualization.Charting.DataPoint&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Sort(class System.Collections.Generic.IComparer`1&lt;class System.Windows.Forms.DataVisualization.Charting.DataPoint&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.Sort(System.Collections.Generic.IComparer{System.Windows.Forms.DataVisualization.Charting.DataPoint})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;System.Windows.Forms.DataVisualization.Charting.DataPoint&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">O <see cref="T:System.Collections.IComparer" /> interface.</param>
+        <summary>Classifica os pontos na série usando <see cref="T:System.Collections.IComparer" /> interface.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public void Sort (System.Windows.Forms.DataVisualization.Charting.PointSortOrder pointSortOrder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Sort(valuetype System.Windows.Forms.DataVisualization.Charting.PointSortOrder pointSortOrder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.Sort(System.Windows.Forms.DataVisualization.Charting.PointSortOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointSortOrder" Type="System.Windows.Forms.DataVisualization.Charting.PointSortOrder" />
+      </Parameters>
+      <Docs>
+        <param name="pointSortOrder">A ordem de classificação.</param>
+        <summary>Classifica os pontos de dados na série, considerando a ordem de classificação especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sort">
+      <MemberSignature Language="C#" Value="public void Sort (System.Windows.Forms.DataVisualization.Charting.PointSortOrder pointSortOrder, string sortBy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Sort(valuetype System.Windows.Forms.DataVisualization.Charting.PointSortOrder pointSortOrder, string sortBy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Series.Sort(System.Windows.Forms.DataVisualization.Charting.PointSortOrder,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointSortOrder" Type="System.Windows.Forms.DataVisualization.Charting.PointSortOrder" />
+        <Parameter Name="sortBy" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pointSortOrder">A ordem de classificação.</param>
+        <param name="sortBy">O valor usado para a classificação (X, Y, Y2...).</param>
+        <summary>Classifica os pontos da série, considerando a ordem de classificação especificada e o valor a ser usado para a classificação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XAxisType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.AxisType XAxisType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.AxisType XAxisType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.XAxisType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de eixo X da série.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.AxisType" /> que determina se a série usa o eixo X primário ou secundário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para todos os tipos, exceto gráficos orientação horizontal do gráfico, como barras, gráficos e gráficos de forma como pizza, rosca, funil e gráficos de pirâmide de barra empilhada, o eixo x primário é sempre o eixo inferior e o eixo secundário é o eixo superior. Para barras e gráficos de barra empilhada, o eixo x primário é o eixo à esquerda e o eixo x secundário é o eixo à direita.  
+  
+ Quando dados são plotados usando o eixo x secundário, você deve usar o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.AxisX2%2A> propriedade para definir as propriedades de eixo e não o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.AxisX%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XValueMember">
+      <MemberSignature Language="C#" Value="public string XValueMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XValueMember" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.XValueMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.SeriesDataSourceMemberConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o membro da fonte de dados de gráfico usado para a associação de dados ao valor X da série.</summary>
+        <value>O membro da fonte de dados de gráfico usado para associação de dados ao valor X da série.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade aceita o nome da coluna de membro ou o valor ordinal da coluna de membro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XValueType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartValueType XValueType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartValueType XValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.XValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os tipos de valores plotados ao longo do eixo X.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartValueType" /> que determina o tipo de dados do valor X armazenado pela série. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartValueType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Series.XValueType%2A> propriedade determina o tipo de dados armazenados pela série.  
+  
+ Defina essa propriedade como <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime> para permitir que o valor de X a ser inserido como um <xref:System.DateTime> valor e não como um <xref:System.Double>. Valores de data e hora são armazenados internamente pelo .NET Framework como <xref:System.Double> valores. O mesmo é válido para o <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel.ToPosition%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel.FromPosition%2A> propriedades de <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel> objetos.  
+  
+ O `IntervalType` propriedade encontrada nas classes de grade, marca de escala e rótulo do eixo determina o tipo de intervalo.  
+  
+> [!NOTE]
+>  Para aplicar corretamente um <xref:System.DateTime> formato para os rótulos de eixo são gerados de valores-X de ponto de dados, usando o <xref:System.Windows.Forms.DataVisualization.Charting.LabelStyle.Format%2A> , essa propriedade deve ser definida como <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime>.  
+  
+ Essa propriedade também pode ser usada para determinar o tipo de dados à qual os valores de X estão associados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YAxisType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.AxisType YAxisType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.AxisType YAxisType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.YAxisType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.AxisType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de eixo Y de uma série.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.AxisType" /> que determina se uma série usa o eixo Y primário ou secundário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Series.YAxisType%2A> propriedade determina se uma série é plotada usando o eixo y primário ou secundário.  
+  
+ Para todos os tipos exceto pizza, rosca, barra de intervalo de gráficos, barras e empilhados, os gráficos de barras no eixo y primário é o eixo vertical esquerdo e o eixo secundário é o eixo vertical direito. Para barras e gráficos de barra empilhada, o eixo primário é o eixo horizontal inferior e o eixo y secundário é o eixo horizontal superior.  
+  
+ Quando dados são plotados usando o eixo y secundário, você deve usar o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.AxisY2%2A> propriedade para definir as propriedades de eixo e não o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.AxisY%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YValueMembers">
+      <MemberSignature Language="C#" Value="public string YValueMembers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string YValueMembers" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.YValueMembers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.SeriesDataSourceMemberValueAxisUITypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.SeriesDataSourceMemberConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as colunas de membro da fonte de dados de gráfico usadas para associar dados aos valores Y da série.</summary>
+        <value>As colunas de membro da fonte de dados de gráfico usadas para associar dados aos valores Y da série.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade aceita uma cadeia de caracteres separada por vírgulas que contém os nomes ou valores ordinais das colunas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YValuesPerPoint">
+      <MemberSignature Language="C#" Value="public int YValuesPerPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 YValuesPerPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.YValuesPerPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de valores Y que objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> em um <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> podem ter.</summary>
+        <value>O número máximo de valores Y que pontos de dados em uma série podem ter. O valor padrão é um (1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você adicionar um <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objeto que tem valores de Y mais que essa propriedade especifica os valores de Y em excesso serão ignorados.  
+  
+ O número de valores Y que são necessárias para exibir corretamente um gráfico depende do tipo de gráfico selecionado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YValueType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartValueType YValueType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartValueType YValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Series.YValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.SeriesYValueTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de dados do valor Y em armazenados por uma série de pontos de dados.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartValueType" /> valor de enumeração que determina o tipo de dados de valor de Y armazenados pela série. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartValueType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Series.YValueType%2A> propriedade determina o tipo de dados armazenados pela série. O valor dessa propriedade é normalmente definido como <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.Auto> ou <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime>.  
+  
+ O `IntervalType` propriedade encontrada nas classes de grade, marca de escala e rótulo do eixo determina o tipo de intervalo.  
+  
+ Essa propriedade também pode ser usada para determinar o tipo de dados à qual os valores de Y estão associados.  
+  
+ É possível plotar expressões de data como os valores de pontos de dados, embora isso raramente é feito. Se você definir essa propriedade como <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime>, o pode ter valor Y, em seguida, inserido como um <xref:System.DateTime> valor e não como um <xref:System.Double>. Valores de data e hora são armazenados internamente pelo .NET Framework como <xref:System.Double> valores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,235 @@
+<Type Name="PolicyConversionContext" FullName="System.ServiceModel.Description.PolicyConversionContext">
+  <TypeSignature Language="C#" Value="public abstract class PolicyConversionContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PolicyConversionContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.PolicyConversionContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma classe usada para recuperar as asserções de associação em metadados e anexar a implementação de elementos de associação no escopo apropriado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma implementação de <xref:System.ServiceModel.Description.PolicyConversionContext> é passado para <xref:System.ServiceModel.Description.IPolicyExportExtension> e <xref:System.ServiceModel.Description.IPolicyImportExtension> objetos para exportar e importar, respectivamente, declarações de política personalizada para e de metadados. Na exportação, um conjunto de declarações de política são recuperados para adicionar asserções personalizadas. Na importação, as declarações são recuperadas para importar alguns específicos e configurar adequadamente a elementos de associação.  
+  
+-   O <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A> método retorna todas as declarações de política para a associação.  
+  
+-   O <xref:System.ServiceModel.Description.PolicyConversionContext.GetFaultBindingAssertions%2A> método retorna todas as declarações de política para uma mensagem de falha específicas.  
+  
+-   O <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A> método retorna todas as declarações de política para uma mensagem específica.  
+  
+-   O <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A> método retorna todas as declarações de política para uma operação específica.  
+  
+-   O <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A> propriedade obtém os elementos de associação para a associação está sendo descrito ou configurado.  
+  
+-   O <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A> propriedade obtém a descrição do contrato para o qual a associação está sendo descrito ou configurado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação do <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A> método que grava todas as declarações de política no console. Os comentários de código descrevem como localizar uma declaração de política personalizada específica, criar e inserir um elemento de associação de implementação e remover a declaração da coleção.  
+  
+ [!code-csharp[S_UEPolicyConversionContext#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/cs/program.cs#0)]  
+  
+ O exemplo de código a seguir mostra como registrar <xref:System.ServiceModel.Description.IPolicyImportExtension> implementações usando o `<policyImporters>` seção de configuração.  
+  
+ [!code-xml[S_UEPolicyConversionContext#100](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/common/app.config#100)]   
+  
+ O exemplo de código a seguir demonstra como um elemento de associação personalizado pode implementar <xref:System.ServiceModel.Description.IPolicyExportExtension> para anexar uma declaração de política personalizada para as declarações de associação.  
+  
+ [!code-csharp[S_UEPolicyConversionContext#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PolicyConversionContext (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.PolicyConversionContext.#ctor(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> para o contexto de política.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> classe usando o ponto de extremidade especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingElements">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.BindingElementCollection BindingElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.BindingElementCollection BindingElements" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.PolicyConversionContext.BindingElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de elementos aos quais elementos de associação personalizada que implementam as declarações de política são adicionados de associação.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Channels.BindingElementCollection" /> que contém os elementos de associação para um ponto de extremidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contract">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ContractDescription Contract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ContractDescription Contract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.PolicyConversionContext.Contract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ContractDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contrato para o ponto de extremidade.</summary>
+        <value>O contrato do ponto de extremidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBindingAssertions">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Description.PolicyAssertionCollection GetBindingAssertions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Description.PolicyAssertionCollection GetBindingAssertions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PolicyAssertionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma coleção de declarações de política de metadados.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.ICollection`1" /> do tipo <see cref="T:System.Xml.XmlElement" /> que contém as declarações de política de associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção retornada de <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A> não é uma cópia. Você pode adicionar e remover asserções conforme necessário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação do <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A> método que grava todas as declarações de política no console. Os comentários de código descrevem como localizar uma declaração de política personalizada específica, criar e inserir um elemento de associação de implementação e remover a declaração da coleção.  
+  
+ [!code-csharp[S_UEPolicyConversionContext#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/cs/program.cs#0)]  
+  
+ O exemplo de código a seguir mostra como registrar <xref:System.ServiceModel.Description.IPolicyImportExtension> implementações usando o `<policyImporters>` seção de configuração.  
+  
+ [!code-xml[S_UEPolicyConversionContext#100](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/common/app.config#100)]   
+  
+ O exemplo de código a seguir demonstra como um elemento de associação personalizado pode implementar <xref:System.ServiceModel.Description.IPolicyExportExtension> para anexar uma declaração de política personalizada para as declarações de associação.  
+  
+ [!code-csharp[S_UEPolicyConversionContext#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uepolicyconversioncontext/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFaultBindingAssertions">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Description.PolicyAssertionCollection GetFaultBindingAssertions (System.ServiceModel.Description.FaultDescription fault);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Description.PolicyAssertionCollection GetFaultBindingAssertions(class System.ServiceModel.Description.FaultDescription fault) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.PolicyConversionContext.GetFaultBindingAssertions(System.ServiceModel.Description.FaultDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PolicyAssertionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fault" Type="System.ServiceModel.Description.FaultDescription" />
+      </Parameters>
+      <Docs>
+        <param name="fault">O <see cref="T:System.ServiceModel.Description.FaultDescription" /> objeto para quais declarações de política devem ser adicionadas ou quais associações devem ser configurados.</param>
+        <summary>Retorna uma coleção de declarações de política para a falha SOAP especificada.</summary>
+        <returns>Uma coleção de declarações de política para a falha SOAP especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção retornada de <xref:System.ServiceModel.Description.PolicyConversionContext.GetFaultBindingAssertions%2A> não é uma cópia. Você pode adicionar e remover asserções conforme necessário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMessageBindingAssertions">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Description.PolicyAssertionCollection GetMessageBindingAssertions (System.ServiceModel.Description.MessageDescription message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Description.PolicyAssertionCollection GetMessageBindingAssertions(class System.ServiceModel.Description.MessageDescription message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions(System.ServiceModel.Description.MessageDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PolicyAssertionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Description.MessageDescription" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Description.MessageDescription" /> para que lá está associando asserções.</param>
+        <summary>Obtém uma coleção de declarações de política para uma mensagem.</summary>
+        <returns>Uma coleção de declarações de política para a mensagem especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção retornada de <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A> não é uma cópia. Você pode adicionar e remover asserções conforme necessário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperationBindingAssertions">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Description.PolicyAssertionCollection GetOperationBindingAssertions (System.ServiceModel.Description.OperationDescription operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Description.PolicyAssertionCollection GetOperationBindingAssertions(class System.ServiceModel.Description.OperationDescription operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PolicyAssertionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="operation">O <see cref="T:System.ServiceModel.Description.OperationDescription" /> objeto para quais declarações de política devem ser adicionadas ou quais associações devem ser configurados.</param>
+        <summary>Retorna uma coleção de declarações de política para a operação especificada.</summary>
+        <returns>As declarações de política para a operação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção retornada de <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A> não é uma cópia. Você pode adicionar e remover asserções conforme necessário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,537 @@
+<Type Name="CallbackBehaviorAttribute" FullName="System.ServiceModel.CallbackBehaviorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class CallbackBehaviorAttribute : Attribute, System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CallbackBehaviorAttribute extends System.Attribute implements class System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.CallbackBehaviorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IEndpointBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Configura uma implementação de serviço de retorno de chamada em um aplicativo cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.CallbackBehaviorAttribute> atributo para definir ou estender o comportamento de execução de uma implementação do contrato de retorno de chamada em um aplicativo cliente. Esse atributo executa a mesma função para a classe de retorno de chamada como o <xref:System.ServiceModel.ServiceBehaviorAttribute> atributo com a exceção de configurações de transações e o comportamento de instanciação.  
+  
+ O <xref:System.ServiceModel.CallbackBehaviorAttribute> deve ser aplicado à classe que implementa o contrato de retorno de chamada. Se aplicado a uma implementação do contrato de não-duplex um <xref:System.InvalidOperationException> exceção em tempo de execução.  
+  
+> [!NOTE]
+>  Você também pode usar o <xref:System.ServiceModel.OperationBehaviorAttribute> atributo para as implementações de operação de retorno de chamada. No entanto, se <xref:System.ServiceModel.OperationBehaviorAttribute> é usado em uma operação de retorno de chamada, o <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A> propriedade deve ser <xref:System.ServiceModel.ReleaseInstanceMode.None> ou um <xref:System.InvalidOperationException> exceção em tempo de execução.  
+  
+ As propriedades a seguir estão disponíveis:  
+  
+-   O <xref:System.ServiceModel.CallbackBehaviorAttribute.AutomaticSessionShutdown%2A> propriedade fecha automaticamente a sessão quando o canal é fechado e o retorno de chamada terminou de processar qualquer mensagem restante.  
+  
+-   O <xref:System.ServiceModel.CallbackBehaviorAttribute.ConcurrencyMode%2A> propriedade controla o modelo de threading interno, habilitando suporte para objetos de retorno de chamada reentrante ou multi-threaded.  
+  
+-   O <xref:System.ServiceModel.CallbackBehaviorAttribute.IgnoreExtensionDataObject%2A> propriedade permite que o tempo de execução ignorar as informações de serialização adicional que não é necessário para processar a mensagem.  
+  
+-   O <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> propriedade especifica se as exceções sem tratamento em um serviço são retornadas para o serviço como falhas de SOAP para fins de depuração.  
+  
+-   O <xref:System.ServiceModel.CallbackBehaviorAttribute.MaxItemsInObjectGraph%2A> limites de propriedade no número de itens em um gráfico de objeto que são serializados.  
+  
+-   O <xref:System.ServiceModel.CallbackBehaviorAttribute.TransactionIsolationLevel%2A> propriedade especifica o nível de isolamento de transação que tem suporte no contrato.  
+  
+-   O <xref:System.ServiceModel.CallbackBehaviorAttribute.TransactionTimeout%2A> propriedade especifica o período de tempo no qual uma transação deve ser concluída ou anular.  
+  
+-   O <xref:System.ServiceModel.CallbackBehaviorAttribute.UseSynchronizationContext%2A> propriedade indica se deseja sincronizar chamadas de método de entrada automaticamente usando atual <xref:System.Threading.SynchronizationContext> objeto.  
+  
+-   O <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> propriedade informa o sistema se deve confirmar que os cabeçalhos SOAP marcada como `MustUnderstand` tem, na verdade, foi entendida.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra uma <xref:System.ServiceModel.CallbackBehaviorAttribute> em um objeto de retorno de chamada que usa o <xref:System.Threading.SynchronizationContext> objeto para determinar qual thread para empacotar, o <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> propriedade para impor a validação de mensagem e o <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> propriedade a ser retornada exceções como <xref:System.ServiceModel.FaultException> objetos para o serviço para fins de depuração.  
+  
+ [!code-csharp[CallbackBehaviorAttribute#3](~/samples/snippets/csharp/VS_Snippets_CFX/callbackbehaviorattribute/cs/client.cs#3)]
+ [!code-vb[CallbackBehaviorAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/callbackbehaviorattribute/vb/client.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallbackBehaviorAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CallbackBehaviorAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.CallbackBehaviorAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As configurações padrão para o <xref:System.ServiceModel.CallbackBehaviorAttribute> são:  
+  
+-   A propriedade <xref:System.ServiceModel.CallbackBehaviorAttribute.AutomaticSessionShutdown%2A> é `true`.  
+  
+-   O <xref:System.ServiceModel.CallbackBehaviorAttribute.ConcurrencyMode%2A> é definido como <xref:System.ServiceModel.ConcurrencyMode.Single>.  
+  
+-   A propriedade <xref:System.ServiceModel.CallbackBehaviorAttribute.IgnoreExtensionDataObject%2A> é `false`.  
+  
+-   <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> é `false`.  
+  
+-   <xref:System.ServiceModel.CallbackBehaviorAttribute.UseSynchronizationContext%2A> é `false`.  
+  
+-   A propriedade <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> é `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra uma <xref:System.ServiceModel.CallbackBehaviorAttribute> em um objeto de retorno de chamada que usa o <xref:System.Threading.SynchronizationContext> objeto para determinar qual thread para empacotar, o <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> propriedade para impor a validação de mensagem e o <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> propriedade a ser retornada exceções como <xref:System.ServiceModel.FaultException> objetos para o serviço para fins de depuração.  
+  
+ [!code-csharp[CallbackBehaviorAttribute#3](~/samples/snippets/csharp/VS_Snippets_CFX/callbackbehaviorattribute/cs/client.cs#3)]
+ [!code-vb[CallbackBehaviorAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/callbackbehaviorattribute/vb/client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticSessionShutdown">
+      <MemberSignature Language="C#" Value="public bool AutomaticSessionShutdown { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutomaticSessionShutdown" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CallbackBehaviorAttribute.AutomaticSessionShutdown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se deve fechar automaticamente uma sessão quando um serviço fecha uma sessão duplex.</summary>
+        <value>
+          <see langword="true" />Se os objetos de retorno de chamada dúplex automaticamente fechar uma sessão quando o serviço fecha uma sessão duplex; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, quando um serviço fecha uma sessão duplex e o retorno de chamada terminou de processar qualquer mensagem restante, o retorno de chamada fecha a sessão. Configuração <xref:System.ServiceModel.CallbackBehaviorAttribute.AutomaticSessionShutdown%2A> para `false` impede que o cliente fechar automaticamente a sessão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConcurrencyMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ConcurrencyMode ConcurrencyMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.ConcurrencyMode ConcurrencyMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CallbackBehaviorAttribute.ConcurrencyMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ConcurrencyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se um serviço dá suporte a um thread, vários threads ou chamadas reentrantes.</summary>
+        <value>Um dos valores <see cref="T:System.ServiceModel.ConcurrencyMode" />; o padrão é <see cref="F:System.ServiceModel.ConcurrencyMode.Single" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica se uma instância de um objeto de retorno de chamada oferece suporte a um thread ou vários threads executadas simultaneamente e se thread único, se reentrada tem suporte.  
+  
+ Configuração <xref:System.ServiceModel.ConcurrencyMode> para <xref:System.ServiceModel.ConcurrencyMode.Single> instrui o sistema para restringir as instâncias do serviço para um thread de execução em um tempo, o que libera você de lidar com problemas de threading. Este é o valor padrão. Um valor de <xref:System.ServiceModel.ConcurrencyMode.Multiple> significa que os objetos de serviço pode ser executada por vários threads ao mesmo tempo. Nesse caso, você deve garantir a consistência de estado e segurança de thread.  
+  
+ <xref:System.ServiceModel.ConcurrencyMode.Reentrant>também restringe o acesso a um único thread por vez. No entanto, ele permite chamadas de um método de serviço em execução para retornar e execute novamente o serviço em execução. Uma chamada reentrante pode executar em um thread gerenciado diferente, mas nesse caso o thread original está bloqueado para a duração da chamada reentrante.  
+  
+ Em geral, se uma mensagem chega para uma instância que viola o modo de simultaneidade, a mensagem aguarda até que a instância está disponível ou o tempo limite.  
+  
+ Além disso, se o <xref:System.ServiceModel.ConcurrencyMode> é definido como <xref:System.ServiceModel.ConcurrencyMode.Single> e uma chamada reentrante é bloqueada enquanto aguarda a instância a ser liberado, o sistema detecta o deadlock e lançará uma exceção.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]simultaneidade, consulte <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> e [sessões, Instancing e simultaneidade](~/docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não é um dos valores <see cref="T:System.ServiceModel.ConcurrencyMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreExtensionDataObject">
+      <MemberSignature Language="C#" Value="public bool IgnoreExtensionDataObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreExtensionDataObject" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CallbackBehaviorAttribute.IgnoreExtensionDataObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se dados de serialização desconhecidos serão enviados na conexão.</summary>
+        <value>
+          <see langword="true" /> se os dados de serialização desconhecidos nunca forem enviados; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um tipo implementa o <xref:System.Runtime.Serialization.IExtensibleDataObject> interface, ele armazena quaisquer dados extras não sabe sobre que entram na transmissão durante a desserialização desse tipo. Por exemplo, se um tipo `Person` tem membros `FirstName` e `LastName`, e um elemento chamado `PhoneNumber` é fornecido, ele é armazenado. Ao serializar posteriormente o tipo `PhoneNumber` é emitida novamente. O problema é que o esquema `Person` exportados pelo serviço só tem `FirstName` e `LastName`, portanto [!INCLUDE[indigo1](~/includes/indigo1-md.md)] gera uma instância de esquema inválida. Se a conformidade de esquema estrita for importante, você pode definir <xref:System.ServiceModel.CallbackBehaviorAttribute.IgnoreExtensionDataObject%2A> para `true` para desativar esse comportamento de emissão novamente.  
+  
+ Independentemente do <xref:System.ServiceModel.CallbackBehaviorAttribute.IgnoreExtensionDataObject%2A> configuração, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] sempre processa dados conhecidos (ambos in e out) e não lançam exceções quando dados extras.  
+  
+ Você pode usar o [ &lt;callbackDebug&gt; ](~/docs/framework/configure-apps/file-schema/wcf/callbackdebug.md) elemento para definir essa propriedade em um cliente de arquivo de configuração do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeExceptionDetailInFaults">
+      <MemberSignature Language="C#" Value="public bool IncludeExceptionDetailInFaults { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeExceptionDetailInFaults" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica que as exceções de execução gerais sem tratamento devem ser convertidas em um <see cref="T:System.ServiceModel.FaultException`1" /> do tipo <see cref="T:System.String" /> e enviadas como uma mensagem de falha. Defina-o como <see langword="true" /> somente durante o desenvolvimento para solucionar problemas de um serviço.</summary>
+        <value>
+          <see langword="true" /> se as exceções sem tratamento precisarem ser retornadas como falhas de SOAP; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> para `true` para habilitar as informações de exceção voltem ao serviços para depuração quando possível. Este é um recurso somente para desenvolvimento e não deve ser usado em serviços implantados. Essas falhas aparecem para o serviço de chamada como <xref:System.ServiceModel.FaultException> objetos.  
+  
+> [!IMPORTANT]
+>  Configuração <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> para `true` permite que os serviços obter informações sobre exceções de retorno de chamada do cliente interno; só é recomendado como um modo de depuração temporariamente um aplicativo cliente duplex.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra uma <xref:System.ServiceModel.CallbackBehaviorAttribute> em um objeto de retorno de chamada que usa o <xref:System.Threading.SynchronizationContext> objeto para determinar qual thread para empacotar, o <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> propriedade para impor a validação de mensagem e o <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> propriedade a ser retornada exceções como <xref:System.ServiceModel.FaultException> objetos para o serviço para fins de depuração.  
+  
+ [!code-csharp[CallbackBehaviorAttribute#3](~/samples/snippets/csharp/VS_Snippets_CFX/callbackbehaviorattribute/cs/client.cs#3)]
+ [!code-vb[CallbackBehaviorAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/callbackbehaviorattribute/vb/client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxItemsInObjectGraph">
+      <MemberSignature Language="C#" Value="public int MaxItemsInObjectGraph { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxItemsInObjectGraph" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CallbackBehaviorAttribute.MaxItemsInObjectGraph" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de itens permitidos em um objeto serializado.</summary>
+        <value>O número máximo de itens permitidos em um objeto. O padrão é <see cref="F:System.Int32.MaxValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.ServiceBehaviorAttribute.MaxItemsInObjectGraph%2A> propriedade definir um limite no número de itens em um gráfico de objeto que são serializados. Você também pode usar o [ &lt;dataContractSerializer&gt; ](~/docs/framework/configure-apps/file-schema/wcf/datacontractserializer.md) elemento para definir esse valor em um cliente de arquivo de configuração do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.AddBindingParameters (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CallbackBehaviorAttribute.System#ServiceModel#Description#IEndpointBehavior#AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">To be added.</param>
+        <param name="parameters">A coleção de parâmetros que são configurados de associação.</param>
+        <summary>Configura os elementos de associação para dar suporte o comportamento de retorno de chamada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.ApplyClientBehavior (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Dispatcher.ClientRuntime behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, class System.ServiceModel.Dispatcher.ClientRuntime behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CallbackBehaviorAttribute.System#ServiceModel#Description#IEndpointBehavior#ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="clientRuntime" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">O ponto de extremidade configurado pelo atributo.</param>
+        <param name="behavior">To be added.</param>
+        <summary>Configura o tempo de execução do cliente para o suporte para o objeto de retorno de chamada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Dispatcher.EndpointDispatcher dispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, class System.ServiceModel.Dispatcher.EndpointDispatcher dispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CallbackBehaviorAttribute.System#ServiceModel#Description#IEndpointBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="endpointDispatcher" Type="System.ServiceModel.Dispatcher.EndpointDispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">O ponto de extremidade a ser modificado.</param>
+        <param name="dispatcher">To be added.</param>
+        <summary>Implementação de <see cref="M:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" /> método. Esta implementação não tem nenhum efeito.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IEndpointBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IEndpointBehavior.Validate (System.ServiceModel.Description.ServiceEndpoint serviceEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IEndpointBehavior.Validate(class System.ServiceModel.Description.ServiceEndpoint serviceEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CallbackBehaviorAttribute.System#ServiceModel#Description#IEndpointBehavior#Validate(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceEndpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="serviceEndpoint">O ponto de extremidade a ser validado.</param>
+        <summary>Valida a descrição do ponto de extremidade antes de compilar o tempo de execução.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionIsolationLevel">
+      <MemberSignature Language="C#" Value="public System.Transactions.IsolationLevel TransactionIsolationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Transactions.IsolationLevel TransactionIsolationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CallbackBehaviorAttribute.TransactionIsolationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o nível de isolamento da transação.</summary>
+        <value>Um valor <see cref="T:System.Transactions.IsolationLevel" /> que especifica o nível de isolamento da transação. O padrão é <see cref="F:System.Transactions.IsolationLevel.Unspecified" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nível de isolamento nas quais a execução de transações determina como os dados são tratados quando alterações são feitas em outras transações e quanto tempo a transação deve manter bloqueios para proteger contra essas alterações. Por exemplo, o valor padrão, <xref:System.Transactions.IsolationLevel.Unspecified>, especifica que nenhuma atualização ou inserção pode ocorrer até que a transação seja concluída.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não é um dos valores <see cref="T:System.Transactions.IsolationLevel" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionTimeout">
+      <MemberSignature Language="C#" Value="public string TransactionTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransactionTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CallbackBehaviorAttribute.TransactionTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período dentro do qual uma transação deve ser concluída.</summary>
+        <value>Um objeto <see cref="T:System.TimeSpan" /> que representa o tempo no qual as transações devem ser concluídas ou ser canceladas automaticamente. O valor padrão é <see cref="F:System.TimeSpan.Zero" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse valor é definido em um arquivo de configuração do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSynchronizationContext">
+      <MemberSignature Language="C#" Value="public bool UseSynchronizationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSynchronizationContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CallbackBehaviorAttribute.UseSynchronizationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Duplex</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o contexto de sincronização atual deve ser usado para escolher o thread de execução.</summary>
+        <value>
+          <see langword="true" /> se todas as chamadas para o serviço deverem ser executadas no thread especificado pelo <see cref="T:System.Threading.SynchronizationContext" />; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para fornecer a afinidade de thread de interface do usuário que alguns aplicativos exigem. Por exemplo, um aplicativo Windows Forms pode ser registrado como um objeto de serviço singleton. Nesse caso, todas as chamadas para o serviço devem executar no thread de formulários do Windows. No caso de padrão, no qual <xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A> é definido como `true`, sincroniza todas as chamadas para o serviço para ser executado no thread de interface do usuário.  
+  
+ Observe que o thread usado é a sincronização atual do thread quando <xref:System.ServiceModel.DuplexChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.DuplexClientBase%601.CreateChannel%2A?displayProperty=nameWithType> é chamado. No caso de um aplicativo do Windows Forms, isso significa que essas chamadas devem ocorrer após uma chamada para o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra uma <xref:System.ServiceModel.CallbackBehaviorAttribute> em um objeto de retorno de chamada que usa o <xref:System.Threading.SynchronizationContext> objeto para determinar qual thread para empacotar, o <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> propriedade para impor a validação de mensagem e o <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> propriedade a ser retornada exceções como <xref:System.ServiceModel.FaultException> objetos para o serviço para fins de depuração.  
+  
+ [!code-csharp[CallbackBehaviorAttribute#3](~/samples/snippets/csharp/VS_Snippets_CFX/callbackbehaviorattribute/cs/client.cs#3)]
+ [!code-vb[CallbackBehaviorAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/callbackbehaviorattribute/vb/client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateMustUnderstand">
+      <MemberSignature Language="C#" Value="public bool ValidateMustUnderstand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateMustUnderstand" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o sistema ou o aplicativo reforça SOAP <see langword="MustUnderstand" /> processamento de cabeçalho.</summary>
+        <value>
+          <see langword="true" />Se o sistema executar o cabeçalho SOAP <see langword="MustUnderstand" /> processamento; caso contrário <see langword="false" />, que indica que o aplicativo executa esse processamento. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> propriedade para desativar a validação de imposto de cabeçalhos de mensagens que chegam. No modo de execução normal, os cabeçalhos de mensagem são comparados com o <xref:System.ServiceModel.Channels.MessageHeaders.UnderstoodHeaders%2A> propriedade para confirmar que os cabeçalhos que chegam são tratados explicitamente no tempo de execução do objeto de retorno de chamada. Defina isso para `false` desativar essa verificação. Quando definido como `false`, o aplicativo deve verificar se há cabeçalhos marcados com MustUnderstand = "true" e retornar uma falha se um ou mais deles não foram entendidas. Isso é útil quando o retorno de chamada deve aceitar qualquer mensagens SOAP de entrada (por exemplo, quando usar digitado ou mensagens sem tipo) e executar o processamento de cabeçalho personalizado.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra uma <xref:System.ServiceModel.CallbackBehaviorAttribute> em um objeto de retorno de chamada que usa o <xref:System.Threading.SynchronizationContext> objeto para determinar qual thread para empacotar, o <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> propriedade para impor a validação de mensagem e o <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> propriedade a ser retornada exceções como <xref:System.ServiceModel.FaultException> objetos para o serviço para fins de depuração.  
+  
+ [!code-csharp[CallbackBehaviorAttribute#3](~/samples/snippets/csharp/VS_Snippets_CFX/callbackbehaviorattribute/cs/client.cs#3)]
+ [!code-vb[CallbackBehaviorAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/callbackbehaviorattribute/vb/client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

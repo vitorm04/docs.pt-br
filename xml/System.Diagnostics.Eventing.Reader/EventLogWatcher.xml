@@ -1,0 +1,200 @@
+<Type Name="EventLogWatcher" FullName="System.Diagnostics.Eventing.Reader.EventLogWatcher">
+  <TypeSignature Language="C#" Value="public class EventLogWatcher : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventLogWatcher extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventLogWatcher" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Permite que você assine eventos recebidos. Sempre que um evento desejado for publicado em um log de eventos, o evento <see cref="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" /> será gerado e o método que manipula esse evento será executado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As instâncias dessa classe são criadas a partir <xref:System.Diagnostics.Eventing.Reader.EventLogQuery> objetos, que especificar uma consulta para a inscrição do evento. Quando um evento é registrado que corresponde aos critérios expressados na consulta, em seguida, o <xref:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten> é gerado.  
+  
+   
+  
+## Examples  
+ Por exemplo de código usando esta classe, consulte [como: inscrever-se para eventos em um Log de eventos](http://msdn.microsoft.com/en-us/62e006d3-9fab-4fdf-a8f8-e23d05498cd4).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogWatcher (System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.#ctor(System.Diagnostics.Eventing.Reader.EventLogQuery)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventQuery" Type="System.Diagnostics.Eventing.Reader.EventLogQuery" />
+      </Parameters>
+      <Docs>
+        <param name="eventQuery">Especifica uma consulta para a inscrição do evento. Quando um evento é registrado que corresponde aos critérios expressados na consulta, em seguida, o <see cref="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" /> é gerado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.Eventing.Reader.EventLogWatcher" /> especificando uma consulta de evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogWatcher (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho ou o nome do monitor de log de eventos para eventos. Se nenhum evento é registrado no log de eventos, em seguida, o <see cref="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" /> é gerado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Eventing.Reader.EventLogWatcher" /> classe especificando o nome ou o caminho para um log de eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogWatcher (System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery, System.Diagnostics.Eventing.Reader.EventBookmark bookmark);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery, class System.Diagnostics.Eventing.Reader.EventBookmark bookmark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.#ctor(System.Diagnostics.Eventing.Reader.EventLogQuery,System.Diagnostics.Eventing.Reader.EventBookmark)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventQuery" Type="System.Diagnostics.Eventing.Reader.EventLogQuery" />
+        <Parameter Name="bookmark" Type="System.Diagnostics.Eventing.Reader.EventBookmark" />
+      </Parameters>
+      <Docs>
+        <param name="eventQuery">Especifica uma consulta para a inscrição do evento. Quando um evento é registrado que corresponde aos critérios expressados na consulta, em seguida, o <see cref="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" /> é gerado.</param>
+        <param name="bookmark">O indicador (espaço reservado) usado como uma posição inicial no log de eventos ou fluxo de eventos. Somente os eventos que foram registrados depois que o evento de indicador será retornado pela consulta.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Eventing.Reader.EventLogWatcher" /> classe especificando uma consulta de evento e um indicador que é usado como o início da consulta.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogWatcher (System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery, System.Diagnostics.Eventing.Reader.EventBookmark bookmark, bool readExistingEvents);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery, class System.Diagnostics.Eventing.Reader.EventBookmark bookmark, bool readExistingEvents) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.#ctor(System.Diagnostics.Eventing.Reader.EventLogQuery,System.Diagnostics.Eventing.Reader.EventBookmark,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventQuery" Type="System.Diagnostics.Eventing.Reader.EventLogQuery" />
+        <Parameter Name="bookmark" Type="System.Diagnostics.Eventing.Reader.EventBookmark" />
+        <Parameter Name="readExistingEvents" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="eventQuery">Especifica uma consulta para a inscrição do evento. Quando um evento é registrado que corresponde aos critérios expressados na consulta, em seguida, o <see cref="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" /> é gerado.</param>
+        <param name="bookmark">O indicador (espaço reservado) usado como uma posição inicial no log de eventos ou fluxo de eventos. Somente os eventos que foram registrados depois que o evento de indicador será retornado pela consulta.</param>
+        <param name="readExistingEvents">Um valor booleano que determina se devem ser lidos os eventos que já existem no log de eventos. Se esse valor for <see langword="true" />, em seguida, os eventos existentes são lidas e se esse valor for <see langword="false" />, em seguida, os eventos existentes não são legíveis.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Eventing.Reader.EventLogWatcher" /> classe especificando uma consulta de evento, um indicador que é usado como a posição para a consulta inicial e um valor booleano que determina se é necessário ler os eventos que já existem no log de eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados por este objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogWatcher.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados por este objeto e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogWatcher.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se este objeto começa a entrega de eventos para o delegado do evento.</summary>
+        <value>Retorna <see langword="true" /> quando este objeto pode fornecer eventos para o delegado de evento e retorna <see langword="false" /> quando este objeto parou de entrega.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventRecordWritten">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs&gt; EventRecordWritten;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs&gt; EventRecordWritten" />
+      <MemberSignature Language="DocId" Value="E:System.Diagnostics.Eventing.Reader.EventLogWatcher.EventRecordWritten" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Diagnostics.Eventing.Reader.EventRecordWrittenEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite definir um delegado (método de manipulador de eventos) que é chamado sempre que um evento é publicado que corresponde aos critérios especificado no evento consulta para esse objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Por exemplo de código usando esta classe, consulte [como: inscrever-se para eventos em um Log de eventos](http://msdn.microsoft.com/en-us/62e006d3-9fab-4fdf-a8f8-e23d05498cd4).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

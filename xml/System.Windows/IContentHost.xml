@@ -1,0 +1,103 @@
+<Type Name="IContentHost" FullName="System.Windows.IContentHost">
+  <TypeSignature Language="C#" Value="public interface IContentHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContentHost" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.IContentHost" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Esta interface é implementada por layouts que hospedam <see cref="T:System.Windows.ContentElement" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetRectangles">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Rect&gt; GetRectangles (System.Windows.ContentElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Windows.Rect&gt; GetRectangles(class System.Windows.ContentElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IContentHost.GetRectangles(System.Windows.ContentElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Rect&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.ContentElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">O elemento filho que são retornados os retângulos delimitadores para.</param>
+        <summary>Retorna uma coleção de delimitadora retângulos para um elemento filho.</summary>
+        <returns>Uma coleção de delimitadora retângulos para um elemento filho.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Se *filho* é nulo.</exception>
+        <exception cref="T:System.ArgumentException">Se o elemento não é um descendente direto (ou seja, o elemento deve ser um filho de <see cref="T:System.Windows.IContentHost" /> ou um <see cref="T:System.Windows.ContentElement" /> que é um descendente direto do <see cref="T:System.Windows.IContentHost" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HostedElements">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Windows.IInputElement&gt; HostedElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerator`1&lt;class System.Windows.IInputElement&gt; HostedElements" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.IContentHost.HostedElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Windows.IInputElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma enumeração que contém todas as classes derivadas de <see cref="T:System.Windows.ContentElement" /> descendentes, bem como todas as classes derivadas de <see cref="T:System.Windows.UIElement" /> que são descendentes diretos de <see cref="T:System.Windows.IContentHost" /> ou uma de suas classes <see cref="T:System.Windows.ContentElement" /> descendentes.</summary>
+        <value>Enumeração que contém todas as classes derivadas de <see cref="T:System.Windows.ContentElement" /> descendentes, bem como todas as classes derivadas de <see cref="T:System.Windows.UIElement" /> que são descendentes diretos de <see cref="T:System.Windows.IContentHost" /> ou uma de suas classes <see cref="T:System.Windows.ContentElement" /> descendentes. Em outras palavras, os elementos para os quais o <see cref="T:System.Windows.IContentHost" /> cria uma representação visual (classes derivadas de <see cref="T:System.Windows.ContentElement" />) ou cujo layout é controlado pelo <see cref="T:System.Windows.IContentHost" /> (as classes derivadas de <see cref="T:System.Windows.UIElement" /> de descendente de primeiro nível).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputHitTest">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement InputHitTest (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.IInputElement InputHitTest(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IContentHost.InputHitTest(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Coordenadas do mouse em relação a ContentHost.</param>
+        <summary>Executa testes para elementos filho.</summary>
+        <returns>Um descendente do <see cref="T:System.Windows.IInputElement" />, ou **nulo** se esse elemento não existe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChildDesiredSizeChanged">
+      <MemberSignature Language="C#" Value="public void OnChildDesiredSizeChanged (System.Windows.UIElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnChildDesiredSizeChanged(class System.Windows.UIElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IContentHost.OnChildDesiredSizeChanged(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">Elemento filho cujo <see cref="P:System.Windows.UIElement.DesiredSize" /> foi alterado</param>
+        <summary>Chamado quando um <see cref="T:System.Windows.UIElement" />-derivada da classe que é hospedado por um <see cref="T:System.Windows.IContentHost" /> alterações seu <see cref="P:System.Windows.UIElement.DesiredSize" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Se *filho* é nulo.</exception>
+        <exception cref="T:System.ArgumentException">Se *filho* não é um descendente direto (ou seja, *filho* deve ser um filho do <see cref="T:System.Windows.IContentHost" /> ou um <see cref="T:System.Windows.ContentElement" /> que é um descendente direto do <see cref="T:System.Windows.IContentHost" />).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

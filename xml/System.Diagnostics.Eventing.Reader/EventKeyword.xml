@@ -1,0 +1,89 @@
+<Type Name="EventKeyword" FullName="System.Diagnostics.Eventing.Reader.EventKeyword">
+  <TypeSignature Language="C#" Value="public sealed class EventKeyword" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventKeyword extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventKeyword" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma palavra-chave para um evento. Palavras-chave são definidas em um provedor de eventos e são usadas para agrupar os eventos com outros eventos semelhantes (com base no uso de eventos).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância dessa classe. Um <xref:System.Diagnostics.Eventing.Reader.ProviderMetadata> objeto defies uma lista de <xref:System.Diagnostics.Eventing.Reader.EventKeyword> objetos, um para cada palavra-chave usada pelos eventos de provedor. Cada palavra-chave é um bit em uma máscara de 64 bits. Valores de bit predefinidos e bits reservados ocupam as posições superior 16 dessa máscara, deixando o manifesto para usar qualquer bit entre 0x0000000000000001 e 0x0000800000000000.  
+  
+ As palavras-chave do evento padrão são definidas no <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords> enumeração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventKeyword.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome localizado da palavra-chave.</summary>
+        <value>Retorna uma cadeia de caracteres que contém um nome localizado para esta palavra-chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventKeyword.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome não localizado da palavra-chave.</summary>
+        <value>Retorna uma cadeia de caracteres que contém o nome não localizada da palavra-chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public long Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventKeyword.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor numérico associado com a palavra-chave.</summary>
+        <value>Retorna um valor <see langword="long" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada palavra-chave é um bit em uma máscara de 64 bits. Valores de bit predefinidos e bits reservados ocupam as posições superior 16 dessa máscara, deixando o manifesto para usar qualquer bit entre 0x0000000000000001 e 0x0000800000000000.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,55 @@
+<Type Name="LayoutExceptionEventArgs" FullName="System.Windows.Forms.Integration.LayoutExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public class LayoutExceptionEventArgs : System.Windows.Forms.Integration.IntegrationExceptionEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LayoutExceptionEventArgs extends System.Windows.Forms.Integration.IntegrationExceptionEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Integration.LayoutExceptionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsFormsIntegration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Integration.IntegrationExceptionEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Integration.IntegrationExceptionEventArgs> classe permite que o usuário a visualizar uma exceção de layout antes que ele seja gerado.  
+  
+ No seu manipulador de eventos, defina o valor da <xref:System.Windows.Forms.Integration.IntegrationExceptionEventArgs.ThrowException%2A> propriedade `true` para indicar que a exceção deve ser gerada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LayoutExceptionEventArgs (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.LayoutExceptionEventArgs.#ctor(System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">O <see cref="T:System.Exception" /> para gerar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Integration.LayoutExceptionEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No seu manipulador de eventos, defina o valor da <xref:System.Windows.Forms.Integration.IntegrationExceptionEventArgs.ThrowException%2A> propriedade `true` para indicar que a exceção deve ser gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="exception" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

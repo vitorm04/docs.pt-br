@@ -1,0 +1,103 @@
+<Type Name="ApplicationIDAttribute" FullName="System.EnterpriseServices.ApplicationIDAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationIDAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationIDAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ApplicationIDAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a ID do aplicativo (como um GUID) para esse assembly. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.ApplicationIDAttribute>usa um GUID no construtor. Quando o registro ocorre, os componentes no assembly são instalados em um aplicativo com a ID especificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.EnterpriseServices.ApplicationIDAttribute> tipo.  
+  
+ [!code-csharp[EnterpriseServices.ApplicationIDAttribute#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices.ApplicationIDAttribute/CS/class1.cs#0)]
+ [!code-vb[EnterpriseServices.ApplicationIDAttribute#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices.ApplicationIDAttribute/VB/class1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationIDAttribute (string guid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string guid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ApplicationIDAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="guid" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="guid">O GUID associado ao aplicativo COM+.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.ApplicationIDAttribute" /> classe especifica o GUID que representa a ID do aplicativo para o aplicativo COM+.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um novo <xref:System.EnterpriseServices.ApplicationIDAttribute>.  
+  
+ [!code-csharp[EnterpriseServices.ApplicationIDAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices.ApplicationIDAttribute/CS/class1.cs#1)]
+ [!code-vb[EnterpriseServices.ApplicationIDAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices.ApplicationIDAttribute/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public Guid Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Value" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ApplicationIDAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID do aplicativo COM+.</summary>
+        <value>O GUID que representa o aplicativo COM+.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.ApplicationIDAttribute.Value%2A>é definido pelo construtor usando o GUID passado como um parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o valor de um `ApplicationID` do atributo <xref:System.EnterpriseServices.ApplicationIDAttribute.Value%2A> propriedade.  
+  
+ [!code-csharp[EnterpriseServices.ApplicationIDAttribute#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices.ApplicationIDAttribute/CS/class1.cs#0)]
+ [!code-vb[EnterpriseServices.ApplicationIDAttribute#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices.ApplicationIDAttribute/VB/class1.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

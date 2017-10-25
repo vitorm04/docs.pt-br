@@ -1,0 +1,246 @@
+<Type Name="WindowsBuiltInRole" FullName="System.Security.Principal.WindowsBuiltInRole">
+  <TypeSignature Language="C#" Value="public enum WindowsBuiltInRole" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed WindowsBuiltInRole extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Principal.WindowsBuiltInRole" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as funções comuns a serem usadas com o <see cref="M:System.Security.Principal.WindowsPrincipal.IsInRole(System.String)" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essas funções representam os grupos do Windows locais comuns para a maioria das instalações do Windows NT, Windows 2000 e Windows XP.  
+  
+> [!NOTE]
+>  No Windows Vista, o controle de conta de usuário (UAC) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Quando você tenta executar uma tarefa que requer privilégios administrativos, você poderá elevar dinamicamente a função usando a caixa de diálogo de consentimento. O código que executa o <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A> método não exibe a caixa de diálogo de consentimento. O código retorna false se você estiver na função de usuário padrão, mesmo que estejam no grupo de administradores internos. Você pode elevar seus privilégios antes de executar o código clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso do <xref:System.Security.Principal.WindowsBuiltInRole> enumeração.  
+  
+ [!code-cpp[System.Security.Principal.WindowsBuiltInRole Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CPP/source.cpp#1)]
+ [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
+ [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccountOperator">
+      <MemberSignature Language="C#" Value="AccountOperator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.WindowsBuiltInRole AccountOperator = int32(548)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.WindowsBuiltInRole.AccountOperator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsBuiltInRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os operadores de conta gerenciam as contas de usuário em um computador ou domínio.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Administrator">
+      <MemberSignature Language="C#" Value="Administrator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.WindowsBuiltInRole Administrator = int32(544)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.WindowsBuiltInRole.Administrator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsBuiltInRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os administradores têm acesso completo e irrestrito ao computador ou domínio.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BackupOperator">
+      <MemberSignature Language="C#" Value="BackupOperator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.WindowsBuiltInRole BackupOperator = int32(551)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.WindowsBuiltInRole.BackupOperator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsBuiltInRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Operadores de backup podem substituir as restrições de segurança com o único objetivo de fazer backup ou restaurar arquivos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Guest">
+      <MemberSignature Language="C#" Value="Guest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.WindowsBuiltInRole Guest = int32(546)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.WindowsBuiltInRole.Guest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsBuiltInRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Convidados são mais restritos que usuários.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerUser">
+      <MemberSignature Language="C#" Value="PowerUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.WindowsBuiltInRole PowerUser = int32(547)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.WindowsBuiltInRole.PowerUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsBuiltInRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os usuários avançados têm a maioria das permissões administrativas com algumas restrições. Portanto, os usuários avançados podem executar aplicativos herdados, além de aplicativos certificados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintOperator">
+      <MemberSignature Language="C#" Value="PrintOperator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.WindowsBuiltInRole PrintOperator = int32(550)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.WindowsBuiltInRole.PrintOperator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsBuiltInRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Operadores de impressão podem assumir o controle de uma impressora.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Replicator">
+      <MemberSignature Language="C#" Value="Replicator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.WindowsBuiltInRole Replicator = int32(552)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.WindowsBuiltInRole.Replicator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsBuiltInRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os replicadores dão suporte à replicação de arquivos em um domínio.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemOperator">
+      <MemberSignature Language="C#" Value="SystemOperator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.WindowsBuiltInRole SystemOperator = int32(549)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.WindowsBuiltInRole.SystemOperator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsBuiltInRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os operadores de sistema gerenciam um computador específico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="User" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Principal.WindowsBuiltInRole User = int32(545)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Principal.WindowsBuiltInRole.User" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Principal.Windows</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.WindowsBuiltInRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os usuários são impedidos de fazer alterações acidentais ou intencionais ao sistema. Portanto, os usuários podem executar aplicativos certificados, mas não a maioria dos aplicativos herdados.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

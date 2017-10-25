@@ -1,0 +1,16 @@
+<Namespace Name="System.Drawing.Imaging">
+  <Docs>
+    <summary>O <see cref="N:System.Drawing.Imaging" /> namespace fornece avançadas GDI+ funcionalidade de geração de imagens. Funcionalidade básica de gráficos é fornecida pelo <see cref="N:System.Drawing" /> namespace.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Imaging.Metafile> classe fornece métodos para gravar e salvar metarquivos. O <xref:System.Drawing.Imaging.Encoder> classe permite que os usuários estendam GDI+ para dar suporte a qualquer formato de imagem. O <xref:System.Drawing.Imaging.PropertyItem> classe fornece métodos para armazenar e recuperar metadados em arquivos de imagem.  
+  
+> [!CAUTION]
+>  Classes de dentro do <xref:System.Drawing.Imaging> namespace não têm suporte para uso em um serviço do Windows ou do ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

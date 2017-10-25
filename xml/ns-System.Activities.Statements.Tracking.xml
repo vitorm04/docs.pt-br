@@ -1,0 +1,6 @@
+<Namespace Name="System.Activities.Statements.Tracking">
+  <Docs>
+    <summary>Fornece classes para monitorar execuções de estado de máquina de estado e as transições de estado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

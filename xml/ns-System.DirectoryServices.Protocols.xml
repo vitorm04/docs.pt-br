@@ -1,0 +1,6 @@
+<Namespace Name="System.DirectoryServices.Protocols">
+  <Docs>
+    <summary>O <see cref="N:System.DirectoryServices.Protocols" /> namespace fornece os métodos definidos na versão Lightweight Directory Access Protocol (LDAP) 3 (V3) e a versão de idioma de marcação de serviços de diretório (DSML) 2.0 (V2) padrões.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

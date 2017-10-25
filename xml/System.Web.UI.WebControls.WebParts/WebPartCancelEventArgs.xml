@@ -1,0 +1,62 @@
+<Type Name="WebPartCancelEventArgs" FullName="System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs">
+  <TypeSignature Language="C#" Value="public class WebPartCancelEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartCancelEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.SelectedWebPartChanging" /> evento, <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartClosing" /> evento, e <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartDeleting" /> eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs> classe contém informações para vários eventos diferentes de Web Parts que podem ser cancelados. Esses eventos incluem a <xref:System.Web.UI.WebControls.WebParts.WebPartManager.SelectedWebPartChanging>, <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartClosing>, e <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartDeleting> eventos. O <xref:System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs> classe fornece acesso para o controle de Web Parts envolvido no evento. O controle de Web Parts é acessado por meio de <xref:System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs.WebPart%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartCancelEventArgs (System.Web.UI.WebControls.WebParts.WebPart webPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPart webPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs.#ctor(System.Web.UI.WebControls.WebParts.WebPart)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">O <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> (ou controle de servidor ou usuário) envolvido no evento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPart">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPart WebPart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart WebPart" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs.WebPart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle de Web Parts envolvido no evento cancelável.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> envolvidos em uma <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.SelectedWebPartChanging" />, <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartClosing" />, ou <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartDeleting" /> eventos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

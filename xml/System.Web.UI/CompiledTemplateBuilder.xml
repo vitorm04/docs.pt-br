@@ -1,0 +1,86 @@
+<Type Name="CompiledTemplateBuilder" FullName="System.Web.UI.CompiledTemplateBuilder">
+  <TypeSignature Language="C#" Value="public sealed class CompiledTemplateBuilder : System.Web.UI.ITemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CompiledTemplateBuilder extends System.Object implements class System.Web.UI.ITemplate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.CompiledTemplateBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITemplate</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Um <see cref="T:System.Web.UI.ITemplate" /> implementação que é chamada de código de classe da página gerado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.CompiledTemplateBuilder> classe é usada pelo ASP.NET para criar um modelo para um controle de modelo do código de classe gerada. Não é destinada a ser usada diretamente no seu código.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompiledTemplateBuilder (System.Web.UI.BuildTemplateMethod buildTemplateMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.BuildTemplateMethod buildTemplateMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CompiledTemplateBuilder.#ctor(System.Web.UI.BuildTemplateMethod)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buildTemplateMethod" Type="System.Web.UI.BuildTemplateMethod" />
+      </Parameters>
+      <Docs>
+        <param name="buildTemplateMethod">Um delegado usado para tratar o <see cref="M:System.Web.UI.CompiledTemplateBuilder.InstantiateIn(System.Web.UI.Control)" /> chamada de método.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.CompiledTemplateBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado internamente pelo ASP.NET para criar uma nova instância do <xref:System.Web.UI.CompiledTemplateBuilder> classe. Não é destinada a ser usada diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InstantiateIn">
+      <MemberSignature Language="C#" Value="public void InstantiateIn (System.Web.UI.Control container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InstantiateIn(class System.Web.UI.Control container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CompiledTemplateBuilder.InstantiateIn(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="container">Um <see cref="T:System.Web.UI.Control" /> que representa o contêiner usado para armazenar os controles filho no modelo.</param>
+        <summary>Popula o objeto <see cref="T:System.Web.UI.Control" /> com os controles filho contidos no modelo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.CompiledBindableTemplateBuilder.InstantiateIn%2A> método é o <xref:System.Web.UI.TemplateBuilder> implementação da classe do <xref:System.Web.UI.ITemplate.InstantiateIn%2A?displayProperty=nameWithType> método. Ele é usado pelo ASP.NET para criar a hierarquia de controle do modelo e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,47 @@
+<Type Name="VisualStyleElement+TrackBar" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+TrackBar">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.TrackBar" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/TrackBar extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém classes que fornecem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> objetos para as partes do controle da barra de controle. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar> classe fornece uma base na qual as classes a seguir são definidas:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar.Thumb>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar.ThumbBottom>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar.ThumbLeft>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar.ThumbRight>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar.ThumbTop>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar.ThumbVertical>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar.Ticks>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar.TicksVertical>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar.Track>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar.TrackVertical>  
+  
+ Cada uma dessas classes fornece uma propriedade que retorna um ou mais <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> objetos para a parte da barra de faixa especificada pelo nome da classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Authentication">
+  <Docs>
+    <summary>O namespace de autenticação fornece um conjunto de enumerações que descrevem a segurança de uma conexão. Incluem essas enumerações <see cref="T:System.Security.Authentication.CipherAlgorithmType" />, <see cref="T:System.Security.Authentication.ExchangeAlgorithmType" />, <see cref="T:System.Security.Authentication.HashAlgorithmType" />, e <see cref="T:System.Security.Authentication.SslProtocols" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

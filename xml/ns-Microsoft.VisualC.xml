@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.VisualC">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.VisualC" /> namespace contém classes que oferecem suporte à compilação e geração de código usando a linguagem C++.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

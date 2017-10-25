@@ -1,0 +1,155 @@
+<Type Name="IXmlDictionary" FullName="System.Xml.IXmlDictionary">
+  <TypeSignature Language="C#" Value="public interface IXmlDictionary" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlDictionary" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.IXmlDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Um <see langword="interface" /> que define o contrato que um dicionário Xml deve implementar para ser usado por <see cref="T:System.Xml.XmlDictionaryReader" /> e <see cref="T:System.Xml.XmlDictionaryWriter" /> implementações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `interface` é implementado por <xref:System.Xml.XmlDictionary>, que é usado em [!INCLUDE[indigo1](~/includes/indigo1-md.md)] para otimizar o desempenho de serialização e desserialização de mensagens XML. Implementar essa interface para fornecer personalizado <xref:System.Xml.XmlDictionaryString> gerenciamento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="TryLookup">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Tenta pesquisar uma entrada no dicionário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método evita uma exceção se a entrada não está no dicionário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="TryLookup">
+      <MemberSignature Language="C#" Value="public bool TryLookup (int key, out System.Xml.XmlDictionaryString result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryLookup(int32 key, [out] class System.Xml.XmlDictionaryString&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlDictionary.TryLookup(System.Int32,System.Xml.XmlDictionaryString@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Int32" />
+        <Parameter Name="result" Type="System.Xml.XmlDictionaryString&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">Chave a ser procurada.</param>
+        <param name="result">Se <c>chave</c> for definida, o <see cref="T:System.Xml.XmlDictionaryString" /> que é mapeada para a chave; caso contrário <see langword="null" />.</param>
+        <summary>Tenta pesquisar uma entrada no dicionário.</summary>
+        <returns>
+          <see langword="true" />Se a chave é no dicionário, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryLookup">
+      <MemberSignature Language="C#" Value="public bool TryLookup (string value, out System.Xml.XmlDictionaryString result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryLookup(string value, [out] class System.Xml.XmlDictionaryString&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlDictionary.TryLookup(System.String,System.Xml.XmlDictionaryString@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="result" Type="System.Xml.XmlDictionaryString&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="value">Valor de cadeia de caracteres que está sendo verificada.</param>
+        <param name="result">O correspondente <see cref="T:System.Xml.XmlDictionaryString" />, se encontrado; caso contrário <see langword="null" />.</param>
+        <summary>Verifica o dicionário de um valor de cadeia de caracteres especificada.</summary>
+        <returns>
+          <see langword="true" />Se o valor é no dicionário, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryLookup">
+      <MemberSignature Language="C#" Value="public bool TryLookup (System.Xml.XmlDictionaryString value, out System.Xml.XmlDictionaryString result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryLookup(class System.Xml.XmlDictionaryString value, [out] class System.Xml.XmlDictionaryString&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlDictionary.TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlDictionaryString" />
+        <Parameter Name="result" Type="System.Xml.XmlDictionaryString&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Xml.XmlDictionaryString" /> que está sendo verificada.</param>
+        <param name="result">A correspondência <see cref="T:System.Xml.XmlDictionaryString" />, se encontrado; caso contrário <see langword="null" />.</param>
+        <summary>Verifica se o dicionário especificado <see cref="T:System.Xml.XmlDictionaryString" />.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="T:System.Xml.XmlDictionaryString" /> é no dicionário, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

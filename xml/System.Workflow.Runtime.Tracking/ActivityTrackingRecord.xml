@@ -1,0 +1,352 @@
+<Type Name="ActivityTrackingRecord" FullName="System.Workflow.Runtime.Tracking.ActivityTrackingRecord">
+  <TypeSignature Language="C#" Value="public class ActivityTrackingRecord : System.Workflow.Runtime.Tracking.TrackingRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityTrackingRecord extends System.Workflow.Runtime.Tracking.TrackingRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Tracking.TrackingRecord</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém os dados enviados para um serviço de acompanhamento pela infraestrutura de controle de tempo de execução quando uma <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackPoint" /> for correspondida. Ele também é usado na lista de retorno de <see cref="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.ActivityEvents" /> propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Quando a infra-estrutura de controle de tempo de execução corresponde um <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> em uma <xref:System.Workflow.Runtime.Tracking.TrackingProfile>, envia um <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> para o serviço de controle sobre o <xref:System.Workflow.Runtime.Tracking.TrackingChannel> associada ao controle de serviço. O serviço de acompanhamento pode executar qualquer ação é necessária nos dados no registro de controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor é chamado pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackingRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackingRecord (Type activityType, string qualifiedName, Guid contextGuid, Guid parentContextGuid, System.Workflow.ComponentModel.ActivityExecutionStatus executionStatus, DateTime eventDateTime, int eventOrder, EventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type activityType, string qualifiedName, valuetype System.Guid contextGuid, valuetype System.Guid parentContextGuid, valuetype System.Workflow.ComponentModel.ActivityExecutionStatus executionStatus, valuetype System.DateTime eventDateTime, int32 eventOrder, class System.EventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.#ctor(System.Type,System.String,System.Guid,System.Guid,System.Workflow.ComponentModel.ActivityExecutionStatus,System.DateTime,System.Int32,System.EventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityType" Type="System.Type" />
+        <Parameter Name="qualifiedName" Type="System.String" />
+        <Parameter Name="contextGuid" Type="System.Guid" />
+        <Parameter Name="parentContextGuid" Type="System.Guid" />
+        <Parameter Name="executionStatus" Type="System.Workflow.ComponentModel.ActivityExecutionStatus" />
+        <Parameter Name="eventDateTime" Type="System.DateTime" />
+        <Parameter Name="eventOrder" Type="System.Int32" />
+        <Parameter Name="eventArgs" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="activityType">O <see cref="T:System.Type" /> da atividade associada ao evento de status de atividade.</param>
+        <param name="qualifiedName">O <see cref="P:System.Workflow.ComponentModel.Activity.QualifiedName" /> da atividade associada ao evento de status de atividade.</param>
+        <param name="contextGuid">O <see cref="T:System.Guid" /> que identifica o <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> da atividade associada ao evento de status de atividade.</param>
+        <param name="parentContextGuid">O <see cref="T:System.Guid" /> que identifica o <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> da atividade pai da atividade associada ao evento de status de atividade.</param>
+        <param name="executionStatus">Um dos valores de <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" />.</param>
+        <param name="eventDateTime">Um <see cref="T:System.DateTime" /> que indica a data e hora do evento de status de atividade associada ao registro de controle.</param>
+        <param name="eventOrder">A ordem relativa em que o evento de status de atividade associado a este registro de controle ocorreu na instância de fluxo de trabalho.</param>
+        <param name="eventArgs">Uma referência nula (<see langword="Nothing" /> no Visual Basic). Este campo não está definido para um <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" /> classe usando os parâmetros especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityType">
+      <MemberSignature Language="C#" Value="public Type ActivityType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ActivityType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.ActivityType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo common language runtime (CLR) da atividade associada a esta <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" />.</summary>
+        <value>O <see cref="T:System.Type" /> da atividade para o qual o <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" /> foi criado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.ActivityType%2A>é definido pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public override System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingAnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de anotações associadas a <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackPoint" /> que foi correspondida.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.TrackingAnnotationCollection" /> que contém as anotações que estão associadas a <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackPoint" /> que corresponde a este registro de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.TrackingDataItem&gt; Body { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Workflow.Runtime.Tracking.TrackingDataItem&gt; Body" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.TrackingDataItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista que contém os dados extraídos do fluxo de trabalho para o <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackPoint" /> que foi correspondida.</summary>
+        <value>Uma lista de <see cref="T:System.Workflow.Runtime.Tracking.TrackingDataItem" /> objetos cada uma delas contém uma única parte dos dados extraídos e suas anotações associadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> for encontrada, o controle de tempo de execução infraestrutura pode extrair dados da instância de fluxo de trabalho. Os dados a ser extraído são especificados pelo <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Extracts%2A?displayProperty=nameWithType>. <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint.Extracts%2A?displayProperty=nameWithType>pode conter dois tipos de objetos: <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> objetos especificam dados de membro a ser extraído da atividade associada ao evento de status de atividade; e, <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract> objetos especificam dados de membro a ser extraído da atividade raiz do fluxo de trabalho. Ambos esses tipos de extrair também pode especificar as anotações a serem retornados com os dados extraídos. A infra-estrutura de controle de tempo de execução encapsula cada parte dos dados extraídos e suas anotações associadas em um <xref:System.Workflow.Runtime.Tracking.TrackingDataItem>e adiciona esses <xref:System.Workflow.Runtime.Tracking.TrackingDataItem> para <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.Body%2A>.  
+  
+ Essa propriedade é definida pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextGuid">
+      <MemberSignature Language="C#" Value="public Guid ContextGuid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ContextGuid" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.ContextGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contexto da atividade.</summary>
+        <value>
+          <see cref="T:System.Guid" />que identifica o <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> da atividade associada ao evento de status de atividade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventArgs">
+      <MemberSignature Language="C#" Value="public override EventArgs EventArgs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EventArgs EventArgs" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.EventArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sempre <see langword="null" /> para um <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" />.</summary>
+        <value>Uma referência nula (<see langword="Nothing" />) para um <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.EventArgs%2A>não tem nenhum significado para um <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> e é sempre uma referência nula (`Nothing`).  
+  
+ Essa propriedade é definida pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime EventDateTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime EventDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.EventDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a data e hora em que ocorreu o evento de status de atividade.</summary>
+        <value>Um valor <see cref="T:System.DateTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DateTime> é hora de Greenwich (UTC).  
+  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.EventDateTime%2A>é definido pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventOrder">
+      <MemberSignature Language="C#" Value="public override int EventOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventOrder" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.EventOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a ordem em que a instância de fluxo de trabalho do evento de status de atividade que corresponde a <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackPoint" />.</summary>
+        <value>Um valor que indica a ordem do evento de status de atividade na instância de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.EventOrder%2A>indica a ordem relativa do evento que corresponde a <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> dentro da instância de fluxo de trabalho.  <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.EventOrder%2A>é exclusivo dentro de uma instância de fluxo de trabalho, mas não é garantido para ser sequenciais. <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.EventOrder%2A>é definido pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionStatus">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.ActivityExecutionStatus ExecutionStatus { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus ExecutionStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.ExecutionStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o status de execução da atividade associada a esta <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância de fluxo de trabalho só emite eventos de status de atividade quando muda o status de execução de uma instância de atividade. Portanto, um <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> só pode ser correspondido quando ocorre uma alteração de status de execução de atividade. <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.ExecutionStatus%2A>contém o <xref:System.Workflow.ComponentModel.ActivityExecutionStatus?displayProperty=nameWithType> que disparou a correspondência e causou o <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> para serem enviadas. Ele reflete o status atual da instância de atividade. <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.ExecutionStatus%2A>é definido pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentContextGuid">
+      <MemberSignature Language="C#" Value="public Guid ParentContextGuid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ParentContextGuid" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.ParentContextGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contexto da atividade pai.</summary>
+        <value>
+          <see cref="T:System.Guid" />que identifica o <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> da atividade associada ao evento de status de atividade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QualifiedName">
+      <MemberSignature Language="C#" Value="public string QualifiedName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string QualifiedName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.QualifiedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador da atividade associada a esta <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" />.</summary>
+        <value>O <see cref="P:System.Workflow.ComponentModel.Activity.QualifiedName" /> do <see cref="T:System.Workflow.ComponentModel.Activity" /> para que este registro de rastreamento foi criado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.QualifiedName%2A>é definido pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

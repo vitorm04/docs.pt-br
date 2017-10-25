@@ -1,0 +1,100 @@
+<Type Name="InstanceContextMode" FullName="System.ServiceModel.InstanceContextMode">
+  <TypeSignature Language="C#" Value="public enum InstanceContextMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed InstanceContextMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.InstanceContextMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o número de instâncias de serviço disponíveis para tratar as chamadas contidas em mensagens de entrada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> gerencia a associação entre o canal e os objetos de serviço definido pelo usuário. Use o <xref:System.ServiceModel.InstanceContextMode> enumeração com o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> propriedade para especificar o tempo de vida do <xref:System.ServiceModel.InstanceContext> objeto. [!INCLUDE[indigo1](~/includes/indigo1-md.md)]pode criar um novo <xref:System.ServiceModel.InstanceContext> de objeto para cada chamada, cada sessão ou especificar que a <xref:System.ServiceModel.InstanceContext> objeto está associado a um objeto de serviço único. Para obter um exemplo de funcionamento, consulte o [Instancing](~/docs/framework/wcf/samples/instancing.md).  
+  
+ O valor único Especifica que um único <xref:System.ServiceModel.InstanceContextMode.Single> objeto deve ser usado para o tempo de vida do serviço.  
+  
+> [!NOTE]
+>  Se o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> valor é definido como único, o resultado é que o serviço só pode processar uma mensagem por vez, a menos que você também definir o <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> valor <xref:System.ServiceModel.ConcurrencyMode>.  
+  
+   
+  
+## Examples  
+ O código a seguir ilustra como definir o <xref:System.ServiceModel.InstanceContextMode> para uma classe de serviço:  
+  
+ [!code-csharp[S_ReliableSession#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_reliablesession/cs/service.cs#1)]
+ [!code-vb[S_ReliableSession#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_reliablesession/vb/service.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PerCall">
+      <MemberSignature Language="C#" Value="PerCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.InstanceContextMode PerCall = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.InstanceContextMode.PerCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.InstanceContextMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um novo objeto <see cref="T:System.ServiceModel.InstanceContext" /> é criado antes de cada chamada e reciclado depois dela. Se o canal não criar uma sessão, esse valor se comportará como se fosse <see cref="F:System.ServiceModel.InstanceContextMode.PerCall" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PerSession">
+      <MemberSignature Language="C#" Value="PerSession" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.InstanceContextMode PerSession = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.InstanceContextMode.PerSession" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.InstanceContextMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um novo objeto <see cref="T:System.ServiceModel.InstanceContext" /> é criado para cada sessão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.InstanceContextMode Single = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.InstanceContextMode.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.InstanceContextMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Apenas um objeto <see cref="T:System.ServiceModel.InstanceContext" /> é usado para todas as chamadas de entrada e não é reciclado após as chamadas. Se não existir nenhum objeto de serviço, um será criado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para o comportamento de tempo de vida de singleton (por exemplo, se o aplicativo host chama o <xref:System.ServiceModel.ServiceHost.%23ctor%2A> construtor e passa um objeto a ser usado como o serviço), a classe de serviço deve definir <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> único, ou uma exceção é lançada quando o host de serviço é aberto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

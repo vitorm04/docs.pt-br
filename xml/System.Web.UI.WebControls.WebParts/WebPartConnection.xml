@@ -1,0 +1,1051 @@
+<Type Name="WebPartConnection" FullName="System.Web.UI.WebControls.WebParts.WebPartConnection">
+  <TypeSignature Language="C#" Value="public sealed class WebPartConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebPartConnection extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "Transformers")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um objeto que permite que dois <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles para formar uma conexão. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No conjunto de controle de Web Parts, uma conexão é um link ou associação entre dois <xref:System.Web.UI.WebControls.WebParts.WebPart> (ou outro servidor ou usuário) controles que permite que eles compartilham dados. Essa capacidade de compartilhar dados permite que os controles conectados a ser usado de maneiras que excedem a funcionalidade oferecida pelos controles isolados. Por exemplo, se um controle fornece dados de código postal e outro controle pode ler esses dados e fornecer informações de clima local com base no código postal, o recurso conectado dos dois controles fornece mais valor aos usuários. Para estender esse exemplo, outros controles podem ser criados que também exibir informações com base em um código postal, como um controle com links para obter notícias locais, e todos esses controles podem trabalhar com dados de código postal podem compartilhar dados com o controle único que fornece um código postal. Usuários finais de aplicativos Web Parts pode criar e gerenciar conexões entre todos esses controles compatíveis diretamente de um navegador da Web, usando a interface de usuário (UI) conexões padrão fornecida pelo <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle ou usando uma interface do usuário personalizada fornecida por um desenvolvedor.  
+  
+ Isso <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> visão geral da classe é uma instrução geral de detalhes para a criação de uma conexão. Para obter mais informações sobre requisitos envolvidas na criação de conexões e componentes específicos, consulte [Web Parts Connections Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b), ou consulte as classes de referência e códigos de exemplo mencionado na discussão a seguir. Há vários aspectos fundamentais de uma conexão de Web Parts:  
+  
+-   Dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Cada conexão de Web Parts consiste em dois controles. É possível para um controle para participar de mais de uma conexão simultaneamente, mas cada conexão única consiste exatamente dois controles. Os controles podem derivar diretamente a <xref:System.Web.UI.WebControls.WebParts.WebPart> classe base, ou podem ser outros controles de servidor, incluindo controles ASP.NET, controles de servidor personalizados e controles de usuário. Controles que não derivam o <xref:System.Web.UI.WebControls.WebParts.WebPart> classe se colocado em um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona, são ajustados automaticamente com um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> objeto em tempo de execução, o que permite que eles herdam a <xref:System.Web.UI.WebControls.WebParts.WebPart> classe e a função como tempo de execução <xref:System.Web.UI.WebControls.WebParts.WebPart> controles.  
+  
+-   Controles que residem em <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zonas. Ambos <xref:System.Web.UI.WebControls.WebParts.WebPart> controles e qualquer outro tipo de controle de servidor devem residir em um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona para poder participar de conexões de Web Parts (e a maioria dos outros recursos de Web Parts).  
+  
+-   Consumidores e provedores. Em cada conexão de Web Parts são dois controles: um provedor de dados e um consumidor de dados. O provedor fornece dados para o consumidor por meio de um método de retorno de chamada especificada que retorna os dados na forma de uma interface. (Para obter um exemplo de como criar e especificar o método de retorno de chamada, consulte a seção exemplo deste tópico.) Esse método de retorno de chamada é conhecido como um ponto de conexão do provedor. Os detalhes desse ponto de conexão (seu nome "amigável", uma ID e o tipo da interface retornado) estão contidos em um <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> objeto associado ao controle do provedor. O consumidor recebe os dados por meio de um método especificado que pode aceitar uma instância da interface. Esse método é conhecido como um ponto de conexão do consumidor, e os detalhes do ponto de conexão (nome, ID e o tipo de interface) estão contidos em um <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto associado ao controle do consumidor.  
+  
+-   Controles compatíveis ou um transformador válido. Para uma conexão funcione, o consumidor e provedor devem ser compatíveis (que significa que os seus métodos de ponto de conexão especificado podem trabalhar com o mesmo tipo de interface) ou não houver deve ser um <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> objeto capaz de converter o tipo oferecido pelo provedor em um tipo entendido pelo consumidor.  
+  
+-   Um objeto <xref:System.Web.UI.WebControls.WebParts.WebPartConnection>. Para uma conexão existir, deve haver uma instância do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> classe que contém referências aos controles de provedor e consumidor, junto com os detalhes de seus pontos de conexão. Se o provedor e consumidor são incompatíveis e em vez disso, use um <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> objeto de conexão, a conexão referencia o transformador.  
+  
+-   Forma de estabelecer a conexão. Depois de controles de consumidor e provedor compatíveis foi corretamente criados com métodos de ponto de conexão e colocados em uma região e um <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> objeto estiver disponível, é última etapa básicos necessários iniciar a conexão. É uma maneira que isso pode acontecer de usuários para criar a conexão por meio da interface do usuário. Se você colocar um `<asp:connectionszone>` necessário de elemento na página e outros componentes para uma conexão estão em vigor, em tempo de execução, um usuário pode alternar a página em modo de exibição de conectar, clique em um verbo de conexão no menu de verbos do provedor ou de consumidor e em uma conexão de interface do usuário (com base no <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle) será exibida. Por meio desta interface do usuário, o usuário pode iniciar a conexão. Outra maneira de iniciar a conexão é para fazer isso programaticamente. Em ambos os casos, se por meio da interface do usuário ou programaticamente, o método subjacente que inicia a conexão é o mesmo. O aplicativo chama o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> método (ou o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> método se usando um transformador) no <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controlar, transmitindo a ele o provedor, o consumidor e seus objetos de ponto de conexão do respectivos, e o método retorna um <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> objeto.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> classe define um objeto que encapsula os detalhes essenciais de uma conexão entre dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. A classe consiste quase que totalmente propriedades relacionadas aos detalhes de uma determinada conexão. Várias propriedades relacionados o controle de consumidor em uma conexão. O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer%2A> propriedade referencia o controle de consumidor em si e o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID%2A> faz referência a propriedade ID. do consumidor O <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto, que contém os detalhes do ponto de conexão do consumidor, que é referenciado pelo consumidor do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint%2A> propriedade. O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> propriedade faz referência à ID do <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto. Todas essas propriedades de conexão relacionados ao consumidor devem ter um valor atribuído a eles para criar uma conexão.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> classe também tem várias propriedades que se relacionam com o controle de provedor em uma conexão, e eles correspondem às propriedades de um consumidor. O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider%2A> propriedade referencia o controle de provedor, enquanto o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID%2A> propriedade faz referência a sua ID. O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint%2A> referências de propriedade de <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> objeto e o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> propriedade faz referência à ID de ponto de conexão do provedor.  
+  
+ Várias propriedades relacionadas ao estado da conexão. O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsActive%2A> propriedade indica se a conexão está ativo (atualmente troca de dados) ou inativos (ainda conectados, mas não ativamente compartilhamento de dados). O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> propriedade indica se a conexão é compartilhado (disponível para todos os usuários de uma página) ou uma conexão específica do usuário e o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> propriedade indica se o controle é estático (declarado na marcação da página e, portanto, permanentes) ou dinâmicos (criado por meio de programação, que significa que ele pode ser excluído).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma conexão simple entre dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. O exemplo demonstra três maneiras de formar uma conexão: declarativamente, colocando marcas para a conexão na marcação da página da Web; programaticamente, criando a conexão no código; e por meio da interface do usuário, colocando uma <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle em uma página, que permite aos usuários estabelecer uma conexão.  
+  
+ O exemplo de código tem quatro partes:  
+  
+-   Modo de exibição de um controle de usuário que permite que você altere as Web Parts em uma página.  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Salve o seguinte código-fonte para um arquivo. ascx, dando a ele o nome do arquivo que é atribuído para o `Src` atributo da `Register` diretiva para este controle de usuário, que está na parte superior da página da Web de hospedagem. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para a interface e controles. O arquivo de origem contém uma interface simples chamada `IZipCode`. Também há um <xref:System.Web.UI.WebControls.WebParts.WebPart> classe denominada `ZipCodeWebPart` que implementa a interface e atua como o provedor de controle. Seu `ProvideIZipCode` método é o método de retorno de chamada que implementa o membro de apenas da interface. O método simplesmente retorna uma instância da interface. Observe que o método está marcado com um `ConnectionProvider` atributo em seus metadados. Esse é o mecanismo para identificar o método como o método de retorno de chamada para o ponto de conexão do provedor. O outro <xref:System.Web.UI.WebControls.WebParts.WebPart> classe é chamada `WeatherWebPart`, e ele atua como o consumidor para a conexão. Essa classe tem um método chamado `GetZipCode` que obtém uma instância do `IZipCode` interface do controle de provedor. Observe que esse método está marcado como método de ponto de conexão do consumidor com uma `ConnectionConsumer` atributo em seus metadados.  
+  
+ Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/VB/ZipCodeComponent.vb#2)]  
+  
+ A terceira parte do exemplo de código é a página da Web. Na parte superior estão a `Register` diretivas para o controle de usuário e personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Como o exemplo supõe que a compilação dinâmica dos controles, o código-fonte para os controles deve ser em uma subpasta de App_Code; o `Register` na página faz referência a um prefixo de marca arbitrários e o namespace dos controles. Personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controles (o provedor e consumidor) são declarados dentro da página da Web `<asp:webpartzone>` elemento, dentro um `<zonetemplate>` elemento.  
+  
+ A página fornece três maneiras para formar uma conexão entre os controles personalizados. O primeiro método é declarativo. Na marcação da página, um <`StaticConnections>` elemento é declarado e em que é um `<asp:WebPartConnections>` elemento com os diversos detalhes de consumidor e provedor da conexão especificada como atributos. Essa é uma maneira para criar uma conexão, declarando-o diretamente na página da Web, especificamente dentro de `<asp:WebPartManager>` elemento. Devido a essa conexão estático, uma conexão entre os dois controles personalizados é criado imediatamente na primeira vez em que a página for carregada.  
+  
+ Um segundo método para formar uma conexão entre os controles é fornecido pelo `<asp:connectionszone>` elemento na página. Se um usuário alterna uma página em modo de exibição de conexão em tempo de execução e clicar em um verbo de conexão em um dos controles personalizados, o `<asp:connectionszone>` elemento renderiza automaticamente a interface do usuário para a criação de uma conexão.  
+  
+ A página também demonstra uma terceira maneira de criar uma conexão, o que fazer isso programaticamente. No `Button1_Click` método, o código cria um <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> objeto para o controle de provedor e recupera seu ponto de conexão de detalhes ao chamar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetProviderConnectionPoints%2A> método. Ele executa uma tarefa semelhante para o controle de consumidor, chamar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetConsumerConnectionPoints%2A> método. Finalmente, ele cria o novo <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> objeto chamando o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> método sobre o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Overview/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Depois de carregar a página da Web em um navegador, a primeira conexão já existe porque ela é declarada dentro de `<StaticConnections>` elemento. Digite algum texto no **provedor de código postal** controle e ele serão exibido no controle do consumidor. Em seguida, desconecte os dois controles. Usando o **exibir modo** suspensa lista de controle, altere a página para conectar-se o modo de exibição. Clique no menu de verbos (representado por uma seta para baixo na barra de título) para cada uma da <xref:System.Web.UI.WebControls.WebParts.WebPart> controla e observe que cada um tem um **conectar** opção. Este é um verbo de conexão, que aparece no menu de verbos somente quando a página está no modo de conexão. Clique no verbo de conectar-se em um dos controles e a interface do usuário fornecida pela conexão de <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle aparece. Clique o **Disconnect** para encerrar a conexão estática entre os controles. Use o **modo de exibição** controle para retornar a página para o modo de procura. Tente digite algum texto novo no provedor novamente e observe que, como os controles são desconectados, o texto não pode atualizar no controle do consumidor.  
+  
+ Em seguida, use o mesmo método acima para alternar a página em modo de exibição de conectar-se novamente. Clique em um verbo de conexão em um dos controles. Clique o **criar uma Conexão** link e use a interface do usuário fornecida pelo <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle para criar uma conexão entre os controles. Este é o segundo método para criar uma conexão. Observe que assim que a conexão é formado, a cadeia de caracteres último inserido no controle do provedor (que não aparecem porque os controles foram desconectados), de repente, aparece no consumidor, porque a conexão foi recriado. Clique o **Disconnect** para encerrar a conexão atual que você acabou de criar. Retorna a página para o modo de procura. Digite algum texto novo no provedor para demonstrar que o texto não é atualizado e que os controles são desconectados novamente.  
+  
+ Retorne a página para se conectar a um modo de exibição. Em vez de clicar em um verbo de conexão, clique no **conectar controles da Web Part** botão, que ilustra o terceiro método de formar uma conexão. Essa abordagem se conecta os controles por meio de programação em uma etapa simples sem a necessidade de usar o <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle. Observe que, como a conexão é criada, a cadeia de caracteres último inserido no provedor de repente aparece no controle do consumidor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartConnection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.%23ctor%2A> construtor é público para que o analisador do ASP.NET possa criar uma instância quando uma conexão é declarado na marcação de uma página da Web; este construtor não se destina a ser usado no código do desenvolvedor.  
+  
+ Quando você deseja criar um <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> objeto programaticamente, você deve usar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A?displayProperty=nameWithType> ou <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A?displayProperty=nameWithType> método fornecido no <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle. Esses métodos de lidar com muitos detalhes da criação de uma conexão e retornar um <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> objeto.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.%23ctor%2A> construtor para o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> classe define os valores da <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> e <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> propriedades `true`. Portanto, o estado padrão de uma nova conexão deve ser estático (o que significa que ele é declarado na marcação da página da Web) e compartilhado (visível para todos os usuários da página). Esse será o caso quando você adiciona uma conexão em um cenário típico, declarando a conexão na marcação da página com um `<asp:webpartconnection>` elemento. No entanto, em outras circunstâncias uma conexão terá valores diferentes para essas propriedades. Por exemplo, quando você adicionar uma conexão programaticamente ao criar o objeto de conexão no código, e o usuário está exibindo a página no escopo de personalização do usuário padrão, a conexão é criada como uma conexão por user(visible only to the specific user) dinâmico.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> e <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> propriedades são somente leitura, e essas propriedades que determinam a natureza de uma conexão são definidas internamente pelo <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle dependendo de como uma conexão é criada (declarativamente na marcação da página, ou programaticamente por meio de seu código ou a interface do usuário).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Consumer">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPart Consumer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart Consumer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> objeto que está atuando como o controle de consumidor em uma conexão.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> que representa o controle de Web Parts que atua como o consumidor em uma conexão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada conexão de Web Parts consiste em dois controles que compartilham dados. Um controle atua como o provedor de dados e o outro controle atua como um consumidor, recebimento e processamento de dados do provedor. O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer%2A> propriedade obtém uma referência para o <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar atuando como um consumidor em uma relação de conexão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer%2A> propriedade.  
+  
+ O exemplo de código tem quatro partes:  
+  
+-   Modo de exibição de um controle de usuário que permite que você altere as Web Parts em uma página.  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Salve o seguinte código-fonte para um arquivo. ascx, dando a ele o nome do arquivo que é atribuído para o `Src` atributo da `Register` diretiva para este controle de usuário, que está na parte superior da página da Web de hospedagem. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_Consumer#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_Consumer#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para os dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles que servem como o consumidor e o provedor para a conexão e uma interface usada para os pontos de conexão. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_Consumer#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_Consumer#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/VB/ZipCodeComponent.vb#2)]  
+  
+ A terceira parte do exemplo de código é o código para a página da Web que hospeda os controles e demonstra o uso de <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer%2A> propriedade. Na parte superior da página são o `Register` diretivas para o controle de usuário e os controles personalizados. Como este exemplo usa a compilação dinâmica, o `Register` diretiva para o arquivo de origem não precisa fazer referência a um nome de assembly; ele inclui um prefixo de marca arbitrários e o namespace dos controles. No `Button2_Click` método, o código acessa o objeto de conexão por meio de <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle e obtém uma referência para o controle de consumidor.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_Consumer#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_Consumer#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Consumer/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Depois de carregar a página em um navegador, use o **modo de exibição** controle de lista suspensa para alternar a página para o modo de conexão. Clique no menu de verbos (representado pela seta para baixo na barra de título) em um do <xref:System.Web.UI.WebControls.WebParts.WebPart> controla e, em seguida, clique no verbo de conexão. Use o **conectar controles da Web Part** botão ou a interface do usuário de conexão fornecido (UI) para criar uma conexão entre os dois controles. Clique o **exibir informações de consumidor** botão para executar o código que demonstra o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Consumer%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O comprimento do <see cref="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID" /> propriedade é zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumerConnectionPoint">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint ConsumerConnectionPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint ConsumerConnectionPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que serve como um ponto de conexão para um controle que atua como um consumidor em uma conexão.</summary>
+        <value>A <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" /> associada ao controle do consumidor em uma conexão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma das etapas necessárias para criar uma conexão entre dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles é criar pontos de conexão para cada controle. O ponto de conexão do consumidor é um objeto que contém as informações sobre como conectar-se para o controle que atua como um consumidor. No código-fonte do consumidor, um dos métodos deve ser identificado com o `ConnectionConsumer` atributo. O <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto que está associado um controle de consumidor contém detalhes sobre o método e o atributo, inclusive uma ID para o método, um nome para exibição para uso na interface do usuário (IU), e que tipo de interface que o método pode recuperar. Esse conjunto de informações sobre o consumidor, o método para formar conexões e o tipo de interface que ele entenda, coletivamente constitui um ponto de conexão do consumidor.  
+  
+ Por padrão, um <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto pode se conectar a apenas um <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> objeto ao mesmo tempo. Um consumidor pode ter vários métodos identificados como pontos de conexão do consumidor possíveis, mas um consumidor pode apenas participar de uma conexão como um consumidor (portanto, somente um dos seus pontos de conexão do consumidor poderá ser ativado) por vez. Em contraste, uma <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> pode se conectar a qualquer número de <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objetos. Esse comportamento padrão pode ser alterado, substituindo o <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute.AllowsMultipleConnections%2A> propriedade o <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint%2A> propriedade.  
+  
+ O exemplo tem quatro partes:  
+  
+-   Modo de exibição de um controle de usuário que permite que você altere as Web Parts em uma página.  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Salve o seguinte código-fonte para um arquivo. ascx, dando a ele o nome do arquivo que é atribuído para o `Src` atributo da `Register` diretiva para este controle de usuário, que está na parte superior da página da Web de hospedagem. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerConnectionPoint#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerConnectionPoint#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para os dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles que servem como o consumidor e o provedor para a conexão e uma interface usada para os pontos de conexão. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ConsumerConnectionPoint#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ConsumerConnectionPoint#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/VB/ZipCodeComponent.vb#2)]  
+  
+ A terceira parte do exemplo de código é o código para a página da Web que hospeda os controles e demonstra o uso de <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint%2A> propriedade. No `Button1_Click` método, todos os objetos necessários para formar uma conexão são criados, incluindo um <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto. Esses objetos são passados para o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> método para criar a conexão. No `Button2_Click` método, o código que acessa o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint%2A> propriedade e exibe alguns detalhes de conexão do ponto.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerConnectionPoint#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerConnectionPoint#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPoint/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Depois de carregar a página em um navegador, use o **modo de exibição** controle de lista suspensa para alternar a página para o modo de conexão. Clique no menu de verbos (representado pela seta para baixo na barra de título) em um do <xref:System.Web.UI.WebControls.WebParts.WebPart> controla e, em seguida, clique no verbo de conexão. Use o **conectar controles da Web Part** botão ou a interface do usuário, para criar uma conexão entre os dois controles de conexão fornecida. Clique o **ConnectionPoint detalhes** botão para executar o código que demonstra o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPoint%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumerConnectionPointID">
+      <MemberSignature Language="C#" Value="public string ConsumerConnectionPointID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConsumerConnectionPointID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("default")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da propriedade em uma conexão que faz referência à ID do objeto que serve como o ponto de conexão do consumidor para essa conexão.</summary>
+        <value>Ponto de uma cadeia de caracteres que contém a ID para a conexão do consumidor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma conexão estática declarada na marcação de uma página da Web, os desenvolvedores podem especificar qual ponto de conexão do consumidor será usado para a conexão, atribuindo um valor para o `ConsumerConnectionPointID` atributo no `<asp:webpartconnection>` elemento. Se um valor não é atribuído ao atributo, o <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.DefaultID> o valor da propriedade é usado.  
+  
+ Quando você cria conexões (programáticos) dinâmicos, normalmente você não deve definir o valor de <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> propriedade. Você pode simplesmente chamar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> método sobre o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controlar, transmitindo a ele o consumidor e a conexão do consumidor aponte objetos (juntamente com os outros parâmetros necessários), e esse método determina a ID correta a ser usado para o ponto de conexão do consumidor. Da mesma forma, quando você desconectar, você pode chamar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisconnectWebParts%2A> método sem a necessidade de especificar o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> o valor da propriedade.  
+  
+> [!NOTE]
+>  A ID do ponto de conexão do consumidor pode ser determinada ao designar um <xref:System.Web.UI.WebControls.WebParts.WebPart> ou outro controle de servidor como um consumidor. Você deve identificar um método no consumidor que recupera uma instância de uma interface fornecida por um controle de provedor ou um transformador. Para identificar o método, marque-o com o `ConnectionConsumer` atributo de código. Quando você adicionar esse atributo, você pode adicionar um parâmetro de valor de cadeia de caracteres opcional que serve como uma ID para o consumidor <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto. Se você fornecer um valor para o parâmetro de ID opcional, esse valor se tornará o valor de <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> propriedade para a conexão. Se você não fornecer um valor de ID, o <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.DefaultID> o valor da propriedade é usado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de programático e declarativo do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> propriedade.  
+  
+ O exemplo tem quatro partes:  
+  
+-   Modo de exibição de um controle de usuário que permite que você altere as Web Parts em uma página.  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Salve o seguinte código-fonte para um arquivo. ascx, dando a ele o nome do arquivo que é atribuído para o `Src` atributo da `Register` diretiva para este controle de usuário, que está na parte superior da página da Web de hospedagem. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerConnectionPointID#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerConnectionPointID#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para a interface e os controles de consumidor e provedor. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ConsumerConnectionPointID#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ConsumerConnectionPointID#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/VB/ZipCodeComponent.vb#2)]  
+  
+ A terceira parte do exemplo de código é a página da Web. Observe que uma conexão é declarado na marcação da página, usando o `<StaticConnections>` e `<asp:WebPartsConnection>` elementos. A declaração de conexão inclui necessários `ConsumerConnectionPointID` atributo. Um segundo método para criar a conexão aparece no `Button1_Click` método, onde o código cria uma nova conexão, usando o ponto de conexão definido no controle do consumidor. Em seguida, no `Button2_Click` método, o código que acessa o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> propriedade.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerConnectionPointID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerConnectionPointID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerConnectionPointID/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Depois de carregar a página em um navegador, uma conexão já existe devido a conexão estática declarada na página. Digite algum texto no controle de provedor e observe que ele é exibido no consumidor devido à conexão. Em seguida, desconecte os controles. Usando o **modo de exibição** suspensa controle de lista, alternar a página para o modo de conexão. Clique no menu de verbos (representado pela seta para baixo na barra de título) em um do <xref:System.Web.UI.WebControls.WebParts.WebPart> controla e, em seguida, clique no verbo de conexão. Clique o **Disconnect** botão. Use o **conectar controles da Web Part** botão para recriar uma conexão entre os dois controles. Clique o **ConnectionPoint detalhes** botão para executar o código que acessa o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerConnectionPointID%2A> o valor da propriedade. O valor é gravado em um rótulo abaixo dos controles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumerID">
+      <MemberSignature Language="C#" Value="public string ConsumerID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConsumerID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da propriedade em uma conexão que faz referência à ID do <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controlar atuando como um consumidor para essa conexão.</summary>
+        <value>Uma cadeia de caracteres que contém a ID do controle que atua como um consumidor em uma conexão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID%2A> o valor da propriedade é necessário quando você cria uma conexão entre <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Se um valor não é atribuído à propriedade, uma exceção é lançada quando o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle tenta ativar a conexão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de programático e declarativo do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID%2A> propriedade.  
+  
+ O exemplo tem quatro partes:  
+  
+-   Modo de exibição de um controle de usuário que permite que você altere as Web Parts em uma página.  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Salve o seguinte código-fonte para um arquivo. ascx, dando a ele o nome do arquivo que é atribuído para o `Src` atributo da `Register` diretiva para este controle de usuário, que está na parte superior da página da Web de hospedagem. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerID#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerID#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para a interface e os controles de consumidor e provedor. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ConsumerID#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ConsumerID#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/VB/ZipCodeComponent.vb#2)]  
+  
+ A terceira parte do exemplo de código é a página da Web. Observe que uma conexão é declarado na marcação da página, usando o `<StaticConnections>` e `<asp:WebPartsConnection>` elementos. A declaração de conexão inclui necessários `ConsumerID` atributo. Um segundo método para criar a conexão aparece no `Button1_Click` método, onde o código cria uma nova conexão, usando o ponto de conexão definido no controle do consumidor. Em seguida, no `Button2_Click` método, o código acessa o valor da <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID%2A> propriedade e o exibe em um rótulo.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ConsumerID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ConsumerID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ConsumerID/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Depois de carregar a página em um navegador, uma conexão já existe devido a conexão estática declarada na página. Digite algum texto no controle de provedor e observe que ele é exibido no consumidor devido à conexão. Em seguida, desconecte os controles. Usando o **modo de exibição** suspensa controle de lista, alternar a página para o modo de conexão. Clique no menu de verbos (representado pela seta para baixo na barra de título) em um do <xref:System.Web.UI.WebControls.WebParts.WebPart> controla e, em seguida, clique no verbo de conexão. Clique o **Disconnect** botão. Use o **conectar controles da Web Part** botão para recriar uma conexão entre os dois controles. Clique o **detalhes de consumidor** botão para executar o código que acessa o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ConsumerID%2A> o valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ID de um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> objeto.</summary>
+        <value>Uma cadeia de caracteres que contém a ID de um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> objeto tem um valor exclusivo atribuído ao seu <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ID%2A> propriedade. Isso é para garantir que haja uma maneira para distinguir entre várias conexões.  
+  
+ Se você criar uma conexão estática, declarando um `<asp:webpartconnection>` elemento em uma página da Web e você não atribuir um valor para o `ID` atributo para a conexão, uma exceção é lançado quando o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle tenta ativar a conexão.  
+  
+ Quando o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle cria uma nova conexão dinâmica, ele chama o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateDynamicConnectionID%2A> método para gerar uma ID exclusiva para a conexão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de programático e declarativo do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ID%2A> propriedade.  
+  
+ O exemplo tem quatro partes:  
+  
+-   Modo de exibição de um controle de usuário que permite que você altere as Web Parts em uma página.  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Salve o seguinte código-fonte para um arquivo. ascx, dando a ele o nome do arquivo que é atribuído para o `Src` atributo da `Register` diretiva para este controle de usuário, que está na parte superior da página da Web de hospedagem. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ID#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ID#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para a interface e os controles de consumidor e provedor. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ID#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ID#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/VB/ZipCodeComponent.vb#2)]  
+  
+ A terceira parte do exemplo de código é a página da Web. Observe que uma conexão é declarado na marcação da página, usando o `<StaticConnections>` e `<asp:WebPartsConnection>` elementos. A declaração de conexão inclui necessários `ID` atributo. Um segundo método para criar a conexão aparece no `Button1_Click` método, onde o código cria uma nova conexão, usando o ponto de conexão definido no controle do consumidor. Aqui, a propriedade ID não é necessária, porque a conexão é dinâmico e o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle atribui uma ID para a conexão. No `Button2_Click` método, o código acessa o valor da <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ID%2A> propriedade e o exibe em um rótulo.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ID/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Depois de carregar a página em um navegador, uma conexão já existe devido a conexão estática declarada na página. Digite algum texto no controle de provedor e observe que ele é exibido no consumidor devido à conexão. Em seguida, desconecte os controles. Usando o **modo de exibição** suspensa controle de lista, alternar a página para o modo de conexão. Clique no menu de verbos (representado pela seta para baixo na barra de título) em um do <xref:System.Web.UI.WebControls.WebParts.WebPart> controla e, em seguida, clique no verbo de conexão. Clique o **Disconnect** botão. Use o **conectar controles da Web Part** botão para recriar uma conexão entre os dois controles. Clique o **detalhes de Conexão** botão para executar o código que acessa o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ID%2A> o valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsActive">
+      <MemberSignature Language="C#" Value="public bool IsActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsActive" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.IsActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> objeto está sendo estabelecida e capaz de trocar dados entre seus provedor e consumidor controles.</summary>
+        <value>
+          <see langword="true" />Se a conexão estiver ativa; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsActive%2A> propriedade indica um estado de um <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> objeto. Quando a conexão estiver nesse estado, os provedor e consumidor controles a conexão não estão se comunicando e trocar dados por meio de uma interface comum ou um <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> objeto.  
+  
+ Quando um usuário exibe uma página renderizada que inclui uma conexão estabelecida no modo de procura normal, a conexão é normalmente ativa (a menos que falhou ao ser ativado devido a algum conflito ou outro problema ao carregar a página). Nos primeiros estágios do ciclo de vida de página e controle, o valor da propriedade é `false`. A conexão é ativada logo após o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectionsActivated> evento no <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle é gerado. Especificamente, a conexão é ativado depois que o consumidor tem recuperar uma instância da interface especificada do provedor ou um <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> objeto.  
+  
+ É útil saber se uma conexão está ativa em situações em que talvez haja conflitos ou problemas de sincronização devido a várias conexões em uma página. Por exemplo, se houver algum tipo de conflito entre duas conexões, o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle tem a opção de ativação de uma das conexões não para evitar o conflito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsActive%2A> propriedade.  
+  
+ O exemplo tem três partes:  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte do exemplo de código é o código-fonte para a interface e os controles de consumidor e provedor. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_IsActive#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsActive/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_IsActive#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsActive/VB/ZipCodeComponent.vb#2)]  
+  
+ A segunda parte do exemplo de código é a página da Web. Na parte superior é um `Register` diretiva refere-se ao código-fonte para os dois compilados dinamicamente <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. A conexão estática declarada dentro de `<StaticConnections>` elemento na página. Dentro de `<script>` elemento são quatro manipuladores de eventos. Cada manipulador de eventos verifica o valor da <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsActive%2A> propriedade de conexão estática e grava uma mensagem para o <xref:System.Web.UI.WebControls.Label> que indica se a conexão está ativo ou inativo no estado do ciclo de vida de página e controle de controle. Isso demonstra que o ponto de conexão se torna ativa e que ele permaneça ativo após a página é renderizada.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_IsActive#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsActive/CS/wpConnectIsActiveCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_IsActive#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsActive/VB/wpConnectIsActiveVB.aspx#1)]  
+  
+ Carregar a página em um navegador. A conexão estático já foi criado, e mensagens já foram gravadas para os rótulos que mostra se a conexão estava ativa em vários pontos no ciclo de vida de página e controle. Clique no **detalhes de Conexão** botão e, em seguida, observe que a conexão não está ativa no momento, mas que a conexão é reativado cada vez após o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectionsActivated> evento, e que ainda está ativa (e permanecerá dessa forma) depois que o <xref:System.Web.UI.Control.PreRender> eventos da página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsShared">
+      <MemberSignature Language="C#" Value="public bool IsShared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsShared" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> objeto está visível para todos os usuários ou somente para o usuário atual.</summary>
+        <value>
+          <see langword="true" />Se a conexão for compartilhado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Assim como acontece com individuais <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, um <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> objeto pode ser compartilhado ou uma instância de cada usuário. Uma instância compartilhada significa que a conexão é visível para todos os usuários de uma página da Web, e uma instância de usuário significa que a conexão é visível somente para um usuário específico.  
+  
+ Em geral, a maneira que uma conexão é adicionada a uma página determina se a conexão é compartilhada. Se a conexão é declarado na marcação de uma página da Web, a conexão é compartilhada e o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> é o valor da propriedade `true`. Além disso, se a página da Web estiver no escopo de personalização compartilhado quando uma conexão é adicionada, a conexão também é compartilhada. Normalmente, quando um usuário utiliza o `<asp:connectionszone>` a interface de usuário (UI) para adicionar uma conexão, a página está no escopo de personalização do usuário, para que a conexão não é compartilhado e o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> é o valor da propriedade `false`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> propriedade.  
+  
+ O exemplo de código tem cinco partes:  
+  
+-   Modo de exibição de um controle de usuário que permite que você altere as Web Parts em uma página.  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma entrada no arquivo Web. config que é necessário para executar o exemplo.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Salve o seguinte código-fonte para um arquivo. ascx, dando a ele o nome do arquivo que é atribuído para o `Src` atributo da `Register` diretiva para este controle de usuário, que está na parte superior da página da Web de hospedagem. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_IsShared#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_IsShared#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para a interface e os controles de consumidor e provedor. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_IsShared#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_IsShared#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/VB/ZipCodeComponent.vb#2)]  
+  
+ A terceira parte do exemplo de código é a página da Web. No `Button2_Click` método, ele verifica o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> propriedade de conexão existente e exibe o resultado na página.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_IsShared#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_IsShared#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsShared/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ A quarta parte do exemplo de código é uma entrada no arquivo Web. config que é necessário para a conta de usuário que executará o exemplo para poder editá-la no escopo de personalização compartilhado. Para habilitar isso, você deve ter uma entrada no arquivo Web. config dentro de `<system.web>` seção parecido com o exemplo a seguir.  
+  
+```  
+<webParts>  
+  <personalization>  
+    <authorization>  
+      <allow users="UserAccount"  
+             roles="admin"  
+             verbs="enterSharedScope"/>  
+    </authorization>            
+  </personalization>  
+</webParts>  
+```  
+  
+ Depois de carregar a página em um navegador, use o **exibir modo** controle de lista suspensa para alternar a página para se conectar a um modo de exibição. Clique o **conectar controles da Web Part** botão para formar uma conexão. Em seguida, clique o **detalhes de Conexão** botão para mostrar se a conexão é compartilhada. Se você criou a conexão com a página no escopo de personalização do usuário padrão, o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> o valor da propriedade deve ser `false` para a conexão.  
+  
+ No menu de verbos de um do <xref:System.Web.UI.WebControls.WebParts.WebPart> controles (indicados pela seta para baixo na barra de título), clique no verbo de conexão. Quando a conexão da interface do usuário for exibida, clique o **Disconnect** para encerrar a conexão. Use o **modo de exibição** controle para retornar a página para o modo de procura.  
+  
+ No **modo de exibição** controle, selecione o **compartilhado** compartilhado de opção de alternar a página para o escopo de personalização. Siga as etapas acima para criar uma conexão e clique novamente o **detalhes de Conexão** botão para mostrar se a conexão é compartilhada. Nesse caso, o valor de <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsShared%2A> propriedade deve ser `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStatic">
+      <MemberSignature Language="C#" Value="public bool IsStatic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStatic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" /> objeto declarado na marcação de uma página da Web ou criado por meio de programação.</summary>
+        <value>
+          <see langword="true" />Se a conexão for estático; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conexões entre os controles de Web Parts podem ser estático ou dinâmico. Uma conexão estática é declarado na marcação de uma página da Web, usando um `<asp:WebPartConnection>` elemento. Conexões dinâmicas são criados por meio de programação ou quando um usuário cria uma conexão por meio da interface do usuário (UI) definido pelo <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle.  
+  
+ Conexões estáticas são objetos compartilhados, o que significa que eles estão disponíveis para todos os usuários da página da Web. Além disso, eles são essencialmente permanentes porque, como static <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, não pode ser excluídas permanentemente.  
+  
+> [!NOTE]
+>  Enquanto um objeto de conexão estática não pode ser excluído permanentemente, ele pode ser desconectado permanentemente. Nesse caso, o objeto desconectado existirá no servidor, mas um usuário final nunca deve estar atento a existência do objeto em uma página.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> propriedade.  
+  
+ O exemplo de código tem três partes:  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte do exemplo de código é o código-fonte para a interface e os controles de consumidor e provedor. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_IsStatic#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsStatic/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_IsStatic#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsStatic/VB/ZipCodeComponent.vb#2)]  
+  
+ A segunda parte do exemplo de código é a página da Web. Na parte superior é um `Register` diretiva refere-se ao código-fonte para os dois compilados dinamicamente <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. A conexão estática declarada dentro de `<StaticConnections>` elemento na página. O `Button1_Click` método acessa o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> propriedade para verificar se a conexão é estático.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_IsStatic#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_IsStatic/CS/wpConnectIsStaticCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_IsStatic#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_IsStatic/VB/wpConnectIsStaticVB.aspx#1)]  
+  
+ Carregar a página em um navegador. A conexão estático já foi criado. Digite algum texto no controle de provedor e observe que o texto é exibido no controle do consumidor. Clique o **detalhes de Conexão** botão para exibir o valor da <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.IsStatic%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPart Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um controle <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> que atua como o provedor em uma conexão de Web Parts.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> que atua como o provedor de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada conexão de Web Parts consiste em dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles-- um consumidor e um provedor – e <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider%2A> propriedade retorna uma referência para o controle de provedor em uma conexão.  
+  
+ Como sua contraparte em uma conexão (o controle de consumidor), o controle de provedor é necessário para estabelecer uma conexão. Se você criar a conexão programaticamente ou por declará-la no formato de persistência da página, você deve especificar um controle para atuar como o provedor para uma conexão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider%2A> propriedade.  
+  
+ O exemplo de código tem três partes:  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte do exemplo de código é o código-fonte para a interface e os controles de consumidor e provedor. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_Provider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Provider/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_Provider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Provider/VB/ZipCodeComponent.vb#2)]  
+  
+ A segunda parte do exemplo de código é a página da Web. Na parte superior é um `Register` diretiva refere-se ao código-fonte para os dois compilados dinamicamente <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. A conexão estática declarada dentro de `<StaticConnections>` elemento na página. Observe que o `<asp:webpartconnection>` elemento, o `ProviderID` atributo tem a ID do provedor de controle atribuído a ele. Isso é necessário para identificar o provedor para a conexão estática. O `Button1_Click` método acessa o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider%2A> propriedade e grava alguns de seus detalhes para um rótulo.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_Provider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_Provider/CS/wpConnectProviderCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_Provider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_Provider/VB/wpConnectProviderVB.aspx#1)]  
+  
+ Carregar a página em um navegador. A conexão estático já foi criado. Digite algum texto no controle de provedor e observe que o texto é exibido no controle do consumidor. Clique o **detalhes do provedor** botão para exibir alguns dos valores de propriedade acessados por meio de <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Provider%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O tamanho do valor da propriedade <see cref="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID" /> é zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderConnectionPoint">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.ProviderConnectionPoint ProviderConnectionPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.ProviderConnectionPoint ProviderConnectionPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.ProviderConnectionPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que serve como um ponto de conexão para um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> atuar como um provedor para uma conexão de controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> associados com o provedor de controle em uma conexão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma das etapas necessárias para criar uma conexão entre dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles é criar pontos de conexão para cada controle. O ponto de conexão do provedor é um objeto que contém as informações sobre como conectar-se para o controle que atua como um provedor. No código-fonte do provedor, um dos métodos deve ser identificado com o `ConnectionProvider` atributo. O <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> que é associado com um provedor de controle contém detalhes sobre o método e o atributo, inclusive uma ID para o método, um nome para exibição para uso na interface do usuário (IU), e que tipo de instância da interface que o método pode retornar a um controle de consumidor. Esse conjunto de informações sobre o provedor, o método para formar conexões e o tipo de interface que fornece, coletivamente constitui um ponto de conexão do provedor.  
+  
+ Por padrão, um <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> pode se conectar a apenas um <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> objeto ao mesmo tempo. Um consumidor pode ter vários métodos identificados como pontos de conexão do consumidor possíveis, mas um consumidor pode apenas participar de uma conexão como um consumidor (portanto, somente um dos seus pontos de conexão do consumidor poderá ser ativado) por vez. Em contraste, uma <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> pode se conectar a qualquer número de <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objetos por padrão. Por exemplo, um controle de provedor que fornece um código postal foi possível se conectar a vários controles de consumidor que usam um código postal para criar vários tipos de dados com base em um código postal, como os dados de clima, notícias e assim por diante. Esse comportamento padrão pode ser alterado, substituindo o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.AllowsMultipleConnections%2A> propriedade o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint%2A> propriedade.  
+  
+ O exemplo tem quatro partes:  
+  
+-   Modo de exibição de um controle de usuário que permite que você altere as Web Parts em uma página.  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Salve o seguinte código-fonte para um arquivo. ascx, dando a ele o nome do arquivo que é atribuído para o `Src` atributo da `Register` diretiva para este controle de usuário, que está na parte superior da página da Web de hospedagem. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderConnectionPoint#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderConnectionPoint#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para os dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles que servem como o consumidor e o provedor para a conexão e uma interface usada para os pontos de conexão. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ProviderConnectionPoint#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ProviderConnectionPoint#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/VB/ZipCodeComponent.vb#2)]  
+  
+ A terceira parte do exemplo de código é o código para a página da Web que hospeda os controles e demonstra o uso de <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint%2A> propriedade. No `Button1_Click` método, todos os objetos necessários para formar uma conexão são criados, incluindo um <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> objeto. Observe a chamada para o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetProviderConnectionPoints%2A> método sobre o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle. Os vários objetos criados são passados para o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> método para criar a conexão. No `Button2_Click` método, o código que acessa o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint%2A> propriedade e exibe alguns detalhes de conexão do ponto.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderConnectionPoint#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderConnectionPoint#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPoint/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Depois de carregar a página em um navegador, use o **modo de exibição** controle de lista suspensa para alternar a página para o modo de conexão. Clique no menu de verbos (representado pela seta para baixo na barra de título) em um do <xref:System.Web.UI.WebControls.WebParts.WebPart> controla e, em seguida, clique no verbo de conexão. Use o **conectar controles da Web Part** botão ou a interface do usuário, para criar uma conexão entre os dois controles de conexão fornecida. Clique o **ConnectionPoint detalhes** botão para executar o código que demonstra o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPoint%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderConnectionPointID">
+      <MemberSignature Language="C#" Value="public string ProviderConnectionPointID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderConnectionPointID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("default")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da propriedade em uma conexão que faz referência à ID do objeto que serve como o ponto de conexão do provedor para essa conexão.</summary>
+        <value>Uma cadeia de caracteres que contém a ID para um objeto de ponto de conexão do provedor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma conexão estática declarada na marcação de uma página da Web, os desenvolvedores podem especificar qual ponto de conexão do provedor será usado para a conexão, atribuindo um valor para o `ProviderConnectionPointID` atributo no `<asp:webpartconnection>` elemento. Se um valor não é atribuído ao atributo, o <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.DefaultID> o valor da propriedade é usado.  
+  
+ Quando você cria conexões (programáticos) dinâmicos, normalmente você não deve definir o valor de <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> propriedade. Você pode simplesmente chamar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> método o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controlar, transmitindo a ele o provedor e conexão de provedor aponte objetos (juntamente com os outros parâmetros necessários), e esse método determina a ID correta a ser usado para o ponto de conexão do provedor. Da mesma forma, quando você desconectar, você pode chamar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisconnectWebParts%2A> método sem a necessidade de especificar o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> o valor da propriedade.  
+  
+> [!NOTE]
+>  A ID do ponto de conexão do provedor pode ser determinada ao designar um <xref:System.Web.UI.WebControls.WebParts.WebPart> ou outro controle de servidor como um provedor. Você deve identificar um método de retorno de chamada no provedor que serve a uma instância de uma interface que contém dados com um consumidor. Para identificar o método, marque-o com o `ConnectionProvider` atributo de código. Quando você adicionar esse atributo, você pode adicionar um parâmetro de valor de cadeia de caracteres opcional que serve como uma ID para o provedor <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> objeto. Se você fornecer um valor para o parâmetro de ID opcional, esse valor se tornará o valor de <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> propriedade para a conexão. Se você não fornecer um valor de ID, o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle atribui uma ID padrão quando o objeto é criado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de programático e declarativo do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> propriedade.  
+  
+ O exemplo tem quatro partes:  
+  
+-   Modo de exibição de um controle de usuário que permite que você altere as Web Parts em uma página.  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Salve o seguinte código-fonte para um arquivo. ascx, dando a ele o nome do arquivo que é atribuído para o `Src` atributo da `Register` diretiva para este controle de usuário, que está na parte superior da página da Web de hospedagem. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderConnectionPointID#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderConnectionPointID#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para a interface e os controles de consumidor e provedor. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ProviderConnectionPointID#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ProviderConnectionPointID#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/VB/ZipCodeComponent.vb#2)]  
+  
+ A terceira parte do exemplo de código é a página da Web. Observe que uma conexão é declarado na marcação da página, usando o `<StaticConnections>` e `<asp:WebPartsConnection>` elementos. A declaração de conexão inclui necessários `ProviderConnectionPointID` atributo. Um segundo método para criar a conexão aparece no `Button1_Click` método, onde o código cria uma nova conexão, usar o ponto de conexão (e a ID) definido no controle do provedor. Em seguida, no `Button2_Click` método, o código que acessa o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> propriedade.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderConnectionPointID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderConnectionPointID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderConnectionPointID/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Depois de carregar a página em um navegador, uma conexão já existe devido a conexão estática declarada na página. Digite algum texto no controle de provedor e observe que ele é exibido no consumidor devido à conexão. Em seguida, desconecte os controles. Usando o **modo de exibição** suspensa controle de lista, alternar a página para o modo de conexão. Clique no menu de verbos (representado pela seta para baixo na barra de título) em um do <xref:System.Web.UI.WebControls.WebParts.WebPart> controla e, em seguida, clique no verbo de conexão. Clique o **Disconnect** botão. Use o **conectar controles da Web Part** botão para recriar uma conexão entre os dois controles. Clique o **ConnectionPoint detalhes** botão para executar o código que acessa o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderConnectionPointID%2A> o valor da propriedade. O valor é gravado em um rótulo abaixo dos controles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderID">
+      <MemberSignature Language="C#" Value="public string ProviderID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da propriedade em uma conexão que faz referência à ID do <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controlar atuar como um provedor para essa conexão.</summary>
+        <value>Uma cadeia de caracteres que contém a ID do controle do provedor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID%2A> o valor da propriedade é necessário quando você cria uma conexão entre dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Se um valor não é atribuído à propriedade, uma exceção é lançada quando o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle tenta ativar a conexão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de programático e declarativo do <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID%2A> propriedade.  
+  
+ O exemplo tem quatro partes:  
+  
+-   Modo de exibição de um controle de usuário que permite que você altere as Web Parts em uma página.  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Salve o seguinte código-fonte para um arquivo. ascx, dando a ele o nome do arquivo que é atribuído para o `Src` atributo da `Register` diretiva para este controle de usuário, que está na parte superior da página da Web de hospedagem. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderID#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderID#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para a interface e os controles de consumidor e provedor. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ProviderID#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ProviderID#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/VB/ZipCodeComponent.vb#2)]  
+  
+ A terceira parte do exemplo de código é a página da Web. Observe que uma conexão é declarado na marcação da página, usando o `<StaticConnections>` e `<asp:WebPartsConnection>` elementos. A declaração de conexão inclui necessários `ProviderID` atributo. Um segundo método para criar a conexão aparece no `Button1_Click` método, onde o código cria uma nova conexão, usando o ponto de conexão definido no controle do consumidor. Em seguida, no `Button2_Click` método, o código acessa o valor da <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID%2A> propriedade e o exibe em um rótulo.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ProviderID#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/CS/wpmgrConnectWebPartsCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ProviderID#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ProviderID/VB/wpmgrConnectWebPartsVB.aspx#1)]  
+  
+ Depois de carregar a página em um navegador, uma conexão já existe devido a conexão estática declarada na página. Digite algum texto no controle de provedor e observe que ele é exibido no consumidor devido à conexão. Em seguida, desconecte os controles. Para fazer isso, use o **modo de exibição** controle de lista suspensa para alternar a página para o modo de conexão. Clique no menu de verbos (representado pela seta para baixo na barra de título) em um do <xref:System.Web.UI.WebControls.WebParts.WebPart> controla e, em seguida, clique no verbo de conexão. Clique o **Disconnect** botão e os controles são desconectadas. Em seguida, use o **conectar controles da Web Part** botão para recriar uma conexão entre os dois controles. Clique o **detalhes de consumidor** botão para executar o código que acessa o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ProviderID%2A> o valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartConnection.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o herdadas <see cref="M:System.Object.ToString" /> método e retorna o nome de um tipo curto para o objeto de conexão.</summary>
+        <returns>Uma cadeia de caracteres que contém o nome curto de tipo (não qualificado) de um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartConnection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente para conveniência pelos designers de controle. Ele aumenta a como os objetos de conexão aparecem no modo de Design usando o nome de tipo menor, em vez de um nome de tipo totalmente qualificado. No entanto, o método pode ser chamado em qualquer ponto no seu código onde você deseja saber o nome do tipo de um objeto de conexão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ToString%2A> método para retornar o nome do tipo curto de um <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> objeto.  
+  
+ O exemplo de código tem três partes:  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte do exemplo de código é o código-fonte para a interface e os controles de consumidor e provedor. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_WebPartConnection_ToString#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ToString/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_WebPartConnection_ToString#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ToString/VB/ZipCodeComponent.vb#2)]  
+  
+ A segunda parte do exemplo de código é a página da Web. Na parte superior é um `Register` diretiva refere-se ao código-fonte para os dois compilados dinamicamente <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. A conexão estática declarada dentro de `<StaticConnections>` elemento na página. O `Button1_Click` chamadas de método de <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ToString%2A> método para gravar o nome do tipo de conexão para um rótulo.  
+  
+ [!code-aspx-csharp[WebParts_WebPartConnection_ToString#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartConnection_ToString/CS/wpConnectToStringCS.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartConnection_ToString#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartConnection_ToString/VB/wpConnectToStringVB.aspx#1)]  
+  
+ Carregar a página em um navegador. A conexão estático já foi criado. Digite algum texto no controle de provedor e observe que o texto é exibido no controle do consumidor. Clique o **detalhes de Conexão** botão para executar o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.ToString%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transformer">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartTransformer Transformer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartTransformer Transformer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartTransformer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> objeto que é usado para transformar dados entre dois pontos de conexão normalmente incompatíveis em uma conexão de Web Parts.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" />. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em uma conexão de Web Parts, há duas maneiras em que os controles de provedor e consumidor de conexão podem se conectar. Eles podem se conectar diretamente por meio de suas respectivas <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> objetos e um tipo de interface que é entendido por ambos os controles. Ou, se eles forem incompatíveis, eles podem conectar-se indiretamente, usando um <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> objeto que transforma uma instância da interface de um provedor em um tipo entendido por um consumidor.  
+  
+ Quando for necessário um transformador como parte de uma conexão, o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformer%2A> propriedade fornece uma referência para o <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> objeto. Você pode adicionar um transformador para uma conexão declarativamente na marcação de uma página da Web, adicionando uma marca um transformador personalizado (ou um de transformadores fornecidos com o conjunto de controles de Web Parts) dentro do `<asp:WebPartConnection>` elemento. Você também pode adicionar um transformador programaticamente, criando uma instância no seu código e, em seguida, chamar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%28System.Web.UI.WebControls.WebParts.WebPart%2CSystem.Web.UI.WebControls.WebParts.ProviderConnectionPoint%2CSystem.Web.UI.WebControls.WebParts.WebPart%2CSystem.Web.UI.WebControls.WebParts.ConsumerConnectionPoint%2CSystem.Web.UI.WebControls.WebParts.WebPartTransformer%29> método sobre o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle para criar a conexão, transmitindo a ele o objeto transformador junto com os outros parâmetros necessários.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transformers">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartTransformerCollection Transformers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartTransformerCollection Transformers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartTransformerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> objetos usados internamente pelo conjunto de controle de Web Parts.</summary>
+        <value><see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformerCollection" /> que contém objetos de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartTransformer" /> .</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformers%2A> propriedade nunca destina para uso pelos desenvolvedores. Para acessar o transformador associado a uma conexão, os desenvolvedores devem sempre usar o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformer%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartConnection.Transformers%2A> propriedade é usada internamente pelo controle Web Parts definido para permitir que os desenvolvedores de página declarar elementos transformador dentro de `<asp:webpartconnection>` elemento na marcação de uma página da Web.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

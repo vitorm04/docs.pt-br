@@ -1,0 +1,227 @@
+<Type Name="AttachedProperty" FullName="System.Activities.Presentation.Model.AttachedProperty">
+  <TypeSignature Language="C#" Value="public abstract class AttachedProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AttachedProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Model.AttachedProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado para associar ou anexar informações adicionais para a instância de um objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é usado pelo [!INCLUDE[wfd1](~/includes/wfd1-md.md)] para manter o controle de partes interessantes de dados durante uma sessão de edição de dados, caso contrário é transitório, que serão descartadas (principalmente) no final de uma sessão de edição. <xref:System.Activities.Presentation.Model.AttachedProperty>é útil como itens de `View` pode vincular os valores e reagir a alterações. Por exemplo, este é o modo que o modelo do item selecionado é exibido (chaves de uma propriedade anexada para seleção).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AttachedProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.AttachedProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Presentation.Model.AttachedProperty" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public abstract object GetValue (System.Activities.Presentation.Model.ModelItem modelItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValue(class System.Activities.Presentation.Model.ModelItem modelItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.AttachedProperty.GetValue(System.Activities.Presentation.Model.ModelItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelItem" Type="System.Activities.Presentation.Model.ModelItem" />
+      </Parameters>
+      <Docs>
+        <param name="modelItem">O item de modelo.</param>
+        <summary>Recupera o valor do item de modelo especificado.</summary>
+        <returns>Retorna um <see cref="T:System.Object" /> que contém o valor do item de modelo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBrowsable">
+      <MemberSignature Language="C#" Value="public bool IsBrowsable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBrowsable" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.AttachedProperty.IsBrowsable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o <see cref="T:System.Activities.Presentation.Model.AttachedProperty" /> é navegável.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Activities.Presentation.Model.AttachedProperty" /> for navegável; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O principal impacto de definição para `true` é que o <xref:System.Activities.Presentation.Model.AttachedProperty> poderão ser descobertos no <xref:System.Activities.Presentation.Model.ModelItem.Properties%2A> coleção do <xref:System.Activities.Presentation.Model.ModelItem> ao qual ele está conectado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public abstract bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.AttachedProperty.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que determina se a propriedade anexada é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se a propriedade é somente leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.AttachedProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da propriedade.</summary>
+        <value>Retorna um <see cref="T:System.String" /> que contém o nome da propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyPropertyChanged">
+      <MemberSignature Language="C#" Value="public void NotifyPropertyChanged (System.Activities.Presentation.Model.ModelItem modelItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NotifyPropertyChanged(class System.Activities.Presentation.Model.ModelItem modelItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.AttachedProperty.NotifyPropertyChanged(System.Activities.Presentation.Model.ModelItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelItem" Type="System.Activities.Presentation.Model.ModelItem" />
+      </Parameters>
+      <Docs>
+        <param name="modelItem">O item que foi alterado.</param>
+        <summary>Cria uma notificação que indica que o item de modelo especificado foi alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerType">
+      <MemberSignature Language="C#" Value="public Type OwnerType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type OwnerType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.AttachedProperty.OwnerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de proprietário.</summary>
+        <value>Retorna um <see cref="T:System.Type" /> que contém o tipo de proprietário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetValue">
+      <MemberSignature Language="C#" Value="public abstract void ResetValue (System.Activities.Presentation.Model.ModelItem modelItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetValue(class System.Activities.Presentation.Model.ModelItem modelItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.AttachedProperty.ResetValue(System.Activities.Presentation.Model.ModelItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelItem" Type="System.Activities.Presentation.Model.ModelItem" />
+      </Parameters>
+      <Docs>
+        <param name="modelItem">O item de modelo para redefinir.</param>
+        <summary>Redefine o item de modelo especificado para o valor padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public abstract void SetValue (System.Activities.Presentation.Model.ModelItem modelItem, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(class System.Activities.Presentation.Model.ModelItem modelItem, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Model.AttachedProperty.SetValue(System.Activities.Presentation.Model.ModelItem,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelItem" Type="System.Activities.Presentation.Model.ModelItem" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="modelItem">O item de modelo para definir.</param>
+        <param name="value">O valor a ser definido.</param>
+        <summary>Define o item de modelo especificado para o valor especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public abstract Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Model.AttachedProperty.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo.</summary>
+        <value>Retorna um <see cref="T:System.Type" /> que contém o tipo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

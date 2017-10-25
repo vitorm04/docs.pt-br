@@ -1,0 +1,62 @@
+<Type Name="MemoryMappedFileSecurity" FullName="System.IO.MemoryMappedFiles.MemoryMappedFileSecurity">
+  <TypeSignature Language="C#" Value="public class MemoryMappedFileSecurity : System.Security.AccessControl.ObjectSecurity&lt;System.IO.MemoryMappedFiles.MemoryMappedFileRights&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MemoryMappedFileSecurity extends System.Security.AccessControl.ObjectSecurity`1&lt;valuetype System.IO.MemoryMappedFiles.MemoryMappedFileRights&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.ObjectSecurity&lt;System.IO.MemoryMappedFiles.MemoryMappedFileRights&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.IO.MemoryMappedFiles.MemoryMappedFileRights</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as permissões que podem ser concedidas para acesso a arquivos e operações em arquivos mapeados na memória.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity> classe especifica os direitos de acesso para um arquivo de mapeamento de memória e como as tentativas de acesso são auditadas.  Essa classe representa os direitos de acesso e auditoria como um conjunto de regras.  
+  
+ O <xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity> classe é uma abstração do sistema de segurança de arquivo do Microsoft Windows subjacente. Neste sistema. Ele oculta muitos dos detalhes de DACLs e SACLs.  
+  
+ Use o <xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity> classe para recuperar, adicionar ou alterar as regras de acesso que representam a DACL e SACL de um pipe.  
+  
+ Para aplicar o acesso de novo ou alterado ou auditoria regras para um arquivo de mapeamento de memória, use o <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SetAccessControl%2A> método. Para recuperar o acesso ou regras de um arquivo existente de auditoria, use o <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.GetAccessControl%2A> método.  
+  
+ O seguinte <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> métodos levar uma <xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity> objeto como um parâmetro:  
+  
+-   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%28System.String%2CSystem.Int64%2CSystem.IO.MemoryMappedFiles.MemoryMappedFileAccess%2CSystem.IO.MemoryMappedFiles.MemoryMappedFileOptions%2CSystem.IO.MemoryMappedFiles.MemoryMappedFileSecurity%2CSystem.IO.HandleInheritability%29>  
+  
+-   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%28System.IO.FileStream%2CSystem.String%2CSystem.Int64%2CSystem.IO.MemoryMappedFiles.MemoryMappedFileAccess%2CSystem.IO.MemoryMappedFiles.MemoryMappedFileSecurity%2CSystem.IO.HandleInheritability%2CSystem.Boolean%29>  
+  
+-   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SetAccessControl%28System.IO.MemoryMappedFiles.MemoryMappedFileSecurity%29>  
+  
+-   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%28System.String%2CSystem.Int64%2CSystem.IO.MemoryMappedFiles.MemoryMappedFileAccess%2CSystem.IO.MemoryMappedFiles.MemoryMappedFileOptions%2CSystem.IO.MemoryMappedFiles.MemoryMappedFileSecurity%2CSystem.IO.HandleInheritability%29>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryMappedFileSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

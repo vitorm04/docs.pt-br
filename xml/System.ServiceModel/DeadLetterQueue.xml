@@ -1,0 +1,105 @@
+<Type Name="DeadLetterQueue" FullName="System.ServiceModel.DeadLetterQueue">
+  <TypeSignature Language="C#" Value="public enum DeadLetterQueue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DeadLetterQueue extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.DeadLetterQueue" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de fila de mensagens mortas a ser usado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fila de mensagens mortas é uma fila no Gerenciador de fila do aplicativo de envio para mensagens expiradas que falharam ao ser entregue. O <xref:System.ServiceModel.DeadLetterQueue> enumeração Especifica o tipo de fila de mensagens mortas a usar. Os valores são:  
+  
+-   Nenhum: Nenhuma fila de mensagens mortas é necessária. Se uma mensagem de falha de entrega, nenhum registro dele é mantido na fila de mensagens mortas. Esse é o padrão quando <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> é definido como `false`.  
+  
+-   Sistema: A fila de mensagens mortas, de todo o sistema é usada para registrar mensagens de falham de entrega. MSMQ tem um transacional, sistema, fila de mensagens mortas e um não-transacional, sistema, a fila de mensagens mortas para gravar as mensagens expiradas que falharam na entrega de filas transacionais e não transacionais, respectivamente. Esse é o padrão quando <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> é definido como `true`.  
+  
+-   Personalizada: A fila especificada no <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> é usado para mensagens de registro que não entrega.  
+  
+ Uma mensagem pode falhar acessar o aplicativo de recebimento para qualquer um dos seguintes motivos:  
+  
+-   Uma mensagem transacional é enviada para uma fila não transacional.  
+  
+-   Uma mensagem não transacional é enviada para uma fila transacional.  
+  
+-   Uma mensagem não autenticada é enviada a uma fila que aceita apenas mensagens autenticadas.  
+  
+-   Uma mensagem não criptografada é enviada para uma fila que aceita somente mensagens criptografadas.  
+  
+-   O valor de tempo de vida da mensagem expira antes que a mensagem é entregue a um destinatário.  
+  
+-   A cota de armazenamento de mensagens do computador de destino ou a cota de armazenamento de fila de destino for excedida, ou há nenhum espaço de armazenamento disponível no computador de destino quando a mensagem chega.  
+  
+-   O remetente não tem o [direitos de acesso](http://go.microsoft.com/fwlink/?LinkID=96167) necessária para colocar a mensagem na fila de destino.  
+  
+-   A assinatura digital anexada à mensagem não é válida.  
+  
+-   Uma mensagem criptografada não pode ser descriptografada pelo Gerenciador de fila de destino.  
+  
+-   A fila de destino é limpo ou excluída antes da mensagem é recuperada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.DeadLetterQueue Custom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.DeadLetterQueue.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.DeadLetterQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fila de mensagens mortas personalizada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.DeadLetterQueue None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.DeadLetterQueue.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.DeadLetterQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma fila de mensagens mortas é para ser usado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.DeadLetterQueue System = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.DeadLetterQueue.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.DeadLetterQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use a fila de mensagens mortas, de todo o sistema.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

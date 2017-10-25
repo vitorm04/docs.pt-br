@@ -1,0 +1,109 @@
+<Type Name="TemplateContentLoader" FullName="System.Windows.TemplateContentLoader">
+  <TypeSignature Language="C#" Value="public class TemplateContentLoader : System.Xaml.XamlDeferringLoader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateContentLoader extends System.Xaml.XamlDeferringLoader" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TemplateContentLoader" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xaml.XamlDeferringLoader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa <see cref="T:System.Xaml.XamlDeferringLoader" /> para adiar o carregamento do conteúdo XAML que é definido para um modelo no WPF XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_TemplateContentLoader"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateContentLoader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplateContentLoader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.TemplateContentLoader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public override object Load (System.Xaml.XamlReader xamlReader, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Load(class System.Xaml.XamlReader xamlReader, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplateContentLoader.Load(System.Xaml.XamlReader,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlReader" Type="System.Xaml.XamlReader" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="xamlReader">O leitor inicial que é retornado em chamadas para <see cref="M:System.Windows.TemplateContentLoader.Save(System.Object,System.IServiceProvider)" />.</param>
+        <param name="serviceProvider">Provedor de serviços para os serviços necessários.</param>
+        <summary>Carrega o conteúdo XAML em um modo adiado, com base em um <see cref="T:System.Xaml.XamlReader" /> e certos serviços necessários de um provedor de serviços.</summary>
+        <returns>O objeto raiz para o fluxo do nó da entrada <see cref="T:System.Xaml.XamlReader" />. Especificamente, este é um <see cref="T:System.Windows.TemplateContent" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.IXamlObjectWriterFactory>é um serviço necessário, ele deve estar disponível no passado `serviceProvider`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlReader" />or <paramref name="serviceProvider" /> are <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="serviceProvider" />não fornece um serviço necessário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlReader Save (object value, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xaml.XamlReader Save(object value, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.TemplateContentLoader.Save(System.Object,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor de entrada para o carregamento diferido de confirmação.</param>
+        <param name="serviceProvider">Provedor de serviços para os serviços necessários.</param>
+        <summary>Não use; sempre gera uma exceção.</summary>
+        <returns>Sempre lança uma exceção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A finalidade de <xref:System.Windows.TemplateContentLoader> é carregar o XAML e invocar uma metáfora de fábrica do objeto, um `Save` caminho não faz parte do seu design pretendido. O <xref:System.Xaml.IXamlObjectWriterFactory> passado como um serviço para <xref:System.Windows.TemplateContentLoader.Load%2A> fornece suporte para todas as outras operações que envolvem o XAML e o modelo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Lançada em todos os casos.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

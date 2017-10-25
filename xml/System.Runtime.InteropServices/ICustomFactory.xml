@@ -1,0 +1,75 @@
+<Type Name="ICustomFactory" FullName="System.Runtime.InteropServices.ICustomFactory">
+  <TypeSignature Language="C#" Value="public interface ICustomFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICustomFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ICustomFactory" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que usuários gravem o código de ativação para os objetos gerenciados que ampliam <see cref="T:System.MarshalByRefObject" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode habilitar a ativação personalizada, fornecendo uma classe de proxy que implementa `ICustomFactory` e atribuindo o <xref:System.MarshalByRefObject> classe com o <xref:System.Runtime.Remoting.Proxies.ProxyAttribute>. Quando a classe é ativada, o proxy <xref:System.Runtime.InteropServices.ICustomFactory.CreateInstance%2A> método é chamado pelo common language runtime para ativar a classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="public MarshalByRefObject CreateInstance (Type serverType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.MarshalByRefObject CreateInstance(class System.Type serverType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ICustomFactory.CreateInstance(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.MarshalByRefObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serverType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serverType">O tipo para ativar.</param>
+        <summary>Cria uma nova instância do tipo especificado.</summary>
+        <returns>Um <see cref="T:System.MarshalByRefObject" /> associado ao tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `CreateInstance`é chamado pelo common language runtime quando um novo objeto do tipo especificado deve ser criada. Substitua este método para fornecer sua própria fábrica de classe personalizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

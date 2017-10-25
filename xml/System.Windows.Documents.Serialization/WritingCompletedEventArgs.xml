@@ -1,0 +1,42 @@
+<Type Name="WritingCompletedEventArgs" FullName="System.Windows.Documents.Serialization.WritingCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class WritingCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WritingCompletedEventArgs extends System.ComponentModel.AsyncCompletedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Serialization.WritingCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.AsyncCompletedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted" /> .</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WritingCompletedEventArgs (bool cancelled, object state, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool cancelled, object state, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.WritingCompletedEventArgs.#ctor(System.Boolean,System.Object,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cancelled" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Object" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="cancelled">
+          <see langword="true" />Se cancelada; Caso contrário, <see langword="false" /> se a operação de gravação concluída normalmente.</param>
+        <param name="state">O objeto de estado fornecido pelo usuário que foi passado para o <see cref="Overload:System.Windows.Documents.Serialization.SerializerWriter.WriteAsync" /> método.</param>
+        <param name="exception">Erro durante a operação de gravação ou <see langword="null" /> se não houver nenhum erro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.Serialization.WritingCompletedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,87 @@
+<Type Name="UITypeEditorEditStyle" FullName="System.Drawing.Design.UITypeEditorEditStyle">
+  <TypeSignature Language="C#" Value="public enum UITypeEditorEditStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UITypeEditorEditStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.UITypeEditorEditStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os identificadores que indicam o estilo da edição de valor de um <see cref="T:System.Drawing.Design.UITypeEditor" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Drawing.Design.UITypeEditorEditStyle> para especificar o estilo de um personalizado <xref:System.Drawing.Design.UITypeEditor>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.Design.DocumentDesigner> classe.  
+  
+ [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#93)]
+ [!code-vb[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#93)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DropDown">
+      <MemberSignature Language="C#" Value="DropDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Design.UITypeEditorEditStyle DropDown = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Design.UITypeEditorEditStyle.DropDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exibe um botão de seta suspenso e hospeda a interface do usuário em uma caixa de diálogo suspensa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Drawing.Design.UITypeEditorEditStyle> para especificar o estilo de um personalizado <xref:System.Drawing.Design.UITypeEditor>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.Design.DocumentDesigner> classe.  
+  
+ [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#93)]
+ [!code-vb[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#93)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modal">
+      <MemberSignature Language="C#" Value="Modal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Design.UITypeEditorEditStyle Modal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Design.UITypeEditorEditStyle.Modal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exibe um botão de reticências (...) para iniciar a caixa de diálogo modal, que requer entrada do usuário antes de continuar um programa ou uma caixa de diálogo sem janela restrita, que permanecerá na tela e estará disponível para uso a qualquer momento, mas permitirá outras atividades do usuário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Design.UITypeEditorEditStyle None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Design.UITypeEditorEditStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não fornece nenhum componente de interface do usuário interativo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

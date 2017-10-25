@@ -1,0 +1,185 @@
+<Type Name="DeleteChildAccessRule" FullName="System.DirectoryServices.DeleteChildAccessRule">
+  <TypeSignature Language="C#" Value="public sealed class DeleteChildAccessRule : System.DirectoryServices.ActiveDirectoryAccessRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DeleteChildAccessRule extends System.DirectoryServices.ActiveDirectoryAccessRule" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.DeleteChildAccessRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.ActiveDirectoryAccessRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.DeleteChildAccessRule" /> classe representa um tipo específico de regra de acesso que é usado para permitir ou negar o direito de excluir objetos filho de um objeto de serviços de domínio do Active Directory.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeleteChildAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DeleteChildAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.DeleteChildAccessRule" /> classe com o tipo de controle de acesso e referência de identidade especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você usar esse construtor, ele cria uma regra de acesso de filho de exclusão que se aplica a todos os tipos de filho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeleteChildAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DeleteChildAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.ActiveDirectorySecurityInheritance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.DeleteChildAccessRule" /> classe com a referência de identidade especificado, o tipo de controle de acesso e a herança de segurança de serviços de domínio do Active Directory.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você usar esse construtor, ele cria uma regra de acesso de filho de exclusão que se aplica a todos os tipos de filho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeleteChildAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, Guid childType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.Guid childType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DeleteChildAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="childType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="childType">O esquema, o GUID do tipo de objetos filho que podem ou não pode ser excluído. Se isso for <see cref="F:System.Guid.Empty" />, em seguida, a regra de acesso se aplica a todos os tipos de filho.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.DeleteChildAccessRule" /> classe com a referência de identidade especificado, o tipo de controle de acesso e o tipo filho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeleteChildAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, valuetype System.Guid inheritedObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DeleteChildAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.ActiveDirectorySecurityInheritance,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+        <Parameter Name="inheritedObjectType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <param name="inheritedObjectType">O GUID de esquema do tipo de objeto filho que pode herdar essa regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.DeleteChildAccessRule" /> classe com o referência de identidade especificado, o tipo de controle de acesso, a herança de segurança do Active Directory Domain Services e o tipo de objeto herdado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você usar esse construtor, ele cria uma regra de acesso de filho de exclusão que se aplica a todos os tipos de filho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeleteChildAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, Guid childType, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.Guid childType, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DeleteChildAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.Guid,System.DirectoryServices.ActiveDirectorySecurityInheritance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="childType" Type="System.Guid" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="childType">O esquema, o GUID do tipo de objetos filho que podem ou não pode ser excluído. Se isso for <see cref="F:System.Guid.Empty" />, em seguida, a regra de acesso se aplica a todos os tipos de filho.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.DeleteChildAccessRule" /> classe com a referência de identidade especificado, o tipo de controle de acesso, tipo filho e herança de segurança de serviços de domínio do Active Directory.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeleteChildAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, Guid childType, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.Guid childType, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, valuetype System.Guid inheritedObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DeleteChildAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.Guid,System.DirectoryServices.ActiveDirectorySecurityInheritance,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="childType" Type="System.Guid" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+        <Parameter Name="inheritedObjectType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="childType">O esquema, o GUID do tipo de objetos filho que podem ou não pode ser excluído. Se isso for <see cref="F:System.Guid.Empty" />, em seguida, a regra de acesso se aplica a todos os tipos de filho.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <param name="inheritedObjectType">O GUID de esquema do tipo de objeto filho que pode herdar essa regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.DeleteChildAccessRule" /> classe com referência de identidade especificado, o tipo de controle de acesso, tipo filho, herança de segurança do Active Directory Domain Services e o tipo de objeto herdado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1050 @@
+<Type Name="WebZone" FullName="System.Web.UI.WebControls.WebParts.WebZone">
+  <TypeSignature Language="C#" Value="public abstract class WebZone : System.Web.UI.WebControls.CompositeControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WebZone extends System.Web.UI.WebControls.CompositeControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebZone" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CompositeControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.WebZoneDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como a classe base para todos os controles que atuam como contêineres para controles de servidor (incluindo controles <see cref="T:System.Web.UI.WebControls.WebParts.Part" /> de Web Parts, controles de servidor e controles de usuário) em aplicativos Web Parts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma zona de Web Parts é uma região definida que contém os controles de servidor em uma página da Web e fornece uma interface de usuário consistente (IU), layout e renderização de controles contidos. As zonas são renderizadas em um navegador, como tabelas HTML.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone> classe é a classe base para todas as zonas de Web Parts. Uma zona é um controle composto criado para conter outros controles, portanto, o <xref:System.Web.UI.WebControls.WebParts.WebZone> classe herda o <xref:System.Web.UI.WebControls.CompositeControl> classe. Junto com o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle e <xref:System.Web.UI.WebControls.WebParts.Part> controles (ou outros controles de usuário ou servidor que podem ser colocados em regiões), controles derivados da zona de <xref:System.Web.UI.WebControls.WebParts.WebZone> os componentes básicos de um aplicativo de Web Parts do formulário de classe base.  
+  
+ É uma função crítica das zonas de Web Parts habilitar a funcionalidade completa de Web Parts para os controles que elas contêm. Cada página de Web Parts contém pelo menos uma zona e uma zona pode conter zero ou mais controles de parte. As zonas são necessárias para a funcionalidade de Web Parts. Sem zonas, até mesmo os controles que derivam de <xref:System.Web.UI.WebControls.WebParts.WebPart> classe pode ter muito pouco funcionalidade de Web Parts. Por outro lado, por causa do design do conjunto de controle de Web Parts, você pode colocar controles comuns do ASP.NET, controles de servidor ou controles de usuário em um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona (que é derivado de <xref:System.Web.UI.WebControls.WebParts.WebZone>), e em virtude sendo na zona, esses controles de servidor comum são habilitar para atuar como <xref:System.Web.UI.WebControls.WebParts.WebPart> controles em tempo de execução. Para obter detalhes, consulte a documentação para o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> classe.  
+  
+> [!NOTE]
+>  É possível adicionar <xref:System.Web.UI.WebControls.WebParts.Part> ou <xref:System.Web.UI.WebControls.WebParts.WebPart> controles a uma página fora de uma zona, mas nesse caso eles simplesmente funcionar como controles de servidor comum.  
+  
+ Há duas categorias amplas de zonas em Web Parts conjunto, que herdam a base de controles <xref:System.Web.UI.WebControls.WebParts.WebZone> classe.  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase>zonas. Eles contêm <xref:System.Web.UI.WebControls.WebParts.WebPart> (e outros servidor e usuário) controla e formam as páginas da interface do usuário da Web Parts primárias que os usuários interagem com a maioria do tempo.  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.ToolZone>zonas. Essas zonas fornecem exibições especiais de uma página de Web Parts que permitem que os usuários de modificar (personalizem) o conteúdo do layout, aparência, comportamento e propriedades de controles contidos em <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zonas em uma página de Web Parts. Por exemplo, um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona é um <xref:System.Web.UI.WebControls.WebParts.ToolZone> que fornece uma exibição de catálogo de uma página, permitindo que os usuários adicionar e remover controles de servidor. Um <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> zona é outro tipo de <xref:System.Web.UI.WebControls.WebParts.ToolZone> que fornece um modo de edição de uma página, permitindo que os usuários modificar e editar o layout da página, junto com as propriedades, a aparência e o comportamento dos controles.  
+  
+ Cada zona de Web Parts, o conjunto de controle é criado para conter um tipo correspondente do controle é derivado de <xref:System.Web.UI.WebControls.WebParts.Part> classe, com os controles de parte que serve como a interface principal de conteúdo e primária da zona. Tipos de zonas no conjunto de controle de Web Parts, juntamente com os tipos correspondentes de controles de parte que eles contêm, são mostrados na tabela a seguir.  
+  
+|Tipo de controle da parte|Tipo de zona|  
+|-----------------------|---------------|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPart>(e controles de servidor e do usuário, que são encapsulados com um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> em tempo de execução)|<xref:System.Web.UI.WebControls.WebParts.WebPartZone>(a classe base é <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> )|  
+|<xref:System.Web.UI.WebControls.WebParts.EditorPart>(vários controles derivados são fornecidos com o conjunto de controles de Web Parts e personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles podem ser desenvolvidos)|<xref:System.Web.UI.WebControls.WebParts.EditorZone>(a classe base é <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> )|  
+|<xref:System.Web.UI.WebControls.WebParts.CatalogPart>(vários controles derivados são fornecidos com o conjunto de controles de Web Parts e personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles podem ser desenvolvidos)|<xref:System.Web.UI.WebControls.WebParts.CatalogZone>(a classe base é <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> )|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPartConnection>(os controles de conexão são os únicos que não são controles de parte que herdem da classe base)|<xref:System.Web.UI.WebControls.WebParts.ConnectionsZone>(herda diretamente da <xref:System.Web.UI.WebControls.WebParts.ToolZone> )|  
+  
+ Todas as zonas no controle de Web Parts tem elementos de interface de usuário básico, comum que eles herdam a base de <xref:System.Web.UI.WebControls.WebParts.WebZone> classe. Nem todos esses elementos são visíveis em cada região, mas cada tipo de zona é capaz de se ter esses elementos de interface de usuário comuns relacionadas à zona, conforme descrito na tabela a seguir.  
+  
+|Seção de zona|Descrição|  
+|------------------|-----------------|  
+|Cabeçalho|A seção superior de uma zona. Ele inclui o texto do cabeçalho, que pode incluir um título para a zona. atributos de estilo (como uma cor de borda ou um plano de fundo) que distinguem o cabeçalho. verbos de nível de zona (representados por botões, hiperlinks ou imagens) e que os usuários podem clicar para executar ações de interface do usuário que se aplicam a toda a zona, como fechar uma zona. Vários <xref:System.Web.UI.WebControls.WebParts.WebZone> propriedades, como <xref:System.Web.UI.WebControls.WebParts.WebZone.HasHeader%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.HeaderStyle%2A>, e <xref:System.Web.UI.WebControls.WebParts.WebZone.HeaderText%2A>, relacionadas a área do cabeçalho de uma zona. Se não houver verbos de nível de zona na zona, o <xref:System.Web.UI.WebControls.WebParts.WebZone.VerbButtonType%2A> e <xref:System.Web.UI.WebControls.WebParts.WebZone.VerbStyle%2A> propriedades se aplicam a eles. Observe que essas propriedades dois verbo se aplicam a nível de zona verbos apenas, não a verbos nos controles da parte individuais contidos na zona. Cabeçalhos não estão presentes em cada tipo de zona. normalmente aparecem no <xref:System.Web.UI.WebControls.WebParts.ToolZone> zonas que não há necessidade de ter uma área comum de cabeçalho com um verbo, como um verbo fechar e texto.|  
+|Corpo|A seção de conteúdo principal de uma zona. Cada zona que é derivada de <xref:System.Web.UI.WebControls.WebParts.WebZone> tem uma seção de corpo. Conjunto de controles para todos os tipos de zonas em Web Parts, o corpo da zona contém o tipo designado de <xref:System.Web.UI.WebControls.WebParts.Part> controles (ou outros controles de servidor) que corresponde a um tipo de zona, conforme indicado na tabela anterior. Vários membros do <xref:System.Web.UI.WebControls.WebParts.WebZone> classe afeta o conteúdo da seção de corpo, como o <xref:System.Web.UI.WebControls.WebParts.WebZone.BackImageUrl%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeStyle%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType%2A>, e <xref:System.Web.UI.WebControls.WebParts.WebZone.PartStyle%2A> propriedades. Se a seção de corpo estiver vazia, o <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.EmptyZoneText%2A> mensagem pode ser exibida em determinadas situações.|  
+|Chrome|Os elementos de interface do usuário comuns renderizados para cada parte do controle em uma zona. Isso é diferente de uma discussão de atributos de estilo que se aplicam à zona em si; Chrome aplica-se especificamente aos controles parte independente. Chrome inclui verbos, bordas e outros atributos de estilo, como cor de plano de fundo ou estilo de fonte do texto do título, para controles de parte de uma zona. Uma zona determina os detalhes de cromo usando um objeto único chrome apropriado para o tipo de parte controles nele (por exemplo, um <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> de objeto para um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> que contém <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles). Esse objeto único chrome trata os detalhes do chrome e o processamento de todos os controles de parte da zona. Isso permite aos desenvolvedores criar zonas na qual eles podem especificar uma consistente, comum aparência para todos os controles de parte. Algumas propriedades que se relacionam com o chrome para controles de parte da zona incluem o <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeStyle%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.PartStyle%2A>, e <xref:System.Web.UI.WebControls.WebParts.WebZone.PartTitleStyle%2A> propriedades. Observe que mais chrome propriedades relacionadas, inclusive uma propriedade específica para fazer referência ao objeto chrome para um determinado tipo de zona, não são implementadas na base de <xref:System.Web.UI.WebControls.WebParts.WebZone> classe. Em vez disso, a maioria dos recursos específicos do cromo das zonas são implementados em tipos de zona específica de acordo com as necessidades exclusivas de seus controles de parte. Consulte os tópicos para cada tipo de zona listados na tabela anterior deste tópico.|  
+|Controles de parte|Os controles que residem na seção de corpo de uma zona. Cada zona que herda de <xref:System.Web.UI.WebControls.WebParts.WebZone> classe contém em sua seção de corpo, digite um ou mais controles de parte de um correspondente, conforme mostrado na tabela anterior neste tópico. Esses controles de parte formam os aplicativos de interface do usuário da Web Parts principais. Zona mais tipos que derivam de <xref:System.Web.UI.WebControls.WebParts.WebZone> tem uma propriedade de coleção que permita fazer referência a todos os seus controles de parte independentes, como o <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.WebParts%2A> propriedade no <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> classe e o <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.EditorParts%2A> propriedade no <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> classe.|  
+|Rodapé|A seção inferior de uma zona. Como a seção de cabeçalho, ele não está presente em cada tipo de zona, mas normalmente ocorre no <xref:System.Web.UI.WebControls.WebParts.ToolZone> zonas. Conteúdo típico de uma seção de rodapé é verbos como um verbo okey ou um verbo apply, que aparecem no rodapé da <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> zonas. Algumas propriedades que se relacionam à seção de rodapé incluem o <xref:System.Web.UI.WebControls.WebParts.WebZone.HasFooter%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.FooterStyle%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.VerbButtonType%2A>, e <xref:System.Web.UI.WebControls.WebParts.WebZone.VerbStyle%2A> propriedades.|  
+  
+ A maioria do <xref:System.Web.UI.WebControls.WebParts.WebZone> propriedades dessa classe são discutidas na tabela anterior que descreve os elementos de interface do usuário comuns de zonas. O <xref:System.Web.UI.WebControls.WebParts.WebZone> classe também tem vários métodos relacionados a sua função de conteúdo de renderização. O <xref:System.Web.UI.WebControls.WebParts.WebZone.RenderBody%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.RenderContents%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.RenderFooter%2A>, e <xref:System.Web.UI.WebControls.WebParts.WebZone.RenderHeader%2A> métodos podem ser substituídos para fornecer controle programático sobre o processamento de cada seção específica de uma zona. Por exemplo, se você quiser personalizar a renderização de todas as seções de rodapé de zonas de catálogo em seu aplicativo, você pode herdar do <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe, substitua o <xref:System.Web.UI.WebControls.WebParts.WebZone.RenderFooter%2A> método herdado do <xref:System.Web.UI.WebControls.WebParts.WebZone>e altere a renderização da seção de rodapé.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso da <xref:System.Web.UI.WebControls.WebParts.WebZone> classe.  
+  
+ A primeira parte do exemplo de código mostra dois controles personalizados que derivam de <xref:System.Web.UI.WebControls.WebParts.WebPart> classe. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_Zone_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Zone_Overview/CS/zonewebparts.cs#2)]
+ [!code-vb[WebParts_Zone_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Zone_Overview/VB/zonewebparts.vb#2)]  
+  
+ A segunda parte do exemplo de código mostra uma página da Web que hospeda o <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Observe que a marcação declarativa contém duas <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controles, uma <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle e um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle.  
+  
+ [!code-aspx-csharp[WebParts_Zone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Zone_Overview/CS/zoneoverviewcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Zone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Zone_Overview/VB/zoneoverviewvb.aspx#1)]  
+  
+ Você pode carregar a página em um navegador e alternar entre os vários modos de exibição de página para ver como as diferentes regiões se comportam. Para obter mais informações sobre modos de exibição e permitindo que os usuários para alternar entre eles, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Raramente precisa herdar diretamente de <see cref="T:System.Web.UI.WebControls.WebParts.WebZone" /> classe para desenvolver as zonas de Web Parts personalizadas. O conjunto de controles de Web Parts contém especializadas zonas listadas acima na seção comentários e geralmente você pode derivar de um para adicionar o comportamento personalizado para uma zona. Se você quiser herdar diretamente do <see cref="T:System.Web.UI.WebControls.WebParts.WebZone" /> classe, você deve substituir um número de propriedades e métodos (consulte a documentação para os membros do <see cref="T:System.Web.UI.WebControls.WebParts.WebZone" /> classe). Você também deve criar um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controlar, opcionalmente, um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> controle para criar um modo de exibição exclusivo no qual deseja exibir a zona e outras personalizações para tornar a zona funcionam dentro do conjunto de controle de Web Parts.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="BackImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string BackImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.BackImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem de plano de fundo de uma zona.</summary>
+        <value>Uma cadeia de caracteres que representa a URL para uma imagem usada como uma imagem de plano de fundo para a zona. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A imagem de plano de fundo de uma zona é visível em todos os modos de exibição em que o conteúdo de uma zona está visível. Se uma zona contém controles de parte, a imagem aparece por trás dos controles. Se uma zona contém controles não, seu conteúdo não é processado no modo de procura, para que a imagem não é exibida.  
+  
+ Se a imagem fornecida é menor do que o corpo de uma zona, ele é colocada lado a lado para cobrir a área de corpo total.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebZone.BackImageUrl%2A> propriedade. Observe que há duas zonas na marcação declarativa e o segundo `<asp:webpartzone>` elemento está vazio.  
+  
+ [!code-aspx-csharp[WebParts_Zone_BackImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Zone_BackImageUrl/CS/zonebackimageurlcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Zone_BackImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Zone_BackImageUrl/VB/zonebackimageurlvb.aspx#1)]  
+  
+ Em um navegador, você pode alternar para modo de design para ver a imagem na zona vazia. Observe que uma URL real para o <xref:System.Web.UI.WebControls.WebParts.WebZone.BackImageUrl%2A> propriedade não é fornecida neste exemplo. Para obter detalhes sobre como alterar a página de modos de exibição, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmptyZoneText">
+      <MemberSignature Language="C#" Value="public virtual string EmptyZoneText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EmptyZoneText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.EmptyZoneText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma mensagem que aparece quando uma zona não contém nenhum controle.</summary>
+        <value>Uma cadeia de caracteres que contém a mensagem que aparece em uma zona vazia. Uma cadeia de caracteres de específicos de cultura padrão é fornecida pelo .NET Framework.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O texto do <xref:System.Web.UI.WebControls.WebParts.WebZone.EmptyZoneText%2A> propriedade aparece quando não existem controles em uma zona e zona está em um dos modos de personalização, como editar, design ou modo de catálogo.  
+  
+> [!NOTE]
+>  Quando uma zona entra em um dos modos de personalização que permitiria que as alterações de personalização sejam feitas no conteúdo da região, o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> conjuntos de controles a <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode.AllowPageDesign%2A?displayProperty=nameWithType> valor da propriedade `true` no objeto do modo de exibição referenciado em seu <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayMode%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebZone.EmptyZoneText%2A> propriedade. Observe que há duas zonas na marcação declarativa e o segundo `<asp:webpartzone>` elemento está vazio.  
+  
+ [!code-aspx-csharp[WebParts_Zone_EmptyZoneText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Zone_EmptyZoneText/CS/zoneemptyzonetextcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Zone_EmptyZoneText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Zone_EmptyZoneText/VB/zoneemptyzonetextvb.aspx#1)]  
+  
+ Em um navegador, você pode alternar para modo de design para ver o texto fornecido para o <xref:System.Web.UI.WebControls.WebParts.WebZone.EmptyZoneText%2A> propriedade exibida na zona vazia. Para obter detalhes sobre como alterar a página de modos de exibição, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmptyZoneTextStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style EmptyZoneTextStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style EmptyZoneTextStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.EmptyZoneTextStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos de estilo para o texto de espaço reservado em uma zona vazia.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Style" /> que contém atributos de estilo para o texto atribuído a uma zona <see cref="P:System.Web.UI.WebControls.WebParts.WebZone.EmptyZoneText" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style ErrorStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style ErrorStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.ErrorStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos de estilo para processar a mensagem de erro que é exibido se um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle não pode ser carregado ou criado.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Style" /> que contém atributos de estilo para a mensagem de erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No tempo de execução, se o .NET Framework é não é possível carregar ou criar uma instância de um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, uma instância do <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> classe é criada e exibida em seu lugar. Este objeto contém uma mensagem de erro e os atributos de estilo do <xref:System.Web.UI.WebControls.WebParts.WebZone.ErrorStyle%2A> propriedade são aplicadas à mensagem de erro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FooterStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.TitleStyle FooterStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.TitleStyle FooterStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.FooterStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.TitleStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos de estilo para o conteúdo da área de rodapé da zona.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.TitleStyle" /> que contém atributos de estilo para o conteúdo da área de rodapé da zona.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEffectiveChromeType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.PartChromeType GetEffectiveChromeType (System.Web.UI.WebControls.WebParts.Part part);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Web.UI.WebControls.WebParts.PartChromeType GetEffectiveChromeType(class System.Web.UI.WebControls.WebParts.Part part) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebZone.GetEffectiveChromeType(System.Web.UI.WebControls.WebParts.Part)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="part" Type="System.Web.UI.WebControls.WebParts.Part" />
+      </Parameters>
+      <Docs>
+        <param name="part">Um controle de parte dentro da região atual.</param>
+        <summary>Retorna atual real ou efetivo <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" /> valor de um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle, considerando o <see cref="P:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType" /> propriedade da zona e o modo de exibição atual da página de Web Parts.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" /> valor que contém o tipo de borda que atualmente quadros contidos por uma região de controles de Web Parts.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="part" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFooter">
+      <MemberSignature Language="C#" Value="protected virtual bool HasFooter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasFooter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.HasFooter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma zona tem uma área de rodapé.</summary>
+        <value>
+          <see langword="true" />Se a zona tem uma área de rodapé. Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone.HasFooter%2A> propriedade é usada principalmente por desenvolvedores de controle que estão criando zonas personalizadas. Ele existe como um sinalizador de modo que o conjunto de controles de Web Parts renderiza um rodapé de página apenas quando apropriado para uma zona. Por exemplo, o <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.HasFooter%2A> propriedade substitui essa propriedade e retorna `false`, de modo que um rodapé de página não é processada para um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle.  
+  
+ Ferramenta zonas (zonas que derivam indiretamente de <xref:System.Web.UI.WebControls.WebParts.WebZone> classe por meio do <xref:System.Web.UI.WebControls.WebParts.ToolZone> classe, como <xref:System.Web.UI.WebControls.WebParts.EditorZone> e <xref:System.Web.UI.WebControls.WebParts.CatalogZone>) deve ter rodapés de forma que, por exemplo, eles processem verbos comuns de interface do usuário do usuário com os botões como **Okey**, **aplicar**, e **Cancelar** na parte inferior da zona. Porque o <xref:System.Web.UI.WebControls.WebParts.WebZone.HasFooter%2A> é de propriedade `true` por padrão, as zonas de ferramenta não precisam substituir a propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você estiver criando uma zona de ferramenta personalizada que é derivada de <see cref="T:System.Web.UI.WebControls.WebParts.ToolZone" />, você pode substituir o <see cref="M:System.Web.UI.WebControls.WebParts.WebZone.RenderFooter(System.Web.UI.HtmlTextWriter)" /> método e fornecer a renderização do rodapé da zona.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="HasHeader">
+      <MemberSignature Language="C#" Value="protected virtual bool HasHeader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.HasHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma zona tem uma área de cabeçalho.</summary>
+        <value>
+          <see langword="true" />Se a zona tem uma área de cabeçalho; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone.HasHeader%2A> propriedade é usada principalmente por desenvolvedores de controle que estão criando zonas personalizadas. Ele existe como um sinalizador de modo que o conjunto de controles de Web Parts renderiza um cabeçalho apenas quando apropriado para uma zona. Por exemplo, o <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.HasHeader%2A> propriedade substitui essa propriedade e retorna `false` , a menos que a página está em um dos modos que permitem a personalização. Nesse caso, um cabeçalho não é processado para um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle no modo de procura, enquanto na maioria dos outros modos de um cabeçalho é renderizado. Para obter mais informações sobre modos de exibição e permitindo que os usuários para alternar entre eles, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ Ferramenta zonas (zonas que derivam indiretamente de <xref:System.Web.UI.WebControls.WebParts.WebZone> classe por meio do <xref:System.Web.UI.WebControls.WebParts.ToolZone> classe, como <xref:System.Web.UI.WebControls.WebParts.EditorZone> e <xref:System.Web.UI.WebControls.WebParts.CatalogZone>) deve ter cabeçalhos que aparecem somente quando a página está no modo de exibição apropriado. Porque o <xref:System.Web.UI.WebControls.WebParts.WebZone.HasHeader%2A> é de propriedade `true` por padrão, eles não precisam substituir a propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você estiver criando uma zona de ferramenta personalizada que é derivada de <see cref="T:System.Web.UI.WebControls.WebParts.ToolZone" />, você pode substituir o <see cref="M:System.Web.UI.WebControls.WebParts.WebZone.RenderHeader(System.Web.UI.HtmlTextWriter)" /> método e fornece processamento de cabeçalho da zona.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.TitleStyle HeaderStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.TitleStyle HeaderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.HeaderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.TitleStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos de estilo para o conteúdo da área de cabeçalho da zona.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.TitleStyle" /> que contém atributos de estilo para o conteúdo da área de cabeçalho da zona.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderText">
+      <MemberSignature Language="C#" Value="public virtual string HeaderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.HeaderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto para a área do cabeçalho de uma zona.</summary>
+        <value>Uma cadeia de caracteres que contém o texto do cabeçalho da zona. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo de uma zona <xref:System.Web.UI.WebControls.WebParts.WebZone.HeaderText%2A> propriedade são exibidas quando uma página da Web entra em certos modos de exibição. Por exemplo, em uma página que tenha um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controlar o texto atribuído para o <xref:System.Web.UI.WebControls.WebParts.WebZone.HeaderText%2A> propriedade fica visível quando a página entra em modo de design, catálogo ou editar.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebZone.HeaderText%2A> propriedade. Observe que há duas zonas na marcação declarativa e o segundo `<asp:webpartzone>` elemento está vazio.  
+  
+ [!code-aspx-csharp[WebParts_Zone_HeaderText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Zone_HeaderText/CS/zoneheadertextcs.aspx#1)]
+ [!code-aspx-vb[WebParts_Zone_HeaderText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Zone_HeaderText/VB/zoneheadertextvb.aspx#1)]  
+  
+ Em um navegador, você pode alternar a página para o modo de design para ver o texto fornecido para o <xref:System.Web.UI.WebControls.WebParts.WebZone.HeaderText%2A> propriedade exibida na área de cabeçalho da zona. Para obter detalhes sobre como alterar a página de modos de exibição, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebZone.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">O estado salvo anteriormente.</param>
+        <summary>Carrega previamente salva informações de estado para uma zona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado basicamente pela infraestrutura do .NET Framework e não se destina a ser usado diretamente no seu código. No entanto, os desenvolvedores de controle podem substituir este método para especificar como um controle de servidor personalizado restaura o estado de exibição. Para obter mais informações, consulte [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone.LoadViewState%2A> cargas método previamente salva informações de estado para uma zona. Ela substitui a base de <xref:System.Web.UI.Control.LoadViewState%2A> método também carregar informações de estado para as várias propriedades de estilo de uma região, como <xref:System.Web.UI.WebControls.WebParts.WebZone.HeaderStyle%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.FooterStyle%2A>, e <xref:System.Web.UI.WebControls.WebParts.WebZone.PartStyle%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tamanho do <paramref name="savedState" /> objeto não igual ao tamanho do objeto de estado de exibição atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebZone.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.Init" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone.OnInit%2A> método substitui a base de <xref:System.Web.UI.Control.OnInit%2A> método para registrar uma zona com o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O controle de zona foi adicionado em muito tarde de um estágio no ciclo de vida da página, ou o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebZone.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.PreRender" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone.OnPreRender%2A> método substitui a base de <xref:System.Web.UI.Control.OnPreRender%2A> método para evitar que uma zona de renderização se seu controle pai é um controle de parte ou outra zona.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Um <see cref="T:System.Web.UI.WebControls.WebParts.WebZone" /> controle está aninhado dentro de outra zona ou em um <see cref="T:System.Web.UI.WebControls.WebParts.Part" /> controle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public virtual int Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os atributos de preenchimento de célula em uma tabela que contém o <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles em uma zona.</summary>
+        <value>O número de pixels para o preenchimento entre itens e seus limites de célula da tabela processados para uma zona. O padrão é 2.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade é definida como um valor menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PartChromePadding">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit PartChromePadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit PartChromePadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.PartChromePadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.WebControls.Unit), "5px")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância entre o conteúdo de um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle e a borda do controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Unit" /> objeto que indica o tipo de medida e a quantidade de preenchimento. O padrão de preenchimento para uma zona é 5 pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para definir uma quantidade de preenchimento padrão entre o conteúdo de cada controle e sua borda para todos os controles contidos em uma zona.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor atribuído à propriedade é um número negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PartChromeStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style PartChromeStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style PartChromeStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.PartChromeStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as características de estilo que se aplicam às bordas dos controles de Web Parts contidos por uma região.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Style" /> que contém atributos de estilo para as bordas que envolvem controles de Web Parts contidos por uma região.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de Web Parts pode ter sua própria borda, definida no <xref:System.Web.UI.WebControls.WebParts.WebZone.PartStyle%2A> propriedade. A zona que contém o controle pode adicionar uma borda externa adicional ao redor do controle. A borda externa pode colocar uma zona em torno de cada um de seus controles de Web Parts é determinada pelo <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeStyle%2A> propriedade. Essa propriedade não cancelar a atributos da propriedade contidos no <xref:System.Web.UI.WebControls.WebParts.WebZone.PartStyle%2A> do objeto; ela é mesclada com ou adicionada a eles. Ele permite que uma zona fornecer uma borda comum e consistente para cada um dos controles de Web Parts que ele contém.  
+  
+> [!IMPORTANT]
+>  Embora o <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeStyle%2A> estilo configurações aplicam-se principalmente para que uma zona pode definir ao redor dos controles que ele contém, se você definir propriedades adicionais na borda externa do <xref:System.Web.UI.WebControls.Style> objeto referenciado pela propriedade, como <xref:System.Web.UI.MobileControls.Style.BackColor%2A>, o navegador interpreta os atributos de estilo aplicável a todos os subelementos da tabela usada para renderizar uma zona. Portanto, definir o <xref:System.Web.UI.MobileControls.Style.BackColor%2A> propriedade estilo do objeto referenciado pelo <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeStyle%2A> propriedade tem o mesmo efeito um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle como configuração o <xref:System.Web.UI.MobileControls.Style.BackColor%2A> propriedade no objeto referenciado pelo <xref:System.Web.UI.WebControls.WebParts.WebZone.PartStyle%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeStyle%2A> propriedade para definir atributos de estilo para as bordas externas de controles de Web Parts contidos em uma zona.  
+  
+ [!code-aspx-csharp[WebParts_Zone_PartChromeStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Zone_PartChromeStyle/CS/zonepartchromestylecs.aspx#1)]
+ [!code-aspx-vb[WebParts_Zone_PartChromeStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Zone_PartChromeStyle/VB/zonepartchromestylevb.aspx#1)]  
+  
+ Observe que, quando você primeiro carrega a página em um navegador, o controle superior tem sua própria borda verde com uma largura de 2 pixels, conforme definido na marcação declarativa para a página. Depois que um usuário clica o calendário, a página programaticamente altera as bordas dos controles na zona para vermelho e define sua largura de borda para 4 pixels, mas o controle superior retém sua borda interna verde original.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartChromeType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.PartChromeType PartChromeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WebParts.PartChromeType PartChromeType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PartChromeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de borda que os controles de Web Parts de quadros contidos por uma região.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" /> que determina o tipo de borda que quadros contidos por uma região de controles de Web Parts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType%2A> propriedade age como uma propriedade padrão para os controles de Web Parts em uma zona. Se um controle de Web Parts tem seu <xref:System.Web.UI.WebControls.WebParts.WebPart.ChromeType%2A> propriedade definida, a propriedade substitui o efeito do <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType%2A> propriedade em tempo de execução. Se o controle <xref:System.Web.UI.WebControls.WebParts.WebPart.ChromeType%2A> propriedade não está definida ou é definida como <xref:System.Web.UI.WebControls.WebParts.PartChromeType.Default>, o valor da <xref:System.Web.UI.WebControls.WebParts.WebZone.PartChromeType%2A> propriedade determina que tipo de borda do controle tem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não é um dos valores <see cref="T:System.Web.UI.WebControls.WebParts.PartChromeType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PartStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableStyle PartStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableStyle PartStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.PartStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as características de estilo que se aplicam à borda e o conteúdo de cada controle de Web Parts contidos por uma região.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.TableStyle" /> que contém atributos de estilo para controles de Web Parts na zona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicam os atributos de estilo para a borda e o conteúdo de todos os controles de Web Parts em uma zona. Essa propriedade é somente leitura; No entanto, você pode definir as propriedades do <xref:System.Web.UI.WebControls.TableStyle> retorna do objeto. Essa propriedade permite que você forneça um estilo consistente para o conteúdo de todos os controles que contém uma zona.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebZone.PartStyle%2A> propriedade. Observe que na zona referenciada na marcação declarativa, há um `<asp:calendar>` elemento e um `<asp:literal>` elemento, com ambos os controles atuando como controles de Web Parts em tempo de execução porque estão em uma zona. Depois que o usuário clica em uma data no controle de calendário, a página usa programaticamente o <xref:System.Web.UI.WebControls.WebParts.WebZone.PartStyle%2A> propriedade para alterar a cor de plano de fundo de todos os controles de parte na zona para vermelho.  
+  
+ [!code-aspx-csharp[WebParts_Zone_PartStyle#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_Zone_PartStyle/CS/zonepartstylecs.aspx#1)]
+ [!code-aspx-vb[WebParts_Zone_PartStyle#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_Zone_PartStyle/VB/zonepartstylevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartTitleStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.TitleStyle PartTitleStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.TitleStyle PartTitleStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.PartTitleStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.TitleStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos de estilo para o conteúdo da barra de título de cada controle de Web Parts contido por uma região.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.TitleStyle" /> que contém atributos de estilo para o conteúdo da barra de título de cada controle de Web Parts na zona.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginTag">
+      <MemberSignature Language="C#" Value="public override void RenderBeginTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RenderBeginTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebZone.RenderBeginTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Renderiza a marca HTML do controle especificado zona abertura <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone.RenderBeginTag%2A> método é usado principalmente por desenvolvedores de controle. Para um <xref:System.Web.UI.WebControls.WebParts.WebZone> controle, o método define atributos de estilo para a tabela HTML que é renderizado para a zona. Os atributos de estilo ajudam a renderizar a tabela HTML corretamente em navegadores com suporte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBody">
+      <MemberSignature Language="C#" Value="protected virtual void RenderBody (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderBody(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebZone.RenderBody(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Substituições de renderização para o corpo de um controle de zona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O corpo de um controle de zona é a parte entre suas áreas de cabeçalho e rodapé.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderClientScript">
+      <MemberSignature Language="C#" Value="protected bool RenderClientScript { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RenderClientScript" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.RenderClientScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se deve processar o script de cliente em uma página de Web Parts.</summary>
+        <value>
+          <see langword="true" />Se a zona processa o script de cliente quando a página estiver em um modo de exibição determinado; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebZone.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Processa todo o conteúdo de um controle de zona entre o início e fim as marcas especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone.RenderContents%2A> método é usado principalmente por desenvolvedores de controle. Esse método substitui a base de <xref:System.Web.UI.WebControls.WebControl.RenderContents%2A> método para renderizar uma zona quando a zona <xref:System.Web.UI.WebControls.WebParts.WebZone.HasHeader%2A> está definida como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderFooter">
+      <MemberSignature Language="C#" Value="protected virtual void RenderFooter (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderFooter(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebZone.RenderFooter(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Substituições de renderização para o rodapé de um controle de zona.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderHeader">
+      <MemberSignature Language="C#" Value="protected virtual void RenderHeader (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderHeader(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebZone.RenderHeader(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Substituições de renderização para o cabeçalho de um controle de zona.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebZone.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações de estado de exibição que ocorreram depois que uma página foi postada no servidor.</summary>
+        <returns>Retorna o estado de exibição atual do controle de zona. Se nenhum estado de exibição é associado com a zona, esse método retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone.SaveViewState%2A> método substitui a base de <xref:System.Web.UI.Control.SaveViewState%2A> método para salvar o estado de exibição é alterado para as várias propriedades de estilo de uma região, como <xref:System.Web.UI.WebControls.WebParts.WebZone.HeaderStyle%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.FooterStyle%2A>, e <xref:System.Web.UI.WebControls.WebParts.WebZone.PartStyle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagKey">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.HtmlTextWriterTag TagKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.HtmlTextWriterTag TagKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.TagKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor <see cref="T:System.Web.UI.HtmlTextWriterTag" /> que corresponde ao controle do servidor Web. Essa propriedade é usada principalmente por desenvolvedores de controle.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.HtmlTextWriterTag" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebZone.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Controla as alterações para o estado de exibição do controle de uma zona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone.TrackViewState%2A> método substitui a base de <xref:System.Web.UI.Control.TrackViewState%2A> método para controlar o estado de exibição é alterado para as várias propriedades de estilo de uma região, como <xref:System.Web.UI.WebControls.WebParts.WebZone.HeaderStyle%2A>, <xref:System.Web.UI.WebControls.WebParts.WebZone.FooterStyle%2A>, e <xref:System.Web.UI.WebControls.WebParts.WebZone.PartStyle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbButtonType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ButtonType VerbButtonType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ButtonType VerbButtonType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.VerbButtonType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ButtonType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de botão é usado para representar verbos em uma zona.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.ButtonType" /> que indica o tipo de botão estará visível para representar verbos na interface do usuário (IU). O padrão é <see cref="F:System.Web.UI.WebControls.ButtonType.Link" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebZone.VerbButtonType%2A> propriedade pode ser usada para determinar como os verbos aparecerá no menu de verbos de uma zona. Verbos podem aparecer como um botão, um hiperlink ou uma imagem que pode ser clicada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade não é definida como um <see cref="T:System.Web.UI.WebControls.ButtonType" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style VerbStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style VerbStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.VerbStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos de estilo para os verbos de interface de usuário associados a controles de Web Parts em uma zona.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Style" /> que contém atributos de estilo para os verbos associados a controles de Web Parts contidos por uma região.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartManager">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebZone.WebPartManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle associado a um <see cref="T:System.Web.UI.WebControls.WebParts.WebZone" /> instância de controle em uma página de Web Parts.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle que está associado uma zona.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

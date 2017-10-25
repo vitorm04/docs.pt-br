@@ -1,0 +1,189 @@
+<Type Name="DaylightTime" FullName="System.Globalization.DaylightTime">
+  <TypeSignature Language="C#" Value="public class DaylightTime" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit DaylightTime extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.DaylightTime" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o período de horário de verão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Horário de verão é um período durante o ano quando o relógio é avançado, normalmente por meio de uma hora, para aproveitar o horário de verão estendida. No final do período, o relógio for alterado para o tempo padrão.  
+  
+> [!WARNING]
+>  O <xref:System.Globalization.DaylightTime> objeto retornado pelo <xref:System.TimeZone.GetDaylightChanges%2A?displayProperty=nameWithType> método reconhece somente a regra de ajuste de fuso horário que está atualmente em vigor e ignora quaisquer regras de ajuste anterior para o qual o sistema possui informações. Em vez disso, ele se aplica a regra de ajuste atual para trás no tempo para períodos em que ele pode não ter sido em vigor. Para recuperar informações sobre todas as regras de ajuste conhecido para um determinado fuso horário, use o <xref:System.TimeZoneInfo.GetAdjustmentRules%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DaylightTime (DateTime start, DateTime end, TimeSpan delta);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTime start, valuetype System.DateTime end, valuetype System.TimeSpan delta) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.DaylightTime.#ctor(System.DateTime,System.DateTime,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="System.DateTime" />
+        <Parameter Name="end" Type="System.DateTime" />
+        <Parameter Name="delta" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="start">O objeto que representa a data e hora de início do horário de verão. O valor deve estar no horário local.</param>
+        <param name="end">O objeto que representa a data e hora de término do horário de verão. O valor deve estar no horário local.</param>
+        <param name="delta">O objeto que representa a diferença entre o período padrão e o horário de verão, em tiques.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Globalization.DaylightTime" /> classe com o especificado do início, fim e informações de diferença de tempo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `start` parâmetro se tornará o valor de <xref:System.Globalization.DaylightTime.Start%2A> propriedade do novo objeto. O `end` parâmetro se tornará o valor de <xref:System.Globalization.DaylightTime.End%2A> propriedade do novo objeto. O `delta` parâmetro se tornará o valor de <xref:System.Globalization.DaylightTime.Delta%2A> propriedade do novo objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delta">
+      <MemberSignature Language="C#" Value="public TimeSpan Delta { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Delta" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.DaylightTime.Delta" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o intervalo de tempo que representa a diferença entre o período padrão e o horário de verão.</summary>
+        <value>O intervalo de tempo que representa a diferença entre o período padrão e o horário de verão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde do <xref:System.TimeZoneInfo.AdjustmentRule.DaylightDelta%2A?displayProperty=nameWithType> propriedade. Em geral, o <xref:System.TimeZoneInfo> classe é uma fonte mais precisa de informações sobre ajustes de fuso horário que o <xref:System.TimeZone> e <xref:System.Globalization.DaylightTime> classes.  
+  
+ Se o valor da propriedade for positivo, no início do horário de verão, a hora do relógio é avançada, o período de tempo especificado por essa propriedade. No final do horário de verão, a hora do relógio é redefinida, o período de tempo especificado por essa propriedade. Se o valor da propriedade for negativo, a hora do relógio é definida de volta no início do horário de verão e avançada no final.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="public DateTime End { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime End" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.DaylightTime.End" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que representa a data e a hora de término do período de verão.</summary>
+        <value>O objeto que representa a data e a hora de término do período de verão. O valor é em hora local.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde do <xref:System.TimeZoneInfo.AdjustmentRule.DateEnd%2A?displayProperty=nameWithType> propriedade. Em geral, o <xref:System.TimeZoneInfo> classe é uma fonte mais precisa de informações sobre ajustes de fuso horário que o <xref:System.TimeZone> e <xref:System.Globalization.DaylightTime> classes.  
+  
+ Quando o horário de verão período termina, a hora do relógio é redefinida para horário padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public DateTime Start { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Start" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.DaylightTime.Start" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que representa a data e hora de início do período de verão.</summary>
+        <value>O objeto que representa a data e hora em que o horário de verão período começa. O valor é em hora local.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde do <xref:System.TimeZoneInfo.AdjustmentRule.DateStart%2A?displayProperty=nameWithType> propriedade. Em geral, o <xref:System.TimeZoneInfo> classe é uma fonte mais precisa de informações sobre ajustes de fuso horário que o <xref:System.TimeZone> e <xref:System.Globalization.DaylightTime> classes.  
+  
+ Quando o horário de verão período de início, a hora do relógio é adiantada pelo número de tiques definido pelo <xref:System.Globalization.DaylightTime.Delta%2A> propriedade para aproveitar o horário de verão estendida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

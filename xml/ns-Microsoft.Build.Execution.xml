@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Execution">
+  <Docs>
+    <summary>Contém tipos que usa o modelo de objeto do MSBuild para criar projetos. Para obter informações, consulte <see href="https://docs.microsoft.com/visualstudio/msbuild/">MSBuild</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

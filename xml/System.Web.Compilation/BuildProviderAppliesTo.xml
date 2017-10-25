@@ -1,0 +1,94 @@
+<Type Name="BuildProviderAppliesTo" FullName="System.Web.Compilation.BuildProviderAppliesTo">
+  <TypeSignature Language="C#" Value="public enum BuildProviderAppliesTo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BuildProviderAppliesTo extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.BuildProviderAppliesTo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os locais onde o <see cref="T:System.Web.Compilation.BuildProviderAppliesToAttribute" /> atributo é respeitado durante a geração de código para um recurso por uma <see cref="T:System.Web.Compilation.BuildProvider" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Compilation.BuildProvider> objeto fornece funcionalidade para analisar um tipo de arquivo específico e gerar código durante a compilação de um recurso. Um provedor de compilação gera código para os recursos que correspondem ao atributo ttribute e que têm a extensão mapeada para o provedor de compilação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.BuildProviderAppliesTo All = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.BuildProviderAppliesTo.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.BuildProviderAppliesTo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o provedor de compilação gera código para recursos, independentemente de onde os recursos estão localizados. Este é o valor padrão para o <see cref="T:System.Web.Compilation.BuildProviderAppliesToAttribute" /> atributo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="Code" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.BuildProviderAppliesTo Code = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.BuildProviderAppliesTo.Code" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.BuildProviderAppliesTo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o provedor de compilação gera código para apenas esses recursos no diretório \App_Code.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Resources">
+      <MemberSignature Language="C#" Value="Resources" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.BuildProviderAppliesTo Resources = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.BuildProviderAppliesTo.Resources" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.BuildProviderAppliesTo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o provedor de compilação gera código para recursos nos diretórios \App_GlobalResources e \App_LocalResources.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Web">
+      <MemberSignature Language="C#" Value="Web" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.BuildProviderAppliesTo Web = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.BuildProviderAppliesTo.Web" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.BuildProviderAppliesTo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o provedor de compilação gera código para apenas esses recursos em diretórios de conteúdo da Web, que são os diretórios que não seja o ASP.NET diretórios \App_Code, \App_GlobalResources e \App_LocalResources reservado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

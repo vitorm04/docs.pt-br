@@ -1,0 +1,607 @@
+<Type Name="ReceiveContext" FullName="System.ServiceModel.Channels.ReceiveContext">
+  <TypeSignature Language="C#" Value="public abstract class ReceiveContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ReceiveContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.ReceiveContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Derivar desta classe para implementar uma máquina de estado personalizado para receber a funcionalidade de contexto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Receber a funcionalidade de contexto é dupla. Ao trabalhar com um canal em fila, receber contexto permite bloquear uma mensagem antes de processá-la. Se ocorrer uma falha, a mensagem permanecerá bloqueada para que o serviço que está processando a mensagem mantém a propriedade (outro serviço não pode receber e processar a mesma mensagem) e pode optar por executar alguma outra ação nele. Ao trabalhar com um canal unidirecional, recebe o contexto permite que um serviço controlar quando ele envia uma mensagem de confirmação ou pode indicar um problema ao enviar uma mensagem de confirmação negativa. O cliente pode escolher reenviar a mensagem se receber uma confirmação negativa ou se não receber uma confirmação dentro de um determinado período de tempo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ReceiveContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.ReceiveContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Abandon">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Faz com que a máquina de estado para fazer a transição para o estado abandonado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Channels.ReceiveContext.Abandon%2A>pode travar quando há uma transação de ambiente e <xref:System.ServiceModel.Channels.ReceiveContext.Complete%2A> é chamado e depois a transação é revertida. Se <xref:System.ServiceModel.Channels.ReceiveContext.Abandon%2A> é chamado antes de concluir a transação rollback, vai existir uma condição de corrida, fazendo com que a chamada para <xref:System.ServiceModel.Channels.ReceiveContext.Abandon%2A> parada. Isso pode ser ilustrado pelo exemplo de pseudocódigo a seguir  
+  
+```  
+using (TransactionScope ts = new TransactionScope())   
+{  
+   try  
+   {  
+       rc.Complete();  
+      ...  
+   }  
+   Catch (Exception)   
+   {  
+      rc.Abandon()  
+   }  
+}  
+  
+```  
+  
+ Isso não é o padrão recomendado para trabalhar com T:System.ServiceModel.Channels.RecieveContext. Em vez disso, o bloco try/catch deve ser colocado fora do escopo da transação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Abandon">
+      <MemberSignature Language="C#" Value="public virtual void Abandon (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Abandon(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.Abandon(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O tempo limite para a conclusão da operação de abandono.</param>
+        <summary>Faz com que a máquina de estado para fazer a transição para o estado abandonado com o valor de tempo limite especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abandon">
+      <MemberSignature Language="C#" Value="public virtual void Abandon (Exception exception, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Abandon(class System.Exception exception, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.Abandon(System.Exception,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="exception">A exceção que faz com que a operação de abandono.</param>
+        <param name="timeout">O tempo limite para a conclusão da operação de abandono.</param>
+        <summary>Faz com que a máquina de estado para fazer a transição para o estado abandonado com a exceção especificada e o valor de tempo limite.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAbandon">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginAbandon (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginAbandon(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.BeginAbandon(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O tempo limite para a conclusão da operação de abandono.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">os dados de estado definido pelo usuário.</param>
+        <summary>Inicia uma operação assíncrona abandono com o tempo limite especificado, retorno de chamada assíncrono e dados de estado definido pelo usuário.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que faz referência a operação assíncrona abandono.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAbandon">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginAbandon (Exception exception, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginAbandon(class System.Exception exception, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.BeginAbandon(System.Exception,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Uma exceção que contém a razão para a operação de abandono.</param>
+        <param name="timeout">O tempo limite para a conclusão da operação de abandono.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">os dados de estado definido pelo usuário.</param>
+        <summary>Inicia uma operação assíncrona abandono com a exceção especificada, tempo limite, retorno de chamada assíncrono e dados de estado definido pelo usuário.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que faz referência a operação assíncrona abandono.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginComplete">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginComplete (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginComplete(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.BeginComplete(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O tempo limite para a conclusão da operação concluída.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">os dados de estado definido pelo usuário.</param>
+        <summary>Inicia uma operação assíncrona concluída com o tempo limite especificado, retorno de chamada assíncrono e dados de estado definido pelo usuário.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que faz referência a concluir a operação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public virtual void Complete (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Complete(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.Complete(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O tempo limite para a conclusão da operação concluída.</param>
+        <summary>Faz com que a máquina de estado para fazer a transição para o estado concluído com o valor de tempo limite especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAbandon">
+      <MemberSignature Language="C#" Value="public virtual void EndAbandon (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndAbandon(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.EndAbandon(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para uma da <see cref="Overload:System.ServiceModel.Activities.WorkflowControlClient.BeginAbandon" /> métodos.</param>
+        <summary>Conclui uma operação assíncrona abandono.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndComplete">
+      <MemberSignature Language="C#" Value="public virtual void EndComplete (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndComplete(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.EndComplete(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="M:System.ServiceModel.Channels.ReceiveContext.BeginComplete(System.TimeSpan,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Conclui uma operação de conclua assíncrona.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fault">
+      <MemberSignature Language="C#" Value="protected virtual void Fault ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Fault() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.Fault" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que a máquina de estado para fazer a transição para o estado de falha.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Faulted">
+      <MemberSignature Language="C#" Value="public event EventHandler Faulted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Faulted" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Channels.ReceiveContext.Faulted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o evento gerado quando uma exceção ocorreu durante o processo de mensagens.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public static readonly string Name;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string Name" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.ReceiveContext.Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do contexto de recebimento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAbandon">
+      <MemberSignature Language="C#" Value="protected abstract void OnAbandon (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAbandon(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.OnAbandon(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O tempo limite para a conclusão da operação de abandono.</param>
+        <summary>Chamado quando a máquina de estado está em transição para estado abandonado com o valor de tempo limite especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAbandon">
+      <MemberSignature Language="C#" Value="protected virtual void OnAbandon (Exception exception, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAbandon(class System.Exception exception, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.OnAbandon(System.Exception,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Uma exceção que contém a razão para a operação de abandono.</param>
+        <param name="timeout">O tempo limite para a conclusão da operação de abandono.</param>
+        <summary>Chamado quando a máquina de estado está em transição para estado abandonado com a exceção especificada e o valor de tempo limite.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginAbandon">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult OnBeginAbandon (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginAbandon(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.OnBeginAbandon(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O tempo limite para a conclusão da operação de abandono.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">Os dados de estado definido pelo usuário.</param>
+        <summary>Chamado quando a máquina de estado está em transição para estado abandonado assíncrona com o valor de tempo limite especificado, retorno de chamada e os dados de estado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que faz referência a operação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginAbandon">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult OnBeginAbandon (Exception exception, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginAbandon(class System.Exception exception, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.OnBeginAbandon(System.Exception,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="exception">Uma exceção que contém a razão para a operação de abandono.</param>
+        <param name="timeout">O tempo limite para a conclusão da operação de abandono.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">os dados de estado definido pelo usuário.</param>
+        <summary>Chamado quando a máquina de estado está em transição para estado abandonado assincronamente com a exceção especificada, o valor de tempo limite, retorno de chamada e os dados de estado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que faz referência a operação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginComplete">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult OnBeginComplete (TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginComplete(valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.OnBeginComplete(System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O tempo limite para a conclusão da operação concluída.</param>
+        <param name="callback">O representante de retorno de chamada assíncrono que recebe a notificação de conclusão de operação assíncrona.</param>
+        <param name="state">os dados de estado definido pelo usuário.</param>
+        <summary>Chamado quando a máquina de estado está em transição para o estado concluído assincronamente com o tempo limite especificado, retorno de chamada e dados de estado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que faz referência a operação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComplete">
+      <MemberSignature Language="C#" Value="protected abstract void OnComplete (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnComplete(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.OnComplete(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O tempo limite para a conclusão da operação concluída.</param>
+        <summary>Chamado quando a máquina de estado está em transição para o estado concluído com o valor de tempo limite especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndAbandon">
+      <MemberSignature Language="C#" Value="protected abstract void OnEndAbandon (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndAbandon(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.OnEndAbandon(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para uma da <see cref="Overload:System.ServiceModel.Channels.ReceiveContext.OnBeginAbandon" /> métodos.</param>
+        <summary>Chamado quando a máquina de estado está em transição para estado abandonado assincronamente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndComplete">
+      <MemberSignature Language="C#" Value="protected abstract void OnEndComplete (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndComplete(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.OnEndComplete(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o<see cref="M:System.ServiceModel.Channels.ReceiveContext.OnBeginComplete(System.TimeSpan,System.AsyncCallback,System.Object)" /></param>
+        <summary>Chamado quando a máquina de estado está em transição para o estado concluído assincronamente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFaulted">
+      <MemberSignature Language="C#" Value="protected virtual void OnFaulted ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFaulted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.OnFaulted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando a máquina de estado está em transição para o estado de falha.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.ReceiveContextState State { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Channels.ReceiveContextState State" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ReceiveContext.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.ReceiveContextState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estado da máquina de estado.</summary>
+        <value>Estado de contexto da máquina de estado de recebimento atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThisLock">
+      <MemberSignature Language="C#" Value="protected object ThisLock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ThisLock" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.ReceiveContext.ThisLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto usado para bloquear o <see cref="T:System.ServiceModel.Channels.ReceiveContext" /> instância.</summary>
+        <value>
+          <see cref="T:System.Object" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGet">
+      <MemberSignature Language="C#" Value="public static bool TryGet (System.ServiceModel.Channels.Message message, out System.ServiceModel.Channels.ReceiveContext property);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGet(class System.ServiceModel.Channels.Message message, [out] class System.ServiceModel.Channels.ReceiveContext&amp; property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.TryGet(System.ServiceModel.Channels.Message,System.ServiceModel.Channels.ReceiveContext@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="property" Type="System.ServiceModel.Channels.ReceiveContext&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem.</param>
+        <param name="property">O contexto de recebimento.</param>
+        <summary>Tenta obter o contexto de recebimento de mensagem especificada.</summary>
+        <returns>
+          <see langword="true" />Se o contexto de recebimento é recuperado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGet">
+      <MemberSignature Language="C#" Value="public static bool TryGet (System.ServiceModel.Channels.MessageProperties properties, out System.ServiceModel.Channels.ReceiveContext property);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGet(class System.ServiceModel.Channels.MessageProperties properties, [out] class System.ServiceModel.Channels.ReceiveContext&amp; property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.ReceiveContext.TryGet(System.ServiceModel.Channels.MessageProperties,System.ServiceModel.Channels.ReceiveContext@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.ServiceModel.Channels.MessageProperties" />
+        <Parameter Name="property" Type="System.ServiceModel.Channels.ReceiveContext&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="properties">A coleção de propriedades de mensagem.</param>
+        <param name="property">O contexto de recebimento.</param>
+        <summary>Tenta obter o contexto de recebimento da coleção de propriedades de mensagem especificada.</summary>
+        <returns>
+          <see langword="true" />Se o contexto de recebimento é recuperado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

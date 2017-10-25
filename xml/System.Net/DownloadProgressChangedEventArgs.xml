@@ -1,0 +1,138 @@
+<Type Name="DownloadProgressChangedEventArgs" FullName="System.Net.DownloadProgressChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class DownloadProgressChangedEventArgs : System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DownloadProgressChangedEventArgs extends System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Net.DownloadProgressChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.WebClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.ProgressChangedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Net.WebClient.DownloadProgressChanged" /> de um <see cref="T:System.Net.WebClient" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As instâncias dessa classe são passadas para o <xref:System.Net.DownloadProgressChangedEventHandler>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a configuração de um manipulador de eventos para o <xref:System.Net.WebClient.DownloadProgressChanged> evento.  
+  
+ [!code-cpp[NCLWebClientAsync#19](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#19)]
+ [!code-csharp[NCLWebClientAsync#19](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#19)]
+ [!code-vb[NCLWebClientAsync#19](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#19)]  
+  
+ O exemplo de código a seguir mostra uma implementação de um manipulador para esse evento.  
+  
+ [!code-cpp[NCLWebClientAsync#42](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#42)]
+ [!code-csharp[NCLWebClientAsync#42](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#42)]
+ [!code-vb[NCLWebClientAsync#42](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#42)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BytesReceived">
+      <MemberSignature Language="C#" Value="public long BytesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 BytesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.DownloadProgressChangedEventArgs.BytesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de bytes recebidos.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que indica o número de bytes recebidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para determinar a porcentagem da transferência ocorreu, use o <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de um manipulador para o <xref:System.Net.WebClient.DownloadProgressChanged> evento. O método exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLWebClientAsync#42](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#42)]
+ [!code-csharp[NCLWebClientAsync#42](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#42)]
+ [!code-vb[NCLWebClientAsync#42](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#42)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalBytesToReceive">
+      <MemberSignature Language="C#" Value="public long TotalBytesToReceive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TotalBytesToReceive" />
+      <MemberSignature Language="DocId" Value="P:System.Net.DownloadProgressChangedEventArgs.TotalBytesToReceive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.WebClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de bytes em um <see cref="T:System.Net.WebClient" /> operação de download de dados.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que indica o número de bytes que serão recebidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para determinar o número de bytes recebidos já, use o <xref:System.Net.DownloadProgressChangedEventArgs.BytesReceived%2A> propriedade.  
+  
+ Para determinar a porcentagem da transferência ocorreu, use o <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de um manipulador para o <xref:System.Net.WebClient.DownloadProgressChanged> evento. O método exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLWebClientAsync#42](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLWebClientAsync/CPP/asyncmethods.cpp#42)]
+ [!code-csharp[NCLWebClientAsync#42](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLWebClientAsync/CS/asyncmethods.cs#42)]
+ [!code-vb[NCLWebClientAsync#42](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLWebClientAsync/VB/asyncmethods.vb#42)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

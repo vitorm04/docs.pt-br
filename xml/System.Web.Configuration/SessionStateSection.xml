@@ -1,0 +1,771 @@
+<Type Name="SessionStateSection" FullName="System.Web.Configuration.SessionStateSection">
+  <TypeSignature Language="C#" Value="public sealed class SessionStateSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SessionStateSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.SessionStateSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura o estado de sessão para um aplicativo Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SessionStateSection> classe refere-se ao elemento no arquivo de configuração Machine. config ou Web. config, identificado pelo `sessionState` marca.  
+  
+ Quando um novo cliente começa a interagir com um aplicativo da Web, uma ID de sessão é emitida e associada a todas as solicitações subsequentes do mesmo cliente durante a hora em que a sessão é válida. Essa ID é usada para manter o estado do servidor associado à sessão de cliente em solicitações. O <xref:System.Web.Configuration.SessionStateSection> controla como o aplicativo ASP.NET estabelece e mantém essa associação em nome de cada cliente.  
+  
+ Esse mecanismo é muito flexível e fornece a capacidade para as informações de estado de sessão do host fora do processo e para controlar o estado sem usar cookies, entre outras coisas.  
+  
+   
+  
+## Examples  
+ Esta seção fornece dois exemplos de código. A primeira demonstra como especificar valores declarativamente para vários atributos do `sessionState` seção, que também pode ser acessada como membros a <xref:System.Web.Configuration.SessionStateSection> classe. O segundo demonstra como usar o <xref:System.Web.Configuration.SessionStateSection> classe.  
+  
+ O exemplo de arquivo de configuração a seguir mostra como especificar valores declarativamente para o `sessionState` seção.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <sessionState mode="InProc"   
+      stateConnectionString="tcpip=127.0.0.1:42424"   
+      stateNetworkTimeout="10"  
+      sqlConnectionString="data source=127.0.0.1;  
+        Integrated Security=SSPI"  
+      sqlCommandTimeout="30"   
+      customProvider=""   
+      cookieless="UseDeviceProfile"   
+      cookieName="ASP.NET_SessionId"   
+      timeout="20"   
+      allowCustomSqlDatabase="False"   
+      regenerateExpiredSessionId="False"   
+      partitionResolverType=""   
+      useHostingIdentity="True">  
+      <providers>  
+        <clear />  
+      </providers>  
+    </sessionState>  
+  </system.web>  
+</configuration>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.SessionStateSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#1)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionStateSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SessionStateSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.SessionStateSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SessionStateSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.SessionStateSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCustomSqlDatabase">
+      <MemberSignature Language="C#" Value="public bool AllowCustomSqlDatabase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowCustomSqlDatabase" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.AllowCustomSqlDatabase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("allowCustomSqlDatabase", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário pode especificar o valor do catálogo inicial no <see cref="P:System.Web.Configuration.SessionStateSection.SqlConnectionString" /> propriedade.</summary>
+        <value>
+          <see langword="true" />Se o usuário tem permissão para especificar o catálogo. Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.AllowCustomSqlDatabase%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.SessionStateSection> tópico de classe para saber como acessar o <xref:System.Web.Configuration.SessionStateSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#2)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionEnabled">
+      <MemberSignature Language="C#" Value="public bool CompressionEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CompressionEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.CompressionEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("compressionEnabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a compactação é habilitada para dados de estado de sessão.</summary>
+        <value>
+          <see langword="true" />Se a compactação estiver habilitada; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.Configuration.SessionStateSection.CompressionEnabled%2A> valor é definido como `true`, o ASP.NET usa a <xref:System.IO.Compression.GZipStream> classe para compactar e expandir os dados de estado de sessão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookieless">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookieMode Cookieless { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.HttpCookieMode Cookieless" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.Cookieless" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieless")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se são usados cookies para identificar sessões de cliente.</summary>
+        <value>
+          <see langword="true" /> se todas as solicitações forem tratadas como sem cookies, ou <see langword="false" />, se nenhuma solicitação for tratada como sem cookies ou um dos valores de <see cref="T:System.Web.HttpCookieMode" />. O valor padrão no ASP.NET versão 2.0 é <see cref="F:System.Web.HttpCookieMode.AutoDetect" />. Em versões anteriores, o valor padrão era <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há duas maneiras que o estado da sessão pode armazenar a ID exclusiva que associa o cliente uma sessão de servidor: armazenando um cookie HTTP no cliente ou a ID de sessão na URL de codificação. Armazenar a ID de sessão no cookie é mais segura, mas requer que o navegador do cliente para oferecer suporte a cookies.  
+  
+ Para aplicativos que permitem que os clientes que não dão suporte a cookies, como uma variedade de dispositivos móveis, a ID de sessão pode ser armazenada na URL. A opção de URL tem várias desvantagens. Ele requer que os links no site ser relativo e que a página ser redirecionada no início da sessão com novos valores de cadeia de caracteres de consulta e expõe o direito de ID de sessão na cadeia de caracteres de consulta, onde ele pode ser selecionado para uso em uma violação de segurança.  
+  
+ Você é incentivado a usar o modo sem cookies somente se você precisar dar suporte a clientes que não têm suporte do cookie.  
+  
+ Estado de sessão também dá suporte a duas opções adicionais: <xref:System.Web.HttpCookieMode.UseDeviceProfile> e <xref:System.Web.HttpCookieMode.AutoDetect>. O módulo de estado de sessão determinar qual modo permite que o primeiro (cookie ou cookieless) é usado em uma base por cliente com base nos recursos do navegador.  O <xref:System.Web.HttpCookieMode.AutoDetect> opção executa um handshake com o navegador para verificar se um cookie pode ser armazenado e, portanto, requer uma solicitação adicional para tomar a decisão. Se você precisar dar suporte a clientes cookieless, considere fortemente o uso de <xref:System.Web.HttpCookieMode.UseDeviceProfile> para gerar URLs sem cookies somente para clientes que precisam delas.  
+  
+> [!NOTE]
+>  Com o backup. Navegador 4.1 ou backup. Navegador 3.2, <xref:System.Web.HttpResponse.Redirect%2A> sempre se comporta como se o valor da <xref:System.Web.Configuration.HttpCapabilitiesBase.SupportsRedirectWithCookie%2A> propriedade do <xref:System.Web.HttpBrowserCapabilities> objeto é `false`, a menos que o <xref:System.Web.Configuration.SessionStateSection.Cookieless%2A> propriedade no <xref:System.Web.Configuration.SystemWebSectionGroup.SessionState%2A> seção de Web. config foi definida explicitamente `true`.  
+>   
+>  Na versão 1.1 do ASP.NET, as opções para essa configuração foram `true` ou `false`, mas com o ASP.NET 2.0, as opções são expandidas, e <xref:System.Web.HttpCookieMode.AutoDetect> agora é a configuração padrão. Se seu aplicativo da Web tem o <xref:System.Web.Configuration.SessionStateSection.Cookieless%2A> propriedade definida como um valor booliano, em seguida, <xref:System.Web.HttpResponse.Redirect%2A> devem funcionar conforme o esperado para esses navegadores.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.Cookieless%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.SessionStateSection> tópico de classe para saber como acessar o <xref:System.Web.Configuration.SessionStateSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#7)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieName">
+      <MemberSignature Language="C#" Value="public string CookieName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CookieName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.CookieName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do cookie.</summary>
+        <value>O nome do cookie HTTP a ser usado para a identificação da sessão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é `"ASP.NET_SessionId"`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.CookieName%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.SessionStateSection> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#5)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomProvider">
+      <MemberSignature Language="C#" Value="public string CustomProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.CustomProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("customProvider", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do provedor personalizado do <see cref="P:System.Web.Configuration.SessionStateSection.Providers" /> coleção.</summary>
+        <value>O nome do provedor personalizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O provedor é usado somente quando o modo de estado de sessão é definido como <xref:System.Web.SessionState.SessionStateMode.Custom>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.CustomProvider%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#4)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementProperty">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElementProperty ElementProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationElementProperty ElementProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.ElementProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.SessionState.SessionStateMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.SessionState.SessionStateMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("mode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica onde armazenar o estado da sessão.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.SessionState.SessionStateMode" />. O valor padrão é <see cref="F:System.Web.SessionState.SessionStateMode.InProc" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateMode> não é um atributo necessário e pode ser herdada de um nível superior na hierarquia de configuração ou do valor padrão. No entanto, o manipulador de configuração para essa seção sempre gravará o modo com base no valor herdado atual ao gravar nesta seção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.Mode%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.SessionStateSection> tópico de classe para saber como acessar o <xref:System.Web.Configuration.SessionStateSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#14](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#14)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#14](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartitionResolverType">
+      <MemberSignature Language="C#" Value="public string PartitionResolverType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PartitionResolverType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.PartitionResolverType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("partitionResolverType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica onde armazenar o estado da sessão.</summary>
+        <value>Um valor que especifica onde armazenar o estado da sessão ou uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.Configuration.SessionStateSection.PartitionResolverType%2A> propriedade for especificada, o <xref:System.Web.Configuration.SessionStateSection.SqlConnectionString%2A> propriedade e <xref:System.Web.Configuration.SessionStateSection.StateConnectionString%2A> são ignoradas.  O <xref:System.Web.Configuration.SessionStateSection.PartitionResolverType%2A> podem ser bloqueados por meio de <xref:System.Configuration.ConfigurationElement.LockAttributes%2A> propriedade assim como outras propriedades no [sessionState Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/bda6fb8c-0076-43e3-9ce2-8cf1f8bdaa7d) elemento. A cadeia de caracteres de conexão retornada pelo <xref:System.Web.Configuration.SessionStateSection.PartitionResolverType%2A> será usado em cada solicitação para se conectar ao local do servidor apropriado para o restante da solicitação.  Se a cadeia de conexão é inválida, o ASP.NET gerará a mesma exceção que é lançada quando a cadeia de caracteres de conexão configurada para o servidor é inválida.  
+  
+ Essa propriedade é usada para particionar dados de estado de sessão em vários nós de back-end quando no modo de servidor de estado ou de SQL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostDeserialize">
+      <MemberSignature Language="C#" Value="protected override void PostDeserialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostDeserialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SessionStateSection.PostDeserialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public System.Configuration.ProviderSettingsCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ProviderSettingsCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("providers")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ProviderSettingsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual <see cref="T:System.Configuration.ProviderSettingsCollection" /> provedores.</summary>
+        <value>A coleção que contém o <see cref="T:System.Web.Configuration.SessionStateSection" /> provedores.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade se refere às informações contidas pela marca de configuração identificada pelo `providers` elemento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.Providers%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.SessionStateSection> tópico de classe para saber como acessar o <xref:System.Web.Configuration.SessionStateSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#10)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegenerateExpiredSessionId">
+      <MemberSignature Language="C#" Value="public bool RegenerateExpiredSessionId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RegenerateExpiredSessionId" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.RegenerateExpiredSessionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("regenerateExpiredSessionId", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a ID de sessão será emitida novamente quando uma ID de sessão expirada for especificada pelo cliente.</summary>
+        <value>
+          <see langword="true" /> se a ID de sessão precisar ser regenerada; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, apenas as URLs cookieless são reemitidas quando <xref:System.Web.Configuration.SessionStateSection.RegenerateExpiredSessionId%2A> está habilitado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.RegenerateExpiredSessionId%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.SessionStateSection> tópico de classe para saber como acessar o <xref:System.Web.Configuration.SessionStateSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#3)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionIDManagerType">
+      <MemberSignature Language="C#" Value="public string SessionIDManagerType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SessionIDManagerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.SessionIDManagerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("sessionIDManagerType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o tipo totalmente qualificado do Gerenciador de ID de sessão.</summary>
+        <value>Um tipo totalmente qualificado do Gerenciador de ID de sessão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SessionStateSection.SessionIDManagerType%2A> substitui a geração de ID de sessão e o gerenciamento de esquemas de gerenciamento de ID de sessão personalizadas. O valor padrão é uma cadeia de caracteres vazia ("").  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlCommandTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan SqlCommandTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SqlCommandTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.SqlCommandTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanSecondsOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("sqlCommandTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo limite de duração para os comandos SQL usando o modo de estado de sessão do SQL Server.</summary>
+        <value>O tempo, em segundos, após o qual um comando SQL atingirá o tempo limite. O padrão é 30 segundos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.SqlCommandTimeout%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.SessionStateSection> tópico de classe para saber como acessar o <xref:System.Web.Configuration.SessionStateSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#13)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlConnectionRetryInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan SqlConnectionRetryInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SqlConnectionRetryInterval" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.SqlConnectionRetryInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanSecondsOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("sqlConnectionRetryInterval", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de tempo que deve decorrer antes que o ASP.NET reconecta-se ao banco de dados.</summary>
+        <value>O intervalo de tempo que deve decorrer antes que o ASP.NET reconecta-se ao banco de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SessionStateSection.SqlConnectionRetryInterval%2A> Especifica o intervalo de tempo em segundos antes de reconectar-se ao banco de dados quando ocorre um erro de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlConnectionString">
+      <MemberSignature Language="C#" Value="public string SqlConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SqlConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.SqlConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("sqlConnectionString", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de conexão SQL.</summary>
+        <value>A cadeia de conexão SQL. Seu valor padrão é a cadeia de caracteres genérica: "data source=127.0.0.1;Integrated Security=SSPI"</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `sqlConnectionString` atributo é necessário quando <xref:System.Web.Configuration.SessionStateSection.Mode%2A> é definido como <xref:System.Web.SessionState.SessionStateMode.SQLServer>.  
+  
+> [!NOTE]
+>  Para usar o <xref:System.Web.SessionState.SessionStateMode.SQLServer> modo de estado de sessão, você deve executar o script InstallSqlState.sql SQL (que é instalado em [*unidade*:] \windows\microsoft.NET\Framework.\\*VersionNumber* como parte da instalação padrão do .NET Framework) no computador executando o SQL Server que armazena o estado da sessão. Isso cria um banco de dados denominado ASPState com novos procedimentos armazenados e cria novas tabelas ASPStateTempApplications e ASPStateTempSessions no banco de dados TempDB.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.SqlConnectionString%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.SessionStateSection> tópico de classe para saber como acessar o <xref:System.Web.Configuration.SessionStateSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#8)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateConnectionString">
+      <MemberSignature Language="C#" Value="public string StateConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StateConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.StateConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("stateConnectionString", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de conexão do servidor de estado.</summary>
+        <value>A cadeia de conexão do servidor de estado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica o nome do servidor e a porta quando o estado da sessão é armazenado remotamente. O `stateConnectionString` atributo é necessário quando o <xref:System.Web.Configuration.SessionStateSection.Mode%2A> é definido como <xref:System.Web.SessionState.SessionStateMode.StateServer>.  
+  
+> [!NOTE]
+>  Verifique se que o serviço de estado do ASP.NET está em execução no servidor remoto que armazena as informações de estado de sessão. Esse serviço é instalado com o ASP.NET e está localizado por padrão em [*unidade*:] \windows\microsoft.NET\Framework.\\*VersionNumber*\aspnet_state.exe..  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.StateConnectionString%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.SessionStateSection> tópico de classe para saber como acessar o <xref:System.Web.Configuration.SessionStateSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#9)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateNetworkTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan StateNetworkTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan StateNetworkTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.StateNetworkTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanSecondsOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("stateNetworkTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo em que a conexão de rede entre o servidor Web e o servidor de estado pode permanecer ociosa.</summary>
+        <value>O tempo, em segundos, que a conexão de rede entre o servidor Web e o servidor de estado pode permanecer ociosa antes de ser abandonada. O valor padrão é 10 segundos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `sessionStateSection` atributo é necessário quando o <xref:System.Web.Configuration.SessionStateSection.Mode%2A> está definida como <xref:System.Web.SessionState.SessionStateMode.StateServer>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.StateNetworkTimeout%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.SessionStateSection> tópico de classe para saber como acessar o <xref:System.Web.Configuration.SessionStateSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#6)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public TimeSpan Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanMinutesOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("timeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:01:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo limite da sessão</summary>
+        <value>O tempo limite da sessão, em minutos. O valor padrão é 20 minutos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SessionStateSection.Timeout%2A> não pode ser definida como um valor maior que 525,601 minutos (1 ano).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o <xref:System.Web.Configuration.SessionStateSection.Timeout%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.SessionStateSection> tópico de classe para saber como acessar o <xref:System.Web.Configuration.SessionStateSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.SessionStateSection#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/CS/sessionstatesection.cs#11)]
+ [!code-vb[System.Web.Configuration.SessionStateSection#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionStateSection/VB/sessionstatesection.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseHostingIdentity">
+      <MemberSignature Language="C#" Value="public bool UseHostingIdentity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseHostingIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionStateSection.UseHostingIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("useHostingIdentity", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o estado de sessão usará a representação do cliente quando disponível ou se será sempre revertido para a identidade de hospedagem.</summary>
+        <value>
+          <see langword="true" /> se o aplicativo Web precisar ser revertido para a identidade de hospedagem; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

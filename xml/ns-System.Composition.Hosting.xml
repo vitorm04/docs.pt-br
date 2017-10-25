@@ -1,0 +1,6 @@
+<Namespace Name="System.Composition.Hosting">
+  <Docs>
+    <summary>O <see cref="N:System.Composition.Hosting" /> namespace contém classes para criar e configurar um contêiner de composição e relatórios exceções a partir de uma composição com falha.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,926 @@
+<Type Name="OracleConnectionStringBuilder" FullName="System.Data.OracleClient.OracleConnectionStringBuilder">
+  <TypeSignature Language="C#" Value="public sealed class OracleConnectionStringBuilder : System.Data.Common.DbConnectionStringBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OracleConnectionStringBuilder extends System.Data.Common.DbConnectionStringBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleConnectionStringBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbConnectionStringBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("DataSource")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.OracleClient.OracleConnectionStringBuilder/OracleConnectionStringBuilderConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("OracleConnectionStringBuilder has been deprecated. http://go.microsoft.com/fwlink/?LinkID=144260", false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma maneira simples de criar e gerenciar o conteúdo de cadeias de conexão usadas pela classe <see cref="T:System.Data.OracleClient.OracleConnection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo foi substituído e será removido em uma versão futura do .NET Framework. Para obter mais informações, consulte [Oracle e ADO.NET](~/docs/framework/data/adonet/oracle-and-adonet.md).  
+  
+ Os construtores de cadeia de caracteres de conexão permitem que os desenvolvedores criem programaticamente sintaticamente corrigir cadeias de caracteres de conexão e analisar e recriar a conexão existente cadeias de caracteres, usando as propriedades e métodos da classe. O construtor de cadeia de caracteres de conexão fornece propriedades com rigidez de tipos correspondentes para os pares chave/valor conhecido permitidos pela Oracle. A classe <xref:System.Data.OracleClient.OracleConnectionStringBuilder> implementa a interface <xref:System.ComponentModel.ICustomTypeDescriptor>. Isso significa que a classe funciona com os designers do Visual Studio .NET em tempo de design. Quando os desenvolvedores de usam o designer para criar fortemente tipado **conjuntos de dados** e fortemente tipadas conexões no Visual Studio .NET, a classe de construtor de cadeia de caracteres de conexão fortemente tipados exibirá as propriedades associadas ao seu tipo serão também ter conversores que podem ser mapeados para os valores comuns conhecida chaves.  
+  
+ Os desenvolvedores que precisam criar cadeias de caracteres de conexão como parte dos aplicativos pode usar o <xref:System.Data.OracleClient.OracleConnectionStringBuilder> classe para criar e modificar cadeias de caracteres de conexão. O <xref:System.Data.OracleClient.OracleConnectionStringBuilder> classe também torna fácil de gerenciar cadeias de caracteres de conexão armazenadas em um arquivo de configuração do aplicativo.  
+  
+ O <xref:System.Data.OracleClient.OracleConnectionStringBuilder> executa verificações de pares chave/valor válido. Portanto, essa classe não pode ser usada para criar cadeias de caracteres de conexão inválido. Tentando adicionar pares inválidos lançará uma exceção. O <xref:System.Data.OracleClient.OracleConnectionStringBuilder> classe mantém um conjunto fixo de sinônimos e, quando necessário, pode executar a conversão necessária para converter de um sinônimo para o nome de chave conhecido correspondente. Por exemplo, quando você usa o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Item%2A> propriedade para recuperar um valor, você pode especificar uma cadeia de caracteres que contém qualquer sinônimo para a chave que você precisa. Consulte o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Item%2A> propriedade para obter uma lista completa de sinônimos aceitáveis.  
+  
+ O <xref:System.Data.OracleClient.OracleConnectionStringBuilder> manipula as tentativas de inserir entradas mal-intencionado. Por exemplo, o código a seguir, usando o padrão <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Item%2A> propriedade (o indexador, em c#) corretamente ignora o par chave/valor aninhado.  
+  
+```vb
+Dim builder As New System.Data. _  
+    OracleClient.OracleConnectionStringBuilder  
+builder("Data Source") = "OracleDemo"  
+builder("Integrated Security") = True  
+builder("User ID") = "Mary;NewValue=Bad"  
+System.Diagnostics.Debug.WriteLine(builder.ConnectionString)  
+```  
+  
+```csharp
+System.Data.OracleClient.OracleConnectionStringBuilder builder =  
+   new System.Data.OracleClient.OracleConnectionStringBuilder();  
+builder["Data Source"] = "OracleDemo";  
+builder["integrated Security"] = true;  
+builder["User ID"] = "Mary;NewValue=Bad";  
+System.Diagnostics.Debug.WriteLine(builder.ConnectionString);  
+```  
+  
+ O resultado é a seguinte cadeia de conexão que trata o valor inválido de maneira segura, colocando o valor da ID de usuário entre aspas:  
+  
+```  
+Data Source=OracleDemo;Integrated Security=True;User ID="Mary;NewValue=Bad"  
+```  
+  
+   
+  
+## Examples  
+ O aplicativo de console a seguir cria cadeias de caracteres de conexão para um banco de dados Oracle. O código usa um <xref:System.Data.OracleClient.OracleConnectionStringBuilder> classe para criar a cadeia de caracteres de conexão e, em seguida, passa o <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> propriedade o <xref:System.Data.OracleClient.OracleConnectionStringBuilder> instância para o construtor da classe conexão. O exemplo também analisa uma cadeia de caracteres de conexão existente e demonstra várias maneiras de manipular o conteúdo da cadeia de caracteres de conexão.  
+  
+> [!NOTE]
+>  Este exemplo inclui uma senha para demonstrar como <xref:System.Data.OracleClient.OracleConnectionStringBuilder> funciona com cadeias de caracteres de conexão. Em seus aplicativos, é recomendável usar a autenticação do Windows. Se você deve usar uma senha, não inclua uma senha codificada em seu aplicativo.  
+  
+ [!code-csharp[DataWorks OracleConnectionStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder/CS/source.cs#1)]
+ [!code-vb[DataWorks OracleConnectionStringBuilder#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleConnectionStringBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleConnectionStringBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleConnectionStringBuilder (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleConnectionStringBuilder.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">A base das informações de conexão internas do objeto. Analisado em pares nome/valor. Nomes de chave inválido acionar um <see cref="T:System.Collections.Generic.KeyNotFoundException" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />. A cadeia de conexão fornecida oferece os dados para obter informações de conexão internas da instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.OracleClient.OracleConnectionStringBuilder> classe fornece uma coleção interna fixa de pares chave/valor. Mesmo se você fornecer apenas um pequeno subconjunto dos valores de cadeia de caracteres de conexão possíveis no construtor, o objeto sempre fornece valores padrão para cada par chave/valor. Quando o <xref:System.Data.Common.DbConnection.ConnectionString%2A> propriedade do objeto for recuperada, a cadeia de caracteres contém apenas os pares chave/valor no qual o valor é diferente do valor padrão para o item.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir fornece uma cadeia de caracteres de conexão simples no <xref:System.Data.OracleClient.OracleConnectionStringBuilder> objeto do construtor e, em seguida, itera por meio de todos os pares chave/valor no objeto. Observe que a coleção fornece valores padrão para cada itens. Observe também que o <xref:System.Data.OracleClient.OracleConnectionStringBuilder> classe converte sinônimos para as chaves conhecidas para que fiquem consistentes com os nomes conhecidos.  
+  
+> [!NOTE]
+>  Este exemplo inclui uma senha para demonstrar como <xref:System.Data.OracleClient.OracleConnectionStringBuilder> funciona com cadeias de caracteres de conexão. Em seus aplicativos, é recomendável usar a autenticação do Windows. Se você deve usar uma senha, não inclua uma senha codificada em seu aplicativo.  
+  
+ [!code-csharp[DataWorks OracleConnectionStringBuilder.Ctor#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Ctor/CS/source.cs#1)]
+ [!code-vb[DataWorks OracleConnectionStringBuilder.Ctor#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Ctor/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">Nome de chave inválido na cadeia de conexão.</exception>
+        <exception cref="T:System.FormatException">Valor inválido na cadeia de conexão (especificamente, quando um valor numérico ou booliano era esperado, mas não foi fornecido).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public override void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleConnectionStringBuilder.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa o conteúdo da instância <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Clear%2A> método Remove todos os pares chave/valor da <xref:System.Data.OracleClient.OracleConnectionStringBuilder>e redefine todas as propriedades correspondentes. Isso inclui a redefinir a cadeia de caracteres de conexão para uma cadeia de caracteres vazia.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o efeito de chamar o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Clear%2A> método. Este exemplo preenche a <xref:System.Data.OracleClient.OracleConnectionStringBuilder> com alguns pares chave/valor e, em seguida, chama o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Clear%2A> método e mostra os resultados.  
+  
+ [!code-csharp[DataWorks OracleConnectionStringBuilder.Clear#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Clear/CS/source.cs#1)]
+ [!code-vb[DataWorks OracleConnectionStringBuilder.Clear#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Clear/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public override bool ContainsKey (string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ContainsKey(string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleConnectionStringBuilder.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">A chave a ser localizada no <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />.</param>
+        <summary>Determina se a <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" /> contém uma chave específica.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" /> contém um elemento que foi especificado chave; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Data.OracleClient.OracleConnectionStringBuilder> contém uma coleção de tamanho fixo de pares chave/valor, o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.ContainsKey%2A> método só determina se um determinado nome da chave é válido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.OracleClient.OracleConnectionStringBuilder> instância, define algumas de suas propriedades e, em seguida, tenta determinar se várias chaves existem dentro do objeto ao chamar o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.ContainsKey%2A> método.  
+  
+ [!code-csharp[DataWorks OracleConnectionStringBuilder.ContainsKey#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.ContainsKey/CS/source.cs#1)]
+ [!code-vb[DataWorks OracleConnectionStringBuilder.ContainsKey#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.ContainsKey/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> é nulo (<see langword="Nothing" /> no Visual Basic)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public string DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Data Source")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da fonte de dados Oracle à qual se conectar.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.OracleClient.OracleConnectionStringBuilder.DataSource" /> ou <see cref="F:System.String.Empty" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "Fonte de dados" e "Server" na cadeia de caracteres de conexão. Independentemente de qual desses valores foram fornecido na cadeia de caracteres de conexão fornecido, a cadeia de caracteres de conexão criadas pelo <xref:System.Data.OracleClient.OracleConnectionStringBuilder> usará a chave "Fonte de dados" bem conhecida. Se o valor passado é nulo quando você tentar definir a propriedade, o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.DataSource%2A> propriedade será redefinida. Se o valor não foi definido e o desenvolvedor tenta recuperar a propriedade, o valor de retorno é <xref:System.String.Empty>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra que o <xref:System.Data.OracleClient.OracleConnectionStringBuilder> classe converte sinônimos para a chave de cadeia de caracteres de conexão "Fonte de dados" na chave conhecido.  
+  
+ [!code-csharp[DataWorks OracleConnectionStringBuilder.DataSource#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.DataSource/CS/source.cs#1)]
+ [!code-vb[DataWorks OracleConnectionStringBuilder.DataSource#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.DataSource/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enlist">
+      <MemberSignature Language="C#" Value="public bool Enlist { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enlist" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.Enlist" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Enlist")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o pooler inscreve automaticamente a conexão no contexto de transação atual do thread de criação.</summary>
+        <value>O valor de <see cref="P:System.Data.OracleClient.OracleConnectionStringBuilder.Enlist" /> propriedade, ou <see langword="true" /> se a propriedade não foi definida anteriormente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave "Enlist" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="protected override void GetProperties (System.Collections.Hashtable propertyDescriptors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetProperties(class System.Collections.Hashtable propertyDescriptors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleConnectionStringBuilder.GetProperties(System.Collections.Hashtable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyDescriptors" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="propertyDescriptors">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntegratedSecurity">
+      <MemberSignature Language="C#" Value="public bool IntegratedSecurity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IntegratedSecurity" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.IntegratedSecurity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Integrated Security")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a “ID de Usuário” e a “Senha” são especificadas na conexão (quando <see langword="false" />) ou se as credenciais atuais da conta do Windows são usadas para autenticação (quando <see langword="true" />).</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.OracleClient.OracleConnectionStringBuilder.IntegratedSecurity" /> ou um <see langword="false" />, se nenhum tiver sido fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave de "Segurança integrada" na cadeia de caracteres de conexão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir converte uma cadeia de caracteres de conexão existente com o uso de autenticação do Windows para usar segurança integrada. O exemplo funciona removendo o nome de usuário e a senha da cadeia de conexão e, em seguida, definindo o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.IntegratedSecurity%2A> propriedade o <xref:System.Data.OracleClient.OracleConnectionStringBuilder> objeto.  
+  
+> [!NOTE]
+>  Este exemplo inclui uma senha para demonstrar como <xref:System.Data.OracleClient.OracleConnectionStringBuilder> funciona com cadeias de caracteres de conexão. Em seus aplicativos, é recomendável usar a autenticação do Windows. Se você deve usar uma senha, não inclua uma senha codificada em seu aplicativo.  
+  
+ [!code-csharp[DataWorks OracleConnectionStringBuilder.IntegratedSecurity#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.IntegratedSecurity/CS/source.cs#1)]
+ [!code-vb[DataWorks OracleConnectionStringBuilder.IntegratedSecurity#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.IntegratedSecurity/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public override bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" /> tem um tamanho fixo.</summary>
+        <value>
+          <see langword="true" />em cada caso, porque o <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" /> fornece uma coleção de tamanho fixo de pares chave/valor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[string keyword] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">A chave do item a ser obtida ou definida.</param>
+        <summary>Obtém ou define o valor associado à chave especificada. No c#, essa propriedade é o indexador.</summary>
+        <value>O valor associado à chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Data.OracleClient.OracleConnectionStringBuilder> contém um dicionário de tamanho fixo, tentar adicionar uma chave que não existe dentro da dicionário lança um <xref:System.Collections.Generic.KeyNotFoundException>. A tabela a seguir lista todas as chaves possíveis dentro a cadeia de caracteres de conexão e o valor padrão para cada um.  
+  
+|Chave|Propriedade|Valor padrão|  
+|---------|--------------|-------------------|  
+|Fonte de dados (ou servidor)|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.DataSource%2A>|Cadeia de caracteres vazia|  
+|Manter informações de segurança (ou persistsecurityinfo)|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.PersistSecurityInfo%2A>|False|  
+|Segurança integrada|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.IntegratedSecurity%2A>|False|  
+|ID de usuário (ou usuário ou uid)|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.UserID%2A>|Cadeia de caracteres vazia|  
+|Senha|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.Password%2A>|Cadeia de caracteres vazia|  
+|Inscrever-se|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.Enlist%2A>|verdadeiro|  
+|Agrupamento|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.Pooling%2A>|verdadeiro|  
+|Tamanho mínimo do Pool|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.MinPoolSize%2A>|0|  
+|Tamanho máximo do Pool|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.MaxPoolSize%2A>|100|  
+|Omitir o nome de Conexão do Oracle|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.OmitOracleConnectionName%2A>|False|  
+|Unicode|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.Unicode%2A>|False|  
+|Carregar saldo ou tempo limite (tempo de vida da conexão)|<xref:System.Data.OracleClient.OracleConnectionStringBuilder.LoadBalanceTimeout%2A>|0|  
+  
+   
+  
+## Examples  
+ O código a seguir, em um aplicativo de console, cria um novo <xref:System.Data.OracleClient.OracleConnectionStringBuilder> e adiciona os pares chave/valor para sua conexão de cadeia de caracteres, usando o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Item%2A> propriedade.  
+  
+ [!code-csharp[DataWorks OracleConnectionStringBuilder.Item#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Item/CS/source.cs#1)]
+ [!code-vb[DataWorks OracleConnectionStringBuilder.Item#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Item/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">Tentativa de adicionar uma chave que não existe nas chaves disponíveis.</exception>
+        <exception cref="T:System.FormatException">Valor inválido na cadeia de conexão (especificamente, quando um valor numérico ou booliano era esperado, mas não foi fornecido).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public override System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> que contém as chaves de <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém as chaves de <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos valores no <xref:System.Collections.ICollection> não for especificado, mas é a mesma ordem que os valores associados no <xref:System.Collections.ICollection> retornado pelo <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Values%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de aplicativo de console a seguir cria um novo <xref:System.Data.OracleClient.OracleConnectionStringBuilder>. O código percorrerá a <xref:System.Collections.ICollection> retornado pelo <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Keys%2A> exibindo os pares chave/valor de propriedade.  
+  
+ [!code-csharp[DataWorks OracleConnectionStringBuilder.Keys#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Keys/CS/source.cs#1)]
+ [!code-vb[DataWorks OracleConnectionStringBuilder.Keys#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Keys/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadBalanceTimeout">
+      <MemberSignature Language="C#" Value="public int LoadBalanceTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LoadBalanceTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.LoadBalanceTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Load Balance Timeout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo mínimo, em segundos, para a conexão de vida do pool de conexão antes de ser removido.</summary>
+        <value>O valor de <see cref="P:System.Data.OracleClient.OracleConnectionStringBuilder.LoadBalanceTimeout" /> propriedade, ou 0 se nenhum foi fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "Timeout de balanceamento de carga" e "Tempo de vida de Conexão" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPoolSize">
+      <MemberSignature Language="C#" Value="public int MaxPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.MaxPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Max Pool Size")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de conexões permitido no pool de conexão para essa cadeia de conexão específica.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.OracleClient.OracleConnectionStringBuilder.MaxPoolSize" /> ou 100, se nenhum foi fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave de "Max Pool Size" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinPoolSize">
+      <MemberSignature Language="C#" Value="public int MinPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.MinPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Min Pool Size")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número mínimo de conexões permitidas no pool de conexão para essa cadeia de caracteres de conexão específica.</summary>
+        <value>O valor de <see cref="P:System.Data.OracleClient.OracleConnectionStringBuilder.MinPoolSize" /> propriedade, ou 0 se nenhum foi fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave de "Tamanho mínimo do Pool" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OmitOracleConnectionName">
+      <MemberSignature Language="C#" Value="public bool OmitOracleConnectionName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OmitOracleConnectionName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.OmitOracleConnectionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Omit Oracle Connection Name")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o sinalizador que habilita reversões de transação em versões anteriores do Oracle (antes 8.1.7.4.1).</summary>
+        <value>
+          <see langword="true" />Se reversões de transação estão habilitados; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando definido como `true`, essa propriedade impede que determinados erros que ocorrem durante a tentativa de reverter transações em versões anteriores do Oracle (antes 8.1.7.4.1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Password")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.PasswordPropertyText(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a senha para a conta do Oracle.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.OracleClient.OracleConnectionStringBuilder.Password" /> ou <see cref="F:System.String.Empty" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "Senha" e "pwd" na cadeia de caracteres de conexão.  
+  
+   
+  
+## Examples  
+ Se o valor passado é nulo quando você tentar definir a propriedade, o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Password%2A> propriedade será redefinida. Se o valor não foi definido e o desenvolvedor tenta recuperar a propriedade, o valor de retorno é <xref:System.String.Empty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistSecurityInfo">
+      <MemberSignature Language="C#" Value="public bool PersistSecurityInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PersistSecurityInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.PersistSecurityInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Persist Security Info")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se informações confidenciais de segurança, como a senha, não serão retornadas como parte da conexão se ela estiver aberta ou se já esteve em um estado aberto.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.OracleClient.OracleConnectionStringBuilder.PersistSecurityInfo" /> ou <see langword="false" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "Persist Security Info" e "persistsecurityinfo" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pooling">
+      <MemberSignature Language="C#" Value="public bool Pooling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Pooling" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.Pooling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Pooling")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se a conexão será agrupado, ou se cada conexão poderá ser explicitamente aberto toda vez que a conexão é solicitada.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.OracleClient.OracleConnectionStringBuilder.Pooling" /> ou <see langword="true" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave do "Pool" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override bool Remove (string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Remove(string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleConnectionStringBuilder.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">A chave do par chave/valor a ser removido da cadeia de conexão neste <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />.</param>
+        <summary>Remove a entrada com a chave especificada da instância de <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />.</summary>
+        <returns>
+          <see langword="true" />Se a chave existe na cadeia de caracteres de conexão e foi removida, <see langword="false" /> se a chave não existe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Remove%2A> método retorna um valor que indica o sucesso, não é necessário procurar a existência de uma chave antes de tentar remover o par chave/valor da <xref:System.Data.OracleClient.OracleConnectionStringBuilder> instância. Porque o <xref:System.Data.OracleClient.OracleConnectionStringBuilder> mantém uma coleção de tamanho fixo de pares chave/valor, chamar o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Remove%2A> método apenas redefine o valor do par chave/valor de volta para seu valor padrão.  
+  
+ Porque a coleção de chaves com suporte a <xref:System.Data.OracleClient.OracleConnectionStringBuilder> é fixa, cada item dentro da coleção tem um valor de padrão conhecido.  
+  
+ A tabela a seguir lista as chaves e o valor para cada quando o <xref:System.Data.OracleClient.OracleConnectionStringBuilder> é inicializado pela primeira vez, ou depois de <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Remove%2A> método foi chamado:  
+  
+|Chave|Valor padrão|  
+|---------|-------------------|  
+|Fonte de dados|Cadeia de caracteres vazia|  
+|Persistência de segurança|False|  
+|Segurança integrada|False|  
+|ID de usuário|Cadeia de caracteres vazia|  
+|Senha|Cadeia de caracteres vazia|  
+|Inscrever-se|verdadeiro|  
+|Agrupamento|verdadeiro|  
+|Tamanho mínimo do Pool|0|  
+|Tamanho máximo do Pool|100|  
+|Unicode|False|  
+|Tempo limite de balanceamento de carga|0|  
+|Omitir o nome de Conexão do Oracle|False|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir converte uma cadeia de caracteres de conexão existente com o uso de autenticação do Windows para usar segurança integrada. O exemplo funciona removendo o nome de usuário e a senha da cadeia de conexão e, em seguida, definindo o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.IntegratedSecurity%2A> propriedade o <xref:System.Data.OracleClient.OracleConnectionStringBuilder> objeto.  
+  
+> [!NOTE]
+>  Este exemplo inclui uma senha para demonstrar como <xref:System.Data.OracleClient.OracleConnectionStringBuilder> funciona com cadeias de caracteres de conexão. Em seus aplicativos, é recomendável usar a autenticação do Windows. Se você deve usar uma senha, não inclua uma senha codificada em seu aplicativo.  
+  
+ [!code-csharp[DataWorks OracleConnectionStringBuilder.Remove#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Remove/CS/source.cs#1)]
+ [!code-vb[DataWorks OracleConnectionStringBuilder.Remove#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Remove/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> é nulo (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerialize">
+      <MemberSignature Language="C#" Value="public override bool ShouldSerialize (string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ShouldSerialize(string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleConnectionStringBuilder.ShouldSerialize(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">A chave a ser localizada no <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />.</param>
+        <summary>Indica se a chave especificada existe neste <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" /> instância.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" /> contiver uma entrada com a chave, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método se comporta de forma idêntica ao <xref:System.Data.OracleClient.OracleConnectionStringBuilder.ContainsKey%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public override bool TryGetValue (string keyword, out object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TryGetValue(string keyword, [out] object&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleConnectionStringBuilder.TryGetValue(System.String,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">A chave do item a ser recuperado.</param>
+        <param name="value">O valor correspondente ao <c>palavra-chave.</c></param>
+        <summary>Recupera um valor correspondente para a chave fornecida neste <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="keyword" /> foi encontrada na cadeia de caracteres de conexão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.OracleClient.OracleConnectionStringBuilder.TryGetValue%2A> método permite que os desenvolvedores recuperar com segurança um valor de um <xref:System.Data.OracleClient.OracleConnectionStringBuilder> sem a necessidade de verificar se o nome de chave fornecido é um nome de chave válido. Porque <xref:System.Data.OracleClient.OracleConnectionStringBuilder.TryGetValue%2A> normalmente lida com a pesquisa para uma chave inexistente, não é necessário para procurar a existência de uma chave antes de recuperar seu valor. Chamando <xref:System.Data.OracleClient.OracleConnectionStringBuilder.TryGetValue%2A> com uma chave inexistente colocará o valor null (`Nothing` no Visual Basic) no `value` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o comportamento de <xref:System.Data.OracleClient.OracleConnectionStringBuilder.TryGetValue%2A> método.  
+  
+ [!code-csharp[DataWorks OracleConnectionStringBuilder.TryGetValue#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.TryGetValue/CS/source.cs#1)]
+ [!code-vb[DataWorks OracleConnectionStringBuilder.TryGetValue#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.TryGetValue/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unicode">
+      <MemberSignature Language="C#" Value="public bool Unicode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Unicode" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.Unicode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Unicode")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o cliente oferece suporte à funcionalidade Unicode disponível em clientes do Oracle posteriores, ou se for não Unicode com suporte.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.OracleClient.OracleConnectionStringBuilder.Unicode" /> ou <see langword="false" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave "Unicode" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserID">
+      <MemberSignature Language="C#" Value="public string UserID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserID" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.UserID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("User ID")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ID de usuário a ser usado ao conectar-se ao Oracle.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.OracleClient.OracleConnectionStringBuilder.UserID" /> ou <see cref="F:System.String.Empty" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "User ID", "usuário" e "uid" na cadeia de caracteres de conexão.  
+  
+ Se o valor passado é nulo quando você tentar definir a propriedade, o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.UserID%2A> propriedade será redefinida. Se o valor não foi definido e o desenvolvedor tenta recuperar a propriedade, o valor de retorno é <xref:System.String.Empty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public override System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleConnectionStringBuilder.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> que contém os valores de <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém os valores de <see cref="T:System.Data.OracleClient.OracleConnectionStringBuilder" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos valores no <xref:System.Collections.ICollection> não for especificado, mas é a mesma ordem que as chaves associadas no <xref:System.Collections.ICollection> retornado pelo <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Keys%2A> propriedade. Como cada instância do <xref:System.Data.OracleClient.OracleConnectionStringBuilder> sempre contém o mesmo conjunto fixo de chaves, o <xref:System.Data.OracleClient.OracleConnectionStringBuilder.Values%2A> propriedade sempre retorna os valores correspondentes para o conjunto fixo de chaves, na mesma ordem que as chaves.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo <xref:System.Data.OracleClient.OracleConnectionStringBuilder>e, em seguida, itera por meio de todos os valores dentro do objeto.  
+  
+ [!code-csharp[DataWorks OracleConnectionStringBuilder.Values#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Values/CS/source.cs#1)]
+ [!code-vb[DataWorks OracleConnectionStringBuilder.Values#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OracleConnectionStringBuilder.Values/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

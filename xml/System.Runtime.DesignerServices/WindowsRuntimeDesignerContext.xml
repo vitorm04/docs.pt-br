@@ -1,0 +1,234 @@
+<Type Name="WindowsRuntimeDesignerContext" FullName="System.Runtime.DesignerServices.WindowsRuntimeDesignerContext">
+  <TypeSignature Language="C#" Value="public sealed class WindowsRuntimeDesignerContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WindowsRuntimeDesignerContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.DesignerServices.WindowsRuntimeDesignerContext" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece vinculação para designers que são usados para criar aplicativos da Windows Store 8. x de assembly personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse recurso é usado somente no modo de desenvolvedor para [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos. Ele permite que os designers fornecer os contextos de associação isolado conforme necessário, durante o desenvolvimento iterativo de assemblies.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsRuntimeDesignerContext (System.Collections.Generic.IEnumerable&lt;string&gt; paths, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; paths, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.#ctor(System.Collections.Generic.IEnumerable{System.String},System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="paths" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="paths">Os caminhos para pesquisar.</param>
+        <param name="name">O nome do contexto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.DesignerServices.WindowsRuntimeDesignerContext" /> classe, especificando o conjunto de caminhos para pesquisar por terceiros [!INCLUDE[wrt](~/includes/wrt-md.md)] tipos em assemblies gerenciados e especificando o nome do contexto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">O domínio de aplicativo atual não é o domínio de aplicativo padrão.  
+  
+ -ou-  
+  
+ O processo não está em execução no contêiner do aplicativo.  
+  
+ -ou-  
+  
+ O computador não tem uma licença de desenvolvedor.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ou <paramref name="paths" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetAssembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly GetAssembly (string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Assembly GetAssembly(string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.GetAssembly(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyName">O nome completo do assembly a ser carregado. Para obter uma descrição de nomes de assembly completo, consulte o <see cref="P:System.Reflection.Assembly.FullName" /> propriedade.</param>
+        <summary>Carrega o assembly especificado do contexto atual.</summary>
+        <returns>O assembly, se ele for encontrado no contexto atual; Caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public Type GetType (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetType(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.GetType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome qualificado do assembly do tipo de carga. Para obter uma descrição dos nomes de assembly qualificado, consulte o <see cref="P:System.Type.AssemblyQualifiedName" /> propriedade.</param>
+        <summary>Carrega o tipo especificado do contexto atual.</summary>
+        <returns>O tipo, se ele é encontrado no contexto atual; Caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeSharedContext">
+      <MemberSignature Language="C#" Value="public static void InitializeSharedContext (System.Collections.Generic.IEnumerable&lt;string&gt; paths);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InitializeSharedContext(class System.Collections.Generic.IEnumerable`1&lt;string&gt; paths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.InitializeSharedContext(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="paths" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="paths">Uma coleção enumerável de caminhos que são usados para resolver as solicitações de associação que não podem ser atendidas pelo contexto da iteração.</param>
+        <summary>Cria um contexto e a define como o contexto compartilhado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto compartilhado não pode ser definido mais de uma vez.  
+  
+ <xref:System.Runtime.DesignerServices.WindowsRuntimeDesignerContext>há suporte apenas no domínio de aplicativo padrão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O contexto compartilhado já foi definido neste domínio de aplicativo.  
+  
+ -ou-  
+  
+ O domínio de aplicativo atual não é o domínio de aplicativo padrão.  
+  
+ -ou-  
+  
+ O processo não está em execução no contêiner do aplicativo.  
+  
+ -ou-  
+  
+ O computador não tem uma licença de desenvolvedor.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="paths" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do contexto do designer de associação.</summary>
+        <value>O nome do contexto.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetIterationContext">
+      <MemberSignature Language="C#" Value="public static void SetIterationContext (System.Runtime.DesignerServices.WindowsRuntimeDesignerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIterationContext(class System.Runtime.DesignerServices.WindowsRuntimeDesignerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.DesignerServices.WindowsRuntimeDesignerContext.SetIterationContext(System.Runtime.DesignerServices.WindowsRuntimeDesignerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Runtime.DesignerServices.WindowsRuntimeDesignerContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto que manipula iterações de solicitações de associação de assembly.</param>
+        <summary>Define um contexto para manipular iterações de solicitações de associação de assembly, como assemblies são recompilados durante o processo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto pode ser substituído por um novo contexto de associação a qualquer momento, conforme exigido pelas necessidades do designer.  
+  
+ <xref:System.Runtime.DesignerServices.WindowsRuntimeDesignerContext>há suporte apenas no domínio de aplicativo padrão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O domínio de aplicativo atual não é o domínio de aplicativo padrão.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,189 @@
+<Type Name="TreeNodeStates" FullName="System.Windows.Forms.TreeNodeStates">
+  <TypeSignature Language="C#" Value="public enum TreeNodeStates" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TreeNodeStates extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeNodeStates" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define constantes que representam os estados possíveis de um <see cref="T:System.Windows.Forms.TreeNode" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelo <xref:System.Windows.Forms.DrawTreeNodeEventArgs.State%2A> propriedade o <xref:System.Windows.Forms.DrawTreeNodeEventArgs> classe. Para obter mais informações, consulte o <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como personalizar um <xref:System.Windows.Forms.TreeView> controle usando o desenho do proprietário. O <xref:System.Windows.Forms.TreeView> controle no exemplo exibe marcas de nó opcional junto com os rótulos de nó normal. Marcas de nó são especificadas usando o <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> propriedade. O <xref:System.Windows.Forms.TreeView> controle também usa cores personalizadas, incluindo uma cor de realce personalizadas.  
+  
+ Você pode personalizar a maioria do <xref:System.Windows.Forms.TreeView> cores definindo propriedades de cores, mas a cor de realce de seleção não está disponível como uma propriedade. Além disso, o retângulo de realce de seleção padrão estende-se apenas ao redor de um rótulo de nó. Desenho proprietário deve ser usado para desenhar as marcas de nó e desenhar um retângulo de realce personalizada grande o suficiente para incluir uma marca de nó.  
+  
+ No exemplo, um manipulador para o <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> evento desenha nós desmarcado chamando métodos do <xref:System.Windows.Forms.DrawTreeNodeEventArgs> classe. Esses métodos fornecem a aparência padrão de <xref:System.Windows.Forms.TreeView> elementos que não é necessário para personalização. O manipulador desenha as marcas de nó e o realce de seleção personalizada manualmente.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> tópico de referência.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="Checked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Checked = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Checked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nó está marcado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Default = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nó está no estado padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Focused">
+      <MemberSignature Language="C#" Value="Focused" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Focused = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Focused" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nó tem o foco.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Grayed">
+      <MemberSignature Language="C#" Value="Grayed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Grayed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Grayed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nó está desabilitado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hot">
+      <MemberSignature Language="C#" Value="Hot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Hot = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Hot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nó está ativo. Esse estado ocorre quando a propriedade <see cref="P:System.Windows.Forms.TreeView.HotTracking" /> está definida como <see langword="true" /> e o ponteiro do mouse está sobre o nó.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Indeterminate">
+      <MemberSignature Language="C#" Value="Indeterminate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Indeterminate = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Indeterminate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nó em um estado indeterminado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Marked">
+      <MemberSignature Language="C#" Value="Marked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Marked = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Marked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nó está marcado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="Selected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates Selected = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.Selected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nó está selecionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowKeyboardCues">
+      <MemberSignature Language="C#" Value="ShowKeyboardCues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeNodeStates ShowKeyboardCues = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeNodeStates.ShowKeyboardCues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nó deve indicar um atalho de teclado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

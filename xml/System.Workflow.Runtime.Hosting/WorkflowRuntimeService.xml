@@ -1,0 +1,289 @@
+<Type Name="WorkflowRuntimeService" FullName="System.Workflow.Runtime.Hosting.WorkflowRuntimeService">
+  <TypeSignature Language="C#" Value="public abstract class WorkflowRuntimeService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WorkflowRuntimeService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base abstrata da qual os serviços de núcleo do mecanismo de tempo de execução do fluxo de trabalho são derivados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Serviços que derivam de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe pode ser iniciada e interrompida pelo mecanismo de tempo de execução de fluxo de trabalho. A ordem na qual os serviços são iniciados ou interrompidos, no entanto, é indeterminada, e serviços podem exigir o suporte de outros serviços para inicializar próprios corretamente quando eles são iniciados e, por outro lado, podem exigir a dar suporte de outros serviços para corretamente desligado quando eles estão interrompidos. Para resolver esse problema, o mecanismo de tempo de execução do fluxo de trabalho fornece duas fases mecanismos para iniciar e parar serviços. Quando <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> é chamado, o fluxo de trabalho mecanismo de tempo de execução chama o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> método para cada um dos seus serviços que derivam de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe.  Depois que todos esses serviços tiverem sido iniciados, o mecanismo de tempo de execução do fluxo de trabalho gera o <xref:System.Workflow.Runtime.WorkflowRuntime.Started?displayProperty=nameWithType> evento, o que faz com que o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A> método ser chamado para cada serviço de mecanismo de tempo de execução do fluxo de trabalho. O serviço pode substituir o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A> método para participar desse processo de duas fases. Da mesma forma, quando <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A> é chamado, o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> método, o <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=nameWithType> evento e o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A> método fornecem esse mecanismo em duas fases.  A propriedade de estado contém um <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState> valor que indica se o serviço está iniciando ou parando ou é totalmente iniciado ou parado.  
+  
+ Serviços que derivam de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe pode disparar o <xref:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled?displayProperty=nameWithType> eventos quando encontra uma condição que faz com que uma exceção sem tratamento, chamando <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.RaiseServicesExceptionNotHandledEvent%2A>.  
+  
+ Serviços derivam a <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService> classe, o <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> classe, o <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> classe e o <xref:System.Workflow.Runtime.Tracking.TrackingService> classe derivada, por fim, do <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowRuntimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State%2A>é inicializado como <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Stopped>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStarted">
+      <MemberSignature Language="C#" Value="protected virtual void OnStarted ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStarted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, representa o método que será chamado quando o mecanismo de tempo de execução de fluxo de trabalho gerará o <see cref="E:System.Workflow.Runtime.WorkflowRuntime.Started" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe implementa um mecanismo de partida em duas fases, para que os serviços de mecanismo de tempo de execução do fluxo de trabalho podem executar qualquer inicialização que depende de outros serviços depois que o mecanismo de tempo de execução do fluxo de trabalho foi invocado o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> método para todos os seus serviços de mecanismo de tempo de execução do fluxo de trabalho. Depois do fluxo de trabalho do mecanismo de tempo de execução chamou o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> método de todos os seus serviços de mecanismo de tempo de execução do fluxo de trabalho, ele gera o <xref:System.Workflow.Runtime.WorkflowRuntime.Started?displayProperty=nameWithType> evento. Você pode substituir o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A> método para fornecer funcionalidades inicialização final exigidas pelo serviço quando o <xref:System.Workflow.Runtime.WorkflowRuntime.Started?displayProperty=nameWithType> é gerado. A mecânica de assinatura e cancelar a assinatura no <xref:System.Workflow.Runtime.WorkflowRuntime.Started?displayProperty=nameWithType> evento é tratado internamente.  
+  
+> [!NOTE]
+>  Se seu serviço será adicionado ao mecanismo de tempo de execução de fluxo de trabalho por uma chamada para <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A> depois que o mecanismo de tempo de execução do fluxo de trabalho já tiver sido iniciado, o mecanismo de tempo de execução do fluxo de trabalho se chamará <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> em seu serviço. No entanto, nessa situação, o <xref:System.Workflow.Runtime.WorkflowRuntime.Started> evento já ocorreu, portanto, seu serviço pode ser necessário que executar qualquer inicialização que normalmente executaria no <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A> de dentro de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> método. Você pode testar <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> para determinar se o mecanismo de tempo de execução do fluxo de trabalho foi iniciado.  
+  
+ <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State%2A>é definido como <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Started> antes de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A> é invocado.  A implementação padrão de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A> não realiza nenhuma ação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStopped">
+      <MemberSignature Language="C#" Value="protected virtual void OnStopped ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStopped() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, representa o método que será chamado quando o mecanismo de tempo de execução de fluxo de trabalho gerará o <see cref="E:System.Workflow.Runtime.WorkflowRuntime.Stopped" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe implementa um mecanismo de parada em duas fases, para que os serviços de mecanismo de tempo de execução do fluxo de trabalho poderão reter algumas funcionalidades após sua <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> método é chamado pelo mecanismo de tempo de execução de fluxo de trabalho para que eles podem, se necessário, dar suporte o desligamento de outros serviços. Depois do fluxo de trabalho do mecanismo de tempo de execução chamou o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> método de todos os seus serviços de mecanismo de tempo de execução do fluxo de trabalho, ele gera o <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=nameWithType> evento. Você pode substituir o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A> método para fornecer alguma funcionalidade do último desligamento exigida pelo seu serviço quando o <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=nameWithType> é gerado. A mecânica de assinatura e cancelar a assinatura no <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=nameWithType> evento é tratado internamente.  
+  
+> [!NOTE]
+>  Se seu <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> é removido do mecanismo de tempo de execução de fluxo de trabalho por uma chamada para <xref:System.Workflow.Runtime.WorkflowRuntime.RemoveService%2A> enquanto o mecanismo de tempo de execução do fluxo de trabalho é executado, o mecanismo de tempo de execução do fluxo de trabalho se chamará <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> em seu serviço. No entanto, nessa situação, o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A> método não será chamado para o serviço. Portanto, o serviço pode ter que executar qualquer desligamento final que normalmente executaria no <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A> de dentro de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> método. Você pode testar <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> para determinar se o mecanismo de tempo de execução do fluxo de trabalho está em execução.  
+  
+ <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State%2A>é definido como <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Stopped> antes de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A> é invocado.  A implementação padrão de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A> não realiza nenhuma ação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseServicesExceptionNotHandledEvent">
+      <MemberSignature Language="C#" Value="protected void RaiseServicesExceptionNotHandledEvent (Exception exception, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseServicesExceptionNotHandledEvent(class System.Exception exception, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.RaiseServicesExceptionNotHandledEvent(System.Exception,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="exception">A exceção que não pôde ser tratada.</param>
+        <param name="instanceId">O <see cref="T:System.Guid" /> da instância do fluxo de trabalho associada à exceção sem tratamento.</param>
+        <summary>Aciona o evento <see cref="E:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O serviço pode chamar <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.RaiseServicesExceptionNotHandledEvent%2A> para gerar o <xref:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled?displayProperty=nameWithType> evento quando encontra uma exceção de que ele não pode tratar durante sua execução. Você deve transmitir o <xref:System.Guid> da instância do fluxo de trabalho associada à exceção sem tratamento. Por exemplo, um serviço de timer pode passar o <xref:System.Guid> associado com o temporizador para o qual a exceção ocorreu.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Runtime">
+      <MemberSignature Language="C#" Value="protected System.Workflow.Runtime.WorkflowRuntime Runtime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.WorkflowRuntime Runtime" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Runtime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowRuntime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> para este serviço.</summary>
+        <value>O objeto <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de tempo de execução do fluxo de trabalho define essa propriedade antes de chamar <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> no serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="protected virtual void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, inicia o serviço e as alterações de <see cref="P:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State" /> para <see cref="F:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Starting" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A>é chamado pelo mecanismo de tempo de execução de fluxo de trabalho em todos os seus serviços que derivam de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> quando <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> é chamado.  
+  
+ <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A>também é chamado pelo mecanismo de tempo de execução de fluxo de trabalho quando um serviço de mecanismo de tempo de execução do fluxo de trabalho é adicionado ao mecanismo de tempo de execução de fluxo de trabalho por uma chamada para <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A> depois que o mecanismo de tempo de execução do fluxo de trabalho já foi iniciado. A implementação padrão de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> controla se o serviço foi iniciado e usa essas informações para lançar a exceção apropriada se o serviço foi iniciado enquanto ele está sendo executado.  
+  
+ Você pode fornecer funcionalidade adicional necessária para que o serviço foi iniciado pelo mecanismo de tempo de execução de fluxo de trabalho por substituir esse método. Não há nenhuma garantia sobre quais, se houver, os serviços serão executados quando o mecanismo de tempo de execução do fluxo de trabalho chama <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> em seu serviço. Portanto, o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> método, você deve somente executar qualquer inicialização que não dependem da funcionalidade fornecida por outros serviços. Isso inclui a funcionalidade fornecida pelos serviços principais como o serviço do Agendador. O mecanismo de tempo de execução de fluxo de trabalho gerará o <xref:System.Workflow.Runtime.WorkflowRuntime.Started?displayProperty=nameWithType> eventos após ter chamado o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> método de todos os seus serviços de mecanismo de tempo de execução do fluxo de trabalho. Se o serviço exigir a inicialização adicional após todos os serviços de mecanismo de tempo de execução de fluxo de trabalho foram iniciados, você pode substituir o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A> método para realizar essa inicialização quando a <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> é gerado.  
+  
+> [!NOTE]
+>  Se seu serviço será adicionado ao mecanismo de tempo de execução de fluxo de trabalho por uma chamada para <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A> depois que o mecanismo de tempo de execução do fluxo de trabalho já tiver sido iniciado, o mecanismo de tempo de execução do fluxo de trabalho se chamará <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> em seu serviço. No entanto, nessa situação, o <xref:System.Workflow.Runtime.WorkflowRuntime.Started> evento já ocorreu, portanto, seu serviço pode ser necessário que executar qualquer inicialização que normalmente executaria no <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A> de dentro de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> método. Você pode testar <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> para determinar se o mecanismo de tempo de execução do fluxo de trabalho foi iniciado.  
+  
+ <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A>só deve ser chamado pelo mecanismo de tempo de execução de fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra isso chamando o método Start em um objeto derivado de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService>, TerminationTrackingService.  Este exemplo é do exemplo do SDK do serviço de controle de encerramento.  Para obter mais informações, consulte [exemplo de serviço de controle de encerramento](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[WF_Samples#112](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#112)]
+ [!code-vb[WF_Samples#112](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#112)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Runtime" />é uma referência nula (<see langword="Nothing" /> no Visual Basic)  
+  
+ -ou-  
+  
+ O serviço já foi iniciado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="protected System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState State" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe implementa mecanismos de duas fases para iniciar e parar um serviço de mecanismo de tempo de execução do fluxo de trabalho. A primeira fase do mecanismo de início começa quando o mecanismo de tempo de execução do fluxo de trabalho chama a implementação de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> método para o serviço. Esse método deve chamar a implementação base de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A>, que define <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State%2A> para <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Starting>. A segunda fase ocorre depois que o mecanismo de tempo de execução do fluxo de trabalho inicia todos os seus serviços de mecanismo de tempo de execução do fluxo de trabalho quando ele gera o <xref:System.Workflow.Runtime.WorkflowRuntime.Started> evento. O <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> gerencia internamente uma assinatura para esse evento e definirá seu manipulador <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State%2A> para <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Started>.  
+  
+ O mecanismo de duas fases para parar um serviço de mecanismo de tempo de execução do fluxo de trabalho começa quando o mecanismo de tempo de execução do fluxo de trabalho chama a implementação de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> método para o serviço. Esse método deve chamar a implementação base de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A>, que define <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State%2A> para <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Stopping>. Depois que ele tiver sido interrompido todos os seus serviços de mecanismo de tempo de execução do fluxo de trabalho, o mecanismo de tempo de execução do fluxo de trabalho gera o <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped> evento. O <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> gerencia internamente uma assinatura para esse evento e definirá seu manipulador <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State%2A> para <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Stopped>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="protected virtual void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, interrompe o serviço e as alterações de <see cref="P:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.State" /> para <see cref="F:System.Workflow.Runtime.Hosting.WorkflowRuntimeServiceState.Stopping" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A>é chamado pelo mecanismo de tempo de execução de fluxo de trabalho em todos os seus serviços que derivam de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> quando <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A> é chamado.  <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A>também é chamado pelo mecanismo de tempo de execução de fluxo de trabalho quando um serviço de mecanismo de tempo de execução do fluxo de trabalho é removido do mecanismo de tempo de execução de fluxo de trabalho por uma chamada para <xref:System.Workflow.Runtime.WorkflowRuntime.RemoveService%2A>. A implementação padrão de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> controla se o serviço foi iniciado e usa essas informações para lançar a exceção apropriada se o serviço foi interrompido antes de ser iniciado.  
+  
+ Você pode fornecer funcionalidade adicional necessária para o serviço interrompido pelo mecanismo de tempo de execução de fluxo de trabalho por substituir esse método. Há nenhuma garantia sobre quais, se houver, serviços será interrompido ou em execução quando <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> é chamado em seu serviço. O mecanismo de tempo de execução de fluxo de trabalho gerará o <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=nameWithType> eventos após ter chamado o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> método de todos os seus serviços de mecanismo de tempo de execução do fluxo de trabalho. O serviço pode precisar manter algumas funcionalidades residual para dar suporte a outros serviços até que todos os serviços de mecanismo de tempo de execução fluxo de trabalho tiveram seus métodos stop chamados pelo mecanismo de tempo de execução de fluxo de trabalho. Se seu serviço deve manter essa funcionalidade, você pode substituir o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A> método para executar qualquer ação adicional necessária para concluir a interromper o serviço quando o <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped?displayProperty=nameWithType> é gerado.  
+  
+> [!NOTE]
+>  Se seu <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> é removido do mecanismo de tempo de execução de fluxo de trabalho por uma chamada para <xref:System.Workflow.Runtime.WorkflowRuntime.RemoveService%2A> enquanto o mecanismo de tempo de execução do fluxo de trabalho é executado, o mecanismo de tempo de execução do fluxo de trabalho se chamará <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> em seu serviço. No entanto, nessa situação, o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A> método não será chamado para o serviço. Portanto, o serviço pode ter que executar qualquer funcionalidade adicional de desligamento que normalmente executaria no <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A> de dentro de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> método. Você pode testar <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> para determinar se o mecanismo de tempo de execução do fluxo de trabalho está em execução.  
+  
+ <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A>só deve ser chamado pelo mecanismo de tempo de execução de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Runtime" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).  
+  
+ -ou-  
+  
+ O serviço ainda não foi iniciado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

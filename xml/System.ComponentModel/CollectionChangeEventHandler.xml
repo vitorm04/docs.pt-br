@@ -1,0 +1,47 @@
+<Type Name="CollectionChangeEventHandler" FullName="System.ComponentModel.CollectionChangeEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void CollectionChangeEventHandler(object sender, CollectionChangeEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CollectionChangeEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.CollectionChangeEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.ComponentModel.CollectionChangeEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.ComponentModel.CollectionChangeEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipula o <see cref="E:System.Data.DataColumnCollection.CollectionChanged" /> evento gerado quando a adição de elementos ou remoção de elementos de uma coleção.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.ComponentModel.CollectionChangeEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de como usar o <xref:System.ComponentModel.CollectionChangeEventHandler> delegar, consulte o código de exemplo de <xref:System.Data.DataColumnCollection.CollectionChanged> eventos do <xref:System.Data.DataColumnCollection> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

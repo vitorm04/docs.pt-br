@@ -1,0 +1,1395 @@
+<Type Name="AssemblyName" FullName="System.Reflection.AssemblyName">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyName : ICloneable, System.Runtime.InteropServices._AssemblyName, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit AssemblyName extends System.Object implements class System.ICloneable, class System.Runtime.InteropServices._AssemblyName, class System.Runtime.Serialization.IDeserializationCallback, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblyName" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._AssemblyName</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IDeserializationCallback</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._AssemblyName))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve integralmente a identidade exclusiva de um assembly.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.AssemblyName> objeto contém informações sobre um assembly, que pode ser usada para associar a esse assembly. Identidade de um assembly consiste no seguinte:  
+  
+-   Nome simples.  
+  
+-   Número de versão.  
+  
+-   Par de chaves criptográficas.  
+  
+-   Cultura com suporte.  
+  
+ O nome simples normalmente é o nome do arquivo para o arquivo de manifesto sem a extensão. O par de chaves inclui uma chave pública e privada, usada para criar assinaturas de nome forte para assemblies.  
+  
+ Todos os compiladores que dão suporte ao Common Language Runtime emitirão o nome simples de uma classe aninhada, e reflexão constrói um nome danificado quando consultado, de acordo com as convenções a seguir.  
+  
+|Delimitador|Significado|  
+|---------------|-------------|  
+|Barra invertida (\\)|Caractere de escape.|  
+|Vírgula (,)|Precede o nome do assembly.|  
+|Sinal de adição (+)|Precede uma classe aninhada.|  
+  
+ Por exemplo, o nome totalmente qualificado para uma classe pode ser semelhante a:  
+  
+ ContainingClass + NestedClass, MyAssembly  
+  
+ A "++" becomes "\\+\\+", and a "\\" becomes "\\\\".  
+  
+ Este nome qualificado pode ser mantido e posteriormente usado para carregar o <xref:System.Type>. Para procurar e carregar <xref:System.Type>, use <xref:System.Type.GetType%2A> apenas com o nome do tipo ou com o nome do tipo qualificado do assembly. <xref:System.Type.GetType%2A> com o nome de tipo só irá procurar o <xref:System.Type> no assembly do chamador e, em seguida, no assembly System. <xref:System.Type.GetType%2A> com o nome de tipo qualificado de assembly irá procurar o <xref:System.Type> em qualquer assembly.  
+  
+ Totalmente especificado <xref:System.Reflection.AssemblyName> devem ter nome, cultura, chave pública ou token de chave pública, principal versão secundária, versão, número da compilação e parâmetros de número de revisão. Os últimos quatro dígitos são empacotados no <xref:System.Version> tipo.  
+  
+ Para criar um nome simples, crie um <xref:System.Reflection.AssemblyName> objeto usando o construtor padrão e defina o <xref:System.Reflection.AssemblyName.Name%2A>. As outras propriedades são opcionais.  
+  
+ Para criar um nome forte completo, crie um <xref:System.Reflection.AssemblyName> objeto usando o construtor padrão e defina o <xref:System.Reflection.AssemblyName.Name%2A> e <xref:System.Reflection.AssemblyName.KeyPair%2A>. As outras propriedades são opcionais. Use <xref:System.Reflection.AssemblyName.SetPublicKey%2A> e <xref:System.Reflection.AssemblyName.SetPublicKeyToken%2A> para definir a chave pública e o nome forte. O nome forte assinatura sempre usa o <xref:System.Security.Cryptography.SHA1> algoritmo de hash.  
+  
+ Para garantir que os nomes são construídos corretamente, use as seguintes propriedades:  
+  
+-   <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Reflection.AssemblyName.FullName%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
+  
+ Você também pode obter o nome usando o `/l` opção com o [Gacutil.exe (ferramenta de Cache de Assembly Global)](~/docs/framework/tools/gacutil-exe-gac-tool.md)  
+  
+ Para um nome forte parcialmente especificado, crie um <xref:System.Reflection.AssemblyName> usando o construtor padrão do objeto e definir o nome e a chave pública. Um assembly criado usando como um <xref:System.Reflection.AssemblyName> pode ser assinado posteriormente usando o Assembly Linker (Al.exe).  
+  
+ É possível especificar uma chave pública e uma <xref:System.Reflection.AssemblyName.KeyPair%2A> com valores inconsistentes. Isso pode ser útil em cenários de desenvolvedor. Nesse caso, a chave pública recuperados com <xref:System.Reflection.AssemblyName.GetPublicKey%2A> Especifica while chave pública correta a <xref:System.Reflection.AssemblyName.KeyPair%2A> Especifica as chaves públicas e privadas usadas durante o desenvolvimento. Quando o tempo de execução detecta uma incompatibilidade entre o <xref:System.Reflection.AssemblyName.KeyPair%2A> e a chave pública, ele procura no registro a chave correta que corresponde à chave pública.  
+  
+ O formato do nome para exibição de um <xref:System.Reflection.AssemblyName> é uma cadeia Unicode delimitado por vírgulas que começa com o nome, da seguinte maneira:  
+  
+ `Name <,Culture = CultureInfo> <,Version = Major.Minor.Build.Revision> <, StrongName> <,PublicKeyToken> '\0'`  
+  
+ `Name`é o nome textual do assembly. `CultureInfo`é a cultura RFC1766 formato definido. `Major`, `Minor`, `Build`, e `Revision` são a versão principal, versão secundária, número da compilação e número de revisão do assembly. `StrongName`é os hexadecimal codificado baixa 64 bits de ordem o valor de hash da chave pública gerado usando o algoritmo de hash SHA-1 e a chave pública especificada pelo <xref:System.Reflection.AssemblyName.SetPublicKey%2A>. `PublicKeyToken`é a chave pública codificada em hexadecimal especificada por <xref:System.Reflection.AssemblyName.SetPublicKey%2A>.  
+  
+ Codificação hexadecimal é definido como a conversão de cada byte de um objeto binário em dois caracteres hexadecimais, em andamento da menor para o byte mais significativo. Valores de exibição adicionais serão adicionados conforme necessário.  
+  
+ Se a chave pública completa for conhecida, em seguida, PublicKey pode ser substituído por nome forte.  
+  
+ Observe também que, exceto para `Name`, que deve vir primeiro, a ordem léxica de parâmetros não é importante. No entanto, qualquer parâmetro (`Version`, `Culture`, `StrongName` ou `PublicKey`) não especificamente conjunto deverá ser omitido e o <xref:System.Reflection.AssemblyName> é considerado parcial. Ao especificar informações parciais, parâmetros de nome devem ser especificados na ordem descrita acima.  
+  
+ Ao fornecer um nome para exibição, a convenção de `StrongName =null` ou `PublicKey= null` indica que a associação e a correspondência em relação a um assembly nomeado simplesmente serão necessária. Além disso, a convenção de `Culture= ""` (aspas duplas que representa uma cadeia de caracteres vazia) indica correspondentes com a cultura padrão.  
+  
+ A exemplo a seguir mostra um <xref:System.Reflection.AssemblyName> para um assembly nomeado simplesmente com a cultura padrão.  
+  
+```  
+ExampleAssembly, Culture=""  
+```  
+  
+ O exemplo a seguir mostra uma referência totalmente especificada para um assembly de nome forte com a cultura “en”.  
+  
+```  
+ExampleAssembly, Version=1.0.0.0, Culture=en, PublicKeyToken=a5d015c7d5a0b012  
+```  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar várias classes de reflexão para analisar os metadados contidos em um assembly.  
+  
+ [!code-cpp[Reflection#1](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection/CPP/reflection.cpp#1)]
+ [!code-csharp[Reflection#1](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection/CS/Reflection.cs#1)]
+ [!code-vb[Reflection#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection/VB/Reflection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Reflection.AssemblyName" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um assembly dinâmico chamado `MyAssembly.exe` e salva-o em seu disco rígido. Depois de executar o exemplo, você pode usar o [Ildasm.exe (IL Disassembler)](~/docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar os metadados do assembly.  
+  
+ [!code-cpp[AssemblyName_Constructor#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_Constructor/CPP/assemblyname_constructor.cpp#1)]
+ [!code-csharp[AssemblyName_Constructor#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_Constructor/CS/assemblyname_constructor.cs#1)]
+ [!code-vb[AssemblyName_Constructor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_Constructor/VB/assemblyname_constructor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyName (string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyName">O nome de exibição do assembly, conforme retornado pela propriedade <see cref="P:System.Reflection.AssemblyName.FullName" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Reflection.AssemblyName" /> com o nome de exibição especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornecido `assemblyName` é analisada e os campos apropriados do novo <xref:System.Reflection.AssemblyName> são inicializadas com os valores do nome de exibição. Essa é a maneira recomendada de análise de nomes de exibição. Escrevendo seu próprio código para analisar os nomes de exibição não é recomendado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância de <xref:System.Reflection.AssemblyName> de um nome para exibição. Os elementos individuais do nome para exibição são a saída para o console como propriedades do <xref:System.Reflection.AssemblyName> objeto.  
+  
+ [!code-cpp[AssemblyName_Constructor_2#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_Constructor_2/CPP/source.cpp#1)]
+ [!code-csharp[AssemblyName_Constructor_2#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_Constructor_2/CS/source.cs#1)]
+ [!code-vb[AssemblyName_Constructor_2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_Constructor_2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assemblyName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="assemblyName" /> é uma cadeia de caracteres de tamanho zero.</exception>
+        <exception cref="T:System.IO.FileLoadException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou [biblioteca de classes portátil](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), capturar a exceção de classe base, <see cref="T:System.IO.IOException" />, em vez disso.  
+  
+</para>
+          </block>  
+  
+ O assembly referenciado não pôde ser encontrado ou não pôde ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz uma cópia deste <see cref="T:System.Reflection.AssemblyName" /> objeto.</summary>
+        <returns>Um objeto que é uma cópia deste <see cref="T:System.Reflection.AssemblyName" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um novo objeto é criado, idêntico ao valor original.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeBase">
+      <MemberSignature Language="C#" Value="public string CodeBase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CodeBase" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.CodeBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local do assembly como uma URL.</summary>
+        <value>Uma cadeia de caracteres que é o local da URL do assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um assembly é carregado, esse valor também pode ser obtido usando o <xref:System.Reflection.Assembly.CodeBase%2A?displayProperty=nameWithType> propriedade.  
+  
+ Se o assembly foi carregado como uma matriz de bytes, essa propriedade retorna o local do chamador do <xref:System.Reflection.Assembly.Load%28System.Byte%5B%5D%29> sobrecarga de método, não o local do assembly carregado.  
+  
+> [!NOTE]
+>  Não use um <xref:System.Reflection.AssemblyName> somente com o <xref:System.Reflection.AssemblyName.CodeBase%2A> conjunto de propriedades. O <xref:System.Reflection.AssemblyName.CodeBase%2A> propriedade não fornece todos os elementos da identidade do assembly (como nome ou versão), então o carregar não ocorrerem de acordo com regras de carga por identidade, como se esperaria do <xref:System.Reflection.Assembly.Load%2A> método. Em vez disso, o assembly for carregado usando regras de carga. Para obter informações sobre as desvantagens de usar o contexto de carga, consulte o <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> sobrecarga de método ou [práticas recomendadas para o carregamento do Assembly](~/docs/framework/deployment/best-practices-for-assembly-loading.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o <xref:System.Reflection.AssemblyName.CodeBase%2A> propriedade é usada para especificar o diretório em que o assembly foi salvo.  
+  
+ [!code-cpp[AssemblyName_CodeBase#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_CodeBase/CPP/assemblyname_codebase.cpp#1)]
+ [!code-csharp[AssemblyName_CodeBase#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_CodeBase/CS/assemblyname_codebase.cs#1)]
+ [!code-vb[AssemblyName_CodeBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_CodeBase/VB/assemblyname_codebase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyContentType ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.AssemblyContentType ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyContentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica qual tipo de conteúdo o assembly contém.</summary>
+        <value>Um valor que indica qual tipo de conteúdo o assembly contém.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureInfo">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo CultureInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo CultureInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.CultureInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cultura com suporte no assembly.</summary>
+        <value>Um objeto que representa a cultura com suporte no assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o <xref:System.Reflection.AssemblyName.CultureInfo%2A> propriedade é usada para especificar a cultura, o que faz parte do nome para exibição do assembly.  
+  
+ [!code-cpp[AssemblyName_CodeBase#2](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_CodeBase/CPP/assemblyname_codebase.cpp#2)]
+ [!code-csharp[AssemblyName_CodeBase#2](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_CodeBase/CS/assemblyname_codebase.cs#2)]
+ [!code-vb[AssemblyName_CodeBase#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_CodeBase/VB/assemblyname_codebase.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureName">
+      <MemberSignature Language="C#" Value="public string CultureName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CultureName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.CultureName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da cultura associado ao assembly.</summary>
+        <value>O nome da cultura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EscapedCodeBase">
+      <MemberSignature Language="C#" Value="public string EscapedCodeBase { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EscapedCodeBase" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.EscapedCodeBase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o URI, incluindo caracteres de escape, que representa a base de código.</summary>
+        <value>Um URI com caracteres de escape.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Reflection.AssemblyNameFlags Flags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.AssemblyNameFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyNameFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os atributos do assembly.</summary>
+        <value>Um valor que representa os atributos do assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o <xref:System.Reflection.AssemblyName.Flags%2A> propriedade é usada para especificar que o assembly tem uma chave pública.  
+  
+ [!code-cpp[AssemblyName_KeyPair#4](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/assemblyname_keypair.cpp#4)]
+ [!code-csharp[AssemblyName_KeyPair#4](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/assemblyname_keypair.cs#4)]
+ [!code-vb[AssemblyName_KeyPair#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/assemblyname_keypair.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome completo do assembly, também conhecido como o nome de exibição.</summary>
+        <value>Uma cadeia de caracteres que é o nome completo do assembly, também conhecido como o nome de exibição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome de exibição consiste normalmente o nome simples, o número de versão, a cultura com suporte e a chave pública. Por exemplo:  
+  
+```  
+mylib, Version=1.2.1900.0, Culture=neutral, PublicKeyToken=a14f3033def15840  
+```  
+  
+ Escrevendo seu próprio código para analisar os nomes de exibição não é recomendado. Em vez disso, passe o nome de exibição para o <xref:System.Reflection.AssemblyName.%23ctor%2A> construtor, que analisa e preenche os campos apropriados do novo <xref:System.Reflection.AssemblyName>.  
+  
+ Quando um assembly é carregado, esse valor também pode ser obtido usando o <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o exemplo de código define o <xref:System.Reflection.AssemblyName.Name%2A>, <xref:System.Reflection.AssemblyName.Version%2A>, <xref:System.Reflection.AssemblyName.CultureInfo%2A>, e <xref:System.Reflection.AssemblyName.KeyPair%2A> propriedades, que juntos compõem o nome completo de um assembly ou o nome de exibição. O <xref:System.Reflection.AssemblyName.FullName%2A> propriedade é usada para recuperar o nome de exibição.  
+  
+ [!code-cpp[AssemblyName_CodeBase#4](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_CodeBase/CPP/assemblyname_codebase.cpp#4)]
+ [!code-csharp[AssemblyName_CodeBase#4](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_CodeBase/CS/assemblyname_codebase.cs#4)]
+ [!code-vb[AssemblyName_CodeBase#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_CodeBase/VB/assemblyname_codebase.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAssemblyName">
+      <MemberSignature Language="C#" Value="public static System.Reflection.AssemblyName GetAssemblyName (string assemblyFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.AssemblyName GetAssemblyName(string assemblyFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.GetAssemblyName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.AssemblyName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyFile">O caminho para o assembly cujo <see cref="T:System.Reflection.AssemblyName" /> deve ser retornado.</param>
+        <summary>Obtém o <see cref="T:System.Reflection.AssemblyName" /> para determinado arquivo.</summary>
+        <returns>Um objeto que representa o arquivo de assembly especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso só funcionará se o arquivo contém um manifesto do assembly. Este método faz com que o arquivo seja aberto e fechado, mas o assembly não foi adicionado a este domínio.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o <xref:System.Reflection.AssemblyName> para um assembly no disco. Ele não será executado, a menos que você substitua a cadeia de caracteres "MyAssembly.exe" com o nome do arquivo de um assembly (incluindo o caminho, se necessário) no disco rígido. Como alternativa, você pode compilar este exemplo como "MyAssembly.exe".  
+  
+ [!code-cpp[AssemblyName_GetAssemblyName#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_GetAssemblyName/CPP/assemblyname_getassemblyname.cpp#1)]
+ [!code-csharp[AssemblyName_GetAssemblyName#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_GetAssemblyName/CS/assemblyname_getassemblyname.cs#1)]
+ [!code-vb[AssemblyName_GetAssemblyName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_GetAssemblyName/VB/assemblyname_getassemblyname.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assemblyFile" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="assemblyFile" /> é inválido, como um assembly com uma cultura inválida.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">
+          <paramref name="assemblyFile" /> não foi encontrado.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem permissão de descoberta de caminho.</exception>
+        <exception cref="T:System.BadImageFormatException">
+          <paramref name="assemblyFile" /> não é um assembly válido.</exception>
+        <exception cref="T:System.IO.FileLoadException">Um assembly ou módulo foi carregado duas vezes com dois conjuntos de evidências.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para acessar informações no caminho. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto a ser populado com informações de serialização.</param>
+        <param name="context">O contexto de destino da serialização.</param>
+        <summary>Obtém informações de serialização com todos os dados necessários para recriar uma instância deste <see langword="AssemblyName" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPublicKey">
+      <MemberSignature Language="C#" Value="public byte[] GetPublicKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetPublicKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.GetPublicKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a chave pública do assembly.</summary>
+        <returns>Uma matriz de bytes que contém a chave pública do assembly.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o <xref:System.Reflection.AssemblyName.SetPublicKey%2A> método é usado para fornecer uma chave pública de assembly. O <xref:System.Reflection.AssemblyName.GetPublicKey%2A> método é usado para recuperar a chave pública, que é exibida no console.  
+  
+ [!code-cpp[AssemblyName_KeyPair#2](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/assemblyname_keypair.cpp#2)]
+ [!code-csharp[AssemblyName_KeyPair#2](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/assemblyname_keypair.cs#2)]
+ [!code-vb[AssemblyName_KeyPair#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/assemblyname_keypair.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Uma chave pública foi fornecida (por exemplo, usando o método <see cref="M:System.Reflection.AssemblyName.SetPublicKey(System.Byte[])" />), mas nenhum token de chave pública foi fornecida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPublicKeyToken">
+      <MemberSignature Language="C#" Value="public byte[] GetPublicKeyToken ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetPublicKeyToken() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.GetPublicKeyToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o token de chave pública, que é composto pelos últimos 8 bytes do hash SHA-1 da chave pública com a qual o aplicativo ou assembly é assinado.</summary>
+        <returns>Uma matriz de bytes que contém o token de chave pública.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o <xref:System.Reflection.AssemblyName.SetPublicKeyToken%2A> método é usado para definir o token de chave pública do assembly. O <xref:System.Reflection.AssemblyName.GetPublicKeyToken%2A> método é usado para recuperar o token de chave pública, que é exibido no console.  
+  
+ [!code-cpp[AssemblyName_KeyPair#3](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/assemblyname_keypair.cpp#3)]
+ [!code-csharp[AssemblyName_KeyPair#3](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/assemblyname_keypair.cs#3)]
+ [!code-vb[AssemblyName_KeyPair#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/assemblyname_keypair.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Configuration.Assemblies.AssemblyHashAlgorithm HashAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.Assemblies.AssemblyHashAlgorithm HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Assemblies.AssemblyHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o algoritmo de hash usado pelo manifesto do assembly.</summary>
+        <value>O algoritmo de hash usado pelo manifesto do assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Começando com o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], o <xref:System.Reflection.AssemblyName.HashAlgorithm%2A> propriedade de um <xref:System.Reflection.AssemblyName> objeto que é retornado pelo <xref:System.Reflection.Assembly.GetReferencedAssemblies%2A?displayProperty=nameWithType> método é <xref:System.Configuration.Assemblies.AssemblyHashAlgorithm?displayProperty=nameWithType> se não houver nenhum algoritmo de hash para o assembly referenciado, ou se o algoritmo de hash do assembly referenciado não é identificado pelo <xref:System.Configuration.Assemblies.AssemblyHashAlgorithm?displayProperty=nameWithType> enumeração. Em versões anteriores do .NET Framework, o <xref:System.Reflection.AssemblyName.HashAlgorithm%2A> propriedade retornada <xref:System.Configuration.Assemblies.AssemblyHashAlgorithm?displayProperty=nameWithType> nessa situação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o <xref:System.Reflection.AssemblyName.HashAlgorithm%2A> propriedade é usada para definir o algoritmo de hash para o manifesto do assembly.  
+  
+ [!code-cpp[AssemblyName_CodeBase#3](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_CodeBase/CPP/assemblyname_codebase.cpp#3)]
+ [!code-csharp[AssemblyName_CodeBase#3](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_CodeBase/CS/assemblyname_codebase.cs#3)]
+ [!code-vb[AssemblyName_CodeBase#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_CodeBase/VB/assemblyname_codebase.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPair">
+      <MemberSignature Language="C#" Value="public System.Reflection.StrongNameKeyPair KeyPair { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.StrongNameKeyPair KeyPair" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.KeyPair" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.StrongNameKeyPair</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o par de chaves de criptografia pública e privada usado para criar uma assinatura de nome forte para o assembly.</summary>
+        <value>O par de chaves de criptografia pública e privada a ser usado para criar um nome forte para o assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um assembly é carregado o tempo de execução, ele não define o <xref:System.Reflection.AssemblyName.KeyPair%2A> propriedade. O getter da propriedade só é útil se o usuário definir a propriedade antes de usar o <xref:System.Reflection.AssemblyName> de objeto para criar um assembly dinâmico e, posteriormente, quiser recuperar o par de chaves.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o <xref:System.Reflection.AssemblyName.KeyPair%2A> propriedade é usada para definir as chaves de criptografia públicas e privadas do assembly. .  
+  
+ [!code-cpp[AssemblyName_KeyPair#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/assemblyname_keypair.cpp#1)]
+ [!code-csharp[AssemblyName_KeyPair#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/assemblyname_keypair.cs#1)]
+ [!code-vb[AssemblyName_KeyPair#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/assemblyname_keypair.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do assembly. Este é geralmente, mas não necessariamente, o nome do arquivo de manifesto do assembly, menos a extensão.</summary>
+        <value>O nome simples do assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo de manifesto é o arquivo que contém o manifesto do assembly.  
+  
+ Por exemplo, o nome simples de um assembly de arquivo único, chamado "MyAssembly" é "MyAssembly".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o <xref:System.Reflection.AssemblyName.Name%2A> propriedade é usada para definir o nome simples do assembly dinâmico.  
+  
+ [!code-cpp[AssemblyName_Constructor#2](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_Constructor/CPP/assemblyname_constructor.cpp#2)]
+ [!code-csharp[AssemblyName_Constructor#2](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_Constructor/CS/assemblyname_constructor.cs#2)]
+ [!code-vb[AssemblyName_Constructor#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_Constructor/VB/assemblyname_constructor.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserialization">
+      <MemberSignature Language="C#" Value="public void OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento de desserialização.</param>
+        <summary>Implementa o <see cref="T:System.Runtime.Serialization.ISerializable" /> interface e é chamado novamente pelo evento desserialização quando desserialização for concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessorArchitecture">
+      <MemberSignature Language="C#" Value="public System.Reflection.ProcessorArchitecture ProcessorArchitecture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.ProcessorArchitecture ProcessorArchitecture" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.ProcessorArchitecture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ProcessorArchitecture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que identifica o processador e os bits por palavra da plataforma de destino de um executável.</summary>
+        <value>Um dos valores de enumeração que identifica o processador e os bits por palavra da plataforma de destino de um executável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], essa propriedade sempre retorna <xref:System.Reflection.ProcessorArchitecture?displayProperty=nameWithType> para assemblies de referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferenceMatchesDefinition">
+      <MemberSignature Language="C#" Value="public static bool ReferenceMatchesDefinition (System.Reflection.AssemblyName reference, System.Reflection.AssemblyName definition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ReferenceMatchesDefinition(class System.Reflection.AssemblyName reference, class System.Reflection.AssemblyName definition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.ReferenceMatchesDefinition(System.Reflection.AssemblyName,System.Reflection.AssemblyName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reference" Type="System.Reflection.AssemblyName" />
+        <Parameter Name="definition" Type="System.Reflection.AssemblyName" />
+      </Parameters>
+      <Docs>
+        <param name="reference">O nome do assembly de referência.</param>
+        <param name="definition">O nome do assembly que é comparado com o assembly de referência.</param>
+        <summary>Retorna um valor que indica se dois nomes de assembly são os mesmos. A comparação baseia-se nos nomes de assembly simples.</summary>
+        <returns>
+          <see langword="true" />Se os nomes de assembly simples forem iguais. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A comparação depende apenas o nome do assembly simples. Ele ignora versão, cultura e token de chave pública.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPublicKey">
+      <MemberSignature Language="C#" Value="public void SetPublicKey (byte[] publicKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPublicKey(unsigned int8[] publicKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.SetPublicKey(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="publicKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="publicKey">Uma matriz de bytes que contém a chave pública do assembly.</param>
+        <summary>Define a chave pública que identifica o assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também deve usar o <xref:System.Reflection.AssemblyName.SetPublicKeyToken%2A> método para fornecer um token de chave pública. Caso contrário, um <xref:System.Security.SecurityException> é gerada quando o <xref:System.Reflection.AssemblyName.GetPublicKey%2A> método é chamado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o <xref:System.Reflection.AssemblyName.SetPublicKey%2A> método é usado para fornecer uma chave pública de assembly. O <xref:System.Reflection.AssemblyName.GetPublicKey%2A> método é usado para recuperar a chave pública, que é exibida no console.  
+  
+ [!code-cpp[AssemblyName_SetPublicKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_SetPublicKey/CPP/assemblyname_setpublickey.cpp#1)]
+ [!code-csharp[AssemblyName_SetPublicKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_SetPublicKey/CS/assemblyname_setpublickey.cs#1)]
+ [!code-vb[AssemblyName_SetPublicKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_SetPublicKey/VB/assemblyname_setpublickey.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPublicKeyToken">
+      <MemberSignature Language="C#" Value="public void SetPublicKeyToken (byte[] publicKeyToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPublicKeyToken(unsigned int8[] publicKeyToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.SetPublicKeyToken(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="publicKeyToken" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="publicKeyToken">Uma matriz de bytes que contém o token de chave pública do assembly.</param>
+        <summary>Define o token de chave pública, que é composto pelos últimos 8 bytes do hash SHA-1 da chave pública sob a qual o aplicativo ou assembly é assinado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define a chave pública chamando o <xref:System.Reflection.AssemblyName.SetPublicKey%2A> método, você também deve usar o <xref:System.Reflection.AssemblyName.SetPublicKeyToken%2A> método para fornecer um token de chave pública. Caso contrário, um <xref:System.Security.SecurityException> é gerada quando o <xref:System.Reflection.AssemblyName.GetPublicKey%2A> método é chamado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o <xref:System.Reflection.AssemblyName.SetPublicKeyToken%2A> método é usado para definir o token de chave pública do assembly. O <xref:System.Reflection.AssemblyName.GetPublicKeyToken%2A> método é usado para recuperar o token de chave pública, que é exibido no console.  
+  
+ [!code-cpp[AssemblyName_SetPublicKey#2](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_SetPublicKey/CPP/assemblyname_setpublickey.cpp#2)]
+ [!code-csharp[AssemblyName_SetPublicKey#2](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_SetPublicKey/CS/assemblyname_setpublickey.cs#2)]
+ [!code-vb[AssemblyName_SetPublicKey#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_SetPublicKey/VB/assemblyname_setpublickey.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._AssemblyName.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _AssemblyName.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._AssemblyName.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.System#Runtime#InteropServices#_AssemblyName#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="rgszNames">Matriz passada de nomes a serem mapeados.</param>
+        <param name="cNames">Contagem dos nomes a serem mapeados.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar os nomes.</param>
+        <param name="rgDispId">Matriz alocada pelo chamador que recebe os IDs correspondentes aos nomes.</param>
+        <summary>Mapeia um conjunto de nomes para um conjunto correspondente de identificadores de expedição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetIDsOfNames`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._AssemblyName.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _AssemblyName.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._AssemblyName.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.System#Runtime#InteropServices#_AssemblyName#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">As informações de tipo a serem retornadas.</param>
+        <param name="lcid">O identificador de localidade das informações do tipo.</param>
+        <param name="ppTInfo">Recebe um ponteiro para o objeto de informações de tipo solicitado.</param>
+        <summary>Recupera as informações do tipo de um objeto, que podem ser usadas para obter informações de tipo para uma interface.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfo`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._AssemblyName.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _AssemblyName.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._AssemblyName.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.System#Runtime#InteropServices#_AssemblyName#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Aponta para um local que recebe o número de interfaces de informações de tipo fornecido pelo objeto.</param>
+        <summary>Retorna o número de interfaces de informações do tipo que um objeto fornece (0 ou 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfoCount`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._AssemblyName.Invoke">
+      <MemberSignature Language="C#" Value="void _AssemblyName.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._AssemblyName.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.System#Runtime#InteropServices#_AssemblyName#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Identifica o membro.</param>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar argumentos.</param>
+        <param name="wFlags">Sinalizadores que descrevem o contexto da chamada.</param>
+        <param name="pDispParams">Ponteiro para uma estrutura que contém uma matriz de argumentos, uma matriz de argumento DispIDs para argumentos nomeados e contas para o número de elementos nas matrizes.</param>
+        <param name="pVarResult">Ponteiro para o local onde o resultado deve ser armazenado.</param>
+        <param name="pExcepInfo">Ponteiro para uma estrutura que contém informações de exceção.</param>
+        <param name="puArgErr">O índice do primeiro argumento que tem um erro.</param>
+        <summary>Fornece acesso a propriedades e métodos expostos por um objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::Invoke`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyName.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome completo do assembly, também conhecido como o nome para exibição.</summary>
+        <returns>O nome completo do assembly, ou o nome de classe, se o nome completo não pode ser determinado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte a descrição do <xref:System.Reflection.AssemblyName> para o formato de cadeia de caracteres retornada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém um <xref:System.Reflection.AssemblyName> objeto para um hipotético `MyAssembly.exe` assembly e, em seguida, usa o <xref:System.Reflection.AssemblyName.ToString%2A> método para recuperar o nome completo do assembly ou o nome para exibição.  
+  
+ [!code-cpp[AssemblyName_GetAssemblyName#2](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_GetAssemblyName/CPP/assemblyname_getassemblyname.cpp#2)]
+ [!code-csharp[AssemblyName_GetAssemblyName#2](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_GetAssemblyName/CS/assemblyname_getassemblyname.cs#2)]
+ [!code-vb[AssemblyName_GetAssemblyName#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_GetAssemblyName/VB/assemblyname_getassemblyname.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os números principal, secundário, do build e da revisão do assembly.</summary>
+        <value>Um objeto que representa os números principal, secundário, do build e da revisão do assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os componentes da versão devem ser números inteiros maiores ou iguais a zero. Metadados restringe o major, minor, compilação e componentes de revisão para um assembly como um valor máximo de <xref:System.UInt16.MaxValue?displayProperty=nameWithType> - 1. Se um componente exceder esse valor, nenhum erro será lançado; No entanto, em um assembly dinâmico, esse componente é zero.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos. O primeiro exemplo mostra como recuperar a versão do assembly em execução no momento. O segundo exemplo mostra como usar o <xref:System.Reflection.AssemblyName.Version%2A> propriedade para especificar a versão do assembly quando você emite um assembly dinâmico.  
+  
+ **Exemplo 1**  
+  
+ O exemplo a seguir recupera e exibe os números de versão do assembly em execução no momento e o assembly que contém o <xref:System.String> classe.  
+  
+ [!code-cpp[AssemblyName.Version#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName.Version/cpp/Example.cpp#1)]
+ [!code-csharp[AssemblyName.Version#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName.Version/cs/Example.cs#1)]
+ [!code-vb[AssemblyName.Version#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName.Version/vb/Example.vb#1)]  
+  
+ **Exemplo 2**  
+  
+ O exemplo a seguir emite um assembly dinâmico e salva-o no diretório atual. Quando o assembly é criado, o <xref:System.Reflection.AssemblyName.Version%2A> propriedade é usada para especificar as informações de versão do assembly.  
+  
+ [!code-cpp[AssemblyName_Constructor#3](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_Constructor/CPP/assemblyname_constructor.cpp#3)]
+ [!code-csharp[AssemblyName_Constructor#3](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_Constructor/CS/assemblyname_constructor.cs#3)]
+ [!code-vb[AssemblyName_Constructor#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_Constructor/VB/assemblyname_constructor.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VersionCompatibility">
+      <MemberSignature Language="C#" Value="public System.Configuration.Assemblies.AssemblyVersionCompatibility VersionCompatibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.Assemblies.AssemblyVersionCompatibility VersionCompatibility" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyName.VersionCompatibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Assemblies.AssemblyVersionCompatibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações relacionadas à compatibilidade do assembly com outros assemblies.</summary>
+        <value>Um valor que representa as informações sobre a compatibilidade do assembly com outros assemblies.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Reflection.AssemblyName.VersionCompatibility%2A>as informações indicam, por exemplo, que o assembly não é possível executar lado a lado com outras versões devido a conflitos em um driver de dispositivo.  
+  
+ Atualmente, <xref:System.Reflection.AssemblyName.VersionCompatibility%2A> sempre retorna <xref:System.Configuration.Assemblies.AssemblyVersionCompatibility?displayProperty=nameWithType>e não é usado pelo carregador. Essa propriedade está reservada para futuro de recursos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

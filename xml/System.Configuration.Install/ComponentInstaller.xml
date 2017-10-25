@@ -1,0 +1,113 @@
+<Type Name="ComponentInstaller" FullName="System.Configuration.Install.ComponentInstaller">
+  <TypeSignature Language="C#" Value="public abstract class ComponentInstaller : System.Configuration.Install.Installer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ComponentInstaller extends System.Configuration.Install.Installer" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Install.ComponentInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.Install</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.Installer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica um instalador que copia as propriedades de um componente para usar no momento da instalação.</summary>
+    <remarks>To be added.</remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.Configuration.Install.ComponentInstaller" />, você deve substituir o <see cref="M:System.Configuration.Install.ComponentInstaller.CopyFromComponent(System.ComponentModel.IComponent)" /> método e normalmente substituem o <see cref="M:System.Configuration.Install.Installer.Install(System.Collections.IDictionary)" /> e <see cref="M:System.Configuration.Install.Installer.Uninstall(System.Collections.IDictionary)" /> métodos.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ComponentInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.ComponentInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.Install.ComponentInstaller" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFromComponent">
+      <MemberSignature Language="C#" Value="public abstract void CopyFromComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyFromComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.ComponentInstaller.CopyFromComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente para copiar de.</param>
+        <summary>Quando substituído em uma classe derivada, copia todas as propriedades que são necessárias em instalação do tempo do componente especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O instalador deve levar todas as informações que ele pode do componente em tempo real e armazená-lo para uso no momento da instalação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma classe `MyInstallClass`, que cria o log de eventos e copia as propriedades do evento de componente para o log de <xref:System.Diagnostics.EventLogInstaller>. Ele também verifica se o <xref:System.ServiceProcess.ServiceInstaller> pode executar o mesmo tipo de instalação, como o <xref:System.Diagnostics.EventLogInstaller>.  
+  
+ [!code-cpp[ComponentInstaller_CopyFromComponent#1](~/samples/snippets/cpp/VS_Snippets_CLR/ComponentInstaller_CopyFromComponent/CPP/componentinstaller_copyfromcomponent.cpp#1)]
+ [!code-csharp[ComponentInstaller_CopyFromComponent#1](~/samples/snippets/csharp/VS_Snippets_CLR/ComponentInstaller_CopyFromComponent/CS/componentinstaller_copyfromcomponent.cs#1)]
+ [!code-vb[ComponentInstaller_CopyFromComponent#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ComponentInstaller_CopyFromComponent/VB/componentinstaller_copyfromcomponent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEquivalentInstaller">
+      <MemberSignature Language="C#" Value="public virtual bool IsEquivalentInstaller (System.Configuration.Install.ComponentInstaller otherInstaller);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEquivalentInstaller(class System.Configuration.Install.ComponentInstaller otherInstaller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.ComponentInstaller.IsEquivalentInstaller(System.Configuration.Install.ComponentInstaller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="otherInstaller" Type="System.Configuration.Install.ComponentInstaller" />
+      </Parameters>
+      <Docs>
+        <param name="otherInstaller">O instalador para comparar.</param>
+        <summary>Determina se o instalador especificado instalará o mesmo objeto como esse instalador.</summary>
+        <returns>
+          <see langword="true" />Se esse instalador e o instalador especificado pelo <paramref name="otherInstaller" /> parâmetro instalar o mesmo objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, <xref:System.Configuration.Install.ComponentInstaller.IsEquivalentInstaller%2A> retorna `true` somente se esse instalador e o instalador especificado pelo `otherInstaller` parâmetro instalar o mesmo objeto. Nesse caso, chamando o <xref:System.Configuration.Install.Installer.Install%2A> ou <xref:System.Configuration.Install.Installer.Uninstall%2A> método em qualquer um dos resultados do instalador no mesmo estado do sistema.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma classe `MyInstallClass`, que cria o log de eventos e copia as propriedades do evento de componente para o log de <xref:System.Diagnostics.EventLogInstaller> objeto. Ele também verifica se <xref:System.ServiceProcess.ServiceInstaller> objeto pode lidar com o mesmo tipo de instalação como <xref:System.Diagnostics.EventLogInstaller>.  
+  
+ [!code-cpp[ComponentInstaller_CopyFromComponent#2](~/samples/snippets/cpp/VS_Snippets_CLR/ComponentInstaller_CopyFromComponent/CPP/componentinstaller_copyfromcomponent.cpp#2)]
+ [!code-csharp[ComponentInstaller_CopyFromComponent#2](~/samples/snippets/csharp/VS_Snippets_CLR/ComponentInstaller_CopyFromComponent/CS/componentinstaller_copyfromcomponent.cs#2)]
+ [!code-vb[ComponentInstaller_CopyFromComponent#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/ComponentInstaller_CopyFromComponent/VB/componentinstaller_copyfromcomponent.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

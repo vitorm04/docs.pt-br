@@ -1,0 +1,309 @@
+<Type Name="RSAPKCS1KeyExchangeFormatter" FullName="System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter">
+  <TypeSignature Language="C#" Value="public class RSAPKCS1KeyExchangeFormatter : System.Security.Cryptography.AsymmetricKeyExchangeFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RSAPKCS1KeyExchangeFormatter extends System.Security.Cryptography.AsymmetricKeyExchangeFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.AsymmetricKeyExchangeFormatter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Cria os dados de troca de chaves PKCS #1 usando <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Troca de chaves permite que um remetente criar informações secretas (como dados aleatórios que podem ser usados como uma chave em um algoritmo de criptografia simétrica) e usar a criptografia para enviar ao destinatário pretendido.  
+  
+ Use <xref:System.Security.Cryptography.RSAPKCS1KeyExchangeDeformatter> para receber a troca de chaves e extrair as informações secretas dele.  
+  
+> [!CAUTION]
+>  É recomendável que você não tentar criar seu próprio método de troca de chaves de funcionalidade básica fornecida, porque muitos detalhes da operação devem ser realizados com cuidado para a troca de chave seja bem-sucedida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter> classe para criar uma chave de troca para um destinatário da mensagem.  
+  
+ [!code-csharp[System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.security.cryptography.rsapkcs1keyexchangeformatter2/cs/program.cs#1)]
+ [!code-vb[System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.security.cryptography.rsapkcs1keyexchangeformatter2/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RSAPKCS1KeyExchangeFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.SetKey%2A> método para definir a chave a ser usada para troca de chaves antes de chamar <xref:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.CreateKeyExchange%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RSAPKCS1KeyExchangeFormatter (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.#ctor(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">A instância do <see cref="T:System.Security.Cryptography.RSA" /> algoritmo que contém a chave pública.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter" /> com a chave especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyExchange">
+      <MemberSignature Language="C#" Value="public override byte[] CreateKeyExchange (byte[] rgbData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] CreateKeyExchange(unsigned int8[] rgbData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.CreateKeyExchange(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbData">As informações secretas ser passado a troca de chaves.</param>
+        <summary>Cria os dados de troca de chave criptografada dos dados de entrada especificados.</summary>
+        <returns>Os dados de troca de chave criptografada para ser enviado para o destinatário pretendido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses dados podem ser interpretados somente pelo proprietário da chave privada correspondente à chave pública usada para criptografar os dados. Isso ajuda a garantir que somente o destinatário possa acessar as informações de segredo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="rgbData" />é muito grande.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException">A chave é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyExchange">
+      <MemberSignature Language="C#" Value="public override byte[] CreateKeyExchange (byte[] rgbData, Type symAlgType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] CreateKeyExchange(unsigned int8[] rgbData, class System.Type symAlgType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.CreateKeyExchange(System.Byte[],System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbData" Type="System.Byte[]" />
+        <Parameter Name="symAlgType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="rgbData">As informações secretas ser passado a troca de chaves.</param>
+        <param name="symAlgType">Esse parâmetro não é usado na versão atual.</param>
+        <summary>Cria os dados de troca de chave criptografada dos dados de entrada especificados.</summary>
+        <returns>Os dados de troca de chave criptografada para ser enviado para o destinatário pretendido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses dados podem ser interpretados somente pelo proprietário da chave privada correspondente à chave pública usada para criptografar os dados. Isso ajuda a garantir que somente o destinatário possa acessar as informações de segredo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.CreateKeyExchange%2A?displayProperty=nameWithType> método para criar uma chave de troca para um destinatário da mensagem. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter2#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.security.cryptography.rsapkcs1keyexchangeformatter2/cs/program.cs#2)]
+ [!code-vb[System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.security.cryptography.rsapkcs1keyexchangeformatter2/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public override string Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros para a troca de chaves PKCS n º 1.</summary>
+        <value>Uma cadeia de caracteres XML que contém os parâmetros da operação de troca de chaves PKCS n º 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.Parameters%2A> propriedade retorna uma cadeia de caracteres XML que contém URIs Uniform Resource Identifier () que descrevem os parâmetros da operação de troca de chaves PKCS n º 1.  Observe que os URIs não têm garantia para apontar para endereços ativos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rng">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.RandomNumberGenerator Rng { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.RandomNumberGenerator Rng" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.Rng" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RandomNumberGenerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o algoritmo do gerador de números aleatórios a ser usado na criação da troca de chave.</summary>
+        <value>A instância de um algoritmo de gerador de números aleatórios a ser usado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade for `null`, o algoritmo números aleatórios gerador do padrão é usado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKey">
+      <MemberSignature Language="C#" Value="public override void SetKey (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetKey(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.SetKey(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">A instância do <see cref="T:System.Security.Cryptography.RSA" /> algoritmo que contém a chave pública.</param>
+        <summary>Define a chave pública a ser usado para criptografar os dados de troca de chaves.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve definir a chave antes de chamar <xref:System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter.CreateKeyExchange%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,565 @@
+<Type Name="AssemblyInstaller" FullName="System.Configuration.Install.AssemblyInstaller">
+  <TypeSignature Language="C#" Value="public class AssemblyInstaller : System.Configuration.Install.Installer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AssemblyInstaller extends System.Configuration.Install.Installer" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Install.AssemblyInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.Install</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.Installer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Carrega um assembly e executa todos os instaladores nele.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Configuration.Install.AssemblyInstaller> é criado chamando o <xref:System.Configuration.Install.AssemblyInstaller.%23ctor%2A> construtor. Configurar as propriedades do objeto e o <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> e <xref:System.Configuration.Install.AssemblyInstaller.Commit%2A> métodos são chamados para instalar o `MyAssembly.exe` assembly.  
+  
+ [!code-cpp[AssemblyInstaller#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller/CPP/assemblyinstaller.cpp#1)]
+ [!code-csharp[AssemblyInstaller#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller/CS/assemblyinstaller.cs#1)]
+ [!code-vb[AssemblyInstaller#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller/VB/assemblyinstaller.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.AssemblyInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.Install.AssemblyInstaller" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.AssemblyInstaller.%23ctor%2A> construtor e o <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> e <xref:System.Configuration.Install.AssemblyInstaller.Commit%2A> métodos de <xref:System.Configuration.Install.AssemblyInstaller> classe.  
+  
+ Um <xref:System.Configuration.Install.AssemblyInstaller> é criado chamando o <xref:System.Configuration.Install.AssemblyInstaller.%23ctor%2A> construtor. Configurar as propriedades do objeto e o <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> e <xref:System.Configuration.Install.AssemblyInstaller.Commit%2A> métodos são chamados para instalar o `MyAssembly_Install.exe` assembly.  
+  
+ [!code-cpp[AssemblyInstaller_Install#2](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller_Install/CPP/assemblyinstaller_install.cpp#2)]
+ [!code-csharp[AssemblyInstaller_Install#2](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller_Install/CS/assemblyinstaller_install.cs#2)]
+ [!code-vb[AssemblyInstaller_Install#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller_Install/VB/assemblyinstaller_install.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyInstaller (System.Reflection.Assembly assembly, string[] commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.Assembly assembly, string[] commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.AssemblyInstaller.#ctor(System.Reflection.Assembly,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+        <Parameter Name="commandLine" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O <see cref="T:System.Reflection.Assembly" /> para instalar.</param>
+        <param name="commandLine">Para usar ao criar uma nova linha de comando <see cref="T:System.Configuration.Install.InstallContext" /> objeto para a instalação do assembly. Pode ser um valor nulo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Configuration.Install.AssemblyInstaller" /> classe e especifica o assembly a ser instalado e a linha de comando para usar ao criar um novo <see cref="T:System.Configuration.Install.InstallContext" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyInstaller (string fileName, string[] commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, string[] commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.AssemblyInstaller.#ctor(System.String,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="commandLine" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo de assembly a ser instalado.</param>
+        <param name="commandLine">Para usar ao criar uma nova linha de comando <see cref="T:System.Configuration.Install.InstallContext" /> objeto para a instalação do assembly. Pode ser um valor nulo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Configuration.Install.AssemblyInstaller" /> classe e especifica o nome do arquivo de assembly a ser instalado e a linha de comando para usar ao criar um novo <see cref="T:System.Configuration.Install.InstallContext" /> objeto para a instalação do assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Configuration.Install.AssemblyInstaller> é criado chamando o <xref:System.Configuration.Install.AssemblyInstaller.%23ctor%2A> construtor com assembly a ser instalado e a matriz de argumentos de linha de comando como parâmetros.  
+  
+ [!code-cpp[AssemblyInstaller_Uninstall#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller_Uninstall/CPP/assemblyinstaller_uninstall.cpp#1)]
+ [!code-csharp[AssemblyInstaller_Uninstall#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller_Uninstall/CS/assemblyinstaller_uninstall.cs#1)]
+ [!code-vb[AssemblyInstaller_Uninstall#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller_Uninstall/VB/assemblyinstaller_uninstall.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public System.Reflection.Assembly Assembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly Assembly" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Install.AssemblyInstaller.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o assembly a ser instalado.</summary>
+        <value>Um <see cref="T:System.Reflection.Assembly" /> que define o assembly a ser instalado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O valor da propriedade é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckIfInstallable">
+      <MemberSignature Language="C#" Value="public static void CheckIfInstallable (string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CheckIfInstallable(string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.AssemblyInstaller.CheckIfInstallable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyName">O assembly no qual procurar instaladores.</param>
+        <summary>Verifica se o assembly especificado pode ser instalado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.Install.AssemblyInstaller.CheckIfInstallable%2A> método determina se o assembly especificado pode ser instalado. Para evitar uma exceção sendo lançada, o arquivo deve atender aos seguintes critérios:  
+  
+-   O arquivo existe.  
+  
+-   O arquivo é um assembly do .NET Framework.  
+  
+-   Os tipos públicos podem ser lidos do arquivo.  
+  
+-   Há pelo menos uma classe pública, não abstrata que estende o <xref:System.Configuration.Install.Installer> e contém o <xref:System.ComponentModel.RunInstallerAttribute.Yes> atributo.  
+  
+-   Uma instância de cada installer pode ser criada.  
+  
+> [!NOTE]
+>  Se o assembly é válido, mas não contém nenhuma instaladores, uma exceção será lançada. Esse comportamento é diferente do que no momento da instalação, quando não é um erro ao instalar um conjunto vazio.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, o <xref:System.Configuration.Install.AssemblyInstaller.CheckIfInstallable%2A> método é aplicado a um assembly existente e não existe e os resultados da chamada são exibidos no console.  
+  
+ [!code-cpp[AssemblyInstaller_CheckIfInstallable#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller_CheckIfInstallable/CPP/assemblyinstaller_checkifinstallable.cpp#1)]
+ [!code-csharp[AssemblyInstaller_CheckIfInstallable#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller_CheckIfInstallable/CS/assemblyinstaller_checkifinstallable.cs#1)]
+ [!code-vb[AssemblyInstaller_CheckIfInstallable#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller_CheckIfInstallable/VB/assemblyinstaller_checkifinstallable.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">O assembly especificado não pode ser instalado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandLine">
+      <MemberSignature Language="C#" Value="public string[] CommandLine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] CommandLine" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Install.AssemblyInstaller.CommandLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a linha de comando para usar ao criar um novo <see cref="T:System.Configuration.Install.InstallContext" /> objeto para a instalação do assembly.</summary>
+        <value>Uma matriz do tipo <see cref="T:System.String" /> que representa a linha de comando para usar ao criar um novo <see cref="T:System.Configuration.Install.InstallContext" /> objeto para a instalação do assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, o <xref:System.Configuration.Install.AssemblyInstaller.CommandLine%2A> propriedade de um <xref:System.Configuration.Install.AssemblyInstaller> é definido como o nome do arquivo de log.  
+  
+ [!code-cpp[AssemblyInstaller_Rollback#3](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller_Rollback/CPP/assemblyinstaller_rollback.cpp#3)]
+ [!code-csharp[AssemblyInstaller_Rollback#3](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller_Rollback/CS/assemblyinstaller_rollback.cs#3)]
+ [!code-vb[AssemblyInstaller_Rollback#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller_Rollback/VB/assemblyinstaller_rollback.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public override void Commit (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Commit(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.AssemblyInstaller.Commit(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> que contém o estado do computador depois que todos os instaladores na coleção de instalador executa.</param>
+        <summary>Conclui a transação de instalação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado somente se o <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> métodos de todos os instaladores nesta instância <xref:System.Configuration.Install.InstallerCollection> tenha êxito. Este método chama o <xref:System.Configuration.Install.AssemblyInstaller.Commit%2A> método de cada instalador na coleção.  
+  
+ Armazenar todas as informações que você precisa fazer uma correta operação o estado salvo de desinstalação <xref:System.Collections.IDictionary>, que é passado para o <xref:System.Configuration.Install.AssemblyInstaller.Uninstall%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.AssemblyInstaller.%23ctor%2A> construtor e o <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> e <xref:System.Configuration.Install.AssemblyInstaller.Commit%2A> métodos de <xref:System.Configuration.Install.AssemblyInstaller> classe.  
+  
+ Um <xref:System.Configuration.Install.AssemblyInstaller> classe é criada chamando o <xref:System.Configuration.Install.AssemblyInstaller.%23ctor%2A> construtor. Configurar as propriedades do objeto e o <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> e <xref:System.Configuration.Install.AssemblyInstaller.Commit%2A> métodos são chamados para instalar o `MyAssembly_Install.exe` assembly.  
+  
+ [!code-cpp[AssemblyInstaller_Install#2](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller_Install/CPP/assemblyinstaller_install.cpp#2)]
+ [!code-csharp[AssemblyInstaller_Install#2](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller_Install/CS/assemblyinstaller_install.cs#2)]
+ [!code-vb[AssemblyInstaller_Install#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller_Install/VB/assemblyinstaller_install.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="savedState" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <see cref="T:System.Collections.IDictionary" /> de estado salvo pode estar corrompido.  
+  
+ -ou-  
+  
+ Não foi possível encontrar um arquivo.</exception>
+        <exception cref="T:System.Exception">Ocorreu um erro no <see cref="E:System.Configuration.Install.Installer.Committing" /> manipulador de eventos de um dos instaladores na coleção.  
+  
+ -ou-  
+  
+ Ocorreu um erro no <see cref="E:System.Configuration.Install.Installer.Committed" /> manipulador de eventos de um dos instaladores na coleção.  
+  
+ -ou-  
+  
+ Ocorreu uma exceção durante a fase <see cref="M:System.Configuration.Install.AssemblyInstaller.Commit(System.Collections.IDictionary)" /> da instalação. A exceção será ignorada e a instalação continua. No entanto, o aplicativo pode não funcionar corretamente após a conclusão da instalação.  
+  
+ -ou-  
+  
+ Os tipos de instalador não foram encontrados em um dos assemblies.  
+  
+ -ou-  
+  
+ Não foi possível criar uma instância de um dos tipos de instalador.</exception>
+        <exception cref="T:System.Configuration.Install.InstallException">Ocorreu uma exceção durante a fase <see cref="M:System.Configuration.Install.AssemblyInstaller.Commit(System.Collections.IDictionary)" /> da instalação. A exceção será ignorada e a instalação continua. No entanto, o aplicativo pode não funcionar corretamente após a conclusão da instalação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpText">
+      <MemberSignature Language="C#" Value="public override string HelpText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpText" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Install.AssemblyInstaller.HelpText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o texto de ajuda para todos os instaladores na coleção de instalador.</summary>
+        <value>O texto de ajuda para todos os instaladores na coleção de instalador, incluindo a descrição do que faz cada instalador e as opções de linha de comando (para o programa de instalação) que podem ser passadas para e entendidas por cada instalador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um exemplo de um programa de instalação é o utilitário InstallUtil.exe.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, o <xref:System.Configuration.Install.AssemblyInstaller.HelpText%2A> propriedade de um <xref:System.Configuration.Install.AssemblyInstaller> é exibido no console.  
+  
+ [!code-cpp[AssemblyInstaller_HelpText#2](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller_HelpText/CPP/assemblyinstaller_helptext.cpp#2)]
+ [!code-csharp[AssemblyInstaller_HelpText#2](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller_HelpText/CS/assemblyinstaller_helptext.cs#2)]
+ [!code-vb[AssemblyInstaller_HelpText#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller_HelpText/VB/assemblyinstaller_helptext.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public override void Install (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Install(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.AssemblyInstaller.Install(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> usado para salvar as informações necessárias para realizar uma confirmação, reversão ou operação de desinstalação.</param>
+        <summary>Realiza a instalação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> método de cada instalador contida o <xref:System.Configuration.Install.Installer.Installers%2A> propriedade desta instância. O <xref:System.Collections.IDictionary> o objeto especificado pelo `savedState` parâmetro é atualizado para refletir o status da instalação depois de executaram os instaladores independentes. Se todos os <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> métodos falharem, o <xref:System.Configuration.Install.AssemblyInstaller.Commit%2A> método é chamado. Caso contrário, o <xref:System.Configuration.Install.AssemblyInstaller.Rollback%2A> método é chamado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.AssemblyInstaller.%23ctor%2A> construtor e o <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> e <xref:System.Configuration.Install.AssemblyInstaller.Commit%2A> métodos de <xref:System.Configuration.Install.AssemblyInstaller> classe.  
+  
+ Um objeto do <xref:System.Configuration.Install.AssemblyInstaller> classe é criada chamando o <xref:System.Configuration.Install.AssemblyInstaller.%23ctor%2A> construtor. Configurar as propriedades do objeto e o <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> e <xref:System.Configuration.Install.AssemblyInstaller.Commit%2A> métodos são chamados para instalar o assembly 'MyAssembly_Install.exe'.  
+  
+ [!code-cpp[AssemblyInstaller_Install#2](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller_Install/CPP/assemblyinstaller_install.cpp#2)]
+ [!code-csharp[AssemblyInstaller_Install#2](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller_Install/CS/assemblyinstaller_install.cs#2)]
+ [!code-vb[AssemblyInstaller_Install#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller_Install/VB/assemblyinstaller_install.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="savedState" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Não foi possível encontrar um arquivo.</exception>
+        <exception cref="T:System.Exception">Ocorreu uma exceção no manipulador de evento <see cref="E:System.Configuration.Install.Installer.BeforeInstall" /> de um dos instaladores na coleção.  
+  
+ -ou-  
+  
+ Ocorreu uma exceção no manipulador de evento <see cref="E:System.Configuration.Install.Installer.AfterInstall" /> de um dos instaladores na coleção.  
+  
+ -ou-  
+  
+ Os tipos de instalador não foram encontrados em um dos assemblies.  
+  
+ -ou-  
+  
+ Não foi possível criar uma instância de um dos tipos de instalador.</exception>
+        <block subset="none" type="usage">
+          <para>O <see cref="T:System.Collections.IDictionary" /> especificado pelo <paramref name="savedState" /> parâmetro deve estar vazio quando passados para o <see cref="M:System.Configuration.Install.AssemblyInstaller.Install(System.Collections.IDictionary)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Install.AssemblyInstaller.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do assembly a ser instalado.</summary>
+        <value>O caminho do assembly a ser instalado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Configuration.Install.AssemblyInstaller> é criado chamando o <xref:System.Configuration.Install.AssemblyInstaller.%23ctor%2A> construtor. O <xref:System.Configuration.Install.AssemblyInstaller.Path%2A> propriedades do objeto são definidas.  
+  
+ [!code-cpp[AssemblyInstaller_Rollback#2](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller_Rollback/CPP/assemblyinstaller_rollback.cpp#2)]
+ [!code-csharp[AssemblyInstaller_Rollback#2](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller_Rollback/CS/assemblyinstaller_rollback.cs#2)]
+ [!code-vb[AssemblyInstaller_Rollback#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller_Rollback/VB/assemblyinstaller_rollback.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.AssemblyInstaller.Rollback(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> que contém o estado de pré-instalação do computador.</param>
+        <summary>Restaura o computador para o estado em que estava antes da instalação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma reversão restaura o computador para o estado em que estava antes da instalação. O <xref:System.Configuration.Install.AssemblyInstaller.Rollback%2A> método é chamado se o <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> método deste <xref:System.Configuration.Install.Installer> instância ou de qualquer instalador do instalador de coleção não seja executada corretamente. Qualquer exceção gerada ao chamar o <xref:System.Configuration.Install.AssemblyInstaller.Rollback%2A> método de um instalador na coleção são ignoradas e a reversão dos outros instaladores continua.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, o <xref:System.Configuration.Install.AssemblyInstaller.Rollback%2A> método é chamado para desfazer o processo de instalação no assembly especificado.  
+  
+ [!code-cpp[AssemblyInstaller_Rollback#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller_Rollback/CPP/assemblyinstaller_rollback.cpp#1)]
+ [!code-csharp[AssemblyInstaller_Rollback#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller_Rollback/CS/assemblyinstaller_rollback.cs#1)]
+ [!code-vb[AssemblyInstaller_Rollback#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller_Rollback/VB/assemblyinstaller_rollback.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="savedState" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <see cref="T:System.Collections.IDictionary" /> de estado salvo pode estar corrompido.  
+  
+ -ou-  
+  
+ Não foi possível encontrar um arquivo.</exception>
+        <exception cref="T:System.Exception">Ocorreu uma exceção no manipulador de evento <see cref="E:System.Configuration.Install.Installer.BeforeRollback" /> de um dos instaladores na coleção.  
+  
+ -ou-  
+  
+ Ocorreu uma exceção no manipulador de evento <see cref="E:System.Configuration.Install.Installer.AfterRollback" /> de um dos instaladores na coleção.  
+  
+ -ou-  
+  
+ Ocorreu uma exceção durante a fase <see cref="M:System.Configuration.Install.AssemblyInstaller.Rollback(System.Collections.IDictionary)" /> da instalação. A exceção será ignorada e a reversão continuará. No entanto, o computador pode não ser totalmente revertido para seu estado inicial após a conclusão da reversão.  
+  
+ -ou-  
+  
+ Os tipos de instalador não foram encontrados em um dos assemblies.  
+  
+ -ou-  
+  
+ Não foi possível criar uma instância de um dos tipos de instalador.</exception>
+        <exception cref="T:System.Configuration.Install.InstallException">Ocorreu uma exceção durante a fase <see cref="M:System.Configuration.Install.AssemblyInstaller.Rollback(System.Collections.IDictionary)" /> da instalação. A exceção será ignorada e a reversão continuará. No entanto, o computador pode não ser totalmente revertido para seu estado inicial após a conclusão da reversão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public override void Uninstall (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Uninstall(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.AssemblyInstaller.Uninstall(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> que contém o estado após a instalação do computador.</param>
+        <summary>Remove uma instalação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para remover uma instalação concluída anteriormente. Se o <xref:System.Configuration.Install.Installer.Uninstall%2A> método falhar para um dos instaladores na coleção, ele ainda será chamado para os instaladores restantes. Uma falha na desinstalação não reverter o computador ao estado pré-desinstalação.  
+  
+> [!NOTE]
+>  Embora o <xref:System.Configuration.Install.Installer.Install%2A> e <xref:System.Configuration.Install.Installer.Commit%2A> métodos salvar o estado do computador após as instalações, o arquivo que contém o <xref:System.Collections.IDictionary> do `savedState` parâmetro pode ter sido excluído em algum momento depois que a instalação foi concluída. Se o arquivo é excluído, o `savedState` parâmetro é `null`.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, o <xref:System.Configuration.Install.AssemblyInstaller.Uninstall%2A> método é chamado após a instalação e confirmar o assembly passado como o parâmetro para o construtor.  
+  
+ [!code-cpp[AssemblyInstaller_Uninstall#2](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller_Uninstall/CPP/assemblyinstaller_uninstall.cpp#2)]
+ [!code-csharp[AssemblyInstaller_Uninstall#2](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller_Uninstall/CS/assemblyinstaller_uninstall.cs#2)]
+ [!code-vb[AssemblyInstaller_Uninstall#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller_Uninstall/VB/assemblyinstaller_uninstall.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Collections.IDictionary" /> de estado salvo pode estar corrompido.  
+  
+ -ou-  
+  
+ Não foi possível encontrar um arquivo.</exception>
+        <exception cref="T:System.Exception">Ocorreu um erro no <see cref="E:System.Configuration.Install.Installer.BeforeUninstall" /> manipulador de eventos de um dos instaladores na coleção.  
+  
+ -ou-  
+  
+ Ocorreu um erro no <see cref="E:System.Configuration.Install.Installer.AfterUninstall" /> manipulador de eventos de um dos instaladores na coleção.  
+  
+ -ou-  
+  
+ Ocorreu uma exceção durante a desinstalação. A exceção será ignorada e a desinstalação continuará. No entanto, o aplicativo pode não ser totalmente desinstalado após a desinstalação for concluída.  
+  
+ -ou-  
+  
+ Os tipos de instalador não foram encontrados em um dos assemblies.  
+  
+ -ou-  
+  
+ Não foi possível criar uma instância de um dos tipos de instalador.  
+  
+ -ou-  
+  
+ Não foi possível excluir um arquivo.</exception>
+        <exception cref="T:System.Configuration.Install.InstallException">Ocorreu uma exceção durante a desinstalação. A exceção será ignorada e a desinstalação continuará. No entanto, o aplicativo pode não ser totalmente desinstalado após a desinstalação for concluída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseNewContext">
+      <MemberSignature Language="C#" Value="public bool UseNewContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseNewContext" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Install.AssemblyInstaller.UseNewContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se é necessário criar um novo <see cref="T:System.Configuration.Install.InstallContext" /> objeto para a instalação do assembly.</summary>
+        <value>
+          <see langword="true" />Se um novo <see cref="T:System.Configuration.Install.InstallContext" /> objeto deve ser criado para a instalação do assembly; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir essa propriedade como `true` cria um novo arquivo denominado "{nome do Assembly}. InstallLog"para registrar mensagens para esse assembly. Configuração <xref:System.Configuration.Install.AssemblyInstaller.UseNewContext%2A> para `false` impede que o novo arquivo que está sendo criado.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Configuration.Install.AssemblyInstaller> é criado chamando o <xref:System.Configuration.Install.AssemblyInstaller.%23ctor%2A> construtor. O <xref:System.Configuration.Install.AssemblyInstaller.UseNewContext%2A> propriedade deste objeto está definida como `true` e <xref:System.Configuration.Install.AssemblyInstaller.Install%2A> método é invocado no `MyAssembly_HelpText.exe` assembly. Devido a isso, as mensagens de log são exibidas no console.  
+  
+ [!code-cpp[AssemblyInstaller_HelpText#1](~/samples/snippets/cpp/VS_Snippets_CLR/AssemblyInstaller_HelpText/CPP/assemblyinstaller_helptext.cpp#1)]
+ [!code-csharp[AssemblyInstaller_HelpText#1](~/samples/snippets/csharp/VS_Snippets_CLR/AssemblyInstaller_HelpText/CS/assemblyinstaller_helptext.cs#1)]
+ [!code-vb[AssemblyInstaller_HelpText#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyInstaller_HelpText/VB/assemblyinstaller_helptext.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1353 @@
+<Type Name="Guid" FullName="System.Guid">
+  <TypeSignature Language="C#" Value="public struct Guid : IComparable, IComparable&lt;Guid&gt;, IEquatable&lt;Guid&gt;, IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Guid extends System.ValueType implements class System.IComparable, class System.IComparable`1&lt;valuetype System.Guid&gt;, class System.IEquatable`1&lt;valuetype System.Guid&gt;, class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Guid" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable&lt;System.Guid&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Guid&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um identificador global exclusivo (GUID).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para exibir o código-fonte do .NET Framework para este tipo, consulte o [fonte de referência](http://referencesource.microsoft.com/#mscorlib/system/guid.cs#b622ef5f6b76c10a). Percorra o código-fonte online, baixe a referência para exibição offline e percorrer as fontes (incluindo atualizações e patches) durante a depuração; consulte [instruções](http://referencesource.microsoft.com/).  
+  
+ Um GUID é um inteiro de 128 bits (16 bytes) que pode ser usado em todos os computadores e redes sempre que um identificador exclusivo é necessário. Tal identificador tem uma probabilidade muito baixa de sendo duplicado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa a <xref:System.Runtime.InteropServices.GuidAttribute?displayProperty=nameWithType> classe para atribuir um GUID para uma interface e uma classe definida pelo usuário. Recupera o valor de GUID chamando o <xref:System.Attribute.GetCustomAttribute%2A> método e o compara com dois outros GUIDs para determinar se eles são iguais.  
+  
+ [!code-cpp[Guid#1](~/samples/snippets/cpp/VS_Snippets_CLR/Guid/CPP/Guids.cpp#1)]
+ [!code-csharp[Guid#1](~/samples/snippets/csharp/VS_Snippets_CLR/Guid/CS/Guids.cs#1)]
+ [!code-vb[Guid#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Guid/VB/Guids.vb#1)]  
+  
+ Observe que o <xref:System.Runtime.InteropServices.GuidAttribute> atributo normalmente é usado em um aplicativo para expor um tipo para COM. Se você compilar este exemplo, você pode executar o [ferramenta de registro de Assembly (Regasm.exe)](~/docs/framework/tools/regasm-exe-assembly-registration-tool.md) no assembly gerado para criar o registro (. reg) e arquivos de biblioteca (. tlb) de tipo. O arquivo. reg pode ser usado para registrar coclass no registro e o arquivo. tlb pode fornecer metadados para interoperabilidade COM.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Guid (byte[] b);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="b" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="b">Uma matriz de elemento de 16 bytes que contém valores que inicializam o GUID.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Guid" /> usando o valor representado pela matriz de bytes especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="b" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="b" /> não tem comprimento de 16 bytes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Guid (string g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="g" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="g">Uma cadeia de caracteres que contém um GUID em um dos seguintes formatos (“d” representa um dígito hexadecimal cujas	maiúsculas e minúsculas são ignoradas):  
+  
+ 32 dígitos contíguos:  
+  
+ dddddddddddddddddddddddddddddddd  
+  
+ -ou-  
+  
+ Grupos de 8, 4, 4, 4 e 12 dígitos com hifens entre os grupos. O GUID inteiro pode ser circunscrito nas chaves ou parênteses correspondentes:  
+  
+ dddddddd-dddd-dddd-dddd-dddddddddddd  
+  
+ -ou-  
+  
+ {dddddddd-dddd-dddd-dddd-dddddddddddd}  
+  
+ -ou-  
+  
+ (dddddddd-dddd-dddd-dddd-dddddddddddd)  
+  
+ -ou-  
+  
+ Grupos de 8, 4 e 4 dígitos e um subconjunto de oito grupos de 2 dígitos, com cada grupo prefixado por “0x” ou “0X” e separado por vírgula. O GUID inteiro, bem como o subconjunto, é circunscrito em chaves correspondentes:  
+  
+ {0xdddddddd, 0xdddd, 0xdddd,{0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd,0xdd}}  
+  
+ Todas as chaves, vírgulas e prefixos “0x” são necessários. Todos os espaços incorporados são ignorados. Todos os zeros à esquerda em um grupo são ignorados.  
+  
+ Os dígitos mostrados em um grupo são o número máximo de dígitos significativos que podem aparecer no grupo. Especifique de 1 ao número de dígitos mostrados para um grupo. Os dígitos especificados são considerados dígitos de ordem inferior do grupo.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Guid" /> usando o valor representado pela cadeia de caracteres especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os dígitos hexadecimais alfabéticos no `g` parâmetro pode ser em maiusculas ou minúsculas. Por exemplo, as cadeias de caracteres a seguir representam o mesmo GUID:  
+  
+ "ca761232ed4211cebacd00aa0057b223"  
+  
+ "CA761232-ED42-11CE-BACD-00AA0057B223"  
+  
+ "{CA761232-ED42-11CE-BACD-00AA0057B223}"  
+  
+ "(CA761232-ED42-11CE-BACD-00AA0057B223)"  
+  
+ "{0xCA761232, 0xED42, 0x11CE, {0xBA, 0xCD, 0x00, 0xAA, 0x00, 0x57, 0xB2, 0x23}}"  
+  
+   
+  
+## Examples  
+ O exemplo a seguir passa cada cadeia de caracteres listada na seção comentários para o <xref:System.Guid.%23ctor%28System.String%29> construtor.  
+  
+ [!code-csharp[System.Guid.ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.ctor/cs/ctor1.cs#1)]
+ [!code-vb[System.Guid.ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.ctor/vb/ctor1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="g" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">O formato de <paramref name="g" /> é inválido.</exception>
+        <exception cref="T:System.OverflowException">O formato de <paramref name="g" /> é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Guid (int a, short b, short c, byte[] d);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 a, int16 b, int16 c, unsigned int8[] d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.#ctor(System.Int32,System.Int16,System.Int16,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="a" Type="System.Int32" />
+        <Parameter Name="b" Type="System.Int16" />
+        <Parameter Name="c" Type="System.Int16" />
+        <Parameter Name="d" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="a">Os primeiros 4 bytes de GUID.</param>
+        <param name="b">Os 2 bytes seguintes de GUID.</param>
+        <param name="c">Os 2 bytes seguintes de GUID.</param>
+        <param name="d">Os 8 bytes restantes de GUID.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Guid" /> usando os inteiros e a matriz de byte especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ `Guid(1,2,3,new byte[]{0,1,2,3,4,5,6,7})`cria um <xref:System.Guid> que corresponde a "00000001-0002-0003-0001-020304050607".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="d" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="d" /> não tem 8 bytes de tamanho.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Guid (int a, short b, short c, byte d, byte e, byte f, byte g, byte h, byte i, byte j, byte k);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 a, int16 b, int16 c, unsigned int8 d, unsigned int8 e, unsigned int8 f, unsigned int8 g, unsigned int8 h, unsigned int8 i, unsigned int8 j, unsigned int8 k) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.#ctor(System.Int32,System.Int16,System.Int16,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="a" Type="System.Int32" />
+        <Parameter Name="b" Type="System.Int16" />
+        <Parameter Name="c" Type="System.Int16" />
+        <Parameter Name="d" Type="System.Byte" />
+        <Parameter Name="e" Type="System.Byte" />
+        <Parameter Name="f" Type="System.Byte" />
+        <Parameter Name="g" Type="System.Byte" />
+        <Parameter Name="h" Type="System.Byte" />
+        <Parameter Name="i" Type="System.Byte" />
+        <Parameter Name="j" Type="System.Byte" />
+        <Parameter Name="k" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="a">Os primeiros 4 bytes de GUID.</param>
+        <param name="b">Os 2 bytes seguintes de GUID.</param>
+        <param name="c">Os 2 bytes seguintes de GUID.</param>
+        <param name="d">O byte seguinte de GUID.</param>
+        <param name="e">O byte seguinte de GUID.</param>
+        <param name="f">O byte seguinte de GUID.</param>
+        <param name="g">O byte seguinte de GUID.</param>
+        <param name="h">O byte seguinte de GUID.</param>
+        <param name="i">O byte seguinte de GUID.</param>
+        <param name="j">O byte seguinte de GUID.</param>
+        <param name="k">O byte seguinte de GUID.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Guid" /> usando os inteiros e bytes especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especificar bytes individuais dessa maneira pode ser usado para contornar as restrições de ordem de byte (ordem de byte big-endian ou little endian) em tipos específicos de computadores.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um GUID cuja representação de cadeia de caracteres é "0000000a-000b-000c-0001-020304050607".  
+  
+ [!code-csharp[System.Guid.Ctor#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.ctor/cs/ctor2.cs#2)]
+ [!code-vb[System.Guid.Ctor#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.ctor/vb/ctor2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Guid (uint a, ushort b, ushort c, byte d, byte e, byte f, byte g, byte h, byte i, byte j, byte k);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int32 a, unsigned int16 b, unsigned int16 c, unsigned int8 d, unsigned int8 e, unsigned int8 f, unsigned int8 g, unsigned int8 h, unsigned int8 i, unsigned int8 j, unsigned int8 k) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.#ctor(System.UInt32,System.UInt16,System.UInt16,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="a" Type="System.UInt32" />
+        <Parameter Name="b" Type="System.UInt16" />
+        <Parameter Name="c" Type="System.UInt16" />
+        <Parameter Name="d" Type="System.Byte" />
+        <Parameter Name="e" Type="System.Byte" />
+        <Parameter Name="f" Type="System.Byte" />
+        <Parameter Name="g" Type="System.Byte" />
+        <Parameter Name="h" Type="System.Byte" />
+        <Parameter Name="i" Type="System.Byte" />
+        <Parameter Name="j" Type="System.Byte" />
+        <Parameter Name="k" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="a">Os primeiros 4 bytes de GUID.</param>
+        <param name="b">Os 2 bytes seguintes de GUID.</param>
+        <param name="c">Os 2 bytes seguintes de GUID.</param>
+        <param name="d">O byte seguinte de GUID.</param>
+        <param name="e">O byte seguinte de GUID.</param>
+        <param name="f">O byte seguinte de GUID.</param>
+        <param name="g">O byte seguinte de GUID.</param>
+        <param name="h">O byte seguinte de GUID.</param>
+        <param name="i">O byte seguinte de GUID.</param>
+        <param name="j">O byte seguinte de GUID.</param>
+        <param name="k">O byte seguinte de GUID.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Guid" /> usando os inteiros sem sinal e bytes especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especificar os bytes dessa maneira evita problemas de ordenação de bits.  
+  
+   
+  
+## Examples  
+ GUID(0xA,0xB,0xC,0,1,2,3,4,5,6,7) cria um <xref:System.Guid> que corresponde a "0000000a-000b-000c-0001-020304050607".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (Guid value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(valuetype System.Guid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.CompareTo(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto a ser comparado com essa instância.</param>
+        <summary>Compara essa instância com um objeto <see cref="T:System.Guid" /> especificado e retorna uma indicação dos valores relativos.</summary>
+        <returns>Um número assinado que indica os valores relativos dessa instância e de <paramref name="value" />.  
+  
+ <list type="table"><listheader><term>Valor de retorno  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>Um inteiro negativo  
+  
+ </term><description>Esta instância é menor que <paramref name="value" />.  
+  
+ </description></item><item><term>Zero  
+  
+ </term><description>Esta instância é igual a <paramref name="value" />.  
+  
+ </description></item><item><term>Um número inteiro positivo  
+  
+ </term><description>Esta instância é maior do que <paramref name="value" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Guid.CompareTo%2A> método compara os GUIDs como se fossem valores fornecidos para o <xref:System.Guid.%23ctor%28System.Int32%2CSystem.Int16%2CSystem.Int16%2CSystem.Byte%5B%5D%29> construtor, da seguinte maneira:  
+  
+-   Ele compara o <xref:System.UInt32> valores e retorna um resultado, se eles são diferentes. Se forem iguais, ele executa a próxima comparação.  
+  
+-   Ele compara o primeiro <xref:System.UInt16> valores e retorna um resultado, se eles são diferentes. Se forem iguais, ele executa a próxima comparação.  
+  
+-   Ele compara o segundo <xref:System.UInt16> valores e retorna um resultado, se eles são diferentes. Se forem iguais, ele executa a próxima comparação.  
+  
+-   Se executa uma comparação byte por byte de oito a próxima <xref:System.Byte> valores. Quando encontra o primeiro par de diferente, ele retorna o resultado. Caso contrário, retorna 0 para indicar que os dois <xref:System.Guid> valores são iguais.  
+  
+ Observe que o final oito bytes aparecem na representação de cadeia de caracteres de um <xref:System.Guid> na ordem inversa, de baixa byte a byte mais significativo. Por exemplo, na representação de cadeia de caracteres da <xref:System.Guid> valor "01e75c83-c6f5-4192-b57e-7427cec5560d", o final oito bytes são "b57e-7427cec5560d". Em outras palavras, o final oito bytes é comparado em uma base de byte por byte da esquerda para direita a partir 0xb5.  
+  
+ Se dois GUIDs com valores iguais para um componente, o método compara o próximo componente. Quando encontra um componente cujos valores são diferentes, ele retorna o resultado.  
+  
+ Implementa esse método de <xref:System.IComparable%601?displayProperty=nameWithType> interface e executa um pouco melhor do que o <xref:System.Guid.CompareTo%2A?displayProperty=nameWithType> método porque ele não tem que converter a `value` parâmetro para um <xref:System.Guid> valor.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Guid.CompareTo%28System.Guid%29> método para comparar um valor GUID com dois valores GUID semelhantes.  
+  
+ [!code-csharp[System.Guid.CompareTo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.compareto/cs/compareto2.cs#1)]
+ [!code-vb[System.Guid.CompareTo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.compareto/vb/compareto2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto a ser comparado ou <see langword="null" />.</param>
+        <summary>Compara essa instância com um objeto especificado e retorna uma indicação dos valores relativos.</summary>
+        <returns>Um número assinado que indica os valores relativos dessa instância e de <paramref name="value" />.  
+  
+ <list type="table"><listheader><term>Valor de retorno  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>Um inteiro negativo  
+  
+ </term><description>Esta instância é menor que <paramref name="value" />.  
+  
+ </description></item><item><term>Zero  
+  
+ </term><description>Esta instância é igual a <paramref name="value" />.  
+  
+ </description></item><item><term>Um número inteiro positivo  
+  
+ </term><description>Esta instância é maior do que <paramref name="value" />, ou <paramref name="value" /> é <see langword="null" />.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `value` parâmetro deve ser `null` ou uma instância de <xref:System.Guid>; caso contrário, uma exceção será lançada. Qualquer instância do <xref:System.Guid>, independentemente de seu valor é considerado maior `null`.  
+  
+ O <xref:System.Guid.CompareTo%2A> método compara os GUIDs como se fossem valores fornecidos para o <xref:System.Guid.%23ctor%2A> construtor, da seguinte maneira:  
+  
+-   Ele compara o <xref:System.Int32> valores e retorna um resultado, se eles são diferentes. Se forem iguais, ele executa a próxima comparação.  
+  
+-   Ele compara o primeiro <xref:System.Int16> valores e retorna um resultado, se eles são diferentes. Se forem iguais, ele executa a próxima comparação.  
+  
+-   Ele compara o segundo <xref:System.Int16> valores e retorna um resultado, se eles são diferentes. Se forem iguais, ele executa a próxima comparação.  
+  
+-   Se executa uma comparação byte por byte de oito a próxima <xref:System.Byte> valores. Quando encontra o primeiro par de diferente, ele retorna o resultado. Caso contrário, retorna 0 para indicar que os dois <xref:System.Guid> valores são iguais.  
+  
+ Se dois GUIDs com valores iguais para um componente, o método compara o próximo componente. Quando encontra um componente cujos valores são diferentes, ele retorna o resultado.  
+  
+ Observe que o final oito bytes aparecem na representação de cadeia de caracteres de um <xref:System.Guid> na ordem inversa, de baixa byte a byte mais significativo. Por exemplo, na representação de cadeia de caracteres da <xref:System.Guid> valor "01e75c83-c6f5-4192-b57e-7427cec5560d", o final oito bytes são "b57e-7427cec5560d".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Runtime.InteropServices.GuidAttribute> atributo para atribuir um GUID para uma classe. Recupera o valor desse GUID chamando o <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> método e passar o <xref:System.Runtime.InteropServices.GuidAttribute.Value%2A> propriedade retornado <xref:System.Runtime.InteropServices.GuidAttribute> o objeto para o <xref:System.Guid.Parse%2A> método. Em seguida, ele compara o GUID com uma matriz de valores.  
+  
+ [!code-csharp[System.Guid.CompareTo#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.compareto/cs/compareto1.cs#2)]
+ [!code-vb[System.Guid.CompareTo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.compareto/vb/compareto1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não é um <see cref="T:System.Guid" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly Guid Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Guid.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma instância somente leitura da estrutura <see cref="T:System.Guid" /> cujo valor é zero.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode comparar um GUID com o valor de <xref:System.Guid.Empty?displayProperty=nameWithType> campo para determinar se um GUID é diferente de zero. O exemplo a seguir usa o <xref:System.Guid.op_Equality%2A> operador para comparar dois valores GUID com <xref:System.Guid.Empty?displayProperty=nameWithType> para determinar se eles consistem exclusivamente em zeros.  
+  
+ [!code-csharp[System.Guid.Empty#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.empty/cs/empty.cs#1)]
+ [!code-vb[System.Guid.Empty#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.empty/vb/empty.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Guid g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Guid g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.Equals(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um objeto a ser comparado com essa instância.</param>
+        <summary>Retorna um valor que indica se essa instância e um objeto <see cref="T:System.Guid" /> especificado representam o mesmo valor.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="g" /> for igual a essa instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Guid> objetos são iguais se eles tiverem valores idênticos bytes.  
+  
+ Esse método executa um pouco melhor do que o <xref:System.Guid.Equals%2A> método porque ele não tem a caixa de `g` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser comparado com essa instância.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="o" /> é um <see cref="T:System.Guid" /> que tem o mesmo valor que esta instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Guid> objetos são iguais se eles tiverem valores idênticos bytes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>O código hash para essa instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewGuid">
+      <MemberSignature Language="C#" Value="public static Guid NewGuid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Guid NewGuid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.NewGuid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Guid" />.</summary>
+        <returns>Um novo objeto GUID.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um conveniente `static` que você pode chamar para obter um novo método <xref:System.Guid>. O método ajusta uma chamada para o Windows [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568.aspx) função. Retornado <xref:System.Guid> é garantido que não é igual a <xref:System.Guid?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e exibe os valores de dois <xref:System.Guid> objetos.  
+  
+ [!code-csharp[system.guid.newguid#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.newguid/cs/ng.cs#1)]
+ [!code-vb[system.guid.newguid#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.newguid/vb/ng.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Guid a, Guid b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Guid a, valuetype System.Guid b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.op_Equality(System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Guid" />
+        <Parameter Name="b" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="a">O primeiro objeto a ser comparado.</param>
+        <param name="b">O segundo objeto a ser comparado.</param>
+        <summary>Indica se os valores dos dois objetos de <see cref="T:System.Guid" /> especificados são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="a" /> e <paramref name="b" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Guid.Equals%28System.Object%29?displayProperty=nameWithType>  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Guid.op_Equality%2A> operador para comparar dois valores GUID com <xref:System.Guid.Empty?displayProperty=nameWithType> para determinar se eles consistem exclusivamente em zeros.  
+  
+ [!code-csharp[System.Guid.Empty#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.empty/cs/empty.cs#1)]
+ [!code-vb[System.Guid.Empty#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.empty/vb/empty.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Guid a, Guid b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Guid a, valuetype System.Guid b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.op_Inequality(System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Guid" />
+        <Parameter Name="b" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="a">O primeiro objeto a ser comparado.</param>
+        <param name="b">O segundo objeto a ser comparado.</param>
+        <summary>Indica se os valores de dois especificada <see cref="T:System.Guid" /> objetos não são iguais.</summary>
+        <returns>
+          <see langword="true" /> caso <paramref name="a" /> e <paramref name="b" /> não sejam iguais; do contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Guid.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static Guid Parse (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Guid Parse(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">A cadeia de caracteres a ser convertida.</param>
+        <summary>Converte a representação de cadeia de caracteres de um GUID para a estrutura <see cref="T:System.Guid" /> equivalente.</summary>
+        <returns>Uma estrutura que contém o valor analisado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Guid.Parse%2A> método corta espaços em branco à esquerda ou à direita do `input` e converte a representação de cadeia de caracteres de um GUID para uma <xref:System.Guid> valor. Esse método pode converter cadeias de caracteres em qualquer um dos cinco formatos produzidos pelo <xref:System.Guid.ToString%28System.String%29> e <xref:System.Guid.ToString%28System.String%2CSystem.IFormatProvider%29> métodos, como mostrado na tabela a seguir.  
+  
+|Especificador|Descrição|Formatar|  
+|---------------|-----------------|------------|  
+|`N`|32 dígitos|00000000000000000000000000000000|  
+|`D`|32 dígitos separados por hifens.|00000000-0000-0000-0000-000000000000|  
+|`B`|32 dígitos separados por hifens, entre chaves.|{00000000-0000-0000-0000-000000000000}|  
+|`P`|32 dígitos separados por hifens, entre parênteses.|(00000000-0000-0000-0000-000000000000)|  
+|`X`|Quatro valores hexadecimais entre chaves, onde o valor da quarto é um subconjunto de valores hexadecimais oito também fica entre chaves|{0x00000000,0x0000,0x0000,{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}}|  
+  
+ O método lança um <xref:System.FormatException> se não for possível analisar com êxito a cadeia de caracteres. Aqui estão alguns dos motivos pelos quais isso pode ocorrer incluem:  
+  
+-   `input`contém caracteres que não fazem parte do conjunto de caracteres hexadecimal.  
+  
+-   `input`tem muitos ou poucos caracteres numéricos.  
+  
+-   `input`tem muitos ou poucos caracteres não numéricos apropriado para um formato específico.  
+  
+-   `input`não está em um dos formatos reconhecidos pelo <xref:System.Guid.ToString%2A> método e listados na tabela anterior.  
+  
+ Use o <xref:System.Guid.TryParse%2A> método para capturar qualquer operação de análise sem êxito sem ter que lidar com uma exceção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo GUID, converte-o em três representações de cadeia de caracteres separada por meio da chamada de <xref:System.Guid.ToString%28System.String%29> método com o "B", "D" e "X" especificadores de formato e, em seguida, chama o <xref:System.Guid.Parse%2A> método para converter as cadeias de caracteres de volta para <xref:System.Guid> valores.  
+  
+ [!code-csharp[System.Guid.Parse#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.parse/cs/parseex1.cs#3)]
+ [!code-vb[System.Guid.Parse#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.parse/vb/parseex1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="input" /> não está em um formato reconhecido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseExact">
+      <MemberSignature Language="C#" Value="public static Guid ParseExact (string input, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Guid ParseExact(string input, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.ParseExact(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">O GUID a converter.</param>
+        <param name="format">Um dos seguintes especificadores que indica o formato exato a ser usado ao interpretar <c>entrada</c>: "N", "D", "B", "P" ou "X".</param>
+        <summary>Converte a representação de cadeia de caracteres de um GUID na estrutura <see cref="T:System.Guid" /> equivalente, desde que a cadeia de caracteres esteja no formato especificado.</summary>
+        <returns>Uma estrutura que contém o valor analisado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Guid.ParseExact%2A> requer que a cadeia de caracteres para converter para ser exatamente no formato especificado pelo método de `format` parâmetro, depois à esquerda e os caracteres de espaço em branco à direita são removidos. A tabela a seguir mostra os especificadores de formato aceitos para o parâmetro `format`. "0" representa um dígito; hifens ("-"), chaves ("{", "}") e parênteses (“(”, ")”) são exibidos como mostrado.  
+  
+|Especificador|Formato da `input` parâmetro|  
+|---------------|-------------------------------------|  
+|N|32 dígitos:<br /><br /> 00000000000000000000000000000000|  
+|D|32 dígitos separados por hifens:<br /><br /> 00000000-0000-0000-0000-000000000000|  
+|B|32 dígitos separados por hifens, entre chaves:<br /><br /> {00000000-0000-0000-0000-000000000000}|  
+|P|32 dígitos separados por hifens, entre parênteses:<br /><br /> (00000000-0000-0000-0000-000000000000)|  
+|X|Quatro valores hexadecimais entre chaves, em que o quarto valor é um subconjunto de oito valores hexadecimais que também é incluído entre chaves:<br /><br /> {0x00000000,0x0000,0x0000,{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}}|  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Guid.ToString%28System.String%29> método com cada um dos especificadores de formato com suporte para gerar uma matriz de cadeias de caracteres que representam um único GUID. Eles são passados para o <xref:System.Guid.ParseExact%2A> método, que analisa com êxito apenas a cadeia de caracteres que está de acordo com o especificador de formato "B".  
+  
+ [!code-csharp[System.Guid.Parse#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.parse/cs/parseexactex1.cs#4)]
+ [!code-vb[System.Guid.Parse#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.parse/vb/parseexactex1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="input" /> ou <paramref name="format" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="input" /> não está no formato especificado por <paramref name="format" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IComparable.CompareTo">
+      <MemberSignature Language="C#" Value="int IComparable.CompareTo (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.IComparable.CompareTo(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.System#IComparable#CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">To be added.</param>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByteArray">
+      <MemberSignature Language="C#" Value="public byte[] ToByteArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ToByteArray() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.ToByteArray" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma matriz de bytes de 16 elementos que contém o valor dessa instância.</summary>
+        <returns>Uma matriz de bytes de 16 elementos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar a matriz de bytes retornada por este método para viagem um <xref:System.Guid> valor chamando o <xref:System.Guid.%23ctor%28System.Byte%5B%5D%29> construtor.  
+  
+ Observe que a ordem de bytes na matriz de bytes retornada é diferente da representação de cadeia de caracteres de uma <xref:System.Guid> valor. A ordem do grupo de quatro bytes de início e os dois grupos de dois bytes é revertida, enquanto que a ordem do último grupo de dois bytes e o grupo de seis bytes de fechamento é o mesmo. O exemplo fornece uma ilustração.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Guid.NewGuid%2A> método para criar um <xref:System.Guid> valor e, em seguida, chama o <xref:System.Guid.ToByteArray%2A> método para representar o <xref:System.Guid> valor como uma matriz de bytes. Ele exibe, em seguida, os dois valores para o console. Por fim, ele cria um novo <xref:System.Guid> valor da matriz de bytes e chama seu <xref:System.Guid.Equals%28System.Guid%29> método para mostrar que os dois <xref:System.Guid> são idênticos.  
+  
+ [!code-csharp[System.Guid.ToByteArray#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.tobytearray/cs/tobytearray3.cs#1)]
+ [!code-vb[System.Guid.ToByteArray#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.tobytearray/vb/tobytearray3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação da cadeia de caracteres do valor dessa instância no formato do Registro.</summary>
+        <returns>O valor desse <see cref="T:System.Guid" />, formatado usando o especificador de formato "D" da seguinte maneira:  
+  
+ <c>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</c>  
+  
+ em que o valor do GUID é representado como uma série de dígitos hexadecimais em letras minúsculas em grupos de 8, 4, 4, 4 e 12 dígitos e separado por hifens. Um exemplo de um valor retornado é "382c74c3-721d-4f34-80e5-57657b6cbc27". Para converter os dígitos hexadecimais de à f em letras maiusculas, chame o <see cref="M:System.String.ToUpper" /> método na cadeia de caracteres retornada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método fornece um formato GUID padrão que é suficiente para uso normal; No entanto, outras versões do método que levam um `format` parâmetro fornecer algumas variações de formato comum.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.ToString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um especificador de formato único que indica como formatar o valor desse <see cref="T:System.Guid" />. O <c>formato</c> parâmetro pode ser "N", "D", "B", "P" ou "X". Se <c>formato</c> é <see langword="null" /> ou uma cadeia de caracteres vazia (""), "D" é usado.</param>
+        <summary>Retorna uma representação de cadeia de caracteres do valor desta instância de <see cref="T:System.Guid" />, de acordo com o especificador de formato fornecido.</summary>
+        <returns>O valor desse <see cref="T:System.Guid" />, representado como uma série de dígitos hexadecimais em minúsculas no formato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os especificadores de formato aceitos para o parâmetro `format`. "0" representa um dígito; hifens ("-"), chaves ("{", "}") e parênteses (“(”, ")”) são exibidos como mostrado.  
+  
+|Especificador|Formato do valor de retorno|  
+|---------------|----------------------------|  
+|`N`|32 dígitos:<br /><br /> 00000000000000000000000000000000|  
+|`D`|32 dígitos separados por hifens:<br /><br /> 00000000-0000-0000-0000-000000000000|  
+|`B`|32 dígitos separados por hifens, entre chaves:<br /><br /> {00000000-0000-0000-0000-000000000000}|  
+|`P`|32 dígitos separados por hifens, entre parênteses:<br /><br /> (00000000-0000-0000-0000-000000000000)|  
+|`X`|Quatro valores hexadecimais entre chaves, em que o quarto valor é um subconjunto de oito valores hexadecimais que também é incluído entre chaves:<br /><br /> {0x00000000,0x0000,0x0000,{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}}|  
+  
+ Os dígitos hexadecimais à f letras são minúsculas na cadeia de caracteres retornada. Para converter para letras maiusculas, chame o <xref:System.String.ToUpper%2A?displayProperty=nameWithType> método na cadeia de caracteres retornada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">O valor <paramref name="format" /> não é <see langword="null" />, uma cadeia de caracteres vazia (""), "N", "D", "B", "P" ou "X".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um especificador de formato único que indica como formatar o valor desse <see cref="T:System.Guid" />. O <c>formato</c> parâmetro pode ser "N", "D", "B", "P" ou "X". Se <c>formato</c> é <see langword="null" /> ou uma cadeia de caracteres vazia (""), "D" é usado.</param>
+        <param name="provider">(Reservado) Um objeto que fornece informações de formatação específicas de cultura.</param>
+        <summary>Retorna uma representação de cadeia de caracteres do valor desta instância da classe <see cref="T:System.Guid" />, de acordo com as informações de formato específicas da cultura e com o especificador de formato fornecido.</summary>
+        <returns>O valor desse <see cref="T:System.Guid" />, representado como uma série de dígitos hexadecimais em minúsculas no formato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `provider` parâmetro é reservado para uso futuro e não contribuem para a execução deste método. Você pode passar `null` na chamada do método.  
+  
+ A tabela a seguir mostra os especificadores de formato aceitos para o parâmetro `format`. "0" representa um dígito; hifens ("-"), chaves ("{", "}") e parênteses (“(”, ")”) são exibidos como mostrado.  
+  
+|Especificador|Formato do valor de retorno|  
+|---------------|----------------------------|  
+|`N`|32 dígitos:<br /><br /> 00000000000000000000000000000000|  
+|`D`|32 dígitos separados por hifens:<br /><br /> 00000000-0000-0000-0000-000000000000|  
+|`B`|32 dígitos separados por hifens, entre chaves:<br /><br /> {00000000-0000-0000-0000-000000000000}|  
+|`P`|32 dígitos separados por hifens, entre parênteses:<br /><br /> (00000000-0000-0000-0000-000000000000)|  
+|`X`|Quatro valores hexadecimais entre chaves, em que o quarto valor é um subconjunto de oito valores hexadecimais que também é incluído entre chaves:<br /><br /> {0x00000000,0x0000,0x0000,{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}}|  
+  
+ Os dígitos hexadecimais à f letras são minúsculas na cadeia de caracteres retornada. Para converter para letras maiusculas, chame o <xref:System.String.ToUpper%2A?displayProperty=nameWithType> método na cadeia de caracteres retornada.  
+  
+ Porque o `provider` parâmetro é ignorado, você não pode usá-lo para fornecer uma solução personalizada de formatação. Para representar um <xref:System.Guid> valor como uma cadeia de caracteres em um formato que não é compatível com as padrão cadeias de formato GUID, chamada de <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> método com um `provider` objeto que implementa ambos o <xref:System.ICustomFormatter> e <xref:System.IFormatProvider> interfaces. Para obter mais informações, consulte a seção "Formatação com ICustomFormatter personalizado" o [tipos de formatação](~/docs/standard/base-types/formatting-types.md) artigo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">O valor <paramref name="format" /> não é <see langword="null" />, uma cadeia de caracteres vazia (""), "N", "D", "B", "P" ou "X".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (string input, out Guid result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string input, [out] valuetype System.Guid&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.TryParse(System.String,System.Guid@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="result" Type="System.Guid&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">O GUID a converter.</param>
+        <param name="result">A estrutura que conterá o valor analisado. Se o método retornar <see langword="true" />, <c>resultados</c> contém válido <see cref="T:System.Guid" />. Se o método retornar <see langword="false" />, <c>resultados</c> é igual a <see cref="F:System.Guid.Empty" />.</param>
+        <summary>Converte a representação de cadeia de caracteres de um GUID para a estrutura <see cref="T:System.Guid" /> equivalente.</summary>
+        <returns>
+          <see langword="true" /> se a operação de análise for bem-sucedida; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é como o <xref:System.Guid.Parse%2A> método, exceto que, em vez de retornar o GUID analisado, ele retorna `false` se `input` é `null` ou não em um formato reconhecido e não gerará uma exceção. Organizando qualquer espaço em branco à esquerda ou à direita do `input` e converte cadeias de caracteres em qualquer um dos cinco formatos reconhecidos pelo <xref:System.Guid.ToString%28System.String%29> e <xref:System.Guid.ToString%28System.String%2CSystem.IFormatProvider%29> métodos, como mostrado na tabela a seguir.  
+  
+|Especificador|Descrição|Formatar|  
+|---------------|-----------------|------------|  
+|`N`|32 dígitos|00000000000000000000000000000000|  
+|`D`|32 dígitos separados por hifens.|00000000-0000-0000-0000-000000000000|  
+|`B`|32 dígitos separados por hifens, entre chaves.|{00000000-0000-0000-0000-000000000000}|  
+|`P`|32 dígitos separados por hifens, entre parênteses.|(00000000-0000-0000-0000-000000000000)|  
+|`X`|Quatro valores hexadecimais entre chaves, onde o valor da quarto é um subconjunto de valores hexadecimais oito também fica entre chaves|{0x00000000,0x0000,0x0000,{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}}|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo GUID, converte-o em três representações de cadeia de caracteres separada por meio da chamada de <xref:System.Guid.ToString%28System.String%29> método com o "B", "D" e "X" especificadores de formato e, em seguida, chama o <xref:System.Guid.TryParse%2A> método para converter as cadeias de caracteres de volta para <xref:System.Guid> valores.  
+  
+ [!code-csharp[System.Guid.Parse#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.parse/cs/tryparseex1.cs#2)]
+ [!code-vb[System.Guid.Parse#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.parse/vb/tryparseex1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseExact">
+      <MemberSignature Language="C#" Value="public static bool TryParseExact (string input, string format, out Guid result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParseExact(string input, string format, [out] valuetype System.Guid&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Guid.TryParseExact(System.String,System.String,System.Guid@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="result" Type="System.Guid&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">O GUID a converter.</param>
+        <param name="format">Um dos seguintes especificadores que indica o formato exato a ser usado ao interpretar <c>entrada</c>: "N", "D", "B", "P" ou "X".</param>
+        <param name="result">A estrutura que conterá o valor analisado. Se o método retornar <see langword="true" />, <c>resultados</c> contém válido <see cref="T:System.Guid" />. Se o método retornar <see langword="false" />, <c>resultados</c> é igual a <see cref="F:System.Guid.Empty" />.</param>
+        <summary>Converte a representação de cadeia de caracteres de um GUID na estrutura <see cref="T:System.Guid" /> equivalente, desde que a cadeia de caracteres esteja no formato especificado.</summary>
+        <returns>
+          <see langword="true" /> se a operação de análise for bem-sucedida; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método requer que a cadeia de caracteres para converter para ser exatamente no formato especificado pelo `format` parâmetro, depois à esquerda e os caracteres de espaço em branco à direita são removidos. Ele retorna `false` se `input` é `null` ou não está no formato especificado pelo `format`e não gerará uma exceção.  
+  
+ A tabela a seguir mostra os especificadores de formato aceitos para o parâmetro `format`. "0" representa um dígito; hifens ("-"), chaves ("{", "}") e parênteses (“(”, ")”) são exibidos como mostrado.  
+  
+|Especificador|Formato da `input` parâmetro|  
+|---------------|-------------------------------------|  
+|N|32 dígitos:<br /><br /> 00000000000000000000000000000000|  
+|D|32 dígitos separados por hifens:<br /><br /> 00000000-0000-0000-0000-000000000000|  
+|B|32 dígitos separados por hifens, entre chaves:<br /><br /> {00000000-0000-0000-0000-000000000000}|  
+|P|32 dígitos separados por hifens, entre parênteses:<br /><br /> (00000000-0000-0000-0000-000000000000)|  
+|X|Quatro valores hexadecimais entre chaves, em que o quarto valor é um subconjunto de oito valores hexadecimais que também é incluído entre chaves:<br /><br /> {0x00000000,0x0000,0x0000,{0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}}|  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Guid.ToString%28System.String%29> método com cada um dos especificadores de formato com suporte para gerar uma matriz de cadeias de caracteres que representam um único GUID. Eles são passados para o <xref:System.Guid.TryParseExact%2A> método, que analisa com êxito a cadeia de caracteres que está de acordo com o especificador de formato "B".  
+  
+ [!code-csharp[System.Guid.Parse#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.guid.parse/cs/tryparseexactex1.cs#5)]
+ [!code-vb[System.Guid.Parse#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.guid.parse/vb/tryparseexactex1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

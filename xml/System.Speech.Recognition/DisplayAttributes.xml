@@ -1,0 +1,170 @@
+<Type Name="DisplayAttributes" FullName="System.Speech.Recognition.DisplayAttributes">
+  <TypeSignature Language="C#" Value="public enum DisplayAttributes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DisplayAttributes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.DisplayAttributes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Lista as opções que o <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> objeto pode usar para especificar o espaço em branco para a exibição de uma palavra ou uma marca de pontuação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fala de área de trabalho do Windows retorna frases reconhecidos como coleções de <xref:System.Speech.Recognition.RecognizedWordUnit> ou <xref:System.Speech.Recognition.ReplacementText> objetos. Cada objeto corresponde a uma única palavra ou uma marca de pontuação. O `DisplayAttributes` propriedade de um <xref:System.Speech.Recognition.RecognizedWordUnit> ou <xref:System.Speech.Recognition.ReplacementText> usa um membro de <xref:System.Speech.Recognition.DisplayAttributes> enumeração para descrever como impressão espaçamento é tratada em torno de uma determinada palavra ou marca de pontuação.  
+  
+ Dois ou mais membros a `DisplayAttributes` enumeração pode ser combinada com um bit a bit `OR` para especificar como uma palavra específica deve ser exibida.  
+  
+> [!NOTE]
+>  A formatação que usa o reconhecedor de fala de exibição é o idioma específico.  
+  
+ Por exemplo, suponha que a expressão de entrada para um mecanismo de reconhecimento usando a gramática de sistema padrão fornecida pelo <xref:System.Speech.Recognition.DictationGrammar> é "Hello vírgula período disse". O mecanismo de reconhecimento retornará um <xref:System.Speech.Recognition.RecognizedPhrase> que contém cinco <xref:System.Speech.Recognition.RecognizedWordUnit> objetos que contém os seguintes cadeias de caracteres com o seguinte `DisplayAttributes` valores.  
+  
+|Item|`DisplayAttributes`|  
+|----------|-------------------------|  
+|Hello|OneTrailingSpace|  
+|,|OneTrailingSpace &#124; ConsumeLeadingSpaces|  
+|he|OneTrailingSpace|  
+|dito|OneTrailingSpace|  
+|.|OneTrailingSpace &#124; ConsumeLeadingSpaces|  
+  
+ O texto retornado para essa frase reconhecida é impresso como: "Olá, eu disse."  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Speech.Recognition.RecognizedWordUnit.DisplayAttributes%2A> propriedade de uma lista de <xref:System.Speech.Recognition.RecognizedWordUnit> objetos para formatar as palavras como uma frase.  
+  
+```csharp  
+  
+// Use the DisplayAttributes property to format speech as text.   
+  
+static string GetDisplayText(List<RecognizedWordUnit> words)  
+{  
+  StringBuilder sb = new StringBuilder();  
+  
+  // Concatenate the word units together. Use the DisplayAttributes  
+  // property of each word unit to add or remove white space around  
+  // the word unit.  
+  foreach (RecognizedWordUnit word in words)  
+  {  
+    if ((word.DisplayAttributes  
+      & DisplayAttributes.ConsumeLeadingSpaces) != 0))  
+    {  
+      sb = new StringBuilder(sb.ToString().TrimEnd());  
+    }  
+  
+    sb.Append(word.Text);  
+  
+    if ((word.DisplayAttributes  
+      & DisplayAttributes.OneTrailingSpace) != 0)  
+    {  
+      sb.Append(" ");  
+    }  
+    else if ((word.DisplayAttributes  
+      & DisplayAttributes.TwoTrailingSpaces) != 0)  
+    {  
+      sb.Append("  ");  
+    }  
+  }  
+  
+  return sb.ToString();  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConsumeLeadingSpaces">
+      <MemberSignature Language="C#" Value="ConsumeLeadingSpaces" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.DisplayAttributes ConsumeLeadingSpaces = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.DisplayAttributes.ConsumeLeadingSpaces" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.DisplayAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O item não têm espaços anterior.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.DisplayAttributes None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.DisplayAttributes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.DisplayAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O item não especifica como o espaço em branco é tratado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OneTrailingSpace">
+      <MemberSignature Language="C#" Value="OneTrailingSpace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.DisplayAttributes OneTrailingSpace = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.DisplayAttributes.OneTrailingSpace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.DisplayAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O item tem um espaço após ele.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoTrailingSpaces">
+      <MemberSignature Language="C#" Value="TwoTrailingSpaces" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.DisplayAttributes TwoTrailingSpaces = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.DisplayAttributes.TwoTrailingSpaces" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.DisplayAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O item tem dois espaços após ele.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ZeroTrailingSpaces">
+      <MemberSignature Language="C#" Value="ZeroTrailingSpaces" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.DisplayAttributes ZeroTrailingSpaces = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.DisplayAttributes.ZeroTrailingSpaces" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.DisplayAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O item não têm espaços após ele.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,326 @@
+<Type Name="CmsSigner" FullName="System.Security.Cryptography.Pkcs.CmsSigner">
+  <TypeSignature Language="C#" Value="public sealed class CmsSigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CmsSigner extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.CmsSigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> fornece funcionalidade de assinatura.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmsSigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.CmsSigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O <see cref="M:System.Security.Cryptography.Pkcs.CmsSigner.#ctor" /> construtor cria uma instância do <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> classe usando um tipo de identificador do assunto padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Pkcs.CmsSigner> classe tem os seguintes valores de propriedade padrão.  
+  
+|Propriedade|Valor padrão|  
+|--------------|-------------------|  
+|<xref:System.Security.Cryptography.Pkcs.CmsSigner.SignerIdentifierType%2A>|<xref:System.Security.Cryptography.Pkcs.SubjectIdentifierType?displayProperty=nameWithType>|  
+|<xref:System.Security.Cryptography.Pkcs.CmsSigner.DigestAlgorithm%2A>|1.3.14.3.2.26 (szOID_OIWSEC_sha1)|  
+|<xref:System.Security.Cryptography.Pkcs.CmsSigner.IncludeOption%2A>|<xref:System.Security.Cryptography.X509Certificates.X509IncludeOption.None>if <xref:System.Security.Cryptography.Pkcs.CmsSigner.SignerIdentifierType%2A> is <xref:System.Security.Cryptography.Pkcs.SubjectIdentifierType>,<br /><br /> <xref:System.Security.Cryptography.X509Certificates.X509IncludeOption.ExcludeRoot>Caso contrário|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmsSigner (System.Security.Cryptography.CspParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.CspParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.CmsSigner.#ctor(System.Security.Cryptography.CspParameters)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Security.Cryptography.CspParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Um <see cref="T:System.Security.Cryptography.CspParameters" /> objeto que representa o conjunto de parâmetros CSP a usar.</param>
+        <summary>O <see cref="M:System.Security.Cryptography.Pkcs.CmsSigner.#ctor(System.Security.Cryptography.CspParameters)" /> construtor cria uma instância do <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> classe com os parâmetros CSP (provedor) de serviços de criptografia especificado. <see cref="M:System.Security.Cryptography.Pkcs.CmsSigner.#ctor(System.Security.Cryptography.CspParameters)" />é útil quando você souber a chave particular e o CSP específico a ser usado para assinatura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para os valores de propriedade padrão usados com esse construtor, consulte <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor>. Uma exceção para esses valores quando este construtor é usado é que <xref:System.Security.Cryptography.Pkcs.CmsSigner.IncludeOption%2A> é definido como <xref:System.Security.Cryptography.X509Certificates.X509IncludeOption?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmsSigner (System.Security.Cryptography.Pkcs.SubjectIdentifierType signerIdentifierType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.Pkcs.SubjectIdentifierType signerIdentifierType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.CmsSigner.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signerIdentifierType" Type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+      </Parameters>
+      <Docs>
+        <param name="signerIdentifierType">Membro de <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifierType" /> enumeração que especifica o tipo de identificador do assinante.</param>
+        <summary>O <see cref="M:System.Security.Cryptography.Pkcs.CmsSigner.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType)" /> construtor cria uma instância do <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> classe com o tipo de identificador de entidade especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmsSigner (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.CmsSigner.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objeto que representa o certificado de autenticação.</param>
+        <summary>O <see cref="M:System.Security.Cryptography.Pkcs.CmsSigner.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" /> construtor cria uma instância do <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> classe com o certificado de autenticação especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para os valores de propriedade padrão usados com esse construtor, consulte <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor>.  
+  
+ O certificado de autenticação especificado pelo `certificate` parâmetro não é verificado para validade na entrada. Para validar o certificado antes de fornecê-lo para o construtor, use o <xref:System.Security.Cryptography.X509Certificates.X509Chain.Build%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmsSigner (System.Security.Cryptography.Pkcs.SubjectIdentifierType signerIdentifierType, System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.Pkcs.SubjectIdentifierType signerIdentifierType, class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Pkcs.CmsSigner.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType,System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signerIdentifierType" Type="System.Security.Cryptography.Pkcs.SubjectIdentifierType" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="signerIdentifierType">Membro de <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifierType" /> enumeração que especifica o tipo de identificador do assinante.</param>
+        <param name="certificate">Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objeto que representa o certificado de autenticação.</param>
+        <summary>O <see cref="M:System.Security.Cryptography.Pkcs.CmsSigner.#ctor(System.Security.Cryptography.Pkcs.SubjectIdentifierType,System.Security.Cryptography.X509Certificates.X509Certificate2)" /> construtor cria uma instância do <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> classe com o tipo de identificador do assinante especificado e o certificado de assinatura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O certificado de autenticação especificado pelo `certificate` parâmetro não é verificado para validade na entrada. Para validar o certificado antes de fornecê-lo para o construtor, use o <xref:System.Security.Cryptography.X509Certificates.X509Chain.Build%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.CmsSigner.Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.CmsSigner.Certificate" /> propriedade define ou recupera o <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objeto que representa o certificado de autenticação.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objeto que representa o certificado de autenticação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificates">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2Collection Certificates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2Collection Certificates" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.CmsSigner.Certificates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2Collection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.CmsSigner.Certificates" /> propriedade recupera o <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> coleção que contém os certificados associados com a mensagem a ser assinado.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> coleção que representa a coleção de certificados associados com a mensagem a ser assinado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser usada para armazenar os certificados na cadeia de certificados do signatário.  Nesse caso, os certificados incluídos na coleção são determinados pela configuração do <xref:System.Security.Cryptography.Pkcs.CmsSigner.IncludeOption%2A> propriedade. Nem todos os certificados na cadeia de certificados do signatário estão necessariamente presentes no <xref:System.Security.Cryptography.Pkcs.CmsSigner.Certificates%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DigestAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Oid DigestAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Oid DigestAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.CmsSigner.DigestAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Oid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.CmsSigner.DigestAlgorithm" /> propriedade define ou recupera o <see cref="T:System.Security.Cryptography.Oid" /> que representa o algoritmo de hash usado com a assinatura.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.Oid" /> objeto que representa o algoritmo de hash usado com a assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o valor padrão desta propriedade, consulte <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeOption">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509IncludeOption IncludeOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.X509IncludeOption IncludeOption" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.CmsSigner.IncludeOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509IncludeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.CmsSigner.IncludeOption" /> propriedade define ou recupera a opção que controla se a raiz e a cadeia inteira associado com o certificado de autenticação são incluídos com a mensagem CMS/PKCS #7 criada.</summary>
+        <value>Um membro do <see cref="T:System.Security.Cryptography.X509Certificates.X509IncludeOption" /> enumeração que especifica o quanto o X509 cadeia de certificados deve ser incluída no <see cref="T:System.Security.Cryptography.Pkcs.CmsSigner" /> objeto. O <see cref="P:System.Security.Cryptography.Pkcs.CmsSigner.IncludeOption" /> propriedade pode ser um dos seguintes <see cref="T:System.Security.Cryptography.X509Certificates.X509IncludeOption" /> membros.  
+  
+ <list type="table"><listheader><term>Nome  
+  
+ </term><description>Valor  
+  
+ </description><description>Significado  
+  
+ </description></listheader><item><term><see cref="F:System.Security.Cryptography.X509Certificates.X509IncludeOption.None" /></term><description> 0  
+  
+ </description><description>A cadeia de certificados não está incluída.  
+  
+ </description></item><item><term><see cref="F:System.Security.Cryptography.X509Certificates.X509IncludeOption.ExcludeRoot" /></term><description> 1  
+  
+ </description><description>A cadeia de certificados, exceto o certificado raiz, é incluída.  
+  
+ </description></item><item><term><see cref="F:System.Security.Cryptography.X509Certificates.X509IncludeOption.EndCertOnly" /></term><description> 2  
+  
+ </description><description>Somente o certificado final está incluído.  
+  
+ </description></item><item><term><see cref="F:System.Security.Cryptography.X509Certificates.X509IncludeOption.WholeChain" /></term><description> 3  
+  
+ </description><description>A cadeia de certificados, incluindo o certificado raiz, é incluída.  
+  
+ </description></item></list></value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Um dos argumentos fornecidos a um método não era válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedAttributes">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CryptographicAttributeObjectCollection SignedAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CryptographicAttributeObjectCollection SignedAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.CmsSigner.SignedAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CryptographicAttributeObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.CmsSigner.SignedAttributes" /> propriedade recupera o <see cref="T:System.Security.Cryptography.CryptographicAttributeObjectCollection" /> coleção de atributos assinados a ser associado resultante <see cref="T:System.Security.Cryptography.Pkcs.SignerInfo" /> conteúdo. Atributos assinados são assinados com o conteúdo especificado.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.CryptographicAttributeObjectCollection" /> coleção que representa os atributos assinados. Se não houver nenhum atributo assinado, a propriedade é uma coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um exemplo de um atributo assinado que pode ser incluído no <xref:System.Security.Cryptography.CryptographicAttributeObjectCollection> coleção recuperados pelo <xref:System.Security.Cryptography.Pkcs.CmsSigner.SignedAttributes%2A> é de propriedade de <xref:System.Security.Cryptography.Pkcs.Pkcs9SigningTime> assinatura de atributo de tempo.  
+  
+ Um <xref:System.Security.Cryptography.Pkcs.Pkcs9ContentType> objeto e um <xref:System.Security.Cryptography.Pkcs.Pkcs9MessageDigest> objeto será automaticamente gerado e colocado no <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignedAttributes%2A?displayProperty=nameWithType> propriedade para o assinante correspondente sempre que o <xref:System.Security.Cryptography.Pkcs.CmsSigner.SignedAttributes%2A> propriedade não está vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignerIdentifierType">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.SubjectIdentifierType SignerIdentifierType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.Pkcs.SubjectIdentifierType SignerIdentifierType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.CmsSigner.SignerIdentifierType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SubjectIdentifierType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.CmsSigner.SignerIdentifierType" /> propriedade define ou recupera o tipo do identificador do assinante.</summary>
+        <value>Membro de <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifierType" /> enumeração que especifica o tipo de identificador do assinante.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Um dos argumentos fornecidos a um método não era válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnsignedAttributes">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.CryptographicAttributeObjectCollection UnsignedAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.CryptographicAttributeObjectCollection UnsignedAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.CmsSigner.UnsignedAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CryptographicAttributeObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.CmsSigner.UnsignedAttributes" /> propriedade recupera o <see cref="T:System.Security.Cryptography.CryptographicAttributeObjectCollection" /> coleção de atributos de PKCS n º 9 não assinados a serem associados com resultante <see cref="T:System.Security.Cryptography.Pkcs.SignerInfo" /> conteúdo. Atributos não assinados podem ser modificados sem invalidar a assinatura.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.CryptographicAttributeObjectCollection" /> coleção que representa os atributos não assinados. Se não houver nenhum atributo não assinado, a propriedade é uma coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um exemplo de um atributo não assinado que pode ser incluído no <xref:System.Security.Cryptography.CryptographicAttributeObjectCollection> coleção recuperados pelo <xref:System.Security.Cryptography.Pkcs.CmsSigner.UnsignedAttributes%2A> propriedade é uma referenda.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

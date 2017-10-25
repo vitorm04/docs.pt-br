@@ -1,0 +1,73 @@
+<Type Name="LightStyle" FullName="System.Web.UI.DataVisualization.Charting.LightStyle">
+  <TypeSignature Language="C#" Value="public enum LightStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LightStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.LightStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica um estilo de iluminação para uma área do gráfico tridimensional de (3D).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.LightStyle> enumeração é usada com a <xref:System.Web.UI.DataVisualization.Charting.ChartArea3DStyle.LightStyle%2A> propriedade para definir o estilo de iluminação de uma área do gráfico 3D.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LightStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LightStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LightStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sem iluminação é aplicada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Realistic">
+      <MemberSignature Language="C#" Value="Realistic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LightStyle Realistic = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LightStyle.Realistic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LightStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um estilo de iluminação realista é aplicado, onde o matiz de todos os elementos da área do gráfico muda dependendo da quantidade de rotação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Simplistic">
+      <MemberSignature Language="C#" Value="Simplistic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LightStyle Simplistic = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LightStyle.Simplistic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LightStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um estilo de iluminação simples é aplicado, onde o matiz de todos os elementos da área do gráfico é fixo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

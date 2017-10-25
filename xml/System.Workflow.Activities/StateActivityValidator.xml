@@ -1,0 +1,101 @@
+<Type Name="StateActivityValidator" FullName="System.Workflow.Activities.StateActivityValidator">
+  <TypeSignature Language="C#" Value="public class StateActivityValidator : System.Workflow.ComponentModel.Compiler.CompositeActivityValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StateActivityValidator extends System.Workflow.ComponentModel.Compiler.CompositeActivityValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.StateActivityValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Compiler.CompositeActivityValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma classe que verifica se um <see cref="T:System.Workflow.Activities.StateActivity" /> classe está configurada corretamente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateActivityValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateActivityValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.StateActivityValidator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override System.Workflow.ComponentModel.Compiler.ValidationErrorCollection Validate (System.Workflow.ComponentModel.Compiler.ValidationManager manager, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Workflow.ComponentModel.Compiler.ValidationErrorCollection Validate(class System.Workflow.ComponentModel.Compiler.ValidationManager manager, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateActivityValidator.Validate(System.Workflow.ComponentModel.Compiler.ValidationManager,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.ValidationErrorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Workflow.ComponentModel.Compiler.ValidationManager" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationManager" /> a ser usado para essa validação.</param>
+        <param name="obj">O <see cref="T:System.Object" /> a ser validado.</param>
+        <summary>Valida o <see cref="T:System.Workflow.Activities.StateActivity" /> classe durante a compilação de fluxo de trabalho.</summary>
+        <returns>Um <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" /> que contém os erros desta operação.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="obj" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateActivityChange">
+      <MemberSignature Language="C#" Value="public override System.Workflow.ComponentModel.Compiler.ValidationError ValidateActivityChange (System.Workflow.ComponentModel.Activity activity, System.Workflow.ComponentModel.ActivityChangeAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Workflow.ComponentModel.Compiler.ValidationError ValidateActivityChange(class System.Workflow.ComponentModel.Activity activity, class System.Workflow.ComponentModel.ActivityChangeAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateActivityValidator.ValidateActivityChange(System.Workflow.ComponentModel.Activity,System.Workflow.ComponentModel.ActivityChangeAction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.ValidationError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+        <Parameter Name="action" Type="System.Workflow.ComponentModel.ActivityChangeAction" />
+      </Parameters>
+      <Docs>
+        <param name="activity">O nome do <see cref="T:System.Workflow.Activities.StateActivity" /> para validar.</param>
+        <param name="action">A ação tomada o <see cref="T:System.Workflow.Activities.StateActivity" />.</param>
+        <summary>Valida as alterações feitas em <see cref="T:System.Workflow.Activities.StateActivity" />.</summary>
+        <returns>Um <see cref="T:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" /> que contém os erros desta operação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

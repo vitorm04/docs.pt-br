@@ -1,0 +1,153 @@
+<Type Name="TreeViewImageIndexConverter" FullName="System.Windows.Forms.TreeViewImageIndexConverter">
+  <TypeSignature Language="C#" Value="public class TreeViewImageIndexConverter : System.Windows.Forms.ImageIndexConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TreeViewImageIndexConverter extends System.Windows.Forms.ImageIndexConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeViewImageIndexConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ImageIndexConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conversor de tipo para converter dados de um índice de imagem em um tipo de dados para outro para uso pelo <see cref="T:System.Windows.Forms.TreeView" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre conversores de tipo, consulte o <xref:System.ComponentModel.TypeConverter> classe base e [como: implementar um conversor de tipo](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56).  
+  
+> [!NOTE]
+>  Normalmente, você não criar diretamente uma instância de um <xref:System.Windows.Forms.TreeViewImageIndexConverter>. Em vez disso, chame o <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> método <xref:System.ComponentModel.TypeDescriptor>. Para obter mais informações, consulte os exemplos de <xref:System.ComponentModel.TypeConverter> classe base.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeViewImageIndexConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeViewImageIndexConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.TreeViewImageIndexConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Acesso a <xref:System.Windows.Forms.TreeViewImageIndexConverter.%23ctor%2A> classe por meio de <xref:System.ComponentModel.TypeDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeViewImageIndexConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> para fornecer informações de localidade.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <summary>Converte o objeto de valor especificado para um objeto inteiro assinado de 32 bits.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor convertido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeViewImageIndexConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato, que pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de tipo do. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> que fornece informações de localidade.</param>
+        <param name="value">O objeto converter, geralmente um índice representado como um <see cref="T:System.Int32" />.</param>
+        <param name="destinationType">O tipo para converter o objeto, geralmente um <see cref="T:System.String" />.</param>
+        <summary>Converte o objeto especificado para o tipo de destino especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor convertido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeViewImageIndexConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato, que pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de tipo do. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <summary>Retorna uma coleção de valores de índice padrão para a lista de imagens associado ao contexto do formato especificado.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que contém um conjunto padrão de valores de índice válido. Se nenhuma lista de imagem for encontrada, essa coleção conterá um único objeto com um valor de -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeNoneAsStandardValue">
+      <MemberSignature Language="C#" Value="protected override bool IncludeNoneAsStandardValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeNoneAsStandardValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeViewImageIndexConverter.IncludeNoneAsStandardValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica <see langword="null" /> é válido o <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> coleção.</summary>
+        <value>
+          <see langword="true" />Se <see langword="null" /> válido na coleção de valores padrão; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, essa propriedade sempre retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

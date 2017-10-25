@@ -1,0 +1,173 @@
+<Type Name="ParallelOptions" FullName="System.Threading.Tasks.ParallelOptions">
+  <TypeSignature Language="C#" Value="public class ParallelOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParallelOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.ParallelOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena opções que configuram a operação dos métodos na classe <see cref="T:System.Threading.Tasks.Parallel" />.</summary>
+    <remarks>To be added.</remarks>
+    <threadsafe>O construtor é thread-safe e pode ser usado por vários threads simultaneamente para várias instâncias. Nenhum dos outros membros públicos são thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParallelOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.ParallelOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Threading.Tasks.ParallelOptions" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa a instância com valores padrão. <xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism%2A>é inicializado como -1, significando que não há nenhum conjunto de limite superior na quantidade paralelismo deve ser empregado. <xref:System.Threading.Tasks.ParallelOptions.CancellationToken%2A>é inicializada com um token não pode ser cancelado, e <xref:System.Threading.Tasks.ParallelOptions.TaskScheduler%2A> é inicializada com o agendador padrão (TaskScheduler.Default).  
+  
+ Todos esses padrões podem ser substituídos usando as propriedades do conjunto de acessadores na instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancellationToken">
+      <MemberSignature Language="C#" Value="public System.Threading.CancellationToken CancellationToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.CancellationToken CancellationToken" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelOptions.CancellationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.CancellationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Threading.CancellationToken" /> associado a esta instância do <see cref="T:System.Threading.Tasks.ParallelOptions" />.</summary>
+        <value>O token associado a essa instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornecendo um <xref:System.Threading.CancellationToken> para um <xref:System.Threading.Tasks.Parallel> método permite a ser encerrado no início da operação. O código externo para a operação pode cancelar o token e se a operação observa o token que está sendo definido, ele pode sair no início, lançando um <xref:System.OperationCanceledException>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDegreeOfParallelism">
+      <MemberSignature Language="C#" Value="public int MaxDegreeOfParallelism { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxDegreeOfParallelism" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de tarefas simultâneas habilitadas por esta instância <see cref="T:System.Threading.Tasks.ParallelOptions" />.</summary>
+        <value>Um inteiro que representa o grau máximo de paralelismo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism%2A> propriedade afeta o número de operações simultâneas executando <xref:System.Threading.Tasks.Parallel> chamadas de método são passadas isso <xref:System.Threading.Tasks.ParallelOptions> instância. Um valor de propriedade positivo limita o número de operações simultâneas para o valor do conjunto. Se for -1, não há nenhum limite no número de operações em execução simultaneamente.  
+  
+ Por padrão, <xref:System.Threading.Tasks.Parallel.For%2A> e <xref:System.Threading.Tasks.Parallel.ForEach%2A> utilizará, no entanto, muitos threads fornece o Agendador subjacente, portanto, alterar <xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism%2A> do padrão só limita quantas tarefas simultâneas serão usadas.  
+  
+ Em geral, você não precisa modificar essa configuração. No entanto, você poderá defini-lo explicitamente em cenários de uso avançados como estes:  
+  
+-   Quando você sabe que um algoritmo específico que você está usando não ultrapassará um determinado número de núcleos. Você pode definir a propriedade para evitar perder ciclos em núcleos adicionais.  
+  
+-   Quando você estiver executando vários algoritmos simultaneamente e para definir manualmente a quantidade do sistema pode utilizar cada algoritmo. Você pode definir um <xref:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism%2A> valor para cada uma.  
+  
+-   Quando heurística de pool de thread não pode determinar o número correto de threads a ser usado e pode acabar injetando muitos threads. Por exemplo, em iterações de corpo do loop de execução longa, o pool de threads pode não ser capaz de determinar a diferença entre o progresso razoável ou livelock ou deadlock e não poderá recuperar os threads que foram adicionados para melhorar o desempenho. Nesse caso, você pode definir a propriedade para garantir que você não use mais de um número razoável de threads.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade está sendo definida como zero ou com um valor menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskScheduler">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.TaskScheduler TaskScheduler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.Tasks.TaskScheduler TaskScheduler" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelOptions.TaskScheduler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskScheduler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Threading.Tasks.TaskScheduler" /> associado a esta instância do <see cref="T:System.Threading.Tasks.ParallelOptions" />. A definição dessa propriedade como nulo indica que o Agendador atual deve ser usado.</summary>
+        <value>O Agendador de tarefas que está associado esta instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

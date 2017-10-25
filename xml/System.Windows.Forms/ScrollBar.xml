@@ -1,0 +1,1437 @@
+<Type Name="ScrollBar" FullName="System.Windows.Forms.ScrollBar">
+  <TypeSignature Language="C#" Value="public abstract class ScrollBar : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ScrollBar extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ScrollBar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Scroll")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Value")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa a funcionalidade básica de um controle de barra de rolagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente não herda diretamente a partir de <xref:System.Windows.Forms.ScrollBar> classe. Para criar sua própria classe de barra de rolagem, herdam o <xref:System.Windows.Forms.VScrollBar> ou <xref:System.Windows.Forms.HScrollBar> classe.  
+  
+> [!NOTE]
+>  A caixa de rolagem às vezes é conhecida como controle deslizante de rolagem.  
+  
+ Para ajustar o intervalo de valores de controle de barra de rolagem, defina o <xref:System.Windows.Forms.ScrollBar.Minimum%2A> e <xref:System.Windows.Forms.ScrollBar.Maximum%2A> propriedades. Para ajustar a distância em que a caixa de rolagem percorre, defina o <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> e <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> propriedades. Para ajustar o ponto de partida da caixa de rolagem, defina o <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedade quando o controle é exibido inicialmente.  
+  
+ Diretrizes de interface de usuário sugerem que o <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> e <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> propriedades são definidas em relação ao tamanho da exibição que o usuário vê, não para o tamanho total, incluindo a parte invisível. Por exemplo, se você tiver uma caixa de imagem com barras de rolagem, exibindo uma imagem grande, o <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> e <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> propriedades devem ser definidas como relativas ao tamanho da caixa de imagem, não para o tamanho da imagem.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria e inicializa um <xref:System.Windows.Forms.VScrollBar> e adiciona-o a um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[Classic VScrollBar Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic VScrollBar Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic VScrollBar Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic VScrollBar Example/CS/source.cs#1)]
+ [!code-vb[Classic VScrollBar Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic VScrollBar Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollBar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollBar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ScrollBar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Windows.Forms.Control.TabStop%2A> está definida como `false` quando uma nova instância de um <xref:System.Windows.Forms.ScrollBar> é criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.ScrollBar" /> é redimensionado automaticamente para ajustar o conteúdo.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Forms.ScrollBar" /> precisar ser automaticamente redimensionado para ajustar seu conteúdo; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.ScrollBar.AutoSize%2A> propriedade não tem nenhum efeito na aparência do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ScrollBar.AutoSize" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da tela de fundo do controle.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor da tela de fundo do controle. O padrão é o valor da propriedade <see cref="P:System.Windows.Forms.Control.DefaultBackColor" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.BackColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ScrollBar.BackColor" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem da tela de fundo exibida no controle.</summary>
+        <value>Um <see cref="T:System.Drawing.Image" /> que representa a imagem a ser exibida na tela de fundo do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ScrollBar.BackgroundImage" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o layout da imagem da tela de fundo, conforme definido na enumeração do <see cref="T:System.Windows.Forms.ImageLayout" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImageLayout" /> (Center, None, Stretch, bloco ou Zoom). Bloco é o valor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ScrollBar.BackgroundImageLayout" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle é clicado se o sinalizador de bit <see cref="F:System.Windows.Forms.ControlStyles.StandardClick" /> estiver definido como <see langword="true" /> em uma classe derivada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ScrollBar> conjuntos de controles de <xref:System.Windows.Forms.ControlStyles.StandardClick> bit de sinalizador para `false`, portanto, o <xref:System.Windows.Forms.ScrollBar> não gerará o <xref:System.Windows.Forms.ScrollBar.Click> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de criação necessários quando a alça de controle é criada.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.CreateParams" /> que contém os parâmetros de criação necessários quando a alça de controle é criada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultImeMode">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ImeMode DefaultImeMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode DefaultImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.DefaultImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo do Editor de método de entrada (IME) padrão suportado por este controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImeMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado o <xref:System.Windows.Forms.ScrollBar> classe, essa propriedade sempre retorna o <xref:System.Windows.Forms.ImeMode?displayProperty=nameWithType> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMargin">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Padding DefaultMargin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding DefaultMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.DefaultMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a distância padrão entre o <see cref="T:System.Windows.Forms.ScrollBar" /> controlar as bordas e seu conteúdo.</summary>
+        <value>
+          <see cref="F:System.Windows.Forms.Padding.Empty" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Windows.Forms.ScrollBar" /> controle é clicado duas vezes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ScrollBar> conjuntos de controles o <xref:System.Windows.Forms.ControlStyles.StandardClick> bit de sinalizador como false, portanto, o <xref:System.Windows.Forms.ScrollBar> não gerará o <xref:System.Windows.Forms.ScrollBar.DoubleClick> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte do texto exibido pelo controle.</summary>
+        <value>O <see cref="T:System.Drawing.Font" /> a ser aplicado ao texto exibido pelo controle. O padrão é o valor da propriedade <see cref="P:System.Windows.Forms.Control.DefaultFont" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler FontChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FontChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.FontChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ScrollBar.Font" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano do controle de barra de rolagem.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de primeiro plano para este controle de barra de rolagem. O padrão é a cor de primeiro plano do controle pai.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade só pode ser alterada programaticamente; não é visível na janela Propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.ForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ScrollBar.ForeColor" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScaledBounds">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle GetScaledBounds (System.Drawing.Rectangle bounds, System.Drawing.SizeF factor, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Rectangle GetScaledBounds(valuetype System.Drawing.Rectangle bounds, valuetype System.Drawing.SizeF factor, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollBar.GetScaledBounds(System.Drawing.Rectangle,System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="factor" Type="System.Drawing.SizeF" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="bounds">Um <see cref="T:System.Drawing.Rectangle" /> que especifica os limites inicias.</param>
+        <param name="factor">Um <see cref="T:System.Drawing.SizeF" /> que indica a quantidade dos limites atuais devem ser aumentados pelo.</param>
+        <param name="specified">Uma combinação bit a bit do <see cref="T:System.Windows.Forms.BoundsSpecified" /> valores que indicam como definir o controle do tamanho e posição retornado por <see cref="M:System.Windows.Forms.ScrollBar.GetScaledBounds(System.Drawing.Rectangle,System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)" />.</param>
+        <summary>Retorna os limites para utilizar quando o <see cref="T:System.Windows.Forms.ScrollBar" /> é dimensionado por um período especificado.</summary>
+        <returns>Um <see cref="T:System.Drawing.Rectangle" /> especificando os limites de escala.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um método auxiliar que é usado pelo <xref:System.Windows.Forms.Control.ScaleControl%2A> método para retornar os limites que o controle deve ser dimensionado por. Você pode substituir esse método se você quiser reutilizar <xref:System.Windows.Forms.Control.ScaleControl%2A> escala lógica, mas você precisa fornecer a seus próprios limites.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImeMode ImeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.ImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo do Editor de método de entrada (IME) com suporte deste controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImeMode" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.ImeModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ScrollBar.ImeMode" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeChange">
+      <MemberSignature Language="C#" Value="public int LargeChange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LargeChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.LargeChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor a ser adicionado ou subtraído da propriedade <see cref="P:System.Windows.Forms.ScrollBar.Value" /> quando a caixa de rolagem for movida em uma grande distância.</summary>
+        <value>Um valor numérico. O valor padrão é 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o usuário clica no controle de barra de rolagem em qualquer lado da caixa de rolagem, o <xref:System.Windows.Forms.ScrollBar.Value%2A> alterações de propriedade de acordo com o valor definido para o <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> propriedade.  
+  
+> [!NOTE]
+>  Você pode manipular eventos de pressionamento de tecla para que quando o usuário pressiona PAGE UP ou PAGE DOWN chave da caixa de rolagem move.  
+  
+ Diretrizes de interface de usuário sugerem que o <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> e <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> propriedades são definidas em relação ao tamanho da exibição que o usuário vê, não para o tamanho total, incluindo a parte invisível. Por exemplo, se você tiver uma caixa de imagem com barras de rolagem, exibindo uma imagem grande, o <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> e <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> propriedades devem ser definidas como relativas ao tamanho da caixa de imagem, não para o tamanho da imagem.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir pressupõe que você tenha criado um <xref:System.Windows.Forms.Form>adicionado um <xref:System.Windows.Forms.PictureBox> para o <xref:System.Windows.Forms.Form>e adicionado um horizontal <xref:System.Windows.Forms.HScrollBar> e vertical <xref:System.Windows.Forms.VScrollBar> para o <xref:System.Windows.Forms.PictureBox>. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.ScrollBar> visão geral da classe.  
+  
+ Neste exemplo, o <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> está definida em relação ao <xref:System.Windows.Forms.PictureBox>.  
+  
+ Você deve adicionar referências para o <xref:System.Drawing?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType> namespaces para executar este exemplo.  
+  
+> [!NOTE]
+>  Para obter instruções sobre como executar esse exemplo no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], consulte [como: compilar e executar uma completa Windows Forms código de exemplo com o Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416).  
+  
+ [!code-csharp[Classic ScrollBar Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar Example/CS/source.cs#2)]
+ [!code-vb[Classic ScrollBar Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor atribuído é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public int Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o limite superior de valores do intervalo rolável.</summary>
+        <value>Um valor numérico. O valor padrão é 100.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode considerar o ajuste de <xref:System.Windows.Forms.ScrollBar.Maximum%2A> propriedade dinamicamente para corresponder ao tamanho do pai da barra de rolagem em proporção de tamanho de pixel ou ao número de linhas ou as linhas exibidas.  
+  
+ O valor máximo só pode ser contatado por meio de programação. O valor de uma barra de rolagem é possível acessar o valor máximo por meio da interação do usuário em tempo de execução. O valor máximo que pode ser acessado por meio da interação do usuário é igual a 1 mais o <xref:System.Windows.Forms.ScrollBar.Maximum%2A> valor da propriedade menos o <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> o valor da propriedade. Se necessário, você pode definir o <xref:System.Windows.Forms.ScrollBar.Maximum%2A> propriedade para o tamanho do objeto -1 para a conta para o termo de 1.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir pressupõe que você tenha criado um <xref:System.Windows.Forms.Form>adicionado um <xref:System.Windows.Forms.PictureBox> para o <xref:System.Windows.Forms.Form>e adicionado um horizontal <xref:System.Windows.Forms.HScrollBar> e vertical <xref:System.Windows.Forms.VScrollBar> para o <xref:System.Windows.Forms.PictureBox>. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.ScrollBar> visão geral da classe.  
+  
+ Neste exemplo, o <xref:System.Windows.Forms.ScrollBar.Maximum%2A> propriedade é definida como o tamanho do <xref:System.Drawing.Image> mais o tamanho da barra de rolagem, se ele estiver visível, mais um fator de ajuste do tamanho do <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> propriedade.  
+  
+ Você deve adicionar referências para o <xref:System.Drawing?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType> namespaces para executar este exemplo.  
+  
+> [!NOTE]
+>  Para obter instruções sobre como executar esse exemplo no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], consulte [como: compilar e executar uma completa Windows Forms código de exemplo com o Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416).  
+  
+ [!code-csharp[Classic ScrollBar Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar Example/CS/source.cs#2)]
+ [!code-vb[Classic ScrollBar Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public int Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o limite inferior de valores do intervalo rolável.</summary>
+        <value>Um valor numérico. O valor padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir pressupõe que você tenha criado um <xref:System.Windows.Forms.Form>adicionado um <xref:System.Windows.Forms.PictureBox> para o <xref:System.Windows.Forms.Form>e adicionado um horizontal <xref:System.Windows.Forms.HScrollBar> e vertical <xref:System.Windows.Forms.VScrollBar> para o <xref:System.Windows.Forms.PictureBox>. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.ScrollBar> visão geral da classe.  
+  
+ Neste exemplo, o <xref:System.Windows.Forms.ScrollBar.Minimum%2A> propriedade é definida como 0.  
+  
+ Você deve adicionar referências para o <xref:System.Drawing?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType> namespaces para executar este exemplo.  
+  
+> [!NOTE]
+>  Para obter instruções sobre como executar esse exemplo no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], consulte [como: compilar e executar uma completa Windows Forms código de exemplo com o Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416).  
+  
+ [!code-csharp[Classic ScrollBar Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar Example/CS/source.cs#2)]
+ [!code-vb[Classic ScrollBar Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.MouseClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica no controle <see cref="T:System.Windows.Forms.ScrollBar" /> com o mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ScrollBar> controle não dispara o <xref:System.Windows.Forms.ScrollBar.MouseClick> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.MouseDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica duas vezes no controle <see cref="T:System.Windows.Forms.ScrollBar" /> com o mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ScrollBar> controle não dispara o <xref:System.Windows.Forms.ScrollBar.MouseDoubleClick> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.MouseDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o ponteiro do mouse está sobre o controle e o usuário pressiona um botão do mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ScrollBar> controle não dispara o <xref:System.Windows.Forms.ScrollBar.MouseDown> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseMove" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.MouseMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário move o ponteiro do mouse sobre o controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.MouseUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário move o ponteiro do mouse sobre o controle e libera um botão do mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ScrollBar> controle não dispara o <xref:System.Windows.Forms.ScrollBar.MouseUp> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnabledChanged">
+      <MemberSignature Language="C#" Value="protected override void OnEnabledChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnabledChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollBar.OnEnabledChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.EnabledChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollBar.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.HandleCreated" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnMouseWheel (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseWheel(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollBar.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /></param>
+        <summary>Gera o <see cref="E:System.Windows.Forms.Control.MouseWheel" /> evento</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ScrollBar> controle converterá movimentos de roda do mouse para rolar quando o <xref:System.Windows.Forms.ScrollBar> esteja em foco.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.ScrollBar.OnMouseWheel%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ScrollBar.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ScrollBar.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnScroll">
+      <MemberSignature Language="C#" Value="protected virtual void OnScroll (System.Windows.Forms.ScrollEventArgs se);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnScroll(class System.Windows.Forms.ScrollEventArgs se) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollBar.OnScroll(System.Windows.Forms.ScrollEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="se" Type="System.Windows.Forms.ScrollEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="se">Um <see cref="T:System.Windows.Forms.ScrollEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ScrollBar.Scroll" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.ScrollBar.OnScroll%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.VScrollBar>. Manipuladores de eventos para o <xref:System.Windows.Forms.ScrollBar.Scroll> e <xref:System.Windows.Forms.ScrollBar.ValueChanged> eventos são criados. Esse código supõe que um <xref:System.Windows.Forms.Label> e <xref:System.Windows.Forms.Button> foram criadas em um formulário e o botão tem um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento. Quando o botão é clicado, o <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedade da barra de rolagem é ajustada em código. O rótulo exibirá o valor atual do <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedade e o evento que é alterado. Você observará que quando o valor de rolagem é alterado, o botão <xref:System.Windows.Forms.Control.Click> somente eventos de <xref:System.Windows.Forms.ScrollBar.ValueChanged> é gerado. Por outro lado, quando a barra de rolagem é rolada manualmente, o <xref:System.Windows.Forms.ScrollBar.Scroll> é gerado imediatamente após o <xref:System.Windows.Forms.ScrollBar.ValueChanged> evento.  
+  
+ [!code-cpp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ScrollBar.OnScroll(System.Windows.Forms.ScrollEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ScrollBar.OnScroll(System.Windows.Forms.ScrollEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValueChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnValueChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnValueChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollBar.OnValueChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ScrollBar.ValueChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.ScrollBar.OnValueChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.VScrollBar>. Manipuladores de eventos para o <xref:System.Windows.Forms.ScrollBar.Scroll> e <xref:System.Windows.Forms.ScrollBar.ValueChanged> eventos são criados. Esse código supõe que um <xref:System.Windows.Forms.Label> e <xref:System.Windows.Forms.Button> foram criadas em um formulário e o botão tem um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento. Quando o botão é clicado, o <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedade da barra de rolagem é ajustada em código. O rótulo exibirá o valor atual do <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedade e o evento que é alterado. Você observará que quando o valor de rolagem é alterado, o botão <xref:System.Windows.Forms.Control.Click> somente eventos de <xref:System.Windows.Forms.ScrollBar.ValueChanged> é gerado. Por outro lado, quando a barra de rolagem é rolada manualmente, o <xref:System.Windows.Forms.ScrollBar.Scroll> é gerado imediatamente após o <xref:System.Windows.Forms.ScrollBar.ValueChanged> evento.  
+  
+> [!NOTE]
+>  Para obter instruções sobre como executar esse exemplo no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], consulte [como: compilar e executar uma completa Windows Forms código de exemplo com o Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416).  
+  
+ [!code-cpp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ScrollBar.OnValueChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ScrollBar.OnValueChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PaintEventHandler Paint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PaintEventHandler Paint" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.Paint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PaintEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o controle é redesenhado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scroll">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ScrollEventHandler Scroll;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ScrollEventHandler Scroll" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.Scroll" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a caixa de rolagem foi movida por uma ação do mouse ou do teclado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir rola uma imagem em uma caixa de imagem. Ele usa o <xref:System.Windows.Forms.ScrollBar.Value%2A> da barra de rolagem para reemitir uma nova parte da imagem, sempre que o usuário rolar. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.ScrollBar> visão geral da classe.  
+  
+> [!NOTE]
+>  Para obter instruções sobre como executar esse exemplo no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], consulte [como: compilar e executar uma completa Windows Forms código de exemplo com o Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416).  
+  
+ [!code-csharp[Classic ScrollBar Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar Example/CS/source.cs#3)]
+ [!code-vb[Classic ScrollBar Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar Example/VB/source.vb#3)]  
+  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.VScrollBar>. Manipuladores de eventos para o <xref:System.Windows.Forms.ScrollBar.Scroll> e <xref:System.Windows.Forms.ScrollBar.ValueChanged> eventos são criados. Esse código supõe que um <xref:System.Windows.Forms.Label> e <xref:System.Windows.Forms.Button> foram criadas em um formulário e o botão tem um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento. Quando o botão é clicado, o <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedade da barra de rolagem é ajustada em código. O rótulo exibirá o valor atual do <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedade e o evento que é alterado. Você observará que quando o valor de rolagem é alterado, o botão <xref:System.Windows.Forms.Control.Click> somente eventos de <xref:System.Windows.Forms.ScrollBar.ValueChanged> é gerado. Por outro lado, quando a barra de rolagem é rolada manualmente, o <xref:System.Windows.Forms.ScrollBar.Scroll> é gerado imediatamente após o <xref:System.Windows.Forms.ScrollBar.ValueChanged> evento.  
+  
+ [!code-cpp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallChange">
+      <MemberSignature Language="C#" Value="public int SmallChange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SmallChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.SmallChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor a ser adicionado ou subtraído da propriedade <see cref="P:System.Windows.Forms.ScrollBar.Value" /> quando a caixa de rolagem é movida por uma distância pequena.</summary>
+        <value>Um valor numérico. O valor padrão é 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o usuário pressiona uma seta de chaves ou clica em um dos botões da barra de rolagem, o <xref:System.Windows.Forms.ScrollBar.Value%2A> alterações de propriedade de acordo com o valor definido para o <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> propriedade.  
+  
+ Diretrizes de interface de usuário sugerem que o <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> e <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> propriedades são definidas em relação ao tamanho da exibição que o usuário vê, não para o tamanho total, incluindo a parte invisível. Por exemplo, se você tiver uma caixa de imagem com barras de rolagem, exibindo uma imagem grande, o <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> e <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> propriedades devem ser definidas como relativas ao tamanho da caixa de imagem, não para o tamanho da imagem.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir pressupõe que você tenha criado um <xref:System.Windows.Forms.Form>adicionado um <xref:System.Windows.Forms.PictureBox> para o <xref:System.Windows.Forms.Form>e adicionado um horizontal <xref:System.Windows.Forms.HScrollBar> e vertical <xref:System.Windows.Forms.VScrollBar> para o <xref:System.Windows.Forms.PictureBox>. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.ScrollBar> visão geral da classe.  
+  
+ Neste exemplo, o <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> está definida em relação ao <xref:System.Windows.Forms.PictureBox>.  
+  
+ Você deve adicionar referências para o <xref:System.Drawing?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType> namespaces para executar este exemplo.  
+  
+> [!NOTE]
+>  Para obter instruções sobre como executar esse exemplo no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], consulte [como: compilar e executar uma completa Windows Forms código de exemplo com o Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416).  
+  
+ [!code-csharp[Classic ScrollBar Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar Example/CS/source.cs#2)]
+ [!code-vb[Classic ScrollBar Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor atribuído é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário pode conceder o foco para o <see cref="T:System.Windows.Forms.ScrollBar" /> controle usando a tecla TAB.</summary>
+        <value>
+          <see langword="true" />Se o usuário pode fornecer o foco para o controle usando a tecla TAB; Caso contrário, false. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o usuário pressiona a tecla TAB, o foco de entrada é definido para o próximo controle na ordem de tabulação. Controles com o <xref:System.Windows.Forms.ScrollBar.TabStop%2A> valor da propriedade `false` não são incluídos na coleção de controles na ordem de tabulação. Você pode manipular a ordem de tabulação, definindo o controle <xref:System.Windows.Forms.Control.TabIndex%2A> o valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto associado a esse controle.</summary>
+        <value>O texto associado a esse controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ScrollBar.Text" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollBar.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o controle <see cref="T:System.Windows.Forms.ScrollBar" />.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.ScrollBar" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ScrollBar.ToString%2A> método retorna uma cadeia de caracteres que inclui o tipo e os valores para o <xref:System.Windows.Forms.ScrollBar.Minimum%2A> <xref:System.Windows.Forms.ScrollBar.Minimum%2A>, e <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateScrollInfo">
+      <MemberSignature Language="C#" Value="protected void UpdateScrollInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UpdateScrollInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollBar.UpdateScrollInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualizações de <see cref="T:System.Windows.Forms.ScrollBar" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ScrollBar.UpdateScrollInfo%2A> método redesenha o <xref:System.Windows.Forms.ScrollBar> usando os valores da <xref:System.Windows.Forms.ScrollBar.Minimum%2A>, <xref:System.Windows.Forms.ScrollBar.Maximum%2A>, <xref:System.Windows.Forms.ScrollBar.LargeChange%2A>, e <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public int Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollBar.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor numérico que representa a posição atual da caixa de rolagem no controle da barra de rolagem.</summary>
+        <value>Um valor numérico dentro do intervalo entre <see cref="P:System.Windows.Forms.ScrollBar.Minimum" /> e <see cref="P:System.Windows.Forms.ScrollBar.Maximum" />. O valor padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir rola uma imagem em uma caixa de imagem. Ele usa o <xref:System.Windows.Forms.ScrollBar.Value%2A> da barra de rolagem para reemitir uma nova parte da imagem, sempre que o usuário rolar. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.ScrollBar> visão geral da classe.  
+  
+> [!NOTE]
+>  Para obter instruções sobre como executar esse exemplo no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], consulte [como: compilar e executar uma completa Windows Forms código de exemplo com o Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416).  
+  
+ [!code-csharp[Classic ScrollBar Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar Example/CS/source.cs#3)]
+ [!code-vb[Classic ScrollBar Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar Example/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor atribuído é menor do que o <see cref="P:System.Windows.Forms.ScrollBar.Minimum" /> o valor da propriedade.  
+  
+ -ou-  
+  
+ O valor atribuído é maior que o valor da propriedade <see cref="P:System.Windows.Forms.ScrollBar.Maximum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ValueChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ValueChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ScrollBar.ValueChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.ScrollBar.Value" /> é alterada, por um evento <see cref="E:System.Windows.Forms.ScrollBar.Scroll" /> ou de forma programática.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.VScrollBar>. Manipuladores de eventos para o <xref:System.Windows.Forms.ScrollBar.Scroll> e <xref:System.Windows.Forms.ScrollBar.ValueChanged> eventos são criados. Esse código supõe que um <xref:System.Windows.Forms.Label> e <xref:System.Windows.Forms.Button> foram criadas em um formulário e o botão tem um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> evento. Quando o botão é clicado, o <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedade da barra de rolagem é ajustada em código. O rótulo exibirá o valor atual do <xref:System.Windows.Forms.ScrollBar.Value%2A> propriedade e o evento que é alterado. Você observará que quando o valor de rolagem é alterado, o botão <xref:System.Windows.Forms.Control.Click> somente eventos de <xref:System.Windows.Forms.ScrollBar.ValueChanged> é gerado. Por outro lado, quando a barra de rolagem é rolada manualmente, o <xref:System.Windows.Forms.ScrollBar.Scroll> é gerado imediatamente após o <xref:System.Windows.Forms.ScrollBar.ValueChanged> evento.  
+  
+> [!NOTE]
+>  Para obter instruções sobre como executar esse exemplo no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], consulte [como: compilar e executar uma completa Windows Forms código de exemplo com o Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416).  
+  
+ [!code-cpp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollBar.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">Um objeto de mensagem do Windows.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.WndProc(System.Windows.Forms.Message@)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

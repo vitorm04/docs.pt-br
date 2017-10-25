@@ -1,0 +1,445 @@
+<Type Name="PageSetupDialog" FullName="System.Windows.Forms.PageSetupDialog">
+  <TypeSignature Language="C#" Value="public sealed class PageSetupDialog : System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PageSetupDialog extends System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.PageSetupDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.CommonDialog</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Document")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que os usuários alterem relacionados à página Configurações de impressão, inclusive as margens e a orientação do papel. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.PageSetupDialog> caixa de diálogo modifica o <xref:System.Drawing.Printing.PageSettings> e <xref:System.Drawing.Printing.PrinterSettings> informações para um determinado <xref:System.Windows.Forms.PageSetupDialog.Document%2A>. O usuário pode ativar seções da caixa de diálogo para manipular a impressão e as margens; orientação do papel, tamanho e fonte; Para exibir a Ajuda e botões de rede. O <xref:System.Windows.Forms.PageSetupDialog.MinMargins%2A> propriedade define as margens mínimo que um usuário pode selecionar.  
+  
+ Quando você cria uma instância do <xref:System.Windows.Forms.PageSetupDialog> classe, as propriedades de leitura/gravação são definidas com valores iniciais. Para obter uma lista desses valores, consulte o <xref:System.Windows.Forms.PageSetupDialog.%23ctor%2A> construtor.  
+  
+ Porque um <xref:System.Windows.Forms.PageSetupDialog> precisa de configurações de página para exibir, você precisará definir o <xref:System.Windows.Forms.PrintDialog.Document%2A>, <xref:System.Windows.Forms.PrintDialog.PrinterSettings%2A>, ou <xref:System.Windows.Forms.PageSetupDialog.PageSettings%2A> propriedade antes de chamar <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>; caso contrário, ocorrerá uma exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.PageSetupDialog> usando o <xref:System.Windows.Forms.PageSetupDialog.PageSettings%2A>, <xref:System.Windows.Forms.PageSetupDialog.PrinterSettings%2A>, e <xref:System.Windows.Forms.PageSetupDialog.ShowNetwork%2A> propriedades. Para executar este exemplo, coloque-o em um formulário que contém um <xref:System.Windows.Forms.Button> chamado `Button1`, um <xref:System.Windows.Forms.ListBox> chamado `ListBox1`e um <xref:System.Windows.Forms.PageSetupDialog> chamado `PageSetupDialog1`. Certifique-se de clicar no botão evento está conectado para o método de manipulação de eventos neste exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageSetupDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PageSetupDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.PageSetupDialog" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma instância de <xref:System.Windows.Forms.PageSetupDialog> é criado, os seguintes propriedades são inicializadas com os valores especificados.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Windows.Forms.PageSetupDialog.AllowMargins%2A>|`true`|  
+|<xref:System.Windows.Forms.PageSetupDialog.AllowOrientation%2A>|`true`|  
+|<xref:System.Windows.Forms.PageSetupDialog.AllowPaper%2A>|`true`|  
+|<xref:System.Windows.Forms.PageSetupDialog.AllowPrinter%2A>|`true`|  
+|<xref:System.Windows.Forms.PageSetupDialog.Document%2A>|`null`|  
+|<xref:System.Windows.Forms.PageSetupDialog.MinMargins%2A>|`null`|  
+|<xref:System.Windows.Forms.PageSetupDialog.PageSettings%2A>|`null`|  
+|<xref:System.Windows.Forms.PageSetupDialog.PrinterSettings%2A>|`null`|  
+|<xref:System.Windows.Forms.PageSetupDialog.ShowHelp%2A>|`false`|  
+|<xref:System.Windows.Forms.PageSetupDialog.ShowNetwork%2A>|`true`|  
+  
+ Você pode alterar o valor de qualquer uma dessas propriedades por meio de uma chamada separada para a propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowMargins">
+      <MemberSignature Language="C#" Value="public bool AllowMargins { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowMargins" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PageSetupDialog.AllowMargins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a seção de margens da caixa de diálogo está habilitada.</summary>
+        <value>
+          <see langword="true" />Se a seção de margens da caixa de diálogo estiver habilitada; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowOrientation">
+      <MemberSignature Language="C#" Value="public bool AllowOrientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowOrientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PageSetupDialog.AllowOrientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a seção orientação da caixa de diálogo (paisagem e retrato) está habilitada.</summary>
+        <value>
+          <see langword="true" />Se a seção orientação da caixa de diálogo estiver habilitada; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowPaper">
+      <MemberSignature Language="C#" Value="public bool AllowPaper { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowPaper" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PageSetupDialog.AllowPaper" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a seção de papel da caixa de diálogo (tamanho do papel e fonte de papel) está habilitada.</summary>
+        <value>
+          <see langword="true" />Se a seção de papel da caixa de diálogo estiver habilitada; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowPrinter">
+      <MemberSignature Language="C#" Value="public bool AllowPrinter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowPrinter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PageSetupDialog.AllowPrinter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o **impressora** botão é habilitado.</summary>
+        <value>
+          <see langword="true" />Se o **impressora** botão estiver habilitado; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Definir essa propriedade como `true` não tem nenhum efeito se o aplicativo é executado [!INCLUDE[windowsver](~/includes/windowsver-md.md)]. O **impressora** botão não será exibido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PrintDocument Document { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PrintDocument Document" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PageSetupDialog.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrintDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o <see cref="T:System.Drawing.Printing.PrintDocument" /> para obter as configurações de página do.</summary>
+        <value>O <see cref="T:System.Drawing.Printing.PrintDocument" /> para obter as configurações de página do. O padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableMetric">
+      <MemberSignature Language="C#" Value="public bool EnableMetric { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableMetric" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PageSetupDialog.EnableMetric" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as configurações de margem, quando exibidas em milímetros, devem ser convertidas automaticamente de e para centenas de polegada.</summary>
+        <value>
+          <see langword="true" />Se as margens devem ser convertidas automaticamente; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Printing.PageSettings> classe medidas <xref:System.Drawing.Printing.PageSettings.Margins%2A?displayProperty=nameWithType> em centenas de polegada, mas o <xref:System.Windows.Forms.PageSetupDialog> permite aos usuários definir as margens em polegadas ou milímetros dependendo das configurações de cultura do sistema que executa o aplicativo.  
+  
+ No .NET Framework versão 2.0, você deve definir essa propriedade `true` se seu aplicativo pode ser usado em culturas que medem margens do documento em milímetros. Se você estiver fazendo essa conversão, como era necessário em versões do .NET Framework anterior à versão 2.0, você deve usar o valor padrão de `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinMargins">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.Margins MinMargins { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.Margins MinMargins" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PageSetupDialog.MinMargins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.Margins</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica as margens mínimo, em centenas de polegada, o usuário tem permissão para selecionar.</summary>
+        <value>As margens mínimo, em centenas de polegada, o usuário pode selecionar. O padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageSettings">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PageSettings PageSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PageSettings PageSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PageSetupDialog.PageSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PageSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica as configurações de página a serem modificadas.</summary>
+        <value>O <see cref="T:System.Drawing.Printing.PageSettings" /> para modificar. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.PageSetupDialog> usando o <xref:System.Windows.Forms.PageSetupDialog.PageSettings%2A>, <xref:System.Windows.Forms.PageSetupDialog.PrinterSettings%2A>, e <xref:System.Windows.Forms.PageSetupDialog.ShowNetwork%2A> propriedades. Para executar este exemplo, coloque-o em um formulário que contém um <xref:System.Windows.Forms.Button> chamado `Button1`, um <xref:System.Windows.Forms.ListBox> chamado `ListBox1`e um <xref:System.Windows.Forms.PageSetupDialog> chamado `PageSetupDialog1`. Certifique-se de clicar no botão evento está conectado para o método de manipulação de eventos neste exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrinterSettings">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PrinterSettings PrinterSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PrinterSettings PrinterSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PageSetupDialog.PrinterSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrinterSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as configurações de impressora que são modificadas quando o usuário clica no botão Impressora na caixa de diálogo.</summary>
+        <value>O <see cref="T:System.Drawing.Printing.PrinterSettings" /> para modificar quando o usuário clica no botão impressora. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.PageSetupDialog> usando o <xref:System.Windows.Forms.PageSetupDialog.PageSettings%2A>, <xref:System.Windows.Forms.PageSetupDialog.PrinterSettings%2A>, e <xref:System.Windows.Forms.PageSetupDialog.ShowNetwork%2A> propriedades. Para executar este exemplo, coloque-o em um formulário que contém um <xref:System.Windows.Forms.Button> chamado `Button1`, um <xref:System.Windows.Forms.ListBox> chamado `ListBox1`e um <xref:System.Windows.Forms.PageSetupDialog> chamado `PageSetupDialog1`. Certifique-se de clicar no botão evento está conectado para o método de manipulação de eventos neste exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PageSetupDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine todas as opções para seus valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunDialog">
+      <MemberSignature Language="C#" Value="protected override bool RunDialog (IntPtr hwndOwner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool RunDialog(native int hwndOwner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PageSetupDialog.RunDialog(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwndOwner" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hwndOwner">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public bool ShowHelp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowHelp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PageSetupDialog.ShowHelp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o **ajuda** botão é visível.</summary>
+        <value>
+          <see langword="true" />Se o **ajuda** botão estiver visível; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowNetwork">
+      <MemberSignature Language="C#" Value="public bool ShowNetwork { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowNetwork" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PageSetupDialog.ShowNetwork" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o **rede** botão é visível.</summary>
+        <value>
+          <see langword="true" />Se o **rede** botão estiver visível; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.PageSetupDialog> usando o <xref:System.Windows.Forms.PageSetupDialog.PageSettings%2A>, <xref:System.Windows.Forms.PageSetupDialog.PrinterSettings%2A>, e <xref:System.Windows.Forms.PageSetupDialog.ShowNetwork%2A> propriedades. Para executar este exemplo, coloque-o em um formulário que contém um <xref:System.Windows.Forms.Button> chamado `Button1`, um <xref:System.Windows.Forms.ListBox> chamado `ListBox1`e um <xref:System.Windows.Forms.PageSetupDialog> chamado `PageSetupDialog1`. Certifique-se de clicar no botão evento está conectado para o método de manipulação de eventos neste exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PageSetupDialogExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PageSetupDialogExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

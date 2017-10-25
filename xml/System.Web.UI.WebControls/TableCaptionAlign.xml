@@ -1,0 +1,117 @@
+<Type Name="TableCaptionAlign" FullName="System.Web.UI.WebControls.TableCaptionAlign">
+  <TypeSignature Language="C#" Value="public enum TableCaptionAlign" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TableCaptionAlign extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TableCaptionAlign" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o posicionamento vertical ou horizontal do texto a ser processada como o elemento de legenda HTML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TableCaptionAlign> enumeração representa o posicionamento vertical ou horizontal de um elemento HTML de legenda em controles que pode ser renderizado como tabelas, tais como <xref:System.Web.UI.WebControls.Table>, <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, ou <xref:System.Web.UI.WebControls.Calendar>. Por exemplo, o <xref:System.Web.UI.WebControls.Table.CaptionAlign%2A> propriedade usa esses valores de enumeração para definir o alinhamento da legenda em um <xref:System.Web.UI.WebControls.Table> controle.  
+  
+ Se você especificar NotSet, o navegador no qual o controle é processado determina onde alinhar a legenda.  
+  
+ O <xref:System.Web.UI.WebControls.Table.CaptionAlign%2A> propriedade especifica a posição do elemento de legenda em relação a controles que podem ser renderizados como tabelas. O <xref:System.Web.UI.WebControls.Table.Caption%2A> propriedade especifica o texto a ser exibido no elemento de legenda. Dispositivos de tecnologia assistencial podem usar a descrição fornecida pelo <xref:System.Web.UI.WebControls.Table.Caption%2A> propriedade para tornar o controle mais acessíveis. Por exemplo, um dispositivo de leitor de tela pode ler a legenda para o usuário para fornecer uma descrição da tabela.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.TableCaptionAlign> enumeração para definir o <xref:System.Web.UI.WebControls.GridView.CaptionAlign%2A> propriedade em um <xref:System.Web.UI.WebControls.Table> controle. O <xref:System.Web.UI.WebControls.Table> controle contém <xref:System.Web.UI.WebControls.TableRow> objetos que exibem valores de cidade e CEP.  
+  
+ [!code-aspx-csharp[TableCaptionAlignEnumeration#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCaptionAlignEnumeration/CS/tablecaptionaligncs.aspx#1)]
+ [!code-aspx-vb[TableCaptionAlignEnumeration#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCaptionAlignEnumeration/VB/tablecaptionalignvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableCaptionAlign Bottom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableCaptionAlign.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento de legenda é alinhado com a parte inferior da tabela.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableCaptionAlign Left = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableCaptionAlign.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento caption é alinhado à esquerda da tabela.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableCaptionAlign NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableCaptionAlign.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O alinhamento da legenda não está definido. O navegador que processa a legenda determina onde alinhar a legenda.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableCaptionAlign Right = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableCaptionAlign.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento caption é alinhado à direita da tabela.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TableCaptionAlign Top = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TableCaptionAlign.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableCaptionAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento de legenda é alinhado com a parte superior da tabela.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

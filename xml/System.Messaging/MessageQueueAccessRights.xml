@@ -1,0 +1,274 @@
+<Type Name="MessageQueueAccessRights" FullName="System.Messaging.MessageQueueAccessRights">
+  <TypeSignature Language="C#" Value="public enum MessageQueueAccessRights" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MessageQueueAccessRights extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueAccessRights" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica um conjunto direitos de acesso específicos do objeto para operações específicas para o Enfileiramento de Mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.MessageQueueAccessRights> enumeração permite que você especifique o Message Queuing direitos de objeto específicos como receber, inspecionar, ou gravar mensagens ou definir propriedades de fila. É uma das duas enumerações ao qual o <xref:System.Messaging.GenericAccessRights> mapas de enumeração amplo ler, gravar ou executar habilidades. O outro, <xref:System.Messaging.StandardAccessRights>, permite que você especifique os direitos comuns à maioria dos objetos, por exemplo, excluir o objeto ou ler um descritor de segurança.  
+  
+ Ambos <xref:System.Messaging.StandardAccessRights> e <xref:System.Messaging.MessageQueueAccessRights> fornecem um membro para excluir uma fila. As necessidades do aplicativo definem qual conjunto de sinalizadores que você usa.  
+  
+ Os direitos de acesso associados a <xref:System.Messaging.MessageQueueAccessRights> enumeração são listados na caixa permissões da janela de propriedades de fila.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChangeQueuePermissions">
+      <MemberSignature Language="C#" Value="ChangeQueuePermissions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights ChangeQueuePermissions = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.ChangeQueuePermissions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito modificar as permissões da fila.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteJournalMessage">
+      <MemberSignature Language="C#" Value="DeleteJournalMessage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights DeleteJournalMessage = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.DeleteJournalMessage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito de excluir mensagens da fila de diário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteMessage">
+      <MemberSignature Language="C#" Value="DeleteMessage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights DeleteMessage = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.DeleteMessage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito de excluir mensagens da fila.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteQueue">
+      <MemberSignature Language="C#" Value="DeleteQueue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights DeleteQueue = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.DeleteQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito de excluir a fila.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FullControl">
+      <MemberSignature Language="C#" Value="FullControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights FullControl = int32(983103)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.FullControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Direitos totais para a fila. Uma união de todos os outros direitos na enumeração.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericRead">
+      <MemberSignature Language="C#" Value="GenericRead" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights GenericRead = int32(131115)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.GenericRead" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma combinação de <see langword="GetQueueProperties" />, <see langword="GetQueuePermissions" />, <see langword="ReceiveMessage" /> e <see langword="ReceiveJournalMessage" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GenericWrite">
+      <MemberSignature Language="C#" Value="GenericWrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights GenericWrite = int32(131108)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.GenericWrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma combinação de <see langword="GetQueueProperties" />, <see langword="GetQueuePermissions" /> e <see langword="WriteMessage" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueuePermissions">
+      <MemberSignature Language="C#" Value="GetQueuePermissions" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights GetQueuePermissions = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.GetQueuePermissions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito ler as permissões da fila.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQueueProperties">
+      <MemberSignature Language="C#" Value="GetQueueProperties" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights GetQueueProperties = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.GetQueueProperties" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito de ler as propriedades da fila.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PeekMessage">
+      <MemberSignature Language="C#" Value="PeekMessage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights PeekMessage = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.PeekMessage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito de espiar mensagens da fila.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveJournalMessage">
+      <MemberSignature Language="C#" Value="ReceiveJournalMessage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights ReceiveJournalMessage = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.ReceiveJournalMessage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito de receber mensagens da fila de diário. Isso inclui os direitos de excluir e espiar mensagens da fila de diário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveMessage">
+      <MemberSignature Language="C#" Value="ReceiveMessage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights ReceiveMessage = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.ReceiveMessage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito de receber mensagens da fila. Isso inclui os direitos de excluir e espiar mensagens.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetQueueProperties">
+      <MemberSignature Language="C#" Value="SetQueueProperties" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights SetQueueProperties = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.SetQueueProperties" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito de modificar as propriedades da fila.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TakeQueueOwnership">
+      <MemberSignature Language="C#" Value="TakeQueueOwnership" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights TakeQueueOwnership = int32(524288)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.TakeQueueOwnership" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito de assumir a propriedade da fila.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteMessage">
+      <MemberSignature Language="C#" Value="WriteMessage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageQueueAccessRights WriteMessage = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageQueueAccessRights.WriteMessage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueueAccessRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O direito de enviar mensagens para a fila.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

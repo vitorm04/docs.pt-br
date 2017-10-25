@@ -1,0 +1,799 @@
+<Type Name="SymWriter" FullName="System.Diagnostics.SymbolStore.SymWriter">
+  <TypeSignature Language="C#" Value="public class SymWriter : System.Diagnostics.SymbolStore.SymWriterBase, IDisposable, System.Diagnostics.SymbolStore.ISymbolWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SymWriter extends System.Diagnostics.SymbolStore.SymWriterBase implements class System.Diagnostics.SymbolStore.ISymbolWriter, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.SymWriter" />
+  <AssemblyInfo>
+    <AssemblyName>ISymWrapper</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.SymbolStore.SymWriterBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Diagnostics.SymbolStore.ISymbolWriter</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um gravador de símbolo para código gerenciado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.SymbolStore.SymWriter> classe fornece métodos que definem a documentos, pontos de sequência, escopos de léxicos e variáveis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.SymbolStore.SymWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymWriter (bool noUnderlyingWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool noUnderlyingWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="noUnderlyingWriter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="noUnderlyingWriter">
+          <see langword="true" />Se um autor de símbolo subjacente será fornecido ao chamar o <see cref="M:System.Diagnostics.SymbolStore.SymWriter.SetUnderlyingWriter(System.IntPtr)" /> método; <see langword="false" /> se um padrão subjacente gravador de símbolo deve ser criado em vez disso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> classe, especificar se deseja criar um gravador de símbolo subjacente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> e confirma os símbolos para o armazenamento de símbolo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após essa chamada, o <xref:System.Diagnostics.SymbolStore.SymWriter> se torna inválido para obter informações mais atualizadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseMethod">
+      <MemberSignature Language="C#" Value="public virtual void CloseMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.CloseMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o método atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que um método é fechado, não é possível definir um símbolo de dentro do método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseNamespace">
+      <MemberSignature Language="C#" Value="public virtual void CloseNamespace ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseNamespace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.CloseNamespace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o namespace mais recente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseScope">
+      <MemberSignature Language="C#" Value="public virtual void CloseScope (int endOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseScope(int32 endOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.CloseScope(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="endOffset">O deslocamento apenas após a última instrução no escopo de IL.</param>
+        <summary>Fecha o escopo léxico atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que um escopo é fechado, você não pode definir uma variável de dentro do método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineDocument">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.SymbolStore.ISymbolDocumentWriter DefineDocument (string url, Guid language, Guid languageVendor, Guid documentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Diagnostics.SymbolStore.ISymbolDocumentWriter DefineDocument(string url, valuetype System.Guid language, valuetype System.Guid languageVendor, valuetype System.Guid documentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.DefineDocument(System.String,System.Guid,System.Guid,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.ISymbolDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="language" Type="System.Guid" />
+        <Parameter Name="languageVendor" Type="System.Guid" />
+        <Parameter Name="documentType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL que identifica o documento.</param>
+        <param name="language">O idioma do documento. Esse parâmetro pode ser <see cref="F:System.Guid.Empty" />.</param>
+        <param name="languageVendor">A identidade do fornecedor para o idioma do documento. Esse parâmetro pode ser <see cref="F:System.Guid.Empty" />.</param>
+        <param name="documentType">O tipo do documento. Esse parâmetro pode ser <see cref="F:System.Guid.Empty" />.</param>
+        <summary>Define um documento de origem.</summary>
+        <returns>O <see cref="T:System.Diagnostics.SymbolStore.ISymbolDocumentWriter" /> objeto que representa o documento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineField">
+      <MemberSignature Language="C#" Value="public virtual void DefineField (System.Diagnostics.SymbolStore.SymbolToken parent, string name, System.Reflection.FieldAttributes attributes, byte[] signature, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DefineField(valuetype System.Diagnostics.SymbolStore.SymbolToken parent, string name, valuetype System.Reflection.FieldAttributes attributes, unsigned int8[] signature, valuetype System.Diagnostics.SymbolStore.SymAddressKind addrKind, int32 addr1, int32 addr2, int32 addr3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.DefineField(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Reflection.FieldAttributes" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="addrKind" Type="System.Diagnostics.SymbolStore.SymAddressKind" />
+        <Parameter Name="addr1" Type="System.Int32" />
+        <Parameter Name="addr2" Type="System.Int32" />
+        <Parameter Name="addr3" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Este parâmetro não é usado.</param>
+        <param name="name">Este parâmetro não é usado.</param>
+        <param name="attributes">Este parâmetro não é usado.</param>
+        <param name="signature">Este parâmetro não é usado.</param>
+        <param name="addrKind">Este parâmetro não é usado.</param>
+        <param name="addr1">Este parâmetro não é usado.</param>
+        <param name="addr2">Este parâmetro não é usado.</param>
+        <param name="addr3">Este parâmetro não é usado.</param>
+        <summary>Gera um <see cref="T:System.NotSupportedException" /> em todos os casos.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Em todos os casos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineGlobalVariable">
+      <MemberSignature Language="C#" Value="public virtual void DefineGlobalVariable (string name, System.Reflection.FieldAttributes attributes, byte[] signature, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DefineGlobalVariable(string name, valuetype System.Reflection.FieldAttributes attributes, unsigned int8[] signature, valuetype System.Diagnostics.SymbolStore.SymAddressKind addrKind, int32 addr1, int32 addr2, int32 addr3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.DefineGlobalVariable(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Reflection.FieldAttributes" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="addrKind" Type="System.Diagnostics.SymbolStore.SymAddressKind" />
+        <Parameter Name="addr1" Type="System.Int32" />
+        <Parameter Name="addr2" Type="System.Int32" />
+        <Parameter Name="addr3" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Este parâmetro não é usado.</param>
+        <param name="attributes">Este parâmetro não é usado.</param>
+        <param name="signature">Este parâmetro não é usado.</param>
+        <param name="addrKind">Este parâmetro não é usado.</param>
+        <param name="addr1">Este parâmetro não é usado.</param>
+        <param name="addr2">Este parâmetro não é usado.</param>
+        <param name="addr3">Este parâmetro não é usado.</param>
+        <summary>Gera um <see cref="T:System.NotSupportedException" /> em todos os casos.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Em todos os casos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineLocalVariable">
+      <MemberSignature Language="C#" Value="public virtual void DefineLocalVariable (string name, System.Reflection.FieldAttributes attributes, byte[] signature, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3, int startOffset, int endOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DefineLocalVariable(string name, valuetype System.Reflection.FieldAttributes attributes, unsigned int8[] signature, valuetype System.Diagnostics.SymbolStore.SymAddressKind addrKind, int32 addr1, int32 addr2, int32 addr3, int32 startOffset, int32 endOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.DefineLocalVariable(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Reflection.FieldAttributes" />
+        <Parameter Name="signature" Type="System.Byte[]" />
+        <Parameter Name="addrKind" Type="System.Diagnostics.SymbolStore.SymAddressKind" />
+        <Parameter Name="addr1" Type="System.Int32" />
+        <Parameter Name="addr2" Type="System.Int32" />
+        <Parameter Name="addr3" Type="System.Int32" />
+        <Parameter Name="startOffset" Type="System.Int32" />
+        <Parameter Name="endOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da variável local.</param>
+        <param name="attributes">Os atributos de variável locais especificados usando o <see cref="T:System.Reflection.FieldAttributes" /> enumerador.</param>
+        <param name="signature">A assinatura de variável local.</param>
+        <param name="addrKind">O endereço de tipos para <c>addr1</c>, <c>addr2</c>, e <c>addr3</c> usando <see cref="T:System.Diagnostics.SymbolStore.SymAddressKind" />.</param>
+        <param name="addr1">O primeiro endereço para a especificação de variável local.</param>
+        <param name="addr2">O segundo endereço para a especificação de variável local.</param>
+        <param name="addr3">O terceiro endereço para a especificação de variável local.</param>
+        <param name="startOffset">O deslocamento de início para a variável. Se for zero, este parâmetro é ignorado e a variável é definida em toda a todo o escopo. Se for diferente de zero, ela se encaixa nos deslocamentos do escopo atual.</param>
+        <param name="endOffset">O deslocamento de fim para a variável. Se for zero, este parâmetro é ignorado e a variável é definida em toda a todo o escopo. Se for diferente de zero, ela se encaixa nos deslocamentos do escopo atual.</param>
+        <summary>Define uma única variável no escopo léxico atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `startOffset` e `endOffset` parâmetros são opcionais. Se o valor for zero, elas são ignoradas e a variável é definida em toda a todo o escopo. Se o valor for diferente de zero, eles se encaixam dentro de deslocamentos do escopo atual.  
+  
+ Você pode chamar <xref:System.Diagnostics.SymbolStore.SymWriter.DefineLocalVariable%2A> várias vezes para uma variável de mesmo nome que ocorre várias vezes em diferentes intervalos de deslocamento ao longo de um escopo. (Nesse caso, os deslocamentos de início e de término não devem se sobrepor.)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineParameter">
+      <MemberSignature Language="C#" Value="public virtual void DefineParameter (string name, System.Reflection.ParameterAttributes attributes, int sequence, System.Diagnostics.SymbolStore.SymAddressKind addrKind, int addr1, int addr2, int addr3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DefineParameter(string name, valuetype System.Reflection.ParameterAttributes attributes, int32 sequence, valuetype System.Diagnostics.SymbolStore.SymAddressKind addrKind, int32 addr1, int32 addr2, int32 addr3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.DefineParameter(System.String,System.Reflection.ParameterAttributes,System.Int32,System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Reflection.ParameterAttributes" />
+        <Parameter Name="sequence" Type="System.Int32" />
+        <Parameter Name="addrKind" Type="System.Diagnostics.SymbolStore.SymAddressKind" />
+        <Parameter Name="addr1" Type="System.Int32" />
+        <Parameter Name="addr2" Type="System.Int32" />
+        <Parameter Name="addr3" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Este parâmetro não é usado.</param>
+        <param name="attributes">Este parâmetro não é usado.</param>
+        <param name="sequence">Este parâmetro não é usado.</param>
+        <param name="addrKind">Este parâmetro não é usado.</param>
+        <param name="addr1">Este parâmetro não é usado.</param>
+        <param name="addr2">Este parâmetro não é usado.</param>
+        <param name="addr3">Este parâmetro não é usado.</param>
+        <summary>Gera um <see cref="T:System.NotSupportedException" /> em todos os casos.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Em todos os casos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineSequencePoints">
+      <MemberSignature Language="C#" Value="public virtual void DefineSequencePoints (System.Diagnostics.SymbolStore.ISymbolDocumentWriter document, int[] offsets, int[] lines, int[] columns, int[] endLines, int[] endColumns);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DefineSequencePoints(class System.Diagnostics.SymbolStore.ISymbolDocumentWriter document, int32[] offsets, int32[] lines, int32[] columns, int32[] endLines, int32[] endColumns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.DefineSequencePoints(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Diagnostics.SymbolStore.ISymbolDocumentWriter" />
+        <Parameter Name="offsets" Type="System.Int32[]" />
+        <Parameter Name="lines" Type="System.Int32[]" />
+        <Parameter Name="columns" Type="System.Int32[]" />
+        <Parameter Name="endLines" Type="System.Int32[]" />
+        <Parameter Name="endColumns" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="document">O objeto de documento para o qual os pontos de sequência estão sendo definidos.</param>
+        <param name="offsets">O deslocamento de IL dos pontos de sequência, medido a partir do início do método.</param>
+        <param name="lines">Os números de linha inicial dos pontos de sequência.</param>
+        <param name="columns">Os números da coluna inicial dos pontos de sequência.</param>
+        <param name="endLines">Os números de linha final dos pontos de sequência.</param>
+        <param name="endColumns">Os números da coluna final dos pontos de sequência.</param>
+        <summary>Define um grupo de pontos de sequência dentro do método atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pontos de sequência são usados para mapear entre os locais de arquivo de origem e deslocamentos de IL.  Cada ponto de sequência consiste em um IL deslocamento e a fonte de arquivo região, especificada por números de início e término de linha/coluna relativa a um <xref:System.Diagnostics.SymbolStore.ISymbolDocument> objeto.  Cada elemento em um índice específico de cada matriz corresponde a um ponto de sequência específico. Cada linha e cada coluna definem o início de uma instrução dentro de um método. As matrizes devem ser classificadas na ordem crescente de deslocamentos. O deslocamento é sempre o deslocamento do início do método, em bytes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados pela instância atual da classe <see cref="T:System.Diagnostics.SymbolStore.SymWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">
+          <see langword="true" />para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Chamado pelo <see cref="M:System.Diagnostics.SymbolStore.SymWriter.Dispose" /> e <see cref="M:System.Diagnostics.SymbolStore.SymWriter.Finalize" /> métodos para liberar os recursos gerenciados e não gerenciados usados pela instância atual do <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado somente pelo público <xref:System.Diagnostics.SymbolStore.SymWriter.Dispose%2A> e <xref:System.Diagnostics.SymbolStore.SymWriter.Finalize%2A> métodos; não chame este método diretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~SymWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera recursos não gerenciados e executa outras operações de limpeza antes que <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> seja recuperado pela coleta de lixo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui  <xref:System.Object.Finalize%2A>. O código do aplicativo não deve chamar este método; o método `Finalize` de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWriter">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.Private.ISymUnmanagedWriter* GetWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Diagnostics.SymbolStore.Private.ISymUnmanagedWriter* GetWriter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.GetWriter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.Private.ISymUnmanagedWriter*</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual void Initialize (IntPtr emitter, string filename, bool fFullBuild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(native int emitter, string filename, bool fFullBuild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.Initialize(System.IntPtr,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="emitter" Type="System.IntPtr" />
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="fFullBuild" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="emitter">A interface do emissor de metadados.</param>
+        <param name="filename">O nome do arquivo para o qual são gravados os símbolos de depuração. Alguns criadores exigem um nome de arquivo, enquanto outros não. Se um nome de arquivo for especificado para um gravador que não use nomes de arquivo, esse parâmetro é ignorado.</param>
+        <param name="fFullBuild">
+          <see langword="true" />indica que se trata de uma recriação completa; <see langword="false" /> indica uma compilação incremental.</param>
+        <summary>Define a interface do emissor de metadados para associar a este gravador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.SymbolStore.ISymbolWriter.Initialize%2A>também define o nome do arquivo de saída onde os símbolos de depuração são gravados. Esse método pode ser chamado apenas uma vez e deve ser chamado antes de quaisquer outros métodos de gravador são chamados.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InitWriter">
+      <MemberSignature Language="C#" Value="public void InitWriter (bool noUnderlyingWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitWriter(bool noUnderlyingWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.InitWriter(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="noUnderlyingWriter" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="noUnderlyingWriter">
+          <see langword="true" />Se um autor de símbolo subjacente será fornecido ao chamar o <see cref="M:System.Diagnostics.SymbolStore.SymWriter.SetUnderlyingWriter(System.IntPtr)" /> método; <see langword="false" /> se um padrão subjacente gravador de símbolo deve ser criado em vez disso.</param>
+        <summary>Inicializa o gravador de símbolo. Esse método não deve ser chamado diretamente. ele é chamado pelo construtor.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMethod">
+      <MemberSignature Language="C#" Value="public virtual void OpenMethod (System.Diagnostics.SymbolStore.SymbolToken method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OpenMethod(valuetype System.Diagnostics.SymbolStore.SymbolToken method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.OpenMethod(System.Diagnostics.SymbolStore.SymbolToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+      </Parameters>
+      <Docs>
+        <param name="method">O token de metadados para o método a ser aberto.</param>
+        <summary>Abre um método no qual colocar informações de símbolo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método especificado torna-se o método atual para chamadas para definir pontos de sequência, parâmetros e escopos léxicos. Há um escopo léxico implícita ao redor de todo o método. Reabrir um método que foi fechado anteriormente apaga qualquer símbolos definidos anteriormente para o método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenNamespace">
+      <MemberSignature Language="C#" Value="public virtual void OpenNamespace (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OpenNamespace(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.OpenNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do novo namespace.</param>
+        <summary>Abre um novo namespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame este método antes de definir métodos ou variáveis que existem em um namespace. Namespaces podem ser aninhados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenScope">
+      <MemberSignature Language="C#" Value="public virtual int OpenScope (int startOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 OpenScope(int32 startOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.OpenScope(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startOffset">O deslocamento de IL em bytes do início do método para a primeira instrução de escopo léxico.</param>
+        <summary>Abre um novo escopo léxico no método atual.</summary>
+        <returns>Um identificador de escopo opaco que pode ser usado com <see cref="M:System.Diagnostics.SymbolStore.SymWriter.SetScopeRange(System.Int32,System.Int32,System.Int32)" /> para definir os deslocamentos de início e término de um escopo em um momento posterior. Nesse caso, os deslocamentos passado para <see cref="M:System.Diagnostics.SymbolStore.SymWriter.OpenScope(System.Int32)" /> e <see cref="M:System.Diagnostics.SymbolStore.SymWriter.CloseScope(System.Int32)" /> são ignorados. Um identificador de escopo é válido somente no método atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse escopo se torna o novo escopo atual e é enviada por push para uma pilha de escopos. Escopos devem formar uma hierarquia. Irmãos não podem se sobrepor.  
+  
+ Identificadores de escopo só são válidos no método atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMethodSourceRange">
+      <MemberSignature Language="C#" Value="public virtual void SetMethodSourceRange (System.Diagnostics.SymbolStore.ISymbolDocumentWriter startDoc, int startLine, int startColumn, System.Diagnostics.SymbolStore.ISymbolDocumentWriter endDoc, int endLine, int endColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetMethodSourceRange(class System.Diagnostics.SymbolStore.ISymbolDocumentWriter startDoc, int32 startLine, int32 startColumn, class System.Diagnostics.SymbolStore.ISymbolDocumentWriter endDoc, int32 endLine, int32 endColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.SetMethodSourceRange(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32,System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startDoc" Type="System.Diagnostics.SymbolStore.ISymbolDocumentWriter" />
+        <Parameter Name="startLine" Type="System.Int32" />
+        <Parameter Name="startColumn" Type="System.Int32" />
+        <Parameter Name="endDoc" Type="System.Diagnostics.SymbolStore.ISymbolDocumentWriter" />
+        <Parameter Name="endLine" Type="System.Int32" />
+        <Parameter Name="endColumn" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startDoc">Este parâmetro não é usado.</param>
+        <param name="startLine">Este parâmetro não é usado.</param>
+        <param name="startColumn">Este parâmetro não é usado.</param>
+        <param name="endDoc">Este parâmetro não é usado.</param>
+        <param name="endLine">Este parâmetro não é usado.</param>
+        <param name="endColumn">Este parâmetro não é usado.</param>
+        <summary>Gera um <see cref="T:System.NotSupportedException" /> em todos os casos.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Em todos os casos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetScopeRange">
+      <MemberSignature Language="C#" Value="public virtual void SetScopeRange (int scopeID, int startOffset, int endOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetScopeRange(int32 scopeID, int32 startOffset, int32 endOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.SetScopeRange(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scopeID" Type="System.Int32" />
+        <Parameter Name="startOffset" Type="System.Int32" />
+        <Parameter Name="endOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="scopeID">O identificador de escopo léxico retornado pelo <see cref="M:System.Diagnostics.SymbolStore.SymWriter.OpenScope(System.Int32)" /> método.</param>
+        <param name="startOffset">O deslocamento de IL do início do escopo léxico.</param>
+        <param name="endOffset">O deslocamento de IL do final do escopo léxico.</param>
+        <summary>Define o intervalo de deslocamento para o escopo léxico especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSymAttribute">
+      <MemberSignature Language="C#" Value="public virtual void SetSymAttribute (System.Diagnostics.SymbolStore.SymbolToken parent, string name, byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSymAttribute(valuetype System.Diagnostics.SymbolStore.SymbolToken parent, string name, unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.SetSymAttribute(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O token de metadados para o qual o atributo é definido.</param>
+        <param name="name">O nome do atributo.</param>
+        <param name="data">O valor do atributo.</param>
+        <summary>Define um atributo quando é fornecido o nome do atributo e o valor do atributo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.SymbolStore.SymWriter.SetSymAttribute%2A> método só está associado às informações simbólicas e não é um atributo de metadados personalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUnderlyingWriter">
+      <MemberSignature Language="C#" Value="public virtual void SetUnderlyingWriter (IntPtr underlyingWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetUnderlyingWriter(native int underlyingWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.SetUnderlyingWriter(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="underlyingWriter" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="underlyingWriter">Um <see cref="T:System.IntPtr" /> ponteiro de tipo para o código que é o gravador subjacente.</param>
+        <summary>Define a base [ISymUnmanagedWriter Interface](~/docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) (correspondente API não gerenciada) que um gerenciado <see cref="T:System.Diagnostics.SymbolStore.SymWriter" /> para emitir símbolos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Subjacente [ISymUnmanagedWriter Interface](~/docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) (correspondente API não gerenciada) interface representa um gravador de símbolo para código gerenciado. A interface fornece métodos para definir documentos, pontos de sequência, escopos de léxicos e variáveis.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUserEntryPoint">
+      <MemberSignature Language="C#" Value="public virtual void SetUserEntryPoint (System.Diagnostics.SymbolStore.SymbolToken entryMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetUserEntryPoint(valuetype System.Diagnostics.SymbolStore.SymbolToken entryMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.SetUserEntryPoint(System.Diagnostics.SymbolStore.SymbolToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entryMethod" Type="System.Diagnostics.SymbolStore.SymbolToken" />
+      </Parameters>
+      <Docs>
+        <param name="entryMethod">Aponte o token de metadados para o método que é a entrada do usuário.</param>
+        <summary>Identifica o método definido pelo usuário como o ponto de entrada para o módulo atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso normalmente é o método principal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsingNamespace">
+      <MemberSignature Language="C#" Value="public virtual void UsingNamespace (string fullName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UsingNamespace(string fullName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymWriter.UsingNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fullName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fullName">O nome totalmente qualificado do namespace.</param>
+        <summary>Especifica que o nome totalmente qualificado de namespace fornecido é usado dentro do escopo léxico aberto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fechar o escopo atual impede que esse escopo usando o namespace. O namespace continua em uso em todos os escopos que herdam do escopo atual aberto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

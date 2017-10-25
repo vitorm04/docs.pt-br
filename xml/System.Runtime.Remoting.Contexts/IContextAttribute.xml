@@ -1,0 +1,87 @@
+<Type Name="IContextAttribute" FullName="System.Runtime.Remoting.Contexts.IContextAttribute">
+  <TypeSignature Language="C#" Value="public interface IContextAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContextAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.IContextAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica um atributo de contexto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Contexts.IContextAttribute> classe é exposta em todos os atributos de contexto. Os atributos de uma propriedade que reside em um contexto e impõe uma política específica para os objetos criados no contexto de colaboração. Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetPropertiesForNewContext">
+      <MemberSignature Language="C#" Value="public void GetPropertiesForNewContext (System.Runtime.Remoting.Activation.IConstructionCallMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetPropertiesForNewContext(class System.Runtime.Remoting.Activation.IConstructionCallMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContextAttribute.GetPropertiesForNewContext(System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">O <see cref="T:System.Runtime.Remoting.Activation.IConstructionCallMessage" /> ao qual adicionar as propriedades de contexto.</param>
+        <summary>Retorna propriedades de contexto para o chamador na mensagem determinada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Contexts.IContextAttribute.GetPropertiesForNewContext%2A> método pode adicionar propriedades de contexto diretamente para o <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage.ContextProperties%2A> lista de propriedades no <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage> interface. A implementação padrão de <xref:System.Runtime.Remoting.Contexts.ContextAttribute> classe isso adicionará à lista de propriedade de contexto. Atributos de contexto estão livres para substituir <xref:System.Runtime.Remoting.Contexts.IContextAttribute.GetPropertiesForNewContext%2A> e pode implementar seu próprio comportamento. Por exemplo, eles podem adicionar à lista de uma nova classe que implementa a propriedade de contexto.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsContextOK">
+      <MemberSignature Language="C#" Value="public bool IsContextOK (System.Runtime.Remoting.Contexts.Context ctx, System.Runtime.Remoting.Activation.IConstructionCallMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsContextOK(class System.Runtime.Remoting.Contexts.Context ctx, class System.Runtime.Remoting.Activation.IConstructionCallMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContextAttribute.IsContextOK(System.Runtime.Remoting.Contexts.Context,System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.Runtime.Remoting.Contexts.Context" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O contexto para verificar com o atributo de contexto atual.</param>
+        <param name="msg">A chamada de construção, os parâmetros que precisam ser verificados em relação ao contexto atual.</param>
+        <summary>Retorna um valor booliano que indica se o contexto especificado atende aos requisitos do atributo de contexto.</summary>
+        <returns>
+          <see langword="true" />Se o contexto transmitido é okey; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

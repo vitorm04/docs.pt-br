@@ -1,0 +1,127 @@
+<Type Name="ThenBy" FullName="System.Web.UI.WebControls.Expressions.ThenBy">
+  <TypeSignature Language="C#" Value="public class ThenBy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ThenBy extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Expressions.ThenBy" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira de aplicar uma expressão de classificação para um <see cref="T:System.Linq.IQueryable" /> o objeto de fonte de dados após um <see cref="T:System.Web.UI.WebControls.Expressions.OrderByExpression" /> expressão é aplicada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após a classificação de uma operação é executada usando o <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> expressão no <xref:System.Web.UI.WebControls.QueryExtender> controlar, classificação subsequente operações podem ser realizadas usando o <xref:System.Web.UI.WebControls.Expressions.ThenBy> classe em um campo de dados diferentes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como classificar dados por campo ListPrice na ordem decrescente e, em seguida, no ProductID campo em crescente ordem usando o <xref:System.Web.UI.WebControls.Expressions.ThenBy> tipo. Este exemplo de código é parte de um exemplo maior fornecido em [passo a passo: filtrando dados em uma página da Web usando declarativa sintaxe](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:OrderByExpression DataField="ListPrice"   
+    Direction="Descending">  
+  <asp:ThenBy DataField="ProductID" Direction="Ascending"/>  
+</asp:OrderByExpression>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThenBy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Expressions.ThenBy.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.Expressions.ThenBy" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataField">
+      <MemberSignature Language="C#" Value="public string DataField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.ThenBy.DataField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a propriedade do <see cref="T:System.Linq.IQueryable" /> objeto ao qual aplicar o <see cref="T:System.Web.UI.WebControls.Expressions.ThenBy" /> expressão.</summary>
+        <value>A propriedade do <see cref="T:System.Linq.IQueryable" /> objeto ao qual aplicar o <see cref="T:System.Web.UI.WebControls.Expressions.ThenBy" /> expressão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> classifica os dados em um campo de dados especificado. Operações de classificação subsequentes podem ser executadas em um campo de dados diferente usando o <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> o <xref:System.Web.UI.WebControls.Expressions.OrderByExpression.ThenByExpressions%2A> coleção. Essa propriedade especifica o campo de dados para aplicar o `ThenBy` da operação de classificação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como classificar dados por campo ListPrice em ordem decrescente e, em seguida, no campo de ID de produto na ordem crescente. Este exemplo de código é parte de um exemplo maior fornecido em [passo a passo: filtrando dados em uma página da Web usando declarativa sintaxe](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:OrderByExpression DataField="ListPrice"   
+    Direction="Descending">  
+  <asp:ThenBy DataField="ProductID" Direction="Ascending"/>  
+</asp:OrderByExpression>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.SortDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.SortDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Expressions.ThenBy.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SortDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a direção de classificação do <see cref="T:System.Linq.IQueryable" /> objeto de fonte de dados.</summary>
+        <value>A direção de classificação do <see cref="T:System.Linq.IQueryable" /> objeto de fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Expressions.OrderByExpression> é usado no <xref:System.Web.UI.WebControls.QueryExtender> controle para classificar dados em ordem crescente ou decrescente. A direção da operação de classificação é especificada usando o <xref:System.Web.UI.WebControls.Expressions.OrderByExpression.Direction%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como classificar dados por campo ListPrice em ordem decrescente e no campo ProductID em ordem crescente, usando o <xref:System.Web.UI.WebControls.Expressions.ThenBy.Direction%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido em [passo a passo: filtrando dados em uma página da Web usando declarativa sintaxe](http://msdn.microsoft.com/en-us/b305ae31-1a1b-4d07-a678-51457c17614f).  
+  
+```  
+<asp:OrderByExpression DataField="ListPrice"   
+    Direction="Descending">  
+  <asp:ThenBy DataField="ProductID" Direction="Ascending"/>  
+</asp:OrderByExpression>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

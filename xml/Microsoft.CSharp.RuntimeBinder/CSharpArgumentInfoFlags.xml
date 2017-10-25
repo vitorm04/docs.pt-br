@@ -1,0 +1,151 @@
+<Type Name="CSharpArgumentInfoFlags" FullName="Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags">
+  <TypeSignature Language="C#" Value="public enum CSharpArgumentInfoFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CSharpArgumentInfoFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CSharp</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa informações sobre operações dinâmicas em C# que são específicas para determinados argumentos em um site de chamada. As instâncias dessa classe são geradas pelo compilador C#.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Constant">
+      <MemberSignature Language="C#" Value="Constant" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags Constant = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags.Constant" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O argumento é uma constante.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsOut">
+      <MemberSignature Language="C#" Value="IsOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags IsOut = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags.IsOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O argumento é passado para um parâmetro de saída.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsRef">
+      <MemberSignature Language="C#" Value="IsRef" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags IsRef = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags.IsRef" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O argumento é passado para um parâmetro ref.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsStaticType">
+      <MemberSignature Language="C#" Value="IsStaticType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags IsStaticType = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags.IsStaticType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O argumento é uma <see cref="T:System.Type" /> indicando que um nome de tipo real usado na fonte. Usado apenas para objetos de destino em chamadas estáticos.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NamedArgument">
+      <MemberSignature Language="C#" Value="NamedArgument" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags NamedArgument = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags.NamedArgument" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O argumento é um argumento nomeado.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma informação adicional para representar.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UseCompileTimeType">
+      <MemberSignature Language="C#" Value="UseCompileTimeType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags UseCompileTimeType = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags.UseCompileTimeType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Tipo de tempo de compilação do argumento deve ser considerado durante a associação.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

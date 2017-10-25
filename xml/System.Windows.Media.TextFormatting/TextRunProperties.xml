@@ -1,0 +1,271 @@
+<Type Name="TextRunProperties" FullName="System.Windows.Media.TextFormatting.TextRunProperties">
+  <TypeSignature Language="C#" Value="public abstract class TextRunProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextRunProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextRunProperties" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de propriedades, como o tipo ou o plano pincel, que pode ser aplicado a um <see cref="T:System.Windows.Media.TextFormatting.TextRun" /> objeto. Esta é uma classe abstrata.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O cliente de layout de texto fornece uma implementação concreta desta classe abstrata. Isso permite que o cliente implementar propriedades de execução de uma maneira que corresponde com o armazenamento associado de formatação de texto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextRunProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextRunProperties.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.TextFormatting.TextRunProperties" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundBrush">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.Brush BackgroundBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush BackgroundBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.BackgroundBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel usado para pintar a cor de plano de fundo da execução de texto.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Brush" /> valor que representa a cor de plano de fundo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaselineAlignment">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.BaselineAlignment BaselineAlignment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.BaselineAlignment BaselineAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.BaselineAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaselineAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estilo de linha de base para o texto que é posicionado no eixo vertical.</summary>
+        <value>Um valor enumerado de <see cref="T:System.Windows.BaselineAlignment" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureInfo">
+      <MemberSignature Language="C#" Value="public abstract System.Globalization.CultureInfo CultureInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo CultureInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.CultureInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de cultura para a execução de texto.</summary>
+        <value>Um valor de <see cref="T:System.Globalization.CultureInfo" /> que representa a cultura da sequência de texto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontHintingEmSize">
+      <MemberSignature Language="C#" Value="public abstract double FontHintingEmSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 FontHintingEmSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.FontHintingEmSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho do texto em pontos, que é usado para dicas de fonte.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o tamanho do texto em pontos. O padrão é 12 pt.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pontos são definidos como 1/72 de polegada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontRenderingEmSize">
+      <MemberSignature Language="C#" Value="public abstract double FontRenderingEmSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 FontRenderingEmSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.FontRenderingEmSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho do texto em pontos para a sequência de texto.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o tamanho do texto em DIPs (Pixels independentes de dispositivo). O padrão é 12 DIP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um DIP é 1/96 de polegada. Como o DIP aumenta o tamanho do texto aumenta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundBrush">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.Brush ForegroundBrush { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush ForegroundBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.ForegroundBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pincel usado para pintar a cor de primeiro plano da execução de texto.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Brush" /> valor que representa a cor de primeiro plano.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberSubstitution">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.NumberSubstitution NumberSubstitution { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.NumberSubstitution NumberSubstitution" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.NumberSubstitution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.NumberSubstitution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as configurações de substituição de número, que determina que os números em texto não são exibidos em diferentes culturas.</summary>
+        <value>Um valor <see cref="T:System.Windows.Media.NumberSubstitution" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelsPerDip">
+      <MemberSignature Language="C#" Value="public double PixelsPerDip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PixelsPerDip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.PixelsPerDip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o PixelsPerDip em que o texto deve ser renderizado.</summary>
+        <value>O valor <see cref="P:System.Windows.Media.TextFormatting.TextRunProperties.PixelsPerDip" /> atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextDecorations">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.TextDecorationCollection TextDecorations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.TextDecorationCollection TextDecorations" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.TextDecorations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de <see cref="T:System.Windows.TextDecoration" /> objetos usados para a sequência de texto.</summary>
+        <value>Um valor <see cref="T:System.Windows.TextDecorationCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextEffects">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.TextEffectCollection TextEffects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.TextEffectCollection TextEffects" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.TextEffects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextEffectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de <see cref="T:System.Windows.Media.TextEffect" /> objetos usados para a sequência de texto.</summary>
+        <value>Um valor <see cref="T:System.Windows.Media.TextEffectCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Typeface">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.Typeface Typeface { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Typeface Typeface" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.Typeface" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Typeface</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de fonte para a sequência de texto.</summary>
+        <value>Um valor de <see cref="T:System.Windows.Media.Typeface" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypographyProperties">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.TextFormatting.TextRunTypographyProperties TypographyProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.TextFormatting.TextRunTypographyProperties TypographyProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextRunProperties.TypographyProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.TextRunTypographyProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as propriedades de tipografia para a execução de texto.</summary>
+        <value>Um valor de <see cref="T:System.Windows.Media.TextFormatting.TextRunTypographyProperties" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

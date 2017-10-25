@@ -1,0 +1,207 @@
+<Type Name="AuthenticodeSignatureInformation" FullName="System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation">
+  <TypeSignature Language="C#" Value="public sealed class AuthenticodeSignatureInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AuthenticodeSignatureInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre uma assinatura Authenticode de um manifesto.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição do certificado de autenticação.</summary>
+        <value>A descrição do certificado de autenticação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DescriptionUrl">
+      <MemberSignature Language="C#" Value="public Uri DescriptionUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri DescriptionUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation.DescriptionUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a URL de descrição do certificado de autenticação.</summary>
+        <value>A URL de descrição do certificado de autenticação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public string HashAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o algoritmo de hash usado para calcular a assinatura.</summary>
+        <value>O algoritmo de hash usado para calcular a assinatura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HResult">
+      <MemberSignature Language="C#" Value="public int HResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HResult" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation.HResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor HRESULT de verificação da assinatura.</summary>
+        <value>O valor HRESULT de verificação da assinatura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureChain">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Chain SignatureChain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Chain SignatureChain" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation.SignatureChain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Chain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de certificados usados para verificar a assinatura Authenticode.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Chain" /> objeto que contém a cadeia de certificados.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.StorePermission">para a direita enumerar os certificados. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Security.Permissions.StorePermissionFlags.EnumerateCertificates" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 SigningCertificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 SigningCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation.SigningCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o certificado que assinou o manifesto.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objeto que representa o certificado.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.StorePermission">para a direita enumerar os certificados. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Security.Permissions.StorePermissionFlags.EnumerateCertificates" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.TimestampInformation Timestamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.TimestampInformation Timestamp" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation.Timestamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.TimestampInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o carimbo de hora que foi aplicado à assinatura do Authenticode.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.X509Certificates.TimestampInformation" /> objeto que contém o carimbo de hora de assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O carimbo de hora é expresso no horário local.  O carimbo de hora está disponível somente se o editor que assinou o carimbo de hora é confiável.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustStatus">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.TrustStatus TrustStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.TrustStatus TrustStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation.TrustStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.TrustStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a confiabilidade da assinatura Authenticode.</summary>
+        <value>Um dos valores de <see cref="T:System.Security.Cryptography.X509Certificates.TrustStatus" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerificationResult">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.SignatureVerificationResult VerificationResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.SignatureVerificationResult VerificationResult" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation.VerificationResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SignatureVerificationResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o resultado da verificação da assinatura do Authenticode.</summary>
+        <value>Um dos valores de <see cref="T:System.Security.Cryptography.SignatureVerificationResult" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna uma verificação positiva <xref:System.Security.Cryptography.SignatureVerificationResult.Valid>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

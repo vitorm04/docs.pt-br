@@ -1,0 +1,221 @@
+<Type Name="ServiceContractGenerationContext" FullName="System.ServiceModel.Description.ServiceContractGenerationContext">
+  <TypeSignature Language="C#" Value="public class ServiceContractGenerationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceContractGenerationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.ServiceContractGenerationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Passado para o <see cref="M:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract(System.ServiceModel.Description.ServiceContractGenerationContext)" /> método para habilitar a modificação de um contrato de serviço e seu contexto antes de gerar código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.ServiceContractGenerationContext> objeto passado para o <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%2A?displayProperty=nameWithType> método de modificar o modelo de objeto de documento de código antes da geração de código. Normalmente, o <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> interface é implementada em um personalizado <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> implementação que é usada para importar elementos WSDL personalizados ou modificar o código no nível de serviço ou operação. Para modificar o código no nível da operação, consulte <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso do <xref:System.ServiceModel.Description.ServiceContractGenerationContext> objeto passado para o <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%2A?displayProperty=nameWithType> método para adicionar comentários de código extraídos de elementos WSDL personalizados.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#12](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#12)]  
+  
+ O exemplo de código a seguir mostra os comentários de código resultante.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#13](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.cs#13)]
+ [!code-vb[C_CustomWSDLExtensions#13](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.vb#13)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceContractGenerationContext (System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, System.ServiceModel.Description.ContractDescription contract, System.CodeDom.CodeTypeDeclaration contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, class System.ServiceModel.Description.ContractDescription contract, class System.CodeDom.CodeTypeDeclaration contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceContractGenerationContext.#ctor(System.ServiceModel.Description.ServiceContractGenerator,System.ServiceModel.Description.ContractDescription,System.CodeDom.CodeTypeDeclaration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceContractGenerator" Type="System.ServiceModel.Description.ServiceContractGenerator" />
+        <Parameter Name="contract" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="contractType" Type="System.CodeDom.CodeTypeDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="serviceContractGenerator">O gerador que gera o código para o contrato.</param>
+        <param name="contract">A descrição do contrato para o contrato a ser gerado.</param>
+        <param name="contractType">O <see cref="T:System.CodeDom.CodeTypeDeclaration" /> para o código de contrato a ser gerado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Description.ServiceContractGenerationContext" /> classe usando o gerador de contrato especificado, a descrição do contrato e a declaração de tipo de código de contrato.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceContractGenerationContext (System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, System.ServiceModel.Description.ContractDescription contract, System.CodeDom.CodeTypeDeclaration contractType, System.CodeDom.CodeTypeDeclaration duplexCallbackType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ServiceContractGenerator serviceContractGenerator, class System.ServiceModel.Description.ContractDescription contract, class System.CodeDom.CodeTypeDeclaration contractType, class System.CodeDom.CodeTypeDeclaration duplexCallbackType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceContractGenerationContext.#ctor(System.ServiceModel.Description.ServiceContractGenerator,System.ServiceModel.Description.ContractDescription,System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeTypeDeclaration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceContractGenerator" Type="System.ServiceModel.Description.ServiceContractGenerator" />
+        <Parameter Name="contract" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="contractType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="duplexCallbackType" Type="System.CodeDom.CodeTypeDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="serviceContractGenerator">O gerador que gera o código para o contrato.</param>
+        <param name="contract">A descrição do contrato para o contrato a ser gerado.</param>
+        <param name="contractType">O <see cref="T:System.CodeDom.CodeTypeDeclaration" /> para o código de contrato a ser gerado.</param>
+        <param name="duplexCallbackType">O <see cref="T:System.CodeDom.CodeTypeDeclaration" /> para o código de contrato duplex seja gerado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Description.ServiceContractGenerationContext" /> classe usando o gerador de contrato especificado, a descrição do contrato e a declaração de tipo de código de contrato.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contract">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ContractDescription Contract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ContractDescription Contract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceContractGenerationContext.Contract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ContractDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.Description.ContractDescription" /> para o contrato atual.</summary>
+        <value>O <see cref="T:System.ServiceModel.Description.ContractDescription" /> para o contrato atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.ServiceContractGenerationContext.Contract%2A> propriedade para examinar o <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> para o contrato atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeDeclaration ContractType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeDeclaration ContractType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceContractGenerationContext.ContractType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeDeclaration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.CodeDom.CodeTypeDeclaration" /> para o contrato atual.</summary>
+        <value>O <see cref="T:System.CodeDom.CodeTypeDeclaration" /> para o contrato atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.ServiceContractGenerationContext.ContractType%2A> propriedade para examinar ou modificar o <xref:System.CodeDom.CodeTypeDeclaration?displayProperty=nameWithType> para o contrato atual antes do código é gerado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso do <xref:System.ServiceModel.Description.ServiceContractGenerationContext> objeto passado para o <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%2A?displayProperty=nameWithType> método para adicionar comentários de código extraídos de elementos WSDL personalizados.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#12](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#12)]  
+  
+ O exemplo de código a seguir mostra os comentários de código resultante.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#13](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.cs#13)]
+ [!code-vb[C_CustomWSDLExtensions#13](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DuplexCallbackType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeDeclaration DuplexCallbackType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeDeclaration DuplexCallbackType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceContractGenerationContext.DuplexCallbackType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeDeclaration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.CodeDom.CodeTypeDeclaration" /> para o contrato de retorno de chamada dúplex no contrato de serviço.</summary>
+        <value>O <see cref="T:System.CodeDom.CodeTypeDeclaration" /> para o contrato de retorno de chamada dúplex no contrato de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.ServiceContractGenerationContext.DuplexCallbackType%2A> propriedade para examinar ou modificar o <xref:System.CodeDom.CodeTypeDeclaration?displayProperty=nameWithType> para o contrato de retorno de chamada dúplex no contrato de serviço antes de gerar código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operations">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.OperationContractGenerationContext&gt; Operations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.Description.OperationContractGenerationContext&gt; Operations" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceContractGenerationContext.Operations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.Description.OperationContractGenerationContext&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.ServiceModel.Description.OperationContractGenerationContext" /> objetos que representam as operações de contrato.</summary>
+        <value>Uma coleção de <see cref="T:System.ServiceModel.Description.OperationContractGenerationContext" /> objetos que representam as operações de contrato.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.ServiceContractGenerationContext.Operations%2A> propriedade para examinar ou modificar o <xref:System.ServiceModel.Description.OperationContractGenerationContext?displayProperty=nameWithType> objetos que representam as operações de contrato.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceContractGenerator">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceContractGenerator ServiceContractGenerator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ServiceContractGenerator ServiceContractGenerator" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceContractGenerationContext.ServiceContractGenerator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceContractGenerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.Description.ServiceContractGenerator" /> que é gerar o contrato.</summary>
+        <value>O <see cref="T:System.ServiceModel.Description.ServiceContractGenerator" /> que é gerar o contrato.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.ServiceContractGenerationContext.ServiceContractGenerator%2A> propriedade para examinar ou modificar o gerador de código é criar o código de contrato.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

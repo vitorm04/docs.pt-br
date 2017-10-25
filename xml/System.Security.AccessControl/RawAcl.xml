@@ -1,0 +1,281 @@
+<Type Name="RawAcl" FullName="System.Security.AccessControl.RawAcl">
+  <TypeSignature Language="C#" Value="public sealed class RawAcl : System.Security.AccessControl.GenericAcl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RawAcl extends System.Security.AccessControl.GenericAcl" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.RawAcl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.GenericAcl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma ACL (Lista de Controle de Acesso).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.AccessControl.RawAcl> classe permite a manipulação completa de entradas de controle de acesso (ACEs). Ele não impõe regras de classificação para as ACEs e não fornece lógica de validação. Qualquer ACE pode ser inserido, modificado ou removido em qualquer local na ACL.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RawAcl (byte revision, int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 revision, int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RawAcl.#ctor(System.Byte,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="revision" Type="System.Byte" />
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="revision">O nível de revisão da lista de controle de acesso (ACL) novo.</param>
+        <param name="capacity">O número de entradas de controle de acesso (ACEs) isso <see cref="T:System.Security.AccessControl.RawAcl" /> objeto pode conter. Esse número é a ser usado apenas como uma dica.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.RawAcl" /> classe com o nível de revisão especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RawAcl (byte[] binaryForm, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] binaryForm, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RawAcl.#ctor(System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="binaryForm" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="binaryForm">Uma matriz de valores de byte que representa uma lista de controle de acesso (ACL).</param>
+        <param name="offset">O deslocamento no <c>binaryForm</c> parâmetro no qual começar unmarshaling de dados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.RawAcl" /> classe a partir do formato binário especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BinaryLength">
+      <MemberSignature Language="C#" Value="public override int BinaryLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BinaryLength" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RawAcl.BinaryLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento, em bytes, da representação binária da atual <see cref="T:System.Security.AccessControl.RawAcl" /> objeto. Esse comprimento deve ser usado antes de empacotamento a ACL em uma matriz binária com o <see cref="M:System.Security.AccessControl.RawAcl.GetBinaryForm(System.Byte[],System.Int32)" /> método.</summary>
+        <value>O comprimento, em bytes, da representação binária da atual <see cref="T:System.Security.AccessControl.RawAcl" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RawAcl.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de acesso (ACEs) de entradas de controle no atual <see cref="T:System.Security.AccessControl.RawAcl" /> objeto.</summary>
+        <value>O número de ACEs atual <see cref="T:System.Security.AccessControl.RawAcl" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBinaryForm">
+      <MemberSignature Language="C#" Value="public override void GetBinaryForm (byte[] binaryForm, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetBinaryForm(unsigned int8[] binaryForm, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RawAcl.GetBinaryForm(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binaryForm" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="binaryForm">A matriz de bytes no qual o conteúdo do <see cref="T:System.Security.AccessControl.RawAcl" /> é empacotada.</param>
+        <param name="offset">O deslocamento no qual iniciar a realização de marshaling.</param>
+        <summary>Empacota o conteúdo de <see cref="T:System.Security.AccessControl.RawAcl" /> o objeto para o início da matriz de bytes especificada no deslocamento especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />é negativa ou muito alto para permitir todo o <see cref="T:System.Security.AccessControl.RawAcl" /> a serem copiados na <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertAce">
+      <MemberSignature Language="C#" Value="public void InsertAce (int index, System.Security.AccessControl.GenericAce ace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertAce(int32 index, class System.Security.AccessControl.GenericAce ace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RawAcl.InsertAce(System.Int32,System.Security.AccessControl.GenericAce)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="ace" Type="System.Security.AccessControl.GenericAce" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição na qual adicionar o novo ACE. Especifique o valor da <see cref="P:System.Security.AccessControl.RawAcl.Count" /> propriedade para inserir uma ACE no final o <see cref="T:System.Security.AccessControl.RawAcl" /> objeto.</param>
+        <param name="ace">As ACEs para inserir.</param>
+        <summary>Insere a entrada de controle de acesso (ACE) especificado no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ACE inserido não é clonado antes da inserção, todas as modificações a ACE após ele ter sido inserido são refletidas na lista de controle de acesso (ACL).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" />é negativa ou muito alto para permitir todo o <see cref="T:System.Security.AccessControl.GenericAcl" /> a serem copiados na <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override System.Security.AccessControl.GenericAce this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.AccessControl.GenericAce Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RawAcl.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.GenericAce</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de ACE para obter ou definir.</param>
+        <summary>Obtém ou define a entrada de controle de acesso (ACE) no índice especificado.</summary>
+        <value>O ACE no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAce">
+      <MemberSignature Language="C#" Value="public void RemoveAce (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAce(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.RawAcl.RemoveAce(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de ACE para remover.</param>
+        <summary>Remove a entrada de controle de acesso (ACE) no local especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor da <paramref name="index" /> parâmetro for maior do que o valor da <see cref="P:System.Security.AccessControl.RawAcl.Count" /> propriedade menos um ou é negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Revision">
+      <MemberSignature Language="C#" Value="public override byte Revision { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Revision" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.RawAcl.Revision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nível de revisão de <see cref="T:System.Security.AccessControl.RawAcl" />.</summary>
+        <value>Um valor de byte que especifica o nível de revisão de <see cref="T:System.Security.AccessControl.RawAcl" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

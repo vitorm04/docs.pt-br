@@ -1,0 +1,332 @@
+<Type Name="Match" FullName="System.Text.RegularExpressions.Match">
+  <TypeSignature Language="C#" Value="public class Match : System.Text.RegularExpressions.Group" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Match extends System.Text.RegularExpressions.Group" />
+  <TypeSignature Language="DocId" Value="T:System.Text.RegularExpressions.Match" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Text.RegularExpressions.Group</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os resultados de correspondência de uma única expressão regular.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.RegularExpressions.Match> objeto é imutável e não tem construtor público. Uma instância do <xref:System.Text.RegularExpressions.Match> retornada pela classe o <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> método e representa o primeiro padrão correspondem em uma cadeia de caracteres. Correspondências subsequentes são representadas por <xref:System.Text.RegularExpressions.Match> objetos retornados pelo <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> método. Além disso, um <xref:System.Text.RegularExpressions.MatchCollection> objeto que consiste em zero, um ou mais <xref:System.Text.RegularExpressions.Match> objetos retornado pelo <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> método.  
+  
+ Se o <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> método não corresponde a um padrão de expressão regular em uma cadeia de caracteres de entrada, ele retornará um elemento <xref:System.Text.RegularExpressions.MatchCollection> objeto. Você pode usar um `foreach` construir em c# ou um `For Each` construir no Visual Basic para iterar a coleção.  
+  
+ Se o <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> método não corresponde ao padrão de expressão regular, ele retorna um <xref:System.Text.RegularExpressions.Match> que é igual ao objeto <xref:System.Text.RegularExpressions.Match.Empty%2A?displayProperty=nameWithType>. Você pode usar o <xref:System.Text.RegularExpressions.Group.Success%2A> para determinar se a correspondência foi bem-sucedida. O exemplo a seguir fornece uma ilustração.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/cs/Match1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Match.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/vb/Match1.vb#1)]  
+  
+ Se uma correspondência de padrão for bem-sucedida, o <xref:System.Text.RegularExpressions.Capture.Value%2A> propriedade contém a subcadeia de caracteres correspondida, a <xref:System.Text.RegularExpressions.Capture.Index%2A> propriedade indica a posição inicial com base em zero da subcadeia de caracteres correspondente na cadeia de entrada e o <xref:System.Text.RegularExpressions.Capture.Length%2A> propriedade indica o comprimento da subcadeia de caracteres correspondida na cadeia de caracteres de entrada.  
+  
+ Como uma única correspondência pode envolver vários grupos de capturas, <xref:System.Text.RegularExpressions.Match> tem um <xref:System.Text.RegularExpressions.Match.Groups%2A> propriedade retorna o <xref:System.Text.RegularExpressions.GroupCollection>. O <xref:System.Text.RegularExpressions.Match> própria instância é equivalente ao primeiro objeto na coleção, em `Match.Groups[0]` (`Match.Groups(0)` no Visual Basic), que representa o inteiro correspondente. Você pode acessar de grupos capturados em uma correspondência das seguintes maneiras:  
+  
+-   Você pode iterar os membros a <xref:System.Text.RegularExpressions.GroupCollection> objeto usando um `foreach` (c#) ou `For Each` construção (Visual Basic).  
+  
+-   Você pode usar o <xref:System.Text.RegularExpressions.GroupCollection.Item%28System.Int32%29?displayProperty=nameWithType> propriedade para recuperar grupos pelo número de grupo de captura. Observe que você pode determinar quais grupos numerados estão presentes em uma expressão regular chamando-se a instância <xref:System.Text.RegularExpressions.Regex.GetGroupNumbers%2A?displayProperty=nameWithType> método.  
+  
+-   Você pode usar o <xref:System.Text.RegularExpressions.GroupCollection.Item%28System.String%29?displayProperty=nameWithType> propriedade para recuperar grupos com o nome do grupo de captura. Observe que você pode determinar quais grupos nomeados estão presentes em uma expressão regular chamando-se a instância <xref:System.Text.RegularExpressions.Regex.GetGroupNames?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir usam a expressão regular `Console\.Write(Line)?`. A expressão regular é interpretada da seguinte forma:  
+  
+|||  
+|-|-|  
+|Console\\. Gravação|Corresponder à cadeia de caracteres “Console.Write”. Observe que o "." caracteres são ignorados para que ele será interpretado como um período de literal em vez de como um caractere curinga que corresponde a qualquer caractere.|  
+|(Linha)?|Corresponde a zero ou uma ocorrência da cadeia de caracteres “Line”.|  
+  
+ **Exemplo 1**  
+  
+ A exemplo a seguir chama o <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> método para recuperar todas as correspondências de padrão em uma cadeia de caracteres de entrada. Ele itera o <xref:System.Text.RegularExpressions.Match> objetos retornado <xref:System.Text.RegularExpressions.MatchCollection> objeto para exibir informações sobre cada correspondência.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/cs/Match2.cs#2)]
+ [!code-vb[System.Text.RegularExpressions.Match.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/vb/Match2.vb#2)]  
+  
+ **Exemplo 2**  
+  
+ A exemplo a seguir chama o <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29> e <xref:System.Text.RegularExpressions.Match.NextMatch%2A> métodos para recuperar uma correspondência de cada vez.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/cs/Match3.cs#3)]
+ [!code-vb[System.Text.RegularExpressions.Match.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.RegularExpressions.Match.Class/vb/Match3.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Text.RegularExpressions.Match Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.RegularExpressions.Match Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.Match.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Match</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o grupo vazio. Todas as correspondências com falha retornam essa correspondência vazia.</summary>
+        <value>Uma correspondência vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não deve ser usada para determinar se uma correspondência for bem-sucedida. Em vez disso, use o `Match.Success` propriedade (que é herdado da <xref:System.Text.RegularExpressions.Group.Success%2A?displayProperty=nameWithType>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Groups">
+      <MemberSignature Language="C#" Value="public virtual System.Text.RegularExpressions.GroupCollection Groups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.RegularExpressions.GroupCollection Groups" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.Match.Groups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.GroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de grupos correspondentes à expressão regular.</summary>
+        <value>Os grupos de caracteres que correspondem ao padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um padrão de expressão regular pode incluir subexpressões, que são definidas, colocando uma parte do padrão de expressão regular entre parênteses. Essa subexpressão cada forma um grupo. O <xref:System.Text.RegularExpressions.Match.Groups%2A> propriedade fornece acesso às informações sobre as correspondências de subexpressão. Por exemplo, o padrão de expressão regular `(\d{3})-(\d{3}-\d{4})`, que corresponde a números de telefone na América do Norte, tem duas subexpressões. O primeiro consiste o código de área, o que compõe os primeiros três dígitos do número de telefone. Esse grupo é capturado pela primeira parte da expressão regular, `(\d{3})`. O segundo consiste o número de telefone individuais, que compõe os última de sete dígitos do número de telefone. Esse grupo é capturado pela segunda parte da expressão regular, `(\d{3}-\d{4})`. Esses dois grupos, em seguida, podem ser recuperados do <xref:System.Text.RegularExpressions.GroupCollection> objeto que é retornado pelo <xref:System.Text.RegularExpressions.Match.Groups%2A> propriedade, como mostra o exemplo a seguir.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.Groups#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.match.groups/cs/groups1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Match.Groups#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.match.groups/vb/groups1.vb#1)]  
+  
+ O <xref:System.Text.RegularExpressions.GroupCollection> objeto retornado pelo <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> propriedade é um objeto de coleção com base zero que sempre tenha pelo menos um membro. Se o mecanismo de expressão regular não pode localizar nenhuma correspondência em uma cadeia de caracteres de entrada específica, o <xref:System.Text.RegularExpressions.Group.Success%2A?displayProperty=nameWithType> propriedade do único <xref:System.Text.RegularExpressions.Group> objeto da coleção (o objeto no índice 0) é definido como `false` e <xref:System.Text.RegularExpressions.Group> do objeto <xref:System.Text.RegularExpressions.Capture.Value%2A> está definida como <xref:System.String.Empty?displayProperty=nameWithType>. Se o mecanismo de expressão regular pode encontrar uma correspondência, o primeiro elemento do <xref:System.Text.RegularExpressions.GroupCollection> objeto (o elemento no índice 0) retornado pelo <xref:System.Text.RegularExpressions.Match.Groups%2A> propriedade contém uma cadeia de caracteres que corresponde ao padrão de toda a expressão regular. Cada elemento subsequente, do índice, uma para cima, representa um grupo capturado, se a expressão regular inclui grupos de captura. Para obter mais informações, consulte a seção "Agrupamento constrói e Regular Expression objetos" a [construções de agrupamento](~/docs/standard/base-types/grouping-constructs-in-regular-expressions.md) artigo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir tenta corresponder a um padrão de expressão regular em uma cadeia de caracteres de exemplo. O exemplo usa o <xref:System.Text.RegularExpressions.Match.Groups%2A> propriedade para armazenar as informações recuperadas pelo correspondem para exibição no console.  
+  
+ [!code-cpp[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/cpp/VS_Snippets_CLR/regex match, nextmatch, groups, captures/cpp/snippet8.cpp#8)]
+ [!code-csharp[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/csharp/VS_Snippets_CLR/regex match, nextmatch, groups, captures/cs/snippet8.cs#8)]
+ [!code-vb[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/regex match, nextmatch, groups, captures/vb/snippet8.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextMatch">
+      <MemberSignature Language="C#" Value="public System.Text.RegularExpressions.Match NextMatch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Text.RegularExpressions.Match NextMatch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.Match.NextMatch" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Match</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um novo objeto <see cref="T:System.Text.RegularExpressions.Match" /> com os resultados para a próxima correspondência, começando na posição em que a última correspondência terminou (no caractere após o último caractere correspondente).</summary>
+        <returns>A próxima expressão regular de correspondência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é semelhante a chamar <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.Int32%29?displayProperty=nameWithType> novamente e passando (`Index+Length`) como a nova posição inicial.  
+  
+> [!NOTE]
+>  Esse método não modifica a instância atual. Em vez disso, ele retorna um novo <xref:System.Text.RegularExpressions.Match> objeto que contém informações sobre a próxima correspondência.  
+  
+ Tentativa de recuperar a próxima correspondência pode gerar um <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> se um valor de tempo limite para correspondência de operações está em vigor e a tentativa de localizar a próxima correspondência excede esse intervalo de tempo limite.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Text.RegularExpressions.Match.NextMatch%2A> método para capturar a expressão regular corresponde além da primeira correspondência.  
+  
+ [!code-cpp[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/cpp/VS_Snippets_CLR/regex match, nextmatch, groups, captures/cpp/snippet8.cpp#8)]
+ [!code-csharp[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/csharp/VS_Snippets_CLR/regex match, nextmatch, groups, captures/cs/snippet8.cs#8)]
+ [!code-vb[Regex Match, NextMatch, Groups, Captures#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/regex match, nextmatch, groups, captures/vb/snippet8.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException">Ocorreu um tempo limite.</exception>
+        <block subset="none" type="usage">
+          <para>Quando uma tentativa de correspondência é repetida ao chamar o <see cref="M:System.Text.RegularExpressions.Match.NextMatch" /> método, o mecanismo de expressão regular fornece correspondências vazias tratamento especial. Normalmente, <see cref="M:System.Text.RegularExpressions.Match.NextMatch" /> inicia a pesquisa para a próxima correspondência exatamente onde a correspondência anterior parou. No entanto, após uma correspondência vazia, o <see cref="M:System.Text.RegularExpressions.Match.NextMatch" /> método avança um caractere antes de tentar a próxima correspondência. Esse comportamento garante que o mecanismo de expressão regular pode avançar a cadeia de caracteres. Caso contrário, como uma correspondência vazia não resulta em nenhum movimento para frente, a próxima correspondência iniciaria exatamente no mesmo local que a correspondência anterior, e ela corresponderia repetidamente com a mesma cadeia de caracteres vazia.  
+  
+ O exemplo a seguir fornece uma ilustração. O padrão de expressão regular <c>um *</c> procura por zero ou mais ocorrências da letra "a" na cadeia de caracteres "abaabb". Como mostra a saída do exemplo, a pesquisa localizará seis correspondências. A primeira tentativa de correspondência localiza o primeiro "a". O segunda inicia correspondência exatamente onde a primeira correspondem termina antes do primeiro b; ele localiza zero ocorrências de "a" e retorna uma cadeia de caracteres vazia. A terceira correspondência não começa exatamente onde a segunda correspondência finalizou, pois a segunda correspondência retornou uma cadeia de caracteres vazia. Em vez disso, ele começa um caractere mais tarde, após o primeiro "b". A terceira correspondência localiza duas ocorrências de "a" e retorna "aa". A tentativa de correspondência quarta começa onde a terceira correspondência finalizou, antes do segundo "b" e retorna uma cadeia de caracteres vazia. A tentativa de correspondência quinto novamente avança um caractere para que ele começa antes do terceiro "b" e retorna uma cadeia de caracteres vazia. A sexta correspondência começa após o último "b" e retorna uma cadeia de caracteres vazia novamente.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.NextMatch#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.match.nextmatch/cs/nextmatch1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Match.NextMatch#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.match.nextmatch/vb/nextmatch1.vb#1)]</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public virtual string Result (string replacement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Result(string replacement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.Match.Result(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="replacement" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="replacement">O padrão de substituição a ser usado.</param>
+        <summary>Retorna a expansão do padrão de substituição especificado.</summary>
+        <returns>A versão expandida do parâmetro <paramref name="replacement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enquanto o <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> método substitui todas as correspondências em uma cadeia de caracteres de entrada com um padrão de substituição especificada, o <xref:System.Text.RegularExpressions.Match.Result%2A> método substitui um única correspondência com um padrão de substituição especificado. Porque ela opera em uma correspondência individual, também é possível executar o processamento na cadeia de caracteres correspondente antes de chamar o <xref:System.Text.RegularExpressions.Match.Result%2A> método.  
+  
+ O `replacement` parâmetro é um padrão de substituição padrão de expressão regular. Ele pode consistir de caracteres literais e substituições de expressão regular. Para obter mais informações, consulte [substituições](~/docs/standard/base-types/substitutions-in-regular-expressions.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir substitui os hifens que começam e terminam uma expressão entre parênteses com parênteses.  
+  
+ [!code-csharp[System.Text.RegularExpressions.Match.Result#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.match.result/cs/result1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.Match.Result#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.match.result/vb/result1.vb#1)]  
+  
+ O padrão da expressão regular `--(.+?)--` é interpretado conforme mostrado na tabela a seguir.  
+  
+|Padrão|Descrição|  
+|-------------|-----------------|  
+|`--`|Corresponde a dois hifens.|  
+|`(.+?)`|Corresponde qualquer caractere uma ou mais vezes, mas como algumas vezes possível. Este é o primeiro grupo de captura.|  
+|`--`|Corresponde a dois hifens.|  
+  
+ Observe que o padrão de expressão regular `--(.+?)--` usa o quantificador lazy `+?`. Se o quantificador greedy `+` foram usadas em vez disso, o mecanismo de expressão regular encontraria somente uma única correspondência na cadeia de caracteres de entrada.  
+  
+ A cadeia de caracteres de substituição `($1)` substitui a correspondência com o primeiro grupo capturado, que é colocado entre parênteses.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="replacement" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">A expansão não é permitida para este padrão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronized">
+      <MemberSignature Language="C#" Value="public static System.Text.RegularExpressions.Match Synchronized (System.Text.RegularExpressions.Match inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Text.RegularExpressions.Match Synchronized(class System.Text.RegularExpressions.Match inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.Match.Synchronized(System.Text.RegularExpressions.Match)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.Match</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inner" Type="System.Text.RegularExpressions.Match" />
+      </Parameters>
+      <Docs>
+        <param name="inner">Uma expressão regular corresponde equivalente à que o esperado.</param>
+        <summary>Retorna um <see cref="T:System.Text.RegularExpressions.Match" /> instância equivalente a um fornecido é adequada compartilhar entre vários threads.</summary>
+        <returns>Uma correspondência da expressão regular que é adequada compartilhar entre vários threads.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

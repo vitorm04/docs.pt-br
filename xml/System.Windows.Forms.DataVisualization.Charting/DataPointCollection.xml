@@ -1,0 +1,835 @@
+<Type Name="DataPointCollection" FullName="System.Windows.Forms.DataVisualization.Charting.DataPointCollection">
+  <TypeSignature Language="C#" Value="public class DataPointCollection : System.Windows.Forms.DataVisualization.Charting.ChartElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.DataPoint&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataPointCollection extends System.Windows.Forms.DataVisualization.Charting.ChartElementCollection`1&lt;class System.Windows.Forms.DataVisualization.Charting.DataPoint&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.DataPointCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.DataPoint&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Windows.Forms.DataVisualization.Charting.DataPoint</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection> classe representa uma coleção de <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objetos, que por sua vez, representam os pontos de dados que fazem parte de um <xref:System.Windows.Forms.DataVisualization.Charting.Series> objeto.  
+  
+ Essa classe de coleção é implementado como o <xref:System.Windows.Forms.DataVisualization.Charting.Series.Points%2A> propriedade de um <xref:System.Windows.Forms.DataVisualization.Charting.Series> objeto.  
+  
+ <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint>objetos podem ser anexados ou inseridos na coleção com o valor de X e Y-já especificados como parâmetros de valor (es). Observe que também sejam adicionados automaticamente quando uma série é associada a uma fonte de dados usando o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindY%2A> ou <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindXY%2A> método.  
+  
+ Pontos de dados são plotados na ordem em que eles ocorrem nesta coleção somente se a série que pertence a coleção tem seu <xref:System.Windows.Forms.DataVisualization.Charting.Series.IsXValueIndexed%2A> propriedade definida como `true` (o valor padrão é `false`), ou se todos os valores de X para todos os pontos de dados são zero. Caso contrário, os pontos de dados são plotados usando os respectivos valores de X.  
+  
+ Pontos de dados podem ser localizados e manipulados, com base no máximo, mínimo ou especificado X ou Y usando o sobrecarregado `FindMaxValue`, `FindMinValue` ou `FindValue` métodos, respectivamente.  
+  
+ O <xref:System.Collections.ObjectModel.Collection%601.Count%2A> propriedade indica o número total de itens na coleção e é comumente usada para localizar o limite superior da coleção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPoint Add (params double[] y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.DataPoint Add(float64[] y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.Add(System.Double[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="y" Type="System.Double[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="y">O valor Y do ponto de dados.</param>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> objeto à coleção e define seu valor de Y.</summary>
+        <returns>Recém-adicionado <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddXY">
+      <MemberSignature Language="C#" Value="public int AddXY (double xValue, double yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 AddXY(float64 xValue, float64 yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddXY(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xValue" Type="System.Double" />
+        <Parameter Name="yValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="xValue">O valor X do ponto de dados.</param>
+        <param name="yValue">O valor Y do ponto de dados.</param>
+        <summary>Adiciona um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> ao final da coleção, com o valor X e o valor Y especificados.</summary>
+        <returns>Um <see langword="integer" /> que representa o índice baseado em zero em que o item foi inserido na coleção de pontos de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> o objeto para o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection>; o objeto sempre é adicionado ao final da coleção.  
+  
+ Use o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddXY%2A> sobrecarga do método se os pontos de dados precisam de mais de um valor de Y.  
+  
+ Se os pontos de dados não é necessário um valor de X — ou seja, se você estiver criando não-dispersões — use o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddY%2A> método em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddXY">
+      <MemberSignature Language="C#" Value="public int AddXY (object xValue, params object[] yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 AddXY(object xValue, object[] yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddXY(System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xValue" Type="System.Object" />
+        <Parameter Name="yValue" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="xValue">O valor X do ponto de dados.</param>
+        <param name="yValue">Um ou mais valores de separada por vírgulas que representam o Y-valor (es) do ponto de dados.</param>
+        <summary>Adiciona um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> ao final da coleção, com o valor X e o(s) valor(es) Y especificados.</summary>
+        <returns>Um valor <see langword="integer" /> que representa o índice baseado em zero em que o item foi inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona uma <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> o objeto para o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection>; o ponto de dados sempre é adicionado ao final da coleção.  
+  
+ Você deve fornecer pelo menos um (1) valor Y, caso contrário, uma exceção será lançada. Esse método também verifica a <xref:System.Windows.Forms.DataVisualization.Charting.Series.YValueType%2A> propriedade o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection> do objeto que esses dados pertencem a; se um número excessivo de valores de Y forem especificados, uma exceção será lançada.  
+  
+ Para que <xref:System.DateTime> formatação tenha efeito, um valor deve ser um <xref:System.DateTime> objeto.  
+  
+ Se os pontos de dados não é necessário um valor de X — ou seja, se você estiver criando não-dispersões — use o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddY%2A> método em vez disso  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddY">
+      <MemberSignature Language="C#" Value="public int AddY (double yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 AddY(float64 yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddY(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="yValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="yValue">O valor Y do ponto de dados.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> objeto ao final da coleção, com o valor de Y especificado.</summary>
+        <returns>Um <see langword="integer" /> que representa o índice baseado em zero em que o item foi inserido na coleção de pontos de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona uma <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> o objeto para o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection>; o ponto de dados sempre é adicionado ao final da coleção.  
+  
+ Use a definição do método que permite que uma matriz de valores de Y se os pontos de dados precisam de mais de um valor de Y.  
+  
+ Se os pontos de dados precisam de um valor de X — ou seja, se você estiver criando dispersões — use um do `AddXY` métodos em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddY">
+      <MemberSignature Language="C#" Value="public int AddY (params object[] yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 AddY(object[] yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.AddY(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="yValue" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="yValue">Uma lista separada por vírgulas de Y-valor (es) do <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> objeto adicionado à coleção.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> objeto ao final da coleção, com Y especificado-valor (es).</summary>
+        <returns>Um <see langword="integer" /> que representa o local no índice de base zero em que o item foi inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona uma <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> o objeto para o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection>; o ponto de dados sempre é adicionado ao final da coleção.  
+  
+ Você deve fornecer pelo menos um (1) valor Y, caso contrário, uma exceção será lançada. Esse método também verifica a <xref:System.Windows.Forms.DataVisualization.Charting.Series.ChartType%2A> propriedade o <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objeto esses dados pertencem a; se um número excessivo de valores de Y forem especificados, uma exceção será lançada.  
+  
+ O X-valor será sempre definido como zero (0), resultando em gráficos de dispersão não. Se desejar que os pontos de dados para usar um valor de X, chame um do `AddXY` métodos em vez disso.  
+  
+ Para que <xref:System.DateTime> formatação tenha efeito, um valor deve ser um <xref:System.DateTime> objeto.  
+  
+ Consulte o seguinte para uma lista completa de tipos do .NET Framework válidos que pode ser usado para os parâmetros de tipo de objeto:  
+  
+||||  
+|-|-|-|  
+|Cadeia de caracteres|DateTime|Duplo|  
+|Decimal|Simples|Int32|  
+|UInt32|Int64|UInt64|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItems">
+      <MemberSignature Language="C#" Value="protected override void ClearItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.ClearItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os elementos do <see cref="T:System.Collections.ObjectModel.Collection`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="public void DataBind (System.Collections.IEnumerable dataSource, string xField, string yFields, string otherFields);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBind(class System.Collections.IEnumerable dataSource, string xField, string yFields, string otherFields) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBind(System.Collections.IEnumerable,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+        <Parameter Name="xField" Type="System.String" />
+        <Parameter Name="yFields" Type="System.String" />
+        <Parameter Name="otherFields" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A fonte de dados a ser associada ao valor de X e aos valores de Y.</param>
+        <param name="xField">O nome do campo para valores de X.</param>
+        <param name="yFields">Uma separada por vírgulas nomes dos campos de valores de Y.</param>
+        <param name="otherFields">Outros dados de ponto de propriedades com regras de associação no formato: PointProperty = campo [{formato}] [, PointProperty = campo [{formato}]].  
+  
+ Por exemplo: “Tooltip=Price{C1},Url=WebSiteName”.</param>
+        <summary>Associa dados do valor X e dos valores Y e dos valores da propriedade dos pontos de dados, como Tooltip ou LabelStyle, à fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fonte de dados pode ser o DataReader Ole (SQL), DataView, conjunto de dados, DataTable ou DataRow.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindXY">
+      <MemberSignature Language="C#" Value="public void DataBindXY (System.Collections.IEnumerable xValue, params System.Collections.IEnumerable[] yValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindXY(class System.Collections.IEnumerable xValue, class System.Collections.IEnumerable[] yValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindXY(System.Collections.IEnumerable,System.Collections.IEnumerable[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xValue" Type="System.Collections.IEnumerable" />
+        <Parameter Name="yValues" Type="System.Collections.IEnumerable[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="xValue">A fonte de dados que fornecerá os valores de X para os pontos de dados.</param>
+        <param name="yValues">Uma lista separada por vírgula dos valores de Y do objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> adicionado à coleção.</param>
+        <summary>Associa dados do valor X e dos valores Y dos pontos de dados da coleção às primeiras colunas da fonte de dados especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método associa todos <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objetos em um <xref:System.Windows.Forms.DataVisualization.Charting.Series>, e usa separar fontes de dados para os X e Y-valor (es).  
+  
+ Observe que a primeira coluna disponível na fonte de dados será usada se a associação de dados em uma tabela. Para vincular a uma coluna que não seja a primeira coluna, use o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindXY%2A> método.  
+  
+ Você pode vincular a vários valores de Y, fornecendo uma lista separada por vírgulas de <xref:System.Collections.Generic.IEnumerable%601> objetos para o `yValues` parâmetro.  
+  
+ Se os valores Y não são fornecidos pela fonte de dados, ou se o número errado de valores é fornecido, uma exceção será lançada.  
+  
+ Se você não deseja exibir gráficos de dispersão de tipo, em que X e Y de valores são usados, use uma da `DataBindY` métodos em vez disso.  
+  
+ A seguir está uma lista de objetos que você pode usar como o parâmetro de origem de dados:  
+  
+-   DataView  
+  
+-   Leitores de dados (SQL, OleDB)  
+  
+-   Matrizes  
+  
+-   Listas  
+  
+-   Todos os outros objetos que usam o <xref:System.Collections.Generic.IEnumerable%601> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindXY">
+      <MemberSignature Language="C#" Value="public void DataBindXY (System.Collections.IEnumerable xValue, string xField, System.Collections.IEnumerable yValue, string yFields);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindXY(class System.Collections.IEnumerable xValue, string xField, class System.Collections.IEnumerable yValue, string yFields) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindXY(System.Collections.IEnumerable,System.String,System.Collections.IEnumerable,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xValue" Type="System.Collections.IEnumerable" />
+        <Parameter Name="xField" Type="System.String" />
+        <Parameter Name="yValue" Type="System.Collections.IEnumerable" />
+        <Parameter Name="yFields" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xValue">A fonte de dados que fornecerá os valores de X para os pontos de dados.</param>
+        <param name="xField">O nome da coluna que fornecerá os valores de X para os pontos de dados.</param>
+        <param name="yValue">Uma lista separada por vírgula dos valores de Y do objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> adicionado à coleção.</param>
+        <param name="yFields">Uma lista separada por vírgulas de nomes de coluna que fornecerá os valores de Y para os pontos de dados. Observe que uma vírgula pode ser inserida como parte de um nome de coluna, usando uma vírgula dupla.</param>
+        <summary>Associa dados do valor X e dos valores Y dos pontos de dados na coleção às colunas especificadas das fontes de dados especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados associa o valor de X e Y dos pontos de dados na coleção de colunas primeiro da fonte de dados especificado.  
+  
+ Você pode vincular a vários valores de Y, definindo o `yFields` parâmetro para vários nomes de coluna. Os nomes de coluna são separados por vírgulas.  
+  
+ Se os valores Y não são fornecidos pela fonte de dados, ou se o número errado de valores é fornecido, uma exceção será lançada.  
+  
+ Se você não deseja exibir gráficos de dispersão de tipo, em que X e Y de valores são usados, use uma da `DataBindY` métodos em vez disso.  
+  
+ A seguir está uma lista de objetos que você pode usar como o parâmetro de origem de dados:  
+  
+-   DataView  
+  
+-   Leitores de dados (SQL, OleDB)  
+  
+-   Matrizes  
+  
+-   Listas  
+  
+-   Todos os outros objetos que usam o <xref:System.Collections.Generic.IEnumerable%601> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindY">
+      <MemberSignature Language="C#" Value="public void DataBindY (params System.Collections.IEnumerable[] yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindY(class System.Collections.IEnumerable[] yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindY(System.Collections.IEnumerable[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="yValue" Type="System.Collections.IEnumerable[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="yValue">Um ou mais separada por vírgulas <see cref="T:System.Collections.Generic.IEnumerable`1" /> fontes de dados.</param>
+        <summary>Dados associa o Y-valor (es) de dados da coleção aponta para a primeira coluna das fontes de dados especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método associa Y-valor (es) dos pontos de dados na coleção para a primeira coluna das fontes de dados especificado.  
+  
+ Para associar valores de Y para uma coluna de fonte de dados que não seja a primeira coluna disponível, use o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindY%2A> método.  
+  
+ Você pode associar vários valores de Y com a especificação de várias fontes de dados usando o `yValue` parâmetro. Observe que a primeira coluna disponível em cada fonte de dados será usada para valores de Y sucessivas cada ponto de dados. Por exemplo, a primeira coluna da primeira <xref:System.Collections.Generic.IEnumerable%601> fonte de dados será associada com o primeiro valor de Y de pontos de dados, a primeira coluna da segunda <xref:System.Collections.Generic.IEnumerable%601> fonte de dados ser associado ao segundo valor de Y de pontos de dados e assim por diante.  
+  
+ Se os valores Y não são fornecidos pela fonte de dados, ou se o número errado de valores é fornecido, uma exceção será lançada.  
+  
+ A seguir está uma lista de objetos que você pode usar como o parâmetro de origem de dados:  
+  
+ A seguir está uma lista de objetos que você pode usar como a fonte de dados:  
+  
+-   DataView  
+  
+-   Leitores de dados (SQL, OleDB)  
+  
+-   Matrizes  
+  
+-   Listas  
+  
+-   Todos os outros objetos que usam o <xref:System.Collections.Generic.IEnumerable%601> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindY">
+      <MemberSignature Language="C#" Value="public void DataBindY (System.Collections.IEnumerable yValue, string yFields);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DataBindY(class System.Collections.IEnumerable yValue, string yFields) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindY(System.Collections.IEnumerable,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="yValue" Type="System.Collections.IEnumerable" />
+        <Parameter Name="yFields" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="yValue">Um <see cref="T:System.Collections.Generic.IEnumerable`1" /> objeto de fonte de dados que fornece o Y-valor (es).</param>
+        <param name="yFields">Campo (s) à qual associar pontos de dados da fonte de dados. Observe que uma vírgula pode ser inserida como parte de um nome de coluna, usando uma vírgula dupla.</param>
+        <summary>Dados associa o Y-valor (es) dos pontos de dados para as colunas especificadas da fonte de dados especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método associa os valores de Y dos pontos de dados na coleção para os campos especificados (s) da fonte de dados.  
+  
+ Para associar apenas para o primeiro campo em uma fonte de dados, use o <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.DataBindY%2A> método.  
+  
+ Você pode vincular a vários campos, definindo o `yFields` parâmetro para vários nomes de campo que são separados por vírgulas. Observe que o primeiro campo será usado para o valor de Y primeiro do ponto de dados, o segundo campo será usado para o valor de Y da segunda do ponto de dados e assim por diante.  
+  
+ Se os valores Y não são fornecidos pela fonte de dados ou o número errado de valores é fornecido, uma exceção será lançada.  
+  
+ A seguir está uma lista de objetos que você pode usar como a fonte de dados:  
+  
+-   DataView  
+  
+-   Leitores de dados (SQL, OleDB)  
+  
+-   Matrizes  
+  
+-   Listas  
+  
+-   Todos os outros objetos que usam o <xref:System.Collections.Generic.IEnumerable%601> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllByValue">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Windows.Forms.DataVisualization.Charting.DataPoint&gt; FindAllByValue (double valueToFind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Forms.DataVisualization.Charting.DataPoint&gt; FindAllByValue(float64 valueToFind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindAllByValue(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Windows.Forms.DataVisualization.Charting.DataPoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Os ponto de dados para localizar.</param>
+        <summary>Localiza todos os pontos de dados que são iguais ao valor especificado.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerable`1" /> interface que representa o enumerador dos pontos de dados correspondente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllByValue">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Windows.Forms.DataVisualization.Charting.DataPoint&gt; FindAllByValue (double valueToFind, string useValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Forms.DataVisualization.Charting.DataPoint&gt; FindAllByValue(float64 valueToFind, string useValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindAllByValue(System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Windows.Forms.DataVisualization.Charting.DataPointCollection/&lt;FindAllByValue&gt;d__23))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Windows.Forms.DataVisualization.Charting.DataPoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+        <Parameter Name="useValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Os ponto de dados para localizar.</param>
+        <param name="useValue">Os ponto de dados a ser usado (X, Y1, Y2...).</param>
+        <summary>Localiza todos os pontos de dados que são iguais ao valor especificado.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerable`1" /> interface que representa o enumerador dos pontos de dados correspondente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllByValue">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Windows.Forms.DataVisualization.Charting.DataPoint&gt; FindAllByValue (double valueToFind, string useValue, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Forms.DataVisualization.Charting.DataPoint&gt; FindAllByValue(float64 valueToFind, string useValue, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindAllByValue(System.Double,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Windows.Forms.DataVisualization.Charting.DataPointCollection/&lt;FindAllByValue&gt;d__22))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Windows.Forms.DataVisualization.Charting.DataPoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+        <Parameter Name="useValue" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Os ponto de dados para localizar.</param>
+        <param name="useValue">Os ponto de dados a ser usado (X, Y1, Y2...).</param>
+        <param name="startIndex">O local de índice do ponto de dados para iniciar a pesquisa.</param>
+        <summary>Localiza todos os pontos de dados que são iguais ao valor especificado, iniciando na posição de índice especificado.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerable`1" /> interface que representa o enumerador dos pontos de dados correspondente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPoint FindByValue (double valueToFind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.DataPoint FindByValue(float64 valueToFind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindByValue(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Os ponto de dados para localizar.</param>
+        <summary>Localiza o primeiro ponto de dados que é igual ao valor especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> que corresponde ao valor especificado ou <see langword="null" />, se não houver nenhuma correspondência.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPoint FindByValue (double valueToFind, string useValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.DataPoint FindByValue(float64 valueToFind, string useValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindByValue(System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+        <Parameter Name="useValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Os ponto de dados para localizar.</param>
+        <param name="useValue">Os ponto de dados a ser usado (X, Y1, Y2...).</param>
+        <summary>Localiza o primeiro ponto de dados que é igual ao valor especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> que corresponde ao valor especificado ou <see langword="null" />, se não houver nenhuma correspondência.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPoint FindByValue (double valueToFind, string useValue, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.DataPoint FindByValue(float64 valueToFind, string useValue, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindByValue(System.Double,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueToFind" Type="System.Double" />
+        <Parameter Name="useValue" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="valueToFind">Os ponto de dados para localizar.</param>
+        <param name="useValue">Os ponto de dados a ser usado (X, Y1, Y2...).</param>
+        <param name="startIndex">O local de índice do ponto de dados para iniciar a pesquisa.</param>
+        <summary>Encontra o primeiro ponto de dados que é igual ao valor especificado, começando no local de índice especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> que corresponde ao valor especificado ou <see langword="null" />, se não houver nenhuma correspondência.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMaxByValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPoint FindMaxByValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.DataPoint FindMaxByValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindMaxByValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Localiza o ponto de dados com o valor máximo.</summary>
+        <returns>O objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> com o valor máximo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMaxByValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPoint FindMaxByValue (string useValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.DataPoint FindMaxByValue(string useValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindMaxByValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="useValue">Os ponto de dados a ser usado (X, Y1, Y2...).</param>
+        <summary>Encontra o valor de ponto de dados com o valor máximo.</summary>
+        <returns>O objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> com o valor máximo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMaxByValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPoint FindMaxByValue (string useValue, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.DataPoint FindMaxByValue(string useValue, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindMaxByValue(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useValue" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="useValue">Os ponto de dados a ser usado (X, Y1, Y2...).</param>
+        <param name="startIndex">O local de índice do ponto de dados para iniciar a pesquisa.</param>
+        <summary>Localiza o ponto de dados com o valor máximo, iniciando na posição de índice especificado.</summary>
+        <returns>O objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> com o valor máximo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMinByValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPoint FindMinByValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.DataPoint FindMinByValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindMinByValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Localiza o ponto de dados com o valor mínimo.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> objeto com o valor mínimo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMinByValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPoint FindMinByValue (string useValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.DataPoint FindMinByValue(string useValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindMinByValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="useValue">Os ponto de dados a ser usado (X, Y1, Y2...).</param>
+        <summary>Localiza o ponto de dados com o valor mínimo.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> objeto com o valor mínimo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindMinByValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DataPoint FindMinByValue (string useValue, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.DataPoint FindMinByValue(string useValue, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.FindMinByValue(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DataPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useValue" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="useValue">Os ponto de dados a ser usado (X, Y1, Y2...).</param>
+        <param name="startIndex">O local de índice do ponto de dados para iniciar a pesquisa.</param>
+        <summary>Localiza o ponto de dados com o valor mínimo, iniciando na posição de índice especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.DataVisualization.Charting.DataPoint" /> objeto com o valor mínimo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertXY">
+      <MemberSignature Language="C#" Value="public void InsertXY (int index, object xValue, params object[] yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertXY(int32 index, object xValue, object[] yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.InsertXY(System.Int32,System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="xValue" Type="System.Object" />
+        <Parameter Name="yValue" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="index">O índice no qual o ponto de dados será inserido.</param>
+        <param name="xValue">O valor X do ponto de dados.</param>
+        <param name="yValue">Uma lista separada por vírgulas dos valores de Y do ponto de dados.</param>
+        <summary>Insere um ponto de dados com o valor de X e um ou mais valores Y de especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertY">
+      <MemberSignature Language="C#" Value="public void InsertY (int index, params object[] yValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertY(int32 index, object[] yValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.DataPointCollection.InsertY(System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="yValue" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="index">O índice no qual o ponto de dados será inserido.</param>
+        <param name="yValue">Uma lista separada por vírgulas dos valores de Y do ponto de dados.</param>
+        <summary>Insere um ponto de dados com um ou mais valores de Y especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

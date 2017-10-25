@@ -1,0 +1,229 @@
+<Type Name="ColorTranslator" FullName="System.Drawing.ColorTranslator">
+  <TypeSignature Language="C#" Value="public sealed class ColorTranslator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ColorTranslator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.ColorTranslator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte as cores em e de estruturas <see cref="T:System.Drawing.Color" /> GDI+. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FromHtml">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color FromHtml (string htmlColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color FromHtml(string htmlColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ColorTranslator.FromHtml(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="htmlColor" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="htmlColor">A representação de cadeia de caracteres da cor HTML a ser traduzida.</param>
+        <summary>Converte uma representação de cor HTML em uma estrutura <see cref="T:System.Drawing.Color" /> GDI+.</summary>
+        <returns>A estrutura <see cref="T:System.Drawing.Color" /> que representa a cor HTML traduzida ou <see cref="F:System.Drawing.Color.Empty" /> se <paramref name="htmlColor" /> for <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método converte uma representação de cadeia de caracteres de um nome de cor HTML, como azul ou vermelho, para um GDI+ <xref:System.Drawing.Color> estrutura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código converte um nome de cor HTML para um <xref:System.Drawing.Color> estrutura e, em seguida, usa cores para preencher um retângulo.  
+  
+ [!code-cpp[System.Drawing.ClassicColorTranslatorExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ClassicColorTranslatorExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ClassicColorTranslatorExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">
+          <paramref name="htmlColor" /> não é um nome de cor HTML válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromOle">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color FromOle (int oleColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color FromOle(int32 oleColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ColorTranslator.FromOle(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oleColor" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="oleColor">A cor OLE a ser convertida.</param>
+        <summary>Converte um valor de cor OLE em uma estrutura GDI+ <see cref="T:System.Drawing.Color" />.</summary>
+        <returns>A estrutura <see cref="T:System.Drawing.Color" /> que representa a cor OLE convertida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código converte um valor de cor OLE para um <xref:System.Drawing.Color> estrutura e, em seguida, usa cores para preencher um retângulo.  
+  
+ [!code-cpp[System.Drawing.ClassicColorTranslatorExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicColorTranslatorExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicColorTranslatorExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromWin32">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color FromWin32 (int win32Color);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color FromWin32(int32 win32Color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ColorTranslator.FromWin32(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="win32Color" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="win32Color">A cor do Windows a ser convertida.</param>
+        <summary>Converte um valor de cor do Windows em uma estrutura GDI+ <see cref="T:System.Drawing.Color" />.</summary>
+        <returns>A estrutura <see cref="T:System.Drawing.Color" /> que representa a cor traduzida do Windows.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código converte um valor de cor do Windows para um <xref:System.Drawing.Color> estrutura e, em seguida, usa cores para preencher um retângulo.  
+  
+ [!code-cpp[System.Drawing.ClassicColorTranslatorExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicColorTranslatorExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicColorTranslatorExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToHtml">
+      <MemberSignature Language="C#" Value="public static string ToHtml (System.Drawing.Color c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToHtml(valuetype System.Drawing.Color c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ColorTranslator.ToHtml(System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="c">A estrutura <see cref="T:System.Drawing.Color" /> a ser convertida.</param>
+        <summary>Converte a estrutura <see cref="T:System.Drawing.Color" /> especificada em uma representação de cor da cadeia de caracteres HTML.</summary>
+        <returns>A cadeia de caracteres que representa a cor HTML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método converte um <xref:System.Drawing.Color> estrutura em uma representação de cadeia de caracteres de uma cor HTML. Este é o nome usado de cor, como "Vermelho", "Blue" ou "Verde" e não a representação de cadeia de caracteres de um valor numérico de cor, como "FF33AA".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Converte o código de um <xref:System.Drawing.Color> estrutura em uma representação de cadeia de caracteres de uma cor HTML e, em seguida, mostra uma caixa de mensagem com a cadeia de caracteres resultante.  
+  
+ [!code-cpp[System.Drawing.ClassicColorTranslatorExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.ClassicColorTranslatorExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.ClassicColorTranslatorExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToOle">
+      <MemberSignature Language="C#" Value="public static int ToOle (System.Drawing.Color c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ToOle(valuetype System.Drawing.Color c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ColorTranslator.ToOle(System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="c">A estrutura <see cref="T:System.Drawing.Color" /> a ser convertida.</param>
+        <summary>Converte a estrutura <see cref="T:System.Drawing.Color" /> especificada para uma cor OLE.</summary>
+        <returns>O valor da cor OLE.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Converte o código de um <xref:System.Drawing.Color> estrutura para um inteiro que representa uma cor OLE e mostra uma caixa de mensagem com a cadeia de caracteres resultante.  
+  
+ [!code-cpp[System.Drawing.ClassicColorTranslatorExamples#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.ClassicColorTranslatorExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.ClassicColorTranslatorExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToWin32">
+      <MemberSignature Language="C#" Value="public static int ToWin32 (System.Drawing.Color c);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ToWin32(valuetype System.Drawing.Color c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ColorTranslator.ToWin32(System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="c">A estrutura <see cref="T:System.Drawing.Color" /> a ser convertida.</param>
+        <summary>Converte a estrutura <see cref="T:System.Drawing.Color" /> especificada em uma cor do Windows.</summary>
+        <returns>O valor de cor do Windows.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Converte o código de um <xref:System.Drawing.Color> estrutura para um inteiro que representa uma cor do Windows e, em seguida, mostra uma caixa de mensagem com a cadeia de caracteres resultante.  
+  
+ [!code-cpp[System.Drawing.ClassicColorTranslatorExamples#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ClassicColorTranslatorExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ClassicColorTranslatorExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicColorTranslatorExamples/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

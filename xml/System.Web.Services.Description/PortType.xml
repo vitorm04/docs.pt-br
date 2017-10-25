@@ -1,0 +1,138 @@
+<Type Name="PortType" FullName="System.Web.Services.Description.PortType">
+  <TypeSignature Language="C#" Value="public sealed class PortType : System.Web.Services.Description.NamedItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PortType extends System.Web.Services.Description.NamedItem" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.PortType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.NamedItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtensionPoint("Extensions")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um conjunto nomeado de operações abstratas e as mensagens abstratas correspondentes. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Description.PortType> classe corresponde para o WSDL Web Services Description Language () `portType` elemento delimitados pelo `definitions` elemento raiz. Para obter mais informações sobre WSDL, consulte a especificação em http://www.w3.org/TR/wsdl.  
+  
+   
+  
+## Examples  
+ [!code-cpp[PortType_Class#1](~/samples/snippets/cpp/VS_Snippets_Remoting/PortType_Class/CPP/porttype_class.cpp#1)]
+ [!code-csharp[PortType_Class#1](~/samples/snippets/csharp/VS_Snippets_Remoting/PortType_Class/CS/porttype_class.cs#1)]
+ [!code-vb[PortType_Class#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/PortType_Class/VB/porttype_class.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PortType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.PortType.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.PortType" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public override System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.PortType.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> associado a este <see cref="T:System.Web.Services.Description.PortType" />.</summary>
+        <value>O <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> associado a este <see cref="T:System.Web.Services.Description.PortType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operations">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.OperationCollection Operations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.OperationCollection Operations" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.PortType.Operations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("operation")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de <see cref="T:System.Web.Services.Description.Operation" /> instâncias definidas pelo <see cref="T:System.Web.Services.Description.PortType" />.</summary>
+        <value>Uma coleção de instâncias de operação definido pelo <see cref="T:System.Web.Services.Description.PortType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[PortType#1](~/samples/snippets/cpp/VS_Snippets_Remoting/PortType/CPP/porttype.cpp#1)]
+ [!code-csharp[PortType#1](~/samples/snippets/csharp/VS_Snippets_Remoting/PortType/CS/porttype.cs#1)]
+ [!code-vb[PortType#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/PortType/VB/porttype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceDescription">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescription ServiceDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescription ServiceDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.PortType.ServiceDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Services.Description.ServiceDescription" /> dos quais o <see cref="T:System.Web.Services.Description.PortType" /> é um membro.</summary>
+        <value>Uma descrição de serviço do qual o <see cref="T:System.Web.Services.Description.PortType" /> é um membro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ PortType_ServiceDescription n º 1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

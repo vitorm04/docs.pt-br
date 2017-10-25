@@ -1,0 +1,370 @@
+<Type Name="Compensator" FullName="System.EnterpriseServices.CompensatingResourceManager.Compensator">
+  <TypeSignature Language="C#" Value="public class Compensator : System.EnterpriseServices.ServicedComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Compensator extends System.EnterpriseServices.ServicedComponent" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.CompensatingResourceManager.Compensator" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EnterpriseServices.ServicedComponent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a classe base para todos os Compensators do Gerenciador de recursos de compensação (CRM).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O usuário deve se estender do objeto para gravar uma transação personalizada compensador.  
+  
+ Um Compensador deve sempre ter um construtor público; Caso contrário, o mecanismo de recuperação não pode criá-lo.  
+  
+ Para obter mais informações, consulte [como: criar um Compensating Resource Manager (CRM)](http://msdn.microsoft.com/en-us/0a8a024b-0be1-4519-a659-076577278029).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso dessa classe.  
+  
+ [!code-cpp[EnterpriseServices_Crm#20](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#20)]
+ [!code-csharp[EnterpriseServices_Crm#20](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#20)]
+ [!code-vb[EnterpriseServices_Crm#20](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#20)]  
+  
+ Este compensador é usado pela classe de trabalho a seguir.  
+  
+ [!code-cpp[EnterpriseServices_Crm#10](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#10)]
+ [!code-csharp[EnterpriseServices_Crm#10](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#10)]
+ [!code-vb[EnterpriseServices_Crm#10](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#10)]  
+  
+ O exemplo de código a seguir demonstra um cliente que emprega esse compensador e trabalho.  
+  
+ [!code-cpp[EnterpriseServices_Crm#30](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmclient.cpp#30)]
+ [!code-csharp[EnterpriseServices_Crm#30](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmclient.cs#30)]
+ [!code-vb[EnterpriseServices_Crm#30](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmclient.vb#30)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Compensator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.CompensatingResourceManager.Compensator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.CompensatingResourceManager.Compensator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbortRecord">
+      <MemberSignature Language="C#" Value="public virtual bool AbortRecord (System.EnterpriseServices.CompensatingResourceManager.LogRecord rec);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool AbortRecord(class System.EnterpriseServices.CompensatingResourceManager.LogRecord rec) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.CompensatingResourceManager.Compensator.AbortRecord(System.EnterpriseServices.CompensatingResourceManager.LogRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rec" Type="System.EnterpriseServices.CompensatingResourceManager.LogRecord" />
+      </Parameters>
+      <Docs>
+        <param name="rec">O registro de log a ser entregue.</param>
+        <summary>Fornece um registro de log para o Compensador Compensating Resource Manager (CRM) durante a fase de anulação.</summary>
+        <returns>
+          <see langword="true" />Se o registro fornecido deve ser esquecido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação deste método.  
+  
+ [!code-cpp[EnterpriseServices_Crm#28](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#28)]
+ [!code-csharp[EnterpriseServices_Crm#28](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#28)]
+ [!code-vb[EnterpriseServices_Crm#28](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAbort">
+      <MemberSignature Language="C#" Value="public virtual void BeginAbort (bool fRecovery);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginAbort(bool fRecovery) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.CompensatingResourceManager.Compensator.BeginAbort(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fRecovery" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fRecovery">
+          <see langword="true" />para iniciar a fase de anulação. Caso contrário, <see langword="false" />.</param>
+        <summary>Notifica o Compensador Compensating Resource Manager (CRM) da fase anulação da conclusão de transações e a entrega futura de registros.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação deste método.  
+  
+ [!code-cpp[EnterpriseServices_Crm#27](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#27)]
+ [!code-csharp[EnterpriseServices_Crm#27](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#27)]
+ [!code-vb[EnterpriseServices_Crm#27](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginCommit">
+      <MemberSignature Language="C#" Value="public virtual void BeginCommit (bool fRecovery);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginCommit(bool fRecovery) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.CompensatingResourceManager.Compensator.BeginCommit(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fRecovery" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fRecovery">
+          <see langword="true" />para iniciar a fase de confirmação. Caso contrário, <see langword="false" />.</param>
+        <summary>Notifica o Compensador Compensating Resource Manager (CRM) da fase de confirmação após a conclusão de transações e a entrega futura de registros.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação deste método.  
+  
+ [!code-cpp[EnterpriseServices_Crm#24](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#24)]
+ [!code-csharp[EnterpriseServices_Crm#24](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#24)]
+ [!code-vb[EnterpriseServices_Crm#24](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginPrepare">
+      <MemberSignature Language="C#" Value="public virtual void BeginPrepare ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginPrepare() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.CompensatingResourceManager.Compensator.BeginPrepare" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o Compensador Compensating Resource Manager (CRM) da fase de preparação da conclusão da transação e a entrega futura de registros.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação deste método.  
+  
+ [!code-cpp[EnterpriseServices_Crm#21](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#21)]
+ [!code-csharp[EnterpriseServices_Crm#21](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#21)]
+ [!code-vb[EnterpriseServices_Crm#21](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clerk">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.CompensatingResourceManager.Clerk Clerk { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EnterpriseServices.CompensatingResourceManager.Clerk Clerk" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.CompensatingResourceManager.Compensator.Clerk" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.CompensatingResourceManager.Clerk</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o Gerenciador de recursos de compensação (CRM) <see cref="T:System.EnterpriseServices.CompensatingResourceManager.Clerk" /> objeto.</summary>
+        <value>O objeto <see cref="T:System.EnterpriseServices.CompensatingResourceManager.Clerk" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitRecord">
+      <MemberSignature Language="C#" Value="public virtual bool CommitRecord (System.EnterpriseServices.CompensatingResourceManager.LogRecord rec);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CommitRecord(class System.EnterpriseServices.CompensatingResourceManager.LogRecord rec) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.CompensatingResourceManager.Compensator.CommitRecord(System.EnterpriseServices.CompensatingResourceManager.LogRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rec" Type="System.EnterpriseServices.CompensatingResourceManager.LogRecord" />
+      </Parameters>
+      <Docs>
+        <param name="rec">O registro de log para encaminhar.</param>
+        <summary>Fornece um registro de log em ordem subsequente durante a fase de confirmação.</summary>
+        <returns>
+          <see langword="true" />Se o registro fornecido deve ser esquecido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação deste método.  
+  
+ [!code-cpp[EnterpriseServices_Crm#25](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#25)]
+ [!code-csharp[EnterpriseServices_Crm#25](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#25)]
+ [!code-vb[EnterpriseServices_Crm#25](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAbort">
+      <MemberSignature Language="C#" Value="public virtual void EndAbort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndAbort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.CompensatingResourceManager.Compensator.EndAbort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o Gerenciador de recursos de compensação (CRM) compensador que recebeu todos os registros de log disponíveis durante a fase de anulação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação deste método.  
+  
+ [!code-cpp[EnterpriseServices_Crm#29](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#29)]
+ [!code-csharp[EnterpriseServices_Crm#29](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#29)]
+ [!code-vb[EnterpriseServices_Crm#29](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCommit">
+      <MemberSignature Language="C#" Value="public virtual void EndCommit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndCommit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.CompensatingResourceManager.Compensator.EndCommit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o Compensador Compensating Resource Manager (CRM) que tenha entregue todos os registros de log disponíveis durante a fase de confirmação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação deste método.  
+  
+ [!code-cpp[EnterpriseServices_Crm#26](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#26)]
+ [!code-csharp[EnterpriseServices_Crm#26](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#26)]
+ [!code-vb[EnterpriseServices_Crm#26](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndPrepare">
+      <MemberSignature Language="C#" Value="public virtual bool EndPrepare ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EndPrepare() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.CompensatingResourceManager.Compensator.EndPrepare" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o Compensador Compensating Resource Manager (CRM) para que ele tenha todos os registros de log disponíveis durante a fase de preparação.</summary>
+        <returns>
+          <see langword="true" />Se for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação deste método.  
+  
+ [!code-cpp[EnterpriseServices_Crm#23](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#23)]
+ [!code-csharp[EnterpriseServices_Crm#23](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#23)]
+ [!code-vb[EnterpriseServices_Crm#23](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareRecord">
+      <MemberSignature Language="C#" Value="public virtual bool PrepareRecord (System.EnterpriseServices.CompensatingResourceManager.LogRecord rec);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool PrepareRecord(class System.EnterpriseServices.CompensatingResourceManager.LogRecord rec) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.CompensatingResourceManager.Compensator.PrepareRecord(System.EnterpriseServices.CompensatingResourceManager.LogRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rec" Type="System.EnterpriseServices.CompensatingResourceManager.LogRecord" />
+      </Parameters>
+      <Docs>
+        <param name="rec">O registro de log para encaminhar.</param>
+        <summary>Fornece um registro de log em ordem subsequente durante a fase de preparação.</summary>
+        <returns>
+          <see langword="true" />Se o registro fornecido deve ser esquecido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação deste método.  
+  
+ [!code-cpp[EnterpriseServices_Crm#22](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Crm/cpp/crmserver.cpp#22)]
+ [!code-csharp[EnterpriseServices_Crm#22](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Crm/CS/crmserver.cs#22)]
+ [!code-vb[EnterpriseServices_Crm#22](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Crm/VB/crmserver.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

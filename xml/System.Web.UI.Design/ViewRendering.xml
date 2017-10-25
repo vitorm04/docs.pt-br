@@ -1,0 +1,123 @@
+<Type Name="ViewRendering" FullName="System.Web.UI.Design.ViewRendering">
+  <TypeSignature Language="C#" Value="public class ViewRendering" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ViewRendering extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ViewRendering" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém a marcação de tempo de design para regiões e conteúdo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ViewRendering (string content, System.Web.UI.Design.DesignerRegionCollection regions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string content, class System.Web.UI.Design.DesignerRegionCollection regions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ViewRendering.#ctor(System.String,System.Web.UI.Design.DesignerRegionCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="regions" Type="System.Web.UI.Design.DesignerRegionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="content">Marcação HTML.</param>
+        <param name="regions">Uma coleção que contém as regiões.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Design.ViewRendering" /> classe usando o conteúdo especificado e regiões.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ViewRendering (string content, System.Web.UI.Design.DesignerRegionCollection regions, bool visible);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string content, class System.Web.UI.Design.DesignerRegionCollection regions, bool visible) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ViewRendering.#ctor(System.String,System.Web.UI.Design.DesignerRegionCollection,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="regions" Type="System.Web.UI.Design.DesignerRegionCollection" />
+        <Parameter Name="visible" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="content">A marcação HTML.</param>
+        <param name="regions">Uma coleção de regiões</param>
+        <param name="visible">Um valor que indica se o controle é processado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Design.ViewRendering" /> classe usando o modo de visibilidade, regiões e conteúdo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public string Content { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ViewRendering.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a marcação HTML de tempo de design.</summary>
+        <value>A marcação HTML para exibir em tempo de design.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Regions">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.DesignerRegionCollection Regions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerRegionCollection Regions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ViewRendering.Regions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerRegionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Web.UI.Design.DesignerRegion" /> objetos em tempo de design.</summary>
+        <value>Uma coleção de regiões.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ViewRendering.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle está visível.</summary>
+        <value>
+          <see langword="true" />Se o controle é processado. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina se o processamento deve estar visível na superfície do designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

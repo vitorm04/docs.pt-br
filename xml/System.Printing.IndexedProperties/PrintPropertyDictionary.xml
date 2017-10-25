@@ -1,0 +1,298 @@
+<Type Name="PrintPropertyDictionary" FullName="System.Printing.IndexedProperties.PrintPropertyDictionary">
+  <TypeSignature Language="C#" Value="public class PrintPropertyDictionary : System.Collections.Hashtable, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PrintPropertyDictionary extends System.Collections.Hashtable implements class System.IDisposable, class System.Runtime.Serialization.IDeserializationCallback, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.IndexedProperties.PrintPropertyDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Hashtable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma coleção de propriedades e os valores que estão associados um objeto de <see cref="N:System.Printing" /> namespace.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção assume a forma de um <xref:System.Collections.Hashtable> dicionário. O <xref:System.Collections.DictionaryEntry.Value%2A> propriedade de cada <xref:System.Collections.DictionaryEntry> na coleção é uma instância de uma classe derivada de <xref:System.Printing.IndexedProperties.PrintProperty>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa classe para instalar uma segunda impressora que difere em suas propriedades de uma impressora existente apenas no local, porta e status compartilhado.  
+  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+  
+ O exemplo a seguir mostra como usar essa classe para descobrir em tempo de execução as propriedades e os tipos dessas propriedades, de um objeto do sistema de impressão, sem o uso de reflexão.  
+  
+ [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
+ [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintPropertyDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintPropertyDictionary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Printing.IndexedProperties.PrintPropertyDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PrintPropertyDictionary (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintPropertyDictionary.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Os dados necessários para serializar ou desserializar um objeto.</param>
+        <param name="context">O contexto de fluxo serializado, incluindo a origem e o destino.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.IndexedProperties.PrintPropertyDictionary" /> classe e fornece-o com especificado <see cref="T:System.Runtime.Serialization.SerializationInfo" /> e <see cref="T:System.Runtime.Serialization.StreamingContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Printing.IndexedProperties.PrintProperty attributeValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Printing.IndexedProperties.PrintProperty attributeValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintPropertyDictionary.Add(System.Printing.IndexedProperties.PrintProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeValue" Type="System.Printing.IndexedProperties.PrintProperty" />
+      </Parameters>
+      <Docs>
+        <param name="attributeValue">Um objeto (de uma classe derivada de <see cref="T:System.Printing.IndexedProperties.PrintProperty" />) que representa uma propriedade de um componente de hardware ou software de sistema impressão.</param>
+        <summary>Adiciona o objeto especificado (de uma classe derivada de <see cref="T:System.Printing.IndexedProperties.PrintProperty" />) no dicionário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> propriedade `attributeValue` se torna o <xref:System.Collections.DictionaryEntry.Key%2A> propriedade do novo <xref:System.Collections.DictionaryEntry>. O <xref:System.Printing.IndexedProperties.PrintProperty> como um todo se torna o <xref:System.Collections.DictionaryEntry.Value%2A> propriedade do novo <xref:System.Collections.DictionaryEntry>.  
+  
+ De outra maneira de adicionar uma entrada ao dicionário, consulte <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para instalar uma segunda impressora que difere em suas propriedades de uma impressora existente apenas no local, porta e status compartilhado.  
+  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintPropertyDictionary.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos que estão sendo usados pelo <see cref="T:System.Printing.IndexedProperties.PrintPropertyDictionary" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Dispose> quando tiver terminado de usar o <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>. O <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Dispose> método deixa o <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> em um estado inutilizável. Depois de chamar <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Dispose>, você deve liberar todas as referências para o <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> para que o coletor de lixo possa recuperar a memória que o <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Dispose> antes de liberar sua última referência para o <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Object.Finalize%2A> método o <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintPropertyDictionary.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">To be added.</param>
+        <summary>Libera os recursos não gerenciados que estão sendo usados pelo <see cref="T:System.Printing.IndexedProperties.PrintPropertyDictionary" /> e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Dispose> e pelo método <xref:System.Object.Finalize%2A>. <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Dispose>invoca o protegido <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Dispose%28System.Boolean%29> método com o parâmetro booliano sem nome definido como `true`. <xref:System.Object.Finalize%2A>invoca <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Dispose%28System.Boolean%29> com o parâmetro definido `false`.  
+  
+ Quando o parâmetro booliano é `true`, esse método libera todos os recursos que são mantidos por qualquer objeto gerenciado que este <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Quando você substituir <see langword="Dispose(Boolean)" />, tenha cuidado em não para referenciar objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintPropertyDictionary.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Armazena todos os dados que são usados para serializar o objeto.</param>
+        <param name="context">Descreve o contexto de fluxo serializado, incluindo a origem e o destino.</param>
+        <summary>Preenche uma <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados que são necessários para serializar o <see cref="T:System.Printing.IndexedProperties.PrintPropertyDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public System.Printing.IndexedProperties.PrintProperty GetProperty (string attribName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.IndexedProperties.PrintProperty GetProperty(string attribName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintPropertyDictionary.GetProperty(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.IndexedProperties.PrintProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attribName">O nome da propriedade que é representado pelo <see cref="T:System.Printing.IndexedProperties.PrintProperty" />.</param>
+        <summary>Obtém o objeto (de uma classe derivada de <see cref="T:System.Printing.IndexedProperties.PrintProperty" />) que representa a propriedade especificada.</summary>
+        <returns>Um objeto de uma classe que deriva de <see cref="T:System.Printing.IndexedProperties.PrintProperty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `attribName` devem ser digitados exatamente como o nome de alguma propriedade específica de um objeto do sistema de impressão, incluindo maiusculas e minúsculas. Por exemplo, o <xref:System.Printing.PrintQueue.QueuePort%2A> propriedade de um <xref:System.Printing.PrintQueue> objeto deve ser escrito "QueuePort", não "PrintPort", "Port" ou "Queueport".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserialization">
+      <MemberSignature Language="C#" Value="public override void OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintPropertyDictionary.OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <summary>Implementa o <see cref="T:System.Runtime.Serialization.ISerializable" /> interface e gera o evento de desserialização quando a desserialização foi concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public void SetProperty (string attribName, System.Printing.IndexedProperties.PrintProperty attribValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetProperty(string attribName, class System.Printing.IndexedProperties.PrintProperty attribValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty(System.String,System.Printing.IndexedProperties.PrintProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribName" Type="System.String" />
+        <Parameter Name="attribValue" Type="System.Printing.IndexedProperties.PrintProperty" />
+      </Parameters>
+      <Docs>
+        <param name="attribName">O nome do atributo.</param>
+        <param name="attribValue">Um objeto de um tipo que é derivado de <see cref="T:System.Printing.IndexedProperties.PrintProperty" />.</param>
+        <summary>Define o valor do atributo especificado para um objeto de uma classe derivada de <see cref="T:System.Printing.IndexedProperties.PrintProperty" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o dicionário ainda não contiver `attribName`, `attribName` será adicionada e definida como `attribValue`, desde que `attribName` é idêntico ao `attribValue`. Nome. Se esses valores não são idênticos, esse método não fará nada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para instalar uma segunda impressora que difere em suas propriedades de uma impressora existente apenas no local, porta e status compartilhado.  
+  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attribName" />já está no dicionário e ele já tem o valor <paramref name="attribValue" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

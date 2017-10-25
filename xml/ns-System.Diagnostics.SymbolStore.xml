@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.SymbolStore">
+  <Docs>
+    <summary>O <see cref="N:System.Diagnostics.SymbolStore" /> namespace fornece classes que permitem ler e gravar informações de símbolo de depuração, como a linha de origem para a Microsoft intermediário de mapas de language (MSIL). Compiladores de direcionamento do.NET Framework podem armazenar as informações de símbolo de depuração em arquivos de banco de dados (PDB) do programador. Depuradores e ferramentas do criador de perfil de código podem ler as informações de símbolo de depuração no tempo de execução.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

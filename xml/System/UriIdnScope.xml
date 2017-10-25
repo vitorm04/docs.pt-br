@@ -1,0 +1,99 @@
+<Type Name="UriIdnScope" FullName="System.UriIdnScope">
+  <TypeSignature Language="C#" Value="public enum UriIdnScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UriIdnScope extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.UriIdnScope" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Fornece os possíveis valores para a definição de configuração do <see cref="T:System.Configuration.IdnElement" /> no namespace <see cref="N:System.Configuration" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Existente <xref:System.Uri> classe foi estendida para oferecer suporte para identificadores de recursos internacionais (RI) com base na RFC 3987. Os usuários atuais não verão qualquer mudança do comportamento do .NET Framework 2.0, a menos que habilitem o IRI especificamente. Isso garante a compatibilidade do aplicativo com versões anteriores do .NET Framework.  
+  
+ O atributo de nome de domínio internacionalizado (IDN) controla apenas o processamento de IDN. Todos os outros processamentos de IRI (normalização de caractere, por exemplo) sempre é executado por padrão.  
+  
+ O parâmetro de configuração para o <xref:System.Configuration.IdnElement?displayProperty=nameWithType> serão lidos uma vez quando o primeiro <xref:System.Uri> classe é criada. Alterações nas configurações depois desse tempo serão ignoradas.  
+  
+ Para obter mais informações sobre o suporte IRI, consulte a seção Comentários da classe <xref:System.Uri>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.UriIdnScope All = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.UriIdnScope.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriIdnScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse valor converterá todos os nomes de domínio Unicode em seus equivalentes do Punycode (nomes IDN).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllExceptIntranet">
+      <MemberSignature Language="C#" Value="AllExceptIntranet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.UriIdnScope AllExceptIntranet = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.UriIdnScope.AllExceptIntranet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriIdnScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse valor converterá todos os nomes de domínio Unicode externos para usar os equivalentes do Punycode (nomes IDN). Nesse caso, para manipular nomes internacionais na Intranet local, os servidores DNS usados para a Intranet devem dar suporte a nomes Unicode.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.UriIdnScope None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.UriIdnScope.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriIdnScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse valor não converterá nenhum nome de domínio Unicode para usar o Punycode. Esse é o valor padrão, que é consistente com o comportamento do .NET Framework 2.0.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

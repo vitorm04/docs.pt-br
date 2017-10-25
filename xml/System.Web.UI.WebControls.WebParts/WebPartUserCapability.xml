@@ -1,0 +1,117 @@
+<Type Name="WebPartUserCapability" FullName="System.Web.UI.WebControls.WebParts.WebPartUserCapability">
+  <TypeSignature Language="C#" Value="public sealed class WebPartUserCapability" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebPartUserCapability extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartUserCapability" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre os recursos do usuário para exibir e modificar os dados de personalização. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vários pontos no ciclo de vida de um aplicativo de Web Parts, o <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> objeto precisa verificar os recursos do usuário atual para determinar que o usuário pode exibir e modificar os dados de personalização. Quando essa necessidade, o objeto de personalização verifica instâncias de <xref:System.Web.UI.WebControls.WebParts.WebPartUserCapability> classe.  
+  
+ O recurso de personalização de Web Parts define dois recursos de usuário, cada um dos quais é representada por um <xref:System.Web.UI.WebControls.WebParts.WebPartUserCapability> objeto. Esses objetos têm verbos correspondentes que podem ser usados para especificar os recursos de usuário dentro do `<authorization>` seção de um arquivo Web. config. Para obter mais informações, consulte [autorização elemento para personalização de Web Parts (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/d190d4ff-1445-4ee1-88eb-9737c7aa1434). Os recursos de usuário diferentes são mostrados na tabela a seguir.  
+  
+|Recurso de usuário|Descrição|  
+|---------------------|-----------------|  
+|`modifyState`|Indica que o usuário atual pode salvar os dados de personalização para o repositório de dados. Acessados por meio de <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.ModifyStateUserCapability> campo em um <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> objeto.|  
+|`enterSharedScope`|Indica que o usuário atual pode inserir o escopo de personalização compartilhado. Acessados por meio de <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.EnterSharedScopeUserCapability> campo em um <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization> objeto.|  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartUserCapability> classe tem uma propriedade pública. O <xref:System.Web.UI.WebControls.WebParts.WebPartUserCapability.Name%2A> propriedade indica o nome da classe.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartUserCapability> classe também tem dois métodos expostos. O <xref:System.Web.UI.WebControls.WebParts.WebPartUserCapability.Equals%2A> método permite que os dois objetos de recurso de usuário a ser comparado. Os objetos são considerados iguais se tiverem o mesmo nome. O <xref:System.Web.UI.WebControls.WebParts.WebPartUserCapability.GetHashCode%2A> método gera um código de hash com base no nome do <xref:System.Web.UI.WebControls.WebParts.WebPartUserCapability> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartUserCapability (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartUserCapability.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uma cadeia de caracteres que contém um nome para o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartUserCapability" />.</param>
+        <summary>Inicializa uma nova instância da classe.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartUserCapability.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Web.UI.WebControls.WebParts.WebPartUserCapability" />.</param>
+        <summary>Determina se o objeto especificado é igual ao atual <see cref="T:System.Web.UI.WebControls.WebParts.WebPartUserCapability" /> de objeto ou tem o mesmo <see cref="P:System.Web.UI.WebControls.WebParts.WebPartUserCapability.Name" /> valor.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="o" /> é igual à atual <see cref="T:System.Web.UI.WebControls.WebParts.WebPartUserCapability" /> ou tem o mesmo <see cref="P:System.Web.UI.WebControls.WebParts.WebPartUserCapability.Name" /> valor; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartUserCapability.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para o <see cref="P:System.Web.UI.WebControls.WebParts.WebPartUserCapability.Name" /> propriedade.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartUserCapability.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor de cadeia de caracteres que identifica a classe.</summary>
+        <value>Um <see cref="T:System.String" /> que identifica a classe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

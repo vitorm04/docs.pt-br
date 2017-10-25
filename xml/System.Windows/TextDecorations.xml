@@ -1,0 +1,206 @@
+<Type Name="TextDecorations" FullName="System.Windows.TextDecorations">
+  <TypeSignature Language="C#" Value="public static class TextDecorations" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed TextDecorations extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TextDecorations" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de decorações de texto predefinido estático.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há quatro tipos de decoração de texto: linha de base, sublinhado, tachado e sublinhado. O exemplo a seguir mostra os locais da decoração de texto em relação ao texto.  
+  
+ ![Diagrama de locais de decoração de texto](~/add/media/textdecoration01.gif "diagrama de locais de decoração de texto")  
+Exemplo de tipos de decoração de texto  
+  
+<a name="xamlAttributeUsage_FontFamily"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object textDecorationsProperty="textDecorationType[,textDecorationType]"/>  
+```  
+  
+<a name="xamlValues_FontFamily"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ `textDecorationType`  
+ O tipo de decoração de texto: <xref:System.Windows.TextDecorations.Baseline%2A>, <xref:System.Windows.TextDecorations.OverLine%2A>, <xref:System.Windows.TextDecorations.Strikethrough%2A>, ou <xref:System.Windows.TextDecorations.Underline%2A>. É permitida mais de uma decoração, com valores separados por vírgulas. Você também pode especificar "Nenhum" para não indicar que nenhum tipo de decoração de texto.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma decoração de texto tachado usa o valor de fonte padrão.  
+  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets1)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets1)]
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
+  
+ Você também pode especificar vários decoração de texto para o mesmo texto. O seguinte exemplo, um sublinhado e sobrescrito decoração de texto são usados para o mesmo texto.  
+  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets4)]  
+  
+ Você pode usar a cadeia de caracteres de valor "None" para indicar que não há nenhuma decoração de texto no <xref:System.Windows.TextDecorations> coleção. No exemplo a seguir, o <xref:System.Windows.TextDecorations> coleção é definida como "None".  
+  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets5](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets5)]  
+  
+ Você pode remover todas as decorações de texto de texto usando o <xref:System.Windows.TextDecorationCollection.Clear%2A> método. No exemplo a seguir, o <xref:System.Windows.TextDecorations> coleção está desmarcada.  
+  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets5a](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets5a)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets5a](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets5a)]  
+  
+ Por padrão, <xref:System.Windows.Documents.Hyperlink> usa um <xref:System.Windows.TextDecoration> objeto para exibir um sublinhado. O exemplo de marcação a seguir mostra um <xref:System.Windows.Documents.Hyperlink> definido com e sem sublinhado:  
+  
+ [!code-xaml[Performance#PerformanceSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Hyperlink.xaml#performancesnippet11)]  
+  
+ <xref:System.Windows.TextDecoration>os objetos podem ser desempenho intensivo para criar uma instância, especialmente se você tiver muitos <xref:System.Windows.Documents.Hyperlink> objetos. Para obter mais informações, consulte [como: especificar se um hiperlink é sublinhado](~/docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Baseline">
+      <MemberSignature Language="C#" Value="public static System.Windows.TextDecorationCollection Baseline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.TextDecorationCollection Baseline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TextDecorations.Baseline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma linha de base <see cref="T:System.Windows.TextDecoration" />.</summary>
+        <value>Um valor que representa uma linha de base <see cref="T:System.Windows.TextDecoration" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra o local de uma linha de base da decoração de texto em relação ao texto.  
+  
+ ![Diagrama de locais de decoração de texto](~/add/media/textdecoration01.gif "diagrama de locais de decoração de texto")  
+Exemplo de decoração de texto uma linha de base  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverLine">
+      <MemberSignature Language="C#" Value="public static System.Windows.TextDecorationCollection OverLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.TextDecorationCollection OverLine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TextDecorations.OverLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um <see cref="T:System.Windows.TextDecoration" /> sobreposto.</summary>
+        <value>Um valor que representa um <see cref="T:System.Windows.TextDecoration" /> sobreposto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra o local de uma decoração de texto sublinhado em relação ao texto.  
+  
+ ![Diagrama de locais de decoração de texto](~/add/media/textdecoration01.gif "diagrama de locais de decoração de texto")  
+Exemplo de uma decoração de texto sublinhado  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Strikethrough">
+      <MemberSignature Language="C#" Value="public static System.Windows.TextDecorationCollection Strikethrough { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.TextDecorationCollection Strikethrough" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TextDecorations.Strikethrough" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um tachado <see cref="T:System.Windows.TextDecoration" />.</summary>
+        <value>Um valor que representa um tachado <see cref="T:System.Windows.TextDecoration" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra o local de uma decoração de texto tachado em relação ao texto.  
+  
+ ![Diagrama de locais de decoração de texto](~/add/media/textdecoration01.gif "diagrama de locais de decoração de texto")  
+Exemplo de uma decoração de texto tachado  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma decoração de texto tachado é criada usando o pincel de cor sólida para a caneta. A propriedade <xref:System.Windows.TextDecoration.Location%2A> é definida como <xref:System.Windows.TextDecorationLocation.Strikethrough>.  
+  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets1)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets1)]
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Underline">
+      <MemberSignature Language="C#" Value="public static System.Windows.TextDecorationCollection Underline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.TextDecorationCollection Underline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TextDecorations.Underline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um <see cref="T:System.Windows.TextDecoration" /> sublinhado.</summary>
+        <value>Um valor que representa um <see cref="T:System.Windows.TextDecoration" /> sublinhado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra o local de uma decoração de texto sublinhado em relação ao texto.  
+  
+ ![Diagrama de locais de decoração de texto](~/add/media/textdecoration01.gif "diagrama de locais de decoração de texto")  
+Exemplo de uma decoração de texto sublinhado  
+  
+ Por padrão, <xref:System.Windows.Documents.Hyperlink> usa um <xref:System.Windows.TextDecoration> objeto para exibir um sublinhado. Para obter mais informações, consulte [como: especificar se um hiperlink é sublinhado](~/docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).  
+  
+   
+  
+## Examples  
+ A ilustração a seguir mostra uma decoração de texto estilo tenha sido definida com um pincel de gradiente linear e uma caneta tracejada.  
+  
+ ![Decoração de texto com sublinhado em gradiente linear](~/add/media/textdecoration02.png "decoração de texto com sublinhado em gradiente linear")  
+Exemplo de um sublinhado estilizado com um pincel de gradiente linear e uma caneta tracejada  
+  
+ No exemplo de código a seguir, uma decoração de texto sublinhado é criada usando um pincel de gradiente linear para a caneta tracejada.  
+  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets3)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets3)]
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

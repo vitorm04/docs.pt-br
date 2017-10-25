@@ -1,0 +1,108 @@
+<Type Name="ProgIdAttribute" FullName="System.Runtime.InteropServices.ProgIdAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ProgIdAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProgIdAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ProgIdAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que o usuário especifique o ProgID de uma classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para classes.  
+  
+ ProgIDs são gerados automaticamente para uma classe, combinando o namespace com o nome do tipo. Isso pode produzir um ProgID inválido no entanto, como ProgIDs estão limitado a 39 caracteres e não pode conter nenhuma pontuação que não seja um período. Nesse caso, um ProgID pode ser atribuído manualmente usando a classe <xref:System.Runtime.InteropServices.ProgIdAttribute>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como aplicar `ProgIdAttribute` em uma classe. Em seguida, o aplicativo obtém todos os atributos de `MyClass`e imprime o <xref:System.Runtime.InteropServices.ProgIdAttribute.Value%2A> propriedade `ProgIdAttribute`.  
+  
+ [!code-cpp[ProgIdAttribute_Value#1](~/samples/snippets/cpp/VS_Snippets_CLR/ProgIdAttribute_Value/CPP/progidattribute_value.cpp#1)]
+ [!code-csharp[ProgIdAttribute_Value#1](~/samples/snippets/csharp/VS_Snippets_CLR/ProgIdAttribute_Value/CS/progidattribute_value.cs#1)]
+ [!code-vb[ProgIdAttribute_Value#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ProgIdAttribute_Value/VB/progidattribute_value.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProgIdAttribute (string progId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string progId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ProgIdAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="progId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="progId">O ProgID a ser atribuído à classe.</param>
+        <summary>Inicializa uma nova instância do <see langword="ProgIdAttribute" /> com o ProgID especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ProgIdAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o ProgID da classe.</summary>
+        <value>O ProgID da classe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

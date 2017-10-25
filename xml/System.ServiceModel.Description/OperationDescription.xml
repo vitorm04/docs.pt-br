@@ -1,0 +1,536 @@
+<Type Name="OperationDescription" FullName="System.ServiceModel.Description.OperationDescription">
+  <TypeSignature Language="C#" Value="public class OperationDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OperationDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.OperationDescription" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Name={name}, IsInitiating={isInitiating}, IsTerminating={isTerminating}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a descrição de uma operação do contrato que fornece uma descrição das mensagens que formam a operação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um [!INCLUDE[indigo1](~/includes/indigo1-md.md)] contrato é uma coleção de operações que especifica o que o ponto de extremidade se comunica com o mundo exterior. Cada operação é uma troca de mensagens. Por exemplo, uma mensagem de solicitação e uma mensagem de resposta associados formam uma troca de mensagens de solicitação/resposta.  
+  
+ Um <xref:System.ServiceModel.Description.ContractDescription> objeto é usado para descrever os contratos e suas operações. Dentro de um <xref:System.ServiceModel.Description.ContractDescription>, cada operação tem um correspondente <xref:System.ServiceModel.Description.OperationDescription> que descreve os aspectos da operação, por exemplo, se a operação é unidirecional ou solicitação/resposta. Cada <xref:System.ServiceModel.Description.OperationDescription> também descreve as mensagens que formam a operação usando uma coleção de <xref:System.ServiceModel.Description.MessageDescription> objetos. <xref:System.ServiceModel.Description.ContractDescription>contém uma referência a uma interface que define o contrato usando o modelo de programação. Essa interface é marcada com <xref:System.ServiceModel.ServiceContractAttribute>, e seus métodos que correspondem às operações de ponto de extremidade são marcados com <xref:System.ServiceModel.OperationContractAttribute>.  
+  
+ Muitas das propriedades <xref:System.ServiceModel.Description.OperationDescription> têm propriedades correspondentes no [!INCLUDE[indigo2](~/includes/indigo2-md.md)] modelo de programação em <xref:System.ServiceModel.OperationContractAttribute>, por exemplo, <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.ServiceModel.Description.OperationDescription> retornado da coleção retornada pelo <xref:System.ServiceModel.Description.ContractDescription.Operations%2A> propriedade o <xref:System.ServiceModel.Description.ContractDescription> classe.  O código itera através da coleção de pontos de extremidade e imprime o nome de cada ponto de extremidade, bem como o nome de cada operação no ponto de extremidade.  
+  
+ [!code-csharp[DataContractSerializerOperationBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/datacontractserializeroperationbehavior/cs/source.cs#2)]
+ [!code-vb[DataContractSerializerOperationBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/datacontractserializeroperationbehavior/vb/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperationDescription (string name, System.ServiceModel.Description.ContractDescription declaringContract);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.ServiceModel.Description.ContractDescription declaringContract) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.OperationDescription.#ctor(System.String,System.ServiceModel.Description.ContractDescription)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="declaringContract" Type="System.ServiceModel.Description.ContractDescription" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da descrição da operação.</param>
+        <param name="declaringContract">O <see cref="T:System.ServiceModel.Description.ContractDescription" /> usado para inicializar a descrição da operação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Description.OperationDescription" /> classe com uma descrição de nome e contrato especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo BeginMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo BeginMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.BeginMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método de início da operação.</summary>
+        <value>O <see cref="T:System.Reflection.MethodInfo" /> que fornece acesso para os atributos e os metadados do método.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Behaviors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.KeyedByTypeCollection&lt;System.ServiceModel.Description.IOperationBehavior&gt; Behaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.KeyedByTypeCollection`1&lt;class System.ServiceModel.Description.IOperationBehavior&gt; Behaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.Behaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.KeyedByTypeCollection&lt;System.ServiceModel.Description.IOperationBehavior&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os comportamentos da operação associados à operação.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.KeyedByTypeCollection`1" /> que contém o <see cref="T:System.ServiceModel.Description.IOperationBehavior" /> objetos associados com a operação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Description.IOperationBehavior> interface é implementada para modificar, examinar ou estender algum aspecto da execução de toda a operação no nível do aplicativo para aplicativos cliente ou serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringContract">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ContractDescription DeclaringContract { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ContractDescription DeclaringContract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.DeclaringContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ContractDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contrato ao qual pertence a operação.</summary>
+        <value>O <see cref="T:System.ServiceModel.Description.ContractDescription" /> para a operação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo EndMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo EndMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.EndMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método final da operação.</summary>
+        <value>O <see cref="T:System.Reflection.MethodInfo" /> que fornece acesso para os atributos e os metadados do método.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Faults">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.FaultDescriptionCollection Faults { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.FaultDescriptionCollection Faults" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.Faults" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.FaultDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as descrições das falhas associadas com a descrição da operação.</summary>
+        <value>O <see cref="T:System.ServiceModel.Description.FaultDescriptionCollection" /> que contém detalhes sobre as falhas associados com a descrição da operação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasProtectionLevel">
+      <MemberSignature Language="C#" Value="public bool HasProtectionLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.HasProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a operação teve um nível de proteção definida.</summary>
+        <value>
+          <see langword="true" />Se o nível de proteção tiver sido definido; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> for definida, o <xref:System.ServiceModel.Description.OperationDescription.HasProtectionLevel%2A> está definida como `true`.  
+  
+ <xref:System.ServiceModel.Description.OperationDescription.HasProtectionLevel%2A>corresponde do <xref:System.ServiceModel.OperationContractAttribute.HasProtectionLevel%2A> propriedade o [!INCLUDE[indigo1](~/includes/indigo1-md.md)] modelo de programação.  
+  
+ Use o <xref:System.ServiceModel.Description.OperationDescription.HasProtectionLevel%2A> propriedade para indicar que um nível de proteção específico seja exigido pelas mensagens dessa operação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitiating">
+      <MemberSignature Language="C#" Value="public bool IsInitiating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitiating" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.IsInitiating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o método implementa uma operação que pode iniciar uma sessão no servidor (se essa sessão existir).</summary>
+        <value>
+          <see langword="true" /> se a operação tiver permissão para iniciar uma sessão no servidor, caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> propriedade controla se uma operação pode ser a primeira operação de chamada quando uma sessão é criada.  
+  
+> [!NOTE]
+>  O valor de <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> devem ser `true` e a associação usada deve oferecer suporte a sessões para o <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> propriedade funcione corretamente.  
+  
+ O padrão é `true`, que significa que uma operação pode ser o primeiro deles chamado em um canal. As chamadas subsequentes para o método de inicialização não possui efeito, diferente de chamar o método. Nenhuma outra sessão é criado.  
+  
+ Normalmente, você define <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> para `false` para forçar os clientes para chamar outro método do serviço antes de eles podem chamar este.  
+  
+ <xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>corresponde do <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> propriedade o [!INCLUDE[indigo1](~/includes/indigo1-md.md)] modelo de programação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOneWay">
+      <MemberSignature Language="C#" Value="public bool IsOneWay { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOneWay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.IsOneWay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma operação retorna uma mensagem de resposta.</summary>
+        <value>
+          <see langword="true" /> se esse método receber uma mensagem de solicitação e não retornar nenhuma mensagem de resposta; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.OperationDescription.IsOneWay%2A> propriedade para indicar que uma operação não retorna uma mensagem de resposta. Esse tipo de operação é útil para notificações ou comunicações no estilo de evento, especialmente em comunicação bidirecional.  
+  
+ Se o <xref:System.ServiceModel.Description.OperationDescription.IsOneWay%2A> está definida como `false` (o padrão), até mesmo os métodos que retornam `void` resultar em uma mensagem de resposta. Nesse caso, a infraestrutura cria e envia uma mensagem vazia para indicar ao chamador que o método foi retornado.  
+  
+ <xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>corresponde do <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> propriedade o [!INCLUDE[indigo1](~/includes/indigo1-md.md)] modelo de programação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTerminating">
+      <MemberSignature Language="C#" Value="public bool IsTerminating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTerminating" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.IsTerminating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a operação de serviço faz o servidor fechar a sessão depois que a mensagem de resposta, se houver, for enviada.</summary>
+        <value>
+          <see langword="true" /> se a operação faz com que o servidor feche a sessão, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A> propriedade para indicar que uma operação de serviço chamar encerra a sessão de comunicação.  
+  
+ <xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>corresponde do <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A> propriedade o [!INCLUDE[indigo1](~/includes/indigo1-md.md)] modelo de programação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KnownTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Type&gt; KnownTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Type&gt; KnownTypes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.KnownTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os tipos conhecidos associados com a descrição da operação.</summary>
+        <value>A coleção de tipos conhecidos associados com a descrição da operação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O *tipos conhecidos* são tipos que podem estar presentes em um gráfico de objeto quando ocorre a serialização ou desserialização. Para obter mais informações sobre tipos conhecidos, consulte [tipos conhecidos de contrato de dados](~/docs/framework/wcf/feature-details/data-contract-known-types.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Messages">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.MessageDescriptionCollection Messages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.MessageDescriptionCollection Messages" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.Messages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MessageDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as descrições das mensagens que formam a operação.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Description.MessageDescriptionCollection" /> que contém descrições das mensagens que formam a operação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da descrição da operação.</summary>
+        <value>O nome da descrição da operação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Description.OperationDescription.Name%2A> substituições de propriedades de <`operation`> nome do elemento em WSDL. O nome da operação padrão é o nome do método de implementação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationBehaviors">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.KeyedCollection&lt;Type,System.ServiceModel.Description.IOperationBehavior&gt; OperationBehaviors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.KeyedCollection`2&lt;class System.Type, class System.ServiceModel.Description.IOperationBehavior&gt; OperationBehaviors" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.OperationBehaviors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.KeyedCollection&lt;System.Type,System.ServiceModel.Description.IOperationBehavior&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conjunto de comportamentos da operação.</summary>
+        <value>O conjunto de comportamentos para a operação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Security.ProtectionLevel ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.ProtectionLevel ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de proteção para a operação.</summary>
+        <value>O <see cref="T:System.Net.Security.ProtectionLevel" /> para a operação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> propriedade controla se as mensagens de uma operação devem ser criptografadas, assinado, ou ambos. O valor definido aqui é o valor padrão para todas as mensagens especificadas para esta operação, a menos que um escopo mais restrito substitui esse valor.  
+  
+ <xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A>corresponde do <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> propriedade o [!INCLUDE[indigo1](~/includes/indigo1-md.md)] modelo de programação.  
+  
+ Quando o <xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> for definida, o <xref:System.ServiceModel.Description.OperationDescription.HasProtectionLevel%2A> está definida como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeProtectionLevel">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeProtectionLevel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeProtectionLevel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.OperationDescription.ShouldSerializeProtectionLevel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="P:System.ServiceModel.Description.OperationDescription.ProtectionLevel" /> propriedade foi alterado do valor padrão e deve ser serializada.</summary>
+        <returns>
+          <see langword="true" /> se o valor da propriedade <see cref="P:System.ServiceModel.Description.OperationDescription.ProtectionLevel" /> precisar ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo SyncMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo SyncMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.SyncMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método de sincronização do serviço da descrição da operação.</summary>
+        <value>O <see cref="T:System.Reflection.MethodInfo" /> que fornece acesso a atributos e os metadados do método.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskMethod">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo TaskMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo TaskMethod" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.OperationDescription.TaskMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método usado para a operação da tarefa.</summary>
+        <value>O método usado para a operação da tarefa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

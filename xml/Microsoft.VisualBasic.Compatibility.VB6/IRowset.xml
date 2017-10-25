@@ -1,0 +1,202 @@
+<Type Name="IRowset" FullName="Microsoft.VisualBasic.Compatibility.VB6.IRowset">
+  <TypeSignature Language="C#" Value="public interface IRowset" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRowset" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.IRowset" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0C733A7C-2A1C-11CE-ADE5-00AA0044773D")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma implementação do OLE DB <see langword="IRowset" /> interface para uso por aplicativos atualizado do Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddRefRows">
+      <MemberSignature Language="C#" Value="public void AddRefRows (int cRows, int[] hRows, out int[] refCounts, out int[] rowStatus);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void AddRefRows([in]int32 cRows, [in]int32[] hRows, [out] int32[]&amp; refCounts, [out] int32[]&amp; rowStatus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IRowset.AddRefRows(System.Int32,System.Int32[],System.Int32[]@,System.Int32[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cRows" Type="System.Int32" />
+        <Parameter Name="hRows" Type="System.Int32[]" />
+        <Parameter Name="refCounts" Type="System.Int32[]&amp;" RefType="out" />
+        <Parameter Name="rowStatus" Type="System.Int32[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="cRows">O número de linhas para o qual incrementar a contagem de referência.</param>
+        <param name="hRows">Uma matriz de identificadores de linha para o qual incrementar a contagem de referência. A contagem de referência de identificadores de linha é incrementada em um cada vez que eles aparecem na matriz.</param>
+        <param name="refCounts">Uma matriz com <c>cRows</c> elementos no qual retornar a nova contagem de referência para cada identificador de linha. O consumidor aloca memória para essa matriz. Se <c>refCounts</c> é um ponteiro nulo, nenhuma referência de contagens são retornadas.</param>
+        <param name="rowStatus">Uma matriz com <c>cRows</c> elementos no qual retornar valores que indica o status de cada linha especificada em <c>hRows</c>.</param>
+        <summary>Adiciona uma contagem de referência para um identificador de linha existente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public void GetData (int hRow, int hAccessor, IntPtr pData);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void GetData([in]int32 hRow, [in]int32 hAccessor, [in]native int pData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IRowset.GetData(System.Int32,System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hRow" Type="System.Int32" />
+        <Parameter Name="hAccessor" Type="System.Int32" />
+        <Parameter Name="pData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hRow">O identificador da linha da qual obter os dados.</param>
+        <param name="hAccessor">O identificador do acessador para usar.</param>
+        <param name="pData">Um ponteiro para um buffer no qual retornar os dados.</param>
+        <summary>Recupera dados de cópia do conjunto de linhas da linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextRows">
+      <MemberSignature Language="C#" Value="public void GetNextRows (int hChapter, int lRowsOffset, int cRows, out int cRowsObtained, out int[] hRows);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void GetNextRows([in]int32 hChapter, [in]int32 lRowsOffset, [in]int32 cRows, [out] int32&amp; cRowsObtained, [out] int32[]&amp; hRows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IRowset.GetNextRows(System.Int32,System.Int32,System.Int32,System.Int32@,System.Int32[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hChapter" Type="System.Int32" />
+        <Parameter Name="lRowsOffset" Type="System.Int32" />
+        <Parameter Name="cRows" Type="System.Int32" />
+        <Parameter Name="cRowsObtained" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="hRows" Type="System.Int32[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="hChapter">O identificador do capítulo designar as linhas a serem buscadas.</param>
+        <param name="lRowsOffset">A contagem assinada de linhas a serem ignoradas antes de buscar linhas. Linhas excluídas que o provedor foi removido do conjunto de linhas não são contadas a ignorar.</param>
+        <param name="cRows">O número de linhas a serem buscadas. Um número negativo significa buscar para trás.</param>
+        <param name="cRowsObtained">Um ponteiro de memória no qual retornar o número real de linhas buscadas.</param>
+        <param name="hRows">Um ponteiro de memória no qual retornar uma matriz de identificadores de linhas buscadas.</param>
+        <summary>Busca linhas sequencialmente, lembre-se a posição anterior.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseRows">
+      <MemberSignature Language="C#" Value="public int ReleaseRows (int cRows, int[] hRows, IntPtr rowOptions, IntPtr rowRefCounts, IntPtr rgRowStatus);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance int32 ReleaseRows([in]int32 cRows, [in]int32[] hRows, [in]native int rowOptions, [in]native int rowRefCounts, [in]native int rgRowStatus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IRowset.ReleaseRows(System.Int32,System.Int32[],System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cRows" Type="System.Int32" />
+        <Parameter Name="hRows" Type="System.Int32[]" />
+        <Parameter Name="rowOptions" Type="System.IntPtr" />
+        <Parameter Name="rowRefCounts" Type="System.IntPtr" />
+        <Parameter Name="rgRowStatus" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="cRows">O número de linhas para liberar.</param>
+        <param name="hRows">Uma matriz de identificadores de linhas a ser liberado. Os identificadores de linha não é necessário formar um cluster lógico. eles foram obtidos em momentos distintos e não precisam ser contíguas linhas de base. Identificadores de linha são diminuídos em uma contagem de referência para cada vez que eles aparecem na matriz.</param>
+        <param name="rowOptions">Uma matriz de <c>cRows</c> elementos contendo as máscaras de bits que indica as opções adicionais para ser especificado quando uma linha é liberada.</param>
+        <param name="rowRefCounts">Uma matriz com <c>cRows</c> elementos no qual retornar a nova contagem de referência de cada linha.</param>
+        <param name="rgRowStatus">Uma matriz com <c>cRows</c> elementos no qual retornar valores que indica o status de cada linha especificada em <c>hRows</c>.</param>
+        <summary>Versões de linhas.</summary>
+        <returns>Um <see langword="Integer" /> que representa o resultado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RestartPosition">
+      <MemberSignature Language="C#" Value="public int RestartPosition (int hChapter);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance int32 RestartPosition([in]int32 hChapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IRowset.RestartPosition(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hChapter" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="hChapter">O identificador do capítulo designar as linhas nas quais reposicionar.</param>
+        <summary>Reposiciona a próxima posição de busca na sua posição inicial.</summary>
+        <returns>Um <see langword="Integer" /> que representa o resultado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

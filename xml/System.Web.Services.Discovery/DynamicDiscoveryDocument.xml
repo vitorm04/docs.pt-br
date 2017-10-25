@@ -1,0 +1,151 @@
+<Type Name="DynamicDiscoveryDocument" FullName="System.Web.Services.Discovery.DynamicDiscoveryDocument">
+  <TypeSignature Language="C#" Value="public sealed class DynamicDiscoveryDocument" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DynamicDiscoveryDocument extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Discovery.DynamicDiscoveryDocument" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot("dynamicDiscovery", IsNullable=true, Namespace="urn:schemas-dynamicdiscovery:disco.2000-03-17")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um documento XML que especifica uma lista de caminhos de diretório do sistema de arquivos que não devem ser pesquisadas para referências adicionar a um documento de descoberta de serviços da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Discovery.DynamicDiscoveryDocument> trabalha na classe de <xref:System.Web.Services.Discovery.DiscoveryRequestHandler> da classe <xref:System.Web.Services.Discovery.DiscoveryRequestHandler.ProcessRequest%2A> método, que manipula uma solicitação HTTP para um documento de descoberta. A solicitação Especifica outro documento, um documento de descoberta dinâmica de XML que contém uma lista de diretórios para exclusão. A lista corresponde do <xref:System.Web.Services.Discovery.DynamicDiscoveryDocument> da classe <xref:System.Web.Services.Discovery.DynamicDiscoveryDocument.ExcludePaths%2A> propriedade e contém diretórios ou abaixo do diretório que contém o documento XML.  
+  
+ Normalmente, nenhuma dessas classes precisa ser usada diretamente por um desenvolvedor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicDiscoveryDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DynamicDiscoveryDocument.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Discovery.DynamicDiscoveryDocument" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExcludePaths">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Discovery.ExcludePathInfo[] ExcludePaths { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Discovery.ExcludePathInfo[] ExcludePaths" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DynamicDiscoveryDocument.ExcludePaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("exclude", typeof(System.Web.Services.Discovery.ExcludePathInfo))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.ExcludePathInfo[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os caminhos de diretório do sistema de arquivos que não devem ser pesquisados para referências ao adicionar a um documento de descoberta.</summary>
+        <value>Uma matriz de objetos de <see cref="T:System.Web.Services.Discovery.ExcludePathInfo" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Caminhos de exclusão são serializados em um documento de descoberta dinâmica de XML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static System.Web.Services.Discovery.DynamicDiscoveryDocument Load (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Services.Discovery.DynamicDiscoveryDocument Load(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DynamicDiscoveryDocument.Load(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DynamicDiscoveryDocument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> do objeto do qual o documento XML de descoberta dinâmica é desserializado.</param>
+        <summary>Desserializa um documento XML em um <see cref="T:System.Web.Services.Discovery.DynamicDiscoveryDocument" /> instância.</summary>
+        <returns>O <see cref="T:System.Web.Services.Discovery.DynamicDiscoveryDocument" /> que foi carregado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso `static` método recebe um documento XML, representado como um <xref:System.IO.Stream>e o converte em um <xref:System.Web.Services.Discovery.DynamicDiscoveryDocument> .  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public const string Namespace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Namespace" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Discovery.DynamicDiscoveryDocument.Namespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém o namespace do documento de descoberta dinâmica "urn: schemas-dynamicdiscovery:disco.2000-03-17". Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DynamicDiscoveryDocument.Write(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> do objeto para o qual o documento XML de descoberta dinâmica é serializado.</param>
+        <summary>Serializa um <see cref="T:System.Web.Services.Discovery.DynamicDiscoveryDocument" /> instância em um documento XML especificado como um fluxo de saída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

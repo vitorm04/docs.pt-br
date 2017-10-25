@@ -1,0 +1,434 @@
+<Type Name="PersonalizationStateInfoCollection" FullName="System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection">
+  <TypeSignature Language="C#" Value="public sealed class PersonalizationStateInfoCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit PersonalizationStateInfoCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma coleção de <see cref="T:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo" /> e <see cref="T:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo" /> objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection> classe fornece um wrapper de coleção com base em um conjunto de <xref:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo> e <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> instâncias. Essas instâncias são recuperadas por sequencialmente iteração pela coleção, por índice ordinal ou por valor de chave.  
+  
+ Instâncias são indexadas em uma combinação de caminho e nome de usuário. Isso é necessário porque <xref:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo> instâncias que representa dados compartilhados são indexadas de acordo com <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo.Path%2A> do objeto, enquanto <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> instâncias são indexadas de acordo com ambos um <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo.Path%2A> objeto e um <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo.Username%2A> objeto.  
+  
+ Os objetos de informações são mantidos na coleção na ordem em que foram recebidos do provedor. A coleção não tentar alterar a ordem das instâncias ou manter uma ordem de classificação específico dentro da coleção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersonalizationStateInfoCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa uma coleção vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.WebControls.WebParts.PersonalizationStateInfo data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.WebControls.WebParts.PersonalizationStateInfo data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.Add(System.Web.UI.WebControls.WebParts.PersonalizationStateInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" />
+      </Parameters>
+      <Docs>
+        <param name="data">O <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" />-derivado instância a ser adicionado.</param>
+        <summary>Adiciona um <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" />-derivado de instância para o final da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona uma <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-derivado de instância para o final da coleção. Internamente, a contagem da coleção é incrementada em um. Qualquer ativo no momento em relação à coleção de enumeradores são invalidados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A coleção foi marcada como somente leitura.</exception>
+        <exception cref="T:System.ArgumentException">Foi feita uma tentativa para adicionar um objeto à coleção quando uma instância do mesmo compartilhado ou estado por usuário já existe na coleção.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro de dados é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a coleção de todos os itens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer ativo no momento em relação à coleção de enumeradores são invalidados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A coleção foi marcada como somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.PersonalizationStateInfo[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.PersonalizationStateInfo[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.CopyTo(System.Web.UI.WebControls.WebParts.PersonalizationStateInfo[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.PersonalizationStateInfo[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz de que elementos na coleção são copiados.</param>
+        <param name="index">O local no qual iniciar a operação de cópia.</param>
+        <summary>Copia os elementos de <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> coleção em um <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" /> matriz, começando na posição especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você deseja criar um <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo> matriz. Este método simplesmente chama o <xref:System.Collections.ArrayList.CopyTo%2A?displayProperty=nameWithType> método e passa o `array` e `index` parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens em uma coleção.</summary>
+        <value>O número de itens em uma coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A contagem de itens na coleção pode ser usada para iterar na coleção, conforme mostrado no exemplo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.Count%2A> propriedade.  
+  
+ [!code-csharp[WebParts_PersAdmin#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PersAdmin/CS/PersAdmin.ascx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador padrão capaz de iteração pela coleção. Esse método não pode ser herdado.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. O método <xref:System.Collections.IEnumerator.Reset%2A> também retorna o enumerador a essa posição. Nesta posição, o <xref:System.Collections.IEnumerator.Current%2A> propriedade está definida. Por isso, você deve chamar o método <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>. Para obter mais informações sobre os enumeradores, consulte <xref:System.Collections.IEnumerator>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores. Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração. Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso para o <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> coleção é sincronizada (thread-safe).</summary>
+        <value>
+          <see langword="true" />Se o acesso à coleção for sincronizado; Caso contrário, <see langword="false" />. O valor é sempre <see langword="false" /> para <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> objetos criados pelo conjunto de controle de Web Parts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.SyncRoot%2A> propriedade retorna um objeto, que pode ser usado para sincronizar o acesso a <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.PersonalizationStateInfo this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.PersonalizationStateInfo Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice ordinal do objeto a ser recuperado.</param>
+        <summary>Obtém um <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" /> instância localizado no índice ordinal especificado na coleção.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" /> instância localizado no índice ordinal especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade recupera o <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo> instância localizado no índice ordinal especificado na coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ \- ou -  
+  
+ <paramref name="index" /> é maior que <see cref="P:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.PersonalizationStateInfo this[string path, string username] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.PersonalizationStateInfo Item(string, string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.Item(System.String,System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationStateInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho relativo de aplicativo do objeto de estado de personalização deve ser recuperado.</param>
+        <param name="username">O nome de usuário a <see cref="T:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo" /> objeto a ser recuperado.</param>
+        <summary>Obtém um elemento da coleção com base em parâmetros especificados.</summary>
+        <value>Um elemento da coleção com base em parâmetros especificados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é o indexador padrão da coleção. Se apenas `path` for fornecido, a propriedade retorna um <xref:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo> instância. Se ambos os `path` e `username` forem fornecidos, a propriedade retorna um <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> instância para a combinação de `path` e `username`.  
+  
+ Se `path` (no caso que `username` é definido como `null`) não existe, ou se `username` e `path` não existirem, `null` será retornado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string path, string username);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string path, string username) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.Remove(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho relativo de aplicativo do objeto de estado de personalização deve ser removido.</param>
+        <param name="username">O nome de usuário a <see cref="T:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo" />-derivados do objeto a ser removido.</param>
+        <summary>Remove um <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" />-objeto derivado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método Remove um <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo>-instância derivado da coleção. Depois que a instância removido todos os elementos são movidos para cima para ocupar a posição vaga nesse tipo. Internamente, a contagem da coleção é reduzida por um. Qualquer ativo no momento em relação à coleção de enumeradores são invalidados.  
+  
+ Se apenas `path` for fornecido, o <xref:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo> de caminho é removido da instância. Se ambos os `path` e `username` são fornecidos, o <xref:System.Web.UI.WebControls.WebParts.UserPersonalizationStateInfo> instância para a combinação de `path` e `username` é removido.  
+  
+> [!NOTE]
+>  Você pode tentar remover um item não existente da coleção; Esta ação não gerará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A coleção foi marcada como somente leitura.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é nulo.  
+  
+ \- ou -  
+  
+ ambos os parâmetros forem nulos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="public void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Marca a coleção como somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Métodos que tentarem modificar uma coleção somente leitura, como <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.Add%2A> e <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.Remove%2A>, gerar um <xref:System.NotSupportedException> exceção.  
+  
+> [!NOTE]
+>  Você pode chamar o <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.SetReadOnly%2A> método várias vezes na coleção; isto não gerará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso a <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" /> instância.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" />. O conjunto de controles de Web Parts retorna uma referência ao objeto da coleção atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ Classes derivadas podem fornecer suas próprias versões sincronizadas de coleção usando o <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.SyncRoot%2A> propriedade. O código de sincronização necessário realizar operações no <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.SyncRoot%2A> da coleção, não diretamente na coleção em si. Isso garante a operação apropriada das coleções que são derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando a instância de coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz na qual uma coleção de <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" /> serão copiados os objetos.</param>
+        <param name="index">O ponto no <c>matriz</c> no qual começar a copiar o <see cref="T:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" /> objetos.</param>
+        <summary>Implementa a base de <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método, como o <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection> da classe <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection.CopyTo%2A> simplesmente chama o método, o <xref:System.Collections.ArrayList.CopyTo%2A?displayProperty=nameWithType> método e passa o `array` e `index` parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

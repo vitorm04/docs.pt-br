@@ -1,0 +1,471 @@
+<Type Name="BinaryExpression" FullName="System.Linq.Expressions.BinaryExpression">
+  <TypeSignature Language="C#" Value="public class BinaryExpression : System.Linq.Expressions.Expression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BinaryExpression extends System.Linq.Expressions.Expression" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.BinaryExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Linq.Expressions.Expression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Linq.Expressions.Expression/BinaryExpressionProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma expressão com um operador binário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As tabelas a seguir resumem os métodos de fábrica que podem ser usados para criar um <xref:System.Linq.Expressions.BinaryExpression> que possui um tipo de nó específico, representado pelo <xref:System.Linq.Expressions.Expression.NodeType%2A> propriedade. Cada tabela contém informações para uma classe específica de operações, como aritmética ou bit a bit.  
+  
+## <a name="binary-arithmetic-operations"></a>Operações aritméticas binárias  
+  
+|Tipo de nó|Método de fábrica|  
+|---------------|--------------------|  
+|<xref:System.Linq.Expressions.ExpressionType.Add>|<xref:System.Linq.Expressions.Expression.Add%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.AddChecked>|<xref:System.Linq.Expressions.Expression.AddChecked%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.Divide>|<xref:System.Linq.Expressions.Expression.Divide%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.Modulo>|<xref:System.Linq.Expressions.Expression.Modulo%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.Multiply>|<xref:System.Linq.Expressions.Expression.Multiply%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.MultiplyChecked>|<xref:System.Linq.Expressions.Expression.MultiplyChecked%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.Power>|<xref:System.Linq.Expressions.Expression.Power%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.Subtract>|<xref:System.Linq.Expressions.Expression.Subtract%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.SubtractChecked>|<xref:System.Linq.Expressions.Expression.SubtractChecked%2A>|  
+  
+## <a name="bitwise-operations"></a>Operações bit a bit  
+  
+|Tipo de nó|Método de fábrica|  
+|---------------|--------------------|  
+|<xref:System.Linq.Expressions.ExpressionType.And>|<xref:System.Linq.Expressions.Expression.And%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.Or>|<xref:System.Linq.Expressions.Expression.Or%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.ExclusiveOr>|<xref:System.Linq.Expressions.Expression.ExclusiveOr%2A>|  
+  
+## <a name="shift-operations"></a>Operações SHIFT  
+  
+|Tipo de nó|Método de fábrica|  
+|---------------|--------------------|  
+|<xref:System.Linq.Expressions.ExpressionType.LeftShift>|<xref:System.Linq.Expressions.Expression.LeftShift%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.RightShift>|<xref:System.Linq.Expressions.Expression.RightShift%2A>|  
+  
+## <a name="conditional-boolean-operations"></a>Operações booleanas condicionais  
+  
+|Tipo de nó|Método de fábrica|  
+|---------------|--------------------|  
+|<xref:System.Linq.Expressions.ExpressionType.AndAlso>|<xref:System.Linq.Expressions.Expression.AndAlso%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.OrElse>|<xref:System.Linq.Expressions.Expression.OrElse%2A>|  
+  
+## <a name="comparison-operations"></a>Operações de comparação  
+  
+|Tipo de nó|Método de fábrica|  
+|---------------|--------------------|  
+|<xref:System.Linq.Expressions.ExpressionType.Equal>|<xref:System.Linq.Expressions.Expression.Equal%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.NotEqual>|<xref:System.Linq.Expressions.Expression.NotEqual%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.GreaterThanOrEqual>|<xref:System.Linq.Expressions.Expression.GreaterThanOrEqual%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.GreaterThan>|<xref:System.Linq.Expressions.Expression.GreaterThan%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.LessThan>|<xref:System.Linq.Expressions.Expression.LessThan%2A>|  
+|<xref:System.Linq.Expressions.ExpressionType.LessThanOrEqual>|<xref:System.Linq.Expressions.Expression.LessThanOrEqual%2A>|  
+  
+## <a name="coalescing-operations"></a>Operações de união  
+  
+|Tipo de nó|Método de fábrica|  
+|---------------|--------------------|  
+|<xref:System.Linq.Expressions.ExpressionType.Coalesce>|<xref:System.Linq.Expressions.Expression.Coalesce%2A>|  
+  
+## <a name="array-indexing-operations"></a>Operações de indexação de matriz  
+  
+|Tipo de nó|Método de fábrica|  
+|---------------|--------------------|  
+|<xref:System.Linq.Expressions.ExpressionType.ArrayIndex>|<xref:System.Linq.Expressions.Expression.ArrayIndex%2A>|  
+  
+ Além disso, o <xref:System.Linq.Expressions.Expression.MakeBinary%2A> métodos também podem ser usados para criar um <xref:System.Linq.Expressions.BinaryExpression>. Esses métodos de fábrica podem ser usados para criar um <xref:System.Linq.Expressions.BinaryExpression> de qualquer tipo de nó que representa uma operação binária. O parâmetro de tipo desses métodos <xref:System.Linq.Expressions.Expression.NodeType%2A> Especifica o tipo de nó desejado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Linq.Expressions.BinaryExpression> que representa a subtração de um número de outro objeto.  
+  
+ [!code-csharp[System.Linq.Expressions.Expression#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/CS/Expression.cs#8)]
+ [!code-vb[System.Linq.Expressions.Expression#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.Expressions.Expression/VB/Expression.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="protected override System.Linq.Expressions.Expression Accept (System.Linq.Expressions.ExpressionVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Linq.Expressions.Expression Accept(class System.Linq.Expressions.ExpressionVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.BinaryExpression.Accept(System.Linq.Expressions.ExpressionVisitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Linq.Expressions.ExpressionVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">O visitante com o qual visitar esse nó.</param>
+        <summary>Expede o método específico de visita para esse tipo de nó. Por exemplo, <see cref="T:System.Linq.Expressions.MethodCallExpression" /> chama o <see cref="M:System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(System.Linq.Expressions.MethodCallExpression)" />.</summary>
+        <returns>O resultado de visitar esse nó.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta implementação padrão para <xref:System.Linq.Expressions.ExpressionType.Extension> chamadas nós <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension%2A>. Substitua este método para chamar um método mais específico em uma classe derivada de visitante do <xref:System.Linq.Expressions.ExpressionVisitor> classe. No entanto, ele ainda deve suportar visitantes desconhecidos chamando <xref:System.Linq.Expressions.ExpressionVisitor.VisitExtension%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReduce">
+      <MemberSignature Language="C#" Value="public override bool CanReduce { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanReduce" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.BinaryExpression.CanReduce" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o nó de árvore de expressão pode ser reduzido.</summary>
+        <value>True se o nó de árvore de expressão pode ser reduzido, caso contrário, false.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Conversion">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.LambdaExpression Conversion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.LambdaExpression Conversion" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.BinaryExpression.Conversion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.LambdaExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a função de conversão de tipo que é usada por uma operação de atribuição composta ou de união.</summary>
+        <value>Um <see cref="T:System.Linq.Expressions.LambdaExpression" /> que representa uma função de conversão de tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Linq.Expressions.BinaryExpression.Conversion%2A> é de propriedade `null` para qualquer <xref:System.Linq.Expressions.BinaryExpression> cujo <xref:System.Linq.Expressions.Expression.NodeType%2A> propriedade não é <xref:System.Linq.Expressions.ExpressionType.Coalesce>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLifted">
+      <MemberSignature Language="C#" Value="public bool IsLifted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLifted" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.BinaryExpression.IsLifted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o nó de árvore de expressão representa um *eliminada* chamada para um operador.</summary>
+        <value>
+          <see langword="true" />Se o nó representa uma chamada lifted; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chamada do operador é eliminada, se o operador espera operandos não anulável, mas anuláveis operandos são passados para ele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiftedToNull">
+      <MemberSignature Language="C#" Value="public bool IsLiftedToNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLiftedToNull" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.BinaryExpression.IsLiftedToNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o nó de árvore de expressão representa um *eliminada* chamada para um operador cujo tipo de retorno é eliminado para um tipo anulável.</summary>
+        <value>
+          <see langword="true" />Se o operador de retorno do tipo é eliminado para um tipo anulável; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chamada do operador é eliminada, se o operador espera operandos não anulável, mas anuláveis operandos são passados para ele. Se o valor de <xref:System.Linq.Expressions.BinaryExpression.IsLiftedToNull%2A> é `true`, o operador retornará um tipo anulável, e se um valor nulo operando é avaliado como `null`, o operador retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression Left { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression Left" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.BinaryExpression.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o operando esquerdo da operação binária.</summary>
+        <value>Um <see cref="T:System.Linq.Expressions.Expression" /> que representa o operando esquerdo da operação binária.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public System.Reflection.MethodInfo Method { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MethodInfo Method" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.BinaryExpression.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o método de implementação de operação binária.</summary>
+        <value>O <see cref="T:System.Reflection.MethodInfo" /> que representa o método de implementação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um <xref:System.Linq.Expressions.BinaryExpression> representa uma operação que usa um operador predefinido, o <xref:System.Linq.Expressions.BinaryExpression.Method%2A> é de propriedade `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reduce">
+      <MemberSignature Language="C#" Value="public override System.Linq.Expressions.Expression Reduce ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Linq.Expressions.Expression Reduce() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.BinaryExpression.Reduce" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reduz o nó de expressão binária para uma expressão mais simples.</summary>
+        <returns>A expressão reduzida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se CanReduce retornar true, ele deverá retornar uma expressão válida.  
+  
+ Esse método pode retornar outro nó que também precisa ser reduzido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression Right { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression Right" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.BinaryExpression.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o operando direito da operação binária.</summary>
+        <value>Um <see cref="T:System.Linq.Expressions.Expression" /> que representa o operando direito da operação binária.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.BinaryExpression Update (System.Linq.Expressions.Expression left, System.Linq.Expressions.LambdaExpression conversion, System.Linq.Expressions.Expression right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Linq.Expressions.BinaryExpression Update(class System.Linq.Expressions.Expression left, class System.Linq.Expressions.LambdaExpression conversion, class System.Linq.Expressions.Expression right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.BinaryExpression.Update(System.Linq.Expressions.Expression,System.Linq.Expressions.LambdaExpression,System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.BinaryExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Linq.Expressions.Expression" />
+        <Parameter Name="conversion" Type="System.Linq.Expressions.LambdaExpression" />
+        <Parameter Name="right" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="left">A propriedade <see cref="P:System.Linq.Expressions.BinaryExpression.Left" /> do resultado.</param>
+        <param name="conversion">A propriedade <see cref="P:System.Linq.Expressions.BinaryExpression.Conversion" /> do resultado.</param>
+        <param name="right">A propriedade <see cref="P:System.Linq.Expressions.BinaryExpression.Right" /> do resultado.</param>
+        <summary>Cria uma nova expressão que é parecida com esta, mas usando os filhos fornecidos. Se todos os filhos forem os mesmos, ela retornará esta expressão.</summary>
+        <returns>Essa expressão se nenhum filho foi alterado ou uma expressão com os filhos atualizados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

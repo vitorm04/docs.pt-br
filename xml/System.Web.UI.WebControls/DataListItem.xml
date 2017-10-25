@@ -1,0 +1,443 @@
+<Type Name="DataListItem" FullName="System.Web.UI.WebControls.DataListItem">
+  <TypeSignature Language="C#" Value="public class DataListItem : System.Web.UI.WebControls.WebControl, System.Web.UI.IDataItemContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataListItem extends System.Web.UI.WebControls.WebControl implements class System.Web.UI.IDataItemContainer, class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataListItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataItemContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um item em um controle <see cref="T:System.Web.UI.WebControls.DataList" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.DataListItem> objeto representa um item em uma <xref:System.Web.UI.WebControls.DataList> controle, como uma seção de cabeçalho, uma seção de rodapé ou um item de dados.  
+  
+ Itens de dados no <xref:System.Web.UI.WebControls.DataList> controle são armazenados em um <xref:System.Web.UI.WebControls.DataListItemCollection> que podem ser acessados usando o <xref:System.Web.UI.WebControls.DataList.Items%2A> propriedade do <xref:System.Web.UI.WebControls.DataList> controle.  
+  
+ Você pode usar um <xref:System.Web.UI.WebControls.DataListItem> para acessar programaticamente as propriedades de um item em uma <xref:System.Web.UI.WebControls.DataList> controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.Web.UI.WebControls.DataListItem> para exibir o conteúdo de cada item de dados no <xref:System.Web.UI.WebControls.DataList> controle.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[DataListItemCreated#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataListItemCreated/CS/datalistitemcreatedcs.aspx#1)]
+ [!code-aspx-vb[DataListItemCreated#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListItemCreated/VB/datalistitemcreatedvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataListItem (int itemIndex, System.Web.UI.WebControls.ListItemType itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 itemIndex, valuetype System.Web.UI.WebControls.ListItemType itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataListItem.#ctor(System.Int32,System.Web.UI.WebControls.ListItemType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice do item no <see cref="T:System.Web.UI.WebControls.DataList" /> controlar do <see cref="P:System.Web.UI.WebControls.DataList.Items" /> coleção.</param>
+        <param name="itemType">Um dos valores de <see cref="T:System.Web.UI.WebControls.ListItemType" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.DataListItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.DataListItem> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.DataListItem> classe.  
+  
+ [!code-csharp[Classic DataListItem.DataListItem Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataListItem.DataListItem Example/CS/source.cs#1)]
+ [!code-vb[Classic DataListItem.DataListItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataListItem.DataListItem Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlStyle">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.Style CreateControlStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.Style CreateControlStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataListItem.CreateControlStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> de objeto para o <see cref="T:System.Web.UI.WebControls.DataListItem" /> controle, que contém as propriedades de estilo para o controle.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> que contém as propriedades de estilo do controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente por desenvolvedores de controle, ao estender a funcionalidade do <xref:System.Web.UI.WebControls.DataListItem> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public virtual object DataItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataListItem.DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um item de dados associado ao objeto <see cref="T:System.Web.UI.WebControls.DataListItem" /> no controle <see cref="T:System.Web.UI.WebControls.DataList" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa um item de dados no controle <see cref="T:System.Web.UI.WebControls.DataList" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataListItem.DataItem%2A> para especificar ou determinar as propriedades de um item de dados associado a <xref:System.Web.UI.WebControls.DataListItem> objeto o <xref:System.Web.UI.WebControls.DataList> controle.  
+  
+> [!NOTE]
+>  Essa propriedade só se aplica a itens de dados a <xref:System.Web.UI.WebControls.DataList> controle. O <xref:System.Web.UI.WebControls.DataListItem.ItemType%2A> propriedade o <xref:System.Web.UI.WebControls.DataListItem> objeto deve ser definido como uma da <xref:System.Web.UI.WebControls.ListItemType> valores de enumeração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DataListItem.DataItem%2A> propriedade para exibir o conteúdo dos itens de dados no <xref:System.Web.UI.WebControls.DataList> controle.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[DataListItemCreated#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataListItemCreated/CS/datalistitemcreatedcs.aspx#1)]
+ [!code-aspx-vb[DataListItemCreated#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListItemCreated/VB/datalistitemcreatedvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public virtual int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataListItem.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do objeto <see cref="T:System.Web.UI.WebControls.DataListItem" /> da coleção <see cref="P:System.Web.UI.WebControls.DataList.Items" /> do controle.</summary>
+        <value>O índice do objeto <see cref="T:System.Web.UI.WebControls.DataListItem" /> da coleção <see cref="P:System.Web.UI.WebControls.DataList.Items" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataListItem.ItemIndex%2A> propriedade para determinar o número de índice a <xref:System.Web.UI.WebControls.DataListItem> de objeto o <xref:System.Web.UI.WebControls.DataList.Items%2A> coleção.  
+  
+> [!NOTE]
+>  Essa propriedade só se aplica a itens de dados a <xref:System.Web.UI.WebControls.DataList> controle. O <xref:System.Web.UI.WebControls.DataListItem.ItemType%2A> propriedade o <xref:System.Web.UI.WebControls.DataListItem> objeto deve ser definido como `ListItemType.Item`, `ListItemType.AlternatingItem`, `ListItemType.SelectedItem`, ou `ListItemType.EditItem`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DataListItem.ItemIndex%2A> propriedade para exibir o número de índice a <xref:System.Web.UI.WebControls.DataListItem> de objeto o <xref:System.Web.UI.WebControls.DataList.Items%2A> coleção do controle.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte[o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic DataListItem.ItemIndex Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataListItem.ItemIndex Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic DataListItem.ItemIndex Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataListItem.ItemIndex Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.ListItemType ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ListItemType ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataListItem.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListItemType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do item representado pelo objeto <see cref="T:System.Web.UI.WebControls.DataListItem" /> no controle <see cref="T:System.Web.UI.WebControls.DataList" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.ListItemType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataListItem.ItemType%2A> propriedade para determinar o tipo do item representado pelo <xref:System.Web.UI.WebControls.DataListItem> objeto. A tabela a seguir lista os vários tipos de item.  
+  
+|Tipo de item|Descrição|  
+|---------------|-----------------|  
+|`Header`|A seção de cabeçalho do <xref:System.Web.UI.WebControls.DataList> controle.|  
+|`Footer`|Seção de rodapé a <xref:System.Web.UI.WebControls.DataList> controle.|  
+|`Item`|Em um item de <xref:System.Web.UI.WebControls.DataList> controle.|  
+|`AlternatingItem`|Um item de alternância no <xref:System.Web.UI.WebControls.DataList> controle.|  
+|`SelectedItem`|O item selecionado no <xref:System.Web.UI.WebControls.DataList> controle.|  
+|`EditItem`|O item selecionado para edição no <xref:System.Web.UI.WebControls.DataList> controle.|  
+|`Separator`|Um separador entre os itens do <xref:System.Web.UI.WebControls.DataList> controle.|  
+|`Pager`|Seção da página seleção de <xref:System.Web.UI.WebControls.DataList> controle.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DataListItem.ItemType%2A> propriedade para determinar o tipo de item do item representado pelo <xref:System.Web.UI.WebControls.DataListItem> objeto. A ordem em que os itens são criados no <xref:System.Web.UI.WebControls.DataList> controle é exibido junto com o tipo de item.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[DataListItemCreated#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataListItemCreated/CS/datalistitemcreatedcs.aspx#1)]
+ [!code-aspx-vb[DataListItemCreated#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListItemCreated/VB/datalistitemcreatedvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataListItem.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Determina se o evento para o controle é passado a hierarquia de controle de servidor.</summary>
+        <returns>
+          <see langword="true" />Se o evento foi cancelado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente por desenvolvedores de controle ao estender a funcionalidade do <xref:System.Web.UI.WebControls.DataListItem> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderItem">
+      <MemberSignature Language="C#" Value="public virtual void RenderItem (System.Web.UI.HtmlTextWriter writer, bool extractRows, bool tableLayout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderItem(class System.Web.UI.HtmlTextWriter writer, bool extractRows, bool tableLayout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataListItem.RenderItem(System.Web.UI.HtmlTextWriter,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="extractRows" Type="System.Boolean" />
+        <Parameter Name="tableLayout" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto que contém o fluxo de saída para renderização no cliente.</param>
+        <param name="extractRows">
+          <see langword="true" />extrair linhas; Caso contrário, <see langword="false" />.</param>
+        <param name="tableLayout">
+          <see langword="true" />Para exibir como uma tabela; Caso contrário, <see langword="false" />.</param>
+        <summary>Exibe o <see cref="T:System.Web.UI.WebControls.DataListItem" /> objeto no cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataListItem.RenderItem%2A> método para exibir o <xref:System.Web.UI.WebControls.DataListItem> objeto no cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItemType">
+      <MemberSignature Language="C#" Value="protected virtual void SetItemType (System.Web.UI.WebControls.ListItemType itemType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void SetItemType(valuetype System.Web.UI.WebControls.ListItemType itemType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataListItem.SetItemType(System.Web.UI.WebControls.ListItemType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Um valor <see cref="T:System.Web.UI.WebControls.ListItemType" />.</param>
+        <summary>Define o atual <see cref="P:System.Web.UI.WebControls.DataListItem.ItemType" /> propriedade para o <see cref="T:System.Web.UI.WebControls.DataListItem" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente por desenvolvedores de controle ao estender a funcionalidade de um <xref:System.Web.UI.WebControls.DataListItem> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public override bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataListItem.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle deve definir o atributo <see langword="disabled" /> do elemento HTML renderizado para "desabilitado" quando a propriedade do controle <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" /> é <see langword="false" />.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> propriedade indica uma versão do ASP.NET inferior <c>4.0</c>; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica como ASP.NET devem renderizar HTML para um controle quando o controle está desabilitado. Se essa propriedade for `true`, o ASP.NET processa um `disabled` atributo quando um controle está desabilitado. Se essa propriedade for `false`, o ASP.NET processa um `class` atributo quando um controle está desabilitado. Para obter mais informações, consulte <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DataItem">
+      <MemberSignature Language="C#" Value="object System.Web.UI.IDataItemContainer.DataItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Web.UI.IDataItemContainer.DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataListItem.System#Web#UI#IDataItemContainer#DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IDataItemContainer.DataItem" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o valor a ser usado quando são executadas operações de associação de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você deve usar o <xref:System.Web.UI.WebControls.DataListItem.DataItem%2A?displayProperty=nameWithType> propriedade para recuperar o objeto de dados para um <xref:System.Web.UI.WebControls.DataListItem> objeto.  
+  
+ O <xref:System.Web.UI.WebControls.DataListItem.System%23Web%23UI%23IDataItemContainer%23DataItem%2A> membro é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.DataListItem> é convertida em uma interface de <xref:System.Web.UI.IDataItemContainer>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Para definir uma implementação personalizada para recuperar o objeto de dados para um <see cref="T:System.Web.UI.WebControls.DataListItem" />, substituir o <see cref="P:System.Web.UI.WebControls.DataListItem.DataItem" /> membro. A implementação de interface explícita usa o <see cref="P:System.Web.UI.WebControls.DataListItem.DataItem" /> propriedade para recuperar o objeto de dados associados.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DataItemIndex">
+      <MemberSignature Language="C#" Value="int System.Web.UI.IDataItemContainer.DataItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Web.UI.IDataItemContainer.DataItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataListItem.System#Web#UI#IDataItemContainer#DataItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IDataItemContainer.DataItemIndex" />.</summary>
+        <value>Um inteiro que representa o índice do item de dados associado a um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você deve usar o <xref:System.Web.UI.WebControls.DataListItem.ItemIndex%2A?displayProperty=nameWithType> propriedade para recuperar o índice do item de dados para um <xref:System.Web.UI.WebControls.DataListItem> objeto.  
+  
+ O <xref:System.Web.UI.WebControls.DataListItem.System%23Web%23UI%23IDataItemContainer%23DataItemIndex%2A> membro é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.DataListItem> é convertida em uma interface de <xref:System.Web.UI.IDataItemContainer>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Para definir uma implementação personalizada para recuperar o índice do item de dados para um <see cref="T:System.Web.UI.WebControls.DataListItem" />, substituir o <see cref="P:System.Web.UI.WebControls.DataListItem.ItemIndex" /> membro. A implementação de interface explícita usa o <see cref="P:System.Web.UI.WebControls.DataListItem.ItemIndex" /> propriedade para recuperar o índice do item de dados.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DisplayIndex">
+      <MemberSignature Language="C#" Value="int System.Web.UI.IDataItemContainer.DisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Web.UI.IDataItemContainer.DisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataListItem.System#Web#UI#IDataItemContainer#DisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IDataItemContainer.DisplayIndex" />.</summary>
+        <value>Um inteiro que representa a posição do item de dados, como exibido em um controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você deve usar o <xref:System.Web.UI.WebControls.DataListItem.ItemIndex%2A?displayProperty=nameWithType> propriedade para recuperar o índice do item de dados para um <xref:System.Web.UI.WebControls.DataListItem> objeto.  
+  
+ O <xref:System.Web.UI.WebControls.DataListItem.System%23Web%23UI%23IDataItemContainer%23DisplayIndex%2A> membro é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.DataListItem> é convertida em uma interface de <xref:System.Web.UI.IDataItemContainer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

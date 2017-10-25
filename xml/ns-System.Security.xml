@@ -1,0 +1,6 @@
+<Namespace Name="System.Security">
+  <Docs>
+    <summary>O <see cref="N:System.Security" /> namespace fornece a estrutura subjacente a common language em tempo de execução do sistema de segurança, incluindo classes base para permissões.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

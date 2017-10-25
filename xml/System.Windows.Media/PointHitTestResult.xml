@@ -1,0 +1,115 @@
+<Type Name="PointHitTestResult" FullName="System.Windows.Media.PointHitTestResult">
+  <TypeSignature Language="C#" Value="public class PointHitTestResult : System.Windows.Media.HitTestResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PointHitTestResult extends System.Windows.Media.HitTestResult" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.PointHitTestResult" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.HitTestResult</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os resultados de um teste de clique que usa um <see cref="T:System.Windows.Point" /> como um teste de clique parâmetro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode executar um teste de clique em um objeto visual usando um <xref:System.Windows.Media.Geometry> como um teste de clique parâmetro e retornar o resultado como uma <xref:System.Windows.Media.GeometryHitTestResult>. Para obter mais informações, consulte [como: ocorrências teste usando geometria como um parâmetro](~/docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como recuperar o <xref:System.Windows.Media.PointHitTestResult> retornar valor o <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> método.  
+  
+ [!code-csharp[HitTestingOverview#100](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#100)]
+ [!code-vb[HitTestingOverview#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#100)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PointHitTestResult (System.Windows.Media.Visual visualHit, System.Windows.Point pointHit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Visual visualHit, valuetype System.Windows.Point pointHit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.PointHitTestResult.#ctor(System.Windows.Media.Visual,System.Windows.Point)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualHit" Type="System.Windows.Media.Visual" />
+        <Parameter Name="pointHit" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="visualHit">O <see cref="T:System.Windows.Media.Visual" /> objeto que representa o resultado de teste de clique.</param>
+        <param name="pointHit">O <see cref="T:System.Windows.Point" /> objeto que representa o resultado de teste de clique.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.PointHitTestResult" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como substituir o padrão ocorrências suporte de teste em um objeto visual definida pelo usuário. Nesse caso, um novo <xref:System.Windows.Media.PointHitTestResult> é criado e retornado do método substituído.  
+  
+ [!code-csharp[HitTestingOverview#107](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#107)]
+ [!code-vb[HitTestingOverview#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#107)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointHit">
+      <MemberSignature Language="C#" Value="public System.Windows.Point PointHit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point PointHit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.PointHitTestResult.PointHit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de ponto que é retornado de um resultado de teste de clique.</summary>
+        <value>Um <see cref="T:System.Windows.Point" /> objeto que representa o resultado de teste de clique.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualHit">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Visual VisualHit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Visual VisualHit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.PointHitTestResult.VisualHit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto visual que é retornado de um resultado de teste de clique.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Visual" /> objeto que representa o resultado de teste de clique.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.PointHitTestResult.VisualHit%2A> valor potencialmente pode representar vários objetos visual durante um teste de clique único. O método do retorno de chamada do teste de clique define as ações que são realizadas quando um teste de clique é identificado em um determinado objeto visual na árvore visual. Depois de executar as ações, você retornar um <xref:System.Windows.Media.HitTestResultBehavior> valor que determina se deseja continuar a enumeração de quaisquer outros objetos visuais. A ordem de enumeração de objetos retornados de visual é por ordem z no plano de renderização.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar o <xref:System.Windows.Media.PointHitTestResult.VisualHit%2A> função de retorno de chamada de resultados de propriedade em um teste de clique.  
+  
+ [!code-csharp[HitTestingOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#102)]
+ [!code-vb[HitTestingOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

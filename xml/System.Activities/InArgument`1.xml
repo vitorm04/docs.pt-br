@@ -1,0 +1,407 @@
+<Type Name="InArgument&lt;T&gt;" FullName="System.Activities.InArgument&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class InArgument&lt;T&gt; : System.Activities.InArgument" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InArgument`1&lt;T&gt; extends System.Activities.InArgument" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.InArgument`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Activities.InArgument</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Activities.XamlIntegration.InArgumentConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Expression")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Activities.XamlIntegration.ArgumentValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">O tipo de dados do <see cref="T:System.Activities.InArgument`1" />.</typeparam>
+    <summary>Um terminal de associação que representa o fluxo de dados em uma atividade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Neste exemplo, um fluxo de trabalho é criado que consiste em um único <xref:System.Activities.Statements.WriteLine> atividade. O <xref:System.Activities.Statements.WriteLine> atividade tem um <xref:System.Activities.InArgument%601> chamado <xref:System.Activities.Statements.WriteLine.Text%2A>. O aplicativo host cria uma instância do fluxo de trabalho e passa uma cadeia de caracteres, que mapeia para o <xref:System.Activities.Statements.WriteLine.Text%2A> argumento do <xref:System.Activities.Statements.WriteLine> e é usado pelo <xref:System.Activities.Statements.WriteLine> atividade.  
+  
+```csharp  
+Activity wf = new WriteLine();  
+  
+Dictionary<string, object> wfParams = new Dictionary<string, object>();  
+wfParams.Add("Text", "Hello World!");  
+  
+WorkflowInvoker.Invoke(wf, wfParams);  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InArgument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.InArgument`1" /> usando valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InArgument (System.Activities.Activity&lt;T&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Activity`1&lt;!T&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.#ctor(System.Activities.Activity{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Activities.Activity&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O valor do argumento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.InArgument`1" /> usando o <see cref="T:System.Activities.Activity`1" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InArgument (System.Activities.DelegateArgument delegateArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.DelegateArgument delegateArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.#ctor(System.Activities.DelegateArgument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="delegateArgument" Type="System.Activities.DelegateArgument" />
+      </Parameters>
+      <Docs>
+        <param name="delegateArgument">O valor do argumento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.InArgument`1" /> usando o <see cref="T:System.Activities.DelegateArgument" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InArgument (System.Activities.Variable variable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Variable variable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.#ctor(System.Activities.Variable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="variable" Type="System.Activities.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="variable">Os dados que são passados por esse argumento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.InArgument`1" /> usando o <see cref="T:System.Activities.Variable" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InArgument (System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,T&gt;&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, !T&gt;&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.#ctor(System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,`0}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,T&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O valor do argumento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.InArgument`1" /> classe usando a expressão especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InArgument (T constValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T constValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="constValue" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="constValue">O valor do argumento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.InArgument`1" /> classe usando o valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `constValue` parâmetro é compartilhado entre todas as instâncias de fluxo de trabalho usando essa definição de fluxo de trabalho. Por exemplo, se um `List<string>` foi fornecido como um `constValue` três instâncias foram criadas e todas as três instâncias deve estar acessando o mesmo `List<string>`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity&lt;T&gt; Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity`1&lt;!T&gt; Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.InArgument`1.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Activities.Activity`1" /> que representa o valor deste <see cref="T:System.Activities.InArgument`1" />.</summary>
+        <value>Uma atividade que representa o valor do argumento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromDelegateArgument">
+      <MemberSignature Language="C#" Value="public static System.Activities.InArgument&lt;T&gt; FromDelegateArgument (System.Activities.DelegateArgument delegateArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.InArgument`1&lt;!T&gt; FromDelegateArgument(class System.Activities.DelegateArgument delegateArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.FromDelegateArgument(System.Activities.DelegateArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegateArgument" Type="System.Activities.DelegateArgument" />
+      </Parameters>
+      <Docs>
+        <param name="delegateArgument">O valor do argumento.</param>
+        <summary>Inicializa e retorna um novo <see cref="T:System.Activities.InArgument`1" /> usando especificado <see cref="T:System.Activities.DelegateArgument" />.</summary>
+        <returns>O argumento de novo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromExpression">
+      <MemberSignature Language="C#" Value="public static System.Activities.InArgument&lt;T&gt; FromExpression (System.Activities.Activity&lt;T&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.InArgument`1&lt;!T&gt; FromExpression(class System.Activities.Activity`1&lt;!T&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.FromExpression(System.Activities.Activity{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Activities.Activity&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O valor do argumento.</param>
+        <summary>Inicializa e retorna um novo <see cref="T:System.Activities.InArgument`1" /> usando especificado <see cref="T:System.Activities.Activity`1" />.</summary>
+        <returns>O argumento de novo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromValue">
+      <MemberSignature Language="C#" Value="public static System.Activities.InArgument&lt;T&gt; FromValue (T constValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.InArgument`1&lt;!T&gt; FromValue(!T constValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.FromValue(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constValue" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="constValue">O valor do argumento,</param>
+        <summary>Inicializa e retorna um novo <see cref="T:System.Activities.InArgument`1" /> usando o valor especificado.</summary>
+        <returns>O argumento de novo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromVariable">
+      <MemberSignature Language="C#" Value="public static System.Activities.InArgument&lt;T&gt; FromVariable (System.Activities.Variable variable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.InArgument`1&lt;!T&gt; FromVariable(class System.Activities.Variable variable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.FromVariable(System.Activities.Variable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.Activities.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="variable">O valor do argumento.</param>
+        <summary>Inicializa e retorna um novo <see cref="T:System.Activities.InArgument`1" /> usando especificado <see cref="T:System.Activities.Variable" />.</summary>
+        <returns>O argumento de novo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public T Get (System.Activities.ActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T Get(class System.Activities.ActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.Get(System.Activities.ActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto da atividade atual.</param>
+        <summary>Obtém o valor da <see cref="T:System.Activities.InArgument`1" /> usando o contexto da atividade especificada.</summary>
+        <returns>O valor do argumento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Activities.InArgument&lt;T&gt; (System.Activities.Activity&lt;T&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Activities.InArgument`1&lt;!T&gt; op_Implicit(class System.Activities.Activity`1&lt;!T&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.op_Implicit(System.Activities.Activity{`0})~System.Activities.InArgument{`0}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Activities.Activity&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expression">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Activities.InArgument&lt;T&gt; (System.Activities.DelegateArgument delegateArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Activities.InArgument`1&lt;!T&gt; op_Implicit(class System.Activities.DelegateArgument delegateArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.op_Implicit(System.Activities.DelegateArgument)~System.Activities.InArgument{`0}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegateArgument" Type="System.Activities.DelegateArgument" />
+      </Parameters>
+      <Docs>
+        <param name="delegateArgument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Activities.InArgument&lt;T&gt; (System.Activities.Variable variable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Activities.InArgument`1&lt;!T&gt; op_Implicit(class System.Activities.Variable variable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.op_Implicit(System.Activities.Variable)~System.Activities.InArgument{`0}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.Activities.Variable" />
+      </Parameters>
+      <Docs>
+        <param name="variable">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Activities.InArgument&lt;T&gt; (T constValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Activities.InArgument`1&lt;!T&gt; op_Implicit(!T constValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.op_Implicit(`0)~System.Activities.InArgument{`0}" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constValue" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="constValue">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (System.Activities.ActivityContext context, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(class System.Activities.ActivityContext context, !T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.InArgument`1.Set(System.Activities.ActivityContext,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.ActivityContext" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto da atividade atual.</param>
+        <param name="value">O novo valor.</param>
+        <summary>Define o valor da <see cref="T:System.Activities.InArgument`1" /> usando o valor especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

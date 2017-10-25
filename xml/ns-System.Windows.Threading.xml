@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Threading">
+  <Docs>
+    <summary>Contém tipos para dar suporte a WPF Windows Presentation Foundation () threading sistema.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

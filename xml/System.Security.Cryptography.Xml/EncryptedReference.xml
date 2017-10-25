@@ -1,0 +1,337 @@
+<Type Name="EncryptedReference" FullName="System.Security.Cryptography.Xml.EncryptedReference">
+  <TypeSignature Language="C#" Value="public abstract class EncryptedReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EncryptedReference extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.EncryptedReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a classe base abstrata usada na criptografia XML da qual as classes <see cref="T:System.Security.Cryptography.Xml.CipherReference" />, <see cref="T:System.Security.Cryptography.Xml.KeyReference" /> e <see cref="T:System.Security.Cryptography.Xml.DataReference" /> são derivadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre os padrões de criptografia de XML, consulte http://www.w3.org/TR/xml-encryption-req.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Security.Cryptography.Xml.CipherReference.GetXml%2A> método o <xref:System.Security.Cryptography.Xml.CipherReference> classe para gravar os valores de XML para o console.  
+  
+ [!code-cpp[CipherReference2#1](~/samples/snippets/cpp/VS_Snippets_CLR/CipherReference2/CPP/example.cpp#1)]
+ [!code-csharp[CipherReference2#1](~/samples/snippets/csharp/VS_Snippets_CLR/CipherReference2/CS/example.cs#1)]
+ [!code-vb[CipherReference2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CipherReference2/VB/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EncryptedReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.EncryptedReference" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa uma classe que é uma classe base abstrata usada na criptografia de XML do qual o <xref:System.Security.Cryptography.Xml.CipherReference>, <xref:System.Security.Cryptography.Xml.KeyReference>, e <xref:System.Security.Cryptography.Xml.DataReference> derivam de classes. A menos que tenha um cenário em que você precisa criar uma seção de referência personalizada em XML, use uma das classes herdadas.  
+  
+ Para obter mais informações sobre os padrões de criptografia de XML, consulte http://www.w3.org/TR/xml-encryption-req.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EncryptedReference (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedReference.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O URI Uniform Resource Identifier () que aponta para os dados a serem criptografados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.EncryptedReference" /> classe usando o Uniform Resource identificador (URI especificado).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `uri` parâmetro fornece informações sobre o local dos dados a serem criptografados.  
+  
+ Este construtor inicializa uma classe que é uma classe base abstrata usada na criptografia de XML do qual o <xref:System.Security.Cryptography.Xml.CipherReference>, <xref:System.Security.Cryptography.Xml.KeyReference>, e <xref:System.Security.Cryptography.Xml.DataReference> derivam de classes. A menos que tenha um cenário em que você precisa criar uma seção de referência personalizada em XML, use uma das classes herdadas.  
+  
+ Para obter mais informações sobre os padrões de criptografia de XML, consulte http://www.w3.org/TR/xml-encryption-req.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="uri" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EncryptedReference (string uri, System.Security.Cryptography.Xml.TransformChain tc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string uri, class System.Security.Cryptography.Xml.TransformChain tc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedReference.#ctor(System.String,System.Security.Cryptography.Xml.TransformChain)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="transformChain" Type="System.Security.Cryptography.Xml.TransformChain" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O URI Uniform Resource Identifier () que aponta para os dados a serem criptografados.</param>
+        <param name="tc">To be added.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.EncryptedReference" /> classe usando a cadeia de identificador de recurso uniforme (URI) e a transformação especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é uma classe base abstrata usada na criptografia de XML do qual o <xref:System.Security.Cryptography.Xml.CipherReference>, <xref:System.Security.Cryptography.Xml.KeyReference>, e <xref:System.Security.Cryptography.Xml.DataReference> derivam de classes. A menos que tenha um cenário em que você precisa criar uma seção de referência personalizada em XML, use uma das classes herdadas.  
+  
+ Para obter mais informações sobre os padrões de criptografia de XML, consulte http://www.w3.org/TR/xml-encryption-req.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="uri" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTransform">
+      <MemberSignature Language="C#" Value="public void AddTransform (System.Security.Cryptography.Xml.Transform transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddTransform(class System.Security.Cryptography.Xml.Transform transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedReference.AddTransform(System.Security.Cryptography.Xml.Transform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transform" Type="System.Security.Cryptography.Xml.Transform" />
+      </Parameters>
+      <Docs>
+        <param name="transform">Um <see cref="T:System.Security.Cryptography.Xml.Transform" /> objeto a ser adicionado à cadeia de transformação.</param>
+        <summary>Adiciona um <see cref="T:System.Security.Cryptography.Xml.Transform" /> objeto para a cadeia de transformação atual de um <see cref="T:System.Security.Cryptography.Xml.EncryptedReference" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheValid">
+      <MemberSignature Language="C#" Value="protected bool CacheValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CacheValid" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedReference.CacheValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o cache é válido.</summary>
+        <value>
+          <see langword="true" />Se o cache é válido. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O cache é usado para manter os dados criptografados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedReference.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação XML de um <see cref="T:System.Security.Cryptography.Xml.EncryptedReference" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlElement" /> objeto que representa os valores de <see langword="&lt;EncryptedReference&gt;" /> elemento na criptografia XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para produzir saída de informações XML contidas em um <xref:System.Security.Cryptography.Xml.EncryptedReference> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Security.Cryptography.Xml.CipherReference.GetXml%2A> método o <xref:System.Security.Cryptography.Xml.CipherReference> classe para gravar os valores de XML para o console.  
+  
+ [!code-cpp[CipherReference2#1](~/samples/snippets/cpp/VS_Snippets_CLR/CipherReference2/CPP/example.cpp#1)]
+ [!code-csharp[CipherReference2#1](~/samples/snippets/csharp/VS_Snippets_CLR/CipherReference2/CS/example.cs#1)]
+ [!code-vb[CipherReference2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CipherReference2/VB/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">A propriedade <see cref="P:System.Security.Cryptography.Xml.EncryptedReference.ReferenceType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public virtual void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedReference.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Xml.XmlElement" /> objeto que representa um elemento XML.</param>
+        <summary>Carrega um elemento XML em um <see cref="T:System.Security.Cryptography.Xml.EncryptedReference" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferenceType">
+      <MemberSignature Language="C#" Value="protected string ReferenceType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReferenceType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedReference.ReferenceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um tipo de referência.</summary>
+        <value>O tipo de referência dos dados criptografados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida ao usar o <xref:System.Security.Cryptography.Xml.CipherReference>, <xref:System.Security.Cryptography.Xml.KeyReference>, e <xref:System.Security.Cryptography.Xml.DataReference> classes derivadas. Por exemplo, um <xref:System.Security.Cryptography.Xml.CipherReference> objeto define esse valor de propriedade <xref:System.Security.Cryptography.Xml.CipherReference>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformChain">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.TransformChain TransformChain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.TransformChain TransformChain" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedReference.TransformChain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.TransformChain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de transformação de um <see cref="T:System.Security.Cryptography.Xml.EncryptedReference" /> objeto.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.Xml.TransformChain" /> objeto que descreve as transformações usadas em dados criptografados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptedReference.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de recursos uniforme (URI) de um <see cref="T:System.Security.Cryptography.Xml.EncryptedReference" /> objeto.</summary>
+        <value>O identificador de recursos uniforme (URI) da <see cref="T:System.Security.Cryptography.Xml.EncryptedReference" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para indicar o local dos dados criptografados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A propriedade <see cref="P:System.Security.Cryptography.Xml.EncryptedReference.Uri" /> foi definida como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

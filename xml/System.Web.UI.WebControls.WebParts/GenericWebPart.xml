@@ -1,0 +1,617 @@
+<Type Name="GenericWebPart" FullName="System.Web.UI.WebControls.WebParts.GenericWebPart">
+  <TypeSignature Language="C#" Value="public class GenericWebPart : System.Web.UI.WebControls.WebParts.WebPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GenericWebPart extends System.Web.UI.WebControls.WebParts.WebPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.GenericWebPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.WebPart</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula os controles de servidor que não são <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controla para que eles possam aparecer e se comportam como true <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles em tempo de execução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> existe controle para fornecer um wrapper de tempo de execução para controles de servidor que não são <xref:System.Web.UI.WebControls.WebParts.WebPart> controla, para que esses controles podem ser usados em páginas de Web Parts e aplicativos. Quando os desenvolvedores adicionar controles de servidor – como os controles de usuário, controles de servidor ASP.NET ou controles personalizados existentes – para um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> controle, o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle automaticamente ajusta os controles de servidor em tempo de execução para que eles podem apresentar a mesma funcionalidade como true <xref:System.Web.UI.WebControls.WebParts.WebPart> controles.  
+  
+ A tabela a seguir compara e contrasta <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controles e <xref:System.Web.UI.WebControls.WebParts.WebPart> controles.  
+  
+|Controle <xref:System.Web.UI.WebControls.WebParts.GenericWebPart>|Controle <xref:System.Web.UI.WebControls.WebParts.WebPart>|  
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Existe para equipar os controles de servidor que não são <xref:System.Web.UI.WebControls.WebParts.WebPart> controles com funcionalidade de Web Parts, portanto que qualquer ASP.NET, personalizado ou controle de usuário pode participar de aplicativos Web Parts.|Existe para criar controles ASP.NET personalizados que têm funcionalidade nativa do Web Parts interna. Isso inclui a personalização, conexões, importação e exportação e recursos de arrastar e soltar.|  
+|Nunca é declarado na marcação de uma página. Ele existe somente para dispor controles de servidor em tempo de execução e para proporcionar o controle encapsulado (ou controle filho) a funcionalidade completa de um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.|Podem ser declarados na marcação de uma página em tempo de design, como um controle de servidor ASP.NET, exceto que ela é declarada em um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona.|  
+|Inclui e integra o controle filho as Web Parts do processo de personalização para que possa agir como um verdadeiro <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. Isso ocorre automaticamente, que torna simples para os desenvolvedores a usar os controles de servidor e controles de usuário em aplicativos Web Parts.|É incluído automaticamente no processo de personalização de Web Parts.|  
+|Pode ser acessado por meio de programação em tempo de execução (usando o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetGenericWebPart%2A> método e transmitindo a ele o filho controle de servidor), como um verdadeiro <xref:System.Web.UI.WebControls.WebParts.WebPart> controle ou um controle padrão do ASP.NET.|Pode ser acessado por meio de programação em tempo de execução, como um controle padrão do ASP.NET.|  
+  
+ Os usuários se beneficiam de <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle porque ele fornece uma experiência de usuário consistente. Qualquer controle de servidor pode ser feita para funcionar como um <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar e têm os mesmos elementos de interface de usuário consistente como verbos, ícones, um título e um cabeçalho. Os desenvolvedores aproveitar o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle porque ele permite a reutilização de controles de usuário existentes e controles de servidor em aplicativos Web Parts.  
+  
+> [!NOTE]
+>  Quando você criar páginas de Web Parts, você não precisa fazer nada para permitir um controle de usuário existente ou um controle personalizado a ser encapsulado com o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle. Basta adicionar o controle de servidor ou o usuário seja um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona, programaticamente ou por declará-la na marcação da página, e o controle de Web Parts definido automaticamente ajusta o controle com um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> objeto em tempo de execução.  
+  
+ Porque os controles de servidor que são colocados em <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zonas são encapsuladas com um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle em tempo de execução, os desenvolvedores podem usar servidor comum e controles de usuário exatamente como se fossem <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Observe que, se você declarar personalizado controles que herdam a base de <xref:System.Web.UI.Control> classe dentro de um <xref:System.Web.UI.WebControls.WebParts.WebPartZone>, esses controles não oferece suporte para o uso de intrínseca <xref:System.Web.UI.WebControls.WebParts.WebPart> propriedades. Portanto, você não pode declarar o <xref:System.Web.UI.WebControls.WebParts.IWebPart> propriedades sobre esses controles, incluindo propriedades, como o <xref:System.Web.UI.WebControls.WebParts.IWebPart.Title%2A> propriedade e o <xref:System.Web.UI.WebControls.WebParts.IWebPart.Description%2A> propriedade. Em contraste, os controles de outros tipos de servidor (como <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, controles de usuário e controles personalizados que herdam de <xref:System.Web.UI.WebControls.WebControl>) pode declarar essas propriedades, porque eles oferecem suporte ao uso de propriedades expando.  
+  
+ Expando propriedades são, na verdade, cadeias de caracteres que podem ser adicionadas a uma classe dinamicamente como uma propriedade, por meio do <xref:System.Web.UI.IAttributeAccessor> interface. Controles que implementam esta interface, incluindo o <xref:System.Web.UI.WebControls.WebControl> classe e seus filhos, pode usar propriedades expando. Porque a base de <xref:System.Web.UI.Control> classe não oferece suporte a propriedades de expando, quando um controle personalizado que herda do <xref:System.Web.UI.Control> classe será colocada em uma <xref:System.Web.UI.WebControls.WebParts.WebPartZone> e encapsulado com uma <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle em tempo de execução, o conjunto de controles de Web Parts não é possível adicionar dinamicamente intrínseca <xref:System.Web.UI.WebControls.WebParts.IWebPart> propriedades para o controle personalizado. Você tem duas opções nesse caso. Você pode usar o controle personalizado sem o <xref:System.Web.UI.WebControls.WebParts.IWebPart> propriedades, ou você pode implementar o <xref:System.Web.UI.WebControls.WebParts.IWebPart> interface no controle personalizado, permitindo que ele use as propriedades.  
+  
+ Como um exemplo de como os controles que herdam <xref:System.Web.UI.WebControls.WebControl> pode usar o <xref:System.Web.UI.WebControls.WebParts.IWebPart> propriedades, se você declarar um ASP.NET <xref:System.Web.UI.WebControls.Calendar> controle na marcação de uma página (dentro de um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona) em tempo de design, mesmo que esse controle não herda do <xref:System.Web.UI.WebControls.WebParts.WebPart> de classe e não contém <xref:System.Web.UI.WebControls.WebParts.WebPart> membros, você pode ainda tratá-la exatamente como um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. Você pode declarar <xref:System.Web.UI.WebControls.WebParts.WebPart> controlam propriedades no calendário, tais como <xref:System.Web.UI.WebControls.WebParts.IWebPart.Title%2A>, <xref:System.Web.UI.WebControls.WebParts.IWebPart.Description%2A>e outros. Em tempo de execução, você pode usar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetGenericWebPart%2A> método, que retorna o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle dinamicamente o controle de calendário de encapsulamento e trabalhar com ele por meio de programação, exatamente como você faria com um <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar, com acesso a todos os mesmos métodos, propriedades e eventos.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle tem uma propriedade crítica que permite que você acesse seu controle de servidor subjacente: o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> propriedade. Essa propriedade permite aos desenvolvedores acessar programaticamente o controle de servidor. O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> propriedade também é usada pelo <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle para acessar os dados de personalização do controle filho e para executar a autorização, caso o <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> está definida.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle tem várias propriedades, que substituem as propriedades herdadas da base de <xref:System.Web.UI.WebControls.WebParts.WebPart> classe. Conforme observado, você pode usar essas propriedades com qualquer controle filho, para que ele pode se comportar como um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. Uma propriedade importante é o <xref:System.Web.UI.WebControls.WebParts.WebPart.ExportMode%2A> propriedade; ela determina se todas as propriedades exportáveis, ou apenas aqueles marcados como não confidencial, pode ser exportada. As propriedades e orientada a interface do usuário é herdado da <xref:System.Web.UI.WebControls.WebParts.WebPart> classe, como <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl%2A>, <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Description%2A>, <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Height%2A>, <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Title%2A>, <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleUrl%2A>, e <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Width%2A>, pode ser definida na marcação declarativa para qualquer controle de servidor que é colocada em um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona.  
+  
+ Métodos importantes no <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> classe inclui o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateControlCollection%2A> método, que cria a coleção de controles (incluindo controles filho) associada com um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle e o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Render%2A> método, que delega todas as renderizações aos controles filho encapsulado. Os construtores no <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> classe são protegidos e são destinadas para uso interno ou para cenários de extensibilidade.  
+  
+ Há algumas informações adicionais úteis para trabalhar com <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controles. Se você deseja definir valores padrão para as propriedades substituídas no <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> classe, o controle de usuário ou controle de servidor personalizado pode implementar o <xref:System.Web.UI.WebControls.WebParts.IWebPart> e <xref:System.Web.UI.WebControls.WebParts.IWebActionable> interfaces e substituir seus membros. Em tempo de execução, o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle obterá seus valores para as propriedades implementadas do controle filho que implementa as interfaces. Se o seu controle define qualquer uma de suas propriedades como personalizável (usando o `Personalizable` atributo de metadados), o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle habilita automaticamente as propriedades de personalização em tempo de execução, assim como propriedades personalizáveis em um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ Se você quiser fornecer recursos de edição de Web Parts para seu controle, você pode implementar o <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface. No tempo de execução, quando o <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método é chamado, o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> código do controle para o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.WebBrowsableObject%2A> propriedade chamará a mesma propriedade no controle filho e usar a implementação do controle filho para criar personalizado associado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle quebra automaticamente um controle de servidor que não é um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle em tempo de execução.  
+  
+ A primeira parte do exemplo de código contém uma página de Web Parts com dois <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controles. Dentro de cada região é um controle de servidor padrão do ASP.NET. Como os controles estão em um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zona, eles serão automaticamente quebrados com um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controlar quando a página é compilada. Portanto, você pode declarar <xref:System.Web.UI.WebControls.WebParts.WebPart> classe propriedades nesses controles. Depois de carregar a página em um navegador, se você clicar no **exibir todos os valores de propriedade** botão, os detalhes para cada controle são exibidos em um rótulo. Para mostrar como o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controlar funciona, o <xref:System.Web.UI.WebControls.Calendar> controle na primeira zona tem algumas do <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> propriedades definidas na marcação declarativa de página. aspx, enquanto o <xref:System.Web.UI.WebControls.BulletedList> controle não. Depois de carregar a página, observe as diferenças entre os valores de propriedade para os dois controles, e que têm um pai <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#1)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#1)]  
+  
+ A segunda parte do exemplo de código mostra uma classe parcial que acessa algumas propriedades do <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controlar programaticamente. Observe que no `Page_Load` método, o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetGenericWebPart%2A> método é usado para recuperar a instância de tempo de execução do <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle que envolve um controle do servidor. Essa abordagem de obter uma referência ao pai <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle permite que você trabalhar programaticamente com um controle de servidor ou usuário comum, como se fosse um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle em tempo de execução.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#3)]
+ [!code-vb[WebParts_GenericWebPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Há algumas ocasiões em que é necessário para herdam o <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> classe. Desse caso seria se um desenvolvedor deseja implementar alguma ação personalizada no construtor quando uma <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle é criado. Por exemplo, você talvez queira armazenar o controle filho em algum lugar que não seja a coleção de controle dentro de <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> classe. Se você herdar o <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> classe, você também precisa herdar o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> classe e substituir seu <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.CreateWebPart(System.Web.UI.Control)" /> método habilitá-lo para criar o controle personalizado.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected GenericWebPart (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.GenericWebPart.#ctor(System.Web.UI.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle de servidor que se torna o controle filho de <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> instância do controle.</param>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle passando uma referência a um controle que se torna o controle filho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.%23ctor%28System.Web.UI.Control%29> construtor é chamado pelo <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controlar seu <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateWebPart%2A> método para inicializar uma instância de um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle passando uma referência a um controle de servidor filho. Após o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> objeto é criado, você pode referenciar o controle filho usando o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="control" /> é do tipo <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />.  
+  
+ \- ou -  
+  
+ <paramref name="control" />tem um <see langword="null" /> ou vazio <see cref="P:System.Web.UI.Control.ID" /> propriedade.  
+  
+ \- ou -  
+  
+ <paramref name="control" />tem sido o cache de saída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CatalogIconImageUrl">
+      <MemberSignature Language="C#" Value="public override string CatalogIconImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CatalogIconImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem que representa um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle em um catálogo de controles.</summary>
+        <value>Uma cadeia de caracteres que representa a URL para uma imagem usada para representar o controle em um catálogo. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicativos Web Parts geralmente fornecem um catálogo (ou lista) de controles que os usuários podem adicionar a uma página. O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl%2A> propriedade em um controle contém a URL para uma imagem que representa o controle quando ele aparece em um catálogo. Essa propriedade substitui a propriedade base para que você pode acessar a propriedade do controle filho como se fosse uma verdadeira <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ Você pode definir valores para a propriedade do controle na marcação declarativa de uma página da Web, bem como por meio de programação. Para fornecer um valor padrão para a propriedade sempre que o controle é usado, você pode implementar o <xref:System.Web.UI.WebControls.WebParts.IWebPart> interface.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático e declarativo do <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl%2A> propriedade. O código-fonte completo para o exemplo foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> tópico de visão geral.  
+  
+ A primeira parte do exemplo de código mostra como o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl%2A> propriedade é definida declarativamente em um controle de servidor em um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#2)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#2)]  
+  
+ A segunda parte do exemplo de código demonstra o método que acessa programaticamente o valor da propriedade quando um usuário clica o **exibir todos os valores de propriedade** botão.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildControl">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control ChildControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control ChildControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o controle filho que é encapsulado por um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle em tempo de execução.</summary>
+        <value>Um <see cref="T:System.Web.UI.Control" /> que se refere a controle filho encapsulado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> propriedade fornece os meios para acessar o controle filho encapsulado por um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle. Por exemplo, o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controlar usa o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> propriedade para extrair dados de personalização do controle filho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático do <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> propriedade. O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> propriedade é acessada por meio de programação para recuperar informações sobre o controle filho de um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle. O código-fonte completo para o exemplo foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> tópico de visão geral.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado pela estrutura de página do ASP.NET para notificar os controles do servidor que usam a implementação baseada em composição para criar os controles filho para preparar-se para um postback ou renderização.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o método base para criar uma coleção somente leitura que consiste o controle filho encapsulado por um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle.</summary>
+        <returns>Um <see cref="T:System.Web.UI.ControlCollection" /> que contém o controle filho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateControlCollection%2A> método cria uma coleção particular, somente leitura que consiste em um único controle, que é o controle filho de um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle. Essa coleção é criada para que os desenvolvedores não é possível adicionar manualmente outros controles para um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle.  
+  
+ Se você quiser criar um personalizado <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle sem adicionar o controle filho para a coleção em particular, você pode derivar do <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> classe, substitua o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.%23ctor%2A> construtor e fornecem um método diferente para armazenar o controle filho referenciado pelo <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.ChildControl%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEditorParts">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateEditorParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.EditorPartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de personalizado <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controles que podem ser usados para editar o controle filho de um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controlar quando ele está em modo de edição.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> que contém a custom <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controles associados a um controle de servidor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateEditorParts%2A> método é chamado quando um controle entra no modo de exibição de edição. Esse método substitui o método base herdado da <xref:System.Web.UI.WebControls.WebParts.WebPart> classe porque, no caso de um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle, é o controle filho que está sendo editado, não o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> próprio controle. O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CreateEditorParts%2A> método converte o controle filho para o <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface, que permite que o controle a ser editado.  
+  
+ Este método substituído é o que permite que os controles de servidor que não derivam de <xref:System.Web.UI.WebControls.WebParts.WebPart> classe – incluindo controles de servidor ASP.NET e controles de servidor personalizado – a ser editado como normal <xref:System.Web.UI.WebControls.WebParts.WebPart> controles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public override string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma frase curta que resume o que um controle faz, para uso em dicas de ferramenta e catálogos de controles de servidor.</summary>
+        <value>Uma cadeia de caracteres que resume a funcionalidade do controle. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Description%2A> o valor da propriedade normalmente é usado como uma cadeia de caracteres descritiva para um controle em catálogos que fornecem listas de controles de servidor e como uma dica de ferramenta na barra de título do controle. O conteúdo da propriedade aparece em uma dica de ferramenta quando um usuário posiciona o ponteiro do mouse sobre o texto do título na barra de título do controle.  
+  
+ Essa propriedade substitui a propriedade base para que você pode acessar a propriedade do controle filho como se fosse uma verdadeira <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ Você pode definir valores para a propriedade do controle na marcação declarativa de uma página da Web, bem como por meio de programação. Para fornecer um valor padrão para a propriedade sempre que o controle é usado, você pode implementar o <xref:System.Web.UI.WebControls.WebParts.IWebPart> interface.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático e declarativo do <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Description%2A> propriedade. O código-fonte completo para o exemplo foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> tópico de visão geral.  
+  
+ A primeira parte do exemplo de código mostra como o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Description%2A> propriedade é definida declarativamente em um controle de servidor em um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#2)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#2)]  
+  
+ A segunda parte do exemplo de código demonstra como acessar a propriedade programaticamente para exibir seu valor em um rótulo.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Height" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura (em pixels) de um controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Unit" /> que indica a altura do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade substitui a propriedade base para que você pode obter ou definir a altura do controle filho como se fosse uma verdadeira <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public override sealed string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ID de um controle. Esse valor não é herdável.</summary>
+        <value>Uma cadeia de caracteres que contém a ID do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.GenericWebPart.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Delegados renderizar o conteúdo do controle para o controle filho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtitle">
+      <MemberSignature Language="C#" Value="public override string Subtitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subtitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Subtitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que é concatenada com o <see cref="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Title" /> valor da propriedade para um título completo para um controle do formulário.</summary>
+        <value>Uma cadeia de caracteres que serve como uma legenda para o controle. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Subtitle%2A> propriedade opcionalmente para retornar uma cadeia de caracteres do subtítulo padrão será acrescentada ao personalizados <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> título do controle.  
+  
+ Essa propriedade substitui a propriedade base para que você pode acessar a propriedade do controle filho como se fosse uma verdadeira <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ Se você implementar o <xref:System.Web.UI.WebControls.WebParts.IWebPart.Subtitle%2A> propriedade em um controle de usuário ou um controle personalizado para fornecer um valor padrão, o controle de Web Parts definido automaticamente acrescenta o valor do controle do <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Title%2A> propriedade em tempo de execução para criar um título completo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o título de um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle.</summary>
+        <value>Uma cadeia de caracteres que representa o título do controle Part. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O texto do título visível na barra de título de uma parte do controle é definido pelo <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Title%2A> propriedade.  
+  
+ Se você não fornecer um título para um controle, o controle de Web Parts definido automaticamente calcula uma cadeia de caracteres padrão a ser usado como um título. Para obter mais informações, consulte <xref:System.Web.UI.WebControls.WebParts.WebPart.DisplayTitle%2A>. Além disso, é possível fornecer um subtítulo padrão que é anexado à cadeia de caracteres do título. Para obter detalhes, consulte <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Subtitle%2A>.  
+  
+ Essa propriedade substitui a propriedade base para que você pode acessar a propriedade do controle filho como se fosse uma verdadeira <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ Você pode definir valores para a propriedade do controle na marcação declarativa de uma página da Web, bem como por meio de programação. Para fornecer um valor padrão para a propriedade sempre que o controle é usado, você pode implementar o <xref:System.Web.UI.WebControls.WebParts.IWebPart> interface.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático e declarativo do <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Title%2A> propriedade. O código-fonte completo para o exemplo foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> tópico de visão geral.  
+  
+ A primeira parte do exemplo de código mostra como o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Title%2A> propriedade é definida declarativamente em um controle de servidor em um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#2)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#2)]  
+  
+ A segunda parte do exemplo de código demonstra como acessar a propriedade programaticamente para exibir seu valor em um rótulo.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleIconImageUrl">
+      <MemberSignature Language="C#" Value="public override string TitleIconImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TitleIconImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleIconImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem usada para representar um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle na barra de título do controle.</summary>
+        <value>Uma cadeia de caracteres que representa a URL para uma imagem. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleIconImageUrl%2A> propriedade fornece uma maneira de associar um ícone com um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle. O ícone é exibido na barra de título do controle. Para manter a consistência temática, os desenvolvedores de aplicativos geralmente tornam esse ícone semelhante para a imagem que representa o controle em um catálogo de controles de Web Parts (a imagem referenciada no <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.CatalogIconImageUrl%2A> propriedade).  
+  
+ Como é implementado no conjunto de controle de Web Parts, os <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleIconImageUrl%2A> propriedade pode ser personalizada pelos usuários finais para alterar a imagem ou um ícone que aparece na barra de título do controle.  
+  
+ Essa propriedade substitui a propriedade base para que você pode acessar a propriedade do controle filho como se fosse uma verdadeira <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ Você pode definir valores para a propriedade do controle na marcação declarativa de uma página da Web, bem como por meio de programação. Para fornecer um valor padrão para a propriedade sempre que o controle é usado, você pode implementar o <xref:System.Web.UI.WebControls.WebParts.IWebPart> interface.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático e declarativo do <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleIconImageUrl%2A> propriedade. O código-fonte completo para o exemplo foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> tópico de visão geral.  
+  
+ A primeira parte do exemplo de código mostra como o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleIconImageUrl%2A> propriedade é definida declarativamente em um controle de servidor em um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#2)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#2)]  
+  
+ A segunda parte do exemplo de código demonstra como acessar a propriedade programaticamente para exibir seu valor em um rótulo.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleUrl">
+      <MemberSignature Language="C#" Value="public override string TitleUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TitleUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma URL para informações complementares sobre um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle.</summary>
+        <value>Uma cadeia de caracteres que representa uma URL para obter mais informações sobre um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você atribui uma URL para o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleUrl%2A> propriedade, o título do controle se torna um link. Esta propriedade fornece uma maneira conveniente para os usuários finais acessar informações adicionais sobre um controle. As informações adicionais podem incluir dados de direitos autorais, dados de contato, detalhes sobre o criador do controle ou um resumo de uso de um controle.  
+  
+ Essa propriedade substitui a propriedade base para que você pode acessar a propriedade do controle filho como se fosse uma verdadeira <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ Você pode definir valores para a propriedade do controle na marcação declarativa de uma página da Web, bem como por meio de programação. Para fornecer um valor padrão para a propriedade sempre que o controle é usado, você pode implementar o <xref:System.Web.UI.WebControls.WebParts.IWebPart> interface.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático e declarativo do <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleUrl%2A> propriedade. O código-fonte completo para o exemplo foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> tópico de visão geral.  
+  
+ A primeira parte do exemplo de código mostra como o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.TitleUrl%2A> propriedade é definida declarativamente em um controle de servidor em um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle.  
+  
+ [!code-aspx-csharp[WebParts_GenericWebPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpartcs.aspx#2)]
+ [!code-aspx-vb[WebParts_GenericWebPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpartvb.aspx#2)]  
+  
+ A segunda parte do exemplo de código demonstra como acessar a propriedade programaticamente para exibir seu valor em um rótulo.  
+  
+ [!code-csharp[WebParts_GenericWebPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/CS/genericwebpart.cs#4)]
+ [!code-vb[WebParts_GenericWebPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_GenericWebPart_Overview/VB/genericwebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WebParts.WebPartVerbCollection Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartVerbCollection Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de verbos personalizados associados a um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerbCollection" /> que contém a custom <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> objetos associados a um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle. O valor padrão é <see cref="F:System.Web.UI.WebControls.WebParts.WebPartVerbCollection.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verbos derivam o <xref:System.Web.UI.WebControls.WebParts.WebPartVerb> classe e fornecer usuário ações de interface do usuário que os usuários podem executar em um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle. Normalmente, os verbos são representados na interface de usuário como itens de menu, botões ou links. Há verbos padrão para abrir, fechar, edição e minimizando a um controle e outros verbos para exportar uma definição para o controle ou carregar um arquivo de Ajuda. Esses verbos não são incluídos no <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Verbs%2A> coleção, porque a coleção contém somente os verbos personalizados.  
+  
+ Essa propriedade substitui a propriedade base para que você pode acessar a propriedade do controle filho como se fosse uma verdadeira <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. Se implementa controle filho de <xref:System.Web.UI.WebControls.WebParts.IWebActionable> interface e, portanto, substituições seu <xref:System.Web.UI.WebControls.WebParts.IWebActionable.Verbs%2A?displayProperty=nameWithType> propriedade, o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle usa a implementação do controle filho quando o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Verbs%2A?displayProperty=nameWithType> propriedade será invocada no <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle.  
+  
+ Quando você criar verbos personalizados e adicioná-los para o <xref:System.Web.UI.WebControls.WebParts.WebPart.Verbs%2A> coleção, você pode acessar os verbos programaticamente a partir de um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart.Verbs%2A> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebBrowsableObject">
+      <MemberSignature Language="C#" Value="public override object WebBrowsableObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object WebBrowsableObject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.WebBrowsableObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o controle filho, para habilitar o controle a ser editado pelo personalizado <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controles.</summary>
+        <value>Um <see cref="T:System.Object" /> que consiste o controle filho de um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um controle filho implementa o <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface e substituições seu <xref:System.Web.UI.WebControls.WebParts.IWebEditable.WebBrowsableObject%2A> propriedade, quando um usuário seleciona o controle de edição, o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle chamará o controle filho por meio do <xref:System.Web.UI.WebControls.WebParts.IWebEditable.WebBrowsableObject%2A> propriedade e usar a implementação do controle filho do <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método. Esse mecanismo permite que um servidor ou controle de usuário que não é um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle para trabalhar com personalizado associado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles em um aplicativo de Web Parts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Unit Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Width" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.GenericWebPart.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura (em pixels) do controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Unit" /> que indica a largura do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade substitui a propriedade base para que você pode obter ou definir a largura do controle filho, como se fosse uma verdadeira <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

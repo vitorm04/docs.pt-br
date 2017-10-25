@@ -1,0 +1,213 @@
+<Type Name="ApplicationAccessControlAttribute" FullName="System.EnterpriseServices.ApplicationAccessControlAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationAccessControlAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationAccessControlAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ApplicationAccessControlAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os controles de acesso para um assembly contendo <see cref="T:System.EnterpriseServices.ServicedComponent" /> classes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No .NET Framework versão 1.1, se esse atributo não estiver presente no assembly, a configuração de segurança COM+ é habilitada por padrão. Essa é uma alteração no comportamento do .NET Framework versão 1.0.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse atributo para controlar o acesso a um assembly que contém <xref:System.EnterpriseServices.ServicedComponent> classes.  
+  
+ [!code-cpp[EnterpriseServices_Security#2](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#2)]
+ [!code-csharp[EnterpriseServices_Security#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#2)]
+ [!code-vb[EnterpriseServices_Security#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.ApplicationAccessControlAttribute" />.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationAccessControlAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ApplicationAccessControlAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.ApplicationAccessControlAttribute" /> classe, habilitando a configuração de segurança do COM+.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse atributo para controlar o acesso a um assembly que contém <xref:System.EnterpriseServices.ServicedComponent> classes.  
+  
+ [!code-cpp[EnterpriseServices_Security#2](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#2)]
+ [!code-csharp[EnterpriseServices_Security#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#2)]
+ [!code-vb[EnterpriseServices_Security#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationAccessControlAttribute (bool val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ApplicationAccessControlAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="val" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="val">
+          <see langword="true" />para permitir a configuração de segurança. Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.ApplicationAccessControlAttribute" /> classe e define o <see cref="P:System.EnterpriseServices.ApplicationAccessControlAttribute.Value" /> propriedade que indica se deseja habilitar a configuração de segurança COM.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessChecksLevel">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.AccessChecksLevelOption AccessChecksLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.AccessChecksLevelOption AccessChecksLevel" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ApplicationAccessControlAttribute.AccessChecksLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.AccessChecksLevelOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível para nível de processo ou para o nível de componente de verificação de acesso.</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.AccessChecksLevelOption" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade tem suporte apenas no Windows 2000 e posterior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso dessa propriedade.  
+  
+ [!code-cpp[EnterpriseServices_Security#2](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#2)]
+ [!code-csharp[EnterpriseServices_Security#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#2)]
+ [!code-vb[EnterpriseServices_Security#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authentication">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.AuthenticationOption Authentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.AuthenticationOption Authentication" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ApplicationAccessControlAttribute.Authentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.AuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de autenticação de RPC (chamada) de procedimento remoto.</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.AuthenticationOption" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir ilustra o uso dessa propriedade.  
+  
+ [!code-cpp[EnterpriseServices_Security#2](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#2)]
+ [!code-csharp[EnterpriseServices_Security#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#2)]
+ [!code-vb[EnterpriseServices_Security#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImpersonationLevel">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.ImpersonationLevelOption ImpersonationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.ImpersonationLevelOption ImpersonationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ApplicationAccessControlAttribute.ImpersonationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ImpersonationLevelOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de representação que é permitido para chamar destinos desse aplicativo.</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.ImpersonationLevelOption" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade tem suporte apenas no Windows 2000 e posterior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso dessa propriedade.  
+  
+ [!code-cpp[EnterpriseServices_Security#2](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#2)]
+ [!code-csharp[EnterpriseServices_Security#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#2)]
+ [!code-vb[EnterpriseServices_Security#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public bool Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Value" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ApplicationAccessControlAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deseja habilitar a configuração de segurança do COM+.</summary>
+        <value>
+          <see langword="true" />Se a configuração de segurança COM+ está ativada. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

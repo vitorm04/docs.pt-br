@@ -1,0 +1,234 @@
+<Type Name="ImageFormatConverter" FullName="System.Drawing.ImageFormatConverter">
+  <TypeSignature Language="C#" Value="public class ImageFormatConverter : System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImageFormatConverter extends System.ComponentModel.TypeConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.ImageFormatConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.TypeConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+      <see cref="T:System.Drawing.ImageFormatConverter" /> é uma classe que pode ser usada para converter objetos <see cref="T:System.Drawing.Imaging.ImageFormat" /> de um tipo de dados para outro. Acesse essa classe por meio do objeto <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um conversor de tipo é usado para converter valores entre tipos de dados. Um conversor de tipo também dá suporte à configuração de propriedade em tempo de design, fornecendo a conversão do valor de texto ou uma lista de valores que os usuários podem selecionar. Acesso a <xref:System.Drawing.ImageFormatConverter> classe por meio de <xref:System.ComponentModel.TypeDescriptor> classe chamando o <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> método.  
+  
+ O <xref:System.Drawing.ImageFormatConverter> converte formatos de imagem conhecido, conforme especificado na <xref:System.Drawing.Imaging.ImageFormat> classe.  
+  
+> [!NOTE]
+>  Se você deseja converter entre formatos de imagem, como converter entre BMP e JPEG, use uma da <xref:System.Drawing.Image.Save%2A?displayProperty=nameWithType> métodos que usa uma <xref:System.Drawing.Imaging.ImageFormat> objeto como um parâmetro.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageFormatConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageFormatConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.ImageFormatConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não crie um <xref:System.Drawing.ImageFormatConverter> diretamente do objeto. Acesso a <xref:System.Drawing.ImageFormatConverter> classe por meio de <xref:System.ComponentModel.TypeDescriptor> classe chamando o <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFrom">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFrom (System.ComponentModel.ITypeDescriptorContext context, Type sourceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Type sourceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageFormatConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="sourceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um contexto do formatador. Esse objeto pode ser usado para obter mais informações sobre o ambiente que esse conversor está sendo chamado. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</param>
+        <param name="sourceType">O tipo que você deseja converter.</param>
+        <summary>Indica se esse conversor pode converter um objeto no tipo de origem especificado para o tipo nativo do conversor.</summary>
+        <returns>Este método retorna <see langword="true" /> se este objeto pode realizar a conversão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.ImageFormatConverter> converte formatos de imagem conhecido, conforme especificado na <xref:System.Drawing.Imaging.ImageFormat> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertTo">
+      <MemberSignature Language="C#" Value="public override bool CanConvertTo (System.ComponentModel.ITypeDescriptorContext context, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageFormatConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que especifica o contexto para a conversão de tipo.</param>
+        <param name="destinationType">O <see cref="T:System.Type" /> que representa o tipo para o qual você deseja converter isso <see cref="T:System.Drawing.Imaging.ImageFormat" /> objeto.</param>
+        <summary>Obtém um valor que indica se esse conversor pode converter um objeto para o tipo de destino especificado usando o contexto.</summary>
+        <returns>Este método retorna <see langword="true" /> se este objeto pode realizar a conversão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.ImageFormatConverter> converte formatos de imagem conhecido, conforme especificado na <xref:System.Drawing.Imaging.ImageFormat> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageFormatConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um contexto do formatador. Esse objeto pode ser usado para obter mais informações sobre o ambiente que esse conversor está sendo chamado. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> objeto que especifica as convenções de formatação para uma cultura específica.</param>
+        <param name="value">O objeto a ser convertido.</param>
+        <summary>Converte o objeto especificado em um <see cref="T:System.Drawing.Imaging.ImageFormat" /> objeto.</summary>
+        <returns>O objeto convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.ImageFormatConverter> converte formatos de imagem conhecido, conforme especificado na <xref:System.Drawing.Imaging.ImageFormat> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não foi possível concluir a conversão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageFormatConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um contexto do formatador. Esse objeto pode ser usado para obter mais informações sobre o ambiente que esse conversor está sendo chamado. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> objeto que especifica as convenções de formatação para uma cultura específica.</param>
+        <param name="value">O objeto a ser convertido.</param>
+        <param name="destinationType">O tipo para converter o objeto.</param>
+        <summary>Converte o objeto especificado no tipo especificado.</summary>
+        <returns>O objeto convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.ImageFormatConverter> converte formatos de imagem conhecido, conforme especificado na <xref:System.Drawing.Imaging.ImageFormat> classe.  
+  
+ A conversão de tipo mais comum é para e de um tipo de cadeia de caracteres. A implementação padrão chama o <xref:System.Object.ToString%2A> método do objeto se o objeto é válido e se o tipo de destino é `string`. Se esse método não é possível converter o objeto especificado para o tipo de destino especificado, ele gerará uma <xref:System.NotSupportedException> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não foi possível concluir a conversão.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destinationType" /> é <see langword="null." /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageFormatConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um contexto do formatador. Esse objeto pode ser usado para obter mais informações sobre o ambiente que esse conversor está sendo chamado. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</param>
+        <summary>Obtém uma coleção que contém um conjunto de valores padrão para o tipo de dados que se destina a este validador. Retorna <see langword="null" /> se o tipo de dados não der suporte a um conjunto de valores padrão.</summary>
+        <returns>Uma coleção que contém um conjunto padrão de valores válidos, ou <see langword="null" />. A implementação padrão sempre retorna <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.ImageFormatConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um descritor de tipo por meio do qual o contexto adicional pode ser fornecido.</param>
+        <summary>Indica se esse objeto oferece suporte a um conjunto padrão de valores que podem ser escolhidos em uma lista.</summary>
+        <returns>Este método retorna <see langword="true" /> se o <see cref="Overload:System.Drawing.ImageFormatConverter.GetStandardValues" /> método deve ser chamado para localizar um conjunto comum de valores que o objeto oferece suporte.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

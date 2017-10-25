@@ -1,0 +1,66 @@
+<Type Name="LinkTarget" FullName="System.Windows.Documents.LinkTarget">
+  <TypeSignature Language="C#" Value="public sealed class LinkTarget" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LinkTarget extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.LinkTarget" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um elemento em uma página que pode ser vinculado a partir de outros documentos ou outros locais no mesmo documento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os nomes de todos os destinos de link para todas as páginas em um <xref:System.Windows.Documents.FixedDocument> são coletados para a parte do conteúdo da página de um [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] documento. Isso permite que aplicativos de consumo para determinar se um destino específico está em um determinado documento sem a necessidade de carregar o documento inteiro. Para obter mais informações sobre o `<PageContent>` e `<LinkTarget>` elementos, consulte o capítulo 3 o [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] especificação que pode ser obtido em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkTarget ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.LinkTarget.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.LinkTarget" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.LinkTarget.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do elemento que isso <see cref="T:System.Windows.Documents.LinkTarget" /> identifica como um elemento linkable.</summary>
+        <value>Um <see cref="T:System.String" /> que é idêntico de <see cref="P:System.Windows.FrameworkElement.Name" /> propriedade do elemento de marcação que corresponde a este <see cref="T:System.Windows.Documents.LinkTarget" /> elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os nomes de todos os destinos de link para todas as páginas em um <xref:System.Windows.Documents.FixedDocument> são coletados para a parte do conteúdo da página de um [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)] documento. Isso permite que aplicativos de consumo para determinar se um destino específico está em um determinado documento sem a necessidade de carregar o documento inteiro. Para obter mais informações sobre o `<PageContent>` e `<LinkTarget>` elementos, consulte o capítulo 3 o [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] especificação que pode ser obtido em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

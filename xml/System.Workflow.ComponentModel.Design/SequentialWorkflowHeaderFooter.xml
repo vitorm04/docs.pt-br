@@ -1,0 +1,228 @@
+<Type Name="SequentialWorkflowHeaderFooter" FullName="System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter">
+  <TypeSignature Language="C#" Value="public class SequentialWorkflowHeaderFooter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SequentialWorkflowHeaderFooter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um cabeçalho ou rodapé que está associado com um <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter>Fornece informações de cabeçalho e rodapé para o <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner> quando ele for exibido no modo de visualização de impressão. Se fornecida pelo designer de fluxo de trabalho, os usuários podem configurar cabeçalhos e rodapés no **cabeçalho/rodapé** guia o **Configurar página** caixa de diálogo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SequentialWorkflowHeaderFooter (System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner parent, bool isHeader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner parent, bool isHeader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.#ctor(System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" />
+        <Parameter Name="isHeader" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="parent">SequentialWorkflowRootDesigner com a qual o</param>
+        <param name="isHeader">
+          <see langword="true" />para indicar que o <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" /> é um cabeçalho. <see langword="false" /> para indicar que o <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" /> é um rodapé.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociatedDesigner">
+      <MemberSignature Language="C#" Value="protected System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner AssociatedDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner AssociatedDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.AssociatedDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o designer raiz ao qual o cabeçalho ou rodapé de página é aplicada.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowRootDesigner" /> para que o <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" /> é aplicada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o retângulo delimitador do cabeçalho ou rodapé de página na superfície de design de fluxo de trabalho.</summary>
+        <value>O <see cref="T:System.Drawing.Rectangle" /> que limites de <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" /> na superfície de design de fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Image Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem associada com o cabeçalho ou rodapé.</summary>
+        <value>O <see cref="T:System.Drawing.Image" /> para associar o <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageRectangle">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Rectangle ImageRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle ImageRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.ImageRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o retângulo delimitador para a imagem associada com o cabeçalho ou rodapé.</summary>
+        <value>O <see cref="T:System.Drawing.Rectangle" /> que define os limites para o <see cref="P:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.Image" /> associado a <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como substituir o <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.ImageRectangle%2A> propriedade. Neste exemplo, o <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.ImageRectangle%2A> é calculado usando os limites do <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter> para desenhar a imagem no canto superior esquerdo do cabeçalho/rodapé.  
+  
+ [!code-csharp[WF_Samples#74](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#74)]
+ [!code-vb[WF_Samples#74](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#74)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayout">
+      <MemberSignature Language="C#" Value="public virtual void OnLayout (System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnLayout(class System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.OnLayout(System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" /> que contém os dados do evento.</param>
+        <summary>Notifica o <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" /> quando os elementos que ele contém são reposicionados pelo usuário.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="public virtual void OnPaint (System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnPaint(class System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.OnPaint(System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Desenha o cabeçalho ou rodapé associada com o designer de raiz de fluxo de trabalho na superfície de design.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição de texto associada no cabeçalho ou rodapé.</summary>
+        <value>A cadeia de caracteres que contém a descrição de texto associada a <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextRectangle">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Rectangle TextRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle TextRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.TextRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o retângulo delimitador para o texto associado ao cabeçalho ou rodapé.</summary>
+        <value>O <see cref="T:System.Drawing.Rectangle" /> que define os limites para o <see cref="P:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.Text" /> associado a <see cref="T:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como substituir o <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.TextRectangle%2A> propriedade. Neste exemplo, o <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.TextRectangle%2A> é calculado usando os limites do <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter> , bem como o local e o tamanho do <xref:System.Workflow.ComponentModel.Design.SequentialWorkflowHeaderFooter.ImageRectangle%2A>.  
+  
+ [!code-csharp[WF_Samples#75](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#75)]
+ [!code-vb[WF_Samples#75](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#75)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

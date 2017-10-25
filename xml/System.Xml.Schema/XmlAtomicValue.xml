@@ -1,0 +1,533 @@
+<Type Name="XmlAtomicValue" FullName="System.Xml.Schema.XmlAtomicValue">
+  <TypeSignature Language="C#" Value="public sealed class XmlAtomicValue : System.Xml.XPath.XPathItem, ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlAtomicValue extends System.Xml.XPath.XPathItem implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlAtomicValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.XPath.XPathItem</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa o valor digitado de um atributo ou elemento XML validado. A classe <see cref="T:System.Xml.Schema.XmlAtomicValue" /> não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlAtomicValue Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.Schema.XmlAtomicValue Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlAtomicValue.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cópia deste <see cref="T:System.Xml.Schema.XmlAtomicValue" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Xml.Schema.XmlAtomicValue" /> objeto cópia deste <see cref="T:System.Xml.Schema.XmlAtomicValue" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNode">
+      <MemberSignature Language="C#" Value="public override bool IsNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNode" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlAtomicValue.IsNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o atributo ou elemento XML validado é um nó de XPath ou um valor atômico.</summary>
+        <value>
+          <see langword="true" />Se o atributo ou elemento XML validado for um nó de XPath. <see langword="false" /> se o atributo ou elemento XML validado é um valor atômico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlAtomicValue.IsNode%2A> propriedade sempre retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlAtomicValue.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.Schema.XmlAtomicValue.Clone" />.</summary>
+        <returns>Retorna uma cópia deste <see cref="T:System.Xml.Schema.XmlAtomicValue" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.Schema.XmlAtomicValue> é convertida em uma interface de <xref:System.ICloneable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlAtomicValue.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see langword="string" /> valor do atributo ou elemento XML validado.</summary>
+        <returns>O <see langword="string" /> valor do atributo ou elemento XML validado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypedValue">
+      <MemberSignature Language="C#" Value="public override object TypedValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlAtomicValue.TypedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual validado elemento ou atributo XML como um objeto boxed do tipo mais apropriado do Microsoft .NET Framework acordo com seu tipo de esquema.</summary>
+        <value>Atual validado elemento ou atributo XML como um objeto boxed do tipo do .NET Framework mais apropriado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor do item não é válido de acordo com seu esquema especificada de tipo, o valor da <xref:System.Xml.Schema.XmlAtomicValue.TypedValue%2A> propriedade é equivalente ao valor da <xref:System.Xml.Schema.XmlAtomicValue.Value%2A> propriedade.  
+  
+ Para obter mais informações sobre o tipo de suporte no <xref:System.Xml?displayProperty=nameWithType> namespace, consulte [suporte a tipo nas Classes System. XML](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlAtomicValue.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see langword="string" /> valor do atributo ou elemento XML validado.</summary>
+        <value>O <see langword="string" /> valor do atributo ou elemento XML validado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAs">
+      <MemberSignature Language="C#" Value="public override object ValueAs (Type type, System.Xml.IXmlNamespaceResolver nsResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ValueAs(class System.Type type, class System.Xml.IXmlNamespaceResolver nsResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlAtomicValue.ValueAs(System.Type,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="nsResolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo para retornar o elemento XML validado ou o valor do atributo.</param>
+        <param name="nsResolver">O <see cref="T:System.Xml.IXmlNamespaceResolver" /> objeto usado para resolver os prefixos de namespace.</param>
+        <summary>Retorna o elemento XML validado ou o valor do atributo do tipo especificado usando o <see cref="T:System.Xml.IXmlNamespaceResolver" /> objeto especificado para resolver os prefixos de namespace.</summary>
+        <returns>O valor do elemento XML validado ou do atributo como o tipo solicitado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlAtomicValue.ValueAs%2A> método tenta converter o valor do atributo ou elemento XML validado para o tipo do Microsoft .NET Framework especificado.  
+  
+ O <xref:System.Xml.IXmlNamespaceResolver> objeto é usado para resolver os prefixos de namespace relacionados a conversões de tipo. Por exemplo, ao converter um `xs:QName` para um `xs:string`.  
+  
+ Para obter mais informações sobre o tipo de suporte no <xref:System.Xml?displayProperty=nameWithType> namespace, consulte [suporte a tipo nas Classes System. XML](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">O elemento XML validado ou o valor do atributo não está no formato correto para o tipo de destino.</exception>
+        <exception cref="T:System.InvalidCastException">A tentativa de conversão não é válida.</exception>
+        <exception cref="T:System.OverflowException">A tentativa de conversão resultou em um estouro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAsBoolean">
+      <MemberSignature Language="C#" Value="public override bool ValueAsBoolean { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValueAsBoolean" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlAtomicValue.ValueAsBoolean" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento XML validado ou o valor do atributo como um <see cref="T:System.Boolean" />.</summary>
+        <value>O elemento XML validado ou o valor do atributo como um <see cref="T:System.Boolean" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlAtomicValue.ValueAsBoolean%2A> propriedade tenta converter o valor do atributo ou elemento XML validado para o Microsoft .NET Framework <xref:System.Boolean> tipo de acordo com as regras do XPath 2.0 para converter o tipo do item.  
+  
+ Para obter mais informações sobre o tipo de suporte no <xref:System.Xml?displayProperty=nameWithType> namespace, consulte [suporte a tipo nas Classes System. XML](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">O elemento XML validado ou o valor do atributo não está no formato correto para o <see cref="T:System.Boolean" /> tipo.</exception>
+        <exception cref="T:System.InvalidCastException">A conversão de tentativa para <see cref="T:System.Boolean" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAsDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime ValueAsDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValueAsDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlAtomicValue.ValueAsDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento XML validado ou o valor do atributo como um <see cref="T:System.DateTime" />.</summary>
+        <value>O elemento XML validado ou o valor do atributo como um <see cref="T:System.DateTime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlAtomicValue.ValueAsDateTime%2A> propriedade tenta converter o valor do atributo ou elemento XML validado para o Microsoft .NET Framework <xref:System.DateTime> tipo de acordo com as regras do XPath 2.0 para converter o tipo do item.  
+  
+ Para obter mais informações sobre o tipo de suporte no <xref:System.Xml?displayProperty=nameWithType> namespace, consulte [suporte a tipo nas Classes System. XML](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">O elemento XML validado ou o valor do atributo não está no formato correto para o <see cref="T:System.DateTime" /> tipo.</exception>
+        <exception cref="T:System.InvalidCastException">A conversão de tentativa para <see cref="T:System.DateTime" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAsDouble">
+      <MemberSignature Language="C#" Value="public override double ValueAsDouble { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ValueAsDouble" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlAtomicValue.ValueAsDouble" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento XML validado ou o valor do atributo como um <see cref="T:System.Double" />.</summary>
+        <value>O elemento XML validado ou o valor do atributo como um <see cref="T:System.Double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlAtomicValue.ValueAsDouble%2A> propriedade tenta converter o valor do atributo ou elemento XML validado para o Microsoft .NET Framework <xref:System.Double> tipo de acordo com as regras do XPath 2.0 para converter o tipo do item.  
+  
+ Para obter mais informações sobre o tipo de suporte no <xref:System.Xml?displayProperty=nameWithType> namespace, consulte [suporte a tipo nas Classes System. XML](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">O elemento XML validado ou o valor do atributo não está no formato correto para o <see cref="T:System.Double" /> tipo.</exception>
+        <exception cref="T:System.InvalidCastException">A conversão de tentativa para <see cref="T:System.Double" /> não é válido.</exception>
+        <exception cref="T:System.OverflowException">A tentativa de conversão resultou em um estouro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAsInt">
+      <MemberSignature Language="C#" Value="public override int ValueAsInt { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ValueAsInt" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlAtomicValue.ValueAsInt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento XML validado ou o valor do atributo como um <see cref="T:System.Int32" />.</summary>
+        <value>O elemento XML validado ou o valor do atributo como um <see cref="T:System.Int32" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlAtomicValue.ValueAsInt%2A> propriedade tenta converter o valor do atributo ou elemento XML validado para o Microsoft .NET Framework <xref:System.Int32> tipo de acordo com as regras do XPath 2.0 para converter o tipo do item.  
+  
+ Para obter mais informações sobre o tipo de suporte no <xref:System.Xml?displayProperty=nameWithType> namespace, consulte [suporte a tipo nas Classes System. XML](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">O elemento XML validado ou o valor do atributo não está no formato correto para o <see cref="T:System.Int32" /> tipo.</exception>
+        <exception cref="T:System.InvalidCastException">A conversão de tentativa para <see cref="T:System.Int32" /> não é válido.</exception>
+        <exception cref="T:System.OverflowException">A tentativa de conversão resultou em um estouro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueAsLong">
+      <MemberSignature Language="C#" Value="public override long ValueAsLong { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ValueAsLong" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlAtomicValue.ValueAsLong" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento XML validado ou o valor do atributo como um <see cref="T:System.Int64" />.</summary>
+        <value>O elemento XML validado ou o valor do atributo como um <see cref="T:System.Int64" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlAtomicValue.ValueAsLong%2A> propriedade tenta converter o valor do atributo ou elemento XML validado para o Microsoft .NET Framework <xref:System.Int64> tipo de acordo com as regras do XPath 2.0 para converter o tipo do item.  
+  
+ Para obter mais informações sobre o tipo de suporte no <xref:System.Xml?displayProperty=nameWithType> namespace, consulte [suporte a tipo nas Classes System. XML](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">O elemento XML validado ou o valor do atributo não está no formato correto para o <see cref="T:System.Int64" /> tipo.</exception>
+        <exception cref="T:System.InvalidCastException">A conversão de tentativa para <see cref="T:System.Int64" /> não é válido.</exception>
+        <exception cref="T:System.OverflowException">A tentativa de conversão resultou em um estouro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueType">
+      <MemberSignature Language="C#" Value="public override Type ValueType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlAtomicValue.ValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do Microsoft .NET Framework do atributo ou elemento XML validado.</summary>
+        <value>O tipo do .NET Framework do atributo ou elemento XML validado. O valor padrão é <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlAtomicValue.ValueType%2A> propriedade obtém o tipo do .NET Framework do valor digitado do atributo ou elemento XML validado.  
+  
+ Por exemplo, um elemento do tipo `xs:int` teria um <xref:System.Xml.Schema.XmlAtomicValue.ValueType%2A> de <xref:System.Int32> por padrão. No entanto, o <xref:System.Xml.Schema.XmlAtomicValue.ValueType%2A> pode ser qualquer um dos tipos válidos que podem ser mapeados para `xs:int`, como <xref:System.Int16> ou <xref:System.Double>.  
+  
+ Para obter mais informações sobre o tipo de suporte no <xref:System.Xml?displayProperty=nameWithType> namespace, consulte [suporte a tipo nas Classes System. XML](~/docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlType">
+      <MemberSignature Language="C#" Value="public override System.Xml.Schema.XmlSchemaType XmlType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaType XmlType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlAtomicValue.XmlType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xml.Schema.XmlSchemaType" /> para o atributo ou elemento XML validado.</summary>
+        <value>O <see cref="T:System.Xml.Schema.XmlSchemaType" /> para o atributo ou elemento XML validado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlAtomicValue.XmlType%2A> propriedade obtém o <xref:System.Xml.Schema.XmlSchemaType> para o atributo ou elemento XML validado. Por exemplo, o <xref:System.Xml.Schema.XmlSchemaSimpleType> ou <xref:System.Xml.Schema.XmlSchemaComplexType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

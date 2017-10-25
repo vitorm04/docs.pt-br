@@ -1,0 +1,121 @@
+<Type Name="ProtectionLevel" FullName="System.Net.Security.ProtectionLevel">
+  <TypeSignature Language="C#" Value="public enum ProtectionLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProtectionLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Security.ProtectionLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica os serviços de segurança solicitados para um fluxo autenticado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pela classe de <xref:System.Net.Security.NegotiateStream> .  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a criação e uso de um cliente <xref:System.Net.Security.NegotiateStream>.  
+  
+ [!code-cpp[NclNegoSyncClient#0](~/samples/snippets/cpp/VS_Snippets_Remoting/NclNegoSyncClient/CPP/NclNegoSyncClient.cpp#0)]
+ [!code-csharp[NclNegoSyncClient#0](~/samples/snippets/csharp/VS_Snippets_Remoting/NclNegoSyncClient/CS/client.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EncryptAndSign">
+      <MemberSignature Language="C#" Value="EncryptAndSign" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Security.ProtectionLevel EncryptAndSign = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Security.ProtectionLevel.EncryptAndSign" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Criptografar e assinar dados para ajudar a garantir a confidencialidade e integridade dos dados transmitidos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Security.ProtectionLevel None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Security.ProtectionLevel.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Somente autenticação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="Sign" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Security.ProtectionLevel Sign = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Security.ProtectionLevel.Sign" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.ProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Assinar dados para ajudar a garantir a integridade dos dados transmitidos.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

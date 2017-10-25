@@ -1,0 +1,211 @@
+<Type Name="DesignerAction" FullName="System.Workflow.ComponentModel.Design.DesignerAction">
+  <TypeSignature Language="C#" Value="public sealed class DesignerAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerAction extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.DesignerAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Associa uma ação executada em um designer de atividade na superfície de design do fluxo de trabalho com o <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Um designer é uma ação do usuário que é executada quando você ativar um glifo designer na superfície de design de fluxo de trabalho. O <xref:System.Workflow.ComponentModel.Design.DesignerAction> classe é usada para indicar suas ações. O <xref:System.Workflow.ComponentModel.Design.DesignerAction> classe também é usada para adicionar os itens de tarefa pelo serviço de adorno.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerAction (System.Workflow.ComponentModel.Design.ActivityDesigner activityDesigner, int actionId, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.ActivityDesigner activityDesigner, int32 actionId, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerAction.#ctor(System.Workflow.ComponentModel.Design.ActivityDesigner,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityDesigner" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+        <Parameter Name="actionId" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="activityDesigner">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> no qual a ação designer é realizada.</param>
+        <param name="actionId">Um valor inteiro que representa o identificador de <see cref="T:System.Workflow.ComponentModel.Design.DesignerAction" />.</param>
+        <param name="text">Uma cadeia de caracteres que representa o texto associado à ação designer.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Design.DesignerAction" /> classe usando um <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />, um número inteiro e uma cadeia de caracteres.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activityDesigner" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="text" />contém uma referência nula (<see langword="Nothing" />) ou seu tamanho é 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerAction (System.Workflow.ComponentModel.Design.ActivityDesigner activityDesigner, int actionId, string text, System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.ActivityDesigner activityDesigner, int32 actionId, string text, class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerAction.#ctor(System.Workflow.ComponentModel.Design.ActivityDesigner,System.Int32,System.String,System.Drawing.Image)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activityDesigner" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+        <Parameter Name="actionId" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="activityDesigner">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> no qual a ação designer é exibido.</param>
+        <param name="actionId">Um valor inteiro que representa o identificador de <see cref="T:System.Workflow.ComponentModel.Design.DesignerAction" />.</param>
+        <param name="text">Uma cadeia de caracteres que representa o texto associado à ação designer.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> deve ser associada com a ação de designer.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Design.DesignerAction" /> classe usando <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />, um número inteiro, uma cadeia de caracteres e um <see cref="T:System.Drawing.Image" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activityDesigner" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="text" />contém uma referência nula (<see langword="Nothing" />) ou seu tamanho é 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionId">
+      <MemberSignature Language="C#" Value="public int ActionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ActionId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerAction.ActionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador para a ação de designer.</summary>
+        <value>Um inteiro que representa o identificador para o <see cref="T:System.Workflow.ComponentModel.Design.DesignerAction" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerAction.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a imagem associada com a ação de designer.</summary>
+        <value>Um <see cref="T:System.Drawing.Image" /> que está associado a <see cref="T:System.Workflow.ComponentModel.Design.DesignerAction" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerAction.Invoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invoca o <see cref="M:System.Workflow.ComponentModel.Design.ActivityDesigner.OnExecuteDesignerAction(System.Workflow.ComponentModel.Design.DesignerAction)" /> método do designer de atividade associado com a ação de designer atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.OnExecuteDesignerAction%2A> método é chamado quando você clicar em um erro de validação exibido pelo designer de atividade na superfície de design de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerAction.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o nome da propriedade que o <see cref="T:System.Workflow.ComponentModel.Design.DesignerAction" /> está associado.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome da propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O editor de propriedade, a propriedade que corresponde do <xref:System.Workflow.ComponentModel.Design.DesignerAction.PropertyName%2A> do <xref:System.Workflow.ComponentModel.Design.DesignerAction> fornece uma indicação visual que indica a presença de um tipo de <xref:System.Workflow.ComponentModel.Design.DesignerAction>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerAction.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o texto associado à ação designer.</summary>
+        <value>Um valor de cadeia de caracteres que representa o texto associado a <see cref="T:System.Workflow.ComponentModel.Design.DesignerAction" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserData">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary UserData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary UserData" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerAction.UserData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário de dados de usuário associados com a ação de designer.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> que representa os dados de usuário associados a <see cref="T:System.Workflow.ComponentModel.Design.DesignerAction" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

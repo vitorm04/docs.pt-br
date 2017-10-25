@@ -1,0 +1,161 @@
+<Type Name="IEqualityComparer" FullName="System.Collections.IEqualityComparer">
+  <TypeSignature Language="C#" Value="public interface IEqualityComparer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEqualityComparer" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.IEqualityComparer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define métodos para dar suporte à comparação de objetos para igualdade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface permite que a implementação de comparação de igualdade personalizadas para coleções. Ou seja, você pode criar sua própria definição de igualdade e especificar que essa definição usada com um tipo de coleção que aceita o <xref:System.Collections.IEqualityComparer> interface. No .NET Framework, construtores do <xref:System.Collections.Hashtable>, <xref:System.Collections.Specialized.NameValueCollection>, e <xref:System.Collections.Specialized.OrderedDictionary> tipos de coleção aceitam esta interface.  
+  
+ Esta interface dá suporte a apenas comparações de igualdade. Personalização de comparações de classificação e ordenação é fornecida pelo <xref:System.Collections.IComparer> interface.  
+  
+ Para obter a versão genérica dessa interface, consulte <xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (object x, object y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(object x, object y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IEqualityComparer.Equals(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Object" />
+        <Parameter Name="y" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="x">O primeiro objeto a ser comparado.</param>
+        <param name="y">O segundo objeto a ser comparado.</param>
+        <summary>Determina se os objetos especificados são iguais.</summary>
+        <returns>
+          <see langword="true" /> se os objetos especificados forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implemente esse método para fornecer uma comparação de igualdade personalizadas para objetos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação de um maiusculas de minúsculas <xref:System.Collections.IEqualityComparer>. Neste exemplo, o <xref:System.Collections.CaseInsensitiveComparer.Compare%2A?displayProperty=nameWithType> método é usado para determinar se dois objetos são iguais, com base em fornecidos <xref:System.Globalization.CultureInfo>.  
+  
+ [!code-cpp[System.Collections.Hashtable_ctor#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Hashtable_ctor/CPP/hashtable_ctor.cpp#2)]
+ [!code-csharp[System.Collections.Hashtable_ctor#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Hashtable_ctor/CS/hashtable_ctor.cs#2)]
+ [!code-vb[System.Collections.Hashtable_ctor#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Hashtable_ctor/VB/hashtable_ctor.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="x" /> e <paramref name="y" /> são de tipos diferentes e não podem manipular comparações com os outros.</exception>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Collections.IEqualityComparer.Equals(System.Object,System.Object)" /> método é transitiva reflexiva e simétrica. Ou seja, ela retorna <see langword="true" /> se usado para comparar um objeto com em si; <see langword="true" /> de dois objetos <c>x</c> e <c>y</c> se for <see langword="true" /> para <c>y</c> e <c>x</c>; e <see langword="true" /> de dois objetos <c>x</c> e <c>z</c> se for <see langword="true" /> para <c>x</c> e <c>y</c> e também <see langword="true" /> para <c>y</c> e <c>z</c>.  
+  
+ Implementações são necessárias para garantir que, se o <see cref="M:System.Collections.IEqualityComparer.Equals(System.Object,System.Object)" /> método retorna <see langword="true" /> de dois objetos <c>x</c> e <c>y</c>, em seguida, o valor retornado pelo <see cref="M:System.Collections.IEqualityComparer.GetHashCode(System.Object)" /> método para <c>x</c> deve ser igual ao valor retornado para <c>y</c>.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public int GetHashCode (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IEqualityComparer.GetHashCode(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> para o qual um código hash deve ser retornado.</param>
+        <summary>Retorna um código hash para o objeto especificado.</summary>
+        <returns>Um código hash para o objeto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar esse método para fornecer códigos hash personalizadas para objetos, correspondente a comparação de igualdade personalizado fornecida pelo <xref:System.Collections.IEqualityComparer.Equals%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação de um maiusculas de minúsculas <xref:System.Collections.IEqualityComparer>. Neste exemplo, o <xref:System.Collections.IEqualityComparer.GetHashCode%2A> método retorna o código hash fornecido pelo <xref:System.Object> tipo.  
+  
+ [!code-cpp[System.Collections.Hashtable_ctor#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Hashtable_ctor/CPP/hashtable_ctor.cpp#2)]
+ [!code-csharp[System.Collections.Hashtable_ctor#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Hashtable_ctor/CS/hashtable_ctor.cs#2)]
+ [!code-vb[System.Collections.Hashtable_ctor#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Hashtable_ctor/VB/hashtable_ctor.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O tipo de <paramref name="obj" /> é um tipo de referência e <paramref name="obj" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Implementações são necessárias para garantir que, se o <see cref="M:System.Collections.IEqualityComparer.Equals(System.Object,System.Object)" /> método retorna <see langword="true" /> de dois objetos <c>x</c> e <c>y</c>, em seguida, o valor retornado pelo <see cref="M:System.Collections.IEqualityComparer.GetHashCode(System.Object)" /> método para <c>x</c> deve ser igual ao valor retornado para <c>y</c>.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

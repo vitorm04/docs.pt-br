@@ -1,0 +1,111 @@
+<Type Name="ProcessModelLogLevel" FullName="System.Web.Configuration.ProcessModelLogLevel">
+  <TypeSignature Language="C#" Value="public enum ProcessModelLogLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProcessModelLogLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ProcessModelLogLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os tipos de evento a ser registrada no log de eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.ProcessModelLogLevel> enumeração contém os valores a serem usados quando você define o <xref:System.Web.Configuration.ProcessModelSection.LogLevel%2A> propriedade.  
+  
+ O valor padrão é erros.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir o <xref:System.Web.Configuration.ProcessModelSection.LogLevel%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.ProcessModelSection#23](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/CS/processmodelsection.cs#23)]
+ [!code-vb[System.Web.Configuration.ProcessModelSection#23](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProcessModelSection/VB/processmodelsection.vb#23)]  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelLogLevel All = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelLogLevel.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelLogLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que todos os eventos de processo estão conectados. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta opção quando quiser explorar os erros possíveis que um aplicativo pode emitir, sem qualquer filtragem. Essa opção é útil durante a criação e a fase de depuração.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="Errors" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelLogLevel Errors = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelLogLevel.Errors" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelLogLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que somente desligamentos inesperados, devido ao limite de memória e bloqueio é registrados. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o valor padrão.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.ProcessModelLogLevel None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.ProcessModelLogLevel.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProcessModelLogLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que nenhum evento é registrado. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você talvez queira usar essa opção para aplicativos implantados e testados.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

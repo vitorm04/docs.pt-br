@@ -1,0 +1,155 @@
+<Type Name="WebPartAuthorizationEventArgs" FullName="System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs">
+  <TypeSignature Language="C#" Value="public class WebPartAuthorizationEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartAuthorizationEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.AuthorizeWebPart" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartManager.AuthorizeWebPart> evento ocorre antes de um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle é adicionado a uma página. Há vários cenários comuns em que um controle pode ser adicionado a uma página. Para obter uma descrição completa dessas, consulte a seção comentários para o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.IsAuthorized%2A?displayProperty=nameWithType> método.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs> classe fornece acesso às propriedades sobre o controle de Web Parts que está sendo adicionado à página. Quando um controle é adicionado, ele deve ser verificado para ver se seu <xref:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter%2A> propriedade foi definida e, nesse caso, se o controle está autorizado a ser adicionado à página.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartAuthorizationEventArgs (Type type, string path, string authorizationFilter, bool isShared);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string path, string authorizationFilter, bool isShared) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.#ctor(System.Type,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="authorizationFilter" Type="System.String" />
+        <Parameter Name="isShared" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do controle que está sendo verificado para autorização.</param>
+        <param name="path">O caminho relativo de aplicativo para o arquivo de origem para o controle de autorização, se o controle for um controle de usuário.</param>
+        <param name="authorizationFilter">Um valor de cadeia de caracteres arbitrária atribuído para o <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter" /> propriedade de um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle, usado para autorizar se um controle pode ser adicionado a uma página.</param>
+        <param name="isShared">Indica se o controle está sendo verificado para autorização é um controle compartilhado, o que significa que é visível para muitos ou todos os usuários do aplicativo e sua <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.IsShared" /> o valor da propriedade é definido como <see langword="true" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationFilter">
+      <MemberSignature Language="C#" Value="public string AuthorizationFilter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthorizationFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.AuthorizationFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de cadeia de caracteres atribuído à propriedade <see cref="P:System.Web.UI.WebControls.WebParts.WebPart.AuthorizationFilter" /> de um controle <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />, usado para autorizar se um controle pode ser adicionado a uma página.</summary>
+        <value>Um <see cref="T:System.String" /> usado para determinar se um controle está autorizado a ser adicionado a uma página.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthorized">
+      <MemberSignature Language="C#" Value="public bool IsAuthorized { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthorized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.IsAuthorized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor que indica se um controle de Web Parts pode ser adicionado a uma página.</summary>
+        <value>
+          <see langword="true" />Se o controle de Web Parts pode ser adicionado à página. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsShared">
+      <MemberSignature Language="C#" Value="public bool IsShared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsShared" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.IsShared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um controle de Web Parts está visível para todos os usuários de uma página de Web Parts.</summary>
+        <value>
+          <see langword="true" />Se o controle de Web Parts está visível para todos os usuários da página. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de Web Parts compartilhado está visível para todos os usuários de uma página da Web. O oposto de um controle compartilhado é um controle de usuário, que é específica do usuário e é visível somente para o usuário que adicionou o controle para a página.  
+  
+ Se um controle dinâmico for adicionado enquanto um usuário está exibindo a página no escopo de personalização compartilhado, o controle será compartilhado. Se o controle for adicionado enquanto o usuário está no escopo de personalização do usuário, o <xref:System.Web.UI.WebControls.WebParts.WebPart.IsShared%2A> será o valor da propriedade para o controle `false`.  
+  
+ Para obter mais informações sobre compartilhados e controles de usuário, consulte [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho relativo de aplicativo para o arquivo de origem para o controle que está sendo autorizado, se o controle for um controle de usuário.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o caminho relativo de aplicativo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAuthorizationEventArgs.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> do controle de Web Parts que está sendo verificado para autorização.</summary>
+        <value>O <see cref="T:System.Type" /> do controle que está sendo verificado para autorização.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

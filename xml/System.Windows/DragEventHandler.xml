@@ -1,0 +1,84 @@
+<Type Name="DragEventHandler" FullName="System.Windows.DragEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DragEventHandler(object sender, DragEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DragEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DragEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.DragEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O objeto em que o manipulador de eventos está anexado.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa um método que tratará eventos roteados de arrastar e soltar, por exemplo <see cref="E:System.Windows.UIElement.DragEnter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este delegado é usado com os seguintes eventos anexados.  
+  
+-   <xref:System.Windows.DragDrop.DragEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.DragDrop.DragLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.DragDrop.DragOver?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.DragDrop.Drop?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.DragDrop.PreviewDragEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.DragDrop.PreviewDragLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.DragDrop.PreviewDragOver?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.DragDrop.PreviewDrop?displayProperty=nameWithType>  
+  
+ Este delegado também é usado com os seguintes eventos roteados em elementos de base. Esses eventos roteados encaminham os eventos anexados listados anteriormente para torná-las mais acessível para o modelo de elemento geral em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+-   <xref:System.Windows.UIElement.DragEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.DragLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.DragOver?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewDragEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewDragLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewDragOver?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewDrop?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.DragEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.DragLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.DragOver?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.Drop?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewDragEnter?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewDragLeave?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewDragOver?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewDrop?displayProperty=nameWithType>  
+  
+ Os eventos anexados e os eventos roteado de elemento base compartilham seus dados de evento e bolha e túnel versões dos eventos roteados também compartilham dados de evento. Isso pode afetar as características manipuladas do evento conforme ela se desloca a rota de evento. Para obter detalhes, consulte [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

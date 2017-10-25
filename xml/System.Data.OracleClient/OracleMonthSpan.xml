@@ -1,0 +1,674 @@
+<Type Name="OracleMonthSpan" FullName="System.Data.OracleClient.OracleMonthSpan">
+  <TypeSignature Language="C#" Value="public struct OracleMonthSpan : IComparable, System.Data.SqlTypes.INullable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit OracleMonthSpan extends System.ValueType implements class System.Data.SqlTypes.INullable, class System.IComparable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleMonthSpan" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.SqlTypes.INullable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um intervalo de tempo em meses e corresponde ao Oracle 9i <see langword="INTERVAL YEAR TO MONTH" /> tipo de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Oracle `INTERVAL YEAR TO MONTH` tipo de dados (Oracle 9i ou posterior) contém um intervalo de tempo em anos e meses e tem um tamanho fixo de 5 bytes.  
+  
+ Para obter um <xref:System.Data.OracleClient.OracleMonthSpan> de objeto, chame o <xref:System.Data.OracleClient.OracleDataReader.GetOracleMonthSpan%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleMonthSpan (System.Data.OracleClient.OracleMonthSpan from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Data.OracleClient.OracleMonthSpan from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.#ctor(System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="from" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="from">Um existente <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura do qual criar a nova estrutura.</param>
+        <summary>Inicializa uma nova <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura de uma existente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleMonthSpan (int months);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 months) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="months" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="months">Número de meses.</param>
+        <summary>Inicializa uma nova <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura para o número especificado de meses.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OracleMonthSpan (int years, int months);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 years, int32 months) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="years" Type="System.Int32" />
+        <Parameter Name="months" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="years">Número de anos.</param>
+        <param name="months">Número de meses.</param>
+        <summary>Inicializa uma nova <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura para um número especificado de anos e meses.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Especificam os parâmetros de um <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> valor menor que <see cref="F:System.Data.OracleClient.OracleMonthSpan.MinValue" /> ou maior que <see cref="F:System.Data.OracleClient.OracleMonthSpan.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado.</param>
+        <summary>Compara este <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura para o objeto fornecido e retorna uma indicação de seus valores relativos.</summary>
+        <returns>Um número assinado que indica os valores relativos da instância e o objeto.  
+  
+ <list type="table"><listheader><term>Valor de retorno  
+  
+ </term><description>Condição  
+  
+ </description></listheader><item><term>Menor que zero  
+  
+ </term><description>Esta instância é menor que o objeto.  
+  
+ </description></item><item><term>Zero  
+  
+ </term><description>Esta instância é igual ao objeto.  
+  
+ </description></item><item><term>Maior que zero  
+  
+ </term><description>Esta instância é maior que o objeto  
+  
+ -ou-  
+  
+ O objeto é uma referência nula (<see langword="Nothing" />).  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser comparado.</param>
+        <summary>Compara o parâmetro de objeto fornecido com a propriedade <see cref="P:System.Data.OracleClient.OracleMonthSpan.Value" /> do objeto <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</summary>
+        <returns>
+          <see langword="true" />Se o objeto é uma instância de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> e os dois são iguais; caso contrário <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean Equals (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean Equals(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.Equals(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Executa uma comparação lógica de dois <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estruturas para determinar se eles são iguais.</summary>
+        <returns>
+          <see langword="true" />Se os dois valores forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean GreaterThan (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean GreaterThan(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.GreaterThan(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> para determinar se a primeira é maior que o segundo.</summary>
+        <returns>Um <see cref="T:System.Data.OracleClient.OracleBoolean" /> que é <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> se a primeira instância é maior que a segunda instância, caso contrário, <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> for nulo, o <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> do <see cref="T:System.Data.OracleClient.OracleBoolean" /> é <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean GreaterThanOrEqual (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean GreaterThanOrEqual(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.GreaterThanOrEqual(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> para determinar se a primeira é maior que ou igual à segunda.</summary>
+        <returns>Um <see cref="T:System.Data.OracleClient.OracleBoolean" /> que é <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> se a primeira instância é maior que ou igual à segunda instância, caso contrário, <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> for nulo, o <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> do <see cref="T:System.Data.OracleClient.OracleBoolean" /> é <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNull" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleMonthSpan.IsNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Data.OracleClient.OracleMonthSpan.Value" /> propriedade o <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura é nula.</summary>
+        <value>
+          <see langword="true" />Se <see cref="P:System.Data.OracleClient.OracleMonthSpan.Value" /> for nulo, caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean LessThan (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean LessThan(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.LessThan(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> para determinar se a primeira for menor que o segundo.</summary>
+        <returns>Um <see cref="T:System.Data.OracleClient.OracleBoolean" /> que é <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> se a primeira instância é menor que a segunda instância, caso contrário, <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> for nulo, o <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> do <see cref="T:System.Data.OracleClient.OracleBoolean" /> é <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean LessThanOrEqual (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean LessThanOrEqual(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.LessThanOrEqual(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> para determinar se a primeira é menor ou igual à segunda.</summary>
+        <returns>Um <see cref="T:System.Data.OracleClient.OracleBoolean" /> que é <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> se a primeira instância é menor ou igual à segunda instância, caso contrário, <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> for nulo, o <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> do <see cref="T:System.Data.OracleClient.OracleBoolean" /> é <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxValue">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleMonthSpan MaxValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleMonthSpan MaxValue" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleMonthSpan.MaxValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleMonthSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o valor máximo de data válida para um <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor é 176556, que é equivalente ao AD de 9999.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinValue">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleMonthSpan MinValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleMonthSpan MinValue" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleMonthSpan.MinValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleMonthSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o valor mínimo de data válida para uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor é-176556, que é equivalente à continuidade de negócios 4172.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotEquals">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean NotEquals (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleBoolean NotEquals(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.NotEquals(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Executa uma comparação lógica de duas instâncias de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> para determinar se elas não forem iguais.</summary>
+        <returns>Um <see cref="T:System.Data.OracleClient.OracleBoolean" /> que é <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> se as duas instâncias não forem iguais ou <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> se duas instâncias são iguais. Se qualquer instância de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> for nulo, o <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> do <see cref="T:System.Data.OracleClient.OracleBoolean" /> é <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.Data.OracleClient.OracleMonthSpan Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Data.OracleClient.OracleMonthSpan Null" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OracleClient.OracleMonthSpan.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleMonthSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um valor nulo que pode ser atribuído para o <see cref="P:System.Data.OracleClient.OracleMonthSpan.Value" /> propriedade de uma instância do <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Null`funciona como uma constante para o <xref:System.Data.OracleClient.OracleMonthSpan> estrutura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator == (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Equality(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.op_Equality(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Executa uma comparação lógica de dois <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estruturas para determinar se eles são iguais.</summary>
+        <returns>
+          <see langword="true" />Se os dois valores forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.OracleClient.OracleMonthSpan.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator int (System.Data.OracleClient.OracleMonthSpan x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname int32 op_Explicit(valuetype System.Data.OracleClient.OracleMonthSpan x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.op_Explicit(System.Data.OracleClient.OracleMonthSpan)~System.Int32" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator System.Data.OracleClient.OracleMonthSpan (string x);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleMonthSpan op_Explicit(string x) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.op_Explicit(System.String)~System.Data.OracleClient.OracleMonthSpan" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleMonthSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &gt; (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_GreaterThan(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.op_GreaterThan(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> para determinar se a primeira é maior que o segundo.</summary>
+        <returns>Um <see cref="T:System.Data.OracleClient.OracleBoolean" /> que é <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> se a primeira instância é maior que a segunda instância, caso contrário, <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> for nulo, o <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> do <see cref="T:System.Data.OracleClient.OracleBoolean" /> é <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.OracleClient.OracleMonthSpan.GreaterThan%28System.Data.OracleClient.OracleMonthSpan%2CSystem.Data.OracleClient.OracleMonthSpan%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &gt;= (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_GreaterThanOrEqual(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.op_GreaterThanOrEqual(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> para determinar se a primeira é maior que ou igual à segunda.</summary>
+        <returns>Um <see cref="T:System.Data.OracleClient.OracleBoolean" /> que é <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> se a primeira instância é maior que ou igual à segunda instância, caso contrário, <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> for nulo, o <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> do <see cref="T:System.Data.OracleClient.OracleBoolean" /> é <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.OracleClient.OracleMonthSpan.GreaterThanOrEqual%28System.Data.OracleClient.OracleMonthSpan%2CSystem.Data.OracleClient.OracleMonthSpan%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator != (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_Inequality(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.op_Inequality(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Executa uma comparação lógica de duas instâncias de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> para determinar se eles são iguais.</summary>
+        <returns>Um <see cref="T:System.Data.OracleClient.OracleBoolean" /> que é <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> se as duas instâncias não forem iguais ou <see cref="F:System.Data.OracleClient.OracleBoolean.False" /> se duas instâncias são iguais. Se qualquer instância de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> for nulo, o <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> do <see cref="T:System.Data.OracleClient.OracleBoolean" /> é <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.OracleClient.OracleMonthSpan.NotEquals%28System.Data.OracleClient.OracleMonthSpan%2CSystem.Data.OracleClient.OracleMonthSpan%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &lt; (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_LessThan(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.op_LessThan(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> para determinar se a primeira for menor que o segundo.</summary>
+        <returns>Um <see cref="T:System.Data.OracleClient.OracleBoolean" /> que é <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> se a primeira instância é menor que a segunda instância, caso contrário, <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> for nulo, o <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> do <see cref="T:System.Data.OracleClient.OracleBoolean" /> é <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.OracleClient.OracleMonthSpan.LessThan%28System.Data.OracleClient.OracleMonthSpan%2CSystem.Data.OracleClient.OracleMonthSpan%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleBoolean operator &lt;= (System.Data.OracleClient.OracleMonthSpan x, System.Data.OracleClient.OracleMonthSpan y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Data.OracleClient.OracleBoolean op_LessThanOrEqual(valuetype System.Data.OracleClient.OracleMonthSpan x, valuetype System.Data.OracleClient.OracleMonthSpan y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.op_LessThanOrEqual(System.Data.OracleClient.OracleMonthSpan,System.Data.OracleClient.OracleMonthSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleBoolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Data.OracleClient.OracleMonthSpan" />
+        <Parameter Name="y" Type="System.Data.OracleClient.OracleMonthSpan" />
+      </Parameters>
+      <Docs>
+        <param name="x">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <param name="y">Uma estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> para determinar se a primeira é menor ou igual à segunda.</summary>
+        <returns>Um <see cref="T:System.Data.OracleClient.OracleBoolean" /> que é <see cref="F:System.Data.OracleClient.OracleBoolean.True" /> se a primeira instância é menor ou igual à segunda instância, caso contrário, <see cref="F:System.Data.OracleClient.OracleBoolean.False" />. Se qualquer instância de <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> for nulo, o <see cref="P:System.Data.OracleClient.OracleBoolean.Value" /> do <see cref="T:System.Data.OracleClient.OracleBoolean" /> é <see cref="F:System.Data.OracleClient.OracleBoolean.Null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Data.OracleClient.OracleMonthSpan.LessThanOrEqual%28System.Data.OracleClient.OracleMonthSpan%2CSystem.Data.OracleClient.OracleMonthSpan%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Data.OracleClient.OracleMonthSpan Parse (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Data.OracleClient.OracleMonthSpan Parse(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OracleClient.OracleMonthSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">O <see langword="String" /> a ser convertido.</param>
+        <summary>Converte a representação <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> especificada de uma data e hora em sua <see cref="T:System.String" /> equivalente.</summary>
+        <returns>Um <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura igual a data e hora representada pelo <see langword="String" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleMonthSpan.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte essa <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura para um <see cref="T:System.String" />.</summary>
+        <returns>Um <see langword="String" /> que representa o <see cref="P:System.Data.OracleClient.OracleMonthSpan.Value" /> propriedade deste <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public int Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleMonthSpan.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor da estrutura <see cref="T:System.Data.OracleClient.OracleMonthSpan" />.</summary>
+        <value>O valor deste <see cref="T:System.Data.OracleClient.OracleMonthSpan" /> estrutura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

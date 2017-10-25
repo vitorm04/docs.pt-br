@@ -1,0 +1,93 @@
+<Type Name="AsyncStateMachineAttribute" FullName="System.Runtime.CompilerServices.AsyncStateMachineAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AsyncStateMachineAttribute : System.Runtime.CompilerServices.StateMachineAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit AsyncStateMachineAttribute extends System.Runtime.CompilerServices.StateMachineAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.AsyncStateMachineAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.CompilerServices.StateMachineAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica se um método é marcado com o o [Async](~/docs/visual-basic/language-reference/modifiers/async.md) ou [async](~/docs/csharp/language-reference/keywords/async.md) modificador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não deve aplicar o `AsyncStateMachine` atributo métodos em seu código. Para métodos que têm o modificador async, o compilador aplicará o `AsyncStateMachine` atributo no nível de integridade que o compilador emite.  
+  
+ Quando um método (*MethodName*) tem o assíncrono ou modificador assíncrono, o compilador emite IL que inclui uma estrutura de máquina de estado. Essa estrutura contém o código no método. Se o IL também contém um método de stub (*MethodName*) que chama a máquina de estado. O compilador adiciona o `AsyncStateMachine` de atributo para o método de stub para que as ferramentas podem identificar a máquina de estado correspondente. Detalhes de IL emitido podem mudar em versões futuras dos compiladores.  
+  
+ Para obter informações sobre o recurso assíncronas, consulte [programação assíncrona com Async e Await](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
+  
+   
+  
+## Examples  
+ Como mostra o exemplo a seguir, você pode determinar se um método é marcado com [Async](~/docs/visual-basic/language-reference/modifiers/async.md) ou [async](~/docs/csharp/language-reference/keywords/async.md) modificador. No exemplo, `IsAsyncMethod` executa as seguintes etapas:  
+  
+-   Obtém um <xref:System.Reflection.MethodInfo> objeto para o nome do método usando <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>.  
+  
+-   Obtém um <xref:System.Type> objeto para o atributo usando [operador GetType](~/docs/visual-basic/language-reference/operators/gettype-operator.md) ou [typeof](~/docs/csharp/language-reference/keywords/typeof.md).  
+  
+-   Obtém um objeto de atributo para o tipo de método e o atributo usando `MethodInfo.GetCustomAttribute`. Se `GetCustomAttribute` retorna `Nothing` (Visual Basic) ou `null` (c#), o método não contém o atributo.  
+  
+ [!code-csharp[Runtime.CompilerServices.AsyncStateMachineAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/runtime.compilerservices.asyncstatemachineattribute/cs/program.cs#1)]
+ [!code-vb[Runtime.CompilerServices.AsyncStateMachineAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/runtime.compilerservices.asyncstatemachineattribute/vb/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsyncStateMachineAttribute (Type stateMachineType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type stateMachineType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.AsyncStateMachineAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stateMachineType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="stateMachineType">O objeto de tipo para o tipo de máquina de estado subjacente que é usado para implementar um método de máquina de estado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.CompilerServices.AsyncStateMachineAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,92 @@
+<Type Name="IDesignerDataSchema" FullName="System.ComponentModel.Design.Data.IDesignerDataSchema">
+  <TypeSignature Language="C#" Value="public interface IDesignerDataSchema" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerDataSchema" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Data.IDesignerDataSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define métodos para recuperar informações de esquema de repositório de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes que implementam o <xref:System.ComponentModel.Design.Data.IDesignerDataSchema> interface recuperar informações do esquema de um repositório de dados e retorná-lo para a interface do usuário, normalmente para preencher os elementos de interface do usuário que permitem ao usuário especificar o objeto de repositório de dados que eles desejam trabalhar com.  
+  
+ O <xref:System.ComponentModel.Design.Data.IDesignerDataSchema> interface fornece dois métodos: o <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems%2A> método, que retorna os objetos de esquema solicitada, e o <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.SupportsSchemaClass%2A> método, que indica se um objeto de esquema de dados especificado é suportado pelo repositório de dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSchemaItems">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection GetSchemaItems (System.ComponentModel.Design.Data.DesignerDataSchemaClass schemaClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetSchemaItems(class System.ComponentModel.Design.Data.DesignerDataSchemaClass schemaClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems(System.ComponentModel.Design.Data.DesignerDataSchemaClass)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaClass" Type="System.ComponentModel.Design.Data.DesignerDataSchemaClass" />
+      </Parameters>
+      <Docs>
+        <param name="schemaClass">Os objetos de esquema para retornar.</param>
+        <summary>Obtém uma coleção de itens do esquema especificado.</summary>
+        <returns>Uma coleção de objetos de esquema do tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems%2A> método retorna uma coleção de todos os objetos de esquema especificado no repositório de dados.  
+  
+ Consulte o <xref:System.ComponentModel.Design.Data.DesignerDataSchemaClass> classe para a lista de objetos de esquema com suporte pelo .NET Framework. Objetos de esquema adicionais podem ser adicionados para o <xref:System.ComponentModel.Design.Data.DesignerDataSchemaClass> classe, criando um tipo derivado.  
+  
+ Se o repositório de dados não dá suporte para o objeto de esquema solicitada, o <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems%2A> método deve retornar `null`. Você pode usar o <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.SupportsSchemaClass%2A> método para determinar se um repositório de dados dá suporte para o objeto de esquema solicitado antes de chamar o <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems%2A> método para evitar o retorno `null` para seu aplicativo.  
+  
+ Se o repositório de dados oferece suporte o objeto solicitado, mas não contém todas as instâncias, o <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.GetSchemaItems%2A> método deve retornar uma coleção vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsSchemaClass">
+      <MemberSignature Language="C#" Value="public bool SupportsSchemaClass (System.ComponentModel.Design.Data.DesignerDataSchemaClass schemaClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SupportsSchemaClass(class System.ComponentModel.Design.Data.DesignerDataSchemaClass schemaClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.IDesignerDataSchema.SupportsSchemaClass(System.ComponentModel.Design.Data.DesignerDataSchemaClass)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemaClass" Type="System.ComponentModel.Design.Data.DesignerDataSchemaClass" />
+      </Parameters>
+      <Docs>
+        <param name="schemaClass">Os objetos de esquema para retornar.</param>
+        <summary>Retorna um valor que indica se o repositório de dados contém o objeto de esquema de dados especificado.</summary>
+        <returns>
+          <see langword="true" />Se o repositório de dados tiver suporte para o objeto de esquema de dados especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.SupportsSchemaClass%2A> método indica se o repositório de dados oferece suporte a um objeto de esquema de dados especificado. Se o repositório de dados não dá suporte para o objeto especificado, o <xref:System.ComponentModel.Design.Data.IDesignerDataSchema.SupportsSchemaClass%2A> método deve retornar `false`.  
+  
+ Você pode adicionar testes para objetos de esquema de dados adicionais derivando de <xref:System.ComponentModel.Design.Data.DesignerDataSchemaClass> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

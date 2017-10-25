@@ -1,0 +1,104 @@
+<Type Name="ISecurityPolicyEncodable" FullName="System.Security.ISecurityPolicyEncodable">
+  <TypeSignature Language="C#" Value="public interface ISecurityPolicyEncodable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISecurityPolicyEncodable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.ISecurityPolicyEncodable" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Oferece suporte os métodos que convertem o estado do objeto de permissão em uma representação de elemento XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é semelhante ao <xref:System.Security.ISecurityEncodable>, com exceção de que ele inclui o contexto do nível de política. Nível de política é necessária para resolver referências a conjuntos de permissões nomeadas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public void FromXml (System.Security.SecurityElement e, System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FromXml(class System.Security.SecurityElement e, class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ISecurityPolicyEncodable.FromXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="e">O XML de codificação a ser usada para reconstruir o objeto de segurança.</param>
+        <param name="level">O contexto do nível de política para resolver permissões nomeadas define referências.</param>
+        <summary>Reconstrói um objeto de segurança com um estado especificado de uma codificação de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código personalizado que estende os objetos de política de segurança necessário para implementar o <xref:System.Security.ISecurityPolicyEncodable.ToXml%2A> e <xref:System.Security.ISecurityPolicyEncodable.FromXml%2A> métodos para tornar os objetos de segurança-pode ser codificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityElement ToXml (System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.SecurityElement ToXml(class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.ISecurityPolicyEncodable.ToXml(System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="level">O contexto do nível de política para resolver permissões nomeadas define referências.</param>
+        <summary>Cria uma codificação de XML do objeto de segurança e seu estado atual.</summary>
+        <returns>O elemento raiz da representação XML do objeto de diretiva.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto do nível de política é fornecido para resolução de referências de conjunto de permissões nomeadas. Por exemplo, grupos de código usam nível de política para localizar os conjuntos de permissões nomeadas por nome.  
+  
+ Código personalizado que estende os objetos de política de segurança necessário para implementar o <xref:System.Security.ISecurityPolicyEncodable.ToXml%2A> e <xref:System.Security.ISecurityPolicyEncodable.FromXml%2A> métodos para tornar os objetos de segurança-pode ser codificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

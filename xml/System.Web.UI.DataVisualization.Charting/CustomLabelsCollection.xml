@@ -1,0 +1,268 @@
+<Type Name="CustomLabelsCollection" FullName="System.Web.UI.DataVisualization.Charting.CustomLabelsCollection">
+  <TypeSignature Language="C#" Value="public class CustomLabelsCollection : System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.CustomLabel&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomLabelsCollection extends System.Web.UI.DataVisualization.Charting.ChartElementCollection`1&lt;class System.Web.UI.DataVisualization.Charting.CustomLabel&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.CustomLabel&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Web.UI.DataVisualization.Charting.CustomLabel</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection> classe representa uma coleção de <xref:System.Web.UI.DataVisualization.Charting.CustomLabel> rótulos de objetos, que por sua vez, representam personalizado que um <xref:System.Web.UI.DataVisualization.Charting.Axis> pode usar o objeto. Essa classe é exposta como o <xref:System.Web.UI.DataVisualization.Charting.Axis.CustomLabels%2A> propriedade de coleção de um <xref:System.Web.UI.DataVisualization.Charting.Axis> objeto.  
+  
+> [!NOTE]
+>  Você pode preencher automaticamente a linha inteira de rótulo de um eixo com personalizado <xref:System.DateTime> rótulos usando qualquer <xref:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add%2A> definição de método que inclui um `DateTimeIntervalType` argumento.  
+  
+ O <xref:System.Collections.ObjectModel.Collection%601.Count%2A> propriedade indica o número total de itens na coleção e é comumente usada para localizar o limite superior da coleção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (double labelsStep, System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(float64 labelsStep, valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Web.UI.DataVisualization.Charting.DateTimeIntervalType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="labelsStep" Type="System.Double" />
+        <Parameter Name="intervalType" Type="System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" />
+      </Parameters>
+      <Docs>
+        <param name="labelsStep">Um <see langword="Double" /> valor que determina a frequência na qual os rótulos personalizados serão desenhados.</param>
+        <param name="intervalType">Um <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> valor de enumeração que determina o tipo de intervalo.</param>
+        <summary>Adiciona vários <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" /> objetos do tipo <see cref="T:System.DateTime" /> à coleção. Preenche a primeira linha inteira de um eixo com rótulos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add%2A> método cria e inicializa <xref:System.Web.UI.DataVisualization.Charting.CustomLabel> objetos para toda a primeira linha do rótulo de um eixo com <xref:System.DateTime> rótulos do tipo especificado.  
+  
+ O `labelsStep` parâmetro determina a frequência na qual os rótulos personalizados serão desenhados.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.DataVisualization.Charting.ChartArea.RecalculateAxesScale%2A> método deve ser chamado antes de chamar essa definição de método específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.CustomLabel Add (double fromPosition, double toPosition, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.CustomLabel Add(float64 fromPosition, float64 toPosition, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Double,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CustomLabel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromPosition" Type="System.Double" />
+        <Parameter Name="toPosition" Type="System.Double" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fromPosition">O valor mínimo do intervalo de eixo ao qual o rótulo é aplicado.</param>
+        <param name="toPosition">O valor máximo do intervalo de eixo ao qual o rótulo é aplicado.</param>
+        <param name="text">O texto do rótulo.</param>
+        <summary>Adiciona um <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" /> objeto à coleção, usando o intervalo do eixo especificado e o texto.</summary>
+        <returns>Recém-adicionado <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adiciona um rótulo personalizado para a primeira linha do rótulo do eixo relevante. Nenhuma marca de rótulo é usada.  
+  
+ Se um rótulo personalizado for usado em qualquer lugar na primeira linha do rótulo, nenhum rótulo é gerado automaticamente para a primeira linha.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.DataVisualization.Charting.ChartArea.RecalculateAxesScale%2A> método deve ser chamado antes de chamar essa definição de método específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (double labelsStep, System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(float64 labelsStep, valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Web.UI.DataVisualization.Charting.DateTimeIntervalType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="labelsStep" Type="System.Double" />
+        <Parameter Name="intervalType" Type="System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="labelsStep">Um <see langword="Double" /> valor que determina a frequência na qual os rótulos personalizados serão desenhados.</param>
+        <param name="intervalType">Um <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> valor de enumeração que determina a unidade de medida para o <c>labelsStep</c> parâmetro.</param>
+        <param name="format">Um valor que determina o formato do rótulo personalizado. Para obter mais informações, consulte Data e cadeias de caracteres de formato de hora.</param>
+        <summary>Adiciona vários <see cref="T:System.DateTime" /> <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection" /> objetos na coleção. Preenche a primeira linha inteira de um eixo com rótulos com o formato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria e inicializa <xref:System.Web.UI.DataVisualization.Charting.CustomLabel> objetos primeiro rótulo de um eixo toda linha com <xref:System.DateTime> rótulos do tipo especificado.  
+  
+ A etapa determina a frequência na qual os rótulos personalizados serão desenhados e formatação de rótulo opcional pode ser especificado também.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.DataVisualization.Charting.ChartArea.RecalculateAxesScale%2A> método deve ser chamado antes de chamar essa definição de método específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.CustomLabel Add (double fromPosition, double toPosition, string text, int rowIndex, System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.CustomLabel Add(float64 fromPosition, float64 toPosition, string text, int32 rowIndex, valuetype System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Double,System.String,System.Int32,System.Web.UI.DataVisualization.Charting.LabelMarkStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CustomLabel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromPosition" Type="System.Double" />
+        <Parameter Name="toPosition" Type="System.Double" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="markStyle" Type="System.Web.UI.DataVisualization.Charting.LabelMarkStyle" />
+      </Parameters>
+      <Docs>
+        <param name="fromPosition">O valor mínimo do intervalo de eixo, que o rótulo é aplicado ao.</param>
+        <param name="toPosition">O valor máximo do intervalo de eixo, que o rótulo é aplicado ao.</param>
+        <param name="text">O texto do rótulo.</param>
+        <param name="rowIndex">O índice de linha do rótulo.</param>
+        <param name="markStyle">Um <see cref="T:System.Web.UI.DataVisualization.Charting.LabelMarkstyle" /> estilo usado para o rótulo da marca de valor de enumeração que especifica a escala.</param>
+        <summary>Adiciona um rótulo personalizado à coleção, usando o intervalo do eixo especificado, o texto, o índice de linha e estilo de marcação.</summary>
+        <returns>Recém-adicionado <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (double labelsStep, System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, string format, int rowIndex, System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(float64 labelsStep, valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, string format, int32 rowIndex, valuetype System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Web.UI.DataVisualization.Charting.DateTimeIntervalType,System.String,System.Int32,System.Web.UI.DataVisualization.Charting.LabelMarkStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="labelsStep" Type="System.Double" />
+        <Parameter Name="intervalType" Type="System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="markStyle" Type="System.Web.UI.DataVisualization.Charting.LabelMarkStyle" />
+      </Parameters>
+      <Docs>
+        <param name="labelsStep">Um <see langword="Double" /> valor que determina a frequência na qual os rótulos personalizados serão desenhados.</param>
+        <param name="intervalType">Um <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> valor de enumeração que determina a unidade de medida para o <c>labelsStep</c> parâmetro.</param>
+        <param name="format">O formato de texto do rótulo.</param>
+        <param name="rowIndex">O índice de linha do rótulo.</param>
+        <param name="markStyle">Um <see cref="T:System.Web.UI.DataVisualization.Charting.LabelMarkstyle" /> estilo usado para o rótulo da marca de valor de enumeração que especifica a escala.</param>
+        <summary>Adiciona vários rótulos personalizados à coleção. Os rótulos serão <see cref="T:System.DateTime" /> rótulos com o tipo de intervalo especificado, o formato de texto, índice e a marcação de estilo de linha.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.CustomLabel Add (double fromPosition, double toPosition, string text, int rowIndex, System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle, System.Web.UI.DataVisualization.Charting.GridTickTypes gridTick);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.DataVisualization.Charting.CustomLabel Add(float64 fromPosition, float64 toPosition, string text, int32 rowIndex, valuetype System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle, valuetype System.Web.UI.DataVisualization.Charting.GridTickTypes gridTick) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Double,System.String,System.Int32,System.Web.UI.DataVisualization.Charting.LabelMarkStyle,System.Web.UI.DataVisualization.Charting.GridTickTypes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CustomLabel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromPosition" Type="System.Double" />
+        <Parameter Name="toPosition" Type="System.Double" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="markStyle" Type="System.Web.UI.DataVisualization.Charting.LabelMarkStyle" />
+        <Parameter Name="gridTick" Type="System.Web.UI.DataVisualization.Charting.GridTickTypes" />
+      </Parameters>
+      <Docs>
+        <param name="fromPosition">O valor mínimo do intervalo de eixo, que o rótulo é aplicado ao.</param>
+        <param name="toPosition">O valor máximo do intervalo de eixo, que o rótulo é aplicado ao.</param>
+        <param name="text">O texto do rótulo.</param>
+        <param name="rowIndex">O índice de linha do rótulo.</param>
+        <param name="markStyle">Um <see cref="T:System.Web.UI.DataVisualization.Charting.LabelMarkstyle" /> estilo usado para o rótulo da marca de valor de enumeração que especifica a escala.</param>
+        <param name="gridTick">Um <see cref="T:System.Web.UI.DataVisualization.Charting.GridTickTypes" /> tipo usado para o rótulo de valor de enumeração que especifica a grade de escala.</param>
+        <summary>Adiciona um rótulo personalizado à coleção, usando o intervalo do eixo especificado, o texto, o índice de linha, marcar o tipo de estilo e a grade de escala.</summary>
+        <returns>Recém-adicionado <see cref="T:System.Web.UI.DataVisualization.Charting.CustomLabel" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (double labelsStep, System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, double min, double max, string format, int rowIndex, System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(float64 labelsStep, valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType intervalType, float64 min, float64 max, string format, int32 rowIndex, valuetype System.Web.UI.DataVisualization.Charting.LabelMarkStyle markStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.CustomLabelsCollection.Add(System.Double,System.Web.UI.DataVisualization.Charting.DateTimeIntervalType,System.Double,System.Double,System.String,System.Int32,System.Web.UI.DataVisualization.Charting.LabelMarkStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="labelsStep" Type="System.Double" />
+        <Parameter Name="intervalType" Type="System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" />
+        <Parameter Name="min" Type="System.Double" />
+        <Parameter Name="max" Type="System.Double" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="markStyle" Type="System.Web.UI.DataVisualization.Charting.LabelMarkStyle" />
+      </Parameters>
+      <Docs>
+        <param name="labelsStep">Um <see langword="Double" /> valor que determina a frequência na qual os rótulos personalizados serão desenhados.</param>
+        <param name="intervalType">Um <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> valor de enumeração que determina a unidade de medida para o <c>labelsStep</c> parâmetro.</param>
+        <param name="min">O valor mínimo do intervalo de eixo.</param>
+        <param name="max">O valor máximo do intervalo de eixo.</param>
+        <param name="format">O formato de texto do rótulo.</param>
+        <param name="rowIndex">O índice de linha do rótulo.</param>
+        <param name="markStyle">Um <see cref="T:System.Web.UI.DataVisualization.Charting.LabelMarkstyle" /> estilo usado para o rótulo da marca de valor de enumeração que especifica a escala.</param>
+        <summary>Adiciona vários rótulos personalizados à coleção. Os rótulos serão <see cref="T:System.DateTime" /> rótulos com o tipo de intervalo especificado e será gerado para o intervalo do eixo é determinado pelo <paramref name="min" /> e <paramref name="max" /> argumentos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

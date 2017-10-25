@@ -1,0 +1,130 @@
+<Type Name="ActivityExecutionStatus" FullName="System.Workflow.ComponentModel.ActivityExecutionStatus">
+  <TypeSignature Language="C#" Value="public enum ActivityExecutionStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ActivityExecutionStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.ActivityExecutionStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Enumeração de valores de status de atividade que correspondem ao ciclo de vida de uma atividade dentro de uma instância de fluxo de trabalho em execução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Status representa o status atual de um <xref:System.Workflow.ComponentModel.Activity> instância em uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Canceling">
+      <MemberSignature Language="C#" Value="Canceling" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Canceling = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionStatus.Canceling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o status quando uma atividade está sendo cancelado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Closed">
+      <MemberSignature Language="C#" Value="Closed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Closed = unsigned int8(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionStatus.Closed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o status quando uma atividade é fechada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Compensating">
+      <MemberSignature Language="C#" Value="Compensating" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Compensating = unsigned int8(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionStatus.Compensating" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o status quando é uma atividade de compensação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Executing">
+      <MemberSignature Language="C#" Value="Executing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Executing = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionStatus.Executing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o status durante a execução de uma atividade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Faulting">
+      <MemberSignature Language="C#" Value="Faulting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Faulting = unsigned int8(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionStatus.Faulting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o status quando uma atividade está falhando.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialized">
+      <MemberSignature Language="C#" Value="Initialized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Initialized = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ActivityExecutionStatus.Initialized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o status quando uma atividade que está sendo inicializada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

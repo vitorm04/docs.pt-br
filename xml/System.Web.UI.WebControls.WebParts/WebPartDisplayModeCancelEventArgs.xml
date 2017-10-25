@@ -1,0 +1,62 @@
+<Type Name="WebPartDisplayModeCancelEventArgs" FullName="System.Web.UI.WebControls.WebParts.WebPartDisplayModeCancelEventArgs">
+  <TypeSignature Language="C#" Value="public class WebPartDisplayModeCancelEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartDisplayModeCancelEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCancelEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanging" /> evento cancelável.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCancelEventArgs> classe contém informações para o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanging> evento. O <xref:System.Web.UI.WebControls.WebParts.WebPartEventArgs> classe fornece acesso para o modo de exibição que será aplicado ao controle de Web Parts. O modo de exibição é acessado por meio de <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCancelEventArgs.NewDisplayMode%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartDisplayModeCancelEventArgs (System.Web.UI.WebControls.WebParts.WebPartDisplayMode newDisplayMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPartDisplayMode newDisplayMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCancelEventArgs.#ctor(System.Web.UI.WebControls.WebParts.WebPartDisplayMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newDisplayMode" Type="System.Web.UI.WebControls.WebParts.WebPartDisplayMode" />
+      </Parameters>
+      <Docs>
+        <param name="newDisplayMode">O <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> para aplicar a um controle de Web Parts.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCancelEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewDisplayMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartDisplayMode NewDisplayMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartDisplayMode NewDisplayMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCancelEventArgs.NewDisplayMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de exibição para aplicar a um controle de Web Parts.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> para aplicar a um controle de Web Parts.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

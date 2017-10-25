@@ -1,0 +1,224 @@
+<Type Name="ViewStateService" FullName="System.Activities.Presentation.View.ViewStateService">
+  <TypeSignature Language="C#" Value="public abstract class ViewStateService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ViewStateService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.View.ViewStateService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que a preservação e o acesso de todos os valores de dados associados aos componentes de interação de usuário de um aplicativo de fluxo de trabalho, em um ponto específico no tempo de execução de um aplicativo de fluxo de trabalho. Um <see cref="T:System.Activities.Presentation.View.ViewStateService" /> repositórios de exibição de estados para itens de modelo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é útil para que o estado pode manter sendo recuperado quando o controle do aplicativo fica e vem com postbacks. <xref:System.Activities.Presentation.View.ViewStateService>é uma classe abstrata. Classes derivadas devem armazenar a exibição informa quando <xref:System.Activities.Presentation.View.ViewStateService.StoreViewState%2A> é chamado e recuperá-las quando <xref:System.Activities.Presentation.View.ViewStateService.RetrieveViewState%2A> é chamado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ViewStateService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.ViewStateService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicia uma nova instância do <see cref="T:System.Activities.Presentation.View.ViewStateService" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveViewState">
+      <MemberSignature Language="C#" Value="public abstract bool RemoveViewState (System.Activities.Presentation.Model.ModelItem modelItem, string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool RemoveViewState(class System.Activities.Presentation.Model.ModelItem modelItem, string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.ViewStateService.RemoveViewState(System.Activities.Presentation.Model.ModelItem,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelItem" Type="System.Activities.Presentation.Model.ModelItem" />
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="modelItem">A atividade de fluxo de trabalho <see cref="T:System.Activities.Presentation.Model.ModelItem" /> associado com o estado de exibição atual.</param>
+        <param name="key">O <see cref="T:System.String" /> que identifica o item de estado de exibição é armazenado.</param>
+        <summary>Quando implementada em uma classe derivada, remove o estado de exibição representado pela chave especificada e associado ao item de modelo especificado.</summary>
+        <returns>
+          <see langword="true" />Se o estado de exibição foi removido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrieveAllViewState">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.Dictionary&lt;string,object&gt; RetrieveAllViewState (System.Activities.Presentation.Model.ModelItem modelItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.Dictionary`2&lt;string, object&gt; RetrieveAllViewState(class System.Activities.Presentation.Model.ModelItem modelItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.ViewStateService.RetrieveAllViewState(System.Activities.Presentation.Model.ModelItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelItem" Type="System.Activities.Presentation.Model.ModelItem" />
+      </Parameters>
+      <Docs>
+        <param name="modelItem">O <see cref="T:System.Activities.Presentation.Model.ModelItem" /> que o estado de exibição aplica-se a.</param>
+        <summary>Retorna um aspecto do estado de exibição que foi armazenado especificado <paramref name="modelItem" />, correspondência especificado <paramref name="key" />.</summary>
+        <returns>Retorna <see cref="T:System.Collections.Generic.Dictionary`2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Activities.Presentation.View.ViewStateService.StoreViewState%2A> inicialmente armazenar informações de estado de exibição para que ele possa ser recuperado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrieveViewState">
+      <MemberSignature Language="C#" Value="public abstract object RetrieveViewState (System.Activities.Presentation.Model.ModelItem modelItem, string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object RetrieveViewState(class System.Activities.Presentation.Model.ModelItem modelItem, string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.ViewStateService.RetrieveViewState(System.Activities.Presentation.Model.ModelItem,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelItem" Type="System.Activities.Presentation.Model.ModelItem" />
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="modelItem">A atividade de fluxo de trabalho <see cref="T:System.Activities.Presentation.Model.ModelItem" /> associado com o estado de exibição atual.</param>
+        <param name="key">O <see cref="T:System.String" /> que identifica o aspecto do estado de exibição devem ser recuperados.</param>
+        <summary>Recupera um aspecto do estado de exibição especificado <paramref name="modelItem" />, correspondência especificado <paramref name="key" />.</summary>
+        <returns>O aspecto do estado de exibição como uma <see cref="T:System.Object" />, ou <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Activities.Presentation.View.ViewStateService.StoreViewState%2A> inicialmente armazenar informações de estado de exibição para que ele possa ser recuperado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreViewState">
+      <MemberSignature Language="C#" Value="public abstract void StoreViewState (System.Activities.Presentation.Model.ModelItem modelItem, string key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StoreViewState(class System.Activities.Presentation.Model.ModelItem modelItem, string key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.ViewStateService.StoreViewState(System.Activities.Presentation.Model.ModelItem,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelItem" Type="System.Activities.Presentation.Model.ModelItem" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="modelItem">O <see cref="T:System.Activities.Presentation.Model.ModelItem" /> que o estado de exibição aplica-se a.</param>
+        <param name="key">O <see cref="T:System.String" /> que identifica o aspecto do estado de exibição será armazenado.</param>
+        <param name="value">Um <see cref="T:System.Object" /> a ser armazenado.</param>
+        <summary>Armazena um aspecto do estado de exibição especificado <paramref name="modelItem" />, correspondência especificado <paramref name="key" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode recuperar o objeto armazenado chamando <xref:System.Activities.Presentation.View.ViewStateService.RetrieveViewState%2A> e passando os mesmos valores `modelItem` e `key`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreViewStateWithUndo">
+      <MemberSignature Language="C#" Value="public abstract void StoreViewStateWithUndo (System.Activities.Presentation.Model.ModelItem modelItem, string key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StoreViewStateWithUndo(class System.Activities.Presentation.Model.ModelItem modelItem, string key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.ViewStateService.StoreViewStateWithUndo(System.Activities.Presentation.Model.ModelItem,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelItem" Type="System.Activities.Presentation.Model.ModelItem" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="modelItem">O <see cref="T:System.Activities.Presentation.Model.ModelItem" /> que o estado de exibição aplica-se a.</param>
+        <param name="key">O <see cref="T:System.String" /> que identifica o aspecto do estado de exibição será armazenado. O <see cref="T:System.String" /> que identifica o item de estado de exibição é armazenado.</param>
+        <param name="value">Um <see cref="T:System.Object" /> a ser armazenado.</param>
+        <summary>Quando implementada em uma classe derivada, registra a configuração atual do item representado pela chave especificada para que ele está disponível para uma operação de desfazer. O item representado pela chave especificada, em seguida, é armazenado no estado de exibição do item de modelo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode recuperar o objeto armazenado chamando <xref:System.Activities.Presentation.View.ViewStateService.RetrieveViewState%2A> e passando os mesmos valores `modelItem` e `key`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoableViewStateChanged">
+      <MemberSignature Language="C#" Value="public abstract event System.Activities.Presentation.View.ViewStateChangedEventHandler UndoableViewStateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Activities.Presentation.View.ViewStateChangedEventHandler UndoableViewStateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.View.ViewStateService.UndoableViewStateChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.ViewStateChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, declara um evento que indica que uma alteração foi feita para o estado de exibição pode ser desfeita do controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewStateChanged">
+      <MemberSignature Language="C#" Value="public abstract event System.Activities.Presentation.View.ViewStateChangedEventHandler ViewStateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Activities.Presentation.View.ViewStateChangedEventHandler ViewStateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.View.ViewStateService.ViewStateChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.View.ViewStateChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, declara um evento que indica que uma alteração foi feita para o estado de exibição do controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

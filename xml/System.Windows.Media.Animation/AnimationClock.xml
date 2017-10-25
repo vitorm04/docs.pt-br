@@ -1,0 +1,86 @@
+<Type Name="AnimationClock" FullName="System.Windows.Media.Animation.AnimationClock">
+  <TypeSignature Language="C#" Value="public class AnimationClock : System.Windows.Media.Animation.Clock" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AnimationClock extends System.Windows.Media.Animation.Clock" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.AnimationClock" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Clock</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Mantém o estado de tempo de execução de um <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> e processa seus valores de saída.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Animation.AnimationClock>objetos são gerados a partir <xref:System.Windows.Media.Animation.AnimationTimeline> objetos. Um <xref:System.Windows.Media.Animation.AnimationTimeline> descreve os valores de saída de uma animação, duração, hora de início, finalizar informações de tempo e outros animação fundamentais. Um <xref:System.Windows.Media.Animation.AnimationClock> processa os valores de animação descritos por um <xref:System.Windows.Media.Animation.AnimationTimeline> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AnimationClock (System.Windows.Media.Animation.AnimationTimeline animation);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Animation.AnimationTimeline animation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.AnimationClock.#ctor(System.Windows.Media.Animation.AnimationTimeline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="animation" Type="System.Windows.Media.Animation.AnimationTimeline" />
+      </Parameters>
+      <Docs>
+        <param name="animation">A saída a animação que descreve esse clock do valores e comportamentos de tempo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.AnimationClock" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValue">
+      <MemberSignature Language="C#" Value="public object GetCurrentValue (object defaultOriginValue, object defaultDestinationValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetCurrentValue(object defaultOriginValue, object defaultDestinationValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.AnimationClock.GetCurrentValue(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Object" />
+        <Parameter Name="defaultDestinationValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">O valor de origem fornecido com o relógio se sua animação não tiver seu próprio valor de início. Se este relógio for o primeiro em uma cadeia de composição, que ele será o valor base da propriedade que está sendo animada; Caso contrário, será o valor retornado pelo relógio anterior na cadeia</param>
+        <param name="defaultDestinationValue">O valor de destino fornecido com o relógio se sua animação não tiver seu próprio valor de destino. Se este relógio for o primeiro em uma cadeia de composição, que ele será o valor base da propriedade que está sendo animada; Caso contrário, será o valor retornado pelo relógio anterior na cadeia</param>
+        <summary>Obtém o valor de saída atual o <see cref="T:System.Windows.Media.Animation.AnimationClock" />.</summary>
+        <returns>O valor atual deste <see cref="T:System.Windows.Media.Animation.AnimationClock" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeline">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.AnimationTimeline Timeline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.AnimationTimeline Timeline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.AnimationClock.Timeline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.AnimationTimeline</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Media.Animation.AnimationTimeline" /> que descreve o comportamento deste relógio.</summary>
+        <value>A animação que descreve o comportamento deste relógio.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

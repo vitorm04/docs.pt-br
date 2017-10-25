@@ -1,0 +1,80 @@
+<Type Name="UsableDuringInitializationAttribute" FullName="System.Windows.Markup.UsableDuringInitializationAttribute">
+  <TypeSignature Language="C#" Value="public sealed class UsableDuringInitializationAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UsableDuringInitializationAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.UsableDuringInitializationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica se este tipo é criado de cima para baixo durante a criação do gráfico de objeto XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ De cima para baixo é uma metáfora que aproxima o comportamento do processador de XAML ao criar o gráfico de objeto. Quando criado de cima para baixo, uma classe é instanciada, anexados para o pai, e, em seguida, configurou suas propriedades. Construção de cima para baixo evita invocar os manipuladores de propriedade alterada várias vezes. Esse tratamento se propagará o gráfico do objeto e, portanto, eliminando as várias chamadas de manipulador fornece uma otimização de desempenho da inicialização do gráfico do objeto.  
+  
+ Nas versões anteriores do .NET Framework, essa classe existia no assembly específicos de WPF WindowsBase. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.UsableDuringInitializationAttribute> está no assembly System. XAML. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="wpf-usage-notes"></a>Observações de uso do WPF  
+ Em WPF XAML para [!INCLUDE[net_v30_short](~/includes/net-v30-short-md.md)] e [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)], construção de cima para baixo foi interna do XAML processamento para determinadas classes. O <xref:System.Windows.Markup.UsableDuringInitializationAttribute> atributo formaliza reporting do comportamento de cima para baixo em [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UsableDuringInitializationAttribute (bool usable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool usable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.UsableDuringInitializationAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="usable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="usable">Define se a classe associada é útil durante a inicialização.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.UsableDuringInitializationAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Herda esse atributo. Para o aplicativo inicial seria aplicada normalmente como `[UsableDuringInitialization(true)]`, mas, em seguida, você pode definir `[UsableDuringInitialization(false)]` em uma classe derivada para alterar a classe derivada de relatórios do comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Usable">
+      <MemberSignature Language="C#" Value="public bool Usable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Usable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.UsableDuringInitializationAttribute.Usable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a classe associada é útil durante a inicialização.</summary>
+        <value>
+          <see langword="true" />Se a classe associada é útil durante a inicialização; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

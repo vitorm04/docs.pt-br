@@ -1,0 +1,89 @@
+<Type Name="SettingsSavedEventArgs" FullName="System.Web.ClientServices.Providers.SettingsSavedEventArgs">
+  <TypeSignature Language="C#" Value="public class SettingsSavedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SettingsSavedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ClientServices.Providers.SettingsSavedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=nameWithType> evento ocorre depois que o provedor de configurações acessa o serviço de configurações, mesmo se as configurações não foram salvas com êxito. Um motivo que o provedor pode falhar salvar as configurações é se o usuário atual foi desconectado. Você pode usar o <xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs.FailedSettingsList%2A> para determinar se as configurações não foram salvas com êxito.  
+  
+ Esse evento não ocorrerá se o provedor de configurações não pode acessar o serviço de configurações, o que faz com que o provedor lançar um <xref:System.Net.WebException>.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar essa classe para exibir uma lista de configurações que não foram salvas com êxito.  
+  
+ [!code-csharp[ClientApplicationServices#304](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#304)]
+ [!code-vb[ClientApplicationServices#304](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#304)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsSavedEventArgs (System.Collections.Generic.IEnumerable&lt;string&gt; failedSettingsList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; failedSettingsList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ClientServices.Providers.SettingsSavedEventArgs.#ctor(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="failedSettingsList" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="failedSettingsList">As configurações que o provedor de configurações não pôde salvar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.ClientServices.Providers.SettingsSavedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailedSettingsList">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; FailedSettingsList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; FailedSettingsList" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ClientServices.Providers.SettingsSavedEventArgs.FailedSettingsList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as configurações que o <see cref="T:System.Web.ClientServices.Providers.ClientSettingsProvider" /> não pôde salvar no servidor.</summary>
+        <value>As configurações que não foram salvas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um motivo que o provedor pode falhar salvar as configurações é se o usuário atual foi desconectado. Você pode usar o <xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs.FailedSettingsList%2A> para determinar se as configurações não foram salvas com êxito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar essa propriedade para exibir uma lista de configurações que não foram salvas com êxito.  
+  
+ [!code-csharp[ClientApplicationServices#304](~/samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#304)]
+ [!code-vb[ClientApplicationServices#304](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#304)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

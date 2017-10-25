@@ -1,0 +1,1028 @@
+<Type Name="WindowsFormsHost" FullName="System.Windows.Forms.Integration.WindowsFormsHost">
+  <TypeSignature Language="C#" Value="public class WindowsFormsHost : System.Windows.Interop.HwndHost, System.Windows.Interop.IKeyboardInputSink" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi WindowsFormsHost extends System.Windows.Interop.HwndHost implements class System.Windows.Interop.IKeyboardInputSink" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Integration.WindowsFormsHost" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsFormsIntegration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Interop.HwndHost</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Interop.IKeyboardInputSink</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ChildChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignerCategory("code")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Child")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Um elemento que permite hospedar um controle de formulários do Windows em uma página do WPF.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento para colocar um [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controle dentro de sua [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] elemento ou da página.  
+  
+ Para hospedar um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] elemento em um [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] de controle ou formulário, use o <xref:System.Windows.Forms.Integration.ElementHost> controle.  
+  
+> [!NOTE]
+>  WindowsFormsIntegration é instalado com o [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] assemblies. O local padrão para o assembly é %programfiles%\Reference Assemblies\Microsoft\Framework\v3.0\WindowsFormsIntegration.dll..  
+  
+ Para hospedar um [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controlar um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] elemento, você deve atribuir o [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] o controle para o <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> propriedade.  
+  
+ Use o <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> propriedade para atribuir mapeamentos personalizados entre um <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento e seu hospedado [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controle. Para mais informações, consulte [Windows Forms e mapeamento de propriedade do WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+  
+<a name="xamlObjectElementUsage_WindowsFormsHost"></a>   
+## <a name="xaml-object-element-usage"></a>Uso de elemento Object do XAML  
+  
+```  
+<WindowsFormsHost.../>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento host um <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> controle. Para obter mais informações, consulte [passo a passo: hospedando um controle de formulários do Windows no WPF pelo XAML usando](~/docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md).  
+  
+ [!code-xaml[HostingWfInWpfWithXaml#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWpfWithXaml/CSharp/HostingWfInWpf/Window1.xaml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowsFormsHost ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">para confiança total para todos os chamadores superior na pilha de chamadas. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size finalSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size finalSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="finalSize">A área final no pai que esse elemento deve usar para organizar a si próprio e seus filhos.</param>
+        <summary>Quando implementada em uma classe derivada, posiciona elementos filho e determina um tamanho para um <see cref="T:System.Windows.FrameworkElement" />-classe derivada.</summary>
+        <returns>O tamanho real usado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Background { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Background" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.WindowsFormsHost.Background" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o plano de fundo do controle hospedado como uma propriedade de ambiente.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Brush" /> definido como a cor de plano de fundo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade de dependência é identificada pelo <xref:System.Windows.Forms.Integration.WindowsFormsHost.BackgroundProperty> campo. Por padrão, essa propriedade é mapeada para atualizar o <xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Control.BackgroundImage%2A?displayProperty=nameWithType> propriedades do controle hospedado.  
+  
+ Para obter mais informações sobre o mapeamento de <xref:System.Windows.Forms.Integration.WindowsFormsHost.Background%2A> propriedade, consulte [Windows Forms e mapeamento de propriedade do WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+  
+<a name="xamlAttributeUsage_Background"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Background="Brush"/>  
+```  
+  
+<a name="xamlValues_Background"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *Pincel*  
+ Consulte <xref:System.Windows.Media.Brush> para obter a sintaxe de atributo XAML.  
+  
+<a name="dependencyPropertyInfo_Background"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Forms.Integration.WindowsFormsHost.BackgroundProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Integration.WindowsFormsHost.BackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Background" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildWindowCore">
+      <MemberSignature Language="C#" Value="protected override System.Runtime.InteropServices.HandleRef BuildWindowCore (System.Runtime.InteropServices.HandleRef hwndParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Runtime.InteropServices.HandleRef BuildWindowCore(valuetype System.Runtime.InteropServices.HandleRef hwndParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore(System.Runtime.InteropServices.HandleRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.HandleRef</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwndParent" Type="System.Runtime.InteropServices.HandleRef" />
+      </Parameters>
+      <Docs>
+        <param name="hwndParent">Identificador da janela pai (HWND).</param>
+        <summary>Substitui a implementação da classe base <see cref="M:System.Windows.Interop.HwndHost.BuildWindowCore(System.Runtime.InteropServices.HandleRef)" /> criem hospedado [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controle.</summary>
+        <returns>O identificador de janela para este objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Child">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control Child { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control Child" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.WindowsFormsHost.Child" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o controle filho hospedado pelo elemento <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" />.</summary>
+        <value>O controle [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controle de apenas um filho pode ser hospedado, mas <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> pode ter qualquer número de filhos.  
+  
+ O controle filho não pode ser um formulário de nível superior.  
+  
+ Se <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> é um <xref:System.Windows.Forms.Form>, o formulário <xref:System.Windows.Forms.Form.ControlBox%2A> está definida como `false`.  
+  
+<a name="xamlTextUsage_Child"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ `<` *objeto* `>`  
+  
+ `<`*hostedControl*  `.../>`  
+  
+ `</` *objeto* `>`  
+  
+<a name="xamlValues_Child"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *object*  
+ Um <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento (ou uma subclasse possíveis).  
+  
+ *hostedControl*  
+ Um elemento que especifica o hospedado [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controle. Especificando o controle personalizado na marcação normalmente requer um mapeamento de xmlns, consulte [Namespaces XAML e o mapeamento de Namespace para WPF XAML](~/docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> propriedade para adicionar o controle hospedado para o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento. Para obter mais informações, consulte [passo a passo: hospedando um controle ActiveX no WPF](~/docs/framework/wpf/advanced/walkthrough-hosting-an-activex-control-in-wpf.md).  
+  
+ [!code-csharp[HostingAxInWpf#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml.cs#11)]
+ [!code-vb[HostingAxInWpf#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingAxInWpf/VisualBasic/HostingAxInWpf/window1.xaml.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Foi feita uma tentativa para atribuir um formulário de nível superior como o controle hospedado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.Integration.ChildChangedEventArgs&gt; ChildChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.Integration.ChildChangedEventArgs&gt; ChildChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.WindowsFormsHost.ChildChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.Integration.ChildChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Child" /> está definida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_ChildChanged"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object ChildChanged="eventHandler"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestroyWindowCore">
+      <MemberSignature Language="C#" Value="protected override void DestroyWindowCore (System.Runtime.InteropServices.HandleRef hwnd);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DestroyWindowCore(valuetype System.Runtime.InteropServices.HandleRef hwnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.DestroyWindowCore(System.Runtime.InteropServices.HandleRef)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.Runtime.InteropServices.HandleRef" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">Um identificador de janela. Este parâmetro não é usado.</param>
+        <summary>Substitui <see cref="M:System.Windows.Interop.HwndHost.DestroyWindowCore(System.Runtime.InteropServices.HandleRef)" /> para excluir a janela que contém este objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Windows.Forms.Integration.WindowsFormsHost.Dispose%2A> método descarta a base de <xref:System.Windows.Interop.HwndHost> e <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableWindowsFormsInterop">
+      <MemberSignature Language="C#" Value="public static void EnableWindowsFormsInterop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableWindowsFormsInterop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Habilita o funcionamento correto de <see cref="T:System.Windows.Forms.Form" /> quando ele é aberto sem modo específico em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> método para encaminhar todas as mensagens do teclado quando um <xref:System.Windows.Forms.Form?displayProperty=nameWithType> é aberto em modo sem restrição. O <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> método instalará um filtro de mensagem que é necessário para formulários sem janela restrita funcionar corretamente quando aberto pelo [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]. Você precisa chamar este método apenas uma vez para um determinado <xref:System.Windows.Forms.Integration.WindowsFormsHost> instância.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.Demand">para confiança total para todos os chamadores superior na pilha de chamadas. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamily">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FontFamily FontFamily { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.FontFamily FontFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.WindowsFormsHost.FontFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a família de fontes do controle hospedado.</summary>
+        <value>A família da fonte usada no controle hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa configuração de propriedade afeta apenas os controles cujo modelo usa a propriedade como um parâmetro. Ele não tem nenhum efeito em outros controles.  
+  
+ Essa propriedade de dependência é identificada pelo <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontFamilyProperty> campo. Por padrão, essa propriedade é mapeada para atualizar o <xref:System.Windows.Forms.Control.Font%2A?displayProperty=nameWithType> propriedade do controle hospedado. Para mais informações, consulte [Windows Forms e mapeamento de propriedade do WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+  
+<a name="xamlAttributeUsage_FontFamily"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object FontFamily="fontFamily"/>  
+```  
+  
+<a name="xamlValues_FontFamily"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *fontFamily*  
+ Consulte <xref:System.Windows.Media.FontFamily> para obter a sintaxe de atributo XAML.  
+  
+<a name="dependencyPropertyInfo_FontFamily"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Forms.Integration.WindowsFormsHost.FontFamilyProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamilyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontFamilyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontFamilyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Integration.WindowsFormsHost.FontFamilyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontFamily" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSize">
+      <MemberSignature Language="C#" Value="public double FontSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 FontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.WindowsFormsHost.FontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho da fonte do controle hospedado.</summary>
+        <value>O tamanho da fonte usado no controle hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade de dependência é identificada pelo <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontSizeProperty> campo. Por padrão, essa propriedade é mapeada para atualizar o <xref:System.Windows.Forms.Control.Font%2A?displayProperty=nameWithType> propriedade do controle hospedado. Para mais informações, consulte [Windows Forms e mapeamento de propriedade do WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+  
+<a name="xamlAttributeUsage_FontSize"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object FontSize="double"/>  
+```  
+  
+<a name="xamlValues_FontSize"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *double*  
+ Representação de cadeia de caracteres um <xref:System.Double> valor igual ou maior que 0.0, mas menor do que <xref:System.Double.PositiveInfinity>. Isso é interpretado como um [!INCLUDE[TLA#tla_dipixel](~/includes/tlasharptla-dipixel-md.md)] medida. Cadeias de caracteres não precisam explicitamente incluir pontos decimais. Por exemplo, um valor de 1 é aceitável.  
+  
+<a name="dependencyPropertyInfo_FontSize"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Forms.Integration.WindowsFormsHost.FontSizeProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontSizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontSizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Integration.WindowsFormsHost.FontSizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontSize" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStyle FontStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStyle FontStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.WindowsFormsHost.FontStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da fonte do controle hospedado.</summary>
+        <value>O estilo da fonte usado no controle hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade de dependência é identificada pelo <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontStyleProperty> campo. Por padrão, essa propriedade é mapeada para atualizar o <xref:System.Windows.Forms.Control.Font%2A?displayProperty=nameWithType> propriedade do controle hospedado. Para mais informações, consulte [Windows Forms e mapeamento de propriedade do WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+  
+<a name="xamlAttributeUsage_FontStyle"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object FontStyle="fontStyle"/>  
+```  
+  
+<a name="xamlValues_FontStyle"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *fontStyle*  
+ Consulte <xref:System.Windows.FontStyle> para obter a sintaxe de atributo XAML.  
+  
+<a name="dependencyPropertyInfo_FontStyle"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Forms.Integration.WindowsFormsHost.FontStyleProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Integration.WindowsFormsHost.FontStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeight">
+      <MemberSignature Language="C#" Value="public System.Windows.FontWeight FontWeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontWeight FontWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.WindowsFormsHost.FontWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a espessura da fonte do controle hospedado.</summary>
+        <value>A espessura da fonte usada no controle hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade de dependência é identificada pelo <xref:System.Windows.Forms.Integration.WindowsFormsHost.FontWeightProperty> campo. Por padrão, essa propriedade é mapeada para atualizar o <xref:System.Windows.Forms.Control.Font%2A?displayProperty=nameWithType> propriedade do controle hospedado. Para mais informações, consulte [Windows Forms e mapeamento de propriedade do WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+  
+<a name="xamlAttributeUsage_FontWeight"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object FontWeight="fontWeight"/>  
+```  
+  
+<a name="xamlValues_FontWeight"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *fontWeight*  
+ Consulte <xref:System.Windows.FontWeight> para obter a sintaxe de atributo XAML.  
+  
+<a name="dependencyPropertyInfo_FontWeight"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Forms.Integration.WindowsFormsHost.FontWeightProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontWeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontWeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Integration.WindowsFormsHost.FontWeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.FontWeight" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Foreground">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Foreground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Foreground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.WindowsFormsHost.Foreground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano do controle hospedado.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Brush" /> usado para definir a cor de primeiro plano para o controle hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade de dependência é identificada pelo <xref:System.Windows.Forms.Integration.WindowsFormsHost.ForegroundProperty> campo. Por padrão, essa propriedade é mapeada para atualizar o <xref:System.Windows.Forms.Control.ForeColor%2A?displayProperty=nameWithType> propriedade do controle hospedado. Para obter mais informações sobre o mapeamento de <xref:System.Windows.Forms.Integration.WindowsFormsHost.Foreground%2A> propriedade, consulte [Windows Forms e mapeamento de propriedade do WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+  
+<a name="xamlAttributeUsage_Foreground"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Foreground="Brush"/>  
+```  
+  
+<a name="xamlValues_Foreground"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *Pincel*  
+ Consulte <xref:System.Windows.Media.Brush> para obter a sintaxe de atributo XAML.  
+  
+<a name="dependencyPropertyInfo_Foreground"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Forms.Integration.WindowsFormsHost.ForegroundProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>,<br /><br /> <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>,<br /><br /> <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ForegroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ForegroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Integration.WindowsFormsHost.ForegroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Foreground" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutError">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Windows.Forms.Integration.LayoutExceptionEventArgs&gt; LayoutError;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Forms.Integration.LayoutExceptionEventArgs&gt; LayoutError" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Forms.Integration.LayoutExceptionEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um erro de layout, como uma distorção ou rotação que <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> não dá suporte, é encontrado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_LayoutError"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object LayoutError="eventHandler"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">O tamanho disponível para o <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> objeto.</param>
+        <summary>Substitui a implementação da classe base <see cref="M:System.Windows.Interop.HwndHost.MeasureOverride(System.Windows.Size)" /> para medir o tamanho de um <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> de objeto e retornar os tamanhos corretos para o mecanismo de layout.</summary>
+        <returns>O tamanho desejado do <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Restrições de tamanho [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] layout são restrições de disco rígidas. Se as restrições são excedidas, o host deve recorte o conteúdo dentro da região hospedada. A implementação desse método impõe esse comportamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Windows.Automation.Peers.WindowsFormsHostAutomationPeer" /> para o <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> elemento.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.WindowsFormsHostAutomationPeer" /> para o <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> elemento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos que identificam a propriedade alterada, bem como fornecer os valores antigo e novo da propriedade.</param>
+        <summary>Força a conversão de uma propriedade mapeada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Windows.Forms.Integration.WindowsFormsHost.OnPropertyChanged%2A> método pode ser necessário quando uma propriedade de um elemento ancestral é alterado, mas o valor local do <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento não foi alterado. Para mais informações, consulte [Windows Forms e mapeamento de propriedade do WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.WindowsFormsHost.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o tamanho do preenchimento desejado em hospedado [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controle.</summary>
+        <value>Um <see cref="T:System.Windows.Thickness" /> estrutura que representa o preenchimento pf hospedado [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Padding"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Padding="Thickness"/>  
+```  
+  
+<a name="xamlValues_Padding"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *Espessura*  
+ Consulte <xref:System.Windows.Thickness> para obter a sintaxe de atributo XAML.  
+  
+<a name="dependencyPropertyInfo_Padding"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Forms.Integration.WindowsFormsHost.PaddingProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PaddingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PaddingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Integration.WindowsFormsHost.PaddingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.Padding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyMap">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Integration.PropertyMap PropertyMap { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Integration.PropertyMap PropertyMap" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Integration.PropertyMap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o mapa de propriedade que determina como configurar as propriedades de <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> elemento afeta hospedado [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controle.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Integration.PropertyMap" /> que mapeia <see cref="T:System.Windows.Forms.Integration.WindowsFormsHost" /> propriedades às propriedades hospedado [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As tecnologias [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] têm dois modelos de propriedade semelhantes, mas diferentes. *Mapeamento de propriedade* dá suporte à interoperação entre as duas arquiteturas. Para mais informações, consulte [Windows Forms e mapeamento de propriedade do WPF](~/docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como adicionar um mapeamento para o <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade para um <xref:System.Windows.Forms.Integration.WindowsFormsHost> controle.  
+  
+ [!code-csharp[PropertyMappingWithWfh#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)] 
+ [!code-vb[PropertyMappingWithWfh#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleChild">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Vector ScaleChild (System.Windows.Vector newScale);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Windows.Vector ScaleChild(valuetype System.Windows.Vector newScale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild(System.Windows.Vector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Vector</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newScale" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="newScale">O novo fator de escala.</param>
+        <summary>Dimensiona hospedado [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controlar e controla o fator de escala.</summary>
+        <returns>Um <see cref="T:System.Windows.Vector" /> que representa o fator de escala aplicado à hospedado [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[TLA2#tla_winforms](~/includes/tla2sharptla-winforms-md.md)]controles não têm suporte para o dimensionamento da mesma maneira como [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] elementos. Por exemplo, dimensionar um [!INCLUDE[TLA2#tla_winforms](~/includes/tla2sharptla-winforms-md.md)] controle de um fator de 1 para um fator de 0,5 e de volta para um fator de 1 em geral, não, recuperar o tamanho original do controle. Para obter mais informações, consulte [Considerações sobre Layout para o elemento WindowsFormsHost](~/docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+  
+ Substituir o <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> método para fornecer o comportamento de dimensionamento personalizado hospedado [!INCLUDE[TLA2#tla_winforms](~/includes/tla2sharptla-winforms-md.md)] controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIndex">
+      <MemberSignature Language="C#" Value="public int TabIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TabIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice de tabulação do controle hospedado.</summary>
+        <value>O índice do guia de foco e navegação de guia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade de dependência é identificada pelo <xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndexProperty> campo.  
+  
+ Use essa propriedade para alterar a ordem de tabulação navegação entre os controles em um formulário. Um controle com um índice de tabulação inferior terá o foco antes de um controle com um índice maior.  
+  
+<a name="xamlAttributeUsage_TabIndex"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object TabIndex="int"/>  
+```  
+  
+<a name="dependencyPropertyInfo_TabIndex"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndexProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIndexProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TabIndexProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TabIndexProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Integration.WindowsFormsHost.TabIndexProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabInto">
+      <MemberSignature Language="C#" Value="public virtual bool TabInto (System.Windows.Input.TraversalRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TabInto(class System.Windows.Input.TraversalRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.TabInto(System.Windows.Input.TraversalRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Windows.Input.TraversalRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">Um <see cref="T:System.Windows.Input.TraversalRequest" /> que especifica o comportamento de foco.</param>
+        <summary>Encaminha o foco da [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] para hospedado [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controle.</summary>
+        <returns>
+          <see langword="true" /> se um controle tiver sido ativado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento recebe um comando de guia do <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A> método, o primeiro qualificados controle <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> recebe o foco.  
+  
+ O primeiro controle for especificado o `request` parâmetro. Quando `request` é <xref:System.Windows.Input.FocusNavigationDirection.Next>, o comportamento é semelhante ao pressionar a tecla TAB. Quando `request` é <xref:System.Windows.Input.FocusNavigationDirection.Previous>, o comportamento é semelhante ao pressionar SHIFT + TAB.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override IntPtr WndProc (IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance native int WndProc(native int hwnd, int32 msg, native int wParam, native int lParam, bool&amp; handled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.WindowsFormsHost.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.IntPtr" />
+        <Parameter Name="msg" Type="System.Int32" />
+        <Parameter Name="wParam" Type="System.IntPtr" />
+        <Parameter Name="lParam" Type="System.IntPtr" />
+        <Parameter Name="handled" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">Identificador de janela da janela hospedada.</param>
+        <param name="msg">Mensagem para agir.</param>
+        <param name="wParam">Informações que podem ser relevantes para tratar a mensagem. Isso normalmente é usado para armazenar pequenas partes de informações, como sinalizadores.</param>
+        <param name="lParam">Informações que podem ser relevantes para tratar a mensagem. Isso normalmente é usado para fazer referência a um objeto.</param>
+        <param name="handled">Se eventos resultantes devem ser marcado como tratado.</param>
+        <summary>Quando implementada em uma classe derivada, acessa o processo de janela da janela filho hospedada.</summary>
+        <returns>O identificador de janela da janela filho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,531 @@
+<Type Name="Context" FullName="System.Runtime.Remoting.Contexts.Context">
+  <TypeSignature Language="C#" Value="public class Context" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi beforefieldinit Context extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.Context" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um ambiente para os objetos que residem dentro dele e aos quais uma política pode ser aplicada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um contexto é uma sequência ordenada de propriedades que definem um ambiente para os objetos residentes dentro dele. Contextos são criados durante o processo de ativação para objetos que são configurados para exigir que determinados serviços automática, como sincronização, transações, ativação just-in-time, segurança e assim por diante. Vários objetos podem residir em um contexto.  
+  
+ Classes são marcadas com uma instância do <xref:System.Runtime.Remoting.Contexts.ContextAttribute> classe, que fornece as regras de uso. Sempre que um novo objeto é instanciado, o .NET Framework encontra um compatível ou cria uma nova instância do <xref:System.Runtime.Remoting.Contexts.Context> classe do objeto. Depois que um objeto é colocado em um contexto, ela permanece nele vida. Classes que podem ser associados a um contexto são chamadas de classes associadas. Quando acessado de outro contexto, essas classes são referenciados diretamente por meio de um proxy. Qualquer chamada de um objeto em um contexto para um objeto em outro contexto passará por um proxy de contexto e ser afetada pela política que impõem as propriedades de contexto combinado.  
+  
+ Contexto de um novo objeto geralmente é escolhido com base em atributos de metadados na classe. Esse mecanismo é extensível por meio de atributos personalizados. Eles são conhecidos como propriedades de contexto estático, que são compiladas em metadados de classe. Propriedades de contexto dinâmico (também conhecidas como propriedades de configuração) podem ser aplicadas e configuradas por administradores.  
+  
+ Para obter mais informações sobre os contextos, consulte [&#91;\< Topic://cpconboundariesprocessesapplicationdomainscontexts > &#93; ](http://msdn.microsoft.com/en-us/7574180d-70df-44b8-8b78-55a119f2c96d).  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Context ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.Contexts.Context" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AllocateDataSlot">
+      <MemberSignature Language="C#" Value="public static LocalDataStoreSlot AllocateDataSlot ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.LocalDataStoreSlot AllocateDataSlot() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.AllocateDataSlot" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.LocalDataStoreSlot</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aloca um slot de dados sem nome.</summary>
+        <returns>Um slot de dados local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O slot está alocado em todos os contextos.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AllocateNamedDataSlot">
+      <MemberSignature Language="C#" Value="public static LocalDataStoreSlot AllocateNamedDataSlot (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.LocalDataStoreSlot AllocateNamedDataSlot(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.AllocateNamedDataSlot(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.LocalDataStoreSlot</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome necessário para o slot de dados.</param>
+        <summary>Aloca um slot de dados nomeado.</summary>
+        <returns>Um objeto do slot de dados local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O slot está alocado em todos os contextos. Slots de dados nomeada são públicos e podem ser manipulados por qualquer pessoa.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ContextID">
+      <MemberSignature Language="C#" Value="public virtual int ContextID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ContextID" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Contexts.Context.ContextID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID do contexto para o contexto atual.</summary>
+        <value>A ID do contexto para o contexto atual.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ContextProperties">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Remoting.Contexts.IContextProperty[] ContextProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Contexts.IContextProperty[] ContextProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Contexts.Context.ContextProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Contexts.IContextProperty[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a matriz de propriedades de contexto atual.</summary>
+        <value>A matriz de propriedades de contexto atual; Caso contrário, <see langword="null" /> se o contexto não têm propriedades atribuídas a ele.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultContext">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.Contexts.Context DefaultContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Runtime.Remoting.Contexts.Context DefaultContext" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Contexts.Context.DefaultContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Contexts.Context</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contexto padrão para o domínio de aplicativo atual.</summary>
+        <value>O contexto padrão para o <see cref="T:System.AppDomain" /> namespace.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada thread em um domínio de aplicativo para o qual um contexto não está definido explicitamente é considerado para ser executado no contexto padrão.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DoCallBack">
+      <MemberSignature Language="C#" Value="public void DoCallBack (System.Runtime.Remoting.Contexts.CrossContextDelegate deleg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DoCallBack(class System.Runtime.Remoting.Contexts.CrossContextDelegate deleg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.DoCallBack(System.Runtime.Remoting.Contexts.CrossContextDelegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deleg" Type="System.Runtime.Remoting.Contexts.CrossContextDelegate" />
+      </Parameters>
+      <Docs>
+        <param name="deleg">O representante usado para solicitar o retorno de chamada.</param>
+        <summary>Executa código em outro contexto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um retorno de chamada pode ser feito ao chamar o <xref:System.Runtime.Remoting.Contexts.Context.DoCallBack%2A> método passando um delegado. O representante é usado para solicitar um retorno de chamada. O representante deve ser um <xref:System.Runtime.Remoting.Contexts.CrossContextDelegate> tipo de classe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~Context ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa os objetos de backup para os contextos não padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contextos de padrão de backup objetos são limpos durante o desligamento para baixo do <xref:System.AppDomain> classe.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FreeNamedDataSlot">
+      <MemberSignature Language="C#" Value="public static void FreeNamedDataSlot (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void FreeNamedDataSlot(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.FreeNamedDataSlot(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do slot para liberar dados.</param>
+        <summary>Libera um slot de dados nomeado em todos os contextos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Slots de dados nomeada são públicos e podem ser manipulados por qualquer pessoa.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Freeze">
+      <MemberSignature Language="C#" Value="public virtual void Freeze ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Freeze() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.Freeze" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Congela o contexto, tornando impossível adicionar ou remover propriedades de contexto do contexto atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades de contexto não podem ser adicionadas após o contexto congelou.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O contexto já está congelado.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public static object GetData (LocalDataStoreSlot slot);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetData(class System.LocalDataStoreSlot slot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.GetData(System.LocalDataStoreSlot)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="slot" Type="System.LocalDataStoreSlot" />
+      </Parameters>
+      <Docs>
+        <param name="slot">O slot de dados que contém os dados.</param>
+        <summary>Recupera o valor do slot especificado no contexto atual.</summary>
+        <returns>Retorna os dados associados ao <paramref name="slot" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamedDataSlot">
+      <MemberSignature Language="C#" Value="public static LocalDataStoreSlot GetNamedDataSlot (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.LocalDataStoreSlot GetNamedDataSlot(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.GetNamedDataSlot(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.LocalDataStoreSlot</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do slot de dados.</param>
+        <summary>Pesquisa um slot de dados nomeado.</summary>
+        <returns>Retorna um slot de dados local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o nome não foi usado, um novo slot será alocado. Slots de dados nomeada são públicos e podem ser manipulados por qualquer pessoa.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Remoting.Contexts.IContextProperty GetProperty (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Contexts.IContextProperty GetProperty(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.GetProperty(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Contexts.IContextProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade.</param>
+        <summary>Retorna uma propriedade de contexto específico, especificada pelo nome.</summary>
+        <returns>A propriedade de contexto especificado.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDynamicProperty">
+      <MemberSignature Language="C#" Value="public static bool RegisterDynamicProperty (System.Runtime.Remoting.Contexts.IDynamicProperty prop, ContextBoundObject obj, System.Runtime.Remoting.Contexts.Context ctx);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool RegisterDynamicProperty(class System.Runtime.Remoting.Contexts.IDynamicProperty prop, class System.ContextBoundObject obj, class System.Runtime.Remoting.Contexts.Context ctx) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.RegisterDynamicProperty(System.Runtime.Remoting.Contexts.IDynamicProperty,System.ContextBoundObject,System.Runtime.Remoting.Contexts.Context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.Runtime.Remoting.Contexts.IDynamicProperty" />
+        <Parameter Name="obj" Type="System.ContextBoundObject" />
+        <Parameter Name="ctx" Type="System.Runtime.Remoting.Contexts.Context" />
+      </Parameters>
+      <Docs>
+        <param name="prop">A propriedade dinâmica para registrar.</param>
+        <param name="obj">O objeto/proxy para o qual o <c>propriedade</c> está registrado.</param>
+        <param name="ctx">O contexto para o qual o <c>propriedade</c> está registrado.</param>
+        <summary>Registra uma implementação de propriedade dinâmica de <see cref="T:System.Runtime.Remoting.Contexts.IDynamicProperty" /> interface com o serviço de comunicação remota.</summary>
+        <returns>
+          <see langword="true" />Se a propriedade foi registrada com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com base em `obj` e `ctx`, `prop` é solicitado a contribuir um coletor que é colocado em algum local no caminho de chamadas de comunicação remota. Se várias propriedades são registradas, seus coletores serão chamados em uma ordem arbitrária que pode ser alterado entre chamadas.  
+  
+ Se `obj` não é `null`, e, em seguida, se for um proxy, todas as chamadas feitas no proxy são interceptadas. Caso contrário, se `obj` é um objeto real, todas as chamadas no objeto são interceptadas. O `ctx` parâmetro deve ser `null`.  
+  
+ Se `ctx` não é `null`, `obj` deve ser `null` e todas as chamadas que entram e saem do contexto são interceptadas.  
+  
+ Se ambos os `ctx` e `obj` são `null`, todas as chamadas que entram e saem todos os contextos são interceptadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="prop" /> ou seu nome é <see langword="null" />, ou não é dinâmico (ele não implementa <see cref="T:System.Runtime.Remoting.Contexts.IDynamicProperty" />).</exception>
+        <exception cref="T:System.ArgumentException">Um objeto como um contexto é especificado (ambos <paramref name="obj" /> e <paramref name="ctx" /> não são <see langword="null" />).</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para conectar o código da infraestrutura de CLR. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" />.</permission>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public static void SetData (LocalDataStoreSlot slot, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetData(class System.LocalDataStoreSlot slot, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.SetData(System.LocalDataStoreSlot,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="slot" Type="System.LocalDataStoreSlot" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="slot">O slot de dados onde os dados são a ser adicionado.</param>
+        <param name="data">Os dados que deve ser adicionado.</param>
+        <summary>Define os dados no slot especificado no contexto atual.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public virtual void SetProperty (System.Runtime.Remoting.Contexts.IContextProperty prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetProperty(class System.Runtime.Remoting.Contexts.IContextProperty prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.SetProperty(System.Runtime.Remoting.Contexts.IContextProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.Runtime.Remoting.Contexts.IContextProperty" />
+      </Parameters>
+      <Docs>
+        <param name="prop">A propriedade de contexto real.</param>
+        <summary>Define uma propriedade de contexto específica por nome.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é permitido adicionar propriedades ao contexto padrão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O contexto está congelado.</exception>
+        <exception cref="T:System.ArgumentNullException">A propriedade ou o nome da propriedade é <see langword="null" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> classe representação do contexto atual.</summary>
+        <returns>Um <see cref="T:System.String" /> classe representação do contexto atual.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterDynamicProperty">
+      <MemberSignature Language="C#" Value="public static bool UnregisterDynamicProperty (string name, ContextBoundObject obj, System.Runtime.Remoting.Contexts.Context ctx);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool UnregisterDynamicProperty(string name, class System.ContextBoundObject obj, class System.Runtime.Remoting.Contexts.Context ctx) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.Context.UnregisterDynamicProperty(System.String,System.ContextBoundObject,System.Runtime.Remoting.Contexts.Context)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="obj" Type="System.ContextBoundObject" />
+        <Parameter Name="ctx" Type="System.Runtime.Remoting.Contexts.Context" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade dinâmica para cancelar o registro.</param>
+        <param name="obj">O objeto/proxy para o qual o <c>propriedade</c> está registrado.</param>
+        <param name="ctx">O contexto para o qual o <c>propriedade</c> está registrado.</param>
+        <summary>Cancela o registro de uma implementação de propriedade dinâmica de <see cref="T:System.Runtime.Remoting.Contexts.IDynamicProperty" /> interface.</summary>
+        <returns>
+          <see langword="true" />Se o objeto foi cancelado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um objeto como um contexto é especificado (ambos <paramref name="obj" /> e <paramref name="ctx" /> não são <see langword="null" />).</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para conectar o código da infraestrutura de CLR. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" />.</permission>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

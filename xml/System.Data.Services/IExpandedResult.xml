@@ -1,0 +1,63 @@
+<Type Name="IExpandedResult" FullName="System.Data.Services.IExpandedResult">
+  <TypeSignature Language="C#" Value="public interface IExpandedResult" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExpandedResult" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.IExpandedResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Declara os membros necessários à enumeradores de resultados e associado a um WCF Data Services segmentos <c>$expand</c> opção de consulta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Expanda provedores podem gerar enumerações que implementam esta interface para reformatar propriedades expandidas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExpandedElement">
+      <MemberSignature Language="C#" Value="public object ExpandedElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ExpandedElement" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.IExpandedResult.ExpandedElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento com propriedades expandidas.</summary>
+        <value>O objeto em uma propriedade expandido por <see cref="T:System.Data.Services.IExpandedResult" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpandedPropertyValue">
+      <MemberSignature Language="C#" Value="public object GetExpandedPropertyValue (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetExpandedPropertyValue(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.IExpandedResult.GetExpandedPropertyValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade para o qual obter resultados enumeráveis.</param>
+        <summary>Obtém o valor de uma propriedade nomeada do resultado.</summary>
+        <returns>O valor da propriedade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

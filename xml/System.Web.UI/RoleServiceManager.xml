@@ -1,0 +1,157 @@
+<Type Name="RoleServiceManager" FullName="System.Web.UI.RoleServiceManager">
+  <TypeSignature Language="C#" Value="public class RoleServiceManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RoleServiceManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.RoleServiceManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Path")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.EmptyStringExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Configura o local de uma implementação personalizada do serviço de função.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.RoleServiceManager> classe corresponde ao <xref:System.Web.UI.ScriptManager.RoleService%2A> propriedade o <xref:System.Web.UI.ScriptManager> ou <xref:System.Web.UI.ScriptManagerProxy> controle.  
+  
+ A função de serviço da Web é usada por aplicativos habilitados para AJAX para recuperar informações de função para o usuário autenticado atual usando uma chamada assíncrona do serviço Web. Você pode usar <xref:System.Web.UI.RoleServiceManager> para fornecer o caminho de uma implementação alternativa da função de serviço da Web em vez de usar o serviço da Web interno.  
+  
+ Para usar o serviço de função em seu aplicativo, você deve habilitá-lo no arquivo de configuração e declare-o na página. Se você usar a função interna do serviço Web, você precisa habilitá-lo, mas você não precisa declarar explicitamente a função do service manager na página.  
+  
+ Para criar um serviço de função personalizada, você deve implementar um serviço Web que tem dois métodos: `GetRolesForCurrentUser` e `IsCurrentUserInRole`. Esses métodos devem ter a mesma assinatura que os métodos correspondentes da função interna serviço da Web.  
+  
+ O exemplo a seguir mostra a estrutura de classe básica que deve ser implementada em uma classe de serviço Web de função personalizado.  
+  
+  
+  
+ Para usar uma serviço Web de função personalizada, você pode adicionar o serviço declarativamente na marcação, colocando uma `RoleService` elemento dentro do <xref:System.Web.UI.ScriptManager> controle, conforme mostrado no exemplo a seguir.  
+  
+```  
+<asp:ScriptManager ID="SM1" runat="server">  
+  <RoleService Path="MyRoleService.asmx" LoadRoles="true" />  
+</asp:ScriptManager>  
+```  
+  
+ Você pode também definir o <xref:System.Web.UI.RoleServiceManager.Path%2A> propriedade para usar uma função personalizada de serviço da Web.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoleServiceManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.RoleServiceManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.RoleServiceManager" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadRoles">
+      <MemberSignature Language="C#" Value="public bool LoadRoles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LoadRoles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RoleServiceManager.LoadRoles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a lista de funções para o usuário conectado no momento deve ser recuperada.</summary>
+        <value>
+          <see langword="true" />Se a lista de funções deve ser recuperada; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.RoleServiceManager.LoadRoles%2A> está definida como `true`, a lista de funções é recuperada pelo <xref:System.Web.UI.RoleServiceManager> classe usando o <xref:System.Web.Security.Roles.GetRolesForUser%2A?displayProperty=nameWithType> método. A lista, em seguida, é serializada em marcação da página.  
+  
+> [!NOTE]
+>  Quando <xref:System.Web.UI.RoleServiceManager.LoadRoles%2A> é `true`, todas as funções que o usuário autenticado atual pertence são enviadas para o navegador. Como os usuários potencialmente podem ver as informações de função, isso pode ser um problema de segurança.  
+  
+ O <xref:System.Web.UI.RoleServiceManager.LoadRoles%2A> propriedade pode ser especificada no <xref:System.Web.UI.ScriptManager> controle ou em um associado <xref:System.Web.UI.ScriptManagerProxy> controle. Se <xref:System.Web.UI.RoleServiceManager.LoadRoles%2A> é definido como `true` para uma instância do proxy, a lista de funções é recuperada e adicionada à página. Se <xref:System.Web.UI.RoleServiceManager.LoadRoles%2A> é `false`, as funções não são adicionadas à marcação da página. Nesse caso, você pode usar o método para armazenar informações de função na memória no navegador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RoleServiceManager.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do serviço de função.</summary>
+        <value>O caminho da função serviço Web personalizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.RoleServiceManager.Path%2A> propriedade não for definida, o valor de retorno é <xref:System.String?displayProperty=nameWithType>. Nesse caso, o ASP.NET usa a autenticação interna serviço da Web que corresponde ao caminho padrão interno seguintes: ~ / RolesService.svc. O mesmo comportamento ocorre se você definir <xref:System.Web.UI.RoleServiceManager.Path%2A> para uma cadeia de caracteres vazia ou em `null`.  
+  
+ <xref:System.Web.UI.RoleServiceManager.Path%2A>pode ser especificado no <xref:System.Web.UI.ScriptManager> controle ou em um associado <xref:System.Web.UI.ScriptManagerProxy> controle. Quando <xref:System.Web.UI.RoleServiceManager.Path%2A> é definida como o <xref:System.Web.UI.ScriptManagerProxy> nível, as seguintes condições forem verdadeiras:  
+  
+-   Se houver vários objetos de proxy na hierarquia de controle, <xref:System.Web.UI.RoleServiceManager.Path%2A> não precisa ser definida para cada instância do proxy.  
+  
+-   Se <xref:System.Web.UI.RoleServiceManager.Path%2A> é explicitamente definido para um objeto de proxy, o valor deve ser o mesmo para todos os outros proxy objetos que esta propriedade é definida para. Se você definir caminhos diferentes para objetos de proxy diferente na hierarquia de controle, um <xref:System.ArgumentException> exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Foi definido mais de um caminho exclusivo na hierarquia do controle.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

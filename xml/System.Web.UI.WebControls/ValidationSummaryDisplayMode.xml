@@ -1,0 +1,84 @@
+<Type Name="ValidationSummaryDisplayMode" FullName="System.Web.UI.WebControls.ValidationSummaryDisplayMode">
+  <TypeSignature Language="C#" Value="public enum ValidationSummaryDisplayMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ValidationSummaryDisplayMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ValidationSummaryDisplayMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o modo de exibição de resumo de validação usado pelo controle <see cref="T:System.Web.UI.WebControls.ValidationSummary" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ValidationSummaryDisplayMode> enumeração representa os formatos de exibição diferente de um <xref:System.Web.UI.WebControls.ValidationSummary> controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como especificar o modo de exibição para um <xref:System.Web.UI.WebControls.ValidationSummary> controle.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic ValidationSummary.DisplayMode Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic ValidationSummary.DisplayMode Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic ValidationSummary.DisplayMode Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic ValidationSummary.DisplayMode Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BulletList">
+      <MemberSignature Language="C#" Value="BulletList" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ValidationSummaryDisplayMode BulletList = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ValidationSummaryDisplayMode.BulletList" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationSummaryDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O resumo de validação exibido em uma lista com marcadores.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="List" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ValidationSummaryDisplayMode List = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ValidationSummaryDisplayMode.List" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationSummaryDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O resumo de validação exibido em uma lista.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleParagraph">
+      <MemberSignature Language="C#" Value="SingleParagraph" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.ValidationSummaryDisplayMode SingleParagraph = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.ValidationSummaryDisplayMode.SingleParagraph" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationSummaryDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O resumo de validação exibido em um único parágrafo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

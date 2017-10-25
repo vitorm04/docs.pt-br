@@ -1,0 +1,127 @@
+<Type Name="RegisterResponseInfo" FullName="System.ServiceModel.PeerResolvers.RegisterResponseInfo">
+  <TypeSignature Language="C#" Value="public class RegisterResponseInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RegisterResponseInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.RegisterResponseInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.MessageContract(IsWrapped=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém informações de resposta retornadas por um resolvedor peer como o resultado de uma operação de registro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService.Register%2A> (ou uma implementação de <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract.Register%2A>) é chamado com um <xref:System.ServiceModel.PeerResolvers.RegisterInfo> instância passados para ele, esse objeto é retornado ao chamador para indicar os resultados da operação de registro.  
+  
+ As instâncias dessa classe são usadas principalmente para transmitir informações de resposta de registro do serviço de resolução para um cliente de rede desse serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegisterResponseInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RegisterResponseInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.ServiceModel.PeerResolvers.RegisterResponseInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegisterResponseInfo (Guid registrationId, TimeSpan registrationLifetime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid registrationId, valuetype System.TimeSpan registrationLifetime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RegisterResponseInfo.#ctor(System.Guid,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="registrationId" Type="System.Guid" />
+        <Parameter Name="registrationLifetime" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="registrationId">
+          <see cref="T:System.Guid" />que identifica exclusivamente o par registrado recentemente.</param>
+        <param name="registrationLifetime">
+          <see cref="T:System.TimeSpan" />que especifica o tempo de vida de registro do par.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.PeerResolvers.RegisterResponseInfo" /> classe com a ID de registro fornecida e o tempo de vida.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.RegisterResponseInfo.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o corpo da mensagem que contém uma instância serializada desse tipo é formado corretamente.</summary>
+        <returns>True se o corpo de informações de resposta de registro está formado corretamente pelo remetente; False se não for.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistrationId">
+      <MemberSignature Language="C#" Value="public Guid RegistrationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid RegistrationId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.RegisterResponseInfo.RegistrationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um GUID que identifica exclusivamente o par registrado recentemente.</summary>
+        <value>
+          <see cref="T:System.Guid" />que identifica exclusivamente o par registrado recentemente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistrationLifetime">
+      <MemberSignature Language="C#" Value="public TimeSpan RegistrationLifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RegistrationLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.RegisterResponseInfo.RegistrationLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo antes que um registro expira e é removido, o serviço de resolução.</summary>
+        <value>
+          <see cref="T:System.TimeSpan" />que especifica o tempo de vida de registro do par.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

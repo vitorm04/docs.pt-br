@@ -1,0 +1,313 @@
+<Type Name="TypeLibFuncFlags" FullName="System.Runtime.InteropServices.TypeLibFuncFlags">
+  <TypeSignature Language="C#" Value="public enum TypeLibFuncFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed TypeLibFuncFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.TypeLibFuncFlags" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve as configurações originais do <see langword="FUNCFLAGS" /> na biblioteca de tipos COM de onde esse método foi importado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Runtime.InteropServices.TypeLibFuncFlags>é usado com o <xref:System.Runtime.InteropServices.TypeLibFuncAttribute>. Os sinalizadores são mantidos apenas para referência. Eles não são usados pelo common language runtime.  
+  
+ Para obter mais informações sobre `FUNCFLAGS`, consulte a biblioteca MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FBindable">
+      <MemberSignature Language="C#" Value="FBindable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FBindable = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FBindable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A função que dá suporte à associação de dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FDefaultBind">
+      <MemberSignature Language="C#" Value="FDefaultBind" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FDefaultBind = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FDefaultBind" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A função que melhor representa o objeto. Apenas uma função de um informações de tipo pode ter esse atributo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FDefaultCollelem">
+      <MemberSignature Language="C#" Value="FDefaultCollelem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FDefaultCollelem = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FDefaultCollelem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite que uma otimização que o compilador procura um membro chamado "xyz" no tipo "abc". Se esse membro for encontrado e é marcado como uma função de acessador de um elemento de coleção padrão, uma chamada é gerada para essa função de membro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FDisplayBind">
+      <MemberSignature Language="C#" Value="FDisplayBind" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FDisplayBind = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FDisplayBind" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A função que é exibida ao usuário como associável. <see cref="F:System.Runtime.InteropServices.TypeLibFuncFlags.FBindable" />também deve ser definido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FHidden">
+      <MemberSignature Language="C#" Value="FHidden" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FHidden = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FHidden" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A função não deve ser exibida para o usuário, embora ele existe e é associável.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FImmediateBind">
+      <MemberSignature Language="C#" Value="FImmediateBind" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FImmediateBind = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FImmediateBind" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A função é mapeada como propriedades vinculáveis individuais.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FNonBrowsable">
+      <MemberSignature Language="C#" Value="FNonBrowsable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FNonBrowsable = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FNonBrowsable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade aparece em um navegador de objeto, mas não em um navegador de propriedades.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FReplaceable">
+      <MemberSignature Language="C#" Value="FReplaceable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FReplaceable = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FReplaceable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Marca a interface como tendo comportamentos padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FRequestEdit">
+      <MemberSignature Language="C#" Value="FRequestEdit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FRequestEdit = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FRequestEdit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando definido, qualquer chamada para um método que define os resultados da propriedade primeiro em uma chamada para <see langword="IPropertyNotifySink::OnRequestEdit" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FRestricted">
+      <MemberSignature Language="C#" Value="FRestricted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FRestricted = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FRestricted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse sinalizador é destinado a funções de nível de sistema ou funções que navegadores de tipo não devem exibir.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FSource">
+      <MemberSignature Language="C#" Value="FSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FSource = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A função retorna um objeto que é uma origem de eventos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUiDefault">
+      <MemberSignature Language="C#" Value="FUiDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FUiDefault = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FUiDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O membro de informações de tipo é o membro padrão para exibição na interface do usuário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FUsesGetLastError">
+      <MemberSignature Language="C#" Value="FUsesGetLastError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.TypeLibFuncFlags FUsesGetLastError = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.TypeLibFuncFlags.FUsesGetLastError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.TypeLibFuncFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A função dá suporte a <see langword="GetLastError" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

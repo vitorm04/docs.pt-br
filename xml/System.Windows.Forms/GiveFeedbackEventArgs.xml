@@ -1,0 +1,151 @@
+<Type Name="GiveFeedbackEventArgs" FullName="System.Windows.Forms.GiveFeedbackEventArgs">
+  <TypeSignature Language="C#" Value="public class GiveFeedbackEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GiveFeedbackEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.GiveFeedbackEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Windows.Forms.Control.GiveFeedback" />, que ocorre durante uma operação de arrastar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Control.GiveFeedback> evento ocorrer durante uma operação de arrastar. Ele permite que a origem de um evento arrastar para modificar a aparência do ponteiro do mouse para fornecer os comentários visuais do usuário durante uma operação de arrastar e soltar. Um <xref:System.Windows.Forms.GiveFeedbackEventArgs> objeto Especifica o tipo de operação de arrastar e soltar e se os cursores padrão são usados.  
+  
+ Para obter informações sobre o modelo de evento, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma operação de arrastar e soltar entre duas <xref:System.Windows.Forms.ListBox> controles. O exemplo chama o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método quando a ação de arrastar inicia. A ação de arrastar inicia se moveu o mouse mais de <xref:System.Windows.Forms.SystemInformation.DragSize%2A?displayProperty=nameWithType> do local do mouse durante o <xref:System.Windows.Forms.Control.MouseDown> evento. O <xref:System.Windows.Forms.ListBox.IndexFromPoint%2A> método é usado para determinar o índice do item a arrastar durante o `MouseDown` evento.  
+  
+ O exemplo também demonstra como usar cursores personalizados para a operação de arrastar e soltar. O exemplo supõe que dois arquivos de cursor, `3dwarro.cur` e `3dwno.cur`, existe no diretório de aplicativo para a operação de arrastar personalizado e não-drop cursores, respectivamente. Os cursores personalizados serão usados se o `UseCustomCursorsCheck` <xref:System.Windows.Forms.CheckBox> é verificada. Os cursores personalizados são definidos <xref:System.Windows.Forms.Control.GiveFeedback> manipulador de eventos.  
+  
+ O estado do teclado é avaliado no <xref:System.Windows.Forms.Control.DragOver> manipulador de eventos para a direita `ListBox`, para determinar qual será a operação de arrastar com base no estado das teclas SHIFT, CTRL, ALT e CTRL + ALT. O local no `ListBox` onde ocorreria o descarte também é determinado durante a `DragOver` eventos. Se os dados para remover não são um `String`, em seguida, o <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> é definido como <xref:System.Windows.Forms.DragDropEffects?displayProperty=nameWithType>. Por fim, o status de menu é exibido no `DropLocationLabel` <xref:System.Windows.Forms.Label>.  
+  
+ Os dados para remover à direita `ListBox` é determinado no <xref:System.Windows.Forms.Control.DragDrop> manipulador de eventos e o `String` valor é adicionado no local apropriado no `ListBox`. Se a operação de arrastar é movido para fora dos limites do formulário, a operação de arrastar e soltar foi cancelada no <xref:System.Windows.Forms.Control.QueryContinueDrag> manipulador de eventos.  
+  
+ Esse trecho de código demonstra como usar o <xref:System.Windows.Forms.GiveFeedbackEventArgs> classe. Consulte o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/VB/form1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GiveFeedbackEventArgs (System.Windows.Forms.DragDropEffects effect, bool useDefaultCursors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.DragDropEffects effect, bool useDefaultCursors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.GiveFeedbackEventArgs.#ctor(System.Windows.Forms.DragDropEffects,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="effect" Type="System.Windows.Forms.DragDropEffects" />
+        <Parameter Name="useDefaultCursors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="effect">O tipo de operação de arrastar e soltar. Os valores possíveis são obtidos, aplicando o bit a bit ou operação (|) para as constantes definidas no <see cref="T:System.Windows.Forms.DragDropEffects" />.</param>
+        <param name="useDefaultCursors">
+          <see langword="true" />Se ponteiros padrão forem usados; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.GiveFeedbackEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Effect">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DragDropEffects Effect { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DragDropEffects Effect" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GiveFeedbackEventArgs.Effect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os comentários de operação de arrastar e soltar é exibido.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.DragDropEffects" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra uma operação de arrastar e soltar entre duas <xref:System.Windows.Forms.ListBox> controles. O exemplo chama o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método quando a ação de arrastar inicia. A ação de arrastar inicia se moveu o mouse mais de <xref:System.Windows.Forms.SystemInformation.DragSize%2A?displayProperty=nameWithType> do local do mouse durante o <xref:System.Windows.Forms.Control.MouseDown> evento. O <xref:System.Windows.Forms.ListBox.IndexFromPoint%2A> método é usado para determinar o índice do item a arrastar durante o `MouseDown` evento.  
+  
+ O exemplo também demonstra como usar cursores personalizados para a operação de arrastar e soltar. O exemplo supõe que dois arquivos de cursor, `3dwarro.cur` e `3dwno.cur`, existe no diretório de aplicativo para a operação de arrastar personalizado e não-drop cursores, respectivamente. Os cursores personalizados serão usados se o `UseCustomCursorsCheck` <xref:System.Windows.Forms.CheckBox> é verificada. Os cursores personalizados são definidos <xref:System.Windows.Forms.Control.GiveFeedback> manipulador de eventos.  
+  
+ O estado do teclado é avaliado no <xref:System.Windows.Forms.Control.DragOver> manipulador de eventos para a direita `ListBox`, para determinar qual será a operação de arrastar com base no estado das teclas SHIFT, CTRL, ALT e CTRL + ALT. O local no `ListBox` onde ocorreria o descarte também é determinado durante a `DragOver` eventos. Se os dados para remover não são um `String`, em seguida, o <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> é definido como <xref:System.Windows.Forms.DragDropEffects?displayProperty=nameWithType>. Por fim, o status de menu é exibido no `DropLocationLabel` <xref:System.Windows.Forms.Label>.  
+  
+ Os dados para remover à direita `ListBox` é determinado no <xref:System.Windows.Forms.Control.DragDrop> manipulador de eventos e o `String` valor é adicionado no local apropriado no `ListBox`. Se a operação de arrastar é movido para fora dos limites do formulário, a operação de arrastar e soltar foi cancelada no <xref:System.Windows.Forms.Control.QueryContinueDrag> manipulador de eventos.  
+  
+ Esse trecho de código demonstra como usar o <xref:System.Windows.Forms.GiveFeedbackEventArgs> classe. Consulte o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultCursors">
+      <MemberSignature Language="C#" Value="public bool UseDefaultCursors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDefaultCursors" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.GiveFeedbackEventArgs.UseDefaultCursors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se a operação de arrastar deve usar os cursores padrão que estão associados com efeitos de arrastar e soltar.</summary>
+        <value>
+          <see langword="true" />Se os ponteiros padrão forem usados; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema fornece arrastar-soltar cursores padrão para operações de arrastar-soltar diferentes, como mover ou copiar. Se <xref:System.Windows.Forms.GiveFeedbackEventArgs.UseDefaultCursors%2A> é definido como `false`, é responsabilidade da origem de eventos para definir o cursor apropriado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma operação de arrastar e soltar entre duas <xref:System.Windows.Forms.ListBox> controles. O exemplo chama o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método quando a ação de arrastar inicia. A ação de arrastar inicia se moveu o mouse mais de <xref:System.Windows.Forms.SystemInformation.DragSize%2A?displayProperty=nameWithType> do local do mouse durante o <xref:System.Windows.Forms.Control.MouseDown> evento. O <xref:System.Windows.Forms.ListBox.IndexFromPoint%2A> método é usado para determinar o índice do item a arrastar durante o `MouseDown` evento.  
+  
+ O exemplo também demonstra como usar cursores personalizados para a operação de arrastar e soltar. O exemplo supõe que dois arquivos de cursor, `3dwarro.cur` e `3dwno.cur`, existe no diretório de aplicativo para a operação de arrastar personalizado e não-drop cursores, respectivamente. Os cursores personalizados serão usados se o `UseCustomCursorsCheck` <xref:System.Windows.Forms.CheckBox> é verificada. Os cursores personalizados são definidos <xref:System.Windows.Forms.Control.GiveFeedback> manipulador de eventos.  
+  
+ O estado do teclado é avaliado no <xref:System.Windows.Forms.Control.DragOver> manipulador de eventos para a direita `ListBox`, para determinar qual será a operação de arrastar com base no estado das teclas SHIFT, CTRL, ALT e CTRL + ALT. O local no `ListBox` onde ocorreria o descarte também é determinado durante a `DragOver` eventos. Se os dados para remover não são um `String`, em seguida, o <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> é definido como <xref:System.Windows.Forms.DragDropEffects?displayProperty=nameWithType>. Por fim, o status de menu é exibido no `DropLocationLabel` <xref:System.Windows.Forms.Label>.  
+  
+ Os dados para remover à direita `ListBox` é determinado no <xref:System.Windows.Forms.Control.DragDrop> manipulador de eventos e o `String` valor é adicionado no local apropriado no `ListBox`. Se a operação de arrastar é movido para fora dos limites do formulário, a operação de arrastar e soltar foi cancelada no <xref:System.Windows.Forms.Control.QueryContinueDrag> manipulador de eventos.  
+  
+ Esse trecho de código demonstra como usar o <xref:System.Windows.Forms.GiveFeedbackEventArgs> classe. Consulte o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.Control.DoDragDrop#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

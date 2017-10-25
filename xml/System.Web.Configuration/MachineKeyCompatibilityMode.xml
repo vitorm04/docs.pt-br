@@ -1,0 +1,81 @@
+<Type Name="MachineKeyCompatibilityMode" FullName="System.Web.Configuration.MachineKeyCompatibilityMode">
+  <TypeSignature Language="C#" Value="public enum MachineKeyCompatibilityMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MachineKeyCompatibilityMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.MachineKeyCompatibilityMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica quais métodos de criptografia podem ser usados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.Configuration.MachineKeyCompatibilityMode> valores quando você definir o <xref:System.Web.Configuration.MachineKeySection.CompatibilityMode%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Framework20SP1">
+      <MemberSignature Language="C#" Value="Framework20SP1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyCompatibilityMode Framework20SP1 = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyCompatibilityMode.Framework20SP1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use os métodos de criptografia que foram implementados no .NET Framework versões anteriores à versão 2.0 Service Pack 2. Vetores de inicialização (IVs) são usados para todas as operações de criptografia, exceto para armazenar senhas criptografadas no banco de dados de associação ASP.NET.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Framework20SP2">
+      <MemberSignature Language="C#" Value="Framework20SP2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyCompatibilityMode Framework20SP2 = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyCompatibilityMode.Framework20SP2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use os métodos de criptografia mais fortes que estão disponíveis no .NET Framework versão 2.0 SP2 e versões posteriores. Vetores de inicialização (IVs) são usados para todas as operações de criptografia.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Framework45">
+      <MemberSignature Language="C#" Value="Framework45" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.MachineKeyCompatibilityMode Framework45 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.MachineKeyCompatibilityMode.Framework45" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.MachineKeyCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use os métodos de criptografia estão disponíveis na versão do .NET Framework 4.5 e versões posteriores. Em comparação com os métodos de criptografia que são usados para <see cref="F:System.Web.Configuration.MachineKeyCompatibilityMode.Framework20SP1" /> e <see cref="F:System.Web.Configuration.MachineKeyCompatibilityMode.Framework20SP2" />, o texto cifrado que é gerado pelas rotinas de criptografia padrão é um pouco menor e seja mais resiliente contra determinadas classes de ataques teóricos. Ele também se integrar com [!INCLUDE[win8](~/includes/win8-md.md)] gerenciamento de chaves do diretório para obter as chaves de criptografia necessárias. Essa opção também permite que você especifique rotinas criptográficas personalizadas, escrevendo uma classe que deriva de <see cref="T:System.Security.Cryptography.DataProtector" /> e especificando o nome da classe no <see cref="P:System.Web.Configuration.MachineKeySection.DataProtectorType" /> propriedade.  
+  
+ Os requisitos de configuração a seguir se aplicam a essa opção:  
+  
+ 1. Se o <see cref="P:System.Web.Configuration.MachineKeySection.DataProtectorType" /> propriedade tem um valor, o <see cref="P:System.Web.Configuration.MachineKeySection.ApplicationName" /> propriedade também deve ter um valor.  
+  
+ 2. O <see cref="P:System.Web.Configuration.MachineKeySection.Validation" /> atributo deve especificar um algoritmo de validação definido pelo sistema (como MD5, SHA1, HMACSHA256, HMACSHA384 ou HMACSHA512) ou um algoritmo de validação personalizada em uma classe que deriva de <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> classe. Os valores AES e 3DES não são algoritmos de validação.  
+  
+ Quando você especificar essa opção, tíquetes de autenticação de formulários são sempre tanto criptografados e assinados, independentemente do valor especificado para o <see cref="P:System.Web.Configuration.FormsAuthenticationConfiguration.Protection" /> propriedade. Exibição de estado é também criptografado e assinado, se uma página <see cref="P:System.Web.UI.Page.EnableViewStateMac" /> é de propriedade <paramref name="true" /> ou <see cref="P:System.Web.UI.Page.ViewStateEncryptionMode" /> é de propriedade <see cref="F:System.Web.UI.ViewStateEncryptionMode.Always" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,215 @@
+<Type Name="IMethodReturnMessage" FullName="System.Runtime.Remoting.Messaging.IMethodReturnMessage">
+  <TypeSignature Language="C#" Value="public interface IMethodReturnMessage : System.Runtime.Remoting.Messaging.IMethodMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMethodReturnMessage implements class System.Runtime.Remoting.Messaging.IMessage, class System.Runtime.Remoting.Messaging.IMethodMessage" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.IMethodReturnMessage" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Messaging.IMethodMessage</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define a interface de mensagem de retorno de chamada de método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma mensagem de retorno de chamada do método representa a resposta a uma chamada de método em um objeto no final do coletor de mensagem. Um <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage> é gerado como resultado de um método chamado em um objeto remoto e é usado para retornar os resultados da chamada do método de volta para o chamador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um proxy personalizado que substituições `RealProxy.Invoke` para gravar as informações de mensagem de retorno para o console.  
+  
+ [!code-cpp[IMethodReturnMessage_ReturnValue#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IMethodReturnMessage_ReturnValue/CPP/imethodreturnmessage_returnvalue.cpp#1)]
+ [!code-csharp[IMethodReturnMessage_ReturnValue#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IMethodReturnMessage_ReturnValue/CS/imethodreturnmessage_returnvalue.cs#1)]
+ [!code-vb[IMethodReturnMessage_ReturnValue#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMethodReturnMessage_ReturnValue/VB/imethodreturnmessage_returnvalue.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodReturnMessage.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a exceção lançada durante a chamada do método.</summary>
+        <value>O objeto de exceção para a chamada de método ou <see langword="null" /> se o método não lançou uma exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra um proxy personalizado que substitui RealProxy.Invoke para gravar as informações de mensagem de retorno, incluindo se o método gerou uma exceção.  
+  
+ [!code-cpp[IMethodReturnMessage_Exception#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IMethodReturnMessage_Exception/CPP/imethodreturnmessage_exception.cpp#1)]
+ [!code-csharp[IMethodReturnMessage_Exception#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IMethodReturnMessage_Exception/CS/imethodreturnmessage_exception.cs#1)]
+ [!code-vb[IMethodReturnMessage_Exception#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMethodReturnMessage_Exception/VB/imethodreturnmessage_exception.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato faz a chamada por meio de uma referência para a interface e não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutArg">
+      <MemberSignature Language="C#" Value="public object GetOutArg (int argNum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetOutArg(int32 argNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.IMethodReturnMessage.GetOutArg(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argNum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="argNum">O número do argumento solicitado.</param>
+        <summary>Retorna o argumento especificado marcado como um <see langword="ref" /> ou um <see langword="out" /> parâmetro.</summary>
+        <returns>O argumento especificado é marcado como um <see langword="ref" /> ou um <see langword="out" /> parâmetro.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato faz a chamada por meio de uma referência para a interface e não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutArgName">
+      <MemberSignature Language="C#" Value="public string GetOutArgName (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetOutArgName(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.IMethodReturnMessage.GetOutArgName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O número do nome do argumento solicitada.</param>
+        <summary>Retorna o nome do argumento especificado marcado como um <see langword="ref" /> ou um <see langword="out" /> parâmetro.</summary>
+        <returns>O nome do argumento, ou <see langword="null" /> se o método atual não está implementado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato faz a chamada por meio de uma referência para a interface e não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OutArgCount">
+      <MemberSignature Language="C#" Value="public int OutArgCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OutArgCount" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodReturnMessage.OutArgCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de argumentos na chamada do método marcado como <see langword="ref" /> ou <see langword="out" /> parâmetros.</summary>
+        <value>O número de argumentos na chamada do método marcado como <see langword="ref" /> ou <see langword="out" /> parâmetros.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra um proxy personalizado que substituições `RealProxy.Invoke` para gravar as informações de mensagem de retorno para o console.  
+  
+ [!code-cpp[IMethodReturnMessage_ReturnValue#2](~/samples/snippets/cpp/VS_Snippets_Remoting/IMethodReturnMessage_ReturnValue/CPP/imethodreturnmessage_returnvalue.cpp#2)]
+ [!code-csharp[IMethodReturnMessage_ReturnValue#2](~/samples/snippets/csharp/VS_Snippets_Remoting/IMethodReturnMessage_ReturnValue/CS/imethodreturnmessage_returnvalue.cs#2)]
+ [!code-vb[IMethodReturnMessage_ReturnValue#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMethodReturnMessage_ReturnValue/VB/imethodreturnmessage_returnvalue.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato faz a chamada por meio de uma referência para a interface e não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OutArgs">
+      <MemberSignature Language="C#" Value="public object[] OutArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] OutArgs" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodReturnMessage.OutArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o argumento especificado marcado como um <see langword="ref" /> ou um <see langword="out" /> parâmetro.</summary>
+        <value>O argumento especificado é marcado como um <see langword="ref" /> ou um <see langword="out" /> parâmetro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage.OutArgs%2A> propriedade é redundante, pois a mesma funcionalidade pode ser obtida por meio de <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage.OutArgCount%2A> campo e <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage.GetOutArg%2A> método, pode haver otimização de desempenho disponíveis se o implementador de entender quando todos os argumentos serão recuperados.  
+  
+> [!WARNING]
+>  Se <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage.Exception%2A> não é `null`, um <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> exceção é lançada quando <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage.OutArgs%2A> é acessada.  
+  
+   
+  
+## Examples  
+ [!code-cpp[IMethodReturnMessage_ReturnValue#2](~/samples/snippets/cpp/VS_Snippets_Remoting/IMethodReturnMessage_ReturnValue/CPP/imethodreturnmessage_returnvalue.cpp#2)]
+ [!code-csharp[IMethodReturnMessage_ReturnValue#2](~/samples/snippets/csharp/VS_Snippets_Remoting/IMethodReturnMessage_ReturnValue/CS/imethodreturnmessage_returnvalue.cs#2)]
+ [!code-vb[IMethodReturnMessage_ReturnValue#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IMethodReturnMessage_ReturnValue/VB/imethodreturnmessage_returnvalue.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato faz a chamada por meio de uma referência para a interface e não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnValue">
+      <MemberSignature Language="C#" Value="public object ReturnValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ReturnValue" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.IMethodReturnMessage.ReturnValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de retorno da chamada de método.</summary>
+        <value>O valor de retorno de chamada de método.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato faz a chamada por meio de uma referência para a interface e não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

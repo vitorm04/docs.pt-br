@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.Remoting.Channels.Ipc">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting.Channels.Ipc" /> namespace define um canal de comunicação para comunicação remota que usa o sistema cmmunication entre processos (IPC) do sistema operacional Windows. Porque ele não usa comunicação de rede, o canal IPC é muito mais rápido do que os canais HTTP e TCP, mas ele só pode ser usado para comunicação entre domínios de aplicativos no mesmo computador físico.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

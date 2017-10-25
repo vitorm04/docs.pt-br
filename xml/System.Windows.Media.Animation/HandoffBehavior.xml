@@ -1,0 +1,67 @@
+<Type Name="HandoffBehavior" FullName="System.Windows.Media.Animation.HandoffBehavior">
+  <TypeSignature Language="C#" Value="public enum HandoffBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HandoffBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.HandoffBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como novas animações interagem com as existentes já aplicadas a uma propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você aplica um <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, ou <xref:System.Windows.Media.Animation.AnimationClock> para uma propriedade usando redigir, qualquer <xref:System.Windows.Media.Animation.Clock> objetos anteriormente associados com aquela propriedade continuam a consumir recursos do sistema; o sistema de tempo não removerá os relógios automaticamente.  
+  
+ Para evitar problemas de desempenho quando você aplicar um grande número de relógios usando redigir, você deve remover relógios de composição da propriedade animada após a conclusão. Há várias maneiras de remover um relógio de:  
+  
+-   Para remover todos os relógios de uma propriedade, use o <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationClock%29> ou <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> método do objeto animado. Especifique a propriedade sendo animada como o primeiro parâmetro, e `null` como o segundo. Isso removerá todos os relógios de animação da propriedade.  
+  
+-   Para remover um determinado <xref:System.Windows.Media.Animation.AnimationClock> de uma lista de relógios, use o <xref:System.Windows.Media.Animation.Clock.Controller%2A> propriedade do <xref:System.Windows.Media.Animation.AnimationClock> para recuperar um <xref:System.Windows.Media.Animation.ClockController>, chame o <xref:System.Windows.Media.Animation.ClockController.Remove%2A> método do <xref:System.Windows.Media.Animation.ClockController>. Isso geralmente é feito o <xref:System.Windows.Media.Animation.Clock.Completed> um relógio de manipulador de eventos. Observe que somente relógios de raiz podem ser controlados por um <xref:System.Windows.Media.Animation.ClockController>; o <xref:System.Windows.Media.Animation.Clock.Controller%2A> retorna a propriedade de um relógio filho `null`. Observe também que o <xref:System.Windows.Media.Animation.Clock.Completed> evento não será gerado se a duração efetiva do relógio for indefinida.  Nesse caso, o usuário deve determinar quando chamar <xref:System.Windows.Media.Animation.ClockController.Remove%2A>.  
+  
+ Isso é basicamente um problema para animações em objetos que têm um longo tempo de vida.  Quando um objeto passa pela coleta de lixo, seus relógios também serão desconectados e coletados como lixo.  
+  
+ Para obter mais informações sobre objetos clock, consulte [visão geral do sistema de controle de tempo e animação](~/docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Compose">
+      <MemberSignature Language="C#" Value="Compose" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.HandoffBehavior Compose = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.HandoffBehavior.Compose" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.HandoffBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Novas animações são combinadas com animações existentes acrescentando novas animações no final da cadeia de composição.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SnapshotAndReplace">
+      <MemberSignature Language="C#" Value="SnapshotAndReplace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.HandoffBehavior SnapshotAndReplace = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.HandoffBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Novas animações substituem todas as animações existentes nas propriedades às quais elas são aplicadas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

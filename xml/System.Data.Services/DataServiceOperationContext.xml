@@ -1,0 +1,146 @@
+<Type Name="DataServiceOperationContext" FullName="System.Data.Services.DataServiceOperationContext">
+  <TypeSignature Language="C#" Value="public sealed class DataServiceOperationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataServiceOperationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.DataServiceOperationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a operação atual que está sendo processada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AbsoluteRequestUri">
+      <MemberSignature Language="C#" Value="public Uri AbsoluteRequestUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri AbsoluteRequestUri" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceOperationContext.AbsoluteRequestUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obter o URI de solicitação para a operação atual.</summary>
+        <value>O <see cref="T:System.Uri" /> da operação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbsoluteServiceUri">
+      <MemberSignature Language="C#" Value="public Uri AbsoluteServiceUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri AbsoluteServiceUri" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceOperationContext.AbsoluteServiceUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o URI do serviço de base para a solicitação.</summary>
+        <value>A base <see cref="T:System.Uri" /> da operação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBatchRequest">
+      <MemberSignature Language="C#" Value="public bool IsBatchRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBatchRequest" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceOperationContext.IsBatchRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a operação atual faz parte de uma solicitação em lote.</summary>
+        <value>
+          <see langword="true" />Quando a operação é parte de uma solicitação em lote; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestHeaders">
+      <MemberSignature Language="C#" Value="public System.Net.WebHeaderCollection RequestHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebHeaderCollection RequestHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceOperationContext.RequestHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebHeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os cabeçalhos de solicitação para a operação atual.</summary>
+        <value>Um <see cref="T:System.Net.WebHeaderCollection" /> objeto que contém os cabeçalhos de solicitação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestMethod">
+      <MemberSignature Language="C#" Value="public string RequestMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceOperationContext.RequestMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o método de solicitação HTTP para a operação</summary>
+        <value>O método de solicitação HTTP.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseHeaders">
+      <MemberSignature Language="C#" Value="public System.Net.WebHeaderCollection ResponseHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebHeaderCollection ResponseHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceOperationContext.ResponseHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebHeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os cabeçalhos de resposta para a operação atual.</summary>
+        <value>Um <see cref="T:System.Net.WebHeaderCollection" /> objeto que contém os cabeçalhos de resposta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseStatusCode">
+      <MemberSignature Language="C#" Value="public int ResponseStatusCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ResponseStatusCode" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.DataServiceOperationContext.ResponseStatusCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o código de status da resposta.</summary>
+        <value>O código de status da resposta da operação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

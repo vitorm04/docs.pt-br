@@ -1,0 +1,180 @@
+<Type Name="ToolTipEventArgs" FullName="System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs">
+  <TypeSignature Language="C#" Value="public class ToolTipEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolTipEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado como um objeto de parâmetro no evento <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> do objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> raiz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é exposta como o `e` parâmetro o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> evento e fornece o mouse, posição, texto de dica de ferramenta, se houver e detalhes sobre o elemento de gráfico em que o cursor do mouse é mantido quando o evento é gerado.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> é gerado alguns segundos após o cursor do mouse é mantido em um elemento de gráfico relevantes.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs> classe contém as seguintes propriedades:  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.X%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Y%2A> propriedades, que são usadas para obter o mouse coordenadas.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Text%2A> propriedade, que é usada para obter a dica de ferramenta para que o evento é gerado para o elemento do gráfico. Observe que muitos dos elementos de gráfico tem uma `ToolTip`, `LegendToolTip`, e/ou `LabelToolTip` propriedade que você pode usar para atribuir uma dica de ferramenta. Esses elementos incluem legendas, anotações, pontos de dados, série, eixos, títulos, rótulos personalizados e faixas. Essa propriedade também pode ser usada para substituir a dica de ferramenta para um elemento de gráfico, ou para definir uma dica de ferramenta para um elemento de gráfico não tem um `ToolTip` propriedade.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.HitTestResult%2A> propriedade, que fornece informações sobre o elemento de gráfico para o qual o evento foi gerado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolTipEventArgs (int x, int y, string text, System.Windows.Forms.DataVisualization.Charting.HitTestResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 x, int32 y, string text, class System.Windows.Forms.DataVisualization.Charting.HitTestResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.#ctor(System.Int32,System.Int32,System.String,System.Windows.Forms.DataVisualization.Charting.HitTestResult)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="result" Type="System.Windows.Forms.DataVisualization.Charting.HitTestResult" />
+      </Parameters>
+      <Docs>
+        <param name="x">Coordenada X do mouse.</param>
+        <param name="y">Coordenada Y do mouse.</param>
+        <param name="text">O texto de dica de ferramenta.</param>
+        <param name="result">O objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs" /> classe com especificado <paramref name="x" />, <paramref name="y" />, <paramref name="text" /> e <paramref name="result" /> parâmetros.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestResult">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.HitTestResult HitTestResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.HitTestResult HitTestResult" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.HitTestResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.HitTestResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" /> object, que fornece informações sobre o elemento de gráfico que o <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> evento foi gerado para.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" /> objeto que representa informações para o elemento de <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> foi gerado para.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é exposta no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> evento da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.HitTestResult%2A> propriedade pode ser usada para obter o objeto que o evento foi gerado para o, o tipo do elemento do gráfico, o evento foi gerado para e assim por diante.  Para obter mais detalhes, consulte o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a dica de ferramenta, se houver, do elemento do gráfico na qual o cursor do mouse é mantido. Essa propriedade também pode definir uma dica de ferramenta para o elemento do gráfico.</summary>
+        <value>Um <see langword="string" /> valor que representa o texto de dica de ferramenta do elemento de <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> foi gerado para.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é exposta no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> evento da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Text%2A> propriedade, que é usada para obter a dica de ferramenta para que o evento é gerado para o elemento do gráfico. Observe que muitos dos elementos de gráfico tem uma `ToolTip`, `LegendToolTip`, e/ou `LabelToolTip` propriedade que você pode usar para atribuir uma dica de ferramenta. Esses elementos incluem legendas, anotações, pontos de dados, série, eixos, títulos, rótulos personalizados e faixas.  
+  
+-   Se você receber essa propriedade, sempre retornará uma cadeia de caracteres de comprimento zero para qualquer item do elemento de gráfico que não têm uma dica de ferramenta.  
+  
+ Você pode definir essa propriedade:  
+  
+-   Substitua a dica de ferramenta para qualquer um dos elementos do gráfico capazes de atribuição de dicas de ferramenta.  
+  
+-   Atribua uma dica de ferramenta para um elemento de gráfico que não oferece suporte a dicas de ferramenta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public int X { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coordenada X do ponto em que o cursor do mouse é mantido sobre quando o <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> é gerado.</summary>
+        <value>Um <see langword="integer" /> valor que representa a coordenada X do cursor do mouse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é exposta no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> evento da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto.  
+  
+ Use o <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.X%2A> propriedade para obter a coordenada X da tela do ponto o cursor do mouse é mantida sobre quando o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> é gerado.  
+  
+ Observe que a coordenada X é medida em pixels. o ponto de (0,0) correspondente para o canto superior esquerdo do gráfico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public int Y { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coordenada Y do ponto em que o cursor do mouse é mantido sobre quando o <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText" /> é gerado.</summary>
+        <value>Um <see langword="integer" /> que representa a coordenada Y do cursor do mouse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é exposta no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> evento da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto.  
+  
+ Use o <xref:System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs.Y%2A> propriedade para obter a coordenada Y da tela do ponto o cursor do mouse é mantida sobre quando o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.GetToolTipText> é gerado.  
+  
+ Observe que a coordenada Y é medida em pixels. o ponto de (0,0) correspondente para o canto superior esquerdo do gráfico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

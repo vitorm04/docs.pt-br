@@ -1,0 +1,82 @@
+<Type Name="JumpItemRejectionReason" FullName="System.Windows.Shell.JumpItemRejectionReason">
+  <TypeSignature Language="C#" Value="public enum JumpItemRejectionReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed JumpItemRejectionReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.JumpItemRejectionReason" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve por que um <see cref="T:System.Windows.Shell.JumpItem" /> não pôde ser adicionado à lista de passar pelo shell do Windows.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InvalidItem">
+      <MemberSignature Language="C#" Value="InvalidItem" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Shell.JumpItemRejectionReason InvalidItem = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.JumpItemRejectionReason.InvalidItem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Shell.JumpItemRejectionReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Shell.JumpItem" /> faz referência a um caminho de arquivo inválido, ou o sistema operacional não dá suporte a listas de saltos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Shell.JumpItemRejectionReason None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.JumpItemRejectionReason.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Shell.JumpItemRejectionReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O motivo não especificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoRegisteredHandler">
+      <MemberSignature Language="C#" Value="NoRegisteredHandler" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Shell.JumpItemRejectionReason NoRegisteredHandler = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.JumpItemRejectionReason.NoRegisteredHandler" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Shell.JumpItemRejectionReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O aplicativo não está registrado para manipular a extensão de nome de arquivo de <see cref="T:System.Windows.Shell.JumpItem" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedByUser">
+      <MemberSignature Language="C#" Value="RemovedByUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Shell.JumpItemRejectionReason RemovedByUser = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Shell.JumpItemRejectionReason.RemovedByUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Shell.JumpItemRejectionReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O item foi anteriormente na lista de saltos, mas foi removido pelo usuário.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,102 @@
+<Type Name="CultureAndRegionModifiers" FullName="System.Globalization.CultureAndRegionModifiers">
+  <TypeSignature Language="C#" Value="public enum CultureAndRegionModifiers" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CultureAndRegionModifiers extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.CultureAndRegionModifiers" />
+  <AssemblyInfo>
+    <AssemblyName>sysglobl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as constantes que definem um objeto <see cref="T:System.Globalization.CultureAndRegionInfoBuilder" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especificar uma combinação bit a bit de um ou mais <xref:System.Globalization.CultureAndRegionModifiers> valores como um argumento para o <xref:System.Globalization.CultureAndRegionInfoBuilder.%23ctor%28System.String%2CSystem.Globalization.CultureAndRegionModifiers%29?displayProperty=nameWithType> construtor. Você usa resultante <xref:System.Globalization.CultureAndRegionInfoBuilder> objeto para criar uma cultura personalizada.  
+  
+ Uma cultura personalizada pode ter uma combinação dessas características:  
+  
+-   Uma cultura personalizada pode ser uma cultura específica ou uma cultura neutra.  
+  
+     Uma cultura específica Especifica um idioma e uma região, enquanto uma cultura neutra Especifica um idioma, mas nenhuma região.  
+  
+-   Uma cultura personalizada pode ser uma cultura substituta ou uma cultura complementar.  
+  
+     Uma cultura substituta substitui uma cultura que é fornecido com o .NET Framework ou uma localidade que é fornecido com o Windows.  
+  
+     Uma cultura suplementar é algo diferente de uma cultura substituta. Uma cultura complementar pode ser totalmente nova, ou pode estender uma cultura existente do .NET Framework ou a localidade do Windows.  
+  
+> [!IMPORTANT]
+>  Observe que o <xref:System.Globalization.CultureAndRegionModifiers> enumeração foi encontrada em um assembly nomeado sysglobl.dll. Compilando com êxito o código que usa esse tipo requer que você adicione uma referência a sysglobl.dll.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma cultura personalizada com um prefixo de uso particular e lista um conjunto de suas propriedades. A primeira propriedade é o nome da cultura.  
+  
+ [!code-cpp[sys.glob.carib1#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.glob.carib1/CPP/carib.cpp#1)]
+ [!code-csharp[sys.glob.carib1#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.carib1/CS/carib.cs#1)]
+ [!code-vb[sys.glob.carib1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.carib1/VB/carib.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Neutral">
+      <MemberSignature Language="C#" Value="Neutral" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureAndRegionModifiers Neutral = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureAndRegionModifiers.Neutral" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureAndRegionModifiers</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cultura personalizada neutra.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureAndRegionModifiers None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureAndRegionModifiers.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureAndRegionModifiers</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cultura personalizada específica e complementar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Replacement">
+      <MemberSignature Language="C#" Value="Replacement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureAndRegionModifiers Replacement = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureAndRegionModifiers.Replacement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>sysglobl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureAndRegionModifiers</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cultura personalizada que substitui uma cultura existente do .NET Framework ou a localidade do Windows.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

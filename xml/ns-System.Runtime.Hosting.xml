@@ -1,0 +1,6 @@
+<Namespace Name="System.Runtime.Hosting">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Hosting" /> namespace contém tipos avançados que são usados na ativação do aplicativo nos domínios de aplicativo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

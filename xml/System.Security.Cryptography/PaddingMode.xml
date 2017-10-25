@@ -1,0 +1,214 @@
+<Type Name="PaddingMode" FullName="System.Security.Cryptography.PaddingMode">
+  <TypeSignature Language="C#" Value="public enum PaddingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PaddingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.PaddingMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o tipo de preenchimento a ser aplicado quando o bloco de dados da mensagem é menor do que o número total de bytes necessários para uma operação criptográfica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maioria das mensagens de texto sem formatação não consistem em um número de bytes que preencher completamente blocos. Geralmente, não há bytes suficientes para preencher o último bloco. Quando isso acontece, uma cadeia de caracteres de preenchimento é adicionada ao texto. Por exemplo, se o tamanho do bloco é de 64 bits e o último bloco contém apenas 40 bits, 24 bits de preenchimento serão adicionados.  
+  
+ Alguns padrões de criptografia especificam um esquema de preenchimento específico. O exemplo a seguir mostra como esses modos funcionam. Dado um blocklength de 8, um comprimento de dados de 9, o número de octetos de preenchimento iguais a 7 e os dados iguais a FF FF FF FF FF FF FF FF FF:  
+  
+ Dados: FF FF FF FF FF FF FF FF TT  
+  
+ X923 preenchimento: FF FF FF FF FF FF FF FF FF 00 00 00 00 00 00 07  
+  
+ Preenchimento PKCS7: FF FF FF FF FF FF FF FF FF 07 07 07 07 07 07 07  
+  
+ Preenchimento ISO10126: FF FF FF FF FF FF FF FF FF 7 D 2A 75 EF F8 EF 07  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ANSIX923">
+      <MemberSignature Language="C#" Value="ANSIX923" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.PaddingMode ANSIX923 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.PaddingMode.ANSIX923" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cadeia de caracteres de preenchimento ANSIX923 consiste em uma sequência de bytes preenchida com zeros antes do tamanho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra como esse modo funciona. Dado um blocklength de 8, um comprimento de dados de 9, o número de octetos de preenchimento iguais a 7 e os dados iguais a FF FF FF FF FF FF FF FF FF:  
+  
+ Dados: FF FF FF FF FF FF FF FF TT  
+  
+ X923 preenchimento: FF FF FF FF FF FF FF FF FF 00 00 00 00 00 00 07  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ISO10126">
+      <MemberSignature Language="C#" Value="ISO10126" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.PaddingMode ISO10126 = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.PaddingMode.ISO10126" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cadeia de caracteres de preenchimento ISO10126 consiste em dados aleatórios antes do tamanho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra como esse modo funciona. Dado um blocklength de 8, um comprimento de dados de 9, o número de octetos de preenchimento iguais a 7 e os dados iguais a FF FF FF FF FF FF FF FF FF:  
+  
+ Dados: FF FF FF FF FF FF FF FF TT  
+  
+ Preenchimento ISO10126: FF FF FF FF FF FF FF FF FF 7 D 2A 75 EF F8 EF 07  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.PaddingMode None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.PaddingMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum preenchimento é feito.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PKCS7">
+      <MemberSignature Language="C#" Value="PKCS7" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.PaddingMode PKCS7 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.PaddingMode.PKCS7" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cadeia de caracteres de preenchimento PKCS #7 consiste em uma sequência de bytes, cada um dos quais é igual ao número total de bytes de preenchimento adicionados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra como esses modos funcionam. Dado um blocklength de 8, um comprimento de dados de 9, o número de octetos de preenchimento iguais a 7 e os dados iguais a FF FF FF FF FF FF FF FF FF:  
+  
+ Dados: FF FF FF FF FF FF FF FF TT  
+  
+ Preenchimento PKCS7: FF FF FF FF FF FF FF FF FF 07 07 07 07 07 07 07  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zeros">
+      <MemberSignature Language="C#" Value="Zeros" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.PaddingMode Zeros = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.PaddingMode.Zeros" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.PaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cadeia de caracteres de preenchimento consiste em bytes definidos como zero.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

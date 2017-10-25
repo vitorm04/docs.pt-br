@@ -1,0 +1,48 @@
+<Type Name="IRegisterMetadata" FullName="System.Activities.Presentation.Metadata.IRegisterMetadata">
+  <TypeSignature Language="C#" Value="public interface IRegisterMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRegisterMetadata" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Metadata.IRegisterMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica uma classe que adicionará atributos adicionais para o repositório de metadados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Presentation.Metadata.IRegisterMetadata>tipos fornecem uma maneira para encapsular a associação de atributos de tempo de design para tipos de tempo de execução de forma flexível. Um aplicativo que hospeda o [!INCLUDE[wfd1](~/includes/wfd1-md.md)] pode usar o <xref:System.Activities.Presentation.Metadata.IRegisterMetadata> interface para registrar os atributos para a atividade. Por exemplo, [!INCLUDE[vs2010](~/includes/vs2010-md.md)] procura os tipos que implementam <xref:System.Activities.Presentation.Metadata.IRegisterMetadata> quando os assemblies que contêm esses tipos são carregados além de também procurando tipos no assembly *.design.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public void Register ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Register() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.IRegisterMetadata.Register" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona metadados adicionais para o repositório de metadados na inicialização do designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações devem chamar <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A> para adicionar dados ao armazenamento de metadados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,388 @@
+<Type Name="EmbeddedMailObject" FullName="System.Web.UI.WebControls.EmbeddedMailObject">
+  <TypeSignature Language="C#" Value="public sealed class EmbeddedMailObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EmbeddedMailObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.EmbeddedMailObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.EmbeddedMailObject/EmbeddedMailObjectTypeConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um item para inserir em uma mensagem de email criada usando o <see cref="T:System.Web.UI.WebControls.MailDefinition" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.EmbeddedMailObject> representa um item para inserir em uma mensagem de email. Esses itens inseridos podem ser arquivos de imagem como logotipos de empresa. Cada item inserido é especificado por um identificador e um caminho.  
+  
+ Para garantir que um objeto inserido é exibido corretamente no arquivo de mensagem de email, as seguintes condições devem ser atendidas:  
+  
+-   A mensagem de email está em formato HTML.  
+  
+-   O item é um arquivo de imagem (. jpg,. gif,. bmp e assim por diante).  
+  
+-   O arquivo de corpo formatado em HTML especificado no <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> propriedade contém uma referência para o arquivo de imagem usando a seguinte sintaxe:  
+  
+    ```  
+    <img src="cid:identifier" alt="Alternate Text" />.  
+    ```  
+  
+ Se um <xref:System.Web.UI.WebControls.EmbeddedMailObject> é adicionado a uma mensagem de email e não atende a todos os requisitos especificados anteriormente, ele será provavelmente exibido como um anexo da mensagem de email. Se um item é referenciado por um identificador na mensagem de email, mas não é incluído como um item inserido, ele aparecerá como um anexo interrompido quando o email é exibido.  
+  
+ O <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection> armazena uma coleção de <xref:System.Web.UI.WebControls.EmbeddedMailObject> objetos para uma mensagem de email único. O <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection> é usado pelo <xref:System.Web.UI.WebControls.MailDefinition.EmbeddedObjects%2A> propriedade o <xref:System.Web.UI.WebControls.MailDefinition> objeto para criar a mensagem de email.  
+  
+ Mensagens de email que permite que os objetos inseridos são configuráveis nos controles da Web a seguir, definindo suas <xref:System.Web.UI.WebControls.MailDefinition> propriedades declarativamente:  
+  
+-   <xref:System.Web.UI.WebControls.CreateUserWizard>  
+  
+-   <xref:System.Web.UI.WebControls.ChangePassword>  
+  
+-   <xref:System.Web.UI.WebControls.PasswordRecovery>  
+  
+> [!NOTE]
+>  Os valores de <xref:System.Web.UI.WebControls.EmbeddedMailObject> e <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection> objetos não são armazenados no estado de exibição. Isso protege contra usuários mal-intencionados, descobrir informações de caminho para o servidor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma página ASP.NET que usa um <xref:System.Web.UI.WebControls.ChangePassword> controle da Web e inclui um manipulador de eventos para o <xref:System.Web.UI.WebControls.ChangePassword.SendingMail> evento chamado `SendingMail`. O exemplo de código pressupõe que o site da Web do ASP.NET foi configurado para usar associação ASP.NET e autenticação de formulários e que um usuário foi criado com o nome e senha são conhecidos por você. Para obter mais informações, consulte [como: implementar a autenticação de formulários simples](http://msdn.microsoft.com/library/9522bc8d-1a41-480a-aa11-c389a4ac2d2e).  
+  
+ Se a alteração de senha for bem-sucedida, o código de `SendingMail` manipulador de eventos tenta enviar uma mensagem de email ao usuário para confirmar a alteração. SMTP já deve estar configurado no servidor para que este exemplo de código trabalhar. Para obter informações sobre como configurar um servidor SMTP, consulte [NIB: como: instalar e configurar servidores virtuais SMTP no IIS 6.0](http://msdn.microsoft.com/en-us/ed204b58-24af-47d0-9687-60e5df5f17f8). Para os fins deste exemplo, não é necessário configurar um servidor SMTP; o exemplo é construído para testar uma falha ao enviar uma mensagem de email.  
+  
+ Se um servidor de email não está configurado corretamente ou algum outro erro ocorre e não é possível enviar a mensagem de email, o `SendMailError` função é chamada. Será exibida uma mensagem para o usuário. Além disso, um evento é registrado para o log de eventos do aplicativo do Windows com a suposição de que uma fonte de evento denominada MySamplesSite já existe. Consulte o exemplo de código abaixo para criar a origem do evento especificado. Para obter mais informações sobre como criar uma fonte de evento, consulte [manipulação de eventos do servidor em páginas Web Forms do ASP.NET](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9). O <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> propriedade o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs> objeto é definido como `true` para indicar que o erro foi tratado.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/CS/changepassword_cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/VB/changepassword_vb.aspx#1)]  
+  
+ Use o exemplo de código a seguir se você precisar adicionar programaticamente a origem do evento chamada MySamplesSite para o log do aplicativo. Esta fonte de evento deve existir para que o primeiro exemplo de código funcione corretamente. O exemplo de código a seguir requer privilégios de administrador.  
+  
+ [!code-csharp[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/CS/createeventsource.cs#1)]
+ [!code-vb[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/VB/createeventsource.vb#1)]  
+  
+ O exemplo de código a seguir pode ser usado como o arquivo ChangePasswordMail.htm para o código de exemplo anterior.  
+  
+> [!IMPORTANT]
+>  Enviando a conta de usuário, nomes ou senhas em email é uma possível ameaça à segurança. Mensagens de email geralmente são enviadas em texto sem formatação e podem ser lidos por aplicativos de "detecção" de rede especial.  Para melhorar a segurança, use as atenuações descritas [protegendo controles de logon](http://msdn.microsoft.com/library/d85075bc-9c1a-4453-8a0c-539b10853c9c).  
+  
+```  
+<html>  
+<head><title></title></head>  
+<body>  
+<form>  
+  
+  <h1>Your password for the account named &quot;<%Username%>&quot; has changed.</h1>  
+  
+  <p>  
+  If you did not initiate this change, please call 1-206-555-0100.  
+  </p>  
+  
+  <p>  
+  <a href="http://www.contoso.com/login.aspx">  
+    <img src="cid:LoginGif" alt="Log In" />  
+  </a>   
+  </p>  
+  
+  <p>  
+  Please read our attached Privacy Notice.  
+  </p>  
+  
+</form>  
+</body>  
+</html>  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EmbeddedMailObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EmbeddedMailObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter ou definir o identificador do item inserido, use o <xref:System.Web.UI.WebControls.EmbeddedMailObject.Name%2A> propriedade. Para obter ou definir o caminho para o item inserido, use o <xref:System.Web.UI.WebControls.EmbeddedMailObject.Path%2A> propriedade. Ambas as propriedades devem ser definidas com êxito, inserir o item na mensagem de email.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EmbeddedMailObject (string name, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.EmbeddedMailObject.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome usado como o identificador do item para inserir na mensagem de email. Para obter mais informações, consulte <see cref="P:System.Web.UI.WebControls.EmbeddedMailObject.Name" />.</param>
+        <param name="path">O caminho usado para recuperar um item para inserir na mensagem de email. Para obter mais informações, consulte <see cref="P:System.Web.UI.WebControls.EmbeddedMailObject.Path" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> de classe, usando o nome do identificador especificado e o caminho para preencher o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra um exemplo de code-behind de uma página ASP.NET que usa um <xref:System.Web.UI.WebControls.ChangePassword> controlar e inclui um manipulador de eventos para o <xref:System.Web.UI.WebControls.ChangePassword.SendingMail> evento chamado `SendingMail`. Este exemplo de código pressupõe que o site da Web do ASP.NET foi configurado para usar associação ASP.NET e autenticação de formulários e que um usuário foi criado com o nome e senha são conhecidos por você. Para obter mais informações, consulte [como: implementar a autenticação de formulários simples](http://msdn.microsoft.com/library/9522bc8d-1a41-480a-aa11-c389a4ac2d2e).  
+  
+ Se a alteração de senha for bem-sucedida, o código de `SendingMail` manipulador de eventos tenta enviar uma mensagem de email ao usuário para confirmar a alteração. SMTP já deve estar configurado no servidor para que este exemplo de código trabalhar. Para obter informações sobre como configurar um servidor SMTP, consulte [NIB: como: instalar e configurar servidores virtuais SMTP no IIS 6.0](http://msdn.microsoft.com/en-us/ed204b58-24af-47d0-9687-60e5df5f17f8). Para os fins deste exemplo, não é necessário configurar um servidor SMTP; o exemplo é construído para testar uma falha ao enviar uma mensagem de email.  
+  
+ Se um servidor de email não está configurado corretamente ou algum outro erro ocorre e não é possível enviar a mensagem de email, o `SendMailError` função é chamada. Será exibida uma mensagem para o usuário. Além disso, um evento é registrado para o log de eventos do aplicativo do Windows com a suposição de que uma fonte de evento denominada MySamplesSite já existe. Consulte o exemplo de código abaixo para criar a origem do evento especificado. Para obter mais informações sobre como criar uma fonte de evento, consulte [manipulação de eventos do servidor em páginas Web Forms do ASP.NET](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9). O <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> propriedade o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs> objeto é definido como `true` para indicar que o erro foi tratado.  
+  
+ O exemplo de código a seguir demonstra o uso de uma página. aspx.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ChangePassword#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ChangePassword/CS/changepassword_cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ChangePassword#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ChangePassword/VB/changepassword_vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como usar um arquivo de code-behind.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ChangePassword#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ChangePassword/CS/changepassword.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ChangePassword#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ChangePassword/VB/changepassword.vb#2)]  
+  
+ Use o exemplo de código a seguir se você precisar adicionar programaticamente a origem do evento chamada MySamplesSite para o log do aplicativo. Esta fonte de evento deve existir para que o primeiro exemplo de código funcione corretamente. O exemplo de código a seguir requer privilégios de administrador.  
+  
+ [!code-csharp[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/CS/createeventsource.cs#1)]
+ [!code-vb[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/VB/createeventsource.vb#1)]  
+  
+ O exemplo de código a seguir pode ser usado como o arquivo ChangePasswordMail.htm para o código de exemplo anterior.  
+  
+> [!IMPORTANT]
+>  Enviando a conta de usuário, nomes ou senhas em uma mensagem de email é uma possível ameaça à segurança. Mensagens de email geralmente são enviadas em texto sem formatação e podem ser lidos por aplicativos de "detecção" de rede especial.  Para melhorar a segurança, use as atenuações descritas [protegendo controles de logon](http://msdn.microsoft.com/library/d85075bc-9c1a-4453-8a0c-539b10853c9c).  
+  
+```  
+<html>  
+<head><title></title></head>  
+<body>  
+<form>  
+  
+  <h1>Your password for the account named &quot;<%Username%>&quot; has changed.</h1>  
+  
+  <p>  
+  If you did not initiate this change, please call 1-206-555-0100.  
+  </p>  
+  
+  <p>  
+  <a href="http://www.contoso.com/login.aspx">  
+    <img src="cid:LoginGif" alt="Log In" />  
+  </a>   
+  </p>  
+  
+  <p>  
+  Please read our attached Privacy Notice.  
+  </p>  
+  
+</form>  
+</body>  
+</html>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EmbeddedMailObject.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome que é usado como o identificador do item a ser inserido em uma mensagem de email criada com o <see cref="T:System.Web.UI.WebControls.MailDefinition" /> classe.</summary>
+        <value>Retorna o identificador do item para inserir em uma mensagem de email.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.EmbeddedMailObject.Name%2A> propriedade especifica um identificador para um item inserir em uma mensagem de email declarativamente construída com o <xref:System.Web.UI.WebControls.MailDefinition> classe. O identificador é usado para mapear o item contido no <xref:System.Web.UI.WebControls.EmbeddedMailObject.Path%2A> propriedade para o local apropriado no corpo do arquivo especificado no <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> propriedade, usando a seguinte sintaxe:  
+  
+```  
+<img src="cid:identifier" alt="Alternate Text" />  
+```  
+  
+ Normalmente, o item é um arquivo de imagem. O padrão para o <xref:System.Web.UI.WebControls.EmbeddedMailObject.Name%2A> propriedade é uma cadeia de caracteres vazia.  
+  
+ É uma prática recomendada para design de acessibilidade definir a propriedade de texto alternativo na sua mensagem de email para as imagens inseridas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma página ASP.NET que usa um <xref:System.Web.UI.WebControls.ChangePassword> controle da Web e inclui um manipulador de eventos para o <xref:System.Web.UI.WebControls.ChangePassword.SendingMail> evento chamado `SendingMail`. O exemplo de código pressupõe que o site da Web do ASP.NET foi configurado para usar associação ASP.NET e autenticação de formulários e que um usuário foi criado com o nome e senha são conhecidos por você. Para obter mais informações, consulte [como: implementar a autenticação de formulários simples](http://msdn.microsoft.com/library/9522bc8d-1a41-480a-aa11-c389a4ac2d2e).  
+  
+ Se a alteração de senha for bem-sucedida, o código de `SendingMail` manipulador de eventos tenta enviar uma mensagem de email ao usuário para confirmar a alteração. SMTP já deve estar configurado no servidor para que este exemplo de código trabalhar. Para obter informações sobre como configurar um servidor SMTP, consulte [NIB: como: instalar e configurar servidores virtuais SMTP no IIS 6.0](http://msdn.microsoft.com/en-us/ed204b58-24af-47d0-9687-60e5df5f17f8). Para os fins deste exemplo, não é necessário configurar um servidor SMTP; o exemplo é construído para testar uma falha ao enviar uma mensagem de email.  
+  
+ Se um servidor de email não está configurado corretamente ou algum outro erro ocorre e não é possível enviar a mensagem de email, o `SendMailError` função é chamada. Será exibida uma mensagem para o usuário. Além disso, um evento é registrado para o log de eventos do aplicativo do Windows com a suposição de que uma fonte de evento denominada MySamplesSite já existe. Consulte o exemplo de código abaixo para criar a origem do evento especificado. Para obter mais informações sobre como criar uma fonte de evento, consulte [manipulação de eventos do servidor em páginas Web Forms do ASP.NET](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9). O <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> propriedade o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs> objeto é definido como `true` para indicar que o erro foi tratado.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/CS/changepassword_cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/VB/changepassword_vb.aspx#1)]  
+  
+ Use o exemplo de código a seguir se você precisar adicionar programaticamente a origem do evento chamada MySamplesSite para o log do aplicativo. Esta fonte de evento deve existir para que o primeiro exemplo de código funcione corretamente. O exemplo de código a seguir requer privilégios de administrador.  
+  
+ [!code-csharp[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/CS/createeventsource.cs#1)]
+ [!code-vb[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/VB/createeventsource.vb#1)]  
+  
+ O exemplo de código a seguir pode ser usado como o arquivo ChangePasswordMail.htm para o código de exemplo anterior.  
+  
+> [!IMPORTANT]
+>  Enviando a conta de usuário, nomes ou senhas em uma mensagem de email é uma possível ameaça à segurança. Mensagens de email são enviadas em texto sem formatação e podem ser lidos por aplicativos de "detecção" de rede especial.  Para melhorar a segurança, use as atenuações descritas [protegendo controles de logon](http://msdn.microsoft.com/library/d85075bc-9c1a-4453-8a0c-539b10853c9c).  
+  
+```  
+<html>  
+<head><title></title></head>  
+<body>  
+<form>  
+  
+  <h1>Your password for the account named &quot;<%Username%>&quot; has changed.</h1>  
+  
+  <p>  
+  If you did not initiate this change, please call 1-206-555-0100.  
+  </p>  
+  
+  <p>  
+  <a href="http://www.contoso.com/login.aspx">  
+    <img src="cid:LoginGif" alt="Log In" />  
+  </a>   
+  </p>  
+  
+  <p>  
+  Please read our attached Privacy Notice.  
+  </p>  
+  
+</form>  
+</body>  
+</html>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.EmbeddedMailObject.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.MailFileEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho que é usado para recuperar um item para inserir em uma mensagem de email criada com o <see cref="T:System.Web.UI.WebControls.MailDefinition" /> classe.</summary>
+        <value>Retorna o caminho para o item para inserir em uma mensagem de email.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.EmbeddedMailObject.Path%2A> propriedade especifica o caminho para o item que você deseja inserir na mensagem de email declarativamente construída com o <xref:System.Web.UI.WebControls.MailDefinition> objeto. O caminho do arquivo no <xref:System.Web.UI.WebControls.EmbeddedMailObject.Path%2A> deve ser um caminho como C:\MyServer\Banner.gif. Normalmente, o item inserido é um arquivo de imagem. Se um arquivo de imagem é referenciado por seu identificador da mensagem de email, mas não está incluído na mensagem, a imagem aparece como um anexo interrompido quando for exibida a mensagem de email.  
+  
+ É uma prática recomendada para design de acessibilidade definir a propriedade de texto alternativo na sua mensagem de email para as imagens inseridas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma página ASP.NET que usa um <xref:System.Web.UI.WebControls.ChangePassword> controle da Web e inclui um manipulador de eventos para o <xref:System.Web.UI.WebControls.ChangePassword.SendingMail> evento chamado `SendingMail`. O exemplo de código pressupõe que o site da Web do ASP.NET foi configurado para usar associação ASP.NET e autenticação de formulários e que um usuário foi criado com o nome e senha são conhecidos por você. Para obter mais informações, consulte [como: implementar a autenticação de formulários simples](http://msdn.microsoft.com/library/9522bc8d-1a41-480a-aa11-c389a4ac2d2e).  
+  
+ Se a alteração de senha for bem-sucedida, o código de `SendingMail` manipulador de eventos tenta enviar uma mensagem de email ao usuário para confirmar a alteração. SMTP já deve estar configurado no servidor para que este exemplo de código trabalhar. Para obter informações sobre como configurar um servidor SMTP, consulte [NIB: como: instalar e configurar servidores virtuais SMTP no IIS 6.0](http://msdn.microsoft.com/en-us/ed204b58-24af-47d0-9687-60e5df5f17f8). Para os fins deste exemplo, não é necessário configurar um servidor SMTP; o exemplo é construído para testar uma falha ao enviar uma mensagem de email.  
+  
+ Se um servidor de email não está configurado corretamente ou algum outro erro ocorre e não é possível enviar a mensagem de email, o `SendMailError` função é chamada. Será exibida uma mensagem para o usuário. Além disso, um evento é registrado para o log de eventos do aplicativo do Windows com a suposição de que uma fonte de evento denominada MySamplesSite já existe. Consulte o exemplo de código abaixo para criar a origem do evento especificado. Para obter mais informações sobre como criar uma fonte de evento, consulte [manipulação de eventos do servidor em páginas Web Forms do ASP.NET](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9). O <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> propriedade o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs> objeto é definido como `true` para indicar que o erro foi tratado.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/CS/changepassword_cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/VB/changepassword_vb.aspx#1)]  
+  
+ Use o exemplo de código a seguir se você precisar adicionar programaticamente a origem do evento chamada MySamplesSite para o log do aplicativo. Esta fonte de evento deve existir para que o primeiro exemplo de código funcione corretamente. O exemplo de código a seguir requer privilégios de administrador.  
+  
+ [!code-csharp[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/CS/createeventsource.cs#1)]
+ [!code-vb[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/VB/createeventsource.vb#1)]  
+  
+ O exemplo de código a seguir pode ser usado como o arquivo ChangePasswordMail.htm para o código de exemplo anterior.  
+  
+> [!IMPORTANT]
+>  Enviando a conta de usuário, nomes ou senhas em uma mensagem de email é uma possível ameaça à segurança. Mensagens de email geralmente são enviadas em texto sem formatação e podem ser lidos por aplicativos de "detecção" de rede especial.  Para melhorar a segurança, use as atenuações descritas [protegendo controles de logon](http://msdn.microsoft.com/library/d85075bc-9c1a-4453-8a0c-539b10853c9c).  
+  
+```  
+<html>  
+<head><title></title></head>  
+<body>  
+<form>  
+  
+  <h1>Your password for the account named &quot;<%Username%>&quot; has changed.</h1>  
+  
+  <p>  
+  If you did not initiate this change, please call 1-206-555-0100.  
+  </p>  
+  
+  <p>  
+  <a href="http://www.contoso.com/login.aspx">  
+    <img src="cid:LoginGif" alt="Log In" />  
+  </a>   
+  </p>  
+  
+  <p>  
+  Please read our attached Privacy Notice.  
+  </p>  
+  
+</form>  
+</body>  
+</html>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

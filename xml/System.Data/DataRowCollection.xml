@@ -1,0 +1,710 @@
+<Type Name="DataRowCollection" FullName="System.Data.DataRowCollection">
+  <TypeSignature Language="C#" Value="public sealed class DataRowCollection : System.Data.InternalDataCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataRowCollection extends System.Data.InternalDataCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataRowCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.InternalDataCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de linhas para um <see cref="T:System.Data.DataTable" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataRowCollection> é um componente principal do <xref:System.Data.DataTable>. Enquanto o <xref:System.Data.DataColumnCollection> define o esquema da tabela, o <xref:System.Data.DataRowCollection> contém os dados reais para a tabela, onde cada <xref:System.Data.DataRow> no <xref:System.Data.DataRowCollection> representa uma única linha.  
+  
+ Você pode chamar o <xref:System.Data.DataRowCollection.Add%2A> e <xref:System.Data.DataRowCollection.Remove%2A> métodos para inserir e excluir <xref:System.Data.DataRow> de objetos a partir de <xref:System.Data.DataRowCollection>. Você também pode chamar o <xref:System.Data.DataRowCollection.Find%2A> método para pesquisar <xref:System.Data.DataRow> objetos que contêm valores específicos nas colunas de chave primárias, e o <xref:System.Data.DataRowCollection.Contains%2A> método para pesquisar dados de caracteres único palavras ou frases.  
+  
+ Para outras operações, como classificação ou filtragem de <xref:System.Data.DataRowCollection>, usar os métodos no <xref:System.Data.DataRowCollection>associada do <xref:System.Data.DataTable>.  
+  
+   
+  
+## Examples  
+ O primeiro exemplo nesta seção imprime o valor da coluna 1 para cada linha em um <xref:System.Data.DataRowCollection>. O segundo exemplo adiciona uma nova linha criada usando o <xref:System.Data.DataTable.NewRow%2A> método para o <xref:System.Data.DataRowCollection>.  
+  
+ [!code-csharp[Classic WebData DataRowCollection Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é seguro para operações de leitura e multithread. Você deve sincronizar todas as operações de gravação.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Data.DataRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Data.DataRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.Add(System.Data.DataRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" />
+      </Parameters>
+      <Docs>
+        <param name="row">O <see cref="T:System.Data.DataRow" /> a ser adicionado.</param>
+        <summary>Adiciona o <see cref="T:System.Data.DataRow" /> especificado ao objeto <see cref="T:System.Data.DataRowCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar um novo <xref:System.Data.DataRow>, você deve usar o <xref:System.Data.DataTable.NewRow%2A> método o <xref:System.Data.DataTable> classe. Quando você usa o <xref:System.Data.DataTable.NewRow%2A> método, um novo <xref:System.Data.DataRow> objeto é retornado usando o esquema do pai <xref:System.Data.DataTable>. Depois de criar o <xref:System.Data.DataRow> do objeto e definir os valores para cada uma de suas colunas, use o <xref:System.Data.DataRowCollection.Add%2A> método para adicionar o objeto à coleção.  
+  
+ Gera uma exceção se o usuário gera uma exceção no <xref:System.Data.DataTable.RowChanging> evento. Se ocorrer uma exceção, a linha não será adicionada à tabela.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRowCollection.Add%2A> método para adicionar um novo <xref:System.Data.DataRow> para um <xref:System.Data.DataRowCollection> objeto.  
+  
+ [!code-csharp[Classic WebData DataRowCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.Add Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.Add Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A linha é nula.</exception>
+        <exception cref="T:System.ArgumentException">A linha pertence a outra tabela ou já pertence a esta tabela.</exception>
+        <exception cref="T:System.Data.ConstraintException">A adição invalida uma restrição.</exception>
+        <exception cref="T:System.Data.NoNullAllowedException">A adição tenta colocar um valor nulo em um <see cref="T:System.Data.DataColumn" /> em que <see cref="P:System.Data.DataColumn.AllowDBNull" /> é falso.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow Add (params object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow Add(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.Add(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="values">Uma matriz de valores usados para criar a nova linha.</param>
+        <summary>Cria uma linha usando os valores especificados e a adiciona ao <see cref="T:System.Data.DataRowCollection" />.</summary>
+        <returns>nenhuma.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um <xref:System.Data.DataColumn> objeto tem seu <xref:System.Data.DataColumn.AutoIncrement%2A> definido como True, null deve ser passado para obter o valor padrão para essa coluna.  
+  
+ Exceções também poderá ocorrer se você gerar uma exceção durante a um <xref:System.Data.DataTable.ColumnChanging> ou <xref:System.Data.DataTable.RowChanging> eventos. Se ocorrer uma exceção, a linha não será adicionada à tabela.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRowCollection.Add%2A> método para criar e adicionar um novo <xref:System.Data.DataRow> o objeto para um <xref:System.Data.DataRowCollection>.  
+  
+ [!code-csharp[Classic WebData DataRowCollection.Add1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.Add1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowCollection.Add1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.Add1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A matriz é maior que o número de colunas na tabela.</exception>
+        <exception cref="T:System.InvalidCastException">Um valor não corresponde a seu respectivo tipo de coluna.</exception>
+        <exception cref="T:System.Data.ConstraintException">Adicionar a linha invalida uma restrição.</exception>
+        <exception cref="T:System.Data.NoNullAllowedException">Tentativa de colocar um valor nulo em uma coluna em que <see cref="P:System.Data.DataColumn.AllowDBNull" /> é falso.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a coleção de todas as linhas.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Data.InvalidConstraintException">Um <see cref="T:System.Data.ForeignKeyConstraint" /> é aplicada no <see cref="T:System.Data.DataRowCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">O valor da chave primária para a qual testar.</param>
+        <summary>Obtém um valor que indica se a chave primária de qualquer linha na coleção contém o valor especificado.</summary>
+        <returns>
+          <see langword="true" /> se a coleção contiver um <see cref="T:System.Data.DataRow" /> com o valor especificado da chave primária; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para usar o <xref:System.Data.DataRowCollection.Contains%2A> método, o <xref:System.Data.DataTable> objeto ao qual o <xref:System.Data.DataRowCollection> objeto pertence deve ter pelo menos uma coluna designada como uma coluna de chave primária. Consulte o <xref:System.Data.DataTable.PrimaryKey%2A> propriedade para obter mais informações sobre como criar uma coluna de chave primária.  
+  
+ Assim que você tiver determinado que uma linha contém o valor especificado, você pode usar o <xref:System.Data.DataRowCollection.Find%2A> método para retornar o específico <xref:System.Data.DataRow> objeto que tem o valor.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo do Visual Basic usa o <xref:System.Data.DataRowCollection.Contains%2A> método para determinar se um <xref:System.Data.DataRowCollection> objeto contém um valor específico.  
+  
+ [!code-vb[Classic WebData DataRowCollection.Contains Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.Contains Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.MissingPrimaryKeyException">A tabela não tem uma chave primária.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object[] keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(object[] keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.Contains(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Uma matriz de valores de chave primária para os quais testar.</param>
+        <summary>Obtém um valor que indica se as colunas de chave primária de qualquer linha na coleção contêm os valores especificados na matriz de objetos.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Data.DataRowCollection" /> contiver um <see cref="T:System.Data.DataRow" /> com os valores de chave especificados; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para usar o <xref:System.Data.DataRowCollection.Contains%2A> método com uma matriz de valores, o <xref:System.Data.DataTable> objeto ao qual o <xref:System.Data.DataRowCollection> objeto pertence deve ter uma matriz de colunas designadas como chaves primárias. Consulte o <xref:System.Data.DataTable.PrimaryKey%2A> propriedade para obter mais informações sobre como criar uma matriz de colunas de chave primária. O número de elementos da matriz deve corresponder ao número de colunas de chave primária no <xref:System.Data.DataTable>.  
+  
+ Assim que você tiver determinado que uma linha contém o valor especificado, use o <xref:System.Data.DataRowCollection.Find%2A> método para retornar o específico <xref:System.Data.DataRow> objeto que tem o valor.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo do Visual Basic usa o <xref:System.Data.DataRowCollection.Contains%2A> método para localizar uma linha específica em um <xref:System.Data.DataRowCollection> objeto. O exemplo cria uma matriz de valores, um elemento para cada chave primária na tabela e, em seguida, passa a matriz para o método para retornar um `true` ou `false`.  
+  
+ [!code-vb[Classic WebData DataRowCollection.Contains1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.Contains1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.MissingPrimaryKeyException">A tabela não tem uma chave primária.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public override void CopyTo (Array ar, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyTo(class System.Array ar, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ar" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ar">A matriz unidimensional que é o destino dos elementos copiados do <see langword="DataRowCollection" />. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero na matriz em que a cópia começa.</param>
+        <summary>Copia todos os objetos <see cref="T:System.Data.DataRow" /> da coleção para a matriz fornecida, começando pelo índice da matriz de destino especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.DataRow[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Data.DataRow[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.CopyTo(System.Data.DataRow[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.DataRow[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz unidimensional que é o destino dos elementos copiados do <see langword="DataRowCollection" />. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero na matriz em que a cópia começa.</param>
+        <summary>Copia todos os objetos <see cref="T:System.Data.DataRow" /> da coleção para a matriz fornecida, começando pelo índice da matriz de destino especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de objetos <see cref="T:System.Data.DataRow" /> nesta coleção.</summary>
+        <value>O número total de objetos <see cref="T:System.Data.DataRow" /> nesta coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow Find (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow Find(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.Find(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">O valor da chave primária do <see cref="T:System.Data.DataRow" /> a ser encontrado.</param>
+        <summary>Obtém a linha especificada pelo valor da chave primária.</summary>
+        <returns>Um <see cref="T:System.Data.DataRow" /> que contém o valor de chave primária especificada; caso contrário, um valor nulo, se o valor da chave primária não existir no <see cref="T:System.Data.DataRowCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para usar o `Find` método, o <xref:System.Data.DataTable> objeto ao qual o <xref:System.Data.DataRowCollection> objeto pertence deve ter pelo menos uma coluna designada como uma coluna de chave primária. Consulte o <xref:System.Data.DataTable.PrimaryKey%2A> propriedade para obter mais informações sobre como criar uma coluna de chave primária.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRowCollection.Find%2A> método para localizar o valor de chave primária "2" em uma coleção de <xref:System.Data.DataRow> objetos. O método retorna específico <xref:System.Data.DataRow> objeto permitindo que você alterar seus valores conforme necessário.  
+  
+ [!code-csharp[Classic WebData DataRowCollection.Find Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.Find Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowCollection.Find Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.Find Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.MissingPrimaryKeyException">A tabela não tem uma chave primária.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow Find (object[] keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow Find(object[] keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.Find(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Uma matriz de valores de chave primária a serem localizados. O tipo da matriz é <see langword="Object" />.</param>
+        <summary>Obtém a linha que contém os valores de chave primária especificados.</summary>
+        <returns>Um objeto <see cref="T:System.Data.DataRow" /> que contém o valor de chave primária especificada; caso contrário, um valor nulo, se o valor da chave primária não existir no <see cref="T:System.Data.DataRowCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para usar o <xref:System.Data.DataRowCollection.Find%2A> método, o <xref:System.Data.DataTable> objeto ao qual o <xref:System.Data.DataRowCollection> objeto pertence deve ter pelo menos uma coluna designada como uma coluna de chave primária. Quando duas ou mais linhas têm o mesmo valor de chave primária, a primeira linha encontrada será retornada. Isso ocorre quando <xref:System.Data.DataSet.EnforceConstraints%2A> é definida como false. Consulte o <xref:System.Data.DataTable.PrimaryKey%2A> propriedade para obter mais informações sobre como criar um <xref:System.Data.DataTable.PrimaryKey%2A> coluna ou uma matriz de <xref:System.Data.DataColumn> objetos quando a tabela tem mais de uma chave primária.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa os valores de uma matriz para localizar uma linha específica em uma coleção de <xref:System.Data.DataRow> objetos. O método pressupõe que um <xref:System.Data.DataTable> existe com três colunas de chave primária. Depois de criar uma matriz de valores, o código usa o <xref:System.Data.DataRowCollection.Find%2A> método com a matriz para obter o objeto específico que você deseja.  
+  
+ [!code-csharp[Classic WebData DataRowCollection.Find1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.Find1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowCollection.Find1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.Find1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Nenhuma linha corresponde a esse valor de índice.</exception>
+        <exception cref="T:System.Data.MissingPrimaryKeyException">A tabela não tem uma chave primária.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.IEnumerator" /> para esta coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para esta coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Data.DataRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Data.DataRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.IndexOf(System.Data.DataRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" />
+      </Parameters>
+      <Docs>
+        <param name="row">O <see langword="DataRow" /> a ser pesquisado.</param>
+        <summary>Obtém o índice do objeto <see cref="T:System.Data.DataRow" /> especificado.</summary>
+        <returns>O índice baseado em zero da linha ou -1, se a linha não for encontrada na coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertAt">
+      <MemberSignature Language="C#" Value="public void InsertAt (System.Data.DataRow row, int pos);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertAt(class System.Data.DataRow row, int32 pos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.InsertAt(System.Data.DataRow,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" />
+        <Parameter Name="pos" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="row">O <see cref="T:System.Data.DataRow" /> a ser adicionado.</param>
+        <param name="pos">A localização (baseada em zero) na coleção à qual você deseja adicionar o <see langword="DataRow" />.</param>
+        <summary>Insere uma nova linha na coleção na localização especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O local especificado por <xref:System.Data.DataRowCollection.InsertAt%2A> é refletido pela ordem de linhas no <xref:System.Data.DataRowCollection> apenas. Se mais de uma linha é retornada em uma <xref:System.Data.DataRow> matriz, a linha inserida não pode ser retornada no local especificado por <xref:System.Data.DataRowCollection.InsertAt%2A>. Por exemplo, o <xref:System.Data.DataTable.Rows%2A> propriedade retornará a linha na posição de inserção especificado. <xref:System.Data.DataTable.Select%2A>e <xref:System.Data.DataRow.GetChildRows%2A> não pode. Quando você escreve o conteúdo do <xref:System.Data.DataRowCollection> como XML, por exemplo, <xref:System.Data.DataSet.WriteXml%2A>, as linhas são gravadas de acordo com a ordem especificada pelo <xref:System.Data.DataRowCollection>.  
+  
+ Se o valor especificado para o `pos` parâmetro for maior que o número de linhas na coleção, a nova linha é adicionada ao final.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataRow Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRowCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero da linha a ser retornada.</param>
+        <summary>Obtém a linha no índice especificado.</summary>
+        <value>O <see cref="T:System.Data.DataRow" /> especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.DataRowCollection.Contains%2A> método para determinar se existe um valor específico na coluna de chave de uma linha.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime o valor da coluna 1 de cada linha em um <xref:System.Data.DataRowCollection>.  
+  
+ [!code-csharp[Classic WebData DataRowCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.this Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRowCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O valor de índice é maior que o número de itens na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Data.DataRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Data.DataRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.Remove(System.Data.DataRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" />
+      </Parameters>
+      <Docs>
+        <param name="row">O <see cref="T:System.Data.DataRow" /> a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Data.DataRow" /> especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma linha é removida, todos os dados nessa linha são perdidas. Você também pode chamar o <xref:System.Data.DataRow.Delete%2A> método o <xref:System.Data.DataRow> classe apenas marcar uma linha para remoção. Chamando `Remove` é o mesmo que chamar <xref:System.Data.DataRow.Delete%2A> e, em seguida, chamar <xref:System.Data.DataRow.AcceptChanges%2A>.  
+  
+ <xref:System.Data.DataRowCollection.Remove%2A>não deve ser chamado em um loop foreach durante a iteração por meio de um <xref:System.Data.DataRowCollection> objeto. <xref:System.Data.DataRowCollection.Remove%2A>modifica o estado da coleção.  
+  
+ Você também pode usar o <xref:System.Data.DataRowCollection.Clear%2A> método para remover todos os membros da coleção de uma só vez.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRowCollection.Remove%2A> método para excluir uma linha encontrada em um <xref:System.Data.DataRowCollection> objeto. O exemplo primeiro usa o <xref:System.Data.DataRowCollection.Contains%2A> método para determinar se a coleção de linhas contém uma linha. Se isso acontecer, o <xref:System.Data.DataRowCollection.Find%2A> método é usado para localizar a linha específica e o <xref:System.Data.DataRowCollection.Remove%2A> método é usado para remover a linha.  
+  
+ [!code-vb[Classic WebData DataRowCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRowCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice da linha a ser removida.</param>
+        <summary>Remove a linha no índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma linha é removida, todos os dados nessa linha são perdidas. Você também pode chamar o <xref:System.Data.DataRow.Delete%2A> método o <xref:System.Data.DataRow> classe apenas marcar uma linha para remoção. Chamando `RemoveAt` é o mesmo que chamar <xref:System.Data.DataRow.Delete%2A> e, em seguida, chamar <xref:System.Data.DataRow.AcceptChanges%2A>.  
+  
+ Você pode usar o <xref:System.Data.DataRowCollection.Clear%2A> método para remover todos os membros da coleção de uma só vez.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir remove a última linha em uma <xref:System.Data.DataRowCollection> chamando o <xref:System.Data.DataRowCollection.RemoveAt%2A> método.  
+  
+ [!code-vb[Classic WebData DataRowCollection.RemoveAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRowCollection.RemoveAt Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

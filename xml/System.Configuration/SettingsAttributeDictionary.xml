@@ -1,0 +1,71 @@
+<Type Name="SettingsAttributeDictionary" FullName="System.Configuration.SettingsAttributeDictionary">
+  <TypeSignature Language="C#" Value="public class SettingsAttributeDictionary : System.Collections.Hashtable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SettingsAttributeDictionary extends System.Collections.Hashtable" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsAttributeDictionary" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Hashtable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de pares chave/valor usados para descrever um objeto de configuração, bem como um <see cref="T:System.Configuration.SettingsProperty" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SettingsAttributeDictionary> objeto herda o <xref:System.Collections.Hashtable> objeto. O <xref:System.Configuration.SettingsAttributeDictionary> objeto é usado para descrever um objeto de configuração, como o <xref:System.Configuration.SettingsProperty> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsAttributeDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsAttributeDictionary.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.SettingsAttributeDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsAttributeDictionary (System.Configuration.SettingsAttributeDictionary attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Configuration.SettingsAttributeDictionary attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsAttributeDictionary.#ctor(System.Configuration.SettingsAttributeDictionary)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Configuration.SettingsAttributeDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Uma coleção de pares chave/valor que estão relacionados às definições de configuração.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.SettingsAttributeDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

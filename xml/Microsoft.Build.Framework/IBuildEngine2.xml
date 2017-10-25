@@ -1,0 +1,135 @@
+<Type Name="IBuildEngine2" FullName="Microsoft.Build.Framework.IBuildEngine2">
+  <TypeSignature Language="C#" Value="public interface IBuildEngine2 : Microsoft.Build.Framework.IBuildEngine" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBuildEngine2 implements class Microsoft.Build.Framework.IBuildEngine" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.IBuildEngine2" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.IBuildEngine</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma maneira para que os autores de tarefas usar um subconjunto da funcionalidade do mecanismo MSBuild.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.Build.Framework.IBuildEngine2>estende <xref:Microsoft.Build.Framework.IBuildEngine>, permitindo que você crie vários arquivos de projeto em paralelo em sistemas com vários processadores ou processadores com vários núcleos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuildProjectFile">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFile (string projectFileName, string[] targetNames, System.Collections.IDictionary globalProperties, System.Collections.IDictionary targetOutputs, string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool BuildProjectFile(string projectFileName, string[] targetNames, class System.Collections.IDictionary globalProperties, class System.Collections.IDictionary targetOutputs, string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine2.BuildProjectFile(System.String,System.String[],System.Collections.IDictionary,System.Collections.IDictionary,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFileName" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="globalProperties" Type="System.Collections.IDictionary" />
+        <Parameter Name="targetOutputs" Type="System.Collections.IDictionary" />
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFileName">O nome do arquivo de projeto para criar.</param>
+        <param name="targetNames">Os nomes de destino do projeto para criar. Separe vários destinos com um ponto e vírgula (;). Os valores de<see langword="Null" /> são aceitáveis.</param>
+        <param name="globalProperties">Um <see cref="T:System.Collections.IDictionary" /> de propriedades adicionais de global para aplicar ao projeto. A chave e o valor devem ser <see langword="String" /> tipos de dados.</param>
+        <param name="targetOutputs">As saídas de cada destino especificado. Os valores de<see langword="Null" /> são aceitáveis.</param>
+        <param name="toolsVersion">Valor padrão = "3.5". Especifica a versão do conjunto de ferramentas para a compilação a ser usado. Os valores de<see langword="Null" /> são aceitáveis.</param>
+        <summary>Inicia uma compilação de um arquivo de projeto. Se a compilação for bem-sucedida, as saídas de destinos especificados são retornadas, se houver.</summary>
+        <returns>
+          <see langword="true" /> caso a compilação tenha sido bem-sucedida; do contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum destino for especificado, [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] compila os destinos padrão do projeto.  
+  
+ Saídas de destino são retornadas como <xref:Microsoft.Build.Framework.ITaskItem> matrizes indexada pelo nome de destino.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProjectFilesInParallel">
+      <MemberSignature Language="C#" Value="public bool BuildProjectFilesInParallel (string[] projectFileNames, string[] targetNames, System.Collections.IDictionary[] globalProperties, System.Collections.IDictionary[] targetOutputsPerProject, string[] toolsVersion, bool useResultsCache, bool unloadProjectsOnCompletion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool BuildProjectFilesInParallel(string[] projectFileNames, string[] targetNames, class System.Collections.IDictionary[] globalProperties, class System.Collections.IDictionary[] targetOutputsPerProject, string[] toolsVersion, bool useResultsCache, bool unloadProjectsOnCompletion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.IBuildEngine2.BuildProjectFilesInParallel(System.String[],System.String[],System.Collections.IDictionary[],System.Collections.IDictionary[],System.String[],System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="projectFileNames" Type="System.String[]" />
+        <Parameter Name="targetNames" Type="System.String[]" />
+        <Parameter Name="globalProperties" Type="System.Collections.IDictionary[]" />
+        <Parameter Name="targetOutputsPerProject" Type="System.Collections.IDictionary[]" />
+        <Parameter Name="toolsVersion" Type="System.String[]" />
+        <Parameter Name="useResultsCache" Type="System.Boolean" />
+        <Parameter Name="unloadProjectsOnCompletion" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="projectFileNames">Os nomes dos arquivos de projeto para criar.</param>
+        <param name="targetNames">Os nomes dos destinos do projeto para criar. Separe vários destinos com um ponto e vírgula (;). Os valores de<see langword="Null" /> são aceitáveis.</param>
+        <param name="globalProperties">Um <see cref="T:System.Collections.IDictionary" /> de propriedades adicionais de global para aplicar ao projeto. A chave e o valor devem ser <see langword="String" /> tipos de dados. As entradas de matriz podem ser <see langword="null" />.</param>
+        <param name="targetOutputsPerProject">As saídas de cada destino especificado. Os valores de<see langword="Null" /> são aceitáveis.</param>
+        <param name="toolsVersion">Valor padrão = "3.5". Especifica a versão do conjunto de ferramentas para a compilação a ser usado. Os valores de<see langword="Null" /> são aceitáveis.</param>
+        <param name="useResultsCache">Se <see langword="true" />, a operação é executada somente se o cache ainda não contém o resultado. Após a operação, o resultado é armazenado no cache.</param>
+        <param name="unloadProjectsOnCompletion">Se <see langword="true" /> o projeto está descarregado após a conclusão da operação.</param>
+        <summary>Permite que tarefas Iniciar compilações paralelas dos arquivos de projeto especificado em sistemas com vários processadores ou vários processadores de núcleo. Se as compilações forem bem-sucedidas, as saídas de destinos especificados são retornadas, se houver.</summary>
+        <returns>
+          <see langword="True" />Se a compilação for bem-sucedida, <see langword="false" /> se contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ambos `targetNames` e `targetOutputs` aceitar `null` valores. Se nenhum destino for especificado, os destinos padrão são criados. Saídas de destino são retornadas como <xref:Microsoft.Build.Framework.ITaskItem> matrizes indexada pelo nome de destino.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunningMultipleNodes">
+      <MemberSignature Language="C#" Value="public bool IsRunningMultipleNodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRunningMultipleNodes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IBuildEngine2.IsRunningMultipleNodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna se o sistema está em execução no modo de processador único ou múltiplo.</summary>
+        <value>
+          <see langword="true" />Se o sistema está em execução no modo de vários processador, <see langword="false" /> caso contrário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de compilação está em modo de processador único (`IsRunningMultipleNodes` = `false`) quando ele é inicializado com o número de CPUs iguais a 1 e o mecanismo de compilação não é um mecanismo de filho. O mecanismo de compilação está no modo de vários processador (`IsRunningMultipleNodes` = `true`) quando ele é inicializado com um número de CPUs, maiores que 1, ou quando o mecanismo de compilação é um mecanismo de filho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

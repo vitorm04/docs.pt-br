@@ -1,0 +1,2279 @@
+<Type Name="SqlConnectionStringBuilder" FullName="System.Data.SqlClient.SqlConnectionStringBuilder">
+  <TypeSignature Language="C#" Value="public sealed class SqlConnectionStringBuilder : System.Data.Common.DbConnectionStringBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlConnectionStringBuilder extends System.Data.Common.DbConnectionStringBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlConnectionStringBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbConnectionStringBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("DataSource")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.SqlClient.SqlConnectionStringBuilder/SqlConnectionStringBuilderConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma maneira simples de criar e gerenciar o conteúdo de cadeias de conexão usadas pela classe <see cref="T:System.Data.SqlClient.SqlConnection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor de cadeia de caracteres de conexão permite aos desenvolvedores criar cadeias de caracteres de conexão sintaticamente correto e analisar programaticamente e recriar as cadeias de caracteres de conexão existentes, propriedades e métodos da classe. O construtor de cadeia de caracteres de conexão fornece propriedades com rigidez de tipos correspondentes para os pares chave/valor conhecido permitidos pelo SQL Server. Os desenvolvedores que precisam criar cadeias de caracteres de conexão como parte dos aplicativos pode usar o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> classe para criar e modificar cadeias de caracteres de conexão. A classe também torna fácil de gerenciar cadeias de caracteres de conexão armazenadas em um arquivo de configuração do aplicativo.  
+  
+ O <xref:System.Data.SqlClient.SqlConnectionStringBuilder> executa verificações de pares chave/valor válido. Portanto, você não pode usar essa classe para criar cadeias de caracteres de conexão inválido; tentando adicionar pares inválidos lançará uma exceção. A classe mantém um conjunto fixo de sinônimos e pode converter de um sinônimo para o nome de chave conhecido correspondente.  
+  
+ Por exemplo, quando você usa o **Item** propriedade para recuperar um valor, você pode especificar uma cadeia de caracteres que contém qualquer sinônimo para a chave que você precisa. Por exemplo, você pode especificar qualquer sinônimo aceitável para esta chave dentro de uma cadeia de caracteres de conexão, "end" ou "Endereço de rede" quando você usa qualquer membro que requer uma cadeia de caracteres que contém o nome da chave, como o **Item** propriedade ou o <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Remove%2A> método. Consulte o <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> propriedade para obter uma lista completa de sinônimos aceitáveis.  
+  
+ O **Item** propriedade manipula tenta inserir entradas mal-intencionado. Por exemplo, o código a seguir, usando a propriedade de Item padrão (o indexador, em c#) corretamente ignora o par chave/valor aninhada:  
+  
+```vb  
+Dim builder As New System.Data.SqlClient.SqlConnectionStringBuilder  
+builder("Data Source") = "(local)"  
+builder("Integrated Security") = True  
+builder("Initial Catalog") = "AdventureWorks;NewValue=Bad"  
+Console.WriteLine(builder.ConnectionString)  
+```  
+  
+```csharp  
+System.Data.SqlClient.SqlConnectionStringBuilder builder =  
+  new System.Data.SqlClient.SqlConnectionStringBuilder();  
+builder["Data Source"] = "(local)";  
+builder["integrated Security"] = true;  
+builder["Initial Catalog"] = "AdventureWorks;NewValue=Bad";  
+Console.WriteLine(builder.ConnectionString);  
+  
+```  
+  
+ O resultado é a seguinte cadeia de conexão que trata o valor inválido de maneira segura:  
+  
+```  
+Source=(local);Initial Catalog="AdventureWorks;NewValue=Bad";  
+Integrated Security=True  
+```  
+  
+   
+  
+## Examples  
+ O aplicativo de console a seguir cria cadeias de caracteres de conexão para um [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] banco de dados. O código usa um <xref:System.Data.SqlClient.SqlConnectionStringBuilder> classe para criar a cadeia de caracteres de conexão e, em seguida, passa o <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> propriedade o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> instância para o construtor da classe conexão. O exemplo também analisa uma cadeia de caracteres de conexão existente e demonstra várias maneiras de manipular o conteúdo da cadeia de caracteres de conexão.  
+  
+> [!NOTE]
+>  Este exemplo inclui uma senha para demonstrar como <xref:System.Data.SqlClient.SqlConnectionStringBuilder> funciona com cadeias de caracteres de conexão. Em seus aplicativos, é recomendável usar a autenticação do Windows. Se você deve usar uma senha, não inclua uma senha codificada em seu aplicativo.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlConnectionStringBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlConnectionStringBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlConnectionStringBuilder (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlConnectionStringBuilder.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">A base das informações de conexão internas do objeto. Analisado em pares nome/valor. Nomes de chave inválidos geram <see cref="T:System.Collections.Generic.KeyNotFoundException" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />. A cadeia de conexão fornecida oferece os dados para obter informações de conexão internas da instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlConnectionStringBuilder> classe fornece uma coleção interna fixa de pares chave/valor. Mesmo se você fornecer apenas um pequeno subconjunto dos valores de cadeia de caracteres de conexão possíveis no construtor, o objeto sempre fornece valores padrão para cada par chave/valor. Quando o `ConnectionString` propriedade do objeto for recuperada, a cadeia de caracteres contém apenas os pares chave/valor no qual o valor não é o valor padrão para o item.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir fornece uma cadeia de caracteres de conexão do SQL Server simple no <xref:System.Data.SqlClient.SqlConnectionStringBuilder> objeto do construtor e, em seguida, itera por meio de todos os pares chave/valor no objeto. Observe que a coleção fornece valores padrão para cada item. Observe também que o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> classe converte sinônimos para as chaves conhecidas para que fiquem consistentes com os nomes conhecidos.  
+  
+> [!NOTE]
+>  Este exemplo inclui uma senha para demonstrar como <xref:System.Data.SqlClient.SqlConnectionStringBuilder> funciona com cadeias de caracteres de conexão. Em seus aplicativos, é recomendável usar a autenticação do Windows. Se você deve usar uma senha, não inclua uma senha codificada em seu aplicativo.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.Password#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Password/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.Password#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Password/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">Nome de chave inválido na cadeia de conexão.</exception>
+        <exception cref="T:System.FormatException">Valor inválido na cadeia de conexão (especificamente, quando um valor numérico ou booliano era esperado, mas não foi fornecido).</exception>
+        <exception cref="T:System.ArgumentException">A <paramref name="connectionString" /> fornecida não é válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationIntent">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.ApplicationIntent ApplicationIntent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.SqlClient.ApplicationIntent ApplicationIntent" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("ApplicationIntent")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.ApplicationIntent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Declara o tipo de carga de trabalho do aplicativo ao se conectar a um banco de dados em um grupo de disponibilidade do SQL Server. Você pode definir o valor dessa propriedade para <see cref="T:System.Data.SqlClient.ApplicationIntent" />. Para saber mais sobre o suporte ao SqlClient para Grupos de Disponibilidade AlwaysOn, confira [Suporte do SqlClient para alta disponibilidade e recuperação de desastres](~/docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).</summary>
+        <value>Retorna o valor atual da propriedade (um valor do tipo <see cref="T:System.Data.SqlClient.ApplicationIntent" />).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Application Name")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do aplicativo associado à cadeia de conexão.</summary>
+        <value>O nome do aplicativo ou “Provedor de Dados .NET SqlClient” se nenhum nome foi fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "Nome do aplicativo" e "aplicativo" na cadeia de caracteres de conexão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo <xref:System.Data.SqlClient.SqlConnectionStringBuilder> e atribui uma cadeia de caracteres de conexão no construtor do objeto. O código exibe a versão analisada e recriada da cadeia de caracteres de conexão e, em seguida, modifica o <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationName%2A> propriedade do objeto. Por fim, o código exibe a nova cadeia de conexão, incluindo o novo par de chave/valor.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.ApplicationName#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.ApplicationName/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.ApplicationName#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.ApplicationName/VB/source.vb#1)]  
+  
+ O exemplo exibe o texto a seguir na janela do console:  
+  
+```  
+Original: Data Source=(local);Initial Catalog=AdventureWorks;Integrated Security=True  
+ApplicationName=".Net SqlClient Data Provider"  
+Modified: Data Source=(local);Initial Catalog=AdventureWorks;Integrated Security=True;Application Name="My Application"  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Para definir o valor como nulo, use <see cref="F:System.DBNull.Value" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AsynchronousProcessing">
+      <MemberSignature Language="C#" Value="public bool AsynchronousProcessing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AsynchronousProcessing" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.AsynchronousProcessing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Asynchronous Processing")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o processamento assíncrono é permitido pela conexão criada usando essa cadeia de conexão.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.AsynchronousProcessing" /> ou <see langword="false" /> se nenhum valor tiver sido fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "Processamento assíncrono" e "async" na cadeia de caracteres de conexão. Para aproveitar o processamento assíncrono fornecido pelo <xref:System.Data.SqlClient.SqlCommand> do objeto, este par chave/valor deve ser incluído na cadeia de caracteres de conexão do associado <xref:System.Data.SqlClient.SqlConnection> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir recupera uma cadeia de caracteres de conexão e verifica se a cadeia de caracteres de conexão está configurada para permitir o processamento assíncrono. (Nesse caso, a cadeia de caracteres provenientes de um procedimento no aplicativo, mas em um aplicativo de produção, a cadeia de caracteres de conexão pode vir de um arquivo de configuração ou alguma outra origem.) Em seguida, o exemplo executa uma operação assíncrona, atualização de valores dentro de um banco de dados de exemplo em um thread em segundo plano.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.Async#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Async/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.Async#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Async/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachDBFilename">
+      <MemberSignature Language="C#" Value="public string AttachDBFilename { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AttachDBFilename" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("AttachDbFilename")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.FileNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que contém o nome do arquivo de dados primário. Isso inclui o nome de caminho completo de um banco de dados anexável.</summary>
+        <value>O valor da propriedade <see langword="AttachDBFilename" /> ou <see langword="String.Empty" /> se nenhum valor tiver sido fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde a "AttachDBFilename", "propriedades estendidas" e chaves de "nome do arquivo inicial" na cadeia de caracteres de conexão.  
+  
+ `AttachDBFilename`Somente há suporte para arquivos de dados primários com uma extensão. mdf.  
+  
+ Um erro será gerado se existe um arquivo de log no mesmo diretório que o arquivo de dados e a palavra-chave 'database' for usada ao anexar o arquivo de dados primário. Nesse caso, remova o arquivo de log. Depois que o banco de dados é anexado, um novo arquivo de log será gerado automaticamente com base no caminho físico.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo <xref:System.Data.SqlClient.SqlConnectionStringBuilder> instância e conjuntos de `AttachDBFilename` propriedade para especificar o nome de um arquivo de dados anexado.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.AttachDBFilename#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.AttachDBFilename/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.AttachDBFilename#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.AttachDBFilename/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Para definir o valor como nulo, use <see cref="F:System.DBNull.Value" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Authentication">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlAuthenticationMethod Authentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.SqlClient.SqlAuthenticationMethod Authentication" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.Authentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Authentication")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlAuthenticationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a autenticação da cadeia de conexão.</summary>
+        <value>A autenticação da cadeia de conexão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public override void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlConnectionStringBuilder.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa o conteúdo da instância <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Common.DbConnectionStringBuilder.Clear%2A> método Remove todos os pares chave/valor da <xref:System.Data.SqlClient.SqlConnectionStringBuilder>e redefine todas as propriedades correspondentes. Isso inclui a configuração de <xref:System.Data.Common.DbConnectionStringBuilder.Count%2A> propriedade como 0 e a configuração de <xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString%2A> propriedade como uma cadeia de caracteres vazia.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a chamar o <xref:System.Data.Common.DbConnectionStringBuilder.Clear%2A> método. Este exemplo preenche a <xref:System.Data.SqlClient.SqlConnectionStringBuilder> com alguns pares chave/valor e, em seguida, chama o <xref:System.Data.Common.DbConnectionStringBuilder.Clear%2A> método e mostra os resultados.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.Clear#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Clear/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.Clear#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Clear/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnEncryptionSetting">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlConnectionColumnEncryptionSetting ColumnEncryptionSetting { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.SqlClient.SqlConnectionColumnEncryptionSetting ColumnEncryptionSetting" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.ColumnEncryptionSetting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Column Encryption Setting")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlConnectionColumnEncryptionSetting</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define a coluna de configurações de criptografia para o construtor de cadeia de caracteres de conexão.</summary>
+        <value>As configurações de criptografia de coluna para o construtor de cadeia de caracteres de conexão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionReset">
+      <MemberSignature Language="C#" Value="public bool ConnectionReset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConnectionReset" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Connection Reset")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("ConnectionReset has been deprecated.  SqlConnection will ignore the 'connection reset' keyword and always reset the connection")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obsoleto. Obtém ou define um valor booliano que indica se a conexão é redefinido quando obtido do pool de conexão.</summary>
+        <value>O valor de <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset" /> propriedade, ou true se nenhum valor foi fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave "Conexão Redefinir" dentro do <xref:System.Data.SqlClient.SqlConnection> cadeia de caracteres de conexão, que foi removida da versão 3.5 SP1 do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectRetryCount">
+      <MemberSignature Language="C#" Value="public int ConnectRetryCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectRetryCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectRetryCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("ConnectRetryCount")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>[Suporte somente no .NET Framework 4.5.1 e versões posteriores]  
+  
+ O número de tentativas de reconexão após identificar que houve uma falha de conexão ociosa. Esse valor deve ser um inteiro entre 0 e 255. O padrão é 1. Defina como 0 para desabilitar a reconexão em falhas de conexão ociosa. Um <see cref="T:System.ArgumentException" /> será gerado se definido como um valor fora do intervalo permitido.</summary>
+        <value>O número de tentativas de reconexão após identificar que houve uma falha de conexão ociosa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectRetryInterval">
+      <MemberSignature Language="C#" Value="public int ConnectRetryInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectRetryInterval" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectRetryInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("ConnectRetryInterval")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>[Suporte somente no .NET Framework 4.5.1 e versões posteriores]  
+  
+ Tempo (em segundos) entre cada tentativa de reconexão após a identificação de uma falha de conexão ociosa. Esse valor deve ser um inteiro entre 1 e 60. O padrão é 10 segundos. Um <see cref="T:System.ArgumentException" /> será gerado se definido como um valor fora do intervalo permitido.</summary>
+        <value>Tempo (em segundos) entre cada tentativa de reconexão após a identificação de uma falha de conexão ociosa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectTimeout">
+      <MemberSignature Language="C#" Value="public int ConnectTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Connect Timeout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo (em segundos) de espera por uma conexão com o servidor antes de finalizar a tentativa e gerar um erro.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectTimeout" /> ou 15 segundos se nenhum valor tiver sido fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde a "Connect Timeout", "tempo limite de conexão" e "timeout" chaves na cadeia de caracteres de conexão.  
+  
+ Ao abrir uma conexão para um banco de dados do SQL Azure, defina o tempo limite de conexão para 30 segundos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir primeiro mostra o conteúdo de uma cadeia de caracteres de conexão que não especifica o valor de "Connect Timeout", define o <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectTimeout%2A> propriedade e, em seguida, exibe a nova cadeia de caracteres de conexão.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.ConnectTimeout#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.ConnectTimeout/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.ConnectTimeout#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.ConnectTimeout/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public override bool ContainsKey (string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ContainsKey(string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlConnectionStringBuilder.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">A chave a ser localizada no <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />.</param>
+        <summary>Determina se a <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" /> contém uma chave específica.</summary>
+        <returns>True se o <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" /> contém um elemento que tem a chave especificada; caso contrário, false.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> contém uma coleção de tamanho fixo de pares chave/valor, o <xref:System.Data.Common.DbConnectionStringBuilder.ContainsKey%2A> método só determina se um determinado nome da chave é válido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.SqlClient.SqlConnectionStringBuilder> instância, define algumas de suas propriedades e, em seguida, tenta determinar se várias chaves existem dentro do objeto chamando o **ContainsKey** método.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.ContainsKey#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.ContainsKey/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.ContainsKey#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.ContainsKey/VB/source.vb#1)]  
+  
+ O exemplo exibe a seguinte saída na janela do console:  
+  
+```  
+Connection string = Data Source=(local);Initial Catalog=AdventureWorks;Integrated Security=True  
+True  
+True  
+True  
+False  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> é nulo (<see langword="Nothing" /> no Visual Basic)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextConnection">
+      <MemberSignature Language="C#" Value="public bool ContextConnection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContextConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.ContextConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Context Connection")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um cliente/servidor ou conexão em processo para o SQL Server deve ser feita.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.ContextConnection" /> ou <see langword="False" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave de "Contexto de Conexão" na cadeia de caracteres de conexão.  
+  
+> [!NOTE]
+>  O <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> propriedade retorna `null` se a cadeia de caracteres de conexão para o <xref:System.Data.SqlClient.SqlConnection> é "conexão de contexto = true".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentLanguage">
+      <MemberSignature Language="C#" Value="public string CurrentLanguage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentLanguage" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.CurrentLanguage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Current Language")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de registro do SQL Server Language.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.CurrentLanguage" /> ou <see langword="String.Empty" /> se nenhum valor tiver sido fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "Idioma atual" e "language" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Para definir o valor como nulo, use <see cref="F:System.DBNull.Value" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public string DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Data Source")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.SqlClient.SqlConnectionStringBuilder/SqlDataSourceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome ou o endereço de rede da instância do SQL Server para conexão.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource" /> ou <see langword="String.Empty" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde a "Fonte de dados", "server", "address", "end", e chaves de "endereço de rede" na cadeia de caracteres de conexão. Independentemente de qual desses valores foram fornecido na cadeia de caracteres de conexão fornecido, a cadeia de caracteres de conexão criadas pelo `SqlConnectionStringBuilder` usará a chave "Fonte de dados" bem conhecida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra que o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> classe converte sinônimos para a chave de cadeia de caracteres de conexão "Fonte de dados" na chave conhecido:  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.DataSource#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.DataSource/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.DataSource#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.DataSource/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Para definir o valor como nulo, use <see cref="F:System.DBNull.Value" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypt">
+      <MemberSignature Language="C#" Value="public bool Encrypt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Encrypt" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.Encrypt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Encrypt")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica que o SQL Server usará criptografia SSL para todos os dados enviados entre o cliente e o servidor, se o servidor tiver um certificado instalado.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.Encrypt" /> ou <see langword="false" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave de "Criptografar" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enlist">
+      <MemberSignature Language="C#" Value="public bool Enlist { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enlist" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.Enlist" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Enlist")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o pooler de conexão do SQL Server inscreve automaticamente a conexão no contexto de transação atual do thread de criação.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.Enlist" /> ou <see langword="true" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave "Enlist" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailoverPartner">
+      <MemberSignature Language="C#" Value="public string FailoverPartner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FailoverPartner" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.FailoverPartner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Failover Partner")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.SqlClient.SqlConnectionStringBuilder/SqlDataSourceConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome ou endereço do servidor parceiro para conectar-se se o servidor primário estiver inativo.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.FailoverPartner" /> ou <see langword="String.Empty" /> se nenhum tiver sido aplicado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Para definir o valor como nulo, use <see cref="F:System.DBNull.Value" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="protected override void GetProperties (System.Collections.Hashtable propertyDescriptors);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetProperties(class System.Collections.Hashtable propertyDescriptors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlConnectionStringBuilder.GetProperties(System.Collections.Hashtable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyDescriptors" Type="System.Collections.Hashtable" />
+      </Parameters>
+      <Docs>
+        <param name="propertyDescriptors">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialCatalog">
+      <MemberSignature Language="C#" Value="public string InitialCatalog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InitialCatalog" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.InitialCatalog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Initial Catalog")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.SqlClient.SqlConnectionStringBuilder/SqlInitialCatalogConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do banco de dados associado à conexão.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.InitialCatalog" /> ou <see langword="String.Empty" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "Initial Catalog" e "banco de dados" na cadeia de caracteres de conexão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma cadeia de caracteres de conexão simples e, em seguida, usa o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> classe para adicionar o nome do banco de dados para a cadeia de caracteres de conexão. O código exibe o conteúdo do <xref:System.Data.SqlClient.SqlConnectionStringBuilder.InitialCatalog%2A> propriedade apenas para verificar se a classe foi capaz de converter o sinônimo ("Database") para o valor da propriedade apropriado.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.InitialCatalog#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.InitialCatalog/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.InitialCatalog#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.InitialCatalog/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Para definir o valor como nulo, use <see cref="F:System.DBNull.Value" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IntegratedSecurity">
+      <MemberSignature Language="C#" Value="public bool IntegratedSecurity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IntegratedSecurity" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.IntegratedSecurity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Integrated Security")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se a ID de Usuário e a Senha são especificadas na conexão (quando <see langword="false" />) ou se as atuais credenciais da conta do Windows são usadas para autenticação (quando <see langword="true" />).</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.IntegratedSecurity" /> ou <see langword="false" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "Segurança integrada" e "trusted_connection" na cadeia de caracteres de conexão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir converte uma cadeia de caracteres de conexão existente com o uso de autenticação do SQL Server para usar segurança integrada. O exemplo faz seu trabalho, remover o nome de usuário e a senha da cadeia de conexão e, em seguida, definindo o <xref:System.Data.SqlClient.SqlConnectionStringBuilder.IntegratedSecurity%2A> propriedade o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> objeto.  
+  
+> [!NOTE]
+>  Este exemplo inclui uma senha para demonstrar como <xref:System.Data.SqlClient.SqlConnectionStringBuilder> funciona com cadeias de caracteres de conexão. Em seus aplicativos, é recomendável usar a autenticação do Windows. Se você deve usar uma senha, não inclua uma senha codificada em seu aplicativo.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.IntegratedSecurity#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.IntegratedSecurity/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.IntegratedSecurity#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.IntegratedSecurity/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public override bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" /> tem um tamanho fixo.</summary>
+        <value>
+          <see langword="true" />em cada caso, porque o <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" /> fornece uma coleção de tamanho fixo de pares chave/valor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[string keyword] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">A chave do item a ser obtida ou definida.</param>
+        <summary>Obtém ou define o valor associado à chave especificada. No c#, essa propriedade é o indexador.</summary>
+        <value>O valor associado à chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> contém um dicionário de tamanho fixo, tentar adicionar uma chave que não existe dentro da dicionário lança um <xref:System.Collections.Generic.KeyNotFoundException>.  
+  
+   
+  
+## Examples  
+ O código a seguir, em um aplicativo de console, cria um novo <xref:System.Data.SqlClient.SqlConnectionStringBuilder> e adiciona os pares chave/valor para sua conexão de cadeia de caracteres, usando o <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Item%2A> propriedade.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.Item#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Item/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.Item#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Item/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">Tentativa de adicionar uma chave que não existe nas chaves disponíveis.</exception>
+        <exception cref="T:System.FormatException">Valor inválido na cadeia de caracteres de conexão (especificamente, um valor numérico ou booleano era esperado, mas não fornecido).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public override System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> que contém as chaves de <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém as chaves de <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos valores no <xref:System.Collections.ICollection> não for especificado, mas é a mesma ordem que os valores associados no <xref:System.Collections.ICollection> retornado pelo <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Values%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de aplicativo de console a seguir cria um novo <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. O código percorrerá a <xref:System.Collections.ICollection> retornado pelo <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Keys%2A> exibindo os pares chave/valor de propriedade.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.Keys#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Keys/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.Keys#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Keys/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadBalanceTimeout">
+      <MemberSignature Language="C#" Value="public int LoadBalanceTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LoadBalanceTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.LoadBalanceTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Load Balance Timeout")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo mínimo, em segundos, para a conexão com o live no pool de conexão antes de ser destruída.</summary>
+        <value>O valor de <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.LoadBalanceTimeout" /> propriedade, ou 0 se nenhum foi fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde a "Timeout de balanceamento de carga" e chaves de "tempo de vida de conexão" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPoolSize">
+      <MemberSignature Language="C#" Value="public int MaxPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.MaxPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Max Pool Size")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de conexões permitido no pool de conexão para essa cadeia de conexão específica.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.MaxPoolSize" /> ou 100, se nenhum foi fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave de "Max Pool Size" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinPoolSize">
+      <MemberSignature Language="C#" Value="public int MinPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.MinPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Min Pool Size")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número mínimo de conexões permitidas no pool de conexão para essa cadeia de caracteres de conexão específica.</summary>
+        <value>O valor de <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.MinPoolSize" /> propriedade, ou 0 se nenhum foi fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave de "Tamanho mínimo do Pool" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultipleActiveResultSets">
+      <MemberSignature Language="C#" Value="public bool MultipleActiveResultSets { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MultipleActiveResultSets" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.MultipleActiveResultSets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("MultipleActiveResultSets")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando for verdadeiro, um aplicativo poderá manter MARS (conjuntos de resultados ativos múltiplos). Quando for falso, um aplicativo deverá processar ou cancelar todos os conjuntos de resultados de um lote antes de poder executar outro lote nessa conexão.  
+  
+ Para obter mais informações, consulte [vários conjuntos de MARS (resultados ativos)](http://msdn.microsoft.com//library/cfa084cz.aspx).</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.MultipleActiveResultSets" /> ou <see langword="false" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave "MultipleActiveResultSets" na cadeia de caracteres de conexão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir desabilita o recurso de vários conjuntos de resultados ativos explicitamente.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.MARS#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.MARS/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.MARS#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.MARS/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiSubnetFailover">
+      <MemberSignature Language="C#" Value="public bool MultiSubnetFailover { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MultiSubnetFailover" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("MultiSubnetFailover")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se o seu aplicativo estiver se conectando a um grupo de disponibilidade AlwaysOn em diferentes sub-redes, configurar MultiSubnetFailover=true oferecerá uma detecção mais rápida e uma conexão com o servidor ativo (atualmente). Para saber mais sobre o suporte ao SqlClient para Grupos de Disponibilidade AlwaysOn, confira [Suporte do SqlClient para alta disponibilidade e recuperação de desastres](~/docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).</summary>
+        <value>Retorna <see cref="T:System.Boolean" />, que indica o valor atual da propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkLibrary">
+      <MemberSignature Language="C#" Value="public string NetworkLibrary { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NetworkLibrary" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.NetworkLibrary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Network Library")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.SqlClient.SqlConnectionStringBuilder/NetworkLibraryConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que contém o nome da biblioteca de rede usada para estabelecer uma conexão com o SQL Server.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.NetworkLibrary" /> ou <see langword="String.Empty" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde a "Biblioteca de rede", "rede" e "net" chaves na cadeia de caracteres de conexão.  
+  
+ Valores com suporte para essa propriedade incluem dbnmpntw (Pipes nomeados), dbmsrpcn (multiprotocolo), dbmsadsn (AppleTalk), dbmsgnet (VIA), dbmslpcn (memória compartilhada) e dbmsspxn (IPX/SPX) e dbmssocn (TCP/IP). A DLL de rede correspondente deve ser instalada no sistema ao qual você se conectar. Se você não especificar uma rede e você usar um servidor local (por exemplo, "." ou "(local)"), memória compartilhada é usada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Para definir o valor como nulo, use <see cref="F:System.DBNull.Value" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PacketSize">
+      <MemberSignature Language="C#" Value="public int PacketSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PacketSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.PacketSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Packet Size")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho em bytes dos pacotes de rede usados para se comunicar com uma instância do SQL Server.</summary>
+        <value>O valor de <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.PacketSize" /> propriedade ou 8000 se nenhum foi fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave de "Tamanho do pacote" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Password")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.PasswordPropertyText(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a senha para a conta do SQL Server.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.Password" /> ou <see langword="String.Empty" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "Senha" e "pwd" na cadeia de caracteres de conexão.  
+  
+ Se <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> não foi definido e recuperar o valor, o valor de retorno é <xref:System.String.Empty>. Para redefinir a senha para a cadeia de caracteres de conexão, passe null para a propriedade do Item.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A>.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.Password.2#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/dataworks sqlconnectionstringbuilder.password.2/cs/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.Password.2#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/dataworks sqlconnectionstringbuilder.password.2/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A senha foi definida incorretamente como null.  Consulte o exemplo de código abaixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistSecurityInfo">
+      <MemberSignature Language="C#" Value="public bool PersistSecurityInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PersistSecurityInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.PersistSecurityInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Persist Security Info")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se informações confidenciais de segurança, como a senha, não serão retornadas como parte da conexão se ela estiver aberta ou se já esteve em um estado aberto.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.PersistSecurityInfo" /> ou <see langword="false" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "Persist Security Info" e "persistsecurityinfo" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PoolBlockingPeriod">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.PoolBlockingPeriod PoolBlockingPeriod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.SqlClient.PoolBlockingPeriod PoolBlockingPeriod" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("PoolBlockingPeriod")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.PoolBlockingPeriod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O comportamento do período bloqueio para um pool de conexões.</summary>
+        <value>As configurações de período de bloqueio disponíveis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o pooling de conexão está habilitada e ocorre um erro de tempo limite ou outro erro de logon, uma exceção será lançada e tentativas de conexão subsequentes falhará para os próximos cinco segundos, o "período de bloqueio". Se o aplicativo tentar se conectar dentro do período de bloqueio, a primeira exceção será gerada novamente. Falhas posteriores após o término de um período de bloqueio resultará em um novo período de bloqueio que é duas vezes, contanto que o período de bloqueio anterior, até um máximo de um minuto.  
+  
+ Tentando se conectar a bancos de dados SQL do Azure pode falhar com erros transitórios, que normalmente são recuperados dentro de alguns segundos. No entanto, com o pool de conexão período comportamento de bloqueio, você pode não ser capaz de alcançar o seu banco de dados em períodos extensos, mesmo que o banco de dados está disponível. Isso é especialmente problemático para aplicativos que precisam para criação rápida. O **PoolBlockingPeriod** permite que você selecione o período de bloqueio mais adequado para seu aplicativo. Consulte o [PoolBlockingPeriod enumeração](../Topic/PoolBlockingPeriod%20Enumeration.md) para as configurações disponíveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pooling">
+      <MemberSignature Language="C#" Value="public bool Pooling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Pooling" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.Pooling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Pooling")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se a conexão será agrupada em pool ou aberta explicitamente sempre que a conexão for solicitada.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.Pooling" /> ou <see langword="true" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave do "Pool" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override bool Remove (string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Remove(string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlConnectionStringBuilder.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">A chave do par chave/valor a ser removido da cadeia de conexão neste <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />.</param>
+        <summary>Remove a entrada com a chave especificada da instância de <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />.</summary>
+        <returns>
+          <see langword="true" /> se a chave existia na cadeia de conexão e foi removida; <see langword="false" /> se a chave não existia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o **remover** método retorna um valor que indica o sucesso, não é necessário para procurar uma chave antes de tentar remover o par chave/valor da <xref:System.Data.SqlClient.SqlConnectionStringBuilder> instância. Porque o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> mantém uma coleção de tamanho fixo de pares chave/valor, chamar o <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Remove%2A> método simplesmente redefine o valor do par chave/valor de volta para seu valor padrão.  
+  
+ Porque a coleção de chaves com suporte a <xref:System.Data.SqlClient.SqlConnectionStringBuilder> é fixa, cada item dentro da coleção tem um valor de padrão conhecido. A tabela a seguir lista as chaves e o valor para cada quando o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> é inicializado pela primeira vez, ou depois de <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Remove%2A> método foi chamado.  
+  
+|Chave|Valor padrão|  
+|---------|-------------------|  
+|Nome do aplicativo|"Provedor de dados do .net SqlClient"|  
+|Processamento assíncrono|False|  
+|AttachDBFilename|Cadeia de caracteres vazia|  
+|Tempo limite de Conexão|15|  
+|Conexão de contexto|False|  
+|Idioma atual|Cadeia de caracteres vazia|  
+|Fonte de dados|Cadeia de caracteres vazia|  
+|Criptografar|False|  
+|Inscrever-se|verdadeiro|  
+|Parceiro de failover|Cadeia de caracteres vazia|  
+|Catálogo inicial|Cadeia de caracteres vazia|  
+|Segurança integrada|False|  
+|Tempo limite de balanceamento de carga|0|  
+|Tamanho máximo do Pool|100|  
+|Tamanho mínimo do Pool|0|  
+|MultipleActiveResultSets|False|  
+|Biblioteca de rede|Cadeia de caracteres vazia|  
+|Tamanho do pacote|8000|  
+|Senha|Cadeia de caracteres vazia|  
+|Persistência de segurança|False|  
+|Agrupamento|verdadeiro|  
+|Replicação|False|  
+|Associação de transação|Implícita desassociar|  
+|ID de usuário|Cadeia de caracteres vazia|  
+|Instância de usuário|False|  
+|ID de estação de trabalho|Cadeia de caracteres vazia|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir converte uma cadeia de caracteres de conexão existente com o uso de autenticação do Windows para usar segurança integrada. O exemplo funciona removendo o nome de usuário e a senha da cadeia de conexão e, em seguida, definindo o <xref:System.Data.SqlClient.SqlConnectionStringBuilder.IntegratedSecurity%2A> propriedade o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> objeto.  
+  
+> [!NOTE]
+>  Este exemplo inclui uma senha para demonstrar como <xref:System.Data.SqlClient.SqlConnectionStringBuilder> funciona com cadeias de caracteres de conexão. Em seus aplicativos, é recomendável usar a autenticação do Windows. Se você deve usar uma senha, não inclua uma senha codificada em seu aplicativo.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.Remove#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Remove/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.Remove#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Remove/VB/source.vb#1)]  
+  
+ O exemplo exibe o texto a seguir na janela do console:  
+  
+```  
+Original: Data Source=(local);Initial Catalog=AdventureWorks;User ID=ab;Password= a1Pass@@11  
+Modified: Data Source=(local);Initial Catalog=AdventureWorks;Integrated Security=True  
+Database = AdventureWorks  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" /> é nulo (<see langword="Nothing" /> no Visual Basic)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Replication">
+      <MemberSignature Language="C#" Value="public bool Replication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Replication" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.Replication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Replication")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se há suporte para replicação usando a conexão.</summary>
+        <value>O valor de <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.Replication" /> propriedade, ou falso se nenhum foi fornecido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave de "Replicação" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerialize">
+      <MemberSignature Language="C#" Value="public override bool ShouldSerialize (string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ShouldSerialize(string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlConnectionStringBuilder.ShouldSerialize(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">A chave a ser localizada no <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />.</param>
+        <summary>Indica se a chave especificada existe neste <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" /> instância.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" /> contiver uma entrada com a chave, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método se comporta de forma idêntica ao <xref:System.Data.Common.DbConnectionStringBuilder.ContainsKey%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionBinding">
+      <MemberSignature Language="C#" Value="public string TransactionBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransactionBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Transaction Binding")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor de cadeia de caracteres que indica como a conexão mantém sua associação com um inscrita <see langword="System.Transactions" /> transação.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding" /> ou <see langword="String.Empty" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As palavras-chave associação de transação em um <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> controle como um <xref:System.Data.SqlClient.SqlConnection> associa a um inscrita <xref:System.Transactions.Transaction>.  
+  
+ A tabela a seguir mostra os valores possíveis para a <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A> propriedade:  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|Implícita desassociar|O padrão. Faz com que a conexão desanexar da transação quando ele termina. Depois de desanexar, solicitações adicionais de conexão são executadas no modo de confirmação automática. O <xref:System.Transactions.Transaction.Current%2A> propriedade não é verificada durante a execução de solicitações enquanto a transação está ativa. Depois que a transação foi encerrada, solicitações adicionais são executadas no modo de confirmação automática.|  
+|Explícita desassociar|Faz com que a conexão permanecer associado à transação até que a conexão é fechada ou até <xref:System.Data.SqlClient.SqlConnection.EnlistTransaction%2A> é chamado com um `null` (`Nothing` no Visual Basic) valor. Um <xref:System.InvalidOperationException> é gerada se <xref:System.Transactions.Transaction.Current%2A> não é a transação inscrita ou se a transação inscrita não está ativa. Esse comportamento impõe as regras de escopo estritas necessários para <xref:System.Transactions.TransactionScope> suporte.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransparentNetworkIPResolution">
+      <MemberSignature Language="C#" Value="public bool TransparentNetworkIPResolution { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransparentNetworkIPResolution" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.TransparentNetworkIPResolution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("TransparentNetworkIPResolution")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando o valor dessa chave é definido como <see langword="true" />, o aplicativo é necessário para recuperar todos os endereços IP para uma determinada entrada DNS e tentar se conectar à primeira na lista. Se a conexão não for estabelecida em 0,5 segundos, o aplicativo tentará se conectar a todos os outros paralelamente. Quando o primeiro responder, o aplicativo estabelecerá a conexão com o endereço IP do respondedor.</summary>
+        <value>Um valor booliano.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `MultiSubnetFailover` chave é definida como `true`, `TransparentNetworkIPResolution` será ignorado.  
+  
+ Se o `Failover Partner` chave for definida, `TransparentNetworkIPResolution` será ignorado.  
+  
+ O valor dessa chave deve ser `true`, `false`, `yes`, ou `no`.  
+  
+ Um valor de `yes` é tratada como um valor de `true`.  
+  
+ Um valor de `no` é tratada como um valor de `false`.  
+  
+ Essa chave padrão é `false` quando:  
+  
+-   Conectando-se ao banco de dados do SQL Azure em que a fonte de dados termina com:  
+  
+    -   .database.chinacloudapi.cn  
+  
+    -   .database.usgovcloudapi.net  
+  
+    -   .database.cloudapi.de  
+  
+    -   .database.windows.net  
+  
+-   `Authentication`é 'Senha do Active Directory' ou 'Integrado ao Active Directory'  
+  
+ Caso contrário, o padrão é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustServerCertificate">
+      <MemberSignature Language="C#" Value="public bool TrustServerCertificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrustServerCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.TrustServerCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("TrustServerCertificate")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o canal será criptografado ao ignorar a movimentação da cadeia de certificados para validar a confiança.</summary>
+        <value>Um <see langword="Boolean" />. Os valores reconhecidos são <see langword="true" />, <see langword="false" />, <see langword="yes" /> e <see langword="no" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando `TrustServerCertificate` estiver definido como `true`, a camada de transporte usará SSL para criptografar o canal e não precisar passar pela verificação da cadeia do certificado para validar a confiança. Se `TrustServerCertificate` é definido como `true` e criptografia é ativada, o nível de criptografia especificado no servidor será usado mesmo se `Encrypt` é definido como `false`. A conexão falhará se isso for feito de outra maneira.  
+  
+ Para obter mais informações, consulte "Hierarquia de criptografia" e "Usando criptografia sem validação" nos Manuais Online do SQL Server.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public override bool TryGetValue (string keyword, out object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TryGetValue(string keyword, [out] object&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlConnectionStringBuilder.TryGetValue(System.String,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyword" Type="System.String" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="keyword">A chave do item a ser recuperado.</param>
+        <param name="value">O valor correspondente ao <c>palavra-chave.</c></param>
+        <summary>Recupera um valor correspondente para a chave fornecida neste <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="keyword" /> foi encontrada na cadeia de caracteres de conexão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TryGetValue%2A> método permite que os desenvolvedores recuperar com segurança um valor de um <xref:System.Data.SqlClient.SqlConnectionStringBuilder> sem a necessidade de verificar se o nome de chave fornecido é um nome de chave válido. Porque **TryGetValue** não gera uma exceção ao chamar, passando uma chave que não existe, não é necessário que procurar uma chave antes de recuperar seu valor.  Chamando **TryGetValue** com uma chave inexistente colocará o valor null (`Nothing` no Visual Basic) no `value` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o comportamento de **TryGetValue** método.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.TryGetValue#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.TryGetValue/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.TryGetValue#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.TryGetValue/VB/source.vb#1)]  
+  
+ O exemplo exibe os seguintes resultados:  
+  
+```  
+Data Source=(local)  
+Trusted_Connection=True  
+Unable to retrieve value for 'InvalidKey'  
+Unable to retrieve value for null key.  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keyword" />contém um valor nulo (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeSystemVersion">
+      <MemberSignature Language="C#" Value="public string TypeSystemVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeSystemVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.TypeSystemVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Type System Version")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor de cadeia de caracteres que indica que o sistema de tipos, o aplicativo espera.</summary>
+        <value>A tabela a seguir mostra os valores possíveis para a <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.TypeSystemVersion" /> propriedade:  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term> [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] 2005  
+  
+ </term><description>Usa o [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] sistema de tipos de 2005. Nenhuma conversão é feita para a versão atual do ADO.NET.  
+  
+ </description></item><item><term>SQL Server 2008  
+  
+ </term><description>Usa o sistema de tipos do SQL Server 2008.  
+  
+ </description></item><item><term>Mais recente  
+  
+ </term><description>Use a versão mais recente desse par de cliente-servidor pode manipular. Isso mudará automaticamente para a frente à medida que os componentes de cliente e servidor são atualizados.  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `TypeSystemVersion` propriedade pode ser usada para especificar uma versão de nível inferior do [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] para aplicativos escritos em relação a essa versão. Isso evita problemas possíveis com tipos incompatíveis em uma versão mais recente do [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] que podem causar o aplicativo seja interrompido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserID">
+      <MemberSignature Language="C#" Value="public string UserID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserID" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.UserID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("User ID")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ID de usuário a ser usada ao conectar-se ao SQL Server.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.UserID" /> ou <see langword="String.Empty" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "User ID", "usuário" e "uid" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Para definir o valor como nulo, use <see cref="F:System.DBNull.Value" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserInstance">
+      <MemberSignature Language="C#" Value="public bool UserInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UserInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("User Instance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve redirecionar a conexão da instância do SQL Server Express padrão para uma instância iniciada pelo tempo de execução em execução sob a conta do chamador.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance" /> ou <see langword="False" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde à chave de "Instância de usuário" na cadeia de caracteres de conexão.  
+  
+> [!NOTE]
+>  Este recurso está disponível somente com o [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] Express Edition. Para obter mais informações sobre instâncias de usuário, consulte [instâncias do SQL Server Express usuário](~/docs/framework/data/adonet/sql/sql-server-express-user-instances.md) e "usuário instâncias para não-administradores" em [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] Manuais Online.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Para definir o valor como nulo, use <see cref="F:System.DBNull.Value" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public override System.Collections.ICollection Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Values" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> que contém os valores de <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém os valores de <see cref="T:System.Data.SqlClient.SqlConnectionStringBuilder" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos valores no <xref:System.Collections.ICollection> não for especificado, mas é a mesma ordem que as chaves associadas no <xref:System.Collections.ICollection> retornado pelo <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Keys%2A> propriedade. Como cada instância do <xref:System.Data.SqlClient.SqlConnectionStringBuilder> sempre contém o mesmo conjunto fixo de chaves, o <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Values%2A> propriedade sempre retorna os valores correspondentes para o conjunto fixo de chaves, na mesma ordem que as chaves.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo <xref:System.Data.SqlClient.SqlConnectionStringBuilder>e, em seguida, itera por meio de todos os valores dentro do objeto.  
+  
+ [!code-csharp[DataWorks SqlConnectionStringBuilder.Values#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Values/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlConnectionStringBuilder.Values#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.Values/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkstationID">
+      <MemberSignature Language="C#" Value="public string WorkstationID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WorkstationID" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlConnectionStringBuilder.WorkstationID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DisplayName("Workstation ID")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da estação de trabalho conectando ao SQL Server.</summary>
+        <value>O valor da propriedade <see cref="P:System.Data.SqlClient.SqlConnectionStringBuilder.WorkstationID" /> ou <see langword="String.Empty" /> se nenhum tiver sido aplicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde às chaves "ID de estação de trabalho" e "wsid" na cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Para definir o valor como nulo, use <see cref="F:System.DBNull.Value" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

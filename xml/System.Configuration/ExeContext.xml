@@ -1,0 +1,67 @@
+<Type Name="ExeContext" FullName="System.Configuration.ExeContext">
+  <TypeSignature Language="C#" Value="public sealed class ExeContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExeContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ExeContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia o contexto de caminho para o aplicativo atual. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExePath">
+      <MemberSignature Language="C#" Value="public string ExePath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExePath" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ExeContext.ExePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho atual para o aplicativo.</summary>
+        <value>Um valor de cadeia de caracteres que contém o caminho atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserLevel">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationUserLevel UserLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.ConfigurationUserLevel UserLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ExeContext.UserLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationUserLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que representa o nível de caminho do aplicativo atual.</summary>
+        <value>Um <see cref="T:System.Configuration.ConfigurationUserLevel" /> objeto que representa o nível de caminho do aplicativo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

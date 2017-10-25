@@ -1,0 +1,244 @@
+<Type Name="IXmlSchemaInfo" FullName="System.Xml.Schema.IXmlSchemaInfo">
+  <TypeSignature Language="C#" Value="public interface IXmlSchemaInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlSchemaInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.IXmlSchemaInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define o infoset de validação pós-esquema de um nó XML validado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsDefault">
+      <MemberSignature Language="C#" Value="public bool IsDefault { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.IsDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este nó XML validado foi definido como o resultado de um padrão que está sendo aplicado durante a validação de esquema de linguagem de definição de esquema XML (XSD).</summary>
+        <value>
+          <see langword="true" />Se isso validado nó XML foi definido como o resultado de um padrão que está sendo aplicado durante a validação de esquema; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.IXmlSchemaInfo> propriedade não relata os padrões DTD (definição) de tipo de documento  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNil">
+      <MemberSignature Language="C#" Value="public bool IsNil { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNil" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.IsNil" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o valor para este nó XML validado é nil.</summary>
+        <value>
+          <see langword="true" />Se o valor para este validado nó XML é zero; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaSimpleType MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaSimpleType MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaSimpleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de esquema dinâmico para este nó XML validado.</summary>
+        <value>Um <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" /> validados de objeto que representa o tipo de esquema dinâmico para este nó XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.IXmlSchemaInfo.MemberType%2A> propriedade é definida somente se o tipo estático do nó XML é um tipo de união caso em que o <xref:System.Xml.Schema.IXmlSchemaInfo.MemberType%2A> propriedade retornará o tipo da união o nó XML validado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaAttribute">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaAttribute SchemaAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaAttribute SchemaAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.SchemaAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o compilados <see cref="T:System.Xml.Schema.XmlSchemaAttribute" /> que corresponde a este nó XML validado.</summary>
+        <value>Um <see cref="T:System.Xml.Schema.XmlSchemaAttribute" /> que corresponde a este nó XML validado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaElement">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaElement SchemaElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaElement SchemaElement" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.SchemaElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o compilados <see cref="T:System.Xml.Schema.XmlSchemaElement" /> que corresponde a este nó XML validado.</summary>
+        <value>Um <see cref="T:System.Xml.Schema.XmlSchemaElement" /> que corresponde a este nó XML validado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaType SchemaType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaType SchemaType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.SchemaType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de esquema de linguagem de definição de esquema XML (XSD) estático deste nó XML validado.</summary>
+        <value>Um <see cref="T:System.Xml.Schema.XmlSchemaType" /> deste validado nó XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo estático de um nó XML é o tipo que foi declarado no esquema XSD.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validity">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaValidity Validity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaValidity Validity" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.IXmlSchemaInfo.Validity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaValidity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xml.Schema.XmlSchemaValidity" /> validados de valor deste nó XML.</summary>
+        <value>Um <see cref="T:System.Xml.Schema.XmlSchemaValidity" /> validados de valor deste nó XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os possíveis <xref:System.Xml.Schema.XmlSchemaValidity> valores para este nó XML são <xref:System.Xml.Schema.XmlSchemaValidity.Valid>, <xref:System.Xml.Schema.XmlSchemaValidity.Invalid>, e <xref:System.Xml.Schema.XmlSchemaValidity.NotKnown>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

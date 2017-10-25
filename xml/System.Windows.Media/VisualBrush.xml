@@ -1,0 +1,358 @@
+<Type Name="VisualBrush" FullName="System.Windows.Media.VisualBrush">
+  <TypeSignature Language="C#" Value="public sealed class VisualBrush : System.Windows.Media.TileBrush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VisualBrush extends System.Windows.Media.TileBrush" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.VisualBrush" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.TileBrush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Pinta uma área com uma <see cref="P:System.Windows.Media.VisualBrush.Visual" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há duas maneiras para especificar o <xref:System.Windows.Media.VisualBrush.Visual%2A> conteúdo de um <xref:System.Windows.Media.VisualBrush>.  
+  
+-   Criar um novo <xref:System.Windows.Media.Visual> e usá-lo para definir o <xref:System.Windows.Media.VisualBrush.Visual%2A> propriedade o <xref:System.Windows.Media.VisualBrush>.  
+  
+-   Use um existente <xref:System.Windows.Media.Visual>, que cria uma imagem duplicada do destino <xref:System.Windows.Media.Visual>. Você pode usar o <xref:System.Windows.Media.VisualBrush> para criar efeitos interessantes, como reflexão e ampliação.  
+  
+ Quando você define um novo <xref:System.Windows.Media.VisualBrush.Visual%2A> para um <xref:System.Windows.Media.VisualBrush> e que <xref:System.Windows.Media.Visual> é um <xref:System.Windows.UIElement> (como um painel ou controle), o sistema de layout é executado <xref:System.Windows.UIElement> e seus elementos filhos quando o <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> está definida como `true`. No entanto, a raiz <xref:System.Windows.UIElement> é essencialmente isolada do restante do sistema; estilos, storyboards e layout externo não podem permear esse limite. Portanto, você deve especificar explicitamente o tamanho da raiz <xref:System.Windows.UIElement>, porque seu único pai é o <xref:System.Windows.Media.VisualBrush> e, portanto, ele não pode automaticamente redimensionar a mesmo para a área que está sendo pintada. Para mais informações sobre o layout em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)], consulte [Layout](~/docs/framework/wpf/advanced/layout.md).  
+  
+ Atualizações para a árvore visual de um <xref:System.Windows.Media.VisualBrush> não serão propagadas se um <xref:System.Windows.Media.Effects.BitmapEffect> está na cadeia do pai do pincel. Você pode solucionar esse problema essa limitação forçando uma atualização da cena no objeto acima do efeito. Você pode chamar <xref:System.Windows.UIElement.InvalidateVisual%2A> ou incluir uma animação para forçar uma atualização de cena.  
+  
+ **Recursos Freezable:** porque ele herda o <xref:System.Windows.Freezable> classe, o <xref:System.Windows.Media.VisualBrush> classe fornece vários recursos especiais: <xref:System.Windows.Media.VisualBrush> objetos podem ser declarados como e compartilhados entre vários objetos. Para obter mais informações sobre os diferentes recursos fornecidos pelo <xref:System.Windows.Freezable> objetos, consulte o [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+> [!NOTE]
+>  Um <xref:System.Windows.Media.VisualBrush> não pode ser transformado em somente leitura (congelado) quando seu <xref:System.Windows.Media.VisualBrush.Visual%2A> propriedade é definida como qualquer valor diferente de`null.`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VisualBrush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.VisualBrush.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.VisualBrush" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VisualBrush (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.VisualBrush.#ctor(System.Windows.Media.Visual)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O conteúdo do novo <see cref="T:System.Windows.Media.VisualBrush" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.VisualBrush" /> classe que contém especificado <see cref="P:System.Windows.Media.VisualBrush.Visual" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoLayoutContent">
+      <MemberSignature Language="C#" Value="public bool AutoLayoutContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoLayoutContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.VisualBrush.AutoLayoutContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se este <see cref="T:System.Windows.Media.VisualBrush" /> executará o layout de seu <see cref="P:System.Windows.Media.VisualBrush.Visual" />.</summary>
+        <value>
+          <see langword="true" />Se esse pincel deve executar o layout em seu <see cref="P:System.Windows.Media.VisualBrush.Visual" />; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir essa propriedade como `true` tem efeito somente quando esse pincel <xref:System.Windows.Media.VisualBrush.Visual%2A> é sem pai <xref:System.Windows.UIElement>.  
+  
+<a name="dependencyPropertyInfo_AutoLayoutContent"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.VisualBrush.AutoLayoutContentProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra os efeitos da <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> propriedade sem pai <xref:System.Windows.UIElement>.  
+  
+ [!code-csharp[visualbrush_markup_snip#AutoLayoutContentNonParentedUIElementExample](~/samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/AutoLayoutContentExample.cs#autolayoutcontentnonparenteduielementexample)]
+ [!code-vb[visualbrush_markup_snip#AutoLayoutContentNonParentedUIElementExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/autolayoutcontentexample.vb#autolayoutcontentnonparenteduielementexample)]
+ [!code-xaml[visualbrush_markup_snip#AutoLayoutContentNonParentedUIElementExample](~/samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/AutoLayoutContentExample.xaml#autolayoutcontentnonparenteduielementexample)]  
+  
+ A ilustração a seguir mostra a saída deste exemplo:  
+  
+ ![AutoLayoutContent não &#45; UIElement pai](~/add/media/graphicsmm-visualbrush-autolayoutcontentproperty-nonparented.png "AutoLayoutContent com um UIElement sem pai")  
+  
+ O exemplo a seguir mostra os efeitos da <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> propriedade em um pai <xref:System.Windows.UIElement>.  
+  
+ [!code-csharp[visualbrush_markup_snip#AutoLayoutContentParentedUIElementExample](~/samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/AutoLayoutContentExample.cs#autolayoutcontentparenteduielementexample)]
+ [!code-vb[visualbrush_markup_snip#AutoLayoutContentParentedUIElementExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/autolayoutcontentexample.vb#autolayoutcontentparenteduielementexample)]
+ [!code-xaml[visualbrush_markup_snip#AutoLayoutContentParentedUIElementExample](~/samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/AutoLayoutContentExample.xaml#autolayoutcontentparenteduielementexample)]  
+  
+ A ilustração a seguir mostra a saída deste exemplo:  
+  
+ ![AutoLayoutContent com um UIElement pai](~/add/media/graphicsmm-visualbrush-autolayoutcontentproperty-parented.png "AutoLayoutContent com um UIElement pai")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoLayoutContentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AutoLayoutContentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AutoLayoutContentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.VisualBrush.AutoLayoutContentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.VisualBrush.AutoLayoutContent" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.VisualBrush Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.VisualBrush Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.VisualBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.VisualBrush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse <see cref="T:System.Windows.Media.VisualBrush" />, fazendo cópias em profundidade dos valores do objeto.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.VisualBrush CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.VisualBrush CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.VisualBrush.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.VisualBrush</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse objeto <see cref="T:System.Windows.Media.VisualBrush" />, fazendo cópias em profundidade dos valores do objeto atual. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade era <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.VisualBrush.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContentBounds">
+      <MemberSignature Language="C#" Value="protected override void GetContentBounds (out System.Windows.Rect contentBounds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetContentBounds([out] valuetype System.Windows.Rect&amp; contentBounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.VisualBrush.GetContentBounds(System.Windows.Rect@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentBounds" Type="System.Windows.Rect&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="contentBounds">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.VisualBrush.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visual">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Visual Visual { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Visual Visual" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.VisualBrush.Visual" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do pincel.</summary>
+        <value>O conteúdo do pincel. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há duas maneiras para especificar o <xref:System.Windows.Media.VisualBrush.Visual%2A> conteúdo de um <xref:System.Windows.Media.VisualBrush>.  
+  
+-   Criar um novo <xref:System.Windows.Media.Visual> e usá-lo para definir o <xref:System.Windows.Media.VisualBrush.Visual%2A> propriedade o <xref:System.Windows.Media.VisualBrush>.  
+  
+-   Use um existente <xref:System.Windows.Media.Visual>, que cria uma imagem duplicada do destino <xref:System.Windows.Media.Visual>. Você pode usar o <xref:System.Windows.Media.VisualBrush> para criar efeitos interessantes, como reflexão e ampliação.  
+  
+ <xref:System.Windows.Media.Visual>é bem alto na hierarquia de classe geral WPF, portanto, um número muito grande de objetos possivelmente pode servir como o visual que você usa para um <xref:System.Windows.Media.VisualBrush>; a lista inteira não pode ser mostrada aqui. Consulte <xref:System.Windows.Media.Visual>; consulte a seção "Hierarquia de herança", que mostra as classes derivadas imediatamente. Você pode, em seguida, clique em classes derivadas imediatamente e percorrer as hierarquias para ter uma noção de toda a gama de possibilidades. Em um nível superior, as duas categorias mais comuns de objetos você pode usar para um <xref:System.Windows.Media.VisualBrush> são <xref:System.Windows.UIElement> ou <xref:System.Windows.Media.ContainerVisual>. <xref:System.Windows.UIElement>abrange basicamente qualquer elemento de interface do usuário que pode participar caso contrário, a interface do usuário para um aplicativo do WPF. <xref:System.Windows.Media.ContainerVisual>contém uma <xref:System.Windows.Media.DrawingGroup> que inclui um ou mais <xref:System.Windows.Media.Drawing>-objetos derivados.  
+  
+ Quando você define um novo <xref:System.Windows.Media.VisualBrush.Visual%2A> para um <xref:System.Windows.Media.VisualBrush> e que <xref:System.Windows.Media.Visual> é um <xref:System.Windows.UIElement> (como um painel ou controle), o sistema de layout é executado <xref:System.Windows.UIElement> e seus elementos filhos quando o <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> está definida como `true`. No entanto, a raiz <xref:System.Windows.UIElement> é essencialmente isolada do restante do sistema; estilos, storyboards e layout externo determinado pelo pai onde o pincel é aplicado não podem permear esse limite. Portanto, você deve especificar explicitamente o tamanho da raiz <xref:System.Windows.UIElement>, porque seu único pai é o <xref:System.Windows.Media.VisualBrush> e, portanto, ele não pode automaticamente redimensionar a mesmo para a área que está sendo pintada. Para mais informações sobre o layout em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)], consulte [Layout](~/docs/framework/wpf/advanced/layout.md).  
+  
+ Atualizações para a árvore visual de um <xref:System.Windows.Media.VisualBrush> não serão propagadas se um <xref:System.Windows.Media.Effects.BitmapEffect> está na cadeia do pai do pincel. Você pode solucionar esse problema essa limitação forçando uma atualização da cena no objeto acima do efeito. Você pode chamar <xref:System.Windows.UIElement.InvalidateVisual%2A> ou incluir uma animação para forçar uma atualização de cena.  
+  
+> [!NOTE]
+>  Um <xref:System.Windows.Media.VisualBrush> não pode ser transformado em somente leitura (congelado) quando seu <xref:System.Windows.Media.VisualBrush.Visual%2A> propriedade é definida como qualquer valor diferente de`null.`  
+  
+<a name="xamlPropertyElementUsage_Visual"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<object>  
+  <object.Visual>  
+    singleVisualRoot  
+  </object.Visual>  
+</object>  
+```  
+  
+<a name="xamlAttributeUsage_Visual"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*objeto* `Visual`= "{*bindingExpression*}" / >  
+  
+ \- ou -  
+  
+ <*objeto* `Visual`= "{*resourceExpression*}" / >  
+  
+<a name="xamlValues_Visual"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ `singleVisualRoot`  
+ Um elemento único objeto que define um novo elemento visual para o pincel. Isso deve ser um objeto que deriva de <xref:System.Windows.Media.Visual>. Consulte Observações.  
+  
+ `bindingExpression`  
+ Um que é avaliada para um existente <xref:System.Windows.Media.Visual> instância.  
+  
+ `resourceExpression`  
+ Um `StaticResource` ou `DynamicResource` que avalia um existente <xref:System.Windows.Media.Visual> instância. Consulte [recursos XAML](~/docs/framework/wpf/advanced/xaml-resources.md)  
+  
+<a name="dependencyPropertyInfo_Visual"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.VisualBrush.VisualProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VisualProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VisualProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.VisualBrush.VisualProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.VisualBrush.Visual" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,612 @@
+<Type Name="MessageVersion" FullName="System.ServiceModel.Channels.MessageVersion">
+  <TypeSignature Language="C#" Value="public sealed class MessageVersion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MessageVersion extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.MessageVersion" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica que as versões de SOAP e WS-Addressing associados a uma mensagem e sua troca.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.MessageVersion> contém as informações de controle de versão, tanto sobre o envelope SOAP e o protocolo de endereçamento que é usado por uma mensagem. Uma instância de <xref:System.ServiceModel.Channels.Message> está associado no momento da criação de um determinado <xref:System.ServiceModel.Channels.MessageVersion> , passando a versão como um parâmetro em uma da <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> sobrecargas.  
+  
+ Todos os estático "get" propriedades dessa classe, como <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressing10%2A> e <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A> tem semântica de enumeração. Eles fornecem uma enumeração das versões possíveis de mensagem com suporte a [!INCLUDE[indigo1](~/includes/indigo1-md.md)] tempo de execução. Uma mensagem tem uma estrutura de envelope e uma estrutura de endereçamento. <xref:System.ServiceModel.Channels.MessageVersion>é apenas um atalho para fornecer {<xref:System.ServiceModel.EnvelopeVersion>, <xref:System.ServiceModel.Channels.AddressingVersion>} juntos.  
+  
+ Atualmente há duas versões do envelope SOAP: SOAP 1.1 e SOAP 1.2. Estas versões de SOAP são representados por <xref:System.ServiceModel.EnvelopeVersion> e são retornados pelo <xref:System.ServiceModel.EnvelopeVersion.Soap11%2A> e <xref:System.ServiceModel.EnvelopeVersion.Soap12%2A> propriedades. A versão do SOAP associado a <xref:System.ServiceModel.Channels.MessageVersion> podem ser recuperados usando o <xref:System.ServiceModel.Channels.MessageVersion.Envelope%2A> propriedade. [!INCLUDE[crdefault](~/includes/crdefault-md.md)]o esquema para [SOAP 1.1](http://go.microsoft.com/fwlink/?LinkId=96641) e [SOAP 1.2](http://go.microsoft.com/fwlink/?LinkId=96642).  
+  
+ Há duas versões do WS-Addressing disponíveis. Enviado em 10 de agosto de 2004 e o especificado no protocolo WS-Addressing 1.0. A versão do endereço usada pela versão atual de mensagem pode ser recuperada usando o <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> propriedade. Essas versões do WS-Addressing são representados por <xref:System.ServiceModel.Channels.AddressingVersion> e são retornados pelo <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressingAugust2004%2A> e <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> propriedades. O WS-Addressing agosto de 2004 é mantido como um valor herdado. A 10 de agosto de 2004, envio de membro do W3C para WS-Addressing está disponível em [Web Services endereçamento (WS-Addressing)](http://go.microsoft.com/fwlink/?LinkId=96643). 17 de agosto de 2005 recomendação do W3C candidato para WS-Addressing 1.0 - Core está disponível em [Web Services endereçamento 1.0 - Core](http://go.microsoft.com/fwlink/?LinkId=96644).  
+  
+ <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>fornece suporte ao uso de "plain old XML" (POX)-estilo de mensagens. Habilitar mensagens básicas de POX agora é uma questão de configurar uma associação HTTP em seu serviço com um codificador de texto que usa <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>.  
+  
+ Objetos de versão de mensagem podem ser criados usando versões especificadas do WS-Addressing e SOAP usando um do <xref:System.ServiceModel.Channels.MessageVersion.CreateVersion%2A> sobrecargas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Addressing">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.AddressingVersion Addressing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.AddressingVersion Addressing" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageVersion.Addressing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.AddressingVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão do WS-Addressing associada com a versão atual da mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> que está associado com a versão atual da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essas versões do WS-Addressing são representados por <xref:System.ServiceModel.Channels.AddressingVersion> e são retornados pelo <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressingAugust2004%2A> e <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> propriedades. O WS-Addressing agosto de 2004 é mantido como um valor herdado. A 10 de agosto de 2004, envio de membro do W3C para WS-Addressing está disponível em [Web Services endereçamento (WS-Addressing)](http://go.microsoft.com/fwlink/?LinkId=96643). 17 de agosto de 2005 recomendação do W3C candidato para WS-Addressing 1.0 - Core está disponível em [Web Services endereçamento 1.0 - Core](http://go.microsoft.com/fwlink/?LinkId=96644).  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#1)]
+ [!code-vb[S_UE_MessageVersion#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateVersion">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageVersion CreateVersion (System.ServiceModel.EnvelopeVersion envelopeVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageVersion CreateVersion(class System.ServiceModel.EnvelopeVersion envelopeVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageVersion.CreateVersion(System.ServiceModel.EnvelopeVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeVersion" Type="System.ServiceModel.EnvelopeVersion" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeVersion">O <see cref="T:System.ServiceModel.EnvelopeVersion" /> que indica a versão do SOAP a ser usada.</param>
+        <summary>Cria um objeto de versão de mensagem usando WS-Addressing 1.0 e com uma versão especificada do SOAP.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que usa a versão especificada do SOAP e WS-Addressing 1.0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As versões SOAP atualmente disponíveis são SOAP 1.1 e SOAP 1.2. Há um <xref:System.ServiceModel.EnvelopeVersion> para cada versão do SOAP que contém os dados relevantes para seu uso.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#11)]
+ [!code-vb[S_UE_MessageVersion#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="envelopeVersion" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateVersion">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageVersion CreateVersion (System.ServiceModel.EnvelopeVersion envelopeVersion, System.ServiceModel.Channels.AddressingVersion addressingVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.MessageVersion CreateVersion(class System.ServiceModel.EnvelopeVersion envelopeVersion, class System.ServiceModel.Channels.AddressingVersion addressingVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageVersion.CreateVersion(System.ServiceModel.EnvelopeVersion,System.ServiceModel.Channels.AddressingVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeVersion" Type="System.ServiceModel.EnvelopeVersion" />
+        <Parameter Name="addressingVersion" Type="System.ServiceModel.Channels.AddressingVersion" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeVersion">O <see cref="T:System.ServiceModel.EnvelopeVersion" /> que indica a versão do SOAP.</param>
+        <param name="addressingVersion">O <see cref="T:System.ServiceModel.Channels.AddressingVersion" /> que indica a versão do WS-Addressing.</param>
+        <summary>Cria um objeto de versão de mensagem com versões SOAP e WS-Addressing especificadas.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.MessageVersion" /> usando as versões especificadas do WS-Addressing e SOAP.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As versões SOAP atualmente disponíveis são SOAP 1.1 e SOAP 1.2. Há um <xref:System.ServiceModel.EnvelopeVersion> para cada versão do SOAP que contém os dados relevantes para seu uso.  
+  
+ Há duas versões do WS-Addressing disponíveis. Um envio 10 de agosto de 2004 e a outros enviado de agosto de 2005 e conhecido como o protocolo WS-Addressing 1.0.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#12](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#12)]
+ [!code-vb[S_UE_MessageVersion#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="envelopeVersion" /> ou <paramref name="addressingVersion" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageVersion Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.MessageVersion Default" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageVersion.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de mensagem padrão usada pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)].</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que usa o WS-Addressing 1.0 e SOAP1.2.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso retorna o mesmo objeto <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressing10%2A>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#0)]
+ [!code-vb[S_UE_MessageVersion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Envelope">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EnvelopeVersion Envelope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EnvelopeVersion Envelope" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageVersion.Envelope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EnvelopeVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão SOAP associada à versão atual da mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.EnvelopeVersion" /> associado à versão atual da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atualmente há duas versões do envelope SOAP: SOAP 1.1 e SOAP 1.2. Estas versões de SOAP são representados por <xref:System.ServiceModel.EnvelopeVersion> e são retornados pelo <xref:System.ServiceModel.EnvelopeVersion.Soap11%2A> e <xref:System.ServiceModel.EnvelopeVersion.Soap12%2A> propriedades. A versão do SOAP associado a <xref:System.ServiceModel.Channels.MessageVersion> podem ser recuperados usando o <xref:System.ServiceModel.Channels.MessageVersion.Envelope%2A> propriedade. [!INCLUDE[crdefault](~/includes/crdefault-md.md)]o esquema para [SOAP 1.1](http://go.microsoft.com/fwlink/?LinkId=96641) e [SOAP 1.2](http://go.microsoft.com/fwlink/?LinkId=96642).  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#2)]
+ [!code-vb[S_UE_MessageVersion#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageVersion.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> para comparar com a versão atual da mensagem.</param>
+        <summary>Retorna um valor que indica se a versão atual da mensagem é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado for igual ao atual <see cref="T:System.ServiceModel.Channels.MessageVersion" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#13](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#13)]
+ [!code-vb[S_UE_MessageVersion#13](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageVersion.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código hash para a versão atual da mensagem.</summary>
+        <returns>Um código hash exclusivo para a atual <see cref="T:System.ServiceModel.Channels.MessageVersion" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#14](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#14)]
+ [!code-vb[S_UE_MessageVersion#14](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageVersion None { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.MessageVersion None" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageVersion.None" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de mensagem que não usa SOAP nem endereçamento WS.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que não usa SOAP nem endereçamento WS.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.MessageVersion.None%2A> consiste de <xref:System.ServiceModel.EnvelopeVersion.None%2A> e <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>. Isso fornece suporte ao uso de "plain old XML" (POX)-estilo de mensagens. Habilitar mensagens básicas de POX agora é uma questão de configurar uma associação HTTP em seu serviço com um codificador de texto que usa <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>.  
+  
+ Observe que, quando um serviço é configurado com o <xref:System.ServiceModel.BasicHttpBinding> e <xref:System.ServiceModel.Channels.MessageVersion> é definido como <xref:System.ServiceModel.Channels.MessageVersion.None%2A>, o cabeçalho de ação em uma mensagem de solicitação é removido da mensagem de resposta. Isso é consistente com a maneira como o trabalho de serviços ASMX.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#4)]
+ [!code-vb[S_UE_MessageVersion#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Soap11">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageVersion Soap11 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.MessageVersion Soap11" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageVersion.Soap11" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão da mensagem usando o SOAP 1.1.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.MessageVersion" /> usando o SOAP 1.1, mas nenhuma versão do WS-Addressing.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#5)]
+ [!code-vb[S_UE_MessageVersion#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Soap11WSAddressing10">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageVersion Soap11WSAddressing10 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.MessageVersion Soap11WSAddressing10" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressing10" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de mensagem usando WS-Addressing 1.0 e SOAP 1.1.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que usa a versão de mensagem usando WS-Addressing 1.0 e SOAP 1.1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e os esquemas para WS-Addressing 1.0 e SOAP 1.1, consulte o seguinte:  
+  
+-   [1.0 - Core endereçamento de serviços Web](http://go.microsoft.com/fwlink/?LinkID=96644)  
+  
+-   [Esquema de WS-Addressing 1.0](http://go.microsoft.com/fwlink/?LinkId=96647)  
+  
+-   [SOAP 1.1 do esquema](http://go.microsoft.com/fwlink/?LinkId=96641)  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#6)]
+ [!code-vb[S_UE_MessageVersion#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Soap11WSAddressingAugust2004">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageVersion Soap11WSAddressingAugust2004 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.MessageVersion Soap11WSAddressingAugust2004" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de mensagem usando o WS-Addressing enviada 10 de agosto de 2004 e SOAP 1.1.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.MessageVersion" /> usando a versão do WS-Addressing enviada 10 de agosto de 2004 e SOAP 1.1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e os esquemas para a 10 de agosto de 2004 envio de membro do W3C para WS-Addressing e SOAP 1.1, consulte o seguinte:  
+  
+-   [Envio de membro de W3C 10 de agosto de 2004 para WS-Addressing.](http://go.microsoft.com/fwlink/?LinkID=96643)  
+  
+-   [WS-Addressing enviada esquema 10 de agosto de 2004](http://go.microsoft.com/fwlink/?LinkId=96648)  
+  
+-   [SOAP 1.1](http://go.microsoft.com/fwlink/?LinkID=96641)  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#7](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#7)]
+ [!code-vb[S_UE_MessageVersion#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Soap12">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageVersion Soap12 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.MessageVersion Soap12" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageVersion.Soap12" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão da mensagem que usa o SOAP 1.2.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que usa o SOAP 1.2, mas nenhuma versão do WS-Addressing.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#8](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#8)]
+ [!code-vb[S_UE_MessageVersion#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Soap12WSAddressing10">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageVersion Soap12WSAddressing10 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.MessageVersion Soap12WSAddressing10" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressing10" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de mensagem usando o WS-Addressing 1.0 e SOAP 1.2.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que usa a versão do WS-Addressing 1.0 e SOAP 1.2.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e os esquemas 17 de agosto de 2005 a recomendação do W3C candidato para WS-Addressing e SOAP 1.2, consulte o seguinte:  
+  
+-   [17 de agosto de 2005 W3C candidato recomendação do WS-Addressing 1.0 - Core](http://go.microsoft.com/fwlink/?LinkID=96644)  
+  
+-   [Esquema de WS-Addressing 1.0](http://go.microsoft.com/fwlink/?LinkID=96647)  
+  
+-   [SOAP 1.2 esquema](http://go.microsoft.com/fwlink/?LinkID=96642)  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#9](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#9)]
+ [!code-vb[S_UE_MessageVersion#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Soap12WSAddressingAugust2004">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.MessageVersion Soap12WSAddressingAugust2004 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.Channels.MessageVersion Soap12WSAddressingAugust2004" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de mensagem usando o WS-Addressing enviada de agosto de 2004 e SOAP 1.2.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.MessageVersion" /> usando a versão do WS-Addressing enviada 10 de agosto de 2004 e SOAP 1.2.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e os esquemas para 10 agosto W3C membro envio para WS-Addressing e SOAP 1.2, consulte o seguinte:  
+  
+-   [Envio de membro de W3C 10 de agosto de 2004 para WS-Addressing.](http://go.microsoft.com/fwlink/?LinkID=96643)  
+  
+-   [WS-Addressing enviada esquema 10 de agosto de 2004](http://go.microsoft.com/fwlink/?LinkID=96648)  
+  
+-   [SOAP 1.2 esquema](http://go.microsoft.com/fwlink/?LinkID=96642)  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#10)]
+ [!code-vb[S_UE_MessageVersion#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.MessageVersion.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação de cadeia de caracteres da versão da mensagem atual.</summary>
+        <returns>A representação de cadeia de caracteres da versão da mensagem atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[S_UE_MessageVersion#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_messageversion/cs/program.cs#3)]
+ [!code-vb[S_UE_MessageVersion#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_messageversion/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

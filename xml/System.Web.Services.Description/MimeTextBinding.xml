@@ -1,0 +1,123 @@
+<Type Name="MimeTextBinding" FullName="System.Web.Services.Description.MimeTextBinding">
+  <TypeSignature Language="C#" Value="public sealed class MimeTextBinding : System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MimeTextBinding extends System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.MimeTextBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.ServiceDescriptionFormatExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtension("text", "http://microsoft.com/wsdl/mime/textMatching/", typeof(System.Web.Services.Description.InputBinding), typeof(System.Web.Services.Description.OutputBinding), typeof(System.Web.Services.Description.MimePart))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtensionPrefix("tm", "http://microsoft.com/wsdl/mime/textMatching/")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um elemento de extensibilidade adicionado a um <see cref="T:System.Web.Services.Description.InputBinding" />, uma <see cref="T:System.Web.Services.Description.OutputBinding" />, ou um <see cref="T:System.Web.Services.Description.MimePart" />, especificando os padrões de texto que deseja pesquisar a transmissão HTTP. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como especificar protocolos para XML Web services, consulte [&#91;\< Topic://cpconbuildingaspnetwebservices > &#93; ](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c). Para obter mais informações sobre WSDL Web Services Description Language (), consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ [!code-cpp[MimeText_Binding_Match_8#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeText_Binding_Match_8/CPP/mimetext_binding_match_8.cpp#1)]
+ [!code-csharp[MimeText_Binding_Match_8#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeText_Binding_Match_8/CS/mimetext_binding_match_8.cs#1)]
+ [!code-vb[MimeText_Binding_Match_8#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeText_Binding_Match_8/VB/mimetext_binding_match_8.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MimeTextBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimeTextBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.MimeTextBinding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.MimeTextMatchCollection Matches { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.MimeTextMatchCollection Matches" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MimeTextBinding.Matches" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("match", typeof(System.Web.Services.Description.MimeTextMatch))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.MimeTextMatchCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de padrões de texto MIME para os quais a transmissão HTTP é pesquisada.</summary>
+        <value>Um <see cref="T:System.Web.Services.Description.MimeTextMatchCollection" /> que representa os padrões de texto MIME para pesquisar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como especificar protocolos para XML Web services, consulte [&#91;\< Topic://cpconbuildingaspnetwebservices > &#93; ](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c). Para obter mais informações sobre WSDL Web Services Description Language (), consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do `Matches` propriedade.  
+  
+ [!code-cpp[MimeText_Binding_Match_8#8](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeText_Binding_Match_8/CPP/mimetext_binding_match_8.cpp#8)]
+ [!code-csharp[MimeText_Binding_Match_8#8](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeText_Binding_Match_8/CS/mimetext_binding_match_8.cs#8)]
+ [!code-vb[MimeText_Binding_Match_8#8](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeText_Binding_Match_8/VB/mimetext_binding_match_8.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public const string Namespace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Namespace" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Description.MimeTextBinding.Namespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o URI para o namespace XML do <see cref="T:System.Web.Services.Description.MimeTextBinding" /> classe. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ MimeTextBinding_1 n º 1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

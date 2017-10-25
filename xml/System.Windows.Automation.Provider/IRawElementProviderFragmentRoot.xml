@@ -1,0 +1,113 @@
+<Type Name="IRawElementProviderFragmentRoot" FullName="System.Windows.Automation.Provider.IRawElementProviderFragmentRoot">
+  <TypeSignature Language="C#" Value="public interface IRawElementProviderFragmentRoot : System.Windows.Automation.Provider.IRawElementProviderFragment" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRawElementProviderFragmentRoot implements class System.Windows.Automation.Provider.IRawElementProviderFragment, class System.Windows.Automation.Provider.IRawElementProviderSimple" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.IRawElementProviderFragment</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("620ce2a5-ab8f-40a9-86cb-de3c75599b58")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe os métodos e as propriedades no elemento raiz em um fragmento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é implementada por um elemento raiz em uma estrutura; Por exemplo, uma caixa de listagem dentro de uma janela. Outros elementos no mesmo fragmento, como itens de lista, implementam a <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ElementProviderFromPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderFragment ElementProviderFromPoint (double x, double y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderFragment ElementProviderFromPoint(float64 x, float64 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.ElementProviderFromPoint(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderFragment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada de X.</param>
+        <param name="y">A coordenada Y.</param>
+        <summary>Recupera o elemento desse fragmento no ponto especificado.</summary>
+        <returns>O provedor para o elemento filho no ponto especificado, se houver, ou o provedor de raiz, se o ponto está sobre este elemento, mas não em qualquer elemento filho. Caso contrário, retornará <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o ponto está em um elemento de estrutura de outro que esteja hospedado por este fragmento, o método retorna o elemento que hospeda esse fragmento.  
+  
+ O provedor retornado deve corresponder ao elemento que deve receber entrada do mouse no ponto especificado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma possível implementação desse método para uma caixa de listagem não rolam. O índice do item de lista no ponto especificado é calculado usando a altura de cada item e o item nesse momento é retornado. Se não há nenhum item nesse momento (por exemplo, é uma área em branco da caixa de listagem, o método retorna uma referência nula (`Nothing`).  
+  
+ [!code-csharp[UIAFragmentProvider_snip#106](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#106)]
+ [!code-vb[UIAFragmentProvider_snip#106](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#106)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFocus">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderFragment GetFocus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderFragment GetFocus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot.GetFocus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderFragment</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o elemento desse fragmento que tem o foco de entrada.</summary>
+        <returns>O provedor para o elemento desse fragmento que tem o foco de entrada, se houver; Caso contrário, uma referência nula (<see langword="Nothing" /> no Visual Basic).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o foco estiver em um elemento de estrutura de outro que esteja hospedado por este fragmento, o método retorna o elemento que hospeda esse fragmento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma possível implementação desse método para uma caixa de listagem. Ele retorna o item atualmente selecionado na lista.  
+  
+ [!code-csharp[UIAFragmentProvider_snip#107](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#107)]
+ [!code-vb[UIAFragmentProvider_snip#107](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#107)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

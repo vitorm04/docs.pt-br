@@ -1,0 +1,383 @@
+<Type Name="UndoEngine+UndoUnit" FullName="System.ComponentModel.Design.UndoEngine+UndoUnit">
+  <TypeSignature Language="C#" Value="protected class UndoEngine.UndoUnit" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit UndoEngine/UndoUnit extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.UndoEngine.UndoUnit" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula uma unidade de trabalho que um usuário pode desfazer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> classe é uma classe aninhada dentro de <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoEngine%2A> que encapsula uma ação que um usuário pode desfazer. O padrão <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> monitora as notificações de alteração de implementação e cria uma lista de eventos para cada alteração. Ele salva esses eventos usando <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>. Um <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> recebe notificações de eventos para alterações diretamente do <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoEngine%2A> por meio de várias `public virtual` métodos. Você pode derivar de <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> e executar qualquer lógica adicional. Se desejar, você pode ignorar completamente o padrão <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> implementação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UndoUnit (System.ComponentModel.Design.UndoEngine engine, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Design.UndoEngine engine, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.#ctor(System.ComponentModel.Design.UndoEngine,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="engine" Type="System.ComponentModel.Design.UndoEngine" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="engine">O mecanismo de desfazer que possui essa unidade para desfazer.</param>
+        <param name="name">O nome para essa unidade de desfazer.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.UndoEngine.UndoUnit" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="engine" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recebe uma chamada do mecanismo de desfazer para fechar esta unidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma unidade é fechada, nenhum evento mais pode vir em seus vários métodos de evento. O <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> em si pode agir aqui para garantir que todos os eventos que são abertos são fechados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentAdded">
+      <MemberSignature Language="C#" Value="public virtual void ComponentAdded (System.ComponentModel.Design.ComponentEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ComponentAdded(class System.ComponentModel.Design.ComponentEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.ComponentAdded(System.ComponentModel.Design.ComponentEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Design.ComponentEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.Design.ComponentEventArgs" /> que contém os dados do evento.</param>
+        <summary>Recebe uma chamada a partir de <see cref="T:System.ComponentModel.Design.UndoEngine" /> em resposta a um <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentAdded" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentAdding">
+      <MemberSignature Language="C#" Value="public virtual void ComponentAdding (System.ComponentModel.Design.ComponentEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ComponentAdding(class System.ComponentModel.Design.ComponentEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.ComponentAdding(System.ComponentModel.Design.ComponentEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Design.ComponentEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.Design.ComponentEventArgs" /> que contém os dados do evento.</param>
+        <summary>Recebe uma chamada a partir de <see cref="T:System.ComponentModel.Design.UndoEngine" /> em resposta a um <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentAdding" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentChanged">
+      <MemberSignature Language="C#" Value="public virtual void ComponentChanged (System.ComponentModel.Design.ComponentChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ComponentChanged(class System.ComponentModel.Design.ComponentChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.ComponentChanged(System.ComponentModel.Design.ComponentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Design.ComponentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Recebe uma chamada a partir de <see cref="T:System.ComponentModel.Design.UndoEngine" /> em resposta a um <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentChanging">
+      <MemberSignature Language="C#" Value="public virtual void ComponentChanging (System.ComponentModel.Design.ComponentChangingEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ComponentChanging(class System.ComponentModel.Design.ComponentChangingEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.ComponentChanging(System.ComponentModel.Design.ComponentChangingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Design.ComponentChangingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Recebe uma chamada a partir de <see cref="T:System.ComponentModel.Design.UndoEngine" /> em resposta a um <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanging" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentRemoved">
+      <MemberSignature Language="C#" Value="public virtual void ComponentRemoved (System.ComponentModel.Design.ComponentEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ComponentRemoved(class System.ComponentModel.Design.ComponentEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.ComponentRemoved(System.ComponentModel.Design.ComponentEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Design.ComponentEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.Design.ComponentEventArgs" /> que contém os dados do evento.</param>
+        <summary>Recebe uma chamada a partir de <see cref="T:System.ComponentModel.Design.UndoEngine" /> em resposta a um <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentRemoved" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentRemoving">
+      <MemberSignature Language="C#" Value="public virtual void ComponentRemoving (System.ComponentModel.Design.ComponentEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ComponentRemoving(class System.ComponentModel.Design.ComponentEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.ComponentRemoving(System.ComponentModel.Design.ComponentEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Design.ComponentEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.Design.ComponentEventArgs" /> que contém os dados do evento.</param>
+        <summary>Recebe uma chamada a partir de <see cref="T:System.ComponentModel.Design.UndoEngine" /> em resposta a um <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentRemoving" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentRename">
+      <MemberSignature Language="C#" Value="public virtual void ComponentRename (System.ComponentModel.Design.ComponentRenameEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ComponentRename(class System.ComponentModel.Design.ComponentRenameEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.ComponentRename(System.ComponentModel.Design.ComponentRenameEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Design.ComponentRenameEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.Design.ComponentRenameEventArgs" /> que contém os dados do evento.</param>
+        <summary>Recebe uma chamada a partir de <see cref="T:System.ComponentModel.Design.UndoEngine" /> em resposta a um <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentRename" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço a ser recuperado.</param>
+        <summary>Obtém uma instância do serviço solicitado.</summary>
+        <returns>Uma instância do serviço em questão, ou <see langword="null" /> se o serviço não pode ser resolvido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public virtual bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.UndoEngine.UndoUnit.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.ComponentModel.Design.UndoEngine.UndoUnit" /> não contém eventos.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.ComponentModel.Design.UndoEngine.UndoUnit" /> não contém eventos; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de desfazer pode descartar unidades vazias.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.UndoEngine.UndoUnit.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do <see cref="T:System.ComponentModel.Design.UndoEngine.UndoUnit" />.</summary>
+        <value>O nome do <see cref="T:System.ComponentModel.Design.UndoEngine.UndoUnit" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> que representa o nome atual da unidade.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o nome atual da unidade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Undo">
+      <MemberSignature Language="C#" Value="public void Undo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Undo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa uma ação de desfazer ou refazer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ações de desfazer alternar se desfazer e refazer estados, por isso a chamada <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo%2A> define duas vezes o objeto de volta ao estado original.  
+  
+ O <xref:System.ComponentModel.Design.UndoEngine.UndoUnit> classe inicialmente assume que o trabalho não pode ser desfeito já foi feito, portanto, a primeira chamada para <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo%2A> desfaz o trabalho. A próxima chamada desfaz a operação de desfazer anterior, executando uma restauração.  
+  
+ O <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo%2A> chamadas de método de <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoCore%2A> método para executar uma operação de desfazer. O <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo%2A> próprio método funciona para manter o estado consistente dentro do <xref:System.ComponentModel.Design.UndoEngine.UndoUnit>, mesmo no caso de uma exceção gerada pelo <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoCore%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Não chame o <see cref="M:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoCore" /> método substituí-la diretamente; se você quiser, mas sempre chamar o <see langword="public" /> <see cref="M:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo" /> método para executar o trabalho de desfazer. O <see cref="M:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo" /> método notifica o mecanismo de desfazer para suspender até que a operação de desfazer atual seja concluída de coleta de dados de desfazer. Isso impede que novas unidades de desfazer está sendo criado em resposta a essa unidade de trabalho.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoCore">
+      <MemberSignature Language="C#" Value="protected virtual void UndoCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void UndoCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado por <see cref="M:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo" /> para executar uma ação de desfazer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo%2A> chamadas de método de <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoCore%2A> método para executar uma operação de desfazer. O <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo%2A> próprio método funciona para manter o estado consistente dentro do <xref:System.ComponentModel.Design.UndoEngine.UndoUnit>, mesmo no caso de uma exceção gerada pelo <xref:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoCore%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Não chame o <see cref="M:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoCore" /> método substituí-la diretamente; se você quiser, mas sempre chamar o <see langword="public" /> <see cref="M:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo" /> método para executar o trabalho de desfazer. O <see cref="M:System.ComponentModel.Design.UndoEngine.UndoUnit.Undo" /> método notifica o mecanismo de desfazer para suspender até que a operação de desfazer atual seja concluída de coleta de dados de operação de desfazer. Isso impede que novas unidades de desfazer está sendo criado em resposta a essa unidade de trabalho.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoEngine">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.Design.UndoEngine UndoEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.UndoEngine UndoEngine" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.UndoEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai <see cref="P:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoEngine" />.</summary>
+        <value>O <see cref="P:System.ComponentModel.Design.UndoEngine.UndoUnit.UndoEngine" /> ao qual este <see cref="T:System.ComponentModel.Design.UndoEngine.UndoUnit" /> está anexado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

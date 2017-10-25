@@ -1,0 +1,96 @@
+<Type Name="VisualTarget" FullName="System.Windows.Media.VisualTarget">
+  <TypeSignature Language="C#" Value="public class VisualTarget : System.Windows.Media.CompositionTarget" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VisualTarget extends System.Windows.Media.CompositionTarget" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.VisualTarget" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.CompositionTarget</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a funcionalidade para conectar uma árvore visual a outra árvore visual entre limites de thread.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VisualTarget (System.Windows.Media.HostVisual hostVisual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Media.HostVisual hostVisual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.VisualTarget.#ctor(System.Windows.Media.HostVisual)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="hostVisual" Type="System.Windows.Media.HostVisual" />
+      </Parameters>
+      <Docs>
+        <param name="hostVisual">Um valor do tipo <see cref="T:System.Windows.Media.HostVisual" />.</param>
+        <summary>Construtor que cria um novo <see cref="T:System.Windows.Media.VisualTarget" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.VisualTarget.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa o estado associado a <see cref="T:System.Windows.Interop.HwndTarget" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformFromDevice">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Matrix TransformFromDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix TransformFromDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.VisualTarget.TransformFromDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma matriz que pode ser usada para transformar as coordenadas do dispositivo de destino de renderização para o <see cref="T:System.Windows.Media.VisualTarget" />.</summary>
+        <value>Obtém um valor do tipo <see cref="T:System.Windows.Media.Matrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformToDevice">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Matrix TransformToDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix TransformToDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.VisualTarget.TransformToDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma matriz que pode ser usada para transformar as coordenadas do <see cref="T:System.Windows.Media.VisualTarget" /> para o dispositivo de destino de renderização.</summary>
+        <value>Obtém um valor do tipo <see cref="T:System.Windows.Media.Matrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

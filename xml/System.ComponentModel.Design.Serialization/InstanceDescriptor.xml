@@ -1,0 +1,266 @@
+<Type Name="InstanceDescriptor" FullName="System.ComponentModel.Design.Serialization.InstanceDescriptor">
+  <TypeSignature Language="C#" Value="public sealed class InstanceDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InstanceDescriptor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.InstanceDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece as informações necessárias para criar uma instância de um objeto. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor>pode armazenar informações que descrevem a uma instância de um objeto. Essas informações podem ser usadas para criar uma instância do objeto.  
+  
+ Usam alguns serializadores personalizados <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor> representar objetos serializáveis. Vários métodos de um <xref:System.ComponentModel.TypeDescriptor> usar <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor> representar ou instanciar objetos.  
+  
+ Um <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor> fornece os seguintes membros:  
+  
+-   Um <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor.MemberInfo%2A> propriedade que descreve este objeto.  
+  
+-   Um <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor.Arguments%2A> propriedade consiste os argumentos de construtor que podem ser usados para criar uma instância desse objeto.  
+  
+-   Um valor booleano <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor.IsComplete%2A> propriedade que indica se o objeto completamente é representado pelas informações atuais.  
+  
+-   Um <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor.Invoke%2A> método que pode ser usado para criar uma instância do objeto representado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra como usar um conversor de tipo que participa de geração de código com o uso de descritores de instância.  
+  
+ [!code-cpp[InstanceDescriptorSample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/InstanceDescriptorSample/CPP/instancedescriptor.cpp#1)]
+ [!code-csharp[InstanceDescriptorSample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/InstanceDescriptorSample/CS/instancedescriptor.cs#1)]
+ [!code-vb[InstanceDescriptorSample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/InstanceDescriptorSample/VB/instancedescriptor.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceDescriptor (System.Reflection.MemberInfo member, System.Collections.ICollection arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.MemberInfo member, class System.Collections.ICollection arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.InstanceDescriptor.#ctor(System.Reflection.MemberInfo,System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="member" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="arguments" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="member">As informações de membro para o descritor. Isso pode ser um <see cref="T:System.Reflection.MethodInfo" />, <see cref="T:System.Reflection.ConstructorInfo" />, <see cref="T:System.Reflection.FieldInfo" />, ou <see cref="T:System.Reflection.PropertyInfo" />. Se esse for um <see cref="T:System.Reflection.MethodInfo" />, <see cref="T:System.Reflection.FieldInfo" />, ou <see cref="T:System.Reflection.PropertyInfo" />, ele deve representar um <see langword="static" /> membro.</param>
+        <param name="arguments">A coleção de argumentos para passar para o membro. Esse parâmetro pode ser <see langword="null" /> ou uma coleção vazia se não houver nenhum argumento. A coleção também pode consistir em outras instâncias do <see cref="T:System.ComponentModel.Design.Serialization.InstanceDescriptor" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.Serialization.InstanceDescriptor" /> classe usando os argumentos e as informações do membro especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="member" />é do tipo <see cref="T:System.Reflection.MethodInfo" />, <see cref="T:System.Reflection.FieldInfo" />, ou <see cref="T:System.Reflection.PropertyInfo" />, e ele não representa um <see langword="static" /> membro.  
+  
+ <paramref name="member" />é do tipo <see cref="T:System.Reflection.PropertyInfo" /> e não é legível.  
+  
+ <paramref name="member" />é do tipo <see cref="T:System.Reflection.MethodInfo" /> ou <see cref="T:System.Reflection.ConstructorInfo" />e o número de argumentos em <paramref name="arguments" /> não coincide com a assinatura de <paramref name="member." /> <paramref name="member" /> é do tipo <see cref="T:System.Reflection.ConstructorInfo" /> e representa um <see langword="static" /> membro.  
+  
+ <paramref name="member" />é do tipo <see cref="T:System.Reflection.FieldInfo" />e o número de argumentos em <paramref name="arguments" /> não é zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstanceDescriptor (System.Reflection.MemberInfo member, System.Collections.ICollection arguments, bool isComplete);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.MemberInfo member, class System.Collections.ICollection arguments, bool isComplete) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.InstanceDescriptor.#ctor(System.Reflection.MemberInfo,System.Collections.ICollection,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="member" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="arguments" Type="System.Collections.ICollection" />
+        <Parameter Name="isComplete" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="member">As informações de membro para o descritor. Isso pode ser um <see cref="T:System.Reflection.MethodInfo" />, <see cref="T:System.Reflection.ConstructorInfo" />, <see cref="T:System.Reflection.FieldInfo" />, ou <see cref="T:System.Reflection.PropertyInfo" />. Se esse for um <see cref="T:System.Reflection.MethodInfo" />, <see cref="T:System.Reflection.FieldInfo" />, ou <see cref="T:System.Reflection.PropertyInfo" />, ele deve representar um <see langword="static" /> membro.</param>
+        <param name="arguments">A coleção de argumentos para passar para o membro. Esse parâmetro pode ser <see langword="null" /> ou uma coleção vazia se não houver nenhum argumento. A coleção também pode consistir em outras instâncias do <see cref="T:System.ComponentModel.Design.Serialization.InstanceDescriptor" />.</param>
+        <param name="isComplete">
+          <see langword="true" />Se as informações especificadas descrevem completamente a instância; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.Serialization.InstanceDescriptor" /> usando as informações do membro especificado, argumentos e valor que indica se as informações especificadas descrevem completamente a instância de classe.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="member" />é do tipo <see cref="T:System.Reflection.MethodInfo" />, <see cref="T:System.Reflection.FieldInfo" />, ou <see cref="T:System.Reflection.PropertyInfo" />, e ele não representa um <see langword="static" /> membro  
+  
+ <paramref name="member" />é do tipo <see cref="T:System.Reflection.PropertyInfo" /> e não é legível.  
+  
+ <paramref name="member" />é do tipo <see cref="T:System.Reflection.MethodInfo" /> ou <see cref="T:System.Reflection.ConstructorInfo" /> e o número de argumentos em <paramref name="arguments" /> não coincide com a assinatura de <paramref name="member" />.  
+  
+ <paramref name="member" />é do tipo <see cref="T:System.Reflection.ConstructorInfo" /> e representa um <see langword="static" /> membro  
+  
+ <paramref name="member" />é do tipo <see cref="T:System.Reflection.FieldInfo" />e o número de argumentos em <paramref name="arguments" /> não é zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.InstanceDescriptor.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de argumentos que podem ser usados para reconstruir uma instância do objeto que representa esse descritor de instância.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> de argumentos que podem ser usados para criar o objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.InstanceDescriptor.Invoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invoca esse descritor de instância e retorna que o objeto descritor descreve.</summary>
+        <returns>O objeto que descreve esse descritor de instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria uma nova instância do objeto indicado pelo <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor.MemberInfo%2A> propriedade, usando os argumentos especificados para criar esse tipo específico de instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsComplete">
+      <MemberSignature Language="C#" Value="public bool IsComplete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsComplete" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.InstanceDescriptor.IsComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o conteúdo desse <see cref="T:System.ComponentModel.Design.Serialization.InstanceDescriptor" /> completamente identificar a instância.</summary>
+        <value>
+          <see langword="true" />Se a instância é descrita completamente; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, um <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor> descreve uma determinada instância. No entanto, alguns objetos são muito complexos para um único método ou construtor para representar. <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor.IsComplete%2A>Indica se um <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor> estiver incompleta, para que um usuário possa identificar esses objetos e executar processamento adicional, se necessário, para mais descrever seu estado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberInfo">
+      <MemberSignature Language="C#" Value="public System.Reflection.MemberInfo MemberInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MemberInfo MemberInfo" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.InstanceDescriptor.MemberInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de membro que descreve a instância que esse descritor está associado.</summary>
+        <value>Um <see cref="T:System.Reflection.MemberInfo" /> que descreve a instância que este objeto está associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade pode ser um <xref:System.Reflection.MethodInfo>, <xref:System.Reflection.ConstructorInfo>, <xref:System.Reflection.FieldInfo>, ou <xref:System.Reflection.PropertyInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

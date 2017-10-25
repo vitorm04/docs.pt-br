@@ -1,0 +1,115 @@
+<Type Name="StringSplitOptions" FullName="System.StringSplitOptions">
+  <TypeSignature Language="C#" Value="public enum StringSplitOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StringSplitOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.StringSplitOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se as sobrecargas do método <see cref="Overload:System.String.Split" /> aplicável incluem ou omitem subcadeias de caracteres vazias do valor retornado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.String.Split%2A?displayProperty=nameWithType> método retorna uma matriz de subcadeias de caracteres em uma cadeia de caracteres determinada são delimitados por caracteres especificados ou cadeias de caracteres. Delimitadores adjacentes geram um elemento de matriz que contém uma cadeia de caracteres vazia (""). Os valores de <xref:System.StringSplitOptions> enumeração especificar se um elemento de matriz que contém uma cadeia de caracteres vazia é incluído na matriz retornada.  
+  
+ Especifique a nenhum valor para invocar o comportamento padrão do <xref:System.String.Split%2A?displayProperty=nameWithType> método, que deve retornar uma matriz de subcadeias de caracteres vazias e subcadeias de caracteres que não estão vazias. Especifique o valor de RemoveEmptyEntries para fazer com que o <xref:System.String.Split%2A?displayProperty=nameWithType> método para retornar uma matriz que consiste exclusivamente em subcadeias de caracteres que não estão vazias.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.StringSplitOptions.RemoveEmptyEntries> enumeração para incluir ou excluir subcadeias de caracteres geradas pelo <xref:System.String.Split%2A?displayProperty=nameWithType> método.  
+  
+ [!code-cpp[string.split3#1](~/samples/snippets/cpp/VS_Snippets_CLR/string.split3/CPP/omit.cpp#1)]
+ [!code-csharp[string.split3#1](~/samples/snippets/csharp/VS_Snippets_CLR/string.split3/CS/omit.cs#1)]
+ [!code-vb[string.split3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/string.split3/VB/omit.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.StringSplitOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.StringSplitOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringSplitOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor retornado inclui elementos de matriz que contêm uma cadeia de caracteres vazia</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEmptyEntries">
+      <MemberSignature Language="C#" Value="RemoveEmptyEntries" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.StringSplitOptions RemoveEmptyEntries = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.StringSplitOptions.RemoveEmptyEntries" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.StringSplitOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor retornado não inclui elementos de matriz que contêm uma cadeia de caracteres vazia</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

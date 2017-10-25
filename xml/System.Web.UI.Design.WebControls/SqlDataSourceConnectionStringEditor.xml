@@ -1,0 +1,90 @@
+<Type Name="SqlDataSourceConnectionStringEditor" FullName="System.Web.UI.Design.WebControls.SqlDataSourceConnectionStringEditor">
+  <TypeSignature Language="C#" Value="public class SqlDataSourceConnectionStringEditor : System.Web.UI.Design.ConnectionStringEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlDataSourceConnectionStringEditor extends System.Web.UI.Design.ConnectionStringEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.SqlDataSourceConnectionStringEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ConnectionStringEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface de usuário para selecionar e editar uma propriedade de cadeia de caracteres de conexão de um <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> objeto em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.SqlDataSourceConnectionStringEditor> classe é um <xref:System.Drawing.Design.UITypeEditor> objeto que pode ser usado em tempo de design para selecionar e editar uma expressão de cadeia de caracteres de conexão e atribuir a expressão para uma propriedade de controle. O <xref:System.Web.UI.WebControls.SqlDataSource> objeto usa o <xref:System.Web.UI.Design.WebControls.SqlDataSourceConnectionStringEditor> classe em tempo de design para definir o valor da <xref:System.Web.UI.WebControls.SqlDataSource.ConnectionString%2A> propriedade.  
+  
+ Se um <xref:System.ComponentModel.Design.Data.IDataEnvironment> interface estiver disponível, cadeias de caracteres de conexão são recuperadas dos serviços de dados do visual designer. Se um <xref:System.ComponentModel.Design.Data.IDataEnvironment> interface não estiver disponível, uma caixa de diálogo modal é mostrada para permitir a edição da cadeia de caracteres de conexão.  
+  
+ Use o <xref:System.ComponentModel.EditorAttribute> atributo para associar o <xref:System.Web.UI.Design.WebControls.SqlDataSourceConnectionStringEditor> com uma propriedade. Quando a propriedade associada é editada na superfície de design, o host de designer chama o <xref:System.Web.UI.Design.ConnectionStringEditor.EditValue%2A> método. O <xref:System.Web.UI.Design.ConnectionStringEditor.EditValue%2A> método exibe uma interface do usuário para criar a expressão de cadeia de caracteres de conexão e retorna a cadeia de caracteres de conexão selecionado pelo usuário. O <xref:System.Web.UI.Design.ConnectionStringEditor.GetEditStyle%2A> método indica o estilo de exibição da interface do usuário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlDataSourceConnectionStringEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SqlDataSourceConnectionStringEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.SqlDataSourceConnectionStringEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderName">
+      <MemberSignature Language="C#" Value="protected override string GetProviderName (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetProviderName(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SqlDataSourceConnectionStringEditor.GetProviderName(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">O <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> que se aplica a cadeia de caracteres de conexão.</param>
+        <summary>Retorna o <see cref="P:System.Web.UI.WebControls.SqlDataSource.ProviderName" /> propriedade o <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> objeto.</summary>
+        <returns>O <see cref="P:System.Web.UI.WebControls.SqlDataSource.ProviderName" /> propriedade o <see cref="T:System.Web.UI.WebControls.SqlDataSource" />, se o <paramref name="instance" /> não é <see langword="null" />; caso contrário, uma cadeia de caracteres vazia ("").</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProviderName">
+      <MemberSignature Language="C#" Value="protected override void SetProviderName (object instance, System.ComponentModel.Design.Data.DesignerDataConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetProviderName(object instance, class System.ComponentModel.Design.Data.DesignerDataConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SqlDataSourceConnectionStringEditor.SetProviderName(System.Object,System.ComponentModel.Design.Data.DesignerDataConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="connection" Type="System.ComponentModel.Design.Data.DesignerDataConnection" />
+      </Parameters>
+      <Docs>
+        <param name="instance">O <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> que se aplica a cadeia de caracteres de conexão.</param>
+        <param name="connection">O <see cref="T:System.ComponentModel.Design.Data.DesignerDataConnection" /> associado ao <see cref="T:System.Web.UI.WebControls.SqlDataSource" />.</param>
+        <summary>Conjuntos de <see cref="P:System.Web.UI.WebControls.SqlDataSource.ProviderName" /> propriedade o <see cref="T:System.Web.UI.WebControls.SqlDataSource" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

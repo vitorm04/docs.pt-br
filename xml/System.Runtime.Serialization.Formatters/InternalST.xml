@@ -1,0 +1,207 @@
+<Type Name="InternalST" FullName="System.Runtime.Serialization.Formatters.InternalST">
+  <TypeSignature Language="C#" Value="public sealed class InternalST" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InternalST extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Formatters.InternalST" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Logs de rastreamento de mensagens quando a infraestrutura de serialização do .NET Framework é compilada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A mensagem de rastreamento é impressa durante a serialização, comunicação remota ou durante a execução [Soapsuds ferramenta (Soapsuds.exe)](http://msdn.microsoft.com/en-us/40f6f8c8-b80c-4e9f-a920-31bcd0cf45c5).  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="InfoSoap">
+      <MemberSignature Language="C#" Value="public static void InfoSoap (params object[] messages);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InfoSoap(object[] messages) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.InternalST.InfoSoap(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("_LOGGING")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messages" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="messages">Uma matriz de mensagens de rastreamento para imprimir.</param>
+        <summary>Imprime SOAP mensagens de rastreamento.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAssemblyFromString">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Assembly LoadAssemblyFromString (string assemblyString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Assembly LoadAssemblyFromString(string assemblyString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.InternalST.LoadAssemblyFromString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyString">O nome do assembly a ser carregado.</param>
+        <summary>Carrega um assembly específico para depurar.</summary>
+        <returns>O <see cref="T:System.Reflection.Assembly" /> para depurar.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationSetValue">
+      <MemberSignature Language="C#" Value="public static void SerializationSetValue (System.Reflection.FieldInfo fi, object target, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SerializationSetValue(class System.Reflection.FieldInfo fi, object target, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.InternalST.SerializationSetValue(System.Reflection.FieldInfo,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fi" Type="System.Reflection.FieldInfo" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fi">Um <see cref="T:System.Reflection.FieldInfo" /> que contém dados sobre o campo de destino.</param>
+        <param name="target">O campo para alterar.</param>
+        <param name="value">O valor a ser definido.</param>
+        <summary>Define o valor de um campo.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Soap">
+      <MemberSignature Language="C#" Value="public static void Soap (params object[] messages);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Soap(object[] messages) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.InternalST.Soap(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("SER_LOGGING")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messages" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="messages">Uma matriz de mensagens a serem processadas.</param>
+        <summary>Processa a matriz de mensagens especificada.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SoapAssert">
+      <MemberSignature Language="C#" Value="public static void SoapAssert (bool condition, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SoapAssert(bool condition, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.InternalST.SoapAssert(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("_DEBUG")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Um valor booleano para usar ao declarar.</param>
+        <param name="message">A mensagem a ser usada ao declarar.</param>
+        <summary>Declara a mensagem especificada.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SoapCheckEnabled">
+      <MemberSignature Language="C#" Value="public static bool SoapCheckEnabled ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool SoapCheckEnabled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.InternalST.SoapCheckEnabled" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica se o rastreamento SOAP está habilitado.</summary>
+        <returns>
+          <see langword="true" />, se o rastreamento estiver habilitado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

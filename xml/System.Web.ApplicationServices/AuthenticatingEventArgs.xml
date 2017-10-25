@@ -1,0 +1,211 @@
+<Type Name="AuthenticatingEventArgs" FullName="System.Web.ApplicationServices.AuthenticatingEventArgs">
+  <TypeSignature Language="C#" Value="public class AuthenticatingEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthenticatingEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ApplicationServices.AuthenticatingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.ApplicationServices.AuthenticationService.Authenticating" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Criar um manipulador para o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento para personalizar como as credenciais do usuário são autenticadas em tempo de execução. O <xref:System.Web.ApplicationServices.AuthenticatingEventArgs> classe fornece valores para qualquer <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> manipulador de eventos. Usando as propriedades disponíveis nessa classe, você pode recuperar as credenciais do usuário para personalizar a autenticação.  
+  
+ O <xref:System.Web.ApplicationServices.AuthenticationService> classe gera o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento antes de validar as credenciais do usuário. O <xref:System.Web.ApplicationServices.AuthenticationService> classe constrói uma instância do <xref:System.Web.ApplicationServices.AuthenticatingEventArgs> de objeto e passá-lo para qualquer <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> manipulador de eventos.  
+  
+ Você pode usar o <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A>, <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> e <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> propriedades para recuperar as credenciais do usuário. O <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> propriedade pode conter valores adicionais que são necessários para autenticação, como um número de identificação.  
+  
+ O <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> propriedade indica se as credenciais do usuário são válidas. Definir o <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> propriedade para o resultado da sua autenticação personalizada. Além disso, você definir o <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> propriedade `true` se você verificou as credenciais do usuário e não quiser que o <xref:System.Web.ApplicationServices.AuthenticationService> classe para verificar as credenciais de usuário por meio do provedor de associação padrão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos que passa o <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> e <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> valores para um provedor de associação personalizado para validar as credenciais do usuário. O manipulador de evento define <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> para o valor de retorno de <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> método e conjuntos de <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> para `true` para que o <xref:System.Web.ApplicationServices.AuthenticationService> classe não valida as credenciais.  
+  
+ [!code-csharp[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/vb/Global.asax#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Authenticated">
+      <MemberSignature Language="C#" Value="public bool Authenticated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Authenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as credenciais do usuário são válidas.</summary>
+        <value>
+          <see langword="true" /> se as credenciais do usuário forem válidas; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você autenticar credenciais de usuário em um manipulador de eventos para o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> conjunto de eventos, o <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> propriedade para indicar se as credenciais do usuário são válidas. Se as credenciais do usuário são válidas e nenhuma validação adicional é necessária, defina <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> para `true` e <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> para `true`. Definir o <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> etapas de propriedade para indicar que o serviço de autenticação deve ignorar o padrão para autenticar um usuário. O valor em <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> é usado pelo <xref:System.Web.ApplicationServices.AuthenticationService> se única classe <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> é definido como `true`. Se <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> é `false`, o <xref:System.Web.ApplicationServices.AuthenticationService> classe chama o provedor de associação padrão para validar as credenciais do usuário e, em seguida, substitui o valor em <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos que passa <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> e <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> valores para um provedor de associação personalizado para validar as credenciais do usuário. O manipulador de evento define <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> para o valor de retorno de <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> método e conjuntos de <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> para `true` para que o <xref:System.Web.ApplicationServices.AuthenticationService> classe não valida as credenciais.  
+  
+ [!code-csharp[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationIsComplete">
+      <MemberSignature Language="C#" Value="public bool AuthenticationIsComplete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AuthenticationIsComplete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as credenciais de usuário autenticadas.</summary>
+        <value>
+          <see langword="true" />Se todas as etapas para validar as credenciais do usuário tem sido executadas; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir o <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> propriedade para indicar se o <xref:System.Web.ApplicationServices.AuthenticationService> classe deve autenticar as credenciais do usuário. Se <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> é `true`, o <xref:System.Web.ApplicationServices.AuthenticationService> classe não valida as credenciais do usuário por meio do provedor de associação padrão. Em vez disso, ele usa o valor em <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> para determinar se deseja criar um cookie de autenticação.  
+  
+ Se <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> é `false`, o <xref:System.Web.ApplicationServices.AuthenticationService> classe valida as credenciais do usuário por meio do provedor de associação padrão e substitui o valor de <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos que passa <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> e <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> valores para um provedor de associação personalizado para validar as credenciais do usuário. O manipulador de evento define <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> para o valor de retorno de <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> método e conjuntos de <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> para `true` para que o <xref:System.Web.ApplicationServices.AuthenticationService> classe não valida as credenciais.  
+  
+ [!code-csharp[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomCredential">
+      <MemberSignature Language="C#" Value="public string CustomCredential { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomCredential" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores de usuário adicionais para autenticação.</summary>
+        <value>Os valores necessários para autenticação diferente do nome de usuário e senha.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> propriedade para recuperar valores de autenticação que não seja o nome de usuário e senha durante o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento. Por exemplo, um aplicativo pode ser configurado para validar um número de identificação junto com o nome de usuário e senha. Nesse caso, o número de identificação será passado a `CustomCredential` parâmetro o <xref:System.Web.ApplicationServices.AuthenticationService.Login%2A> método. Você pode recuperar o valor personalizado por meio de <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> propriedade.  
+  
+ O <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> propriedade contém os valores personalizados no mesmo formato que eles são passados para o <xref:System.Web.ApplicationServices.AuthenticationService.Login%2A> método. No <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> manipulador de eventos, se mais de um valor é armazenado na propriedade, você deve analisar o valor da <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> propriedade para recuperar os valores.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento que analisa os dois valores de autenticação do <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> propriedade. Ele passa dois valores e o nome de usuário e senha para uma classe de autenticação personalizada chamada `StudentAuthentication`.  
+  
+ [!code-csharp[System.Web.Security.LoginService_MultipleCredentials#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_MultipleCredentials/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_MultipleCredentials#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_MultipleCredentials/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.AuthenticatingEventArgs.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a senha do usuário.</summary>
+        <value>A senha a ser validada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> propriedade para recuperar a senha durante o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos que passa <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> e <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> valores para um provedor de associação personalizado para validar as credenciais do usuário. O manipulador de evento define <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> para o valor de retorno de <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> método e conjuntos de <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> para `true` para que o <xref:System.Web.ApplicationServices.AuthenticationService> classe não valida as credenciais.  
+  
+ [!code-csharp[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public string UserName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de autenticação para o usuário.</summary>
+        <value>O nome de usuário para validar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> propriedade para recuperar o nome de autenticação durante o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos que seleciona um provedor de associação para usar com base no valor da <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> propriedade. O manipulador é aprovado <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.UserName%2A> e <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Password%2A> valores para o provedor de associação personalizado para validar as credenciais do usuário. Ele define <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.Authenticated%2A> para o valor de retorno de <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> método e conjuntos de <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.AuthenticationIsComplete%2A> para `true` para que o <xref:System.Web.ApplicationServices.AuthenticationService> classe não valida as credenciais.  
+  
+ [!code-csharp[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_NonDefaultProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_NonDefaultProvider/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

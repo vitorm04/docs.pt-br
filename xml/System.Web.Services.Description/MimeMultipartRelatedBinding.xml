@@ -1,0 +1,88 @@
+<Type Name="MimeMultipartRelatedBinding" FullName="System.Web.Services.Description.MimeMultipartRelatedBinding">
+  <TypeSignature Language="C#" Value="public sealed class MimeMultipartRelatedBinding : System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MimeMultipartRelatedBinding extends System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.MimeMultipartRelatedBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.ServiceDescriptionFormatExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtension("multipartRelated", "http://schemas.xmlsoap.org/wsdl/mime/", typeof(System.Web.Services.Description.InputBinding), typeof(System.Web.Services.Description.OutputBinding))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um elemento de extensibilidade adicionado a um <see cref="T:System.Web.Services.Description.InputBinding" /> ou um <see cref="T:System.Web.Services.Description.OutputBinding" />, especificar o MIME individual formatos para as partes da transmissão HTTP. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como especificar protocolos para XML Web services, consulte [&#91;\< Topic://cpconbuildingaspnetwebservices > &#93; ](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c). Para obter mais informações sobre WSDL Web Services Description Language (), consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso das propriedades e métodos expostos pelo `MimeMultipartRelatedBinding` classe.  
+  
+ [!code-cpp[MimeMultiPartRelatedBinding_Parts_2#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MimeMultiPartRelatedBinding_Parts_2/CPP/mimemultipartrelatedbinding_parts_2.cpp#1)]
+ [!code-csharp[MimeMultiPartRelatedBinding_Parts_2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MimeMultiPartRelatedBinding_Parts_2/CS/mimemultipartrelatedbinding_parts_2.cs#1)]
+ [!code-vb[MimeMultiPartRelatedBinding_Parts_2#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MimeMultiPartRelatedBinding_Parts_2/VB/mimemultipartrelatedbinding_parts_2.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MimeMultipartRelatedBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MimeMultipartRelatedBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.MimeMultipartRelatedBinding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parts">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.MimePartCollection Parts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.MimePartCollection Parts" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MimeMultipartRelatedBinding.Parts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("part")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.MimePartCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de elementos de extensibilidade adicionados para o <see cref="T:System.Web.Services.Description.MimeMultipartRelatedBinding" /> para especificar o formato MIME para as partes da mensagem MIME.</summary>
+        <value>Um <see cref="T:System.Web.Services.Description.MimePartCollection" /> que representa os elementos de extensibilidade adicionados para o <see cref="T:System.Web.Services.Description.MimeMultipartRelatedBinding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ MimeMultiPartRelatedBinding_Parts_2 n º 2  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

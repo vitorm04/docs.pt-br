@@ -1,0 +1,45 @@
+<Type Name="IUnvalidatedValueProvider" FullName="System.Web.ModelBinding.IUnvalidatedValueProvider">
+  <TypeSignature Language="C#" Value="public interface IUnvalidatedValueProvider : System.Web.ModelBinding.IValueProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IUnvalidatedValueProvider implements class System.Web.ModelBinding.IValueProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.IUnvalidatedValueProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.ModelBinding.IValueProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define o método que é necessário para um provedor de valor não validados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public System.Web.ModelBinding.ValueProviderResult GetValue (string key, bool skipValidation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.ModelBinding.ValueProviderResult GetValue(string key, bool skipValidation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.IUnvalidatedValueProvider.GetValue(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ModelBinding.ValueProviderResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="skipValidation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave.</param>
+        <param name="skipValidation">
+          <see langword="true" />para ignorar a validação de solicitação; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna um valor usando a chave especificada e, opcionalmente, um valor que especifica se a validação de solicitação deve ser ignorada.</summary>
+        <returns>O objeto de valor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

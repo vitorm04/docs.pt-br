@@ -1,0 +1,288 @@
+<Type Name="IConfigurationManagerInternal" FullName="System.Configuration.Internal.IConfigurationManagerInternal">
+  <TypeSignature Language="C#" Value="public interface IConfigurationManagerInternal" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConfigurationManagerInternal" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Internal.IConfigurationManagerInternal" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define uma interface usada pelo .NET Framework para inicializar as propriedades de configuração.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationConfigUri">
+      <MemberSignature Language="C#" Value="public string ApplicationConfigUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationConfigUri" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigurationManagerInternal.ApplicationConfigUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do arquivo de configuração relacionado para o caminho do aplicativo.</summary>
+        <value>Um valor de cadeia de caracteres que representa um nome de arquivo de configuração.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExeLocalConfigDirectory">
+      <MemberSignature Language="C#" Value="public string ExeLocalConfigDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExeLocalConfigDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigurationManagerInternal.ExeLocalConfigDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o diretório de configuração local do aplicativo com base no assembly de entrada.</summary>
+        <value>Uma cadeia de caracteres que representa o diretório de configuração local.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExeLocalConfigPath">
+      <MemberSignature Language="C#" Value="public string ExeLocalConfigPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExeLocalConfigPath" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigurationManagerInternal.ExeLocalConfigPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho de configuração local do aplicativo com base no assembly de entrada.</summary>
+        <value>Um valor de cadeia de caracteres que representa o caminho de configuração local do aplicativo.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExeProductName">
+      <MemberSignature Language="C#" Value="public string ExeProductName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExeProductName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigurationManagerInternal.ExeProductName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do produto do aplicativo com base no assembly de entrada.</summary>
+        <value>Um valor de cadeia de caracteres que representa o nome do produto do aplicativo.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExeProductVersion">
+      <MemberSignature Language="C#" Value="public string ExeProductVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExeProductVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigurationManagerInternal.ExeProductVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de produto do aplicativo com base no assembly de entrada.</summary>
+        <value>Um valor de cadeia de caracteres que representa a versão do produto do aplicativo.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExeRoamingConfigDirectory">
+      <MemberSignature Language="C#" Value="public string ExeRoamingConfigDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExeRoamingConfigDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigurationManagerInternal.ExeRoamingConfigDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o diretório de configuração móvel do aplicativo com base no assembly de entrada.</summary>
+        <value>Um valor de cadeia de caracteres que representa o diretório de configuração móvel do aplicativo.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExeRoamingConfigPath">
+      <MemberSignature Language="C#" Value="public string ExeRoamingConfigPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExeRoamingConfigPath" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigurationManagerInternal.ExeRoamingConfigPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho de configuração do usuário móvel com base no assembly de entrada do aplicativo.</summary>
+        <value>Um valor de cadeia de caracteres que representa o caminho de configuração do usuário móvel.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MachineConfigPath">
+      <MemberSignature Language="C#" Value="public string MachineConfigPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineConfigPath" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigurationManagerInternal.MachineConfigPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho de configuração para o arquivo Machine. config.</summary>
+        <value>Um valor de cadeia de caracteres que representa o caminho do arquivo Machine. config.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetConfigurationSystemInProgress">
+      <MemberSignature Language="C#" Value="public bool SetConfigurationSystemInProgress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SetConfigurationSystemInProgress" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigurationManagerInternal.SetConfigurationSystemInProgress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o status do sistema de configuração.</summary>
+        <value>
+          <see langword="true" />Se o sistema de configuração está sendo inicializado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.Internal.IConfigurationManagerInternal.SetConfigurationSystemInProgress%2A> propriedade é usada pelo <xref:System.Diagnostics> durante a inicialização de configuração.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsUserConfig">
+      <MemberSignature Language="C#" Value="public bool SupportsUserConfig { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsUserConfig" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigurationManagerInternal.SupportsUserConfig" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se as configurações do usuário têm suporte.</summary>
+        <value>
+          <see langword="true" />Se o sistema de configuração oferece suporte a configurações de usuário; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UserConfigFilename">
+      <MemberSignature Language="C#" Value="public string UserConfigFilename { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserConfigFilename" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.Internal.IConfigurationManagerInternal.UserConfigFilename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do arquivo usado para armazenar as configurações do usuário.</summary>
+        <value>Uma cadeia de caracteres especificando o nome do arquivo usado para armazenar a configuração do usuário.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

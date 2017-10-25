@@ -1,0 +1,1033 @@
+<Type Name="EntityDataReader" FullName="System.Data.EntityClient.EntityDataReader">
+  <TypeSignature Language="C#" Value="public class EntityDataReader : System.Data.Common.DbDataReader, System.Data.IExtendedDataRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityDataReader extends System.Data.Common.DbDataReader implements class System.Data.IDataRecord, class System.Data.IExtendedDataRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Data.EntityClient.EntityDataReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbDataReader</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Data.IExtendedDataRecord</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Lê um fluxo de linhas apenas de encaminhamento a partir de uma fonte de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Combina a funcionalidade do <xref:System.Data.Common.DbDataReader> classe e o <xref:System.Data.IExtendedDataRecord> interface.  
+  
+ Um <xref:System.Data.EntityClient.EntityDataReader> não tem construtor público. Só pode ser obtido por meio de um a `EntityCommand.ExecuteReader` sobrecargas do método.  
+  
+ [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)]coloca os parâmetros de saída de procedimentos armazenados no final do fluxo de resultado, depois de todos os conjuntos de resultados. Portanto, para obter valores de parâmetro de saída, um aplicativo deve consumir todos os registros de todos os conjuntos de resultados. Se o aplicativo for fechado o <xref:System.Data.EntityClient.EntityDataReader> (que também deve fechar o <xref:System.Data.Common.DbDataReader>), parâmetros de saída não podem ser preenchidos.  
+  
+ <xref:System.Data.EntityClient.EntityDataReader>não consome implicitamente conjuntos de resultados para disponibilizar os parâmetros de saída. Portanto, observe o seguinte:  
+  
+-   <xref:System.Data.EntityClient.EntityDataReader>chamadas de <xref:System.Data.Common.DbDataReader.NextResult%2A?displayProperty=nameWithType> somente quando <xref:System.Data.EntityClient.EntityDataReader.NextResult%2A?displayProperty=nameWithType> é chamado explicitamente. Se <xref:System.Data.Common.DbDataReader.NextResult%2A?displayProperty=nameWithType> lança uma exceção, o <xref:System.Data.EntityClient.EntityDataReader> será ajustado em um <xref:System.Data.EntityException> (ou uma exceção derivada).  
+  
+-   <xref:System.Data.EntityClient.EntityDataReader.Close%2A>somente fecha o <xref:System.Data.Common.DbDataReader>, sem consumir nenhuma registros pendentes ou conjuntos de resultados.  
+  
+-   <xref:System.Data.EntityClient.EntityDataReader.Dispose%2A>descarta somente o <xref:System.Data.Common.DbDataReader>, sem consumir nenhuma registros pendentes ou conjuntos de resultados.  
+  
+ Para obter exemplos de código, consulte [trabalhando com EntityClient](http://msdn.microsoft.com/en-us/dec4728c-8dff-4e30-abe0-0f78fb5d5af5).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o objeto <see cref="T:System.Data.EntityClient.EntityDataReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)]coloca os parâmetros de saída de procedimentos armazenados no final do fluxo de resultado, depois de todos os conjuntos de resultados. Portanto, para obter valores de parâmetro de saída, um aplicativo deve consumir todos os registros de todos os conjuntos de resultados. Se o aplicativo for fechado o <xref:System.Data.EntityClient.EntityDataReader> (que também deve fechar o <xref:System.Data.Common.DbDataReader>), parâmetros de saída não podem ser preenchidos.  
+  
+ <xref:System.Data.EntityClient.EntityDataReader>não consome implicitamente conjuntos de resultados para disponibilizar os parâmetros de saída. Portanto, observe o seguinte:  
+  
+-   <xref:System.Data.EntityClient.EntityDataReader>chamadas de <xref:System.Data.Common.DbDataReader.NextResult%2A?displayProperty=nameWithType> somente quando <xref:System.Data.EntityClient.EntityDataReader.NextResult%2A?displayProperty=nameWithType> é chamado explicitamente. Se <xref:System.Data.Common.DbDataReader.NextResult%2A?displayProperty=nameWithType> lança uma exceção, <xref:System.Data.EntityClient.EntityDataReader> será ajustado no <xref:System.Data.EntityException> (ou uma exceção derivada).  
+  
+-   <xref:System.Data.EntityClient.EntityDataReader.Close%2A>somente fecha o <xref:System.Data.Common.DbDataReader>, sem consumir nenhuma registros pendentes ou conjuntos de resultados.  
+  
+-   <xref:System.Data.EntityClient.EntityDataReader.Dispose%2A>descarta somente o <xref:System.Data.Common.DbDataReader>, sem consumir nenhuma registros pendentes ou conjuntos de resultados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataRecordInfo">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DataRecordInfo DataRecordInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DataRecordInfo DataRecordInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityDataReader.DataRecordInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DataRecordInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém <see cref="T:System.Data.Common.DataRecordInfo" /> para este <see cref="T:System.Data.IExtendedDataRecord" />.</summary>
+        <value>As informações de um registro de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public override int Depth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityDataReader.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a profundidade de aninhamento da linha atual.</summary>
+        <value>A profundidade de aninhamento da linha atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela externa tem uma profundidade de zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos consumidos por este <see cref="T:System.Data.EntityClient.EntityDataReader" /> e chamadas <see cref="M:System.Data.EntityClient.EntityDataReader.Close" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)]coloca os parâmetros de saída de procedimentos armazenados no final do fluxo de resultado, depois de todos os conjuntos de resultados. Portanto, para obter valores de parâmetro de saída, um aplicativo deve consumir todos os registros de todos os conjuntos de resultados. Se o aplicativo for fechado o <xref:System.Data.EntityClient.EntityDataReader> (que também deve fechar o <xref:System.Data.Common.DbDataReader>), parâmetros de saída não podem ser preenchidos.  
+  
+ <xref:System.Data.EntityClient.EntityDataReader>não consome implicitamente conjuntos de resultados para disponibilizar os parâmetros de saída. Portanto, observe o seguinte:  
+  
+-   <xref:System.Data.EntityClient.EntityDataReader>chamadas de <xref:System.Data.Common.DbDataReader.NextResult%2A?displayProperty=nameWithType> somente quando <xref:System.Data.EntityClient.EntityDataReader.NextResult%2A?displayProperty=nameWithType> é chamado explicitamente. Se <xref:System.Data.Common.DbDataReader.NextResult%2A?displayProperty=nameWithType> lança uma exceção, o <xref:System.Data.EntityClient.EntityDataReader> será ajustado em um <xref:System.Data.EntityException> (ou uma exceção derivada).  
+  
+-   <xref:System.Data.EntityClient.EntityDataReader.Close%2A>somente fecha o <xref:System.Data.Common.DbDataReader>, sem consumir nenhuma registros pendentes ou conjuntos de resultados.  
+  
+-   <xref:System.Data.EntityClient.EntityDataReader.Dispose%2A>descarta somente o <xref:System.Data.Common.DbDataReader>, sem consumir nenhuma registros pendentes ou conjuntos de resultados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldCount">
+      <MemberSignature Language="C#" Value="public override int FieldCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FieldCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityDataReader.FieldCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de colunas na linha atual.</summary>
+        <value>O número de colunas na linha atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inclui campos ocultos. Use <xref:System.Data.EntityClient.EntityDataReader.VisibleFieldCount*> para excluir os campos ocultos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public override bool GetBoolean (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetBoolean(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetBoolean(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um booliano.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByte">
+      <MemberSignature Language="C#" Value="public override byte GetByte (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8 GetByte(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetByte(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um byte.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public override long GetBytes (int ordinal, long dataOffset, byte[] buffer, int bufferOffset, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetBytes(int32 ordinal, int64 dataOffset, unsigned int8[] buffer, int32 bufferOffset, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="dataOffset" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="bufferOffset" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <param name="dataOffset">O índice na linha na qual a operação de leitura é iniciada.</param>
+        <param name="buffer">O buffer no qual os dados são copiados.</param>
+        <param name="bufferOffset">O índice com o buffer no qual os dados serão copiados.</param>
+        <param name="length">O número máximo de caracteres a serem lidos.</param>
+        <summary>Lê um fluxo de bytes na coluna especificada, iniciando no local indicado por <paramref name="dataIndex" />, no buffer, iniciando na posição indicada por <paramref name="bufferIndex" />.</summary>
+        <returns>O número real de bytes lidos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChar">
+      <MemberSignature Language="C#" Value="public override char GetChar (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance char GetChar(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetChar(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um único caractere.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChars">
+      <MemberSignature Language="C#" Value="public override long GetChars (int ordinal, long dataOffset, char[] buffer, int bufferOffset, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetChars(int32 ordinal, int64 dataOffset, char[] buffer, int32 bufferOffset, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="dataOffset" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="bufferOffset" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <param name="dataOffset">O índice na linha na qual a operação de leitura é iniciada.</param>
+        <param name="buffer">O buffer no qual os dados são copiados.</param>
+        <param name="bufferOffset">O índice com o buffer no qual os dados serão copiados.</param>
+        <param name="length">O número máximo de caracteres a serem lidos.</param>
+        <summary>Lê um fluxo de caracteres da coluna especificada, começando no local indicado pelo <paramref name="dataIndex" />, do buffer, iniciando na posição indicada pelo <paramref name="bufferIndex" />.</summary>
+        <returns>O número real de caracteres lidos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataReader">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbDataReader GetDataReader (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.Common.DbDataReader GetDataReader(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetDataReader(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">O ordinal da coluna.</param>
+        <summary>Retorna os leitores aninhados como objetos <see cref="T:System.Data.Common.DbDataReader" />.</summary>
+        <returns>Os leitores aninhados como objetos <see cref="T:System.Data.Common.DbDataReader" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataRecord">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbDataRecord GetDataRecord (int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.Common.DbDataRecord GetDataRecord(int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetDataRecord(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbDataRecord</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">O número do <see langword="DbDataRecord" /> a serem retornados.</param>
+        <summary>Retorna um <see cref="T:System.Data.Common.DbDataRecord" /> aninhado.</summary>
+        <returns>O registro de dados aninhados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataTypeName">
+      <MemberSignature Language="C#" Value="public override string GetDataTypeName (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDataTypeName(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetDataTypeName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o nome do tipo de dados da coluna especificada.</summary>
+        <returns>O nome do tipo de dados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime GetDateTime (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime GetDateTime(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetDateTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um objeto <see cref="T:System.DateTime" />.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDbDataReader">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbDataReader GetDbDataReader (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbDataReader GetDbDataReader(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetDbDataReader(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbDataReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Retorna um <see cref="T:System.Data.Common.DbDataReader" /> objeto para o ordinal da coluna solicitada que pode ser substituído por uma implementação específica do provedor.</summary>
+        <returns>Um leitor de dados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecimal">
+      <MemberSignature Language="C#" Value="public override decimal GetDecimal (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Decimal GetDecimal(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetDecimal(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um objeto <see cref="T:System.Decimal" />.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDouble">
+      <MemberSignature Language="C#" Value="public override double GetDouble (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float64 GetDouble(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetDouble(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um número de ponto flutuante de precisão dupla.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pelas linhas do leitor de dados.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pelas linhas do leitor de dados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldType">
+      <MemberSignature Language="C#" Value="public override Type GetFieldType (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetFieldType(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o tipo de dados da coluna especificada.</summary>
+        <returns>O tipo de dados da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFloat">
+      <MemberSignature Language="C#" Value="public override float GetFloat (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float32 GetFloat(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetFloat(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um número de ponto flutuante de precisão simples.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGuid">
+      <MemberSignature Language="C#" Value="public override Guid GetGuid (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Guid GetGuid(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetGuid(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um identificador global exclusivo (GUID).</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt16">
+      <MemberSignature Language="C#" Value="public override short GetInt16 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int16 GetInt16(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetInt16(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um inteiro com sinal de 16 bits.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt32">
+      <MemberSignature Language="C#" Value="public override int GetInt32 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetInt32(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetInt32(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um inteiro com sinal de 32 bits.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt64">
+      <MemberSignature Language="C#" Value="public override long GetInt64 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetInt64(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetInt64(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um inteiro com sinal de 64 bits.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public override string GetName (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetName(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o nome da coluna, dada a coluna com base em zero ordinal.</summary>
+        <returns>O nome da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrdinal">
+      <MemberSignature Language="C#" Value="public override int GetOrdinal (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetOrdinal(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetOrdinal(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da coluna.</param>
+        <summary>Obtém o ordinal da coluna, de acordo com o nome da coluna.</summary>
+        <returns>O ordinal da coluna baseado em zero.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O nome especificado não é um nome de coluna válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificFieldType">
+      <MemberSignature Language="C#" Value="public override Type GetProviderSpecificFieldType (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetProviderSpecificFieldType(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetProviderSpecificFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Retorna o tipo de campo específico do provedor da coluna especificada.</summary>
+        <returns>O <see cref="T:System.Type" /> objeto que descreve o tipo de dados da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificValue">
+      <MemberSignature Language="C#" Value="public override object GetProviderSpecificValue (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetProviderSpecificValue(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetProviderSpecificValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como uma instância de <see cref="T:System.Object" />.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificValues">
+      <MemberSignature Language="C#" Value="public override int GetProviderSpecificValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetProviderSpecificValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetProviderSpecificValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Uma matriz de <see cref="T:System.Object" /> na qual as colunas de atributo serão copiadas.</param>
+        <summary>Obtém todas as colunas de atributo específico do provedor na coleção para a linha atual.</summary>
+        <returns>O número de instâncias de <see cref="T:System.Object" /> na matriz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaTable">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable GetSchemaTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Data.DataTable GetSchemaTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetSchemaTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Data.DataTable" /> que descreve os metadados da coluna do <see cref="T:System.Data.Common.DbDataReader" />.</summary>
+        <returns>Um <see cref="T:System.Data.DataTable" /> que descreve os metadados de coluna.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public override string GetString (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetString(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como uma instância de <see cref="T:System.String" />.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override object GetValue (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetValue(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como uma instância de <see cref="T:System.Object" />.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public override int GetValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.GetValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Uma matriz de <see cref="T:System.Object" /> na qual as colunas de atributo serão copiadas.</param>
+        <summary>Popula uma matriz de objetos com os valores da coluna da linha atual.</summary>
+        <returns>O número de instâncias de <see cref="T:System.Object" /> na matriz.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasRows">
+      <MemberSignature Language="C#" Value="public override bool HasRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasRows" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityDataReader.HasRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Data.EntityClient.EntityDataReader" /> contém uma ou mais linhas.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Data.EntityClient.EntityDataReader" /> contém uma ou mais linhas; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public override bool IsClosed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityDataReader.IsClosed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.EntityClient.EntityDataReader" /> está fechado.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Data.EntityClient.EntityDataReader" /> estiver fechado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDBNull">
+      <MemberSignature Language="C#" Value="public override bool IsDBNull (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDBNull(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.IsDBNull(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém um valor que indica se a coluna contém valores ausentes ou inexistentes.</summary>
+        <returns>
+          <see langword="true" />Se a coluna especificada for equivalente a <see cref="T:System.DBNull" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[int ordinal] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityDataReader.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero</param>
+        <summary>Obtém o valor da coluna especificada como uma instância de <see cref="T:System.Object" />.</summary>
+        <value>O valor da coluna especificada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityDataReader.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da coluna.</param>
+        <summary>Obtém o valor da coluna especificada como uma instância de <see cref="T:System.Object" />.</summary>
+        <value>O valor da coluna especificada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextResult">
+      <MemberSignature Language="C#" Value="public override bool NextResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool NextResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.NextResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Avança o leitor para o resultado seguinte ao ler os resultados de um lote de instruções.</summary>
+        <returns>
+          <see langword="true" /> se houver mais conjuntos de resultados; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que você processe vários conjuntos de resultados retornados quando um lote é enviado para o provedor de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityDataReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Avança o leitor para o próximo registro em um conjunto de resultados.</summary>
+        <returns>
+          <see langword="true" /> se houver mais linhas; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A posição padrão de um leitor de dados é antes do primeiro registro. Portanto, você deve chamar `Read` para começar a acessar os dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordsAffected">
+      <MemberSignature Language="C#" Value="public override int RecordsAffected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RecordsAffected" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityDataReader.RecordsAffected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linhas alteradas, inseridas ou excluídas pela execução da instrução SQL.</summary>
+        <value>O número de linhas alteradas, inseridas ou excluídas. Retorna -1 para instruções SELECT; 0 se nenhuma linha foi afetada ou se a instrução falhou.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `RecordsAffected` propriedade não é definida até que todas as linhas são lidas e fechar o `DataReader`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleFieldCount">
+      <MemberSignature Language="C#" Value="public override int VisibleFieldCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisibleFieldCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityDataReader.VisibleFieldCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de campos em <see cref="T:System.Data.EntityClient.EntityDataReader" /> que não estão ocultos.</summary>
+        <value>O número de campos que não estão ocultos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é usado para determinar quantos campos no <xref:System.Data.EntityClient.EntityDataReader> são visíveis. Por exemplo, uma seleção em uma chave primária parcial retorna as partes restantes da chave como campos ocultos. Os campos ocultos são acrescentados sempre atrás os campos visíveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

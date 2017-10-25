@@ -1,0 +1,147 @@
+<Type Name="ActiveDirectoryRoleFactory" FullName="System.Workflow.Activities.ActiveDirectoryRoleFactory">
+  <TypeSignature Language="C#" Value="public static class ActiveDirectoryRoleFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed ActiveDirectoryRoleFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.ActiveDirectoryRoleFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Uma classe de fábrica para criar <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> objetos aliases do Windows NT, endereços de email e identificadores de segurança (SIDs).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Todos os métodos no <xref:System.Workflow.Activities.ActiveDirectoryRoleFactory> são estáticos e nenhuma instância deve ser criada. O construtor está oculto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Configuration">
+      <MemberSignature Language="C#" Value="public static System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration Configuration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration Configuration" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ActiveDirectoryRoleFactory.Configuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration" /> associado à <see cref="T:System.Workflow.Activities.ActiveDirectoryRoleFactory" />.</summary>
+        <value>O <see cref="T:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration" /> objeto associado a <see cref="T:System.Workflow.Activities.ActiveDirectoryRoleFactory" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration> objeto é usado para alterar as propriedades de esquema padrão do Active Directory que o <xref:System.Workflow.Activities.ActiveDirectoryRole> classe usa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromAlias">
+      <MemberSignature Language="C#" Value="public static System.Workflow.Activities.ActiveDirectoryRole CreateFromAlias (string alias);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.Activities.ActiveDirectoryRole CreateFromAlias(string alias) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ActiveDirectoryRoleFactory.CreateFromAlias(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.ActiveDirectoryRole</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="alias" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="alias">A cadeia de caracteres do alias para criar o <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" />.</param>
+        <summary>Cria uma instância de <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> usando o alias especificado do Windows NT.</summary>
+        <returns>Uma instância de <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> que descreve o alias especificado do Windows NT.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.ActiveDirectoryRole>é uma implementação concreta do <xref:System.Workflow.Activities.WorkflowRole> classe abstrata que é usada para acessar a funcionalidade do Active Directory. Normalmente, o repositório do Active Directory é usado para armazenar informações organizacionais para a equipe. O objetivo principal para o <xref:System.Workflow.Activities.ActiveDirectoryRole> é para fazer consultas em tais informações organizacionais, por motivos comerciais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromEmailAddress">
+      <MemberSignature Language="C#" Value="public static System.Workflow.Activities.ActiveDirectoryRole CreateFromEmailAddress (string emailAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.Activities.ActiveDirectoryRole CreateFromEmailAddress(string emailAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ActiveDirectoryRoleFactory.CreateFromEmailAddress(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.ActiveDirectoryRole</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="emailAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="emailAddress">A cadeia de caracteres de endereço de email do qual criar o <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" />.</param>
+        <summary>Cria uma instância de <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> usando um endereço de email.</summary>
+        <returns>Uma instância de <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> que descreve o endereço de email especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.ActiveDirectoryRole>é uma implementação concreta do <xref:System.Workflow.Activities.WorkflowRole> classe abstrata que é usada para acessar a funcionalidade do Active Directory. Normalmente, o repositório do Active Directory é usado para armazenar informações organizacionais para a equipe. O objetivo principal para o <xref:System.Workflow.Activities.ActiveDirectoryRole> é para fazer consultas em tais informações organizacionais, por motivos comerciais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromSecurityIdentifier">
+      <MemberSignature Language="C#" Value="public static System.Workflow.Activities.ActiveDirectoryRole CreateFromSecurityIdentifier (System.Security.Principal.SecurityIdentifier sid);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.Activities.ActiveDirectoryRole CreateFromSecurityIdentifier(class System.Security.Principal.SecurityIdentifier sid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ActiveDirectoryRoleFactory.CreateFromSecurityIdentifier(System.Security.Principal.SecurityIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.ActiveDirectoryRole</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sid" Type="System.Security.Principal.SecurityIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="sid">O <see cref="T:System.Security.Principal.SecurityIdentifier" /> usar para criar o <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" />.</param>
+        <summary>Cria uma instância de <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> usando o Windows NT <see cref="T:System.Security.Principal.SecurityIdentifier" />.</summary>
+        <returns>Uma instância de <see cref="T:System.Workflow.Activities.ActiveDirectoryRole" /> que descreve especificado <see cref="T:System.Security.Principal.SecurityIdentifier" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.ActiveDirectoryRole>é uma implementação concreta do <xref:System.Workflow.Activities.WorkflowRole> classe abstrata que é usada para acessar a funcionalidade do Active Directory. Normalmente, o repositório do Active Directory é usado para armazenar informações organizacionais para a equipe. O objetivo principal para o <xref:System.Workflow.Activities.ActiveDirectoryRole> é para fazer consultas em tais informações organizacionais, por motivos comerciais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

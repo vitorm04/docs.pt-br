@@ -1,0 +1,233 @@
+<Type Name="IButtonControl" FullName="System.Web.UI.WebControls.IButtonControl">
+  <TypeSignature Language="C#" Value="public interface IButtonControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IButtonControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.IButtonControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define as propriedades e os eventos que devem ser implementados para permitir que um controle atue como um botão em uma página da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.IButtonControl> interface define as propriedades e eventos que devem ser implementados para permitir que um controle atuar como um botão em uma página da Web.  
+  
+ Os membros desta interface fornecem funcionalidade de botão básicas, como a capacidade de gerar um <xref:System.Web.UI.WebControls.IButtonControl.Click> eventos e um <xref:System.Web.UI.WebControls.IButtonControl.Command> eventos. O <xref:System.Web.UI.WebControls.IButtonControl.PostBackUrl%2A> propriedade fornece funcionalidade de postagem entre páginas.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Implemente essa interface em classes que atuam como os controles de botão em páginas da Web.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se clicar no botão faz com que ocorra validação página.</summary>
+        <value>
+          <see langword="true" />Se clicar no botão faz com que a validação de página deve ocorrer; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle que implementa o <xref:System.Web.UI.WebControls.IButtonControl> deve implementar a interface do <xref:System.Web.UI.WebControls.IButtonControl.CausesValidation%2A> propriedade para indicar se clicar no botão faz com que ocorra validação página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.IButtonControl.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário clica no controle de botão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.IButtonControl.Click> é gerado quando o controle de botão é clicado.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.CommandEventHandler Command;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.CommandEventHandler Command" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.IButtonControl.Command" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CommandEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário clica no controle de botão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.IButtonControl.Command> é gerado quando o controle de botão é clicado.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandArgument">
+      <MemberSignature Language="C#" Value="public string CommandArgument { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandArgument" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.CommandArgument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um argumento opcional que é propagado para o <see cref="E:System.Web.UI.WebControls.IButtonControl.Command" /> evento.</summary>
+        <value>O argumento que é propagado para o <see cref="E:System.Web.UI.WebControls.IButtonControl.Command" /> evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle que implementa o <xref:System.Web.UI.WebControls.IButtonControl> deve implementar a interface de <xref:System.Web.UI.WebControls.IButtonControl.CommandArgument%2A> propriedade e o <xref:System.Web.UI.WebControls.IButtonControl.CommandName%2A> propriedade para indicar o nome de argumento e o comando que são propagadas para o <xref:System.Web.UI.WebControls.IButtonControl.Command> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandName">
+      <MemberSignature Language="C#" Value="public string CommandName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.CommandName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do comando que é propagado para o <see cref="E:System.Web.UI.WebControls.IButtonControl.Command" /> evento.</summary>
+        <value>O nome do comando que é propagado para o <see cref="E:System.Web.UI.WebControls.IButtonControl.Command" /> evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle que implementa o <xref:System.Web.UI.WebControls.IButtonControl> deve implementar a interface de <xref:System.Web.UI.WebControls.IButtonControl.CommandArgument%2A> propriedade e o <xref:System.Web.UI.WebControls.IButtonControl.CommandName%2A> propriedade para indicar o nome de argumento e o comando que são propagadas para o <xref:System.Web.UI.WebControls.IButtonControl.Command> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostBackUrl">
+      <MemberSignature Language="C#" Value="public string PostBackUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PostBackUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.PostBackUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL da página da Web que será usada para postagem da página atual quando o controle de botão receber um clique do mouse.</summary>
+        <value>A URL da página da Web que será usada para postagem da página atual quando o controle de botão receber um clique.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.WebControls.IButtonControl.PostBackUrl%2A> propriedade para executar uma postagem entre páginas. Se o <xref:System.Web.UI.WebControls.IButtonControl.PostBackUrl%2A> propriedade é definida para a página que o botão está ativado, ocorre um ciclo normal de eventos de postback.  
+  
+ Um controle que implementa o <xref:System.Web.UI.WebControls.IButtonControl> deve implementar a interface do <xref:System.Web.UI.WebControls.IButtonControl.PostBackUrl%2A> propriedade para indicar a URL da página da Web para postagem da página atual quando o controle de botão é clicado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto da legenda exibido para o botão.</summary>
+        <value>O texto da legenda exibido para o botão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle que implementa o <xref:System.Web.UI.WebControls.IButtonControl> deve implementar a interface do <xref:System.Web.UI.WebControls.IButtonControl.Text%2A> propriedade para indicar o texto da legenda exibido para o botão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IButtonControl.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome para o grupo de controles para o qual o controle de botão faz com que a validação quando ele envia de volta para o servidor.</summary>
+        <value>O nome para o grupo de controles para o qual o controle de botão faz com que a validação quando ele envia de volta para o servidor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle que implementa o <xref:System.Web.UI.WebControls.IButtonControl> deve implementar a interface do <xref:System.Web.UI.WebControls.IButtonControl.ValidationGroup%2A> propriedade para indicar o nome do grupo de controles para o qual o controle de botão faz com que a validação quando ele envia de volta para o servidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

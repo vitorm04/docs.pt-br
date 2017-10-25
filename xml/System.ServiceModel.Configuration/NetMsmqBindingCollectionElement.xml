@@ -1,0 +1,45 @@
+<Type Name="NetMsmqBindingCollectionElement" FullName="System.ServiceModel.Configuration.NetMsmqBindingCollectionElement">
+  <TypeSignature Language="C#" Value="public class NetMsmqBindingCollectionElement : System.ServiceModel.Configuration.StandardBindingCollectionElement&lt;System.ServiceModel.NetMsmqBinding,System.ServiceModel.Configuration.NetMsmqBindingElement&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NetMsmqBindingCollectionElement extends System.ServiceModel.Configuration.StandardBindingCollectionElement`2&lt;class System.ServiceModel.NetMsmqBinding, class System.ServiceModel.Configuration.NetMsmqBindingElement&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.NetMsmqBindingCollectionElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.StandardBindingCollectionElement&lt;System.ServiceModel.NetMsmqBinding,System.ServiceModel.Configuration.NetMsmqBindingElement&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TStandardBinding">System.ServiceModel.NetMsmqBinding</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="TBindingConfiguration">System.ServiceModel.Configuration.NetMsmqBindingElement</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma seção de configuração que contém uma coleção de <see cref="T:System.ServiceModel.Configuration.NetMsmqBindingElement" /> instâncias.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta coleção de <xref:System.ServiceModel.Configuration.NetMsmqBindingElement> objetos contém todas as configurações necessárias para o <xref:System.ServiceModel.NetMsmqBinding> associação à função. O <xref:System.ServiceModel.NetMsmqBinding> associação oferece suporte para enfileiramento de mensagens utilizando o Microsoft Message Queuing (MSMQ) como um transporte e habilita o suporte para aplicativos acoplados de forma flexível, isolamento de falha, nivelamento de carga e as operações desconectadas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetMsmqBindingCollectionElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.NetMsmqBindingCollectionElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.NetMsmqBindingCollectionElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

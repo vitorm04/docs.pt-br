@@ -1,0 +1,482 @@
+<Type Name="DocumentPaginator" FullName="System.Windows.Documents.DocumentPaginator">
+  <TypeSignature Language="C#" Value="public abstract class DocumentPaginator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DocumentPaginator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.DocumentPaginator" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base abstrata que dá suporte à criação de elementos de várias páginas com base em um único documento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você precisar repaginação automática em segundo plano em resposta a eventos como alterar o tamanho da página de um <xref:System.Windows.Documents.FlowDocument>, em seguida, use <xref:System.Windows.Documents.DynamicDocumentPaginator> como sua classe base.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DocumentPaginator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentPaginator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.DocumentPaginator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAsync">
+      <MemberSignature Language="C#" Value="public virtual void CancelAsync (object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelAsync(object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentPaginator.CancelAsync(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userState">O original <c>userState</c> passado para <see cref="Overload:System.Windows.Documents.DocumentPaginator.GetPageAsync" />, <see cref="Overload:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync" />, ou <see cref="Overload:System.Windows.Documents.DocumentPaginator.ComputePageCountAsync" /> que identifica a cancelamento da tarefa assíncrona.</param>
+        <summary>Cancela uma anterior <see cref="Overload:System.Windows.Documents.DocumentPaginator.GetPageAsync" /> ou <see cref="Overload:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync" /> operação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `userState` é `null`, em seguida, todas as tarefas assíncronas são canceladas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputePageCount">
+      <MemberSignature Language="C#" Value="public virtual void ComputePageCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ComputePageCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentPaginator.ComputePageCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Força uma paginação do conteúdo, as atualizações <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> com o novo total e conjuntos de <see cref="P:System.Windows.Documents.DocumentPaginator.IsPageCountValid" /> para <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid%2A>será `true` imediatamente depois que isso é chamado. Se o conteúdo for modificado ou <xref:System.Windows.Documents.DocumentPaginator.PageSize%2A> for alterado depois que este método é chamado, <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid%2A> provavelmente será revertido para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputePageCountAsync">
+      <MemberSignature Language="C#" Value="public virtual void ComputePageCountAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ComputePageCountAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentPaginator.ComputePageCountAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>De forma assíncrona, força uma paginação do conteúdo, as atualizações <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> com o novo total e conjuntos de <see cref="P:System.Windows.Documents.DocumentPaginator.IsPageCountValid" /> para <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É a única maneira de cancelar a operação assíncrona do método Cancelar todas as operações assíncronas. Compare isso com a outra sobrecarga desse método: <xref:System.Windows.Documents.DocumentPaginator.ComputePageCountAsync%28System.Object%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputePageCountAsync">
+      <MemberSignature Language="C#" Value="public virtual void ComputePageCountAsync (object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ComputePageCountAsync(object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentPaginator.ComputePageCountAsync(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userState">Um identificador exclusivo para a tarefa assíncrona.</param>
+        <summary>De forma assíncrona, força uma paginação do conteúdo, as atualizações <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> com o novo total, define <see cref="P:System.Windows.Documents.DocumentPaginator.IsPageCountValid" /> para <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ID especificada é atribuída para a tarefa assíncrona.  
+  
+ Esta sobrecarga do método torna possível cancelar essa operação assíncrona sem cancelar todas as operações assíncronas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputePageCountCompleted">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.AsyncCompletedEventHandler ComputePageCountCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.AsyncCompletedEventHandler ComputePageCountCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.DocumentPaginator.ComputePageCountCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AsyncCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="Overload:System.Windows.Documents.DocumentPaginator.ComputePageCountAsync" /> concluiu a operação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPage">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Documents.DocumentPage GetPage (int pageNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Documents.DocumentPage GetPage(int32 pageNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentPaginator.GetPage(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.DocumentPage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pageNumber">O número de páginas com base em zero da página do documento que é necessária.</param>
+        <summary>Quando substituído em uma classe derivada, obtém o <see cref="T:System.Windows.Documents.DocumentPage" /> para o número de páginas especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Documents.DocumentPage" /> para o <paramref name="pageNumber" /> especificado ou <see cref="F:System.Windows.Documents.DocumentPage.Missing" /> se a página não existe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se páginas anteriores ao `pageNumber` não foram formatados, eles serão ser paginados síncrona antes de retornar a página solicitada.  
+  
+ <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%2A>fornece funcionalidade semelhante ao <xref:System.Windows.Documents.DocumentPaginator.GetPage%2A>, mas a operação assíncrona.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pageNumber" /> é negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageAsync">
+      <MemberSignature Language="C#" Value="public virtual void GetPageAsync (int pageNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetPageAsync(int32 pageNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pageNumber">O número de páginas com base em zero da página do documento que é necessária.</param>
+        <summary>Retorna de maneira assíncrona (por meio de <see cref="E:System.Windows.Documents.DocumentPaginator.GetPageCompleted" /> evento) a <see cref="T:System.Windows.Documents.DocumentPage" /> para o número de página especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É a única maneira de cancelar a operação assíncrona do método Cancelar todas as operações assíncronas. Compare isso com a outra sobrecarga desse método: <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29>.  
+  
+ Este método gera o <xref:System.Windows.Documents.DocumentPaginator.GetPageCompleted> evento. O <xref:System.Windows.Documents.DocumentPage> é passado para o evento como um dos argumentos do evento. Consulte <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29> sobre como usar esse método para a página.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pageNumber" /> é negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageAsync">
+      <MemberSignature Language="C#" Value="public virtual void GetPageAsync (int pageNumber, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetPageAsync(int32 pageNumber, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentPaginator.GetPageAsync(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageNumber" Type="System.Int32" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="pageNumber">O número da página com base em zero a <see cref="T:System.Windows.Documents.DocumentPage" /> obter.</param>
+        <param name="userState">Um identificador exclusivo para a tarefa assíncrona.</param>
+        <summary>Retorna de maneira assíncrona (por meio de <see cref="E:System.Windows.Documents.DocumentPaginator.GetPageCompleted" /> eventos) de <see cref="T:System.Windows.Documents.DocumentPage" /> para o número de página especificado e atribui a ID especificada para a tarefa assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do método torna possível cancelar essa operação assíncrona sem cancelar todas as operações assíncronas.  
+  
+ Este método gera o <xref:System.Windows.Documents.DocumentPaginator.GetPageCompleted> evento. O <xref:System.Windows.Documents.DocumentPage> é passado para o evento como um dos argumentos do evento.  
+  
+ As etapas a seguir ilustram como recuperar um <xref:System.Windows.Documents.DocumentPage> assíncrona:  
+  
+1.  Criar um <xref:System.Windows.Documents.GetPageCompletedEventHandler> delegar e adicioná-lo para ser notificado sobre <xref:System.Windows.Documents.DocumentPaginator.GetPageCompleted> eventos.  
+  
+2.  Chamar <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29> especificando o `pageNumber` desejado e um exclusivo `userState`, que será usado para identificar a conclusão do evento assíncrono.  
+  
+3.  Quando o evento ocorre e o representante é chamado, compare o evento <xref:System.Windows.Documents.GetPageCompletedEventArgs>.<xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade com o original <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29> `userState` parâmetro.  (O <xref:System.Windows.Documents.GetPageCompletedEventArgs>.<xref:System.Windows.Documents.GetPageCompletedEventArgs.PageNumber%2A> propriedade também serão compatíveis com o `pageNumber` especificado no <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29> chame.)  
+  
+4.  Quando o <xref:System.Windows.Documents.GetPageCompletedEventArgs>.<xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade corresponde ao original <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%28System.Int32%2CSystem.Object%29> `userState`, a operação for concluída e a página está pronta.  
+  
+5.  Chamar <xref:System.Windows.Documents.DocumentPaginator.GetPage%2A> para recuperar o formatado <xref:System.Windows.Documents.DocumentPage>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="pageNumber" /> é negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageCompleted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Documents.GetPageCompletedEventHandler GetPageCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.GetPageCompletedEventHandler GetPageCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.DocumentPaginator.GetPageCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.GetPageCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando <see cref="Overload:System.Windows.Documents.DocumentPaginator.GetPageAsync" /> é concluído.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPageCountValid">
+      <MemberSignature Language="C#" Value="public abstract bool IsPageCountValid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPageCountValid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DocumentPaginator.IsPageCountValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> é o número total de páginas.</summary>
+        <value>
+          <see langword="true" />Se a paginação estiver concluída e <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> é o total de número de páginas; caso contrário, <see langword="false" />, se a paginação está em processo e <see cref="P:System.Windows.Documents.DocumentPaginator.PageCount" /> é o número de páginas atualmente formatada (não o total).  
+  
+ Esse valor pode ser revertida para <see langword="false" />, depois de ser <see langword="true" />, se <see cref="P:System.Windows.Documents.DocumentPaginator.PageSize" /> ou conteúdo alterações; porque esses eventos forçaria uma repaginação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComputePageCountCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnComputePageCountCompleted (System.ComponentModel.AsyncCompletedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnComputePageCountCompleted(class System.ComponentModel.AsyncCompletedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentPaginator.OnComputePageCountCompleted(System.ComponentModel.AsyncCompletedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.AsyncCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.AsyncCompletedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Documents.DocumentPaginator.ComputePageCountCompleted" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetPageCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnGetPageCompleted (System.Windows.Documents.GetPageCompletedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnGetPageCompleted(class System.Windows.Documents.GetPageCompletedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentPaginator.OnGetPageCompleted(System.Windows.Documents.GetPageCompletedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Documents.GetPageCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Documents.GetPageCompletedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Documents.DocumentPaginator.GetPageCompleted" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPagesChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPagesChanged (System.Windows.Documents.PagesChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPagesChanged(class System.Windows.Documents.PagesChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentPaginator.OnPagesChanged(System.Windows.Documents.PagesChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Documents.PagesChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Documents.PagesChangedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Documents.DocumentPaginator.PagesChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageCount">
+      <MemberSignature Language="C#" Value="public abstract int PageCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DocumentPaginator.PageCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém uma contagem do número de páginas atualmente formatada</summary>
+        <value>Uma contagem do número de páginas que foram formatados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid%2A> é `true`, a paginação está concluída e <xref:System.Windows.Documents.DocumentPaginator.PageCount%2A> é o número total de páginas do documento.  
+  
+ Se <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid%2A> é `false`, a paginação está em processo e <xref:System.Windows.Documents.DocumentPaginator.PageCount%2A> é o número de páginas atualmente formatada (não o total).  
+  
+ Esse valor pode ser alterado se <xref:System.Windows.Documents.DocumentPaginator.PageSize%2A> ou conteúdo de alterações, porque esses eventos forçaria uma repaginação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagesChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Documents.PagesChangedEventHandler PagesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.PagesChangedEventHandler PagesChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.DocumentPaginator.PagesChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.PagesChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o conteúdo do documento é alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageSize">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Size PageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Size PageSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DocumentPaginator.PageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém ou define a largura e altura sugeridas de cada página.</summary>
+        <value>Um <see cref="T:System.Windows.Size" /> que representa a largura e altura de cada página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.DocumentPaginator> pode substituir o valor dessa propriedade. Os usuários devem verificar <xref:System.Windows.Documents.DocumentPage.Size%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.DocumentPaginator.PageSize%2A>.  
+  
+ [!code-csharp[XpsSave#CreateFixedDocument](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpfContent.cs#createfixeddocument)]
+ [!code-vb[XpsSave#CreateFixedDocument](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpfcontent.vb#createfixeddocument)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Documents.IDocumentPaginatorSource Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.IDocumentPaginatorSource Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DocumentPaginator.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.IDocumentPaginatorSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna o elemento que está sendo paginado.</summary>
+        <value>Um <see cref="T:System.Windows.Documents.IDocumentPaginatorSource" /> que representa o elemento que está sendo paginado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto retornado tem isso <xref:System.Windows.Documents.DocumentPaginator> como o valor do seu <xref:System.Windows.Documents.IDocumentPaginatorSource.DocumentPaginator%2A> propriedade. É garantido que ele tem essa propriedade porque ele implementa <xref:System.Windows.Documents.IDocumentPaginatorSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

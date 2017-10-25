@@ -1,0 +1,192 @@
+<Type Name="CollectionAdapters" FullName="System.AddIn.Pipeline.CollectionAdapters">
+  <TypeSignature Language="C#" Value="public static class CollectionAdapters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CollectionAdapters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Pipeline.CollectionAdapters" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que as coleções a serem passados entre um suplemento e seu aplicativo de host.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece métodos que permitem um <xref:System.Collections.Generic.IList%601> coleção a ser convertido em um <xref:System.AddIn.Contract.IListContract%601> coleção. O <xref:System.AddIn.Contract.IListContract%601> coleção é passada pelo limite de isolamento e convertida de volta para um <xref:System.Collections.Generic.IList%601> coleção que pode usar o suplemento ou o aplicativo de host.  
+  
+ Objetos em coleções devem ser remotos. Para obter mais informações sobre os tipos de objeto que você pode passar, consulte [contratos, exibições e adaptadores](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ToIList&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;T&gt; ToIList&lt;T&gt; (System.AddIn.Contract.IListContract&lt;T&gt; collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;!!T&gt; ToIList&lt;T&gt;(class System.AddIn.Contract.IListContract`1&lt;!!T&gt; collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIList``1(System.AddIn.Contract.IListContract{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="collection" Type="System.AddIn.Contract.IListContract&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de objetos que estão contidos na lista. <c>T</c> devem ser serializáveis.</typeparam>
+        <param name="collection">A coleção do outro lado do pipeline.</param>
+        <summary>Converte especificado <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção para um <see cref="T:System.Collections.Generic.IList`1" /> coleção.</summary>
+        <returns>A coleção convertida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O aplicativo de host ou o suplemento pode usar retornado <xref:System.Collections.Generic.IList%601> coleção. O <xref:System.Collections.Generic.IList%601> coleta terá um token de tempo de vida para o controle remoto <xref:System.AddIn.Contract.IListContract%601> coleção.  
+  
+ Você deve usar essa sobrecarga de método apenas quando o conteúdo do <xref:System.AddIn.Contract.IListContract%601> são tipos serializáveis que podem ser passados diretamente para o suplemento e host (em vez de tipos que devem ser adaptados para modos de exibição).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa um segmento de pipeline do adaptador do host conforme descrito [passo a passo: passando coleções entre Hosts e suplementos](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5). O exemplo adapta personalizado `ProcessBooks` método colocando o <xref:System.AddIn.Contract.IListContract%601> coleção passado do add-in e convertê-la em um <xref:System.Collections.Generic.IList%601> coleção, o que pode usar o aplicativo de host.  
+  
+ [!code-csharp[AddInCollectionPipelineAddInSideAdapter#3](~/samples/snippets/csharp/VS_Snippets_CLR/AddInCollectionPipelineAddInSideAdapter/cs/LibraryManagerViewToContractAddInAdapter.cs#3)]
+ [!code-vb[AddInCollectionPipelineAddInSideAdapter#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddInCollectionPipelineAddInSideAdapter/vb/LibraryManagerViewToContractAddInAdapter.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToIList&lt;TContract,TView&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;TView&gt; ToIList&lt;TContract,TView&gt; (System.AddIn.Contract.IListContract&lt;TContract&gt; collection, Converter&lt;TContract,TView&gt; contractViewAdapter, Converter&lt;TView,TContract&gt; viewContractAdapter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;!!TView&gt; ToIList&lt;TContract, TView&gt;(class System.AddIn.Contract.IListContract`1&lt;!!TContract&gt; collection, class System.Converter`2&lt;!!TContract, !!TView&gt; contractViewAdapter, class System.Converter`2&lt;!!TView, !!TContract&gt; viewContractAdapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIList``2(System.AddIn.Contract.IListContract{``0},System.Converter{``0,``1},System.Converter{``1,``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;TView&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TContract" />
+        <TypeParameter Name="TView" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="collection" Type="System.AddIn.Contract.IListContract&lt;TContract&gt;" />
+        <Parameter Name="contractViewAdapter" Type="System.Converter&lt;TContract,TView&gt;" />
+        <Parameter Name="viewContractAdapter" Type="System.Converter&lt;TView,TContract&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TContract">O tipo que define o contrato para passar os objetos do tipo <c>TView</c> através dos limites de isolamento.</typeparam>
+        <typeparam name="TView">O tipo que define a exibição dos objetos na lista.</typeparam>
+        <param name="collection">A coleção para passar para o outro lado da pipeline.</param>
+        <param name="contractViewAdapter">Um conversor que se adapta os dados do tipo definido no contrato para o tipo esperado no modo de exibição.</param>
+        <param name="viewContractAdapter">Um conversor que se adapta os dados do tipo definido no modo de exibição para o tipo esperado pelo contrato.</param>
+        <summary>Converte um especificado <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção para um <see cref="T:System.Collections.Generic.IList`1" /> coleção usando adaptadores de conversor.</summary>
+        <returns>A coleção convertida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga de método para <xref:System.AddIn.Contract.IListContract%601> coleções que contêm tipos que devem ser adaptados antes que eles podem ser passados para o suplemento ou host (em vez de tipos serializáveis simples que podem ser passados diretamente). O aplicativo de host ou o suplemento pode usar retornado <xref:System.Collections.Generic.IList%601> coleção. Ele terá um token de tempo de vida para o controle remoto <xref:System.AddIn.Contract.IListContract%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToIListContract&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Contract.IListContract&lt;T&gt; ToIListContract&lt;T&gt; (System.Collections.Generic.IList&lt;T&gt; collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.AddIn.Contract.IListContract`1&lt;!!T&gt; ToIListContract&lt;T&gt;(class System.Collections.Generic.IList`1&lt;!!T&gt; collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIListContract``1(System.Collections.Generic.IList{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IListContract&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IList&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de objetos que estão contidos na lista. <c>T</c> devem ser serializáveis.</typeparam>
+        <param name="collection">A coleção para converter.</param>
+        <summary>Converte um especificado <see cref="T:System.Collections.Generic.IList`1" /> coleção para um <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção.</summary>
+        <returns>A coleção convertida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AddIn.Contract.IListContract%601> coleção pode ser empacotada pelo limite de isolamento entre o suplemento e seu aplicativo de host.  
+  
+ Você deve usar essa sobrecarga de método apenas quando o conteúdo do <xref:System.Collections.Generic.IList%601> coleção são tipos serializáveis que podem ser passados diretamente para o contrato (em vez de tipos que devem ser adaptados para contratos).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa a classe que define um segmento de pipeline de adaptador do lado do suplemento. Ele se adapta personalizado `ProcessBooks` método colocando o <xref:System.Collections.Generic.IList%601> coleção passados do segmento de exibição e convertê-la em um <xref:System.AddIn.Contract.IListContract%601> coleção pode ser empacotada pelo limite de isolamento para o host.  
+  
+ [!code-csharp[AddInCollectionPipelineHostSideAdapter#4](~/samples/snippets/csharp/VS_Snippets_CLR/AddInCollectionPipelineHostSideAdapter/cs/LibraryManagerContractToViewHostAdapter.cs#4)]
+ [!code-vb[AddInCollectionPipelineHostSideAdapter#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddInCollectionPipelineHostSideAdapter/vb/LibraryManagerContractToViewHostAdapter.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToIListContract&lt;TView,TContract&gt;">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Contract.IListContract&lt;TContract&gt; ToIListContract&lt;TView,TContract&gt; (System.Collections.Generic.IList&lt;TView&gt; collection, Converter&lt;TView,TContract&gt; viewContractAdapter, Converter&lt;TContract,TView&gt; contractViewAdapter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.AddIn.Contract.IListContract`1&lt;!!TContract&gt; ToIListContract&lt;TView, TContract&gt;(class System.Collections.Generic.IList`1&lt;!!TView&gt; collection, class System.Converter`2&lt;!!TView, !!TContract&gt; viewContractAdapter, class System.Converter`2&lt;!!TContract, !!TView&gt; contractViewAdapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.CollectionAdapters.ToIListContract``2(System.Collections.Generic.IList{``0},System.Converter{``0,``1},System.Converter{``1,``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IListContract&lt;TContract&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TView" />
+        <TypeParameter Name="TContract" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IList&lt;TView&gt;" />
+        <Parameter Name="viewContractAdapter" Type="System.Converter&lt;TView,TContract&gt;" />
+        <Parameter Name="contractViewAdapter" Type="System.Converter&lt;TContract,TView&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TView">O tipo que define a exibição dos objetos na lista.</typeparam>
+        <typeparam name="TContract">O tipo que define o contrato para passar os objetos do tipo <c>TView</c> através dos limites de isolamento.</typeparam>
+        <param name="collection">A coleção para converter.</param>
+        <param name="viewContractAdapter">Um conversor que se adapta os dados do tipo definido no modo de exibição para o tipo esperado pelo contrato.</param>
+        <param name="contractViewAdapter">Um conversor que se adapta os dados do tipo definido no contrato para o tipo esperado no modo de exibição.</param>
+        <summary>Converte um especificado <see cref="T:System.Collections.Generic.IList`1" /> coleção para um <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção usando adaptadores de conversor.</summary>
+        <returns>A coleção convertida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga de método para <xref:System.Collections.Generic.IList%601> coleções que contêm tipos que devem ser adaptados de contratos antes que eles podem ser passados para o contrato (em vez de tipos serializáveis simples que podem ser passados diretamente). O <xref:System.AddIn.Contract.IListContract%601> coleção pode ser empacotada pelo limite de isolamento entre um suplemento e seu aplicativo de host.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

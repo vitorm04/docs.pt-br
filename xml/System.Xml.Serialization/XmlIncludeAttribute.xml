@@ -1,0 +1,132 @@
+<Type Name="XmlIncludeAttribute" FullName="System.Xml.Serialization.XmlIncludeAttribute">
+  <TypeSignature Language="C#" Value="public class XmlIncludeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlIncludeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlIncludeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Method | System.AttributeTargets.Interface, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que <see cref="T:System.Xml.Serialization.XmlSerializer" /> reconheça um tipo quando ele serializa ou desserializa um objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Xml.Serialization.XmlIncludeAttribute> quando você chama o <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> ou <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> método o <xref:System.Xml.Serialization.XmlSerializer> classe.  
+  
+ Ao aplicar o <xref:System.Xml.Serialization.XmlIncludeAttribute>, especifique o <xref:System.Type> da classe derivada. Quando o <xref:System.Xml.Serialization.XmlSerializer> serializa objetos que incluem a base e a classe derivada, em seguida, ele pode reconhecer ambos os tipos de objeto.  
+  
+ Você pode usar o <xref:System.Xml.Serialization.XmlIncludeAttribute> para incluir classes derivadas em documentos de descrição de serviço que são escritos no WSDL Web Services Description Language (). Por exemplo, se um método retorna um <xref:System.Object>, aplicar o <xref:System.Xml.Serialization.XmlIncludeAttribute> para o método e especifica os tipos reais para retornar.  
+  
+ Para obter mais informações sobre WSDL, consulte "Web Services Description Language (WSDL) 1.1" em www.w3.org.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra três classes, duas delas herdam o terceiros. O exemplo aplica o <xref:System.Xml.Serialization.XmlIncludeAttribute> para um método que retorna uma instância de uma das classes derivadas.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlIncludeAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlIncludeAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do objeto a ser incluído.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlIncludeAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra três classes, duas delas herdam o terceiros. O exemplo aplica o <xref:System.Xml.Serialization.XmlIncludeAttribute> para um método que retorna uma instância de uma das duas classes derivadas. O exemplo define o <xref:System.Xml.Serialization.XmlIncludeAttribute.Type%2A> propriedade para o tipo do objeto retornado.  
+  
+ [!code-cpp[Classic XmlIncludeAttribute.XmlIncludeAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlIncludeAttribute.XmlIncludeAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlIncludeAttribute.XmlIncludeAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlIncludeAttribute.XmlIncludeAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlIncludeAttribute.XmlIncludeAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlIncludeAttribute.XmlIncludeAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlIncludeAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo do objeto a ser incluído.</summary>
+        <value>O <see cref="T:System.Type" /> do objeto a ser incluído.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir define uma classe denominada `Group`, que contém um campo chamado `Employees` que retorna uma matriz de `Employee` objetos. Deriva o exemplo o `Manager` classe o `Employee` classe e aplica o <xref:System.Xml.Serialization.XmlIncludeAttribute> para o `Employee` classe. Quando o exemplo cria um `Group` do objeto, ele insere um `Manager` objeto para o `Employee` matriz. Por fim, o exemplo serializa o `Group` objeto.  
+  
+ [!code-cpp[Classic XmlIncludeAttribute.Type Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlIncludeAttribute.Type Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlIncludeAttribute.Type Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlIncludeAttribute.Type Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlIncludeAttribute.Type Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlIncludeAttribute.Type Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

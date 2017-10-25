@@ -1,0 +1,156 @@
+<Type Name="ITableMapping" FullName="System.Data.ITableMapping">
+  <TypeSignature Language="C#" Value="public interface ITableMapping" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITableMapping" />
+  <TypeSignature Language="DocId" Value="T:System.Data.ITableMapping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Associa uma tabela de origem a uma tabela em um <see cref="T:System.Data.DataSet" /> e é implementado pela classe <see cref="T:System.Data.Common.DataTableMapping" />, que é usada em comum por provedores de dados .NET Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.ITableMapping> interface permite que uma classe herda de implementar uma classe TableMapping, que associa uma coluna de fonte de dados com um <xref:System.Data.DataSet> coluna. Para obter mais informações, consulte [DataAdapter DataTable e DataColumn mapeamentos](~/docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md).  
+  
+ Um aplicativo não cria uma instância do <xref:System.Data.ITableMapping> interface diretamente, mas cria uma instância de uma classe que herda <xref:System.Data.ITableMapping>.  
+  
+ As classes que herdam <xref:System.Data.ITableMapping> deve implementar os membros herdados e geralmente definem membros adicionais para adicionar funcionalidade específica do provedor. Por exemplo, o <xref:System.Data.ITableMapping> interface define o <xref:System.Data.ITableMapping.DataSetTable%2A> propriedade. Por sua vez, o <xref:System.Data.Common.DataTableMapping> classe herda essa propriedade e também define o <xref:System.Data.Common.DataTableMapping.GetDataTableBySchemaAction%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância da classe derivada, <xref:System.Data.Common.DataTableMapping>e adiciona-o a um <xref:System.Data.Common.DataTableMappingCollection> coleção. Em seguida, ele informa ao usuário que o mapeamento foi adicionado à coleção e exibe o pai de mapeamento.  
+  
+ [!code-csharp[Classic WebData DataTableMapping Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar do <see cref="T:System.Data.ITableMapping" /> interface, você deve implementar construtores a seguir:  
+  
+ <list type="table"><listheader><term>Item  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>DataTableMapping()  
+  
+ </term><description>Inicializa uma nova instância da classe TableMapping.  
+  
+ </description></item><item><term>TableMapping (sourceTable de cadeia de caracteres, cadeia de caracteres dataSetTable)  
+  
+ </term><description>Inicializa uma nova instância da classe TableMapping com uma fonte quando recebe um nome de tabela de origem e um <see cref="T:System.Data.DataTable" /> nome.  
+  
+ </description></item><item><term>TableMapping (sourceTable de cadeia de caracteres, cadeia de caracteres dataSetTable, DataColumnMapping columnMappings de [])  
+  
+ </term><description>Inicializa uma nova instância da classe TableMapping quando é fornecido um nome de tabela de origem, um <see cref="T:System.Data.DataTable" /> nome e uma matriz de objetos de ColumnMapping.  
+  
+ </description></item></list></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnMappings">
+      <MemberSignature Language="C#" Value="public System.Data.IColumnMappingCollection ColumnMappings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IColumnMappingCollection ColumnMappings" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ITableMapping.ColumnMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IColumnMappingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o derivada <see cref="T:System.Data.Common.DataColumnMappingCollection" /> para o <see cref="T:System.Data.DataTable" />.</summary>
+        <value>Uma coleção de mapeamentos de coluna de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma instância da classe derivada, <xref:System.Data.Common.DataTableMapping>, define algumas de suas propriedades e cópias de seus <xref:System.Data.Common.DataTableMapping.ColumnMappings%2A> para uma matriz. Este exemplo supõe que um <xref:System.Data.Common.DataColumnMappingCollection> foi criado.  
+  
+ [!code-csharp[Classic WebData DataTableMapping.ColumnMappings Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.ColumnMappings Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping.ColumnMappings Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping.ColumnMappings Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSetTable">
+      <MemberSignature Language="C#" Value="public string DataSetTable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSetTable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ITableMapping.DataSetTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de maiusculas e minúsculas da tabela dentro do <see cref="T:System.Data.DataSet" />.</summary>
+        <value>O nome de maiusculas e minúsculas da tabela dentro do <see cref="T:System.Data.DataSet" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceTable">
+      <MemberSignature Language="C#" Value="public string SourceTable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceTable" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ITableMapping.SourceTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome diferencia maiusculas e minúsculas da tabela de origem.</summary>
+        <value>O nome diferencia maiusculas e minúsculas da tabela de origem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

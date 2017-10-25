@@ -1,0 +1,222 @@
+<Type Name="UrlRoutingModule" FullName="System.Web.Routing.UrlRoutingModule">
+  <TypeSignature Language="C#" Value="public class UrlRoutingModule : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UrlRoutingModule extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Routing.UrlRoutingModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Routing, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Corresponde a uma solicitação de URL a uma rota definida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Routing.UrlRoutingModule> classe corresponde a uma solicitação HTTP para uma rota em um aplicativo ASP.NET. O módulo itera todas as rotas no <xref:System.Web.Routing.UrlRoutingModule.RouteCollection%2A> propriedade e procura uma rota com um padrão de URL que corresponde ao formato da solicitação HTTP. Quando o módulo de encontra uma rota correspondente, ele recupera o <xref:System.Web.Routing.IRouteHandler> objeto para essa rota. O manipulador de rota, o módulo obtém um <xref:System.Web.IHttpHandler> do objeto e a usará como o manipulador HTTP da solicitação atual.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UrlRoutingModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.UrlRoutingModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Routing.UrlRoutingModule" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.UrlRoutingModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos (diferente de memória) que são usados pelo módulo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="protected virtual void Init (System.Web.HttpApplication application);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Init(class System.Web.HttpApplication application) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.UrlRoutingModule.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="application" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="application">Um objeto que fornece acesso aos métodos, propriedades e eventos comuns a todos os objetos de aplicativo em um aplicativo ASP.NET.</param>
+        <summary>Inicializa um módulo e o prepara para manipular solicitações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostMapRequestHandler">
+      <MemberSignature Language="C#" Value="public virtual void PostMapRequestHandler (System.Web.HttpContextBase context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PostMapRequestHandler(class System.Web.HttpContextBase context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler(System.Web.HttpContextBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method is obsolete. Override the Init method to use the PostMapRequestHandler event.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContextBase" />
+      </Parameters>
+      <Docs>
+        <param name="context">Encapsula todas as informações específicas de HTTP sobre uma solicitação HTTP individual.</param>
+        <summary>Atribui o manipulador HTTP para a solicitação atual para o contexto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A> método é chamado quando o <xref:System.Web.HttpApplication.PostMapRequestHandler> é gerado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Web.Routing.RouteData.RouteHandler" /> é de propriedade para a rota <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PostResolveRequestCache">
+      <MemberSignature Language="C#" Value="public virtual void PostResolveRequestCache (System.Web.HttpContextBase context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PostResolveRequestCache(class System.Web.HttpContextBase context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(System.Web.HttpContextBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContextBase" />
+      </Parameters>
+      <Docs>
+        <param name="context">Encapsula todas as informações específicas de HTTP sobre uma solicitação HTTP individual.</param>
+        <summary>Corresponde a solicitação HTTP para uma rota, recupera o manipulador de rota e define o manipulador como o manipulador HTTP para a solicitação atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Routing.UrlRoutingModule.PostResolveRequestCache%2A> método é chamado quando o <xref:System.Web.HttpApplication.PostResolveRequestCache> é gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouteCollection">
+      <MemberSignature Language="C#" Value="public System.Web.Routing.RouteCollection RouteCollection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Routing.RouteCollection RouteCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.UrlRoutingModule.RouteCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RouteCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coleção de rotas definidas para o aplicativo ASP.NET.</summary>
+        <value>Um objeto que contém as rotas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpModule.Dispose">
+      <MemberSignature Language="C#" Value="void IHttpModule.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpModule.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.UrlRoutingModule.System#Web#IHttpModule#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.IHttpModule.Dispose" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.Routing.UrlRoutingModule> é convertida em uma interface de <xref:System.Web.IHttpModule>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpModule.Init">
+      <MemberSignature Language="C#" Value="void IHttpModule.Init (System.Web.HttpApplication application);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpModule.Init(class System.Web.HttpApplication application) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.UrlRoutingModule.System#Web#IHttpModule#Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="application" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="application">Um objeto que fornece acesso para os métodos, propriedades e eventos que são comuns a todos os objetos de aplicativo em um aplicativo ASP.NET.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.Routing.UrlRoutingModule.System#Web#IHttpModule#Init(System.Web.HttpApplication)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.Routing.UrlRoutingModule> é convertida em uma interface de <xref:System.Web.IHttpModule>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

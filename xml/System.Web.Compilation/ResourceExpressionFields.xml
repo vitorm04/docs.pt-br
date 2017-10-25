@@ -1,0 +1,93 @@
+<Type Name="ResourceExpressionFields" FullName="System.Web.Compilation.ResourceExpressionFields">
+  <TypeSignature Language="C#" Value="public sealed class ResourceExpressionFields" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ResourceExpressionFields extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ResourceExpressionFields" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém os campos de uma expressão de recurso analisado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma página é analisada, os valores contidos em uma expressão de recurso são analisados e armazenados em uma instância do <xref:System.Web.Compilation.ResourceExpressionFields> classe. Isso <xref:System.Web.Compilation.ResourceExpressionFields> objeto contém dois campos, <xref:System.Web.Compilation.ResourceExpressionFields.ClassKey%2A> e <xref:System.Web.Compilation.ResourceExpressionFields.ResourceKey%2A>. Esses campos são desenhados entre os valores de uma expressão de recursos em qualquer explícita (`<%$ Resources: ClassKey, ResourceKey %>`) ou implícita (`meta:resourcekey="ResourceKey"`) formulário.  
+  
+ O <xref:System.Web.Compilation.ResourceExpressionFields.ClassKey%2A> propriedade identifica o nome da classe de um recurso que é mapeado para um arquivo de recurso. Por exemplo, para fazer referência a um arquivo de recurso denominado Financial.resx ou uma versão localizada como Financial.en GB.resx, a expressão de recurso será exibido como `<%$ Resources: Financial, ResourceKey %>`. Após a análise, o <xref:System.Web.Compilation.ResourceExpressionFields.ClassKey%2A> propriedade retornaria "Financeiro" como seu valor.  
+  
+ O <xref:System.Web.Compilation.ResourceExpressionFields.ResourceKey%2A> propriedade identifica o par chave/valor específico a ser recuperada do arquivo. Se o arquivo Financial.resx contém uma chave chamada `Currency`, que o valor pode ser especificado com a expressão de recurso `<%$ Resources: Financial, Currency %>`. Após a análise, o <xref:System.Web.Compilation.ResourceExpressionFields.ResourceKey%2A> propriedade retornaria "Moeda" como seu valor.  
+  
+ A expressão de recurso é analisada por meio de <xref:System.Web.Compilation.ResourceExpressionBuilder.ParseExpression%2A> método.  
+  
+> [!CAUTION]
+>  Informações confidenciais não devem ser armazenadas em um arquivo de recurso.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClassKey">
+      <MemberSignature Language="C#" Value="public string ClassKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ResourceExpressionFields.ClassKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de classe para uma expressão de recurso analisada.</summary>
+        <value>Uma <see cref="T:System.String" /> que contém a chave da classe ou <see cref="F:System.String.Empty" /> se a chave de classe não foi definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna a chave de classe para uma expressão de recurso analisado. A chave de classe representa o nome do arquivo de recurso e é o valor especificado antes da vírgula (,) em uma expressão de formato `<%$ Resources: [Namespace.]ClassKey, ResourceKey $>`. Um valor de namespace para a classe de recurso é opcional. Quando é fornecido um namespace, o namespace e a chave de classe são retornados no <xref:System.Web.Compilation.ResourceExpressionFields.ClassKey%2A> propriedade. A chave de classe não pode conter espaços ou conjuntos de caracteres de dois bytes (DBCS).  
+  
+ Para fazer referência a um arquivo de recurso denominado Financial.resx ou uma versão localizada como Financial.en GB.resx, você incluiria a expressão de recurso <`%$ Resources: Financial, ResourceKey %>`. Após a análise, o <xref:System.Web.Compilation.ResourceExpressionFields.ClassKey%2A> propriedade retornaria "Financeiro" como seu valor.  
+  
+> [!CAUTION]
+>  Informações confidenciais não devem ser armazenadas em um arquivo de recurso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceKey">
+      <MemberSignature Language="C#" Value="public string ResourceKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResourceKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ResourceExpressionFields.ResourceKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de recurso para uma expressão de recurso analisada.</summary>
+        <value>Uma <see cref="T:System.String" /> que contém a chave de recurso ou <see cref="F:System.String.Empty" /> se a chave de recurso não foi definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna a chave de recurso para uma expressão de recurso analisado. A chave de recurso é o valor especificado após a vírgula (,) em uma expressão de formato `<%$ Resources: ClassKey, ResourceKey %>`. O <xref:System.Web.Compilation.ResourceExpressionFields.ResourceKey%2A> propriedade identifica um par chave/valor específico dentro do arquivo de recurso mapeado para a chave de classe. Por exemplo, se um arquivo chamado Financial.resx contém uma chave chamada `Currency`, que o valor pode ser especificado com a expressão de recurso `<%$ Resources: Financial, Currency %>`. Após a análise, o <xref:System.Web.Compilation.ResourceExpressionFields.ResourceKey%2A> propriedade retornaria "Moeda" como seu valor.  
+  
+> [!CAUTION]
+>  Informações confidenciais não devem ser armazenadas em um arquivo de recurso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

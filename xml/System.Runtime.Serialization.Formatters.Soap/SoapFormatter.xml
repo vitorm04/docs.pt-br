@@ -1,0 +1,456 @@
+<Type Name="SoapFormatter" FullName="System.Runtime.Serialization.Formatters.Soap.SoapFormatter">
+  <TypeSignature Language="C#" Value="public sealed class SoapFormatter : System.Runtime.Remoting.Messaging.IRemotingFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapFormatter extends System.Object implements class System.Runtime.Remoting.Messaging.IRemotingFormatter, class System.Runtime.Serialization.IFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Messaging.IRemotingFormatter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Serializa e desserializa um objeto ou um grafo inteiro de objetos conectados, em formato SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Começando com o .NET Framework 2.0, essa classe está obsoleta. Use <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> em seu lugar.  
+  
+ O <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> e <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classes implementam o <xref:System.Runtime.Remoting.Messaging.IRemotingFormatter> interface para oferecer suporte a chamadas de procedimento remoto (RPCs) e o <xref:System.Runtime.Serialization.IFormatter> interface (herdada pelo <xref:System.Runtime.Remoting.Messaging.IRemotingFormatter>) para dar suporte a serialização de um gráfico de objetos. O <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> classe também oferece suporte a RPCs com <xref:System.Runtime.Serialization.Formatters.ISoapMessage> objetos, sem usar o <xref:System.Runtime.Remoting.Messaging.IRemotingFormatter> funcionalidade.  
+  
+ Durante a RPCs, o <xref:System.Runtime.Remoting.Messaging.IRemotingFormatter> interface permite a especificação de dois gráficos de objetos separados: o gráfico de objetos para serializar e um gráfico adicional que contém uma matriz de objetos de cabeçalho que transmitem informações sobre a chamada de função remota (por exemplo, ID da transação ou uma assinatura de método). Para serialização apropriada, o objeto raiz do primeiro gráfico deve ser um objeto que implementa o o <xref:System.Runtime.Remoting.Messaging.IMethodCallMessage> interface ou <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage> interface.  
+  
+ Durante a desserialização de um RPC, um <xref:System.Runtime.Remoting.Messaging.HeaderHandler> delegado é especificado para o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> método do formatador. Usa a infra-estrutura de comunicação remota do <xref:System.Runtime.Remoting.Messaging.HeaderHandler> delegado para produzir um objeto que oferece suporte a <xref:System.Runtime.Serialization.ISerializable> interface. Este objeto contém as informações armazenadas nos cabeçalhos e torna-se a raiz do gráfico retornado pelo desserializador.  
+  
+ O <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> também pode lidar com RPCs que são produzidos com objetos que implementam o <xref:System.Runtime.Serialization.Formatters.ISoapMessage> interface. Para criar uma RPC sem usar o <xref:System.Runtime.Remoting.Messaging.IRemotingFormatter> funcionalidade, o local de um objeto que oferece suporte a <xref:System.Runtime.Serialization.Formatters.ISoapMessage> interface na raiz de um gráfico que está sendo serializado. Para desserializar uma RPC criada dessa maneira a <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TopObject%2A> propriedade deve ser definida em outro objeto que ofereça suporte a <xref:System.Runtime.Serialization.Formatters.ISoapMessage> de interface e contém as informações relevantes chamada remota.  
+  
+## <a name="timespan-serialization"></a>Serialização de TimeSpan  
+ Objetos de TimeSpan são serializados de acordo com o padrão ISO 8601:1998 seção 5.5.3.2.1 "Alternativo".  
+  
+## <a name="version-information"></a>Informações de versão  
+ O <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> não oferece suporte a compatibilidade de serialização entre as versões do .NET Framework. Falha na serialização entre os tipos de versões 1.1 e 2.0 do Framework geralmente. As seguintes ações podem ser tomadas para solucionar este problema:  
+  
+-   Converter para usar o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>, que fornece compatibilidade entre 1.1 e 2.0.  
+  
+-   Converta os dados persistentes existentes para o novo formato.  
+  
+-   Converta todos os produtores e consumidores de dados serializados para a versão 2.0.  
+  
+-   Evite usar tipos alterado de 1.1 para 2.0.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapFormatter Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapFormatter Example/CPP/soapformatter.cpp#1)]
+ [!code-csharp[SoapFormatter Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapFormatter Example/CS/soapformatter.cs#1)]
+ [!code-vb[SoapFormatter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapFormatter Example/VB/soapformatter.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapFormatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> com os valores da propriedade padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.SurrogateSelector%2A>|`null`|  
+|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Context%2A>|Um novo <xref:System.Runtime.Serialization.StreamingContext> inicializado para especificar que os dados serializados podem ser transmitidos para ou recebidos de qualquer um dos outros contextos|  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapFormatter Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapFormatter Example/CPP/soapformatter.cpp#1)]
+ [!code-csharp[SoapFormatter Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapFormatter Example/CS/soapformatter.cs#1)]
+ [!code-vb[SoapFormatter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapFormatter Example/VB/soapformatter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapFormatter (System.Runtime.Serialization.ISurrogateSelector selector, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.ISurrogateSelector selector, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.#ctor(System.Runtime.Serialization.ISurrogateSelector,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="selector" Type="System.Runtime.Serialization.ISurrogateSelector" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="selector">O <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> para usar com a nova instância do <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />. Pode ser <see langword="null" />.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém a origem e o destino da serialização. Se o <c>contexto</c> parâmetro é <see langword="null" />, em seguida, o <see cref="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Context" /> padrão é <see cref="F:System.Runtime.Serialization.StreamingContextStates.CrossMachine" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" /> com o <see cref="T:System.Runtime.Serialization.ISurrogateSelector" /> e <see cref="T:System.Runtime.Serialization.StreamingContext" /> especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos são serializados para ou desserializar do especificado <xref:System.IO.Stream>.  
+  
+ O processo de serialização ou desserialização usa especificado <xref:System.Runtime.Serialization.ISurrogateSelector> para procurar substitutos que são registrados para os tipos de objeto você deseja desserializar. Substitutos são auxiliares que serializar e desserializar objetos de classes específicas. O padrão <xref:System.Runtime.Serialization.ISurrogateSelector> não é possível lidar com a serialização de objetos que derivam de <xref:System.MarshalByRefObject> para fins de comunicação remota. Em uma situação de comunicação remota especificada <xref:System.Runtime.Serialization.ISurrogateSelector> substitui o objeto derivado de <xref:System.MarshalByRefObject> com um <xref:System.Runtime.Remoting.ObjRef> objeto é serializado pelo seletor substituto especificado. Portanto, se você quiser usar objetos remotos, defina o `selector` parâmetro a uma instância de <xref:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector>. Se você não precisar substitutos, defina o `selector` parâmetro seja `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyFormat">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Formatters.FormatterAssemblyStyle AssemblyFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.Formatters.FormatterAssemblyStyle AssemblyFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.AssemblyFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.FormatterAssemblyStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comportamento do desserializador em relação a encontrar e carregar assemblies.</summary>
+        <value>Um dos valores <see cref="T:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle" /> que especifica o comportamento do desserializador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binder">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.SerializationBinder Binder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.SerializationBinder Binder" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Binder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.SerializationBinder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Runtime.Serialization.SerializationBinder" /> que controla a associação de um objeto serializado para um tipo.</summary>
+        <value>O <see cref="T:System.Runtime.Serialization.SerializationBinder" /> usado com esta <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.StreamingContext Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.StreamingContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Runtime.Serialization.StreamingContext" /> usado com esta <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.</summary>
+        <value>O <see cref="T:System.Runtime.Serialization.StreamingContext" /> usado com esta <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Serialization.StreamingContext> fornece uma enumeração que descreve a origem e o destino para um determinado fluxo serializado, bem como uma forma de serialização manter esse contexto e um contexto adicional definido pelo chamador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Deserialize">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Desserializa um fluxo em um gráfico de objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.IO.Stream serializationStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Deserialize(class System.IO.Stream serializationStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">O fluxo que contém os dados a serem desserializados.</param>
+        <summary>Desserializa os dados no fluxo fornecido e reconstitui o grafo de objetos.</summary>
+        <returns>O objeto superior do gráfico desserializado (raiz).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para desserialização bem-sucedida, a posição atual no fluxo deve ser no início do gráfico do objeto.  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapFormatter Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapFormatter Example/CPP/soapformatter.cpp#1)]
+ [!code-csharp[SoapFormatter Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapFormatter Example/CS/soapformatter.cs#1)]
+ [!code-vb[SoapFormatter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapFormatter Example/VB/soapformatter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializationStream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Deserialize(class System.IO.Stream serializationStream, class System.Runtime.Remoting.Messaging.HeaderHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="handler" Type="System.Runtime.Remoting.Messaging.HeaderHandler" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">O fluxo que contém os dados a serem desserializados.</param>
+        <param name="handler">Delegar para lidar com quaisquer cabeçalhos encontrados no fluxo. Pode ser <see langword="null" />.</param>
+        <summary>Desserializa o fluxo em um grafo de objeto com os cabeçalhos nesse fluxo manipulados pelo <see cref="T:System.Runtime.Remoting.Messaging.HeaderHandler" /> especificado.</summary>
+        <returns>O objeto superior do gráfico desserializado (raiz).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cabeçalhos são usados apenas para aplicativos remotos específico. O <xref:System.Runtime.Remoting.Messaging.HeaderHandler> parâmetro é uma das duas maneiras de cabeçalhos de retorno de um fluxo no formato SOAP Remote Procedure Call (RPC). A outra maneira é usar o <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TopObject%2A> propriedade.  
+  
+ Para desserialização bem-sucedida, a posição atual no fluxo deve ser no início do gráfico do objeto.  
+  
+## <a name="timespan-serialization"></a>Serialização de TimeSpan  
+ Objetos de TimeSpan são serializados de acordo com o padrão ISO 8601:1998 seção 5.5.3.2.1 "Alternativo".  
+  
+> [!IMPORTANT]
+>  Chamar esse método com dados não confiáveis é um risco de segurança. Chame este método apenas com dados confiáveis. Para obter mais informações, consulte [riscos de segurança de dados não confiável](http://go.microsoft.com/fwlink/?LinkId=330378).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializationStream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">
+          <paramref name="serializationStream" /> dá suporte à busca e seu tamanho é 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterLevel">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Formatters.TypeFilterLevel FilterLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.Formatters.TypeFilterLevel FilterLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.FilterLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.TypeFilterLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" /> de desserialização automática para comunicação remota do .NET Framework.</summary>
+        <value>O <see cref="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" /> que representa o nível atual de desserialização automática.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores com suporte são <xref:System.Runtime.Serialization.Formatters.TypeFilterLevel.Low> e <xref:System.Runtime.Serialization.Formatters.TypeFilterLevel.Full> (o padrão). Para obter detalhes sobre os níveis de desserialização, consulte [desserialização automática no .NET Remoting](http://msdn.microsoft.com/en-us/313a0e88-5b2b-4a17-8391-0ddf9f7a787b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.IO.Stream serializationStream, object graph);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Serialize(class System.IO.Stream serializationStream, object graph) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="graph" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">O fluxo no qual o formatador coloca os dados para serializar.</param>
+        <param name="graph">O objeto, ou a raiz do gráfico do objeto para serializar. Todos os objetos filho desse objeto raiz são serializados automaticamente.</param>
+        <summary>Serializa um objeto ou grafo de objetos com a raiz especificada para o <see cref="T:System.IO.Stream" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos de TimeSpan são serializados de acordo com o padrão ISO 8601:1998 seção 5.5.3.2.1 "Alternativo".  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapFormatter Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapFormatter Example/CPP/soapformatter.cpp#1)]
+ [!code-csharp[SoapFormatter Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapFormatter Example/CS/soapformatter.cs#1)]
+ [!code-vb[SoapFormatter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapFormatter Example/VB/soapformatter.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializationStream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.IO.Stream serializationStream, object graph, System.Runtime.Remoting.Messaging.Header[] headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Serialize(class System.IO.Stream serializationStream, object graph, class System.Runtime.Remoting.Messaging.Header[] headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object,System.Runtime.Remoting.Messaging.Header[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializationStream" Type="System.IO.Stream" />
+        <Parameter Name="graph" Type="System.Object" />
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Messaging.Header[]" />
+      </Parameters>
+      <Docs>
+        <param name="serializationStream">O fluxo no qual o formatador coloca os dados para serializar.</param>
+        <param name="graph">O objeto ou a raiz do gráfico de objeto para serializar. Todos os objetos filho desse objeto raiz são serializados automaticamente.</param>
+        <param name="headers">Cabeçalhos de comunicação remota para incluir na serialização. Pode ser <see langword="null" />.</param>
+        <summary>Serializa um objeto ou um gráfico de objetos com a raiz especificado para o determinado <see cref="T:System.IO.Stream" /> no formato SOAP Remote Procedure Call (RPC).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cabeçalhos são usados apenas para aplicativos remotos específico.  
+  
+ Objetos de TimeSpan são serializados de acordo com o padrão ISO 8601:1998 seção 5.5.3.2.1 "Alternativo".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializationStream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SurrogateSelector">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.ISurrogateSelector SurrogateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.ISurrogateSelector SurrogateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.SurrogateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ISurrogateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Runtime.Serialization.SurrogateSelector" /> que controles de tipo de substituição durante a serialização e desserialização.</summary>
+        <value>O <see cref="T:System.Runtime.Serialization.SurrogateSelector" /> usado com esta <see cref="T:System.Runtime.Serialization.Formatters.Soap.SoapFormatter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado por <xref:System.Runtime.Remoting> para gerar <xref:System.Runtime.Remoting.ObjRef> instâncias <xref:System.MarshalByRefObject> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopObject">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Formatters.ISoapMessage TopObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.Formatters.ISoapMessage TopObject" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TopObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.ISoapMessage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Runtime.Serialization.Formatters.ISoapMessage" /> no qual o objeto superior SOAP é desserializado.</summary>
+        <value>O <see cref="T:System.Runtime.Serialization.Formatters.ISoapMessage" /> no qual o objeto superior SOAP é desserializado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é usada para o formato de chamada (RPC) de procedimento remoto de SOAP e especifica que o registro inicial do SOAP é um método chamado remotamente, não um tipo common language runtime objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeFormat">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Formatters.FormatterTypeStyle TypeFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.Formatters.FormatterTypeStyle TypeFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.TypeFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Formatters.FormatterTypeStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o formato no qual as descrições de tipo são apresentadas no fluxo serializado.</summary>
+        <value>O formato no qual tipo descrições são dispostas no fluxo serializado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

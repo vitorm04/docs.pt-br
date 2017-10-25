@@ -1,0 +1,145 @@
+<Type Name="SqlMethodAttribute" FullName="Microsoft.SqlServer.Server.SqlMethodAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SqlMethodAttribute : Microsoft.SqlServer.Server.SqlFunctionAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SqlMethodAttribute extends Microsoft.SqlServer.Server.SqlFunctionAttribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlMethodAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.SqlServer.Server.SqlFunctionAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica as propriedades de acesso de determinismo e dados de um método ou propriedade em um tipo definido pelo usuário (UDT). As propriedades do atributo refletem as características físicas que são usadas quando o tipo é registrado com o SQL Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma propriedade, o <xref:Microsoft.SqlServer.Server.SqlMethodAttribute> deve ser usado diretamente em setter ou getter.  
+  
+ <xref:Microsoft.SqlServer.Server.SqlMethodAttribute>herda de uma <xref:Microsoft.SqlServer.Server.SqlFunctionAttribute>, portanto <xref:Microsoft.SqlServer.Server.SqlMethodAttribute> herda o `FillRowMethodName` e `TableDefinition` os campos do <xref:Microsoft.SqlServer.Server.SqlFunctionAttribute>. Observe que não é possível escrever um método com valor de tabela, embora os nomes desses campos podem sugerir que é possível.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um método UDT que é atribuído para indicar que o método não será chamado em instâncias nulas do tipo, o método não alterará o estado do tipo, e que o método será não chamado quando `null` são parâmetros fornecido para a invocação de método.  
+  
+ [!code-csharp[DataWorks SqlMethodAttribute Sample#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlMethodAttribute Sample/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlMethodAttribute Sample#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlMethodAttribute Sample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlMethodAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlMethodAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Um atributo em um tipo definido pelo usuário (UDT), usado para indicar as propriedades de acesso de determinismo e dados de um método ou uma propriedade em um UDT.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeIfReceiverIsNull">
+      <MemberSignature Language="C#" Value="public bool InvokeIfReceiverIsNull { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InvokeIfReceiverIsNull" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMethodAttribute.InvokeIfReceiverIsNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o SQL Server deve chamar o método em instâncias nulas.</summary>
+        <value>
+          <see langword="true" />Se o SQL Server deve chamar o método em instâncias nulas; Caso contrário, <see langword="false" />. Se o método não pode ser invocado (devido a um atributo no método), o [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] <see langword="DbNull" /> é retornado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão para o <xref:Microsoft.SqlServer.Server.SqlMethodAttribute.InvokeIfReceiverIsNull%2A> é de propriedade `false`.  
+  
+ Ou seja, o método não é invocado em uma instância nula. Se <xref:Microsoft.SqlServer.Server.SqlMethodAttribute.InvokeIfReceiverIsNull%2A> for true, o valor de retorno do método depende de seu tipo. Se o tipo de retorno do método for nulo, o valor diferenciado nulo para o tipo será retornado. Se o tipo de retorno é não nulo, o valor CLR de padrão para o tipo será retornado. O valor padrão para tipos de referência é nulo. O valor padrão para um tipo de valor é o valor que é retornado ao chamar o construtor padrão para o tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMutator">
+      <MemberSignature Language="C#" Value="public bool IsMutator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMutator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se um método em um tipo definido pelo usuário (UDT) é um modificador.</summary>
+        <value>
+          <see langword="true" />Se o método é um modificador; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator%2A> está definida como `true` e o tipo de retorno do método é `void`, SQL Server marca o método como um modificador. Um método modificador é aquele que faz com que uma alteração de estado na instância da UDT. Métodos de modificador podem ser chamados em instruções de atribuição ou instruções de modificação de dados, mas não podem ser usados em consultas. Se um método é marcado como um modificador, mas não retorna void, CREATE TYPE falha com um erro. Embora um retornados valor diferente de `void` faz não gerar um erro, o valor retornado não está acessível e não pode ser usado.  
+  
+ O valor padrão de <xref:Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator%2A> é de propriedade `false`.  
+  
+ Uma propriedade pode ser um modificador se <xref:Microsoft.SqlServer.Server.SqlMethodAttribute> é usada em setter e <xref:Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator%2A> é definido como `true`. No entanto, um setter de propriedade implicitamente é tratado como um modificador, portanto, não é necessário definir o <xref:Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator%2A> propriedade o <xref:Microsoft.SqlServer.Server.SqlMethodAttribute> para `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNullCall">
+      <MemberSignature Language="C#" Value="public bool OnNullCall { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OnNullCall" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlMethodAttribute.OnNullCall" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o método em um tipo definido pelo usuário (UDT) é chamado quando <see langword="null" /> argumentos de entrada são especificados na invocação de método.</summary>
+        <value>
+          <see langword="true" />Se o método é chamado quando <see langword="null" /> argumentos de entrada estão especificados na invocação de método; <see langword="false" /> se o método retorna um <see langword="null" /> valor quando qualquer um dos seus parâmetros de entrada são <see langword="null" />. Se o método não pode ser invocado (devido a um atributo no método), o [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] <see langword="DbNull" /> é retornado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:Microsoft.SqlServer.Server.SqlMethodAttribute.OnNullCall%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,105 @@
+<Type Name="ScrollEventArgs" FullName="System.Windows.Controls.Primitives.ScrollEventArgs">
+  <TypeSignature Language="C#" Value="public class ScrollEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScrollEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.ScrollEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para um <see cref="E:System.Windows.Controls.Primitives.ScrollBar.Scroll" /> evento que ocorre quando o <see cref="T:System.Windows.Controls.Primitives.Thumb" /> de um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> move.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollEventArgs (System.Windows.Controls.Primitives.ScrollEventType scrollEventType, double newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Controls.Primitives.ScrollEventType scrollEventType, float64 newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ScrollEventArgs.#ctor(System.Windows.Controls.Primitives.ScrollEventType,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scrollEventType" Type="System.Windows.Controls.Primitives.ScrollEventType" />
+        <Parameter Name="newValue" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="scrollEventType">Um <see cref="T:System.Windows.Controls.Primitives.ScrollEventType" /> valor de enumeração que descreve o tipo de <see cref="T:System.Windows.Controls.Primitives.Thumb" /> movimentação que causou o evento.</param>
+        <param name="newValue">O valor correspondente para o novo local do <see cref="T:System.Windows.Controls.Primitives.Thumb" /> no <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</param>
+        <summary>Inicializa uma instância do <see cref="T:System.Windows.Controls.Primitives.ScrollEventArgs" /> classe usando especificado <see cref="T:System.Windows.Controls.Primitives.ScrollEventType" /> valor de enumeração e o novo local do <see cref="T:System.Windows.Controls.Primitives.Thumb" /> controlar o <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ScrollEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">O manipulador de eventos para chamar.</param>
+        <param name="genericTarget">O objeto atual ao longo de rota do evento.</param>
+        <summary>Executa a conversão de tipo apropriado para chamar a segurança de tipo <see cref="T:System.Windows.Controls.Primitives.ScrollEventHandler" /> delegar o <see cref="E:System.Windows.Controls.Primitives.ScrollBar.Scroll" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public double NewValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 NewValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ScrollEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o novo local do <see cref="T:System.Windows.Controls.Primitives.Thumb" /> no <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</summary>
+        <value>O valor que corresponde à posição de novo o <see cref="T:System.Windows.Controls.Primitives.Thumb" /> no <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O novo valor corresponde ao valor da <xref:System.Windows.Controls.Primitives.Track.Value%2A> propriedade o <xref:System.Windows.Controls.Primitives.Track> controle que é implementado para o <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollEventType">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.ScrollEventType ScrollEventType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.Primitives.ScrollEventType ScrollEventType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ScrollEventArgs.ScrollEventType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Controls.Primitives.ScrollEventType" /> valor de enumeração que descreve a alteração no <see cref="T:System.Windows.Controls.Primitives.Thumb" /> posição que causou este evento.</summary>
+        <value>Um <see cref="T:System.Windows.Controls.Primitives.ScrollEventType" /> valor de enumeração que descreve o tipo de <see cref="T:System.Windows.Controls.Primitives.Thumb" /> movimentação que causou o <see cref="E:System.Windows.Controls.Primitives.ScrollBar.Scroll" /> evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

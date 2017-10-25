@@ -1,0 +1,225 @@
+<Type Name="TrackingParameters" FullName="System.Workflow.Runtime.Tracking.TrackingParameters">
+  <TypeSignature Language="C#" Value="public sealed class TrackingParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TrackingParameters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém informações sobre a instância de fluxo de trabalho associada com um <see cref="T:System.Workflow.Runtime.Tracking.TrackingChannel" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ O tempo de execução controle infraestrutura passa um <xref:System.Workflow.Runtime.Tracking.TrackingParameters> objeto quando ele chama <xref:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel%2A> em um <xref:System.Workflow.Runtime.Tracking.TrackingService>. Você pode usar esses parâmetros em seu serviço de controle para associar o controle de dados recebidos no <xref:System.Workflow.Runtime.Tracking.TrackingChannel> com uma instância de fluxo de trabalho específico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackingParameters (Guid instanceId, Type workflowType, System.Workflow.ComponentModel.Activity rootActivity, System.Collections.Generic.IList&lt;string&gt; callPath, Guid callerInstanceId, Guid contextGuid, Guid callerContextGuid, Guid callerParentContextGuid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, class System.Type workflowType, class System.Workflow.ComponentModel.Activity rootActivity, class System.Collections.Generic.IList`1&lt;string&gt; callPath, valuetype System.Guid callerInstanceId, valuetype System.Guid contextGuid, valuetype System.Guid callerContextGuid, valuetype System.Guid callerParentContextGuid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingParameters.#ctor(System.Guid,System.Type,System.Workflow.ComponentModel.Activity,System.Collections.Generic.IList{System.String},System.Guid,System.Guid,System.Guid,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="workflowType" Type="System.Type" />
+        <Parameter Name="rootActivity" Type="System.Workflow.ComponentModel.Activity" />
+        <Parameter Name="callPath" Type="System.Collections.Generic.IList&lt;System.String&gt;" />
+        <Parameter Name="callerInstanceId" Type="System.Guid" />
+        <Parameter Name="contextGuid" Type="System.Guid" />
+        <Parameter Name="callerContextGuid" Type="System.Guid" />
+        <Parameter Name="callerParentContextGuid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O <see cref="T:System.Guid" /> da instância do fluxo de trabalho associada ao canal de controle.</param>
+        <param name="workflowType">O <see cref="T:System.Type" /> da instância do fluxo de trabalho associada ao canal de controle.</param>
+        <param name="rootActivity">A raiz <see cref="T:System.Workflow.ComponentModel.Activity" /> da instância do fluxo de trabalho associada ao canal de controle.</param>
+        <param name="callPath">Uma lista de cadeias de caracteres, cada um deles representa a <see cref="P:System.Workflow.ComponentModel.Activity.QualifiedName" /> de uma atividade na cadeia de chamada da instância do fluxo de trabalho associada ao canal de controle. Atualmente, apenas o <see cref="P:System.Workflow.ComponentModel.Activity.QualifiedName" /> da atividade que invocou o fluxo de trabalho de instância é incluída na lista.</param>
+        <param name="callerInstanceId">O <see cref="T:System.Guid" /> do fluxo de trabalho que chamou a instância de fluxo de trabalho associada ao canal de controle.</param>
+        <param name="contextGuid">Um número que identifica o <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> da atividade raiz da instância do fluxo de trabalho associada ao canal de controle.</param>
+        <param name="callerContextGuid">Um número que identifica o <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> da atividade que invocou a instância de fluxo de trabalho associada ao canal de controle.</param>
+        <param name="callerParentContextGuid">Um número que identifica o pai <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> da atividade que invocou a instância de fluxo de trabalho associada ao canal de controle.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.Tracking.TrackingParameters" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor é chamado pelo tempo de execução de infra-estrutura de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallerContextGuid">
+      <MemberSignature Language="C#" Value="public Guid CallerContextGuid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid CallerContextGuid" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingParameters.CallerContextGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID do contexto da atividade do chamador.</summary>
+        <value>Um <see cref="T:System.Guid" /> que contém a ID do contexto do chamador <see cref="T:System.Workflow.ComponentModel.Activity" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallerInstanceId">
+      <MemberSignature Language="C#" Value="public Guid CallerInstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid CallerInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingParameters.CallerInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Guid" /> do fluxo de trabalho instância que chamou a instância de fluxo de trabalho associado ao canal de controle.</summary>
+        <value>O <see cref="T:System.Guid" /> do fluxo de trabalho instância que chamou a instância de fluxo de trabalho associado ao canal de controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallerParentContextGuid">
+      <MemberSignature Language="C#" Value="public Guid CallerParentContextGuid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid CallerParentContextGuid" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingParameters.CallerParentContextGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID do contexto da atividade do pai do chamador.</summary>
+        <value>Um <see cref="T:System.Guid" /> que contém a ID do contexto do pai do chamador <see cref="T:System.Workflow.ComponentModel.Activity" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallPath">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;string&gt; CallPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; CallPath" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingParameters.CallPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de cadeias de caracteres, cada um deles representa a <see cref="P:System.Workflow.ComponentModel.Activity.QualifiedName" /> de uma atividade na cadeia de chamada da instância do fluxo de trabalho associada ao canal de controle.</summary>
+        <value>Uma lista de cadeias de caracteres, cada um deles representa a <see cref="P:System.Workflow.ComponentModel.Activity.QualifiedName" /> de uma atividade na cadeia de chamada da instância do fluxo de trabalho associada ao canal de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atualmente, apenas o <xref:System.Workflow.ComponentModel.Activity.QualifiedName%2A> da atividade que invocou o fluxo de trabalho de instância é incluída na lista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextGuid">
+      <MemberSignature Language="C#" Value="public Guid ContextGuid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ContextGuid" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingParameters.ContextGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID do contexto da atividade associada.</summary>
+        <value>Um <see cref="T:System.Guid" /> que contém a ID do contexto da <see cref="T:System.Workflow.ComponentModel.Activity" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingParameters.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Guid" /> da instância do fluxo de trabalho associada ao canal de controle.</summary>
+        <value>O <see cref="T:System.Guid" /> da instância do fluxo de trabalho associada ao canal de controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootActivity">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Activity RootActivity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Activity RootActivity" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingParameters.RootActivity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atividade de raiz da instância do fluxo de trabalho associada ao canal de controle.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Activity" /> que representa a atividade de raiz da instância do fluxo de trabalho associada ao canal de controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowType">
+      <MemberSignature Language="C#" Value="public Type WorkflowType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type WorkflowType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingParameters.WorkflowType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> da instância do fluxo de trabalho associada ao canal de controle.</summary>
+        <value>O <see cref="T:System.Type" /> da instância do fluxo de trabalho associada ao canal de controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

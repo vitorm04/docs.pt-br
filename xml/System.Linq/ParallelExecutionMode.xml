@@ -1,0 +1,80 @@
+<Type Name="ParallelExecutionMode" FullName="System.Linq.ParallelExecutionMode">
+  <TypeSignature Language="C#" Value="public enum ParallelExecutionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ParallelExecutionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.ParallelExecutionMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Parallel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>O modo de execução de consulta é uma dica que especifica como o sistema deve tratar as compensações de desempenho ao paralelizar consultas.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Linq.ParallelExecutionMode Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Linq.ParallelExecutionMode.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.ParallelExecutionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa é a configuração padrão. O PLINQ examinará a estrutura da consulta e paralelizará a consulta apenas se provavelmente isso resultará no aumento de velocidade. Se a estrutura de consulta indicar que não é provável que esse aumento de velocidade seja obtido, o PLINQ executará a consulta como uma consulta LINQ to Objects comum.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceParallelism">
+      <MemberSignature Language="C#" Value="ForceParallelism" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Linq.ParallelExecutionMode ForceParallelism = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Linq.ParallelExecutionMode.ForceParallelism" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.ParallelExecutionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Paralelizar toda a consulta, mesmo que isso signifique usar algoritmos de alta sobrecarga. Use esse sinalizador nos casos em que você sabe que a execução paralela da consulta resultará no aumento de velocidade, mas o PLINQ no modo Atual executaria como sequencial.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

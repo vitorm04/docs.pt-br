@@ -1,0 +1,111 @@
+<Type Name="LoadHint" FullName="System.Runtime.CompilerServices.LoadHint">
+  <TypeSignature Language="C#" Value="public enum LoadHint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed LoadHint extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.LoadHint" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a associação padrão preferencial para um assembly dependente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta enumeração com o <xref:System.Runtime.CompilerServices.DependencyAttribute> atributo e o <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> atributo para especificar a associação padrão preferencial para um assembly dependente.  
+  
+ Observe que o `Default` valor instrui o serviço de geração nativo consultar o assembly dependente para seu padrão preferencial de associação, que é especificado usando o <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> atributo. Muito poucos assemblies devem precisar especificar um valor padrão dessa maneira.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.LoadHint Always = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.LoadHint.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.LoadHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A dependência é sempre carregada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.LoadHint Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.LoadHint.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.LoadHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma preferência especificada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sometimes">
+      <MemberSignature Language="C#" Value="Sometimes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.LoadHint Sometimes = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.LoadHint.Sometimes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.LoadHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A dependência às vezes é carregada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

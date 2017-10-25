@@ -1,0 +1,58 @@
+<Type Name="AsyncCallback" FullName="System.AsyncCallback">
+  <TypeSignature Language="C#" Value="public delegate void AsyncCallback(IAsyncResult ar);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AsyncCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.AsyncCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="ar" Type="System.IAsyncResult" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="ar">O resultado da operação assíncrona.</param>
+    <summary>Faz referência a um método a ser chamado quando uma operação assíncrona correspondente for concluída.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um <xref:System.AsyncCallback> delegado para processar os resultados de uma operação assíncrona em um thread separado. O <xref:System.AsyncCallback> delegate representa um método de retorno de chamada que é chamado quando a operação assíncrona for concluída. O método de retorno de chamada usa um <xref:System.IAsyncResult> parâmetro, que é usado posteriormente para obter os resultados da operação assíncrona.  
+  
+ Para obter mais informações sobre a programação assíncrona, consulte [usando um delegado AsyncCallback para finalizar uma operação assíncrona](~/docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md) e [usando um delegado AsyncCallback e um objeto de estado](~/docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md) na [padrão assíncrono baseado em evento (EAP)](~/docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar métodos assíncronos no <xref:System.Net.Dns> classe para recuperar informações do sistema de nome de domínio (DNS) de computadores especificado pelo usuário. Este exemplo cria um <xref:System.AsyncCallback> representante que referencia o `ProcessDnsInformation` método. Esse método é chamado uma vez para cada solicitação assíncrona para obter informações de DNS.  
+  
+ [!code-csharp[AsyncDesignPattern#4](~/samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/AsyncDelegateNoStateObject.cs#4)]
+ [!code-vb[AsyncDesignPattern#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/AsyncDelegateNoState.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

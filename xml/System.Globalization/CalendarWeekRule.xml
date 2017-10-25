@@ -1,0 +1,181 @@
+<Type Name="CalendarWeekRule" FullName="System.Globalization.CalendarWeekRule">
+  <TypeSignature Language="C#" Value="public enum CalendarWeekRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CalendarWeekRule extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.CalendarWeekRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define regras diferentes para determinar a primeira semana do ano.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um membro do <xref:System.Globalization.CalendarWeekRule> retornada pela enumeração o <xref:System.Globalization.DateTimeFormatInfo.CalendarWeekRule%2A?displayProperty=nameWithType> propriedade e é usada pelo calendário atual da cultura para determinar a regra de semana de calendário. O valor de enumeração também é usado como um parâmetro para o <xref:System.Globalization.Calendar.GetWeekOfYear%2A?displayProperty=nameWithType> método.  
+  
+ Regras de semana de calendário dependem de <xref:System.DayOfWeek?displayProperty=nameWithType> valor que indica o primeiro dia da semana além para dependendo de uma <xref:System.Globalization.CalendarWeekRule> valor. O <xref:System.Globalization.DateTimeFormatInfo.FirstDayOfWeek%2A?displayProperty=nameWithType> propriedade fornece o valor padrão para uma cultura, mas qualquer <xref:System.DayOfWeek> valor pode ser especificado como o primeiro dia da semana no <xref:System.Globalization.Calendar.GetWeekOfYear%2A?displayProperty=nameWithType> método.  
+  
+ A primeira semana com base no valor FirstDay pode ter um a sete dias. A primeira semana com base no valor FirstFullWeek sempre tem sete dias. A primeira semana com base no valor FirstFourDayWeek pode ter quatro a sete dias.  
+  
+ Por exemplo, no calendário gregoriano, suponha que o primeiro dia do ano (1 de janeiro) fica em uma terça-feira e designado primeiro dia da semana é domingo. Selecionar FirstFullWeek define o primeiro domingo (6 de janeiro) como o início da primeira semana do ano. Os primeiros cinco dias do ano são considerados parte da última semana do ano anterior. Por outro lado, selecionar FirstFourDayWeek define o primeiro dia do ano (1 de janeiro) como o início da primeira semana do ano porque há mais de quatro dias de 1 de janeiro do dia antes do seguinte domingo.  
+  
+|Date|FirstDay|FirstFullWeek|FirstFourDayWeek|  
+|----------|--------------|-------------------|----------------------|  
+|31 de dezembro de seg|Última semana do ano anterior|Última semana do ano anterior|Última semana do ano anterior|  
+|1 de janeiro terça-feira|Semana 1|Última semana do ano anterior|Semana 1|  
+|2 de janeiro quarta-feira|Semana 1|Última semana do ano anterior|Semana 1|  
+|3 de janeiro quinta-feira|Semana 1|Última semana do ano anterior|Semana 1|  
+|4 de janeiro sexta-feira|Semana 1|Última semana do ano anterior|Semana 1|  
+|5 de janeiro de saturação|Semana 1|Última semana do ano anterior|Semana 1|  
+|6 de janeiro Sun|Semana 2|Semana 1|Semana 2|  
+|7 de janeiro seg|Semana 2|Semana 1|Semana 2|  
+|8 de janeiro terça-feira|Semana 2|Semana 1|Semana 2|  
+|9 de janeiro quarta-feira|Semana 2|Semana 1|Semana 2|  
+|10 de janeiro, quinta-feira|Semana 2|Semana 1|Semana 2|  
+|11 de janeiro sexta-feira|Semana 2|Semana 1|Semana 2|  
+|12 de janeiro de saturação|Semana 2|Semana 1|Semana 2|  
+  
+ Suponha que o primeiro dia do ano (1 de janeiro) fica em uma sexta-feira e designado primeiro dia da semana é domingo. Selecionar FirstFourDayWeek define o primeiro domingo (3 de janeiro) como o início da primeira semana do ano, porque há menos de quatro dias de 1 de janeiro do dia antes do seguinte domingo.  
+  
+|Date|FirstDay|FirstFullWeek|FirstFourDayWeek|  
+|----------|--------------|-------------------|----------------------|  
+|31 de dezembro de quinta-feira|Última semana do ano anterior|Última semana do ano anterior|Última semana do ano anterior|  
+|1 de janeiro sexta-feira|Semana 1|Última semana do ano anterior|Última semana do ano anterior|  
+|2 de janeiro de saturação|Semana 1|Última semana do ano anterior|Última semana do ano anterior|  
+|3 de janeiro Sun|Semana 2|Semana 1|Semana 1|  
+|4 de janeiro seg|Semana 2|Semana 1|Semana 1|  
+|5 de janeiro terça-feira|Semana 2|Semana 1|Semana 1|  
+|Quarta-feira 6 de janeiro|Semana 2|Semana 1|Semana 1|  
+|7 de janeiro quinta-feira|Semana 2|Semana 1|Semana 1|  
+|8 de janeiro sexta-feira|Semana 2|Semana 1|Semana 1|  
+|9 de janeiro de saturação|Semana 2|Semana 1|Semana 1|  
+  
+ O exemplo a seguir ilustra como o <xref:System.Globalization.CalendarWeekRule.FirstDay> e <xref:System.DayOfWeek?displayProperty=nameWithType> valores são usados juntos para determinar como semanas são atribuídas. No calendário gregoriano, o primeiro dia do ano (1 de janeiro) em 2013 se enquadra em uma terça-feira. Se o designado primeiro dia da semana é domingo, o primeiro domingo (6 de janeiro) é o primeiro dia da primeira semana do ano e sábado (5 de janeiro) pertence a terceiros cinquenta semana do ano anterior. Alterar a regra de semana de calendário para FirstFourDayWeek define terça-feira (1 de janeiro) como o início da primeira semana do ano, porque há mais de quatro dias entre terça-feira, 1º de janeiro e domingo, 6 de janeiro. Usando essa regra, 5 de janeiro pertence a primeira semana do ano. 2010, um ano em que 1 de janeiro fica em uma sexta-feira, aplicar a regra FirstFourDayWeek com <xref:System.DayOfWeek?displayProperty=nameWithType> como o primeiro dia da semana torna domingo, 3 de janeiro o início da primeira semana do ano, porque a primeira semana 2010 que tem mais de quatro dias é 3 de janeiro a 9.  
+  
+ [!code-csharp[System.Globalization.CalendarWeekRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendarweekrule/cs/calendarweekruleex.cs#1)]
+ [!code-vb[System.Globalization.CalendarWeekRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendarweekrule/vb/calendarweekruleex.vb#1)]  
+  
+> [!NOTE]
+>  Isso não mapear exatamente de acordo com ISO 8601. As diferenças são discutidas na entrada de blog [formato ISO 8601 semana do ano no Microsoft .net](http://go.microsoft.com/fwlink/?LinkId=160851).  
+  
+ Cada <xref:System.Globalization.CultureInfo> objeto oferece suporte a um conjunto de calendários. O <xref:System.Globalization.CultureInfo.Calendar%2A> propriedade retorna o calendário padrão para a cultura e o <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> propriedade retorna uma matriz que contém todos os calendários suportados pela cultura. Para alterar o calendário usado por um <xref:System.Globalization.CultureInfo>, o aplicativo deve definir o <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> para um novo <xref:System.Globalization.CalendarWeekRule.FirstFourDayWeek?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FirstDay">
+      <MemberSignature Language="C#" Value="FirstDay" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CalendarWeekRule FirstDay = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CalendarWeekRule.FirstDay" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarWeekRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a primeira semana do ano começa no primeiro dia do ano e termina antes do primeiro dia designado seguinte da semana. O valor é 0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstFourDayWeek">
+      <MemberSignature Language="C#" Value="FirstFourDayWeek" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CalendarWeekRule FirstFourDayWeek = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CalendarWeekRule.FirstFourDayWeek" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarWeekRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a primeira semana do ano é a primeira semana com quatro ou mais dias antes do primeiro dia designado da semana. O valor é 2.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstFullWeek">
+      <MemberSignature Language="C#" Value="FirstFullWeek" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CalendarWeekRule FirstFullWeek = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CalendarWeekRule.FirstFullWeek" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarWeekRule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a primeira semana do ano começa na primeira ocorrência do primeiro dia designado da semana no ou após o primeiro dia do ano. O valor é 1.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

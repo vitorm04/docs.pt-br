@@ -1,0 +1,315 @@
+<Type Name="TrustSection" FullName="System.Web.Configuration.TrustSection">
+  <TypeSignature Language="C#" Value="public sealed class TrustSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TrustSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TrustSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura o nível de segurança de acesso ao código que é aplicado a um aplicativo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.TrustSection> classe permite acessar e modificar o arquivo de configuração de forma programática `<trust>` seção. O `<trust>` seção configura o conjunto de permissões de segurança de acesso ao código que é usado para executar um aplicativo específico. Esta seção pode ser declarada no computador, no site e no aplicativo.  
+  
+   
+  
+## Examples  
+ Esta seção fornece dois exemplos de código. A primeira demonstra como especificar declarativamente valores para várias propriedades da <xref:System.Web.Configuration.TrustSection> classe. O segundo demonstra como usar o <xref:System.Web.Configuration.TrustSection> tipo.  
+  
+ O exemplo de arquivo de configuração a seguir mostra como especificar declarativamente valores para várias propriedades da <xref:System.Web.Configuration.TrustSection> classe.  
+  
+```  
+<system.web>  
+  <trust level="Full" originUrl=""/>  
+</system.web>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.TrustSection> tipo.  
+  
+ [!code-csharp[System.Web.Configuration.TrustSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TrustSection/CS/trustsection.cs#1)]
+ [!code-vb[System.Web.Configuration.TrustSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TrustSection/VB/trustsection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrustSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.TrustSection" /> classe usando as configurações padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.TrustSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.TrustSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ A tabela a seguir mostra as configurações padrão que são usadas para o <xref:System.Web.Configuration.TrustSection.%23ctor%2A> construtor.  
+  
+|Configuração|Valor padrão|  
+|-------------|-------------------|  
+|<xref:System.Web.Configuration.TrustSection.Level%2A>|`Full`|  
+|<xref:System.Web.Configuration.TrustSection.OriginUrl%2A>|`""`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostSecurityPolicyResolverType">
+      <MemberSignature Language="C#" Value="public string HostSecurityPolicyResolverType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostSecurityPolicyResolverType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustSection.HostSecurityPolicyResolverType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("hostSecurityPolicyResolverType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de resolução de política de segurança personalizada.</summary>
+        <value>O tipo de resolução de política de segurança personalizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.Configuration.TrustSection.HostSecurityPolicyResolverType%2A> é uma cadeia de caracteres vazia, o aplicativo usa a política do ASP.NET padrão para determinar as permissões de um assembly. A política padrão para avaliação de permissões concede confiança total para os assemblies de Cache de Assembly Global (GAC) e a confiança parcial para os outros assemblies.  
+  
+ Esse atributo não pode ser definido como um `null` valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegacyCasModel">
+      <MemberSignature Language="C#" Value="public bool LegacyCasModel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LegacyCasModel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustSection.LegacyCasModel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("legacyCasModel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a segurança de acesso de código herdado está habilitada.</summary>
+        <value>
+          <see langword="true" /> se a segurança de acesso de código herdado estiver habilitada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a segurança de acesso ao código herdado é habilitada, as regras de segurança a seguir se aplicam:  
+  
+-   Política de CAS (segurança) de acesso do código é estabelecida pela combinação de política de computador e o arquivo de política de confiança parcial especificado do ASP.NET.  
+  
+-   Domínios de aplicativo de confiança parcial volte a ser confiança total no nível de domínio do aplicativo.  
+  
+-   Os arquivos de confiança parcial herdados localizados no diretório de configuração no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] diretório de instalação são usadas em vez de novos arquivos de configuração de confiança parcial estão localizados no mesmo diretório. Os arquivos herdados incluem as condições de associação que foram encontradas no [!INCLUDE[net_v11_long](~/includes/net-v11-long-md.md)] ou [!INCLUDE[net_v20SP1_short](~/includes/net-v20sp1-short-md.md)] versões dos [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+-   Condições de associação adicionais para avaliar as permissões são aplicadas, conforme definido nos arquivos de confiança parcial do ASP.NET. O diretório de configuração que acompanha o [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] versão contém arquivos de política de confiança parcial herdado. Os nomes desses arquivos incluir "herdados" a cadeia de caracteres e conter o [!INCLUDE[net_v20SP1_short](~/includes/net-v20sp1-short-md.md)] seções. Essas seções contêm condições de associação não-vazia que são necessários para avaliar a política de CAS em assemblies.  
+  
+-   Se o aplicativo ASP.NET está executando em confiança parcial e o arquivo de política de segurança para os mapas de nível de confiança para um dos arquivos de configuração de confiança parcial do padrão, o ASP.NET escolhe automaticamente o arquivo de configuração herdada correspondente. Por exemplo, se a política de segurança normalmente seria carregada do Web_mediumtrust, em seguida, no modo herdado ASP.NET em vez disso, carregará política de segurança de Legacy.web_mediumtrust.config.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public string Level { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Level" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustSection.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("level", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do nível de segurança sob a qual o aplicativo será executado.</summary>
+        <value>O nome do nível de confiança. O padrão é <see langword="&quot;Full&quot;" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.TrustSection.Level%2A> propriedade especifica o nível de segurança sob a qual o aplicativo será executado. O padrão é `"Full"`.  
+  
+ Há cinco níveis de confiança disponíveis:  
+  
+-   Completo  
+  
+-   Alta  
+  
+-   Médio  
+  
+-   Baixo  
+  
+-   Mínimo  
+  
+ Os níveis nomeados correspondem aos níveis de segurança que são definidos no `<trustLevel>` elemento para `<securityPolicy>`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.TrustSection.Level%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TrustSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TrustSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TrustSection/CS/trustsection.cs#2)]
+ [!code-vb[System.Web.Configuration.TrustSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TrustSection/VB/trustsection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginUrl">
+      <MemberSignature Language="C#" Value="public string OriginUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OriginUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustSection.OriginUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("originUrl", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a URL de origem para um aplicativo.</summary>
+        <value>Uma URL de HTTP válido ou uma cadeia de caracteres vazia (""). O padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.TrustSection.OriginUrl%2A> propriedade especifica a URL de origem para um aplicativo. Se estiver presente, isso pode ser usado para algumas permissões, como aqueles associados com a <xref:System.Net.WebRequest> classe. Isso permite que você especifique uma única URL que é usada para criar permissão por meio de um <xref:System.Net.WebPermission> instância. Essa permissão, em seguida, concede o direito de fazer chamadas HTTP (por exemplo, uma chamada de serviço Web) para a URL de código ASP.NET que tenha relação de confiança parcial. O valor deve ser uma URL HTTP bem formada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.TrustSection.OriginUrl%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TrustSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TrustSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TrustSection/CS/trustsection.cs#3)]
+ [!code-vb[System.Web.Configuration.TrustSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TrustSection/VB/trustsection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionSetName">
+      <MemberSignature Language="C#" Value="public string PermissionSetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PermissionSetName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustSection.PermissionSetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("permissionSetName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do conjunto de permissões.</summary>
+        <value>O nome do conjunto de permissões.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.TrustSection.PermissionSetName%2A> propriedade permite que você defina em um arquivo de configuração de confiança parcial, o conjunto de permissões nomeadas que é usado durante a inicialização de um domínio de aplicativo.  
+  
+ Por padrão, o <xref:System.Web.Configuration.TrustSection.PermissionSetName%2A> propriedade é "ASP.Net" Esse é o nome do conjunto de permissões que é usado para inicializar o domínio de aplicativo.  
+  
+ Esse atributo não pode ser definido como uma cadeia de caracteres vazia ou um `null` valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequestInApplicationTrust">
+      <MemberSignature Language="C#" Value="public bool ProcessRequestInApplicationTrust { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProcessRequestInApplicationTrust" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustSection.ProcessRequestInApplicationTrust" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("processRequestInApplicationTrust", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as solicitações de página são automaticamente restrito para as permissões que são configuradas no arquivo de política de confiança que é aplicado ao aplicativo ASP.NET.</summary>
+        <value>
+          <see langword="true" />Se as solicitações são automaticamente restritas para as permissões que são configuradas no arquivo de política de confiança; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

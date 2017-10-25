@@ -1,0 +1,2254 @@
+<Type Name="Attribute" FullName="System.Attribute">
+  <TypeSignature Language="C#" Value="public abstract class Attribute : System.Runtime.InteropServices._Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit Attribute extends System.Object implements class System.Runtime.InteropServices._Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Attribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._Attribute</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._Attribute))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base para os atributos personalizados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Attribute> classe associa informações do sistema predefinidos ou definidos pelo usuário personalizado com um elemento de destino. Um elemento de destino pode ser um assembly, classe, construtor, delegado, enum, evento, campo, interface, método, o módulo de arquivo executável portátil, parâmetro, propriedade, valor de retorno, struct ou outro atributo.  
+  
+ As informações fornecidas por um atributo também são conhecido como metadados. Metadados podem ser examinados em tempo de execução por seu aplicativo para controlar como o seu programa processa os dados ou antes do tempo de execução por ferramentas externas para controlar como o aplicativo em si é processado ou mantido. Por exemplo, o .NET Framework predefine usa tipos de atributo para controlar o comportamento de tempo de execução, e algumas linguagens de programação usam tipos de atributo para representar os recursos de idioma não diretamente compatíveis com o sistema de tipo comum do .NET Framework.  
+  
+ Todos os tipos de atributo derivam direta ou indiretamente a <xref:System.Attribute> classe. Atributos podem ser aplicados a qualquer elemento de destino. vários atributos podem ser aplicados ao mesmo elemento de destino; e os atributos podem ser herdados por um elemento derivado de um elemento de destino. Use o <xref:System.AttributeTargets> classe para especificar o elemento de destino para o qual o atributo é aplicado.  
+  
+ O <xref:System.Attribute> classe fornece métodos convenientes para recuperar e testar os atributos personalizados. Para obter mais informações sobre o uso de atributos, consulte [aplicar atributos](~/docs/standard/attributes/applying-attributes.md) e [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute>.  
+  
+ [!code-cpp[AnimalAttributes#1](~/samples/snippets/cpp/VS_Snippets_CLR/AnimalAttributes/CPP/customattribute.cpp#1)]
+ [!code-csharp[AnimalAttributes#1](~/samples/snippets/csharp/VS_Snippets_CLR/AnimalAttributes/CS/customattribute.cs#1)]
+ [!code-vb[AnimalAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AnimalAttributes/VB/customattribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Attribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Attribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor só é chamado por classes que derivam de <xref:System.Attribute>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a definição de um parâmetro personalizado <xref:System.Attribute> classe com seu construtor.  
+  
+ [!code-cpp[System.Attribute.GetCustomAttribute#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Attribute.GetCustomAttribute/CPP/getcustattrparam.cpp#2)]
+ [!code-csharp[System.Attribute.GetCustomAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Attribute.GetCustomAttribute/CS/getcustattrparam.cs#2)]
+ [!code-vb[System.Attribute.GetCustomAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Attribute.GetCustomAttribute/VB/getcustattrparam.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> a ser comparado com essa instância ou <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir define dois parâmetros personalizados <xref:System.Attribute> classes, em seguida, cria vários objetos de cada classe e mostra o uso do <xref:System.Attribute.Equals%2A> método compará-los.  
+  
+ [!code-cpp[System.Attribute.Equals#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Attribute.Equals/CPP/equals.cpp#1)]
+ [!code-csharp[System.Attribute.Equals#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Attribute.Equals/CS/equals.cs#1)]
+ [!code-vb[System.Attribute.Equals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Attribute.Equals/VB/equals.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttribute">
+      <MemberSignature Language="C#" Value="public static Attribute GetCustomAttribute (System.Reflection.Assembly element, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute GetCustomAttribute(class System.Reflection.Assembly element, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttribute(System.Reflection.Assembly,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Assembly" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Assembly" /> que descreve uma coleção reutilizável de módulos.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Recupera um atributo personalizado aplicado a um assembly especificado. Os parâmetros especificam o assembly e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>Uma referência ao único atributo personalizado do tipo <paramref name="attributeType" /> que é aplicado ao <paramref name="element" /> ou <see langword="null" /> se não houver nenhum atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Attribute.GetCustomAttributes%2A> método se você espera que mais de um valor a ser retornado, ou <xref:System.Reflection.AmbiguousMatchException> será lançada.  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Attribute.GetCustomAttribute%2A> colocando método um <xref:System.Reflection.Assembly> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#1](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#1)]
+ [!code-csharp[IsDefined#1](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id1.cs#1)]
+ [!code-vb[IsDefined#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Mais de um dos atributos solicitados foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttribute">
+      <MemberSignature Language="C#" Value="public static Attribute GetCustomAttribute (System.Reflection.MemberInfo element, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute GetCustomAttribute(class System.Reflection.MemberInfo element, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttribute(System.Reflection.MemberInfo,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.MemberInfo" /> que descreve um construtor, evento, campo, método ou membro da propriedade de uma classe.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Recupera um atributo personalizado aplicado a um membro de um tipo. Parâmetros especificam o membro e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>Uma referência ao único atributo personalizado do tipo <paramref name="attributeType" /> que é aplicado ao <paramref name="element" /> ou <see langword="null" /> se não houver nenhum atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma correspondência é determinada da mesma forma descrita na seção de valor de retorno de <xref:System.Type.IsAssignableFrom%2A?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança em tipos, métodos e construtores se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Attribute.GetCustomAttribute%2A> colocando método um <xref:System.Reflection.MemberInfo> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#4](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#4)]
+ [!code-csharp[IsDefined#4](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id4.cs#4)]
+ [!code-vb[IsDefined#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          O <paramref name="element" /> não é um construtor, método, propriedade, evento, tipo nem campo.</exception>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Mais de um dos atributos solicitados foi encontrado.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttribute">
+      <MemberSignature Language="C#" Value="public static Attribute GetCustomAttribute (System.Reflection.Module element, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute GetCustomAttribute(class System.Reflection.Module element, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttribute(System.Reflection.Module,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Module" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Module" /> que descreve um arquivo executável portátil.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Recupera um atributo personalizado aplicado a um módulo. Parâmetros especificam o módulo e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>Uma referência ao único atributo personalizado do tipo <paramref name="attributeType" /> que é aplicado ao <paramref name="element" /> ou <see langword="null" /> se não houver nenhum atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Attribute.GetCustomAttribute%2A> colocando método um <xref:System.Reflection.Module> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#2](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#2)]
+ [!code-csharp[IsDefined#2](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id2.cs#2)]
+ [!code-vb[IsDefined#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Mais de um dos atributos solicitados foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttribute">
+      <MemberSignature Language="C#" Value="public static Attribute GetCustomAttribute (System.Reflection.ParameterInfo element, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute GetCustomAttribute(class System.Reflection.ParameterInfo element, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttribute(System.Reflection.ParameterInfo,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.ParameterInfo" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.ParameterInfo" /> que descreve um parâmetro de um membro de uma classe.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Recupera um atributo personalizado aplicado a um parâmetro de método. Parâmetros especificam o parâmetro de método e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>Uma referência ao único atributo personalizado do tipo <paramref name="attributeType" /> que é aplicado ao <paramref name="element" /> ou <see langword="null" /> se não houver nenhum atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `element` representa um parâmetro em um método de um tipo derivado, o valor de retorno inclui os atributos personalizados herdáveis aplicados para o mesmo parâmetro em métodos substituídos base.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um parâmetro personalizado <xref:System.Attribute> classe e aplica o atributo personalizado para um método em uma classe derivada e a base da classe derivada. O exemplo mostra o uso do <xref:System.Attribute.GetCustomAttribute%2A> método para retornar os atributos.  
+  
+ [!code-cpp[System.Attribute.GetCustomAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Attribute.GetCustomAttribute/CPP/getcustattrparam.cpp#1)]
+ [!code-csharp[System.Attribute.GetCustomAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Attribute.GetCustomAttribute/CS/getcustattrparam.cs#1)]
+ [!code-vb[System.Attribute.GetCustomAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Attribute.GetCustomAttribute/VB/getcustattrparam.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Mais de um dos atributos solicitados foi encontrado.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttribute">
+      <MemberSignature Language="C#" Value="public static Attribute GetCustomAttribute (System.Reflection.Assembly element, Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute GetCustomAttribute(class System.Reflection.Assembly element, class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttribute(System.Reflection.Assembly,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Assembly" />
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Assembly" /> que descreve uma coleção reutilizável de módulos.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Esse parâmetro é ignorado e não afeta a operação desse método.</param>
+        <summary>Recupera um atributo personalizado aplicado a um assembly. Parâmetros especificam o assembly, o tipo de atributo personalizado pelo qual pesquisar e uma opção de pesquisa ignorada.</summary>
+        <returns>Uma referência ao único atributo personalizado do tipo <paramref name="attributeType" /> que é aplicado ao <paramref name="element" /> ou <see langword="null" /> se não houver nenhum atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Attribute.GetCustomAttribute%2A> colocando método um <xref:System.Reflection.Assembly> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#1](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#1)]
+ [!code-csharp[IsDefined#1](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id1.cs#1)]
+ [!code-vb[IsDefined#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Mais de um dos atributos solicitados foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttribute">
+      <MemberSignature Language="C#" Value="public static Attribute GetCustomAttribute (System.Reflection.MemberInfo element, Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute GetCustomAttribute(class System.Reflection.MemberInfo element, class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttribute(System.Reflection.MemberInfo,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.MemberInfo" /> que descreve um construtor, evento, campo, método ou membro da propriedade de uma classe.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Se <see langword="true" />, especifica também a pesquisa os ancestrais do <c>elemento</c> para os atributos personalizados.</param>
+        <summary>Recupera um atributo personalizado aplicado a um membro de um tipo. Os parâmetros especificam o membro e o tipo do atributo personalizado a ser pesquisado, além de definir se os ancestrais do membro devem ser pesquisados.</summary>
+        <returns>Uma referência ao único atributo personalizado do tipo <paramref name="attributeType" /> que é aplicado ao <paramref name="element" /> ou <see langword="null" /> se não houver nenhum atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança em tipos, métodos e construtores se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Attribute.GetCustomAttribute%2A> colocando método um <xref:System.Reflection.MemberInfo> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#4](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#4)]
+ [!code-csharp[IsDefined#4](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id4.cs#4)]
+ [!code-vb[IsDefined#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          O <paramref name="element" /> não é um construtor, método, propriedade, evento, tipo nem campo.</exception>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Mais de um dos atributos solicitados foi encontrado.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttribute">
+      <MemberSignature Language="C#" Value="public static Attribute GetCustomAttribute (System.Reflection.Module element, Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute GetCustomAttribute(class System.Reflection.Module element, class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttribute(System.Reflection.Module,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Module" />
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Module" /> que descreve um arquivo executável portátil.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Esse parâmetro é ignorado e não afeta a operação desse método.</param>
+        <summary>Recupera um atributo personalizado aplicado a um módulo. Parâmetros especificam o módulo, o tipo de atributo personalizado a ser pesquisado e uma opção de pesquisa ignorada.</summary>
+        <returns>Uma referência ao único atributo personalizado do tipo <paramref name="attributeType" /> que é aplicado ao <paramref name="element" /> ou <see langword="null" /> se não houver nenhum atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Attribute.GetCustomAttribute%2A> colocando método um <xref:System.Reflection.Module> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#2](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#2)]
+ [!code-csharp[IsDefined#2](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id2.cs#2)]
+ [!code-vb[IsDefined#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Mais de um dos atributos solicitados foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttribute">
+      <MemberSignature Language="C#" Value="public static Attribute GetCustomAttribute (System.Reflection.ParameterInfo element, Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute GetCustomAttribute(class System.Reflection.ParameterInfo element, class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttribute(System.Reflection.ParameterInfo,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.ParameterInfo" />
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.ParameterInfo" /> que descreve um parâmetro de um membro de uma classe.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Se <see langword="true" />, especifica também a pesquisa os ancestrais do <c>elemento</c> para os atributos personalizados.</param>
+        <summary>Recupera um atributo personalizado aplicado a um parâmetro de método. Os parâmetros especificam o parâmetro de método, o tipo do atributo personalizado a ser pesquisado e se os ancestrais de pesquisa do parâmetro do membro devem ser pesquisados.</summary>
+        <returns>Uma referência ao único atributo personalizado do tipo <paramref name="attributeType" /> que é aplicado ao <paramref name="element" /> ou <see langword="null" /> se não houver nenhum atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `element` representa um parâmetro em um método de um tipo derivado, o valor de retorno inclui os atributos personalizados herdáveis aplicados para o mesmo parâmetro em métodos substituídos base.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um parâmetro personalizado <xref:System.Attribute> classe e aplica o atributo personalizado para um método em uma classe derivada e a base da classe derivada. O exemplo mostra o uso do <xref:System.Attribute.GetCustomAttribute%2A> método para retornar os atributos.  
+  
+ [!code-cpp[System.Attribute.GetCustomAttribute#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Attribute.GetCustomAttribute/CPP/getcustattrprminh.cpp#3)]
+ [!code-csharp[System.Attribute.GetCustomAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Attribute.GetCustomAttribute/CS/getcustattrprminh.cs#3)]
+ [!code-vb[System.Attribute.GetCustomAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Attribute.GetCustomAttribute/VB/getcustattrprminh.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.Reflection.AmbiguousMatchException">Mais de um dos atributos solicitados foi encontrado.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.Assembly element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.Assembly element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Assembly" /> que descreve uma coleção reutilizável de módulos.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um assembly. Um parâmetro especifica o assembly.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir recupera os atributos personalizados encontrados no assembly atual.  
+  
+ [!code-cpp[GetCustomAttributes#1](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/ca1.cpp#1)]
+ [!code-csharp[GetCustomAttributes#1](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca1.cs#1)]
+ [!code-vb[GetCustomAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.MemberInfo element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.MemberInfo element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.MemberInfo" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.MemberInfo" /> que descreve um construtor, evento, campo, método ou membro da propriedade de uma classe.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicada a um membro de um tipo. Um parâmetro especifica o membro.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno contém os atributos personalizados para ancestrais do `element`.  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança em tipos, métodos e construtores se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttribute%2A>, aceitando um <xref:System.Reflection.MemberInfo> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#4](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#4)]
+ [!code-csharp[GetCustomAttributes#4](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca4.cs#4)]
+ [!code-vb[GetCustomAttributes#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          O <paramref name="element" /> não é um construtor, método, propriedade, evento, tipo nem campo.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.Module element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.Module element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.Module)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Module" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Module" /> que descreve um arquivo executável portátil.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um módulo. Um parâmetro especifica o módulo.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.Module> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#2](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#2)]
+ [!code-csharp[GetCustomAttributes#2](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca2.cs#2)]
+ [!code-vb[GetCustomAttributes#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.ParameterInfo element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.ParameterInfo element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.ParameterInfo" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.ParameterInfo" /> que descreve um parâmetro de um membro de uma classe.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um parâmetro de método. Um parâmetro especifica o parâmetro de método.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `element` representa um parâmetro em um método de um tipo derivado, o valor de retorno inclui os atributos personalizados herdáveis aplicados para o mesmo parâmetro em métodos substituídos base.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.ParameterInfo> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#5](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#5)]
+ [!code-csharp[GetCustomAttributes#5](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca5.cs#5)]
+ [!code-vb[GetCustomAttributes#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca5.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.Assembly element, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.Assembly element, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.Assembly,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Assembly" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Assembly" /> que descreve uma coleção reutilizável de módulos.</param>
+        <param name="inherit">Esse parâmetro é ignorado e não afeta a operação desse método.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um assembly. Parâmetros especificam o assembly e uma opção de pesquisa ignorada.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.Assembly> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#1](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/ca1.cpp#1)]
+ [!code-csharp[GetCustomAttributes#1](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca1.cs#1)]
+ [!code-vb[GetCustomAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.Assembly element, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.Assembly element, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.Assembly,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Assembly" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Assembly" /> que descreve uma coleção reutilizável de módulos.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um assembly. Os parâmetros especificam o assembly e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados do tipo <paramref name="attributeType" /> aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.Assembly> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#1](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/ca1.cpp#1)]
+ [!code-csharp[GetCustomAttributes#1](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca1.cs#1)]
+ [!code-vb[GetCustomAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.MemberInfo element, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.MemberInfo element, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.MemberInfo" /> que descreve um construtor, evento, campo, método ou membro da propriedade de uma classe.</param>
+        <param name="inherit">Se <see langword="true" />, especifica também a pesquisa os ancestrais do <c>elemento</c> para os atributos personalizados.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicada a um membro de um tipo. Os parâmetros especificam o membro e o tipo do atributo personalizado a ser pesquisado, além de definir se os ancestrais do membro devem ser pesquisados.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno contém os atributos personalizados para ancestrais do `element` se `inherit` é `true`.  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança em tipos, métodos e construtores se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.MemberInfo> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#4](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#4)]
+ [!code-csharp[GetCustomAttributes#4](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca4.cs#4)]
+ [!code-vb[GetCustomAttributes#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          O <paramref name="element" /> não é um construtor, método, propriedade, evento, tipo nem campo.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.MemberInfo element, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.MemberInfo element, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.MemberInfo" /> que descreve um construtor, evento, campo, método ou membro da propriedade de uma classe.</param>
+        <param name="type">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicada a um membro de um tipo. Parâmetros especificam o membro e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados do tipo <paramref name="type" /> aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno contém os atributos personalizados para ancestrais do `element`.  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança em tipos, métodos e construtores se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttribute%2A>, aceitando um <xref:System.Reflection.MemberInfo> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#4](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#4)]
+ [!code-csharp[GetCustomAttributes#4](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca4.cs#4)]
+ [!code-vb[GetCustomAttributes#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          O <paramref name="element" /> não é um construtor, método, propriedade, evento, tipo nem campo.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.Module element, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.Module element, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.Module,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Module" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Module" /> que descreve um arquivo executável portátil.</param>
+        <param name="inherit">Esse parâmetro é ignorado e não afeta a operação desse método.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um módulo. Parâmetros especificam o módulo e uma opção de pesquisa ignorado.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno contém os atributos personalizados para ancestrais do `element` se `inherit` é `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.Module> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#2](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#2)]
+ [!code-csharp[GetCustomAttributes#2](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca2.cs#2)]
+ [!code-vb[GetCustomAttributes#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.Module element, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.Module element, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.Module,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Module" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Module" /> que descreve um arquivo executável portátil.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um módulo. Parâmetros especificam o módulo e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados do tipo <paramref name="attributeType" /> aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.Module> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#2](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#2)]
+ [!code-csharp[GetCustomAttributes#2](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca2.cs#2)]
+ [!code-vb[GetCustomAttributes#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.ParameterInfo element, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.ParameterInfo element, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.ParameterInfo" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.ParameterInfo" /> que descreve um parâmetro de um membro de uma classe.</param>
+        <param name="inherit">Se <see langword="true" />, especifica também a pesquisa os ancestrais do <c>elemento</c> para os atributos personalizados.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um parâmetro de método. Parâmetros de especificam o parâmetro do método e se deseja pesquisar ancestrais do parâmetro de método.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `element` representa um parâmetro em um método de um tipo derivado, o valor de retorno inclui os atributos personalizados herdáveis aplicados para o mesmo parâmetro em métodos substituídos base.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.ParameterInfo> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#5](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#5)]
+ [!code-csharp[GetCustomAttributes#5](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca5.cs#5)]
+ [!code-vb[GetCustomAttributes#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca5.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Reflection.ParameterInfo.Member" /> propriedade <paramref name="element" /> é<see langword="null." /><see langword="" /></exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.ParameterInfo element, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.ParameterInfo element, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.ParameterInfo" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.ParameterInfo" /> que descreve um parâmetro de um membro de uma classe.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um parâmetro de método. Parâmetros especificam o parâmetro de método e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados do tipo <paramref name="attributeType" /> aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `element` representa um parâmetro em um método de um tipo derivado, o valor de retorno inclui os atributos personalizados herdáveis aplicados para o mesmo parâmetro em métodos substituídos base.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.ParameterInfo> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#5](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#5)]
+ [!code-csharp[GetCustomAttributes#5](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca5.cs#5)]
+ [!code-vb[GetCustomAttributes#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca5.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.Assembly element, Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.Assembly element, class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.Assembly,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Assembly" />
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Assembly" /> que descreve uma coleção reutilizável de módulos.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Esse parâmetro é ignorado e não afeta a operação desse método.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um assembly. Parâmetros especificam o assembly, o tipo de atributo personalizado pelo qual pesquisar e uma opção de pesquisa ignorada.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados do tipo <paramref name="attributeType" /> aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.Assembly> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#1](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/ca1.cpp#1)]
+ [!code-csharp[GetCustomAttributes#1](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca1.cs#1)]
+ [!code-vb[GetCustomAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.MemberInfo element, Type type, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.MemberInfo element, class System.Type type, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.MemberInfo,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.MemberInfo" /> que descreve um construtor, evento, campo, método ou membro da propriedade de uma classe.</param>
+        <param name="type">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Se <see langword="true" />, especifica também a pesquisa os ancestrais do <c>elemento</c> para os atributos personalizados.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicada a um membro de um tipo. Os parâmetros especificam o membro e o tipo do atributo personalizado a ser pesquisado, além de definir se os ancestrais do membro devem ser pesquisados.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados do tipo <paramref name="type" /> aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno contém os atributos personalizados para ancestrais do `element` se `inherit` é `true`.  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna atributos de segurança em tipos, métodos e construtores se os atributos são armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.MemberInfo> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#4](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#4)]
+ [!code-csharp[GetCustomAttributes#4](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca4.cs#4)]
+ [!code-vb[GetCustomAttributes#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          O <paramref name="element" /> não é um construtor, método, propriedade, evento, tipo nem campo.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.Module element, Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.Module element, class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.Module,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Module" />
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Module" /> que descreve um arquivo executável portátil.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Esse parâmetro é ignorado e não afeta a operação desse método.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um módulo. Parâmetros especificam o módulo, o tipo de atributo personalizado a ser pesquisado e uma opção de pesquisa ignorada.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados do tipo <paramref name="attributeType" /> aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno contém os atributos personalizados para ancestrais do `element` se `inherit` é `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.Module> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#2](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#2)]
+ [!code-csharp[GetCustomAttributes#2](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca2.cs#2)]
+ [!code-vb[GetCustomAttributes#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static Attribute[] GetCustomAttributes (System.Reflection.ParameterInfo element, Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Attribute[] GetCustomAttributes(class System.Reflection.ParameterInfo element, class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetCustomAttributes(System.Reflection.ParameterInfo,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Attribute[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.ParameterInfo" />
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.ParameterInfo" /> que descreve um parâmetro de um membro de uma classe.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Se <see langword="true" />, especifica também a pesquisa os ancestrais do <c>elemento</c> para os atributos personalizados.</param>
+        <summary>Recupera uma matriz dos atributos personalizados aplicados a um parâmetro de método. Os parâmetros especificam o parâmetro de método, o tipo do atributo personalizado a ser pesquisado e se os ancestrais de pesquisa do parâmetro do membro devem ser pesquisados.</summary>
+        <returns>Uma matriz <see cref="T:System.Attribute" /> que contém os atributos personalizados do tipo <paramref name="attributeType" /> aplicados a <paramref name="element" /> ou uma matriz vazia se nenhum atributo personalizado existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `element` representa um parâmetro em um método de um tipo derivado, o valor de retorno inclui os atributos personalizados herdáveis aplicados para o mesmo parâmetro em métodos substituídos base.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Attribute.GetCustomAttributes%2A>, aceitando um <xref:System.Reflection.ParameterInfo> como um parâmetro.  
+  
+ [!code-cpp[GetCustomAttributes#5](~/samples/snippets/cpp/VS_Snippets_CLR/GetCustomAttributes/CPP/custattrs.cpp#5)]
+ [!code-csharp[GetCustomAttributes#5](~/samples/snippets/csharp/VS_Snippets_CLR/GetCustomAttributes/CS/ca5.cs#5)]
+ [!code-vb[GetCustomAttributes#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetCustomAttributes/VB/ca5.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.Attribute.GetHashCode%2A> no contexto de <xref:System.Attribute>.  
+  
+ [!code-csharp[GetHashCode#1](~/samples/snippets/csharp/VS_Snippets_CLR/GetHashCode/CS/hashcode.cs#1)]
+ [!code-vb[GetHashCode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/GetHashCode/VB/hashcode.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public virtual bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, indica se o valor dessa instância é o valor padrão para a classe derivada.</summary>
+        <returns>
+          <see langword="true" /> se a instância for o atributo padrão para a classe; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna a implementação padrão dessa classe `false`e deve ser implementado na classe derivada para ser útil para essa classe.  
+  
+ A implementação deste método em uma classe derivada compara o valor dessa instância com um valor padrão, em seguida, retorna um valor booliano que indica se o valor desta instância é igual ao valor padrão. O valor padrão normalmente é codificado como uma constante na implementação ou armazenado programaticamente em um campo usado pela implementação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.Attribute.IsDefaultAttribute%2A>.  
+  
+ [!code-cpp[IsDefaultAttribute#1](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefaultAttribute/CPP/defattr.cpp#1)]
+ [!code-csharp[IsDefaultAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefaultAttribute/CS/defattr.cs#1)]
+ [!code-vb[IsDefaultAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefaultAttribute/VB/defattr.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public static bool IsDefined (System.Reflection.Assembly element, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefined(class System.Reflection.Assembly element, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.IsDefined(System.Reflection.Assembly,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Assembly" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Assembly" /> que descreve uma coleção reutilizável de módulos.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Determina se todos os atributos personalizados são aplicados a um assembly. Os parâmetros especificam o assembly e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>
+          <see langword="true" /> se um atributo personalizado do tipo <paramref name="attributeType" /> for aplicado a <paramref name="element" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna `true` se o assembly tem os atributos de segurança armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.Attribute.IsDefined%2A>, aceitando um <xref:System.Reflection.Assembly> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#1](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#1)]
+ [!code-csharp[IsDefined#1](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id1.cs#1)]
+ [!code-vb[IsDefined#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public static bool IsDefined (System.Reflection.MemberInfo element, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefined(class System.Reflection.MemberInfo element, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.IsDefined(System.Reflection.MemberInfo,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.MemberInfo" /> que descreve um construtor, evento, campo, método, tipo ou membro da propriedade de uma classe.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Determina se todos os atributos personalizados são aplicados a um membro de um tipo. Parâmetros especificam o membro e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>
+          <see langword="true" /> se um atributo personalizado do tipo <paramref name="attributeType" /> for aplicado a <paramref name="element" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os ancestrais do `element` são pesquisados para os atributos personalizados.  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna `true` se um tipo, método ou construtor tem os atributos de segurança armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.Attribute.IsDefined%2A>, aceitando um <xref:System.Reflection.MemberInfo> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#4](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#4)]
+ [!code-csharp[IsDefined#4](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id4.cs#4)]
+ [!code-vb[IsDefined#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          O <paramref name="element" /> não é um construtor, método, propriedade, evento, tipo nem campo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public static bool IsDefined (System.Reflection.Module element, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefined(class System.Reflection.Module element, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.IsDefined(System.Reflection.Module,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Module" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Module" /> que descreve um arquivo executável portátil.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Determina se os atributos personalizados de um tipo especificado são aplicados a um módulo. Parâmetros especificam o módulo e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>
+          <see langword="true" /> se um atributo personalizado do tipo <paramref name="attributeType" /> for aplicado a <paramref name="element" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os ancestrais do `element` não são pesquisados para os atributos personalizados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.Attribute.IsDefined%2A>, aceitando um <xref:System.Reflection.Module> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#2](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#2)]
+ [!code-csharp[IsDefined#2](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id2.cs#2)]
+ [!code-vb[IsDefined#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public static bool IsDefined (System.Reflection.ParameterInfo element, Type attributeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefined(class System.Reflection.ParameterInfo element, class System.Type attributeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.IsDefined(System.Reflection.ParameterInfo,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.ParameterInfo" />
+        <Parameter Name="attributeType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.ParameterInfo" /> que descreve um parâmetro de um membro de uma classe.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <summary>Determina se todos os atributos personalizados são aplicados a um parâmetro de método. Parâmetros especificam o parâmetro de método e o tipo do atributo personalizado a ser pesquisado.</summary>
+        <returns>
+          <see langword="true" /> se um atributo personalizado do tipo <paramref name="attributeType" /> for aplicado a <paramref name="element" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os ancestrais do `element` são pesquisados para os atributos personalizados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.Attribute.IsDefined%2A>, aceitando um <xref:System.Reflection.ParameterInfo> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#5](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#5)]
+ [!code-csharp[IsDefined#5](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id5.cs#5)]
+ [!code-vb[IsDefined#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id5.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public static bool IsDefined (System.Reflection.Assembly element, Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefined(class System.Reflection.Assembly element, class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.IsDefined(System.Reflection.Assembly,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Assembly" />
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Assembly" /> que descreve uma coleção reutilizável de módulos.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Esse parâmetro é ignorado e não afeta a operação desse método.</param>
+        <summary>Determina se todos os atributos personalizados são aplicados a um assembly. Parâmetros especificam o assembly, o tipo de atributo personalizado pelo qual pesquisar e uma opção de pesquisa ignorada.</summary>
+        <returns>
+          <see langword="true" /> se um atributo personalizado do tipo <paramref name="attributeType" /> for aplicado a <paramref name="element" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna `true` se o assembly tem os atributos de segurança armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.Attribute.IsDefined%2A>, aceitando um <xref:System.Reflection.Assembly> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#1](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#1)]
+ [!code-csharp[IsDefined#1](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id1.cs#1)]
+ [!code-vb[IsDefined#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public static bool IsDefined (System.Reflection.MemberInfo element, Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefined(class System.Reflection.MemberInfo element, class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.IsDefined(System.Reflection.MemberInfo,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.MemberInfo" />
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.MemberInfo" /> que descreve um construtor, evento, campo, método, tipo ou membro da propriedade de uma classe.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Se <see langword="true" />, especifica também a pesquisa os ancestrais do <c>elemento</c> para os atributos personalizados.</param>
+        <summary>Determina se todos os atributos personalizados são aplicados a um membro de um tipo. Os parâmetros especificam o membro e o tipo do atributo personalizado a ser pesquisado, além de definir se os ancestrais do membro devem ser pesquisados.</summary>
+        <returns>
+          <see langword="true" /> se um atributo personalizado do tipo <paramref name="attributeType" /> for aplicado a <paramref name="element" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Iniciando com o .NET Framework versão 2.0, esse método retorna `true` se um tipo, método ou construtor tem os atributos de segurança armazenados no novo formato de metadados. Assemblies compilados com a versão 2.0 ou posterior usam o novo formato. Assemblies dinâmicos e assemblies compilados com versões anteriores do .NET Framework usam o formato XML antigo. Consulte [emitindo atributos de segurança declarativos](http://msdn.microsoft.com/en-us/9eeddee8-ca89-4440-b84b-fd613f590cd5).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.Attribute.IsDefined%2A>, aceitando um <xref:System.Reflection.MemberInfo> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#4](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#4)]
+ [!code-csharp[IsDefined#4](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id4.cs#4)]
+ [!code-vb[IsDefined#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          O <paramref name="element" /> não é um construtor, método, propriedade, evento, tipo nem campo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public static bool IsDefined (System.Reflection.Module element, Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefined(class System.Reflection.Module element, class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.IsDefined(System.Reflection.Module,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.Module" />
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.Module" /> que descreve um arquivo executável portátil.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Esse parâmetro é ignorado e não afeta a operação desse método.</param>
+        <summary>Determina se todos os atributos personalizados são aplicados a um módulo. Parâmetros especificam o módulo, o tipo de atributo personalizado a ser pesquisado e uma opção de pesquisa ignorada.</summary>
+        <returns>
+          <see langword="true" /> se um atributo personalizado do tipo <paramref name="attributeType" /> for aplicado a <paramref name="element" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método ignora o `inherit` parâmetro e não pesquisa os ancestrais do `element` para os atributos personalizados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.Attribute.IsDefined%2A>, aceitando um <xref:System.Reflection.Module> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#2](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#2)]
+ [!code-csharp[IsDefined#2](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id2.cs#2)]
+ [!code-vb[IsDefined#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public static bool IsDefined (System.Reflection.ParameterInfo element, Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefined(class System.Reflection.ParameterInfo element, class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.IsDefined(System.Reflection.ParameterInfo,System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Reflection.ParameterInfo" />
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto derivado da classe <see cref="T:System.Reflection.ParameterInfo" /> que descreve um parâmetro de um membro de uma classe.</param>
+        <param name="attributeType">O tipo, ou um tipo base, do atributo personalizado a ser pesquisado.</param>
+        <param name="inherit">Se <see langword="true" />, especifica também a pesquisa os ancestrais do <c>elemento</c> para os atributos personalizados.</param>
+        <summary>Determina se todos os atributos personalizados são aplicados a um parâmetro de método. Os parâmetros especificam o parâmetro de método, o tipo do atributo personalizado a ser pesquisado e se os ancestrais de pesquisa do parâmetro do membro devem ser pesquisados.</summary>
+        <returns>
+          <see langword="true" /> se um atributo personalizado do tipo <paramref name="attributeType" /> for aplicado a <paramref name="element" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.Attribute.IsDefined%2A>, aceitando um <xref:System.Reflection.ParameterInfo> como um parâmetro.  
+  
+ [!code-cpp[IsDefined#5](~/samples/snippets/cpp/VS_Snippets_CLR/IsDefined/CPP/isdefined.cpp#5)]
+ [!code-csharp[IsDefined#5](~/samples/snippets/csharp/VS_Snippets_CLR/IsDefined/CS/id5.cs#5)]
+ [!code-vb[IsDefined#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/IsDefined/VB/id5.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> ou <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> não é derivado de <see cref="T:System.Attribute" />.</exception>
+        <exception cref="T:System.ExecutionEngineException">
+          <paramref name="element" />não é um tipo, construtor ou método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public virtual bool Match (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Match(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.Match(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> a ser comparado com essa instância de <see cref="T:System.Attribute" />.</param>
+        <summary>Quando substituído em uma classe derivada, retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se essa instância for igual a <paramref name="obj" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método determina se um <xref:System.Attribute> é igual a outro. Sua implementação do padrão é o mesmo que <xref:System.Attribute.Equals%2A>, que executa uma comparação de valor e referência. Substitua este método para implementar o suporte para valores de atributo, como sinalizadores ou campos de bits, que consistem em componentes que são significativos em si.  
+  
+ Por exemplo, considere um atributo cujo valor é um campo binário dividido em um campo de bits de sinalizadores. Duas instâncias desse atributo tem um sinalizador no conjunto em comum, enquanto todos os outros sinalizadores são diferentes. O <xref:System.Attribute.Equals%2A> método não é possível determinar se duas instâncias tem o mesmo sinalizador definido, mas o <xref:System.Attribute.Match%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de <xref:System.Attribute.Match%2A> no contexto de <xref:System.Attribute>.  
+  
+ [!code-csharp[Match#1](~/samples/snippets/csharp/VS_Snippets_CLR/Match/CS/match.cs#1)]
+ [!code-vb[Match#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Match/VB/match.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._Attribute.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _Attribute.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._Attribute.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.System#Runtime#InteropServices#_Attribute#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="rgszNames">Matriz passada de nomes a serem mapeados.</param>
+        <param name="cNames">Contagem dos nomes a serem mapeados.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar os nomes.</param>
+        <param name="rgDispId">Matriz alocada pelo chamador que recebe os IDs correspondentes aos nomes.</param>
+        <summary>Mapeia um conjunto de nomes para um conjunto correspondente de identificadores de expedição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetIDsOfNames`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._Attribute.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _Attribute.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._Attribute.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.System#Runtime#InteropServices#_Attribute#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">As informações de tipo a serem retornadas.</param>
+        <param name="lcid">O identificador de localidade das informações do tipo.</param>
+        <param name="ppTInfo">Recebe um ponteiro para o objeto de informações de tipo solicitado.</param>
+        <summary>Recupera as informações de tipo para um objeto, que pode ser usado para obter as informações de tipo para uma interface.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfo`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._Attribute.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _Attribute.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._Attribute.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.System#Runtime#InteropServices#_Attribute#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Aponta para um local que recebe o número de interfaces de informações de tipo fornecido pelo objeto.</param>
+        <summary>Retorna o número de interfaces de informações do tipo que um objeto fornece (0 ou 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfoCount`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._Attribute.Invoke">
+      <MemberSignature Language="C#" Value="void _Attribute.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._Attribute.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Attribute.System#Runtime#InteropServices#_Attribute#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Identifica o membro.</param>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar argumentos.</param>
+        <param name="wFlags">Sinalizadores que descrevem o contexto da chamada.</param>
+        <param name="pDispParams">Ponteiro para uma estrutura contendo uma matriz de argumentos, uma matriz de DISPIDs de argumento para argumentos nomeados e contagens para o número de elementos nas matrizes.</param>
+        <param name="pVarResult">Ponteiro para o local onde o resultado deve ser armazenado.</param>
+        <param name="pExcepInfo">Ponteiro para uma estrutura que contém informações de exceção.</param>
+        <param name="puArgErr">O índice do primeiro argumento que tem um erro.</param>
+        <summary>Fornece acesso a propriedades e métodos expostos por um objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::Invoke`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public virtual object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.Attribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementado em uma classe derivada, obtém um identificador exclusivo para este <see cref="T:System.Attribute" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que é um identificador exclusivo do atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado, esse identificador é simplesmente o <xref:System.Type> do atributo. No entanto, destina-se que o identificador exclusivo usado para identificar os dois atributos do mesmo tipo.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Attribute.TypeId%2A> propriedade em um parâmetro personalizado <xref:System.Attribute> classe e mostra seu uso.  
+  
+ [!code-cpp[System.Attribute.TypeId#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Attribute.TypeId/CPP/typeid.cpp#1)]
+ [!code-csharp[System.Attribute.TypeId#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Attribute.TypeId/CS/typeid.cs#1)]
+ [!code-vb[System.Attribute.TypeId#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Attribute.TypeId/VB/typeid.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

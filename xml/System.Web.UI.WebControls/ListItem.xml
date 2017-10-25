@@ -1,0 +1,784 @@
+<Type Name="ListItem" FullName="System.Web.UI.WebControls.ListItem">
+  <TypeSignature Language="C#" Value="public sealed class ListItem : System.Web.UI.IAttributeAccessor, System.Web.UI.IParserAccessor, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ListItem extends System.Object implements class System.Web.UI.IAttributeAccessor, class System.Web.UI.IParserAccessor, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IAttributeAccessor</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IParserAccessor</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.ListItemControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "Text")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um item de dados em um controle de lista associado a dados. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.ListItem> controle representa um item de dados individuais dentro de um controle de lista associado a dados, como um <xref:System.Web.UI.WebControls.ListBox> ou um <xref:System.Web.UI.WebControls.RadioButtonList> controle.  
+  
+ Há várias maneiras para especificar o texto exibido para um item na lista de controle. O método mais comum é colocando o texto em HTML interna conteúdo. O conteúdo HTML interno é o texto entre as marcas de abertura e fechamento do <xref:System.Web.UI.WebControls.ListItem> controle. Você também pode usar o <xref:System.Web.UI.WebControls.ListItem.Text%2A> propriedade para especificar o texto exibido na lista de controle para o item.  
+  
+ O <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade permite que você associe um valor com o item na lista de controle, além para o texto exibido no controle. Por exemplo, você pode exibir o texto de um item na lista de controle, como `"Item 1"`e usar o <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade para especificar um valor para esse item, como `"$1.99"`.  
+  
+ Você pode ter qualquer combinação de conteúdo interno de HTML, <xref:System.Web.UI.WebControls.ListItem.Text%2A>, ou <xref:System.Web.UI.WebControls.ListItem.Value%2A> conjunto de propriedades. O HTML resultante de saída para o <xref:System.Web.UI.WebControls.ListItem> controle depende da combinação dessas três propriedades que são definidas. Por exemplo, se todas as três propriedades são definidas como segue:  
+  
+```  
+<asp:ListItem Value="Value 1" Text="Item 1">Inner 1</asp:ListItem>  
+```  
+  
+ Interna conteúdo HTML é usado para renderizado o HTML interno conteúdo e o <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade é usada para o `Value` atributo. A saída de renderização de HTML resultante é:  
+  
+```  
+<option value="Value 1">Inner 1</option>  
+```  
+  
+ A tabela a seguir lista a combinação de conjunto de propriedades e a propriedade correspondente usado para o conteúdo renderizado em HTML interno e `Value` atributo. As três colunas à esquerda listam a combinação de conjunto de propriedades. As duas colunas à direita listam cujo valor da propriedade é usado para o atributo correspondente.  
+  
+|Conteúdo HTML interno|Propriedade Text|Propriedade Value|Conteúdo HTML interno renderizado|Atributo de valor processado|  
+|------------------------|-------------------|--------------------|---------------------------------|------------------------------|  
+|Definir|Definir|Definir|Conteúdo HTML interno|Propriedade Value|  
+|Definir|Definir|Não definido|Conteúdo HTML interno|Conteúdo HTML interno|  
+|Definir|Não definido|Definir|Conteúdo HTML interno|Propriedade Value|  
+|Definir|Não definido|Não definido|Conteúdo HTML interno|Texto HTML interno|  
+|Não definido|Definir|Definir|Propriedade Text|Propriedade Value|  
+|Não definido|Definir|Não definido|Propriedade Text|Propriedade Text|  
+|Não definido|Não definido|Definir|Propriedade Value|Propriedade Value|  
+|Não definido|Não definido|Não definido|Não definido|Não definido|  
+  
+> [!NOTE]
+>  Porque o <xref:System.Web.UI.WebControls.ListItem.Text%2A> e <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedades de cada um valor padrão de uma cadeia de caracteres vazia, é possível ter itens de lista vazia na lista de controle.  
+  
+ Quando um controle de lista é exibido, qualquer <xref:System.Web.UI.WebControls.ListItem> controlar com seu <xref:System.Web.UI.WebControls.ListItem.Selected%2A> propriedade definida como `true` aparece realçado no controle.  
+  
+ O <xref:System.Web.UI.WebControls.ListItem> fornece controle de <xref:System.Web.UI.WebControls.ListItem.Enabled%2A> propriedade para permitir que você especifique se um <xref:System.Web.UI.WebControls.ListItem> controle está habilitado ou desabilitado. Um <xref:System.Web.UI.WebControls.ListItem> controle está desabilitado ficará esmaecida para indicar que não podem ser selecionado. Use esta propriedade para desabilitar um <xref:System.Web.UI.WebControls.ListItem> controle em um um <xref:System.Web.UI.WebControls.RadioButtonList> controle ou um <xref:System.Web.UI.WebControls.CheckBoxList> controle.  
+  
+> [!NOTE]
+>  Você não pode usar essa propriedade para desabilitar um <xref:System.Web.UI.WebControls.ListItem> controlar um <xref:System.Web.UI.WebControls.DropDownList> controle ou <xref:System.Web.UI.WebControls.ListBox> controle.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListItem>, consulte o <xref:System.Web.UI.WebControls.ListItem.%23ctor%2A> construtor.  
+  
+> [!CAUTION]
+>  Este controle pode ser usado para exibir a entrada do usuário, que pode incluir um script de cliente mal-intencionado. Verifique todas as informações que são enviadas de um cliente para o script executável, instruções SQL ou outro código antes de exibi-lo em seu aplicativo. Você pode usar controles de validação para verificar se a entrada do usuário antes de exibir o texto de entrada em um controle. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Para obter mais informações, consulte [protegendo controles padrão](http://msdn.microsoft.com/library/f3e7718f-63d0-44a3-bd5f-48cc2059c2a8), [como: proteger contra scripts maliciosos em um aplicativo da Web aplicando codificação HTML a cadeias de caracteres](http://msdn.microsoft.com/library/6f67973f-dda0-45a1-ba9d-e88532d7dc5b), e [Validando a entrada do usuário em páginas da Web do ASP.NET](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso de <xref:System.Web.UI.WebControls.ListItem> controla dentro de um <xref:System.Web.UI.WebControls.ListBox> controle.  
+  
+> [!NOTE]
+>  Os exemplos de código a seguir usam o modelo de código de arquivo único e podem não funcionar corretamente se copiados diretamente para um arquivo code-behind. Cada exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic ListItem Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic ListItem Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic ListItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic ListItem Example/VB/sourcevb.aspx#1)]  
+  
+ [!code-aspx-csharp[ListBoxMultiSelectExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListBoxMultiSelectExample/CS/listitemcollectioncs.aspx#1)]
+ [!code-aspx-vb[ListBoxMultiSelectExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListBoxMultiSelectExample/VB/listitemcollectionvb.aspx#1)]  
+[!code-aspx-csharp[ListBoxMultiSelectExample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ListBoxMultiSelectExample/CS/listitemcollectioncs.aspx#3)]
+[!code-aspx-vb[ListBoxMultiSelectExample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListBoxMultiSelectExample/VB/listitemcollectionvb.aspx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.ListItem> classe usando valores padrão.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListItem>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Text`|`null`|  
+|`Value`|`null`|  
+|`Enabled`|`true`|  
+  
+   
+  
+## Examples  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[ListItem.ListItem Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItem.ListItem Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[ListItem.ListItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItem.ListItem Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListItem (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido no controle de lista para o item representado pelo <see cref="T:System.Web.UI.WebControls.ListItem" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListItem" /> com os dados de texto especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.ListItem> classe usando o texto especificado.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListItem>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Text`|O valor de `text` parâmetro.|  
+|`Value`|`null`|  
+|`Enabled`|`true`|  
+  
+   
+  
+## Examples  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[ListItem.ListItem2 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItem.ListItem2 Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[ListItem.ListItem2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItem.ListItem2 Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListItem (string text, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido no controle de lista para o item representado pelo <see cref="T:System.Web.UI.WebControls.ListItem" />.</param>
+        <param name="value">O valor associado ao <see cref="T:System.Web.UI.WebControls.ListItem" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListItem" /> com os dados de valor e texto especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.ListItem> usando o texto especificado e o valor de classe.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListItem>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Text`|O valor de `text` parâmetro.|  
+|`Value`|O valor de `value` parâmetro.|  
+|`Enabled`|`true`|  
+  
+   
+  
+## Examples  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[ListItem.ListItem3 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItem.ListItem3 Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[ListItem.ListItem3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItem.ListItem3 Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListItem (string text, string value, bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text, string value, bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.#ctor(System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser exibido no controle de lista para o item representado pelo <see cref="T:System.Web.UI.WebControls.ListItem" />.</param>
+        <param name="value">O valor associado ao <see cref="T:System.Web.UI.WebControls.ListItem" />.</param>
+        <param name="enabled">Indica se o <see cref="T:System.Web.UI.WebControls.ListItem" /> está habilitado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListItem" /> com o texto, o valor e os dados habilitados especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListItem>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Text`|O valor de `text` parâmetro.|  
+|`Value`|O valor de `value` parâmetro.|  
+|`Enabled`|O valor de `enabled` parâmetro.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a adicionar itens à e remover itens de <xref:System.Web.UI.WebControls.ListBox> controles. Quando um item é selecionado no `ListBox1` controlar, uma nova <xref:System.Web.UI.WebControls.ListItem> controle com o mesmo valor pode ser criado e adicionado ao `ListBox2` de controle, se o `ListBox2` controle ainda não contém um item com esse texto. Neste exemplo, o construtor for chamado com `enabled` definido como `true`. Se ele foi chamado com `enabled` definida como `false`, o novo <xref:System.Web.UI.WebControls.ListItem> controle não apareça no <xref:System.Web.UI.WebControls.ListBox> controle.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[ListItem.ListItem4 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItem.ListItem4 Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[ListItem.ListItem4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItem.ListItem4 Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Web.UI.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItem.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de pares nome-valor de atributo do <see cref="T:System.Web.UI.WebControls.ListItem" /> que não tem suporte diretamente com a classe.</summary>
+        <value>Uma <see cref="T:System.Web.UI.AttributeCollection" /> que contém uma coleção de pares nome-valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItem.Attributes%2A> coleção para gerenciar os pares de nome e valor de atributo declarados nas marcas de abertura e fechamento do <xref:System.Web.UI.WebControls.ListItem>, mas não diretamente suportados pela classe. Você pode adicionar programaticamente ou remover atributos à coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItem.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o item de lista está habilitado.</summary>
+        <value>
+          <see langword="true" /> se o item de lista estiver habilitado; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListItem.Enabled%2A> propriedade permite que você especifique se um <xref:System.Web.UI.WebControls.ListItem> controle está habilitado ou desabilitado. Um <xref:System.Web.UI.WebControls.ListItem> controle está desabilitado ficará esmaecida para indicar que não podem ser selecionado. Use esta propriedade para desabilitar um <xref:System.Web.UI.WebControls.ListItem> controle em um um <xref:System.Web.UI.WebControls.RadioButtonList> controle ou um <xref:System.Web.UI.WebControls.CheckBoxList> controle.  
+  
+> [!NOTE]
+>  Você não pode usar essa propriedade para desabilitar um <xref:System.Web.UI.WebControls.ListItem> controlar um <xref:System.Web.UI.WebControls.DropDownList> controle ou <xref:System.Web.UI.WebControls.ListBox> controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.ListItem.Enabled%2A> propriedade programaticamente desabilitar itens de lista em um <xref:System.Web.UI.WebControls.RadioButtonList> controle. A primeira pergunta pede ao usuário para selecionar o botão de opção que corresponde a ocupação do usuário. Se o usuário indica que ele ou ela não é um desenvolvedor, os itens na segunda lista de botões de opção serão desabilitados. A segunda pergunta solicita que o usuário selecione uma linguagem de programação principal. Essa pergunta não é relevante para um usuário que não é um desenvolvedor.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[ListItem.Enabled#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItem.Enabled/CS/listitem.enabledcs.aspx#1)]
+ [!code-aspx-vb[ListItem.Enabled#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItem.Enabled/VB/listitem.enabledvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser comparado com o item da lista atual.</param>
+        <summary>Determina se o objeto especificado tem o mesmo valor e o texto como o item atual da lista.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado é equivalente ao item atual da lista; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromString">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.ListItem FromString (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.WebControls.ListItem FromString(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.FromString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">O texto a ser exibido no controle de lista para o item representado pelo <see cref="T:System.Web.UI.WebControls.ListItem" />.</param>
+        <summary>Cria um <see cref="T:System.Web.UI.WebControls.ListItem" /> do texto especificado.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.ListItem" /> que representa o texto especificado o <paramref name="s" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItem.FromString%2A> método estático para criar um <xref:System.Web.UI.WebControls.ListItem> do texto especificado. Esse método define o <xref:System.Web.UI.WebControls.ListItem.Text%2A> propriedade o <xref:System.Web.UI.WebControls.ListItem> para o texto especificado pelo `s` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para um determinado tipo e é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public bool Selected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Selected" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItem.Selected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.MinimizableAttributeTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o item está selecionado.</summary>
+        <value>
+          <see langword="true" /> se o item estiver selecionado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItem.Selected%2A> propriedade para determinar se o <xref:System.Web.UI.WebControls.ListItem> está selecionado no momento na lista de controle que o contém. Essa propriedade normalmente é usada ao fazer a iteração por meio de uma coleção de <xref:System.Web.UI.WebControls.ListItem> objetos em um controle de lista, para determinar se um item é selecionado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.ListItem.Selected%2A> propriedade durante a iteração de <xref:System.Web.UI.WebControls.ListControl.Items%2A> coleção de um <xref:System.Web.UI.WebControls.CheckBoxList> controle para determinar quais caixas de seleção estão marcadas.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[Classic ListControl.Items Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic ListControl.Items Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic ListControl.Items Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic ListControl.Items Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.GetAttribute">
+      <MemberSignature Language="C#" Value="string IAttributeAccessor.GetAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Web.UI.IAttributeAccessor.GetAttribute(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.System#Web#UI#IAttributeAccessor#GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O componente de nome do par de nome/valor de um atributo.</param>
+        <summary>Retorna o valor do atributo do controle de item de lista com o nome do atributo especificado.</summary>
+        <returns>O valor do atributo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItem> é convertida em uma interface de <xref:System.Web.UI.IAttributeAccessor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.SetAttribute">
+      <MemberSignature Language="C#" Value="void IAttributeAccessor.SetAttribute (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IAttributeAccessor.SetAttribute(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.System#Web#UI#IAttributeAccessor#SetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O componente de nome do par de nome/valor do atributo.</param>
+        <param name="value">O componente de valor do par de nome/valor do atributo.</param>
+        <summary>Define um atributo do controle de item de lista com o nome especificado e o valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItem> é convertida em uma interface de <xref:System.Web.UI.IAttributeAccessor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IParserAccessor.AddParsedSubObject">
+      <MemberSignature Language="C#" Value="void IParserAccessor.AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IParserAccessor.AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.System#Web#UI#IParserAccessor#AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto especificado é analisado.</param>
+        <summary>Permite que o <see cref="P:System.Web.UI.WebControls.ListItem.Text" /> propriedade seja mantido como conteúdo interno.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItem> é convertida em uma interface de <xref:System.Web.UI.IParserAccessor>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="obj" /> é um <see cref="T:System.Web.UI.DataBoundLiteralControl" />.  
+  
+ \- ou -  
+  
+ <paramref name="obj" /> não é um <see cref="T:System.Web.UI.LiteralControl" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItem.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IStateManager.IsTrackingViewState" />.</summary>
+        <value>
+          <see langword="true" />Se o estado de exibição está sendo rastreado; Caso contrário, <see langword="false" />.  O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um <see cref="T:System.Object" /> que contém os valores de estado de exibição salvo para o controle.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IStateManager.LoadViewState(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItem> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IStateManager.SaveViewState" />.</summary>
+        <returns>O <see cref="T:System.Object" /> que contém as alterações de estado de exibição.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItem> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IStateManager.TrackViewState" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.ListItem> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItem.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.EncodedInnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto exibido em um controle de lista para o item representado pelo <see cref="T:System.Web.UI.WebControls.ListItem" />.</summary>
+        <value>O texto exibido em um controle de lista para o item representado pelo controle <see cref="T:System.Web.UI.WebControls.ListItem" />. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItem.Text%2A> para especificar ou determinar o texto exibido em um controle de lista para o item representado pelo <xref:System.Web.UI.WebControls.ListItem>.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.ListItem.Text%2A> propriedade contém `null`, o `get` acessador retorna o valor da <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade. Se o <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade, por sua vez, contém `null`, <xref:System.String.Empty?displayProperty=nameWithType> será retornado.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[ListItem.ListItem Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItem.ListItem Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[ListItem.ListItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItem.ListItem Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListItem.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o objeto atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListItem.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor associado ao <see cref="T:System.Web.UI.WebControls.ListItem" />.</summary>
+        <value>O valor associado ao <see cref="T:System.Web.UI.WebControls.ListItem" />. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListItem.Value%2A> para especificar ou determinar o valor associado com o <xref:System.Web.UI.WebControls.ListItem>.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.ListItem.Value%2A> propriedade contém `null`, o `get` acessador retorna o valor da <xref:System.Web.UI.WebControls.ListItem.Text%2A> propriedade. Se o <xref:System.Web.UI.WebControls.ListItem.Text%2A> propriedade, por sua vez, contém `null`, <xref:System.String.Empty?displayProperty=nameWithType> será retornado.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações sobre o modelo de código de Web Forms, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[ListItem.ListItem Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ListItem.ListItem Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[ListItem.ListItem Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ListItem.ListItem Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

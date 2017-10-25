@@ -1,0 +1,90 @@
+<Type Name="EmbeddedMailObjectCollectionEditor" FullName="System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor">
+  <TypeSignature Language="C#" Value="public class EmbeddedMailObjectCollectionEditor : System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EmbeddedMailObjectCollectionEditor extends System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.CollectionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um editor de componente de email inserido coleções de objetos em um <see cref="T:System.Web.UI.WebControls.MailDefinition" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor> classe fornece uma interface do usuário para edição de <xref:System.Web.UI.WebControls.EmbeddedMailObject> elementos do <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection> objeto do <xref:System.Web.UI.WebControls.MailDefinition> objetos.  
+  
+ O <xref:System.Web.UI.WebControls.MailDefinition> objetos definem o conteúdo e o formato das mensagens de notificação de email que são enviados pelo <xref:System.Web.UI.WebControls.CreateUserWizard>, <xref:System.Web.UI.WebControls.ChangePassword>, <xref:System.Web.UI.WebControls.PasswordRecovery>e outros controles. O <xref:System.Web.UI.WebControls.EmbeddedMailObject> elementos definem os objetos inseridos dentro dessas mensagens de email.  
+  
+ O <xref:System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor> é invocado selecionando as reticências (**... **) no botão de **EmbeddedObjects** propriedade, em **MailDefinition**, no **propriedades** grade do visual designer.  
+  
+ O <xref:System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor.EditValue%2A> método edita o valor do objeto especificado usando o provedor de serviço especificado e o contexto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EmbeddedMailObjectCollectionEditor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> da coleção para editar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor> classe quando o usuário seleciona o botão de reticências (**... **) no botão de **EmbeddedObjects** propriedade, em **MailDefinition**, no **propriedades** grade do visual designer, durante a criação de um <xref:System.Web.UI.WebControls.CreateUserWizard>, <xref:System.Web.UI.WebControls.ChangePassword>, <xref:System.Web.UI.WebControls.PasswordRecovery>, ou outro controle que encapsula uma <xref:System.Web.UI.WebControls.MailDefinition> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext context, class System.IServiceProvider provider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que é usado para obter informações de contexto adicional.</param>
+        <param name="provider">Um objeto que implementa o <see cref="T:System.IServiceProvider" /> por meio do qual edição services pode ser obtido.</param>
+        <param name="value">O objeto para editar o valor.</param>
+        <summary>Edita o valor do objeto especificado usando o provedor de serviço especificado e o contexto.</summary>
+        <returns>O novo <paramref name="value" />; caso contrário, se o valor do objeto não foi alterado, <paramref name="value" /> inalterado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor.EditValue%2A> chamadas de método o <xref:System.ComponentModel.ITypeDescriptorContext.OnComponentChanging%2A> método o `context` parâmetro e, em seguida, chama o <xref:System.Web.UI.Design.WebControls.EmbeddedMailObjectCollectionEditor.EditValue%2A> método de base. Exceções geradas são propagadas de volta para o chamador. O <xref:System.ComponentModel.ITypeDescriptorContext.OnComponentChanged%2A> método `context` é chamado quando a edição é concluída.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

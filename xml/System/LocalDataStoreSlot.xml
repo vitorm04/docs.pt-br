@@ -1,0 +1,84 @@
+<Type Name="LocalDataStoreSlot" FullName="System.LocalDataStoreSlot">
+  <TypeSignature Language="C#" Value="public sealed class LocalDataStoreSlot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LocalDataStoreSlot extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.LocalDataStoreSlot" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Thread</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula um slot de memória para armazenar dados locais. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework fornece dois mecanismos para usar o armazenamento local de thread (TLS): campos estáticos relativos a thread e slots de dados.  
+  
+-   Campos estáticos relativos a thread são `static` campos (`Shared` campos no Visual Basic) que são marcados com o <xref:System.ThreadStaticAttribute> atributo. Eles fornecem melhor desempenho de slots de dados e habilitar a verificação de tipo de tempo de compilação.  
+  
+-   Slots de dados são mais lento e mais inadequado para uso de campos estáticos relativos a thread. Além disso, os dados são armazenados como tipo <xref:System.Object>, portanto, você deve convertê-lo para o tipo correto antes de usá-lo. No entanto, você pode usar os slots de dados quando você tem informações suficientes no tempo de compilação para alocar campos estáticos.  
+  
+ Para obter mais informações sobre como usar o TLS, consulte [armazenamento Local de Thread: campos estáticos relativos a Thread e Slots de dados](~/docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md).  
+  
+ Da mesma forma, o .NET Framework fornece dois mecanismos para uso do armazenamento local de contexto: slots campos e dados estáticos relativo de contexto. Campos estáticos relativos a contexto são campos estáticos que são marcados com o <xref:System.ContextStaticAttribute> atributo. As compensações entre usar esses dois mecanismos são semelhantes às compensações entre o uso de slots dados e campos estáticos relativos a thread.  
+  
+ O <xref:System.LocalDataStoreSlot> estrutura serve como um local armazena o mecanismo de memória que threads e contextos podem usar para armazenar dados específicos de segmento e o contexto específico, respectivamente. O common language runtime aloca uma matriz de armazenamento de dados de vários slots para cada processo quando ele é criado. As chamadas de thread ou context várias funções para alocar um slot de dados no repositório de dados, armazenar e recuperar um valor de dados no slot e liberar um slot de dados para reutilizar depois que o objeto de thread ou context expira.  
+  
+ Os slots de dados são exclusivos por thread ou context; os valores não são compartilhados entre os objetos de thread ou context. Slots de dados podem ser alocados por um nome ou um número de índice.  
+  
+ Para obter mais informações sobre como armazenar dados locais, consulte <xref:System.Threading.Thread> ou <xref:System.Runtime.Remoting.Contexts.Context>. O <xref:System.LocalDataStoreSlot> classe é usada como com métodos <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType>, <xref:System.Runtime.Remoting.Contexts.Context.AllocateNamedDataSlot%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType>, e <xref:System.Runtime.Remoting.Contexts.Context.GetData%2A?displayProperty=nameWithType>; ele não tem métodos de sua própria que você precisa usar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~LocalDataStoreSlot ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.LocalDataStoreSlot.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Garante que os recursos são liberados e outras operações de limpeza são executadas quando o coletor de lixo recupera o objeto <see cref="T:System.LocalDataStoreSlot" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O coletor de lixo chama <xref:System.LocalDataStoreSlot.Finalize%2A> quando o objeto atual está pronto para ser finalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

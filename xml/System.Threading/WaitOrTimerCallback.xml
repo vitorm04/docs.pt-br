@@ -1,0 +1,75 @@
+<Type Name="WaitOrTimerCallback" FullName="System.Threading.WaitOrTimerCallback">
+  <TypeSignature Language="C#" Value="public delegate void WaitOrTimerCallback(object state, bool timedOut);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WaitOrTimerCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.WaitOrTimerCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="state" Type="System.Object" />
+    <Parameter Name="timedOut" Type="System.Boolean" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="state">Um objeto que contém as informações a serem usadas pelo método de retorno de chamada sempre que ele for executado.</param>
+    <param name="timedOut">
+      <see langword="true" /> se o <see cref="T:System.Threading.WaitHandle" /> tiver atingido o tempo limite; <see langword="false" /> se ele tiver sido sinalizado.</param>
+    <summary>Representa um método a ser chamado quando um <see cref="T:System.Threading.WaitHandle" /> é sinalizado ou atinge o tempo limite.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.WaitOrTimerCallback>representa um método de retorno de chamada que você deseja executar quando um identificador de espera registrado expira ou for sinalizado. Criar o representante, passando o seu método de retorno de chamada para o <xref:System.Threading.WaitOrTimerCallback> construtor. O método deve ter a assinatura mostrada aqui.  
+  
+ Criar o identificador de espera registrado passando o <xref:System.Threading.WaitOrTimerCallback> delegar e um <xref:System.Threading.WaitHandle> para <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>. O método de retorno de chamada é executado sempre que o <xref:System.Threading.WaitHandle> expirar ou for sinalizado.  
+  
+  
+> [!NOTE]
+>  Usuários do Visual Basic podem omitir o <xref:System.Threading.WaitOrTimerCallback> construtor e simplesmente usar a `AddressOf` operador ao passar o método de retorno de chamada para <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>. Visual Basic automaticamente chama construtor delegado correto.  
+  
+ Se você quiser passar informações para o seu método de retorno de chamada, crie um objeto que contém as informações necessárias e passá-lo para <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> quando você cria o identificador de espera registrado. Cada vez que seu método de retorno de chamada é executado, o `state` parâmetro contém este objeto.  
+  
+ Para obter mais informações sobre como usar métodos de retorno de chamada para sincronizar threads do pool, consulte [o Pool de threads gerenciados](~/docs/standard/threading/the-managed-thread-pool.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Threading.WaitOrTimerCallback> delegado para representar um método de retorno de chamada que é executado quando um identificador de espera é sinalizado.  
+  
+ O exemplo também mostra como usar o <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> método para executar um método de retorno de chamada especificada quando um identificador de espera especificado é sinalizado. Neste exemplo, o método de retorno de chamada é `WaitProc` e o identificador de espera é um <xref:System.Threading.AutoResetEvent>.  
+  
+ O exemplo define um `TaskInfo` classe para conter as informações que são passadas para o retorno de chamada quando ele é executado. O exemplo cria um `TaskInfo` do objeto e o atribui alguns dados de cadeia de caracteres. O <xref:System.Threading.RegisteredWaitHandle> que é retornado pelo <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> método é atribuído ao `Handle` campo do `TaskInfo` do objeto, para que o método de retorno de chamada tem acesso ao <xref:System.Threading.RegisteredWaitHandle>.  
+  
+ Além de `TaskInfo` objeto, a chamada para o <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> método Especifica o <xref:System.Threading.AutoResetEvent> aguarda a tarefa, um <xref:System.Threading.WaitOrTimerCallback> delegado que representa o `WaitProc` vários retornos de chamada de método de retorno de chamada e um intervalo de tempo limite de um segundo .  
+  
+ Quando o thread principal sinaliza o <xref:System.Threading.AutoResetEvent> chamando seu <xref:System.Threading.EventWaitHandle.Set%2A> método, o <xref:System.Threading.WaitOrTimerCallback> delegado é invocado. O `WaitProc` método testes <xref:System.Threading.RegisteredWaitHandle> para determinar se ocorreu um tempo limite. Se o retorno de chamada foi invocado porque o identificador de espera foi sinalizado, o `WaitProc` método cancela o registro de <xref:System.Threading.RegisteredWaitHandle>, parando mais retornos de chamada. No caso de um tempo limite, a tarefa continuará aguardando. O `WaitProc` método termina imprimindo uma mensagem para o console.  
+  
+ [!code-cpp[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool RegisterWaitForSingleObject0#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool RegisterWaitForSingleObject0/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

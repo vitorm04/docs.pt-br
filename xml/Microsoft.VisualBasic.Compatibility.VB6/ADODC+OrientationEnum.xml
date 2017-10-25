@@ -1,0 +1,65 @@
+<Type Name="ADODC+OrientationEnum" FullName="Microsoft.VisualBasic.Compatibility.VB6.ADODC+OrientationEnum">
+  <TypeSignature Language="C#" Value="public enum ADODC.OrientationEnum" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ADODC/OrientationEnum extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.OrientationEnum" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece constantes para compatibilidade com a propriedade <see langword="Orientation" /> do Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No Visual Basic 6.0, o `Orientation` propriedade foi usada para especificar se um `ADODataControl` foi exibida com uma orientação horizontal ou vertical.  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="adHorizontal">
+      <MemberSignature Language="C#" Value="adHorizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ADODC/OrientationEnum adHorizontal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.OrientationEnum.adHorizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ADODC+OrientationEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see langword="ADODC" /> será exibido na horizontal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="adVertical">
+      <MemberSignature Language="C#" Value="adVertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ADODC/OrientationEnum adVertical = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.OrientationEnum.adVertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ADODC+OrientationEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see langword="ADODC" /> será exibida verticalmente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

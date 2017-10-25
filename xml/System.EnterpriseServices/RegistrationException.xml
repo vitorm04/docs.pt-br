@@ -1,0 +1,142 @@
+<Type Name="RegistrationException" FullName="System.EnterpriseServices.RegistrationException">
+  <TypeSignature Language="C#" Value="public sealed class RegistrationException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit RegistrationException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.RegistrationException" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção que é lançada quando um erro de registro é detectado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir contém um bloco catch que mostra como tratar uma exceção do registro.  
+  
+ [!code-cpp[EnterpriseServices Registration#0](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices Registration/CPP/deployservicedcomponent.cpp#0)]
+ [!code-csharp[EnterpriseServices Registration#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices Registration/CS/deployservicedcomponent.cs#0)]
+ [!code-vb[EnterpriseServices Registration#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices Registration/VB/deployservicedcomponent.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.RegistrationException" />.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistrationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.RegistrationException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.RegistrationException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistrationException (string msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.RegistrationException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="msg" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="msg">A mensagem exibida para o cliente quando a exceção é gerada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.RegistrationException" /> com uma mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegistrationException (string msg, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string msg, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.RegistrationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="msg" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="msg">A mensagem exibida para o cliente quando a exceção é gerada.</param>
+        <param name="inner">A exceção aninhada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.RegistrationException" /> classe com uma mensagem de erro especificada e uma exceção aninhada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorInfo">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.RegistrationErrorInfo[] ErrorInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.EnterpriseServices.RegistrationErrorInfo[] ErrorInfo" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.RegistrationException.ErrorInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.RegistrationErrorInfo[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de objetos <see cref="T:System.EnterpriseServices.RegistrationErrorInfo" /> que descrevem os erros de registro.</summary>
+        <value>Uma matriz de objetos <see cref="T:System.EnterpriseServices.RegistrationErrorInfo" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando ocorre um erro de catálogo COMADMIN_E_OBJECTERRORS auxiliar que registro lerá o `ErrorInfo` coleção e retorná-lo por meio de <xref:System.EnterpriseServices.RegistrationException.ErrorInfo%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext ctx);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext ctx) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.RegistrationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="ctx" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> serializado de objeto que contém dados de objeto.</param>
+        <param name="ctx">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Conjuntos de <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com as informações de erro em <see cref="T:System.EnterpriseServices.RegistrationErrorInfo" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="info" />o parâmetro é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

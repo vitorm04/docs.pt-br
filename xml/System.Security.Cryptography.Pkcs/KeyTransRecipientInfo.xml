@@ -1,0 +1,135 @@
+<Type Name="KeyTransRecipientInfo" FullName="System.Security.Cryptography.Pkcs.KeyTransRecipientInfo">
+  <TypeSignature Language="C#" Value="public sealed class KeyTransRecipientInfo : System.Security.Cryptography.Pkcs.RecipientInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit KeyTransRecipientInfo extends System.Security.Cryptography.Pkcs.RecipientInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Pkcs.RecipientInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo" /> classe define as informações de destinatário do transporte de chaves.        *O transporte chaves* algoritmos normalmente usam o algoritmo RSA, no qual um originador estabelece uma chave de criptografia compartilhada com um destinatário, gerando chave e, em seguida, transporte-lo para o destinatário. Isso é, em oposição à *acordo de chave* algoritmos, no qual as duas partes que estará usando uma criptografia chave ambos fazem parte de sua geração, assim, mutuamente concordando com essa chave.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe não tem um construtor público; Portanto, ele não pode ser publicamente instanciado. É uma classe somente leitura acessível a partir de <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.RecipientInfos%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EncryptedKey">
+      <MemberSignature Language="C#" Value="public override byte[] EncryptedKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] EncryptedKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo.EncryptedKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo.EncryptedKey" /> propriedade recupera a chave criptografada para esse destinatário de transporte de chaves.</summary>
+        <value>Uma matriz de valores de byte que representa a chave criptografada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyEncryptionAlgorithm">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.Pkcs.AlgorithmIdentifier KeyEncryptionAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.AlgorithmIdentifier KeyEncryptionAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo.KeyEncryptionAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.AlgorithmIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo.KeyEncryptionAlgorithm" /> propriedade recupera o algoritmo de criptografia de chave usado para criptografar a chave de criptografia do conteúdo.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.Pkcs.AlgorithmIdentifier" /> objeto que armazena o identificador de algoritmo de criptografia de chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecipientIdentifier">
+      <MemberSignature Language="C#" Value="public override System.Security.Cryptography.Pkcs.SubjectIdentifier RecipientIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.SubjectIdentifier RecipientIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo.RecipientIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SubjectIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo.RecipientIdentifier" /> propriedade recupera o identificador da entidade associado ao conteúdo criptografado.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifier" /> objeto que armazena o identificador do destinatário que fazem parte do transporte de chaves.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public override int Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo.Version" /> propriedade recupera a versão do destinatário para o transporte de chaves. A versão do destinatário para o transporte de chaves é definida automaticamente para objetos desta classe e o valor indica que o destinatário é que faz parte de um algoritmo de chave de transporte.</summary>
+        <value>Um valor inteiro que representa a versão do transporte chave <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A versão determina se a mensagem no qual este <xref:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo> contido é uma mensagem de PKCS #7 ou uma sintaxe de mensagem criptográfico (CMS). CMS é um superconjunto mais recente do PKCS #7.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

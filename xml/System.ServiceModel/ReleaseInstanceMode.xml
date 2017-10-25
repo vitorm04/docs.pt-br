@@ -1,0 +1,102 @@
+<Type Name="ReleaseInstanceMode" FullName="System.ServiceModel.ReleaseInstanceMode">
+  <TypeSignature Language="C#" Value="public enum ReleaseInstanceMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReleaseInstanceMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ReleaseInstanceMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica quando o sistema se reciclar o objeto de serviço no processo de invocação de operação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.ReleaseInstanceMode> com o <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A> propriedade informar [!INCLUDE[indigo1](~/includes/indigo1-md.md)] que o objeto de serviço atual deve ser reciclado em um ponto específico no processo de chamada. O comportamento padrão é reciclar um objeto de serviço de acordo com o <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> valor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de <xref:System.ServiceModel.ReleaseInstanceMode> para reciclar os objetos de serviço antes e depois de uma chamada.  
+  
+ [!code-csharp[OBA.ReleaseInstanceMode#1](~/samples/snippets/csharp/VS_Snippets_CFX/oba.releaseinstancemode/cs/services.cs#1)]
+ [!code-vb[OBA.ReleaseInstanceMode#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/oba.releaseinstancemode/vb/services.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterCall">
+      <MemberSignature Language="C#" Value="AfterCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReleaseInstanceMode AfterCall = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReleaseInstanceMode.AfterCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReleaseInstanceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recicla o objeto após a conclusão da operação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeAndAfterCall">
+      <MemberSignature Language="C#" Value="BeforeAndAfterCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReleaseInstanceMode BeforeAndAfterCall = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReleaseInstanceMode.BeforeAndAfterCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReleaseInstanceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recicla o objeto antes de chamar a operação e após a conclusão da operação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeCall">
+      <MemberSignature Language="C#" Value="BeforeCall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReleaseInstanceMode BeforeCall = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReleaseInstanceMode.BeforeCall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReleaseInstanceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recicla o objeto antes de chamar a operação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReleaseInstanceMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReleaseInstanceMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReleaseInstanceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recicla o objeto de acordo com o <see cref="P:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode" /> valor.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

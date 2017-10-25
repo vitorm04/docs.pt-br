@@ -1,0 +1,204 @@
+<Type Name="StaticExtension" FullName="System.Windows.Markup.StaticExtension">
+  <TypeSignature Language="C#" Value="public class StaticExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StaticExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.StaticExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Markup.StaticExtensionConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("PresentationFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Object))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa uma extensão de marcação que retorna referências de campo e de propriedade estáticas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é uma implementação de extensão de marcação para `{x:Static}` no XAML .NET serviços de suporte de recursos de linguagem XAML. Para obter informações de uso XAML, consulte [extensão de marcação X:Static](~/docs/framework/xaml-services/x-static-markup-extension.md).  
+  
+ Normalmente, você usa referências estáticas para obter valores estáticos de tipos, incluindo tipos que não pode ser instanciado em XAML, porque o tipo é estático. Exemplos comuns de casos onde `{x:Static}` é útil incluir valores que podem ser pensados como constantes como valores de matemática fixa ou chaves exclusivas para estados. Os membros estáticos que está sendo referenciados não precisam vir de assemblies do framework específicos associados a contexto do esquema XAML. Você pode mapear outros assemblies e namespaces CLR para uso em XAML e, em seguida, pode fazer referência a membros estáticos de tipos em XAML usando o prefixo que você mapeou.  
+  
+<a name="xamlTextUsage_StaticExtension"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StaticExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.StaticExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.StaticExtension" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StaticExtension (string member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.StaticExtension.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="member" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="member">Uma cadeia de caracteres que identifica o membro para fazer uma referência a. Essa cadeia de caracteres usa o formato <c>prefix:typeName.fieldOrPropertyName</c>. <c>prefixo</c> é o prefixo de mapeamento para um namespace XAML e só é necessário para fazer referência a valores estáticos que não estejam mapeados para o namespace XAML padrão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.StaticExtension" /> classe usando fornecido <paramref name="member" /> cadeia de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `member` valor não será avaliado quando você configurá-lo. Se o valor inicial não é `null`, em seguida, o valor é aceito. A análise real e avaliação do `member` valor é adiado até <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A> é chamado quando um gravador XAML processa um uso de extensão. Desse tempo, o contexto de esquema XAML informa o mapeamento de tipo e o valor pode ser obtido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="member" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public string Member { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Member" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.StaticExtension.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.ConstructorArgument("member")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um membro de cadeia de caracteres de nome que é usada para resolver um campo estático ou propriedade baseado no resolvedor fornecido pelo serviço de tipo.</summary>
+        <value>Uma cadeia de caracteres que identifica o membro para fazer uma referência a.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres para <xref:System.Windows.Markup.StaticExtension.Member%2A> normalmente usa o formato *prefixo*`:`*typeName*`.`*fieldOrPropertyName*. (*prefixo* é o prefixo de mapeamento para um namespace XML e só é necessário para fazer referência a valores estáticos que não são mapeados para o namespace XML padrão). A cadeia de caracteres também pode especificar apenas o nome do membro, contanto que <xref:System.Windows.Markup.StaticExtension.MemberType%2A> também é fornecido., mas observe que essa técnica não dará suporte a namespaces e prefixos XML; ele está funcionando no nível do sistema de tipo.  
+  
+ Para obter informações de uso XAML, consulte [extensão de marcação X:Static](~/docs/framework/xaml-services/x-static-markup-extension.md).  
+  
+ Esse valor não é avaliado quando você definir. desde que o valor não é `null` serão aceitas. A análise real e avaliação do valor é adiada até <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A> é chamado durante a análise.  
+  
+ Sob o cenário normal de uso de [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] processador XAML, o processador XAML passa um resolvedor de tipo para tipos de CLR como parte de seu contrato de serviço, e esse resolvedor é usado no <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A> chamar.  
+  
+<a name="xamlTextUsage_Member"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Tentativa de definir <see cref="P:System.Windows.Markup.StaticExtension.Member" /> como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public Type MemberType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.StaticExtension.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Type" /> que define o membro estático para retornar.</summary>
+        <value>O <see cref="T:System.Type" /> que define o membro estático para retornar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], <xref:System.Windows.Markup.StaticExtension> suporta um modo alternativo no qual ele pode retornar um membro estático com base em <xref:System.Windows.Markup.StaticExtension.Member%2A> sendo o membro simple nome e seu tipo de proprietário fornecidos como <xref:System.Windows.Markup.StaticExtension.MemberType%2A>, em vez de <xref:System.Windows.Markup.StaticExtension.Member%2A> fornecendo um nome completo no formato *tipo*`.`*membro*. O resolvedor de tipo ainda funciona, mas nesse caso o <xref:System.Windows.Markup.StaticExtension.Member%2A> e <xref:System.Windows.Markup.StaticExtension.MemberType%2A> basicamente são combinadas: `memberFullName = MemberType.FullName + "." + Member`. Observe que essa técnica não dá suporte XAML namespaces e prefixos; ele está funcionando no sistema de tipo de backup, não o sistema de tipo XAML.  
+  
+ A cadeia de caracteres para <xref:System.Windows.Markup.StaticExtension.Member%2A> normalmente usa o formato *prefixo*`:`*typeName*`.`*fieldOrPropertyName*. (*prefixo* é o prefixo de mapeamento para um namespace XML e só é necessário para fazer referência a valores estáticos que não são mapeados para o namespace XML padrão).  
+  
+ Para obter informações de uso XAML, consulte [extensão de marcação X:Static](~/docs/framework/xaml-services/x-static-markup-extension.md).  
+  
+<a name="xamlTextUsage_MemberType"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Tentativa de definir <see cref="P:System.Windows.Markup.StaticExtension.MemberType" /> como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.StaticExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um objeto que pode fornecer serviços para a extensão de marcação. O provedor de serviços deve fornecer um serviço que implementa um resolvedor de tipo (<see cref="T:System.Windows.Markup.IXamlTypeResolver" />).</param>
+        <summary>Retorna um valor de objeto para definir a propriedade onde você aplicar essa extensão. Para <see cref="T:System.Windows.Markup.StaticExtension" />, o valor de retorno é o valor estático que é avaliado para o membro estático solicitado.</summary>
+        <returns>O valor estático para definir a propriedade onde a extensão é aplicada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte a recursos de linguagem XAML e geralmente não se destina a ser chamado diretamente. A implementação de processador XAML usa esse método para tratar corretamente o `x:Static` valores de durante a criação do objeto de extensão.  
+  
+ Esta implementação se baseia em serviços baseados no passado `serviceProvider`. `serviceProvider`não deve ser `null`. O `serviceProvider` objeto deve retornar um serviço para <xref:System.Windows.Markup.IXamlTypeResolver>. Sob o cenário normal de uso de leitores XAML padrão e os gravadores XAML, um provedor de serviço adequado está disponível. Um contexto de esquema XAML inválido pode ter o efeito colateral de quebra de mapeamento de tipo e, portanto, o <xref:System.Windows.Markup.IXamlTypeResolver> service.  
+  
+ Em [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)], <xref:System.Windows.Markup.StaticExtension> suporta um modo alternativo no qual ele pode retornar um membro estático com base em <xref:System.Windows.Markup.StaticExtension.Member%2A> sendo o membro simple nome e seu tipo de proprietário fornecidos como <xref:System.Windows.Markup.StaticExtension.MemberType%2A>, em vez de <xref:System.Windows.Markup.StaticExtension.Member%2A> fornecendo um nome completo no formato *tipo*`.`*membro*. O resolvedor de tipo ainda funciona, mas nesse caso o <xref:System.Windows.Markup.StaticExtension.Member%2A> e <xref:System.Windows.Markup.StaticExtension.MemberType%2A> basicamente são combinadas: `memberFullName = MemberType.FullName + "." + Member`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="member" /> valor para a extensão é <see langword="null" /> no momento da avaliação.</exception>
+        <exception cref="T:System.ArgumentException">Alguma parte do <paramref name="member" /> cadeia de caracteres não foi analisada corretamente  
+  
+ -ou-  
+  
+ <paramref name="serviceProvider" />não forneceu um serviço para<see cref="T:System.Windows.Markup.IXamlTypeResolver" />  
+  
+ -ou-  
+  
+ <paramref name="member" />valor não foi resolvido para um membro estático.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceProvider" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

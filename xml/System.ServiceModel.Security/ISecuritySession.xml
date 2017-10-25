@@ -1,0 +1,45 @@
+<Type Name="ISecuritySession" FullName="System.ServiceModel.Security.ISecuritySession">
+  <TypeSignature Language="C#" Value="public interface ISecuritySession : System.ServiceModel.Channels.ISession" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISecuritySession implements class System.ServiceModel.Channels.ISession" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.ISecuritySession" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.ISession</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um tipo de <see langword="ISession" /> que impõe o requisito de que todas as mensagens trocadas na sessão estão entre as partes da comunicação mesmo que estabeleceu a sessão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.Security.ISecuritySession>instâncias são fornecidas pelos canais de segurança de mensagem (que usam o WS-SecureConversation) e por canais de transporte seguro de TCP.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RemoteIdentity">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointIdentity RemoteIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointIdentity RemoteIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.ISecuritySession.RemoteIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a identidade da entidade de segurança remota.</summary>
+        <value>O <see cref="T:System.ServiceModel.EndpointIdentity" /> da entidade de segurança remota.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

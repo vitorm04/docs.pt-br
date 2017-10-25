@@ -1,0 +1,62 @@
+<Type Name="BuildProviderResultFlags" FullName="System.Web.Compilation.BuildProviderResultFlags">
+  <TypeSignature Language="C#" Value="public enum BuildProviderResultFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BuildProviderResultFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.BuildProviderResultFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica o comportamento necessário quando um caminho virtual é criado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.BuildProviderResultFlags> valores são usados para indicar os resultados do <xref:System.Web.Compilation.BuildProvider.GetResultFlags%2A?displayProperty=nameWithType> método. Os valores de enumeração indicam ações que são necessárias depois que um caminho virtual é criado no ambiente de compilação do ASP.NET. O <xref:System.Web.Compilation.BuildProviderResultFlags> valores são usados pelo ambiente de compilação do ASP.NET ao usar instâncias do <xref:System.Web.Compilation.BuildProvider> classe para criar arquivos e carregar os assemblies compilados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.BuildProviderResultFlags Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.BuildProviderResultFlags.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.BuildProviderResultFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor padrão. Nenhuma ação especial é necessária após a compilação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownAppDomainOnChange">
+      <MemberSignature Language="C#" Value="ShutdownAppDomainOnChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.BuildProviderResultFlags ShutdownAppDomainOnChange = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.BuildProviderResultFlags.ShutdownAppDomainOnChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.BuildProviderResultFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A compilação do caminho virtual requer que o contém <see cref="T:System.AppDomain" /> para ser descarregado e reiniciado. Isso é usado apenas em cenários de compilação avançadas; Normalmente, você deve usar o <see cref="F:System.Web.Compilation.BuildProviderResultFlags.Default" /> valor.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

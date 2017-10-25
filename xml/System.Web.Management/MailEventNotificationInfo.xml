@@ -1,0 +1,299 @@
+<Type Name="MailEventNotificationInfo" FullName="System.Web.Management.MailEventNotificationInfo">
+  <TypeSignature Language="C#" Value="public sealed class MailEventNotificationInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MailEventNotificationInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.MailEventNotificationInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações para o <see cref="T:System.Web.Management.TemplatedMailWebEventProvider" /> objeto sobre a notificação de evento atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada para passar informações para o modelo de email para um <xref:System.Web.Management.TemplatedMailWebEventProvider> quando ocorre uma notificação de eventos do objeto. O modelo de email, em seguida, formata as informações de evento para o corpo da mensagem de email.  
+  
+ Uma notificação ocorre quando o buffer está desativado, o sistema de armazenamento de eventos envia mensagens de eventos acumulados, ou ocorre um evento e o sistema de armazenamento de eventos está desabilitado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Events">
+      <MemberSignature Language="C#" Value="public System.Web.Management.WebBaseEventCollection Events { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Management.WebBaseEventCollection Events" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.Events" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.WebBaseEventCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de eventos para a mensagem atual.</summary>
+        <value>Um <see cref="T:System.Web.Management.WebBaseEventCollection" /> de eventos para a mensagem atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventsDiscardedByBuffer">
+      <MemberSignature Language="C#" Value="public int EventsDiscardedByBuffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventsDiscardedByBuffer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.EventsDiscardedByBuffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de eventos descartados pelo buffer desde a última notificação.</summary>
+        <value>O número de eventos descartados pelo buffer desde a última notificação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Eventos são descartados se o buffer tem sobrecarregado desde a última notificação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventsDiscardedDueToMessageLimit">
+      <MemberSignature Language="C#" Value="public int EventsDiscardedDueToMessageLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventsDiscardedDueToMessageLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.EventsDiscardedDueToMessageLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de eventos que são descartados pelo buffer porque o buffer excedeu o limite de mensagem para a notificação atual.</summary>
+        <value>O número de eventos descartados por buffer porque o buffer excedeu o limite de mensagem para a notificação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O limite de mensagem especifica o número máximo de mensagens que são enviadas durante uma única notificação, que é o número máximo de mensagens por notificação multiplicado pelo número máximo de eventos permitido por mensagem. Esses valores são especificados pelo `maxEventsPerMessage` e `maxMessagesPerNotification` a sub-seção provedor apropriado de atributos a `healthMonitoring` seção em um arquivo de configuração.  
+  
+ Uma notificação ocorre quando o sistema de armazenamento de eventos envia mensagens de eventos acumulados. Isso pode ocorrer porque o buffer acumulados o número máximo permitido de eventos, porque o intervalo de tempo entre o envio de eventos expirou ou porque o sistema de monitoramento de integridade solicitou uma liberação de buffer. O buffer de evento completa é enviado para os destinatários de mensagens ao menor número possível, com base no `maxEventsPerMessage` valor. Configurações do buffer são especificadas no `bufferModes` subseção do `healthMonitoring` seção em um arquivo de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventsInBuffer">
+      <MemberSignature Language="C#" Value="public int EventsInBuffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventsInBuffer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.EventsInBuffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de eventos restantes no buffer após a notificação atual.</summary>
+        <value>O número de eventos restantes no buffer após a notificação atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventsInNotification">
+      <MemberSignature Language="C#" Value="public int EventsInNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventsInNotification" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.EventsInNotification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de eventos que são processados para a notificação atual.</summary>
+        <value>O número de eventos que são processados para a notificação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa contagem só inclui eventos de notificação atual e não inclui eventos descartados pelo buffer ou excluídas devido ao limite de mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventsRemaining">
+      <MemberSignature Language="C#" Value="public int EventsRemaining { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EventsRemaining" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.EventsRemaining" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de eventos restantes no buffer após a notificação atual.</summary>
+        <value>O número de eventos restantes no buffer após a notificação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa contagem não inclui eventos descartados pelo buffer ou excluídas devido ao limite de mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastNotificationUtc">
+      <MemberSignature Language="C#" Value="public DateTime LastNotificationUtc { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastNotificationUtc" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.LastNotificationUtc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a hora da notificação anterior.</summary>
+        <value>Um <see cref="T:System.DateTime" /> objeto que especifica o tempo da notificação anterior.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public System.Net.Mail.MailMessage Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Mail.MailMessage Message" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.MailMessage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem de email será enviada como a mensagem atual.</summary>
+        <value>Um <see cref="T:System.Web.Mail.MailMessage" /> que especifica a mensagem de email para enviar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Mail.MailMessage> objeto fornecido por esta propriedade é concluído, exceto o corpo da mensagem, que é a parte que cria o modelo. O modelo pode modificar os valores da <xref:System.Web.Mail.MailMessage> do objeto, se apropriado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageSequence">
+      <MemberSignature Language="C#" Value="public int MessageSequence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MessageSequence" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.MessageSequence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição dessa mensagem na sequência para a notificação atual.</summary>
+        <value>A posição dessa mensagem na sequência para a notificação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Os números começam em 1 para a primeira mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessagesInNotification">
+      <MemberSignature Language="C#" Value="public int MessagesInNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MessagesInNotification" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.MessagesInNotification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de mensagens de notificação atual.</summary>
+        <value>O número total de mensagens de notificação atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotificationSequence">
+      <MemberSignature Language="C#" Value="public int NotificationSequence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NotificationSequence" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.NotificationSequence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição dessa notificação dentro do número total de notificações feitas à data.</summary>
+        <value>A posição dessa notificação dentro do número total de notificações feitas à data.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Os números começam em 1 para a primeira notificação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotificationType">
+      <MemberSignature Language="C#" Value="public System.Web.Management.EventNotificationType NotificationType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Management.EventNotificationType NotificationType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.MailEventNotificationInfo.NotificationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.EventNotificationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de notificação atual.</summary>
+        <value>O <see cref="T:System.Web.Management.EventNotificationType" /> para a notificação atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,678 @@
+<Type Name="StatusBarPanel" FullName="System.Windows.Forms.StatusBarPanel">
+  <TypeSignature Language="C#" Value="public class StatusBarPanel : System.ComponentModel.Component, System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StatusBarPanel extends System.ComponentModel.Component implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.StatusBarPanel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um painel em um controle <see cref="T:System.Windows.Forms.StatusBar" />. Embora o controle <see cref="T:System.Windows.Forms.StatusStrip" /> substitua e adicione funcionalidade ao controle <see cref="T:System.Windows.Forms.StatusBar" /> de versões anteriores, <see cref="T:System.Windows.Forms.StatusBar" /> é mantido para compatibilidade com versões anteriores e uso futuro, se desejado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.StatusBarPanel> representa um painel individual no <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> de um <xref:System.Windows.Forms.StatusBar> controle. Um <xref:System.Windows.Forms.StatusBarPanel> pode conter texto e/ou em um ícone que pode ser usado para refletir o status de um aplicativo. Use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>, acessível por meio de <xref:System.Windows.Forms.StatusBar.Panels%2A?displayProperty=nameWithType> propriedade de um <xref:System.Windows.Forms.StatusBar> controle, recuperar, adicionar ou remover um indivíduo <xref:System.Windows.Forms.StatusBarPanel>.  
+  
+ O <xref:System.Windows.Forms.StatusBarPanel> fornece propriedades que permitem que você modificar o comportamento de exibição de um painel em um <xref:System.Windows.Forms.StatusBar> controle. Você pode usar o <xref:System.Windows.Forms.StatusBarPanel.Icon%2A> propriedade para exibir um ícone em um painel. Essa propriedade pode ser usada para fornecer uma representação gráfica de estado em um aplicativo. O <xref:System.Windows.Forms.StatusBarPanel.Alignment%2A> propriedade permite que você especifique como o texto e/ou um ícone é alinhado dentro do painel. Para garantir que o painel é dimensionado corretamente para acomodar o texto do painel, você pode usar o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A> propriedade automaticamente redimensionar o painel de acordo com o texto do painel ou para preencher o restante de espaço dentro de <xref:System.Windows.Forms.StatusBar> controle. O <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A> propriedade permite que você especifique uma largura mínima do painel garantir que ele não obtém menor do que os dados que ele é destinado a exibir.  
+  
+ O <xref:System.Windows.Forms.StatusBar> controle normalmente é usado para exibir informações de Ajuda ou informações de estado sobre o seu aplicativo. Geralmente, é importante exibir informações adicionais sobre dados que são apresentados em um painel. Você pode usar o <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> propriedade para exibir informações sempre que o ponteiro do mouse está localizada em um painel.  
+  
+ Embora o <xref:System.Windows.Forms.StatusBar> controle normalmente é usado para exibir informações textuais, você também pode fornecer seu próprio tipo de exibição para um <xref:System.Windows.Forms.StatusBarPanel>. O <xref:System.Windows.Forms.StatusBarPanel.Style%2A> propriedade permite que você especifique como o <xref:System.Windows.Forms.StatusBarPanel> será desenhada. Por padrão, o <xref:System.Windows.Forms.StatusBarPanel.Style%2A> propriedade é usada para exibir o valor da <xref:System.Windows.Forms.StatusBarPanel.Text%2A> propriedade (e um ícone, se especificado no <xref:System.Windows.Forms.StatusBarPanel.Icon%2A> propriedade). Se a propriedade é definida como <xref:System.Windows.Forms.StatusBarPanelStyle.OwnerDraw>, você pode desenhar suas próprias informações para o painel. Você pode usar esse recurso para desenhar uma barra de progresso ou um ícone animado no painel.  
+  
+ Quando você cria uma instância do <xref:System.Windows.Forms.StatusBarPanel> classe, as propriedades de leitura/gravação são definidas com valores iniciais. Para obter uma lista desses valores, consulte o <xref:System.Windows.Forms.StatusBarPanel.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.StatusBar> control em um formulário e adiciona dois <xref:System.Windows.Forms.StatusBarPanel> objetos. A primeira <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel1`, exibe o texto de status para um aplicativo. A segunda <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel2`, exibe a data atual e usa o <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> propriedade o <xref:System.Windows.Forms.StatusBarPanel> classe para exibir a hora atual. O exemplo usa o <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriedade para garantir que os painéis são exibidos em vez de um painel padrão e utiliza o <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade para acessar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> para adicionar os painéis para o <xref:System.Windows.Forms.StatusBar>. O exemplo também usa o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>, <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Text%2A> propriedades para inicializar o <xref:System.Windows.Forms.StatusBarPanel> objetos. Este exemplo pressupõe que o método definido no exemplo é definido e chamado a partir do construtor de uma <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CS/form1.cs#1)]
+ [!code-vb[StatusBar and StatusBarPanel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StatusBarPanel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBarPanel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.StatusBarPanel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria uma instância de <xref:System.Windows.Forms.StatusBarPanel>, as seguintes propriedades de leitura/gravação são definidas com valores iniciais.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Windows.Forms.StatusBarPanel.Alignment%2A>|<xref:System.Windows.Forms.HorizontalAlignment.Left>|  
+|<xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>|<xref:System.Windows.Forms.StatusBarPanelAutoSize.None>|  
+|<xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>|<xref:System.Windows.Forms.StatusBarPanelBorderStyle.Sunken>|  
+|<xref:System.Windows.Forms.StatusBarPanel.Icon%2A>|`null`|  
+|<xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>|10|  
+|<xref:System.Windows.Forms.StatusBarPanel.Style%2A>|<xref:System.Windows.Forms.StatusBarPanelStyle.Text>|  
+|<xref:System.Windows.Forms.StatusBarPanel.Text%2A>|Uma cadeia de caracteres de comprimento zero.|  
+|<xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>|Uma cadeia de caracteres de comprimento zero.|  
+|<xref:System.Windows.Forms.StatusBarPanel.Width%2A>|100|  
+  
+ Você pode alterar o valor de qualquer uma dessas propriedades por meio de uma chamada separada para a propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.StatusBar> control em um formulário e adiciona dois <xref:System.Windows.Forms.StatusBarPanel> objetos. A primeira <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel1`, exibe o texto de status para um aplicativo. A segunda <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel2`, exibe a data atual e usa o <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> propriedade o <xref:System.Windows.Forms.StatusBarPanel> classe para exibir a hora atual. O exemplo usa o <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriedade para garantir que os painéis são exibidos em vez de um painel padrão e utiliza o <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade para acessar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> para adicionar os painéis para o <xref:System.Windows.Forms.StatusBar>. O exemplo também usa o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>, <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Text%2A> propriedades para inicializar o <xref:System.Windows.Forms.StatusBarPanel> objetos. Este exemplo pressupõe que o método definido no exemplo é definido e chamado a partir do construtor de uma <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CS/form1.cs#1)]
+ [!code-vb[StatusBar and StatusBarPanel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alignment">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HorizontalAlignment Alignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.HorizontalAlignment Alignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.Alignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento do texto e dos ícones no painel de barra de status.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.HorizontalAlignment" />. O padrão é <see cref="F:System.Windows.Forms.HorizontalAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para alinhar horizontalmente o texto e/ou ícone atribuído para o <xref:System.Windows.Forms.StatusBarPanel.Icon%2A> propriedade dentro das bordas do painel. Ícones e texto podem ser alinhados à esquerda, direita ou no centro da <xref:System.Windows.Forms.StatusBarPanel>. Não é possível posicionar independentemente um ícone dentro de <xref:System.Windows.Forms.StatusBarPanel>. Por exemplo, você não pode posicionar um ícone ao lado esquerdo do <xref:System.Windows.Forms.StatusBarPanel> ao alinhamento de texto no lado direito. O ícone é sempre posicionado à esquerda do texto, independentemente de como o texto é alinhado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.StatusBar.SizingGrip%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.StatusBarPanel.Alignment%2A>, <xref:System.Windows.Forms.StatusBarPanel.Width%2A>, <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, e <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A> propriedades e como tratar o <xref:System.Windows.Forms.StatusBar.PanelClick?displayProperty=nameWithType> evento.  
+  
+ Para executar o exemplo, cole o código a seguir em um formulário. Chamar o `InitializeStatusBarPanels` método no construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído à propriedade não é um membro do <see cref="T:System.Windows.Forms.HorizontalAlignment" /> enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.StatusBarPanelAutoSize AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.StatusBarPanelAutoSize AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanelAutoSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o painel da barra de status é automaticamente redimensionado.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.StatusBarPanelAutoSize" />. O padrão é <see cref="F:System.Windows.Forms.StatusBarPanelAutoSize.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.StatusBarPanel>objetos definidos com <xref:System.Windows.Forms.StatusBarPanelAutoSize.Contents> têm precedência sobre esses painéis definidos como o <xref:System.Windows.Forms.StatusBarPanelAutoSize.Spring> valor. Por exemplo, um <xref:System.Windows.Forms.StatusBarPanel> com seus <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A> propriedade definida como <xref:System.Windows.Forms.StatusBarPanelAutoSize.Spring> é reduzido se um <xref:System.Windows.Forms.StatusBarPanel> com o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A> propriedade definida como <xref:System.Windows.Forms.StatusBarPanelAutoSize.Contents> requer que o espaço.  
+  
+ Você pode usar <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A> para garantir que o conteúdo de um <xref:System.Windows.Forms.StatusBarPanel> são exibidos corretamente em um <xref:System.Windows.Forms.StatusBar> que contém mais de um painel de controle. Por exemplo, talvez seja um painel que contém o texto para ajustar automaticamente a quantidade de texto que está exibindo (<xref:System.Windows.Forms.StatusBarPanelAutoSize.Contents>), enquanto outro painel o <xref:System.Windows.Forms.StatusBar> que exibe uma barra de progresso de desenho proprietário precisa ter um tamanho fixo (<xref:System.Windows.Forms.StatusBarPanelAutoSize.None>).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.StatusBar> control em um formulário e adiciona dois <xref:System.Windows.Forms.StatusBarPanel> objetos. A primeira <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel1`, exibe o texto de status para um aplicativo. A segunda <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel2`, exibe a data atual e usa o <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> propriedade o <xref:System.Windows.Forms.StatusBarPanel> classe para exibir a hora atual. O exemplo usa o <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriedade para garantir que os painéis são exibidos em vez de um painel padrão e utiliza o <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade para acessar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> para adicionar os painéis para o <xref:System.Windows.Forms.StatusBar>. O exemplo também usa o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>, <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Text%2A> propriedades para inicializar o <xref:System.Windows.Forms.StatusBarPanel> objetos. Este exemplo pressupõe que o método definido no exemplo é definido e chamado a partir do construtor de uma <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CS/form1.cs#1)]
+ [!code-vb[StatusBar and StatusBarPanel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído à propriedade não é um membro do <see cref="T:System.Windows.Forms.StatusBarPanelAutoSize" /> enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBarPanel.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Começa a inicialização de um <see cref="T:System.Windows.Forms.StatusBarPanel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para iniciar a inicialização de um componente que é usado em um formulário ou por outro componente. O <xref:System.Windows.Forms.StatusBarPanel.EndInit%2A> método termina a inicialização. Usando o <xref:System.Windows.Forms.StatusBarPanel.BeginInit%2A> e <xref:System.Windows.Forms.StatusBarPanel.EndInit%2A> métodos impede que o controle que está sendo usada antes de ser totalmente inicializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.StatusBarPanelBorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.StatusBarPanelBorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-504)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanelBorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da borda do painel de barra de status.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.StatusBarPanelBorderStyle" />. O padrão é <see cref="F:System.Windows.Forms.StatusBarPanelBorderStyle.Sunken" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para diferenciar um painel de outros painéis em uma <xref:System.Windows.Forms.StatusBar> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.StatusBar> control em um formulário e adiciona dois <xref:System.Windows.Forms.StatusBarPanel> objetos. A primeira <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel1`, exibe o texto de status para um aplicativo. A segunda <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel2`, exibe a data atual e usa o <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> propriedade o <xref:System.Windows.Forms.StatusBarPanel> classe para exibir a hora atual. O exemplo usa o <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriedade para garantir que os painéis são exibidos em vez de um painel padrão e utiliza o <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade para acessar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> para adicionar os painéis para o <xref:System.Windows.Forms.StatusBar>. O exemplo também usa o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>, <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Text%2A> propriedades para inicializar o <xref:System.Windows.Forms.StatusBarPanel> objetos. Este exemplo pressupõe que o método definido no exemplo é definido e chamado a partir do construtor de uma <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CS/form1.cs#1)]
+ [!code-vb[StatusBar and StatusBarPanel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído à propriedade não é um membro do <see cref="T:System.Windows.Forms.StatusBarPanelBorderStyle" /> enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBarPanel.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.StatusBarPanel" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Windows.Forms.StatusBarPanel> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBarPanel.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Termina a inicialização de um <see cref="T:System.Windows.Forms.StatusBarPanel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para finalizar a inicialização de um componente que é usado por outro componente. O <xref:System.Windows.Forms.StatusBarPanel.BeginInit%2A> método inicia a inicialização. Usando o <xref:System.Windows.Forms.StatusBarPanel.BeginInit%2A> e <xref:System.Windows.Forms.StatusBarPanel.EndInit%2A> métodos impede que o controle que está sendo usada antes de ser totalmente inicializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Icon">
+      <MemberSignature Language="C#" Value="public System.Drawing.Icon Icon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Icon Icon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.Icon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ícone a ser exibido no painel de barra de status.</summary>
+        <value>Um <see cref="T:System.Drawing.Icon" /> que representa o ícone a ser exibido no painel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para exibir um ícone que representa o estado do seu aplicativo ou um processo dentro de seu aplicativo. Por exemplo, você pode exibir um ícone em uma <xref:System.Windows.Forms.StatusBarPanel> para indicar se um arquivo de operação de gravação está em andamento ou concluída.  
+  
+> [!NOTE]
+>  Não é possível posicionar independentemente um ícone dentro de <xref:System.Windows.Forms.StatusBarPanel>. Por exemplo, você não pode posicionar um ícone ao lado esquerdo do <xref:System.Windows.Forms.StatusBarPanel> ao alinhamento de texto no lado direito usando o <xref:System.Windows.Forms.StatusBarPanel.Alignment%2A> propriedade. O ícone é sempre posicionado à esquerda do texto do painel, independentemente de como o texto é alinhado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWidth">
+      <MemberSignature Language="C#" Value="public int MinWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.MinWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o mínimo permitido largura do painel de barra de status dentro do <see cref="T:System.Windows.Forms.StatusBar" /> controle.</summary>
+        <value>A largura mínima, em pixels, do <see cref="T:System.Windows.Forms.StatusBarPanel" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A> propriedade é usada quando o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A> está definida como <xref:System.Windows.Forms.StatusBarPanelAutoSize.Contents> ou <xref:System.Windows.Forms.StatusBarPanelAutoSize.Spring> para impedir que o <xref:System.Windows.Forms.StatusBarPanel> seja redimensionada automaticamente para uma largura que é muito pequena. Quando o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A> está definida como <xref:System.Windows.Forms.StatusBarPanelAutoSize.None>, o <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A> propriedade é definida automaticamente como o mesmo valor que o <xref:System.Windows.Forms.StatusBarPanel.Width%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um valor menor que 0 é atribuído à propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome para aplicar ao <see cref="T:System.Windows.Forms.StatusBarPanel" />.</summary>
+        <value>O nome do <see cref="T:System.Windows.Forms.StatusBarPanel" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.StatusBarPanel.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.StatusBarPanel> no <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.StatusBar Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.StatusBar Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBar</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.StatusBar" /> controle que hospeda o painel da barra de status.</summary>
+        <value>O <see cref="T:System.Windows.Forms.StatusBar" /> que contém o painel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para determinar a <xref:System.Windows.Forms.StatusBar> controlar que um <xref:System.Windows.Forms.StatusBarPanel> contidos. <xref:System.Windows.Forms.StatusBarPanel>objetos são adicionados a um <xref:System.Windows.Forms.StatusBar> controle chamando o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> classe. O <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> de um <xref:System.Windows.Forms.StatusBar> controle é acessível por meio de <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.StatusBarPanelStyle Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.StatusBarPanelStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanelStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo do painel de barra de status.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.StatusBarPanelStyle" />. O padrão é <see cref="F:System.Windows.Forms.StatusBarPanelStyle.Text" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para indicar se um <xref:System.Windows.Forms.StatusBarPanel> exibe texto ou se o painel é gerenciado como um desenho proprietário <xref:System.Windows.Forms.StatusBarPanel>. Para determinar quando um <xref:System.Windows.Forms.StatusBarPanel> precisa ser desenhado, crie um manipulador de eventos para o <xref:System.Windows.Forms.StatusBar.DrawItem> eventos do <xref:System.Windows.Forms.StatusBar> controle. O <xref:System.Windows.Forms.StatusBarDrawItemEventArgs> passada como um parâmetro para um manipulador de eventos do <xref:System.Windows.Forms.StatusBar.DrawItem> evento permite que você determine qual painel deve ser desenhado. O <xref:System.Windows.Forms.StatusBarDrawItemEventArgs> também fornece um <xref:System.Drawing.Graphics> você pode usar para executar tarefas de desenho do objeto de <xref:System.Windows.Forms.StatusBarPanel>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.StatusBarPanel.Style%2A> propriedade <xref:System.Windows.Forms.StatusBarDrawItemEventHandler> delegado, <xref:System.Windows.Forms.StatusBarDrawItemEventArgs> classe <xref:System.Windows.Forms.StatusBarPanelStyle> enumeração e <xref:System.Windows.Forms.StatusBarDrawItemEventArgs.Panel%2A?displayProperty=nameWithType> propriedade. Para executar o exemplo, cole o código a seguir em um formulário. Chamar o `InitializeStatusBarPanels` método no construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método de evento.  
+  
+ [!code-cpp[System.Windows.Forms.StatusBarDrawItemEventHandler#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarDrawItemEventHandler/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.StatusBarDrawItemEventHandler#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarDrawItemEventHandler/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.StatusBarDrawItemEventHandler#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusBarDrawItemEventHandler/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído à propriedade não é um membro do <see cref="T:System.Windows.Forms.StatusBarPanelStyle" /> enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que contém dados sobre o <see cref="T:System.Windows.Forms.StatusBarPanel" />.</summary>
+        <value>O <see cref="T:System.Object" /> que contém dados sobre o <see cref="T:System.Windows.Forms.StatusBarPanel" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto do painel da barra de status.</summary>
+        <value>O texto exibido no painel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade representa o texto que é exibido quando o <xref:System.Windows.Forms.StatusBarPanel.Style%2A> está definida como <xref:System.Windows.Forms.StatusBarPanelStyle.Text>. Você pode usar essa propriedade para exibir informações sobre o seu aplicativo em um <xref:System.Windows.Forms.StatusBar> controle. Por exemplo, você pode usar o <xref:System.Windows.Forms.StatusBarPanel.Text%2A> propriedade para exibir informações de ajuda quando o usuário move o mouse sobre um menu ou para exibir o nome e o local de um arquivo que está aberto em um aplicativo. Para alinhar o texto dentro de um <xref:System.Windows.Forms.StatusBarPanel>, use o <xref:System.Windows.Forms.StatusBarPanel.Alignment%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.StatusBar> control em um formulário e adiciona dois <xref:System.Windows.Forms.StatusBarPanel> objetos. A primeira <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel1`, exibe o texto de status para um aplicativo. A segunda <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel2`, exibe a data atual e usa o <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> propriedade o <xref:System.Windows.Forms.StatusBarPanel> classe para exibir a hora atual. O exemplo usa o <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriedade para garantir que os painéis são exibidos em vez de um painel padrão e utiliza o <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade para acessar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> para adicionar os painéis para o <xref:System.Windows.Forms.StatusBar>. O exemplo também usa o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>, <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Text%2A> propriedades para inicializar o <xref:System.Windows.Forms.StatusBarPanel> objetos. Este exemplo pressupõe que o método definido no exemplo é definido e chamado a partir do construtor de uma <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CS/form1.cs#1)]
+ [!code-vb[StatusBar and StatusBarPanel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipText">
+      <MemberSignature Language="C#" Value="public string ToolTipText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTipText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.ToolTipText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto de dica de ferramenta associado ao painel da barra de status.</summary>
+        <value>O texto de dica de ferramenta do painel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para exibir informações adicionais em uma dica de ferramenta quando o ponteiro do mouse está localizada em um <xref:System.Windows.Forms.StatusBarPanel>. Por exemplo, você pode exibir uma dica de ferramenta que fornece a velocidade da transferência de dados para um <xref:System.Windows.Forms.StatusBarPanel> que exibe o status de uma transferência de arquivo.  
+  
+ Para exibir dicas de ferramenta para outros controles em seu aplicativo, use o <xref:System.Windows.Forms.ToolTip> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.StatusBar> control em um formulário e adiciona dois <xref:System.Windows.Forms.StatusBarPanel> objetos. A primeira <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel1`, exibe o texto de status para um aplicativo. A segunda <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel2`, exibe a data atual e usa o <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> propriedade o <xref:System.Windows.Forms.StatusBarPanel> classe para exibir a hora atual. O exemplo usa o <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriedade para garantir que os painéis são exibidos em vez de um painel padrão e utiliza o <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade para acessar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> para adicionar os painéis para o <xref:System.Windows.Forms.StatusBar>. O exemplo também usa o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>, <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Text%2A> propriedades para inicializar o <xref:System.Windows.Forms.StatusBarPanel> objetos. Este exemplo pressupõe que o método definido no exemplo é definido e chamado a partir do construtor de uma <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CS/form1.cs#1)]
+ [!code-vb[StatusBar and StatusBarPanel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBarPanel.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma cadeia de caracteres que contém informações sobre o painel.</summary>
+        <returns>Retorna uma cadeia de caracteres que contém o nome da classe para o controle e o texto que ele contém.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBarPanel.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura do painel de barra de status dentro do <see cref="T:System.Windows.Forms.StatusBar" /> controle.</summary>
+        <value>A largura, em pixels, do <see cref="T:System.Windows.Forms.StatusBarPanel" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.StatusBarPanel.Width%2A> propriedade sempre reflete a largura real de um <xref:System.Windows.Forms.StatusBarPanel> e não pode ser menor do que o <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A> propriedade. Para redimensionar automaticamente a largura do <xref:System.Windows.Forms.StatusBarPanel> para o conteúdo do <xref:System.Windows.Forms.StatusBarPanel>, você pode usar o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.StatusBar.SizingGrip%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.StatusBarPanel.Alignment%2A>, <xref:System.Windows.Forms.StatusBarPanel.Width%2A>, <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, e <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A> propriedades e como tratar o <xref:System.Windows.Forms.StatusBar.PanelClick?displayProperty=nameWithType> evento.  
+  
+ Para executar o exemplo, cole o código a seguir em um formulário. Chamar o `InitializeStatusBarPanels` método no construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusBarPanelExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusBarPanelExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A largura especificada é menor que o valor da <see cref="P:System.Windows.Forms.StatusBarPanel.MinWidth" /> propriedade.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

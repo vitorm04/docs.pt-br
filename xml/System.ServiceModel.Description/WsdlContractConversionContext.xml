@@ -1,0 +1,252 @@
+<Type Name="WsdlContractConversionContext" FullName="System.ServiceModel.Description.WsdlContractConversionContext">
+  <TypeSignature Language="C#" Value="public class WsdlContractConversionContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WsdlContractConversionContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.WsdlContractConversionContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Passado para exportadores e importadores WSDL personalizados para habilitar a personalização dos processos de importação e exportação de metadados para um contrato.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.WsdlContractConversionContext> objeto para examinar e modificar os itens que devem ser convertidos para ou de WSDL.  
+  
+ Ao exportar metadados de um <xref:System.ServiceModel.Description.WsdlContractConversionContext> objeto é passado para o <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> e <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> métodos. Use os vários métodos e propriedades para obter objetos de metadados que você pode usar para examinar e modificar para alterar o WSDL publicado.  
+  
+ Ao importar metadados de um <xref:System.ServiceModel.Description.WsdlContractConversionContext> objeto é passado para o <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A> e <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%2A> métodos. Use os vários métodos e propriedades para obter objetos de metadados que você pode usar para examinar e modificar os metadados importados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.Description.WsdlContractConversionContext> para adicionar anotações de WSDL personalizadas para o metadados exportado usando o <xref:System.ServiceModel.Description.WsdlContractConversionContext.WsdlPortType%2A> e <xref:System.ServiceModel.Description.WsdlContractConversionContext.Contract%2A> propriedades.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationattribute.cs#6)]  
+[!code-csharp[C_CustomWSDLExtensions#7](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationattribute.cs#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contract">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ContractDescription Contract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.ContractDescription Contract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WsdlContractConversionContext.Contract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ContractDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.Description.ContractDescription" /> sendo exportados ou importados.</summary>
+        <value>O <see cref="T:System.ServiceModel.Description.ContractDescription" /> sendo exportados ou importados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.WsdlContractConversionContext.Contract%2A> para obter a descrição do contrato na exportação ou importação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.Description.WsdlContractConversionContext> para adicionar anotações de WSDL personalizadas para o metadados exportado usando o <xref:System.ServiceModel.Description.WsdlContractConversionContext.WsdlPortType%2A> e <xref:System.ServiceModel.Description.WsdlContractConversionContext.Contract%2A> propriedades.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationattribute.cs#6)]  
+[!code-csharp[C_CustomWSDLExtensions#7](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationattribute.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFaultDescription">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.FaultDescription GetFaultDescription (System.Web.Services.Description.OperationFault operationFault);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.FaultDescription GetFaultDescription(class System.Web.Services.Description.OperationFault operationFault) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlContractConversionContext.GetFaultDescription(System.Web.Services.Description.OperationFault)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.FaultDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationFault" Type="System.Web.Services.Description.OperationFault" />
+      </Parameters>
+      <Docs>
+        <param name="operationFault">O <see cref="T:System.Web.Services.Description.OperationFault" /> para a operação <see cref="T:System.ServiceModel.Description.FaultDescription" />.</param>
+        <summary>Retorna a descrição de falha para a falha específica.</summary>
+        <returns>A descrição da falha para a falha específica.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">O valor não foi encontrado.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMessageDescription">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.MessageDescription GetMessageDescription (System.Web.Services.Description.OperationMessage operationMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.MessageDescription GetMessageDescription(class System.Web.Services.Description.OperationMessage operationMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlContractConversionContext.GetMessageDescription(System.Web.Services.Description.OperationMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MessageDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationMessage" Type="System.Web.Services.Description.OperationMessage" />
+      </Parameters>
+      <Docs>
+        <param name="operationMessage">O <see cref="T:System.Web.Services.Description.OperationMessage" /> para a operação <see cref="T:System.ServiceModel.Description.MessageDescription" />.</param>
+        <summary>Retorna a descrição da mensagem para a mensagem especificada.</summary>
+        <returns>A descrição da mensagem para a mensagem especificada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">O valor não foi encontrado.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperation">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Operation GetOperation (System.ServiceModel.Description.OperationDescription operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.Operation GetOperation(class System.ServiceModel.Description.OperationDescription operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlContractConversionContext.GetOperation(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Operation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operation" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="operation">O <see cref="T:System.ServiceModel.Description.OperationDescription" /> para a operação <see cref="T:System.Web.Services.Description.Operation" />.</param>
+        <summary>Retorna a operação para a descrição da operação especificada.</summary>
+        <returns>A operação para a descrição da operação especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.Description.WsdlContractConversionContext> para adicionar anotações de WSDL personalizadas para o metadados exportado usando o <xref:System.ServiceModel.Description.WsdlContractConversionContext.WsdlPortType%2A> e <xref:System.ServiceModel.Description.WsdlContractConversionContext.Contract%2A> propriedades. Ao exportar as operações, o método percorre as descrições de operação e localiza cada associado <xref:System.Web.Services.Description.Operation?displayProperty=nameWithType> chamando o <xref:System.ServiceModel.Description.WsdlContractConversionContext.GetOperation%2A> método.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#7](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationattribute.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">O valor não foi encontrado.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperationDescription">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.OperationDescription GetOperationDescription (System.Web.Services.Description.Operation operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.OperationDescription GetOperationDescription(class System.Web.Services.Description.Operation operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlContractConversionContext.GetOperationDescription(System.Web.Services.Description.Operation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.OperationDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operation" Type="System.Web.Services.Description.Operation" />
+      </Parameters>
+      <Docs>
+        <param name="operation">O <see cref="T:System.Web.Services.Description.Operation" /> para a operação <see cref="T:System.ServiceModel.Description.OperationDescription" />.</param>
+        <summary>Retorna a descrição da operação associada à operação.</summary>
+        <returns>A descrição da operação associada à operação.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">O valor não foi encontrado.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperationFault">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.OperationFault GetOperationFault (System.ServiceModel.Description.FaultDescription fault);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.OperationFault GetOperationFault(class System.ServiceModel.Description.FaultDescription fault) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlContractConversionContext.GetOperationFault(System.ServiceModel.Description.FaultDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationFault</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fault" Type="System.ServiceModel.Description.FaultDescription" />
+      </Parameters>
+      <Docs>
+        <param name="fault">O <see cref="T:System.ServiceModel.Description.FaultDescription" /> para a operação <see cref="T:System.Web.Services.Description.OperationFault" />.</param>
+        <summary>Retorna o <see cref="T:System.Web.Services.Description.OperationFault" /> para a operação <see cref="T:System.ServiceModel.Description.FaultDescription" />.</summary>
+        <returns>O <see cref="T:System.Web.Services.Description.OperationFault" /> para a operação <see cref="T:System.ServiceModel.Description.FaultDescription" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">O valor não foi encontrado.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOperationMessage">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.OperationMessage GetOperationMessage (System.ServiceModel.Description.MessageDescription message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.OperationMessage GetOperationMessage(class System.ServiceModel.Description.MessageDescription message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.WsdlContractConversionContext.GetOperationMessage(System.ServiceModel.Description.MessageDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.OperationMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Description.MessageDescription" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Description.MessageDescription" /> para a operação <see cref="T:System.Web.Services.Description.OperationMessage" />.</param>
+        <summary>Obtém um <see cref="T:System.Web.Services.Description.OperationMessage" /> objeto especificado <paramref name="message" /> que representa um tipo de mensagem passado pela ação de um serviço Web XML.</summary>
+        <returns>Um <see cref="T:System.Web.Services.Description.OperationMessage" /> objeto que representa um tipo de mensagem passada pela ação de um serviço Web XML.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">O valor não foi encontrado.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WsdlPortType">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.PortType WsdlPortType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.PortType WsdlPortType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.WsdlContractConversionContext.WsdlPortType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.PortType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Services.Description.PortType" /> que representa o contrato.</summary>
+        <value>O <see cref="T:System.Web.Services.Description.PortType" /> que representa o contrato.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.Description.WsdlContractConversionContext> para adicionar anotações de WSDL personalizadas para o metadados exportado usando o <xref:System.ServiceModel.Description.WsdlContractConversionContext.WsdlPortType%2A> e <xref:System.ServiceModel.Description.WsdlContractConversionContext.Contract%2A> propriedades.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationattribute.cs#6)]  
+[!code-csharp[C_CustomWSDLExtensions#7](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationattribute.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

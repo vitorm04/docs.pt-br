@@ -1,0 +1,15 @@
+<Namespace Name="System.ServiceModel.Security">
+  <Docs>
+    <summary>O <see cref="N:System.ServiceModel.Security" /> namespace lida com tópicos relacionados à segurança gerais, por exemplo, <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para tópicos de lidar com tokens de segurança e certificados, por exemplo <xref:System.ServiceModel.Security.Tokens.WrappedKeySecurityToken> consulte <xref:System.ServiceModel.Security.Tokens>.  
+  
+ Tópicos de segurança que se sobrepõem com o modelo de serviço, por exemplo <xref:System.ServiceModel.TcpTransportSecurity>, consulte <xref:System.ServiceModel>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

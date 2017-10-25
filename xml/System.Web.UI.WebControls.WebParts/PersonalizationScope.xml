@@ -1,0 +1,86 @@
+<Type Name="PersonalizationScope" FullName="System.Web.UI.WebControls.WebParts.PersonalizationScope">
+  <TypeSignature Language="C#" Value="public enum PersonalizationScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PersonalizationScope extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PersonalizationScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica o escopo de personalização para um objeto <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> ou o escopo de personalização que se aplica a uma propriedade em um controle de Web Parts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Escopo de personalização é um conceito fundamental na personalização de Web Parts e é integrado com outras configurações, incluindo o escopo que a página, por meio de <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controlar, é executar; o escopo associado com cada propriedade em um controle; e a maneira na qual o controle foi adicionado à página. Para obter mais informações sobre o escopo de personalização, consulte [Web Parts Personalization Overview](http://msdn.microsoft.com/library/7dc34f74-52aa-4082-b98d-2bcf9e07e320).  
+  
+ Escopo de personalização se refere a como os dados de personalização são aplicáveis a diferentes conjuntos de usuários. Alguns dados de personalização são aplicáveis somente para um usuário específico e controle em uma página. Outros dados de personalização são aplicáveis a todos os usuários que exibirem um site. Escopo de personalização é usado em várias áreas de personalização para indicar qual conjunto de dados deve ser recuperado e exibido.  
+  
+ Quando uma página está em execução no escopo de personalização compartilhado, isso indica que somente os dados de personalização de um controle específico, aplicável a todos os usuários exibindo o controle devem ser carregados. Dependendo de direitos do usuário atualmente em execução, esses dados amplamente aplicáveis também podem ser modificados e salvo no repositório de dados. Quando uma página está em execução no escopo de personalização do usuário, isso indica que a personalização do controle dados devem ser salvos e carregados baseadas no usuário em execução no momento. Geralmente, isso significa que os dados específicos do usuário podem ser carregados e salvos em um controle, enquanto em larga escala dados aplicável (ou dados compartilhados) só podem ser exibidos no controle.  
+  
+ Um <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle, que gerencia o ciclo de vida de alto nível de personalização, executado em um dos escopos de personalização de dois.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.PersonalizationScope.User> enumeração.  
+  
+ [!code-csharp[WebParts_PersAdmin#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PersAdmin/CS/PersAdmin.ascx#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="Shared" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope Shared = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.Shared" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ao fazer referência ao escopo no controle <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" />, o escopo <see langword="Shared" /> significa que os dados de personalização se aplicam a todos os usuários para todos os controles personalizáveis em uma página e também estão disponíveis para serem salvos na página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao fazer referência ao escopo associado a uma propriedade de controle de Web Parts, `Shared` escopo indica que a propriedade normalmente só permite carregar ou salvar os dados associados com todos os usuários.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="User" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.PersonalizationScope User = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.PersonalizationScope.User" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.PersonalizationScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ao fazer referência ao escopo no <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle, <see langword="User" /> escopo significa que os dados de personalização que são específicas do usuário, bem como os dados de personalização que se aplica a todos os usuários, são carregados para todos os controles personalizáveis em uma página. Somente os dados de personalização específicos do usuário podem ser salvos na página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao fazer referência ao escopo associado a uma propriedade de controle de Web Parts, `User` escopo indica que a propriedade só pode carregar e armazenar dados aplicáveis a todos os usuários durante a execução em uma página no `Shared` escopo. No entanto, quando o controle da propriedade está sendo executado em uma página no `User` escopo, por usuário e dados de todos os usuários da propriedade serão carregados e mesclados. Nesse caso, no entanto, somente os dados de usuário serão salvo quando uma página está em execução `User` escopo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.Design.Data">
+  <Docs>
+    <summary>O <see cref="N:System.ComponentModel.Design.Data" /> namespace contém classes que você pode usar para criar o comportamento de tempo de design personalizado para componentes relacionados aos dados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

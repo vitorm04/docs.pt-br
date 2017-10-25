@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Services.Configuration">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Services.Configuration" /> namespace consiste das classes que configurar como os XML Web services criados usando ASP.NET são executados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

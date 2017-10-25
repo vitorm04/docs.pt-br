@@ -1,0 +1,104 @@
+<Type Name="DataControlExtensions" FullName="System.Web.UI.DataControlExtensions">
+  <TypeSignature Language="C#" Value="public static class DataControlExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DataControlExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataControlExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos de extensão que são usados por dados dinâmicos do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataControlExtensions> classe é usada para habilitar recursos de dados dinâmicos em controles de associação de dados do ASP.NET.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de como habilitar os recursos de dados dinâmicos em um controle associado a dados, consulte [passo a passo: Habilitando dados dinâmicos em controles de associação de dados do ASP.NET](http://msdn.microsoft.com/en-us/c170c9df-54f2-4fee-ad9f-33f2a882928f).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnableDynamicData">
+      <MemberSignature Language="C#" Value="public static void EnableDynamicData (this System.Web.UI.INamingContainer control, Type entityType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableDynamicData(class System.Web.UI.INamingContainer control, class System.Type entityType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataControlExtensions.EnableDynamicData(System.Web.UI.INamingContainer,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.INamingContainer" RefType="this" />
+        <Parameter Name="entityType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle de dados para habilitar o comportamento de dados dinâmicos para.</param>
+        <param name="entityType">O tipo a ser usado para metadados.</param>
+        <summary>Habilita o comportamento de Dados Dinâmicos para o controle de dados especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDynamicData">
+      <MemberSignature Language="C#" Value="public static void EnableDynamicData (this System.Web.UI.INamingContainer control, Type entityType, System.Collections.Generic.IDictionary&lt;string,object&gt; defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableDynamicData(class System.Web.UI.INamingContainer control, class System.Type entityType, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataControlExtensions.EnableDynamicData(System.Web.UI.INamingContainer,System.Type,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.INamingContainer" RefType="this" />
+        <Parameter Name="entityType" Type="System.Type" />
+        <Parameter Name="defaultValues" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle de dados para habilitar o comportamento de dados dinâmicos para.</param>
+        <param name="entityType">O tipo a ser usado para metadados.</param>
+        <param name="defaultValues">Os valores padrão para usar com o <see cref="T:System.Web.UI.INamingContainer" /> objeto.</param>
+        <summary>Habilita o comportamento de Dados Dinâmicos para o controle de dados especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDynamicData">
+      <MemberSignature Language="C#" Value="public static void EnableDynamicData (this System.Web.UI.INamingContainer control, Type entityType, object defaults);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableDynamicData(class System.Web.UI.INamingContainer control, class System.Type entityType, object defaults) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataControlExtensions.EnableDynamicData(System.Web.UI.INamingContainer,System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.INamingContainer" RefType="this" />
+        <Parameter Name="entityType" Type="System.Type" />
+        <Parameter Name="defaults" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle de dados para habilitar o comportamento de dados dinâmicos para.</param>
+        <param name="entityType">O tipo que representa a tabela para exibir.</param>
+        <param name="defaults">Os valores padrão para usar com o <see cref="T:System.Web.UI.INamingContainer" /> objeto.</param>
+        <summary>Habilita o comportamento de Dados Dinâmicos para o controle de dados especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

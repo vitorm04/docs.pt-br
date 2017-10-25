@@ -1,0 +1,83 @@
+<Type Name="ADODC+EOFActionEnum" FullName="Microsoft.VisualBasic.Compatibility.VB6.ADODC+EOFActionEnum">
+  <TypeSignature Language="C#" Value="public enum ADODC.EOFActionEnum" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ADODC/EOFActionEnum extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece constantes para compatibilidade com a propriedade <see langword="EOFAction" /> do Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No Visual Basic 6.0, o `EOFAction` propriedade foi usada para determinar qual ação o `ADODC` usa quando o `EOF` propriedade é true.  
+  
+ Constantes permitem que o código que foi atualizado do Visual Basic 6.0 para continuar a ser executados sem modificações adicionais.  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="adDoAddNew">
+      <MemberSignature Language="C#" Value="adDoAddNew" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ADODC/EOFActionEnum adDoAddNew = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum.adDoAddNew" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ADODC+EOFActionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Passar o último registro dispara o evento <see langword="Validation" /> do <see langword="ADODC" /> no registro atual, seguido por um <see langword="AddNew" /> automático e por um evento <see langword="Reposition" /> no novo registro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="adDoMoveLast">
+      <MemberSignature Language="C#" Value="adDoMoveLast" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ADODC/EOFActionEnum adDoMoveLast = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum.adDoMoveLast" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ADODC+EOFActionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Mantém o último registro como o registro atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="adStayEOF">
+      <MemberSignature Language="C#" Value="adStayEOF" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Compatibility.VB6.ADODC/EOFActionEnum adStayEOF = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Compatibility.VB6.ADODC.EOFActionEnum.adStayEOF" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Compatibility.VB6.ADODC+EOFActionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Passar do final de um <see langword="Recordset" /> dispara o evento <see langword="Validation" /> do <see langword="ADODC" /> no último registro, seguido por um evento <see langword="Reposition" /> no registro inválido (<see langword="EOF" />). Neste ponto, o botão **Mover Próximo** do <see langword="ADODC" /> está desabilitado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

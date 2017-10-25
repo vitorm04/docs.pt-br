@@ -1,0 +1,1551 @@
+<Type Name="ProgressBar" FullName="System.Windows.Forms.ProgressBar">
+  <TypeSignature Language="C#" Value="public class ProgressBar : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProgressBar extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ProgressBar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultBindingProperty("Value")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Value")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um controle de barra de progresso do Windows.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.ProgressBar> controle visualmente indica o progresso de uma operação demorada em um dos três estilos:  
+  
+-   Blocos segmentados que aumentam em etapas da esquerda para a direita.  
+  
+-   Uma barra contínua que preenche da esquerda para a direita.  
+  
+-   Um bloco que rola uma <xref:System.Windows.Forms.ProgressBar> de uma maneira de marca de seleção.  
+  
+ O <xref:System.Windows.Forms.ProgressBar.Style%2A> propriedade determina o estilo de <xref:System.Windows.Forms.ProgressBar> que é exibido. Observe que o <xref:System.Windows.Forms.ProgressBar> controle só pode mais ser orientado horizontal. Para obter um exemplo de como criar uma orientação vertical <xref:System.Windows.Forms.ProgressBar>, consulte o <xref:System.Windows.Forms.ProgressBarRenderer> classe. O <xref:System.Windows.Forms.ProgressBar> controle normalmente é usado quando um aplicativo executa tarefas como copiar arquivos ou impressão de documentos. Os usuários de um aplicativo podem considerar um aplicativo sem resposta se não há nenhuma indicação visual. Usando o <xref:System.Windows.Forms.ProgressBar> em seu aplicativo, você alerta o usuário que o aplicativo está executando uma longa de tarefa e se o aplicativo ainda está respondendo.  
+  
+ O <xref:System.Windows.Forms.ProgressBar.Maximum%2A> e <xref:System.Windows.Forms.ProgressBar.Minimum%2A> propriedades definem o intervalo de valores para representar o progresso de uma tarefa. O <xref:System.Windows.Forms.ProgressBar.Minimum%2A> propriedade normalmente é definida como um valor de 0 e o <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade normalmente é definida como um valor que indica a conclusão de uma tarefa. Por exemplo, para exibir o progresso corretamente ao copiar um grupo de arquivos, o <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade pode ser definida como o número total de arquivos a serem copiados.  
+  
+ O <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade representa o progresso que fez o aplicativo para concluir a operação. O valor exibido pelo <xref:System.Windows.Forms.ProgressBar> aproxima apenas o valor atual do <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade. Com base no tamanho do <xref:System.Windows.Forms.ProgressBar>, o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade determina quando exibir o próximo bloco ou aumente o tamanho da barra.  
+  
+ Há várias maneiras de modificar o valor exibido pelo <xref:System.Windows.Forms.ProgressBar> diferente alterando o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade diretamente. Você pode usar o <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade para especificar um valor específico para incrementar o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade e, em seguida, chame o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método para incrementar o valor. Para variar o valor de incremento, você pode usar o <xref:System.Windows.Forms.ProgressBar.Increment%2A> método e especifique um valor com o qual incrementar o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.Control.ForeColor%2A>e <xref:System.Windows.Forms.Control.BackColor%2A> alterações para o <xref:System.Windows.Forms.ProgressBar> não será atendido quando estilos visuais são habilitados em [!INCLUDE[WinXpFamily](~/includes/winxpfamily-md.md)] e acima.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.Windows.Forms.ProgressBar> controle para exibir o progresso de uma operação de cópia de arquivo. O exemplo usa o <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedades para especificar um intervalo para o <xref:System.Windows.Forms.ProgressBar> que é equivalente ao número de arquivos a serem copiados. Também usa o código de <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade com o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método para incrementar o valor da <xref:System.Windows.Forms.ProgressBar> como um arquivo é copiado. Este exemplo requer que você tenha um <xref:System.Windows.Forms.ProgressBar> controle criado chamado `pBar1` que é criado em um <xref:System.Windows.Forms.Form> e se há um método criado chamado `CopyFile` (que retorna um valor booliano que indica a operação de cópia foi foi concluída com êxito) que executa a operação de cópia de arquivo. O código também requer que uma matriz de cadeias de caracteres que contém os arquivos para copiar é criada e transmitida para o `CopyWithProgress` método definido no exemplo e o método é chamado de outro método ou evento no <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ProgressBarOverview#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ProgressBarOverview/CPP/form1.cpp#1)]
+ [!code-csharp[ProgressBarOverview#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ProgressBarOverview/CS/form1.cs#1)]
+ [!code-vb[ProgressBarOverview#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ProgressBarOverview/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProgressBar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ProgressBar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Windows.Forms.ProgressBar.Minimum%2A> propriedade é definida como 0, o <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade será definida como 100 e o <xref:System.Windows.Forms.ProgressBar.Step%2A> estiver definida como 10.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDrop">
+      <MemberSignature Language="C#" Value="public override bool AllowDrop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowDrop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.AllowDrop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle pode aceitar os dados arrastados pelo usuário.</summary>
+        <value>
+          <see langword="true" />Se são permitidas operações de arrastar e soltar no controle; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem de tela de fundo do controle <see cref="T:System.Windows.Forms.ProgressBar" />.</summary>
+        <value>A imagem de plano de fundo atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.ProgressBar.BackgroundImage%2A> não tem nenhum efeito na aparência do <xref:System.Windows.Forms.ProgressBar>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ProgressBar.BackgroundImage" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.ProgressBar.BackgroundImage%2A> não tem nenhum efeito na aparência do <xref:System.Windows.Forms.ProgressBar>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o layout da imagem de plano de fundo da barra de progresso.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImageLayout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.ProgressBar.BackgroundImageLayout%2A> propriedade não tem nenhum efeito na aparência do <xref:System.Windows.Forms.ProgressBar> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ProgressBar.BackgroundImageLayout" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.ProgressBar.BackgroundImageLayout%2A> propriedade não tem nenhum efeito na aparência do <xref:System.Windows.Forms.ProgressBar> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle quando ele recebe o foco, faz com que a validação seja executada em todos os controles que exigem validação.</summary>
+        <value>
+          <see langword="true" />Se o controle quando ele recebe o foco, faz com que a validação seja executada em todos os controles que exigem validação; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CausesValidationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CausesValidationChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.CausesValidationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ProgressBar.CausesValidation" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHandle">
+      <MemberSignature Language="C#" Value="protected override void CreateHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBar.CreateHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um identificador para o controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui <see cref="P:System.Windows.Forms.Control.CreateParams" />.</summary>
+        <value>Informações necessárias ao cariar um controle.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermissionFlag">para acessar código não gerenciado ao obter o valor da propriedade. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultImeMode">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ImeMode DefaultImeMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode DefaultImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.DefaultImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo do Editor de método de entrada (IME) padrão com suporte pelo controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImeMode" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho padrão do controle.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> que representa o tamanho padrão do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleBuffered">
+      <MemberSignature Language="C#" Value="protected override bool DoubleBuffered { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DoubleBuffered" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.DoubleBuffered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se este o controle deve redesenhar sua superfície usando um buffer secundário.</summary>
+        <value>
+          <see langword="true" />Se um buffer secundário deve ser usado, <see langword="false" /> caso contrário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.ProgressBar.DoubleBuffered%2A> propriedade não tem efeito sobre o <xref:System.Windows.Forms.ProgressBar> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica duas vezes no controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ProgressBar> controle não dispara o <xref:System.Windows.Forms.ProgressBar.DoubleClick> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enter">
+      <MemberSignature Language="C#" Value="public event EventHandler Enter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Enter" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.Enter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o foco insere o <see cref="T:System.Windows.Forms.ProgressBar" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ O <xref:System.Windows.Forms.ProgressBar> controle não pode receber o foco do teclado, para que ele nunca gera o <xref:System.Windows.Forms.ProgressBar.Enter> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte do texto no <see cref="T:System.Windows.Forms.ProgressBar" />.</summary>
+        <value>O <see cref="T:System.Drawing.Font" /> do texto. O padrão é a fonte definida pelo contêiner.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler FontChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FontChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.FontChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ProgressBar.Font" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImeMode ImeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.ImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o editor de método de entrada (IME) para o<see cref="T:System.Windows.Forms.ProgressBar" /></summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImeMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.ImeModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ProgressBar.ImeMode" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Increment">
+      <MemberSignature Language="C#" Value="public void Increment (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Increment(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBar.Increment(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor do incremento da posição atual da barra de progresso.</param>
+        <summary>Avança a posição atual da barra de progresso na quantidade especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ProgressBar.Increment%2A> método permite que você incrementar o valor da barra de progresso em uma quantidade específica. Esse método de incrementar a barra de progresso é semelhante ao uso de <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade com o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método. O <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade especifica a posição atual do <xref:System.Windows.Forms.ProgressBar>. Se, depois de chamar o <xref:System.Windows.Forms.ProgressBar.Increment%2A> método, o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade é maior que o valor da <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade, o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade permanece no valor da <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade. Se, depois de chamar o <xref:System.Windows.Forms.ProgressBar.Increment%2A> método com um valor negativo especificado no `value` parâmetro, o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade é menor que o valor da <xref:System.Windows.Forms.ProgressBar.Minimum%2A> propriedade, o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade permanece no valor da <xref:System.Windows.Forms.ProgressBar.Minimum%2A> propriedade.  
+  
+ Porque um <xref:System.Windows.Forms.ProgressBar> objeto cujo estilo é definido como <xref:System.Windows.Forms.ProgressBarStyle.Marquee> exibe uma barra de rolagem continuamente em vez de seu <xref:System.Windows.Forms.ProgressBar.Value%2A>, chamar <xref:System.Windows.Forms.ProgressBar.Increment%2A> é desnecessário e gerará um <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.ProgressBar.Increment%2A> método e o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade para incrementar o valor de um <xref:System.Windows.Forms.ProgressBar> no <xref:System.Windows.Forms.Timer.Tick> eventos de um <xref:System.Windows.Forms.Timer>. O exemplo também exibe o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade em uma <xref:System.Windows.Forms.StatusBarPanel> para fornecer uma representação textual do <xref:System.Windows.Forms.ProgressBar>. Este exemplo requer que você tenha um <xref:System.Windows.Forms.ProgressBar> controle, chamado `progressBar1`e um <xref:System.Windows.Forms.StatusBar> controle que contém um <xref:System.Windows.Forms.StatusBarPanel>, denominado `statusBarPanel1`. O <xref:System.Windows.Forms.Timer>, denominado `time`, deve ser adicionado ao formulário como um membro.  
+  
+ [!code-cpp[ProgressBar.Increment#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ProgressBar.Increment/CPP/form1.cpp#1)]
+ [!code-csharp[ProgressBar.Increment#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ProgressBar.Increment/CS/form1.cs#1)]
+ [!code-vb[ProgressBar.Increment#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ProgressBar.Increment/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Windows.Forms.ProgressBar.Style" /> é definida como <see cref="F:System.Windows.Forms.ProgressBarStyle.Marquee" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.KeyDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário pressiona uma tecla enquanto o controle tem foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ProgressBar> controle não pode receber o foco do teclado, para que ele nunca gera o <xref:System.Windows.Forms.ProgressBar.KeyDown> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyPressEventHandler KeyPress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyPressEventHandler KeyPress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.KeyPress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyPressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário pressiona uma tecla enquanto o controle tem foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ProgressBar> controle não pode receber o foco do teclado, para que ele nunca gera o <xref:System.Windows.Forms.ProgressBar.KeyPress> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.KeyUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário solta uma tecla enquanto o controle tem foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ProgressBar> controle não pode receber o foco do teclado, para que ele nunca gera o <xref:System.Windows.Forms.ProgressBar.KeyUp> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Leave">
+      <MemberSignature Language="C#" Value="public event EventHandler Leave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Leave" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.Leave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o foco deixa o <see cref="T:System.Windows.Forms.ProgressBar" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ProgressBar> controle não pode receber o foco do teclado, para que ele nunca gera o <xref:System.Windows.Forms.ProgressBar.Leave> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarqueeAnimationSpeed">
+      <MemberSignature Language="C#" Value="public int MarqueeAnimationSpeed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MarqueeAnimationSpeed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.MarqueeAnimationSpeed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período, em milissegundos, necessário para o bloco de progresso rolar pela barra de progresso.</summary>
+        <value>O período, em milissegundos, necessário para o bloco de progresso rolar pela barra de progresso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um indicador de progresso de estilo da marca de seleção não mostra o andamento. em vez disso, ele indica que uma operação está ocorrendo, movendo o bloco de progresso na barra de progresso.  
+  
+ Uma vez que a velocidade da animação do letreiro é um período de tempo, definindo o valor como um resultados de número mais alto em uma velocidade mais lenta e um resultados de número inferior em uma velocidade mais rápida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O período indicado é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public int Maximum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor máximo do intervalo do controle.</summary>
+        <value>O valor máximo do intervalo. O padrão é 100.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica o limite superior do <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade. Quando o valor da <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade for alterada, o <xref:System.Windows.Forms.ProgressBar> controle é redesenhado para refletir o novo intervalo de controle. Quando o valor da <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade é igual ao valor da <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade, a barra de progresso é completamente preenchida.  
+  
+ Você pode usar essa propriedade para especificar um valor para o qual o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade deve ser definida (definindo o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade ou usando o <xref:System.Windows.Forms.ProgressBar.Increment%2A> ou <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> métodos) para indicar que uma operação é concluída. Por exemplo, você pode definir o valor da <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade para o número total de arquivos em uma operação de cópia de arquivo. Cada vez que um arquivo é copiado, o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade pode ser aumentada em 1 até que o número total de arquivos é copiado. Nesse ponto, a barra de progresso deve ser totalmente preenchida.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.Windows.Forms.ProgressBar> controle para exibir o progresso de uma operação de cópia de arquivo. O exemplo usa o <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedades para especificar um intervalo para o <xref:System.Windows.Forms.ProgressBar> que é equivalente ao número de arquivos a serem copiados. Também usa o código de <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade com o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método para incrementar o valor da <xref:System.Windows.Forms.ProgressBar> como um arquivo é copiado. Este exemplo requer que você tenha um <xref:System.Windows.Forms.ProgressBar> controle criado chamado `pBar1` que é criado em um <xref:System.Windows.Forms.Form> e se há um método criado chamado `CopyFile` (que retorna um valor booliano que indica a operação de cópia foi foi concluída com êxito) que executa a operação de cópia de arquivo. O código também requer que uma matriz de cadeias de caracteres que contém os arquivos para copiar é criada e transmitida para o `CopyWithProgress` método definido no exemplo e o método é chamado de outro método ou evento no <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ProgressBarOverview#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ProgressBarOverview/CPP/form1.cpp#1)]
+ [!code-csharp[ProgressBarOverview#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ProgressBarOverview/CS/form1.cs#1)]
+ [!code-vb[ProgressBarOverview#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ProgressBarOverview/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public int Minimum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor mínimo do intervalo do controle.</summary>
+        <value>O valor mínimo do intervalo. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica o limite inferior do <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade. Quando o valor da <xref:System.Windows.Forms.ProgressBar.Minimum%2A> propriedade for alterada, o <xref:System.Windows.Forms.ProgressBar> controle é redesenhado para refletir o novo intervalo de controle. Quando o valor da <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade é igual ao valor da <xref:System.Windows.Forms.ProgressBar.Minimum%2A> propriedade, a barra de progresso está vazia. Para alterar o valor da barra de progresso, use o <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade com o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método, use o <xref:System.Windows.Forms.ProgressBar.Increment%2A> método, ou defina o valor da <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade diretamente.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.Windows.Forms.ProgressBar> controle para exibir o progresso de uma operação de cópia de arquivo. O exemplo usa o <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedades para especificar um intervalo para o <xref:System.Windows.Forms.ProgressBar> que é equivalente ao número de arquivos a serem copiados. Também usa o código de <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade com o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método para incrementar o valor da <xref:System.Windows.Forms.ProgressBar> como um arquivo é copiado. Este exemplo requer que você tenha um <xref:System.Windows.Forms.ProgressBar> controle criado chamado `pBar1` que é criado dentro de um <xref:System.Windows.Forms.Form>, e que há um método de criação chamado `CopyFile` (que retorna um valor booliano que indica a operação de cópia foi foi concluída com êxito) que executa a operação de cópia de arquivo. O código também requer que uma matriz de cadeias de caracteres que contém os arquivos para copiar é criada e transmitida para o `CopyWithProgress` método definido no exemplo, e que o método é chamado de outro método ou evento no <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ProgressBarOverview#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ProgressBarOverview/CPP/form1.cpp#1)]
+ [!code-csharp[ProgressBarOverview#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ProgressBarOverview/CS/form1.cs#1)]
+ [!code-vb[ProgressBarOverview#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ProgressBarOverview/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado para a propriedade é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.MouseDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica duas vezes no controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ProgressBar> controle não dispara o <xref:System.Windows.Forms.ProgressBar.MouseDoubleClick> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBackColorChanged">
+      <MemberSignature Language="C#" Value="protected override void OnBackColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBackColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBar.OnBackColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.BackColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ProgressBar.OnBackColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ProgressBar.OnBackColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ProgressBar.OnBackColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnForeColorChanged">
+      <MemberSignature Language="C#" Value="protected override void OnForeColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnForeColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBar.OnForeColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.ForeColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ProgressBar.OnForeColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Forms.Control.ForeColor%2A>as alterações não serão cumpridas quando estilos visuais são ativados e o sistema operacional oferece suporte a estilos visuais.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ProgressBar.OnForeColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ProgressBar.OnForeColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBar.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Substituições<see cref="M:System.Windows.Forms.Control.OnHandleCreated(System.EventArgs)" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleDestroyed">
+      <MemberSignature Language="C#" Value="protected override void OnHandleDestroyed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleDestroyed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBar.OnHandleDestroyed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.HandleDestroyed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ProgressBar.OnHandleDestroyed%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ProgressBar.OnHandleDestroyed(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ProgressBar.OnHandleDestroyed(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnRightToLeftLayoutChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRightToLeftLayoutChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBar.OnRightToLeftLayoutChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="P:System.Windows.Forms.ProgressBar.RightToLeftLayout" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ProgressBar.OnRightToLeftLayoutChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ProgressBar.OnRightToLeftLayoutChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ProgressBar.OnRightToLeftLayoutChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o espaço entre as bordas de um <see cref="T:System.Windows.Forms.ProgressBar" /> controle e seu conteúdo.</summary>
+        <value>
+          <see cref="F:System.Windows.Forms.Padding.Empty" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.ProgressBar.Padding%2A> propriedade não terá efeito na aparência do <xref:System.Windows.Forms.ProgressBar>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ProgressBar.Padding" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PaintEventHandler Paint;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PaintEventHandler Paint" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.Paint" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PaintEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Windows.Forms.ProgressBar" /> é desenhado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformStep">
+      <MemberSignature Language="C#" Value="public void PerformStep ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PerformStep() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBar.PerformStep" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Avança a posição atual da barra de progresso até o valor da propriedade <see cref="P:System.Windows.Forms.ProgressBar.Step" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método incrementa o valor da barra de progresso com o valor especificado pelo <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade. Você pode usar o <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade para especificar a quantidade de cada tarefa concluída em uma operação altera o valor da barra de progresso. Por exemplo, se você estiver copiando um grupo de arquivos, você talvez queira definir o valor da <xref:System.Windows.Forms.ProgressBar.Step%2A> 1 e o valor da propriedade a <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade para o número total de arquivos a serem copiados. Quando cada arquivo é copiado, você pode chamar o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método para aumentar o valor de barra de progresso de <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade. Se você quiser ter um controle mais flexível, o valor da barra de progresso, você pode usar o <xref:System.Windows.Forms.ProgressBar.Increment%2A> método ou defina o valor da <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade diretamente.  
+  
+ O <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade especifica a posição atual do <xref:System.Windows.Forms.ProgressBar>. Se, depois de chamar o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método, o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade é maior que o valor da <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade, o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade permanece no valor da <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade. Se, depois de chamar o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método com um valor negativo especificado em <xref:System.Windows.Forms.ProgressBar.Step%2A>, o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade é menor que o valor da <xref:System.Windows.Forms.ProgressBar.Minimum%2A> propriedade, o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade permanece no valor da <xref:System.Windows.Forms.ProgressBar.Minimum%2A> propriedade.  
+  
+ Porque um <xref:System.Windows.Forms.ProgressBar> objeto cujo estilo é definido como <xref:System.Windows.Forms.ProgressBarStyle.Marquee> exibe uma barra de rolagem continuamente em vez de seu <xref:System.Windows.Forms.ProgressBar.Value%2A>, chamar <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> é desnecessário e gerará um <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.Windows.Forms.ProgressBar> controle para exibir o progresso de uma operação de cópia de arquivo. O exemplo usa o <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedades para especificar um intervalo para o <xref:System.Windows.Forms.ProgressBar> que é equivalente ao número de arquivos a serem copiados. Também usa o código de <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade com o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método para incrementar o valor da <xref:System.Windows.Forms.ProgressBar> como um arquivo é copiado. Este exemplo requer que você tenha um <xref:System.Windows.Forms.ProgressBar> controle criado chamado `pBar1` que é criado dentro de um <xref:System.Windows.Forms.Form>, e que há um método de criação chamado `CopyFile` (que retorna um valor booliano que indica a operação de cópia foi foi concluída com êxito) que executa a operação de cópia de arquivo. O código também requer que uma matriz de cadeias de caracteres que contém os arquivos para copiar é criada e transmitida para o `CopyWithProgress` método definido no exemplo, e que o método é chamado de outro método ou evento no <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ProgressBarOverview#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ProgressBarOverview/CPP/form1.cpp#1)]
+ [!code-csharp[ProgressBarOverview#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ProgressBarOverview/CS/form1.cs#1)]
+ [!code-vb[ProgressBarOverview#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ProgressBarOverview/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Forms.ProgressBar.Style" /> é definido como <see cref="F:System.Windows.Forms.ProgressBarStyle.Marquee" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetForeColor">
+      <MemberSignature Language="C#" Value="public override void ResetForeColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResetForeColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBar.ResetForeColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o <see cref="P:System.Windows.Forms.Control.ForeColor" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar este método redefinirá o <xref:System.Windows.Forms.Control.ForeColor%2A> para <xref:System.Drawing.SystemColors.Highlight%2A> , a menos que o método é substituído em uma classe derivada. O <xref:System.Windows.Forms.ProgressBar.ResetForeColor%2A> método é útil quando você criar um designer para o controle, ou você está criando seu próprio controle que incorpora o <xref:System.Windows.Forms.ProgressBar>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayout">
+      <MemberSignature Language="C#" Value="public virtual bool RightToLeftLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RightToLeftLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.RightToLeftLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.ProgressBar" /> e contém o texto é exibido da direita para esquerda.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Forms.ProgressBar" /> exibido da direita para a esquerda; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ProgressBar.RightToLeftLayout%2A> propriedade é útil ao criar um aplicativo para uso com idiomas que são lidos da direita para esquerda.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeftLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RightToLeftLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RightToLeftLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.RightToLeftLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.ProgressBar.RightToLeftLayout" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ProgressBar.RightToLeftLayoutChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ProgressBar> chamado `ProgressBar1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ProgressBar.RightToLeftLayoutChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#519](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#519)]
+ [!code-vb[System.Windows.Forms.EventExamples#519](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#519)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Step">
+      <MemberSignature Language="C#" Value="public int Step { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Step" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.Step" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(10)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o quanto a posição atual da barra de progresso é aumentada por uma chamada para o método <see cref="M:System.Windows.Forms.ProgressBar.PerformStep" />.</summary>
+        <value>O valor do incremento da barra de progresso mediante cada chamada para o método <see cref="M:System.Windows.Forms.ProgressBar.PerformStep" />. O padrão é 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade para especificar a quantidade de cada tarefa concluída em uma operação altera o valor da barra de progresso. Por exemplo, se você estiver copiando um grupo de arquivos, você talvez queira definir o valor da <xref:System.Windows.Forms.ProgressBar.Step%2A> 1 e o valor da propriedade a <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedade para o número total de arquivos a serem copiados. Quando cada arquivo é copiado, você pode chamar o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método para aumentar o valor de barra de progresso de <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade. Se você quiser ter um controle mais flexível, o valor da barra de progresso, você pode usar o <xref:System.Windows.Forms.ProgressBar.Increment%2A> método ou defina o valor da <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade diretamente.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.Windows.Forms.ProgressBar> controle para exibir o progresso de uma operação de cópia de arquivo. O exemplo usa o <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedades para especificar um intervalo para o <xref:System.Windows.Forms.ProgressBar> que é equivalente ao número de arquivos a serem copiados. Também usa o código de <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade com o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método para incrementar o valor da <xref:System.Windows.Forms.ProgressBar> como um arquivo é copiado. Este exemplo requer que você tenha um <xref:System.Windows.Forms.ProgressBar> controle criado chamado `pBar1` que é criado dentro de um <xref:System.Windows.Forms.Form>, e que há um método de criação chamado `CopyFile` (que retorna um valor booliano que indica a operação de cópia foi foi concluída com êxito) que executa a operação de cópia de arquivo. O código também requer que uma matriz de cadeias de caracteres que contém os arquivos para copiar é criada e transmitida para o `CopyWithProgress` método definido no exemplo, e que o método é chamado de outro método ou evento no <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ProgressBarOverview#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ProgressBarOverview/CPP/form1.cpp#1)]
+ [!code-csharp[ProgressBarOverview#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ProgressBarOverview/CS/form1.cs#1)]
+ [!code-vb[ProgressBarOverview#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ProgressBarOverview/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ProgressBarStyle Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ProgressBarStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ProgressBarStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a maneira na qual o progresso deve ser indicado na barra de progresso.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ProgressBarStyle" />. O padrão é <see cref="F:System.Windows.Forms.ProgressBarStyle.Blocks" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o estilo da marca de seleção quando você precisa indicar progresso está sendo feito, sem que indica a quantidade de progresso. O <xref:System.Windows.Forms.ProgressBarStyle.Marquee> estilo é respeitado apenas quando os estilos visuais estão habilitados. O <xref:System.Windows.Forms.ProgressBarStyle.Continuous> estilo é cumprido quando os estilos visuais não estão habilitados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor não é membro da enumeração <see cref="T:System.Windows.Forms.ProgressBarStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui <see cref="P:System.Windows.Forms.Control.TabStop" />.</summary>
+        <value>True se o usuário pode definir o foco para o controle usando a tecla TAB; Caso contrário, false. O padrão é true.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStopChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TabStopChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TabStopChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.TabStopChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.ProgressBar.TabStop" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto associado a esse controle.</summary>
+        <value>O texto associado a esse controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ProgressBar.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.ProgressBar.Text" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ProgressBar.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o controle <see cref="T:System.Windows.Forms.ProgressBar" />.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.ProgressBar" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres de retorno inclui o tipo e os valores para o <xref:System.Windows.Forms.ProgressBar.Minimum%2A>, <xref:System.Windows.Forms.ProgressBar.Maximum%2A>, e <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public int Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ProgressBar.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição atual da barra de progresso.</summary>
+        <value>A posição dentro do intervalo da barra de progresso. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores mínimo e máximo do <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade são especificados pelo <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> propriedades. Essa propriedade permite que você incrementar ou decrementar o valor do progresso da barra diretamente. Para executar um aumento consistente no valor do <xref:System.Windows.Forms.ProgressBar> controle que você pode usar o <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade com o <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> método. Para aumentar o valor de barra de progresso com vários valores, use o <xref:System.Windows.Forms.ProgressBar.Increment%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.ProgressBar.Increment%2A> método e o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade para incrementar o valor de um <xref:System.Windows.Forms.ProgressBar> no <xref:System.Windows.Forms.Timer.Tick> eventos de um <xref:System.Windows.Forms.Timer>. O exemplo também exibe o <xref:System.Windows.Forms.ProgressBar.Value%2A> propriedade em uma <xref:System.Windows.Forms.StatusBarPanel> para fornecer uma representação textual do <xref:System.Windows.Forms.ProgressBar>. Este exemplo requer que você tenha um <xref:System.Windows.Forms.ProgressBar> controle, chamado `progressBar1`e um <xref:System.Windows.Forms.StatusBar> controle que contém um <xref:System.Windows.Forms.StatusBarPanel>, denominado `statusBarPanel1`. O <xref:System.Windows.Forms.Timer>, denominado `time`, deve ser adicionado ao formulário como um membro.  
+  
+ [!code-cpp[ProgressBar.Increment#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ProgressBar.Increment/CPP/form1.cpp#1)]
+ [!code-csharp[ProgressBar.Increment#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ProgressBar.Increment/CS/form1.cs#1)]
+ [!code-vb[ProgressBar.Increment#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ProgressBar.Increment/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado é maior que o valor da <see cref="P:System.Windows.Forms.ProgressBar.Maximum" /> propriedade.  
+  
+ -ou-  
+  
+ O valor especificado é menor que o valor da <see cref="P:System.Windows.Forms.ProgressBar.Minimum" /> propriedade.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

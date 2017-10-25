@@ -1,0 +1,129 @@
+<Type Name="TimerExtension" FullName="System.Activities.Statements.TimerExtension">
+  <TypeSignature Language="C#" Value="public abstract class TimerExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TimerExtension extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.TimerExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Classe base abstrata para as extensões de timer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma extensão de timer é usada por atividades como <xref:System.Activities.Statements.Delay> para gerenciar os timers.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TimerExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.TimerExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, cria uma nova instância da classe derivada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelTimer">
+      <MemberSignature Language="C#" Value="public void CancelTimer (System.Activities.Bookmark bookmark);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelTimer(class System.Activities.Bookmark bookmark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.TimerExtension.CancelTimer(System.Activities.Bookmark)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bookmark" Type="System.Activities.Bookmark" />
+      </Parameters>
+      <Docs>
+        <param name="bookmark">O indicador associado com o timer.</param>
+        <summary>Remove um timer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCancelTimer">
+      <MemberSignature Language="C#" Value="protected abstract void OnCancelTimer (System.Activities.Bookmark bookmark);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCancelTimer(class System.Activities.Bookmark bookmark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.TimerExtension.OnCancelTimer(System.Activities.Bookmark)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bookmark" Type="System.Activities.Bookmark" />
+      </Parameters>
+      <Docs>
+        <param name="bookmark">O indicador associado com o timer.</param>
+        <summary>Chamado pelo <see cref="M:System.Activities.Statements.TimerExtension.CancelTimer(System.Activities.Bookmark)" /> método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRegisterTimer">
+      <MemberSignature Language="C#" Value="protected abstract void OnRegisterTimer (TimeSpan timeout, System.Activities.Bookmark bookmark);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRegisterTimer(valuetype System.TimeSpan timeout, class System.Activities.Bookmark bookmark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.TimerExtension.OnRegisterTimer(System.TimeSpan,System.Activities.Bookmark)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="bookmark" Type="System.Activities.Bookmark" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">A duração do temporizador.</param>
+        <param name="bookmark">O indicador associado com o timer, deverá ser retomada quando o timer expira.</param>
+        <summary>Chamado pelo <see cref="M:System.Activities.Statements.TimerExtension.RegisterTimer(System.TimeSpan,System.Activities.Bookmark)" /> método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterTimer">
+      <MemberSignature Language="C#" Value="public void RegisterTimer (TimeSpan timeout, System.Activities.Bookmark bookmark);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterTimer(valuetype System.TimeSpan timeout, class System.Activities.Bookmark bookmark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.TimerExtension.RegisterTimer(System.TimeSpan,System.Activities.Bookmark)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="bookmark" Type="System.Activities.Bookmark" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">A duração do temporizador.</param>
+        <param name="bookmark">O indicador associado com o timer, deverá ser retomada quando o timer expira.</param>
+        <summary>Cria um temporizador com a duração especificada e associados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,128 @@
+<Type Name="LinqDataSourceContextEventArgs" FullName="System.Web.UI.WebControls.LinqDataSourceContextEventArgs">
+  <TypeSignature Language="C#" Value="public class LinqDataSourceContextEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinqDataSourceContextEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LinqDataSourceContextEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.LinqDataSource.ContextCreating" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSource> controle cria uma instância do tipo especificado no <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade. O <xref:System.Web.UI.WebControls.LinqDataSource> controle chama o construtor padrão do objeto de contexto de dados para criar uma instância do objeto.  
+  
+ Você pode criar manualmente o objeto de contexto de dados ao manipular o <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreating> evento. Fazer isso se você quiser usar um construtor não padrão.  
+  
+ Você também pode manipular o <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreating> evento se você deseja criar um objeto de contexto de dados que é diferente do especificado no <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade. Nesse caso, você define o <xref:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance%2A> propriedade no objeto que você criou. O <xref:System.Web.UI.WebControls.LinqDataSource> controle usará o objeto que você criou para selecionar os dados. Quando você estiver atualizando, inserir, ou excluir dados, você deve definir o <xref:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance%2A> propriedade a um objeto que deriva de <xref:System.Data.Linq.DataContext> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar o objeto de contexto de dados chamando um construtor não-padrão em um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreating> evento. O código atribui o objeto personalizado para o <xref:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance%2A> propriedade.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource.ContextCreating#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.ContextCreating/cs/Default.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource.ContextCreating#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.ContextCreating/vb/Default.aspx.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceContextEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.LinqDataSourceContextEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceContextEventArgs (System.Web.UI.DataSourceOperation operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.DataSourceOperation operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.#ctor(System.Web.UI.DataSourceOperation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="operation" Type="System.Web.UI.DataSourceOperation" />
+      </Parameters>
+      <Docs>
+        <param name="operation">A operação de dados que está sendo executada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.LinqDataSourceContextEventArgs" /> classe para a operação de dados especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectInstance">
+      <MemberSignature Language="C#" Value="public object ObjectInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de contexto de dados para criar.</summary>
+        <value>O objeto de contexto de dados que você definiu para o <see cref="P:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance" /> propriedade; caso contrário, <see langword="null" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSource> controle cria uma instância da classe especificada no <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade. Ele faz isso chamando o construtor padrão da classe.  
+  
+ Você pode criar manualmente o objeto de dados operações manipulando o <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreating> evento e a configuração de <xref:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance%2A> propriedade a um objeto que você criou.  
+  
+ Crie o objeto manualmente se você deseja usar um construtor não-padrão ou se você deseja criar um objeto que é diferente da especificada no <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance%2A> a propriedade não contém uma instância do tipo especificado no <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade, porque essa instância é criada após o <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreating> evento. O <xref:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance%2A> propriedade é usada somente quando você criar manualmente o objeto de contexto de dados durante o <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreating> evento. Quando você estiver atualizando, inserir, ou excluir dados, você deve definir o <xref:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance%2A> propriedade a um objeto que deriva de <xref:System.Data.Linq.DataContext> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar o objeto de contexto de dados chamando um construtor não-padrão em um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreating> evento. O código atribui o objeto personalizado para o <xref:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance%2A> propriedade.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource.ContextCreating#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.ContextCreating/cs/Default.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource.ContextCreating#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.ContextCreating/vb/Default.aspx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operation">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataSourceOperation Operation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataSourceOperation Operation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.Operation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a operação de dados que está sendo executada.</summary>
+        <value>Um valor que representa o tipo de operação de dados que está sendo executada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

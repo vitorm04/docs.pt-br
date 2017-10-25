@@ -1,0 +1,566 @@
+<Type Name="DesignerActionService" FullName="System.ComponentModel.Design.DesignerActionService">
+  <TypeSignature Language="C#" Value="public class DesignerActionService : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerActionService extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Estabelece um serviço de tempo de design que gerencia a coleção de <see cref="T:System.ComponentModel.Design.DesignerActionItem" /> objetos para os componentes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionService> classe é responsável por gerenciar a coleção de <xref:System.ComponentModel.Design.DesignerActionItem> objetos para cada instância de um componente que existe em um formulário em tempo de design. Essa classe permite que um modelo de push direto de criação do item e é usado principalmente para uso por desenvolvedores de ferramentas de tempo de design, embora também possa ser usado pelo componente e desenvolvedores de controle personalizado.  
+  
+ Os desenvolvedores da ferramenta de tempo de design serão necessário determinar a lista de itens a serem exibidos para um componente e determinar quando essa lista muda. Eles também podem criar suplementos que operam em conjunto com objetos do painel de marca inteligente.  
+  
+ Avançado desenvolvedores talvez precise controlar dinamicamente os itens associados a um componente, assim, substituir ou que complementam o modelo de pull padrão do componente. Por exemplo, os comandos de painel podem ser alterados dependendo do contexto de seu uso e o estado de tempo de design do componente.  
+  
+> [!NOTE]
+>  O <xref:System.ComponentModel.Design.DesignerActionService> é, na verdade, o serviço principal por trás de modelos de push e pull; no entanto, no último caso ele opera implicitamente.  
+  
+ <xref:System.ComponentModel.Design.DesignerActionService>Fornece uma interface simples para acessar e manipular os itens para cada componente, incluindo os seguintes métodos e eventos:  
+  
+-   O <xref:System.ComponentModel.Design.DesignerActionService.Contains%2A> método determina se o <xref:System.ComponentModel.Design.DesignerActionService> está atualmente Gerenciando um componente específico.  
+  
+-   O <xref:System.ComponentModel.Design.DesignerActionService.GetComponentActions%2A> método dá suporte à enumeração de listas de itens.  
+  
+-   O <xref:System.ComponentModel.Design.DesignerActionService.Add%2A> método permite adicionar um <xref:System.ComponentModel.Design.DesignerActionList> ou <xref:System.ComponentModel.Design.DesignerActionListCollection> ao conjunto de itens existentes para uma instância do componente. Em contraste, o <xref:System.ComponentModel.Design.DesignerActionService.Remove%2A> método Remove uma ou todas as listas de item associadas ao componente.  
+  
+    > [!NOTE]
+    >  O <xref:System.ComponentModel.Design.DesignerActionService.Add%2A> método representa o modelo de push direto de associar a um componente de itens do painel. Por outro lado, o modelo de pull depende substituindo o <xref:System.ComponentModel.Design.ComponentDesigner.ActionLists%2A> propriedade da classe do designer para esse componente. O ambiente de design é responsável por adicionar esses itens em atual <xref:System.ComponentModel.Design.DesignerActionService> quando um componente é criado na superfície de design.  
+  
+    > [!IMPORTANT]
+    >  O <xref:System.ComponentModel.Design.DesignerActionService.Add%2A>, <xref:System.ComponentModel.Design.DesignerActionService.Remove%2A>, <xref:System.ComponentModel.Design.DesignerActionService.Contains%2A>, e <xref:System.ComponentModel.Design.DesignerActionService.Clear%2A> métodos só considere ou afetam itens de modelo de push.  
+  
+-   O <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> evento indica quando a coleção de itens é alterado para um componente.  
+  
+ Como geralmente é desejável usar alguns dos mesmos itens de painel no menu de atalho de tempo de design do componente e seu painel, um alto grau de interoperabilidade existe entre <xref:System.ComponentModel.Design.DesignerActionItem> objetos e verbos do designer.  
+  
+ Se um designer de componentes não especificar explicitamente um <xref:System.ComponentModel.Design.DesignerActionList> (ou seja, ele não contém um substituído <xref:System.ComponentModel.Design.ComponentDesigner.ActionLists%2A> propriedade), em seguida, será criada uma lista de verbos do designer existentes. Esses verbos são especificados pelo <xref:System.ComponentModel.Design.ComponentDesigner.Verbs%2A> propriedade. Nesse caso, uma classe de lista verbo interno é usada para conter a coleção de entradas de painel de item do verbo.  
+  
+ Se você quiser uma <xref:System.ComponentModel.Design.DesignerActionMethodItem> a ser usado como uma entrada no painel e como uma entrada de menu de atalho de tempo de design, você poderá definir o `includeAsDesignerVerb` parâmetro no construtor do item.  
+  
+ Use o <xref:System.ComponentModel.Design.DesignerActionUIService> para controlar a exibição de seu designer <xref:System.ComponentModel.Design.ComponentDesigner.ActionLists%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionService (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">O provedor de serviço para o ambiente de tempo de design atual.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.DesignerActionService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor de serviço é necessário para a seleção e alterações de componente de monitoramento. Espera-se para dar suporte a <xref:System.ComponentModel.Design.IDesignerHost> e <xref:System.ComponentModel.Design.IComponentChangeService> tipos. O <xref:System.ComponentModel.Design.DesignerActionService> classe usa uma tabela interna para gerenciar componentes e seus respectivos <xref:System.ComponentModel.Design.DesignerActionList> marcas inteligentes.  
+  
+ Normalmente, os desenvolvedores de componentes não serão necessário criar uma instância dessa classe; em vez disso, eles podem adquirir uma instância existente por meio de uma chamada para o <xref:System.ComponentModel.Component.GetService%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ComponentModel.IComponent comp, System.ComponentModel.Design.DesignerActionList actionList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.ComponentModel.IComponent comp, class System.ComponentModel.Design.DesignerActionList actionList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.Add(System.ComponentModel.IComponent,System.ComponentModel.Design.DesignerActionList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comp" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="actionList" Type="System.ComponentModel.Design.DesignerActionList" />
+      </Parameters>
+      <Docs>
+        <param name="comp">O <see cref="T:System.ComponentModel.IComponent" /> para associar as marcas inteligentes com.</param>
+        <param name="actionList">O <see cref="T:System.ComponentModel.Design.DesignerActionList" /> que contém os novos itens de marca inteligente a ser adicionado.</param>
+        <summary>Adiciona um <see cref="T:System.ComponentModel.Design.DesignerActionList" /> à coleção atual de marcas inteligentes gerenciadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionService.Add%2A> método representa o modelo de push de adição de itens de marcas inteligentes. O modelo de pull alternativo depende substituindo o <xref:System.ComponentModel.Design.ComponentDesigner.ActionLists%2A> propriedade no designer do componente correspondente.  
+  
+ Quando este método é chamado, a lista a serem adicionados é verificada para qualquer <xref:System.ComponentModel.Design.DesignerActionMethodItem> com o <xref:System.ComponentModel.Design.DesignerActionMethodItem.IncludeAsDesignerVerb%2A> propriedade definida como `true`. Esses itens são adicionados à lista de verbos do designer para este componente, por meio de uma chamada para o <xref:System.ComponentModel.Design.MenuCommandService.AddVerb%2A?displayProperty=nameWithType> método.  
+  
+ Marcas inteligentes são gerenciadas em uma base de instância do componente. A coleção gerenciada pode conter entradas duplicadas.  
+  
+ Este método gera o <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um ou ambos os parâmetros são <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ComponentModel.IComponent comp, System.ComponentModel.Design.DesignerActionListCollection designerActionListCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.ComponentModel.IComponent comp, class System.ComponentModel.Design.DesignerActionListCollection designerActionListCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.Add(System.ComponentModel.IComponent,System.ComponentModel.Design.DesignerActionListCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comp" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="designerActionListCollection" Type="System.ComponentModel.Design.DesignerActionListCollection" />
+      </Parameters>
+      <Docs>
+        <param name="comp">O <see cref="T:System.ComponentModel.IComponent" /> para associar as marcas inteligentes com.</param>
+        <param name="designerActionListCollection">O <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> que contém os novos itens de marca inteligente a ser adicionado.</param>
+        <summary>Adiciona um <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> à coleção atual de marcas inteligentes gerenciadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionService.Add%2A> método representa o modelo de push de adição de itens de marcas inteligentes. O modelo de pull alternativo depende substituindo o <xref:System.ComponentModel.Design.ComponentDesigner.ActionLists%2A> propriedade no designer do componente correspondente.  
+  
+ Quando este método é chamado, a lista a serem adicionados é verificada para qualquer <xref:System.ComponentModel.Design.DesignerActionMethodItem> com o <xref:System.ComponentModel.Design.DesignerActionMethodItem.IncludeAsDesignerVerb%2A> propriedade definida como `true`. Esses itens são adicionados à lista de verbos do designer para este componente, por meio de uma chamada para o <xref:System.ComponentModel.Design.MenuCommandService.AddVerb%2A?displayProperty=nameWithType> método.  
+  
+ Marcas inteligentes são gerenciadas em uma base de instância do componente. A coleção gerenciada pode conter entradas duplicadas.  
+  
+ Este método gera o <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um ou ambos os parâmetros são <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os componentes de gerenciamento e limpa todas as listas de marca inteligente do modelo de push.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionService.Clear%2A> método esvazia a tabela interna usada para armazenar informações sobre componentes e seu modelo de push inteligentes listas de marcas.  
+  
+> [!CAUTION]
+>  Como esse método afeta todos os componentes gerenciados pelo serviço atual e não apenas o componente atual, esse método deve ser usado criteriosamente. Normalmente, o desenvolvedor da ferramenta de design usa quando redefinir uma superfície de design. Os desenvolvedores de componentes devem usar um do <xref:System.ComponentModel.Design.DesignerActionService.Remove%2A> métodos em vez disso, para remover a marca inteligente individual de itens ou lista.  
+  
+ Um <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> é gerado para cada componente que foi anteriormente gerenciado pelo serviço atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.ComponentModel.IComponent comp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.ComponentModel.IComponent comp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.Contains(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comp" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="comp">O <see cref="T:System.ComponentModel.IComponent" /> a ser pesquisado.</param>
+        <summary>Determina se o serviço de marca inteligente atual gerencia as listas de ação para o componente especificado.</summary>
+        <returns>
+          <see langword="true" />Se o componente é gerenciado pelo serviço atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionService.Contains%2A> método reconhece somente marcas inteligentes do modelo de push, que são associadas a um componente com o <xref:System.ComponentModel.Design.DesignerActionService.Add%2A> método.  
+  
+ Embora não haja nenhuma limitação estrutural no número de unidades simultâneas <xref:System.ComponentModel.Design.DesignerActionService> instâncias criadas por uma ferramenta de tempo de design, normalmente apenas uma única instância do serviço é criada por superfície de design.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="comp" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerActionListsChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.DesignerActionListsChangedEventHandler DesignerActionListsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.DesignerActionListsChangedEventHandler DesignerActionListsChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListsChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.ComponentModel.Design.DesignerActionList" /> foi removido ou adicionado para qualquer componente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra o conjunto de classes especializadas associado a <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> eventos.  
+  
+|Tipo especializado|Descrição|  
+|----------------------|-----------------|  
+|<xref:System.ComponentModel.Design.DesignerActionListsChangedEventArgs>|Adiciona informações específicas para o gerenciamento da lista de marcas inteligentes. Essa classe é especializada do <xref:System.EventArgs>.|  
+|<xref:System.ComponentModel.Design.DesignerActionListsChangedEventHandler>|Conecta-se a <xref:System.ComponentModel.Design.DesignerActionListsChangedEventArgs> com seu manipulador.|  
+|<xref:System.ComponentModel.Design.DesignerActionListsChangedType>|Indica se uma lista foi adicionada ou removida.|  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela classe <see cref="T:System.ComponentModel.Design.DesignerActionService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionService.Dispose%2A> método é a implementação do método somente exigida pelo <xref:System.IDisposable> interface. Chame este método quando tiver terminado de usar o <xref:System.ComponentModel.Design.DesignerActionService>. Ele executa duas ações principais:  
+  
+-   Remove o serviço atual da lista de serviços disponíveis no ambiente de design através de uma chamada para o <xref:System.ComponentModel.Design.IServiceContainer.RemoveService%2A> método.  
+  
+-   Cancela a inscrição para eventos de alteração de componente de associado <xref:System.ComponentModel.Design.IComponentChangeService> interface.  
+  
+ Chamar <xref:System.ComponentModel.Design.DesignerActionService.Dispose%2A> quando tiver terminado de usar o <xref:System.ComponentModel.Design.DesignerActionService>. O <xref:System.ComponentModel.Design.DesignerActionService.Dispose%2A> método deixa o <xref:System.ComponentModel.Design.DesignerActionService> em um estado inutilizável. Depois de chamar <xref:System.ComponentModel.Design.DesignerActionService.Dispose%2A>, você deve liberar todas as referências para o <xref:System.ComponentModel.Design.DesignerActionService> para o coletor de lixo possa recuperar a memória que o <xref:System.ComponentModel.Design.DesignerActionService> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.ComponentModel.Design.DesignerActionService.Dispose%2A> antes de liberar sua última referência para o <xref:System.ComponentModel.Design.DesignerActionService>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.ComponentModel.Design.DesignerActionService> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.ComponentModel.Design.DesignerActionService" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionService.Dispose%2A> método é a implementação do método somente exigida pelo <xref:System.IDisposable> interface. Chame este método quando tiver terminado de usar o <xref:System.ComponentModel.Design.DesignerActionService>. Ele executa duas ações principais:  
+  
+-   Remove o serviço atual da lista de serviços disponíveis no ambiente de design através de uma chamada para o <xref:System.ComponentModel.Design.IServiceContainer.RemoveService%2A> método.  
+  
+-   Cancela a inscrição para eventos de alteração de componente de associado <xref:System.ComponentModel.Design.IComponentChangeService> interface.  
+  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.ComponentModel.Design.DesignerActionService> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetComponentActions">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.DesignerActionListCollection GetComponentActions (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Design.DesignerActionListCollection GetComponentActions(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.GetComponentActions(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente que as marcas inteligentes associadas.</param>
+        <summary>Retorna a coleção de listas de itens de marcas inteligentes associadas a um componente.</summary>
+        <returns>A coleção de marcas inteligentes para o componente especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionService.GetComponentActions%2A> método é equivalente a uma chamada para o <xref:System.ComponentModel.Design.DesignerActionService.GetComponentActions%28System.ComponentModel.IComponent%2CSystem.ComponentModel.Design.ComponentActionsType%29> usando o método um `type` parâmetro <xref:System.ComponentModel.Design.ComponentActionsType.All>. Portanto, a coleção retornada conterá as listas por push e pull de marcas inteligentes.  
+  
+ Retornado <xref:System.ComponentModel.Design.DesignerActionListCollection> é a união das listas de itens adicionados por meio de <xref:System.ComponentModel.Design.DesignerActionService.Add%2A> métodos e também as listas obtido a partir o <xref:System.ComponentModel.Design.DesignerCommandSet> instância obtido do site do componente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="comp" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetComponentActions">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.Design.DesignerActionListCollection GetComponentActions (System.ComponentModel.IComponent component, System.ComponentModel.Design.ComponentActionsType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.Design.DesignerActionListCollection GetComponentActions(class System.ComponentModel.IComponent component, valuetype System.ComponentModel.Design.ComponentActionsType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.GetComponentActions(System.ComponentModel.IComponent,System.ComponentModel.Design.ComponentActionsType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="type" Type="System.ComponentModel.Design.ComponentActionsType" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente que as marcas inteligentes associadas.</param>
+        <param name="type">O <see cref="T:System.ComponentModel.Design.ComponentActionsType" /> para filtrar as marcas inteligentes associadas com.</param>
+        <summary>Retorna a coleção de marcas inteligentes listas de itens do tipo especificado associado ao componente.</summary>
+        <returns>A coleção de marcas inteligentes do tipo especificado para o componente especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta versão do sobrecarregados <xref:System.ComponentModel.Design.DesignerActionService.GetComponentActions%2A> método filtra o `type` parâmetro, que pode ter um dos valores a seguir.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|<xref:System.ComponentModel.Design.ComponentActionsType.All>|Todos os respectivos marcas inteligentes.|  
+|<xref:System.ComponentModel.Design.ComponentActionsType.Component>|Modelo de pull apenas as marcas inteligentes.|  
+|<xref:System.ComponentModel.Design.ComponentActionsType.Service>|Modelo de push apenas as marcas inteligentes.|  
+  
+ Se o designer associado para um componente não fornecer uma lista de marcas inteligentes do modelo de pull, em seguida, o <xref:System.ComponentModel.Design.DesignerActionService.GetComponentActions%2A> método usará em vez disso, os itens de menu de atalho de tempo de design do designer do <xref:System.ComponentModel.Design.ComponentDesigner.Verbs%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="comp" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetComponentDesignerActions">
+      <MemberSignature Language="C#" Value="protected virtual void GetComponentDesignerActions (System.ComponentModel.IComponent component, System.ComponentModel.Design.DesignerActionListCollection actionLists);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetComponentDesignerActions(class System.ComponentModel.IComponent component, class System.ComponentModel.Design.DesignerActionListCollection actionLists) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.GetComponentDesignerActions(System.ComponentModel.IComponent,System.ComponentModel.Design.DesignerActionListCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="actionLists" Type="System.ComponentModel.Design.DesignerActionListCollection" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente que as marcas inteligentes associadas.</param>
+        <param name="actionLists">A coleção para adicionar as marcas inteligentes associadas ao.</param>
+        <summary>Recupera as marcas inteligentes do modelo de pull associadas ao componente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionService.GetComponentDesignerActions%2A> é um método auxiliar para o <xref:System.ComponentModel.Design.DesignerActionService.GetComponentActions%2A> métodos. <xref:System.ComponentModel.Design.DesignerActionService.GetComponentDesignerActions%2A>procura o modelo de pull inteligente marcas do tipo <xref:System.ComponentModel.Design.ComponentActionsType.Component>e, em seguida, adiciona esses para fornecido `actionLists` coleção.  
+  
+ Se o desenvolvedor do componente não fornecer explicitamente uma coleção de marcas inteligentes por meio do <xref:System.ComponentModel.Design.ComponentDesigner.ActionLists%2A> propriedade de seu designer, esse método reutilizará as entradas de menu de atalho de tempo de design, que são obtidas por meio de <xref:System.ComponentModel.Design.ComponentDesigner.Verbs%2A> propriedade do designer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um ou ambos os parâmetros são <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetComponentServiceActions">
+      <MemberSignature Language="C#" Value="protected virtual void GetComponentServiceActions (System.ComponentModel.IComponent component, System.ComponentModel.Design.DesignerActionListCollection actionLists);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetComponentServiceActions(class System.ComponentModel.IComponent component, class System.ComponentModel.Design.DesignerActionListCollection actionLists) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.GetComponentServiceActions(System.ComponentModel.IComponent,System.ComponentModel.Design.DesignerActionListCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="actionLists" Type="System.ComponentModel.Design.DesignerActionListCollection" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente que as marcas inteligentes associadas.</param>
+        <param name="actionLists">A coleção para adicionar as marcas inteligentes associadas ao.</param>
+        <summary>Recupera as marcas inteligentes do modelo de push associadas ao componente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionService.GetComponentServiceActions%2A> é um método auxiliar para o <xref:System.ComponentModel.Design.DesignerActionService.GetComponentActions%2A> métodos. Ele procura as marcas inteligentes do tipo de modelo de push <xref:System.ComponentModel.Design.ComponentActionsType.Service>e, em seguida, adiciona esses para fornecido `actionLists` coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um ou ambos os parâmetros são <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.ComponentModel.Design.DesignerActionList actionList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.ComponentModel.Design.DesignerActionList actionList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.Remove(System.ComponentModel.Design.DesignerActionList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="actionList" Type="System.ComponentModel.Design.DesignerActionList" />
+      </Parameters>
+      <Docs>
+        <param name="actionList">A lista de marcas inteligentes a ser removido.</param>
+        <summary>Remove a lista de marca inteligente de todos os componentes gerenciados pelo serviço atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta versão do <xref:System.ComponentModel.Design.DesignerActionService.Remove%2A> método normalmente é usado por desenvolvedores de ferramentas de design, porque os desenvolvedores de componentes normalmente não sabe que outros componentes existem no espaço de design atual.  
+  
+ Se for bem-sucedido, esse método gerará o <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="actionList" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.ComponentModel.IComponent comp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.ComponentModel.IComponent comp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.Remove(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comp" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="comp">O componente de desassociar as marcas inteligentes do.</param>
+        <summary>Remove todas as listas de marcas inteligentes associadas ao componente especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se for bem-sucedido, o <xref:System.ComponentModel.Design.DesignerActionService.Remove%2A> método gera o <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="comp" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.ComponentModel.IComponent comp, System.ComponentModel.Design.DesignerActionList actionList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.ComponentModel.IComponent comp, class System.ComponentModel.Design.DesignerActionList actionList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionService.Remove(System.ComponentModel.IComponent,System.ComponentModel.Design.DesignerActionList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comp" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="actionList" Type="System.ComponentModel.Design.DesignerActionList" />
+      </Parameters>
+      <Docs>
+        <param name="comp">O componente de desassociar as marcas inteligentes do.</param>
+        <param name="actionList">A lista de marcas inteligentes para remover.</param>
+        <summary>Remove a lista de marca inteligente especificado do componente especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se for bem-sucedido, o <xref:System.ComponentModel.Design.DesignerActionService.Remove%2A> método gera o <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um ou ambos os parâmetros são <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

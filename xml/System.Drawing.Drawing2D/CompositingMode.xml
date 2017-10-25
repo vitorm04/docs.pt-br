@@ -1,0 +1,50 @@
+<Type Name="CompositingMode" FullName="System.Drawing.Drawing2D.CompositingMode">
+  <TypeSignature Language="C#" Value="public enum CompositingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CompositingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.CompositingMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como as cores de origem são combinadas com as cores da tela de fundo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SourceCopy">
+      <MemberSignature Language="C#" Value="SourceCopy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CompositingMode SourceCopy = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CompositingMode.SourceCopy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CompositingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que, quando uma cor é renderizada, ela substitui a cor da tela de fundo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceOver">
+      <MemberSignature Language="C#" Value="SourceOver" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CompositingMode SourceOver = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CompositingMode.SourceOver" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CompositingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que, quando uma cor é renderizada, la é mesclada com a cor da tela de fundo. A mesclagem é determinada pelo componente alfa da cor que está sendo renderizada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

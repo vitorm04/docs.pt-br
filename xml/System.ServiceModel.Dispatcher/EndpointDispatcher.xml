@@ -1,0 +1,329 @@
+<Type Name="EndpointDispatcher" FullName="System.ServiceModel.Dispatcher.EndpointDispatcher">
+  <TypeSignature Language="C#" Value="public sealed class EndpointDispatcher" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EndpointDispatcher extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.EndpointDispatcher" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o objeto de tempo de execução que expõe propriedades que permitem a inserção de extensões ou modificações de tempo de execução para mensagens em aplicativos de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> e <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType> classes exponham os pontos de personalização de tempo de execução para pontos de extremidade em um serviço. O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> pode ser usado para controlar quais mensagens pode processar e algumas informações relacionadas ao ponto de extremidade. O <xref:System.ServiceModel.Dispatcher.DispatchRuntime> tem um grande número de propriedades usadas para inserir extensões personalizadas no tempo de execução de todo o ponto de extremidade.  
+  
+ O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> objeto é responsável pelo processamento de mensagens de um <xref:System.ServiceModel.Dispatcher.ChannelDispatcher?displayProperty=nameWithType> quando o endereço de destino de uma mensagem corresponde a <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> propriedade e as correspondências de ação de mensagem de <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> propriedade. Se dois <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> objetos podem aceitar uma mensagem, o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A> o valor da propriedade determina o ponto de extremidade de prioridade mais alto.  
+  
+ Use o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> objeto para definir ou estender o processo de recebimento de mensagens de associado <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>, converter objetos de mensagem para objetos usados como parâmetros e chamar uma operação de ponto de extremidade, bem como o processo inverso.  
+  
+ Normalmente, o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> para um ponto de extremidade é obtido com a implementação de <xref:System.ServiceModel.Description.IEndpointBehavior> interface, mas você pode acessar o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> das interfaces do comportamento.  
+  
+ Você pode usar o seguinte <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> propriedades:  
+  
+-   O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> propriedade permite que você obtenha ou defina um <xref:System.ServiceModel.Dispatcher.MessageFilter> o objeto de <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ChannelDispatcher%2A> usa para identificar se o ponto de extremidade pode processar uma mensagem específica.  
+  
+-   O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ChannelDispatcher%2A> propriedade obtém associado <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> objeto, que envia e recebe mensagens de e para o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> e que pode ser usado para inspecionar ou modificar os outros valores de canal e comportamentos.  
+  
+-   O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> obtém o <xref:System.ServiceModel.Dispatcher.MessageFilter> objeto que é usado para identificar se uma mensagem é destinada a esse contrato.  
+  
+-   O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractName%2A> e <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractNamespace%2A> propriedades retornam o nome e o namespace do contrato de ponto de extremidade.  
+  
+-   O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> propriedade retorna o <xref:System.ServiceModel.Dispatcher.DispatchRuntime> que você pode usar para modificar os valores de tempo de execução ou inserir extensões personalizadas de tempo de execução para o ponto de extremidade inteira do objeto.  
+  
+-   O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.EndpointAddress%2A> propriedade obtém o endereço do ponto de extremidade.  
+  
+-   O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A> propriedade retorna a prioridade do filtro composto de <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ChannelDispatcher%2A> usa para estabelecer a qual ponto de extremidade é manipular a mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> para localizar o <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType> para o ponto de extremidade e inserções de um personalizado usando o comportamento de um ponto de extremidade do Inspetor de mensagem.  
+  
+ [!code-csharp[IEndpointBehavior#4](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/iendpointbehaviormessageinspector.cs#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointDispatcher (System.ServiceModel.EndpointAddress address, string contractName, string contractNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address, string contractName, string contractNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointDispatcher.#ctor(System.ServiceModel.EndpointAddress,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="contractName" Type="System.String" />
+        <Parameter Name="contractNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="address">O endereço do ponto de extremidade.</param>
+        <param name="contractName">O nome do contrato de ponto de extremidade.</param>
+        <param name="contractNamespace">O namespace do contrato de ponto de extremidade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.EndpointDispatcher" /> classe com o endereço especificado, o nome do contrato e o namespace do contrato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar um ponto de extremidade que não está na descrição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EndpointDispatcher (System.ServiceModel.EndpointAddress address, string contractName, string contractNamespace, bool isSystemEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.EndpointAddress address, string contractName, string contractNamespace, bool isSystemEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.EndpointDispatcher.#ctor(System.ServiceModel.EndpointAddress,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="contractName" Type="System.String" />
+        <Parameter Name="contractNamespace" Type="System.String" />
+        <Parameter Name="isSystemEndpoint" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="address">O endereço do ponto de extremidade.</param>
+        <param name="contractName">O nome do contrato de ponto de extremidade.</param>
+        <param name="contractNamespace">O namespace do contrato de ponto de extremidade.</param>
+        <param name="isSystemEndpoint">
+          <see langword="true" />para indicar que o ponto de extremidade é criado internamente pelo servidor e não pelo usuário; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.EndpointDispatcher" /> classe com o endereço especificado, o nome do contrato, o namespace de contrato, e se o ponto de extremidade é um ponto de extremidade público, do sistema.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressFilter">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.MessageFilter AddressFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.MessageFilter AddressFilter" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.MessageFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> que é usado para identificar se uma mensagem específica destina-se ao endereço do ponto de extremidade.</summary>
+        <value>O filtro de endereço usado para rotear a mensagem para o ponto de extremidade apropriado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Dispatcher.ChannelDispatcher?displayProperty=nameWithType> tem um <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> para cada ponto de extremidade de canal pode dar suporte. O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> propriedade é um <xref:System.ServiceModel.Dispatcher.MessageFilter?displayProperty=nameWithType> objeto que coincide com o endereço do ponto de extremidade de destino da mensagem. O <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> combina o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> valor com o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> valor para determinar se a rotear uma mensagem para esse ponto de extremidade.  
+  
+ No caso em que dois <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> objetos que correspondem pode processar uma mensagem, o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A> propriedade é usada para selecionar um ponto de extremidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelDispatcher">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.ChannelDispatcher ChannelDispatcher { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.ChannelDispatcher ChannelDispatcher" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ChannelDispatcher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.ChannelDispatcher</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o associado <see cref="T:System.ServiceModel.Dispatcher.ChannelDispatcher" /> objeto, que pode ser usado para inspecionar ou modificar os outros valores de canal e comportamentos.</summary>
+        <value>O distribuidor de canal que pode ser usado para inspecionar ou modificar os outros valores de canal e comportamentos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> objeto recebe uma mensagem de um canal e usa o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>, e <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A> propriedades para determinar por qual ponto de extremidade a mensagem é processada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractFilter">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.MessageFilter ContractFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.MessageFilter ContractFilter" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.MessageFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> que é usado para identificar se uma mensagem destina-se a este contrato.</summary>
+        <value>O filtro usado para rotear mensagens para o contrato apropriado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> propriedade é um <xref:System.ServiceModel.Dispatcher.MessageFilter> objeto que é comparado com a ação de uma mensagem. O <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> combina o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> valor com o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> valor para determinar se a rotear uma mensagem para esse ponto de extremidade.  
+  
+ No caso em que dois <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> objetos que correspondem pode processar uma mensagem, o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A> propriedade é usada para selecionar um ponto de extremidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractName">
+      <MemberSignature Language="C#" Value="public string ContractName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContractName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do contrato do ponto de extremidade.</summary>
+        <value>O nome do contrato de ponto de extremidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractNamespace">
+      <MemberSignature Language="C#" Value="public string ContractNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContractNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o namespace do contrato de ponto de extremidade.</summary>
+        <value>O namespace do contrato de ponto de extremidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DispatchRuntime">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.DispatchRuntime DispatchRuntime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.DispatchRuntime DispatchRuntime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.DispatchRuntime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.Dispatcher.DispatchRuntime" /> objeto usado para inspecionar, modificar ou estender o comportamento de tempo de execução em um ponto de extremidade de serviço ou um ponto de extremidade de retorno de chamada do cliente.</summary>
+        <value>O <see cref="P:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime" /> objeto usado para inspecionar, modificar ou estender o comportamento de tempo de execução em um ponto de extremidade de serviço ou um ponto de extremidade de retorno de chamada do cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> propriedade para obter o <xref:System.ServiceModel.Dispatcher.DispatchRuntime> objeto para modificar os valores de tempo de execução ou inserir extensões personalizadas de tempo de execução para a empresa inteira. Do <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> propriedade, você também pode navegar para o <xref:System.ServiceModel.Dispatcher.DispatchOperation?displayProperty=nameWithType> coleta para o ponto de extremidade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> para localizar o <xref:System.ServiceModel.Dispatcher.DispatchRuntime?displayProperty=nameWithType> para o ponto de extremidade e inserções de um personalizado usando o comportamento de um ponto de extremidade do Inspetor de mensagem.  
+  
+ [!code-csharp[IEndpointBehavior#4](~/samples/snippets/csharp/VS_Snippets_CFX/iendpointbehavior/cs/iendpointbehaviormessageinspector.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress EndpointAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress EndpointAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.EndpointAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço do ponto de extremidade.</summary>
+        <value>O endereço do ponto de extremidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterPriority">
+      <MemberSignature Language="C#" Value="public int FilterPriority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FilterPriority" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade do <see cref="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter" /> e <see cref="P:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter" /> combinação quando o <see cref="P:System.ServiceModel.Dispatcher.EndpointDispatcher.ChannelDispatcher" /> é selecionar os pontos de extremidade.</summary>
+        <value>A prioridade do filtro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> combina o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> valor com o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> valor para determinar se a rotear uma mensagem para esse ponto de extremidade.  
+  
+ No caso em que dois <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> objetos que correspondem pode processar uma mensagem, o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A> propriedade é usada para selecionar um ponto de extremidade.  
+  
+ Se os dois pontos de extremidade podem processar uma mensagem e o valor de suas <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A> correspondências de propriedade, um <xref:System.ServiceModel.Dispatcher.MultipleFilterMatchesException?displayProperty=nameWithType> é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSystemEndpoint">
+      <MemberSignature Language="C#" Value="public bool IsSystemEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSystemEndpoint" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.EndpointDispatcher.IsSystemEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o ponto de extremidade é criado internamente pelo servidor e não pelo usuário.</summary>
+        <value>
+          <see langword="true" />Se o ponto de extremidade foi gerado pelo sistema. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

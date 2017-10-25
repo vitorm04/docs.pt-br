@@ -1,0 +1,190 @@
+<Type Name="SoapHeaderAttribute" FullName="System.Web.Services.Protocols.SoapHeaderAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SoapHeaderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapHeaderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapHeaderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Esse atributo é aplicado a um método de serviço da Web em XML ou um cliente de serviço da Web em XML para especificar um cabeçalho SOAP que pode processar o método de serviço da Web em XML ou o cliente de serviço Web XML. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As etapas básicas usadas para recebimento e processamento de um cabeçalho SOAP são:  
+  
+1.  Criar uma classe derivando de <xref:System.Web.Services.Protocols.SoapHeader> que representa os dados passados no cabeçalho SOAP.  
+  
+2.  Adicione um membro à classe de serviço da Web em XML ou classe de proxy de cliente de serviço de Web XML do tipo criado na etapa 1.  
+  
+3.  Aplicar um <xref:System.Web.Services.Protocols.SoapHeaderAttribute> para o método de serviço da Web em XML ou o método correspondente na classe proxy, especificando o membro criado na etapa 2 do <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> propriedade.  
+  
+4.  Dentro do método de serviço da Web em XML ou código de cliente de serviço da Web em XML, acessar o <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> propriedade para processar os dados enviados no cabeçalho SOAP.  
+  
+ Para obter mais detalhes, consulte o <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O seguinte `MyWebService` XML Web Services define um <xref:System.Web.Services.Protocols.SoapHeader> do tipo `MyHeader`. O `Hello` método XML Web service requer que o cliente invocar o método de serviço da Web em XML com esta <xref:System.Web.Services.Protocols.SoapHeader>. O `Hello` XML Web Services também obtém os cabeçalhos de SOAP que `MyHeader`.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapHeaderAttribute (string memberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string memberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapHeaderAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="memberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="memberName">O membro da classe de serviço Web XML que representa o conteúdo do cabeçalho SOAP. A propriedade <see cref="P:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName" /> será definida como o valor desse parâmetro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.SoapHeaderAttribute" />, definindo o membro da classe de serviço Web XML que representa o conteúdo do cabeçalho SOAP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um cliente de serviço Web XML ou o serviço Web XML pode especificar os cabeçalhos SOAP que quiser processar para métodos específicos de serviço da Web em XML, aplicando um <xref:System.Web.Services.Protocols.SoapHeaderAttribute> para o método de serviço Web XML na classe de serviço da Web em XML ou o método correspondente na classe proxy. Em ordem para o método de serviço da Web em XML receber o conteúdo do cabeçalho SOAP, um membro é adicionado à classe de serviço da Web em XML de um <xref:System.Type> derivado de <xref:System.Web.Services.Protocols.SoapHeader>. Da mesma forma, um cliente de serviço Web XML adiciona um membro à classe de proxy derivando de <xref:System.Web.Services.Protocols.SoapHeader>. Que <xref:System.Type> derivados de <xref:System.Web.Services.Protocols.SoapHeader> representa o conteúdo do cabeçalho SOAP e é criado pelo desenvolvedor do serviço da Web em XML ou cliente de serviço da Web em XML que deseja receber o cabeçalho SOAP. Depois que a classe é criada, uma <xref:System.Web.Services.Protocols.SoapHeaderAttribute> podem ser aplicadas para o método de serviço da Web em XML ou método correspondente no XML Web service cliente proxy classe especificando o membro para receber o cabeçalho SOAP conteúdo com o `memberName` parâmetro para esse construtor ou <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> propriedade.  
+  
+ Um método de serviço Web XML pode receber vários cabeçalhos SOAP adicionando vários membros para a classe de serviço da Web em XML ou a classe de proxy de serviço da Web em XML e aplicando sucessivamente vários <xref:System.Web.Services.Protocols.SoapHeaderAttribute> atributos para o método de serviço da Web em XML.  
+  
+ Para receber e processar cabeçalhos SOAP desconhecidos no momento em que o serviço Web XML é gravado, especifique o <xref:System.Type> do membro a ser <xref:System.Web.Services.Protocols.SoapUnknownHeader>, <xref:System.Web.Services.Protocols.SoapHeader> ou uma matriz de qualquer classe.  
+  
+   
+  
+## Examples  
+ O seguinte `MyWebService` XML Web Services define um <xref:System.Web.Services.Protocols.SoapHeader> do tipo `MyHeader`. O `Hello` Especifica o método de serviço da Web em XML de `myHeader` membro como o <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> propriedade para receber o conteúdo de `MyHeader` cabeçalhos SOAP passado para o método de serviço da Web em XML.  
+  
+ [!code-cpp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapHeaderDirection Direction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapHeaderDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderAttribute.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapHeaderDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o cabeçalho SOAP destina-se para o serviço da Web em XML, o cliente do serviço da Web em XML ou ambos.</summary>
+        <value>O destinatário pretendido do cabeçalho SOAP. O padrão é <see cref="F:System.Web.Services.Protocols.SoapHeaderDirection.In" />, que significa que o destinatário pretendido é apenas o serviço Web XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte `MyWebService` XML Web Services define um <xref:System.Web.Services.Protocols.SoapHeader> do tipo `MyHeader`. O `Hello` método de serviço Web XML Especifica que `MyHeader` devem ser enviadas para o método de serviço da Web em XML e o cliente ao invocate o método de serviço da Web em XML.  
+  
+ [!code-cpp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o membro da classe de serviço Web XML que representa o conteúdo do cabeçalho SOAP.</summary>
+        <value>O membro da classe de serviço Web XML que representa o conteúdo do cabeçalho SOAP. Não há nenhum padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um serviço Web XML ou um cliente de serviço Web XML pode especificar os cabeçalhos SOAP que quiser processar aplicando um <xref:System.Web.Services.Protocols.SoapHeaderAttribute> para o método de serviço Web XML na classe de serviço da Web em XML ou o método correspondente na classe proxy. Em ordem para o método de serviço da Web em XML receber o conteúdo do cabeçalho SOAP, um membro é adicionado à classe de serviço da Web em XML de um tipo derivado de <xref:System.Web.Services.Protocols.SoapHeader>. Da mesma forma, um cliente de serviço Web XML adiciona um membro à classe de proxy derivando de <xref:System.Web.Services.Protocols.SoapHeader>. O <xref:System.Type> derivados de <xref:System.Web.Services.Protocols.SoapHeader> representa o conteúdo do cabeçalho SOAP e é criado pelo desenvolvedor do serviço da Web em XML ou cliente de serviço da Web em XML que deseja receber o cabeçalho SOAP. Depois que a classe é criada, uma <xref:System.Web.Services.Protocols.SoapHeaderAttribute> podem ser aplicadas para o método de serviço Web XML ou o método correspondente na classe de proxy do cliente de XML Web serviço especificando o membro para receber o conteúdo de cabeçalho SOAP com o <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> propriedade.  
+  
+ Um método de serviço Web XML pode receber vários cabeçalhos SOAP adicionando vários membros para a classe de serviço da Web em XML ou a classe de proxy de serviço da Web em XML e aplicando sucessivamente vários <xref:System.Web.Services.Protocols.SoapHeaderAttribute> atributos para o método de serviço da Web em XML.  
+  
+ Para receber e processar cabeçalhos SOAP desconhecidos no momento em que o serviço Web XML é gravado, especifique o tipo do membro a ser <xref:System.Web.Services.Protocols.SoapUnknownHeader>, <xref:System.Web.Services.Protocols.SoapHeader> ou uma matriz de qualquer classe.  
+  
+   
+  
+## Examples  
+ O seguinte `MyWebService` XML Web Services define um <xref:System.Web.Services.Protocols.SoapHeader> do tipo `MyHeader`. O `Hello` Especifica o método de serviço da Web em XML de `myHeader` membro como o <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> propriedade para receber o conteúdo de `MyHeader` cabeçalhos SOAP passado para o método de serviço da Web em XML.  
+  
+ [!code-cpp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapHeaderAttribute.MemberName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapHeaderAttribute.MemberName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="public bool Required { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Required" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapHeaderAttribute.Required" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed from a future version. The presence of a particular header in a SOAP message is no longer enforced", false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse membro é obsoleto e não tem nenhuma funcionalidade.</summary>
+        <value>Um valor <see cref="T:System.Boolean" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para verificar que um cabeçalho SOAP é enviado para um serviço Web XML, confirme se o membro especificado no <xref:System.Web.Services.Protocols.SoapHeaderAttribute.MemberName%2A> é de propriedade `null`. Se for `null`, o cabeçalho SOAP não foi enviado.  
+  
+ Na versão 1.0 do SDK do .NET Framework, o <xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A> propriedade indica se um cabeçalho SOAP deve ser entendido e processado pelo destinatário XML Web Services ou cliente de serviço Web XML. Se um destinatário não processou o cabeçalho SOAP uma exceção foi lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

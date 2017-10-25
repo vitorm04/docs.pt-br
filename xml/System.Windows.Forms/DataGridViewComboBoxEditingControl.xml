@@ -1,0 +1,342 @@
+<Type Name="DataGridViewComboBoxEditingControl" FullName="System.Windows.Forms.DataGridViewComboBoxEditingControl">
+  <TypeSignature Language="C#" Value="public class DataGridViewComboBoxEditingControl : System.Windows.Forms.ComboBox, System.Windows.Forms.IDataGridViewEditingControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewComboBoxEditingControl extends System.Windows.Forms.ComboBox implements class System.Windows.Forms.IDataGridViewEditingControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewComboBoxEditingControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ComboBox</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IDataGridViewEditingControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o controle de caixa de combinação hospedado em um <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl> classe é um tipo especializado de <xref:System.Windows.Forms.ComboBox> que implementa o <xref:System.Windows.Forms.IDataGridViewEditingControl> interface, permitindo que ele seja hospedado em um <xref:System.Windows.Forms.DataGridViewComboBoxCell> quando a célula está em modo de edição. Quando um <xref:System.Windows.Forms.DataGridViewComboBoxCell> é no modo de edição, você pode recuperar o <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl> por meio de <xref:System.Windows.Forms.DataGridView.EditingControl%2A> propriedade do <xref:System.Windows.Forms.DataGridView> controle.  
+  
+ Manipular o <xref:System.Windows.Forms.DataGridView.EditingControlShowing> evento para executar a inicialização personalizada do controle de edição quando uma célula entra em modo de edição. Para personalizar as características de exibição do controle, defina as propriedades do objeto retornado pelo <xref:System.Windows.Forms.DataGridViewEditingControlShowingEventArgs.CellStyle%2A?displayProperty=nameWithType> propriedade em vez de definir as propriedades do controle retornado pelo <xref:System.Windows.Forms.DataGridViewEditingControlShowingEventArgs.Control%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Windows.Forms.DataGridView.EditingControlShowing?displayProperty=nameWithType> manipulador de eventos para adicionar um manipulador para um <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl> eventos. No exemplo, o controle de edição é convertido em um <xref:System.Windows.Forms.ComboBox> para lidar com o <xref:System.Windows.Forms.ComboBox.SelectedIndexChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc2#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc2/cs/misc2.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc2#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc2/vb/misc2.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewComboBoxEditingControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxEditingControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewComboBoxEditingControl" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor padrão define o <xref:System.Windows.Forms.Control.TabStop%2A> propriedade `false`.  
+  
+ Código do aplicativo normalmente não criará explicitamente instâncias do <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl> classe, porque isso é executado automaticamente quando o contendo <xref:System.Windows.Forms.DataGridViewComboBoxCell> é criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyCellStyleToEditingControl">
+      <MemberSignature Language="C#" Value="public virtual void ApplyCellStyleToEditingControl (System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyCellStyleToEditingControl(class System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxEditingControl.ApplyCellStyleToEditingControl(System.Windows.Forms.DataGridViewCellStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataGridViewCellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+      </Parameters>
+      <Docs>
+        <param name="dataGridViewCellStyle">O <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> para usar como um padrão para a interface do usuário.</param>
+        <summary>Altera a interface do usuário do controle (IU) para ser consistente com o estilo de célula especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, e <xref:System.Windows.Forms.Control.ForeColor%2A> propriedades do controle alinham com as propriedades correspondentes do `dataGridViewCellStyle` o valor do parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlDataGridView">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGridView EditingControlDataGridView { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridView EditingControlDataGridView" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlDataGridView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.DataGridView" /> que contém o controle de caixa de combinação.</summary>
+        <value>O <see cref="T:System.Windows.Forms.DataGridView" /> que contém o <see cref="T:System.Windows.Forms.DataGridViewComboBoxCell" /> que contém este controle; caso contrário, <see langword="null" /> se não houver associado não <see cref="T:System.Windows.Forms.DataGridView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é automaticamente definida quando um <xref:System.Windows.Forms.DataGridViewComboBoxColumn> ou <xref:System.Windows.Forms.DataGridViewComboBoxCell> é criado em uma <xref:System.Windows.Forms.DataGridView> ou adicionado a um <xref:System.Windows.Forms.DataGridView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlFormattedValue">
+      <MemberSignature Language="C#" Value="public virtual object EditingControlFormattedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object EditingControlFormattedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlFormattedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a representação formatada do valor atual do controle.</summary>
+        <value>Um objeto que representa o valor atual deste controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ComboBox.Text%2A> propriedade contém os dados reais contidos no controle. Esses dados são a cadeia de caracteres mostrada na parte da caixa de texto do controle. Em contraste, o <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl.GetEditingControlFormattedValue%2A> método retorna a representação formatada da cadeia de caracteres. Como uma caixa de combinação usa cadeias de caracteres de texto sem formatação, essas duas propriedades são essencialmente as mesmas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlRowIndex">
+      <MemberSignature Language="C#" Value="public virtual int EditingControlRowIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EditingControlRowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlRowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice da linha pai da célula proprietário.</summary>
+        <value>O índice da linha que contém a célula proprietária; -1 se não houver nenhuma linha proprietária.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O índice de linha da linha de cabeçalhos de coluna é -1.  
+  
+ O índice de linha de uma linha compartilhada também é -1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlValueChanged">
+      <MemberSignature Language="C#" Value="public virtual bool EditingControlValueChanged { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EditingControlValueChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlValueChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o valor atual do controle é alterado.</summary>
+        <value>
+          <see langword="true" />Se o valor do controle é alterado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlValueChanged%2A> está definida como `true` para especificar que o valor da célula proprietário foi alterado e a célula pode precisar ser atualizado para refletir essa alteração. A célula ou tabela proprietária redefinirá a essa propriedade como `false` depois que ela foi atualizada em si.  
+  
+ Quando o controle é inicializado, essa propriedade é definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingControlWantsInputKey">
+      <MemberSignature Language="C#" Value="public virtual bool EditingControlWantsInputKey (System.Windows.Forms.Keys keyData, bool dataGridViewWantsInputKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EditingControlWantsInputKey(valuetype System.Windows.Forms.Keys keyData, bool dataGridViewWantsInputKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingControlWantsInputKey(System.Windows.Forms.Keys,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+        <Parameter Name="dataGridViewWantsInputKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Uma combinação bit a bit de <see cref="T:System.Windows.Forms.Keys" /> valores que representa a chave que foi pressionada.</param>
+        <param name="dataGridViewWantsInputKey">
+          <see langword="true" />para indicar que o <see cref="T:System.Windows.Forms.DataGridView" /> controle pode processar a chave; caso contrário, <see langword="false" />.</param>
+        <summary>Determina se a chave especificada é uma chave de entrada regular que deve ser processada pelo controle de edição ou uma chave especial que deve ser processada pelo <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <returns>
+          <see langword="true" /> se a chave especificada for uma chave de entrada regular que deverá ser manipulada pelo controle de edição; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView> controle chama esse método para determinar se deve lidar com uma chave de entrada ou deixar que o controle de edição tratá-la.  
+  
+ Este método retorna `true` se `keyData` inclui o <xref:System.Windows.Forms.Keys.Up> ou <xref:System.Windows.Forms.Keys.Down> valores ou se a lista suspensa é exibida e `keyData` inclui o <xref:System.Windows.Forms.Keys.Escape> ou <xref:System.Windows.Forms.Keys.Enter> valores. Esse método também retorna `true` se `dataGridViewWantsInputKey` é `false`. Do contrário, esse método retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingPanelCursor">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Cursor EditingPanelCursor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Cursor EditingPanelCursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxEditingControl.EditingPanelCursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cursor usado durante a edição.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Cursor" /> que representa a imagem de cursor usada pelo ponteiro de mouse durante a edição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditingControlFormattedValue">
+      <MemberSignature Language="C#" Value="public virtual object GetEditingControlFormattedValue (System.Windows.Forms.DataGridViewDataErrorContexts context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetEditingControlFormattedValue(valuetype System.Windows.Forms.DataGridViewDataErrorContexts context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxEditingControl.GetEditingControlFormattedValue(System.Windows.Forms.DataGridViewDataErrorContexts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Windows.Forms.DataGridViewDataErrorContexts" />
+      </Parameters>
+      <Docs>
+        <param name="context">Uma combinação bit a bit de <see cref="T:System.Windows.Forms.DataGridViewDataErrorContexts" /> valores que especifica o contexto de erro de dados.</param>
+        <summary>Recupera o valor formatado da célula.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa a versão formatada do conteúdo da célula.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectedIndexChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSelectedIndexChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSelectedIndexChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxEditingControl.OnSelectedIndexChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ComboBox.SelectedIndexChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareEditingControlForEdit">
+      <MemberSignature Language="C#" Value="public virtual void PrepareEditingControlForEdit (bool selectAll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PrepareEditingControlForEdit(bool selectAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewComboBoxEditingControl.PrepareEditingControlForEdit(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectAll" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="selectAll">
+          <see langword="true" />para selecionar todo o conteúdo da célula; Caso contrário, <see langword="false" />.</param>
+        <summary>Prepara a célula selecionada atualmente para edição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepositionEditingControlOnValueChange">
+      <MemberSignature Language="C#" Value="public virtual bool RepositionEditingControlOnValueChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RepositionEditingControlOnValueChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewComboBoxEditingControl.RepositionEditingControlOnValueChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o conteúdo da célula precisa ser reposicionado sempre que o valor é alterado.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

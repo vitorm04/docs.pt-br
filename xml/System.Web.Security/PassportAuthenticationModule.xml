@@ -1,0 +1,134 @@
+<Type Name="PassportAuthenticationModule" FullName="System.Web.Security.PassportAuthenticationModule">
+  <TypeSignature Language="C#" Value="public sealed class PassportAuthenticationModule : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PassportAuthenticationModule extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.PassportAuthenticationModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("This type is obsolete. The Passport authentication product is no longer supported and has been superseded by Live ID.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um wrapper em torno de serviços de autenticação do Passport. Essa classe não pode ser herdada. Essa classe foi preterida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe foi preterido e não é mais suportada. Rede do Microsoft Passport foi substituído pelo Windows Live ID. Para obter mais informações sobre como usar o Windows Live ID para autenticar usuários em um aplicativo Web, consulte [SDK do Windows Live ID](http://go.microsoft.com/fwlink/?LinkId=106346).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PassportAuthenticationModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.PassportAuthenticationModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.Security.PassportAuthenticationModule" />. Essa classe foi preterida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe foi preterido e não é mais suportada. Rede do Microsoft Passport foi substituído pelo Windows Live ID. Para obter mais informações sobre como usar o Windows Live ID para autenticar usuários em um aplicativo Web, consulte [SDK do Windows Live ID](http://go.microsoft.com/fwlink/?LinkId=106346).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticate">
+      <MemberSignature Language="C#" Value="public event System.Web.Security.PassportAuthenticationEventHandler Authenticate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.Security.PassportAuthenticationEventHandler Authenticate" />
+      <MemberSignature Language="DocId" Value="E:System.Web.Security.PassportAuthenticationModule.Authenticate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Security.PassportAuthenticationEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gerado durante a autenticação. Este é um evento global. asax que deve ser nomeado <see langword="PassportAuthentication_OnAuthenticate" />. Essa classe foi preterida</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe foi preterido e não é mais suportada. Rede do Microsoft Passport foi substituído pelo Windows Live ID. Para obter mais informações sobre como usar o Windows Live ID para autenticar usuários em um aplicativo Web, consulte [SDK do Windows Live ID](http://go.microsoft.com/fwlink/?LinkId=106346).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.PassportAuthenticationModule.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarta o módulo derivados de <see cref="T:System.Web.IHttpModule" /> quando chamados pelo <see cref="T:System.Web.HttpRuntime" />. Essa classe foi preterida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe foi preterido e não é mais suportada. Rede do Microsoft Passport foi substituído pelo Windows Live ID. Para obter mais informações sobre como usar o Windows Live ID para autenticar usuários em um aplicativo Web, consulte [SDK do Windows Live ID](http://go.microsoft.com/fwlink/?LinkId=106346).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public void Init (System.Web.HttpApplication app);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.HttpApplication app) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.PassportAuthenticationModule.Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="app" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="app">O <see cref="T:System.Web.HttpApplication" /> módulo</param>
+        <summary>Inicializa o módulo derivado de <see cref="T:System.Web.IHttpModule" /> quando chamados pelo <see cref="T:System.Web.HttpRuntime" />. Essa classe foi preterida</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe foi preterido e não é mais suportada. Rede do Microsoft Passport foi substituído pelo Windows Live ID. Para obter mais informações sobre como usar o Windows Live ID para autenticar usuários em um aplicativo Web, consulte [SDK do Windows Live ID](http://go.microsoft.com/fwlink/?LinkId=106346).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

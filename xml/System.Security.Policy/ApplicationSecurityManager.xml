@@ -1,0 +1,122 @@
+<Type Name="ApplicationSecurityManager" FullName="System.Security.Policy.ApplicationSecurityManager">
+  <TypeSignature Language="C#" Value="public static class ApplicationSecurityManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ApplicationSecurityManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.ApplicationSecurityManager" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gerencia as decisões de confiança para aplicativos ativados pelo manifesto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Policy.ApplicationSecurityManager> classe fornece informações essenciais para a execução de um aplicativo baseado no manifesto. O <xref:System.Security.Policy.ApplicationSecurityManager.ApplicationTrustManager%2A> propriedade identifica o Gerenciador de confiança responsável por determinar se um aplicativo é confiável. O <xref:System.Security.Policy.ApplicationSecurityManager.DetermineApplicationTrust%2A> método chama a relação de confiança do aplicativo Gerenciador para determinar se um aplicativo é confiável. O <xref:System.Security.Policy.ApplicationSecurityManager.UserApplicationTrusts%2A> propriedade contém as decisões de confiança em cache para o usuário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationTrustManager">
+      <MemberSignature Language="C#" Value="public static System.Security.Policy.IApplicationTrustManager ApplicationTrustManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Policy.IApplicationTrustManager ApplicationTrustManager" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityManager.ApplicationTrustManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.IApplicationTrustManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o Gerenciador de confiança do aplicativo atual.</summary>
+        <value>Um <see cref="T:System.Security.Policy.IApplicationTrustManager" /> que representa o Gerenciador de confiança atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na versão atual, há apenas um Gerenciador de confiança, que pode ser uma implementação personalizada do <xref:System.Security.Policy.IApplicationTrustManager> interface. A implementação do Gerenciador de confiança padrão solicita ao usuário permissão para instalar o aplicativo e elevar as permissões concedidas ao aplicativo. Outras implementações do Gerenciador de confiança podem ter experiências de usuário diferente. Por exemplo, uma implementação pode consultar uma lista de enterprise para aplicativos confiáveis, em vez de solicitar ao usuário essas informações.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Policy.PolicyException">A política sobre este aplicativo não tem um Gerenciador de confiança.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de exibir e modificar a política. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DetermineApplicationTrust">
+      <MemberSignature Language="C#" Value="public static bool DetermineApplicationTrust (ActivationContext activationContext, System.Security.Policy.TrustManagerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool DetermineApplicationTrust(class System.ActivationContext activationContext, class System.Security.Policy.TrustManagerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationSecurityManager.DetermineApplicationTrust(System.ActivationContext,System.Security.Policy.TrustManagerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activationContext" Type="System.ActivationContext" />
+        <Parameter Name="context" Type="System.Security.Policy.TrustManagerContext" />
+      </Parameters>
+      <Docs>
+        <param name="activationContext">Um <see cref="T:System.ActivationContext" /> identifica o contexto de ativação para o aplicativo.</param>
+        <param name="context">A <see cref="T:System.Security.Policy.TrustManagerContext" /> identifica o contexto do Gerenciador de confiança para o aplicativo.</param>
+        <summary>Determina se o usuário aprovar o aplicativo especificado seja executado com o conjunto de permissões solicitado.</summary>
+        <returns>
+          <see langword="true" />para executar o aplicativo especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Policy.ApplicationSecurityManager.DetermineApplicationTrust%2A>usa configurado <xref:System.Security.Policy.ApplicationSecurityManager.ApplicationTrustManager%2A> propriedade para determinar se deve permitir a execução do aplicativo especificado com a permissão definida solicitada no manifesto do aplicativo. Comportamento do Gerenciador de confiança depende a implementação do Gerenciador de confiança e as informações transmitidas no `context` parâmetro. O comportamento padrão do Gerenciador de confiança é estabelecer uma caixa de diálogo de interface de usuário para determinar a aprovação do usuário. No entanto, um Gerenciador de confiança também pode determinar o status de confiança de um aplicativo com base em outros critérios, como decisões fornecidos por um banco de dados corporativo. A decisão de confiança pode ser persistente, dependendo de `context` propriedades de parâmetros e a implementação do Gerenciador de confiança. Se a relação de confiança para o aplicativo é mantida para uma decisão com base em uma caixa de diálogo do usuário, futuras chamadas para o <xref:System.Security.Policy.ApplicationSecurityManager> não apresentará a caixa de diálogo de interface do usuário para cada solicitação para o aplicativo. <xref:System.Security.Policy.ApplicationSecurityManager.DetermineApplicationTrust%2A>é chamado após o manifesto, mas antes que o aplicativo foi baixado para o sistema local.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="activationContext" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UserApplicationTrusts">
+      <MemberSignature Language="C#" Value="public static System.Security.Policy.ApplicationTrustCollection UserApplicationTrusts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Policy.ApplicationTrustCollection UserApplicationTrusts" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityManager.UserApplicationTrusts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.ApplicationTrustCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de relação de confiança do aplicativo que contém as decisões de confiança em cache para o usuário.</summary>
+        <value>Um <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> que contém as decisões de confiança em cache para o usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As decisões de confiança na coleção são mantidas usando os métodos de coleção, como o <xref:System.Security.Policy.ApplicationTrustCollection.Add%2A> método ou o <xref:System.Security.Policy.ApplicationTrustCollection.Remove%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de exibir e modificar a política. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

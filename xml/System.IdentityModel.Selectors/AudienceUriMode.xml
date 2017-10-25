@@ -1,0 +1,79 @@
+<Type Name="AudienceUriMode" FullName="System.IdentityModel.Selectors.AudienceUriMode">
+  <TypeSignature Language="C#" Value="public enum AudienceUriMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AudienceUriMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.AudienceUriMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se o <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> do token de segurança <see cref="T:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition" /> deve ser validado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Selectors.AudienceUriMode> propriedade em um aplicativo federado que utiliza um serviço de token de segurança (STS) que emite <xref:System.IdentityModel.Tokens.SamlSecurityToken> tokens de segurança. Quando o STS emite o token de segurança, ele pode especificar o URI dos serviços da Web para o qual o token de segurança destina-se com a adição de um <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> para o token de segurança. Que permite que o <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> para o serviço Web destinatário verificar se o token de segurança emitido destina-se para esse serviço da Web, especificando que essa seleção deve acontecer, fazendo o seguinte:  
+  
+-   Definir o <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A> propriedade sempre ou BearerKeyOnly.  
+  
+-   Especifique o conjunto de URIs válidos, adicionando os URIs para o <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A> coleção.  
+  
+ Opcionalmente, substituir o <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.ValidateAudienceRestriction%2A> método para especificar o algoritmo de validação a ser usado para o URI permitido.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Selectors.AudienceUriMode Always = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Selectors.AudienceUriMode.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.AudienceUriMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sempre.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BearerKeyOnly">
+      <MemberSignature Language="C#" Value="BearerKeyOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Selectors.AudienceUriMode BearerKeyOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.AudienceUriMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Somente quando a chave do token de segurança é do tipo BearerKey e não há nenhuma chave de prova de posse no token de segurança.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Selectors.AudienceUriMode Never = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Selectors.AudienceUriMode.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.AudienceUriMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nunca.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,309 @@
+<Type Name="CultureTypes" FullName="System.Globalization.CultureTypes">
+  <TypeSignature Language="C#" Value="public enum CultureTypes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CultureTypes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.CultureTypes" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define os tipos de listas de cultura que podem ser recuperados usando o método <see cref="M:System.Globalization.CultureInfo.GetCultures(System.Globalization.CultureTypes)" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses valores de tipo de cultura são retornados pelo <xref:System.Globalization.CultureInfo.CultureTypes%2A?displayProperty=nameWithType> propriedade e sirvam como um filtro que limita as culturas retornadas pelo <xref:System.Globalization.CultureInfo.GetCultures%2A?displayProperty=nameWithType> método. Para obter mais informações sobre culturas, consulte <xref:System.Globalization.CultureInfo>.  
+  
+ Geralmente, seu aplicativo deve enumerar todas as culturas, usando o valor de AllCultures. Isso permite que a enumeração de culturas personalizadas, bem como outros tipos de cultura.  
+  
+ Observe que os membros FrameworkCultures e WindowsOnlyCultures foram preteridos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Globalization.CultureTypes.AllCultures> enumeração e <xref:System.Globalization.CultureInfo.CultureTypes%2A> propriedade.  
+  
+ [!code-cpp[System.Globalization.CultureTypes#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.globalization.cultureTypes/cpp/ct.cpp#1)]
+ [!code-csharp[System.Globalization.CultureTypes#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureTypes/cs/ct.cs#1)]
+ [!code-vb[System.Globalization.CultureTypes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureTypes/vb/ct.vb#1)]  
+  
+ O exemplo a seguir exibe várias propriedades das culturas neutras.  
+  
+ [!code-cpp[System.Globalization.CultureInfo.GetCultures#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.CultureInfo.GetCultures/CPP/getcultures.cpp#1)]
+ [!code-csharp[System.Globalization.CultureInfo.GetCultures#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.CultureInfo.GetCultures/CS/getcultures.cs#1)]
+ [!code-vb[System.Globalization.CultureInfo.GetCultures#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.CultureInfo.GetCultures/VB/getcultures.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllCultures">
+      <MemberSignature Language="C#" Value="AllCultures" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureTypes AllCultures = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureTypes.AllCultures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todas as culturas que acompanham o .NET Framework, incluindo culturas neutras e específicas, culturas instaladas no sistema operacional Windows e culturas personalizadas criadas pelo usuário.  
+  
+ <see cref="F:System.Globalization.CultureTypes.AllCultures" /> é um campo de composição que inclui os valores <see cref="F:System.Globalization.CultureTypes.NeutralCultures" />, <see cref="F:System.Globalization.CultureTypes.SpecificCultures" /> e <see cref="F:System.Globalization.CultureTypes.InstalledWin32Cultures" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkCultures">
+      <MemberSignature Language="C#" Value="FrameworkCultures" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureTypes FrameworkCultures = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureTypes.FrameworkCultures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This value has been deprecated.  Please use other values in CultureTypes.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este membro é substituído; o uso deste valor com <see cref="M:System.Globalization.CultureInfo.GetCultures(System.Globalization.CultureTypes)" /> retorna neutras e culturas fornecidas com o .NET Framework 2.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InstalledWin32Cultures">
+      <MemberSignature Language="C#" Value="InstalledWin32Cultures" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureTypes InstalledWin32Cultures = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureTypes.InstalledWin32Cultures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todas as culturas instaladas no sistema operacional Windows. Observe que nem todas as culturas com suporte no .NET Framework estão instaladas no sistema operacional.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NeutralCultures">
+      <MemberSignature Language="C#" Value="NeutralCultures" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureTypes NeutralCultures = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureTypes.NeutralCultures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Culturas associadas a um idioma, mas que não são específicas de um país ou uma região. Os nomes de culturas do .NET Framework consistem no código de duas letras minúsculas derivado da ISO 639-1. Por exemplo: “en” (inglês) é uma cultura neutra.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Culturas personalizadas podem ter qualquer nome especificado pelo usuário, não apenas um código de duas letras.  
+  
+ A cultura invariável é incluída na matriz de culturas retornado pelo <xref:System.Globalization.CultureInfo.GetCultures%2A?displayProperty=nameWithType> método que especifica esse valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacementCultures">
+      <MemberSignature Language="C#" Value="ReplacementCultures" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureTypes ReplacementCultures = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureTypes.ReplacementCultures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Culturas personalizadas criadas pelo usuário que substituem as culturas que acompanham o .NET Framework.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecificCultures">
+      <MemberSignature Language="C#" Value="SpecificCultures" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureTypes SpecificCultures = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureTypes.SpecificCultures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Culturas específicas de um país ou uma região. Os nomes dessas culturas seguem o RFC 4646 (Windows Vista e posterior). O formato é "&lt;formato código_de_idioma2&gt;-&lt;país/regioncode2&gt;", onde &lt;formato código_de_idioma2&gt; é derivado de um código de duas letras minúsculas do ISO 639-1 e &lt;país/regioncode2&gt; é um código de duas letras maiusculas derivado da ISO 3166. Por exemplo, “en-US” para inglês (Estados Unidos) é uma cultura específica.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Culturas personalizadas podem ter qualquer nome especificado pelo usuário, não apenas um nome compatível com o padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserCustomCulture">
+      <MemberSignature Language="C#" Value="UserCustomCulture" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureTypes UserCustomCulture = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureTypes.UserCustomCulture" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Culturas personalizadas criadas pelo usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nas versões do Windows antes do Windows 10, o valor de UserCustomCulture é atribuído para culturas personalizadas criadas pelo desenvolvedor. No Windows 10, o valor de UserCustomCulture também é atribuído para culturas do sistema que não são suportados por um conjunto completo de dados culturais e que não têm identificadores exclusivos de locais. (Todas as culturas do tipo UserCustomCulture compartilham um <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType> valor `LOCALE_CUSTOM_UNSPECIFIED` (0x1000 ou 4096). Como resultado, código, como  
+  
+ [!code-csharp[System.Globalization.CultureTypes#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureTypes/cs/getcultures3.cs#2)]
+ [!code-vb[System.Globalization.CultureTypes#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureTypes/vb/getcultures3.vb#2)]  
+  
+ ou  
+  
+ [!code-csharp[System.Globalization.CultureTypes#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureTypes/cs/getcultures3.cs#3)]
+ [!code-vb[System.Globalization.CultureTypes#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureTypes/vb/getcultures3.vb#3)]  
+  
+ retornará conjuntos diferentes de culturas em diferentes versões do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsOnlyCultures">
+      <MemberSignature Language="C#" Value="WindowsOnlyCultures" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.CultureTypes WindowsOnlyCultures = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.CultureTypes.WindowsOnlyCultures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This value has been deprecated.  Please use other values in CultureTypes.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este membro foi preterido. Se ele for usado como argumento para o método <see cref="M:System.Globalization.CultureInfo.GetCultures(System.Globalization.CultureTypes)" />, o método retornará uma matriz vazia.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

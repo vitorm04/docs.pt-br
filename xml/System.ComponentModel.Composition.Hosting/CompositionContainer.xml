@@ -1,0 +1,565 @@
+<Type Name="CompositionContainer" FullName="System.ComponentModel.Composition.Hosting.CompositionContainer">
+  <TypeSignature Language="C#" Value="public class CompositionContainer : System.ComponentModel.Composition.Hosting.ExportProvider, IDisposable, System.ComponentModel.Composition.ICompositionService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompositionContainer extends System.ComponentModel.Composition.Hosting.ExportProvider implements class System.ComponentModel.Composition.ICompositionService, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Composition.Hosting.ExportProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Composition.ICompositionService</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Gerencia a composição de partes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> objeto atende a dois objetivos principais em um aplicativo. Primeiro, ele mantém o controle de quais partes estão disponíveis para composição e quais são suas dependências e executa a composição sempre que o conjunto de disponíveis partes alterações. Em segundo lugar, ele fornece os métodos pelos quais o aplicativo obtém as instâncias de partes compostos ou preenche as dependências de uma parte de composição.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ Partes podem ser disponibilizadas para o contêiner seja diretamente ou por meio de <xref:System.ComponentModel.Composition.Hosting.CompositionContainer.Catalog%2A> propriedade. Todas as partes detectáveis neste <xref:System.ComponentModel.Composition.Primitives.ComposablePartCatalog> estão disponíveis para o contêiner para atender as importações, juntamente com quaisquer partes adicionados diretamente.  
+  
+ O <xref:System.ComponentModel.Composition.Hosting.CompositionContainer.Compose%2A> método permite que partes instanciadas a ser adicionado a um contêiner existente. Supondo que composição for bem-sucedida, essas partes terão suas importações preenchidas com partes recuperadas do contêiner e suas exportações estará disponíveis para outras partes. Importações marcadas como pode ser recomposta serão registradas para recomposition.  
+  
+ O <xref:System.ComponentModel.Composition.Hosting.CompositionContainer.SatisfyImportsOnce%2A> método permite que uma parte ter suas importações preenchidas sem que está sendo adicionado ao contêiner. Se a composição for bem-sucedida, importações da parte serão preenchidas, mas exportações da parte não estará disponíveis para outras partes e nenhum importações serão registradas para recomposition.  
+  
+ <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>objetos sempre devem ser descartados. Quando o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer.Dispose%2A> método é chamado, o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> objeto também remove todas as partes que ele foi criado.  
+  
+ Um <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> objeto que pode ser acessado por vários threads deve ser construído com o `isThreadSafe` parâmetro definido como `true`, usando o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer.%23ctor%28System.ComponentModel.Composition.Primitives.ComposablePartCatalog%2CSystem.Boolean%2CSystem.ComponentModel.Composition.Hosting.ExportProvider%5B%5D%29> construtor. O desempenho será um pouco mais lento quando `isThreadSafe` é `true`, portanto, é recomendável que você defina esse parâmetro para `false` em cenários de thread único. O padrão é `false`.  
+  
+> [!WARNING]
+>  Um <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> nunca deve importar a mesmo, ou uma parte que tem uma referência a ele. Tal referência pode permitir que uma parte não confiável acessar todas as partes no contêiner.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> objeto é inicializado com um catálogo e é usado para preencher as importações de uma parte. Este exemplo usa o modelo de programação atribuído.  
+  
+ [!code-csharp[Composition.CompositionContainer#1](~/samples/snippets/csharp/VS_Snippets_Misc/composition.compositioncontainer/cs/program.cs#1)]
+ [!code-vb[Composition.CompositionContainer#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/composition.compositioncontainer/vb/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionContainer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionContainer (params System.ComponentModel.Composition.Hosting.ExportProvider[] providers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Hosting.ExportProvider[] providers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.#ctor(System.ComponentModel.Composition.Hosting.ExportProvider[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providers" Type="System.ComponentModel.Composition.Hosting.ExportProvider[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="providers">Uma matriz de <see cref="T:System.ComponentModel.Composition.Hosting.ExportProvider" /> objetos que fornecem o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> acesso <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos, ou <see langword="null" /> definir <see cref="P:System.ComponentModel.Composition.Hosting.CompositionContainer.Providers" /> para vazio <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> classe com os provedores de exportação especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="providers" />contém um elemento que é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionContainer (System.ComponentModel.Composition.Hosting.CompositionOptions compositionOptions, params System.ComponentModel.Composition.Hosting.ExportProvider[] providers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.Composition.Hosting.CompositionOptions compositionOptions, class System.ComponentModel.Composition.Hosting.ExportProvider[] providers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.#ctor(System.ComponentModel.Composition.Hosting.CompositionOptions,System.ComponentModel.Composition.Hosting.ExportProvider[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="compositionOptions" Type="System.ComponentModel.Composition.Hosting.CompositionOptions" />
+        <Parameter Name="providers" Type="System.ComponentModel.Composition.Hosting.ExportProvider[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="compositionOptions">Um objeto que especifica o comportamento desse contêiner.</param>
+        <param name="providers">Uma matriz de <see cref="T:System.ComponentModel.Composition.Hosting.ExportProvider" /> objetos que fornecem o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> acesso <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos, ou <see langword="null" /> definir <see cref="P:System.ComponentModel.Composition.Hosting.CompositionContainer.Providers" /> para vazio <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> classe com as opções e os provedores de exportação especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="providers" />contém um elemento que é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionContainer (System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, params System.ComponentModel.Composition.Hosting.ExportProvider[] providers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, class System.ComponentModel.Composition.Hosting.ExportProvider[] providers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.#ctor(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,System.ComponentModel.Composition.Hosting.ExportProvider[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="catalog" Type="System.ComponentModel.Composition.Primitives.ComposablePartCatalog" />
+        <Parameter Name="providers" Type="System.ComponentModel.Composition.Hosting.ExportProvider[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="catalog">Um catálogo que fornece objetos <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> para o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</param>
+        <param name="providers">Uma matriz de <see cref="T:System.ComponentModel.Composition.Hosting.ExportProvider" /> objetos que fornecem o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> acesso <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos, ou <see langword="null" /> definir <see cref="P:System.ComponentModel.Composition.Hosting.CompositionContainer.Providers" /> para vazio <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> classe com o catálogo especificado e provedores de exportação.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="providers" />contém um elemento que é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionContainer (System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, bool isThreadSafe, params System.ComponentModel.Composition.Hosting.ExportProvider[] providers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, bool isThreadSafe, class System.ComponentModel.Composition.Hosting.ExportProvider[] providers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.#ctor(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,System.Boolean,System.ComponentModel.Composition.Hosting.ExportProvider[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="catalog" Type="System.ComponentModel.Composition.Primitives.ComposablePartCatalog" />
+        <Parameter Name="isThreadSafe" Type="System.Boolean" />
+        <Parameter Name="providers" Type="System.ComponentModel.Composition.Hosting.ExportProvider[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="catalog">Um catálogo que fornece objetos <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> para o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</param>
+        <param name="isThreadSafe">
+          <see langword="true" /> se este objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> deve ser thread-safe; caso contrário, <see langword="false" />.</param>
+        <param name="providers">Uma matriz de objetos <see cref="T:System.ComponentModel.Composition.Hosting.ExportProvider" /> que fornecem o acesso <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> a objetos <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> ou <see langword="null" /> para definir a propriedade <see cref="P:System.ComponentModel.Composition.Hosting.CompositionContainer.Providers" /> para um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> vazio.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> com o catálogo, modo thread-safe e provedores de exportação especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> objeto que pode ser acessado por vários threads deve definir o `isThreadSafe` parâmetro `true`. O desempenho será um pouco mais lento quando `isThreadSafe` é `true`, portanto, é recomendável que você defina esse parâmetro para `false` em cenários de thread único. O padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ou mais elementos de <paramref name="providers" /> são <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionContainer (System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, System.ComponentModel.Composition.Hosting.CompositionOptions compositionOptions, params System.ComponentModel.Composition.Hosting.ExportProvider[] providers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Composition.Primitives.ComposablePartCatalog catalog, valuetype System.ComponentModel.Composition.Hosting.CompositionOptions compositionOptions, class System.ComponentModel.Composition.Hosting.ExportProvider[] providers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.#ctor(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,System.ComponentModel.Composition.Hosting.CompositionOptions,System.ComponentModel.Composition.Hosting.ExportProvider[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="catalog" Type="System.ComponentModel.Composition.Primitives.ComposablePartCatalog" />
+        <Parameter Name="compositionOptions" Type="System.ComponentModel.Composition.Hosting.CompositionOptions" />
+        <Parameter Name="providers" Type="System.ComponentModel.Composition.Hosting.ExportProvider[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="catalog">Um catálogo que fornece objetos <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> para o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</param>
+        <param name="compositionOptions">Um objeto que especifica as opções que afetam o comportamento do contêiner.</param>
+        <param name="providers">Uma matriz de <see cref="T:System.ComponentModel.Composition.Hosting.ExportProvider" /> objetos que fornecem o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> acesso <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos, ou <see langword="null" /> definir <see cref="P:System.ComponentModel.Composition.Hosting.CompositionContainer.Providers" /> para vazio <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> classe com o catálogo especificado, opções e provedores de exportação.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="providers" />contém um elemento que é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Catalog">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Primitives.ComposablePartCatalog Catalog { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Composition.Primitives.ComposablePartCatalog Catalog" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.CompositionContainer.Catalog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ComposablePartCatalog</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartCatalog" /> que fornece o acesso ao contêiner para <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos.</summary>
+        <value>O catálogo que fornece o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> acesso para exportações produzidos de <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> objetos. O padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Compose">
+      <MemberSignature Language="C#" Value="public void Compose (System.ComponentModel.Composition.Hosting.CompositionBatch batch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Compose(class System.ComponentModel.Composition.Hosting.CompositionBatch batch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.Compose(System.ComponentModel.Composition.Hosting.CompositionBatch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="batch" Type="System.ComponentModel.Composition.Hosting.CompositionBatch" />
+      </Parameters>
+      <Docs>
+        <param name="batch">Altera para o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> para inclusão durante a composição.</param>
+        <summary>Adiciona ou remove as partes no <see cref="T:System.ComponentModel.Composition.Hosting.CompositionBatch" /> especificado do contêiner e executa a composição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é a principal maneira de adicionar ou remover partes do contêiner de diretamente. O <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> sempre mantém um estado estável, composto. Portanto, ao chamar <xref:System.ComponentModel.Composition.Hosting.CompositionContainer.Compose%2A> com vazio <xref:System.ComponentModel.Composition.Hosting.CompositionBatch> nunca é necessária para iniciar a composição. Em vez disso, chame o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer.Compose%2A> método sempre que você precisa fazer alterações às partes disponíveis para o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>.  
+  
+ O <xref:System.ComponentModel.Composition.Hosting.CompositionBatch> pode conter partes a serem adicionados e partes a ser removido.  Recomposition ocorrerá apenas uma vez para cada chamada para <xref:System.ComponentModel.Composition.Hosting.CompositionContainer.Compose%2A>.  
+  
+   
+  
+## Examples  
+ Neste exemplo simples, três partes são criados e adicionados para o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>, e uma parte é recuperada para mostrar todas as importações foram preenchidas. Este exemplo usa o modelo de programação atribuído.  
+  
+ [!code-csharp[Composition.CompositionContainer.Compose#1](~/samples/snippets/csharp/VS_Snippets_Misc/composition.compositioncontainer.compose/cs/program.cs#1)]
+ [!code-vb[Composition.CompositionContainer.Compose#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/composition.compositioncontainer.compose/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>. O `Dispose` método deixa o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> para o coletor de lixo possa recuperar a memória que o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportsCore">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt; GetExportsCore (System.ComponentModel.Composition.Primitives.ImportDefinition definition, System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.Export&gt; GetExportsCore(class System.ComponentModel.Composition.Primitives.ImportDefinition definition, class System.ComponentModel.Composition.Hosting.AtomicComposition atomicComposition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.GetExportsCore(System.ComponentModel.Composition.Primitives.ImportDefinition,System.ComponentModel.Composition.Hosting.AtomicComposition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="definition" Type="System.ComponentModel.Composition.Primitives.ImportDefinition" />
+        <Parameter Name="atomicComposition" Type="System.ComponentModel.Composition.Hosting.AtomicComposition" />
+      </Parameters>
+      <Docs>
+        <param name="definition">O objeto que define as condições dos objetos <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> a serem obtidas.</param>
+        <param name="atomicComposition">A transação de composição para usar, ou <see langword="null" /> para desabilitar a composição transacional.</param>
+        <summary>Retorna uma coleção de todas as exportações que correspondem às condições do <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> objeto.</summary>
+        <returns>Uma coleção de todos os <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos nesta <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> que correspondem às condições especificadas pelo objeto <paramref name="definition" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações não devem tratar incompatibilidades de cardinalidade como erros e não devem lançar exceções para incompatibilidades de cardinalidade. Por exemplo, se a importação solicita exatamente uma exportação e o provedor tem nenhum exportações de correspondência ou em mais de um, o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer.GetExportsCore%2A> método deve retornar vazio <xref:System.Collections.Generic.IEnumerable%601> coleção de <xref:System.ComponentModel.Composition.Primitives.Export> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ComponentModel.Composition.Hosting.ExportProvider&gt; Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.ComponentModel.Composition.Hosting.ExportProvider&gt; Providers" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Hosting.CompositionContainer.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ComponentModel.Composition.Hosting.ExportProvider&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os provedores de exportação que fornecem acesso a contêiner a adicionais <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePartCatalog" /> objetos.</summary>
+        <value>Uma coleção de <see cref="T:System.ComponentModel.Composition.Hosting.ExportProvider" /> objetos que fornecem o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> acesso a mais <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos. O padrão é um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> vazio.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseExport">
+      <MemberSignature Language="C#" Value="public void ReleaseExport (System.ComponentModel.Composition.Primitives.Export export);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReleaseExport(class System.ComponentModel.Composition.Primitives.Export export) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.ReleaseExport(System.ComponentModel.Composition.Primitives.Export)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="export" Type="System.ComponentModel.Composition.Primitives.Export" />
+      </Parameters>
+      <Docs>
+        <param name="export">O <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> que precisa ser liberado.</param>
+        <summary>Libera especificado <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> de objeto o <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento desse método pode variar dependendo da implementação do <xref:System.ComponentModel.Composition.Hosting.ExportProvider> que produziu o <xref:System.ComponentModel.Composition.Primitives.Export> instância. Como regra, exportações não compartilhado devem ser desanexadas do contêiner.  
+  
+ Por exemplo, o <xref:System.ComponentModel.Composition.Hosting.CatalogExportProvider> será apenas a versão um <xref:System.ComponentModel.Composition.Primitives.Export> se se trata de um <xref:System.ComponentModel.Composition.Primitives.ComposablePart> que foi construída em uma <xref:System.ComponentModel.Composition.CreationPolicy.NonShared> contexto. Versão neste contexto significa percorrer a cadeia de dependência da <xref:System.ComponentModel.Composition.Primitives.Export> objetos, referências do contêiner e chamar a desanexação `Dispose` no <xref:System.ComponentModel.Composition.Primitives.ComposablePart> objetos conforme necessário. Se o <xref:System.ComponentModel.Composition.Primitives.Export> foi construído em uma <xref:System.ComponentModel.Composition.CreationPolicy.Shared> contexto a <xref:System.ComponentModel.Composition.Hosting.CatalogExportProvider> não fará nada, como especificado <xref:System.ComponentModel.Composition.Primitives.Export> que está sendo usado por outros solicitantes de maio. Aqueles só serão desanexados quando o contêiner é descartado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="export" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseExport&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void ReleaseExport&lt;T&gt; (Lazy&lt;T&gt; export);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReleaseExport&lt;T&gt;(class System.Lazy`1&lt;!!T&gt; export) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.ReleaseExport``1(System.Lazy{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="export" Type="System.Lazy&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de exportação.</typeparam>
+        <param name="export">Uma referência indireta para a exportação para remover.</param>
+        <summary>Remove a exportação especificada de composição e libera os recursos se possível.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseExports">
+      <MemberSignature Language="C#" Value="public void ReleaseExports (System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt; exports);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReleaseExports(class System.Collections.Generic.IEnumerable`1&lt;class System.ComponentModel.Composition.Primitives.Export&gt; exports) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.ReleaseExports(System.Collections.Generic.IEnumerable{System.ComponentModel.Composition.Primitives.Export})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exports" Type="System.Collections.Generic.IEnumerable&lt;System.ComponentModel.Composition.Primitives.Export&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="exports">Uma coleção de <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos sejam liberados.</param>
+        <summary>Libera um conjunto de <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> de objetos a partir de <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento desse método pode variar dependendo do contexto no qual o <xref:System.ComponentModel.Composition.Primitives.Export> foi construído. Para obter mais informações, consulte o método <xref:System.ComponentModel.Composition.Hosting.CompositionContainer.ReleaseExport%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="exports" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="exports" />contém um elemento que é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseExports&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void ReleaseExports&lt;T&gt; (System.Collections.Generic.IEnumerable&lt;Lazy&lt;T&gt;&gt; exports);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReleaseExports&lt;T&gt;(class System.Collections.Generic.IEnumerable`1&lt;class System.Lazy`1&lt;!!T&gt;&gt; exports) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.ReleaseExports``1(System.Collections.Generic.IEnumerable{System.Lazy{``0}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="exports" Type="System.Collections.Generic.IEnumerable&lt;System.Lazy&lt;T&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de exportação.</typeparam>
+        <param name="exports">Uma coleção de referências indiretas para as exportações a ser removido.</param>
+        <summary>Remove uma coleção de exportações da composição e libera os recursos se possível.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseExports&lt;T,TMetadataView&gt;">
+      <MemberSignature Language="C#" Value="public void ReleaseExports&lt;T,TMetadataView&gt; (System.Collections.Generic.IEnumerable&lt;Lazy&lt;T,TMetadataView&gt;&gt; exports);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReleaseExports&lt;T, TMetadataView&gt;(class System.Collections.Generic.IEnumerable`1&lt;class System.Lazy`2&lt;!!T, !!TMetadataView&gt;&gt; exports) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.ReleaseExports``2(System.Collections.Generic.IEnumerable{System.Lazy{``0,``1}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+        <TypeParameter Name="TMetadataView" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="exports" Type="System.Collections.Generic.IEnumerable&lt;System.Lazy&lt;T,TMetadataView&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de exportação.</typeparam>
+        <typeparam name="TMetadataView">O tipo de exibição de metadados as exportações.</typeparam>
+        <param name="exports">Uma coleção de referências indiretas exportações a ser removido e seus metadados.</param>
+        <summary>Remove uma coleção de exportações da composição e libera os recursos se possível.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SatisfyImportsOnce">
+      <MemberSignature Language="C#" Value="public void SatisfyImportsOnce (System.ComponentModel.Composition.Primitives.ComposablePart part);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SatisfyImportsOnce(class System.ComponentModel.Composition.Primitives.ComposablePart part) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionContainer.SatisfyImportsOnce(System.ComponentModel.Composition.Primitives.ComposablePart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="part" Type="System.ComponentModel.Composition.Primitives.ComposablePart" />
+      </Parameters>
+      <Docs>
+        <param name="part">A parte da qual satisfazer as importações.</param>
+        <summary>Satisfaz as importações do objeto <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> especificado sem registrá-lo para recomposição.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" /> foi descartado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="part" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Composition.CompositionException">Ocorreu um erro durante a composição. O <see cref="P:System.ComponentModel.Composition.CompositionException.Errors" /> conterá uma coleção dos erros ocorridos.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

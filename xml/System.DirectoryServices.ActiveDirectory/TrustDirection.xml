@@ -1,0 +1,77 @@
+<Type Name="TrustDirection" FullName="System.DirectoryServices.ActiveDirectory.TrustDirection">
+  <TypeSignature Language="C#" Value="public enum TrustDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TrustDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.TrustDirection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica a direção de uma relação de confiança.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A direção da relação de confiança é sempre em relação a um dos lados de uma relação de confiança. Por exemplo, se o domínio A tem uma relação de confiança de entrada com o domínio B, em seguida, por definição, o domínio B tem uma relação de confiança de saída com o domínio A.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bidirectional">
+      <MemberSignature Language="C#" Value="Bidirectional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.TrustDirection Bidirectional = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.TrustDirection.Bidirectional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada domínio ou floresta tem acesso aos recursos de outro domínio ou floresta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inbound">
+      <MemberSignature Language="C#" Value="Inbound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.TrustDirection Inbound = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.TrustDirection.Inbound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este é um domínio ou uma floresta confiante. O domínio ou floresta tem acesso aos recursos do domínio ou da floresta. Este domínio ou floresta não tem acesso a recursos que pertencem a outro domínio ou floresta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Outbound">
+      <MemberSignature Language="C#" Value="Outbound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ActiveDirectory.TrustDirection Outbound = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ActiveDirectory.TrustDirection.Outbound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Isso é uma floresta ou domínio confiável. Este domínio ou floresta tem acesso aos recursos de outro domínio ou floresta. O domínio ou floresta não tem acesso aos recursos do domínio ou da floresta.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

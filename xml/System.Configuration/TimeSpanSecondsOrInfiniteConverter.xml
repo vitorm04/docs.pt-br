@@ -1,0 +1,151 @@
+<Type Name="TimeSpanSecondsOrInfiniteConverter" FullName="System.Configuration.TimeSpanSecondsOrInfiniteConverter">
+  <TypeSignature Language="C#" Value="public sealed class TimeSpanSecondsOrInfiniteConverter : System.Configuration.TimeSpanSecondsConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TimeSpanSecondsOrInfiniteConverter extends System.Configuration.TimeSpanSecondsConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.TimeSpanSecondsOrInfiniteConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.TimeSpanSecondsConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte um <see cref="T:System.TimeSpan" /> expresso em segundos, ou como um período de tempo padrão de infinito.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este tipo, como todos os outros conversor tipos de configuração, converte cadeias de caracteres encontradas no arquivo de configuração de e para as propriedades com rigidez de tipos relacionadas.  
+  
+ Em particular, o <xref:System.Configuration.TimeSpanSecondsOrInfiniteConverter> converte <xref:System.String> segundos, atribuídos a uma propriedade de configuração, a <xref:System.TimeSpan> segundos e vice-versa. Se a propriedade de configuração tem um <xref:System.String> valor de "infinito", ele converte esse valor para <xref:System.TimeSpan.MaxValue> e vice-versa.  
+  
+ O infinito <xref:System.TimeSpan> valor é representado pelo <xref:System.TimeSpan.MaxValue> valor de enumeração.  
+  
+   
+  
+## Examples  
+ Consulte exemplos de código a <xref:System.Configuration.InfiniteTimeSpanConverter> e <xref:System.Configuration.TimeSpanMinutesConverter> classes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimeSpanSecondsOrInfiniteConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.TimeSpanSecondsOrInfiniteConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.TimeSpanSecondsOrInfiniteConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você usa os tipos de conversor fornecidos pelo sistema. A única vez em que você precisa usar o <xref:System.Configuration.TimeSpanSecondsOrInfiniteConverter.%23ctor%2A> construtor é quando você cria seu próprio tipo de conversão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.TimeSpanSecondsOrInfiniteConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> usado para conversões de tipo de objeto.</param>
+        <param name="ci">O <see cref="T:System.Globalization.CultureInfo" /> usado durante a conversão do objeto.</param>
+        <param name="data">O <see cref="T:System.String" /> objeto converter.</param>
+        <summary>Converte uma <see cref="T:System.String" /> em uma <see cref="T:System.TimeSpan" />.</summary>
+        <returns>O <see cref="F:System.TimeSpan.MaxValue" />, se o <paramref name="data" /> parâmetro é o <see cref="T:System.String" /> "infinito"; caso contrário, o <see cref="T:System.TimeSpan" /> que representa o <paramref name="data" /> parâmetro em segundos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema usa <xref:System.Configuration.TimeSpanSecondsOrInfiniteConverter.ConvertFrom%2A> durante a leitura de um arquivo de configuração para converter um <xref:System.String> valor <xref:System.TimeSpan>, ou o <xref:System.String> "infinito" para <xref:System.TimeSpan.MaxValue>.  
+  
+   
+  
+## Examples  
+ Consulte exemplos de código a <xref:System.Configuration.InfiniteTimeSpanConverter> e <xref:System.Configuration.TimeSpanMinutesConverter> classes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext ctx, System.Globalization.CultureInfo ci, object value, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext ctx, class System.Globalization.CultureInfo ci, object value, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.TimeSpanSecondsOrInfiniteConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="ci" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> usado para conversões de tipo de objeto.</param>
+        <param name="ci">O <see cref="T:System.Globalization.CultureInfo" /> usado durante a conversão do objeto.</param>
+        <param name="value">O valor a ser convertido.</param>
+        <param name="type">O tipo de conversão.</param>
+        <summary>Converte um <see cref="T:System.TimeSpan" /> para um. <see cref="T:System.String" />.</summary>
+        <returns>O <see cref="T:System.String" /> "infinito", se o <paramref name="value" /> parâmetro é <see cref="F:System.TimeSpan.MaxValue" />; caso contrário, o <see cref="T:System.String" /> que representa o <paramref name="value" /> parâmetro em segundos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema usa <xref:System.Configuration.TimeSpanSecondsOrInfiniteConverter.ConvertTo%2A> ao gravar em um arquivo de configuração para converter um <xref:System.TimeSpan> valor ou <xref:System.TimeSpan.MaxValue> para um <xref:System.String>.  
+  
+   
+  
+## Examples  
+ Consulte exemplos de código a <xref:System.Configuration.InfiniteTimeSpanConverter> e <xref:System.Configuration.TimeSpanMinutesConverter> classes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

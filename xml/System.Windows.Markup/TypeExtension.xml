@@ -1,0 +1,225 @@
+<Type Name="TypeExtension" FullName="System.Windows.Markup.TypeExtension">
+  <TypeSignature Language="C#" Value="public class TypeExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TypeExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.TypeExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Markup.TypeExtensionConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("PresentationFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Type))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa uma extensão de marcação que retorna um <see cref="T:System.Type" /> com base em uma cadeia de caracteres de entrada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] informações de uso, consulte [x: tipo de extensão de marcação](~/docs/framework/xaml-services/x-type-markup-extension.md).  
+  
+> [!NOTE]
+>  O `{x:Type}` funcionalidade geralmente é para invocação de código do usuário da marcação. Para o código que está implementando suporte XAML, serviços de resolução de tipo provenientes <xref:System.Windows.Markup.IXamlTypeResolver> e estão relacionados à implementação da atuar contexto do esquema XAML. Não tente fazer referência <xref:System.Windows.Markup.TypeExtension.ProvideValue%2A> como um substituto para um <xref:System.Windows.Markup.IXamlTypeResolver> provedor de serviços; o contexto transmitido no pode não ser válido para uma resolução de tipo e as tentativas de chamar sem serviços válidos falharão.  
+  
+## <a name="wpf-usage-notes"></a>Observações de uso do WPF  
+ Referências de tipo são geralmente usadas para áreas de recurso de estilo, modelo e a associação de dados em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], quando esses recursos são referenciados pelo XAML.  
+  
+<a name="xamlTextUsage_TypeExtension"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.TypeExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.TypeExtension" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeExtension (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.TypeExtension.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Uma cadeia de caracteres que identifica o tipo para fazer uma referência a. Essa cadeia de caracteres usa o formato <c>prefixo: className</c>. <c>prefixo</c> é o prefixo de mapeamento para um namespace XAML e só é necessário para fazer referência a tipos que não estão mapeados para o namespace XAML padrão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.TypeExtension" /> classe Inicializando o <see cref="P:System.Windows.Markup.TypeExtension.TypeName" /> valor com base em fornecidos <paramref name="typeName" /> cadeia de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor não é avaliado quando você configurá-lo no construtor. Se o valor não for `null`, o valor será aceito inicialmente. A análise real e avaliação do valor é adiada até <xref:System.Windows.Markup.TypeExtension.ProvideValue%2A> é chamado nessa extensão, quando o XAML é analisado e com contextos de serviço disponível ativos. No momento o `typeName` deve ser resolvido como um tipo em um contexto de esquema XAML e esse tipo é retornado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Tentativa de especificar <paramref name="typeName" /> como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeExtension (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.TypeExtension.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo a ser representado por esse <see cref="T:System.Windows.Markup.TypeExtension" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.TypeExtension" /> classe, o tipo declarativo diretamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um método auxiliar para usos de código de tempo de execução de <xref:System.Windows.Markup.TypeExtension> e não faz parte do padrão da implementação normal para uma extensão de marcação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.TypeExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Objeto que pode fornecer serviços para a extensão de marcação. O provedor deve fornecer um serviço para <see cref="T:System.Windows.Markup.IXamlTypeResolver" />.</param>
+        <summary>Retorna um objeto que deve ser definido na propriedade onde essa extensão é aplicada. Para <see cref="T:System.Windows.Markup.TypeExtension" /> , esse é o <see cref="T:System.Type" /> valor conforme avaliada para o nome do tipo solicitado.</summary>
+        <returns>O <see cref="T:System.Type" /> para definir a propriedade onde a extensão é aplicada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode passar `null` para `serviceProvider`, mas somente se essa <xref:System.Windows.Markup.TypeExtension> instância foi estabelecida com um tipo true inicial no construtor, em vez de um `typeName`. Caso contrário, essa implementação de extensão de marcação depende de serviços com base no passado `serviceProvider`. Ele não deve ser `null`. O `serviceProvider` deve fornecer um serviço para <xref:System.Windows.Markup.IXamlTypeResolver>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="member" />valor de extensão é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Alguma parte do <paramref name="typeName" /> cadeia de caracteres não foi analisada corretamente.  
+  
+ -ou-  
+  
+ <paramref name="serviceProvider" />não forneceu um serviço para<see cref="T:System.Windows.Markup.IXamlTypeResolver" />  
+  
+ -ou-  
+  
+ <paramref name="typeName" />valor não foi resolvido para um tipo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceProvider" /> é <see langword="null" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.TypeExtension.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.ConstructorArgument("type")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de tipo para esta extensão.</summary>
+        <value>O tipo estabelecido. Para fins de tempo de execução, isso pode ser <see langword="null" /> para obter acesso, mas não pode ser definido como <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que esta instância foi deliberadamente instanciada com o <xref:System.Windows.Markup.TypeExtension.%23ctor%28System.Type%29> construtor de assinatura, esse valor será `null`. Essa propriedade não será redefinido quando <xref:System.Windows.Markup.TypeExtension.ProvideValue%2A> é chamado. Se você quiser o verdadeiro tipo representado você sempre deve chamar <xref:System.Windows.Markup.TypeExtension.ProvideValue%2A> em vez de verificar essa propriedade.  
+  
+ Essa propriedade é configurável por regras comuns sobre o uso da extensão de marcação. No entanto, se você estiver configurando com um <xref:System.Type>, em seguida, a finalidade desta extensão de marcação é irrelevante, porque o mesmo <xref:System.Type> é retornado de um <xref:System.Windows.Markup.TypeExtension.ProvideValue%2A> chamar.  
+  
+<a name="xamlTextUsage_Type"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Tentativa de definir <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.TypeExtension.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tipo representado por esta extensão de marcação.</summary>
+        <value>Uma cadeia de caracteres que identifica o tipo. Essa cadeia de caracteres usa o formato *prefixo*<c>:</c>*className*. (*prefixo* é o prefixo de mapeamento para um namespace XML e só é necessário para fazer referência a tipos que não são mapeados para o namespace XML padrão para WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](~/includes/tlasharptla-wpfxmlnsv1-md.md)]).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_TypeName"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Tentativa de definir <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

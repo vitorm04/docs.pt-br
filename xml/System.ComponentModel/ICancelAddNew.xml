@@ -1,0 +1,121 @@
+<Type Name="ICancelAddNew" FullName="System.ComponentModel.ICancelAddNew">
+  <TypeSignature Language="C#" Value="public interface ICancelAddNew" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICancelAddNew" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ICancelAddNew" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Adiciona a funcionalidade transacional durante a adição de um novo item a uma coleção.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.ICancelAddNew> interface permite que uma coleção para adicionar um novo item de forma extensível. O novo item posteriormente pode ser confirmado ou revertido. O <xref:System.ComponentModel.IBindingList.AddNew%2A> método da coleção é usado para adicionar temporariamente o item, que é subsequentemente transacionado por meio das seguintes operações:  
+  
+-   O <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> método explicitamente confirmará a adição pendente.  
+  
+-   Executando outra operação de coleção, como uma inserção, remoção ou mover implicitamente confirmará a adição pendente.  
+  
+-   O <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> método reverterá a adição pendente se ele não já foi confirmado.  
+  
+> [!NOTE]
+>  Em alguns cenários, como associação de dados complexos de formulários do Windows, a coleção pode receber <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> ou <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> chama para itens que não sejam o item recém-adicionado. (Cada item normalmente é uma linha em uma exibição de dados). Ignorar essas chamadas; Cancelar ou confirmar o novo item somente quando o índice do item é especificado.  
+  
+ Há dois modelos que permitem a adição transacional de um item em uma coleção de associação de dados:  
+  
+-   O antigo modelo depende diretamente em uma coleção que implementa o <xref:System.ComponentModel.IBindingList> de interface e dados associados diretamente usando o <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType> classe. O <xref:System.Windows.Forms.CurrencyManager.AddNew%2A>, <xref:System.Windows.Forms.CurrencyManager.EndCurrentEdit%2A>, e <xref:System.Windows.Forms.CurrencyManager.CancelCurrentEdit%2A> métodos de <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType> classe são responsáveis por suporte transacional para adicionar novos itens. No entanto, essa funcionalidade depende dos itens com suporte a comportamento transacional por meio de <xref:System.ComponentModel.IEditableObject> interface. Se os itens não dão suporte a essa interface, o item sempre será adicionado à lista, independentemente das chamadas subsequentes para <xref:System.Windows.Forms.CurrencyManager.CancelCurrentEdit%2A>.  
+  
+-   O modelo mais recente aceita um cenário de associação de dados mais robusto por meio de genérica <xref:System.ComponentModel.BindingList%601> de classe que implementa o <xref:System.ComponentModel.IBindingList> e <xref:System.ComponentModel.ICancelAddNew> interfaces. Nesse caso, o suporte transacional é gerenciado pelo <xref:System.ComponentModel.BindingList%601> coleção diretamente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CancelNew">
+      <MemberSignature Language="C#" Value="public void CancelNew (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelNew(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICancelAddNew.CancelNew(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice do item que foi adicionado anteriormente à coleção.</param>
+        <summary>Descarta um novo item pendente da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A> método reverte uma adição pendente (<xref:System.ComponentModel.IBindingList.AddNew%2A>) de um item adicionado anteriormente à coleção na posição `itemIndex`. O parâmetro de índice é necessário porque vários novos itens podem estar pendentes simultaneamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndNew">
+      <MemberSignature Language="C#" Value="public void EndNew (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndNew(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICancelAddNew.EndNew(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice do item que foi adicionado anteriormente à coleção.</param>
+        <summary>Confirma um novo item de pendente para a coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.ICancelAddNew.EndNew%2A> confirma uma adição pendente (<xref:System.ComponentModel.IBindingList.AddNew%2A>) de um item adicionado anteriormente à coleção na posição `itemIndex`. O parâmetro de índice é necessário porque vários novos itens podem estar pendentes simultaneamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

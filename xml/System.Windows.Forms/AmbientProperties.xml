@@ -1,0 +1,141 @@
+<Type Name="AmbientProperties" FullName="System.Windows.Forms.AmbientProperties">
+  <TypeSignature Language="C#" Value="public sealed class AmbientProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AmbientProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AmbientProperties" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece valores de propriedade de ambiente para controles de nível superior.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma propriedade de ambiente é uma propriedade em um controle que, se não for definido, será recuperado do controle pai. Se o controle não tem um pai e a propriedade não for definida, o controle tenta localizar o valor da propriedade de ambiente por meio de <xref:System.ComponentModel.Component.Site%2A> propriedade. Se o controle não é localizado, o site não oferece suporte a propriedades de ambiente ou a propriedade não está definida no <xref:System.Windows.Forms.AmbientProperties> objeto, o <xref:System.Windows.Forms.Control> usa seus próprios valores padrão. Alguns objetos derivados do <xref:System.Windows.Forms.Control> classe pode definir a propriedade, mesmo se você não fizer isso. Por exemplo, o <xref:System.Windows.Forms.Form> classe sempre define o <xref:System.Windows.Forms.Control.ForeColor%2A> e <xref:System.Windows.Forms.Control.BackColor%2A> propriedades.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AmbientProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AmbientProperties.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.AmbientProperties" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AmbientProperties.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de plano de fundo de ambiente de um objeto.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa a cor de plano de fundo de um objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhuma cor de plano de fundo de ambiente, o valor da <xref:System.Windows.Forms.Control.BackColor%2A> está definida como <xref:System.Drawing.Color.Empty?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cursor">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Cursor Cursor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Cursor Cursor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AmbientProperties.Cursor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o cursor do ambiente de um objeto.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Cursor" /> que representa o cursor de um objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não há nenhum cursor de ambiente, o valor da <xref:System.Windows.Forms.Control.Cursor%2A> é de propriedade `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AmbientProperties.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte de ambiente de um objeto.</summary>
+        <value>Um <see cref="T:System.Drawing.Font" /> que representa a fonte usada ao exibir o texto dentro de um objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhuma fonte de ambiente, o valor da <xref:System.Windows.Forms.Control.Font%2A> é de propriedade `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.AmbientProperties.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano ambiente de um objeto.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa a cor de primeiro plano de um objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhuma cor de primeiro plano de ambiente, o valor da <xref:System.Windows.Forms.Control.ForeColor%2A> está definida como <xref:System.Drawing.Color.Empty?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

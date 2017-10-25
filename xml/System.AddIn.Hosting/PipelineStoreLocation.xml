@@ -1,0 +1,53 @@
+<Type Name="PipelineStoreLocation" FullName="System.AddIn.Hosting.PipelineStoreLocation">
+  <TypeSignature Language="C#" Value="public enum PipelineStoreLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PipelineStoreLocation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.PipelineStoreLocation" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os locais alternativos para um repositório de pipeline, em vez de um caminho para um diretório.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração contém apenas o valor de ApplicationBase no momento.  
+  
+ Os métodos de <xref:System.AddIn.Hosting.AddInStore> classe que usam essa enumeração habilitar parcialmente hosts confiáveis, que podem não ter permissão para descobrir o seu próprio local localizar e ativar suplementos em seu próprio diretório.  
+  
+ Você pode usar o <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType> e <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType> sobrecargas do método para especificar um local para atualizar ou recriar o repositório de pipeline e o <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType> sobrecarga do método para especificar um local para encontrar suplementos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o valor de ApplicationBase para ativar um suplemento dos arquivos de armazenamento do pipeline, que estão localizados no diretório do aplicativo host.  
+  
+ [!code-csharp[AddInP3Host#4](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#4)]
+ [!code-vb[AddInP3Host#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationBase">
+      <MemberSignature Language="C#" Value="ApplicationBase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.PipelineStoreLocation ApplicationBase = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.PipelineStoreLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O local especificado pelo <see cref="P:System.AppDomainSetup.ApplicationBase" /> propriedade de configuração de host do domínio de aplicativo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

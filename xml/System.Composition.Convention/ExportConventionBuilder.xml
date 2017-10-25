@@ -1,0 +1,170 @@
+<Type Name="ExportConventionBuilder" FullName="System.Composition.Convention.ExportConventionBuilder">
+  <TypeSignature Language="C#" Value="public sealed class ExportConventionBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExportConventionBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.Convention.ExportConventionBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.Convention</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura uma exportação que está associada uma parte.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddMetadata">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ExportConventionBuilder AddMetadata (string name, Func&lt;Type,object&gt; getValueFromPartType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ExportConventionBuilder AddMetadata(string name, class System.Func`2&lt;class System.Type, object&gt; getValueFromPartType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AddMetadata(System.String,System.Func{System.Type,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="getValueFromPartType" Type="System.Func&lt;System.Type,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome dos metadados a serem adicionados.</param>
+        <param name="getValueFromPartType">Uma função que fornece o valor de metadados a serem adicionados.</param>
+        <summary>Adiciona os metadados que têm o nome e o valor especificados para a exportação.</summary>
+        <returns>Um construtor de exportação que contém os metadados que permite a configuração adicional.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMetadata">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ExportConventionBuilder AddMetadata (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ExportConventionBuilder AddMetadata(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AddMetadata(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome dos metadados a serem adicionados.</param>
+        <param name="value">O valor dos metadados a serem adicionados.</param>
+        <summary>Adiciona os metadados que têm o nome e o valor especificados para a exportação.</summary>
+        <returns>Um construtor de exportação que contém os metadados que permite a configuração adicional.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsContractName">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ExportConventionBuilder AsContractName (Func&lt;Type,string&gt; getContractNameFromPartType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ExportConventionBuilder AsContractName(class System.Func`2&lt;class System.Type, string&gt; getContractNameFromPartType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AsContractName(System.Func{System.Type,System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="getContractNameFromPartType" Type="System.Func&lt;System.Type,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="getContractNameFromPartType">Uma função que fornece o nome do contrato.</param>
+        <summary>Especifica o nome do contrato para a exportação com base no resultado da função especificada no tipo de exportação.</summary>
+        <returns>Um construtor de exportação que contém o nome do contrato que permite a configuração adicional.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsContractName">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ExportConventionBuilder AsContractName (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ExportConventionBuilder AsContractName(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AsContractName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">O nome do contrato.</param>
+        <summary>Especifica o nome do contrato para a exportação.</summary>
+        <returns>Um construtor de exportação que contém o nome do contrato que permite a configuração adicional.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsContractType">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ExportConventionBuilder AsContractType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ExportConventionBuilder AsContractType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AsContractType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo.</param>
+        <summary>Especifica o tipo de contrato para a exportação.</summary>
+        <returns>Um construtor de exportação que contém o tipo de contrato que permite a configuração adicional.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsContractType&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Composition.Convention.ExportConventionBuilder AsContractType&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Composition.Convention.ExportConventionBuilder AsContractType&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Convention.ExportConventionBuilder.AsContractType``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Convention</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Composition.Convention.ExportConventionBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo genérico.</typeparam>
+        <summary>Especifica o tipo de contrato para a exportação como um tipo genérico.</summary>
+        <returns>Um construtor de exportação que contém o tipo de contrato que permite a configuração adicional.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

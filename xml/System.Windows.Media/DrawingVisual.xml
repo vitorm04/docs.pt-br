@@ -1,0 +1,186 @@
+<Type Name="DrawingVisual" FullName="System.Windows.Media.DrawingVisual">
+  <TypeSignature Language="C#" Value="public class DrawingVisual : System.Windows.Media.ContainerVisual" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DrawingVisual extends System.Windows.Media.ContainerVisual" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.DrawingVisual" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.ContainerVisual</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+      <see cref="T:System.Windows.Media.DrawingVisual" />é um objeto visual que pode ser usado para renderizar gráficos vetoriais na tela. O conteúdo é mantido pelo sistema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.DrawingVisual>é uma classe leve que é usada para renderizar formas, imagens ou texto. Essa classe é considerada leve porque não fornece layout, entrada, foco ou manipulação de eventos, o que melhora o desempenho. Por esse motivo, desenhos são ideais para telas de fundo e clip-art.  
+  
+ Para usar <xref:System.Windows.Media.DrawingVisual> objetos, você precisa criar um contêiner de host para os objetos. O objeto contêiner host deve ser derivado de <xref:System.Windows.FrameworkElement> classe, que oferece suporte para o layout e a manipulação de eventos que o <xref:System.Windows.Media.DrawingVisual> classe não oferece suporte. O objeto contêiner host não exibe as propriedades de visual, como sua finalidade principal é conter objetos filho. Para obter mais informações, consulte [Usando objetos DrawingVisual](~/docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md).  
+  
+ Para obter um exemplo completo mostrando como criar <xref:System.Windows.Media.DrawingVisual> objetos com um contêiner de host, consulte o [ocorrências Test Using DrawingVisuals Sample](http://go.microsoft.com/fwlink/?LinkID=159994) .  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DrawingVisual ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingVisual.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.DrawingVisual" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Windows.Media.DrawingVisual> do objeto, ele não tem nenhum conteúdo de desenho. Você pode adicionar conteúdo da imagem, gráfico ou texto, recuperar o contexto do objeto de desenho e desenho nele. Um contexto de desenho é retornado ao chamar o <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> método de um <xref:System.Windows.Media.DrawingVisual> objeto.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um <xref:System.Windows.Media.DrawingVisual> objeto é criado e um retângulo em seu contexto de desenho. Observe que você deve chamar o <xref:System.Windows.Media.DrawingContext.Close%2A> método o <xref:System.Windows.Media.DrawingContext> para manter o conteúdo de desenho.  
+  
+ [!code-csharp[DrawingVisualSample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
+ [!code-vb[DrawingVisualSample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Drawing">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DrawingGroup Drawing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.DrawingGroup Drawing" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DrawingVisual.Drawing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DrawingGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o desenho conteúdo do <see cref="T:System.Windows.Media.DrawingVisual" /> objeto.</summary>
+        <value>Obtém um valor do tipo <see cref="T:System.Windows.Media.DrawingGroup" /> que representa a coleção de <see cref="T:System.Windows.Media.Drawing" /> objetos no <see cref="T:System.Windows.Media.DrawingVisual" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto visual armazena seus dados de renderização como uma lista de instruções de gráficos vetoriais. Cada item na lista de instruções representa um conjunto de baixo nível de dados de gráficos em um formato serializado. Para obter mais informações sobre objetos visuais como armazenar dados de gráficos, consulte [visão geral de renderização do WPF gráficos](~/docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
+  
+ Qualquer alteração retornado <xref:System.Windows.Media.DrawingGroup> valor não é mantido pelo <xref:System.Windows.Media.DrawingVisual>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, o <xref:System.Windows.Media.DrawingGroup> valor de cada <xref:System.Windows.Media.DrawingVisual> em um host do visual é enumerado.  
+  
+ [!code-csharp[VisualSnippets#DrawingVisualSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/DrawingVisual.xaml.cs#drawingvisualsnippet1)]
+ [!code-vb[VisualSnippets#DrawingVisualSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/drawingvisual.xaml.vb#drawingvisualsnippet1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.GeometryHitTestResult HitTestCore (System.Windows.Media.GeometryHitTestParameters hitTestParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.GeometryHitTestResult HitTestCore(class System.Windows.Media.GeometryHitTestParameters hitTestParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingVisual.HitTestCore(System.Windows.Media.GeometryHitTestParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeometryHitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitTestParameters" Type="System.Windows.Media.GeometryHitTestParameters" />
+      </Parameters>
+      <Docs>
+        <param name="hitTestParameters">Um valor do tipo <see cref="T:System.Windows.Media.GeometryHitTestParameters" /> que especifica o <see cref="T:System.Windows.Media.Geometry" /> teste contra.</param>
+        <summary>Determina se um valor de geometria está dentro dos limites do objeto visual.</summary>
+        <returns>Um valor do tipo <see cref="T:System.Windows.Media.GeometryHitTestResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.HitTestResult HitTestCore (System.Windows.Media.PointHitTestParameters hitTestParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.HitTestResult HitTestCore(class System.Windows.Media.PointHitTestParameters hitTestParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingVisual.HitTestCore(System.Windows.Media.PointHitTestParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.HitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitTestParameters" Type="System.Windows.Media.PointHitTestParameters" />
+      </Parameters>
+      <Docs>
+        <param name="hitTestParameters">Um valor do tipo <see cref="T:System.Windows.Media.PointHitTestParameters" /> que especifica o <see cref="T:System.Windows.Point" /> teste contra.</param>
+        <summary>Determina se um valor de coordenadas de ponto está dentro dos limites do <see cref="T:System.Windows.Media.DrawingVisual" /> objeto.</summary>
+        <returns>Um valor do tipo <see cref="T:System.Windows.Media.HitTestResult" />, representando o <see cref="T:System.Windows.Media.Visual" /> retornado de um teste de clique.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.HitTestResult.VisualHit%2A> propriedade do valor de retorno representa o objeto visual que foi atingido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderOpen">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DrawingContext RenderOpen ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.DrawingContext RenderOpen() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingVisual.RenderOpen" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DrawingContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre o objeto <see cref="T:System.Windows.Media.DrawingVisual" /> para renderização. O valor <see cref="T:System.Windows.Media.DrawingContext" /> retornado pode ser usado para renderizar no <see cref="T:System.Windows.Media.DrawingVisual" />.</summary>
+        <returns>Um valor do tipo <see cref="T:System.Windows.Media.DrawingContext" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o <xref:System.Windows.Media.DrawingContext.Close%2A> método o <xref:System.Windows.Media.DrawingContext>, atual que substitui o conteúdo de desenho qualquer conteúdo de desenho anterior definido para o <xref:System.Windows.Media.DrawingVisual>. Isso significa que não é possível anexar o novo conteúdo de desenho para conteúdo de desenho existente.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Media.DrawingVisual> objeto é criado e sua <xref:System.Windows.Media.DrawingContext> retornado.  
+  
+ [!code-csharp[DrawingVisualSample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
+ [!code-vb[DrawingVisualSample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
+  
+ A ordem na qual desenhar no contexto do desenho é importante — cada desenho subsequente é desenhado sobre os outros. No exemplo a seguir, o retângulo é desenhado primeiro e o texto.  
+  
+ [!code-csharp[VisualSnippets#RenderOrderSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Snippets.cs#renderordersnippet1)]
+ [!code-vb[VisualSnippets#RenderOrderSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/snippets.vb#renderordersnippet1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

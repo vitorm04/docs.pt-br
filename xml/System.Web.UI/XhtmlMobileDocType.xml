@@ -1,0 +1,79 @@
+<Type Name="XhtmlMobileDocType" FullName="System.Web.UI.XhtmlMobileDocType">
+  <TypeSignature Language="C#" Value="public enum XhtmlMobileDocType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XhtmlMobileDocType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.XhtmlMobileDocType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de XHTML para o <see cref="T:System.Web.UI.XhtmlTextWriter" /> classe para renderizar a página ou controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você especificar um o <xref:System.Web.UI.XhtmlMobileDocType> valores de enumeração como o parâmetro em um <xref:System.Web.UI.XhtmlTextWriter.SetDocType%2A?displayProperty=nameWithType> chamada de método, valor força o gravador de texto para atender as restrições desse tipo de documento XHTML.  
+  
+ XHTML básica é a versão móvel do XHTML 1.0 e suporta o número mínimo de módulos XHTML um documento XHTML. Ele foi projetado para clientes que não oferecem suporte para o conjunto completo de recursos XHTML, como telefones celulares, personal digital assistants (PDAs), pagers e decodificadores de sinais. Com Basic XHTML, um documento pode ser apresentado no número máximo de clientes, incluindo uma ampla variedade de telefones celulares com recursos de apresentação e formatos de exibição diferente.  
+  
+ XHTML Mobile Profile adiciona a XHTML Basic vários atributos e elementos adicionais de XHTML 1.0 completo, incluindo elementos de apresentação adicionais e suporte para folhas de estilo interno.  
+  
+ 2.0 WML expande XHTML básica e de perfil móvel de XHTML, fornecendo suporte para folhas de estilo em cascata.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Wml20">
+      <MemberSignature Language="C#" Value="Wml20" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.XhtmlMobileDocType Wml20 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.XhtmlMobileDocType.Wml20" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.XhtmlMobileDocType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o formato WML 2.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XhtmlBasic">
+      <MemberSignature Language="C#" Value="XhtmlBasic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.XhtmlMobileDocType XhtmlBasic = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.XhtmlMobileDocType.XhtmlBasic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.XhtmlMobileDocType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o formato básico de XHTML. Esse formato não dá suporte a quadros e estilos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XhtmlMobileProfile">
+      <MemberSignature Language="C#" Value="XhtmlMobileProfile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.XhtmlMobileDocType XhtmlMobileProfile = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.XhtmlMobileDocType.XhtmlMobileProfile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.XhtmlMobileDocType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o formato de perfil móvel de XHTML.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

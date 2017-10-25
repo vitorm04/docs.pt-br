@@ -1,0 +1,46 @@
+<Type Name="SiteMapResolveEventHandler" FullName="System.Web.SiteMapResolveEventHandler">
+  <TypeSignature Language="C#" Value="public delegate System.Web.SiteMapNode SiteMapResolveEventHandler(object sender, SiteMapResolveEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SiteMapResolveEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SiteMapResolveEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.SiteMapResolveEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Web.SiteMapNode</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A origem do evento, uma instância do <see cref="T:System.Web.SiteMapProvider" /> classe.</param>
+    <param name="e">Um <see cref="T:System.Web.SiteMapResolveEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o <see cref="E:System.Web.SiteMapProvider.SiteMapResolve" /> eventos de uma instância específica da <see cref="T:System.Web.SiteMapProvider" /> ou estático <see cref="T:System.Web.SiteMap" /> classe.</summary>
+    <returns>O <see cref="T:System.Web.SiteMapNode" /> que representa o resultado da operação <see cref="T:System.Web.SiteMapResolveEventHandler" />.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estático <xref:System.Web.SiteMap> classe expõe o <xref:System.Web.SiteMap.SiteMapResolve> eventos do provedor de mapa do site padrão.  
+  
+ Quando você cria um <xref:System.Web.UI.WebControls.SqlDataSourceCommandEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como tratar o <xref:System.Web.SiteMap.SiteMapResolve> evento em uma página da Web ASP.NET para modificar as URLs de destino que são exibidas por um controle de navegação do site, como o <xref:System.Web.UI.WebControls.SiteMapPath> controle. Neste exemplo, a página atual for uma página de postagem em um quadro de avisos online ou o fórum. Para tornar mais significativa a navegação do site, as URLs de nós que são exibidos pelo controle de navegação serão anexados com cadeias de caracteres de consulta que são relevantes para o contexto.  
+  
+> [!NOTE]
+>  É seguro acessar o <xref:System.Web.SiteMap.CurrentNode%2A> propriedade de dentro de <xref:System.Web.SiteMapResolveEventHandler> classe. A infraestrutura de navegação de site ASP.NET protege contra a recursão infinita, nesse caso.  
+  
+ [!code-csharp[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/CS/sitemapresolve1cs.aspx.cs#1)]
+ [!code-vb[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/VB/sitemapresolve1vb.aspx.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

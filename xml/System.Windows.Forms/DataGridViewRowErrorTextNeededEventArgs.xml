@@ -1,0 +1,112 @@
+<Type Name="DataGridViewRowErrorTextNeededEventArgs" FullName="System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewRowErrorTextNeededEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewRowErrorTextNeededEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Windows.Forms.DataGridView.RowErrorTextNeeded" /> de um controle <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> evento ocorre somente quando o <xref:System.Windows.Forms.DataGridView> controle <xref:System.Windows.Forms.DataGridView.DataSource%2A> está definida ou seu <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> é de propriedade `true`. Manipulando o <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> evento é útil quando você quiser determinar o erro para uma linha, dependendo de seu estado e os valores que ele contém.  
+  
+ Quando você processa o <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> eventos e especifique o texto de erro no manipulador de um glifo de erro é exibida no cabeçalho da linha, a menos que o <xref:System.Windows.Forms.DataGridView.ShowRowErrors%2A?displayProperty=nameWithType> está definida como `false`. Quando o usuário move o ponteiro do mouse sobre o glifo de erro, o texto de erro é exibida em uma dica de ferramenta.  
+  
+ O <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> evento também ocorre sempre que o valor da <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A?displayProperty=nameWithType> propriedade é recuperada.  
+  
+ Você pode usar o <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs.RowIndex%2A> propriedade para determinar o estado ou o valor de uma linha e use essas informações para alterar ou modificar o <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs.ErrorText%2A> propriedade. Essa propriedade é inicializada com o valor da linha <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> propriedade, que substitui o valor do evento.  
+  
+ Manipular o <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> eventos ao trabalhar com grandes quantidades de dados para evitar as penalidades de desempenho de definir a linha <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> valor para várias linhas. Para obter mais informações, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse tipo. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridView> chamado `DataGridView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#346](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#346)]
+ [!code-vb[System.Windows.Forms.EventExamples#346](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#346)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ErrorText">
+      <MemberSignature Language="C#" Value="public string ErrorText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs.ErrorText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto de erro para a linha.</summary>
+        <value>Uma cadeia de caracteres que representa o texto de erro para a linha.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicialmente, essa propriedade contém o valor da <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A?displayProperty=nameWithType> propriedade se ele tiver sido definido para uma linha.  
+  
+ O <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs.ErrorText%2A> exibe o valor da propriedade como uma dica de ferramenta do glifo de erro no cabeçalho da linha.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs.ErrorText%2A> propriedade em um manipulador de eventos. Embora o código realmente usa o <xref:System.Windows.Forms.DataGridViewCellErrorTextNeededEventArgs.ErrorText%2A?displayProperty=nameWithType> propriedade, essa propriedade é praticamente idêntica ao <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs.ErrorText%2A> propriedade de <xref:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs>.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView_SharedRowScenarios#24](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/CPP/sharedrows.cpp#24)]
+ [!code-csharp[System.Windows.Forms.DataGridView_SharedRowScenarios#24](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/CS/sharedrows.cs#24)]
+ [!code-vb[System.Windows.Forms.DataGridView_SharedRowScenarios#24](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_SharedRowScenarios/VB/sharedrows.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowErrorTextNeededEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a linha que gerou o <see cref="E:System.Windows.Forms.DataGridView.RowErrorTextNeeded" /> evento.</summary>
+        <value>O linha baseada em índice zero para a linha.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridView> chamado `DataGridView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridView.RowErrorTextNeeded?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#346](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#346)]
+ [!code-vb[System.Windows.Forms.EventExamples#346](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#346)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,62 @@
+<Type Name="IWorkBatch" FullName="System.Workflow.Runtime.IWorkBatch">
+  <TypeSignature Language="C#" Value="public interface IWorkBatch" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWorkBatch" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.IWorkBatch" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos para adicionar a um lote de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Serviços de usam essa interface para adicionar trabalho para pendente de <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Workflow.Runtime.IPendingWork work, object workItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Workflow.Runtime.IPendingWork work, object workItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.IWorkBatch.Add(System.Workflow.Runtime.IPendingWork,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="work" Type="System.Workflow.Runtime.IPendingWork" />
+        <Parameter Name="workItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="work">Um <see cref="T:System.Workflow.Runtime.IPendingWork" /> objeto associado a <c>item de trabalho</c>.</param>
+        <param name="workItem">Um objeto no qual o trabalho está para ser executada.</param>
+        <summary>Adiciona um item de trabalho pendente para um lote de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é usado para adicionar itens de trabalho pendente para um lote de trabalho. O `workItem` objeto adicionado ao lote está associado `work`, um objeto que implementa o <xref:System.Workflow.Runtime.IPendingWork> interface. Os métodos fornecidos por esse <xref:System.Workflow.Runtime.IPendingWork> objeto será chamado para manipular a confirmação final do `workItem`. Serviços de usam esse método para adicionar trabalho para pendente de <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

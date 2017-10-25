@@ -1,0 +1,89 @@
+<Type Name="MailFileEditor" FullName="System.Web.UI.Design.MailFileEditor">
+  <TypeSignature Language="C#" Value="public class MailFileEditor : System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MailFileEditor extends System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.MailFileEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.UrlEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface de usuário para selecionar e editar um nome de arquivo de email para uma propriedade em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.MailFileEditor> classe é um <xref:System.Drawing.Design.UITypeEditor> objeto que pode ser usado em tempo de design para selecionar e editar um nome de arquivo de email como uma cadeia de caracteres e atribuir a cadeia de caracteres a uma propriedade de controle. Por exemplo, o <xref:System.Web.UI.WebControls.EmbeddedMailObject> controlar usa o <xref:System.Web.UI.Design.MailFileEditor> classe em tempo de design para definir o valor da <xref:System.Web.UI.WebControls.EmbeddedMailObject.Path%2A> propriedade.  
+  
+ Use o <xref:System.ComponentModel.EditorAttribute> atributo para associar o <xref:System.Web.UI.Design.MailFileEditor> com uma propriedade. Quando a propriedade associada é editada na superfície de design, o host de designer chama o <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> método. O <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> método exibe uma caixa de diálogo para selecionar um nome de arquivo de email de uma lista filtrada de arquivos e retorna o nome do arquivo selecionado pelo usuário. O <xref:System.Web.UI.Design.UrlEditor.GetEditStyle%2A> método indica o estilo de exibição da interface do usuário.  
+  
+ Derivar uma classe a partir de <xref:System.Web.UI.Design.MailFileEditor> para definir um editor personalizado para uma propriedade de nome de arquivo de email. Por exemplo, uma classe derivada pode substituir o <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> método e exibir um <xref:System.Windows.Forms.OpenFileDialog> instância com um título ou um filtro de arquivo personalizado de email.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como associar uma instância do <xref:System.Web.UI.Design.MailFileEditor> classe com uma propriedade que está dentro de um controle personalizado. Quando a propriedade de controle é editada na superfície de design, o <xref:System.Web.UI.Design.MailFileEditor> classe fornece a interface do usuário para selecionar e editar um nome de arquivo de email para o valor da propriedade.  
+  
+ [!code-csharp[System.Web.UI.Design.FileEditor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.FileEditor/CS/simplecontrolwithfilename.cs#1)]
+ [!code-vb[System.Web.UI.Design.FileEditor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.FileEditor/VB/simplecontrolwithfilename.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MailFileEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MailFileEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.MailFileEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="protected override string Caption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.MailFileEditor.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a legenda para a caixa de diálogo do editor.</summary>
+        <value>A legenda para a caixa de diálogo de tempo de design.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="protected override string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.MailFileEditor.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres de filtro de arquivo para a caixa de diálogo (como "*.txt").</summary>
+        <value>O filtro para selecionar os arquivos na caixa de diálogo de tempo de design.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

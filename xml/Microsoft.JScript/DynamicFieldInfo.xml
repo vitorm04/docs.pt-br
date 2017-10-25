@@ -1,0 +1,118 @@
+<Type Name="DynamicFieldInfo" FullName="Microsoft.JScript.DynamicFieldInfo">
+  <TypeSignature Language="C#" Value="public sealed class DynamicFieldInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DynamicFieldInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.DynamicFieldInfo" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa informações de campo. Essa classe é usada para retornar campos de classes expando e matrizes de script para o depurador.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicFieldInfo (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DynamicFieldInfo.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do campo.</param>
+        <param name="value">O valor do campo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.DynamicFieldInfo" /> de classe, usando o nome especificado e o valor.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicFieldInfo (string name, object value, string fieldTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, object value, string fieldTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.DynamicFieldInfo.#ctor(System.String,System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="fieldTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do campo.</param>
+        <param name="value">O valor do campo.</param>
+        <param name="fieldTypeName">O tipo do campo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.DynamicFieldInfo" /> de classe, usando o nome especificado, o valor e o tipo.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="fieldTypeName">
+      <MemberSignature Language="C#" Value="public string fieldTypeName;" />
+      <MemberSignature Language="ILAsm" Value=".field public string fieldTypeName" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.DynamicFieldInfo.fieldTypeName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tipo do campo.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="name">
+      <MemberSignature Language="C#" Value="public string name;" />
+      <MemberSignature Language="ILAsm" Value=".field public string name" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.DynamicFieldInfo.name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do campo.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="value">
+      <MemberSignature Language="C#" Value="public object value;" />
+      <MemberSignature Language="ILAsm" Value=".field public object value" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.DynamicFieldInfo.value" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor do campo.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

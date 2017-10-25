@@ -1,0 +1,133 @@
+<Type Name="MarkupObject" FullName="System.Windows.Markup.Primitives.MarkupObject">
+  <TypeSignature Language="C#" Value="public abstract class MarkupObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MarkupObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Primitives.MarkupObject" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Classe abstrata que representa um objeto que pode ser usado para navegar em uma árvore de objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar uma instância de um <xref:System.Windows.Markup.Primitives.MarkupObject>, consulte <xref:System.Windows.Markup.Primitives.MarkupWriter.GetMarkupObjectFor%2A> método o <xref:System.Windows.Markup.Primitives.MarkupWriter> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssignRootContext">
+      <MemberSignature Language="C#" Value="public abstract void AssignRootContext (System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AssignRootContext(class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Primitives.MarkupObject.AssignRootContext(System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.Windows.Markup.IValueSerializerContext" /> para atribuir um contexto raiz para.</param>
+        <summary>Quando substituído em uma classe derivada, atribui um contexto raiz para <see cref="T:System.Windows.Markup.ValueSerializer" /> classes.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public abstract System.ComponentModel.AttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.AttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupObject.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém os atributos associados a este <see cref="T:System.Windows.Markup.Primitives.MarkupObject" />.</summary>
+        <value>A coleção de atributos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Instance">
+      <MemberSignature Language="C#" Value="public abstract object Instance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Instance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupObject.Instance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a instância do objeto representado por este <see cref="T:System.Windows.Markup.Primitives.MarkupObject" />.</summary>
+        <value>A instância do objeto</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do objeto não pode ser igual a <xref:System.Windows.Markup.Primitives.MarkupObject.ObjectType%2A> se a instância representa uma fábrica que cria instâncias de tipo <xref:System.Windows.Markup.Primitives.MarkupObject.ObjectType%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public abstract Type ObjectType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupObject.ObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo da <see cref="T:System.Windows.Markup.Primitives.MarkupObject" /> instância.</summary>
+        <value>O tipo do objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.Primitives.MarkupObject.ObjectType%2A>Retorna o tipo do <xref:System.Windows.Markup.Primitives.MarkupObject>.  Por exemplo, um item que representa um <xref:System.Windows.Controls.Button> retornaria o equivalente de **typeof(System.Windows.Button)**.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;System.Windows.Markup.Primitives.MarkupProperty&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Markup.Primitives.MarkupProperty&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Primitives.MarkupObject.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Windows.Markup.Primitives.MarkupProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém as propriedades desse <see cref="T:System.Windows.Markup.Primitives.MarkupObject" /> instância deve ser gravada em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].</summary>
+        <value>As propriedades.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

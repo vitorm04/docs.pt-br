@@ -1,0 +1,184 @@
+<Type Name="OleDbError" FullName="System.Data.OleDb.OleDbError">
+  <TypeSignature Language="C#" Value="public sealed class OleDbError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit OleDbError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbError" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Coleta informações relevantes para um aviso ou erro retornado pela fonte de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é criada pelo adaptador de dados OleDb quando ocorre um erro. Uma instância de <xref:System.Data.OleDb.OleDbError> é criada e gerenciada pelo <xref:System.Data.OleDb.OleDbErrorCollection> classe, que por sua vez, é criado pelo <xref:System.Data.OleDb.OleDbException> classe.  
+  
+ Se a severidade do erro for muito grande, o servidor poderá fechar o <xref:System.Data.OleDb.OleDbConnection>. No entanto, o usuário pode reabrir a conexão e continuar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe as propriedades da <xref:System.Data.OleDb.OleDbError>.  
+  
+ [!code-csharp[Classic WebData OleDbError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbError.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma descrição curta do erro.</summary>
+        <value>Uma breve descrição do erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe as propriedades da <xref:System.Data.OleDb.OleDbError>.  
+  
+ [!code-csharp[Classic WebData OleDbError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NativeError">
+      <MemberSignature Language="C#" Value="public int NativeError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NativeError" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbError.NativeError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de erro específico de banco de dados.</summary>
+        <value>As informações de erro específico de banco de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe as propriedades da <xref:System.Data.OleDb.OleDbError>.  
+  
+ [!code-csharp[Classic WebData OleDbError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbError.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do provedor que gerou o erro.</summary>
+        <value>O nome do provedor que gerou o erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe as propriedades de um <xref:System.Data.OleDb.OleDbError>.  
+  
+ [!code-csharp[Classic WebData OleDbError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SQLState">
+      <MemberSignature Language="C#" Value="public string SQLState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SQLState" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbError.SQLState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o código de erro de cinco caracteres ANSI SQL a seguir padrão para o banco de dados.</summary>
+        <value>O código de erro de cinco caracteres que identifica a origem do erro, se o erro pode ser emitido por mais de um local.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe as propriedades da <xref:System.Data.OleDb.OleDbError>.  
+  
+ [!code-csharp[Classic WebData OleDbError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbError.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o texto completo da mensagem de erro.</summary>
+        <returns>O texto completo do erro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres está no formato "OleDbError:", seguido de <xref:System.Data.OleDb.OleDbError.Message%2A>e o rastreamento de pilha. Por exemplo:  
+  
+ OleDbError:UserId ou a senha não é válida. \<rastreamento de pilha >  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe cada <xref:System.Data.OleDb.OleDbError> dentro de <xref:System.Data.OleDb.OleDbErrorCollection> coleção.  
+  
+ [!code-csharp[Classic WebData OleDbError.ToString Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbError.ToString Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData OleDbError.ToString Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbError.ToString Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,41 @@
+<Type Name="SendOrPostCallback" FullName="System.Threading.SendOrPostCallback">
+  <TypeSignature Language="C#" Value="public delegate void SendOrPostCallback(object state);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SendOrPostCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.SendOrPostCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="state" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="state">O objeto transmitido ao delegado.</param>
+    <summary>Representa um método a ser chamado quando uma mensagem deve ser distribuída em um contexto de sincronização.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.SendOrPostCallback>representa um método de retorno de chamada que você deseja executar quando uma mensagem deve ser distribuída em um contexto de sincronização.  Criar o representante, passando o seu método de retorno de chamada para o <xref:System.Threading.SendOrPostCallback> construtor. O método deve ter a assinatura mostrada aqui.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

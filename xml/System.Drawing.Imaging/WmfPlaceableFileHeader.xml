@@ -1,0 +1,266 @@
+<Type Name="WmfPlaceableFileHeader" FullName="System.Drawing.Imaging.WmfPlaceableFileHeader">
+  <TypeSignature Language="C#" Value="public sealed class WmfPlaceableFileHeader" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit WmfPlaceableFileHeader extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.WmfPlaceableFileHeader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um metarquivo colocação. Não herdável.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metarquivos colocação fornecem uma maneira padrão para especificar como um metarquivo é mapeado e escala em um dispositivo de saída.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WmfPlaceableFileHeader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.WmfPlaceableFileHeader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see langword="WmfPlaceableFileHeader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BboxBottom">
+      <MemberSignature Language="C#" Value="public short BboxBottom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 BboxBottom" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.WmfPlaceableFileHeader.BboxBottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada y do canto inferior direito do retângulo delimitador da imagem de metarquivo no dispositivo de saída.</summary>
+        <value>A coordenada y do canto inferior direito do retângulo delimitador da imagem de metarquivo no dispositivo de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As coordenadas do retângulo delimitador são medidas em twips.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BboxLeft">
+      <MemberSignature Language="C#" Value="public short BboxLeft { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 BboxLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.WmfPlaceableFileHeader.BboxLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada x do canto superior esquerdo do retângulo delimitador da imagem de metarquivo no dispositivo de saída.</summary>
+        <value>A coordenada x do canto superior esquerdo do retângulo delimitador da imagem de metarquivo no dispositivo de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As coordenadas do retângulo delimitador são medidas em twips.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BboxRight">
+      <MemberSignature Language="C#" Value="public short BboxRight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 BboxRight" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.WmfPlaceableFileHeader.BboxRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada x do canto inferior direito do retângulo delimitador da imagem de metarquivo no dispositivo de saída.</summary>
+        <value>A coordenada x do canto inferior direito do retângulo delimitador da imagem de metarquivo no dispositivo de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As coordenadas do retângulo delimitador são medidas em twips.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BboxTop">
+      <MemberSignature Language="C#" Value="public short BboxTop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 BboxTop" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.WmfPlaceableFileHeader.BboxTop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada y do canto superior esquerdo do retângulo delimitador da imagem de metarquivo no dispositivo de saída.</summary>
+        <value>A coordenada y do canto superior esquerdo do retângulo delimitador da imagem de metarquivo no dispositivo de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As coordenadas do retângulo delimitador são medidas em twips.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Checksum">
+      <MemberSignature Language="C#" Value="public short Checksum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 Checksum" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.WmfPlaceableFileHeader.Checksum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de soma de verificação dos últimos dez <see langword="WORD" />s no cabeçalho.</summary>
+        <value>O valor de soma de verificação dos últimos dez <see langword="WORD" />s no cabeçalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor pode ser usado em uma tentativa para detectar se o metarquivo foi corrompido. A soma de verificação é calculada unindo cada `WORD` valor para um valor inicial de 0 por meio de `XOR` operador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hmf">
+      <MemberSignature Language="C#" Value="public short Hmf { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 Hmf" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.WmfPlaceableFileHeader.Hmf" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador do metarquivo na memória.</summary>
+        <value>O identificador de metarquivo na memória.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando gravada no disco, essa propriedade não é usada e sempre contém o valor 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inch">
+      <MemberSignature Language="C#" Value="public short Inch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 Inch" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.WmfPlaceableFileHeader.Inch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de twips por polegada.</summary>
+        <value>O número de twips por polegada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, há 1440 twips por polegada; No entanto, esse número pode ser alterado para dimensionar a imagem. Um valor de 720 indica que a imagem é double seu tamanho normal ou dimensionado para um fator de 2:1. Um valor de 360 indica uma escala de 4:1. Por outro lado, um valor de 2880 indica que a imagem é reduzida em tamanho por um fator de dois. Um valor de 1440 indica uma proporção de escala de 1:1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public int Key { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Key" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.WmfPlaceableFileHeader.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a presença de um cabeçalho de metarquivo colocação.</summary>
+        <value>Um valor que indica a presença de um cabeçalho de metarquivo colocação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse campo sempre tem um valor de 0x9AC6CDD7.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reserved">
+      <MemberSignature Language="C#" Value="public int Reserved { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Reserved" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.WmfPlaceableFileHeader.Reserved" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Reservado. Não use.</summary>
+        <value>Reservado. Não use.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sempre defina este campo como zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

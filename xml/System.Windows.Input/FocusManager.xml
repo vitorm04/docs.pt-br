@@ -1,0 +1,409 @@
+<Type Name="FocusManager" FullName="System.Windows.Input.FocusManager">
+  <TypeSignature Language="C#" Value="public static class FocusManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit FocusManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.FocusManager" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de métodos estáticos, propriedades anexadas e eventos para determinar e definir escopos de foco e para definir o elemento focalizado dentro do escopo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] há dois conceitos relacionados com foco: foco do teclado e foco lógico.  
+  
+ O foco do teclado referem-se ao elemento que está recebendo entrada do teclado.  Pode haver apenas um elemento com o foco do teclado.  Este elemento com o foco do teclado tem <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> definido como `true`.  <xref:System.Windows.Input.Keyboard.FocusedElement%2A?displayProperty=nameWithType>Retorna o elemento com o foco do teclado.  
+  
+ Foco lógico se refere ao <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> dentro de um escopo específico de foco.  
+  
+ Um escopo de foco é um elemento de contêiner que controla o <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> dentro de seu escopo.  Por padrão, o <xref:System.Windows.Window> classe é um escopo de foco são o <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ContextMenu>, e <xref:System.Windows.Controls.ToolBar> classes.  Um elemento que é um escopo de foco tem <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> definido como `true`.  
+  
+ Pode haver vários elementos com foco lógico, mas só pode haver um elemento com o foco lógico em um escopo de foco único.  Um elemento com foco lógico não necessariamente tem o foco do teclado, mas um elemento com o foco do teclado terá foco lógico.  É possível definir um escopo de foco em um escopo de foco.  Nesse caso, o escopo de foco pai e o escopo de foco filho podem ter um <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType>.  
+  
+ O cenário a seguir ilustra como o foco do teclado e foco lógico alterados em uma [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] aplicativo que tem um <xref:System.Windows.Window> com um <xref:System.Windows.Controls.TextBox> e um <xref:System.Windows.Controls.Menu> que tem um <xref:System.Windows.Controls.MenuItem>.  Quando o foco do teclado muda do <xref:System.Windows.Controls.TextBox> para o <xref:System.Windows.Controls.MenuItem>, o <xref:System.Windows.Controls.TextBox> o foco do teclado perdas mas retém foco lógico para o <xref:System.Windows.Window> focar o escopo.  O <xref:System.Windows.Controls.MenuItem> obtém o foco do teclado e obtém foco lógico para o <xref:System.Windows.Controls.Menu> focar o escopo.  Quando o foco do teclado retorna para a raiz <xref:System.Windows.Window>, o elemento no <xref:System.Windows.Window> escopo de foco com foco lógico obterá o foco do teclado, que nesse caso é o <xref:System.Windows.Controls.TextBox>.  O <xref:System.Windows.Controls.TextBox> agora tem o foco do teclado e foco lógico.  O <xref:System.Windows.Controls.MenuItem> perde o foco do teclado, mas manterá foco lógico para o <xref:System.Windows.Controls.Menu> focar o escopo.  
+  
+ O valor padrão de <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> em uma <xref:System.Windows.Window>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolBar>, e <xref:System.Windows.Controls.ContextMenu> é `true`.  
+  
+ Para obter mais informações sobre o foco, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md) e [visão geral de foco](~/docs/framework/wpf/advanced/focus-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddGotFocusHandler">
+      <MemberSignature Language="C#" Value="public static void AddGotFocusHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddGotFocusHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.AddGotFocusHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> que escuta esse evento.</param>
+        <param name="handler">O manipulador de eventos a ser adicionado.</param>
+        <summary>Adiciona um manipulador para o <see cref="E:System.Windows.Input.FocusManager.GotFocus" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLostFocusHandler">
+      <MemberSignature Language="C#" Value="public static void AddLostFocusHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddLostFocusHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.AddLostFocusHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> que escuta esse evento.</param>
+        <param name="handler">O manipulador de eventos a ser adicionado.</param>
+        <summary>Adiciona um manipulador para o <see cref="E:System.Windows.Input.FocusManager.LostFocus" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusedElementProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FocusedElementProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FocusedElementProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusManager.FocusedElementProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Input.FocusManager.FocusedElement" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFocusedElement">
+      <MemberSignature Language="C#" Value="public static System.Windows.IInputElement GetFocusedElement (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.IInputElement GetFocusedElement(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento com o foco lógico no escopo de foco especificado.</param>
+        <summary>Obtém o elemento com o foco lógico dentro do escopo de foco especificado.</summary>
+        <returns>O elemento no escopo de foco especificado com foco lógico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.FocusManager.FocusedElement%2A> é o elemento que tem foco lógico para um escopo específico de foco.  Este objeto pode ou não pode ter o foco do teclado.  O foco do teclado refere-se ao elemento que recebe entrada do teclado.  Para obter mais informações sobre o foco, o foco do teclado e foco lógico, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ Se `element` não é um escopo de foco, esse método retornará `null`.  
+  
+ Use <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>, para especificar o elemento com foco lógico em um escopo de foco especificado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o elemento com foco lógico usando o <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> e obtém o elemento com foco lógico usando o <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>.  
+  
+ [!code-csharp[focussnippets#FocusGetSetFocusedElement](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focusgetsetfocusedelement)]
+ [!code-vb[focussnippets#FocusGetSetFocusedElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFocusScope">
+      <MemberSignature Language="C#" Value="public static System.Windows.DependencyObject GetFocusScope (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.DependencyObject GetFocusScope(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.GetFocusScope(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento para obter o escopo mais próximo foco.</param>
+        <summary>Determina o ancestral mais próximo do elemento especificado tem <see cref="P:System.Windows.Input.FocusManager.IsFocusScope" /> definido como <see langword="true" />.</summary>
+        <returns>O escopo de foco para o elemento especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> em uma <xref:System.Windows.Window>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolBar>, <xref:System.Windows.Controls.ContextMenu> é `true`.  
+  
+ Um escopo de foco é um elemento de contêiner que controla o <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> dentro de seu escopo.  Por padrão, o <xref:System.Windows.Window> classe é um escopo de foco são o <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ContextMenu>, e <xref:System.Windows.Controls.ToolBar> classes.  Um elemento que é um escopo de foco tem <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> definido como `true`.  
+  
+ Para obter mais informações sobre o foco, o foco do teclado e foco lógico, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsFocusScope">
+      <MemberSignature Language="C#" Value="public static bool GetIsFocusScope (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsFocusScope(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.GetIsFocusScope(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual ler a propriedade anexada.</param>
+        <summary>Determina se o especificado <see cref="T:System.Windows.DependencyObject" /> é um escopo de foco.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="P:System.Windows.Input.FocusManager.IsFocusScope" /> é definido como <see langword="true" /> no elemento especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um escopo de foco é um elemento de contêiner que controla o <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> dentro de seu escopo.  Por padrão, o <xref:System.Windows.Window> classe é um escopo de foco são o <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ContextMenu>, e <xref:System.Windows.Controls.ToolBar> classes.  Um elemento que é um escopo de foco tem <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> definido como `true`.  
+  
+ Para obter mais informações sobre o foco, o foco do teclado e foco lógico, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GotFocusEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent GotFocusEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent GotFocusEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusManager.GotFocusEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.Input.FocusManager.GotFocus" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFocusScopeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsFocusScopeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsFocusScopeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusManager.IsFocusScopeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Input.FocusManager.IsFocusScope" /> anexada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> em uma <xref:System.Windows.Window>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolBar>, <xref:System.Windows.Controls.ContextMenu> é `true`.  
+  
+ Um escopo de foco é um elemento de contêiner que controla o <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> dentro de seu escopo.  Por padrão, o <xref:System.Windows.Window> classe é um escopo de foco são o <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ContextMenu>, e <xref:System.Windows.Controls.ToolBar> classes.  Um elemento que é um escopo de foco tem <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> definido como `true`.  
+  
+ Para obter mais informações sobre o foco, o foco do teclado e foco lógico, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LostFocusEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent LostFocusEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent LostFocusEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.FocusManager.LostFocusEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="E:System.Windows.Input.FocusManager.LostFocus" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveGotFocusHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveGotFocusHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveGotFocusHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.RemoveGotFocusHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> que escuta esse evento.</param>
+        <param name="handler">O manipulador de eventos a ser removido.</param>
+        <summary>Remove um manipulador para o <see cref="E:System.Windows.Input.FocusManager.GotFocus" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveLostFocusHandler">
+      <MemberSignature Language="C#" Value="public static void RemoveLostFocusHandler (System.Windows.DependencyObject element, System.Windows.RoutedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveLostFocusHandler(class System.Windows.DependencyObject element, class System.Windows.RoutedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.RemoveLostFocusHandler(System.Windows.DependencyObject,System.Windows.RoutedEventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="handler" Type="System.Windows.RoutedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" /> que escuta esse evento.</param>
+        <param name="handler">O manipulador de eventos a ser removido.</param>
+        <summary>Remove um manipulador para o <see cref="E:System.Windows.Input.FocusManager.LostFocus" /> evento anexado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFocusedElement">
+      <MemberSignature Language="C#" Value="public static void SetFocusedElement (System.Windows.DependencyObject element, System.Windows.IInputElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFocusedElement(class System.Windows.DependencyObject element, class System.Windows.IInputElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.SetFocusedElement(System.Windows.DependencyObject,System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O escopo do foco no qual o elemento especificado se torna <see cref="P:System.Windows.Input.FocusManager.FocusedElement" />.</param>
+        <param name="value">O elemento a receber foco lógico.</param>
+        <summary>Determina o foco lógico no elemento especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.FocusManager.FocusedElement%2A> é o elemento que tem foco lógico para o escopo de foco específico.  Este objeto pode ou não pode ter o foco do teclado.  O foco do teclado refere-se ao elemento que recebe entrada do teclado.  Para obter mais informações sobre o foco, o foco do teclado e foco lógico, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ É possível especificar um escopo de foco que é um ancestral do escopo de foco, que o elemento.  Por exemplo, se um <xref:System.Windows.Controls.StackPanel> é um escopo de foco e seu pai <xref:System.Windows.Window> é um escopo de foco, um <xref:System.Windows.Controls.TextBox> filho a <xref:System.Windows.Controls.StackPanel> poderia especificar o <xref:System.Windows.Window> como o escopo de foco ao chamar <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>.  O <xref:System.Windows.Controls.TextBox> é, em seguida, <xref:System.Windows.Input.FocusManager.FocusedElement%2A> para ambos os <xref:System.Windows.Window> focar o escopo e o <xref:System.Windows.Controls.StackPanel> focar o escopo.  
+  
+ <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>dará o foco lógico do elemento especificado no escopo de foco especificado e tenta dar o foco do teclado de elemento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o elemento com foco lógico usando o <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> e obtém o elemento com foco lógico usando o <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>.  
+  
+ [!code-csharp[focussnippets#FocusGetSetFocusedElement](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focusgetsetfocusedelement)]
+ [!code-vb[focussnippets#FocusGetSetFocusedElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsFocusScope">
+      <MemberSignature Language="C#" Value="public static void SetIsFocusScope (System.Windows.DependencyObject element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsFocusScope(class System.Windows.DependencyObject element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.FocusManager.SetIsFocusScope(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento para tornar um escopo de foco.</param>
+        <param name="value">
+          <see langword="true" />Se <c>elemento</c> é um escopo de foco; caso contrário, <see langword="false" />.</param>
+        <summary>Define especificado <see cref="T:System.Windows.DependencyObject" /> como um escopo de foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um escopo de foco é um elemento de contêiner que controla o <xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType> dentro de seu escopo.  Por padrão, o <xref:System.Windows.Window> classe é um escopo de foco são o <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ContextMenu>, e <xref:System.Windows.Controls.ToolBar> classes.  Um elemento que é um escopo de foco tem <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> definido como `true`.  
+  
+ Para obter mais informações sobre o foco, o foco do teclado e foco lógico, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir faz um elemento de um escopo de foco usando <xref:System.Windows.Input.FocusManager.SetIsFocusScope%2A>.  
+  
+ [!code-csharp[focussnippets#FocusSetIsFocusScope](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
+ [!code-vb[focussnippets#FocusSetIsFocusScope](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

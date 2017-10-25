@@ -1,0 +1,938 @@
+<Type Name="CompiledQuery" FullName="System.Data.Objects.CompiledQuery">
+  <TypeSignature Language="C#" Value="public sealed class CompiledQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CompiledQuery extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.CompiledQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma consulta LINQ to Entities armazenada em cache.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornece compilação e cache de consultas para reutilização. Conceitualmente, essa classe contém um único `Compile` método com várias sobrecargas. Chamar o `Compile` método para criar um novo delegado para representar a consulta compilada. O representante, quando chamado com o <xref:System.Data.Objects.ObjectContext> parâmetro de entrada e outros valores de parâmetro, produz algum resultado (como um <xref:System.Linq.IQueryable%601> instância). A consulta é convertida e armazenada em cache quando o delegado é invocado pela primeira vez.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é compilado e, em seguida, invoca uma consulta que aceita <xref:System.DateTime> e <xref:System.Decimal> parâmetros de entrada e retorna uma sequência de ordens em que a data do pedido é posterior a 8 de março de 2003 e o total devido é menor que US $300,00:  
+  
+ [!code-csharp[DP L2E Conceptual Examples#CompiledQuery5](~/samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery5)]
+ [!code-vb[DP L2E Conceptual Examples#CompiledQuery5](~/samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Compile&lt;TArg0,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TResult&gt; Compile&lt;TArg0,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`2&lt;!!TArg0, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;!!TArg0, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`2" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir compila e invoca uma consulta que retorna uma instância <xref:System.Data.Objects.ObjectQuery%601>:  
+  
+ [!code-csharp[DP L2E Conceptual Examples#CompiledQuery1_MQ](~/samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery1_mq)]
+ [!code-vb[DP L2E Conceptual Examples#CompiledQuery1_MQ](~/samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery1_mq)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TResult&gt; Compile&lt;TArg0,TArg1,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`3&lt;!!TArg0, !!TArg1, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`3&lt;!!TArg0, !!TArg1, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``3(System.Linq.Expressions.Expression{System.Func{``0,``1,``2}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``3(System.Linq.Expressions.Expression{System.Func{``0,``1,``2}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`3" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir compila e invoca uma consulta que aceita um parâmetro de entrada <xref:System.Decimal> e retorna uma sequência de pedidos em que o total devido é maior ou igual a US$ 200:  
+  
+ [!code-csharp[DP L2E Conceptual Examples#CompiledQuery2](~/samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery2)]
+ [!code-vb[DP L2E Conceptual Examples#CompiledQuery2](~/samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`4&lt;!!TArg0, !!TArg1, !!TArg2, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`4&lt;!!TArg0, !!TArg1, !!TArg2, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``4(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``4(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`4" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é compilado e, em seguida, invoca uma consulta que aceita <xref:System.DateTime> e <xref:System.Decimal> parâmetros de entrada e retorna uma sequência de ordens em que a data do pedido é posterior a 8 de março de 2003 e o total devido é menor que US $300,00:  
+  
+ [!code-csharp[DP L2E Conceptual Examples#CompiledQuery5](~/samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery5)]
+ [!code-vb[DP L2E Conceptual Examples#CompiledQuery5](~/samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`5&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`5&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``5(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``5(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`5" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`6&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`6&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``6(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``6(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`6" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`7&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TArg5, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`7&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``7(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TArg5" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg5">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg5</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``7(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`7" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`8&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`8&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``8(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TArg5" />
+        <TypeParameter Name="TArg6" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg5">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg5</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg6">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg6</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``8(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`8" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`9&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`9&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``9(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TArg5" />
+        <TypeParameter Name="TArg6" />
+        <TypeParameter Name="TArg7" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg5">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg5</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg6">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg6</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg7">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg7</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``9(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`9" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`10&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`10&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``10(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TArg5" />
+        <TypeParameter Name="TArg6" />
+        <TypeParameter Name="TArg7" />
+        <TypeParameter Name="TArg8" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg5">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg5</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg6">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg6</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg7">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg7</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg8">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg8</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``10(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`10" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`11&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`11&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``11(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TArg5" />
+        <TypeParameter Name="TArg6" />
+        <TypeParameter Name="TArg7" />
+        <TypeParameter Name="TArg8" />
+        <TypeParameter Name="TArg9" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg5">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg5</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg6">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg6</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg7">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg7</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg8">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg8</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg9">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg9</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``11(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`11" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`12&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`12&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``12(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TArg5" />
+        <TypeParameter Name="TArg6" />
+        <TypeParameter Name="TArg7" />
+        <TypeParameter Name="TArg8" />
+        <TypeParameter Name="TArg9" />
+        <TypeParameter Name="TArg10" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg5">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg5</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg6">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg6</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg7">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg7</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg8">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg8</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg9">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg9</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg10">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg10</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``12(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`12" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`13&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TArg11, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`13&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TArg11, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``13(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TArg5" />
+        <TypeParameter Name="TArg6" />
+        <TypeParameter Name="TArg7" />
+        <TypeParameter Name="TArg8" />
+        <TypeParameter Name="TArg9" />
+        <TypeParameter Name="TArg10" />
+        <TypeParameter Name="TArg11" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg5">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg5</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg6">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg6</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg7">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg7</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg8">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg8</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg9">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg9</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg10">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg10</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg11">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg11</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``13(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`13" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`14&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TArg11, !!TArg12, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`14&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TArg11, !!TArg12, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``14(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TArg5" />
+        <TypeParameter Name="TArg6" />
+        <TypeParameter Name="TArg7" />
+        <TypeParameter Name="TArg8" />
+        <TypeParameter Name="TArg9" />
+        <TypeParameter Name="TArg10" />
+        <TypeParameter Name="TArg11" />
+        <TypeParameter Name="TArg12" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg5">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg5</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg6">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg6</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg7">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg7</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg8">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg8</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg9">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg9</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg10">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg10</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg11">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg11</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg12">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg12</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``14(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`14" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`15&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TArg11, !!TArg12, !!TArg13, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`15&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TArg11, !!TArg12, !!TArg13, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``15(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TArg5" />
+        <TypeParameter Name="TArg6" />
+        <TypeParameter Name="TArg7" />
+        <TypeParameter Name="TArg8" />
+        <TypeParameter Name="TArg9" />
+        <TypeParameter Name="TArg10" />
+        <TypeParameter Name="TArg11" />
+        <TypeParameter Name="TArg12" />
+        <TypeParameter Name="TArg13" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg5">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg5</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg6">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg6</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg7">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg7</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg8">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg8</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg9">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg9</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg10">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg10</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg11">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg11</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg12">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg12</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg13">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg13</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``15(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`15" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`16&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TArg11, !!TArg12, !!TArg13, !!TArg14, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`16&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TArg11, !!TArg12, !!TArg13, !!TArg14, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``16(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TArg5" />
+        <TypeParameter Name="TArg6" />
+        <TypeParameter Name="TArg7" />
+        <TypeParameter Name="TArg8" />
+        <TypeParameter Name="TArg9" />
+        <TypeParameter Name="TArg10" />
+        <TypeParameter Name="TArg11" />
+        <TypeParameter Name="TArg12" />
+        <TypeParameter Name="TArg13" />
+        <TypeParameter Name="TArg14" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg5">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg5</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg6">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg6</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg7">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg7</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg8">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg8</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg9">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg9</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg10">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg10</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg11">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg11</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg12">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg12</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg13">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg13</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg14">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg14</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``16(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`16" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TArg15,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TArg15,TResult&gt; Compile&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TArg15,TResult&gt; (System.Linq.Expressions.Expression&lt;Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TArg15,TResult&gt;&gt; query) where TArg0 : System.Data.Objects.ObjectContext;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Func`17&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TArg11, !!TArg12, !!TArg13, !!TArg14, !!TArg15, !!TResult&gt; Compile&lt;(class System.Data.Objects.ObjectContext) TArg0, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9, TArg10, TArg11, TArg12, TArg13, TArg14, TArg15, TResult&gt;(class System.Linq.Expressions.Expression`1&lt;class System.Func`17&lt;!!TArg0, !!TArg1, !!TArg2, !!TArg3, !!TArg4, !!TArg5, !!TArg6, !!TArg7, !!TArg8, !!TArg9, !!TArg10, !!TArg11, !!TArg12, !!TArg13, !!TArg14, !!TArg15, !!TResult&gt;&gt; query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.CompiledQuery.Compile``17(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15,``16}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TArg15,TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg0">
+          <Constraints>
+            <BaseTypeName>System.Data.Objects.ObjectContext</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TArg1" />
+        <TypeParameter Name="TArg2" />
+        <TypeParameter Name="TArg3" />
+        <TypeParameter Name="TArg4" />
+        <TypeParameter Name="TArg5" />
+        <TypeParameter Name="TArg6" />
+        <TypeParameter Name="TArg7" />
+        <TypeParameter Name="TArg8" />
+        <TypeParameter Name="TArg9" />
+        <TypeParameter Name="TArg10" />
+        <TypeParameter Name="TArg11" />
+        <TypeParameter Name="TArg12" />
+        <TypeParameter Name="TArg13" />
+        <TypeParameter Name="TArg14" />
+        <TypeParameter Name="TArg15" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TArg0,TArg1,TArg2,TArg3,TArg4,TArg5,TArg6,TArg7,TArg8,TArg9,TArg10,TArg11,TArg12,TArg13,TArg14,TArg15,TResult&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg0">Um tipo derivado de <see cref="T:System.Data.Objects.ObjectContext" />.</typeparam>
+        <typeparam name="TArg1">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg1</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg2">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg2</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg3">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg3</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg4">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg4</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg5">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg5</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg6">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg6</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg7">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg7</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg8">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg8</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg9">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg9</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg10">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg10</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg11">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg11</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg12">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg12</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg13">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg13</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg14">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg14</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TArg15">Representa o tipo do parâmetro a ser passado ao executar o delegado retornado por este método. <c>TArg15</c> deve ser um tipo primitivo.</typeparam>
+        <typeparam name="TResult">O tipo <c>T</c> dos resultados da consulta retornados executando o delegado retornado pelo <see cref="M:System.Data.Objects.CompiledQuery.Compile``17(System.Linq.Expressions.Expression{System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15,``16}})" /> método.</typeparam>
+        <param name="query">A expressão lambda para compilar.</param>
+        <summary>Cria um novo delegado que representa o LINQ compilado para consulta de entidades.</summary>
+        <returns>
+          <see cref="T:System.Func`17" />, um delegate genérico que representa o LINQ compilado para consulta de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [consultas compiladas (LINQ to Entities)](~/docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

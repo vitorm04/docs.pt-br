@@ -1,0 +1,242 @@
+<Type Name="DebuggableAttribute" FullName="System.Diagnostics.DebuggableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DebuggableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DebuggableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Module, AllowMultiple=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Modifica a geração de código para depuração do tempo de execução JIT (just-in-time). Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DebuggableAttribute> controla como o tempo de execução trata o código dentro do módulo. O tempo de execução pode rastrear informações extras sobre código gerado, e ele pode desabilitar certas otimizações com base nos valores contidos neste atributo.  
+  
+ Um depurador pode escolher ignorar o <xref:System.Diagnostics.DebuggableAttribute> configurações ao carregar um assembly. No entanto, para anexar um depurador a um programa em execução pode impedir o depurador porque já foi aplicados a alteração das configurações.  
+  
+ Para usar o <xref:System.Diagnostics.DebuggableAttribute> com assemblies dinâmicos usando a emissão de reflexão <xref:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule%2A> métodos, emitir o <xref:System.Diagnostics.DebuggableAttribute> antes de chamar o <xref:System.Reflection.Emit.AssemblyBuilder.DefineDynamicModule%2A> métodos para garantir que as configurações são aplicadas ao assembly inteiro.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggableAttribute (System.Diagnostics.DebuggableAttribute.DebuggingModes modes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.DebuggableAttribute/DebuggingModes modes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggableAttribute.#ctor(System.Diagnostics.DebuggableAttribute.DebuggingModes)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="modes" Type="System.Diagnostics.DebuggableAttribute+DebuggingModes" />
+      </Parameters>
+      <Docs>
+        <param name="modes">Uma combinação bit a bit do <see cref="T:System.Diagnostics.DebuggableAttribute.DebuggingModes" /> valores que especificam o modo de depuração para o compilador JIT.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.DebuggableAttribute" /> de classe, usando os modos de depuração especificados para o compilador just-in-time (JIT).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Diagnostics.DebuggableAttribute.%23ctor%28System.Diagnostics.DebuggableAttribute.DebuggingModes%29> construtor com um `modes` valor de parâmetro de <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes.Default> é equivalente a chamar o <xref:System.Diagnostics.DebuggableAttribute.%23ctor%28System.Boolean%2CSystem.Boolean%29> construtor com um `isJITTrackingEnabled` valor de parâmetro de `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggableAttribute (bool isJITTrackingEnabled, bool isJITOptimizerDisabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isJITTrackingEnabled, bool isJITOptimizerDisabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggableAttribute.#ctor(System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isJITTrackingEnabled" Type="System.Boolean" />
+        <Parameter Name="isJITOptimizerDisabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isJITTrackingEnabled">
+          <see langword="true" />Para habilitar a depuração; Caso contrário, <see langword="false" />.</param>
+        <param name="isJITOptimizerDisabled">
+          <see langword="true" />Para desabilitar o otimizador para execução; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.DebuggableAttribute" /> de classe, usando as opções de rastreamento e de otimização especificadas para o compilador just-in-time (JIT).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor define as propriedades <xref:System.Diagnostics.DebuggableAttribute.IsJITTrackingEnabled%2A> e <xref:System.Diagnostics.DebuggableAttribute.IsJITOptimizerDisabled%2A>.  
+  
+ Um `isJITTrackingEnabaled` valor de parâmetro de `true` faz com que o tempo de execução rastrear as informações importantes para o depurador durante a geração de código; um valor de `false` resulta em nenhum controle, mas não impede que a depuração. Esse parâmetro não tem nenhum efeito no .NET Framework versão 2.0.  Na versão 2.0, as informações de rastreamento JIT, a linguagem intermediária do Microsoft (MSIL) de deslocamento para o deslocamento de código nativo dentro de um método, sempre são geradas.  
+  
+ Um `isJITOptimizerDisabled` valor de parâmetro de `true` otimiza para depuração; um valor de `false` otimiza para execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebuggingFlags">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.DebuggableAttribute.DebuggingModes DebuggingFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.DebuggableAttribute/DebuggingModes DebuggingFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggableAttribute.DebuggingFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.DebuggableAttribute+DebuggingModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os modos de depuração do atributo.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Diagnostics.DebuggableAttribute.DebuggingModes" /> que descrevem o modo de depuração para o compilador JIT (Just-In-Time). O padrão é <see cref="F:System.Diagnostics.DebuggableAttribute.DebuggingModes.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DebuggableAttribute.DebuggingFlags%2A> propriedade controla como o tempo de execução controla informações importantes para o depurador durante a geração de código. Essas informações ajudam o depurador oferecer uma experiência de depuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsJITOptimizerDisabled">
+      <MemberSignature Language="C#" Value="public bool IsJITOptimizerDisabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsJITOptimizerDisabled" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggableAttribute.IsJITOptimizerDisabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o otimizador de tempo de execução está desabilitado.</summary>
+        <value>
+          <see langword="true" />Se o otimizador de tempo de execução é desabilitado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor de `true` melhora o desempenho para tempo de execução de depuração, que pode causar uma queda no desempenho de execução. Um valor de `false` melhora o desempenho da execução. Quando <xref:System.Diagnostics.DebuggableAttribute.IsJITOptimizerDisabled%2A> é definido como `false`, percorrendo o código pode resultar em um comportamento diferente de quando definido como `true` porque o compilador pode reordenar instruções ou inserir vai para o código comum.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsJITTrackingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsJITTrackingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsJITTrackingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggableAttribute.IsJITTrackingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o tempo de execução controlar informações durante a geração de código para o depurador.</summary>
+        <value>
+          <see langword="true" />Se o tempo de execução controlar informações durante a geração de código para o depurador; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.DebuggableAttribute.IsJITTrackingEnabled%2A>Controla se o tempo de execução rastreia informações importantes para o depurador durante a geração de código. Essas informações ajudam o depurador oferecer uma experiência de depuração.  
+  
+ Começando com o .NET Framework 2.0, as informações de rastreamento JIT está sempre habilitadas durante a depuração e o valor da propriedade é ignorado.  
+  
+> [!NOTE]
+>  Mas essa propriedade não controla a capacidade de depurar, informa que o compilador just-in-time (JIT) para gerar informações de rastreamento. Especificamente, o compilador rastreia o deslocamento do Microsoft Intermediate Language MSIL para código nativo deslocamento dentro de um método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

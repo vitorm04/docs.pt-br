@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Discovery.Configuration">
+  <Docs>
+    <summary>O <see langword="System.ServiceModel.Discovery.Configuration" /> namespace contém classes que permitem que você defina as configurações de descoberta em um arquivo de configuração.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

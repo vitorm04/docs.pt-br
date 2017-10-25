@@ -1,0 +1,212 @@
+<Type Name="ImportBuilder" FullName="System.ComponentModel.Composition.Registration.ImportBuilder">
+  <TypeSignature Language="C#" Value="public sealed class ImportBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImportBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Registration.ImportBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa informações de configuração para uma importação com base em regra.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.ImportBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.Registration.ImportBuilder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDefault">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.ImportBuilder AllowDefault ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.ImportBuilder AllowDefault() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.ImportBuilder.AllowDefault" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.ImportBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Especifica que a importação deve permitir que um valor padrão.</summary>
+        <returns>O objeto atual, para permitir que o encadeamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowRecomposition">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.ImportBuilder AllowRecomposition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.ImportBuilder AllowRecomposition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.ImportBuilder.AllowRecomposition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.ImportBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Especifica que a importação deve ser pode ser recomposta.</summary>
+        <returns>O objeto atual, para permitir que o encadeamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsContractName">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.ImportBuilder AsContractName (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.ImportBuilder AsContractName(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.ImportBuilder.AsContractName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.ImportBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">O nome do contrato.</param>
+        <summary>Especifica que a importação deve estar sob o nome do contrato especificado.</summary>
+        <returns>O objeto atual, para permitir que o encadeamento.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contractName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="contractName" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AsContractType">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.ImportBuilder AsContractType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.ImportBuilder AsContractType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.ImportBuilder.AsContractType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.ImportBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de contrato a ser usado.</param>
+        <summary>Especifica que a importação deve usar o tipo de dado contrato.</summary>
+        <returns>O objeto atual, para permitir que o encadeamento.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AsContractType&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.ImportBuilder AsContractType&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.ImportBuilder AsContractType&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.ImportBuilder.AsContractType``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.ImportBuilder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo de contrato a ser usado.</typeparam>
+        <summary>Especifica que a importação deve usar o tipo de dado contrato.</summary>
+        <returns>O objeto atual, para permitir que o encadeamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsMany">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.ImportBuilder AsMany (bool isMany = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.ImportBuilder AsMany(bool isMany) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.ImportBuilder.AsMany(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.ImportBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isMany" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isMany">
+          <see langword="true" />para especificar uma importação de vários; <see langword="false" /> para especificar uma importação simples. O padrão é <see langword="true" />.</param>
+        <summary>Especifica a cardinalidade da importação.</summary>
+        <returns>O objeto atual, para permitir que o encadeamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredCreationPolicy">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.ImportBuilder RequiredCreationPolicy (System.ComponentModel.Composition.CreationPolicy requiredCreationPolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.ImportBuilder RequiredCreationPolicy(valuetype System.ComponentModel.Composition.CreationPolicy requiredCreationPolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.ImportBuilder.RequiredCreationPolicy(System.ComponentModel.Composition.CreationPolicy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.ImportBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requiredCreationPolicy" Type="System.ComponentModel.Composition.CreationPolicy" />
+      </Parameters>
+      <Docs>
+        <param name="requiredCreationPolicy">Requer a política de criação de importação.</param>
+        <summary>Especifica a política de criação necessárias da importação.</summary>
+        <returns>O objeto atual, para permitir que o encadeamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Registration.ImportBuilder Source (System.ComponentModel.Composition.ImportSource source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.Composition.Registration.ImportBuilder Source(valuetype System.ComponentModel.Composition.ImportSource source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Registration.ImportBuilder.Source(System.ComponentModel.Composition.ImportSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition.Registration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Registration.ImportBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.ComponentModel.Composition.ImportSource" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um valor que especifica os escopos de importação pode ser atendida no.</param>
+        <summary>Especifica um valor que especifica os escopos de que importação pode ser atendida.</summary>
+        <returns>O objeto atual, para permitir que o encadeamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

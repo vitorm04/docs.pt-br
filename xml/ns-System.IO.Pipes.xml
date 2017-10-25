@@ -1,0 +1,6 @@
+<Namespace Name="System.IO.Pipes">
+  <Docs>
+    <summary>O <see cref="N:System.IO.Pipes" /> namespace contém tipos que fornecem um meio de comunicação entre processos através de pipes nomeados e/ou anônimos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

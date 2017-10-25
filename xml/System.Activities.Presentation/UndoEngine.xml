@@ -1,0 +1,257 @@
+<Type Name="UndoEngine" FullName="System.Activities.Presentation.UndoEngine">
+  <TypeSignature Language="C#" Value="public class UndoEngine" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UndoEngine extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.UndoEngine" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece desfazer e refazer implementações de operação para designers.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UndoEngine (System.Activities.Presentation.EditingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Presentation.EditingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.#ctor(System.Activities.Presentation.EditingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.Presentation.EditingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto de edição.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Presentation.UndoEngine" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUndoUnit">
+      <MemberSignature Language="C#" Value="public void AddUndoUnit (System.Activities.Presentation.UndoUnit unit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddUndoUnit(class System.Activities.Presentation.UndoUnit unit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.AddUndoUnit(System.Activities.Presentation.UndoUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unit" Type="System.Activities.Presentation.UndoUnit" />
+      </Parameters>
+      <Docs>
+        <param name="unit">A unidade de desfazer para adicionar.</param>
+        <summary>Adiciona a unidade especificada para a pilha de desfazer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRedoActions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; GetRedoActions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; GetRedoActions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.GetRedoActions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um <see cref="T:System.Collections.Generic.IEnumerable`1" /> coleção de operações de restauração.</summary>
+        <returns>Um iterador simple em uma coleção de operações de restauração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUndoActions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; GetUndoActions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; GetUndoActions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.GetUndoActions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um <see cref="T:System.Collections.Generic.IEnumerable`1" /> coleção de operações de desfazer.</summary>
+        <returns>Um iterador simple em uma coleção de operações de desfazer.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUndoRedoInProgress">
+      <MemberSignature Language="C#" Value="public bool IsUndoRedoInProgress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUndoRedoInProgress" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.UndoEngine.IsUndoRedoInProgress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Boolean" /> valor que indica se uma operação de desfazer ou refazer está em andamento.</summary>
+        <value>
+          <see langword="true" />Se uma operação de desfazer ou refazer estiver em andamento. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Redo">
+      <MemberSignature Language="C#" Value="public bool Redo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Redo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.Redo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o último <see cref="T:System.Activities.Presentation.UndoUnit" /> da pilha de refazer da instância e executa uma operação de restauração na unidade. O <see cref="T:System.Activities.Presentation.UndoUnit" /> instância é colocada na pilha de desfazer.</summary>
+        <returns>
+          <see langword="true" />Se esse método for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedoCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt; RedoCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Activities.Presentation.UndoUnitEventArgs&gt; RedoCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.RedoCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a operação de restauração seja concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Undo">
+      <MemberSignature Language="C#" Value="public bool Undo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Undo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.UndoEngine.Undo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o último <see cref="T:System.Activities.Presentation.UndoUnit" /> da pilha de desfazer da instância e executa uma operação de desfazer na unidade. O <see cref="T:System.Activities.Presentation.UndoUnit" /> instância é colocada na pilha de refazer.</summary>
+        <returns>
+          <see langword="true" />Se esse método for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt; UndoCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Activities.Presentation.UndoUnitEventArgs&gt; UndoCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.UndoCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a operação de desfazer está concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoRedoBufferChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler UndoRedoBufferChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler UndoRedoBufferChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.UndoRedoBufferChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando os buffers que mantenha desfazer e refazer as operações de alteração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoUnitAdded">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt; UndoUnitAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Activities.Presentation.UndoUnitEventArgs&gt; UndoUnitAdded" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.UndoUnitAdded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma unidade de desfazer é adicionada à pilha de desfazer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoUnitCancelled">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt; UndoUnitCancelled;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Activities.Presentation.UndoUnitEventArgs&gt; UndoUnitCancelled" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.UndoUnitCancelled" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Activities.Presentation.UndoUnitEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma unidade de desfazer é cancelada da pilha de desfazer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoUnitDiscarded">
+      <MemberSignature Language="C#" Value="public event EventHandler UndoUnitDiscarded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler UndoUnitDiscarded" />
+      <MemberSignature Language="DocId" Value="E:System.Activities.Presentation.UndoEngine.UndoUnitDiscarded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma unidade de desfazer é removida da pilha de desfazer, sem primeiro executar uma operação de desfazer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

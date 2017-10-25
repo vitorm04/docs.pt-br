@@ -1,0 +1,19 @@
+<Namespace Name="System.Windows.Documents.DocumentStructures">
+  <Docs>
+    <summary>Fornece classes para descrever a estrutura de um <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> em termos de seções, parágrafos, figuras, lista numerada ou com marcador e tabelas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A formatação e layout de um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento permite que diferentes partes do conteúdo para se comportam em uma forma de semântica como parágrafos, tabelas e lista.  As pessoas conseguem perceber a estrutura de semântica do conteúdo de sua aparência; mas o formato físico e o layout de marcação não identificar explicitamente os elementos de semânticos reais.  Para habilitar a compreensão programático de organização do documento, o <xref:System.Windows.Documents.DocumentStructures> namespace fornece elementos de estrutura que podem ser usados para definir o documento por suas partes semânticas.  
+  
+ Cada página de um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento contém um <xref:System.Windows.Documents.FixedPage> elemento que define seu *conteúdo* na forma de sequências de texto posicionais e elementos gráficos.  Com o uso de elementos de estrutura do documento, páginas de um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento também pode ser associado ao <xref:System.Windows.Documents.DocumentStructures.StoryFragment> elementos que definem o *estrutura* da página na forma de seções, parágrafos, listas, imagens e tabelas.  O <xref:System.Windows.Documents.DocumentStructures.NamedElement> classe é usada para definir as associações entre partes do conteúdo e a estrutura da marcação do documento.  Um <xref:System.Windows.Documents.DocumentStructures.NamedElement> é o filho de um elemento estrutural, como tabela célula ou marcador de item de lista que está localizado no <xref:System.Windows.Documents.DocumentStructures.StoryFragment> hierarquia de uma página.  Um <xref:System.Windows.Documents.DocumentStructures.NamedElement> identifica um item no <xref:System.Windows.Documents.FixedPage> hierarquia da mesma página.  O item que se refere a é o conteúdo do elemento estrutural.  
+  
+ Aplicativos que criam [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documentos não precisam incluir marcação estrutural, mas o uso de elementos de estrutura de documento melhora a flexibilidade pelo qual os aplicativos podem acessar e usar o conteúdo de um documento.  
+  
+ Para obter mais informações sobre os elementos de estrutura de [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documentos, consulte o capítulo 9 e Apêndice E do XML Paper Specification (XPS) disponível para download em [http://go.microsoft.com/fwlink/?LinkID=67000](http://go.microsoft.com/fwlink/?LinkID=67000).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

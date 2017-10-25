@@ -1,0 +1,57 @@
+<Namespace Name="System.Net.Http">
+  <Docs>
+    <summary>O <see cref="N:System.Net.Http" /> namespace fornece uma interface de programação para aplicativos HTTP modernos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Http> namespace é projetado para fornecer o seguinte:  
+  
+1.  Componentes de cliente HTTP que permitem que os usuários a consumir serviços web moderna via HTTP.  
+  
+2.  Componentes HTTP que podem ser usados por clientes e servidores (cabeçalhos HTTP e mensagens, por exemplo). Isso fornece um modelo de programação consistente no cliente e no lado do servidor para os serviços web moderna via HTTP.  
+  
+ O <xref:System.Net.Http> namespace e relacionado <xref:System.Net.Http.Headers> namespace fornece o seguinte conjunto de componentes:  
+  
+1.  <xref:System.Net.Http.HttpClient>-a classe principal usada para enviar e receber solicitações via HTTP.  
+  
+2.  <xref:System.Net.Http.HttpRequestMessage>e <xref:System.Net.Http.HttpResponseMessage> -mensagens de HTTP, conforme definido na RFC 2616 pela IETF.  
+  
+3.  <xref:System.Net.Http.Headers.HttpHeaders>-Cabeçalhos HTTP conforme definido na RFC 2616 pela IETF.  
+  
+4.  <xref:System.Net.Http.HttpClientHandler>-Manipuladores HTTP responsáveis por produzir mensagens de resposta HTTP.  
+  
+ Há vários identificadores de mensagem HTTP que podem ser usados. Eles incluem o seguinte.  
+  
+1.  <xref:System.Net.Http.DelegatingHandler>-Uma classe usada para conectar um manipulador em um encadeamento de manipulador.  
+  
+2.  <xref:System.Net.Http.HttpMessageHandler>-Um simples à classe derivar que suporte os requisitos mais comuns para a maioria dos aplicativos.  
+  
+3.  <xref:System.Net.Http.HttpClientHandler>-Uma classe que opera na parte inferior da cadeia de manipulador que realmente manipula as operações de transporte HTTP.  
+  
+4.  <xref:System.Net.Http.WebRequestHandler>-A classe de especialidade opera na parte inferior da classe de cadeia de manipulador que manipula as operações de transporte HTTP com opções específicas para o <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> objeto.  
+  
+ O conteúdo de uma mensagem HTTP corresponde ao corpo da entidade definido na RFC 2616.  
+  
+ Um número de classes pode ser usado para o conteúdo HTTP. Eles incluem o seguinte.  
+  
+1.  <xref:System.Net.Http.ByteArrayContent>-Conteúdo HTTP baseado em uma matriz de bytes.  
+  
+2.  <xref:System.Net.Http.FormUrlEncodedContent>-Conteúdo HTTP de tuplas de nome/valor codificadas usando o tipo MIME application/x-www-form-urlencoded.  
+  
+3.  <xref:System.Net.Http.MultipartContent>-Conteúdo HTTP que é serializado usando o com diversas partes / * especificação de tipo de conteúdo.  
+  
+4.  <xref:System.Net.Http.MultipartFormDataContent>-Conteúdo HTTP codificado usando o tipo MIME de várias partes/dados de formulário.  
+  
+5.  <xref:System.Net.Http.StreamContent>-Conteúdo HTTP baseado em um fluxo.  
+  
+6.  <xref:System.Net.Http.StringContent>-Conteúdo HTTP baseado em uma cadeia de caracteres.  
+  
+ Se um aplicativo usando o <xref:System.Net.Http> e <xref:System.Net.Http.Headers> namespaces pretende baixar grandes quantidades de dados (50 megabytes ou mais), em seguida, o aplicativo deve transmitir esses downloads e não usar o armazenamento em buffer padrão. Se o armazenamento em buffer padrão é usado o uso de memória do cliente obterá muito grande, possivelmente resultando em substancialmente o desempenho reduzido.  
+  
+ Classes de <xref:System.Net.Http> e <xref:System.Net.Http.Headers> namespaces pode ser usados para desenvolver aplicativos da Windows Store ou aplicativos de desktop. Quando usado em um aplicativo da Windows Store, classes de <xref:System.Net.Http> e <xref:System.Net.Http.Headers> namespaces são afetadas pelo recurso de isolamento de rede, parte do modelo de segurança do aplicativo usado pelo [!INCLUDE[win8](~/includes/win8-md.md)]. Os recursos de rede apropriado devem ser habilitados no manifesto do aplicativo para um aplicativo da Windows Store para o sistema permitir o acesso à rede por um aplicativo da Windows store. Para obter mais informações, consulte o [rede isolamento de aplicativos da Windows Store](~/docs/framework/network-programming/network-isolation-for-windows-store-apps.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,138 @@
+<Type Name="SqlRowUpdatingEventArgs" FullName="System.Data.SqlClient.SqlRowUpdatingEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class SqlRowUpdatingEventArgs : System.Data.Common.RowUpdatingEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlRowUpdatingEventArgs extends System.Data.Common.RowUpdatingEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlRowUpdatingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.RowUpdatingEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Data.SqlClient.SqlDataAdapter.RowUpdating" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlDataAdapter.RowUpdating> é gerado antes de uma <xref:System.Data.Common.DbDataAdapter.Update%2A> para uma linha.  
+  
+ Quando você estiver usando <xref:System.Data.Common.DbDataAdapter.Update%2A>, há dois eventos que ocorrem para cada linha de dados atualizada. A ordem de execução é o seguinte:  
+  
+1.  Os valores no <xref:System.Data.DataRow> são movidos para os valores de parâmetro.  
+  
+2.  O <xref:System.Data.Common.DbDataAdapter.OnRowUpdating%2A> é gerado.  
+  
+3.  O comando é executado.  
+  
+4.  Se o comando é definido como `FirstReturnedRecord`, e a primeira retornou o resultado é colocado no <xref:System.Data.DataRow>.  
+  
+5.  Se não houver parâmetros de saída, eles são colocados no <xref:System.Data.DataRow>.  
+  
+6.  O <xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A> é gerado.  
+  
+7.  <xref:System.Data.DataRow.AcceptChanges%2A> é chamado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Data.SqlClient.SqlDataAdapter.RowUpdating> e <xref:System.Data.SqlClient.SqlDataAdapter.RowUpdated> eventos.  
+  
+ O <xref:System.Data.SqlClient.SqlDataAdapter.RowUpdating> evento retorna essa saída:  
+  
+ argumentos do evento: (command=System.Data.SqlClient.SQLCommand commandType = 2 status = 0)  
+  
+ O <xref:System.Data.SqlClient.SqlDataAdapter.RowUpdated> evento retorna essa saída:  
+  
+ argumentos do evento: (command=System.Data.SqlClient.SQLCommand commandType = recordsAffected 2 = 1 row=System.Data.DataRow[37] status = 0)  
+  
+ [!code-csharp[Classic WebData SqlRowUpdatingEventArgs Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlRowUpdatingEventArgs Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlRowUpdatingEventArgs Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlRowUpdatingEventArgs Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlRowUpdatingEventArgs (System.Data.DataRow row, System.Data.IDbCommand command, System.Data.StatementType statementType, System.Data.Common.DataTableMapping tableMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataRow row, class System.Data.IDbCommand command, valuetype System.Data.StatementType statementType, class System.Data.Common.DataTableMapping tableMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlRowUpdatingEventArgs.#ctor(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="row" Type="System.Data.DataRow" />
+        <Parameter Name="command" Type="System.Data.IDbCommand" />
+        <Parameter Name="statementType" Type="System.Data.StatementType" />
+        <Parameter Name="tableMapping" Type="System.Data.Common.DataTableMapping" />
+      </Parameters>
+      <Docs>
+        <param name="row">O <see cref="T:System.Data.DataRow" /> para <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" />.</param>
+        <param name="command">O <see cref="T:System.Data.IDbCommand" /> para executar durante <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" />.</param>
+        <param name="statementType">Uma da <see cref="T:System.Data.StatementType" /> valores que especifica o tipo de consulta executada.</param>
+        <param name="tableMapping">O <see cref="T:System.Data.Common.DataTableMapping" /> enviadas por meio de um <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.SqlClient.SqlRowUpdatingEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseCommand">
+      <MemberSignature Language="C#" Value="protected override System.Data.IDbCommand BaseCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.IDbCommand BaseCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlRowUpdatingEventArgs.BaseCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Data.SqlClient.SqlCommand Command { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.SqlClient.SqlCommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlRowUpdatingEventArgs.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.SqlClient.SqlCommand" /> para executar ao executar o <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" />.</summary>
+        <value>O <see cref="T:System.Data.SqlClient.SqlCommand" /> para executar ao executar o <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

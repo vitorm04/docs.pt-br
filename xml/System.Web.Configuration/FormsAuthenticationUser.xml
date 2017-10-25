@@ -1,0 +1,187 @@
+<Type Name="FormsAuthenticationUser" FullName="System.Web.Configuration.FormsAuthenticationUser">
+  <TypeSignature Language="C#" Value="public sealed class FormsAuthenticationUser : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormsAuthenticationUser extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.FormsAuthenticationUser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define as credenciais do usuário para aplicativos Web que usam a autenticação baseada em formulários.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.FormsAuthenticationUser> classe fornece uma maneira de acessar e modificar a seção de um arquivo de configuração de forma programática.  
+  
+ Esse tipo é parte de um grupo que inclui o <xref:System.Web.Configuration.FormsAuthenticationCredentials>, o <xref:System.Web.Configuration.FormsAuthenticationUserCollection>e o <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tipos. Os tipos que não seja o tipo de coleção afetam diretamente as marcas de configuração subjacentes.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.FormsAuthenticationUser> pode gravar informações para a seção correspondente do arquivo de configuração no computador, site ou somente no nível do aplicativo. Qualquer tentativa de gravar em um arquivo de configuração em um nível diferente na hierarquia resulta em uma mensagem de erro gerada pelo analisador. No entanto, você pode usar essa classe para ler informações de configuração em qualquer nível na hierarquia. Para escalabilidade e segurança, é recomendável que você usar um repositório externo, como um banco de dados para manter as credenciais dos usuários.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.FormsAuthenticationUserCollection> para acessar o <xref:System.Web.Configuration.FormsAuthenticationUser> objetos de um aplicativo Web existente. O arquivo de configuração contém uma configuração semelhante à seguinte.  
+  
+> [!NOTE]
+>  Se você usar o [credenciais elemento para formulários de autenticação (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/e5a001f8-fdbe-4c88-80ca-bfe36df23479) seção, certifique-se de seguir as diretrizes explicadas em [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Escalabilidade e melhor segurança, é recomendável que usar um banco de dados externo para armazenar as credenciais dos usuários. Para obter mais informações sobre como criar aplicativos ASP.NET seguros, procure o site da Microsoft MSDN (msdn.microsoft.com) "Protegendo seu aplicativo ASP.NET" e "aplicativos ASP.NET seguros de construção: autenticação, autorização e seguro Comunicação".  
+  
+```  
+<authentication mode="Forms">  
+  <forms name="MyAppCookieName" loginUrl="/login.aspx">  
+    defaultUrl="formsdefault.aspx"  
+    protection="Encryption" timeout="5" path="aspnet"  
+    slidingExpiration="false"  
+    cookieless="UseCookies" domain="domainName">  
+    <credentials passwordFormat="SHA1">  
+      <user name="aspnetuser1"  
+        password="5BAA61E4C9B93F3F0682250B6CF8331B7EE68FD8"/>  
+       <user name="aspnetuser2"  
+         password="E38AD214943DAAD1D64C102FAEC29DE4AFE9DA3D"/>  
+    </credentials>            
+  </forms>  
+</authentication>  
+```  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationUser#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationUser/CS/formsauthenticationuser.cs#1)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationUser#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationUser/VB/formsauthenticationuser.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormsAuthenticationUser (string name, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.FormsAuthenticationUser.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Nome do usuário.</param>
+        <param name="password">Senha do usuário.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.FormsAuthenticationUser" /> classe usando os parâmetros passados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.Web.Configuration.FormsAuthenticationUser> usando os parâmetros passados do objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Web.Configuration.FormsAuthenticationUser> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationUser#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationUser/CS/formsauthenticationuser.cs#3)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationUser#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationUser/VB/formsauthenticationuser.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationUser.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.Configuration.LowerCaseStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de logon do usuário.</summary>
+        <value>O nome de usuário de logon exigido pelo aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.FormsAuthenticationUser.Name%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationUser> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationUser#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationUser/CS/formsauthenticationuser.cs#5)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationUser#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationUser/VB/formsauthenticationuser.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationUser.Password" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("password", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a senha do usuário.</summary>
+        <value>A senha do usuário exigida pelo aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.FormsAuthenticationUser.Password%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationUser> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationUser#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationUser/CS/formsauthenticationuser.cs#4)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationUser#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationUser/VB/formsauthenticationuser.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationUser.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

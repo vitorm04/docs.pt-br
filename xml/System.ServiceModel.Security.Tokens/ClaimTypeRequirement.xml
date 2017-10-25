@@ -1,0 +1,163 @@
+<Type Name="ClaimTypeRequirement" FullName="System.ServiceModel.Security.Tokens.ClaimTypeRequirement">
+  <TypeSignature Language="C#" Value="public class ClaimTypeRequirement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClaimTypeRequirement extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.ClaimTypeRequirement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os tipos de declarações obrigatórias e opcionais esperados para aparecer na credencial federada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um cenário federado, serviços de estado os requisitos de credenciais de entrada. Por exemplo, as credenciais de entrada devem ter um determinado conjunto de tipos de declaração. Esse requisito é manifestado em uma política de segurança. Quando um cliente solicita um token de segurança de um serviço de token de segurança (por exemplo, [!INCLUDE[infocard](~/includes/infocard-md.md)]), ele coloca os requisitos em uma solicitação de token para que o serviço de token de segurança pode emitir o token de segurança que satisfaz os requisitos de acordo.  
+  
+   
+  
+## Examples  
+ O código a seguir adiciona dois requisitos de tipo de declaração para uma associação de segurança.  
+  
+ [!code-csharp[S_UEClaimTypeRequirement#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueclaimtyperequirement/cs/client.cs#1)]  
+  
+ O arquivo de configuração a seguir é usado com o código anterior.  
+  
+ [!code-xml[S_UEClaimTypeRequirement#101](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueclaimtyperequirement/common/app.config#101)]   
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimTypeRequirement (string claimType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string claimType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.ClaimTypeRequirement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">O tipo da declaração.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Security.Tokens.ClaimTypeRequirement" /> classe para uma declaração necessária do tipo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tipos de declaração predefinidos podem ser encontrados em <xref:System.IdentityModel.Claims.ClaimTypes>.  
+  
+   
+  
+## Examples  
+ O código a seguir adiciona dois requisitos de tipo de declaração para uma associação de segurança.  
+  
+ [!code-csharp[S_UEClaimTypeRequirement#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueclaimtyperequirement/cs/client.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimTypeRequirement (string claimType, bool isOptional);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string claimType, bool isOptional) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.Tokens.ClaimTypeRequirement.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+        <Parameter Name="isOptional" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">O tipo da declaração.</param>
+        <param name="isOptional">Se <see langword="false" />, a declaração é necessária; caso contrário, é opcional.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Security.Tokens.ClaimTypeRequirement" /> classe para uma declaração do tipo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir adiciona dois requisitos de tipo de declaração para uma associação de segurança.  
+  
+ [!code-csharp[S_UEClaimTypeRequirement#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueclaimtyperequirement/cs/client.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimType">
+      <MemberSignature Language="C#" Value="public string ClaimType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClaimType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ClaimTypeRequirement.ClaimType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de declaração que foi especificado no construtor.</summary>
+        <value>O tipo da declaração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é um URI que define o tipo de declaração.  Por exemplo, para adquirir um produto de um site, o usuário deve apresentar um cartão de crédito válido com um limite de crédito suficiente. O tipo de declaração seria o URI do cartão de crédito.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como obter essa propriedade.  
+  
+ [!code-csharp[S_UEClaimTypeRequirement#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueclaimtyperequirement/cs/client.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOptional">
+      <MemberSignature Language="C#" Value="public bool IsOptional { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOptional" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.Tokens.ClaimTypeRequirement.IsOptional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a declaração é opcional.</summary>
+        <value>
+          <see langword="true" />Se esta instância da classe é para uma declaração opcional; <see langword="false" /> se especifica uma declaração necessária.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um exemplo de como usar essa propriedade é o cenário no qual o serviço solicita algumas informações mas não a exige. Por exemplo, é necessário inserir seu nome, sobrenome e endereço, mas seu número de telefone é opcional.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como obter essa propriedade.  
+  
+ [!code-csharp[S_UEClaimTypeRequirement#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueclaimtyperequirement/cs/client.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

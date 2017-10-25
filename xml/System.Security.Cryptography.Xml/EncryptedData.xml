@@ -1,0 +1,145 @@
+<Type Name="EncryptedData" FullName="System.Security.Cryptography.Xml.EncryptedData">
+  <TypeSignature Language="C#" Value="public sealed class EncryptedData : System.Security.Cryptography.Xml.EncryptedType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EncryptedData extends System.Security.Cryptography.Xml.EncryptedType" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.EncryptedData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.EncryptedType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o <see langword="&lt;EncryptedData&gt;" /> elemento na criptografia de XML. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada para representar o `<EncryptedData>` elemento na criptografia de XML. Este é o elemento principal na criptografia de XML. O elemento filho, `<CipherData>`, contém dados criptografados. O `<EncryptedData>` elemento substitui um elemento criptografado ou serve como a raiz do documento novo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criptografar e descriptografar um elemento XML usando o <xref:System.Security.Cryptography.Xml.EncryptedData> classe. Este exemplo exibe várias propriedades da <xref:System.Security.Cryptography.Xml.EncryptedData> classe para o console.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptedData/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptedData/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncryptedData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.EncryptedData" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma nova instância do <xref:System.Security.Cryptography.Xml.EncryptedData> classe. Para obter mais informações sobre os padrões de criptografia de XML, consulte o documento "XML criptografia sintaxe e processamento de" em http://www.w3.org/TR/xmlenc-core/.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criptografar e descriptografar um elemento XML usando o <xref:System.Security.Cryptography.Xml.EncryptedData> classe. Este exemplo exibe várias propriedades da <xref:System.Security.Cryptography.Xml.EncryptedData> classe para o console.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptedData/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptedData/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedData.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação XML do <see cref="T:System.Security.Cryptography.Xml.EncryptedData" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlElement" /> que representa o <see langword="&lt;EncryptedData&gt;" /> elemento na criptografia de XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para produzir o `<EncryptedData>` elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O valor de <see cref="T:System.Security.Cryptography.Xml.EncryptedData" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public override void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptedData.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Xml.XmlElement" /> objeto que representa um elemento XML a ser usado para o <see langword="&lt;EncryptedData&gt;" /> elemento.</param>
+        <summary>Carrega informações de XML no <see langword="&lt;EncryptedData&gt;" /> elemento na criptografia de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para carregar um elemento XML existente para o `<EncryptedData>` elemento representado pelo <xref:System.Security.Cryptography.Xml.EncryptedData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criptografar e descriptografar um elemento XML usando o <xref:System.Security.Cryptography.Xml.EncryptedData> classe. Este exemplo exibe várias propriedades da <xref:System.Security.Cryptography.Xml.EncryptedData> classe para o console.  
+  
+ [!code-csharp[Cryptography.XML.EncryptedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.EncryptedData/cs/sample.cs#1)]
+ [!code-vb[Cryptography.XML.EncryptedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.EncryptedData/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="value" /> fornecido é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O <paramref name="value" /> parâmetro não tem um &lt; <see langword="CypherData" /> &gt; nó.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

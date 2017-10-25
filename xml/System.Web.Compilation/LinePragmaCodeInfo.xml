@@ -1,0 +1,174 @@
+<Type Name="LinePragmaCodeInfo" FullName="System.Web.Compilation.LinePragmaCodeInfo">
+  <TypeSignature Language="C#" Value="public sealed class LinePragmaCodeInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit LinePragmaCodeInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.LinePragmaCodeInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém propriedades para um bloco de script que está sendo analisado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a análise da página, as informações sobre um bloco de script são armazenadas no <xref:System.Web.Compilation.LinePragmaCodeInfo> classe. Essa classe é usada no <xref:System.Web.UI.SimpleWebHandlerParser> classe.  
+  
+ <xref:System.Web.Compilation.LinePragmaCodeInfo>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinePragmaCodeInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.LinePragmaCodeInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Compilation.LinePragmaCodeInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para usar as propriedades de um <xref:System.Web.Compilation.LinePragmaCodeInfo> da instância, use a sobrecarga de construtor que usa parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinePragmaCodeInfo (int startLine, int startColumn, int startGeneratedColumn, int codeLength, bool isCodeNugget);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 startLine, int32 startColumn, int32 startGeneratedColumn, int32 codeLength, bool isCodeNugget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.LinePragmaCodeInfo.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="startLine" Type="System.Int32" />
+        <Parameter Name="startColumn" Type="System.Int32" />
+        <Parameter Name="startGeneratedColumn" Type="System.Int32" />
+        <Parameter Name="codeLength" Type="System.Int32" />
+        <Parameter Name="isCodeNugget" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="startLine">A linha inicial de um bloco de script em um arquivo. aspx.</param>
+        <param name="startColumn">A coluna de início de um bloco de script em um arquivo. aspx.</param>
+        <param name="startGeneratedColumn">A coluna de início de um bloco de script no arquivo de origem gerado.</param>
+        <param name="codeLength">O comprimento do bloco de script.</param>
+        <param name="isCodeNugget">Um valor que indica se o bloco de script está localizado dentro de &lt;% %&gt; marcas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Compilation.LinePragmaCodeInfo" /> classe com parâmetros para inicializar o <see cref="P:System.Web.Compilation.LinePragmaCodeInfo.StartLine" />, <see cref="P:System.Web.Compilation.LinePragmaCodeInfo.StartColumn" />, <see cref="P:System.Web.Compilation.LinePragmaCodeInfo.StartGeneratedColumn" />, <see cref="P:System.Web.Compilation.LinePragmaCodeInfo.CodeLength" />, e <see cref="P:System.Web.Compilation.LinePragmaCodeInfo.IsCodeNugget" /> propriedades.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeLength">
+      <MemberSignature Language="C#" Value="public int CodeLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CodeLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.LinePragmaCodeInfo.CodeLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento do bloco de script.</summary>
+        <value>O comprimento do bloco de script.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCodeNugget">
+      <MemberSignature Language="C#" Value="public bool IsCodeNugget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCodeNugget" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.LinePragmaCodeInfo.IsCodeNugget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o bloco de script está localizado dentro de &lt;% %&gt; marcas.</summary>
+        <value>
+          <see langword="true" />Se o bloco de script está contido em &lt;% %&gt; marcas; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código localizado dentro de \<% % > marcas é conhecido como "preciosidade".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartColumn">
+      <MemberSignature Language="C#" Value="public int StartColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.LinePragmaCodeInfo.StartColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coluna de início de um bloco de script em um arquivo. aspx.</summary>
+        <value>A coluna de início de um bloco de script em um arquivo. aspx.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartGeneratedColumn">
+      <MemberSignature Language="C#" Value="public int StartGeneratedColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartGeneratedColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.LinePragmaCodeInfo.StartGeneratedColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coluna de início de um bloco de script no arquivo de origem gerado.</summary>
+        <value>A coluna de início de um bloco de script no arquivo de origem gerado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartLine">
+      <MemberSignature Language="C#" Value="public int StartLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartLine" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.LinePragmaCodeInfo.StartLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a linha inicial de um bloco de script em um arquivo. aspx.</summary>
+        <value>A linha inicial de um bloco de script em um arquivo. aspx.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

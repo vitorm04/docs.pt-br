@@ -1,0 +1,81 @@
+<Type Name="IRegistrationHelper" FullName="System.EnterpriseServices.IRegistrationHelper">
+  <TypeSignature Language="C#" Value="public interface IRegistrationHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRegistrationHelper" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.IRegistrationHelper" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("55e3ea25-55cb-4650-8887-18e8d30bb4bc")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Instala e configura os assemblies no catálogo COM+.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InstallAssembly">
+      <MemberSignature Language="C#" Value="public void InstallAssembly (string assembly, out string application, out string tlb, System.EnterpriseServices.InstallationFlags installFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InstallAssembly([in]string assembly, [out] string&amp; application, [out] string&amp; tlb, [in]valuetype System.EnterpriseServices.InstallationFlags installFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IRegistrationHelper.InstallAssembly(System.String,System.String@,System.String@,System.EnterpriseServices.InstallationFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.String" />
+        <Parameter Name="application" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="tlb" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="installFlags" Type="System.EnterpriseServices.InstallationFlags" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O nome do assembly como um arquivo ou o nome forte de um assembly no cache de assembly global (GAC).</param>
+        <param name="application">O parâmetro de aplicativo pode ser <see langword="null" />. Se for, o nome do aplicativo é gerado automaticamente com base no nome do assembly ou o <see langword="ApplicationName" /> atributo. Se o aplicativo contém um <see langword="ApplicationID" /> atributo, o atributo terá precedência.</param>
+        <param name="tlb">O nome do arquivo de biblioteca (TLB) do tipo de saída, ou uma cadeia de caracteres que contém <see langword="null" /> se o auxiliar de registro é esperado para gerar o nome. Na conclusão da chamada, o nome real usado é colocado no parâmetro.</param>
+        <param name="installFlags">As opções de instalação especificadas na enumeração.</param>
+        <summary>Instala o assembly no catálogo COM+.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método requer que o chamador tenha privilégios administrativos no computador local.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UninstallAssembly">
+      <MemberSignature Language="C#" Value="public void UninstallAssembly (string assembly, string application);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UninstallAssembly([in]string assembly, [in]string application) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IRegistrationHelper.UninstallAssembly(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.String" />
+        <Parameter Name="application" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O nome do assembly como um arquivo ou o nome forte de um assembly no cache de assembly global (GAC).</param>
+        <param name="application">O nome do aplicativo COM+.</param>
+        <summary>Desinstala o assembly do catálogo COM+.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,106 @@
+<Type Name="IFieldInfo" FullName="System.Runtime.Serialization.Formatters.IFieldInfo">
+  <TypeSignature Language="C#" Value="public interface IFieldInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFieldInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Formatters.IFieldInfo" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite acesso aos nomes de campo e tipos de campo de objetos que dão suporte a <see cref="T:System.Runtime.Serialization.ISerializable" /> interface.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FieldNames">
+      <MemberSignature Language="C#" Value="public string[] FieldNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] FieldNames" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.IFieldInfo.FieldNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os nomes de campo dos objetos serializados.</summary>
+        <value>Os nomes de campo dos objetos serializados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um nome for `null`, um nome de parâmetro padrão é usado.  
+  
+ Essa propriedade `get` e `set` acessadores são protegidos por um <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> para o <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldTypes">
+      <MemberSignature Language="C#" Value="public Type[] FieldTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] FieldTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Formatters.IFieldInfo.FieldTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os tipos de campo dos objetos serializados.</summary>
+        <value>Os tipos de campo dos objetos serializados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade `get` e `set` acessadores são protegidos por um <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> para o <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

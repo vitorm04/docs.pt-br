@@ -1,0 +1,75 @@
+<Type Name="ISponsor" FullName="System.Runtime.Remoting.Lifetime.ISponsor">
+  <TypeSignature Language="C#" Value="public interface ISponsor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISponsor" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Lifetime.ISponsor" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que o implementador deseja ser um responsável de concessão de tempo de vida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto deve implementar a <xref:System.Runtime.Remoting.Lifetime.ISponsor> se ele precisa solicitar uma renovação de concessão de um determinado objeto de interface. Um objeto que implementa o <xref:System.Runtime.Remoting.Lifetime.ISponsor> interface pode se tornar um patrocinador se registrou com o Gerenciador de concessão. O <xref:System.Runtime.Remoting.Lifetime.ISponsor> interface é usada pelo serviço de tempo de vida para retorno de chamada para o patrocinador.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ISponsor_Client#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ISponsor_Client/CPP/isponsor_client.cpp#2)]
+ [!code-csharp[ISponsor_Client#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ISponsor_Client/CS/isponsor_client.cs#2)]
+ [!code-vb[ISponsor_Client#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ISponsor_Client/VB/isponsor_client.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Renewal">
+      <MemberSignature Language="C#" Value="public TimeSpan Renewal (System.Runtime.Remoting.Lifetime.ILease lease);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.TimeSpan Renewal(class System.Runtime.Remoting.Lifetime.ILease lease) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.ISponsor.Renewal(System.Runtime.Remoting.Lifetime.ILease)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lease" Type="System.Runtime.Remoting.Lifetime.ILease" />
+      </Parameters>
+      <Docs>
+        <param name="lease">A concessão de tempo de vida do objeto que exige a renovação da concessão.</param>
+        <summary>Solicitações de um cliente patrocinadora para renovar a concessão para o objeto especificado.</summary>
+        <returns>O tempo de concessão adicional para o objeto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Lifetime.ISponsor.Renewal%2A> método é chamado pelo coletor de lixo distribuído para renovar a concessão para o objeto especificado.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ISponsor_Client#2](~/samples/snippets/cpp/VS_Snippets_Remoting/ISponsor_Client/CPP/isponsor_client.cpp#2)]
+ [!code-csharp[ISponsor_Client#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ISponsor_Client/CS/isponsor_client.cs#2)]
+ [!code-vb[ISponsor_Client#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ISponsor_Client/VB/isponsor_client.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato faz a chamada por meio de uma referência para a interface e não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

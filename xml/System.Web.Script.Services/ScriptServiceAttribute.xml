@@ -1,0 +1,55 @@
+<Type Name="ScriptServiceAttribute" FullName="System.Web.Script.Services.ScriptServiceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ScriptServiceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ScriptServiceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Script.Services.ScriptServiceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que um serviço Web pode ser chamado a partir do script. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para invocar um método de serviço Web de ECMAScript (JavaScript), você deve aplicar o <xref:System.Web.Script.Services.ScriptServiceAttribute> de atributo para a classe de serviço Web relacionada. Quando você aplica <xref:System.Web.Script.Services.ScriptServiceAttribute> para uma definição de classe de serviço da Web que contém um ou mais métodos com <xref:System.Web.Services.WebMethodAttribute> aplicada, o script de geração de proxy cria um objeto proxy que corresponde à classe de serviço da Web.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como aplicar <xref:System.Web.Script.Services.ScriptServiceAttribute> da Web de serviços de definição de classe para que seus métodos podem ser chamados de script de cliente.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptServiceAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Services.ScriptServiceAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Script.Services.ScriptServiceAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

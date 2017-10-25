@@ -1,0 +1,127 @@
+<Type Name="FormatNumberEventArgs" FullName="System.Web.UI.DataVisualization.Charting.FormatNumberEventArgs">
+  <TypeSignature Language="C#" Value="public class FormatNumberEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormatNumberEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.FormatNumberEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os argumentos do evento de formatação numérica localizado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ElementType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartElementType ElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartElementType ElementType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.FormatNumberEventArgs.ElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartElementType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de elemento do gráfico.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Web.UI.DataVisualization.Charting.ChartElementType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public string Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Format" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.FormatNumberEventArgs.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de formato.</summary>
+        <value>Um <see langword="string" /> valor que representa o formato.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalizedValue">
+      <MemberSignature Language="C#" Value="public string LocalizedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalizedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.FormatNumberEventArgs.LocalizedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto localizado.</summary>
+        <value>Um <see langword="string" /> valor que representa o texto localizado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderTag">
+      <MemberSignature Language="C#" Value="public object SenderTag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SenderTag" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.FormatNumberEventArgs.SenderTag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto do remetente do evento.</summary>
+        <value>O objeto do remetente do evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.FormatNumberEventArgs.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor a ser formatado.</summary>
+        <value>Um valor <see langword="double" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartValueType ValueType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartValueType ValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.FormatNumberEventArgs.ValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de valor.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Web.UI.DataVisualization.Charting.ChartValueType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

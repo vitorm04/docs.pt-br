@@ -1,0 +1,13 @@
+<Namespace Name="System.Net.Http.Headers">
+  <Docs>
+    <summary>Fornece suporte para coleções de cabeçalhos HTTP usados pelo namespace <see cref="N:System.Net.Http" /></summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Http.Headers> namespace fornece suporte para cabeçalhos HTTP conforme definido em [RFC 2616](http://go.microsoft.com/fwlink/?LinkID=241642) pela IETF.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

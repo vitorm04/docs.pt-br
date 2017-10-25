@@ -1,0 +1,572 @@
+<Type Name="TableLayoutSettings" FullName="System.Windows.Forms.TableLayoutSettings">
+  <TypeSignature Language="C#" Value="public sealed class TableLayoutSettings : System.Windows.Forms.LayoutSettings, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit TableLayoutSettings extends System.Windows.Forms.LayoutSettings implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TableLayoutSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.LayoutSettings</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.Layout.TableLayoutSettingsTypeConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Coleta as características associadas a layouts de tabela.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TableLayoutSettings> classe coleta e gerencia as características associadas o esquema de layout de tabela. Essa classe é usada internamente pelo <xref:System.Windows.Forms.TableLayoutPanel> e <xref:System.Windows.Forms.ToolStrip> classes, bem como o mecanismo de layout de tabela. O <xref:System.Windows.Forms.TableLayoutSettings> classe é usada pelo mecanismo de layout para determinar como organizar controles filho do contêiner.  
+  
+ O <xref:System.Windows.Forms.TableLayoutSettings> classe gerencia as seguintes informações:  
+  
+-   O <xref:System.Windows.Forms.TableLayoutPanelGrowStyle> que está sendo usado.  
+  
+-   O número máximo de colunas e linhas no layout.  
+  
+-   A coleção de estilos usada para as colunas contidas e linhas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como inicializar um <xref:System.Windows.Forms.TableLayoutSettings> de objeto para um <xref:System.Windows.Forms.TableLayoutPanel> controle. Para obter uma listagem de código completo, consulte [como: implementar um ToolStripRenderer personalizado](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnCount">
+      <MemberSignature Language="C#" Value="public int ColumnCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.ColumnCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de colunas permitidas no layout de tabela.</summary>
+        <value>O número máximo de colunas permitidas no layout de tabela. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.TableLayoutSettings.ColumnCount%2A> propriedade não aloca as colunas ou nenhuma memória de backup. Essa alocação ocorre quando as colunas são criadas.  
+  
+ A definição dessa propriedade faz com que a tabela passar por outra operação de layout.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como inicializar um <xref:System.Windows.Forms.TableLayoutSettings> de objeto para um <xref:System.Windows.Forms.TableLayoutPanel> controle. Para obter uma listagem de código completo, consulte [como: implementar um ToolStripRenderer personalizado](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor da propriedade é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnStyles">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TableLayoutColumnStyleCollection ColumnStyles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TableLayoutColumnStyleCollection ColumnStyles" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.ColumnStyles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutColumnStyleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de estilos usada para determinar a aparência das colunas do layout da tabela.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.TableLayoutColumnStyleCollection" /> que contém os estilos de coluna para a tabela de layout.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.TableLayoutSettings.ColumnStyles%2A> propriedade para acessar as propriedades de estilo de colunas específicas. A ordem dos estilos em um <xref:System.Windows.Forms.TableLayoutColumnStyleCollection?displayProperty=nameWithType> corresponde à ordem das colunas correspondentes na tabela de layout.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCellPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TableLayoutPanelCellPosition GetCellPosition (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.TableLayoutPanelCellPosition GetCellPosition(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.GetCellPosition(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanelCellPosition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle contido em uma célula.</param>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> que representa a linha e a coluna da célula.</summary>
+        <returns>Uma <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> que representa a posição da célula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Windows.Forms.TableLayoutSettings> objeto para obter uma posição de célula em uma <xref:System.Windows.Forms.TableLayoutPanel> controle. Para obter uma listagem de código completo, consulte [como: implementar um ToolStripRenderer personalizado](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumn">
+      <MemberSignature Language="C#" Value="public int GetColumn (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetColumn(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.GetColumn(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle contido em uma célula.</param>
+        <summary>Obtém a posição de coluna do controle filho especificado.</summary>
+        <returns>A posição de coluna do controle filho especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnSpan">
+      <MemberSignature Language="C#" Value="public int GetColumnSpan (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetColumnSpan(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.GetColumnSpan(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle contido em uma célula.</param>
+        <summary>Obtém o número de colunas abrangidas pela célula que contém o controle filho.</summary>
+        <returns>O número de colunas abrangidas pela célula que contém o controle filho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRow">
+      <MemberSignature Language="C#" Value="public int GetRow (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetRow(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.GetRow(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle contido em uma célula.</param>
+        <summary>Obtém a posição da linha do controle filho especificado.</summary>
+        <returns>A posição da linha do controle filho especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRowSpan">
+      <MemberSignature Language="C#" Value="public int GetRowSpan (object control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetRowSpan(object control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.GetRowSpan(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle contido em uma célula.</param>
+        <summary>Obtém o número de linhas abrangidas pela célula que contém o controle filho.</summary>
+        <returns>O número de linhas abrangidas pela célula que contém o controle filho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GrowStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TableLayoutPanelGrowStyle GrowStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.TableLayoutPanelGrowStyle GrowStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.GrowStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanelGrowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica como o layout da tabela deve ser expandido para acomodar novas células quando todas as células existentes estiverem ocupadas.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.TableLayoutPanelGrowStyle" />. O padrão é <see cref="F:System.Windows.Forms.TableLayoutPanelGrowStyle.AddRows" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TableLayoutSettings.GrowStyle%2A> propriedade determina como o mecanismo de layout deve adicionar uma nova célula em uma tabela inteira. Essa propriedade pode ser definida como <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.AddRows> para indicar que as linhas devem ser adicionadas, <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns> para indicar que as colunas devem ser adicionadas, ou <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize> para não permitir a expansão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor da propriedade não é válido para o tipo de enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutEngine">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.Layout.LayoutEngine LayoutEngine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Layout.LayoutEngine LayoutEngine" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.LayoutEngine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Layout.LayoutEngine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o mecanismo de layout de tabela atual.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Layout.LayoutEngine" /> está sendo usado atualmente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TableLayoutSettings.LayoutEngine%2A> propriedade normalmente é usada em dois contextos:  
+  
+-   Um contêiner que usa um layout de tabela.  
+  
+-   Um controle dentro de um contêiner de layout de tabela, como um botão contido em uma célula de uma <xref:System.Windows.Forms.TableLayoutPanel>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowCount">
+      <MemberSignature Language="C#" Value="public int RowCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.RowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de linhas permitido no layout de tabela.</summary>
+        <value>O número máximo de linhas permitido no layout de tabela. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.TableLayoutSettings.RowCount%2A> propriedade não aloca as linhas ou nenhuma memória de backup. Essa alocação ocorre quando as linhas são criadas.  
+  
+ A definição dessa propriedade faz com que a tabela passar por outra operação de layout.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como inicializar um <xref:System.Windows.Forms.TableLayoutSettings> de objeto para um <xref:System.Windows.Forms.TableLayoutPanel> controle. Para obter uma listagem de código completo, consulte [como: implementar um ToolStripRenderer personalizado](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor da propriedade é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RowStyles">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TableLayoutRowStyleCollection RowStyles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TableLayoutRowStyleCollection RowStyles" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutSettings.RowStyles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutRowStyleCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de estilos usada para determinar a aparência das linhas de layout da tabela.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" /> que contém os estilos de linha para a tabela de layout.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.TableLayoutSettings.RowStyles%2A> propriedade para acessar as propriedades de estilo de linhas específicas. A ordem dos estilos em um <xref:System.Windows.Forms.TableLayoutRowStyleCollection?displayProperty=nameWithType> corresponde à ordem das linhas correspondentes na tabela de layout.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCellPosition">
+      <MemberSignature Language="C#" Value="public void SetCellPosition (object control, System.Windows.Forms.TableLayoutPanelCellPosition cellPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCellPosition(object control, valuetype System.Windows.Forms.TableLayoutPanelCellPosition cellPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.SetCellPosition(System.Object,System.Windows.Forms.TableLayoutPanelCellPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+        <Parameter Name="cellPosition" Type="System.Windows.Forms.TableLayoutPanelCellPosition" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle contido em uma célula.</param>
+        <param name="cellPosition">Uma <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> que representa a posição da célula.</param>
+        <summary>Define o <see cref="T:System.Windows.Forms.TableLayoutPanelCellPosition" /> que representa a linha e a coluna da célula.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Windows.Forms.TableLayoutSettings> objeto para definir uma posição de célula uma <xref:System.Windows.Forms.TableLayoutPanel> controle. Para obter uma listagem de código completo, consulte [como: implementar um ToolStripRenderer personalizado](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#2)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumn">
+      <MemberSignature Language="C#" Value="public void SetColumn (object control, int column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColumn(object control, int32 column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.SetColumn(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+        <Parameter Name="column" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle contido em uma célula.</param>
+        <param name="column">A posição de coluna para o controle filho especificado.</param>
+        <summary>Define a posição de coluna para o controle filho especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="column" /> é menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumnSpan">
+      <MemberSignature Language="C#" Value="public void SetColumnSpan (object control, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColumnSpan(object control, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.SetColumnSpan(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle contido em uma célula.</param>
+        <param name="value">O número de colunas abrangidas pela célula que contém o controle filho.</param>
+        <summary>Define o número de colunas abrangidas pela célula que contém o controle filho.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" /> é menor que 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRow">
+      <MemberSignature Language="C#" Value="public void SetRow (object control, int row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRow(object control, int32 row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.SetRow(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+        <Parameter Name="row" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle contido em uma célula.</param>
+        <param name="row">A posição da linha do controle filho especificado.</param>
+        <summary>Define a posição de linha do controle filho especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="row" /> é menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRowSpan">
+      <MemberSignature Language="C#" Value="public void SetRowSpan (object control, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRowSpan(object control, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.SetRowSpan(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Object" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle contido em uma célula.</param>
+        <param name="value">O número de linhas abrangidas pela célula que contém o controle filho.</param>
+        <summary>Define o número de linhas abrangidas pela célula que contém o controle filho.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" /> é menor que 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutSettings.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">O objeto a ser populado com informações de serialização.</param>
+        <param name="context">O contexto de destino da serialização.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.TableLayoutSettings> é convertida em uma interface de <xref:System.Runtime.Serialization.ISerializable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

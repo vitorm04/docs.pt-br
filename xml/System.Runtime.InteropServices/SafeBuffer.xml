@@ -1,0 +1,684 @@
+<Type Name="SafeBuffer" FullName="System.Runtime.InteropServices.SafeBuffer">
+  <TypeSignature Language="C#" Value="public abstract class SafeBuffer : Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SafeBuffer extends Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.SafeBuffer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.InteropServices.SafeHandle</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um buffer de memória controlado que pode ser usado para leitura e gravação. Tentativas de acessar a memória fora do buffer controlado (falhas e estouros) geram exceções.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar o <xref:System.Runtime.InteropServices.SafeBuffer.Initialize%2A?displayProperty=nameWithType> método antes de usar qualquer instância do <xref:System.Runtime.InteropServices.SafeBuffer>. Para evitar corridas quando você armazena uma instância de um <xref:System.Runtime.InteropServices.SafeBuffer> do objeto em uma variável estática, você deve usar uma das seguintes abordagens:  
+  
+-   Criar um bloqueio ao publicar o <xref:System.Runtime.InteropServices.SafeBuffer>.  
+  
+-   Criar um local inicializar variável, o <xref:System.Runtime.InteropServices.SafeBuffer>e, em seguida, atribua o <xref:System.Runtime.InteropServices.SafeBuffer> à variável estática, por exemplo, usando o <xref:System.Threading.Interlocked.CompareExchange%2A?displayProperty=nameWithType> método.  
+  
+> [!NOTE]
+>  Atribuições em um construtor de classe estática implicitamente estão bloqueadas.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SafeBuffer (bool ownsHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool ownsHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.SafeBuffer.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownsHandle" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ownsHandle">
+          <see langword="true" /> para liberar de forma confiável o identificador durante a fase de finalização; <see langword="false" /> para impedir a liberação confiável (não recomendado).</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Runtime.InteropServices.SafeBuffer" /> classe e especifica se o identificador do buffer é confiável seja liberado.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquirePointer">
+      <MemberSignature Language="C#" Value="public void AcquirePointer (ref byte* pointer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AcquirePointer(unsigned int8*&amp; pointer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.SafeBuffer.AcquirePointer(System.Byte*@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pointer" Type="System.Byte*&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="pointer">Um ponteiro de bytes, transmitido pela referência, para receber o ponteiro de dentro do objeto <see cref="T:System.Runtime.InteropServices.SafeBuffer" />. Você deve definir o ponteiro como <see langword="null" /> antes de chamar esse método.</param>
+        <summary>Obtém um ponteiro de um objeto <see cref="T:System.Runtime.InteropServices.SafeBuffer" /> para um bloco de memória.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Runtime.InteropServices.SafeBuffer.AcquirePointer%2A> retorna, você deve executar, verificando se a verificação de limites de `pointer` parâmetro é `null`. Se não for `null`, você deve chamar o <xref:System.Runtime.InteropServices.SafeBuffer.ReleasePointer%2A?displayProperty=nameWithType> método em uma região de execução restrita (CER).  
+  
+ <xref:System.Runtime.InteropServices.SafeBuffer.AcquirePointer%2A>chama o <xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A?displayProperty=nameWithType> método e expõe o ponteiro. Ao contrário de <xref:System.Runtime.InteropServices.SafeBuffer.Read%2A> método, ele não altera a posição atual do ponteiro.  
+  
+ A seguir exampledemonstrates como usar o <xref:System.Runtime.InteropServices.SafeBuffer.AcquirePointer%2A> método:  
+  
+```  
+byte* pointer = null;  
+RuntimeHelpers.PrepareConstrainedRegions();  
+try {  
+    MySafeBuffer.AcquirePointer(ref pointer);  
+    // Use pointer here, with your own bounds checking.  
+    }  
+finally {  
+    if (pointer != null)  
+        MySafeBuffer.ReleasePointer();  
+    }  
+```  
+  
+ Se você converter `pointer` (que é um ponteiro para um byte) como um ponteiro para um tipo diferente (T *), você poderá ter problemas de alinhamento de ponteiro.  
+  
+ Você deve assumir a responsabilidade para todos os limites verificando com esse ponteiro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> não foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ByteLength">
+      <MemberSignature Language="C#" Value="public ulong ByteLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 ByteLength" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.SafeBuffer.ByteLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho do buffer, em bytes.</summary>
+        <value>O número de bytes no buffer de memória.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> não foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (ulong numBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Initialize(unsigned int64 numBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.SafeBuffer.Initialize(System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numBytes" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="numBytes">O número de bytes no buffer.</param>
+        <summary>Define o tamanho de alocação da região de memória em bytes. Você deve chamar esse método antes de usar o <see cref="T:System.Runtime.InteropServices.SafeBuffer" /> instância.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="numBytes" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="numBytes" />é maior que o espaço de endereço disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (uint numElements, uint sizeOfEachElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Initialize(unsigned int32 numElements, unsigned int32 sizeOfEachElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.SafeBuffer.Initialize(System.UInt32,System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numElements" Type="System.UInt32" />
+        <Parameter Name="sizeOfEachElement" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="numElements">O número de elementos no buffer.</param>
+        <param name="sizeOfEachElement">O tamanho de cada elemento no buffer.</param>
+        <summary>Especifica o tamanho de alocação de buffer de memória usando o número especificado de elementos e o tamanho do elemento. Você deve chamar esse método antes de usar o <see cref="T:System.Runtime.InteropServices.SafeBuffer" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método define o tamanho necessário da região de memória como o número de elementos em uma matriz multiplicado pelo tamanho de cada elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="numElements" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="sizeOfEachElement" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="numElements" />multiplicado por <paramref name="sizeOfEachElement" /> é maior que o espaço de endereço disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void Initialize&lt;T&gt; (uint numElements) where T : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Initialize&lt;struct .ctor (class System.ValueType) T&gt;(unsigned int32 numElements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.SafeBuffer.Initialize``1(System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="numElements" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de valor para alocar memória para.</typeparam>
+        <param name="numElements">O número de elementos de alocar memória para o tipo de valor.</param>
+        <summary>Define o tamanho de alocação da região de memória, especificando o número de tipos de valor. Você deve chamar esse método antes de usar o <see cref="T:System.Runtime.InteropServices.SafeBuffer" /> instância.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="numElements" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="numElements" />multiplicado pelo tamanho de cada elemento é maior que o espaço de endereço disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInvalid">
+      <MemberSignature Language="C#" Value="public override bool IsInvalid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInvalid" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.SafeBuffer.IsInvalid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Read&lt;T&gt; (ulong byteOffset) where T : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Read&lt;struct .ctor (class System.ValueType) T&gt;(unsigned int64 byteOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.SafeBuffer.Read``1(System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="byteOffset" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de valor para leitura.</typeparam>
+        <param name="byteOffset">O local do qual ler o tipo de valor. Você precisará considerar as questões de alinhamento.</param>
+        <summary>Lê um tipo de valor da memória no deslocamento especificado.</summary>
+        <returns>O tipo de valor que foi lido da memória.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> não foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadArray&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void ReadArray&lt;T&gt; (ulong byteOffset, T[] array, int index, int count) where T : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReadArray&lt;struct .ctor (class System.ValueType) T&gt;(unsigned int64 byteOffset, !!T[] array, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.SafeBuffer.ReadArray``1(System.UInt64,``0[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="byteOffset" Type="System.UInt64" />
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de valor para leitura.</typeparam>
+        <param name="byteOffset">O local do qual iniciar a leitura.</param>
+        <param name="array">A matriz de saída para gravar.</param>
+        <param name="index">O local da matriz de saída para começar a gravar.</param>
+        <param name="count">O número de tipos de valor leiam a matriz de entrada e para gravar a matriz de saída.</param>
+        <summary>Lê o número especificado de tipos de valor da memória iniciados no deslocamento e grava-os em uma matriz, começando no índice.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O comprimento da matriz menos o índice é menor que <paramref name="count" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> não foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleasePointer">
+      <MemberSignature Language="C#" Value="public void ReleasePointer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReleasePointer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.SafeBuffer.ReleasePointer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera um ponteiro que foi obtido com o <see cref="M:System.Runtime.InteropServices.SafeBuffer.AcquirePointer(System.Byte*@)" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna, o ponteiro não pode ser usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> não foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void Write&lt;T&gt; (ulong byteOffset, T value) where T : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write&lt;struct .ctor (class System.ValueType) T&gt;(unsigned int64 byteOffset, !!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.SafeBuffer.Write``1(System.UInt64,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="byteOffset" Type="System.UInt64" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de valor para gravação.</typeparam>
+        <param name="byteOffset">O local no qual iniciar a gravação. Você precisará considerar as questões de alinhamento.</param>
+        <param name="value">O valor a ser gravado.</param>
+        <summary>Grava um tipo de valor para a memória no local especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é equivalente ao seguinte código:  
+  
+```  
+*(T*)(bytePtr + byteOffset) = value;  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> não foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteArray&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void WriteArray&lt;T&gt; (ulong byteOffset, T[] array, int index, int count) where T : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteArray&lt;struct .ctor (class System.ValueType) T&gt;(unsigned int64 byteOffset, !!T[] array, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.SafeBuffer.WriteArray``1(System.UInt64,``0[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.MayFail)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="byteOffset" Type="System.UInt64" />
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de valor para gravação.</typeparam>
+        <param name="byteOffset">O local na memória para gravar.</param>
+        <param name="array">A matriz de entrada.</param>
+        <param name="index">O deslocamento na matriz para iniciar a leitura do.</param>
+        <param name="count">O número de tipos de valor para gravação.</param>
+        <summary>Grava o número especificado de tipos de valor para um local de memória por leitura de bytes a partir do local especificado na matriz de entrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada elemento na matriz de entrada consiste o tipo de valor genérico da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">O comprimento da matriz de entrada menos <paramref name="index" /> é menor que <paramref name="count" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="Overload:System.Runtime.InteropServices.SafeBuffer.Initialize" /> não foi chamado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

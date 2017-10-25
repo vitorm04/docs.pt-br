@@ -1,0 +1,199 @@
+<Type Name="SplineSizeKeyFrame" FullName="System.Windows.Media.Animation.SplineSizeKeyFrame">
+  <TypeSignature Language="C#" Value="public class SplineSizeKeyFrame : System.Windows.Media.Animation.SizeKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SplineSizeKeyFrame extends System.Windows.Media.Animation.SizeKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.SplineSizeKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.SizeKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Anima do valor <see cref="T:System.Windows.Size" /> do quadro chave anterior para seu próprio <see cref="P:System.Windows.Media.Animation.SizeKeyFrame.Value" /> com interpolação spline.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada como parte de um <xref:System.Windows.Media.Animation.SizeKeyFrameCollection> em conjunto com um <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> para animar uma <xref:System.Windows.Size> valor da propriedade ao longo de um conjunto de quadros-chave.  
+  
+ Um quadro-chave define um segmento do <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> ao qual ela pertence. Cada quadro chave tem um destino <xref:System.Windows.Media.Animation.SizeKeyFrame.Value%2A> e um <xref:System.Windows.Media.Animation.SizeKeyFrame.KeyTime%2A>. O <xref:System.Windows.Media.Animation.SizeKeyFrame.KeyTime%2A> Especifica a hora em que o quadro chave <xref:System.Windows.Media.Animation.SizeKeyFrame.Value%2A> devem ser atingido. Um quadro chave anima do valor de destino de quadro chave anterior a seu próprio valor de destino. Ele começa quando o quadro chave anterior termina e termina quando é atingido sua própria chave de tempo.  
+  
+ Quadros-chave spline como <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> cria uma transição de variável entre valores que é determinado pelo <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> propriedade. Interpolação por spline pode ser usada para obter efeitos de tempo "reais" mais realistas, como a aceleração e desaceleração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplineSizeKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineSizeKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.SplineSizeKeyFrame" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplineSizeKeyFrame (System.Windows.Size value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Size value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineSizeKeyFrame.#ctor(System.Windows.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="value">Valor (também conhecido como "valor de destino") para o quadro-chave de término.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.SplineSizeKeyFrame" /> classe com o valor final especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplineSizeKeyFrame (System.Windows.Size value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Size value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineSizeKeyFrame.#ctor(System.Windows.Size,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Size" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Valor (também conhecido como "valor de destino") para o quadro-chave de término.</param>
+        <param name="keyTime">Chave de tempo para o quadro-chave. O tempo de chave determina quando o valor de destino é atingido que também é quando o quadro chave termina.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.SplineSizeKeyFrame" /> classe com o valor e chave de hora especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SplineSizeKeyFrame (System.Windows.Size value, System.Windows.Media.Animation.KeyTime keyTime, System.Windows.Media.Animation.KeySpline keySpline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Size value, valuetype System.Windows.Media.Animation.KeyTime keyTime, class System.Windows.Media.Animation.KeySpline keySpline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineSizeKeyFrame.#ctor(System.Windows.Size,System.Windows.Media.Animation.KeyTime,System.Windows.Media.Animation.KeySpline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Size" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+        <Parameter Name="keySpline" Type="System.Windows.Media.Animation.KeySpline" />
+      </Parameters>
+      <Docs>
+        <param name="value">Valor (também conhecido como "valor de destino") para o quadro-chave de término.</param>
+        <param name="keyTime">Chave de tempo para o quadro-chave. O tempo de chave determina quando o valor de destino é atingido que também é quando o quadro chave termina.</param>
+        <param name="keySpline">
+          <see cref="T:System.Windows.Media.Animation.KeySpline" />para o quadro-chave. O <see cref="T:System.Windows.Media.Animation.KeySpline" /> representa uma curva de Bézier que define o progresso de animação de quadro-chave.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.SplineSizeKeyFrame" /> classe com o valor final especificado, a hora, de chave e <see cref="T:System.Windows.Media.Animation.KeySpline" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineSizeKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de <see cref="T:System.Windows.Media.Animation.SplineSizeKeyFrame" />.</summary>
+        <returns>A nova instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size InterpolateValueCore (System.Windows.Size baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size InterpolateValueCore(valuetype System.Windows.Size baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.SplineSizeKeyFrame.InterpolateValueCore(System.Windows.Size,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Windows.Size" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">O valor para animar do.</param>
+        <param name="keyFrameProgress">Um valor entre 0,0 e 1,0, inclusive, que especifica a porcentagem de tempo decorrido para este quadro-chave.</param>
+        <summary>Usa interpolação por spline para fazer a transição entre o valor anterior de quadro-chave e o valor do quadro chave atual.</summary>
+        <returns>O valor de saída de quadro chave recebe o valor de base especificado e o andamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySpline">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.KeySpline KeySpline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.KeySpline KeySpline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.KeySpline</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os pontos de controle que definem o andamento da animação de quadro chave.</summary>
+        <value>Os dois pontos de controle que especificam o Bezier cúbico curva que define o progresso do quadro chave.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para entender como um <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> funciona, é útil entender as curvas cúbicas de Bezier. Uma curva de Bézier cúbica é definida por um ponto inicial, um ponto final e dois pontos de controle. As duas coordenadas no <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> define esses dois pontos de controle. Ao descrever splines de chave, o ponto de início da curva de Bézier sempre é 0 e o ponto de extremidade é sempre 1, por isso, você define apenas os dois pontos de controle. A curva resultante Especifica como uma animação é interpolada durante um segmento de tempo; ou seja, a curva representa a taxa de alteração no atributo de destino da animação sobre o segmento de tempo. Para ver melhor a relação entre o andamento da animação e uma curva de Bézier, consulte [chave Spline Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160011) .  
+  
+<a name="dependencyPropertyInfo_KeySpline"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySplineProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySplineProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty KeySplineProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty KeySplineProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySplineProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

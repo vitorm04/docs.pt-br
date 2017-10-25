@@ -1,0 +1,1853 @@
+<Type Name="BindingList&lt;T&gt;" FullName="System.ComponentModel.BindingList&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class BindingList&lt;T&gt; : System.Collections.ObjectModel.Collection&lt;T&gt;, System.ComponentModel.IBindingList, System.ComponentModel.ICancelAddNew, System.ComponentModel.IRaiseItemChangedEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit BindingList`1&lt;T&gt; extends System.Collections.ObjectModel.Collection`1&lt;!T&gt; implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList, class System.ComponentModel.IBindingList, class System.ComponentModel.ICancelAddNew, class System.ComponentModel.IRaiseItemChangedEvents" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.BindingList`1" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;T&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">T</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IBindingList</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ICancelAddNew</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IRaiseItemChangedEvents</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">O tipo dos elementos na lista.</typeparam>
+    <summary>Fornece uma coleção genérica que dá suporte à vinculação de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601> classe pode ser usada como uma classe base para criar um mecanismo de associação de dados bidirecional. <xref:System.ComponentModel.BindingList%601>Fornece uma implementação concreta genérica do <xref:System.ComponentModel.IBindingList> interface. Essa é uma alternativa à implementação completo <xref:System.ComponentModel.IBindingList> interface, que pode ser difícil devido a interação sutil entre <xref:System.ComponentModel.IBindingList>, <xref:System.ComponentModel.IEditableObject>e os respectivos <xref:System.Windows.Forms.CurrencyManager>. No entanto, o programador soluções típicas usará uma classe que fornece a funcionalidade de associação de dados, como <xref:System.Windows.Forms.BindingSource>, em vez de diretamente usando <xref:System.ComponentModel.BindingList%601>.  
+  
+ <xref:System.ComponentModel.BindingList%601>dá suporte a instâncias de fábrica criada por meio de extensível <xref:System.ComponentModel.BindingList%601.AddNew%2A> método. (Esse mesmo tipo de extensibilidade também podem é encontrado em outras classes, como <xref:System.Windows.Forms.BindingSource>) Além disso, como essa classe implementa o <xref:System.ComponentModel.ICancelAddNew> interface, ele permite transacionais confirmações ou reversões do novo item por meio de <xref:System.ComponentModel.BindingList%601.EndNew%2A> e <xref:System.ComponentModel.BindingList%601.CancelNew%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a associação a um <xref:System.ComponentModel.BindingList%601> componente que contém um objeto de negócios. Este é um exemplo completo que contém um `Main` método.  
+  
+ [!code-csharp[System.ComponentModel.BindingListOfTExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/CS/Form1.cs#1)]
+ [!code-vb[System.ComponentModel.BindingListOfTExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.BindingList`1" /> usando valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de <xref:System.ComponentModel.BindingList%601> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.ComponentModel.BindingList%601.AllowEdit%2A>|`true`|  
+|<xref:System.ComponentModel.BindingList%601.AllowNew%2A>|`true`Se o tipo de lista tem um construtor padrão; Caso contrário, `false`.|  
+|<xref:System.ComponentModel.BindingList%601.AllowRemove%2A>|`true`|  
+|<xref:System.ComponentModel.BindingList%601.RaiseListChangedEvents%2A>|`true`|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um novo <xref:System.ComponentModel.BindingList%601>. Para o exemplo completo, consulte o <xref:System.ComponentModel.BindingList%601> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.ComponentModel.BindingListOfTExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/CS/Form1.cs#2)]
+ [!code-vb[System.ComponentModel.BindingListOfTExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindingList (System.Collections.Generic.IList&lt;T&gt; list);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IList`1&lt;!T&gt; list) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.#ctor(System.Collections.Generic.IList{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.Generic.IList&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="list">Um <see cref="T:System.Collections.Generic.IList`1" /> de itens a ser contido no <see cref="T:System.ComponentModel.BindingList`1" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.BindingList`1" /> com a lista especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este <xref:System.ComponentModel.BindingList%601.%23ctor%2A> para criar um <xref:System.ComponentModel.BindingList%601> que é apoiado por `list`, que garante que as alterações para `list` são refletidas no <xref:System.ComponentModel.BindingList%601>.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de <xref:System.ComponentModel.BindingList%601> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.ComponentModel.BindingList%601.AllowEdit%2A>|`true`|  
+|<xref:System.ComponentModel.BindingList%601.AllowNew%2A>|`true`Se o tipo de lista tem um construtor padrão; Caso contrário, `false`.|  
+|<xref:System.ComponentModel.BindingList%601.AllowRemove%2A>|`true`|  
+|<xref:System.ComponentModel.BindingList%601.RaiseListChangedEvents%2A>|`true`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddingNew">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.AddingNewEventHandler AddingNew;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.AddingNewEventHandler AddingNew" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.BindingList`1.AddingNew" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AddingNewEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes que um item seja adicionado à lista.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.AddingNew> evento ocorre antes de um novo objeto é adicionado à coleção representada pelo <xref:System.Collections.ObjectModel.Collection%601.Items%2A> propriedade. Esse evento é gerado após o <xref:System.ComponentModel.BindingList%601.AddNew%2A> método é chamado, mas antes do novo item é criado e adicionado à lista interna. Manipulando esse evento, o programador pode fornecer a criação de item personalizado e comportamento de inserção sem ser forçado a derivam de <xref:System.ComponentModel.BindingList%601> classe.  
+  
+ Para obter mais informações sobre como fornecer funcionalidade personalizada de novo item, consulte o <xref:System.ComponentModel.BindingList%601.AddNew%2A> método. Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como tratar o <xref:System.ComponentModel.BindingList%601.AddingNew> evento. Para o exemplo completo, consulte o <xref:System.ComponentModel.BindingList%601> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.ComponentModel.BindingListOfTExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/CS/Form1.cs#3)]
+ [!code-vb[System.ComponentModel.BindingListOfTExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNew">
+      <MemberSignature Language="C#" Value="public T AddNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !T AddNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.AddNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona um novo item à coleção.</summary>
+        <returns>O item adicionado à lista.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.AddNew%2A> método adiciona um novo item à coleção representada pelo <xref:System.Collections.ObjectModel.Collection%601.Items%2A> propriedade. Para adicionar um novo item, a lógica a seguir é usada:  
+  
+1.  O <xref:System.ComponentModel.BindingList%601.AddingNew> evento é gerado automaticamente.  
+  
+     Esse evento pode ser tratado por meio de programação para criar um novo item personalizado. Isso é feito no manipulador de eventos, definindo o <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A> propriedade o <xref:System.ComponentModel.AddingNewEventArgs> parâmetro para o novo item.  
+  
+     Caso contrário, o novo item é criado automaticamente por meio de seu construtor padrão público.  
+  
+2.  A posição do novo item é rastreada, mas ele não é adicionado à lista de até que uma das seguintes condições forem atendidas:  
+  
+    -   O item é explicitamente confirmado por uma chamada para <xref:System.ComponentModel.BindingList%601.EndNew%2A>.  
+  
+    -   O item é implicitamente confirmado por alguma outra operação que alterou o conteúdo da lista, como uma inserção ou remoção de um item.  
+  
+ Por outro lado, ao chamar o <xref:System.ComponentModel.BindingList%601.CancelNew%2A> método antes que o item seja confirmado fará com que o novo item a ser descartado.  
+  
+ Este método gera o <xref:System.ComponentModel.BindingList%601.ListChanged> evento quando o novo item é confirmado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.BindingList%601.AddNew%2A> método. <xref:System.ComponentModel.BindingList%601>. Para o exemplo completo, consulte o <xref:System.ComponentModel.BindingList%601> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.ComponentModel.BindingListOfTExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/CS/Form1.cs#4)]
+ [!code-vb[System.ComponentModel.BindingListOfTExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Windows.Forms.BindingSource.AllowNew" /> é definida como <see langword="false" />.  
+  
+ -ou-  
+  
+ Não foi possível encontrar um construtor padrão público para o tipo de item atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddNewCore">
+      <MemberSignature Language="C#" Value="protected virtual object AddNewCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object AddNewCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.AddNewCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona um novo item ao final da coleção.</summary>
+        <returns>O item que foi adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.AddNewCore%2A> método adiciona um novo item à coleção representada pelo <xref:System.Collections.ObjectModel.Collection%601.Items%2A> propriedade. <xref:System.ComponentModel.BindingList%601.AddNewCore%2A>gera o <xref:System.ComponentModel.BindingList%601.AddingNew> evento. Isso permite que você adicione um novo item definindo a <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A> propriedade o <xref:System.ComponentModel.AddingNewEventArgs> parâmetro para o novo item. Caso contrário, o novo item é criado automaticamente por meio de seu construtor padrão público.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">O novo item não é do mesmo tipo que os objetos contidos no <see cref="T:System.ComponentModel.BindingList`1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowEdit">
+      <MemberSignature Language="C#" Value="public bool AllowEdit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowEdit" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.AllowEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os itens da lista podem ser editados.</summary>
+        <value>
+          <see langword="true" /> se os itens de lista puderem ser editados; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.AllowEdit%2A> propriedade normalmente é usada por outros componentes para determinar se a edição de itens na lista é permitida. Quando <xref:System.ComponentModel.BindingList%601.AllowEdit%2A> é definido como um novo valor, um <xref:System.ComponentModel.BindingList%601.ListChanged> eventos do tipo <xref:System.ComponentModel.ListChangedType.Reset> ocorrerá.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.ComponentModel.BindingList%601.AllowEdit%2A> propriedade. Para o exemplo completo, consulte o <xref:System.ComponentModel.BindingList%601> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.ComponentModel.BindingListOfTExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/CS/Form1.cs#2)]
+ [!code-vb[System.ComponentModel.BindingListOfTExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowNew">
+      <MemberSignature Language="C#" Value="public bool AllowNew { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowNew" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.AllowNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se é possível adicionar itens à lista usando o método <see cref="M:System.ComponentModel.BindingList`1.AddNew" />.</summary>
+        <value>
+          <see langword="true" /> se for possível adicionar itens à lista com o método <see cref="M:System.ComponentModel.BindingList`1.AddNew" />; caso contrário, <see langword="false" />. O padrão depende do tipo subjacente contido na lista.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.AllowNew%2A> propriedade normalmente é usada por outros componentes para determinar se a criação de novos itens são permitidos. <xref:System.ComponentModel.BindingList%601.AllowNew%2A>o padrão será a `true` se o tipo contido na lista tem um construtor padrão ou o <xref:System.ComponentModel.BindingList%601.AddingNew> evento é manipulado. Se o <xref:System.ComponentModel.BindingList%601.AddingNew> evento não é tratado ou o tipo de lista não tem um construtor padrão, em seguida, <xref:System.ComponentModel.BindingList%601.AllowNew%2A> padrão é `false`.  
+  
+ Se <xref:System.ComponentModel.BindingList%601.AllowNew%2A> é definido explicitamente, o conjunto de valor será sempre usado por objetos associados para determinar se é possível adicionar novos itens à lista. Se <xref:System.ComponentModel.BindingList%601.AllowNew%2A> é `true` ou `false`, novos itens podem ser adicionados explicitamente chamando <xref:System.ComponentModel.BindingList%601.AddNew%2A> se o tipo de lista tem um construtor padrão ou o <xref:System.ComponentModel.BindingList%601.AddingNew> evento é manipulado. Além disso, a configuração <xref:System.ComponentModel.BindingList%601.AllowNew%2A> faz com que um <xref:System.ComponentModel.BindingList%601.ListChanged> eventos do tipo <xref:System.ComponentModel.ListChangedType.Reset> ocorra.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.ComponentModel.BindingList%601.AllowNew%2A> propriedade. Para o exemplo completo, consulte o <xref:System.ComponentModel.BindingList%601> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.ComponentModel.BindingListOfTExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/CS/Form1.cs#2)]
+ [!code-vb[System.ComponentModel.BindingListOfTExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowRemove">
+      <MemberSignature Language="C#" Value="public bool AllowRemove { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowRemove" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.AllowRemove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se você pode remover itens da coleção.</summary>
+        <value>
+          <see langword="true" />Se você pode remover os itens da lista com o <see cref="M:System.ComponentModel.BindingList`1.RemoveItem(System.Int32)" /> método caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.AllowRemove%2A> propriedade normalmente é usada por outros componentes para determinar se a remoção de itens é permitida.  
+  
+ Quando <xref:System.ComponentModel.BindingList%601.AllowRemove%2A> é definido como um novo valor, um <xref:System.ComponentModel.BindingList%601.ListChanged> eventos do tipo <xref:System.ComponentModel.ListChangedType.Reset> ocorre.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.ComponentModel.BindingList%601.AllowRemove%2A> propriedade. Para o exemplo completo, consulte o <xref:System.ComponentModel.BindingList%601> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.ComponentModel.BindingListOfTExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/CS/Form1.cs#2)]
+ [!code-vb[System.ComponentModel.BindingListOfTExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplySortCore">
+      <MemberSignature Language="C#" Value="protected virtual void ApplySortCore (System.ComponentModel.PropertyDescriptor prop, System.ComponentModel.ListSortDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ApplySortCore(class System.ComponentModel.PropertyDescriptor prop, valuetype System.ComponentModel.ListSortDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.ApplySortCore(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.ComponentModel.PropertyDescriptor" />
+        <Parameter Name="direction" Type="System.ComponentModel.ListSortDirection" />
+      </Parameters>
+      <Docs>
+        <param name="prop">Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> que especifica a propriedade para a classificação.</param>
+        <param name="direction">Um dos valores de <see cref="T:System.ComponentModel.ListSortDirection" />.</param>
+        <summary>Classifica os itens se substituído em uma classe derivada; caso contrário, lança um <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601> classe não fornece uma implementação de base de classificação, isso <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A> sempre gera um <xref:System.NotSupportedException> por padrão. Para permitir a classificação, derivam <xref:System.ComponentModel.BindingList%601> e executar as seguintes tarefas:  
+  
+-   Substituir <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A> e implementar a classificação, gerando o <xref:System.ComponentModel.BindingList%601.ListChanged> evento quando a classificação for concluído.  
+  
+-   Substituir <xref:System.ComponentModel.BindingList%601.RemoveSortCore%2A> e implementar a remoção de classificação.  
+  
+-   Substituir <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A> e defina <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A> para `true`.  
+  
+ Além disso, talvez você queira implementar o complementares <xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A> e <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A> propriedades de classificação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O método não é substituído em uma classe derivada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelNew">
+      <MemberSignature Language="C#" Value="public virtual void CancelNew (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelNew(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.CancelNew(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice das do novo item a ser adicionado</param>
+        <summary>Descarta um novo item pendente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.CancelNew%2A> método reverte um novo item pendente que foi adicionado por meio de <xref:System.ComponentModel.BindingList%601.AddNew%2A> método, mas ainda não foram confirmados.  
+  
+ Para obter mais informações sobre como adicionar e confirmar novos itens, consulte o <xref:System.ComponentModel.BindingList%601.AddNew%2A> método  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.BindingList%601.CancelNew%2A> método. Para o exemplo completo, consulte o <xref:System.ComponentModel.BindingList%601> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.ComponentModel.BindingListOfTExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/CS/Form1.cs#4)]
+ [!code-vb[System.ComponentModel.BindingListOfTExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItems">
+      <MemberSignature Language="C#" Value="protected override void ClearItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.ClearItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os elementos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.ClearItems%2A> método Remove todos os itens da coleção representada pelo <xref:System.Collections.ObjectModel.Collection%601.Items%2A> propriedade.  
+  
+ <xref:System.ComponentModel.BindingList%601.ClearItems%2A>chamadas de <xref:System.ComponentModel.BindingList%601.EndNew%2A> método antes de limpar a coleção e gera o <xref:System.ComponentModel.BindingList%601.ListChanged> evento após foi limpo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndNew">
+      <MemberSignature Language="C#" Value="public virtual void EndNew (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndNew(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.EndNew(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice do novo item a ser adicionado.</param>
+        <summary>Confirma um novo item de pendente para a coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.EndNew%2A> um novo item pendente que foram adicionado por meio do método confirma o <xref:System.ComponentModel.BindingList%601.AddNew%2A> método. Se não houver nenhum novo item aguardando para ser confirmada, esse método não fará nada.  
+  
+ Para obter mais informações sobre como adicionar e confirmar novos itens, consulte o <xref:System.ComponentModel.BindingList%601.AddNew%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindCore">
+      <MemberSignature Language="C#" Value="protected virtual int FindCore (System.ComponentModel.PropertyDescriptor prop, object key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 FindCore(class System.ComponentModel.PropertyDescriptor prop, object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.FindCore(System.ComponentModel.PropertyDescriptor,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.ComponentModel.PropertyDescriptor" />
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="prop">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> a ser pesquisado.</param>
+        <param name="key">O valor de <c>propriedade</c> para corresponder.</param>
+        <summary>Procura o índice do item que tem o descritor de propriedade especificado com o valor indicado se a pesquisa for implementada em uma classe derivada; caso contrário, um <see cref="T:System.NotSupportedException" />.</summary>
+        <returns>O índice de base zero do item que corresponde ao descritor de propriedade e contém o valor especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601> classe não fornece uma implementação de base de pesquisa e isso <xref:System.ComponentModel.BindingList%601.FindCore%2A> sempre gera um <xref:System.NotSupportedException> por padrão. Para habilitar a pesquisa, derivam <xref:System.ComponentModel.BindingList%601> e executar as seguintes tarefas:  
+  
+-   Substituir <xref:System.ComponentModel.BindingList%601.SupportsSearchingCore%2A> para definir o <xref:System.ComponentModel.BindingList%601.SupportsSearchingCore%2A> propriedade `true`.  
+  
+-   Substituir <xref:System.ComponentModel.BindingList%601.FindCore%2A> para implementar o algoritmo de localizar.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.BindingList%601.FindCore%2A> membro.  
+  
+ [!code-csharp[System.Windows.Forms.BindingSourceAndBindingListOfT#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceAndBindingListOfT/CS/Form1.cs#3)]
+ [!code-vb[System.Windows.Forms.BindingSourceAndBindingListOfT#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceAndBindingListOfT/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="M:System.ComponentModel.BindingList`1.FindCore(System.ComponentModel.PropertyDescriptor,System.Object)" /> não é substituído em uma classe derivada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.InsertItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero no qual o item deve ser inserido.</param>
+        <param name="item">O item a ser inserido na lista.</param>
+        <summary>Insere o item especificado na lista no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.BindingList%601.InsertItem%2A>executa as seguintes operações:  
+  
+-   Chamadas <xref:System.ComponentModel.BindingList%601.EndNew%2A> para confirmar todos os itens não confirmados adicionados por meio de <xref:System.ComponentModel.BindingList%601.AddingNew> eventos.  
+  
+-   Insere o item no índice especificado  
+  
+-   Gera um <xref:System.ComponentModel.BindingList%601.ListChanged> eventos do tipo <xref:System.ComponentModel.ListChangedType.ItemAdded> indicando que o índice do item que foi inserido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSortedCore">
+      <MemberSignature Language="C#" Value="protected virtual bool IsSortedCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSortedCore" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.IsSortedCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a lista está classificada.</summary>
+        <value>
+          <see langword="true" /> se a lista estiver classificada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601> classe não fornece uma implementação de base de classificação, isso <xref:System.ComponentModel.BindingList%601.IsSortedCore%2A> sempre retorna `false` por padrão.  
+  
+ O <xref:System.ComponentModel.BindingList%601> classe não fornece uma implementação de base de classificação. Para permitir a classificação, derive uma classe de <xref:System.ComponentModel.BindingList%601> e:  
+  
+-   Substituir <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A> e implementar a classificação aumentando o <xref:System.ComponentModel.BindingList%601.ListChanged> evento quando a classificação for concluído.  
+  
+-   Substituir <xref:System.ComponentModel.BindingList%601.RemoveSortCore%2A> e implementar a remoção de classificação.  
+  
+-   Substituir <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A> e defina <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A> para `true`.  
+  
+ Além disso, talvez você queira implementar o complementares <xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A> e <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>s propriedades de classificação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.ListChangedEventHandler ListChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.ListChangedEventHandler ListChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.BindingList`1.ListChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a lista ou um item na lista é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.BindingList%601.ListChanged>notificações para as alterações de valor de item são geradas somente se o tipo de item de lista implementa o <xref:System.ComponentModel.INotifyPropertyChanged> interface.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como tratar o <xref:System.ComponentModel.BindingList%601.ListChanged> evento. Para o exemplo completo, consulte o <xref:System.ComponentModel.BindingList%601> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.ComponentModel.BindingListOfTExample#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/CS/Form1.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAddingNew">
+      <MemberSignature Language="C#" Value="protected virtual void OnAddingNew (System.ComponentModel.AddingNewEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAddingNew(class System.ComponentModel.AddingNewEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.OnAddingNew(System.ComponentModel.AddingNewEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.AddingNewEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.AddingNewEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.ComponentModel.BindingList`1.AddingNew" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.AddingNew> evento e o <xref:System.ComponentModel.BindingList%601.AddNew%2A> método permitir personalizado criado itens a serem adicionados à lista.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.ComponentModel.BindingList%601.OnAddingNew%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.ComponentModel.BindingList`1.OnAddingNew(System.ComponentModel.AddingNewEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.ComponentModel.BindingList`1.OnAddingNew(System.ComponentModel.AddingNewEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnListChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnListChanged (System.ComponentModel.ListChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnListChanged(class System.ComponentModel.ListChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.OnListChanged(System.ComponentModel.ListChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.ListChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.ListChangedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.ComponentModel.BindingList`1.ListChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.OnListChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.ComponentModel.BindingList`1.OnListChanged(System.ComponentModel.ListChangedEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.ComponentModel.BindingList`1.OnListChanged(System.ComponentModel.ListChangedEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseListChangedEvents">
+      <MemberSignature Language="C#" Value="public bool RaiseListChangedEvents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RaiseListChangedEvents" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.RaiseListChangedEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a adição ou remoção de itens na lista gera eventos <see cref="E:System.ComponentModel.BindingList`1.ListChanged" />.</summary>
+        <value>
+          <see langword="true" /> se a adição ou remoção de itens gera eventos <see cref="E:System.ComponentModel.BindingList`1.ListChanged" />; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.ComponentModel.BindingList%601.RaiseListChangedEvents%2A> propriedade `false` se você deseja suprimir <xref:System.ComponentModel.BindingList%601.ListChanged> eventos ocorra na lista.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.BindingList%601.RaiseListChangedEvents%2A> método. Para o exemplo completo, consulte o <xref:System.ComponentModel.BindingList%601> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.ComponentModel.BindingListOfTExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/CS/Form1.cs#2)]
+ [!code-vb[System.ComponentModel.BindingListOfTExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BindingListOfTExample/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.RemoveItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do item a ser removido.</param>
+        <summary>Remove o item no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método gera o <xref:System.ComponentModel.BindingList%601.ListChanged> eventos do tipo <xref:System.ComponentModel.ListChangedType.ItemDeleted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Você está removendo um item recém-adicionado e <see cref="P:System.ComponentModel.IBindingList.AllowRemove" /> está definido como <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSortCore">
+      <MemberSignature Language="C#" Value="protected virtual void RemoveSortCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RemoveSortCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.RemoveSortCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove qualquer classificação aplicada com <see cref="M:System.ComponentModel.BindingList`1.ApplySortCore(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)" /> se a classificação for implementada em uma classe derivada; caso contrário, gerará <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601> classe não fornece uma implementação de base de classificação, isso <xref:System.ComponentModel.BindingList%601.RemoveSortCore%2A> sempre gera um <xref:System.NotSupportedException> por padrão. Para obter mais informações sobre a classificação, consulte o <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O método não é substituído em uma classe derivada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetBindings">
+      <MemberSignature Language="C#" Value="public void ResetBindings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetBindings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.ResetBindings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aciona um evento <see cref="E:System.ComponentModel.BindingList`1.ListChanged" /> do tipo <see cref="F:System.ComponentModel.ListChangedType.Reset" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.ComponentModel.BindingList%601> está associada a controles de formulários do Windows, o <xref:System.ComponentModel.BindingList%601.ResetBindings%2A> método faz com que uma atualização de todos os controles associados à lista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetItem">
+      <MemberSignature Language="C#" Value="public void ResetItem (int position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetItem(int32 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.ResetItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="position">Um índice com base em zero do item a ser redefinido.</param>
+        <summary>Gera um <see cref="E:System.ComponentModel.BindingList`1.ListChanged" /> eventos do tipo <see cref="F:System.ComponentModel.ListChangedType.ItemChanged" /> para o item na posição especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.ComponentModel.BindingList%601> está associada a controles de formulários do Windows, o <xref:System.ComponentModel.BindingList%601.ResetItem%2A> método faz com que uma atualização de controles associados ao item na posição especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.SetItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do item a ser substituído.</param>
+        <param name="item">O novo valor para o item no índice especificado. O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Substitui o item no índice especificado pelo item especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que o item for definido, <xref:System.ComponentModel.BindingList%601.SetItem%2A> gera um <xref:System.ComponentModel.BindingList%601.ListChanged> eventos do tipo <xref:System.ComponentModel.ListChangedType.ItemChanged> indicando que o índice do item que foi definido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ - ou -  
+  
+ <paramref name="index" /> é maior que <see cref="P:System.Collections.ObjectModel.Collection`1.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDirectionCore">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.ListSortDirection SortDirectionCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.ListSortDirection SortDirectionCore" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.SortDirectionCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListSortDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a direção que a lista é classificada.</summary>
+        <value>Um dos valores de <see cref="T:System.ComponentModel.ListSortDirection" />. O padrão é <see cref="F:System.ComponentModel.ListSortDirection.Ascending" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601> classe não fornece uma implementação de base de classificação, isso <xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A> sempre retorna <xref:System.ComponentModel.ListSortDirection.Ascending> por padrão. Para obter mais informações sobre a classificação, consulte o <xref:System.ComponentModel.IBindingList.ApplySort%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortPropertyCore">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.PropertyDescriptor SortPropertyCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptor SortPropertyCore" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.SortPropertyCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o descritor de propriedade que é usado para classificar a lista se a classificação é implementada em uma classe derivada; Caso contrário, retornará <see langword="null" />.</summary>
+        <value>O <see cref="T:System.ComponentModel.PropertyDescriptor" /> usado para classificar a lista.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>Retorna `null` por padrão porque o <xref:System.ComponentModel.BindingList%601> classe não fornece uma implementação de base de classificação. Para permitir a classificação, derive uma classe de <xref:System.ComponentModel.BindingList%601> e:  
+  
+-   Substituir <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A> e implementar a classificação.  
+  
+-   Substituir <xref:System.ComponentModel.BindingList%601.RemoveSortCore%2A> e implementar a remoção de classificação.  
+  
+-   Substituir <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A> e defina <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A> para `true`.  
+  
+-   Opcionalmente, substituir o <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A> para retornar o <xref:System.ComponentModel.PropertyDescriptor> usado para classificação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsChangeNotificationCore">
+      <MemberSignature Language="C#" Value="protected virtual bool SupportsChangeNotificationCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsChangeNotificationCore" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.SupportsChangeNotificationCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se <see cref="E:System.ComponentModel.BindingList`1.ListChanged" /> os eventos são ativados.</summary>
+        <value>
+          <see langword="true" />Se <see cref="E:System.ComponentModel.BindingList`1.ListChanged" /> eventos são com suporte; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.BindingList%601.SupportsChangeNotificationCore%2A>fornece a implementação para <xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A>. Você pode derivar uma classe de <xref:System.ComponentModel.BindingList%601> e substituir o valor padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsSearchingCore">
+      <MemberSignature Language="C#" Value="protected virtual bool SupportsSearchingCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsSearchingCore" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.SupportsSearchingCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a lista dá suporte a pesquisa.</summary>
+        <value>
+          <see langword="true" />Se a lista oferecer suporte a pesquisa; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601> classe não fornece uma implementação de base de pesquisa, isso <xref:System.ComponentModel.BindingList%601.SupportsSearchingCore%2A> sempre retorna `false` por padrão. Para obter mais informações sobre a implementação de pesquisa, consulte o <xref:System.ComponentModel.BindingList%601.System%23ComponentModel%23IBindingList%23Find%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.BindingList%601.SupportsSearchingCore%2A> membro.  
+  
+ [!code-csharp[System.Windows.Forms.BindingSourceAndBindingListOfT#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceAndBindingListOfT/CS/Form1.cs#3)]
+ [!code-vb[System.Windows.Forms.BindingSourceAndBindingListOfT#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceAndBindingListOfT/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsSortingCore">
+      <MemberSignature Language="C#" Value="protected virtual bool SupportsSortingCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsSortingCore" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.SupportsSortingCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a lista dá suporte à classificação.</summary>
+        <value>
+          <see langword="true" /> se a lista der suporte à classificação; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A> propriedade indica se o <xref:System.ComponentModel.BindingList%601> dá suporte à classificação com o <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A> método.  
+  
+ O <xref:System.ComponentModel.BindingList%601> classe não fornece uma implementação de base de classificação, isso <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A> sempre retorna `false` por padrão. Para obter mais informações sobre como implementar a classificação, consulte o <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.AddIndex">
+      <MemberSignature Language="C#" Value="void IBindingList.AddIndex (System.ComponentModel.PropertyDescriptor prop);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IBindingList.AddIndex(class System.ComponentModel.PropertyDescriptor prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#AddIndex(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="prop">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> para adicionar como um critério de pesquisa.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.IBindingList.AddIndex(System.ComponentModel.PropertyDescriptor)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação base deste método não fará nada. Se essa funcionalidade é desejada, uma classe derivada deve implementá-la.  
+  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.AddNew">
+      <MemberSignature Language="C#" Value="object IBindingList.AddNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.IBindingList.AddNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#AddNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona um novo item à lista. Para obter mais informações, consulte <see cref="M:System.ComponentModel.IBindingList.AddNew" />.</summary>
+        <returns>O item adicionado à lista.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ Essa implementação chama <xref:System.ComponentModel.BindingList%601.AddNewCore%2A> para adicionar um novo item à lista.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para o método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.AllowEdit">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.AllowEdit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.AllowEdit" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#AllowEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os itens da lista podem ser editados.</summary>
+        <value>
+          <see langword="true" /> se os itens de lista puderem ser editados; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.BindingList%601.AllowEdit%2A> propriedade normalmente é usada por outros componentes para determinar se a edição de itens na lista é permitida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.AllowNew">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.AllowNew { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.AllowNew" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#AllowNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os novos itens podem ser adicionados à lista usando o <see cref="M:System.ComponentModel.BindingList`1.AddNew" /> método.</summary>
+        <value>
+          <see langword="true" /> se for possível adicionar itens à lista com o método <see cref="M:System.ComponentModel.BindingList`1.AddNew" />; caso contrário, <see langword="false" />. O padrão depende do tipo subjacente contido na lista.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.AllowRemove">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.AllowRemove { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.AllowRemove" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#AllowRemove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os itens podem ser removidos da lista.</summary>
+        <value>
+          <see langword="true" />Se você pode remover os itens da lista com o <see cref="M:System.ComponentModel.BindingList`1.RemoveItem(System.Int32)" /> método; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.ApplySort">
+      <MemberSignature Language="C#" Value="void IBindingList.ApplySort (System.ComponentModel.PropertyDescriptor prop, System.ComponentModel.ListSortDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IBindingList.ApplySort(class System.ComponentModel.PropertyDescriptor prop, valuetype System.ComponentModel.ListSortDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#ApplySort(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.ComponentModel.PropertyDescriptor" />
+        <Parameter Name="direction" Type="System.ComponentModel.ListSortDirection" />
+      </Parameters>
+      <Docs>
+        <param name="prop">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> pelo qual se classificar.</param>
+        <param name="direction">Um dos valores de <see cref="T:System.ComponentModel.ListSortDirection" />.</param>
+        <summary>Classifica a lista com base em um <see cref="T:System.ComponentModel.PropertyDescriptor" /> e um <see cref="T:System.ComponentModel.ListSortDirection" />. Para obter uma descrição completa desse membro, consulte <see cref="M:System.ComponentModel.IBindingList.ApplySort(System.ComponentModel.PropertyDescriptor,System.ComponentModel.ListSortDirection)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.Find">
+      <MemberSignature Language="C#" Value="int IBindingList.Find (System.ComponentModel.PropertyDescriptor prop, object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.ComponentModel.IBindingList.Find(class System.ComponentModel.PropertyDescriptor prop, object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#Find(System.ComponentModel.PropertyDescriptor,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.ComponentModel.PropertyDescriptor" />
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="prop">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> no qual pesquisar.</param>
+        <param name="key">O valor de <c>propriedade</c> parâmetro a ser pesquisado.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.IBindingList.Find(System.ComponentModel.PropertyDescriptor,System.Object)" />.</summary>
+        <returns>O índice da linha que tem o <see cref="T:System.ComponentModel.PropertyDescriptor" /> determinado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.IsSorted">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.IsSorted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.IsSorted" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#IsSorted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.ComponentModel.IBindingList.IsSorted" />.</summary>
+        <value>
+          <see langword="true" />Se <see cref="M:System.ComponentModel.IBindingListView.ApplySort(System.ComponentModel.ListSortDescriptionCollection)" /> foi chamado e <see cref="M:System.ComponentModel.IBindingList.RemoveSort" /> não foi chamado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.RemoveIndex">
+      <MemberSignature Language="C#" Value="void IBindingList.RemoveIndex (System.ComponentModel.PropertyDescriptor prop);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IBindingList.RemoveIndex(class System.ComponentModel.PropertyDescriptor prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#RemoveIndex(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="prop">Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> para remover dos índices usados para pesquisa.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ComponentModel.IBindingList.RemoveIndex(System.ComponentModel.PropertyDescriptor)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação base deste método não fará nada. Se essa funcionalidade é desejada, uma classe derivada deve implementá-la.  
+  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.RemoveSort">
+      <MemberSignature Language="C#" Value="void IBindingList.RemoveSort ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IBindingList.RemoveSort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#RemoveSort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte<see cref="M:System.ComponentModel.IBindingList.RemoveSort" /></summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.SortDirection">
+      <MemberSignature Language="C#" Value="System.ComponentModel.ListSortDirection System.ComponentModel.IBindingList.SortDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.ListSortDirection System.ComponentModel.IBindingList.SortDirection" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#SortDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ListSortDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.ComponentModel.IBindingList.SortDirection" />.</summary>
+        <value>Um dos valores de <see cref="T:System.ComponentModel.ListSortDirection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.SortProperty">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptor System.ComponentModel.IBindingList.SortProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptor System.ComponentModel.IBindingList.SortProperty" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#SortProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.ComponentModel.IBindingList.SortProperty" />.</summary>
+        <value>O <see cref="T:System.ComponentModel.PropertyDescriptor" /> que está sendo usada para classificação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.SupportsChangeNotification">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.SupportsChangeNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.SupportsChangeNotification" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#SupportsChangeNotification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.ComponentModel.IBindingList.SupportsChangeNotification" />.</summary>
+        <value>
+          <see langword="true" /> se um evento <see cref="E:System.ComponentModel.IBindingList.ListChanged" /> for acionado quando a lista ou um item for alterado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.SupportsSearching">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.SupportsSearching { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.SupportsSearching" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#SupportsSearching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.ComponentModel.IBindingList.SupportsSearching" />.</summary>
+        <value>
+          <see langword="true" />Se a lista dá suporte a pesquisa usando o <see cref="M:System.ComponentModel.IBindingList.Find(System.ComponentModel.PropertyDescriptor,System.Object)" /> método; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IBindingList.SupportsSorting">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IBindingList.SupportsSorting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IBindingList.SupportsSorting" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.System#ComponentModel#IBindingList#SupportsSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.ComponentModel.IBindingList.SupportsSorting" />.</summary>
+        <value>
+          <see langword="true" /> se a lista der suporte à classificação; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.BindingList%601> é convertida em uma interface de <xref:System.ComponentModel.IBindingList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BindingList`1.System#ComponentModel#IRaiseItemChangedEvents#RaisesItemChangedEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as alterações de valor de propriedade do item geram <see cref="E:System.ComponentModel.BindingList`1.ListChanged" /> eventos do tipo <see cref="F:System.ComponentModel.ListChangedType.ItemChanged" />. Este membro não pode ser substituído em uma classe derivada.</summary>
+        <value>
+          <see langword="true" />Se o tipo de lista implementa <see cref="T:System.ComponentModel.INotifyPropertyChanged" />, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.BindingList%601.System%23ComponentModel%23IRaiseItemChangedEvents%23RaisesItemChangedEvents%2A>verifica se o tipo de lista para ver se ele implementa o <xref:System.ComponentModel.INotifyPropertyChanged> interface para indicar que ele gera <xref:System.ComponentModel.BindingList%601.ListChanged> eventos de <xref:System.ComponentModel.ListChangedType.ItemChanged> quando os valores de propriedade são alterados em itens de lista individual. Este membro não pode ser substituído em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

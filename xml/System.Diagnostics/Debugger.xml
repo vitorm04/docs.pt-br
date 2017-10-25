@@ -1,0 +1,326 @@
+<Type Name="Debugger" FullName="System.Diagnostics.Debugger">
+  <TypeSignature Language="C#" Value="public sealed class Debugger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Debugger extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Debugger" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Habilita a comunicação com um depurador. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Debugger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debugger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Call the static methods directly on this type", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.Debugger" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Break">
+      <MemberSignature Language="C#" Value="public static void Break ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Break() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debugger.Break" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sinaliza um ponto de interrupção em um depurador anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum depurador é anexado, os usuários são solicitados a se deseja anexar um depurador. Se usuários dizem Sim, o depurador é iniciado. Se um depurador estiver anexado, o depurador é sinalizado com um evento de ponto de interrupção do usuário e o depurador suspende a execução do processo como se tivesse foi atingido um ponto de interrupção do depurador.  
+  
+> [!WARNING]
+>  Começando com [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], o tempo de execução não exerce controle rigoroso de iniciar o depurador para o <xref:System.Diagnostics.Debugger.Break%2A> método, mas em vez disso, relata um erro no subsistema de relatório de erros do Windows (WER). WER fornece várias configurações para personalizar o experiência de problemas para que uma série de fatores influenciam a maneira como WER responde a um erro, como versão do sistema operacional, processo, sessão, usuário, computador e domínio. Se você estiver tendo resultados inesperados ao chamar o <xref:System.Diagnostics.Debugger.Break%2A> método, verifique as configurações do WER no seu computador. Para obter mais informações sobre como personalizar o WER, consulte [configurações WER](https://msdn.microsoft.com/library/windows/desktop/bb513638.aspx). Se você deseja garantir que o depurador é iniciado, independentemente das configurações do WER, certifique-se de chamar o <xref:System.Diagnostics.Debugger.Launch%2A> método em vez disso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como parar o depurador na chamada de <xref:System.Console.WriteLine%2A>.  
+  
+```vb  
+Debugger.Break()  
+Console.WriteLine("Hello, world.")  
+```  
+  
+```csharp  
+Debugger.Break();  
+Console.WriteLine("Hello, world.");  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O <see cref="T:System.Security.Permissions.UIPermission" /> não está definido para interromper o depurador.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão iniciar um depurador. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /> ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCategory">
+      <MemberSignature Language="C#" Value="public static readonly string DefaultCategory;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string DefaultCategory" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Debugger.DefaultCategory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a categoria padrão da mensagem com uma constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de constante esse padrão é `null`. <xref:System.Diagnostics.Debugger.DefaultCategory>é usado pelo <xref:System.Diagnostics.Debugger.Log%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAttached">
+      <MemberSignature Language="C#" Value="public static bool IsAttached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsAttached" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Debugger.IsAttached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um depurador está anexado ao processo.</summary>
+        <value>
+          <see langword="true" /> se um depurador estiver anexado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLogging">
+      <MemberSignature Language="C#" Value="public static bool IsLogging ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsLogging() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debugger.IsLogging" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica se o log está habilitado por um depurador anexado.</summary>
+        <returns>
+          <see langword="true" /> se um depurador for anexado e o log estiver habilitado; caso contrário, <see langword="false" />. O depurador anexado é o depurador gerenciado registrado na chave do Registro <see langword="DbgManagedDebugger" />. Para obter mais informações sobre essa chave, consulte [habilitando a depuração de anexação JIT](~/docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md).</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Launch">
+      <MemberSignature Language="C#" Value="public static bool Launch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Launch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debugger.Launch" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia e anexa um depurador ao processo.</summary>
+        <returns>
+          <see langword="true" /> se a inicialização for bem-sucedida ou se o depurador já estiver anexado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um depurador já está anexado, nada acontecerá.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O <see cref="T:System.Security.Permissions.UIPermission" /> não está definido para iniciar o depurador.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão iniciar um depurador. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /> ação de segurança:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public static void Log (int level, string category, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Log(int32 level, string category, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debugger.Log(System.Int32,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="level" Type="System.Int32" />
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="level">Uma descrição da importância da mensagem.</param>
+        <param name="category">A categoria da mensagem.</param>
+        <param name="message">A mensagem a ser mostrada.</param>
+        <summary>Posta uma mensagem para o depurador anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhum depurador anexado, esse método não tem efeito. O depurador pode ou não pode relatar a mensagem, dependendo das suas configurações.  
+  
+> [!NOTE]
+>  O parâmetro de categoria é limitado a 256 caracteres. Mais de 256 caracteres de cadeias de caracteres são truncadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyOfCrossThreadDependency">
+      <MemberSignature Language="C#" Value="public static void NotifyOfCrossThreadDependency ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void NotifyOfCrossThreadDependency() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica um depurador de que a execução está prestes a entrar em um caminho que envolve uma dependência entre threads.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depuradores devem habilitar especificamente retornos de chamada que desejam receber. Um depurador que deseja receber retornos de chamada de dependência entre threads deve chamar o método.  
+  
+ Um depurador que selecionou <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A> pode tomar as devidas providências após a notificação. Por exemplo, executar uma avaliação de função normalmente requer o congelamento de todos os threads, exceto o thread que está executando a avaliação. Se a avaliação da função requer a execução em mais de um thread, como pode ocorrer em cenários de comunicação remota, a avaliação será bloqueado. O <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A> notificação informa o depurador que tem um thread de liberação ou anular a avaliação de função. A notificação está sujeita à coleção depois que esse método retorna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

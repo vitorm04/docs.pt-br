@@ -1,0 +1,544 @@
+<Type Name="HostProtectionAttribute" FullName="System.Security.Permissions.HostProtectionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class HostProtectionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit HostProtectionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.HostProtectionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Delegate, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite o uso de ações de segurança declarativa para determinar os requisitos de proteção de host. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo afeta somente os aplicativos não gerenciados que hospedam o comuns language runtime e implementar proteção de host, como o SQL Server. Se o código for executado em um aplicativo cliente ou em um servidor que não seja protegido pelo host, o atributo "evapora"; ele não é detectado e, portanto, não é aplicado. Quando aplicada, os resultados de ação de segurança na criação de uma demanda de link baseada nos recursos de host que a classe ou método expõe.  
+  
+> [!IMPORTANT]
+>  O objetivo desse atributo é impor diretrizes de modelo de programação específicas do host, mas não o comportamento de segurança.  Embora uma demanda de link seja usada para verificar a conformidade com requisitos de modelo de programação, o <xref:System.Security.Permissions.HostProtectionAttribute> não é uma permissão de segurança.  
+  
+ Se o host não tem requisitos de modelo de programação, as demandas de link não ocorrem.  
+  
+ Esse atributo identifica o seguinte:  
+  
+-   Métodos ou classes que não se ajustam ao modelo de programação do host, mas são benignas.  
+  
+-   Métodos ou classes que não se ajustam ao modelo de programação de host e podem levar à desestabilização do código do usuário gerenciado por servidor.  
+  
+-   Métodos ou classes que não se ajustam ao modelo de programação de host e podem levar à desestabilização do processo do servidor em si.  
+  
+> [!NOTE]
+>  Se você está criando uma biblioteca de classes que pode vir a ser chamada por aplicativos que podem vir a ser executados em um ambiente de host protegido, você deve aplicar esse atributo aos membros que expõem categorias de recursos <xref:System.Security.Permissions.HostProtectionResource>. Os membros da biblioteca de classes do .NET Framework com esse atributo fazem apenas com que o chamador imediato seja verificado.  O membro da biblioteca deve também causar uma verificação de seu chamador imediato da mesma maneira.  
+  
+> [!NOTE]
+>  Não use o [Ngen.exe (gerador de imagem nativa)](~/docs/framework/tools/ngen-exe-native-image-generator.md) para criar uma imagem nativa de assemblies que são protegidos pelo <xref:System.Security.Permissions.HostProtectionAttribute>. Em um ambiente de confiança total, a imagem é sempre carregada, sem levar em consideração para o <xref:System.Security.Permissions.HostProtectionAttribute>e em um ambiente de confiança parcial, a imagem não está carregada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Security.Permissions.HostProtectionAttribute> atributo com uma variedade de <xref:System.Security.Permissions.HostProtectionResource> valores.  
+  
+ [!code-cpp[System.Security.Permissions.HostProtectionAttribute.1.1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CPP/hostprotectionattribute.cpp#1)]
+ [!code-csharp[System.Security.Permissions.HostProtectionAttribute.1.1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CS/hostprotectionattribute.cs#1)]
+ [!code-vb[System.Security.Permissions.HostProtectionAttribute.1.1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/VB/hostprotectionattribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HostProtectionAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.HostProtectionAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.HostProtectionAttribute" /> com valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.Security.Permissions.HostProtectionAttribute> com todas as propriedades Boolianas definidas como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HostProtectionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.HostProtectionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Um dos valores de <see cref="T:System.Security.Permissions.SecurityAction" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.HostProtectionAttribute" /> com o valor <see cref="T:System.Security.Permissions.SecurityAction" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não deve ser usado. Ele é destinado ao uso de infraestrutura.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="action" /> não é <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.HostProtectionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma nova permissão de proteção de host.</summary>
+        <returns>Um <see cref="T:System.Security.IPermission" /> que corresponde ao atributo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método deve ser chamado somente pelo sistema de segurança, nunca pelo código do aplicativo.  
+  
+ Em tempo de compilação, atributos convertem declarações de segurança para um formato serializado em metadados. Dados de segurança declarativa em metadados são criados a permissão correspondente para o atributo que este método retorna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalProcessMgmt">
+      <MemberSignature Language="C#" Value="public bool ExternalProcessMgmt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExternalProcessMgmt" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.HostProtectionAttribute.ExternalProcessMgmt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o gerenciamento de processo externo é exposto.</summary>
+        <value>
+          <see langword="true" />Se o gerenciamento de processo externo é exposto; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código que expõe gerenciamento de processo externo pode criar ou destruir a outros processos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Security.Permissions.HostProtectionAttribute> atributo com o <xref:System.Security.Permissions.HostProtectionAttribute.ExternalProcessMgmt%2A> propriedade. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.HostProtectionAttribute> classe.  
+  
+ [!code-cpp[System.Security.Permissions.HostProtectionAttribute.1.1#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CPP/hostprotectionattribute.cpp#5)]
+ [!code-csharp[System.Security.Permissions.HostProtectionAttribute.1.1#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CS/hostprotectionattribute.cs#5)]
+ [!code-vb[System.Security.Permissions.HostProtectionAttribute.1.1#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/VB/hostprotectionattribute.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalThreading">
+      <MemberSignature Language="C#" Value="public bool ExternalThreading { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExternalThreading" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.HostProtectionAttribute.ExternalThreading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se threading externo é exposto.</summary>
+        <value>
+          <see langword="true" />Se for exposto threading externo; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código que expõe threading externo cria ou manipula threads que não seja o seu próprio, que podem ser prejudiciais ao host.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Security.Permissions.HostProtectionAttribute> atributo com o <xref:System.Security.Permissions.HostProtectionAttribute.ExternalThreading%2A> propriedade. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.HostProtectionAttribute> classe.  
+  
+ [!code-cpp[System.Security.Permissions.HostProtectionAttribute.1.1#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CPP/hostprotectionattribute.cpp#6)]
+ [!code-csharp[System.Security.Permissions.HostProtectionAttribute.1.1#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CS/hostprotectionattribute.cs#6)]
+ [!code-vb[System.Security.Permissions.HostProtectionAttribute.1.1#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/VB/hostprotectionattribute.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MayLeakOnAbort">
+      <MemberSignature Language="C#" Value="public bool MayLeakOnAbort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MayLeakOnAbort" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.HostProtectionAttribute.MayLeakOnAbort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se recursos podem causar vazamento de memória se a operação será encerrada.</summary>
+        <value>
+          <see langword="true" />Se os recursos podem causar vazamento de memória no término; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código pode causar uma perda de recursos no encerramento, se não protegido por um identificador seguro ou alguma outra maneira de garantir a versão de recursos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resources">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.HostProtectionResource Resources { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.HostProtectionResource Resources" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.HostProtectionAttribute.Resources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.HostProtectionResource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os sinalizadores que especificam as categorias de funcionalidade que são potencialmente prejudiciais para o host.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Security.Permissions.HostProtectionResource" />. O padrão é <see cref="F:System.Security.Permissions.HostProtectionResource.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Permissions.HostProtectionResource> sinalizadores de especificam os recursos expostos pelo método ou classe potencialmente prejudiciais para o host.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Security.Permissions.HostProtectionAttribute> atributo com o <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> propriedade. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.HostProtectionAttribute> classe.  
+  
+ [!code-cpp[System.Security.Permissions.HostProtectionAttribute.1.1#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CPP/hostprotectionattribute.cpp#2)]
+ [!code-csharp[System.Security.Permissions.HostProtectionAttribute.1.1#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CS/hostprotectionattribute.cs#2)]
+ [!code-vb[System.Security.Permissions.HostProtectionAttribute.1.1#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/VB/hostprotectionattribute.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityInfrastructure">
+      <MemberSignature Language="C#" Value="public bool SecurityInfrastructure { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SecurityInfrastructure" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.HostProtectionAttribute.SecurityInfrastructure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a infraestrutura de segurança é exposta.</summary>
+        <value>
+          <see langword="true" />Se a infraestrutura de segurança é exposta; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O uso de um <xref:System.Security.Principal.WindowsIdentity> objeto representar um usuário é um exemplo de exposição a infraestrutura de segurança.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Security.Permissions.HostProtectionAttribute> atributo com o <xref:System.Security.Permissions.HostProtectionAttribute.SecurityInfrastructure%2A> propriedade. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.HostProtectionAttribute> classe.  
+  
+ [!code-cpp[System.Security.Permissions.HostProtectionAttribute.1.1#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CPP/hostprotectionattribute.cpp#4)]
+ [!code-csharp[System.Security.Permissions.HostProtectionAttribute.1.1#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CS/hostprotectionattribute.cs#4)]
+ [!code-vb[System.Security.Permissions.HostProtectionAttribute.1.1#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/VB/hostprotectionattribute.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelfAffectingProcessMgmt">
+      <MemberSignature Language="C#" Value="public bool SelfAffectingProcessMgmt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SelfAffectingProcessMgmt" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.HostProtectionAttribute.SelfAffectingProcessMgmt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a opção automática que afetam o gerenciamento de processo é exposto.</summary>
+        <value>
+          <see langword="true" />Se for exposto automática que afetam o gerenciamento de processo; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Auto afetar o código de gerenciamento de processo pode sair do processo atual, encerrando o servidor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Security.Permissions.HostProtectionAttribute> atributo com o <xref:System.Security.Permissions.HostProtectionAttribute.SelfAffectingProcessMgmt%2A> propriedade. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.HostProtectionAttribute> classe.  
+  
+ [!code-cpp[System.Security.Permissions.HostProtectionAttribute.1.1#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CPP/hostprotectionattribute.cpp#2)]
+ [!code-csharp[System.Security.Permissions.HostProtectionAttribute.1.1#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CS/hostprotectionattribute.cs#2)]
+ [!code-vb[System.Security.Permissions.HostProtectionAttribute.1.1#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/VB/hostprotectionattribute.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelfAffectingThreading">
+      <MemberSignature Language="C#" Value="public bool SelfAffectingThreading { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SelfAffectingThreading" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.HostProtectionAttribute.SelfAffectingThreading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se afetar automaticamente threading é exposto.</summary>
+        <value>
+          <see langword="true" />se auto afetando threading é exposto; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Self afetar threading manipula os threads de forma que afeta apenas o código do usuário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Security.Permissions.HostProtectionAttribute> atributo com o <xref:System.Security.Permissions.HostProtectionAttribute.SelfAffectingThreading%2A> propriedade. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.HostProtectionAttribute> classe.  
+  
+ [!code-cpp[System.Security.Permissions.HostProtectionAttribute.1.1#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CPP/hostprotectionattribute.cpp#3)]
+ [!code-csharp[System.Security.Permissions.HostProtectionAttribute.1.1#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CS/hostprotectionattribute.cs#3)]
+ [!code-vb[System.Security.Permissions.HostProtectionAttribute.1.1#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/VB/hostprotectionattribute.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharedState">
+      <MemberSignature Language="C#" Value="public bool SharedState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SharedState" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.HostProtectionAttribute.SharedState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o estado compartilhado é exposto.</summary>
+        <value>
+          <see langword="true" />Se o estado compartilhado é exposto; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Security.Permissions.HostProtectionAttribute.SharedState%2A> é `true`, ele indica que o estado é exposto que pode ser compartilhado entre threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Security.Permissions.HostProtectionAttribute> atributo com o <xref:System.Security.Permissions.HostProtectionAttribute.SharedState%2A> propriedade. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.HostProtectionAttribute> classe.  
+  
+ [!code-cpp[System.Security.Permissions.HostProtectionAttribute.1.1#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CPP/hostprotectionattribute.cpp#3)]
+ [!code-csharp[System.Security.Permissions.HostProtectionAttribute.1.1#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CS/hostprotectionattribute.cs#3)]
+ [!code-vb[System.Security.Permissions.HostProtectionAttribute.1.1#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/VB/hostprotectionattribute.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronization">
+      <MemberSignature Language="C#" Value="public bool Synchronization { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Synchronization" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.HostProtectionAttribute.Synchronization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a sincronização é exposta.</summary>
+        <value>
+          <see langword="true" />Se a sincronização é exposta; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Security.Permissions.HostProtectionAttribute> atributo com o <xref:System.Security.Permissions.HostProtectionAttribute.Synchronization%2A> propriedade. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.HostProtectionAttribute> classe.  
+  
+ [!code-cpp[System.Security.Permissions.HostProtectionAttribute.1.1#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CPP/hostprotectionattribute.cpp#6)]
+ [!code-csharp[System.Security.Permissions.HostProtectionAttribute.1.1#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CS/hostprotectionattribute.cs#6)]
+ [!code-vb[System.Security.Permissions.HostProtectionAttribute.1.1#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/VB/hostprotectionattribute.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UI">
+      <MemberSignature Language="C#" Value="public bool UI { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UI" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.HostProtectionAttribute.UI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a interface do usuário é exposta.</summary>
+        <value>
+          <see langword="true" />Se a interface do usuário é exposta; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do <xref:System.Security.Permissions.HostProtectionAttribute> atributo com o <xref:System.Security.Permissions.HostProtectionAttribute.UI%2A> propriedade. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.HostProtectionAttribute> classe.  
+  
+ [!code-cpp[System.Security.Permissions.HostProtectionAttribute.1.1#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CPP/hostprotectionattribute.cpp#3)]
+ [!code-csharp[System.Security.Permissions.HostProtectionAttribute.1.1#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/CS/hostprotectionattribute.cs#3)]
+ [!code-vb[System.Security.Permissions.HostProtectionAttribute.1.1#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.HostProtectionAttribute.1.1/VB/hostprotectionattribute.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

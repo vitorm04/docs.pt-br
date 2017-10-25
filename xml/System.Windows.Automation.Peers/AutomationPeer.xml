@@ -1,0 +1,1436 @@
+<Type Name="AutomationPeer" FullName="System.Windows.Automation.Peers.AutomationPeer">
+  <TypeSignature Language="C#" Value="public abstract class AutomationPeer : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract AutomationPeer extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.AutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base que expõe um elemento de automação de interface do usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] consultas a raiz de um [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] a raiz de aplicativo sobre um elemento, retorna o [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] ponto a ponto para esse elemento. O par também responde à [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] consultas sobre o elemento correspondente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Fornece a inicialização para valores de classe base quando eles são chamados pelo construtor de uma classe derivada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventsSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Peers.AutomationPeer EventsSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Peers.AutomationPeer EventsSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.AutomationPeer.EventsSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> que é relatado para o cliente de automação, como uma fonte para todos os eventos que são fornecidos neste <see cref="T:System.Windows.Automation.Peers.AutomationPeer" />.</summary>
+        <value>O <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> que é a origem de eventos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAcceleratorKey">
+      <MemberSignature Language="C#" Value="public string GetAcceleratorKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetAcceleratorKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetAcceleratorKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o Acelerador de combinações de tecla para o elemento que está associado com o [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] ponto a ponto.</summary>
+        <returns>A chave do acelerador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAcceleratorKeyCore">
+      <MemberSignature Language="C#" Value="protected abstract string GetAcceleratorKeyCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetAcceleratorKeyCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetAcceleratorKeyCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAcceleratorKey" />.</summary>
+        <returns>A chave do acelerador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um aplicativo responde a eventos de teclado para fornecer o comportamento das teclas de atalho, ele deverá retornar uma cadeia de caracteres que contém a combinação de atalho de teclado. Por exemplo, para um elemento que pode copiar o texto na área de transferência, essa propriedade anexada pode ser definida como o valor "CTRL + C".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessKey">
+      <MemberSignature Language="C#" Value="public string GetAccessKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetAccessKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetAccessKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a chave de acesso para o elemento que está associado com o par de automação.</summary>
+        <returns>A cadeia de caracteres que contém a chave de acesso.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessKeyCore">
+      <MemberSignature Language="C#" Value="protected abstract string GetAccessKeyCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetAccessKeyCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetAccessKeyCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAccessKey" />.</summary>
+        <returns>A cadeia de caracteres que contém a chave de acesso.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chave de acesso (também conhecida como um atalho de teclado ou mnemônico) é um caractere no texto de um menu, o item de menu ou o rótulo de um controle, como um botão que invoca a função de menu associado. Por exemplo, para fornecer uma maneira de atalho para abrir o `File` menu (para que a chave de acesso é normalmente F), um elemento pode ter esta propriedade anexada definida como "ALT + F".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlType">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Peers.AutomationControlType GetAutomationControlType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o tipo de controle para o elemento que está associado com o [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] ponto a ponto.</summary>
+        <returns>O tipo de controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
+        <returns>O tipo de controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationId">
+      <MemberSignature Language="C#" Value="public string GetAutomationId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetAutomationId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Windows.Automation.AutomationProperties.AutomationId" /> do elemento que está associado com o par de automação.</summary>
+        <returns>O identificador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor do identificador de automação é o <xref:System.Windows.Automation.AutomationProperties.AutomationId%2A> propriedade. Se essa propriedade não for definida, o valor será o <xref:System.Windows.FrameworkElement.Name%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationIdCore">
+      <MemberSignature Language="C#" Value="protected abstract string GetAutomationIdCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetAutomationIdCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationIdCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationId" />.</summary>
+        <returns>A cadeia de caracteres que contém o identificador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor do identificador de automação é o <xref:System.Windows.Automation.AutomationProperties.AutomationId%2A> propriedade. Se essa propriedade não for definida, o valor será o <xref:System.Windows.FrameworkElement.Name%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoundingRectangle">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect GetBoundingRectangle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Rect GetBoundingRectangle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetBoundingRectangle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Rect" /> objeto que representa as coordenadas de tela do elemento que está associado com o par de automação.</summary>
+        <returns>O retângulo delimitador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoundingRectangleCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.Rect GetBoundingRectangleCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Windows.Rect GetBoundingRectangleCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetBoundingRectangleCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetBoundingRectangle" />.</summary>
+        <returns>O retângulo delimitador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildren">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt; GetChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;class System.Windows.Automation.Peers.AutomationPeer&gt; GetChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a coleção de <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" /> elementos que são representados na árvore de automação de interface do usuário como elementos filho imediato do ponto de automação.</summary>
+        <returns>A coleção de elementos filho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildrenCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.List`1&lt;class System.Windows.Automation.Peers.AutomationPeer&gt; GetChildrenCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetChildrenCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Windows.Automation.Peers.AutomationPeer&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildren" />.</summary>
+        <returns>A coleção de elementos filho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassName">
+      <MemberSignature Language="C#" Value="public string GetClassName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetClassName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um nome que é usado com <see cref="T:System.Windows.Automation.Peers.AutomationControlType" />, para diferenciar o controle que é representado por esse <see cref="T:System.Windows.Automation.Peers.AutomationPeer" />.</summary>
+        <returns>O nome da classe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected abstract string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
+        <returns>O nome da classe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClickablePoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Point GetClickablePoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Point GetClickablePoint() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetClickablePoint" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Point" /> do elemento que está associado com o par de automação que responde a um mouse, clique em.</summary>
+        <returns>Um ponto na área clicável do elemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, se o elemento representa uma <xref:System.Windows.Controls.Button>, um ponto clicável é qualquer ponto na área do cliente visível a <xref:System.Windows.Controls.Button> que emite o comando que o botão representa quando ele é clicado com o mouse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClickablePointCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.Point GetClickablePointCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Windows.Point GetClickablePointCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetClickablePointCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClickablePoint" />.</summary>
+        <returns>Um ponto dentro da área clicável do elemento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHelpText">
+      <MemberSignature Language="C#" Value="public string GetHelpText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetHelpText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetHelpText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o texto que descreve a funcionalidade do controle que está associado com o par de automação.</summary>
+        <returns>O texto de Ajuda.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres retornada normalmente fornece o mesmo texto que é fornecido pela dica de ferramenta para o controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHelpTextCore">
+      <MemberSignature Language="C#" Value="protected abstract string GetHelpTextCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetHelpTextCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetHelpTextCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetHelpText" />.</summary>
+        <returns>O texto de Ajuda.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostRawElementProviderCore">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Automation.Peers.HostedWindowWrapper GetHostRawElementProviderCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Automation.Peers.HostedWindowWrapper GetHostRawElementProviderCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetHostRawElementProviderCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.HostedWindowWrapper</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Informa [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] onde no [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] árvore para colocar o <see langword="hwnd" /> hospedada por um [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] elemento.</summary>
+        <returns>Este método retorna hospedado <see langword="hwnd" /> para [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] para controles que hospedam <see langword="hwnd" /> objetos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna hospedado `hwnd` para [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] para controles que hospedam `hwnd` objetos.  
+  
+ O <xref:System.Windows.Automation.Peers.AutomationPeer> que está associado um elemento que hospeda imediatamente um `hwnd` devem substituir este método.  
+  
+ Se esse método não for substituído, [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] coloca o `hwnd` como um elemento filho de <xref:System.Windows.Interop.HwndSource> que hospeda o aplicativo inteiro. Normalmente, você deseja substituir esse comportamento padrão e defina [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] para posicionar o hospedado `hwnd` paralelo para o local onde ele está localizado no [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] árvore lógica.  
+  
+ Exceto em cenários de hospedagem, não permita <xref:System.Windows.Automation.Peers.AutomationPeer> tipos para substituir esse método.  
+  
+ Além de substituir esse método, o <xref:System.Windows.Automation.Peers.AutomationPeer> tipos que estão associados um elemento que hospeda imediatamente um `hwnd` deve retornar o <xref:System.Windows.Automation.Peers.AutomationPeer> que é convertido em <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> em resposta a WM_GETOBJECT proveniente hospedado `hwnd`.  
+  
+ Para obter um ponteiro para <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>, chame <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemStatus">
+      <MemberSignature Language="C#" Value="public string GetItemStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetItemStatus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetItemStatus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o texto que transmite o status visual do elemento que está associado com esse ponto de automação.</summary>
+        <returns>O status.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, o status de um contato messenger pode ser "Ocupado" ou "Online".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemStatusCore">
+      <MemberSignature Language="C#" Value="protected abstract string GetItemStatusCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetItemStatusCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetItemStatusCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetItemStatus" />.</summary>
+        <returns>O status.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemType">
+      <MemberSignature Language="C#" Value="public string GetItemType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetItemType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetItemType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que descreve que tipo de item de um objeto representa.</summary>
+        <returns>O tipo de item.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exemplos de cadeia de caracteres retornada são "Email", "Contatos" e "Documento".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemTypeCore">
+      <MemberSignature Language="C#" Value="protected abstract string GetItemTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetItemTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetItemTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetItemType" />.</summary>
+        <returns>O tipo de item.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLabeledBy">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Peers.AutomationPeer GetLabeledBy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.Peers.AutomationPeer GetLabeledBy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetLabeledBy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> para o <see cref="T:System.Windows.Controls.Label" /> que é o destino para o elemento.</summary>
+        <returns>O <see cref="T:System.Windows.Automation.Peers.LabelAutomationPeer" /> para o elemento que é o destino de <see cref="T:System.Windows.Controls.Label" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, se o elemento é um <xref:System.Windows.Controls.ComboBox> controle, o <xref:System.Windows.Automation.Peers.AutomationPeer.GetLabeledBy%2A> método obtém o <xref:System.Windows.Automation.Peers.AutomationPeer> para o <xref:System.Windows.Controls.Label> que está associado a <xref:System.Windows.Controls.ComboBox>.  
+  
+ Na imagem a seguir, o <xref:System.Windows.Controls.Label> "Temas" estão direcionados para o <xref:System.Windows.Controls.ComboBox>; portanto a <xref:System.Windows.Controls.AccessText.AccessKey%2A> para o <xref:System.Windows.Controls.Label> também afeta o <xref:System.Windows.Controls.ComboBox>. Quando o usuário pressiona **ALT**+**T**, o <xref:System.Windows.Controls.ComboBox> obtém foco em vez do <xref:System.Windows.Controls.Label>.  
+  
+ ![Propriedades de exibição mostra rotuladas por uso](~/add/media/labeledby.JPG "propriedades de exibição mostra rotulado pelo uso")  
+  
+ O <xref:System.Windows.Automation.Peers.AutomationPeer.GetLabeledBy%2A> método <xref:System.Windows.Automation.Peers.ComboBoxAutomationPeer> retorna o <xref:System.Windows.Automation.Peers.LabelAutomationPeer> para o correspondente <xref:System.Windows.Controls.Label>. Isso permite que um cliente de automação obter a cadeia de caracteres de texto que descreve o <xref:System.Windows.Controls.ComboBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLabeledByCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.Automation.Peers.AutomationPeer GetLabeledByCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Automation.Peers.AutomationPeer GetLabeledByCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetLabeledByCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetLabeledBy" />.</summary>
+        <returns>O <see cref="T:System.Windows.Automation.Peers.LabelAutomationPeer" /> para o elemento que é o destino de <see cref="T:System.Windows.Controls.Label" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalizedControlType">
+      <MemberSignature Language="C#" Value="public string GetLocalizedControlType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetLocalizedControlType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetLocalizedControlType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres localizada legível que representa o <see cref="T:System.Windows.Automation.Peers.AutomationControlType" /> valor para o controle que está associado com esse ponto de automação.</summary>
+        <returns>O tipo do controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalizedControlTypeCore">
+      <MemberSignature Language="C#" Value="protected virtual string GetLocalizedControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetLocalizedControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetLocalizedControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetLocalizedControlType" />.</summary>
+        <returns>O tipo do controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public string GetName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o texto que descreve o elemento que está associado com esse ponto de automação.</summary>
+        <returns>O nome.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama a implementação derivada de <xref:System.Windows.Automation.Peers.AutomationPeer.GetNameCore%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNameCore">
+      <MemberSignature Language="C#" Value="protected abstract string GetNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetName" />.</summary>
+        <returns>A cadeia de caracteres que contém o rótulo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode pensar esse valor como uma cadeia de caracteres usados pelos usuários para explicar o controle está referenciando. Essa propriedade é usada por ferramentas como o Narrator para informar ao usuário o que é o controle. Por exemplo, um botão com uma cadeia de caracteres "Okey" deve retornar "Okey". Um <xref:System.Windows.Controls.ListBox> que permite aos usuários selecionar uma cor pode retornar "Cores".  
+  
+ Certifique-se de que você atribuiu um nome para todos os controles de [!INCLUDE[TLA#tla_gui](~/includes/tlasharptla-gui-md.md)] para que as ferramentas de acessibilidade, como leitores de tela podem fazer referência a cada controle de uma maneira localizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Peers.AutomationOrientation GetOrientation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Automation.Peers.AutomationOrientation GetOrientation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetOrientation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationOrientation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica a orientação do controle explícito, se houver.</summary>
+        <returns>A orientação do controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrientationCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.Automation.Peers.AutomationOrientation GetOrientationCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Windows.Automation.Peers.AutomationOrientation GetOrientationCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetOrientationCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationOrientation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetOrientation" />.</summary>
+        <returns>A orientação do controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParent">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Peers.AutomationPeer GetParent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.Peers.AutomationPeer GetParent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetParent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> que é o pai deste <see cref="T:System.Windows.Automation.Peers.AutomationPeer" />.</summary>
+        <returns>O par de automação do pai.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPattern">
+      <MemberSignature Language="C#" Value="public abstract object GetPattern (System.Windows.Automation.Peers.PatternInterface patternInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetPattern(valuetype System.Windows.Automation.Peers.PatternInterface patternInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternInterface" Type="System.Windows.Automation.Peers.PatternInterface" />
+      </Parameters>
+      <Docs>
+        <param name="patternInterface">Um valor da enumeração <see cref="T:System.Windows.Automation.Peers.PatternInterface" />.</param>
+        <summary>Quando substituído em uma classe derivada, obtém o padrão de controle associado especificado <see cref="T:System.Windows.Automation.Peers.PatternInterface" />.</summary>
+        <returns>O objeto que implementa a interface padrão; <see langword="null" /> se esse ponto não oferece suporte a essa interface.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPeerFromPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Peers.AutomationPeer GetPeerFromPoint (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Automation.Peers.AutomationPeer GetPeerFromPoint(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetPeerFromPoint(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">A posição na tela para obter o <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> do.</param>
+        <summary>Obtém um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> do ponto especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> no ponto especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPeerFromPointCore">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Automation.Peers.AutomationPeer GetPeerFromPointCore (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Automation.Peers.AutomationPeer GetPeerFromPointCore(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.GetPeerFromPointCore(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">A posição na tela para obter o <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> do.</param>
+        <summary>Quando substituído em uma classe derivada, é chamado de <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetPeerFromPoint(System.Windows.Point)" />.</summary>
+        <returns>O <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> no ponto especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasKeyboardFocus">
+      <MemberSignature Language="C#" Value="public bool HasKeyboardFocus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasKeyboardFocus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.HasKeyboardFocus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o elemento que é associado com esse ponto de automação atualmente tem o foco do teclado.</summary>
+        <returns>
+          <see langword="true" />Se o elemento tem o foco do teclado. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasKeyboardFocusCore">
+      <MemberSignature Language="C#" Value="protected abstract bool HasKeyboardFocusCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool HasKeyboardFocusCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.HasKeyboardFocusCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.HasKeyboardFocus" />.</summary>
+        <returns>
+          <see langword="true" />Se o elemento tem o foco do teclado. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidatePeer">
+      <MemberSignature Language="C#" Value="public void InvalidatePeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvalidatePeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.InvalidatePeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dispara o recálculo das propriedades principais do <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> e gera o <see cref="E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged" /> notificação para o cliente de automação, se as propriedades alteradas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exemplos de propriedades principais incluem, mas não está limitados a, <xref:System.Windows.Controls.ContentControl.LogicalChildren%2A> e <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.BoundingRectangle%2A>.  
+  
+ Normalmente, atualizações e notificações ocorram automaticamente após a atualização do layout em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]. (A atualização ocorre em resposta a <xref:System.Windows.UIElement.LayoutUpdated> evento.) Às vezes, no entanto, propriedades alteradas sem gerar o <xref:System.Windows.UIElement.LayoutUpdated> evento. Por exemplo, quando todo o <xref:System.Windows.Window> move, o <xref:System.Windows.UIElement.LayoutUpdated> não é gerado. Neste exemplo, o conjunto de <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.BoundingRectangle%2A> objetos alterar como os objetos são expresso em coordenadas da tela. Portanto, o <xref:System.Windows.Window> deve chamar <xref:System.Windows.Automation.Peers.AutomationPeer.InvalidatePeer%2A> no seu ponto no <xref:System.Windows.Automation.Peers.WindowAutomationPeer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContentElement">
+      <MemberSignature Language="C#" Value="public bool IsContentElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsContentElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsContentElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o elemento que está associado com esse ponto de automação contém dados que são apresentados ao usuário.</summary>
+        <returns>
+          <see langword="true" />Se o elemento é um elemento de conteúdo. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um elemento de conteúdo contém dados que são apresentados ao usuário. Um exemplo de um elemento de conteúdo é um item em uma caixa de listagem ou um botão em uma caixa de diálogo. Normalmente, você usar elementos de conteúdo não (que também são conhecidos como elementos periféricos) para trabalhar com o conteúdo em um controle composto. Um exemplo de um elemento de conteúdo não é um botão em um controle de lista suspensa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContentElementCore">
+      <MemberSignature Language="C#" Value="protected abstract bool IsContentElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsContentElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsContentElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsContentElement" />.</summary>
+        <returns>
+          <see langword="true" />Se o elemento é um elemento de conteúdo. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsControlElement">
+      <MemberSignature Language="C#" Value="public bool IsControlElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsControlElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsControlElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o elemento é compreendido pelo usuário como interativo ou que contribuem para a estrutura lógica do controle de [!INCLUDE[TLA2#tla_gui](~/includes/tla2sharptla-gui-md.md)].</summary>
+        <returns>
+          <see langword="true" />Se o elemento é um controle; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsControlElementCore">
+      <MemberSignature Language="C#" Value="protected abstract bool IsControlElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsControlElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsControlElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsControlElement" />.</summary>
+        <returns>
+          <see langword="true" />Se o elemento é um controle; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsEnabled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsEnabled" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o elemento associado a esse par de automação suporta interação.</summary>
+        <returns>
+          <see langword="true" />Se o elemento suporta interação; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledCore">
+      <MemberSignature Language="C#" Value="protected abstract bool IsEnabledCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsEnabledCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsEnabledCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsEnabled" />.</summary>
+        <returns>
+          <see langword="true" />Se o par de automação pode receber e enviar eventos; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHwndHost">
+      <MemberSignature Language="C#" Value="protected virtual bool IsHwndHost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHwndHost" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.AutomationPeer.IsHwndHost" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o elemento que está associado a essa <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> hosts <see langword="hwnds" /> em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)].</summary>
+        <value>
+          <see langword="true" />Se o elemento que está associada a essa <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> hosts <see langword="hwnds" /> na [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois exemplos de elementos que hospedam `hwnds` na [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] são <xref:System.Windows.Forms.Integration.WindowsFormsHost> e <xref:System.Windows.Controls.Primitives.Popup>.  
+  
+ Esses pares também deverá substituir <xref:System.Windows.Automation.Peers.AutomationPeer.GetHostRawElementProviderCore%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyboardFocusable">
+      <MemberSignature Language="C#" Value="public bool IsKeyboardFocusable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsKeyboardFocusable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsKeyboardFocusable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o elemento pode aceitar o foco do teclado.</summary>
+        <returns>
+          <see langword="true" />Se o elemento pode aceitar o foco do teclado. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyboardFocusableCore">
+      <MemberSignature Language="C#" Value="protected abstract bool IsKeyboardFocusableCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsKeyboardFocusableCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsKeyboardFocusableCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsKeyboardFocusable" />.</summary>
+        <returns>
+          <see langword="true" />Se o elemento pode aceitar o foco do teclado. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOffscreen">
+      <MemberSignature Language="C#" Value="public bool IsOffscreen ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsOffscreen() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsOffscreen" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se um elemento está fora da tela.</summary>
+        <returns>
+          <see langword="true" />Se o elemento não está na tela; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não indica se o elemento está visível. Em algumas circunstâncias, um elemento está na tela, mas ainda não está visível. Por exemplo, se o elemento estiver na tela mas obscurecidas por outros elementos, ele não fiquem visível. Nesse caso, o método retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOffscreenCore">
+      <MemberSignature Language="C#" Value="protected abstract bool IsOffscreenCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsOffscreenCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsOffscreenCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsOffscreen" />.</summary>
+        <returns>
+          <see langword="true" />Se o elemento não está na tela; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPassword">
+      <MemberSignature Language="C#" Value="public bool IsPassword ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPassword() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsPassword" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o elemento contém conteúdo confidencial.</summary>
+        <returns>
+          <see langword="true" />Se o elemento contém conteúdo confidencial, como uma senha. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPasswordCore">
+      <MemberSignature Language="C#" Value="protected abstract bool IsPasswordCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsPasswordCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsPasswordCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsPassword" />.</summary>
+        <returns>
+          <see langword="true" />Se o elemento contém conteúdo confidencial; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequiredForForm">
+      <MemberSignature Language="C#" Value="public bool IsRequiredForForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsRequiredForForm() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsRequiredForForm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o elemento que está associado com esse ponto deve ser concluído em um formulário.</summary>
+        <returns>
+          <see langword="true" />Se o elemento deve ser concluído; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequiredForFormCore">
+      <MemberSignature Language="C#" Value="protected abstract bool IsRequiredForFormCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsRequiredForFormCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.IsRequiredForFormCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsRequiredForForm" />.</summary>
+        <returns>
+          <see langword="true" />Se o elemento for deve ser concluído; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenerExists">
+      <MemberSignature Language="C#" Value="public static bool ListenerExists (System.Windows.Automation.Peers.AutomationEvents eventId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ListenerExists(valuetype System.Windows.Automation.Peers.AutomationEvents eventId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.ListenerExists(System.Windows.Automation.Peers.AutomationEvents)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventId" Type="System.Windows.Automation.Peers.AutomationEvents" />
+      </Parameters>
+      <Docs>
+        <param name="eventId">Um dos valores de enumeração.</param>
+        <summary>Obtém um valor que indica se [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] está escutando para o evento especificado.</summary>
+        <returns>Um <see langword="boolean" /> que indica se [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] está escutando para o evento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você chama esse método antes de criar o <xref:System.Windows.Automation.Peers.AutomationPeer> que gera o evento. Esse método é uma medida de desempenho, pois se [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] não escuta para o evento, não faz sentido criar uma ponto a ponto para gerar um.  
+  
+> [!NOTE]
+>  Esse método é estático e responde apenas se um delegado de escuta para o evento especificado na [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)], não para um evento em um elemento específico. [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]pode criar ouvintes de difusão; Portanto, as informações por elemento serão irrelevantes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerFromProvider">
+      <MemberSignature Language="C#" Value="protected System.Windows.Automation.Peers.AutomationPeer PeerFromProvider (System.Windows.Automation.Provider.IRawElementProviderSimple provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Windows.Automation.Peers.AutomationPeer PeerFromProvider(class System.Windows.Automation.Provider.IRawElementProviderSimple provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.PeerFromProvider(System.Windows.Automation.Provider.IRawElementProviderSimple)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Windows.Automation.Provider.IRawElementProviderSimple" />
+      </Parameters>
+      <Docs>
+        <param name="provider">A classe que implementa <see cref="T:System.Windows.Automation.Provider.IRawElementProviderSimple" />.</param>
+        <summary>Obtém um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> especificado <see cref="T:System.Windows.Automation.Provider.IRawElementProviderSimple" /> proxy.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> especificado <see cref="T:System.Windows.Automation.Provider.IRawElementProviderSimple" /> proxy.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderFromPeer">
+      <MemberSignature Language="C#" Value="protected System.Windows.Automation.Provider.IRawElementProviderSimple ProviderFromPeer (System.Windows.Automation.Peers.AutomationPeer peer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Windows.Automation.Provider.IRawElementProviderSimple ProviderFromPeer(class System.Windows.Automation.Peers.AutomationPeer peer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.ProviderFromPeer(System.Windows.Automation.Peers.AutomationPeer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peer" Type="System.Windows.Automation.Peers.AutomationPeer" />
+      </Parameters>
+      <Docs>
+        <param name="peer">O par de automação.</param>
+        <summary>Obtém o <see cref="T:System.Windows.Automation.Provider.IRawElementProviderSimple" /> especificado <see cref="T:System.Windows.Automation.Peers.AutomationPeer" />.</summary>
+        <returns>O proxy.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseAsyncContentLoadedEvent">
+      <MemberSignature Language="C#" Value="public void RaiseAsyncContentLoadedEvent (System.Windows.Automation.AsyncContentLoadedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseAsyncContentLoadedEvent(class System.Windows.Automation.AsyncContentLoadedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.RaiseAsyncContentLoadedEvent(System.Windows.Automation.AsyncContentLoadedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Windows.Automation.AsyncContentLoadedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">Os dados do evento.</param>
+        <summary>Chamado pelo <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> para gerar o <see cref="F:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseAutomationEvent">
+      <MemberSignature Language="C#" Value="public void RaiseAutomationEvent (System.Windows.Automation.Peers.AutomationEvents eventId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseAutomationEvent(valuetype System.Windows.Automation.Peers.AutomationEvents eventId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent(System.Windows.Automation.Peers.AutomationEvents)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventId" Type="System.Windows.Automation.Peers.AutomationEvents" />
+      </Parameters>
+      <Docs>
+        <param name="eventId">O identificador de evento.</param>
+        <summary>Gera um evento de automação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePropertyChangedEvent">
+      <MemberSignature Language="C#" Value="public void RaisePropertyChangedEvent (System.Windows.Automation.AutomationProperty property, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaisePropertyChangedEvent(class System.Windows.Automation.AutomationProperty property, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent(System.Windows.Automation.AutomationProperty,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.Windows.Automation.AutomationProperty" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="property">A propriedade alterada.</param>
+        <param name="oldValue">O valor anterior da propriedade.</param>
+        <param name="newValue">O novo valor da propriedade.</param>
+        <summary>Gera um evento para notificar o cliente de automação de um valor de propriedade alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetChildrenCache">
+      <MemberSignature Language="C#" Value="public void ResetChildrenCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetChildrenCache() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.ResetChildrenCache" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Modo síncrono redefine a árvore de elementos filho chamando <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetChildrenCore" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método em determinadas implementações de mesmo nível que alterar o conjunto de elementos filho em resposta a uma chamada para uma interface padrão de controle. Um exemplo é <xref:System.Windows.Automation.Provider.ITextProvider>, que pode alterar os elementos filho do par movendo o <xref:System.Windows.Documents.TextRange>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFocus">
+      <MemberSignature Language="C#" Value="public void SetFocus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetFocus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.SetFocus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o foco do teclado no elemento que está associado com esse ponto de automação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFocusCore">
+      <MemberSignature Language="C#" Value="protected abstract void SetFocusCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetFocusCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.AutomationPeer.SetFocusCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, é chamado pelo <see cref="M:System.Windows.Automation.Peers.AutomationPeer.SetFocus" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

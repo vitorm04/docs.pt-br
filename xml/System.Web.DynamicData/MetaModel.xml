@@ -1,0 +1,852 @@
+<Type Name="MetaModel" FullName="System.Web.DynamicData.MetaModel">
+  <TypeSignature Language="C#" Value="public class MetaModel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MetaModel extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.MetaModel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um ou vários bancos de dados que são usados por Dados Dinâmicos do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.MetaModel> tipo permite registrar um ou vários contextos de dados para um aplicativo Web de dados dinâmicos.  
+  
+ Um contexto de dados é um objeto que representa uma conexão de banco de dados. Um contexto de dados tem acesso a um modelo de dados que representa um banco de dados que está disponível por meio dessa conexão. Um modelo de dados é um objeto que representa as entidades de dados de um banco de dados como tipos CLR. Dados dinâmicos dá suporte a modelos de dados com base em LINQ to SQL e o ADO.NET Entity Framework.  
+  
+ Em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], você pode gerar tipos de modelo de dados usando o **Classes LINQ to SQL** modelo ou o **modelo de dados de entidade ADO.NET** modelo. Esses modelos de usam o Object Relational Designer (O/R Designer) para o LINQ no modelo SQL ou ADO.NET Entity Data Model Designer (Designer de entidade) para o modelo do Entity Framework.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Web.DynamicData.MetaModel> tipo para executar as seguintes tarefas para usar o scaffolding automática em um site da Web do ASP.NET:  
+  
+-   Obter o modelo de dados para o contexto de dados padrão.  
+  
+-   Obter o modelo de dados para um contexto de dados especificado.  
+  
+-   Avaliar o caminho de roteamento (determinar a URL) para uma tabela especificada.  
+  
+ O exemplo consiste em uma página e seu arquivo code-behind.  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/PlaceHolder.cs#1)]
+ [!code-aspx-csharp[System.Web.DynamicData.MetaModel#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/PathModel.aspx#1)]
+ [!code-aspx-vb[System.Web.DynamicData.MetaModel#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/PathModel.aspx#1)]
+ [!code-vb[System.Web.DynamicData.MetaModel#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/PlaceHolder.vb#1)]  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/PathModel.aspx.cs#2)]
+ [!code-vb[System.Web.DynamicData.MetaModel#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/PathModel.aspx.vb#2)]  
+  
+ Para compilar o exemplo, você precisará do seguinte:  
+  
+-   [!INCLUDE[vs_dev10_long](~/includes/vs-dev10-long-md.md)] ou [!INCLUDE[vwd_exp_dev10_long](~/includes/vwd-exp-dev10-long-md.md)].  
+  
+-   Um site da Web dinâmico de dados. Para obter mais informações, consulte [passo a passo: Criando um novo dinâmico dados de Site da Web usando o Scaffolding](http://msdn.microsoft.com/library/1564aef2-9103-436a-9806-c8ad7abd616a).  
+  
+ Veja um exemplo de código de tempo de execução deste recurso: [executar](http://go.microsoft.com/fwlink/?LinkId=120736&sref=System.Web.DynamicData.MetaModel).  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.InvalidOperationException">Poderá ser gerada por qualquer método, se houver um erro de registro de contexto de dados.</exception>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetaModel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.DynamicData.MetaModel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente você chama o <xref:System.Web.DynamicData.MetaModel.%23ctor%2A> construtor o `Application_Start` método do arquivo global. asax.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.DynamicData.MetaModel.%23ctor%2A> construtor para executar as seguintes tarefas:  
+  
+-   Criar uma instância de <xref:System.Web.DynamicData.MetaModel> classe.  
+  
+-   Inicializar e registrar o <xref:System.Web.DynamicData.MetaModel> instância.  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#99](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/global.asax.cs#99)]
+ [!code-vb[System.Web.DynamicData.MetaModel#99](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/global.asax.vb#99)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetaModel (bool registerGlobally);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool registerGlobally) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="registerGlobally" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="registerGlobally">
+          <see langword="true" />para indicar que o modelo está registrado globalmente; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</param>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.DynamicData.MetaModel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor determina se o modelo de dados é registrado globalmente para que ele possa ser recuperado usando o <xref:System.Web.DynamicData.MetaModel.GetModel%2A> método. Ele permite criar vários modelos e usar os mesmos tipos de entidade, evitando conflitos de tipo.  
+  
+ Normalmente você chama o <xref:System.Web.DynamicData.MetaModel.%23ctor%2A> construtor o `Application_Start` método do arquivo global. asax.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTable">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.DynamicData.MetaTable CreateTable (System.Web.DynamicData.ModelProviders.TableProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.DynamicData.MetaTable CreateTable(class System.Web.DynamicData.ModelProviders.TableProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.CreateTable(System.Web.DynamicData.ModelProviders.TableProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Web.DynamicData.ModelProviders.TableProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O provedor para a tabela.</param>
+        <summary>Cria um <see cref="T:System.Web.DynamicData.MetaTable" /> objeto.</summary>
+        <returns>Uma nova instância da tabela.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.MetaModel.CreateTable%2A> método pode ser substituído para criar uma instância de um tipo derivado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Web.DynamicData.MetaModel Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.DynamicData.MetaModel Default" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaModel.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a primeira instância de um modelo de dados é criado pelo aplicativo.</summary>
+        <value>A instância do modelo de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece uma maneira simples de fazer referência à instância de modelo de dados padrão. Se o aplicativo usa vários modelos, você deve fornecer sua própria maneira de armazenar as referências para os modelos de dados adicionais. Para localizar um modelo de dados específico, chame o <xref:System.Web.DynamicData.MetaModel.GetModel%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.DynamicData.MetaModel.Default%2A> propriedade o <xref:System.Web.DynamicData.MetaModel.GetModel%2A> método para obter o modelo de dados padrão.  
+  
+ Para obter um exemplo completo, consulte o <xref:System.Web.DynamicData.MetaModel> visão geral da classe.  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#22](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/PathModel.aspx.cs#22)]
+ [!code-vb[System.Web.DynamicData.MetaModel#22](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/PathModel.aspx.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicDataFolderVirtualPath">
+      <MemberSignature Language="C#" Value="public string DynamicDataFolderVirtualPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DynamicDataFolderVirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaModel.DynamicDataFolderVirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho virtual da pasta DynamicData no site da Web.</summary>
+        <value>O caminho virtual da pasta DynamicData.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você altere o caminho virtual da pasta DynamicData. O valor padrão é "~/DynamicData".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityTemplateFactory">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.EntityTemplateFactory EntityTemplateFactory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.EntityTemplateFactory EntityTemplateFactory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaModel.EntityTemplateFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.EntityTemplateFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.DynamicData.EntityTemplateFactory" /> objeto que está associado com o modelo.</summary>
+        <value>Uma instância do <see cref="T:System.Web.DynamicData.EntityTemplateFactory" /> objeto que está associado com o modelo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldTemplateFactory">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.IFieldTemplateFactory FieldTemplateFactory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.IFieldTemplateFactory FieldTemplateFactory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaModel.FieldTemplateFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.IFieldTemplateFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um personalizado <see cref="T:System.Web.DynamicData.IFieldTemplateFactory" /> interface.</summary>
+        <value>O <see cref="T:System.Web.DynamicData.IFieldTemplateFactory" /> interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.IFieldTemplateFactory> interface permite que você especifique quais modelos de campo são criados para as colunas da tabela.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterFactory">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.FilterFactory FilterFactory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.FilterFactory FilterFactory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaModel.FilterFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.FilterFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.DynamicData.FilterFactory" /> objeto que está associado com o modelo.</summary>
+        <value>Uma instância do <see cref="T:System.Web.DynamicData.FilterFactory" /> objeto que está associado com o modelo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetActionPath">
+      <MemberSignature Language="C#" Value="public string GetActionPath (string tableName, string action, object row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetActionPath(string tableName, string action, object row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.GetActionPath(System.String,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tableName" Type="System.String" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="row" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="tableName">O nome da tabela que a ação se aplica.</param>
+        <param name="action">A ação a ser aplicado à tabela.</param>
+        <param name="row">Um objeto que representa uma única linha de dados em uma tabela. <c>linha</c> é usada para fornecer valores para parâmetros de cadeia de caracteres de consulta.</param>
+        <summary>Retorna o caminho da ação associada uma tabela específica.</summary>
+        <returns>A URL que está associada com a rota.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A rota é determinada pela combinação do nome da tabela e ação.  
+  
+ [Executar](http://go.microsoft.com/fwlink/?LinkId=120736&sref=System.Web.DynamicData.MetaModel&spage=PathModel.aspx) um exemplo online desse recurso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.DynamicData.MetaModel.GetActionPath%28System.String%2CSystem.String%2CSystem.Object%29> método para avaliar o caminho de roteamento (determinar a URL) para uma tabela especificada. Para obter um exemplo completo, consulte <xref:System.Web.DynamicData.MetaModel>.  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#23](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/PathModel.aspx.cs#23)]
+ [!code-vb[System.Web.DynamicData.MetaModel#23](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/PathModel.aspx.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModel">
+      <MemberSignature Language="C#" Value="public static System.Web.DynamicData.MetaModel GetModel (Type contextType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.DynamicData.MetaModel GetModel(class System.Type contextType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.GetModel(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaModel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contextType">O tipo de contexto de dados, conforme definido no modelo de dados.</param>
+        <summary>Retorna a instância de modelo de dados para o contexto especificado.</summary>
+        <returns>O modelo de dados que está associado com o tipo de contexto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.DynamicData.MetaModel.GetModel%28System.Type%29> método para executar as seguintes tarefas:  
+  
+-   Obtendo o modelo de dados padrão.  
+  
+-   Obtendo o modelo de dados especificado pelo tipo de contexto passado.  
+  
+ Para obter um exemplo completo, consulte o <xref:System.Web.DynamicData.MetaModel> visão geral da classe.  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#22](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/PathModel.aspx.cs#22)]
+ [!code-vb[System.Web.DynamicData.MetaModel#22](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/PathModel.aspx.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetTable">
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <exception cref="T:System.ArgumentNullException">A tabela não foi encontrada.</exception>
+        <summary>Retorna os metadados que descrevem uma tabela de modelo de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.MetaTable> objeto que é retornado pelos métodos sobrecarregados contém as informações de metadados que está associadas com a tabela especificada.  
+  
+ [Executar](http://go.microsoft.com/fwlink/?LinkId=120736&sref=System.Web.DynamicData.MetaModel&spage=GetTable.aspx) um exemplo online desse recurso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.DynamicData.MetaModel.GetTable%2A> sobrecarregado métodos para executar as seguintes tarefas:  
+  
+-   Obter o <xref:System.Web.DynamicData.MetaTable> objeto da tabela especificada.  
+  
+-   Acessar as informações de metadados que contém o <xref:System.Web.DynamicData.MetaTable> objeto.  
+  
+ O exemplo consiste em uma página e seu arquivo code-behind.  
+  
+ [!code-aspx-csharp[System.Web.DynamicData.MetaModel#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/GetTable.aspx#3)] -->
+ [!code-aspx-vb[System.Web.DynamicData.MetaModel#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/GetTable.aspx#3)] --> 
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/GetTable.aspx.cs#4)]
+ [!code-vb[System.Web.DynamicData.MetaModel#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/gettable.aspx.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetTable">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaTable GetTable (string uniqueTableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.DynamicData.MetaTable GetTable(string uniqueTableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.GetTable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uniqueTableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uniqueTableName">O nome que identifica a tabela no modelo de dados.</param>
+        <summary>Retorna os metadados que está associado com a tabela especificada.</summary>
+        <returns>Os metadados que descrevem a tabela especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome exclusivamente identifica uma tabela no modelo de dados e é usado para gerar a URL relacionada para roteamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.DynamicData.MetaModel.GetTable%28System.String%29> método para obter os metadados da tabela especificada. Para obter um exemplo completo, consulte <xref:System.Web.DynamicData.MetaModel.GetTable%2A>.  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#42](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/GetTable.aspx.cs#42)]
+ [!code-vb[System.Web.DynamicData.MetaModel#42](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/gettable.aspx.vb#42)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O nome não foi encontrado no modelo de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTable">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaTable GetTable (Type entityType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.DynamicData.MetaTable GetTable(class System.Type entityType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.GetTable(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entityType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="entityType">O tipo que identifica a tabela no modelo de dados.</param>
+        <summary>Retorna os metadados que descrevem a tabela especificada.</summary>
+        <returns>Os metadados que descrevem a tabela especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.DynamicData.MetaModel.GetTable%28System.Type%29> método para obter os metadados da tabela especificada. Para obter um exemplo completo, consulte <xref:System.Web.DynamicData.MetaModel.GetTable%2A>.  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#41](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/GetTable.aspx.cs#41)]
+ [!code-vb[System.Web.DynamicData.MetaModel#41](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/gettable.aspx.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O tipo não foi encontrado no modelo de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTable">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaTable GetTable (string tableName, Type contextType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.DynamicData.MetaTable GetTable(string tableName, class System.Type contextType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.GetTable(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tableName" Type="System.String" />
+        <Parameter Name="contextType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="tableName">O nome da tabela.</param>
+        <param name="contextType">O contexto de dados para a tabela de pesquisa.</param>
+        <summary>Retorna os metadados que descrevem a tabela especificada.</summary>
+        <returns>Os metadados que descrevem a tabela especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.DynamicData.MetaModel.GetTable%28System.String%2CSystem.Type%29> método para obter os metadados da tabela especificada. Para obter um exemplo completo, consulte <xref:System.Web.DynamicData.MetaModel.GetTable%2A>.  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#43](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/GetTable.aspx.cs#43)]
+ [!code-vb[System.Web.DynamicData.MetaModel#43](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/gettable.aspx.vb#43)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="tablename" /> ou <paramref name="contextType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O contexto não está registrado ou a tabela não existe no contexto de dados.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="RegisterContext">
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Registra o contexto de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir informações de inicialização de contexto de dados usando as propriedades da <xref:System.Web.DynamicData.ContextConfiguration> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="RegisterContext">
+      <MemberSignature Language="C#" Value="public void RegisterContext (Func&lt;object&gt; contextFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterContext(class System.Func`1&lt;object&gt; contextFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Func{System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextFactory" Type="System.Func&lt;System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="contextFactory">A fábrica para criar uma instância do contexto de dados.</param>
+        <summary>Registra o contexto de dados que é especificado por uma fábrica de contexto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa as informações de contexto padrão definida pelo <xref:System.Web.DynamicData.ContextConfiguration> classe. Ele permite instanciar o contexto de dados usando seu próprios construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterContext">
+      <MemberSignature Language="C#" Value="public void RegisterContext (Type contextType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterContext(class System.Type contextType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contextType">O tipo de contexto de dados, conforme definido no modelo de dados.</param>
+        <summary>Registra uma instância de contexto de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa as informações de contexto padrão, conforme definido pelo <xref:System.Web.DynamicData.ContextConfiguration> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterContext">
+      <MemberSignature Language="C#" Value="public void RegisterContext (System.Web.DynamicData.ModelProviders.DataModelProvider dataModelProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterContext(class System.Web.DynamicData.ModelProviders.DataModelProvider dataModelProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Web.DynamicData.ModelProviders.DataModelProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataModelProvider" Type="System.Web.DynamicData.ModelProviders.DataModelProvider" />
+      </Parameters>
+      <Docs>
+        <param name="dataModelProvider">Um provedor para o modelo de dados.</param>
+        <summary>Registra uma instância de contexto de dados usando um provedor de dados modelo</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterContext">
+      <MemberSignature Language="C#" Value="public void RegisterContext (Func&lt;object&gt; contextFactory, System.Web.DynamicData.ContextConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterContext(class System.Func`1&lt;object&gt; contextFactory, class System.Web.DynamicData.ContextConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Func{System.Object},System.Web.DynamicData.ContextConfiguration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextFactory" Type="System.Func&lt;System.Object&gt;" />
+        <Parameter Name="configuration" Type="System.Web.DynamicData.ContextConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="contextFactory">Um delegado que é usado para instanciar o contexto do modelo de dados.</param>
+        <param name="configuration">As informações de contexto, conforme definido pelo <see cref="T:System.Web.DynamicData.ContextConfiguration" /> classe.</param>
+        <summary>Registra uma instância de contexto de dados usando a configuração de contexto especificado e ativando um construtor personalizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fábrica de contexto em que esse método permite que você criar uma instância de um contexto de modelo de dados usando um construtor personalizado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contextFactory" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="contextType" /> instanciado por <paramref name="contextFactory" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterContext">
+      <MemberSignature Language="C#" Value="public void RegisterContext (Type contextType, System.Web.DynamicData.ContextConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterContext(class System.Type contextType, class System.Web.DynamicData.ContextConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Type,System.Web.DynamicData.ContextConfiguration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contextType" Type="System.Type" />
+        <Parameter Name="configuration" Type="System.Web.DynamicData.ContextConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="contextType">O tipo de contexto de dados, conforme definido no modelo de dados.</param>
+        <param name="configuration">As informações de contexto, conforme definido pela configuração de <see cref="T:System.Web.DynamicData.ContextConfiguration" /> classe.</param>
+        <summary>Registra uma instância de contexto de dados usando a configuração do contexto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.DynamicData.MetaModel.RegisterContext%28System.Type%2CSystem.Web.DynamicData.ContextConfiguration%29> método para registrar um contexto de dados com scaffolding habilitado, conforme especificado pelo `configuration` parâmetro.  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#99](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/global.asax.cs#99)]
+ [!code-vb[System.Web.DynamicData.MetaModel#99](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/global.asax.vb#99)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contextType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterContext">
+      <MemberSignature Language="C#" Value="public virtual void RegisterContext (System.Web.DynamicData.ModelProviders.DataModelProvider dataModelProvider, System.Web.DynamicData.ContextConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterContext(class System.Web.DynamicData.ModelProviders.DataModelProvider dataModelProvider, class System.Web.DynamicData.ContextConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.RegisterContext(System.Web.DynamicData.ModelProviders.DataModelProvider,System.Web.DynamicData.ContextConfiguration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataModelProvider" Type="System.Web.DynamicData.ModelProviders.DataModelProvider" />
+        <Parameter Name="configuration" Type="System.Web.DynamicData.ContextConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="dataModelProvider">Um provedor para o modelo de dados.</param>
+        <param name="configuration">As informações de contexto, conforme definido pelo <see cref="T:System.Web.DynamicData.ContextConfiguration" /> classe.</param>
+        <summary>Registra uma instância de contexto de dados usando a configuração de contexto especificado e permitindo que um provedor de dados modelo.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dataModelProvider" /> ou <paramref name="configuration" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          O <paramref name="contextType" /> já está registrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetRegistrationException">
+      <MemberSignature Language="C#" Value="public static void ResetRegistrationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ResetRegistrationException() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.ResetRegistrationException" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine qualquer erro de registro de contexto anterior que possam ter ocorrido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando ocorre um erro durante o registro de contexto de dados, a exceção é armazenado em cache e gerada em todas as operações subsequentes. Por exemplo, se ocorrer um erro na inicialização do aplicativo, ela é gerada em cada solicitação. Chame este método para limpar o erro e permitir um novo registro de contexto a ser executada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tables">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Web.DynamicData.MetaTable&gt; Tables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Web.DynamicData.MetaTable&gt; Tables" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaModel.Tables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Web.DynamicData.MetaTable&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de todas as tabelas que fazem parte do modelo de dados.</summary>
+        <value>Uma coleção que contém as tabelas que pertencem ao modelo de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção contém todas as tabelas no modelo de dados, que inclui as tabelas que não são visíveis (não fazem parte da estrutura de dados dinâmicos).  
+  
+ [Executar](http://go.microsoft.com/fwlink/?LinkId=120736&sref=System.Web.DynamicData.MetaModel&spage=TablesMenu.aspx) um exemplo online desse recurso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.DynamicData.MetaModel.Tables%2A> e <xref:System.Web.DynamicData.MetaModel.VisibleTables%2A> propriedades para executar as seguintes tarefas:  
+  
+-   Obtém uma coleção de todas as tabelas em um modelo de dados e mostrá-los em um `GridView` controle.  
+  
+-   Obtém uma coleção de tabelas visíveis em um modelo de dados e mostrá-los em um `GridView` controle.  
+  
+ O exemplo consiste em uma página e seu arquivo code-behind.  
+  
+ [!code-aspx-csharp[System.Web.DynamicData.MetaModel#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/TablesMenu.aspx#5)]
+ [!code-aspx-vb[System.Web.DynamicData.MetaModel#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/TablesMenu.aspx#5)]  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/TablesMenu.aspx.cs#6)]
+ [!code-vb[System.Web.DynamicData.MetaModel#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/TablesMenu.aspx.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetTable">
+      <MemberSignature Language="C#" Value="public bool TryGetTable (string uniqueTableName, out System.Web.DynamicData.MetaTable table);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetTable(string uniqueTableName, [out] class System.Web.DynamicData.MetaTable&amp; table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.TryGetTable(System.String,System.Web.DynamicData.MetaTable@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uniqueTableName" Type="System.String" />
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="uniqueTableName">O nome que identifica exclusivamente a tabela.</param>
+        <param name="table">Quando este método retorna, e se ele encontra a tabela solicitada, contém os metadados para essa tabela. Este parâmetro é passado não inicializado.</param>
+        <summary>Tenta obter os metadados que está associado com a tabela especificada.</summary>
+        <returns>
+          <see langword="true" />Se os metadados da tabela for encontrado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método obtém os metadados que está associado com a tabela especificada. Se a tabela não for encontrada, este método retorna `false`. Isso difere do <xref:System.Web.DynamicData.MetaModel.GetTable%2A> método, que gera uma exceção se a tabela não foi encontrada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uniqueTableName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetTable">
+      <MemberSignature Language="C#" Value="public bool TryGetTable (Type entityType, out System.Web.DynamicData.MetaTable table);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetTable(class System.Type entityType, [out] class System.Web.DynamicData.MetaTable&amp; table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.MetaModel.TryGetTable(System.Type,System.Web.DynamicData.MetaTable@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entityType" Type="System.Type" />
+        <Parameter Name="table" Type="System.Web.DynamicData.MetaTable&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="entityType">O tipo de tabela.</param>
+        <param name="table">Quando este método retorna, e se a tabela solicitada foi encontrada, contém os metadados da tabela especificada. Este parâmetro é passado não inicializado.</param>
+        <summary>Tenta obter os metadados que está associado com a tabela especificada.</summary>
+        <returns>
+          <see langword="true" />Se os metadados da tabela for encontrado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método obtém os metadados que está associado com a tabela especificada. Se a tabela não for encontrada, este método retorna `false`. Isso difere do <xref:System.Web.DynamicData.MetaModel.GetTable%2A> método, que gera uma exceção se a tabela não foi encontrada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entityType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VisibleTables">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.Web.DynamicData.MetaTable&gt; VisibleTables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.Web.DynamicData.MetaTable&gt; VisibleTables" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.MetaModel.VisibleTables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Web.DynamicData.MetaTable&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de tabelas visíveis no modelo de dados.</summary>
+        <value>Uma tabela visível se refere a uma tabela que tem o scaffolding habilitado. Isso significa que se trata de uma tabela para a qual uma página List.aspx existe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.DynamicData.MetaModel.VisibleTables%2A> propriedade para obter uma coleção de tabelas visíveis no modelo de dados. Para obter um exemplo completo, consulte o <xref:System.Web.DynamicData.MetaModel> visão geral da classe.  
+  
+ [!code-csharp[System.Web.DynamicData.MetaModel#62](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/CS/TablesMenu.aspx.cs#62)]
+ [!code-vb[System.Web.DynamicData.MetaModel#62](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.DynamicData.MetaModel/VB/TablesMenu.aspx.vb#62)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

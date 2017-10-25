@@ -1,0 +1,467 @@
+<Type Name="MetaData" FullName="System.Runtime.Remoting.MetadataServices.MetaData">
+  <TypeSignature Language="C#" Value="public class MetaData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MetaData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.MetadataServices.MetaData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos que permitem que você trabalhe com o esquema XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.MetadataServices.MetaData> classe fornece métodos que permitem que você gerar WSDL Web Services Description Language () de informações de tipo, converter um esquema XML em um fluxo de código e compilar o fluxo de código em um assembly. Essa funcionalidade também está presente no [Soapsuds ferramenta (Soapsuds.exe)](http://msdn.microsoft.com/en-us/40f6f8c8-b80c-4e9f-a920-31bcd0cf45c5).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetaData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Runtime.Remoting.MetadataServices.MetaData" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertCodeSourceFileToAssemblyFile">
+      <MemberSignature Language="C#" Value="public static void ConvertCodeSourceFileToAssemblyFile (string codePath, string assemblyPath, string strongNameFilename);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ConvertCodeSourceFileToAssemblyFile(string codePath, string assemblyPath, string strongNameFilename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertCodeSourceFileToAssemblyFile(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codePath" Type="System.String" />
+        <Parameter Name="assemblyPath" Type="System.String" />
+        <Parameter Name="strongNameFilename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="codePath">O caminho para o arquivo que contém o código-fonte.</param>
+        <param name="assemblyPath">O local onde o novo assembly de tempo de execução é gerado.</param>
+        <param name="strongNameFilename">O nome forte para compilar para o novo assembly. Pode ser <see cref="F:System.String.Empty" />.</param>
+        <summary>Compila um arquivo de origem do código especificado em um arquivo de assembly de tempo de execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações adicionais sobre nomes fortes, consulte [strong-Named Assemblies](~/docs/framework/app-domains/strong-named-assemblies.md).  
+  
+> [!NOTE]
+>  Se um arquivo com o nome especificado já existir, ele será substituído.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Runtime.Remoting.MetadataServices.MetaData.ConvertCodeSourceFileToAssemblyFile%2A> método grave a definição de esquema dos tipos especificados a um assembly de tempo de execução com o nome especificado. O `CsSource.cs` arquivo convertido aqui contém o código-fonte c#.  
+  
+ [!code-cpp[MetaData.ConvertCodeSourceFileToAssemblyFile#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MetaData.ConvertCodeSourceFileToAssemblyFile/CPP/source.cpp#1)]
+ [!code-csharp[MetaData.ConvertCodeSourceFileToAssemblyFile#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MetaData.ConvertCodeSourceFileToAssemblyFile/CS/source.cs#1)]
+ [!code-vb[MetaData.ConvertCodeSourceFileToAssemblyFile#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MetaData.ConvertCodeSourceFileToAssemblyFile/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertCodeSourceStreamToAssemblyFile">
+      <MemberSignature Language="C#" Value="public static void ConvertCodeSourceStreamToAssemblyFile (System.Collections.ArrayList outCodeStreamList, string assemblyPath, string strongNameFilename);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ConvertCodeSourceStreamToAssemblyFile(class System.Collections.ArrayList outCodeStreamList, string assemblyPath, string strongNameFilename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertCodeSourceStreamToAssemblyFile(System.Collections.ArrayList,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="outCodeStreamList" Type="System.Collections.ArrayList" />
+        <Parameter Name="assemblyPath" Type="System.String" />
+        <Parameter Name="strongNameFilename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="outCodeStreamList">Um <see cref="T:System.Collections.ArrayList" /> de fluxos com o código-fonte.</param>
+        <param name="assemblyPath">O local onde o novo assembly de tempo de execução é gerado.</param>
+        <param name="strongNameFilename">O nome forte para compilar para o novo assembly de tempo de execução. Pode ser <see cref="F:System.String.Empty" />.</param>
+        <summary>Compila especificado fluxos do código fonte em um arquivo de assembly de tempo de execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações adicionais sobre nomes fortes, consulte [strong-Named Assemblies](~/docs/framework/app-domains/strong-named-assemblies.md).  
+  
+> [!NOTE]
+>  Se um arquivo com o nome especificado já existir, ele será substituído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertSchemaStreamToCodeSourceStream">
+      <MemberSignature Language="C#" Value="public static void ConvertSchemaStreamToCodeSourceStream (bool clientProxy, string outputDirectory, System.IO.Stream inputStream, System.Collections.ArrayList outCodeStreamList);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ConvertSchemaStreamToCodeSourceStream(bool clientProxy, string outputDirectory, class System.IO.Stream inputStream, class System.Collections.ArrayList outCodeStreamList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientProxy" Type="System.Boolean" />
+        <Parameter Name="outputDirectory" Type="System.String" />
+        <Parameter Name="inputStream" Type="System.IO.Stream" />
+        <Parameter Name="outCodeStreamList" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="clientProxy">Indica o tipo de proxy para gerar. Se <see langword="true" />, gera um proxy simple (também conhecido como proxy encapsulado) que carrega os canais automaticamente, expõe todos os métodos do objeto remoto e fornece acesso às propriedades do canal. Se <see langword="false" />, gera um proxy transparente que expõe todos os métodos do objeto remoto.</param>
+        <param name="outputDirectory">O diretório onde o novo c# arquivos código-fonte com o proxy são criados.</param>
+        <param name="inputStream">O fluxo de entrada que contém a definição de esquema no formato WSDL Web Services Description Language ().</param>
+        <param name="outCodeStreamList">A lista de nomes de arquivo para os fluxos de código que são gerados. Observe que o <see cref="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)" /> método pode criar a fonte de vários fluxos de código.</param>
+        <summary>Converte a definição de esquema especificado no código-fonte c# proxy.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Se já existirem arquivos com os nomes especificados, eles serão substituídos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertSchemaStreamToCodeSourceStream">
+      <MemberSignature Language="C#" Value="public static void ConvertSchemaStreamToCodeSourceStream (bool clientProxy, string outputDirectory, System.IO.Stream inputStream, System.Collections.ArrayList outCodeStreamList, string proxyUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ConvertSchemaStreamToCodeSourceStream(bool clientProxy, string outputDirectory, class System.IO.Stream inputStream, class System.Collections.ArrayList outCodeStreamList, string proxyUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientProxy" Type="System.Boolean" />
+        <Parameter Name="outputDirectory" Type="System.String" />
+        <Parameter Name="inputStream" Type="System.IO.Stream" />
+        <Parameter Name="outCodeStreamList" Type="System.Collections.ArrayList" />
+        <Parameter Name="proxyUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="clientProxy">Indica o tipo de proxy para gerar. Se <see langword="true" />, gera um proxy simple (também conhecido como proxy encapsulado) que carrega os canais automaticamente, expõe todos os métodos do objeto remoto e fornece acesso às propriedades do canal. Se <see langword="false" />, gera um proxy transparente que expõe todos os métodos do objeto remoto.</param>
+        <param name="outputDirectory">O diretório onde o novo c# arquivos código-fonte com o proxy são criados.</param>
+        <param name="inputStream">O fluxo de entrada que contém a definição de esquema no formato WSDL Web Services Description Language ().</param>
+        <param name="outCodeStreamList">A lista de nomes de arquivo para os fluxos de código que são gerados. Observe que o <see cref="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)" /> método pode criar a fonte de vários fluxos de código.</param>
+        <param name="proxyUrl">A URL em que o objeto de destino remoto que é representado do novo proxy serão localizado.</param>
+        <summary>Converte a definição de esquema especificado no proxy código fonte c# para um objeto remoto localizado na URL especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Se já existirem arquivos com os nomes especificados, eles serão substituídos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertSchemaStreamToCodeSourceStream">
+      <MemberSignature Language="C#" Value="public static void ConvertSchemaStreamToCodeSourceStream (bool clientProxy, string outputDirectory, System.IO.Stream inputStream, System.Collections.ArrayList outCodeStreamList, string proxyUrl, string proxyNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ConvertSchemaStreamToCodeSourceStream(bool clientProxy, string outputDirectory, class System.IO.Stream inputStream, class System.Collections.ArrayList outCodeStreamList, string proxyUrl, string proxyNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientProxy" Type="System.Boolean" />
+        <Parameter Name="outputDirectory" Type="System.String" />
+        <Parameter Name="inputStream" Type="System.IO.Stream" />
+        <Parameter Name="outCodeStreamList" Type="System.Collections.ArrayList" />
+        <Parameter Name="proxyUrl" Type="System.String" />
+        <Parameter Name="proxyNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="clientProxy">Indica o tipo de proxy para gerar. Se <see langword="true" />, gera um proxy simple (também conhecido como proxy encapsulado) que carrega os canais automaticamente, expõe todos os métodos do objeto remoto e fornece acesso às propriedades do canal. Se <see langword="false" />, gera um proxy transparente que expõe todos os métodos do objeto remoto.</param>
+        <param name="outputDirectory">O diretório onde o novo c# arquivos código-fonte com o proxy são criados.</param>
+        <param name="inputStream">O fluxo de entrada que contém a definição de esquema no formato WSDL Web Services Description Language ().</param>
+        <param name="outCodeStreamList">A lista de nomes de arquivo para os fluxos de código que são gerados. Observe que o <see cref="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertSchemaStreamToCodeSourceStream(System.Boolean,System.String,System.IO.Stream,System.Collections.ArrayList,System.String,System.String)" /> método pode criar a fonte de vários fluxos de código.</param>
+        <param name="proxyUrl">A URL em que o objeto de destino remoto que é representado do novo proxy serão localizado.</param>
+        <param name="proxyNamespace">O namespace do proxy recém-criado.</param>
+        <summary>Converte a definição de esquema especificado no proxy código fonte c# para um objeto remoto localizado na URL especificada e no namespace fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Se já existirem arquivos com os nomes especificados, eles serão substituídos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTypesToSchemaToFile">
+      <MemberSignature Language="C#" Value="public static void ConvertTypesToSchemaToFile (System.Runtime.Remoting.MetadataServices.ServiceType[] types, System.Runtime.Remoting.MetadataServices.SdlType sdlType, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ConvertTypesToSchemaToFile(class System.Runtime.Remoting.MetadataServices.ServiceType[] types, valuetype System.Runtime.Remoting.MetadataServices.SdlType sdlType, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToFile(System.Runtime.Remoting.MetadataServices.ServiceType[],System.Runtime.Remoting.MetadataServices.SdlType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="types" Type="System.Runtime.Remoting.MetadataServices.ServiceType[]" />
+        <Parameter Name="sdlType" Type="System.Runtime.Remoting.MetadataServices.SdlType" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="types">O <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> instâncias para converter para o esquema XML.</param>
+        <param name="sdlType">O tipo de linguagem de descrição de serviço a ser usado para o esquema XML.</param>
+        <param name="path">O caminho do arquivo XML.</param>
+        <summary>Converte os tipos de serviço especificado para o esquema XML e grava-o em um arquivo que é especificado pelo nome.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Runtime.Remoting.MetadataServices.ServiceType> instância permite que você associe uma URL com um objeto <xref:System.Type>.  
+  
+> [!NOTE]
+>  Se um arquivo com o nome especificado já existir, ele será substituído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTypesToSchemaToFile">
+      <MemberSignature Language="C#" Value="public static void ConvertTypesToSchemaToFile (Type[] types, System.Runtime.Remoting.MetadataServices.SdlType sdlType, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ConvertTypesToSchemaToFile(class System.Type[] types, valuetype System.Runtime.Remoting.MetadataServices.SdlType sdlType, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToFile(System.Type[],System.Runtime.Remoting.MetadataServices.SdlType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="sdlType" Type="System.Runtime.Remoting.MetadataServices.SdlType" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="types">Os tipos de objeto para converter para o esquema XML.</param>
+        <param name="sdlType">O tipo de linguagem de descrição de serviço a ser usado para o esquema XML.</param>
+        <param name="path">O caminho do arquivo XML.</param>
+        <summary>Converte os tipos de objeto especificado para o esquema XML e grava-o em um arquivo que é especificado pelo nome.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Se um arquivo com o nome especificado já existir, ele será substituído.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToFile%2A> método grave a definição de esquema dos tipos especificados em um arquivo.  
+  
+ [!code-cpp[MetaData.ConvertTypesToSchemaToFile#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MetaData.ConvertTypesToSchemaToFile/CPP/source.cpp#1)]
+ [!code-csharp[MetaData.ConvertTypesToSchemaToFile#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MetaData.ConvertTypesToSchemaToFile/CS/source.cs#1)]
+ [!code-vb[MetaData.ConvertTypesToSchemaToFile#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MetaData.ConvertTypesToSchemaToFile/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTypesToSchemaToStream">
+      <MemberSignature Language="C#" Value="public static void ConvertTypesToSchemaToStream (System.Runtime.Remoting.MetadataServices.ServiceType[] serviceTypes, System.Runtime.Remoting.MetadataServices.SdlType sdlType, System.IO.Stream outputStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ConvertTypesToSchemaToStream(class System.Runtime.Remoting.MetadataServices.ServiceType[] serviceTypes, valuetype System.Runtime.Remoting.MetadataServices.SdlType sdlType, class System.IO.Stream outputStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToStream(System.Runtime.Remoting.MetadataServices.ServiceType[],System.Runtime.Remoting.MetadataServices.SdlType,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceTypes" Type="System.Runtime.Remoting.MetadataServices.ServiceType[]" />
+        <Parameter Name="sdlType" Type="System.Runtime.Remoting.MetadataServices.SdlType" />
+        <Parameter Name="outputStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="serviceTypes">O <see cref="T:System.Runtime.Remoting.MetadataServices.ServiceType" /> instâncias para converter para o esquema XML.</param>
+        <param name="sdlType">O tipo de linguagem de descrição de serviço a ser usado para o esquema XML.</param>
+        <param name="outputStream">O <see cref="T:System.IO.Stream" /> que o esquema é gravado.</param>
+        <summary>Converte os tipos de serviço especificado para o esquema XML e grava-o em um fluxo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Runtime.Remoting.MetadataServices.ServiceType> instância permite que você associe uma URL com um objeto <xref:System.Type>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTypesToSchemaToStream">
+      <MemberSignature Language="C#" Value="public static void ConvertTypesToSchemaToStream (Type[] types, System.Runtime.Remoting.MetadataServices.SdlType sdlType, System.IO.Stream outputStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ConvertTypesToSchemaToStream(class System.Type[] types, valuetype System.Runtime.Remoting.MetadataServices.SdlType sdlType, class System.IO.Stream outputStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToStream(System.Type[],System.Runtime.Remoting.MetadataServices.SdlType,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="sdlType" Type="System.Runtime.Remoting.MetadataServices.SdlType" />
+        <Parameter Name="outputStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="types">Os tipos de objeto para converter para o esquema XML.</param>
+        <param name="sdlType">O tipo de linguagem de descrição de serviço a ser usado para o esquema XML.</param>
+        <param name="outputStream">O <see cref="T:System.IO.Stream" /> que o esquema é gravado.</param>
+        <summary>Converte os tipos de objeto especificado para o esquema XML e grava-o em um fluxo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Runtime.Remoting.MetadataServices.MetaData.ConvertTypesToSchemaToStream%2A> método grave a definição de esquema dos tipos especificados em um fluxo.  
+  
+ [!code-cpp[MetaData.ConvertTypesToSchemaToStream#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MetaData.ConvertTypesToSchemaToStream/CPP/source.cpp#1)]
+ [!code-csharp[MetaData.ConvertTypesToSchemaToStream#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MetaData.ConvertTypesToSchemaToStream/CS/source.cs#1)]
+ [!code-vb[MetaData.ConvertTypesToSchemaToStream#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MetaData.ConvertTypesToSchemaToStream/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrieveSchemaFromUrlToFile">
+      <MemberSignature Language="C#" Value="public static void RetrieveSchemaFromUrlToFile (string url, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RetrieveSchemaFromUrlToFile(string url, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.RetrieveSchemaFromUrlToFile(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL onde se encontra o esquema XML.</param>
+        <param name="path">O caminho do arquivo que o esquema é gravado.</param>
+        <summary>Baixa o esquema XML de uma URL e grava-o para o arquivo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Se um arquivo com o nome especificado já existir, ele será substituído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrieveSchemaFromUrlToStream">
+      <MemberSignature Language="C#" Value="public static void RetrieveSchemaFromUrlToStream (string url, System.IO.Stream outputStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RetrieveSchemaFromUrlToStream(string url, class System.IO.Stream outputStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.RetrieveSchemaFromUrlToStream(System.String,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="outputStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL onde se encontra o esquema XML.</param>
+        <param name="outputStream">O <see cref="T:System.IO.Stream" /> que o esquema é gravado.</param>
+        <summary>Baixa o esquema XML de uma URL e grava-o fluxo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveStreamToFile">
+      <MemberSignature Language="C#" Value="public static void SaveStreamToFile (System.IO.Stream inputStream, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SaveStreamToFile(class System.IO.Stream inputStream, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.MetadataServices.MetaData.SaveStreamToFile(System.IO.Stream,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputStream" Type="System.IO.Stream" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputStream">O fluxo para gravar o arquivo especificado.</param>
+        <param name="path">O arquivo que o fluxo de entrada é gravado.</param>
+        <summary>Salva o fluxo de entrada em um arquivo com o nome especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Se um arquivo com o nome especificado já existir, ele será substituído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

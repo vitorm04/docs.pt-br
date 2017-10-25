@@ -1,0 +1,25 @@
+<Type Name="DragStartedEventHandler" FullName="System.Windows.Controls.Primitives.DragStartedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DragStartedEventHandler(object sender, DragStartedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DragStartedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.DragStartedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Controls.Primitives.DragStartedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O objeto em que o manipulador de eventos está anexado.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa o método que manipulará o <see cref="E:System.Windows.Controls.Primitives.Thumb.DragStarted" /> evento encaminhado de um <see cref="T:System.Windows.Controls.Primitives.Thumb" /> controle.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

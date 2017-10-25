@@ -1,0 +1,380 @@
+<Type Name="PartialCachingAttribute" FullName="System.Web.UI.PartialCachingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PartialCachingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PartialCachingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PartialCachingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o atributo de metadados que os controles de usuário do Web Forms (arquivos .ascx) usam para indicar se e como sua saída é armazenada em cache. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PartialCachingAttribute> classe de atributo marca controles de usuário (arquivos. ascx) que dão suporte a cache de fragmento e encapsula as configurações de cache ASP.NET usa ao armazenar em cache o controle. Os desenvolvedores de página e controles usam o <xref:System.Web.UI.PartialCachingAttribute> atributo para habilitar o cache de saída para um controle de usuário em um arquivo code-behind.  
+  
+ Usando o <xref:System.Web.UI.PartialCachingAttribute> é uma das várias maneiras que você pode habilitar o cache de saída. A lista a seguir descreve os métodos que você pode usar para habilitar o cache de saída.  
+  
+-   Use a diretiva para habilitar o cache de saída em cenários declarativos.  
+  
+-   Use o <xref:System.Web.UI.PartialCachingAttribute> para habilitar o cache para um controle de usuário em um arquivo code-behind.  
+  
+-   Use o <xref:System.Web.UI.ControlCachePolicy> classe para especificar as configurações de cache de forma programática em cenários de programação na qual você está trabalhando com <xref:System.Web.UI.BasePartialCachingControl> instâncias.  
+  
+ Se um controle de usuário contém uma diretiva ou tiver um <xref:System.Web.UI.PartialCachingAttribute> aplicada, o analisador do ASP.NET gera uma instância do <xref:System.Web.UI.PartialCachingControl> classe para ajustar o controle de usuário.  
+  
+ Para obter mais informações sobre o cache do ASP.NET, consulte [cache](http://msdn.microsoft.com/library/ac11c8ea-df5d-4de8-b315-9ccf1048b0ce). Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.PartialCachingAttribute>. Este exemplo tem três partes:  
+  
+-   Uma classe parcial, `ctlMine`, que herda o <xref:System.Web.UI.UserControl> classe base e para o qual o <xref:System.Web.UI.PartialCachingAttribute> atributo é aplicado.  
+  
+-   Um controle de usuário que é usado com o `ctlMine` classe parcial.  
+  
+-   Uma página de formulários da Web que hospeda o controle de usuário.  
+  
+ A primeira parte do exemplo demonstra uma classe parcial que herda o <xref:System.Web.UI.UserControl> classe base e para o qual o <xref:System.Web.UI.PartialCachingAttribute> atributo é aplicado. Neste exemplo, o atributo especifica que o controle de usuário deve ser armazenado em cache por 20 segundos.  
+  
+ [!code-csharp[PartialCachingAttribute_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_1/CS/partialcache.cs.ascx.cs#1)]
+ [!code-vb[PartialCachingAttribute_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_1/VB/partialcache.vb.ascx.vb#1)]  
+  
+ A segunda parte do exemplo mostra um controle de usuário que é usado com o exemplo anterior para demonstrar o cache de controle de usuário.  
+  
+ [!code-aspx-csharp[PartialCachingAttribute_1#5](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_1/CS/partialcache.cs.ascx#5)]
+ [!code-aspx-vb[PartialCachingAttribute_1#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_1/VB/partialcache.vb.ascx#5)]  
+  
+ A terceira parte do exemplo demonstra uma página de formulários da Web que hospeda o controle de usuário.  
+  
+ [!code-aspx-csharp[PartialCachingAttribute_1#6](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_1/CS/partialcache.cs.aspx#6)]
+ [!code-aspx-vb[PartialCachingAttribute_1#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_1/VB/partialcache.vb.aspx#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PartialCachingAttribute (int duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PartialCachingAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="duration">A quantidade de tempo, em segundos, um controle de usuário deve permanecer no cache de saída.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.PartialCachingAttribute" /> classe com a duração especificada atribuída ao controle de usuário a ser armazenado em cache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%29> construtor pode ser aplicado a um controle de usuário. No exemplo, o construtor é usado para indicar que o controle de usuário pode ser armazenados em cache e para especificar a duração do cache. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.PartialCachingAttribute> classe.  
+  
+ [!code-csharp[PartialCachingAttribute_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_1/CS/partialcache.cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_1/VB/partialcache.vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PartialCachingAttribute (int duration, string varyByParams, string varyByControls, string varyByCustom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 duration, string varyByParams, string varyByControls, string varyByCustom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PartialCachingAttribute.#ctor(System.Int32,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="duration">A quantidade de tempo, em segundos, em que o controle de usuário é armazenado em cache.</param>
+        <param name="varyByParams">Uma lista separada por ponto-e-vírgula de cadeias de caracteres usadas para variar o cache de saída. Por padrão, essas cadeias de caracteres correspondem a um valor de cadeia de caracteres de consulta enviada com os atributos de método GET ou um parâmetro enviado usando o método POST. Quando esse atributo é definido com vários parâmetros, o cache de saída contém uma versão diferente do documento solicitado para cada parâmetro especificado. Os valores possíveis incluem "none", "*" e qualquer cadeia de caracteres de consulta válida ou o nome do parâmetro de POSTAGEM.</param>
+        <param name="varyByControls">Uma lista separada por ponto-e-vírgula de cadeias de caracteres usadas para variar o cache de saída. Essas cadeias de caracteres representam nomes totalmente qualificados de propriedades em um controle de usuário. Quando esse parâmetro é usado para um controle de usuário, a saída do controle de usuário é variada no cache para cada propriedade de controle de usuário especificada.</param>
+        <param name="varyByCustom">Qualquer texto que representa os requisitos de cache de saída personalizados. Se esse parâmetro receber um valor “navegador”, o cache será variado pelo nome do navegador e as informações sobre a versão principal. Se uma cadeia de caracteres personalizada for inserida, você deverá substituir o método <see cref="M:System.Web.HttpApplication.GetVaryByCustomString(System.Web.HttpContext,System.String)" /> no arquivo Global.asax do aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.PartialCachingAttribute" /> classe, que especifica a duração do cache, qualquer GET e POST valores, nomes de controle e cache requisitos usados para variar o cache de saída personalizada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%2CSystem.String%2CSystem.String%2CSystem.String%29> construtor pode ser aplicado a um controle de usuário. No exemplo, o construtor é usado para indicar que o controle de usuário pode ser armazenados em cache, especifique a duração do cache como 20 segundos e especificar um controle chamado `state` para que a saída de controle de usuário será variada.  
+  
+ [!code-csharp[PartialCachingAttribute_2_Resubmit#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_2_Resubmit/CS/partialcache_1cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_2_Resubmit#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_2_Resubmit/VB/partialcache_1vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PartialCachingAttribute (int duration, string varyByParams, string varyByControls, string varyByCustom, bool shared);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 duration, string varyByParams, string varyByControls, string varyByCustom, bool shared) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PartialCachingAttribute.#ctor(System.Int32,System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="shared" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="duration">A quantidade de tempo, em segundos, em que o controle de usuário é armazenado em cache.</param>
+        <param name="varyByParams">Uma lista separada por ponto-e-vírgula de cadeias de caracteres usadas para variar o cache de saída. Por padrão, essas cadeias de caracteres correspondem a um valor de cadeia de consulta enviado com os atributos do método <see langword="GET" /> ou um parâmetro enviado usando o método <see langword="POST" />. Quando esse atributo é definido com vários parâmetros, o cache de saída contém uma versão diferente do documento solicitado para cada parâmetro especificado. Os valores possíveis incluem “nenhum”, “*” e qualquer cadeia de consulta ou nome de parâmetro <see langword="POST" /> válido.</param>
+        <param name="varyByControls">Uma lista separada por ponto-e-vírgula de cadeias de caracteres usadas para variar o cache de saída. Essas cadeias de caracteres representam nomes totalmente qualificados de propriedades em um controle de usuário. Quando esse parâmetro é usado para um controle de usuário, a saída do controle de usuário é variada no cache para cada propriedade de controle de usuário especificada.</param>
+        <param name="varyByCustom">Qualquer texto que representa os requisitos de cache de saída personalizados. Se esse parâmetro receber um valor “navegador”, o cache será variado pelo nome do navegador e as informações sobre a versão principal. Se uma cadeia de caracteres personalizada for inserida, você deverá substituir o método <see cref="M:System.Web.HttpApplication.GetVaryByCustomString(System.Web.HttpContext,System.String)" /> no arquivo Global.asax do aplicativo.</param>
+        <param name="shared">
+          <see langword="true" /> para indicar que a saída do controle de usuário pode ser compartilhada com várias páginas; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.PartialCachingAttribute" /> classe, especifica a duração do cache, qualquer <see langword="GET" /> e <see langword="POST" /> valores, requisitos de cache usados para variar o cache de saída de nomes de controle personalizado e se o usuário controle a saída pode ser compartilhada com várias páginas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PartialCachingAttribute (int duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, bool shared);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, bool shared) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PartialCachingAttribute.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="sqlDependency" Type="System.String" />
+        <Parameter Name="shared" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="duration">A quantidade de tempo, em segundos, em que o controle de usuário é armazenado em cache.</param>
+        <param name="varyByParams">Uma lista separada por ponto-e-vírgula de cadeias de caracteres usadas para variar o cache de saída. Por padrão, essas cadeias de caracteres correspondem a um valor de cadeia de consulta enviado com os atributos do método <see langword="GET" /> ou um parâmetro enviado usando o método <see langword="POST" />. Quando esse atributo é definido com vários parâmetros, o cache de saída contém uma versão diferente do documento solicitado para cada parâmetro especificado. Os valores possíveis incluem “nenhum”, “*” e qualquer cadeia de consulta ou nome de parâmetro <see langword="POST" /> válido.</param>
+        <param name="varyByControls">Uma lista separada por ponto-e-vírgula de cadeias de caracteres usadas para variar o cache de saída. Essas cadeias de caracteres representam nomes totalmente qualificados de propriedades em um controle de usuário. Quando esse parâmetro é usado para um controle de usuário, a saída do controle de usuário é variada no cache para cada propriedade de controle de usuário especificada.</param>
+        <param name="varyByCustom">Qualquer texto que representa os requisitos de cache de saída personalizados. Se esse parâmetro receber um valor “navegador”, o cache será variado pelo nome do navegador e as informações sobre a versão principal. Se uma cadeia de caracteres personalizada for inserida, você deverá substituir o método <see cref="M:System.Web.HttpApplication.GetVaryByCustomString(System.Web.HttpContext,System.String)" /> no arquivo Global.asax do aplicativo.</param>
+        <param name="sqlDependency">Uma lista delimitada de nomes de banco de dados e nomes de tabela que, quando alteradas, expiram explicitamente uma entrada de cache no cache do ASP.NET. Esses nomes de banco de dados correspondem às dependências de cache do SQL Server identificadas na seção de configuração da Web.</param>
+        <param name="shared">
+          <see langword="true" /> para indicar que a saída do controle de usuário pode ser compartilhada com várias páginas; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.PartialCachingAttribute" />, especificando a duração de cache, os valores <see langword="GET" /> e <see langword="POST" />, os nomes de controle, os requisitos de cache de saída personalizados usados para variar o cache, as dependências de banco de dados e se a saída do controle de usuário pode ser compartilhada com várias páginas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public int Duration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Duration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.Duration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a quantidade de tempo, em segundos, para que os itens armazenados em cache devem permanecer no cache de saída.</summary>
+        <value>A quantidade de tempo, em segundos, um controle de usuário deve permanecer no cache de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%29> construtor pode ser aplicado a um controle de usuário. O atributo indica que o controle de usuário pode ser armazenados em cache e especifica um segundo 20 duração de cache. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.PartialCachingAttribute> classe.  
+  
+ [!code-csharp[PartialCachingAttribute_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_1/CS/partialcache.cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_1/VB/partialcache.vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public string ProviderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.ProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do provedor que é usado para armazenar os dados de cache de saída para o controle associado.</summary>
+        <value>O nome do provedor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir essa propriedade declarativamente ou por meio de um atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="public bool Shared { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Shared" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.Shared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a saída de controle de usuário pode ser compartilhada com várias páginas.</summary>
+        <value>
+          <see langword="true" />Se a saída de controle de usuário pode ser compartilhada entre várias páginas; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir essa propriedade como `true`, armazenados em cache saída de controle de usuário pode ser acessada por várias páginas de Web Forms. Se você não defini-lo `true`, o comportamento padrão é armazenar em cache uma versão de saída do controle de usuário para cada página que contém o controle de usuário. Potencialmente, você pode salvar uma quantidade significativa de memória, permitindo que essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlDependency">
+      <MemberSignature Language="C#" Value="public string SqlDependency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SqlDependency" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.SqlDependency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres delimitada que identifica um ou mais banco de dados e tabela de pares de nomes que o controle de usuário em cache é dependente.</summary>
+        <value>Uma cadeia de caracteres delimitada que identifica um conjunto de nomes de tabela e banco de dados que a entrada de cache de controle de usuário é dependente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PartialCachingAttribute.SqlDependency%2A> cadeia de caracteres identifica os nomes de tabela de acordo com o nome de uma dependência de cache do SQL Server em sua configuração e bancos de dados (normalmente adicionada usando o `sqlcachedependency` elementos de configuração). Se você usar o SQL Server 2005, você pode definir o <xref:System.Web.UI.PartialCachingAttribute.SqlDependency%2A> propriedade para "CommandNotification", que instrui o ASP.NET para criar as dependências de nível de linha para todos os comandos SQL emitidos dentro do contexto da página atual do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByControls">
+      <MemberSignature Language="C#" Value="public string VaryByControls { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByControls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.VaryByControls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de propriedades de controle de usuário que usa o cache de saída para variar o controle de usuário.</summary>
+        <value>A lista de propriedades de controle de usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%2CSystem.String%2CSystem.String%2CSystem.String%29> construtor pode ser aplicado a um controle de usuário. No exemplo, o construtor é usado para indicar que o controle de usuário pode ser armazenados em cache, para especificar a duração do cache como 20 segundos e para especificar um controle chamado `state` para que a saída de controle de usuário será variada.  
+  
+ [!code-csharp[PartialCachingAttribute_2_Resubmit#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_2_Resubmit/CS/partialcache_1cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_2_Resubmit#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_2_Resubmit/VB/partialcache_1vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByCustom">
+      <MemberSignature Language="C#" Value="public string VaryByCustom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByCustom" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.VaryByCustom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de cadeias de caracteres personalizadas que o cache de saída usará para variar o controle de usuário.</summary>
+        <value>A lista de cadeias de caracteres personalizadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você especificar "browser" para essa propriedade, o controle de usuário será variar por tipo de navegador e o número de versão principal. Você também pode usar essa propriedade para estender os valores que varia de cache a resposta de controle de usuário de saída.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%2CSystem.String%2CSystem.String%2CSystem.String%29> construtor pode ser aplicado a um controle de usuário. No exemplo, o construtor é usado para indicar que o controle de usuário pode ser armazenados em cache e para especificar que a entrada do cache é dependente do tipo de navegador e o número de versão principal.  
+  
+ [!code-csharp[PartialCachingAttribute_4#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_4/CS/partialcache_3cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_4#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_4/VB/partialcache_3vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VaryByParams">
+      <MemberSignature Language="C#" Value="public string VaryByParams { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VaryByParams" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PartialCachingAttribute.VaryByParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de cadeia de caracteres de consulta ou formulário <see langword="POST" /> parâmetros que o cache de saída serão usadas para variar o controle de usuário.</summary>
+        <value>A lista de cadeia de caracteres de consulta ou formulário <see langword="POST" /> parâmetros.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.PartialCachingAttribute.%23ctor%28System.Int32%2CSystem.String%2CSystem.String%2CSystem.String%29> construtor pode ser aplicado a um controle de usuário. No exemplo, o construtor é usado para indicar que o controle de usuário pode ser armazenados em cache e especificar o parâmetro que a entrada do cache é dependente.  
+  
+ [!code-csharp[PartialCachingAttribute_3#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PartialCachingAttribute_3/CS/partialcache_2cs.ascx.cs#2)]
+ [!code-vb[PartialCachingAttribute_3#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PartialCachingAttribute_3/VB/partialcache_2vb.ascx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

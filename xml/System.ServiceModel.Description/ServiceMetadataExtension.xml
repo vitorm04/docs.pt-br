@@ -1,0 +1,130 @@
+<Type Name="ServiceMetadataExtension" FullName="System.ServiceModel.Description.ServiceMetadataExtension">
+  <TypeSignature Language="C#" Value="public class ServiceMetadataExtension : System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceMetadataExtension extends System.Object implements class System.ServiceModel.IExtension`1&lt;class System.ServiceModel.ServiceHostBase&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.ServiceMetadataExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a implementação para os protocolos de publicação de metadados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Description.ServiceMetadataExtension> está configurado e usado ao configurar um serviço com o <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>.  
+  
+ Você também pode usar o <xref:System.ServiceModel.Description.ServiceMetadataExtension> classe para obter metadados do serviço em tempo de execução, acessando o <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceMetadataExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceMetadataExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de um <see cref="T:System.ServiceModel.Description.ServiceMetadataExtension" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.MetadataSet Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.MetadataSet Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceMetadataExtension.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.MetadataSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os metadados do serviço em tempo de execução.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Description.MetadataSet" /> objeto que contém metadados do serviço em tempo de execução.  
+  
+ <block subset="none" type="note"><para>  
+ As alterações na coleção retornada são refletidas em solicitações subsequentes para os metadados do serviço.  
+  
+</para></block></value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleWsdl">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescription SingleWsdl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescription SingleWsdl" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Description.ServiceMetadataExtension.SingleWsdl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o WSDL único usado pelo serviço.</summary>
+        <value>O WSDL único usado pelo serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Attach">
+      <MemberSignature Language="C#" Value="void IExtension&lt;ServiceHostBase&gt;.Attach (System.ServiceModel.ServiceHostBase owner);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Attach(class System.ServiceModel.ServiceHostBase owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceMetadataExtension.System#ServiceModel#IExtension&lt;System#ServiceModel#ServiceHostBase&gt;#Attach(System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.ServiceModel.ServiceHostBase" />.</param>
+        <summary>Permite que um objeto participe de comportamento personalizado. Chamado quando o tempo de execução anexa a extensão a uma instância do <see cref="T:System.ServiceModel.ServiceHostBase" /> classe.  Somente para uso interno.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Detach">
+      <MemberSignature Language="C#" Value="void IExtension&lt;ServiceHostBase&gt;.Detach (System.ServiceModel.ServiceHostBase owner);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Detach(class System.ServiceModel.ServiceHostBase owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.ServiceMetadataExtension.System#ServiceModel#IExtension&lt;System#ServiceModel#ServiceHostBase&gt;#Detach(System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.ServiceModel.InstanceContext" />.</param>
+        <summary>Permite que um objeto participe de comportamento personalizado. Chamado quando o tempo de execução Desanexa a extensão de uma instância do <see cref="T:System.ServiceModel.InstanceContext" /> classe.  Somente para uso interno.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

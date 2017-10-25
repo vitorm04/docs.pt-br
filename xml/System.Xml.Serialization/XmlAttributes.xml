@@ -1,0 +1,744 @@
+<Type Name="XmlAttributes" FullName="System.Xml.Serialization.XmlAttributes">
+  <TypeSignature Language="C#" Value="public class XmlAttributes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlAttributes extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlAttributes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de objetos de atributos que controlam como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa e desserializa um objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Criando o <xref:System.Xml.Serialization.XmlAttributes> faz parte de um processo que substitui o padrão de forma a <xref:System.Xml.Serialization.XmlSerializer> serializa instâncias de classe. Por exemplo, suponha que você deseja serializar um objeto que é criado a partir de uma DLL que tem uma fonte acessível. Usando o <xref:System.Xml.Serialization.XmlAttributeOverrides>, você pode aumentar ou controlar como o objeto é serializado.  
+  
+ Os membros de <xref:System.Xml.Serialization.XmlAttributes> classe correspondem diretamente a uma família de classes de atributos que controlam a serialização. Por exemplo, o <xref:System.Xml.Serialization.XmlAttributes.XmlText%2A> propriedade deve ser definida um <xref:System.Xml.Serialization.XmlTextAttribute>, que permite que você substituir a serialização de um campo ou propriedade instruindo o <xref:System.Xml.Serialization.XmlSerializer> para serializar o valor da propriedade como texto XML. Para obter uma lista completa de atributos que controlam a serialização, consulte o <xref:System.Xml.Serialization.XmlSerializer>.  
+  
+ Para obter mais detalhes sobre como usar o <xref:System.Xml.Serialization.XmlAttributeOverrides> com o <xref:System.Xml.Serialization.XmlAttributes> de classe, consulte [como: especificar um nome de elemento alternativo para um fluxo XML](~/docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma instância de uma classe denominada `Orchestra`, que contém um único campo chamado `Instruments` que retorna uma matriz de `Instrument` objetos. Uma segunda classe denominada `Brass` herda o `Instrument` classe. O exemplo cria um <xref:System.Xml.Serialization.XmlAttributes> objeto para substituir o `Instrument` campo--permitindo que o campo aceitar `Brass` objetos – e adiciona o <xref:System.Xml.Serialization.XmlAttributes> objeto para uma instância do <xref:System.Xml.Serialization.XmlAttributeOverrides> classe.  
+  
+ [!code-cpp[Classic XmlAttributes.XmlAttributes Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlAttributes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlAttributes Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlAttributes Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlAttributes Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlAttributes Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlAttributes.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlAttributes" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir serializa uma instância de uma classe denominada `Orchestra`, que contém um único campo chamado `Instruments` que retorna uma matriz de `Instrument` objetos. Uma segunda classe denominada `Brass` herda o `Instrument` classe. O exemplo cria um <xref:System.Xml.Serialization.XmlAttributes> objeto para substituir o `Instrument` campo--permitindo que o campo aceitar `Brass` objetos – e adiciona o <xref:System.Xml.Serialization.XmlAttributes> objeto para uma instância do <xref:System.Xml.Serialization.XmlAttributeOverrides> classe.  
+  
+ [!code-cpp[Classic XmlAttributes.XmlAttributes Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlAttributes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlAttributes Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlAttributes Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlAttributes Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlAttributes Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlAttributes (System.Reflection.ICustomAttributeProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.ICustomAttributeProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlAttributes.#ctor(System.Reflection.ICustomAttributeProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Reflection.ICustomAttributeProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Uma classe que pode fornecer implementações alternativas dos atributos que controlam a serialização de XML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.XmlAttributes" /> classe e personaliza como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa e desserializa um objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o construtor padrão para o <xref:System.Xml.Serialization.XmlAttributes> classe, em vez de usar este construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlAnyAttribute">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlAnyAttributeAttribute XmlAnyAttribute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlAnyAttributeAttribute XmlAnyAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlAnyAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlAnyAttributeAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a propriedade <see cref="T:System.Xml.Serialization.XmlAnyAttributeAttribute" /> a ser substituída.</summary>
+        <value>O <see cref="T:System.Xml.Serialization.XmlAnyAttributeAttribute" /> a ser substituído.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> pode ser aplicado a um membro que retorna uma matriz de <xref:System.Xml.XmlAttribute> objetos na desserialização. Isso permite que o <xref:System.Xml.Serialization.XmlSerializer> para desserializar os atributos que não têm um membro correspondente no objeto que está sendo desserializado –, portanto, esses elementos são "desconhecidos" para o <xref:System.Xml.Serialization.XmlSerializer>. Isso é útil quando o fluxo XML foi alterado por um serviço Web XML, ou quando se sabe que dados aleatórios serão sempre incluídos com o fluxo XML.  
+  
+ O <xref:System.Xml.Serialization.XmlAttributes.XmlAnyAttribute%2A> propriedade permite que você substitua a serialização de um membro ao qual o <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> foi aplicada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlAnyElements">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlAnyElementAttributes XmlAnyElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlAnyElementAttributes XmlAnyElements" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlAnyElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlAnyElementAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de objetos <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" /> a serem substituídos.</summary>
+        <value>Um objeto <see cref="T:System.Xml.Serialization.XmlAnyElementAttributes" /> que representa a coleção de objetos <see cref="T:System.Xml.Serialization.XmlAnyElementAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlAnyElementAttribute> pode ser aplicado a um membro que retorna uma matriz de <xref:System.Xml.XmlElement> objetos na desserialização. Isso permite que o <xref:System.Xml.Serialization.XmlSerializer> para desserializar os elementos que não têm um membro correspondente no objeto que está sendo desserializado –, portanto, esses elementos são "desconhecidos" para o <xref:System.Xml.Serialization.XmlSerializer>. Isso é útil quando o fluxo XML foi alterado por um serviço Web XML, ou quando se sabe que dados aleatórios serão sempre incluídos com o fluxo XML.  
+  
+ O <xref:System.Xml.Serialization.XmlAttributes.XmlAnyElements%2A> propriedade permite que você substitua a serialização de um membro para funcionar como um membro ao qual o <xref:System.Xml.Serialization.XmlAnyElementAttribute> foi aplicada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo <xref:System.Xml.Serialization.XmlAnyElementAttribute> e o adiciona à coleção de objetos acessados por meio de <xref:System.Xml.Serialization.XmlAttributes.XmlAnyElements%2A> propriedade. O <xref:System.Xml.Serialization.XmlAttributes> objeto, em seguida, é adicionado a um <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto que é usado para criar um <xref:System.Xml.Serialization.XmlSerializer> objeto. O <xref:System.Xml.Serialization.XmlSerializer> é usado para serializar ou desserializar um objeto. Para ver o efeito de usar o <xref:System.Xml.Serialization.XmlAnyElementAttributes> propriedade, criar um documento XML chamado "UnknownElements.xml" executando o `SerializeObject` método o `Main` método. Edite o documento resultante para incluir outros elementos (desconhecidos). Comente o `SerializeObject` chamar o `Main` método, e remova a chamada para o `DeserializeObject` método, que imprime o nome e o valor de qualquer elemento XML desconhecido.  
+  
+ [!code-cpp[XmlAttributes.XmlAnyElements#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlAttributes.XmlAnyElements/CPP/xmlanyover.cpp#1)]
+ [!code-csharp[XmlAttributes.XmlAnyElements#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlAttributes.XmlAnyElements/CS/xmlanyover.cs#1)]
+ [!code-vb[XmlAttributes.XmlAnyElements#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlAttributes.XmlAnyElements/VB/xmlanyover.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlArray">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlArrayAttribute XmlArray { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlArrayAttribute XmlArray" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlArray" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlArrayAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que especifica como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa um campo público ou uma propriedade de leitura/gravação que retorna uma matriz.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlArrayAttribute" /> que especifica como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa um campo público ou uma propriedade de leitura/gravação que retorna uma matriz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há duas maneiras em que um campo público ou propriedade pública de leitura/gravação que retorna uma matriz é serializada pelo <xref:System.Xml.Serialization.XmlSerializer>: a serialização padrão e a serialização controlada.  
+  
+ Na serialização padrão, nenhum atributo for aplicado ao membro. Quando serializado, a matriz é serializada como uma sequência aninhada de elementos XML com o nome do elemento XML da sequência aninhada obtido o nome do membro.  
+  
+ Para controlar a serialização mais precisamente, aplique um <xref:System.Xml.Serialization.XmlArrayAttribute> para o campo ou propriedade. Por exemplo, você pode alterar o nome do elemento XML gerado do padrão para um nome diferente, definindo o <xref:System.Xml.Serialization.XmlArrayAttribute.ElementName%2A> propriedade para um novo valor.  
+  
+ O <xref:System.Xml.Serialization.XmlAttributes.XmlArray%2A> propriedade permite que você substitua a serialização padrão, bem como a serialização controlada aplicando um <xref:System.Xml.Serialization.XmlArrayAttribute> ao membro. Por exemplo, você pode alterar o nome do elemento XML gerado do padrão (o identificador de membro) para um novo valor. Além disso, se você aplicar uma <xref:System.Xml.Serialization.XmlArrayAttribute> para um membro, ele é substituído por qualquer <xref:System.Xml.Serialization.XmlArrayAttribute> que é atribuído para o <xref:System.Xml.Serialization.XmlAttributes.XmlArray%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma classe que contém um campo chamado `Members` que retorna uma matriz de objetos. O <xref:System.Xml.Serialization.XmlArrayAttribute> é usado para substituir a serialização do campo e renomeie o nome do elemento para `Staff`.  
+  
+ [!code-cpp[Classic XmlAttributes.XmlArray Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlArray Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlArray Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlArray Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlArray Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlArray Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlArrayItems">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlArrayItemAttributes XmlArrayItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlArrayItemAttributes XmlArrayItems" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlArrayItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlArrayItemAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de objetos que especificam como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa os itens inseridos em uma matriz retornada por um campo público ou uma propriedade de leitura/gravação.</summary>
+        <value>Um objeto <see cref="T:System.Xml.Serialization.XmlArrayItemAttributes" /> que contém uma coleção de objetos <see cref="T:System.Xml.Serialization.XmlArrayItemAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlAttributes.XmlArrayItems%2A> propriedade permite que você especifique os tipos derivados que podem ser inseridos em uma matriz retornada por um campo público ou propriedade pública de leitura/gravação. Para cada novo tipo que você deseja que o campo ou propriedade para aceitar, crie um <xref:System.Xml.Serialization.XmlArrayItemAttribute> objeto e <xref:System.Xml.Serialization.XmlArrayItemAttributes.Add%2A> para o <xref:System.Xml.Serialization.XmlArrayItemAttributes>) retornado pelo <xref:System.Xml.Serialization.XmlAttributes.XmlArrayItems%2A> propriedade. (O novo tipo deve ser derivado do tipo já foi aceito pelo campo ou propriedade.) <xref:System.Xml.Serialization.XmlAttributeOverrides.Add%2A> o <xref:System.Xml.Serialization.XmlAttributes> o objeto para um <xref:System.Xml.Serialization.XmlAttributeOverrides> de objeto e especificar o tipo do objeto que contém o campo ou propriedade e o nome do campo ou propriedade. Construir um <xref:System.Xml.Serialization.XmlSerializer> com o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto antes de chamar <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> ou <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma classe que contém um campo chamado `Members` que retorna uma matriz de objetos. Dois <xref:System.Xml.Serialization.XmlArrayItemAttribute> objetos são criados para permitir que o campo aceitar os objetos que derivam da classe base chamado `Member`. Cada objeto é adicionado para o <xref:System.Xml.Serialization.XmlAttributes> por meio de <xref:System.Xml.Serialization.XmlAttributes.XmlArrayItems%2A> propriedade.  
+  
+ [!code-cpp[Classic XmlAttributes.XmlArrayItems Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlArrayItems Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlArrayItems Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlArrayItems Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlArrayItems Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlArrayItems Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlAttribute">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlAttributeAttribute XmlAttribute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlAttributeAttribute XmlAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlAttributeAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que especifica como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa um campo público ou uma propriedade de leitura/gravação pública como um atributo XML.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlAttributeAttribute" /> que controla a serialização de um campo público ou de uma propriedade de leitura/gravação como um atributo XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, se nenhum atributo for aplicado a um campo público ou propriedade pública de leitura/gravação, ele é serializado como um elemento XML. Você também pode instruir o <xref:System.Xml.Serialization.XmlSerializer> para gerar um atributo XML aplicando um <xref:System.Xml.Serialization.XmlAttributeAttribute> para o campo ou propriedade.  
+  
+ O <xref:System.Xml.Serialization.XmlAttributes.XmlAttribute%2A> propriedade permite que você substitua a serialização padrão, bem como a serialização controlada aplicando um <xref:System.Xml.Serialization.XmlAttributeAttribute> ao membro. Para fazer isso, crie um <xref:System.Xml.Serialization.XmlAttributeAttribute> e defina suas propriedades (como <xref:System.Xml.Serialization.XmlAttributeAttribute.AttributeName%2A>). Atribuir o novo objeto para o <xref:System.Xml.Serialization.XmlAttributes.XmlAttribute%2A> propriedade de um <xref:System.Xml.Serialization.XmlAttributes> objeto. Adicionar o <xref:System.Xml.Serialization.XmlAttributes> o objeto para um <xref:System.Xml.Serialization.XmlAttributeOverrides> de objeto e especificar o tipo do objeto que contém o campo ou propriedade e o nome do campo ou propriedade. Por fim, crie um <xref:System.Xml.Serialization.XmlSerializer> usando o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto e a chamada a <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> ou <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma classe denominada `Group` que contém uma propriedade chamada `GroupName`; o `GroupName` propriedade é serializada como um atributo XML. O exemplo cria um <xref:System.Xml.Serialization.XmlAttributeOverrides> e um <xref:System.Xml.Serialization.XmlAttributes> objeto para substituir a serialização padrão do campo. O exemplo cria um <xref:System.Xml.Serialization.XmlAttributeAttribute> de especificamente substituir a propriedade e o objeto é definido como o <xref:System.Xml.Serialization.XmlAttributes.XmlAttribute%2A> propriedade o <xref:System.Xml.Serialization.XmlAttributes> objeto é adicionado ao <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto com o nome do membro substituído especificado. Por fim, um <xref:System.Xml.Serialization.XmlSerializer> é criada e retornada usando o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto.  
+  
+ [!code-cpp[Classic XmlAttributes.XmlAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlChoiceIdentifier">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlChoiceIdentifierAttribute XmlChoiceIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlChoiceIdentifierAttribute XmlChoiceIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlChoiceIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlChoiceIdentifierAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que permite que você faça a distinção entre um conjunto de opções.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlChoiceIdentifierAttribute" /> que pode ser aplicado a um membro de classe é serializado como um <see langword="xsi:choice" /> elemento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlDefaultValue">
+      <MemberSignature Language="C#" Value="public object XmlDefaultValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object XmlDefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlDefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor padrão de um atributo ou elemento XML.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o valor padrão de um atributo ou elemento XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar o valor padrão de um elemento XML ou atributo XML aplicando um <xref:System.ComponentModel.DefaultValueAttribute> a um membro. Para examinar o resultado da aplicação de valor, compilar o aplicativo em uma DLL ou executável e passar o arquivo resultante como um argumento para a ferramenta de definição de esquema XML (XSD.exe). No documento de esquema XML, um valor padrão é atribuído para o `default` atributo. No exemplo a seguir, o padrão para o \<Animal > elemento é "Cachorros".  
+  
+```  
+<?xml version="1.0"?>  
+ <schema attributeFormDefault="qualified"   
+ elementFormDefault="qualified" targetNamespace=""   
+ xmlns="http://www.w3.org/2000/10/XMLSchema">  
+   <element name="Pets" nullable="true" type="Pets"/>  
+   <complexType name="Pets">  
+     <sequence>  
+       <element default="Dogs" name="Animal" nullable="true"   
+        type="string" minOccurs="0"/>  
+     </sequence>  
+   </complexType>  
+ </schema>  
+```  
+  
+ Para substituir o valor padrão, crie um <xref:System.Object> e atribuí-la para o <xref:System.Xml.Serialization.XmlAttributes.XmlDefaultValue%2A>.  
+  
+ Se o valor atribuído a um campo ou propriedade é igual ao valor padrão para esse campo ou propriedade, o <xref:System.Xml.Serialization.XmlSerializer> não serializar o valor para a instância XML. Isso ocorre porque o valor atribuído pode ser recuperado do esquema XML. Em outras palavras, a definição de um campo ou propriedade com seu próprio valor padrão é equivalente de não configurá-la. Da mesma forma, se nenhum valor for definido para o campo ou propriedade, o <xref:System.Xml.Serialization.XmlSerializer> usa o valor padrão é encontrado no esquema. Em ambos os casos, (definindo a propriedade como seu padrão ou não configurá-la), a instância de documento XML não contém qualquer valor para a propriedade.  
+  
+ Você pode usar os construtores de classe em vez do esquema para atribuir os valores padrão. Se você estiver usando Xsd.exe para gerar uma classe de esquemas, você pode comentar ou remover todos os atributos [System.ComponentModel.DefaultValueAttribute("myFieldName")] dos arquivos de classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma classe chamada `Pet` que contém um campo que tem um valor padrão definido como "Dog". No entanto, o exemplo também cria um <xref:System.Xml.Serialization.XmlAttributes> objeto e define seu <xref:System.Xml.Serialization.XmlAttributes.XmlDefaultValue%2A> propriedade para um novo valor padrão ("Cat"). Isso substitui o valor padrão original. Portanto, se o valor do campo é definido como "Cat", o <xref:System.Xml.Serialization.XmlSerializer> tratará como o valor padrão e não serializá-lo. Se ele for definido como qualquer outro valor, o <xref:System.Xml.Serialization.XmlSerializer> serializa o valor.  
+  
+ [!code-cpp[Classic XmlAttributes.XmlDefaultValue Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlDefaultValue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlDefaultValue Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlDefaultValue Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlDefaultValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlDefaultValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlElements">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlElementAttributes XmlElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlElementAttributes XmlElements" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlElementAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos que especifica como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa um campo público ou uma propriedade de leitura/gravação como um elemento XML.</summary>
+        <value>Uma <see cref="T:System.Xml.Serialization.XmlElementAttributes" /> que contém uma coleção de objetos <see cref="T:System.Xml.Serialization.XmlElementAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para cada membro substituído é serializado como um elemento XML, você deve adicionar um novo <xref:System.Xml.Serialization.XmlElementAttribute> para um <xref:System.Xml.Serialization.XmlElementAttributes> chamando o <xref:System.Xml.Serialization.XmlElementAttributes.Add%2A> método. Por padrão, um <xref:System.Xml.Serialization.XmlElementAttributes> objeto é criado e atribuído para o <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa o `Transportation` classe, que contém um único campo chamado `Vehicles` que retorna um <xref:System.Collections.ArrayList>. O exemplo aplica dois <xref:System.Xml.Serialization.XmlElementAttribute> atributos para o `Vehicles` campo. O exemplo cria dois <xref:System.Xml.Serialization.XmlElementAttribute> objetos e adiciona-os para o <xref:System.Xml.Serialization.XmlElementAttributes> coleção de um <xref:System.Xml.Serialization.XmlAttributes> objeto. Para permitir que a matriz aceitar diferentes tipos de objeto, o <xref:System.Xml.Serialization.XmlAttributes> objeto é adicionado para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto.  
+  
+ [!code-cpp[Classic XmlAttributes.XmlElements Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlElements Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlElements Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlElements Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlElements Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlElements Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlEnum">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlEnumAttribute XmlEnum { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlEnumAttribute XmlEnum" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlEnum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlEnumAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que especifica como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa um membro de enumeração.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlEnumAttribute" /> que especifica como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa um membro de enumeração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para cada identificador que você deseja substituir, você deve criar um <xref:System.Xml.Serialization.XmlAttributes> do objeto e defina o <xref:System.Xml.Serialization.XmlAttributes.XmlEnum%2A> propriedade para um <xref:System.Xml.Serialization.XmlEnumAttribute> que substitui o identificador. Adicionar o <xref:System.Xml.Serialization.XmlAttributes> o objeto para o <xref:System.Xml.Serialization.XmlAttributeOverrides> do objeto e especificar os dois o <xref:System.Type> da classe que contém a enumeração e o nome de membro substituído.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa duas classes chamadas `Food` e `FoodType`. O `FoodType` classe contém duas enumerações que são substituídas e, para cada tipo de enumeração, o exemplo cria um <xref:System.Xml.Serialization.XmlEnumAttribute> que ele atribui ao objeto de <xref:System.Xml.Serialization.XmlAttributes.XmlEnum%2A> propriedade de um <xref:System.Xml.Serialization.XmlAttributes> objeto. O exemplo adiciona o <xref:System.Xml.Serialization.XmlAttributes> o objeto para um <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto, que é usado para criar um <xref:System.Xml.Serialization.XmlSerializer>.  
+  
+ [!code-cpp[Classic XmlAttributes.XmlEnum Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlEnum Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlEnum Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlEnum Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlEnum Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlEnum Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlIgnore">
+      <MemberSignature Language="C#" Value="public bool XmlIgnore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool XmlIgnore" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlIgnore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa ou não um campo público ou uma propriedade de leitura/gravação pública.</summary>
+        <value>
+          <see langword="true" /> se o campo ou propriedade não for serializada por <see cref="T:System.Xml.Serialization.XmlSerializer" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, todos os campos públicos e as propriedades públicas de leitura/gravação são serializadas pelo <xref:System.Xml.Serialization.XmlSerializer>. Ou seja, o valor de cada campo público ou propriedade é mantido como um elemento XML ou atributo XML em uma instância de documento XML.  
+  
+ Para substituir a serialização padrão de um campo ou propriedade, crie um <xref:System.Xml.Serialization.XmlAttributes> do objeto e defina seu <xref:System.Xml.Serialization.XmlAttributes.XmlIgnore%2A> propriedade `true`. <xref:System.Xml.Serialization.XmlAttributeOverrides.Add%2A>o objeto para um <xref:System.Xml.Serialization.XmlAttributeOverrides> de objeto e especificar o tipo do objeto que contém o campo ou propriedade para ignorar e o nome do campo ou propriedade para ignorar.  
+  
+ Se um <xref:System.Xml.Serialization.XmlIgnoreAttribute> é aplicado a um campo ou propriedade, campo ou propriedade é ignorada. No entanto, você pode substituir esse comportamento, criando um <xref:System.Xml.Serialization.XmlAttributes> objeto, definindo seu <xref:System.Xml.Serialization.XmlAttributes.XmlIgnore%2A> propriedade `false`, adicioná-lo para um <xref:System.Xml.Serialization.XmlAttributeOverrides> Especifica o tipo do objeto que contém o campo ou propriedade e o nome do campo ou propriedade de objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma classe denominada `Group`, que contém um membro chamado `Comment` para que o <xref:System.Xml.Serialization.XmlIgnoreAttribute> é aplicada. O exemplo cria um <xref:System.Xml.Serialization.XmlAttributes> objeto e define o <xref:System.Xml.Serialization.XmlAttributes.XmlIgnore%2A> propriedade `false`, assim, substituindo o <xref:System.Xml.Serialization.XmlIgnoreAttribute>.  
+  
+ [!code-cpp[Classic XmlAttributes.XmlIgnore Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlIgnore Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlIgnore Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlIgnore Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlIgnore Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlIgnore Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xmlns">
+      <MemberSignature Language="C#" Value="public bool Xmlns { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Xmlns" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.Xmlns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se é necessário manter todas as declarações de namespace quando um objeto que contém um membro que retorna um objeto <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> é substituído.</summary>
+        <value>
+          <see langword="true" /> se as declarações de namespace precisarem ser mantidas; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir contém uma classe denominada `Student`. A classe contém um membro chamado `MyNamespaces` que retorna um <xref:System.Xml.Serialization.XmlSerializerNamespaces> objeto. O exemplo cria um <xref:System.Xml.Serialization.XmlAttributes> que é adicionado a uma instância do objeto de <xref:System.Xml.Serialization.XmlAttributeOverrides> classe. O <xref:System.Xml.Serialization.XmlAttributes.Xmlns%2A> está definida como `true`, que instrui o <xref:System.Xml.Serialization.XmlSerializer> para preservar os namespaces quando a serialização do `Student` objeto é substituído.  
+  
+ [!code-cpp[XmlAttributes.Xmlns property example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlAttributes.Xmlns property example/CPP/xmlns.cpp#1)]
+ [!code-csharp[XmlAttributes.Xmlns property example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlAttributes.Xmlns property example/CS/xmlns.cs#1)]
+ [!code-vb[XmlAttributes.Xmlns property example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlAttributes.Xmlns property example/VB/xmlns.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlRoot">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlRootAttribute XmlRoot { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlRootAttribute XmlRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlRootAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que especifica como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa uma classe como um elemento raiz XML.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlRootAttribute" /> que substitui uma classe atribuída como um elemento raiz XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto, um <xref:System.Xml.Serialization.XmlAttributes> objeto e um <xref:System.Xml.Serialization.XmlRootAttribute> objeto. O exemplo atribui o <xref:System.Xml.Serialization.XmlRootAttribute> para o <xref:System.Xml.Serialization.XmlAttributes.XmlRoot%2A> propriedade do <xref:System.Xml.Serialization.XmlAttributes> e o adiciona a <xref:System.Xml.Serialization.XmlAttributes> o objeto para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto. Por fim, o exemplo obtém o <xref:System.Xml.Serialization.XmlAttributes> objeto passando o <xref:System.Type> da classe serializada para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto. (Neste exemplo, o <xref:System.Type> é `Group`.)  
+  
+ [!code-cpp[Classic XmlAttributes.XmlRoot Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlRoot Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlRoot Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlRoot Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlRoot Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlRoot Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlText">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTextAttribute XmlText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlTextAttribute XmlText" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTextAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que instrui o <see cref="T:System.Xml.Serialization.XmlSerializer" /> para serializar um campo público ou propriedade de leitura/gravação pública como texto XML.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlTextAttribute" /> que substitui a serialização padrão de uma propriedade pública ou campo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, um campo público ou propriedade pública de leitura/gravação é serializada como um elemento XML de <xref:System.Xml.Serialization.XmlSerializer>. No entanto, ele pode forçar o campo ou propriedade a ser serializado como texto XML aplicando um <xref:System.Xml.Serialization.XmlTextAttribute> para o campo ou propriedade.  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlTextAttribute> não pode ser aplicado a um campo ou propriedade que retorna uma matriz.  
+  
+ Para substituir a serialização padrão de um campo ou propriedade (que não retorna uma matriz), crie um <xref:System.Xml.Serialization.XmlTextAttribute> e atribuí-la para o <xref:System.Xml.Serialization.XmlAttributes.XmlText%2A> propriedade de um <xref:System.Xml.Serialization.XmlAttributes> objeto. Adicionar o <xref:System.Xml.Serialization.XmlAttributes> o objeto para um <xref:System.Xml.Serialization.XmlAttributeOverrides> de objeto e especificar o tipo do objeto que contém a propriedade ou campo substituído e o nome do campo substituído ou propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa a classe denominada `Group`, que contém um campo chamado `Comment`. Para substituir o padrão de forma a <xref:System.Xml.Serialization.XmlSerializer> serializa o campo, o exemplo cria um <xref:System.Xml.Serialization.XmlAttributeOverrides> e um <xref:System.Xml.Serialization.XmlAttributes> objeto. O exemplo cria um <xref:System.Xml.Serialization.XmlTextAttribute> objeto, que atribui para a <xref:System.Xml.Serialization.XmlAttributes.XmlText%2A> propriedade e adiciona o <xref:System.Xml.Serialization.XmlAttributes> objeto (com o nome do campo a ser serializado como texto XML) para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto. Por fim o exemplo cria um <xref:System.Xml.Serialization.XmlSerializer> usando o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto.  
+  
+ [!code-cpp[Classic XmlAttributes.XmlText Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlText Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlText Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlText Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlText Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlText Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlType">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlTypeAttribute XmlType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlTypeAttribute XmlType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributes.XmlType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlTypeAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que especifica como o <see cref="T:System.Xml.Serialization.XmlSerializer" /> serializa uma classe à qual o <see cref="T:System.Xml.Serialization.XmlTypeAttribute" /> foi aplicado.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlTypeAttribute" /> que substitui um <see cref="T:System.Xml.Serialization.XmlTypeAttribute" /> aplicado a uma declaração de classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlTypeAttribute> podem ser usadas para controlar como um tipo é serializado pelo <xref:System.Xml.Serialization.XmlSerializer>. Por exemplo, por padrão, quando um tipo é serializado, o <xref:System.Xml.Serialization.XmlSerializer> usa o nome de classe como o nome do elemento XML. Criando um <xref:System.Xml.Serialization.XmlTypeAttribute>, a definição de <xref:System.Xml.Serialization.XmlAttributes.XmlType%2A> propriedade e criar um <xref:System.Xml.Serialization.XmlAttributeOverrides> do objeto, você pode alterar o nome do elemento XML.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.Serialization.XmlTypeAttribute> de objeto e atribui-lo para o <xref:System.Xml.Serialization.XmlAttributes.XmlType%2A> propriedade de um <xref:System.Xml.Serialization.XmlAttributes> objeto.  
+  
+ [!code-cpp[Classic XmlAttributes.XmlType Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributes.XmlType Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributes.XmlType Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributes.XmlType Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributes.XmlType Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributes.XmlType Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

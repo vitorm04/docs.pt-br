@@ -1,0 +1,931 @@
+<Type Name="ActivityPreviewDesigner" FullName="System.Workflow.ComponentModel.Design.ActivityPreviewDesigner">
+  <TypeSignature Language="C#" Value="public class ActivityPreviewDesigner : System.Workflow.ComponentModel.Design.SequentialActivityDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityPreviewDesigner extends System.Workflow.ComponentModel.Design.SequentialActivityDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Design.SequentialActivityDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.ComponentModel.Design.ActivityDesignerTheme(typeof(System.Workflow.ComponentModel.Design.ActivityPreviewDesignerTheme))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Exibe uma coleção de designers de atividade filho em uma faixa de visualização e, quando um designer filho é selecionado na faixa de visualização, exibe o designer de atividade selecionada no modo de visualização ou editar em uma superfície de design do fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>é um designer de atividades sequenciais que exibe todos os seus criadores de atividade filho em uma faixa que aparece na parte superior de sua superfície de design. Quando um dos designers filho é selecionado, sua representação é exibida em uma janela de visualização que o designer de atividade de visualização hospeda abaixo a faixa. O <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner> tem um modo de visualização e um modo de edição. Modo de visualização permite que o usuário exibir a representação inteira do designer selecionado sem fazer rolagem; No entanto, o modo de visualização não permitir ao usuário modificar o designer de atividade selecionada. Modo de edição permite que o usuário modifique o designer de atividade selecionada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityPreviewDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessibilityObject">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject AccessibilityObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AccessibleObject AccessibilityObject" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.AccessibilityObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Forms.AccessibleObject" /> que permite que o designer ajustar sua interface de usuário para usuários com deficiências.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.AccessibleObject" /> que permite que o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> para ajustar sua interface de usuário para usuários com deficiências.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor inicial de <xref:System.Windows.Forms.AccessibleObject> é uma referência nula (`Nothing` no Visual Basic), o <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner> cria um <xref:System.Windows.Forms.AccessibleObject>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainedDesigners">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Design.ActivityDesigner&gt; ContainedDesigners { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Workflow.ComponentModel.Design.ActivityDesigner&gt; ContainedDesigners" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.ContainedDesigners" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Design.ActivityDesigner&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de designers de atividade que são exibidos pelo designer de atividade de visualização.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> coleção somente leitura que contém os designers exibidos pelo <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentDropTarget">
+      <MemberSignature Language="C#" Value="protected override int CurrentDropTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentDropTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.CurrentDropTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice do destino de soltar atual na matriz de destinos de soltar retornado por <see cref="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.GetDropTargets(System.Drawing.Point)" />.</summary>
+        <value>Um inteiro que representa o índice do destino de soltar atual para o designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.CurrentDropTarget%2A> operação set define o destino na faixa de visualização que aparece na parte superior do <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />para liberar os recursos gerenciados; Caso contrário, <see langword="false" />.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureVisibleContainedDesigner">
+      <MemberSignature Language="C#" Value="public override void EnsureVisibleContainedDesigner (System.Workflow.ComponentModel.Design.ActivityDesigner containedDesigner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EnsureVisibleContainedDesigner(class System.Workflow.ComponentModel.Design.ActivityDesigner containedDesigner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.EnsureVisibleContainedDesigner(System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="containedDesigner" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="containedDesigner">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> para o qual garantir visibilidade na superfície de design de fluxo de trabalho.</param>
+        <summary>Garante que o designer de atividade especificada está visível na superfície de design de fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.EnsureVisibleContainedDesigner%2A>verifica se todos os designers de atividade no <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>, e seus filhos são exibidos na faixa de visualização na parte superior do designer.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="containedDesigner" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstSelectableObject">
+      <MemberSignature Language="C#" Value="public override object FirstSelectableObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object FirstSelectableObject" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.FirstSelectableObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o primeiro objeto selecionável na ordem de navegação a <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que é o primeiro objeto selecionável na ordem de navegação do designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.Expanded%2A> e <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.IsVisible%2A> não contêm referências nulas (`Nothing` no Visual Basic), <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.FirstSelectableObject%2A> retornará o valor da <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.Activity%2A> propriedade o <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.PreviewedDesigner%2A>. Se o <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.Activity%2A> propriedade contém uma referência nula (`Nothing`), <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.FirstSelectableObject%2A> retornará o <xref:System.Workflow.ComponentModel.Activity> associada com o designer primeiro no <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.ContainedDesigners%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConnectors">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle[] GetConnectors ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Drawing.Rectangle[] GetConnectors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.GetConnectors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma matriz de retângulos que associado conectores do designer de atividade.</summary>
+        <returns>Um <see cref="T:System.Drawing.Rectangle" /> matriz que define os limites de todos os conectores no <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.GetConnectors%2A>Retorna uma matriz vazia se ocorrerem uma ou mais das seguintes condições:  
+  
+-   O <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner> não é o designer ativo na superfície de design de fluxo de trabalho.  
+  
+-   O <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner> não contém qualquer designer de atividade filho.  
+  
+-   O <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner> não estiver expandida na superfície de design de fluxo de trabalho.  
+  
+-   <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.ShowPreview%2A> é definido como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDropTargets">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Rectangle[] GetDropTargets (System.Drawing.Point dropPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Rectangle[] GetDropTargets(valuetype System.Drawing.Point dropPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.GetDropTargets(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dropPoint" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="dropPoint">O <see cref="T:System.Drawing.Point" /> que define as coordenadas x e y para o local de destino.</param>
+        <summary>Retorna uma matriz de retângulos que representam os locais de destino válido dentro do <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Rectangle" /> matriz que representa os locais de destino válido dentro do <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `dropPoint` está no <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner> faixa de visualização, <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.GetDropTargets%2A> retorna os destinos possíveis drop na faixa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextSelectableObject">
+      <MemberSignature Language="C#" Value="public override object GetNextSelectableObject (object obj, System.Workflow.ComponentModel.Design.DesignerNavigationDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetNextSelectableObject(object obj, valuetype System.Workflow.ComponentModel.Design.DesignerNavigationDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.GetNextSelectableObject(System.Object,System.Workflow.ComponentModel.Design.DesignerNavigationDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="direction" Type="System.Workflow.ComponentModel.Design.DesignerNavigationDirection" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto atual a ordem da navegação.</param>
+        <param name="direction">O <see cref="T:System.Workflow.ComponentModel.Design.DesignerNavigationDirection" /> valor de enumeração que especifica a direção na qual designer navegação ocorre.</param>
+        <summary>Retorna o primeiro objeto selecionável que segue o objeto especificado na ordem de navegação do atual <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <returns>O primeiro selecionável <see cref="T:System.Object" /> seguir <paramref name="obj" /> na ordem de navegação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Desde que os usuários só podem navegar horizontalmente no painel de visualização do <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>, <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.GetNextSelectableObject%2A> reconhece apenas <xref:System.Workflow.ComponentModel.Design.DesignerNavigationDirection.Left> e <xref:System.Workflow.ComponentModel.Design.DesignerNavigationDirection.Right>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Glyphs">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection Glyphs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection Glyphs" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.Glyphs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura de glifos que estão associados a <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.Design.DesignerGlyph" /> coleção somente leitura que contém os glifos associados a <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.Glyphs%2A>contém a coleção de glifos para exibir na faixa de visualização na parte superior do <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpText">
+      <MemberSignature Language="C#" Value="protected override string HelpText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpText" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.HelpText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto a ser exibido quando o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> contém sem outros designers de atividade.</summary>
+        <value>Uma cadeia de caracteres que contém o texto a ser exibido na superfície do designer</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.HelpText%2A> operação adiciona texto para a faixa de visualização na parte superior a <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTest">
+      <MemberSignature Language="C#" Value="public override System.Workflow.ComponentModel.Design.HitTestInfo HitTest (System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Workflow.ComponentModel.Design.HitTestInfo HitTest(valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.HitTest(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.HitTestInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">O <see cref="T:System.Drawing.Point" /> que contém as coordenadas na superfície de design de fluxo de trabalho do qual coletar informações.</param>
+        <summary>Retorna informações sobre o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> em coordenadas especificadas na superfície de design de fluxo de trabalho.</summary>
+        <returns>Um <see cref="T:System.Workflow.ComponentModel.Design.HitTestInfo" /> que contém informações sobre o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> em coordenadas especificadas</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize (System.Workflow.ComponentModel.Activity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Initialize(class System.Workflow.ComponentModel.Activity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.Initialize(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activity">O <see cref="T:System.Workflow.ComponentModel.Activity" /> para o qual inicializar o designer.</param>
+        <summary>Inicializa o designer usado pela atividade especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso configura o escuta o evento de alteração de seleção para o designer de atividade associado `activity`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContainedDesignerVisible">
+      <MemberSignature Language="C#" Value="public override bool IsContainedDesignerVisible (System.Workflow.ComponentModel.Design.ActivityDesigner containedDesigner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsContainedDesignerVisible(class System.Workflow.ComponentModel.Design.ActivityDesigner containedDesigner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.IsContainedDesignerVisible(System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="containedDesigner" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="containedDesigner">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> a ser verificado.</param>
+        <summary>Retorna um valor que indica se o designer de atividade especificada está visível no <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="containedDesigner" /> estiver visível; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.ShowPreview%2A> é `true` e a janela de visualização é definida como modo de visualização <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.IsContainedDesignerVisible%2A> retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="containedDesigner" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LastSelectableObject">
+      <MemberSignature Language="C#" Value="public override object LastSelectableObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object LastSelectableObject" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.LastSelectableObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o último objeto selecionável na ordem de navegação a <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <value>O <see cref="T:System.Object" /> que é o último objeto selecionável na ordem de navegação do designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.Expanded%2A> e <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.IsVisible%2A> não contêm referências nulas (`Nothing` no Visual Basic), <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.LastSelectableObject%2A> retorna o valor da <xref:System.Workflow.ComponentModel.Design.ActivityDesigner.Activity%2A> propriedade o <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.PreviewedDesigner%2A>. Se o <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.PreviewedDesigner%2A> contém uma referência nula (`Nothing` no Visual Basic), <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.LastSelectableObject%2A> retorna o <xref:System.Workflow.ComponentModel.Activity> associados com o designer na última o <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.ContainedDesigners%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (System.IO.BinaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(class System.IO.BinaryReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.LoadViewState(System.IO.BinaryReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.BinaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.IO.BinaryReader" /> usado para restaurar o estado do designer de exibição.</param>
+        <summary>Carrega o estado de exibição da <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> de um fluxo binário.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" />contém uma referência nula (<see langword="Nothing" /> no Visual Basic)</exception>
+        <exception cref="T:System.Exception">O designer host associado com o designer é uma referência nula (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Point Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point Location" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local do designer em coordenadas lógicas na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Point" /> que contém a x-y coordenadas e associada a <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> na superfície de design de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.Location%2A> operação atualiza o local do <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner> e todos os designers de filho que ele contém.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContainedActivitiesChanged">
+      <MemberSignature Language="C#" Value="protected override void OnContainedActivitiesChanged (System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs listChangeArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnContainedActivitiesChanged(class System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs listChangeArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnContainedActivitiesChanged(System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listChangeArgs" Type="System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="listChangeArgs">O <see cref="T:System.Workflow.ComponentModel.ActivityCollectionChangeEventArgs" /> que contém os dados do evento.</param>
+        <summary>Notifica o designer de que o número de atividades contido no <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `listChangeArgs`contém os designers de atividade que foram adicionados e removidos do <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>. <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnContainedActivitiesChanged%2A>atualiza os verbos do designer associados a <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner> e modifica o layout do designer na superfície de design de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="listChangeArgs" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragEnter">
+      <MemberSignature Language="C#" Value="protected override void OnDragEnter (System.Workflow.ComponentModel.Design.ActivityDragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragEnter(class System.Workflow.ComponentModel.Design.ActivityDragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnDragEnter(System.Workflow.ComponentModel.Design.ActivityDragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Notifica o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> quando uma operação arrastar-soltar está em andamento e o cursor do mouse do usuário entra nos limites do designer.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDragOver">
+      <MemberSignature Language="C#" Value="protected override void OnDragOver (System.Workflow.ComponentModel.Design.ActivityDragEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDragOver(class System.Workflow.ComponentModel.Design.ActivityDragEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnDragOver(System.Workflow.ComponentModel.Design.ActivityDragEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDragEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Notifica o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> quando uma operação arrastar-soltar está em andamento e o cursor do mouse do usuário está dentro dos limites do designer.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayoutPosition">
+      <MemberSignature Language="C#" Value="protected override void OnLayoutPosition (System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLayoutPosition(class System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnLayoutPosition(System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" /> que contém os dados do evento.</param>
+        <summary>Executa tarefas de layout para posicionar indicações visuais e designers de filho no <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayoutSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size OnLayoutSize (System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Size OnLayoutSize(class System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnLayoutSize(System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerLayoutEventArgs" /> que contém os dados do evento.</param>
+        <summary>Define o tamanho das indicações visuais sobre os designers de dentro do <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Size" /> que contém as novas configurações de tamanho para o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnLayoutSize%2A>Determina o tamanho do <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner> visualizar faixa que exibe a coleção de designers de atividade filho e a janela de visualização que exibe o designer de atividade selecionada. <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnLayoutSize%2A>também determina o tamanho da janela de visualização, dependendo se o designer estiver no modo de edição ou visualização.  
+  
+ Se <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner.Expanded%2A> retorna `false`, <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnLayoutSize%2A> retorna a implementação base herdada de <xref:System.Workflow.ComponentModel.Design.SequentialActivityDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDoubleClick">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDoubleClick (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDoubleClick(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnMouseDoubleClick(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Notifica o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> quando o usuário clica duas vezes na superfície do designer de atividade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o usuário clica duas vezes na janela de visualização <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnMouseDoubleClick%2A> habilita o modo de edição no <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Notifica o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> quando o usuário pressiona o botão do mouse enquanto o ponteiro está em limites de designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o usuário pressionar o botão do mouse pressionado enquanto o cursor estiver na janela de visualização, o modo de edição é ativado para o designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnMouseLeave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o designer quando o usuário move o cursor do mouse fora dos limites de designer.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Notifica o designer quando o usuário libera o botão do mouse no designer dos limites.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o usuário libera o botão do mouse sobre a faixa de visualização, o botão rolável alterado para uma seta de rolagem mínima.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnPaint(System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerPaintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Desenha a representação visual da atividade associada com o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> em tempo de design.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnThemeChange">
+      <MemberSignature Language="C#" Value="protected override void OnThemeChange (System.Workflow.ComponentModel.Design.ActivityDesignerTheme newTheme);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnThemeChange(class System.Workflow.ComponentModel.Design.ActivityDesignerTheme newTheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnThemeChange(System.Workflow.ComponentModel.Design.ActivityDesignerTheme)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newTheme" Type="System.Workflow.ComponentModel.Design.ActivityDesignerTheme" />
+      </Parameters>
+      <Docs>
+        <param name="newTheme">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerTheme" /> que contém as configurações de propriedade do tema atualizado.</param>
+        <summary>Notifica o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> que seu tema associado foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnThemeChange%2A>não só atualiza as configurações de propriedade de tema para <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>, ele também processa as novas configurações para a janela de visualização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewedDesigner">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Design.ActivityDesigner PreviewedDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.ActivityDesigner PreviewedDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.PreviewedDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ActivityDesigner</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o designer para visualizar a seção de visualização do designer de atividade.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> para exibir na seção de visualização de <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum designer está selecionado na seção de faixa de visualização do <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>, <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.PreviewedDesigner%2A> retorna uma referência nula (`Nothing` no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshDesignerActions">
+      <MemberSignature Language="C#" Value="protected override void RefreshDesignerActions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RefreshDesignerActions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.RefreshDesignerActions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza os erros de configuração associados a <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.RefreshDesignerActions%2A>não só atualiza as ações associadas à <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>, ele também processa os novos modos de exibição para a janela de visualização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshPreview">
+      <MemberSignature Language="C#" Value="public void RefreshPreview ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RefreshPreview() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.RefreshPreview" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza o modo de exibição na janela de visualização do <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.ShowPreview%2A>deve ser definido como `true` para <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.RefreshPreview%2A> para executar atualizações do modo de exibição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override void SaveViewState (System.IO.BinaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SaveViewState(class System.IO.BinaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.SaveViewState(System.IO.BinaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.BinaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.IO.BinaryWriter" /> para que o estado atual do designer de exibição é armazenado.</param>
+        <summary>Armazena o estado de exibição atual do <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" /> em um fluxo binário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.SaveViewState%2A>salva o designer de atividade selecionada atualmente na faixa de visualização e, se <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.ShowPreview%2A> retorna `true`, o conteúdo da janela de visualização.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" />contém a referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowPreview">
+      <MemberSignature Language="C#" Value="public bool ShowPreview { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowPreview" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.ShowPreview" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a visualização da atividade deve ser exibida no designer.</summary>
+        <value>
+          <see langword="true" />Para exibir a visualização da atividade no <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.Design.ActivityDesignerVerbCollection Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Design.ActivityDesignerVerbCollection Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Design.ActivityDesignerVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de verbos para associar o <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesignerVerbCollection" /> que contém os verbos associados <see cref="T:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como substituir o <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.Verbs%2A> propriedade inserir ações verbo personalizado para um <xref:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner>. O `CreateActivityVerbs` cria um novo <xref:System.Workflow.ComponentModel.Design.ActivityDesignerVerb> chamado `"Add New Parallel Branch"` e associa um manipulador de eventos chamado `OnAddParallelBranch`. Quando o verbo for clicado no designer de fluxo de trabalho, o manipulador de eventos é chamado.  
+  
+ [!code-csharp[WF_Samples#73](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#73)]
+ [!code-vb[WF_Samples#73](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#73)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

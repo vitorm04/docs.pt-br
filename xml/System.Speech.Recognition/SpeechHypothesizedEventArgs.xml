@@ -1,0 +1,50 @@
+<Type Name="SpeechHypothesizedEventArgs" FullName="System.Speech.Recognition.SpeechHypothesizedEventArgs">
+  <TypeSignature Language="C#" Value="public class SpeechHypothesizedEventArgs : System.Speech.Recognition.RecognitionEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SpeechHypothesizedEventArgs extends System.Speech.Recognition.RecognitionEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SpeechHypothesizedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Recognition.RecognitionEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Retorna a notificação de <see cref="E:System.Speech.Recognition.SpeechRecognitionEngine.SpeechHypothesized" /> ou <see cref="E:System.Speech.Recognition.SpeechRecognizer.SpeechHypothesized" /> eventos.  
+  
+ Esta classe dá suporte à infraestrutura .NET Framework e não se destina a ser usado diretamente no código do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um `SpeechHypothesized` é gerado pelo <xref:System.Speech.Recognition.SpeechRecognizer> e <xref:System.Speech.Recognition.SpeechRecognitionEngine> classes.  
+  
+ Você pode obter informações detalhadas sobre uma frase reconhecida provisoriamente usando o <xref:System.Speech.Recognition.RecognitionEventArgs.Result%2A> propriedade.  
+  
+ Vários `SpeechHypothesized` eventos são gerados como um reconhecimento mecanismo tenta identificar uma frase de entrada. Normalmente, manipular esses eventos só é útil para depuração.  
+  
+ `SpeechHypothesizedEventArgs` deriva de <xref:System.Speech.Recognition.RecognitionEventArgs>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um manipulador para <xref:System.Speech.Recognition.SpeechRecognizer.SpeechHypothesized?displayProperty=nameWithType> ou <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechHypothesized?displayProperty=nameWithType> eventos. O manipulador utiliza uma instância de `SpeechHypothesizedEventArgs` para retornar e exibir informações sobre uma frase provisoriamente reconhecida.  
+  
+```  
+// Create a handler for the SpeechHypothesized event.  
+recognizer.SpeechHypothesized += new EventHandler<SpeechHypothesizedEventArgs>(recognizer_SpeechHypothesized);  
+  
+// Handle the event and display the hypothesized result.  
+void recognizer_SpeechHypothesized (object sender, SpeechHypothesizedEventArgs e)  
+  {  
+    Console.WriteLine("Hypothesized text: " + e.Result.Text);  
+  }  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

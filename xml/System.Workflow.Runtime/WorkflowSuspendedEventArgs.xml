@@ -1,0 +1,60 @@
+<Type Name="WorkflowSuspendedEventArgs" FullName="System.Workflow.Runtime.WorkflowSuspendedEventArgs">
+  <TypeSignature Language="C#" Value="public class WorkflowSuspendedEventArgs : System.Workflow.Runtime.WorkflowEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowSuspendedEventArgs extends System.Workflow.Runtime.WorkflowEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowSuspendedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.WorkflowEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Uma instância de fluxo de trabalho pode ser suspenso em uma das três maneiras: o host pode chamar <xref:System.Workflow.Runtime.WorkflowInstance.Suspend%2A?displayProperty=nameWithType>, um <xref:System.Workflow.ComponentModel.SuspendActivity> atividade pode ser chamada de dentro da instância de fluxo de trabalho, ou o mecanismo de tempo de execução do fluxo de trabalho pode suspender a instância de fluxo de trabalho. Quando a instância de fluxo de trabalho é suspenso, o mecanismo de tempo de execução do fluxo de trabalho gera o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended?displayProperty=nameWithType> evento. O host pode assinar esse evento adicionando um manipulador de eventos para <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public string Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Error" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowSuspendedEventArgs.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição do motivo pelo qual a instância de fluxo de trabalho foi suspenso.</summary>
+        <value>A descrição do motivo pelo qual a instância de fluxo de trabalho foi suspenso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o host suspende a instância de fluxo de trabalho, ele fornece um motivo para a suspensão no `string` parâmetro <xref:System.Workflow.Runtime.WorkflowInstance.Suspend%2A?displayProperty=nameWithType>. Se o fluxo de trabalho for suspenso devido a um <xref:System.Workflow.ComponentModel.SuspendActivity> atividade, o motivo é fornecido pelo <xref:System.Workflow.ComponentModel.SuspendActivity.Error%2A?displayProperty=nameWithType>. Caso contrário, o mecanismo de tempo de execução do fluxo de trabalho fornece um motivo para a suspensão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

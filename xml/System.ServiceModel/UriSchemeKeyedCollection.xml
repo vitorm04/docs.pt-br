@@ -1,0 +1,135 @@
+<Type Name="UriSchemeKeyedCollection" FullName="System.ServiceModel.UriSchemeKeyedCollection">
+  <TypeSignature Language="C#" Value="public class UriSchemeKeyedCollection : System.Collections.Generic.SynchronizedKeyedCollection&lt;string,Uri&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UriSchemeKeyedCollection extends System.Collections.Generic.SynchronizedKeyedCollection`2&lt;string, class System.Uri&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.UriSchemeKeyedCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Generic.SynchronizedKeyedCollection&lt;System.String,System.Uri&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="K">System.String</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="T">System.Uri</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma coleção thread-safe que contém URIs que são criptografadas pelo seu nome de esquema de transporte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa coleção é usada por hosts para armazenar endereços base para um serviço pelo nome do esquema.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriSchemeKeyedCollection (params Uri[] uris);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri[] uris) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.UriSchemeKeyedCollection.#ctor(System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="addresses" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="uris">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.UriSchemeKeyedCollection" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="uris" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeyForItem">
+      <MemberSignature Language="C#" Value="protected override string GetKeyForItem (Uri item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetKeyForItem(class System.Uri item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.UriSchemeKeyedCollection.GetKeyForItem(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Uri" /> cuja chave está sendo recuperado.</param>
+        <summary>Obtém a chave para um URI especificado da coleção.</summary>
+        <returns>A chave para o URI especificado da coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, Uri item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.Uri item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.UriSchemeKeyedCollection.InsertItem(System.Int32,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero que especifica o local de inserção para o item na coleção.</param>
+        <param name="item">O <see cref="T:System.Uri" /> a ser inserido na coleção.</param>
+        <summary>Insere um URI na coleção em um local especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="item" /> URI não é um URI absoluto.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="item" />URI já contém um nome de esquema já está na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, Uri item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.Uri item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.UriSchemeKeyedCollection.SetItem(System.Int32,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero que especifica o local de inserção para o URI da coleção.</param>
+        <param name="item">O <see cref="T:System.Uri" /> sejam colocados na coleção.</param>
+        <summary>Substitui um URI em um local especificado da coleção com um novo URI.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="item" /> URI não é um URI absoluto.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="item" />URI já contém um nome de esquema já está na coleção.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

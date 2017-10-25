@@ -1,0 +1,255 @@
+<Type Name="MarshalByRefObject" FullName="System.MarshalByRefObject">
+  <TypeSignature Language="C#" Value="public abstract class MarshalByRefObject" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi abstract serializable beforefieldinit MarshalByRefObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.MarshalByRefObject" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite acesso a objetos entre limites de domínio de aplicativo em aplicativos que dão suporte a comunicação remota.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um domínio de aplicativo é uma partição em um processo de sistema operacional em um ou mais aplicativos residem. Objetos no mesmo domínio do aplicativo se comunicam diretamente. Objetos em diferentes domínios de aplicativos se comunicam por transporte cópias dos objetos nos limites do domínio de aplicativo ou usando um proxy para trocar mensagens.  
+  
+ <xref:System.MarshalByRefObject>a classe base para objetos que se comunicam entre limites de domínio de aplicativo com troca de mensagens está usando um proxy. Objetos que não herda de <xref:System.MarshalByRefObject> são implicitamente marshaling por valor. Quando um aplicativo remoto faz referência a um pacote por objeto de valor, uma cópia do objeto é passada entre limites de domínio de aplicativo.  
+  
+ <xref:System.MarshalByRefObject>objetos são acessados diretamente dentro dos limites do domínio do aplicativo local. Na primeira vez que um aplicativo em um controle remoto domínio de aplicativo acessa um <xref:System.MarshalByRefObject>, um proxy é passado para o aplicativo remoto. Chamadas subsequentes no proxy são empacotadas de volta para o objeto que reside no domínio de aplicativo local.  
+  
+ Tipos devem herdar de <xref:System.MarshalByRefObject> quando o tipo é usado além dos limites do domínio de aplicativo e o estado do objeto não deve ser copiado porque os membros do objeto não são utilizáveis fora do domínio de aplicativo onde eles foram criados.  
+  
+ Quando você deriva de um objeto de <xref:System.MarshalByRefObject> para uso nos limites do domínio de aplicativo, você não deve substituir qualquer um de seus membros, nem deve chamar seus métodos diretamente. O tempo de execução reconhece que as classes derivadas de <xref:System.MarshalByRefObject> devem ser empacotados em limites de domínio de aplicativo.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código mostra como criar uma instância de uma classe em outro domínio de aplicativo. O segundo exemplo de código mostra uma classe simples que pode ser usada para comunicação remota.  
+  
+ **Exemplo 1**  
+  
+ O exemplo de código a seguir mostra a maneira mais simples para executar código em outro domínio de aplicativo. O exemplo define uma classe denominada `Worker` que herda <xref:System.MarshalByRefObject>, com um método que exibe o nome do domínio do aplicativo no qual ele está em execução. O exemplo cria instâncias de `Worker` no domínio de aplicativo padrão e em um novo domínio de aplicativo.  
+  
+> [!NOTE]
+>  O assembly que contém `Worker` devem ser carregados em ambos os domínios de aplicativo, mas conseguiu carregar outros assemblies que deve existir somente no novo domínio de aplicativo.  
+  
+ [!code-cpp[CreateInstanceAndUnwrap2#1](~/samples/snippets/cpp/VS_Snippets_CLR/CreateInstanceAndUnwrap2/cpp/source.cpp#1)]
+ [!code-csharp[CreateInstanceAndUnwrap2#1](~/samples/snippets/csharp/VS_Snippets_CLR/CreateInstanceAndUnwrap2/cs/source.cs#1)]
+ [!code-vb[CreateInstanceAndUnwrap2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CreateInstanceAndUnwrap2/VB/source.vb#1)]  
+  
+ **Exemplo 2**  
+  
+ O exemplo a seguir demonstra uma classe derivada de <xref:System.MarshalByRefObject> comunicação remota que é usada posteriormente.  
+  
+ [!code-cpp[RemotingServices.SetObjectUriForMarshal#1](~/samples/snippets/cpp/VS_Snippets_CLR/RemotingServices.SetObjectUriForMarshal/CPP/source.cpp#1)]
+ [!code-csharp[RemotingServices.SetObjectUriForMarshal#1](~/samples/snippets/csharp/VS_Snippets_CLR/RemotingServices.SetObjectUriForMarshal/CS/source.cs#1)]
+ [!code-vb[RemotingServices.SetObjectUriForMarshal#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RemotingServices.SetObjectUriForMarshal/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MarshalByRefObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MarshalByRefObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.MarshalByRefObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateObjRef">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Remoting.ObjRef CreateObjRef (Type requestedType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.ObjRef CreateObjRef(class System.Type requestedType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MarshalByRefObject.CreateObjRef(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.ObjRef</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestedType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="requestedType">O <see cref="T:System.Type" /> do objeto a que o novo <see cref="T:System.Runtime.Remoting.ObjRef" /> fará referência.</param>
+        <summary>Cria um objeto que contém todas as informações relevantes necessárias para gerar um proxy usado para se comunicar com um objeto remoto.</summary>
+        <returns>Informações necessárias para gerar um proxy.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.MarshalByRefObject.CreateObjRef%2A> método é chamado pelos métodos de criação do objeto remoto como <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> e <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType>. Na maioria dos casos, não é necessário substituir esse método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">Esta instância não é um objeto remoto válido.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLifetimeService">
+      <MemberSignature Language="C#" Value="public object GetLifetimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetLifetimeService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MarshalByRefObject.GetLifetimeService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o objeto de serviço de tempo de vida atual que controla a política de ciclo de vida para esta instância.</summary>
+        <returns>Um objeto do tipo <see cref="T:System.Runtime.Remoting.Lifetime.ILease" /> usado para controlar a política de tempo de vida para esta instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre os serviços de tempo de vida, consulte o <xref:System.Runtime.Remoting.Lifetime.LifetimeServices> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeLifetimeService">
+      <MemberSignature Language="C#" Value="public virtual object InitializeLifetimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object InitializeLifetimeService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MarshalByRefObject.InitializeLifetimeService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um objeto de serviço de tempo de vida para controlar a política de tempo de vida para essa instância.</summary>
+        <returns>Um objeto do tipo <see cref="T:System.Runtime.Remoting.Lifetime.ILease" /> usado para controlar a política de tempo de vida para esta instância. Esse é o objeto de serviço de tempo de vida atual para essa instância se existir alguma; caso contrário, um novo objeto de serviço de tempo de vida inicializado para o valor da propriedade <see cref="P:System.Runtime.Remoting.Lifetime.LifetimeServices.LeaseManagerPollTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre os serviços de tempo de vida, consulte o <xref:System.Runtime.Remoting.Lifetime.LifetimeServices> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a criação de uma concessão.  
+  
+ [!code-cpp[Classic MarshalByRefObject.InitializeLifetimeService Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MarshalByRefObject.InitializeLifetimeService Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MarshalByRefObject.InitializeLifetimeService Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MarshalByRefObject.InitializeLifetimeService Example/CS/source.cs#1)]
+ [!code-vb[Classic MarshalByRefObject.InitializeLifetimeService Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MarshalByRefObject.InitializeLifetimeService Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberwiseClone">
+      <MemberSignature Language="C#" Value="protected MarshalByRefObject MemberwiseClone (bool cloneIdentity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.MarshalByRefObject MemberwiseClone(bool cloneIdentity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MarshalByRefObject.MemberwiseClone(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.MarshalByRefObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cloneIdentity" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cloneIdentity">
+          <see langword="false" /> para excluir a identidade do objeto <see cref="T:System.MarshalByRefObject" /> atual, o que fará com que o objeto seja atribuído a uma nova identidade quando ele passa por marshaling em um limite de comunicação remota. Um valor de <see langword="false" /> geralmente é adequado. <see langword="true" /> para copiar a identidade do objeto <see cref="T:System.MarshalByRefObject" /> atual para o clone, o que fará com que as chamadas de cliente de comunicação remota sejam roteados para o objeto do servidor remoto.</param>
+        <summary>Cria uma cópia superficial do objeto <see cref="T:System.MarshalByRefObject" /> atual.</summary>
+        <returns>Uma cópia superficial do objeto <see cref="T:System.MarshalByRefObject" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.MarshalByRefObject.MemberwiseClone%28System.Boolean%29> método cria uma cópia superficial, criando um novo <xref:System.MarshalByRefObject> do objeto e, em seguida, copiando os campos não estáticos do atual <xref:System.MarshalByRefObject> objeto para o novo objeto. Se um campo é um tipo de valor, uma cópia de bit a bit do campo será executada. Se um campo é um tipo de referência, a referência é copiada, mas o objeto chamado é não; Portanto, o objeto original e seu clone se referem ao mesmo objeto.  
+  
+ Por exemplo, considere um <xref:System.MarshalByRefObject> objeto chamado X que faz referência a objetos A e B. B do objeto, por sua vez, faz referência a objeto C. Uma cópia superficial de X cria um novo objeto X2 que também faz referência a objetos A e B. Em contraste, uma cópia profunda de X cria um novo objeto X2 que faz referência os novos objetos A2 e B2, que são cópias de um e B. B2, por sua vez, referencia o novo objeto C2, que é uma cópia C. Use uma classe que implementa o <xref:System.ICloneable> para executar uma cópia superficial ou profunda de um objeto.  
+  
+ A identidade de um <xref:System.MarshalByRefObject> objeto é definido como o objeto de servidor remoto que é o destino de uma chamada de cliente de comunicação remota. Por padrão, o clone memberwise de um <xref:System.MarshalByRefObject> objeto tem a mesma identidade que o objeto original, que normalmente não é o comportamento correto para clones de objetos do servidor que são empacotados em um limite de comunicação remota para o lado do cliente. Especifique `false`, que é geralmente apropriado, para excluir a identidade do clone e fazer com que uma nova identidade seja atribuído quando o clone é empacotado em um limite de comunicação remota, ou `true` para fazer com que o clone reter a identidade do original <xref:System.MarshalByRefObject> objeto. O <xref:System.MarshalByRefObject.MemberwiseClone%28System.Boolean%29> método se destina a ser usado por desenvolvedores implementar objetos de servidor remoto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

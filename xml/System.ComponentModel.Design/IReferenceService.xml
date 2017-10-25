@@ -1,0 +1,208 @@
+<Type Name="IReferenceService" FullName="System.ComponentModel.Design.IReferenceService">
+  <TypeSignature Language="C#" Value="public interface IReferenceService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IReferenceService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IReferenceService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface para obter referências a objetos em um projeto por nome ou tipo, obtendo o nome de um objeto especificado e para localizar o pai de um objeto especificado em um projeto do designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.IReferenceService> interface fornece os seguintes métodos:  
+  
+-   O <xref:System.ComponentModel.Design.IReferenceService.GetReference%2A> método retorna o componente com o nome especificado, ou `null` se nenhum componente com o nome especificado foi encontrado.  
+  
+-   O <xref:System.ComponentModel.Design.IReferenceService.GetName%2A> método retorna o nome associado ao componente especificado.  
+  
+-   O <xref:System.ComponentModel.Design.IReferenceService.GetComponent%2A> método retorna o contêiner pai do componente especificado.  
+  
+-   O <xref:System.ComponentModel.Design.IReferenceService.GetReferences%2A> método retorna uma matriz de referências a todos os componentes do projeto, ou todos os componentes de um tipo especificado, opcionalmente, de projeto.  
+  
+   
+  
+## Examples  
+ O controle de exemplo a seguir usa o <xref:System.ComponentModel.Design.IReferenceService.GetReferences%2A> método o <xref:System.ComponentModel.Design.IReferenceService> interface para obter uma lista de componentes do projeto de modo de design atual do tipo do componente selecionado no momento.  
+  
+ [!code-cpp[IReferenceServiceExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IReferenceServiceExample/CPP/ireferenceserviceexample.cpp#1)]
+ [!code-csharp[IReferenceServiceExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IReferenceServiceExample/CS/ireferenceserviceexample.cs#1)]
+ [!code-vb[IReferenceServiceExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IReferenceServiceExample/VB/ireferenceserviceexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetComponent">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent GetComponent (object reference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.IComponent GetComponent(object reference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IReferenceService.GetComponent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reference" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="reference">O objeto para recuperar o componente pai.</param>
+        <summary>Obtém o componente que contém o componente especificado.</summary>
+        <returns>A base de <see cref="T:System.ComponentModel.IComponent" /> que contém o objeto especificado, ou <see langword="null" /> não se existir nenhum componente pai.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public string GetName (object reference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetName(object reference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IReferenceService.GetName(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reference" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="reference">O objeto para retornar o nome do.</param>
+        <summary>Obtém o nome do componente especificado.</summary>
+        <returns>O nome do objeto referenciado, ou <see langword="null" /> se a referência de objeto não é válida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome de cada componente localizado em um projeto de tempo de design é definido <xref:System.ComponentModel.ISite.Name%2A> propriedade o <xref:System.ComponentModel.ISite> onde o componente está localizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReference">
+      <MemberSignature Language="C#" Value="public object GetReference (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetReference(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IReferenceService.GetReference(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do componente para retornar uma referência ao.</param>
+        <summary>Obtém uma referência para o componente cujo nome corresponde ao nome especificado.</summary>
+        <returns>Um objeto se refere o nome especificado, ou <see langword="null" /> se nenhuma referência foi encontrada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReferences">
+      <MemberSignature Language="C#" Value="public object[] GetReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] GetReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IReferenceService.GetReferences" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém todas as referências disponíveis para os componentes do projeto.</summary>
+        <returns>Uma matriz de todos os objetos com referências disponíveis para o <see cref="T:System.ComponentModel.Design.IReferenceService" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReferences">
+      <MemberSignature Language="C#" Value="public object[] GetReferences (Type baseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] GetReferences(class System.Type baseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IReferenceService.GetReferences(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="baseType">O tipo de objeto para retornar referências às instâncias de.</param>
+        <summary>Obtém todas as referências disponíveis para componentes do tipo especificado.</summary>
+        <returns>Uma matriz de todos os objetos disponíveis do tipo especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

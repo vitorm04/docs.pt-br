@@ -1,0 +1,712 @@
+<Type Name="Barrier" FullName="System.Threading.Barrier">
+  <TypeSignature Language="C#" Value="public class Barrier : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Barrier extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Barrier" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Participant Count={ParticipantCount},Participants Remaining={ParticipantsRemaining}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que várias tarefas trabalhem de forma colaborativa em um algoritmo em paralelo por meio de várias fases.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um grupo de tarefas cooperam movendo por meio de uma série de fases, onde cada no grupo sinaliza tem acessou o <xref:System.Threading.Barrier> em uma determinada etapa e implicitamente aguarda até que todos os outros chegar. O mesmo <xref:System.Threading.Barrier> podem ser usados para várias fases.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar uma barreira:  
+  
+ [!code-csharp[System.Threading.Barrier#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.barrier/cs/barrier.cs#01)]
+ [!code-vb[System.Threading.Barrier#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.barrier/vb/barrier.vb#01)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Todos os membros protegidos e públicos da <see cref="T:System.Threading.Barrier" /> são thread-safe e podem ser usados simultaneamente em vários segmentos, com exceção de Dispose, que só deve ser usado quando todas as outras operações no <see cref="T:System.Threading.Barrier" /> concluiu.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Barrier (int participantCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 participantCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="participantCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="participantCount">O número de threads participantes.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Threading.Barrier" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="participantCount" /> é menor que 0 ou maior que 32.767.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Barrier (int participantCount, Action&lt;System.Threading.Barrier&gt; postPhaseAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 participantCount, class System.Action`1&lt;class System.Threading.Barrier&gt; postPhaseAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.#ctor(System.Int32,System.Action{System.Threading.Barrier})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="participantCount" Type="System.Int32" />
+        <Parameter Name="postPhaseAction" Type="System.Action&lt;System.Threading.Barrier&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="participantCount">O número de threads participantes.</param>
+        <param name="postPhaseAction">O <see cref="T:System.Action`1" /> a ser executado depois de cada fase. nulo (Nothing no Visual Basic) pode ser passado para indicar que nenhuma ação será tomada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Threading.Barrier" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `postPhaseAction` representante será executado depois que todos os participantes chegaram à barreira em uma fase. Os participantes não serão liberados para a próxima fase até que o delegado postPhaseAction concluiu a execução.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="participantCount" /> é menor que 0 ou maior que 32.767.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParticipant">
+      <MemberSignature Language="C#" Value="public long AddParticipant ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 AddParticipant() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.AddParticipant" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o <see cref="T:System.Threading.Barrier" /> que haverá um participante adicional.</summary>
+        <returns>O número de fase da barreira em que os participantes novo participará primeiro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a barreira está executando uma ação após a fase, essa chamada será bloqueada até que a ação após a fase de conclusão e a barreira moveu para a próxima fase.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.InvalidOperationException">Adicionar um participante fará com que a contagem participante do barreira exceder 32.767.  
+  
+ -ou-  
+  
+ O método foi chamado de dentro de uma pós-fase de ação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParticipants">
+      <MemberSignature Language="C#" Value="public long AddParticipants (int participantCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 AddParticipants(int32 participantCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.AddParticipants(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="participantCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="participantCount">O número de participantes adicionais para adicionar à barreira.</param>
+        <summary>Notifica o <see cref="T:System.Threading.Barrier" /> que haverá participantes adicionais.</summary>
+        <returns>O número de fase da barreira em que os participantes novo participará primeiro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a barreira está executando uma ação após a fase, essa chamada será bloqueada até que a ação após a fase de conclusão e a barreira moveu para a próxima fase.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="participantCount" /> é menor que 0.  
+  
+ -ou-  
+  
+ Adicionando <paramref name="participantCount" /> participantes faria com que a contagem de participante do barreira exceder 32.767.</exception>
+        <exception cref="T:System.InvalidOperationException">O método foi chamado de dentro de uma pós-fase de ação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPhaseNumber">
+      <MemberSignature Language="C#" Value="public long CurrentPhaseNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 CurrentPhaseNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Barrier.CurrentPhaseNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número da barreira atual do fase.</summary>
+        <value>Retorna o número da barreira atual do fase.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Threading.Barrier" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.Threading.Barrier>. O `Dispose` método deixa o <xref:System.Threading.Barrier> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.Threading.Barrier> para o coletor de lixo possa recuperar a memória que o <xref:System.Threading.Barrier> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.Threading.Barrier>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Threading.Barrier> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método foi chamado de dentro de uma pós-fase de ação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">True para liberar recursos gerenciados e não gerenciados; False para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Threading.Barrier" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário da maioria dos membros de <xref:System.Threading.Barrier>, Dispose não é thread-safe e não podem ser usada simultaneamente com outros membros desta instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantCount">
+      <MemberSignature Language="C#" Value="public int ParticipantCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ParticipantCount" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Barrier.ParticipantCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de participantes a barreira.</summary>
+        <value>Retorna o número total de participantes a barreira.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantsRemaining">
+      <MemberSignature Language="C#" Value="public int ParticipantsRemaining { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ParticipantsRemaining" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Barrier.ParticipantsRemaining" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de participantes a barreira que ainda não tenha sinalizado na fase atual.</summary>
+        <value>Retorna o número de participantes a barreira que ainda não tenha sinalizado na fase atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso pode ser 0 durante uma execução de delegado de ação pós-fase ou se o ParticipantCount é 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveParticipant">
+      <MemberSignature Language="C#" Value="public void RemoveParticipant ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveParticipant() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.RemoveParticipant" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o <see cref="T:System.Threading.Barrier" /> que haverá um participante menor.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.InvalidOperationException">A barreira já tem 0 participantes.  
+  
+ -ou-  
+  
+ O método foi chamado de dentro de uma pós-fase de ação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveParticipants">
+      <MemberSignature Language="C#" Value="public void RemoveParticipants (int participantCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveParticipants(int32 participantCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.RemoveParticipants(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="participantCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="participantCount">O número de participantes adicionais para remover da barreira.</param>
+        <summary>Notifica o <see cref="T:System.Threading.Barrier" /> que haverá menos participantes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `participantCount` participantes já estão aguardando a barreira, essa remoção atende a barreira, a ação após a fase é executada e todos os participantes são ativados como se este participante que está sendo removido com êxito atingiu a barreira.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A contagem total de participantes é menor que o especificado<paramref name="participantCount" /></exception>
+        <exception cref="T:System.InvalidOperationException">A barreira já tem 0 participantes.  
+  
+ -ou-  
+  
+ O método foi chamado de dentro de uma pós-fase de ação.  
+  
+ -ou-  
+  
+ contagem atual de participante é menor do que o especificado participantCount</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalAndWait">
+      <MemberSignature Language="C#" Value="public void SignalAndWait ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SignalAndWait() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.SignalAndWait" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica que um participante atingiu a barreira e aguarda até que todos os outros participantes atinjam a barreira também.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.InvalidOperationException">O método foi invocado a partir de uma ação pós-fase, a barreira atualmente tem 0 participantes ou a barreira é sinalizada pelo mais threads que estão registrados como participantes.</exception>
+        <exception cref="T:System.Threading.BarrierPostPhaseException">Se uma exceção for gerada com base na ação pós-fase de um Barrier depois que todos os threads participantes tiverem chamado SignalAndWait, a exceção será encapsulada em um BarrierPostPhaseException e gerada em todos os threads participantes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalAndWait">
+      <MemberSignature Language="C#" Value="public bool SignalAndWait (int millisecondsTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SignalAndWait(int32 millisecondsTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.SignalAndWait(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">O número de milissegundos de espera ou <see cref="F:System.Threading.Timeout.Infinite" /> (- 1) para aguardar por tempo indefinido.</param>
+        <summary>Sinaliza que um participante atingiu a barreira e aguarda todos os outros participantes alcançar a barreira, usando um inteiro assinado de 32 bits para medir o tempo limite.</summary>
+        <returns>Se todos os participantes atingido a barreira dentro do tempo especificado; Caso contrário, false.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> é um número negativo diferente de -1, que representa um tempo limite infinito.</exception>
+        <exception cref="T:System.InvalidOperationException">O método foi invocado a partir de uma ação pós-fase, a barreira atualmente tem 0 participantes ou a barreira é sinalizada pelo mais threads que estão registrados como participantes.</exception>
+        <exception cref="T:System.Threading.BarrierPostPhaseException">Se uma exceção for gerada com base na ação pós-fase de um Barrier depois que todos os threads participantes tiverem chamado SignalAndWait, a exceção será encapsulada em um BarrierPostPhaseException e gerada em todos os threads participantes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalAndWait">
+      <MemberSignature Language="C#" Value="public void SignalAndWait (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SignalAndWait(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.SignalAndWait(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">O <see cref="T:System.Threading.CancellationToken" /> a ser observado.</param>
+        <summary>Sinaliza que um participante atingiu a barreira e aguarda até que todos os outros participantes alcançar a barreira ao observar um token de cancelamento.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />foi cancelada.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.InvalidOperationException">O método foi invocado a partir de uma ação pós-fase, a barreira atualmente tem 0 participantes ou a barreira é sinalizada pelo mais threads que estão registrados como participantes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalAndWait">
+      <MemberSignature Language="C#" Value="public bool SignalAndWait (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SignalAndWait(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.SignalAndWait(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que representa o número de milissegundos para aguardar ou um <see cref="T:System.TimeSpan" /> que representa -1 milissegundos para aguardar indefinidamente.</param>
+        <summary>Sinaliza que um participante atingiu a barreira e aguarda todos os outros participantes alcançar a barreira, usando um <see cref="T:System.TimeSpan" /> objeto para medir o intervalo de tempo.</summary>
+        <returns>True se todos os outros participantes atingiu a barreira; Caso contrário, false.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" />é um número negativo que não seja-1 milissegundos, que representa um tempo limite infinito, ou é maior que 32.767.</exception>
+        <exception cref="T:System.InvalidOperationException">O método foi invocado a partir de uma ação pós-fase, a barreira atualmente tem 0 participantes ou a barreira é sinalizada pelo mais threads que estão registrados como participantes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalAndWait">
+      <MemberSignature Language="C#" Value="public bool SignalAndWait (int millisecondsTimeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SignalAndWait(int32 millisecondsTimeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.SignalAndWait(System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="millisecondsTimeout" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="millisecondsTimeout">O número de milissegundos de espera ou <see cref="F:System.Threading.Timeout.Infinite" /> (- 1) para aguardar por tempo indefinido.</param>
+        <param name="cancellationToken">O <see cref="T:System.Threading.CancellationToken" /> a ser observado.</param>
+        <summary>Sinaliza que um participante atingiu a barreira e aguarda todos os outros participantes alcançar a barreira, usando um inteiro assinado de 32 bits para medir o tempo limite, ao observar um token de cancelamento.</summary>
+        <returns>Se todos os participantes atingido a barreira dentro do tempo especificado; Caso contrário, false</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `cancellationToken` foi cancelada antes que o sinal está em vigor, então um <xref:System.OperationCanceledException> é gerada e o <xref:System.Threading.Barrier.ParticipantsRemaining%2A> valor não é reduzido. Se o `cancellationToken` não for cancelado ou for cancelada depois que o sinal entra em vigor, em seguida, <xref:System.Threading.Barrier.ParticipantsRemaining%2A> é reduzido e nenhum <xref:System.OperationCanceledException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />foi cancelada.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="millisecondsTimeout" /> é um número negativo diferente de -1, que representa um tempo limite infinito.</exception>
+        <exception cref="T:System.InvalidOperationException">O método foi invocado a partir de uma ação pós-fase, a barreira atualmente tem 0 participantes ou a barreira é sinalizada pelo mais threads que estão registrados como participantes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalAndWait">
+      <MemberSignature Language="C#" Value="public bool SignalAndWait (TimeSpan timeout, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SignalAndWait(valuetype System.TimeSpan timeout, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Barrier.SignalAndWait(System.TimeSpan,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que representa o número de milissegundos para aguardar ou um <see cref="T:System.TimeSpan" /> que representa -1 milissegundos para aguardar indefinidamente.</param>
+        <param name="cancellationToken">O <see cref="T:System.Threading.CancellationToken" /> a ser observado.</param>
+        <summary>Sinaliza que um participante atingiu a barreira e aguarda todos os outros participantes alcançar a barreira, usando um <see cref="T:System.TimeSpan" /> objeto para medir o intervalo de tempo ao observar um token de cancelamento.</summary>
+        <returns>True se todos os outros participantes atingiu a barreira; Caso contrário, false.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.OperationCanceledException">
+          <paramref name="cancellationToken" />foi cancelada.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância atual já foi descartada.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é um número negativo diferente de -1 milissegundo, que representa um tempo limite infinito.</exception>
+        <exception cref="T:System.InvalidOperationException">O método foi invocado a partir de uma ação pós-fase, a barreira atualmente tem 0 participantes ou a barreira é sinalizada pelo mais threads que estão registrados como participantes.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

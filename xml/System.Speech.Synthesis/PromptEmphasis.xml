@@ -1,0 +1,108 @@
+<Type Name="PromptEmphasis" FullName="System.Speech.Synthesis.PromptEmphasis">
+  <TypeSignature Language="C#" Value="public enum PromptEmphasis" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PromptEmphasis extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.PromptEmphasis" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera os valores para níveis de ênfase nos prompts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Membros do <xref:System.Speech.Synthesis.PromptEmphasis> enumeração são usados pelo <xref:System.Speech.Synthesis.PromptStyle.%23ctor%2A> construtor, pelo <xref:System.Speech.Synthesis.PromptBuilder.AppendText%2A> método e o <xref:System.Speech.Synthesis.PromptBuilder.StartStyle%2A> método para especificar o nível de ênfase de texto falado. O <xref:System.Speech.Synthesis.PromptStyle.Emphasis%2A> propriedade obtém o foco para um <xref:System.Speech.Synthesis.PromptStyle> objeto usando um <xref:System.Speech.Synthesis.PromptEmphasis> instância.  
+  
+> [!NOTE]
+>  Os mecanismos de síntese de fala no Windows não dão suporte variações na ênfase da saída de fala no momento. Definir valores para dar ênfase usando um membro do <xref:System.Speech.Synthesis.PromptEmphasis> enumeração não produzirá nenhuma alteração audível na saída de fala sintetizada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Moderate">
+      <MemberSignature Language="C#" Value="Moderate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptEmphasis Moderate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptEmphasis.Moderate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptEmphasis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica um nível moderado de ênfase.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptEmphasis None = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptEmphasis.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptEmphasis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não indica que nenhuma ênfase.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptEmphasis NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptEmphasis.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptEmphasis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que nenhum valor de ênfase for especificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reduced">
+      <MemberSignature Language="C#" Value="Reduced" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptEmphasis Reduced = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptEmphasis.Reduced" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptEmphasis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica um nível reduzido de ênfase.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strong">
+      <MemberSignature Language="C#" Value="Strong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.PromptEmphasis Strong = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.PromptEmphasis.Strong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.PromptEmphasis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica um alto nível de ênfase.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,127 @@
+<Type Name="ApartmentState" FullName="System.Threading.ApartmentState">
+  <TypeSignature Language="C#" Value="public enum ApartmentState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ApartmentState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.ApartmentState" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Thread</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o estado de apartment de um <see cref="T:System.Threading.Thread" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um compartimento é um contêiner lógico em um processo para objetos que compartilham os mesmos requisitos de acesso de thread. Todos os objetos no mesmo compartimento podem receber chamadas de qualquer thread no apartment. O .NET Framework não usa apartments e objetos gerenciados são responsáveis por usando todos os recursos compartilhados de maneira thread-safe próprios.  
+  
+ Como classes COM usam apartments, o common language runtime precisa para criar e inicializar um apartment ao chamar um objeto COM em uma situação de interoperabilidade COM. Um thread gerenciado pode criar e inserir um single-threaded apartment (STA) que permite que apenas um thread ou um multi-threaded apartment (MTA) que contém um ou mais threads. Você pode controlar o tipo de apartment criado definindo o <xref:System.Threading.Thread.ApartmentState%2A> o thread de um dos valores de propriedade a <xref:System.Threading.ApartmentState> enumeração. Como um determinado thread somente pode inicializar um compartimento COM uma vez, você não pode alterar o tipo de apartment após a primeira chamada para o código não gerenciado.  
+  
+ Para obter mais informações, consulte <xref:System.Threading.Thread>, [gerenciado e não gerenciado de Threading](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5), e [Advanced COM Interoperability](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir o estado de apartment de thread.  
+  
+ [!code-cpp[System.Threading.Thread.ApartmentState#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Thread.ApartmentState/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.Thread.ApartmentState#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Thread.ApartmentState/CS/source.cs#1)]
+ [!code-vb[System.Threading.Thread.ApartmentState#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Thread.ApartmentState/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MTA">
+      <MemberSignature Language="C#" Value="MTA" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ApartmentState MTA = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ApartmentState.MTA" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ApartmentState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Threading.Thread" /> vai criar e inserir um Multi-Threaded Apartment.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="STA">
+      <MemberSignature Language="C#" Value="STA" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ApartmentState STA = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ApartmentState.STA" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ApartmentState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Threading.Thread" /> vai criar e inserir um Single-Threaded Apartment.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.ApartmentState Unknown = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.ApartmentState.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Thread</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ApartmentState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade <see cref="P:System.Threading.Thread.ApartmentState" /> não foi definida.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

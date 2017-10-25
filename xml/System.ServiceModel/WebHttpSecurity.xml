@@ -1,0 +1,156 @@
+<Type Name="WebHttpSecurity" FullName="System.ServiceModel.WebHttpSecurity">
+  <TypeSignature Language="C#" Value="public sealed class WebHttpSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebHttpSecurity extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.WebHttpSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os tipos de segurança disponíveis para um ponto de extremidade de serviço configurado para receber solicitações HTTP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.WebHttpSecurity>fornece os requisitos de segurança para um ponto de extremidade configurado com um <xref:System.ServiceModel.WebHttpBinding>.  
+  
+ Se o <xref:System.ServiceModel.WebHttpSecurityMode.Transport> valor for especificado o <xref:System.ServiceModel.WebHttpBinding.%23ctor%28System.ServiceModel.WebHttpSecurityMode%29> método e, em seguida, as configurações fornecidas pelo <xref:System.ServiceModel.WebHttpSecurity.Transport%2A> propriedade entra em vigor para o ponto de extremidade de serviço. O valor de <xref:System.ServiceModel.WebHttpSecurityMode> só pode ser definida no <xref:System.ServiceModel.WebHttpBinding> construtor-lo como um parâmetro explícito e seu valor não podem ser definidos novamente depois que a instância de associação é criada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebHttpSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WebHttpSecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.ServiceModel.WebHttpSecurity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.WebHttpSecurityMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.WebHttpSecurityMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpSecurity.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WebHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de segurança que é usado por um ponto de extremidade configurado para receber solicitações HTTP com um <see cref="T:System.ServiceModel.WebHttpBinding" />.</summary>
+        <value>Um valor de <see cref="T:System.ServiceModel.WebHttpSecurityMode" /> que indica se a segurança em nível de transporte ou nenhuma segurança é usada por um ponto de extremidade. O valor padrão é <see cref="F:System.ServiceModel.WebHttpSecurityMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina se as configurações de <xref:System.ServiceModel.WebHttpSecurity.Transport%2A> propriedade entra em vigor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não é um <see cref="T:System.ServiceModel.WebHttpSecurityMode" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMode">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WebHttpSecurity.ShouldSerializeMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Especifica se o <see cref="P:System.ServiceModel.WebHttpSecurity.Mode" /> propriedade foi alterado do padrão e deve ser serializada. Isso é usado para a integração do XAML.</summary>
+        <returns>
+          <see langword="true" /> se o valor da propriedade <see cref="P:System.ServiceModel.WebHttpSecurity.Mode" /> precisar ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeTransport">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeTransport ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeTransport() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WebHttpSecurity.ShouldSerializeTransport" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se a propriedade de transporte foi alterado do valor padrão e deve ser serializada. Isso é usado pelo WCF para a integração do XAML.</summary>
+        <returns>
+          <see langword="true" /> se o valor da propriedade <see cref="P:System.ServiceModel.WebHttpSecurity.Transport" /> precisar ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.HttpTransportSecurity Transport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.HttpTransportSecurity Transport" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WebHttpSecurity.Transport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.HttpTransportSecurity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que contém as configurações de segurança de nível de transporte para essa associação.</summary>
+        <value>O <see cref="T:System.ServiceModel.HttpTransportSecurity" /> dessa associação.  
+  
+ O conjunto de valores padrão são um <see cref="P:System.ServiceModel.HttpTransportSecurity.ClientCredentialType" /> de <see cref="F:System.ServiceModel.HttpClientCredentialType.None" />, um <see cref="P:System.ServiceModel.HttpTransportSecurity.ProxyCredentialType" /> de <see cref="F:System.ServiceModel.HttpProxyCredentialType.None" />, e <see cref="P:System.ServiceModel.HttpTransportSecurity.Realm" /> = "".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.HttpTransportSecurity> objeto retornado por essa propriedade para definir o transporte de parâmetros de segurança para o <xref:System.ServiceModel.WebHttpBinding>.  
+  
+ Se o <xref:System.ServiceModel.WebHttpSecurityMode.Transport> ou <xref:System.ServiceModel.WebHttpSecurityMode.TransportCredentialOnly> valor for especificado o <xref:System.ServiceModel.WebHttpBinding.%23ctor%28System.ServiceModel.WebHttpSecurityMode%29> método e, em seguida, as configurações fornecidas pelo <xref:System.ServiceModel.WebHttpSecurity.Transport%2A> propriedade entra em vigor para o ponto de extremidade de serviço.  
+  
+ Se o <xref:System.ServiceModel.WebHttpSecurityMode.TransportCredentialOnly> valor for especificado o <xref:System.ServiceModel.WebHttpBinding.%23ctor%28System.ServiceModel.WebHttpSecurityMode%29> método e, em seguida, as configurações fornecidas pelo <xref:System.ServiceModel.WebHttpSecurity.Transport%2A> propriedade entra em vigor para o ponto de extremidade de serviço. O valor de <xref:System.ServiceModel.WebHttpSecurityMode> só pode ser definida no <xref:System.ServiceModel.WebHttpBinding> construtor-lo como um parâmetro explícito e seu valor não podem ser definidos novamente depois que a instância de associação é criada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

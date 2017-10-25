@@ -1,0 +1,154 @@
+<Type Name="IEqualityComparer&lt;T&gt;" FullName="System.Collections.Generic.IEqualityComparer&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IEqualityComparer&lt;in T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEqualityComparer`1&lt;- T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.IEqualityComparer`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">O tipo de objetos a serem comparados.</typeparam>
+    <summary>Define métodos para dar suporte à comparação de objetos para igualdade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface permite que a implementação de comparação de igualdade personalizadas para coleções. Ou seja, você pode criar sua própria definição de igualdade para tipo `T`e especificar que essa definição usada com um tipo de coleção que aceita o <xref:System.Collections.Generic.IEqualityComparer%601> interface genérica. No .NET Framework, construtores do <xref:System.Collections.Generic.Dictionary%602> tipo de coleção genérica aceitar esta interface.  
+  
+ Uma implementação padrão desta interface é fornecida pelo <xref:System.Collections.Generic.EqualityComparer%601.Default%2A> propriedade o <xref:System.Collections.Generic.EqualityComparer%601> classe genérica. O <xref:System.StringComparer> classe implementa <xref:System.Collections.Generic.IEqualityComparer%601> do tipo <xref:System.String>.  
+  
+ Esta interface dá suporte a apenas comparações de igualdade. Personalização de comparações de classificação e ordenação é fornecida pelo <xref:System.Collections.Generic.IComparer%601> interface genérica.  
+  
+ É recomendável que você derivar do <xref:System.Collections.Generic.EqualityComparer%601> classe em vez de implementar o <xref:System.Collections.Generic.IEqualityComparer%601> interface, pois o <xref:System.Collections.Generic.EqualityComparer%601> classe testes para igualdade usando o <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> método em vez do <xref:System.Object.Equals%2A?displayProperty=nameWithType> método. Isso é consistente com o `Contains`, `IndexOf`, `LastIndexOf`, e `Remove` métodos de <xref:System.Collections.Generic.Dictionary%602> classe e outras coleções genéricas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona personalizado `Box` objetos a uma coleção de dicionário. O `Box` objetos são considerados iguais se suas dimensões forem iguais.  
+  
+ [!code-csharp[System.Collections.Generic.IEqualityComparer#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.iequalitycomparer/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.IEqualityComparer#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.iequalitycomparer/vb/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (T x, T y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(!T x, !T y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="T" />
+        <Parameter Name="y" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="x">O primeiro objeto do tipo <c>T</c> para comparar.</param>
+        <param name="y">O segundo objeto do tipo <c>T</c> para comparar.</param>
+        <summary>Determina se os objetos especificados são iguais.</summary>
+        <returns>
+          <see langword="true" /> se os objetos especificados forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar esse método para fornecer uma comparação de igualdade personalizado para o tipo `T`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Implementações são necessárias para garantir que, se o <see cref="M:System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)" /> método retorna <see langword="true" /> de dois objetos <c>x</c> e <c>y</c>, em seguida, o valor retornado pelo <see cref="M:System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)" /> método para <c>x</c> deve ser igual ao valor retornado para <c>y</c>.  
+  
+ O <see cref="M:System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)" /> método é transitiva reflexiva e simétrica. Ou seja, ela retorna <see langword="true" /> se usado para comparar um objeto com em si; <see langword="true" /> de dois objetos <c>x</c> e <c>y</c> se for <see langword="true" /> para <c>y</c> e <c>x</c>; e <see langword="true" /> de dois objetos <c>x</c> e <c>z</c> se for <see langword="true" /> para <c>x</c> e <c>y</c> e também <see langword="true" /> para <c>y</c> e <c>z</c>.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public int GetHashCode (T obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetHashCode(!T obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> para o qual um código hash deve ser retornado.</param>
+        <summary>Retorna um código hash para o objeto especificado.</summary>
+        <returns>Um código hash para o objeto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar esse método para fornecer um código de hash personalizado para o tipo `T`, correspondente a comparação de igualdade personalizado fornecida pelo <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O tipo de <paramref name="obj" /> é um tipo de referência e <paramref name="obj" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Implementações são necessárias para garantir que, se o <see cref="M:System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)" /> método retorna <see langword="true" /> de dois objetos <c>x</c> e <c>y</c>, em seguida, o valor retornado pelo <see cref="M:System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)" /> método para <c>x</c> deve ser igual ao valor retornado para <c>y</c>.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

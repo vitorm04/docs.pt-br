@@ -1,0 +1,15 @@
+<Namespace Name="System.Runtime.Remoting.MetadataServices">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting.MetadataServices" /> namespace contém classes que são usadas pelo <see href="http://msdn.microsoft.com/en-us/40f6f8c8-b80c-4e9f-a920-31bcd0cf45c5">Soapsuds ferramenta (Soapsuds.exe)</see> ferramenta de linha de comando e o código de usuário para converter metadados para e de esquema XML para a infraestrutura de comunicação remota. Algumas das classes desse namespace mais importantes são o <see cref="T:System.Runtime.Remoting.MetadataServices.SdlChannelSink" /> classe e o <see cref="T:System.Runtime.Remoting.MetadataServices.MetaData" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.MetadataServices.SdlChannelSink> pela infraestrutura de comunicação remota, a classe é usada para gerar WSDL Web Services Description Language () no lado do servidor.  
+  
+ O <xref:System.Runtime.Remoting.MetadataServices.MetaData> classe fornece a funcionalidade do [Soapsuds ferramenta (Soapsuds.exe)](http://msdn.microsoft.com/en-us/40f6f8c8-b80c-4e9f-a920-31bcd0cf45c5) de linha de comando ferramenta e pode ser usado por meio de programação para alcançar o mesmo resultado. Os métodos de <xref:System.Runtime.Remoting.MetadataServices.MetaData> classe pode ser usada para criar esquemas XML que descrevem os serviços que são expostos no código-fonte e para criar o código c# do esquema XML.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

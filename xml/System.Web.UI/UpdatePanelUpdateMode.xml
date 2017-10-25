@@ -1,0 +1,82 @@
+<Type Name="UpdatePanelUpdateMode" FullName="System.Web.UI.UpdatePanelUpdateMode">
+  <TypeSignature Language="C#" Value="public enum UpdatePanelUpdateMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UpdatePanelUpdateMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.UpdatePanelUpdateMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Representa os modos de atualização possíveis para o conteúdo em um controle <see cref="T:System.Web.UI.UpdatePanel" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.UpdatePanelUpdateMode> enumeração define os modos de atualização possíveis para o conteúdo de um <xref:System.Web.UI.UpdatePanel> controle. O <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> propriedade deve ser definida como um dos valores da <xref:System.Web.UI.UpdatePanelUpdateMode> enumeração. O <xref:System.Web.UI.UpdatePanel> controle requer que o <xref:System.Web.UI.ScriptManager.EnablePartialRendering%2A> propriedade o <xref:System.Web.UI.ScriptManager> controle ser `true` para renderização parcial da página ocorra.  
+  
+ O valor padrão de <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> propriedade é sempre.  
+  
+ Se o <xref:System.Web.UI.UpdatePanelUpdateMode.Always> controle está dentro de outro <xref:System.Web.UI.UpdatePanel> controle e o painel pai é atualizada, o painel aninhado também será atualizado independentemente do <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> o valor da propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir declara duas <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> controles. O primeiro painel define o <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> propriedade de um <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> controle como condicional. O segundo painel tem <xref:System.Web.UI.UpdatePanel.UpdateMode%2A> definido como sempre, por padrão. Um botão fora os dois painéis está registrado como um controle de postback assíncrono usando o <xref:System.Web.UI.ScriptManager.RegisterAsyncPostBackControl%2A> método o <xref:System.Web.UI.ScriptManager> controle. No botão de clique manipulador de eventos, o <xref:System.Web.UI.UpdatePanel.Update%2A> método do primeiro painel é chamado se mais de cinco segundos decorridos desde sua última atualização. Nesse cenário, de conteúdo o painel é atualizado apenas se a última atualização do painel foi há mais de cinco segundos. De conteúdo o segundo painel é sempre atualizado.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdatePanel.UpdateMode#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.UpdateMode/CS/UpdatePanelUpdateModeCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdatePanel.UpdateMode#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.UpdateMode/VB/UpdatePanelUpdateModeVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.UpdatePanelUpdateMode Always = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.UpdatePanelUpdateMode.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.UpdatePanelUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conteúdo do controle <see cref="T:System.Web.UI.UpdatePanel" /> é atualizado para todos os postbacks que se originam da página. Isso inclui os postbacks assíncronos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Conditional">
+      <MemberSignature Language="C#" Value="Conditional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.UpdatePanelUpdateMode Conditional = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.UpdatePanelUpdateMode.Conditional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.UpdatePanelUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conteúdo do controle <see cref="T:System.Web.UI.UpdatePanel" /> é atualizado sob as seguintes condições:</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Se o <xref:System.Web.UI.UpdatePanel.Update%2A> método o <xref:System.Web.UI.UpdatePanel> controle for chamado explicitamente.  
+  
+-   Se um controle é definido como um gatilho usando a propriedade de gatilhos do <xref:System.Web.UI.UpdatePanel> controlar e causa um postback. Nesse cenário, o controle é um gatilho explícito para atualizar o conteúdo do painel. O controle de gatilho pode ser dentro ou fora de <xref:System.Web.UI.UpdatePanel> controle que define o gatilho.  
+  
+-   Se o <xref:System.Web.UI.UpdatePanel.ChildrenAsTriggers%2A> está definida como `true` e um controle filho de <xref:System.Web.UI.UpdatePanel> controle causar um postback. Nesse cenário, com controles filho do <xref:System.Web.UI.UpdatePanel> controle são gatilhos implícita para atualizar o painel. Controles filho de aninhados <xref:System.Web.UI.UpdatePanel> controles não causam externa <xref:System.Web.UI.UpdatePanel> controle a ser atualizada, a menos que eles sejam explicitamente definidos como disparadores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

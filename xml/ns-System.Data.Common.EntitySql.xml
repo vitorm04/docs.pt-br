@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Common.EntitySql">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Common.EntitySql" /> namespace inclui o <see cref="T:System.Data.Common.EntitySql.EntitySqlParser" /> classe e outras classes de suporte. Essas classes permitem analisar uma cadeia de caracteres de consulta Entity SQL e criar uma consulta de árvore de comando.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

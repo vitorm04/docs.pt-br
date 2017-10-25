@@ -1,0 +1,101 @@
+<Type Name="TextDecorationLocation" FullName="System.Windows.TextDecorationLocation">
+  <TypeSignature Language="C#" Value="public enum TextDecorationLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextDecorationLocation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TextDecorationLocation" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a posição vertical de um <see cref="T:System.Windows.TextDecoration" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Decoração de texto está disponíveis em quatro tipos: linha de base, sublinhado, tachado e sublinhado. O exemplo a seguir mostra os locais da decoração de texto em relação ao texto.  
+  
+ ![Diagrama de locais de decoração de texto](~/add/media/textdecoration01.gif "diagrama de locais de decoração de texto")  
+Tipos de decoração de texto  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma decoração de texto sublinhado e usa um pincel de cor sólida para a caneta.  
+  
+ [!code-csharp[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets2)]
+ [!code-vb[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets2)]
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Baseline">
+      <MemberSignature Language="C#" Value="Baseline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.TextDecorationLocation Baseline = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.TextDecorationLocation.Baseline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A posição vertical de uma linha de base.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverLine">
+      <MemberSignature Language="C#" Value="OverLine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.TextDecorationLocation OverLine = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.TextDecorationLocation.OverLine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A posição vertical de uma linha sobreposta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strikethrough">
+      <MemberSignature Language="C#" Value="Strikethrough" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.TextDecorationLocation Strikethrough = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.TextDecorationLocation.Strikethrough" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A posição vertical de um tachado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Underline">
+      <MemberSignature Language="C#" Value="Underline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.TextDecorationLocation Underline = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.TextDecorationLocation.Underline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A posição vertical de um sublinhado. Este é o valor padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

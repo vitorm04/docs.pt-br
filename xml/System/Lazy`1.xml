@@ -1,0 +1,715 @@
+<Type Name="Lazy&lt;T&gt;" FullName="System.Lazy&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class Lazy&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Lazy`1&lt;T&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Lazy`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("ThreadSafetyMode={Mode}, IsValueCreated={IsValueCreated}, IsValueFaulted={IsValueFaulted}, Value={ValueForDebugDisplay}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.System_LazyDebugView`1))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">O tipo de objeto que está sendo inicializado sem pressa.</typeparam>
+    <summary>Dá suporte à inicialização lenta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use a inicialização lenta para adiar a criação de um objeto grande ou de uso intensivo de recursos ou a execução de uma tarefa de uso intensivo de recursos, especialmente quando a criação ou execução não pode ocorrer durante o tempo de vida do programa.  
+  
+ Para preparar para inicialização lenta, você cria uma instância de <xref:System.Lazy%601>. O argumento de tipo do <xref:System.Lazy%601> objeto criado por você especifica o tipo do objeto que você deseja inicializar lentamente. O construtor que você usa para criar o <xref:System.Lazy%601> objeto determina as características da inicialização. A inicialização lenta ocorre na primeira vez que a propriedade <xref:System.Lazy%601.Value%2A?displayProperty=nameWithType> é acessada.  
+  
+ Na maioria dos casos, escolher um construtor depende de suas respostas às duas perguntas:  
+  
+-   O objeto inicializado lentamente será acessado de mais de um thread? Nesse caso, o <xref:System.Lazy%601> objeto pode criá-lo em qualquer thread. Você pode usar um dos construtores simples cujo comportamento padrão é criar um thread-safe <xref:System.Lazy%601> do objeto, para que apenas uma instância do objeto instanciado lentamente é criada, independentemente de quantos threads tentarem acessá-lo. Para criar um <xref:System.Lazy%601> objeto que não é thread-safe, você deve usar um construtor que permite que você não especifique nenhum acesso thread-safe.  
+  
+    > [!CAUTION]
+    >  Tornando o <xref:System.Lazy%601> segura para thread objeto não protege o objeto inicializado lentamente. Se vários threads podem acessar o objeto inicializado lentamente, você deve fazer suas propriedades e métodos seguros para acesso multi-threaded.  
+  
+-   Inicialização lenta exige muito código ou o objeto inicializado lentamente tem um construtor padrão que faz tudo o que você precisa e não lançam exceções? Se você precisar escrever o código de inicialização ou se as exceções precisam ser manipulados, use um dos construtores que usa um método de fábrica. Escreva o código de inicialização no método de fábrica.  
+  
+ A tabela a seguir mostra quais construtor para escolha, com base nesses dois fatores:  
+  
+|Objeto será acessado por|Se nenhum código de inicialização é necessário (construtor padrão), use|Se o código de inicialização for necessário, use|  
+|--------------------------------|------------------------------------------------------------------------|---------------------------------------------|  
+|Vários threads|<xref:System.Lazy%601.%23ctor>|<xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%29>|  
+|Um thread|<xref:System.Lazy%601.%23ctor%28System.Boolean%29>com `isThreadSafe` definido como `false`.|<xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Boolean%29>com `isThreadSafe` definido como `false`.|  
+  
+ Você pode usar uma expressão lambda para especificar o método de fábrica. Isso mantém todo o código de inicialização em um único local. A expressão lambda captura o contexto, incluindo quaisquer argumentos que você passa para o construtor do objeto inicializado lentamente.  
+  
+ **Exceção cache** quando você usar métodos de fábrica, exceções são armazenados em cache. Ou seja, se o método de fábrica gera um tempo de exceção primeiro um thread tenta acessar o <xref:System.Lazy%601.Value%2A> propriedade o <xref:System.Lazy%601> do objeto, a mesma exceção será lançada em todas as tentativas subsequentes. Isso garante que todas as chamadas para o <xref:System.Lazy%601.Value%2A> propriedade produz o mesmo resultado e evita erros sutis que podem surgir se threads diferentes obtenham resultados diferentes. O <xref:System.Lazy%601> significa um real `T` que outra forma seria foram inicializados em algum momento anterior, geralmente durante a inicialização. Uma falha em que ponto anterior é geralmente fatal. Se houver uma possibilidade de uma falha recuperável, recomendamos que você crie a lógica de repetição para a rotina de inicialização (nesse caso, o método de fábrica), exatamente como você faria se estivéssemos usando inicialização lenta.  
+  
+ **Alternativa para bloqueio** em determinadas situações, você talvez queira evitar a sobrecarga do <xref:System.Lazy%601> objeto padrão de comportamento de bloqueio. Em situações raras, pode haver um potencial para deadlocks. Nesses casos, você pode usar o <xref:System.Lazy%601.%23ctor%28System.Threading.LazyThreadSafetyMode%29> ou <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Threading.LazyThreadSafetyMode%29> construtor e especifique <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType>. Isso permite que o <xref:System.Lazy%601> objeto para criar uma cópia do objeto inicializado lentamente em cada um dos vários threads, se os threads de chamam o <xref:System.Lazy%601.Value%2A> propriedade simultaneamente. O <xref:System.Lazy%601> objeto garante que todos os threads de usar a mesma instância do objeto inicializado lentamente e descarta as instâncias que não são usadas. Assim, o custo de reduzir a sobrecarga de bloqueio é seu programa, às vezes, pode criar e descartar cópias adicionais de um objeto caro. Na maioria dos casos, isso é improvável. Os exemplos para o <xref:System.Lazy%601.%23ctor%28System.Threading.LazyThreadSafetyMode%29> e <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Threading.LazyThreadSafetyMode%29> construtores demonstram esse comportamento.  
+  
+> [!IMPORTANT]
+>  Quando você especificar <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType>, exceções são nunca armazenados em cache, mesmo se você especificar um método de fábrica.  
+  
+ **Construtores equivalentes** além de habilitar o uso de <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType>, o <xref:System.Lazy%601.%23ctor%28System.Threading.LazyThreadSafetyMode%29> e <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Threading.LazyThreadSafetyMode%29> construtores podem duplicar a funcionalidade de outros construtores. A tabela a seguir mostra os valores de parâmetro que produzem um comportamento equivalente.  
+  
+|Para criar um <xref:System.Lazy%601> objeto|Para construtores que têm um `LazyThreadSafetyMode` `mode` parâmetro, defina `mode` para|Para construtores que têm um valor booleano `isThreadSafe` parâmetro, defina `isThreadSafe` para|Para construtores sem parâmetros de segurança de thread|  
+|-------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|-------------------------------------------------------|  
+|Totalmente thread-safe; usa bloqueio para garantir que apenas um thread inicializa o valor.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Todos os construtores de tais totalmente são thread-safe.|  
+|Não thread-safe.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Não aplicável.|  
+|Totalmente thread-safe; corrida de threads para inicializar o valor.|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|Não aplicável.|Não aplicável.|  
+  
+ **Outros recursos** para obter informações sobre o uso de <xref:System.Lazy%601> com campos de thread estático, ou como o repositório de backup para as propriedades, consulte [inicialização lenta](~/docs/framework/performance/lazy-initialization.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso da <xref:System.Lazy%601> classe para fornecer a inicialização lenta com acesso de vários threads.  
+  
+> [!NOTE]
+>  O exemplo usa o <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%29> construtor. Ele também demonstra o uso do <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Boolean%29> construtor (especificando `true` para `isThreadSafe`) e o <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Threading.LazyThreadSafetyMode%29> construtor (especificando <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> para `mode`). Para alternar para um construtor diferente, basta altere quais construtores são comentadas.  
+>   
+>  Para obter um exemplo que demonstra a exceção de cache usando os mesmo construtores, consulte o <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%29> construtor.  
+  
+ O exemplo define uma classe `LargeObject` que será inicializada lentamente por um dos vários threads. As quatro seções principais de código ilustram a criação de inicializador, o método de fábrica, a inicialização real e o construtor do `LargeObject` classe, que exibe uma mensagem quando o objeto é criado. No início do método `Main`, o exemplo cria o inicializador thread-safe lento para `LargeObject`:  
+  
+ [!code-csharp[System.Lazy\`1#NewLazy](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1/cs/example.cs#newlazy)]
+ [!code-vb[System.Lazy\`1#NewLazy](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1/vb/example.vb#newlazy)]  
+  
+ O método de fábrica mostra a criação do objeto, com um espaço reservado para inicialização adicional:  
+  
+ [!code-csharp[System.Lazy\`1#FactoryFunc](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1/cs/example.cs#factoryfunc)]
+ [!code-vb[System.Lazy\`1#FactoryFunc](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1/vb/example.vb#factoryfunc)]  
+  
+ Observe que as seções de duas primeiras código poderiam ser combinadas usando uma função lambda, conforme mostrado aqui:  
+  
+ [!code-csharp[System.Lazy\`1#InitWithLambda](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1/cs/lambda.cs#initwithlambda)]
+ [!code-vb[System.Lazy\`1#InitWithLambda](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1/vb/lambda.vb#initwithlambda)]  
+  
+ O exemplo faz uma pausa, para indicar que um período indeterminado pode decorrer antes da inicialização lenta. Quando você pressiona o **Enter** chave, o exemplo cria e inicia três threads. O `ThreadProc` método que é usado por todas as chamadas de três threads a <xref:System.Lazy%601.Value%2A> propriedade. Na primeira vez que isso acontecer, o `LargeObject` instância é criada:  
+  
+ [!code-csharp[System.Lazy\`1#ValueProp](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1/cs/example.cs#valueprop)]
+ [!code-vb[System.Lazy\`1#ValueProp](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1/vb/example.vb#valueprop)]  
+  
+ O construtor do `LargeObject` classe, que inclui a última seção chave do código, exibe uma mensagem e registra a identidade do thread de inicialização. A saída do programa é exibido no final da listagem de código completo.  
+  
+ [!code-csharp[System.Lazy\`1#LargeCtor](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1/cs/example.cs#largector)]
+ [!code-vb[System.Lazy\`1#LargeCtor](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1/vb/example.vb#largector)]  
+  
+> [!NOTE]
+>  Para simplificar, este exemplo usa uma instância global de <xref:System.Lazy%601>, e todos os métodos são `static` (`Shared` no Visual Basic). Estes não são requisitos para o uso da inicialização lenta.  
+  
+ [!code-csharp[System.Lazy\`1#All](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1/cs/example.cs#all)]
+ [!code-vb[System.Lazy\`1#All](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1/vb/example.vb#all)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Por padrão, todos os membros protegidos e públicos do <see cref="T:System.Lazy`1" /> classe é thread-safe e podem ser usados simultaneamente em vários threads. Essas garantias de segurança do thread podem ser removidas, opcionalmente e por instância, usando parâmetros para construtores de tipo.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Lazy`1" />. Quando ocorre a inicialização lenta, o construtor padrão do tipo de destino é usado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância que é criada com esse construtor pode ser usada simultaneamente de vários threads.  
+  
+ O modo de segurança do thread de um <xref:System.Lazy%601> instância é inicializada com esse construtor é <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType>. O modo thread-safe descreve o comportamento quando vários threads tentam inicializar a instância de <xref:System.Lazy%601>.  
+  
+ Um <xref:System.Lazy%601> instância que é criada com esse construtor não armazena em cache exceções. Para obter mais informações, consulte a classe <xref:System.Lazy%601> ou a enumeração <xref:System.Threading.LazyThreadSafetyMode?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor. Ele também ilustra o uso do <xref:System.Lazy%601.%23ctor%28System.Boolean%29> construtor (especificando `true` para `isThreadSafe`) e o <xref:System.Lazy%601.%23ctor%28System.Threading.LazyThreadSafetyMode%29> construtor (especificando <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> para `mode`). Para alternar para um construtor diferente, basta altere quais construtores são comentadas.  
+  
+ O exemplo define uma classe `LargeObject` que será inicializada lentamente por um dos vários threads. As duas linhas de chave de código neste exemplo são a criação de inicializador e a inicialização real. No início do método `Main`, o exemplo cria o inicializador thread-safe lento para `LargeObject`:  
+  
+ [!code-csharp[System.Lazy\`1.ctor#NewLazy](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctor/cs/example.cs#newlazy)]
+ [!code-vb[System.Lazy\`1.ctor#NewLazy](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctor/vb/example.vb#newlazy)]  
+  
+ O exemplo cria e inicia três threads bloqueiam um <xref:System.Threading.ManualResetEvent> do objeto, para que o exemplo pode liberar os threads ao mesmo tempo. O `ThreadProc` método que é usado por todas as chamadas de três threads a <xref:System.Lazy%601.Value%2A> propriedade para obter o `LargeObject` instância:  
+  
+ [!code-csharp[System.Lazy\`1.ctor#ValueProp](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctor/cs/example.cs#valueprop)]
+ [!code-vb[System.Lazy\`1.ctor#ValueProp](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctor/vb/example.vb#valueprop)]  
+  
+ O <xref:System.Lazy%601> classe fornece o bloqueio, para que apenas um thread tem permissão para criar o `LargeObject` instância. O exemplo demonstra que os threads todos obtenham a mesma instância.  
+  
+> [!NOTE]
+>  Para simplificar, este exemplo usa uma instância global de <xref:System.Lazy%601>, e todos os métodos são `static` (`Shared` no Visual Basic). Estes não são requisitos para o uso da inicialização lenta.  
+  
+ [!code-csharp[System.Lazy\`1.ctor#All](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctor/cs/example.cs#all)]
+ [!code-vb[System.Lazy\`1.ctor#All](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctor/vb/example.vb#all)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (bool isThreadSafe);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isThreadSafe) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`1.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isThreadSafe" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isThreadSafe">
+          <see langword="true" /> para tornar essa instância utilizável simultaneamente por vários threads; <see langword="false" /> para torná-la utilizável por apenas um thread por vez.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Lazy`1" />. Quando ocorre a inicialização lenta, o construtor padrão do tipo de destino e o modo de inicialização especificado são usados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modo de segurança do thread de um <xref:System.Lazy%601> instância é inicializada com esse construtor é <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> se `isThreadSafe` é `true`; caso contrário, o modo é <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. O modo thread-safe descreve o comportamento quando vários threads tentam inicializar a instância de <xref:System.Lazy%601>. Para especificar o <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> modo, use o <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Threading.LazyThreadSafetyMode%29> ou <xref:System.Lazy%601.%23ctor%28System.Threading.LazyThreadSafetyMode%29> construtor.  
+  
+ Um <xref:System.Lazy%601> instância que é criada com esse construtor não armazena em cache exceções. Para obter mais informações, consulte a classe <xref:System.Lazy%601> ou a enumeração <xref:System.Threading.LazyThreadSafetyMode?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor para criar um inicializador lento que não é thread-safe, para cenários em que todo o acesso ao objeto inicializado lentamente ocorre no mesmo thread. Ele também demonstra o uso do <xref:System.Lazy%601.%23ctor%28System.Threading.LazyThreadSafetyMode%29> construtor (especificando <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> para `mode`. Para alternar para um construtor diferente, basta altere qual construtor é comentada.  
+  
+> [!NOTE]
+>  Para o código que demonstra como usar o construtor em cenários com vários segmentos (especificando `true` para `isThreadSafe`), consulte o exemplo para o <xref:System.Lazy%601.%23ctor> construtor.  
+  
+ O exemplo define um `LargeObject` classe será inicializado lentamente. No `Main` método, o exemplo cria um <xref:System.Lazy%601> instância e, em seguida, pausa. Quando você pressiona o **Enter** chave, o exemplo acessa o <xref:System.Lazy%601.Value%2A> propriedade o <xref:System.Lazy%601> instância, o que faz com que a inicialização ocorra. O construtor do `LargeObject` classe exibe uma mensagem de console.  
+  
+> [!NOTE]
+>  Para simplificar, este exemplo usa uma instância global de <xref:System.Lazy%601>, e todos os métodos são `static` (`Shared` no Visual Basic). Estes não são requisitos para o uso da inicialização lenta.  
+  
+ [!code-csharp[System.Lazy\`1.ctorBool#All](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorbool/cs/example.cs#all)]
+ [!code-vb[System.Lazy\`1.ctorBool#All](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorbool/vb/example.vb#all)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (Func&lt;T&gt; valueFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`1&lt;!T&gt; valueFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`1.#ctor(System.Func{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valueFactory" Type="System.Func&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="valueFactory">O delegado que é invocado para produzir o valor inicializado de forma lenta quando for necessário.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Lazy`1" />. Quando ocorre uma inicialização lenta, a função de inicialização especificada é usada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância que é criada com esse construtor pode ser usada simultaneamente de vários threads.  
+  
+ O modo de segurança do thread de um <xref:System.Lazy%601> instância é inicializada com esse construtor é <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType>. O modo thread-safe descreve o comportamento quando vários threads tentam inicializar a instância de <xref:System.Lazy%601>.  
+  
+ Exceções geradas por `valueFactory` são armazenados em cache. Para obter mais informações, consulte a classe <xref:System.Lazy%601> ou a enumeração <xref:System.Threading.LazyThreadSafetyMode?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor para fornecer a inicialização lenta com o cache de exceção. Ele também demonstra o uso do <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Boolean%29> construtor (especificando `true` para `isThreadSafe`) e o <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Threading.LazyThreadSafetyMode%29> construtor (especificando <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> para `mode`). Para alternar para um construtor diferente, basta altere quais construtores são comentadas.  
+  
+ O exemplo define uma classe `LargeObject` que será inicializada lentamente por um dos vários threads. As três seções principais de código ilustram a criação de inicializador, a inicialização real e o construtor do `LargeObject` classe, que demonstra o cache de exceções. No início do método `Main`, o exemplo cria o inicializador thread-safe lento para `LargeObject`:  
+  
+ [!code-csharp[System.Lazy\`1.ctorFunc#NewLazy](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfunc/cs/example.cs#newlazy)]
+ [!code-vb[System.Lazy\`1.ctorFunc#NewLazy](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfunc/vb/example.vb#newlazy)]  
+  
+ O exemplo cria e inicia três threads. O `ThreadProc` método que é usado por todas as chamadas de três threads a <xref:System.Lazy%601.Value%2A> propriedade para obter o `LargeObject` instância:  
+  
+ [!code-csharp[System.Lazy\`1.ctorFunc#ValueProp](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfunc/cs/example.cs#valueprop)]
+ [!code-vb[System.Lazy\`1.ctorFunc#ValueProp](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfunc/vb/example.vb#valueprop)]  
+  
+ No construtor do `LargeObject` classe, a terceira seção chave do código lança uma exceção na primeira vez um `LargeObject` instância é criada, mas depois disso permite a criação da instância:  
+  
+ [!code-csharp[System.Lazy\`1.ctorFunc#LargeCtor](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfunc/cs/example.cs#largector)]
+ [!code-vb[System.Lazy\`1.ctorFunc#LargeCtor](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfunc/vb/example.vb#largector)]  
+  
+ Quando o exemplo for executado, o primeiro thread que tenta criar uma instância de `LargeObject` falhará e a exceção é capturado. Você pode esperar que o próximo segmento seria criar com êxito uma instância, mas o <xref:System.Lazy%601> objeto armazenou em cache a exceção. Por isso, todos os três threads geram a exceção.  
+  
+> [!NOTE]
+>  Para simplificar, este exemplo usa uma instância global de <xref:System.Lazy%601>, e todos os métodos são `static` (`Shared` no Visual Basic). Estes não são requisitos para o uso da inicialização lenta.  
+  
+ [!code-csharp[System.Lazy\`1.ctorFunc#All](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfunc/cs/example.cs#all)]
+ [!code-vb[System.Lazy\`1.ctorFunc#All](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfunc/vb/example.vb#all)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="valueFactory" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (System.Threading.LazyThreadSafetyMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Threading.LazyThreadSafetyMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`1.#ctor(System.Threading.LazyThreadSafetyMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Threading.LazyThreadSafetyMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Um dos valores de enumeração que especifica o modo de acesso thread-safe.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Lazy`1" /> que usa o construtor padrão de <paramref name="T" /> e o modo de acesso thread-safe especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modo de segurança do thread de um <xref:System.Lazy%601> instância descreve o comportamento quando vários threads tentarem inicializar o <xref:System.Lazy%601> instância.  
+  
+ Um <xref:System.Lazy%601> instância que é criada com esse construtor não armazena em cache exceções. Para obter mais informações, consulte a classe <xref:System.Lazy%601> ou a enumeração <xref:System.Threading.LazyThreadSafetyMode?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor para criar um inicializador lento que permite que vários threads disputem para criar um objeto lentamente. Vários threads podem ter êxito na criação de instâncias, mas todos os threads de usam a instância que foi criada pela primeira vez.  
+  
+> [!NOTE]
+>  Para obter um exemplo que demonstra como usar o construtor em cenários de thread único (especificando <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> para `mode`), consulte o <xref:System.Lazy%601.%23ctor%28System.Boolean%29> construtor. Para obter um exemplo que demonstra como usar o construtor para fornecer bloqueio em vez de condições de corrida em cenários com vários segmentos (especificando <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> para `mode`), consulte o <xref:System.Lazy%601.%23ctor> construtor.  
+  
+ O exemplo define um `LargeObject` classe será inicializado lentamente por qualquer um dos vários threads. As três seções principais de código ilustram a criação do inicializador, a inicialização real e o construtor e o finalizador do `LargeObject` classe. No início do `Main` método, o exemplo cria o <xref:System.Lazy%601> objeto que executa a inicialização lenta do `LargeObject`:  
+  
+ [!code-csharp[System.Lazy\`1.ctorLTSM#NewLazy](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorltsm/cs/example.cs#newlazy)]
+ [!code-vb[System.Lazy\`1.ctorLTSM#NewLazy](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorltsm/vb/example.vb#newlazy)]  
+  
+ O exemplo cria e inicia três threads bloqueiam um <xref:System.Threading.ManualResetEvent> do objeto, para que o exemplo pode liberar os threads ao mesmo tempo. No `ThreadProc` método que é usado por todos os três threads, chamando o <xref:System.Lazy%601.Value%2A> propriedade cria o `LargeObject` instância:  
+  
+ [!code-csharp[System.Lazy\`1.ctorLTSM#ValueProp](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorltsm/cs/example.cs#valueprop)]
+ [!code-vb[System.Lazy\`1.ctorLTSM#ValueProp](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorltsm/vb/example.vb#valueprop)]  
+  
+ Porque o construtor para o <xref:System.Lazy%601> instância especificada <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType>, todos os três threads têm permissão para criar `LargeObject` instâncias. O exemplo demonstra isso exibindo mensagens de console no construtor e no finalizador do `LargeObject` classe:  
+  
+ [!code-csharp[System.Lazy\`1.ctorLTSM#CtorFinalizer](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorltsm/cs/example.cs#ctorfinalizer)]
+ [!code-vb[System.Lazy\`1.ctorLTSM#CtorFinalizer](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorltsm/vb/example.vb#ctorfinalizer)]  
+  
+ No entanto, o <xref:System.Lazy%601> objeto garante que apenas uma instância é usada por todos os threads. A saída do exemplo mostra que todos os três threads usam a mesma instância e também mostra que as duas instâncias podem ser recuperadas pela coleta de lixo.  
+  
+> [!NOTE]
+>  Para simplificar, este exemplo usa uma instância global de <xref:System.Lazy%601>, e todos os métodos são `static` (`Shared` no Visual Basic). Estes não são requisitos para o uso da inicialização lenta.  
+  
+ [!code-csharp[System.Lazy\`1.ctorLTSM#All](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorltsm/cs/example.cs#all)]
+ [!code-vb[System.Lazy\`1.ctorLTSM#All](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorltsm/vb/example.vb#all)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> contém um valor inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (Func&lt;T&gt; valueFactory, bool isThreadSafe);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`1&lt;!T&gt; valueFactory, bool isThreadSafe) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`1.#ctor(System.Func{`0},System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valueFactory" Type="System.Func&lt;T&gt;" />
+        <Parameter Name="isThreadSafe" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="valueFactory">O delegado que é invocado para produzir o valor inicializado de forma lenta quando for necessário.</param>
+        <param name="isThreadSafe">
+          <see langword="true" /> para tornar essa instância utilizável simultaneamente por vários threads; <see langword="false" /> para tornar essa instância utilizável por apenas um thread por vez.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Lazy`1" />. Quando ocorre a inicialização lenta, a função de inicialização especificada e o modo de inicialização são usados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modo de segurança do thread de um <xref:System.Lazy%601> instância é inicializada com esse construtor é <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> se `isThreadSafe` é `true`; caso contrário, o modo é <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. O modo thread-safe descreve o comportamento quando vários threads tentam inicializar a instância de <xref:System.Lazy%601>.  
+  
+ Para especificar o <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> modo, use o <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Threading.LazyThreadSafetyMode%29> ou <xref:System.Lazy%601.%23ctor%28System.Threading.LazyThreadSafetyMode%29> construtor.  
+  
+ Exceções geradas por `valueFactory` são armazenados em cache. Para obter mais informações, consulte a classe <xref:System.Lazy%601> ou a enumeração <xref:System.Threading.LazyThreadSafetyMode?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor para fornecer a inicialização lenta com a exceção de armazenamento em cache, em um cenário com um único thread. Ele também demonstra o uso do <xref:System.Lazy%601.%23ctor%2A> construtor (especificando <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> para `mode`). Para alternar para esse construtor, basta altere qual construtor é comentada.  
+  
+> [!NOTE]
+>  Para o código que demonstra como usar o construtor em cenários com vários segmentos (especificando `true` para `isThreadSafe`), consulte o exemplo para o <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%29> construtor.  
+  
+ O exemplo define uma classe `LargeObject` que será inicializada lentamente por um dos vários threads. As três seções principais de código ilustram a criação de inicializador, a inicialização real e o construtor do `LargeObject` classe, que demonstra o cache de exceções. No início do método `Main`, o exemplo cria o inicializador thread-safe lento para `LargeObject`:  
+  
+ [!code-csharp[System.Lazy\`1.ctorFuncBool#NewLazy](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfuncbool/cs/example.cs#newlazy)]
+ [!code-vb[System.Lazy\`1.ctorFuncBool#NewLazy](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfuncbool/vb/example.vb#newlazy)]  
+  
+ Na chamada para o construtor de `isThreadSafe` parâmetro é `false`, portanto, o <xref:System.Lazy%601> não é thread-safe. Porque ele não é thread-safe, o exemplo chama o <xref:System.Lazy%601.Value%2A> propriedade três vezes no mesmo thread:  
+  
+ [!code-csharp[System.Lazy\`1.ctorFuncBool#ValueProp](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfuncbool/cs/example.cs#valueprop)]
+ [!code-vb[System.Lazy\`1.ctorFuncBool#ValueProp](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfuncbool/vb/example.vb#valueprop)]  
+  
+ No construtor do `LargeObject` classe, a terceira seção chave do código lança uma exceção na primeira vez um `LargeObject` instância é criada, mas depois disso permite a criação da instância:  
+  
+ [!code-csharp[System.Lazy\`1.ctorFuncBool#LargeCtor](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfuncbool/cs/example.cs#largector)]
+ [!code-vb[System.Lazy\`1.ctorFuncBool#LargeCtor](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfuncbool/vb/example.vb#largector)]  
+  
+ Quando o exemplo for executado, a primeira tentativa de criar uma instância de `LargeObject` falhará e a exceção é capturado. Você pode esperar que a próxima tentativa terá êxito, mas o <xref:System.Lazy%601> objeto armazenou em cache a exceção. Por isso, todos os três tentativas lançam a exceção.  
+  
+> [!NOTE]
+>  Para simplificar, este exemplo usa uma instância global de <xref:System.Lazy%601>, e todos os métodos são `static` (`Shared` no Visual Basic). Estes não são requisitos para o uso da inicialização lenta.  
+  
+ [!code-csharp[System.Lazy\`1.ctorFuncBool#All](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfuncbool/cs/example.cs#all)]
+ [!code-vb[System.Lazy\`1.ctorFuncBool#All](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfuncbool/vb/example.vb#all)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="valueFactory" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (Func&lt;T&gt; valueFactory, System.Threading.LazyThreadSafetyMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`1&lt;!T&gt; valueFactory, valuetype System.Threading.LazyThreadSafetyMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`1.#ctor(System.Func{`0},System.Threading.LazyThreadSafetyMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valueFactory" Type="System.Func&lt;T&gt;" />
+        <Parameter Name="mode" Type="System.Threading.LazyThreadSafetyMode" />
+      </Parameters>
+      <Docs>
+        <param name="valueFactory">O delegado que é invocado para produzir o valor inicializado de forma lenta quando for necessário.</param>
+        <param name="mode">Um dos valores de enumeração que especifica o modo de acesso thread-safe.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Lazy`1" /> que usa a função de inicialização especificada e o modo de segurança do thread.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modo de segurança do thread de um <xref:System.Lazy%601> instância descreve o comportamento quando vários threads tentarem inicializar o <xref:System.Lazy%601> instância.  
+  
+ Exceções geradas por `valueFactory` são armazenados em cache, a menos que `mode` é <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType>. Para obter mais informações, consulte a classe <xref:System.Lazy%601> ou a enumeração <xref:System.Threading.LazyThreadSafetyMode?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor para criar um inicializador lento que permite que vários threads disputem para criar um objeto lentamente. Vários threads podem ter êxito na criação de instâncias, mas todos os threads de usam a instância que foi criada pela primeira vez. Além disso, o exemplo demonstra que exceções são nunca armazenados em cache quando você especificar <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType>, mesmo se a inicialização é executada por uma função em vez de pelo construtor padrão do tipo lentamente criado.  
+  
+> [!NOTE]
+>  Para obter um exemplo que demonstra como usar o construtor em cenários de thread único (especificando <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> para `mode`), consulte o <xref:System.Lazy%601.%23ctor%28System.Boolean%29> construtor. Para obter um exemplo que demonstra como usar o construtor para fornecer bloqueio em vez de condições de corrida em cenários com vários segmentos (especificando <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> para `mode`), consulte o <xref:System.Lazy%601.%23ctor> construtor.  
+  
+ O exemplo define um `LargeObject` classe será inicializado lentamente por qualquer um dos vários threads. As quatro seções principais de código ilustram a criação do inicializador, a inicialização real, a função de inicialização e o construtor e o finalizador do `LargeObject` classe. No início do `Main` método, o exemplo cria o <xref:System.Lazy%601> objeto que executa a inicialização lenta do `LargeObject`:  
+  
+ [!code-csharp[System.Lazy\`1.ctorFuncLTSM#NewLazy](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfuncltsm/cs/example.cs#newlazy)]
+ [!code-vb[System.Lazy\`1.ctorFuncLTSM#NewLazy](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfuncltsm/vb/example.vb#newlazy)]  
+  
+ O inicializador lento usa uma função para executar a inicialização. Nesse caso, uma função é necessária porque não há nenhum construtor padrão para o `LargeObject` classe.  
+  
+ O exemplo cria e inicia três threads bloqueiam um <xref:System.Threading.ManualResetEvent> do objeto, para que o exemplo pode liberar os threads ao mesmo tempo. No `ThreadProc` método que é usado por todos os três threads, chamando o <xref:System.Lazy%601.Value%2A> propriedade cria o `LargeObject` instância:  
+  
+ [!code-csharp[System.Lazy\`1.ctorFuncLTSM#ValueProp](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfuncltsm/cs/example.cs#valueprop)]
+ [!code-vb[System.Lazy\`1.ctorFuncLTSM#ValueProp](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfuncltsm/vb/example.vb#valueprop)]  
+  
+ Na seção terceira chave de código, a função de inicialização lenta é chamada para criar o `LargeObject` instância. A função gera um tempo de exceção na primeira chamada:  
+  
+ [!code-csharp[System.Lazy\`1.ctorFuncLTSM#FactoryFunc](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfuncltsm/cs/example.cs#factoryfunc)]
+ [!code-vb[System.Lazy\`1.ctorFuncLTSM#FactoryFunc](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfuncltsm/vb/example.vb#factoryfunc)]  
+  
+ Com qualquer outro <xref:System.Threading.LazyThreadSafetyMode> configuração, uma exceção sem tratamento na função de inicialização deve ser armazenado em cache. No entanto, <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> suprime o cache de exceções. A saída do exemplo demonstra uma tentativa subsequente para inicializar o objeto for bem-sucedida.  
+  
+> [!NOTE]
+>  A mensagem de exceção normalmente aparece depois mensagens indicando que outros threads tiveram inicializado com êxito o objeto. Isso ocorre devido o atraso introduzido pela lançamento e captura a exceção.  
+  
+ Porque o construtor para o <xref:System.Lazy%601> instância especificada <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType>, todos os três threads têm permissão para criar `LargeObject` instâncias. O exemplo demonstra isso exibindo mensagens de console no construtor e no finalizador do `LargeObject` classe:  
+  
+ [!code-csharp[System.Lazy\`1.ctorFuncLTSM#CtorFinalizer](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfuncltsm/cs/example.cs#ctorfinalizer)]
+ [!code-vb[System.Lazy\`1.ctorFuncLTSM#CtorFinalizer](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfuncltsm/vb/example.vb#ctorfinalizer)]  
+  
+ O <xref:System.Lazy%601> objeto garante que apenas uma instância é usada por todos os threads (exceto o thread em que a função de inicialização gera uma exceção). A saída do exemplo mostra isso.  
+  
+> [!NOTE]
+>  Para simplificar, este exemplo usa uma instância global de <xref:System.Lazy%601>, e todos os métodos são `static` (`Shared` no Visual Basic). Estes não são requisitos para o uso da inicialização lenta.  
+  
+ [!code-csharp[System.Lazy\`1.ctorFuncLTSM#All](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.lazy`1.ctorfuncltsm/cs/example.cs#all)]
+ [!code-vb[System.Lazy\`1.ctorFuncLTSM#All](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.lazy`1.ctorfuncltsm/vb/example.vb#all)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> contém um valor inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="valueFactory" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValueCreated">
+      <MemberSignature Language="C#" Value="public bool IsValueCreated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValueCreated" />
+      <MemberSignature Language="DocId" Value="P:System.Lazy`1.IsValueCreated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um valor foi criado para essa instância <see cref="T:System.Lazy`1" />.</summary>
+        <value>
+          <see langword="true" /> se um valor foi criado para essa instância <see cref="T:System.Lazy`1" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a inicialização lenta ocorre para um <xref:System.Lazy%601> instância, ele pode resultar em um valor que está sendo criado ou uma exceção sendo lançada. Se uma exceção for lançado, subsequente comportamento da <xref:System.Lazy%601> instância depende se o cache de exceção está em vigor. Se o <xref:System.Lazy%601> instância foi criada usando um construtor que não especifica uma função de inicialização e cache de exceções não está em vigor. Uma tentativa subsequente para inicializar o <xref:System.Lazy%601> pode ter êxito e depois da inicialização bem-sucedida do <xref:System.Lazy%601.IsValueCreated%2A> propriedade retorna `true`. Se o <xref:System.Lazy%601> instância foi criada com uma função de inicialização (especificado pelo `valueFactory` parâmetro do <xref:System.Lazy%601> construtor), e em seguida, o cache de exceção é controlado pelo modo de segurança de thread.  
+  
+-   Se o modo for <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> ou <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, não há nenhuma possibilidade de segundo para inicializar o <xref:System.Lazy%601> instância. Se uma exceção ocorre e sem tratamento na função de inicialização, essa exceção é armazenado em cache e relançada em acessos subsequentes do <xref:System.Lazy%601.Value%2A?displayProperty=nameWithType> propriedade. Nenhum valor é criado se uma exceção for lançada, isso em tais casos <xref:System.Lazy%601.IsValueCreated%2A> retorna `false`.  
+  
+-   Se o modo for <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType>, o primeiro thread êxito executando a função de inicialização (ou o construtor padrão) cria o valor para a <xref:System.Lazy%601> instância. Se a função de inicialização lançar uma exceção em um thread, outros threads ainda podem tentar inicializar o <xref:System.Lazy%601> instância. Até que o valor é criado, o <xref:System.Lazy%601.IsValueCreated%2A> propriedade retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`1.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma representação de cadeia de caracteres da <see cref="P:System.Lazy`1.Value" /> propriedade para essa instância.</summary>
+        <returns>O resultado da chamada de <see cref="M:System.Object.ToString" /> método no <see cref="P:System.Lazy`1.Value" /> propriedade nessa instância, se o valor tiver sido criado (ou seja, se o <see cref="P:System.Lazy`1.IsValueCreated" /> propriedade retorna <see langword="true" />). Caso contrário, uma cadeia de caracteres que indica se o valor não foi criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método não faz com que a inicialização.  
+  
+ O <xref:System.Lazy%601.Value%2A?displayProperty=nameWithType> propriedade pode ser `null` após a inicialização lenta se o método de fábrica que foi especificado para o `valueFactory` parâmetro o <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%29>, <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Threading.LazyThreadSafetyMode%29>, ou <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Boolean%29> construtor retorna `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">A propriedade <see cref="P:System.Lazy`1.Value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public T Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Value" />
+      <MemberSignature Language="DocId" Value="P:System.Lazy`1.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de inicialização ociosa do atual <see cref="T:System.Lazy`1" /> instância.</summary>
+        <value>O valor de inicialização ociosa do atual <see cref="T:System.Lazy`1" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Lazy%601.IsValueCreated%2A?displayProperty=nameWithType> é de propriedade `false`, acessando o <xref:System.Lazy%601.Value%2A> propriedade força a inicialização.  
+  
+ Além de exceções que são listadas, o <xref:System.Lazy%601.Value%2A> propriedade pode acionar qualquer exceção que é lançada pelo método de fábrica que foi passado para o `valueFactory` parâmetro o <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%29>, <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Threading.LazyThreadSafetyMode%29>, ou <xref:System.Lazy%601.%23ctor%28System.Func%7B%600%7D%2CSystem.Boolean%29> construtor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">O <see cref="T:System.Lazy`1" /> instância é inicializada para usar o construtor padrão do tipo que está sendo inicializado lentamente e permissões para acessar o construtor estão ausentes.</exception>
+        <exception cref="T:System.MissingMemberException">O <see cref="T:System.Lazy`1" /> instância é inicializada para usar o construtor padrão do tipo que está sendo inicializado lentamente e esse tipo não tem um construtor público sem parâmetros.</exception>
+        <exception cref="T:System.InvalidOperationException">A função de inicialização tenta acessar <see cref="P:System.Lazy`1.Value" /> nessa instância.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

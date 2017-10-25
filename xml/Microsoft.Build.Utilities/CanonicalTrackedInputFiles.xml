@@ -1,0 +1,480 @@
+<Type Name="CanonicalTrackedInputFiles" FullName="Microsoft.Build.Utilities.CanonicalTrackedInputFiles">
+  <TypeSignature Language="C#" Value="public class CanonicalTrackedInputFiles" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CanonicalTrackedInputFiles extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.CanonicalTrackedInputFiles" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe é o interpretador de log filetracking para .read. logs de rastreamento em forma canônica ou aqueles que foram com raiz (^) para torná-los canônico</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanonicalTrackedInputFiles (Microsoft.Build.Framework.ITaskItem[] tlogFiles, Microsoft.Build.Framework.ITaskItem[] sourceFiles, Microsoft.Build.Utilities.CanonicalTrackedOutputFiles outputs, bool useMinimalRebuildOptimization, bool maintainCompositeRootingMarkers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITaskItem[] tlogFiles, class Microsoft.Build.Framework.ITaskItem[] sourceFiles, class Microsoft.Build.Utilities.CanonicalTrackedOutputFiles outputs, bool useMinimalRebuildOptimization, bool maintainCompositeRootingMarkers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.#ctor(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Utilities.CanonicalTrackedOutputFiles,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tlogFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="sourceFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="outputs" Type="Microsoft.Build.Utilities.CanonicalTrackedOutputFiles" />
+        <Parameter Name="useMinimalRebuildOptimization" Type="System.Boolean" />
+        <Parameter Name="maintainCompositeRootingMarkers" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="tlogFiles">.Read. arquivos de tlog para interpretar</param>
+        <param name="sourceFiles">Os arquivos de fonte primária cujas dependências devem ser interpretadas</param>
+        <param name="outputs">Os arquivos de saída produzidos pela compilação deste conjunto de fontes</param>
+        <param name="useMinimalRebuildOptimization">AVISO: A otimização de recompilação mínima requer a especificação de saídas computadas 100% precisas!</param>
+        <param name="maintainCompositeRootingMarkers">Verdadeiro para manter marcadores de raiz compostos (caso de muitos-para-um) ou falso para rasgá-los (caso de um-para-um ou de um-para-muitos)</param>
+        <summary>Construtor para vários arquivos de fonte de entrada</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanonicalTrackedInputFiles (Microsoft.Build.Framework.ITaskItem[] tlogFiles, Microsoft.Build.Framework.ITaskItem[] sourceFiles, Microsoft.Build.Framework.ITaskItem[] excludedInputPaths, Microsoft.Build.Utilities.CanonicalTrackedOutputFiles outputs, bool useMinimalRebuildOptimization, bool maintainCompositeRootingMarkers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITaskItem[] tlogFiles, class Microsoft.Build.Framework.ITaskItem[] sourceFiles, class Microsoft.Build.Framework.ITaskItem[] excludedInputPaths, class Microsoft.Build.Utilities.CanonicalTrackedOutputFiles outputs, bool useMinimalRebuildOptimization, bool maintainCompositeRootingMarkers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.#ctor(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Utilities.CanonicalTrackedOutputFiles,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tlogFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="sourceFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="excludedInputPaths" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="outputs" Type="Microsoft.Build.Utilities.CanonicalTrackedOutputFiles" />
+        <Parameter Name="useMinimalRebuildOptimization" Type="System.Boolean" />
+        <Parameter Name="maintainCompositeRootingMarkers" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="tlogFiles">.Read. arquivos de tlog para interpretar</param>
+        <param name="sourceFiles">Os arquivos de fonte primária cujas dependências devem ser interpretadas</param>
+        <param name="excludedInputPaths">O conjunto de caminhos que contêm arquivos que devem ser ignorados durante a verificação atualizada</param>
+        <param name="outputs">Os arquivos de saída produzidos pela compilação deste conjunto de fontes</param>
+        <param name="useMinimalRebuildOptimization">AVISO: A otimização de recompilação mínima requer a especificação de saídas computadas 100% precisas!</param>
+        <param name="maintainCompositeRootingMarkers">Verdadeiro para manter marcadores de raiz compostos (caso de muitos-para-um) ou falso para rasgá-los (caso de um-para-um ou de um-para-muitos)</param>
+        <summary>Construtor para vários arquivos de fonte de entrada</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanonicalTrackedInputFiles (Microsoft.Build.Framework.ITask ownerTask, Microsoft.Build.Framework.ITaskItem[] tlogFiles, Microsoft.Build.Framework.ITaskItem sourceFile, Microsoft.Build.Framework.ITaskItem[] excludedInputPaths, Microsoft.Build.Utilities.CanonicalTrackedOutputFiles outputs, bool useMinimalRebuildOptimization, bool maintainCompositeRootingMarkers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITask ownerTask, class Microsoft.Build.Framework.ITaskItem[] tlogFiles, class Microsoft.Build.Framework.ITaskItem sourceFile, class Microsoft.Build.Framework.ITaskItem[] excludedInputPaths, class Microsoft.Build.Utilities.CanonicalTrackedOutputFiles outputs, bool useMinimalRebuildOptimization, bool maintainCompositeRootingMarkers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Utilities.CanonicalTrackedOutputFiles,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerTask" Type="Microsoft.Build.Framework.ITask" />
+        <Parameter Name="tlogFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="sourceFile" Type="Microsoft.Build.Framework.ITaskItem" />
+        <Parameter Name="excludedInputPaths" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="outputs" Type="Microsoft.Build.Utilities.CanonicalTrackedOutputFiles" />
+        <Parameter Name="useMinimalRebuildOptimization" Type="System.Boolean" />
+        <Parameter Name="maintainCompositeRootingMarkers" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ownerTask">A tarefa que está usando o controlador de arquivos</param>
+        <param name="tlogFiles">.Read. arquivos de tlog para interpretar</param>
+        <param name="sourceFile">O arquivo de origem primário para interpretar as dependências para</param>
+        <param name="excludedInputPaths">O conjunto de caminhos que contêm arquivos que devem ser ignorados durante a verificação atualizada</param>
+        <param name="outputs">Os arquivos de saída produzidos por compilar esta fonte</param>
+        <param name="useMinimalRebuildOptimization">AVISO: A otimização de recompilação mínima requer a especificação de saídas computadas 100% precisas!</param>
+        <param name="maintainCompositeRootingMarkers">Verdadeiro para manter marcadores de raiz compostos (caso de muitos-para-um) ou falso para rasgá-los (caso de um-para-um ou de um-para-muitos)</param>
+        <summary>Construtor para um arquivo de origem de entrada único</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanonicalTrackedInputFiles (Microsoft.Build.Framework.ITask ownerTask, Microsoft.Build.Framework.ITaskItem[] tlogFiles, Microsoft.Build.Framework.ITaskItem[] sourceFiles, Microsoft.Build.Framework.ITaskItem[] excludedInputPaths, Microsoft.Build.Framework.ITaskItem[] outputs, bool useMinimalRebuildOptimization, bool maintainCompositeRootingMarkers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITask ownerTask, class Microsoft.Build.Framework.ITaskItem[] tlogFiles, class Microsoft.Build.Framework.ITaskItem[] sourceFiles, class Microsoft.Build.Framework.ITaskItem[] excludedInputPaths, class Microsoft.Build.Framework.ITaskItem[] outputs, bool useMinimalRebuildOptimization, bool maintainCompositeRootingMarkers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerTask" Type="Microsoft.Build.Framework.ITask" />
+        <Parameter Name="tlogFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="sourceFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="excludedInputPaths" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="outputs" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="useMinimalRebuildOptimization" Type="System.Boolean" />
+        <Parameter Name="maintainCompositeRootingMarkers" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ownerTask">A tarefa que está usando o controlador de arquivos</param>
+        <param name="tlogFiles">.Read. arquivos de tlog para interpretar</param>
+        <param name="sourceFiles">Os arquivos de fonte primária cujas dependências devem ser interpretadas</param>
+        <param name="excludedInputPaths">O conjunto de caminhos que contêm arquivos que devem ser ignorados durante a verificação atualizada</param>
+        <param name="outputs">Os arquivos de saída produzidos pela compilação deste conjunto de fontes</param>
+        <param name="useMinimalRebuildOptimization">AVISO: A otimização de recompilação mínima requer a especificação de saídas computadas 100% precisas!</param>
+        <param name="maintainCompositeRootingMarkers">Verdadeiro para manter marcadores de raiz compostos (caso de muitos-para-um) ou falso para rasgá-los (caso de um-para-um ou de um-para-muitos)</param>
+        <summary>Construtor para vários arquivos de fonte de entrada</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanonicalTrackedInputFiles (Microsoft.Build.Framework.ITask ownerTask, Microsoft.Build.Framework.ITaskItem[] tlogFiles, Microsoft.Build.Framework.ITaskItem[] sourceFiles, Microsoft.Build.Framework.ITaskItem[] excludedInputPaths, Microsoft.Build.Utilities.CanonicalTrackedOutputFiles outputs, bool useMinimalRebuildOptimization, bool maintainCompositeRootingMarkers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Framework.ITask ownerTask, class Microsoft.Build.Framework.ITaskItem[] tlogFiles, class Microsoft.Build.Framework.ITaskItem[] sourceFiles, class Microsoft.Build.Framework.ITaskItem[] excludedInputPaths, class Microsoft.Build.Utilities.CanonicalTrackedOutputFiles outputs, bool useMinimalRebuildOptimization, bool maintainCompositeRootingMarkers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.#ctor(Microsoft.Build.Framework.ITask,Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Utilities.CanonicalTrackedOutputFiles,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerTask" Type="Microsoft.Build.Framework.ITask" />
+        <Parameter Name="tlogFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="sourceFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="excludedInputPaths" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="outputs" Type="Microsoft.Build.Utilities.CanonicalTrackedOutputFiles" />
+        <Parameter Name="useMinimalRebuildOptimization" Type="System.Boolean" />
+        <Parameter Name="maintainCompositeRootingMarkers" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ownerTask">A tarefa que está usando o controlador de arquivos</param>
+        <param name="tlogFiles">.Read. arquivos de tlog para interpretar</param>
+        <param name="sourceFiles">Os arquivos de fonte primária cujas dependências devem ser interpretadas</param>
+        <param name="excludedInputPaths">O conjunto de caminhos que contêm arquivos que devem ser ignorados durante a verificação atualizada</param>
+        <param name="outputs">Os arquivos de saída produzidos pela compilação deste conjunto de fontes</param>
+        <param name="useMinimalRebuildOptimization">AVISO: A otimização de recompilação mínima requer a especificação de saídas computadas 100% precisas!</param>
+        <param name="maintainCompositeRootingMarkers">Verdadeiro para manter marcadores de raiz compostos (caso de muitos-para-um) ou falso para rasgá-los (caso de um-para-um ou de um-para-muitos)</param>
+        <summary>Construtor para vários arquivos de fonte de entrada</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeSourcesNeedingCompilation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ComputeSourcesNeedingCompilation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Framework.ITaskItem[] ComputeSourcesNeedingCompilation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.ComputeSourcesNeedingCompilation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Esse método computa as fontes que precisam ser compilada com base em arquivos de saída e o gráfico de dependência completa de entradas.</summary>
+        <returns>Matriz de arquivos que precisam ser compilados</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeSourcesNeedingCompilation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] ComputeSourcesNeedingCompilation (bool searchForSubRootsInCompositeRootingMarkers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Framework.ITaskItem[] ComputeSourcesNeedingCompilation(bool searchForSubRootsInCompositeRootingMarkers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.ComputeSourcesNeedingCompilation(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="searchForSubRootsInCompositeRootingMarkers" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="searchForSubRootsInCompositeRootingMarkers">Se true, composta de pesquisa raiz marcadores para subroots.</param>
+        <summary>Esse método computa as fontes que precisam ser compilada com base em arquivos de saída e o gráfico de dependência completa de entradas, pesquisando opcionalmente compostos marcadores raiz para subroots que podem conter arquivos de entrada.</summary>
+        <returns>Matriz de arquivos que precisam ser compilados</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependencyTable">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,System.Collections.Generic.Dictionary&lt;string,string&gt;&gt; DependencyTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class System.Collections.Generic.Dictionary`2&lt;string, string&gt;&gt; DependencyTable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.DependencyTable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma tabela de dependência.</summary>
+        <value>Retorna a tabela de dependência.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileIsExcludedFromDependencyCheck">
+      <MemberSignature Language="C#" Value="public bool FileIsExcludedFromDependencyCheck (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FileIsExcludedFromDependencyCheck(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.FileIsExcludedFromDependencyCheck(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Caminho completo do arquivo para testar</param>
+        <summary>Verifique se o arquivo especificado é excluído da verificação de dependência controlada</summary>
+        <returns>Retorna verdadeiro do arquivo é excluído.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependenciesFromEntryIfMissing">
+      <MemberSignature Language="C#" Value="public void RemoveDependenciesFromEntryIfMissing (Microsoft.Build.Framework.ITaskItem source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependenciesFromEntryIfMissing(class Microsoft.Build.Framework.ITaskItem source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">Fonte que deve ser removida do gráfico</param>
+        <summary>Remova as entradas de gráfico de saída para as fontes indicadas e as saída correspondentes.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependenciesFromEntryIfMissing">
+      <MemberSignature Language="C#" Value="public void RemoveDependenciesFromEntryIfMissing (Microsoft.Build.Framework.ITaskItem[] source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependenciesFromEntryIfMissing(class Microsoft.Build.Framework.ITaskItem[] source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="source">Fontes que devem ser removidas do gráfico</param>
+        <summary>Remova as entradas de gráfico de saída para as fontes indicadas e as saída correspondentes.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependenciesFromEntryIfMissing">
+      <MemberSignature Language="C#" Value="public void RemoveDependenciesFromEntryIfMissing (Microsoft.Build.Framework.ITaskItem source, Microsoft.Build.Framework.ITaskItem correspondingOutput);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependenciesFromEntryIfMissing(class Microsoft.Build.Framework.ITaskItem source, class Microsoft.Build.Framework.ITaskItem correspondingOutput) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem" />
+        <Parameter Name="correspondingOutput" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">Fonte que deve ser removida do gráfico</param>
+        <param name="correspondingOutput">Saídas que correspondem ot as fontes (usadas para processamento do mesmo arquivo)</param>
+        <summary>Remova as entradas de gráfico de saída para as fontes indicadas e as saída correspondentes.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependenciesFromEntryIfMissing">
+      <MemberSignature Language="C#" Value="public void RemoveDependenciesFromEntryIfMissing (Microsoft.Build.Framework.ITaskItem[] source, Microsoft.Build.Framework.ITaskItem[] correspondingOutputs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependenciesFromEntryIfMissing(class Microsoft.Build.Framework.ITaskItem[] source, class Microsoft.Build.Framework.ITaskItem[] correspondingOutputs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependenciesFromEntryIfMissing(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="correspondingOutputs" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="source">Fontes que devem ser removidas do gráfico</param>
+        <param name="correspondingOutputs">Saídas que correspondem ot as fontes (usadas para processamento do mesmo arquivo)</param>
+        <summary>Remova as entradas de gráfico de saída para as fontes indicadas e as saída correspondentes.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependencyFromEntry">
+      <MemberSignature Language="C#" Value="public void RemoveDependencyFromEntry (Microsoft.Build.Framework.ITaskItem source, Microsoft.Build.Framework.ITaskItem dependencyToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependencyFromEntry(class Microsoft.Build.Framework.ITaskItem source, class Microsoft.Build.Framework.ITaskItem dependencyToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependencyFromEntry(Microsoft.Build.Framework.ITaskItem,Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem" />
+        <Parameter Name="dependencyToRemove" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">Fonte que deve ser removida do gráfico</param>
+        <param name="dependencyToRemove">A dependência a ser removida.</param>
+        <summary>Remova as entradas de gráfico de saída para a fonte indicada e as saída correspondentes.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependencyFromEntry">
+      <MemberSignature Language="C#" Value="public void RemoveDependencyFromEntry (Microsoft.Build.Framework.ITaskItem[] sources, Microsoft.Build.Framework.ITaskItem dependencyToRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveDependencyFromEntry(class Microsoft.Build.Framework.ITaskItem[] sources, class Microsoft.Build.Framework.ITaskItem dependencyToRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveDependencyFromEntry(Microsoft.Build.Framework.ITaskItem[],Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sources" Type="Microsoft.Build.Framework.ITaskItem[]" />
+        <Parameter Name="dependencyToRemove" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="sources">Fontes que devem ser removidas do gráfico</param>
+        <param name="dependencyToRemove">A dependência a ser removida.</param>
+        <summary>Remova as entradas de gráfico de saída para as fontes indicadas e as saída correspondentes.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEntriesForSource">
+      <MemberSignature Language="C#" Value="public void RemoveEntriesForSource (Microsoft.Build.Framework.ITaskItem source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveEntriesForSource(class Microsoft.Build.Framework.ITaskItem source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="source">Fonte que deve ser removida do gráfico</param>
+        <summary>Remova as entradas de gráfico de saída para as fontes indicadas e as saída correspondentes.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEntriesForSource">
+      <MemberSignature Language="C#" Value="public void RemoveEntriesForSource (Microsoft.Build.Framework.ITaskItem[] source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveEntriesForSource(class Microsoft.Build.Framework.ITaskItem[] source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveEntriesForSource(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="source">Fontes que devem ser removidas do gráfico</param>
+        <summary>Remove as entradas de gráfico de saída para o determinado fontes e saídas correspondentes.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEntryForSourceRoot">
+      <MemberSignature Language="C#" Value="public void RemoveEntryForSourceRoot (string rootingMarker);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveEntryForSourceRoot(string rootingMarker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.RemoveEntryForSourceRoot(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootingMarker" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="rootingMarker">A raiz a ser removido.</param>
+        <summary>Remove a entrada no gráfico de dependência de entrada correspondente a uma raiz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveTlog">
+      <MemberSignature Language="C#" Value="public void SaveTlog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveTlog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.SaveTlog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Esse método novamente gravar o tlogs da tabela de saída atual novas entradas serão rastreadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveTlog">
+      <MemberSignature Language="C#" Value="public void SaveTlog (Microsoft.Build.Utilities.DependencyFilter includeInTLog);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveTlog(class Microsoft.Build.Utilities.DependencyFilter includeInTLog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.CanonicalTrackedInputFiles.SaveTlog(Microsoft.Build.Utilities.DependencyFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeInTLog" Type="Microsoft.Build.Utilities.DependencyFilter" />
+      </Parameters>
+      <Docs>
+        <param name="includeInTLog">Delegado usado para determinar se um determinado arquivo deve ser incluído no tlog de compactado.</param>
+        <summary>Esse método novamente gravará o tlogs de dependência atual. Como as fontes são compiladas, novas entradas serão rastreadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

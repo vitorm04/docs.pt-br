@@ -1,0 +1,233 @@
+<Type Name="FontEmbeddingRight" FullName="System.Windows.Media.FontEmbeddingRight">
+  <TypeSignature Language="C#" Value="public enum FontEmbeddingRight" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontEmbeddingRight extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.FontEmbeddingRight" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve as permissões especificadas em um arquivo de fonte OpenType de incorporação de fontes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre as fontes OpenType, consulte o **Especificação OpenType** em [http://www.microsoft.com/typography/otspec/](http://www.microsoft.com/typography/otspec/).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Editable">
+      <MemberSignature Language="C#" Value="Editable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight Editable = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.Editable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte pode ser inserida, mas só deve ser instalada temporariamente em outros sistemas. Em comparação com o <see cref="F:System.Windows.Media.FontEmbeddingRight.PreviewAndPrint" /> configuração, documentos que contêm fontes editáveis podem ser abertos para leitura, edição é permitida, e as alterações podem ser salvas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EditableButNoSubsetting">
+      <MemberSignature Language="C#" Value="EditableButNoSubsetting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight EditableButNoSubsetting = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.EditableButNoSubsetting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte pode ser inserida, mas só deve ser instalada temporariamente em outros sistemas. Documentos que contêm a fonte podem ser abertos para leitura, edição é permitida, e as alterações podem ser salvas. A fonte não pode ser subdividida antes da inserção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EditableButNoSubsettingAndWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="EditableButNoSubsettingAndWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight EditableButNoSubsettingAndWithBitmapsOnly = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.EditableButNoSubsettingAndWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte pode ser inserida, mas só deve ser instalada temporariamente em outros sistemas. Documentos que contêm a fonte podem ser abertos para leitura, edição é permitida, e as alterações podem ser salvas. A fonte não pode ser subdividida antes da inserção. Somente os bitmaps contidos na fonte pode ser inseridos. Nenhum dado de estrutura de tópicos pode ser inseridos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EditableButWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="EditableButWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight EditableButWithBitmapsOnly = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.EditableButWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte pode ser inserida, mas só deve ser instalada temporariamente em outros sistemas. Documentos que contêm a fonte podem ser abertos para leitura, edição é permitida, e as alterações podem ser salvas. Somente os bitmaps contidos na fonte pode ser inseridos. Nenhum dado de estrutura de tópicos pode ser inseridos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Installable">
+      <MemberSignature Language="C#" Value="Installable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight Installable = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.Installable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fontes com essa configuração indicam que eles podem ser inseridos e permanentemente instalados no sistema remoto por um aplicativo. O usuário do sistema remoto adquire os direitos idênticos, obrigações e licenças para essa fonte como comprador original da fonte e está sujeito o mesmo contrato de licença do usuário final, direitos autoral, patentes de design, e/ou de marca como era o comprador original.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallableButNoSubsetting">
+      <MemberSignature Language="C#" Value="InstallableButNoSubsetting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight InstallableButNoSubsetting = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.InstallableButNoSubsetting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fontes com essa configuração indicam que eles podem ser inseridos e permanentemente instalados no sistema remoto por um aplicativo. Eles não podem ser subdividida antes da inserção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallableButNoSubsettingAndWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="InstallableButNoSubsettingAndWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight InstallableButNoSubsettingAndWithBitmapsOnly = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.InstallableButNoSubsettingAndWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fontes com essa configuração indicam que eles podem ser inseridos e permanentemente instalados no sistema remoto por um aplicativo. Eles não podem ser subdividida antes da inserção. Somente os bitmaps contidos nas fontes pode ser inseridos. Nenhum dado de estrutura de tópicos pode ser inseridos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InstallableButWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="InstallableButWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight InstallableButWithBitmapsOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.InstallableButWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fontes com essa configuração indicam que eles podem ser inseridos e permanentemente instalados no sistema remoto por um aplicativo. Somente os bitmaps contidos nas fontes pode ser inseridos. Nenhum dado de estrutura de tópicos pode ser inseridos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewAndPrint">
+      <MemberSignature Language="C#" Value="PreviewAndPrint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight PreviewAndPrint = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.PreviewAndPrint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte pode ser inserida e temporariamente carregada no sistema remoto. Documentos que contêm a fonte devem ser abertos em um modo somente leitura.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewAndPrintButNoSubsetting">
+      <MemberSignature Language="C#" Value="PreviewAndPrintButNoSubsetting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight PreviewAndPrintButNoSubsetting = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.PreviewAndPrintButNoSubsetting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte pode ser inserida e temporariamente carregada no sistema remoto. Documentos que contêm a fonte devem ser abertos em um modo somente leitura. A fonte não pode ser subdividida antes da inserção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewAndPrintButNoSubsettingAndWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="PreviewAndPrintButNoSubsettingAndWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight PreviewAndPrintButNoSubsettingAndWithBitmapsOnly = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.PreviewAndPrintButNoSubsettingAndWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte pode ser inserida e temporariamente carregada no sistema remoto. Documentos que contêm a fonte devem ser abertos em um modo somente leitura. A fonte não pode ser subdividida antes da inserção. Somente os bitmaps contidos na fonte pode ser inseridos. Nenhum dado de estrutura de tópicos pode ser inseridos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviewAndPrintButWithBitmapsOnly">
+      <MemberSignature Language="C#" Value="PreviewAndPrintButWithBitmapsOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight PreviewAndPrintButWithBitmapsOnly = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.PreviewAndPrintButWithBitmapsOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte pode ser inserida e temporariamente carregada no sistema remoto. Documentos que contêm a fonte devem ser abertos em um modo somente leitura. Somente os bitmaps contidos na fonte pode ser inseridos. Nenhum dado de estrutura de tópicos pode ser inseridos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RestrictedLicense">
+      <MemberSignature Language="C#" Value="RestrictedLicense" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.FontEmbeddingRight RestrictedLicense = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.FontEmbeddingRight.RestrictedLicense" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontEmbeddingRight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fontes com essa configuração não devem ser modificadas, inseridas ou trocadas, de alguma forma sem primeiro obter permissão do proprietário legal.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

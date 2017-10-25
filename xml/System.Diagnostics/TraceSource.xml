@@ -1,0 +1,1005 @@
+<Type Name="TraceSource" FullName="System.Diagnostics.TraceSource">
+  <TypeSignature Language="C#" Value="public class TraceSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TraceSource extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.TraceSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de métodos e propriedades que permitem que os aplicativos rastreiem a execução do código e associe mensagens de rastreamento à sua origem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe <xref:System.Diagnostics.TraceSource> é usada por aplicativos para produzir rastreamentos que podem ser associados ao aplicativo. <xref:System.Diagnostics.TraceSource> fornece métodos de rastreamento que permitem rastrear eventos com facilidade, rastrear dados e emitir rastreamentos informativos. Rastreamento de saída de <xref:System.Diagnostics.TraceSource> podem ser controlados pelo arquivo de configuração. O arquivo de configuração está localizado na pasta com o executável do aplicativo e tem o nome do aplicativo com a extensão de nome de arquivo. config adicionada. Por exemplo, o nome do arquivo de configuração para TraceSourceSample.exe é TraceSourceSample.exe.config. O arquivo de configuração pode ser usado para determinar onde as informações de rastreamento são enviado e quais são os níveis de atividade a ser rastreado. O exemplo a seguir mostra o conteúdo de um arquivo de configuração do aplicativo de exemplo.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <sources>  
+      <source name="TraceTest" switchName="SourceSwitch"   
+        switchType="System.Diagnostics.SourceSwitch" >  
+        <listeners>  
+          <add name="console" />  
+          <remove name ="Default" />  
+        </listeners>  
+      </source>  
+    </sources>  
+    <switches>  
+      <!-- You can set the level at which tracing is to occur -->  
+      <add name="SourceSwitch" value="Warning" />  
+        <!-- You can turn tracing off -->  
+        <!--add name="SourceSwitch" value="Off" -->  
+    </switches>  
+    <sharedListeners>  
+      <add name="console"   
+        type="System.Diagnostics.ConsoleTraceListener"   
+        initializeData="false"/>  
+    </sharedListeners>  
+    <trace autoflush="true" indentsize="4">  
+      <listeners>  
+        <add name="console" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ O <xref:System.Diagnostics.TraceSource> classe é identificada pelo nome de uma fonte, normalmente o nome do aplicativo.  As mensagens de rastreamento provenientes de um componente específico podem ser iniciadas por uma origem de rastreamento específico, permitindo que todas as mensagens recebidas de componente a ser identificados com facilidade.  
+  
+ <xref:System.Diagnostics.TraceSource>define métodos de rastreamento, mas não fornece realmente qualquer mecanismo específico para gerar e armazenar os dados de rastreamento. Os dados de rastreamento são produzidos pelo ouvintes de rastreamento, que são plug-ins que podem ser carregados por fontes de rastreamento.  
+  
+> [!NOTE]
+>  Você não deve chamar os métodos de rastreamento durante a finalização. Isso pode resultar em um <xref:System.ObjectDisposedException> que está sendo gerada.  
+  
+ Você pode personalizar o destino da saída de rastreamento adicionando ou removendo <xref:System.Diagnostics.TraceListener> instâncias ou da coleção armazenados no <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> propriedade. Por padrão, saída de rastreamento é gerada usando uma instância do <xref:System.Diagnostics.DefaultTraceListener> classe. O exemplo de arquivo de configuração anterior demonstra a remover o <xref:System.Diagnostics.DefaultTraceListener> e adicionando um <xref:System.Diagnostics.ConsoleTraceListener> para produzir a saída de rastreamento para a origem de rastreamento. Para obter mais informações, consulte [ &lt;ouvintes&gt; ](~/docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md) e [ &lt;sharedListeners&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).  
+  
+> [!NOTE]
+>  Adicionar um ouvinte de rastreamento para o <xref:System.Diagnostics.TraceSource.Listeners%2A> coleta pode causar uma exceção seja lançada durante um rastreamento, se um recurso usado pelo ouvinte de rastreamento não está disponível. As condições e a exceção lançada dependem o ouvinte de rastreamento e não podem ser enumerados neste tópico. Pode ser útil fazer chamadas para o <xref:System.Diagnostics.TraceSource> métodos em `try` / `catch` blocos para detectar e lidar com todas as exceções de ouvintes de rastreamento.  
+  
+ O <xref:System.Diagnostics.SourceSwitch> classe fornece os meios para controlar dinamicamente a saída de rastreamento. O exemplo de arquivo de configuração anterior mostra como você pode desativar o rastreamento de uma origem de rastreamento e controle o nível no qual o rastreamento ocorre.  Você pode modificar o valor da opção de origem sem recompilar o aplicativo. Para obter informações sobre como usar o arquivo de configuração para definir uma opção, consulte <xref:System.Diagnostics.Switch> e [como: criar, inicializar e configurar opções de rastreamento](~/docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+  
+> [!NOTE]
+>  Se você modificar um arquivo de configuração durante a execução de um aplicativo, o aplicativo deve ser interrompido e reiniciado ou o <xref:System.Diagnostics.Trace.Refresh%2A> método deve ser chamado antes que as novas configurações tenham efeito.  
+  
+ O <xref:System.Diagnostics.TraceEventType> enumeração é usada para definir o tipo de evento da mensagem de rastreamento. Use filtros de rastreamento de <xref:System.Diagnostics.TraceEventType> para determinar se um ouvinte de rastreamento deve produzir a mensagem de rastreamento.  
+  
+ Os ouvintes de rastreamento, opcionalmente, podem ter uma camada adicional de filtragem por meio de um filtro de rastreamento.  Se um ouvinte de rastreamento tiver um filtro associado, o ouvinte chama o <xref:System.Diagnostics.TraceFilter.ShouldTrace%2A> método em que o filtro para determinar se deve ou não produzir as informações de rastreamento.  
+  
+ Os ouvintes de rastreamento usam os valores da <xref:System.Diagnostics.Trace> propriedades da classe <xref:System.Diagnostics.Trace.Indent%2A>, <xref:System.Diagnostics.Trace.IndentSize%2A>, e <xref:System.Diagnostics.Trace.AutoFlush%2A> para formato de saída de rastreamento. Você pode usar os atributos de arquivo de configuração para definir o <xref:System.Diagnostics.Trace.Indent%2A>, <xref:System.Diagnostics.Trace.IndentSize%2A>, e <xref:System.Diagnostics.Trace.AutoFlush%2A> propriedades. O exemplo a seguir define o <xref:System.Diagnostics.Trace.AutoFlush%2A> propriedade `false` e <xref:System.Diagnostics.Trace.IndentSize%2A> propriedade 3.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="3" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso da <xref:System.Diagnostics.TraceSource> classe para encaminhar os rastreamentos para ouvintes.  O exemplo também demonstra o uso de comutador e filtro.  
+  
+ [!code-cpp[System.Diagnostics.TraceSource2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CPP/tracesource2.cpp#1)]
+ [!code-csharp[System.Diagnostics.TraceSource2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#1)]
+ [!code-vb[System.Diagnostics.TraceSource2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceSource (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da fonte (geralmente o nome do aplicativo).</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.TraceSource" />, usando o nome especificado para a fonte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome de origem é usado para identificar os rastreamentos. Ele é usado por um <xref:System.Diagnostics.SourceFilter> para determinar se um ouvinte de rastreamento deve gerar o rastreamento. A prática recomendada é usar o nome do aplicativo para o nome da fonte.  
+  
+> [!NOTE]
+>  Não é necessário criar um novo <xref:System.Diagnostics.TraceSource> instância para cada solicitação de rastreamento. Criar um <xref:System.Diagnostics.TraceSource> de instância e usá-lo para todas as solicitações de rastreamento para o aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.TraceSource.%23ctor%2A> construtor para criar um novo <xref:System.Diagnostics.TraceSource> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#9)]
+ [!code-vb[System.Diagnostics.TraceSource2#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceSource (string name, System.Diagnostics.SourceLevels defaultLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Diagnostics.SourceLevels defaultLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.#ctor(System.String,System.Diagnostics.SourceLevels)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="defaultLevel" Type="System.Diagnostics.SourceLevels" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da fonte, geralmente o nome do aplicativo.</param>
+        <param name="defaultLevel">Uma combinação bit a bit dos valores de enumeração que especifica o nível da fonte padrão para o rastreamento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.TraceSource" /> usando o nome especificado para a fonte e o nível da fonte padrão no qual o rastreamento deve ocorrer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome de origem é usado para identificar os rastreamentos. Ele pode ser usado por um <xref:System.Diagnostics.SourceSwitch> para determinar se o rastreamento deve ocorrer e por um <xref:System.Diagnostics.SourceFilter> para determinar se deve produzir o rastreamento. O nível de fonte padrão é usado por um <xref:System.Diagnostics.EventTypeFilter> para determinar se o rastreamento deve ocorrer com base no nível de origem da mensagem a ser rastreado.  
+  
+> [!NOTE]
+>  Não é necessário criar um novo <xref:System.Diagnostics.TraceSource> instância para cada solicitação de rastreamento. Criar um <xref:System.Diagnostics.TraceSource> de instância e usá-lo para todas as solicitações de rastreamento para o aplicativo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringDictionary Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringDictionary Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSource.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos de opção personalizados definidos no arquivo de configuração de aplicativo.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.StringDictionary" /> que contém os atributos personalizados para a opção de rastreamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceSource.Attributes%2A> propriedade identifica os atributos personalizados referenciados no arquivo de configuração do aplicativo. Atributos personalizados não referenciados não são enumerados. Classes que herdam o <xref:System.Diagnostics.TraceSource> classe pode adicionar atributos personalizados, substituindo o <xref:System.Diagnostics.Switch.GetSupportedAttributes%2A?displayProperty=nameWithType> método e retornar uma matriz de cadeia de caracteres de nomes de atributo personalizado.  
+  
+ A seguir está um exemplo de um elemento de origem do rastreamento especificando o atributo personalizado `SecondTraceSourceAttribute`:  
+  
+```  
+<sources>  
+  <source name="TraceTest" switchName="TestSourceSwitch"   
+    switchType="Testing.MySourceSwitch, TraceSample"   
+    SecondTraceSourceAttribute="two">  
+  </source>  
+</sources>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como exibir os atributos personalizados para um <xref:System.Diagnostics.TraceSource>.  Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#14)]
+ [!code-vb[System.Diagnostics.TraceSource2#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha todos os ouvintes de rastreamento na coleção de ouvinte de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceSource.Close%2A> chamadas de método de <xref:System.Diagnostics.TraceListener.Close%2A> método de cada ouvinte de rastreamento no <xref:System.Diagnostics.TraceSource.Listeners%2A> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como você pode usar o <xref:System.Diagnostics.TraceSource.Close%2A> método para fechar todos os ouvintes na coleção. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#33](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#33)]
+ [!code-vb[System.Diagnostics.TraceSource2#33](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os ouvintes de rastreamento na coleção de ouvinte de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceSource.Flush%2A> chamadas de método de <xref:System.Diagnostics.TraceListener.Flush%2A> método de cada ouvinte de rastreamento no <xref:System.Diagnostics.TraceSource.Listeners%2A> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como você pode usar o <xref:System.Diagnostics.TraceSource.Flush%2A> método para liberar todos os ouvintes na coleção. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#33](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#33)]
+ [!code-vb[System.Diagnostics.TraceSource2#33](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Foi feita uma tentativa de rastrear um evento durante a finalização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedAttributes">
+      <MemberSignature Language="C#" Value="protected virtual string[] GetSupportedAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string[] GetSupportedAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.GetSupportedAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os atributos personalizados com suporte a origem de rastreamento.</summary>
+        <returns>Uma matriz de cadeia de caracteres, os atributos personalizados com suporte a origem de rastreamento de nomenclatura ou <see langword="null" /> se não houver nenhum atributo personalizado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão para <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> retorna `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma substituição do <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> método para identificar os atributos personalizados para o `MyTraceSource` classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource#33](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/CS/program.cs#33)]
+ [!code-vb[System.Diagnostics.TraceSource#33](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource/VB/program.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Diagnostics.TraceSource" /> classe ou uma classe derivada, você pode substituir o <see cref="M:System.Diagnostics.TraceSource.GetSupportedAttributes" /> método para fornecer atributos personalizados para sua classe.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Listeners">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.TraceListenerCollection Listeners { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.TraceListenerCollection Listeners" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSource.Listeners" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceListenerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de ouvintes de rastreamento para a origem de rastreamento.</summary>
+        <value>Um <see cref="T:System.Diagnostics.TraceListenerCollection" /> que contém os ouvintes de rastreamento ativos associados à origem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para acessar e executar operações em que os ouvintes de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSource.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da origem do rastreamento.</summary>
+        <value>O nome da origem do rastreamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome é definido pelo `name` parâmetro transmitido ao construtor. Você pode consultar a origem de rastreamento usando o `name` atributo no arquivo de configuração.  
+  
+ O elemento XML a seguir mostra que faz referência a uma fonte de rastreamento no arquivo de configuração.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <sources>  
+      <source name="TraceTest">  
+      </source>  
+    </sources>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como nomear uma origem de rastreamento na chamada de construtor.  Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#9)]
+ [!code-vb[System.Diagnostics.TraceSource2#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Switch">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SourceSwitch Switch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.SourceSwitch Switch" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.TraceSource.Switch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SourceSwitch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da opção de fonte.</summary>
+        <value>Um objeto <see cref="T:System.Diagnostics.SourceSwitch" /> que representa o valor da opção de fonte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceSource.Switch%2A> propriedade permite a filtragem de mensagens antes que a origem de rastreamento chama os ouvintes.  
+  
+ A opção é usada para verificar se as chamadas de rastreamento devem ser geradas ou ignoradas. Cada método de rastreamento chama o <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> método do <xref:System.Diagnostics.SourceSwitch> para determinar se deseja continuar com o rastreamento. Se a chamada retorna `true`, os ouvintes são chamados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Diagnostics.TraceSource.Switch" /> é definido como <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public void TraceData (System.Diagnostics.TraceEventType eventType, int id, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceData(valuetype System.Diagnostics.TraceEventType eventType, int32 id, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceData(System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventType">Um dos valores de enumeração que especifica o tipo de evento dos dados de rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="data">Os dados de rastreamento.</param>
+        <summary>Grava dados de rastreamento para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.TraceSource.Listeners" /> usando o tipo de evento, o identificador de evento e os dados de rastreamento especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceSource.TraceData%2A> método, como o <xref:System.Diagnostics.TraceSource.TraceEvent%2A> método, destina-se a ferramentas automatizadas, mas ele também permite que a anexação de um objeto adicional, como uma instância de exceção, o rastreamento.  
+  
+ O <xref:System.Diagnostics.TraceSource.TraceData%2A> chamadas de método a <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A?displayProperty=nameWithType> método o <xref:System.Diagnostics.SourceSwitch> objeto retornado pelo <xref:System.Diagnostics.TraceSource.Switch%2A> propriedade. Se <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> retorna `true`, <xref:System.Diagnostics.TraceSource.TraceData%2A> chama correspondente <xref:System.Diagnostics.TraceListener.TraceData%2A> método em todos os ouvintes. Caso contrário, <xref:System.Diagnostics.TraceSource.TraceData%2A> retorna sem chamar métodos os ouvintes.  
+  
+> [!NOTE]
+>  O <xref:System.Diagnostics.EventLogTraceListener> objeto é limitado a um máximo `id` valor 65.535. Se o `id` valor especificado é maior que 65.535, o <xref:System.Diagnostics.EventLogTraceListener> objeto usa 65.535.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.TraceSource.TraceData%28System.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.Object%29> método para filtrar e encaminhar uma mensagem de rastreamento para os ouvintes. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#28](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#28)]
+ [!code-vb[System.Diagnostics.TraceSource2#28](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Foi feita uma tentativa de rastrear um evento durante a finalização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public void TraceData (System.Diagnostics.TraceEventType eventType, int id, params object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceData(valuetype System.Diagnostics.TraceEventType eventType, int32 id, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceData(System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventType">Um dos valores de enumeração que especifica o tipo de evento dos dados de rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="data">Uma matriz de objeto que contém os dados de rastreamento.</param>
+        <summary>Grava dados de rastreamento para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.TraceSource.Listeners" /> coleção usando o tipo de evento especificado, o identificador de evento e a matriz de dados de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceSource.TraceData%2A> método, como o <xref:System.Diagnostics.TraceSource.TraceEvent%2A> método, destina-se a ferramentas automatizadas, mas ele também permite que a anexação de objetos adicionais, como uma instância de exceção e um rastreamento de pilha, o rastreamento.  
+  
+ O <xref:System.Diagnostics.TraceSource.TraceData%2A> chamadas de método a <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> método o <xref:System.Diagnostics.SourceSwitch> objeto retornado pelo <xref:System.Diagnostics.TraceSource.Switch%2A> propriedade. Se <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> retorna `true`, <xref:System.Diagnostics.TraceSource.TraceData%2A> chama correspondente <xref:System.Diagnostics.TraceListener.TraceData%2A> método em todos os ouvintes. Caso contrário, <xref:System.Diagnostics.TraceSource.TraceData%2A> retorna sem chamar métodos os ouvintes.  
+  
+> [!NOTE]
+>  O <xref:System.Diagnostics.EventLogTraceListener> objeto é limitado a um máximo `id` valor 65.535. Se o `id` valor especificado é maior que 65.535, o <xref:System.Diagnostics.EventLogTraceListener> objeto usa 65.535.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Foi feita uma tentativa de rastrear um evento durante a finalização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public void TraceEvent (System.Diagnostics.TraceEventType eventType, int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceEvent(valuetype System.Diagnostics.TraceEventType eventType, int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceEvent(System.Diagnostics.TraceEventType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventType">Um dos valores de enumeração que especifica o tipo de evento dos dados de rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <summary>Grava uma mensagem de evento de rastreamento para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.TraceSource.Listeners" /> usando o tipo de evento e o identificador de evento especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceSource.TraceEvent%2A> método destina-se para eventos de rastreamento que podem ser processados automaticamente por ferramentas. Por exemplo, uma ferramenta de monitoramento pode notificar um administrador, se um evento específico é rastreado por uma fonte específica.  
+  
+ O <xref:System.Diagnostics.TraceSource.TraceEvent%2A> chamadas de método a <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> método o <xref:System.Diagnostics.SourceSwitch> objeto retornado pelo <xref:System.Diagnostics.TraceSource.Switch%2A> propriedade. Se <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> retorna `true`, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> chama correspondente <xref:System.Diagnostics.TraceListener.TraceEvent%2A> método de cada ouvinte. Caso contrário, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> retorna sem chamar métodos os ouvintes.  
+  
+ O conteúdo de rastreamento é específica do ouvinte. Se o método não é substituído pela implementação de ouvinte, a saída padrão é o nome de origem de rastreamento, sua identidade numérica e o tipo de evento.  Conteúdo de rastreamento adicionais depende do ouvinte <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> valor da propriedade.  
+  
+> [!NOTE]
+>  O <xref:System.Diagnostics.EventLogTraceListener> objeto é limitado a um máximo `id` valor 65.535. Se o `id` valor especificado é maior que 65.535, o <xref:System.Diagnostics.EventLogTraceListener> usa a 65.535.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%29> método para passar um evento de rastreamento para os ouvintes. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#17)]
+ [!code-vb[System.Diagnostics.TraceSource2#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Foi feita uma tentativa de rastrear um evento durante a finalização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public void TraceEvent (System.Diagnostics.TraceEventType eventType, int id, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceEvent(valuetype System.Diagnostics.TraceEventType eventType, int32 id, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceEvent(System.Diagnostics.TraceEventType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventType">Um dos valores de enumeração que especifica o tipo de evento dos dados de rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="message">A mensagem de rastreamento a ser gravada.</param>
+        <summary>Grava uma mensagem de evento de rastreamento para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.TraceSource.Listeners" /> usando o tipo de evento, o identificador de evento e a mensagem especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceSource.TraceEvent%2A> método destina-se para eventos de rastreamento que podem ser processados automaticamente por ferramentas. Por exemplo, uma ferramenta de monitoramento pode notificar um administrador, se um evento específico é rastreado por uma fonte específica.  
+  
+ O <xref:System.Diagnostics.TraceSource.TraceEvent%2A> chamadas de método a <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> método o <xref:System.Diagnostics.SourceSwitch> objeto retornado pelo <xref:System.Diagnostics.TraceSource.Switch%2A> propriedade. Se <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> retorna `true`, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> chama correspondente <xref:System.Diagnostics.TraceListener.TraceEvent%2A> método de cada ouvinte. Caso contrário, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> retorna sem chamar métodos os ouvintes.  
+  
+ O conteúdo de rastreamento é específica do ouvinte. Se o método não é substituído pela implementação de ouvinte, a saída padrão é o nome de sua identidade numérica, a origem de rastreamento, o tipo de evento e a mensagem.  Conteúdo de rastreamento adicionais depende do ouvinte <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> valor da propriedade.  
+  
+> [!NOTE]
+>  O <xref:System.Diagnostics.EventLogTraceListener> objeto é limitado a um máximo `id` valor 65.535. Se o `id` valor especificado é maior que 65.535, o <xref:System.Diagnostics.EventLogTraceListener> objeto usa 65.535.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%29> método para passar um evento de rastreamento para os ouvintes. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#18](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#18)]
+ [!code-vb[System.Diagnostics.TraceSource2#18](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Foi feita uma tentativa de rastrear um evento durante a finalização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public void TraceEvent (System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceEvent(valuetype System.Diagnostics.TraceEventType eventType, int32 id, string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceEvent(System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventType">Um dos valores de enumeração que especifica o tipo de evento dos dados de rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="format">Uma cadeia de caracteres de formato composto que contém texto misturado com zero ou mais itens de formato, que correspondem aos objetos no <c>args</c> matriz.</param>
+        <param name="args">Uma matriz <see langword="object" /> que contém zero ou mais objetos a serem formatados.</param>
+        <summary>Grava um evento de rastreamento para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.TraceSource.Listeners" /> usando o tipo de evento, o identificador de evento, a matriz de argumentos e o formato especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o `format` parâmetro, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+ O <xref:System.Diagnostics.TraceSource.TraceEvent%2A> método destina-se para eventos de rastreamento que podem ser processados automaticamente por ferramentas. Por exemplo, uma ferramenta de monitoramento pode notificar um administrador, se um evento específico é rastreado por uma fonte específica.  
+  
+ O <xref:System.Diagnostics.TraceSource.TraceEvent%2A> chamadas de método a <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> método o <xref:System.Diagnostics.SourceSwitch> objeto retornado pelo <xref:System.Diagnostics.TraceSource.Switch%2A> propriedade. Se <xref:System.Diagnostics.SourceSwitch.ShouldTrace%2A> retorna `true`, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> chama correspondente <xref:System.Diagnostics.TraceListener.TraceEvent%2A> método de cada ouvinte. Caso contrário, <xref:System.Diagnostics.TraceSource.TraceEvent%2A> retorna sem chamar métodos os ouvintes.  
+  
+ O conteúdo de rastreamento é específica do ouvinte. O padrão <xref:System.Diagnostics.TraceListener.TraceEvent%28System.Diagnostics.TraceEventCache%2CSystem.String%2CSystem.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%2CSystem.Object%5B%5D%29> método grava o nome da fonte, o tipo de evento e a identidade numérica no cabeçalho de rastreamento, em seguida, chama o <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> método, passando o `format` cadeia de caracteres e `args` matriz e usando o <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> propriedade para formatar a cadeia de caracteres como a saída de mensagem.  
+  
+> [!NOTE]
+>  O <xref:System.Diagnostics.EventLogTraceListener> objeto é limitado a um máximo `id` valor 65.535. Se o `id` valor especificado é maior que 65.535, o <xref:System.Diagnostics.EventLogTraceListener> objeto usa 65.535.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%29> método para passar um evento de rastreamento para os ouvintes. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.TraceSource> classe.  
+  
+ [!code-csharp[System.Diagnostics.TraceSource2#24](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/CS/program.cs#24)]
+ [!code-vb[System.Diagnostics.TraceSource2#24](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.TraceSource2/VB/program.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> é inválido.  
+  
+ -ou-  
+  
+ O número que indica um argumento para o formato é menor que zero ou maior ou igual ao número de objetos especificados a serem formatados.</exception>
+        <exception cref="T:System.ObjectDisposedException">Foi feita uma tentativa de rastrear um evento durante a finalização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceInformation">
+      <MemberSignature Language="C#" Value="public void TraceInformation (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceInformation(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceInformation(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem informativa a ser gravada.</param>
+        <summary>Grava uma mensagem informativa para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.TraceSource.Listeners" /> usando a mensagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceSource.TraceInformation%2A> método fornece uma mensagem informativa que se destina a ser lido por usuários e não por ferramentas.  
+  
+ <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%29>chamadas de <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%29> método, configurando `eventType` para <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType> e transmitindo a mensagem informativa como a cadeia de caracteres de mensagem. O <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%29> método por sua vez chama o <xref:System.Diagnostics.TraceListener.TraceEvent%28System.Diagnostics.TraceEventCache%2CSystem.String%2CSystem.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%29> método de cada ouvinte de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Foi feita uma tentativa de rastrear um evento durante a finalização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceInformation">
+      <MemberSignature Language="C#" Value="public void TraceInformation (string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceInformation(string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceInformation(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato composto que contém texto misturado com zero ou mais itens de formato, que correspondem aos objetos no <c>args</c> matriz.</param>
+        <param name="args">Uma matriz que contém zero ou mais objetos a serem formatados.</param>
+        <summary>Grava uma mensagem informativa para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.TraceSource.Listeners" /> coleção usando a matriz do objeto especificado e as informações de formatação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o `format` parâmetro, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).  
+  
+ O <xref:System.Diagnostics.TraceSource.TraceInformation%2A> método fornece uma mensagem informativa que se destina a ser lido por usuários e não por ferramentas.  
+  
+ <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29>chamadas de <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%2CSystem.Object%5B%5D%29> método, configurando `eventType` para <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType> e passar o conteúdo da mensagem como uma matriz de objetos com informações de formatação. O <xref:System.Diagnostics.TraceSource.TraceEvent%28System.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%2CSystem.Object%5B%5D%29> método por sua vez chama o <xref:System.Diagnostics.TraceListener.TraceEvent%28System.Diagnostics.TraceEventCache%2CSystem.String%2CSystem.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%2CSystem.Object%5B%5D%29> método de cada ouvinte de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="format" /> é inválido.  
+  
+ -ou-  
+  
+ O número que indica um argumento para o formato é menor que zero ou maior ou igual ao número de objetos especificados a serem formatados.</exception>
+        <exception cref="T:System.ObjectDisposedException">Foi feita uma tentativa de rastrear um evento durante a finalização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceTransfer">
+      <MemberSignature Language="C#" Value="public void TraceTransfer (int id, string message, Guid relatedActivityId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TraceTransfer(int32 id, string message, valuetype System.Guid relatedActivityId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceSource.TraceTransfer(System.Int32,System.String,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="relatedActivityId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="message">A mensagem de rastreamento a ser gravada.</param>
+        <param name="relatedActivityId">Uma estrutura que identifica a atividade relacionada.</param>
+        <summary>Grava uma mensagem de transferência de rastreamento nos ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.TraceSource.Listeners" /> usando o identificador numérico especificado, a mensagem e o identificador de atividade relacionada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.TraceSource.TraceTransfer%2A> chamadas de método de <xref:System.Diagnostics.TraceListener.TraceTransfer%2A> método de cada ouvinte de rastreamento no <xref:System.Diagnostics.TraceSource.Listeners%2A> propriedade a gravar as informações de rastreamento. O padrão <xref:System.Diagnostics.TraceListener.TraceTransfer%2A> método na base de <xref:System.Diagnostics.TraceListener> classe chamadas a <xref:System.Diagnostics.TraceListener.TraceEvent%28System.Diagnostics.TraceEventCache%2CSystem.String%2CSystem.Diagnostics.TraceEventType%2CSystem.Int32%2CSystem.String%29?displayProperty=nameWithType> método para processar a chamada de configuração `eventType` para <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType> e anexando uma representação de cadeia de caracteres da `relatedActivityId` GUID `message`.  
+  
+ <xref:System.Diagnostics.TraceSource.TraceTransfer%2A>se destina a ser usada com as operações lógicas de um <xref:System.Diagnostics.CorrelationManager>. O `relatedActivityId` parâmetro tem relação com o <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> propriedade de um <xref:System.Diagnostics.CorrelationManager> objeto. Se uma operação lógica começa em uma atividade e transfere para outra, a segunda atividade registra a transferência por chamar o <xref:System.Diagnostics.TraceSource.TraceTransfer%2A> método. O <xref:System.Diagnostics.TraceSource.TraceTransfer%2A> chamada está relacionada a nova identidade de atividade para a identidade anterior. O consumidor provavelmente essa funcionalidade é um visualizador de rastreamento que pode relatar operações lógicas que abrangem várias atividades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

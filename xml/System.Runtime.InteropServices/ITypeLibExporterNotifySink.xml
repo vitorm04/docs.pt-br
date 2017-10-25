@@ -1,0 +1,98 @@
+<Type Name="ITypeLibExporterNotifySink" FullName="System.Runtime.InteropServices.ITypeLibExporterNotifySink">
+  <TypeSignature Language="C#" Value="public interface ITypeLibExporterNotifySink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeLibExporterNotifySink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ITypeLibExporterNotifySink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("f1c3bf77-c3e4-11d3-88e7-00902754c43a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um mecanismo de retorno de chamada para o conversor de assembly informar o chamador do status da conversão e envolvem o chamador no processo de conversão em si.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é usada no processo de conversão de um assembly gerenciado em uma biblioteca de tipos COM.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReportEvent">
+      <MemberSignature Language="C#" Value="public void ReportEvent (System.Runtime.InteropServices.ExporterEventKind eventKind, int eventCode, string eventMsg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportEvent(valuetype System.Runtime.InteropServices.ExporterEventKind eventKind, int32 eventCode, string eventMsg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ITypeLibExporterNotifySink.ReportEvent(System.Runtime.InteropServices.ExporterEventKind,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventKind" Type="System.Runtime.InteropServices.ExporterEventKind" />
+        <Parameter Name="eventCode" Type="System.Int32" />
+        <Parameter Name="eventMsg" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventKind">Um <see cref="T:System.Runtime.InteropServices.ExporterEventKind" /> valor que indica o tipo de evento.</param>
+        <param name="eventCode">Indica informações extras sobre o evento.</param>
+        <param name="eventMsg">Uma mensagem gerada pelo evento.</param>
+        <summary>Notifica o chamador que um evento ocorreu durante a conversão de um assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o evento que está sendo relatado é um aviso ou erro, `eventCode` conterá o HRESULT do erro. Para qualquer outro evento será 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveRef">
+      <MemberSignature Language="C#" Value="public object ResolveRef (System.Reflection.Assembly assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ResolveRef(class System.Reflection.Assembly assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ITypeLibExporterNotifySink.ResolveRef(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O assembly para resolver.</param>
+        <summary>Pede ao usuário para resolver uma referência a outro assembly.</summary>
+        <returns>A biblioteca de tipos para <paramref name="assembly" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma referência a outro assembly for encontrada durante a conversão de um assembly, o chamador deve retornar a biblioteca de tipos correta (o objeto que implementa `ITypeLib` interface) para esse assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

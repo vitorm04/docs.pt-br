@@ -1,0 +1,390 @@
+<Type Name="SessionStateItemCollection" FullName="System.Web.SessionState.SessionStateItemCollection">
+  <TypeSignature Language="C#" Value="public sealed class SessionStateItemCollection : System.Collections.Specialized.NameObjectCollectionBase, System.Collections.ICollection, System.Web.SessionState.ISessionStateItemCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SessionStateItemCollection extends System.Collections.Specialized.NameObjectCollectionBase implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Web.SessionState.ISessionStateItemCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.SessionStateItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Specialized.NameObjectCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.SessionState.ISessionStateItemCollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Uma coleção de objetos armazenados no estado de sessão. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateItemCollection> classe é usada para gerenciar valores de variável indexados por um nome de variável ou por índice numérico de estado de sessão. As variáveis de estado de sessão são expostas ao código de aplicativo ASP.NET usando o <xref:System.Web.SessionState.HttpSessionState> classe, que pode é acessada usando a <xref:System.Web.HttpContext.Session%2A> propriedade <xref:System.Web.HttpContext> ou <xref:System.Web.UI.Page>. O <xref:System.Web.SessionState.HttpSessionState> classe chama o <xref:System.Web.SessionState.HttpSessionStateContainer> classe, que gerencia os valores de variável de estado de sessão usando o <xref:System.Web.SessionState.SessionStateItemCollection>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Web.SessionState.SessionStateItemCollection> do objeto e define e obtém os valores na coleção por nome.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateItemCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/CS/keyscs.aspx#1)]
+ [!code-vb[System.Web.SessionState.SessionStateItemCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/VB/keysvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você cria um provedor de estado de sessão personalizado com base no <see cref="T:System.Web.SessionState.SessionStateStoreProviderBase" /> classe, use o <see cref="T:System.Web.SessionState.SessionStateItemCollection" /> classe para gerenciar os itens armazenados no estado de sessão. Se você precisar criar um objeto personalizado para gerenciar itens de estado de sessão, implemente o <see cref="T:System.Web.SessionState.ISessionStateItemCollection" /> interface.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionStateItemCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateItemCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo e vazio <see cref="T:System.Web.SessionState.SessionStateItemCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateItemCollection> classe é usada para gerenciar valores de variável indexados por um nome de variável ou por índice numérico de estado de sessão. As variáveis de estado de sessão são expostas ao código de aplicativo ASP.NET usando o <xref:System.Web.SessionState.HttpSessionState> classe, que pode é acessada usando a <xref:System.Web.HttpContext.Session%2A> propriedade <xref:System.Web.HttpContext> ou <xref:System.Web.UI.Page>. O <xref:System.Web.SessionState.HttpSessionState> classe chama o <xref:System.Web.SessionState.HttpSessionStateContainer> classe, que gerencia os valores de variável de estado de sessão usando o <xref:System.Web.SessionState.SessionStateItemCollection> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Web.SessionState.SessionStateItemCollection> do objeto e define e obtém os valores na coleção por nome.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateItemCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/CS/keyscs.aspx#1)]
+ [!code-vb[System.Web.SessionState.SessionStateItemCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/VB/keysvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateItemCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as chaves e valores da coleção de estado da sessão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public static System.Web.SessionState.SessionStateItemCollection Deserialize (System.IO.BinaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.SessionState.SessionStateItemCollection Deserialize(class System.IO.BinaryReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateItemCollection.Deserialize(System.IO.BinaryReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.BinaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.IO.BinaryReader" /> usado para ler a coleção serializada de um fluxo ou cadeia de caracteres codificada.</param>
+        <summary>Cria uma coleção de <see cref="T:System.Web.SessionState.SessionStateItemCollection" /> de um local de armazenamento gravado usando o método <see cref="M:System.Web.SessionState.SessionStateItemCollection.Serialize(System.IO.BinaryWriter)" />.</summary>
+        <returns>Um <see cref="T:System.Web.SessionState.SessionStateItemCollection" /> coleção preenchida com o conteúdo de um local de armazenamento que é gravado usando a <see cref="M:System.Web.SessionState.SessionStateItemCollection.Serialize(System.IO.BinaryWriter)" /> método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateItemCollection.Deserialize%2A> método pode ser usado para ler o conteúdo de um <xref:System.Web.SessionState.SessionStateItemCollection> coleção de armazenamento da sessão.  
+  
+ Para gravar o conteúdo de um <xref:System.Web.SessionState.SessionStateItemCollection> objeto para o armazenamento de sessão, use o <xref:System.Web.SessionState.SessionStateItemCollection.Serialize%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Web.SessionState.SessionStateItemCollection> coleção de um arquivo que foi criado usando o <xref:System.Web.SessionState.SessionStateItemCollection.Serialize%2A> método.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateItemCollection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/CS/serializecs.aspx#4)]
+ [!code-vb[System.Web.SessionState.SessionStateItemCollection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/VB/serializevb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">As informações de estado de sessão são inválidas ou estão corrompidas</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dirty">
+      <MemberSignature Language="C#" Value="public bool Dirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Dirty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.SessionStateItemCollection.Dirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a coleção foi marcada como alterada.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Web.SessionState.SessionStateItemCollection" /> conteúdo forem alterados; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateItemCollection.Dirty%2A> propriedade é usada para indicar se o conteúdo do <xref:System.Web.SessionState.SessionStateItemCollection> coleta foram alteradas.  
+  
+ O <xref:System.Web.SessionState.SessionStateItemCollection.Dirty%2A> está definida como `true` quando um valor de objeto está definido ou adicionado à coleção usando o <xref:System.Web.SessionState.SessionStateItemCollection.Item%2A> propriedade e quando um ou mais valores de objeto são removidos da coleção usando o <xref:System.Web.SessionState.SessionStateItemCollection.Remove%2A>, <xref:System.Web.SessionState.SessionStateItemCollection.RemoveAt%2A>, ou <xref:System.Web.SessionState.SessionStateItemCollection.Clear%2A> métodos.  
+  
+ O <xref:System.Web.SessionState.SessionStateItemCollection.Dirty%2A> propriedade também é definida como `true` quando um objeto mutável é recuperado da coleção usando o <xref:System.Web.SessionState.SessionStateItemCollection.Item%2A> propriedade.  
+  
+ Chamando o <xref:System.Web.SessionState.SessionStateItemCollection.Deserialize%2A> para popular um <xref:System.Web.SessionState.SessionStateItemCollection> coleção resulta no <xref:System.Web.SessionState.SessionStateItemCollection.Dirty%2A> propriedade sendo definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateItemCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode ser usado para ler todos os nomes de chave da coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode iterar os nomes das variáveis na coleção de estados da sessão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém os nomes de variáveis em uma <xref:System.Web.SessionState.SessionStateItemCollection> coleção usando o <xref:System.Web.SessionState.SessionStateItemCollection.GetEnumerator%2A> método.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateItemCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/CS/keyscs.aspx#1)]
+ [!code-vb[System.Web.SessionState.SessionStateItemCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/VB/keysvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.SessionStateItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice numérico do valor na coleção.</param>
+        <summary>Obtém ou define um valor na coleção por índice numérico.</summary>
+        <value>O valor da coleção armazenado no índice especificado. Se a chave especificada não for encontrada, tentar obtê-la retornará <see langword="null" /> e tentar de defini-la criará um novo elemento usando a chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir define e obtém os valores um <xref:System.Web.SessionState.SessionStateItemCollection> coleção por índice numérico.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateItemCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/CS/keyscs.aspx#2)]
+ [!code-vb[System.Web.SessionState.SessionStateItemCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/VB/keysvb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.SessionStateItemCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da chave do valor na coleção.</param>
+        <summary>Obtém ou define um valor na coleção por nome.</summary>
+        <value>O valor da coleção com o nome especificado. Se a chave especificada não for encontrada, tentar obtê-la retornará <see langword="null" /> e tentar de defini-la criará um novo elemento usando a chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir define e obtém os valores um <xref:System.Web.SessionState.SessionStateItemCollection> coleção por nome.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateItemCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/CS/keyscs.aspx#1)]
+ [!code-vb[System.Web.SessionState.SessionStateItemCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/VB/keysvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public override System.Collections.Specialized.NameObjectCollectionBase.KeysCollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameObjectCollectionBase/KeysCollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.SessionStateItemCollection.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameObjectCollectionBase+KeysCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção dos nomes de variável para todos os valores armazenados na coleção.</summary>
+        <value>O <see cref="T:System.Collections.Specialized.NameObjectCollectionBase.KeysCollection" /> coleção que contém todas as chaves da coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada chave é uma cadeia de caracteres que representa um nome de variável para um valor armazenado na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém os nomes de variáveis em uma <xref:System.Web.SessionState.SessionStateItemCollection> coleção usando os nomes de variáveis retornados pelo <xref:System.Web.SessionState.SessionStateItemCollection.Keys%2A> propriedade.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateItemCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/CS/keyscs.aspx#1)]
+ [!code-vb[System.Web.SessionState.SessionStateItemCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/VB/keysvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateItemCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do item a ser excluído da coleção.</param>
+        <summary>Exclui um item da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.SessionState.SessionStateItemCollection> a coleção não contém um elemento com especificado `name`, a coleção permaneça inalterada. Nenhuma exceção é lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateItemCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do item a ser removido da coleção.</param>
+        <summary>Exclui um item em um índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.SessionState.SessionStateItemCollection> a coleção não contém um elemento com especificado `name`, a coleção permaneça inalterada. Nenhuma exceção é lançada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ \- ou -  
+  
+ <paramref name="index" /> é igual a ou maior que <see cref="P:System.Collections.ICollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.IO.BinaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(class System.IO.BinaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.SessionStateItemCollection.Serialize(System.IO.BinaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.BinaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.IO.BinaryWriter" /> codificado ou usado para gravar a coleção serializada em um fluxo de cadeia de caracteres.</param>
+        <summary>Grava o conteúdo da coleção para um <see cref="T:System.IO.BinaryWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateItemCollection.Serialize%2A> método pode ser usado para gravar o conteúdo de um <xref:System.Web.SessionState.SessionStateItemCollection> coleção para o armazenamento da sessão.  
+  
+ Para recuperar um serializado <xref:System.Web.SessionState.SessionStateItemCollection> objeto de armazenamento de sessão, use o <xref:System.Web.SessionState.SessionStateItemCollection.Deserialize%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e preenche uma <xref:System.Web.SessionState.SessionStateItemCollection> coleta e grava o conteúdo para um arquivo usando o <xref:System.Web.SessionState.SessionStateItemCollection.Serialize%2A> método.  
+  
+ [!code-csharp[System.Web.SessionState.SessionStateItemCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/CS/serializecs.aspx#3)]
+ [!code-vb[System.Web.SessionState.SessionStateItemCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.SessionStateItemCollection/VB/serializevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

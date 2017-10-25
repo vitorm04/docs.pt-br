@@ -1,0 +1,89 @@
+<Type Name="ToolTipIcon" FullName="System.Windows.Forms.ToolTipIcon">
+  <TypeSignature Language="C#" Value="public enum ToolTipIcon" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolTipIcon extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolTipIcon" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define um conjunto de ícones padronizados que pode ser associado uma dica de ferramenta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolTipIcon> enumeração define um pequeno conjunto de ícones padronizados que pode ser exibido como parte de uma dica de ferramenta. Isso é feito definindo o <xref:System.Windows.Forms.ToolTip.ToolTipIcon%2A?displayProperty=nameWithType> propriedade o <xref:System.Windows.Forms.ToolTip> classe para um dos valores a seguir.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolTipIcon Error = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolTipIcon.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolTipIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ícone de erro</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Info">
+      <MemberSignature Language="C#" Value="Info" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolTipIcon Info = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolTipIcon.Info" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolTipIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ícone de informações.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolTipIcon None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolTipIcon.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolTipIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é um ícone padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Warning">
+      <MemberSignature Language="C#" Value="Warning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolTipIcon Warning = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolTipIcon.Warning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolTipIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ícone de aviso.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

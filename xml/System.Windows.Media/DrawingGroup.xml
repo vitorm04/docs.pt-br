@@ -1,0 +1,746 @@
+<Type Name="DrawingGroup" FullName="System.Windows.Media.DrawingGroup">
+  <TypeSignature Language="C#" Value="public sealed class DrawingGroup : System.Windows.Media.Drawing" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DrawingGroup extends System.Windows.Media.Drawing" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.DrawingGroup" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Drawing</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Children")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de desenhos que pode ser operada como um único desenho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um <xref:System.Windows.Media.DrawingGroup> para combinar vários desenhos em um único, composto desenho. Ao contrário de outras <xref:System.Windows.Media.Drawing> objetos, você pode aplicar uma <xref:System.Windows.Media.DrawingGroup.Transform%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A> configuração, <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, ou um <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> para um <xref:System.Windows.Media.DrawingGroup>. A flexibilidade dessa classe permite que você crie cenas complexas.  
+  
+ Porque <xref:System.Windows.Media.DrawingGroup> também é um <xref:System.Windows.Media.Drawing>, ele pode conter outros <xref:System.Windows.Media.DrawingGroup> objetos.  
+  
+ Para obter mais informações sobre <xref:System.Windows.Media.Drawing> objetos, consulte [visão geral de objetos de desenho](~/docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+  
+ **Recursos Freezable:** porque ele herda o <xref:System.Windows.Freezable> classe, o <xref:System.Windows.Media.DrawingGroup> classe fornece vários recursos especiais: <xref:System.Windows.Media.DrawingGroup> objetos podem ser declarados como, compartilhados entre vários objetos, somente leitura para melhorar o desempenho, clonados e tornados thread-safe. Para obter mais informações sobre os diferentes recursos fornecidos pelo <xref:System.Windows.Freezable> objetos, consulte [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DrawingGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.DrawingGroup" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DrawingContext Append ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.DrawingContext Append() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingGroup.Append" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DrawingContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre o <see cref="T:System.Windows.Media.DrawingGroup" /> para preencher sua <see cref="P:System.Windows.Media.DrawingGroup.Children" />. Esse método permite que você anexe adicionais <see cref="P:System.Windows.Media.DrawingGroup.Children" /> a este <see cref="T:System.Windows.Media.DrawingGroup" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.DrawingContext" /> que você pode usar para descrever o conteúdo desse <see cref="T:System.Windows.Media.DrawingGroup" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve fechar o <xref:System.Windows.Media.DrawingContext> antes de você pode renderizar isso <xref:System.Windows.Media.DrawingGroup>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BitmapEffect">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.BitmapEffect BitmapEffect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Effects.BitmapEffect BitmapEffect" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DrawingGroup.BitmapEffect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.BitmapEffect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Media.Effects.BitmapEffect" /> a ser aplicado a este <see cref="T:System.Windows.Media.DrawingGroup" />.</summary>
+        <value>O <see cref="T:System.Windows.Media.Effects.BitmapEffect" /> a ser aplicado a este <see cref="T:System.Windows.Media.DrawingGroup" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre os efeitos de bitmap e como eles funcionam, consulte [visão geral de efeitos de Bitmap](~/docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md).  
+  
+ <xref:System.Windows.Media.DrawingGroup>as operações são aplicadas na seguinte ordem:  
+  
+-   <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>  
+  
+-   <xref:System.Windows.Media.DrawingGroup.Opacity%2A>  
+  
+-   <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>  
+  
+-   <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>  
+  
+-   <xref:System.Windows.Media.DrawingGroup.Transform%2A>  
+  
+<a name="dependencyPropertyInfo_BitmapEffect"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.DrawingGroup.BitmapEffectProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como aplicar um <xref:System.Windows.Media.Effects.BitmapEffect> a um desenho. Use um <xref:System.Windows.Media.Effects.BitmapEffect> desfoque ou alto-relevo ou aplicar outros efeitos visuais ao conteúdo renderizado.  
+  
+ Somente <xref:System.Windows.Media.DrawingGroup> objetos oferecem suporte para efeitos de bitmap. Para aplicar um efeito de bitmap em outro tipo de <xref:System.Windows.Media.Drawing> de objeto, adicione-o a um <xref:System.Windows.Media.DrawingGroup> e defina o <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A> propriedade o <xref:System.Windows.Media.DrawingGroup> objeto.  
+  
+> [!NOTE]
+>  [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]efeitos de bitmap são renderizados por software. Qualquer objeto que aplica um <xref:System.Windows.Media.Effects.BitmapEffect> também é renderizado no software. Evite usar um <xref:System.Windows.Media.Effects.BitmapEffect> em grandes animações ou visuais porque este cenário pode causar uma diminuição no desempenho do sistema.  
+  
+ O exemplo a seguir usa uma <xref:System.Windows.Media.DrawingGroup> para aplicar uma <xref:System.Windows.Media.Effects.BlurBitmapEffect> para vários <xref:System.Windows.Media.GeometryDrawing> objetos.  
+  
+ A ilustração a seguir mostra a saída deste exemplo.  
+  
+ ![DrawingGroup com um BlurBitmapEffect](~/add/media/graphicsmm-bitmap.png "DrawingGroup com um BlurBitmapEffect")  
+  
+ [!code-csharp[DrawingMiscSnippets_snip#DrawingGroupBitmapEffectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/BitmapEffectExample.cs#drawinggroupbitmapeffectexamplewholepage)]
+ [!code-xaml[DrawingMiscSnippets_snip#DrawingGroupBitmapEffectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/BitmapEffectExample.xaml#drawinggroupbitmapeffectexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BitmapEffectInput">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.BitmapEffectInput BitmapEffectInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Effects.BitmapEffectInput BitmapEffectInput" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DrawingGroup.BitmapEffectInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.BitmapEffectInput</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a região onde o <see cref="T:System.Windows.Media.DrawingGroup" /> aplica-se seu <see cref="P:System.Windows.Media.DrawingGroup.BitmapEffect" /> e, opcionalmente, um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> para usar como entrada para seu <see cref="P:System.Windows.Media.DrawingGroup.BitmapEffect" />.</summary>
+        <value>A região onde o <see cref="P:System.Windows.Media.DrawingGroup.BitmapEffect" /> do <see cref="T:System.Windows.Media.DrawingGroup" /> é aplicada e, opcionalmente, o <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> para usar como entrada; ou <see langword="null" /> se o <see cref="P:System.Windows.Media.DrawingGroup.BitmapEffect" /> se aplica a todo o <see cref="T:System.Windows.Media.DrawingGroup" /> e usa o <see cref="T:System.Windows.Media.DrawingGroup" /> como sua entrada. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_BitmapEffectInput"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.DrawingGroup.BitmapEffectInputProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BitmapEffectInputProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BitmapEffectInputProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BitmapEffectInputProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DrawingGroup.BitmapEffectInputProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.DrawingGroup.BitmapEffectInput" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BitmapEffectProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BitmapEffectProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BitmapEffectProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DrawingGroup.BitmapEffectProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.DrawingGroup.BitmapEffect" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DrawingCollection Children { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.DrawingCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DrawingGroup.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DrawingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os objetos <see cref="T:System.Windows.Media.Drawing" /> contidos neste <see cref="T:System.Windows.Media.DrawingGroup" />.</summary>
+        <value>Uma coleção dos objetos <see cref="T:System.Windows.Media.Drawing" /> neste <see cref="T:System.Windows.Media.DrawingGroup" />. O padrão é um <see cref="T:System.Windows.Media.DrawingCollection" /> vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem z dos itens filho em uma <xref:System.Windows.Media.DrawingGroup> é determinada pela ordem os itens filhos a <xref:System.Windows.Media.DrawingCollection> do <xref:System.Windows.Media.DrawingGroup>. Cada filho de desenho está sob o próximo filho na coleção.  
+  
+<a name="dependencyPropertyInfo_Children"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.DrawingGroup.ChildrenProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildrenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ChildrenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ChildrenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DrawingGroup.ChildrenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.DrawingGroup.Children" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry ClipGeometry { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Geometry ClipGeometry" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DrawingGroup.ClipGeometry" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a região de corte desse <see cref="T:System.Windows.Media.DrawingGroup" />.</summary>
+        <value>O <see cref="T:System.Windows.Media.Geometry" /> que é usado para recortar esse <see cref="T:System.Windows.Media.DrawingGroup" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Desenhos fora da geometria serão recortados do <xref:System.Windows.Media.DrawingGroup> quando ele for renderizado. A geometria não precisa ser retangular; Por exemplo, você pode usar um <xref:System.Windows.Media.EllipseGeometry> para recortar para uma forma elíptica.  
+  
+ <xref:System.Windows.Media.DrawingGroup>as operações são aplicadas na seguinte ordem:  
+  
+1.  <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>  
+  
+2.  <xref:System.Windows.Media.DrawingGroup.Opacity%2A>  
+  
+3.  <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>  
+  
+4.  <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>  
+  
+5.  <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>  
+  
+6.  <xref:System.Windows.Media.DrawingGroup.Transform%2A>  
+  
+<a name="dependencyPropertyInfo_ClipGeometry"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.DrawingGroup.ClipGeometryProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como definir uma região de clip para um <xref:System.Windows.Media.Drawing>.  
+  
+ Use um <xref:System.Windows.Media.DrawingGroup> para definir um clipe para um <xref:System.Windows.Media.Drawing>. O <xref:System.Windows.Media.DrawingGroup> classe é o único tipo de <xref:System.Windows.Media.Drawing> objeto que permite que você defina sua própria região de recorte.  
+  
+ Use um <xref:System.Windows.Media.Geometry> para descrever o corte e aplicá-lo para o <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A> propriedade o <xref:System.Windows.Media.DrawingGroup> objeto.  
+  
+ A ilustração mostra a <xref:System.Windows.Media.DrawingGroup> antes e após o corte elíptico é aplicado.  
+  
+ ![DrawingGroup com uma região de clip definida](~/add/media/graphicsmm-clipgeom.png "DrawingGroup com uma região de clip definida")  
+  
+ O exemplo a seguir usa uma <xref:System.Windows.Media.DrawingGroup> para aplicar uma <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A> para vários <xref:System.Windows.Media.GeometryDrawing> objetos.  
+  
+ [!code-csharp[DrawingMiscSnippets_snip#DrawingGroupClipGeometryExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ClipExample.cs#drawinggroupclipgeometryexamplewholepage)]
+ [!code-xaml[DrawingMiscSnippets_snip#DrawingGroupClipGeometryExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/ClipExample.xaml#drawinggroupclipgeometryexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipGeometryProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ClipGeometryProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ClipGeometryProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DrawingGroup.ClipGeometryProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.DrawingGroup.ClipGeometry" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DrawingGroup Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.DrawingGroup Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingGroup.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DrawingGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia profunda modificável deste <see cref="T:System.Windows.Media.DrawingGroup" /> e faz cópias profundas de seus valores.</summary>
+        <returns>Um clone modificável do objeto atual. O <see cref="P:System.Windows.Freezable.IsFrozen" /> retorna de propriedade do objeto clonado <see langword="false" /> mesmo se o <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade da fonte<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para produzir cópias modificáveis de somente leitura <xref:System.Windows.Freezable> objetos. Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Quando esse método copia as propriedades de dependência, ele copia associações de dados e as referências de recurso, embora eles não podem resolver. Ele não copie animações ou seus valores atuais.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DrawingGroup CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.DrawingGroup CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingGroup.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DrawingGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia profunda modificável deste <see cref="T:System.Windows.Media.DrawingGroup" /> de objeto e faz cópias profundas de seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade do objeto clonado <see langword="false" /> mesmo se o <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade da fonte de <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para produzir cópias modificáveis de somente leitura <xref:System.Windows.Freezable> objetos. Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Esse método não copiar referências de recurso, associações de dados e animações, embora ele copia os valores atuais.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingGroup.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GuidelineSet">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GuidelineSet GuidelineSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.GuidelineSet GuidelineSet" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DrawingGroup.GuidelineSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GuidelineSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Media.GuidelineSet" /> a ser aplicado a este <see cref="T:System.Windows.Media.DrawingGroup" />.</summary>
+        <value>O <see cref="T:System.Windows.Media.GuidelineSet" /> a ser aplicado a este <see cref="T:System.Windows.Media.DrawingGroup" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.DrawingGroup.Transform%2A> deste <xref:System.Windows.Media.DrawingGroup> é aplicada após o <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>. Como resultado, o <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> é transformado junto com o conteúdo do <xref:System.Windows.Media.DrawingGroup>.  
+  
+<a name="dependencyPropertyInfo_GuidelineSet"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.DrawingGroup.GuidelineSetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GuidelineSetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty GuidelineSetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty GuidelineSetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DrawingGroup.GuidelineSetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.DrawingGroup.GuidelineSet" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opacity">
+      <MemberSignature Language="C#" Value="public double Opacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Opacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DrawingGroup.Opacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a opacidade deste <see cref="T:System.Windows.Media.DrawingGroup" />.</summary>
+        <value>Um valor entre 0 e 1, inclusive, que descreve a opacidade deste <see cref="T:System.Windows.Media.DrawingGroup" />. O padrão é <c>1</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor de `1` Especifica que o <xref:System.Windows.Media.DrawingGroup> é completamente opaco; um valor de `0` Especifica que é completamente transparente. Um valor que seja menor do que 0 é tratado como 0 e um valor maior que 1 é tratado como 1.  
+  
+ Outra maneira de controlar a opacidade de um <xref:System.Windows.Media.GeometryDrawing> é especificar o <xref:System.Windows.Media.Brush.Opacity%2A> de seu <xref:System.Windows.Media.Brush>.  
+  
+ <xref:System.Windows.Media.DrawingGroup>as operações são aplicadas na seguinte ordem:  
+  
+1.  <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>  
+  
+2.  <xref:System.Windows.Media.DrawingGroup.Opacity%2A>  
+  
+3.  <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>  
+  
+4.  <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>  
+  
+5.  <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>  
+  
+6.  <xref:System.Windows.Media.DrawingGroup.Transform%2A>  
+  
+<a name="dependencyPropertyInfo_Opacity"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.DrawingGroup.OpacityProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como modificar a opacidade de um <xref:System.Windows.Media.Drawing>. O <xref:System.Windows.Media.DrawingGroup> classe é o único tipo de <xref:System.Windows.Media.Drawing> objeto que tem um <xref:System.Windows.Media.DrawingGroup.Opacity%2A> propriedade.  
+  
+ Para alterar a opacidade de um <xref:System.Windows.Media.Drawing> de objeto, adicione-o a um <xref:System.Windows.Media.DrawingGroup> e defina o <xref:System.Windows.Media.DrawingGroup.Opacity%2A> propriedade do <xref:System.Windows.Media.DrawingGroup> objeto.  
+  
+ O <xref:System.Windows.Media.DrawingGroup.Opacity%2A> configuração do <xref:System.Windows.Media.DrawingGroup> objeto é multiplicado pela opacidade de seus desenhos-filhos; por exemplo, se um <xref:System.Windows.Media.DrawingGroup> tem um <xref:System.Windows.Media.DrawingGroup.Opacity%2A> de 0,5 e ele contém um <xref:System.Windows.Media.GeometryDrawing> que tem um 50 por cento opaco <xref:System.Windows.Media.GeometryDrawing.Brush%2A>, o pincel é 25 por cento opaco (0,5 * 0,5).  
+  
+ Para alterar a opacidade de partes específicas de um desenho, use um <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>.  
+  
+ O exemplo a seguir usa uma <xref:System.Windows.Media.DrawingGroup> para combinar vários <xref:System.Windows.Media.GeometryDrawing> objetos. O exemplo também define a opacidade do <xref:System.Windows.Media.DrawingGroup> do objeto de 0,25 para que os desenhos sejam 25 por cento opaco.  
+  
+ Esta ilustração mostra o <xref:System.Windows.Media.DrawingGroup> antes e após seu <xref:System.Windows.Media.DrawingGroup.Opacity%2A> seja definida como 0,25.  
+  
+ ![DrawingGroups com diferentes configurações de opacidade](~/add/media/graphicsmm-opacity.png "DrawingGroups com diferentes configurações de opacidade")  
+  
+ [!code-csharp[DrawingMiscSnippets_snip#DrawingGroupOpacityExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/OpacityExample.cs#drawinggroupopacityexamplewholepage)]
+ [!code-xaml[DrawingMiscSnippets_snip#DrawingGroupOpacityExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/OpacityExample.xaml#drawinggroupopacityexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpacityMask">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush OpacityMask { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush OpacityMask" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DrawingGroup.OpacityMask" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pincel usado para alterar a opacidade de regiões selecionados deste <see cref="T:System.Windows.Media.DrawingGroup" />.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Brush" /> que descreve a opacidade desta <see cref="T:System.Windows.Media.DrawingGroup" />; <see langword="null" /> indica que nenhuma máscara de opacidade existe e a opacidade é uniforme. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Brush> é mapeado para o <xref:System.Windows.Media.DrawingGroup>. O valor de opacidade de cada pixel do mapeado <xref:System.Windows.Media.Brush> é usado para determinar a opacidade resultante de cada pixel correspondente do <xref:System.Windows.Media.DrawingGroup>. Somente o valor de opacidade de cada cor do pincel é usado para esse processamento; todas as outras informações de cor são ignoradas.  
+  
+ A opacidade que essa propriedade especifica é multiplicada com o <xref:System.Windows.Media.DrawingGroup.Opacity%2A> valor o <xref:System.Windows.Media.DrawingGroup> objeto. Para obter mais informações sobre máscaras de opacidade e como eles funcionam, consulte [visão geral de máscaras de opacidade](~/docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md).  
+  
+ <xref:System.Windows.Media.DrawingGroup>as operações são aplicadas na seguinte ordem:  
+  
+1.  <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>  
+  
+2.  <xref:System.Windows.Media.DrawingGroup.Opacity%2A>  
+  
+3.  <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>  
+  
+4.  <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>  
+  
+5.  <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>  
+  
+6.  <xref:System.Windows.Media.DrawingGroup.Transform%2A>  
+  
+<a name="dependencyPropertyInfo_OpacityMask"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.DrawingGroup.OpacityMaskProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como aplicar uma máscara de opacidade para um <xref:System.Windows.Media.Drawing>. O <xref:System.Windows.Media.DrawingGroup> classe é o único tipo de <xref:System.Windows.Media.Drawing> objeto que suporta máscara de opacidade.  
+  
+ Para aplicar uma máscara de opacidade a um <xref:System.Windows.Media.Drawing> de objeto, adicione-o a um <xref:System.Windows.Media.DrawingGroup> e defina o <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A> propriedade do <xref:System.Windows.Media.DrawingGroup> objeto.  
+  
+ A ilustração a seguir mostra três modos de exibição da <xref:System.Windows.Media.DrawingGroup>: o desenho sem uma máscara de opacidade, a máscara de opacidade sozinha e o <xref:System.Windows.Media.DrawingGroup> depois que a máscara de opacidade é aplicada.  
+  
+ ![Um DrawingGroup com uma máscara de opacidade](~/add/media/graphicsmm-opmask.png "um DrawingGroup com uma máscara de opacidade")  
+  
+ O exemplo a seguir usa uma <xref:System.Windows.Media.RadialGradientBrush> como uma máscara de opacidade para um <xref:System.Windows.Media.DrawingGroup>.  
+  
+> [!NOTE]
+>  Embora este exemplo usa um <xref:System.Windows.Media.RadialGradientBrush> como uma máscara de opacidade, <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.ImageBrush>, e <xref:System.Windows.Media.VisualBrush> também podem ser boas máscaras de opacidade. Para obter mais informações sobre máscaras de opacidade e como eles funcionam, consulte o [visão geral de máscaras de opacidade](~/docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md).  
+  
+ [!code-csharp[DrawingMiscSnippets_snip#DrawingGroupOpacityMaskExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/OpacityMaskExample.cs#drawinggroupopacitymaskexamplewholepage)]
+ [!code-xaml[DrawingMiscSnippets_snip#DrawingGroupOpacityMaskExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/OpacityMaskExample.xaml#drawinggroupopacitymaskexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpacityMaskProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OpacityMaskProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OpacityMaskProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DrawingGroup.OpacityMaskProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.DrawingGroup.OpacityMask" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpacityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty OpacityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty OpacityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DrawingGroup.OpacityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.DrawingGroup.Opacity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DrawingContext Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.DrawingContext Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.DrawingGroup.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DrawingContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre o <see cref="T:System.Windows.Media.DrawingGroup" /> para popular seu <see cref="P:System.Windows.Media.DrawingGroup.Children" /> e limpa todos os <see cref="P:System.Windows.Media.DrawingGroup.Children" /> existentes.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.DrawingContext" /> que pode ser usado para descrever o conteúdo desse objeto <see cref="T:System.Windows.Media.DrawingGroup" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve fechar o <xref:System.Windows.Media.DrawingContext> antes de você pode renderizar isso <xref:System.Windows.Media.DrawingGroup> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Transform Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Transform Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DrawingGroup.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Media.Transform" /> aplicado a este <see cref="T:System.Windows.Media.DrawingGroup" />.</summary>
+        <value>A transformação a ser aplicada a este <see cref="T:System.Windows.Media.DrawingGroup" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para aplicar várias transformações a um único <xref:System.Windows.Media.DrawingGroup>, use um <xref:System.Windows.Media.TransformGroup>.  
+  
+ <xref:System.Windows.Media.DrawingGroup>as operações são aplicadas na seguinte ordem:  
+  
+1.  <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>  
+  
+2.  <xref:System.Windows.Media.DrawingGroup.Opacity%2A>  
+  
+3.  <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>  
+  
+4.  <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>  
+  
+5.  <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>  
+  
+6.  <xref:System.Windows.Media.DrawingGroup.Transform%2A>  
+  
+<a name="dependencyPropertyInfo_Transform"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.DrawingGroup.TransformProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como aplicar uma <xref:System.Windows.Media.DrawingGroup.Transform%2A> para um <xref:System.Windows.Media.Drawing>. Para transformar um <xref:System.Windows.Media.Drawing> do objeto, adicioná-lo para um <xref:System.Windows.Media.DrawingGroup> e defina o <xref:System.Windows.Media.DrawingGroup.Transform%2A> propriedade o <xref:System.Windows.Media.DrawingGroup> objeto.  
+  
+ O <xref:System.Windows.Media.DrawingGroup> classe é o único tipo de <xref:System.Windows.Media.Drawing> objeto que oferece suporte a transformações. Para aplicar várias transformações a um único <xref:System.Windows.Media.DrawingGroup>, use um <xref:System.Windows.Media.TransformGroup>.  
+  
+ O exemplo a seguir usa uma <xref:System.Windows.Media.DrawingGroup> para combinar vários <xref:System.Windows.Media.GeometryDrawing> objetos e, em seguida, transforma-os usando um <xref:System.Windows.Media.RotateTransform>.  
+  
+ A ilustração mostra a <xref:System.Windows.Media.DrawingGroup> antes e depois o <xref:System.Windows.Media.RotateTransform> é aplicada.  
+  
+ ![A rotação DrawingGroup](~/add/media/graphicsmm-rotate.png "um girado DrawingGroup")  
+  
+ [!code-csharp[DrawingMiscSnippets_snip#DrawingGroupTransformExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/TransformExample.cs#drawinggrouptransformexamplewholepage)]
+ [!code-xaml[DrawingMiscSnippets_snip#DrawingGroupTransformExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/TransformExample.xaml#drawinggrouptransformexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TransformProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TransformProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.DrawingGroup.TransformProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.DrawingGroup.Transform" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

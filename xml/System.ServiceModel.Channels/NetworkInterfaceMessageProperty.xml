@@ -1,0 +1,165 @@
+<Type Name="NetworkInterfaceMessageProperty" FullName="System.ServiceModel.Channels.NetworkInterfaceMessageProperty">
+  <TypeSignature Language="C#" Value="public class NetworkInterfaceMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NetworkInterfaceMessageProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.NetworkInterfaceMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma propriedade de mensagem da interface de rede.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetworkInterfaceMessageProperty (int interfaceIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 interfaceIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.NetworkInterfaceMessageProperty.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="interfaceIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceIndex">O índice de interface especificado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.NetworkInterfaceMessageProperty" /> classe usando um interfaceIndex especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTo">
+      <MemberSignature Language="C#" Value="public void AddTo (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddTo(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.NetworkInterfaceMessageProperty.AddTo(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser adicionada.</param>
+        <summary>Especifica uma mensagem para adicionar as propriedades de mensagem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTo">
+      <MemberSignature Language="C#" Value="public void AddTo (System.ServiceModel.Channels.MessageProperties properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddTo(class System.ServiceModel.Channels.MessageProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.NetworkInterfaceMessageProperty.AddTo(System.ServiceModel.Channels.MessageProperties)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.ServiceModel.Channels.MessageProperties" />
+      </Parameters>
+      <Docs>
+        <param name="properties">As propriedades para adicionar.</param>
+        <summary>Especifica uma propriedade a ser adicionada para as propriedades de mensagem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterfaceIndex">
+      <MemberSignature Language="C#" Value="public int InterfaceIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InterfaceIndex" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.NetworkInterfaceMessageProperty.InterfaceIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que especifica o índice de interface para a propriedade de mensagem.</summary>
+        <value>O valor que especifica o índice de interface para a propriedade de mensagem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public static string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.NetworkInterfaceMessageProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome especificado para a propriedade de mensagem da interface de rede.</summary>
+        <value>O nome especificado para a propriedade de mensagem de interface de rede.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGet">
+      <MemberSignature Language="C#" Value="public static bool TryGet (System.ServiceModel.Channels.Message message, out System.ServiceModel.Channels.NetworkInterfaceMessageProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGet(class System.ServiceModel.Channels.Message message, [out] class System.ServiceModel.Channels.NetworkInterfaceMessageProperty&amp; property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.NetworkInterfaceMessageProperty.TryGet(System.ServiceModel.Channels.Message,System.ServiceModel.Channels.NetworkInterfaceMessageProperty@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="property" Type="System.ServiceModel.Channels.NetworkInterfaceMessageProperty&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de que as propriedades de mensagem da interface de rede devem ser recuperados.</param>
+        <param name="property">O método retorna true, networkInterfaceMessageProperty contém um NetworkInterfaceMessageProperty que está associado com a mensagem.</param>
+        <summary>Tenta obter o NetworkInterfaceMessageProperty das propriedades de uma mensagem especificada.</summary>
+        <returns>
+          <see langword="True" />Quando um valor para o NetworkInterfaceMessageproperty é obtido da mensagem; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGet">
+      <MemberSignature Language="C#" Value="public static bool TryGet (System.ServiceModel.Channels.MessageProperties properties, out System.ServiceModel.Channels.NetworkInterfaceMessageProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGet(class System.ServiceModel.Channels.MessageProperties properties, [out] class System.ServiceModel.Channels.NetworkInterfaceMessageProperty&amp; property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.NetworkInterfaceMessageProperty.TryGet(System.ServiceModel.Channels.MessageProperties,System.ServiceModel.Channels.NetworkInterfaceMessageProperty@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.ServiceModel.Channels.MessageProperties" />
+        <Parameter Name="property" Type="System.ServiceModel.Channels.NetworkInterfaceMessageProperty&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Os MessageProperties do que as interfaces de rede propriedades da mensagem devem ser recuperados.</param>
+        <param name="property">O método retorna true, networkInterfaceMessageProperty contém um NetworkInterfaceMessageProperty que está associado às propriedades.</param>
+        <summary>Tenta obter o NetworkInterfaceMessageProperty de uma coleção de propriedades de mensagem especificada.</summary>
+        <returns>
+          <see langword="True" />Quando um valor para o NetworkInterfaceMessageProperty é obtido a partir; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

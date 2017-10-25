@@ -1,0 +1,192 @@
+<Type Name="ManipulationCompletedEventArgs" FullName="System.Windows.Input.ManipulationCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ManipulationCompletedEventArgs : System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManipulationCompletedEventArgs extends System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ManipulationCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.UIElement.ManipulationCompleted" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre manipulações, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md). Para obter um exemplo de um aplicativo que responde às manipulações, consulte [passo a passo: Criando seu primeiro toque aplicativo](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ManipulationCompletedEventArgs.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela a manipulação.</summary>
+        <returns>
+          <see langword="true" />Se a manipulação foi cancelada com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o método for bem-sucedido, o padrão <xref:System.Windows.Input.TouchDevice> envia anterior toque eventos como mouse para baixo, movimento do mouse ou mouse eventos para o elemento. Toque não pode ser promovido para eventos de mouse se o <xref:System.Windows.UIElement.ManipulationCompleted> evento ocorrer durante inércia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalVelocities">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ManipulationVelocities FinalVelocities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ManipulationVelocities FinalVelocities" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.FinalVelocities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ManipulationVelocities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as velocidades que são usadas para a manipulação.</summary>
+        <value>Velocidades que são usadas para a manipulação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ManipulationCompletedEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="genericTarget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInertial">
+      <MemberSignature Language="C#" Value="public bool IsInertial { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInertial" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.IsInertial" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o evento <see cref="E:System.Windows.UIElement.ManipulationCompleted" /> ocorre durante a inercia.</summary>
+        <value>
+          <see langword="true" /> se o evento <see cref="E:System.Windows.UIElement.ManipulationCompleted" /> ocorrer durante a inércia; <see langword="false" /> se o evento ocorrer quando o usuário tiver contato com o <see cref="T:System.Windows.UIElement" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManipulationContainer">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement ManipulationContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement ManipulationContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.ManipulationContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contêiner que define as coordenadas para a manipulação.</summary>
+        <value>O contêiner que define as coordenadas para a manipulação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManipulationOrigin">
+      <MemberSignature Language="C#" Value="public System.Windows.Point ManipulationOrigin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point ManipulationOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.ManipulationOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o ponto que deu origem à manipulação.</summary>
+        <value>O ponto que deu origem à manipulação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois pontos de contato iniciada a manipulação de <xref:System.Windows.Input.ManipulationCompletedEventArgs.ManipulationOrigin%2A> propriedade é o ponto entre os dois pontos de contato.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Manipulators">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Windows.Input.IManipulator&gt; Manipulators { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Input.IManipulator&gt; Manipulators" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.Manipulators" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Windows.Input.IManipulator&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos que representa o contata o toque para a manipulação.</summary>
+        <value>Uma coleção de objetos que representa o contata o toque para a manipulação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalManipulation">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ManipulationDelta TotalManipulation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ManipulationDelta TotalManipulation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationCompletedEventArgs.TotalManipulation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ManipulationDelta</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a transformação total que ocorre durante a manipulação atual.</summary>
+        <value>A transformação total que ocorre durante a manipulação atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

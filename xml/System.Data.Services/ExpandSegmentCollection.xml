@@ -1,0 +1,84 @@
+<Type Name="ExpandSegmentCollection" FullName="System.Data.Services.ExpandSegmentCollection">
+  <TypeSignature Language="C#" Value="public class ExpandSegmentCollection : System.Collections.Generic.List&lt;System.Data.Services.ExpandSegment&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExpandSegmentCollection extends System.Collections.Generic.List`1&lt;class System.Data.Services.ExpandSegment&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.ExpandSegmentCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Generic.List&lt;System.Data.Services.ExpandSegment&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Data.Services.ExpandSegment</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Os segmentos de uma consulta que pode ser expandida, o <c>$expand</c> cláusula que segue uma consulta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um `$expand` cláusula indica que se expandir cada item deve ser totalmente expandido. Por exemplo, o valor `OrderLines.Product.Image` com `$expand` faz com que `OrderLines`, o `Product` de cada elemento na `OrderLines`e o `Image` do `Product` de cada elemento na `OrderLines` a ser expandido.  
+  
+ A propriedade de recurso mais à esquerda em um `$expand` cláusula deve ser uma propriedade de tipo de entidade dentro do conjunto de entidade identificado pelo último segmento do caminho no URI de solicitação.  
+  
+ Redundância `$expand` cláusula regras são ignoradas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpandSegmentCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.ExpandSegmentCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma coleção de segmentos de expansão de uma consulta.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpandSegmentCollection (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.ExpandSegmentCollection.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">O número de segmentos de expansão que a nova coleção pode armazenar inicialmente.</param>
+        <summary>Inicializa uma nova coleção de segmentos de expansão que está vazia e tem a capacidade inicial especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFilter">
+      <MemberSignature Language="C#" Value="public bool HasFilter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.ExpandSegmentCollection.HasFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor booliano que indica se segmentos a ser expandido incluem uma cláusula de filtro.</summary>
+        <value>Valor booliano que indica se segmentos a ser expandido incluem uma cláusula de filtro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

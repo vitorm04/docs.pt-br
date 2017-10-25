@@ -1,0 +1,412 @@
+<Type Name="User" FullName="Microsoft.VisualBasic.ApplicationServices.User">
+  <TypeSignature Language="C#" Value="public class User" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi User extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.ApplicationServices.User" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso às informações sobre o usuário atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades e métodos expostos pelo `My.User` objeto fornece acesso às informações sobre o usuário atual. O significado de "usuário atual" difere ligeiramente entre aplicativos Windows e Web. Em um aplicativo do Windows, o usuário atual é o usuário que executa o aplicativo. Em um aplicativo Web, o usuário atual é o usuário que acessa o aplicativo.  
+  
+ O `My.User` propriedade também fornece acesso a <xref:System.Security.Principal.IPrincipal> para o usuário atual. Um objeto principal representa o contexto de segurança do usuário, incluindo a identidade do usuário e quaisquer funções aos quais o usuário pertence.  
+  
+ Para aplicativos do Windows, esta propriedade fornece a mesma funcionalidade que o <xref:System.Threading.Thread.CurrentPrincipal%2A> propriedade. Para aplicativos Web, esta propriedade fornece a mesma funcionalidade que o <xref:System.Web.HttpContext.User%2A> propriedade do objeto retornado pelo <xref:System.Web.HttpContext.Current%2A> propriedade.  
+  
+> [!NOTE]
+>  Para aplicativos do Windows, somente os projetos criados **aplicativo do Windows** modelo inicializar o `My.User` objeto por padrão. Em todos os outros tipos de projeto do Windows, você deverá inicializar o `My.User` objeto chamando o <xref:Microsoft.VisualBasic.ApplicationServices.User.InitializeWithWindowsUser%2A> método explicitamente ou atribuindo um valor para <xref:System.Threading.Thread.CurrentPrincipal%2A>.  
+  
+> [!NOTE]
+>  O `My.User` objeto não pode relatar informações sobre o usuário atual do Windows, quando executado no Windows 95 e Windows 98, pois esses sistemas operacionais não suportam o conceito de um usuário conectado. Você deve implementar a autenticação personalizada para usar o `My.User` objeto nesses sistemas operacionais.  
+  
+   
+  
+## Examples  
+ Este exemplo verifica se o aplicativo está usando o Windows ou a autenticação personalizada e usa essas informações para analisar o `My.User.Name` propriedade.  
+  
+ [!code-vb[VbVbalrMyUser#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyUser/VB/Class1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public User ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.User.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.ApplicationServices.User" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades e métodos expostos pelo `My.User` objeto fornecem acesso a informações sobre o usuário atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPrincipal">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IPrincipal CurrentPrincipal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal CurrentPrincipal" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a entidade de segurança atual (para segurança baseada em função).</summary>
+        <value>Um valor <see cref="T:System.Security.Principal.IPrincipal" /> que representa o contexto de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir o `My.User.CurrentPrincipal` propriedade para um objeto que implementa o <xref:System.Security.Principal.IPrincipal> interface para habilitar a autenticação personalizada.  
+  
+ Na maioria dos tipos de projeto, esta propriedade obtém e define a entidade de segurança do thread atual. Em um aplicativo ASP.NET, esta propriedade obtém e define as informações de segurança para a identidade do usuário da solicitação HTTP atual.  
+  
+ Este é um membro avançado; ele não aparece no IntelliSense, a menos que você clique no **todas as** guia.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|**Sim**|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|**Sim**|  
+  
+   
+  
+## Examples  
+ Este exemplo verifica se o aplicativo está usando o Windows ou a autenticação personalizada e usa essas informações para analisar `My.User.Name` propriedade.  
+  
+ [!code-vb[VbVbalrMyUser#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyUser/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária para definir a entidade de segurança.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Descreve um conjunto de permissões de segurança aplicadas ao código. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeWithWindowsUser">
+      <MemberSignature Language="C#" Value="public void InitializeWithWindowsUser ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void InitializeWithWindowsUser() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.User.InitializeWithWindowsUser" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define a entidade de segurança do thread atual para o usuário do Windows que iniciou o aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `My.User.InitializeWithWindowsUser` método para definir a entidade de segurança do thread atual para o usuário do Windows que iniciou o aplicativo. O modelo de aplicativo do Visual Basic em um aplicativo do Windows chama esse método durante a inicialização por padrão. Em outros tipos de projeto, você deve definir a entidade de segurança do thread atual ao chamar esse método explicitamente ou atribuindo um valor para <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>.  
+  
+ Em projetos do Windows, o `My.User` objeto baseia-se a entidade de segurança do thread atual; portanto, esse método pode alterar as informações `My.User` retorna. Em um aplicativo ASP.NET, o `My.User` objeto baseia-se na identidade do usuário da solicitação HTTP atual e não é afetado por este método.  
+  
+> [!NOTE]
+>  O comportamento exato do `My.User` objeto depende do tipo de aplicativo e o sistema operacional no qual o aplicativo é executado. Para obter mais informações, consulte o <xref:Microsoft.VisualBasic.ApplicationServices.User> visão geral da classe.  
+  
+ Este é um membro avançado; ele não aparece no IntelliSense, a menos que você clique no **todas as** guia.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|**Sim**|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|**Sim**|  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Descreve um conjunto de permissões de segurança aplicadas ao código. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalPrincipal">
+      <MemberSignature Language="C#" Value="protected virtual System.Security.Principal.IPrincipal InternalPrincipal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal InternalPrincipal" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.User.InternalPrincipal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto principal que representa o usuário atual.</summary>
+        <value>Um <see cref="T:System.Security.Principal.IPrincipal" /> objeto representando o usuário atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No <xref:Microsoft.VisualBasic.ApplicationServices.User> de objeto, essa propriedade encapsula o <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> propriedade. Substitua este método em uma classe derivada para fornecer um comportamento diferente. Por exemplo, o <xref:Microsoft.VisualBasic.ApplicationServices.WebUser.InternalPrincipal%2A?displayProperty=nameWithType> propriedade substitui essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthenticated">
+      <MemberSignature Language="C#" Value="public bool IsAuthenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.User.IsAuthenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o usuário foi autenticado.</summary>
+        <value>
+          <see langword="True" /> se o usuário foi autenticado; caso contrário, <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.User.IsAuthenticated` propriedade permite que seu código determinar se o usuário atual foi autenticado.  
+  
+> [!NOTE]
+>  O comportamento exato do `My.User` objeto depende do tipo do aplicativo e o sistema operacional no qual o aplicativo é executado. Para obter mais informações, consulte o <xref:Microsoft.VisualBasic.ApplicationServices.User> visão geral da classe.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|**Sim**|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|**Sim**|  
+  
+   
+  
+## Examples  
+ Este exemplo verifica se o usuário foi autenticado antes de acessar um recurso.  
+  
+ [!code-vb[VbVbalrMyUser#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyUser/VB/Class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Descreve um conjunto de permissões de segurança aplicadas ao código. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInRole">
+      <MemberSignature Language="C#" Value="public bool IsInRole (Microsoft.VisualBasic.ApplicationServices.BuiltInRole role);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool IsInRole(valuetype Microsoft.VisualBasic.ApplicationServices.BuiltInRole role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.User.IsInRole(Microsoft.VisualBasic.ApplicationServices.BuiltInRole)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="role" Type="Microsoft.VisualBasic.ApplicationServices.BuiltInRole" />
+      </Parameters>
+      <Docs>
+        <param name="role">A função interna do Windows para o qual verificar a associação.</param>
+        <summary>Determina se o usuário atual pertence à função especificada.</summary>
+        <returns>
+          <see langword="True" /> se o usuário atual for membro da função especificada; caso contrário, <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.User.IsInRole` método permite que seu código determinar se o usuário atual é um membro da função especificada.  
+  
+ A sobrecarga do `My.User.IsInRole` método que utiliza uma cadeia de caracteres oferece acesso fácil ao <xref:System.Security.Principal.IPrincipal.IsInRole%2A> método da entidade de segurança atual.  
+  
+ A sobrecarga do `My.User.IsInRole` método que utiliza um `BuiltInRole` enumeração tem um comportamento diferente, dependendo do objeto atual. Se for uma entidade de usuário do Windows (<xref:System.Security.Principal.WindowsPrincipal>), esta função converte `role` equivalente a <xref:System.Security.Principal.WindowsBuiltInRole> enumeração e retorna o resultado da chamada <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A>. Se o servidor principal atual é qualquer outra entidade de segurança, essa função passa o nome do valor na enumeração `role` para a entidade de segurança <xref:System.Security.Principal.IPrincipal.IsInRole%2A> método.  
+  
+> [!NOTE]
+>  O comportamento exato do `My.User` objeto depende do tipo do aplicativo e o sistema operacional no qual o aplicativo é executado. Para obter mais informações, consulte o <xref:Microsoft.VisualBasic.ApplicationServices.User> visão geral da classe.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|**Sim**|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|**Sim**|  
+  
+   
+  
+## Examples  
+ Este exemplo verifica se o usuário é um administrador antes de acessar um recurso.  
+  
+ [!code-vb[VbVbalrMyUser#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyUser/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Descreve um conjunto de permissões de segurança aplicadas ao código. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInRole">
+      <MemberSignature Language="C#" Value="public bool IsInRole (string role);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance bool IsInRole(string role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ApplicationServices.User.IsInRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="role" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="role">O nome da função cuja associação será verificada.</param>
+        <summary>Determina se o usuário atual pertence à função especificada.</summary>
+        <returns>
+          <see langword="True" /> se o usuário atual for membro da função especificada; caso contrário, <see langword="False" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.User.IsInRole` método permite que seu código determinar se o usuário atual é um membro da função especificada.  
+  
+ A sobrecarga do `My.User.IsInRole` método que utiliza uma cadeia de caracteres oferece acesso fácil ao <xref:System.Security.Principal.IPrincipal.IsInRole%2A> método da entidade de segurança atual.  
+  
+ A sobrecarga do `My.User.IsInRole` método que utiliza um `BuiltInRole` enumeração tem um comportamento diferente, dependendo do objeto atual. Se for uma entidade de usuário do Windows (<xref:System.Security.Principal.WindowsPrincipal>), esta função converte `role` equivalente a <xref:System.Security.Principal.WindowsBuiltInRole> enumeração e retorna o resultado da chamada <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A>. Se o servidor principal atual é qualquer outra entidade de segurança, essa função passa o nome do valor na enumeração `role` para a entidade de segurança <xref:System.Security.Principal.IPrincipal.IsInRole%2A> método.  
+  
+> [!NOTE]
+>  O comportamento exato do `My.User` objeto depende do tipo do aplicativo e o sistema operacional no qual o aplicativo é executado. Para obter mais informações, consulte o <xref:Microsoft.VisualBasic.ApplicationServices.User> visão geral da classe.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|**Sim**|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|**Sim**|  
+  
+   
+  
+## Examples  
+ Este exemplo verifica se o usuário é um administrador antes de acessar um recurso.  
+  
+ [!code-vb[VbVbalrMyUser#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyUser/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Descreve um conjunto de permissões de segurança aplicadas ao código. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ApplicationServices.User.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do usuário atual.</summary>
+        <value>
+          <see langword="String" />. O nome do usuário atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `My.User` objeto para obter informações sobre o usuário atual.  
+  
+ A entidade que autentica o usuário também controla o formato do nome de usuário. Por padrão, um aplicativo usa a autenticação do Windows e o nome de usuário tem o formato domínio ome de usuário. Uma implementação personalizada do principal não necessariamente usa o mesmo formato.  
+  
+> [!NOTE]
+>  O `My.User.Name` propriedade retorna uma cadeia de caracteres vazia quando executada em Windows 95 e Windows 98 porque esses sistemas operacionais não reconhecem nomes de usuário.  
+  
+> [!NOTE]
+>  O comportamento exato do `My.User` objeto depende do tipo do aplicativo e o sistema operacional no qual o aplicativo é executado. Para obter mais informações, consulte o <xref:Microsoft.VisualBasic.ApplicationServices.User> visão geral da classe.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|**Sim**|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|**Sim**|  
+  
+   
+  
+## Examples  
+ Este exemplo verifica se o aplicativo está usando o Windows ou a autenticação personalizada e usa essas informações para analisar o `My.User.Name` propriedade.  
+  
+ [!code-vb[VbVbalrMyUser#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyUser/VB/Class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Descreve um conjunto de permissões de segurança aplicadas ao código. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

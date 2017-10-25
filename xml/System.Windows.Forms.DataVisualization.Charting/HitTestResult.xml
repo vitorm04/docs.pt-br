@@ -1,0 +1,241 @@
+<Type Name="HitTestResult" FullName="System.Windows.Forms.DataVisualization.Charting.HitTestResult">
+  <TypeSignature Language="C#" Value="public class HitTestResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HitTestResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os resultados de um teste de clique.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> classe representa os resultados de um teste de clique e é exposto como o objeto de retorno de um <xref:System.Windows.Forms.DataVisualization.Charting.Chart.HitTest%2A> chamada de método.  
+  
+ Um teste de hit verifica um ponto especificado no gráfico para determinar se um elemento do gráfico está localizado nesse ponto. Se um elemento de gráfico é detectado, o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult> classe é usada para obter informações sobre o elemento gráfico.  
+  
+ Se for encontrado um elemento de gráfico, o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.Object%2A> propriedade retorna uma referência ao elemento gráfico; a única exceção a esta sendo <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objetos, caso em que o valor de retorno dessa propriedade é `null`.  
+  
+ Se um ponto de dados for localizado, você pode usar o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.PointIndex%2A> propriedade para obter o índice desse ponto de dados; ou seja, o índice de base zero do ponto de <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection>. Use o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.Series%2A> propriedade para obter o associado <xref:System.Windows.Forms.DataVisualization.Charting.Series> objeto para esse ponto de dados.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.ChartArea%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.Axis%2A> propriedades são usadas para obter a área de gráfico associados e o eixo do elemento do gráfico — se houver, retornado pelo teste de clique. Observe que essas propriedades podem ser `null` se o elemento gráfico retornado não tem uma área de gráfico associado ou o eixo.  
+  
+ Use o <xref:System.Windows.Forms.DataVisualization.Charting.ChartElementType> propriedade para determinar o tipo do elemento do gráfico retornado por um teste de clique.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HitTestResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.HitTestResult.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataVisualization.Charting.HitTestResult" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Axis">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.Axis Axis { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.Axis Axis" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.HitTestResult.Axis" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Axis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" /> objeto que pode ser associado a um elemento de gráfico retornado por um teste de clique. A presença de um associado <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" /> objeto depende se um elemento do gráfico foi detectado no local especificado e o tipo de elemento do gráfico retornado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" /> objeto, caso contrário <see langword="null" />. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o objeto de gráfico retornado pelo teste de ocorrências for um objeto que está associado um eixo — por exemplo, um elemento de barra de rolagem, marca de escala, linha de grade ou faixa — o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.Axis%2A> propriedade fará referência a <xref:System.Windows.Forms.DataVisualization.Charting.Axis> objeto ao qual o objeto de gráfico retornado está associado. Caso contrário, essa propriedade será `null`.  
+  
+ Observe que o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.HitTest%2A> método pode ser chamado explicitamente, caso em que um elemento de gráfico pode ou não estar no local especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartArea">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartArea ChartArea { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.ChartArea ChartArea" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.HitTestResult.ChartArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> objeto que pode ser associado a um elemento de gráfico retornado por um teste de clique. A presença de um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> objeto depende se um elemento do gráfico foi detectado no local especificado e o tipo de elemento do gráfico retornado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> objeto, caso contrário <see langword="null" />. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um objeto de gráfico é retornado pelo teste de clique, o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.ChartArea%2A> propriedade fará referência a <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> objeto que está associado com o elemento de gráfico retornado.  
+  
+ Se nenhum elemento de gráfico é retornado pelo teste de clique, o valor dessa propriedade será `null`.  
+  
+ **Observação** o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.HitTest%2A> método pode ser chamado explicitamente, caso em que um elemento de gráfico pode ou não estar no local especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartElementType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartElementType ChartElementType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartElementType ChartElementType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.HitTestResult.ChartElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartElementType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de elemento do gráfico, se houver, retornado por um teste de clique.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartElementType" /> valor de enumeração que indica o tipo de elemento gráfico retornado por um teste de clique. Assume o padrão de <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartElementType.Nothing" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para determinar o tipo de elemento do gráfico, se houver, retornado por um teste de clique.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Object">
+      <MemberSignature Language="C#" Value="public object Object { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Object" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.HitTestResult.Object" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto, se houver, retornado por um teste de clique.</summary>
+        <value>Um objeto do tipo <see cref="T:System.Object" />, caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um elemento do gráfico está localizado no ponto em que é verificado pelo teste de clique, essa propriedade fará referência a esse elemento do gráfico, caso contrário, o valor dessa propriedade será `null`.  
+  
+> [!NOTE]
+>  Se um ponto de dados é retornado pelo teste de clique, esta propriedade ainda retornará um `null`. Para obter informações sobre o ponto de dados, use o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.PointIndex%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.Series%2A> propriedades em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointIndex">
+      <MemberSignature Language="C#" Value="public int PointIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PointIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.HitTestResult.PointIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice de um ponto de dados, se houver, retornado por um teste de clique.</summary>
+        <value>Um <see langword="integer" /> valor que representa o índice de um ponto de dados retornado por um teste de clique. O valor padrão é um negativo (-1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver um ponto de dados no local que é verificado por um teste de clique, o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.PointIndex%2A> propriedade retornará o índice de base zero que do ponto de dados, caso contrário, ele retornará um resultado negativo um (-1).  
+  
+ Todos os pontos de dados são armazenados em um <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection>, que é exposto como o <xref:System.Windows.Forms.DataVisualization.Charting.Series.Points%2A> propriedade de coleção de um <xref:System.Windows.Forms.DataVisualization.Charting.Series> objeto; o índice do <xref:System.Windows.Forms.DataVisualization.Charting.DataPointCollection> é baseado em zero.  
+  
+ Use o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.Series%2A> propriedade para determinar a série à qual pertence o ponto de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Series">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.Series Series { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.Series Series" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.HitTestResult.Series" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Series</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a série associada de um ponto de dados, se houver, retornado por um teste de clique.</summary>
+        <value>O <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> que um ponto de dados retornado por um teste de hit pertence. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se for um ponto de dados no local marcado por um teste de clique, essa propriedade fará referência a <xref:System.Windows.Forms.DataVisualization.Charting.Series> objeto ao qual pertence o ponto de dados. Se nenhum ponto de dados é retornado pelo teste de clique, o valor dessa propriedade será `null`.  
+  
+ Para determinar o índice de um ponto de dados retornados, use o <xref:System.Windows.Forms.DataVisualization.Charting.HitTestResult.PointIndex%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubObject">
+      <MemberSignature Language="C#" Value="public object SubObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SubObject" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.HitTestResult.SubObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto sub, se houver, retornado por um teste de clique.</summary>
+        <value>Um objeto subtipo do tipo <see cref="T:System.Object" />, caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um exemplo de um Subobjeto é um <xref:System.Windows.Forms.DataVisualization.Charting.Axis> objeto que é exibido dentro de uma <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

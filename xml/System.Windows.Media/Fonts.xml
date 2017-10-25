@@ -1,0 +1,275 @@
+<Type Name="Fonts" FullName="System.Windows.Media.Fonts">
+  <TypeSignature Language="C#" Value="public static class Fonts" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Fonts extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Fonts" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de enumeração para objetos <see cref="T:System.Windows.Media.FontFamily" /> e <see cref="T:System.Windows.Media.Typeface" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma família de fontes é um conjunto de fontes que têm o mesmo tipo, como Arial, mas que diferem em recursos. Essas diferenças incluem <xref:System.Windows.Media.Typeface.Style%2A>, como itálico, e <xref:System.Windows.Media.Typeface.Weight%2A>, como negrito.  
+  
+ ![Fontes](~/add/media/fonts.PNG "fontes")  
+Exemplo de tipos que são membros de família de fonte "Times New Roman"  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetFontFamilies">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Windows.Media.FontFamily&gt; GetFontFamilies (string location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Windows.Media.FontFamily&gt; GetFontFamilies(string location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Fonts.GetFontFamilies(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Media.FontFamily&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="location">O local que contém as fontes.</param>
+        <summary>Retorna a coleção de <see cref="T:System.Windows.Media.FontFamily" /> objetos de um valor de cadeia de caracteres que representa o local das fontes.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.ICollection`1" /> de <see cref="T:System.Windows.Media.FontFamily" /> objetos que representam as fontes <paramref name="location" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para retornar a coleção de <xref:System.Windows.Media.FontFamily> objetos de um local de fonte.  
+  
+ [!code-csharp[FontSnippets#100](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/Window1.xaml.cs#100)]
+ [!code-vb[FontSnippets#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/window1.xaml.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="location" /> é <see langword="null" />. Você não pode passar <see langword="null" />, pois esse parâmetro é tratado como um caminho ou [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontFamilies">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Windows.Media.FontFamily&gt; GetFontFamilies (Uri baseUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Windows.Media.FontFamily&gt; GetFontFamilies(class System.Uri baseUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Fonts.GetFontFamilies(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Media.FontFamily&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">A base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor do local das fontes.</param>
+        <summary>Retorna uma coleção de <see cref="T:System.Windows.Media.FontFamily" /> objetos de uma [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] valor que representa o local das fontes.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.ICollection`1" /> de <see cref="T:System.Windows.Media.FontFamily" /> objetos que representam as fontes <paramref name="baseUri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para retornar a coleção de <xref:System.Windows.Media.FontFamily> objetos de uma base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] local.  
+  
+ [!code-csharp[FontSnippets#FontsSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet1)]
+ [!code-vb[FontSnippets#FontsSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet1)]  
+  
+ Para retornar a coleção de <xref:System.Windows.Media.FontFamily> objetos em recursos do aplicativo, use "//aplicativo" [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] notação mostrada no exemplo a seguir.  
+  
+ [!code-csharp[FontSnippets#FontsSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet2)]
+ [!code-vb[FontSnippets#FontsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para ler o conteúdo do <paramref name="baseUri" />. Enumerações associadas: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontFamilies">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Windows.Media.FontFamily&gt; GetFontFamilies (Uri baseUri, string location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Windows.Media.FontFamily&gt; GetFontFamilies(class System.Uri baseUri, string location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Fonts.GetFontFamilies(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Media.FontFamily&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="location" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">A base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor do local das fontes.</param>
+        <param name="location">O local que contém as fontes.</param>
+        <summary>Retorna uma coleção de <see cref="T:System.Windows.Media.FontFamily" /> objetos usando uma base de [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] valor para resolver o local de fonte.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.ICollection`1" /> de <see cref="T:System.Windows.Media.FontFamily" /> objetos que representam as fontes no local de fonte resolvido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para retornar a coleção de <xref:System.Windows.Media.FontFamily> objetos do local fonte resolvido. Nesse caso, o aplicativo contém um subdiretório chamado "recursos".  
+  
+ [!code-csharp[FontSnippets#FontsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
+ [!code-vb[FontSnippets#FontsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypefaces">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt; GetTypefaces (string location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Windows.Media.Typeface&gt; GetTypefaces(string location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Fonts.GetTypefaces(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="location">O local que contém as fontes.</param>
+        <summary>Retorna a coleção de <see cref="T:System.Windows.Media.Typeface" /> objetos de um valor de cadeia de caracteres que representa o local do diretório de fonte.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.ICollection`1" /> de <see cref="T:System.Windows.Media.Typeface" /> objetos que representam as fontes <paramref name="location" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para retornar a coleção de <xref:System.Windows.Media.Typeface> objetos de um local de fonte.  
+  
+ [!code-csharp[FontSnippets#FontsSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet4)]
+ [!code-vb[FontSnippets#FontsSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="location" /> é <see langword="null" />. Você não pode passar <see langword="null" />, pois esse parâmetro é tratado como um caminho ou [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypefaces">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt; GetTypefaces (Uri baseUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Windows.Media.Typeface&gt; GetTypefaces(class System.Uri baseUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Fonts.GetTypefaces(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">A base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor do local das fontes.</param>
+        <summary>Retorna uma coleção de <see cref="T:System.Windows.Media.Typeface" /> objetos de uma [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] valor que representa o local de fonte.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.ICollection`1" /> de <see cref="T:System.Windows.Media.Typeface" /> objetos que representam as fontes <paramref name="baseUri" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para retornar a coleção de <xref:System.Windows.Media.Typeface> objetos de uma base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] local.  
+  
+ [!code-csharp[FontSnippets#FontsSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet5)]
+ [!code-vb[FontSnippets#FontsSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet5)]  
+  
+ Para retornar a coleção de <xref:System.Windows.Media.Typeface> objetos em recursos do aplicativo, use "//aplicativo" [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] notação mostrada no exemplo a seguir.  
+  
+ [!code-csharp[FontSnippets#FontsSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet6)]
+ [!code-vb[FontSnippets#FontsSnippet6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet6)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para ler o conteúdo do <paramref name="baseUri" />. Enumerações associadas: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypefaces">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt; GetTypefaces (Uri baseUri, string location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.ICollection`1&lt;class System.Windows.Media.Typeface&gt; GetTypefaces(class System.Uri baseUri, string location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Fonts.GetTypefaces(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="location" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">A base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] valor do local das fontes.</param>
+        <param name="location">O local que contém as fontes.</param>
+        <summary>Retorna uma coleção de <see cref="T:System.Windows.Media.Typeface" /> objetos usando uma base de [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] valor para resolver o local de fonte.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.ICollection`1" /> de <see cref="T:System.Windows.Media.Typeface" /> objetos que representam as fontes no local de fonte resolvido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para retornar a coleção de <xref:System.Windows.Media.Typeface> objetos do local fonte resolvido. Nesse caso, o aplicativo contém um subdiretório chamado "recursos".  
+  
+ [!code-csharp[FontSnippets#FontsSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
+ [!code-vb[FontSnippets#FontsSnippet7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemFontFamilies">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Windows.Media.FontFamily&gt; SystemFontFamilies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.ICollection`1&lt;class System.Windows.Media.FontFamily&gt; SystemFontFamilies" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Fonts.SystemFontFamilies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Media.FontFamily&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de objetos <see cref="T:System.Windows.Media.FontFamily" /> do local de fonte de sistema padrão.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.ICollection`1" /> de <see cref="T:System.Windows.Media.FontFamily" /> objetos que representam as fontes na coleção de fontes de sistema.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemTypefaces">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt; SystemTypefaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.ICollection`1&lt;class System.Windows.Media.Typeface&gt; SystemTypefaces" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Fonts.SystemTypefaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.Windows.Media.Typeface&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de objetos <see cref="T:System.Windows.Media.Typeface" /> do local de fonte de sistema padrão.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.ICollection`1" /> de <see cref="T:System.Windows.Media.Typeface" /> objetos que representam as fontes na coleção de fontes de sistema.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

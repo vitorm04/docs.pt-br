@@ -1,0 +1,271 @@
+<Type Name="HtmlMeta" FullName="System.Web.UI.HtmlControls.HtmlMeta">
+  <TypeSignature Language="C#" Value="public class HtmlMeta : System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlMeta extends System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlMeta" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.HtmlControls.HtmlEmptyTagControlBuilder))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite o acesso programático à tag <see langword="&lt;meta&gt;" /> HTML no servidor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlMeta> controle fornece acesso programático para HTML `<meta>` elemento no servidor. O HTML `<meta>` elemento é um contêiner para dados sobre a página renderizada, mas não o próprio conteúdo de página. O `<meta>` marca é colocada entre o HTML de abertura e fechamento `<head>` elementos. Cada `<meta>` elemento descreve um nome de propriedade de metadados e seu valor associado.  
+  
+ Use o <xref:System.Web.UI.HtmlControls.HtmlMeta> do controle <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> propriedade para especificar o nome da propriedade de metadados e o <xref:System.Web.UI.HtmlControls.HtmlMeta.Content%2A> propriedade para especificar o valor da propriedade de metadados. Use o <xref:System.Web.UI.HtmlControls.HtmlMeta.Scheme%2A> propriedade para especificar informações adicionais aos agentes de usuário sobre como interpretar a propriedade de metadados. Use o <xref:System.Web.UI.HtmlControls.HtmlMeta.HttpEquiv%2A> propriedade em vez do <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> propriedade quando a propriedade de metadados resultante será recuperada usando HTTP.  
+  
+ Você pode obter uma referência à página `<head>` elemento usando o <xref:System.Web.UI.Page.Header%2A> propriedade o <xref:System.Web.UI.Page> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlMeta> controle para definir HTML `<meta>` elementos de uma página da Web. Dois `<meta>` elementos são definidos, uma lista de palavras-chave que descreve a página e uma lista a data de criação da página.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/cs/sourcecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/vb/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlMeta ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlMeta.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.HtmlControls.HtmlMeta> controle.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.HtmlControls.HtmlMeta>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|Cadeia de caracteres literal a "meta".|  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de como usar o <xref:System.Web.UI.HtmlControls.HtmlMeta.%23ctor%2A> construtor, consulte o <xref:System.Web.UI.HtmlControls.HtmlMeta> tópico de visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public virtual string Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlMeta.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da propriedade de metadados definido pelo controle <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" />.</summary>
+        <value>O valor da propriedade de metadados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlMeta.Content%2A> propriedade, junto com o <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> propriedade, define uma propriedade de metadados da página.  
+  
+ O <xref:System.Web.UI.HtmlControls.HtmlMeta.Content%2A> propriedade é renderizada para o `content` atributo do HTML resultante `<meta>` elemento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlMeta> controle para definir HTML `<meta>` elementos de uma página da Web. Dois `<meta>` elementos são definidos, uma lista de palavras-chave que descreve a página e uma lista a data de criação da página. O <xref:System.Web.UI.HtmlControls.HtmlMeta.Content%2A> propriedade é usada para definir o `content` atributo para cada `<meta>` marca.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/cs/sourcecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/vb/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpEquiv">
+      <MemberSignature Language="C#" Value="public virtual string HttpEquiv { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpEquiv" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlMeta.HttpEquiv" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> propriedade que está incluída no cabeçalho de resposta HTTP do controle.</summary>
+        <value>O nome do item de cabeçalho de resposta HTTP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.HtmlControls.HtmlMeta.HttpEquiv%2A> propriedade em vez do <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> propriedade para identificar as informações que devem ser incluídas nos cabeçalhos de resposta de uma solicitação HTTP.  
+  
+ O <xref:System.Web.UI.HtmlControls.HtmlMeta.HttpEquiv%2A> propriedade é renderizada para o `http-equiv` atributo do HTML resultante `<meta>` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlMeta.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da propriedade de metadados definido pelo <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> controle.</summary>
+        <value>O nome da propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> propriedade, junto com o <xref:System.Web.UI.HtmlControls.HtmlMeta.Content%2A> propriedade, define uma propriedade de metadados da página.  
+  
+ O <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> propriedade é renderizada para o `name` atributo do HTML resultante `<meta>` elemento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlMeta> controle para definir HTML `<meta>` elementos de uma página da Web. Dois `<meta>` marcas são definidas, uma lista de palavras-chave que descreve a página e uma lista a data de criação da página. O <xref:System.Web.UI.HtmlControls.HtmlMeta.Name%2A> propriedade é usada para definir o `name` atributo de cada `<meta>` marca.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/cs/sourcecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/vb/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlMeta.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> usado para renderizar o <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> o conteúdo do controle no navegador do cliente.</param>
+        <summary>Renderiza o <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> controle para o navegador do cliente usando especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlMeta> controlar processa um <xref:System.Web.UI.HtmlTextWriter.SelfClosingTagEnd> colchete HTML (/ >) no `<meta>` elemento se o navegador do cliente é compatível com XHTML. Para obter mais informações sobre como configurar o ASP.NET para renderização de não-XHTML, consulte [NIB: como: configurar o processamento de XHTML em Sites da Web do ASP.NET](http://msdn.microsoft.com/en-us/42483a54-f1ae-44e1-88e6-4370f8690149).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao estender o <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> controlar, substituir o <see cref="M:System.Web.UI.HtmlControls.HtmlMeta.Render(System.Web.UI.HtmlTextWriter)" /> método para fornecer processamento personalizado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public virtual string Scheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlMeta.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see langword="scheme" /> usado para interpretar o valor da propriedade de metadados de atributo definido pelo <see cref="T:System.Web.UI.HtmlControls.HtmlMeta" /> controle.</summary>
+        <value>O <see langword="scheme" /> atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlMeta.Scheme%2A> propriedade permite que você especifique um `scheme` atributo de HTML renderizado `<meta>` elemento. O `scheme` atributo pode ser usado para fornecer os agentes do usuário, tais como navegadores clientes ou pesquisa de mecanismos, contexto adicional para interpretar a propriedade de metadados.  
+  
+ O <xref:System.Web.UI.HtmlControls.HtmlMeta.Scheme%2A> propriedade é renderizada para o `scheme` atributo do HTML resultante `<meta>` elemento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlMeta> controle para definir HTML `<meta>` elementos de uma página da Web. Dois `<meta>` marcas são definidas, uma lista de palavras-chave que descreve a página e uma lista a data de criação da página. O <xref:System.Web.UI.HtmlControls.HtmlMeta.Scheme%2A> propriedade é usada para o relacionados a datas `<meta>` marca para facilitar a leitura do valor de data de agentes de usuário.  
+  
+ [!code-aspx-csharp[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/cs/sourcecs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.HtmlControls.HtmlMeta#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlControls.HtmlMeta/vb/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

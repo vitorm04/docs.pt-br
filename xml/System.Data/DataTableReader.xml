@@ -1,0 +1,1884 @@
+<Type Name="DataTableReader" FullName="System.Data.DataTableReader">
+  <TypeSignature Language="C#" Value="public sealed class DataTableReader : System.Data.Common.DbDataReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataTableReader extends System.Data.Common.DbDataReader" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataTableReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbDataReader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.Data.DataTableReader" /> obtém o conteúdo de um ou mais objetos <see cref="T:System.Data.DataTable" /> na forma de um ou mais conjuntos de resultados somente leitura de somente avanço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTableReader> funciona praticamente como qualquer outro leitor de dados, como o <xref:System.Data.SqlClient.SqlDataReader>, exceto que o <xref:System.Data.DataTableReader> fornece para iteração por linhas em um <xref:System.Data.DataTable>. Em outras palavras, ele fornece para iteração por linhas em um cache. Os dados em cache podem ser modificados enquanto o <xref:System.Data.DataTableReader> está ativa, e o leitor mantém automaticamente sua posição.  
+  
+ Quando você cria um <xref:System.Data.DataTableReader> de um <xref:System.Data.DataTable>, resultante <xref:System.Data.DataTableReader> objeto contém um conjunto de resultados com os mesmos dados que o <xref:System.Data.DataTable> do qual ele foi criado, exceto para todas as linhas que foram marcadas como excluídas. As colunas aparecem na mesma ordem que o original <xref:System.Data.DataTable>. A estrutura do resultado retornado é idêntica no esquema e os dados ao valor original <xref:System.Data.DataTable>. Um <xref:System.Data.DataTableReader> que foi criada chamando o <xref:System.Data.DataSet.CreateDataReader*> método de um <xref:System.Data.DataSet> objeto contém vários conjuntos de resultados se o <xref:System.Data.DataSet> contém mais de uma tabela. Os resultados estão na mesma sequência como o <xref:System.Data.DataTable> objetos no <xref:System.Data.DataTableCollection> do <xref:System.Data.DataSet> objeto.  
+  
+ O conjunto de resultados retornado contém apenas a versão atual de cada <xref:System.Data.DataRow>; são ignoradas linhas que são marcadas para exclusão.  
+  
+ O `DataTableReader` fornece um estável iterador, ou seja, o conteúdo do `DataTableReader` não são invalidados se o tamanho da coleção subjacente é modificado durante a iteração. Por exemplo, se um ou mais linhas no <xref:System.Data.DataTable.Rows%2A> coleta são excluídos ou removidos durante a iteração, a posição atual dentro de `DataTableReader` é mantida adequadamente e não invalida o iterador.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTableReader (System.Data.DataTable dataTable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataTable dataTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.#ctor(System.Data.DataTable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataTable" Type="System.Data.DataTable" />
+      </Parameters>
+      <Docs>
+        <param name="dataTable">O <see cref="T:System.Data.DataTable" /> do qual o novo <see cref="T:System.Data.DataTableReader" /> obtém seu conjunto de resultados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.DataTableReader" /> classe usando dados de fornecido <see cref="T:System.Data.DataTable" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataTableReader (System.Data.DataTable[] dataTables);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.DataTable[] dataTables) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.#ctor(System.Data.DataTable[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataTables" Type="System.Data.DataTable[]" />
+      </Parameters>
+      <Docs>
+        <param name="dataTables">A matriz de <see cref="T:System.Data.DataTable" /> objetos que fornece os resultados para o novo <see cref="T:System.Data.DataTableReader" /> objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.DataTableReader" /> classe usando a matriz fornecida de <see cref="T:System.Data.DataTable" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se for necessário criar um <xref:System.Data.DataTableReader> com base em todos ou um subconjunto das tabelas dentro de um determinado <xref:System.Data.DataSet>, chame o `DataSet`do <xref:System.Data.DataSet.CreateDataReader*> método. Se você quiser criar um novo <xref:System.Data.DataTableReader> instância com base em um grupo de `DataTable` instâncias que não seriam relacionadas, use este construtor. Você também pode tirar proveito desse construtor para reorganizar a ordem do `DataTables` dentro de `DataTableReader`, se sua ordem dentro de sua origem `DataSet` não atender às suas necessidades.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, o método TestConstructor cria dois <xref:System.Data.DataTable> instâncias. Para demonstrar a este construtor para o <xref:System.Data.DataTableReader> classe, o exemplo cria um novo `DataTableReader` com base em uma matriz que contém os dois `DataTables`e executa uma operação simples, imprimir o conteúdo de algumas colunas primeiro o console janela. Para testar esse aplicativo, crie um novo aplicativo de Console e cole o código de exemplo para o arquivo recém-criado.  
+  
+ [!code-csharp[DataWorks DataTableReader.ctor#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.ctor/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.ctor#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.ctor/VB/source.vb#1)]  
+  
+ A janela de Console exibe os seguintes resultados:  
+  
+```  
+1 Mary  
+2 Andy  
+3 Peter  
+4 Russ  
+1 Wireless Network Card  
+2 Hard Drive  
+3 Monitor  
+4 CPU  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o atual <see cref="T:System.Data.DataTableReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando `Close()` em um fechado `DataTableReader` objeto não gera um erro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Depth">
+      <MemberSignature Language="C#" Value="public override int Depth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Depth" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataTableReader.Depth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A profundidade de aninhamento da linha atual do <see cref="T:System.Data.DataTableReader" />.</summary>
+        <value>A profundidade de aninhamento da linha atual; sempre zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `DataTableReader`não oferece suporte a aninhamento. O `Depth` propriedade sempre retorna zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldCount">
+      <MemberSignature Language="C#" Value="public override int FieldCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FieldCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataTableReader.FieldCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o número de colunas na linha atual.</summary>
+        <value>Quando não posicionado em um conjunto de resultados válido, 0; Caso contrário, o número de colunas na linha atual.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa para recuperar a contagem de campo em um <see cref="T:System.Data.DataTableReader" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public override bool GetBoolean (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetBoolean(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetBoolean(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um <see cref="T:System.Boolean" />.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma conversão é executada; Portanto, os dados recuperados devem já ser um booliano ou conversível para um valor booleano ou será gerada uma exceção.  
+  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 no passado <xref:System.Data.DataTableReader>. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna não são do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetBoolean#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetBoolean/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetBoolean#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetBoolean/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém um <see langword="Boolean" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByte">
+      <MemberSignature Language="C#" Value="public override byte GetByte (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8 GetByte(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetByte(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um byte.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma conversão é executada; Portanto, os dados recuperados já devem ser um byte ou conversível para um byte.  
+  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 no passado <xref:System.Data.DataTableReader>. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna não são do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetByte#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetByte/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetByte#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetByte/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see langword="DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém um byte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public override long GetBytes (int ordinal, long dataIndex, byte[] buffer, int bufferIndex, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetBytes(int32 ordinal, int64 dataIndex, unsigned int8[] buffer, int32 bufferIndex, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="dataIndex" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="bufferIndex" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <param name="dataIndex">O índice no campo no qual será iniciada a operação de leitura.</param>
+        <param name="buffer">O buffer no qual o fluxo de bytes deve ser lido.</param>
+        <param name="bufferIndex">O índice no buffer no qual será iniciada a colocação dos dados.</param>
+        <param name="length">O tamanho máximo a ser copiado no buffer.</param>
+        <summary>Lê um fluxo de bytes, começando no deslocamento de coluna especificado no buffer como uma matriz iniciada no deslocamento de buffer especificado.</summary>
+        <returns>O número real de bytes lidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `GetBytes`Retorna o número de bytes disponíveis no campo. Na maioria das vezes, isso é o comprimento exato do campo. No entanto, o número retornado pode ser menor que o comprimento real do campo se `GetBytes` já foi usado para obter os bytes do campo. Isso pode ser o caso, por exemplo, quando o <xref:System.Data.DataTableReader> está lendo uma estrutura de dados grande em um buffer  
+  
+ Se você passar um buffer que está `null` (`Nothing` no Visual Basic), `GetBytes` retorna o comprimento do campo inteiro em bytes, não o tamanho restante com base no parâmetro de deslocamento de buffer.  
+  
+ Nenhuma conversão é executada; Portanto, os dados recuperados já devem ser uma matriz de bytes ou conversível para uma matriz de bytes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.DataTableReader> com base nos dados no banco de dados de exemplo AdventureWorks e salva cada imagem recuperada para um arquivo separado na pasta C:\. Para testar esse aplicativo, crie um novo aplicativo de Console, fazer referência ao assembly System.Drawing.dll e cole o código de exemplo para o arquivo recém-criado.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetBytes#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetBytes/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetBytes#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetBytes/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see langword="DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém uma matriz de bytes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChar">
+      <MemberSignature Language="C#" Value="public override char GetChar (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance char GetChar(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetChar(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um caractere.</summary>
+        <returns>O valor da coluna.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma conversão é executada; Portanto, os dados recuperados já devem ser um caractere ou conversível para um caractere.  
+  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 em DataTableReader transmitido. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna não são do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetChar#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetChar/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetChar#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetChar/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see langword="DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">O campo especificado não contém um caractere.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChars">
+      <MemberSignature Language="C#" Value="public override long GetChars (int ordinal, long dataIndex, char[] buffer, int bufferIndex, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetChars(int32 ordinal, int64 dataIndex, char[] buffer, int32 bufferIndex, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+        <Parameter Name="dataIndex" Type="System.Int64" />
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="bufferIndex" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <param name="dataIndex">O índice no campo no qual será iniciada a operação de leitura.</param>
+        <param name="buffer">O buffer no qual ler o fluxo de caracteres.</param>
+        <param name="bufferIndex">O índice no buffer no qual será iniciada a colocação dos dados.</param>
+        <param name="length">O tamanho máximo a ser copiado no buffer.</param>
+        <summary>Retorna o valor da coluna especificada como uma matriz de caracteres.</summary>
+        <returns>O número real de caracteres lidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `GetChars`Retorna o número de caracteres disponíveis no campo. Na maioria das vezes, isso é o comprimento exato do campo. No entanto, o número retornado pode ser menor que o comprimento real do campo se `GetChars` já foi usado para obter caracteres do campo.  
+  
+ O número real de caracteres lidos pode ser menor que o tamanho solicitado, se o final do campo é atingido. Se você passar um buffer que é nulo (`Nothing` no Visual Basic), `GetChars` retorna o comprimento do campo inteiro em caracteres, não o tamanho restante com base no parâmetro de deslocamento de buffer.  
+  
+ Nenhuma conversão é executada; Portanto, os dados a serem recuperados já devem ser uma matriz de caracteres ou conversível para uma matriz de caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o `GetChars` método. O `TestGetChars` método espera deve passar um `DataTableReader` preenchido com duas colunas de dados: um nome de arquivo na primeira coluna e uma matriz de caracteres no segundo. Além disso, `TestGetChars` permite que você especifique o tamanho do buffer a ser usado como ele lê os dados da matriz de caracteres no `DataTableReader`. `TestGetChars`cria um arquivo correspondente a cada linha de dados a `DataTableReader`, usando os dados fornecidos na primeira coluna do `DataTableReader` como o nome do arquivo.  
+  
+ Esse procedimento demonstra o uso do `GetChars` método de leitura de dados que foi armazenados o `DataTable` como uma matriz de caracteres. Qualquer outro tipo de dados faz com que o `GetChars` método para lançar uma `InvalidCastException`.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetChars#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetChars/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetChars#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetChars/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see langword="DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém uma matriz de caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataTypeName">
+      <MemberSignature Language="C#" Value="public override string GetDataTypeName (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDataTypeName(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetDataTypeName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém uma cadeia de caracteres que representa o tipo de dados da coluna especificada.</summary>
+        <returns>Uma cadeia de caracteres que representa o tipo de dados da coluna.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTableReader.GetDataTypeName%2A> método sempre retorna o tipo de base <xref:System.Data.DataColumn> em vez de um tipo específico de provedor.  
+  
+   
+  
+## Examples  
+ O aplicativo de console a seguir exibe uma lista de campos e os nomes de tipo em uma simples <xref:System.Data.DataTable>:  
+  
+ [!code-csharp[DataWorks DataTableReader.GetDataTypeName#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetDataTypeName/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetDataTypeName#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetDataTypeName/VB/source.vb#1)]  
+  
+ A janela de Console exibe os seguintes resultados:  
+  
+```  
+ID: Int32  
+Name: String  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime GetDateTime (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime GetDateTime(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetDateTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um objeto <see cref="T:System.DateTime" />.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma conversão é executada; Portanto, os dados recuperados já devem ser um <xref:System.DateTime> ou conversível para um `DataTime`.  
+  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 no passado <xref:System.Data.DataTableReader>. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna não são do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetDateTime#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetDateTime/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetDateTime#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetDateTime/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see langword="DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém um valor de DateTime.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecimal">
+      <MemberSignature Language="C#" Value="public override decimal GetDecimal (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Decimal GetDecimal(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetDecimal(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um <see cref="T:System.Decimal" />.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma conversão é executada; Portanto, os dados recuperados já devem ser um <xref:System.Decimal> ou conversível para um `Decimal`.  
+  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 no passado <xref:System.Data.DataTableReader>. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna não são do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetDecimal#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetDecimal/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetDecimal#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetDecimal/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see langword="DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém um valor <see langword="Decimal" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDouble">
+      <MemberSignature Language="C#" Value="public override double GetDouble (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float64 GetDouble(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetDouble(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal baseado em zero da coluna.</param>
+        <summary>Obtém o valor da coluna como um número de ponto flutuante de precisão dupla.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma conversão é executada; Portanto, os dados recuperados já devem ser um número de ponto flutuante de precisão dupla ou devem ser conversível para um número de ponto flutuante de precisão dupla.  
+  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 no passado <xref:System.Data.DataTableReader>. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna não são do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetDouble#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetDouble/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetDouble#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetDouble/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see langword="DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém um número de ponto flutuante de precisão dupla.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode ser usado para iterar na coleção de item.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.IEnumerator" /> que representa a coleção de itens.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enumeradores permitem somente para leitura dos dados no <xref:System.Data.DataTableReader>. Enumeradores não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador está posicionado antes do primeiro elemento na coleção. AT isso posicionar, chamando <xref:System.Collections.IEnumerator.Current%2A> lança uma exceção. Por isso, você deve chamar `MoveNext` para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de `Current`.  
+  
+ `Current`Retorna um <xref:System.Data.Common.DbDataRecord>e retorna o mesmo objeto até que o <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> é chamado. `MoveNext` define `Current` como o próximo elemento.  
+  
+ Após o final da coleção for passado, o enumerador está posicionado após o último elemento da coleção e chamada `MoveNext` retorna false. Se a última chamada `MoveNext` retornou `false`, chamar `Current` lança uma exceção. Além disso, porque o <xref:System.Data.DataTableReader> fornece acesso somente de encaminhamento para seus dados, chamando o <xref:System.Collections.IEnumerator.Reset%2A> método de IEnumerator lança um <xref:System.NotSupportedException>.  
+  
+ O <xref:System.Data.DataTableReader> fornece um enumerador estável. Isso significa que, mesmo se ocorrerem a adições ou exclusões de linha nos dados subjacentes, o enumerador retornado por uma chamada para <xref:System.Data.DataTableReader.GetEnumerator%2A> ainda é válido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método <xref:System.Data.DataTableReader.GetEnumerator%2A>. Isso inclui o comportamento do enumerador quando linhas são excluídas de subjacente <xref:System.Data.DataTable> enquanto o enumerador está ativo.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetEnumerator/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetEnumerator/VB/source.vb#1)]  
+  
+ O procedimento exibe o texto a seguir na janela do Console:  
+  
+```  
+Peter  
+Mary  
+Russ  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFieldType">
+      <MemberSignature Language="C#" Value="public override Type GetFieldType (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetFieldType(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o <see cref="T:System.Type" /> que é o tipo de dados do objeto.</summary>
+        <returns>O <see cref="T:System.Type" /> que é o tipo de dados do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Chame o procedimento a seguir, passando um <xref:System.Data.DataTableReader> instância para exibir uma lista de todos os campos e o nome completo de cada tipo na janela do Console.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetFieldType#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetFieldType/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetFieldType#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetFieldType/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFloat">
+      <MemberSignature Language="C#" Value="public override float GetFloat (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance float32 GetFloat(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetFloat(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um número de ponto flutuante de precisão simples.</summary>
+        <returns>O valor da coluna.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma conversão é executada; Portanto, os dados recuperados já devem ser um número de ponto flutuante de precisão simples ou devem ser conversível para um número de ponto flutuante de precisão simples.  
+  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 no passado <xref:System.Data.DataTableReader>. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna não são do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetFloat#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetFloat/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetFloat#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetFloat/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém um número de ponto flutuante de precisão simples.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGuid">
+      <MemberSignature Language="C#" Value="public override Guid GetGuid (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Guid GetGuid(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetGuid(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada como um identificador global exclusivo (GUID).</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma conversão é executada; Portanto, os dados recuperados já devem ser um <xref:System.Guid> ou conversível para um `Guid`.  
+  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 em DataTableReader transmitido. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna não são do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetGuid#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetGuid/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetGuid#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetGuid/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém um GUID.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt16">
+      <MemberSignature Language="C#" Value="public override short GetInt16 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int16 GetInt16(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetInt16(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero</param>
+        <summary>Obtém o valor da coluna especificada como um inteiro com sinal de 16 bits.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma conversão é executada; Portanto, os dados recuperados já devem ser um <xref:System.Int16> ou conversível para um `Int16`.  
+  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 no passado <xref:System.Data.DataTableReader>. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna não são do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetInt16#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetInt16/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetInt16#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetInt16/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém um inteiro assinado de 16 bits.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt32">
+      <MemberSignature Language="C#" Value="public override int GetInt32 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetInt32(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetInt32(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero</param>
+        <summary>Obtém o valor da coluna especificada como um inteiro com sinal de 32 bits.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma conversão é executada; Portanto, os dados recuperados já devem ser um <xref:System.Int32> ou conversível para um `Int32`.  
+  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 no passado <xref:System.Data.DataTableReader>. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna não são do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetInt32#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetInt32/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetInt32#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetInt32/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém um valor inteiro com sinal de 32 bits.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt64">
+      <MemberSignature Language="C#" Value="public override long GetInt64 (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetInt64(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetInt64(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero</param>
+        <summary>Obtém o valor da coluna especificada como um inteiro com sinal de 64 bits.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma conversão é executada; Portanto, os dados recuperados já devem ser um <xref:System.Int64> ou conversível para um `Int64`.  
+  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 no passado <xref:System.Data.DataTableReader>. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna não são do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetInt64#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetInt64/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetInt64#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetInt64/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém um valor inteiro assinado de 64 bits.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public override string GetName (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetName(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero</param>
+        <summary>Obtém o valor da coluna especificada como um <see cref="T:System.String" />.</summary>
+        <returns>O nome da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `GetName` e <xref:System.Data.DataTableReader.GetOrdinal%2A> métodos fornecem funcionalidade inversa. Ou seja, chamando `GetOrdinal` no valor de retorno de chamada `GetName` deve retornar o parâmetro original passado para `GetName`; o mesmo se aplica para chamar os procedimentos na ordem oposta.  
+  
+   
+  
+## Examples  
+ O exemplo simples a seguir inclui um procedimento que lista os nomes de todas as colunas dentro de especificado `DataTableReader`e a posição ordinal da coluna, a janela do Console.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetName#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetName/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetName#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetName/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrdinal">
+      <MemberSignature Language="C#" Value="public override int GetOrdinal (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetOrdinal(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetOrdinal(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da coluna.</param>
+        <summary>Obtém a ordinal da coluna, de acordo com o nome da coluna.</summary>
+        <returns>O ordinal da coluna baseado em zero.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como a maioria dos métodos fornecidos pelo <xref:System.Data.DataTableReader> classe deve ser fornecido com um número ordinal de coluna, você pode usar o `GetOrdinal` método para recuperar o número da coluna, considerando o nome da coluna.  
+  
+ `GetOrdinal`executa uma pesquisa diferencia maiusculas de minúsculas primeiro. Se ele falhar, é feita uma segunda pesquisa diferencia maiusculas de minúsculas. Se o número da coluna não for encontrado um `IndexOutOfRangeException` é gerada.  
+  
+ `GetOrdinal`é a largura de kana diferenciação.  
+  
+ Como pesquisas baseadas em ordinais são mais eficientes do que pesquisas por nome, é ineficiente chamar `GetOrdinal` dentro de um loop. Economize tempo chamando `GetOrdinal` uma vez e atribuindo os resultados para uma variável de inteiro para uso dentro do loop  
+  
+   
+  
+## Examples  
+ Se você tiver apenas um nome de coluna, caso em que o nome da coluna é o usuário fornecido e você deve recuperar informações da coluna, você pode usar um procedimento semelhante à seguinte para extrair as informações necessárias. Neste exemplo, o procedimento aceita um nome de coluna e retorna os dados que estão contidos nessa coluna para a linha atual do <xref:System.Data.DataTableReader> :  
+  
+ [!code-csharp[DataWorks DataTableReader.GetOrdinal#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetOrdinal/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetOrdinal#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetOrdinal/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.ArgumentException">O nome especificado não é um nome de coluna válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificFieldType">
+      <MemberSignature Language="C#" Value="public override Type GetProviderSpecificFieldType (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetProviderSpecificFieldType(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetProviderSpecificFieldType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o tipo da coluna especificada no formato específico do provedor.</summary>
+        <returns>O <see cref="T:System.Type" /> que é o tipo de dados do objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Data.DataTableReader> sempre retorna o tipo armazenado no subjacente <xref:System.Data.DataColumn>, o valor retornado ao chamar o <xref:System.Data.DataTableReader.GetProviderSpecificFieldType%2A> método sempre retorna o mesmo tipo que o tipo armazenado dentro a <xref:System.Data.DataTable>. Quando você trabalha com o <xref:System.Data.DataTableReader> classe, chamando o <xref:System.Data.DataTableReader.GetProviderSpecificFieldType%2A> método retorna o mesmo tipo que chamar o <xref:System.Type.GetType%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificValue">
+      <MemberSignature Language="C#" Value="public override object GetProviderSpecificValue (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetProviderSpecificValue(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetProviderSpecificValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O número com base em zero da coluna cujo valor é recuperado.</param>
+        <summary>Obtém o valor da coluna especificada no formato específico do provedor.</summary>
+        <returns>O valor da coluna especificada no formato específico do provedor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Data.DataTableReader> sempre retorna o tipo armazenado no subjacente <xref:System.Data.DataColumn>, o valor retornado ao chamar o <xref:System.Data.DataTableReader.GetProviderSpecificValue%2A> método sempre retorna dados do mesmo tipo de dados armazenados no <xref:System.Data.DataTable>. Quando você trabalha com o <xref:System.Data.DataTableReader> classe, chamando o <xref:System.Data.DataTableReader.GetProviderSpecificValue%2A> método retorna o mesmo valor e digite como chamar o <xref:System.Data.DataTableReader.GetValue%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa para ler ou acessar uma coluna em um fechado<see cref="T:System.Data.DataTableReader" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProviderSpecificValues">
+      <MemberSignature Language="C#" Value="public override int GetProviderSpecificValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetProviderSpecificValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetProviderSpecificValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Uma matriz de objetos a ser preenchido com as informações de tipo para as colunas a <see cref="T:System.Data.DataTableReader" />.</param>
+        <summary>Preenche a matriz fornecida com informações de tipo específico do provedor para todas as colunas de <see cref="T:System.Data.DataTableReader" />.</summary>
+        <returns>O número de valores de coluna copiados para a matriz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Data.DataTableReader> sempre retorna os dados do tipo armazenado no subjacente <xref:System.Data.DataColumn>, os valores retornados pela chamada de <xref:System.Data.DataTableReader.GetProviderSpecificValues%2A> método é sempre os mesmos tipos de dados armazenados no <xref:System.Data.DataTable>. Quando você trabalha com o <xref:System.Data.DataTableReader> classe, chamando o <xref:System.Data.DataTableReader.GetProviderSpecificValues%2A> método retorna os mesmos valores e tipos de como chamar o <xref:System.Data.DataTableReader.GetValues%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchemaTable">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable GetSchemaTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Data.DataTable GetSchemaTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetSchemaTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Data.DataTable" /> que descreve os metadados da coluna do <see cref="T:System.Data.DataTableReader" />.</summary>
+        <returns>Um <see cref="T:System.Data.DataTable" /> que descreve os metadados de coluna.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método GetSchemaTable retorna metadados sobre cada coluna na seguinte ordem:  
+  
+|Coluna de DataReader|Descrição|  
+|-----------------------|-----------------|  
+|ColumnName|O nome da coluna como ele aparece no <xref:System.Data.DataTable>.|  
+|ColumnOrdinal|O ordinal da coluna|  
+|ColumnSize|-1 se o <xref:System.Data.Common.SchemaTableColumn.ColumnSize> (ou <xref:System.Data.DataColumn.MaxLength%2A>) propriedade o <xref:System.Data.DataColumn> não pode ser determinado ou não é relevante; caso contrário, 0 ou um inteiro positivo que contém o `MaxLength` valor.|  
+|NumericPrecision|Se o tipo de coluna for um tipo numérico, essa é a precisão máxima da coluna. Se o tipo de coluna não é um tipo de dados numérico, esse é um valor nulo.|  
+|NumericScale|Se o tipo de dados de coluna tem um componente de escala, retorna o número de dígitos à direita da vírgula decimal. Caso contrário, retorna um valor nulo.|  
+|DataType|O tipo subjacente da coluna.|  
+|ProviderType|O indicador de tipo de dados da coluna. Se o tipo de dados da coluna varia de uma linha para outra, esse valor é <xref:System.Object>. Esta coluna não pode conter um valor nulo.|  
+|IsLong|`true`Se o tipo de dados da coluna for <xref:System.String> e sua <xref:System.Data.DataColumn.MaxLength%2A> propriedade é -1. Caso contrário, `false`.|  
+|AllowDBNull|`true`Se a restrição AllowDbNull for definida como verdadeiro para a coluna. Caso contrário, `false`.|  
+|IsReadOnly|`true`Se a coluna não pode ser modificada; Caso contrário, `false`.|  
+|IsRowVersion|`false`, para cada coluna.|  
+|IsUnique|`true`: Duas linhas na <xref:System.Data.DataTable> pode ter o mesmo valor nesta coluna. `IsUnique`é garantido como true se a coluna representa uma chave por si só ou se houver uma restrição de tipo UNIQUE que se aplica somente a esta coluna. `false`: A coluna pode conter valores duplicados no `DataTable`. O padrão desta coluna é `false`.|  
+|IsKey|`true`: A coluna for de um conjunto de colunas que, juntas, identificam exclusivamente a linha de <xref:System.Data.DataTable>. O conjunto de colunas com `IsKey` definida como `true` deve identificar exclusivamente uma linha de `DataTable`. Não há nenhum requisito de que esse conjunto de colunas é um conjunto mínimo de colunas. Esse conjunto de colunas pode ser gerado por um `DataTable` chave primária, uma restrição exclusiva ou um índice exclusivo. `false`: A coluna não é necessário para identificar exclusivamente a linha. Esse valor é `true` se a coluna participa de uma chave primária única ou composta. Caso contrário, seu valor é `false`.|  
+|IsAutoIncrement|`true`: A coluna atribui valores a novas linhas em incrementos fixos. `false`: A coluna não atribui valores a novas linhas em incrementos fixos. O padrão desta coluna é `false`.|  
+|BaseCatalogName|O nome do catálogo no repositório de dados que contém a coluna. `Null`Se o nome do catálogo de base não pode ser determinado. O valor padrão para essa coluna é uma `null` valor.|  
+|BaseSchemaName|Esse valor é sempre `Null`.|  
+|BaseTableName|O nome do <xref:System.Data.DataTable>.|  
+|BaseColumnName|O nome da coluna no <xref:System.Data.DataTable>.|  
+|AutoIncrementSeed|O valor de <xref:System.Data.DataTable>do <xref:System.Data.DataColumn.AutoIncrementSeed%2A> propriedade.|  
+|AutoIncrementStep|O valor de <xref:System.Data.DataTable>do <xref:System.Data.DataColumn.AutoIncrementStep%2A> propriedade.|  
+|defaultValue|O valor de <xref:System.Data.DataColumn>do <xref:System.Data.DataColumn.DefaultValue%2A> propriedade.|  
+|Expressão|A cadeia de caracteres de expressão, se a coluna atual for uma coluna de expressão e todas as colunas usadas na expressão pertencem ao mesmo `T:System.Data.DataTable` que contém a coluna de expressão; caso contrário, `null`.|  
+|ColumnMapping|O <xref:System.Data.MappingType> valor associado com o <xref:System.Data.DataColumn>. O tipo pode ser um dos `Attribute`, `Element`, `Hidden`, ou `SimpleContent`. O valor padrão é `Element`.|  
+|BaseTableNamespace|O valor de <xref:System.Data.DataTable>do <xref:System.Data.DataTable.Namespace%2A> propriedade.|  
+|BaseColumnNamespace|O valor de <xref:System.Data.DataColumn>do <xref:System.Data.DataColumn.Namespace%2A> propriedade.|  
+  
+   
+  
+## Examples  
+ O exemplo de aplicativo de console a seguir recupera informações de esquema sobre a coluna especificada. Passar o `DisplaySchemaTableInfo` procedimento uma <xref:System.Data.DataTableReader> e um inteiro que representa a posição ordinal de uma coluna dentro de `DataTableReader`, e o procedimento gera informações de esquema para a janela do console.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetSchemaTable#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetSchemaTable/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetSchemaTable#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetSchemaTable/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Data.DataTableReader" /> está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public override string GetString (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetString(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero</param>
+        <summary>Obtém o valor da coluna especificada como uma cadeia de caracteres.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para verificar se há valores nulos antes de chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 no passado <xref:System.Data.DataTableReader>. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetString#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetString/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetString#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetString/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+        <exception cref="T:System.InvalidCastException">A coluna especificada não contém uma cadeia de caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override object GetValue (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetValue(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero</param>
+        <summary>Obtém o valor da coluna especificada em seu formato nativo.</summary>
+        <returns>O valor da coluna especificada. Esse método retorna <see langword="DBNull" /> para colunas nulas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora você possa chamar <xref:System.Data.DataTableReader.IsDBNull%2A> para ver se há valores nulos antes de chamar esse método, você não precisa fazer isso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir itera em todas as colunas dentro da linha atual em um <xref:System.Data.DataTableReader>, exibindo o conteúdo de cada coluna e o nome da coluna. Em geral, se sua intenção for trabalhar com todas as colunas dentro de uma linha recuperada por um <xref:System.Data.DataTableReader>, considere o uso de <xref:System.Data.DataTableReader.GetValues%2A> método em vez disso, porque é mais eficiente.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetValue#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetValue/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetValue#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetValue/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar colunas em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public override int GetValues (object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetValues(object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.GetValues(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="values">Uma matriz de <see cref="T:System.Object" /> para a qual copiar os valores da coluna de <see cref="T:System.Data.DataTableReader" />.</param>
+        <summary>Popula uma matriz de objetos com os valores da coluna da linha atual.</summary>
+        <returns>O número de valores de coluna copiados para a matriz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para a maioria dos aplicativos, esse método fornece uma forma eficiente para recuperar todas as colunas, em vez de recuperar cada coluna individualmente. Se sua intenção é recuperar todos os valores de coluna de uma linha dentro de <xref:System.Data.DataTableReader>, o `GetValues` método fornece a solução mais eficiente.  
+  
+ Você pode passar um <xref:System.Object> matriz que contém menos do que o número de colunas que estão contidos na linha resultante. Somente a quantidade de dados a `Object` matriz pode conter é copiado para a matriz. Você também pode passar um `Object` matriz cujo tamanho é maior que o número de colunas que estão contidos na linha resultante, nesse caso dos elementos da matriz adicionais permanece inalterado pela chamada de método.  
+  
+ Esse método insere `DBNull` na matriz de saída para colunas null.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso de uma matriz que é o tamanho correto, para ler todos os valores da linha atual em fornecido <xref:System.Data.DataTableReader>. Além disso, o exemplo demonstra o uso de uma matriz de tamanho fixo que pode ser menor ou maior que o número de colunas disponíveis.  
+  
+ [!code-csharp[DataWorks DataTableReader.GetValueObject#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetValueObject/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.GetValueObject#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.GetValueObject/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasRows">
+      <MemberSignature Language="C#" Value="public override bool HasRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasRows" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataTableReader.HasRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.DataTableReader" /> contém uma ou mais linhas.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Data.DataTableReader" /> contiver uma ou mais linhas; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `HasRows` propriedade retorna informações sobre o conjunto de resultados atual. Se o <xref:System.Data.DataTableReader> contém resultados múltiplos conjuntos, você pode examinar o valor da `HasRows` propriedade imediatamente depois de chamar o <xref:System.Data.DataTableReader.NextResult%2A> método para determinar se o novo conjunto de resultados contém linhas.  
+  
+ Use o `HasRows` propriedade para evitar a necessidade de chamar o <xref:System.Data.DataTableReader.Read%2A> método o <xref:System.Data.DataTableReader> se não existem linhas no conjunto de resultados atual.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir preenche duas <xref:System.Data.DataTable> instâncias com dados. A primeira <xref:System.Data.DataTable> contém uma linha, e o segundo não contém linhas. O exemplo cria um <xref:System.Data.DataTableReader> que contém ambos <xref:System.Data.DataTable> objetos e chama o método PrintData para exibir o conteúdo de cada um, verificando o valor da <xref:System.Data.DataTableReader.HasRows%2A> propriedade de cada antes de fazer a chamada para PrintData.  
+  
+ [!code-csharp[DataWorks DataTableReader.HasRows#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.HasRows/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.HasRows#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.HasRows/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de recuperar informações sobre um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public override bool IsClosed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataTableReader.IsClosed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.DataTableReader" /> está fechado.</summary>
+        <value>Retorna <see langword="true" /> se o <see cref="T:System.Data.DataTableReader" /> estiver fechado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.DataTableReader.Close%2A>é o único método e `IsClosed` e <xref:System.Data.DataTableReader.RecordsAffected%2A> são as únicas propriedades que podem ser acessadas após o <xref:System.Data.DataTableReader> foi fechado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDBNull">
+      <MemberSignature Language="C#" Value="public override bool IsDBNull (int ordinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDBNull(int32 ordinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.IsDBNull(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero</param>
+        <summary>Obtém um valor que indica se a coluna contém valores ausentes ou inexistente.</summary>
+        <returns>
+          <see langword="true" /> se o valor da coluna especificada for equivalente a <see cref="T:System.DBNull" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para verificar se há valores de coluna nulos antes de chamar os métodos get tipado (por exemplo, <xref:System.Data.DataTableReader.GetByte%2A>, <xref:System.Data.DataTableReader.GetChar%2A>e assim por diante) para evitar gerar um erro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo da coluna numerados como 2 no passado <xref:System.Data.DataTableReader>. Se o valor da coluna dentro de uma linha específica for nula, o código exibe o texto \<nulo >. Se os dados da coluna do tipo correto, o exemplo exibe uma mensagem de erro para cada linha.  
+  
+ [!code-csharp[DataWorks DataTableReader.IsDbNull#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.IsDbNull/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.IsDbNull#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.IsDbNull/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[int ordinal] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataTableReader.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ordinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ordinal">O ordinal da coluna baseado em zero.</param>
+        <summary>Obtém o valor da coluna especificada em seu formato nativo de acordo com o ordinal da coluna.</summary>
+        <value>O valor da coluna especificada em seu formato nativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga para <xref:System.Data.DataTableReader.Item%2A> se comporta de forma idêntica ao <xref:System.Data.DataTableReader.GetValue%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo de todas as colunas em todas as linhas de fornecido <xref:System.Data.DataTableReader>. O código usa o <xref:System.Data.DataTableReader.Item%2A> (o indexador, no Microsoft c#) do método para recuperar o valor contido em cada coluna.  
+  
+ [!code-csharp[DataWorks DataTableReader.Item#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.Item/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.Item#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.Item/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O índice passado estava fora do intervalo de 0 a <see cref="P:System.Data.DataTableReader.FieldCount" /> -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataTableReader.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da coluna.</param>
+        <summary>Obtém o valor da coluna especificada em seu formato nativo de acordo com o nome da coluna.</summary>
+        <value>O valor da coluna especificada em seu formato nativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma pesquisa diferencia maiusculas de minúsculas é executada pela primeira vez. Se ele falhar, é feita uma segunda pesquisa diferencia maiusculas de minúsculas.  
+  
+ Esse método é não diferencia caracteres kana-largura.  
+  
+ Esta versão sobrecarregada de <xref:System.Data.DataTableReader.Item%2A> corresponde ao chamar o <xref:System.Data.DataTableReader.GetOrdinal%2A> método e, em seguida, chamar subsequentemente o <xref:System.Data.DataTableReader.GetValue%2A> método.  
+  
+   
+  
+## Examples  
+ Dado um <xref:System.Data.DataTableReader> e um nome de coluna, o procedimento GetValueByName retorna o valor da coluna especificada. Antes de chamar esse procedimento, você deve criar um novo <xref:System.Data.DataTableReader> instância e chame seu método de leitura pelo menos uma vez para posicionar o ponteiro de linha em uma linha de dados.  
+  
+ [!code-csharp[DataWorks DataTableReader.ItemName#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.ItemName/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.ItemName#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.ItemName/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O nome especificado não é um nome de coluna válido.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Foi feita uma tentativa de recuperar dados de uma linha excluída.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NextResult">
+      <MemberSignature Language="C#" Value="public override bool NextResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool NextResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.NextResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Avança o <see cref="T:System.Data.DataTableReader" /> para o próximo conjunto de resultados, se houver.</summary>
+        <returns>
+          <see langword="true" /> se houver outro conjunto de resultados; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado para processar vários resultados que podem ser gerados, criando um <xref:System.Data.DataTableReader> em uma <xref:System.Data.DataSet> que contém duas ou mais tabelas ou uma matriz que contém duas ou mais <xref:System.Data.DataTable> instâncias.  
+  
+ Um novo <xref:System.Data.DataTableReader> é posicionado no primeiro resultado.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, o método TestConstructor cria dois <xref:System.Data.DataTable> instâncias. Para demonstrar a este construtor para o <xref:System.Data.DataTableReader> classe, o exemplo cria um novo `DataTableReader` com base em uma matriz que contém os dois `DataTables`e executa uma operação simples, imprimir o conteúdo de algumas colunas primeiro o console janela. Para testar esse aplicativo, crie um novo aplicativo de Console e cole o código de exemplo para o arquivo recém-criado.  
+  
+ [!code-csharp[DataWorks DataTableReader.NextResult#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.NextResult/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.NextResult#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.NextResult/VB/source.vb#1)]  
+  
+ A janela de Console exibe os seguintes resultados:  
+  
+```  
+1 Mary  
+2 Andy  
+3 Peter  
+4 Russ  
+1 Wireless Network Card  
+2 Hard Drive  
+3 Monitor  
+4 CPU  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de navegar em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataTableReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Avança o <see cref="T:System.Data.DataTableReader" /> para o próximo registro.</summary>
+        <returns>
+          <see langword="true" /> se houver outra linha a ser lida; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A posição padrão da <xref:System.Data.DataTableReader> é antes do primeiro registro. Portanto, você deve chamar `Read` para começar a acessar os dados.  
+  
+   
+  
+## Examples  
+ O procedimento PrintColumns executa um loop em todas as linhas de <xref:System.Data.DataTableReader>, exibindo o conteúdo de cada coluna na janela do Console.  
+  
+ [!code-csharp[DataWorks DataTableReader.Read#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.Read/CS/source.cs#1)]
+ [!code-vb[DataWorks DataTableReader.Read#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.Read/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de ler ou acessar uma coluna em um <see cref="T:System.Data.DataTableReader" /> fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordsAffected">
+      <MemberSignature Language="C#" Value="public override int RecordsAffected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RecordsAffected" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataTableReader.RecordsAffected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linhas inseridas, alteradas ou excluídas pela execução da instrução SQL.</summary>
+        <value>O <see cref="T:System.Data.DataTableReader" /> não dá suporte a essa propriedade e sempre retorna 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

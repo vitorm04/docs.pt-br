@@ -1,0 +1,188 @@
+<Type Name="ListItemStructure" FullName="System.Windows.Documents.DocumentStructures.ListItemStructure">
+  <TypeSignature Language="C#" Value="public class ListItemStructure : System.Windows.Documents.DocumentStructures.SemanticBasicElement, System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt;, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListItemStructure extends System.Windows.Documents.DocumentStructures.SemanticBasicElement implements class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Documents.DocumentStructures.BlockElement&gt;, class System.Collections.IEnumerable, class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.DocumentStructures.ListItemStructure" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.DocumentStructures.SemanticBasicElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um item em uma lista ou uma estrutura de tópicos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Documents.DocumentStructures.ListItemStructure> só pode ser um filho de um <xref:System.Windows.Documents.DocumentStructures.ListStructure>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListItemStructure ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.ListItemStructure.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.DocumentStructures.ListItemStructure" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Windows.Documents.DocumentStructures.BlockElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Windows.Documents.DocumentStructures.BlockElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.ListItemStructure.Add(System.Windows.Documents.DocumentStructures.BlockElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.Documents.DocumentStructures.BlockElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O bloco para adicionar.</param>
+        <summary>Adiciona um bloco em um item de lista.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Marker">
+      <MemberSignature Language="C#" Value="public string Marker { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Marker" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DocumentStructures.ListItemStructure.Marker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do número, caractere ou símbolo de marcador do item de lista como ele aparece na marcação da formatação do documento.</summary>
+        <value>Um <see cref="T:System.String" /> marcar o item de lista.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Documents.DocumentStructures.ListStructure> espelhos um conjunto de itens, geralmente abreviada parágrafos, o que realmente são formatados como uma lista no `<FixedPage>` faz parte de marcação de um documento. Normalmente, cada item na lista é formatado com um marcador, como um número, um caractere ou um marcador. O marcador também pode ser vários caracteres ou até mesmo uma imagem. O valor da <xref:System.Windows.Documents.DocumentStructures.ListItemStructure.Marker%2A> propriedade é o <xref:System.Windows.FrameworkElement.Name%2A> atributo do elemento, no `<FixedPage>` parte de marcação de um documento, que especifica o que é o marcador. Por exemplo, se o elemento de marcador Especifica o número 3 como o marcador para um item de lista e o <xref:System.Windows.FrameworkElement.Name%2A> desse elemento é 'ThirdItem', o <xref:System.Windows.Documents.DocumentStructures.ListItemStructure.Marker%2A> propriedade o <xref:System.Windows.Documents.DocumentStructures.ListItemStructure> que espelhos do item de lista deve ser definido como 'ThirdItem'.  
+  
+ Se um item de lista tem um marcador, com falha referenciar o marcador com o <xref:System.Windows.Documents.DocumentStructures.ListItemStructure.Marker%2A> propriedade correspondente <xref:System.Windows.Documents.DocumentStructures.ListItemStructure> pode forçar os aplicativos que estão consumindo a <xref:System.Windows.Documents.DocumentStructures.ListItemStructure> para exibir ou imprimir o marcador no final do documento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt; IEnumerable&lt;BlockElement&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Windows.Documents.DocumentStructures.BlockElement&gt; System.Collections.Generic.IEnumerable&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.ListItemStructure.System#Collections#Generic#IEnumerable&lt;System#Windows#Documents#DocumentStructures#BlockElement&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Windows.Documents.DocumentStructures.BlockElement&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este método não foi implementado.</summary>
+        <returns>Sempre gera <see cref="T:System.NotSupportedException" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.ListItemStructure.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este método não foi implementado.</summary>
+        <returns>Sempre gera <see cref="T:System.NotSupportedException" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.ListItemStructure.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O filho <see cref="T:System.Object" /> que é adicionado.</param>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adiciona um objeto filho para o <xref:System.Windows.Documents.DocumentStructures.ListItemStructure>.  
+  
+ Normalmente, um filho de um <xref:System.Windows.Documents.DocumentStructures.ListItemStructure> é um <xref:System.Windows.Documents.DocumentStructures.ParagraphStructure>, mas pode ser um <xref:System.Windows.Documents.DocumentStructures.FigureStructure>, <xref:System.Windows.Documents.DocumentStructures.TableStructure>, ou (aninhada) <xref:System.Windows.Documents.DocumentStructures.ListStructure>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />não é um dos tipos que podem ser um filho dessa classe. Consulte **comentários**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.ListItemStructure.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Não usado.</param>
+        <summary>Não implementado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

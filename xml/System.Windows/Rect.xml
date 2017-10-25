@@ -1,0 +1,1889 @@
+<Type Name="Rect" FullName="System.Windows.Rect">
+  <TypeSignature Language="C#" Value="public struct Rect : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Rect extends System.ValueType implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Rect" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.RectConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Converters.RectValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve a largura, altura e local de um retângulo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Duration"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="x,y,width,height"/>  
+```  
+  
+<a name="xamlValues_MinWidth"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *x*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ O local da coordenada x do lado esquerdo do retângulo.  
+  
+ *y*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ O local da coordenada y do canto superior do retângulo.  
+  
+ *width*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Um valor negativo que representa o <xref:System.Windows.Rect.Width%2A> do retângulo.  
+  
+ *altura*  
+ <xref:System.Double?displayProperty=nameWithType>  
+  
+ Um valor negativo que representa o <xref:System.Windows.Rect.Height%2A> do retângulo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Windows.Rect> para especificar o local de um retângulo usando XAML e dimensões.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect (System.Windows.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.#ctor(System.Windows.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="size" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size">Uma estrutura <see cref="T:System.Windows.Size" /> que especifica a largura e altura do retângulo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Rect" /> estrutura que é do tamanho especificado e está localizado em (0,0).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar um novo <xref:System.Windows.Rect> estrutura usando o <xref:System.Windows.Rect.%23ctor%28System.Windows.Size%29> construtor.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect (System.Windows.Point point1, System.Windows.Point point2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point point1, valuetype System.Windows.Point point2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.#ctor(System.Windows.Point,System.Windows.Point)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point1" Type="System.Windows.Point" />
+        <Parameter Name="point2" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point1">O primeiro ponto em que o novo retângulo deve conter.</param>
+        <param name="point2">O segundo ponto que o novo retângulo deve conter.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Windows.Rect" /> que é exatamente grande o suficiente para conter os dois pontos especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar um novo <xref:System.Windows.Rect> estrutura usando o <xref:System.Windows.Rect.%23ctor%28System.Windows.Point%2CSystem.Windows.Point%29> construtor.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample3_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample3_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect (System.Windows.Point location, System.Windows.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point location, valuetype System.Windows.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.#ctor(System.Windows.Point,System.Windows.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="location" Type="System.Windows.Point" />
+        <Parameter Name="size" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="location">Um ponto que especifica o local do canto superior esquerdo do retângulo.</param>
+        <param name="size">Uma estrutura <see cref="T:System.Windows.Size" /> que especifica a largura e altura do retângulo.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Windows.Rect" /> que tem o local do canto superior esquerdo especificado e a altura e largura especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar um novo <xref:System.Windows.Rect> estrutura usando o <xref:System.Windows.Rect.%23ctor%28System.Windows.Point%2CSystem.Windows.Size%29> construtor.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample4_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample4_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect (System.Windows.Point point, System.Windows.Vector vector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Point point, valuetype System.Windows.Vector vector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.#ctor(System.Windows.Point,System.Windows.Vector)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="vector" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="point">O primeiro ponto o retângulo deve conter.</param>
+        <param name="vector">A quantidade para deslocar o ponto especificado. O retângulo resultante terá tamanho suficiente exatamente para conter os dois pontos.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Windows.Rect" /> com tamanho suficiente exatamente para conter o ponto especificado e a soma do ponto e do vetor especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar um novo <xref:System.Windows.Rect> estrutura usando o <xref:System.Windows.Rect.%23ctor%28System.Windows.Point%2CSystem.Windows.Vector%29> construtor.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample5_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample5_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect (double x, double y, double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 x, float64 y, float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.#ctor(System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada X do canto superior esquerdo do retângulo.</param>
+        <param name="y">A coordenada y do canto superior esquerdo do retângulo.</param>
+        <param name="width">A largura do retângulo.</param>
+        <param name="height">A altura do retângulo.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Windows.Rect" />, que tem a coordenada X, a coordenada Y, a largura e a altura especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra como criar um novo <xref:System.Windows.Rect> estrutura usando o <xref:System.Windows.Rect.%23ctor%28System.Double%2CSystem.Double%2CSystem.Double%2CSystem.Double%29> construtor.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample6_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample6_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="width" /> é um valor negativo.  
+  
+ -ou-  
+  
+ <paramref name="height" /> é um valor negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public double Bottom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Bottom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do eixo y da parte inferior do retângulo.</summary>
+        <value>O valor do eixo y da parte inferior do retângulo. Se o retângulo estiver vazio, o valor será <see cref="F:System.Double.NegativeInfinity" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor do eixo y da parte inferior do retângulo é igual à soma do <xref:System.Windows.Rect.Y%2A> e <xref:System.Windows.Rect.Height%2A> propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomLeft">
+      <MemberSignature Language="C#" Value="public System.Windows.Point BottomLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point BottomLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.BottomLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição do canto inferior esquerdo do retângulo</summary>
+        <value>A posição do canto inferior esquerdo do retângulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A posição do canto inferior esquerdo do retângulo é igual a (<xref:System.Windows.Rect.X%2A>, <xref:System.Windows.Rect.Y%2A>  +  <xref:System.Windows.Rect.Height%2A>).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="public System.Windows.Point BottomRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point BottomRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.BottomRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição do canto inferior direito do retângulo.</summary>
+        <value>A posição do canto inferior direito do retângulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A posição do canto inferior direito do retângulo é igual a (<xref:System.Windows.Rect.X%2A> + <xref:System.Windows.Rect.Width%2A>, <xref:System.Windows.Rect.Y%2A>  +  <xref:System.Windows.Rect.Height%2A>).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Contains(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">O ponto de verificação.</param>
+        <summary>Indica se o retângulo que contém o ponto especificado.</summary>
+        <returns>
+          <see langword="true" /> se o retângulo contiver o ponto especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Contains%28System.Windows.Point%29> método para determinar se o retângulo contém especificado <xref:System.Windows.Point>.  
+  
+ [!code-csharp[RectExamples_snip#ContainsExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#containsexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Contains(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O retângulo a ser verificado.</param>
+        <summary>Indica se o retângulo contém o retângulo especificado.</summary>
+        <returns>
+          <see langword="true" /> se o <paramref name="rect" /> estiver inteiramente contido pelo retângulo; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Contains%28System.Windows.Rect%29> método para determinar se um retângulo está contido por outro retângulo.  
+  
+ [!code-csharp[RectExamples_snip#ContainsExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#containsexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (double x, double y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(float64 x, float64 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Contains(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada x do ponto de verificação.</param>
+        <param name="y">A coordenada y do ponto de verificação.</param>
+        <summary>Indica se o retângulo contém a coordenada x especificada e a coordenada y.</summary>
+        <returns>
+          <see langword="true" />Se (<paramref name="x" />, <paramref name="y" />) é contida pelo retângulo; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Contains%28System.Double%2CSystem.Double%29> método para determinar se o retângulo que contém o ponto especificado pela determinado de coordenada de x e y.  
+  
+ [!code-csharp[RectExamples_snip#ContainsExample3_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#containsexample3_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Rect Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor especial que representa um retângulo sem posição ou área.</summary>
+        <value>O retângulo vazio, que tem valores de propriedade <see cref="P:System.Windows.Rect.X" /> e <see cref="P:System.Windows.Rect.Y" /> de <see cref="F:System.Double.PositiveInfinity" /> e tem valores de propriedade <see cref="P:System.Windows.Rect.Width" /> e <see cref="P:System.Windows.Rect.Height" /> de <see cref="F:System.Double.NegativeInfinity" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Evite cálculos matemáticos envolvendo retângulos vazios. Porque ambos <xref:System.Windows.Rect.X%2A> e <xref:System.Windows.Rect.Y%2A> são valores de infinitos, processador operações são severos prejudicadas por essas operações. Comparações que envolvem esses valores não afetará o desempenho do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser comparado com o retângulo atual.</param>
+        <summary>Indica se o objeto especificado é igual ao retângulo atual.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="o" /> é um <see cref="T:System.Windows.Rect" /> e tem o mesmo <see cref="P:System.Windows.Rect.Location" /> e <see cref="P:System.Windows.Rect.Size" /> valores como o retângulo atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação testa a igualdade de objetos.  
+  
+ Nessa comparação, duas instâncias de <xref:System.Double.NaN?displayProperty=nameWithType> são considerados iguais.  
+  
+> [!NOTE]
+>  A posição do retângulo e as dimensões são descritas por <xref:System.Double> valores. Porque <xref:System.Double> valores podem perder precisão quando for operado, uma comparação entre dois valores são iguais logicamente poderá falhar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Equals%28System.Object%29> método para determinar se um retângulo é igual ao objeto especificado.  
+  
+ [!code-csharp[RectExamples_snip#EqualsExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#equalsexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Rect value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.Rect value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Equals(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="value">O retângulo a ser comparado com o retângulo atual.</param>
+        <summary>Indica se o retângulo especificado é igual ao retângulo atual.</summary>
+        <returns>
+          <see langword="true" />Se o retângulo especificado tem o mesmo <see cref="P:System.Windows.Rect.Location" /> e <see cref="P:System.Windows.Rect.Size" /> valores como o retângulo atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação testa a igualdade de objetos.  
+  
+ Nessa comparação, duas instâncias de <xref:System.Double.NaN?displayProperty=nameWithType> são considerados iguais.  
+  
+> [!NOTE]
+>  A posição do retângulo e as dimensões são descritas por <xref:System.Double> valores. Porque <xref:System.Double> valores podem perder precisão quando for operado, uma comparação entre dois valores são iguais logicamente poderá falhar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Equals%28System.Windows.Rect%29> método para determinar se um retângulo é igual a um retângulo especificado.  
+  
+ [!code-csharp[RectExamples_snip#EqualsExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#equalsexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Rect rect1, System.Windows.Rect rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.Windows.Rect rect1, valuetype System.Windows.Rect rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Equals(System.Windows.Rect,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Rect" />
+        <Parameter Name="rect2" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">O primeiro retângulo a ser comparado.</param>
+        <param name="rect2">O segundo retângulo para comparar.</param>
+        <summary>Indica se os retângulos especificados são iguais.</summary>
+        <returns>
+          <see langword="true" /> se os retângulos tiverem os mesmos valores <see cref="P:System.Windows.Rect.Location" /> e <see cref="P:System.Windows.Rect.Size" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação testa a igualdade de objetos.  
+  
+ Nessa comparação, duas instâncias de <xref:System.Double.NaN?displayProperty=nameWithType> são considerados iguais.  
+  
+> [!NOTE]
+>  A posição do retângulo e as dimensões são descritas por <xref:System.Double> valores. Porque <xref:System.Double> valores podem perder precisão quando for operado, uma comparação entre dois valores são iguais logicamente poderá falhar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Equals%28System.Windows.Rect%2CSystem.Windows.Rect%29> método para determinar se um retângulo é igual a outro.  
+  
+ [!code-csharp[RectExamples_snip#EqualsExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#equalsexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um código hash para o retângulo.</summary>
+        <returns>Um código hash para a atual <see cref="T:System.Windows.Rect" /> estrutura.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um código hash usando o <xref:System.Windows.Rect.X%2A>, <xref:System.Windows.Rect.Y%2A>, <xref:System.Windows.Rect.Width%2A>, e <xref:System.Windows.Rect.Height%2A> valores de propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.GetHashCode%2A> método para obter o código hash de um <xref:System.Windows.Rect>.  
+  
+ [!code-csharp[RectExamples_snip#GetHashCodeExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#gethashcodeexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public double Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura do retângulo.</summary>
+        <value>Um número positivo que representa a altura do retângulo. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Rect.Empty%2A> retângulo possui um <xref:System.Windows.Rect.Height%2A> de <xref:System.Double.NegativeInfinity>. O <xref:System.Windows.Rect.Empty%2A> retângulo é somente leitura; seu <xref:System.Windows.Rect.Height%2A> não não pode ser alterado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Windows.Rect> para especificar o local de um retângulo usando XAML e dimensões.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Rect.Height" /> é definido como um valor negativo.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.Height" /> está definido em um retângulo <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public void Inflate (System.Windows.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Inflate(valuetype System.Windows.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Inflate(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="size">Especifica o valor para expandir o retângulo. O <see cref="T:System.Windows.Size" /> da estrutura <see cref="P:System.Windows.Size.Width" /> propriedade especifica o valor para aumentar o retângulo <see cref="P:System.Windows.Rect.Left" /> e <see cref="P:System.Windows.Rect.Right" /> propriedades. O <see cref="T:System.Windows.Size" /> da estrutura <see cref="P:System.Windows.Size.Height" /> propriedade especifica o valor para aumentar o retângulo <see cref="P:System.Windows.Rect.Top" /> e <see cref="P:System.Windows.Rect.Bottom" /> propriedades.</param>
+        <summary>Expande o retângulo usando especificado <see cref="T:System.Windows.Size" />, em todas as direções.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Rect.Width%2A> do retângulo resultante é aumentado em duas vezes o <xref:System.Windows.Size.Width%2A> especificada <xref:System.Windows.Size> estrutura, porque ambos os lados esquerdo e direito do retângulo são aumentados. Da mesma forma, o <xref:System.Windows.Rect.Height%2A> do retângulo resultante é aumentado em duas vezes o <xref:System.Windows.Size.Height%2A> especificada <xref:System.Windows.Size> estrutura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Inflate%28System.Windows.Size%29> método para aumentar o tamanho de um retângulo.  
+  
+ [!code-csharp[RectExamples_snip#InflateExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#inflateexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Esse método é chamado no <see cref="P:System.Windows.Rect.Empty" /> retângulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public void Inflate (double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Inflate(float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Inflate(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">A quantidade pela qual expandir ou reduzir à esquerda e à direita do retângulo.</param>
+        <param name="height">A quantidade pela qual expandir ou reduzir os lados superior e inferior do retângulo.</param>
+        <summary>Aumenta ou diminui o retângulo usando os valores de largura e altura especificados, em todas as direções.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Rect.Width%2A> do retângulo resultante é aumentado ou diminuído por duas vezes o deslocamento de largura especificada, porque ela é aplicada à esquerda e direita do retângulo. Da mesma forma, o <xref:System.Windows.Rect.Height%2A> do retângulo resultante é aumentado ou diminuído por duas vezes a altura especificada.  
+  
+ Se a altura ou largura especificada reduzir o retângulo maior do que o atual <xref:System.Windows.Rect.Width%2A> ou <xref:System.Windows.Rect.Height%2A>— fornecendo o retângulo uma área negativa — o retângulo se torna o <xref:System.Windows.Rect.Empty%2A> retângulo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Inflate%28System.Double%2CSystem.Double%29> método para alterar o tamanho de um retângulo.  
+  
+ [!code-csharp[RectExamples_snip#InflateExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#inflateexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Esse método é chamado no <see cref="P:System.Windows.Rect.Empty" /> retângulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Inflate (System.Windows.Rect rect, System.Windows.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Inflate(valuetype System.Windows.Rect rect, valuetype System.Windows.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Inflate(System.Windows.Rect,System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="size" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="rect">A estrutura <see cref="T:System.Windows.Rect" /> a ser modificada.</param>
+        <param name="size">Especifica o valor para expandir o retângulo. O <see cref="T:System.Windows.Size" /> da estrutura <see cref="P:System.Windows.Size.Width" /> propriedade especifica o valor para aumentar o retângulo <see cref="P:System.Windows.Rect.Left" /> e <see cref="P:System.Windows.Rect.Right" /> propriedades. O <see cref="T:System.Windows.Size" /> da estrutura <see cref="P:System.Windows.Size.Height" /> propriedade especifica o valor para aumentar o retângulo <see cref="P:System.Windows.Rect.Top" /> e <see cref="P:System.Windows.Rect.Bottom" /> propriedades.</param>
+        <summary>Retorna o retângulo resultante da expansão do retângulo indicado pelo <see cref="T:System.Windows.Size" /> especificado, em todos os sentidos.</summary>
+        <returns>O retângulo resultante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Rect.Width%2A> do retângulo resultante é aumentado em duas vezes o <xref:System.Windows.Size.Width%2A> especificada <xref:System.Windows.Size> estrutura, porque ambos os lados esquerdo e direito do retângulo são aumentados. Da mesma forma, o <xref:System.Windows.Rect.Height%2A> do retângulo resultante é aumentado em duas vezes o <xref:System.Windows.Size.Height%2A> especificada <xref:System.Windows.Size> estrutura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Inflate%28System.Windows.Rect%2CSystem.Windows.Size%29> método para alterar o tamanho de um retângulo.  
+  
+ [!code-csharp[RectExamples_snip#InflateExample3_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#inflateexample3_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="rect" /> é um retângulo <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Inflate">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Inflate (System.Windows.Rect rect, double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Inflate(valuetype System.Windows.Rect rect, float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Inflate(System.Windows.Rect,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="rect">A estrutura <see cref="T:System.Windows.Rect" /> a ser modificada.</param>
+        <param name="width">A quantidade pela qual expandir ou reduzir à esquerda e à direita do retângulo.</param>
+        <param name="height">A quantidade pela qual expandir ou reduzir os lados superior e inferior do retângulo.</param>
+        <summary>Cria um retângulo que é o resultado de expandir ou reduzir o retângulo especificado pelos valores especificados de largura e altura, em todas as direções.</summary>
+        <returns>O retângulo resultante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Rect.Width%2A> do retângulo resultante é aumentado ou diminuído por duas vezes o deslocamento de largura especificada, porque ela é aplicada à esquerda e direita do retângulo. Da mesma forma, o <xref:System.Windows.Rect.Height%2A> do retângulo resultante é aumentado ou diminuído por duas vezes a altura especificada.  
+  
+ Se a redução os modificadores especificados de largura ou altura do retângulo maior do que o atual <xref:System.Windows.Rect.Width%2A> ou <xref:System.Windows.Rect.Height%2A>— fornecendo o retângulo uma área negativa — esse método retorna <xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Inflate%28System.Windows.Rect%2CSystem.Double%2CSystem.Double%29> método para alterar o tamanho de um retângulo.  
+  
+ [!code-csharp[RectExamples_snip#InflateExample4_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#inflateexample4_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="rect" /> é um retângulo <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public void Intersect (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Intersect(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Intersect(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O retângulo para fazer a interseção com o retângulo atual.</param>
+        <summary>Localiza a interseção do retângulo atual e do retângulo especificado e armazena o resultado como o retângulo atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhuma interseção existir, o retângulo atual se tornará <xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Intersect%28System.Windows.Rect%29> método para localizar a interseção de dois retângulos e armazenar o resultado como um retângulo.  
+  
+ [!code-csharp[RectExamples_snip#IntersectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#intersectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Intersect (System.Windows.Rect rect1, System.Windows.Rect rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Intersect(valuetype System.Windows.Rect rect1, valuetype System.Windows.Rect rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Intersect(System.Windows.Rect,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Rect" />
+        <Parameter Name="rect2" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">O primeiro retângulo a ser comparado.</param>
+        <param name="rect2">O segundo retângulo para comparar.</param>
+        <summary>Retorna a interseção dos retângulos especificados.</summary>
+        <returns>A interseção dos dois retângulos ou <see cref="P:System.Windows.Rect.Empty" /> se não existir interseção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Intersect%28System.Windows.Rect%2CSystem.Windows.Rect%29> método para encontrar a interseção de dois retângulos.  
+  
+ [!code-csharp[RectExamples_snip#IntersectExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#intersectexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntersectsWith">
+      <MemberSignature Language="C#" Value="public bool IntersectsWith (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IntersectsWith(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.IntersectsWith(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O retângulo a ser verificado.</param>
+        <summary>Indica se o retângulo especificado faz interseção com o retângulo atual.</summary>
+        <returns>
+          <see langword="true" /> se o retângulo especificado fizer interseção com o retângulo atual, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.IntersectsWith%2A> método para determinar se dois retângulos se cruzam.  
+  
+ [!code-csharp[RectExamples_snip#IntersectsWithExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#intersectswithexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o retângulo é o retângulo <see cref="P:System.Windows.Rect.Empty" />.</summary>
+        <value>
+          <see langword="true" /> se o retângulo for o <see cref="P:System.Windows.Rect.Empty" /> retângulo, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não use essa propriedade para testar a área de zero. um retângulo com área de zero não é necessariamente o <xref:System.Windows.Rect.Empty%2A> retângulo. Para obter mais informações, consulte a propriedade <xref:System.Windows.Rect.Empty%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public double Left { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Left" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do eixo x do lado esquerdo do retângulo.</summary>
+        <value>O valor do eixo x do lado esquerdo do retângulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é equivalente à obtenção de <xref:System.Windows.Rect.X%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Windows.Point Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point Location" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição do canto superior esquerdo do retângulo.</summary>
+        <value>A posição do canto superior esquerdo do retângulo. O padrão é (0, 0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A posição do canto superior esquerdo do retângulo é igual a (<xref:System.Windows.Rect.X%2A>, <xref:System.Windows.Rect.Y%2A>).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Windows.Rect> para especificar o local de um retângulo usando XAML e dimensões.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.Location" /> está definido em um retângulo <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (System.Windows.Vector offsetVector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(valuetype System.Windows.Vector offsetVector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Offset(System.Windows.Vector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetVector" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="offsetVector">Um vetor que especifica os valores horizontais e verticais para mover o retângulo.</param>
+        <summary>Move o retângulo com o vetor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar este método em um retângulo vazio (<xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>) não é permitido.  
+  
+ Observe que a chamada a <xref:System.Windows.Rect.Offset%2A> método só terá efeito se você pode alterar o <xref:System.Windows.Rect.X%2A> e <xref:System.Windows.Rect.Y%2A> propriedades diretamente. Porque <xref:System.Windows.Rect> é um tipo de valor, se você referenciar um <xref:System.Windows.Rect> objeto usando uma propriedade ou indexador, você obtém uma cópia do objeto, não uma referência ao objeto. Se você tentar alterar <xref:System.Windows.Rect.X%2A> ou <xref:System.Windows.Rect.Y%2A> em uma referência de propriedade ou indexador, ocorre um erro do compilador. Da mesma forma, chamar <xref:System.Windows.Rect.Offset%2A> na propriedade ou indexador não alterará o objeto subjacente.  Se você quiser alterar o valor de um <xref:System.Windows.Rect> que é referenciada como uma propriedade ou indexador, crie um novo <xref:System.Windows.Rect>, modificar seus campos e, em seguida, atribua o <xref:System.Windows.Rect> para a propriedade ou indexador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Offset%28System.Windows.Vector%29> método para alterar a posição de um retângulo.  
+  
+ [!code-csharp[RectExamples_snip#OffsetExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#offsetexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Esse método é chamado no <see cref="P:System.Windows.Rect.Empty" /> retângulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (double offsetX, double offsetY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(float64 offsetX, float64 offsetY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Offset(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offsetX">O valor para mover o retângulo horizontalmente.</param>
+        <param name="offsetY">O valor para mover o retângulo verticalmente.</param>
+        <summary>Move o retângulo especificado nas quantidades horizontal e vertical.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar este método em um retângulo vazio (<xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>) não é permitido.  
+  
+ Observe que a chamada a <xref:System.Windows.Rect.Offset%2A> método só terá efeito se você pode alterar o <xref:System.Windows.Rect.X%2A> e <xref:System.Windows.Rect.Y%2A> propriedades diretamente. Porque <xref:System.Windows.Rect> é um tipo de valor, se você referenciar um <xref:System.Windows.Rect> objeto usando uma propriedade ou indexador, você obtém uma cópia do objeto, não uma referência ao objeto. Se você tentar alterar <xref:System.Windows.Rect.X%2A> ou <xref:System.Windows.Rect.Y%2A> em uma referência de propriedade ou indexador, ocorre um erro do compilador. Da mesma forma, chamar <xref:System.Windows.Rect.Offset%2A> na propriedade ou indexador não alterará o objeto subjacente.  Se você quiser alterar o valor de um <xref:System.Windows.Rect> que é referenciada como uma propriedade ou indexador, crie um novo <xref:System.Windows.Rect>, modificar seus campos e, em seguida, atribua o <xref:System.Windows.Rect> para a propriedade ou indexador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Offset%28System.Double%2CSystem.Double%29> método para alterar a posição de um retângulo.  
+  
+ [!code-csharp[RectExamples_snip#OffsetExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#offsetexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Esse método é chamado no <see cref="P:System.Windows.Rect.Empty" /> retângulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Offset (System.Windows.Rect rect, System.Windows.Vector offsetVector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Offset(valuetype System.Windows.Rect rect, valuetype System.Windows.Vector offsetVector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Offset(System.Windows.Rect,System.Windows.Vector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="offsetVector" Type="System.Windows.Vector" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O retângulo original.</param>
+        <param name="offsetVector">Um vetor que especifica os deslocamentos horizontais e verticais para o retângulo de novo.</param>
+        <summary>Retorna um retângulo que é deslocado do retângulo especificado usando o vetor especificado.</summary>
+        <returns>O retângulo resultante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método com um retângulo vazio (<xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>) não é permitido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Offset%28System.Windows.Rect%2CSystem.Windows.Vector%29> método para alterar a posição de um retângulo.  
+  
+ [!code-csharp[RectExamples_snip#OffsetExample3_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#offsetexample3_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="rect" /> é <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Offset (System.Windows.Rect rect, double offsetX, double offsetY);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Offset(valuetype System.Windows.Rect rect, float64 offsetX, float64 offsetY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Offset(System.Windows.Rect,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Mover o retângulo.</param>
+        <param name="offsetX">O deslocamento horizontal para o retângulo de novo.</param>
+        <param name="offsetY">O deslocamento vertical para o novo retângulo.</param>
+        <summary>Retorna um retângulo que é deslocado do retângulo especificado usando os valores especificados horizontais e verticais.</summary>
+        <returns>O retângulo resultante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método com um retângulo vazio (<xref:System.Windows.Rect.Empty%2A?displayProperty=nameWithType>) não é permitido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Offset%28System.Windows.Rect%2CSystem.Double%2CSystem.Double%29> método para alterar a posição de um retângulo.  
+  
+ [!code-csharp[RectExamples_snip#OffsetExample4_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#offsetexample4_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="rect" /> é <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Rect rect1, System.Windows.Rect rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Rect rect1, valuetype System.Windows.Rect rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.op_Equality(System.Windows.Rect,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Rect" />
+        <Parameter Name="rect2" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">O primeiro retângulo a ser comparado.</param>
+        <param name="rect2">O segundo retângulo para comparar.</param>
+        <summary>Compara a igualdade exata de dois retângulos.</summary>
+        <returns>
+          <see langword="true" /> se os retângulos tiverem os mesmos valores <see cref="P:System.Windows.Rect.Location" /> e <see cref="P:System.Windows.Rect.Size" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação testa a igualdade de objetos.  
+  
+ Nessa comparação, duas instâncias de <xref:System.Double.NaN?displayProperty=nameWithType> são considerados iguais.  
+  
+> [!NOTE]
+>  A posição do retângulo e as dimensões são descritas por <xref:System.Double> valores. Porque <xref:System.Double> valores podem perder precisão quando for operado, uma comparação entre dois valores são iguais logicamente poderá falhar.  
+  
+ O método equivalente para esse operador é<xref:System.Windows.Rect.Equals%28System.Windows.Rect%2CSystem.Windows.Rect%29?displayProperty=nameWithType>  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.op_Equality%2A> operador para determinar se dois retângulos são exatamente iguais.  
+  
+ [!code-csharp[RectExamples_snip#OverloadedEqualityOperatorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#overloadedequalityoperatorexample)]
+ [!code-vb[RectExamples_snip#OverloadedEqualityOperatorExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RectExamples_snip/visualbasic/rectexample.vb#overloadedequalityoperatorexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Rect rect1, System.Windows.Rect rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Rect rect1, valuetype System.Windows.Rect rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.op_Inequality(System.Windows.Rect,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Rect" />
+        <Parameter Name="rect2" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">O primeiro retângulo a ser comparado.</param>
+        <param name="rect2">O segundo retângulo para comparar.</param>
+        <summary>Compara dois retângulos desigualdade.</summary>
+        <returns>
+          <see langword="true" />Se os retângulos não tiverem o mesmo <see cref="P:System.Windows.Rect.Location" /> e <see cref="P:System.Windows.Rect.Size" /> valores; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação testa a desigualdade de objeto.  
+  
+ Nessa comparação, duas instâncias de <xref:System.Double.NaN?displayProperty=nameWithType> são considerados iguais.  
+  
+> [!NOTE]
+>  A posição do retângulo e as dimensões são descritas por <xref:System.Double> valores. Porque <xref:System.Double> valores podem perder precisão quando for operado, uma comparação entre dois valores são iguais logicamente poderá falhar.  
+  
+ O método equivalente para esse operador é<xref:System.Windows.Rect.Equals%28System.Windows.Rect%2CSystem.Windows.Rect%29?displayProperty=nameWithType>  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.op_Inequality%2A> operador para determinar se dois retângulos são não são exatamente iguais.  
+  
+ [!code-csharp[RectExamples_snip#OverloadedInequalityOperatorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#overloadedinequalityoperatorexample)]
+ [!code-vb[RectExamples_snip#OverloadedInequalityOperatorExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RectExamples_snip/visualbasic/rectexample.vb#overloadedinequalityoperatorexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Parse (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Parse(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">A representação de cadeia de caracteres do retângulo, no formato "x, y, largura, altura".</param>
+        <summary>Cria um novo retângulo da representação da cadeia de caracteres especificada.</summary>
+        <returns>O retângulo resultante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Parse%2A> método para converter uma representação de cadeia de caracteres de um retângulo em uma <xref:System.Windows.Rect> estrutura.  
+  
+ [!code-csharp[RectExamples_snip#ParseExample](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#parseexample)]
+ [!code-vb[RectExamples_snip#ParseExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RectExamples_snip/visualbasic/rectexample.vb#parseexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public double Right { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Right" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do eixo x do lado direito do retângulo.</summary>
+        <value>O valor do eixo x do lado direito do retângulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor do eixo x do lado direito do retângulo é igual à soma do <xref:System.Windows.Rect.X%2A> e <xref:System.Windows.Rect.Width%2A> propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public void Scale (double scaleX, double scaleY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Scale(float64 scaleX, float64 scaleY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Scale(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scaleX" Type="System.Double" />
+        <Parameter Name="scaleY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="scaleX">O fator de escala na direção x.</param>
+        <param name="scaleY">O fator de escala na direção y.</param>
+        <summary>Multiplica o tamanho do retângulo atual pelos valores de x e y especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Scale%2A> método multiplicar a largura e altura de um retângulo pelo valor especificado.  
+  
+ [!code-csharp[RectExamples_snip#ScaleExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#scaleexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Windows.Size Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Size Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura e a altura do retângulo.</summary>
+        <value>Uma estrutura <see cref="T:System.Windows.Size" /> que especifica a largura e altura do retângulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Windows.Rect> para especificar o local de um retângulo usando XAML e dimensões.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.Size" /> está definido em um retângulo <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato a ser usado.  
+  
+ -ou-  
+  
+ Uma referência nula (<see langword="Nothing" /> no Visual Basic) para usar o formato padrão definido para o tipo do <see cref="T:System.IFormattable" /> implementação.</param>
+        <param name="provider">O provedor a ser usado para formatar o valor.  
+  
+ -ou-  
+  
+ Uma referência nula (<see langword="Nothing" /> no Visual Basic) para obter as informações de formato numérico da configuração de localidade atual do sistema operacional.</param>
+        <summary>Formata o valor da instância atual usando o formato especificado.</summary>
+        <returns>Uma representação de cadeia de caracteres do retângulo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Rect> é convertida em uma interface de <xref:System.IFormattable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public double Top { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Top" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Top" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição do eixo y da parte superior do retângulo.</summary>
+        <value>A posição do eixo y da parte superior do retângulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é equivalente à obtenção de <xref:System.Windows.Rect.Y%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="public System.Windows.Point TopLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point TopLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.TopLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição do canto superior esquerdo do retângulo.</summary>
+        <value>A posição do canto superior esquerdo do retângulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A posição do canto superior esquerdo do retângulo é igual a (<xref:System.Windows.Rect.X%2A>, <xref:System.Windows.Rect.Y%2A>).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopRight">
+      <MemberSignature Language="C#" Value="public System.Windows.Point TopRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Point TopRight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.TopRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição do canto superior direito do retângulo.</summary>
+        <value>A posição do canto superior direito do retângulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A posição do canto superior direito do retângulo é igual a (<xref:System.Windows.Rect.X%2A> + <xref:System.Windows.Rect.Width%2A>, <xref:System.Windows.Rect.Y%2A>).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres do retângulo.</summary>
+        <returns>Uma representação de cadeia de caracteres do retângulo atual. A cadeia de caracteres tem o seguinte formato: "<see cref="P:System.Windows.Rect.X" />,<see cref="P:System.Windows.Rect.Y" />,<see cref="P:System.Windows.Rect.Width" />,<see cref="P:System.Windows.Rect.Height" />".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.ToString> método para obter uma representação de cadeia de caracteres de um <xref:System.Windows.Rect> estrutura.  
+  
+ [!code-csharp[RectExamples_snip#ToStringExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#tostringexample_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Informações de formatação de cultura específica.</param>
+        <summary>Retorna uma representação de cadeia de caracteres do retângulo, usando o provedor de formato especificado.</summary>
+        <returns>Uma representação de cadeia de caracteres do retângulo atual que é determinado pelo provedor de formato especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public void Transform (System.Windows.Media.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Transform(valuetype System.Windows.Media.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Transform(System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">Uma matriz que especifica a transformação a ser aplicada.</param>
+        <summary>Transforma o retângulo aplicando a matriz especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Transform%28System.Windows.Media.Matrix%29> método para transformar uma <xref:System.Windows.Rect> estrutura usando um <xref:System.Windows.Media.Matrix>.  
+  
+ [!code-csharp[RectExamples_snip#TransformExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#transformexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Transform (System.Windows.Rect rect, System.Windows.Media.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Transform(valuetype System.Windows.Rect rect, valuetype System.Windows.Media.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Transform(System.Windows.Rect,System.Windows.Media.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="matrix" Type="System.Windows.Media.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Um retângulo que é a base para a transformação.</param>
+        <param name="matrix">Uma matriz que especifica a transformação a ser aplicada.</param>
+        <summary>Retorna o retângulo que resulta da aplicação da matriz especificada ao retângulo especificado.</summary>
+        <returns>O retângulo que resulta da operação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Transform%28System.Windows.Rect%2CSystem.Windows.Media.Matrix%29> método para criar um novo <xref:System.Windows.Rect> estrutura que resulta da aplicação de um <xref:System.Windows.Media.Matrix> a um retângulo existente.  
+  
+ [!code-csharp[RectExamples_snip#TransformExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#transformexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public void Union (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Union(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Union(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">O ponto de serem incluídos.</param>
+        <summary>Expande o retângulo atual exatamente o suficiente para conter o ponto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Union%28System.Windows.Point%29> método para expandir o retângulo atual exatamente o suficiente para conter um determinado <xref:System.Windows.Point>.  
+  
+ [!code-csharp[RectExamples_snip#UnionExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#unionexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public void Union (System.Windows.Rect rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Union(valuetype System.Windows.Rect rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Union(System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O retângulo a ser incluído.</param>
+        <summary>Expande o retângulo atual exatamente o suficiente para conter o retângulo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Union%28System.Windows.Rect%29> método para expandir o retângulo atual exatamente o suficiente para conter o retângulo especificado.  
+  
+ [!code-csharp[RectExamples_snip#UnionExample2_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#unionexample2_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Union (System.Windows.Rect rect, System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Union(valuetype System.Windows.Rect rect, valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Union(System.Windows.Rect,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O retângulo a ser incluído.</param>
+        <param name="point">O ponto de serem incluídos.</param>
+        <summary>Cria um retângulo que é exatamente grande o suficiente para incluir o retângulo especificado e o ponto especificado.</summary>
+        <returns>Um retângulo que é exatamente grande o suficiente para conter o retângulo especificado e o ponto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Union%28System.Windows.Rect%2CSystem.Windows.Point%29> método para criar um retângulo que é exatamente grande o suficiente para conter um retângulo determinado e um determinado <xref:System.Windows.Point>.  
+  
+ [!code-csharp[RectExamples_snip#UnionExample3_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#unionexample3_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public static System.Windows.Rect Union (System.Windows.Rect rect1, System.Windows.Rect rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Rect Union(valuetype System.Windows.Rect rect1, valuetype System.Windows.Rect rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Rect.Union(System.Windows.Rect,System.Windows.Rect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Rect" />
+        <Parameter Name="rect2" Type="System.Windows.Rect" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">O primeiro retângulo para incluir.</param>
+        <param name="rect2">O segundo retângulo para incluir.</param>
+        <summary>Cria um retângulo que é exatamente grande o suficiente para conter os dois retângulos especificados.</summary>
+        <returns>O retângulo resultante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Rect.Union%28System.Windows.Rect%2CSystem.Windows.Rect%29> método para criar um retângulo que é exatamente grande o suficiente para conter os dois retângulos determinados.  
+  
+ [!code-csharp[RectExamples_snip#UnionExample4_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#unionexample4_csharp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public double Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura do retângulo.</summary>
+        <value>Um número positivo que representa a largura do retângulo. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Rect.Empty%2A> retângulo possui um <xref:System.Windows.Rect.Width%2A> de <xref:System.Double.NegativeInfinity>. O <xref:System.Windows.Rect.Empty%2A> retângulo é somente leitura; seu <xref:System.Windows.Rect.Width%2A> não não pode ser alterado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Windows.Rect> para especificar o local de um retângulo usando XAML e dimensões.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Rect.Width" /> é definido como um valor negativo.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.Width" /> está definido em um retângulo <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public double X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do eixo X do lado esquerdo do retângulo.</summary>
+        <value>O valor do eixo x do lado esquerdo do retângulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é equivalente à obtenção de <xref:System.Windows.Rect.Left%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Windows.Rect> para especificar o local de um retângulo usando XAML e dimensões.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.X" /> está definido em um retângulo <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public double Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Rect.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do eixo y do canto superior do retângulo.</summary>
+        <value>O valor do eixo y do canto superior do retângulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é equivalente à obtenção de <xref:System.Windows.Rect.Top%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Windows.Rect> para especificar o local de um retângulo usando XAML e dimensões.  
+  
+ [!code-csharp[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/CSharp/RectExample.cs#rectexamplewholepage)]
+ [!code-vb[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/visualbasic/rectexample.vb#rectexamplewholepage)]
+ [!code-xaml[GeometriesMiscSnippets_snip#RectExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/RectExample.xaml#rectexamplewholepage)]  
+  
+ O exemplo a seguir mostra como usar código para criar um retângulo e adicioná-lo para a página. O exemplo também ilustra como localizar informações sobre o retângulo novo tamanho e coordenadas e processar as informações em um <xref:System.Windows.Controls.TextBox> abaixo do retângulo.  
+  
+ [!code-csharp[RectExamples_snip#CreateRectExample1_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/RectExamples_snip/CSharp/RectExample.cs#createrectexample1_csharp)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Rect.Y" /> está definido em um retângulo <see cref="P:System.Windows.Rect.Empty" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

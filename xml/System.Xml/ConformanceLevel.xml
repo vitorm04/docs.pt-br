@@ -1,0 +1,147 @@
+<Type Name="ConformanceLevel" FullName="System.Xml.ConformanceLevel">
+  <TypeSignature Language="C#" Value="public enum ConformanceLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConformanceLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.ConformanceLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a quantidade de verificação de entrada ou saída que os objetos <see cref="T:System.Xml.XmlReader" /> e <see cref="T:System.Xml.XmlWriter" /> executam.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria uma instância de leitor ou gravador XML, você pode usar o <xref:System.Xml.XmlReaderSettings> ou <xref:System.Xml.XmlWriterSettings> classe para especificar os recursos que você deseja que a nova instância para dar suporte. Um dos recursos que você pode configurar é o nível de conformidade que você deseja impor nos dados XML.  
+  
+ Criar um compatível leitor ou gravador garante que os dados XML que está sendo processados é compatível com o nível de conformidade especificado. Se o fluxo que está sendo lidos ou gravados não está em conformidade com o nível de conformidade, uma exceção será lançada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.ConformanceLevel Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.ConformanceLevel.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.ConformanceLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto <see cref="T:System.Xml.XmlReader" /> ou <see cref="T:System.Xml.XmlWriter" /> detecta automaticamente se a verificação do nível do documento ou do nível do fragmento deve ser executada e realiza a verificação apropriada. Se você estiver encapsulando outro objeto <see cref="T:System.Xml.XmlReader" /> ou <see cref="T:System.Xml.XmlWriter" />, o objeto externo não executará nenhuma verificação de compatibilidade adicional. A verificação de compatibilidade é deixada a cargo do objeto subjacente.  
+  
+ Consulte as propriedades <see cref="P:System.Xml.XmlReaderSettings.ConformanceLevel" /> e <see cref="P:System.Xml.XmlWriterSettings.ConformanceLevel" /> para obter detalhes sobre como o nível de conformidade é determinado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="Document" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.ConformanceLevel Document = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.ConformanceLevel.Document" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.ConformanceLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os dados XML está em conformidade com as regras para um bem formado [documento XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/#sec-well-formed), conforme definido pelo W3C.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse nível de verificação garante que o fluxo que está sendo lidos ou gravados pode ser consumido por qualquer processador como um [documento XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/#sec-well-formed).  
+  
+ Verificações em nível de documento impõem verificações de nível de fragmento e verifique também o seguinte:  
+  
+-   O item de nível superior não tem todos os nós que não seja a declaração XML, DTD, elemento, comentário, espaço em branco ou instrução de processamento.  
+  
+-   Os dados XML tem apenas um nó de elemento de nível superior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fragment">
+      <MemberSignature Language="C#" Value="Fragment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.ConformanceLevel Fragment = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.ConformanceLevel.Fragment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.ConformanceLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os dados XML são um [fragmento XML bem-formado](http://www.w3.org/TR/2006/REC-xml-20060816/#wf-entities), conforme definido pelo W3C.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse nível de conformidade representa um documento XML que não pode ter um elemento raiz, mas está bem formado. Esse nível de verificação garante que o fluxo que está sendo lidos ou gravados pode ser consumido por qualquer processador como um [entidade analisada do XML 1.0 externo](http://www.w3.org/TR/2006/REC-xml-20060816/#wf-entities).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,161 @@
+<Type Name="EventQuery" FullName="System.Management.EventQuery">
+  <TypeSignature Language="C#" Value="public class EventQuery : System.Management.ManagementQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventQuery extends System.Management.ManagementQuery" />
+  <TypeSignature Language="DocId" Value="T:System.Management.EventQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.ManagementQuery</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma *consulta de evento* do WMI.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como o cliente recebe a notificação quando uma instância do **Win32_Process** é criado porque a classe de evento é **InstanceCreationEvent**. Para obter mais informações, consulte a documentação do Windows Management Instrumentation na biblioteca MSDN em http://msdn.microsoft.com/library. O cliente recebe eventos de forma síncrona, chamando o <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A> método. Este exemplo pode ser testado iniciando um processo, como o bloco de notas, enquanto o código de exemplo está em execução.  
+  
+ [!code-csharp[wminet_EventQuery#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventQuery/cs/EventQuery.cs#1)]
+ [!code-vb[wminet_EventQuery#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventQuery/vb/EventQuery.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EventQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.EventQuery" />. Esse é o construtor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como o cliente recebe a notificação quando uma instância do **Win32_Process** é criado porque a classe de evento é **InstanceCreationEvent**. Para obter mais informações, consulte a documentação do Windows Management Instrumentation na biblioteca MSDN em http://msdn.microsoft.com/library. O cliente recebe eventos de forma síncrona, chamando o <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A> método. Este exemplo pode ser testado iniciando um processo, como o bloco de notas, enquanto o código de exemplo está em execução.  
+  
+ [!code-csharp[wminet_EventQuery#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventQuery/cs/EventQuery.cs#1)]
+ [!code-vb[wminet_EventQuery#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventQuery/vb/EventQuery.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventQuery (string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EventQuery.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="query">Uma representação textual de <c>consulta de evento</c>.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.EventQuery" /> classe para a consulta especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como o cliente recebe a notificação quando uma instância do **Win32_Process** é criado porque a classe de evento é **InstanceCreationEvent**. Para obter mais informações, consulte a documentação do Windows Management Instrumentation na biblioteca MSDN em http://msdn.microsoft.com/library. O cliente recebe eventos de forma síncrona, chamando o <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A> método. Este exemplo pode ser testado iniciando um processo, como o bloco de notas, enquanto o código de exemplo está em execução.  
+  
+ [!code-csharp[wminet_EventQuery-1#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventQuery-1/cs/EventQuery-1.cs#1)]
+ [!code-vb[wminet_EventQuery-1#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventQuery-1/vb/EventQuery-1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventQuery (string language, string query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string language, string query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EventQuery.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" />
+        <Parameter Name="query" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="language">O idioma no qual a cadeia de caracteres de consulta é especificada.</param>
+        <param name="query">A representação de cadeia de caracteres da consulta.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.EventQuery" /> classe para o idioma especificado e a consulta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como o cliente recebe a notificação quando uma instância do **Win32_Process** é criado porque a classe de evento é **InstanceCreationEvent**. Para obter mais informações, consulte a documentação do Windows Management Instrumentation na biblioteca MSDN em http://msdn.microsoft.com/library. O cliente recebe eventos de forma síncrona, chamando o <xref:System.Management.ManagementEventWatcher.WaitForNextEvent%2A> método. Este exemplo pode ser testado iniciando um processo, como o bloco de notas, enquanto o código de exemplo está em execução.  
+  
+ [!code-csharp[wminet_EventQuery-2#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_EventQuery-2/cs/EventQuery-2.cs#1)]
+ [!code-vb[wminet_EventQuery-2#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_EventQuery-2/vb/EventQuery-2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.EventQuery.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cópia do objeto.</summary>
+        <returns>O objeto clonado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

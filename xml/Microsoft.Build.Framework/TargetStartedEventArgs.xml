@@ -1,0 +1,162 @@
+<Type Name="TargetStartedEventArgs" FullName="Microsoft.Build.Framework.TargetStartedEventArgs">
+  <TypeSignature Language="C#" Value="public class TargetStartedEventArgs : Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TargetStartedEventArgs extends Microsoft.Build.Framework.BuildStatusEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.TargetStartedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildStatusEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:Microsoft.Build.Framework.IEventSource.TargetStarted" /> .</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TargetStartedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TargetStartedEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Framework.TargetStartedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TargetStartedEventArgs (string message, string helpKeyword, string targetName, string projectFile, string targetFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string targetName, string projectFile, string targetFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TargetStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="targetName" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">O texto do evento.</param>
+        <param name="helpKeyword">A palavra-chave de ajuda associada ao evento.</param>
+        <param name="targetName">O nome do destino associado ao evento.</param>
+        <param name="projectFile">O nome do arquivo de projeto associado ao evento.</param>
+        <param name="targetFile">O nome do arquivo de destino.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Build.Framework.TargetStartedEventArgs" /> classe com os valores fornecidos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TargetStartedEventArgs (string message, string helpKeyword, string targetName, string projectFile, string targetFile, string parentTarget, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string targetName, string projectFile, string targetFile, string parentTarget, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.TargetStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="targetName" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetFile" Type="System.String" />
+        <Parameter Name="parentTarget" Type="System.String" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de texto.</param>
+        <param name="helpKeyword">A palavra-chave de ajuda.</param>
+        <param name="targetName">O nome do evento de destino.</param>
+        <param name="projectFile">O arquivo de projeto.</param>
+        <param name="targetFile">O arquivo de destino.</param>
+        <param name="parentTarget">O destino do pai.</param>
+        <param name="eventTimestamp">A data e hora que o evento foi criado.</param>
+        <summary>Representa os argumentos para o destino eventos iniciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentTarget">
+      <MemberSignature Language="C#" Value="public string ParentTarget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParentTarget" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TargetStartedEventArgs.ParentTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o destino que causou esse destino criar.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFile">
+      <MemberSignature Language="C#" Value="public string ProjectFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProjectFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TargetStartedEventArgs.ProjectFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do arquivo de projeto associado ao evento.</summary>
+        <value>O nome do arquivo de projeto associado ao evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFile">
+      <MemberSignature Language="C#" Value="public string TargetFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TargetStartedEventArgs.TargetFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do arquivo que contém a implementação desse destino.</summary>
+        <value>O nome do arquivo que contém a implementação desse destino.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetName">
+      <MemberSignature Language="C#" Value="public string TargetName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.TargetStartedEventArgs.TargetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do associado ao evento de destino.</summary>
+        <value>O nome do destino associado ao evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

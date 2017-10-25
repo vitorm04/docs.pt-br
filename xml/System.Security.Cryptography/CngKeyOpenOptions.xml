@@ -1,0 +1,144 @@
+<Type Name="CngKeyOpenOptions" FullName="System.Security.Cryptography.CngKeyOpenOptions">
+  <TypeSignature Language="C#" Value="public enum CngKeyOpenOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CngKeyOpenOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngKeyOpenOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica opções para abrir uma chave.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A opção silenciosa suprime a qualquer solicitação de interface do usuário. Essa opção pode não funcionar com alguns tipos de chave, como chaves de cartões inteligentes e chaves que são armazenadas no provedor de armazenamento de chaves (KSP) de software. Esses tipos de chave são protegidos com solicitando obrigatório de interface do usuário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MachineKey">
+      <MemberSignature Language="C#" Value="MachineKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngKeyOpenOptions MachineKey = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngKeyOpenOptions.MachineKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyOpenOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma chave de máquina é aberta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngKeyOpenOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngKeyOpenOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyOpenOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma chave abra as opções são especificadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Silent">
+      <MemberSignature Language="C#" Value="Silent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngKeyOpenOptions Silent = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngKeyOpenOptions.Silent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyOpenOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Interface de usuário solicitando será suprimido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserKey">
+      <MemberSignature Language="C#" Value="UserKey" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngKeyOpenOptions UserKey = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngKeyOpenOptions.UserKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngKeyOpenOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se o <see cref="F:System.Security.Cryptography.CngKeyOpenOptions.MachineKey" /> valor não for especificado, uma chave de usuário é aberta em vez disso.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

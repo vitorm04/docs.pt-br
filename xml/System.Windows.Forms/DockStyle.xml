@@ -1,0 +1,137 @@
+<Type Name="DockStyle" FullName="System.Windows.Forms.DockStyle">
+  <TypeSignature Language="C#" Value="public enum DockStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DockStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DockStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DockEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a posição e a maneira como um controle está encaixado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um controle está ancorado a uma borda de seu contêiner, ele é sempre posicionado liberação contra essa borda quando o contêiner é redimensionado. Se mais de um controle é encaixado a uma borda, os controles são exibidos lado a lado de acordo com sua ordem z; mais alto na ordem z de controles é posicionado mais distante da borda do contêiner.  
+  
+ Se esquerda, direita, superior ou inferior estiver selecionada, o especificado e oposta bordas do controle são redimensionadas ao tamanho das extremidades do controle que o contém. Se o preenchimento é selecionado, todos os quatro lados do controle serão redimensionados para corresponder bordas do controle que contém.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Forms.GroupBox> e define algumas de suas propriedades comuns. O exemplo cria um <xref:System.Windows.Forms.TextBox> e define seu <xref:System.Windows.Forms.Control.Location%2A> dentro da caixa de grupo. Em seguida, ele define o <xref:System.Windows.Forms.Control.Text%2A> propriedade da caixa de grupo e módulos de ancoragem caixa de grupo para a parte superior do formulário. Por fim, ele desabilita a caixa de grupo, definindo o <xref:System.Windows.Forms.Control.Enabled%2A> propriedade `false`, que faz com que todos os controles contidos dentro da caixa de grupo a ser desabilitado.  
+  
+ [!code-cpp[Windows.Forms.Control Properties#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control Properties/CPP/controlproperties.cpp#2)]
+ [!code-csharp[Windows.Forms.Control Properties#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control Properties/CS/controlproperties.cs#2)]
+ [!code-vb[Windows.Forms.Control Properties#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control Properties/VB/controlproperties.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle Bottom = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.Bottom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A borda inferior do controle está encaixada na parte inferior do controle recipiente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="Fill" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle Fill = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.Fill" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todas as bordas do controle estão encaixadas em todas as bordas do controle recipiente e dimensionadas adequadamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle Left = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A borda esquerda do controle está encaixada na borda esquerda do controle recipiente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle não está encaixado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle Right = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A borda direita do controle está encaixada na borda direita do controle recipiente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DockStyle Top = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DockStyle.Top" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A borda superior do controle está encaixada na parte superior do controle recipiente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

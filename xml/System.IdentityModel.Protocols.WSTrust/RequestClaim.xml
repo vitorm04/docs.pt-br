@@ -1,0 +1,182 @@
+<Type Name="RequestClaim" FullName="System.IdentityModel.Protocols.WSTrust.RequestClaim">
+  <TypeSignature Language="C#" Value="public class RequestClaim" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequestClaim extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.RequestClaim" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma única declaração solicitada em uma solicitação de token de segurança (primeira).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa uma única declaração dentro de um elemento wst:Claims em uma mensagem wst:RequestSecurityToken. Todo o conteúdo do elemento wst:Claims é representado por um <xref:System.IdentityModel.Protocols.WSTrust.RequestClaimCollection> que é uma coleção de <xref:System.IdentityModel.Protocols.WSTrust.RequestClaim> objetos. O conteúdo do elemento wst:Claims é acessada por meio de <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken.Claims%2A?displayProperty=nameWithType> propriedade.  
+  
+ Um <xref:System.IdentityModel.Protocols.WSTrust.RequestClaim> objeto representa uma solicitação para uma declaração, identificada por seu tipo de declaração (o <xref:System.IdentityModel.Protocols.WSTrust.RequestClaim.ClaimType%2A> propriedade), presente no token de segurança emitido pelo STS. O <xref:System.IdentityModel.Protocols.WSTrust.RequestClaim.IsOptional%2A> propriedade indica se a declaração é necessária no no token emitido.  
+  
+ Para obter mais informações sobre o elemento que essa classe representa, consulte a versão da especificação WS-Trust que se aplica ao seu cenário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestClaim (string claimType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string claimType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestClaim.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">O URI que representa o tipo de declaração.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestClaim" /> classe com o tipo de declaração especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Protocols.WSTrust.RequestClaim.IsOptional%2A> está definida como `false` e <xref:System.IdentityModel.Protocols.WSTrust.RequestClaim.Value%2A> está definida como `null` no novo <xref:System.IdentityModel.Protocols.WSTrust.RequestClaim> instância. Este construtor cria um <xref:System.IdentityModel.Protocols.WSTrust.RequestClaim> objeto que representa uma solicitação para uma declaração que é necessária na resposta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestClaim (string claimType, bool isOptional);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string claimType, bool isOptional) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestClaim.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+        <Parameter Name="isOptional" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">O URI que representa o tipo de declaração.</param>
+        <param name="isOptional">
+          <see langword="true" />Se a declaração é opcional em resposta; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestClaim" /> classe com o tipo de declaração especificado e um valor que indica se a declaração é opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Protocols.WSTrust.RequestClaim.Value%2A> está definida como `null` no novo <xref:System.IdentityModel.Protocols.WSTrust.RequestClaim> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestClaim (string claimType, bool isOptional, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string claimType, bool isOptional, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestClaim.#ctor(System.String,System.Boolean,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimType" Type="System.String" />
+        <Parameter Name="isOptional" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claimType">O URI que representa o tipo de declaração.</param>
+        <param name="isOptional">
+          <see langword="true" />Se a declaração é opcional em resposta; Caso contrário, <see langword="false" />.</param>
+        <param name="value">O valor da declaração.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestClaim" /> classe com o tipo de declaração especificado, o valor de declaração e um valor que indica se a declaração é opcional.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimType">
+      <MemberSignature Language="C#" Value="public string ClaimType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClaimType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestClaim.ClaimType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo da declaração solicitada.</summary>
+        <value>O URI que representa o tipo de declaração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do atributo ClaimType Uri.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOptional">
+      <MemberSignature Language="C#" Value="public bool IsOptional { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOptional" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestClaim.IsOptional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a declaração de solicitação é opcional na resposta.</summary>
+        <value>
+          <see langword="true" />Se a declaração é opcional em resposta; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o atributo opcional ClaimType.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestClaim.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da declaração solicitada.</summary>
+        <value>O valor da declaração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento de valor ClaimType.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

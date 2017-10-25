@@ -1,0 +1,376 @@
+<Type Name="RegexCompilationInfo" FullName="System.Text.RegularExpressions.RegexCompilationInfo">
+  <TypeSignature Language="C#" Value="public class RegexCompilationInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RegexCompilationInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.RegularExpressions.RegexCompilationInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre uma expressão regular usada para compilar uma expressão regular para um assembly autônomo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma matriz de <xref:System.Text.RegularExpressions.RegexCompilationInfo> objetos é passada para o <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> método para fornecer informações sobre cada expressão regular a ser incluído no assembly. Cada expressão regular compilado que está incluído no conjunto é representada como uma classe derivada de <xref:System.Text.RegularExpressions.Regex>. As propriedades do <xref:System.Text.RegularExpressions.RegexCompilationInfo> tipo define o nome da classe da expressão regular, o nome totalmente qualificado (ou seja, o seu namespace e o seu nome de tipo), o padrão de expressão regular, quaisquer opções adicionais (como se a expressão regular diferencia maiusculas de minúsculas) e um intervalo de tempo limite que especifica quanto tempo o mecanismo de expressão regular deve procurar uma correspondência.  
+  
+ Você pode instanciar uma <xref:System.Text.RegularExpressions.RegexCompilationInfo> objeto chamando o construtor de classe sobrecarregados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegexCompilationInfo (string pattern, System.Text.RegularExpressions.RegexOptions options, string name, string fullnamespace, bool ispublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pattern, valuetype System.Text.RegularExpressions.RegexOptions options, string name, string fullnamespace, bool ispublic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.RegexCompilationInfo.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+        <Parameter Name="options" Type="System.Text.RegularExpressions.RegexOptions" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="fullnamespace" Type="System.String" />
+        <Parameter Name="ispublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">A expressão regular para compilar.</param>
+        <param name="options">As opções de expressão regular a ser usado ao compilar a expressão regular.</param>
+        <param name="name">O nome do tipo que representa a expressão regular compilada.</param>
+        <param name="fullnamespace">O namespace ao qual pertence o novo tipo.</param>
+        <param name="ispublic">
+          <see langword="true" />Para tornar a expressão regular compilada publicamente visível; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Text.RegularExpressions.RegexCompilationInfo" /> classe que contém informações sobre uma expressão regular a ser incluído em um assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada parâmetro do <xref:System.Text.RegularExpressions.RegexCompilationInfo.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.String%2CSystem.String%2CSystem.Boolean%29> construtor corresponde diretamente a uma propriedade do <xref:System.Text.RegularExpressions.RegexCompilationInfo> classe. Como todas as propriedades são somente leitura, seus valores também podem ser atribuídos diretamente.  
+  
+ O <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> método gera um assembly que contém expressões regulares compiladas. Portanto, você não deve especificar <xref:System.Text.RegularExpressions.RegexOptions.Compiled> como um dos valores de `options`.  
+  
+ Se `ispublic` é `true`, a classe de expressão regular compilados tem acessibilidade pública. Ou seja, ele poderá ser instanciado de código que é executado em qualquer assembly. Se `ispublic` é `false`, receberá a classe de expressão regular compilados `internal` (em c#) ou `Friend` (no Visual Basic) acessibilidade. Ou seja, ele poderá ser instanciado somente de código que é executado no mesmo assembly como a classe de expressão regular.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria e usa uma expressão regular compilada em duas etapas.  
+  
+ Na primeira etapa, compile e execute o exemplo de código a seguir. O <xref:System.Text.RegularExpressions.RegexCompilationInfo.%23ctor%2A> construtor no exemplo de código define uma expressão regular compilada. O resultado da execução do código é um assembly chamado FishRegex.dll que contém um tipo de expressão regular compilados chamado `FishRegex`.  
+  
+ [!code-csharp[sys.txt.rgxCompInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.txt.rgxCompInfo/cs/genFishRegex.cs#1)]
+ [!code-vb[sys.txt.rgxCompInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.txt.rgxCompInfo/vb/genFishRegex.vb#1)]  
+  
+ Na segunda etapa, compile o exemplo a seguir usa uma referência a FishRegex.dll e, em seguida, execute o arquivo executável resultante. O arquivo executável corresponde a uma cadeia de caracteres de destino usando o `FishRegex` digite e exibe a correspondência, grupo, grupo de captura e posição de índice de correspondências na cadeia de caracteres de destino.  
+  
+ [!code-csharp[sys.txt.rgxCompInfo#2](~/samples/snippets/csharp/VS_Snippets_CLR/sys.txt.rgxCompInfo/cs/useFishRegex.cs#2)]
+ [!code-vb[sys.txt.rgxCompInfo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.txt.rgxCompInfo/vb/useFishRegex.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pattern" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="name" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="fullnamespace" /> é <see langword="null" />.</exception>
+        <block subset="none" type="usage">
+          <para>Este construtor cria uma expressão regular compilada que usa o valor de tempo limite padrão do domínio do aplicativo no qual ele é criado. Se um valor de tempo limite é definido para o domínio de aplicativo, a expressão regular compilada usa o valor <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" />, que impede que uma operação de correspondência de padrão de tempo limite. O construtor recomendado para a criação de uma expressão regular compilada é <see cref="M:System.Text.RegularExpressions.RegexCompilationInfo.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String,System.Boolean,System.TimeSpan)" />, que permite que você defina o intervalo de tempo limite.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegexCompilationInfo (string pattern, System.Text.RegularExpressions.RegexOptions options, string name, string fullnamespace, bool ispublic, TimeSpan matchTimeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string pattern, valuetype System.Text.RegularExpressions.RegexOptions options, string name, string fullnamespace, bool ispublic, valuetype System.TimeSpan matchTimeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.RegularExpressions.RegexCompilationInfo.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,System.String,System.String,System.Boolean,System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pattern" Type="System.String" />
+        <Parameter Name="options" Type="System.Text.RegularExpressions.RegexOptions" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="fullnamespace" Type="System.String" />
+        <Parameter Name="ispublic" Type="System.Boolean" />
+        <Parameter Name="matchTimeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="pattern">A expressão regular para compilar.</param>
+        <param name="options">As opções de expressão regular a ser usado ao compilar a expressão regular.</param>
+        <param name="name">O nome do tipo que representa a expressão regular compilada.</param>
+        <param name="fullnamespace">O namespace ao qual pertence o novo tipo.</param>
+        <param name="ispublic">
+          <see langword="true" />Para tornar a expressão regular compilada publicamente visível; Caso contrário, <see langword="false" />.</param>
+        <param name="matchTimeout">O intervalo de tempo limite padrão para a expressão regular.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Text.RegularExpressions.RegexCompilationInfo" /> classe que contém informações sobre uma expressão regular com um valor de tempo limite especificado para ser incluído em um assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada parâmetro do <xref:System.Text.RegularExpressions.RegexCompilationInfo.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.String%2CSystem.String%2CSystem.Boolean%29> construtor corresponde diretamente a uma propriedade do <xref:System.Text.RegularExpressions.RegexCompilationInfo> classe. Como todas as propriedades são somente leitura, seus valores também podem ser atribuídos diretamente.  
+  
+ O <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> método gera um assembly que contém expressões regulares compiladas. Portanto, você não deve especificar <xref:System.Text.RegularExpressions.RegexOptions.Compiled> como um dos valores de `options`.  
+  
+ Se `ispublic` é `true`, a classe de expressão regular compilados tem acessibilidade pública. Ou seja, ele poderá ser instanciado de código que é executado em qualquer assembly. Se `ispublic` é `false`, receberá a classe de expressão regular compilados `internal` (em c#) ou `Friend` (no Visual Basic) acessibilidade. Ou seja, ele poderá ser instanciado somente de código que é executado no mesmo assembly como a classe de expressão regular.  
+  
+ O `matchTimeout` parâmetro define o intervalo de tempo limite padrão para a expressão regular compilado. Esse valor representa a quantidade aproximada de tempo que um objeto de expressão regular compilada será executado uma única operação de correspondência antes da operação de tempo limite e o mecanismo de expressão regular gera um <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> exceção durante sua próxima verificação de tempo. Para obter informações adicionais sobre o valor de tempo limite, consulte o <xref:System.Text.RegularExpressions.RegexCompilationInfo.MatchTimeout%2A> propriedade.  
+  
+> [!IMPORTANT]
+>  É recomendável que você sempre pode definir um valor de tempo limite padrão para uma expressão regular compilado. Os consumidores de sua biblioteca de expressão regular podem substituir esse valor de tempo limite, passando um <xref:System.TimeSpan> valor que representa o novo intervalo de tempo limite para essa sobrecarga de construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma única expressão regular compilada denominada `DuplicateChars` que identifica a duas ou mais ocorrências do mesmo caractere em uma cadeia de caracteres de entrada. A expressão regular compilada tem um tempo limite padrão de 2 segundos. Quando você executar o exemplo, ele cria uma biblioteca de classes chamada RegexLib.dll que contém a expressão regular compilada.  
+  
+ [!code-csharp[System.Text.RegularExpressions.RegexCompilationInfo.MatchTimeout#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regexcompilationinfo.matchtimeout/cs/example1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.RegexCompilationInfo.MatchTimeout#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regexcompilationinfo.matchtimeout/vb/example1.vb#1)]  
+  
+ O padrão de expressão regular `(\w)\1+` é definido conforme mostrado na tabela a seguir.  
+  
+|Padrão|Descrição|  
+|-------------|-----------------|  
+|`(\w)`|Corresponder qualquer caractere de palavra e atribuí-la para o primeiro grupo de capturando.|  
+|`\1+`|Corresponde a uma ou mais ocorrências do valor do primeiro grupo capturado.|  
+  
+ O exemplo a seguir usa o `DuplicatedChars` expressão regular para identificar duplique caracteres em uma matriz de cadeia de caracteres. Quando ele chama o `DuplicatedChars` construtor, ele altera o intervalo de tempo limite de 0,5 segundo.  
+  
+ [!code-csharp[System.Text.RegularExpressions.RegexCompilationInfo.MatchTimeout#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regexcompilationinfo.matchtimeout/cs/example1a.cs#2)]
+ [!code-vb[System.Text.RegularExpressions.RegexCompilationInfo.MatchTimeout#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regexcompilationinfo.matchtimeout/vb/example1a.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="pattern" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="name" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="fullnamespace" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="matchTimeout" /> é negativo, zero ou maior que aproximadamente 24 dias.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPublic">
+      <MemberSignature Language="C#" Value="public bool IsPublic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPublic" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.RegexCompilationInfo.IsPublic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a expressão regular compilada tem visibilidade pública.</summary>
+        <value>
+          <see langword="true" />Se a expressão regular tem visibilidade pública; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Text.RegularExpressions.RegexCompilationInfo.IsPublic%2A> é de propriedade `false`, a classe de expressão regular definida pela instância atual pode ser instanciada somente pelo código que está em execução no assembly que contém a classe. No entanto, como o <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> método gera um assembly que contém somente as expressões regulares compiladas e não permite que o código adicional a ser adicionado, geralmente, não há nenhum motivo para atribuir esta propriedade um valor de `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan MatchTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MatchTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.RegexCompilationInfo.MatchTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de tempo limite padrão de expressão regular.</summary>
+        <value>O intervalo de tempo máximo que pode decorrer em uma operação de correspondência antes de um <see cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException" /> for lançada, ou <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> se tempos limite está desabilitado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.RegularExpressions.RegexCompilationInfo.MatchTimeout%2A> propriedade define o intervalo de tempo limite padrão para a expressão regular compilado. Esse valor representa a quantidade aproximada de tempo que uma expressão regular compilada executará uma única operação de correspondência antes da operação de tempo limite e o mecanismo de expressão regular gera um <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> exceção durante sua próxima verificação de tempo.  
+  
+> [!IMPORTANT]
+>  É recomendável que você sempre pode definir um valor de tempo limite padrão para uma expressão regular compilado. Os consumidores de sua biblioteca de expressão regular podem substituir esse valor de tempo limite, passando um <xref:System.TimeSpan> valor que representa o novo intervalo de tempo limite para o construtor de classe da expressão regular compilados.  
+  
+ Você pode atribuir um valor de tempo limite padrão para um <xref:System.Text.RegularExpressions.RegexCompilationInfo> objeto em qualquer uma das seguintes maneiras:  
+  
+-   Chamando o <xref:System.AppDomain.SetData%2A?displayProperty=nameWithType> método e fornecer a representação de cadeia de caracteres de uma <xref:System.TimeSpan> valor para a propriedade "REGEX_DEFAULT_MATCH_TIMEOUT".  
+  
+-   Chamando o <xref:System.Text.RegularExpressions.RegexCompilationInfo.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.TimeSpan%29> construtor e fornecer um valor para o `matchTimeout` parâmetro.  
+  
+-   Definindo o valor dessa propriedade.  
+  
+ Para definir um intervalo de tempo limite razoável, considere os seguintes fatores:  
+  
+-   O comprimento e a complexidade do padrão de expressão regular. Expressões regulares mais longas e complexas requerem mais tempo do que aqueles menores e mais simples.  
+  
+-   A carga esperada máquina. Processamento leva mais tempo em sistemas com alta utilização de CPU e memória.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma única expressão regular compilada denominada `DuplicateChars` que identifica a duas ou mais ocorrências do mesmo caractere em uma cadeia de caracteres de entrada. A expressão regular compilada tem um tempo limite padrão de 2 segundos. Quando você executar o exemplo, ele cria uma biblioteca de classes chamada RegexLib.dll que contém a expressão regular compilada.  
+  
+ [!code-csharp[System.Text.RegularExpressions.RegexCompilationInfo.MatchTimeout#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regexcompilationinfo.matchtimeout/cs/example1.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.RegexCompilationInfo.MatchTimeout#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regexcompilationinfo.matchtimeout/vb/example1.vb#1)]  
+  
+ O padrão de expressão regular `(\w)\1+` é definido conforme mostrado na tabela a seguir.  
+  
+|Padrão|Descrição|  
+|-------------|-----------------|  
+|`(\w)`|Corresponder qualquer caractere de palavra e atribuí-la para o primeiro grupo de capturando.|  
+|`\1+`|Corresponde a uma ou mais ocorrências do valor do primeiro grupo capturado.|  
+  
+ O exemplo a seguir usa o `DuplicatedChars` expressão regular para identificar duplique caracteres em uma matriz de cadeia de caracteres. Quando ele chama o `DuplicatedChars` construtor, ele altera o intervalo de tempo limite de 0,5 segundo.  
+  
+ [!code-csharp[System.Text.RegularExpressions.RegexCompilationInfo.MatchTimeout#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regexcompilationinfo.matchtimeout/cs/example1a.cs#2)]
+ [!code-vb[System.Text.RegularExpressions.RegexCompilationInfo.MatchTimeout#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regexcompilationinfo.matchtimeout/vb/example1a.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.RegexCompilationInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tipo que representa a expressão regular compilada.</summary>
+        <value>O nome do novo tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.RegularExpressions.RegexCompilationInfo> classe é usada para definir uma expressão regular compilada, que é representada como uma classe derivada de <xref:System.Text.RegularExpressions.Regex>. O <xref:System.Text.RegularExpressions.RegexCompilationInfo.Name%2A> propriedade define o nome da classe do tipo de expressão regular e o <xref:System.Text.RegularExpressions.RegexCompilationInfo.Namespace%2A> e <xref:System.Text.RegularExpressions.RegexCompilationInfo.Name%2A> propriedades juntas definem o nome totalmente qualificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor dessa propriedade é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O valor dessa propriedade é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.RegexCompilationInfo.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace ao qual pertence o novo tipo.</summary>
+        <value>O namespace do novo tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.RegularExpressions.RegexCompilationInfo> classe é usada para definir uma expressão regular compilada, que é representada como uma classe derivada de <xref:System.Text.RegularExpressions.Regex>. O <xref:System.Text.RegularExpressions.RegexCompilationInfo.Namespace%2A> propriedade define o namespace que contém o tipo de expressão regular compilado, e o <xref:System.Text.RegularExpressions.RegexCompilationInfo.Namespace%2A> e <xref:System.Text.RegularExpressions.RegexCompilationInfo.Name%2A> propriedades juntas definem o nome totalmente qualificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor dessa propriedade é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.Text.RegularExpressions.RegexOptions Options { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Text.RegularExpressions.RegexOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.RegexCompilationInfo.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as opções para usar ao compilar a expressão regular.</summary>
+        <value>Um combinação bit a bit dos valores de enumeração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> método gera um assembly que contém expressões regulares compiladas. Portanto, você não precisa especificar <xref:System.Text.RegularExpressions.RegexOptions.Compiled> como um dos valores da propriedade. Se estiver presente, o <xref:System.Text.RegularExpressions.RegexOptions.Compiled> opção será ignorada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public string Pattern { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Pattern" />
+      <MemberSignature Language="DocId" Value="P:System.Text.RegularExpressions.RegexCompilationInfo.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expressão regular para compilar.</summary>
+        <value>A expressão regular para compilar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Text.RegularExpressions.RegexCompilationInfo.Pattern%2A> propriedade pode conter qualquer expressão regular válida. Se o valor da <xref:System.Text.RegularExpressions.RegexCompilationInfo.Pattern%2A> propriedade não é um padrão de expressão regular sintaticamente correto, a chamada para o <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> método lança um <xref:System.ArgumentException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor dessa propriedade é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

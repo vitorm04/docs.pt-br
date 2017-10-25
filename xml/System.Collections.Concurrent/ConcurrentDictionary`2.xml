@@ -1,0 +1,1841 @@
+<Type Name="ConcurrentDictionary&lt;TKey,TValue&gt;" FullName="System.Collections.Concurrent.ConcurrentDictionary&lt;TKey,TValue&gt;">
+  <TypeSignature Language="C#" Value="public class ConcurrentDictionary&lt;TKey,TValue&gt; : System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;, System.Collections.IDictionary" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ConcurrentDictionary`2&lt;TKey, TValue&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IDictionary`2&lt;!TKey, !TValue&gt;, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IReadOnlyDictionary`2&lt;!TKey, !TValue&gt;, class System.Collections.ICollection, class System.Collections.IDictionary, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Concurrent.ConcurrentDictionary`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Concurrent</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.14.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey" />
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IDictionary</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.Generic.Mscorlib_DictionaryDebugView`2))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="TKey">O tipo das chaves no dicionário.</typeparam>
+    <typeparam name="TValue">O tipo dos valores no dicionário.</typeparam>
+    <summary>Representa uma coleção thread-safe de pares chave-valor que podem ser acessados por vários threads ao mesmo tempo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para grandes <xref:System.Collections.Concurrent.ConcurrentDictionary%602> objetos, você pode aumentar o tamanho da matriz de máximo de 2 gigabytes (GB) em um sistema de 64 bits, definindo o elemento de configuração para `true` no ambiente de tempo de execução.  
+  
+> [!NOTE]
+>  <xref:System.Collections.Concurrent.ConcurrentDictionary%602>implementa o <xref:System.Collections.Generic.IReadOnlyCollection%601> e <xref:System.Collections.Generic.IReadOnlyDictionary%602> interfaces começando com o [!INCLUDE[net_v46](~/includes/net-v46-md.md)]; nas versões anteriores do .NET Framework, o <xref:System.Collections.Concurrent.ConcurrentDictionary%602> classe não implementou essas interfaces.  
+  
+ Como o <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> classe <xref:System.Collections.Concurrent.ConcurrentDictionary%602> implementa o <xref:System.Collections.Generic.IDictionary%602> interface. Além disso, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> fornece vários métodos para adicionar ou atualizar os pares chave/valor no dicionário, conforme descrito na tabela a seguir.  
+  
+|Para fazer isso|Use esse método|Observações de uso|  
+|----------------|---------------------|-----------------|  
+|Adicionar uma nova chave ao dicionário, se ainda não existir no dicionário|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryAdd%2A>|Este método adiciona o par chave/valor especificado, se a chave atualmente não existe no dicionário. O método retorna `true` ou `false` dependendo se o novo par foi adicionado.|  
+|Atualize o valor de uma chave existente no dicionário, se essa chave tem um valor específico|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryUpdate%2A>|Esse método verifica se a chave tem um valor especificado e se ele, atualiza a chave com um novo valor. É semelhante de <xref:System.Threading.Interlocked.CompareExchange%2A> método, exceto que ela do usado para elementos do dicionário.|  
+|Armazenar um par chave/valor no dicionário incondicionalmente e substituir o valor de uma chave que já existe|Setter do indexador:`dictionary[key] = newValue`||  
+|Adicionar um par chave/valor ao dicionário, ou se a chave já existe, atualize o valor para a chave com base no valor existente da chave|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%28%600%2CSystem.Func%7B%600%2C%601%7D%2CSystem.Func%7B%600%2C%601%2C%601%7D%29><br /><br /> —ou—<br /><br /> <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%28%600%2C%601%2CSystem.Func%7B%600%2C%601%2C%601%7D%29>|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%28%600%2CSystem.Func%7B%600%2C%601%7D%2CSystem.Func%7B%600%2C%601%2C%601%7D%29>aceita a chave e dois delegados. Ele usa o delegado primeiro se a chave não existe no dicionário. ele aceita a chave e retorna o valor que deve ser adicionado para a chave. Ele usa o delegado segundo se a chave existir; ele aceita a chave e seu valor atual e retorna o novo valor deve ser definido para a chave.<br /><br /> <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%28%600%2C%601%2CSystem.Func%7B%600%2C%601%2C%601%7D%29>aceita a chave, um valor a ser adicionado e o representante de atualização. Isso é o mesmo que a sobrecarga anterior, exceto que ele não use um delegado para adicionar uma chave.|  
+|Obter o valor de uma chave no dicionário, adicionando o valor ao dicionário e retorná-lo se a chave não existe|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%28%600%2C%601%29><br /><br /> —ou—<br /><br /> <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%28%600%2CSystem.Func%7B%600%2C%601%7D%29>|Essas sobrecargas fornecem inicialização lenta para um par chave/valor no dicionário, adicionando o valor somente se ele não estiver lá.<br /><br /> <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%28%600%2C%601%29>Obtém o valor a ser adicionado se a chave não existe.<br /><br /> <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%28%600%2CSystem.Func%7B%600%2C%601%7D%29>usa um delegado que irá gerar o valor se a chave não existe.|  
+  
+ Todas essas operações são atômicas e são thread-safe em relação a todas as outras operações de <xref:System.Collections.Concurrent.ConcurrentDictionary%602> classe. As únicas exceções são os métodos que aceitam um delegado, ou seja, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>. Para operações de gravação ao dicionário e modificações <xref:System.Collections.Concurrent.ConcurrentDictionary%602> usa bloqueio refinado para garantir a segurança do thread. (As operações de leitura no dicionário são executadas de forma livre de bloqueios). No entanto, delegados para esses métodos são chamados de fora de bloqueios para evitar os problemas que podem surgir de executar código desconhecido em um bloqueio. Portanto, o código executado por esses representantes não é sujeito a atomicidade da operação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como construir um <xref:System.Collections.Concurrent.ConcurrentDictionary%602> objeto.  
+  
+ [!code-csharp[System.Collections.Concurrent.ConcurrentDictionary#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/cs/concdictionary.cs#1)]
+ [!code-vb[System.Collections.Concurrent.ConcurrentDictionary#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/vb/concdictionary.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Todos os membros protegidos e públicos da <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> são thread-safe e podem ser usados simultaneamente em vários threads. No entanto, os membros são acessados por meio de uma das interfaces de <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> implementa, incluindo métodos de extensão, não há garantia de ser thread-safe e talvez precise ser sincronizado pelo chamador.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConcurrentDictionary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> que está vazia, tem o nível de simultaneidade padrão, tem a capacidade inicial padrão e usa o comparador padrão para o tipo de chave.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nível de simultaneidade padrão é o multiplicador de simultaneidade padrão (DEFAULT_CONCURRENCY_MULTIPLIER) vezes o número de CPUs. Quanto maior o multiplicador de simultaneidade padrão, as operações de gravação mais simultâneas podem ocorrer sem interferência e bloqueio. Valores mais altos de multiplicador também fazer com que as operações que exigem todos os bloqueios (por exemplo, tabela redimensionando, `ToArray` e `Count`) para se tornar mais caros. O multiplicador de simultaneidade padrão é 4. A capacidade de padrão (DEFAULT_CAPACITY), que representa o número inicial de buckets, é uma compensação entre o tamanho de um dicionário muito pequeno e o número de redimensiona ao construir um dicionário grande. Além disso, a capacidade não deve ser divisível por um pequeno número primo. A capacidade padrão é 31.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConcurrentDictionary (System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt; collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="collection">O <see cref="T:System.Collections.Generic.IEnumerable`1" /> cujos elementos são copiados para o novo <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> que contém elementos copiados do <see cref="T:System.Collections.Generic.IEnumerable`1" /> especificado, tem o nível de simultaneidade padrão, tem a capacidade inicial padrão e usa o comparador padrão para o tipo de chave.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="collection" /> ou qualquer uma de suas chaves é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="collection" /> contém uma ou mais chaves duplicadas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConcurrentDictionary (System.Collections.Generic.IEqualityComparer&lt;TKey&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEqualityComparer`1&lt;!TKey&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="comparer">A implementação de comparação de igualdade a ser usada ao comparar chaves.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> que está vazia, tem a capacidade e o nível de simultaneidade padrão e usa o <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="comparer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConcurrentDictionary (System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; collection, System.Collections.Generic.IEqualityComparer&lt;TKey&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt; collection, class System.Collections.Generic.IEqualityComparer`1&lt;!TKey&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}},System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="collection">O <see cref="T:System.Collections.Generic.IEnumerable`1" /> cujos elementos são copiados para o novo <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</param>
+        <param name="comparer">A implementação de <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> a ser usada ao comparar chaves.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> classe que contém os elementos copiados especificado <see cref="T:System.Collections.IEnumerable" /> tem o nível de simultaneidade padrão, tem a capacidade inicial padrão e utiliza especificado <see cref="T:System.Collections.Generic.IEqualityComparer`1" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="collection" /> ou <paramref name="comparer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConcurrentDictionary (int concurrencyLevel, int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 concurrencyLevel, int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="concurrencyLevel" Type="System.Int32" />
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="concurrencyLevel">O número estimado de threads que atualizará o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> simultaneamente.</param>
+        <param name="capacity">O número inicial de elementos que o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> pode conter.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> que está vazia, tem a capacidade e o nível de simultaneidade especificados e usa o comparador padrão para o tipo de chave.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="concurrencyLevel" /> é menor que 1.  
+  
+ -ou-  
+  
+ <paramref name="capacity" /> é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConcurrentDictionary (int concurrencyLevel, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; collection, System.Collections.Generic.IEqualityComparer&lt;TKey&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 concurrencyLevel, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt; collection, class System.Collections.Generic.IEqualityComparer`1&lt;!TKey&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.#ctor(System.Int32,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}},System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="concurrencyLevel" Type="System.Int32" />
+        <Parameter Name="collection" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="concurrencyLevel">O número estimado de threads que atualizará o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> simultaneamente.</param>
+        <param name="collection">O <see cref="T:System.Collections.Generic.IEnumerable`1" /> cujos elementos são copiados para o novo <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</param>
+        <param name="comparer">A implementação de <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> a ser usada ao comparar chaves.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> classe que contém os elementos copiados especificado <see cref="T:System.Collections.IEnumerable" />e usa especificado <see cref="T:System.Collections.Generic.IEqualityComparer`1" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="collection" /> ou <paramref name="comparer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="concurrencyLevel" /> é menor que 1.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="collection" /> contém uma ou mais chaves duplicadas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConcurrentDictionary (int concurrencyLevel, int capacity, System.Collections.Generic.IEqualityComparer&lt;TKey&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 concurrencyLevel, int32 capacity, class System.Collections.Generic.IEqualityComparer`1&lt;!TKey&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.#ctor(System.Int32,System.Int32,System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="concurrencyLevel" Type="System.Int32" />
+        <Parameter Name="capacity" Type="System.Int32" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="concurrencyLevel">O número estimado de threads que atualizará o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> simultaneamente.</param>
+        <param name="capacity">O número inicial de elementos que o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> pode conter.</param>
+        <param name="comparer">A implementação de <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> a ser usada ao comparar chaves.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> classe está vazio, tem o nível de simultaneidade especificada, tem a capacidade inicial especificada e usa especificado <see cref="T:System.Collections.Generic.IEqualityComparer`1" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="comparer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="concurrencyLevel" />ou <paramref name="capacity" /> é menor que 1.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddOrUpdate">
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adiciona um par chave/valor para o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> se a chave ainda não existir ou atualiza um par chave/valor no <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> se a chave já existe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como chamar o <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> método:  
+  
+ [!code-csharp[System.Collections.Concurrent.ConcurrentDictionary#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/cs/concdictionary.cs#3)]
+ [!code-vb[System.Collections.Concurrent.ConcurrentDictionary#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/vb/concdictionary.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddOrUpdate">
+      <MemberSignature Language="C#" Value="public TValue AddOrUpdate (TKey key, Func&lt;TKey,TValue&gt; addValueFactory, Func&lt;TKey,TValue,TValue&gt; updateValueFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TValue AddOrUpdate(!TKey key, class System.Func`2&lt;!TKey, !TValue&gt; addValueFactory, class System.Func`3&lt;!TKey, !TValue, !TValue&gt; updateValueFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.AddOrUpdate(`0,System.Func{`0,`1},System.Func{`0,`1,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="addValueFactory" Type="System.Func&lt;TKey,TValue&gt;" />
+        <Parameter Name="updateValueFactory" Type="System.Func&lt;TKey,TValue,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser adicionada ou cujo valor deve ser atualizado</param>
+        <param name="addValueFactory">A função usada para gerar um valor para uma chave ausente</param>
+        <param name="updateValueFactory">A função usada para gerar um novo valor para uma chave existente com base no valor existente da chave</param>
+        <summary>Usará as funções especificadas para adicionar um par chave-valor ao <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> se a chave ainda não existir ou para atualizar um par chave-valor no <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> se a chave já existir.</summary>
+        <returns>O novo valor da chave. Isso será o resultado de addValueFactory (se a chave estava ausente) ou o resultado de updateValueFactory (se a chave estava presente).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você chamar <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> simultaneamente em diferentes threads, `addValueFactory` pode ser chamado várias vezes, mas o par chave/valor não pode ser adicionada ao dicionário para cada chamada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" />, <paramref name="addValueFactory" /> ou <paramref name="updateValueFactory" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.OverflowException">O dicionário já contém o número máximo de elementos (<see cref="F:System.Int32.MaxValue" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOrUpdate">
+      <MemberSignature Language="C#" Value="public TValue AddOrUpdate (TKey key, TValue addValue, Func&lt;TKey,TValue,TValue&gt; updateValueFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TValue AddOrUpdate(!TKey key, !TValue addValue, class System.Func`3&lt;!TKey, !TValue, !TValue&gt; updateValueFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.AddOrUpdate(`0,`1,System.Func{`0,`1,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="addValue" Type="TValue" />
+        <Parameter Name="updateValueFactory" Type="System.Func&lt;TKey,TValue,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser adicionada ou cujo valor deve ser atualizado</param>
+        <param name="addValue">O valor a ser adicionado para uma chave ausente</param>
+        <param name="updateValueFactory">A função usada para gerar um novo valor para uma chave existente com base no valor existente da chave</param>
+        <summary>Adiciona um par chave-valor ao <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> se a chave ainda não existir ou atualiza um par chave-valor no <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> usando a função especificada se a chave já existir.</summary>
+        <returns>O novo valor da chave. Será addValue (se a chave estava ausente) ou o resultado de updateValueFactory (se a chave estava presente).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como inicializar um <xref:System.Collections.Concurrent.ConcurrentDictionary%602> e como usar o método AddOrUpdate para adicionar um item adicional à coleção e atualizar os itens existentes.  
+  
+ [!code-csharp[System.Collections.ConcurrentColAddUpdate#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrentcoladdupdate/cs/program.cs#1)]
+ [!code-vb[System.Collections.ConcurrentColAddUpdate#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrentcoladdupdate/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ou <paramref name="updateValueFactory" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.OverflowException">O dicionário já contém o número máximo de elementos (<see cref="F:System.Int32.MaxValue" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOrUpdate&lt;TArg&gt;">
+      <MemberSignature Language="C#" Value="public TValue AddOrUpdate&lt;TArg&gt; (TKey key, Func&lt;TKey,TArg,TValue&gt; addValueFactory, Func&lt;TKey,TValue,TArg,TValue&gt; updateValueFactory, TArg factoryArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TValue AddOrUpdate&lt;TArg&gt;(!TKey key, class System.Func`3&lt;!TKey, !!TArg, !TValue&gt; addValueFactory, class System.Func`4&lt;!TKey, !TValue, !!TArg, !TValue&gt; updateValueFactory, !!TArg factoryArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.AddOrUpdate``1(`0,System.Func{`0,``0,`1},System.Func{`0,`1,``0,`1},``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="addValueFactory" Type="System.Func&lt;TKey,TArg,TValue&gt;" />
+        <Parameter Name="updateValueFactory" Type="System.Func&lt;TKey,TValue,TArg,TValue&gt;" />
+        <Parameter Name="factoryArgument" Type="TArg" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg">To be added.</typeparam>
+        <param name="key">To be added.</param>
+        <param name="addValueFactory">To be added.</param>
+        <param name="updateValueFactory">To be added.</param>
+        <param name="factoryArgument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as chaves e valores do <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.ContainsKey(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada no <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</param>
+        <summary>Determina se o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> atual contém a chave especificada.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> contiver um elemento com a chave especificada; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pares chave-valor contidos no <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</summary>
+        <value>O número de pares chave-valor contidos no <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade tem semântica de instantâneo e representa o número de itens a <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> no momento em que a propriedade foi acessada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OverflowException">O dicionário já contém o número máximo de elementos (<see cref="F:System.Int32.MaxValue" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</summary>
+        <returns>Um enumerador para o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enumerador retornado do dicionário é seguro usar simultaneamente com leituras e gravações ao dicionário, mas ele não representa um instantâneo do momento em vez do dicionário. O conteúdo exposto por meio do enumerador pode conter as modificações feitas no dicionário após <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetEnumerator%2A> foi chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetOrAdd">
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Adiciona um par chave-valor ao <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> se a chave ainda não existe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como chamar o <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> método:  
+  
+ [!code-csharp[System.Collections.Concurrent.ConcurrentDictionary#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/cs/concdictionary.cs#3)]
+ [!code-vb[System.Collections.Concurrent.ConcurrentDictionary#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/vb/concdictionary.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetOrAdd">
+      <MemberSignature Language="C#" Value="public TValue GetOrAdd (TKey key, Func&lt;TKey,TValue&gt; valueFactory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TValue GetOrAdd(!TKey key, class System.Func`2&lt;!TKey, !TValue&gt; valueFactory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(`0,System.Func{`0,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="valueFactory" Type="System.Func&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser adicionada.</param>
+        <param name="valueFactory">A função usada para gerar um valor para a chave.</param>
+        <summary>Adiciona um par chave/valor para o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> usando a função especificada se a chave ainda não existir ou retorna o valor existente, se a chave existir.</summary>
+        <returns>O valor da chave.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks   
+ Como um chave/valor pode ser inserido por outro thread enquanto `valueFactory` é gerar um valor, você não pode confiar que só porque `valueFactory` executado, seu valor gerado será inserido no dicionário e retornado. Se você chamar <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> simultaneamente em diferentes threads, `valueFactory` pode ser chamado várias vezes, mas o par chave/valor apenas uma será adicionada ao dicionário. 
+ 
+ O valor de retorno depende da presença da chave no dicionário e se uma chave/valor é inserido por outro thread após <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> é chamado mas antes `valueFactory` gera um valor:
+
+ | Cenário | Valor retornado |
+ | -------- | ------------ |
+ | A chave já está no dicionário. | O valor existente será retornado. |
+ | A chave não está no dicionário. `valueFactory`gera um valor. Em verificá-la novamente para a chave, nenhuma chave foi encontrada. | O chave/valor é inserido no dicionário e o valor será retornado. |
+ | A chave não está no dicionário. `valueFactory`gera um valor. Enquanto `valueFactory` é gerar o valor, um thread diferente insere um valor para a chave. Depois de `valueFactory` executa e após verificá-la novamente para a chave, a chave inserida pelo outro thread foi encontrada. | O valor inserido pelo outro thread é retornado. |
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> ou <paramref name="valueFactory" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.OverflowException">O dicionário já contém o número máximo de elementos (<see cref="F:System.Int32.MaxValue" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrAdd">
+      <MemberSignature Language="C#" Value="public TValue GetOrAdd (TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TValue GetOrAdd(!TKey key, !TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(`0,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser adicionada.</param>
+        <param name="value">O valor a ser adicionado, se a chave ainda não existir.</param>
+        <summary>Adiciona um par chave-valor ao <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> se a chave ainda não existe.</summary>
+        <returns>O valor da chave. Esse será o valor existente da chave se ela já estiver no dicionário ou o novo valor se ela não estiver no dicionário.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.OverflowException">O dicionário já contém o número máximo de elementos (<see cref="F:System.Int32.MaxValue" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrAdd&lt;TArg&gt;">
+      <MemberSignature Language="C#" Value="public TValue GetOrAdd&lt;TArg&gt; (TKey key, Func&lt;TKey,TArg,TValue&gt; valueFactory, TArg factoryArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TValue GetOrAdd&lt;TArg&gt;(!TKey key, class System.Func`3&lt;!TKey, !!TArg, !TValue&gt; valueFactory, !!TArg factoryArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd``1(`0,System.Func{`0,``0,`1},``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TArg" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="valueFactory" Type="System.Func&lt;TKey,TArg,TValue&gt;" />
+        <Parameter Name="factoryArgument" Type="TArg" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TArg">To be added.</typeparam>
+        <param name="key">To be added.</param>
+        <param name="valueFactory">To be added.</param>
+        <param name="factoryArgument">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> está vazia.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> estiver vazia; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public TValue this[TKey key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TValue Item(!TKey)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.Item(`0)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do valor a ser obtido ou definido.</param>
+        <summary>Obtém ou define o valor associado à chave especificada.</summary>
+        <value>O valor do par chave-valor no índice especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">A propriedade é recuperada e <paramref name="key" /> não existe na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;TKey&gt; Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;!TKey&gt; Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;TKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção que contém as chaves do <see cref="T:System.Collections.Generic.Dictionary`2" />.</summary>
+        <value>Uma coleção de chaves no <see cref="T:System.Collections.Generic.Dictionary`2" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Add">
+      <MemberSignature Language="C#" Value="void ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;.Add (System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt; keyValuePair);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Add(valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt; keyValuePair) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;TKey,TValue&gt;&gt;#Add(System.Collections.Generic.KeyValuePair{`0,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyValuePair" Type="System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keyValuePair">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Contains">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;.Contains (System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt; keyValuePair);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Contains(valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt; keyValuePair) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;TKey,TValue&gt;&gt;#Contains(System.Collections.Generic.KeyValuePair{`0,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyValuePair" Type="System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keyValuePair">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;.CopyTo (System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.CopyTo(valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;TKey,TValue&gt;&gt;#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;TKey,TValue&gt;&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Remove">
+      <MemberSignature Language="C#" Value="bool ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;.Remove (System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt; keyValuePair);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;.Remove(valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt; keyValuePair) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#Generic#ICollection&lt;System#Collections#Generic#KeyValuePair&lt;TKey,TValue&gt;&gt;#Remove(System.Collections.Generic.KeyValuePair{`0,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyValuePair" Type="System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keyValuePair">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;.Add">
+      <MemberSignature Language="C#" Value="void IDictionary&lt;TKey,TValue&gt;.Add (TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;.Add(!TKey key, !TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#Generic#IDictionary&lt;TKey,TValue&gt;#Add(`0,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;.Remove">
+      <MemberSignature Language="C#" Value="bool IDictionary&lt;TKey,TValue&gt;.Remove (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;.Remove(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#Generic#IDictionary&lt;TKey,TValue&gt;#Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Keys">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerable&lt;TKey&gt; System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;!TKey&gt; System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#Generic#IReadOnlyDictionary&lt;TKey,TValue&gt;#Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Values">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerable&lt;TValue&gt; System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;!TValue&gt; System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;.Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#Generic#IReadOnlyDictionary&lt;TKey,TValue&gt;#Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz unidimensional que é o destino dos elementos copiados do <see cref="T:System.Collections.ICollection" />. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos do <see cref="T:System.Collections.ICollection" /> para uma matriz, começando no índice da matriz especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que 0.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="index" />é igual a ou maior que o comprimento do <paramref name="array" />.  
+  
+ -ou-  
+  
+ O número de elementos na origem <see cref="T:System.Collections.ICollection" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor indicando se o acesso ao <see cref="T:System.Collections.ICollection" /> está sincronizado com o SyncRoot.</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.ICollection" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />. Para <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> essa propriedade sempre retorna **false**.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />. Não há suporte para essa propriedade.</summary>
+        <value>Sempre retorna null.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para essa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Add">
+      <MemberSignature Language="C#" Value="void IDictionary.Add (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Add(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#IDictionary#Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">O objeto a ser usado como a chave.</param>
+        <param name="value">O objeto a ser usado como o valor.</param>
+        <summary>Adiciona a chave e o valor especificados ao dicionário.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="key" />é de um tipo que não é atribuível para o tipo de chave de <see cref="T:System.Collections.Generic.Dictionary`2" />.  
+  
+ -ou-  
+  
+ <paramref name="value" />é de um tipo que não é atribuível ao tipo de valores de <see cref="T:System.Collections.Generic.Dictionary`2" />.  
+  
+ -ou-  
+  
+ Já existe um valor com a mesma chave no <see cref="T:System.Collections.Generic.Dictionary`2" />.</exception>
+        <exception cref="T:System.OverflowException">O dicionário já contém o número máximo de elementos (<see cref="F:System.Int32.MaxValue" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Contains">
+      <MemberSignature Language="C#" Value="bool IDictionary.Contains (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IDictionary.Contains(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#IDictionary#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada no <see cref="T:System.Collections.Generic.IDictionary`2" />.</param>
+        <summary>Obtém se o <see cref="T:System.Collections.Generic.IDictionary`2" /> contém um elemento com a chave especificada.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.Generic.IDictionary`2" /> contiver um elemento com a chave especificada; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IDictionaryEnumerator IDictionary.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator System.Collections.IDictionary.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#IDictionary#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um <see cref="T:System.Collections.IDictionaryEnumerator" /> para o <see cref="T:System.Collections.Generic.IDictionary`2" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IDictionaryEnumerator" /> para o <see cref="T:System.Collections.Generic.IDictionary`2" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IDictionary.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IDictionary.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#IDictionary#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.Generic.IDictionary`2" /> tem um tamanho fixo.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.Generic.IDictionary`2" /> tiver um valor fixo; caso contrário, <see langword="false" />. Para <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />, essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IDictionary.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IDictionary.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#IDictionary#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.Generic.IDictionary`2" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.Generic.IDictionary`2" /> for somente leitura; caso contrário, <see langword="false" />. Para <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />, essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IDictionary.Item[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IDictionary.Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#IDictionary#Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do valor a ser obtido ou definido.</param>
+        <summary>Obtém ou define o valor associado à chave especificada.</summary>
+        <value>O valor associado à chave especificada ou <see langword="null" /> se <paramref name="key" /> não estiver no dicionário ou <paramref name="key" /> for de um tipo que não é atribuível ao tipo de chave de <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um valor está sendo atribuído e <paramref name="key" /> é de um tipo que não é atribuível ao tipo de chave ou ao tipo de valor do <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Keys">
+      <MemberSignature Language="C#" Value="System.Collections.ICollection System.Collections.IDictionary.Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection System.Collections.IDictionary.Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#IDictionary#Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> que contém as chaves do <see cref="T:System.Collections.Generic.IDictionary`2" />.</summary>
+        <value>Uma interface que contém as chaves do <see cref="T:System.Collections.Generic.IDictionary`2" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Remove">
+      <MemberSignature Language="C#" Value="void IDictionary.Remove (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IDictionary.Remove(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#IDictionary#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser removido.</param>
+        <summary>Remove o elemento com a chave especificada do <see cref="T:System.Collections.IDictionary" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IDictionary.Values">
+      <MemberSignature Language="C#" Value="System.Collections.ICollection System.Collections.IDictionary.Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection System.Collections.IDictionary.Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#IDictionary#Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> que contém os valores de <see cref="T:System.Collections.IDictionary" />.</summary>
+        <value>Uma interface que contém os valores de <see cref="T:System.Collections.IDictionary" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</summary>
+        <returns>Um enumerador para o <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enumerador retornado do dicionário é seguro usar simultaneamente com leituras e gravações ao dicionário, mas ele não representa um instantâneo do momento em vez do dicionário. O conteúdo exposto por meio do enumerador pode conter as modificações feitas no dicionário após <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetEnumerator%2A> foi chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToArray">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;[] ToArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;[] ToArray() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.ToArray" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Copia os pares de chave e valor armazenados em <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> para uma nova matriz.</summary>
+        <returns>Uma nova matriz que contém um instantâneo de pares de chave e valor copiados de <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryAdd">
+      <MemberSignature Language="C#" Value="public bool TryAdd (TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryAdd(!TKey key, !TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.TryAdd(`0,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser adicionada.</param>
+        <param name="value">O valor do elemento a ser adicionado. O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Tenta adicionar a chave e o valor especificados ao <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</summary>
+        <returns>
+          <see langword="true" /> se o par chave/valor foi adicionado ao <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> com êxito; <see langword="false" /> se a chave já existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `false` se a chave já existe. Use o <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryUpdate%2A> ou <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> método para atualizar o valor no caso de uma chave já existe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como chamar o <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryAdd%2A?displayProperty=nameWithType> método:  
+  
+ [!code-csharp[System.Collections.Concurrent.ConcurrentDictionary#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/cs/concdictionary.cs#2)]
+ [!code-vb[System.Collections.Concurrent.ConcurrentDictionary#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/vb/concdictionary.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.OverflowException">O dicionário já contém o número máximo de elementos (<see cref="F:System.Int32.MaxValue" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (TKey key, out TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(!TKey key, [out] !TValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.TryGetValue(`0,`1@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do valor a ser obtido.</param>
+        <param name="value">Quando esse método for retornado, ele conterá o objeto do <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" /> que tem a chave especificada ou o valor padrão do tipo se a operação tiver falhado.</param>
+        <summary>Tenta obter o valor associado à chave especificada do <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</summary>
+        <returns>
+          <see langword="true" /> se a chave foi encontrada no <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryRemove">
+      <MemberSignature Language="C#" Value="public bool TryRemove (TKey key, out TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryRemove(!TKey key, [out] !TValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.TryRemove(`0,`1@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser removido e retornado.</param>
+        <param name="value">Quando este método retorna, contém o objeto removido do <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />, ou o valor padrão de <see langword="TValue" /> digite se <c>chave</c> não existe.</param>
+        <summary>Tenta remover e retornar o valor com a chave especificada do <see cref="T:System.Collections.Concurrent.ConcurrentDictionary`2" />.</summary>
+        <returns>
+          <see langword="true" /> se um objeto tiver sido removido com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como chamar o <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryRemove%2A?displayProperty=nameWithType> método:  
+  
+ [!code-csharp[System.Collections.Concurrent.ConcurrentDictionary#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/cs/concdictionary.cs#2)]
+ [!code-vb[System.Collections.Concurrent.ConcurrentDictionary#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/vb/concdictionary.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryUpdate">
+      <MemberSignature Language="C#" Value="public bool TryUpdate (TKey key, TValue newValue, TValue comparisonValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryUpdate(!TKey key, !TValue newValue, !TValue comparisonValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.ConcurrentDictionary`2.TryUpdate(`0,`1,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="newValue" Type="TValue" />
+        <Parameter Name="comparisonValue" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave cujo valor é comparado com <c>comparisonValue</c> e possivelmente substituído.</param>
+        <param name="newValue">O valor que substitui o valor do elemento que foi especificado <c>chave</c> se a comparação resulte em igualdade.</param>
+        <param name="comparisonValue">O valor que é comparado com o valor do elemento que foi especificado <c>chave</c>.</param>
+        <summary>Compara o valor existente para a chave especificada com um valor especificado e se eles forem iguais, atualiza a chave com um terceiro valor.</summary>
+        <returns>
+          <see langword="true" /> se o valor com <paramref name="key" /> era igual a <paramref name="comparisonValue" /> e foi substituído pelo <paramref name="newValue" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como chamar o <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryUpdate%2A> método:  
+  
+ [!code-csharp[System.Collections.Concurrent.ConcurrentDictionary#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/cs/concdictionary.cs#2)]
+ [!code-vb[System.Collections.Concurrent.ConcurrentDictionary#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.concurrent.concurrentdictionary/vb/concdictionary.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;TValue&gt; Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;!TValue&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Concurrent.ConcurrentDictionary`2.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção que contém os valores no <see cref="T:System.Collections.Generic.Dictionary`2" />.</summary>
+        <value>Uma coleção que contém os valores no <see cref="T:System.Collections.Generic.Dictionary`2" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

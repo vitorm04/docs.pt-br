@@ -1,0 +1,148 @@
+<Type Name="IChannelReceiverHook" FullName="System.Runtime.Remoting.Channels.IChannelReceiverHook">
+  <TypeSignature Language="C#" Value="public interface IChannelReceiverHook" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannelReceiverHook" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IChannelReceiverHook" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que o canal de implementação deseja conectar-se no serviço de ouvinte de fora.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[IChannelReceiverHook_ChannelScheme#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IChannelReceiverHook_ChannelScheme/CPP/ichannelreceiverhook_channelscheme.cpp#1)]
+ [!code-csharp[IChannelReceiverHook_ChannelScheme#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IChannelReceiverHook_ChannelScheme/CS/ichannelreceiverhook_channelscheme.cs#1)]
+ [!code-vb[IChannelReceiverHook_ChannelScheme#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IChannelReceiverHook_ChannelScheme/VB/ichannelreceiverhook_channelscheme.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddHookChannelUri">
+      <MemberSignature Language="C#" Value="public void AddHookChannelUri (string channelUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddHookChannelUri(string channelUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IChannelReceiverHook.AddHookChannelUri(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="channelUri">Um URI de escuta o gancho do canal.</param>
+        <summary>Adiciona um URI de escuta o gancho do canal.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código do cliente não deve chamar este método diretamente.  
+  
+   
+  
+## Examples  
+ [!code-cpp[HttpChannel.AddHookChannelUri#1](~/samples/snippets/cpp/VS_Snippets_Remoting/HttpChannel.AddHookChannelUri/CPP/class1.cpp#1)]
+ [!code-csharp[HttpChannel.AddHookChannelUri#1](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpChannel.AddHookChannelUri/CS/class1.cs#1)]
+ [!code-vb[HttpChannel.AddHookChannelUri#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpChannel.AddHookChannelUri/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelScheme">
+      <MemberSignature Language="C#" Value="public string ChannelScheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChannelScheme" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.IChannelReceiverHook.ChannelScheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de ouvinte para conectar ao.</summary>
+        <value>O tipo de ouvinte para conectar ao (por exemplo, "http").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor não diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelSinkChain">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Channels.IServerChannelSink ChannelSinkChain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Channels.IServerChannelSink ChannelSinkChain" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.IChannelReceiverHook.ChannelSinkChain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Channels.IServerChannelSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de coletor de canal que está usando o canal atual.</summary>
+        <value>A cadeia de coletor de canal que está usando o canal atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[HttpChannel.ChannelSinkChain#1](~/samples/snippets/cpp/VS_Snippets_Remoting/HttpChannel.ChannelSinkChain/CPP/class1.cpp#1)]
+ [!code-csharp[HttpChannel.ChannelSinkChain#1](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpChannel.ChannelSinkChain/CS/class1.cs#1)]
+ [!code-vb[HttpChannel.ChannelSinkChain#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpChannel.ChannelSinkChain/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="WantsToListen">
+      <MemberSignature Language="C#" Value="public bool WantsToListen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WantsToListen" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.IChannelReceiverHook.WantsToListen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se <see cref="T:System.Runtime.Remoting.Channels.IChannelReceiverHook" /> precisa ser conectado o serviço de escuta externa.</summary>
+        <value>Um valor booliano que indica se <see cref="T:System.Runtime.Remoting.Channels.IChannelReceiverHook" /> precisa ser conectado o serviço de escuta externa.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

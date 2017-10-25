@@ -1,0 +1,134 @@
+<Type Name="AssemblyAlgorithmIdAttribute" FullName="System.Reflection.AssemblyAlgorithmIdAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyAlgorithmIdAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyAlgorithmIdAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblyAlgorithmIdAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica um algoritmo de hash de todos os arquivos em um assembly. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores de hash de arquivo e nomes no assembly são armazenados no manifesto do assembly. Quando um arquivo é carregado, o valor de hash é usado para verificar se um arquivo não foi alterado desde que o manifesto foi criado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyAlgorithmIdAttribute (System.Configuration.Assemblies.AssemblyHashAlgorithm algorithmId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Configuration.Assemblies.AssemblyHashAlgorithm algorithmId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyAlgorithmIdAttribute.#ctor(System.Configuration.Assemblies.AssemblyHashAlgorithm)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="algorithmId" Type="System.Configuration.Assemblies.AssemblyHashAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="algorithmId">Um membro de <see langword="AssemblyHashAlgorithm" /> que representa o algoritmo de hash.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Reflection.AssemblyAlgorithmIdAttribute" /> classe com o algoritmo de hash especificado, usando um dos membros de <see cref="T:System.Configuration.Assemblies.AssemblyHashAlgorithm" /> representar o algoritmo de hash.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyAlgorithmIdAttribute (uint algorithmId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int32 algorithmId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyAlgorithmIdAttribute.#ctor(System.UInt32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="algorithmId" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="algorithmId">Um inteiro sem sinal que representa o algoritmo de hash.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Reflection.AssemblyAlgorithmIdAttribute" /> classe com o algoritmo de hash especificado, usando um número inteiro sem sinal para representar o algoritmo de hash.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmId">
+      <MemberSignature Language="C#" Value="public uint AlgorithmId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 AlgorithmId" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyAlgorithmIdAttribute.AlgorithmId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o algoritmo de hash do conteúdo do manifesto do assembly.</summary>
+        <value>Um inteiro sem sinal que representa o algoritmo de hash do assembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

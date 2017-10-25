@@ -1,0 +1,166 @@
+<Type Name="IJSVsaItems" FullName="Microsoft.JScript.Vsa.IJSVsaItems">
+  <TypeSignature Language="C#" Value="public interface IJSVsaItems : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IJSVsaItems implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Vsa.IJSVsaItems" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use of this type is not recommended because it is being deprecated in Visual Studio 2005; there will be no replacement for this feature. Please see the ICodeCompiler documentation for additional help.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("172341E0-9B0D-43E6-9EFF-75E030A46461")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define uma interface para uma coleção de <see cref="T:Microsoft.JScript.Vsa.IJSVsaItem" /> objetos, que podem ser tratados por nome ou por índice.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaItems.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na coleção especificada.</summary>
+        <value>Retorna o valor inteiro para o número de itens na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItem">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem CreateItem (string name, Microsoft.JScript.Vsa.JSVsaItemType itemType, Microsoft.JScript.Vsa.JSVsaItemFlag itemFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.JScript.Vsa.IJSVsaItem CreateItem(string name, valuetype Microsoft.JScript.Vsa.JSVsaItemType itemType, valuetype Microsoft.JScript.Vsa.JSVsaItemFlag itemFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaItems.CreateItem(System.String,Microsoft.JScript.Vsa.JSVsaItemType,Microsoft.JScript.Vsa.JSVsaItemFlag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="itemType" Type="Microsoft.JScript.Vsa.JSVsaItemType" />
+        <Parameter Name="itemFlag" Type="Microsoft.JScript.Vsa.JSVsaItemFlag" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome para associar o novo item.  
+  
+ Em casos onde o item é um tipo de item de referência, o parâmetro nome deve ser exatamente igual ao nome do assembly referenciado, conforme definido com o <see cref="P:Microsoft.JScript.Vsa.IJSVsaReferenceItem.AssemblyName" /> propriedade. No JScript, no entanto, se você não especificar um AssemblyName JScript usará o nome do item como o nome do assembly.</param>
+        <param name="itemType">O tipo de item criado, conforme definido no <see cref="T:Microsoft.JScript.Vsa.JSVsaItemType" /> enumeração.</param>
+        <param name="itemFlag">O sinalizador opcional para especificar o conteúdo inicial de um item de código.</param>
+        <summary>Cria uma nova instância de uma da <see cref="T:Microsoft.JScript.Vsa.IJSVsaItem" /> tipos, conforme definido no <see cref="T:Microsoft.JScript.Vsa.JSVsaItemType" /> enumeração.</summary>
+        <returns>Retorna uma referência para o <see cref="T:Microsoft.JScript.Vsa.IJSVsaItem" /> objeto criado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.JScript.Vsa.IJSVsaItem Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaItems.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um índice de base 0 dos itens recuperáveis.</param>
+        <summary>Obtém um item da coleção por seu valor de índice.</summary>
+        <value>Retorna o item no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.JScript.Vsa.IJSVsaItem this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.JScript.Vsa.IJSVsaItem Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaItems.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.Vsa.IJSVsaItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do item a ser recuperado da coleção.</param>
+        <summary>Obtém um item da coleção por seu nome.</summary>
+        <value>Retorna o item especificado pelo nome.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaItems.Remove(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O valor de índice do item a ser removido.</param>
+        <summary>Remove um item da coleção, conforme especificado por seu valor de índice.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.Vsa.IJSVsaItems.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do item a ser removido da coleção.</param>
+        <summary>Remove um item da coleção, conforme especificado por seu nome.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

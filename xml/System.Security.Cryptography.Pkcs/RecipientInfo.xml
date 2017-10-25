@@ -1,0 +1,182 @@
+<Type Name="RecipientInfo" FullName="System.Security.Cryptography.Pkcs.RecipientInfo">
+  <TypeSignature Language="C#" Value="public abstract class RecipientInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RecipientInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Pkcs.RecipientInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> classe representa informações sobre um destinatário de mensagem CMS/PKCS #7. A classe <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> é uma classe abstrata herdada pelas classes <see cref="T:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo" /> e <see cref="T:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma classe abstrata que não pode ser instanciada.  Ela é herdada pelo <xref:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo> e <xref:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo> classes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EncryptedKey">
+      <MemberSignature Language="C#" Value="public abstract byte[] EncryptedKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] EncryptedKey" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfo.EncryptedKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfo.EncryptedKey" /> propriedade abstrata recupera o material de chave criptografado destinatário.</summary>
+        <value>Uma matriz de valores de bytes que contém o material de chave criptografado destinatário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa é uma propriedade abstrata substituída pelo <xref:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo> e <xref:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyEncryptionAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.Pkcs.AlgorithmIdentifier KeyEncryptionAlgorithm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.AlgorithmIdentifier KeyEncryptionAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfo.KeyEncryptionAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.AlgorithmIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfo.KeyEncryptionAlgorithm" /> propriedade abstrata recupera o algoritmo usado para executar o estabelecimento de chave.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.Pkcs.AlgorithmIdentifier" /> objeto que contém o valor do algoritmo usado para estabelecer a chave entre o remetente e o destinatário da mensagem CMS/PKCS #7.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa é uma propriedade abstrata substituída pelo <xref:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo> e <xref:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecipientIdentifier">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.Pkcs.SubjectIdentifier RecipientIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Pkcs.SubjectIdentifier RecipientIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfo.RecipientIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.SubjectIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfo.RecipientIdentifier" /> propriedade abstrata recupera o identificador do destinatário.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.Pkcs.SubjectIdentifier" /> objeto que contém o identificador do destinatário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa é uma propriedade abstrata substituída pelo <xref:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo> e <xref:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Pkcs.RecipientInfoType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.Pkcs.RecipientInfoType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfo.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Pkcs.RecipientInfoType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfo.Type" /> propriedade recupera o tipo do destinatário. O tipo de destinatário determina qual dos dois protocolos principais é usado para estabelecer uma chave entre o remetente e o destinatário de uma mensagem CMS/PKCS #7.</summary>
+        <value>Um valor de <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfoType" /> enumeração que define o tipo de destinatário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public abstract int Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Version" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Pkcs.RecipientInfo.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Pkcs</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.Security.Cryptography.Pkcs.RecipientInfo.Version" /> propriedade abstrata recupera a versão das informações do destinatário. Classes derivadas automaticamente definir essa propriedade para os objetos e o valor que indica se você estiver usando PKCS #7 ou sintaxe de mensagem criptográfico (CMS) para proteger as mensagens. A versão também indica se o <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> objeto estabelece uma chave de criptografia por um algoritmo de acordo de chave ou um transporte de chaves.</summary>
+        <value>Um <see cref="T:System.Int32" /> valor que representa a versão do <see cref="T:System.Security.Cryptography.Pkcs.RecipientInfo" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa é uma propriedade abstrata substituída pelo <xref:System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo> e <xref:System.Security.Cryptography.Pkcs.KeyTransRecipientInfo>.  
+  
+ A versão determina se a mensagem é uma mensagem de PKCS #7 ou CMS. CMS é um superconjunto mais recente do PKCS #7.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,321 @@
+<Type Name="TextEncoder" FullName="System.Text.Encodings.Web.TextEncoder">
+  <TypeSignature Language="C#" Value="public abstract class TextEncoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextEncoder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.Encodings.Web.TextEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe base de codificadores de web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[ 
+
+## Remarks  
+ Subclasses de TextEncoder podem ser usadas para fazer a codificação HTML, a codificação de URI e a codificação JavaScript. Instâncias de tais subclasses podem ser acessadas usando o <xref:System.Text.Encodings.Web.HtmlEncoder.Default?displayProperty=nameWithType>, <xref:System.Text.Encodings.Web.UrlEncoder.Default?displayProperty=nameWithType>, e <xref:System.Text.Encodings.Web.JavaScriptEncoder.Default?displayProperty=nameWithType> propriedades.   
+
+ O código-fonte para esse tipo está disponível na [System.Text.Encodings.Web projeto](https://github.com/dotnet/corefx/tree/master/src/System.Text.Encodings.Web) no GitHub. Testes de unidade também poderá servir como exemplos de código são encontrados no [System.Text.Encodings.Web/tests](https://github.com/dotnet/corefx/tree/master/src/System.Text.Encodings.Web/tests) pasta no GitHub.  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Text.Encodings.Web.TextEncoder" />.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public virtual string Encode (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Encode(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoder.Encode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser codificada.</param>
+        <summary>Codifica a cadeia de caracteres fornecida e retorna o texto codificado como uma nova cadeia de caracteres.</summary>
+        <returns>A cadeia de caracteres codificada.</returns>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="M:System.Text.Encodings.Web.TextEncoder.TryEncodeUnicodeScalar(System.Int32,System.Char*,System.Int32,System.Int32@)" /> falha no método. O codificador não implementa <see cref="P:System.Text.Encodings.Web.TextEncoder.MaxOutputCharactersPerInputCharacter" /> corretamente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public void Encode (System.IO.TextWriter output, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Encode(class System.IO.TextWriter output, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoder.Encode(System.IO.TextWriter,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="output">O fluxo no qual gravar o texto codificado.</param>
+        <param name="value">A cadeia de caracteres a ser codificada.</param>
+        <summary>Codifica a cadeia de caracteres especificada para um <see cref="T:System.IO.TextWriter" /> objeto.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public virtual void Encode (System.IO.TextWriter output, char[] value, int startIndex, int characterCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Encode(class System.IO.TextWriter output, char[] value, int32 startIndex, int32 characterCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoder.Encode(System.IO.TextWriter,System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+        <Parameter Name="value" Type="System.Char[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="characterCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="output">O fluxo no qual gravar o texto codificado.</param>
+        <param name="value">A matriz de caracteres para codificar.</param>
+        <param name="startIndex">O índice de matriz do primeiro caractere a codificação.</param>
+        <param name="characterCount">O número de caracteres na matriz para codificar.</param>
+        <summary>Codifica caracteres de uma matriz e grava-as para um <see cref="T:System.IO.TextWriter" /> objeto.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="M:System.Text.Encodings.Web.TextEncoder.TryEncodeUnicodeScalar(System.Int32,System.Char*,System.Int32,System.Int32@)" /> falha no método. O codificador não implementa <see cref="P:System.Text.Encodings.Web.TextEncoder.MaxOutputCharactersPerInputCharacter" /> corretamente.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> está fora do intervalo.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="characterCount" /> está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public virtual void Encode (System.IO.TextWriter output, string value, int startIndex, int characterCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Encode(class System.IO.TextWriter output, string value, int32 startIndex, int32 characterCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoder.Encode(System.IO.TextWriter,System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="characterCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="output">O fluxo no qual gravar o texto codificado.</param>
+        <param name="value">A cadeia de caracteres cuja subcadeia está para ser codificado.</param>
+        <param name="startIndex">O índice onde a subcadeia de caracteres começa.</param>
+        <param name="characterCount">O número de caracteres na subcadeia de caracteres.</param>
+        <summary>Codifica uma subcadeia de caracteres e grava-o para um <see cref="T:System.IO.TextWriter" /> objeto.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="output" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="M:System.Text.Encodings.Web.TextEncoder.TryEncodeUnicodeScalar(System.Int32,System.Char*,System.Int32,System.Int32@)" /> falha no método. O codificador não implementa <see cref="P:System.Text.Encodings.Web.TextEncoder.MaxOutputCharactersPerInputCharacter" /> corretamente.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> está fora do intervalo.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="characterCount" /> está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindFirstCharacterToEncode">
+      <MemberSignature Language="C#" Value="public abstract int FindFirstCharacterToEncode (char* text, int textLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 FindFirstCharacterToEncode(char* text, int32 textLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoder.FindFirstCharacterToEncode(System.Char*,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.Char*" />
+        <Parameter Name="textLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">O buffer de texto a ser pesquisado.</param>
+        <param name="textLength">O número de caracteres em <paramref name="text" />.</param>
+        <summary>Localiza o índice do primeiro caractere a codificação.</summary>
+        <returns>O índice do primeiro caractere a codificação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[ 
+
+## Remarks  
+ Esse método auxiliar raramente é chamado diretamente.
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxOutputCharactersPerInputCharacter">
+      <MemberSignature Language="C#" Value="public abstract int MaxOutputCharactersPerInputCharacter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxOutputCharactersPerInputCharacter" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Encodings.Web.TextEncoder.MaxOutputCharactersPerInputCharacter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número máximo de caracteres que pode gerar esse codificador para cada ponto de entrada de código.</summary>
+        <value>O número máximo de caracteres.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryEncodeUnicodeScalar">
+      <MemberSignature Language="C#" Value="public abstract bool TryEncodeUnicodeScalar (int unicodeScalar, char* buffer, int bufferLength, out int numberOfCharactersWritten);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryEncodeUnicodeScalar(int32 unicodeScalar, char* buffer, int32 bufferLength, [out] int32&amp; numberOfCharactersWritten) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoder.TryEncodeUnicodeScalar(System.Int32,System.Char*,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unicodeScalar" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Char*" />
+        <Parameter Name="bufferLength" Type="System.Int32" />
+        <Parameter Name="numberOfCharactersWritten" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="unicodeScalar">Um valor escalar de Unicode.</param>
+        <param name="buffer">Um ponteiro para o buffer no qual gravar o texto codificado.</param>
+        <param name="bufferLength">O comprimento do destino <paramref name="buffer" /> em caracteres.</param>
+        <param name="numberOfCharactersWritten">Quando o método retorna, indica o número de caracteres gravados para o <paramref name="buffer" />.</param>
+        <summary>Codifica um valor escalar Unicode e grava-o em um buffer.</summary>
+        <returns>
+          <see langword="false" />Se <paramref name="bufferLength" /> é muito pequeno para acomodar o texto codificado; caso contrário, retornará <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[ 
+
+## Remarks  
+ Este método raramente é chamado diretamente. Uma da <xref:System.Text.Encodings.Web.TextEncoder.Encode%20> sobrecargas devem ser usadas em vez disso. Implementações de <xref:System.Text.Encodings.Web.TextEncoder> classe deve ser thread-safe e sem monitoração de estado.  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WillEncode">
+      <MemberSignature Language="C#" Value="public abstract bool WillEncode (int unicodeScalar);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool WillEncode(int32 unicodeScalar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Encodings.Web.TextEncoder.WillEncode(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unicodeScalar" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="unicodeScalar">Um valor escalar de Unicode.</param>
+        <summary>Determina se um determinado valor escalar do Unicode será codificado.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="unicodeScalar" /> valor será codificado por esse codificador; caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

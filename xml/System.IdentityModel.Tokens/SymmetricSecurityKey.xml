@@ -1,0 +1,239 @@
+<Type Name="SymmetricSecurityKey" FullName="System.IdentityModel.Tokens.SymmetricSecurityKey">
+  <TypeSignature Language="C#" Value="public abstract class SymmetricSecurityKey : System.IdentityModel.Tokens.SecurityKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SymmetricSecurityKey extends System.IdentityModel.Tokens.SecurityKey" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SymmetricSecurityKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityKey</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a classe base abstrata para todas as chaves geradas usando algoritmos simétricos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, essa classe é usada pela infraestrutura para transformar XML usando uma chave simétrica.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SymmetricSecurityKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricSecurityKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.SymmetricSecurityKey" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateDerivedKey">
+      <MemberSignature Language="C#" Value="public abstract byte[] GenerateDerivedKey (string algorithm, byte[] label, byte[] nonce, int derivedKeyLength, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GenerateDerivedKey(string algorithm, unsigned int8[] label, unsigned int8[] nonce, int32 derivedKeyLength, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricSecurityKey.GenerateDerivedKey(System.String,System.Byte[],System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="label" Type="System.Byte[]" />
+        <Parameter Name="nonce" Type="System.Byte[]" />
+        <Parameter Name="derivedKeyLength" Type="System.Int32" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Um URI que representa o algoritmo de criptografia a ser usado para gerar a chave derivada.</param>
+        <param name="label">Uma matriz de <see cref="T:System.Byte" /> que contém o parâmetro de rótulo para o algoritmo de criptografia.</param>
+        <param name="nonce">Uma matriz de <see cref="T:System.Byte" /> que contém o valor de uso único que é usado para criar uma chave derivada.</param>
+        <param name="derivedKeyLength">O tamanho da chave derivada.</param>
+        <param name="offset">A posição em que a chave derivada está localizada na matriz de bytes que é retornado deste método.</param>
+        <summary>Quando substituído em uma classe derivada, gera uma chave derivada usando o algoritmo de criptografia especificado e os parâmetros para a chave atual.</summary>
+        <returns>Uma matriz de <see cref="T:System.Byte" /> que contém a chave derivada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para especificar SHA1 P como o algoritmo de criptografia, use o <xref:System.IdentityModel.Tokens.SecurityAlgorithms.Psha1KeyDerivation> campo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecryptionTransform">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.ICryptoTransform GetDecryptionTransform (string algorithm, byte[] iv);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.ICryptoTransform GetDecryptionTransform(string algorithm, unsigned int8[] iv) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricSecurityKey.GetDecryptionTransform(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="iv" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Um algoritmo de criptografia que descriptografa codificação de texto, como XML criptografado.</param>
+        <param name="iv">Uma matriz de <see cref="T:System.Byte" /> que contém o vetor de inicialização (<see langword="IV" />) para o algoritmo especificado.</param>
+        <summary>Quando substituído em uma classe derivada, obtém uma transformação que descriptografa codificação de texto usando o algoritmo de criptografia especificado.</summary>
+        <returns>Um <see cref="T:System.Security.Cryptography.ICryptoTransform" /> que representa a transformação de descriptografia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os campos que representam os algoritmos de descriptografia no <xref:System.IdentityModel.Tokens.SecurityAlgorithms> classe para especificar o algoritmo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEncryptionTransform">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.ICryptoTransform GetEncryptionTransform (string algorithm, byte[] iv);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.ICryptoTransform GetEncryptionTransform(string algorithm, unsigned int8[] iv) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricSecurityKey.GetEncryptionTransform(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ICryptoTransform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+        <Parameter Name="iv" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">Um algoritmo de criptografia que criptografa o XML.</param>
+        <param name="iv">Uma matriz de <see cref="T:System.Byte" /> que contém o vetor de inicialização (<see langword="IV" />) para o algoritmo especificado.</param>
+        <summary>Quando substituído em uma classe derivada, obtém uma transformação que criptografa o XML usando o algoritmo de criptografia especificado.</summary>
+        <returns>Um <see cref="T:System.Security.Cryptography.ICryptoTransform" /> que representa a transformação de criptografia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os campos que representam os algoritmos de descriptografia no <xref:System.IdentityModel.Tokens.SecurityAlgorithms> classe para especificar o algoritmo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIVSize">
+      <MemberSignature Language="C#" Value="public abstract int GetIVSize (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetIVSize(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricSecurityKey.GetIVSize(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo criptográfico para obter o tamanho do vetor de inicialização (<see langword="IV" />).</param>
+        <summary>Quando substituído em uma classe derivada, obtém o tamanho, em bits, o vetor de inicialização (<see langword="IV" />) que é necessário para o algoritmo de criptografia especificado.</summary>
+        <returns>O tamanho, em bits, o vetor de inicialização (<see langword="IV" />) que é necessário para o algoritmo de criptografia especificado no <paramref name="algorithm" /> parâmetro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeyedHashAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.KeyedHashAlgorithm GetKeyedHashAlgorithm (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.KeyedHashAlgorithm GetKeyedHashAlgorithm(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricSecurityKey.GetKeyedHashAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeyedHashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo de hash com chave para obter uma instância do.</param>
+        <summary>Quando substituído em uma classe derivada, obtém uma instância do algoritmo de hash com chave especificada.</summary>
+        <returns>Um <see cref="T:System.Security.Cryptography.KeyedHashAlgorithm" /> que representa o algoritmo de hash com chave.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os campos que representam os algoritmos de hash com chave no <xref:System.IdentityModel.Tokens.SecurityAlgorithms> classe para especificar o algoritmo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSymmetricAlgorithm">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Cryptography.SymmetricAlgorithm GetSymmetricAlgorithm (string algorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.SymmetricAlgorithm GetSymmetricAlgorithm(string algorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricSecurityKey.GetSymmetricAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.SymmetricAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="algorithm">O algoritmo simétrico para obter uma instância do.</param>
+        <summary>Quando substituído em uma classe derivada, obtém uma instância do algoritmo simétrico especificado.</summary>
+        <returns>Um <see cref="T:System.Security.Cryptography.SymmetricAlgorithm" /> que representa o algoritmo simétrico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os campos que representam os algoritmos simétricos no <xref:System.IdentityModel.Tokens.SecurityAlgorithms> classe para especificar o algoritmo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSymmetricKey">
+      <MemberSignature Language="C#" Value="public abstract byte[] GetSymmetricKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetSymmetricKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricSecurityKey.GetSymmetricKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém os bytes que representam a chave simétrica.</summary>
+        <returns>Uma matriz de <see cref="T:System.Byte" /> que contém a chave simétrica.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

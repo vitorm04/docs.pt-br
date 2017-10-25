@@ -1,0 +1,67 @@
+<Type Name="DiscoveryEndpointProvider" FullName="System.ServiceModel.Discovery.DiscoveryEndpointProvider">
+  <TypeSignature Language="C#" Value="public abstract class DiscoveryEndpointProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DiscoveryEndpointProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.DiscoveryEndpointProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um ponto de extremidade de descoberta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> classe usa as classes derivadas de <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> para obter o ponto de extremidade de descoberta para usar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DiscoveryEndpointProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryEndpointProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Discovery.DiscoveryEndpointProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiscoveryEndpoint">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Discovery.DiscoveryEndpoint GetDiscoveryEndpoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Discovery.DiscoveryEndpoint GetDiscoveryEndpoint() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.DiscoveryEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o ponto de extremidade de descoberta.</summary>
+        <returns>O ponto de extremidade de descoberta.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> classe chama o <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> método no <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> instância passada pelo usuário para obter o <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> para descobrir os serviços. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>também chama <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> sempre que ele deve clone a mesmo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

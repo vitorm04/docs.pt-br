@@ -1,0 +1,46 @@
+<Type Name="IParserAccessor" FullName="System.Web.UI.IParserAccessor">
+  <TypeSignature Language="C#" Value="public interface IParserAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IParserAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IParserAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define o método que devem implementar controles de servidor ASP.NET para reconhecer quando elementos, HTML ou XML, são analisados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando os elementos são analisados, eles são reconhecidos como controles filho do controle de servidor que implementa essa interface. Esses elementos são convertidos em objetos. Quando você implementar essa interface, o controle que você criar define o processamento ocorre uma vez que ele foi notificado de que um elemento foi analisado.  
+  
+ Porque o <xref:System.Web.UI.Control> classe implementa essa interface, é mais fácil estender a classe e substituir sua implementação do <xref:System.Web.UI.IParserAccessor.AddParsedSubObject%2A> método que ao implementar esta interface por conta própria.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="public void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IParserAccessor.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> que foi analisada.</param>
+        <summary>Quando implementado por um controle de servidor ASP.NET, notifica o controle de servidor que um elemento, XML ou HTML, foi analisado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

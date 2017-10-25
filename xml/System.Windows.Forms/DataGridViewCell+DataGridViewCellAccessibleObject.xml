@@ -1,0 +1,508 @@
+<Type Name="DataGridViewCell+DataGridViewCellAccessibleObject" FullName="System.Windows.Forms.DataGridViewCell+DataGridViewCellAccessibleObject">
+  <TypeSignature Language="C#" Value="protected class DataGridViewCell.DataGridViewCellAccessibleObject : System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit DataGridViewCell/DataGridViewCellAccessibleObject extends System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.AccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece informações sobre um <see cref="T:System.Windows.Forms.DataGridViewCell" /> para aplicativos cliente de acessibilidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows Forms inclui suporte interno de acessibilidade que permite que seu aplicativo trabalhar com aplicativos cliente de acessibilidade. Exemplos de aplicativos cliente de acessibilidade incluem utilitários ampliador e Revisor de tela, utilitários de entrada de voz, teclados na tela, dispositivos de entrada alternativos e os utilitários de aprimoramento de teclado.  
+  
+ O <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject> classe herda o <xref:System.Windows.Forms.AccessibleObject> classe para fornecer informações sobre um <xref:System.Windows.Forms.DataGridViewCell> para aplicativos cliente de acessibilidade. Cada classe que representa uma parte do <xref:System.Windows.Forms.DataGridView>— como <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>, <xref:System.Windows.Forms.DataGridViewRowHeaderCell>, <xref:System.Windows.Forms.DataGridViewRow> e <xref:System.Windows.Forms.DataGridViewCell>— também contém uma classe que herda de <xref:System.Windows.Forms.AccessibleObject> para fornecer informações sobre a classe continente e executar ações em nome dos aplicativos cliente de acessibilidade.  
+  
+ Há ocasiões em que você deve fornecer informações adicionais, como o nome ou descrição do <xref:System.Windows.Forms.DataGridView> controle, para aplicativos cliente de acessibilidade. Há duas maneiras de fornecer essas informações adicionais. Para fornecer informações de acessibilidade limitada para controles existentes, defina o controle <xref:System.Windows.Forms.Control.AccessibleName%2A> e <xref:System.Windows.Forms.Control.AccessibleDescription%2A> valores de propriedade, que serão relatados para aplicativos cliente de acessibilidade.  
+  
+> [!NOTE]
+>  Você deve alterar o <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A> e <xref:System.Windows.Forms.Control.AccessibleRole%2A> valores de propriedade somente em situações raras, como se você tornar um <xref:System.Windows.Forms.DataGridView> a aparência de uma lista.  
+  
+ Ocasionalmente, você pode exigir mais informações sobre acessibilidade ou ações diferentes de acessibilidade para ser incluído no personalizados <xref:System.Windows.Forms.DataGridView> ou <xref:System.Windows.Forms.DataGridViewCell>. Para personalizar a acessibilidade, você pode escrever sua própria classe que deriva de <xref:System.Windows.Forms.DataGridView.DataGridViewAccessibleObject> ou <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject> classes e substituir o <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> método. Por exemplo, se você estiver escrevendo uma célula de cabeçalho de linha personalizado que implementa exclusivas ações personalizadas, como o teste de clique especiais dentro de sua célula, você deve criar uma classe que herda de <xref:System.Windows.Forms.DataGridViewRowHeaderCell.DataGridViewRowHeaderCellAccessibleObject> classe e substituir o <xref:System.Windows.Forms.DataGridViewRowHeaderCell.CreateAccessibilityInstance%2A> método.  
+  
+ O <xref:System.Windows.Forms.DataGridView> expõe sua estrutura de dados usando <xref:System.Windows.Forms.AccessibleRole> valores para definir os dados de tabela hierarquia. Para obter mais informações sobre a exposição de tabelas de dados para acessibilidade ativa da Microsoft, consulte "Expor dados de tabelas por meio de Microsoft Active Accessibility" na biblioteca MSDN em http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewCellAccessibleObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" /> classe sem inicializar o <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewCellAccessibleObject (System.Windows.Forms.DataGridViewCell owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataGridViewCell owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.#ctor(System.Windows.Forms.DataGridViewCell)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.DataGridViewCell" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.DataGridViewCell" /> que tem o <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" /> classe, definindo o <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> propriedade especificado <see cref="T:System.Windows.Forms.DataGridViewCell" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local e o tamanho do objeto acessível.</summary>
+        <value>Um <see cref="T:System.Drawing.Rectangle" /> que representa os limites do objeto acessível.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Bounds%2A> propriedade recupera o retângulo do objeto em coordenadas da tela.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAction">
+      <MemberSignature Language="C#" Value="public override string DefaultAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultAction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.DefaultAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que descreve a ação padrão da <see cref="T:System.Windows.Forms.DataGridViewCell" />.</summary>
+        <value>A cadeia de caracteres "Edit".</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public override void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a ação padrão associada a <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a célula associada a esta <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject> é um <xref:System.Windows.Forms.DataGridViewHeaderCell>, esse método não fará nada. Caso contrário, esse método seleciona a célula, facilita a célula atual e usa uma das seguintes ações:  
+  
+-   Se a célula <xref:System.Windows.Forms.DataGridViewCell.ReadOnly%2A> é o valor da propriedade `true`, esse método retorna.  
+  
+-   Se a célula <xref:System.Windows.Forms.DataGridViewCell.EditType%2A> é o valor da propriedade `null`, que significa que a célula não pode hospedar um controle de edição, este método retorna.  
+  
+-   Se a célula estiver atualmente entrar ou sair do modo de edição (por exemplo, se esse método é chamado um <xref:System.Windows.Forms.DataGridView.CellBeginEdit> ou <xref:System.Windows.Forms.DataGridView.CellEndEdit> manipulador de eventos), esse método retorna.  
+  
+-   Se a célula está em modo de edição, este método confirma e termina a edição.  
+  
+-   Se a célula não está na modo de edição e o <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> está definida como <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>, esse método retorna.  
+  
+-   Se nenhuma das ações anteriores for tomada, este método faz com que a célula entrar no modo de edição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O valor da <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" /> propriedade não é <see langword="null" /> e <see cref="P:System.Windows.Forms.DataGridViewCell.RowIndex" /> propriedade do <see cref="T:System.Windows.Forms.DataGridViewCell" /> retornado pelo <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> propriedade é igual a -1.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChild">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject GetChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.AccessibleObject GetChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.GetChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do objeto filho acessível.</param>
+        <summary>Retorna o objeto acessível correspondente para o índice especificado.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.AccessibleObject" /> que representa o filho acessível correspondente para o índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.GetChild%2A> método retorna um <xref:System.Windows.Forms.AccessibleObject> somente se o <xref:System.Windows.Forms.DataGridViewCell> que possui o <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject> está em modo de edição e `index` é 0.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildCount">
+      <MemberSignature Language="C#" Value="public override int GetChildCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetChildCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.GetChildCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o número de filhos que pertencem ao <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />.</summary>
+        <returns>O valor 1 se o <see cref="T:System.Windows.Forms.DataGridViewCell" /> que possui <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" /> está sendo editado; caso contrário, -1.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFocused">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject GetFocused ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.AccessibleObject GetFocused() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.GetFocused" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o filho objeto acessível que tem o foco do teclado.</summary>
+        <returns>
+          <see langword="null" /> em todos os casos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelected">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject GetSelected ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.AccessibleObject GetSelected() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.GetSelected" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o filho objeto acessível que está selecionado no momento.</summary>
+        <returns>
+          <see langword="null" /> em todos os casos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Help">
+      <MemberSignature Language="C#" Value="public override string Help { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Help" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Help" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os nomes de tipo de proprietário da célula e o tipo base.</summary>
+        <value>Os nomes de tipo de proprietário da célula e o tipo base.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna uma cadeia de caracteres que inclui o nome do tipo de propriedade da célula seguido do nome de seu tipo base entre parênteses, como "`DataGridViewTextBoxCell` (`DataGridViewCell`)".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />.</summary>
+        <value>O nome do <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Name%2A> propriedade retorna uma cadeia de caracteres que contém o texto do cabeçalho de coluna e o índice da linha de <xref:System.Windows.Forms.DataGridViewCell>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject Navigate (System.Windows.Forms.AccessibleNavigation navigationDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.AccessibleObject Navigate(valuetype System.Windows.Forms.AccessibleNavigation navigationDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Navigate(System.Windows.Forms.AccessibleNavigation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigationDirection" Type="System.Windows.Forms.AccessibleNavigation" />
+      </Parameters>
+      <Docs>
+        <param name="navigationDirection">Um dos valores de <see cref="T:System.Windows.Forms.AccessibleNavigation" />.</param>
+        <summary>Navega para outro objeto acessível.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" /> que representa o <see cref="T:System.Windows.Forms.DataGridViewCell" /> no local especificado <see cref="T:System.Windows.Forms.AccessibleNavigation" /> valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir descreve quais <xref:System.Windows.Forms.DataGridViewCell> possui o <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject> que é retornado pelo <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Navigate%2A> método para cada valor de parâmetro.  
+  
+|Valor do parâmetro|Descrição|  
+|---------------------|-----------------|  
+|<xref:System.Windows.Forms.AccessibleNavigation.Right>|O <xref:System.Windows.Forms.DataGridViewCell> à direita da célula atual. <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Navigate%2A>Retorna `null` se a célula atual está na coluna mais à direita.|  
+|<xref:System.Windows.Forms.AccessibleNavigation.Left>|O <xref:System.Windows.Forms.DataGridViewCell> à esquerda da célula atual. <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Navigate%2A>Retorna um objeto acessível para o cabeçalho da linha se a célula atual está na coluna mais à esquerda.|  
+|<xref:System.Windows.Forms.AccessibleNavigation.Next>|O <xref:System.Windows.Forms.DataGridViewCell> que tem o índice mais próximo. <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Navigate%2A>Retorna `null` se a célula atual for a primeira coluna.|  
+|<xref:System.Windows.Forms.AccessibleNavigation.Previous>|O <xref:System.Windows.Forms.DataGridViewCell> que tem o próximo índice inferior. <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Navigate%2A>Retorna `null` se a célula atual estiver na última coluna.|  
+|<xref:System.Windows.Forms.AccessibleNavigation.Up>|O <xref:System.Windows.Forms.DataGridViewCell> na mesma coluna e uma linha acima da célula atual. <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Navigate%2A>Retorna `null` se a célula atual for a primeira linha.|  
+|<xref:System.Windows.Forms.AccessibleNavigation.Down>|O <xref:System.Windows.Forms.DataGridViewCell> na mesma coluna e uma linha abaixo da célula atual. <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Navigate%2A>Retorna `null` se a célula atual for a última linha.|  
+|Todos os outros <xref:System.Windows.Forms.AccessibleNavigation> valores|`null`.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewCell Owner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCell Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCell</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a célula que possui o <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />.</summary>
+        <value>O <see cref="T:System.Windows.Forms.DataGridViewCell" /> que tem o <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Ao definir essa propriedade, o <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> propriedade já foi definida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AccessibleObject Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai do <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />.</summary>
+        <value>O pai do <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Parent%2A> propriedade retorna um <xref:System.Windows.Forms.DataGridViewRow.DataGridViewRowAccessibleObject>, que representa o <xref:System.Windows.Forms.DataGridViewRow> que contém o <xref:System.Windows.Forms.DataGridViewCell>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a função de <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />.</summary>
+        <value>O valor <see cref="F:System.Windows.Forms.AccessibleRole.Cell" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public override void Select (System.Windows.Forms.AccessibleSelection flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Select(valuetype System.Windows.Forms.AccessibleSelection flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Select(System.Windows.Forms.AccessibleSelection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Windows.Forms.AccessibleSelection" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Um dos valores de <see cref="T:System.Windows.Forms.AccessibleSelection" />.</param>
+        <summary>Modifica a seleção ou move o foco do teclado do objeto acessível.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir descreve a ação executada pelo <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Select%2A> método para cada `flags` valor.  
+  
+|Valor do parâmetro|Ação|  
+|---------------------|------------|  
+|<xref:System.Windows.Forms.AccessibleSelection.TakeFocus>|O <xref:System.Windows.Forms.DataGridView> tem foco.|  
+|<xref:System.Windows.Forms.AccessibleSelection.TakeSelection>|O <xref:System.Windows.Forms.DataGridViewCell> que possui essa <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject> tem foco.|  
+|<xref:System.Windows.Forms.AccessibleSelection.AddSelection>|O <xref:System.Windows.Forms.DataGridViewCell> é adicionada para o <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> propriedade.|  
+|<xref:System.Windows.Forms.AccessibleSelection.RemoveSelection>|O <xref:System.Windows.Forms.DataGridViewCell> é removido do <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> propriedade.|  
+|Todos os outros <xref:System.Windows.Forms.AccessibleSelection> valores|Nenhuma ação será tomada.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do <see cref="T:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject" />.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.AccessibleStates" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno sempre inclui o <xref:System.Windows.Forms.AccessibleStates.Selectable> e <xref:System.Windows.Forms.AccessibleStates.Focusable> valores. Ele também inclui o <xref:System.Windows.Forms.AccessibleStates.Selected> valor se a célula associada é selecionada, o <xref:System.Windows.Forms.AccessibleStates.Focused> valor se a célula tem o foco do teclado e o <xref:System.Windows.Forms.AccessibleStates.Offscreen> valor se a célula não é exibida no momento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que representa o valor formatado da célula proprietário.</summary>
+        <value>Um <see cref="T:System.String" /> representação do valor de célula.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Value%2A> propriedade contém uma cadeia de caracteres que representa o valor da célula <xref:System.Windows.Forms.DataGridViewCell.FormattedValue%2A> propriedade. Se <xref:System.Windows.Forms.DataGridViewCell.FormattedValue%2A> é `null`, <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Value%2A> contém a cadeia de caracteres "(nulo)".  
+  
+ A definição dessa propriedade não terá efeito se a célula proprietária é uma célula de cabeçalho, é somente leitura ou não pertence a uma linha. Caso contrário, a definição dessa propriedade:  
+  
+-   Termina a qualquer edição atualmente em andamento e confirma o valor.  
+  
+-   Usa a célula <xref:System.Windows.Forms.DataGridViewCell.GetFormattedValue%2A> e <xref:System.Windows.Forms.DataGridViewCell.ParseFormattedValue%2A> métodos para converter o valor especificado para o tipo indicado pela célula <xref:System.Windows.Forms.DataGridViewCell.ValueType%2A> propriedade.  
+  
+-   Define o valor da célula para o valor convertido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

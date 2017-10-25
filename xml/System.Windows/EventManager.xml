@@ -1,0 +1,212 @@
+<Type Name="EventManager" FullName="System.Windows.EventManager">
+  <TypeSignature Language="C#" Value="public static class EventManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit EventManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.EventManager" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos de utilitário relacionados a eventos que registram eventos roteados de proprietários de classe e adicionam manipuladores de classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geralmente, essa classe é usada para registrar um novo evento roteado com <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>.  
+  
+ O segundo mais comuns [!INCLUDE[TLA2#tla_api](~/includes/tla2sharptla-api-md.md)] uso é <xref:System.Windows.EventManager.RegisterClassHandler%2A>. Você pode usar esse método para habilitar a manipulação de classe de um evento roteado na classe ou um evento. Para obter detalhes, consulte [marcar eventos roteados como Handled e tratamento de classe](~/docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostram como usar essa classe para registrar um novo evento roteado como um membro de classe, junto com a técnica de "wrapper" do evento roteado de substituição a adicionar e remover implementações para um [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] eventos.  
+  
+ [!code-csharp[DPCustom#EventManagerClass](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCustom/CSharp/default.xaml.cs#eventmanagerclass)]
+ [!code-vb[DPCustom#EventManagerClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCustom/visualbasic/default.xaml.vb#eventmanagerclass)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetRoutedEvents">
+      <MemberSignature Language="C#" Value="public static System.Windows.RoutedEvent[] GetRoutedEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.RoutedEvent[] GetRoutedEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventManager.GetRoutedEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna identificadores para eventos roteados que foram registrados para o sistema de eventos.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.Windows.RoutedEvent" /> que contém os objetos registrados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mais <xref:System.Windows.RoutedEvent> objetos podem ser registrados mais tarde. Esse método obtém um instantâneo e a coleção de eventos roteados é gravável ao longo do tempo de vida do aplicativo. A coleção retornada pode ser muito grande. Até mesmo contar os eventos que fazem parte do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)], a contagem de coleta for alta centenas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRoutedEventsForOwner">
+      <MemberSignature Language="C#" Value="public static System.Windows.RoutedEvent[] GetRoutedEventsForOwner (Type ownerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.RoutedEvent[] GetRoutedEventsForOwner(class System.Type ownerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventManager.GetRoutedEventsForOwner(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ownerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ownerType">O tipo para iniciar a pesquisa. Classes base são incluídos na pesquisa.</param>
+        <summary>Localiza todos os identificadores de eventos roteados para eventos que são registrados com o tipo de proprietário fornecidos.</summary>
+        <returns>Uma matriz de identificadores de evento roteado de correspondência se nenhuma correspondência for encontrada; Caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterClassHandler">
+      <MemberSignature Language="C#" Value="public static void RegisterClassHandler (Type classType, System.Windows.RoutedEvent routedEvent, Delegate handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterClassHandler(class System.Type classType, class System.Windows.RoutedEvent routedEvent, class System.Delegate handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventManager.RegisterClassHandler(System.Type,System.Windows.RoutedEvent,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="classType" Type="System.Type" />
+        <Parameter Name="routedEvent" Type="System.Windows.RoutedEvent" />
+        <Parameter Name="handler" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="classType">O tipo da classe que está declarando a manipulação de classe.</param>
+        <param name="routedEvent">O identificador de evento roteado do evento a ser manipulado.</param>
+        <param name="handler">Uma referência à implementação do manipulador de classe.</param>
+        <summary>Registra um manipulador de classes para um evento roteado particular.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tratamento de classe é um recurso que está disponível para eventos roteados, incluindo eventos anexados que são implementados com eventos roteados fazendo. Um manipulador de classe é como um manipulador estático que existe para todas as instâncias da classe. Porque o manipulador é estático, você não pode alterar as propriedades de instância diretamente com um manipulador de classe, mas você pode acessar instâncias por meio de `sender` parâmetro e/ou os dados do evento.  
+  
+ Manipuladores de classe são chamados antes de manipuladores de instância. Você pode implementar um manipulador de classe que tem o comportamento de marcar o evento como manipulado. Portanto, manipuladores de instância para um evento de classe tratado não serão chamados a menos que os manipuladores de instância registrarem especificamente para eventos manipulados.  
+  
+ Muitas do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] eventos do elemento base fornecem métodos virtuais de manipulação de classe. Substituindo esses métodos em classes que herdam as classes base, você pode implementar classe tratamento sem chamar <xref:System.Windows.EventManager.RegisterClassHandler%2A> em construtores estáticos. Esses métodos de manipulação de classe normalmente existem para eventos de entrada e têm nomes que começam com "On" e termina com o nome do evento que está sendo tratado de classe.  
+  
+ Para obter mais informações sobre tratamento de classe, consulte [marcar eventos roteados como Handled e tratamento de classe](~/docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+  
+ Usando essa assinatura, manipuladores de classe serão registrados para invocar apenas em resposta a eventos sem tratamento. Você também pode registrar manipuladores de classe para chamar, mesmo que os argumentos de evento são marcados como manipulados, usando o <xref:System.Windows.EventManager.RegisterClassHandler%28System.Type%2CSystem.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> assinatura, com `handledEventsToo` definido como `true`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um manipulador para <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>, chamar <xref:System.Windows.EventManager.RegisterClassHandler%2A>.  
+  
+ [!code-csharp[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#staticandregisterclasshandler)]
+ [!code-vb[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterClassHandler">
+      <MemberSignature Language="C#" Value="public static void RegisterClassHandler (Type classType, System.Windows.RoutedEvent routedEvent, Delegate handler, bool handledEventsToo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterClassHandler(class System.Type classType, class System.Windows.RoutedEvent routedEvent, class System.Delegate handler, bool handledEventsToo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventManager.RegisterClassHandler(System.Type,System.Windows.RoutedEvent,System.Delegate,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="classType" Type="System.Type" />
+        <Parameter Name="routedEvent" Type="System.Windows.RoutedEvent" />
+        <Parameter Name="handler" Type="System.Delegate" />
+        <Parameter Name="handledEventsToo" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="classType">O tipo da classe que está declarando a manipulação de classe.</param>
+        <param name="routedEvent">O identificador de evento roteado do evento a ser manipulado.</param>
+        <param name="handler">Uma referência à implementação do manipulador de classe.</param>
+        <param name="handledEventsToo">
+          <see langword="true" /> para invocar esse manipulador de classe, mesmo se os argumentos do evento roteado tiverem sido marcados como manipulados; <see langword="false" /> para reter o comportamento padrão de não invocar o manipulador em nenhum evento manipulado marcado.</param>
+        <summary>Registra um manipulador de classes para um evento roteado específico, com a opção de manipular eventos em que os dados do evento já estão marcados como manipulados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tratamento de classe é um recurso que está disponível para eventos roteados, incluindo eventos anexados que são implementados com eventos roteados fazendo. Um manipulador de classe é como um manipulador estático que existe para todas as instâncias da classe. Porque o manipulador é estático, você não pode alterar as propriedades de instância diretamente com um manipulador de classe, mas você pode acessar instâncias por meio de `sender` parâmetro e/ou os dados do evento.  
+  
+ Manipuladores de classe são chamados antes de manipuladores de instância. Você pode implementar um manipulador de classe que tem o comportamento de marcar o evento como manipulado. Portanto, manipuladores de instância para um evento de classe tratado não serão chamados a menos que os manipuladores de instância registrarem especificamente para eventos manipulados.  
+  
+ Muitas do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] eventos do elemento base fornecem métodos virtuais de manipulação de classe. Substituindo esses métodos em classes que herdam as classes base, você pode implementar classe tratamento sem chamar <xref:System.Windows.EventManager.RegisterClassHandler%2A> em construtores estáticos. Esses métodos de manipulação de classe normalmente existem para eventos de entrada e têm nomes que começam com "On" e termina com o nome do evento que está sendo tratado de classe.  
+  
+ Para obter mais informações sobre tratamento de classe, consulte [marcar eventos roteados como Handled e tratamento de classe](~/docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+  
+ Usando essa assinatura, manipuladores de classe podem ser registrados para invocar após eventos manipulados, definindo `handledEventsToo` definido como `true`. Em geral, você deve fazer isso somente se houver um problema de tratamento conhecidos que você está tentando solucionar o problema, como o sistema de entrada de tratamento de eventos de mouse ou teclado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterRoutedEvent">
+      <MemberSignature Language="C#" Value="public static System.Windows.RoutedEvent RegisterRoutedEvent (string name, System.Windows.RoutingStrategy routingStrategy, Type handlerType, Type ownerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.RoutedEvent RegisterRoutedEvent(string name, valuetype System.Windows.RoutingStrategy routingStrategy, class System.Type handlerType, class System.Type ownerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.EventManager.RegisterRoutedEvent(System.String,System.Windows.RoutingStrategy,System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="routingStrategy" Type="System.Windows.RoutingStrategy" />
+        <Parameter Name="handlerType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do evento roteado. O nome deve ser exclusivo dentro do tipo de proprietário e não pode ser <see langword="null" /> ou uma cadeia de caracteres vazia.</param>
+        <param name="routingStrategy">A estratégia de roteamento do evento como um valor da enumeração.</param>
+        <param name="handlerType">O tipo de manipulador de eventos. Esse deve ser um tipo de delegado e não pode ser <see langword="null" />.</param>
+        <param name="ownerType">O tipo de classe do proprietário do evento roteado. Esse não pode ser <see langword="null" />.</param>
+        <summary>Registra um novo evento roteado com o sistema de eventos [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)].</summary>
+        <returns>O identificador para o evento roteado registrado recentemente. Esse objeto de identificador agora pode ser armazenado como um campo estático em uma classe e, em seguida, usado como um parâmetro para métodos que anexam manipuladores ao evento. O identificador de evento roteado também é usado para outro sistema de evento [!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)].</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o valor de retorno desse método para criar a declaração estática para uma única <xref:System.Windows.RoutedEvent> campo de identificador. Este campo deve ser armazenado no tipo do proprietário.  
+  
+ Há um número considerável de convenções e práticas recomendadas associadas a eventos roteados como devem ser chamadas, registradas e expostas em uma classe. Para obter mais informações, consulte [Visão geral de eventos roteados](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

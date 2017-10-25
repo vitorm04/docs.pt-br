@@ -1,0 +1,111 @@
+<Type Name="ListSourceHelper" FullName="System.Web.UI.ListSourceHelper">
+  <TypeSignature Language="C#" Value="public static class ListSourceHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ListSourceHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ListSourceHelper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado por controles de fonte de dados ao implementar membros definidos pelo <see cref="T:System.ComponentModel.IListSource" /> interface. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ListSourceHelper> classe é fornecida para simplificar a implementação de uma classe de utilitário de <xref:System.ComponentModel.IListSource> interface por controles de fonte de dados. Controles de fonte de dados que implementam o <xref:System.Web.UI.IDataSource> interface mas não estender o <xref:System.Web.UI.DataSourceControl> classe pode usar estático <xref:System.Web.UI.ListSourceHelper> métodos em suas próprias implementações dos métodos definidos pelo <xref:System.ComponentModel.IListSource> interface. Controles que estendem a partir da fonte de dados a <xref:System.Web.UI.DataSourceControl> classe herdam essas implementações de método automaticamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o padrão de design de uma classe de fonte de dados que implementa o <xref:System.ComponentModel.IListSource> métodos.  
+  
+ [!code-csharp[Samples.AspNet.Controls.IListSourceHelper#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Controls.IListSourceHelper/CS/somedatasource.cs#2)]
+ [!code-vb[Samples.AspNet.Controls.IListSourceHelper#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Controls.IListSourceHelper/VB/somedatasource.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContainsListCollection">
+      <MemberSignature Language="C#" Value="public static bool ContainsListCollection (System.Web.UI.IDataSource dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsListCollection(class System.Web.UI.IDataSource dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ListSourceHelper.ContainsListCollection(System.Web.UI.IDataSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Web.UI.IDataSource" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Um <see cref="T:System.Web.UI.IDataSource" /> que especifica o controle de fonte de dados de teste para objetos de exibição de fonte de dados associado.</param>
+        <summary>Indica se o controle de fonte de dados especificado contém uma coleção de objetos de exibição de fonte de dados.</summary>
+        <returns>
+          <see langword="true" />Se o controle de fonte de dados contém uma coleção de objetos de exibição da fonte de dados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método em uma implementação do <xref:System.ComponentModel.IListSource.ContainsListCollection%2A> propriedade, passar uma referência a um controle de fonte de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o padrão de design de uma classe de fonte de dados que implementa o <xref:System.ComponentModel.IListSource> métodos. O <xref:System.ComponentModel.IListSource.ContainsListCollection%2A> propriedade chama estático <xref:System.Web.UI.ListSourceHelper.ContainsListCollection%2A> método.  
+  
+ [!code-csharp[Samples.AspNet.Controls.IListSourceHelper#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Controls.IListSourceHelper/CS/somedatasource.cs#3)]
+ [!code-vb[Samples.AspNet.Controls.IListSourceHelper#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Controls.IListSourceHelper/VB/somedatasource.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetList">
+      <MemberSignature Language="C#" Value="public static System.Collections.IList GetList (System.Web.UI.IDataSource dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IList GetList(class System.Web.UI.IDataSource dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ListSourceHelper.GetList(System.Web.UI.IDataSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Web.UI.IDataSource" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Um <see cref="T:System.Web.UI.IDataSource" /> que contém um ou mais associados <see cref="T:System.Web.UI.DataSourceView" /> objetos, que são recuperados por uma chamada para <see cref="M:System.Web.UI.DataSourceControl.GetViewNames" />.</param>
+        <summary>Recupera um <see cref="T:System.Collections.IList" /> coleção de objetos de fonte de dados.</summary>
+        <returns>Um <see cref="T:System.Collections.IList" /> de um <see cref="T:System.Web.UI.IDataSource" />, se o <see cref="T:System.Web.UI.IDataSource" /> tem um ou mais associados <see cref="T:System.Web.UI.DataSourceView" /> objetos; caso contrário, retornará <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método em uma implementação de <xref:System.Web.UI.DataSourceControl.System%23ComponentModel%23IListSource%23GetList%2A> método, passando uma referência a um controle de fonte de dados.  
+  
+ O <xref:System.Collections.IList> objeto retornado implementa o <xref:System.ComponentModel.ITypedList> interface. Você pode usar o <xref:System.ComponentModel.ITypedList.GetItemProperties%2A> método para recuperar uma lista de <xref:System.ComponentModel.PropertyDescriptor> descritores que correspondem ao <xref:System.Web.UI.DataSourceView> associados com o controle de fonte de dados da lista de nomes.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o padrão de design de uma classe de fonte de dados que implementa o <xref:System.ComponentModel.IListSource> métodos. O <xref:System.ComponentModel.IListSource.GetList%2A> chamadas de método estático <xref:System.Web.UI.ListSourceHelper.GetList%2A> método.  
+  
+ [!code-csharp[Samples.AspNet.Controls.IListSourceHelper#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Controls.IListSourceHelper/CS/somedatasource.cs#3)]
+ [!code-vb[Samples.AspNet.Controls.IListSourceHelper#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Controls.IListSourceHelper/VB/somedatasource.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,176 @@
+<Type Name="IAccessor" FullName="Microsoft.VisualBasic.Compatibility.VB6.IAccessor">
+  <TypeSignature Language="C#" Value="public interface IAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAccessor" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.IAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0c733a8c-2a1c-11ce-ade5-00aa0044773d")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma implementação do OLE DB <see langword="IAccessor" /> interface para uso por aplicativos atualizado do Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddRefAccessor">
+      <MemberSignature Language="C#" Value="public void AddRefAccessor (int hAccessor, out int cRefCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void AddRefAccessor([in]int32 hAccessor, [out] int32&amp; cRefCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IAccessor.AddRefAccessor(System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hAccessor" Type="System.Int32" />
+        <Parameter Name="cRefCount" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="hAccessor">O identificador do acessador para a qual incrementar a contagem de referência.</param>
+        <param name="cRefCount">Um ponteiro de memória no qual retornar a contagem de referência de identificador do acessador. Se <c>cRefCount</c> é um ponteiro nulo, sem contagem de referência é retornada.</param>
+        <summary>Adiciona uma contagem de referência para um acessador existente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessor">
+      <MemberSignature Language="C#" Value="public void CreateAccessor (int accessorFlags, int cBindings, Microsoft.VisualBasic.Compatibility.VB6.DBBINDING[] bindings, int cbRowSize, out int hAccessor, IntPtr pBindStatus);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void CreateAccessor([in]int32 accessorFlags, [in]int32 cBindings, [in]valuetype Microsoft.VisualBasic.Compatibility.VB6.DBBINDING[] bindings, [in]int32 cbRowSize, [out] int32&amp; hAccessor, [in]native int pBindStatus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IAccessor.CreateAccessor(System.Int32,System.Int32,Microsoft.VisualBasic.Compatibility.VB6.DBBINDING[],System.Int32,System.Int32@,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessorFlags" Type="System.Int32" />
+        <Parameter Name="cBindings" Type="System.Int32" />
+        <Parameter Name="bindings" Type="Microsoft.VisualBasic.Compatibility.VB6.DBBINDING[]" />
+        <Parameter Name="cbRowSize" Type="System.Int32" />
+        <Parameter Name="hAccessor" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="pBindStatus" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="accessorFlags">Uma máscara de bits que descreve as propriedades do acessador e como ele pode ser usado.</param>
+        <param name="cBindings">O número de associações no acessador.</param>
+        <param name="bindings">Uma matriz de <see cref="T:Microsoft.VisualBasic.Compatibility.VB6.DBBINDING" /> estruturas.</param>
+        <param name="cbRowSize">O número de bytes alocados para um único conjunto de valores de parâmetros ou critérios no buffer do consumidor.</param>
+        <param name="hAccessor">Um ponteiro de memória no qual retornar o identificador do acessador criado.</param>
+        <param name="pBindStatus">Um ponteiro para uma matriz de <see langword="DBBINDSTATUS" /> valores.</param>
+        <summary>Cria um acessador de um conjunto de associações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBindings">
+      <MemberSignature Language="C#" Value="public void GetBindings (int hAccessor, out int accessorFlags, out int cBindings, out IntPtr rgBindings);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void GetBindings([in]int32 hAccessor, [out] int32&amp; accessorFlags, [out] int32&amp; cBindings, [out] native int&amp; rgBindings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IAccessor.GetBindings(System.Int32,System.Int32@,System.Int32@,System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hAccessor" Type="System.Int32" />
+        <Parameter Name="accessorFlags" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="cBindings" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="rgBindings" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="hAccessor">O identificador do acessador para a qual retornar as associações.</param>
+        <param name="accessorFlags">Um ponteiro de memória no qual retornar uma máscara de bits que descreve as propriedades do acessador e como ele se destina a ser usado.</param>
+        <param name="cBindings">Um ponteiro de memória no qual retornar o número de associações no acessador.</param>
+        <param name="rgBindings">Um ponteiro de memória no qual retornar uma matriz de <see langword="DBBINDSTATUS" /> estruturas.</param>
+        <summary>Retorna as associações em um acessador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseAccessor">
+      <MemberSignature Language="C#" Value="public void ReleaseAccessor (int hAccessor, out int cRefCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void ReleaseAccessor([in]int32 hAccessor, [out] int32&amp; cRefCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IAccessor.ReleaseAccessor(System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hAccessor" Type="System.Int32" />
+        <Parameter Name="cRefCount" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="hAccessor">O identificador do acessador para liberar.</param>
+        <param name="cRefCount">Um ponteiro de memória no qual retornar a contagem de referência restantes do identificador do acessador.</param>
+        <summary>Libera um acessador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

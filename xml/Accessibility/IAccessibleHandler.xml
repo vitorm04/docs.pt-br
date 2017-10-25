@@ -1,0 +1,66 @@
+<Type Name="IAccessibleHandler" FullName="Accessibility.IAccessibleHandler">
+  <TypeSignature Language="C#" Value="public interface IAccessibleHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAccessibleHandler" />
+  <TypeSignature Language="DocId" Value="T:Accessibility.IAccessibleHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Accessibility</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("03022430-ABC4-11D0-BDE2-00AA001A1953")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(System.Runtime.InteropServices.TypeLibTypeFlags.FHidden | System.Runtime.InteropServices.TypeLibTypeFlags.FOleAutomation)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O <see cref="T:Accessibility.IAccessibleHandler" /> e todos os seus membros expostos fazem parte de um wrapper gerenciado para a interface <see langword="IAccessibleHandler" /> COM (Component Object Model).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre <xref:Accessibility.IAccessibleHandler>, consulte a documentação para o `IAccessibleHandler::AccessibleObjectFromID` método na documentação do Microsoft Active Accessibility na biblioteca MSDN em http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccessibleObjectFromID">
+      <MemberSignature Language="C#" Value="public void AccessibleObjectFromID (int hwnd, int lObjectID, out Accessibility.IAccessible pIAccessible);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AccessibleObjectFromID([in]int32 hwnd, [in]int32 lObjectID, [out] class Accessibility.IAccessible&amp; pIAccessible) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Accessibility.IAccessibleHandler.AccessibleObjectFromID(System.Int32,System.Int32,Accessibility.IAccessible@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Accessibility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.Int32" />
+        <Parameter Name="lObjectID" Type="System.Int32" />
+        <Parameter Name="pIAccessible" Type="Accessibility.IAccessible&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">Especifica o identificador de uma janela para o qual um ponteiro de interface IAccessible é a ser recuperado.</param>
+        <param name="lObjectID">Especifica a ID de objeto.</param>
+        <param name="pIAccessible">Especifica o endereço de uma variável de ponteiro que recebe o endereço da interface de IAccessible do objeto.</param>
+        <summary>O <see cref="T:Accessibility.IAccessibleHandler" /> e todos os seus membros expostos fazem parte de um wrapper gerenciado para a interface <see langword="IAccessibleHandler" /> COM (Component Object Model).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre <xref:Accessibility.IAccessibleHandler.AccessibleObjectFromID%2A>, consulte a documentação para o `IAccessibleHandler::AccessibleObjectFromID` método na documentação do Microsoft Active Accessibility na biblioteca MSDN em http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

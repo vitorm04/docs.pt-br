@@ -1,0 +1,81 @@
+<Type Name="WebHttpSecurityMode" FullName="System.ServiceModel.WebHttpSecurityMode">
+  <TypeSignature Language="C#" Value="public enum WebHttpSecurityMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebHttpSecurityMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.WebHttpSecurityMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os modos de segurança que podem ser usados para configurar um ponto de extremidade de serviço para receber solicitações HTTP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta enumeração para especificar se a segurança em nível de transporte é usada por um ponto de extremidade configurado com um <xref:System.ServiceModel.WebHttpBinding> para receber solicitações HTTP. O valor padrão é nenhuma, que indica que nenhuma segurança é usada.  
+  
+ Se o valor de transporte é especificado pelo <xref:System.ServiceModel.WebHttpBinding.%23ctor%28System.ServiceModel.WebHttpSecurityMode%29>, em seguida, as configurações fornecidas pelo <xref:System.ServiceModel.WebHttpSecurity.Transport%2A> propriedade entra em vigor para o ponto de extremidade de serviço. O valor de <xref:System.ServiceModel.WebHttpSecurityMode> só pode ser definida no <xref:System.ServiceModel.WebHttpBinding> construtor-lo como um parâmetro explícito e seu valor não podem ser definidos novamente depois que a instância de associação é criada.  
+  
+ TransportCredentialOnly não fornecer confidencialidade e integridade da mensagem. Ele fornece somente a autenticação de cliente com base em HTTP. Esse modo deve ser usado com cuidado. Ele deve ser usado em ambientes, como em IPSec, onde a segurança de transporte está sendo fornecida por outros meios e somente a autenticação do cliente é fornecido pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] infraestrutura.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.WebHttpSecurityMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.WebHttpSecurityMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WebHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que nenhuma segurança é usada com solicitações HTTP.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="Transport" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.WebHttpSecurityMode Transport = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.WebHttpSecurityMode.Transport" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WebHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a segurança do nível de transporte é usada com solicitações HTTP.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportCredentialOnly">
+      <MemberSignature Language="C#" Value="TransportCredentialOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.WebHttpSecurityMode TransportCredentialOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.WebHttpSecurityMode.TransportCredentialOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WebHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que apenas a autenticação de cliente baseada em HTTP é fornecida.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,717 @@
+<Type Name="EntityConnection" FullName="System.Data.EntityClient.EntityConnection">
+  <TypeSignature Language="C#" Value="public sealed class EntityConnection : System.Data.Common.DbConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EntityConnection extends System.Data.Common.DbConnection" />
+  <TypeSignature Language="DocId" Value="T:System.Data.EntityClient.EntityConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbConnection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma referência a um modelo conceitual e uma conexão de fonte de dados. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar inadvertidamente a colocação de objetos, como <xref:System.Data.Common.CommandTrees> e <xref:System.Data.Objects.ObjectContext> fora de sincronia com metadados, <xref:System.Data.EntityClient.EntityConnection> deve bloquear seus metadados. Nenhuma alteração para a cadeia de caracteres de conexão é permitida depois que os metadados é bloqueado. Estes são dois cenários em que os metadados está bloqueado:  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é criada por meio do construtor padrão, ou por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.String%29> construtor, que aceita uma cadeia de caracteres de conexão. Em qualquer caso a cadeia de caracteres de conexão pode ser alterada várias vezes antes que a conexão é aberta. Chamando <xref:System.Data.EntityClient.EntityConnection.Open%2A> ou <xref:System.Data.EntityClient.EntityConnection.GetMetadataWorkspace%2A> bloqueia os metadados.  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é construída por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.Data.Metadata.Edm.MetadataWorkspace%2CSystem.Data.Common.DbConnection%29> construtor, que aceita um <xref:System.Data.Metadata.Edm.MetadataWorkspace> e um <xref:System.Data.Common.DbConnection>. Nesse caso, os metadados está bloqueado no momento da construção. Nenhuma alteração para a cadeia de caracteres de conexão nunca é permitidas.  
+  
+ Quando os metadados forem carregados, o <xref:System.Data.EntityClient.EntityConnection> verifica se o arquivo de mapeamento, o modelo conceitual e o modelo de armazenamento estão presentes.  
+  
+ Para obter exemplos de código, consulte [trabalhando com EntityClient](http://msdn.microsoft.com/en-us/dec4728c-8dff-4e30-abe0-0f78fb5d5af5).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.EntityClient.EntityConnection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar inadvertidamente a colocação de objetos, como <xref:System.Data.Common.CommandTrees> e <xref:System.Data.Objects.ObjectContext> fora de sincronia com metadados, <xref:System.Data.EntityClient.EntityConnection> deve bloquear seus metadados. Nenhuma alteração para a cadeia de caracteres de conexão é permitida depois que os metadados é bloqueado. Estes são dois cenários em que os metadados está bloqueado:  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é criada por meio do construtor padrão, ou por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.String%29> construtor, que aceita uma cadeia de caracteres de conexão. Em qualquer caso a cadeia de caracteres de conexão pode ser alterada várias vezes antes que a conexão é aberta. Chamando <xref:System.Data.EntityClient.EntityConnection.Open%2A> ou <xref:System.Data.EntityClient.EntityConnection.GetMetadataWorkspace%2A> bloqueia os metadados.  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é construída por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.Data.Metadata.Edm.MetadataWorkspace%2CSystem.Data.Common.DbConnection%29> construtor, que aceita um <xref:System.Data.Metadata.Edm.MetadataWorkspace> e um <xref:System.Data.Common.DbConnection>. Nesse caso, os metadados está bloqueado no momento da construção. Nenhuma alteração para a cadeia de caracteres de conexão nunca é permitidas.  
+  
+ Quando os metadados forem carregados, o <xref:System.Data.EntityClient.EntityConnection> verifica se o arquivo de mapeamento, o modelo conceitual e o modelo de armazenamento estão presentes.  
+  
+ Para obter exemplos de código, consulte [trabalhando com EntityClient](http://msdn.microsoft.com/en-us/dec4728c-8dff-4e30-abe0-0f78fb5d5af5).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.EntityClient.EntityConnection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar inadvertidamente a colocação de objetos, como <xref:System.Data.Common.CommandTrees> e <xref:System.Data.Objects.ObjectContext> fora de sincronia com metadados, <xref:System.Data.EntityClient.EntityConnection> deve bloquear seus metadados. Nenhuma alteração para a cadeia de caracteres de conexão é permitida depois que os metadados é bloqueado. Estes são dois cenários em que os metadados está bloqueado:  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é criada por meio do construtor padrão, ou por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.String%29> construtor, que aceita uma cadeia de caracteres de conexão. Em qualquer caso a cadeia de caracteres de conexão pode ser alterada várias vezes antes que a conexão é aberta. Chamando <xref:System.Data.EntityClient.EntityConnection.Open%2A> ou <xref:System.Data.EntityClient.EntityConnection.GetMetadataWorkspace%2A> bloqueia os metadados.  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é construída por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.Data.Metadata.Edm.MetadataWorkspace%2CSystem.Data.Common.DbConnection%29> construtor, que aceita um <xref:System.Data.Metadata.Edm.MetadataWorkspace> e um <xref:System.Data.Common.DbConnection>. Nesse caso, os metadados está bloqueado no momento da construção. Nenhuma alteração para a cadeia de caracteres de conexão nunca é permitidas.  
+  
+ Quando os metadados forem carregados, o <xref:System.Data.EntityClient.EntityConnection> verifica se o arquivo de mapeamento, o modelo conceitual e o modelo de armazenamento estão presentes.  
+  
+ Para obter exemplos de código, consulte [trabalhando com EntityClient](http://msdn.microsoft.com/en-us/dec4728c-8dff-4e30-abe0-0f78fb5d5af5).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityConnection (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">A cadeia de conexão específica do provedor.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.EntityClient.EntityConnection" /> com base na cadeia de conexão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A gerar uma cadeia de caracteres de conexão nomeada que é armazenada no arquivo de configuração do aplicativo. Essa cadeia de caracteres de conexão nomeada pode ser fornecida em vez do `connectionString` parâmetro quando você cria uma instância de <xref:System.Data.EntityClient.EntityConnection> classe.  
+  
+ Para evitar que inadvertidamente objetos <xref:System.Data.Common.CommandTrees> e <xref:System.Data.Objects.ObjectContext> fora de sincronia com metadados, <xref:System.Data.EntityClient.EntityConnection> deve bloquear seus metadados. Nenhuma alteração para a cadeia de caracteres de conexão é permitida depois que os metadados é bloqueado. Estes são dois cenários em que os metadados está bloqueado:  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é criada por meio do construtor padrão, ou este construtor (<xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.String%29>), que aceita uma cadeia de caracteres de conexão. Em qualquer caso a cadeia de caracteres de conexão pode ser alterada várias vezes antes que a conexão é aberta. Chamando <xref:System.Data.EntityClient.EntityConnection.Open%2A> ou <xref:System.Data.EntityClient.EntityConnection.GetMetadataWorkspace%2A> bloqueia os metadados.  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é construída por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.Data.Metadata.Edm.MetadataWorkspace%2CSystem.Data.Common.DbConnection%29> construtor, que aceita um <xref:System.Data.Metadata.Edm.MetadataWorkspace> e um <xref:System.Data.Common.DbConnection>. Nesse caso, os metadados está bloqueado no momento da construção. Nenhuma alteração para a cadeia de caracteres de conexão nunca é permitidas.  
+  
+ Quando os metadados forem carregados, o <xref:System.Data.EntityClient.EntityConnection> verifica se o arquivo de mapeamento, o modelo conceitual e o modelo de armazenamento estão presentes.  
+  
+ Para obter exemplos de código, consulte [trabalhando com EntityClient](http://msdn.microsoft.com/en-us/dec4728c-8dff-4e30-abe0-0f78fb5d5af5).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Uma palavra-chave de cadeia de conexão inválida foi fornecida ou uma palavra-chave de cadeia de conexão obrigatória não foi fornecida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityConnection (System.Data.Metadata.Edm.MetadataWorkspace workspace, System.Data.Common.DbConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.Metadata.Edm.MetadataWorkspace workspace, class System.Data.Common.DbConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.#ctor(System.Data.Metadata.Edm.MetadataWorkspace,System.Data.Common.DbConnection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workspace" Type="System.Data.Metadata.Edm.MetadataWorkspace" />
+        <Parameter Name="connection" Type="System.Data.Common.DbConnection" />
+      </Parameters>
+      <Docs>
+        <param name="workspace">O <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" /> a ser associado a esse <see cref="T:System.Data.EntityClient.EntityConnection" />.</param>
+        <param name="connection">A conexão da fonte de dados subjacente para esse objeto <see cref="T:System.Data.EntityClient.EntityConnection" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.EntityClient.EntityConnection" /> com o <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" /> e o <see cref="T:System.Data.Common.DbConnection" /> especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor permite que você crie um <xref:System.Data.EntityClient.EntityConnection> de metadados que não de um arquivo em um disco ou de um recurso inserido em um assembly.  
+  
+ Para evitar inadvertidamente a colocação de objetos, como <xref:System.Data.Common.CommandTrees> e <xref:System.Data.Objects.ObjectContext> fora de sincronia com metadados, o <xref:System.Data.EntityClient.EntityConnection> deve bloquear seus metadados. Nenhuma alteração para a cadeia de caracteres de conexão é permitida depois que os metadados é bloqueado. Estes são dois cenários em que os metadados está bloqueado:  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é criada por meio do construtor padrão, ou por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.String%29> construtor, que aceita uma cadeia de caracteres de conexão. Em qualquer caso a cadeia de caracteres de conexão pode ser alterada várias vezes antes que a conexão é aberta. Chamando <xref:System.Data.EntityClient.EntityConnection.Open%2A> ou <xref:System.Data.EntityClient.EntityConnection.GetMetadataWorkspace%2A> bloqueia os metadados.  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é construída através deste construtor (<xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.Data.Metadata.Edm.MetadataWorkspace%2CSystem.Data.Common.DbConnection%29>), que aceita um <xref:System.Data.Metadata.Edm.MetadataWorkspace> e um <xref:System.Data.Common.DbConnection>. Nesse caso, os metadados está bloqueado no momento da construção. Nenhuma alteração para a cadeia de caracteres de conexão nunca é permitidas.  
+  
+ Quando os metadados forem carregados, o <xref:System.Data.EntityClient.EntityConnection> verifica se o arquivo de mapeamento, o modelo conceitual e o modelo de armazenamento estão presentes.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="workspace" /> ou <paramref name="connection" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O modelo conceitual está ausente do espaço de trabalho.  
+  
+ -ou-  
+  
+ O arquivo de mapeamento está ausente do espaço de trabalho.  
+  
+ -ou-  
+  
+ O modelo de armazenamento está ausente do espaço de trabalho.  
+  
+ -ou-  
+  
+ O <paramref name="connection" /> não está em um estado fechado.</exception>
+        <exception cref="T:System.Data.ProviderIncompatibleException">O <paramref name="connection" /> não é de um provedor compatível com o ADO.NET Entity Framework.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDbTransaction">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbTransaction BeginDbTransaction (System.Data.IsolationLevel isolationLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbTransaction BeginDbTransaction(valuetype System.Data.IsolationLevel isolationLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.BeginDbTransaction(System.Data.IsolationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isolationLevel" Type="System.Data.IsolationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="isolationLevel">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransaction">
+      <MemberSignature Language="C#" Value="public System.Data.EntityClient.EntityTransaction BeginTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.EntityClient.EntityTransaction BeginTransaction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.BeginTransaction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityClient.EntityTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia uma transação usando o provedor subjacente.</summary>
+        <returns>Um novo <see cref="T:System.Data.EntityClient.EntityTransaction" />. A instância <see cref="T:System.Data.EntityClient.EntityTransaction" /> retornada pode, posteriormente, ser associada a <see cref="T:System.Data.EntityClient.EntityCommand" /> para executar o comando na transação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.EntityClient.EntityConnection.BeginTransaction%2A> método usa o <xref:System.Data.IsolationLevel.Unspecified> nível de isolamento da transação. Para especificar um nível de isolamento diferente, chamar <xref:System.Data.EntityClient.EntityConnection.BeginTransaction%2A>. Esse valor pode ser interpretado diferentemente por diferentes provedores subjacentes. Se você quiser que seu aplicativo para ser portátil em vários provedores, ela deve especificar explicitamente o nível de isolamento da transação chamando <xref:System.Data.EntityClient.EntityConnection.BeginTransaction%2A>.  
+  
+ Em qualquer determinado momento pode haver não mais de uma transação ativa que foi criada por meio de <xref:System.Data.EntityClient.EntityConnection.BeginTransaction%2A>. Uma tentativa de chamar qualquer uma da <xref:System.Data.EntityClient.EntityConnection.BeginTransaction%2A> sobrecargas em uma <xref:System.Data.EntityClient.EntityConnection> que já tem um resultados de transação atual em um <xref:System.InvalidOperationException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O provedor subjacente não é conhecido.  
+  
+ -ou-  
+  
+ A chamada para <see cref="M:System.Data.EntityClient.EntityConnection.BeginTransaction" /> foi feita em um <see cref="T:System.Data.EntityClient.EntityConnection" /> que já tem uma transação atual.  
+  
+ -ou-  
+  
+ O estado do <see cref="T:System.Data.EntityClient.EntityConnection" /> não é <see cref="F:System.Data.ConnectionState.Open" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransaction">
+      <MemberSignature Language="C#" Value="public System.Data.EntityClient.EntityTransaction BeginTransaction (System.Data.IsolationLevel isolationLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.EntityClient.EntityTransaction BeginTransaction(valuetype System.Data.IsolationLevel isolationLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.BeginTransaction(System.Data.IsolationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityClient.EntityTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isolationLevel" Type="System.Data.IsolationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="isolationLevel">O nível de isolamento da transação.</param>
+        <summary>Inicia uma transação com o nível de isolamento especificado, usando o provedor subjacente.</summary>
+        <returns>Um novo <see cref="T:System.Data.EntityClient.EntityTransaction" />. A instância <see cref="T:System.Data.EntityClient.EntityTransaction" /> retornada pode, posteriormente, ser associada a <see cref="T:System.Data.EntityClient.EntityCommand" /> para executar o comando na transação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em qualquer determinado momento pode haver não mais de uma transação ativa que foi criada por meio de <xref:System.Data.EntityClient.EntityConnection.BeginTransaction%2A>. Uma tentativa de chamar qualquer uma da <xref:System.Data.EntityClient.EntityConnection.BeginTransaction%2A> sobrecargas em uma <xref:System.Data.EntityClient.EntityConnection> que já tem um resultados de transação atual em um <xref:System.InvalidOperationException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O provedor subjacente não é conhecido.  
+  
+ -ou-  
+  
+ A chamada para <see cref="M:System.Data.EntityClient.EntityConnection.BeginTransaction" /> foi feita em um <see cref="T:System.Data.EntityClient.EntityConnection" /> que já tem uma transação atual.  
+  
+ -ou-  
+  
+ O estado do <see cref="T:System.Data.EntityClient.EntityConnection" /> não é <see cref="F:System.Data.ConnectionState.Open" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeDatabase">
+      <MemberSignature Language="C#" Value="public override void ChangeDatabase (string databaseName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ChangeDatabase(string databaseName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.ChangeDatabase(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="databaseName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="databaseName">Não há suporte.</param>
+        <summary>Não há suporte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.EntityClient.EntityConnection.ChangeDatabase%2A> método é necessário ao derivar de <xref:System.Data.Common.DbConnection>. Esse método não é suportado e gerará um <xref:System.NotSupportedException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Quando o método é chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha a conexão com o banco de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o provedor de dados subjacente não for conhecida, a chamada para <xref:System.Data.EntityClient.EntityConnection.Close%2A> não fará nada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorreu um erro ao fechar a conexão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="public override string ConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityConnection.ConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de conexão <see cref="T:System.Data.EntityClient.EntityConnection" />.</summary>
+        <value>A cadeia de conexão necessária para estabelecer a conexão inicial com uma fonte de dados. O valor padrão é uma cadeia de caracteres vazia. Em uma conexão fechada, o valor definido no momento é retornado. Se nenhum valor tiver sido definido, uma cadeia de caracteres vazia será retornada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um `EntityClient` cadeia de caracteres de conexão consiste em uma sequência de pares de parâmetro de palavra-chave/valor separados por ponto e vírgula. O sinal de igual (=) conecta-se a cada palavra-chave e seu valor. A tabela a seguir lista os nomes válidos para valores de palavra-chave na propriedade <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
+  
+|Palavra-chave|Descrição|  
+|-------------|-----------------|  
+|`Provider`|Necessária quando a palavra-chave `Name` não é especificada. O nome do provedor, que é usado para recuperar o objeto <xref:System.Data.Common.DbProviderFactory> do provedor subjacente. Esse valor é constante.<br /><br /> Quando o `Name` palavra-chave não está incluído na cadeia de conexão, um valor não vazio para o `Provider` palavra-chave é necessária. Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.|  
+|`Provider Connection String`|Opcional. Especifica a cadeia de conexão específica ao provedor que é passada para a fonte de dados subjacente. Essa cadeia de conexão é expressa usando pares de palavra-chave-valor válidos para o provedor de dados. Uma palavra-chave `Provider Connection String` inválida produzirá um erro em tempo de execução ao ser avaliada pela fonte de dados.<br /><br /> Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.<br /><br /> O valor da palavra-chave `Provider Connection String` deve ficar entre aspas. A seguir está um exemplo:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> O exemplo a seguir não funcionará:<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
+|`Metadata`|Necessária quando a palavra-chave `Name` não é especificada. Uma lista delimitada de diretórios, arquivos e locais de recursos no qual procurar o modelo e informações de mapeamento. A seguir está um exemplo:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Os espaços em branco em cada lado do separador de pipe são ignorados.<br /><br /> Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.|  
+|`Name`|O aplicativo pode, opcionalmente, especificar o nome da conexão em um arquivo de configuração do aplicativo que forneça os valores de cadeia de conexão de palavra-chave-valor necessários. Nesse caso, não é possível fornecê-los diretamente na cadeia de conexão. A palavra-chave `Name` não é permitida em um arquivo de configuração.<br /><br /> Quando a palavra-chave `Name` não é incluída na cadeia de conexão, um valor não vazio para a palavra-chave Provider é necessário.<br /><br /> Essa palavra-chave é mutuamente excludente com todos as outras palavras-chave de cadeia de conexão.|  
+  
+ O aplicativo pode fornecer os palavra-chave/valores diretamente no <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> propriedade ou pode especificar um valor para o `Name` palavra-chave. Se o `Name` palavra-chave for especificado, os palavra-chave/valores de cadeia de caracteres de conexão são recuperados de um arquivo de configuração do aplicativo, da seguinte maneira:  
+  
+ `Name=AdventureWorksEntities;`  
+  
+ Se o `Name` palavra-chave é usada a <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> propriedade, não é permitidas outras palavras-chave. O `Name` palavra-chave se refere a uma cadeia de caracteres de conexão nomeada que é armazenada no `connectionStrings` seção em um arquivo de configuração do aplicativo, conforme mostrado no exemplo a seguir. O `Provider`, `Metadata`, e `Provider Connection String` valores são recuperados do arquivo de configuração em tempo de execução.  
+  
+  
+  
+ Os pares de palavra-chave/valor também podem ser fornecidos diretamente no <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> propriedade, conforme mostrado no exemplo a seguir. Nesse caso, o `Name` palavra-chave não é usada.  
+  
+```  
+"Provider=System.Data.SqlClient;  
+Metadata=c:\metadata|c:\Metadata\Sql;  
+Provider Connection String= 'Data Source=localhost;  
+    Initial Catalog=AdventureWorks;Integrated Security=True;Connection Timeout=60' "  
+```  
+  
+ Para evitar inadvertidamente a colocação de objetos, como <xref:System.Data.Common.CommandTrees> e <xref:System.Data.Objects.ObjectContext> fora de sincronia com metadados, <xref:System.Data.EntityClient.EntityConnection> deve bloquear seus metadados. Nenhuma alteração para a cadeia de caracteres de conexão é permitida depois que os metadados é bloqueado. Estes são dois cenários em que os metadados está bloqueado:  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é criada por meio do construtor padrão, ou por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.String%29> construtor, que aceita uma cadeia de caracteres de conexão. Em qualquer caso a cadeia de caracteres de conexão pode ser alterada várias vezes antes que a conexão é aberta. Chamando <xref:System.Data.EntityClient.EntityConnection.Open%2A> ou <xref:System.Data.EntityClient.EntityConnection.GetMetadataWorkspace%2A> bloqueia os metadados.  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é construída por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.Data.Metadata.Edm.MetadataWorkspace%2CSystem.Data.Common.DbConnection%29> construtor, que aceita um <xref:System.Data.Metadata.Edm.MetadataWorkspace> e um <xref:System.Data.Common.DbConnection>. Nesse caso, os metadados está bloqueado no momento da construção. Nenhuma alteração para a cadeia de caracteres de conexão nunca é permitidas.  
+  
+ Quando os metadados forem carregados, o <xref:System.Data.EntityClient.EntityConnection> verifica se o arquivo de mapeamento, o modelo conceitual e o modelo de armazenamento estão presentes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Data.EntityClient.EntityConnectionStringBuilder> em conjunto com um <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. O código define as propriedades de um `SqlConnectionStringBuilder` para criar um <xref:System.Data.SqlClient.SqlConnection> cadeia de caracteres que fornece a parte da cadeia de caracteres de conexão de provedor subjacente. Observe que o `Provider` nome não pode ser definido usando o `SqlConnectionStringBuilder`, porque ele não usa válido `SqlConnection` sintaxe. O código cria o <xref:System.Data.EntityClient.EntityConnection> cadeia de caracteres, definindo `EntityConnectionStringBuilder` propriedades.  
+  
+ [!code-csharp[eSQLBasicExamples#BuildingConnectionStringWithEntityCommand](~/samples/snippets/csharp/VS_Snippets_Data/eSQLBasicExamples/CS/Program.cs#buildingconnectionstringwithentitycommand)]
+ [!code-vb[eSQLBasicExamples#BuildingConnectionStringWithEntityCommand](~/samples/snippets/visualbasic/VS_Snippets_Data/eSQLBasicExamples/VB/Program.vb#buildingconnectionstringwithentitycommand)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentativa de definir a propriedade <see cref="P:System.Data.EntityClient.EntityConnection.ConnectionString" /> após a inicialização do <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" /> do <see cref="EntityConnection" />. O <see cref="MetadataWorkspace" /> é inicializado quando a instância <see cref="EntityConnection" /> é construída por meio da sobrecarga que utiliza um <see cref="MetadataWorkspace" /> como parâmetro, ou quando a instância <see cref="T:System.Data.EntityClient.EntityConnection" /> foi aberta.</exception>
+        <exception cref="T:System.ArgumentException">Uma palavra-chave de cadeia de conexão inválida foi fornecida ou uma palavra-chave de cadeia de conexão obrigatória não foi fornecida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionTimeout">
+      <MemberSignature Language="C#" Value="public override int ConnectionTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectionTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityConnection.ConnectionTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de segundos de espera ao tentar estabelecer uma conexão antes de encerrar a tentativa e gerar um erro.</summary>
+        <value>O tempo (em segundos) de espera para abrir uma conexão. O valor padrão é o tempo limite padrão do provedor de dados subjacente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna zero se o provedor de dados subjacente não é conhecido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor definido é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCommand">
+      <MemberSignature Language="C#" Value="public System.Data.EntityClient.EntityCommand CreateCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.EntityClient.EntityCommand CreateCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.CreateCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityClient.EntityCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de um <see cref="T:System.Data.EntityClient.EntityCommand" />, com o <see cref="P:System.Data.EntityClient.EntityCommand.Connection" /> definido para esse <see cref="T:System.Data.EntityClient.EntityConnection" />.</summary>
+        <returns>Um objeto <see cref="T:System.Data.EntityClient.EntityCommand" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O nome do provedor de dados subjacente não é conhecido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDbCommand">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbCommand CreateDbCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbCommand CreateDbCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.CreateDbCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Database">
+      <MemberSignature Language="C#" Value="public override string Database { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Database" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityConnection.Database" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do banco de dados atual ou o banco de dados que será usado depois que uma conexão é aberta.</summary>
+        <value>O valor de <see langword="Database" /> propriedade do provedor de dados subjacente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o valor de palavra-chave específica, como `Database`, que mapeia para o <xref:System.Data.EntityClient.EntityConnection.Database%2A> propriedade, consulte a documentação para o provedor de dados subjacente. Para [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] equivalentes palavras-chave, consulte a documentação para o <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O provedor de dados subjacente não é conhecido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public override string DataSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityConnection.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome ou endereço de rede da fonte de dados para se conectar ao.</summary>
+        <value>O nome da fonte de dados. O valor padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o valor de palavra-chave específica, como `DataSource`, que mapeia para o <xref:System.Data.EntityClient.EntityConnection.DataSource%2A> propriedade, consulte a documentação para o provedor de dados subjacente. Para [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] equivalentes palavras-chave, consulte a documentação para o <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O provedor de dados subjacente não é conhecido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DbProviderFactory">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbProviderFactory DbProviderFactory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbProviderFactory DbProviderFactory" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityConnection.DbProviderFactory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbProviderFactory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnlistTransaction">
+      <MemberSignature Language="C#" Value="public override void EnlistTransaction (System.Transactions.Transaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EnlistTransaction(class System.Transactions.Transaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.EnlistTransaction(System.Transactions.Transaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Transactions.Transaction" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">O objeto de transação para inscrever-se em.</param>
+        <summary>Inscreve isso <see cref="T:System.Data.EntityClient.EntityConnection" /> na transação especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método encaminha a chamada para a conexão de fonte de dados para explicitamente se inscrever no passado <xref:System.Transactions.Transaction>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O estado do <see cref="T:System.Data.EntityClient.EntityConnection" /> não é <see cref="F:System.Data.ConnectionState.Open" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataWorkspace">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.MetadataWorkspace GetMetadataWorkspace ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Metadata.Edm.MetadataWorkspace GetMetadataWorkspace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.GetMetadataWorkspace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.MetadataWorkspace</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" /> associado a este <see cref="T:System.Data.EntityClient.EntityConnection" />.</summary>
+        <returns>O <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" /> associado a este <see cref="T:System.Data.EntityClient.EntityConnection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Data.Metadata.Edm.MetadataWorkspace> é criado automaticamente quando o <xref:System.Data.EntityClient.EntityConnection> classe é criada. O processo de criação pode lançar exceções específicas de metadados. Metadados são carregados na memória e um aplicativo do modelo de dados de entidade (EDM) usa metadados para acessar informações sobre a fonte de dados subjacente. Para obter mais informações, consulte [metadados ADO.NET](http://msdn.microsoft.com/en-us/196097a5-a791-4ac4-9e6a-805685d481d5).  
+  
+ Para evitar inadvertidamente a colocação de objetos, como <xref:System.Data.Common.CommandTrees> e <xref:System.Data.Objects.ObjectContext> fora de sincronia com metadados, <xref:System.Data.EntityClient.EntityConnection> deve bloquear seus metadados. Nenhuma alteração para a cadeia de caracteres de conexão é permitida depois que os metadados é bloqueado. Estes são dois cenários em que os metadados está bloqueado:  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é criada por meio do construtor padrão, ou por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.String%29> construtor, que aceita uma cadeia de caracteres de conexão. Em qualquer caso a cadeia de caracteres de conexão pode ser alterada várias vezes antes que a conexão é aberta. <xref:System.Data.EntityClient.EntityConnection.Open%2A>ou <xref:System.Data.EntityClient.EntityConnection.GetMetadataWorkspace%2A> bloqueia os metadados.  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é construída por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.Data.Metadata.Edm.MetadataWorkspace%2CSystem.Data.Common.DbConnection%29> construtor, que aceita um <xref:System.Data.Metadata.Edm.MetadataWorkspace> e um <xref:System.Data.Common.DbConnection>. Nesse caso, os metadados está bloqueado no momento da construção. Nenhuma alteração para a cadeia de caracteres de conexão nunca é permitidas.  
+  
+ Quando os metadados forem carregados, o <xref:System.Data.EntityClient.EntityConnection> verifica se o arquivo de mapeamento, o modelo conceitual e o modelo de armazenamento estão presentes.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.MetadataException">A cadeia de conexão embutida contém um valor de palavra-chave <see langword="Metadata" /> inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public override void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EntityClient.EntityConnection.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Estabelece uma conexão à fonte de dados chamando o provedor de dados subjacente <see langword="Open" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar inadvertidamente a colocação de objetos, como <xref:System.Data.Common.CommandTrees> e <xref:System.Data.Objects.ObjectContext> fora de sincronia com metadados, <xref:System.Data.EntityClient.EntityConnection> deve bloquear seus metadados. Nenhuma alteração para a cadeia de caracteres de conexão é permitida depois que os metadados é bloqueado. Estes são dois cenários em que os metadados está bloqueado:  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é criada por meio do construtor padrão, ou por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.String%29> construtor, que aceita uma cadeia de caracteres de conexão. Em qualquer caso a cadeia de caracteres de conexão pode ser alterada várias vezes antes que a conexão é aberta. Chamando <xref:System.Data.EntityClient.EntityConnection.Open%2A> ou <xref:System.Data.EntityClient.EntityConnection.GetMetadataWorkspace%2A> bloqueia os metadados.  
+  
+-   O <xref:System.Data.EntityClient.EntityConnection> instância é construída por meio de <xref:System.Data.EntityClient.EntityConnection.%23ctor%28System.Data.Metadata.Edm.MetadataWorkspace%2CSystem.Data.Common.DbConnection%29> construtor que aceita um <xref:System.Data.Metadata.Edm.MetadataWorkspace> e um <xref:System.Data.Common.DbConnection>. Nesse caso, os metadados está bloqueado no momento da construção. Nenhuma alteração para a cadeia de caracteres de conexão nunca é permitidas.  
+  
+ Quando os metadados forem carregados, o <xref:System.Data.EntityClient.EntityConnection> verifica se o arquivo de mapeamento, o modelo conceitual e o modelo de armazenamento estão presentes.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorre um erro quando você abre a conexão ou o nome do provedor de dados subjacente não é conhecido.</exception>
+        <exception cref="T:System.Data.MetadataException">A cadeia de conexão embutida contém um valor de palavra-chave <see langword="Metadata" /> inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerVersion">
+      <MemberSignature Language="C#" Value="public override string ServerVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServerVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityConnection.ServerVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que contém a versão da fonte de dados ao qual o cliente está conectado.</summary>
+        <value>A versão da fonte de dados que está contido na cadeia de conexão de provedor.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">A conexão está fechada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Data.ConnectionState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.ConnectionState State" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityConnection.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ConnectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.ConnectionState" /> propriedade do provedor subjacente se o <see cref="T:System.Data.EntityClient.EntityConnection" /> está aberto. Caso contrário, retornará <see cref="F:System.Data.ConnectionState.Closed" />.</summary>
+        <value>
+          <see cref="F:System.Data.ConnectionState.Open" />, se e somente se o <see cref="T:System.Data.EntityClient.EntityConnection" />do estado interno e o provedor subjacente <see cref="T:System.Data.ConnectionState" /> estão abertas. Se o <see cref="T:System.Data.EntityClient.EntityConnection" />do estado é aberto, mas o provedor <see cref="T:System.Data.ConnectionState" /> for fechada, essa propriedade retornará <see cref="F:System.Data.ConnectionState.Broken" />. Caso contrário, retornará <see cref="F:System.Data.ConnectionState.Closed" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreConnection">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbConnection StoreConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbConnection StoreConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.EntityClient.EntityConnection.StoreConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece acesso à conexão da fonte de dados subjacente que é usada pelo objeto <see cref="T:System.Data.EntityClient.EntityConnection" />.</summary>
+        <value>O <see cref="T:System.Data.Common.DbConnection" /> para a conexão de fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Data.EntityClient.EntityConnection> objeto é fechado, a conexão de fonte de dados retornado será fechado. Se estiver aberto, uma conexão de fonte de dados será retornado. Se as informações de conexão de fonte de dados foi definidas, o valor retornado é sempre não nulo. Se não houver nenhuma informação de conexão de fonte de dados (por exemplo, se o construtor padrão foi usado e nenhuma cadeia de caracteres de conexão foi definida mais tarde), uma referência nula é retornada.  
+  
+ A mesma conexão de fonte de dados usada pelo Entity Framework pode ser compartilhado com outras partes de um aplicativo. A conexão de fonte de dados é retornada como um <xref:System.Data.Common.DbConnection> de objeto o <xref:System.Data.Objects.ObjectContext.Connection%2A> propriedade de <xref:System.Data.Objects.ObjectContext>, ou do <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> propriedade de <xref:System.Data.EntityClient.EntityConnection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

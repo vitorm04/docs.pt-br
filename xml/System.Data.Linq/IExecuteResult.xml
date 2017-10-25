@@ -1,0 +1,74 @@
+<Type Name="IExecuteResult" FullName="System.Data.Linq.IExecuteResult">
+  <TypeSignature Language="C#" Value="public interface IExecuteResult : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExecuteResult implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.IExecuteResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece acesso para o valor de retorno ou os resultados da execução de uma consulta.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetParameterValue">
+      <MemberSignature Language="C#" Value="public object GetParameterValue (int parameterIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetParameterValue(int32 parameterIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.IExecuteResult.GetParameterValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterIndex">O índice do parâmetro a ser recuperado.</param>
+        <summary>Fornece acesso para o * n *ésimo parâmetro de saída.</summary>
+        <returns>Um objeto que contém o valor do parâmetro especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é geralmente usado quando a consulta é uma função mapeada que tem parâmetros de saída.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnValue">
+      <MemberSignature Language="C#" Value="public object ReturnValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ReturnValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.IExecuteResult.ReturnValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de retorno ou o resultado da consulta executada.</summary>
+        <value>O valor ou o resultado da consulta executada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse objeto tem o mesmo tipo subjacente que o `Type` propriedade da expressão de consulta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

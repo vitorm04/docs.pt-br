@@ -1,0 +1,19 @@
+<Namespace Name="System.Linq">
+  <Docs>
+    <summary>O <see cref="N:System.Linq" /> namespace fornece classes e interfaces que oferecem suporte a consultas que usam LINQ (consulta).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Linq> namespace está no assembly Core (em System.Core.dll).  
+  
+ O <xref:System.Linq.Enumerable> classe contém [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operadores de consulta padrão que operam em objetos que implementam <xref:System.Collections.Generic.IEnumerable%601>.  
+  
+ O <xref:System.Linq.Queryable> classe contém [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operadores de consulta padrão que operam em objetos que implementam <xref:System.Linq.IQueryable%601>.  
+  
+ Para obter informações sobre o LINQ to SQL, consulte [LINQ to SQL &#91; LINQ to SQL &#93; ](http://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

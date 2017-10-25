@@ -1,0 +1,199 @@
+<Type Name="RequiredFieldValidator" FullName="System.Web.UI.WebControls.RequiredFieldValidator">
+  <TypeSignature Language="C#" Value="public class RequiredFieldValidator : System.Web.UI.WebControls.BaseValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequiredFieldValidator extends System.Web.UI.WebControls.BaseValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RequiredFieldValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.BaseValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:RequiredFieldValidator runat="server" ErrorMessage="RequiredFieldValidator"&gt;&lt;/{0}:RequiredFieldValidator&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Faz do controle de entrada associado um campo obrigatório.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este controle para fazer um controle de entrada de um campo obrigatório. O controle de entrada Falha na validação se não altera seu valor da <xref:System.Web.UI.WebControls.RequiredFieldValidator.InitialValue%2A> propriedade perdendo o foco.  
+  
+ Vários validadores podem ser associados com o mesmo controle de entrada. Por exemplo, um <xref:System.Web.UI.WebControls.RequiredFieldValidator> pode ser usado para garantir a entrada para um controle, e, ao mesmo tempo um <xref:System.Web.UI.WebControls.RangeValidator> pode ser usado para garantir que a entrada está em um intervalo de dados especificado.  
+  
+> [!NOTE]
+>  Quando você usa o <xref:System.Web.UI.WebControls.RequiredFieldValidator> controle dentro de um <xref:System.Web.UI.UpdatePanel> de controle, certifique-se de que o controle de validação e o controle está associado são do mesmo painel. Para obter mais informações sobre como usar o <xref:System.Web.UI.UpdatePanel> para atualizações parciais de página, consulte [visão geral de renderização de página parcial](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+ Para obter informações adicionais sobre os controles de validação, consulte <xref:System.Web.UI.WebControls.BaseValidator>.  
+  
+## <a name="accessibility"></a>Acessibilidade  
+ Para obter informações sobre como configurar este controle para que ele gera marcação que está de acordo com os padrões de acessibilidade, consulte [acessibilidade no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) e [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.RequiredFieldValidator> controle para certificar-se de que o usuário insere um valor na caixa de texto.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic RequiredFieldValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RequiredFieldValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic RequiredFieldValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RequiredFieldValidator Example/VB/sourcevb.aspx#1)]
+ [!code-xml[Classic RequiredFieldValidator Example#1](~/samples/snippets/common/VS_Snippets_WebNet/Classic RequiredFieldValidator Example/Common/source.xml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequiredFieldValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RequiredFieldValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.RequiredFieldValidator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.RequiredFieldValidator> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RequiredFieldValidator.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Adiciona os atributos HTML e estilos que precisam ser processados para o controle especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.RequiredFieldValidator.AddAttributesToRender%2A> método em um controle de servidor personalizado para que o <xref:System.Web.UI.WebControls.RequiredFieldValidator> mensagem de erro sempre exibe como negrito.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomRequiredFieldValidatorAddAttributesToRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRequiredFieldValidatorAddAttributesToRender/CS/custom_requiredfieldvalidator_addattributestorendercs.aspx#1)]
+ [!code-aspx-vb[CustomRequiredFieldValidatorAddAttributesToRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRequiredFieldValidatorAddAttributesToRender/VB/custom_requiredfieldvalidator_addattributestorendervb.aspx#1)]  
+[!code-csharp[CustomRequiredFieldValidatorAddAttributesToRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRequiredFieldValidatorAddAttributesToRender/CS/custom_requiredfieldvalidator_addattributestorender.cs#2)]
+[!code-vb[CustomRequiredFieldValidatorAddAttributesToRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRequiredFieldValidatorAddAttributesToRender/VB/custom_requiredfieldvalidator_addattributestorender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateIsValid">
+      <MemberSignature Language="C#" Value="protected override bool EvaluateIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool EvaluateIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RequiredFieldValidator.EvaluateIsValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado durante o estágio de validação quando o ASP.NET processa um formulário da Web.</summary>
+        <returns>
+          <see langword="true" /> se o valor no controle de entrada for válido, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.RequiredFieldValidator.EvaluateIsValid%2A> método em um servidor personalizado de controle para que ele sempre retorna `false` se o valor da <xref:System.Web.UI.WebControls.RequiredFieldValidator> é nulo ou vazio e sempre retorna `true` caso contrário.  
+  
+ [!code-aspx-csharp[CustomRequiredFieldValidatorEvaluateIsValid#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRequiredFieldValidatorEvaluateIsValid/CS/custom_requiredfieldvalidator_evaluateisvalidcs.aspx#1)]
+ [!code-aspx-vb[CustomRequiredFieldValidatorEvaluateIsValid#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRequiredFieldValidatorEvaluateIsValid/VB/custom_requiredfieldvalidator_evaluateisvalidvb.aspx#1)]  
+[!code-csharp[CustomRequiredFieldValidatorEvaluateIsValid#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRequiredFieldValidatorEvaluateIsValid/CS/custom_requiredfieldvalidator_evaluateisvalid.cs#2)]
+[!code-vb[CustomRequiredFieldValidatorEvaluateIsValid#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRequiredFieldValidatorEvaluateIsValid/VB/custom_requiredfieldvalidator_evaluateisvalid.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialValue">
+      <MemberSignature Language="C#" Value="public string InitialValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InitialValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RequiredFieldValidator.InitialValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor inicial do controle de entrada associado.</summary>
+        <value>Uma cadeia de caracteres que especifica o valor inicial do controle de entrada associado. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para especificar o valor inicial do controle de entrada.  
+  
+ Validação falhar apenas se o valor do controle de entrada associado com este <xref:System.Web.UI.WebControls.RequiredFieldValidator.InitialValue%2A> após perdendo o foco.  
+  
+> [!NOTE]
+>  As cadeias de caracteres em ambos os <xref:System.Web.UI.WebControls.RequiredFieldValidator.InitialValue%2A> propriedade e o controle de entrada são cortadas para remover espaços extras antes e depois a cadeia de caracteres antes da validação é executada.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.RequiredFieldValidator.InitialValue%2A> propriedade para garantir que o usuário insere um valor na caixa de texto.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic RequiredFieldValidator.InitialValue Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RequiredFieldValidator.InitialValue Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic RequiredFieldValidator.InitialValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RequiredFieldValidator.InitialValue Example/VB/sourcevb.aspx#1)]  
+  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.RequiredFieldValidator.InitialValue%2A> propriedade para garantir que o usuário seleciona um item de caixa de listagem.  
+  
+ [!code-aspx-csharp[Classic RequiredFieldValidator.InitialValue Example#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RequiredFieldValidator.InitialValue Example/CS/source2cs.aspx#2)]
+ [!code-aspx-vb[Classic RequiredFieldValidator.InitialValue Example#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RequiredFieldValidator.InitialValue Example/VB/source2vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

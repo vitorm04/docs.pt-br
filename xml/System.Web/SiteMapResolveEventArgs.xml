@@ -1,0 +1,115 @@
+<Type Name="SiteMapResolveEventArgs" FullName="System.Web.SiteMapResolveEventArgs">
+  <TypeSignature Language="C#" Value="public class SiteMapResolveEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SiteMapResolveEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SiteMapResolveEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para um evento que é gerado por chamar o <see cref="P:System.Web.SiteMapProvider.CurrentNode" /> propriedade o <see cref="T:System.Web.SiteMapProvider" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMapResolveEventArgs> classe é usada no <xref:System.Web.SiteMapProvider.ResolveSiteMapNode%2A> método para permitir que os assinantes a <xref:System.Web.SiteMapProvider.SiteMapResolve> evento para retornar uma instância do <xref:System.Web.SiteMapNode> classe. Adicionando um delegado de manipulador de eventos para lidar com o <xref:System.Web.SiteMapProvider.SiteMapResolve> eventos, você pode criar um <xref:System.Web.SiteMapNode> representação de uma página sem implementar um provedor de mapa de site personalizado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como tratar o <xref:System.Web.SiteMap.SiteMapResolve> evento em uma página da Web ASP.NET para modificar as URLs de destino que são exibidas por um controle de navegação do site, como o <xref:System.Web.UI.WebControls.SiteMapPath> controle. Neste exemplo, a página atual for uma página de postagem em um quadro de avisos online ou o fórum. Para tornar mais significativa a navegação do site, as URLs de nós exibido pelo controle de navegação serão anexados com cadeias de caracteres de consulta que são relevantes para o contexto.  
+  
+ **Observação** é seguro acessar o <xref:System.Web.SiteMap.CurrentNode%2A> propriedade de dentro de <xref:System.Web.SiteMapResolveEventHandler> classe. A infraestrutura de navegação de site ASP.NET protege contra a recursão infinita, nesse caso.  
+  
+ [!code-csharp[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/CS/sitemapresolve1cs.aspx.cs#1)]
+ [!code-vb[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/VB/sitemapresolve1vb.aspx.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapResolveEventArgs (System.Web.HttpContext context, System.Web.SiteMapProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.HttpContext context, class System.Web.SiteMapProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SiteMapResolveEventArgs.#ctor(System.Web.HttpContext,System.Web.SiteMapProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="provider" Type="System.Web.SiteMapProvider" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Web.HttpContext" /> que representa o contexto da solicitação de página atual.</param>
+        <param name="provider">O <see cref="T:System.Web.SiteMapProvider" /> que gerou o <see cref="E:System.Web.SiteMapProvider.SiteMapResolve" /> evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.SiteMapResolveEventArgs" /> classe usando especificado <see cref="T:System.Web.HttpContext" /> e <see cref="T:System.Web.SiteMapProvider" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `context` e `provider` parâmetros podem ser `null`.  
+  
+ O <xref:System.Web.XmlSiteMapProvider> objeto inicializa uma nova instância do <xref:System.Web.SiteMapResolveEventArgs> classe com valores que não são `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Web.HttpContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapResolveEventArgs.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contexto da solicitação de página que representa o nó solicitado.</summary>
+        <value>Um <see cref="T:System.Web.HttpContext" />, se um for especificado; caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os assinantes do evento podem usar o <xref:System.Web.HttpContext> e <xref:System.Web.SiteMapProvider> objetos para criar dinamicamente uma <xref:System.Web.SiteMapNode> de objeto e recuperar informações sobre a página solicitada, como a URL solicitada, bem como informações do usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Web.SiteMapProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.SiteMapProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMapResolveEventArgs.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.SiteMapProvider" /> objeto que gerou o <see cref="E:System.Web.SiteMapProvider.SiteMapResolve" /> evento.</summary>
+        <value>O <see cref="T:System.Web.SiteMapProvider" /> que disparou o evento; caso contrário, <see langword="null" />, se nenhum provedor é especificado durante a <see langword="EventArgs" /> construção do objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os assinantes do evento podem usar o <xref:System.Web.HttpContext> e <xref:System.Web.SiteMapProvider> objetos para criar dinamicamente uma <xref:System.Web.SiteMapNode> de objeto e recuperar informações sobre a página solicitada, como a URL solicitada, bem como informações do usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

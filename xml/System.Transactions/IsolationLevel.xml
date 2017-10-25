@@ -1,0 +1,221 @@
+<Type Name="IsolationLevel" FullName="System.Transactions.IsolationLevel">
+  <TypeSignature Language="C#" Value="public enum IsolationLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IsolationLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.IsolationLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o nível de isolamento de uma transação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os dados afetados por uma transação são chamados voláteis. Quando você cria uma transação, você pode especificar o nível de isolamento que se aplica à transação. O nível de isolamento de uma transação determina o nível de acesso que outras transações terão aos dados voláteis antes que a transação é concluída.  
+  
+ O nível de isolamento mais baixo, `ReadUncommitted`, permite que muitas transações funcionar simultaneamente em um repositório de dados e não oferece proteção contra corrupção de dados devido a transações semelhantes. O nível de isolamento mais alto, `Serializable`, fornece um alto grau de proteção contra transações semelhantes, mas requer que cada transação concluída antes de quaisquer outras transações podem operar nos dados.  
+  
+ O nível de isolamento de uma transação é determinado quando a transação é criada. Por padrão, o <xref:System.Transactions> infraestrutura cria `Serializable` transações. Você pode determinar o nível de isolamento de uma transação existente usando o <xref:System.Transactions.Transaction.IsolationLevel%2A> propriedade de uma transação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Chaos">
+      <MemberSignature Language="C#" Value="Chaos" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.IsolationLevel Chaos = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.IsolationLevel.Chaos" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As alterações pendentes de transações com maior isolamento não podem ser substituídas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadCommitted">
+      <MemberSignature Language="C#" Value="ReadCommitted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.IsolationLevel ReadCommitted = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.IsolationLevel.ReadCommitted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dados voláteis não podem ser lidos durante a transação, mas podem ser modificados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadUncommitted">
+      <MemberSignature Language="C#" Value="ReadUncommitted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.IsolationLevel ReadUncommitted = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.IsolationLevel.ReadUncommitted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dados voláteis podem ser lidos e modificados durante a transação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatableRead">
+      <MemberSignature Language="C#" Value="RepeatableRead" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.IsolationLevel RepeatableRead = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.IsolationLevel.RepeatableRead" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dados voláteis podem ser lidos, mas não modificados durante a transação. Novos dados podem ser adicionados durante a transação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Serializable">
+      <MemberSignature Language="C#" Value="Serializable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.IsolationLevel Serializable = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.IsolationLevel.Serializable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dados voláteis podem ser lidos, mas não modificados, e não é possível adicionar dados novos durante a transação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Snapshot">
+      <MemberSignature Language="C#" Value="Snapshot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.IsolationLevel Snapshot = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.IsolationLevel.Snapshot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dados voláteis podem ser lidos. Antes de uma transação modifica dados, ele verifica se outra transação alterou os dados depois de lida inicialmente. Se os dados foram atualizados, um erro será gerado. Isso permite que uma transação obtenha os valores dos dados confirmados anteriormente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao tentar promover uma transação que foi criada com esse nível de isolamento, uma <xref:System.InvalidOperationException> será lançada com o erro mensagem "transações com instantâneo IsolationLevel não pode ser promovido".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.IsolationLevel Unspecified = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.IsolationLevel.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.IsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nível de isolamento diferente daquele especificado está sendo usado, mas não é possível determinar o nível. Uma exceção será lançada se esse valor for definido.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

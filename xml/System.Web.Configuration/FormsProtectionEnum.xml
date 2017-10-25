@@ -1,0 +1,101 @@
+<Type Name="FormsProtectionEnum" FullName="System.Web.Configuration.FormsProtectionEnum">
+  <TypeSignature Language="C#" Value="public enum FormsProtectionEnum" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormsProtectionEnum extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.FormsProtectionEnum" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define o tipo de criptografia, se houver, para usar para cookies.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você selecionar o valor todos, o sistema usa o algoritmo de validação de dados configurado, com base no [machineKey Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4b5699a9-bc21-4c4a-85f1-8b3b8ebd2d46) marca. Este é o padrão e recomendado, o valor.  
+  
+ Se você selecionar nenhuma, cookies podem ser estão sujeitos a ataques de texto sem formatação.  
+  
+ Se você selecionar a validação, o cookie é criado usando a validação de cookie concatenando uma chave de validação com os dados do cookie, calculando um código de autenticação de mensagem (MAC) e anexando o MAC ao cookie de saída.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.FormsProtectionEnum.All> enumeração. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#11)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.FormsProtectionEnum All = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.FormsProtectionEnum.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FormsProtectionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o aplicativo usar a validação de dados e criptografia para ajudar a proteger os cookies. Essa opção usa o algoritmo de validação de dados configurado (com base no <see langword="machineKey" /> elemento). DES triplo (3DES) é usado para criptografia, se ele está disponível e se a chave for pelo menos de 48 bytes. <see langword="All" />é o padrão (e recomendável) valor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Encryption">
+      <MemberSignature Language="C#" Value="Encryption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.FormsProtectionEnum Encryption = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.FormsProtectionEnum.Encryption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FormsProtectionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os cookies são criptografados usando Triple-DES ou DES, mas não é realizada a validação de dados em cookies. Cookies utilizados dessa forma podem ser estão sujeitos a ataques de segurança de texto não criptografado escolhido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.FormsProtectionEnum None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.FormsProtectionEnum.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FormsProtectionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a criptografia e validação estão desabilitadas para sites que usam cookies somente para personalização e, portanto, têm requisitos de segurança mais fracos. Não é recomendado usar cookies dessa maneira; No entanto, é a maneira de consome menos recursos de habilitar personalização usando o .NET Framework.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Validation">
+      <MemberSignature Language="C#" Value="Validation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.FormsProtectionEnum Validation = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.FormsProtectionEnum.Validation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FormsProtectionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o aplicativo usa um esquema de validação para verificar que o conteúdo de um cookie criptografado não foram alterado em trânsito. O cookie é criado concatenando uma chave de validação com os dados do cookie, calculando um código de autenticação de mensagem (MAC) e anexando o MAC ao cookie de saída.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

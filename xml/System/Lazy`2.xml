@@ -1,0 +1,286 @@
+<Type Name="Lazy&lt;T,TMetadata&gt;" FullName="System.Lazy&lt;T,TMetadata&gt;">
+  <TypeSignature Language="C#" Value="public class Lazy&lt;T,TMetadata&gt; : Lazy&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Lazy`2&lt;T, TMetadata&gt; extends System.Lazy`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Lazy`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+    <TypeParameter Name="TMetadata" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Lazy&lt;T&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">T</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">O tipo do objeto referenciado.</typeparam>
+    <typeparam name="TMetadata">O tipo dos metadados.</typeparam>
+    <summary>Fornece uma referência indireta lenta para um objeto e seus metadados associados para uso pelo Managed Extensibility Framework.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (TMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`2.#ctor(`1)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="metadata" Type="TMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Os metadados associados ao objeto referenciado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Lazy`2" /> classe com os metadados especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (Func&lt;T&gt; valueFactory, TMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`1&lt;!T&gt; valueFactory, !TMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`2.#ctor(System.Func{`0},`1)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valueFactory" Type="System.Func&lt;T&gt;" />
+        <Parameter Name="metadata" Type="TMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="valueFactory">Uma função que retorna o objeto referenciado.</param>
+        <param name="metadata">Os metadados associados ao objeto referenciado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Lazy`2" /> classe com os metadados especificados que usa a função especificada para obter o objeto referenciado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (TMetadata metadata, bool isThreadSafe);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TMetadata metadata, bool isThreadSafe) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`2.#ctor(`1,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="metadata" Type="TMetadata" />
+        <Parameter Name="isThreadSafe" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Os metadados associados ao objeto referenciado.</param>
+        <param name="isThreadSafe">Indica se o <see cref="T:System.Lazy`2" /> objeto criado será thread-safe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Lazy`2" /> classe com o valor especificado de segurança de thread e metadados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (TMetadata metadata, System.Threading.LazyThreadSafetyMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!TMetadata metadata, valuetype System.Threading.LazyThreadSafetyMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`2.#ctor(`1,System.Threading.LazyThreadSafetyMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="metadata" Type="TMetadata" />
+        <Parameter Name="mode" Type="System.Threading.LazyThreadSafetyMode" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Os metadados associados ao objeto referenciado.</param>
+        <param name="mode">O modo de sincronização de thread.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Lazy`2" /> classe com o modo de sincronização de metadados e o thread especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte <xref:System.Threading.LazyThreadSafetyMode> para obter mais informações sobre sincronização de threads e <xref:System.Lazy%602>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (Func&lt;T&gt; valueFactory, TMetadata metadata, bool isThreadSafe);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`1&lt;!T&gt; valueFactory, !TMetadata metadata, bool isThreadSafe) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`2.#ctor(System.Func{`0},`1,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valueFactory" Type="System.Func&lt;T&gt;" />
+        <Parameter Name="metadata" Type="TMetadata" />
+        <Parameter Name="isThreadSafe" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="valueFactory">Uma função que retorna o objeto referenciado.</param>
+        <param name="metadata">Os metadados associados ao objeto referenciado.</param>
+        <param name="isThreadSafe">Indica se o <see cref="T:System.Lazy`2" /> objeto criado será thread-safe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Lazy`2" /> classe com o valor de segurança especificado para metadados e o thread que usa a função especificada para obter o objeto referenciado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lazy (Func&lt;T&gt; valueFactory, TMetadata metadata, System.Threading.LazyThreadSafetyMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`1&lt;!T&gt; valueFactory, !TMetadata metadata, valuetype System.Threading.LazyThreadSafetyMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Lazy`2.#ctor(System.Func{`0},`1,System.Threading.LazyThreadSafetyMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="valueFactory" Type="System.Func&lt;T&gt;" />
+        <Parameter Name="metadata" Type="TMetadata" />
+        <Parameter Name="mode" Type="System.Threading.LazyThreadSafetyMode" />
+      </Parameters>
+      <Docs>
+        <param name="valueFactory">Uma função que retorna o objeto referenciado</param>
+        <param name="metadata">Os metadados associados ao objeto referenciado.</param>
+        <param name="mode">O modo de sincronização de thread</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Lazy`2" /> classe com o modo de sincronização especificado para metadados e o thread que usa a função especificada para obter o objeto referenciado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte <xref:System.Threading.LazyThreadSafetyMode> para obter mais informações sobre sincronização de threads e <xref:System.Lazy%602>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public TMetadata Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TMetadata Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.Lazy`2.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os metadados associados ao objeto referenciado.</summary>
+        <value>Os metadados associados ao objeto referenciado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

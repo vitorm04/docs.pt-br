@@ -1,0 +1,89 @@
+<Type Name="CompositionService" FullName="System.ComponentModel.Composition.Hosting.CompositionService">
+  <TypeSignature Language="C#" Value="public class CompositionService : IDisposable, System.ComponentModel.Composition.ICompositionService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompositionService extends System.Object implements class System.ComponentModel.Composition.ICompositionService, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Hosting.CompositionService" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Composition.ICompositionService</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece métodos para atender as importações em uma instância existente da parte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionService.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.ComponentModel.Composition.Hosting.CompositionContainer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>. O `Dispose` método deixa o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> para o coletor de lixo possa recuperar a memória que o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SatisfyImportsOnce">
+      <MemberSignature Language="C#" Value="public void SatisfyImportsOnce (System.ComponentModel.Composition.Primitives.ComposablePart part);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SatisfyImportsOnce(class System.ComponentModel.Composition.Primitives.ComposablePart part) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Hosting.CompositionService.SatisfyImportsOnce(System.ComponentModel.Composition.Primitives.ComposablePart)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="part" Type="System.ComponentModel.Composition.Primitives.ComposablePart" />
+      </Parameters>
+      <Docs>
+        <param name="part">A parte para compor.</param>
+        <summary>Compõe a parte especificada, com recomposition e a validação desabilitado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

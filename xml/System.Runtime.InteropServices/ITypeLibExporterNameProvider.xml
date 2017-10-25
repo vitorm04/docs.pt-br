@@ -1,0 +1,62 @@
+<Type Name="ITypeLibExporterNameProvider" FullName="System.Runtime.InteropServices.ITypeLibExporterNameProvider">
+  <TypeSignature Language="C#" Value="public interface ITypeLibExporterNameProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITypeLibExporterNameProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ITypeLibExporterNameProvider" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("fa1f3615-acb9-486d-9eac-1bef87e36b09")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece controle sobre o uso de maiusculas e minúsculas dos nomes quando exportado para uma biblioteca de tipos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para controlar como os tipos são nomeados quando exportado para uma biblioteca de tipos, um objeto deve implementar essa interface, bem como <xref:System.Runtime.InteropServices.ITypeLibExporterNotifySink>. Você passar esse objeto como o último parâmetro <xref:System.Runtime.InteropServices.TypeLibConverter.ConvertAssemblyToTypeLib%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetNames">
+      <MemberSignature Language="C#" Value="public string[] GetNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ITypeLibExporterNameProvider.GetNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma lista de nomes para controlar o uso de maiusculas.</summary>
+        <returns>Uma matriz de cadeias de caracteres, onde cada elemento contém o nome de um tipo de controle de maiusculas e minúsculas para.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nomes na matriz retornada desse método devem ser exclusivos. Se um nome aparece duas vezes na matriz de nomes, mesmo com maiusculas e minúsculas diferentes, a primeira ocorrência terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,486 @@
+<Type Name="FormatterServices" FullName="System.Runtime.Serialization.FormatterServices">
+  <TypeSignature Language="C#" Value="public static class FormatterServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed FormatterServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.FormatterServices" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos estáticos para ajudar com a implementação de um <see cref="T:System.Runtime.Serialization.Formatter" /> para serialização. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CheckTypeSecurity">
+      <MemberSignature Language="C#" Value="public static void CheckTypeSecurity (Type t, System.Runtime.Serialization.Formatters.TypeFilterLevel securityLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CheckTypeSecurity(class System.Type t, valuetype System.Runtime.Serialization.Formatters.TypeFilterLevel securityLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterServices.CheckTypeSecurity(System.Type,System.Runtime.Serialization.Formatters.TypeFilterLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="t" Type="System.Type" />
+        <Parameter Name="securityLevel" Type="System.Runtime.Serialization.Formatters.TypeFilterLevel" />
+      </Parameters>
+      <Docs>
+        <param name="t">O <see cref="T:System.Type" /> para verificar a capacidade de ser desserializado.</param>
+        <param name="securityLevel">O <see cref="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" /> o valor da propriedade.</param>
+        <summary>Determina se o especificado <see cref="T:System.Type" /> pode ser desserializado com o <see cref="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" /> propriedade definida como <see langword="Low" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar se um tipo especificado pode ser desserializado quando o <xref:System.Runtime.Serialization.Formatters.TypeFilterLevel> está definida como `Low`.  
+  
+ Comunicação remota do .NET framework fornece dois níveis de desserialização automática, <xref:System.Runtime.Serialization.Formatters.TypeFilterLevel.Low> e <xref:System.Runtime.Serialization.Formatters.TypeFilterLevel.Full>. <xref:System.Runtime.Serialization.Formatters.TypeFilterLevel.Low>ajuda a proteger contra ataques de desserialização desserializando somente os tipos associados à funcionalidade de comunicação remota mais básica. O <xref:System.Runtime.Serialization.Formatters.TypeFilterLevel.Full> desserialização nível dá suporte a desserialização automática de todos os tipos se a comunicação remota oferece suporte a todas as situações. Para obter mais informações sobre o.NET Framework remoting tipos que <xref:System.Runtime.Serialization.Formatters.TypeFilterLevel.Low> e <xref:System.Runtime.Serialization.Formatters.TypeFilterLevel.Full> suporte, consulte [&#91;\< Topic://cpconAutomaticDeserializationInNETRemoting > &#93; ](http://msdn.microsoft.com/en-us/313a0e88-5b2b-4a17-8391-0ddf9f7a787b).  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.Runtime.Serialization.FormatterServices> classe para serializar ou desserializar um objeto em que a classe base não implementa <xref:System.Runtime.Serialization.ISerializable> , mas não a classe derivada.  
+  
+ [!code-cpp[FormatterServices#1](~/samples/snippets/cpp/VS_Snippets_Remoting/FormatterServices/cpp/FormatterServices.cpp#1)]
+ [!code-csharp[FormatterServices#1](~/samples/snippets/csharp/VS_Snippets_Remoting/FormatterServices/CS/FormatterServices.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O <paramref name="t" /> parâmetro é um tipo de objeto avançado e não pode ser desserializado quando o <see cref="T:System.Runtime.Serialization.Formatters.TypeFilterLevel" /> está definida como <see langword="Low" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public static object[] GetObjectData (object obj, System.Reflection.MemberInfo[] members);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object[] GetObjectData(object obj, class System.Reflection.MemberInfo[] members) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterServices.GetObjectData(System.Object,System.Reflection.MemberInfo[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="members" Type="System.Reflection.MemberInfo[]" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto para gravar o formatador.</param>
+        <param name="members">Os membros para extrair o objeto.</param>
+        <summary>Extrai os dados do objeto especificado e o retorna como uma matriz de objetos.</summary>
+        <returns>Uma matriz de <see cref="T:System.Object" /> que contém dados armazenados em <paramref name="members" /> e associados ao <paramref name="obj" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para cada membro fornecido a `members` matriz a <xref:System.Runtime.Serialization.FormatterServices.GetObjectData%2A> método extrai o valor associado com o `obj` do objeto e o retorna. O comprimento da matriz retornada é o mesmo que o comprimento do `members` matriz.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância de uma classe de catálogo e conjuntos de valores de campo na instância. O código obtém as informações de tipo usando o <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%2A> método. O código copia os dados de instância em uma matriz de objeto usando o <xref:System.Runtime.Serialization.FormatterServices.GetObjectData%2A> método. Uma nova instância não inicializada da classe é criada usando o <xref:System.Runtime.Serialization.FormatterServices.GetSafeUninitializedObject%2A> método. Por fim, os dados da primeira instância são copiados para a segunda instância usando o <xref:System.Runtime.Serialization.FormatterServices.PopulateObjectMembers%2A> método.  
+  
+ [!code-csharp[FormatterServices_PopulateObjects#1](~/samples/snippets/csharp/VS_Snippets_Remoting/FormatterServices_PopulateObjects/cs/Populate.cs#1)]
+ [!code-vb[FormatterServices_PopulateObjects#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/FormatterServices_PopulateObjects/vb/Populate.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="obj" /> ou <paramref name="members" /> é <see langword="null" />.  
+  
+ Um elemento de <paramref name="members" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento de <paramref name="members" /> não representa um campo.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para fornecer serviços de serialização. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />, <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSafeUninitializedObject">
+      <MemberSignature Language="C#" Value="public static object GetSafeUninitializedObject (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetSafeUninitializedObject(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterServices.GetSafeUninitializedObject(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de objeto a ser criado.</param>
+        <summary>Cria uma nova instância do tipo de objeto especificado.</summary>
+        <returns>Um objeto zerado do tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como a nova instância do objeto é inicializada a zero e não há construtores são executados, o objeto não pode representar um estado que é considerado válido por esse objeto. <xref:System.Runtime.Serialization.FormatterServices.GetSafeUninitializedObject%2A>só deve ser usado para desserialização quando o usuário deseja preencher imediatamente todos os campos. Ele não cria uma cadeia de caracteres não inicializada, desde a criação de uma instância vazia de um tipo imutável não serve para nenhuma finalidade.  
+  
+ <xref:System.Runtime.Serialization.FormatterServices.GetSafeUninitializedObject%2A>Converte todos os nível de classe [demandas de Link](~/docs/framework/misc/link-demands.md) para [demandas](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48) para garantir que todos os chamadores diretos e indiretos tenham as permissões que especifica a demanda. Use <xref:System.Runtime.Serialization.FormatterServices.GetSafeUninitializedObject%2A> para aumentar o nível de segurança durante a desserialização de uma fonte parcialmente confiável. Para obter melhor desempenho em cenários de confiança total, use <xref:System.Runtime.Serialization.FormatterServices.GetUninitializedObject%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">O parâmetro <paramref name="type" /> não é um tipo válido do Common Language Runtime.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para fornecer serviços de serialização. Enumerações associadas: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />, <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializableMembers">
+      <MemberSignature Language="C#" Value="public static System.Reflection.MemberInfo[] GetSerializableMembers (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.MemberInfo[] GetSerializableMembers(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterServices.GetSerializableMembers(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo que está sendo serializado.</param>
+        <summary>Obtém todos os membros serializáveis para uma classe especificada <see cref="T:System.Type" />.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.Reflection.MemberInfo" /> dos membros não transitório, não estático.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geralmente, os membros de uma classe serializáveis são os membros não transitório, não estático, como campos e propriedades. Para ser incluída, as propriedades devem ter um getter e um setter. Uma classe que implementa o <xref:System.Runtime.Serialization.ISerializable> interface ou tem uma serialização substitutos não precisa serializar todos esses membros ou pode serializar membros adicionais.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar o <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Serialization.FormatterServices> classe.  
+  
+ [!code-cpp[FormatterServices#2](~/samples/snippets/cpp/VS_Snippets_Remoting/FormatterServices/cpp/FormatterServices.cpp#2)]
+ [!code-csharp[FormatterServices#2](~/samples/snippets/csharp/VS_Snippets_Remoting/FormatterServices/CS/FormatterServices.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para fornecer serviços de serialização. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />, <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializableMembers">
+      <MemberSignature Language="C#" Value="public static System.Reflection.MemberInfo[] GetSerializableMembers (Type type, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.MemberInfo[] GetSerializableMembers(class System.Type type, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterServices.GetSerializableMembers(System.Type,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo que está sendo serializado ou clonada.</param>
+        <param name="context">O contexto onde ocorre a serialização.</param>
+        <summary>Obtém todos os membros serializáveis para uma classe especificada <see cref="T:System.Type" /> e fornecidos <see cref="T:System.Runtime.Serialization.StreamingContext" />.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.Reflection.MemberInfo" /> dos membros não transitório, não estático.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geralmente, os membros de uma classe serializáveis são os membros não transitório, não estático, como campos e propriedades. Para ser incluída, as propriedades devem ter um getter e um setter. Uma classe que implementa <xref:System.Runtime.Serialization.ISerializable> ou tem uma serialização substitutos não precisa serializar todos esses membros ou pode serializar membros adicionais.  
+  
+ No momento, você não precisa fazer algo diferente, a menos que `context` tem o <xref:System.Runtime.Serialization.StreamingContextStates> valor <xref:System.Runtime.Serialization.StreamingContextStates.Clone> definido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para fornecer serviços de serialização. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />, <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSurrogateForCyclicalReference">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Serialization.ISerializationSurrogate GetSurrogateForCyclicalReference (System.Runtime.Serialization.ISerializationSurrogate innerSurrogate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Serialization.ISerializationSurrogate GetSurrogateForCyclicalReference(class System.Runtime.Serialization.ISerializationSurrogate innerSurrogate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterServices.GetSurrogateForCyclicalReference(System.Runtime.Serialization.ISerializationSurrogate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ISerializationSurrogate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="innerSurrogate" Type="System.Runtime.Serialization.ISerializationSurrogate" />
+      </Parameters>
+      <Docs>
+        <param name="innerSurrogate">O substituto especificado.</param>
+        <summary>Retorna um substituto de serialização especificado <see cref="T:System.Runtime.Serialization.ISerializationSurrogate" />.</summary>
+        <returns>Um <see cref="T:System.Runtime.Serialization.ISerializationSurrogate" /> especificado <paramref name="innerSurrogate" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeFromAssembly">
+      <MemberSignature Language="C#" Value="public static Type GetTypeFromAssembly (System.Reflection.Assembly assem, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Type GetTypeFromAssembly(class System.Reflection.Assembly assem, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterServices.GetTypeFromAssembly(System.Reflection.Assembly,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assem" Type="System.Reflection.Assembly" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assem">O assembly em que você deseja pesquisar o objeto.</param>
+        <param name="name">O nome do objeto.</param>
+        <summary>Procura o <see cref="T:System.Type" /> do objeto especificado em fornecidos <see cref="T:System.Reflection.Assembly" />.</summary>
+        <returns>O <see cref="T:System.Type" /> do objeto nomeado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="assem" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para fornecer serviços de serialização. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />, <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">Extração de informações de reflexão em membros de um tipo que não são visíveis. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUninitializedObject">
+      <MemberSignature Language="C#" Value="public static object GetUninitializedObject (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetUninitializedObject(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterServices.GetUninitializedObject(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de objeto a ser criado.</param>
+        <summary>Cria uma nova instância do tipo de objeto especificado.</summary>
+        <returns>Um objeto zerado do tipo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como a nova instância do objeto é inicializada a zero e não há construtores são executados, o objeto não pode representar um estado que é considerado válido por esse objeto. O método atual só deve ser usado para desserialização quando o usuário deseja preencher imediatamente todos os campos. Ele não cria uma cadeia de caracteres não inicializada, desde a criação de uma instância vazia de um tipo imutável não serve para nenhuma finalidade.  
+  
+> [!NOTE]
+>  Não é possível usar o <xref:System.Runtime.Serialization.FormatterServices.GetUninitializedObject%2A> método para criar instâncias dos tipos que derivam de <xref:System.ContextBoundObject> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para fornecer serviços de serialização. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />, <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateObjectMembers">
+      <MemberSignature Language="C#" Value="public static object PopulateObjectMembers (object obj, System.Reflection.MemberInfo[] members, object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object PopulateObjectMembers(object obj, class System.Reflection.MemberInfo[] members, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.FormatterServices.PopulateObjectMembers(System.Object,System.Reflection.MemberInfo[],System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="members" Type="System.Reflection.MemberInfo[]" />
+        <Parameter Name="data" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a popular.</param>
+        <param name="members">Uma matriz de <see cref="T:System.Reflection.MemberInfo" /> que descreve quais campos e propriedades para preencher.</param>
+        <param name="data">Uma matriz de <see cref="T:System.Object" /> que especifica os valores para cada campo e de propriedade para preencher.</param>
+        <summary>Preenche o objeto especificado com valores para cada campo extraído da matriz de dados de objetos.</summary>
+        <returns>O objeto recentemente preenchido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um elemento em `data` é `null`, <xref:System.Runtime.Serialization.FormatterServices.PopulateObjectMembers%2A> não gravar nada no campo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância de uma classe de catálogo e conjuntos de valores de campo na instância. O código obtém as informações de tipo usando o <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%2A> método. O código copia os dados de instância em uma matriz de objeto usando o <xref:System.Runtime.Serialization.FormatterServices.GetObjectData%2A> método. Uma nova instância não inicializada da classe é criada usando o <xref:System.Runtime.Serialization.FormatterServices.GetSafeUninitializedObject%2A> método. Por fim, os dados da primeira instância são copiados para a segunda instância usando o <xref:System.Runtime.Serialization.FormatterServices.PopulateObjectMembers%2A> método.  
+  
+ [!code-csharp[FormatterServices_PopulateObjects#1](~/samples/snippets/csharp/VS_Snippets_Remoting/FormatterServices_PopulateObjects/cs/Populate.cs#1)]
+ [!code-vb[FormatterServices_PopulateObjects#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/FormatterServices_PopulateObjects/vb/Populate.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="obj" />, <paramref name="members" /> ou <paramref name="data" /> é <see langword="null" />.  
+  
+ Um elemento de <paramref name="members" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O comprimento de <paramref name="members" /> não coincide com o comprimento de <paramref name="data" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento de <paramref name="members" /> não é uma instância de <see cref="T:System.Reflection.FieldInfo" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para fornecer serviços de serialização. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />, <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

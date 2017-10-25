@@ -1,0 +1,38 @@
+<Type Name="ControlSkinDelegate" FullName="System.Web.UI.ControlSkinDelegate">
+  <TypeSignature Language="C#" Value="public delegate System.Web.UI.Control ControlSkinDelegate(Control control);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ControlSkinDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ControlSkinDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="control" Type="System.Web.UI.Control" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Web.UI.Control</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="control">O <see cref="T:System.Web.UI.Control" /> ao qual aplicar a capa do tema.</param>
+    <summary>Representa o método que se aplica a capa de controle correta para o controle especificado.</summary>
+    <returns>O <see cref="T:System.Web.UI.Control" /> que foi passado para o método com uma capa de controle aplicada.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os desenvolvedores de página e o controle não usar o <xref:System.Web.UI.ControlSkinDelegate>, <xref:System.Web.UI.ControlSkin>, ou <xref:System.Web.UI.PageTheme> classes diretamente. Essas classes são usadas internamente pela estrutura de página ASP.NET para aplicar propriedades do lado do servidor e em cascata definições de folha de estilo que são definidas em arquivos de capa de controle para tipos específicos de controles e temas do ASP.NET.  
+  
+ O <xref:System.Web.UI.ControlSkinDelegate> representante está associado a <xref:System.Web.UI.ControlSkin.ApplySkin%2A> método o <xref:System.Web.UI.ControlSkin> classe. O <xref:System.Web.UI.ControlSkin> classe representa uma capa de controle do ASP.NET, que é um componente de um tema ASP.NET representada por um <xref:System.Web.UI.PageTheme> objeto. Para obter mais informações sobre os temas do ASP.NET, consulte [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

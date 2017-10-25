@@ -1,0 +1,203 @@
+<Type Name="BulletStyle" FullName="System.Web.UI.WebControls.BulletStyle">
+  <TypeSignature Language="C#" Value="public enum BulletStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BulletStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.BulletStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os estilos de marcador, você pode aplicar a itens de lista em um <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.BulletStyle> enumeração representa os estilos de marcador que você pode aplicar aos itens de lista em um <xref:System.Web.UI.WebControls.BulletedList> controle. O <xref:System.Web.UI.WebControls.BulletedList.BulletStyle%2A> propriedade usa esses valores de enumeração para definir os estilos de marcador em um <xref:System.Web.UI.WebControls.BulletedList> controle. Por exemplo, se você definir o <xref:System.Web.UI.WebControls.BulletedList.BulletStyle%2A> propriedade `Disc`, cada item de lista em um <xref:System.Web.UI.WebControls.BulletedList> controle processe um círculo preenchido precede o conteúdo do item de lista da seguinte maneira:  
+  
+-   Item de lista 1  
+  
+-   Item de lista 2  
+  
+-   Item de lista 3  
+  
+ Especificando o `CustomImage` estilo de marcador permite fornecer sua própria imagem para o marcador. Se você especificar o `CustomImage` estilo de marcador, você também deve definir o <xref:System.Web.UI.WebControls.BulletedList.BulletImageUrl%2A> propriedade para a URL da imagem personalizada para usar.  
+  
+ Se você especificar `NotSet`, o navegador no qual o controle é processado determina o estilo de marcador para exibir com os itens na <xref:System.Web.UI.WebControls.BulletedList> controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.Web.UI.WebControls.BulletedList> controle. Um <xref:System.Web.UI.WebControls.ListBox> controle é populado com todos os disponível <xref:System.Web.UI.WebControls.BulletStyle> valores de enumeração. As alterações de estilo de marcador com base no estilo de que o usuário seleciona a caixa de listagem.  
+  
+ [!code-aspx-csharp[BulletedListStylesExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/BulletedListStylesExample/CS/bulletedliststylescs.aspx#1)]
+ [!code-aspx-vb[BulletedListStylesExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/BulletedListStylesExample/VB/bulletedliststylesvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Circle">
+      <MemberSignature Language="C#" Value="Circle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletStyle Circle = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletStyle.Circle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de marcador é uma forma de círculo vazio.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomImage">
+      <MemberSignature Language="C#" Value="CustomImage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletStyle CustomImage = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletStyle.CustomImage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de marcador é uma imagem personalizada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Disc">
+      <MemberSignature Language="C#" Value="Disc" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletStyle Disc = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletStyle.Disc" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de marcador é uma forma de círculo preenchido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LowerAlpha">
+      <MemberSignature Language="C#" Value="LowerAlpha" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletStyle LowerAlpha = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletStyle.LowerAlpha" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de marcador é uma letra minúscula (a, b, c,...).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LowerRoman">
+      <MemberSignature Language="C#" Value="LowerRoman" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletStyle LowerRoman = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletStyle.LowerRoman" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de marcador é um numeral romano letras minúsculas (i, ii, iii,...).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletStyle NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletStyle.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de marcador não está definido. O navegador que processa o <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle determina o estilo de marcador para exibir.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numbered">
+      <MemberSignature Language="C#" Value="Numbered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletStyle Numbered = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletStyle.Numbered" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de marcador é um número (1, 2, 3,...).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Square">
+      <MemberSignature Language="C#" Value="Square" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletStyle Square = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletStyle.Square" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo do marcador é uma forma de quadrado preenchida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UpperAlpha">
+      <MemberSignature Language="C#" Value="UpperAlpha" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletStyle UpperAlpha = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletStyle.UpperAlpha" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de marcador é uma letra maiuscula (A, B, C,...).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UpperRoman">
+      <MemberSignature Language="C#" Value="UpperRoman" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.BulletStyle UpperRoman = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.BulletStyle.UpperRoman" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BulletStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estilo de marcador é um numeral romano em maiusculas (I, II, III,...).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

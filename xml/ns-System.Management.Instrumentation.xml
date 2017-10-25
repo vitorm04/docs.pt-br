@@ -1,0 +1,6 @@
+<Namespace Name="System.Management.Instrumentation">
+  <Docs>
+    <summary>Fornece as classes necessárias para a instrumentação de aplicativos para gerenciamento e expor suas informações de gerenciamento e os eventos por meio do WMI para os consumidores em potencial. Os consumidores, como o Microsoft Application Center ou o Microsoft Operations Manager podem gerenciar facilmente, seu aplicativo e monitoramento e a configuração do seu aplicativo estão disponível para outros aplicativos ou scripts do administrador, gerenciados, bem como não gerenciado. Instrumentação do seu aplicativo é fácil obter usando o atributo personalizado InstrumentationClass em classes que você deseja expor ou fornecido <see cref="T:System.Management.Instrumentation.BaseEvent" /> e <see cref="T:System.Management.Instrumentation.Instance" /> classes base e o <see cref="T:System.Management.Instrumentation.Instrumentation" /> classe auxiliar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

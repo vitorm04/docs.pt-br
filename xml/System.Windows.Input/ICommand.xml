@@ -1,0 +1,180 @@
+<Type Name="ICommand" FullName="System.Windows.Input.ICommand">
+  <TypeSignature Language="C#" Value="public interface ICommand" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICommand" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ICommand" />
+  <AssemblyInfo>
+    <AssemblyName>System.ObjectModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um comando.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Input.RoutedCommand>e <xref:System.Windows.Input.RoutedUICommand> são duas implementações de <xref:System.Windows.Input.ICommand> interface em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)].  
+  
+## <a name="icommand-in-windows-runtime-apps"></a>ICommand no Windows aplicativos de tempo de execução  
+ O <xref:System.Windows.Input.ICommand> interface é o contrato de código para os comandos que são escritos em aplicativos .NET para Windows Runtime. Esses comandos fornecem o comportamento de comando para elementos de interface do usuário, como um XAML de tempo de execução do Windows `Button` e especificamente um `AppBarButton`. Se você está definindo comandos para aplicativos do Windows Runtime use basicamente as mesmas técnicas que você deseja usar para definir os comandos para um aplicativo .NET. Implementar o comando com a definição de uma classe que implementa <xref:System.Windows.Input.ICommand> e implementar especificamente o <xref:System.Windows.Input.ICommand.Execute%2A> método.  
+  
+ XAML para Windows Runtime não oferece suporte x`:Static`, portanto, não tente usar o `x:Static` extensão de marcação se for usado o comando do Windows em tempo de execução XAML. Além disso, o tempo de execução do Windows não tem qualquer biblioteca de comando predefinidos, portanto, realmente não se aplica a sintaxe XAML mostrada aqui para o caso em que você está implementando a interface e definir o comando para uso em tempo de execução do Windows.  
+  
+<a name="xamlTextUsage_ICommand"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ \<*propriedade de objeto*= "*predefinedCommandName*" / >  
+  
+ \- ou -  
+  
+ \<*propriedade de objeto*= "*predefinedCommandName.predefinedCommandName*" / >  
+  
+ \- ou -  
+  
+ \<*propriedade de objeto*= "{ *customClassName.customCommandName*}" / >  
+  
+<a name="xamlValues_ICommand"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *predefinedClassName*  
+ Uma das classes de comando predefinidos.  
+  
+ *predefinedCommandName*  
+ Um dos comandos predefinidos.  
+  
+ *customClassName*  
+ Uma classe personalizada que contém o comando personalizado. Classes personalizadas geralmente exigem um `xlmns` mapeamento de prefixo, consulte [Namespaces XAML e o mapeamento de Namespace para WPF XAML](~/docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+  
+ *customCommandName*  
+ Um comando personalizado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanExecute">
+      <MemberSignature Language="C#" Value="public bool CanExecute (object parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanExecute(object parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ICommand.CanExecute(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Dados usados pelo comando.  Se o comando não exigir que dados sejam passados, esse objeto poderá ser definido como <see langword="null" />.</param>
+        <summary>Define o método que determina se o comando pode ser executado em seu estado atual.</summary>
+        <returns>
+          <see langword="true" /> se esse comando puder ser executado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, uma fonte de comando chama o <xref:System.Windows.Input.ICommand.CanExecute%2A> método quando o <xref:System.Windows.Input.ICommand.CanExecuteChanged> é gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExecuteChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CanExecuteChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CanExecuteChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Input.ICommand.CanExecuteChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre em caso de alterações que afetam se o comando deve ser executado ou não.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, uma fonte de comando chama <xref:System.Windows.Input.ICommand.CanExecute%2A> no comando quando esse evento ocorrer.  
+  
+ Normalmente, se não puder executar o comando, a fonte de comando desabilita em si.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public void Execute (object parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(object parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ICommand.Execute(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ObjectModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Dados usados pelo comando.  Se o comando não exigir que dados sejam passados, esse objeto poderá ser definido como <see langword="null" />.</param>
+        <summary>Define o método a ser chamado quando o comando for invocado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

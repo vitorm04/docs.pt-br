@@ -1,0 +1,684 @@
+<Type Name="EntityCollection&lt;TEntity&gt;" FullName="System.Data.Objects.DataClasses.EntityCollection&lt;TEntity&gt;">
+  <TypeSignature Language="C#" Value="public sealed class EntityCollection&lt;TEntity&gt; : System.Data.Objects.DataClasses.RelatedEnd, System.Collections.Generic.ICollection&lt;TEntity&gt;, System.Collections.Generic.IEnumerable&lt;TEntity&gt;, System.ComponentModel.IListSource where TEntity : class" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit EntityCollection`1&lt;class TEntity&gt; extends System.Data.Objects.DataClasses.RelatedEnd implements class System.Collections.Generic.ICollection`1&lt;!TEntity&gt;, class System.Collections.Generic.IEnumerable`1&lt;!TEntity&gt;, class System.Collections.IEnumerable, class System.ComponentModel.IListSource" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EntityCollection`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TEntity">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Data.Objects.DataClasses.RelatedEnd</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;TEntity&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;TEntity&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IListSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TEntity">O tipo de entidade da coleção.</typeparam>
+    <summary>Representa uma coleção de objetos no final “muitos” de uma relação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Data.Objects.DataClasses.EntityCollection%601> é uma coleção de objetos de um tipo específico de entidade que representa o fim "muitos" de uma relação um-para-muitos ou muitos-para-muitos.  
+  
+ Um <xref:System.Data.Objects.DataClasses.EntityCollection%601> é retornado por uma propriedade de navegação. Use o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Load%2A> método carregar objetos relacionados em um <xref:System.Data.Objects.DataClasses.EntityCollection%601>. Para armazenar uma coleção não relacionada de objetos de um tipo de entidade específica, como o resultado de uma <xref:System.Data.Objects.ObjectQuery%601>, usar uma instância do <xref:System.Collections.Generic.List%601> classe.  
+  
+ Um <xref:System.Data.Objects.DataClasses.EntityCollection%601> pode ter um correspondente <xref:System.Data.Objects.DataClasses.EntityReference%601>. Quando um <xref:System.Data.Objects.DataClasses.EntityCollection%601> e um <xref:System.Data.Objects.DataClasses.EntityReference%601> modelo oposto da mesma relação, a integridade da relação é mantida no nível do objeto. As duas classes serão sincronizadas automaticamente.  
+  
+ Essa classe não pode ser herdada.  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o. Para executar o código neste exemplo, você deve já adicionado o modelo de vendas do AdventureWorks ao seu projeto e configurado o projeto para usar o Entity Framework. Para fazer isso, conclua os procedimentos em [como: configurar manualmente um projeto do Entity Framework](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e) e [como: definir manualmente os arquivos de modelo e mapeamento](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+  
+ Este exemplo faz o seguinte:  
+  
+1.  Cria dois novos `SalesOrderHeader` entidades e adiciona-os para o `Contact` entidade.  
+  
+2.  Obtém todos relacionada termina do <xref:System.Data.Objects.DataClasses.RelationshipManager> que está associado a `Contact` entidade.  
+  
+3.  Itera através da coleção de <xref:System.Data.Objects.DataClasses.IRelatedEnd>s.  
+  
+4.  Obtém o <xref:System.Data.Objects.DataClasses.EntityCollection%601> para cada extremidade relacionada.  
+  
+5.  Usa o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Remove%2A> método para remover uma das entidades da coleção.  
+  
+6.  Chama o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Contains%2A> método para determinar se o objeto foi removido da coleção.  
+  
+7.  Usa o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Add%2A> método para adicionar a entidade novamente.  
+  
+ [!code-csharp[DP ObjectServices Concepts#IRelatedEnd_Add](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#irelatedend_add)]
+ [!code-vb[DP ObjectServices Concepts#IRelatedEnd_Add](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#irelatedend_add)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor público para <xref:System.Data.Objects.DataClasses.EntityCollection%601> se destina a ser usada pelos serviços de objeto durante a desserialização de gráficos de objeto. Você deve acessar uma instância de <xref:System.Data.Objects.DataClasses.EntityCollection%601> de uma propriedade de navegação, em vez de usar este construtor.  
+  
+ Para armazenar uma coleção não relacionada de objetos de um tipo de entidade específica, como o resultado de uma <xref:System.Data.Objects.ObjectQuery%601>, usar uma instância de <xref:System.Collections.Generic.List%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (TEntity entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(!TEntity entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Um objeto a ser adicionado à coleção. <c>entidade</c> deve implementar <see cref="T:System.Data.Objects.DataClasses.IEntityWithRelationships" />.</param>
+        <summary>Adiciona um objeto à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.DataClasses.EntityCollection%601.Add%2A> método adiciona um objeto para um <xref:System.Data.Objects.DataClasses.EntityCollection%601> e cria uma relação entre os dois objetos. Quando o objeto de origem é anexado a um <xref:System.Data.Objects.ObjectContext> instância, o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Add%2A> método também adiciona o objeto para o <xref:System.Data.Objects.ObjectContext>. Essa operação é convertida em uma operação de inserção nos dados de origem quando <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> é chamado. Para obter mais informações, consulte [criando, adicionando, modificando e excluindo objetos](http://msdn.microsoft.com/en-us/f76f1fad-c553-4b59-820b-89b3dec2fad1).  
+  
+ O <xref:System.Data.Objects.DataClasses.EntityCollection%601.Add%2A> método pode ser chamado várias vezes na mesma instância do objeto.  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o. Para executar o código neste exemplo, você deve já adicionado o modelo de vendas do AdventureWorks ao seu projeto e configurado o projeto para usar o Entity Framework. Para fazer isso, conclua os procedimentos em [como: configurar manualmente um projeto do Entity Framework](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e) e [como: definir manualmente os arquivos de modelo e mapeamento](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+  
+ Este exemplo cria dois novos `SalesOrderHeader` entidades, adiciona-os para o `Contact` entidade e, depois de remover um objeto, usa o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Add%2A> método para adicionar o objeto para a coleção.  
+  
+ [!code-csharp[DP ObjectServices Concepts#IRelatedEnd_Add](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#irelatedend_add)]
+ [!code-vb[DP ObjectServices Concepts#IRelatedEnd_Add](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#irelatedend_add)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entity" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (System.Collections.Generic.IEnumerable&lt;TEntity&gt; entities);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Attach(class System.Collections.Generic.IEnumerable`1&lt;!TEntity&gt; entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.Attach(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.Generic.IEnumerable&lt;TEntity&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="entities">Coleção de objetos no contexto do objeto que estão relacionadas ao objeto de origem.</param>
+        <summary>Define as relações entre um objeto e uma coleção de objetos relacionados em um contexto de objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.ObjectContext.Attach%2A> método é usado para definir relações entre um objeto e uma coleção de objetos relacionados quando o objeto de origem e a coleção de objetos relacionados já existem no contexto do objeto. Para anexar um objeto ou um gráfico de objeto em que as relações já estão definidas, chame o <xref:System.Data.Objects.ObjectContext.Attach%2A> método sobre o <xref:System.Data.Objects.ObjectContext>. Para criar um novo objeto que está relacionado ao objeto de origem, chame o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Add%2A> método sobre o <xref:System.Data.Objects.DataClasses.EntityCollection%601>. Para obter mais informações, consulte [anexar e desanexar objetos](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+  
+ Se a coleção já preenchida ou parcialmente preenchida, o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Attach%2A> método mescla entidades existentes com as entidades determinadas. As entidades de determinada não deveriam para ser o conjunto completo de entidades relacionadas.  
+  
+ Todas as entidades passadas devem estar no <xref:System.Data.EntityState.Unchanged> ou <xref:System.Data.EntityState.Modified> estado. Objetos de <xref:System.Data.EntityState.Deleted> estado são permitidos apenas quando o Gerenciador de estado já está controlando a instância de relação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entities" />coleção é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O objeto de origem ou em um objeto de <paramref name="entities" /> coleção <see langword="null" /> ou não está em um <see cref="F:System.Data.EntityState.Unchanged" /> ou <see cref="F:System.Data.EntityState.Modified" /> estado.  
+  
+ -ou-  
+  
+ A relação não pode ser definida com base nos metadados do EDM. Isso pode ocorrer quando a associação do esquema conceitual não dá suporte a uma relação entre os dois tipos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (TEntity entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Attach(!TEntity entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.Attach(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <param name="entity">O objeto que está sendo anexado.</param>
+        <summary>Define uma relação entre dois objetos anexados em um contexto de objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.DataClasses.EntityCollection%601.Attach%2A> método é usado para definir relações entre os dois objetos quando ambos os objetos já existem no contexto do objeto. Para anexar um objeto ou um gráfico de objeto em que as relações já estão definidas, chame o <xref:System.Data.Objects.ObjectContext.Attach%2A> método sobre o <xref:System.Data.Objects.ObjectContext>. Para criar um novo objeto que está relacionado ao objeto de origem, chame o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Add%2A> método sobre o <xref:System.Data.Objects.DataClasses.EntityCollection%601>. Para obter mais informações, consulte [anexar e desanexar objetos](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+  
+ Se o <xref:System.Data.Objects.DataClasses.EntityCollection%601> já carregou objetos, o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Attach%2A> método mescla o objeto junto com os objetos existentes no <xref:System.Data.Objects.DataClasses.EntityCollection%601>.  
+  
+ O objeto anexado não é considerado como o conjunto completo de objetos de entidade relacionada.  
+  
+ O objeto associado a esta <xref:System.Data.Objects.DataClasses.EntityCollection%601> e todos os objetos que está sendo anexados a ele devem estar em um <xref:System.Data.EntityState.Unchanged> ou <xref:System.Data.EntityState.Modified> estado.  
+  
+ Objetos no <xref:System.Data.EntityState.Deleted> estado só pode ser anexado quando a <xref:System.Data.Objects.ObjectStateManager> já está controlando a instância de relação.  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o. Para executar o código neste exemplo, você deve já adicionado o modelo de vendas do AdventureWorks ao seu projeto e configurado o projeto para usar o Entity Framework. Para fazer isso, conclua os procedimentos em [como: configurar manualmente um projeto do Entity Framework](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e) e [como: definir manualmente os arquivos de modelo e mapeamento](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+  
+ Este exemplo anexa uma coleção de desanexado `SalesOrderDetail` objetos e um desanexado `SalesOrderHeader` o objeto para um contexto de objeto e, em seguida, define as relações entre o `SalesOrderHeader` objeto e cada `SalesOrderDetail` objeto.  
+  
+ [!code-csharp[DP ObjectServices Concepts#AttachRelatedObjects](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#attachrelatedobjects)]
+ [!code-vb[DP ObjectServices Concepts#AttachRelatedObjects](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#attachrelatedobjects)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Quando o <paramref name="entity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Quando o <paramref name="entity" /> não pode estar relacionado ao objeto de origem. Isso pode ocorrer quando a associação do esquema conceitual não dá suporte a uma relação entre os dois tipos.  
+  
+ -ou-  
+  
+ Quando um objeto é <see langword="null" /> ou não está em um <see cref="F:System.Data.EntityState.Unchanged" /> ou <see cref="F:System.Data.EntityState.Modified" /> estado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as entidades da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.EntityCollection%601.Clear%2A>faz o seguinte:  
+  
+-   Conjuntos de <xref:System.Data.Objects.DataClasses.RelatedEnd.IsLoaded%2A> sinalizador como `false`.  
+  
+-   Remove todas as entidades da coleção.  
+  
+-   Desanexa relações entre entidades removidas e o proprietário do <xref:System.Data.Objects.DataClasses.EntityCollection%601> do <xref:System.Data.Objects.ObjectStateManager>.  
+  
+-   Remove o proprietário do <xref:System.Data.Objects.DataClasses.EntityCollection%601> das entidades relacionadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (TEntity entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!TEntity entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <param name="entity">O objeto a ser localizado no <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" />.</param>
+        <summary>Determina se um objeto específico existe na coleção.</summary>
+        <returns>
+          <see langword="true" /> se o objeto for encontrado no <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usa o <xref:System.Object.Equals%2A?displayProperty=nameWithType> método para comparar o objeto especificado com os objetos já está na coleção.  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o. Para executar o código neste exemplo, você deve já adicionado o modelo de vendas do AdventureWorks ao seu projeto e configurado o projeto para usar o Entity Framework. Para fazer isso, conclua os procedimentos em [como: configurar manualmente um projeto do Entity Framework](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e) e [como: definir manualmente os arquivos de modelo e mapeamento](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+  
+ Este exemplo faz o seguinte:  
+  
+1.  Cria dois novos `SalesOrderHeader` entidades e adiciona-os para o `Contact` entidade.  
+  
+2.  Obtém todos relacionada termina do <xref:System.Data.Objects.DataClasses.RelationshipManager> que está associado com a entidade de contato.  
+  
+3.  Itera através da coleção de <xref:System.Data.Objects.DataClasses.IRelatedEnd>s.  
+  
+4.  Obtém o <xref:System.Data.Objects.DataClasses.EntityCollection%601> para cada extremidade relacionada.  
+  
+5.  Usa o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Remove%2A> método para remover uma das entidades da coleção.  
+  
+6.  Chama o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Contains%2A> método para determinar se o objeto foi removido da coleção.  
+  
+7.  Usa o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Add%2A> método para adicionar a entidade novamente.  
+  
+ [!code-csharp[DP ObjectServices Concepts#IRelatedEnd_Add](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#irelatedend_add)]
+ [!code-vb[DP ObjectServices Concepts#IRelatedEnd_Add](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#irelatedend_add)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (TEntity[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(!TEntity[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="TEntity[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz na qual copiar.</param>
+        <param name="arrayIndex">O índice de base zero na matriz em que a cópia começa.</param>
+        <summary>Copia todo o conteúdo da coleção para uma matriz, começando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EntityCollection`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de objetos que estão contidos na coleção.</summary>
+        <value>O número de elementos que estão contidos no <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.DataClasses.EntityCollection%601.Count%2A> propriedade obtém o número de entidades no momento na coleção de local e não reflete o tamanho da coleção na fonte de dados. Um valor zero não necessariamente indica que a coleção relacionada está vazia. Para determinar o tamanho da coleção na fonte de dados, chame o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Load%2A> método ou incluir o objeto relacionado no caminho de consulta. Para obter mais informações, consulte [objetos relacionados ao carregar](http://msdn.microsoft.com/en-us/452347d2-7b3b-44cd-9001-231299a28cb1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSourceQuery">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectQuery&lt;TEntity&gt; CreateSourceQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectQuery`1&lt;!TEntity&gt; CreateSourceQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.CreateSourceQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectQuery&lt;TEntity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma consulta de objeto que, quando executada, retorna o mesmo conjunto de objetos existente na coleção atual.</summary>
+        <returns>Um <see cref="T:System.Data.Objects.ObjectQuery`1" /> que representa a coleção de entidades.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada para obter uma nova instância da <xref:System.Data.Objects.ObjectQuery%601> que retorna o mesmo conjunto de objetos. Isso é útil quando o ponto de partida para uma junção mais complexa, união ou consulta filtrada ou para retornar os mesmos objetos em estado desanexado usando o <xref:System.Data.Objects.MergeOption.NoTracking> opção.  
+  
+ <xref:System.Data.Objects.DataClasses.EntityCollection%601.CreateSourceQuery%2A>é usado para filtrar os objetos em um <xref:System.Data.Objects.DataClasses.EntityCollection%601> para que você possa associar apenas os objetos de um tipo específico. Para obter mais informações, consulte [objetos de associação para controles](http://msdn.microsoft.com/en-us/2fd34855-929b-4303-a91e-4bb69d958f2b).  
+  
+   
+  
+## Examples  
+ Este exemplo é baseado em uma versão modificada das. Esta versão oferece suporte a herança de tabela por tipo com `Course` como um tipo abstrato. Conclua o passo a passo para modificar o modelo de escola para suportar o exemplo de herança de tabela por tipo usado neste tópico.  
+  
+ Este exemplo mostra como usar <xref:System.Data.Objects.DataClasses.EntityCollection%601.CreateSourceQuery%2A> filtrar objetos em um <xref:System.Data.Objects.DataClasses.EntityCollection%601> e associar-se somente aos objetos de um tipo específico. Para obter uma versão completa deste exemplo, consulte [como: associar controles para tipos derivados de](http://msdn.microsoft.com/en-us/09730c14-3b7b-4563-af4a-7ecfa4e34bd5).  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Quando o objeto está em um estado <see cref="F:System.Data.EntityState.Added" />.  
+  
+ -ou-  
+  
+ Quando o objeto está em um estado <see cref="F:System.Data.EntityState.Detached" /> com um <see cref="T:System.Data.Objects.MergeOption" /> diferente de <see cref="F:System.Data.Objects.MergeOption.NoTracking" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;TEntity&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!TEntity&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;TEntity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que é usado para iterar por meio dos objetos na coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que itera por meio do conjunto de valores armazenados em cache pelo <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EntityCollection`1.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> é somente leitura.</summary>
+        <value>Sempre retorna <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public override void Load (System.Data.Objects.MergeOption mergeOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Load(valuetype System.Data.Objects.MergeOption mergeOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.Load(System.Data.Objects.MergeOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mergeOption" Type="System.Data.Objects.MergeOption" />
+      </Parameters>
+      <Docs>
+        <param name="mergeOption">Especifica como os objetos nesta coleção devem ser mesclados com os objetos que podem ter sido retornados de consultas anteriores com o mesmo <see cref="T:System.Data.Objects.ObjectContext" />.</param>
+        <summary>Carrega os objetos relacionados na coleção, usando a opção de mesclagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+Este método chama o interno `RelatedEnd.ValidateLoad` método antes de carregar a coleção, que confirma que uma chamada para <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> tem as condições corretas. O `RelatedEnd.ValidateLoad` método verifica se:
+
+* Uma opção válida <xref:System.Data.Objects.ObjectContext> existe.
+* A entidade não está em um <xref:System.Data.EntityState.Deleted> estado.
+* <xref:System.Data.Objects.MergeOption>para <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> devem ser <xref:System.Data.Objects.MergeOption.NoTracking> se e somente se a entidade de origem foi <xref:System.Data.Objects.MergeOption.NoTracking>. Se a entidade de origem foi recuperada com qualquer outro <xref:System.Data.Objects.MergeOption>, o <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> <xref:System.Data.Objects.MergeOption> pode ser qualquer coisa <xref:System.Data.Objects.MergeOption.NoTracking> (por exemplo, a entidade pode ter foi carregada com <xref:System.Data.Objects.MergeOption.OverwriteChanges> e <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> opção pode ser <xref:System.Data.Objects.MergeOption.AppendOnly>).
+* Se `mergeOption` é <xref:System.Data.Objects.MergeOption.NoTracking>, <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> não é chamado em uma entidade já carregada e <xref:System.Data.Objects.DataClasses.RelatedEnd.Load%2A> não é chamado em uma não-vazio, não controladas <xref:System.Data.Objects.DataClasses.RelatedEnd>.
+  
+ Quando os objetos na coleção já estão carregados para o <xref:System.Data.Objects.ObjectContext>, o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Load%2A> método impõe o <xref:System.Data.Objects.MergeOption> especificado pelo `mergeOption` parâmetro. Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0).  
+  
+ Para carregar explicitamente os objetos relacionados, você deve chamar o `Load` método no final relacionado retornado pela propriedade de navegação. Para uma relação um-para-muitos, chame o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Load%2A> método <xref:System.Data.Objects.DataClasses.EntityCollection%601>. Para uma relação um para um, chame o <xref:System.Data.Objects.DataClasses.EntityReference%601.Load%2A> em <xref:System.Data.Objects.DataClasses.EntityReference%601>. Isso carrega os dados de objeto relacionado no contexto do objeto. Você pode enumerar através da coleção de resultados retornados usando um `foreach` loop (`For Each...Next` no Visual Basic) e chame condicionalmente a `Load` método <xref:System.Data.Objects.DataClasses.EntityReference%601> e <xref:System.Data.Objects.DataClasses.EntityCollection%601> propriedades para cada entidade nos resultados.  
+  
+ O <xref:System.Data.Objects.DataClasses.EntityCollection%601.Load%2A> método carrega objetos relacionados da fonte de dados ou não <xref:System.Data.Objects.DataClasses.RelatedEnd.IsLoaded%2A> é `true`.  
+  
+> [!NOTE]
+>  Quando você chama o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Load%2A> método durante um `foreach` (c#) ou `For Each` enumeração (Visual Basic), os serviços de objetos tenta abrir um novo leitor de dados. Esta operação falhará, a menos que você habilitou vários conjuntos de resultados ativos especificando `multipleactiveresultsets=true` na cadeia de conexão. Você também pode carregar o resultado da consulta em um <xref:System.Collections.Generic.List%601> coleção. Isso fecha o leitor de dados e permite que você enumerar a coleção de objetos referenciados de carga.  
+  
+ O <xref:System.Data.Objects.DataClasses.EntityCollection%601.Load%2A?displayProperty=nameWithType> método está sincronizado com o <xref:System.Data.Objects.DataClasses.EntityReference%601.Load%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o. Para executar o código neste exemplo, você deve já adicionado o modelo de vendas do AdventureWorks ao seu projeto e configurado o projeto para usar o Entity Framework. Para fazer isso, conclua os procedimentos em [como: configurar manualmente um projeto do Entity Framework](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e) e [como: definir manualmente os arquivos de modelo e mapeamento](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+  
+ Este exemplo carrega o relacionados `SalesOrderHeader` objetos para o `Contact` entidade.  
+  
+ [!code-csharp[DP ObjectServices Concepts#QueryWithLoad](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#querywithload)]
+ [!code-vb[DP ObjectServices Concepts#QueryWithLoad](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#querywithload)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCollectionDeserialized">
+      <MemberSignature Language="C#" Value="public void OnCollectionDeserialized (System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnCollectionDeserialized(valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.OnCollectionDeserialized(System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.OnDeserialized</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto de streaming.</param>
+        <summary>Usada internamente para desserializar objetos de entidade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSerializing">
+      <MemberSignature Language="C#" Value="public void OnSerializing (System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnSerializing(valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.OnSerializing(System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.OnSerializing</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto de streaming.</param>
+        <summary>Usada internamente para serializar objetos de entidade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (TEntity entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(!TEntity entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <param name="entity">O objeto a ser removido da coleção.</param>
+        <summary>Remove um objeto da coleção e marca a relação para exclusão.</summary>
+        <returns>
+          <see langword="true" /> se o item foi removido com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.DataClasses.EntityCollection%601.Remove%2A> método também exclui a relação entre o objeto de origem e o objeto que está sendo removido da coleção. Se a relação tem uma restrição de integridade referencial, chamar o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Remove%2A> método em um objeto dependente marca a relação e o objeto dependente para exclusão. Isso ocorre porque a restrição indica que o objeto dependente não pode existir sem uma relação de pai. Para obter mais informações, consulte [ReferentialConstraint elemento (CSDL)](http://msdn.microsoft.com/en-us/24f96a80-85b5-4f2e-a14c-0e3eb6796fa0).  
+  
+ <xref:System.Data.Objects.DataClasses.EntityCollection%601.Remove%2A>Retorna `false` quando o objeto especificado não está na coleção.  
+  
+   
+  
+## Examples  
+ Este exemplo se baseia o. Para executar o código neste exemplo, você deve já adicionado o modelo de vendas do AdventureWorks ao seu projeto e configurado o projeto para usar o Entity Framework. Para fazer isso, conclua os procedimentos em [como: configurar manualmente um projeto do Entity Framework](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e) e [como: definir manualmente os arquivos de modelo e mapeamento](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+  
+ Este exemplo usa o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Remove%2A> método para remover uma das entidades de coleção e, em seguida, chama o <xref:System.Data.Objects.DataClasses.EntityCollection%601.Contains%2A> método para determinar se o objeto foi removido da coleção.  
+  
+ [!code-csharp[DP ObjectServices Concepts#IRelatedEnd_Add](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#irelatedend_add)]
+ [!code-vb[DP ObjectServices Concepts#IRelatedEnd_Add](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#irelatedend_add)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          O objeto <paramref name="entity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="entity" /> objeto não está anexado ao mesmo contexto de objeto.  
+  
+ -ou-  
+  
+ O <paramref name="entity" /> o objeto não tem um Gerenciador de relação válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que é usado para iterar por meio do conjunto de valores armazenados em cache pelo <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que itera por meio do conjunto de valores armazenados em cache pelo <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IListSource.ContainsListCollection">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IListSource.ContainsListCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IListSource.ContainsListCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EntityCollection`1.System#ComponentModel#IListSource#ContainsListCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção da entidade relacionada consiste em objetos de coleção.</summary>
+        <value>Essa propriedade sempre retorna <see langword="false" /> porque o <see cref="T:System.Data.Objects.DataClasses.EntityCollection`1" /> contém objetos e coleções não.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Objects.DataClasses.EntityCollection%601> é convertida em uma interface de <xref:System.ComponentModel.IListSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IListSource.GetList">
+      <MemberSignature Language="C#" Value="System.Collections.IList IListSource.GetList ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IList System.ComponentModel.IListSource.GetList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EntityCollection`1.System#ComponentModel#IListSource#GetList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a coleção como um <see cref="T:System.Collections.IList" /> usado para associação de dados.</summary>
+        <returns>Um <see cref="T:System.Collections.IList" /> objetos de entidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Objects.DataClasses.EntityCollection%601> é convertida em uma interface de <xref:System.ComponentModel.IListSource>.  
+  
+ Esse método permite que a associação de dados a um <xref:System.Data.Objects.DataClasses.EntityCollection%601>. Ele é chamado pelo controle associado à coleção. Para obter mais informações, consulte [objetos de associação para controles](http://msdn.microsoft.com/en-us/2fd34855-929b-4303-a91e-4bb69d958f2b).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

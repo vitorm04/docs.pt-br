@@ -1,0 +1,1070 @@
+<Type Name="X509Certificate2Collection" FullName="System.Security.Cryptography.X509Certificates.X509Certificate2Collection">
+  <TypeSignature Language="C#" Value="public class X509Certificate2Collection : System.Security.Cryptography.X509Certificates.X509CertificateCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509Certificate2Collection extends System.Security.Cryptography.X509Certificates.X509CertificateCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.X509Certificates.X509CertificateCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> armazenamento é aberto, o resultado é representado por um <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> objeto. Se você estiver familiarizado com as construções Cryptographic API não gerenciadas, você pode pensar um <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> como um repositório de memória de <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> objetos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir abre o repositório de certificados pessoais do usuário atual, seleciona somente os certificados válidos, permite que o usuário selecione um certificado e, em seguida, grava certificado e as informações de cadeia de certificado no console. A saída depende do certificado que o usuário seleciona.  
+  
+ [!code-cpp[certselect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[certselect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[certselect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2Collection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> sem nenhuma informações de <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria vazio <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> objeto, que é diferente de outros construtores que usam as informações de certificado ou uma coleção para criar o objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir abre o repositório de certificados pessoais do usuário atual, seleciona somente os certificados válidos, permite que o usuário selecione um certificado e, em seguida, grava certificado e as informações de cadeia de certificado no console. A saída depende do certificado que o usuário seleciona.  
+  
+ [!code-cpp[certselect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[certselect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[certselect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2Collection (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objeto para iniciar a coleta de.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> usando um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2Collection (System.Security.Cryptography.X509Certificates.X509Certificate2[] certificates);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2[] certificates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificates" Type="System.Security.Cryptography.X509Certificates.X509Certificate2[]" />
+      </Parameters>
+      <Docs>
+        <param name="certificates">Uma matriz de objetos de <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> classe usando uma matriz de <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir abre o repositório de certificados pessoais do usuário atual, seleciona somente os certificados válidos, permite que o usuário selecione um certificado e, em seguida, grava certificado e as informações de cadeia de certificado no console. A saída depende do certificado selecionado.  
+  
+ [!code-cpp[certselect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[certselect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[certselect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509Certificate2Collection (System.Security.Cryptography.X509Certificates.X509Certificate2Collection certificates);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2Collection certificates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2Collection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificates" Type="System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />
+      </Parameters>
+      <Docs>
+        <param name="certificates">Um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> classe usando a coleção de certificado especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir abre o repositório de certificados pessoais do usuário atual, seleciona somente os certificados válidos, permite que o usuário selecione um certificado e, em seguida, grava certificado e as informações de cadeia de certificado no console. A saída depende do certificado que o usuário seleciona.  
+  
+ [!code-cpp[certselect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[certselect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[certselect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Add(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Um certificado X.509 representado como um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />.</param>
+        <summary>Adiciona um objeto ao final do <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />.</summary>
+        <returns>O índice <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> ao qual o <paramref name="certificate" /> foi adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona uma <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> objeto a uma coleção e retorna o local do índice do certificado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir abre um repositório de certificados x. 509, adiciona e exclui certificados e, em seguida, fecha o repositório. Ele pressupõe que você tem três certificados para adicionar a e remova um repositório local.  
+  
+ [!code-cpp[x509store2#1](~/samples/snippets/cpp/VS_Snippets_CLR/x509store2/CPP/x509store2.cpp#1)]
+ [!code-csharp[x509store2#1](~/samples/snippets/csharp/VS_Snippets_CLR/x509store2/CS/x509store2.cs#1)]
+ [!code-vb[x509store2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509store2/vb/x509store2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Security.Cryptography.X509Certificates.X509Certificate2[] certificates);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Security.Cryptography.X509Certificates.X509Certificate2[] certificates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.AddRange(System.Security.Cryptography.X509Certificates.X509Certificate2[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Method isn't transactional (like documented)")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificates" Type="System.Security.Cryptography.X509Certificates.X509Certificate2[]" />
+      </Parameters>
+      <Docs>
+        <param name="certificates">Uma matriz de objetos de <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />.</param>
+        <summary>Adiciona vários <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objetos em uma matriz para o <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você tem uma matriz de <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> objetos para adicionar a um <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> objeto. O <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.AddRange%2A> e <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.RemoveRange%2A> métodos processam solicitações de forma transacional, para que, se um único adicionar ou remover falha, toda a operação é anulada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificates" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Security.Cryptography.X509Certificates.X509Certificate2Collection certificates);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Security.Cryptography.X509Certificates.X509Certificate2Collection certificates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.AddRange(System.Security.Cryptography.X509Certificates.X509Certificate2Collection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Method isn't transactional (like documented)")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificates" Type="System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />
+      </Parameters>
+      <Docs>
+        <param name="certificates">Um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />.</param>
+        <summary>Adiciona vários <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objetos em um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto para outro <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você tiver certificados em um <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> que você deseja adicionar a outro objeto <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> objeto. O <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.AddRange%2A> e <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.RemoveRange%2A> métodos processam solicitações de forma transacional, para que, se um único adicionar ou remover falha, toda a operação é anulada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificates" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Contains(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">O <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objeto a ser localizado na coleção.</param>
+        <summary>Determina se o <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto contém um certificado específico.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> contiver o <paramref name="certificate" /> especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método executa uma pesquisa linear; Portanto, o tempo médio de execução é proporcional ao <xref:System.Collections.CollectionBase.Count%2A> propriedade. Ou seja, esse método é um O (`n`) operação, onde `n` é <xref:System.Collections.CollectionBase.Count%2A>.  
+  
+ Este método determina a igualdade chamando o <xref:System.Object.Equals%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public byte[] Export (System.Security.Cryptography.X509Certificates.X509ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Export(valuetype System.Security.Cryptography.X509Certificates.X509ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Export(System.Security.Cryptography.X509Certificates.X509ContentType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("only support X509ContentType.Cert")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Security.Cryptography.X509Certificates.X509ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">Um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509ContentType" /> com suporte.</param>
+        <summary>Exporta as informações do certificado X.509 para uma matriz de bytes.</summary>
+        <returns>Informações de certificado X.509 em uma matriz de bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte a tipos de conteúdo que não exigem uma senha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public byte[] Export (System.Security.Cryptography.X509Certificates.X509ContentType contentType, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Export(valuetype System.Security.Cryptography.X509Certificates.X509ContentType contentType, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Export(System.Security.Cryptography.X509Certificates.X509ContentType,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("only support X509ContentType.Cert")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Security.Cryptography.X509Certificates.X509ContentType" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">Um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509ContentType" /> com suporte.</param>
+        <param name="password">Uma cadeia de caracteres usada para proteger a matriz de bytes.</param>
+        <summary>Exporta as informações de certificado x. 509 em uma matriz de bytes usando uma senha.</summary>
+        <returns>Informações de certificado X.509 em uma matriz de bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte para o seguinte <xref:System.Security.Cryptography.X509Certificates.X509ContentType> tipos:  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Cert>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.SerializedCert>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Pfx>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.SerializedStore>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Pkcs7>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O certificado é ilegível, o conteúdo é inválido ou, no caso de um certificado que exigem uma senha, a chave privada pode não ser exportada porque a senha fornecida estava incorreta.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2Collection Find (System.Security.Cryptography.X509Certificates.X509FindType findType, object findValue, bool validOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.X509Certificates.X509Certificate2Collection Find(valuetype System.Security.Cryptography.X509Certificates.X509FindType findType, object findValue, bool validOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Find(System.Security.Cryptography.X509Certificates.X509FindType,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Does not support X509FindType.FindByTemplateName, FindByApplicationPolicy and FindByCertificatePolicy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2Collection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="findType" Type="System.Security.Cryptography.X509Certificates.X509FindType" />
+        <Parameter Name="findValue" Type="System.Object" />
+        <Parameter Name="validOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="findType">Um dos valores de <see cref="T:System.Security.Cryptography.X509Certificates.X509FindType" />.</param>
+        <param name="findValue">Os critérios de pesquisa como um objeto.</param>
+        <param name="validOnly">
+          <see langword="true" />para permitir que somente os certificados válidos a serem retornados da pesquisa; Caso contrário, <see langword="false" />.</param>
+        <summary>Pesquisa um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> usando critérios de pesquisa especificados pela enumeração <see cref="T:System.Security.Cryptography.X509Certificates.X509FindType" /> e pelo objeto <paramref name="findValue" />.</summary>
+        <returns>Um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para localizar <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> objetos se nenhuma interação do usuário é necessária. Use o <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Find%2A> método para permitir que o usuário selecione <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> objetos.  
+  
+ Observe que esse método pode ser usado em um estilo em cascata ou aninhado, restringir os critérios de pesquisa com cada chamada ao método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir abre o repositório de certificados pessoais do usuário atual, localiza apenas certificados válidos, permite que o usuário selecione um certificado e grava informações de cadeia de certificado e de certificado no console. A saída depende do certificado que o usuário seleciona.  
+  
+ [!code-cpp[certselect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[certselect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[certselect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">
+          <paramref name="findType" /> é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2Enumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.Cryptography.X509Certificates.X509Certificate2Enumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2Enumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode iterar por meio de um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Enumerator" /> objeto que pode iterar por meio de <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enumeradores permitem acesso somente leitura aos dados na coleção. Enumeradores não podem ser usados para modificar a coleção subjacente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public void Import (byte[] rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Import(unsigned int8[] rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Import(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("same limitations as X509Certificate2.Import")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Uma matriz de bytes que contém dados de um certificado X.509.</param>
+        <summary>Importa um certificado na forma de uma matriz de bytes em uma <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método importa um certificado na forma de uma matriz de bytes em uma <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> objeto. Este método dá suporte para o seguinte <xref:System.Security.Cryptography.X509Certificates.X509ContentType> tipos:  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Cert>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.SerializedCert>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Pfx>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.SerializedStore>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Pkcs7>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Authenticode>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public void Import (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Import(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Import(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("same limitations as X509Certificate2.Import")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo que contém as informações de certificado.</param>
+        <summary>Importa um arquivo de certificado para um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método dá suporte para o seguinte <xref:System.Security.Cryptography.X509Certificates.X509ContentType> tipos:  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Cert>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.SerializedCert>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Pfx>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.SerializedStore>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Pkcs7>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Authenticode>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public void Import (byte[] rawData, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Import(unsigned int8[] rawData, string password, valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Import(System.Byte[],System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("same limitations as X509Certificate2.Import")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="keyStorageFlags" Type="System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Uma matriz de bytes que contém dados de um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />.</param>
+        <param name="password">A senha necessária para acessar as informações do certificado.</param>
+        <param name="keyStorageFlags">Uma combinação bit a bit dos valores de enumeração que controlam como e para qual local o certificado é importado.</param>
+        <summary>Importa um certificado, na forma de uma matriz de bytes que exige uma senha para acessar o certificado em um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado com um PFX/PKCS12 objeto binário grande (BLOB) protegido por senha. Contêineres de chave associados com certificados no BLOB PFX/PKCS12 podem ser criados e o <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags> valor pode ser usado para controlar este processo. Observe que, se você não criar um contêiner de chave, a chave privada não é persistente.  
+  
+ Esse método importa uma matriz de bytes de certificado para uma coleção de certificados. Este método dá suporte para o seguinte <xref:System.Security.Cryptography.X509Certificates.X509ContentType> tipos:  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Cert>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.SerializedCert>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Pfx>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.SerializedStore>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Pkcs7>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public void Import (string fileName, string password, System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Import(string fileName, string password, valuetype System.Security.Cryptography.X509Certificates.X509KeyStorageFlags keyStorageFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Import(System.String,System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("same limitations as X509Certificate2.Import")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="keyStorageFlags" Type="System.Security.Cryptography.X509Certificates.X509KeyStorageFlags" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo que contém as informações de certificado.</param>
+        <param name="password">A senha necessária para acessar as informações do certificado.</param>
+        <param name="keyStorageFlags">Uma combinação bit a bit dos valores de enumeração que controlam como e para qual local o certificado é importado.</param>
+        <summary>Importa um arquivo de certificado que exige uma senha em um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado com um arquivo PFX/PKCS12 ou outros arquivos de certificado que exigem uma senha. Contêineres de chave associados com certificados no arquivo PFX/PKCS12 podem ser criados e <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags> valor pode ser usado para controlar este processo. Observe que, se você não criar um contêiner de chave, a chave privada não é persistente.  
+  
+ Observe que um arquivo PFX/PKCS12 pode conter mais de um certificado. Esse método importa o primeiro certificado associado à chave privada ou, se nenhuma chave privada for encontrada, o primeiro certificado encontrado.  
+  
+ Este método dá suporte para o seguinte <xref:System.Security.Cryptography.X509Certificates.X509ContentType> tipos:  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Cert>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.SerializedCert>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Pfx>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.SerializedStore>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Pkcs7>  
+  
+-   <xref:System.Security.Cryptography.X509Certificates.X509ContentType.Authenticode>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Insert(System.Int32,System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir <c>certificado</c>.</param>
+        <param name="certificate">O <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objeto a ser inserido.</param>
+        <summary>Insere um objeto para o <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Collections.CollectionBase.Count%2A> propriedade já for igual a capacidade da lista, a capacidade é duplicada, automaticamente realocando a matriz interna antes do novo elemento é inserido.  
+  
+ Se `index` é igual a <xref:System.Collections.CollectionBase.Count%2A>, `certificate` é adicionada ao final da coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="index" />é maior do que o <see cref="P:System.Collections.CollectionBase.Count" /> propriedade.</exception>
+        <exception cref="T:System.NotSupportedException">A coleção é somente leitura.  
+  
+ -ou-  
+  
+ A coleção tem um tamanho fixo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do elemento a ser obtido ou definido.</param>
+        <summary>Obtém ou define o elemento no índice especificado.</summary>
+        <value>O elemento no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece a capacidade de acessar um elemento específico na coleção usando a seguinte sintaxe: `myCollection[index]`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir abre o repositório de certificados pessoais do usuário atual, seleciona somente os certificados válidos, permite que o usuário selecione um certificado e, em seguida, grava certificado e as informações de cadeia de certificado no console. A saída depende do certificado que o usuário seleciona.  
+  
+ [!code-cpp[certselect#1](~/samples/snippets/cpp/VS_Snippets_CLR/CertSelect/CPP/certselect.cpp#1)]
+ [!code-csharp[certselect#1](~/samples/snippets/csharp/VS_Snippets_CLR/CertSelect/CS/certselect.cs#1)]
+ [!code-vb[certselect#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CertSelect/VB/certselect.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="index" />é igual a ou maior que o <see cref="P:System.Collections.CollectionBase.Count" /> propriedade.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="index" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.Remove(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">O <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objeto a ser removido do <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto.</param>
+        <summary>Remove a primeira ocorrência de um certificado do <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método remove a primeira ocorrência de um certificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRange">
+      <MemberSignature Language="C#" Value="public void RemoveRange (System.Security.Cryptography.X509Certificates.X509Certificate2[] certificates);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveRange(class System.Security.Cryptography.X509Certificates.X509Certificate2[] certificates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.RemoveRange(System.Security.Cryptography.X509Certificates.X509Certificate2[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Method isn't transactional (like documented)")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificates" Type="System.Security.Cryptography.X509Certificates.X509Certificate2[]" />
+      </Parameters>
+      <Docs>
+        <param name="certificates">Uma matriz de objetos de <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" />.</param>
+        <summary>Remove vários <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objetos em uma matriz de um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você tem uma matriz de <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> objetos a serem removidos de um <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> objeto. O <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.AddRange%2A> e <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.RemoveRange%2A> métodos processam solicitações de forma transacional, para que, se um único adicionar ou remover falha, toda a operação é anulada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificates" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRange">
+      <MemberSignature Language="C#" Value="public void RemoveRange (System.Security.Cryptography.X509Certificates.X509Certificate2Collection certificates);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveRange(class System.Security.Cryptography.X509Certificates.X509Certificate2Collection certificates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.RemoveRange(System.Security.Cryptography.X509Certificates.X509Certificate2Collection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Method isn't transactional (like documented)")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificates" Type="System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />
+      </Parameters>
+      <Docs>
+        <param name="certificates">Um objeto <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" />.</param>
+        <summary>Remove vários <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> objetos em um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto de outro <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2Collection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você tiver certificados em um <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> objeto que você deseja remover do outro <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> objeto. O <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.AddRange%2A> e <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection.RemoveRange%2A> métodos processam solicitações de forma transacional, para que, se um único adicionar ou remover falha, toda a operação é anulada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificates" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

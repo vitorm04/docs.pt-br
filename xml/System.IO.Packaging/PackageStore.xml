@@ -1,0 +1,181 @@
+<Type Name="PackageStore" FullName="System.IO.Packaging.PackageStore">
+  <TypeSignature Language="C#" Value="public static class PackageStore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed PackageStore extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.PackageStore" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical(System.Security.SecurityCriticalScope.Everything)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de instâncias <see cref="T:System.IO.Packaging.Package" /> específicas de aplicativos usadas em combinação com <see cref="T:System.IO.Packaging.PackWebRequest" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Packaging.PackageStore> define uma coleção de referência do pacote está aberto e ativo no aplicativo.  Pacotes adicionados para o <xref:System.IO.Packaging.PackageStore> são acessados é por seus valores URI de chave.  O <xref:System.IO.Packaging.PackageStore> oferece suporte a três usos comuns:  
+  
+1.  Acessando <xref:System.IO.Packaging.PackagePart> dados por meio de <xref:System.IO.Packaging.PackWebRequest>.  
+  
+2.  O aplicativo obter uma instância de um <xref:System.IO.Packaging.Package> fornecido URI do pacote.  
+  
+3.  Acessar pacotes que são criados e armazenados em um <xref:System.IO.MemoryStream>.  
+  
+ Para melhorar o desempenho e minimizar a sobrecarga de operações de abrir e fechar arquivo repetidas, o <xref:System.IO.Packaging.PackageStore> é usado para gerenciar instâncias de pacotes acessados por <xref:System.IO.Packaging.PackWebRequest> e diretamente pelo aplicativo.  Ao acessar dados em um pacote, o <xref:System.IO.Packaging.Package> endereço de um solicitado <xref:System.IO.Packaging.PackagePart> <xref:System.IO.Packaging.PackagePart.Uri%2A> é verificado para ver se o pacote já está definido e aberto no <xref:System.IO.Packaging.PackageStore>.  Se o pacote é definida como aberta no <xref:System.IO.Packaging.PackageStore>, solicitado partes podem ser acessadas diretamente sem repetidamente abrir e fechar o pacote para cada solicitação.  
+  
+ Se seu aplicativo abre um pacote com <xref:System.IO.Packaging.Package.Open%2A?displayProperty=nameWithType>, <xref:System.IO.Packaging.PackageStore.AddPackage%2A> pode ser chamado para adicionar o pacote para o <xref:System.IO.Packaging.PackageStore>.  <xref:System.IO.Packaging.PackageStore.RemovePackage%2A>mais tarde deve ser chamado para remover o pacote de <xref:System.IO.Packaging.PackageStore> antes de chamar <xref:System.IO.Packaging.Package.Close%2A?displayProperty=nameWithType>.  
+  
+ Pacotes XPS aberto com um <xref:System.Windows.Xps.Packaging.XpsDocument.%23ctor%2A> construtor são automaticamente adicionados e removidos do <xref:System.IO.Packaging.PackageStore> quando o documento é criado e descartado.  (Você não precisa chamar <xref:System.IO.Packaging.PackageStore.AddPackage%2A> ou <xref:System.IO.Packaging.PackageStore.RemovePackage%2A> separadamente para pacotes XPS abertos com <xref:System.Windows.Xps.Packaging.XpsDocument.%23ctor%2A> construtores.)  
+  
+ As permissões de arquivo e/s de um pacote acessados por meio de <xref:System.IO.Packaging.PackageStore> permanece o mesmo que as permissões de e/s definidos no pacote quando ele é aberto.  O <xref:System.IO.Packaging.PackageStore> só fornece referências para os pacotes que foram adicionados a loja.  É responsabilidade do aplicativo para abrir, atualizar e fechar cada pacote corretamente.  
+  
+ Pacotes adicionados para o <xref:System.IO.Packaging.PackageStore> podem ser acessados em ambientes multithread quando eles são usados em combinação com um [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] analisador como <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>.  Ao operar em um ambiente multithreaded, o aplicativo deve bloquear o pacote antes de acesso.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddPackage">
+      <MemberSignature Language="C#" Value="public static void AddPackage (Uri uri, System.IO.Packaging.Package package);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddPackage(class System.Uri uri, class System.IO.Packaging.Package package) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageStore.AddPackage(System.Uri,System.IO.Packaging.Package)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+        <Parameter Name="package" Type="System.IO.Packaging.Package" />
+      </Parameters>
+      <Docs>
+        <param name="uri">A chave [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do <c>pacote</c> para comparar em um <see cref="T:System.IO.Packaging.PackWebRequest" />.</param>
+        <param name="package">O pacote a adicionar ao repositório.</param>
+        <summary>Adiciona um <see cref="T:System.IO.Packaging.Package" /> no repositório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `packageUri`Define a chave do pacote URI que é comparado ao chamar <xref:System.IO.Packaging.PackWebRequest>.  
+  
+ Se o `packageUri` corresponde a <xref:System.IO.Packaging.PackagePart.Uri%2A> para um <xref:System.IO.Packaging.PackagePart> em uma <xref:System.IO.Packaging.PackWebRequest> chamar o pacote foi definido o <xref:System.IO.Packaging.PackageStore> é usada para acessar a parte solicitada.  
+  
+ Se o `packageUri` não coincide com o <xref:System.IO.Packaging.PackagePart.Uri%2A> para um <xref:System.IO.Packaging.PackagePart> em um <xref:System.IO.Packaging.PackWebRequest> chamada, o pacote com o URI especificado é aberta para acessar a parte solicitada.  
+  
+ **Observação de segurança** esse método exige <xref:System.Security.Permissions.EnvironmentPermission> para personalizar todos os <xref:System.IO.Packaging.Package> (não -<xref:System.IO.Packaging.ZipPackage>) tipos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.IO.Packaging.PackageStore.AddPackage%2A>.  
+  
+ [!code-csharp[RightsManagedPackageViewer#RmPkgViewDecrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackageViewer/CSharp/Window1.xaml.cs#rmpkgviewdecrypt)]
+ [!code-vb[RightsManagedPackageViewer#RmPkgViewDecrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackageViewer/visualbasic/window1.xaml.vb#rmpkgviewdecrypt)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="package" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="packageUri" />é um pacote inválido [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+        <exception cref="T:System.InvalidOperationException">Um pacote com especificado <paramref name="packageUri" /> já está no repositório.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPackage">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.Package GetPackage (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.Package GetPackage(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageStore.GetPackage(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.Package</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] do pacote a retornar.</param>
+        <summary>Retorna o <see cref="T:System.IO.Packaging.Package" /> com determinado [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do repositório.</summary>
+        <returns>O pacote com um especificado <paramref name="packageUri" />; ou <see langword="null" />, se um pacote com especificado <paramref name="packageUri" /> não está no repositório.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `packageUri`está de acordo com os URIs especificado no <xref:System.IO.Packaging.PackageStore.AddPackage%2A> chamada de método.  
+  
+ **Observação de segurança** esse método exige <xref:System.Security.Permissions.EnvironmentPermission> para personalizar todos os <xref:System.IO.Packaging.Package> (não -<xref:System.IO.Packaging.ZipPackage>) tipos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.IO.Packaging.PackageStore.GetPackage%2A>.  
+  
+ [!code-csharp[RightsManagedPackageViewer#RmPkgViewOpenDoc](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackageViewer/CSharp/Window1.xaml.cs#rmpkgviewopendoc)]
+ [!code-vb[RightsManagedPackageViewer#RmPkgViewOpenDoc](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackageViewer/visualbasic/window1.xaml.vb#rmpkgviewopendoc)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="packageUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="packageUri" />é um pacote inválido [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePackage">
+      <MemberSignature Language="C#" Value="public static void RemovePackage (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemovePackage(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackageStore.RemovePackage(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] do pacote a ser removido.</param>
+        <summary>Remove o <see cref="T:System.IO.Packaging.Package" /> com determinado [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do repositório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `packageUri`está de acordo com os URIs especificado no <xref:System.IO.Packaging.PackageStore.AddPackage%2A> chamada de método.  
+  
+ **Observação de segurança** esse método exige <xref:System.Security.Permissions.EnvironmentPermission> para personalizar todos os <xref:System.IO.Packaging.Package> (não -<xref:System.IO.Packaging.ZipPackage>) tipos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.IO.Packaging.PackageStore.RemovePackage%2A>.  
+  
+ [!code-csharp[RightsManagedPackageViewer#RmPkgViewCloseDoc](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackageViewer/CSharp/Window1.xaml.cs#rmpkgviewclosedoc)]
+ [!code-vb[RightsManagedPackageViewer#RmPkgViewCloseDoc](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackageViewer/visualbasic/window1.xaml.vb#rmpkgviewclosedoc)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="packageUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="packageUri" />é um pacote inválido [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,278 @@
+<Type Name="WorkflowIdentity" FullName="System.Activities.WorkflowIdentity">
+  <TypeSignature Language="C#" Value="public class WorkflowIdentity : IEquatable&lt;System.Activities.WorkflowIdentity&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit WorkflowIdentity extends System.Object implements class System.IEquatable`1&lt;class System.Activities.WorkflowIdentity&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Activities.WorkflowIdentity&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Activities.XamlIntegration.WorkflowIdentityConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Mapeia uma instância de fluxo de trabalho persistente para sua definição de fluxo de trabalho correspondente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao controle de versão e à funcionalidade de atualização dinâmica do Windows Workflow Foundation. versão do fluxo de trabalho [!INCLUDE[crabout](~/includes/crabout-md.md)], identidade do fluxo de trabalho e atualização dinâmica, consulte os tópicos a seguir.  
+  
+ [Controle de versão de fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=271561)  
+ Descreve a funcionalidade do controle de versão do fluxo de trabalho introduzida no [!INCLUDE[net_v45](~/includes/net-v45-md.md)].  
+  
+ [Atualização dinâmica](http://go.microsoft.com/fwlink/?LinkId=271563)  
+ Descreve como atualizar a definição de fluxo de trabalho de uma instância de fluxo de trabalho persistente usando a atualização dinâmica.  
+  
+ [Usando WorkflowApplication identidade e controle de versão](http://go.microsoft.com/fwlink/?LinkId=271564)  
+ Descreve como usar <xref:System.Activities.WorkflowIdentity> para hospedar várias versões de um fluxo de trabalho lado a lado.  
+  
+ [Controle de versão lado a lado no WorkflowServiceHost](http://go.microsoft.com/fwlink/?LinkId=271565)  
+ Descreve como hospedar várias versões de um fluxo de trabalho em um único ponto de extremidade.  
+  
+ [Como hospedar várias versões de um fluxo de trabalho lado a lado](http://go.microsoft.com/fwlink/?LinkId=271566)  
+ Essa etapa de [Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkId=271570) demonstra como atualizar uma definição de fluxo de trabalho e hospedagem de fluxos de trabalho usando a definição antiga e nova ao mesmo tempo.  
+  
+ [Como atualizar a definição de uma instância de fluxo de trabalho em execução](http://go.microsoft.com/fwlink/?LinkId=271567)  
+ Essa etapa de [Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkId=271570) demonstra a atualização de instâncias de fluxo de trabalho persistentes para usar uma nova definição de fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowIdentity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowIdentity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.WorkflowIdentity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowIdentity (string name, Version version, string package);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Version version, string package) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowIdentity.#ctor(System.String,System.Version,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="version" Type="System.Version" />
+        <Parameter Name="package" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da identidade de fluxo de trabalho.</param>
+        <param name="version">A versão de identidade do fluxo de trabalho.</param>
+        <param name="package">O pacote de identidade de fluxo de trabalho.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.WorkflowIdentity" /> classe usando o nome, a versão e o pacote.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Activities.WorkflowIdentity other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Activities.WorkflowIdentity other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowIdentity.Equals(System.Activities.WorkflowIdentity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Activities.WorkflowIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="other">A WorkflowIdentity para comparar.</param>
+        <summary>Determina se a WorkflowIdentity atual e a WorkflowIdentity especificada são iguais.</summary>
+        <returns>
+          <see langword="True" />Se a WorkflowIdentity atual e a WorkflowIdentity especificada forem iguais. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowIdentity.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com o objeto atual.</param>
+        <summary>Determina se o objeto especificado é igual ao objeto atual.</summary>
+        <returns>
+          <see langword="True" />Se o objeto especificado for igual ao objeto atual; Caso contrário. <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowIdentity.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa identidade de fluxo de trabalho.</summary>
+        <returns>O código hash para essa identidade de fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowIdentity.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da identidade do fluxo de trabalho.</summary>
+        <value>O nome da identidade do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Package">
+      <MemberSignature Language="C#" Value="public string Package { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Package" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowIdentity.Package" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pacote da identidade do fluxo de trabalho.</summary>
+        <value>O pacote da identidade do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Activities.WorkflowIdentity Parse (string identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Activities.WorkflowIdentity Parse(string identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowIdentity.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.WorkflowIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Uma nova identidade.</param>
+        <summary>Converte a representação de cadeia de caracteres da WorkflowIdentity.</summary>
+        <returns>A representação de cadeia de caracteres da WorkflowIdentity.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowIdentity.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o objeto atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (string identity, out System.Activities.WorkflowIdentity result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string identity, [out] class System.Activities.WorkflowIdentity&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.WorkflowIdentity.TryParse(System.String,System.Activities.WorkflowIdentity@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="result" Type="System.Activities.WorkflowIdentity&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Uma nova identidade.</param>
+        <param name="result">O resultado criado a partir da cadeia de caracteres.</param>
+        <summary>Analisa a cadeia de caracteres e cria uma nova instância de uma WorkflowIdentity.</summary>
+        <returns>
+          <see langword="True" />Se tiver sido criada uma instância de WorkflowIdentity; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowIdentity.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão da identidade do fluxo de trabalho.</summary>
+        <value>A versão da identidade do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,124 @@
+<Type Name="ExternalProjectStartedEventArgs" FullName="Microsoft.Build.Framework.ExternalProjectStartedEventArgs">
+  <TypeSignature Language="C#" Value="public class ExternalProjectStartedEventArgs : Microsoft.Build.Framework.CustomBuildEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ExternalProjectStartedEventArgs extends Microsoft.Build.Framework.CustomBuildEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.ExternalProjectStartedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.CustomBuildEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:Microsoft.Build.Framework.IEventSource.CustomEventRaised" /> .</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExternalProjectStartedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Framework.ExternalProjectStartedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalProjectStartedEventArgs (string message, string helpKeyword, string senderName, string projectFile, string targetNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string senderName, string projectFile, string targetNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">O texto do evento.</param>
+        <param name="helpKeyword">A palavra-chave de ajuda associada ao evento.</param>
+        <param name="senderName">A fonte do evento.</param>
+        <param name="projectFile">O nome do arquivo de projeto.</param>
+        <param name="targetNames">Os nomes dos destinos de compilação no projeto externo. Isso pode ser uma referência nula (<see langword="Nothing" /> em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) se o projeto externo está sendo construído com os destinos padrão.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" />, com os valores especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalProjectStartedEventArgs (string message, string helpKeyword, string senderName, string projectFile, string targetNames, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, string helpKeyword, string senderName, string projectFile, string targetNames, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="targetNames" Type="System.String" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="message">O texto do evento.</param>
+        <param name="helpKeyword">A palavra-chave de ajuda associada ao evento.</param>
+        <param name="senderName">A fonte do evento.</param>
+        <param name="projectFile">O nome do arquivo de projeto.</param>
+        <param name="targetNames">Os nomes dos destinos de compilação no projeto externo. Isso pode ser uma referência nula (<see langword="Nothing" /> em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) se o projeto externo está sendo construído com os destinos padrão.</param>
+        <param name="eventTimestamp">A data e a hora a serem associadas ao evento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Framework.ExternalProjectFinishedEventArgs" />, com os valores especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFile">
+      <MemberSignature Language="C#" Value="public string ProjectFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProjectFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.ProjectFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o arquivo de projeto que gerou o evento.</summary>
+        <value>O arquivo de projeto que gerou o evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetNames">
+      <MemberSignature Language="C#" Value="public string TargetNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.ExternalProjectStartedEventArgs.TargetNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os nomes de destino que estão sendo criados no projeto.</summary>
+        <value>Os nomes dos destinos que estão sendo criados no projeto externo. Isso pode ser uma referência nula (<see langword="Nothing" /> em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) se o projeto externo está sendo construído com o destino padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

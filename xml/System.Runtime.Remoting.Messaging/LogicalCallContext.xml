@@ -1,0 +1,230 @@
+<Type Name="LogicalCallContext" FullName="System.Runtime.Remoting.Messaging.LogicalCallContext">
+  <TypeSignature Language="C#" Value="public sealed class LogicalCallContext : ICloneable, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit LogicalCallContext extends System.Object implements class System.ICloneable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.LogicalCallContext" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Security.SecurityCritical</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um conjunto de propriedades que são transportadas com o caminho do código de execução durante as chamadas de método remoto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> classe é uma versão do <xref:System.Runtime.Remoting.Messaging.CallContext> classe que é usado durante o método chamadas para os domínios de aplicativo remoto. O <xref:System.Runtime.Remoting.Messaging.CallContext> é um objeto de coleção especializada semelhante a um armazenamento local de thread para chamadas de método e fornece os slots de dados que são exclusivos para cada thread lógica de execução. Os slots não são compartilhados entre contextos de chamada em outros threads de lógicas. Objetos podem ser adicionados para o <xref:System.Runtime.Remoting.Messaging.CallContext> como se desloca para baixo e o caminho de código de execução e examinados através de vários objetos ao longo do caminho.  
+  
+ Quando uma chamada de método remoto é feita em um objeto em outro <xref:System.AppDomain>, o <xref:System.Runtime.Remoting.Messaging.CallContext> classe gera uma <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> que viaja junto com a chamada remota. Somente objetos que expõem o <xref:System.Runtime.Remoting.Messaging.ILogicalThreadAffinative> interface e são armazenados na <xref:System.Runtime.Remoting.Messaging.CallContext> são propagadas fora de <xref:System.AppDomain> em um <xref:System.Runtime.Remoting.Messaging.LogicalCallContext>. Objetos que não dão suporte a esta interface não são transmitidos em <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> instâncias com chamadas de método remoto.  
+  
+> [!NOTE]
+>  Essa classe faz uma demanda de link. Um SecurityException é gerada se o chamador imediato não tem permissão de infraestrutura. Consulte [demandas de Link](~/docs/framework/misc/link-demands.md) para obter mais informações.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.LogicalCallContext.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto que é uma cópia da instância atual.</summary>
+        <returns>Um novo objeto que é uma cópia dessa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.Clone%2A> método gera uma cópia profunda da atual <xref:System.Runtime.Remoting.Messaging.LogicalCallContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FreeNamedDataSlot">
+      <MemberSignature Language="C#" Value="public void FreeNamedDataSlot (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FreeNamedDataSlot(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.LogicalCallContext.FreeNamedDataSlot(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do slot de dados como vazio.</param>
+        <summary>Esvazia um slot de dados com o nome especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetData(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.LogicalCallContext.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do item no contexto da chamada.</param>
+        <summary>Recupera um objeto associado com o nome especificado da instância atual.</summary>
+        <returns>O objeto no contexto da chamada lógico associado com o nome especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.LogicalCallContext.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">As informações contextuais sobre a origem ou destino da serialização.</param>
+        <summary>Preenche uma especificado <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados necessários para serializar atual <see cref="T:System.Runtime.Remoting.Messaging.LogicalCallContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método atual preenche fornecido <xref:System.Runtime.Serialization.SerializationInfo> com todos os dados necessários para recriar o <xref:System.Runtime.Remoting.Messaging.LogicalCallContext>.  
+  
+ O método atual é uma implementação de <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão comoSerializationFormatter.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para fornecer serviços de serialização. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HasInfo">
+      <MemberSignature Language="C#" Value="public bool HasInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.LogicalCallContext.HasInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o atual <see cref="T:System.Runtime.Remoting.Messaging.LogicalCallContext" /> contém informações.</summary>
+        <value>Um valor booliano que indica se o atual <see cref="T:System.Runtime.Remoting.Messaging.LogicalCallContext" /> contém informações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (string name, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetData(string name, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome ao qual associar o novo item no contexto da chamada.</param>
+        <param name="data">O objeto para armazenar no contexto da chamada.</param>
+        <summary>Armazena o objeto especificado na instância atual e o associa com o nome especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

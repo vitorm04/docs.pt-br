@@ -1,0 +1,111 @@
+<Type Name="EllipseStylusShape" FullName="System.Windows.Ink.EllipseStylusShape">
+  <TypeSignature Language="C#" Value="public sealed class EllipseStylusShape : System.Windows.Ink.StylusShape" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EllipseStylusShape extends System.Windows.Ink.StylusShape" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Ink.EllipseStylusShape" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Ink.StylusShape</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma dica de caneta a forma de uma elipse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.Windows.Ink.EllipseStylusShape> e passá-lo para o <xref:System.Windows.Ink.StrokeCollection.GetIncrementalStrokeHitTester%2A> método para apagar parte de um <xref:System.Windows.Ink.Stroke>. Este exemplo supõe que haja uma <xref:System.Windows.Ink.IncrementalStrokeHitTester> chamado `eraseTester` e que seu <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> evento foi conectado ao manipulador de eventos definido neste exemplo. Para criar um controle que permite que um usuário apagar tinta, consulte [como: apagar tinta em um controle personalizado](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#4)]
+ [!code-vb[InkEraser#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Ink.EllipseStylusShape" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir demonstra como criar um <xref:System.Windows.Ink.EllipseStylusShape> e passá-lo para o <xref:System.Windows.Ink.StrokeCollection.GetIncrementalStrokeHitTester%2A> método para apagar parte de um <xref:System.Windows.Ink.Stroke>. Este exemplo supõe que haja uma <xref:System.Windows.Ink.IncrementalStrokeHitTester> chamado `eraseTester` e que seu <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> evento foi conectado ao manipulador de eventos definido neste exemplo. Para criar um controle que permite que um usuário apagar tinta, consulte [como: apagar tinta em um controle personalizado](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#4)]
+ [!code-vb[InkEraser#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EllipseStylusShape (double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.EllipseStylusShape.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">A largura da forma de caneta.</param>
+        <param name="height">A altura da forma de caneta.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Ink.EllipseStylusShape" /> classe com a altura e largura especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.Windows.Ink.EllipseStylusShape> e passá-lo para o <xref:System.Windows.Ink.StrokeCollection.GetIncrementalStrokeHitTester%2A> método para apagar parte de um <xref:System.Windows.Ink.Stroke>. Este exemplo supõe que haja uma <xref:System.Windows.Ink.IncrementalStrokeHitTester> chamado `eraseTester` e que seu <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> evento foi conectado ao manipulador de eventos definido neste exemplo. Para criar um controle que permite que um usuário apagar tinta, consulte [como: apagar tinta em um controle personalizado](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#4)]
+ [!code-vb[InkEraser#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EllipseStylusShape (double width, double height, double rotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 width, float64 height, float64 rotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.EllipseStylusShape.#ctor(System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+        <Parameter Name="rotation" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">A largura da forma de caneta.</param>
+        <param name="height">A altura da forma de caneta.</param>
+        <param name="rotation">O ângulo da forma de caneta.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Ink.EllipseStylusShape" /> classe com a largura especificada, altura e ângulo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.Windows.Ink.EllipseStylusShape> e passá-lo para o <xref:System.Windows.Ink.StrokeCollection.GetIncrementalStrokeHitTester%2A> método para apagar parte de um <xref:System.Windows.Ink.Stroke>. Este exemplo supõe que haja uma <xref:System.Windows.Ink.IncrementalStrokeHitTester> chamado `eraseTester` e que seu <xref:System.Windows.Ink.IncrementalStrokeHitTester.StrokeHit> evento foi conectado ao manipulador de eventos definido neste exemplo. Para criar um controle que permite que um usuário apagar tinta, consulte [como: apagar tinta em um controle personalizado](~/docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md).  
+  
+ [!code-csharp[InkEraser#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkEraser/CSharp/InkEraser.cs#4)]
+ [!code-vb[InkEraser#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkEraser/VisualBasic/InkEraser.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

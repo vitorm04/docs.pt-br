@@ -1,0 +1,323 @@
+<Type Name="ICustomMarshaler" FullName="System.Runtime.InteropServices.ICustomMarshaler">
+  <TypeSignature Language="C#" Value="public interface ICustomMarshaler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICustomMarshaler" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ICustomMarshaler" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece wrappers personalizados para manipular chamadas de método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um empacotamento fornece uma ponte entre a funcionalidade antigas e novas interfaces. Empacotamento personalizado oferece os seguintes benefícios:  
+  
+-   Ele permite que aplicativos cliente que foram projetados para trabalhar com uma interface antiga também trabalhar com servidores que implementam uma nova interface.  
+  
+-   Permite aplicativos cliente criados para funcionar com uma nova interface trabalhar com servidores que implementam uma interface antiga.  
+  
+ Se você tiver uma interface que apresenta o comportamento de marshaling diferente ou que é exposto para o modelo COM (Component Object) de forma diferente, você pode criar um marshaler personalizado em vez de usar o empacotamento de interoperabilidade. Usando um marshaler personalizado, você pode minimizar a distinção entre os novos componentes do .NET Framework e componentes COM existentes.  
+  
+ Por exemplo, suponha que você está desenvolvendo uma interface gerenciada chamada `INew`. Quando essa interface é exposta a COM por meio de um padrão COM callable wrapper (CCW), ela tem os mesmos métodos de como a interface gerenciada e usa as regras de empacotamento incorporadas interop marshaler. Agora suponha que uma interface COM conhecido chamado `IOld` já fornecem a mesma funcionalidade que o `INew` interface. Criando um marshaler personalizado, você pode fornecer uma implementação não gerenciada de `IOld` que simplesmente delega as chamadas para a implementação gerenciada do `INew` interface. Portanto, o marshaler personalizado atua como uma ponte entre as interfaces gerenciadas e não gerenciados.  
+  
+> [!NOTE]
+>  Marshalers personalizados não serão chamados durante a chamada do código gerenciado para código não gerenciado em uma interface somente de expedição.  
+  
+## <a name="defining-the-marshaling-type"></a>Definindo o tipo Marshaling  
+ Antes de criar um marshaler personalizado, você deve definir as interfaces gerenciadas e que irá ser empacotadas. Essas interfaces geralmente realizam a mesma função, mas são expostas diferente para objetos gerenciados e não gerenciados.  
+  
+ Um compilador gerenciado gera uma interface gerenciada dos metadados e a interface resultante parece com qualquer outra interface gerenciada. O exemplo a seguir mostra uma interface comum.  
+  
+ [!code-cpp[System.Runtime.InteropServices.ICustomMarshaler#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/cpp/source.cpp#1)]
+ [!code-csharp[System.Runtime.InteropServices.ICustomMarshaler#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/cs/source.cs#1)]
+ [!code-vb[System.Runtime.InteropServices.ICustomMarshaler#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/vb/source.vb#1)]  
+  
+ Defina o tipo não gerenciado na Interface Definition Language (IDL) e compilá-lo com o compilador de linguagem de definição de Interface da Microsoft (MIDL). Definir a interface dentro de uma instrução de biblioteca e atribuir uma ID de interface com o atributo de identificador exclusivo universal (UUID), como demonstrado no exemplo a seguir.  
+  
+```  
+ [uuid(9B2BAADA-0705-11D3-A0CD-00C04FA35826)]  
+library OldLib {  
+     [uuid(9B2BAADD-0705-11D3-A0CD-00C04FA35826)]  
+     interface IOld : IUnknown  
+         HRESULT OldMethod();  
+}  
+```  
+  
+ O compilador MIDL produz vários arquivos de saída. Se a interface é definida em Old.idl, o arquivo de saída Old_i.c define um `const` variável com o identificador de interface (IID) da interface, como demonstrado no exemplo a seguir.  
+  
+```  
+const IID IID_IOld = {0x9B2BAADD,0x0705,0x11D3,{0xA0,0xCD,0x00,0xC0,0x4F,0xA3,0x58,0x26}};  
+```  
+  
+ O arquivo de Old.h também é produzido pelo MIDL. Ele contém uma definição de C++ da interface que pode ser incluída em seu código-fonte C++.  
+  
+## <a name="implementing-the-icustommarshaler-interface"></a>Implementando a interface ICustomMarshaler  
+ O marshaler personalizado deve implementar o <xref:System.Runtime.InteropServices.ICustomMarshaler> interface para fornecer os wrappers apropriados para o tempo de execução.  
+  
+ O código c# a seguir exibe a interface base que deve ser implementada por todos os empacotadores personalizados.  
+  
+ [!code-cpp[System.Runtime.InteropServices.ICustomMarshaler#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/cpp/source.cpp#2)]
+ [!code-csharp[System.Runtime.InteropServices.ICustomMarshaler#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/cs/source.cs#2)]
+ [!code-vb[System.Runtime.InteropServices.ICustomMarshaler#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/vb/source.vb#2)]  
+  
+ O <xref:System.Runtime.InteropServices.ICustomMarshaler> interface inclui métodos que oferecem suporte à conversão, suporte de limpeza e informações sobre os dados a ser empacotado.  
+  
+|Tipo de operação|Método ICustomMarshaler|Descrição|  
+|-----------------------|-----------------------------|-----------------|  
+|Conversão (de nativo para código gerenciado)|<xref:System.Runtime.InteropServices.ICustomMarshaler.MarshalNativeToManaged%2A>|Realiza marshaling de um ponteiro para dados nativos em um objeto gerenciado. Esse método retorna um tempo de execução personalizado RCW (callable wrapper) que possa empacotar a interface de não gerenciada é passada como um argumento. O marshaler deve retornar uma instância de RCW personalizado para esse tipo.|  
+|Conversão (a partir do código gerenciado para nativo)|<xref:System.Runtime.InteropServices.ICustomMarshaler.MarshalManagedToNative%2A>|Realiza marshaling de um objeto gerenciado em um ponteiro para dados nativos. Esse método retorna um personalizado COM callable wrapper (CCW) que possa empacotar a interface gerenciada é passada como um argumento. O marshaler deve retornar uma instância da CCW personalizado para esse tipo.|  
+|Limpeza (de código nativo)|<xref:System.Runtime.InteropServices.ICustomMarshaler.CleanUpNativeData%2A>|Permite que o marshaler limpar os dados nativos (o CCW) que são retornados pelo <xref:System.Runtime.InteropServices.ICustomMarshaler.MarshalManagedToNative%2A> método.|  
+|Limpeza (de código gerenciado)|<xref:System.Runtime.InteropServices.ICustomMarshaler.CleanUpManagedData%2A>|Permite que o marshaler limpar os dados gerenciados (RCW) que são retornados pelo <xref:System.Runtime.InteropServices.ICustomMarshaler.MarshalNativeToManaged%2A> método.|  
+|Informações (sobre código nativo)|<xref:System.Runtime.InteropServices.ICustomMarshaler.GetNativeDataSize%2A>|Retorna o tamanho dos dados não gerenciados para ser empacotado.|  
+  
+### <a name="conversion"></a>Conversão  
+ <xref:System.Runtime.InteropServices.ICustomMarshaler.MarshalNativeToManaged%2A?displayProperty=nameWithType>  
+  
+ Realiza marshaling de um ponteiro para dados nativos em um objeto gerenciado. Esse método retorna um tempo de execução personalizado RCW (callable wrapper) que possa empacotar a interface de não gerenciada é passada como um argumento. O marshaler deve retornar uma instância de RCW personalizado para esse tipo.  
+  
+ <xref:System.Runtime.InteropServices.ICustomMarshaler.MarshalManagedToNative%2A?displayProperty=nameWithType>  
+  
+ Realiza marshaling de um objeto gerenciado em um ponteiro para dados nativos. Esse método retorna um personalizado COM callable wrapper (CCW) que possa empacotar a interface gerenciada é passada como um argumento. O marshaler deve retornar uma instância da CCW personalizado para esse tipo.  
+  
+### <a name="cleanup"></a>Limpeza  
+ <xref:System.Runtime.InteropServices.ICustomMarshaler.CleanUpNativeData%2A?displayProperty=nameWithType>  
+  
+ Permite que o marshaler limpar os dados nativos (o CCW) que são retornados pelo <xref:System.Runtime.InteropServices.ICustomMarshaler.MarshalManagedToNative%2A> método.  
+  
+ <xref:System.Runtime.InteropServices.ICustomMarshaler.CleanUpManagedData%2A?displayProperty=nameWithType>  
+  
+ Permite que o marshaler limpar os dados gerenciados (RCW) que são retornados pelo <xref:System.Runtime.InteropServices.ICustomMarshaler.MarshalNativeToManaged%2A> método.  
+  
+### <a name="size-information"></a>Informações de tamanho  
+ <xref:System.Runtime.InteropServices.ICustomMarshaler.GetNativeDataSize%2A?displayProperty=nameWithType>  
+  
+ Retorna o tamanho dos dados não gerenciados para ser empacotado.  
+  
+## <a name="implementing-the-getinstance-method"></a>Implementando o método GetInstance  
+ Além de implementar o <xref:System.Runtime.InteropServices.ICustomMarshaler> interface empacotadores personalizados devem implementar um `static` método chamado `GetInstance` que aceita um <xref:System.String> como um parâmetro e tem um tipo de retorno <xref:System.Runtime.InteropServices.ICustomMarshaler>. Isso `static` método é chamado pela camada de interoperabilidade COM o common language runtime para criar uma instância do marshaler personalizado. A cadeia de caracteres que é passada para `GetInstance` é um cookie que o método pode usar para personalizar o marshaler personalizado retornado.  
+  
+```  
+static ICustomMarshaler *GetInstance(String *pstrCookie);  
+```  
+  
+## <a name="applying-marshalasattribute"></a>Aplicando MarshalAsAttribute  
+ Para usar um marshaler personalizado, você deve aplicar o <xref:System.Runtime.InteropServices.MarshalAsAttribute> de atributo para o parâmetro ou campo que está sendo empacotado.  
+  
+ Você também deve transmitir o <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType> valor de enumeração para o <xref:System.Runtime.InteropServices.MarshalAsAttribute> construtor. Além disso, você deve especificar o <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType> campo com um dos seguintes parâmetros nomeados:  
+  
+-   <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType>(obrigatório): O nome qualificado de assembly do marshaler personalizado. O nome deve incluir o namespace e classe de marshaler personalizado. Se o marshaler personalizado não está definido no assembly em que é usado, você deve especificar o nome do assembly no qual ela está definida.  
+  
+    > [!NOTE]
+    >  Você pode usar o <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalTypeRef> campo em vez do <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType> campo. <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalTypeRef>usa um tipo que é mais fácil de especificar.  
+  
+-   <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalCookie>(opcional): um cookie que é passado para o marshaler personalizado. Você pode usar o cookie para fornecer informações adicionais para o empacotador. Por exemplo, se o mesmo marshaler é usado para fornecer um número de wrappers, o cookie identifica um wrapper específico. O cookie é passado para o `GetInstance` método de empacotamento.  
+  
+ O <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo identifica o marshaler personalizado para que ele pode ativar o wrapper apropriado. Serviço de interoperabilidade do common language runtime, em seguida, examina o atributo e cria o tempo de marshaler personalizado primeiro o argumento (parâmetro ou campo) precisa ser empacotado.  
+  
+ O tempo de execução, em seguida, chama o <xref:System.Runtime.InteropServices.ICustomMarshaler.MarshalNativeToManaged%2A> e <xref:System.Runtime.InteropServices.ICustomMarshaler.MarshalManagedToNative%2A> métodos em que o marshaler personalizado para ativar o wrapper correto para manipular a chamada.  
+  
+## <a name="using-a-custom-marshaler"></a>Usando um Marshaler personalizado  
+ Quando o marshaler personalizado for concluído, você pode usá-lo como um wrapper personalizado para um determinado tipo. O exemplo a seguir mostra a definição do `IUserData` interface gerenciada:  
+  
+ [!code-cpp[System.Runtime.InteropServices.ICustomMarshaler#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/cpp/source.cpp#3)]
+ [!code-csharp[System.Runtime.InteropServices.ICustomMarshaler#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/cs/source.cs#3)]
+ [!code-vb[System.Runtime.InteropServices.ICustomMarshaler#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/vb/source.vb#3)]  
+  
+ No exemplo a seguir, o `IUserData` interface usos de `NewOldMarshaler` marshaler personalizado para permitir que aplicativos cliente não gerenciados passar um `IOld` interface para o `DoSomeStuff` método. A descrição do gerenciado do `DoSomeStuff` leva um `INew` de interface, conforme mostrado no exemplo anterior, enquanto a versão não gerenciada de `DoSomeStuff` leva um `IOld` ponteiro de interface, conforme mostrado no exemplo a seguir.  
+  
+```  
+[uuid(9B2BAADA-0705-11D3-A0CD-00C04FA35826)]  
+library UserLib {  
+     [uuid(9B2BABCD-0705-11D3-A0CD-00C04FA35826)]  
+     interface IUserData : IUnknown  
+         HRESULT DoSomeStuff(IUnknown* pIOld);  
+}  
+```  
+  
+ A biblioteca de tipos que é gerada por meio da exportação a definição gerenciada da `IUserData` gera a definição não gerenciada mostrada neste exemplo, em vez da definição padrão. O <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo aplicado para o `INew` argumento a definição gerenciada do `DoSomeStuff` método indica que o argumento usa um marshaler personalizado, como mostra o exemplo a seguir.  
+  
+ [!code-cpp[System.Runtime.InteropServices.ICustomMarshaler#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/cpp/source.cpp#4)]
+ [!code-csharp[System.Runtime.InteropServices.ICustomMarshaler#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/cs/source.cs#4)]
+ [!code-vb[System.Runtime.InteropServices.ICustomMarshaler#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/vb/source.vb#4)]  
+  
+ [!code-cpp[System.Runtime.InteropServices.ICustomMarshaler#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/cpp/source.cpp#5)]
+ [!code-csharp[System.Runtime.InteropServices.ICustomMarshaler#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/cs/source.cs#5)]
+ [!code-vb[System.Runtime.InteropServices.ICustomMarshaler#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.runtime.interopservices.icustommarshaler/vb/source.vb#5)]  
+  
+ Nos exemplos anteriores, o primeiro parâmetro fornecido para o <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo é o <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType> valor de enumeração `UnmanagedType.CustomMarshaler`.  
+  
+ O segundo parâmetro é o <xref:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType> campo, que fornece o nome qualificado de assembly do marshaler personalizado. Esse nome consiste o namespace e classe de personalizado (`MarshalType="MyCompany.NewOldMarshaler"`).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CleanUpManagedData">
+      <MemberSignature Language="C#" Value="public void CleanUpManagedData (object ManagedObj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CleanUpManagedData(object ManagedObj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ICustomMarshaler.CleanUpManagedData(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ManagedObj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ManagedObj">O objeto gerenciado a ser destruído.</param>
+        <summary>Executa a limpeza necessária dos dados gerenciados quando ele não for mais necessário.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CleanUpNativeData">
+      <MemberSignature Language="C#" Value="public void CleanUpNativeData (IntPtr pNativeData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CleanUpNativeData(native int pNativeData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ICustomMarshaler.CleanUpNativeData(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pNativeData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pNativeData">Um ponteiro para os dados não gerenciados a serem destruídos.</param>
+        <summary>Executa a limpeza necessária dos dados não gerenciados quando ele não for mais necessário.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNativeDataSize">
+      <MemberSignature Language="C#" Value="public int GetNativeDataSize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetNativeDataSize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ICustomMarshaler.GetNativeDataSize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o tamanho dos dados nativo para ser empacotado.</summary>
+        <returns>O tamanho, em bytes, dos dados nativos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarshalManagedToNative">
+      <MemberSignature Language="C#" Value="public IntPtr MarshalManagedToNative (object ManagedObj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance native int MarshalManagedToNative(object ManagedObj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ICustomMarshaler.MarshalManagedToNative(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ManagedObj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="ManagedObj">O objeto gerenciado a ser convertido.</param>
+        <summary>Converte os dados gerenciados para dados não gerenciados.</summary>
+        <returns>Um ponteiro para o modo de exibição COM o objeto gerenciado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarshalNativeToManaged">
+      <MemberSignature Language="C#" Value="public object MarshalNativeToManaged (IntPtr pNativeData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object MarshalNativeToManaged(native int pNativeData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ICustomMarshaler.MarshalNativeToManaged(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pNativeData" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pNativeData">Um ponteiro para os dados não gerenciados a ser encapsulado.</param>
+        <summary>Converte os dados não gerenciados em dados gerenciados.</summary>
+        <returns>Um objeto que representa a exibição gerenciada dos dados COM.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,116 @@
+<Type Name="ContractClassForAttribute" FullName="System.Diagnostics.Contracts.ContractClassForAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ContractClassForAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContractClassForAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Contracts.ContractClassForAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que uma classe é um contrato para um tipo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tipos que são marcados com esse atributo representam um contrato de código para outro tipo. O tipo que o contrato se aplica a é especificado no construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Diagnostics.Contracts.ContractClassForAttribute> atributo para especificar os contratos para outro tipo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.Contracts.ContractClassAttribute> classe.  
+  
+ [!code-csharp[ContractExample#4](~/samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContractClassForAttribute (Type typeContractsAreFor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type typeContractsAreFor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.ContractClassForAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeContractsAreFor" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="typeContractsAreFor">O tipo de classe atual é um contrato para.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Contracts.ContractClassForAttribute" /> classe, especificando o tipo de classe atual é um contrato para.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra como usar o <xref:System.Diagnostics.Contracts.ContractClassAttribute.%23ctor%2A> construtor para especificar que os contratos no tipo aplicam para o `IArray` interface. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.Contracts.ContractClassAttribute> classe.  
+  
+ [!code-csharp[ContractExample#4](~/samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeContractsAreFor">
+      <MemberSignature Language="C#" Value="public Type TypeContractsAreFor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TypeContractsAreFor" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Contracts.ContractClassForAttribute.TypeContractsAreFor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo que este contrato de código aplica-se a.</summary>
+        <value>O tipo que este contrato aplica-se a.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

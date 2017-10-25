@@ -1,0 +1,100 @@
+<Type Name="ManagementBindAttribute" FullName="System.Management.Instrumentation.ManagementBindAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ManagementBindAttribute : System.Management.Instrumentation.ManagementNewInstanceAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagementBindAttribute extends System.Management.Instrumentation.ManagementNewInstanceAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementBindAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Instrumentation.ManagementNewInstanceAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O atributo ManagementBind indica que um método é usado para retornar a instância de uma classe WMI associada com um valor de chave específico.  
+  
+ Observação: as bibliotecas do .NET no WMI agora são consideradas em estado final e nenhum desenvolvimento, melhorias ou atualizações adicionais estarão disponíveis para problemas não relacionados à segurança que afetarem essas bibliotecas. O [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) deve ser usado para todos os novos desenvolvimentos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo marca o método que usa a infraestrutura para executar a operação de obtenção WMI. O método deve usar os valores de chave da classe WMI correspondente como parâmetros e retornar a instância associada da classe WMI.  
+  
+ **Importante** os parâmetros do método devem ter exatamente o mesmo nome e tipo como parâmetros de chave da classe. Os parâmetros de chave são identificados pela. <xref:System.Management.Instrumentation.ManagementKeyAttribute> atributo  
+  
+ O método deve atribuir valores para todas as propriedades disponíveis da classe.  
+  
+ Quando a infraestrutura de extensões do provedor de WMI requer essa funcionalidade de associação, ele primeiro procura por um construtor com esse atributo. Se nenhum for encontrado, ele pesquisa para um método estático que retorna o tipo de classe WMI.  
+  
+ O destino desse atributo deve ser um método ou um método estático.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o atributo ManagementBind para marcar o construtor de uma classe.  
+  
+```csharp  
+// Use the ManagementBind attribute to specify that this constructor  
+// is used to attach a class instance to a specific WMI  
+// instance. The constructor should set the values of the  
+// key properties of the WMI instance.  
+[ManagementBind]  
+public ClassConstructor(int Id)  
+{  
+     // Set this class instance to a specific instance  
+     // by assigning property values and   
+     // giving unique values to the key properties.   
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementBindAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.ManagementBindAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementBindAttribute" />. Esse é o construtor padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public Type Schema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.ManagementBindAttribute.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que define o tipo de saída do método está marcado com o atributo ManagementEnumerator de saída.</summary>
+        <value>Um <see cref="T:System.Type" /> valor que indica o tipo de saída que o método marcado com o <see cref="ManagementBind" /> resultará em atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tipo retornado é <xref:System.Object?displayProperty=nameWithType>, em seguida, a saída deve ser tratada como um valor do tipo <xref:System.Object?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

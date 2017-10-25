@@ -1,0 +1,92 @@
+<Type Name="LenientFunctionPrototype" FullName="Microsoft.JScript.LenientFunctionPrototype">
+  <TypeSignature Language="C#" Value="public sealed class LenientFunctionPrototype : Microsoft.JScript.FunctionPrototype" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LenientFunctionPrototype extends Microsoft.JScript.FunctionPrototype" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.LenientFunctionPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.FunctionPrototype</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena objetos que representam os métodos estáticos do <see cref="T:Microsoft.JScript.FunctionPrototype" /> classe. O <see cref="T:Microsoft.JScript.LenientFunctionPrototype" /> classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="apply">
+      <MemberSignature Language="C#" Value="public object apply;" />
+      <MemberSignature Language="ILAsm" Value=".field public object apply" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientFunctionPrototype.apply" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.FunctionPrototype.apply(System.Object,System.Object,System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.FunctionPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="call">
+      <MemberSignature Language="C#" Value="public object call;" />
+      <MemberSignature Language="ILAsm" Value=".field public object call" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientFunctionPrototype.call" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.FunctionPrototype.call(System.Object,System.Object,System.Object[])" /> estático da classe <see cref="T:Microsoft.JScript.FunctionPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public object constructor;" />
+      <MemberSignature Language="ILAsm" Value=".field public object constructor" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientFunctionPrototype.constructor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena uma referência a um <see cref="T:Microsoft.JScript.FunctionConstructor" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toString">
+      <MemberSignature Language="C#" Value="public object toString;" />
+      <MemberSignature Language="ILAsm" Value=".field public object toString" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientFunctionPrototype.toString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.FunctionPrototype.toString(System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.FunctionPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

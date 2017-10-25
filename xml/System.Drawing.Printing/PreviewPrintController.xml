@@ -1,0 +1,261 @@
+<Type Name="PreviewPrintController" FullName="System.Drawing.Printing.PreviewPrintController">
+  <TypeSignature Language="C#" Value="public class PreviewPrintController : System.Drawing.Printing.PrintController" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PreviewPrintController extends System.Drawing.Printing.PrintController" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Printing.PreviewPrintController" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Printing.PrintController</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica um controlador de impressão que exibe um documento em uma tela como uma série de imagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, para usar o recurso de visualização de impressão, você cria uma instância de um <xref:System.Windows.Forms.PrintPreviewControl> ou <xref:System.Windows.Forms.PrintPreviewDialog> de classe e defina seu <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> propriedade. O <xref:System.Drawing.Printing.PreviewPrintController> é usado pelo <xref:System.Windows.Forms.PrintPreviewControl> e <xref:System.Windows.Forms.PrintPreviewDialog> classes, embora você possa usar o <xref:System.Drawing.Printing.PreviewPrintController> ao gerenciar a exibição da janela de visualização de impressão.  
+  
+ Quando usado com um <xref:System.Windows.Forms.PrintPreviewControl> ou <xref:System.Windows.Forms.PrintPreviewDialog>, <xref:System.Drawing.Printing.PreviewPrintController> define o <xref:System.Drawing.Printing.PrintController> de associado <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> para um <xref:System.Windows.Forms.PrintControllerWithStatusDialog>, realiza a visualização de impressão e define o <xref:System.Drawing.Printing.PrintController> para o valor original.  
+  
+ <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A>cria o <xref:System.Drawing.Graphics> que é exibido durante a visualização de impressão. Depois de <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A> é chamado, o <xref:System.Drawing.Printing.PreviewPrintController.OnStartPage%2A> método define o <xref:System.Drawing.Graphics> a um gráfico de uma única página. O <xref:System.Drawing.Printing.PreviewPrintController.OnEndPage%2A> método limpa o <xref:System.Drawing.Graphics>, enquanto o <xref:System.Drawing.Printing.PreviewPrintController.OnEndPrint%2A> método desaloca o objeto.  
+  
+ Para obter mais informações sobre como imprimir, consulte o <xref:System.Drawing.Printing> visão geral do namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PreviewPrintController ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PreviewPrintController.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Printing.PreviewPrintController" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreviewPageInfo">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PreviewPageInfo[] GetPreviewPageInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Printing.PreviewPageInfo[] GetPreviewPageInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PreviewPrintController.GetPreviewPageInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PreviewPageInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Captura as páginas de um documento como uma série de imagens.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.Drawing.Printing.PreviewPageInfo" /> que contém as páginas de um <see cref="T:System.Drawing.Printing.PrintDocument" /> como uma série de imagens.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Drawing.Printing.PrintDocument> imagem representação contida em um <xref:System.Drawing.Printing.PreviewPageInfo> para implementar seu próprio formulário de visualização de impressão.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">Para imprimir segura em uma caixa de diálogo restrita. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPreview">
+      <MemberSignature Language="C#" Value="public override bool IsPreview { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPreview" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PreviewPrintController.IsPreview" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esse controlador é usado para visualização de impressão.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndPage">
+      <MemberSignature Language="C#" Value="public override void OnEndPage (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintPageEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnEndPage(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintPageEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PreviewPrintController.OnEndPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintPageEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Um <see cref="T:System.Drawing.Printing.PrintDocument" /> que representa o documento sendo visualizado.</param>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.PrintPageEventArgs" /> que contém dados sobre como visualizar uma página no documento de impressão.</param>
+        <summary>Conclui a sequência de controle que determina quando e como visualizar uma página em um documento de impressão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.PreviewPrintController.OnEndPage%2A>é chamado imediatamente após o <xref:System.Drawing.Printing.PrintDocument> gera o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento. Se uma exceção é gerada dentro de um <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos de um <xref:System.Drawing.Printing.PrintDocument>, este método não é chamado.  
+  
+ <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A>cria o <xref:System.Drawing.Graphics> que é exibido durante a visualização de impressão. Depois de <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A> é chamado, o <xref:System.Drawing.Printing.PreviewPrintController.OnStartPage%2A> método define o <xref:System.Drawing.Graphics> a um gráfico de uma única página. O <xref:System.Drawing.Printing.PreviewPrintController.OnEndPage%2A> método limpa o <xref:System.Drawing.Graphics>, enquanto o <xref:System.Drawing.Printing.PreviewPrintController.OnEndPrint%2A> método desaloca o objeto.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">Para imprimir segura em uma caixa de diálogo restrita. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndPrint">
+      <MemberSignature Language="C#" Value="public override void OnEndPrint (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnEndPrint(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PreviewPrintController.OnEndPrint(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Um <see cref="T:System.Drawing.Printing.PrintDocument" /> que representa o documento sendo visualizado.</param>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.PrintEventArgs" /> que contém dados sobre como visualizar o documento de impressão.</param>
+        <summary>Conclui a sequência de controle que determina quando e como visualizar um documento de impressão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado imediatamente após <xref:System.Drawing.Printing.PrintDocument> gera o <xref:System.Drawing.Printing.PrintDocument.EndPrint> evento. Mesmo se uma exceção não tratada foi lançada durante o processo de visualização de impressão, <xref:System.Drawing.Printing.PreviewPrintController.OnEndPrint%2A> é chamado.  
+  
+ <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A>cria o <xref:System.Drawing.Graphics> que é exibido durante a visualização de impressão. Depois de <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A> é chamado, o <xref:System.Drawing.Printing.PreviewPrintController.OnStartPage%2A> método define o <xref:System.Drawing.Graphics> a um gráfico de uma única página. O <xref:System.Drawing.Printing.PreviewPrintController.OnEndPage%2A> método limpa o <xref:System.Drawing.Graphics>, enquanto o <xref:System.Drawing.Printing.PreviewPrintController.OnEndPrint%2A> método desaloca o objeto.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">Para imprimir segura em uma caixa de diálogo restrita. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStartPage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Graphics OnStartPage (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintPageEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Drawing.Graphics OnStartPage(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintPageEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PreviewPrintController.OnStartPage(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintPageEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintPageEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Um <see cref="T:System.Drawing.Printing.PrintDocument" /> que representa o documento sendo visualizado.</param>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.PrintPageEventArgs" /> que contém dados sobre como visualizar uma página no documento de impressão. Inicialmente, o <see cref="P:System.Drawing.Printing.PrintPageEventArgs.Graphics" /> propriedade desse parâmetro será <see langword="null" />. O valor retornado desse método será ser usado para definir essa propriedade.</param>
+        <summary>Inicia a sequência de controle que determina quando e como visualizar uma página em um documento de impressão.</summary>
+        <returns>Um <see cref="T:System.Drawing.Graphics" /> que representa uma página de um <see cref="T:System.Drawing.Printing.PrintDocument" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.PreviewPrintController.OnStartPage%2A>é chamado imediatamente antes do <xref:System.Drawing.Printing.PrintDocument> gera o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento.  
+  
+ <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A>cria o <xref:System.Drawing.Graphics> que é exibido durante a visualização de impressão. Depois de <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A> é chamado, o <xref:System.Drawing.Printing.PreviewPrintController.OnStartPage%2A> método define o <xref:System.Drawing.Graphics> a um gráfico de uma única página. O <xref:System.Drawing.Printing.PreviewPrintController.OnEndPage%2A> método limpa o <xref:System.Drawing.Graphics>, enquanto o <xref:System.Drawing.Printing.PreviewPrintController.OnEndPrint%2A> método desaloca o objeto.  
+  
+> [!NOTE]
+>  Suavização, também conhecido como cinza dimensionamento, melhoram a visualização de impressão a aparência. No entanto, o uso de suavização pode reduzir a velocidade de processamento. Para obter mais informações sobre a suavização, consulte o <xref:System.Drawing.Printing.PreviewPrintController.UseAntiAlias%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">Para imprimir segura em uma caixa de diálogo restrita. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStartPrint">
+      <MemberSignature Language="C#" Value="public override void OnStartPrint (System.Drawing.Printing.PrintDocument document, System.Drawing.Printing.PrintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnStartPrint(class System.Drawing.Printing.PrintDocument document, class System.Drawing.Printing.PrintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Printing.PreviewPrintController.OnStartPrint(System.Drawing.Printing.PrintDocument,System.Drawing.Printing.PrintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="document" Type="System.Drawing.Printing.PrintDocument" />
+        <Parameter Name="e" Type="System.Drawing.Printing.PrintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="document">Um <see cref="T:System.Drawing.Printing.PrintDocument" /> que representa o documento sendo visualizado.</param>
+        <param name="e">Um <see cref="T:System.Drawing.Printing.PrintEventArgs" /> que contém dados sobre como imprimir o documento.</param>
+        <summary>Inicia a sequência de controle que determina quando e como visualizar um documento de impressão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A>é chamado imediatamente após <xref:System.Drawing.Printing.PrintDocument> gera o <xref:System.Drawing.Printing.PrintDocument.BeginPrint> evento.  
+  
+ <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A>cria o <xref:System.Drawing.Graphics> que é exibido durante a visualização de impressão. Depois de <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A> é chamado, o <xref:System.Drawing.Printing.PreviewPrintController.OnStartPage%2A> método define o <xref:System.Drawing.Graphics> a um gráfico de uma única página. O <xref:System.Drawing.Printing.PreviewPrintController.OnEndPage%2A> método limpa o <xref:System.Drawing.Graphics>, enquanto o <xref:System.Drawing.Printing.PreviewPrintController.OnEndPrint%2A> método desaloca o objeto.  
+  
+ <xref:System.Drawing.Printing.PreviewPrintController.OnStartPrint%2A>verifica se as configurações da impressora são válidas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">A impressora nomeada na propriedade <see cref="P:System.Drawing.Printing.PrinterSettings.PrinterName" /> não existe.</exception>
+        <permission cref="T:System.Drawing.Printing.PrintingPermission">Para imprimir segura em uma caixa de diálogo restrita. Enumeração associada: <see cref="F:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAntiAlias">
+      <MemberSignature Language="C#" Value="public virtual bool UseAntiAlias { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAntiAlias" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Printing.PreviewPrintController.UseAntiAlias" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve usar a suavização ao exibir a visualização de impressão.</summary>
+        <value>
+          <see langword="true" />Se a visualização de impressão usa a suavização; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Suavização, também conhecido como cinza dimensionamento, usa vários tons de cinza ao redor de áreas de curvas e diagonais em texto para que o texto de uma aparência mais suave.  
+  
+> [!NOTE]
+>  Ao usar a suavização torna a visualização de impressão parecem melhor, isso pode reduzir a velocidade de processamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

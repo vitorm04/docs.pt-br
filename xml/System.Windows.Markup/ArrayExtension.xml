@@ -1,0 +1,278 @@
+<Type Name="ArrayExtension" FullName="System.Windows.Markup.ArrayExtension">
+  <TypeSignature Language="C#" Value="public class ArrayExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArrayExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.ArrayExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("PresentationFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Items")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Array))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa o suporte de <see langword="x:Array" /> para serviços de XAML do .NET Framework</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.ArrayExtension>é a classe que implementa o `x:Array` comportamento de extensões de marcação e o `x:ArrayExtension` item de informação do [MS-XAML]. `x:Array`oferece suporte a um recurso de linguagem XAML que permite a adição de elementos filho arbitrário dentro de uma matriz, por meio de uma sintaxe de extensão habilitada marcação específica. A sintaxe de extensão de marcação requer uma explícita <xref:System.Windows.Markup.ArrayExtension.Type%2A> atributo sobre o uso da extensão de marcação e uma sintaxe de conteúdo para especificar o <xref:System.Windows.Markup.ArrayExtension.Items%2A>. Para obter mais informações e detalhes sobre a sintaxe, consulte [extensão de marcação X:array](~/docs/framework/xaml-services/x-array-markup-extension.md).  
+  
+ Essa classe é uma implementação de extensão de marcação. Classes de extensão de marcação existe principalmente para oferecer suporte à infraestrutura para alguns aspectos de uma implementação do processador XAML, e os membros expostos por uma classe de extensão de marcação não são normalmente chamados de código do usuário. Essa extensão oferece suporte a [extensão de marcação X:array](~/docs/framework/xaml-services/x-array-markup-extension.md) uso do XAML para implementação de serviços XAML do .NET Framework do XAML e seus leitores XAML e gravadores XAML.  
+  
+ Nas versões anteriores do .NET Framework, essa classe existia no assembly específicos de WPF PresentationFramework. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.ArrayExtension> está no assembly System. XAML. Isso torna o `x:Array` uso disponível para estruturas ou tecnologias como [!INCLUDE[TLA#tla_workflow](~/includes/tlasharptla-workflow-md.md)] que são criados em serviços XAML do .NET Framework. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+ Os usos de assembly System <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para mapear tipos do <xref:System.Windows.Markup> namespace CLR no assembly para o namespace XAML para a linguagem XAML ([!INCLUDE[TLA#tla_xamlxmlnsv1](~/includes/tlasharptla-xamlxmlnsv1-md.md)]). Na marcação XAML típica, você declara um prefixo de [!INCLUDE[TLA#tla_xamlxmlnsv1](~/includes/tlasharptla-xamlxmlnsv1-md.md)] em um mapeamento de elemento raiz e use o prefixo `x`.  
+  
+<a name="xamlTextUsage_ArrayExtension"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ArrayExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.ArrayExtension" />. Isso cria uma matriz vazia.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayExtension (Array elements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Array elements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ArrayExtension.#ctor(System.Array)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elements" Type="System.Array" />
+      </Parameters>
+      <Docs>
+        <param name="elements">O conteúdo da matriz que preenche a matriz criada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.ArrayExtension" /> classe com base na matriz fornecida bruta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método oferece suporte ao comportamento de extensão de marcação e não é normalmente chamado pelo código do usuário, a menos que esse código de usuário implementa o comportamento de processamento de XAML.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="elements" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayExtension (Type arrayType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type arrayType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ArrayExtension.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="arrayType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="arrayType">O tipo de objeto da nova matriz.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.ArrayExtension" /> classe e inicializa o tipo da matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método oferece suporte ao comportamento de extensão de marcação e não é normalmente chamado pelo código do usuário, a menos que esse código de usuário implementa o comportamento de processamento de XAML.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="arrayType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChild">
+      <MemberSignature Language="C#" Value="public void AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ArrayExtension.AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser adicionado ao final da matriz.</param>
+        <summary>Anexa o objeto fornecido no final da matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado diretamente e não participa de qualquer interpretação .NET existente a `x:Array` comportamento de extensão de marcação. Qualquer código de acesso para a instância de matriz de backup deve ser feito com APIs de matriz ou recursos de linguagem. Qualquer leitor de alternativas XAML ou implementações do gravador de XAML devem em vez disso, use as extensões de serviços .NET System. XAML como <xref:System.Xaml.Schema.XamlTypeInvoker.GetAddMethod%2A> para determinar qual método de chamada, ou <xref:System.Xaml.XamlType.LookupCollectionKind%2A> junto com a conversão da interface apropriada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddText">
+      <MemberSignature Language="C#" Value="public void AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ArrayExtension.AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser adicionado ao final da matriz.</param>
+        <summary>Adiciona um nó de texto como um novo item de matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado diretamente e não participa na interpretação de `x:Array` comportamento de extensão de marcação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList Items" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ArrayExtension.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conteúdo da matriz. Pode ser definido em XAML por meio da sintaxe de coleção de XAML.</summary>
+        <value>O conteúdo da matriz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.ArrayExtension.Items%2A>é a propriedade de conteúdo XAML atribuída de <xref:System.Windows.Markup.ArrayExtension>. Designação de propriedade de conteúdo XAML suporta o uso XAML típico de especificar os elementos de item de uma matriz como elementos filho do objeto no XAML. <xref:System.Windows.Markup.ArrayExtension.Items%2A>é o objeto modelo e marcação de extensão implementação exposição para intrínseca `ArrayExtension.Items` propriedade, conforme definido para `x:ArrayExtension` em [MS-XAML].  
+  
+ Digite incompatibilidades entre <xref:System.Windows.Markup.ArrayExtension.Type%2A> e os itens na <xref:System.Windows.Markup.ArrayExtension.Items%2A>, ou qualquer outro problema de validação, não são relatados como exceções até <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> é invocado. Esse comportamento é consistente com os princípios de design geral de extensões de marcação XAML.  
+  
+ Para obter informações de uso XAML, consulte [extensão de marcação X:array](~/docs/framework/xaml-services/x-array-markup-extension.md).  
+  
+<a name="xamlTextUsage_Items"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ArrayExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um objeto que pode fornecer serviços para a extensão de marcação.</param>
+        <summary>Retorna uma matriz que é dimensionada para o número de objetos fornecidos no <see cref="P:System.Windows.Markup.ArrayExtension.Items" /> valores.</summary>
+        <returns>A matriz criada, ou null.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método oferece suporte ao comportamento de extensão de marcação e não é normalmente chamado pelo código do usuário, a menos que esse código de usuário implementa o comportamento de processamento de XAML.  
+  
+ Uma implementação de processador XAML usa esse método para manipulação adequada de `x:Array` elementos durante a criação do objeto. Isso depende de comportamento geral para processadores XAML quando eles processem qualquer <xref:System.Windows.Markup.MarkupExtension> e chame seu `ProvideValue` implementação.  
+  
+ Esta implementação não confie em todos os serviços com base no passado `serviceProvider`. No entanto, ele dependem conceitos CLR como transmitidas pelo uso da extensão durante o processamento com o contexto do esquema padrão XAML para serviços XAML do .NET Framework.  
+  
+ Para obter mais informações sobre extensões de marcação, consulte [extensões de marcação para XAML Overview](~/docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Processado uma matriz que não forneceu um válido <see cref="P:System.Windows.Markup.ArrayExtension.Type" />.  
+  
+ -ou-  
+  
+ Há uma incompatibilidade de tipo entre o declarado <see cref="P:System.Windows.Markup.ArrayExtension.Type" /> de matriz e um ou mais dos seus <see cref="P:System.Windows.Markup.ArrayExtension.Items" /> valores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ArrayExtension.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.ConstructorArgument("type")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de matriz a ser criado ao chamar <see cref="M:System.Windows.Markup.ArrayExtension.ProvideValue(System.IServiceProvider)" />.</summary>
+        <value>O tipo da matriz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações de uso XAML, consulte [extensão de marcação X:array](~/docs/framework/xaml-services/x-array-markup-extension.md).  
+  
+<a name="xamlTextUsage_Type"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

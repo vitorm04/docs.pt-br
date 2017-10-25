@@ -1,0 +1,51 @@
+<Type Name="SoapParameterAttribute" FullName="System.Runtime.Remoting.Metadata.SoapParameterAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SoapParameterAttribute : System.Runtime.Remoting.Metadata.SoapAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapParameterAttribute extends System.Runtime.Remoting.Metadata.SoapAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Metadata.SoapParameterAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.Metadata.SoapAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Personaliza a geração de SOAP e processamento de um parâmetro. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos de destino para o <xref:System.Runtime.Remoting.Metadata.SoapParameterAttribute> atributos são parâmetros de chamadas de método que são invocados remotamente. O <xref:System.Runtime.Remoting.Metadata.SoapParameterAttribute> é usado para especificar as informações que controla como o Framework .NET gera o formato de transmissão do XML de SOAP para parâmetros de destino.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapParameterAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.SoapParameterAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Runtime.Remoting.Metadata.SoapParameterAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

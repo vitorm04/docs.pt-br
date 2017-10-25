@@ -1,0 +1,55 @@
+<Type Name="BamlLocalizerErrorNotifyEventArgs" FullName="System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventArgs">
+  <TypeSignature Language="C#" Value="public class BamlLocalizerErrorNotifyEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BamlLocalizerErrorNotifyEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados de evento necessários para o <see cref="E:System.Windows.Markup.Localizer.BamlLocalizer.ErrorNotify" /> evento.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.Localizer.BamlLocalizerError Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Markup.Localizer.BamlLocalizerError Error" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventArgs.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Localizer.BamlLocalizerError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a condição de erro específico encontrada pelo <see cref="T:System.Windows.Markup.Localizer.BamlLocalizer" />.</summary>
+        <value>A condição de erro encontrados por <see cref="T:System.Windows.Markup.Localizer.BamlLocalizer" />, como um valor da enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.Localizer.BamlLocalizableResourceKey Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.Localizer.BamlLocalizableResourceKey Key" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.Localizer.BamlLocalizerErrorNotifyEventArgs.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Localizer.BamlLocalizableResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave associada ao recurso que gerou a condição de erro.</summary>
+        <value>A chave associada ao recurso que gerou a condição de erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,357 @@
+<Type Name="BrowsableAttribute" FullName="System.ComponentModel.BrowsableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class BrowsableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BrowsableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.BrowsableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se uma propriedade ou evento deve ser exibido em uma janela Propriedades.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um designer visual exibe na janela Propriedades daqueles membros que não têm nenhum atributo navegável ou são marcados com o <xref:System.ComponentModel.BrowsableAttribute.%23ctor%2A> do construtor `browsable` parâmetro definido como `true`. Esses membros podem ser modificados em tempo de design. Os membros marcados com o <xref:System.ComponentModel.BrowsableAttribute.%23ctor%2A> do construtor `browsable` parâmetro definido como `false` não são apropriados para edição em tempo de design e, portanto, não são exibidos em um designer visual. O padrão é `true`.  
+  
+> [!NOTE]
+>  Quando você marca uma propriedade com `Browsable(true)`, o valor desse atributo é definido como o membro constante <xref:System.ComponentModel.BrowsableAttribute.Yes>. Para uma propriedade é marcada com `Browsable(false)`, o valor é <xref:System.ComponentModel.BrowsableAttribute.No>. Portanto, quando você verificar o valor desse atributo no seu código, você deve especificar o atributo como <xref:System.ComponentModel.BrowsableAttribute.Yes?displayProperty=nameWithType> ou <xref:System.ComponentModel.BrowsableAttribute.No?displayProperty=nameWithType>.  
+  
+ Para obter mais informações, consulte [Atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir marca uma propriedade como navegável.  
+  
+ [!code-cpp[Classic BrowsableAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BrowsableAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BrowsableAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BrowsableAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic BrowsableAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BrowsableAttribute Example/VB/source.vb#1)]  
+  
+ O exemplo a seguir mostra como verificar o valor da <xref:System.ComponentModel.BrowsableAttribute> para `MyProperty`. Primeiro, o código obtém um <xref:System.ComponentModel.PropertyDescriptorCollection> com todas as propriedades do objeto. Em seguida, o código de índices para o <xref:System.ComponentModel.PropertyDescriptorCollection> obter `MyProperty`. Em seguida, ele retorna os atributos para essa propriedade e os salva na variável de atributos.  
+  
+ O exemplo apresenta duas maneiras de verificar o valor de <xref:System.ComponentModel.BrowsableAttribute>. No segundo fragmento de código, o exemplo chama o <xref:System.Object.Equals%2A> método. No último fragmento de código, o exemplo usa o <xref:System.ComponentModel.BrowsableAttribute.Browsable%2A> propriedade para verificar o valor.  
+  
+ [!code-cpp[Classic BrowsableAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BrowsableAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic BrowsableAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BrowsableAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic BrowsableAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BrowsableAttribute Example/VB/source.vb#2)]  
+  
+ Se você marcou uma classe com o <xref:System.ComponentModel.BrowsableAttribute>, use o seguinte código para verificar o valor.  
+  
+ [!code-cpp[Classic BrowsableAttribute Example#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BrowsableAttribute Example/CPP/source.cpp#3)]
+ [!code-csharp[Classic BrowsableAttribute Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BrowsableAttribute Example/CS/source.cs#3)]
+ [!code-vb[Classic BrowsableAttribute Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BrowsableAttribute Example/VB/source.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BrowsableAttribute (bool browsable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool browsable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BrowsableAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="browsable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="browsable">
+          <see langword="true" /> se uma propriedade ou um evento puder ser modificada no tempo de design, caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.BrowsableAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você marca uma propriedade com o <xref:System.ComponentModel.BrowsableAttribute.%23ctor%2A> construtor do valor `true`, o valor desse atributo é definido como o membro constante <xref:System.ComponentModel.BrowsableAttribute.Yes>. Para uma propriedade é marcada com o <xref:System.ComponentModel.BrowsableAttribute.%23ctor%2A> construtor do valor `false`, o valor é <xref:System.ComponentModel.BrowsableAttribute.No>. Portanto, quando você quiser verificar o valor desse atributo no seu código, você deve especificar o atributo como <xref:System.ComponentModel.BrowsableAttribute.Yes?displayProperty=nameWithType> ou <xref:System.ComponentModel.BrowsableAttribute.No?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir marca uma propriedade como navegável. Esse código cria um novo <xref:System.ComponentModel.BrowsableAttribute>, define seu valor como <xref:System.ComponentModel.BrowsableAttribute.Yes?displayProperty=nameWithType>e o associa à propriedade.  
+  
+ [!code-cpp[Classic BrowsableAttribute.BrowsableAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BrowsableAttribute.BrowsableAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BrowsableAttribute.BrowsableAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BrowsableAttribute.BrowsableAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic BrowsableAttribute.BrowsableAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BrowsableAttribute.BrowsableAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Browsable">
+      <MemberSignature Language="C#" Value="public bool Browsable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Browsable" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.BrowsableAttribute.Browsable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um objeto é navegável.</summary>
+        <value>
+          <see langword="true" /> se o objeto for navegável; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir verifica se `MyProperty` é navegável. Primeiro, o código obtém os atributos de `MyProperty` por:  
+  
+-   Recuperando um <xref:System.ComponentModel.PropertyDescriptorCollection> com todas as propriedades do objeto.  
+  
+-   A indexação para o <xref:System.ComponentModel.PropertyDescriptorCollection> obter `MyProperty`.  
+  
+-   Salvando os atributos para essa propriedade na variável de atributos.  
+  
+ Em seguida, o código define `myAttribute` para o valor da <xref:System.ComponentModel.BrowsableAttribute> no <xref:System.ComponentModel.AttributeCollection> e verifica se a propriedade é navegável.  
+  
+ [!code-cpp[Classic BrowsableAttribute.Browsable Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic BrowsableAttribute.Browsable Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic BrowsableAttribute.Browsable Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic BrowsableAttribute.Browsable Example/CS/source.cs#1)]
+ [!code-vb[Classic BrowsableAttribute.Browsable Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic BrowsableAttribute.Browsable Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.BrowsableAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.BrowsableAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.BrowsableAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BrowsableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o valor padrão para o <see cref="T:System.ComponentModel.BrowsableAttribute" />, que é <see cref="F:System.ComponentModel.BrowsableAttribute.Yes" />. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você marca uma propriedade com esse valor, esse atributo é definido como o membro constante <xref:System.ComponentModel.BrowsableAttribute.Yes>. Portanto, quando você deseja verificar se o atributo é definido como esse valor em seu código, você deve especificar o atributo como <xref:System.ComponentModel.BrowsableAttribute.Yes?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BrowsableAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Outro objeto a ser comparado.</param>
+        <summary>Indica se essa instância e um objeto especificado são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual a essa instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BrowsableAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.BrowsableAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se este atributo é o padrão.</summary>
+        <returns>
+          <see langword="true" />Se o atributo é o valor padrão para essa classe de atributo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.BrowsableAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.BrowsableAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.BrowsableAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BrowsableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma propriedade ou evento não pode ser modificado em tempo de design. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você marca uma propriedade com o <xref:System.ComponentModel.BrowsableAttribute.%23ctor%2A> construtor do valor `false`, esse atributo é definido como o membro constante <xref:System.ComponentModel.BrowsableAttribute.No>. Portanto, quando você verifica se o atributo é definido como esse valor em seu código, você deve especificar o atributo como <xref:System.ComponentModel.BrowsableAttribute.No?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.BrowsableAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.BrowsableAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.BrowsableAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BrowsableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma propriedade ou evento pode ser modificado em tempo de design. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é a configuração padrão para esse atributo.  
+  
+ Quando você marca uma propriedade com o <xref:System.ComponentModel.BrowsableAttribute.%23ctor%2A> construtor do valor `true`, esse atributo é definido como o membro constante <xref:System.ComponentModel.BrowsableAttribute.Yes>. Portanto, quando você verifica se o atributo é definido como esse valor em seu código, você deve especificar o atributo como <xref:System.ComponentModel.BrowsableAttribute.Yes?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

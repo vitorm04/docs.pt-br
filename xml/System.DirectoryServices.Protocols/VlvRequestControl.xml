@@ -1,0 +1,239 @@
+<Type Name="VlvRequestControl" FullName="System.DirectoryServices.Protocols.VlvRequestControl">
+  <TypeSignature Language="C#" Value="public class VlvRequestControl : System.DirectoryServices.Protocols.DirectoryControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VlvRequestControl extends System.DirectoryServices.Protocols.DirectoryControl" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.VlvRequestControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.Protocols.VlvRequestControl" /> classe é usada para solicitar suporte VLV (exibição) de lista virtual do servidor.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VlvRequestControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.VlvRequestControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O construtor <see cref="M:System.DirectoryServices.Protocols.VlvRequestControl.#ctor" /> cria uma instância da classe <see cref="T:System.DirectoryServices.Protocols.VlvRequestControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VlvRequestControl (int beforeCount, int afterCount, byte[] target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 beforeCount, int32 afterCount, unsigned int8[] target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.VlvRequestControl.#ctor(System.Int32,System.Int32,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beforeCount" Type="System.Int32" />
+        <Parameter Name="afterCount" Type="System.Int32" />
+        <Parameter Name="target" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="beforeCount">O número de entradas antes da entrada de destino que o cliente solicita o servidor para retornar os resultados da lista.</param>
+        <param name="afterCount">O número de entradas após a entrada de destino que o cliente solicita o servidor para retornar os resultados.</param>
+        <param name="target">A entrada de destino para a pesquisa.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.VlvRequestControl.#ctor(System.Int32,System.Int32,System.Byte[])" /> construtor cria uma instância do <see cref="T:System.DirectoryServices.Protocols.VlvRequestControl" /> classe usando as contagens de entrada especificada e a entrada de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VlvRequestControl (int beforeCount, int afterCount, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 beforeCount, int32 afterCount, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.VlvRequestControl.#ctor(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beforeCount" Type="System.Int32" />
+        <Parameter Name="afterCount" Type="System.Int32" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="beforeCount">O número de entradas antes da entrada de destino que as solicitações do cliente do servidor para enviar de volta nos resultados da lista.</param>
+        <param name="afterCount">O número de entradas após a entrada de destino que as solicitações do cliente do servidor para enviar de volta nos resultados.</param>
+        <param name="offset">A taxa entre o valor de deslocamento e a contagem de conteúdo.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.VlvRequestControl.#ctor(System.Int32,System.Int32,System.Int32)" /> construtor cria uma instância do <see cref="T:System.DirectoryServices.Protocols.VlvRequestControl" /> usando as contagens de entrada especificado e o deslocamento de classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VlvRequestControl (int beforeCount, int afterCount, string target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 beforeCount, int32 afterCount, string target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.VlvRequestControl.#ctor(System.Int32,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="beforeCount" Type="System.Int32" />
+        <Parameter Name="afterCount" Type="System.Int32" />
+        <Parameter Name="target" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="beforeCount">O número de entradas antes da entrada de destino que o cliente solicita o servidor para retornar os resultados da lista.</param>
+        <param name="afterCount">O número de entradas após a entrada de destino que o cliente solicita o servidor para retornar os resultados.</param>
+        <param name="target">A entrada de destino para a pesquisa.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.VlvRequestControl.#ctor(System.Int32,System.Int32,System.String)" /> construtor cria uma instância do <see cref="T:System.DirectoryServices.Protocols.VlvRequestControl" /> classe usando as contagens de entrada especificada e a entrada de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AfterCount">
+      <MemberSignature Language="C#" Value="public int AfterCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AfterCount" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.VlvRequestControl.AfterCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.VlvRequestControl.AfterCount" /> propriedade especifica o número de entradas após a entrada de destino para retornar os resultados da lista.</summary>
+        <value>O número de entradas após a entrada de destino para retornar os resultados da lista.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeCount">
+      <MemberSignature Language="C#" Value="public int BeforeCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BeforeCount" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.VlvRequestControl.BeforeCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.VlvRequestControl.BeforeCount" /> propriedade especifica o número de entradas antes da entrada de destino para retornar os resultados da lista.</summary>
+        <value>O número de entradas antes da entrada de destino para retornar os resultados da lista.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextId">
+      <MemberSignature Language="C#" Value="public byte[] ContextId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] ContextId" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.VlvRequestControl.ContextId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.VlvRequestControl.ContextId" /> propriedade contém a ID do contexto atribuída pelo servidor para identificar essa operação de pesquisa.</summary>
+        <value>A ID do contexto atribuída pelo servidor para identificar essa operação de pesquisa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EstimateCount">
+      <MemberSignature Language="C#" Value="public int EstimateCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EstimateCount" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.VlvRequestControl.EstimateCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.VlvRequestControl.EstimateCount" /> propriedade contém a contagem de conteúdo da lista.</summary>
+        <value>A contagem de conteúdo da lista.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public override byte[] GetValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] GetValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.VlvRequestControl.GetValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.VlvRequestControl.GetValue" /> método retorna uma sequência codificada BER que especifica o controle.</summary>
+        <returns>Uma sequência codificada BER que especifica esse controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public int Offset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.VlvRequestControl.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.VlvRequestControl.Offset" /> propriedade contém o valor de deslocamento da entrada de destino.</summary>
+        <value>O valor de deslocamento da entrada de destino.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public byte[] Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Target" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.VlvRequestControl.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.VlvRequestControl.Target" /> propriedade contém a entrada de destino da pesquisa.</summary>
+        <value>A entrada de destino da pesquisa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

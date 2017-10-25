@@ -1,0 +1,259 @@
+<Type Name="DataPagerDesigner" FullName="System.Web.UI.Design.WebControls.DataPagerDesigner">
+  <TypeSignature Language="C#" Value="public class DataPagerDesigner : System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataPagerDesigner extends System.Web.UI.Design.ControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.DataPagerDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de tempo de design em um designer visual para o <see cref="T:System.Web.UI.WebControls.DataPager" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um designer visual, quando você alternar para um modo de exibição designer (como `Design` exibir em [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)]), a marcação que descreve o <xref:System.Web.UI.WebControls.DataPager> controle é analisado. Uma versão de tempo de design do controle é criada na superfície de design. Quando você alternar para exibição da fonte, o controle de tempo de design é mantido como marcação para a página da Web.  
+  
+ As propriedades da <xref:System.Web.UI.Design.WebControls.DataPagerDesigner> classe fornecer a seguinte funcionalidade:  
+  
+-   O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.ActionLists%2A> propriedade retorna a lista de itens que são usados para criar um painel de marcas inteligentes.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.PagedControlID%2A> propriedade é usada como a versão (sombreada) designer o <xref:System.Web.UI.WebControls.DataPager.PagedControlID%2A?displayProperty=nameWithType> propriedade.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.TemplateGroups%2A> propriedade retorna uma coleção de grupos de modelo para os campos de pager modelado de associado <xref:System.Web.UI.WebControls.DataPager> controle.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.UsePreviewControl%2A> propriedade sempre retorna `true`, que indica que o designer cria uma cópia temporária do associado <xref:System.Web.UI.WebControls.DataPager> controle para gerar a marcação de tempo de design.  
+  
+ Os métodos de <xref:System.Web.UI.Design.WebControls.DataPagerDesigner> classe fornecer a seguinte funcionalidade:  
+  
+-   O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetDesignTimeHtml%2A> e <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetEmptyDesignTimeHtml%2A> métodos retornam a marcação HTML que é usada para renderizar associado <xref:System.Web.UI.WebControls.DataPager> em tempo de design.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.Initialize%2A> método prepara o designer para exibir, editar e criar associado <xref:System.Web.UI.WebControls.DataPager> controle.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties%2A> método é usado para adicionar ou remover propriedades da grade de propriedades para o <xref:System.Web.UI.WebControls.DataPager> controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataPagerDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataPagerDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.DataPagerDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] cria uma nova instância do <xref:System.Web.UI.Design.WebControls.DataPagerDesigner> classe quando ele cria associado <xref:System.Web.UI.WebControls.DataPager> controle ou uma cópia desse controle na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataPagerDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de itens que são usados para criar o painel de marcas inteligentes para o associado <see cref="T:System.Web.UI.WebControls.DataPager" /> controle.</summary>
+        <value>A lista de itens que são usados para criar o painel de marcas inteligentes para o associado <see cref="T:System.Web.UI.WebControls.DataPager" /> controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataPagerDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera a marcação HTML que é usada para renderizar associado <see cref="T:System.Web.UI.WebControls.DataPager" /> controle em tempo de design.</summary>
+        <returns>A marcação HTML que é usada para renderizar associado <see cref="T:System.Web.UI.WebControls.DataPager" /> controle em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.WebControls.DataPager.Fields%2A?displayProperty=nameWithType> coleção não está vazia, o <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetDesignTimeHtml> método atualiza o <xref:System.ComponentModel.TypeDescriptor> objeto para forçar o <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties%2A> método a ser chamado e, em seguida, chama sua implementação de base. Se o <xref:System.Web.UI.WebControls.DataPager.Fields%2A?displayProperty=nameWithType> coleção estiver vazia, o <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetDesignTimeHtml> método invoca o <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetEmptyDesignTimeHtml%2A> método para gerar a marcação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataPagerDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera a marcação HTML que representa um <see cref="T:System.Web.UI.WebControls.DataPager" /> controle em tempo de design que não tem representação visual em tempo de execução.</summary>
+        <returns>A marcação HTML que representa um vazio <see cref="T:System.Web.UI.WebControls.DataPager" /> controle em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetEmptyDesignTimeHtml%2A> método é usado pelo designer para renderizar o <xref:System.Web.UI.WebControls.DataPager> controlar em tempo de design se o <xref:System.Web.UI.WebControls.DataPager.Fields%2A?displayProperty=nameWithType> coleção está vazia. O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.GetEmptyDesignTimeHtml%2A> chamadas de método de <xref:System.Web.UI.Design.ControlDesigner.CreatePlaceHolderDesignTimeHtml%28System.String%29> método para criar um espaço reservado que exibe o tipo e a ID do controle e instruções adicionais para o usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataPagerDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O controle que está sendo criado.</param>
+        <summary>Inicializa o designer de controle e carrega o controle especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O host de designer chama o <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.Initialize%2A> método quando ele estiver pronto para usar o designer para renderizar o <xref:System.Web.UI.WebControls.DataPager> controle. O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.Initialize%2A> método e seus métodos base configurar propriedades e conecte-se para eventos que são necessários para o designer.  
+  
+ O `component` parâmetro é o <xref:System.Web.UI.WebControls.DataPager> controle associado este designer, ou uma cópia do <xref:System.Web.UI.WebControls.DataPager> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PagedControlID">
+      <MemberSignature Language="C#" Value="public string PagedControlID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PagedControlID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataPagerDesigner.PagedControlID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor para a versão de designer do <see cref="P:System.Web.UI.WebControls.DataPager.PagedControlID" /> propriedade.</summary>
+        <value>O valor da propriedade <see cref="P:System.Web.UI.WebControls.DataPager.PagedControlID" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Uma coleção que contém as propriedades que são expostas na grade de propriedades para o <see cref="T:System.Web.UI.WebControls.DataPager" /> controle em tempo de design.</param>
+        <summary>Adiciona ou remove propriedades da grade de propriedades para o <see cref="T:System.Web.UI.WebControls.DataPager" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties%2A> método adiciona uma nova propriedade à grade de propriedade do <xref:System.Web.UI.WebControls.DataPager> controle que corresponde do <xref:System.Web.UI.WebControls.DataPager.PagedControlID%2A?displayProperty=nameWithType> propriedade. Se o <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A> está definida como `true`, o <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties%2A> método também define o <xref:System.ComponentModel.BrowsableAttribute> atributo do <xref:System.Web.UI.WebControls.DataPager.Fields%2A?displayProperty=nameWithType> propriedade para `BrowsableAttribute.No`. Isso impede que os campos de pager seja excluído usando o `Fields` caixa de diálogo quando um campo de pager de modelo está no modo de modelo.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="M:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties(System.Collections.IDictionary)" /> método para adicionar ou alterar atributos de propriedades na coleção de propriedades de tempo de design. Certifique-se de que você chamar a classe base <see cref="M:System.Web.UI.Design.WebControls.DataPagerDesigner.PreFilterProperties(System.Collections.IDictionary)" /> método antes de executar outro processamento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataPagerDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de grupos de modelos para os campos de pager modelado de associado <see cref="T:System.Web.UI.WebControls.DataPager" /> controle.</summary>
+        <value>Uma coleção de grupos de modelo para os campos de pager modelado de associado <see cref="T:System.Web.UI.WebControls.DataPager" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.DataPagerDesigner.TemplateGroups%2A> propriedade cria uma coleção de <xref:System.Web.UI.Design.TemplateGroup> objetos que representam os elementos de modelo em um <xref:System.Web.UI.WebControls.DataPager> controle em tempo de design. Ele adiciona um elemento à coleção para cada <xref:System.Web.UI.WebControls.TemplatePagerField> objeto o <xref:System.Web.UI.WebControls.DataPager.Fields%2A> coleção de associado <xref:System.Web.UI.WebControls.DataPager> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataPagerDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o designer deve usar uma cópia temporária em vez de real <see cref="T:System.Web.UI.WebControls.DataPager" /> controle que está associado com o designer para gerar a marcação de tempo de design.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

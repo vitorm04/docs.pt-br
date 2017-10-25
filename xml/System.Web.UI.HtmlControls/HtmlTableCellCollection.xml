@@ -1,0 +1,468 @@
+<Type Name="HtmlTableCellCollection" FullName="System.Web.UI.HtmlControls.HtmlTableCellCollection">
+  <TypeSignature Language="C#" Value="public sealed class HtmlTableCellCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HtmlTableCellCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Uma coleção de <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> objetos que representam as células em uma única linha de um <see cref="T:System.Web.UI.HtmlControls.HtmlTable" /> controle. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> classe programaticamente para gerenciar uma coleção de <xref:System.Web.UI.HtmlControls.HtmlTableCell> objetos que representam as células de uma única linha em um <xref:System.Web.UI.HtmlControls.HtmlTable> controle. Normalmente, essa classe é usada para adicionar, remover ou modificar o conteúdo de uma célula em uma linha de um <xref:System.Web.UI.HtmlControls.HtmlTable> controle.  
+  
+> [!NOTE]
+>  Um <xref:System.Web.UI.HtmlControls.HtmlTable> controle contém um <xref:System.Web.UI.HtmlControls.HtmlTable.Rows%2A> propriedade que contém uma coleção de <xref:System.Web.UI.HtmlControls.HtmlTableRow> objetos. Cada <xref:System.Web.UI.HtmlControls.HtmlTableRow> objeto representa uma linha individual na tabela. Um <xref:System.Web.UI.HtmlControls.HtmlTableRow> objeto contém um <xref:System.Web.UI.HtmlControls.HtmlTableRow.Cells%2A> propriedade que representa uma coleção de <xref:System.Web.UI.HtmlControls.HtmlTableCell> objetos. Esses objetos, por sua vez, representam as células individuais de uma linha. Para recuperar uma célula individual, primeiro obtenha o <xref:System.Web.UI.HtmlControls.HtmlTableRow> objeto que representa a linha que contém a célula da tabela (da <xref:System.Web.UI.HtmlControls.HtmlTable.Rows%2A> coleção do <xref:System.Web.UI.HtmlControls.HtmlTable> controle). Em seguida, você pode obter o <xref:System.Web.UI.HtmlControls.HtmlTableCell> objeto que representa a célula na linha (da <xref:System.Web.UI.HtmlControls.HtmlTableRow.Cells%2A> coleção do <xref:System.Web.UI.HtmlControls.HtmlTableRow> objeto).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como gerar dinamicamente o conteúdo de um <xref:System.Web.UI.HtmlControls.HtmlTable> controle adicionando células para um <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção. Observe que o <xref:System.Web.UI.HtmlControls.HtmlTableRow.Cells%2A> propriedade de uma linha, representada por um <xref:System.Web.UI.HtmlControls.HtmlTableRow> de objeto, é o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção.  
+  
+ [!code-aspx-csharp[HtmlTableCellCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableCellCollection/CS/htmltablecellcollectioncs.aspx#1)]
+ [!code-aspx-vb[HtmlTableCellCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableCellCollection/VB/htmltablecellcollectionvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.HtmlControls.HtmlTableCell cell);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.HtmlControls.HtmlTableCell cell) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableCellCollection.Add(System.Web.UI.HtmlControls.HtmlTableCell)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.HtmlControls.HtmlTableCell" />
+      </Parameters>
+      <Docs>
+        <param name="cell">O <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> a adicionar à coleção.</param>
+        <summary>Acrescenta especificado <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> objeto ao final do <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para adicionar especificado <xref:System.Web.UI.HtmlControls.HtmlTableCell> objeto ao final de um <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção. Se você desejar inserir um <xref:System.Web.UI.HtmlControls.HtmlTableCell> objeto em um local especificado na coleção, use o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.Insert%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.Add%2A> método acrescentar uma célula de uma tabela, representada por um <xref:System.Web.UI.HtmlControls.HtmlTableCell> objeto ao final de um <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção. Observe que o <xref:System.Web.UI.HtmlControls.HtmlTableRow.Cells%2A> propriedade de uma linha representada por um <xref:System.Web.UI.HtmlControls.HtmlTableRow> objeto é o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção.  
+  
+ [!code-aspx-csharp[HtmlTableCellCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableCellCollection/CS/htmltablecellcollectioncs.aspx#1)]
+ [!code-aspx-vb[HtmlTableCellCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableCellCollection/VB/htmltablecellcollectionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableCellCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> de objetos a partir de <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover todos os <xref:System.Web.UI.HtmlControls.HtmlTableCell> objetos do <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleta e redefinir o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.Count%2A> propriedade `0`.  
+  
+> [!NOTE]
+>  Este método remove as células de uma linha, mas não remove a linha da tabela. Para remover uma linha da tabela, certifique-se de também removerá o <xref:System.Web.UI.HtmlControls.HtmlTableRow> objeto que representa a linha do <xref:System.Web.UI.HtmlControls.HtmlTable.Rows%2A> coleção do <xref:System.Web.UI.HtmlControls.HtmlTable> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.Clear%2A> método para remover todos os itens do <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção. As novas entradas são, em seguida, adicionadas à coleção e exibidas no <xref:System.Web.UI.HtmlControls.HtmlTable> controle.  
+  
+ [!code-aspx-csharp[HtmlTableCellCollectioncClear#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableCellCollectioncClear/CS/htmltablecellcollectionclearcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableCellCollectioncClear#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableCellCollectioncClear/VB/htmltablecellcollectionclearvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableCellCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Array" /> de base zero que recebe os itens copiados do <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" />.</param>
+        <param name="index">O primeiro índice especificado no <see cref="T:System.Array" /> para receber os itens.</param>
+        <summary>Copia os itens do <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> coleção especificado <see cref="T:System.Array" />, começando com o índice especificado no <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para copiar o conteúdo do <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção especificado <xref:System.Array?displayProperty=nameWithType>, começando no índice especificado da matriz.  
+  
+> [!NOTE]
+>  O `array` parâmetro deve ser um com base em zero <xref:System.Array?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.CopyTo%2A> método para criar uma matriz que contém o mesmo conteúdo a <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção. A matriz é iteração, em seguida, para exibir o conteúdo do <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção.  
+  
+ [!code-aspx-csharp[HtmlTableCellCollectionCopyTo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableCellCollectionCopyTo/CS/htmltablecellcollectioncopytocs.aspx#1)]
+ [!code-aspx-vb[HtmlTableCellCollectionCopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableCellCollectionCopyTo/VB/htmltablecellcollectioncopytovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTableCellCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> objetos no <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> coleção.</summary>
+        <value>O número de <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> objetos no <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" />. O valor padrão é <see langword="0" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.Count%2A> propriedade para determinar o número de células contidas no <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção. O <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.Count%2A> propriedade normalmente é usada quando a iteração na coleção para determinar o superior associado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.Count%2A> propriedade para determinar o número de células em uma linha do <xref:System.Web.UI.HtmlControls.HtmlTable> controle. Esse valor, em seguida, é usado como o limite superior de um loop para percorrer as células de uma linha na tabela.  
+  
+ [!code-aspx-csharp[HtmlTableCellCollectionCount#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableCellCollectionCount/CS/htmltablecellcollectioncountcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableCellCollectionCount#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableCellCollectionCount/VB/htmltablecellcollectioncountvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableCellCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IEnumerator" />-implementado o objeto que contém todos os <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> objetos no <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" />-implementado o objeto que contém todos os <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> objetos no <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar um <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-implementado um objeto que pode ser iteração para recuperar o conteúdo de cada item a <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção.  
+  
+ Use o <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> apontada propriedade para obter o item atualmente na coleção.  
+  
+ Use o <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método para mover para o próximo item na coleção.  
+  
+ Use o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método para mover o enumerador para a posição inicial.  
+  
+> [!NOTE]
+>  O <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método deve ser chamado depois de criar o <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-implementado de objeto, ou depois de usar o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método para mover o enumerador para o primeiro item na coleção. Caso contrário, o item é representado pelo <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> propriedade está definida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.GetEnumerator%2A> método para criar um <xref:System.Collections.IEnumerator?displayProperty=nameWithType>-implementado o objeto. O objeto é iteração, em seguida, para exibir o conteúdo do <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção.  
+  
+ [!code-aspx-csharp[HtmlTableCellCollectionienumerator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableCellCollectionienumerator/CS/htmltablecellcollectionienumeratorcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableCellCollectionienumerator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableCellCollectionienumerator/VB/htmltablecellcollectionienumeratorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.HtmlControls.HtmlTableCell cell);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.HtmlControls.HtmlTableCell cell) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableCellCollection.Insert(System.Int32,System.Web.UI.HtmlControls.HtmlTableCell)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="cell" Type="System.Web.UI.HtmlControls.HtmlTableCell" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local no <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> no qual o <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> será adicionado.</param>
+        <param name="cell">O <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> para adicionar ao <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" />.</param>
+        <summary>Adiciona o <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> objeto no local do índice especificado do <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.Insert%2A> método para adicionar especificado <xref:System.Web.UI.HtmlControls.HtmlTableCell> o objeto para um <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção no índice especificado. Se você quiser simplesmente acrescentar um <xref:System.Web.UI.HtmlControls.HtmlTableCell> objeto ao final da coleção, use o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.Add%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.Insert%2A> método para inserir dinamicamente uma célula de uma tabela, representada por um <xref:System.Web.UI.HtmlControls.HtmlTableCell> objeto, um <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção.  
+  
+ [!code-aspx-csharp[HtmlTableCellCollectionInsert#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableCellCollectionInsert/CS/htmltablecellcollectioninsertcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableCellCollectionInsert#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableCellCollectionInsert/VB/htmltablecellcollectioninsertvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTableCellCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> coleção é somente leitura.</summary>
+        <value>
+          <see langword="false" />para todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna `false` para indicar que o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção pode ser gravada em todos os casos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTableCellCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso para o <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> coleção é sincronizada (thread-safe).</summary>
+        <value>
+          <see langword="false" />para todos os casos, que indica que o acesso para o <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> não está sincronizada (não thread-safe).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é derivada de <xref:System.Collections.ICollection?displayProperty=nameWithType> e é substituído para sempre retornar `false` para indicar que o acesso para o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção é sincronizada (não thread-safe).  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.IsSynchronized%2A> propriedade, consulte o <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.HtmlControls.HtmlTableCell this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.HtmlControls.HtmlTableCell Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTableCellCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlControls.HtmlTableCell</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um valor de índice ordinal que especifica o <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> para retornar.</param>
+        <summary>Obtém o <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> objeto no índice especificado do <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> coleção.</summary>
+        <value>Um <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> que representa uma célula dentro de <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este indexador para obter um <xref:System.Web.UI.HtmlControls.HtmlTableCell> de objeto o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção. Você pode acessar uma <xref:System.Web.UI.HtmlControls.HtmlTableCell> objeto em um índice especificado usando a notação de matriz simples.  
+  
+> [!NOTE]
+>  A coleção é baseado em zero; Portanto, o primeiro elemento na coleção contém um valor de índice `0`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o indexador para recuperar uma célula de uma tabela, representada por um <xref:System.Web.UI.HtmlControls.HtmlTableCell> objeto, do <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção. A célula, em seguida, é atualizada com novo conteúdo. Observe que o <xref:System.Web.UI.HtmlControls.HtmlTableRow.Cells%2A> propriedade de uma linha representada por um <xref:System.Web.UI.HtmlControls.HtmlTableRow> objeto é o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção.  
+  
+ [!code-aspx-csharp[HtmlTableCellCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableCellCollection/CS/htmltablecellcollectioncs.aspx#1)]
+ [!code-aspx-vb[HtmlTableCellCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableCellCollection/VB/htmltablecellcollectionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.HtmlControls.HtmlTableCell cell);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.HtmlControls.HtmlTableCell cell) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableCellCollection.Remove(System.Web.UI.HtmlControls.HtmlTableCell)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.HtmlControls.HtmlTableCell" />
+      </Parameters>
+      <Docs>
+        <param name="cell">O <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> a ser removido de <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" />.</param>
+        <summary>Remove o objeto <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> especificado da coleção <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover especificado <xref:System.Web.UI.HtmlControls.HtmlTableCell> de objeto o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção.  
+  
+> [!NOTE]
+>  Se você especificar um <xref:System.Web.UI.HtmlControls.HtmlTableCell> que não existe no objeto de <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção, nenhum item é removida da coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.Remove%2A> método para remover a célula especificada de uma tabela, representada por um <xref:System.Web.UI.HtmlControls.HtmlTableCell> objeto, do <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção. Este exemplo remove as células da primeira coluna do <xref:System.Web.UI.HtmlControls.HtmlTable> controle.  
+  
+ [!code-aspx-csharp[HtmlTableCellCollectionRemove#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableCellCollectionRemove/CS/htmltablecellcollectionremovecs.aspx#1)]
+ [!code-aspx-vb[HtmlTableCellCollectionRemove#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableCellCollectionRemove/VB/htmltablecellcollectionremovevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableCellCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> para remover do <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" />.</param>
+        <summary>Remove o <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> objeto no índice especificado do <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover o <xref:System.Web.UI.HtmlControls.HtmlTableCell> objeto no índice especificado de uma <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção. O número de índice é baseado em zero; Portanto, o primeiro item na coleção tem um valor de índice `0`.  
+  
+> [!NOTE]
+>  Se você especificar um índice está fora do intervalo de valores de índice, uma exceção será gerada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.RemoveAt%2A> método para remover o item no índice especificado do <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> coleção. Este exemplo remove as células da primeira coluna do <xref:System.Web.UI.HtmlControls.HtmlTable> controle.  
+  
+ [!code-aspx-csharp[HtmlTableCellCollectionRemoveAt#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlTableCellCollectionRemoveAt/CS/htmltablecellcollectionremoveatcs.aspx#1)]
+ [!code-aspx-vb[HtmlTableCellCollectionRemoveAt#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlTableCellCollectionRemoveAt/VB/htmltablecellcollectionremoveatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice especificado está fora do intervalo de valores de índice na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlTableCellCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que pode ser usado para sincronizar o acesso a <see cref="T:System.Web.UI.HtmlControls.HtmlTableCellCollection" /> coleção.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto retornado nesta implementação é a instância atual do <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection> classe.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.HtmlControls.HtmlTableCellCollection.SyncRoot%2A> propriedade, consulte o <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

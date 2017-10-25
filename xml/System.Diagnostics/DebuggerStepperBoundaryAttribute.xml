@@ -1,0 +1,74 @@
+<Type Name="DebuggerStepperBoundaryAttribute" FullName="System.Diagnostics.DebuggerStepperBoundaryAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DebuggerStepperBoundaryAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DebuggerStepperBoundaryAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggerStepperBoundaryAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Constructor | System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que o código que segue o atributo deve ser executado no modo de execução, não em etapas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DebuggerStepperBoundaryAttribute> atributo é usado como um escape do efeito de um <xref:System.Diagnostics.DebuggerNonUserCodeAttribute>. Ao executar dentro dos limites do <xref:System.Diagnostics.DebuggerNonUserCodeAttribute>, fornecida pelo designer de código é executado como uma passo a passo até que o próximo usuário fornecidas código é encontrada. Quando alternâncias de contexto são feitas em um thread, o próximo módulo de código fornecido pelo usuário entrado em pode não se relacionam com o código que estava no processo sendo depurado. Para evitar essa experiência de depuração, use o <xref:System.Diagnostics.DebuggerStepperBoundaryAttribute> para escape de percorrer o código para executar o código. Por exemplo, em [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], encontrar uma <xref:System.Diagnostics.DebuggerStepperBoundaryAttribute> ao percorrer o código usando a tecla F10 (ou **passar por** comando) tem o mesmo efeito que pressionar a tecla F5 ou usando o **iniciar depuração** comando.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerStepperBoundaryAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerStepperBoundaryAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.DebuggerStepperBoundaryAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma descrição do objetivo desse construtor, consulte o <xref:System.Diagnostics.DebuggerStepperBoundaryAttribute> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

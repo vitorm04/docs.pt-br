@@ -1,0 +1,113 @@
+<Type Name="TrackingChannel" FullName="System.Workflow.Runtime.Tracking.TrackingChannel">
+  <TypeSignature Language="C#" Value="public abstract class TrackingChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TrackingChannel extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O <see langword="abstract" /> classe base que representa um canal de controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Se um <xref:System.Workflow.Runtime.Tracking.TrackingService> estiver presente, o tempo de execução de chamadas de infraestrutura de rastreamento <xref:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel%2A> para obter um canal de controle para uma instância de fluxo de trabalho. A infra-estrutura de controle de tempo de execução usa esse canal de controle para enviar registros de controle associado com a instância de fluxo de trabalho para o aplicativo de host sempre que a infraestrutura de rastreamento corresponde a um ponto de controle no <xref:System.Workflow.Runtime.Tracking.TrackingProfile> associado com a instância de fluxo de trabalho. Seu aplicativo pode tratar essas informações de controle de qualquer forma que você escolher. Por exemplo, o <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> grava informações de rastreamento em um banco de dados do SQL.  
+  
+ Para criar um canal de controle para o serviço de controle, derive uma classe a partir de <xref:System.Workflow.Runtime.Tracking.TrackingChannel> classe base.  Você pode usar o <xref:System.Workflow.Runtime.Tracking.TrackingParameters> objeto passado pelo tempo de execução controle infraestrutura na chamada de sua implementação de <xref:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel%2A> para associar a uma instância de fluxo de trabalho específico de cada instância do seu canal de controle. O mecanismo de tempo de execução do fluxo de trabalho solicita um canal de controle de cada serviço de acompanhamento que forneceu um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para uma instância de fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TrackingChannel ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingChannel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Tracking.TrackingChannel" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceCompletedOrTerminated">
+      <MemberSignature Language="C#" Value="protected abstract void InstanceCompletedOrTerminated ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void InstanceCompletedOrTerminated() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingChannel.InstanceCompletedOrTerminated" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, notifica um receptor de dados no canal de controle que a instância de fluxo de trabalho associada ao canal de controle foi concluída ou terminada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tempo de execução de chamadas de infraestrutura de rastreamento <xref:System.Workflow.Runtime.Tracking.TrackingChannel.InstanceCompletedOrTerminated%2A> para notificar o receptor de dados no canal de controle que a instância de fluxo de trabalho associada a esse canal de controle encerrado ou concluído. Não há mais dados serão enviados no canal de controle. Quando <xref:System.Workflow.Runtime.Tracking.TrackingChannel.InstanceCompletedOrTerminated%2A> é chamado, você pode executar qualquer ação que é necessárias pela sua implementação do <xref:System.Workflow.Runtime.Tracking.TrackingChannel> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="protected abstract void Send (System.Workflow.Runtime.Tracking.TrackingRecord record);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Send(class System.Workflow.Runtime.Tracking.TrackingRecord record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingChannel.Send(System.Workflow.Runtime.Tracking.TrackingRecord)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="System.Workflow.Runtime.Tracking.TrackingRecord" />
+      </Parameters>
+      <Docs>
+        <param name="record">O <see cref="T:System.Workflow.Runtime.Tracking.TrackingRecord" /> a ser enviado.</param>
+        <summary>Quando implementada em uma classe derivada, envia um <see cref="T:System.Workflow.Runtime.Tracking.TrackingRecord" /> sobre o <see cref="T:System.Workflow.Runtime.Tracking.TrackingChannel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tempo de execução de chamadas de infraestrutura de rastreamento <xref:System.Workflow.Runtime.Tracking.TrackingChannel.Send%2A> para entregar um <xref:System.Workflow.Runtime.Tracking.TrackingRecord> no <xref:System.Workflow.Runtime.Tracking.TrackingChannel> quando ele corresponde a um ponto de controle em um <xref:System.Workflow.Runtime.Tracking.TrackingProfile>. Você pode tratar as informações de rastreamento enviadas <xref:System.Workflow.Runtime.Tracking.TrackingChannel> forma que determinam os requisitos do seu aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma implementação do método Send.  Nessa implementação, as mensagens de rastreamento são gravadas no log de eventos quando um fluxo de trabalho será encerrado.  Este exemplo é de amostra do SDK do serviço de controle de encerramento.  Para obter mais informações, consulte [exemplo de serviço de controle de encerramento](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[WF_Samples#117](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#117)]
+ [!code-vb[WF_Samples#117](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#117)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

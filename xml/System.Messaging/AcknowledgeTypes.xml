@@ -1,0 +1,181 @@
+<Type Name="AcknowledgeTypes" FullName="System.Messaging.AcknowledgeTypes">
+  <TypeSignature Language="C#" Value="public enum AcknowledgeTypes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AcknowledgeTypes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.AcknowledgeTypes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os tipos de mensagem de confirmação que o Enfileiramento de Mensagens retorna para o aplicativo de envio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.AcknowledgeTypes> classe fornece um conjunto de sinalizadores que você pode combinar para solicitar uma ou mais categorias de mensagens de confirmação.  
+  
+ Quando um aplicativo envia uma mensagem, pode solicitar que o enfileiramento de mensagens retornar mensagens de confirmação que indica o êxito ou falha da mensagem original. O Message Queuing envia essas mensagens de confirmação para a fila de administração que você especificar. Tipos de confirmação podem ser divididos em larga escala em quatro grupos: confirmações de chegada positivo, confirmações de leitura positivas, confirmações de chegada negativa e confirmações de leitura negativas. Solicitar confirmações permite que seu aplicativo receber uma notificação de determinadas ocorrências — por exemplo, uma mensagem atingir sua fila de destino, uma mensagem que está sendo recuperado ou um tempo limite impedindo uma mensagem atingir ou que está sendo recuperada da fila de destino.  
+  
+ Quando você estiver usando o <xref:System.Messaging.Message> de classe para enviar mensagens para uma fila, você especifica os tipos de confirmações de seu aplicativo deve receber no <xref:System.Messaging.Message.AcknowledgeType%2A> propriedade, bem como a fila de administração que recebe as mensagens de confirmação no <xref:System.Messaging.Message.AdministrationQueue%2A> propriedade.  
+  
+ Quando você usa o <xref:System.Messaging.Message> classe para ler mensagens de confirmação da fila de administração, a instância <xref:System.Messaging.Message.Acknowledgment%2A> propriedade indica a condição responsável por mensagem de confirmação, por exemplo, se um tempo limite expirou antes da mensagem original foi lido da fila.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir envia e recebe uma mensagem que contém um pedido de e para uma fila. Ele solicita uma confirmação positiva especificamente quando a mensagem original atinge ou é recuperada da fila.  
+  
+ [!code-cpp[Message.Acknowledgment#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message.Acknowledgment/CPP/message_acknowledgment.cpp#1)]
+ [!code-csharp[Message.Acknowledgment#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message.Acknowledgment/CS/message_acknowledgment.cs#1)]
+ [!code-vb[Message.Acknowledgment#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message.Acknowledgment/VB/message_acknowledgment.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FullReachQueue">
+      <MemberSignature Language="C#" Value="FullReachQueue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes FullReachQueue = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.FullReachQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma máscara usada para solicitar uma confirmação positiva se a mensagem original chegar à fila ou uma confirmação negativa se o temporizador do tempo para chegar à fila expirar ou se não for possível autenticar a mensagem original.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FullReceive">
+      <MemberSignature Language="C#" Value="FullReceive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes FullReceive = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.FullReceive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma máscara usada para solicitar uma confirmação positiva se a mensagem original for recebida da fila antes de o temporizador do tempo de recebimento expirar ou uma confirmação negativa, caso contrário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NegativeReceive">
+      <MemberSignature Language="C#" Value="NegativeReceive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes NegativeReceive = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.NegativeReceive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma máscara usada para solicitar uma confirmação negativa quando a mensagem original não for recebida da fila.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando o <xref:System.Messaging.MessageQueue.Peek%2A?displayProperty=nameWithType> método não remove uma mensagem da fila para esse tipo de confirmação pode ser retornado mesmo que você inspecionar a mensagem. Somente o <xref:System.Messaging.MessageQueue.Receive%2A?displayProperty=nameWithType> método (ou relacionado assíncrona <xref:System.Messaging.MessageQueue.BeginReceive%2A?displayProperty=nameWithType> método) remove uma mensagem da fila.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma máscara usada para solicitar que nenhuma mensagem de confirmação (positiva ou negativa) seja postada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAcknowledgeReachQueue">
+      <MemberSignature Language="C#" Value="NotAcknowledgeReachQueue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes NotAcknowledgeReachQueue = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.NotAcknowledgeReachQueue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma máscara usada para solicitar uma confirmação negativa quando a mensagem original não pode chegar à fila. Isso pode acontecer quando temporizador do tempo para chegar à fila expirar ou se não for possível autenticar uma mensagem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotAcknowledgeReceive">
+      <MemberSignature Language="C#" Value="NotAcknowledgeReceive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes NotAcknowledgeReceive = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.NotAcknowledgeReceive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma máscara usada para solicitar uma confirmação negativa quando ocorrer um erro que impede que a mensagem original seja recebida da fila antes de seu temporizador do tempo de recebimento expirar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PositiveArrival">
+      <MemberSignature Language="C#" Value="PositiveArrival" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes PositiveArrival = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.PositiveArrival" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma máscara usada para solicitar uma confirmação positiva quando a mensagem original chega à fila.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PositiveReceive">
+      <MemberSignature Language="C#" Value="PositiveReceive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.AcknowledgeTypes PositiveReceive = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.AcknowledgeTypes.PositiveReceive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma máscara usada para solicitar uma confirmação positiva quando a mensagem original é recuperada da fila com êxito.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

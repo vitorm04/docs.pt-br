@@ -1,0 +1,37 @@
+<Type Name="CacheItemRemovedCallback" FullName="System.Web.Caching.CacheItemRemovedCallback">
+  <TypeSignature Language="C#" Value="public delegate void CacheItemRemovedCallback(string key, object value, CacheItemRemovedReason reason);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CacheItemRemovedCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.CacheItemRemovedCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="key" Type="System.String" />
+    <Parameter Name="value" Type="System.Object" />
+    <Parameter Name="reason" Type="System.Web.Caching.CacheItemRemovedReason" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="key">A chave removida do cache.</param>
+    <param name="value">O item <see cref="T:System.Object" /> associado à chave removida do cache.</param>
+    <param name="reason">O motivo pelo qual o item foi removido do cache, conforme especificado pela enumeração <see cref="T:System.Web.Caching.CacheItemRemovedReason" />.</param>
+    <summary>Define um método de retorno de chamada para notificar aplicativos quando um item em cache é removido do <see cref="T:System.Web.Caching.Cache" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma página que mostra aos usuários o valor atribuído a um item no cache e, em seguida, notifica quando o item é removido do cache. Ele cria um `RemovedCallback` método, que usa a assinatura do <xref:System.Web.Caching.CacheItemRemovedCallback> representante, para notificar os usuários quando o item de cache é removido e usa o <xref:System.Web.Caching.CacheItemRemovedReason> enumeração para saber por que ele foi removido. Além disso, ele usa o <xref:System.Web.Caching.Cache.Item%2A?displayProperty=nameWithType> propriedade para adicionar objetos ao cache e recuperar o valor desses objetos. No `AddItemToCache` método, ele usa o <xref:System.Web.Caching.Cache.Add%2A?displayProperty=nameWithType> método para adicionar um item ao cache. Para usar o <xref:System.Web.Caching.CacheItemRemovedCallback> delegado, você deve adicionar um item ao cache com esse método ou o <xref:System.Web.Caching.Cache.Insert%2A?displayProperty=nameWithType> método assim que que o ASP.NET automaticamente pode tornar o método correto chama quando o item for removido. Personalizado `RemoveItemFromCache` método usa o <xref:System.Web.Caching.Cache.Remove%2A?displayProperty=nameWithType> método para excluir explicitamente o item do cache, fazendo com que o `RemovedCallback` método ser chamado.  
+  
+ [!code-aspx-csharp[System.Web.Caching Examples#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching Examples/CS/cachecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Caching Examples#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching Examples/VB/cachevb.aspx#1)]
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

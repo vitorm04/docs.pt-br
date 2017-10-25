@@ -1,0 +1,95 @@
+<Type Name="ContextDataSource" FullName="System.Web.UI.WebControls.ContextDataSource">
+  <TypeSignature Language="C#" Value="public abstract class ContextDataSource : System.Web.UI.WebControls.QueryableDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ContextDataSource extends System.Web.UI.WebControls.QueryableDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ContextDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.QueryableDataSource</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma classe base para controles de fonte de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ContextDataSource> classe é uma classe base que pode ser usada para criar qualquer controle de fonte de dados que oferece suporte ao Entity Framework, LINQ to SQL [!INCLUDE[vstecado](~/includes/vstecado-md.md)] serviços de dados ou outro provedor de dados. O <xref:System.Web.UI.WebControls.ContextDataSource> classe é derivada de <xref:System.Web.UI.WebControls.QueryableDataSource>. O <xref:System.Web.UI.WebControls.QueryableDataSource> classe fornece um <xref:System.Web.UI.WebControls.ContextDataSource.ContextTypeName%2A> propriedade que representa o tipo de contexto que o controle de fonte de dados funciona com. Por exemplo, o tipo de contexto para o <xref:System.Web.UI.WebControls.LinqDataSource> classe é o <xref:System.Data.Linq.DataContext> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ContextDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ContextDataSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ContextDataSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextTypeName">
+      <MemberSignature Language="C#" Value="public virtual string ContextTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContextTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ContextDataSource.ContextTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do objeto que contém a propriedade para recuperar dados.</summary>
+        <value>O nome do objeto que contém a propriedade para recuperar dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntitySetName">
+      <MemberSignature Language="C#" Value="protected string EntitySetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntitySetName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ContextDataSource.EntitySetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo ou propriedade no objeto de fonte de dados que representa uma coleção de dados.</summary>
+        <value>O nome da propriedade ou campo no objeto de fonte de dados que representa uma coleção de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityTypeName">
+      <MemberSignature Language="C#" Value="public virtual string EntityTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntityTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ContextDataSource.EntityTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tipo que é criado para operações Insert, Delete e Update.</summary>
+        <value>O nome do tipo que é criado para operações Insert, Delete e Update.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1227 @@
+<Type Name="Block" FullName="System.Windows.Documents.Block">
+  <TypeSignature Language="C#" Value="public abstract class Block : System.Windows.Documents.TextElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Block extends System.Windows.Documents.TextElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Block" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.TextElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe abstrata que fornece uma base para todos os elementos de conteúdo de fluxo no nível de bloco.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementos que herdam o <xref:System.Windows.Documents.Block> classe (como <xref:System.Windows.Documents.Section>) pode ser usado para agrupar elementos em um pai comum ou aplicar atributos comuns a um grupo. Conceitualmente, isso é semelhante a como você pode usar o \<DIV > marca em [!INCLUDE[TLA#tla_html](~/includes/tlasharptla-html-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Block ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Block.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa <see cref="T:System.Windows.Documents.Block" /> quando chamado por uma classe derivada de valores de classe de base.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush BorderBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush BorderBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.BorderBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Media.Brush" /> para usar ao pintar a borda do elemento.</summary>
+        <value>O pincel usado para aplicar a borda do elemento. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma tabela de amostras que mostram as cores do pincel predefinidos disponíveis, consulte <xref:System.Windows.Media.Brushes>.  
+  
+<a name="dependencyPropertyInfo_BorderBrush"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.BorderBrushProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.BorderBrush%2A> atributo de um <xref:System.Windows.Documents.Block> elemento (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_BordersXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_bordersxaml)]  
+  
+ A figura a seguir mostra como o exemplo anterior é renderizado.  
+  
+ ![Captura de tela: Azul, 1 &#47; 4 polegadas borda em torno do bloco](~/add/media/block-borders.png "captura de tela: borda azul, de 1/4 polegadas em torno do bloco")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.BorderBrush%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_Borders](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_borders)]
+ [!code-vb[BlockSnippets#_Block_Borders](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_borders)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.BorderBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.BorderBrush" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThickness">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness BorderThickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness BorderThickness" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.BorderThickness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a espessura da borda do elemento.</summary>
+        <value>Uma estrutura <see cref="T:System.Windows.Thickness" /> que especifica a quantidade de borda a ser aplicada, em pixels independentes de dispositivo. O padrão é uma espessura uniforme de zero (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_BorderThickness"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object BorderThickness="uniformThickness"/>  
+- or -  
+<object BorderThickness="independentThickness"/>  
+- or -  
+<object BorderThickness="qualifiedUniformThickness"/>  
+- or -  
+<object BorderThickness="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_BorderThickness"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *uniformThickness*  
+ Representação de uma única cadeia de caracteres <xref:System.Double> valor a ser aplicado uniformemente para todas as dimensões de espessura de quatro.  Por exemplo, um valor de `"10"` é equivalente a um valor de `"10,10,10,10"`.  Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *independentThickness*  
+ Representação de quatro ordenados de cadeia de caracteres <xref:System.Double> valores correspondentes para dimensões de espessura independente para esquerda, superior, direita e inferior, nessa ordem.  Os quatro valores devem ser separados por vírgulas. não são permitidos espaços.  Por exemplo, "5,10,15,20" resulta em 5 pixels da borda à esquerda do conteúdo, 10 pixels da borda acima conteúdo, 15 pixels da borda direita do conteúdo e 20 pixels da borda abaixo do conteúdo.  
+  
+ *qualifiedUniformThickness*  
+ Um valor descrito por *uniformThickness* seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1in"` fornece borda uniforme de 1 polegada em todas as direções.  
+  
+ *qualifiedIndependentThickness*  
+ Um valor descrito por *independentThickness*, com cada valor independente seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1.5in,0.8in,1.5in,0.8in"`.  Especificadores de unidade podem ser combinados ou omitidos de um ou mais valores.  
+  
+<a name="dependencyPropertyInfo_BorderThickness"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.BorderThicknessProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.BorderThickness%2A> atributo de um <xref:System.Windows.Documents.Block> elemento (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_BordersXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_bordersxaml)]  
+  
+ A figura a seguir mostra como o exemplo anterior é renderizado.  
+  
+ ![Captura de tela: Azul, 1 &#47; 4 polegadas borda em torno do bloco](~/add/media/block-borders.png "captura de tela: borda azul, de 1/4 polegadas em torno do bloco")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.BorderThickness%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_Borders](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_borders)]
+ [!code-vb[BlockSnippets#_Block_Borders](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_borders)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderThicknessProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BorderThicknessProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BorderThicknessProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.BorderThicknessProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.BorderThickness" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakColumnBefore">
+      <MemberSignature Language="C#" Value="public bool BreakColumnBefore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BreakColumnBefore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.BreakColumnBefore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deseja inserir uma quebra de coluna antes desse elemento automaticamente em casos onde o elemento participa de uma apresentação com base em coluna.</summary>
+        <value>
+          <see langword="true" />Inserir automaticamente uma quebra de coluna antes desse elemento. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_BreakColumnBefore"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.BreakColumnBeforeProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakColumnBeforeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BreakColumnBeforeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BreakColumnBeforeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.BreakColumnBeforeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.BreakColumnBefore" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakPageBefore">
+      <MemberSignature Language="C#" Value="public bool BreakPageBefore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BreakPageBefore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.BreakPageBefore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve inserir automaticamente uma quebra de página antes desse elemento.</summary>
+        <value>
+          <see langword="true" />Inserir automaticamente uma quebra de página antes desse elemento. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_BreakPageBefore"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.BreakColumnBeforeProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakPageBeforeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BreakPageBeforeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BreakPageBeforeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.BreakPageBeforeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.BreakPageBefore" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearFloaters">
+      <MemberSignature Language="C#" Value="public System.Windows.WrapDirection ClearFloaters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.WrapDirection ClearFloaters" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.ClearFloaters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WrapDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a direção na qual uma <see cref="T:System.Windows.Documents.Floater" /> elementos contidos por um <see cref="T:System.Windows.Documents.Block" /> elemento deve ser reposicionado.</summary>
+        <value>Uma da <see cref="T:System.Windows.WrapDirection" /> valores que especifica a direção na qual separar qualquer <see cref="T:System.Windows.Documents.Floater" /> elementos de outro conteúdo a <see cref="T:System.Windows.Documents.Block" /> elemento. O padrão é <see cref="F:System.Windows.WrapDirection.None" />, que indica que os floaters devem ser processados em vigor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.Block.ClearFloaters%2A> propriedade afeta como conteúdo é distribuído dentro de um <xref:System.Windows.Documents.Block> e se destina a ser usada para evitar <xref:System.Windows.Documents.Floater> elementos de congestionamento o conteúdo de um <xref:System.Windows.Documents.Block> elemento.  Especificando uma direção para essa propriedade faz com que os floaters ser reposicionado na direção uniforme dentro de <xref:System.Windows.Documents.Block> conteúdo.  Os Floaters não são reposicionados fora de seu pai <xref:System.Windows.Documents.Block>.  
+  
+<a name="dependencyPropertyInfo_ClearFloaters"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.ClearFloatersProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearFloatersProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ClearFloatersProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ClearFloatersProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.ClearFloatersProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.ClearFloaters" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirection">
+      <MemberSignature Language="C#" Value="public System.Windows.FlowDirection FlowDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FlowDirection FlowDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.FlowDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FlowDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a direção relativa para o fluxo de conteúdo em um <see cref="T:System.Windows.Documents.Block" /> elemento.</summary>
+        <value>Uma da <see cref="T:System.Windows.FlowDirection" /> valores que especifica a direção do fluxo relativo. O padrão é <see cref="F:System.Windows.FlowDirection.LeftToRight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obter esta propriedade retorna a direção do fluxo no momento efetivo.  A definição dessa propriedade faz com que o conteúdo do <xref:System.Windows.Documents.Block> elemento fluxo novamente na direção indicada.  
+  
+ A direção do fluxo de conteúdo normalmente corresponde à direção do fluxo inata do idioma que está sendo representado.  Árabe e hebraico são exemplos de idiomas que naturalmente fluem da direita para a esquerda.  Inglês, alemão e russo são exemplos de idiomas que fluem naturalmente da esquerda para a direita.  
+  
+> [!NOTE]
+>  **O valor dessa propriedade não é alterado automaticamente para coincidir com o idioma usado pelo sistema operacional. Se você precisar usar outro valor th**um**n o padrão de** <xref:System.Windows.FlowDirection.LeftToRight> **, você deve especificá-lo.**  
+  
+<a name="dependencyPropertyInfo_FlowDirection"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.FlowDirectionProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.FlowDirection%2A> atributo de um <xref:System.Windows.Documents.Block> elemento (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_FlowDirectionXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_flowdirectionxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.FlowDirection%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_flowdirection)]
+ [!code-vb[BlockSnippets#_Block_FlowDirection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_flowdirection)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlowDirectionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FlowDirectionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FlowDirectionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.FlowDirectionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.FlowDirection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsHyphenationEnabled">
+      <MemberSignature Language="C#" Value="public static bool GetIsHyphenationEnabled (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsHyphenationEnabled(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Block.GetIsHyphenationEnabled(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Documents.Block.IsHyphenationEnabled" /> propriedade.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Documents.Block.IsHyphenationEnabled" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Documents.Block.IsHyphenationEnabled" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineHeight">
+      <MemberSignature Language="C#" Value="public static double GetLineHeight (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetLineHeight(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Block.GetLineHeight(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Documents.Block.LineHeight" /> propriedade.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Documents.Block.LineHeight" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Documents.Block.LineHeight" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineStackingStrategy">
+      <MemberSignature Language="C#" Value="public static System.Windows.LineStackingStrategy GetLineStackingStrategy (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.LineStackingStrategy GetLineStackingStrategy(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Block.GetLineStackingStrategy(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineStackingStrategy</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Documents.Block.LineStackingStrategy" /> propriedade anexada.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Documents.Block.LineStackingStrategy" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Documents.Block.LineStackingStrategy" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextAlignment">
+      <MemberSignature Language="C#" Value="public static System.Windows.TextAlignment GetTextAlignment (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.TextAlignment GetTextAlignment(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Block.GetTextAlignment(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextAlignment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Documents.Block.TextAlignment" /> propriedade.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Documents.Block.TextAlignment" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Documents.Block.TextAlignment" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHyphenationEnabled">
+      <MemberSignature Language="C#" Value="public bool IsHyphenationEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHyphenationEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.IsHyphenationEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a hifenização automática de palavras está habilitada ou desabilitada.</summary>
+        <value>
+          <see langword="true" />Se a hifenização de palavras e de quebra automática estiver habilitada; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O recurso de hifenização word automática permite que um <xref:System.Windows.Documents.Block> elemento para interromper e hifenizar, automaticamente com base nas condições de layout atual.  Isso permite que palavras longas começar em uma linha e continuar com este próximo e tende a fazer uma distribuição mais uniforme de espaço em branco no texto justificado.  Palavras são desfeitas e hifenizadas de acordo com as regras da gramática padrão.  
+  
+<a name="dependencyPropertyInfo_IsHyphenationEnabled"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.IsHyphenationEnabledProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.IsHyphenationEnabled%2A> atributo de um <xref:System.Windows.Documents.Block> elemento.  
+  
+ [!code-xaml[BlockSnippets#_Block_HyphenateXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_hyphenatexaml)]  
+  
+ A figura a seguir mostra como o exemplo anterior é renderizado.  
+  
+ ![Captura de tela: FlowDocument com hífen habilitado](~/add/media/flowdoc-hyphenenabled.png "captura de tela: FlowDocument com hífen habilitado")  
+  
+ A figura a seguir mostra como o mesmo exemplo renderizado com a configuração padrão de <xref:System.Windows.Documents.Block.IsHyphenationEnabled%2A> = `false`.  
+  
+ ![Captura de tela: FlowDocument com hifens desabilitados](~/add/media/flowdoc-hyphendisabled.png "captura de tela: FlowDocument com hifens desabilitados")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.IsHyphenationEnabled%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_Hyphenate](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_hyphenate)]
+ [!code-vb[BlockSnippets#_Block_Hyphenate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_hyphenate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHyphenationEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsHyphenationEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsHyphenationEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.IsHyphenationEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.IsHyphenationEnabled" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeight">
+      <MemberSignature Language="C#" Value="public double LineHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LineHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.LineHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura de cada linha de conteúdo.</summary>
+        <value>A altura de cada linha em pixels independentes de dispositivo, no intervalo de 0.0034 para 160000 ou <see cref="F:System.Double.NaN" /> para determinar a altura automaticamente. O padrão é <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor de <xref:System.Double?displayProperty=nameWithType> (equivalente a um valor de atributo `Auto`) indica que a altura da linha é determinada automaticamente das características da fonte atual.  
+  
+ A alteração desse valor não altera a altura do texto associado; em vez disso, ele altera a altura da linha que contém o texto. Para alterar o tamanho do texto, use o <xref:System.Windows.Documents.FlowDocument.FontSize%2A> propriedade.  
+  
+ Além dessa propriedade, o layout de linhas em uma <xref:System.Windows.Documents.Block> é afetado pelo seu <xref:System.Windows.Documents.Block.LineStackingStrategy%2A> propriedade.  
+  
+<a name="xamlAttributeUsage_LineHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object LineHeight="double"/>  
+- or -  
+<object LineHeight="qualifiedDouble"/>  
+- or -  
+<object LineHeight="Auto"/>  
+```  
+  
+<a name="xamlValues_LineHeight"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *double*  
+ <xref:System.Double>  
+  
+ Representação de cadeia de caracteres um <xref:System.Double> valor igual a ou maior que 0.0034 mas igual ou menor que 160000. Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *qualifiedDouble*  
+ Um *duplo* valor conforme descrito acima, (com exceção da `Auto`) seguido por um dos seguintes especificadores de unidade: `px`, `in`, `cm`, `pt`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ `cm`centímetros; 1cm==(96/2.54) px  
+  
+ `pt`pontos; 1pt==(96/72) px  
+  
+ Auto  
+ Faz com que a altura da linha é determinada automaticamente das características da fonte atual.  Equivalente a um valor da propriedade <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+<a name="dependencyPropertyInfo_LineHeight"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.LineHeightProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.LineHeight%2A> atributo de um <xref:System.Windows.Documents.Block> elemento.  
+  
+ [!code-xaml[BlockSnippets#_Block_LineHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_lineheightxaml)]  
+  
+ A figura a seguir mostra como o exemplo anterior é renderizado.  
+  
+ ![Captura de tela: FlowDocument LineHeight](~/add/media/flowdocument-lineheight.png "captura de tela: LineHeight de FlowDocument")  
+  
+ A figura a seguir mostra como o mesmo <xref:System.Windows.Documents.FlowDocument> renderizada com a configuração padrão de <xref:System.Windows.Documents.FlowDocument.LineHeight%2A> = <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+ ![Captura de tela: LineHeight de FlowDocument padrão](~/add/media/flowdocument-lineheightdefault.png "captura de tela: LineHeight de FlowDocument padrão")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.LineHeight%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_LineHeight](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_lineheight)]
+ [!code-vb[BlockSnippets#_Block_LineHeight](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_lineheight)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Controls.TextBlock.LineHeight" /> é definida como um valor não positivo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.LineHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.LineHeight" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategy">
+      <MemberSignature Language="C#" Value="public System.Windows.LineStackingStrategy LineStackingStrategy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LineStackingStrategy LineStackingStrategy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.LineStackingStrategy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineStackingStrategy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define como uma caixa de linha é determinada para cada linha de texto dentro do elemento de conteúdo de fluxo de nível de bloco.</summary>
+        <value>Uma da <see cref="T:System.Windows.LineStackingStrategy" /> valores que especifica como uma caixa de linha é determinada para cada linha de texto dentro do elemento de conteúdo de fluxo de nível de bloco. O valor padrão é <see cref="F:System.Windows.LineStackingStrategy.MaxHeight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade de dependência também tem um uso de propriedades anexadas. Em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], o uso é \< *objeto* <xref:System.Windows.Documents.Block.LineStackingStrategy%2A?displayProperty=nameWithType>= "*valor*"... / >, onde *objeto* é um elemento de objeto (geralmente um elemento de fluxo) contido em um <xref:System.Windows.Documents.Block> derivado da classe, e *valor* é um valor de cadeia de caracteres da <xref:System.Windows.LineStackingStrategy> enumeração. No código, o uso da propriedade anexada é suportado pelo <xref:System.Windows.Documents.Block.GetLineStackingStrategy%2A> e <xref:System.Windows.Documents.Block.SetLineStackingStrategy%2A> métodos. O uso da propriedade anexada não é comum.  
+  
+<a name="dependencyPropertyInfo_LineStackingStrategy"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.LineStackingStrategyProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> propriedade para determinar como as caixas de linha são criadas para as linhas de texto de um <xref:System.Windows.Controls.TextBlock>. A primeira <xref:System.Windows.Controls.TextBlock> tem um <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> valor <xref:System.Windows.LineStackingStrategy.MaxHeight> e a segunda <xref:System.Windows.Controls.TextBlock> tem um valor de <xref:System.Windows.LineStackingStrategy.BlockLineHeight>.  
+  
+ [!code-xaml[FlowMiscSnippets_snip#LineStackingStrategyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/linestackingstrategyexample.xaml#linestackingstrategyexamplewholepage)]  
+  
+ A ilustração a seguir mostra o resultado do código anterior.  
+  
+ ![Captura de tela: Comparar valores LineStackingStrategy](~/add/media/flow-linestackingstrategy.gif "captura de tela: LineStackingStrategy comparar valores")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineStackingStrategyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineStackingStrategyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.LineStackingStrategyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.LineStackingStrategy" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Margin">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness Margin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness Margin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.Margin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a espessura da margem do elemento.</summary>
+        <value>Uma estrutura <see cref="T:System.Windows.Thickness" /> que especifica a quantidade de margem a ser aplicada, em pixels independentes de dispositivo. O padrão é uma espessura uniforme de zero (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.Block.Margin%2A>é o espaço de buffer que está fora da área de conteúdo de um elemento, entre as bordas da área de conteúdo do elemento e as bordas do elemento pai.  Compare com <xref:System.Windows.Documents.Block.Padding%2A>, que é o espaço de buffer que está dentro da área de conteúdo de um elemento, entre o conteúdo do elemento e a borda interna do elemento.  
+  
+<a name="xamlAttributeUsage_Margin"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Margin="uniformThickness"/>  
+- or -  
+<object Margin="independentThickness"/>  
+- or -  
+<object Margin="qualifiedUniformThickness"/>  
+- or -  
+<object Margin="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_Margin"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *uniformThickness*  
+ Representação de uma única cadeia de caracteres <xref:System.Double> valor a ser aplicado uniformemente para todas as dimensões de espessura de quatro.  Por exemplo, um valor de `"10"` é equivalente a um valor de `"10,10,10,10"`.  Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *independentThickness*  
+ Representação de quatro ordenados de cadeia de caracteres <xref:System.Double> valores correspondentes para dimensões de espessura independente para esquerda, superior, direita e inferior, nessa ordem.  Os quatro valores devem ser separados por vírgulas. não são permitidos espaços.  Por exemplo, "5,10,15,20" resulta em 5 pixels da margem à esquerda do conteúdo, 10 pixels da margem acima conteúdo, 15 pixels da margem à direita do conteúdo e 20 pixels da margem abaixo do conteúdo.  
+  
+ *qualifiedUniformThickness*  
+ Um valor descrito por *uniformThickness* seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1in"` fornece margem uniforme de 1 polegada em todas as direções.  
+  
+ *qualifiedIndependentThickness*  
+ Um valor descrito por *independentThickness*, com cada valor independente seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1.5in,0.8in,1.5in,0.8in"`.  Especificadores de unidade podem ser combinados ou omitidos de um ou mais valores.  
+  
+<a name="dependencyPropertyInfo_Margin"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.MarginProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.Margin%2A> atributo de um <xref:System.Windows.Documents.Block> elemento (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_MarginPaddingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_marginpaddingxaml)]  
+  
+ A figura a seguir mostra como o exemplo anterior é renderizado.  Cores e espessuras exageradas são usadas para fins ilustrativos.  
+  
+ ![Captura de tela: Parágrafos com preenchimento e margens](~/add/media/block-marginpadding.png "captura de tela: parágrafos com preenchimento e margens")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.Margin%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_MarginPadding](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_marginpadding)]
+ [!code-vb[BlockSnippets#_Block_MarginPadding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_marginpadding)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarginProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MarginProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MarginProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.MarginProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.Margin" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextBlock">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Block NextBlock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.Block NextBlock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.NextBlock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Block</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o irmão <see cref="T:System.Windows.Documents.Block" /> elemento que segue diretamente atual <see cref="T:System.Windows.Documents.Block" /> elemento.</summary>
+        <value>O irmão <see cref="T:System.Windows.Documents.Block" /> elemento que segue diretamente atual <see cref="T:System.Windows.Documents.Block" /> elemento, ou <see langword="null" /> se esse elemento não existe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a espessura do preenchimento do elemento.</summary>
+        <value>Uma estrutura <see cref="T:System.Windows.Thickness" /> que especifica a quantidade de preenchimento a aplicar, em pixels independentes de dispositivo. O padrão é uma espessura uniforme de zero (0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.Block.Padding%2A>é o espaço de buffer que está dentro da área de conteúdo de um elemento, entre o conteúdo do elemento e a borda interna do elemento.  Compare com <xref:System.Windows.Documents.Block.Margin%2A>, que é o espaço de buffer que está fora da área de conteúdo de um elemento, entre as bordas da área de conteúdo do elemento e as bordas do elemento pai.  
+  
+<a name="xamlAttributeUsage_Padding"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Padding="uniformThickness"/>  
+- or -  
+<object Padding="independentThickness"/>  
+- or -  
+<object Padding="qualifiedUniformThickness"/>  
+- or -  
+<object Padding="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_Padding"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *uniformThickness*  
+ Representação de uma única cadeia de caracteres <xref:System.Double> valor a ser aplicado uniformemente para todas as dimensões de espessura de quatro.  Por exemplo, um valor de `"10"` é equivalente a um valor de `"10,10,10,10"`.  Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *independentThickness*  
+ Representação de quatro ordenados de cadeia de caracteres <xref:System.Double> valores correspondentes para dimensões de espessura independente para esquerda, superior, direita e inferior, nessa ordem.  Os quatro valores devem ser separados por vírgulas. não são permitidos espaços.  Por exemplo, "5,10,15,20" resulta em 5 pixels de preenchimento à esquerda do conteúdo, 10 pixels de preenchimento acima de conteúdo, 15 pixels de preenchimento à direita do conteúdo e 20 pixels de preenchimento abaixo do conteúdo.  
+  
+ *qualifiedUniformThickness*  
+ Um valor descrito por *uniformThickness* seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1in"` fornece preenchimento uniforme de 1 polegada em todas as direções.  
+  
+ *qualifiedIndependentThickness*  
+ Um valor descrito por *independentThickness*, com cada valor independente seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1.5in,0.8in,1.5in,0.8in"`.  Especificadores de unidade podem ser combinados ou omitidos de um ou mais valores.  
+  
+<a name="dependencyPropertyInfo_Padding"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.PaddingProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.Padding%2A> atributo de um <xref:System.Windows.Documents.Block> elemento (<xref:System.Windows.Documents.Paragraph>).  
+  
+ [!code-xaml[BlockSnippets#_Block_MarginPaddingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_marginpaddingxaml)]  
+  
+ A figura a seguir mostra como o exemplo anterior é renderizado.  Cores e espessuras exageradas são usadas para fins ilustrativos.  
+  
+ ![Captura de tela: Parágrafos com preenchimento e margens](~/add/media/block-marginpadding.png "captura de tela: parágrafos com preenchimento e margens")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.Padding%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_MarginPadding](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_marginpadding)]
+ [!code-vb[BlockSnippets#_Block_MarginPadding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_marginpadding)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PaddingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PaddingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.PaddingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.Padding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousBlock">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Block PreviousBlock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.Block PreviousBlock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.PreviousBlock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Block</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o irmão <see cref="T:System.Windows.Documents.Block" /> elemento que precede diretamente atual <see cref="T:System.Windows.Documents.Block" /> elemento.</summary>
+        <value>O irmão <see cref="T:System.Windows.Documents.Block" /> elemento que precede diretamente atual <see cref="T:System.Windows.Documents.Block" /> elemento, ou <see langword="null" /> se esse elemento não existe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsHyphenationEnabled">
+      <MemberSignature Language="C#" Value="public static void SetIsHyphenationEnabled (System.Windows.DependencyObject element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsHyphenationEnabled(class System.Windows.DependencyObject element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Block.SetIsHyphenationEnabled(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Documents.Block.IsHyphenationEnabled" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Documents.Block.IsHyphenationEnabled" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLineHeight">
+      <MemberSignature Language="C#" Value="public static void SetLineHeight (System.Windows.DependencyObject element, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetLineHeight(class System.Windows.DependencyObject element, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Block.SetLineHeight(System.Windows.DependencyObject,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Documents.Block.LineHeight" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Documents.Block.LineHeight" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> é negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLineStackingStrategy">
+      <MemberSignature Language="C#" Value="public static void SetLineStackingStrategy (System.Windows.DependencyObject element, System.Windows.LineStackingStrategy value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetLineStackingStrategy(class System.Windows.DependencyObject element, valuetype System.Windows.LineStackingStrategy value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Block.SetLineStackingStrategy(System.Windows.DependencyObject,System.Windows.LineStackingStrategy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.LineStackingStrategy" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Documents.Block.LineStackingStrategy" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Documents.Block.LineStackingStrategy" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTextAlignment">
+      <MemberSignature Language="C#" Value="public static void SetTextAlignment (System.Windows.DependencyObject element, System.Windows.TextAlignment value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetTextAlignment(class System.Windows.DependencyObject element, valuetype System.Windows.TextAlignment value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Block.SetTextAlignment(System.Windows.DependencyObject,System.Windows.TextAlignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.TextAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Documents.Block.TextAlignment" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Documents.Block.TextAlignment" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <xref:System.Windows.Documents.Block.GetTextAlignment%2A>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SiblingBlocks">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.BlockCollection SiblingBlocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.BlockCollection SiblingBlocks" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.SiblingBlocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.BlockCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Windows.Documents.Block" /> elementos que são irmãos ao atual <see cref="T:System.Windows.Documents.Block" /> elemento.</summary>
+        <value>Um <see cref="T:System.Windows.Documents.BlockCollection" /> que contém o filho <see cref="T:System.Windows.Documents.Block" /> elementos que são hospedados diretamente pelo pai dos atual <see cref="T:System.Windows.Documents.Block" /> elemento, ou <see langword="null" /> se atual <see cref="T:System.Windows.Documents.Block" /> elemento não tem nenhum pai.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.BlockCollection> retornado por essa propriedade inclui o <xref:System.Windows.Documents.Block> elemento por meio do qual a coleção é acessada; ou seja, o elemento que possui essa propriedade é considerado seu próprio irmão para fins de geração de conjunto de irmãos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.TextAlignment TextAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.TextAlignment TextAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Block.TextAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento horizontal do conteúdo de texto.</summary>
+        <value>Um dos valores <see cref="T:System.Windows.TextAlignment" /> que especifica o alinhamento desejado. O padrão é <see cref="F:System.Windows.TextAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_TextAlignment"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Block.TextAlignmentProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.TextAlignment%2A> atributo de um <xref:System.Windows.Documents.Block> elemento.  
+  
+ [!code-xaml[BlockSnippets#_Block_TextAlignmentXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_block_textalignmentxaml)]  
+  
+ A figura a seguir mostra como o exemplo anterior é renderizado com <xref:System.Windows.TextAlignment.Left> alinhamento de texto (o padrão).  
+  
+ ![Captura de tela: Valor Left da propriedade TextAlign](~/add/media/flowdoc-textalign-left.png "captura de tela: valor da propriedade TextAlign da esquerda")  
+  
+ A figura a seguir mostra como o mesmo exemplo renderiza com <xref:System.Windows.TextAlignment.Right> alinhamento de texto.  
+  
+ ![Captura de tela: Valor TextAlign direita](~/add/media/flowdoc-textalign-right.png "captura de tela: valor da direita TextAlign")  
+  
+ A figura a seguir mostra como o mesmo exemplo renderiza com <xref:System.Windows.TextAlignment.Center> alinhamento de texto.  
+  
+ ![Captura de tela: Valor Center da propriedade TextAlign](~/add/media/flowdoc-textalign-center.png "captura de tela: valor da propriedade TextAlign do Centro")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Block.TextAlignment%2A> propriedade programaticamente.  
+  
+ [!code-csharp[BlockSnippets#_Block_TextAlignment](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml.cs#_block_textalignment)]
+ [!code-vb[BlockSnippets#_Block_TextAlignment](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BlockSnippets/visualbasic/window1.xaml.vb#_block_textalignment)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignmentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextAlignmentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextAlignmentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Block.TextAlignmentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Block.TextAlignment" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,117 @@
+<Type Name="KeyNumber" FullName="System.Security.Cryptography.KeyNumber">
+  <TypeSignature Language="C#" Value="public enum KeyNumber" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed KeyNumber extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.KeyNumber" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se deve-se criar uma chave de assinatura assimétrica ou uma chave de troca assimétrica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.KeyNumber> enumeração com o <xref:System.Security.Cryptography.CspKeyContainerInfo.KeyNumber%2A> propriedade para inspecionar um tipo de chave ou com o <xref:System.Security.Cryptography.CspParameters.KeyNumber> campo para especificar um tipo de chave.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Security.Cryptography.KeyNumber> enumeração para especificar um tipo de chave para um <xref:System.Security.Cryptography.RSACryptoServiceProvider> objeto.  
+  
+ [!code-cpp[Cryptography.KeyNumber#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.KeyNumber/cpp/sample.cpp#1)]
+ [!code-csharp[Cryptography.KeyNumber#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.KeyNumber/CS/sample.cs#1)]
+ [!code-vb[Cryptography.KeyNumber#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.KeyNumber/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Exchange">
+      <MemberSignature Language="C#" Value="Exchange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.KeyNumber Exchange = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.KeyNumber.Exchange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeyNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um par de chaves de troca usadas para criptografar as chaves de sessão para que possam ser armazenados com segurança e trocadas com outros usuários.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor corresponde ao valor AT_KEYEXCHANGE usado de não gerenciado Microsoft Cryptographic API (CAPI).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Signature">
+      <MemberSignature Language="C#" Value="Signature" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.KeyNumber Signature = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.KeyNumber.Signature" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.KeyNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um par de chaves de assinatura usadas para autenticar mensagens ou arquivos assinados digitalmente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor corresponde ao valor AT_SIGNATURE usado de não gerenciado Microsoft Cryptographic API (CAPI).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

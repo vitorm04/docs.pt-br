@@ -1,0 +1,20 @@
+<Namespace Name="System.Runtime.Remoting">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting" /> namespace fornece classes e interfaces que permitem aos desenvolvedores criar e configurar de aplicativos distribuídos. Algumas das classes mais importante do <see cref="N:System.Runtime.Remoting" /> namespace são o <see cref="T:System.Runtime.Remoting.RemotingConfiguration" /> classe, o <see cref="T:System.Runtime.Remoting.RemotingServices" /> classe e o <see cref="T:System.Runtime.Remoting.ObjRef" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.RemotingConfiguration> classe contém métodos estáticos para fazer interface com definições de configuração. O <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%2A?displayProperty=nameWithType> método permite que os desenvolvedores configurem a infraestrutura de comunicação remota com o uso de arquivos de configuração XML formatado. O <xref:System.Runtime.Remoting.RemotingConfiguration> classe também contém vários métodos para o registro final de cliente e servidor a fim de cliente e servidor ativado objetos que residem no servidor.  
+  
+ O <xref:System.Runtime.Remoting.RemotingServices> classe fornece vários métodos para ajudar a usar e publicar os objetos remotos. O <xref:System.Runtime.Remoting.RemotingServices.Marshal%2A?displayProperty=nameWithType> método fornece a funcionalidade para armazenar todas as informações relevantes necessárias para ativar e se comunicar com um objeto remoto em uma instância do <xref:System.Runtime.Remoting.ObjRef> classe para serialização e a transmissão para um local remoto posterior. O <xref:System.Runtime.Remoting.RemotingServices.Unmarshal%2A?displayProperty=nameWithType> método inverte esse processo, criando um proxy para um objeto remoto pode ser usado por um aplicativo sem levar em consideração qualquer subdivisões de comunicação remota.  
+  
+ O <xref:System.Runtime.Remoting.ObjRef> classe contém todas as informações relevantes necessárias para ativar e se comunicar com um objeto remoto. Essa classe é uma representação serializável de um objeto que é transmitida para um local remoto usando um canal, onde ele é desempacotado (consulte <xref:System.Runtime.Remoting.RemotingServices.Unmarshal%2A>) e pode ser usado para criar um proxy do local do objeto remoto.  
+  
+> [!NOTE]
+>  Objetos de marshaling por referência (MBRs) não estão na memória para sempre. Em vez disso, a menos que o tipo substitui <xref:System.MarshalByRefObject.InitializeLifetimeService%2A?displayProperty=nameWithType> para controlar suas próprias diretivas de tempo de vida, cada MBR tem um tempo de vida finito antes do sistema de comunicação remota do .NET Framework começa o processo de exclusão e recuperação de memória. Para obter mais informações, consulte [concessões de tempo de vida](https://msdn.microsoft.com/library/23bk23zc.aspx).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

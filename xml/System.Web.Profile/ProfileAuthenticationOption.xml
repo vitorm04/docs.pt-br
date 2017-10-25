@@ -1,0 +1,84 @@
+<Type Name="ProfileAuthenticationOption" FullName="System.Web.Profile.ProfileAuthenticationOption">
+  <TypeSignature Language="C#" Value="public enum ProfileAuthenticationOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProfileAuthenticationOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileAuthenticationOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve o tipo de autenticação de perfis de usuário a ser pesquisada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileAuthenticationOption> enumeração é usada por provedores de perfil e o <xref:System.Web.Profile.ProfileManager> classe quando eles procuram perfis na fonte de dados e eles excluí-los. O <xref:System.Web.Profile.ProfileAuthenticationOption> enumeração é usada para selecionar se somente anônimo, somente autenticados, ou todos os perfis são pesquisados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir permite que um usuário exibir e excluir informações de perfis de ativo e inativo com base em critérios de pesquisa, incluindo um <xref:System.Web.Profile.ProfileAuthenticationOption> parâmetro.  
+  
+> [!IMPORTANT]
+>  Este exemplo inclui uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/FindProfilesByUserNamecs.aspx#5)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/FindProfilesByUserNamevb.aspx#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Profile.ProfileAuthenticationOption All = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Profile.ProfileAuthenticationOption.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileAuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Pesquise todos os perfis.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Anonymous">
+      <MemberSignature Language="C#" Value="Anonymous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Profile.ProfileAuthenticationOption Anonymous = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Profile.ProfileAuthenticationOption.Anonymous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileAuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Pesquise somente perfis anônimos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticated">
+      <MemberSignature Language="C#" Value="Authenticated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Profile.ProfileAuthenticationOption Authenticated = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Profile.ProfileAuthenticationOption.Authenticated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileAuthenticationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Pesquisa apenas perfis autenticados.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,124 @@
+<Type Name="ContentPropertyAttribute" FullName="System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ContentPropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContentPropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém o nome para a propriedade de conteúdo da classe decorada.  Marcar um tipo com esse atributo faz com que os dados nesse tipo a ser serializado sem as marcas de nome de propriedade delimitador. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Para Windows Workflow Foundation, as restrições a seguir pertencem ao <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>:  
+  
+-   <xref:System.Type>, <xref:System.Collections.Generic.Stack%601>, e <xref:System.Collections.Generic.Queue%601> não há suporte para `ContentProperty` tipos.  
+  
+-   Uma cadeia de caracteres vazia é desserializada como um valor nulo.  
+  
+-   Um `ContentProperty` que associa a um campo usando `ActivityBind` não é serializado como um `ContentProperty`.  
+  
+-   `ContentProperty`que interleaves com propriedade de conteúdo não não é suportado na marcação de fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentPropertyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentPropertyAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Um <see cref="T:System.String" /> que contém o valor para o <see cref="P:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute.Name" /> propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute" /> classe Inicializando o <see cref="P:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute.Name" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para Windows Workflow Foundation, as restrições a seguir pertencem ao `ContentPropertyAttribute`:  
+  
+-   <xref:System.Type>, <xref:System.Collections.Generic.Stack%601>, e <xref:System.Collections.Generic.Queue%601> não há suporte para `ContentProperty` tipos.  
+  
+-   Uma cadeia de caracteres vazia será ser desserializada como um valor nulo.  
+  
+-   Um `ContentProperty` que se associa a um campo usando `ActivityBind` não será serializado como um `ContentProperty`.  
+  
+-   `ContentProperty`que interleaves com propriedade de conteúdo não não é suportado na marcação de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.String" /> que representa o nome da propriedade de conteúdo.</summary>
+        <value>O <see cref="T:System.String" /> que representa o nome da propriedade de conteúdo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As restrições a seguir pertencem ao `ContentPropertyAttribute`:  
+  
+-   <xref:System.Type>, <xref:System.Collections.Generic.Stack%601>, e <xref:System.Collections.Generic.Queue%601> não há suporte para `ContentProperty` tipos.  
+  
+-   Uma cadeia de caracteres vazia será ser desserializada como um valor nulo.  
+  
+-   Um `ContentProperty` que se associa a um campo usando `ActivityBind` não será serializado como um `ContentProperty`.  
+  
+-   `ContentProperty`que interleaves com propriedade de conteúdo não não é suportado na marcação de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

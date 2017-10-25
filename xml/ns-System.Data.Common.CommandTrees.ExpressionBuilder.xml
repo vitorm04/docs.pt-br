@@ -1,0 +1,21 @@
+<Namespace Name="System.Data.Common.CommandTrees.ExpressionBuilder">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Common.CommandTrees.ExpressionBuilder" /> namespace fornece uma API de árvore de comando.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Common.CommandTrees.ExpressionBuilder> API é usada para criar expressões, que são representados por <xref:System.Data.Common.CommandTrees.DbExpression> objetos. A árvore de comandos API fornecida pelo <xref:System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder> classe tem as seguintes características:  
+  
+-   Funcional. <xref:System.Data.Common.CommandTrees.DbExpression>objetos são construídos usando padrões funcionais que fornecem um fluxo natural de construção.  
+  
+-   Flexível. Um <xref:System.Data.Common.CommandTrees.DbExpression> não está associado a qualquer árvore de comandos específicos do objeto e pode ser usado em qualquer contexto em que o tipo de contrato é atendido.  
+  
+-   Imutável. A API consiste inteiramente em tipos imutáveis; Mutabilidade pode ser simulada substituindo novos valores ao recriar uma árvore de expressão.  
+  
+-  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

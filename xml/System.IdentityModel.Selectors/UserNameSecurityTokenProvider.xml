@@ -1,0 +1,84 @@
+<Type Name="UserNameSecurityTokenProvider" FullName="System.IdentityModel.Selectors.UserNameSecurityTokenProvider">
+  <TypeSignature Language="C#" Value="public class UserNameSecurityTokenProvider : System.IdentityModel.Selectors.SecurityTokenProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UserNameSecurityTokenProvider extends System.IdentityModel.Selectors.SecurityTokenProvider" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.UserNameSecurityTokenProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um provedor de token de segurança que fornece tokens de segurança <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" /> para um remetente de mensagem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na maioria dos casos o <xref:System.IdentityModel.Selectors.UserNameSecurityTokenProvider> classe não precisa ser chamado diretamente, como ele é chamado quando um cliente envia uma mensagem SOAP que requer um <xref:System.IdentityModel.Tokens.UserNameSecurityToken> token de segurança. Especificamente, um cliente especifica o tipo de segurança token necessário usando o <xref:System.ServiceModel.Description.ClientCredentials> classe e o <xref:System.ServiceModel.Description.ClientCredentials> classe chama o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> método para obter um token de segurança. Quando o token de segurança necessário é uma <xref:System.IdentityModel.Tokens.UserNameSecurityToken> token de segurança, o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.UserNameSecurityTokenProvider.GetTokenCore%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserNameSecurityTokenProvider (string userName, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string userName, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.UserNameSecurityTokenProvider.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="userName" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userName">O nome de usuário para obter <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" /> token de segurança para.</param>
+        <param name="password">A senha do usuário para obter um <see cref="T:System.IdentityModel.Tokens.UserNameSecurityToken" /> token de segurança para.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Selectors.UserNameSecurityTokenProvider" /> classe usando o nome de usuário especificado e a senha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.UserNameSecurityTokenProvider.GetTokenCore%2A> método obtém um token com base no nome de usuário especificado e senha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenCore">
+      <MemberSignature Language="C#" Value="protected override System.IdentityModel.Tokens.SecurityToken GetTokenCore (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityToken GetTokenCore(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.UserNameSecurityTokenProvider.GetTokenCore(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que obtém o token de segurança.</param>
+        <summary>Obtém uma segurança token com base no nome de usuário e senha especificados no construtor.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança para obter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.UserNameSecurityTokenProvider.GetTokenCore%2A> método é chamado pelo <xref:System.ServiceModel.Description.ClientCredentials> classe quando um cliente envia uma mensagem SOAP e uma <xref:System.IdentityModel.Tokens.UserNameSecurityToken> token de segurança é necessária.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.UserNameSecurityTokenProvider.GetTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

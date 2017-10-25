@@ -1,0 +1,405 @@
+<Type Name="XsltArgumentList" FullName="System.Xml.Xsl.XsltArgumentList">
+  <TypeSignature Language="C#" Value="public class XsltArgumentList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XsltArgumentList extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.XsltArgumentList" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém um número variável de argumentos que são parâmetros XSLT ou objetos de extensão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada pelo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> método. Ele permite que os parâmetros e objetos de extensão para ser chamado de dentro da folha de estilo.  
+  
+ Quando os parâmetros e os objetos são adicionados para o <xref:System.Xml.Xsl.XsltArgumentList>, eles estão associados com um nome qualificado de namespace e um URI de namespace, respectivamente.  
+  
+ A seguir são vantagens para passar um objeto em vez de usar um script incorporado como `<msxsl:script>`:  
+  
+-   Fornece a melhor encapsulamento e reutilização de classes.  
+  
+-   Permite que as folhas de estilo a ser menores e mais facilmente mantidos.  
+  
+-   Suporta a passagem de fragmentos de nó (por meio de <xref:System.Xml.XPath.XPathNavigator>) para a folha de estilos.  
+  
+ Para obter mais informações sobre como usar o <xref:System.Xml.Xsl.XsltArgumentList>, consulte [objetos de extensão XSLT](~/docs/standard/data/xml/xslt-extension-objects.md) e [parâmetros XSLT](~/docs/standard/data/xml/xslt-parameters.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XsltArgumentList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.XsltArgumentList.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Implementa uma nova instância do <see cref="T:System.Xml.Xsl.XsltArgumentList" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddExtensionObject">
+      <MemberSignature Language="C#" Value="public void AddExtensionObject (string namespaceUri, object extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddExtensionObject(string namespaceUri, object extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.XsltArgumentList.AddExtensionObject(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceUri" Type="System.String" />
+        <Parameter Name="extension" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceUri">O URI do namespace a associar ao objeto. Para usar o namespace padrão, especifique uma cadeia de caracteres vazia.</param>
+        <param name="extension">O objeto a ser adicionado à lista.</param>
+        <summary>Adiciona um novo objeto ao <see cref="T:System.Xml.Xsl.XsltArgumentList" /> e associa-o ao URI do namespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `params` palavra-chave, que permite que um número especificado de parâmetros a serem passados, não é suportado atualmente. Folhas de estilo XSLT que utilizam métodos definidos com o `params` palavra-chave não funciona corretamente. Para obter mais informações, consulte [params](~/docs/csharp/language-reference/keywords/params.md).  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, a folha de estilo usa um objeto de extensão XSLT para converter o preço de catálogo.  
+  
+ [!code-csharp[XsltArgumentList.AddExtensionObject#1](~/samples/snippets/csharp/VS_Snippets_Data/XsltArgumentList.AddExtensionObject/CS/addextobj.cs#1)]
+ [!code-vb[XsltArgumentList.AddExtensionObject#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XsltArgumentList.AddExtensionObject/VB/addextobj.vb#1)]  
+  
+ O exemplo usa os seguintes arquivos de dados como entrada.  
+  
+ `books.xml`  
+  
+ [!code-xml[XsltArgumentList.AddExtensionObject#2](~/samples/snippets/xml/VS_Snippets_Data/XsltArgumentList.AddExtensionObject/XML/books.xml#2)]  
+  
+ `prices.xsl`  
+  
+ [!code-xml[XsltArgumentList.AddExtensionObject#3](~/samples/snippets/xml/VS_Snippets_Data/XsltArgumentList.AddExtensionObject/XML/prices.xsl#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="namespaceUri" /> é <see langword="null" /> ou http://www.w3.org/1999/XSL/Transform  
+  
+ O <paramref name="namespaceUri" /> já tem um objeto de extensão associado a ele.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem permissões suficientes para chamar esse método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParam">
+      <MemberSignature Language="C#" Value="public void AddParam (string name, string namespaceUri, object parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddParam(string name, string namespaceUri, object parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.XsltArgumentList.AddParam(System.String,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceUri" Type="System.String" />
+        <Parameter Name="parameter" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao parâmetro.</param>
+        <param name="namespaceUri">O namespace URI para associar o parâmetro. Para usar o namespace padrão, especifique uma cadeia de caracteres vazia.</param>
+        <param name="parameter">O valor do parâmetro ou o objeto a ser adicionado à lista.</param>
+        <summary>Adiciona um parâmetro ao <see cref="T:System.Xml.Xsl.XsltArgumentList" /> e o associa ao nome qualificado de namespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `parameter` deve corresponder a um tipo de W3C. A tabela a seguir mostra os tipos de W3C XPath ou XSLT e a classe corresponding.NET.  
+  
+|Tipo W3C|Classe Equivalent.NET (tipo)|  
+|--------------|-----------------------------------|  
+|`String`(XPath)|<xref:System.String>|  
+|`Boolean`(XPath)|<xref:System.Boolean>|  
+|`Number`(XPath)|<xref:System.Double>|  
+|`Result Tree Fragment`(XSLT)|<xref:System.Xml.XPath.XPathNavigator>|  
+|`Node Set`(XPath)|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> `XPathNavigator[]`|  
+|`Node`* (XPath)|<xref:System.Xml.XPath.XPathNavigator>|  
+  
+ os *This são equivalentes a um nó definida que contém um único nó.  
+  
+ Se o objeto de parâmetro que está sendo invocado a partir de folha de estilos não é um dos itens acima, ela será convertida de acordo com as regras a seguir:  
+  
+-   Os tipos numéricos de CLR são convertidos em <xref:System.Double>.  
+  
+-   O tipo <xref:System.DateTime> é convertido em <xref:System.String>.  
+  
+-   Os tipos <xref:System.Xml.XPath.IXPathNavigable> são convertidos em <xref:System.Xml.XPath.XPathNavigator>. `XPathNavigator[]`é convertido em <xref:System.Xml.XPath.XPathNodeIterator>.  
+  
+ Todos os outros tipos lançam um erro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> método para criar um parâmetro que representa a data e hora atuais.  
+  
+ [!code-csharp[XsltArgumentList.AddParam#1](~/samples/snippets/csharp/VS_Snippets_Data/XsltArgumentList.AddParam/CS/addparam.cs#1)]
+ [!code-vb[XsltArgumentList.AddParam#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XsltArgumentList.AddParam/VB/addparam.vb#1)]  
+  
+ O exemplo usa os seguintes arquivos de dados como entrada.  
+  
+ `order.xml`  
+  
+ [!code-xml[XsltArgumentList.AddParam#2](~/samples/snippets/xml/VS_Snippets_Data/XsltArgumentList.AddParam/XML/order.xml#2)]  
+  
+ `order.xsl`  
+  
+ [!code-xml[XsltArgumentList.AddParam#3](~/samples/snippets/xml/VS_Snippets_Data/XsltArgumentList.AddParam/XML/order.xsl#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="namespaceUri" /> é <see langword="null" /> ou http://www.w3.org/1999/XSL/Transform.  
+  
+ O <paramref name="name" /> não é um nome válido de acordo com a especificação W3C XML.  
+  
+ O <paramref name="namespaceUri" /> já tem um parâmetro associado a ele.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.XsltArgumentList.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os parâmetros e objetos de extensão do <see cref="T:System.Xml.Xsl.XsltArgumentList" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtensionObject">
+      <MemberSignature Language="C#" Value="public object GetExtensionObject (string namespaceUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetExtensionObject(string namespaceUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.XsltArgumentList.GetExtensionObject(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceUri">O namespace URI do objeto.</param>
+        <summary>Obtém o objeto associado ao namespace específico.</summary>
+        <returns>O objeto URI de namespace ou <see langword="null" /> se não foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParam">
+      <MemberSignature Language="C#" Value="public object GetParam (string name, string namespaceUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetParam(string name, string namespaceUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.XsltArgumentList.GetParam(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro. <see cref="T:System.Xml.Xsl.XsltArgumentList" />não verifica para garantir que o nome passado é um nome local válido; No entanto, o nome não pode ser <see langword="null" />.</param>
+        <param name="namespaceUri">O namespace URI associado ao parâmetro.</param>
+        <summary>Obtém o parâmetro associado com o nome qualificado de namespace.</summary>
+        <returns>O objeto de parâmetro ou <see langword="null" /> se não foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveExtensionObject">
+      <MemberSignature Language="C#" Value="public object RemoveExtensionObject (string namespaceUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object RemoveExtensionObject(string namespaceUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.XsltArgumentList.RemoveExtensionObject(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceUri">O namespace URI associado ao objeto a ser removido.</param>
+        <summary>Remove o objeto com o URI do namespace do <see cref="T:System.Xml.Xsl.XsltArgumentList" />.</summary>
+        <returns>O objeto com o URI de namespace ou <see langword="null" /> se não foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveParam">
+      <MemberSignature Language="C#" Value="public object RemoveParam (string name, string namespaceUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object RemoveParam(string name, string namespaceUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.XsltArgumentList.RemoveParam(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="namespaceUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro a ser removido. <see cref="T:System.Xml.Xsl.XsltArgumentList" />não verifica para garantir que o nome passado é um nome local válido; No entanto, o nome não pode ser <see langword="null" />.</param>
+        <param name="namespaceUri">O namespace URI do parâmetro a ser removido.</param>
+        <summary>Remove o parâmetro a partir de <see cref="T:System.Xml.Xsl.XsltArgumentList" />.</summary>
+        <returns>O objeto de parâmetro ou <see langword="null" /> se não foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XsltMessageEncountered">
+      <MemberSignature Language="C#" Value="public event System.Xml.Xsl.XsltMessageEncounteredEventHandler XsltMessageEncountered;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Xml.Xsl.XsltMessageEncounteredEventHandler XsltMessageEncountered" />
+      <MemberSignature Language="DocId" Value="E:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.XsltMessageEncounteredEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma mensagem é especificada na folha de estilos, o <c>xsl:message</c> elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o evento não estiver registrado, todas as mensagens são direcionadas para saída padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

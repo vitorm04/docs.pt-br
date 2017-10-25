@@ -1,0 +1,128 @@
+<Type Name="FileDialogCustomPlacesCollection" FullName="System.Windows.Forms.FileDialogCustomPlacesCollection">
+  <TypeSignature Language="C#" Value="public class FileDialogCustomPlacesCollection : System.Collections.ObjectModel.Collection&lt;System.Windows.Forms.FileDialogCustomPlace&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileDialogCustomPlacesCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.Windows.Forms.FileDialogCustomPlace&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FileDialogCustomPlacesCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.Windows.Forms.FileDialogCustomPlace&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Windows.Forms.FileDialogCustomPlace</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de locais personalizados de Windows Vista para o <see cref="T:System.Windows.Forms.FileDialog" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em [!INCLUDE[winxp](~/includes/winxp-md.md)] ou [!INCLUDE[winxpsvr](~/includes/winxpsvr-md.md)], essa classe não tem nenhum efeito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.FileDialogCustomPlacesCollection>. Para executar este exemplo, cole o seguinte código em um formulário do Windows e a chamada `InitializeDialogAndButton` do construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-csharp[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileDialogCustomPlacesCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlacesCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.FileDialogCustomPlacesCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Guid knownFolderGuid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(valuetype System.Guid knownFolderGuid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlacesCollection.Add(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="knownFolderGuid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="knownFolderGuid">Um <see cref="T:System.Guid" /> que representa um [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] pasta conhecido.</param>
+        <summary>Adiciona um local personalizado para o <see cref="T:System.Windows.Forms.FileDialogCustomPlacesCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A pasta é adicionada a locais personalizados somente para um determinado <xref:System.Windows.Forms.FileDialog> e não é uma grande alteração sistema ou aplicativo.  
+  
+ As pastas são posicionadas nos locais personalizados na ordem em que eles são adicionados para o <xref:System.Windows.Forms.FileDialog>. O último adicionado será na parte superior. Se você adicionar um local personalizado à coleção que não existe no computador que executa o aplicativo, o local personalizado não será exibido. GUIDs diferenciam maiusculas de minúsculas. Para obter uma lista dos [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] pastas conhecidas, consulte [GUIDs de pasta conhecidas para locais do arquivo de caixa de diálogo personalizada](~/docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md) ou o arquivo KnownFolders.h a [!INCLUDE[winSDK](~/includes/winsdk-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A> método. Para executar este exemplo, cole o seguinte código em um formulário do Windows e a chamada `InitializeDialogAndButton` do construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-csharp[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlacesCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um caminho de pasta para o local personalizado.</param>
+        <summary>Adiciona um local personalizado para o <see cref="T:System.Windows.Forms.FileDialogCustomPlacesCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A pasta é adicionada a locais personalizados somente para um determinado <xref:System.Windows.Forms.FileDialog> e não é uma grande alteração sistema ou aplicativo.  
+  
+ As pastas são posicionadas nos locais personalizados na ordem em que eles são adicionados para o <xref:System.Windows.Forms.FileDialog>. O último adicionado será na parte superior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A> método. Para executar este exemplo, cole o seguinte código em um formulário do Windows e a chamada `InitializeDialogAndButton` do construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-csharp[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

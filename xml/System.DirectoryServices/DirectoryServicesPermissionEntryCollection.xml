@@ -1,0 +1,316 @@
+<Type Name="DirectoryServicesPermissionEntryCollection" FullName="System.DirectoryServices.DirectoryServicesPermissionEntryCollection">
+  <TypeSignature Language="C#" Value="public class DirectoryServicesPermissionEntryCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit DirectoryServicesPermissionEntryCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.DirectoryServicesPermissionEntryCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma coleção fortemente tipada de <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objetos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.DirectoryServices.DirectoryServicesPermissionEntry value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.DirectoryServices.DirectoryServicesPermissionEntry value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.Add(System.DirectoryServices.DirectoryServicesPermissionEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DirectoryServices.DirectoryServicesPermissionEntry" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto a ser adicionado a esta coleção.</param>
+        <summary>Acrescenta especificado <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto à coleção.</summary>
+        <returns>O índice com base em zero do adicionado <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto que é anexado a esta coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.DirectoryServices.DirectoryServicesPermissionEntry[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.DirectoryServices.DirectoryServicesPermissionEntry[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.AddRange(System.DirectoryServices.DirectoryServicesPermissionEntry[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DirectoryServices.DirectoryServicesPermissionEntry[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">
+          <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" />matriz que contém os objetos para acrescentar a esta coleção.</param>
+        <summary>Acrescenta o conteúdo do especificado <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> matriz a esta coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.DirectoryServices.DirectoryServicesPermissionEntryCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.DirectoryServices.DirectoryServicesPermissionEntryCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.AddRange(System.DirectoryServices.DirectoryServicesPermissionEntryCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DirectoryServices.DirectoryServicesPermissionEntryCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntryCollection" /> objeto que contém os objetos para acrescentar a esta coleção.</param>
+        <summary>Acrescenta o conteúdo do especificado <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntryCollection" /> objeto à coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.DirectoryServicesPermissionEntry value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.DirectoryServicesPermissionEntry value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.Contains(System.DirectoryServices.DirectoryServicesPermissionEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DirectoryServices.DirectoryServicesPermissionEntry" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Determina se o especificado <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto está nesta coleção.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto está nesta coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.DirectoryServicesPermissionEntry[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.DirectoryServices.DirectoryServicesPermissionEntry[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.CopyTo(System.DirectoryServices.DirectoryServicesPermissionEntry[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.DirectoryServices.DirectoryServicesPermissionEntry[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz de <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objetos que recebe os elementos desta coleção.</param>
+        <param name="index">O índice baseado em zero na matriz onde esse método inicia a cópia desta coleção.</param>
+        <summary>Copia todos os <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objetos na coleção para a matriz especificada, iniciando no índice especificado na matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.DirectoryServices.DirectoryServicesPermissionEntry value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.DirectoryServices.DirectoryServicesPermissionEntry value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.IndexOf(System.DirectoryServices.DirectoryServicesPermissionEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DirectoryServices.DirectoryServicesPermissionEntry" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Retorna o índice da primeira ocorrência do <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto na coleção.</summary>
+        <returns>O índice de base zero do primeiro objeto correspondente.  Retornará -1 se nenhum membro dessa coleção é idêntico de <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.DirectoryServices.DirectoryServicesPermissionEntry value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.DirectoryServices.DirectoryServicesPermissionEntry value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.Insert(System.Int32,System.DirectoryServices.DirectoryServicesPermissionEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.DirectoryServices.DirectoryServicesPermissionEntry" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero na coleção onde o objeto é inserido.</param>
+        <param name="value">O <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto a ser inserido nesta coleção.</param>
+        <summary>Insere especificado <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> na coleção no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectoryServicesPermissionEntry this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.DirectoryServicesPermissionEntry Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryServicesPermissionEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto para get ou set.</param>
+        <summary>Obtém ou define um <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto na coleção.</summary>
+        <value>O <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto que existe no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No c#, essa propriedade é o indexador de <xref:System.DirectoryServices.DirectoryServicesPermissionEntryCollection> classe.  
+  
+ No JScript, você pode usar as propriedades indexadas padrão definidas por um tipo, mas você não pode definir explicitamente as suas próprias. No entanto, especificar o atributo expando em uma classe fornece automaticamente um padrão propriedade com um tipo de objeto e um tipo de índice indexada <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected override void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o método <see cref="M:System.Collections.CollectionBase.OnClear" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected override void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir <c>valor</c>.</param>
+        <param name="value">O novo valor do elemento no <c>índice</c>.</param>
+        <summary>Substitui o método <see cref="M:System.Collections.CollectionBase.OnInsert(System.Int32,System.Object)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="protected override void OnRemove (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemove(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.OnRemove(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> pode ser encontrado.</param>
+        <param name="value">O valor do elemento a ser removido do <c>índice</c>.</param>
+        <summary>Substitui o método <see cref="M:System.Collections.CollectionBase.OnRemove(System.Int32,System.Object)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSet">
+      <MemberSignature Language="C#" Value="protected override void OnSet (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSet(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.OnSet(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>oldValue</c> pode ser encontrado.</param>
+        <param name="oldValue">O valor para substituir <c>newValue</c>.</param>
+        <param name="newValue">O novo valor do elemento no <c>índice</c>.</param>
+        <summary>Substitui o método <see cref="M:System.Collections.CollectionBase.OnSet(System.Int32,System.Object,System.Object)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.DirectoryServices.DirectoryServicesPermissionEntry value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.DirectoryServices.DirectoryServicesPermissionEntry value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryServicesPermissionEntryCollection.Remove(System.DirectoryServices.DirectoryServicesPermissionEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DirectoryServices.DirectoryServicesPermissionEntry" />
+      </Parameters>
+      <Docs>
+        <param name="value">Especificado <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto a ser removido desta coleção.</param>
+        <summary>Remove a primeira ocorrência de um objeto na coleção que é idêntica ao especificado <see cref="T:System.DirectoryServices.DirectoryServicesPermissionEntry" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

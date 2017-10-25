@@ -1,0 +1,170 @@
+<Type Name="DurableTimerExtension" FullName="System.Activities.Statements.DurableTimerExtension">
+  <TypeSignature Language="C#" Value="public class DurableTimerExtension : System.Activities.Statements.TimerExtension, IDisposable, System.Activities.Hosting.IWorkflowInstanceExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DurableTimerExtension extends System.Activities.Statements.TimerExtension implements class System.Activities.Hosting.IWorkflowInstanceExtension, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.DurableTimerExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Statements.TimerExtension</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Activities.Hosting.IWorkflowInstanceExtension</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma extensão de timer de atividade pode ser persistente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Activities.Statements.DurableTimerExtension> objeto só pode ser associado uma instância de fluxo de trabalho único. Se um <xref:System.Activities.Statements.DurableTimerExtension> objeto é usado com mais de uma instância de fluxo de trabalho, um <xref:System.InvalidOperationException> será lançada com a seguinte mensagem:  
+  
+```Output  
+This TimerExtension has already been attached to a workflow instance.  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DurableTimerExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.DurableTimerExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Statements.DurableTimerExtension" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.DurableTimerExtension.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Encerra todos os timers.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAdditionalExtensions">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;object&gt; GetAdditionalExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;object&gt; GetAdditionalExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.DurableTimerExtension.GetAdditionalExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Activities.Statements.DurableTimerExtension/&lt;GetAdditionalExtensions&gt;d__16))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera pela coleção de extensões do timer.</summary>
+        <returns>Um enumerador.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCancelTimer">
+      <MemberSignature Language="C#" Value="protected override void OnCancelTimer (System.Activities.Bookmark bookmark);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCancelTimer(class System.Activities.Bookmark bookmark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.DurableTimerExtension.OnCancelTimer(System.Activities.Bookmark)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bookmark" Type="System.Activities.Bookmark" />
+      </Parameters>
+      <Docs>
+        <param name="bookmark">Um ponto no qual um fluxo de trabalho ou uma atividade pode passivamente esperar para ser retomado após a expiração do objeto de timer.</param>
+        <summary>Remove um objeto de timer da tabela de temporizadores registrados para a operação de fluxo de trabalho atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRegisterTimer">
+      <MemberSignature Language="C#" Value="protected override void OnRegisterTimer (TimeSpan timeout, System.Activities.Bookmark bookmark);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRegisterTimer(valuetype System.TimeSpan timeout, class System.Activities.Bookmark bookmark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.DurableTimerExtension.OnRegisterTimer(System.TimeSpan,System.Activities.Bookmark)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="bookmark" Type="System.Activities.Bookmark" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Uma hora de alcance do objeto que é adicionada à entrada de tabela de registro de timer em uma operação de fluxo de trabalho, juntamente com informações de retorno de chamada.</param>
+        <param name="bookmark">Um ponto no qual um fluxo de trabalho ou uma atividade pode passivamente esperar para ser retomado após a expiração de um objeto de timer.</param>
+        <summary>Adiciona um objeto de timer que contém o tempo de alcance e indicador as informações na tabela de temporizadores registrados para a operação de fluxo de trabalho atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetInstance">
+      <MemberSignature Language="C#" Value="public virtual void SetInstance (System.Activities.Hosting.WorkflowInstanceProxy instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetInstance(class System.Activities.Hosting.WorkflowInstanceProxy instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.DurableTimerExtension.SetInstance(System.Activities.Hosting.WorkflowInstanceProxy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Activities.Hosting.WorkflowInstanceProxy" />
+      </Parameters>
+      <Docs>
+        <param name="instance">A instância de fluxo de trabalho a ser o atual.</param>
+        <summary>Estabelece a instância de fluxo de trabalho especificado como a instância atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Activities.Statements.DurableTimerExtension> objeto só pode ser associado uma instância de fluxo de trabalho único. Se um <xref:System.Activities.Statements.DurableTimerExtension> objeto é usado com mais de uma instância de fluxo de trabalho, um <xref:System.InvalidOperationException> será lançada com a seguinte mensagem:  
+  
+```Output  
+This TimerExtension has already been attached to a workflow instance.  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

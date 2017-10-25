@@ -1,0 +1,458 @@
+<Type Name="DependencyProperty" FullName="System.Workflow.ComponentModel.DependencyProperty">
+  <TypeSignature Language="C#" Value="public sealed class DependencyProperty : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DependencyProperty extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.DependencyProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Um tipo especial de propriedade que pode ser definido ou anexado a um <see cref="T:System.Workflow.ComponentModel.DependencyObject" />. Há três tipos de propriedades de dependência: propriedades de instância, metapropriedades e propriedades anexadas. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Propriedades de dependência suportam três casos de uso. Primeiro, se uma propriedade de instância de uma atividade é implementada usando uma propriedade de dependência, essa propriedade pode ser atribuída uma <xref:System.Workflow.ComponentModel.ActivityBind> em vez de um valor real. Segunda, propriedades de atividade são metadados (ou seja, o valor não é possível alterar em tempo de execução) deve ser implementado usando propriedades de dependência, especificando o <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> opção. Em terceiro lugar, as propriedades de dependência suportam propriedades anexadas, que são propriedades que são aplicadas dinamicamente aos objetos de dependência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como registrar um <xref:System.Workflow.ComponentModel.DependencyProperty> para uso por um <xref:System.Workflow.ComponentModel.DependencyObject>. Este exemplo de código é parte do exemplo enviar email SDK e do arquivo de SendMailActivity.cs. Para obter mais informações, consulte [enviar email atividade](http://msdn.microsoft.com/en-us/bfb5939e-60a9-4037-af4e-2cea9e654669).  
+  
+ [!code-csharp[WF_Samples#230](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#230)]
+ [!code-vb[WF_Samples#230](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#230)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DefaultMetadata">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.PropertyMetadata DefaultMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.PropertyMetadata DefaultMetadata" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyProperty.DefaultMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.PropertyMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Workflow.ComponentModel.PropertyMetadata" /> que representa os dados definidos pelo usuário para este <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.PropertyMetadata" /> para <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromName">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.DependencyProperty FromName (string propertyName, Type ownerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.ComponentModel.DependencyProperty FromName(string propertyName, class System.Type ownerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyProperty.FromName(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="ownerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O <see cref="P:System.Workflow.ComponentModel.DependencyProperty.Name" /> do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <param name="ownerType">O valor necessário de <see cref="P:System.Workflow.ComponentModel.DependencyProperty.OwnerType" />.</param>
+        <summary>Obtém o registrado <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> com base no <see cref="P:System.Workflow.ComponentModel.DependencyProperty.Name" /> e <see cref="P:System.Workflow.ComponentModel.DependencyProperty.OwnerType" />.</summary>
+        <returns>Registrado <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> com base no <see cref="P:System.Workflow.ComponentModel.DependencyProperty.Name" /> e <see cref="P:System.Workflow.ComponentModel.DependencyProperty.OwnerType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromType">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Workflow.ComponentModel.DependencyProperty&gt; FromType (Type ownerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Workflow.ComponentModel.DependencyProperty&gt; FromType(class System.Type ownerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyProperty.FromType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Workflow.ComponentModel.DependencyProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ownerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="ownerType">O <see cref="T:System.Type" />.</param>
+        <summary>Cria um <see cref="T:System.Collections.IList" /> do tipo <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que pertencem a um determinado <see cref="T:System.Type" />.</summary>
+        <returns>
+          <see cref="T:System.Collections.IList" />do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que pertencem a um determinado <see cref="T:System.Type" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyProperty.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código hash para essa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código hash computado aqui está o `bitwise AND` dos códigos de hash gerados pelo <xref:System.Workflow.ComponentModel.DependencyProperty.Name%2A>, e <xref:System.Workflow.ComponentModel.DependencyProperty.OwnerType%2A> atributos deste <xref:System.Workflow.ComponentModel.DependencyProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAttached">
+      <MemberSignature Language="C#" Value="public bool IsAttached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAttached" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyProperty.IsAttached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a propriedade que indica se este <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> está associado a um <see cref="T:System.Workflow.ComponentModel.DependencyObject" /> por registro.</summary>
+        <value>
+          <see langword="true" />se conectado a um <see cref="T:System.Workflow.ComponentModel.DependencyObject" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado indica se isso <xref:System.Workflow.ComponentModel.DependencyProperty> foi registrado usando o <xref:System.Workflow.ComponentModel.DependencyProperty.Register%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEvent">
+      <MemberSignature Language="C#" Value="public bool IsEvent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEvent" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyProperty.IsEvent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a propriedade que indica se o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> é um evento <see cref="T:System.Delegate" />.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> é um evento <see cref="T:System.Delegate" />; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Workflow.ComponentModel.DependencyProperty.Name" /> do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</summary>
+        <value>O <see cref="P:System.Workflow.ComponentModel.DependencyProperty.Name" /> do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerType">
+      <MemberSignature Language="C#" Value="public Type OwnerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type OwnerType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyProperty.OwnerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</summary>
+        <value>O <see cref="T:System.Type" /> do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public Type PropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyProperty.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> do valor armazenado na <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</summary>
+        <value>O <see cref="T:System.Type" /> do valor armazenado na <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.DependencyProperty Register (string name, Type propertyType, Type ownerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.ComponentModel.DependencyProperty Register(string name, class System.Type propertyType, class System.Type ownerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyProperty.Register(System.String,System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <param name="propertyType">
+          <see cref="T:System.Type" />o valor que a propriedade pode conter.</param>
+        <param name="ownerType">Proprietário <see cref="T:System.Type" /> da propriedade de dependência.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> classe que tem as propriedades parametrizadas de acordo com os parâmetros de entrada.</summary>
+        <returns>O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> classe que tem as propriedades parametrizadas de acordo com os parâmetros de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como registrar um <xref:System.Workflow.ComponentModel.DependencyProperty> para uso por um <xref:System.Workflow.ComponentModel.DependencyObject>. Este exemplo de código é parte do exemplo enviar email SDK e do arquivo de SendMailActivity.cs. Para obter mais informações, consulte [enviar email atividade](http://msdn.microsoft.com/en-us/bfb5939e-60a9-4037-af4e-2cea9e654669).  
+  
+ [!code-csharp[WF_Samples#230](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#230)]
+ [!code-vb[WF_Samples#230](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#230)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.DependencyProperty Register (string name, Type propertyType, Type ownerType, System.Workflow.ComponentModel.PropertyMetadata defaultMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.ComponentModel.DependencyProperty Register(string name, class System.Type propertyType, class System.Type ownerType, class System.Workflow.ComponentModel.PropertyMetadata defaultMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyProperty.Register(System.String,System.Type,System.Type,System.Workflow.ComponentModel.PropertyMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="defaultMetadata" Type="System.Workflow.ComponentModel.PropertyMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <param name="propertyType">
+          <see cref="T:System.Type" />do valor de propriedade pode conter.</param>
+        <param name="ownerType">Proprietário <see cref="T:System.Type" /> da propriedade de dependência.</param>
+        <param name="defaultMetadata">Opções de propriedades adicionais.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> classe que tem as propriedades parametrizadas de acordo com os parâmetros de entrada.</summary>
+        <returns>O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> classe que tem as propriedades parametrizadas de acordo com os parâmetros de entrada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAttached">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.DependencyProperty RegisterAttached (string name, Type propertyType, Type ownerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.ComponentModel.DependencyProperty RegisterAttached(string name, class System.Type propertyType, class System.Type ownerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyProperty.RegisterAttached(System.String,System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <param name="propertyType">
+          <see cref="T:System.Type" />do valor de propriedade pode conter.</param>
+        <param name="ownerType">Proprietário <see cref="T:System.Type" /> da propriedade de dependência.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> classe que tem as propriedades parametrizadas de acordo com os parâmetros de entrada. Esta instância destina-se para declarar propriedades que são usadas em objetos que não sejam os objetos do tipo de propriedade.</summary>
+        <returns>O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> classe que tem as propriedades parametrizadas de acordo com os parâmetros de entrada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAttached">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.DependencyProperty RegisterAttached (string name, Type propertyType, Type ownerType, System.Workflow.ComponentModel.PropertyMetadata defaultMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.ComponentModel.DependencyProperty RegisterAttached(string name, class System.Type propertyType, class System.Type ownerType, class System.Workflow.ComponentModel.PropertyMetadata defaultMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyProperty.RegisterAttached(System.String,System.Type,System.Type,System.Workflow.ComponentModel.PropertyMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="defaultMetadata" Type="System.Workflow.ComponentModel.PropertyMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <param name="propertyType">
+          <see cref="T:System.Type" />do valor de propriedade pode conter.</param>
+        <param name="ownerType">Proprietário <see cref="T:System.Type" /> da propriedade de dependência.</param>
+        <param name="defaultMetadata">Opções de propriedades adicionais.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> classe que tem as propriedades parametrizadas de acordo com os parâmetros de entrada.</summary>
+        <returns>O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> classe que tem as propriedades parametrizadas de acordo com os parâmetros de entrada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAttached">
+      <MemberSignature Language="C#" Value="public static System.Workflow.ComponentModel.DependencyProperty RegisterAttached (string name, Type propertyType, Type ownerType, System.Workflow.ComponentModel.PropertyMetadata defaultMetadata, Type validatorType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Workflow.ComponentModel.DependencyProperty RegisterAttached(string name, class System.Type propertyType, class System.Type ownerType, class System.Workflow.ComponentModel.PropertyMetadata defaultMetadata, class System.Type validatorType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyProperty.RegisterAttached(System.String,System.Type,System.Type,System.Workflow.ComponentModel.PropertyMetadata,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="ownerType" Type="System.Type" />
+        <Parameter Name="defaultMetadata" Type="System.Workflow.ComponentModel.PropertyMetadata" />
+        <Parameter Name="validatorType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</param>
+        <param name="propertyType">
+          <see cref="T:System.Type" />do valor de propriedade pode conter.</param>
+        <param name="ownerType">Proprietário <see cref="T:System.Type" /> da propriedade de dependência.</param>
+        <param name="defaultMetadata">Opções de propriedades adicionais.</param>
+        <param name="validatorType">
+          <see cref="T:System.Type" />objeto que implementa a lógica de validação para a propriedade anexada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> classe que tem as propriedades parametrizadas de acordo com os parâmetros de entrada.</summary>
+        <returns>O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> classe que tem as propriedades parametrizadas de acordo com os parâmetros de entrada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyProperty.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> associado aos dados.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém os dados.</param>
+        <summary>Popula um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados necessários para serializar o objeto de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.DependencyProperty.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o <see cref="T:System.Object" /> método para retornar o <see cref="P:System.Workflow.ComponentModel.DependencyProperty.Name" /> o valor da propriedade.</summary>
+        <returns>O <see cref="P:System.Workflow.ComponentModel.DependencyProperty.Name" /> o valor da propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso representa o nome da propriedade ou evento que está sendo espelhado, o <xref:System.Workflow.ComponentModel.DependencyProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatorType">
+      <MemberSignature Language="C#" Value="public Type ValidatorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ValidatorType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.DependencyProperty.ValidatorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> implementar a lógica de validação específica para o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" />.</summary>
+        <value>O <see cref="T:System.Type" /> implementar a lógica de validação específica para essa instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

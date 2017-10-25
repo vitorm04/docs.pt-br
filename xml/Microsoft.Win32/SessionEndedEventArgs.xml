@@ -1,0 +1,62 @@
+<Type Name="SessionEndedEventArgs" FullName="Microsoft.Win32.SessionEndedEventArgs">
+  <TypeSignature Language="C#" Value="public class SessionEndedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionEndedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.SessionEndedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:Microsoft.Win32.SystemEvents.SessionEnded" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:Microsoft.Win32.SystemEvents.SessionEnded> evento é gerado quando o usuário efetua logoff ou desliga o sistema.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionEndedEventArgs (Microsoft.Win32.SessionEndReasons reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Win32.SessionEndReasons reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SessionEndedEventArgs.#ctor(Microsoft.Win32.SessionEndReasons)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reason" Type="Microsoft.Win32.SessionEndReasons" />
+      </Parameters>
+      <Docs>
+        <param name="reason">Uma da <see cref="T:Microsoft.Win32.SessionEndReasons" /> valores que indica como a sessão foi finalizada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Win32.SessionEndedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SessionEndReasons Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Win32.SessionEndReasons Reason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.SessionEndedEventArgs.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionEndReasons</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador que indica como a sessão foi finalizada.</summary>
+        <value>Uma da <see cref="T:Microsoft.Win32.SessionEndReasons" /> valores que indica como a sessão foi finalizada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

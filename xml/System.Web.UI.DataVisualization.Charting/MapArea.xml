@@ -1,0 +1,570 @@
+<Type Name="MapArea" FullName="System.Web.UI.DataVisualization.Charting.MapArea">
+  <TypeSignature Language="C#" Value="public class MapArea : System.Web.UI.DataVisualization.Charting.ChartNamedElement, System.Web.UI.DataVisualization.Charting.IChartMapArea" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MapArea extends System.Web.UI.DataVisualization.Charting.ChartNamedElement implements class System.Web.UI.DataVisualization.Charting.IChartMapArea" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.MapArea" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartNamedElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.DataVisualization.Charting.IChartMapArea</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("ToolTip")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma área do mapa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.MapArea> classe representa uma área do mapa de um mapa de imagem do lado do cliente e corresponde a uma marca HTML \<área > marca.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.MapArea> são armazenados no <xref:System.Web.UI.DataVisualization.Charting.MapAreasCollection> classe.  
+  
+ Há dois tipos de <xref:System.Web.UI.DataVisualization.Charting.MapArea> objetos:  
+  
+-   Mapear áreas que são criadas automaticamente quando um elemento de gráfico — por exemplo, um ponto de dados, série, objeto de linha de item ou a faixa de legenda — tem não vazio `ToolTip`, `Url` ou `MapAreaAttributes` propriedade; Observe que os outros elementos HTML que são necessários para um mapa de imagem do lado do cliente também são criados. Nesse caso, as dimensões e o local de uma área do mapa são determinados automaticamente para o elemento de gráfico. Use o <xref:System.Web.UI.DataVisualization.Charting.Chart.CustomizeMapAreas> evento da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto excluir ou modificar essas áreas do mapa em tempo de execução.  
+  
+-   Áreas de mapa personalizado que tenham uma forma definida pelo usuário e as coordenadas. Use o <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto para adicionar essas áreas de mapa personalizado em tempo de design ou tempo de execução.  
+  
+ A definição dessa propriedade não terá efeito se a <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> está definida como `false`. O valor padrão é `true`.  
+  
+ **Importante** para criar um mapa de imagem usando o descrito anteriormente <xref:System.Web.UI.DataVisualization.Charting.MapArea> objetos, o <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto deve ser definido como <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. É possível criar um mapa de imagem ao usar fluxo binário, mas outra técnica deve ser usada.  
+  
+ Para personalizar <xref:System.Web.UI.DataVisualization.Charting.MapArea> objetos, o <xref:System.Web.UI.DataVisualization.Charting.MapArea.Shape%2A> propriedade determina a forma e o <xref:System.Web.UI.DataVisualization.Charting.MapArea.Coordinates%2A> propriedade determina o local da área do mapa.  
+  
+ Dicas de ferramenta, hiperlinks ou atributos, como destino = blank ou OnClick="javascript:MyJavaScriptFunction()", pode ser definida para todas as áreas de mapa.  
+  
+ Use o <xref:System.Web.UI.DataVisualization.Charting.MapArea.IsCustom%2A> propriedade para determinar se uma área do mapa é um personalizado <xref:System.Web.UI.DataVisualization.Charting.MapArea> objeto; isto é, se ele tem a forma definida pelo usuário e as coordenadas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MapArea ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.MapArea.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser usado para criar e inicializar uma nova instância do <xref:System.Web.UI.DataVisualization.Charting.MapArea> classe.  
+  
+ No entanto, uma maneira fácil de criar um personalizado <xref:System.Web.UI.DataVisualization.Charting.MapArea> objeto é usar um dos sobrecarregados `Add` ou `Insert` métodos do <xref:System.Web.UI.DataVisualization.Charting.MapAreasCollection> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MapArea (string url, System.Drawing.Drawing2D.GraphicsPath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string url, class System.Drawing.Drawing2D.GraphicsPath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.MapArea.#ctor(System.String,System.Drawing.Drawing2D.GraphicsPath)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="path" Type="System.Drawing.Drawing2D.GraphicsPath" />
+      </Parameters>
+      <Docs>
+        <param name="url">O URL ou âncora de ponto de destino da área do mapa.</param>
+        <param name="path">Um <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> objeto que define a forma da área do mapa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" /> classe com a URL especificada e <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MapArea (string url, System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string url, valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.MapArea.#ctor(System.String,System.Drawing.RectangleF)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="url">O URL ou âncora de ponto de destino da área do mapa.</param>
+        <param name="rect">Um <see cref="T:System.Drawing.RectangleF" /> estrutura que define a forma da área do mapa retangular.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" /> classe com a URL especificada e <see cref="T:System.Drawing.RectangleF" /> estrutura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MapArea (System.Web.UI.DataVisualization.Charting.MapAreaShape shape, string url, float[] coordinates);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.DataVisualization.Charting.MapAreaShape shape, string url, float32[] coordinates) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.MapArea.#ctor(System.Web.UI.DataVisualization.Charting.MapAreaShape,System.String,System.Single[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="shape" Type="System.Web.UI.DataVisualization.Charting.MapAreaShape" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="coordinates" Type="System.Single[]" />
+      </Parameters>
+      <Docs>
+        <param name="shape">A forma da área do mapa.</param>
+        <param name="url">O URL ou âncora de ponto de destino da área do mapa.</param>
+        <param name="coordinates">Uma matriz de coordenadas que determinam o local do círculo, retângulo ou polígono. O tipo de forma que está sendo usada determina o tipo de coordenadas necessárias.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" /> classe com a forma especificada, a URL e as coordenadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MapArea (string toolTip, string url, string attributes, string postBackValue, System.Drawing.Drawing2D.GraphicsPath path, object tag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string toolTip, string url, string attributes, string postBackValue, class System.Drawing.Drawing2D.GraphicsPath path, object tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.MapArea.#ctor(System.String,System.String,System.String,System.String,System.Drawing.Drawing2D.GraphicsPath,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toolTip" Type="System.String" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="attributes" Type="System.String" />
+        <Parameter Name="postBackValue" Type="System.String" />
+        <Parameter Name="path" Type="System.Drawing.Drawing2D.GraphicsPath" />
+        <Parameter Name="tag" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="toolTip">A dica de ferramenta para a área do mapa.</param>
+        <param name="url">O URL ou âncora de ponto de destino da área do mapa.</param>
+        <param name="attributes">Os atributos para a área do mapa.</param>
+        <param name="postBackValue">O valor de postback que pode ser processado em um <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> eventos.</param>
+        <param name="path">As coordenadas da área de uma área do mapa como caminho de gráfico.</param>
+        <param name="tag">A marca para indicar se a área do mapa é personalizada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" /> classe com o texto de dica de ferramenta especificado, URL, atributos, valor de postback, caminho e marca.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MapArea (string toolTip, string url, string attributes, string postBackValue, System.Drawing.RectangleF rect, object tag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string toolTip, string url, string attributes, string postBackValue, valuetype System.Drawing.RectangleF rect, object tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.MapArea.#ctor(System.String,System.String,System.String,System.String,System.Drawing.RectangleF,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toolTip" Type="System.String" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="attributes" Type="System.String" />
+        <Parameter Name="postBackValue" Type="System.String" />
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="tag" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="toolTip">A dica de ferramenta para a área do mapa.</param>
+        <param name="url">O URL ou âncora de ponto de destino da área do mapa.</param>
+        <param name="attributes">Os atributos para a área do mapa.</param>
+        <param name="postBackValue">O valor de postback que pode ser processado em um <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> eventos.</param>
+        <param name="rect">As coordenadas de um <see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" /> objeto.</param>
+        <param name="tag">A marca para indicar se a área do mapa é personalizada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" /> classe com o texto de dica de ferramenta especificado, URL, atributos, valor de postback, coordenadas de retângulo e marca.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MapArea (System.Web.UI.DataVisualization.Charting.MapAreaShape shape, string toolTip, string url, string attributes, string postBackValue, float[] coordinates, object tag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.DataVisualization.Charting.MapAreaShape shape, string toolTip, string url, string attributes, string postBackValue, float32[] coordinates, object tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.MapArea.#ctor(System.Web.UI.DataVisualization.Charting.MapAreaShape,System.String,System.String,System.String,System.String,System.Single[],System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="shape" Type="System.Web.UI.DataVisualization.Charting.MapAreaShape" />
+        <Parameter Name="toolTip" Type="System.String" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="attributes" Type="System.String" />
+        <Parameter Name="postBackValue" Type="System.String" />
+        <Parameter Name="coordinates" Type="System.Single[]" />
+        <Parameter Name="tag" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="shape">A forma da área do mapa.</param>
+        <param name="toolTip">A dica de ferramenta para a área do mapa.</param>
+        <param name="url">O URL ou âncora de ponto de destino da área do mapa.</param>
+        <param name="attributes">Os atributos para a área do mapa.</param>
+        <param name="postBackValue">O valor de postback que pode ser processado em um <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> eventos.</param>
+        <param name="coordinates">Uma matriz de coordenadas que determinam o local do círculo, retângulo ou polígono. O tipo de forma que está sendo usada determina o tipo de coordenadas necessárias.</param>
+        <param name="tag">A marca para indicar se a área do mapa é personalizada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" /> classe com forma especificada, o texto de dica de ferramenta, URL, atributos, valor de postback, coordenadas e marca.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Coordinates">
+      <MemberSignature Language="C#" Value="public float[] Coordinates { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32[] Coordinates" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.MapArea.Coordinates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.MapAreaCoordinatesConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as coordenadas de um <see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" /> objeto.</summary>
+        <value>Uma matriz de coordenadas que depende da forma da área do mapa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.MapArea.Coordinates%2A> propriedade normalmente é usada para definir as coordenadas de um objeto da área de mapa personalizado que tem uma forma definida pelo usuário e as coordenadas.  
+  
+ As coordenadas que devem ser especificadas para uma área de mapa personalizado dependem a forma da área do mapa:  
+  
+-   Círculo. Três coordenadas devem ser fornecidas: "x1, y1, r", onde "x1, y2" são as coordenadas do centro do círculo, e "r" é o raio do círculo.  
+  
+-   Retângulo. Quatro coordenadas devem ser fornecidas: "x1, y1, x2, y2", onde "x1, y1" são as coordenadas do canto superior esquerdo do retângulo e "x2, y2" são as coordenadas do canto inferior direito do retângulo.  
+  
+-   Polígono. Dois ou mais x e y devem ser fornecidos pares "x1, y1, x2, y2... xn, yn", onde cada par "x, y" contém as coordenadas de um vértice do polígono.  
+  
+ Quando a definição de coordenadas, use o sistema de coordenadas relativo do gráfico, onde o canto superior esquerdo da imagem do gráfico é "0,0" e o canto inferior direito da imagem é "100,100".  
+  
+ Depois que a forma e as coordenadas são definidas para a área do mapa, o <xref:System.Web.UI.DataVisualization.Charting.MapArea.ToolTip%2A>, <xref:System.Web.UI.DataVisualization.Charting.MapArea.Url%2A> e/ou <xref:System.Web.UI.DataVisualization.Charting.MapArea.MapAreaAttributes%2A> propriedades podem ser usadas para especificar uma interação de usuário específico.  
+  
+ Observe o seguinte:  
+  
+-   Um mapa de imagem do lado do cliente só será criado em tempo de execução se o <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> propriedade da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto `true`, que é o padrão.  
+  
+-   Para criar um mapa de imagem adicionando um <xref:System.Web.UI.DataVisualization.Charting.MapArea> objeto à coleção de áreas de mapa, o <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto deve ser definido como <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. É possível criar um mapa de imagem ao usar fluxo binário, mas uma técnica especial deve ser usada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCustom">
+      <MemberSignature Language="C#" Value="public bool IsCustom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCustom" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.MapArea.IsCustom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a área do mapa é personalizada.</summary>
+        <value>
+          <see langword="true" />Se a área do mapa é personalizada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapAreaAttributes">
+      <MemberSignature Language="C#" Value="public string MapAreaAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MapAreaAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.MapArea.MapAreaAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os atributos da área do mapa.</summary>
+        <value>Um valor <see langword="string" /> que representa os atributos da área do mapa que corresponde a um elemento do gráfico específico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir essa propriedade, um mapa de imagem do lado do cliente será criado automaticamente e uma área do mapa será criada com a cadeia de caracteres do atributo anexado ao \<mapa > marca que corresponde à <xref:System.Web.UI.DataVisualization.Charting.Chart> que essa propriedade está sendo definida para o objeto. Por exemplo, definindo o atributo de destino usando essa propriedade e definindo o `Url` propriedade do primeiro ponto de dados resultará no código HTML que é semelhante à seguinte:  
+  
+ \<img id = "Chart1" USEMAP = "#Chart1ImageMap" src = "ChartPic_000002.jpg? 6735e83b-f0cd-4225-8be4-047695a61040" border = "0" / >... \<Mapa NAME = "Chart1ImageMap" >\<forma da área = "rect" HREF = "http://www.SomeDomain.ca" COORDS = "69,120,106,309" Target\=blank > \< /MAPEAR >  
+  
+ Porque a cadeia de caracteres inteira será acrescentada ao \<mapa > marca, vários atributos devem ser separados por um espaço.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.MapArea.MapAreaAttributes%2A> propriedade pode ser usada em conjunto com o <xref:System.Web.UI.DataVisualization.Charting.MapArea.Url%2A> propriedade para especificar atributos de área de mapa como destino = blank, bem como manipuladores de eventos do lado do cliente, como OnClick="MyEvent()".  
+  
+ A definição dessa propriedade não terá efeito se a <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> está definida como `false`. O valor padrão é `true`.  
+  
+ **Importante** para criar um mapa de imagem dessa maneira, o <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto deve ser definido como <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. É possível criar um mapa de imagem ao usar fluxo binário, mas outra técnica deve ser usada.  
+  
+ Palavras-chave podem ser usadas quando você definir essa propriedade. Cada palavra-chave será substituída com algum tipo de dados do elemento gráfico aplicável. Consulte a tabela a seguir para obter uma lista de todas as palavras-chave disponíveis:  
+  
+|Palavra-chave|Substituído por|  
+|-------------|-----------------|  
+|#VALX|Valor X do ponto de dados.|  
+|#VAL, #VALY, VALY2 DE #, #VALY3...|Valores de Y do ponto de dados.|  
+|#SER|Nome da série.|  
+|#LABEL|Rótulo de ponto de dados.|  
+|#INDEX|Índice de ponto de dados.|  
+|#PERCENT|Porcentagem do valor de Y dados ponto.|  
+|#TOTAL|Total de todos os valores Y na série.|  
+|#LEGENDTEXT|Texto da legenda.|  
+  
+ Para criar mapas de imagem que têm coordenadas definidas pelo usuário, use o <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> propriedade da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.MapArea.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("Map Area")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da área do mapa.</summary>
+        <value>Um <see langword="string" /> valor que representa o nome da área do mapa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostBackValue">
+      <MemberSignature Language="C#" Value="public string PostBackValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PostBackValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.MapArea.PostBackValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de postback que pode ser processado em um <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> eventos.</summary>
+        <value>Um <see langword="string" /> valor que representa o valor de postback passado para <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shape">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.MapAreaShape Shape { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.MapAreaShape Shape" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.MapArea.Shape" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.DataVisualization.Charting.MapAreaShape), "Rectangle")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.MapAreaShape</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a forma de um <see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" /> objeto.</summary>
+        <value>Um <see cref="T:System.Web.UI.DataVisualization.Charting.MapAreaShape" /> valor de enumeração que determina a forma de um objeto da área de mapa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade normalmente é usada para definir a forma de um objeto de área de mapa personalizado, que tem uma forma definida pelo usuário e as coordenadas.  
+  
+ A forma da área do mapa personalizado determina o tipo de coordenadas que deve ser especificado e formas disponíveis são círculos, retângulos e polígonos.  
+  
+ Ao recuperar as formas de <xref:System.Web.UI.DataVisualization.Charting.MapArea> objetos que são armazenados no <xref:System.Web.UI.DataVisualization.Charting.MapAreasCollection>, qualquer forma que não é um retângulo ou um círculo será considerada um polígono. Por exemplo, uma área de mapa personalizado pode ser adicionada para a coleção de áreas de mapa usando um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto como um parâmetro, o que permite que qualquer tipo de formato a ser usado. Se o <xref:System.Web.UI.DataVisualization.Charting.MapArea.Shape%2A> nesse determinada propriedade <xref:System.Web.UI.DataVisualization.Charting.MapArea> objeto é recuperado, ele retornará um <xref:System.Web.UI.DataVisualization.Charting.MapAreaShape.Polygon>.  
+  
+ Depois que a forma e as coordenadas da área do mapa são definidas, o <xref:System.Web.UI.DataVisualization.Charting.MapArea.ToolTip%2A>, <xref:System.Web.UI.DataVisualization.Charting.MapArea.Url%2A> e/ou <xref:System.Web.UI.DataVisualization.Charting.MapArea.MapAreaAttributes%2A> propriedades podem ser usadas para especificar uma interação de usuário específico.  
+  
+ Observe o seguinte:  
+  
+-   Um mapa de imagem do lado do cliente só será criado em tempo de execução se a propriedade IsMapEnabled do objeto de gráfico raiz for true, o que é o padrão.  
+  
+-   Para criar uma imagem do mapa, adicionando um maparea à coleção de áreas de mapa a propriedade RenderType do objeto de gráfico deve ser RenderType.ImageTag. É possível criar um mapa de imagem ao usar fluxo binário, mas uma técnica especial deve ser usada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.MapArea.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a dica de ferramenta para a área do mapa.</summary>
+        <value>Um <see langword="string" /> valor que representa a dica de ferramenta do elemento do gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade automaticamente resulta em um mapa de imagem do lado do cliente que está sendo criado e uma área do mapa será criada com o atributo Title para a cadeia de caracteres especificada de dica de ferramenta. A área do mapa usará as dimensões que correspondem ao elemento gráfico relevantes. Por exemplo, se o <xref:System.Web.UI.DataVisualization.Charting.MapArea.ToolTip%2A> propriedade está definida para um ponto de dados e, em seguida, HTML código semelhante ao seguinte código será gerado em tempo de execução:  
+  
+ \<NOME do mapa = "Chart1ImageMap" >\<forma da área = "rect" Title = "primeiro valor de dados = 19" COORDS = "69,120,106,309" > \< /MAPEAR >  
+  
+ A definição dessa propriedade não terá efeito se a <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> está definida como `false`. O valor padrão é `true`.  
+  
+ **Importante** para criar um mapa de imagem dessa maneira, o <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto deve ser definido como <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. É possível criar um mapa de imagem ao usar fluxo binário, mas outra técnica deve ser usada.  
+  
+ Essa propriedade permite que você defina as palavras-chave especiais para exibir diferentes tipos de dados relacionados ao gráfico.  
+  
+ Para criar mapas de imagem que têm coordenadas definidas pelo usuário, use o <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> propriedade da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.MapArea.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.UrlValueEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ponto de ancoragem ou de URL de destino da área do mapa.</summary>
+        <value>Um <see langword="string" /> valor que representa o ponto de ancoragem ou de URL de destino da área do mapa. Para usar uma URL absoluta, inicie a expressão de cadeia de caracteres com "http://" ou "www". Se a cadeia de caracteres não começa com um destes prefixos, ele será tratado como uma URL relativa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define essa propriedade, um mapa de imagem do lado do cliente será criado automaticamente, e uma área do mapa será criada com o atributo HREF definido como a âncora especificado ou a URL. Essa área do mapa usará também as dimensões que correspondem ao elemento gráfico relevantes. Por exemplo, se a propriedade HREF é definida para um ponto de dados, código HTML semelhante à seguinte será gerado em tempo de execução:  
+  
+ &lt;img id = "Chart1" USEMAP = "#Chart1ImageMap" src = "ChartPic_000002.jpg? 6735e83b-f0cd-4225-8be4-047695a61040" border = "0" /&gt;\<BR >... \<BR >&lt;mapa NAME = "Chart1ImageMap"&gt;\<BR >&lt;forma da área = "rect" HREF = "http://www.healthquotes.ca" COORDS = "69,120,106,309"&gt;\<BR > &lt; /MAPEAR&gt;  
+  
+ A definição dessa propriedade não terá efeito se a <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> está definida como `false`. O valor padrão é `true`.  
+  
+ **Importante** para criar um mapa de imagem dessa maneira, o <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto deve ser definido como <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. É possível criar um mapa de imagem ao usar fluxo binário, mas outra técnica deve ser usada.  
+  
+ Atributos de area(s) o mapa, como destino = em branco, podem ser especificados usando o <xref:System.Web.UI.DataVisualization.Charting.MapArea.MapAreaAttributes%2A> propriedade.  
+  
+ Essa propriedade permite que você defina as palavras-chave especiais para exibir diferentes tipos de dados relacionados ao gráfico.  
+  
+ Para criar mapas de imagem que têm coordenadas definidas pelo usuário, use o <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> propriedade da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

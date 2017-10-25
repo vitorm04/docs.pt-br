@@ -1,0 +1,116 @@
+<Type Name="RuntimeDelegateArgument" FullName="System.Activities.RuntimeDelegateArgument">
+  <TypeSignature Language="C#" Value="public sealed class RuntimeDelegateArgument" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RuntimeDelegateArgument extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.RuntimeDelegateArgument" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve as características de um <see cref="T:System.Activities.DelegateArgument" /> no tempo de execução.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuntimeDelegateArgument (string name, Type type, System.Activities.ArgumentDirection direction, System.Activities.DelegateArgument boundArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type type, valuetype System.Activities.ArgumentDirection direction, class System.Activities.DelegateArgument boundArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.RuntimeDelegateArgument.#ctor(System.String,System.Type,System.Activities.ArgumentDirection,System.Activities.DelegateArgument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="direction" Type="System.Activities.ArgumentDirection" />
+        <Parameter Name="boundArgument" Type="System.Activities.DelegateArgument" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Activities.RuntimeDelegateArgument" />.</param>
+        <param name="type">O tipo de dados do <see cref="T:System.Activities.RuntimeDelegateArgument" />.</param>
+        <param name="direction">Um dos valores de enumeração que especifica a direção do fluxo de dados por meio de um argumento.</param>
+        <param name="boundArgument">O argumento de representante que é representado por esse <see cref="T:System.Activities.RuntimeDelegateArgument" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.RuntimeDelegateArgument" /> classe usando o nome especificado, o tipo de dados, a direção do argumento, e <see cref="T:System.Activities.DelegateArgument" />.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoundArgument">
+      <MemberSignature Language="C#" Value="public System.Activities.DelegateArgument BoundArgument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.DelegateArgument BoundArgument" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.RuntimeDelegateArgument.BoundArgument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DelegateArgument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Activities.DelegateArgument" /> que é representado por esse <see cref="T:System.Activities.RuntimeDelegateArgument" />.</summary>
+        <value>O argumento associado representado por esse <see cref="T:System.Activities.RuntimeDelegateArgument" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.Activities.ArgumentDirection Direction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.ArgumentDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.RuntimeDelegateArgument.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.ArgumentDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a direção do fluxo de dados por meio de <see cref="T:System.Activities.RuntimeDelegateArgument" />.</summary>
+        <value>Um dos valores de enumeração que especifica a direção do fluxo de dados por meio de um argumento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.RuntimeDelegateArgument.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do <see cref="T:System.Activities.RuntimeDelegateArgument" />.</summary>
+        <value>O nome do <see cref="T:System.Activities.RuntimeDelegateArgument" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.RuntimeDelegateArgument.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de dados de <see cref="T:System.Activities.RuntimeDelegateArgument" />.</summary>
+        <value>O tipo de dados do <see cref="T:System.Activities.RuntimeDelegateArgument" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

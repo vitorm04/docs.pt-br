@@ -1,0 +1,80 @@
+<Type Name="DiscoveryMessageSequenceGenerator" FullName="System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator">
+  <TypeSignature Language="C#" Value="public class DiscoveryMessageSequenceGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DiscoveryMessageSequenceGenerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe auxiliar que cria <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" /> instâncias.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de criado, o <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator> cria novos <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence> instâncias, conjuntos de <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence.InstanceId%2A>, <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence.SequenceId%2A> e incrementa o <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence.MessageNumber%2A> para cada sucessivas <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence> instância criada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscoveryMessageSequenceGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscoveryMessageSequenceGenerator (long instanceId, Uri sequenceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 instanceId, class System.Uri sequenceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator.#ctor(System.Int64,System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Int64" />
+        <Parameter Name="sequenceId" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">ID da instância.</param>
+        <param name="sequenceId">A ID de sequência.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator" /> de classe com o ID de instância e ID de sequência.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.DiscoveryMessageSequence Next ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Discovery.DiscoveryMessageSequence Next() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator.Next" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.DiscoveryMessageSequence</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria o próximo <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" /> objeto.</summary>
+        <returns>O próximo <see cref="T:System.ServiceModel.Discovery.DiscoveryMessageSequence" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

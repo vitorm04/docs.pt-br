@@ -1,0 +1,158 @@
+<Type Name="DragEventArgs" FullName="System.Windows.DragEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class DragEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DragEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DragEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém argumentos relevantes para todos os eventos do tipo "arrastar e soltar" (<see cref="E:System.Windows.DragDrop.DragEnter" />, <see cref="E:System.Windows.DragDrop.DragLeave" />, <see cref="E:System.Windows.DragDrop.DragOver" /> e <see cref="E:System.Windows.DragDrop.Drop" />).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowedEffects">
+      <MemberSignature Language="C#" Value="public System.Windows.DragDropEffects AllowedEffects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.DragDropEffects AllowedEffects" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DragEventArgs.AllowedEffects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um membro do <see cref="T:System.Windows.DragDropEffects" /> enumeração que especifica as operações permitidas pela origem do evento de arrastar.</summary>
+        <value>Membro de <see cref="T:System.Windows.DragDropEffects" /> enumeração que especifica as operações permitidas pela origem do evento de arrastar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma operação de arrastar e soltar é iniciada chamando o <xref:System.Windows.DragDrop.DoDragDrop%2A> método, operações permitidas são especificadas com um membro do <xref:System.Windows.DragDropEffects> enumeração. Por exemplo, ao arrastar um arquivo somente leitura o iniciador de arrastar deve indicar que o arquivo pode ser copiado, mas não foi movido.  Antes de tentar executar uma operação em dados arrastados, examine esta propriedade para garantir que a operação é permitida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public System.Windows.IDataObject Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IDataObject Data" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DragEventArgs.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IDataObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto de dados que contém os dados associados ao evento de arrastar correspondente.</summary>
+        <value>Um objeto de dados que contém os dados associados ao evento de arrastar correspondente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Effects">
+      <MemberSignature Language="C#" Value="public System.Windows.DragDropEffects Effects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.DragDropEffects Effects" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DragEventArgs.Effects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a operação do tipo "arrastar e soltar".</summary>
+        <value>Um membro da enumeração <see cref="T:System.Windows.DragDropEffects" /> que especifica a operação do tipo “arrastar e soltar” de destino.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o efeito especificado nesta propriedade determina o cursor do mouse para o destino de uma operação de arrastar e soltar. Isso é útil para fornecer comentários ao usuário sobre a operação que ocorrerá quando o objeto correspondente é removido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPosition">
+      <MemberSignature Language="C#" Value="public System.Windows.Point GetPosition (System.Windows.IInputElement relativeTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Point GetPosition(class System.Windows.IInputElement relativeTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragEventArgs.GetPosition(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relativeTo" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="relativeTo">Um objeto <see cref="T:System.Windows.IInputElement" /> para o qual obter um ponto de soltura relativo.</param>
+        <summary>Retorna um ponto de soltura relativo a um <see cref="T:System.Windows.IInputElement" /> especificado.</summary>
+        <returns>Um ponto de soltura relativo ao elemento especificado em <paramref name="relativeTo" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Acionado quando <paramref name="relativeTo" /> é **null**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DragEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="genericTarget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyStates">
+      <MemberSignature Language="C#" Value="public System.Windows.DragDropKeyStates KeyStates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.DragDropKeyStates KeyStates" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DragEventArgs.KeyStates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropKeyStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma enumeração de sinalizador que indica o estado atual das teclas SHIFT, CTRL e teclas ALT, bem como o estado dos botões do mouse.</summary>
+        <value>Um ou mais membros a <see cref="T:System.Windows.DragDropKeyStates" /> enumeração de sinalizador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O efeito de uma operação de arrastar e soltar pode ser ajustado dependendo do estado de uma determinada chave. Por exemplo, dados podem ser copiados ou movidos dependendo se forem pressionadas as teclas CTRL ou SHIFT durante a operação de arrastar e soltar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

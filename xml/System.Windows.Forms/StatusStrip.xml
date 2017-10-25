@@ -1,0 +1,723 @@
+<Type Name="StatusStrip" FullName="System.Windows.Forms.StatusStrip">
+  <TypeSignature Language="C#" Value="public class StatusStrip : System.Windows.Forms.ToolStrip" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StatusStrip extends System.Windows.Forms.ToolStrip" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.StatusStrip" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStrip</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um controle de barra de status do Windows.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.StatusStrip>substitui o <xref:System.Windows.Forms.StatusBar> controle. Recursos especiais de <xref:System.Windows.Forms.StatusStrip> incluem um layout de tabela personalizados, o suporte para o formulário do dimensionamento e familiarizar-se de mover e suporte para o <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> propriedade, que permite um <xref:System.Windows.Forms.ToolStripStatusLabel> para preencher o espaço disponível automaticamente.  
+  
+ Os itens a seguir foram especificamente projetados para funcionar perfeitamente com ambos <xref:System.Windows.Forms.ToolStripSystemRenderer> e <xref:System.Windows.Forms.ToolStripProfessionalRenderer> em todas as orientações. Eles estão disponíveis por padrão em tempo de design para o <xref:System.Windows.Forms.StatusStrip> controle:  
+  
+-   <xref:System.Windows.Forms.ToolStripStatusLabel>  
+  
+-   <xref:System.Windows.Forms.ToolStripDropDownButton>  
+  
+-   <xref:System.Windows.Forms.ToolStripSplitButton>  
+  
+-   <xref:System.Windows.Forms.ToolStripProgressBar>  
+  
+ Um <xref:System.Windows.Forms.StatusStrip> controle exibe informações sobre um objeto que está sendo visualizado em um <xref:System.Windows.Forms.Form>, componentes do objeto ou as informações contextuais relacionadas à operação do objeto dentro de seu aplicativo. Normalmente, um <xref:System.Windows.Forms.StatusStrip> consiste em controle <xref:System.Windows.Forms.ToolStripStatusLabel> objetos, cada um deles exibe o texto, um ícone ou ambos. O <xref:System.Windows.Forms.StatusStrip> também podem conter <xref:System.Windows.Forms.ToolStripDropDownButton>, <xref:System.Windows.Forms.ToolStripSplitButton>, e <xref:System.Windows.Forms.ToolStripProgressBar> controles.  
+  
+ O padrão <xref:System.Windows.Forms.StatusStrip> não tem nenhum painéis. Para adicionar painéis de um <xref:System.Windows.Forms.StatusStrip>, use o <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A?displayProperty=nameWithType> método ou use o [StatusStrip Editor de coleção de itens](http://msdn.microsoft.com/en-us/7c56677b-d5eb-4eca-949c-a22c4e3833a1) em tempo de design para adicionar, remover, ou reordenar os itens e modificar as propriedades. Use o [caixa de diálogo de tarefas StatusStrip](http://msdn.microsoft.com/en-us/c150678b-4873-4743-b23f-84fb3126582c) em tempo de design para executar comandos comuns.  
+  
+ Embora o <xref:System.Windows.Forms.StatusStrip> substitua e estenda o controle <xref:System.Windows.Forms.StatusBar> de versões anteriores, <xref:System.Windows.Forms.StatusBar> é mantido para compatibilidade com versões anteriores e uso futuro, se desejado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um <xref:System.Windows.Forms.StatusStrip> com várias propriedades comuns definido.  
+  
+ [!code-csharp[System.Windows.Forms.StatusStrip.CommonProps#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.StatusStrip.CommonProps#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StatusStrip ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusStrip.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.StatusStrip" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanOverflow">
+      <MemberSignature Language="C#" Value="public bool CanOverflow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanOverflow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.CanOverflow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.StatusStrip" /> dá suporte à funcionalidade de estouro.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Forms.StatusStrip" /> dá suporte à funcionalidade de estouro; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusStrip.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto de acessibilidade para o controle.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Forms.AccessibleObject" /> para o controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não chamar explicitamente o <xref:System.Windows.Forms.StatusStrip.CreateAccessibilityInstance%2A> método, ele será chamado quando o <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType> propriedade é referenciada.  
+  
+> [!NOTE]
+>  Para obter ou definir o <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType> propriedade, você deve adicionar uma referência para o `Accessibility` assembly instalado com o .NET Framework.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código demonstra como usar <xref:System.Windows.Forms.StatusStrip.CreateAccessibilityInstance%2A>, consulte <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDefaultItem">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ToolStripItem CreateDefaultItem (string text, System.Drawing.Image image, EventHandler onClick);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Windows.Forms.ToolStripItem CreateDefaultItem(string text, class System.Drawing.Image image, class System.EventHandler onClick) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusStrip.CreateDefaultItem(System.String,System.Drawing.Image,System.EventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="onClick" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser usado para o <see cref="T:System.Windows.Forms.ToolStripStatusLabel" />. Se o <c>texto</c> parâmetro é um hífen (-), esse método cria um <see cref="T:System.Windows.Forms.ToolStripSeparator" />.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> para exibir o <see cref="T:System.Windows.Forms.ToolStripStatusLabel" />.</param>
+        <param name="onClick">Um manipulador de eventos que gera a <see cref="E:System.Windows.Forms.Control.Click" /> eventos quando o <see cref="T:System.Windows.Forms.ToolStripStatusLabel" /> é clicado.</param>
+        <summary>Cria um padrão <see cref="T:System.Windows.Forms.ToolStripStatusLabel" /> com o manipulador de eventos, a imagem e texto especificado em um novo <see cref="T:System.Windows.Forms.StatusStrip" /> instância.</summary>
+        <returns>Um <see cref="M:System.Windows.Forms.ToolStripStatusLabel.#ctor(System.String,System.Drawing.Image,System.EventHandler)" />, ou um <see cref="T:System.Windows.Forms.ToolStripSeparator" /> se o <paramref name="text" /> parâmetro é um hífen (-).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.StatusStrip.CreateDefaultItem%2A> método para adicionar um <xref:System.Windows.Forms.ToolStripStatusLabel> com comumente usado características para um <xref:System.Windows.Forms.StatusStrip>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDock">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.DockStyle DefaultDock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DockStyle DefaultDock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.DefaultDock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as bordas do <see cref="T:System.Windows.Forms.StatusStrip" /> são encaixados para o <see cref="T:System.Windows.Forms.ToolStripContainer" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.DockStyle" />. O padrão é <see cref="F:System.Windows.Forms.DockStyle.Bottom" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPadding">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Padding DefaultPadding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding DefaultPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.DefaultPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o espaçamento, em pixels, entre a esquerda, direita, superior e bordas inferior do <see cref="T:System.Windows.Forms.StatusStrip" /> das bordas do formulário.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Padding" /> que representa o espaçamento. O padrão é <c>{esquerda = 6, Top = 2, direito = 0, inferior = 2}</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.StatusStrip.DefaultPadding%2A> propriedade para definir o espaçamento interior entre controles. Quando um controle é um contêiner de itens, o preenchimento representa o espaço da borda do contêiner.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultShowItemToolTips">
+      <MemberSignature Language="C#" Value="protected override bool DefaultShowItemToolTips { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DefaultShowItemToolTips" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.DefaultShowItemToolTips" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as dicas de ferramenta serão mostradas para o <see cref="T:System.Windows.Forms.StatusStrip" /> por padrão.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho, em pixels, do <see cref="T:System.Windows.Forms.StatusStrip" /> quando ele é criado.</summary>
+        <value>Um <see cref="M:System.Drawing.Point.#ctor(System.Drawing.Size)" /> construtor que representa o tamanho do <see cref="T:System.Windows.Forms.StatusStrip" />, em pixels.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusStrip.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.StatusStrip" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro for true, este método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Windows.Forms.StatusStrip> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Dock">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DockStyle Dock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DockStyle Dock" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.Dock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DockStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define quais bordas de <see cref="T:System.Windows.Forms.StatusStrip" /> são encaixadas em seu controle pai e determina como uma <see cref="T:System.Windows.Forms.StatusStrip" /> é redimensionada com seu pai.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.DockStyle" />. O padrão é <see cref="F:System.Windows.Forms.DockStyle.Bottom" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.StatusStrip.Dock%2A> propriedade para definir como um <xref:System.Windows.Forms.StatusStrip> é redimensionado automaticamente porque seu controle pai é redimensionado. Por exemplo, definindo <xref:System.Windows.Forms.StatusStrip.Dock%2A> para <xref:System.Windows.Forms.DockStyle.Left> faz com que o <xref:System.Windows.Forms.StatusStrip> para alinhar-se com as bordas esquerdas do controle pai e são redimensionados à medida que o controle pai for redimensionado. Controles são encaixados em sua ordem Z, que é a camada visual de controles em um formulário ao longo eixo z do formulário (profundidade).  
+  
+ Um controle pode ser ancorado a uma borda de seu contêiner pai, ou pode ser encaixado para todas as bordas e preencher o contêiner pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um <xref:System.Windows.Forms.StatusStrip> com várias propriedades comuns definidas, inclusive o <xref:System.Windows.Forms.StatusStrip.Dock%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GripStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripGripStyle GripStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolStripGripStyle GripStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.GripStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripGripStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a visibilidade da alça usada para reposicionar o controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ToolStripGripStyle" />. O padrão é <see cref="F:System.Windows.Forms.ToolStripGripStyle.Hidden" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mesmo com o <xref:System.Windows.Forms.StatusStrip.SizingGrip%2A> propriedade definida como `true` e <xref:System.Windows.Forms.StatusStrip.GripStyle%2A> propriedade definida como `Visible`, a alça de dimensionamento não será exibida a menos que você defina também a <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> propriedade para um dos valores de estouro. Se o <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> está definida como <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> ou <xref:System.Windows.Forms.ToolStripLayoutStyle.Table>, não será exibida a alça de dimensionamento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um <xref:System.Windows.Forms.StatusStrip> com várias propriedades comuns definidas, inclusive o <xref:System.Windows.Forms.StatusStrip.GripStyle%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolStripLayoutStyle LayoutStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolStripLayoutStyle LayoutStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.LayoutStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripLayoutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica como o <see cref="T:System.Windows.Forms.StatusStrip" /> dispõe a coleção de itens.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ToolStripLayoutStyle" />. O padrão é <see cref="F:System.Windows.Forms.ToolStripLayoutStyle.Table" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.StatusStrip.LayoutStyle%2A> propriedade para obter ou definir como os itens são organizados de <xref:System.Windows.Forms.StatusStrip>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um <xref:System.Windows.Forms.StatusStrip> com várias propriedades comuns definidas, inclusive o <xref:System.Windows.Forms.StatusStrip.LayoutStyle%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayout">
+      <MemberSignature Language="C#" Value="protected override void OnLayout (System.Windows.Forms.LayoutEventArgs levent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLayout(class System.Windows.Forms.LayoutEventArgs levent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusStrip.OnLayout(System.Windows.Forms.LayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="levent" Type="System.Windows.Forms.LayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="levent">Os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.Layout" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaintBackground">
+      <MemberSignature Language="C#" Value="protected override void OnPaintBackground (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaintBackground(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusStrip.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.PaintEventArgs" /> que contém informações sobre o <see cref="T:System.Windows.Forms.StatusStrip" /> para pintar.</param>
+        <summary>Colore a tela de fundo do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.StatusStrip.OnPaintBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.StatusStrip.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.StatusStrip.OnPaintBackground(System.Windows.Forms.PaintEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSpringTableLayoutCore">
+      <MemberSignature Language="C#" Value="protected virtual void OnSpringTableLayoutCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSpringTableLayoutCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusStrip.OnSpringTableLayoutCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece o layout de tabela personalizados para um <see cref="T:System.Windows.Forms.StatusStrip" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir <xref:System.Windows.Forms.StatusStrip.OnSpringTableLayoutCore%2A> fazer layouts de tabela personalizados. O valor padrão de <xref:System.Windows.Forms.ToolStripLayoutStyle> é <xref:System.Windows.Forms.ToolStripLayoutStyle.Table>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Padding Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é relevante para essa classe.</summary>
+        <value>Um valor <see cref="T:System.Windows.Forms.Padding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PaddingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaddingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.StatusStrip.PaddingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse evento não é relevante para essa classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDisplayedItems">
+      <MemberSignature Language="C#" Value="protected override void SetDisplayedItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDisplayedItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusStrip.SetDisplayedItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a coleção de exibidos e itens de estouro após um layout.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowItemToolTips">
+      <MemberSignature Language="C#" Value="public bool ShowItemToolTips { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowItemToolTips" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.ShowItemToolTips" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as Dicas de Ferramenta serão mostradas para <see cref="T:System.Windows.Forms.StatusStrip" />.</summary>
+        <value>
+          <see langword="true" /> se as Dicas de Ferramentas forem mostradas para o <see cref="T:System.Windows.Forms.StatusStrip" />; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A> propriedade para obter ou definir <xref:System.Windows.Forms.ToolTip> comportamento de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um <xref:System.Windows.Forms.StatusStrip> com várias propriedades comuns definidas, inclusive o <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeGripBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle SizeGripBounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle SizeGripBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.SizeGripBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os limites da alça de dimensionamento (alça) para um <see cref="T:System.Windows.Forms.StatusStrip" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Rectangle" /> que representa os limites da alça.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizingGrip">
+      <MemberSignature Language="C#" Value="public bool SizingGrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SizingGrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.SizingGrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma alça de dimensionamento é exibida no canto inferior direito do controle.</summary>
+        <value>
+          <see langword="true" /> se uma alça for exibida; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.StatusStrip.SizingGrip%2A> propriedade para exibir uma alça para fornecer uma indicação para o usuário quando um <xref:System.Windows.Forms.StatusStrip> é redimensionável.  
+  
+ Mesmo com o <xref:System.Windows.Forms.StatusStrip.SizingGrip%2A> propriedade definida como `true` e <xref:System.Windows.Forms.StatusStrip.GripStyle%2A> propriedade definida como `Visible`, a alça de dimensionamento não será exibida a menos que você defina também a <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> propriedade para um dos valores de estouro. Se o <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> está definida como <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> ou <xref:System.Windows.Forms.ToolStripLayoutStyle.Table>, não será exibida a alça de dimensionamento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um <xref:System.Windows.Forms.StatusStrip> com várias propriedades comuns definidas, inclusive o <xref:System.Windows.Forms.StatusStrip.SizingGrip%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stretch">
+      <MemberSignature Language="C#" Value="public bool Stretch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Stretch" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusStrip.Stretch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.StatusStrip" /> estende de ponta a ponta de seu contêiner.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Forms.StatusStrip" /> expande de ponta a ponta em seu <see cref="T:System.Windows.Forms.ToolStripContainer" />; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra um <xref:System.Windows.Forms.StatusStrip> com várias propriedades comuns definidas, inclusive o <xref:System.Windows.Forms.StatusStrip.Stretch%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.StatusStrip.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusStrip.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusStrip.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">O <see cref="T:System.Windows.Forms.Message" /> do Windows a ser processado.</param>
+        <summary>Processa mensagens do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Message> estrutura encapsula as mensagens que o Windows envia. Você pode usar essa estrutura envolver uma mensagem e atribuí-lo para o procedimento de janela deve ser distribuída. Você também pode usar essa estrutura para obter informações sobre uma mensagem de que o sistema envia para seu aplicativo ou controles.  
+  
+ Não é possível criar o <xref:System.Windows.Forms.Message> estrutura diretamente. Para criar um <xref:System.Windows.Forms.Message> estrutura, use o <xref:System.Windows.Forms.Message.Create%2A> método. Para tornar a criação <xref:System.Windows.Forms.Message> estruturas mais eficientes, o <xref:System.Windows.Forms.Message> estrutura usa seu pool de existentes <xref:System.Windows.Forms.Message> estruturas em vez de criar uma instância de um novo, se possível. No entanto, se um <xref:System.Windows.Forms.Message> estrutura não está disponível no pool, uma nova instância da estrutura é criada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

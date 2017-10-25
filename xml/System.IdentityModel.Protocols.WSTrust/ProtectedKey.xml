@@ -1,0 +1,117 @@
+<Type Name="ProtectedKey" FullName="System.IdentityModel.Protocols.WSTrust.ProtectedKey">
+  <TypeSignature Language="C#" Value="public class ProtectedKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProtectedKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.ProtectedKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o conteúdo de um wst:Entropy ou um elemento wst:RequestedProofToken dentro da RequestSecurityToken e RequestSecurityTokenResponse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo de um wst:Entropy ou um elemento wst:RequestedProofToken dentro de wst:RequestSecurityToken (<xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken>) e wst:RequestSecurityTokenResponse (<xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse>) mensagens.  
+  
+ Para obter mais informações sobre o elemento que essa classe representa, consulte a versão da especificação WS-Trust que se aplica ao seu cenário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProtectedKey (byte[] secret);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] secret) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.ProtectedKey.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="secret" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="secret">Uma matriz de <see cref="T:System.Byte" /> que contém o material da chave a ser protegido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.ProtectedKey" /> classe sem criptografia.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para enviar o material da chave em texto não criptografado. O <xref:System.IdentityModel.Protocols.WSTrust.ProtectedKey.WrappingCredentials%2A> está definida como `null` no novo <xref:System.IdentityModel.Protocols.WSTrust.ProtectedKey> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProtectedKey (byte[] secret, System.IdentityModel.Tokens.EncryptingCredentials wrappingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] secret, class System.IdentityModel.Tokens.EncryptingCredentials wrappingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.ProtectedKey.#ctor(System.Byte[],System.IdentityModel.Tokens.EncryptingCredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="secret" Type="System.Byte[]" />
+        <Parameter Name="wrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="secret">Uma matriz de <see cref="T:System.Byte" /> que contém o material da chave a ser protegido.</param>
+        <param name="wrappingCredentials">Um <see cref="T:System.IdentityModel.Tokens.EncryptingCredentials" /> que contém as credenciais usadas para criptografar o material da chave.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.ProtectedKey" /> classe usando as credenciais de criptografia especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para enviar o material da chave criptografado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeyBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetKeyBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetKeyBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.ProtectedKey.GetKeyBytes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o material da chave.</summary>
+        <returns>Uma matriz de <see cref="T:System.Byte" /> que contém o material da chave.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrappingCredentials">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.EncryptingCredentials WrappingCredentials { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.EncryptingCredentials WrappingCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.ProtectedKey.WrappingCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.EncryptingCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as credenciais de criptografia da chave.</summary>
+        <value>Um <see cref="T:System.IdentityModel.SecurityTokenService.EncryptingCredentials" /> que representa as credenciais usadas para criptografar a chave. <see langword="null" />indica que a chave não é criptografada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

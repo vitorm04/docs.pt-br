@@ -1,0 +1,2644 @@
+<Type Name="TextBlock" FullName="System.Windows.Controls.TextBlock">
+  <TypeSignature Language="C#" Value="public class TextBlock : System.Windows.FrameworkElement, IServiceProvider, System.Windows.IContentHost" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi TextBlock extends System.Windows.FrameworkElement implements class System.IServiceProvider, class System.Windows.IContentHost, class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.TextBlock" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.IContentHost</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Text)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Inlines")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um controle leve para a exibição de pequenos volumes de conteúdo de fluxo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.TextBlock> pode conter uma cadeia de caracteres em seu <xref:System.Windows.Controls.TextBlock.Text%2A> propriedade ou <xref:System.Windows.Documents.Inline> elementos de conteúdo de fluxo como <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Hyperlink>, e <xref:System.Windows.Documents.InlineUIContainer>, no seu <xref:System.Windows.Controls.TextBlock.Inlines%2A> propriedade.  
+  
+ <xref:System.Windows.Controls.TextBlock>foi projetado para ser leve e destina-se especificamente na integração pequenas partes do conteúdo de fluxo em um [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)].  <xref:System.Windows.Controls.TextBlock>é otimizado para exibição de linha única e fornece um bom desempenho para exibir até algumas linhas de conteúdo.  
+  
+ <xref:System.Windows.Controls.TextBlock>não é otimizado para cenários que precisam exibir mais de poucas linhas de conteúdo. para esses cenários, uma <xref:System.Windows.Documents.FlowDocument> juntamente com um controle de exibição apropriado é uma escolha melhor do que <xref:System.Windows.Controls.TextBlock>, em termos de desempenho.  Depois de <xref:System.Windows.Controls.TextBlock>, <xref:System.Windows.Controls.FlowDocumentScrollViewer> é o próximo controle de nível de importância para exibir o conteúdo de fluxo e simplesmente fornece uma área de conteúdo de rolagem com pouca [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)].  <xref:System.Windows.Controls.FlowDocumentPageViewer>é otimizado em torno de modo de exibição de "uma página no tempo" para o conteúdo de fluxo.  Por fim, <xref:System.Windows.Controls.FlowDocumentReader> oferece suporte a funcionalidade de conjunto mais rico para exibir o conteúdo de fluxo, mas correspondentemente-pesado.  
+  
+ Alinhamento horizontal de texto dentro de um <xref:System.Windows.Controls.TextBlock> é feito com o <xref:System.Windows.Controls.TextBlock.TextAlignment%2A> propriedade. Alinhando o <xref:System.Windows.Controls.TextBlock> dentro do layout da página é feito com o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> e <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o elemento <xref:System.Windows.Controls.TextBlock>.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockSimpleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblocksimplexaml)]  
+  
+ A figura a seguir mostra como esse exemplo é renderizado.  
+  
+ ![Captura de tela: TextBlocks e botões](~/add/media/textblock-simple.png "captura de tela: TextBlocks e botões")  
+  
+ O exemplo a seguir mostra como a mostra como obter semelhante os resultados programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockSimple](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblocksimple)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockSimple](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblocksimple)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextBlock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextBlock (System.Windows.Documents.Inline inline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Inline inline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.#ctor(System.Windows.Documents.Inline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="inline" Type="System.Windows.Documents.Inline" />
+      </Parameters>
+      <Docs>
+        <param name="inline">Um objeto que deriva da classe <see cref="T:System.Windows.Documents.Inline" /> abstrata a ser adicionado como o conteúdo inicial.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.TextBlock" />, adicionando um elemento <see cref="T:System.Windows.Documents.Inline" /> especificado como o conteúdo de exibição inicial.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tipos de entrada válida para `inline` incluem <xref:System.Windows.Documents.AnchoredBlock>, <xref:System.Windows.Documents.InlineUIContainer>, <xref:System.Windows.Documents.LineBreak>, <xref:System.Windows.Documents.Run>, e <xref:System.Windows.Documents.Span>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor.  Nesse caso, o <xref:System.Windows.Controls.TextBlock> contém um texto <xref:System.Windows.Documents.Run>.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockConstructorSimple](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockconstructorsimple)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockConstructorSimple](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockconstructorsimple)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inline" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override sealed System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">Um <see cref="T:System.Windows.Size" /> dentro do elemento de pai de hospedagem que o <see cref="T:System.Windows.Controls.TextBlock" /> devem usar para organizar próprio e seus elementos filho. Restrições de dimensionamento pode afetar esse tamanho solicitado.</param>
+        <summary>Posiciona elementos filho e determina um tamanho para o <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <returns>O valor real <see cref="T:System.Windows.Size" /> usado para organizar o elemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.FrameworkElement.ArrangeOverride%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Background { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Background" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.Background" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Media.Brush" /> usado para preencher a tela de fundo da área de conteúdo.</summary>
+        <value>O pincel usado para preencher a tela de fundo da área de conteúdo ou <see langword="null" /> para não usar um pincel tela de fundo. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer <xref:System.Windows.Controls.TextBlock.Background%2A> configurações nos elementos filho substituem essa configuração de nível superior.  
+  
+ Para uma tabela de amostras que mostram as cores do pincel predefinidos disponíveis, consulte <xref:System.Windows.Media.Brushes>.  
+  
+<a name="dependencyPropertyInfo_Background"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.BackgroundProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.Background%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.Background%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.BackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.Background" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaselineOffset">
+      <MemberSignature Language="C#" Value="public double BaselineOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 BaselineOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.BaselineOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade pela qual cada linha de texto é deslocada da linha de base.</summary>
+        <value>A quantidade pela qual cada linha de texto é deslocada da linha de base, em pixels independentes de dispositivo. <see cref="F:System.Double.NaN" /> indica que um deslocamento de linha de base ideal é calculado automaticamente usando as características de fonte atuais. O padrão é <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A linha de base é a linha horizontal imaginária com a qual a base de cada caractere em uma linha de texto é alinhada.  
+  
+ Essa propriedade de dependência também tem um uso de propriedades anexadas. Em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], o uso é `<` *objeto* <xref:System.Windows.Controls.TextBlock.BaselineOffset%2A?displayProperty=nameWithType> `="` *duplo*`".../>`, onde *objeto* é um elemento de objeto (geralmente um elemento de fluxo) contido em um <xref:System.Windows.Controls.TextBlock>. No código, o uso da propriedade anexada é suportado pelo <xref:System.Windows.Controls.TextBlock.GetBaselineOffset%2A> e <xref:System.Windows.Controls.TextBlock.SetBaselineOffset%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaselineOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BaselineOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BaselineOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.BaselineOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.BaselineOffset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakAfter">
+      <MemberSignature Language="C#" Value="public System.Windows.LineBreakCondition BreakAfter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LineBreakCondition BreakAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.BreakAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineBreakCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.LineBreakCondition" /> que indica como o conteúdo deve quebrar após o elemento atual.</summary>
+        <value>As condições para quebrando o conteúdo após o elemento atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna <xref:System.Windows.LineBreakCondition.BreakDesired>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakBefore">
+      <MemberSignature Language="C#" Value="public System.Windows.LineBreakCondition BreakBefore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LineBreakCondition BreakBefore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.BreakBefore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineBreakCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.LineBreakCondition" /> que indica como o conteúdo deve quebrar antes do elemento atual.</summary>
+        <value>As condições para quebrando o conteúdo após o elemento atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna <xref:System.Windows.LineBreakCondition.BreakDesired>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentEnd">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer ContentEnd { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextPointer ContentEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.ContentEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Documents.TextPointer" /> ao final do conteúdo de <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>Um <see cref="T:System.Windows.Documents.TextPointer" /> ao final do conteúdo de <see cref="T:System.Windows.Controls.TextBlock" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O final do conteúdo é usado como a posição de inserção diretamente após o último caractere do <xref:System.Windows.Controls.TextBlock>.  
+  
+ O <xref:System.Windows.Documents.TextPointer> retornado por essa propriedade sempre tem seu <xref:System.Windows.Documents.LogicalDirection> definido como <xref:System.Windows.Documents.LogicalDirection.Forward>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentStart">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer ContentStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.TextPointer ContentStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.ContentStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Documents.TextPointer" /> para o início do conteúdo a <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>Um <see cref="T:System.Windows.Documents.TextPointer" /> para o início do conteúdo a <see cref="T:System.Windows.Controls.TextBlock" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Início do conteúdo é usado como a posição de inserção diretamente antes do primeiro caractere no <xref:System.Windows.Controls.TextBlock>.  
+  
+ O <xref:System.Windows.Documents.TextPointer> retornado por essa propriedade sempre tem seu <xref:System.Windows.Documents.LogicalDirection> definido como <xref:System.Windows.Documents.LogicalDirection.Backward>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamily">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.FontFamily FontFamily { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.FontFamily FontFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.FontFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Font)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a família de fontes de nível superior preferencial para o <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Media.FontFamily" /> que especifica a família de fontes preferenciais ou uma família principal de fontes preferenciais com uma ou mais famílias de fontes de fallback. O padrão é a fonte determinada pelo valor <see cref="P:System.Windows.SystemFonts.MessageFontFamily" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer <xref:System.Windows.Controls.TextBlock.FontFamily%2A> configurações nos elementos filho substituem essa configuração de nível superior.  
+  
+ Quando várias famílias forem especificadas, a família de fontes segunda e as subsequentes servem como famílias de fallbacks a ser usado em casos em que a família de fontes primário está indisponível ou não aplicável.  
+  
+ Essa propriedade especifica uma preferência apenas.  Se a família de fonte especificada não estiver disponível, o <xref:System.Windows.Controls.TextBlock> silenciosamente reverterá para a fonte determinada pelo <xref:System.Windows.SystemFonts.MessageFontFamily%2A> valor.  
+  
+ Essa propriedade de dependência também tem um uso de propriedades anexadas. Em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], o uso é `<` *objeto* <xref:System.Windows.Controls.TextBlock.FontFamily%2A?displayProperty=nameWithType> `="` *valor*`".../>`, onde *objeto* é um elemento de objeto (geralmente um elemento de fluxo) contido em um <xref:System.Windows.Controls.TextBlock>, e *valor* é um dos valores de cadeia de caracteres de formato, conforme explicado em valores de XAML. No código, o uso da propriedade anexada é suportado pelo <xref:System.Windows.Controls.TextBlock.GetFontFamily%2A> e <xref:System.Windows.Controls.TextBlock.SetFontFamily%2A>. O uso da propriedade anexada não é comum, pois a maioria dos elementos que podem estar contidas em um <xref:System.Windows.Controls.TextBlock> suporte um análogo via `FontFamily` propriedade, que o <xref:System.Windows.Controls.TextBlock> usa para renderização.  
+  
+<a name="xamlAttributeUsage_FontFamily"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object FontFamily="fontFamilyName"/>  
+- or -  
+<object FontFamily="fontFamilyNamesList"/>  
+- or -  
+<object FontFamily="fontFamilyFolderReference"/>  
+- or -  
+<object FontFamily="fontFamilyUriReference"/>  
+```  
+  
+<a name="xamlValues_FontFamily"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *fontFamilyName*  
+ Uma cadeia de caracteres especificando um nome de família de fonte.  Por exemplo `"Arial"` ou `"Century Gothic"`.  
+  
+ *fontFamilyNamesList*  
+ Uma cadeia de caracteres especificando vários nomes de família de fonte, cada um separado por uma vírgula (qualquer espaço em branco após uma vírgula é ignorado).  A primeira família de fontes especificada serve como a família de fonte principal. famílias de fontes subsequentes servem como famílias de fallbacks a ser usado em casos em que a família de fontes primário está indisponível ou não aplicável.  Por exemplo, `"Arial, Century Gothic"` Especifica Arial como a família de fontes primária, com século Gótica como a família de fontes de fallback.  
+  
+ *fontFamilyFolderReference*  
+ Uma cadeia de caracteres especificando uma pasta que contém a fonte, junto com um nome de família de fonte.  A pasta e o nome de família de fonte são delimitadas por um caractere #.  A referência da pasta pode ser absoluta ou relativa.  Por exemplo, `"Custom Fonts\#My Custom Font"`.  
+  
+ *fontFamilyUriReference*  
+ Uma cadeia de caracteres que especifica um [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] para a fonte, junto com um nome de família de fonte.  O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] e o nome de família de fonte são delimitadas por um caractere #.  Por exemplo, `"http://MyFontServer/Fonts/#My Custom Font"`.  
+  
+<a name="dependencyPropertyInfo_FontFamily"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.FontFamilyProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.FontFamily%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.FontFamily%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontFamilyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontFamilyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontFamilyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.FontFamilyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.FontFamily" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSize">
+      <MemberSignature Language="C#" Value="public double FontSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 FontSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.FontSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.FontSizeConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho da fonte de nível superior do <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>O tamanho da fonte desejado a ser usado em pixels independentes de dispositivo). O padrão é determinado pelo valor <see cref="P:System.Windows.SystemFonts.MessageFontSize" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer <xref:System.Windows.Controls.TextBlock.FontSize%2A> configurações nos elementos filho substituem essa configuração de nível superior.  
+  
+ Essa propriedade de dependência também tem um uso de propriedades anexadas. Em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], o uso é `<` *objeto* <xref:System.Windows.Controls.TextBlock.FontSize%2A?displayProperty=nameWithType> `="` *valor*`".../>`, onde *objeto* é um elemento de objeto (geralmente um elemento de fluxo) contido em um <xref:System.Windows.Controls.TextBlock>, e *valor* é um dos valores de cadeia de caracteres de formato, conforme explicado em valores de XAML. No código, o uso da propriedade anexada é suportado pelo <xref:System.Windows.Controls.TextBlock.GetFontSize%2A> e <xref:System.Windows.Controls.TextBlock.SetFontSize%2A>. O uso da propriedade anexada não é comum, pois a maioria dos elementos que podem estar contidas em um <xref:System.Windows.Controls.TextBlock> suporte um análogo via `FontSize` propriedade, que o <xref:System.Windows.Controls.TextBlock> usa para renderização.  
+  
+<a name="xamlAttributeUsage_FontSize"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object FontSize="double"/>  
+- or -  
+<object FontSize="qualifiedDouble"/>  
+```  
+  
+<a name="xamlValues_FontSize"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *double*  
+ <xref:System.Double>  
+  
+ Representação de cadeia de caracteres um <xref:System.Double> valor igual ou maior que 0.0, mas menor do que <xref:System.Double.PositiveInfinity>. Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *qualifiedDouble*  
+ Um *duplo* valor conforme descrito acima, seguido por um dos seguintes especificadores de unidade: `px`, `in`, `cm`, `pt`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ `cm`centímetros; 1cm==(96/2.54) px  
+  
+ `pt`pontos; 1pt==(96/72) px  
+  
+<a name="dependencyPropertyInfo_FontSize"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.FontSizeProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.FontSize%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.FontSize%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontSizeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontSizeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontSizeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.FontSizeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.FontSize" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStretch">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStretch FontStretch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStretch FontStretch" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.FontStretch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as características de alongamento de fonte de nível superior para o <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>Um membro da classe <see cref="T:System.Windows.FontStretch" /> que especifica as características de alongamento de fonte a serem usadas. O padrão é <see cref="P:System.Windows.FontStretches.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer <xref:System.Windows.Controls.TextBlock.FontStretch%2A> configurações nos elementos filho substituem essa configuração de nível superior.  
+  
+ Essa propriedade de dependência também tem um uso de propriedades anexadas. Em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], o uso é `<` *objeto* <xref:System.Windows.Controls.TextBlock.FontStretch%2A?displayProperty=nameWithType> `="` *valor*`".../>`, onde *objeto* é um elemento de objeto (geralmente um elemento de fluxo) contido em um <xref:System.Windows.Controls.TextBlock>, e *valor* é um formato de cadeia de caracteres de nomes de propriedade do <xref:System.Windows.FontStretch> classe. No código, o uso da propriedade anexada é suportado pelo <xref:System.Windows.Controls.TextBlock.GetFontStretch%2A> e <xref:System.Windows.Controls.TextBlock.SetFontStretch%2A>. O uso da propriedade anexada não é comum, pois a maioria dos elementos que podem estar contidas em um <xref:System.Windows.Controls.TextBlock> suporte um análogo via `FontStretch` propriedade, que o <xref:System.Windows.Controls.TextBlock> usa para renderização.  
+  
+<a name="dependencyPropertyInfo_FontStretch"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.FontStretchProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.FontStretch%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.FontStretch%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStretchProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontStretchProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontStretchProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.FontStretchProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.FontStretch" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.FontStyle FontStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontStyle FontStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.FontStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da fonte de nível superior para o <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>Um membro da classe <see cref="T:System.Windows.FontStyles" /> que especifica o estilo da fonte desejada. O padrão é determinado pelo valor <see cref="P:System.Windows.SystemFonts.MessageFontStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer <xref:System.Windows.Controls.TextBlock.FontStyle%2A> configurações nos elementos filho substituem essa configuração de nível superior.  
+  
+ Essa propriedade de dependência também tem um uso de propriedades anexadas. Em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], o uso é `<` *objeto* <xref:System.Windows.Controls.TextBlock.FontStyle%2A?displayProperty=nameWithType> `="` *valor*`".../>`, onde *objeto* é um elemento de objeto (geralmente um elemento de fluxo) contido em um <xref:System.Windows.Controls.TextBlock>, e *valor* é um formato de cadeia de caracteres de nomes de propriedade no <xref:System.Windows.FontStyles> classe. No código, o uso da propriedade anexada é suportado pelo <xref:System.Windows.Controls.TextBlock.GetFontStyle%2A> e <xref:System.Windows.Controls.TextBlock.SetFontStyle%2A>. O uso da propriedade anexada não é comum, pois a maioria dos elementos que podem estar contidas em um <xref:System.Windows.Controls.TextBlock> suporte um análogo via `FontStyle` propriedade, que o <xref:System.Windows.Controls.TextBlock> usa para renderização.  
+  
+<a name="dependencyPropertyInfo_FontStyle"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.FontStyleProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.FontStyle%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.FontStyle%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.FontStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.FontStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeight">
+      <MemberSignature Language="C#" Value="public System.Windows.FontWeight FontWeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.FontWeight FontWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.FontWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a espessura da fonte de nível superior do <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>Um membro da classe <see cref="T:System.Windows.FontWeights" /> que especifica a espessura da fonte desejada. O padrão é determinado pelo valor <see cref="P:System.Windows.SystemFonts.MessageFontWeight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer <xref:System.Windows.Controls.TextBlock.FontWeight%2A> configurações nos elementos filho substituem essa configuração de nível superior.  
+  
+ Para obter uma lista de valores válidos de pesos de fonte, consulte o <xref:System.Windows.FontWeights> classe.  
+  
+ Essa propriedade de dependência também tem um uso de propriedades anexadas. No [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], é o uso de `<` *objeto* <xref:System.Windows.Controls.TextBlock.FontWeight%2A?displayProperty=nameWithType> `="` *valor*`".../>`, onde *objeto* é um elemento de objeto (geralmente um elemento de fluxo) contido em um <xref:System.Windows.Controls.TextBlock>, e *valor* é um dos valores de uma propriedade de formato de cadeia de caracteres de <xref:System.Windows.FontWeights> classe. No código, o uso da propriedade anexada é suportado pelo <xref:System.Windows.Controls.TextBlock.GetFontWeight%2A> e <xref:System.Windows.Controls.TextBlock.SetFontWeight%2A>. O uso da propriedade anexada não é comum, pois a maioria dos elementos que podem estar contidas em um <xref:System.Windows.Controls.TextBlock> suporte um análogo via `FontWeight` propriedade, que o <xref:System.Windows.Controls.TextBlock> usa para renderização.  
+  
+<a name="dependencyPropertyInfo_FontWeight"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.FontWeightProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.FontWeight%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.FontWeight%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontWeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FontWeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FontWeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.FontWeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.FontWeight" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Foreground">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush Foreground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush Foreground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.Foreground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Media.Brush" /> a ser aplicado ao conteúdo de texto do <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>O pincel usado para aplicar o conteúdo de texto. O padrão é <see cref="P:System.Windows.Media.Brushes.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma tabela de amostras que mostram as cores do pincel predefinidos disponíveis, consulte <xref:System.Windows.Media.Brushes>.  
+  
+ Qualquer <xref:System.Windows.Controls.TextBlock.Foreground%2A> configurações nos elementos filho substituem essa configuração de nível superior.  
+  
+ Essa propriedade de dependência também tem um uso de propriedades anexadas. Em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], o uso é `<` *objeto* <xref:System.Windows.Controls.TextBlock.Foreground%2A?displayProperty=nameWithType> `="` *valor*`".../>`, onde *objeto* é um elemento de objeto (geralmente um elemento de fluxo) contido em um <xref:System.Windows.Controls.TextBlock>, e *valor* é uma cadeia de caracteres que resolve para um <xref:System.Windows.Media.Brush> valor de implementação. No código, o uso da propriedade anexada é suportado pelo <xref:System.Windows.Controls.TextBlock.GetForeground%2A> e <xref:System.Windows.Controls.TextBlock.SetForeground%2A>. O uso da propriedade anexada não é comum, pois a maioria dos elementos que podem estar contidas em um <xref:System.Windows.Controls.TextBlock> suporte um análogo via `Foreground` propriedade, que o <xref:System.Windows.Controls.TextBlock> usa para renderização.  
+  
+<a name="dependencyPropertyInfo_Foreground"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.ForegroundProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.Foreground%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.Foreground%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForegroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ForegroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ForegroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.ForegroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.Foreground" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBaselineOffset">
+      <MemberSignature Language="C#" Value="public static double GetBaselineOffset (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetBaselineOffset(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetBaselineOffset(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Controls.TextBlock.BaselineOffset" /> propriedade anexada.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.TextBlock.BaselineOffset" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Controls.TextBlock.BaselineOffset" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontFamily">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.FontFamily GetFontFamily (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.FontFamily GetFontFamily(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetFontFamily(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.FontFamily</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Controls.TextBlock.FontFamily" /> propriedade anexada.</param>
+        <summary>Retorna o valor da <see cref="F:System.Windows.Controls.TextBlock.FontFamilyProperty" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Controls.TextBlock.FontFamily" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontSize">
+      <MemberSignature Language="C#" Value="public static double GetFontSize (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetFontSize(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetFontSize(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.FontSizeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Controls.TextBlock.FontSize" /> propriedade anexada.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.TextBlock.FontSize" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Controls.TextBlock.FontSize" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontStretch">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontStretch GetFontStretch (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.FontStretch GetFontStretch(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetFontStretch(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStretch</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Controls.TextBlock.FontStretch" /> propriedade anexada.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.TextBlock.FontStretch" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Controls.TextBlock.FontStretch" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontStyle">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontStyle GetFontStyle (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.FontStyle GetFontStyle(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetFontStyle(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Controls.TextBlock.FontStyle" /> propriedade anexada.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.TextBlock.FontStyle" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Controls.TextBlock.FontStyle" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFontWeight">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontWeight GetFontWeight (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.FontWeight GetFontWeight(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetFontWeight(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontWeight</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Controls.TextBlock.FontWeight" /> propriedade anexada.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.TextBlock.FontWeight" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Controls.TextBlock.FontWeight" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetForeground">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Brush GetForeground (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Brush GetForeground(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetForeground(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Controls.TextBlock.Foreground" /> propriedade anexada.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.TextBlock.Foreground" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Controls.TextBlock.Foreground" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineHeight">
+      <MemberSignature Language="C#" Value="public static double GetLineHeight (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetLineHeight(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetLineHeight(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Controls.TextBlock.LineHeight" /> propriedade anexada.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.TextBlock.LineHeight" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Controls.TextBlock.LineHeight" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLineStackingStrategy">
+      <MemberSignature Language="C#" Value="public static System.Windows.LineStackingStrategy GetLineStackingStrategy (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.LineStackingStrategy GetLineStackingStrategy(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetLineStackingStrategy(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineStackingStrategy</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Controls.TextBlock.LineStackingStrategy" /> propriedade anexada.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.TextBlock.LineStackingStrategy" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Controls.TextBlock.LineStackingStrategy" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPositionFromPoint">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.TextPointer GetPositionFromPoint (System.Windows.Point point, bool snapToText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.TextPointer GetPositionFromPoint(valuetype System.Windows.Point point, bool snapToText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetPositionFromPoint(System.Windows.Point,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.TextPointer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+        <Parameter Name="snapToText" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="point">Um <see cref="T:System.Windows.Point" /> no espaço de coordenada do <see cref="T:System.Windows.Controls.TextBlock" /> para o qual retornar um <see cref="T:System.Windows.Documents.TextPointer" />.</param>
+        <param name="snapToText">
+          <see langword="true" />para retornar um <see cref="T:System.Windows.Documents.TextPointer" /> para o ponto de inserção mais próximo <c>ponto</c>, ou não <c>ponto</c> está dentro de um caractere delimitador caixa; <see langword="false" /> para retornar <see langword="null" /> se <c>ponto</c> é não dentro de um caractere caixa delimitadora.</param>
+        <summary>Retorna um <see cref="T:System.Windows.Documents.TextPointer" /> para a posição mais próxima à especificada <see cref="T:System.Windows.Point" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Documents.TextPointer" /> para o ponto especificado, ou <see langword="null" /> se <paramref name="snapToText" /> é <see langword="false" /> e o ponto especificado não estão dentro de um caractere delimitador caixa o <see cref="T:System.Windows.Controls.TextBlock" /> área de conteúdo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método sempre retorna um válido <xref:System.Windows.Documents.TextPointer> quando `snapToText` é `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Informações de layout atual, válido para o controle não estão disponíveis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRectanglesCore">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Rect&gt; GetRectanglesCore (System.Windows.ContentElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Windows.Rect&gt; GetRectanglesCore(class System.Windows.ContentElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetRectanglesCore(System.Windows.ContentElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Rect&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.ContentElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">Um <see cref="T:System.Windows.ContentElement" /> para o qual gerar e retornar uma coleção de delimitadora retângulos.</param>
+        <summary>Retorna uma coleção somente leitura de delimitadora retângulos para um <see cref="T:System.Windows.ContentElement" />.</summary>
+        <returns>Uma coleção somente leitura de delimitadora retângulos especificado <see cref="T:System.Windows.ContentElement" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada retângulo delimitador na coleção corresponde a uma linha de conteúdo a <xref:System.Windows.ContentElement>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="child" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTextAlignment">
+      <MemberSignature Language="C#" Value="public static System.Windows.TextAlignment GetTextAlignment (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.TextAlignment GetTextAlignment(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetTextAlignment(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextAlignment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Controls.TextBlock.TextAlignment" /> propriedade anexada.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.TextBlock.TextAlignment" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor atual da propriedade anexada <see cref="P:System.Windows.Controls.TextBlock.TextAlignment" /> no objeto de dependência especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVisualChild">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.Visual GetVisualChild (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.Visual GetVisualChild(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.GetVisualChild(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um índice de base zero que especifica o <see cref="T:System.Windows.Media.Visual" /> filho para retornar.  Esse valor deve estar entre 0 e (<see cref="P:System.Windows.Controls.TextBlock.VisualChildrenCount" /> menos 1)</param>
+        <summary>Retorna o <see cref="T:System.Windows.Media.Visual" /> filho em um índice especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Media.Visual" /> filho no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.FrameworkElement.GetVisualChild%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" />não está entre 0 e (<see cref="P:System.Windows.Controls.TextBlock.VisualChildrenCount" /> menos 1)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestCore">
+      <MemberSignature Language="C#" Value="protected override sealed System.Windows.Media.HitTestResult HitTestCore (System.Windows.Media.PointHitTestParameters hitTestParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.HitTestResult HitTestCore(class System.Windows.Media.PointHitTestParameters hitTestParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.HitTestCore(System.Windows.Media.PointHitTestParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.HitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitTestParameters" Type="System.Windows.Media.PointHitTestParameters" />
+      </Parameters>
+      <Docs>
+        <param name="hitTestParameters">Um <see cref="T:System.Windows.Media.PointHitTestParameters" /> objeto que especifica os parâmetros para fazer testes de clique.</param>
+        <summary>Retorna um <see cref="T:System.Windows.Media.PointHitTestResult" /> especificado para <see cref="T:System.Windows.Media.PointHitTestParameters" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.PointHitTestResult" /> parâmetros de teste para a ocorrência especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método destina-se para habilitar o teste de hit precisas para conteúdo renderizado.  
+  
+ Este método substitui <xref:System.Windows.UIElement.HitTestCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hitTestParameters" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HostedElementsCore">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IEnumerator&lt;System.Windows.IInputElement&gt; HostedElementsCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerator`1&lt;class System.Windows.IInputElement&gt; HostedElementsCore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.HostedElementsCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Windows.IInputElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um enumerador que pode ser usada itera os elementos hospedados por este <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>Um enumerador que pode iterar elementos hospedados por este <see cref="T:System.Windows.Controls.TextBlock" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inlines">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.InlineCollection Inlines { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.InlineCollection Inlines" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.Inlines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.InlineCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Documents.InlineCollection" /> que contém os elementos <see cref="T:System.Windows.Documents.Inline" /> de nível superior que compõem o conteúdo do <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>Um <see cref="T:System.Windows.Documents.InlineCollection" /> que contém os elementos <see cref="T:System.Windows.Documents.Inline" /> que compõem o conteúdo do <see cref="T:System.Windows.Controls.TextBlock" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Documents.InlineCollection> retornado por essa propriedade para enumerar ou manipular o conteúdo de um <xref:System.Windows.Controls.TextBlock>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputHitTestCore">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.IInputElement InputHitTestCore (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.IInputElement InputHitTestCore(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.InputHitTestCore(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Um <see cref="T:System.Windows.Point" />, no espaço de coordenada do <see cref="T:System.Windows.Controls.TextBlock" />, para o qual retornar correspondente <see cref="T:System.Windows.IInputElement" />.</param>
+        <summary>Retorna o <see cref="T:System.Windows.IInputElement" /> em determinado <see cref="T:System.Windows.Point" /> dentro de <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <returns>O <see cref="T:System.Windows.IInputElement" /> encontrado no ponto especificado, ou <see langword="null" /> se não há tal <see cref="T:System.Windows.IInputElement" /> pode ser encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHyphenationEnabled">
+      <MemberSignature Language="C#" Value="public bool IsHyphenationEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHyphenationEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.IsHyphenationEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a hifenização automática de palavras está habilitada ou desabilitada.</summary>
+        <value>
+          <see langword="true" />para indicar que automatic recentes e hifenização de palavras está ativado. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O recurso de hifenização word automática permite que um <xref:System.Windows.Controls.TextBlock> quebrar automaticamente e hifenizar, com base nas condições do layout atual.  Isso permite que palavras longas começar em uma linha e continuar com este próximo e tende a fazer uma distribuição mais uniforme de espaço em branco no texto justificado.  Palavras são desfeitas e hifenizadas de acordo com as regras da gramática padrão.  
+  
+<a name="dependencyPropertyInfo_IsHyphenationEnabled"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.IsHyphenationEnabledProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHyphenationEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsHyphenationEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsHyphenationEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.IsHyphenationEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.IsHyphenationEnabled" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeight">
+      <MemberSignature Language="C#" Value="public double LineHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LineHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.LineHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura de cada linha de conteúdo.</summary>
+        <value>A altura da linha, em pixels independentes do dispositivo, no intervalo de 0,0034 a 160000. Um valor de <see cref="F:System.Double.NaN" /> (equivalente a um valor de atributo "<c>automática</c>") indica que a altura da linha é determinada automaticamente das características da fonte atual. O padrão é <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A alteração desse valor não altera a altura do texto associado; em vez disso, ele altera a altura da linha que contém o texto. Para alterar o tamanho do texto, use o <xref:System.Windows.Controls.TextBlock.FontSize%2A> propriedade.  
+  
+ Além dessa propriedade, o layout de linhas em uma <xref:System.Windows.Controls.TextBlock> é afetado pelo seu <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> propriedade.  
+  
+ Essa propriedade de dependência também tem um uso de propriedades anexadas. Em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], o uso é `<` *objeto* <xref:System.Windows.Controls.TextBlock.LineHeight%2A?displayProperty=nameWithType> `="` *valor*`".../>`, onde *objeto* é um elemento de objeto (geralmente um elemento de fluxo) contido em um <xref:System.Windows.Controls.TextBlock>, e *valor* é uma cadeia de caracteres, conforme explicado em valores de XAML. No código, o uso da propriedade anexada é suportado pelo <xref:System.Windows.Controls.TextBlock.GetLineHeight%2A> e <xref:System.Windows.Controls.TextBlock.SetLineHeight%2A>. O uso da propriedade anexada não é comum.  
+  
+<a name="xamlAttributeUsage_LineHeight"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object LineHeight="double"/>  
+- or -  
+<object LineHeight="qualifiedDouble"/>  
+- or -  
+<object LineHeight="Auto"/>  
+```  
+  
+<a name="xamlValues_LineHeight"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *double*  
+ <xref:System.Double>  
+  
+ Representação de cadeia de caracteres um <xref:System.Double> valor maior que ou igual a `0.0034` e igual ou menor, em seguida, `160000`. Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *qualifiedDouble*  
+ Um *duplo* valor conforme descrito acima, (com exceção da `Auto`) seguido por um dos seguintes especificadores de unidade: `px`, `in`, `cm`, `pt`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ `cm`centímetros; 1cm==(96/2.54) px  
+  
+ `pt`pontos; 1pt==(96/72) px  
+  
+ Auto  
+ Faz com que a altura da linha ser determinado automaticamente das características da fonte atual.  Equivalente a um valor da propriedade <xref:System.Double.NaN?displayProperty=nameWithType>.  
+  
+<a name="dependencyPropertyInfo_LineHeight"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.LineHeightProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.LineHeight%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.LineHeight%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Controls.TextBlock.LineHeight" /> é definida como um valor não positivo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.LineHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.LineHeight" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategy">
+      <MemberSignature Language="C#" Value="public System.Windows.LineStackingStrategy LineStackingStrategy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LineStackingStrategy LineStackingStrategy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.LineStackingStrategy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineStackingStrategy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o mecanismo pelo qual uma caixa de linha é determinada para cada linha de texto em <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>O mecanismo pelo qual uma caixa de linha é determinada para cada linha de texto em <see cref="T:System.Windows.Controls.TextBlock" />. O padrão é <see cref="F:System.Windows.LineStackingStrategy.MaxHeight" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade de dependência também tem um uso de propriedades anexadas. Em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], o uso é `<` *objeto* <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A?displayProperty=nameWithType> `="` *valor*`".../>`, onde *objeto* é um elemento de objeto (geralmente um elemento de fluxo) contido em um <xref:System.Windows.Controls.TextBlock>, e *valor* é um valor de cadeia de caracteres da <xref:System.Windows.LineStackingStrategy> enumeração. No código, o uso da propriedade anexada é suportado pelo <xref:System.Windows.Controls.TextBlock.GetLineStackingStrategy%2A> e <xref:System.Windows.Controls.TextBlock.SetLineStackingStrategy%2A>. O uso da propriedade anexada não é comum.  
+  
+<a name="dependencyPropertyInfo_LineStackingStrategy"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.LineStackingStrategyProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> propriedade para determinar como as caixas de linha são criadas para as linhas de texto de um <xref:System.Windows.Controls.TextBlock>. A primeira <xref:System.Windows.Controls.TextBlock> tem um <xref:System.Windows.Controls.TextBlock.LineStackingStrategy%2A> valor <xref:System.Windows.LineStackingStrategy.MaxHeight> e a segunda <xref:System.Windows.Controls.TextBlock> tem um valor de <xref:System.Windows.LineStackingStrategy.BlockLineHeight>.  
+  
+ [!code-xaml[FlowMiscSnippets_snip#LineStackingStrategyExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowMiscSnippets_snip/cs/linestackingstrategyexample.xaml#linestackingstrategyexamplewholepage)]  
+  
+ A ilustração a seguir mostra o resultado do código anterior.  
+  
+ ![Captura de tela: Comparar valores LineStackingStrategy](~/add/media/flow-linestackingstrategy.gif "captura de tela: LineStackingStrategy comparar valores")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineStackingStrategyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LineStackingStrategyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LineStackingStrategyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.LineStackingStrategyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.LineStackingStrategy" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um enumerador que pode iterar os filhos lógicos a <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>Um enumerador para os filhos lógicos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override sealed System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Um <see cref="T:System.Windows.Size" /> estrutura especificando quaisquer restrições no tamanho do <see cref="T:System.Windows.Controls.TextBlock" />.</param>
+        <summary>Chamado para medir novamente o <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Size" /> estrutura indicando o novo tamanho do <see cref="T:System.Windows.Controls.TextBlock" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substitua este método para implementar o comportamento de dimensionamento personalizado.  
+  
+ Este método substitui <xref:System.Windows.FrameworkElement.MeasureOverride%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChildDesiredSizeChangedCore">
+      <MemberSignature Language="C#" Value="protected virtual void OnChildDesiredSizeChangedCore (System.Windows.UIElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnChildDesiredSizeChangedCore(class System.Windows.UIElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.OnChildDesiredSizeChangedCore(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">O filho <see cref="T:System.Windows.UIElement" /> elemento cujo <see cref="P:System.Windows.UIElement.DesiredSize" /> foi alterado.</param>
+        <summary>Chamado quando um elemento filho derivando de <see cref="T:System.Windows.UIElement" /> alterações seu <see cref="P:System.Windows.UIElement.DesiredSize" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> objeto para este <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> objeto para este <see cref="T:System.Windows.Controls.TextBlock" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override sealed void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos para o evento associado.</param>
+        <summary>Chamado quando o valor de um ou mais hospedado alterações de propriedades de dependência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override sealed void OnRender (System.Windows.Media.DrawingContext ctx);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext ctx) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O <see cref="T:System.Windows.Media.DrawingContext" /> para renderizar o controle no.</param>
+        <summary>Renderiza o conteúdo de um <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado pelo sistema de layout para renderizar o conteúdo do <xref:System.Windows.Controls.TextBlock>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ctx" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Padding">
+      <MemberSignature Language="C#" Value="public System.Windows.Thickness Padding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Thickness Padding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.Padding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Thickness</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a espessura do espaço de preenchimento entre os limites da área de conteúdo e o conteúdo exibido por um <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>Uma estrutura <see cref="T:System.Windows.Thickness" /> que especifica a quantidade de preenchimento a aplicar, em pixels independentes de dispositivo. O padrão é <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.TextBlock.Padding%2A>pode ser descrito como uniforme em todas as direções (`Padding="10"`), ou como quatro distintos de valores que representam à esquerda, à direita, preenchimento superior e inferior independentemente (`Padding="5,0,10,20"`).  
+  
+ Se uma espessura de preenchimento especificado excede a dimensão de área de conteúdo correspondente (por exemplo, a soma de esquerda e direita preenchimento larguras excede a largura da área de conteúdo), a espessura do preenchimento proporcionalmente será reduzida para ter mais do que a dimensão de área de conteúdo relevante.  
+  
+<a name="xamlAttributeUsage_Padding"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Padding="uniformThickness"/>  
+- or -  
+<object Padding="independentThickness"/>  
+- or -  
+<object Padding="qualifiedUniformThickness"/>  
+- or -  
+<object Padding="qualifiedIndependentThickness"/>  
+```  
+  
+<a name="xamlValues_Padding"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *uniformThickness*  
+ Representação de uma única cadeia de caracteres <xref:System.Double> valor a ser aplicado uniformemente para todas as dimensões de espessura de quatro.  Por exemplo, um valor de `"10"` é equivalente a um valor de `"10,10,10,10"`.  Um valor não qualificado é medido em pixels independentes de dispositivo. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *independentThickness*  
+ Representação de quatro ordenados de cadeia de caracteres <xref:System.Double> valores correspondentes para dimensões de espessura independente para esquerda, superior, direita e inferior, nessa ordem.  Os quatro valores devem ser separados por vírgulas. não são permitidos espaços.  Por exemplo, "5,10,15,20" resulta em 5 pixels de preenchimento à esquerda do conteúdo, 10 pixels de preenchimento acima de conteúdo, 15 pixels de preenchimento à direita do conteúdo e 20 pixels de preenchimento abaixo do conteúdo.  
+  
+ *qualifiedUniformThickness*  
+ Um valor descrito por *uniformThickness* seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1in"` fornece preenchimento uniforme de 1 polegada em todas as direções.  
+  
+ *qualifiedIndependentThickness*  
+ Um valor descrito por *independentThickness*, com cada valor independente seguido por um dos seguintes especificadores de unidade: `px`, `in`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ Por exemplo, `"1.5in,0.8in,1.5in,0.8in"`.  Especificadores de unidade podem ser combinados ou omitidos de um ou mais valores.  
+  
+<a name="dependencyPropertyInfo_Padding"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.PaddingProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.Padding%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.Padding%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaddingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PaddingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PaddingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.PaddingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.Padding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBaselineOffset">
+      <MemberSignature Language="C#" Value="public static void SetBaselineOffset (System.Windows.DependencyObject element, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetBaselineOffset(class System.Windows.DependencyObject element, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.SetBaselineOffset(System.Windows.DependencyObject,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Controls.TextBlock.BaselineOffset" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Controls.TextBlock.BaselineOffset" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontFamily">
+      <MemberSignature Language="C#" Value="public static void SetFontFamily (System.Windows.DependencyObject element, System.Windows.Media.FontFamily value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFontFamily(class System.Windows.DependencyObject element, class System.Windows.Media.FontFamily value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.SetFontFamily(System.Windows.DependencyObject,System.Windows.Media.FontFamily)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Media.FontFamily" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Controls.TextBlock.FontFamily" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Controls.TextBlock.FontFamily" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontSize">
+      <MemberSignature Language="C#" Value="public static void SetFontSize (System.Windows.DependencyObject element, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFontSize(class System.Windows.DependencyObject element, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.SetFontSize(System.Windows.DependencyObject,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Controls.TextBlock.FontSize" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Controls.TextBlock.FontSize" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontStretch">
+      <MemberSignature Language="C#" Value="public static void SetFontStretch (System.Windows.DependencyObject element, System.Windows.FontStretch value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFontStretch(class System.Windows.DependencyObject element, valuetype System.Windows.FontStretch value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.SetFontStretch(System.Windows.DependencyObject,System.Windows.FontStretch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.FontStretch" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Controls.TextBlock.FontStretch" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Controls.TextBlock.FontStretch" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontStyle">
+      <MemberSignature Language="C#" Value="public static void SetFontStyle (System.Windows.DependencyObject element, System.Windows.FontStyle value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFontStyle(class System.Windows.DependencyObject element, valuetype System.Windows.FontStyle value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.SetFontStyle(System.Windows.DependencyObject,System.Windows.FontStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.FontStyle" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Controls.TextBlock.FontStyle" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Controls.TextBlock.FontStyle" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFontWeight">
+      <MemberSignature Language="C#" Value="public static void SetFontWeight (System.Windows.DependencyObject element, System.Windows.FontWeight value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFontWeight(class System.Windows.DependencyObject element, valuetype System.Windows.FontWeight value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.SetFontWeight(System.Windows.DependencyObject,System.Windows.FontWeight)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.FontWeight" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Controls.TextBlock.FontWeight" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Controls.TextBlock.FontWeight" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetForeground">
+      <MemberSignature Language="C#" Value="public static void SetForeground (System.Windows.DependencyObject element, System.Windows.Media.Brush value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetForeground(class System.Windows.DependencyObject element, class System.Windows.Media.Brush value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.SetForeground(System.Windows.DependencyObject,System.Windows.Media.Brush)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Media.Brush" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Controls.TextBlock.Foreground" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Controls.TextBlock.Foreground" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLineHeight">
+      <MemberSignature Language="C#" Value="public static void SetLineHeight (System.Windows.DependencyObject element, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetLineHeight(class System.Windows.DependencyObject element, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.SetLineHeight(System.Windows.DependencyObject,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Controls.TextBlock.LineHeight" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Controls.TextBlock.LineHeight" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Controls.TextBlock.LineHeight" /> é definida como um valor não positivo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLineStackingStrategy">
+      <MemberSignature Language="C#" Value="public static void SetLineStackingStrategy (System.Windows.DependencyObject element, System.Windows.LineStackingStrategy value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetLineStackingStrategy(class System.Windows.DependencyObject element, valuetype System.Windows.LineStackingStrategy value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.SetLineStackingStrategy(System.Windows.DependencyObject,System.Windows.LineStackingStrategy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.LineStackingStrategy" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Controls.TextBlock.LineStackingStrategy" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Controls.TextBlock.LineStackingStrategy" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTextAlignment">
+      <MemberSignature Language="C#" Value="public static void SetTextAlignment (System.Windows.DependencyObject element, System.Windows.TextAlignment value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetTextAlignment(class System.Windows.DependencyObject element, valuetype System.Windows.TextAlignment value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.SetTextAlignment(System.Windows.DependencyObject,System.Windows.TextAlignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.TextAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto de dependência no qual definir o valor da propriedade <see cref="P:System.Windows.Controls.TextBlock.TextAlignment" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o valor da <see cref="P:System.Windows.Controls.TextBlock.TextAlignment" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeBaselineOffset">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeBaselineOffset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeBaselineOffset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.ShouldSerializeBaselineOffset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o valor efetivo do <see cref="P:System.Windows.Controls.TextBlock.BaselineOffset" /> propriedade deve ser serializada durante a serialização de um <see cref="T:System.Windows.Controls.TextBlock" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Controls.TextBlock.BaselineOffset" /> propriedade deve ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeInlines">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeInlines (System.Windows.Markup.XamlDesignerSerializationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeInlines(class System.Windows.Markup.XamlDesignerSerializationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.ShouldSerializeInlines(System.Windows.Markup.XamlDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Windows.Markup.XamlDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="manager">Um objeto de Gerenciador de serviço de serialização para este objeto.</param>
+        <summary>Retorna um valor que indica se o valor efetivo do <see cref="P:System.Windows.Controls.TextBlock.Inlines" /> propriedade deve ser serializada durante a serialização de um <see cref="T:System.Windows.Controls.TextBlock" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Controls.TextBlock.Inlines" /> propriedade deve ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="manager" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeText">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.ShouldSerializeText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o valor efetivo do <see cref="P:System.Windows.Controls.TextBlock.Text" /> propriedade deve ser serializada durante a serialização de um <see cref="T:System.Windows.Controls.TextBlock" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Controls.TextBlock.Text" /> propriedade deve ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IServiceProvider.GetService">
+      <MemberSignature Language="C#" Value="object IServiceProvider.GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.IServiceProvider.GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.System#IServiceProvider#GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Um objeto que especifica o tipo de objeto de serviço a ser obtido.</param>
+        <summary>Este método oferece suporte à [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usada diretamente no seu código.</summary>
+        <returns>Um objeto de serviço do tipo <paramref name="serviceType" />, ou <see langword="null" /> se não houver nenhum objeto de serviço do tipo <paramref name="serviceType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.IContentHost.GetRectangles">
+      <MemberSignature Language="C#" Value="System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Rect&gt; IContentHost.GetRectangles (System.Windows.ContentElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Windows.Rect&gt; System.Windows.IContentHost.GetRectangles(class System.Windows.ContentElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.System#Windows#IContentHost#GetRectangles(System.Windows.ContentElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Rect&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.ContentElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">Um <see cref="T:System.Windows.ContentElement" /> para o qual gerar e retornar uma coleção de delimitadora retângulos.</param>
+        <summary>Este método oferece suporte à [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usada diretamente no seu código.  Use a segurança de tipo <see cref="M:System.Windows.Controls.TextBlock.GetRectanglesCore(System.Windows.ContentElement)" /> método em vez disso.</summary>
+        <returns>Uma coleção somente leitura de delimitadora retângulos especificado <see cref="T:System.Windows.ContentElement" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.IContentHost.HostedElements">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Windows.IInputElement&gt; System.Windows.IContentHost.HostedElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerator`1&lt;class System.Windows.IInputElement&gt; System.Windows.IContentHost.HostedElements" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.System#Windows#IContentHost#HostedElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Windows.IInputElement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.  Use a segurança de tipo <see cref="P:System.Windows.Controls.TextBlock.HostedElementsCore" /> propriedade em vez disso.</summary>
+        <value>Elementos hospedados pelo host de conteúdo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.IContentHost.InputHitTest">
+      <MemberSignature Language="C#" Value="System.Windows.IInputElement IContentHost.InputHitTest (System.Windows.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Windows.IInputElement System.Windows.IContentHost.InputHitTest(valuetype System.Windows.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.System#Windows#IContentHost#InputHitTest(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Coordenadas do mouse em relação ao host de conteúdo.</param>
+        <summary>Este método oferece suporte à [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usada diretamente no seu código.  Use a segurança de tipo <see cref="M:System.Windows.Controls.TextBlock.InputHitTestCore(System.Windows.Point)" /> método em vez disso.</summary>
+        <returns>O elemento foi atingido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.IContentHost.OnChildDesiredSizeChanged">
+      <MemberSignature Language="C#" Value="void IContentHost.OnChildDesiredSizeChanged (System.Windows.UIElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.IContentHost.OnChildDesiredSizeChanged(class System.Windows.UIElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.System#Windows#IContentHost#OnChildDesiredSizeChanged(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">O filho <see cref="T:System.Windows.UIElement" /> elemento cujo <see cref="P:System.Windows.UIElement.DesiredSize" /> foi alterado.</param>
+        <summary>Este método oferece suporte à [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usada diretamente no seu código.  Use a segurança de tipo <see cref="M:System.Windows.Controls.TextBlock.OnChildDesiredSizeChangedCore(System.Windows.UIElement)" /> método em vez disso.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto a ser adicionado como filho.</param>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TextBlock.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Uma cadeia de caracteres para adicionar ao objeto.</param>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Text)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo de texto de um <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>O conteúdo de texto deste <see cref="T:System.Windows.Controls.TextBlock" />. Observe que todo o conteúdo que não é texto será removido, resultando em uma representação de texto sem formatação do conteúdo <see cref="T:System.Windows.Controls.TextBlock" />. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade quando você deseja mostrar texto sem formatação em um <xref:System.Windows.Controls.TextBlock>.  Quando for necessário formatar o texto, adicione <xref:System.Windows.Documents.Inline> objetos para o <xref:System.Windows.Controls.TextBlock.Inlines%2A> propriedade.  
+  
+<a name="dependencyPropertyInfo_Text"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.TextProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.Text%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[SpanSnippets#_TextBlock_Text1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_textblock_text1xaml)]  
+  
+ Como alternativa, o conteúdo de uma sequência de texto simplesmente pode estar contido em <xref:System.Windows.Controls.TextBlock> marcas de elemento.  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.Text%2A> propriedade programaticamente.  
+  
+ [!code-csharp[SpanSnippets#_TextBlock_Text](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_textblock_text)]
+ [!code-vb[SpanSnippets#_TextBlock_Text](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_textblock_text)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.TextAlignment TextAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.TextAlignment TextAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.TextAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o alinhamento horizontal do conteúdo de texto.</summary>
+        <value>Um dos valores <see cref="T:System.Windows.TextAlignment" /> que especifica o alinhamento desejado. O padrão é <see cref="F:System.Windows.TextAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade de dependência também tem um uso de propriedades anexadas. Em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], o uso é `<` *objeto* <xref:System.Windows.Controls.TextBlock.TextAlignment%2A?displayProperty=nameWithType> `="` *valor*`".../>`, onde *objeto* é um elemento de objeto (geralmente um elemento de fluxo) contido em um <xref:System.Windows.Controls.TextBlock>, e *valor* é um valor de cadeia de caracteres da <xref:System.Windows.TextAlignment> enumeração. No código, o uso da propriedade anexada é suportado pelo <xref:System.Windows.Controls.TextBlock.GetTextAlignment%2A> e <xref:System.Windows.Controls.TextBlock.SetTextAlignment%2A>. O uso da propriedade anexada não é comum.  
+  
+<a name="dependencyPropertyInfo_TextAlignment"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.TextAlignmentProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.TextAlignment%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.TextAlignment%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignmentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextAlignmentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextAlignmentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.TextAlignmentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.TextAlignment" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextDecorations">
+      <MemberSignature Language="C#" Value="public System.Windows.TextDecorationCollection TextDecorations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.TextDecorationCollection TextDecorations" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.TextDecorations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextDecorationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.TextDecorationCollection" /> que contém os efeitos a serem aplicados ao texto de um <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>Uma coleção de <see cref="T:System.Windows.TextDecorationCollection" /> que contém as decorações de texto a serem aplicadas a esse elemento. O padrão é <see langword="null" /> (nenhuma decoração de texto aplicada).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.TextDecoration> objeto é um Ornamento visual que você pode adicionar ao texto. Há quatro tipos de decoração de texto: sublinhado, linha de base, tachado e linha sobreposta.  Para obter mais informações sobre a decoração de texto, consulte [como: criar uma decoração de texto](~/docs/framework/wpf/advanced/how-to-create-a-text-decoration.md).  
+  
+ Por padrão, essa propriedade é definida como `null` e não tem nenhum <xref:System.Windows.TextDecorationCollection> associados a ele.  Antes de adicionar os efeitos de texto, crie um novo <xref:System.Windows.TextDecorationCollection> e atribuí-la a essa propriedade.  
+  
+<a name="dependencyPropertyInfo_TextDecorations"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.TextDecorationsProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.TextDecorations%2A> atributo.  
+  
+ [!code-xaml[InlineSnippets#_TextBlock_TextDecXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml#_textblock_textdecxaml)]  
+  
+ A figura a seguir mostra como esse exemplo é renderizado.  
+  
+ ![Captura de tela: Texto com efeito de tachado padrão](~/add/media/inline-textdec-strike.png "captura de tela: texto com efeito de tachado padrão")  
+  
+ Os seguintes números de mostrar como o <xref:System.Windows.TextDecorations.OverLine%2A>, <xref:System.Windows.TextDecorations.Baseline%2A>, e <xref:System.Windows.TextDecorations.Underline%2A> decorações de processam, respectivamente.  
+  
+ ![Captura de tela: Linha sobreposta TextDecorator](~/add/media/inline-textdec-over.png "captura de tela: linha sobreposta TextDecorator")  
+  
+ ![Captura de tela: Padrão efeito de linha de base no texto](~/add/media/inline-textdec-base.png "captura de tela: padrão de efeito de linha de base em texto")  
+  
+ ![Captura de tela: Texto com efeito de sublinhado padrão](~/add/media/inline-textdec-under.png "captura de tela: texto com efeito de sublinhado padrão")  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.TextDecorations%2A> propriedade programaticamente.  
+  
+ [!code-csharp[InlineSnippets#_TextBlock_TextDec](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml.cs#_textblock_textdec)]
+ [!code-vb[InlineSnippets#_TextBlock_TextDec](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InlineSnippets/visualbasic/window1.xaml.vb#_textblock_textdec)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextDecorationsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextDecorationsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextDecorationsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.TextDecorationsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.TextDecorations" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextEffects">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.TextEffectCollection TextEffects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.TextEffectCollection TextEffects" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.TextEffects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextEffectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os efeitos a serem aplicados no conteúdo de texto neste elemento.</summary>
+        <value>Uma <see cref="T:System.Windows.Media.TextEffectCollection" /> que contém um ou mais objetos <see cref="T:System.Windows.Media.TextEffect" /> que definem os efeitos a serem aplicados ao texto do <see cref="T:System.Windows.Controls.TextBlock" />. O padrão é <see langword="null" /> (sem efeitos aplicados).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, essa propriedade é definida como `null` e não tem nenhum <xref:System.Windows.Media.TextEffectCollection> associados a ele.  Antes de adicionar os efeitos de texto, crie um novo <xref:System.Windows.Media.TextEffectCollection> e atribuí-la a essa propriedade.  
+  
+<a name="dependencyPropertyInfo_TextEffects"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.TextEffectsProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um efeito de texto simples e aplicá-la a um texto de um <xref:System.Windows.Controls.TextBlock>.  
+  
+ [!code-csharp[TextElementSnippets#_TextBlock_TextEffects](~/samples/snippets/csharp/VS_Snippets_Wpf/TextElementSnippets/CSharp/Window1.xaml.cs#_textblock_texteffects)]
+ [!code-vb[TextElementSnippets#_TextBlock_TextEffects](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textblock_texteffects)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextEffectsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextEffectsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextEffectsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.TextEffectsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.TextEffects" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.TextProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.Text" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextTrimming">
+      <MemberSignature Language="C#" Value="public System.Windows.TextTrimming TextTrimming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.TextTrimming TextTrimming" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.TextTrimming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextTrimming</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um comportamento de filtragem de texto a ser empregado quando o conteúdo excede a área de conteúdo.</summary>
+        <value>Um dos valores <see cref="T:System.Windows.TextTrimming" /> que especifica o comportamento de filtragem de texto a ser empregado. O padrão é <see cref="F:System.Windows.TextTrimming.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_TextTrimming"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.TextTrimmingProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextTrimmingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextTrimmingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextTrimmingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.TextTrimmingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.TextTrimming" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextWrapping">
+      <MemberSignature Language="C#" Value="public System.Windows.TextWrapping TextWrapping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.TextWrapping TextWrapping" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.TextWrapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextWrapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define como o <see cref="T:System.Windows.Controls.TextBlock" /> deve quebrar o texto.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.TextWrapping" />. O padrão é <see cref="F:System.Windows.TextWrapping.NoWrap" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_TextWrapping"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TextBlock.TextWrappingProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextWrappingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TextWrappingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TextWrappingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TextBlock.TextWrappingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TextBlock.TextWrapping" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Typography">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Typography Typography { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.Typography Typography" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.Typography" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Typography</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as variações de tipografia atualmente efetivas para o conteúdo deste elemento.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Documents.Typography" /> que especifica as variações de tipografia atualmente efetivas. Para obter uma lista de valores de tipografia padrão, consulte <see cref="T:System.Windows.Documents.Typography" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.TextBlock.Typography%2A> propriedade é aplicável somente a [!INCLUDE[TLA#tla_opentype](~/includes/tlasharptla-opentype-md.md)] fontes. Uma variante de tipografia não tem efeito sobre as fontes que não dão suporte a variante.  Para obter mais informações sobre este tópico, consulte [tipografia no WPF](~/docs/framework/wpf/advanced/typography-in-wpf.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.Typography%2A> atributo de um <xref:System.Windows.Controls.TextBlock> elemento.  
+  
+ [!code-xaml[FlowDocumentSnippets#_TextBlockPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml#_textblockpropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TextBlock.Typography%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_textblockprops)]
+ [!code-vb[FlowDocumentSnippets#_TextBlockProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_textblockprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualChildrenCount">
+      <MemberSignature Language="C#" Value="protected override int VisualChildrenCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VisualChildrenCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TextBlock.VisualChildrenCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de <see cref="T:System.Windows.Media.Visual" /> filhos hospedado pelo <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+        <value>O número de filhos visuais hospedado pelo <see cref="T:System.Windows.Controls.TextBlock" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

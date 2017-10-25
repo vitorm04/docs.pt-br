@@ -1,0 +1,104 @@
+<Type Name="AxImporter+IReferenceResolver" FullName="System.Windows.Forms.Design.AxImporter+IReferenceResolver">
+  <TypeSignature Language="C#" Value="public interface AxImporter.IReferenceResolver" />
+  <TypeSignature Language="ILAsm" Value=".class nested public interface auto ansi abstract AxImporter/IReferenceResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.AxImporter.IReferenceResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para resolver referências a bibliotecas do ActiveX, nas bibliotecas de tipos ou assemblies ou assemblies gerenciados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ResolveActiveXReference">
+      <MemberSignature Language="C#" Value="public string ResolveActiveXReference (System.Runtime.InteropServices.UCOMITypeLib typeLib);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveActiveXReference(class System.Runtime.InteropServices.UCOMITypeLib typeLib) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AxImporter.IReferenceResolver.ResolveActiveXReference(System.Runtime.InteropServices.UCOMITypeLib)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeLib" Type="System.Runtime.InteropServices.UCOMITypeLib" />
+      </Parameters>
+      <Docs>
+        <param name="typeLib">Um <see cref="T:System.Runtime.InteropServices.UCOMITypeLib" /> para resolver uma referência a.</param>
+        <summary>Resolve uma referência para a biblioteca que contém um controle ActiveX.</summary>
+        <returns>Um caminho totalmente qualificado para um assembly.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveComReference">
+      <MemberSignature Language="C#" Value="public string ResolveComReference (System.Reflection.AssemblyName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveComReference(class System.Reflection.AssemblyName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AxImporter.IReferenceResolver.ResolveComReference(System.Reflection.AssemblyName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Reflection.AssemblyName" />
+      </Parameters>
+      <Docs>
+        <param name="name">Um <see cref="T:System.Reflection.AssemblyName" /> que indica que o assembly para resolver uma referência a.</param>
+        <summary>Resolve uma referência para o assembly especificado que contém um componente COM.</summary>
+        <returns>Um caminho totalmente qualificado para um assembly.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveComReference">
+      <MemberSignature Language="C#" Value="public string ResolveComReference (System.Runtime.InteropServices.UCOMITypeLib typeLib);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveComReference(class System.Runtime.InteropServices.UCOMITypeLib typeLib) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AxImporter.IReferenceResolver.ResolveComReference(System.Runtime.InteropServices.UCOMITypeLib)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeLib" Type="System.Runtime.InteropServices.UCOMITypeLib" />
+      </Parameters>
+      <Docs>
+        <param name="typeLib">Um <see cref="T:System.Runtime.InteropServices.UCOMITypeLib" /> para resolver uma referência a.</param>
+        <summary>Resolve uma referência para a biblioteca que contém um componente COM.</summary>
+        <returns>Um caminho totalmente qualificado para um assembly.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveManagedReference">
+      <MemberSignature Language="C#" Value="public string ResolveManagedReference (string assemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveManagedReference(string assemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.AxImporter.IReferenceResolver.ResolveManagedReference(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assemName">O nome do assembly para resolver uma referência a.</param>
+        <summary>Resolve uma referência para o assembly especificado.</summary>
+        <returns>Um caminho totalmente qualificado para um assembly.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

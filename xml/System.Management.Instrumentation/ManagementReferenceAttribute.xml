@@ -1,0 +1,218 @@
+<Type Name="ManagementReferenceAttribute" FullName="System.Management.Instrumentation.ManagementReferenceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ManagementReferenceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagementReferenceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementReferenceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O ManagementReferenceAttribute marca um parâmetro de método, propriedade ou membro de classe como uma referência a outra classe ou objeto de gerenciamento.  
+  
+ Observação: as bibliotecas do .NET no WMI agora são consideradas em estado final e nenhum desenvolvimento, melhorias ou atualizações adicionais estarão disponíveis para problemas não relacionados à segurança que afetarem essas bibliotecas. O [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) deve ser usado para todos os novos desenvolvimentos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse atributo para criar classes de associação, conforme demonstrado no exemplo a seguir.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como usar o <xref:System.Management.Instrumentation.ManagementReferenceAttribute> atributo junto com o <xref:System.Management.Instrumentation.ManagementQualifierAttribute> para criar uma associação de classe WMI que vincula duas outras classes do WMI. O exemplo é um provedor separado que expõe três classes WMI no namespace raiz/assoc. As primeiras duas classes, NumberPhonetic e NumberLetter, são vinculadas por último classe, LetterPhonetic.  
+  
+ Para compilar o exemplo, você precisará incluir referências a System.Management.Instrumentation e System.Configuration.Install. Você deve executar o installutil.exe contra o executável resultante e certifique-se de que o programa é executado para usar as classes WMI implementadas.  
+  
+```  
+using System;  
+using System.Collections;  
+using System.Management.Instrumentation;  
+  
+[assembly: WmiConfiguration("root/assoc", HostingModel = ManagementHostingModel.Decoupled)]  
+  
+[System.ComponentModel.RunInstaller(true)]  
+public class TheInstaller : DefaultManagementInstaller  
+{ }  
+  
+namespace AssocExample  
+{  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            InstrumentationManager.RegisterType(typeof(NumberPhonetic));  
+            InstrumentationManager.RegisterType(typeof(NumberLetter));  
+            InstrumentationManager.RegisterType(typeof(LetterPhonetic));  
+  
+            Console.WriteLine("Press enter to exit");  
+            Console.ReadLine();  
+  
+            InstrumentationManager.UnregisterType(typeof(NumberPhonetic));  
+            InstrumentationManager.UnregisterType(typeof(NumberLetter));  
+            InstrumentationManager.UnregisterType(typeof(LetterPhonetic));  
+  
+        }  
+    }  
+  
+  [ManagementEntity]  
+    public class NumberPhonetic  
+    {  
+        [ManagementKey]  
+        public int Number;  
+  
+        [ManagementProbe]  
+        public string Name;  
+  
+        [ManagementBind]  
+        public NumberPhonetic(int Number)  
+        {  
+           this.Number = Number;  
+           if(Number == 1)  
+           {  
+              Name = "alpha";  
+           }  
+           else if(Number == 2)  
+           {  
+              Name = "bravo";  
+           }  
+           else  
+           {  
+              throw new InstanceNotFoundException();  
+           }  
+        }  
+  
+        [ManagementEnumerator]  
+        static public IEnumerable EnumerateInstances()  
+        {  
+            for (int i = 1; i < 3; i++)  
+            {  
+                yield return new NumberPhonetic(i);  
+            }  
+        }  
+  
+    }  
+  
+    [ManagementEntity]  
+    public class NumberLetter  
+    {  
+        [ManagementKey]  
+        public int Number;  
+  
+        [ManagementProbe]  
+        public string Letter;  
+  
+        [ManagementBind]  
+        public NumberLetter(int Number)  
+        {  
+           this.Number = Number;  
+           if(Number == 1)  
+           {  
+              Letter = "A";  
+           }  
+           else if(Number == 2)  
+           {  
+              Letter = "B";  
+           }  
+           else  
+           {  
+              throw new InstanceNotFoundException();  
+           }  
+        }  
+  
+        [ManagementEnumerator]  
+        static public IEnumerable EnumerateInstances()  
+        {  
+            for (int i = 1; i < 3; i++)  
+            {  
+                yield return new NumberLetter(i);  
+            }  
+        }  
+  
+    }  
+  
+    [ManagementEntity]  
+    [ManagementQualifier("Association", Flavor = ManagementQualifierFlavors.DisableOverride)]  
+    public class LetterPhonetic  
+    {  
+        [ManagementReference(Type = "NumberLetter")]  
+        [ManagementKey]  
+        public string LetterNumber;  
+  
+        [ManagementReference(Type = "NumberPhonetic")]  
+        [ManagementKey]  
+        public string PhoneticNumber;  
+  
+        [ManagementEnumerator]  
+        static public IEnumerable EnumerateInstances()  
+        {  
+            ArrayList insts = new ArrayList();  
+            for (int i = 1; i < 3; i++)  
+            {  
+                LetterPhonetic inst = new LetterPhonetic();  
+                inst.LetterNumber = "Letter = " + i;  
+                inst.PhoneticNumber = "Phonetic = " + i;  
+                insts.Add(inst);  
+            }  
+            return insts;  
+        }  
+  
+    }  
+  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementReferenceAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.ManagementReferenceAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementReferenceAttribute" />. Esse é o construtor padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.ManagementReferenceAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tipo referenciado.</summary>
+        <value>Uma cadeia de caracteres que contém o nome do tipo referenciado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo padrão é o objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

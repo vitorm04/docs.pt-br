@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.XamlIntegration">
+  <Docs>
+    <summary>Fornece classes de utilitário para habilitar a serialização de entidades do Windows Communication Foundation (WCF) para XAML.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

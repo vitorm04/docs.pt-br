@@ -1,0 +1,872 @@
+<Type Name="XmlSchemaElement" FullName="System.Xml.Schema.XmlSchemaElement">
+  <TypeSignature Language="C#" Value="public class XmlSchemaElement : System.Xml.Schema.XmlSchemaParticle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaElement extends System.Xml.Schema.XmlSchemaParticle" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaParticle</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento <see langword="element" /> do esquema XML, conforme especificado pelo World Wide Web Consortium (W3C). Essa classe é a classe base para todos os tipos de partícula e é usada para descrever um elemento em um documento XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  -   Não use esquemas de fontes desconhecidas ou não confiáveis ou locais. Isso comprometerá a segurança do seu código.  
+> -   Esquemas XML (incluindo esquemas embutidos) são inerentemente vulneráveis a ataques negação de serviço; não aceitá-los em cenários não confiáveis.  
+> -   Exceções e mensagens de erro de validação de esquema podem expor informações confidenciais sobre o modelo de conteúdo ou o caminho de URI para o arquivo de esquema. Tenha cuidado para não expor essas informações para chamadores não confiáveis.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria o `element` elemento.  
+  
+ [!code-cpp[Classic WebData XmlSchemaElement Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic Webdata XmlSchemaElement Example/CPP/element.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaElement Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic Webdata XmlSchemaElement Example/CS/element.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic Webdata XmlSchemaElement Example/VB/element.vb#1)]  
+  
+ O arquivo XML a seguir é usado para o exemplo de código anterior.  
+  
+ [!code-xml[Classic WebData XmlSchemaElement Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic Webdata XmlSchemaElement Example/XML/example.xsd#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Block">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaDerivationMethod Block { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaDerivationMethod Block" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.Block" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("block")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaDerivationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see langword="Block" /> derivação.</summary>
+        <value>O atributo usado para bloquear uma derivação de tipo. O valor padrão é <see langword="XmlSchemaDerivationMethod.None" />.  
+  
+ Opcional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo pode conter os seguintes valores:  
+  
+|Enum|Descrição|  
+|----------|-----------------|  
+|`None`|Use a restrição de derivação definida pelo `BlockDefault` propriedade do esquema, se ele existir.|  
+|`Empty`|Não existem restrições em substituições desse elemento.|  
+|`Substitution`|Esse elemento não pode ser substituído por um tipo derivado de substituição.|  
+|`Extension`|Esse elemento não pode ser substituído por um tipo derivado por extensão.|  
+|`Restriction`|Esse elemento não pode ser substituído por um tipo derivado por restrição.|  
+|`All`|`#all`. Esse elemento não pode ser substituído por qualquer tipo, independentemente do método de derivação.|  
+  
+ Essa propriedade não evitar derivação, mas impede a derivação de substituição do tipo em uma instância. Não há suporte para valores de lista e de união para o `block` propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockResolved">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaDerivationMethod BlockResolved { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaDerivationMethod BlockResolved" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.BlockResolved" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaDerivationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de pós-compilação do <see langword="Block" /> propriedade.</summary>
+        <value>O valor de pós-compilação do <see langword="Block" /> propriedade. O padrão é o <see langword="BlockDefault" /> valor o <see langword="schema" /> elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor indica como o tipo é imposto quando `xsi:type` é usado no documento da instância. Por exemplo, se o valor é restrito, apenas o tipo definido específico pode ser usado, não tipos derivados por restrição de tipo específico definido.  
+  
+ Essa propriedade pode conter os valores mostrados na tabela a seguir. O padrão é `None`. Lista e os métodos de derivação de união não são permitidos nesta propriedade.  
+  
+|Enum|Descrição|  
+|----------|-----------------|  
+|`Empty`|Não existem restrições em substituições desse elemento.|  
+|`Substitution`|Esse elemento não pode ser substituído por um tipo derivado de substituição.|  
+|`Extension`|Esse elemento não pode ser substituído por um tipo derivado por extensão.|  
+|`Restriction`|Esse elemento não pode ser substituído por um tipo derivado por restrição.|  
+|`All`|`#all`. Esse elemento não pode ser substituído por qualquer tipo, independentemente do método de derivação.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constraints">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObjectCollection Constraints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObjectCollection Constraints" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.Constraints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("key", typeof(System.Xml.Schema.XmlSchemaKey))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("keyref", typeof(System.Xml.Schema.XmlSchemaKeyref))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("unique", typeof(System.Xml.Schema.XmlSchemaUnique))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de restrições no elemento.</summary>
+        <value>A coleção de restrições.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna uma coleção de restrições no elemento. Pode ser qualquer um dos `XmlSchemaKey`, `XmlSchemaKeyref`, ou `XmlSchemaUnique`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public string DefaultValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("default")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor padrão do elemento se seu conteúdo é um tipo simple ou conteúdo do elemento <see langword="textOnly" />.</summary>
+        <value>O valor padrão para o elemento. O padrão é uma referência nula.  
+  
+ Opcional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `fixed` e `default` atributos são mutuamente exclusivos. Se o elemento contiver um tipo simples, esse valor deverá ser um valor válido desse tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementSchemaType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaType ElementSchemaType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaType ElementSchemaType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.ElementSchemaType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Xml.Schema.XmlSchemaType" /> que representa o tipo do elemento com base nos valores <see cref="P:System.Xml.Schema.XmlSchemaElement.SchemaType" /> e <see cref="P:System.Xml.Schema.XmlSchemaElement.SchemaTypeName" /> do elemento.</summary>
+        <value>Um objeto <see cref="T:System.Xml.Schema.XmlSchemaType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é uma propriedade de infoset de post-schema a validação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementType">
+      <MemberSignature Language="C#" Value="public object ElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ElementType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.ElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property has been deprecated. Please use ElementSchemaType property that returns a strongly typed element type. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto do common language runtime (CLR) com base no <see cref="T:System.Xml.Schema.XmlSchemaElement" /> ou <see cref="T:System.Xml.Schema.XmlSchemaElement" /> do elemento, que contém o valor de pós-compilação do <see langword="ElementType" /> propriedade.</summary>
+        <value>O objeto de tempo de execução de linguagem comum. O valor de pós-compilação do <see langword="ElementType" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto pode ser <xref:System.Xml.Schema.XmlSchemaDatatype> se o elemento tem um tipo de esquema XML interno ou <xref:System.Xml.Schema.XmlSchemaSimpleType> se o elemento tem um tipo definido pelo usuário.  
+  
+ Essa propriedade é uma propriedade de infoset de post-schema a validação.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaElement.ElementType%2A> propriedade é obsoleta na versão 2.0 do .NET Framework e foi substituída pelo <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Final">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaDerivationMethod Final { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaDerivationMethod Final" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.Final" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("final")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaDerivationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see langword="Final" /> propriedade para indicar que nenhuma derivações mais são permitidas.</summary>
+        <value>A propriedade de <see langword="Final" /> . O padrão é <see langword="XmlSchemaDerivationMethod.None" />.  
+  
+ Opcional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo pode conter os valores mostrados na tabela a seguir.  
+  
+|Enum|Descrição|  
+|----------|-----------------|  
+|`None`|Use a restrição de derivação definida pelo `FinalDefault` propriedade do esquema, se ele existir.|  
+|`Empty`|Não existem restrições em derivações desse elemento.|  
+|`Extension`|Esse elemento não pode ser derivado por extensão.|  
+|`Restriction`|Esse elemento não pode ser derivado por restrição.|  
+|`All`|`#all`. Esse elemento não pode ser derivado por qualquer método de derivação.|  
+  
+ Confira também <xref:System.Xml.Schema.XmlSchemaElement>. `Substitution`, `List`, e `Union` métodos de derivação não são permitidos para essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalResolved">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaDerivationMethod FinalResolved { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaDerivationMethod FinalResolved" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.FinalResolved" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaDerivationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de pós-compilação do <see langword="Final" /> propriedade.</summary>
+        <value>O valor de pós-compilação do <see langword="Final" /> propriedade. Valor padrão é o <see langword="FinalDefault" /> valor o <see langword="schema" /> elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor indica como o tipo é restrito quando o tipo é estendido por meio de restrição. Essa propriedade pode conter os seguintes valores.  
+  
+|Enum|Descrição|  
+|----------|-----------------|  
+|`Empty`|Não existem restrições em derivações desse elemento.|  
+|`Extension`|Esse elemento não pode ser derivado por extensão.|  
+|`Restriction`|Esse elemento não pode ser derivado por restrição.|  
+|`All`|`#all`. Esse elemento não pode ser derivado por qualquer método de derivação.|  
+  
+ Substituição, lista e união derivação métodos não são permitidos para essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedValue">
+      <MemberSignature Language="C#" Value="public string FixedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FixedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.FixedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("fixed")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor fixo.</summary>
+        <value>O valor fixo que é inalterável e predeterminado. O padrão é uma referência nula.  
+  
+ Opcional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo deve ser um tipo simples ou `textOnly`. O `fixed` e `default` atributos são mutuamente exclusivos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Form">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaForm Form { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaForm Form" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.Form" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("form")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o formato para o elemento.</summary>
+        <value>O formato para o elemento. O padrão é o valor <see cref="P:System.Xml.Schema.XmlSchema.ElementFormDefault" />.  
+  
+ Opcional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é o valor da `elementFormDefault` de atributo para o `schema` elemento que contém o elemento. O padrão é `Unqualified`.  
+  
+|Enum|Descrição|  
+|----------|-----------------|  
+|`Qualified`|Elemento deve ser qualificado com o prefixo de namespace.|  
+|`Unqualified`|Elemento não é necessário para ser qualificado com o prefixo de namespace.|  
+  
+ O valor não pode ser definido se for o elemento que contém o `schema` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAbstract">
+      <MemberSignature Language="C#" Value="public bool IsAbstract { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAbstract" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.IsAbstract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("abstract")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações para indicar se o elemento pode ser usado em um documento de instância.</summary>
+        <value>Se <see langword="true" />, o elemento não pode aparecer no documento da instância. O padrão é <see langword="false" />.  
+  
+ Opcional.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNillable">
+      <MemberSignature Language="C#" Value="public bool IsNillable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNillable" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.IsNillable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("nillable")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações que indicam se <see langword="xsi:nil" /> pode ocorrer nos dados da instância. Indica se uma explícita valor nulo pode ser atribuído a para o elemento.</summary>
+        <value>Se for anulável <see langword="true" />, isso permite que uma instância do elemento tem o <see langword="nil" /> atributo definido como <see langword="true" />. O <see langword="nil" /> atributo está definido como parte do namespace do esquema XML para instâncias. O padrão é <see langword="false" />.  
+  
+ Opcional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso se aplica ao conteúdo de elemento e não aos atributos do elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do elemento.</summary>
+        <value>O nome do elemento. O padrão é <see langword="String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome deve ser um NCName (dois-pontos não nome), conforme definido na especificação de Namespaces de XML do World Wide Web Consortium (W3C). `Name`e `RefName` atributos são mutuamente exclusivos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QualifiedName">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName QualifiedName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName QualifiedName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.QualifiedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome qualificado real para o elemento especificado.</summary>
+        <value>O nome qualificado do elemento. O valor de pós-compilação do <see langword="QualifiedName" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>é o nome que um `ref` atributo refere-se a. O nome qualificado consiste NCName do elemento. Por exemplo, nome do elemento = "NCName" e o prefixo usado para descrever o `targetNamespace` do esquema. Esta propriedade contém o valor de pós-compilação do `QualifiedName` propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefName">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName RefName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName RefName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.RefName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("ref")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de referência de um elemento declarado neste esquema (ou outro esquema indicado pelo namespace especificado).</summary>
+        <value>O nome de referência do elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `RefName` deve ser um QName. O `RefName` pode incluir um prefixo de namespace. Se `RefName` atributo estiver presente, todos os `complexType`, `simpleType`, `key`, `keyref`, `unique`, `nillable`, `default`, `fixed`, `form`, `block`e `type`deverão estar ausentes. Se `RefName` estiver presente, `minOccurs`, `maxOccurs`, e `id` são permitidos. Para declarar um elemento usando uma definição de elemento existente, use o `RefName` atributo para especificar a definição do elemento existente.  
+  
+ O valor não pode ser definido se for o elemento que contém o `schema` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaType SchemaType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaType SchemaType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.SchemaType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("complexType", typeof(System.Xml.Schema.XmlSchemaComplexType))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("simpleType", typeof(System.Xml.Schema.XmlSchemaSimpleType))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo do elemento. Esse pode ser um tipo complexo ou um tipo simples.</summary>
+        <value>O tipo do elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para declarar um elemento usando um existente `simpleType` ou `complexType` definição, use o `SchemaType` propriedade para especificar o tipo existente. Se `RefName` atributo estiver presente, `complexType`, `simpleType`, `key`, `keyref`, e `unique` elementos e `nillable`, `default`, `fixed`, `form`, `block`, e `SchemaType` atributos não podem estar presentes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaTypeName">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName SchemaTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName SchemaTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.SchemaTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("type")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de um tipo de dados interno definido no esquema ou outro esquema indicado pelo namespace especificado.</summary>
+        <value>O nome do tipo de dados interno.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubstitutionGroup">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName SubstitutionGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName SubstitutionGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaElement.SubstitutionGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("substitutionGroup")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de um elemento que está sendo substituído por este elemento.</summary>
+        <value>O nome qualificado de um elemento que está sendo substituído por este elemento.  
+  
+ Opcional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento deve ter o mesmo tipo ou um tipo derivado do tipo do elemento especificado. Este valor deve ser um QName.  
+  
+ O valor não pode ser definido se for o elemento que contém o `schema` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,120 @@
+<Type Name="AsyncPostBackTriggerControlIDConverter" FullName="System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter">
+  <TypeSignature Language="C#" Value="public class AsyncPostBackTriggerControlIDConverter : System.ComponentModel.StringConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AsyncPostBackTriggerControlIDConverter extends System.ComponentModel.StringConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.StringConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conversor de tipo que recupera uma lista de IDs no contêiner atual de controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter> classe deriva de <xref:System.ComponentModel.StringConverter> classe e fornece uma lista de IDs de controle para exibição em um controle de grade de propriedade em ambientes de tempo de design.  
+  
+ Para obter mais informações sobre conversores de tipo, consulte [como: implementar um conversor de tipo](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56) e [conversão do tipo generalizada](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsyncPostBackTriggerControlIDConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Você nunca deve acessar diretamente um conversor de tipo. Em vez disso, chame o conversor apropriado usando um <xref:System.ComponentModel.TypeDescriptor> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto que fornece um contexto de formato que pode ser usado para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Este parâmetro ou propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <summary>Retorna uma coleção de IDs do contêiner de controle de <see cref="T:System.ComponentModel.Design.IDesignerHost" /> quando fornecido com um contexto de formato do objeto.</summary>
+        <returns>Um objeto que contém um conjunto de cadeias de caracteres que representam os IDs dos controles no contêiner atual de controle. Se o contêiner não tem controles, retorna uma coleção vazia. Se o contexto for <see langword="null" /> ou se não houver nenhum contêiner atual, retorna <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto que fornece um contexto de formatação.</param>
+        <summary>Retorna um valor que indica se a coleção de padrão de valores que é retornado do <see cref="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> método é uma lista exclusiva de valores possíveis, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> objeto que é retornado o <see cref="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> método fornece uma lista completa de valores possíveis. <see langword="false" /> se outros valores são possíveis. O padrão é <see langword="false" /></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto que fornece um contexto de formatação.</param>
+        <summary>Retorna um valor que indica se esse conversor suporta um conjunto padrão de identificações de controle que podem ser escolhidos em uma lista, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="M:System.Web.UI.Design.AsyncPostBackTriggerControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> método deve ser chamado para localizar um conjunto comum de identificações de controle que dá suporte ao objeto; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,424 @@
+<Type Name="XmlILStorageConverter" FullName="System.Xml.Xsl.Runtime.XmlILStorageConverter">
+  <TypeSignature Language="C#" Value="public static class XmlILStorageConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit XmlILStorageConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.Runtime.XmlILStorageConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlXml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma classe interna que fornece métodos auxiliares estático que obtém um conversor de valor de <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" /> para converter entre vários físico language runtime (CLR) representações comuns para o mesmo tipo XML lógico.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="BooleanToAtomicValue">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlAtomicValue BooleanToAtomicValue (bool value, int index, System.Xml.Xsl.Runtime.XmlQueryRuntime runtime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlAtomicValue BooleanToAtomicValue(bool value, int32 index, class System.Xml.Xsl.Runtime.XmlQueryRuntime runtime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.BooleanToAtomicValue(System.Boolean,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="runtime" Type="System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor <see langword="Boolean" /> a ser convertido.</param>
+        <param name="index">Um valor do tipo <see langword="Int32" /> que fornece o índice do item a converter.</param>
+        <param name="runtime">Uma instância da classe <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />.</param>
+        <summary>Converte um valor booliano para um <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlAtomicValue" /> de objeto para o <see langword="Boolean" /> valor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BytesToAtomicValue">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlAtomicValue BytesToAtomicValue (byte[] value, int index, System.Xml.Xsl.Runtime.XmlQueryRuntime runtime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlAtomicValue BytesToAtomicValue(unsigned int8[] value, int32 index, class System.Xml.Xsl.Runtime.XmlQueryRuntime runtime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.BytesToAtomicValue(System.Byte[],System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="runtime" Type="System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de <see langword="Byte" /> para converter.</param>
+        <param name="index">Um valor do tipo <see langword="Int32" /> que fornece o índice do item a converter.</param>
+        <param name="runtime">Uma instância da classe <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />.</param>
+        <summary>Converte uma matriz de bytes a um <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlAtomicValue" /> de objeto para o <see langword="Byte" /> matriz.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DateTimeToAtomicValue">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlAtomicValue DateTimeToAtomicValue (DateTime value, int index, System.Xml.Xsl.Runtime.XmlQueryRuntime runtime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlAtomicValue DateTimeToAtomicValue(valuetype System.DateTime value, int32 index, class System.Xml.Xsl.Runtime.XmlQueryRuntime runtime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.DateTimeToAtomicValue(System.DateTime,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DateTime" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="runtime" Type="System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um valor do tipo <see langword="DateTime" /> para converter.</param>
+        <param name="index">Um valor do tipo <see langword="Int32" /> que fornece o índice do item a converter.</param>
+        <param name="runtime">Uma instância da classe <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />.</param>
+        <summary>Converte um <see langword="DateTime" /> valor para um <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlAtomicValue" /> de objeto para o <see langword="DateTime" /> valor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DecimalToAtomicValue">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlAtomicValue DecimalToAtomicValue (decimal value, int index, System.Xml.Xsl.Runtime.XmlQueryRuntime runtime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlAtomicValue DecimalToAtomicValue(valuetype System.Decimal value, int32 index, class System.Xml.Xsl.Runtime.XmlQueryRuntime runtime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.DecimalToAtomicValue(System.Decimal,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Decimal" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="runtime" Type="System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um valor do tipo <see langword="Decimal" /> para converter.</param>
+        <param name="index">Um valor do tipo <see langword="Int32" /> que fornece o índice do item a converter.</param>
+        <param name="runtime">Uma instância da classe <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />.</param>
+        <summary>Converte um valor decimal em um <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlAtomicValue" /> de objeto para o <see langword="Decimal" /> valor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleToAtomicValue">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlAtomicValue DoubleToAtomicValue (double value, int index, System.Xml.Xsl.Runtime.XmlQueryRuntime runtime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlAtomicValue DoubleToAtomicValue(float64 value, int32 index, class System.Xml.Xsl.Runtime.XmlQueryRuntime runtime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.DoubleToAtomicValue(System.Double,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="runtime" Type="System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um valor do tipo <see langword="Double" /> para converter.</param>
+        <param name="index">Um valor do tipo <see langword="Int32" /> que fornece o índice do item a converter.</param>
+        <param name="runtime">Uma instância da classe <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />.</param>
+        <summary>Converte um <see langword="Double" /> valor para um <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlAtomicValue" /> de objeto para o <see langword="Double" /> valor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Int32ToAtomicValue">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlAtomicValue Int32ToAtomicValue (int value, int index, System.Xml.Xsl.Runtime.XmlQueryRuntime runtime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlAtomicValue Int32ToAtomicValue(int32 value, int32 index, class System.Xml.Xsl.Runtime.XmlQueryRuntime runtime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.Int32ToAtomicValue(System.Int32,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="runtime" Type="System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um valor do tipo <see langword="Int32" /> para converter.</param>
+        <param name="index">Um valor do tipo <see langword="Int32" /> que fornece o índice do item a converter.</param>
+        <param name="runtime">Uma instância da classe <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />.</param>
+        <summary>Converte um <see langword="Int32" /> valor para um <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlAtomicValue" /> de objeto para o <see langword="Int32" /> valor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Int64ToAtomicValue">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlAtomicValue Int64ToAtomicValue (long value, int index, System.Xml.Xsl.Runtime.XmlQueryRuntime runtime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlAtomicValue Int64ToAtomicValue(int64 value, int32 index, class System.Xml.Xsl.Runtime.XmlQueryRuntime runtime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.Int64ToAtomicValue(System.Int64,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="runtime" Type="System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um valor do tipo <see langword="Int64" /> para converter.</param>
+        <param name="index">Um valor do tipo <see langword="Int32" /> que fornece o índice do item a converter.</param>
+        <param name="runtime">Uma instância da classe <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />.</param>
+        <summary>Converte um <see langword="Int64" /> valor para um <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlAtomicValue" /> de objeto para o <see langword="Int64" /> valor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsToNavigators">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Xml.XPath.XPathNavigator&gt; ItemsToNavigators (System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt; listItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathNavigator&gt; ItemsToNavigators(class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathItem&gt; listItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.ItemsToNavigators(System.Collections.Generic.IList{System.Xml.XPath.XPathItem})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Xml.XPath.XPathNavigator&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listItems" Type="System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="listItems">Uma sequência de <see cref="T:System.Xml.XPath.XPathItem" /> instâncias.</param>
+        <summary>Converte uma lista ou uma sequência de <see cref="T:System.Xml.XPath.XPathItem" /> objetos em uma sequência de <see cref="T:System.Xml.XPath.XPathNavigator" /> objetos ou valores.</summary>
+        <returns>Uma lista genérica de tipo <see cref="T:System.Xml.XPath.XPathNavigator" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NavigatorsToItems">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt; NavigatorsToItems (System.Collections.Generic.IList&lt;System.Xml.XPath.XPathNavigator&gt; listNavigators);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathItem&gt; NavigatorsToItems(class System.Collections.Generic.IList`1&lt;class System.Xml.XPath.XPathNavigator&gt; listNavigators) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.NavigatorsToItems(System.Collections.Generic.IList{System.Xml.XPath.XPathNavigator})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Xml.XPath.XPathItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listNavigators" Type="System.Collections.Generic.IList&lt;System.Xml.XPath.XPathNavigator&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="listNavigators">Uma sequência de <see cref="T:System.Xml.XPath.XPathNavigator" /> instâncias.</param>
+        <summary>Converte uma sequência de <see cref="T:System.Xml.XPath.XPathNavigator" /> objetos ou valores a uma lista ou uma sequência de <see cref="T:System.Xml.XPath.XPathItem" /> objetos.</summary>
+        <returns>Uma lista genérica de tipo <see cref="T:System.Xml.XPath.XPathItem" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SingleToAtomicValue">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlAtomicValue SingleToAtomicValue (float value, int index, System.Xml.Xsl.Runtime.XmlQueryRuntime runtime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlAtomicValue SingleToAtomicValue(float32 value, int32 index, class System.Xml.Xsl.Runtime.XmlQueryRuntime runtime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.SingleToAtomicValue(System.Single,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="runtime" Type="System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um valor do tipo <see langword="Single" /> para converter.</param>
+        <param name="index">Um valor do tipo <see langword="Int32" /> que fornece o índice do item a converter.</param>
+        <param name="runtime">Uma instância da classe <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />.</param>
+        <summary>Converte um <see langword="Single" /> valor para um <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlAtomicValue" /> de objeto para o <see langword="Single" /> valor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StringToAtomicValue">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlAtomicValue StringToAtomicValue (string value, int index, System.Xml.Xsl.Runtime.XmlQueryRuntime runtime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlAtomicValue StringToAtomicValue(string value, int32 index, class System.Xml.Xsl.Runtime.XmlQueryRuntime runtime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.StringToAtomicValue(System.String,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="runtime" Type="System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um valor do tipo <see langword="String" /> para converter.</param>
+        <param name="index">Um valor do tipo <see langword="Int32" /> que fornece o índice do item a converter.</param>
+        <param name="runtime">Uma instância da classe <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />.</param>
+        <summary>Converte um valor de cadeia de caracteres em um <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlAtomicValue" /> de objeto para o <see langword="String" /> valor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="TimeSpanToAtomicValue">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlAtomicValue TimeSpanToAtomicValue (TimeSpan value, int index, System.Xml.Xsl.Runtime.XmlQueryRuntime runtime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlAtomicValue TimeSpanToAtomicValue(valuetype System.TimeSpan value, int32 index, class System.Xml.Xsl.Runtime.XmlQueryRuntime runtime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.TimeSpanToAtomicValue(System.TimeSpan,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.TimeSpan" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="runtime" Type="System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um valor do tipo <see cref="T:System.TimeSpan" /> para converter.</param>
+        <param name="index">Um valor do tipo <see langword="Int32" /> que fornece o índice do item a converter.</param>
+        <param name="runtime">Uma instância da classe <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />.</param>
+        <summary>Converte um <see cref="T:System.TimeSpan" /> valor para um <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlAtomicValue" /> de objeto para o <see langword="TimeSpan" /> valor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="XmlQualifiedNameToAtomicValue">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlAtomicValue XmlQualifiedNameToAtomicValue (System.Xml.XmlQualifiedName value, int index, System.Xml.Xsl.Runtime.XmlQueryRuntime runtime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlAtomicValue XmlQualifiedNameToAtomicValue(class System.Xml.XmlQualifiedName value, int32 index, class System.Xml.Xsl.Runtime.XmlQueryRuntime runtime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.XmlILStorageConverter.XmlQualifiedNameToAtomicValue(System.Xml.XmlQualifiedName,System.Int32,System.Xml.Xsl.Runtime.XmlQueryRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlAtomicValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="runtime" Type="System.Xml.Xsl.Runtime.XmlQueryRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma instância do <see cref="T:System.Xml.XmlQualifiedName" /> classe para converter.</param>
+        <param name="index">Um valor do tipo <see langword="Int32" /> que fornece o índice do item a converter.</param>
+        <param name="runtime">Uma instância da classe <see cref="T:System.Xml.Xsl.Runtime.XmlQueryRuntime" />.</param>
+        <summary>Converte um <see cref="T:System.Xml.XmlQualifiedName" /> valor para um <see cref="T:System.Xml.Schema.XmlAtomicValue" />.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlAtomicValue" /> de objeto para o <see langword="XmlQualifiedName" /> valor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

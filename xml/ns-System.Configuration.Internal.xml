@@ -1,0 +1,6 @@
+<Namespace Name="System.Configuration.Internal">
+  <Docs>
+    <summary>O <see cref="N:System.Configuration.Internal" /> namespace contém tipos de configuração que se destinam-se somente para uso interno.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,323 @@
+<Type Name="WorkflowRuntimeElement" FullName="System.ServiceModel.Configuration.WorkflowRuntimeElement">
+  <TypeSignature Language="C#" Value="public class WorkflowRuntimeElement : System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowRuntimeElement extends System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.WorkflowRuntimeElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.WorkflowServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BehaviorExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The WF3 types are deprecated.  Instead, please use the new WF4 types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um elemento de configuração que especifica as configurações para uma instância de <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> para hospedar os serviços do Windows Communication Foundation (WCF) baseados em fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para habilitar ou desabilitar uma da `ServiceDebugElement` recursos usando um arquivo de configuração, você deve:  
+  
+1.  Adicionar um atributo de configuração de comportamento para o elemento de serviço da sua [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviço. Comportamentos de ponto de extremidade são configurados no `endpoint` elementos; serviço comportamentos são configurados no `service` elementos.  
+  
+2.  Criar um `serviceBehaviors` seção e, em seguida, adicione um elemento de comportamento com o nome que corresponde do `behaviorConfiguration` valor do atributo da etapa 1.  
+  
+3.  Adicionar um `serviceDebug` elemento para o elemento de comportamento da etapa 2 e habilitar ou desabilitar as várias propriedades conforme necessário.  
+  
+   
+  
+## Examples  
+ `<serviceBehaviors>`  
+  
+ `<behavior name="ServiceBehavior">`  
+  
+ `<workflowRuntime name="WorkflowServiceHostRuntime" validateOnCreate="true" enablePerformanceCounters="true">`  
+  
+ `<services>`  
+  
+ `<add type="NetFx.Checkin.Scenario.WorkflowServices.WorkflowBasedServices.Common.TestPersistenceService.FilePersistenceService, NetFx.Checkin.Scenario.WorkflowServices.WorkflowBasedServices.Common"/>`  
+  
+ `</services>`  
+  
+ `</workflowRuntime>`  
+  
+ `</behavior>`  
+  
+ `</serviceBehaviors>`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowRuntimeElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.WorkflowRuntimeElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.WorkflowRuntimeElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BehaviorType">
+      <MemberSignature Language="C#" Value="public override Type BehaviorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BehaviorType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.BehaviorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo deste elemento de comportamento.</summary>
+        <value>O tipo do comportamento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CachedInstanceExpiration">
+      <MemberSignature Language="C#" Value="public TimeSpan CachedInstanceExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CachedInstanceExpiration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.CachedInstanceExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.TimeSpanOrInfiniteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cachedInstanceExpiration", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.PositiveTimeSpanValidator</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a hora em que uma instância armazenada em cache irá expirar.</summary>
+        <value>A hora em que uma instância armazenada em cache irá expirar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonParameters">
+      <MemberSignature Language="C#" Value="public System.Configuration.NameValueConfigurationCollection CommonParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.NameValueConfigurationCollection CommonParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.CommonParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("commonParameters", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.NameValueConfigurationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros comuns usados pelos serviços.</summary>
+        <value>Um <see langword="NameValueConfigurationCollection" /> que contém os parâmetros comuns usados pelos serviços. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, essa coleção incluirá a cadeia de caracteres de conexão de banco de dados que pode ser compartilhada com serviços duráveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBehavior">
+      <MemberSignature Language="C#" Value="protected override object CreateBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object CreateBehavior() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.WorkflowRuntimeElement.CreateBehavior" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um comportamento personalizado com base nas configurações deste elemento de configuração.</summary>
+        <returns>Um comportamento personalizado com base nas configurações deste elemento de configuração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnablePerformanceCounters">
+      <MemberSignature Language="C#" Value="public bool EnablePerformanceCounters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnablePerformanceCounters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.EnablePerformanceCounters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enablePerformanceCounters", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os contadores de desempenho estão habilitados.</summary>
+        <value>
+          <see langword="true" />Se os contadores de desempenho estão habilitados; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contadores de desempenho fornecem informações sobre várias estatísticas relacionadas ao fluxo de trabalho, mas elas causam uma penalidade de desempenho quando o mecanismo de tempo de execução do fluxo de trabalho é iniciado, e quando as instâncias de fluxo de trabalho estão em execução. O valor padrão é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do mecanismo de tempo de execução do fluxo de trabalho.</summary>
+        <value>Uma cadeia de caracteres que contém o nome do mecanismo de tempo de execução do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é usada para definir <xref:System.Workflow.Runtime.WorkflowRuntime.Name%2A>. O padrão é uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> instância que contém uma coleção de <see cref="T:System.Configuration.ConfigurationProperty" /> objetos que podem ser atributos ou <see cref="T:System.Configuration.ConfigurationElement" /> objetos deste elemento de configuração.</summary>
+        <value>Um <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> instância que contém uma coleção de <see cref="T:System.Configuration.ConfigurationProperty" /> objetos que podem ser atributos ou <see cref="T:System.Configuration.ConfigurationElement" /> objetos deste elemento de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement.ContextProtectionLevel%2A> propriedade também está contida nessa coleção de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Services">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection Services { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection Services" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.Services" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("services", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de serviços que serão adicionados para o <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> mecanismo.</summary>
+        <value>A coleção de serviços que serão adicionados para o <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> mecanismo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os serviços especificados no <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection> será inicializado pelo mecanismo de tempo de execução de fluxo de trabalho e adicionado para seus serviços quando apropriado <xref:System.Workflow.Runtime.WorkflowRuntime> construtor seja chamado. Portanto, os serviços especificados no <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection> devem seguir determinadas regras sobre as assinaturas dos seus construtores. Para obter mais informações, consulte <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateOnCreate">
+      <MemberSignature Language="C#" Value="public bool ValidateOnCreate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateOnCreate" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WorkflowRuntimeElement.ValidateOnCreate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("validateOnCreate", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a validação ocorrerá na criação da instância do fluxo de trabalho.</summary>
+        <value>
+          <see langword="true" />Se a validação ocorrerá na criação. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `true`, a validação do fluxo de trabalho é executada sempre que <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> é chamado. Se forem encontrados erros de validação, um <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> erro será lançado.  
+  
+ Quando essa propriedade é definida como `false`, <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> cria uma instância de fluxo de trabalho e ignora a validação. Nesse caso, o aplicativo de host deve garantir que o fluxo de trabalho está configurado corretamente ou o erro de tempo de execução.  
+  
+ O valor padrão dessa propriedade é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

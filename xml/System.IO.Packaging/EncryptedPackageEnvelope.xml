@@ -1,0 +1,623 @@
+<Type Name="EncryptedPackageEnvelope" FullName="System.IO.Packaging.EncryptedPackageEnvelope">
+  <TypeSignature Language="C#" Value="public class EncryptedPackageEnvelope : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EncryptedPackageEnvelope extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.EncryptedPackageEnvelope" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um arquivo composto OLE que contém um pacote criptografado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.EncryptedPackageEnvelope>não tem nenhum construtor público.  Um <xref:System.IO.Packaging.EncryptedPackageEnvelope> é criado pelo uso do estático <xref:System.IO.Packaging.EncryptedPackageEnvelope.Create%2A>, <xref:System.IO.Packaging.EncryptedPackageEnvelope.CreateFromPackage%2A>, ou <xref:System.IO.Packaging.EncryptedPackageEnvelope.Open%2A> métodos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o pacote criptografado e o arquivo composto OLE que mantém a ele.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para fechar um <xref:System.IO.Packaging.EncryptedPackageEnvelope>.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubencrypt)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubencrypt)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.EncryptedPackageEnvelope Create (System.IO.Stream envelopeStream, System.Security.RightsManagement.PublishLicense publishLicense, System.Security.RightsManagement.CryptoProvider cryptoProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.EncryptedPackageEnvelope Create(class System.IO.Stream envelopeStream, class System.Security.RightsManagement.PublishLicense publishLicense, class System.Security.RightsManagement.CryptoProvider cryptoProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.Create(System.IO.Stream,System.Security.RightsManagement.PublishLicense,System.Security.RightsManagement.CryptoProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.EncryptedPackageEnvelope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeStream" Type="System.IO.Stream" />
+        <Parameter Name="publishLicense" Type="System.Security.RightsManagement.PublishLicense" />
+        <Parameter Name="cryptoProvider" Type="System.Security.RightsManagement.CryptoProvider" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeStream">O fluxo no qual criar o arquivo.</param>
+        <param name="publishLicense">A licença de publicação que é inserida no arquivo composto.</param>
+        <param name="cryptoProvider">Um objeto que determina quais operações o usuário atual tem permissão para executar o conteúdo criptografado.</param>
+        <summary>Cria e retorna um <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> no fluxo especificado.</summary>
+        <returns>O <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O usuário atual tem acesso de leitura/gravação para o novo arquivo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="envelopeStream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="envelopeStream" />não fornece acesso de leitura/gravação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.EncryptedPackageEnvelope Create (string envelopeFileName, System.Security.RightsManagement.PublishLicense publishLicense, System.Security.RightsManagement.CryptoProvider cryptoProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.EncryptedPackageEnvelope Create(string envelopeFileName, class System.Security.RightsManagement.PublishLicense publishLicense, class System.Security.RightsManagement.CryptoProvider cryptoProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.Create(System.String,System.Security.RightsManagement.PublishLicense,System.Security.RightsManagement.CryptoProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.EncryptedPackageEnvelope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeFileName" Type="System.String" />
+        <Parameter Name="publishLicense" Type="System.Security.RightsManagement.PublishLicense" />
+        <Parameter Name="cryptoProvider" Type="System.Security.RightsManagement.CryptoProvider" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeFileName">O nome do arquivo composto OLE.</param>
+        <param name="publishLicense">A licença de publicação que é inserida no arquivo composto.</param>
+        <param name="cryptoProvider">Um objeto que determina quais operações o usuário atual tem permissão para executar o conteúdo criptografado.</param>
+        <summary>Cria e retorna um <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> e concede a ele o nome de arquivo especificado.</summary>
+        <returns>O <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um arquivo com o nome especificado já existir, ele será substituído.  
+  
+ O usuário atual tem acesso de leitura/gravação para o arquivo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="envelopeFileName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateFromPackage">
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Cria e retorna um <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> que usa um pacote não criptografado existente como a origem de seu conteúdo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Packaging.EncryptedPackageEnvelope.CreateFromPackage%2A> método para instanciar um <xref:System.IO.Packaging.EncryptedPackageEnvelope>.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubencrypt)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubencrypt)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateFromPackage">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.EncryptedPackageEnvelope CreateFromPackage (System.IO.Stream envelopeStream, System.IO.Stream packageStream, System.Security.RightsManagement.PublishLicense publishLicense, System.Security.RightsManagement.CryptoProvider cryptoProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.EncryptedPackageEnvelope CreateFromPackage(class System.IO.Stream envelopeStream, class System.IO.Stream packageStream, class System.Security.RightsManagement.PublishLicense publishLicense, class System.Security.RightsManagement.CryptoProvider cryptoProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.CreateFromPackage(System.IO.Stream,System.IO.Stream,System.Security.RightsManagement.PublishLicense,System.Security.RightsManagement.CryptoProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.EncryptedPackageEnvelope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeStream" Type="System.IO.Stream" />
+        <Parameter Name="packageStream" Type="System.IO.Stream" />
+        <Parameter Name="publishLicense" Type="System.Security.RightsManagement.PublishLicense" />
+        <Parameter Name="cryptoProvider" Type="System.Security.RightsManagement.CryptoProvider" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeStream">O fluxo no qual criar o arquivo.</param>
+        <param name="packageStream">O fluxo que representa o pacote não criptografado existente.</param>
+        <param name="publishLicense">A licença de publicação que é inserida no arquivo composto.</param>
+        <param name="cryptoProvider">Um objeto que determina quais operações o usuário atual tem permissão para executar o conteúdo criptografado.</param>
+        <summary>Cria e retorna um <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> (no fluxo especificado), que usa o pacote não criptografado especificado como seu conteúdo.</summary>
+        <returns>O <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O usuário atual tem acesso de leitura/gravação para o novo arquivo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Packaging.EncryptedPackageEnvelope.CreateFromPackage%2A> método para instanciar um <xref:System.IO.Packaging.EncryptedPackageEnvelope>.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubencrypt)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubencrypt)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="envelopeStream" /> ou <paramref name="packageStream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="envelopeStream" />não fornece acesso de leitura/gravação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromPackage">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.EncryptedPackageEnvelope CreateFromPackage (string envelopeFileName, System.IO.Stream packageStream, System.Security.RightsManagement.PublishLicense publishLicense, System.Security.RightsManagement.CryptoProvider cryptoProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.EncryptedPackageEnvelope CreateFromPackage(string envelopeFileName, class System.IO.Stream packageStream, class System.Security.RightsManagement.PublishLicense publishLicense, class System.Security.RightsManagement.CryptoProvider cryptoProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.CreateFromPackage(System.String,System.IO.Stream,System.Security.RightsManagement.PublishLicense,System.Security.RightsManagement.CryptoProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.EncryptedPackageEnvelope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeFileName" Type="System.String" />
+        <Parameter Name="packageStream" Type="System.IO.Stream" />
+        <Parameter Name="publishLicense" Type="System.Security.RightsManagement.PublishLicense" />
+        <Parameter Name="cryptoProvider" Type="System.Security.RightsManagement.CryptoProvider" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeFileName">O nome do arquivo composto OLE.</param>
+        <param name="packageStream">O fluxo que representa o pacote não criptografado existente.</param>
+        <param name="publishLicense">A licença de publicação que é inserida no arquivo composto.</param>
+        <param name="cryptoProvider">Um objeto que determina quais operações o usuário atual tem permissão para executar o conteúdo criptografado.</param>
+        <summary>Cria e retorna um <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> que usa o pacote não criptografado especificado como seu conteúdo e concede a ele o nome de arquivo especificado.</summary>
+        <returns>O <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um arquivo com o nome especificado já existir, ele será substituído.  
+  
+ O usuário atual tem acesso de leitura/gravação para o arquivo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Packaging.EncryptedPackageEnvelope.CreateFromPackage%2A> método para instanciar um <xref:System.IO.Packaging.EncryptedPackageEnvelope>.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubencrypt)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubencrypt)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="envelopeFileName" /> ou <paramref name="packageStream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.IO.Packaging.EncryptedPackageEnvelope.Dispose%2A> quando terminar com um <xref:System.IO.Packaging.EncryptedPackageEnvelope>. O <xref:System.IO.Packaging.EncryptedPackageEnvelope.Dispose%2A> método deixa o <xref:System.IO.Packaging.EncryptedPackageEnvelope> em um estado inutilizável. Depois de chamar <xref:System.IO.Packaging.EncryptedPackageEnvelope.Dispose%2A>, você deve liberar todas as referências para o <xref:System.IO.Packaging.EncryptedPackageEnvelope> para o coletor de lixo possa recuperar a memória que o <xref:System.IO.Packaging.EncryptedPackageEnvelope> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.IO.Packaging.EncryptedPackageEnvelope.Dispose%2A> antes de liberar sua última referência para o <xref:System.IO.Packaging.EncryptedPackageEnvelope>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.IO.Packaging.EncryptedPackageEnvelope> do objeto <xref:System.Object.Finalize%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro for true, este método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.IO.Packaging.EncryptedPackageEnvelope> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FileOpenAccess">
+      <MemberSignature Language="C#" Value="public System.IO.FileAccess FileOpenAccess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.FileAccess FileOpenAccess" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.EncryptedPackageEnvelope.FileOpenAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o arquivo foi aberto com acesso de leitura, gravação, ou ambos.</summary>
+        <value>O <see cref="T:System.IO.FileAccess" /> valor que foi usado para abrir o arquivo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Liberar o fluxo para ambos os <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> e seu conteúdo do pacote.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPackage">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.Package GetPackage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Packaging.Package GetPackage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.GetPackage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.Package</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o pacote criptografado dentro do <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" />.</summary>
+        <returns>O <see cref="T:System.IO.Packaging.Package" /> no envelope.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEncryptedPackageEnvelope">
+      <MemberSignature Language="C#" Value="public static bool IsEncryptedPackageEnvelope (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsEncryptedPackageEnvelope(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.IsEncryptedPackageEnvelope(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo que é testado.</param>
+        <summary>Obtém um valor que especifica se o fluxo especificado é um arquivo composto de OLE com um fluxo de pacote criptografado.</summary>
+        <returns>
+          <see langword="true" />Se o fluxo especificado é um arquivo composto de OLE com um fluxo de pacote criptografado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEncryptedPackageEnvelope">
+      <MemberSignature Language="C#" Value="public static bool IsEncryptedPackageEnvelope (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsEncryptedPackageEnvelope(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.IsEncryptedPackageEnvelope(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O arquivo que é testado.</param>
+        <summary>Obtém um valor que especifica se o arquivo especificado é um arquivo composto de OLE com um fluxo de pacote criptografado.</summary>
+        <returns>
+          <see langword="true" />Se o arquivo especificado é um arquivo composto de OLE com um fluxo de pacote criptografado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para testar a criptografia.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubencrypt)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubencrypt)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.EncryptedPackageEnvelope Open (System.IO.Stream envelopeStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.EncryptedPackageEnvelope Open(class System.IO.Stream envelopeStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.Open(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.EncryptedPackageEnvelope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeStream">O fluxo que contém o pacote criptografado.</param>
+        <summary>Abra o pacote criptografado no fluxo especificado.</summary>
+        <returns>O <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> que é aberto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O fluxo deve ter um pacote criptografado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.EncryptedPackageEnvelope Open (string envelopeFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.EncryptedPackageEnvelope Open(string envelopeFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.Open(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.EncryptedPackageEnvelope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeFileName">O arquivo que contém o pacote criptografado.</param>
+        <summary>Abra o pacote criptografado no arquivo especificado como leitura somente e não compartilhada.</summary>
+        <returns>O <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> que é aberto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo deve ter um pacote criptografado.  
+  
+ O arquivo aberto é lido apenas e não compartilhado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.EncryptedPackageEnvelope Open (string envelopeFileName, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.EncryptedPackageEnvelope Open(string envelopeFileName, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.Open(System.String,System.IO.FileAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.EncryptedPackageEnvelope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeFileName" Type="System.String" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeFileName">O arquivo que contém o pacote criptografado.</param>
+        <param name="access">O tipo de acesso.</param>
+        <summary>Abra o pacote criptografado no arquivo especificado como não compartilhado e com o acesso especificado.</summary>
+        <returns>O <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> que é aberto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo deve ter um pacote criptografado.  
+  
+ O arquivo aberto é removido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.IO.Packaging.EncryptedPackageEnvelope Open (string envelopeFileName, System.IO.FileAccess access, System.IO.FileShare sharing);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Packaging.EncryptedPackageEnvelope Open(string envelopeFileName, valuetype System.IO.FileAccess access, valuetype System.IO.FileShare sharing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.EncryptedPackageEnvelope.Open(System.String,System.IO.FileAccess,System.IO.FileShare)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.EncryptedPackageEnvelope</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="envelopeFileName" Type="System.String" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="sharing" Type="System.IO.FileShare" />
+      </Parameters>
+      <Docs>
+        <param name="envelopeFileName">O arquivo que contém o pacote criptografado.</param>
+        <param name="access">O tipo de acesso.</param>
+        <param name="sharing">O tipo de compartilhamento.</param>
+        <summary>Abra o pacote criptografado no arquivo especificado e concede o acesso especificado e compartilhamento.</summary>
+        <returns>O <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" /> que é aberto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo deve ter um pacote criptografado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PackageProperties">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.PackageProperties PackageProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Packaging.PackageProperties PackageProperties" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.EncryptedPackageEnvelope.PackageProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.PackageProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os principais propriedades do pacote (por exemplo, título e assunto) do documento direitos gerenciado.</summary>
+        <value>O <see cref="T:System.IO.Packaging.PackageProperties" /> para o pacote.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essas propriedades de núcleo são armazenadas em fluxos padrão de propriedade OLE (\005SummaryInformation e \005DocumentSummaryInformation). As propriedades de núcleo também são armazenadas no próprio pacote. É responsabilidade do aplicativo para manter os dois conjuntos de propriedades sincronizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightsManagementInformation">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.RightsManagementInformation RightsManagementInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Packaging.RightsManagementInformation RightsManagementInformation" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.EncryptedPackageEnvelope.RightsManagementInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.RightsManagementInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os direitos de informações de gerenciamento armazenadas na <see cref="T:System.IO.Packaging.EncryptedPackageEnvelope" />; especificamente, o <see cref="T:System.Security.RightsManagement.PublishLicense" /> e <see cref="T:System.Security.RightsManagement.UseLicense" />s armazenadas no arquivo composto OLE que incorpora o gerenciamento de direitos protegidos pacote</summary>
+        <value>O <see cref="T:System.IO.Packaging.RightsManagementInformation" /> para o pacote.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter <xref:System.IO.Packaging.RightsManagementInformation> para um pacote criptografado usando o <xref:System.IO.Packaging.EncryptedPackageEnvelope.RightsManagementInformation%2A> propriedade.  
+  
+ [!code-csharp[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/csharp/VS_Snippets_Wpf/RightsManagedPackagePublish/CSharp/Window1.xaml.cs#rmpkgpubencrypt)]
+ [!code-vb[RightsManagedPackagePublish#RmPkgPubEncrypt](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RightsManagedPackagePublish/visualbasic/window1.xaml.vb#rmpkgpubencrypt)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StorageInfo">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.StorageInfo StorageInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Packaging.StorageInfo StorageInfo" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.EncryptedPackageEnvelope.StorageInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.StorageInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que fornece acesso para os fluxos de arquivo composto fora do pacote criptografado.</summary>
+        <value>Um <see cref="T:System.IO.Packaging.StorageInfo" /> representar fluxos no arquivo composto OLE que estão fora do pacote criptografado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

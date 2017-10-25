@@ -1,0 +1,414 @@
+<Type Name="ControlParameter" FullName="System.Web.UI.WebControls.ControlParameter">
+  <TypeSignature Language="C#" Value="public class ControlParameter : System.Web.UI.WebControls.Parameter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlParameter extends System.Web.UI.WebControls.Parameter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ControlParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Parameter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("ControlID")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Associa o valor de uma propriedade de um <see cref="T:System.Web.UI.Control" /> a um objeto de parâmetro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.WebControls.ControlParameter> classe para associar o valor de um <xref:System.Web.UI.Control> propriedade, como <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> ou <xref:System.Web.UI.WebControls.ListControl.SelectedIndex%2A>, para um parâmetro que é usado em uma consulta SQL parametrizada, o método do objeto comercial ou a expressão de filtragem.  
+  
+ O <xref:System.Web.UI.WebControls.ControlParameter> classe fornece duas propriedades, além daqueles herdado da <xref:System.Web.UI.WebControls.Parameter> classe: <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> e <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A>. O <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> propriedade identifica qual <xref:System.Web.UI.Control> instância para associar a e o <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedade identifica a propriedade pública do <xref:System.Web.UI.Control> do qual o <xref:System.Web.UI.WebControls.ControlParameter> classe recupera um valor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ControlParameter> objeto para associar os dados exibidos em um <xref:System.Web.UI.WebControls.ListBox> controle para o valor selecionado de um <xref:System.Web.UI.WebControls.DropDownList> controle em um cenário declarativo. O <xref:System.Web.UI.WebControls.ControlParameter> objeto é adicionado ao <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção do <xref:System.Web.UI.WebControls.SqlDataSource> controle no formulário e corresponde ao "@Title" texto de espaço reservado de <xref:System.Web.UI.WebControls.SqlDataSource.SelectCommand%2A> propriedade.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSource_2sql#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_2sql/CS/sql2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSource_2sql#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_2sql/VB/sql2vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância não nomeada da classe <see cref="T:System.Web.UI.WebControls.ControlParameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.ControlParameter> objeto criado com o <xref:System.Web.UI.WebControls.ControlParameter.%23ctor%2A> construtor é inicializada com valores padrão para todas as suas propriedades. O <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> e <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedades são inicializadas para <xref:System.String.Empty?displayProperty=nameWithType>. Além disso, o <xref:System.Web.UI.WebControls.Parameter.Name%2A> propriedade é inicializada para <xref:System.String.Empty?displayProperty=nameWithType>, o <xref:System.Web.UI.WebControls.Parameter.Type%2A> propriedade é inicializada para <xref:System.TypeCode?displayProperty=nameWithType>, o <xref:System.Web.UI.WebControls.Parameter.Direction%2A> propriedade é inicializada para <xref:System.Data.ParameterDirection.Input>e o <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade é inicializada para `null`.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como criar um <xref:System.Web.UI.WebControls.ControlParameter> do objeto com o <xref:System.Web.UI.WebControls.ControlParameter.%23ctor%2A> construtor. O <xref:System.Web.UI.WebControls.ControlParameter> objeto associa o <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> propriedade de um <xref:System.Web.UI.WebControls.DropDownList> controle para uma consulta SQL parametrizada que recupera os dados exibidos em um <xref:System.Web.UI.WebControls.DataGrid> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.Parameter_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Parameter_3/CS/param1acs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.Parameter_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Parameter_3/VB/param1avb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ControlParameter (System.Web.UI.WebControls.ControlParameter original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.ControlParameter original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlParameter.#ctor(System.Web.UI.WebControls.ControlParameter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="System.Web.UI.WebControls.ControlParameter" />
+      </Parameters>
+      <Docs>
+        <param name="original">Um <see cref="T:System.Web.UI.WebControls.ControlParameter" /> instância na qual a instância atual é inicializada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.ControlParameter" /> classe com valores da instância especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ControlParameter.%23ctor%2A> construtor é um construtor de cópia protegida que é usado para clonar um <xref:System.Web.UI.WebControls.ControlParameter> instância. Os valores a <xref:System.Web.UI.WebControls.ControlParameter> do objeto, incluindo o <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A>, <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A>, <xref:System.Web.UI.WebControls.Parameter.Name%2A>, e <xref:System.Web.UI.WebControls.Parameter.Type%2A> propriedades, são transferidos para a nova instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlParameter (string name, string controlID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string controlID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlParameter.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="controlID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="controlID">O nome do controle associado para o parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <summary>Inicializa uma nova instância nomeada do <see cref="T:System.Web.UI.WebControls.ControlParameter" /> de classe, usando o nome do controle especificado para identificar qual controle para vincular.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.ControlParameter> objeto criado com o <xref:System.Web.UI.WebControls.ControlParameter.%23ctor%2A> construtor é inicializada com o nome do parâmetro especificado e <xref:System.Web.UI.Control> nome que identifica o <xref:System.Web.UI.Control> que associa o parâmetro para. Outras propriedades, incluindo <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A>, <xref:System.Web.UI.WebControls.Parameter.Type%2A>, e <xref:System.Web.UI.WebControls.Parameter.Direction%2A>, são inicializadas com valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlParameter (string name, string controlID, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string controlID, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlParameter.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="controlID" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="controlID">O nome do controle associado para o parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <param name="propertyName">O nome da propriedade no controle associado para o parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <summary>Inicializa uma nova instância nomeada do <see cref="T:System.Web.UI.WebControls.ControlParameter" /> de classe, usando o nome da propriedade especificado e o nome do controle para identificar o controle para vincular.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.ControlParameter> objeto criado com o <xref:System.Web.UI.WebControls.ControlParameter.%23ctor%2A> construtor é inicializada com o nome do parâmetro especificado, <xref:System.Web.UI.Control> nome, e <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedade que identifica o <xref:System.Web.UI.Control> que associa o parâmetro para. Outras propriedades, incluindo <xref:System.Web.UI.WebControls.Parameter.Type%2A>, <xref:System.Web.UI.WebControls.Parameter.Direction%2A>, e <xref:System.Web.UI.WebControls.Parameter.ConvertEmptyStringToNull%2A>, são inicializadas com valores padrão.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como criar <xref:System.Web.UI.WebControls.ControlParameter> objetos usando o <xref:System.Web.UI.WebControls.ControlParameter.%23ctor%2A> construtor. Associam os parâmetros para os valores de <xref:System.Web.UI.WebControls.TextBox> e <xref:System.Web.UI.WebControls.DropDownList> controles para inserir dados em um banco de dados de uma página de Web Forms.  
+  
+ [!code-csharp[System.Web.UI.WebControls.AccessDataSource_3#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.AccessDataSource_3/CS/webform5cs.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.AccessDataSource_3#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.AccessDataSource_3/VB/webform5vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlParameter (string name, System.Data.DbType dbType, string controlID, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.DbType dbType, string controlID, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlParameter.#ctor(System.String,System.Data.DbType,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.DbType" />
+        <Parameter Name="controlID" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="dbType">O tipo de dados do parâmetro.</param>
+        <param name="controlID">O nome do controle associado para o parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <param name="propertyName">O nome da propriedade do controle associado para o parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.ControlParameter" /> classe usando o nome do parâmetro especificado, o tipo de banco de dados, ID de controle e o nome da propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlParameter (string name, TypeCode type, string controlID, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.TypeCode type, string controlID, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlParameter.#ctor(System.String,System.TypeCode,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.TypeCode" />
+        <Parameter Name="controlID" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="type">O tipo que representa o parâmetro. O padrão é <see cref="F:System.TypeCode.Object" />.</param>
+        <param name="controlID">O nome do controle associado para o parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <param name="propertyName">O nome da propriedade do controle associado para o parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <summary>Inicializa uma nova instância nomeada e fortemente tipada do <see cref="T:System.Web.UI.WebControls.ControlParameter" /> de classe, usando o nome da propriedade especificado e o nome do controle para identificar o controle para vincular.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.ControlParameter> objeto criado com o <xref:System.Web.UI.WebControls.ControlParameter.%23ctor%2A> construtor é inicializada com o nome do parâmetro especificado, <xref:System.Web.UI.WebControls.Parameter.Type%2A>, <xref:System.Web.UI.Control> nome, e <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedade. Somente o <xref:System.Web.UI.WebControls.Parameter.Direction%2A> e <xref:System.Web.UI.WebControls.Parameter.ConvertEmptyStringToNull%2A> propriedades são inicializadas com os valores padrão.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como usar o <xref:System.Web.UI.WebControls.ControlParameter.%23ctor%2A> construtor para criar dois <xref:System.Web.UI.WebControls.ControlParameter> objetos e associá-los com um <xref:System.Web.UI.WebControls.SqlDataSource> controle.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ControlParameter_3#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ControlParameter_3/CS/webform5cs.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ControlParameter_3#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ControlParameter_3/VB/webform5vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.Parameter Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.Parameter Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlParameter.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Parameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma duplicata do atual <see cref="T:System.Web.UI.WebControls.ControlParameter" /> instância.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.ControlParameter" /> que é uma cópia exata do atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ControlParameter.Clone%2A> chamadas de método de <xref:System.Web.UI.WebControls.ControlParameter.%23ctor%2A> construtor cópia para inicializar uma nova instância do <xref:System.Web.UI.WebControls.ControlParameter> classe com os valores da instância atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlID">
+      <MemberSignature Language="C#" Value="public string ControlID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ControlID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ControlParameter.ControlID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.ControlIDConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o nome do controle ao qual o objeto <see cref="T:System.Web.UI.WebControls.ControlParameter" /> é associado.</summary>
+        <value>Um <see langword="string" /> que representa o nome do controle de servidor Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> propriedade é uma propriedade necessária que identifica o <xref:System.Web.UI.Control> instância em que o <xref:System.Web.UI.WebControls.ControlParameter> objeto associa a em tempo de execução.  
+  
+ Normalmente, o <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> e <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedades forem definidas para o <xref:System.Web.UI.WebControls.ControlParameter.Evaluate%2A> método corretamente vincular a um controle. Se você não definir a <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> propriedade, o <xref:System.Web.UI.WebControls.ControlParameter.Evaluate%2A> método lança um <xref:System.ArgumentException> exceção quando chamado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ControlParameter> objeto para associar os dados exibidos em um <xref:System.Web.UI.WebControls.ListBox> controle para o valor selecionado de um <xref:System.Web.UI.WebControls.DropDownList> controle em um cenário declarativo. O <xref:System.Web.UI.WebControls.ControlParameter> objeto é adicionado ao <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção do <xref:System.Web.UI.WebControls.SqlDataSource> controle no formulário e corresponde ao "@Title" texto de espaço reservado de <xref:System.Web.UI.WebControls.SqlDataSource.SelectCommand%2A> propriedade.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSource_2sql#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_2sql/CS/sql2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSource_2sql#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_2sql/VB/sql2vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> e <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedades para identificar o controle que um <xref:System.Web.UI.WebControls.ControlParameter> objeto está associado a. O exemplo preenche uma <xref:System.Web.UI.WebControls.ListBox> controle com valores. O <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> propriedade o <xref:System.Web.UI.WebControls.ListBox> controle é usado para filtrar os dados recuperados por um <xref:System.Web.UI.WebControls.SqlDataSource> controlar e exibidos por um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ControlParameter_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ControlParameter_2/CS/webform1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ControlParameter_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ControlParameter_2/VB/webform1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="protected override object Evaluate (System.Web.HttpContext context, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object Evaluate(class System.Web.HttpContext context, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="context">Atual <see cref="T:System.Web.HttpContext" /> da solicitação.</param>
+        <param name="control">O <see cref="T:System.Web.UI.Control" /> associado para o parâmetro.</param>
+        <summary>Atualiza e retorna o valor da <see cref="T:System.Web.UI.WebControls.ControlParameter" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor atualizado do parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ControlParameter> objeto tenta associar o <xref:System.Web.UI.Control> objeto e propriedade sempre que o <xref:System.Web.UI.WebControls.ControlParameter.Evaluate%2A> método é chamado. O <xref:System.Web.UI.WebControls.ControlParameter.Evaluate%2A> método retorna o valor da propriedade do controle que é identificado pela combinação da <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> e <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedades.  
+  
+ O <xref:System.Web.UI.WebControls.ControlParameter> nunca classe usa a <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade, que é herdada do <xref:System.Web.UI.WebControls.Parameter>, ao associar ao valor da propriedade do controle.  
+  
+> [!NOTE]
+>  Nessa implementação do método, o `context` parâmetro é ignorado. Se o `control` parâmetro é `null`, `null` será retornado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade <see cref="P:System.Web.UI.WebControls.ControlParameter.ControlID" /> não foi definida.  
+  
+ \- ou -  
+  
+ O <see cref="P:System.Web.UI.WebControls.ControlParameter.PropertyName" /> propriedade não está definida e o <see cref="T:System.Web.UI.Control" /> identificado pelo <see cref="P:System.Web.UI.WebControls.ControlParameter.ControlID" /> propriedade não é decorada com um <see cref="T:System.Web.UI.ControlValuePropertyAttribute" /> atributo.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Web.UI.Control.FindControl(System.String)" />não retorna o controle especificado.  
+  
+ \- ou -  
+  
+ O controle identificado pelo <see cref="P:System.Web.UI.WebControls.ControlParameter.ControlID" /> propriedade não dá suporte para a propriedade nomeada pelo <see cref="P:System.Web.UI.WebControls.ControlParameter.PropertyName" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ControlParameter.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.ControlPropertyNameConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da propriedade do controle identificado pela propriedade <see cref="P:System.Web.UI.WebControls.ControlParameter.ControlID" /> à qual o objeto <see cref="T:System.Web.UI.WebControls.ControlParameter" /> está associado.</summary>
+        <value>Um <see langword="string" /> que representa o nome da propriedade de um controle ao qual o <see cref="T:System.Web.UI.WebControls.ControlParameter" /> está associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedade identifica a propriedade pública do <xref:System.Web.UI.Control> objeto identificado pelo <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> propriedade que o <xref:System.Web.UI.WebControls.ControlParameter> objeto associa a em tempo de execução. <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A>pode ser definido como uma cadeia de caracteres simple, como "SelectedValue" ou uma expressão usando <xref:System.Web.UI.DataBinder.Eval%2A> sintaxe para identificar as propriedades de controle complexo.  
+  
+ Enquanto o <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedade normalmente é opcional, ambos <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> e <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedades forem definidas para o <xref:System.Web.UI.WebControls.ControlParameter.Evaluate%2A> método corretamente vincular a um controle. Se você definir o <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> propriedade, mas não o <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedade, o <xref:System.Web.UI.WebControls.ControlParameter.Evaluate%2A> método tenta usar o <xref:System.Web.UI.ControlValuePropertyAttribute> atributo para identificar um padrão <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedade. (É a responsabilidade de autores de controle para especificar esse atributo.) Se isso falhar, <xref:System.Web.UI.WebControls.ControlParameter.Evaluate%2A> lança um <xref:System.ArgumentException> exceção.  
+  
+ A tabela a seguir identifica quais controles ASP.NET decoram propriedades com o <xref:System.Web.UI.ControlValuePropertyAttribute> atributo.  
+  
+|Controle|Propriedade|  
+|-------------|--------------|  
+|<xref:System.Web.UI.WebControls.Calendar>|<xref:System.Web.UI.WebControls.Calendar.SelectedDate%2A>|  
+|<xref:System.Web.UI.WebControls.CheckBox>|<xref:System.Web.UI.WebControls.CheckBox.Checked%2A>|  
+|<xref:System.Web.UI.WebControls.DataList>|<xref:System.Web.UI.WebControls.DataList.SelectedValue%2A>|  
+|<xref:System.Web.UI.WebControls.DetailsView>|<xref:System.Web.UI.WebControls.DetailsView.SelectedValue%2A>|  
+|<xref:System.Web.UI.WebControls.FormView>|<xref:System.Web.UI.WebControls.FormView.SelectedValue%2A>|  
+|<xref:System.Web.UI.WebControls.GridView>|<xref:System.Web.UI.WebControls.GridView.SelectedValue%2A>|  
+|<xref:System.Web.UI.WebControls.Label>|<xref:System.Web.UI.WebControls.Label.Text%2A>|  
+|<xref:System.Web.UI.WebControls.ListControl>|<xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A>|  
+|<xref:System.Web.UI.WebControls.Menu>|<xref:System.Web.UI.WebControls.Menu.SelectedValue%2A>|  
+|<xref:System.Web.UI.WebControls.TextBox>|<xref:System.Web.UI.WebControls.TextBox.Text%2A>|  
+|<xref:System.Web.UI.WebControls.TreeView>|<xref:System.Web.UI.WebControls.TreeView.SelectedValue%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ControlParameter> objeto para associar os dados exibidos em um <xref:System.Web.UI.WebControls.ListBox> controle para o valor selecionado de um <xref:System.Web.UI.WebControls.DropDownList> controle em um cenário declarativo. O <xref:System.Web.UI.WebControls.DropDownList> controle deriva o <xref:System.Web.UI.WebControls.ListControl> controle. O <xref:System.Web.UI.WebControls.ControlParameter> objeto é adicionado ao <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção do <xref:System.Web.UI.WebControls.SqlDataSource> controle no formulário e corresponde ao "@Title" texto de espaço reservado de <xref:System.Web.UI.WebControls.SqlDataSource.SelectCommand%2A> propriedade.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSource_2sql#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_2sql/CS/sql2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSource_2sql#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_2sql/VB/sql2vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> e <xref:System.Web.UI.WebControls.ControlParameter.PropertyName%2A> propriedades para identificar o controle que um <xref:System.Web.UI.WebControls.ControlParameter> objeto está associado a. O exemplo preenche uma <xref:System.Web.UI.WebControls.ListBox> controle com valores. O <xref:System.Web.UI.WebControls.ListControl.SelectedValue%2A> propriedade o <xref:System.Web.UI.WebControls.ListBox> controle é usado para filtrar os dados recuperados por um <xref:System.Web.UI.WebControls.SqlDataSource> controlar e exibidos por um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ControlParameter_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ControlParameter_2/CS/webform1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ControlParameter_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ControlParameter_2/VB/webform1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

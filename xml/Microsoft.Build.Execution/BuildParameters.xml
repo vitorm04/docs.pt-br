@@ -1,0 +1,589 @@
+<Type Name="BuildParameters" FullName="Microsoft.Build.Execution.BuildParameters">
+  <TypeSignature Language="C#" Value="public class BuildParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildParameters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildParameters" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe representa todas as configurações que devem ser especificadas para iniciar uma compilação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildParameters.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria parâmetros de compilação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Construtor para uso na configuração de todas as propriedades de compilação programaticamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildParameters (Microsoft.Build.Evaluation.ProjectCollection projectCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Build.Evaluation.ProjectCollection projectCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildParameters.#ctor(Microsoft.Build.Evaluation.ProjectCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectCollection" Type="Microsoft.Build.Evaluation.ProjectCollection" />
+      </Parameters>
+      <Docs>
+        <param name="projectCollection">O ProjectCollection do qual BuildParameters deve preencher o próprio.</param>
+        <summary>Cria parâmetros de compilação e inicializa-los de uma coleção de projeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildProcessEnvironment">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; BuildProcessEnvironment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; BuildProcessEnvironment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.BuildProcessEnvironment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as variáveis de ambiente que foram definidas quando esta compilação foi criada.</summary>
+        <value>Retorna as variáveis de ambiente definidas quando a compilação foi criada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildThreadPriority">
+      <MemberSignature Language="C#" Value="public System.Threading.ThreadPriority BuildThreadPriority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Threading.ThreadPriority BuildThreadPriority" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.BuildThreadPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ThreadPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade de thread desejado para a construção.</summary>
+        <value>Retorna a prioridade de thread de compilação</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.BuildParameters Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.BuildParameters Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildParameters.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildParameters</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone do objeto de parâmetros de compilação.</summary>
+        <returns>Retorna um clone do objeto de parâmetros de compilação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um clone de coleções de agente de log, mas não clonar profundamente os agentes em.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Culture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da cultura a ser usada durante a compilação.</summary>
+        <value>Retorna a cultura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultToolsVersion">
+      <MemberSignature Language="C#" Value="public string DefaultToolsVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultToolsVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.DefaultToolsVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão de ferramentas padrão para a compilação.</summary>
+        <value>Retorna a versão das ferramentas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailedSummary">
+      <MemberSignature Language="C#" Value="public bool DetailedSummary { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DetailedSummary" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.DetailedSummary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma opção que especifica se a compilação emitirá um resumo detalhado no final do log.</summary>
+        <value>Retorna o valor de uma opção que especifica se a compilação emitirá um resumo detalhado no final do log</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableInProcNode">
+      <MemberSignature Language="C#" Value="public bool DisableInProcNode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableInProcNode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.DisableInProcNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o sinalizador de determinar se irá usar o processo no nó.</summary>
+        <value>Retorna o sinalizador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableNodeReuse">
+      <MemberSignature Language="C#" Value="public bool EnableNodeReuse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableNodeReuse" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.EnableNodeReuse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que determina se nós de fora do processo devem persistir após a compilação e aguarde compilações mais.</summary>
+        <value>Retorna o sinalizador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvironmentProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; EnvironmentProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; EnvironmentProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.EnvironmentProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de propriedades de ambiente imutável.</summary>
+        <value>Retorna uma coleção de propriedades de ambiente imutável.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForwardingLoggers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt; ForwardingLoggers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Logging.ForwardingLoggerRecord&gt; ForwardingLoggers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.ForwardingLoggers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Logging.ForwardingLoggerRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coleção de descrições de agente de log de encaminhamento.</summary>
+        <value>Retorna a coleção de descrições de agente de log de encaminhamento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolset">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.Toolset GetToolset (string toolsVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Evaluation.Toolset GetToolset(string toolsVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.BuildParameters.GetToolset(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.Toolset</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolsVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolsVersion">O conjunto de ferramentas para recuperar.</param>
+        <summary>Obtém um determinado conjunto de ferramentas.</summary>
+        <returns>Retorna o conjunto de ferramentas.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; GlobalProperties { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GlobalProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.GlobalProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de propriedades globais imutável.</summary>
+        <value>Retorna uma coleção de propriedades globais imutável.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostServices">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.HostServices HostServices { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.HostServices HostServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.HostServices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.HostServices</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um serviço que permite que o host fornecer mais controle sobre o processo de compilação.</summary>
+        <value>Retorna o serviço de host.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LegacyThreadingSemantics">
+      <MemberSignature Language="C#" Value="public bool LegacyThreadingSemantics { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LegacyThreadingSemantics" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.LegacyThreadingSemantics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma opção que habilita ou desabilita a semântica de threading herdada.</summary>
+        <value>Retorna um comutador que habilita ou desabilita a semântica de threading herdada; True se habilitado, FALSO caso contrário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Semântica de threading herdada indica que se um envio é a ser criado apenas no proc de-nó e o envio é executado de forma síncrona, todas as suas solicitações serão criadas no thread que a compilação de chamada em vez de um thread de BuildManager.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Loggers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt; Loggers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Framework.ILogger&gt; Loggers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.Loggers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Framework.ILogger&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coleção de agentes de log a ser usado durante a compilação.</summary>
+        <value>Retorna a coleção de agentes de log a ser usado durante a compilação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogInitialPropertiesAndItems">
+      <MemberSignature Language="C#" Value="public bool LogInitialPropertiesAndItems { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogInitialPropertiesAndItems" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.LogInitialPropertiesAndItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o sinalizador que determina se a compilação registra em log os parâmetros de entrada.</summary>
+        <value>Retorna o sinalizador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogTaskInputs">
+      <MemberSignature Language="C#" Value="public bool LogTaskInputs { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogTaskInputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.LogTaskInputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o sinalizador que determina se a compilação registra em log os parâmetros da tarefa.</summary>
+        <value>Retorna o sinalizador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxNodeCount">
+      <MemberSignature Language="C#" Value="public int MaxNodeCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxNodeCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.MaxNodeCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de nós que pode usar esta compilação.</summary>
+        <value>Retorna o número máximo de nós que pode usar esta compilação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemoryUseLimit">
+      <MemberSignature Language="C#" Value="public int MemoryUseLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MemoryUseLimit" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.MemoryUseLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de memória que de compilação deve limitar o próprio usando, em megabytes.</summary>
+        <value>Retorna a quantidade de memória que de compilação deve limitar o próprio usando, em megabytes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeExeLocation">
+      <MemberSignature Language="C#" Value="public string NodeExeLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NodeExeLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.NodeExeLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local do nó compilação executável.</summary>
+        <value>Retorna o local do nó compilação executável.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyLogCriticalEvents">
+      <MemberSignature Language="C#" Value="public bool OnlyLogCriticalEvents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OnlyLogCriticalEvents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.OnlyLogCriticalEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que determina se os eventos de log não críticos devem ser descartados.</summary>
+        <value>Retorna um sinalizador que determina se os eventos de log não críticos devem ser descartados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetCaches">
+      <MemberSignature Language="C#" Value="public bool ResetCaches { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ResetCaches" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.ResetCaches" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma opção que especifica se a compilação deve redefinir a configuração e os caches de resultados.</summary>
+        <value>Retorna uma opção que especifica se a compilação deve redefinir a configuração e os caches de resultados; True se os caches devem ser redefinidos, false caso contrário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveOperatingEnvironment">
+      <MemberSignature Language="C#" Value="public bool SaveOperatingEnvironment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SaveOperatingEnvironment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.SaveOperatingEnvironment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma opção que especifica se o ambiente operacional, como o diretório atual e o ambiente, deve ser salvo e restaurado entre o projeto é compilado e chamadas de tarefa.</summary>
+        <value>Retorna um comutador que indica se o ambiente operacional deve ser salvo e restaurado entre versões do projeto e chamadas de tarefas; True se o ambiente deve ser salvo, FALSO caso contrário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso deve ser definido como false para outros gerenciadores de compilação em execução no sistema de forma que não temos dois gerenciadores de compilação trampling em cada um dos outros ambiente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownInProcNodeOnBuildFinish">
+      <MemberSignature Language="C#" Value="public bool ShutdownInProcNodeOnBuildFinish { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShutdownInProcNodeOnBuildFinish" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.ShutdownInProcNodeOnBuildFinish" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o sinalizador que determina se deseja encerrar o processo no nó quando o build for concluído. O padrão é <see langword="false" />.</summary>
+        <value>Retorna o sinalizador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolsetDefinitionLocations">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Evaluation.ToolsetDefinitionLocations ToolsetDefinitionLocations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Evaluation.ToolsetDefinitionLocations ToolsetDefinitionLocations" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.ToolsetDefinitionLocations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Evaluation.ToolsetDefinitionLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os locais para procurar conjuntos de ferramentas.</summary>
+        <value>Retorna os locais para procurar conjuntos de ferramentas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Toolsets">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Toolset&gt; Toolsets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Evaluation.Toolset&gt; Toolsets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.Toolsets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Evaluation.Toolset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todos os conjuntos de ferramentas.</summary>
+        <value>Retorna todos os conjuntos de ferramentas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UICulture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo UICulture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo UICulture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.UICulture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da cultura da interface do usuário a ser usado durante a compilação.</summary>
+        <value>Retorna o nome da cultura da interface do usuário a ser usado durante a compilação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSynchronousLogging">
+      <MemberSignature Language="C#" Value="public bool UseSynchronousLogging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSynchronousLogging" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.BuildParameters.UseSynchronousLogging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma opção que especifica se o log síncrono é usado quando há apenas um único processo.</summary>
+        <value>Retorna uma opção que especifica se o log síncrono é usado quando há apenas um único processo; Se true, síncrono log, caso contrário, usar log assíncrono.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

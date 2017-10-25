@@ -1,0 +1,359 @@
+<Type Name="ConnectionProviderAttribute" FullName="System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute">
+  <TypeSignature Language="C#" Value="public class ConnectionProviderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectionProviderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica o método de retorno de chamada em um controle de servidor que atua como o provedor em uma conexão de Web Parts e permite que os desenvolvedores especificar detalhes sobre o ponto de conexão do provedor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma conexão de Web Parts consiste em dois controles de servidor que reside em um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona e compartilhamento de dados por meio de uma instância da interface passado de um controle para outro. O controle que serve a instância da interface é chamado de provedor e o controle que recebe a instância da interface e os processos ou exibe os dados é chamado de consumidor. Para obter detalhes sobre conexões, consulte o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> classe e [Web Parts Connections Overview](http://msdn.microsoft.com/library/d98cfd0f-ebd6-4871-89d5-abbd2cdef67b).  
+  
+ O provedor de controle em uma conexão pode ser um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle ou qualquer tipo de servidor ou controle de usuário, mas ele deve ter um método designado como um método de retorno de chamada. O método de retorno de chamada é invocado durante o processo de conexão e sua finalidade é uma instância da interface que contém dados de retorno para o consumidor. Para designar o método que serve como o método de retorno de chamada em um provedor, você deve adicionar um `ConnectionProviderAttribute` elemento de metadados para o método (o elemento se baseia o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> classe).  
+  
+ Além de designar o método de retorno de chamada em um provedor, o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> objeto também permite que você especifique alguns detalhes sobre o ponto de conexão do provedor. Um ponto de conexão do provedor é uma ocorrência da <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> classe que encapsula todos os detalhes sobre um provedor necessário para estabelecer uma conexão, incluindo o tipo de controle do provedor, se ele pode se conectar a vários consumidores ao mesmo tempo, o tipo de interface de provedor serve para os consumidores, detalhes sobre o método de retorno de chamada e um nome para exibição que representa o ponto de conexão de provedor na interface do usuário (IU). Cada conexão de Web Parts inclui um ponto de conexão do provedor que está associado com o controle de provedor.  
+  
+ Quando você adiciona o `ConnectionProviderAttribute` elemento de metadados para o método de retorno de chamada em um provedor, você também pode usar isso para especificar os seguintes detalhes sobre o ponto de conexão do provedor: um nome para exibição para o ponto de conexão (para obter detalhes, consulte o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName%2A> propriedade), se o provedor pode se conectar a vários consumidores ao mesmo tempo (para obter detalhes, consulte o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.AllowsMultipleConnections%2A> propriedade), uma ID para o ponto de conexão (para obter detalhes Consulte o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.ID%2A> propriedade) e o tipo do ponto de conexão que usa o provedor (para obter detalhes, consulte o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.ConnectionPointType%2A> propriedade). As quatro sobrecargas do construtor para o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> cada classe têm parâmetros que permitem que você especifique valores para uma ou mais dessas propriedades de ponto de conexão quando uma nova instância da classe é criada. A maioria das propriedades de um ponto de conexão de provedor também pode ser definida programaticamente; configurá-los usando o `ConnectionProviderAttribute` elemento é opcional.  
+  
+> [!NOTE]
+>  Quando você adiciona o `ConnectionProviderAttribute` é do elemento de metadados para um método de retorno de chamada em um provedor, o único parâmetro necessário que você sempre deve especificar o `displayName` parâmetro (para obter detalhes, consulte o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.%23ctor%28System.String%29> sobrecarga de construtor). O valor desse parâmetro é atribuído para o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName%2A> propriedade, e quando um usuário abre a conexão da interface do usuário (criado pelo <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle), o nome de exibição representa o ponto de conexão de provedor na interface de usuário. Se você designar vários métodos de retorno de chamada em um controle de provedor, você terá vários pontos de conexão possíveis para escolher e quando você adiciona o `ConnectionProviderAttribute` elemento de metadados para cada método de retorno de chamada, você deve especificar um valor para o `id` parâmetro, para que o ponto de conexão de cada provedor tem um identificador exclusivo conhecido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> classe, mostrando como declarar o `ConnectionProviderAttribute` elemento de metadados em um método de retorno de chamada em um controle de provedor. Observe que a sobrecarga mais simples do construtor é usada; somente o `displayName` o valor do parâmetro for fornecido.  
+  
+ [!code-csharp[UI.WebControls.WebParts.Connection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/rowproviderwebpart.cs#6)]
+ [!code-vb[UI.WebControls.WebParts.Connection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/rowproviderwebpart.vb#6)]  
+  
+ Os exemplos de código a seguir demonstram como criar uma conexão básica, estática entre dois controles de Web Parts usando o <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> classe. Os arquivos de código do provedor e consumidor devem ser colocados na pasta App_Code sob a pasta de aplicativo que contém a página. aspx.  
+  
+ O primeiro exemplo mostra uma classe que atua como um provedor. Observe que um método é designado como o método de retorno de chamada com o `ConnectionProviderAttribute` elemento de metadados.  
+  
+ [!code-csharp[UI.WebControls.WebParts.Connection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/rowproviderwebpart.cs#1)]
+ [!code-vb[UI.WebControls.WebParts.Connection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/rowproviderwebpart.vb#1)]  
+  
+ O segundo exemplo mostra uma classe que atua como um consumidor.  
+  
+ [!code-csharp[UI.WebControls.WebParts.Connection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/rowconsumerwebpart.cs#2)]
+ [!code-vb[UI.WebControls.WebParts.Connection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/rowconsumerwebpart.vb#2)]  
+  
+ O exemplo final mostra a página do ASP.NET que contém dois controles.  
+  
+ [!code-aspx-csharp[UI.WebControls.WebParts.Connection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/defaultcs.aspx#3)]
+ [!code-aspx-vb[UI.WebControls.WebParts.Connection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/defaultvb.aspx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute" /> classe, especificando um valor a ser usado para o nome de exibição do ponto de conexão e, opcionalmente, especificando valores a serem usados para a ID do ponto de conexão, o tipo de ponto de conexão ou ambos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de fornecedor pode ter vários métodos marcados com o `ConnectionProviderAttribute` elemento de metadados. Nesse caso, o provedor deve ter vários pontos de conexão e cada instância do `ConnectionProviderAttribute` elemento deve especificar um valor de ID exclusivo para o ponto de conexão associado, para que os pontos de conexão do provedor podem ser diferenciados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionProviderAttribute (string displayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Uma cadeia de caracteres que contém um nome amigável para a conexão do provedor de ponto para exibir na interface do usuário (IU).</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute" /> classe, especificando um nome de exibição para o ponto de conexão do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma instância do atributo que é usado com um método de um controle de Web Parts que atua como um provedor. Esse método torna-se o ponto de conexão entre o provedor e consumidor. Normalmente, a maneira como você usa este construtor é para declarar um `ConnectionProviderAttribute` elemento de metadados em um método que você deseja designar como um método de retorno de chamada em um controle de provedor.  
+  
+ O `displayName` parâmetro é um nome amigável do ponto de conexão de provedor que é usado pelo <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle para representar um ponto de conexão do provedor na interface de usuário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> classe, mostrando como declarar o `ConnectionProviderAttribute` elemento de metadados em um método de retorno de chamada em um controle de provedor. Observe que a sobrecarga mais simples do construtor é usada; somente o `displayName` o valor do parâmetro for fornecido. Para o código completo necessário para executar o exemplo de código, consulte o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> visão geral da classe.  
+  
+ [!code-csharp[UI.WebControls.WebParts.Connection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/rowproviderwebpart.cs#6)]
+ [!code-vb[UI.WebControls.WebParts.Connection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/rowproviderwebpart.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="displayName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionProviderAttribute (string displayName, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Uma cadeia de caracteres que contém um nome amigável para a conexão do provedor de ponto para exibir na interface do usuário (IU).</param>
+        <param name="id">O <see cref="P:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.ID" />, um valor de cadeia de caracteres exclusiva atribuído ao ponto de conexão de provedor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute" /> classe, especificando um nome de exibição e uma ID para o ponto de conexão do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `displayName` parâmetro é um nome amigável do ponto de conexão de provedor que é usado pelo <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle para representar um ponto de conexão do provedor na interface de usuário.  
+  
+ O `id` parâmetro é usado para especificar a ID para o ponto de conexão do provedor associado com o método de retorno de chamada específico. Um controle pode ter vários pontos de conexão, mas o `id` para cada um deve ser exclusiva. Portanto, essa sobrecarga de construtor é útil se você tiver vários métodos de retorno de chamada no seu controle de provedor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="displayName" /> ou <paramref name="id" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionProviderAttribute (string displayName, Type connectionPointType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, class System.Type connectionPointType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="connectionPointType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Uma cadeia de caracteres que contém um nome amigável para a conexão do provedor de ponto para exibir na interface do usuário (IU).</param>
+        <param name="connectionPointType">Um <see cref="T:System.Type" /> que deriva de <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionPoint" />, e que você deseja especificar como o tipo de conexão de ponto de objeto a ser usado com um método de retorno de chamada específico.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute" /> classe, especificando um nome de exibição e um tipo específico de objeto de ponto de conexão a ser usado para o ponto de conexão do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `displayName` parâmetro é um nome amigável do ponto de conexão de provedor que é usado pelo <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle para representar um ponto de conexão do provedor na interface de usuário.  
+  
+ O `connectionPointType` parâmetro deve ser um <xref:System.Type> derivado de <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint>. Se esse parâmetro for especificado, o <xref:System.Type> é usado para criar o ponto de conexão em vez do padrão <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> classe fornecida com o conjunto de controles de Web Parts.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="displayName" /> ou <paramref name="connectionPointType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="connectionPointType" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionProviderAttribute (string displayName, string id, Type connectionPointType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string id, class System.Type connectionPointType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.#ctor(System.String,System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="connectionPointType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">Uma cadeia de caracteres que contém um nome amigável para a conexão do provedor de ponto para exibir na interface do usuário (IU).</param>
+        <param name="id">O <see cref="P:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.ID" />, um valor de cadeia de caracteres exclusiva atribuído ao ponto de conexão de provedor.</param>
+        <param name="connectionPointType">Um <see cref="T:System.Type" /> que deriva de <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" />, e que você deseja especificar como o tipo de conexão de ponto de objeto a ser usado com um método de retorno de chamada específico.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute" /> classe, especificando um nome de exibição, uma ID e um tipo específico de objeto de ponto de conexão a ser usado para o ponto de conexão do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `displayName` parâmetro é um nome amigável do ponto de conexão de provedor que é usado pelo <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle para representar um ponto de conexão do provedor na interface de usuário.  
+  
+ O `id` parâmetro é usado para especificar a ID para o ponto de conexão do provedor associado com o método de retorno de chamada específico. Um controle pode ter vários pontos de conexão, mas o `id` para cada um deve ser exclusiva. Portanto, essa sobrecarga de construtor é útil se você tiver vários métodos de retorno de chamada no seu controle de provedor.  
+  
+ O `connectionPointType` parâmetro deve ser um <xref:System.Type> derivado de <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint>. Se esse parâmetro for especificado, o <xref:System.Type> é usado para criar o ponto de conexão em vez do padrão <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> classe fornecida com o conjunto de controles de Web Parts.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="displayName" />, <paramref name="id" /> ou <paramref name="connectionPointType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="connectionPointType" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowsMultipleConnections">
+      <MemberSignature Language="C#" Value="public bool AllowsMultipleConnections { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowsMultipleConnections" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.AllowsMultipleConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o ponto de conexão permite várias conexões.</summary>
+        <value>
+          <see langword="true" />Se o ponto de conexão aceitar várias conexões; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pontos de conexão do provedor podem se conectar a vários consumidores por padrão e essa propriedade no <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> atributo é definido como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionPointType">
+      <MemberSignature Language="C#" Value="public Type ConnectionPointType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ConnectionPointType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.ConnectionPointType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de ponto de conexão associado a um controle de provedor.</summary>
+        <value>Um <see cref="T:System.Type" /> que indica o tipo de ponto de conexão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna o <xref:System.Type> do ponto de conexão de provedor. O <xref:System.Type> deve derivar de <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint>, e quando você declara o `connectionPointType` parâmetro com um `ConnectionProviderAttribute` elemento de metadados em um método de retorno de chamada, uma instância do tipo declarado é usado para criar um ponto de conexão em vez do padrão <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Um tipo de ponto de conexão inválido (que não derivam de <see cref="T:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint" /> classe) foi usado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public virtual string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome amigável do ponto de conexão de provedor.</summary>
+        <value>Uma cadeia de caracteres que contém um nome para exibição amigável para o ponto de conexão do provedor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é o nome amigável de um ponto de conexão do provedor. Seu valor pode ser definido declarativamente, quando você adiciona o `displayName` parâmetro para um `ConnectionProviderAttribute` elemento de metadados em um método de retorno de chamada. Ele também pode ser definido programaticamente por uma classe derivada, usando o protegido <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayNameValue%2A> propriedade.  
+  
+ Quando você estiver procurando por meio de uma coleção de ponto de conexão, você deve usar o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.ID%2A> propriedade, porque a propriedade de ID deve ser exclusiva, mas o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName%2A> propriedade não é necessário.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName%2A> propriedade de um ponto de conexão do provedor é exibida aos usuários quando um <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle está na página, a interface de usuário (UI) conexão está aberta e os usuários estão em uma exibição em que eles têm permissão para selecionar pontos de conexão para estabelecer uma conexão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName%2A> propriedade, mostrando como declarar o `ConnectionProviderAttribute` elemento de metadados em um método de retorno de chamada em um controle de provedor. Observe que a sobrecarga mais simples do construtor é usada; somente o `displayName` o valor do parâmetro for fornecido. O valor do parâmetro se tornará o valor de <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName%2A> propriedade. Para o código completo necessário para executar o exemplo de código, consulte o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> visão geral da classe.  
+  
+ [!code-csharp[UI.WebControls.WebParts.Connection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/CS/rowproviderwebpart.cs#6)]
+ [!code-vb[UI.WebControls.WebParts.Connection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/UI.WebControls.WebParts.Connection/VB/rowproviderwebpart.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayNameValue">
+      <MemberSignature Language="C#" Value="protected string DisplayNameValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayNameValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayNameValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres usada como o valor de <see cref="P:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName" /> propriedade, para uso em cenários de localização.</summary>
+        <value>Uma cadeia de caracteres que é usada como o valor de <see cref="P:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade extra existe para que você pode derivar de <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> e fornecer uma versão localizada. Derivada localizável <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute> atributo manterá um campo particular booliano para indicar se ele foi localizado. No primeiro acesso para o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName%2A> propriedade, ele será pesquisar a cadeia de caracteres localizada e, em seguida, use o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayNameValue%2A> propriedade para atribuir o valor localizado para o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public string ID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que representa a identidade exclusiva do objeto de ponto de conexão do provedor.</summary>
+        <value>A ID exclusiva atribuída ao ponto de conexão de provedor. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a pesquisa por meio de uma coleção de ponto de conexão, você deve usar o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.ID%2A> propriedade para localizar um ponto de conexão específico. Essa propriedade pode ser usada para distinguir entre dois pontos de conexão de mesmo nome. Pontos de conexão do provedor podem ter o mesmo <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.DisplayName%2A> valor da propriedade, mas o <xref:System.Web.UI.WebControls.WebParts.ConnectionProviderAttribute.ID%2A> propriedade deve ser diferente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

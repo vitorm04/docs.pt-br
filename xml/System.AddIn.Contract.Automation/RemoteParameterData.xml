@@ -1,0 +1,163 @@
+<Type Name="RemoteParameterData" FullName="System.AddIn.Contract.Automation.RemoteParameterData">
+  <TypeSignature Language="C#" Value="public struct RemoteParameterData" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit RemoteParameterData extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Automation.RemoteParameterData" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre um parâmetro ou valor de retorno de um método que pertence a um tipo que podem acessar componentes nos limites de domínio e o processo do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AddIn.Contract.Automation.RemoteParameterData> estrutura fornece informações sobre o valor de parâmetro ou retornado de um método que pertence a um tipo que implementa o <xref:System.AddIn.Contract.Automation.IRemoteObjectContract> interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Reflection.ParameterAttributes Attributes;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.Reflection.ParameterAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteParameterData.Attributes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ParameterAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa os atributos do parâmetro do método que este <see cref="T:System.AddIn.Contract.Automation.RemoteParameterData" /> descreve.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.RemoteArgument DefaultValue;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype System.AddIn.Contract.RemoteArgument DefaultValue" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteParameterData.DefaultValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o valor padrão do parâmetro do método que este <see cref="T:System.AddIn.Contract.Automation.RemoteParameterData" /> descreve.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsByRef">
+      <MemberSignature Language="C#" Value="public bool IsByRef;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool IsByRef" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteParameterData.IsByRef" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se este <see cref="T:System.AddIn.Contract.Automation.RemoteParameterData" /> descreve um parâmetro de método que é passado por referência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor desse campo é `true` se este <xref:System.AddIn.Contract.Automation.RemoteParameterData> descreve um parâmetro de método que é passada por referência; caso contrário, o valor desse campo é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsParameterArray">
+      <MemberSignature Language="C#" Value="public bool IsParameterArray;" />
+      <MemberSignature Language="ILAsm" Value=".field public bool IsParameterArray" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteParameterData.IsParameterArray" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se este <see cref="T:System.AddIn.Contract.Automation.RemoteParameterData" /> descreve um parâmetro de método que pode ter um número variável de argumentos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor desse campo é `true` se este <xref:System.AddIn.Contract.Automation.RemoteParameterData> descreve um parâmetro que pode ter um número variável de argumentos; caso contrário, o valor desse campo é `false`.  
+  
+ O valor desse campo é sempre `false` se este <xref:System.AddIn.Contract.Automation.RemoteParameterData> descreve um parâmetro de um método fornecido por um objeto COM.  
+  
+ Parâmetros que podem ter um número variável de argumentos são especificados pelo `params` (para o Visual C#) e `ParamArray` (para Visual Basic) palavras-chave. Para obter mais informações, consulte [params](~/docs/csharp/language-reference/keywords/params.md) e [ParamArray](~/docs/visual-basic/language-reference/modifiers/paramarray.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name;" />
+      <MemberSignature Language="ILAsm" Value=".field public string Name" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteParameterData.Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o nome do parâmetro do método que este <see cref="T:System.AddIn.Contract.Automation.RemoteParameterData" /> descreve.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterType">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.Automation.IRemoteTypeContract ParameterType;" />
+      <MemberSignature Language="ILAsm" Value=".field public class System.AddIn.Contract.Automation.IRemoteTypeContract ParameterType" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteParameterData.ParameterType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.IRemoteTypeContract</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o tipo do método de parâmetro ou retornado de valor que este <see cref="T:System.AddIn.Contract.Automation.RemoteParameterData" /> descreve.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public int Position;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 Position" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Contract.Automation.RemoteParameterData.Position" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a posição do parâmetro do método que este <see cref="T:System.AddIn.Contract.Automation.RemoteParameterData" /> descreve em relação os outros parâmetros do método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

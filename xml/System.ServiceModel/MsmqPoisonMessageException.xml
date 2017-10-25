@@ -1,0 +1,183 @@
+<Type Name="MsmqPoisonMessageException" FullName="System.ServiceModel.MsmqPoisonMessageException">
+  <TypeSignature Language="C#" Value="public class MsmqPoisonMessageException : System.ServiceModel.PoisonMessageException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MsmqPoisonMessageException extends System.ServiceModel.PoisonMessageException" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MsmqPoisonMessageException" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.PoisonMessageException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula a exceção que é lançada quando o canal detecta que a mensagem é uma mensagem suspeita.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa exceção é lançada quando o canal detecta que Message Queuing (MSMQ) anulou o processamento da mensagem porque o número de tentativas de repetição excedeu o valor especificado pelo <xref:System.ServiceModel.Configuration.MsmqElementBase.ReceiveRetryCount%2A> e <xref:System.ServiceModel.Configuration.MsmqElementBase.MaxRetryCycles%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqPoisonMessageException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqPoisonMessageException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.MsmqPoisonMessageException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqPoisonMessageException (long messageLookupId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 messageLookupId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqPoisonMessageException.#ctor(System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="messageLookupId" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="messageLookupId">A ID de pesquisa da mensagem suspeita.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.MsmqPoisonMessageException" /> classe usando a ID de pesquisa especificado da mensagem suspeita.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqPoisonMessageException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqPoisonMessageException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem com a qual inicializar a nova instância do <see cref="T:System.ServiceModel.MsmqPoisonMessageException" /> classe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.MsmqPoisonMessageException" /> classe usando o texto da mensagem especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqPoisonMessageException (long messageLookupId, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 messageLookupId, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqPoisonMessageException.#ctor(System.Int64,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="messageLookupId" Type="System.Int64" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="messageLookupId">A ID de pesquisa da mensagem suspeita.</param>
+        <param name="innerException">A exceção interna a ser encapsulada pela instância de novo o <see cref="T:System.ServiceModel.MsmqPoisonMessageException" /> classe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.MsmqPoisonMessageException" /> classe usando a ID de pesquisa especificado, a mensagem suspeita e a exceção interna.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MsmqPoisonMessageException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqPoisonMessageException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> instância que contém os dados serializados associados a <see cref="T:System.ServiceModel.MsmqPoisonMessageException" />.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> instância que contém a origem e destino do fluxo serializado associado a <see cref="T:System.ServiceModel.MsmqPoisonMessageException" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.MsmqPoisonMessageException" /> serializado de classe com mais informações sobre a exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqPoisonMessageException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqPoisonMessageException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem com a qual inicializar a nova instância do <see cref="T:System.ServiceModel.MsmqPoisonMessageException" /> classe.</param>
+        <param name="innerException">A exceção interna a ser encapsulada pela instância de novo o <see cref="T:System.ServiceModel.MsmqPoisonMessageException" /> classe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.MsmqPoisonMessageException" /> classe usando o texto da mensagem especificado e a exceção interna.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqPoisonMessageException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> instância para manter os dados serializados associados a <see cref="T:System.ServiceModel.MsmqPoisonMessageException" />.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> instância para manter a origem e destino do fluxo serializado associado a <see cref="T:System.ServiceModel.MsmqPoisonMessageException" />.</param>
+        <summary>Recupera os dados serializados associados a <see cref="T:System.ServiceModel.MsmqPoisonMessageException" />e a origem e destino do fluxo serializado associado a <see cref="T:System.ServiceModel.MsmqPoisonMessageException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageLookupId">
+      <MemberSignature Language="C#" Value="public long MessageLookupId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MessageLookupId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqPoisonMessageException.MessageLookupId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID de pesquisa da mensagem suspeita.</summary>
+        <value>A ID de pesquisa da mensagem suspeita.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

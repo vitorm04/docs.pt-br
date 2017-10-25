@@ -1,0 +1,139 @@
+<Type Name="CodeTypeDelegate" FullName="System.CodeDom.CodeTypeDelegate">
+  <TypeSignature Language="C#" Value="public class CodeTypeDelegate : System.CodeDom.CodeTypeDeclaration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeTypeDelegate extends System.CodeDom.CodeTypeDeclaration" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeTypeDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeTypeDeclaration</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma declaração delegate.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeTypeDelegate>pode ser usado para declarar um tipo delegado, ou o manipulador de eventos. Um representante define a assinatura de um método que pode ser usada por métodos calback ou manipuladores de eventos. Delegados podem ser declarados no nível de namespace ou aninhados dentro de outros tipos. Delegados não podem ser aninhados dentro de outros delegados.  
+  
+ O <xref:System.CodeDom.CodeTypeDelegate.ReturnType%2A> propriedade especifica o tipo de dados do manipulador de eventos retornado pelo delegado. O <xref:System.CodeDom.CodeTypeDelegate.Parameters%2A> propriedade contém os parâmetros para o tipo delegado.  
+  
+ <xref:System.CodeDom.CodeTypeDelegate>não deve ser usado para enumeração, interface ou tipo de declaração. Em vez disso, use <xref:System.CodeDom.CodeTypeDeclaration> para aqueles.  
+  
+> [!NOTE]
+>  Nem todos os idiomas oferecem suporte à declaração de representantes. Chamar o <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> método com o <xref:System.CodeDom.Compiler.GeneratorSupport.DeclareDelegates> sinalizador para determinar se ele tem suporte em um determinado idioma.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.CodeDom.CodeTypeDelegate> para declarar um novo tipo de delegado.  
+  
+ [!code-cpp[CodeTypeDelegateExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeTypeDelegateExample/CPP/codetypedelegateexample.cpp#3)]
+ [!code-csharp[CodeTypeDelegateExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeTypeDelegateExample/CS/codetypedelegateexample.cs#3)]
+ [!code-vb[CodeTypeDelegateExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeTypeDelegateExample/VB/codetypedelegateexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeDelegate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeDelegate.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeTypeDelegate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeTypeDelegate (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeTypeDelegate.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do representante.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeTypeDelegate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeParameterDeclarationExpressionCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeParameterDeclarationExpressionCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDelegate.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeParameterDeclarationExpressionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros do delegado.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeParameterDeclarationExpressionCollection" /> que indica que os parâmetros do delegado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference ReturnType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeTypeDelegate.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de retorno do delegado.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeTypeReference" /> que indica o tipo de retorno do delegado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

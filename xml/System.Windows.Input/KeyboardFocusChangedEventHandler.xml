@@ -1,0 +1,58 @@
+<Type Name="KeyboardFocusChangedEventHandler" FullName="System.Windows.Input.KeyboardFocusChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void KeyboardFocusChangedEventHandler(object sender, KeyboardFocusChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed KeyboardFocusChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.KeyboardFocusChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.KeyboardFocusChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O objeto em que o manipulador de eventos está anexado.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa o método que manipulará os eventos roteados <see cref="E:System.Windows.UIElement.LostKeyboardFocus" /> e <see cref="E:System.Windows.UIElement.GotKeyboardFocus" />, bem como eventos de visualização e anexados relacionados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este delegado é usado com os seguintes eventos anexados:  
+  
+-   <xref:System.Windows.Input.Keyboard.GotKeyboardFocus?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Keyboard.LostKeyboardFocus?displayProperty=nameWithType>  
+  
+ Este delegado também é usado com os seguintes eventos roteados em elementos de base. Esses eventos roteados encaminham os eventos anexados listados anteriormente para torná-las mais acessível para o modelo de elemento geral em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+-   <xref:System.Windows.UIElement.GotKeyboardFocus?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.LostKeyboardFocus?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewGotKeyboardFocus?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewLostKeyboardFocus?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.GotKeyboardFocus?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.LostKeyboardFocus?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewGotKeyboardFocus?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewLostKeyboardFocus?displayProperty=nameWithType>  
+  
+ Os eventos anexados e os eventos roteado de elemento base compartilham seus dados de evento e bolha e túnel versões dos eventos roteados também compartilham dados de evento. Isso pode afetar as características manipuladas do evento conforme ela se desloca a rota de evento. Para obter detalhes, consulte [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ Se o <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> evento ou o <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus> evento é manipulado (<xref:System.Windows.RoutedEventArgs.Handled%2A> é definido como `true` nos dados do evento), o foco do teclado não será alterado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,53 @@
+<Type Name="TemplateBindingExpression" FullName="System.Windows.TemplateBindingExpression">
+  <TypeSignature Language="C#" Value="public class TemplateBindingExpression : System.Windows.Expression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateBindingExpression extends System.Windows.Expression" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TemplateBindingExpression" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Expression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.TemplateBindingExpressionConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve uma instância de tempo de execução de um <see cref="T:System.Windows.TemplateBindingExtension" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o conteúdo de um modelo é instanciado para inspeção, o <xref:System.Windows.TemplateBindingExpression> instâncias representam as associações do modelo.  
+  
+<a name="xamlTextUsage_TemplateBindingExpression"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Você não pode usar essa classe gerenciada em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="TemplateBindingExtension">
+      <MemberSignature Language="C#" Value="public System.Windows.TemplateBindingExtension TemplateBindingExtension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.TemplateBindingExtension TemplateBindingExtension" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.TemplateBindingExpression.TemplateBindingExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TemplateBindingExtension</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.TemplateBindingExtension" /> objeto desta instância de expressão.</summary>
+        <value>A extensão de associação de modelo desta instância de expressão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

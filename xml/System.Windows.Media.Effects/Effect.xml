@@ -1,0 +1,169 @@
+<Type Name="Effect" FullName="System.Windows.Media.Effects.Effect">
+  <TypeSignature Language="C#" Value="public abstract class Effect : System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract Effect extends System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Effects.Effect" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um efeito de bitmap personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derivam de <xref:System.Windows.Media.Effects.Effect> classe para implementar um efeito de bitmap personalizado. Na maioria dos casos, você será derivado <xref:System.Windows.Media.Effects.ShaderEffect>.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.UIPermission">Para obter acesso completo aos recursos de interface do usuário. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Effect ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.Effect.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Effects.Effect" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.Effect Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.Effect Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.Effect.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.Effect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável <see cref="T:System.Windows.Media.Effects.Effect" /> objeto, fazendo cópias profundas dos valores do objeto. Ao copiar as propriedades do objeto de dependência, esse método copia dados e referências de ligações de recurso (que não podem resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável desta instância. O clone retornado é efetivamente uma cópia em profundidade do objeto atual. O clone <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Effects.Effect.Clone%2A> método pode ser usado para gerar cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos. Para sua conveniência, este método sombreia a herdadas <xref:System.Windows.Freezable.Clone%2A> método para fornecer uma implementação fortemente tipada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.Effect CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.Effect CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.Effect.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.Effect</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse objeto <see cref="T:System.Windows.Media.Effects.Effect" />, fazendo cópias em profundidade dos valores do objeto atual. Referências de recurso, associações de dados e animações não são copiadas, mas seus valores atuais serão copiados.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade era <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EffectMapping">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Media.GeneralTransform EffectMapping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.GeneralTransform EffectMapping" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.Effect.EffectMapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GeneralTransform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, transforma a entrada do mouse e sistemas de coordenadas por meio do efeito.</summary>
+        <value>A transformação a ser aplicada. O padrão é a transformação de identidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Windows.Media.Effects.Effect.EffectMapping%2A> propriedade para atribuir uma transformação que difere de transformação de identidade padrão.  
+  
+ Entrada é transformada pelo inverso dessa transformação. O <xref:System.Windows.Media.Visual.TransformToAncestor%2A> e <xref:System.Windows.Media.Visual.TransformToDescendant%2A> métodos também têm o <xref:System.Windows.Media.Effects.Effect.EffectMapping%2A> transformação aplicada.  
+  
+ Pontos de entrada devem ser em [0-1], intervalo e pontos de saída devem mapear a [0-1] intervalo. O <xref:System.Windows.Media.GeneralTransform.Inverse%2A> propriedade deve retornar um <xref:System.Windows.Media.GeneralTransform> que calcula o mapeamento inverso.  
+  
+ A transformação inversa mapeia um ponto de depois que o efeito é aplicado ao ponto de origem antes do efeito. O não-inverso transformação mapas de um ponto de antes do efeito é aplicado a após o efeito é aplicado.  
+  
+ Observe que a transformação não inclui informações sobre o tamanho de pixel físico que está sendo usado, e funciona apenas no intervalo de unidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplicitInput">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Brush ImplicitInput { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Brush ImplicitInput" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.Effect.ImplicitInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.Brush" /> que, quando ele é usado como entrada para uma <see cref="T:System.Windows.Media.Effects.Effect" />, faz com que o bitmap do <see cref="T:System.Windows.UIElement" /> que o <see cref="T:System.Windows.Media.Effects.Effect" /> é aplicada para essa entrada.</summary>
+        <value>O <see cref="T:System.Windows.Media.Brush" /> que atua como entrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Media.Effects.Effect.ImplicitInput%2A> a propriedade como o valor a uma entrada de valor de pincel para um <xref:System.Windows.Media.Effects.ShaderEffect>.  
+  
+ O <xref:System.Windows.Media.Effects.Effect.ImplicitInput%2A> propriedade representa a entrada de sombreador que vêm de processamento do <xref:System.Windows.UIElement> que o <xref:System.Windows.Media.Effects.Effect> é aplicado a.  
+  
+> [!NOTE]
+>  O comportamento é indefinido quando <xref:System.Windows.Media.Effects.Effect.ImplicitInput%2A> é usado como um pincel em outras classes do WPF.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

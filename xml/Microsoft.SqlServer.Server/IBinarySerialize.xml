@@ -1,0 +1,102 @@
+<Type Name="IBinarySerialize" FullName="Microsoft.SqlServer.Server.IBinarySerialize">
+  <TypeSignature Language="C#" Value="public interface IBinarySerialize" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBinarySerialize" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.IBinarySerialize" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma implementação personalizada para o UDT (tipo definido pelo usuário) e a serialização e desserialização de agregação definidas pelo usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos definidos pelo usuário (UDTs) e agregações definidas pelo usuário são necessárias para definir um formato de armazenamento, que pode ser <xref:Microsoft.SqlServer.Server.Format>.`Native` ou <xref:Microsoft.SqlServer.Server.Format>.`UserDefined`.  
+  
+ <xref:Microsoft.SqlServer.Server.Format>.`Native` permite que o SQL Server para lidar com a serialização e desserialização automaticamente, mas o formato tem restrições no tipo de tipos pode manipular. <xref:Microsoft.SqlServer.Server.Format>.`UserDefined` permite que os tipos definidos pelo usuário e agregações lidar com sua própria serialização. Tipos definidos pelo usuário e agregações devem ser marcadas com <xref:Microsoft.SqlServer.Server.Format>.`UserDefined` no `SqlUserDefinedType` ou `SqlUserDefinedAggregate` de atributos e deve implementar o <xref:Microsoft.SqlServer.Server.IBinarySerialize> interface.  
+  
+ Observe que, mesmo com a serialização personalizada, o tamanho total de cada instância deve estar sob o limite máximo permitido, no momento de 8000 bytes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public void Read (System.IO.BinaryReader r);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Read(class System.IO.BinaryReader r) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.IBinarySerialize.Read(System.IO.BinaryReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="System.IO.BinaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="r">O fluxo do <see cref="T:System.IO.BinaryReader" /> do qual o objeto é desserializado.</param>
+        <summary>Gera um tipo definido pelo usuário (UDT) ou a agregação definida pelo usuário de seu formato binário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:Microsoft.SqlServer.Server.IBinarySerialize.Read%2A> método deve reconstituir o objeto usando as informações gravadas pelo <xref:Microsoft.SqlServer.Server.IBinarySerialize.Write%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a implementação do <xref:Microsoft.SqlServer.Server.IBinarySerialize.Read%2A> método de um UDT, que usa um <xref:System.IO.BinaryReader> desserializar um UDT previamente persistido. Este exemplo presume que o UDT tem duas propriedades de dados: `StringValue` e `DoubleValue`.  
+  
+ [!code-csharp[DataWorks IBinarySerialize Samples#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks IBinarySerialize Samples/CS/source.cs#1)]
+ [!code-vb[DataWorks IBinarySerialize Samples#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks IBinarySerialize Samples/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.IO.BinaryWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.IO.BinaryWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.IBinarySerialize.Write(System.IO.BinaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.IO.BinaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">O <see cref="T:System.IO.BinaryWriter" /> fluxo ao qual a agregação definida pelo usuário ou UDT é serializada.</param>
+        <summary>Converte um tipo definido pelo usuário (UDT) ou uma agregação definida pelo usuário em seu formato binário para que ela pode ser persistente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gravar informações suficientes para o fluxo binário para permitir que o <xref:Microsoft.SqlServer.Server.IBinarySerialize.Read%2A> método para reconstituir o UDT ou agregação definida pelo usuário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a implementação do <xref:Microsoft.SqlServer.Server.IBinarySerialize.Write%2A> método de um UDT, que usa um <xref:System.IO.BinaryWriter> para serializar o UDT no formato binário definido pelo usuário. O propósito do preenchimento caractere nulo é garantir que o valor de cadeia de caracteres seja totalmente separado do valor duplo, para que uma UDT seja comparada para outra no código Transact-SQL, bytes de cadeia de caracteres são comparadas com os bytes de cadeia de caracteres e dois bytes são comparados em duplo bytes.  
+  
+ [!code-csharp[DataWorks IBinarySerialize Samples#2](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks IBinarySerialize Samples/CS/source.cs#2)]
+ [!code-vb[DataWorks IBinarySerialize Samples#2](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks IBinarySerialize Samples/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

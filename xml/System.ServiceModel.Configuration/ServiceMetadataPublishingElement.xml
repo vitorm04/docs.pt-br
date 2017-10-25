@@ -1,0 +1,408 @@
+<Type Name="ServiceMetadataPublishingElement" FullName="System.ServiceModel.Configuration.ServiceMetadataPublishingElement">
+  <TypeSignature Language="C#" Value="public sealed class ServiceMetadataPublishingElement : System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServiceMetadataPublishingElement extends System.ServiceModel.Configuration.BehaviorExtensionElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ServiceMetadataPublishingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.BehaviorExtensionElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento de configuração que controla a publicação de metadados de serviço e as informações associadas. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este elemento de configuração pode ser usado para habilitar ou desabilitar a publicação de metadados de serviço usando uma solicitação HTTP/Get ou uma solicitação do WS-MetadataExchange (WS-MEX). Você também pode habilitar ou impedir a exibição de uma página HTML de informações sobre o serviço quando solicitado por HTTP.  
+  
+   
+  
+## Examples  
+ [&lt;serviceMetadata&gt;](~/docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceMetadataPublishingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.ServiceMetadataPublishingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BehaviorType">
+      <MemberSignature Language="C#" Value="public override Type BehaviorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BehaviorType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.BehaviorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo deste elemento de configuração de comportamento.</summary>
+        <value>Um <see cref="T:System.Type" />, o valor é o tipo de <see cref="T:System.ServiceModel.Description.ServiceMetadataBehavior" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.ServiceModel.Configuration.ServiceModelExtensionElement from);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.ServiceModel.Configuration.ServiceModelExtensionElement from) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.CopyFrom(System.ServiceModel.Configuration.ServiceModelExtensionElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.ServiceModel.Configuration.ServiceModelExtensionElement" />
+      </Parameters>
+      <Docs>
+        <param name="from">O elemento de configuração a serem copiados.</param>
+        <summary>Copia o conteúdo do elemento de configuração especificado para este elemento de configuração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBehavior">
+      <MemberSignature Language="C#" Value="protected override object CreateBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object CreateBehavior() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.CreateBehavior" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalMetadataLocation">
+      <MemberSignature Language="C#" Value="public Uri ExternalMetadataLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ExternalMetadataLocation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.ExternalMetadataLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("externalMetadataLocation")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que contém o local do serviço de metadados.</summary>
+        <value>Um URI que especifica o local de um arquivo WSDL, que é retornado para o usuário em resposta a solicitações WSDL e MEX em vez do WSDL gerado automaticamente. O padrão é um <see langword="null" /> objeto Uri.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando esta propriedade não for definida, será retornado o WSDL gerado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpGetBinding">
+      <MemberSignature Language="C#" Value="public string HttpGetBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpGetBinding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpGetBinding", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um valor de cadeia de caracteres que especifica o nome da associação a ser usado para recuperação de metadados em cenários de HTTP GET.</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade não está definida, a associação padrão (HttpsTransportBindingElement) é usada para recuperação de metadados conforme apropriado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpGetBindingConfiguration">
+      <MemberSignature Language="C#" Value="public string HttpGetBindingConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpGetBindingConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetBindingConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpGetBindingConfiguration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que aponta para uma seção XML definindo as informações de configuração adicional para a associação especificada no <see cref="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetBinding" />.</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpGetEnabled">
+      <MemberSignature Language="C#" Value="public bool HttpGetEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HttpGetEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpGetEnabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se deve publicar metadados de serviço para recuperação usando uma solicitação HTTP/Get.</summary>
+        <value>
+          <see langword="true" />Se os metadados de serviço é publicado para recuperação usando uma solicitação HTTP/Get; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetUrl%2A> propriedade não for especificada, o endereço no qual os metadados são publicados é o endereço de serviço mais um "? wsdl". Por exemplo, se o endereço do serviço é "http://localhost:8080/CalculatorService", o endereço de metadados HTTP/Get é "http://localhost:8080/CalculatorService? wsdl".  
+  
+ Se essa propriedade for `false`, ou o endereço do serviço não é baseado em HTTP ou HTTPS, "? wsdl" será ignorado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpGetUrl">
+      <MemberSignature Language="C#" Value="public Uri HttpGetUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri HttpGetUrl" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpGetUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpGetUrl")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um URI que especifica o endereço no qual os metadados são publicados para recuperação usando uma solicitação HTTP/Get.</summary>
+        <value>Um URI que especifica o endereço no qual os metadados são publicados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpsGetBinding">
+      <MemberSignature Language="C#" Value="public string HttpsGetBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpsGetBinding" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpsGetBinding", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um valor de cadeia de caracteres que especifica o nome da associação a ser usado para recuperação de metadados em cenários de HTTPS GET.</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade não está definida, a associação padrão (HttpsTransportBindingElement) é usada para recuperação de metadados conforme apropriado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpsGetBindingConfiguration">
+      <MemberSignature Language="C#" Value="public string HttpsGetBindingConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HttpsGetBindingConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetBindingConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpsGetBindingConfiguration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres que aponta para uma seção XML definindo as informações de configuração adicional para a associação especificada no <see cref="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetBinding" />.</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpsGetEnabled">
+      <MemberSignature Language="C#" Value="public bool HttpsGetEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HttpsGetEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpsGetEnabled", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve publicar metadados de serviço para recuperação usando uma solicitação HTTPS/Get.</summary>
+        <value>
+          <see langword="true" />Se os metadados de serviço é publicado para recuperação usando uma solicitação HTTP/Get; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetUrl%2A> propriedade não for especificada, o endereço no qual os metadados são publicados é o endereço de serviço mais um "? wsdl". Por exemplo, se o endereço do serviço é "https://localhost:8080/CalculatorService", o endereço de metadados HTTP/Get é "https://localhost:8080/CalculatorService? wsdl".  
+  
+ Se essa propriedade for `false`, ou o endereço do serviço não é baseado em HTTP ou HTTPS, "? wsdl" será ignorado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpsGetUrl">
+      <MemberSignature Language="C#" Value="public Uri HttpsGetUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri HttpsGetUrl" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.HttpsGetUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("httpsGetUrl")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um URI que especifica o endereço no qual os metadados são publicados para recuperação usando uma solicitação HTTPS/Get.</summary>
+        <value>Um URI que especifica o endereço no qual os metadados são publicados para recuperação usando uma solicitação HTTPS/Get.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.PolicyVersion PolicyVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Description.PolicyVersion PolicyVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.PolicyVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.PolicyVersionConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("policyVersion", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.PolicyVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a versão da especificação WS-Policy sendo usada.</summary>
+        <value>Um valor válido de <see cref="T:System.ServiceModel.Description.PolicyVersion" /> que especifica a versão da especificação WS-Policy sendo usada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ServiceMetadataPublishingElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

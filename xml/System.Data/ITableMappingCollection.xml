@@ -1,0 +1,249 @@
+<Type Name="ITableMappingCollection" FullName="System.Data.ITableMappingCollection">
+  <TypeSignature Language="C#" Value="public interface ITableMappingCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITableMappingCollection implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Data.ITableMappingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Contém uma coleção de objetos TableMapping e é implementado pelo <see cref="T:System.Data.Common.DataTableMappingCollection" />, que é usado em comum por provedores de dados do .NET Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.ITableMappingCollection> interface permite que uma classe de herança para implementar uma coleção TableMapping. Para obter mais informações, consulte [DataAdapter DataTable e DataColumn mapeamentos](~/docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md).  
+  
+ Um aplicativo não cria uma instância do <xref:System.Data.ITableMappingCollection> interface diretamente, mas cria uma instância de uma classe que herda <xref:System.Data.ITableMappingCollection>.  
+  
+ As classes que herdam <xref:System.Data.ITableMappingCollection> deve implementar os membros herdados e geralmente definem membros adicionais para adicionar funcionalidade específica do provedor. Por exemplo, o <xref:System.Data.ITableMappingCollection> interface define uma implementação de <xref:System.Data.ITableMappingCollection.RemoveAt%2A> método. Por sua vez, o <xref:System.Data.Common.DataTableMappingCollection> classe herda esse método e define duas sobrecargas adicionais do <xref:System.Data.Common.DataTableMappingCollection.RemoveAt%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância da classe derivada, <xref:System.Data.Common.DataTableMapping>e adiciona-o a um <xref:System.Data.Common.DataTableMappingCollection> coleção. Em seguida, informa ao usuário que o mapeamento foi adicionado à coleção.  
+  
+ [!code-csharp[Classic WebData DataTableMapping Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataTableMapping Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataTableMapping Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataTableMapping Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você herda o <see cref="T:System.Data.ITableMappingCollection" /> interface, você deve implementar o seguinte construtor:  
+  
+ <list type="table"><listheader><term>Item  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>PrvTableMappingCollection()  
+  
+ </term><description>Cria uma classe PrvTableMappingCollection vazia.  
+  
+ </description></item></list></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.ITableMapping Add (string sourceTableName, string dataSetTableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.ITableMapping Add(string sourceTableName, string dataSetTableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ITableMappingCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ITableMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceTableName" Type="System.String" />
+        <Parameter Name="dataSetTableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceTableName">O nome diferencia maiusculas e minúsculas da tabela de origem.</param>
+        <param name="dataSetTableName">O nome do <see cref="T:System.Data.DataSet" /> tabela.</param>
+        <summary>Adiciona um mapeamento de tabela à coleção.</summary>
+        <returns>Uma referência para o novo mapeamento <see cref="T:System.Data.ITableMapping" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string sourceTableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(string sourceTableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ITableMappingCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceTableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceTableName">O nome diferencia maiusculas e minúsculas da tabela de origem.</param>
+        <summary>Obtém um valor que indica se a coleção contém um mapeamento de tabela com o nome da tabela de origem especificada.</summary>
+        <returns>
+          <see langword="true" />Se um mapeamento de tabela com o nome da tabela de origem especificado existe, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByDataSetTable">
+      <MemberSignature Language="C#" Value="public System.Data.ITableMapping GetByDataSetTable (string dataSetTableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.ITableMapping GetByDataSetTable(string dataSetTableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ITableMappingCollection.GetByDataSetTable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ITableMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSetTableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSetTableName">O nome do <see langword="DataSet" /> tabela dentro da coleção.</param>
+        <summary>Obtém o objeto TableMapping com especificado <see cref="T:System.Data.DataSet" /> nome de tabela.</summary>
+        <returns>O objeto TableMapping com especificado <see langword="DataSet" /> nome de tabela.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string sourceTableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(string sourceTableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ITableMappingCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceTableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceTableName">O nome diferencia maiusculas e minúsculas da tabela de origem.</param>
+        <summary>Obtém o local do <see cref="T:System.Data.ITableMapping" /> objeto dentro da coleção.</summary>
+        <returns>O local com base em zero do <see cref="T:System.Data.ITableMapping" /> objeto dentro da coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.ITableMappingCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">O <see langword="SourceTable" /> nome do <see cref="T:System.Data.ITableMapping" />.</param>
+        <summary>Obtém ou define a instância de <see cref="T:System.Data.ITableMapping" /> com especificado <see cref="P:System.Data.ITableMapping.SourceTable" /> nome.</summary>
+        <value>A instância do <see cref="T:System.Data.ITableMapping" /> com especificado <see langword="SourceTable" /> nome.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (string sourceTableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(string sourceTableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.ITableMappingCollection.RemoveAt(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceTableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceTableName">O nome diferencia maiusculas e minúsculas do <see langword="SourceTable" />.</param>
+        <summary>Remove o <see cref="T:System.Data.ITableMapping" /> objeto com especificado <see cref="P:System.Data.ITableMapping.SourceTable" /> nome da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

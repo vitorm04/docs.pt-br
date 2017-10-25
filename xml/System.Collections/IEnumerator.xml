@@ -1,0 +1,231 @@
+<Type Name="IEnumerator" FullName="System.Collections.IEnumerator">
+  <TypeSignature Language="C#" Value="public interface IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEnumerator" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.IEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("496B0ABF-CDEE-11d3-88E8-00902754C43A")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dá suporte a uma iteração simples em uma coleção não genérica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.IEnumerator>é a interface base para todos os enumeradores de não genérico.  
+  
+ Para a versão genérica dessa interface consulte <xref:System.Collections.Generic.IEnumerator%601>.  
+  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, usando `foreach` é recomendado em vez de manipulação direta do enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ O <xref:System.Collections.IEnumerator.Reset%2A> método é fornecido para interoperabilidade COM e não precisa ser totalmente implementado; em vez disso, o implementador pode lançar um <xref:System.NotSupportedException>.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. Você deve chamar o <xref:System.Collections.IEnumerator.MoveNext%2A> método para avançar o enumerador para o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>; caso contrário, <xref:System.Collections.IEnumerator.Current%2A> é indefinido.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Se a última chamada <xref:System.Collections.IEnumerator.MoveNext%2A> retornou `false`, chamar <xref:System.Collections.IEnumerator.Current%2A> lança uma exceção.  
+  
+ Para definir <xref:System.Collections.IEnumerator.Current%2A> para o primeiro elemento da coleção novamente, você pode chamar <xref:System.Collections.IEnumerator.Reset%2A>, se ele é implementado, seguido por <xref:System.Collections.IEnumerator.MoveNext%2A>. Se <xref:System.Collections.IEnumerator.Reset%2A> não é implementada, você deve criar uma nova instância de enumerador para retornar para o primeiro elemento da coleção.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar, ou excluir elementos, o enumerador é invalidado invalidado e a próxima chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> lança um <xref:System.InvalidOperationException>. Se a coleção é modificada entre <xref:System.Collections.IEnumerator.MoveNext%2A> e <xref:System.Collections.IEnumerator.Current%2A>, <xref:System.Collections.IEnumerator.Current%2A> retorna o elemento que está definido como, mesmo se o enumerador já é invalidado.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação do <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> interfaces para uma coleção personalizada. Neste exemplo, os membros dessas interfaces não forem chamados explicitamente, mas eles são implementados para suporte ao uso de `foreach` (`for each` no Visual Basic) para iterar pela coleção.  
+  
+ [!code-csharp[System.Collections_EnumeratorInterfaces#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections_EnumeratorInterfaces/cs/ienumerator.cs#1)]
+ [!code-vb[System.Collections_EnumeratorInterfaces#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections_EnumeratorInterfaces/vb/ienumerator.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public object Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Current" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.IEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento na coleção na posição atual do enumerador.</summary>
+        <value>O elemento na coleção na posição atual do enumerador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.IEnumerator.Current%2A>o não está definida em qualquer uma das seguintes condições:  
+  
+-   O enumerador está posicionado antes do primeiro elemento na coleção, imediatamente depois que o enumerador é criado.   <xref:System.Collections.IEnumerator.MoveNext%2A>deve ser chamado para avançar o enumerador para o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+-   A última chamada a <xref:System.Collections.IEnumerator.MoveNext%2A> retornou `false`, que indica o final da coleção.  
+  
+-   O enumerador é invalidado devido a alterações feitas na coleção, como adicionar, modificar ou excluir elementos.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A>Retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação do <xref:System.Collections.IEnumerator> interfaces para uma coleção personalizada. Neste exemplo, <xref:System.Collections.IEnumerator.Current%2A> não for chamado explicitamente, mas ele é implementado para suporte ao uso de `foreach` (`for each` no Visual Basic). Este exemplo de código é parte de um exemplo maior para o <xref:System.Collections.IEnumerator> interface.  
+  
+ [!code-csharp[System.Collections_EnumeratorInterfaces#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections_EnumeratorInterfaces/cs/ienumerator.cs#2)]
+ [!code-vb[System.Collections_EnumeratorInterfaces#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections_EnumeratorInterfaces/vb/ienumerator.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Avança o enumerador para o próximo elemento da coleção.</summary>
+        <returns>
+          <see langword="true" /> se o enumerador foi avançado com êxito para o próximo elemento; <see langword="false" /> se o enumerador passou o final da coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após a criação de um enumerador ou depois do <xref:System.Collections.IEnumerator.Reset%2A> método é chamado, um enumerador está posicionado antes do primeiro elemento da coleção e a primeira chamada para o <xref:System.Collections.IEnumerator.MoveNext%2A> método Move o enumerador sobre o primeiro elemento da coleção.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false` até <xref:System.Collections.IEnumerator.Reset%2A> é chamado.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar, ou excluir elementos, o enumerador é invalidado invalidado e a próxima chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> lança um <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação do <xref:System.Collections.IEnumerator> interfaces para uma coleção personalizada. Neste exemplo, <xref:System.Collections.IEnumerator.MoveNext%2A> não for chamado explicitamente, mas ele é implementado para suporte ao uso de `foreach` (`for each` no Visual Basic). Este exemplo de código é parte de um exemplo maior para o <xref:System.Collections.IEnumerator> interface.  
+  
+ [!code-csharp[System.Collections_EnumeratorInterfaces#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections_EnumeratorInterfaces/cs/ienumerator.cs#2)]
+ [!code-vb[System.Collections_EnumeratorInterfaces#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections_EnumeratorInterfaces/vb/ienumerator.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A coleção foi modificada depois da criação do enumerador.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.IEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o enumerador com sua posição inicial, que é antes do primeiro elemento da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar, ou excluir elementos, o enumerador é invalidado invalidado e a próxima chamada para o <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> método lança um <xref:System.InvalidOperationException>.  
+  
+ O <xref:System.Collections.IEnumerator.Reset%2A> método é fornecido para interoperabilidade COM. Ele não necessariamente precisa ser implementadas; em vez disso, o implementador de simplesmente pode lançar um <xref:System.NotSupportedException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a implementação do <xref:System.Collections.IEnumerator> interfaces para uma coleção personalizada. Neste exemplo, <xref:System.Collections.IEnumerator.Reset%2A> não for chamado explicitamente, mas ele é implementado para suporte ao uso de `foreach` (`for each` no Visual Basic). Este exemplo de código é parte de um exemplo maior para o <xref:System.Collections.IEnumerator> interface.  
+  
+ [!code-csharp[System.Collections_EnumeratorInterfaces#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections_EnumeratorInterfaces/cs/ienumerator.cs#2)]
+ [!code-vb[System.Collections_EnumeratorInterfaces#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections_EnumeratorInterfaces/vb/ienumerator.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A coleção foi modificada depois da criação do enumerador.</exception>
+        <block subset="none" type="overrides">
+          <para>Todas as chamadas para <see cref="M:System.Collections.IEnumerator.Reset" /> deve resultar no mesmo estado do enumerador. A implementação preferida é mover o enumerador para o início da coleção, antes do primeiro elemento. Isso invalida o enumerador se a coleção foi modificada desde que o enumerador foi criado, o que é consistente com <see cref="M:System.Collections.IEnumerator.MoveNext" /> e <see cref="P:System.Collections.IEnumerator.Current" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

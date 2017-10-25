@@ -1,0 +1,85 @@
+<Type Name="IOperationContractGenerationExtension" FullName="System.ServiceModel.Description.IOperationContractGenerationExtension">
+  <TypeSignature Language="C#" Value="public interface IOperationContractGenerationExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOperationContractGenerationExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IOperationContractGenerationExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define os métodos chamados durante a geração de contrato que pode ser usada para modificar o código gerado para uma operação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> interface em um comportamento de operação (um <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType> tipo) para que você possa modificar o código gerado quando um contrato ou o ponto de extremidade é compilado em código. Normalmente, um personalizado <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> insere um comportamento de operação personalizada para o <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A?displayProperty=nameWithType> coleção durante a chamada para <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a implementação do <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%2A> método que adiciona uma cadeia de caracteres para a seção de comentários da operação usando o <xref:System.CodeDom?displayProperty=nameWithType> namespace.  
+  
+  
+  
+ O seguinte exemplo de código mostra como o comportamento da operação que implementa <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> é inserido no <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A?displayProperty=nameWithType> coleção durante a chamada para <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#4](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#4)]  
+  
+ Finalmente, o exemplo de código a seguir mostra a operação gerada em Visual Basic e c#.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.cs#3)]
+ [!code-vb[C_CustomWSDLExtensions#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GenerateOperation">
+      <MemberSignature Language="C#" Value="public void GenerateOperation (System.ServiceModel.Description.OperationContractGenerationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateOperation(class System.ServiceModel.Description.OperationContractGenerationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation(System.ServiceModel.Description.OperationContractGenerationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Description.OperationContractGenerationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto de trabalho que contém o <see cref="N:System.CodeDom" /> tipos necessários para modificar a operação gerada.</param>
+        <summary>Implemente para modificar o modelo de objeto de documento de código antes do processo de geração de contrato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, um personalizado <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> insere um comportamento de operação personalizada para o <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A?displayProperty=nameWithType> coleção durante a chamada para <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%2A?displayProperty=nameWithType>.  
+  
+ O <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%2A> método é chamado uma vez para cada contrato.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a implementação do <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%2A> método que adiciona uma cadeia de caracteres para a seção de comentários da operação usando o <xref:System.CodeDom?displayProperty=nameWithType> namespace.  
+  
+  
+  
+ O seguinte exemplo de código mostra como o comportamento da operação que implementa <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> é inserido no <xref:System.ServiceModel.Description.OperationDescription.Behaviors%2A?displayProperty=nameWithType> coleção durante a chamada para <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#4](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#4)]  
+  
+ Finalmente, o exemplo de código a seguir mostra a operação gerada em Visual Basic e c#.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.cs#3)]
+ [!code-vb[C_CustomWSDLExtensions#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

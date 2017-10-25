@@ -1,0 +1,95 @@
+<Type Name="EntityHandling" FullName="System.Xml.EntityHandling">
+  <TypeSignature Language="C#" Value="public enum EntityHandling" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EntityHandling extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.EntityHandling" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como o <see cref="T:System.Xml.XmlTextReader" /> ou <see cref="T:System.Xml.XmlValidatingReader" /> tratar entidades.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExpandCharEntities">
+      <MemberSignature Language="C#" Value="ExpandCharEntities" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.EntityHandling ExpandCharEntities = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.EntityHandling.ExpandCharEntities" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.EntityHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Expande a entidades de caractere e retorna as entidades gerais como <see cref="F:System.Xml.XmlNodeType.EntityReference" /> nós.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar <xref:System.Xml.XmlReader.ResolveEntity%2A> para ver o que expanda entidades gerais para. Isso permite que você otimizar a entidade tratamento expandindo somente a entidade na primeira vez que ele é usado.  
+  
+ Quando definido como ExpandCharEntities, um leitor de chamada para o <xref:System.Xml.XmlReader.GetAttribute%2A> método expande todas as entidades (entidades de caractere e gerais).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandEntities">
+      <MemberSignature Language="C#" Value="ExpandEntities" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.EntityHandling ExpandEntities = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.EntityHandling.ExpandEntities" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.EntityHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Expande todas as entidades e retorna os nós expandidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xml.XmlNodeType.EntityReference>nós não são retornados. O texto de entidade é expandido em vez de referências de entidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

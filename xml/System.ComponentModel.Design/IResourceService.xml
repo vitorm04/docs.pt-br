@@ -1,0 +1,117 @@
+<Type Name="IResourceService" FullName="System.ComponentModel.Design.IResourceService">
+  <TypeSignature Language="C#" Value="public interface IResourceService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IResourceService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IResourceService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface para designers para os leitores de recursos de acesso e gravadores para determinado <see cref="T:System.Globalization.CultureInfo" /> tipos de recursos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um gravador de recurso ou o leitor de recurso pode ser usado para serializar ou deserialze objetos ou dados de acordo com a especificada <xref:System.Globalization.CultureInfo> as configurações de recursos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um designer que usa o <xref:System.ComponentModel.Design.IResourceService> para ler e gravar arquivos de recurso para configurar uma propriedade de um controle associado.  
+  
+ [!code-cpp[IResourceServiceExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IResourceServiceExample/CPP/source.cpp#1)]
+ [!code-csharp[IResourceServiceExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IResourceServiceExample/CS/source.cs#1)]
+ [!code-vb[IResourceServiceExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IResourceServiceExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetResourceReader">
+      <MemberSignature Language="C#" Value="public System.Resources.IResourceReader GetResourceReader (System.Globalization.CultureInfo info);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Resources.IResourceReader GetResourceReader(class System.Globalization.CultureInfo info) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IResourceService.GetResourceReader(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.IResourceReader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Globalization.CultureInfo" /> do recurso para o qual recuperar um leitor de recurso.</param>
+        <summary>Localiza o leitor de recurso para a cultura especificada e o retorna.</summary>
+        <returns>Um <see cref="T:System.Resources.IResourceReader" /> interface que contém os recursos para a cultura, ou <see langword="null" /> não se houver nenhum recursos para a cultura.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não há recursos associados com o designer para a cultura especificada, esse método retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceWriter">
+      <MemberSignature Language="C#" Value="public System.Resources.IResourceWriter GetResourceWriter (System.Globalization.CultureInfo info);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Resources.IResourceWriter GetResourceWriter(class System.Globalization.CultureInfo info) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IResourceService.GetResourceWriter(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.IResourceWriter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Globalization.CultureInfo" /> do recurso para o qual criar um gravador de recurso.</param>
+        <summary>Localiza o gravador de recurso para a cultura especificada e o retorna.</summary>
+        <returns>Um <see cref="T:System.Resources.IResourceWriter" /> interface para a cultura especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um novo recurso para a cultura especificada e destrói um recurso existente, se já existir uma.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

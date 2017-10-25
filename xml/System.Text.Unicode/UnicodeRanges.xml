@@ -1,0 +1,3189 @@
+<Type Name="UnicodeRanges" FullName="System.Text.Unicode.UnicodeRanges">
+  <TypeSignature Language="C#" Value="public static class UnicodeRanges" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit UnicodeRanges extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.Unicode.UnicodeRanges" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades estáticas que retornam predefinidas <see cref="System.Text.Unicode.UnicodeRange" /> instâncias que correspondem aos blocos da especificação de Unicode.</summary>
+        <remarks>
+      <format type="text/markdown"><![CDATA[  
+## Remarks  
+
+Você usa <xref:System.Text.Unicode.UnicodeRanges> propriedades recuperar Unicode intervalos nomeado, cada uma delas consiste em um bloco contínuo de pontos de código Unicode. Alguns intervalos incluir pontos de código indefinido. Por exemplo, no **armênio** bloco Unicode (U + 0530-U + 058F), U + 0530, U + 0557-U + 0558, U + 0560, U + 0588 e U + 058B - 058 C são indefinidos. Um ou mais pontos de código podem ocorrer no início de um intervalo, no final de um intervalo ou em qualquer lugar no meio. 
+
+Atualmente, o <xref:System.Text.Unicode.UnicodeRange> classe oferece suporte somente no básico multilíngue BMP (plano), que se estende de U + 0000 a U + FFFF de intervalos nomeados.   
+  ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange All { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange All" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.All" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um intervalo que consiste da todo básica multilíngue BMP (plano), U + 0000 a U + FFFF).</summary>
+        <value>Um intervalo que consiste o BMP inteiro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlphabeticPresentationForms">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange AlphabeticPresentationForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange AlphabeticPresentationForms" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.AlphabeticPresentationForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco alfabéticos Unicode de formulários de apresentação (U + FB00-U + FB4F).</summary>
+        <value>O bloco alfabéticos Unicode de formulários de apresentação (U + FB00-U + FB4F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arabic">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Arabic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Arabic" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Arabic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode árabe (U + 0600-U + 06FF).</summary>
+        <value>O bloco de Unicode árabe (U + 0600-U + 06FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArabicExtendedA">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange ArabicExtendedA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange ArabicExtendedA" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.ArabicExtendedA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco árabe Extended-A Unicode (U + 08A0-U + 08FF).</summary>
+        <value>O bloco árabe Extended-A Unicode (U + 08A0-U + 08FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArabicPresentationFormsA">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange ArabicPresentationFormsA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange ArabicPresentationFormsA" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.ArabicPresentationFormsA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco árabe apresentação Forms-A Unicode (U + FB50-U + FDFF).</summary>
+        <value>O bloco árabe apresentação Forms-A Unicode (U + FB50-U + FDFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArabicPresentationFormsB">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange ArabicPresentationFormsB { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange ArabicPresentationFormsB" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.ArabicPresentationFormsB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco árabe apresentação formulários B Unicode (U + FE70-U + FEFF).</summary>
+        <value>O bloco árabe apresentação formulários B Unicode (U + FE70-U + FEFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArabicSupplement">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange ArabicSupplement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange ArabicSupplement" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.ArabicSupplement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco árabe suplementar Unicode (U + 0750-U + 077F).</summary>
+        <value>O bloco árabe suplementar Unicode (U + 0750-U + 077F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Armenian">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Armenian { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Armenian" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Armenian" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco armênia Unicode (U + 0530-U + 058F).</summary>
+        <value>O bloco de Unicode Armênio (U + 0530-U + 058F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arrows">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Arrows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Arrows" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Arrows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de setas Unicode (U + 2190-U + 21FF).</summary>
+        <value>O bloco de setas Unicode (U + 2190-U + 21FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Balinese">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Balinese { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Balinese" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Balinese" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Balinês Unicode (U + 1B00-U + 1B7F).</summary>
+        <value>O bloco Balinês Unicode (U + 1B00-U + 1B7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bamum">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Bamum { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Bamum" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Bamum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Bamum Unicode (U + A6A0-U + A6FF).</summary>
+        <value>O bloco Bamum Unicode (U + A6A0-U + A6FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BasicLatin">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange BasicLatin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange BasicLatin" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.BasicLatin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode Latim básico (U + 0021-U + 007F).</summary>
+        <value>O bloco de Unicode Latim básico (U + 0021-U + 007F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Batak">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Batak { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Batak" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Batak" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Batak Unicode (U + 1BC0-U + 1BFF).</summary>
+        <value>O bloco Batak Unicode (U + 1BC0-U + 1BFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bengali">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Bengali { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Bengali" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Bengali" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode Bengali (U + 0980-U + 09FF).</summary>
+        <value>O bloco de Unicode Bengali (U + 0980-U + 09FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockElements">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange BlockElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange BlockElements" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.BlockElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de elementos de bloco (U + 2580-U + 259F).</summary>
+        <value>O bloco de Unicode de elementos de bloco (U + 2580-U + 259F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bopomofo">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Bopomofo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Bopomofo" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Bopomofo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Bopomofo Unicode (U + 3100-U + 312F).</summary>
+        <value>O bloco Bopomofo Unicode (U + 3105-U + 312F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BopomofoExtended">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange BopomofoExtended { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange BopomofoExtended" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.BopomofoExtended" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Bopomofo estendido Unicode (U + 31A0-U + 31BF).</summary>
+        <value>O bloco Bopomofo estendido Unicode (U + 31A0-U + 31BF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoxDrawing">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange BoxDrawing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange BoxDrawing" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.BoxDrawing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de desenho de caixa (U + 2500-U + 257F).</summary>
+        <value>O bloco de Unicode de desenho de caixa (U + 2500-U + 257F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BraillePatterns">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange BraillePatterns { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange BraillePatterns" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.BraillePatterns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Braille padrões Unicode (U + 2800-U + 28FF).</summary>
+        <value>O bloco de Braille padrões Unicode (U + 2800-U + 28FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Buginese">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Buginese { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Buginese" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Buginese" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Buginese Unicode (U + 1A00-U + 1A1F).</summary>
+        <value>O bloco Buginese Unicode (U + 1A00-U + 1A1F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Buhid">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Buhid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Buhid" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Buhid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Buhid Unicode (U + 1740-U + 175F).</summary>
+        <value>O bloco Buhid Unicode (U + 1740-U + 175F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cham">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Cham { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Cham" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Cham" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Cham Unicode (U + AA00-U + AA5F).</summary>
+        <value>O bloco Cham Unicode (U + AA00-U + AA5F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cherokee">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Cherokee { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Cherokee" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Cherokee" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Cherokee Unicode (U + 13A0-U + 13FF).</summary>
+        <value>O bloco Cherokee Unicode (U + 13A0-U + 13FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CherokeeSupplement">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CherokeeSupplement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CherokeeSupplement" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CherokeeSupplement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Cherokee suplementar Unicode (U + AB70-U + ABBF).</summary>
+        <value>O bloco Cherokee suplementar Unicode (U + AB70-U + ABBF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CjkCompatibility">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CjkCompatibility { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CjkCompatibility" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CjkCompatibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco CJK compatibilidade Unicode (U + 3300-U + 33FF).</summary>
+        <value>O bloco de CJK compatibilidade Unicode (U + 3300-U + 33FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CjkCompatibilityForms">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CjkCompatibilityForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CjkCompatibilityForms" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CjkCompatibilityForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco CJK compatibilidade formulários Unicode (U + FE30-U + FE4F).</summary>
+        <value>O bloco de CJK compatibilidade formulários Unicode (U + FE30-U + FE4F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CjkCompatibilityIdeographs">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CjkCompatibilityIdeographs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CjkCompatibilityIdeographs" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CjkCompatibilityIdeographs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco CJK compatibilidade ideogramas Unicode (U + F900-U + FAD9).</summary>
+        <value>O bloco de CJK compatibilidade ideogramas Unicode (U + F900-U + FAD9).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CjkRadicalsSupplement">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CjkRadicalsSupplement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CjkRadicalsSupplement" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CjkRadicalsSupplement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco CJK radicais suplementar Unicode (U + 2E80-U + 2EFF).</summary>
+        <value>O bloco de Unicode de suplemento de Radicais CJK (U + 2E80-U + 2EFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CjkStrokes">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CjkStrokes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CjkStrokes" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CjkStrokes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco CJK traços Unicode (U + 31C 0-U + 31EF).</summary>
+        <value>O bloco de CJK traços Unicode (U + 31C 0-U + 31EF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CjkSymbolsandPunctuation">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CjkSymbolsandPunctuation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CjkSymbolsandPunctuation" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CjkSymbolsandPunctuation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de símbolos CJK e pontuação Unicode (U + 3000-U + 303F).</summary>
+        <value>O bloco de símbolos CJK e pontuação Unicode (U + 3000-U + 303F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CjkUnifiedIdeographs">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CjkUnifiedIdeographs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CjkUnifiedIdeographs" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CjkUnifiedIdeographs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco CJK Unificado ideogramas Unicode (U + 4E00-U + 9FCC).</summary>
+        <value>O bloco de CJK Unificado ideogramas Unicode (U + 4E00-U + 9FCC).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CjkUnifiedIdeographsExtensionA">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CjkUnifiedIdeographsExtensionA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CjkUnifiedIdeographsExtensionA" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CjkUnifiedIdeographsExtensionA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco CJK Unitied ideogramas extensão um Unicode (U + 3400-U + 4DB5).</summary>
+        <value>O bloco de CJK Unitied ideogramas extensão um Unicode (U + 3400-U + 4DB5).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CombiningDiacriticalMarks">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CombiningDiacriticalMarks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CombiningDiacriticalMarks" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CombiningDiacriticalMarks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode a combinação de marcas diacríticas (U + 0300-U + 036F).</summary>
+        <value>O bloco de Unicode a combinação de marcas diacríticas (U + 0300-U + 036F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CombiningDiacriticalMarksExtended">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CombiningDiacriticalMarksExtended { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CombiningDiacriticalMarksExtended" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CombiningDiacriticalMarksExtended" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco combinando diacríticas marcas estendidos Unicode (U + 1AB0-U + 1AFF).</summary>
+        <value>O bloco de combinar diacríticas marcas estendidos Unicode (U + 1AB0-U + 1AFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CombiningDiacriticalMarksforSymbols">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CombiningDiacriticalMarksforSymbols { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CombiningDiacriticalMarksforSymbols" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CombiningDiacriticalMarksforSymbols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as marcas diacríticas combinando para bloco de símbolos Unicode (U + 20D 0-U + 20FF).</summary>
+        <value>Marcas diacríticas combinando símbolos Unicode bloco (U + 20D 0-U + 20FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CombiningDiacriticalMarksSupplement">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CombiningDiacriticalMarksSupplement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CombiningDiacriticalMarksSupplement" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CombiningDiacriticalMarksSupplement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de combinação Unicode de suplemento marcas diacríticas (U + 1DC0-U + 1DFF).</summary>
+        <value>O bloco de combinação Unicode de suplemento marcas diacríticas (U + 1DC0-U + 1DFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CombiningHalfMarks">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CombiningHalfMarks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CombiningHalfMarks" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CombiningHalfMarks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco combinando metade marcas Unicode (U + FE20-U + FE2F).</summary>
+        <value>O bloco de combinar metade marcas Unicode (U + FE20-U + FE2F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonIndicNumberForms">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CommonIndicNumberForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CommonIndicNumberForms" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CommonIndicNumberForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de formulários de número índicos comuns (U + A830-U + A83F).</summary>
+        <value>O bloco de Unicode de formulários de número índicos comuns (U + A830-U + A83F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPictures">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange ControlPictures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange ControlPictures" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.ControlPictures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de controle Unicode de imagens (U + 2400-U + 243F).</summary>
+        <value>O bloco de controle Unicode de imagens (U + 2400-U + 243F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Coptic">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Coptic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Coptic" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Coptic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Cóptico Unicode (U + 2C 80-U + 2CFF).</summary>
+        <value>O bloco Cóptico Unicode (U + 2C 80-U + 2CFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrencySymbols">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CurrencySymbols { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CurrencySymbols" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CurrencySymbols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de símbolos de moeda (U + 20A0-U + 20CF).</summary>
+        <value>O bloco de Unicode de símbolos de moeda (U + 20A0-U + 20CF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cyrillic">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Cyrillic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Cyrillic" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Cyrillic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode Cirílico (U + 0400-U + 04FF).</summary>
+        <value>O bloco de Unicode Cirílico (U + 0400-U + 04FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CyrillicExtendedA">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CyrillicExtendedA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CyrillicExtendedA" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CyrillicExtendedA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco cirílico Extended-A Unicode (U + 2DE0-U + 2DFF).</summary>
+        <value>O bloco de cirílico Extended-A Unicode (U + 2DE0-U + 2DFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CyrillicExtendedB">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CyrillicExtendedB { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CyrillicExtendedB" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CyrillicExtendedB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco cirílico estendido-B Unicode (U + A640-U + A69F).</summary>
+        <value>O bloco de cirílico estendido-B Unicode (U + A640-U + A69F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CyrillicSupplement">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange CyrillicSupplement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange CyrillicSupplement" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.CyrillicSupplement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco cirílico suplementar Unicode (U + 0500-U + 052F).</summary>
+        <value>O bloco de cirílico suplementar Unicode (U + 0500-U + 052F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Devanagari">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Devanagari { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Devanagari" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Devanagari" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Devangari Unicode (U + 0900-U + 097F).</summary>
+        <value>O bloco Devangari Unicode (U + 0900-U + 097F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DevanagariExtended">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange DevanagariExtended { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange DevanagariExtended" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.DevanagariExtended" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Devanagari estendidos Unicode (U + A8E0-U + A8FF).</summary>
+        <value>O bloco Devanagari estendidos Unicode (U + A8E0-U + A8FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dingbats">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Dingbats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Dingbats" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Dingbats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Dingbats Unicode (U + 2700-U + 27BF).</summary>
+        <value>O bloco de Dingbats Unicode (U + 2700-U + 27BF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnclosedAlphanumerics">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange EnclosedAlphanumerics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange EnclosedAlphanumerics" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.EnclosedAlphanumerics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco colocados alfanuméricos Unicode (U + 2460-U + 24FF).</summary>
+        <value>O bloco colocados alfanuméricos Unicode (U + 2460-U + 24FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnclosedCjkLettersandMonths">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange EnclosedCjkLettersandMonths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange EnclosedCjkLettersandMonths" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.EnclosedCjkLettersandMonths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de letras de CJK incluídas e meses Unicode (U + 3200-U + 32FF).</summary>
+        <value>O bloco de letras de CJK incluídas e meses Unicode (U + 3200-U + 32FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ethiopic">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Ethiopic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Ethiopic" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Ethiopic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco etíope Unicode (U + 1200-U + 137C).</summary>
+        <value>O bloco etíope Unicode (U + 1200-U + 137C).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EthiopicExtended">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange EthiopicExtended { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange EthiopicExtended" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.EthiopicExtended" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Ethipic estendidos Unicode (U + 2D 80-U + 2DDF).</summary>
+        <value>O bloco Ethipic estendidos Unicode (U + 2D 80-U + 2DDF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EthiopicExtendedA">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange EthiopicExtendedA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange EthiopicExtendedA" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.EthiopicExtendedA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco etíope Extended-A Unicode (U + AB00-U + AB2F).</summary>
+        <value>O bloco etíope Extended-A Unicode (U + AB00-U + AB2F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EthiopicSupplement">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange EthiopicSupplement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange EthiopicSupplement" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.EthiopicSupplement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco etíope suplementar Unicode (U + 1380-U + 1399).</summary>
+        <value>O bloco etíope suplementar Unicode (U + 1380-U + 1399).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneralPunctuation">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange GeneralPunctuation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange GeneralPunctuation" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.GeneralPunctuation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de pontuação geral (U + 2000-U + 206F).</summary>
+        <value>O bloco de Unicode de pontuação geral (U + 2000-U + 206F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeometricShapes">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange GeometricShapes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange GeometricShapes" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.GeometricShapes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de formas geométricas (U + 25A0-U + 25FF).</summary>
+        <value>O bloco de Unicode de formas geométricas (U + 25A0-U + 25FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Georgian">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Georgian { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Georgian" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Georgian" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode Georgiano (U + 10A0-U + 10FF).</summary>
+        <value>O bloco de Unicode Georgiano (U + 10A0-U + 10FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeorgianSupplement">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange GeorgianSupplement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange GeorgianSupplement" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.GeorgianSupplement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco georgiano suplementar Unicode (U + 2D 00-U + 2D2F).</summary>
+        <value>O bloco georgiano suplementar Unicode (U + 2D 00-U + 2D2F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Glagolitic">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Glagolitic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Glagolitic" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Glagolitic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Glagolítica Unicode (U + 2C 00-U + 2C5F).</summary>
+        <value>O bloco de Unicode Glagolítica (U + 2C 00-U + 2C5F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreekandCoptic">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange GreekandCoptic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange GreekandCoptic" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.GreekandCoptic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco grego e Cóptico Unicode (U + 0370-U + 03FF).</summary>
+        <value>O bloco grego e Cóptico Unicode (U + 0370-U + 03FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreekExtended">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange GreekExtended { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange GreekExtended" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.GreekExtended" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco grego estendido Unicode (U + 1F00-U + e 1FFF).</summary>
+        <value>O bloco de grego estendido Unicode (U + 1F00-U + e 1FFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gujarati">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Gujarati { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Gujarati" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Gujarati" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Gujarti Unicode (U + 0A81-U + 0AFF).</summary>
+        <value>O bloco Gujarti Unicode (U + 0A81-U + 0AFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gurmukhi">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Gurmukhi { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Gurmukhi" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Gurmukhi" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Gurmukhi Unicode (U + 0A01-U + 0A7F).</summary>
+        <value>O bloco Gurmukhi Unicode (U + 0A01-U + 0A7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HalfwidthandFullwidthForms">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange HalfwidthandFullwidthForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange HalfwidthandFullwidthForms" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.HalfwidthandFullwidthForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de meia largura e largura total formulários Unicode (U + FF00-U + FFEE).</summary>
+        <value>O bloco de meia largura e largura total formulários Unicode (U + FF00-U + FFEE).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HangulCompatibilityJamo">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange HangulCompatibilityJamo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange HangulCompatibilityJamo" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.HangulCompatibilityJamo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Hangul Compatibilidade Jamo Unicode (U + 3131-U + 318F).</summary>
+        <value>O bloco de Hangul Compatibilidade Jamo Unicode (U + 3131-U + 318F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HangulJamo">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange HangulJamo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange HangulJamo" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.HangulJamo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Hangul Jamo Unicode (U + 1100-U + 11FF).</summary>
+        <value>O bloco de Hangul Jamo Unicode (U + 1100-U + 11FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HangulJamoExtendedA">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange HangulJamoExtendedA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange HangulJamoExtendedA" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.HangulJamoExtendedA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Hangul Jamo Extended-A Unicode (U + A960-U + A9F).</summary>
+        <value>O bloco de Hangul Jamo Extended-A Unicode (U + A960-U + A97F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HangulJamoExtendedB">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange HangulJamoExtendedB { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange HangulJamoExtendedB" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.HangulJamoExtendedB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Hangul Jamo estendido-B Unicode (U + D7B0-U + D7FF).</summary>
+        <value>O bloco de Hangul Jamo estendido-B Unicode (U + D7B0-U + D7FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HangulSyllables">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange HangulSyllables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange HangulSyllables" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.HangulSyllables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Hangul sílabas Unicode (U + AC00-U + D7AF).</summary>
+        <value>O bloco de Hangul sílabas Unicode (U + AC00-U + D7AF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hanunoo">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Hanunoo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Hanunoo" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Hanunoo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Hanunoo Unicode (U + 1720-U + 173F).</summary>
+        <value>O bloco Hanunoo Unicode (U + 1720-U + 173F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hebrew">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Hebrew { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Hebrew" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Hebrew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode hebraico (U + 0590-U + 05FF).</summary>
+        <value>O bloco de Unicode hebraico (U + 0590-U + 05FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hiragana">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Hiragana { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Hiragana" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Hiragana" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Hiragana Unicode (U + 3040-U + 309F).</summary>
+        <value>O bloco de Hiragana Unicode (U + 3040-U + 309F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdeographicDescriptionCharacters">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange IdeographicDescriptionCharacters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange IdeographicDescriptionCharacters" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.IdeographicDescriptionCharacters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de caracteres de descrição ideográfico (U + 2FF0-U + 2FFF).</summary>
+        <value>O bloco de Unicode de caracteres de descrição ideográfico (U + 2FF0-U + 2FFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IpaExtensions">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange IpaExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange IpaExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.IpaExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de IPA extensões Unicode (U + 0250-U + 02AF).</summary>
+        <value>O bloco de IPA extensões Unicode (U + 0250-U + 02AF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Javanese">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Javanese { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Javanese" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Javanese" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Javanese Unicode (U + A980-U + A9DF).</summary>
+        <value>O bloco Javanese Unicode (U + A980-U + A9DF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kanbun">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Kanbun { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Kanbun" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Kanbun" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Kanbun Unicode (U + 3190-U + 319F).</summary>
+        <value>O bloco Kanbun Unicode (U + 3190-U + 319F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KangxiRadicals">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange KangxiRadicals { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange KangxiRadicals" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.KangxiRadicals" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Kangxi radicais suplementar Unicode (U + 2F00-U + 2FDF).</summary>
+        <value>O bloco Kangxi radicais suplementar Unicode (U + 2F00-U + 2FDF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kannada">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Kannada { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Kannada" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Kannada" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode Kannada (U + 0C 81-U + 0CFF).</summary>
+        <value>O bloco de Unicode Kannada (U + 0C 81-U + 0CFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Katakana">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Katakana { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Katakana" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Katakana" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Katakana Unicode (U + 30A0-U + 30FF).</summary>
+        <value>O bloco de Katakana Unicode (U + 30A0-U + 30FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KatakanaPhoneticExtensions">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange KatakanaPhoneticExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange KatakanaPhoneticExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.KatakanaPhoneticExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Katakana fonético extensões Unicode (U + 31F0-U + 31FF).</summary>
+        <value>O bloco de Katakana fonético extensões Unicode (U + 31F0-U + 31FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KayahLi">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange KayahLi { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange KayahLi" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.KayahLi" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Kayah Li Unicode (U + A900-U + A92F).</summary>
+        <value>O bloco Kayah Li Unicode (U + A900-U + A92F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Khmer">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Khmer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Khmer" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Khmer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode Khmer (U + 1780-U + 17FF).</summary>
+        <value>O bloco de Unicode Khmer (U + 1780-U + 17FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KhmerSymbols">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange KhmerSymbols { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange KhmerSymbols" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.KhmerSymbols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de símbolos Khmer (U + 19E0-U + 19FF).</summary>
+        <value>O bloco de Unicode de símbolos Khmer (U + 19E0-U + 19FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lao">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Lao { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Lao" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Lao" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode laosiano (U + 0E80-U + 0EDF).</summary>
+        <value>O bloco de Unicode laosiano (U + 0E80-U + 0EDF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Latin1Supplement">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Latin1Supplement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Latin1Supplement" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Latin1Supplement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Latin-1 suplementar Unicode (U + 00A1-U + 00FF).</summary>
+        <value>O bloco de Latin-1 suplementar Unicode (U + 00A1-U + 00FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LatinExtendedA">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange LatinExtendedA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange LatinExtendedA" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.LatinExtendedA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de Extended-A latinos (U + 0100-U + 017F).</summary>
+        <value>O bloco de Unicode de Extended-A latinos (U + 0100-U + 017F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LatinExtendedAdditional">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange LatinExtendedAdditional { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange LatinExtendedAdditional" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.LatinExtendedAdditional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco latino estendido Unicode adicionais (U + 1E00-U + 1EFF).</summary>
+        <value>O bloco de Unicode adicionais latino estendido (U + 1E00-U + 1EFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LatinExtendedB">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange LatinExtendedB { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange LatinExtendedB" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.LatinExtendedB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de Latim estendido-B (U + 0180-U + 024F).</summary>
+        <value>O bloco de Unicode de Latim estendido-B (U + 0180-U + 024F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LatinExtendedC">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange LatinExtendedC { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange LatinExtendedC" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.LatinExtendedC" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de latino estendido C (U + 2C 60-U + 2C7F).</summary>
+        <value>O bloco de Unicode de latino estendido C (U + 2C 60-U + 2C7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LatinExtendedD">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange LatinExtendedD { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange LatinExtendedD" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.LatinExtendedD" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de D estendida latino (U + A720-U + A7FF).</summary>
+        <value>O bloco de Unicode de D estendida latino (U + A720-U + A7FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LatinExtendedE">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange LatinExtendedE { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange LatinExtendedE" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.LatinExtendedE" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de estendida E latino (U + AB30-U + AB6F).</summary>
+        <value>O bloco de Unicode de estendida E latino (U + AB30-U + AB6F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lepcha">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Lepcha { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Lepcha" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Lepcha" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Lepcha Unicode (U + 1C 00-U + 1C4F).</summary>
+        <value>O bloco Lepcha Unicode (U + 1C 00-U + 1C4F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LetterlikeSymbols">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange LetterlikeSymbols { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange LetterlikeSymbols" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.LetterlikeSymbols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de símbolos do tipo carta (U + 2100-U + 214F).</summary>
+        <value>O bloco de Unicode de símbolos do tipo carta (U + 2100-U + 214F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Limbu">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Limbu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Limbu" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Limbu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Limbu Unicode (U + 1900-U + 194F).</summary>
+        <value>O bloco Limbu Unicode (U + 1900-U + 194F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lisu">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Lisu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Lisu" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Lisu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Lisu Unicode (U + A4D0-U + A4FF).</summary>
+        <value>O bloco Lisu Unicode (U + A4D0-U + A4FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Malayalam">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Malayalam { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Malayalam" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Malayalam" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode malaiala (U + 0d 00-U + 0D7F).</summary>
+        <value>O bloco de Unicode malaiala (U + 0d 00-U + 0D7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mandaic">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Mandaic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Mandaic" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Mandaic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Mandaic Unicode (U + 0840-U + 085F).</summary>
+        <value>O bloco Mandaic Unicode (U + 0840-U + 085F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MathematicalOperators">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange MathematicalOperators { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange MathematicalOperators" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.MathematicalOperators" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de operadores de matemática (U + 2200-U + 22FF).</summary>
+        <value>O bloco de Unicode de operadores de matemática (U + 2200-U + 22FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeeteiMayek">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange MeeteiMayek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange MeeteiMayek" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.MeeteiMayek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Meetei Mayek Unicode (U + ABC0-U + ABFF).</summary>
+        <value>O bloco Meetei Mayek Unicode (U + ABC0-U + ABFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeeteiMayekExtensions">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange MeeteiMayekExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange MeeteiMayekExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.MeeteiMayekExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Meetei Mayek extensões Unicode (U + AAE0-U + AAFF).</summary>
+        <value>O bloco Meetei Mayek extensões Unicode (U + AAE0-U + AAFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MiscellaneousMathematicalSymbolsA">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange MiscellaneousMathematicalSymbolsA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange MiscellaneousMathematicalSymbolsA" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.MiscellaneousMathematicalSymbolsA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de diversos Unicode Symbols-A matemática (U + 27 C 0-U + 27EF).</summary>
+        <value>O bloco de diversos Unicode Symbols-A matemática (U + 27 C 0-U + 27EF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MiscellaneousMathematicalSymbolsB">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange MiscellaneousMathematicalSymbolsB { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange MiscellaneousMathematicalSymbolsB" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.MiscellaneousMathematicalSymbolsB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de diversos Unicode matemática de símbolos-B (U + 2980-U + 29FF).</summary>
+        <value>O bloco de diversos Unicode matemática de símbolos-B (U + 2980-U + 29FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MiscellaneousSymbols">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange MiscellaneousSymbols { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange MiscellaneousSymbols" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.MiscellaneousSymbols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de diversos Unicode de símbolos (U + 2600-U + 26FF).</summary>
+        <value>O bloco de diversos Unicode de símbolos (U + 2600-U + 26FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MiscellaneousSymbolsandArrows">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange MiscellaneousSymbolsandArrows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange MiscellaneousSymbolsandArrows" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.MiscellaneousSymbolsandArrows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de diversos símbolos e setas Unicode (U + 2B00-U + 2BFF).</summary>
+        <value>O bloco de diversos símbolos e setas Unicode (U + 2B00-U + 2BFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MiscellaneousTechnical">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange MiscellaneousTechnical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange MiscellaneousTechnical" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.MiscellaneousTechnical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de diversos Unicode técnica (U + 2300-U + 23FF).</summary>
+        <value>O bloco de diversos Unicode técnica (U + 2300-U + 23FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifierToneLetters">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange ModifierToneLetters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange ModifierToneLetters" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.ModifierToneLetters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de modificador tom letras Unicode (U + A700-U + A71F).</summary>
+        <value>O bloco de modificador tom letras Unicode (U + A700-U + A71F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mongolian">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Mongolian { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Mongolian" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Mongolian" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode mongol (U + 1800-U + 18AF).</summary>
+        <value>O bloco de Unicode mongol (U + 1800-U + 18AF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Myanmar">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Myanmar { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Myanmar" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Myanmar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Myanmar Unicode (U + 1000-U + 109F).</summary>
+        <value>O bloco de Myanmar Unicode (U + 1000-U + 109F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MyanmarExtendedA">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange MyanmarExtendedA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange MyanmarExtendedA" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.MyanmarExtendedA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Myanmar Extended-A Unicode (U + AA60-U + AA7F).</summary>
+        <value>O bloco de Myanmar Extended-A Unicode (U + AA60-U + AA7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MyanmarExtendedB">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange MyanmarExtendedB { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange MyanmarExtendedB" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.MyanmarExtendedB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Myanmar estendido-B Unicode (U + A9E0-U + A9FF).</summary>
+        <value>O bloco de Myanmar estendido-B Unicode (U + A9E0-U + A9FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewTaiLue">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange NewTaiLue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange NewTaiLue" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.NewTaiLue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de Lue Novo parte fina (U + 1980-U + 19DF).</summary>
+        <value>O bloco de Unicode de Lue Novo parte fina (U + 1980-U + 19DF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NKo">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange NKo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange NKo" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.NKo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco NKo Unicode (U + 07c 0-U + 07FF).</summary>
+        <value>O bloco NKo Unicode (U + 07c 0-U + 07FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange None { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange None" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.None" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um intervalo vazio do Unicode. </summary>
+        <value>Um intervalo de Unicode com nenhum elemento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberForms">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange NumberForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange NumberForms" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.NumberForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de número formulários Unicode (U + 2150-U + 218F).</summary>
+        <value>O bloco de número formulários Unicode (U + 2150-U + 218F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ogham">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Ogham { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Ogham" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Ogham" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Ogham Unicode (U + 1680-U + 169F).</summary>
+        <value>O bloco Ogham Unicode (U + 1680-U + 169F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OlChiki">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange OlChiki { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange OlChiki" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.OlChiki" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Ol Chiki Unicode (U + 1C 50-U + 1C7F).</summary>
+        <value>O bloco Ol Chiki Unicode (U + 1C 50-U + 1C7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpticalCharacterRecognition">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange OpticalCharacterRecognition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange OpticalCharacterRecognition" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.OpticalCharacterRecognition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de reconhecimento óptico de caracteres Unicode (U + 2440-U + 245F).</summary>
+        <value>O bloco de reconhecimento óptico de caracteres Unicode (U + 2440-U + 245F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Oriya">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Oriya { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Oriya" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Oriya" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode oriá (U + 0B00-U + 0B7F).</summary>
+        <value>O bloco de Unicode oriá (U + 0B00-U + 0B7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Phagspa">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Phagspa { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Phagspa" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Phagspa" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Phags-pa Unicode (U + A840-U + A87F).</summary>
+        <value>O bloco Phags-pa Unicode (U + A840-U + A87F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneticExtensions">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange PhoneticExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange PhoneticExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.PhoneticExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de extensões fonéticas (U + 1D 00-U + 1D7F).</summary>
+        <value>O bloco de Unicode de extensões fonéticas (U + 1D 00-U + 1D7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneticExtensionsSupplement">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange PhoneticExtensionsSupplement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange PhoneticExtensionsSupplement" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.PhoneticExtensionsSupplement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de suplemento extensões fonéticas (U + 1D 80-U + 1DBF).</summary>
+        <value>O bloco de Unicode de suplemento extensões fonéticas (U + 1D 80-U + 1DBF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rejang">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Rejang { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Rejang" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Rejang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Rejang Unicode (U + A930-U + A95F).</summary>
+        <value>O bloco Rejang Unicode (U + A930-U + A95F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Runic">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Runic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Runic" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Runic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco rúnica Unicode (U + 16A0-U + 16FF).</summary>
+        <value>O bloco de Unicode rúnica (U + 16A0-U + 16FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Samaritan">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Samaritan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Samaritan" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Samaritan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Samaritan Unicode (U + 0800-U + 083F).</summary>
+        <value>O bloco Samaritan Unicode (U + 0800-U + 083F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Saurashtra">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Saurashtra { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Saurashtra" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Saurashtra" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Saurashtra Unicode (U + A880-U + A8DF).</summary>
+        <value>O bloco Saurashtra Unicode (U + A880-U + A8DF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sinhala">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Sinhala { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Sinhala" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Sinhala" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Sinhala Unicode (U + 0D 80-U + 0DFF).</summary>
+        <value>O bloco Sinhala Unicode (U + 0D 80-U + 0DFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallFormVariants">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange SmallFormVariants { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange SmallFormVariants" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.SmallFormVariants" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de variantes de forma pequena (U + FE50-U + FE6F).</summary>
+        <value>O bloco de Unicode de variantes de forma pequena (U + FE50-U + FE6F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpacingModifierLetters">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange SpacingModifierLetters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange SpacingModifierLetters" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.SpacingModifierLetters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de espaçamento modificador letras Unicode (U + 02B0-U + 02FF).</summary>
+        <value>O bloco de espaçamento modificador letras Unicode (U + 02B0-U + 02FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Specials">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Specials { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Specials" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Specials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de promoções Unicode (U + FFF0-U + FFFF).</summary>
+        <value>O bloco de promoções Unicode (U + FFF0-U + FFFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sundanese">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Sundanese { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Sundanese" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Sundanese" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Sundanese Unicode (U + 1B80-U + 1BBF).</summary>
+        <value>O bloco Sundanese Unicode (U + 1B80-U + 1BBF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SundaneseSupplement">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange SundaneseSupplement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange SundaneseSupplement" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.SundaneseSupplement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Sundanese suplementar Unicode (U + 1CC0-U + 1CCF).</summary>
+        <value>O bloco Sundanese suplementar Unicode (U + 1CC0-U + 1CCF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuperscriptsandSubscripts">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange SuperscriptsandSubscripts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange SuperscriptsandSubscripts" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.SuperscriptsandSubscripts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o sobrescritos e subscritos Unicode bloquear (U + 2070-U + 209F).</summary>
+        <value>O sobrescritos e subscritos Unicode bloquear (U + 2070-U + 209F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupplementalArrowsA">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange SupplementalArrowsA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange SupplementalArrowsA" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.SupplementalArrowsA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco suplementar Unicode de Arrows-A (U + 27F0-U + 27FF).</summary>
+        <value>O bloco de suplementar Unicode de Arrows-A (U + 27F0-U + 27FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupplementalArrowsB">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange SupplementalArrowsB { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange SupplementalArrowsB" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.SupplementalArrowsB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco suplementar Unicode de setas-B (U + 2900-U + 297F).</summary>
+        <value>O bloco de suplementar Unicode de setas-B (U + 2900-U + 297F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupplementalMathematicalOperators">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange SupplementalMathematicalOperators { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange SupplementalMathematicalOperators" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.SupplementalMathematicalOperators" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco suplementar Unicode operadores matemáticos (U + 2A00-U + 2AFF).</summary>
+        <value>O bloco de suplementar Unicode operadores matemáticos (U + 2A00-U + 2AFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupplementalPunctuation">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange SupplementalPunctuation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange SupplementalPunctuation" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.SupplementalPunctuation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco suplementar Unicode de pontuação (U + 2E00-U + 2E7F).</summary>
+        <value>O bloco de suplementar Unicode de pontuação (U + 2E00-U + 2E7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SylotiNagri">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange SylotiNagri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange SylotiNagri" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.SylotiNagri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Syloti Nagri Unicode (U + A800-U + A82F).</summary>
+        <value>O bloco Syloti Nagri Unicode (U + A800-U + A82F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Syriac">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Syriac { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Syriac" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Syriac" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode Siríaco (U + 0700-U + 074F).</summary>
+        <value>O bloco de Unicode Siríaco (U + 0700-U + 074F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tagalog">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Tagalog { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Tagalog" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Tagalog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Tagalo Unicode (U + 1700-U + 171F).</summary>
+        <value>O bloco Tagalo Unicode (U + 1700-U + 171F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tagbanwa">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Tagbanwa { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Tagbanwa" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Tagbanwa" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Tagbanwa Unicode (U + 1760-U + 177F).</summary>
+        <value>O bloco Tagbanwa Unicode (U + 1760-U + 177F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaiLe">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange TaiLe { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange TaiLe" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.TaiLe" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco da parte fina Le Unicode (U + 1950-U + 197F).</summary>
+        <value>O bloco de parte fina Le Unicode (U + 1950-U + 197F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaiTham">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange TaiTham { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange TaiTham" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.TaiTham" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco da parte fina Tham Unicode (U + 1A20-U + 1AAF).</summary>
+        <value>O bloco de parte fina Tham Unicode (U + 1A20-U + 1AAF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaiViet">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange TaiViet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange TaiViet" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.TaiViet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco da parte fina Viet Unicode (U + AA80-U + AADF).</summary>
+        <value>O bloco de parte fina Viet Unicode (U + AA80-U + AADF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tamil">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Tamil { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Tamil" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Tamil" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode tâmil (U + 0B80-U + 0BFF).</summary>
+        <value>O bloco de Unicode tâmil (U + 0B82-U + 0BFA).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Telugu">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Telugu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Telugu" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Telugu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode télugo (U + 0C 00-U + 0C7F).</summary>
+        <value>O bloco de Unicode télugo (U + 0C 00-U + 0C7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thaana">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Thaana { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Thaana" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Thaana" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Thaana Unicode (U + 0780-U + 07BF).</summary>
+        <value>O bloco Thaana Unicode (U + 0780-U + 07BF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thai">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Thai { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Thai" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Thai" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode tailandês (U + 0E00-U + 0E7F).</summary>
+        <value>O bloco de Unicode tailandês (U + 0E00-U + 0E7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tibetan">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Tibetan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Tibetan" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Tibetan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode tibetano (U + 0F00-U + 0FFF).</summary>
+        <value>O bloco de Unicode tibetano (U + 0F00-U + 0FFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tifinagh">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Tifinagh { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Tifinagh" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Tifinagh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Tifinagh Unicode (U + 2D 30-U + 2D7F).</summary>
+        <value>O bloco Tifinagh Unicode (U + 2D 30-U + 2D7F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnifiedCanadianAboriginalSyllabics">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange UnifiedCanadianAboriginalSyllabics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange UnifiedCanadianAboriginalSyllabics" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.UnifiedCanadianAboriginalSyllabics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco unificado canadense Aborígine silábico Unicode (U + 1400-U + 167F).</summary>
+        <value>O bloco unificado canadense Aborígine silábico Unicode (U + 1400-U + 167F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnifiedCanadianAboriginalSyllabicsExtended">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange UnifiedCanadianAboriginalSyllabicsExtended { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange UnifiedCanadianAboriginalSyllabicsExtended" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.UnifiedCanadianAboriginalSyllabicsExtended" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco unificado canadense Aborígine silábico Unicode estendido (U + 18B0-U + 18FF).</summary>
+        <value>O bloco unificado canadense Aborígine silábico Unicode estendido (U + 18B0-U + 18FF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Vai">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Vai { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange Vai" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.Vai" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Vai Unicode (U + A500-U + A63F).</summary>
+        <value>O bloco Vai Unicode (U + A500-U + A63F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VariationSelectors">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange VariationSelectors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange VariationSelectors" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.VariationSelectors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de variação seletores Unicode (U + FE00-U + FE0F).</summary>
+        <value>O bloco de variação seletores Unicode (U + FE00-U + FE0F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VedicExtensions">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange VedicExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange VedicExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.VedicExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco de Unicode de extensões Vedic (U + 1CD 0-U + 1CFF).</summary>
+        <value>O bloco de Unicode de extensões Vedic (U + 1CD 0-U + 1CFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalForms">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange VerticalForms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange VerticalForms" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.VerticalForms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Vertical Unicode de formulários (U + FE10-U + FE1F).</summary>
+        <value>O bloco de Unicode de formulários Vertical (U + FE10-U + FE1F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YijingHexagramSymbols">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange YijingHexagramSymbols { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange YijingHexagramSymbols" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.YijingHexagramSymbols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Yijing Hexagrama símbolos Unicode (U + 4DC0-U + 4DFF).</summary>
+        <value>O bloco Yijing Hexagrama símbolos Unicode (U + 4DC0-U + 4DFF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YiRadicals">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange YiRadicals { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange YiRadicals" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.YiRadicals" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Yi radicais Unicode (U + A490-U + A4CF).</summary>
+        <value>O bloco de Unicode de Radicais Yi (U + A490-U + A4CF).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YiSyllables">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange YiSyllables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Text.Unicode.UnicodeRange YiSyllables" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRanges.YiSyllables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o bloco Yi sílabas Unicode (U + A000-U + A48F).</summary>
+        <value>O bloco Yi sílabas Unicode (U + A000-U + A48F).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

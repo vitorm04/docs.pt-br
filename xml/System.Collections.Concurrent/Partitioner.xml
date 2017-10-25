@@ -1,0 +1,404 @@
+<Type Name="Partitioner" FullName="System.Collections.Concurrent.Partitioner">
+  <TypeSignature Language="C#" Value="public static class Partitioner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Partitioner extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Concurrent.Partitioner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Concurrent</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.14.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece estratégias de particionamento comuns para enumeráveis, listas e matrizes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para saber mais, veja [Particionadores personalizados para PLINQ e TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Concurrent.OrderablePartitioner&lt;Tuple&lt;int,int&gt;&gt; Create (int fromInclusive, int toExclusive);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Concurrent.OrderablePartitioner`1&lt;class System.Tuple`2&lt;int32, int32&gt;&gt; Create(int32 fromInclusive, int32 toExclusive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.Partitioner.Create(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.OrderablePartitioner&lt;System.Tuple&lt;System.Int32,System.Int32&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int32" />
+        <Parameter Name="toExclusive" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">O limite inferior inclusivo do intervalo.</param>
+        <param name="toExclusive">O limite superior exclusivo do intervalo.</param>
+        <summary>Cria um particionador que divide em partes o intervalo especificado pelo usuário.</summary>
+        <returns>Um particionador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [Particionadores personalizados para PLINQ e TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O argumento <paramref name="toExclusive" /> é menor ou igual ao argumento <paramref name="fromInclusive" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Concurrent.OrderablePartitioner&lt;Tuple&lt;long,long&gt;&gt; Create (long fromInclusive, long toExclusive);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Concurrent.OrderablePartitioner`1&lt;class System.Tuple`2&lt;int64, int64&gt;&gt; Create(int64 fromInclusive, int64 toExclusive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.Partitioner.Create(System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.OrderablePartitioner&lt;System.Tuple&lt;System.Int64,System.Int64&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int64" />
+        <Parameter Name="toExclusive" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">O limite inferior inclusivo do intervalo.</param>
+        <param name="toExclusive">O limite superior exclusivo do intervalo.</param>
+        <summary>Cria um particionador que divide em partes o intervalo especificado pelo usuário.</summary>
+        <returns>Um particionador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [Particionadores personalizados para PLINQ e TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O argumento <paramref name="toExclusive" /> é menor ou igual ao argumento <paramref name="fromInclusive" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Concurrent.OrderablePartitioner&lt;Tuple&lt;int,int&gt;&gt; Create (int fromInclusive, int toExclusive, int rangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Concurrent.OrderablePartitioner`1&lt;class System.Tuple`2&lt;int32, int32&gt;&gt; Create(int32 fromInclusive, int32 toExclusive, int32 rangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.Partitioner.Create(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.OrderablePartitioner&lt;System.Tuple&lt;System.Int32,System.Int32&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int32" />
+        <Parameter Name="toExclusive" Type="System.Int32" />
+        <Parameter Name="rangeSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">O limite inferior inclusivo do intervalo.</param>
+        <param name="toExclusive">O limite superior exclusivo do intervalo.</param>
+        <param name="rangeSize">O tamanho de cada subintervalo.</param>
+        <summary>Cria um particionador que divide em partes o intervalo especificado pelo usuário.</summary>
+        <returns>Um particionador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [Particionadores personalizados para PLINQ e TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O argumento <paramref name="toExclusive" /> é menor ou igual ao argumento <paramref name="fromInclusive" />.  
+  
+ -ou-  
+  
+ O argumento <paramref name="rangeSize" /> é menor ou igual a 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Collections.Concurrent.OrderablePartitioner&lt;Tuple&lt;long,long&gt;&gt; Create (long fromInclusive, long toExclusive, long rangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Concurrent.OrderablePartitioner`1&lt;class System.Tuple`2&lt;int64, int64&gt;&gt; Create(int64 fromInclusive, int64 toExclusive, int64 rangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.Partitioner.Create(System.Int64,System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.OrderablePartitioner&lt;System.Tuple&lt;System.Int64,System.Int64&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fromInclusive" Type="System.Int64" />
+        <Parameter Name="toExclusive" Type="System.Int64" />
+        <Parameter Name="rangeSize" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="fromInclusive">O limite inferior inclusivo do intervalo.</param>
+        <param name="toExclusive">O limite superior exclusivo do intervalo.</param>
+        <param name="rangeSize">O tamanho de cada subintervalo.</param>
+        <summary>Cria um particionador que divide em partes o intervalo especificado pelo usuário.</summary>
+        <returns>Um particionador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [Particionadores personalizados para PLINQ e TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O argumento <paramref name="toExclusive" /> é menor ou igual ao argumento <paramref name="fromInclusive" />.  
+  
+ -ou-  
+  
+ O argumento <paramref name="rangeSize" /> é menor ou igual a 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt; Create&lt;TSource&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Concurrent.OrderablePartitioner`1&lt;!!TSource&gt; Create&lt;TSource&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">O tipo dos elementos no enumerável de origem.</typeparam>
+        <param name="source">O enumerável a ser particionado.</param>
+        <summary>Cria um particionador ordenável de uma instância do <see cref="T:System.Collections.Generic.IEnumerable`1" />.</summary>
+        <returns>Um particionador ordenável com base na matriz de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem usada no particionador criado é determinada pela ordem natural dos elementos, conforme recuperados da fonte de enumerável. Para obter mais informações e exemplos, consulte [Particionadores personalizados para PLINQ e TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt; Create&lt;TSource&gt; (System.Collections.Generic.IEnumerable&lt;TSource&gt; source, System.Collections.Concurrent.EnumerablePartitionerOptions partitionerOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Concurrent.OrderablePartitioner`1&lt;!!TSource&gt; Create&lt;TSource&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; source, valuetype System.Collections.Concurrent.EnumerablePartitionerOptions partitionerOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Concurrent.EnumerablePartitionerOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" />
+        <Parameter Name="partitionerOptions" Type="System.Collections.Concurrent.EnumerablePartitionerOptions" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">O tipo dos elementos no enumerável de origem.</typeparam>
+        <param name="source">O enumerável a ser particionado.</param>
+        <param name="partitionerOptions">Opções para controlar o comportamento de buffer do particionador.</param>
+        <summary>Cria um particionador ordenável de uma instância do <see cref="T:System.Collections.Generic.IEnumerable`1" />.</summary>
+        <returns>Um particionador ordenável com base na matriz de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem usada no particionador criado é determinada pela ordem natural dos elementos, conforme recuperados da fonte de enumerável.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O argumento <paramref name="partitionerOptions" /> especifica um valor inválido para <see cref="T:System.Collections.Concurrent.EnumerablePartitionerOptions" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt; Create&lt;TSource&gt; (System.Collections.Generic.IList&lt;TSource&gt; list, bool loadBalance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Concurrent.OrderablePartitioner`1&lt;!!TSource&gt; Create&lt;TSource&gt;(class System.Collections.Generic.IList`1&lt;!!TSource&gt; list, bool loadBalance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.Partitioner.Create``1(System.Collections.Generic.IList{``0},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="list" Type="System.Collections.Generic.IList&lt;TSource&gt;" />
+        <Parameter Name="loadBalance" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">Tipo dos elementos na lista de origem.</typeparam>
+        <param name="list">A lista a ser particionada.</param>
+        <param name="loadBalance">Um valor booliano que indica se o particionador criado deve balancear carga dinamicamente entre as partições em vez de criar uma partição estaticamente.</param>
+        <summary>Cria um particionador ordenável com base em uma instância <see cref="T:System.Collections.Generic.IList`1" />.</summary>
+        <returns>Um particionador ordenável baseado na lista de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [Particionadores personalizados para PLINQ e TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt; Create&lt;TSource&gt; (TSource[] array, bool loadBalance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Concurrent.OrderablePartitioner`1&lt;!!TSource&gt; Create&lt;TSource&gt;(!!TSource[] array, bool loadBalance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Concurrent.Partitioner.Create``1(``0[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Concurrent</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.14.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Concurrent.OrderablePartitioner&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="array" Type="TSource[]" />
+        <Parameter Name="loadBalance" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">O tipo dos elementos na matriz de origem.</typeparam>
+        <param name="array">A matriz a ser particionada.</param>
+        <param name="loadBalance">Um valor booliano que indica se o particionador criado deve balancear carga dinamicamente entre as partições em vez de criar uma partição estaticamente.</param>
+        <summary>Cria um particionador ordenável de uma instância do <see cref="T:System.Array" />.</summary>
+        <returns>Um particionador ordenável com base na matriz de entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações e exemplos, consulte [Particionadores personalizados para PLINQ e TPL](~/docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

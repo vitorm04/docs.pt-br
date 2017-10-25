@@ -1,0 +1,98 @@
+<Type Name="IColumnsInfo" FullName="Microsoft.VisualBasic.Compatibility.VB6.IColumnsInfo">
+  <TypeSignature Language="C#" Value="public interface IColumnsInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IColumnsInfo" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.IColumnsInfo" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0C733A11-2A1C-11CE-ADE5-00AA0044773D")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma implementação do OLE DB <see langword="IColumnInfo" /> interface para uso por aplicativos atualizado do Visual Basic 6.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetColumnInfo">
+      <MemberSignature Language="C#" Value="public void GetColumnInfo (out int cColumns, out IntPtr pColumnInfo, out IntPtr pStringsBuffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void GetColumnInfo([out] int32&amp; cColumns, [out] native int&amp; pColumnInfo, [out] native int&amp; pStringsBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IColumnsInfo.GetColumnInfo(System.Int32@,System.IntPtr@,System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cColumns" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="pColumnInfo" Type="System.IntPtr&amp;" RefType="out" />
+        <Parameter Name="pStringsBuffer" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="cColumns">Um ponteiro de memória no qual retornar o número de colunas no conjunto de linhas; Esse número inclui a coluna de indicador, se houver um.</param>
+        <param name="pColumnInfo">Um ponteiro de memória no qual retornar uma matriz de <see langword="DBCOLUMNINFO" /> estruturas.</param>
+        <param name="pStringsBuffer">Um ponteiro de memória no qual retornar um ponteiro para o armazenamento de todos os valores de cadeia de caracteres (nomes usados em columnid ou para pwszName) dentro de um único bloco de alocação.</param>
+        <summary>Retorna os metadados de coluna necessários pela maioria dos consumidores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapColumnIDs">
+      <MemberSignature Language="C#" Value="public void MapColumnIDs (int cColumnIDs, Microsoft.VisualBasic.Compatibility.VB6.DBID[] columnIDs, int[] rgColumns);" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance void MapColumnIDs([in]int32 cColumnIDs, [in]valuetype Microsoft.VisualBasic.Compatibility.VB6.DBID[] columnIDs, [out] int32[] rgColumns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Compatibility.VB6.IColumnsInfo.MapColumnIDs(System.Int32,Microsoft.VisualBasic.Compatibility.VB6.DBID[],System.Int32[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cColumnIDs" Type="System.Int32" />
+        <Parameter Name="columnIDs" Type="Microsoft.VisualBasic.Compatibility.VB6.DBID[]" />
+        <Parameter Name="rgColumns" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="cColumnIDs">O número de coluna IDs para mapear.</param>
+        <param name="columnIDs">Uma matriz de IDs de colunas para a qual determinar ordinais de coluna.</param>
+        <param name="rgColumns">Uma matriz de <c>cColumnIDs</c> ordinais das colunas identificadas pelos elementos de <c>columnIDs</c>.</param>
+        <summary>Retorna uma matriz de ordinais das colunas em um conjunto de linhas que são identificados pela coluna IDs especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[Note_compatibility](~/includes/note-compatibility-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

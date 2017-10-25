@@ -1,0 +1,67 @@
+<Type Name="XmlSchemaMaxInclusiveFacet" FullName="System.Xml.Schema.XmlSchemaMaxInclusiveFacet">
+  <TypeSignature Language="C#" Value="public class XmlSchemaMaxInclusiveFacet : System.Xml.Schema.XmlSchemaFacet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaMaxInclusiveFacet extends System.Xml.Schema.XmlSchemaFacet" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaMaxInclusiveFacet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaFacet</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento <see langword="maxInclusive" /> do esquema XML, conforme especificado pelo W3C (World Wide Web Consortium). Essa classe pode ser usada para especificar uma restrição no valor máximo de um <see langword="simpleType" /> elemento. O valor do elemento deve ser menor ou igual ao valor da <see langword="maxInclusive" /> elemento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra o uso da `XmlSchemaMaxInclusiveFacet` classe.  
+  
+ [!code-cpp[Classic WebData XmlSchemaMaxInclusiveFacet Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic Webdata XmlSchemaMaxInclusiveFacet Example/CPP/maxinclusivefacet.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaMaxInclusiveFacet Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic Webdata XmlSchemaMaxInclusiveFacet Example/CS/maxinclusivefacet.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaMaxInclusiveFacet Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic Webdata XmlSchemaMaxInclusiveFacet Example/VB/maxinclusivefacet.vb#1)]  
+  
+ O seguinte arquivo XML é gerado para o exemplo de código anterior.  
+  
+ [!code-xml[Classic WebData XmlSchemaMaxInclusiveFacet Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic Webdata XmlSchemaMaxInclusiveFacet Example/XML/example.xsd#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaMaxInclusiveFacet ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaMaxInclusiveFacet.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaMaxInclusiveFacet" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

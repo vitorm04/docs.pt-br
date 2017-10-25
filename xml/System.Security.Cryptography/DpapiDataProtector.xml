@@ -1,0 +1,208 @@
+<Type Name="DpapiDataProtector" FullName="System.Security.Cryptography.DpapiDataProtector">
+  <TypeSignature Language="C#" Value="public sealed class DpapiDataProtector : System.Security.Cryptography.DataProtector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DpapiDataProtector extends System.Security.Cryptography.DataProtector" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.DpapiDataProtector" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.DataProtector</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos de proteção de dados simples.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.DpapiDataProtector> classe fornece uma maneira estruturada para proteger dados usando o <xref:System.Security.Cryptography.ProtectedData> classe. O construtor da classe tem parâmetros para fins que servem como uma senha para identificar os dados protegidos. Todos os três parâmetros são colocadas em hash e incluídos como parte da cadeia de caracteres de dados criptografados. Você deve saber os parâmetros de finalidade para desproteger os dados. O <xref:System.Security.Cryptography.ProtectedData.Protect%2A?displayProperty=nameWithType> método é chamado para criptografar os dados que tem um `optionalEntropy` parâmetro que permite que você adicione informações de qualificação para criptografar os dados com mais segurança. O hash dos parâmetros de finalidade é usado para entropia. Porque você não precisa de uma chave para descriptografar os dados, escolher cuidadosamente os dados de finalidade adiciona outro nível de segurança para proteção de dados.  
+  
+ Se você usar um <xref:System.Security.Cryptography.DpapiDataProtector.Scope%2A> de <xref:System.Security.Cryptography.DataProtectionScope.CurrentUser>, somente um usuário com credenciais de logon que correspondam do usuário que os dados criptografados pode descriptografar os dados. Além disso, descriptografia geralmente pode ser feita apenas no computador em que os dados foram criptografados. A função do Windows que criptografa os dados cria uma chave de sessão para executar a criptografia. A chave de sessão é derivada novamente quando os dados a serem descriptografados. Para obter uma descrição detalhada de como os dados são protegidos usando chaves de sessão, consulte [proteção de dados do Windows](http://go.microsoft.com/fwlink/?LinkId=224686).  
+  
+ Se você usar um <xref:System.Security.Cryptography.DpapiDataProtector.Scope%2A> de <xref:System.Security.Cryptography.DataProtectionScope.LocalMachine> ao proteger os dados e não identificar cuidadosamente os parâmetros de finalidade, nenhum outro aplicativo no computador que conhece as finalidades pode acessar e desproteger os dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DpapiDataProtector (string appName, string primaryPurpose, params string[] specificPurpose);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string appName, string primaryPurpose, string[] specificPurpose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DpapiDataProtector.#ctor(System.String,System.String,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="appName" Type="System.String" />
+        <Parameter Name="primaryPurpose" Type="System.String" />
+        <Parameter Name="specificPurpose" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="appName">O nome do aplicativo.</param>
+        <param name="primaryPurpose">O objetivo principal para o protetor de dados.</param>
+        <param name="specificPurpose">O purpose(s) específico para o protetor de dados.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Security.Cryptography.DpapiDataProtector" /> classe usando o nome do aplicativo especificado, o principal objetivo e a fins específicos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do aplicativo especificado pelo `appName` parâmetro é considerado parte da finalidade dos dados protegidos. Os três parâmetros são transformadas em hash e o hash é usado para proteger tanto ao desproteger os dados. Exemplos de `primaryPurpose` e `specificPurposes` os valores são **Giftcard** e ** \<número de cartão de presentes >** ou **fatura** e ** \<número da nota fiscal >**.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="appName" />é uma cadeia de caracteres vazia ou <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="primaryPurpose" />é uma cadeia de caracteres vazia ou <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="specificPurposes" />contém uma cadeia de caracteres vazia ou <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.DataProtectionPermission">para proteger os dados. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReprotectRequired">
+      <MemberSignature Language="C#" Value="public override bool IsReprotectRequired (byte[] encryptedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsReprotectRequired(unsigned int8[] encryptedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DpapiDataProtector.IsReprotectRequired(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedData">Os dados criptografados a ser verificada.</param>
+        <summary>Determina se os dados devem ser criptografados novamente.</summary>
+        <returns>
+          <see langword="true" />Se os dados devem ser criptografados novamente; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método sempre retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrependHashedPurposeToPlaintext">
+      <MemberSignature Language="C#" Value="protected override bool PrependHashedPurposeToPlaintext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrependHashedPurposeToPlaintext" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.DpapiDataProtector.PrependHashedPurposeToPlaintext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderProtect">
+      <MemberSignature Language="C#" Value="protected override byte[] ProviderProtect (byte[] userData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance unsigned int8[] ProviderProtect(unsigned int8[] userData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DpapiDataProtector.ProviderProtect(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="userData">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderUnprotect">
+      <MemberSignature Language="C#" Value="protected override byte[] ProviderUnprotect (byte[] encryptedData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance unsigned int8[] ProviderUnprotect(unsigned int8[] encryptedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DpapiDataProtector.ProviderUnprotect(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedData">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.DataProtectionScope Scope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.DataProtectionScope Scope" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.DpapiDataProtector.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.DataProtectionScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o escopo da proteção de dados.</summary>
+        <value>Um dos valores de enumeração que especifica o escopo da proteção de dados (o usuário atual ou o computador local). O padrão é <see cref="F:System.Security.Cryptography.DataProtectionScope.CurrentUser" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Proteção de dados criptografa os dados no disco para que ele não pode ser lido por outros programas.  Você não precisa de uma chave para proteger ou desproteger os dados. Se você definir o <xref:System.Security.Cryptography.DpapiDataProtector.Scope%2A> para <xref:System.Security.Cryptography.DataProtectionScope.CurrentUser>, somente os aplicativos em execução em suas credenciais podem desproteger os dados; no entanto, isso significa que qualquer aplicativo em execução em suas credenciais pode acessar os dados protegidos.  Se você definir o <xref:System.Security.Cryptography.DpapiDataProtector.Scope%2A> para <xref:System.Security.Cryptography.DataProtectionScope.LocalMachine>, qualquer aplicativo de confiança total no computador pode desproteger, acessar e modificar os dados, se souber o nome do aplicativo, o objetivo principal e o objetivo específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

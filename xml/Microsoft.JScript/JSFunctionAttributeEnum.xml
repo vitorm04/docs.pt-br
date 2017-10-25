@@ -1,0 +1,241 @@
+<Type Name="JSFunctionAttributeEnum" FullName="Microsoft.JScript.JSFunctionAttributeEnum">
+  <TypeSignature Language="C#" Value="public enum JSFunctionAttributeEnum" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed JSFunctionAttributeEnum extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.JSFunctionAttributeEnum" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("BA5ED019-F669-3C35-93AC-3ABF776B62B3")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as convenções de chamada de funções que são geradas pelo compilador JScript. Usado com o <see cref="T:Microsoft.JScript.JSFunctionAttribute" /> atributo personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os parâmetros associados HasArguments, HasEngine e HasThisObject implícitas e são fornecidos automaticamente pelo tempo de execução de JScript quando a função é chamada de código JScript.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="ClassicFunction">
+      <MemberSignature Language="C#" Value="ClassicFunction" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum ClassicFunction = int32(35)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.ClassicFunction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a agregação de <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasArguments" />, <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasEngine" />, e <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject" />.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ClassicNestedFunction">
+      <MemberSignature Language="C#" Value="ClassicNestedFunction" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum ClassicNestedFunction = int32(47)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.ClassicNestedFunction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a agregação de <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.ClassicFunction" /> e <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.NestedFunction" />.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HasArguments">
+      <MemberSignature Language="C#" Value="HasArguments" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum HasArguments = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.HasArguments" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o terceiro parâmetro da função é do tipo <see langword="Object" />. O chamador deve passar um objeto que implementa o objeto de argumentos JScript, normalmente uma instância de <see cref="T:Microsoft.JScript.ArgumentsObject" />. O tempo de execução de JScript pressupõe que se <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasArguments" /> for definido, em seguida, <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasStackFrame" /> e <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject" /> também são definidas.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HasEngine">
+      <MemberSignature Language="C#" Value="HasEngine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum HasEngine = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.HasEngine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o segundo parâmetro da função é do tipo <see cref="T:Microsoft.JScript.Vsa.VsaEngine" />. O chamador deve passar em uma instância do <see cref="T:Microsoft.JScript.Vsa.VsaEngine" /> do qual a função pode recuperar a infraestrutura de tempo de execução. O tempo de execução de JScript pressupõe que se <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasEngine" /> estiver definida, então <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject" /> também seja definido.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HasStackFrame">
+      <MemberSignature Language="C#" Value="HasStackFrame" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum HasStackFrame = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.HasStackFrame" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a função copia suas variáveis locais em um objeto de quadro de pilha mantido pelo tempo de execução de JScript antes de fazer uma chamada de. Copia as variáveis de objeto de quadro de pilha para seus locais quando o controle é retornado para a função. Esse sinalizador é definido em funções que contêm funções aninhadas que acessam locais da função pai.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HasThisObject">
+      <MemberSignature Language="C#" Value="HasThisObject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum HasThisObject = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o primeiro parâmetro da função é do tipo <see langword="Object" /> e que ele geralmente é denominado <paramref name="thisob" />. O chamador deve passar em uma instância do objeto que a função atua em.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="HasVarArgs">
+      <MemberSignature Language="C#" Value="HasVarArgs" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum HasVarArgs = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a função usa um número variável de argumentos. O último parâmetro é do tipo de matriz de <see langword="Object" />, que contém os argumentos que são especificados explicitamente.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsExpandoMethod">
+      <MemberSignature Language="C#" Value="IsExpandoMethod" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum IsExpandoMethod = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.IsExpandoMethod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a função é uma função de construtor para um objeto de protótipo. Para obter mais informações, consulte [objetos baseados no protótipo](http://msdn.microsoft.com/en-us/ef504099-8026-485e-8c70-c5246b548b94) e [expando modificador](http://msdn.microsoft.com/en-us/079e089b-a6ab-43f2-8585-78791d7b5c43).</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsInstanceNestedClassConstructor">
+      <MemberSignature Language="C#" Value="IsInstanceNestedClassConstructor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum IsInstanceNestedClassConstructor = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.IsInstanceNestedClassConstructor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a função é um construtor para uma classe aninhada de instância. O primeiro parâmetro da função de uma instância da classe pai.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsNested">
+      <MemberSignature Language="C#" Value="IsNested" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum IsNested = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.IsNested" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a função for aninhada em outra função JScript.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NestedFunction">
+      <MemberSignature Language="C#" Value="NestedFunction" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum NestedFunction = int32(44)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.NestedFunction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a agregação de <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasStackFrame" />, <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.IsNested" />, e <see cref="F:Microsoft.JScript.JSFunctionAttributeEnum.HasEngine" />.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.JScript.JSFunctionAttributeEnum None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.JSFunctionAttributeEnum.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.JSFunctionAttributeEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um método regular do .NET Framework com nenhuma especiais convenções de chamada. Normalmente não é usada como neste caso que o JSFunctionAttribute não é emitido.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,73 @@
+<Type Name="EventHandler&lt;TEventArgs&gt;" FullName="System.EventHandler&lt;TEventArgs&gt;">
+  <TypeSignature Language="C#" Value="public delegate void EventHandler&lt;TEventArgs&gt;(object sender, TEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed EventHandler`1&lt;TEventArgs&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.EventHandler`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TEventArgs" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="TEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TEventArgs">O tipo dos dados de eventos gerados pelo evento.</typeparam>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um objeto que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará um evento quando o evento fornecer dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modelo de evento no .NET Framework baseia-se de ter um delegado de evento que se conecta a um evento com seu manipulador. Para gerar um evento, dois elementos são necessários:  
+  
+-   Um delegado que se refere a um método que fornece a resposta ao evento.  
+  
+-   Opcionalmente, uma classe que contém os dados do evento, se o evento fornece dados.  
+  
+ O delegado é um tipo que define uma assinatura, ou seja, o tipo de valor de retorno e os tipos de lista de parâmetro para um método. Você pode usar o tipo delegado para declarar uma variável que pode se referir a qualquer método com a mesma assinatura do representante.  
+  
+ A assinatura padrão de um representante do manipulador de eventos define um método que não retorna um valor. Parâmetro primeiro desse método é do tipo <xref:System.Object> e refere-se à instância que gera o evento. O segundo parâmetro é derivado do tipo <xref:System.EventArgs> e mantém os dados do evento. Se o evento não gera dados de evento, o segundo parâmetro é simplesmente o valor da <xref:System.EventArgs.Empty?displayProperty=nameWithType> campo. Caso contrário, o segundo parâmetro é um tipo derivado de <xref:System.EventArgs> e fornece a todos os campos ou propriedades necessárias para manter os dados de evento.  
+  
+ O <xref:System.EventHandler%601> delegado é um delegado predefinido que representa um método de manipulador de eventos para um evento que gera os dados. A vantagem de usar <xref:System.EventHandler%601> é que você não precisa codificar seu próprios representante personalizado, se o evento gera dados de evento. Você simplesmente fornecer o tipo do objeto de dados de evento como o parâmetro genérico.  
+  
+ Para associar o evento com o método que manipulará o evento, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante.  
+  
+ Para obter mais informações sobre delegados de manipulador de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um evento chamado `ThresholdReached`. O evento está associado com um <xref:System.EventHandler%601> delegate.  
+  
+ [!code-cpp[EventsOverview#6](~/samples/snippets/cpp/VS_Snippets_CLR/eventsoverview/cpp/programwithdata.cpp#6)]
+ [!code-csharp[EventsOverview#6](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdata.cs#6)]
+ [!code-vb[EventsOverview#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdata.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+    <altCompliant cref="T:System.EventHandler" />
+  </Docs>
+</Type>

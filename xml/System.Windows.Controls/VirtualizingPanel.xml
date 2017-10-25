@@ -1,0 +1,888 @@
+<Type Name="VirtualizingPanel" FullName="System.Windows.Controls.VirtualizingPanel">
+  <TypeSignature Language="C#" Value="public abstract class VirtualizingPanel : System.Windows.Controls.Panel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit VirtualizingPanel extends System.Windows.Controls.Panel" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.VirtualizingPanel" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Panel</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma estrutura para os elementos <see cref="T:System.Windows.Controls.Panel" /> que virtualizam os respectivos dados filho. Esta é uma classe abstrata.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nesse contexto, "virtualiza" refere-se a uma técnica pela qual um subconjunto de [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] elementos gerados a partir de um grande número de itens de dados com base em quais itens estão visíveis na tela. É intenso, tanto em termos de memória e processador, para gerar um grande número de [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] elementos quando apenas alguns podem estar na tela em um determinado momento. Um painel que herda de <xref:System.Windows.Controls.VirtualizingPanel>, como o <xref:System.Windows.Controls.VirtualizingStackPanel>, calcula itens visíveis e funciona com o <xref:System.Windows.Controls.ItemContainerGenerator> de um <xref:System.Windows.Controls.ItemsControl> (como <xref:System.Windows.Controls.ListBox> ou <xref:System.Windows.Controls.ListView>) para criar apenas [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] elementos para os itens visíveis.  
+  
+ As listas a seguir descreve os casos quando o <xref:System.Windows.Controls.VirtualizingPanel> não é possível virtualizar contêineres de itens:  
+  
+-   O <xref:System.Windows.Controls.ItemsControl> contém contêineres de itens de tipos diferentes.  Por exemplo, um <xref:System.Windows.Controls.Menu> pode ter itens que usam <xref:System.Windows.Controls.MenuItem> e <xref:System.Windows.Controls.Separator> objetos que os contêineres de item.  
+  
+-   Os contêineres de item para você cria explicitamente o <xref:System.Windows.Controls.ItemsControl>. Para obter mais informações sobre explicitamente versus implicitamente criar contêineres de itens, consulte o <xref:System.Windows.Controls.ItemsControl> classe.  
+  
+ Quando um <xref:System.Windows.Controls.VirtualizingPanel> é virtualizar contêineres de itens, talvez seja necessário salvar as informações de estado que está associadas um contêiner com o item de dados. Por exemplo, se um item está contido por um <xref:System.Windows.Controls.Expander> controle, o <xref:System.Windows.Controls.Expander.IsExpanded%2A> estado associado para o contêiner do item e não para o item de dados. Quando o <xref:System.Windows.Controls.Expander> são reutilizadas para um novo item, o valor atual de <xref:System.Windows.Controls.Expander.IsExpanded%2A> é usado para o novo item. Além disso, o item antigo não retém seu <xref:System.Windows.Controls.Expander.IsExpanded%2A> valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o derivada <xref:System.Windows.Controls.VirtualizingStackPanel> classe em [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].  
+  
+ [!code-xaml[virtualizingstackpanel_intro#1](~/samples/snippets/csharp/VS_Snippets_Wpf/VirtualizingStackPanel_Intro/CS/default.xaml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected VirtualizingPanel ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.VirtualizingPanel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddInternalChild">
+      <MemberSignature Language="C#" Value="protected void AddInternalChild (System.Windows.UIElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddInternalChild(class System.Windows.UIElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.AddInternalChild(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">O <see cref="T:System.Windows.UIElement" /> filho para adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Windows.UIElement" /> para o <see cref="P:System.Windows.Controls.Panel.InternalChildren" /> coleção de um <see cref="T:System.Windows.Controls.VirtualizingPanel" /> elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método oferece melhor desempenho para <xref:System.Windows.Controls.Panel> elementos que virtualizam sua coleção de filhos do que o <xref:System.Windows.Controls.UIElementCollection.Add%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BringIndexIntoView">
+      <MemberSignature Language="C#" Value="protected virtual void BringIndexIntoView (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void BringIndexIntoView(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.BringIndexIntoView(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição de índice do item que é gerado e ficam visíveis.</param>
+        <summary>Quando implementada em uma classe derivada, gera o item no local do índice especificado e o torna visível.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BringIndexIntoViewPublic">
+      <MemberSignature Language="C#" Value="public void BringIndexIntoViewPublic (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BringIndexIntoViewPublic(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.BringIndexIntoViewPublic(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição de índice do item que é gerado e ficam visíveis.</param>
+        <summary>Gera o item no local do índice especificado e o torna visível.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheLengthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CacheLengthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CacheLengthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizingPanel.CacheLengthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLength" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheLengthUnitProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CacheLengthUnitProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CacheLengthUnitProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizingPanel.CacheLengthUnitProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanHierarchicallyScrollAndVirtualize">
+      <MemberSignature Language="C#" Value="public bool CanHierarchicallyScrollAndVirtualize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanHierarchicallyScrollAndVirtualize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingPanel.CanHierarchicallyScrollAndVirtualize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Controls.VirtualizingPanel" /> pode virtualizar itens que são agrupados ou organizados em uma hierarquia.</summary>
+        <value>Um valor que indica se o <see cref="T:System.Windows.Controls.VirtualizingPanel" /> pode virtualizar itens que são agrupados ou organizados em uma hierarquia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método chama <xref:System.Windows.Controls.VirtualizingPanel.CanHierarchicallyScrollAndVirtualizeCore%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanHierarchicallyScrollAndVirtualizeCore">
+      <MemberSignature Language="C#" Value="protected virtual bool CanHierarchicallyScrollAndVirtualizeCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanHierarchicallyScrollAndVirtualizeCore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingPanel.CanHierarchicallyScrollAndVirtualizeCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Controls.VirtualizingPanel" /> pode virtualizar itens que são agrupados ou organizados em uma hierarquia.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que herdam de <xref:System.Windows.Controls.VirtualizingPanel> e suporte a virtualização de itens que são agrupados ou organizados em uma hierarquia deve substituir este método para retornar `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCacheLength">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.VirtualizationCacheLength GetCacheLength (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Controls.VirtualizationCacheLength GetCacheLength(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.GetCacheLength(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.VirtualizationCacheLength</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento para obter o <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLength" /> anexado a propriedade.</param>
+        <summary>Obtém o valor de <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLength" /> propriedade.</summary>
+        <returns>O tamanho do cache antes e depois do visor quando o <see cref="T:System.Windows.Controls.VirtualizingPanel" /> está virtualizando.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCacheLengthUnit">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.VirtualizationCacheLengthUnit GetCacheLengthUnit (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Controls.VirtualizationCacheLengthUnit GetCacheLengthUnit(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.GetCacheLengthUnit(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.VirtualizationCacheLengthUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento para obter o <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit" /> anexado a propriedade.</param>
+        <summary>Obtém o valor de <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit" /> propriedade.</summary>
+        <returns>O tipo de unidade usado pela propriedade <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLength" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão é do <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A> é de propriedade <xref:System.Windows.Controls.VirtualizationCacheLengthUnit.Page>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsContainerVirtualizable">
+      <MemberSignature Language="C#" Value="public static bool GetIsContainerVirtualizable (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsContainerVirtualizable(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.GetIsContainerVirtualizable(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento para obter o <see cref="P:System.Windows.Controls.VirtualizingPanel.IsContainerVirtualizable" /> anexado a propriedade.</param>
+        <summary>Obtém o valor de <see cref="P:System.Windows.Controls.VirtualizingPanel.IsContainerVirtualizable" /> propriedade.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Windows.Controls.VirtualizingPanel" /> deve virtualizar um item; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão é do <xref:System.Windows.Controls.VirtualizingPanel.IsContainerVirtualizable%2A> propriedade anexada `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsVirtualizing">
+      <MemberSignature Language="C#" Value="public static bool GetIsVirtualizing (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsVirtualizing(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.GetIsVirtualizing(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto do qual o valor da propriedade anexada é lida.</param>
+        <summary>Obtém o valor de <see cref="P:System.Windows.Controls.VirtualizingPanel.IsVirtualizing" /> propriedade anexada.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Windows.Controls.VirtualizingPanel" /> é virtualizar seu conteúdo; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsVirtualizingWhenGrouping">
+      <MemberSignature Language="C#" Value="public static bool GetIsVirtualizingWhenGrouping (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsVirtualizingWhenGrouping(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.GetIsVirtualizingWhenGrouping(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento para obter o <see cref="P:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping" /> anexado a propriedade.</param>
+        <summary>Obtém o valor de <see cref="P:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping" /> propriedade.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.VirtualizingPanel" /> virtualizar os itens agrupados em sua coleção. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> é de propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemOffset">
+      <MemberSignature Language="C#" Value="public double GetItemOffset (System.Windows.UIElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetItemOffset(class System.Windows.UIElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.GetItemOffset(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">O elemento cuja posição de localizar.</param>
+        <summary>Retorna a posição do item especificado, relativo a <see cref="T:System.Windows.Controls.VirtualizingPanel" />.</summary>
+        <returns>A posição do item especificado, relativa a <see cref="T:System.Windows.Controls.VirtualizingPanel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método chama <xref:System.Windows.Controls.VirtualizingPanel.GetItemOffsetCore%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemOffsetCore">
+      <MemberSignature Language="C#" Value="protected virtual double GetItemOffsetCore (System.Windows.UIElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance float64 GetItemOffsetCore(class System.Windows.UIElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.GetItemOffsetCore(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="child">O elemento cuja posição de localizar.</param>
+        <summary>Retorna a posição do item especificado, relativo a <see cref="T:System.Windows.Controls.VirtualizingPanel" />.</summary>
+        <returns>0 em todos os casos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que herdam de <xref:System.Windows.Controls.VirtualizingPanel> devem substituir este método para retornar a posição `child`, relativo ao painel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScrollUnit">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.ScrollUnit GetScrollUnit (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Controls.ScrollUnit GetScrollUnit(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.GetScrollUnit(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento para obter o <see cref="P:System.Windows.Controls.VirtualizingPanel.ScrollUnit" /> anexado a propriedade.</param>
+        <summary>Obtém o valor de <see cref="P:System.Windows.Controls.VirtualizingPanel.ScrollUnit" /> propriedade.</summary>
+        <returns>Um valor que indica se a rolagem é medida como itens na coleção ou como pixels.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> é de propriedade <xref:System.Windows.Controls.ScrollUnit.Item>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVirtualizationMode">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.VirtualizationMode GetVirtualizationMode (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Controls.VirtualizationMode GetVirtualizationMode(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.GetVirtualizationMode(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.VirtualizationMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto do qual o <see cref="P:System.Windows.Controls.VirtualizingPanel.VirtualizationMode" /> propriedade é lido.</param>
+        <summary>Retorna o <see cref="P:System.Windows.Controls.VirtualizingPanel.VirtualizationMode" /> anexado a propriedade do objeto especificado.</summary>
+        <returns>Um dos valores de enumeração que especifica se o objeto usa a reciclagem de contêiner.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertInternalChild">
+      <MemberSignature Language="C#" Value="protected void InsertInternalChild (int index, System.Windows.UIElement child);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InsertInternalChild(int32 index, class System.Windows.UIElement child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.InsertInternalChild(System.Int32,System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="child" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição de índice na coleção em que o elemento filho é inserido.</param>
+        <param name="child">O <see cref="T:System.Windows.UIElement" /> filho para adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Windows.UIElement" /> para o <see cref="P:System.Windows.Controls.Panel.InternalChildren" /> coleção de um <see cref="T:System.Windows.Controls.VirtualizingPanel" /> elemento na posição de índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método oferece melhor desempenho para <xref:System.Windows.Controls.Panel> elementos que virtualizam sua coleção de filhos do que o <xref:System.Windows.Controls.UIElementCollection.Add%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContainerVirtualizableProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsContainerVirtualizableProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsContainerVirtualizableProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizingPanel.IsContainerVirtualizableProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Controls.VirtualizingPanel.IsContainerVirtualizable" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVirtualizingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsVirtualizingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsVirtualizingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizingPanel.IsVirtualizingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.VirtualizingPanel.IsVirtualizing" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVirtualizingWhenGroupingProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsVirtualizingWhenGroupingProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsVirtualizingWhenGroupingProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGroupingProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemContainerGenerator">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Primitives.IItemContainerGenerator ItemContainerGenerator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Primitives.IItemContainerGenerator ItemContainerGenerator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.VirtualizingPanel.ItemContainerGenerator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.IItemContainerGenerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica o <see cref="T:System.Windows.Controls.ItemContainerGenerator" /> para este <see cref="T:System.Windows.Controls.VirtualizingPanel" />.</summary>
+        <value>O <see cref="T:System.Windows.Controls.ItemContainerGenerator" /> para <see cref="T:System.Windows.Controls.VirtualizingPanel" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClearChildren">
+      <MemberSignature Language="C#" Value="protected virtual void OnClearChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClearChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.OnClearChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando a coleção de elementos filho é desmarcada por base de <see cref="T:System.Windows.Controls.Panel" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemsChanged (object sender, System.Windows.Controls.Primitives.ItemsChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemsChanged(object sender, class System.Windows.Controls.Primitives.ItemsChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.OnItemsChanged(System.Object,System.Windows.Controls.Primitives.ItemsChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="args" Type="System.Windows.Controls.Primitives.ItemsChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">O <see cref="T:System.Object" /> que gerou o evento.</param>
+        <param name="args">Fornece dados para o evento de <see cref="E:System.Windows.Controls.ItemContainerGenerator.ItemsChanged" /> .</param>
+        <summary>Chamado quando o <see cref="P:System.Windows.Controls.ItemsControl.Items" /> coleção que está associada com o <see cref="T:System.Windows.Controls.ItemsControl" /> para este <see cref="T:System.Windows.Controls.Panel" /> alterações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveInternalChildRange">
+      <MemberSignature Language="C#" Value="protected void RemoveInternalChildRange (int index, int range);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RemoveInternalChildRange(int32 index, int32 range) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.RemoveInternalChildRange(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="range" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição do índice de início dentro da coleção em que o primeiro elemento filho é removido.</param>
+        <param name="range">O número total de elementos filho a ser removido da coleção.</param>
+        <summary>Remove os elementos filhos do <see cref="P:System.Windows.Controls.Panel.InternalChildren" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método oferece melhor desempenho para <xref:System.Windows.Controls.Panel> elementos que virtualizam sua coleção de filhos do que o <xref:System.Windows.Controls.UIElementCollection.RemoveRange%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollUnitProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ScrollUnitProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ScrollUnitProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizingPanel.ScrollUnitProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Controls.VirtualizingPanel.ScrollUnit" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCacheLength">
+      <MemberSignature Language="C#" Value="public static void SetCacheLength (System.Windows.DependencyObject element, System.Windows.Controls.VirtualizationCacheLength value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCacheLength(class System.Windows.DependencyObject element, valuetype System.Windows.Controls.VirtualizationCacheLength value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.SetCacheLength(System.Windows.DependencyObject,System.Windows.Controls.VirtualizationCacheLength)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Controls.VirtualizationCacheLength" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto para definir a propriedade no.</param>
+        <param name="value">O tamanho do cache antes e depois do visor quando o <see cref="T:System.Windows.Controls.VirtualizingPanel" /> está virtualizando.</param>
+        <summary>Conjuntos de <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLength" /> propriedade anexada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O cache é a quantidade de espaço acima ou abaixo do visor no qual itens não serão virtualizados. Usar um cache para evitar a geração de [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] elementos conforme eles são rolados para a exibição.  O <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A> propriedade determina a unidade de medida é usada pelo <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCacheLengthUnit">
+      <MemberSignature Language="C#" Value="public static void SetCacheLengthUnit (System.Windows.DependencyObject element, System.Windows.Controls.VirtualizationCacheLengthUnit value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCacheLengthUnit(class System.Windows.DependencyObject element, valuetype System.Windows.Controls.VirtualizationCacheLengthUnit value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.SetCacheLengthUnit(System.Windows.DependencyObject,System.Windows.Controls.VirtualizationCacheLengthUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Controls.VirtualizationCacheLengthUnit" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto para definir a propriedade no.</param>
+        <param name="value">O tipo de unidade usado pela propriedade <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLength" />.</param>
+        <summary>Conjuntos de <see cref="P:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit" /> propriedade anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsContainerVirtualizable">
+      <MemberSignature Language="C#" Value="public static void SetIsContainerVirtualizable (System.Windows.DependencyObject element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsContainerVirtualizable(class System.Windows.DependencyObject element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.SetIsContainerVirtualizable(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto para definir a propriedade no.</param>
+        <param name="value">
+          <see langword="true" />para indicar que o <see cref="T:System.Windows.Controls.VirtualizingPanel" /> deve virtualizar um item; caso contrário, <see langword="false" />.</param>
+        <summary>Conjuntos de <see cref="P:System.Windows.Controls.VirtualizingPanel.IsContainerVirtualizable" /> propriedade anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsVirtualizing">
+      <MemberSignature Language="C#" Value="public static void SetIsVirtualizing (System.Windows.DependencyObject element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsVirtualizing(class System.Windows.DependencyObject element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto ao qual o valor da propriedade anexada está definido.</param>
+        <param name="value">
+          <see langword="true" />Se o <see cref="T:System.Windows.Controls.VirtualizingStackPanel" /> for virtualização; caso contrário <see langword="false" />.</param>
+        <summary>Define o valor de <see cref="F:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizingProperty" /> propriedade anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsVirtualizingWhenGrouping">
+      <MemberSignature Language="C#" Value="public static void SetIsVirtualizingWhenGrouping (System.Windows.DependencyObject element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsVirtualizingWhenGrouping(class System.Windows.DependencyObject element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.SetIsVirtualizingWhenGrouping(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto para definir a propriedade no.</param>
+        <param name="value">
+          <see langword="true" />para especificar que o <see cref="T:System.Windows.Controls.VirtualizingPanel" /> virtualiza itens agrupados em sua coleção; caso contrário, <see langword="false" />.</param>
+        <summary>Conjuntos de <see cref="P:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping" /> propriedade anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetScrollUnit">
+      <MemberSignature Language="C#" Value="public static void SetScrollUnit (System.Windows.DependencyObject element, System.Windows.Controls.ScrollUnit value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetScrollUnit(class System.Windows.DependencyObject element, valuetype System.Windows.Controls.ScrollUnit value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.SetScrollUnit(System.Windows.DependencyObject,System.Windows.Controls.ScrollUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Controls.ScrollUnit" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto para definir a propriedade no.</param>
+        <param name="value">Um valor que indica se a rolagem é medida como itens na coleção ou como pixels.</param>
+        <summary>Conjuntos de <see cref="P:System.Windows.Controls.VirtualizingPanel.ScrollUnit" /> propriedade anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVirtualizationMode">
+      <MemberSignature Language="C#" Value="public static void SetVirtualizationMode (System.Windows.DependencyObject element, System.Windows.Controls.VirtualizationMode value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetVirtualizationMode(class System.Windows.DependencyObject element, valuetype System.Windows.Controls.VirtualizationMode value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.SetVirtualizationMode(System.Windows.DependencyObject,System.Windows.Controls.VirtualizationMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Windows.Controls.VirtualizationMode" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento no qual definir o <see cref="P:System.Windows.Controls.VirtualizingPanel.VirtualizationMode" /> propriedade.</param>
+        <param name="value">Um dos valores de enumeração que especifica se <c>elemento</c> usa a reciclagem de contêiner.</param>
+        <summary>Define o <see cref="P:System.Windows.Controls.VirtualizingPanel.VirtualizationMode" /> anexado a propriedade no objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldItemsChangeAffectLayout">
+      <MemberSignature Language="C#" Value="public bool ShouldItemsChangeAffectLayout (bool areItemChangesLocal, System.Windows.Controls.Primitives.ItemsChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldItemsChangeAffectLayout(bool areItemChangesLocal, class System.Windows.Controls.Primitives.ItemsChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.ShouldItemsChangeAffectLayout(System.Boolean,System.Windows.Controls.Primitives.ItemsChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="areItemChangesLocal" Type="System.Boolean" />
+        <Parameter Name="args" Type="System.Windows.Controls.Primitives.ItemsChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="areItemChangesLocal">
+          <see langword="true" />Se o item alterado é um filho direto disso <see cref="T:System.Windows.Controls.VirtualizingPanel" />; <see langword="false" /> se o item alterado for um descendente indireto do <see cref="T:System.Windows.Controls.VirtualizingPanel" />.</param>
+        <param name="args">Contém dados sobre o item alterado.</param>
+        <summary>Retorna um valor que indica se um item alterado em uma <see cref="T:System.Windows.Controls.ItemsControl" /> afeta o layout para esse painel.</summary>
+        <returns>
+          <see langword="true" />Se o item alterado em uma <see cref="T:System.Windows.Controls.ItemsControl" /> afeta o layout para esse painel; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldItemsChangeAffectLayoutCore">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldItemsChangeAffectLayoutCore (bool areItemChangesLocal, System.Windows.Controls.Primitives.ItemsChangedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldItemsChangeAffectLayoutCore(bool areItemChangesLocal, class System.Windows.Controls.Primitives.ItemsChangedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.VirtualizingPanel.ShouldItemsChangeAffectLayoutCore(System.Boolean,System.Windows.Controls.Primitives.ItemsChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="areItemChangesLocal" Type="System.Boolean" />
+        <Parameter Name="args" Type="System.Windows.Controls.Primitives.ItemsChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="areItemChangesLocal">
+          <see langword="true" />Se o item alterado é um filho direto disso <see cref="T:System.Windows.Controls.VirtualizingPanel" />; <see langword="false" /> se o item alterado for um descendente indireto do <see cref="T:System.Windows.Controls.VirtualizingPanel" />.</param>
+        <param name="args">Contém dados sobre o item alterado.</param>
+        <summary>Retorna um valor que indica se um item alterado em uma <see cref="T:System.Windows.Controls.ItemsControl" /> afeta o layout para esse painel.</summary>
+        <returns>
+          <see langword="true" />Se o item alterado em uma <see cref="T:System.Windows.Controls.ItemsControl" /> afeta o layout para esse painel; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualizationModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VirtualizationModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VirtualizationModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizingPanel.VirtualizationModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.VirtualizingPanel.VirtualizationMode" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

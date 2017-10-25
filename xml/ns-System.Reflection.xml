@@ -1,0 +1,6 @@
+<Namespace Name="System.Reflection">
+  <Docs>
+    <summary>O <see cref="N:System.Reflection" /> namespace contém tipos que recuperam informações sobre assemblies, módulos, membros, parâmetros e outras entidades em código gerenciado examinando seus metadados. Esses tipos também podem ser usados para manipular instâncias de tipos carregados, por exemplo, para conectar eventos ou chamar métodos. Para criar dinamicamente os tipos, use o <see cref="N:System.Reflection.Emit" /> namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

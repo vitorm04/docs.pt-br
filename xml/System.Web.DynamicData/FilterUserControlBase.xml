@@ -1,0 +1,281 @@
+<Type Name="FilterUserControlBase" FullName="System.Web.DynamicData.FilterUserControlBase">
+  <TypeSignature Language="C#" Value="public class FilterUserControlBase : System.Web.UI.UserControl, System.Web.DynamicData.IControlParameterTarget" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FilterUserControlBase extends System.Web.UI.UserControl implements class System.Web.DynamicData.IControlParameterTarget" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.FilterUserControlBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.UserControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.DynamicData.IControlParameterTarget</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a classe base para controles de usuário que são usados para filtrar dados em uma tabela de dados. Essa classe é usada para exibir os seletores de filtro.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterUserControlBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FilterUserControlBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.DynamicData.FilterUserControlBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Column">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaColumn Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaColumn Column" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FilterUserControlBase.Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coluna de que um filtro se aplica.</summary>
+        <value>A coluna de um filtro se aplica a.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextTypeName">
+      <MemberSignature Language="C#" Value="public string ContextTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContextTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FilterUserControlBase.ContextTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de contexto de uma tabela ou coluna de dados é parte do.</summary>
+        <value>O nome do objeto de fonte de dados a ser usado para recuperar os dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataField">
+      <MemberSignature Language="C#" Value="public string DataField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FilterUserControlBase.DataField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da coluna para filtrar.</summary>
+        <value>O nome da coluna para filtrar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialValue">
+      <MemberSignature Language="C#" Value="public string InitialValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InitialValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FilterUserControlBase.InitialValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor inicial do filtro quando o filtro é preenchido.</summary>
+        <value>O valor inicial do filtro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateListControl">
+      <MemberSignature Language="C#" Value="public void PopulateListControl (System.Web.UI.WebControls.ListControl listControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PopulateListControl(class System.Web.UI.WebControls.ListControl listControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FilterUserControlBase.PopulateListControl(System.Web.UI.WebControls.ListControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listControl" Type="System.Web.UI.WebControls.ListControl" />
+      </Parameters>
+      <Docs>
+        <param name="listControl">O controle para preencher.</param>
+        <summary>Preenche uma <see cref="T:System.Web.UI.WebControls.ListControl" /> objeto com todos os itens em uma tabela de dados que estão relacionadas à tabela atual por meio de uma chave estrangeira.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, os seletores de filtro são exibidos em um <xref:System.Web.UI.WebControls.DropDownList> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDataKey">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.DataKey SelectedDataKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataKey SelectedDataKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FilterUserControlBase.SelectedDataKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de dados para o item selecionado.</summary>
+        <value>A chave do item selecionado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedValue">
+      <MemberSignature Language="C#" Value="public virtual string SelectedValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FilterUserControlBase.SelectedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor selecionado em um controle de caixa de listagem suspensa.</summary>
+        <value>O valor selecionado em um controle de caixa de listagem suspensa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, os seletores de filtro são exibidos em um <xref:System.Web.UI.WebControls.DropDownList> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.DynamicData.IControlParameterTarget.FilteredColumn">
+      <MemberSignature Language="C#" Value="System.Web.DynamicData.MetaColumn System.Web.DynamicData.IControlParameterTarget.FilteredColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaColumn System.Web.DynamicData.IControlParameterTarget.FilteredColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FilterUserControlBase.System#Web#DynamicData#IControlParameterTarget#FilteredColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaColumn</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coluna de dados que é filtrada.</summary>
+        <value>A coluna de dados que é filtrada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.DynamicData.IControlParameterTarget.GetPropertyNameExpression">
+      <MemberSignature Language="C#" Value="string IControlParameterTarget.GetPropertyNameExpression (string columnName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Web.DynamicData.IControlParameterTarget.GetPropertyNameExpression(string columnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FilterUserControlBase.System#Web#DynamicData#IControlParameterTarget#GetPropertyNameExpression(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">A coluna que é filtrada.</param>
+        <summary>Obtém o nome da coluna que é filtrada.</summary>
+        <returns>A coluna que é filtrada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.DynamicData.IControlParameterTarget.Table">
+      <MemberSignature Language="C#" Value="System.Web.DynamicData.MetaTable System.Web.DynamicData.IControlParameterTarget.Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaTable System.Web.DynamicData.IControlParameterTarget.Table" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FilterUserControlBase.System#Web#DynamicData#IControlParameterTarget#Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma tabela que é filtrada.</summary>
+        <value>A tabela que foi filtrada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TableName">
+      <MemberSignature Language="C#" Value="public string TableName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TableName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.FilterUserControlBase.TableName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da tabela de dados que é usado pelo filtro.</summary>
+        <value>O nome da tabela de dados que é usado pelo filtro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,220 @@
+<Type Name="EventRegistrationTokenTable&lt;T&gt;" FullName="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class EventRegistrationTokenTable&lt;T&gt; where T : class" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventRegistrationTokenTable`1&lt;class T&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">Delegar o tipo do manipulador de eventos para um determinado evento.</typeparam>
+    <summary>Armazena os mapeamentos entre delegados e tokens de eventos, para dar suporte à implementação de um evento de tempo de execução do Windows em código gerenciado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este tipo quando você precisa gerenciar a adição e remoção de eventos manualmente.  
+  
+ Uma instância desta tabela armazena os delegados que representam os manipuladores de eventos que foram adicionados a um evento. Para gerar o evento, invocar o delegado que é retornado pelo <xref:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable%601.InvocationList%2A> propriedade, se não for `null`. Uma instância desta tabela é necessária para cada evento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventRegistrationTokenTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="T" /> não é um tipo de delegado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEventHandler">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken AddEventHandler (T handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken AddEventHandler(!T handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.AddEventHandler(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="handler">O manipulador de eventos para adicionar.</param>
+        <summary>Adiciona o manipulador de eventos especificado para a tabela e a lista de invocação e retorna um token que pode ser usado para remover o manipulador de eventos.</summary>
+        <returns>Um token que pode ser usado para remover o manipulador de eventos de tabela e a lista de invocação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOrCreateEventRegistrationTokenTable">
+      <MemberSignature Language="C#" Value="public static System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable&lt;T&gt; GetOrCreateEventRegistrationTokenTable (ref System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable&lt;T&gt; refEventTable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1&lt;!T&gt; GetOrCreateEventRegistrationTokenTable(class System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1&lt;!T&gt;&amp; refEventTable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.GetOrCreateEventRegistrationTokenTable(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable{`0}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refEventTable" Type="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable&lt;T&gt;&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="refEventTable">Uma evento registro tabela de token, passada por referência.</param>
+        <summary>Retorna a tabela de token de registro de evento especificado, se não for <see langword="null" />; caso contrário, retorna uma nova tabela de token de registro do evento.</summary>
+        <returns>A tabela de token de registro de evento que é especificada pelo <paramref name="refEventTable" />, se não for <see langword="null" />; caso contrário, uma nova tabela de token de registro do evento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable%601.GetOrCreateEventRegistrationTokenTable%2A> método para inicializar uma tabela de token de registro de evento em cenários em que qualquer um dos vários threads pode criar a tabela. Se esse método for chamado em vários threads ao mesmo tempo, a mesma tabela de token de registro do evento é retornada em todos os threads.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvocationList">
+      <MemberSignature Language="C#" Value="public T InvocationList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T InvocationList" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.InvocationList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um delegado do tipo <paramref name="T" /> cuja lista de invocação inclui todos os representantes de eventos de manipulador que foram adicionados e que ainda não foram removidas. Invocar esse delegado invoca todos os manipuladores de eventos.</summary>
+        <value>Um delegado do tipo <paramref name="T" /> que representa todos os representantes de manipulador de eventos que estão registrados atualmente para um evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEventHandler">
+      <MemberSignature Language="C#" Value="public void RemoveEventHandler (System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveEventHandler(valuetype System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.RemoveEventHandler(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">O token retornado quando o manipulador de eventos foi adicionado.</param>
+        <summary>Remove o manipulador de eventos que está associado com o token especificado da tabela e a lista de invocação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o token não estiver registrado, a tabela e a lista de invocação não são modificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEventHandler">
+      <MemberSignature Language="C#" Value="public void RemoveEventHandler (T handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveEventHandler(!T handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.EventRegistrationTokenTable`1.RemoveEventHandler(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="handler">O manipulador de eventos a ser removido.</param>
+        <summary>Remove o delegado do manipulador de eventos especificado da tabela e a lista de invocação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o manipulador não estiver registrado, a tabela e a lista de invocação não são modificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

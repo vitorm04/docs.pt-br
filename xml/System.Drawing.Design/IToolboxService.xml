@@ -1,0 +1,781 @@
+<Type Name="IToolboxService" FullName="System.Drawing.Design.IToolboxService">
+  <TypeSignature Language="C#" Value="public interface IToolboxService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IToolboxService" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.IToolboxService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("4BACD258-DE64-4048-BC4E-FEDBEF9ACB76")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos e propriedades para gerenciar e consultar a caixa de ferramentas no ambiente de desenvolvimento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.IToolboxService> interface fornece propriedades e métodos para adicionar e remover itens da caixa de ferramentas e o criador de caixa de ferramentas delegados de retorno de chamada, serializar e desserializar itens da caixa de ferramentas e recuperar informações de estado da caixa de ferramentas e o gerenciamento de estado da caixa de ferramentas.  
+  
+ Você pode recuperar informações sobre o conteúdo da caixa de ferramentas com os seguintes métodos:  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.CategoryNames%2A> propriedade indica as categorias atualmente disponíveis na caixa de ferramentas.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.SelectedCategory%2A> propriedade indica a categoria selecionada no momento da caixa de ferramentas.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.GetToolboxItems%2A> método recupera os itens na caixa de ferramentas, opcionalmente filtradas por categoria especificada da caixa de ferramentas.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.GetSelectedToolboxItem%2A> método recupera selecionado no momento <xref:System.Drawing.Design.ToolboxItem>.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.SetSelectedToolboxItem%2A> método seleciona especificado <xref:System.Drawing.Design.ToolboxItem> como o item atual da caixa de ferramentas.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.IsSupported%2A> método indica se especificado serializado objeto, se ele for um <xref:System.Drawing.Design.ToolboxItem>, há suporte para o host de designer especificado, ou se ele corresponde os atributos especificados.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.IsToolboxItem%2A> método indica se o objeto serializado especificado é um <xref:System.Drawing.Design.ToolboxItem>.  
+  
+ Você pode adicionar e remover itens da caixa de ferramentas com os seguintes métodos:  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.AddToolboxItem%2A> método adiciona uma <xref:System.Drawing.Design.ToolboxItem> à caixa de ferramentas, criando a categoria especificada opcionalmente se ele não existe.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.AddLinkedToolboxItem%2A> método adiciona uma <xref:System.Drawing.Design.ToolboxItem> que só é habilitada para o projeto atual para a caixa de ferramentas.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.RemoveToolboxItem%2A> método Remove especificado <xref:System.Drawing.Design.ToolboxItem>.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.AddCreator%2A> método adiciona uma <xref:System.Drawing.Design.ToolboxItemCreatorCallback> delegado capaz de converter um tipo de dados armazenados na caixa de ferramentas para um <xref:System.Drawing.Design.ToolboxItem>.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.RemoveCreator%2A> método remove qualquer <xref:System.Drawing.Design.ToolboxItemCreatorCallback> delegados para o tipo de dados especificado.  
+  
+ Você pode atualizar a caixa de ferramentas, marcar um item de caixa de ferramentas, como usado ou defina o cursor do mouse em um cursor que representa o item de caixa de ferramentas atual usando os seguintes métodos:  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.Refresh%2A> método atualiza a exibição de caixa de ferramentas para refletir o estado atual dos itens da caixa de ferramentas.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.SelectedToolboxItemUsed%2A> método sinaliza a caixa de ferramentas que o item selecionado da caixa de ferramentas foi usado.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.SetCursor%2A> método define o cursor do mouse em um cursor que representa o item atual da caixa de ferramentas.  
+  
+ Você pode usar a caixa de ferramentas para serializar ou desserializar um item de caixa de ferramentas usando os seguintes métodos:  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.DeserializeToolboxItem%2A> método tentar retornar um <xref:System.Drawing.Design.ToolboxItem> do objeto de item de caixa de ferramentas serializado especificado.  
+  
+-   O <xref:System.Drawing.Design.IToolboxService.SerializeToolboxItem%2A> método retorna um objeto serializado que representa especificado <xref:System.Drawing.Design.ToolboxItem>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Drawing.Design.IToolboxService> no modo de design e selecione categorias de caixa de ferramentas e itens e para criar controles e componentes de itens de caixa de ferramentas e adicioná-los para um <xref:System.Windows.Forms.Form>. Para usar o exemplo, compile o código em um assembly e adicionar uma referência ao assembly em um aplicativo Windows Forms. Se você estiver usando [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], o `IToolboxServiceControl` é adicionado automaticamente para o **caixa de ferramentas**. Criar uma instância do `IToolboxServiceControl` em um formulário para testar seu comportamento.  
+  
+ [!code-cpp[IToolboxServiceExample1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IToolboxServiceExample1/CPP/itoolboxservicecontrol.cpp#1)]
+ [!code-csharp[IToolboxServiceExample1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IToolboxServiceExample1/CS/itoolboxservicecontrol.cs#1)]
+ [!code-vb[IToolboxServiceExample1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IToolboxServiceExample1/VB/itoolboxservicecontrol.vb#1)]  
+  
+ O exemplo de código a seguir fornece um componente que usa o <xref:System.Drawing.Design.IToolboxService> para adicionar um manipulador de formato de dados de "Text", ou <xref:System.Drawing.Design.ToolboxItemCreatorCallback>, a caixa de ferramentas. O representante de retorno de chamada do criador de dados passa os dados de texto colado à caixa de ferramentas e arrastadas para um formulário para um personalizado <xref:System.Drawing.Design.ToolboxItem> que cria um <xref:System.Windows.Forms.TextBox> que contém o texto.  
+  
+ [!code-cpp[ToolboxCreatorCallbackSample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/CPP/textdatatextboxcomponent.cpp#1)]
+ [!code-csharp[ToolboxCreatorCallbackSample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/CS/textdatatextboxcomponent.cs#1)]
+ [!code-vb[ToolboxCreatorCallbackSample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolboxCreatorCallbackSample/VB/textdatatextboxcomponent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddCreator">
+      <MemberSignature Language="C#" Value="public void AddCreator (System.Drawing.Design.ToolboxItemCreatorCallback creator, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddCreator(class System.Drawing.Design.ToolboxItemCreatorCallback creator, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddCreator(System.Drawing.Design.ToolboxItemCreatorCallback,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="creator" Type="System.Drawing.Design.ToolboxItemCreatorCallback" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="creator">Um <see cref="T:System.Drawing.Design.ToolboxItemCreatorCallback" /> que você pode criar um componente quando o item de caixa de ferramentas é invocado.</param>
+        <param name="format">O formato de dados que trata o criador.</param>
+        <summary>Adiciona um novo item criador de caixa de ferramentas para um formato de dados especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um criador de item de caixa de ferramentas pode converter dados de um formato de dados específico que foi colado ou descartado na caixa de ferramentas em um <xref:System.Drawing.Design.ToolboxItem>. Se um criador de manipular mais de um formato, chame <xref:System.Drawing.Design.IToolboxService.AddCreator%2A> mais de uma vez. Um comportamento inesperado poderá resultar se você adicionar mais de um criador para o mesmo formato.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCreator">
+      <MemberSignature Language="C#" Value="public void AddCreator (System.Drawing.Design.ToolboxItemCreatorCallback creator, string format, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddCreator(class System.Drawing.Design.ToolboxItemCreatorCallback creator, string format, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddCreator(System.Drawing.Design.ToolboxItemCreatorCallback,System.String,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="creator" Type="System.Drawing.Design.ToolboxItemCreatorCallback" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="creator">Um <see cref="T:System.Drawing.Design.ToolboxItemCreatorCallback" /> que você pode criar um componente quando o item de caixa de ferramentas é invocado.</param>
+        <param name="format">O formato de dados que trata o criador.</param>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que representa o host de designer para associar com o criador.</param>
+        <summary>Adiciona um novo item criador de caixa de ferramentas para um formato de dados especificado e o host de designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um criador de item de caixa de ferramentas pode converter dados de um formato de dados específico que foi colado ou descartado na caixa de ferramentas em um <xref:System.Drawing.Design.ToolboxItem>. Se um criador de manipular mais de um formato, chame <xref:System.Drawing.Design.IToolboxService.AddCreator%2A> mais de uma vez. Um comportamento inesperado poderá resultar se você adicionar mais de um criador para o mesmo formato.  
+  
+ Se o `host` parâmetro está definido como `null`, o criador estará disponível para todos os designers. Se um host designer for fornecido, o criador só estarão disponível para designers usando o host especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLinkedToolboxItem">
+      <MemberSignature Language="C#" Value="public void AddLinkedToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddLinkedToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddLinkedToolboxItem(System.Drawing.Design.ToolboxItem,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">Vinculado <see cref="T:System.Drawing.Design.ToolboxItem" /> para adicionar a caixa de ferramentas.</param>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> para o documento de design atual.</param>
+        <summary>Adiciona o item de caixa de ferramentas projeto vinculado especificado para a caixa de ferramentas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um item vinculado da caixa de ferramentas é um item de caixa de ferramentas que está disponível somente para um projeto específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLinkedToolboxItem">
+      <MemberSignature Language="C#" Value="public void AddLinkedToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem, string category, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddLinkedToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem, string category, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddLinkedToolboxItem(System.Drawing.Design.ToolboxItem,System.String,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">Vinculado <see cref="T:System.Drawing.Design.ToolboxItem" /> para adicionar a caixa de ferramentas.</param>
+        <param name="category">A categoria de item de caixa de ferramentas para adicionar o item de caixa de ferramentas.</param>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> para o documento de design atual.</param>
+        <summary>Adiciona o item de caixa de ferramentas projeto vinculado especificado para a caixa de ferramentas na categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um item vinculado da caixa de ferramentas é um item de caixa de ferramentas que está disponível somente para um projeto específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToolboxItem">
+      <MemberSignature Language="C#" Value="public void AddToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddToolboxItem(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">O <see cref="T:System.Drawing.Design.ToolboxItem" /> para adicionar a caixa de ferramentas.</param>
+        <summary>Adiciona o item especificado da caixa de ferramentas para a caixa de ferramentas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToolboxItem">
+      <MemberSignature Language="C#" Value="public void AddToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.AddToolboxItem(System.Drawing.Design.ToolboxItem,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">O <see cref="T:System.Drawing.Design.ToolboxItem" /> para adicionar a caixa de ferramentas.</param>
+        <param name="category">A categoria de item de caixa de ferramentas para adicionar o <see cref="T:System.Drawing.Design.ToolboxItem" /> para.</param>
+        <summary>Adiciona o item especificado da caixa de ferramentas para a caixa de ferramentas na categoria especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryNames">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.CategoryNameCollection CategoryNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Design.CategoryNameCollection CategoryNames" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.IToolboxService.CategoryNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.CategoryNameCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os nomes de todas as categorias de ferramenta atualmente na caixa de ferramentas.</summary>
+        <value>Um <see cref="T:System.Drawing.Design.CategoryNameCollection" /> que contém as categorias de ferramenta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeToolboxItem">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItem DeserializeToolboxItem (object serializedObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItem DeserializeToolboxItem(object serializedObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.DeserializeToolboxItem(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">O objeto que contém o <see cref="T:System.Drawing.Design.ToolboxItem" /> para recuperar.</param>
+        <summary>Obtém um item de caixa de ferramentas do objeto especificado que representa um item de caixa de ferramentas no formato serializado.</summary>
+        <returns>O <see cref="T:System.Drawing.Design.ToolboxItem" /> criado a partir do objeto serializado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeToolboxItem">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItem DeserializeToolboxItem (object serializedObject, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItem DeserializeToolboxItem(object serializedObject, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.DeserializeToolboxItem(System.Object,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">O objeto que contém o <see cref="T:System.Drawing.Design.ToolboxItem" /> para recuperar.</param>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> para associar a este <see cref="T:System.Drawing.Design.ToolboxItem" />.</param>
+        <summary>Obtém um item de caixa de ferramentas do objeto especificado que representa um item de caixa de ferramentas no formato serializado, usando o designer de host especificado.</summary>
+        <returns>O <see cref="T:System.Drawing.Design.ToolboxItem" /> criado a partir de desserialização.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedToolboxItem">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItem GetSelectedToolboxItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItem GetSelectedToolboxItem() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetSelectedToolboxItem" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o item atualmente selecionado da caixa de ferramentas.</summary>
+        <returns>O <see cref="T:System.Drawing.Design.ToolboxItem" /> que está selecionado no momento, ou <see langword="null" /> se nenhum item de caixa de ferramentas foi selecionado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedToolboxItem">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItem GetSelectedToolboxItem (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItem GetSelectedToolboxItem(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetSelectedToolboxItem(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que a ferramenta selecionada deve ser associada a ele a ser retornado.</param>
+        <summary>Obtém o item de caixa de ferramentas selecionado no momento se ele está disponível para todos os designers, ou se ele dá suporte ao designer especificado.</summary>
+        <returns>O <see cref="T:System.Drawing.Design.ToolboxItem" /> que está selecionado no momento, ou <see langword="null" /> se nenhum item de caixa de ferramentas está selecionado no momento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna selecionado no momento <xref:System.Drawing.Design.ToolboxItem> se ele não é específico do designer e retorna apenas um designer-específico selecionado no momento <xref:System.Drawing.Design.ToolboxItem> se o tipo de host do designer especificado no `host` parâmetro corresponde ao tipo de designer que selecionado no momento <xref:System.Drawing.Design.ToolboxItem> oferece suporte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolboxItems">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItemCollection GetToolboxItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItemCollection GetToolboxItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetToolboxItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a coleção inteira de itens da caixa de ferramentas da caixa de ferramentas.</summary>
+        <returns>Um <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> que contém os itens da caixa de ferramentas atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolboxItems">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItemCollection GetToolboxItems (System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItemCollection GetToolboxItems(class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetToolboxItems(System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que está associado com os itens da caixa de ferramentas para recuperar.</param>
+        <summary>Obtém a coleção de itens de caixa de ferramentas que estão associados com o host de designer especificado na caixa de ferramentas.</summary>
+        <returns>Um <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> que contém os itens da caixa de ferramentas atual que estão associados com o host de designer especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolboxItems">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItemCollection GetToolboxItems (string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItemCollection GetToolboxItems(string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetToolboxItems(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="category">A categoria de item de caixa de ferramentas para recuperar todos os itens da caixa de ferramentas.</param>
+        <summary>Obtém uma coleção de itens da caixa de ferramentas da caixa de ferramentas que correspondem a categoria especificada.</summary>
+        <returns>Um <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> que contém os itens da caixa de ferramentas atual que estão associados com a categoria especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolboxItems">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.ToolboxItemCollection GetToolboxItems (string category, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.ToolboxItemCollection GetToolboxItems(string category, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.GetToolboxItems(System.String,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.ToolboxItemCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="category">A categoria de item de caixa de ferramentas para recuperar os itens da caixa de ferramentas do.</param>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que está associado com os itens da caixa de ferramentas para recuperar.</param>
+        <summary>Obtém a coleção de itens de caixa de ferramentas que estão associados com o host de designer especificado e a categoria da caixa de ferramentas.</summary>
+        <returns>Um <see cref="T:System.Drawing.Design.ToolboxItemCollection" /> que contém os itens da caixa de ferramentas atual que estão associados com a categoria especificada e o host de designer.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupported">
+      <MemberSignature Language="C#" Value="public bool IsSupported (object serializedObject, System.Collections.ICollection filterAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupported(object serializedObject, class System.Collections.ICollection filterAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.IsSupported(System.Object,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+        <Parameter Name="filterAttributes" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">O objeto que contém o <see cref="T:System.Drawing.Design.ToolboxItem" /> para recuperar.</param>
+        <param name="filterAttributes">Um <see cref="T:System.Collections.ICollection" /> que contém os atributos para testar o objeto serializado para.</param>
+        <summary>Obtém um valor que indica se o objeto especificado que representa um item de caixa de ferramentas serializado coincide com os atributos especificados.</summary>
+        <returns>
+          <see langword="true" />Se o objeto com os atributos especificados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupported">
+      <MemberSignature Language="C#" Value="public bool IsSupported (object serializedObject, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsSupported(object serializedObject, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.IsSupported(System.Object,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">O objeto que contém o <see cref="T:System.Drawing.Design.ToolboxItem" /> para recuperar.</param>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> para testar o suporte para o <see cref="T:System.Drawing.Design.ToolboxItem" />.</param>
+        <summary>Obtém um valor que indica se o objeto especificado que representa um item de caixa de ferramentas serializado pode ser usado pelo designer host especificado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado é compatível com o host de designer especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsToolboxItem">
+      <MemberSignature Language="C#" Value="public bool IsToolboxItem (object serializedObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsToolboxItem(object serializedObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.IsToolboxItem(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">O objeto a ser inspecionado.</param>
+        <summary>Obtém um valor que indica se o objeto especificado é um item de caixa de ferramentas serializado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto contiver um objeto de item da caixa de ferramentas. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsToolboxItem">
+      <MemberSignature Language="C#" Value="public bool IsToolboxItem (object serializedObject, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsToolboxItem(object serializedObject, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.IsToolboxItem(System.Object,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedObject" Type="System.Object" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="serializedObject">O objeto a ser inspecionado.</param>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que está fazendo a solicitação.</param>
+        <summary>Obtém um valor que indica se o objeto especificado é um item de caixa de ferramentas serializado, usando o designer de host especificado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto contiver um objeto de item da caixa de ferramentas. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza o estado dos itens de caixa de ferramentas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Design.IToolboxService.Refresh%2A> método é usado para indicar para o serviço de caixa de ferramentas que o usuário deseja atualizar o cache de itens da caixa de ferramentas. Se o serviço de caixa de ferramentas mantém uma lista dinâmica de contêineres de itens da caixa de ferramentas, em seguida, esse método não fará nada. Se ele mantém um instantâneo de contêineres de item de caixa de ferramentas, chamar este método deve garantir que o instantâneo é atualizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCreator">
+      <MemberSignature Language="C#" Value="public void RemoveCreator (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveCreator(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.RemoveCreator(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato de dados do criador para remover.</param>
+        <summary>Remove um criador de item adicionado anteriormente da caixa de ferramentas do formato de dados especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCreator">
+      <MemberSignature Language="C#" Value="public void RemoveCreator (string format, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveCreator(string format, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.RemoveCreator(System.String,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato de dados do criador para remover.</param>
+        <param name="host">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que está associado com o criador para remover.</param>
+        <summary>Remove um criador anteriormente adicionados da caixa de ferramentas que está associado com o formato de dados especificado e o host de designer especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveToolboxItem">
+      <MemberSignature Language="C#" Value="public void RemoveToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.RemoveToolboxItem(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">O <see cref="T:System.Drawing.Design.ToolboxItem" /> para remover da caixa de ferramentas.</param>
+        <summary>Remove o item especificado da caixa de ferramentas da caixa de ferramentas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveToolboxItem">
+      <MemberSignature Language="C#" Value="public void RemoveToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.RemoveToolboxItem(System.Drawing.Design.ToolboxItem,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">O <see cref="T:System.Drawing.Design.ToolboxItem" /> para remover da caixa de ferramentas.</param>
+        <param name="category">A categoria de item de caixa de ferramentas para remover o <see cref="T:System.Drawing.Design.ToolboxItem" /> do.</param>
+        <summary>Remove o item especificado da caixa de ferramentas da caixa de ferramentas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedCategory">
+      <MemberSignature Language="C#" Value="public string SelectedCategory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedCategory" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Design.IToolboxService.SelectedCategory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da categoria de ferramenta selecionada no momento da caixa de ferramentas.</summary>
+        <value>O nome da categoria selecionada no momento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedToolboxItemUsed">
+      <MemberSignature Language="C#" Value="public void SelectedToolboxItemUsed ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectedToolboxItemUsed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.SelectedToolboxItemUsed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o serviço de caixa de ferramentas que foi usada a ferramenta selecionada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeToolboxItem">
+      <MemberSignature Language="C#" Value="public object SerializeToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object SerializeToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.SerializeToolboxItem(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">O <see cref="T:System.Drawing.Design.ToolboxItem" /> a ser serializado.</param>
+        <summary>Obtém um objeto serializável que representa o item especificado da caixa de ferramentas.</summary>
+        <returns>Um objeto que representa a <see cref="T:System.Drawing.Design.ToolboxItem" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método serializa especificado <xref:System.Drawing.Design.ToolboxItem> a um objeto que pode ser persistente. O objeto retornado pode ser armazenado em um fluxo ou passado em uma operação de arrastar e soltar ou área de transferência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCursor">
+      <MemberSignature Language="C#" Value="public bool SetCursor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetCursor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.SetCursor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o cursor do aplicativo atual para um cursor que representa a ferramenta selecionada no momento.</summary>
+        <returns>
+          <see langword="true" />Se o cursor é definido pela ferramenta selecionada no momento, <see langword="false" /> se não houver nenhuma ferramenta selecionada e o cursor é definido como o cursor padrão do windows.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhuma ferramenta for selecionada, o cursor padrão será o cursor padrão do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSelectedToolboxItem">
+      <MemberSignature Language="C#" Value="public void SetSelectedToolboxItem (System.Drawing.Design.ToolboxItem toolboxItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSelectedToolboxItem(class System.Drawing.Design.ToolboxItem toolboxItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IToolboxService.SetSelectedToolboxItem(System.Drawing.Design.ToolboxItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolboxItem" Type="System.Drawing.Design.ToolboxItem" />
+      </Parameters>
+      <Docs>
+        <param name="toolboxItem">O <see cref="T:System.Drawing.Design.ToolboxItem" /> a ser selecionado.</param>
+        <summary>Seleciona o item especificado da caixa de ferramentas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

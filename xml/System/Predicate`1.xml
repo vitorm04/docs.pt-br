@@ -1,0 +1,71 @@
+<Type Name="Predicate&lt;T&gt;" FullName="System.Predicate&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public delegate bool Predicate&lt;in T&gt;(T obj);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Predicate`1&lt;- T&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Predicate`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="obj" Type="T" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="T">Especifica o tipo do objeto a ser comparado.</typeparam>
+    <param name="obj">O objeto a ser comparado com os critérios definidos dentro do método representado por esse delegado.</param>
+    <summary>Representa o método que define um conjunto de critérios e determina se o objeto especificado atende a esses critérios.</summary>
+    <returns>
+      <see langword="true" /> se <paramref name="obj" /> atender aos critérios definidos dentro do método representado por esse delegado; caso contrário, <see langword="false" />.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este delegado é usado por vários métodos para o <xref:System.Array> e <xref:System.Collections.Generic.List%601> classes para pesquisar elementos na coleção.  
+  
+ Normalmente, o <xref:System.Predicate%601> delegado é representado por uma expressão lambda. Como as variáveis com escopo local estão disponíveis para a expressão lambda, é fácil de testar uma condição que não é conhecido em tempo de compilação com precisão. Isso é simulado no exemplo a seguir, que define um `HockeyTeam` classe que contém informações sobre uma equipe liga de hóquei nacional e o ano no qual ele foi fundado. O exemplo define uma matriz de valores inteiros que representam anos e atribui aleatoriamente um elemento da matriz para `foundedBeforeYear`, que é uma variável local voltada para o exemplo `Main` método. Como as variáveis com escopo local estão disponíveis para uma expressão lambda, a expressão lambda passado para o <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> método é capaz de retornar um `HockeyTeam` objeto para cada equipe Fundada em ou antes desse ano.  
+  
+ [!code-csharp[System.Predicate\`1#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Predicate`1/cs/predicate1.cs#3)]
+ [!code-vb[System.Predicate\`1#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Predicate`1/vb/predicate1.vb#3)]  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.Predicate%601> delegar com o <xref:System.Array.Find%2A?displayProperty=nameWithType> método para pesquisar uma matriz de <xref:System.Drawing.Point> estruturas. O exemplo define explicitamente um <xref:System.Predicate%601> delegado chamado `predicate` e atribui a ele um método chamado `FindPoints` que retorna `true` se o produto a <xref:System.Drawing.Point.X%2A?displayProperty=nameWithType> e <xref:System.Drawing.Point.Y%2A?displayProperty=nameWithType> campos seja superior a 100.000. Observe que é comum usar uma expressão lambda em vez de definir explicitamente um delegado do tipo <xref:System.Predicate%601>, como mostra o segundo exemplo.  
+  
+ [!code-csharp[System.Predicate\`1#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Predicate`1/cs/predicateex2.cs#4)]
+ [!code-vb[System.Predicate\`1#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Predicate`1/vb/predicateex2.vb#4)]  
+  
+ O exemplo a seguir é idêntico ao exemplo anterior, exceto que ele usa uma expressão lambda para representar o <xref:System.Predicate%601> delegate.  Cada elemento do `points` matriz é passada para a expressão lambda até que a expressão localiza um elemento que atendem aos critérios de pesquisa. Nesse caso, a expressão lambda retorna `true` se o produto dos campos de X e Y é maior que 100.000.  
+  
+ [!code-csharp[System.Predicate\`1#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Predicate`1/cs/predicateex1.cs#2)]
+ [!code-vb[System.Predicate\`1#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Predicate`1/vb/predicateex1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

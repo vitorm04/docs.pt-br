@@ -1,0 +1,109 @@
+<Type Name="DirectorySynchronizationOptions" FullName="System.DirectoryServices.DirectorySynchronizationOptions">
+  <TypeSignature Language="C#" Value="public enum DirectorySynchronizationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DirectorySynchronizationOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.DirectorySynchronizationOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém sinalizadores que determinam como os diretórios em um domínio serão sincronizados.  Essas opções podem ser definidas para o <see cref="P:System.DirectoryServices.DirectorySynchronization.Option" /> propriedade.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IncrementalValues">
+      <MemberSignature Language="C#" Value="IncrementalValues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectorySynchronizationOptions IncrementalValues = int64(2147483648)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectorySynchronizationOptions.IncrementalValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se este sinalizador não estiver presente, todos os valores, até o limite especificado de servidor, em um atributo com vários valores são retornados quando qualquer valor é alterado. Se esse sinalizador estiver presente, somente os valores alterados são retornados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectorySynchronizationOptions None = int64(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectorySynchronizationOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum sinalizador está definido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectSecurity">
+      <MemberSignature Language="C#" Value="ObjectSecurity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectorySynchronizationOptions ObjectSecurity = int64(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectorySynchronizationOptions.ObjectSecurity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se este sinalizador não estiver presente, o chamador deve ter o direito de replicar as alterações. Se esse sinalizador estiver presente, o chamador não requer nenhum direito, mas pode ver apenas os objetos e atributos que são acessíveis ao chamador.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentsFirst">
+      <MemberSignature Language="C#" Value="ParentsFirst" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectorySynchronizationOptions ParentsFirst = int64(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectorySynchronizationOptions.ParentsFirst" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorne os pais antes dos filhos, quando os pais apareceriam posteriormente no fluxo de replicação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicDataOnly">
+      <MemberSignature Language="C#" Value="PublicDataOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.DirectorySynchronizationOptions PublicDataOnly = int64(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.DirectorySynchronizationOptions.PublicDataOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectorySynchronizationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não retornam dados privados nos resultados da pesquisa.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

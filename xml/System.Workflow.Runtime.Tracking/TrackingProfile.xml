@@ -1,0 +1,219 @@
+<Type Name="TrackingProfile" FullName="System.Workflow.Runtime.Tracking.TrackingProfile">
+  <TypeSignature Language="C#" Value="public class TrackingProfile" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TrackingProfile extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingProfile" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define pontos de interesse no caminho de execução potencial de uma instância de fluxo de trabalho raiz sobre os quais um serviço de controle deve ser notificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Durante o tempo de execução, uma instância de fluxo de trabalho emite eventos de rastreamento para o infra-estrutura de controle de tempo de execução. Tempo de execução do controle de infraestrutura usa um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para filtrar esses eventos de rastreamento e retorna registros com base em como a filtragem para um serviço de controle de controle. Há três tipos de rastreamento de eventos que podem ser filtrados: eventos de status de atividade, eventos de status do fluxo de trabalho e eventos de usuário. Você pode adicionar <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> objetos para o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A> propriedade para corresponder eventos de status de atividade específica; <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> objetos para o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A> propriedade para corresponder eventos de status do fluxo de trabalho específico; e <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> objetos para o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints%2A> propriedade para corresponder eventos de usuário específico. Quando um ponto de controle for correspondido, a infra-estrutura de controle de tempo de execução retorna os dados associados ao evento de rastreamento para o serviço de controle sobre o <xref:System.Workflow.Runtime.Tracking.TrackingChannel> associados ao serviço. Os dados são retornados em um um <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord>, um <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord>, ou <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> dependendo do tipo de ponto de controle que foi correspondido.  
+  
+ Um serviço de controle implementa os métodos em teoria <xref:System.Workflow.Runtime.Tracking.TrackingService> classe para fornecer a funcionalidade para a infra-estrutura de controle de tempo de execução solicitar um <xref:System.Workflow.Runtime.Tracking.TrackingChannel> associado ao serviço e um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> associados com uma instância de fluxo de trabalho específico ou com um tipo específico de fluxo de trabalho. Um serviço de controle também deve implementar abstrata <xref:System.Workflow.Runtime.Tracking.TrackingChannel> classe para fornecer o canal em que a infra-estrutura de controle de tempo de execução pode enviar registros de rastreamento.  
+  
+ Quando o serviço de acompanhamento retorna um perfil de rastreamento do objeto para o tempo de execução, o fluxo de trabalho começa a executar, e o perfil de rastreamento é serializado. Se a serialização do perfil de rastreamento falhar, uma exceção é gerada para a instância de fluxo de trabalho. Se a exceção não for manipulada, a instância de fluxo de trabalho será encerrada. O perfil de rastreamento pode ser validado antes de passar para o tempo de execução usando o <xref:System.Workflow.Runtime.Tracking.TrackingProfileSerializer.Schema%2A> propriedade.  
+  
+ Um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> podem ser serializados em XML usando o <xref:System.Workflow.Runtime.Tracking.TrackingProfileSerializer>, que formata o XML de acordo com o <xref:System.Workflow.Runtime.Tracking.TrackingProfileSerializer.Schema%2A>. Isso fornece um formato conveniente para armazenamento de perfil e para a criação de um perfil de uma maneira não através de programação. Por exemplo, o serviço de rastreamento do SQL armazena serializado versões dos seus perfis de controle, assim como qualquer serviço de acompanhamento que você cria com base no <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode criar um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> usando o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.%23ctor%2A> construtor e usar as propriedades do objeto para ajudar a controlar a execução de um fluxo de trabalho. O código de exemplo usa o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A>, e <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A> propriedades.  
+  
+ Este exemplo de código é parte da consulta usando a amostra do SDK SQLTrackingService do arquivo Program.cs. Para obter mais informações, consulte [consulta usando SQLTrackingService](http://msdn.microsoft.com/en-us/a81e48bb-12f4-4e2b-9176-ea4e6b6e3d21).  
+  
+ [!code-csharp[WF_Samples#291](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#291)]
+ [!code-vb[WF_Samples#291](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#291)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackingProfile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingProfile.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor inicializa vazio <xref:System.Workflow.Runtime.Tracking.TrackingProfile>. Você pode adicionar pontos de controle para <xref:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>, e <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A> para configurar o <xref:System.Workflow.Runtime.Tracking.TrackingProfile>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode criar um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> usando o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.%23ctor%2A> construtor e usar as propriedades do objeto para ajudar a controlar a execução de um fluxo de trabalho. O código de exemplo usa o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A>, e <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A> propriedades.  
+  
+ Este exemplo de código é parte da consulta usando a amostra do SDK SQLTrackingService do arquivo Program.cs. Para obter mais informações, consulte [consulta usando SQLTrackingService](http://msdn.microsoft.com/en-us/a81e48bb-12f4-4e2b-9176-ea4e6b6e3d21).  
+  
+ [!code-csharp[WF_Samples#291](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#291)]
+ [!code-vb[WF_Samples#291](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#291)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityTrackPoints">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.ActivityTrackPointCollection ActivityTrackPoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.ActivityTrackPointCollection ActivityTrackPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.ActivityTrackPointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de pontos de controle de atividade usado pela infraestrutura de controle de tempo de execução para filtrar eventos de status de atividade.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackPointCollection" /> que especifica os pontos em uma instância de fluxo de trabalho para o qual a infra-estrutura de controle de tempo de execução deve enviar um <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" /> para o serviço de acompanhamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância de fluxo de trabalho emite eventos de status de atividade para a infra-estrutura de controle de tempo de execução sempre que o <xref:System.Workflow.ComponentModel.ActivityExecutionStatus> das alterações de instância atividade. O tempo de execução usa infraestrutura de rastreamento de <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A> propriedade para filtrar esses eventos de status de atividade para determinar quando enviar um <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> para o serviço de acompanhamento. Você pode adicionar uma <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> para o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A> propriedade para especificar pontos de interesse no caminho de execução potencial da instância do fluxo de trabalho para o qual você deseja que a infraestrutura de tempo de execução para enviar um <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord>.  
+  
+ Um <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> não realmente definir um ponto físico em uma instância de fluxo de trabalho, mas em vez disso, define um conjunto de parâmetros de correspondência que pode ser usado pela infraestrutura de controle de tempo de execução para coincidir com um evento de status de atividade para o qual deve enviar um <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord>. Portanto, o mesmo <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> pode ser correspondido muitas vezes durante o tempo de vida de uma instância de fluxo de trabalho. Um <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> também pode especificar os dados a ser extraído da instância de fluxo de trabalho e retornados no <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode criar um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> usando o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.%23ctor%2A> construtor e usar as propriedades do objeto para ajudar a controlar a execução de um fluxo de trabalho. O código de exemplo usa o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A>, e <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A> propriedades.  
+  
+ Este exemplo de código é parte da consulta usando a amostra do SDK SQLTrackingService do arquivo Program.cs. Para obter mais informações, consulte [consulta usando SQLTrackingService](http://msdn.microsoft.com/en-us/a81e48bb-12f4-4e2b-9176-ea4e6b6e3d21).  
+  
+ [!code-csharp[WF_Samples#291](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#291)]
+ [!code-vb[WF_Samples#291](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#291)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserTrackPoints">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.UserTrackPointCollection UserTrackPoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.UserTrackPointCollection UserTrackPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.UserTrackPointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de pontos de controle de usuário usado pela infraestrutura de controle de tempo de execução para filtrar eventos de usuário.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.UserTrackPointCollection" /> que especifica os pontos em uma instância de fluxo de trabalho para o qual a infra-estrutura de controle de tempo de execução deve enviar um <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingRecord" /> para o serviço de acompanhamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pode usar um designer de fluxo de trabalho ou um designer de atividade <xref:System.Workflow.ComponentModel.Activity.TrackData%2A?displayProperty=nameWithType>, <xref:System.Workflow.ComponentModel.Activity.TrackData%2A?displayProperty=nameWithType>, <xref:System.Workflow.ComponentModel.ActivityExecutionContext.TrackData%2A?displayProperty=nameWithType>, ou <xref:System.Workflow.ComponentModel.Activity.TrackData%2A?displayProperty=nameWithType> instrumentar um fluxo de trabalho ou uma atividade para emitir os dados no tempo de execução controle infraestrutura em pontos específicos durante a execução de um fluxo de trabalho. Tal uma ocorrência é chamada de um evento de usuário e os dados emitidos são chamados de dados de usuário. O tempo de execução usa infraestrutura de rastreamento de <xref:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints%2A> propriedade para filtrar eventos de usuário para determinar quando enviar um <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> para o serviço de acompanhamento. Você pode adicionar uma <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> para o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.UserTrackPoints%2A> propriedade para especificar pontos de interesse no caminho de execução potencial da instância do fluxo de trabalho para o qual você deseja uma <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord> enviados.  
+  
+ Um <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> não realmente definir um ponto físico em uma instância de fluxo de trabalho, mas em vez disso, define um conjunto de parâmetros de correspondência que pode ser usado pela infraestrutura de controle de tempo de execução para correspondência de eventos do usuário. Portanto, o mesmo <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> pode ser correspondido muitas vezes durante o tempo de vida de uma instância de fluxo de trabalho. A infra-estrutura de controle de tempo de execução sempre retorna os dados de usuário associados com uma correspondência <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> no <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord>, mas um <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> também pode especificar os dados a ser extraído da instância de fluxo de trabalho e retornados no registro de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingProfile.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão do perfil de rastreamento.</summary>
+        <value>O <see cref="T:System.Version" /> do <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Devido a semântica do perfil de cache no mecanismo de tempo de execução de fluxo de trabalho, se você alterar o conteúdo de um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> atualize <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A>. Se você não fizer isso, seu atualizada <xref:System.Workflow.Runtime.Tracking.TrackingProfile> não pode ser carregado pelo mecanismo de tempo de execução de fluxo de trabalho, mesmo se ele é retornado por uma chamada para <xref:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile%2A?displayProperty=nameWithType>, ou enviados no <xref:System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs> associado com um <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated> eventos. Portanto, para garantir que a atualização <xref:System.Workflow.Runtime.Tracking.TrackingProfile> é carregado pelo mecanismo de tempo de execução de fluxo de trabalho, você deve alterar o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A> para o <xref:System.Workflow.Runtime.Tracking.TrackingProfile>. Você pode chamar explicitamente <xref:System.Workflow.Runtime.WorkflowInstance.ReloadTrackingProfiles%2A?displayProperty=nameWithType> em qualquer instância de fluxo de trabalho apropriado ou, dependendo da implementação, você pode contar com o serviço de acompanhamento para informar o mecanismo de tempo de execução do fluxo de trabalho da alteração. Para obter mais informações, consulte <xref:System.Workflow.Runtime.Tracking.TrackingService>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode criar um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> usando o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.%23ctor%2A> construtor e usar as propriedades do objeto para ajudar a controlar a execução de um fluxo de trabalho. O código de exemplo usa o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A>, e <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A> propriedades.  
+  
+ Este exemplo de código é parte da consulta usando a amostra do SDK SQLTrackingService do arquivo Program.cs. Para obter mais informações, consulte [consulta usando SQLTrackingService](http://msdn.microsoft.com/en-us/a81e48bb-12f4-4e2b-9176-ea4e6b6e3d21).  
+  
+ [!code-csharp[WF_Samples#291](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#291)]
+ [!code-vb[WF_Samples#291](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#291)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowTrackPoints">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.WorkflowTrackPointCollection WorkflowTrackPoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.WorkflowTrackPointCollection WorkflowTrackPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.WorkflowTrackPointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de pontos de controle de fluxo de trabalho usado pela infraestrutura de controle de tempo de execução para filtrar eventos de status do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackPointCollection" /> que especifica os pontos em uma instância de fluxo de trabalho para o qual a infra-estrutura de controle de tempo de execução deve enviar um <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord" /> para o serviço de acompanhamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância de fluxo de trabalho emite eventos de status do fluxo de trabalho para a infra-estrutura de controle de tempo de execução sempre que um <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent> ocorre indicando que o status de uma instância de fluxo de trabalho foi alterado. O tempo de execução usa infraestrutura de rastreamento de <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A> propriedade para filtrar esses eventos de status do fluxo de trabalho para determinar quando enviar um <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> para o serviço de acompanhamento. Você pode adicionar uma <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> para o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A> propriedade para especificar pontos de interesse no caminho de execução potencial da instância do fluxo de trabalho para o qual você deseja uma <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> enviados.  
+  
+ Um <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> não realmente definir um ponto físico em uma instância de fluxo de trabalho, mas em vez disso, define um ou mais <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent> valores que podem ser usados pelo tempo de execução de infra-estrutura de controle para fazer a correspondência de eventos de status do fluxo de trabalho. Portanto, o mesmo <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> pode ser correspondido muitas vezes durante o tempo de vida de uma instância de fluxo de trabalho. Um <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> também pode especificar qualquer anotações a serem retornados no <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode criar um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> usando o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.%23ctor%2A> construtor e usar as propriedades do objeto para ajudar a controlar a execução de um fluxo de trabalho. O código de exemplo usa o <xref:System.Workflow.Runtime.Tracking.TrackingProfile.ActivityTrackPoints%2A>, <xref:System.Workflow.Runtime.Tracking.TrackingProfile.Version%2A>, e <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A> propriedades.  
+  
+ Este exemplo de código é parte da consulta usando a amostra do SDK SQLTrackingService do arquivo Program.cs. Para obter mais informações, consulte [consulta usando SQLTrackingService](http://msdn.microsoft.com/en-us/a81e48bb-12f4-4e2b-9176-ea4e6b6e3d21).  
+  
+ [!code-csharp[WF_Samples#291](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#291)]
+ [!code-vb[WF_Samples#291](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#291)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

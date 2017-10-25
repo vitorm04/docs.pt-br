@@ -1,0 +1,172 @@
+<Type Name="RibbonContextualTabGroupsPanel" FullName="System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel">
+  <TypeSignature Language="C#" Value="public class RibbonContextualTabGroupsPanel : System.Windows.Controls.Panel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi RibbonContextualTabGroupsPanel extends System.Windows.Controls.Panel" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Panel</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto que organiza os grupos de guia contextual em um <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonContextualTabGroupsPanel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size finalSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size finalSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finalSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="finalSize">O tamanho que o <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel" /> precisa posicionar seus elementos filho.</param>
+        <summary>Posiciona e dimensiona os elementos filho neste <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" />.</summary>
+        <returns>O tamanho real do <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size availableSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size availableSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="availableSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="availableSize">O tamanho máximo de <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel" />.</param>
+        <summary>Mede os elementos filho neste <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel" /> na preparação da organização-las durante a <see cref="M:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel.ArrangeOverride(System.Windows.Size)" /> passar.</summary>
+        <returns>O tamanho desejado do <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsItemsHostChanged">
+      <MemberSignature Language="C#" Value="protected override void OnIsItemsHostChanged (bool oldIsItemsHost, bool newIsItemsHost);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnIsItemsHostChanged(bool oldIsItemsHost, bool newIsItemsHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel.OnIsItemsHostChanged(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldIsItemsHost" Type="System.Boolean" />
+        <Parameter Name="newIsItemsHost" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="oldIsItemsHost">O valor antigo do <see cref="P:System.Windows.Controls.Panel.IsItemsHost" /> propriedade.</param>
+        <param name="newIsItemsHost">O novo valor da propriedade <see cref="P:System.Windows.Controls.Panel.IsItemsHost" />.</param>
+        <summary>Chamado quando a propriedade <see cref="P:System.Windows.Controls.Panel.IsItemsHost" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Windows.Media.DrawingContext drawingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Windows.Media.DrawingContext drawingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel.OnRender(System.Windows.Media.DrawingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drawingContext" Type="System.Windows.Media.DrawingContext" />
+      </Parameters>
+      <Docs>
+        <param name="drawingContext">O objeto <see cref="T:System.Windows.Media.DrawingContext" /> a ser desenhado.</param>
+        <summary>Desenha o conteúdo de um objeto <see cref="T:System.Windows.Media.DrawingContext" /> durante a fase de renderização de um elemento <see cref="T:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ribbon">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Ribbon.Ribbon Ribbon { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Ribbon.Ribbon Ribbon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel.Ribbon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.Ribbon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> que este controle pertence.</summary>
+        <value>Uma referência para o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> que este controle pertence. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida no pai <xref:System.Windows.Controls.Ribbon.Ribbon> controlar e é herdada por controles filho. Ele é usado para acessar pincéis de estilo visual definidos no <xref:System.Windows.Controls.Ribbon.Ribbon> classe.  
+  
+<a name="dependencyPropertyInfo_Ribbon"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel.RibbonProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RibbonProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RibbonProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RibbonProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel.RibbonProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Primitives.RibbonContextualTabGroupsPanel.Ribbon" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,160 @@
+<Type Name="SrgsText" FullName="System.Speech.Recognition.SrgsGrammar.SrgsText">
+  <TypeSignature Language="C#" Value="public class SrgsText : System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SrgsText extends System.Speech.Recognition.SrgsGrammar.SrgsElement" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsText" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Recognition.SrgsGrammar.SrgsElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{DebuggerDisplayString ()}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o conteúdo textual dos elementos de gramática definida pelo World Wide Web Consortium (W3C) [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0](http://www.w3.org/TR/speech-grammar/).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Recognition.SrgsGrammar.SrgsText> classe representa o texto localizado em um conjunto de marcas de elemento SRGS. Quando um <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> objeto for construído com uma <xref:System.String> parâmetro, um <xref:System.Speech.Recognition.SrgsGrammar.SrgsText> objeto é criado com seu <xref:System.Speech.Recognition.SrgsGrammar.SrgsText.Text%2A> propriedade inicializada com o valor desse parâmetro. O <xref:System.Speech.Recognition.SrgsGrammar.SrgsText.Text%2A> objeto é adicionado para o <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem.Elements%2A> coleção no <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> objeto.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código em c# demonstra como usar o <xref:System.Speech.Recognition.SrgsGrammar.SrgsText> classe para modificar o conteúdo textual de <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> objetos. O exemplo altera os valores de texto inicial do <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> objetos (`Large`, `Larger`, e `Largest`) para `Small`, `Medium`, e `Large`, respectivamente.  
+  
+```csharp  
+  
+// Create SrgsItem objects and specify their text.  
+SrgsItem smallItem = new SrgsItem("Large");  
+SrgsItem mediumItem = new SrgsItem("Larger");  
+SrgsItem largeItem = new SrgsItem("Largest");  
+  
+SrgsText textOfItem = null;  
+  
+//  Change the text of smallItem.  
+if (smallItem.Elements[0] is SrgsText)  
+{  
+  textOfItem = smallItem.Elements[0] as SrgsText;  
+  textOfItem.Text = "Small";  
+}  
+  
+//  Change the text of mediumItem.  
+if (mediumItem.Elements[0] is SrgsText)  
+{  
+  textOfItem = mediumItem.Elements[0] as SrgsText;  
+  textOfItem.Text = "Medium";  
+}  
+  
+// Change the text of largeItem.  
+if (largeItem.Elements[0] is SrgsText)  
+{  
+  textOfItem = largeItem.Elements[0] as SrgsText;  
+  textOfItem.Text = "Large";  
+}  
+  
+// Create an SrgsOneOf object and add smallItem, mediumItem,   
+// and largeItem as alternatives.  
+SrgsOneOf itemSize = new SrgsOneOf(new SrgsItem[]   
+  { smallItem, mediumItem, largeItem });  
+  
+// Create a new SrgsRule from the SrgsOneOf object, and specifiy its identifier.  
+SrgsRule size = new SrgsRule("Sizes", itemSize);  
+  
+// Create an SrgsDocument object.  
+// Add the SrgsRule object to the collection of rules and make it the root rule.  
+SrgsDocument document = new SrgsDocument();   
+document.Rules.Add(size);  
+document.Root = size;  
+  
+// Write the SrgsDocument to an XML grammar file.  
+string srgsDocumentFile = Path.Combine(Path.GetTempPath(), "srgsDocumentFile.xml");  
+XmlWriter writer = XmlWriter.Create(srgsDocumentFile);  
+document.WriteSrgs(writer);  
+writer.Close();  
+```  
+  
+ A seguir mostra como o modificou o texto do <xref:System.Speech.Recognition.SrgsGrammar.SrgsItem> objetos apareceria como `item` elementos no arquivo de gramática do XML de saída.  
+  
+```xml  
+<!-- SRGS XML Fragment -->  
+<one-of>  
+  <item>Small</item>  
+  <item>Medium</item>  
+  <item>Large</item>  
+</one-of>  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsText.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsText" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o construtor padrão para o <xref:System.Speech.Recognition.SrgsGrammar.SrgsText> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SrgsText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsText.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O valor usado para definir o <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsText.Text" /> propriedade o <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsText" /> instância.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsText" /> classe, especificando o texto da instância.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.SrgsGrammar.SrgsText.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto contido dentro de <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsText" /> instância da classe.</summary>
+        <value>O texto contido dentro de <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsText" /> instância.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">É feita uma tentativa de definir <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsText.Text" /> para <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

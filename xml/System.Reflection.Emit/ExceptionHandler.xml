@@ -1,0 +1,315 @@
+<Type Name="ExceptionHandler" FullName="System.Reflection.Emit.ExceptionHandler">
+  <TypeSignature Language="C#" Value="public struct ExceptionHandler : IEquatable&lt;System.Reflection.Emit.ExceptionHandler&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ExceptionHandler extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Reflection.Emit.ExceptionHandler&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.ExceptionHandler" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Reflection.Emit.ExceptionHandler&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um manipulador de exceção em uma matriz de bytes de IL para ser passado para um método como <see cref="M:System.Reflection.Emit.MethodBuilder.SetMethodBody(System.Byte[],System.Int32,System.Byte[],System.Collections.Generic.IEnumerable{System.Reflection.Emit.ExceptionHandler},System.Collections.Generic.IEnumerable{System.Int32})" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExceptionHandler (int tryOffset, int tryLength, int filterOffset, int handlerOffset, int handlerLength, System.Reflection.ExceptionHandlingClauseOptions kind, int exceptionTypeToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 tryOffset, int32 tryLength, int32 filterOffset, int32 handlerOffset, int32 handlerLength, valuetype System.Reflection.ExceptionHandlingClauseOptions kind, int32 exceptionTypeToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ExceptionHandler.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Reflection.ExceptionHandlingClauseOptions,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tryOffset" Type="System.Int32" />
+        <Parameter Name="tryLength" Type="System.Int32" />
+        <Parameter Name="filterOffset" Type="System.Int32" />
+        <Parameter Name="handlerOffset" Type="System.Int32" />
+        <Parameter Name="handlerLength" Type="System.Int32" />
+        <Parameter Name="kind" Type="System.Reflection.ExceptionHandlingClauseOptions" />
+        <Parameter Name="exceptionTypeToken" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="tryOffset">O deslocamento de bytes da primeira instrução protegido por este manipulador de exceção.</param>
+        <param name="tryLength">O número de bytes protegido por este manipulador de exceção.</param>
+        <param name="filterOffset">O deslocamento de bytes do início do código do filtro. O código de filtro termina na primeira instrução do bloco do manipulador. Para manipuladores de exceção não filtro, especifique 0 (zero) para esse parâmetro.</param>
+        <param name="handlerOffset">O deslocamento de bytes da primeira instrução deste manipulador de exceção.</param>
+        <param name="handlerLength">O número de bytes neste manipulador de exceção.</param>
+        <param name="kind">Um dos valores de enumeração que especifica o tipo de manipulador de exceção.</param>
+        <param name="exceptionTypeToken">O token do tipo de exceção tratado por este manipulador de exceção. Se não for aplicável, especifique 0 (zero).</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Reflection.Emit.ExceptionHandler" /> com os parâmetros especificados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="tryOffset" />, <paramref name="filterOffset" />, <paramref name="handlerOffset" />, <paramref name="tryLength" />, ou <paramref name="handlerLength" /> são negativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ExceptionHandler.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado a essa instância.</param>
+        <summary>Indica se esta instância do <see cref="T:System.Reflection.Emit.ExceptionHandler" /> objeto é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> e esta instância forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Reflection.Emit.ExceptionHandler other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Reflection.Emit.ExceptionHandler other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ExceptionHandler.Equals(System.Reflection.Emit.ExceptionHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Reflection.Emit.ExceptionHandler" />
+      </Parameters>
+      <Docs>
+        <param name="other">O objeto do manipulador de exceção para comparar a essa instância.</param>
+        <summary>Indica se esta instância do <see cref="T:System.Reflection.Emit.ExceptionHandler" /> objeto é igual a outro <see cref="T:System.Reflection.Emit.ExceptionHandler" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="other" /> e esta instância forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionTypeToken">
+      <MemberSignature Language="C#" Value="public int ExceptionTypeToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ExceptionTypeToken" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ExceptionHandler.ExceptionTypeToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o token do tipo de exceção tratado por este manipulador.</summary>
+        <value>O token do tipo de exceção tratado por este manipulador ou 0 se não houver nenhum.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterOffset">
+      <MemberSignature Language="C#" Value="public int FilterOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FilterOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ExceptionHandler.FilterOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento de bytes no qual o código de filtro para o manipulador de exceção começa.</summary>
+        <value>O deslocamento de bytes no qual o código de filtro começa, ou 0 se nenhum filtro estiver presente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ExceptionHandler.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como a função de hash padrão.</summary>
+        <returns>O código hash do objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlerLength">
+      <MemberSignature Language="C#" Value="public int HandlerLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HandlerLength" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ExceptionHandler.HandlerLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento, em bytes, do manipulador de exceção.</summary>
+        <value>O comprimento, em bytes, do manipulador de exceção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlerOffset">
+      <MemberSignature Language="C#" Value="public int HandlerOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HandlerOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ExceptionHandler.HandlerOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento de bytes da primeira instrução do manipulador de exceção.</summary>
+        <value>O deslocamento de bytes da primeira instrução do manipulador de exceção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kind">
+      <MemberSignature Language="C#" Value="public System.Reflection.ExceptionHandlingClauseOptions Kind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.ExceptionHandlingClauseOptions Kind" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ExceptionHandler.Kind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ExceptionHandlingClauseOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o tipo de manipulador de exceção que este objeto representa.</summary>
+        <value>Um dos valores de enumeração que especifica o tipo de manipulador de exceção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Reflection.Emit.ExceptionHandler left, System.Reflection.Emit.ExceptionHandler right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Reflection.Emit.ExceptionHandler left, valuetype System.Reflection.Emit.ExceptionHandler right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ExceptionHandler.op_Equality(System.Reflection.Emit.ExceptionHandler,System.Reflection.Emit.ExceptionHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.Emit.ExceptionHandler" />
+        <Parameter Name="right" Type="System.Reflection.Emit.ExceptionHandler" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro objeto a ser comparado.</param>
+        <param name="right">O segundo objeto a ser comparado.</param>
+        <summary>Determina se duas instâncias especificadas do <see cref="T:System.Reflection.Emit.ExceptionHandler" /> são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="left" /> e <paramref name="right" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Reflection.Emit.ExceptionHandler left, System.Reflection.Emit.ExceptionHandler right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Reflection.Emit.ExceptionHandler left, valuetype System.Reflection.Emit.ExceptionHandler right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.ExceptionHandler.op_Inequality(System.Reflection.Emit.ExceptionHandler,System.Reflection.Emit.ExceptionHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.Emit.ExceptionHandler" />
+        <Parameter Name="right" Type="System.Reflection.Emit.ExceptionHandler" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro objeto a ser comparado.</param>
+        <param name="right">O segundo objeto a ser comparado.</param>
+        <summary>Determina se duas instâncias especificadas de <see cref="T:System.Reflection.Emit.ExceptionHandler" /> não são iguais.</summary>
+        <returns>
+          <see langword="true" /> caso <paramref name="left" /> e <paramref name="right" /> não sejam iguais; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryLength">
+      <MemberSignature Language="C#" Value="public int TryLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TryLength" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ExceptionHandler.TryLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento, em bytes, do código protegido por este manipulador de exceção.</summary>
+        <value>O comprimento, em bytes, do código protegido por este manipulador de exceção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryOffset">
+      <MemberSignature Language="C#" Value="public int TryOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TryOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.ExceptionHandler.TryOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento de bytes no qual o código que é protegido por este manipulador de exceção começa.</summary>
+        <value>O deslocamento de bytes no qual o código que é protegido por este manipulador de exceção começa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

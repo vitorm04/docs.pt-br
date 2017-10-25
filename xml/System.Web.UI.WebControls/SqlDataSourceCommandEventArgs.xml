@@ -1,0 +1,101 @@
+<Type Name="SqlDataSourceCommandEventArgs" FullName="System.Web.UI.WebControls.SqlDataSourceCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class SqlDataSourceCommandEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlDataSourceCommandEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos <see cref="E:System.Web.UI.WebControls.SqlDataSource.Updating" />, <see cref="E:System.Web.UI.WebControls.SqlDataSource.Deleting" /> e <see cref="E:System.Web.UI.WebControls.SqlDataSource.Inserting" /> do controle <see cref="T:System.Web.UI.WebControls.SqlDataSource" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adicionando um delegado de manipulador de eventos para lidar com o <xref:System.Web.UI.WebControls.SqlDataSource.Updating>, <xref:System.Web.UI.WebControls.SqlDataSource.Inserting>, ou <xref:System.Web.UI.WebControls.SqlDataSource.Deleting> eventos, você pode executar qualquer pré-processamento adicional necessária ou cancele o comando de banco de dados.  
+  
+ Porque o <xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs> classe é derivada do <xref:System.ComponentModel.CancelEventArgs> classe, você pode cancelar um pendente <xref:System.Web.UI.WebControls.SqlDataSource> comando de banco de dados, definindo o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade `true`. Você pode examinar e manipular o <xref:System.Data.Common.DbCommand.CommandText%2A>, <xref:System.Data.Common.DbCommand.Parameters%2A> coleta e outras propriedades de comando antes de executar o comando acessando o <xref:System.Data.Common.DbCommand> objeto exposto pelo <xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs.Command%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs> classe é usada no <xref:System.Web.UI.WebControls.SqlDataSourceView.OnUpdating%2A>, <xref:System.Web.UI.WebControls.SqlDataSourceView.OnInserting%2A>, e <xref:System.Web.UI.WebControls.SqlDataSourceView.OnDeleting%2A> métodos para fornecer acesso a um <xref:System.Web.UI.WebControls.SqlDataSource> comando de banco de dados antes de ser executado. O <xref:System.Web.UI.WebControls.SqlDataSource> controle expõe vários eventos que você pode manipular para trabalhar com os objetos de dados subjacente durante o curso de uma operação de dados. A tabela a seguir lista os eventos e associados <xref:System.EventArgs> e classes de manipulador de eventos, para orientá-lo melhor para os vários eventos que correspondem ao ciclo de vida de uma operação de dados usando o <xref:System.Web.UI.WebControls.SqlDataSource> controle.  
+  
+|Evento|EventArgs|EventHandler|  
+|-----------|---------------|------------------|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Selecting>Ocorre antes que os dados são recuperados.|<xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventHandler>|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Inserting>, <xref:System.Web.UI.WebControls.SqlDataSource.Updating>, <xref:System.Web.UI.WebControls.SqlDataSource.Deleting> ocorrer antes de uma inserção, atualização ou operação de exclusão é executada.|<xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceCommandEventHandler>|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Selected>, <xref:System.Web.UI.WebControls.SqlDataSource.Inserted>, <xref:System.Web.UI.WebControls.SqlDataSource.Updated>, <xref:System.Web.UI.WebControls.SqlDataSource.Deleted> ocorrer após a recuperação de dados, insert, update ou operações de exclusão for concluída.|<xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceStatusEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como exibir dados recuperados de um banco de dados do Microsoft SQL Server em uma <xref:System.Web.UI.WebControls.DropDownList> controlar e atualizar o registro usando um <xref:System.Web.UI.WebControls.TextBox> controle. O exemplo mostra como você pode usar um <xref:System.Data.Common.DbTransaction> objeto para adicionar o contexto de transação ao usar o <xref:System.Web.UI.WebControls.SqlDataSource> controle para atualizar dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSource_9sql#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_9sql/CS/sql9cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSource_9sql#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_9sql/VB/sql9vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlDataSourceCommandEventArgs (System.Data.Common.DbCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.Common.DbCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs.#ctor(System.Data.Common.DbCommand)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.Data.Common.DbCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">Um <see cref="T:System.Data.Common.DbCommand" /> objeto que representa o cancelável <see cref="M:System.Web.UI.WebControls.SqlDataSource.Update" />, <see cref="M:System.Web.UI.WebControls.SqlDataSource.Insert" />, ou <see cref="M:System.Web.UI.WebControls.SqlDataSource.Delete" /> comando.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs" /> de classe, usando o objeto de comando de banco de dados especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbCommand Command { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbCommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comando de banco de dados pendente.</summary>
+        <value>Um objeto <see cref="T:System.Data.Common.DbCommand" /> que representa o comando de banco de dados pendente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode manipular o <xref:System.Web.UI.WebControls.SqlDataSource.Updating>, <xref:System.Web.UI.WebControls.SqlDataSource.Inserting>, ou <xref:System.Web.UI.WebControls.SqlDataSource.Deleting> eventos para examinar e manipular as propriedades do <xref:System.Data.Common.DbCommand> antes de ser executado pelo <xref:System.Web.UI.WebControls.SqlDataSource> controle. A conexão à fonte de dados subjacente não ainda estiver aberto quando o delegado de manipulador de eventos é chamado. Portanto, você não pode cancelar a operação de banco de dados chamando o <xref:System.Data.Common.DbCommand.Cancel%2A> método o <xref:System.Data.Common.DbCommand> diretamente do objeto. No entanto, você pode cancelar a operação de banco de dados, definindo o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade o <xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs> para `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como recuperar dados do Microsoft SQL Server e exibi-lo em uma <xref:System.Web.UI.WebControls.GridView> controle e como usar um <xref:System.Web.UI.WebControls.DetailsView> controle para ver os detalhes de uma linha selecionada no <xref:System.Web.UI.WebControls.GridView> e como um formulário para inserir novos registros.  
+  
+ Os dados são inicialmente exibidos no <xref:System.Web.UI.WebControls.GridView> controle e a linha selecionada do <xref:System.Web.UI.WebControls.GridView> também é exibida no <xref:System.Web.UI.WebControls.DetailsView>. O <xref:System.Web.UI.WebControls.GridView> e <xref:System.Web.UI.WebControls.DetailsView> controles usar dados diferentes controles de origem; que está associado a <xref:System.Web.UI.WebControls.DetailsView> tem um <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> e <xref:System.Web.UI.WebControls.SqlDataSource.FilterParameters%2A> que certifique-se de que a linha selecionada do <xref:System.Web.UI.WebControls.GridView> é exibido.  
+  
+ Se você clicar no botão de inserção gerado automaticamente do <xref:System.Web.UI.WebControls.DetailsView> controle, o <xref:System.Web.UI.WebControls.DetailsView> mostra uma interface de usuário diferente, que é usada para inserir um novo registro. O exemplo usa um procedimento armazenado para inserir registros e retorna a chave primária da linha inserida. Se você inserir um registro, o <xref:System.Web.UI.WebControls.DetailsView> preenche automaticamente o <xref:System.Web.UI.WebControls.SqlDataSource.InsertParameters%2A> coleção com valores das colunas associadas e chama o <xref:System.Web.UI.WebControls.SqlDataSource.Insert%2A> método. O <xref:System.Web.UI.WebControls.DetailsView> pode deduzir os parâmetros corretos de qualquer <xref:System.Web.UI.WebControls.BoundField>e um parâmetro para o <xref:System.Web.UI.WebControls.TemplateField> quando a sintaxe de associação de dados bidirecional do ASP.NET é usada. Neste exemplo, um parâmetro adicional é adicionado a <xref:System.Web.UI.WebControls.SqlDataSourceView.OnInserting%2A> manipulador de eventos para lidar com a chave primária retornada pelo procedimento armazenado.  
+  
+ Por fim, depois que os dados são inseridos o <xref:System.Web.UI.WebControls.DetailsView> no banco de dados, o <xref:System.Web.UI.WebControls.SqlDataSourceView.OnInserted%2A> manipulador de eventos é chamado para manipular a <xref:System.Web.UI.WebControls.SqlDataSource.Inserted> evento, o valor da chave primária da linha inserida é exibido e o <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBind%2A> método o <xref:System.Web.UI.WebControls.GridView>controle for chamado explicitamente para atualizar os dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSource_15sql#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_15sql/CS/sql15cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSource_15sql#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_15sql/VB/sql15vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

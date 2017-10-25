@@ -1,0 +1,68 @@
+<Type Name="TitleFormat" FullName="System.Web.UI.WebControls.TitleFormat">
+  <TypeSignature Language="C#" Value="public enum TitleFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TitleFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TitleFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o formato do título para o mês, exibido no <see cref="T:System.Web.UI.WebControls.Calendar" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TitleFormat> enumeração representa os formatos de título diferente para o <xref:System.Web.UI.WebControls.Calendar> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como alterar o título do calendário do formato padrão (`MonthYear`) para o `Month` formato. Para executar o exemplo, crie uma página de Web Forms denominada `WebForm1`e substitua o `Page_load` método com o código de exemplo.  
+  
+ [!code-csharp[TitleFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TitleFormat/CS/titleformat.cs#1)]
+ [!code-vb[TitleFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TitleFormat/VB/titleformat.vb#1)]  
+  
+ [!code-aspx-csharp[CalendarTitleFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CalendarTitleFormat/CS/calendartitleformatcs.aspx#1)]
+ [!code-aspx-vb[CalendarTitleFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CalendarTitleFormat/VB/calendartitleformatvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Month">
+      <MemberSignature Language="C#" Value="Month" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TitleFormat Month = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TitleFormat.Month" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TitleFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exibe o título com o mês, mas não o ano (por exemplo, "Janeiro").</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MonthYear">
+      <MemberSignature Language="C#" Value="MonthYear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TitleFormat MonthYear = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TitleFormat.MonthYear" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TitleFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exibe o título com o mês e ano (por exemplo, "Janeiro de 2000").</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

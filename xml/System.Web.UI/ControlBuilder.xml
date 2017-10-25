@@ -1,0 +1,1114 @@
+<Type Name="ControlBuilder" FullName="System.Web.UI.ControlBuilder">
+  <TypeSignature Language="C#" Value="public class ControlBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ControlBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dá suporte ao analisador de página ao criar um controle e os controles filhos que ele contém.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, cada controle em uma página é associado com um padrão <xref:System.Web.UI.ControlBuilder> classe. Durante a análise, a estrutura da página ASP.NET cria uma árvore de <xref:System.Web.UI.ControlBuilder> objetos correspondentes para a árvore de controles para a página. O <xref:System.Web.UI.ControlBuilder> árvore é usada para gerar o código de página para criar a árvore de controle. Além dos controles filho, o <xref:System.Web.UI.ControlBuilder> define o comportamento de como o conteúdo dentro de marcas de controle é analisado. Você pode substituir esse comportamento padrão definindo sua própria classe de construtor do controle personalizado. Isso é feito aplicando um <xref:System.Web.UI.ControlBuilderAttribute> atributo à sua classe de construtor do controle da seguinte maneira:  
+  
+ `[ControlBuilderAttribute(typeof(ControlBuilderType))]`  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Web.UI.WebControls.Table> controle cujos atributos e conteúdo é definido no momento em que a tabela é criada. A seguir está a linha de comando a ser usado para criar o arquivo executável.  
+  
+```vb  
+vbc /r:System.dll /r:System.Web.dll /r:System.Drawing.dll /t:library /out:myWebAppPath/Bin/vb_mycontrolbuilder.dll myControlBuilder.vb  
+```  
+  
+```csharp  
+csc /t:library /out:myWebAppPath/Bin/cs_mycontrolbuilder.dll myControlBuilder.cs  
+```  
+  
+ [!code-csharp[SystemWebUI_ControlBuilder_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_ControlBuilder_2/CS/controlbuilder.cs#1)]
+ [!code-vb[SystemWebUI_ControlBuilder_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_ControlBuilder_2/VB/controlbuilder.vb#1)]  
+  
+ O exemplo de código a seguir usa o controle personalizado anterior. Em particular, ele cria uma tabela cujos atributos e conteúdo são definidos em tempo de execução. Observe que os valores mostrados na diretiva de refletem a linha de comando anterior.  
+  
+ [!code-aspx-csharp[SystemWebUI_ControlBuilder_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_ControlBuilder_2/CS/controlbuilder.aspx#2)]
+ [!code-aspx-vb[SystemWebUI_ControlBuilder_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_ControlBuilder_2/VB/controlbuilder.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ControlBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma nova instância de <xref:System.Web.UI.ControlBuilder> classe.  
+  
+> [!NOTE]
+>  Este construtor é geralmente usado pelo ASP.NET ao analisar a página e criar a hierarquia de controle. Ele não se destina para uso em seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowWhitespaceLiterals">
+      <MemberSignature Language="C#" Value="public virtual bool AllowWhitespaceLiterals ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool AllowWhitespaceLiterals() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.AllowWhitespaceLiterals" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o espaço em branco literais são permitidos no conteúdo entre um controle marcas de abertura e fechamento. Este método é chamado pela estrutura de página ASP.NET.</summary>
+        <returns>Sempre retorna <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ControlBuilder.AllowWhitespaceLiterals%2A> método é usado para determinar se espaço em branco literais são permitidos em conteúdo entre as marcas de abertura e fechamento de um controle. Quando este método retorna `false`, os literais de espaço em branco são cortados do conteúdo antes do conteúdo é processado pelo analisador de página. Quando este método retorna `true`, os literais de espaço em branco não é removidos.  
+  
+ Esse método é chamado pela estrutura de página ASP.NET durante a análise e não se destina a ser chamado diretamente de código.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ControlBuilderSamples_1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_1/CS/ctrlbuilder_1.cs#4)]
+ [!code-vb[ControlBuilderSamples_1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_1/VB/ctrlbuilder_1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir esse método em sua classe derivada para indicar se o espaço em branco literais são permitidos em seu controle personalizado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendLiteralString">
+      <MemberSignature Language="C#" Value="public virtual void AppendLiteralString (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AppendLiteralString(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.AppendLiteralString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">O conteúdo para adicionar ao controle.</param>
+        <summary>Adiciona o conteúdo literal especificado para um controle. Este método é chamado pela estrutura de página ASP.NET.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Web.UI.ControlBuilder.AppendLiteralString%2A> método para controlar o conteúdo como literal entre o controle marcas de abertura e fechamento é processado. Conteúdo literal pode ser qualquer texto que é passado pelo navegador para o controle de servidor. Por exemplo, quaisquer elementos HTML e texto entre suas marcas de abertura e fechamento, são conteúdo literal.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ControlBuilderSamples_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_1/CS/ctrlbuilder_1.cs#3)]
+ [!code-vb[ControlBuilderSamples_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_1/VB/ctrlbuilder_1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A cadeia de caracteres literal não está bem formada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSubBuilder">
+      <MemberSignature Language="C#" Value="public virtual void AppendSubBuilder (System.Web.UI.ControlBuilder subBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AppendSubBuilder(class System.Web.UI.ControlBuilder subBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.AppendSubBuilder(System.Web.UI.ControlBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subBuilder" Type="System.Web.UI.ControlBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="subBuilder">O <see cref="T:System.Web.UI.ControlBuilder" /> atribuído ao controle filho do objeto.</param>
+        <summary>Adiciona construtores para o <see cref="T:System.Web.UI.ControlBuilder" /> objeto para os controles filho que pertencem ao controle de contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir substitui o <xref:System.Web.UI.ControlBuilder.AppendSubBuilder%2A> método para lançar uma <xref:System.Exception> se o controle este construtor do controle é aplicada ao tentar incluem controles em sua instância de <xref:System.Web.UI.ControlCollection> classe.  
+  
+ [!code-csharp[ControlBuilderSamples_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_2/cs/ctrlbuilder1.cs#1)]
+ [!code-vb[ControlBuilderSamples_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_2/VB/ctrlbuilder1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingContainerBuilder">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ControlBuilder BindingContainerBuilder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlBuilder BindingContainerBuilder" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.BindingContainerBuilder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlBuilder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o construtor de controle que corresponde ao contêiner de associação para o controle que cria este construtor.</summary>
+        <value>O construtor de controle que corresponde ao contêiner de associação para o controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingContainerType">
+      <MemberSignature Language="C#" Value="public virtual Type BindingContainerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BindingContainerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.BindingContainerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do contêiner de associação para o controle que cria este construtor.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo do contêiner de associação para o controle que cria este construtor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildObject">
+      <MemberSignature Language="C#" Value="public virtual object BuildObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object BuildObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.BuildObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de tempo de design do controle que é referenciado por essa <see cref="T:System.Web.UI.ControlBuilder" /> objeto.</summary>
+        <returns>Resultante criado o controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseControl">
+      <MemberSignature Language="C#" Value="public virtual void CloseControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CloseControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.CloseControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado pelo analisador para informar o construtor que a análise do controle marcas de abertura e fechamento foi concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ControlBuilder.CloseControl%2A> método é usado pelo analisador para indicar para o construtor que concluiu a análise do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComplexPropertyEntries">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection ComplexPropertyEntries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection ComplexPropertyEntries" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ComplexPropertyEntries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de entradas de propriedade complexa.</summary>
+        <value>Uma coleção de entradas de propriedade complexa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhuma entrada, uma coleção vazia estática será retornada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlType">
+      <MemberSignature Language="C#" Value="public Type ControlType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ControlType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ControlType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> para o controle a ser criado.</summary>
+        <value>O <see cref="T:System.Type" /> para o controle a ser criado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo substitui o <xref:System.Web.UI.ControlBuilder.OnAppendToParentBuilder%2A> método para verificar a <xref:System.Web.UI.ControlBuilder.ControlType%2A> propriedade para determinar que tipo de controle este construtor é aplicada à. Se for um `CustomTextBox`, builder verificará se o valor da <xref:System.Web.UI.ControlBuilder.HasAspCode%2A> propriedade está incluída no controle. Se assim, uma exceção será lançada, se não for o <xref:System.Web.UI.ControlBuilder.HasBody%2A> método é chamado.  
+  
+ [!code-csharp[ControlBuilderSamples_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_4/cs/controlbuilder_4.cs#1)]
+ [!code-vb[ControlBuilderSamples_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_4/VB/controlbuilder_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBuilderFromType">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.ControlBuilder CreateBuilderFromType (System.Web.UI.TemplateParser parser, System.Web.UI.ControlBuilder parentBuilder, Type type, string tagName, string id, System.Collections.IDictionary attribs, int line, string sourceFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.UI.ControlBuilder CreateBuilderFromType(class System.Web.UI.TemplateParser parser, class System.Web.UI.ControlBuilder parentBuilder, class System.Type type, string tagName, string id, class System.Collections.IDictionary attribs, int32 line, string sourceFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.CreateBuilderFromType(System.Web.UI.TemplateParser,System.Web.UI.ControlBuilder,System.Type,System.String,System.String,System.Collections.IDictionary,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parser" Type="System.Web.UI.TemplateParser" />
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="attribs" Type="System.Collections.IDictionary" />
+        <Parameter Name="line" Type="System.Int32" />
+        <Parameter Name="sourceFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parser">O <see cref="T:System.Web.UI.TemplateParser" /> objeto responsável pela análise do controle.</param>
+        <param name="parentBuilder">O <see cref="T:System.Web.UI.ControlBuilder" /> objeto responsável pela criação do controle pai.</param>
+        <param name="type">O <see cref="T:System.Type" /> do objeto que o construtor de relatórios criará.</param>
+        <param name="tagName">O nome da marca a ser criado. Isso permite que o construtor dar suporte a vários tipos de marca.</param>
+        <param name="id">O <see cref="P:System.Web.UI.ControlBuilder.ID" /> atributo atribuído ao controle.</param>
+        <param name="attribs">O <see cref="T:System.Collections.IDictionary" /> objeto que contém todos os atributos de marca especificada.</param>
+        <param name="line">O número de linha de arquivo de origem para o controle especificado.</param>
+        <param name="sourceFileName">O nome do arquivo de origem do qual o controle será criado.</param>
+        <summary>Cria um <see cref="T:System.Web.UI.ControlBuilder" /> objeto do tipo de objeto e o nome da marca especificado, bem como outros parâmetros que definem o construtor.</summary>
+        <returns>O construtor que é responsável por criar o controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentFilterResolutionService">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IFilterResolutionService CurrentFilterResolutionService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.IFilterResolutionService CurrentFilterResolutionService" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.CurrentFilterResolutionService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IFilterResolutionService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.IFilterResolutionService" /> objeto que é usado para gerenciar o filtro de dispositivo serviços relacionados ao analisar e persistência de controles no designer.</summary>
+        <value>Um <see cref="T:System.Web.UI.IFilterResolutionService" /> objeto que é usado para gerenciar o filtro de dispositivo serviços relacionados ao analisar e persistência de controles no designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IFilterResolutionService> é uma interface que é específica para como um controle usa filtros de dispositivo em um designer. Quando controles são analisados ou persistentes no designer de fora do contexto de uma solicitação do navegador, o <xref:System.Web.UI.IFilterResolutionService> fornece uma maneira de determinar se o controle atual é afetado por um filtro nomeado e se um filtro é parte de uma hierarquia de filtro de dispositivo específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclareType">
+      <MemberSignature Language="C#" Value="public virtual Type DeclareType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclareType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.DeclareType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo que será usado por geração de código para declarar o controle.</summary>
+        <value>O <see cref="T:System.Type" /> do controle usado por geração de código para declarar o controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerFilter">
+      <MemberSignature Language="C#" Value="public static readonly string DesignerFilter;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string DesignerFilter" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ControlBuilder.DesignerFilter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <c>"__designer"</c> cadeia de caracteres literal.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FChildrenAsProperties">
+      <MemberSignature Language="C#" Value="protected bool FChildrenAsProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FChildrenAsProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.FChildrenAsProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que determina se o controle tem um <see cref="T:System.Web.UI.ParseChildrenAttribute" /> com <see cref="P:System.Web.UI.ParseChildrenAttribute.ChildrenAsProperties" /> definido como <see langword="true" />.</summary>
+        <value>
+          <see langword="true" />Se o controle tiver um <see cref="T:System.Web.UI.ParseChildrenAttribute" /> com <see cref="P:System.Web.UI.ParseChildrenAttribute.ChildrenAsProperties" /> definida como <see langword="true" />, caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FIsNonParserAccessor">
+      <MemberSignature Language="C#" Value="protected bool FIsNonParserAccessor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FIsNonParserAccessor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.FIsNonParserAccessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que determina se o controle implementa o <see cref="T:System.Web.UI.IParserAccessor" /> interface.</summary>
+        <value>
+          <see langword="false" />Se o controle implementa o <see cref="T:System.Web.UI.IParserAccessor" /> interface, caso contrário <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildControlType">
+      <MemberSignature Language="C#" Value="public virtual Type GetChildControlType (string tagName, System.Collections.IDictionary attribs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetChildControlType(string tagName, class System.Collections.IDictionary attribs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.GetChildControlType(System.String,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="attribs" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="tagName">O nome da marca do filho.</param>
+        <param name="attribs">Uma matriz de atributos contidos no controle filho.</param>
+        <summary>Obtém o <see cref="T:System.Type" /> do tipo de controle correspondente a uma tag de filho. Este método é chamado pela estrutura de página ASP.NET.</summary>
+        <returns>O <see cref="T:System.Type" /> do filho do controle especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado pela estrutura de página ASP.NET durante a análise e não se destina a ser chamado diretamente de código.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ControlBuilderSamples_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_1/CS/ctrlbuilder_1.cs#2)]
+ [!code-vb[ControlBuilderSamples_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_1/VB/ctrlbuilder_1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectPersistData">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ObjectPersistData GetObjectPersistData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.ObjectPersistData GetObjectPersistData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.GetObjectPersistData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ObjectPersistData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria o <see cref="T:System.Web.UI.ObjectPersistData" /> objeto para este <see cref="T:System.Web.UI.ControlBuilder" /> objeto.</summary>
+        <returns>O <see cref="T:System.Web.UI.ObjectPersistData" /> para <see cref="T:System.Web.UI.ControlBuilder" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResourceKey">
+      <MemberSignature Language="C#" Value="public string GetResourceKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetResourceKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.GetResourceKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a chave de recurso para este <see cref="T:System.Web.UI.ControlBuilder" /> objeto.</summary>
+        <returns>A chave de recurso para este <see cref="T:System.Web.UI.ControlBuilder" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasAspCode">
+      <MemberSignature Language="C#" Value="public virtual bool HasAspCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasAspCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.HasAspCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle contém os blocos de código.</summary>
+        <value>
+          <see langword="true" />Se o controle contiver pelo menos um bloco de código; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo substitui o <xref:System.Web.UI.ControlBuilder.OnAppendToParentBuilder%2A> método para verificar a <xref:System.Web.UI.ControlBuilder.ControlType%2A> propriedade para determinar que tipo de controle este construtor é aplicada à. Se for um `CustomTextBox`, builder verificará se o valor da <xref:System.Web.UI.ControlBuilder.HasAspCode%2A> propriedade está incluída no controle. Se assim, uma exceção será lançada, se não for o <xref:System.Web.UI.ControlBuilder.HasBody%2A> método é chamado.  
+  
+ [!code-csharp[ControlBuilderSamples_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_4/cs/controlbuilder_4.cs#1)]
+ [!code-vb[ControlBuilderSamples_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_4/VB/controlbuilder_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public virtual bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se um controle tiver uma abertura e a marca de fechamento. Este método é chamado pela estrutura de página ASP.NET.</summary>
+        <returns>
+          <see langword="true" />Se o controle tiver uma marca de abertura e fechamento; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado pela estrutura de página ASP.NET durante a análise e não se destina a ser chamado diretamente de código.  
+  
+   
+  
+## Examples  
+ Este exemplo substitui o <xref:System.Web.UI.ControlBuilder.OnAppendToParentBuilder%2A> método para verificar a <xref:System.Web.UI.ControlBuilder.ControlType%2A> propriedade para determinar que tipo de controle este construtor é aplicada à. Se for um `CustomTextBox`, builder verificará se o valor da <xref:System.Web.UI.ControlBuilder.HasAspCode%2A> propriedade está incluída no controle. Se assim, uma exceção será lançada, se não for o <xref:System.Web.UI.ControlBuilder.HasBody%2A> método é chamado.  
+  
+ [!code-csharp[ControlBuilderSamples_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_4/cs/controlbuilder_4.cs#1)]
+ [!code-vb[ControlBuilderSamples_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_4/VB/controlbuilder_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlDecodeLiterals">
+      <MemberSignature Language="C#" Value="public virtual bool HtmlDecodeLiterals ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HtmlDecodeLiterals() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.HtmlDecodeLiterals" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se a cadeia de caracteres literal de um controle HTML deve ser decodificado de HTML. Este método é chamado pela estrutura de página ASP.NET.</summary>
+        <returns>
+          <see langword="true" />Se o HTML controle literal cadeia de caracteres é a ser decodificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cadeia de caracteres literal refere-se ao texto entre a abertura e a marca de fechamento de um controle HTML. Codificação HTML é quando o texto é convertido em uma representação de cadeia de caracteres que o navegador irá exibir em vez de interpretar como HTML. Caracteres, como a pergunta marcar (?), e comercial (&), barra (/) de marcar e espaços podem ser truncados ou corrompidos por alguns navegadores, portanto esses caracteres devem ser codificados quando eles aparecem na `a` marcas ou em cadeias de caracteres de consulta.  
+  
+ O <xref:System.Web.UI.ControlBuilder.HtmlDecodeLiterals%2A> método é chamado pela estrutura de página ASP.NET durante a análise e não se destina a ser chamado diretamente de código.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir substitui o <xref:System.Web.UI.ControlBuilder.HtmlDecodeLiterals%2A> método para permitir o HTML decodificação de cadeias de caracteres literais em qualquer controle este construtor é aplicado ao.  
+  
+ [!code-csharp[ControlBuilderSamples_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_2/cs/ctrlbuilder1.cs#2)]
+ [!code-vb[ControlBuilderSamples_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_2/VB/ctrlbuilder1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ID">
+      <MemberSignature Language="C#" Value="public string ID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a propriedade do identificador para o controle a ser criado.</summary>
+        <value>A propriedade do identificador para o controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InDesigner">
+      <MemberSignature Language="C#" Value="protected bool InDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.InDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna se o <see cref="T:System.Web.UI.ControlBuilder" /> está sendo executado no designer.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Web.UI.ControlBuilder" /> está em execução no designer; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Web.UI.ControlBuilder.InDesigner%2A> propriedade quando o <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> método é chamado. Quando um controle tem este construtor anexado a ele, o <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> método determina se o controle está sendo acessado no tempo de design por meio de um designer. O <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> retorna o valor da <xref:System.Web.UI.ControlBuilder.InDesigner%2A> propriedade e, em seguida, o <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> método é chamado. Se o <xref:System.Web.UI.ControlBuilder.InDesigner%2A> está definida como `false`, uma <xref:System.Exception> é gerada. Caso contrário, o texto interno do controle é retornado no <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> chamar.  
+  
+ [!code-csharp[ControlBuilderSamples_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_3/cs/controlbuilder_samples3.cs#1)]
+ [!code-vb[ControlBuilderSamples_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_3/VB/controlbuilder_samples3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="public virtual void Init (System.Web.UI.TemplateParser parser, System.Web.UI.ControlBuilder parentBuilder, Type type, string tagName, string id, System.Collections.IDictionary attribs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Init(class System.Web.UI.TemplateParser parser, class System.Web.UI.ControlBuilder parentBuilder, class System.Type type, string tagName, string id, class System.Collections.IDictionary attribs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.Init(System.Web.UI.TemplateParser,System.Web.UI.ControlBuilder,System.Type,System.String,System.String,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parser" Type="System.Web.UI.TemplateParser" />
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="attribs" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="parser">O <see cref="T:System.Web.UI.TemplateParser" /> objeto responsável pela análise do controle.</param>
+        <param name="parentBuilder">O <see cref="T:System.Web.UI.ControlBuilder" /> objeto responsável pela criação do controle pai.</param>
+        <param name="type">O <see cref="T:System.Type" /> atribuído ao controle que o construtor de relatórios criará.</param>
+        <param name="tagName">O nome da marca a ser criado. Isso permite que o construtor dar suporte a vários tipos de marca.</param>
+        <param name="id">O <see cref="P:System.Web.UI.ControlBuilder.ID" /> atributo atribuído ao controle.</param>
+        <param name="attribs">O <see cref="T:System.Collections.IDictionary" /> objeto que contém todos os atributos de marca especificada.</param>
+        <summary>Inicializa o <see cref="T:System.Web.UI.ControlBuilder" /> para uso após ele ser instanciado. Este método é chamado pela estrutura de página ASP.NET.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado pela estrutura de página ASP.NET durante a análise e não se destina a ser chamado diretamente de código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InPageTheme">
+      <MemberSignature Language="C#" Value="protected bool InPageTheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InPageTheme" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.InPageTheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se este <see cref="T:System.Web.UI.ControlBuilder" /> objeto é usado para gerar os temas de página.</summary>
+        <value>
+          <see langword="true" />Use essa <see cref="T:System.Web.UI.ControlBuilder" /> para gerar temas de página; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public virtual string ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo definido no contêiner de associação.</summary>
+        <value>O tipo definido no contêiner de associação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Localize">
+      <MemberSignature Language="C#" Value="public bool Localize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Localize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.Localize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se o controle que é criado por este <see cref="T:System.Web.UI.ControlBuilder" /> objeto está localizado.</summary>
+        <value>
+          <see langword="true" />para indicar que o controle é criado por este <see cref="T:System.Web.UI.ControlBuilder" /> objeto for localizado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamingContainerType">
+      <MemberSignature Language="C#" Value="public Type NamingContainerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type NamingContainerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.NamingContainerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de contêiner de nomeação para o controle que cria este construtor.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo de contêiner de nomeação para o controle que cria este construtor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedsTagInnerText">
+      <MemberSignature Language="C#" Value="public virtual bool NeedsTagInnerText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool NeedsTagInnerText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.NeedsTagInnerText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o construtor de controle precisa obter seu texto interno. Nesse caso, o <see cref="M:System.Web.UI.ControlBuilder.SetTagInnerText(System.String)" /> método deve ser chamado. Este método é chamado pela estrutura de página ASP.NET.</summary>
+        <returns>
+          <see langword="true" />Se o construtor de controle precisa obter seu texto interno. O padrão é <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O texto interno é o texto entre as marcas de abertura e fechamento do controle.  
+  
+ Esse método é chamado pela estrutura de página ASP.NET durante a análise e não se destina a ser chamado diretamente de código.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Web.UI.ControlBuilder.InDesigner%2A> propriedade quando o <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> método é chamado. Quando um controle tem este construtor anexado a ele, o <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> determina se o controle está sendo acessado no tempo de design por meio de um designer. O <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> retorna o valor da <xref:System.Web.UI.ControlBuilder.InDesigner%2A> propriedade e, em seguida, o <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> método é chamado. Se o <xref:System.Web.UI.ControlBuilder.InDesigner%2A> está definida como `false`, uma <xref:System.Exception> é gerada. Caso contrário, o texto interno do controle é retornado no <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> chamar.  
+  
+ [!code-csharp[ControlBuilderSamples_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_3/cs/controlbuilder_samples3.cs#1)]
+ [!code-vb[ControlBuilderSamples_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_3/VB/controlbuilder_samples3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAppendToParentBuilder">
+      <MemberSignature Language="C#" Value="public virtual void OnAppendToParentBuilder (System.Web.UI.ControlBuilder parentBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnAppendToParentBuilder(class System.Web.UI.ControlBuilder parentBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.OnAppendToParentBuilder(System.Web.UI.ControlBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="parentBuilder">O <see cref="T:System.Web.UI.ControlBuilder" /> do objeto ao qual o construtor atual é adicionado.</param>
+        <summary>Notifica o <see cref="T:System.Web.UI.ControlBuilder" /> que está sendo adicionado a um construtor de controle pai.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo substitui o <xref:System.Web.UI.ControlBuilder.OnAppendToParentBuilder%2A> método para verificar a <xref:System.Web.UI.ControlBuilder.ControlType%2A> propriedade para determinar que tipo de controle este construtor é aplicada à. Se for um `CustomTextBox`, builder verificará se o valor da <xref:System.Web.UI.ControlBuilder.HasAspCode%2A> propriedade está incluída no controle. Se assim, uma exceção será lançada, se não for o <xref:System.Web.UI.ControlBuilder.HasBody%2A> método é chamado.  
+  
+ [!code-csharp[ControlBuilderSamples_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_4/cs/controlbuilder_4.cs#1)]
+ [!code-vb[ControlBuilderSamples_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_4/VB/controlbuilder_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageVirtualPath">
+      <MemberSignature Language="C#" Value="public string PageVirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PageVirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.PageVirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual de uma página a ser criado por este <see cref="T:System.Web.UI.ControlBuilder" /> instância.</summary>
+        <value>O caminho virtual da página a ser criado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parser">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.TemplateParser Parser { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.TemplateParser Parser" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.Parser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.TemplateParser</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.TemplateParser" /> responsável pela análise do controle.</summary>
+        <value>O <see cref="T:System.Web.UI.TemplateParser" /> usado para analisar o controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade recupera o <xref:System.Web.UI.TemplateParser> responsável pela análise do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessGeneratedCode">
+      <MemberSignature Language="C#" Value="public virtual void ProcessGeneratedCode (System.CodeDom.CodeCompileUnit codeCompileUnit, System.CodeDom.CodeTypeDeclaration baseType, System.CodeDom.CodeTypeDeclaration derivedType, System.CodeDom.CodeMemberMethod buildMethod, System.CodeDom.CodeMemberMethod dataBindingMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessGeneratedCode(class System.CodeDom.CodeCompileUnit codeCompileUnit, class System.CodeDom.CodeTypeDeclaration baseType, class System.CodeDom.CodeTypeDeclaration derivedType, class System.CodeDom.CodeMemberMethod buildMethod, class System.CodeDom.CodeMemberMethod dataBindingMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.ProcessGeneratedCode(System.CodeDom.CodeCompileUnit,System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeTypeDeclaration,System.CodeDom.CodeMemberMethod,System.CodeDom.CodeMemberMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="baseType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="derivedType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="buildMethod" Type="System.CodeDom.CodeMemberMethod" />
+        <Parameter Name="dataBindingMethod" Type="System.CodeDom.CodeMemberMethod" />
+      </Parameters>
+      <Docs>
+        <param name="codeCompileUnit">O contêiner raiz de um gráfico CodeDOM do controle que está sendo criado.</param>
+        <param name="baseType">O tipo base do controle de página ou o usuário que contém o controle que está sendo criado.</param>
+        <param name="derivedType">O tipo derivado do controle de página ou o usuário que contém o controle que está sendo criado.</param>
+        <param name="buildMethod">O código que é usado para criar o controle.</param>
+        <param name="dataBindingMethod">O código que é usado para criar o método de associação de dados do controle.</param>
+        <summary>Permite que desenvolvedores de controle personalizado acessar o modelo de objeto de documento do código de gerado (CodeDom) e inserir e modificar o código durante o processo de análise e criação de controles.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No modelo de página de arquivo único, o `baseType` e `derivedType` parâmetros são os mesmos <xref:System.CodeDom.CodeTypeDeclaration> tipo, que normalmente deriva de <xref:System.Web.UI.Page> classe.  
+  
+ No modelo de página code-behind, `baseType` é o <xref:System.CodeDom.CodeTypeDeclaration> que representa a classe de code-behind parcial, que normalmente é derivado do tipo de <xref:System.Web.UI.Page> classe. O `derivedType` parâmetro é a classe que deriva da classe parcial que contém a marcação.  
+  
+ Para obter mais informações sobre modelos de página da Web do ASP.NET, consulte [visão geral da sintaxe de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/09074b20-ece9-46fa-bc8f-ab2595ed2c02).  
+  
+ Para obter mais informações sobre como usar o CodeDOM para representar e gerar código-fonte, consulte [dinâmico geração de código-fonte e compilação](~/docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceProvider">
+      <MemberSignature Language="C#" Value="public IServiceProvider ServiceProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IServiceProvider ServiceProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ServiceProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IServiceProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de serviço para este <see cref="T:System.Web.UI.ControlBuilder" /> objeto.</summary>
+        <value>Um <see cref="T:System.IServiceProvider" /> que representa o objeto de serviço para este <see cref="T:System.Web.UI.ControlBuilder" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResourceKey">
+      <MemberSignature Language="C#" Value="public void SetResourceKey (string resourceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetResourceKey(string resourceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.SetResourceKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">A chave de recurso para este <see cref="T:System.Web.UI.ControlBuilder" />.</param>
+        <summary>Define a chave de recurso para este <see cref="T:System.Web.UI.ControlBuilder" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetServiceProvider">
+      <MemberSignature Language="C#" Value="public void SetServiceProvider (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetServiceProvider(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.SetServiceProvider(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um <see cref="T:System.IServiceProvider" /> que representa o objeto de serviço para o <see cref="T:System.Web.UI.ControlBuilder" />.</param>
+        <summary>Define o objeto de serviço para este <see cref="T:System.Web.UI.ControlBuilder" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTagInnerText">
+      <MemberSignature Language="C#" Value="public virtual void SetTagInnerText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetTagInnerText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ControlBuilder.SetTagInnerText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser fornecido.</param>
+        <summary>Fornece o <see cref="T:System.Web.UI.ControlBuilder" /> com o texto interno da marca do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado somente se <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> retornados anteriormente `true`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Web.UI.ControlBuilder.InDesigner%2A> propriedade quando o <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> método é chamado. Quando um controle tem este construtor anexado a ele, o <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> determina se o controle está sendo acessado no tempo de design por meio de um designer. O <xref:System.Web.UI.ControlBuilder.NeedsTagInnerText%2A> retorna o valor da <xref:System.Web.UI.ControlBuilder.InDesigner%2A> propriedade e, em seguida, o <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> método é chamado. Se o <xref:System.Web.UI.ControlBuilder.InDesigner%2A> está definida como `false`, uma <xref:System.Exception> é gerada. Caso contrário, o texto interno do controle é retornado no <xref:System.Web.UI.ControlBuilder.SetTagInnerText%2A> chamar.  
+  
+ [!code-csharp[ControlBuilderSamples_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlBuilderSamples_3/cs/controlbuilder_samples3.cs#1)]
+ [!code-vb[ControlBuilderSamples_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlBuilderSamples_3/VB/controlbuilder_samples3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubBuilders">
+      <MemberSignature Language="C#" Value="public System.Collections.ArrayList SubBuilders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList SubBuilders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.SubBuilders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de filhos <see cref="T:System.Web.UI.ControlBuilder" /> objetos para este <see cref="T:System.Web.UI.ControlBuilder" /> objeto.</summary>
+        <value>Uma lista de filhos <see cref="T:System.Web.UI.ControlBuilder" /> objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagName">
+      <MemberSignature Language="C#" Value="public string TagName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.TagName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da marca para o controle a ser criado.</summary>
+        <value>O nome da marca do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplatePropertyEntries">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection TemplatePropertyEntries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection TemplatePropertyEntries" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.TemplatePropertyEntries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de entradas de propriedade do modelo.</summary>
+        <value>Uma coleção de entradas de propriedade do modelo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhuma entrada, uma coleção vazia estática será retornada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThemeResolutionService">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IThemeResolutionService ThemeResolutionService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.IThemeResolutionService ThemeResolutionService" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ControlBuilder.ThemeResolutionService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IThemeResolutionService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.IThemeResolutionService" /> objeto que é usado em tempo de design para gerenciar capas e temas do controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.IThemeResolutionService" /> objeto que é usado em tempo de design para gerenciar capas e temas do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IThemeResolutionService> interface é um contêiner para um ou mais <xref:System.Web.UI.ThemeProvider> objetos, que por sua vez fornecem o <xref:System.Web.UI.SkinBuilder> objetos que se aplicam a temas e capas de controle para controles quando eles são criados em um designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

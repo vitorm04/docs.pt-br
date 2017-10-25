@@ -1,0 +1,86 @@
+<Type Name="PatternMatcher" FullName="System.Web.Services.Protocols.PatternMatcher">
+  <TypeSignature Language="C#" Value="public sealed class PatternMatcher" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PatternMatcher extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.PatternMatcher" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Pesquisa o texto de resposta HTTP para valores de retorno para clientes de serviço Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.PatternMatcher> classe executa a correspondência de padrões usando expressões regulares para localizar valores de retorno de método da Web em texto codificado no corpo de uma resposta HTTP. O <xref:System.Web.Services.Protocols.PatternMatcher> classe é chamada pelo lado do cliente <xref:System.Web.Services.Protocols.TextReturnReader> classe que desserializa os valores de retorno de serviço Web.  
+  
+ Correspondência de padrões de texto fornece uma maneira para os serviços Web para recuperar o conteúdo HTML sem convertê-lo para documentos XML que devem ser associados às definições de esquema XML. Destinos de pesquisa de expressão regular são especificados em um documento WSDL Web Services Description Language () por meio de `match` elementos XML no `text` elementos. Os dois elementos pertencem ao http://microsoft.com/wsdl/mime/textMatching/ namespace.  
+  
+ Quando `match` elementos são especificados em um documento WSDL, aplica-se a ferramenta Wsdl.exe <xref:System.Web.Services.Protocols.MatchAttribute> atributos para os métodos da Web correspondentes na classe de proxy de cliente que é gerado. Um <xref:System.Web.Services.Protocols.MatchAttribute> propriedades do atributo estabelecer os critérios de pesquisa para um <xref:System.Web.Services.Protocols.PatternMatcher> instância.  
+  
+ Um desenvolvedor normalmente não precisa usar diretamente <xref:System.Web.Services.Protocols.PatternMatcher>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PatternMatcher (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.PatternMatcher.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Type" /> que especifica o tipo de retorno para um método Web.</param>
+        <summary>Cria um <see cref="T:System.Web.Services.Protocols.PatternMatcher" /> instância com base no tipo de entrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.PatternMatcher> propriedades da instância, como a expressão regular para tornar o destino de pesquisa, são preenchidas com base em <xref:System.Web.Services.Protocols.MatchAttribute> atributos aplicados aos campos do tipo de retorno.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public object Match (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Match(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.PatternMatcher.Match(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto de pesquisa, que é o corpo da resposta HTTP.</param>
+        <summary>Pesquisa um texto de entrada para desserializar um objeto que representa um valor de retorno do método da Web.</summary>
+        <returns>Valor de retorno de um objeto que representa um método Web.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.PatternMatcher.Match%2A> é de valor de retorno do método Web o método retorna o valor desserializado do texto de entrada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

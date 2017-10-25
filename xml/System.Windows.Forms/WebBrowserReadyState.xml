@@ -1,0 +1,105 @@
+<Type Name="WebBrowserReadyState" FullName="System.Windows.Forms.WebBrowserReadyState">
+  <TypeSignature Language="C#" Value="public enum WebBrowserReadyState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebBrowserReadyState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.WebBrowserReadyState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica as constantes que definem o estado do controle <see cref="T:System.Windows.Forms.WebBrowser" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelo <xref:System.Windows.Forms.WebBrowser.ReadyState%2A?displayProperty=nameWithType> propriedade para indicar o estado atual do <xref:System.Windows.Forms.WebBrowser> controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="Complete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserReadyState Complete = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserReadyState.Complete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserReadyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle terminou de carregar o novo documento e todo o seu conteúdo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Interactive">
+      <MemberSignature Language="C#" Value="Interactive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserReadyState Interactive = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserReadyState.Interactive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserReadyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle carregou o suficiente do documento para permitir a interação limitada do usuário, como clicar em hiperlinks que foram exibidos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Loaded">
+      <MemberSignature Language="C#" Value="Loaded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserReadyState Loaded = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserReadyState.Loaded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserReadyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle carregou e inicializou o novo documento, mas ainda não recebeu todos os dados do documento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Loading">
+      <MemberSignature Language="C#" Value="Loading" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserReadyState Loading = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserReadyState.Loading" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserReadyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle está carregando um novo documento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninitialized">
+      <MemberSignature Language="C#" Value="Uninitialized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserReadyState Uninitialized = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserReadyState.Uninitialized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserReadyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum documento está carregado no momento.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

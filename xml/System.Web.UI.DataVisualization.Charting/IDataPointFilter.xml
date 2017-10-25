@@ -1,0 +1,73 @@
+<Type Name="IDataPointFilter" FullName="System.Web.UI.DataVisualization.Charting.IDataPointFilter">
+  <TypeSignature Language="C#" Value="public interface IDataPointFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataPointFilter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.IDataPointFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Expõe o <see cref="M:System.Web.UI.DataVisualization.Charting.IDataPointFilter.FilterDataPoint(System.Web.UI.DataVisualization.Charting.DataPoint,System.Web.UI.DataVisualization.Charting.Series,System.Int32)" /> método, que permite <see cref="T:System.Web.UI.DataVisualization.Charting.Series" /> filtrados de dados a ser personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.IDataPointFilter> interface expõe o <xref:System.Web.UI.DataVisualization.Charting.IDataPointFilter.FilterDataPoint%2A> método, que usa um ponto de dados específico dentro de uma série e retorna um `Boolean` valor que determina se esse ponto de dados será filtrado.  
+  
+ Para executar a filtragem personalizada:  
+  
+-   Derive uma classe nova ou existente dessa interface.  
+  
+-   Substituir o <xref:System.Web.UI.DataVisualization.Charting.IDataPointFilter.FilterDataPoint%2A> método para fornecer a lógica de filtragem personalizada.  
+  
+-   Para iniciar a operação de filtragem, chame um do `Filter` métodos o <xref:System.Web.UI.DataVisualization.Charting.DataManipulator> classe que leva um <xref:System.Web.UI.DataVisualization.Charting.IDataPointFilter> objeto como seu primeiro parâmetro.  
+  
+ Para exemplos de código fonte, consulte o <xref:System.Web.UI.DataVisualization.Charting.IDataPointFilter.FilterDataPoint%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FilterDataPoint">
+      <MemberSignature Language="C#" Value="public bool FilterDataPoint (System.Web.UI.DataVisualization.Charting.DataPoint point, System.Web.UI.DataVisualization.Charting.Series series, int pointIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool FilterDataPoint(class System.Web.UI.DataVisualization.Charting.DataPoint point, class System.Web.UI.DataVisualization.Charting.Series series, int32 pointIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.IDataPointFilter.FilterDataPoint(System.Web.UI.DataVisualization.Charting.DataPoint,System.Web.UI.DataVisualization.Charting.Series,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Web.UI.DataVisualization.Charting.DataPoint" />
+        <Parameter Name="series" Type="System.Web.UI.DataVisualization.Charting.Series" />
+        <Parameter Name="pointIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="point">O <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> objeto a ser filtrada.</param>
+        <param name="series">O <see cref="T:System.Web.UI.DataVisualization.Charting.Series" /> objeto ao qual pertence o ponto de dados.</param>
+        <param name="pointIndex">O índice do ponto de dados, que determina a posição na série.</param>
+        <summary>Determina se um determinado ponto de dados na série será filtrado.</summary>
+        <returns>
+          <see langword="True" />Se o ponto de dados é removido, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método deve ser chamado para cada ponto de dados em uma série e retorna um `Boolean` valor que indica se um ponto de dados deve ser filtrado.  
+  
+ Para fornecer filtragem personalizada, derive uma classe nova ou existente do <xref:System.Web.UI.DataVisualization.Charting.IDataPointFilter> interface e, em seguida, implementam este método. Forneça a lógica de correspondência de critérios personalizados e retornar `true` ou `false` marcar pontos de dados a ser filtrada. Depois de implementar esse método, use um do `Filter` definições de método no <xref:System.Web.UI.DataVisualization.Charting.DataManipulator> classe que leva um <xref:System.Web.UI.DataVisualization.Charting.IDataPointFilter> objeto como um parâmetro para executar a filtragem.  
+  
+ Pontos filtrados, por padrão, são removidos de uma série. Eles também podem ser exibidos como pontos vazios, definindo o valor da <xref:System.Web.UI.DataVisualization.Charting.DataManipulator.FilterSetEmptyPoints%2A> propriedade `true`.  
+  
+ Filtrado pontos também podem ser marcados como filtrado se eles não correspondem a critérios de filtragem, conforme determinado pelo <xref:System.Web.UI.DataVisualization.Charting.DataManipulator.FilterMatchedPoints%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

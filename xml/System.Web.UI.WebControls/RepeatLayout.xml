@@ -1,0 +1,218 @@
+<Type Name="RepeatLayout" FullName="System.Web.UI.WebControls.RepeatLayout">
+  <TypeSignature Language="C#" Value="public enum RepeatLayout" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RepeatLayout extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RepeatLayout" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o layout de itens em um controle de lista.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.RepeatLayout> enumeração representa as opções de layout diferente para um controle de lista.  
+  
+   
+  
+## Examples  
+ [!code-aspx-csharp[DataListLayout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataListLayout/CS/datalistlayoutcs.aspx#1)]
+ [!code-aspx-vb[DataListLayout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataListLayout/VB/datalistlayoutvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Flow">
+      <MemberSignature Language="C#" Value="Flow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.RepeatLayout Flow = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.RepeatLayout.Flow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeatLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os itens são exibidos sem uma estrutura de tabela. A marcação renderizada consiste em um elemento <see langword="span" /> e os itens são separados por elementos <see langword="br" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra a marcação que é renderizada para um <xref:System.Web.UI.WebControls.CheckBoxList> controle cuja <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> está definida como fluxo.  
+  
+```  
+<span id="ctl00_MainContent_CheckBoxList1">  
+  <input id="ctl00_MainContent_CheckBoxList1_0" type="checkbox"   
+    name="ctl00$MainContent$CheckBoxList1$0" value="Item 1" />  
+  <label for="ctl00_MainContent_CheckBoxList1_0">Item 1</label>  
+  <br />  
+  <input id="ctl00_MainContent_CheckBoxList1_1" type="checkbox"  
+    name="ctl00$MainContent$CheckBoxList1$1" value="Item 2"/>  
+  <label for="ctl00_MainContent_CheckBoxList1_1">Item 2</label>  
+  <br />  
+  <input id="ctl00_MainContent_CheckBoxList1_2" type="checkbox"  
+    name="ctl00$MainContent$CheckBoxList1$2" value="Item 2" />  
+  <label for="ctl00_MainContent_CheckBoxList1_2">Item 2</label>  
+</span>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderedList">
+      <MemberSignature Language="C#" Value="OrderedList" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.RepeatLayout OrderedList = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.RepeatLayout.OrderedList" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeatLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os itens são exibidos sem uma estrutura de tabela. A marcação renderizada consiste em um elemento <see langword="ol" /> que contém elementos <see langword="li" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra a marcação que é renderizada para um <xref:System.Web.UI.WebControls.CheckBoxList> controle cuja <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> está definida como OrderedList.  
+  
+```  
+<ol id="ctl00_MainContent_CheckBoxList3">  
+  <li>  
+    <input id="ctl00_MainContent_CheckBoxList3_0" type="checkbox"  
+      name="ctl00$MainContent$CheckBoxList3$0" value="Item 1" />  
+    <label for="ctl00_MainContent_CheckBoxList3_0">Item 1</label>  
+  </li>  
+  <li>  
+    <input id="ctl00_MainContent_CheckBoxList3_1" type="checkbox"  
+      name="ctl00$MainContent$CheckBoxList3$1" value="Item 2" />  
+    <label for="ctl00_MainContent_CheckBoxList3_1">Item 2</label>  
+  </li>  
+  <li>  
+    <input id="ctl00_MainContent_CheckBoxList3_2" type="checkbox"  
+      name="ctl00$MainContent$CheckBoxList3$2" value="Item 2" />  
+    <label for="ctl00_MainContent_CheckBoxList3_2">Item 2</label>  
+  </li>  
+</ol>  
+```  
+  
+> [!NOTE]
+>  Este campo é novo a partir do ASP.NET 4 e é uma opção válida somente para o <xref:System.Web.UI.WebControls.CheckBoxList> e <xref:System.Web.UI.WebControls.RadioButtonList> controles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="Table" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.RepeatLayout Table = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.RepeatLayout.Table" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeatLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os itens são exibidos em uma tabela.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra a marcação que é renderizada para um <xref:System.Web.UI.WebControls.CheckBoxList> controle cuja <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> estiver definida como tabela.  
+  
+> [!NOTE]
+>  Esta opção faz com que o controle renderizar HTML que pode não estar em conformidade com padrões de acessibilidade. Para obter mais informações, consulte [acessibilidade no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13).  
+  
+```  
+<table id="ctl00_MainContent_CheckBoxList2">  
+  <tr>  
+    <td>  
+      <input id="ctl00_MainContent_CheckBoxList2_0" type="checkbox"  
+        name="ctl00$MainContent$CheckBoxList2$0" value="Item 1" />  
+      <label for="ctl00_MainContent_CheckBoxList2_0">Item 1</label>  
+    </td>  
+  </tr>  
+  <tr>  
+    <td>  
+      <input id="ctl00_MainContent_CheckBoxList2_1" type="checkbox"  
+        name="ctl00$MainContent$CheckBoxList2$1" value="Item 2" />  
+      <label for="ctl00_MainContent_CheckBoxList2_1">Item 2</label>  
+    </td>  
+  </tr>  
+  <tr>  
+    <td>  
+      <input id="ctl00_MainContent_CheckBoxList2_2" type="checkbox"  
+        name="ctl00$MainContent$CheckBoxList2$2" value="Item 3" />  
+      <label for="ctl00_MainContent_CheckBoxList2_2">Item 3</label>  
+    </td>  
+  </tr>  
+</table>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnorderedList">
+      <MemberSignature Language="C#" Value="UnorderedList" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.RepeatLayout UnorderedList = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.RepeatLayout.UnorderedList" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.RepeatLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os itens são exibidos sem uma estrutura de tabela. A marcação renderizada consiste em um elemento <see langword="ul" /> que contém elementos <see langword="li" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra a marcação que é renderizada para um <xref:System.Web.UI.WebControls.CheckBoxList> controle cuja <xref:System.Web.UI.WebControls.CheckBoxList.RepeatLayout%2A> está definida como UnorderedList.  
+  
+```  
+<ul id="ctl00_MainContent_CheckBoxList4">  
+  <li>  
+    <input id="ctl00_MainContent_CheckBoxList4_0" type="checkbox"  
+      name="ctl00$MainContent$CheckBoxList4$0" value="Item 1" />  
+    <label for="ctl00_MainContent_CheckBoxList4_0">Item 1</label>  
+  </li>  
+  <li>  
+    <input id="ctl00_MainContent_CheckBoxList4_1" type="checkbox"  
+      name="ctl00$MainContent$CheckBoxList4$1" value="Item 2" />  
+    <label for="ctl00_MainContent_CheckBoxList4_1">Item 2</label>  
+  </li>  
+  <li>  
+    <input id="ctl00_MainContent_CheckBoxList4_2" type="checkbox"  
+      name="ctl00$MainContent$CheckBoxList4$2" value="Item 2" />  
+    <label for="ctl00_MainContent_CheckBoxList4_2">Item 2</label>  
+  </li>  
+</ul>  
+```  
+  
+> [!NOTE]
+>  Este campo é novo a partir do ASP.NET 4 e é uma opção válida somente para o <xref:System.Web.UI.WebControls.CheckBoxList> e <xref:System.Web.UI.WebControls.RadioButtonList> controles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

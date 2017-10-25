@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Cryptography.Xml">
+  <Docs>
+    <summary>O <see cref="N:System.Security.Cryptography.Xml" /> namespace contém classes para dar suporte a criação e a validação de assinaturas digitais XML. As classes neste namespace implementam a World Wide Web Consortium recomendação, "Assinatura XML sintaxe e processamento", descrito em http://www.w3.org/TR/xmldsig-core/.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

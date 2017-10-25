@@ -1,0 +1,43 @@
+<Type Name="NetworkAvailabilityChangedEventHandler" FullName="System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void NetworkAvailabilityChangedEventHandler(object sender, NetworkAvailabilityEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NetworkAvailabilityChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Net.NetworkInformation.NetworkAvailabilityEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém dados sobre o evento.</param>
+    <summary>Faz referência a um ou mais métodos a serem chamados quando a disponibilidade da rede for alterada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este delegado manipula <xref:System.Net.NetworkInformation.NetworkChange.NetworkAvailabilityChanged> eventos gerados pelo <xref:System.Net.NetworkInformation.NetworkChange> classe. Para obter informações detalhadas sobre o recebimento da notificação para o endereço de interface de rede eventos de alteração, consulte o <xref:System.Net.NetworkInformation.NetworkChange> documentação de visão geral de classe.  
+  
+ O <xref:System.Net.NetworkInformation.NetworkChange.NetworkAvailabilityChanged> evento tem suporte no Windows 2000 e posterior.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

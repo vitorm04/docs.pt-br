@@ -1,0 +1,370 @@
+<Type Name="RSASignaturePadding" FullName="System.Security.Cryptography.RSASignaturePadding">
+  <TypeSignature Language="C#" Value="public sealed class RSASignaturePadding : IEquatable&lt;System.Security.Cryptography.RSASignaturePadding&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RSASignaturePadding extends System.Object implements class System.IEquatable`1&lt;class System.Security.Cryptography.RSASignaturePadding&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RSASignaturePadding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Security.Cryptography.RSASignaturePadding&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Especifica o modo de preenchimento e os parâmetros a serem usados com operações de criação ou verificação de assinatura RSA.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSASignaturePadding.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com a instância atual.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado for igual ao objeto atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instância atual e `obj` são iguais se `obj` é um <xref:System.Security.Cryptography.RSASignaturePadding> instância e o <xref:System.Security.Cryptography.RSASignaturePadding.Mode%2A> propriedade dos dois objetos é igual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Security.Cryptography.RSASignaturePadding other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Security.Cryptography.RSASignaturePadding other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSASignaturePadding.Equals(System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="other">O objeto a ser comparado com a instância atual.</param>
+        <summary>Retorna um valor que indica se esta instância é igual a um especificado <see cref="T:System.Security.Cryptography.RSASignaturePadding" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado for igual ao objeto atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instância atual e `other` são iguais se os <xref:System.Security.Cryptography.RSASignaturePadding.Mode%2A> propriedade dos dois objetos é igual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSASignaturePadding.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância <see cref="T:System.Security.Cryptography.RSASignaturePadding" />.</summary>
+        <returns>O código hash para essa instância <see cref="T:System.Security.Cryptography.RSASignaturePadding" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.RSASignaturePaddingMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.RSASignaturePaddingMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSASignaturePadding.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSASignaturePaddingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo de preenchimento deste <see cref="T:System.Security.Cryptography.RSASignaturePadding" /> instância.</summary>
+        <value>O modo de preenchimento (tanto <see cref="F:System.Security.Cryptography.RSASignaturePaddingMode.Pkcs1" /> ou <see cref="F:System.Security.Cryptography.RSASignaturePaddingMode.Pss" />) desta instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Security.Cryptography.RSASignaturePadding left, System.Security.Cryptography.RSASignaturePadding right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Security.Cryptography.RSASignaturePadding left, class System.Security.Cryptography.RSASignaturePadding right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSASignaturePadding.op_Equality(System.Security.Cryptography.RSASignaturePadding,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Cryptography.RSASignaturePadding" />
+        <Parameter Name="right" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro objeto a ser comparado.</param>
+        <param name="right">O segundo objeto a ser comparado.</param>
+        <summary>Indica se dois objetos <see cref="T:System.Security.Cryptography.RSASignaturePadding" /> especificados são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <see langword="left" /> e <see langword="right" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.RSASignaturePadding.op_Equality%2A> método define a operação do operador de igualdade para <xref:System.Security.Cryptography.RSASignaturePadding> valores.  
+  
+ Dois <xref:System.Security.Cryptography.RSASignaturePadding> valores são iguais se seus <xref:System.Security.Cryptography.RSASignaturePadding.Mode%2A> valores de propriedade são iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Security.Cryptography.RSASignaturePadding left, System.Security.Cryptography.RSASignaturePadding right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Security.Cryptography.RSASignaturePadding left, class System.Security.Cryptography.RSASignaturePadding right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSASignaturePadding.op_Inequality(System.Security.Cryptography.RSASignaturePadding,System.Security.Cryptography.RSASignaturePadding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Security.Cryptography.RSASignaturePadding" />
+        <Parameter Name="right" Type="System.Security.Cryptography.RSASignaturePadding" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro objeto a ser comparado.</param>
+        <param name="right">O segundo objeto a ser comparado.</param>
+        <summary>Indica se dois especificada <see cref="T:System.Security.Cryptography.RSASignaturePadding" /> objetos são diferentes.</summary>
+        <returns>
+          <see langword="true" /> se <see langword="left" /> e <see langword="right" /> forem diferentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.RSASignaturePadding.op_Inequality%2A> método define a operação do operador de desigualdade para <xref:System.Security.Cryptography.RSASignaturePadding> valores.  
+  
+ Dois <xref:System.Security.Cryptography.RSASignaturePadding> valores são diferentes se seus <xref:System.Security.Cryptography.RSASignaturePadding.Mode%2A> valores de propriedade são diferentes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pkcs1">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.RSASignaturePadding Pkcs1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.RSASignaturePadding Pkcs1" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSASignaturePadding.Pkcs1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSASignaturePadding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que usa o modo de preenchimento PKCS nº 1 v1.5.</summary>
+        <value>Um objeto que usa o modo de preenchimento <see cref="F:System.Security.Cryptography.RSASignaturePaddingMode.Pkcs1" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pss">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.RSASignaturePadding Pss { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Security.Cryptography.RSASignaturePadding Pss" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.RSASignaturePadding.Pss" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.RSASignaturePadding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que usa o modo de preenchimento PSS.</summary>
+        <value>Um objeto que usa o modo de preenchimento <see cref="F:System.Security.Cryptography.RSASignaturePaddingMode.Pss" /> com o número de bytes de sal igual ao tamanho do hash.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.RSASignaturePadding.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação de cadeia de caracteres do atual <see cref="T:System.Security.Cryptography.RSASignaturePadding" /> instância.</summary>
+        <returns>A representação de cadeia de caracteres do objeto atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.RSASignaturePadding.ToString%2A> método retornará o valor de `RSASignaturePadding.Mode.ToString` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

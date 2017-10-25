@@ -1,0 +1,114 @@
+<Type Name="LoggerDescription" FullName="Microsoft.Build.Logging.LoggerDescription">
+  <TypeSignature Language="C#" Value="public class LoggerDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LoggerDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Logging.LoggerDescription" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações sobre um agente de log como uma coleção de valores que podem ser usados para criar uma instância de agente de log e pode ser serializado para ser transmitidos entre processos diferentes.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoggerDescription (string loggerClassName, string loggerAssemblyName, string loggerAssemblyFile, string loggerSwitchParameters, Microsoft.Build.Framework.LoggerVerbosity verbosity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string loggerClassName, string loggerAssemblyName, string loggerAssemblyFile, string loggerSwitchParameters, valuetype Microsoft.Build.Framework.LoggerVerbosity verbosity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.LoggerDescription.#ctor(System.String,System.String,System.String,System.String,Microsoft.Build.Framework.LoggerVerbosity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="loggerClassName" Type="System.String" />
+        <Parameter Name="loggerAssemblyName" Type="System.String" />
+        <Parameter Name="loggerAssemblyFile" Type="System.String" />
+        <Parameter Name="loggerSwitchParameters" Type="System.String" />
+        <Parameter Name="verbosity" Type="Microsoft.Build.Framework.LoggerVerbosity" />
+      </Parameters>
+      <Docs>
+        <param name="loggerClassName">O nome da classe do agente de log.</param>
+        <param name="loggerAssemblyName">O nome do assembly que implementa o agente de log.</param>
+        <param name="loggerAssemblyFile">O arquivo de assembly que implementa o agente de log.</param>
+        <param name="loggerSwitchParameters">Parâmetros de opção para o agente de log.</param>
+        <param name="verbosity">O nível de detalhamento.</param>
+        <summary>Cria uma descrição do agente de log a partir dos dados fornecidos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLogger">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ILogger CreateLogger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Framework.ILogger CreateLogger() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Logging.LoggerDescription.CreateLogger" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ILogger</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de ILogger a partir dos dados nessa descrição.</summary>
+        <returns>Retorna uma instância de ILogger dos dados nessa descrição.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode acionar uma variedade de reflexão exceções se os dados são inválidos. É o resposibility do chamador para tratar essas exceções, se desejado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoggerSwitchParameters">
+      <MemberSignature Language="C#" Value="public string LoggerSwitchParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LoggerSwitchParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.LoggerDescription.LoggerSwitchParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres de parâmetros de agente de log.</summary>
+        <value>Retorna a cadeia de caracteres de parâmetros de agente de log.  Retorna null se não houver nenhum parâmetro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbosity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.LoggerVerbosity Verbosity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Logging.LoggerDescription.Verbosity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o nível de detalhes para este agente.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para a exibição de linha de comando, todos os agentes de log obtém o mesmo nível de detalhamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

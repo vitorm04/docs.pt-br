@@ -1,0 +1,341 @@
+<Type Name="Binder" FullName="Microsoft.CSharp.RuntimeBinder.Binder">
+  <TypeSignature Language="C#" Value="public static class Binder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Binder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.CSharp.RuntimeBinder.Binder" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.CSharp</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém métodos de fábrica para criar associadores de site de chamada dinâmica para CSharp.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="BinaryOperation">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.CallSiteBinder BinaryOperation (Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, System.Linq.Expressions.ExpressionType operation, Type context, System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.CompilerServices.CallSiteBinder BinaryOperation(valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, valuetype System.Linq.Expressions.ExpressionType operation, class System.Type context, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CSharp.RuntimeBinder.Binder.BinaryOperation(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags,System.Linq.Expressions.ExpressionType,System.Type,System.Collections.Generic.IEnumerable{Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CallSiteBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+        <Parameter Name="operation" Type="System.Linq.Expressions.ExpressionType" />
+        <Parameter Name="context" Type="System.Type" />
+        <Parameter Name="argumentInfo" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Os sinalizadores com os quais inicializar o associador.</param>
+        <param name="operation">O tipo de operação binária.</param>
+        <param name="context">O <see cref="T:System.Type" /> que indica onde esta operação é usada.</param>
+        <param name="argumentInfo">A sequência de instâncias <see cref="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo" /> para os argumentos dessa operação.</param>
+        <summary>Inicializa um novo associador de operação binária CSharp.</summary>
+        <returns>Retorna um novo associador de operação binária CSharp.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.CallSiteBinder Convert (Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, Type type, Type context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.CompilerServices.CallSiteBinder Convert(valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, class System.Type type, class System.Type context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CSharp.RuntimeBinder.Binder.Convert(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags,System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CallSiteBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="context" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Os sinalizadores com os quais inicializar o associador.</param>
+        <param name="type">O tipo para o qual converter.</param>
+        <param name="context">O <see cref="T:System.Type" /> que indica onde esta operação é usada.</param>
+        <summary>Inicializa um novo associador de conversão CSharp.</summary>
+        <returns>Retorna um novo associador de conversão CSharp.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetIndex">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.CallSiteBinder GetIndex (Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, Type context, System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.CompilerServices.CallSiteBinder GetIndex(valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, class System.Type context, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CSharp.RuntimeBinder.Binder.GetIndex(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags,System.Type,System.Collections.Generic.IEnumerable{Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CallSiteBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+        <Parameter Name="context" Type="System.Type" />
+        <Parameter Name="argumentInfo" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Os sinalizadores com os quais inicializar o associador.</param>
+        <param name="context">O <see cref="T:System.Type" /> que indica onde esta operação é usada.</param>
+        <param name="argumentInfo">A sequência de instâncias <see cref="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo" /> para os argumentos dessa operação.</param>
+        <summary>Inicializa uma nova CSharp obter associador de índice.</summary>
+        <returns>Retorna um novo CSharp obter associador de índice.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetMember">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.CallSiteBinder GetMember (Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, string name, Type context, System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.CompilerServices.CallSiteBinder GetMember(valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, string name, class System.Type context, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CSharp.RuntimeBinder.Binder.GetMember(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags,System.String,System.Type,System.Collections.Generic.IEnumerable{Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CallSiteBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="context" Type="System.Type" />
+        <Parameter Name="argumentInfo" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Os sinalizadores com os quais inicializar o associador.</param>
+        <param name="name">O nome do membro a ser obtido.</param>
+        <param name="context">O <see cref="T:System.Type" /> que indica onde esta operação é usada.</param>
+        <param name="argumentInfo">A sequência de instâncias <see cref="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo" /> para os argumentos dessa operação.</param>
+        <summary>Inicializa um novo associador de membro CSharp a ser obtido.</summary>
+        <returns>Retorna um novo associador de membro CSharp a ser obtido.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.CallSiteBinder Invoke (Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, Type context, System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.CompilerServices.CallSiteBinder Invoke(valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, class System.Type context, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CSharp.RuntimeBinder.Binder.Invoke(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags,System.Type,System.Collections.Generic.IEnumerable{Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CallSiteBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+        <Parameter Name="context" Type="System.Type" />
+        <Parameter Name="argumentInfo" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Os sinalizadores com os quais inicializar o associador.</param>
+        <param name="context">O <see cref="T:System.Type" /> que indica onde esta operação é usada.</param>
+        <param name="argumentInfo">A sequência de instâncias <see cref="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo" /> para os argumentos dessa operação.</param>
+        <summary>Inicializa uma nova CSharp invocar associador.</summary>
+        <returns>Retorna um novo CSharp invocar associador.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeConstructor">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.CallSiteBinder InvokeConstructor (Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, Type context, System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.CompilerServices.CallSiteBinder InvokeConstructor(valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, class System.Type context, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CSharp.RuntimeBinder.Binder.InvokeConstructor(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags,System.Type,System.Collections.Generic.IEnumerable{Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CallSiteBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+        <Parameter Name="context" Type="System.Type" />
+        <Parameter Name="argumentInfo" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Os sinalizadores com os quais inicializar o associador.</param>
+        <param name="context">O <see cref="T:System.Type" /> que indica onde esta operação é usada.</param>
+        <param name="argumentInfo">A sequência de instâncias <see cref="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo" /> para os argumentos dessa operação.</param>
+        <summary>Inicializa uma nova CSharp invocar associador de construtor.</summary>
+        <returns>Retorna um novo CSharp invocar associador de construtor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMember">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.CallSiteBinder InvokeMember (Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, string name, System.Collections.Generic.IEnumerable&lt;Type&gt; typeArguments, Type context, System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.CompilerServices.CallSiteBinder InvokeMember(valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, string name, class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt; typeArguments, class System.Type context, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CSharp.RuntimeBinder.Binder.InvokeMember(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags,System.String,System.Collections.Generic.IEnumerable{System.Type},System.Type,System.Collections.Generic.IEnumerable{Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CallSiteBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="typeArguments" Type="System.Collections.Generic.IEnumerable&lt;System.Type&gt;" />
+        <Parameter Name="context" Type="System.Type" />
+        <Parameter Name="argumentInfo" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Os sinalizadores com os quais inicializar o associador.</param>
+        <param name="name">O nome do membro para invocar.</param>
+        <param name="typeArguments">A lista de argumentos de tipo especificado para esse invoke.</param>
+        <param name="context">O <see cref="T:System.Type" /> que indica onde esta operação é usada.</param>
+        <param name="argumentInfo">A sequência de instâncias <see cref="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo" /> para os argumentos dessa operação.</param>
+        <summary>Inicializa uma nova CSharp invocar associador de membro.</summary>
+        <returns>Retorna um novo CSharp invocar associador de membro.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsEvent">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.CallSiteBinder IsEvent (Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, string name, Type context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.CompilerServices.CallSiteBinder IsEvent(valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, string name, class System.Type context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CSharp.RuntimeBinder.Binder.IsEvent(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags,System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CallSiteBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="context" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Os sinalizadores com os quais inicializar o associador.</param>
+        <param name="name">O nome do evento a ser pesquisada.</param>
+        <param name="context">O <see cref="T:System.Type" /> que indica onde esta operação é usada.</param>
+        <summary>Inicializa uma nova CSharp é associador de evento.</summary>
+        <returns>Retorna um novo CSharp associador de evento.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetIndex">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.CallSiteBinder SetIndex (Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, Type context, System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.CompilerServices.CallSiteBinder SetIndex(valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, class System.Type context, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CSharp.RuntimeBinder.Binder.SetIndex(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags,System.Type,System.Collections.Generic.IEnumerable{Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CallSiteBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+        <Parameter Name="context" Type="System.Type" />
+        <Parameter Name="argumentInfo" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Os sinalizadores com os quais inicializar o associador.</param>
+        <param name="context">O <see cref="T:System.Type" /> que indica onde esta operação é usada.</param>
+        <param name="argumentInfo">A sequência de instâncias <see cref="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo" /> para os argumentos dessa operação.</param>
+        <summary>Inicializa uma nova CSharp definir associador de índice.</summary>
+        <returns>Retorna que um novo CSharp definido associador de índice.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetMember">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.CallSiteBinder SetMember (Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, string name, Type context, System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.CompilerServices.CallSiteBinder SetMember(valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, string name, class System.Type context, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CSharp.RuntimeBinder.Binder.SetMember(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags,System.String,System.Type,System.Collections.Generic.IEnumerable{Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CallSiteBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="context" Type="System.Type" />
+        <Parameter Name="argumentInfo" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Os sinalizadores com os quais inicializar o associador.</param>
+        <param name="name">O nome do membro a ser definido.</param>
+        <param name="context">O <see cref="T:System.Type" /> que indica onde esta operação é usada.</param>
+        <param name="argumentInfo">A sequência de instâncias <see cref="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo" /> para os argumentos dessa operação.</param>
+        <summary>Inicializa uma nova CSharp definir associador de membro.</summary>
+        <returns>Retorna que um novo CSharp definido associador de membro.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UnaryOperation">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.CallSiteBinder UnaryOperation (Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, System.Linq.Expressions.ExpressionType operation, Type context, System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.CompilerServices.CallSiteBinder UnaryOperation(valuetype Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags flags, valuetype System.Linq.Expressions.ExpressionType operation, class System.Type context, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt; argumentInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.CSharp.RuntimeBinder.Binder.UnaryOperation(Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags,System.Linq.Expressions.ExpressionType,System.Type,System.Collections.Generic.IEnumerable{Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.CSharp</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CallSiteBinder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags" />
+        <Parameter Name="operation" Type="System.Linq.Expressions.ExpressionType" />
+        <Parameter Name="context" Type="System.Type" />
+        <Parameter Name="argumentInfo" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Os sinalizadores com os quais inicializar o associador.</param>
+        <param name="operation">O tipo de operação unária.</param>
+        <param name="context">O <see cref="T:System.Type" /> que indica onde esta operação é usada.</param>
+        <param name="argumentInfo">A sequência de instâncias <see cref="T:Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo" /> para os argumentos dessa operação.</param>
+        <summary>Inicializa um novo associador de operação CSharp unário.</summary>
+        <returns>Retorna um novo associador de operação de unário CSharp.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

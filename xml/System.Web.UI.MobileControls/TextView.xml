@@ -1,0 +1,477 @@
+<Type Name="TextView" FullName="System.Web.UI.MobileControls.TextView">
+  <TypeSignature Language="C#" Value="public class TextView : System.Web.UI.MobileControls.PagedControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextView extends System.Web.UI.MobileControls.PagedControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.TextView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.PagedControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Web.UI.Design.MobileControls.TextViewDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.TextDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.DesignerAdapter("System.Web.UI.Design.MobileControls.Adapters.DesignerTextViewAdapter")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:TextView runat="server"&gt;TextView&lt;/{0}:TextView&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um controle programável para exibir grandes quantidades de texto, com marcação opcional em uma página móvel. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diferentemente do texto literal em um formulário móvel, você pode definir o conteúdo de um <xref:System.Web.UI.MobileControls.TextView> do código. Ao contrário de um celular <xref:System.Web.UI.MobileControls.Label> controle, você pode incluir marcação dentro do valor da <xref:System.Web.UI.MobileControls.TextView.Text%2A> propriedade. Além disso, o <xref:System.Web.UI.MobileControls.TextView> controle é cuidado para não violar os elementos inseridos, como links durante a paginação. Para obter mais informações, consulte [texto Literal dentro de marcação de forma](http://msdn.microsoft.com/en-us/05e061ed-9916-4ece-bfc8-7bf131fe232e).  
+  
+ Se o <xref:System.Web.UI.MobileControls.TextView> controle está dentro de um <xref:System.Web.UI.MobileControls.Panel>, defina o <xref:System.Web.UI.MobileControls.Panel.Paginate%2A?displayProperty=nameWithType> propriedade `true` para permitir que o texto flua por várias páginas em dispositivos móveis. Se o <xref:System.Web.UI.MobileControls.TextView> controle não está em um <xref:System.Web.UI.MobileControls.Panel>, coloque o nome do <xref:System.Web.UI.MobileControls.TextView> controlar no <xref:System.Web.UI.MobileControls.Form.ControlToPaginate%2A?displayProperty=nameWithType> propriedade.  
+  
+ A maioria das outras propriedades e métodos de móvel <xref:System.Web.UI.MobileControls.TextView> controle são de uso mais para desenvolvedores de novos adaptadores de dispositivo para renderizar o conteúdo em dispositivos específicos.  
+  
+> [!CAUTION]
+>  Este controle pode ser usado para exibir a entrada do usuário, que pode incluir um script de cliente mal-intencionado. Verifique todas as informações que são enviadas de um cliente para o script executável, instruções SQL ou outro código antes de exibi-lo em seu aplicativo. Você pode usar controles de validação para verificar se a entrada do usuário antes de exibir o texto de entrada em um controle. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Para obter mais informações, consulte [protegendo controles padrão](http://msdn.microsoft.com/library/f3e7718f-63d0-44a3-bd5f-48cc2059c2a8), [como: proteger contra scripts maliciosos em um aplicativo da Web aplicando codificação HTML a cadeias de caracteres](http://msdn.microsoft.com/library/6f67973f-dda0-45a1-ba9d-e88532d7dc5b), e [Validando a entrada do usuário em páginas da Web do ASP.NET](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria números identifica cada número primo em uma oração e adiciona as frases para o <xref:System.Web.UI.MobileControls.TextView> controle. O exemplo também usa paginação personalizada para fornecer uma página de texto por vez.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileTextViewSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileTextViewSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileTextViewSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileTextViewSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextView ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.TextView.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.MobileControls.TextView" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstVisibleElementIndex">
+      <MemberSignature Language="C#" Value="public int FirstVisibleElementIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FirstVisibleElementIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextView.FirstVisibleElementIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do primeiro <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> objeto na exibição de texto atual depois que o texto é paginado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O índice do primeiro <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> objeto na exibição de texto atual quando a exibição de texto é paginada. Se não houver nenhum <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> objetos atual <see cref="T:System.Web.UI.MobileControls.TextView" /> de objeto, retornará -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.TextView.FirstVisibleElementIndex%2A> por desenvolvedores de adaptadores de dispositivo personalizada, a propriedade é usada para renderizar o conteúdo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstVisibleElementOffset">
+      <MemberSignature Language="C#" Value="public int FirstVisibleElementOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FirstVisibleElementOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextView.FirstVisibleElementOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento de caractere, o primeiro <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> classe, que é exibido quando paginados. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O deslocamento de caractere, o primeiro <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> classe, que é exibido quando paginados. Se não houver nenhum <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> objetos atual <see cref="T:System.Web.UI.MobileControls.TextView" /> do objeto, esse valor é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.TextView.FirstVisibleElementOffset%2A> por desenvolvedores de adaptadores de dispositivo personalizada, a propriedade é usada para renderizar o conteúdo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElement">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.TextViewElement GetElement (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.MobileControls.TextViewElement GetElement(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.TextView.GetElement(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.TextViewElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> classe.</param>
+        <summary>Retorna o <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> classe no índice especificado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>O <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.TextView.GetElement%2A> método é usado por desenvolvedores de adaptadores de dispositivo personalizado para renderizar o conteúdo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalItemCount">
+      <MemberSignature Language="C#" Value="protected override int InternalItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InternalItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextView.InternalItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens no controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O número de itens no controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCount">
+      <MemberSignature Language="C#" Value="public int ItemCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextView.ItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de itens no controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O número de itens no controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsPerPage">
+      <MemberSignature Language="C#" Value="public int ItemsPerPage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemsPerPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextView.ItemsPerPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou retorna o número de itens exibidos por página depois de paginação. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O número de itens exibidos por página depois de paginação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.TextView.ItemsPerPage%2A> por desenvolvedores de adaptadores de dispositivo personalizada, a propriedade é usada para renderizar o conteúdo.  
+  
+ Se for zero, a paginação não é afetada por essa propriedade. Se for diferente de zero, substituições de itens exibidos por página, quando o formulário é paginado. O valor padrão é zero.  
+  
+ Controles para dispositivos móveis que oferecem suporte à paginação interna também fornecem um recurso chamado paginação personalizada. Normalmente, esses controles exigem que você forneça todos os dados que eles podem exibir. Os desenvolvedores de especificam o número total de itens que estão na lista de <xref:System.Web.UI.MobileControls.TextView.ItemCount%2A> propriedade. O <xref:System.Web.UI.MobileControls.TextView.ItemsPerPage%2A> propriedade especifica quantos itens exibe o controle por página.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define o número de itens para cada postback. Este exemplo é parte de um exemplo maior para o <xref:System.Web.UI.MobileControls.TextView> visão geral da classe.  
+  
+ [!code-csharp[MobileTextViewSample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileTextViewSample/cs/Default.aspx#2)]
+ [!code-vb[MobileTextViewSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileTextViewSample/vb/Default.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemWeight">
+      <MemberSignature Language="C#" Value="protected override int ItemWeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemWeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextView.ItemWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o peso aproximado de um único item no controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O peso aproximado de um único item no controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastVisibleElementIndex">
+      <MemberSignature Language="C#" Value="public int LastVisibleElementIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LastVisibleElementIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextView.LastVisibleElementIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o índice da última <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> objeto atual <see cref="T:System.Web.UI.MobileControls.TextView" /> objeto. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O índice da última <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> no atual <see cref="T:System.Web.UI.MobileControls.TextView" />. Se não houver nenhum <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> objetos no atual <see cref="T:System.Web.UI.MobileControls.TextView" />, retornará 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.TextView.LastVisibleElementIndex%2A> por desenvolvedores de adaptadores de dispositivo personalizada, a propriedade é usada para renderizar o conteúdo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastVisibleElementOffset">
+      <MemberSignature Language="C#" Value="public int LastVisibleElementOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LastVisibleElementOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextView.LastVisibleElementOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o deslocamento de caractere no último <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> objeto, que é exibido quando paginados. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O deslocamento de caractere no último <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> objeto, que é exibido quando paginados. Se não houver nenhum <see cref="T:System.Web.UI.MobileControls.TextViewElement" /> objetos no atual <see cref="T:System.Web.UI.MobileControls.TextView" />, retornará 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.TextView.LastVisibleElementOffset%2A> por desenvolvedores de adaptadores de dispositivo personalizada, a propriedade é usada para renderizar o conteúdo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadItems">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.MobileControls.LoadItemsEventHandler LoadItems;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.MobileControls.LoadItemsEventHandler LoadItems" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.TextView.LoadItems" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.LoadItemsEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um controle é paginado personalizado e precisa de mais dados. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o controle é personalizado-paginado, você não associar explicitamente o controle. Depois de paginação, o controle gera esse evento, que indica qual parte dos dados é necessária. O aplicativo pode lidar com esse evento e associar o controle com os dados necessários.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar paginação personalizada e chamar o <xref:System.Web.UI.MobileControls.TextView.LoadItems> método para carregar um número especificado de itens por página.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileTextViewSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileTextViewSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileTextViewSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileTextViewSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="protected override void OnRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.TextView.OnRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que processará o conteúdo.</param>
+        <summary>Aciona o evento <see cref="M:System.Web.UI.MobileControls.MobileControl.Render(System.Web.UI.HtmlTextWriter)" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaginateRecursive">
+      <MemberSignature Language="C#" Value="public override void PaginateRecursive (System.Web.UI.MobileControls.ControlPager pager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void PaginateRecursive(class System.Web.UI.MobileControls.ControlPager pager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.TextView.PaginateRecursive(System.Web.UI.MobileControls.ControlPager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pager" Type="System.Web.UI.MobileControls.ControlPager" />
+      </Parameters>
+      <Docs>
+        <param name="pager">Pager.</param>
+        <summary>Pagina o controle e seus filhos. Chamado internamente pelo ASP.NET. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.TextView.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define ou retorna o texto do controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O texto do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre as marcas (como \<b >) que <xref:System.Web.UI.MobileControls.TextView> dá suporte a no seu <xref:System.Web.UI.MobileControls.TextView.Text%2A> propriedade, consulte o <xref:System.Web.UI.MobileControls.TextView> discussão de classe.  
+  
+ O <xref:System.Web.UI.MobileControls.TextView.Text%2A> propriedade pode ser especificada usando o `Text` atributo, ou como texto interno. Se o <xref:System.Web.UI.MobileControls.TextView.Text%2A> propriedade for especificada em ambos os modos, o texto interno sempre terá precedência. No entanto, se o <xref:System.Web.UI.MobileControls.TextView.Text%2A> propriedade é definida por meio de programação, o texto interno é removido automaticamente e a nova configuração terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

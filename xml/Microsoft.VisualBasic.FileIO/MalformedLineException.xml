@@ -1,0 +1,329 @@
+<Type Name="MalformedLineException" FullName="Microsoft.VisualBasic.FileIO.MalformedLineException">
+  <TypeSignature Language="C#" Value="public class MalformedLineException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable MalformedLineException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.FileIO.MalformedLineException" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção que é gerada quando o método <see cref="M:Microsoft.VisualBasic.FileIO.TextFieldParser.ReadFields" /> não pode analisar uma linha usando o formato especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verifique se que o `TextFieldType` e `Delimiter` os parâmetros são definidos corretamente.  
+  
+ Se o <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ReadFields%2A> método não é possível analisar uma linha usando o formato especificado, o <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> exceção será lançada. A exceção contém o número da linha da linha malformado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MalformedLineException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.FileIO.MalformedLineException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.FileIO.MalformedLineException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A exceção indica que o <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ReadFields%2A> método não é possível analisar uma linha usando o formato especificado.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>.  
+  
+|Propriedade|Valor|  
+|-|-|  
+|<xref:System.Exception.InnerException%2A>|Uma referência nula (`Nothing` no Visual Basic).|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro localizada.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MalformedLineException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.FileIO.MalformedLineException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que descreve o erro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.FileIO.MalformedLineException" /> com uma mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo do parâmetro `message` deve ser compreendido por humanos. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.  
+  
+ <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>herda o <xref:System.Exception> classe. Este construtor define as propriedades do <xref:System.Exception> objeto conforme mostrado na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|-|-|  
+|<xref:System.Exception.InnerException%2A>|Uma referência nula (`Nothing` no Visual Basic)|  
+|<xref:System.Exception.Message%2A>|O `message` cadeia de caracteres.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MalformedLineException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyspecialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.FileIO.MalformedLineException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> estrutura que contém informações contextuais sobre a origem ou destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.FileIO.MalformedLineException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção transmitido por um fluxo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MalformedLineException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.FileIO.MalformedLineException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Um <see cref="T:System.String" /> que descreve o erro.</param>
+        <param name="innerException">O <see cref="T:System.Exception" /> objeto que é a causa da exceção atual. Se o <see cref="P:System.Exception.InnerException" /> parâmetro não é uma referência nula (<see langword="Nothing" /> no Visual Basic), a exceção atual é gerada em um bloco catch que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.FileIO.MalformedLineException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo do parâmetro `message` deve ser compreendido por humanos. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.  
+  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. O <xref:System.Exception.InnerException%2A> propriedade retorna o mesmo valor que é passado para o construtor, ou uma referência nula se o <xref:System.Exception.InnerException%2A> propriedade não fornecer o valor da exceção interna para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.ApplicationException>.  
+  
+|Propriedade|Valor|  
+|-|-|  
+|<xref:System.Exception.InnerException%2A>|O `innerException` referência.|  
+|<xref:System.Exception.Message%2A>|O `message` cadeia de caracteres.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MalformedLineException (string message, long lineNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string message, int64 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.FileIO.MalformedLineException.#ctor(System.String,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem para a exceção.</param>
+        <param name="lineNumber">O número de linha da linha malformado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.VisualBasic.FileIO.MalformedLineException" /> classe com uma mensagem de erro especificada e um número de linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo do parâmetro `message` deve ser compreendido por humanos. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual. O `lineNumber` parâmetro inicializa o <xref:Microsoft.VisualBasic.FileIO.MalformedLineException.LineNumber%2A> propriedade.  
+  
+ <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>herda o <xref:System.Exception>. Este construtor define as propriedades do <xref:System.Exception> objeto conforme mostrado na tabela a seguir.  
+  
+|Propriedade|Valor|  
+|-|-|  
+|<xref:System.Exception.InnerException%2A>|Uma referência nula (`Nothing` no Visual Basic)|  
+|<xref:System.Exception.Message%2A>|O `message` cadeia de caracteres.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MalformedLineException (string message, long lineNumber, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string message, int64 lineNumber, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.FileIO.MalformedLineException.#ctor(System.String,System.Int64,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int64" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem para a exceção.</param>
+        <param name="lineNumber">O número de linha da linha malformado.</param>
+        <param name="innerException">O <see cref="T:System.Exception" /> que é a causa da exceção atual. Se o <see cref="P:System.Exception.InnerException" /> parâmetro não é uma referência nula (<see langword="Nothing" /> no Visual Basic), a exceção atual é gerada em um bloco catch que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.VisualBasic.FileIO.MalformedLineException" /> classe com uma mensagem de erro especificada, um número de linha e uma referência à exceção interna que é a causa dessa exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo do parâmetro `message` deve ser compreendido por humanos. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual. O `lineNumber` parâmetro inicializa o <xref:Microsoft.VisualBasic.FileIO.MalformedLineException.LineNumber%2A> propriedade.  
+  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. O <xref:System.Exception.InnerException%2A> propriedade retorna o mesmo valor que é passado para o construtor, ou uma referência nula se o <xref:System.Exception.InnerException%2A> propriedade não fornecer o valor da exceção interna para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.ApplicationException>.  
+  
+|Propriedade|Valor|  
+|-|-|  
+|<xref:System.Exception.InnerException%2A>|O `innerException` referência.|  
+|<xref:System.Exception.Message%2A>|O `message` cadeia de caracteres.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.FileIO.MalformedLineException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> estrutura que contém informações contextuais sobre a origem ou destino.</param>
+        <summary>Define o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com informações sobre a exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método define uma <xref:System.Runtime.Serialization.SerializationInfo> objeto com todos os dados do objeto de exceção destinados para a serialização. Durante a desserialização, a exceção é reconstituída do <xref:System.Runtime.Serialization.SerializationInfo> transmitido no fluxo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public long LineNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.FileIO.MalformedLineException.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linha da linha malformado.</summary>
+        <value>O número de linha da linha malformado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ReadFields%2A> método não é possível analisar uma linha usando o formato especificado, o <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> exceção será lançada. A exceção contém o número da linha da linha malformado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.FileIO.MalformedLineException.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma representação de cadeia de caracteres da exceção atual.</summary>
+        <returns>Uma representação de cadeia de caracteres de exceção atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.VisualBasic.FileIO.MalformedLineException.ToString%2A>Retorna uma representação da exceção atual que se destina a ser compreendidos por humanos. Quando a exceção contém dados sensíveis à cultura, a representação de cadeia de caracteres retornados por <xref:Microsoft.VisualBasic.FileIO.MalformedLineException.ToString%2A> é necessário levar em conta a cultura atual do sistema. Embora não haja nenhum requisitos exatos para o formato de cadeia de caracteres retornada, ele deve tentar refletem o valor do objeto como percebido pelo usuário.  
+  
+ A implementação padrão de <xref:Microsoft.VisualBasic.FileIO.MalformedLineException.ToString%2A> obtém o nome da classe que lançou a exceção atual, a mensagem, o resultado da chamada <xref:Microsoft.VisualBasic.FileIO.MalformedLineException.ToString%2A> na exceção interna, o resultado da chamada <xref:System.Environment.StackTrace%2A>e o número de linha da linha malformado se qualquer um desses membros for uma referência nula (`Nothing` no Visual Basic), seu valor não está incluído na cadeia de caracteres retornada.  
+  
+ Se não houver nenhuma mensagem de erro ou se é uma cadeia de caracteres vazia (""), nenhuma mensagem de erro será retornado. O nome da exceção interna e o rastreamento de pilha serão retornadas apenas se eles não são uma referência nula (`Nothing` no Visual Basic).  
+  
+ Este método substitui <xref:System.Exception.ToString%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

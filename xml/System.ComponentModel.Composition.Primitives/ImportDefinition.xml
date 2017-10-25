@@ -1,0 +1,282 @@
+<Type Name="ImportDefinition" FullName="System.ComponentModel.Composition.Primitives.ImportDefinition">
+  <TypeSignature Language="C#" Value="public class ImportDefinition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImportDefinition extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma importação exigida por um objeto <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ImportDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ImportDefinition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos derivados que chamam este construtor devem substituir o <xref:System.ComponentModel.Composition.Primitives.ImportDefinition.Constraint%2A> propriedade e, opcionalmente, o <xref:System.ComponentModel.Composition.Primitives.ImportDefinition.Cardinality%2A>, <xref:System.ComponentModel.Composition.Primitives.ImportDefinition.IsPrerequisite%2A> e <xref:System.ComponentModel.Composition.Primitives.ImportDefinition.IsRecomposable%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportDefinition (System.Linq.Expressions.Expression&lt;Func&lt;System.ComponentModel.Composition.Primitives.ExportDefinition,bool&gt;&gt; constraint, string contractName, System.ComponentModel.Composition.Primitives.ImportCardinality cardinality, bool isRecomposable, bool isPrerequisite);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.ComponentModel.Composition.Primitives.ExportDefinition, bool&gt;&gt; constraint, string contractName, valuetype System.ComponentModel.Composition.Primitives.ImportCardinality cardinality, bool isRecomposable, bool isPrerequisite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ImportDefinition.#ctor(System.Linq.Expressions.Expression{System.Func{System.ComponentModel.Composition.Primitives.ExportDefinition,System.Boolean}},System.String,System.ComponentModel.Composition.Primitives.ImportCardinality,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.ComponentModel.Composition.Primitives.ExportDefinition,System.Boolean&gt;&gt;" />
+        <Parameter Name="contractName" Type="System.String" />
+        <Parameter Name="cardinality" Type="System.ComponentModel.Composition.Primitives.ImportCardinality" />
+        <Parameter Name="isRecomposable" Type="System.Boolean" />
+        <Parameter Name="isPrerequisite" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Uma expressão que contém uma <see cref="T:System.Func`2" /> objeto que define as condições de uma <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> devem corresponder para satisfazer a definição de importação.</param>
+        <param name="contractName">O nome do contrato.</param>
+        <param name="cardinality">Um dos valores de enumeração que indica a cardinalidade de <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos exigidos pela definição de importação.</param>
+        <param name="isRecomposable">
+          <see langword="true" />para especificar que a definição de importação pode ser atendida várias vezes durante o tempo de vida de um <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> objeto; caso contrário, <see langword="false" />.</param>
+        <param name="isPrerequisite">
+          <see langword="true" />para especificar que a definição de importação deve ser atendida antes de uma <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> podem iniciar produzindo exportados objetos; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> classe com a restrição especificada, o nome do contrato e a cardinalidade e indica se a definição de importação é pode ser recomposta ou um pré-requisito.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="constraint" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="cardinality" />não é um dos valores de <see cref="T:System.ComponentModel.Composition.Primitives.ImportCardinality" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImportDefinition (System.Linq.Expressions.Expression&lt;Func&lt;System.ComponentModel.Composition.Primitives.ExportDefinition,bool&gt;&gt; constraint, string contractName, System.ComponentModel.Composition.Primitives.ImportCardinality cardinality, bool isRecomposable, bool isPrerequisite, System.Collections.Generic.IDictionary&lt;string,object&gt; metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.ComponentModel.Composition.Primitives.ExportDefinition, bool&gt;&gt; constraint, string contractName, valuetype System.ComponentModel.Composition.Primitives.ImportCardinality cardinality, bool isRecomposable, bool isPrerequisite, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ImportDefinition.#ctor(System.Linq.Expressions.Expression{System.Func{System.ComponentModel.Composition.Primitives.ExportDefinition,System.Boolean}},System.String,System.ComponentModel.Composition.Primitives.ImportCardinality,System.Boolean,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.ComponentModel.Composition.Primitives.ExportDefinition,System.Boolean&gt;&gt;" />
+        <Parameter Name="contractName" Type="System.String" />
+        <Parameter Name="cardinality" Type="System.ComponentModel.Composition.Primitives.ImportCardinality" />
+        <Parameter Name="isRecomposable" Type="System.Boolean" />
+        <Parameter Name="isPrerequisite" Type="System.Boolean" />
+        <Parameter Name="metadata" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Uma expressão que contém uma <see cref="T:System.Func`2" /> objeto que define as condições de uma <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> devem corresponder para satisfazer a definição de importação.</param>
+        <param name="contractName">O nome do contrato.</param>
+        <param name="cardinality">Um dos valores de enumeração que indica a cardinalidade de <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos exigidos pela definição de importação.</param>
+        <param name="isRecomposable">
+          <see langword="true" />para especificar que a definição de importação pode ser atendida várias vezes durante o tempo de vida de um <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> objeto; caso contrário, <see langword="false" />.</param>
+        <param name="isPrerequisite">
+          <see langword="true" />para especificar que a definição de importação deve ser atendida antes de uma <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> podem iniciar produzindo exportados objetos; caso contrário, <see langword="false" />.</param>
+        <param name="metadata">Os metadados associados com a importação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> com a restrição especificada, o nome de contrato, cardinalidade e metadados de classe e indica se a definição de importação é pode ser recomposta ou um pré-requisito.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cardinality">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.Composition.Primitives.ImportCardinality Cardinality { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Composition.Primitives.ImportCardinality Cardinality" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ImportDefinition.Cardinality" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ImportCardinality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cardinalidade das exportações exigido pela definição de importação.</summary>
+        <value>Um dos valores de enumeração que indica a cardinalidade do <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> objetos necessários para o <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />. O padrão é <see cref="F:System.ComponentModel.Composition.Primitives.ImportCardinality.ExactlyOne" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constraint">
+      <MemberSignature Language="C#" Value="public virtual System.Linq.Expressions.Expression&lt;Func&lt;System.ComponentModel.Composition.Primitives.ExportDefinition,bool&gt;&gt; Constraint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.ComponentModel.Composition.Primitives.ExportDefinition, bool&gt;&gt; Constraint" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ImportDefinition.Constraint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression&lt;System.Func&lt;System.ComponentModel.Composition.Primitives.ExportDefinition,System.Boolean&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma expressão que define condições que a importação deve atender para coincidir com a definição de importação.</summary>
+        <value>Uma expressão que contém um objeto <see cref="T:System.Func`2" /> que define as condições de uma <see cref="T:System.ComponentModel.Composition.Primitives.Export" /> devem satisfazer para corresponder a <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituições dessa propriedade nunca devem retornar `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">A propriedade não foi substituída por uma classe derivada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractName">
+      <MemberSignature Language="C#" Value="public virtual string ContractName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContractName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ImportDefinition.ContractName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do contrato.</summary>
+        <value>O nome do contrato.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConstraintSatisfiedBy">
+      <MemberSignature Language="C#" Value="public virtual bool IsConstraintSatisfiedBy (System.ComponentModel.Composition.Primitives.ExportDefinition exportDefinition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsConstraintSatisfiedBy(class System.ComponentModel.Composition.Primitives.ExportDefinition exportDefinition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ImportDefinition.IsConstraintSatisfiedBy(System.ComponentModel.Composition.Primitives.ExportDefinition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exportDefinition" Type="System.ComponentModel.Composition.Primitives.ExportDefinition" />
+      </Parameters>
+      <Docs>
+        <param name="exportDefinition">A definição de exportação para testar.</param>
+        <summary>Obtém um valor que indica se a exportação representada pela definição de especificado satisfaz as restrições desta definição de importação.</summary>
+        <returns>
+          <see langword="true" />Se as restrições forem atendidas; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrerequisite">
+      <MemberSignature Language="C#" Value="public virtual bool IsPrerequisite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrerequisite" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ImportDefinition.IsPrerequisite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a definição de importação deve ser atendida antes de pode iniciar uma parte produzindo exportado objetos.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> devem ser atendidos antes de uma <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> objeto pode começar a produzir exportado objetos; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRecomposable">
+      <MemberSignature Language="C#" Value="public virtual bool IsRecomposable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRecomposable" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ImportDefinition.IsRecomposable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a definição de importação pode ser atendida várias vezes.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.ComponentModel.Composition.Primitives.ImportDefinition" /> pode ser satisfeita várias vezes durante o tempo de vida de um <see cref="T:System.ComponentModel.Composition.Primitives.ComposablePart" /> objeto; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IDictionary&lt;string,object&gt; Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.Primitives.ImportDefinition.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os metadados associados a essa importação.</summary>
+        <value>Uma coleção que contém os metadados associados a essa importação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade nunca deve retornar nula. Importações sem metadados devem retornar vazio <xref:System.Collections.Generic.IDictionary%602> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.Primitives.ImportDefinition.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres da definição de importação.</summary>
+        <returns>Uma representação de cadeia de caracteres da definição de importação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

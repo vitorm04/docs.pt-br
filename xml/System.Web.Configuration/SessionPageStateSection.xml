@@ -1,0 +1,131 @@
+<Type Name="SessionPageStateSection" FullName="System.Web.Configuration.SessionPageStateSection">
+  <TypeSignature Language="C#" Value="public sealed class SessionPageStateSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SessionPageStateSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.SessionPageStateSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura o <see langword="sessionPageState" /> seção. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SessionPageStateSection> refere-se para o `sessionPageState` seção do arquivo de configuração.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.SessionPageStateSection> pode ler e gravar informações de e para a seção correspondente do arquivo de configuração de acordo com a propriedade de seção <xref:System.Configuration.SectionInformation.AllowDefinition%2A> cujo valor é <xref:System.Configuration.ConfigurationAllowDefinition.Everywhere>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.SessionPageStateSection> objeto do arquivo de configuração associado a um aplicativo Web existente.  
+  
+ [!code-csharp[System.Web.Configuration.SessionPageStateSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionPageStateSection/CS/sessionpagestatesection.cs#1)]
+ [!code-vb[System.Web.Configuration.SessionPageStateSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionPageStateSection/VB/sessionpagestatesection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionPageStateSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SessionPageStateSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de <see cref="T:System.Web.Configuration.SessionPageStateSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SessionPageStateSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.SessionPageStateSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultHistorySize">
+      <MemberSignature Language="C#" Value="public const int DefaultHistorySize = 9;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultHistorySize = (9)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.SessionPageStateSection.DefaultHistorySize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary>Define o tamanho do histórico de página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.SessionPageStateSection.DefaultHistorySize> propriedade do arquivo de configuração associado a um aplicativo Web existente.  
+  
+ [!code-csharp[System.Web.Configuration.SessionPageStateSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SessionPageStateSection/CS/sessionpagestatesection.cs#2)]
+ [!code-vb[System.Web.Configuration.SessionPageStateSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SessionPageStateSection/VB/sessionpagestatesection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HistorySize">
+      <MemberSignature Language="C#" Value="public int HistorySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HistorySize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionPageStateSection.HistorySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("historySize", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MinValue=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho do histórico de página.</summary>
+        <value>O tamanho do histórico de página.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SessionPageStateSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

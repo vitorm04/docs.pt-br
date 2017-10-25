@@ -1,0 +1,427 @@
+<Type Name="DebuggerVisualizerAttribute" FullName="System.Diagnostics.DebuggerVisualizerAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DebuggerVisualizerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DebuggerVisualizerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DebuggerVisualizerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct, AllowMultiple=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que o tipo tem um visualizador. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo pode ser usado no nível de assembly. Normalmente os construtores de atributo levam dois tipos.  Os dois tipos são um visualizador e uma origem de objeto visualizador, especificado como tipos ou nomes de tipo totalmente qualificado do assembly. A segunda opção é fornecida para que o assembly de visualizador não precisa ser referenciados pelo assembly que contém o <xref:System.Diagnostics.DebuggerVisualizerAttribute>. Isso permite que um criador de componente enviar o visualizador em uma DLL a ser chamado apenas em tempo de depuração. O <xref:System.Diagnostics.DebuggerVisualizerAttribute.Description%2A> propriedade especifica a descrição do visualizador que aparece na caixa de lista suspensa. Os parâmetros de destino especificam o tipo que é o destino do visualizador. Para obter mais informações sobre visualizadores, consulte [criar os visualizadores personalizados](http://msdn.microsoft.com/library/c24c006f-f2ac-429f-89db-677fc0c6e1ea).  
+  
+> [!NOTE]
+>  Visualizador e Visualizador de objeto a implementação de origem depende do depurador de hospedagem.  Para obter informações sobre como criar um visualizador para [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], consulte [como: gravar um visualizador](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (string visualizerTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string visualizerTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizerTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="visualizerTypeName">O nome de tipo totalmente qualificado do visualizador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" /> classe, especificando o nome do tipo de visualizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DebuggerVisualizerAttribute> pode ser aplicado a assemblies, classes e estruturas. Para obter informações sobre o uso desse atributo, consulte [como: gravar um visualizador](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (Type visualizer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type visualizer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizer" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="visualizer">O tipo do visualizador.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" />, especificando o tipo do visualizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DebuggerVisualizerAttribute> pode ser aplicado a assemblies, classes e estruturas. Para obter informações sobre o uso desse atributo, consulte [como: gravar um visualizador](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visualizer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (string visualizerTypeName, string visualizerObjectSourceTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string visualizerTypeName, string visualizerObjectSourceTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizerTypeName" Type="System.String" />
+        <Parameter Name="visualizerObjectSourceTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="visualizerTypeName">O nome de tipo totalmente qualificado do visualizador.</param>
+        <param name="visualizerObjectSourceTypeName">O nome totalmente qualificado do tipo da origem do objeto do visualizador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" /> classe, especificando o nome do tipo de visualizador e o nome do tipo da fonte de objeto visualizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DebuggerVisualizerAttribute> pode ser aplicado a assemblies, classes e estruturas. Para obter informações sobre o uso desse atributo, consulte [como: gravar um visualizador](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (string visualizerTypeName, Type visualizerObjectSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string visualizerTypeName, class System.Type visualizerObjectSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizerTypeName" Type="System.String" />
+        <Parameter Name="visualizerObjectSource" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="visualizerTypeName">O nome de tipo totalmente qualificado do visualizador.</param>
+        <param name="visualizerObjectSource">O tipo de origem do objeto do visualizador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" /> classe, especificando o nome do tipo de visualizador e o tipo de origem de objeto do visualizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DebuggerVisualizerAttribute> pode ser aplicado a assemblies, classes e estruturas. Para obter informações sobre o uso desse atributo, consulte [como: gravar um visualizador](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visualizerObjectSource" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (Type visualizer, string visualizerObjectSourceTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type visualizer, string visualizerObjectSourceTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizer" Type="System.Type" />
+        <Parameter Name="visualizerObjectSourceTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="visualizer">O tipo do visualizador.</param>
+        <param name="visualizerObjectSourceTypeName">O nome totalmente qualificado do tipo da origem do objeto do visualizador.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" />, especificando o tipo do visualizador e o nome do tipo da origem do objeto do visualizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DebuggerVisualizerAttribute> pode ser aplicado a assemblies, classes e estruturas. Para obter informações sobre o uso desse atributo, consulte [como: gravar um visualizador](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visualizer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerVisualizerAttribute (Type visualizer, Type visualizerObjectSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type visualizer, class System.Type visualizerObjectSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.DebuggerVisualizerAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visualizer" Type="System.Type" />
+        <Parameter Name="visualizerObjectSource" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="visualizer">O tipo do visualizador.</param>
+        <param name="visualizerObjectSource">O tipo de origem do objeto do visualizador.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.DebuggerVisualizerAttribute" />, especificando o tipo do visualizador e o tipo da origem do objeto do visualizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.DebuggerVisualizerAttribute> pode ser aplicado a assemblies, classes e estruturas. Para obter informações sobre o uso desse atributo, consulte [como: gravar um visualizador](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visualizerObjectSource" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerVisualizerAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição do visualizador.</summary>
+        <value>A descrição do visualizador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public Type Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Target" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerVisualizerAttribute.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de destino quando o atributo é aplicado no nível de assembly.</summary>
+        <value>O tipo que é o destino do visualizador.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O valor não pode ser definido porque ele é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetTypeName">
+      <MemberSignature Language="C#" Value="public string TargetTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerVisualizerAttribute.TargetTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome totalmente qualificado do tipo quando o atributo é aplicado no nível de assembly.</summary>
+        <value>O nome de tipo totalmente qualificado do tipo de destino.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o destino foi especificado por tipo (em vez de nome de tipo), o nome retornado é o <xref:System.Type.AssemblyQualifiedName%2A> propriedade do tipo de destino.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualizerObjectSourceTypeName">
+      <MemberSignature Language="C#" Value="public string VisualizerObjectSourceTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VisualizerObjectSourceTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerVisualizerAttribute.VisualizerObjectSourceTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de tipo totalmente qualificado do Visualizador de objeto de fonte.</summary>
+        <value>O nome totalmente qualificado do tipo da origem do objeto do visualizador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a fonte do objeto visualizador foi especificada por seu tipo, o valor retornado é o <xref:System.Type.AssemblyQualifiedName%2A> propriedade do tipo de origem de objeto visualizador.  
+  
+ Um objeto de fonte de visualizador criado para [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] devem herdar do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] classe `VisualizerObjectSource` classe. Para obter informações sobre como criar um visualizador, consulte [como: gravar um visualizador](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VisualizerTypeName">
+      <MemberSignature Language="C#" Value="public string VisualizerTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VisualizerTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DebuggerVisualizerAttribute.VisualizerTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Debug</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de tipo totalmente qualificado do visualizador.</summary>
+        <value>O nome de tipo totalmente qualificado do visualizador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o visualizador foi especificado por seu tipo, o valor retornado é o <xref:System.Type.AssemblyQualifiedName%2A> propriedade para o tipo de visualizador.  
+  
+ Para obter informações sobre como criar um visualizador, consulte [como: gravar um visualizador](http://msdn.microsoft.com/library/625a0d4f-abcc-43f2-9f8c-31c131a4378e).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,87 @@
+<Type Name="StoryBreak" FullName="System.Windows.Documents.DocumentStructures.StoryBreak">
+  <TypeSignature Language="C#" Value="public class StoryBreak : System.Windows.Documents.DocumentStructures.BlockElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StoryBreak extends System.Windows.Documents.DocumentStructures.BlockElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.DocumentStructures.StoryBreak" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.DocumentStructures.BlockElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Identifica o início ou término de texto composto de um ou mais <see cref="T:System.Windows.Documents.DocumentStructures.StoryFragment" /> elementos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Documents.DocumentStructures.StoryBreak> só pode ser um elemento filho de um <xref:System.Windows.Documents.DocumentStructures.StoryFragment>.  Além disso, um <xref:System.Windows.Documents.DocumentStructures.StoryBreak> só pode ser o primeiro filho, o último filho ou os dois elementos filho e o sobrenome em um <xref:System.Windows.Documents.DocumentStructures.StoryFragment>.  O local do <xref:System.Windows.Documents.DocumentStructures.StoryBreak> elemento em um <xref:System.Windows.Documents.DocumentStructures.StoryFragment> indica se o texto estiver contido em fragmentos adicionais e se os fragmentos adicionais precedem ou execute o fragmento atual.  
+  
+ Um <xref:System.Windows.Documents.DocumentStructures.StoryBreak> como o primeiro elemento em um <xref:System.Windows.Documents.DocumentStructures.StoryFragment> indica o início de um texto.  
+  
+```  
+<!-- Fragment 1 -->  
+<StoryFragment>  
+  <StoryBreak />   <!-- Identifies the start of a story when          -->  
+                   <!-- immediately after an opening <StoryFragment>. -->  
+  <ParagraphStructure>  
+    <NamedElement NameReference="a" />  
+    <NamedElement NameReference="b" />  
+  </ParagraphStructure>  
+</StoryFragment>   <!-- Story continues in the next <StoryFragment>.  -->  
+```  
+  
+ Um <xref:System.Windows.Documents.DocumentStructures.StoryBreak> como o último elemento em um <xref:System.Windows.Documents.DocumentStructures.StoryFragment> indica o final de um texto.  
+  
+```  
+<!-- Fragment 2 -->  
+<StoryFragment>    <!-- Story continued from prior <StoryFragment>.    -->  
+  <ParagraphStructure>    
+    <NamedElement NameReference="c" />  
+  </ParagraphStructure>  
+  <StoryBreak />   <!-- Identifies the end of a story when             -->  
+                   <!-- immediately before a closing </StoryFragment>. -->  
+</StoryFragment>  
+```  
+  
+ Um texto que está contido em uma única <xref:System.Windows.Documents.DocumentStructures.StoryFragment> terá dois <xref:System.Windows.Documents.DocumentStructures.StoryBreak> elementos como os elementos filho e o sobrenome do fragmento.  
+  
+```  
+<!-- Fragments 1 and 2 Merged -->  
+<ParagraphStructure>  
+  <NamedElement NameReference="a" />  
+  <NamedElement NameReference="b" />  
+  <NamedElement NameReference="c" />  
+</ParagraphStructure>  
+```  
+  
+ <xref:System.Windows.Documents.DocumentStructures.StoryFragment>elementos que são totalmente contidos em uma única página irá iniciar e terminar com <xref:System.Windows.Documents.DocumentStructures.StoryBreak> elementos desde que o conteúdo é totalmente contido em um único fragmento.  
+  
+ A posição do <xref:System.Windows.Documents.DocumentStructures.StoryBreak> elementos em um <xref:System.Windows.Documents.DocumentStructures.StoryFragment> é útil quando você deseja acessar o conteúdo na direção direta ou inversa no documento. Por exemplo quando a mesclagem de fragmentos em ordem subsequente, um <xref:System.Windows.Documents.DocumentStructures.StoryFragment> que termina com um <xref:System.Windows.Documents.DocumentStructures.StoryBreak> indica o final do texto e se há são não mais fragmentos de mesclagem.  Da mesma forma quando história mesclar fragmentos na ordem inversa, um <xref:System.Windows.Documents.DocumentStructures.StoryFragment> que começa com um <xref:System.Windows.Documents.DocumentStructures.StoryBreak> não indica o início do texto e se há nenhum fragmentos anteriores a serem mesclados.  
+  
+ A capacidade de processar os fragmentos de texto em direções direta ou inversa é importante para muitos usos de aplicativo.  Por exemplo, um parágrafo que abrange as quebras de página é dividido em vários fragmentos de texto, um fragmento de cada página.  Uma interface de usuário que fornece um recurso de clique três vezes para selecionar e copiar um parágrafo inteiro para a área de transferência deve ser capaz de mesclar vários fragmentos de texto quando um parágrafo abrange várias páginas.  Além disso se o usuário clica três vezes em parte de um parágrafo que inicia na primeira página, o aplicativo deve identificar que a <xref:System.Windows.Documents.DocumentStructures.StoryFragment> começa com um <xref:System.Windows.Documents.DocumentStructures.StoryBreak> , mas não termina com um <xref:System.Windows.Documents.DocumentStructures.StoryBreak>.  Isso indica que o <xref:System.Windows.Documents.DocumentStructures.StoryFragment> que está contida na próxima página deve ser carregada e adicionada ao final do fragmento atual.  Da mesma forma se o usuário clica três vezes na parte do parágrafo localizado na última página, o aplicativo deve identificar que a <xref:System.Windows.Documents.DocumentStructures.StoryFragment> termina com um <xref:System.Windows.Documents.DocumentStructures.StoryBreak> , mas não começa com um <xref:System.Windows.Documents.DocumentStructures.StoryBreak>.  Isso indica que o <xref:System.Windows.Documents.DocumentStructures.StoryFragment> que é independente na página anterior deve ser carregado e adicionado ao início do fragmento atual.  O aplicativo também deve ser capaz de processar instruções diretas e inversas para o caso de grandes parágrafos que abrangem três ou mais páginas e em que ponto a seleção do usuário está em uma página interna.  
+  
+ Como um <xref:System.Windows.Documents.DocumentStructures.StoryFragment> é limitado a uma única página, o uso de <xref:System.Windows.Documents.DocumentStructures.StoryBreak> elementos permitem que cada <xref:System.Windows.Documents.DocumentStructures.StoryFragment> conter XML bem formado, mas ainda tem uma estrutura hierárquica de um documento inteiro.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StoryBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DocumentStructures.StoryBreak.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.DocumentStructures.StoryBreak" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

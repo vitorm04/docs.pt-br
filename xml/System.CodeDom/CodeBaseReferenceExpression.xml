@@ -1,0 +1,66 @@
+<Type Name="CodeBaseReferenceExpression" FullName="System.CodeDom.CodeBaseReferenceExpression">
+  <TypeSignature Language="C#" Value="public class CodeBaseReferenceExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeBaseReferenceExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeBaseReferenceExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma referência para a classe base.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeBaseReferenceExpression>representa uma referência para a classe base da classe atual. A classe base é, às vezes, também conhecido como a classe pai ou superclasse. Referências a classe base são usadas ao substituir um método ou propriedade para chamar a implementação da classe base do método ou propriedade. Por exemplo, uma substituição de um método ToString acrescenta uma cadeia de caracteres ao final da classe base `ToString` da chamada do método seria base. ToString () em c#.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como usar um <xref:System.CodeDom.CodeBaseReferenceExpression> para fazer referência a um método de classe base.  
+  
+ [!code-cpp[CodeBaseReferenceExpressionExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeBaseReferenceExpressionExample/CPP/codebasereferenceexpressionexample.cpp#2)]
+ [!code-csharp[CodeBaseReferenceExpressionExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeBaseReferenceExpressionExample/CS/codebasereferenceexpressionexample.cs#2)]
+ [!code-vb[CodeBaseReferenceExpressionExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeBaseReferenceExpressionExample/VB/codebasereferenceexpressionexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeBaseReferenceExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeBaseReferenceExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeBaseReferenceExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

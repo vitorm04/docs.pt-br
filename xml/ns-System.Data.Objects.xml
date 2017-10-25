@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Objects">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Objects" /> namespace inclui classes que fornecem acesso para a funcionalidade básica do objeto de serviços. Essas classes permitem consultar, inserir, atualizar e excluir dados, trabalhando com objetos fortemente tipados do CLR que são instâncias de tipos de entidade. Serviços de objetos dá suporte a consultas LINQ (consulta) e o Entity SQL em tipos que são definidos no modelo de dados uma entidade (EDM). Serviços de objetos materializa os dados retornados como objetos e propaga as alterações de objeto para a fonte de dados. Ele também fornece recursos de controle de alterações, objetos de associação para controles e tratamento de simultaneidade. Para obter mais informações, consulte <see href="http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038">visão geral dos serviços de objeto (Entity Framework)</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

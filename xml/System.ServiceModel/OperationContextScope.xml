@@ -1,0 +1,159 @@
+<Type Name="OperationContextScope" FullName="System.ServiceModel.OperationContextScope">
+  <TypeSignature Language="C#" Value="public sealed class OperationContextScope : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OperationContextScope extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.OperationContextScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Cria um bloco no qual um objeto <see cref="T:System.ServiceModel.OperationContext" /> está no escopo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationContextScope> classe para criar um escopo para um determinado <xref:System.ServiceModel.OperationContext> objeto ou um escopo para um novo <xref:System.ServiceModel.OperationContext> usando um especificado do objeto <xref:System.ServiceModel.IContextChannel> objeto. Um <xref:System.ServiceModel.OperationContextScope> pode ser usado em uma [!INCLUDE[indigo1](~/includes/indigo1-md.md)] service ou [!INCLUDE[indigo2](~/includes/indigo2-md.md)] aplicativo cliente.  
+  
+ Uma vez o <xref:System.ServiceModel.OperationContextScope> objeto estabeleceu o contexto da operação atual, você pode usar o <xref:System.ServiceModel.OperationContext> para:  
+  
+-   Acessar e modificar os cabeçalhos de mensagem de entrada e saída e outras propriedades.  
+  
+-   O tempo de execução, incluindo distribuidores, o host, canal e extensões de acesso.  
+  
+-   Outros tipos de contextos, como segurança, instância e contextos de solicitação de acesso.  
+  
+-   Acessar o canal associado a <xref:System.ServiceModel.OperationContext> objeto ou (se o canal implementa <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) identificador de sessão do canal associado.  
+  
+ Quando um <xref:System.ServiceModel.OperationContextScope> é criado, atual <xref:System.ServiceModel.OperationContext> é armazenado e o novo <xref:System.ServiceModel.OperationContext> torna-se aquele retornado pelo <xref:System.ServiceModel.OperationContext.Current%2A> propriedade. Quando o <xref:System.ServiceModel.OperationContextScope> é descartado, o original <xref:System.ServiceModel.OperationContext> for restaurado.  
+  
+> [!WARNING]
+>  Não use o padrão assíncrono "await" dentro de um bloco OperationContextScope. Quando ocorre a continuação, ela poderá ser executada em um thread diferente e OperationContextScope está thread específico. Se você precisar chamar "await" para uma chamada assíncrona, usá-lo fora do bloco OperationContextScope.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ServiceModel.OperationContextScope> para criar um novo contexto em um aplicativo cliente para adicionar um cabeçalho personalizado à mensagem de saída.  
+  
+ [!code-csharp[OperationContextScope#3](~/samples/snippets/csharp/VS_Snippets_CFX/operationcontextscope/cs/client.cs#3)]
+ [!code-vb[OperationContextScope#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/operationcontextscope/vb/client.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperationContextScope (System.ServiceModel.IContextChannel channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.IContextChannel channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OperationContextScope.#ctor(System.ServiceModel.IContextChannel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="channel" Type="System.ServiceModel.IContextChannel" />
+      </Parameters>
+      <Docs>
+        <param name="channel">O canal a ser usado ao criar o escopo de um novo <see cref="T:System.ServiceModel.OperationContext" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.OperationContextScope" /> que usa o <see cref="T:System.ServiceModel.IContextChannel" /> especificado para criar um novo <see cref="T:System.ServiceModel.OperationContext" /> para o escopo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationContextScope.%23ctor%2A> construtor para criar um novo <xref:System.ServiceModel.OperationContext> para um canal de cliente que pode ser usado para adicionar ou modificar os cabeçalhos de mensagem de saída, ler os cabeçalhos de mensagem de entrada, ou acessar outras propriedades de tempo de execução do <xref:System.ServiceModel.OperationContext>.  
+  
+ Os cabeçalhos adicionados para o <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A?displayProperty=nameWithType> propriedade recém-criado <xref:System.ServiceModel.OperationContext> se aplicam somente ao canal que foi passado para o <xref:System.ServiceModel.OperationContextScope.%23ctor%2A> construtor. Se o usuário cria um novo canal de dentro de seu escopo os cabeçalhos não são aplicados às mensagens enviadas no canal de novo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ServiceModel.OperationContextScope> para criar um novo contexto em um aplicativo cliente para adicionar um cabeçalho personalizado à mensagem de saída.  
+  
+ [!code-csharp[OperationContextScope#4](~/samples/snippets/csharp/VS_Snippets_CFX/operationcontextscope/cs/client.cs#4)]
+ [!code-vb[OperationContextScope#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/operationcontextscope/vb/client.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperationContextScope (System.ServiceModel.OperationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.OperationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OperationContextScope.#ctor(System.ServiceModel.OperationContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.OperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Ativo <see cref="T:System.ServiceModel.OperationContext" /> no escopo criado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.OperationContextScope" /> classe para criar um escopo especificado <see cref="T:System.ServiceModel.OperationContext" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationContextScope.%23ctor%2A> construtor para criar um bloco de código dentro do qual especificado <xref:System.ServiceModel.OperationContextScope> objeto é o escopo atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OperationContextScope.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Restaura o original <see cref="T:System.ServiceModel.OperationContext" /> para o contexto de ativo e reciclagem de <see cref="T:System.ServiceModel.OperationContextScope" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

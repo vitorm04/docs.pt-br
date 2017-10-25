@@ -1,0 +1,93 @@
+<Type Name="DefaultInterfaceAttribute" FullName="System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DefaultInterfaceAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DefaultInterfaceAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a interface padrão de uma classe gerenciada do tempo de execução do Windows.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você desenvolve [!INCLUDE[wrt](~/includes/wrt-md.md)] componentes, use esse atributo quando você deseja especificar a interface padrão que é usada para empacotar a classe de atributo é aplicado a. Isso não é necessário se você permitir que as interfaces de classe a ser gerado automaticamente.  
+  
+ Um [!INCLUDE[wrt](~/includes/wrt-md.md)] classe deve ter uma interface padrão. Se o utilitário WinMdExp.exe não detectar uma interface padrão para uma classe quando ele cria o [!INCLUDE[wrt](~/includes/wrt-md.md)]componente, ele escolhe uma interface da seguinte maneira:  
+  
+-   Se a classe foi gerada automaticamente interfaces, ele usa o primeiro deles como o padrão.  
+  
+-   Se a classe não tem todas as interfaces geradas automaticamente, ele usará a primeira interface na lista de implementação de interface da classe.  
+  
+ Você pode aplicar o <xref:System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute> para a classe de atributo ou aplicar o `Windows.Foundations.Metadata.DefaultAttribute` atributo a uma interface. O segundo tem precedência se ambos os atributos são fornecidos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultInterfaceAttribute (Type defaultInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type defaultInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultInterface" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="defaultInterface">O tipo de interface que é especificado como a interface padrão para a classe de atributo é aplicado ao.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultInterface">
+      <MemberSignature Language="C#" Value="public Type DefaultInterface { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DefaultInterface" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.WindowsRuntime.DefaultInterfaceAttribute.DefaultInterface" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de interface padrão.</summary>
+        <value>O tipo de interface padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

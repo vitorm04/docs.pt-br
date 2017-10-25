@@ -1,0 +1,82 @@
+<Type Name="CertificateEmbeddingOption" FullName="System.IO.Packaging.CertificateEmbeddingOption">
+  <TypeSignature Language="C#" Value="public enum CertificateEmbeddingOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CertificateEmbeddingOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.CertificateEmbeddingOption" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o local onde o certificado x. 509 que é usado na assinatura é armazenado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o certificado for NotEmbedded no pacote, um aplicativo que verifica as assinaturas deve fornecer uma cópia do certificado para verificar as assinaturas que são assinadas por ele.  
+  
+ InSignaturePart adiciona dois elementos informativos, `<KeyName>` e `<KeyValue>`, como parte do <xref:System.Security.Cryptography.Xml.Signature.KeyInfo%2A> campo da assinatura digital armazenada. O `<KeyName>` e `<KeyValue>` elementos não são processados como parte da validação de assinatura e, portanto, não são protegidos contra modificações. Aplicativos não devem fazer nenhuma suposição sobre a validade desses dois elementos. Para evitar a modificação não foi detectada e possível confusão, os aplicativos devem usar a opção InCertificatePart em vez de InSignaturePart. A opção InCertificatePart não fornecer ou expor um `<KeyName>` ou `<KeyValue>`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.IO.Packaging.CertificateEmbeddingOption.InSignaturePart> para definir o <xref:System.IO.Packaging.PackageDigitalSignatureManager>.<xref:System.IO.Packaging.PackageDigitalSignatureManager.CertificateOption%2A> propriedade. Para o exemplo completo, consulte [criando um pacote com um exemplo de Assinatura Digital](http://go.microsoft.com/fwlink/?LinkID=159966).  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InCertificatePart">
+      <MemberSignature Language="C#" Value="InCertificatePart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Packaging.CertificateEmbeddingOption InCertificatePart = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Packaging.CertificateEmbeddingOption.InCertificatePart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.CertificateEmbeddingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O certificado é inserido em seu próprio <see cref="T:System.IO.Packaging.PackagePart" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InSignaturePart">
+      <MemberSignature Language="C#" Value="InSignaturePart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Packaging.CertificateEmbeddingOption InSignaturePart = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Packaging.CertificateEmbeddingOption.InSignaturePart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.CertificateEmbeddingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O certificado está inserido no <see cref="P:System.IO.Packaging.PackageDigitalSignature.SignaturePart" /> que é criado para a assinatura que está sendo adicionada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotEmbedded">
+      <MemberSignature Language="C#" Value="NotEmbedded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Packaging.CertificateEmbeddingOption NotEmbedded = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Packaging.CertificateEmbeddingOption.NotEmbedded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.CertificateEmbeddingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O certificado não é inserido no pacote.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,172 @@
+<Type Name="ManagedToNativeComInteropStubAttribute" FullName="System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ManagedToNativeComInteropStubAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagedToNativeComInteropStubAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dá suporte para personalização do usuário de stubs de interoperabilidade em cenários de interoperabilidade gerenciada para COM.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este atributo permite que os desenvolvedores de interoperabilidade que tem conhecimento sobre o empacotamento e o funcionamento interno de chamadas interop para fazer o seguinte:  
+  
+-   Tirar proveito de stubs de interoperabilidade personalizados em tempo de compilação em vez de tempo de execução.  
+  
+-   Depure stubs de interoperabilidade personalizados.  
+  
+-   Fornece recursos de empacotamento dentro de um stub de que o tempo de execução não fornece.  
+  
+-   Fornece recursos de expedição de método específicas do usuário.  
+  
+ Aplique o atributo em um método em uma interface para especificar um método de stub correspondente para interoperabilidade de gerenciado para nativo.  
+  
+ Se esse atributo for encontrado durante o tempo de execução, o common language runtime não gera dinamicamente um stub de interoperabilidade. Em vez disso, ele chama o fragmento de código personalizado que foi criado no momento da compilação.  
+  
+ O <xref:System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute> atributo tem as seguintes características:  
+  
+-   O atributo pode ser usado somente em métodos de interfaces que são marcados como `[ComImport]`. Se o atributo é aplicado a tipos de interface não, ele será ignorado pelo tempo de execução.  
+  
+-   O atributo pode ser usado apenas uma vez no mesmo método em uma interface. Se for usado mais de uma vez, o compilador gera um erro de atributo duplicado.  
+  
+-   O atributo não é herdado de uma interface base. Interfaces derivadas devem atribuir explicitamente o atributo.  
+  
+-   O assembly que contém o método atribuído também deve conter o fragmento de código personalizado.  
+  
+ Métodos sobrecarregados stub são válidos. Embora você especificar apenas o tipo e o nome do método de stub, o tempo de execução descobrirá o fragmento de código correspondente. Ele faz isso examinando todos os argumentos de método de interface, e, em seguida, executar correspondência com o uso explícito de assinatura completa `this` ponteiro.  
+  
+ Também é possível que vários métodos em uma interface para compartilhar o mesmo método de stub; No entanto, você deve ter cuidado ao usar stubs compartilhados.  
+  
+> [!NOTE]
+>  Métodos de stub devem ser estáticos.  
+  
+ Você poderia informar o tempo de execução para usar um stub de interoperabilidade personalizado em tempo de compilação em vez de tempo de execução com o código c# a seguir:  
+  
+```  
+[ComImport]  
+interface IMyInterface  
+{  
+    [ManagedToNativeComInteropStubAttribute(typeof(TestStubClass),  
+              "ForwardTestStub")]  
+    void GetString (string arg);  
+}  
+```  
+  
+ Você pode usar o código a seguir para declarar o método de stub correspondente:  
+  
+```  
+class TestStubClass  
+{  
+    internal static void ForwardTestStub(IMyInterface thisObject,  
+             string arg) {…}  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagedToNativeComInteropStubAttribute (Type classType, string methodName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type classType, string methodName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="classType" Type="System.Type" />
+        <Parameter Name="methodName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="classType">A classe que contém o método de stub necessária.</param>
+        <param name="methodName">O nome do método de stub.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute" /> classe com o nome de tipo e método de classe especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="methodName" />não foi encontrado.  
+  
+ -ou-  
+  
+ O método não é estático ou não genérica.  
+  
+ -ou-  
+  
+ Lista de parâmetros do método não corresponde à lista de parâmetro esperado para o stub.</exception>
+        <exception cref="T:System.MethodAccessException">A interface que contém o método de interoperabilidade gerenciado não tem acesso para o método de stub, porque o método de stub tem acessibilidade privada ou protegida, ou devido a um problema de segurança.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassType">
+      <MemberSignature Language="C#" Value="public Type ClassType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ClassType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute.ClassType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a classe que contém o método de stub necessária.</summary>
+        <value>A classe que contém o fragmento de código de interoperabilidade personalizado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do método de stub.</summary>
+        <value>O nome de um stub de interoperabilidade personalizado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

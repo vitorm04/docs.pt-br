@@ -1,0 +1,169 @@
+<Type Name="DesignerDataTableBase" FullName="System.ComponentModel.Design.Data.DesignerDataTableBase">
+  <TypeSignature Language="C#" Value="public abstract class DesignerDataTableBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DesignerDataTableBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Data.DesignerDataTableBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define as propriedades e métodos compartilhados entre tabelas de armazenamento de dados e modos de exibição do repositório de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.DesignerDataTableBase> classe é um dos vários tipos que representam o esquema de um repositório de dados em tempo de design. Esses itens de esquema são disponibilizadas para controles pelos designers de implementar o <xref:System.ComponentModel.Design.Data.IDataEnvironment> interface. Controla o acesso a objetos de esquema chamando o <xref:System.ComponentModel.Design.Data.IDataEnvironment.GetConnectionSchema%2A> método da interface.  
+  
+ O <xref:System.ComponentModel.Design.Data.DesignerDataTableBase> classe fornece as propriedades e métodos compartilhados entre dados de tabelas em um repositório de dados e modos de exibição definidos nessas tabelas de dados.  
+  
+ Quando você herda o <xref:System.ComponentModel.Design.Data.DesignerDataTableBase> classe, você deve substituir o <xref:System.ComponentModel.Design.Data.DesignerDataTableBase.CreateColumns%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignerDataTableBase (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DesignerDataTableBase.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da tabela ou exibição.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.Data.DesignerDataTableBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializa a classe para uso por uma instância de classe herdada. Este construtor pode ser chamado somente por uma classe herdada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignerDataTableBase (string name, string owner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name, string owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DesignerDataTableBase.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="owner" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da tabela ou exibição.</param>
+        <param name="owner">O proprietário do repositório de dados da tabela ou exibição.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.Data.DesignerDataTableBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializa a classe para uso por uma instância de classe herdada. Este construtor pode ser chamado somente por uma classe herdada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Columns">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Columns { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Columns" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataTableBase.Columns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de colunas definidas para uma tabela ou exibição.</summary>
+        <value>Uma coleção de colunas definidas para uma tabela ou exibição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.DesignerDataTableBase.Columns%2A> propriedade é preenchida pelo <xref:System.ComponentModel.Design.Data.DesignerDataTableBase.CreateColumns%2A> tempo método primeiro o <xref:System.ComponentModel.Design.Data.DesignerDataTableBase.Columns%2A> propriedade for acessada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateColumns">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.ICollection CreateColumns ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.ICollection CreateColumns() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DesignerDataTableBase.CreateColumns" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna uma coleção de objetos de repositório de dados de coluna.</summary>
+        <returns>Uma coleção de objetos <see cref="T:System.ComponentModel.Design.Data.DesignerDataColumn" /> .</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.DesignerDataTableBase.CreateColumns%2A> método é chamado na primeira vez o <xref:System.ComponentModel.Design.Data.DesignerDataTableBase.Columns%2A> propriedade é acessada, para preencher a coleção de colunas de repositório de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataTableBase.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do repositório de dados de tabela ou exibição.</summary>
+        <value>O nome do repositório de dados de tabela ou exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public string Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Owner" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataTableBase.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o proprietário do repositório de dados de tabela ou exibição.</summary>
+        <value>O proprietário do repositório de dados de tabela ou exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

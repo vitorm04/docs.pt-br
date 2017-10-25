@@ -1,0 +1,486 @@
+<Type Name="SignInRequestMessage" FullName="System.IdentityModel.Services.SignInRequestMessage">
+  <TypeSignature Language="C#" Value="public class SignInRequestMessage : System.IdentityModel.Services.WSFederationMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SignInRequestMessage extends System.IdentityModel.Services.WSFederationMessage" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.SignInRequestMessage" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Services.WSFederationMessage</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma mensagem de Solicitação de Conexão do Web Services Federation.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma mensagem de entrada do WS-Federation é enviada por uma terceira parte confiável (RP) para um serviço de token de segurança (STS) para solicitar um token de segurança. O parâmetro de wa deve ser definido como "wsignout 1.0" e o parâmetro wtrealm deve ser definido para o realm de segurança do recurso solicitado (geralmente é a URL do recurso solicitado). Outros parâmetros opcionais também podem ser especificados na solicitação.  
+  
+ Um <xref:System.IdentityModel.Services.SignOutRequestMessage> mensagem é criada por um dos métodos estáticos de <xref:System.IdentityModel.Services.SignOutRequestMessage> classe, por exemplo o <xref:System.IdentityModel.Services.WSFederationMessage.CreateFromUri%2A> método, quando o parâmetro de wa é definido como "wsignin 1.0", não há nenhum parâmetro wresult ou wresultptr presente e um parâmetro wtrealm ou um parâmetro de wreply está presente.  
+  
+> [!IMPORTANT]
+>  Para compatibilidade com os serviços de Federação do Active Directory (AD FS) versões 1.0, Windows Identity Foundation (WIF) permite o parâmetro wtrealm ou o parâmetro wreply a ser definido (ou ambos) de uma mensagem de entrada para ser válido. No entanto, o protocolo WS-Federation exige que o parâmetro wtrealm esteja presente em uma solicitação de entrada. Na maioria dos cenários, você deve garantir que o parâmetro wtrealm for especificado.  
+  
+ O <xref:System.IdentityModel.Services.SignInRequestMessage> classe expõe várias propriedades que podem ser usadas para definir ou acessar os parâmetros de mensagens individuais. Esses parâmetros também podem ser definidos ou acessados por meio de <xref:System.IdentityModel.Services.FederationMessage.Parameters%2A> dicionário. Por exemplo, você pode ler o parâmetro wtrealm na mensagem de qualquer um de <xref:System.IdentityModel.Services.SignInRequestMessage.Realm%2A> propriedade ou especificando "wtrealm" como a chave para o <xref:System.IdentityModel.Services.FederationMessage.Parameters%2A> dicionário.  
+  
+ [!INCLUDE[wif_wsfed_ref](~/includes/wif-wsfed-ref-md.md)]  
+  
+   
+  
+## Examples  
+ [!code-csharp[WifSignInMessage#2](~/samples/snippets/csharp/VS_Snippets_Misc/wifsigninmessage/cs/webapplication1/default.aspx.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignInRequestMessage (Uri baseUrl, string realm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri baseUrl, string realm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SignInRequestMessage.#ctor(System.Uri,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseUrl" Type="System.Uri" />
+        <Parameter Name="realm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUrl">A URL base ao qual se aplica a mensagem de entrada.</param>
+        <param name="realm">O valor do parâmetro wtrealm mensagem. Define a propriedade <see cref="P:System.IdentityModel.Services.SignInRequestMessage.Realm" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Services.SignInRequestMessage" /> classe com o parâmetro de URL e wtrealm base especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro da mensagem wa (o <xref:System.IdentityModel.Services.WSFederationMessage.Action%2A> propriedade) é inicializado como "wsignin 1.0".  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="realm" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignInRequestMessage (Uri baseUrl, string realm, string reply);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri baseUrl, string realm, string reply) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SignInRequestMessage.#ctor(System.Uri,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="baseUrl" Type="System.Uri" />
+        <Parameter Name="realm" Type="System.String" />
+        <Parameter Name="reply" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseUrl">A URL de Base ao qual se aplica a mensagem de entrada.</param>
+        <param name="realm">O valor do parâmetro wtrealm mensagem. Se não <see langword="null" /> ou vazio, define o <see cref="P:System.IdentityModel.Services.SignInRequestMessage.Realm" /> propriedade.</param>
+        <param name="reply">O URI para que respondam. (O valor do parâmetro de mensagem wreply.) Se não for nulo ou vazio, define o <see cref="P:System.IdentityModel.Services.SignInRequestMessage.Reply" /> propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Services.SignInRequestMessage" /> classe usando o URI de base especificado, wtrealm e wreply parâmetro. Dá suporte à criação de mensagem não padrão para compatibilidade com versões anteriores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro da mensagem wa (o <xref:System.IdentityModel.Services.WSFederationMessage.Action%2A> propriedade) é inicializado como "wsignin 1.0".  
+  
+ Dá suporte à criação de mensagem não padrão para compatibilidade com versões anteriores. No caso típico, um parâmetro de mensagem wtrealm deve ser especificado. Este construtor permite apenas um parâmetro de mensagem wreply deve ser especificado para compatibilidade com versões anteriores com a versão 1.0 do serviço de Federação do Active Directory (AD FS).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Ambos <paramref name="realm" /> e <paramref name="reply" /> são <see langword="null" /> ou uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationType">
+      <MemberSignature Language="C#" Value="public string AuthenticationType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.AuthenticationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wauth da mensagem.</summary>
+        <value>O tipo de autenticação. Isso é especificado como um URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro wauth é como o elemento de wst:AuthenticationType definido em WS-Trust. O valor deve ser definido como uma cadeia de caracteres que contém um URI que identifica o tipo de autenticação que é usada.  
+  
+ O parâmetro wauth é opcional. Definir o <xref:System.IdentityModel.Services.SignInRequestMessage.AuthenticationType%2A> propriedade `null` ou uma cadeia de caracteres vazia para remover o parâmetro wauth da mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ocorre uma tentativa de definir um valor que não é um URI válido, absoluto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentTime">
+      <MemberSignature Language="C#" Value="public string CurrentTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentTime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.CurrentTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wct da mensagem.</summary>
+        <value>O valor do parâmetro wct especificado como uma cadeia de caracteres de data e hora em UTC.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro wct Especifica a hora atual no momento em que a mensagem foi criada. O parâmetro wct é opcional. Defina como o <xref:System.IdentityModel.Services.SignInRequestMessage.CurrentTime%2A> propriedade `null` ou uma cadeia de caracteres vazia para remover o parâmetro wct da mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ocorre uma tentativa de definir um valor que não é uma cadeia de caracteres de datetime válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Federation">
+      <MemberSignature Language="C#" Value="public string Federation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Federation" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.Federation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wfed da mensagem.</summary>
+        <value>O valor do parâmetro wfed. Isso é especificado como um URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro wfed Especifica o contexto de federação para a mensagem. O parâmetro wfed é opcional. Defina como o <xref:System.IdentityModel.Services.SignInRequestMessage.Federation%2A> propriedade `null` ou uma cadeia de caracteres vazia para remover o parâmetro wfed da mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Freshness">
+      <MemberSignature Language="C#" Value="public string Freshness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Freshness" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.Freshness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wfresh da mensagem.</summary>
+        <value>O valor do parâmetro wfresh. Isso deve ser um inteiro representado como uma cadeia de caracteres. Especifica a duração máxima em minutos em que a autenticação é válida. Zero indica que o usuário deve ser avisado antes o token é emitido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro wfresh indica a idade máxima em minutos que a autenticação é válida. O parâmetro wfresh é opcional. Definir o <xref:System.IdentityModel.Services.SignInRequestMessage.Freshness%2A> propriedade `null` ou uma cadeia de caracteres vazia para remover o parâmetro wfresh da mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Tentativa de definir um valor que não é uma representação de cadeia de caracteres de um número inteiro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HomeRealm">
+      <MemberSignature Language="C#" Value="public string HomeRealm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HomeRealm" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.HomeRealm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro whr da mensagem.</summary>
+        <value>O valor do parâmetro whr. Isso é especificado como um URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro whr identifica o realm de segurança do provedor de identidade para usar para a solicitação. Ele pode ser especificado como a URL do IP-STS para usar ou como um identificador que seja entendido pelo destinatário da solicitação. O parâmetro whr é um conjunto opcional de <xref:System.IdentityModel.Services.SignInRequestMessage.HomeRealm%2A> propriedade `null` ou uma cadeia de caracteres vazia para remover o parâmetro whr da mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Policy">
+      <MemberSignature Language="C#" Value="public string Policy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Policy" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.Policy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro de wp da mensagem.</summary>
+        <value>O valor do parâmetro wp. Isso é especificado como um URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Identifica a política a ser usado para a solicitação. Normalmente, ele se aplica a ação (parâmetro wa), mas pode ter implicações de mais amplas. O parâmetro wp é opcional. Definir o <xref:System.IdentityModel.Services.SignInRequestMessage.Policy%2A> propriedade `null` ou uma cadeia de caracteres vazia para remover o parâmetro wp da mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ocorre uma tentativa de definir um valor que não é um URI válido, absoluto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Realm">
+      <MemberSignature Language="C#" Value="public string Realm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Realm" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.Realm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wtrealm da mensagem.</summary>
+        <value>O valor do parâmetro wtrealm. Isso é especificado como um URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro wtrealm Especifica o realm de segurança ao qual pertence o recurso solicitado. Isso geralmente é a URL do recurso solicitado.  
+  
+> [!IMPORTANT]
+>  Para compatibilidade com os serviços de Federação do Active Directory (AD FS) versões 1.0, Windows Identity Foundation (WIF) permite o parâmetro wtrealm ou o parâmetro wreply a ser definido (ou ambos) de uma mensagem de entrada para ser válido. No entanto, o protocolo WS-Federation exige que o parâmetro wtrealm esteja presente em uma solicitação de entrada. Na maioria dos cenários, você deve garantir que o parâmetro wtrealm for especificado.  
+  
+ Definir o <xref:System.IdentityModel.Services.SignInRequestMessage.Realm%2A> propriedade `null` ou uma cadeia de caracteres vazia para remover o parâmetro wtrealm da mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ocorre uma tentativa de definir um valor que não é um URI válido, absoluto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reply">
+      <MemberSignature Language="C#" Value="public string Reply { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Reply" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.Reply" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wreply da mensagem.</summary>
+        <value>O valor do parâmetro wreply. Isso é especificado como um URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contém o URI para o qual as respostas devem ser direcionadas. O parâmetro wtrealm geralmente é usado para especificar esse URI. No entanto, em cenários mais complexos, o parâmetro wtrealm pode ser usado para especificar o domínio de segurança para a solicitação, por exemplo, o site inteiro, e o parâmetro wreply pode ser usado para especificar um recurso específico em que território, por exemplo, um documento, página ou ponto de extremidade. O parâmetro wreply é opcional. Definir o <xref:System.IdentityModel.Services.SignInRequestMessage.Reply%2A> propriedade `null` ou uma cadeia de caracteres vazia para remover o parâmetro wreply da mensagem.  
+  
+> [!IMPORTANT]
+>  Para compatibilidade com os serviços de Federação do Active Directory (AD FS) versões 1.0, Windows Identity Foundation (WIF) permite o parâmetro wtrealm ou o parâmetro wreply a ser definido (ou ambos) de uma mensagem de entrada para ser válido. No entanto, o protocolo WS-Federation exige que o parâmetro wtrealm esteja presente em uma solicitação de entrada. Na maioria dos cenários, você deve garantir que o parâmetro wtrealm for especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ocorre uma tentativa de definir um valor que não é um URI válido, absoluto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public string Request { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Request" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.Request" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wreq da mensagem.</summary>
+        <value>O valor do parâmetro wreq.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro wreq Especifica uma solicitação de token usando um `<wst:RequestSecurityToken>` elemento ou uma mensagem de solicitação completa, conforme descrito em WS-Trust. O parâmetro wreq é opcional. Definir o <xref:System.IdentityModel.Services.SignInRequestMessage.Request%2A> propriedade `null` ou uma cadeia de caracteres vazia para remover o parâmetro wreq da mensagem.  
+  
+ Se o <xref:System.IdentityModel.Services.SignInRequestMessage.Request%2A> propriedade for especificada, o <xref:System.IdentityModel.Services.SignInRequestMessage.RequestPtr%2A> propriedade não pode ser especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestPtr">
+      <MemberSignature Language="C#" Value="public string RequestPtr { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestPtr" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.RequestPtr" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wreqptr da mensagem.</summary>
+        <value>O valor do parâmetro wreqptr.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifica uma URL que indica onde encontrar a solicitação, expressada como um `<wst:RequestSecurityToken>` elemento. O parâmetro wreqptr é opcional. Definir o <xref:System.IdentityModel.Services.SignInRequestMessage.RequestPtr%2A> propriedade `null` ou uma cadeia de caracteres vazia para remover o parâmetro wreqptr da mensagem.  
+  
+ Se o <xref:System.IdentityModel.Services.SignInRequestMessage.RequestPtr%2A> propriedade for especificada, o <xref:System.IdentityModel.Services.SignInRequestMessage.Request%2A> propriedade não pode ser especificada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ocorre uma tentativa de definir um valor que não é um URI válido, absoluto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUrl">
+      <MemberSignature Language="C#" Value="public string RequestUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestUrl" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.RequestUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma representação de cadeia de caracteres da URL que corresponde a essa mensagem.</summary>
+        <value>Uma URL serializada da instância atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres contém uma URL (incluindo parâmetros de consulta) que é criada pela instância atual de serialização. O <xref:System.IdentityModel.Services.SignInRequestMessage.Write%2A> método é chamado para executar a serialização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resource">
+      <MemberSignature Language="C#" Value="public string Resource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Resource" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SignInRequestMessage.Resource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro wres da mensagem.</summary>
+        <value>O valor do parâmetro wres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifica a URL para o recurso a ser acessado. O parâmetro wres é um parâmetro herdado. Normalmente, o parâmetro wtrealm (o <xref:System.IdentityModel.Services.SignInRequestMessage.Realm%2A> propriedade) é usado em vez disso. O parâmetro wres é opcional. Definido como o <xref:System.IdentityModel.Services.SignInRequestMessage.Resource%2A> propriedade `null` ou uma cadeia de caracteres vazia para remover o parâmetro wres da mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ocorre uma tentativa de definir um valor que não é um URI válido, absoluto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected override void Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SignInRequestMessage.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Valida a instância atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Para compatibilidade com os serviços de Federação do Active Directory (AD FS) versões 1.0, Windows Identity Foundation (WIF) permite o parâmetro wtrealm ou o parâmetro wreply a ser definido (ou ambos) de uma mensagem de entrada para ser válido. No entanto, o protocolo WS-Federation exige que o parâmetro wtrealm esteja presente em uma solicitação de entrada. Na maioria dos cenários, você deve garantir que o parâmetro wtrealm for especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O parâmetro wa (o <see cref="P:System.IdentityModel.Services.WSFederationMessage.Action" /> propriedade) não está definido como "wsignin 1.0".</exception>
+        <exception cref="T:System.IdentityModel.Services.WSFederationMessageException">O parâmetro wtrealm e o parâmetro wreply não está presente. (O <see cref="P:System.IdentityModel.Services.SignInRequestMessage.Realm" /> propriedade e o <see cref="P:System.IdentityModel.Services.SignInRequestMessage.Reply" /> são de propriedade <see langword="null" /> ou vazio.)  
+  
+ -ou-  
+  
+ O parâmetro wreq e o parâmetro wreqptr estão presentes. (O <see cref="P:System.IdentityModel.Services.SignInRequestMessage.Request" /> propriedade e o <see cref="P:System.IdentityModel.Services.SignInRequestMessage.RequestPtr" /> propriedade são definidos.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SignInRequestMessage.Write(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> no qual gravar a mensagem.</param>
+        <summary>Grava essa mensagem no formulário de cadeia de caracteres de consulta para o gravador de texto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.IdentityModel.Services.SignInRequestMessage.Validate%2A> método antes de gravar a mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

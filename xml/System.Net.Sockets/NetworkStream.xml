@@ -1,0 +1,1565 @@
+<Type Name="NetworkStream" FullName="System.Net.Sockets.NetworkStream">
+  <TypeSignature Language="C#" Value="public class NetworkStream : System.IO.Stream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NetworkStream extends System.IO.Stream" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.NetworkStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Stream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece o fluxo de dados subjacente para acesso à rede.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.NetworkStream> classe fornece métodos para enviar e receber dados pela <xref:System.Net.Sockets.SocketType.Stream> sockets no modo de bloqueio. Para obter mais informações sobre o bloqueio sem bloqueio <xref:System.Net.Sockets.Socket>s, consulte [usando um soquete do cliente assíncrono](~/docs/framework/network-programming/using-an-asynchronous-client-socket.md). Você pode usar o <xref:System.Net.Sockets.NetworkStream> classe ambos síncronas e assíncronas para transferência de dados. Para obter mais informações sobre a comunicação síncrona e assíncrona, consulte [soquetes](~/docs/framework/network-programming/sockets.md).  
+  
+ Para criar um <xref:System.Net.Sockets.NetworkStream>, você deve fornecer um conectado <xref:System.Net.Sockets.Socket>. Você também pode especificar qual <xref:System.IO.FileAccess> permissão a <xref:System.Net.Sockets.NetworkStream> tem sobre fornecido <xref:System.Net.Sockets.Socket>. Por padrão, fechando o <xref:System.Net.Sockets.NetworkStream> não fecha fornecido <xref:System.Net.Sockets.Socket>. Se você quiser que o <xref:System.Net.Sockets.NetworkStream> tenha permissão para fechar fornecido <xref:System.Net.Sockets.Socket>, você deve especificar `true` para o valor da `ownsSocket` parâmetro.  
+  
+ Use o <xref:System.Net.Sockets.NetworkStream.Write%2A> e <xref:System.Net.Sockets.NetworkStream.Read%2A> métodos de um único simple e/s síncronas bloqueio de thread. Se você quiser processar a e/s usando threads separados, considere o uso de <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> e <xref:System.Net.Sockets.NetworkStream.EndWrite%2A> métodos, ou o <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> e <xref:System.Net.Sockets.NetworkStream.EndRead%2A> métodos de comunicação.  
+  
+ O <xref:System.Net.Sockets.NetworkStream> não oferece suporte a acesso aleatório ao fluxo de dados de rede. O valor da <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> propriedade, o que indica se o fluxo oferece suporte à busca, é sempre `false`; ler o <xref:System.Net.Sockets.NetworkStream.Position%2A> propriedade, ler o <xref:System.Net.Sockets.NetworkStream.Length%2A> propriedade ou chamar o <xref:System.Net.Sockets.NetworkStream.Seek%2A> método lançará um <xref:System.NotSupportedException>.  
+  
+ Ler e gravar operações podem ser executadas simultaneamente em uma instância do <xref:System.Net.Sockets.NetworkStream> classe sem a necessidade de sincronização. Como há um thread exclusivo para as operações de gravação e um thread exclusivo para as operações de leitura, haverá sem interferência entre leitura e gravação threads e nenhuma sincronização é necessária.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Net.Sockets.NetworkStream> de conectada <xref:System.Net.Sockets.SocketType.Stream> <xref:System.Net.Sockets.Socket> e executar básica bloqueio e/s síncronas.  
+  
+ [!code-cpp[NetworkStream_Synch_SendAndReceive#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CPP/source.cpp#2)]
+ [!code-csharp[NetworkStream_Synch_SendAndReceive#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CS/source.cs#2)]
+ [!code-vb[NetworkStream_Synch_SendAndReceive#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetworkStream (System.Net.Sockets.Socket socket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Sockets.Socket socket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.#ctor(System.Net.Sockets.Socket)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="socket" Type="System.Net.Sockets.Socket" />
+      </Parameters>
+      <Docs>
+        <param name="socket">O <see cref="T:System.Net.Sockets.Socket" /> que o <see cref="T:System.Net.Sockets.NetworkStream" /> usará para enviar e receber dados.</param>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Net.Sockets.NetworkStream" /> para o <see cref="T:System.Net.Sockets.Socket" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.NetworkStream> é criada com acesso de leitura/gravação especificado <xref:System.Net.Sockets.Socket>. O <xref:System.Net.Sockets.NetworkStream> não possuir subjacente <xref:System.Net.Sockets.Socket>, para chamar o <xref:System.Net.Sockets.NetworkStream.Close%2A> método não fecha o <xref:System.Net.Sockets.Socket>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra como criar um <xref:System.Net.Sockets.NetworkStream> com um <xref:System.Net.Sockets.Socket>.  
+  
+ [!code-cpp[NetworkStream_Synch_SendAndReceive#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CPP/source.cpp#2)]
+ [!code-csharp[NetworkStream_Synch_SendAndReceive#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CS/source.cs#2)]
+ [!code-vb[NetworkStream_Synch_SendAndReceive#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="socket" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">O parâmetro <paramref name="socket" /> não está conectado.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Net.Sockets.Socket.SocketType" /> do parâmetro <paramref name="socket" /> não é <see cref="F:System.Net.Sockets.SocketType.Stream" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="socket" /> está em um estado sem bloqueio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetworkStream (System.Net.Sockets.Socket socket, bool ownsSocket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Sockets.Socket socket, bool ownsSocket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.#ctor(System.Net.Sockets.Socket,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="socket" Type="System.Net.Sockets.Socket" />
+        <Parameter Name="ownsSocket" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="socket">O <see cref="T:System.Net.Sockets.Socket" /> que o <see cref="T:System.Net.Sockets.NetworkStream" /> usará para enviar e receber dados.</param>
+        <param name="ownsSocket">Defina como <see langword="true" /> para indicar que o <see cref="T:System.Net.Sockets.NetworkStream" /> assumirá a propriedade do <see cref="T:System.Net.Sockets.Socket" />; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Sockets.NetworkStream" /> para o <see cref="T:System.Net.Sockets.Socket" /> especificado com a propriedade <see cref="T:System.Net.Sockets.Socket" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.NetworkStream> é criada com acesso de leitura/gravação especificado <xref:System.Net.Sockets.Socket>. Se o valor de `ownsSocket` parâmetro é `true`, o <xref:System.Net.Sockets.NetworkStream> se apropria de subjacente <xref:System.Net.Sockets.Socket>e chamar o <xref:System.Net.Sockets.NetworkStream.Close%2A> método fecha também subjacente <xref:System.Net.Sockets.Socket>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Net.Sockets.NetworkStream> com propriedade do <xref:System.Net.Sockets.Socket>.  
+  
+ [!code-cpp[NetworkStream_Synch_SendAndReceive#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CPP/source.cpp#2)]
+ [!code-csharp[NetworkStream_Synch_SendAndReceive#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CS/source.cs#2)]
+ [!code-vb[NetworkStream_Synch_SendAndReceive#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="socket" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">O parâmetro <paramref name="socket" /> não está conectado.  
+  
+ -ou-  
+  
+ O valor da propriedade <see cref="P:System.Net.Sockets.Socket.SocketType" /> do parâmetro <paramref name="socket" /> não é <see cref="F:System.Net.Sockets.SocketType.Stream" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="socket" /> está em um estado sem bloqueio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetworkStream (System.Net.Sockets.Socket socket, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Sockets.Socket socket, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.#ctor(System.Net.Sockets.Socket,System.IO.FileAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="socket" Type="System.Net.Sockets.Socket" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="socket">O <see cref="T:System.Net.Sockets.Socket" /> que o <see cref="T:System.Net.Sockets.NetworkStream" /> usará para enviar e receber dados.</param>
+        <param name="access">Uma combinação bit a bit do <see cref="T:System.IO.FileAccess" /> valores que especificam o tipo de acesso fornecido para o <see cref="T:System.Net.Sockets.NetworkStream" /> em fornecidos <see cref="T:System.Net.Sockets.Socket" />.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Net.Sockets.NetworkStream" /> classe especificado <see cref="T:System.Net.Sockets.Socket" /> com os direitos de acesso especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.NetworkStream> é criada com o acesso especificado especificado <xref:System.Net.Sockets.Socket>. Com esse construtor o <xref:System.Net.Sockets.NetworkStream> não possuir subjacente <xref:System.Net.Sockets.Socket>, para chamar o <xref:System.Net.Sockets.NetworkStream.Close%2A> método não fecha subjacente <xref:System.Net.Sockets.Socket>.  
+  
+ O `access` conjuntos de parâmetros de <xref:System.Net.Sockets.NetworkStream.CanRead%2A> e <xref:System.Net.Sockets.NetworkStream.CanWrite%2A> propriedades da <xref:System.Net.Sockets.NetworkStream>. Se você especificar <xref:System.IO.FileAccess.Write>, em seguida, o <xref:System.Net.Sockets.NetworkStream> permite chamadas para o <xref:System.Net.Sockets.NetworkStream.Write%2A> método. Se você especificar <xref:System.IO.FileAccess.Read>, em seguida, o <xref:System.Net.Sockets.NetworkStream> permite chamadas para o <xref:System.Net.Sockets.NetworkStream.Read%2A> método. Se você especificar <xref:System.IO.FileAccess.ReadWrite>, as duas chamadas de método são permitidas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Net.Sockets.NetworkStream> com a capacidade de ler e gravar o <xref:System.Net.Sockets.Socket>.  
+  
+ [!code-cpp[NetworkStream_Async_SendAndReceive#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CPP/source.cpp#1)]
+ [!code-csharp[NetworkStream_Async_SendAndReceive#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CS/source.cs#1)]
+ [!code-vb[NetworkStream_Async_SendAndReceive#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="socket" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">O parâmetro <paramref name="socket" /> não está conectado.  
+  
+ -ou-  
+  
+ o <see cref="P:System.Net.Sockets.Socket.SocketType" /> propriedade o <paramref name="socket" /> parâmetro não é <see cref="F:System.Net.Sockets.SocketType.Stream" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="socket" /> está em um estado sem bloqueio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetworkStream (System.Net.Sockets.Socket socket, System.IO.FileAccess access, bool ownsSocket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Sockets.Socket socket, valuetype System.IO.FileAccess access, bool ownsSocket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.#ctor(System.Net.Sockets.Socket,System.IO.FileAccess,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="socket" Type="System.Net.Sockets.Socket" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="ownsSocket" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="socket">O <see cref="T:System.Net.Sockets.Socket" /> que o <see cref="T:System.Net.Sockets.NetworkStream" /> usará para enviar e receber dados.</param>
+        <param name="access">Uma combinação bit a bit do <see cref="T:System.IO.FileAccess" /> valores que especifica o tipo de acesso fornecido para o <see cref="T:System.Net.Sockets.NetworkStream" /> em fornecidos <see cref="T:System.Net.Sockets.Socket" />.</param>
+        <param name="ownsSocket">Defina como <see langword="true" /> para indicar que o <see cref="T:System.Net.Sockets.NetworkStream" /> assumirá a propriedade do <see cref="T:System.Net.Sockets.Socket" />; caso contrário, <see langword="false" />.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Net.Sockets.NetworkStream" /> classe especificado <see cref="T:System.Net.Sockets.Socket" /> com os direitos de acesso especificado e especificado <see cref="T:System.Net.Sockets.Socket" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.NetworkStream> é criada com acesso de leitura/gravação especificado <xref:System.Net.Sockets.Socket>. Se o valor da `ownsSocket` parâmetro é `true`, o <xref:System.Net.Sockets.NetworkStream> se apropria de subjacente <xref:System.Net.Sockets.Socket>e chamar o <xref:System.Net.Sockets.NetworkStream.Close%2A> método fecha também subjacente <xref:System.Net.Sockets.Socket>.  
+  
+ O `access` conjuntos de parâmetros de <xref:System.Net.Sockets.NetworkStream.CanRead%2A> e <xref:System.Net.Sockets.NetworkStream.CanWrite%2A> propriedades da <xref:System.Net.Sockets.NetworkStream>. Se você especificar <xref:System.IO.FileAccess.Write>, em seguida, o <xref:System.Net.Sockets.NetworkStream> permite chamadas para o <xref:System.Net.Sockets.NetworkStream.Write%2A> método. Se você especificar <xref:System.IO.FileAccess.Read>, em seguida, o <xref:System.Net.Sockets.NetworkStream> permite chamadas para o <xref:System.Net.Sockets.NetworkStream.Read%2A> método. Se você especificar <xref:System.IO.FileAccess.ReadWrite>, as duas chamadas de método são permitidas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Net.Sockets.NetworkStream> com a capacidade de ler e gravar o <xref:System.Net.Sockets.Socket>. Propriedade do <xref:System.Net.Sockets.Socket> é fornecido a este <xref:System.Net.Sockets.NetworkStream> especificando `true` para o `ownsSocket` parâmetro.  
+  
+ [!code-cpp[NetworkStream_Async_SendAndReceive#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CPP/source.cpp#1)]
+ [!code-csharp[NetworkStream_Async_SendAndReceive#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CS/source.cs#1)]
+ [!code-vb[NetworkStream_Async_SendAndReceive#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="socket" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">O parâmetro <paramref name="socket" /> não está conectado.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Net.Sockets.Socket.SocketType" /> do parâmetro <paramref name="socket" /> não é <see cref="F:System.Net.Sockets.SocketType.Stream" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="socket" /> está em um estado sem bloqueio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRead">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginRead (byte[] buffer, int offset, int size, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginRead(unsigned int8[] buffer, int32 offset, int32 size, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz do tipo <see cref="T:System.Byte" /> que é o local na memória onde os dados lidos de <see cref="T:System.Net.Sockets.NetworkStream" /> serão armazenados.</param>
+        <param name="offset">O local na <c>buffer</c> para começar a armazenar os dados.</param>
+        <param name="size">O número de bytes a serem lidos de <see cref="T:System.Net.Sockets.NetworkStream" />.</param>
+        <param name="callback">O delegado <see cref="T:System.AsyncCallback" /> que é executado quando <see cref="M:System.Net.Sockets.NetworkStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /> é concluído.</param>
+        <param name="state">Um objeto que contém dados adicionais definidos pelo usuário.</param>
+        <summary>Inicia uma leitura assíncrona do <see cref="T:System.Net.Sockets.NetworkStream" />.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa a chamada assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> método inicia de forma assíncrona lendo dados dos buffers de rede de entrada. Chamar o <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> método lhe oferece a capacidade de receber dados dentro de um thread de execução separado.  
+  
+ Você deve criar um método de retorno de chamada que implementa o <xref:System.AsyncCallback> delegar e passar o nome para o <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> método. No mínimo, o `state` parâmetro deve conter o <xref:System.Net.Sockets.NetworkStream>. Como deseja obter os dados recebidos dentro de seu método de retorno de chamada, você deve criar uma pequena classe ou estrutura para manter um buffer de leitura e quaisquer outras informações úteis. Passe a instância de classe ou estrutura para a <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> método por meio de `state` parâmetro.  
+  
+ O método de retorno de chamada deve chamar o <xref:System.Net.Sockets.NetworkStream.EndRead%2A> método. Quando o aplicativo chama <xref:System.Net.Sockets.NetworkStream.BeginRead%2A>, o sistema aguardará até que os dados são recebidos ou ocorrerá um erro e, em seguida, o sistema usará um thread separado para executar o método de retorno de chamada especificada e blocos em <xref:System.Net.Sockets.NetworkStream.EndRead%2A> até fornecido <xref:System.Net.Sockets.NetworkStream> lê os dados ou gera uma exceção. Se você quiser que o thread original para bloquear depois de chamar o <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> método, use o <xref:System.Threading.WaitHandle.WaitOne%2A> método. Chamar <xref:System.Threading.EventWaitHandle.Set%2A> no método de retorno de chamada quando o thread original para continuar a executar. Para obter informações adicionais sobre métodos de retorno de chamada de gravação, consulte [Marshaling de um delegado como um método de retorno de chamada](~/docs/framework/interop/marshaling-a-delegate-as-a-callback-method.md).  
+  
+ O <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> método lê a quantidade de dados estiver disponível, até o número de bytes especificado pelo `size` parâmetro.  
+  
+> [!NOTE]
+>  Se você receber um <xref:System.IO.IOException>, verifique o <xref:System.Exception.InnerException%2A> propriedade para determinar se ele foi causado por um <xref:System.Net.Sockets.SocketException>. Nesse caso, use o <xref:System.Net.Sockets.SocketException.ErrorCode%2A> propriedade para obter o código de erro específico e consulte a Windows Sockets versão 2 API documentação códigos de erro no MSDN para obter uma descrição detalhada do erro.  
+  
+ Ler e gravar operações podem ser executadas simultaneamente em uma instância do <xref:System.Net.Sockets.NetworkStream> classe sem a necessidade de sincronização. Como há um thread exclusivo para as operações de gravação e um thread exclusivo para as operações de leitura, haverá sem interferência entre leitura e gravação threads e nenhuma sincronização é necessária.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> para ler dados de forma assíncrona do fluxo de rede. O `myReadCallBack` método implementa o <xref:System.AsyncCallback> delegate e é chamado pelo sistema quando <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> retorna.  
+  
+ [!code-cpp[NetworkStream_Async_SendAndReceive#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CPP/source.cpp#3)]
+ [!code-csharp[NetworkStream_Async_SendAndReceive#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CS/source.cs#3)]
+ [!code-vb[NetworkStream_Async_SendAndReceive#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="offset" /> é menor que 0.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="offset" /> é maior que o tamanho do parâmetro <paramref name="buffer" />.  
+  
+ -ou-  
+  
+ O <paramref name="size" /> é menor que 0.  
+  
+ -ou-  
+  
+ O <paramref name="size" /> é maior que o tamanho da subtração de <paramref name="buffer" /> e do valor do parâmetro <paramref name="offset" />.</exception>
+        <exception cref="T:System.IO.IOException">O <see cref="T:System.Net.Sockets.Socket" /> subjacente está fechado.  
+  
+ -ou-  
+  
+ Houve uma falha durante a leitura da rede.  
+  
+ -ou-  
+  
+ Ocorreu um erro ao acessar o soquete.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.Sockets.NetworkStream" /> está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWrite">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginWrite (byte[] buffer, int offset, int size, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginWrite(unsigned int8[] buffer, int32 offset, int32 size, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz do tipo <see cref="T:System.Byte" /> que contém os dados a serem gravados no <see cref="T:System.Net.Sockets.NetworkStream" />.</param>
+        <param name="offset">O local na <c>buffer</c> para começar a enviar os dados.</param>
+        <param name="size">O número de bytes a serem gravados no <see cref="T:System.Net.Sockets.NetworkStream" />.</param>
+        <param name="callback">O delegado <see cref="T:System.AsyncCallback" /> que é executado quando <see cref="M:System.Net.Sockets.NetworkStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /> é concluído.</param>
+        <param name="state">Um objeto que contém dados adicionais definidos pelo usuário.</param>
+        <summary>Inicia uma gravação assíncrona em um fluxo.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa a chamada assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> método inicia uma operação de envio assíncrono para o host remoto. Chamar o <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> método lhe oferece a capacidade de enviar dados dentro de um thread de execução separado.  
+  
+ Você deve criar um método de retorno de chamada que implementa o <xref:System.AsyncCallback> delegar e passar o nome para o <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> método. No mínimo, o `state` parâmetro deve conter o <xref:System.Net.Sockets.NetworkStream>. Se o retorno de chamada precisa de mais informações, você pode criar uma pequena classe ou estrutura para manter o <xref:System.Net.Sockets.NetworkStream> e outras informações necessárias. Passe a instância de classe ou estrutura para a <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> método por meio de `state` parâmetro.  
+  
+ O método de retorno de chamada deve implementar o <xref:System.Net.Sockets.NetworkStream.EndWrite%2A> método. Quando o aplicativo chama <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A>, o sistema usa um thread separado para executar o método de retorno de chamada especificada e blocos em <xref:System.Net.Sockets.NetworkStream.EndWrite%2A> até que o <xref:System.Net.Sockets.NetworkStream> envia o número de bytes solicitado ou gera uma exceção. Se você quiser que o thread original para bloquear depois de chamar o <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> método, use o <xref:System.Threading.WaitHandle.WaitOne%2A> método. Chamar <xref:System.Threading.EventWaitHandle.Set%2A> no método de retorno de chamada quando o thread original para continuar a executar. Para obter informações adicionais sobre métodos de retorno de chamada de gravação, consulte [Marshaling de um delegado como um método de retorno de chamada](~/docs/framework/interop/marshaling-a-delegate-as-a-callback-method.md).  
+  
+> [!NOTE]
+>  Se você receber um <xref:System.IO.IOException>, verifique o <xref:System.Exception.InnerException%2A> propriedade para determinar se ele foi causado por um <xref:System.Net.Sockets.SocketException>. Nesse caso, use o <xref:System.Net.Sockets.SocketException.ErrorCode%2A> propriedade para obter o código de erro específico e consulte a Windows Sockets versão 2 API documentação códigos de erro no MSDN para obter uma descrição detalhada do erro.  
+  
+ Ler e gravar operações podem ser executadas simultaneamente em uma instância do <xref:System.Net.Sockets.NetworkStream> classe sem a necessidade de sincronização. Como há um thread exclusivo para as operações de gravação e um thread exclusivo para as operações de leitura, haverá sem interferência entre leitura e gravação threads e nenhuma sincronização é necessária.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> para gravar dados de forma assíncrona em um fluxo de rede. O `myWriteCallBack` método implementa o <xref:System.AsyncCallback> delegate e é chamado pelo sistema quando <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> retorna.  
+  
+ [!code-cpp[NetworkStream_Async_SendAndReceive#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CPP/source.cpp#2)]
+ [!code-csharp[NetworkStream_Async_SendAndReceive#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CS/source.cs#2)]
+ [!code-vb[NetworkStream_Async_SendAndReceive#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="offset" /> é menor que 0.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="offset" /> é maior que o tamanho de <paramref name="buffer" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="size" /> é menor que 0.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="size" /> é maior que o tamanho de <paramref name="buffer" /> subtraído do valor do parâmetro <paramref name="offset" />.</exception>
+        <exception cref="T:System.IO.IOException">O <see cref="T:System.Net.Sockets.Socket" /> subjacente está fechado.  
+  
+ -ou-  
+  
+ Houve uma falha durante a gravação na rede.  
+  
+ -ou-  
+  
+ Ocorreu um erro ao acessar o soquete.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.Sockets.NetworkStream" /> está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRead" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.CanRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Net.Sockets.NetworkStream" /> dá suporte à leitura.</summary>
+        <value>
+          <see langword="true" /> se os dados puderem ser lidos do fluxo; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Net.Sockets.NetworkStream.CanRead%2A> é `true`, <xref:System.Net.Sockets.NetworkStream> permite chamadas para o <xref:System.Net.Sockets.NetworkStream.Read%2A> método. Fornecer apropriada <xref:System.IO.FileAccess> enumerados valor no construtor para definir a legibilidade de gravabilidade do <xref:System.Net.Sockets.NetworkStream>. O <xref:System.Net.Sockets.NetworkStream.CanRead%2A> propriedade é definida quando o <xref:System.Net.Sockets.NetworkStream> é inicializado.  
+  
+   
+  
+## Examples  
+ O seguinte código de exemplo verifica <xref:System.Net.Sockets.NetworkStream.CanRead%2A> para verificar se o <xref:System.Net.Sockets.NetworkStream> é legível. Ele executa uma operação de leitura no <xref:System.Net.Sockets.NetworkStream>.  
+  
+ [!code-cpp[NetworkStream_Synch_SendAndReceive#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CPP/source.cpp#4)]
+ [!code-csharp[NetworkStream_Synch_SendAndReceive#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CS/source.cs#4)]
+ [!code-vb[NetworkStream_Synch_SendAndReceive#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSeek">
+      <MemberSignature Language="C#" Value="public override bool CanSeek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSeek" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.CanSeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo oferece suporte à busca. Atualmente, não há suporte para essa propriedade. Essa propriedade sempre retorna <see langword="false" />.</summary>
+        <value>
+          <see langword="false" />em todos os casos para indicar que <see cref="T:System.Net.Sockets.NetworkStream" /> não é possível procurar um local específico no fluxo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanTimeout">
+      <MemberSignature Language="C#" Value="public override bool CanTimeout { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.CanTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se as propriedades de tempo limite são utilizáveis para <see cref="T:System.Net.Sockets.NetworkStream" />.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade está presente porque ela é herdada do <xref:System.IO.Stream>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWrite">
+      <MemberSignature Language="C#" Value="public override bool CanWrite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWrite" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.CanWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Net.Sockets.NetworkStream" /> dá suporte à gravação.</summary>
+        <value>
+          <see langword="true" /> se os dados puderem ser gravados no <see cref="T:System.Net.Sockets.NetworkStream" />; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Net.Sockets.NetworkStream.CanWrite%2A> é `true`, <xref:System.Net.Sockets.NetworkStream> permite chamadas para o <xref:System.Net.Sockets.NetworkStream.Write%2A> método. Fornecer apropriada <xref:System.IO.FileAccess> enumerados valor no construtor para definir a legibilidade de gravabilidade do <xref:System.Net.Sockets.NetworkStream>. O <xref:System.Net.Sockets.NetworkStream.CanWrite%2A> propriedade é definida quando o <xref:System.Net.Sockets.NetworkStream> é inicializado.  
+  
+   
+  
+## Examples  
+ O seguinte código de exemplo verifica <xref:System.Net.Sockets.NetworkStream.CanWrite%2A> para verificar se o <xref:System.Net.Sockets.NetworkStream> é gravável. Ele executa uma operação de gravação no <xref:System.Net.Sockets.NetworkStream>.  
+  
+ [!code-cpp[NetworkStream_Synch_SendAndReceive#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CPP/source.cpp#3)]
+ [!code-csharp[NetworkStream_Synch_SendAndReceive#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CS/source.cs#3)]
+ [!code-vb[NetworkStream_Synch_SendAndReceive#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close (int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close(int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.Close(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um inteiro com sinal de 32 bits que especifica o número de milissegundos para aguardar o envio dos dados restantes antes de fechar.</param>
+        <summary>Fecha o <see cref="T:System.Net.Sockets.NetworkStream" /> após aguardar o tempo especificado para permitir que os dados sejam enviados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.NetworkStream.Close%2A> método libera os recursos gerenciados e não associados a <xref:System.Net.Sockets.NetworkStream>. Se o <xref:System.Net.Sockets.NetworkStream> possui subjacente <xref:System.Net.Sockets.Socket>, também está fechado.  
+  
+ Se um <xref:System.Net.Sockets.NetworkStream> foi associado um <xref:System.Net.Sockets.TcpClient>, o <xref:System.Net.Sockets.NetworkStream.Close%2A> método fechar a conexão TCP, mas não descartar associado <xref:System.Net.Sockets.TcpClient>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="timeout" /> é menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DataAvailable">
+      <MemberSignature Language="C#" Value="public virtual bool DataAvailable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DataAvailable" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.DataAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se há dados disponíveis no <see cref="T:System.Net.Sockets.NetworkStream" /> a ser lido.</summary>
+        <value>
+          <see langword="true" /> se houver dados disponíveis no fluxo a ser lido; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Net.Sockets.NetworkStream.DataAvailable%2A> propriedade para determinar se os dados estão prontos para ser lido. Se <xref:System.Net.Sockets.NetworkStream.DataAvailable%2A> é `true`, uma chamada para <xref:System.Net.Sockets.NetworkStream.Read%2A> retorna imediatamente. Se o host remoto é desligado ou fecha a conexão, <xref:System.Net.Sockets.NetworkStream.DataAvailable%2A> pode gerar um <xref:System.Net.Sockets.SocketException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir lê a partir de <xref:System.Net.Sockets.NetworkStream> enquanto os dados estão disponíveis.  
+  
+ [!code-cpp[NetworkStream_Synch_SendAndReceive#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CPP/source.cpp#4)]
+ [!code-csharp[NetworkStream_Synch_SendAndReceive#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CS/source.cs#4)]
+ [!code-vb[NetworkStream_Synch_SendAndReceive#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.Sockets.NetworkStream" /> está fechado.</exception>
+        <exception cref="T:System.IO.IOException">O <see cref="T:System.Net.Sockets.Socket" /> subjacente está fechado.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Use o <see cref="P:System.Net.Sockets.SocketException.ErrorCode" /> propriedade para obter o código de erro específico e consulte a Windows Sockets versão 2 API documentação códigos de erro no MSDN para obter uma descrição detalhada do erro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Net.Sockets.NetworkStream" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose` e pelo método <xref:System.Object.Finalize%2A>. `Dispose` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Net.Sockets.NetworkStream> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tome cuidado para não referenciar objetos que tenham sido descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRead">
+      <MemberSignature Language="C#" Value="public override int EndRead (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 EndRead(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.EndRead(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Um <see cref="T:System.IAsyncResult" /> que representa uma chamada assíncrona.</param>
+        <summary>Manipula o final de uma leitura assíncrona.</summary>
+        <returns>O número de bytes lidos de <see cref="T:System.Net.Sockets.NetworkStream" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.NetworkStream.EndRead%2A> a operação de leitura assíncrona iniciada conclusão do método de <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> método.  
+  
+ Antes de chamar <xref:System.Net.Sockets.NetworkStream.BeginRead%2A>, você precisa criar um método de retorno de chamada que implementa o <xref:System.AsyncCallback> delegate. Esse método de retorno de chamada é executado em um thread separado e é chamado pelo sistema após <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> retorna. O método de retorno de chamada deve aceitar o <xref:System.IAsyncResult> retornado do <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> método como um parâmetro.  
+  
+ Dentro do método de retorno de chamada, chame o <xref:System.IAsyncResult.AsyncState%2A> propriedade o <xref:System.IAsyncResult> para obter o objeto de estado passado para o <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> método. Extrair o recebimento <xref:System.Net.Sockets.NetworkStream> deste objeto de estado. Depois de obter o <xref:System.Net.Sockets.NetworkStream>, chame o <xref:System.Net.Sockets.NetworkStream.EndRead%2A> método para concluir a operação de leitura e retornar o número de bytes lidos com êxito.  
+  
+ O <xref:System.Net.Sockets.NetworkStream.EndRead%2A> método bloqueia até que os dados estão disponíveis. O <xref:System.Net.Sockets.NetworkStream.EndRead%2A> método lê a quantidade de dados está disponível até o número de bytes especificado no `size` parâmetro o <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> método. Se o host remoto desliga o <xref:System.Net.Sockets.Socket> todos os dados disponíveis e conexão foi recebida, o <xref:System.Net.Sockets.NetworkStream.EndRead%2A> método é concluído imediatamente e retorna zero bytes.  
+  
+ Para obter os dados recebidos, chame o <xref:System.IAsyncResult.AsyncState%2A> propriedade o <xref:System.IAsyncResult>e extraia o buffer contido no objeto de estado resultante.  
+  
+> [!NOTE]
+>  Se você receber um <xref:System.IO.IOException>, verifique o <xref:System.Exception.InnerException%2A> propriedade para determinar se ele foi causado por um <xref:System.Net.Sockets.SocketException>. Nesse caso, use o <xref:System.Net.Sockets.SocketException.ErrorCode%2A> propriedade para obter o código de erro específico e consulte a Windows Sockets versão 2 API documentação códigos de erro no MSDN para obter uma descrição detalhada do erro.  
+  
+   
+  
+## Examples  
+ No exemplo de código a seguir, `myReadCallback` é fornecido para <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> como o método de retorno de chamada. <xref:System.Net.Sockets.NetworkStream.EndRead%2A>é implementado em `myReadCallback` concluir o assíncrona ler chamada iniciada pelo <xref:System.Net.Sockets.NetworkStream.BeginRead%2A>.  
+  
+ [!code-cpp[NetworkStream_Async_SendAndReceive#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CPP/source.cpp#5)]
+ [!code-csharp[NetworkStream_Async_SendAndReceive#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CS/source.cs#5)]
+ [!code-vb[NetworkStream_Async_SendAndReceive#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="asyncResult" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">O <see cref="T:System.Net.Sockets.Socket" /> subjacente está fechado.  
+  
+ -ou-  
+  
+ Ocorreu um erro ao acessar o soquete.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.Sockets.NetworkStream" /> está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWrite">
+      <MemberSignature Language="C#" Value="public override void EndWrite (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndWrite(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.EndWrite(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">O <see cref="T:System.IAsyncResult" /> que representa a chamada assíncrona.</param>
+        <summary>Manipula o final de uma gravação assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.Sockets.NetworkStream.EndWrite%2A>conclui a operação de envio assíncrono iniciada em <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A>.  
+  
+ Antes de chamar <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A>, você precisa criar um método de retorno de chamada que implementa o <xref:System.AsyncCallback> delegate. Esse método de retorno de chamada é executado em um thread separado e é chamado pelo sistema após <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> retorna. O método de retorno de chamada deve aceitar o <xref:System.IAsyncResult> retornado do <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> método como um parâmetro.  
+  
+ Dentro do método de retorno de chamada, chame o <xref:System.IAsyncResult.AsyncState%2A> propriedade o `IAsyncResult` parâmetro para obter o <xref:System.Net.Sockets.NetworkStream>. Depois de obter o <xref:System.Net.Sockets.NetworkStream>, você pode chamar o <xref:System.Net.Sockets.NetworkStream.EndWrite%2A> método para concluir a operação de envio e retornar o número de bytes enviados com êxito.  
+  
+ O <xref:System.Net.Sockets.NetworkStream.EndWrite%2A> método bloqueia até que o número solicitado de bytes é enviado.  
+  
+> [!NOTE]
+>  Se você receber um <xref:System.IO.IOException>, verifique o <xref:System.Exception.InnerException%2A> propriedade para determinar se ele foi causado por um <xref:System.Net.Sockets.SocketException>. Nesse caso, use o <xref:System.Net.Sockets.SocketException.ErrorCode%2A> propriedade para obter o código de erro específico e consulte a Windows Sockets versão 2 API documentação códigos de erro no MSDN para obter uma descrição detalhada do erro.  
+  
+   
+  
+## Examples  
+ No exemplo de código a seguir, `myWriteCallback` é fornecido para <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> como o método de retorno de chamada. <xref:System.Net.Sockets.NetworkStream.EndWrite%2A>é implementado em `myWriteCallback` para completar a chamada de gravação assíncrona iniciada por <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A>.  
+  
+ [!code-cpp[NetworkStream_Async_SendAndReceive#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CPP/source.cpp#4)]
+ [!code-csharp[NetworkStream_Async_SendAndReceive#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/CS/source.cs#4)]
+ [!code-vb[NetworkStream_Async_SendAndReceive#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Async_SendAndReceive/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="asyncResult" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.IOException">O <see cref="T:System.Net.Sockets.Socket" /> subjacente está fechado.  
+  
+ -ou-  
+  
+ Ocorreu um erro ao gravar na rede.  
+  
+ -ou-  
+  
+ Ocorreu um erro ao acessar o soquete.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.Sockets.NetworkStream" /> está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~NetworkStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Net.Sockets.NetworkStream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. O código do aplicativo não deve chamar este método; o método <xref:System.Object.Finalize%2A> de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType>.  
+  
+ Para obter mais informações sobre como usar o método Finalize, consulte [métodos Finalize e destruidores](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md), e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os dados do fluxo. Este método está reservado para uso futuro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.NetworkStream.Flush%2A> método implementa o <xref:System.IO.Stream.Flush%2A?displayProperty=nameWithType> método; no entanto, porque <xref:System.Net.Sockets.NetworkStream> não é armazenado em buffer, ela não terá efeito nos fluxos de rede. Chamar o <xref:System.Net.Sockets.NetworkStream.Flush%2A> método gerará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task FlushAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task FlushAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.FlushAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">Um token de cancelamento usado para propagar a notificação de que essa operação deve ser cancelada.</param>
+        <summary>Libera os dados do fluxo como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task> objeto será concluída depois que foi liberados do fluxo de dados a <xref:System.Net.Sockets.NetworkStream> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public override long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho dos dados disponíveis no fluxo. Atualmente, esta propriedade não tem suporte e sempre gera um <see cref="T:System.NotSupportedException" />.</summary>
+        <value>O tamanho dos dados disponíveis no fluxo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Qualquer uso dessa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public override long Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Position" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição atual no fluxo. Atualmente, esta propriedade não tem suporte e sempre gera um <see cref="T:System.NotSupportedException" />.</summary>
+        <value>A posição atual no fluxo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Qualquer uso dessa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read (byte[] buffer, int offset, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read([out] unsigned int8[] buffer, int32 offset, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz do tipo <see cref="T:System.Byte" /> que é o local na memória onde os dados lidos de <see cref="T:System.Net.Sockets.NetworkStream" /> serão armazenados.</param>
+        <param name="offset">O local na <c>buffer</c> para começar a armazenar os dados.</param>
+        <param name="size">O número de bytes a serem lidos de <see cref="T:System.Net.Sockets.NetworkStream" />.</param>
+        <summary>Lê dados de <see cref="T:System.Net.Sockets.NetworkStream" />.</summary>
+        <returns>O número de bytes lidos do <see cref="T:System.Net.Sockets.NetworkStream" />, ou 0 se o soquete é fechado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método lê os dados para o `buffer` parâmetro e retorna o número de bytes lidos com êxito. Se o soquete é fechado, o <xref:System.Net.Sockets.NetworkStream.Read%2A> método retornará 0. O <xref:System.Net.Sockets.NetworkStream.Read%2A> operação lê a quantidade de dados estiver disponível, até o número de bytes especificado pelo `size` parâmetro. Se o host remoto fecha a conexão e todos os dados disponíveis foi recebida, o <xref:System.Net.Sockets.NetworkStream.Read%2A> método é concluído imediatamente e retornar zero bytes.  
+  
+> [!NOTE]
+>  Verifique se o <xref:System.Net.Sockets.NetworkStream> é legível chamando o <xref:System.Net.Sockets.NetworkStream.CanRead%2A> propriedade. Se você tentar ler de um <xref:System.Net.Sockets.NetworkStream> que não é legível, você obterá um <xref:System.IO.IOException>.  
+  
+> [!NOTE]
+>  Se você receber um <xref:System.IO.IOException>, verifique o <xref:System.Exception.InnerException%2A> propriedade para determinar se ele foi causado por um <xref:System.Net.Sockets.SocketException>. Nesse caso, use o <xref:System.Net.Sockets.SocketException.ErrorCode%2A> propriedade para obter o código de erro específico e consulte a Windows Sockets versão 2 API documentação códigos de erro no MSDN para obter uma descrição detalhada do erro.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Net.Sockets.NetworkStream.DataAvailable%2A> para determinar se os dados estão disponíveis para ser lido. Se houver dados disponíveis, ele lê a partir de <xref:System.Net.Sockets.NetworkStream>.  
+  
+ [!code-cpp[NetworkStream_Synch_SendAndReceive#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CPP/source.cpp#4)]
+ [!code-csharp[NetworkStream_Synch_SendAndReceive#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CS/source.cs#4)]
+ [!code-vb[NetworkStream_Synch_SendAndReceive#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="offset" /> é menor que 0.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="offset" /> é maior que o tamanho de <paramref name="buffer" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="size" /> é menor que 0.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="size" /> é maior que o tamanho de <paramref name="buffer" /> subtraído do valor do parâmetro <paramref name="offset" />.  
+  
+ -ou-  
+  
+ Ocorreu um erro ao acessar o soquete.</exception>
+        <exception cref="T:System.IO.IOException">O <see cref="T:System.Net.Sockets.Socket" /> subjacente está fechado.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.Sockets.NetworkStream" /> está fechado.  
+  
+ -ou-  
+  
+ Ocorreu uma falha de leitura da rede.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Readable">
+      <MemberSignature Language="C#" Value="protected bool Readable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Readable" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.Readable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Net.Sockets.NetworkStream" /> pode ser lido.</summary>
+        <value>
+          <see langword="true" /> para indicar que o <see cref="T:System.Net.Sockets.NetworkStream" /> pode ser lido; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve derivar do <xref:System.Net.Sockets.NetworkStream> classe para usar o <xref:System.Net.Sockets.NetworkStream.Readable%2A> propriedade. Se <xref:System.Net.Sockets.NetworkStream.Readable%2A> é `true`, <xref:System.Net.Sockets.NetworkStream> permite chamadas para o <xref:System.Net.Sockets.NetworkStream.Read%2A> método. Você também pode determinar se um <xref:System.Net.Sockets.NetworkStream> é legível verificando publicamente acessível <xref:System.Net.Sockets.NetworkStream.CanRead%2A> propriedade.  
+  
+ O <xref:System.Net.Sockets.NetworkStream.Readable%2A> propriedade é definida quando o <xref:System.Net.Sockets.NetworkStream> é inicializado.  
+  
+   
+  
+## Examples  
+ No exemplo de código a seguir, o `CanCommunicate` verificações de propriedade de <xref:System.Net.Sockets.NetworkStream.Readable%2A> para determinar se o <xref:System.Net.Sockets.NetworkStream> é legível.  
+  
+ [!code-cpp[NetworkStream_Protected_Members#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Protected_Members/CPP/source.cpp#1)]
+ [!code-csharp[NetworkStream_Protected_Members#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Protected_Members/CS/source.cs#1)]
+ [!code-vb[NetworkStream_Protected_Members#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Protected_Members/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (byte[] buffer, int offset, int size, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;int32&gt; ReadAsync(unsigned int8[] buffer, int32 offset, int32 size, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="offset">To be added.</param>
+        <param name="size">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTimeout">
+      <MemberSignature Language="C#" Value="public override int ReadTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReadTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.ReadTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo que uma operação de leitura é bloqueada aguardando dados.</summary>
+        <value>Um <see cref="T:System.Int32" /> que especifica o período, em milissegundos, que decorrerá antes da falha de uma operação de leitura. O valor padrão, <see cref="F:System.Threading.Timeout.Infinite" />, especifica que a operação de leitura não atinge o tempo limite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a operação de leitura não for concluída dentro do tempo especificado por essa propriedade, a operação de leitura lança um <xref:System.IO.IOException>.  
+  
+> [!NOTE]
+>  Essa propriedade afeta apenas síncronas Leituras executadas por chamar o <xref:System.Net.Sockets.NetworkStream.Read%2A> método. Essa propriedade não afeta as Leituras assíncronas executadas chamando o <xref:System.Net.Sockets.NetworkStream.BeginRead%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define o tempo limite de leitura para um fluxo de rede de 10 milissegundos.  
+  
+ [!code-csharp[NCLTcpClientSync#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLTcpClientSync/CS/tcpclient.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor especificado é menor ou igual a zero e não é <see cref="F:System.Threading.Timeout.Infinite" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public override long Seek (long offset, System.IO.SeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 Seek(int64 offset, valuetype System.IO.SeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Este parâmetro não é usado.</param>
+        <param name="origin">Este parâmetro não é usado.</param>
+        <summary>Define a posição atual do fluxo para o valor especificado. Atualmente, este método não tem suporte e sempre gera um <see cref="T:System.NotSupportedException" />.</summary>
+        <returns>A posição no fluxo.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Qualquer uso dessa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLength">
+      <MemberSignature Language="C#" Value="public override void SetLength (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLength(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.SetLength(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">Este parâmetro não é usado.</param>
+        <summary>Define o comprimento do fluxo. Esse método sempre gerará um <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Qualquer uso dessa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Socket">
+      <MemberSignature Language="C#" Value="protected System.Net.Sockets.Socket Socket { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Sockets.Socket Socket" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.Socket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.Socket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Net.Sockets.Socket" /> subjacente.</summary>
+        <value>Um <see cref="T:System.Net.Sockets.Socket" /> que representa a conexão de rede subjacente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas de <xref:System.Net.Sockets.NetworkStream> pode usar essa propriedade para obter subjacente <xref:System.Net.Sockets.Socket>. Use subjacente <xref:System.Net.Sockets.Socket> retornado do <xref:System.Net.Sockets.NetworkStream.Socket%2A> propriedade se você precisar acessar além do qual <xref:System.Net.Sockets.NetworkStream> fornece.  
+  
+> [!NOTE]
+>  Esta propriedade é acessível somente por meio dessa classe ou uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir recupera subjacente <xref:System.Net.Sockets.Socket> para verificar uma conexão ativa.  
+  
+ [!code-cpp[NetworkStream_Protected_Members#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Protected_Members/CPP/source.cpp#1)]
+ [!code-csharp[NetworkStream_Protected_Members#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Protected_Members/CS/source.cs#1)]
+ [!code-vb[NetworkStream_Protected_Members#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Protected_Members/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (byte[] buffer, int offset, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(unsigned int8[] buffer, int32 offset, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz do tipo <see cref="T:System.Byte" /> que contém os dados a serem gravados no <see cref="T:System.Net.Sockets.NetworkStream" />.</param>
+        <param name="offset">O local na <c>buffer</c> da qual iniciar a gravação de dados.</param>
+        <param name="size">O número de bytes a serem gravados no <see cref="T:System.Net.Sockets.NetworkStream" />.</param>
+        <summary>Grava os dados no <see cref="T:System.Net.Sockets.NetworkStream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.NetworkStream.Write%2A> método inicia no local especificado `offset` e envia `size` bytes do conteúdo do `buffer` à rede. O <xref:System.Net.Sockets.NetworkStream.Write%2A> método bloqueia até que o número solicitado de bytes seja enviado ou um <xref:System.Net.Sockets.SocketException> é gerada. Se você receber um <xref:System.Net.Sockets.SocketException>, use o <xref:System.Net.Sockets.SocketException.ErrorCode%2A?displayProperty=nameWithType> propriedade para obter o código de erro específico e consulte a Windows Sockets versão 2 API documentação códigos de erro no MSDN para obter uma descrição detalhada do erro.  
+  
+> [!NOTE]
+>  Verifique se o <xref:System.Net.Sockets.NetworkStream> é gravável, acessando o <xref:System.Net.Sockets.NetworkStream.CanWrite%2A> propriedade. Se você tentar gravar uma <xref:System.Net.Sockets.NetworkStream> que não é gravável, você obterá um <xref:System.IO.IOException>. Se você receber um <xref:System.IO.IOException>, verifique o <xref:System.Exception.InnerException%2A> propriedade para determinar se ele foi causado por um <xref:System.Net.Sockets.SocketException>.  
+  
+   
+  
+## Examples  
+ O seguinte código de exemplo verifica se o <xref:System.Net.Sockets.NetworkStream> é gravável. Se for, em seguida, <xref:System.Net.Sockets.NetworkStream.Write%2A> é usada para gravar uma mensagem pequena.  
+  
+ [!code-cpp[NetworkStream_Synch_SendAndReceive#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CPP/source.cpp#3)]
+ [!code-csharp[NetworkStream_Synch_SendAndReceive#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/CS/source.cs#3)]
+ [!code-vb[NetworkStream_Synch_SendAndReceive#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Synch_SendAndReceive/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="offset" /> é menor que 0.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="offset" /> é maior que o tamanho de <paramref name="buffer" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="size" /> é menor que 0.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="size" /> é maior que o tamanho de <paramref name="buffer" /> subtraído do valor do parâmetro <paramref name="offset" />.</exception>
+        <exception cref="T:System.IO.IOException">Houve uma falha durante a gravação na rede.  
+  
+ -ou-  
+  
+ Ocorreu um erro ao acessar o soquete.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Net.Sockets.NetworkStream" /> está fechado.  
+  
+ -ou-  
+  
+ Houve uma falha de leitura da rede.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Writeable">
+      <MemberSignature Language="C#" Value="protected bool Writeable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Writeable" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.Writeable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Net.Sockets.NetworkStream" /> é gravável.</summary>
+        <value>
+          <see langword="true" /> se os dados puderem ser gravados no fluxo; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve derivar do <xref:System.Net.Sockets.NetworkStream> classe para usar o <xref:System.Net.Sockets.NetworkStream.Writeable%2A> propriedade. Se <xref:System.Net.Sockets.NetworkStream.Writeable%2A> é `true`, <xref:System.Net.Sockets.NetworkStream> permite chamadas para o <xref:System.Net.Sockets.NetworkStream.Write%2A> método. Você também pode determinar se um <xref:System.Net.Sockets.NetworkStream> é gravável verificando publicamente acessível <xref:System.Net.Sockets.NetworkStream.CanWrite%2A> propriedade.  
+  
+ O <xref:System.Net.Sockets.NetworkStream.Writeable%2A> propriedade é definida quando o <xref:System.Net.Sockets.NetworkStream> é inicializado.  
+  
+   
+  
+## Examples  
+ No exemplo de código a seguir, o `CanCommunicate` verificações de propriedade de <xref:System.Net.Sockets.NetworkStream.Writeable%2A> para determinar se o <xref:System.Net.Sockets.NetworkStream> é gravável.  
+  
+ [!code-cpp[NetworkStream_Protected_Members#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NetworkStream_Protected_Members/CPP/source.cpp#1)]
+ [!code-csharp[NetworkStream_Protected_Members#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NetworkStream_Protected_Members/CS/source.cs#1)]
+ [!code-vb[NetworkStream_Protected_Members#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NetworkStream_Protected_Members/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (byte[] buffer, int offset, int size, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(unsigned int8[] buffer, int32 offset, int32 size, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.NetworkStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="offset">To be added.</param>
+        <param name="size">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTimeout">
+      <MemberSignature Language="C#" Value="public override int WriteTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WriteTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.NetworkStream.WriteTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo que uma operação de gravação fica bloqueada aguardando dados.</summary>
+        <value>Um <see cref="T:System.Int32" /> que especifica a quantidade de tempo, em milissegundos, que decorrerá antes da falha de uma operação de gravação. O valor padrão, <see cref="F:System.Threading.Timeout.Infinite" />, especifica que a operação de gravação não atinge o tempo limite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a operação de gravação não for concluída dentro do tempo especificado por essa propriedade, a operação de gravação lança um <xref:System.IO.IOException>.  
+  
+> [!NOTE]
+>  Essa propriedade afeta as operações de gravação síncrona apenas executadas chamando o <xref:System.Net.Sockets.NetworkStream.Write%2A> método. Essa propriedade não afeta as gravações assíncronas executadas chamando o <xref:System.Net.Sockets.NetworkStream.BeginWrite%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define o tempo limite de gravação para um fluxo de rede de 10 milissegundos.  
+  
+ [!code-cpp[NCLTcpServerSync#0](~/samples/snippets/cpp/VS_Snippets_Remoting/NclTcpServerSync/cpp/tcplistener.cpp#0)]
+ [!code-csharp[NCLTcpServerSync#0](~/samples/snippets/csharp/VS_Snippets_Remoting/NclTcpServerSync/CS/tcplistener.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor especificado é menor ou igual a zero e não é <see cref="F:System.Threading.Timeout.Infinite" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

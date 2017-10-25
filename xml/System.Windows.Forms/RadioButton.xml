@@ -1,0 +1,728 @@
+<Type Name="RadioButton" FullName="System.Windows.Forms.RadioButton">
+  <TypeSignature Language="C#" Value="public class RadioButton : System.Windows.Forms.ButtonBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RadioButton extends System.Windows.Forms.ButtonBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.RadioButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ButtonBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultBindingProperty("Checked")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("CheckedChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Checked")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.RadioButtonDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Windows.Forms.Design.AutoSizeToolboxItem,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que o usuário selecione uma única opção em um grupo quando comparado a outros controles <see cref="T:System.Windows.Forms.RadioButton" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.RadioButton> controle pode exibir texto, um <xref:System.Drawing.Image>, ou ambos.  
+  
+ Quando o usuário seleciona um botão de opção (também conhecido como um botão de opção) dentro de um grupo, os outros limpar automaticamente. Todos os <xref:System.Windows.Forms.RadioButton> controles em um contêiner específico, como um <xref:System.Windows.Forms.Form>, constituem um grupo. Para criar vários grupos em um formulário, coloque cada grupo em seu próprio contêiner, como um <xref:System.Windows.Forms.GroupBox> ou <xref:System.Windows.Forms.Panel> controle.  
+  
+ <xref:System.Windows.Forms.RadioButton>e <xref:System.Windows.Forms.CheckBox> controles têm uma função semelhante: oferecem opções de um usuário pode selecionar ou desmarcar. A diferença é que vários <xref:System.Windows.Forms.CheckBox> controles podem ser selecionados ao mesmo tempo, mas os botões de opção são mutuamente exclusivos.  
+  
+ Use o <xref:System.Windows.Forms.RadioButton.Checked%2A> propriedade para obter ou definir o estado de um <xref:System.Windows.Forms.RadioButton>. Aparência do botão de opção pode ser alterada para ser exibido como um botão de alternância estilo ou como um botão de opção padrão definindo o <xref:System.Windows.Forms.RadioButton.Appearance%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa duas <xref:System.Windows.Forms.RadioButton> controles em um <xref:System.Windows.Forms.GroupBox>. O exemplo usa o <xref:System.Windows.Forms.RadioButton.CheckedChanged> eventos para controlar qual <xref:System.Windows.Forms.RadioButton> está selecionado e relata o texto selecionados <xref:System.Windows.Forms.RadioButton> quando o usuário clica em um <xref:System.Windows.Forms.Button>. Para executar este exemplo, cole o código em um formulário do Windows. Chamar `InitializeRadioButtons` do construtor do formulário ou o <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-csharp[System.Windows.Forms.MiscBugDriven#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MiscBugDriven/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.MiscBugDriven#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MiscBugDriven/VB/form1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RadioButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.RadioButton" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A exibição padrão do <xref:System.Windows.Forms.RadioButton> texto é alinhado à direita do botão e o <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> está definida como `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Windows.Forms.RadioButton>, concede a ele a aparência de um botão de alternância, define seu <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> propriedade `false`e adiciona-o a um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-csharp[Classic RadioButton Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RadioButton Example/CS/source.cs#1)]
+ [!code-vb[Classic RadioButton Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RadioButton Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Appearance">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Appearance Appearance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Appearance Appearance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButton.Appearance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Appearance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina a aparência do <see cref="T:System.Windows.Forms.RadioButton" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.Appearance" />. O valor padrão é <see cref="F:System.Windows.Forms.Appearance.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.RadioButton.Appearance%2A> valor é definido como <xref:System.Windows.Forms.Appearance.Normal>, em seguida, o <xref:System.Windows.Forms.RadioButton> controle é desenhado com uma caixa de seleção circular. Se o valor for definido como <xref:System.Windows.Forms.Appearance.Button>, em seguida, o <xref:System.Windows.Forms.RadioButton> é desenhada como um controle que pode ser alternado para um backup ou estado de inatividade. O tipo pode exibir texto, uma imagem ou ambos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Windows.Forms.RadioButton>, concede a ele a aparência de um controle de alternância, define seu <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> propriedade `false`e adiciona-o a um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-csharp[Classic RadioButton Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RadioButton Example/CS/source.cs#1)]
+ [!code-vb[Classic RadioButton Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RadioButton Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.Appearance" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppearanceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AppearanceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AppearanceChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.RadioButton.AppearanceChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.RadioButton.Appearance" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.RadioButton.AppearanceChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.RadioButton> chamado `RadioButton1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.RadioButton.AppearanceChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#535](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#535)]
+ [!code-vb[System.Windows.Forms.EventExamples#535](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#535)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoCheck">
+      <MemberSignature Language="C#" Value="public bool AutoCheck { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoCheck" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButton.AutoCheck" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o valor <see cref="P:System.Windows.Forms.RadioButton.Checked" /> e a aparência do controle mudam automaticamente quando o controle é clicado.</summary>
+        <value>
+          <see langword="true" /> se o valor <see cref="P:System.Windows.Forms.RadioButton.Checked" /> e a aparência do controle mudarem automaticamente no evento <see cref="E:System.Windows.Forms.Control.Click" />; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.RadioButton.Checked%2A> valor é definido como `false`, o <xref:System.Windows.Forms.RadioButton> parte do controle deve ser verificada em código o <xref:System.Windows.Forms.Control.Click> manipulador de eventos. Além disso, se o <xref:System.Windows.Forms.RadioButton> faz parte de um <xref:System.Windows.Forms.RadioButton> grupo de controle, essa propriedade garante que apenas um dos controles é verificado em um determinado momento.  
+  
+ Se o <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> está definida como `false`, um grupo de <xref:System.Windows.Forms.RadioButton> controles não funcionará como um grupo mutuamente exclusivo e o <xref:System.Windows.Forms.RadioButton.Checked%2A> propriedade deve ser atualizada no código.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Windows.Forms.RadioButton>, concede a ele a aparência de um controle de alternância, define seu <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> propriedade `false`e adiciona-o a um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-csharp[Classic RadioButton Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RadioButton Example/CS/source.cs#1)]
+ [!code-vb[Classic RadioButton Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RadioButton Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAlign">
+      <MemberSignature Language="C#" Value="public System.Drawing.ContentAlignment CheckAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment CheckAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButton.CheckAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local da parte da caixa de seleção do <see cref="T:System.Windows.Forms.RadioButton" />.</summary>
+        <value>Um dos válidos <see cref="T:System.Drawing.ContentAlignment" /> valores. O valor padrão é <see cref="F:System.Drawing.ContentAlignment.MiddleLeft" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Windows.Forms.RadioButton.CheckAlign%2A> propriedade pode ser alterada em tempo de execução. A parte da caixa de seleção de um <xref:System.Windows.Forms.RadioButton> é movido para a direita ou esquerda do texto quando o <xref:System.Windows.Forms.RadioButton.Checked%2A> o valor é alterado. Este exemplo requer que um <xref:System.Windows.Forms.RadioButton> controle instanciado em um formulário e que uma referência para o <xref:System.Drawing?displayProperty=nameWithType> namespace foi incluído.  
+  
+ [!code-cpp[Classic RadioButton.CheckAlign Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RadioButton.CheckAlign Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RadioButton.CheckAlign Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RadioButton.CheckAlign Example/CS/source.cs#1)]
+ [!code-vb[Classic RadioButton.CheckAlign Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RadioButton.CheckAlign Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Drawing.ContentAlignment" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public bool Checked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Checked" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButton.Checked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle está selecionado.</summary>
+        <value>
+          <see langword="true" /> se a caixa de seleção estiver selecionada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir avalia um <xref:System.Windows.Forms.ListBox> seleção e o <xref:System.Windows.Forms.RadioButton.Checked%2A> propriedade de um <xref:System.Windows.Forms.RadioButton>. Quando um item especificado está selecionado na caixa de listagem, o <xref:System.Windows.Forms.RadioButton.PerformClick%2A> outro método <xref:System.Windows.Forms.RadioButton> é chamado. Este exemplo requer que dois <xref:System.Windows.Forms.RadioButton> controles e um <xref:System.Windows.Forms.ListBox> tenham sido criadas em um formulário.  
+  
+ [!code-cpp[Classic RadioButton.Checked Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RadioButton.Checked Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RadioButton.Checked Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RadioButton.Checked Example/CS/source.cs#1)]
+ [!code-vb[Classic RadioButton.Checked Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RadioButton.Checked Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler CheckedChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler CheckedChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.RadioButton.CheckedChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.RadioButton.Checked" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Windows.Forms.RadioButton.CheckAlign%2A> propriedade pode ser alterada em tempo de execução. A parte da caixa de seleção de um <xref:System.Windows.Forms.RadioButton> é movido para a direita ou esquerda do texto quando o <xref:System.Windows.Forms.RadioButton.Checked%2A> o valor é alterado. Este exemplo requer que um <xref:System.Windows.Forms.RadioButton> controle instanciado em um formulário e que uma referência para o <xref:System.Drawing?displayProperty=nameWithType> namespace foi incluído.  
+  
+ [!code-cpp[Classic RadioButton.CheckAlign Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RadioButton.CheckAlign Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RadioButton.CheckAlign Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RadioButton.CheckAlign Example/CS/source.cs#1)]
+ [!code-vb[Classic RadioButton.CheckAlign Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RadioButton.CheckAlign Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto de acessibilidade para o <see cref="T:System.Windows.Forms.RadioButton" /> controle.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Forms.RadioButton.RadioButtonAccessibleObject" /> para o controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não chamar explicitamente o <xref:System.Windows.Forms.RadioButton.CreateAccessibilityInstance%2A> método, ele será chamado quando o <xref:System.Windows.Forms.Control.AccessibilityObject%2A> propriedade é referenciada.  
+  
+> [!NOTE]
+>  Para obter ou definir o <xref:System.Windows.Forms.Control.AccessibilityObject%2A> propriedade, você deve adicionar uma referência para o <xref:Accessibility> assembly instalado com o .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.RadioButton.CreateAccessibilityInstance" /> em uma classe derivada, você não deve chamar a classe base <see cref="M:System.Windows.Forms.RadioButton.CreateAccessibilityInstance" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButton.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de criação necessários quando a alça de controle é criada.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.CreateParams" /> que contém os parâmetros de criação necessários quando a alça de controle é criada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButton.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho padrão do controle.</summary>
+        <value>Retorna um <see cref="T:System.Drawing.Size" /> com um <see cref="P:System.Drawing.Size.Width" /> igual a 104 e um <see cref="P:System.Drawing.Size.Height" /> igual a 24.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.RadioButton.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica duas vezes no controle <see cref="T:System.Windows.Forms.RadioButton" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Windows.Forms.ControlStyles.StandardClick> bit de estilo é definido como `false` para o <xref:System.Windows.Forms.RadioButton> controle e o <xref:System.Windows.Forms.RadioButton.DoubleClick> não é gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseDoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseDoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.RadioButton.MouseDoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica duas vezes no controle <see cref="T:System.Windows.Forms.RadioButton" /> com o mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Windows.Forms.ControlStyles.StandardClick> bit de estilo é definido como `false` para o <xref:System.Windows.Forms.RadioButton> controle e o <xref:System.Windows.Forms.RadioButton.MouseDoubleClick> não é gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCheckedChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnCheckedChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCheckedChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.OnCheckedChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.CheckBox.CheckedChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.RadioButton.OnCheckedChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Windows.Forms.RadioButton.CheckAlign%2A> propriedade pode ser alterada em tempo de execução. A parte da caixa de seleção de um <xref:System.Windows.Forms.RadioButton> é movido para a direita ou esquerda do texto quando o <xref:System.Windows.Forms.RadioButton.Checked%2A> o valor é alterado. Este exemplo requer que um <xref:System.Windows.Forms.RadioButton> controle instanciado em um formulário e que uma referência para o <xref:System.Drawing?displayProperty=nameWithType> namespace foi incluído.  
+  
+ [!code-cpp[Classic RadioButton.OnCheckedChanged Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RadioButton.OnCheckedChanged Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RadioButton.OnCheckedChanged Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RadioButton.OnCheckedChanged Example/CS/source.cs#1)]
+ [!code-vb[Classic RadioButton.OnCheckedChanged Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RadioButton.OnCheckedChanged Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.RadioButton.OnCheckedChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.RadioButton.OnCheckedChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected override void OnClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.OnClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.Click" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> está definida como `true`, o <xref:System.Windows.Forms.RadioButton.Checked%2A> está definida como `true` quando o <xref:System.Windows.Forms.RadioButton> controle é clicado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnter">
+      <MemberSignature Language="C#" Value="protected override void OnEnter (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnter(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.OnEnter(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.Enter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o usuário insere o <xref:System.Windows.Forms.RadioButton> controle usando as teclas de direção, o <xref:System.Windows.Forms.RadioButton> irá gerar o <xref:System.Windows.Forms.Control.Click> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnHandleCreated(System.EventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs mevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs mevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mevent" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="mevent">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.MouseUp" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.RadioButton.OnMouseUp%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.RadioButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.RadioButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformClick">
+      <MemberSignature Language="C#" Value="public void PerformClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PerformClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.PerformClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera um evento <see cref="E:System.Windows.Forms.Control.Click" /> para o controle, simulando um clique de um usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir avalia um <xref:System.Windows.Forms.ListBox> seleção e o <xref:System.Windows.Forms.RadioButton.Checked%2A> propriedade de um <xref:System.Windows.Forms.RadioButton>. Quando um item especificado está selecionado na caixa de listagem, o <xref:System.Windows.Forms.RadioButton.PerformClick%2A> outro método <xref:System.Windows.Forms.RadioButton> é chamado. Este exemplo requer que dois <xref:System.Windows.Forms.RadioButton> controles e um <xref:System.Windows.Forms.ListBox> tenham sido criadas em um formulário.  
+  
+ [!code-cpp[Classic RadioButton.Checked Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RadioButton.Checked Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RadioButton.Checked Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RadioButton.Checked Example/CS/source.cs#1)]
+ [!code-vb[Classic RadioButton.Checked Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RadioButton.Checked Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMnemonic">
+      <MemberSignature Language="C#" Value="protected override bool ProcessMnemonic (char charCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ProcessMnemonic(char charCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.ProcessMnemonic(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charCode" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="charCode">O caractere a ser processado.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.ProcessMnemonic(System.Char)" />.</summary>
+        <returns>
+          <see langword="true" />Se o caractere foi processado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButton.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário pode focalizar esse controle usando a tecla TAB.</summary>
+        <value>
+          <see langword="true" />Se o usuário pode colocar em foco deste controle usando a tecla TAB; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlign">
+      <MemberSignature Language="C#" Value="public override System.Drawing.ContentAlignment TextAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment TextAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RadioButton.TextAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento do texto no controle <see cref="T:System.Windows.Forms.RadioButton" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Drawing.ContentAlignment" />. O padrão é <see cref="F:System.Drawing.ContentAlignment.MiddleLeft" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Drawing.ContentAlignment" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RadioButton.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o método <see cref="M:System.ComponentModel.Component.ToString" />.</summary>
+        <returns>Uma representação de cadeia de caracteres da <see cref="T:System.Windows.Forms.RadioButton" /> que indica se ele está selecionado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,75 @@
+<Type Name="MenuRenderingMode" FullName="System.Web.UI.WebControls.MenuRenderingMode">
+  <TypeSignature Language="C#" Value="public enum MenuRenderingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MenuRenderingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MenuRenderingMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se o <see cref="T:System.Web.UI.WebControls.Menu" /> controle renderiza HTML <see langword="table" /> elementos e estilos embutidos, ou <see langword="listitem" /> elementos e estilo em cascata da folha de estilos (CSS).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usar o <xref:System.Web.UI.WebControls.MenuRenderingMode> enumeração quando você define o <xref:System.Web.UI.WebControls.Menu.RenderingMode%2A> propriedade o <xref:System.Web.UI.WebControls.Menu> controle. O valor que você atribui para a <xref:System.Web.UI.WebControls.Menu.RenderingMode%2A> propriedade determina como o <xref:System.Web.UI.WebControls.Menu> controle processa a marcação.  
+  
+ No ASP.NET 3.5 e versões anteriores, o <xref:System.Web.UI.WebControls.Menu> usa o controle HTML `table` elementos e estilos embutidos para controlar a aparência do menu em um navegador. No ASP.NET 4 e versões posteriores, por padrão o <xref:System.Web.UI.WebControls.Menu> controlar usa `listitem` elementos e estilo em cascata da folha de estilos (CSS). Essa enumeração é fornecida para compatibilidade com versões anteriores. No ASP.NET 4 e versões posteriores, você pode usar essa enumeração para especificar que você deseja que o controle de menu para gerar a marcação da forma que faz em versões anteriores do ASP.NET.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.MenuRenderingMode Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.MenuRenderingMode.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MenuRenderingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Web.UI.WebControls.Menu" /> controle processa a marcação da maneira que ocorre por padrão para a versão do ASP.NET indicado pelo <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> propriedade do controle. Se o valor de <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> é de propriedade <c>3.5</c>, essa configuração é equivalente a <see cref="F:System.Web.UI.WebControls.MenuRenderingMode.Table" />. Se o valor da <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> é de propriedade <c>4.0</c> ou posterior, essa configuração é equivalente a <see cref="F:System.Web.UI.WebControls.MenuRenderingMode.List" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="List" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.MenuRenderingMode List = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.MenuRenderingMode.List" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MenuRenderingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Web.UI.WebControls.Menu" /> controle renderiza a marcação usando o item de lista (<see langword="li" />) elementos e estilos CSS.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="Table" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.MenuRenderingMode Table = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.MenuRenderingMode.Table" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MenuRenderingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Web.UI.WebControls.Menu" /> controle renderiza marcações usando <see langword="table" /> elementos e estilos embutidos.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

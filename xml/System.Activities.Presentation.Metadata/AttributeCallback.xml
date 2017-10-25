@@ -1,0 +1,32 @@
+<Type Name="AttributeCallback" FullName="System.Activities.Presentation.Metadata.AttributeCallback">
+  <TypeSignature Language="C#" Value="public delegate void AttributeCallback(AttributeCallbackBuilder builder);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AttributeCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Metadata.AttributeCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="builder" Type="System.Activities.Presentation.Metadata.AttributeCallbackBuilder" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="builder">Um <see cref="T:System.Activities.Presentation.Metadata.AttributeCallbackBuilder" /> que pode ser usado para adicionar atributos.</param>
+    <summary>Chamado quando atributos são necessários para um tipo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse retorno de chamada habilita o registro posterior de atributos de metadados, bem como a capacidade de fornecer código que dinamicamente determina quais atributos devem ser aplicados. Esse retorno de chamada é fornecido para o <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCallback%2A> método o <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> classe.  
+  
+ <xref:System.Activities.Presentation.Metadata.AttributeCallbackBuilder>objetos podem criar atributos somente para o tipo que está solicitando metadados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

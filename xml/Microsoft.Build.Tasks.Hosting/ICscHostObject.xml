@@ -1,0 +1,1029 @@
+<Type Name="ICscHostObject" FullName="Microsoft.Build.Tasks.Hosting.ICscHostObject">
+  <TypeSignature Language="C#" Value="public interface ICscHostObject : Microsoft.Build.Framework.ITaskHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICscHostObject implements class Microsoft.Build.Framework.ITaskHost" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Hosting.ICscHostObject" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITaskHost</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("8520CC4D-64DC-4855-BE3F-4C28CCE048EE")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define uma interface que permite que o [Csc](http://msdn.microsoft.com/library/d8c19b36-f5ca-484b-afa6-8ff3b90e103a) tarefas para se comunicar com o ambiente de desenvolvimento integrado (IDE) do host.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface permite que o `Csc` tarefa para delegar a compilação de projeto para o IDE em vez de usar compiladores de linha de comando.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginInitialization">
+      <MemberSignature Language="C#" Value="public void BeginInitialization ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInitialization() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.BeginInitialization" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Começa a inicialização do <see cref="T:Microsoft.Build.Tasks.Hosting.ICscHostObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public bool Compile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Compile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.Compile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Compila o projeto.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInitialization">
+      <MemberSignature Language="C#" Value="public bool EndInitialization (out string errorMessage, out int errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EndInitialization([out] string&amp; errorMessage, [out] int32&amp; errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.EndInitialization(System.String@,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorMessage" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="errorCode" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="errorMessage">A mensagem de erro.</param>
+        <param name="errorCode">O código de erro.</param>
+        <summary>Termina a inicialização do <see cref="T:Microsoft.Build.Tasks.Hosting.ICscHostObject" /> com a mensagem de erro especificada e o código.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDesignTime">
+      <MemberSignature Language="C#" Value="public bool IsDesignTime ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDesignTime() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.IsDesignTime" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o ambiente de desenvolvimento integrado (IDE) ainda está no modo de tempo de design.</summary>
+        <returns>
+          <see langword="true" />Se o IDE estiver em modo de tempo de design; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUpToDate">
+      <MemberSignature Language="C#" Value="public bool IsUpToDate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUpToDate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.IsUpToDate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o projeto compilado é atualizado.</summary>
+        <returns>
+          <see langword="true" />Se o projeto compilado é atualizado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAdditionalLibPaths">
+      <MemberSignature Language="C#" Value="public bool SetAdditionalLibPaths (string[] additionalLibPaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetAdditionalLibPaths(string[] additionalLibPaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAdditionalLibPaths(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="additionalLibPaths" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="additionalLibPaths">Uma matriz de diretórios para procurar por referências.</param>
+        <summary>Especifica diretórios adicionais para pesquisar referências.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAddModules">
+      <MemberSignature Language="C#" Value="public bool SetAddModules (string[] addModules);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetAddModules(string[] addModules) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAddModules(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addModules" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="addModules">Uma matriz de módulos para fazer parte do assembly.</param>
+        <summary>Especifica um ou mais módulos a fazerem parte do assembly.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAllowUnsafeBlocks">
+      <MemberSignature Language="C#" Value="public bool SetAllowUnsafeBlocks (bool allowUnsafeBlocks);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetAllowUnsafeBlocks(bool allowUnsafeBlocks) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetAllowUnsafeBlocks(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="allowUnsafeBlocks" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="allowUnsafeBlocks">
+          <see langword="true" />para permitir que o código que usa a palavra-chave unsafe para compilar; Caso contrário, <see langword="false" />.</param>
+        <summary>Especifica um valor que indica se deve permitir que o código que usa o <see langword="unsafe" /> palavra-chave para compilar.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBaseAddress">
+      <MemberSignature Language="C#" Value="public bool SetBaseAddress (string baseAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetBaseAddress(string baseAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetBaseAddress(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="baseAddress">O endereço base preferencial no qual carregar uma DLL.</param>
+        <summary>Especifica o endereço básico preferencial no qual uma DLL será carregada.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCheckForOverflowUnderflow">
+      <MemberSignature Language="C#" Value="public bool SetCheckForOverflowUnderflow (bool checkForOverflowUnderflow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetCheckForOverflowUnderflow(bool checkForOverflowUnderflow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetCheckForOverflowUnderflow(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="checkForOverflowUnderflow" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="checkForOverflowUnderflow">
+          <see langword="true" />Para fazer com que uma exceção quando inteiro aritmético excede os limites do tipo de dados; Caso contrário, <see langword="false" />.</param>
+        <summary>Especifica um valor que indica se a aritmética que excede os limites do tipo de dados de número inteiro gera uma exceção em tempo de execução.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCodePage">
+      <MemberSignature Language="C#" Value="public bool SetCodePage (int codePage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetCodePage(int32 codePage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetCodePage(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codePage" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="codePage">A página de código a ser usado para todos os arquivos de código fonte na compilação.</param>
+        <summary>Especifica a página de código a ser usada para todos os arquivos de código-fonte na compilação.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDebugType">
+      <MemberSignature Language="C#" Value="public bool SetDebugType (string debugType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetDebugType(string debugType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDebugType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="debugType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="debugType">O tipo de depuração, que pode ser <see langword="full" /> ou <see langword="pdbonly" />.</param>
+        <summary>Especifica o tipo de depuração.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefineConstants">
+      <MemberSignature Language="C#" Value="public bool SetDefineConstants (string defineConstants);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetDefineConstants(string defineConstants) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDefineConstants(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defineConstants" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="defineConstants">Os símbolos de pré-processamento para definir.</param>
+        <summary>Especifica os símbolos de pré-processamento para definir.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDelaySign">
+      <MemberSignature Language="C#" Value="public bool SetDelaySign (bool delaySignExplicitlySet, bool delaySign);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetDelaySign(bool delaySignExplicitlySet, bool delaySign) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDelaySign(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delaySignExplicitlySet" Type="System.Boolean" />
+        <Parameter Name="delaySign" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="delaySignExplicitlySet">
+          <see langword="true" />Se o <see langword="DelaySign" /> parâmetro for explicitamente definida; caso contrário, <see langword="false" />.</param>
+        <param name="delaySign">
+          <see langword="true" />Se você quiser criar um assembly totalmente assinado. <see langword="false" /> se você deseja colocar a chave pública no assembly.</param>
+        <summary>Especifica um valor que indica se é necessário criar um assembly totalmente assinado.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDisabledWarnings">
+      <MemberSignature Language="C#" Value="public bool SetDisabledWarnings (string disabledWarnings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetDisabledWarnings(string disabledWarnings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDisabledWarnings(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disabledWarnings" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="disabledWarnings">A lista de avisos para desabilitar. Vários avisos são separados por vírgula.</param>
+        <summary>Especifica a lista de avisos para desabilitar.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDocumentationFile">
+      <MemberSignature Language="C#" Value="public bool SetDocumentationFile (string documentationFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetDocumentationFile(string documentationFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetDocumentationFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentationFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="documentationFile">Uma cadeia de caracteres que contém o nome do arquivo no qual salvar os comentários de documentação processados.</param>
+        <summary>Especifica o arquivo XML no qual salvar os comentários de documentação processados.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEmitDebugInformation">
+      <MemberSignature Language="C#" Value="public bool SetEmitDebugInformation (bool emitDebugInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetEmitDebugInformation(bool emitDebugInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetEmitDebugInformation(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="emitDebugInformation" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="emitDebugInformation">
+          <see langword="true" />Gerar informações de depuração e colocá-lo em um arquivo. PDB; Caso contrário, <see langword="false" />.</param>
+        <summary>Especifica um valor que indica se deve gerar informações de depuração e colocá-lo em um arquivo de banco de dados (. PDB) do programa.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetErrorReport">
+      <MemberSignature Language="C#" Value="public bool SetErrorReport (string errorReport);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetErrorReport(string errorReport) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetErrorReport(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorReport" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorReport">Um valor que especifica os erros de compilador como internos são relatados à Microsoft. Esse valor pode ser <see langword="prompt" />, <see langword="send" />, ou <see langword="none" />.</param>
+        <summary>Especifica um valor que indica erros de compilador como internos são relatados à Microsoft.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFileAlignment">
+      <MemberSignature Language="C#" Value="public bool SetFileAlignment (int fileAlignment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetFileAlignment(int32 fileAlignment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetFileAlignment(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileAlignment" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fileAlignment">O tamanho das seções no arquivo de saída.</param>
+        <summary>Especifica o tamanho das seções no arquivo de saída.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGenerateFullPaths">
+      <MemberSignature Language="C#" Value="public bool SetGenerateFullPaths (bool generateFullPaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetGenerateFullPaths(bool generateFullPaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetGenerateFullPaths(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="generateFullPaths" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="generateFullPaths">
+          <see langword="true" />Especifique o caminho absoluto para o arquivo na saída do compilador; <see langword="false" /> para especificar apenas o nome do arquivo na saída do compilador.</param>
+        <summary>Especifica um valor que indica se deve especificar o caminho absoluto para o arquivo na saída do compilador.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKeyContainer">
+      <MemberSignature Language="C#" Value="public bool SetKeyContainer (string keyContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetKeyContainer(string keyContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetKeyContainer(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyContainer" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyContainer">O nome do contêiner de chave criptográfico.</param>
+        <summary>Especifica o nome do contêiner da chave de criptografia.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKeyFile">
+      <MemberSignature Language="C#" Value="public bool SetKeyFile (string keyFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetKeyFile(string keyFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetKeyFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keyFile">O nome do arquivo que contém a chave de criptografia.</param>
+        <summary>Especifica o nome de arquivo que contém a chave de criptografia.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLangVersion">
+      <MemberSignature Language="C#" Value="public bool SetLangVersion (string langVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetLangVersion(string langVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetLangVersion(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="langVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="langVersion">A versão do idioma a ser usado.</param>
+        <summary>Especifica a versão da linguagem a ser usada.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLinkResources">
+      <MemberSignature Language="C#" Value="public bool SetLinkResources (Microsoft.Build.Framework.ITaskItem[] linkResources);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetLinkResources(class Microsoft.Build.Framework.ITaskItem[] linkResources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetLinkResources(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="linkResources" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="linkResources">O [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] recursos para vincular ao arquivo de saída.</param>
+        <summary>Cria links especificado [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] recursos no arquivo de saída; o recurso de arquivos não são colocados no arquivo de saída.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMainEntryPoint">
+      <MemberSignature Language="C#" Value="public bool SetMainEntryPoint (string targetType, string mainEntryPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetMainEntryPoint(string targetType, string mainEntryPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetMainEntryPoint(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.String" />
+        <Parameter Name="mainEntryPoint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">O formato do arquivo de saída. Este valor pode ser <see langword="library" />, <see langword="exe" />, <see langword="module" /> ou <see langword="winexe" />.</param>
+        <param name="mainEntryPoint">O local do <see langword="Main" /> método.</param>
+        <summary>Especifica a localização do método <c>Principal</c>.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetModuleAssemblyName">
+      <MemberSignature Language="C#" Value="public bool SetModuleAssemblyName (string moduleAssemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetModuleAssemblyName(string moduleAssemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetModuleAssemblyName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moduleAssemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="moduleAssemblyName">Um assembly cujo não público tipos um. netmodule pode acessar.</param>
+        <summary>Especifica um assembly cujos tipos não públicos podem ser acessados por um .netmodule.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoConfig">
+      <MemberSignature Language="C#" Value="public bool SetNoConfig (bool noConfig);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetNoConfig(bool noConfig) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetNoConfig(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="noConfig" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="noConfig">
+          <see langword="true" />Para impedir que o compilador compilar com o arquivo csc.rsp; Caso contrário, <see langword="false" />.</param>
+        <summary>Especifica um valor que indica se é para impedir que o compilador compilar com o arquivo csc.rsp.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoStandardLib">
+      <MemberSignature Language="C#" Value="public bool SetNoStandardLib (bool noStandardLib);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetNoStandardLib(bool noStandardLib) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetNoStandardLib(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="noStandardLib" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="noStandardLib">
+          <see langword="true" />Para impedir a importação de mscorlib.dll; Caso contrário, <see langword="false" />.</param>
+        <summary>Especifica um valor que indica se é para impedir a importação de mscorlib.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOptimize">
+      <MemberSignature Language="C#" Value="public bool SetOptimize (bool optimize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetOptimize(bool optimize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetOptimize(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="optimize" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="optimize">
+          <see langword="true" />Habilitar otimizações; Caso contrário, <see langword="false" />.</param>
+        <summary>Especifica um valor que indica se deseja habilitar otimizações.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOutputAssembly">
+      <MemberSignature Language="C#" Value="public bool SetOutputAssembly (string outputAssembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetOutputAssembly(string outputAssembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetOutputAssembly(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="outputAssembly" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="outputAssembly">O nome do arquivo de saída.</param>
+        <summary>Especifica o nome do arquivo de saída.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPdbFile">
+      <MemberSignature Language="C#" Value="public bool SetPdbFile (string pdbFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetPdbFile(string pdbFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetPdbFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pdbFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pdbFile">O arquivo. PDB na qual colocar gerado informações de depuração.</param>
+        <summary>Especifica o arquivo de banco de dados (. PDB) do programa no qual colocar gerado informações de depuração.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPlatform">
+      <MemberSignature Language="C#" Value="public bool SetPlatform (string platform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetPlatform(string platform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetPlatform(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="platform" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="platform">A plataforma do processador a ser segmentada pelo arquivo de saída. Esse valor pode ser <see langword="x86" />, <see langword="x64" />, ou <see langword="anycpu" />.</param>
+        <summary>Especifica a plataforma do processador a ser direcionada pelo arquivo de saída.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReferences">
+      <MemberSignature Language="C#" Value="public bool SetReferences (Microsoft.Build.Framework.ITaskItem[] references);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetReferences(class Microsoft.Build.Framework.ITaskItem[] references) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetReferences(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="references" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="references">Os itens do qual importar informações de tipo público para o projeto atual.</param>
+        <summary>Especifica os itens a partir do qual importar informações de tipo público para o projeto atual.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResources">
+      <MemberSignature Language="C#" Value="public bool SetResources (Microsoft.Build.Framework.ITaskItem[] resources);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetResources(class Microsoft.Build.Framework.ITaskItem[] resources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetResources(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resources" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="resources">O [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] recursos para incorporar o arquivo de saída.</param>
+        <summary>Especifica o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] recursos para incorporar o arquivo de saída.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResponseFiles">
+      <MemberSignature Language="C#" Value="public bool SetResponseFiles (Microsoft.Build.Framework.ITaskItem[] responseFiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetResponseFiles(class Microsoft.Build.Framework.ITaskItem[] responseFiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetResponseFiles(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseFiles" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="responseFiles">Os arquivos de resposta que contém comandos para o compilador.</param>
+        <summary>Especifica os arquivos de resposta que contém comandos para o compilador.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSources">
+      <MemberSignature Language="C#" Value="public bool SetSources (Microsoft.Build.Framework.ITaskItem[] sources);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetSources(class Microsoft.Build.Framework.ITaskItem[] sources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetSources(Microsoft.Build.Framework.ITaskItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sources" Type="Microsoft.Build.Framework.ITaskItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="sources">Um ou mais [!INCLUDE[csprcs](~/includes/csprcs-md.md)] arquivos de origem.</param>
+        <summary>Especifica um ou mais arquivos de origem [!INCLUDE[csprcs](~/includes/csprcs-md.md)].</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTargetType">
+      <MemberSignature Language="C#" Value="public bool SetTargetType (string targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetTargetType(string targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetTargetType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetType">O formato do arquivo de saída. Este valor pode ser <see langword="library" />, <see langword="exe" />, <see langword="module" /> ou <see langword="winexe" />.</param>
+        <summary>Especifica o formato do arquivo de saída.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTreatWarningsAsErrors">
+      <MemberSignature Language="C#" Value="public bool SetTreatWarningsAsErrors (bool treatWarningsAsErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetTreatWarningsAsErrors(bool treatWarningsAsErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetTreatWarningsAsErrors(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="treatWarningsAsErrors" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="treatWarningsAsErrors">
+          <see langword="true" />Trate todos os avisos como erros. Caso contrário, <see langword="false" />.</param>
+        <summary>Especifica um valor que indica se deve tratar todos os avisos como erros.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWarningLevel">
+      <MemberSignature Language="C#" Value="public bool SetWarningLevel (int warningLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetWarningLevel(int32 warningLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningLevel(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="warningLevel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="warningLevel">O nível de aviso, de 0 a 4.</param>
+        <summary>Especifica o nível de aviso, de 0 a 4.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWarningsAsErrors">
+      <MemberSignature Language="C#" Value="public bool SetWarningsAsErrors (string warningsAsErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetWarningsAsErrors(string warningsAsErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningsAsErrors(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="warningsAsErrors" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="warningsAsErrors">Uma lista de avisos a serem tratados como erros.</param>
+        <summary>Especifica uma lista de avisos a serem tratados como erros.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWarningsNotAsErrors">
+      <MemberSignature Language="C#" Value="public bool SetWarningsNotAsErrors (string warningsNotAsErrors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetWarningsNotAsErrors(string warningsNotAsErrors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWarningsNotAsErrors(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="warningsNotAsErrors" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="warningsNotAsErrors">Uma lista de avisos que não são tratados como erros.</param>
+        <summary>Especifica uma lista de avisos que não são tratados como erros.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWin32Icon">
+      <MemberSignature Language="C#" Value="public bool SetWin32Icon (string win32Icon);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetWin32Icon(string win32Icon) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWin32Icon(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="win32Icon" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="win32Icon">O arquivo. ico a ser inserido no assembly.</param>
+        <summary>Especifica um arquivo. ico a ser inserido no assembly.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWin32Resource">
+      <MemberSignature Language="C#" Value="public bool SetWin32Resource (string win32Resource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SetWin32Resource(string win32Resource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Hosting.ICscHostObject.SetWin32Resource(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="win32Resource" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="win32Resource">Um arquivo de recurso (. res) do Win32 para inserir o arquivo de saída.</param>
+        <summary>Especifica um arquivo de recurso (. res) do Win32 para inserir o arquivo de saída.</summary>
+        <returns>
+          <see langword="true" /> caso o método tenha sido bem-sucedido; do contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

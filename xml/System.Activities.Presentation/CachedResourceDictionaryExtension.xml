@@ -1,0 +1,93 @@
+<Type Name="CachedResourceDictionaryExtension" FullName="System.Activities.Presentation.CachedResourceDictionaryExtension">
+  <TypeSignature Language="C#" Value="public class CachedResourceDictionaryExtension : System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CachedResourceDictionaryExtension extends System.Windows.Markup.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.CachedResourceDictionaryExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.MarkupExtensionReturnType(typeof(System.Windows.ResourceDictionary))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um dicionário em cache que associa a seus URIs de dicionários de recursos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementa o <xref:System.Windows.Markup.MarkupExtension> classe que fornece extensões de marcação XAML. Extensões de marcação retornam objetos com base em valores de atributo de cadeia de caracteres ou elementos de marcação em XAML. O <xref:System.Activities.Presentation.CachedResourceDictionaryExtension.ProvideValue%2A> pode usar o método de cada extensão de um <xref:System.IServiceProvider> objeto em tempo de execução que pode fornecer o contexto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CachedResourceDictionaryExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.CachedResourceDictionaryExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Activities.Presentation.CachedResourceDictionaryExtension" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.CachedResourceDictionaryExtension.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um <see cref="T:System.IServiceProvider" /> objeto que pode fornecer serviços para a extensão de marcação.</param>
+        <summary>Retorna um objeto que é definido como o valor da propriedade de destino para esta extensão de marcação.</summary>
+        <returns>O <see cref="T:System.Object" /> valor a ser definido na propriedade onde a extensão é aplicada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Activities.Presentation.CachedResourceDictionaryExtension.ProvideValue%2A> pode usar o método de cada extensão de um <xref:System.IServiceProvider> objeto em tempo de execução que pode fornecer o contexto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.CachedResourceDictionaryExtension.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o URI associado a essa extensão de dicionário de recursos armazenado em cache.</summary>
+        <value>O <see cref="T:System.Uri" /> associado a essa extensão de dicionário de recursos armazenado em cache.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

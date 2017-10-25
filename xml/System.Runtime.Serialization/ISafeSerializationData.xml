@@ -1,0 +1,87 @@
+<Type Name="ISafeSerializationData" FullName="System.Runtime.Serialization.ISafeSerializationData">
+  <TypeSignature Language="C#" Value="public interface ISafeSerializationData" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISafeSerializationData" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.ISafeSerializationData" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Habilita a serialização de dados de exceção personalizada no código de transparência de segurança.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em versões anteriores do.NET Framework 4.0, a serialização de dados de usuário personalizada em um código de transparência de segurança foi realizada usando o <xref:System.Exception.GetObjectData%2A> método. Começando com o .NET Framework 4.0, esse método é marcado com o <xref:System.Security.SecurityCriticalAttribute> atributo que impede a execução de código transparente de segurança. Para solucionar essa condição, implementar a <xref:System.Runtime.Serialization.ISafeSerializationData> de interface e adicionar dados personalizados, conforme mostrado no exemplo a seguir.  
+  
+ O <xref:System.Runtime.Serialization.ISafeSerializationData.CompleteDeserialization%2A> método é chamado após a serialização e usa o <xref:System.Runtime.Serialization.SafeSerializationEventArgs> para restaurar os dados personalizados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir contém uma implementação de <xref:System.Runtime.Serialization.ISafeSerializationData> interface que é usado para armazenar dados personalizados que são serializados.  
+  
+ [!code-csharp[ISafeSerializationData#1](~/samples/snippets/csharp/VS_Snippets_CFX/isafeserializationdata/cs/source.cs#1)]
+ [!code-vb[ISafeSerializationData#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/isafeserializationdata/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompleteDeserialization">
+      <MemberSignature Language="C#" Value="public void CompleteDeserialization (object deserialized);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CompleteDeserialization(object deserialized) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ISafeSerializationData.CompleteDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deserialized" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="deserialized">Um objeto que contém o estado da instância.</param>
+        <summary>Esse método é chamado quando a instância é desserializada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto de estado é armazenado em uma variável particular definida na implementação do <xref:System.Runtime.Serialization.ISafeSerializationData> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir restaura o estado da exceção depois que está sendo desserializado.  
+  
+ [!code-csharp[ISafeSerializationData#2](~/samples/snippets/csharp/VS_Snippets_CFX/isafeserializationdata/cs/source.cs#2)]
+ [!code-vb[ISafeSerializationData#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/isafeserializationdata/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

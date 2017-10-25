@@ -1,0 +1,248 @@
+<Type Name="SystemCommands" FullName="System.Windows.SystemCommands">
+  <TypeSignature Language="C#" Value="public static class SystemCommands" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed SystemCommands extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.SystemCommands" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define os comandos roteados que são comuns para gerenciamento de janela.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os comandos de <xref:System.Windows.SystemCommands> classe representam um conjunto de comandos comuns que gerencia um <xref:System.Windows.Window>.  As propriedades dessa classe representam <xref:System.Windows.Input.RoutedCommand> objetos e não fornecer a lógica de implementação do comando. Você pode fornecer a lógica para um comando associando o comando com um <xref:System.Windows.Input.CommandBinding>.  Para obter mais informações, consulte [como: gancho de um comando a um controle com suporte de comandos não](~/docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md). Como alternativa, o <xref:System.Windows.SystemCommands> classe fornece métodos estáticos que implementam a lógica para especificado <xref:System.Windows.Window>. Você pode passar um método estático para um tipo que implementa <xref:System.Windows.Input.ICommand> e que aceita um delegado. Para obter mais informações, consulte o exemplo de <xref:System.Windows.Input.InputBinding> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CloseWindow">
+      <MemberSignature Language="C#" Value="public static void CloseWindow (System.Windows.Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CloseWindow(class System.Windows.Window window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SystemCommands.CloseWindow(System.Windows.Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="window" Type="System.Windows.Window" />
+      </Parameters>
+      <Docs>
+        <param name="window">A janela a ser fechada.</param>
+        <summary>Fecha a janela especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseWindowCommand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedCommand CloseWindowCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedCommand CloseWindowCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SystemCommands.CloseWindowCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um comando que fecha uma janela.</summary>
+        <value>Um comando que fecha uma janela.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximizeWindow">
+      <MemberSignature Language="C#" Value="public static void MaximizeWindow (System.Windows.Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void MaximizeWindow(class System.Windows.Window window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SystemCommands.MaximizeWindow(System.Windows.Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="window" Type="System.Windows.Window" />
+      </Parameters>
+      <Docs>
+        <param name="window">Maximizar a janela.</param>
+        <summary>Maximiza a janela especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximizeWindowCommand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedCommand MaximizeWindowCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedCommand MaximizeWindowCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SystemCommands.MaximizeWindowCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um comando que maximiza a uma janela.</summary>
+        <value>Um comando que maximiza a uma janela.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimizeWindow">
+      <MemberSignature Language="C#" Value="public static void MinimizeWindow (System.Windows.Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void MinimizeWindow(class System.Windows.Window window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SystemCommands.MinimizeWindow(System.Windows.Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="window" Type="System.Windows.Window" />
+      </Parameters>
+      <Docs>
+        <param name="window">A janela para minimizar.</param>
+        <summary>Minimiza a janela especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimizeWindowCommand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedCommand MinimizeWindowCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedCommand MinimizeWindowCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SystemCommands.MinimizeWindowCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um comando que maximiza a uma janela.</summary>
+        <value>Um comando que maximiza a uma janela.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RestoreWindow">
+      <MemberSignature Language="C#" Value="public static void RestoreWindow (System.Windows.Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RestoreWindow(class System.Windows.Window window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SystemCommands.RestoreWindow(System.Windows.Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="window" Type="System.Windows.Window" />
+      </Parameters>
+      <Docs>
+        <param name="window">A janela para restaurar.</param>
+        <summary>Restaura a janela especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RestoreWindowCommand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedCommand RestoreWindowCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedCommand RestoreWindowCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SystemCommands.RestoreWindowCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um comando que restaura uma janela.</summary>
+        <value>Um comando que restaura uma janela.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSystemMenu">
+      <MemberSignature Language="C#" Value="public static void ShowSystemMenu (System.Windows.Window window, System.Windows.Point screenLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowSystemMenu(class System.Windows.Window window, valuetype System.Windows.Point screenLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SystemCommands.ShowSystemMenu(System.Windows.Window,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="window" Type="System.Windows.Window" />
+        <Parameter Name="screenLocation" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="window">A janela para que o menu de sistema exibido.</param>
+        <param name="screenLocation">O local do menu do sistema.</param>
+        <summary>Exibe o menu do sistema para a janela especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSystemMenuCommand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedCommand ShowSystemMenuCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedCommand ShowSystemMenuCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SystemCommands.ShowSystemMenuCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um comando que exibe o menu do sistema.</summary>
+        <value>Um comando que exibe o menu do sistema.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

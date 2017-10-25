@@ -1,0 +1,239 @@
+<Type Name="TemplatedWizardStep" FullName="System.Web.UI.WebControls.TemplatedWizardStep">
+  <TypeSignature Language="C#" Value="public class TemplatedWizardStep : System.Web.UI.WebControls.WizardStepBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplatedWizardStep extends System.Web.UI.WebControls.WizardStepBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TemplatedWizardStep" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WizardStepBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.WizardStepControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.Themeable(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma etapa em um controle do assistente que pode ser personalizada com o uso de modelos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TemplatedWizardStep> classe é fornecida para habilitar os desenvolvedores a aplicar um modelo para as etapas em um controle que atua como um assistente. O <xref:System.Web.UI.WebControls.TemplatedWizardStep> classe se destina a ser usado principalmente por desenvolvedores de controle.  
+  
+ Você pode aplicar um tema para <xref:System.Web.UI.WebControls.TemplatedWizardStep>.  
+  
+   
+  
+## Examples  
+ O <xref:System.Web.UI.WebControls.TemplatedWizardStep> classe permite que você personalize os modelos de conteúdo e navegação dentro dele. O exemplo a seguir mostra como definir uma etapa do assistente com base no modelo.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate%2A> propriedade permite que você tenha controle total do bloco de navegação, normalmente é exibido na parte inferior da exibição atual. Normalmente, você deve preencher o bloco de navegação com uma série de botões. No entanto, outros controles são aceitáveis como eles oferecem suporte a bolha de comando, como faz o <xref:System.Web.UI.WebControls.Button> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.TemplatedWizardStep#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatedWizardStep/CS/templatedwizardstepcs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.TemplatedWizardStep#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.TemplatedWizardStep/VB/templatedwizardstepvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplatedWizardStep ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TemplatedWizardStep.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.TemplatedWizardStep" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate ContentTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ContentTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.Wizard))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo para exibir o conteúdo de uma etapa em um <see cref="T:System.Web.UI.WebControls.Wizard" /> controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.ITemplate" /> objeto que contém o modelo para exibir o conteúdo de uma etapa em um <see cref="T:System.Web.UI.WebControls.Wizard" /> controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplateContainer">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control ContentTemplateContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control ContentTemplateContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplateContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contêiner que um <see cref="T:System.Web.UI.WebControls.Wizard" /> controle usa para criar um <see cref="P:System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplate" /> modelo para uma etapa.</summary>
+        <value>Um <see cref="T:System.Web.UI.Control" /> que contém o <see cref="P:System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplate" /> modelo para uma etapa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora a sintaxe inclui a configuração de <xref:System.Web.UI.WebControls.TemplatedWizardStep.ContentTemplateContainer%2A> propriedade, é para uso interno apenas, portanto, a propriedade é eficaz somente leitura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomNavigationTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate CustomNavigationTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate CustomNavigationTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.Wizard))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo para exibir a interface do usuário (UI) navegação de uma etapa em um <see cref="T:System.Web.UI.WebControls.Wizard" /> controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.ITemplate" /> objeto que contém o modelo de exibição de navegação da interface do usuário de uma etapa em um <see cref="T:System.Web.UI.WebControls.Wizard" /> controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomNavigationTemplateContainer">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control CustomNavigationTemplateContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control CustomNavigationTemplateContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplateContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contêiner que um <see cref="T:System.Web.UI.WebControls.Wizard" /> controle usa para criar um <see cref="P:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate" /> modelo para uma etapa.</summary>
+        <value>Um <see cref="T:System.Web.UI.Control" /> que contém o <see cref="P:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate" /> modelo para uma etapa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora a sintaxe inclui a configuração de <xref:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplateContainer%2A> propriedade, é para uso interno apenas, portanto, a propriedade é eficaz somente leitura. Seu código deve verificar se o <xref:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplateContainer%2A> não é de propriedade `null` antes de fazer referência a ele.  
+  
+ Essa propriedade não é vinculável em designers visuais, mas é vinculável em tempo de execução. Para obter mais informações, consulte <xref:System.ComponentModel.BindableAttribute>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">Se <see cref="P:System.Web.UI.WebControls.TemplatedWizardStep.CustomNavigationTemplate" /> não tem nenhum conteúdo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SkinID">
+      <MemberSignature Language="C#" Value="public override string SkinID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SkinID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TemplatedWizardStep.SkinID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a capa a ser aplicada ao controle.</summary>
+        <value>O nome da capa para aplicar ao controle. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1392 @@
+<Type Name="CodeDomProvider" FullName="System.CodeDom.Compiler.CodeDomProvider">
+  <TypeSignature Language="C#" Value="public abstract class CodeDomProvider : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CodeDomProvider extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.CodeDomProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma classe base para implementações <see cref="T:System.CodeDom.Compiler.CodeDomProvider" />. Esta classe é abstrata.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.CodeDom.Compiler.CodeDomProvider> pode ser usado para criar e recuperar instâncias dos geradores de código e compiladores de código. Geradores de código podem ser usados para gerar o código em um idioma específico e compiladores de código podem ser usados para compilar o código em assemblies.  
+  
+> [!NOTE]
+>  No [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], os métodos disponíveis no gerador de código e compilador de código estão disponíveis diretamente com o provedor de código. Você não precisa chamar <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> ou <xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A> para acessar os métodos e os métodos são marcados como obsoletos. Isso se aplica a preexistente, bem como novas implementações do provedor de código.  
+  
+ Um <xref:System.CodeDom.Compiler.CodeDomProvider> implementação normalmente fornece código de geração de e/ou códigos interfaces de compilação para geração de código e gerenciamento de compilação para um único idioma de programação. Vários idiomas suportados pelo <xref:System.CodeDom.Compiler.CodeDomProvider> implementações que acompanham o [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)]. Essas linguagens incluem c#, Visual Basic, C++ e JScript. Os desenvolvedores ou fornecedores de compilador podem implementar o <xref:System.CodeDom.Compiler.ICodeGenerator> e <xref:System.CodeDom.Compiler.ICodeCompiler> interfaces e fornecer um <xref:System.CodeDom.Compiler.CodeDomProvider> que estende o suporte de CodeDOM para outras linguagens de programação.  
+  
+ O [ &lt;System. CodeDom&gt; elemento](~/docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) na configuração do computador (Machine. config) de arquivo fornece um mecanismo para desenvolvedores e fornecedores de compilador adicionar configurações adicionais <xref:System.CodeDom.Compiler.CodeDomProvider>implementações.  
+  
+ O <xref:System.CodeDom.Compiler.CodeDomProvider> classe fornece métodos estáticos para descobrir e enumerar o <xref:System.CodeDom.Compiler.CodeDomProvider> implementações em um computador. O <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> método retorna as configurações para todos os <xref:System.CodeDom.Compiler.CodeDomProvider> implementações em um computador. O <xref:System.CodeDom.Compiler.CodeDomProvider.GetCompilerInfo%2A> método retorna as configurações para um determinado <xref:System.CodeDom.Compiler.CodeDomProvider> implementação, com base no nome da linguagem de programação. O <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A> método retorna uma instância de um <xref:System.CodeDom.Compiler.CodeDomProvider> implementação para um idioma específico.  
+  
+ Para obter mais detalhes sobre as configurações do provedor de linguagem no arquivo de configuração, consulte [esquema de configurações do provedor de linguagem e compilador](http://msdn.microsoft.com/library/c020b139-8699-4f0d-9ac9-70d0c5b2a8c8).  
+  
+> [!NOTE]
+>  Essa classe faz uma demanda de link e uma demanda de herança no nível de classe. Um <xref:System.Security.SecurityException> é gerada se o chamador imediato ou classe derivada não tem permissão de confiança total. Para obter detalhes sobre as exigências de segurança, consulte [demandas de Link](~/docs/framework/misc/link-demands.md) e [demandas de herança](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ O programa de exemplo a seguir pode gerar e compilar o código-fonte com base em um modelo de CodeDOM de um programa que imprime "Olá, mundo" usando o <xref:System.Console> classe. Uma interface de usuário do Windows Forms é fornecida. O usuário pode selecionar o destino de linguagem de várias seleções de programação: c#, Visual Basic e JScript.  
+  
+ [!code-cpp[CodeDomExample#1](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source.cpp#1)]
+ [!code-csharp[CodeDomExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source.cs#1)]
+ [!code-vb[CodeDomExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esta classe não pode ser usada pelo código parcialmente confiável.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Esta classe não pode ser herdada pelo código parcialmente confiável.</permission>
+    <block subset="none" type="overrides">
+      <para>Nas versões do .NET Framework 1.0 e 1.1, provedores de código consistem em implementações de <see cref="T:System.CodeDom.Compiler.CodeDomProvider" />, <see cref="T:System.CodeDom.Compiler.ICodeGenerator" />, <see cref="T:System.CodeDom.Compiler.ICodeParser" />, e <see cref="T:System.CodeDom.Compiler.ICodeCompiler" />. No [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], o <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" />, <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateParser" />, e <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler" /> métodos são obsoletos e os métodos de <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> e <see cref="T:System.CodeDom.Compiler.ICodeCompiler" /> diretamente disponíveis no <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> classe. Você deve substituir esses métodos em sua implementação de provedor de código e não chama os métodos de base.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CodeDomProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.Compiler.CodeDomProvider" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esta classe não pode ser usada pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileAssemblyFromDom">
+      <MemberSignature Language="C#" Value="public virtual System.CodeDom.Compiler.CompilerResults CompileAssemblyFromDom (System.CodeDom.Compiler.CompilerParameters options, params System.CodeDom.CodeCompileUnit[] compilationUnits);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults CompileAssemblyFromDom(class System.CodeDom.Compiler.CompilerParameters options, class System.CodeDom.CodeCompileUnit[] compilationUnits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom(System.CodeDom.Compiler.CompilerParameters,System.CodeDom.CodeCompileUnit[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="compilationUnits" Type="System.CodeDom.CodeCompileUnit[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="options">Um objeto <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> que indica as configurações da compilação.</param>
+        <param name="compilationUnits">Uma matriz do tipo <see cref="T:System.CodeDom.CodeCompileUnit" /> que indica o código a ser compilado.</param>
+        <summary>Compila um assembly com base nas árvores <see cref="N:System.CodeDom" /> contidas na matriz especificada de objetos <see cref="T:System.CodeDom.CodeCompileUnit" />, usando as configurações de compilador especificadas.</summary>
+        <returns>Um objeto <see cref="T:System.CodeDom.Compiler.CompilerResults" /> que indica os resultados da compilação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeCompiler> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeCompiler> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler" /> método para compatibilidade com provedores preexistentes que usam os compiladores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeCompiler" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um compilador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileAssemblyFromFile">
+      <MemberSignature Language="C#" Value="public virtual System.CodeDom.Compiler.CompilerResults CompileAssemblyFromFile (System.CodeDom.Compiler.CompilerParameters options, params string[] fileNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults CompileAssemblyFromFile(class System.CodeDom.Compiler.CompilerParameters options, string[] fileNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile(System.CodeDom.Compiler.CompilerParameters,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="fileNames" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="options">Um objeto <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> que indica as configurações da compilação.</param>
+        <param name="fileNames">Uma matriz com os nomes dos arquivos a serem compilados.</param>
+        <summary>Compila um assembly do código-fonte contido nos arquivos especificados, usando as configurações de compilador especificadas.</summary>
+        <returns>Um objeto <see cref="T:System.CodeDom.Compiler.CompilerResults" /> que indica os resultados da compilação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeCompiler> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeCompiler> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler" /> método para compatibilidade com provedores preexistentes que usam os compiladores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeCompiler" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um compilador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileAssemblyFromSource">
+      <MemberSignature Language="C#" Value="public virtual System.CodeDom.Compiler.CompilerResults CompileAssemblyFromSource (System.CodeDom.Compiler.CompilerParameters options, params string[] sources);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.CompilerResults CompileAssemblyFromSource(class System.CodeDom.Compiler.CompilerParameters options, string[] sources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromSource(System.CodeDom.Compiler.CompilerParameters,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CompilerParameters" />
+        <Parameter Name="sources" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="options">Um objeto <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> que indica as configurações do compilador para esta compilação.</param>
+        <param name="sources">Uma matriz de cadeias de código-fonte a ser compilada.</param>
+        <summary>Compila um assembly da matriz especificada de cadeias de caracteres que contém o código-fonte, usando as configurações do compilador especificadas.</summary>
+        <returns>Um objeto <see cref="T:System.CodeDom.Compiler.CompilerResults" /> que indica os resultados da compilação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeCompiler> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeCompiler> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler" /> método para compatibilidade com provedores preexistentes que usam os compiladores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeCompiler" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um compilador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCompiler">
+      <MemberSignature Language="C#" Value="public abstract System.CodeDom.Compiler.ICodeCompiler CreateCompiler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.ICodeCompiler CreateCompiler() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("ICodeCompiler is obsolete")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.ICodeCompiler</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, cria um novo compilador de código.</summary>
+        <returns>Um <see cref="T:System.CodeDom.Compiler.ICodeCompiler" /> que pode ser usado para a compilação de representações de código-fonte baseadas em <see cref="N:System.CodeDom" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método está obsoleto no [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. A alternativa recomendada é chamar o <xref:System.CodeDom.Compiler.ICodeCompiler> métodos que estão diretamente disponíveis no provedor de código.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>No [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], você deve implementar o <see cref="T:System.CodeDom.Compiler.ICodeCompiler" /> membros no <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> classe e lançar um <see cref="T:System.NotSupportedException" /> quando este método é chamado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEscapedIdentifier">
+      <MemberSignature Language="C#" Value="public virtual string CreateEscapedIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateEscapedIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CreateEscapedIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres para o qual criar um identificador de escape.</param>
+        <summary>Cria um identificador com caracteres de escape para o valor especificado.</summary>
+        <returns>O identificador com caracteres de escape para o valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.Compiler.CodeDomProvider.CreateEscapedIdentifier%2A>testes se o identificador está em conflito com qualquer reservadas ou palavras-chave e nesse caso, retorna um nome equivalente com formatação de código de escape de idioma específico. Isso é conhecido como um identificador com caracteres de escape. O identificador com escape contém o mesmo `value` mas formatação de código de escape adicionados para diferenciar o identificador da palavra-chave. Dois exemplos de implementação são precede o `value` com "@" ou colchetes a `value` com "[" e "]".  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeGenerator> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeGenerator> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> método para compatibilidade com provedores preexistentes que usam geradores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um gerador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateGenerator">
+      <MemberSignature Language="C#" Value="public abstract System.CodeDom.Compiler.ICodeGenerator CreateGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.ICodeGenerator CreateGenerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("ICodeGenerator is obsolete")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.ICodeGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, cria um novo gerador de código.</summary>
+        <returns>Um <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> que pode ser usado para gerar <see cref="N:System.CodeDom" /> com base em representações de código de origem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método está obsoleto no [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)]. A alternativa recomendada é chamar o <xref:System.CodeDom.Compiler.ICodeGenerator> métodos que estão diretamente disponíveis no <xref:System.CodeDom.Compiler.CodeDomProvider> classe.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>No [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], você deve implementar o <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> membros no <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> classe e lançar um <see cref="T:System.NotSupportedException" /> quando este método é chamado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateGenerator">
+      <MemberSignature Language="C#" Value="public virtual System.CodeDom.Compiler.ICodeGenerator CreateGenerator (System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.ICodeGenerator CreateGenerator(class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.ICodeGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="output">Um <see cref="T:System.IO.TextWriter" /> para usar a saída.</param>
+        <summary>Quando substituído em uma classe derivada, cria um novo gerador de código usando especificado <see cref="T:System.IO.TextWriter" /> para saída.</summary>
+        <returns>Um <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> que pode ser usado para gerar <see cref="N:System.CodeDom" /> com base em representações de código de origem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa especificado <xref:System.IO.TextWriter> para saída. Este método dá suporte à geração de código otimizado mais que incrementalmente atualiza o código-fonte.  
+  
+> [!NOTE]
+>  As chamadas de implementação de classe base a <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método, que está obsoleto no [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)] e resulta em uma <xref:System.NotSupportedException> se um <xref:System.CodeDom.Compiler.ICodeGenerator> objeto não é retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateGenerator">
+      <MemberSignature Language="C#" Value="public virtual System.CodeDom.Compiler.ICodeGenerator CreateGenerator (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.ICodeGenerator CreateGenerator(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.ICodeGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo de saída.</param>
+        <summary>Quando substituído em uma classe derivada, cria um novo gerador de código usando o nome de arquivo especificado para a saída.</summary>
+        <returns>Um <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> que pode ser usado para gerar <see cref="N:System.CodeDom" /> com base em representações de código de origem.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa o nome de arquivo especificado para a saída.  
+  
+> [!NOTE]
+>  As chamadas de implementação de classe base a <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método, que está obsoleto no [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)] e resulta em uma <xref:System.NotSupportedException> se um <xref:System.CodeDom.Compiler.ICodeGenerator> objeto não é retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParser">
+      <MemberSignature Language="C#" Value="public virtual System.CodeDom.Compiler.ICodeParser CreateParser ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.Compiler.ICodeParser CreateParser() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CreateParser" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("ICodeParser is obsolete")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.ICodeParser</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, cria um novo analisador de código.</summary>
+        <returns>Um <see cref="T:System.CodeDom.Compiler.ICodeParser" /> que pode ser usado para analisar o código-fonte. Retorna a implementação base sempre <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProvider">
+      <MemberSignature Language="C#" Value="public static System.CodeDom.Compiler.CodeDomProvider CreateProvider (string language);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.CodeDom.Compiler.CodeDomProvider CreateProvider(string language) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CreateProvider(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CodeDomProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="language">O nome do idioma.</param>
+        <summary>Obtém uma instância <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> para o idioma especificado.</summary>
+        <returns>Um provedor CodeDOM implementado para o nome do idioma especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esse método é mais comumente usado para criar uma instância de um provedor de código em um aplicativo que pode, opcionalmente, use um dos vários provedores. <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A>permite que você especificar em tempo de execução, o provedor de código que você deseja criar uma instância. Se você souber em tempo de design, qual código provedor será usado, você deve criar uma instância do provedor de código em vez de usar o <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A> método.  
+  
+ O <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A> método retorna um <xref:System.CodeDom.Compiler.CodeDomProvider> instância para um nome de idioma específico; ele é semelhante a chamar o <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> método com o tipo de provedor do idioma. Use <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A> quando você deseja localizar dinamicamente uma implementação de provedor configurado para um nome de idioma.  
+  
+ Se mais de uma implementação de provedor estiver configurada para o nome do idioma, <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A> retorna uma instância do provedor para o último elemento de configuração correspondente.  
+  
+ Use o <xref:System.Activator.CreateInstance%28System.Type%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> sobrecarga de método quando desejar que uma implementação de provedor de idioma específico. Por exemplo, use o <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A> método para obter uma instância do provedor que suporte o nome do idioma `"CSharp"`; use o <xref:System.Activator.CreateInstance%28System.Type%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> sobrecarga do método para obter uma instância do provedor especificamente para o <xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType> implementação. Você deve usar o [\], CultureInfo, objeto\<xref:System.Activator.CreateInstance%28System.Type%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D% 2CSystem.Globalization.CultureInfo%2CSystem.Object%5b%5D%29?displayProperty=nameWithType > método se você tiver vários provedores de código para um idioma e você quiser criar uma instância de um provedor de código específico.  
+  
+ O <xref:System.CodeDom.Compiler.CodeDomProvider.IsDefinedLanguage%2A> método verifica se a implementação de pelo menos um provedor oferece suporte a um idioma específico. Você pode validar um nome de idioma usando <xref:System.CodeDom.Compiler.CodeDomProvider.IsDefinedLanguage%2A> antes de passá-lo para <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A>. Se você passar um nome de idioma sem suporte para <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A> um <xref:System.Configuration.ConfigurationException?displayProperty=nameWithType> é gerada.  
+  
+ O <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> método pode ser usado para determinar todas as <xref:System.CodeDom.Compiler.CodeDomProvider> implementações em um computador, incluindo implementações adicionais fornecidas por desenvolvedores e fornecedores de compilador que são identificados no [ &lt;System. CodeDom &gt; Elemento](~/docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) no arquivo de configuração da máquina (Machine. config).  
+  
+ O <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A> método retorna uma instância de um <xref:System.CodeDom.Compiler.CodeDomProvider> implementação para um idioma específico.  
+  
+ Nomes de idiomas diferenciam maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina o <xref:System.CodeDom.Compiler.CodeDomProvider> implementação para um idioma de entrada e exibe as configurações definidas para o provedor do idioma. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.CodeDom.Compiler.CompilerInfo> classe.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#6](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#6)]
+ [!code-csharp[CodeDom_CompilerInfo#6](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#6)]
+ [!code-vb[CodeDom_CompilerInfo#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O <paramref name="language" /> não tem um provedor configurado neste computador.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="language" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateProvider">
+      <MemberSignature Language="C#" Value="public static System.CodeDom.Compiler.CodeDomProvider CreateProvider (string language, System.Collections.Generic.IDictionary&lt;string,string&gt; providerOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.CodeDom.Compiler.CodeDomProvider CreateProvider(string language, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; providerOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CreateProvider(System.String,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CodeDomProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" />
+        <Parameter Name="providerOptions" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="language">O nome do idioma.</param>
+        <param name="providerOptions">Uma coleção de opções do provedor do arquivo de configuração.</param>
+        <summary>Obtém uma instância <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> para as opções de idioma e provedor especificadas.</summary>
+        <returns>Um provedor CodeDOM implementado para as opções e o nome do idioma especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esse método é mais comumente usado para criar uma instância de um provedor de código em um aplicativo que pode, opcionalmente, use um dos vários provedores. <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%28System.String%2CSystem.Collections.Generic.IDictionary%7BSystem.String%2CSystem.String%7D%29>permite que você especificar em tempo de execução, a versão do provedor de código que você deseja criar uma instância. Se você souber em tempo de design, qual código provedor será usado, você deve criar uma instância do que provedor de código em vez de usar o <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%28System.String%2CSystem.Collections.Generic.IDictionary%7BSystem.String%2CSystem.String%7D%29> método.  
+  
+ Use <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%28System.String%2CSystem.Collections.Generic.IDictionary%7BSystem.String%2CSystem.String%7D%29> quando você deseja localizar dinamicamente uma implementação de provedor configurado para um idioma específico e opções. Nomes de idiomas diferenciam maiusculas de minúsculas. Para obter informações sobre opções de provedor com suporte, consulte a documentação específica do provedor de CodeDOM.  
+  
+ Para obter informações sobre validação de um provedor e chamar um provedor se mais de uma implementação de provedor estiver configurada para o nome do idioma, consulte a seção comentários a <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%28System.String%29> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma instância de um provedor usando o `providerOptions` parâmetro.  
+  
+ [!code-csharp[CodeDomProvider.ProviderOptions#1](~/samples/snippets/csharp/VS_Snippets_CLR/codedomprovider.provideroptions/cs/program.cs#1)]
+ [!code-vb[CodeDomProvider.ProviderOptions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/codedomprovider.provideroptions/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateValidIdentifier">
+      <MemberSignature Language="C#" Value="public virtual string CreateValidIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateValidIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.CreateValidIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres para o qual gerar um identificador válido.</param>
+        <summary>Cria um identificador válido para o valor especificado.</summary>
+        <returns>Um identificador válido para o valor especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.Compiler.CodeDomProvider.CreateValidIdentifier%2A>Testa se o identificador está em conflito com reservadas ou palavras-chave, e se assim, tenta retornar um identificador válido de nomes que não estão em conflito. Normalmente o identificador retornado é apenas um pouco modificado para diferenciar o identificador da palavra-chave; Por exemplo, o nome pode ser precedido pelo caractere de sublinhado ("_").  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeGenerator> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeGenerator> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> método para compatibilidade com provedores preexistentes que usam geradores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um gerador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FileExtension">
+      <MemberSignature Language="C#" Value="public virtual string FileExtension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileExtension" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeDomProvider.FileExtension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a extensão de nome de arquivo padrão a ser usado para arquivos de código fonte no idioma atual.</summary>
+        <value>Uma extensão de nome de arquivo correspondente para a extensão dos arquivos de origem do idioma atual. Retorna a implementação base sempre <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada pelos geradores de código e compiladores de código para indicar quais extensões de arquivo devem ser gerados ou usados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância de <xref:Microsoft.VisualBasic.VBCodeProvider?displayProperty=nameWithType>. O exemplo exibe o nome do provedor, o hash padrão e o código de extensão de nome para a nova instância do provedor.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#3)]
+ [!code-csharp[CodeDom_CompilerInfo#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#3)]
+ [!code-vb[CodeDom_CompilerInfo#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCodeFromCompileUnit">
+      <MemberSignature Language="C#" Value="public virtual void GenerateCodeFromCompileUnit (System.CodeDom.CodeCompileUnit compileUnit, System.IO.TextWriter writer, System.CodeDom.Compiler.CodeGeneratorOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateCodeFromCompileUnit(class System.CodeDom.CodeCompileUnit compileUnit, class System.IO.TextWriter writer, class System.CodeDom.Compiler.CodeGeneratorOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit(System.CodeDom.CodeCompileUnit,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="compileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="compileUnit">Um <see cref="T:System.CodeDom.CodeCompileUnit" /> para o qual gerar código.</param>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> para o qual o código de saída é enviado.</param>
+        <param name="options">Um <see cref="T:System.CodeDom.Compiler.CodeGeneratorOptions" /> que indica as opções a serem usadas para gerar código.</param>
+        <summary>Gera código para a unidade de compilação CodeDOM (Modelo de Objeto do Documento de Código) especificada e envia-a para o text writer especificado, usando as opções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeGenerator> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeGenerator> implementação é chamada pela classe base.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> método para gerar código para um aplicativo "Hello World" de um <xref:System.CodeDom.CodeCompileUnit>. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.CodeDom.Compiler.CodeDomProvider> classe.  
+  
+ [!code-cpp[CodeDomExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source.cpp#3)]
+ [!code-csharp[CodeDomExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source.cs#3)]
+ [!code-vb[CodeDomExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> método para compatibilidade com provedores preexistentes que usam geradores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um gerador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCodeFromExpression">
+      <MemberSignature Language="C#" Value="public virtual void GenerateCodeFromExpression (System.CodeDom.CodeExpression expression, System.IO.TextWriter writer, System.CodeDom.Compiler.CodeGeneratorOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateCodeFromExpression(class System.CodeDom.CodeExpression expression, class System.IO.TextWriter writer, class System.CodeDom.Compiler.CodeGeneratorOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromExpression(System.CodeDom.CodeExpression,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Um objeto <see cref="T:System.CodeDom.CodeExpression" /> que indica a expressão para a qual gerar código.</param>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> para o qual o código de saída é enviado.</param>
+        <param name="options">Um <see cref="T:System.CodeDom.Compiler.CodeGeneratorOptions" /> que indica as opções a serem usadas para gerar código.</param>
+        <summary>Gera código para a expressão CodeDOM (Modelo de Objeto do Documento de Código) especificada e o envia para o text writer especificado, usando as opções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeGenerator> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeGenerator> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> método para compatibilidade com provedores preexistentes que usam geradores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um gerador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCodeFromMember">
+      <MemberSignature Language="C#" Value="public virtual void GenerateCodeFromMember (System.CodeDom.CodeTypeMember member, System.IO.TextWriter writer, System.CodeDom.Compiler.CodeGeneratorOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateCodeFromMember(class System.CodeDom.CodeTypeMember member, class System.IO.TextWriter writer, class System.CodeDom.Compiler.CodeGeneratorOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromMember(System.CodeDom.CodeTypeMember,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="System.CodeDom.CodeTypeMember" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="member">Um <see cref="T:System.CodeDom.CodeTypeMember" /> objeto que indica o membro para o qual gerar código.</param>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> para o qual o código de saída é enviado.</param>
+        <param name="options">Um <see cref="T:System.CodeDom.Compiler.CodeGeneratorOptions" /> que indica as opções a serem usadas para gerar código.</param>
+        <summary>Gera código para a declaração de membro especificado do modelo de objeto de documento de código (CodeDOM) e o envia para o gravador de texto especificado, usando as opções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação da classe base lança um <xref:System.NotImplementedException>. Consulte <xref:Microsoft.CSharp.CSharpCodeProvider.GenerateCodeFromMember%2A?displayProperty=nameWithType> para obter a documentação que descreve uma implementação deste método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromMember%2A> método conforme implementado pelo <xref:Microsoft.CSharp.CSharpCodeProvider> e <xref:Microsoft.VisualBasic.VBCodeProvider> classes.  
+  
+ [!code-csharp[CodeDom_GenerateCodeFromMember#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_GenerateCodeFromMember/cs/program.cs#1)]
+ [!code-vb[CodeDom_GenerateCodeFromMember#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_GenerateCodeFromMember/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Este método não for substituído em uma classe derivada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCodeFromNamespace">
+      <MemberSignature Language="C#" Value="public virtual void GenerateCodeFromNamespace (System.CodeDom.CodeNamespace codeNamespace, System.IO.TextWriter writer, System.CodeDom.Compiler.CodeGeneratorOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateCodeFromNamespace(class System.CodeDom.CodeNamespace codeNamespace, class System.IO.TextWriter writer, class System.CodeDom.Compiler.CodeGeneratorOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromNamespace(System.CodeDom.CodeNamespace,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codeNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="codeNamespace">Um <see cref="T:System.CodeDom.CodeNamespace" /> objeto que indica o namespace para o qual gerar código.</param>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> para o qual o código de saída é enviado.</param>
+        <param name="options">Um <see cref="T:System.CodeDom.Compiler.CodeGeneratorOptions" /> que indica as opções a serem usadas para gerar código.</param>
+        <summary>Gera código para o namespace do modelo de objeto de documento de código (CodeDOM) especificado e o envia para o gravador de texto especificado, usando as opções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeGenerator> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeGenerator> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> método para compatibilidade com provedores preexistentes que usam geradores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um gerador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCodeFromStatement">
+      <MemberSignature Language="C#" Value="public virtual void GenerateCodeFromStatement (System.CodeDom.CodeStatement statement, System.IO.TextWriter writer, System.CodeDom.Compiler.CodeGeneratorOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateCodeFromStatement(class System.CodeDom.CodeStatement statement, class System.IO.TextWriter writer, class System.CodeDom.Compiler.CodeGeneratorOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromStatement(System.CodeDom.CodeStatement,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="statement" Type="System.CodeDom.CodeStatement" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="statement">Um <see cref="T:System.CodeDom.CodeStatement" /> que contém os elementos de CodeDOM para o qual gerar código.</param>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> para o qual o código de saída é enviado.</param>
+        <param name="options">Um <see cref="T:System.CodeDom.Compiler.CodeGeneratorOptions" /> que indica as opções a serem usadas para gerar código.</param>
+        <summary>Gera código para a instrução do modelo de objeto de documento de código (CodeDOM) e o envia para o gravador de texto especificado, usando as opções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeGenerator> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeGenerator> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> método para compatibilidade com provedores preexistentes que usam geradores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um gerador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCodeFromType">
+      <MemberSignature Language="C#" Value="public virtual void GenerateCodeFromType (System.CodeDom.CodeTypeDeclaration codeType, System.IO.TextWriter writer, System.CodeDom.Compiler.CodeGeneratorOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateCodeFromType(class System.CodeDom.CodeTypeDeclaration codeType, class System.IO.TextWriter writer, class System.CodeDom.Compiler.CodeGeneratorOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromType(System.CodeDom.CodeTypeDeclaration,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codeType" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="codeType">Um <see cref="T:System.CodeDom.CodeTypeDeclaration" /> objeto que indica o tipo para o qual gerar código.</param>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> para o qual o código de saída é enviado.</param>
+        <param name="options">Um <see cref="T:System.CodeDom.Compiler.CodeGeneratorOptions" /> que indica as opções a serem usadas para gerar código.</param>
+        <summary>Gera código para a declaração de tipo de modelo de objeto de documento de código (CodeDOM) especificado e o envia para o gravador de texto especificado, usando as opções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeGenerator> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeGenerator> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> método para compatibilidade com provedores preexistentes que usam geradores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um gerador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllCompilerInfo">
+      <MemberSignature Language="C#" Value="public static System.CodeDom.Compiler.CompilerInfo[] GetAllCompilerInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.CodeDom.Compiler.CompilerInfo[] GetAllCompilerInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o idioma de definições de configuração de provedor e o compilador para este computador.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.CodeDom.Compiler.CompilerInfo" /> que representa as configurações de todos os configurado <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> implementações.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> método para enumerar as configurações do provedor de idioma em um computador.  
+  
+> [!NOTE]
+>  No [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], os provedores de linguagem padrão fornecidos pelo .NET Framework não são especificados no [ &lt;System. CodeDom&gt; elemento](~/docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) configuração do compilador seção e não pode ser removida, portanto essa método retorna informações sobre os provedores padrão e qualquer especificado no arquivo de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir enumera os provedores de linguagem no computador e exibe as configurações de compilador e de configuração para cada provedor de idioma. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.CodeDom.Compiler.CompilerInfo> classe.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#8](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#8)]
+ [!code-csharp[CodeDom_CompilerInfo#8](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#8)]
+ [!code-vb[CodeDom_CompilerInfo#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCompilerInfo">
+      <MemberSignature Language="C#" Value="public static System.CodeDom.Compiler.CompilerInfo GetCompilerInfo (string language);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.CodeDom.Compiler.CompilerInfo GetCompilerInfo(string language) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.GetCompilerInfo(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CompilerInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="language">Um nome de idioma.</param>
+        <summary>Retorna o idioma de definições de configuração de provedor e o compilador para o idioma especificado.</summary>
+        <returns>Um <see cref="T:System.CodeDom.Compiler.CompilerInfo" /> objeto preenchido com as configurações de configurado <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> implementação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [ &lt;System. CodeDom&gt; elemento](~/docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) na configuração do computador o arquivo contém os compilador e o provedor de configuração configurações de idioma para cada <xref:System.CodeDom.Compiler.CodeDomProvider> implementação no computador. Para obter informações sobre arquivos de configuração de máquina, consulte a seção de arquivos de configuração de máquina em [Configurando aplicativos](http://msdn.microsoft.com/library/86bd26d3-737e-4484-9782-19b17f34cd1f). O <xref:System.CodeDom.Compiler.CodeDomProvider.GetCompilerInfo%2A> método procura cada elemento de configuração do provedor para o nome do idioma especificado. Retornado <xref:System.CodeDom.Compiler.CompilerInfo> instância contém configurações de provedor e o compilador de idioma definidas.  
+  
+ O <xref:System.CodeDom.Compiler.CodeDomProvider.IsDefinedLanguage%2A> método verifica se a implementação de pelo menos um provedor oferece suporte a um idioma específico. Você pode validar um nome de idioma usando <xref:System.CodeDom.Compiler.CodeDomProvider.IsDefinedLanguage%2A> antes de passá-lo para <xref:System.CodeDom.Compiler.CodeDomProvider.GetCompilerInfo%2A>. Isso impede que lançando um <xref:System.Configuration.ConfigurationException?displayProperty=nameWithType> quando você acessa o <xref:System.CodeDom.Compiler.CompilerInfo> instância para um nome de idioma sem suporte.  
+  
+ Se mais de uma implementação de provedor estiver configurada para o nome do idioma de entrada, <xref:System.CodeDom.Compiler.CodeDomProvider.GetCompilerInfo%2A> retorna as configurações do provedor de correspondência último elemento de configuração.  
+  
+ Nomes de idiomas diferenciam maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina o <xref:System.CodeDom.Compiler.CodeDomProvider> implementação para um idioma de entrada e exibe as configurações definidas para o provedor do idioma. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.CodeDom.Compiler.CompilerInfo> classe.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#6](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#6)]
+ [!code-csharp[CodeDom_CompilerInfo#6](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#6)]
+ [!code-vb[CodeDom_CompilerInfo#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">O <paramref name="language" /> não tem um provedor configurado neste computador.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O <paramref name="language" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConverter">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.TypeConverter GetConverter (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.TypeConverter GetConverter(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.GetConverter(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de objeto para recuperar um conversor de tipo.</param>
+        <summary>Obtém um <see cref="T:System.ComponentModel.TypeConverter" /> para o tipo de dados especificado.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter" /> para o tipo especificado, ou <see langword="null" /> se um <see cref="T:System.ComponentModel.TypeConverter" /> para o tipo especificado não foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe derivada pode substituir esse método para fornecer tipos específicos de conversores de tipo para tipos de dados específicos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLanguageFromExtension">
+      <MemberSignature Language="C#" Value="public static string GetLanguageFromExtension (string extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetLanguageFromExtension(string extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.GetLanguageFromExtension(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Uma extensão de nome de arquivo.</param>
+        <summary>Retorna um nome de idioma associado com a extensão de nome de arquivo especificado, conforme configurado no <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> seção de configuração do compilador.</summary>
+        <returns>Um nome de idioma associado com a extensão de nome de arquivo, conforme configurado no <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> definições de configuração do compilador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [ &lt;System. CodeDom&gt; elemento](~/docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) na configuração do computador (Machine. config) do arquivo contém os compilador e o provedor de configuração configurações de idioma para cada <xref:System.CodeDom.Compiler.CodeDomProvider> implementação sobre o computador. O <xref:System.CodeDom.Compiler.CodeDomProvider.GetLanguageFromExtension%2A> método procura cada elemento de configuração do provedor para a extensão de nome de arquivo especificado.  
+  
+ O <xref:System.CodeDom.Compiler.CodeDomProvider.IsDefinedExtension%2A> método verifica se a implementação de pelo menos um provedor oferece suporte a uma extensão de nome de arquivo específico. Você pode validar um extensão de nome de arquivo usando <xref:System.CodeDom.Compiler.CodeDomProvider.IsDefinedExtension%2A> antes de passá-lo para <xref:System.CodeDom.Compiler.CodeDomProvider.GetLanguageFromExtension%2A>. Isso impede que <xref:System.CodeDom.Compiler.CodeDomProvider.GetLanguageFromExtension%2A> de lançar um <xref:System.Configuration.ConfigurationException?displayProperty=nameWithType> para uma extensão de nome de arquivo sem suporte.  
+  
+ Se uma implementação de provedor oferecer suporte a extensão de nome de arquivo de entrada e existem em vários idiomas com suporte configurados para esse provedor, em seguida, <xref:System.CodeDom.Compiler.CodeDomProvider.GetLanguageFromExtension%2A> retorna o primeiro nome de idioma para o provedor. Se mais de uma implementação de provedor estiver configurada para a extensão de nome de arquivo de entrada, <xref:System.CodeDom.Compiler.CodeDomProvider.GetLanguageFromExtension%2A> retorna o nome do idioma do provedor de correspondência último elemento de configuração.  
+  
+ Nomes de idiomas e as extensões de nome de arquivo diferenciam maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina o <xref:System.CodeDom.Compiler.CodeDomProvider> implementação para uma extensão de nome de arquivo de entrada e exibe as configurações definidas para o provedor do idioma. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.CodeDom.Compiler.CompilerInfo> classe.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#5](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#5)]
+ [!code-csharp[CodeDom_CompilerInfo#5](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#5)]
+ [!code-vb[CodeDom_CompilerInfo#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">O <paramref name="extension" /> não tem um provedor de idioma definidas neste computador.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O <paramref name="extension" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeOutput">
+      <MemberSignature Language="C#" Value="public virtual string GetTypeOutput (System.CodeDom.CodeTypeReference type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetTypeOutput(class System.CodeDom.CodeTypeReference type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.GetTypeOutput(System.CodeDom.CodeTypeReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.CodeDom.CodeTypeReference" /> que indica o tipo de retorno.</param>
+        <summary>Obtém o tipo indicado pelo especificado <see cref="T:System.CodeDom.CodeTypeReference" />.</summary>
+        <returns>Uma representação de texto do tipo especificado, formatado para o idioma no qual o código é gerado por este gerador de código. No Visual Basic, por exemplo, passando um <see cref="T:System.CodeDom.CodeTypeReference" /> para o <see cref="T:System.Int32" /> tipo retornará "Integer".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeGenerator> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeGenerator> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> método para compatibilidade com provedores preexistentes que usam geradores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um gerador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefinedExtension">
+      <MemberSignature Language="C#" Value="public static bool IsDefinedExtension (string extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefinedExtension(string extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.IsDefinedExtension(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="extension">Uma extensão de nome de arquivo.</param>
+        <summary>Testa se uma extensão de nome de arquivo possui um tipo de <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> implementação configurada no computador.</summary>
+        <returns>
+          <see langword="true" />Se um <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> implementação é configurado para a extensão de nome de arquivo especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [ &lt;System. CodeDom&gt; elemento](~/docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) na configuração do computador (Machine. config) do arquivo contém os compilador e o provedor de configuração configurações de idioma para cada <xref:System.CodeDom.Compiler.CodeDomProvider> implementação sobre o computador. O <xref:System.CodeDom.Compiler.CodeDomProvider.IsDefinedExtension%2A> método pesquisa os elementos de configuração do provedor para a extensão de nome de arquivo especificado.  
+  
+ Extensões de nome de arquivo diferenciam maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina o <xref:System.CodeDom.Compiler.CodeDomProvider> implementação para uma extensão de nome de arquivo de entrada e exibe as configurações definidas para o provedor do idioma. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.CodeDom.Compiler.CompilerInfo> classe.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#5](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#5)]
+ [!code-csharp[CodeDom_CompilerInfo#5](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#5)]
+ [!code-vb[CodeDom_CompilerInfo#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="extension" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefinedLanguage">
+      <MemberSignature Language="C#" Value="public static bool IsDefinedLanguage (string language);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDefinedLanguage(string language) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.IsDefinedLanguage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="language" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="language">O nome do idioma.</param>
+        <summary>Testa se uma linguagem tem um <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> implementação configurada no computador.</summary>
+        <returns>
+          <see langword="true" />Se um <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> implementação é configurado para o idioma especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [ &lt;System. CodeDom&gt; elemento](~/docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md) na configuração do computador (Machine. config) do arquivo contém os compilador e o provedor de configuração configurações de idioma para cada <xref:System.CodeDom.Compiler.CodeDomProvider> implementação sobre o computador. O <xref:System.CodeDom.Compiler.CodeDomProvider.IsDefinedLanguage%2A> método pesquisa os elementos de configuração do provedor para o nome do idioma especificado.  
+  
+ Nomes de idiomas diferenciam maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina o <xref:System.CodeDom.Compiler.CodeDomProvider> implementação para um idioma de entrada e exibe as configurações definidas para o provedor do idioma. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.CodeDom.Compiler.CompilerInfo> classe.  
+  
+ [!code-cpp[CodeDom_CompilerInfo#6](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDom_CompilerInfo/CPP/source.cpp#6)]
+ [!code-csharp[CodeDom_CompilerInfo#6](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDom_CompilerInfo/CS/source.cs#6)]
+ [!code-vb[CodeDom_CompilerInfo#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDom_CompilerInfo/VB/source.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="language" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidIdentifier">
+      <MemberSignature Language="C#" Value="public virtual bool IsValidIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsValidIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.IsValidIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor para verificar como um identificador válido.</param>
+        <summary>Retorna um valor que indica se o valor especificado é um identificador válido para o idioma atual.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="value" /> parâmetro é um identificador válido; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método testa se um identificador é válido. O <xref:System.CodeDom.Compiler.CodeDomProvider.IsValidIdentifier%2A> método é específico do provedor. Os identificadores que são válidos para um provedor podem não ser válidos para outros provedores. Se `value` contém caracteres fora do intervalo de caracteres ASCII, verifique o identificador para todos os idiomas que podem ser usados para compilar o código.  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeGenerator> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeGenerator> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.CodeDom.Compiler.CodeDomProvider.IsValidIdentifier(System.String)" /> em uma classe derivada, cria o método para retornar <see langword="true" /> somente se o valor se ajusta as regras do idioma e não está em conflito com uma palavra-chave.  
+  
+ Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> método para compatibilidade com provedores preexistentes que usam geradores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um gerador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="LanguageOptions">
+      <MemberSignature Language="C#" Value="public virtual System.CodeDom.Compiler.LanguageOptions LanguageOptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.CodeDom.Compiler.LanguageOptions LanguageOptions" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeDomProvider.LanguageOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.LanguageOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador de recursos de idioma.</summary>
+        <value>Um <see cref="T:System.CodeDom.Compiler.LanguageOptions" /> que indica os recursos especiais do idioma.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public virtual System.CodeDom.CodeCompileUnit Parse (System.IO.TextReader codeStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.CodeCompileUnit Parse(class System.IO.TextReader codeStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.Parse(System.IO.TextReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codeStream" Type="System.IO.TextReader" />
+      </Parameters>
+      <Docs>
+        <param name="codeStream">Um objeto <see cref="T:System.IO.TextReader" /> que é usado para ler o código a ser analisado.</param>
+        <summary>Compila o código lido do fluxo de texto especificado em um <see cref="T:System.CodeDom.CodeCompileUnit" />.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeCompileUnit" /> que contém uma representação do código analisado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeParser> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeParser> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um analisador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateParser" /> método para compatibilidade com provedores preexistentes que usam os analisadores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeParser" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um analisador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Supports">
+      <MemberSignature Language="C#" Value="public virtual bool Supports (System.CodeDom.Compiler.GeneratorSupport supports);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Supports(valuetype System.CodeDom.Compiler.GeneratorSupport supports) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeDomProvider.Supports(System.CodeDom.Compiler.GeneratorSupport)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="generatorSupport" Type="System.CodeDom.Compiler.GeneratorSupport" />
+      </Parameters>
+      <Docs>
+        <param name="supports">To be added.</param>
+        <summary>Retorna um valor que indica se a geração de código especificada suporte é fornecido.</summary>
+        <returns>
+          <see langword="true" />Se a geração de código especificada suporte é fornecida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser chamado com um número de <xref:System.CodeDom.Compiler.GeneratorSupport> sinalizadores de uma vez para testar para um conjunto de recursos ao ingressar em um conjunto de sinalizadores de recurso apropriado junto com um binário `OR` operador (&#124;).  
+  
+> [!NOTE]
+>  Nas versões do .NET Framework 1.0 e 1.1, este método é fornecido pelo <xref:System.CodeDom.Compiler.ICodeGenerator> implementação que é retornada pelo <xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A> método do provedor. Na versão 2.0, esse método pode ser chamado diretamente no provedor de código, mesmo se ele não é substituído pelo provedor de código. Se o provedor de código não substituir esse método, o <xref:System.CodeDom.Compiler.ICodeGenerator> implementação é chamada pela classe base.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Nem esse método nem o método <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> são substituídos em uma classe derivada.</exception>
+        <block subset="none" type="overrides">
+          <para>Se você substituir esse método, você não deve chamar o método correspondente da classe base. O método de classe de base cria um gerador na classe derivada usando o obsoleto <see cref="M:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator" /> método para compatibilidade com provedores preexistentes que usam geradores de código. O método de classe base chama o método equivalente <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> implementação para executar essa função. Você obterá um <see cref="T:System.NotImplementedException" /> se você chamar o método de classe base de um provedor de código que não usa um gerador de código.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

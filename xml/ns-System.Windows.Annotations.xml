@@ -1,0 +1,15 @@
+<Namespace Name="System.Windows.Annotations">
+  <Docs>
+    <summary>Fornece classes para dar suporte a anotações criadas pelo usuário no conteúdo exibido no documento WPF controles de exibição.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos no <xref:System.Windows.Annotations> namespace são fornecidos para oferecer suporte a gerenciamento de anotações criadas pelo usuário nos dados de aplicativo exibidos no [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] controles de exibição de documento.  Usando o [!INCLUDE[TLA#tla_caf](~/includes/tlasharptla-caf-md.md)] aplicativos podem adicionar suporte para criados pelo usuário notas e destaques são armazenados separadamente do documento do aplicativo em si.  Desde que as informações de anotação do usuário são armazenadas separadamente do conteúdo do documento, os usuários ainda pode adicionar anotações e realça a documentos somente leitura ou direitos gerenciados que não podem ser alterados fisicamente.  
+  
+ O [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] controles de exibição de documentos que dão suporte a recursos de anotação do usuário são baseados em <xref:System.Windows.Controls.Primitives.DocumentViewerBase> derivados subclasses como <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, e <xref:System.Windows.Controls.FlowDocumentScrollViewer> , bem como <xref:System.Windows.Controls.FlowDocumentReader>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

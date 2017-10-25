@@ -1,0 +1,49 @@
+<Type Name="IErrorHandler" FullName="Microsoft.JScript.IErrorHandler">
+  <TypeSignature Language="C#" Value="public interface IErrorHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IErrorHandler" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.IErrorHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("E93D012C-56BB-4f32-864F-7C75EDA17B14")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define métodos para manipular erros que ocorrem quando o código está sendo analisado.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="OnCompilerError">
+      <MemberSignature Language="C#" Value="public bool OnCompilerError (Microsoft.JScript.IVsaFullErrorInfo error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool OnCompilerError(class Microsoft.JScript.IVsaFullErrorInfo error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.IErrorHandler.OnCompilerError(Microsoft.JScript.IVsaFullErrorInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="error" Type="Microsoft.JScript.IVsaFullErrorInfo" />
+      </Parameters>
+      <Docs>
+        <param name="error">Um objeto que contém informações sobre o erro.</param>
+        <summary>Quando implementada em uma classe, determina como lidar com um erro que ocorre quando o código está sendo analisado.</summary>
+        <returns>
+          <see langword="false" />para tratar o erro; <see langword="true" /> para ignorar o erro e continuar a análise.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

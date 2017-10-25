@@ -1,0 +1,94 @@
+<Type Name="FontSubsetterCommitPolicies" FullName="System.Windows.Xps.Serialization.FontSubsetterCommitPolicies">
+  <TypeSignature Language="C#" Value="public enum FontSubsetterCommitPolicies" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontSubsetterCommitPolicies extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a granularidade na qual os subconjuntos de glifo de fonte são salvos em um documento XPS.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando os glifos de fonte para o texto em uma [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento são salvas no pacote do documento, o texto do documento exibe forma idêntica em qualquer computador ou impressora.  Se os glifos não são salvas no documento e a fonte necessária não está instalada no computador local ou impressora, o dispositivo de renderização deve substituir glifos de outra fonte.  Substituir glifos pode alterar a aparência do texto quando uma fonte diferente é usada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CommitEntireSequence">
+      <MemberSignature Language="C#" Value="CommitEntireSequence" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Serialization.FontSubsetterCommitPolicies CommitEntireSequence = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitEntireSequence" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.FontSubsetterCommitPolicies</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazene todos os glifos que são usados no texto de cada sequência de documento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitPerDocument">
+      <MemberSignature Language="C#" Value="CommitPerDocument" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Serialization.FontSubsetterCommitPolicies CommitPerDocument = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerDocument" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.FontSubsetterCommitPolicies</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazene todos os glifos que são usados no texto de cada documento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitPerPage">
+      <MemberSignature Language="C#" Value="CommitPerPage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Serialization.FontSubsetterCommitPolicies CommitPerPage = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.CommitPerPage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.FontSubsetterCommitPolicies</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazene todos os glifos que são usados no texto de cada página.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Xps.Serialization.FontSubsetterCommitPolicies None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Serialization.FontSubsetterCommitPolicies</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum subconjunto.  Armazene todos os glifos para todas as fontes usadas no documento.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

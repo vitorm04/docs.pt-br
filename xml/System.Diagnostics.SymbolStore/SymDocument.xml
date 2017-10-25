@@ -1,0 +1,367 @@
+<Type Name="SymDocument" FullName="System.Diagnostics.SymbolStore.SymDocument">
+  <TypeSignature Language="C#" Value="public class SymDocument : System.Diagnostics.SymbolStore.SymDocumentBase, IDisposable, System.Diagnostics.SymbolStore.ISymbolDocument" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SymDocument extends System.Diagnostics.SymbolStore.SymDocumentBase implements class System.Diagnostics.SymbolStore.ISymbolDocument, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.SymbolStore.SymDocument" />
+  <AssemblyInfo>
+    <AssemblyName>ISymWrapper</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.SymbolStore.SymDocumentBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Diagnostics.SymbolStore.ISymbolDocument</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um documento referenciado por um repositório de símbolo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um documento é definido por uma URL e um GUID de tipo de documento. Usando o documento tipo GUID e a URL, você pode localizar o documento. Opcionalmente, você pode armazenar o documento de origem no repositório de símbolos.  
+  
+ Essa interface também fornece acesso a essa fonte, se presente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymDocument (System.Diagnostics.SymbolStore.Private.ISymUnmanagedDocument* pDocument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.SymbolStore.Private.ISymUnmanagedDocument* pDocument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymDocument.#ctor(System.Diagnostics.SymbolStore.Private.ISymUnmanagedDocument*)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pDocument" Type="System.Diagnostics.SymbolStore.Private.ISymUnmanagedDocument*" />
+      </Parameters>
+      <Docs>
+        <param name="pDocument">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckSumAlgorithmId">
+      <MemberSignature Language="C#" Value="public virtual Guid CheckSumAlgorithmId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid CheckSumAlgorithmId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymDocument.CheckSumAlgorithmId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gera um <see cref="T:System.NotSupportedException" /> em todos os casos.</summary>
+        <value>Um <see cref="T:System.NotSupportedException" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Em todos os casos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override sealed void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymDocument.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados pela instância atual da classe <see cref="T:System.Diagnostics.SymbolStore.SymDocument" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymDocument.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">
+          <see langword="true" />para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Chamado pelo <see cref="M:System.Diagnostics.SymbolStore.SymDocument.Dispose" /> e <see cref="M:System.Diagnostics.SymbolStore.SymDocument.Finalize" /> métodos para liberar os recursos gerenciados e não gerenciados usados pela instância atual do <see cref="T:System.Diagnostics.SymbolStore.SymDocument" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado somente pelo público <xref:System.Diagnostics.SymbolStore.SymDocument.Dispose%2A> e <xref:System.Diagnostics.SymbolStore.SymDocument.Finalize%2A> métodos; não chame este método diretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentType">
+      <MemberSignature Language="C#" Value="public virtual Guid DocumentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid DocumentType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymDocument.DocumentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do documento atual.</summary>
+        <value>O tipo de documento atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~SymDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymDocument.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera recursos não gerenciados e executa outras operações de limpeza antes que <see cref="T:System.Diagnostics.SymbolStore.SymReader" /> seja recuperado pela coleta de lixo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.Finalize%2A>. O código do aplicativo não deve chamar este método; o método `Finalize` de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindClosestLine">
+      <MemberSignature Language="C#" Value="public virtual int FindClosestLine (int line);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 FindClosestLine(int32 line) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymDocument.FindClosestLine(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="line" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="line">A linha especificada no documento.</param>
+        <summary>Retorna o número da linha da linha mais próximo que é um ponto de sequência, dada uma linha no documento atual que pode ou não ser um ponto de sequência.</summary>
+        <returns>O número da linha do ponto de sequência mais próximo à linha especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCheckSum">
+      <MemberSignature Language="C#" Value="public virtual byte[] GetCheckSum ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetCheckSum() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymDocument.GetCheckSum" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera um <see cref="T:System.NotSupportedException" /> em todos os casos.</summary>
+        <returns>Um <see cref="T:System.NotSupportedException" /> em todos os casos.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Em todos os casos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSourceRange">
+      <MemberSignature Language="C#" Value="public virtual byte[] GetSourceRange (int startLine, int startColumn, int endLine, int endColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetSourceRange(int32 startLine, int32 startColumn, int32 endLine, int32 endColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymDocument.GetSourceRange(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startLine" Type="System.Int32" />
+        <Parameter Name="startColumn" Type="System.Int32" />
+        <Parameter Name="endLine" Type="System.Int32" />
+        <Parameter Name="endColumn" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="startLine">Este parâmetro não é usado.</param>
+        <param name="startColumn">Este parâmetro não é usado.</param>
+        <param name="endLine">Este parâmetro não é usado.</param>
+        <param name="endColumn">Este parâmetro não é usado.</param>
+        <summary>Gera um <see cref="T:System.NotSupportedException" /> em todos os casos.</summary>
+        <returns>Um <see cref="T:System.NotSupportedException" /> em todos os casos.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Em todos os casos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnmanaged">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SymbolStore.Private.ISymUnmanagedDocument* GetUnmanaged ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Diagnostics.SymbolStore.Private.ISymUnmanagedDocument* GetUnmanaged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.SymbolStore.SymDocument.GetUnmanaged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SymbolStore.Private.ISymUnmanagedDocument*</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasEmbeddedSource">
+      <MemberSignature Language="C#" Value="public virtual bool HasEmbeddedSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasEmbeddedSource" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymDocument.HasEmbeddedSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a fonte para o documento atual é armazenada no repositório de símbolos.</summary>
+        <value>
+          <see langword="true" />Se a fonte para o documento atual é armazenada no repositório de símbolos; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Language">
+      <MemberSignature Language="C#" Value="public virtual Guid Language { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Language" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymDocument.Language" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o idioma do documento atual.</summary>
+        <value>Um <see cref="T:System.Guid" /> que representa o idioma do documento atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os GUIDS para linguagens comuns são definidos no arquivo corsym.idl incluído com o [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LanguageVendor">
+      <MemberSignature Language="C#" Value="public virtual Guid LanguageVendor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid LanguageVendor" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymDocument.LanguageVendor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o fornecedor do idioma do documento atual.</summary>
+        <value>Um <see cref="T:System.Guid" /> que representa o fornecedor do idioma do documento atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os GUIDS para linguagens comuns são definidos no arquivo corsym.idl incluído com o [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceLength">
+      <MemberSignature Language="C#" Value="public virtual int SourceLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SourceLength" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymDocument.SourceLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento, em bytes, da fonte incorporada.</summary>
+        <value>O comprimento da origem do documento atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="URL">
+      <MemberSignature Language="C#" Value="public virtual string URL { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string URL" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.SymbolStore.SymDocument.URL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ISymWrapper</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a URL do documento atual.</summary>
+        <value>A URL do documento atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

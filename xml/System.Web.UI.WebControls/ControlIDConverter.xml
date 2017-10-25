@@ -1,0 +1,181 @@
+<Type Name="ControlIDConverter" FullName="System.Web.UI.WebControls.ControlIDConverter">
+  <TypeSignature Language="C#" Value="public class ControlIDConverter : System.ComponentModel.StringConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlIDConverter extends System.ComponentModel.StringConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ControlIDConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.StringConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conversor de tipo que recupera uma lista de IDs no contêiner atual de controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ControlIDConverter> classe deriva de <xref:System.ComponentModel.StringConverter> classe e fornece uma lista de IDs de controle para exibição em um controle de grade de propriedade em ambientes de tempo de design. O <xref:System.Web.UI.WebControls.ControlIDConverter> classe também serve como a classe base para o <xref:System.Web.UI.WebControls.AssociatedControlConverter> e <xref:System.Web.UI.WebControls.ValidatedControlConverter> classes, que são conversores de tipo para controles da Web e que oferecem suporte a atributos de propriedade de validação, respectivamente.  
+  
+ Para obter mais informações sobre conversores de tipo, consulte [como: implementar um conversor de tipo](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56) ou [conversão do tipo generalizada](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.ControlIDConverter> em uma classe que requer um <xref:System.ComponentModel.TypeConverter> para processar a ID de um controle. O `DebugInfoControl` é um controle simple que imprime algumas informações em um controle contido pelo formulário da Web atual. Seu `ControlID` propriedade é decorada com um <xref:System.ComponentModel.TypeConverterAttribute> que designa o <xref:System.Web.UI.WebControls.ControlIDConverter> como o <xref:System.ComponentModel.TypeConverter> a ser usado para essa propriedade. O `DebugInfoControl` substitui o `Render` método para imprimir informações sobre o controle de destino em um <xref:System.Web.UI.WebControls.Label> controle.  
+  
+ [!code-csharp[System.Web.UI.ControlIdConverter_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlIdConverter_1/CS/debuginfocontrol.cs#1)]
+ [!code-vb[System.Web.UI.ControlIdConverter_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlIdConverter_1/VB/debuginfocontrol.vb#1)]  
+  
+ O exemplo de código a seguir demonstra como o `DebugInfoControl` pode ser usado em um formulário da Web juntamente com um <xref:System.Web.UI.WebControls.AccessDataSource> controle para exibir informações sobre o <xref:System.Web.UI.WebControls.AccessDataSource> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.ControlIdConverter_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.ControlIdConverter_1/CS/debuginfocs.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.ControlIdConverter_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.ControlIdConverter_1/VB/debuginfovb.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlIDConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlIDConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ControlIDConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Você nunca deve acessar diretamente um conversor de tipo. Em vez disso, chame o conversor apropriado usando um <xref:System.ComponentModel.TypeDescriptor> objeto. Para obter mais informações, consulte os exemplos em <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterControl">
+      <MemberSignature Language="C#" Value="protected virtual bool FilterControl (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool FilterControl(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlIDConverter.FilterControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">A instância de controle para testar a inclusão de <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" />.</param>
+        <summary>Retorna um valor que indica se a ID do controle do controle especificado é adicionada para o <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que é retornado pelo <see cref="M:System.Web.UI.WebControls.ControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> método.</summary>
+        <returns>
+          <see langword="true" /> em todos os casos.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>A implementação de <see cref="M:System.Web.UI.WebControls.ControlIDConverter.FilterControl(System.Web.UI.Control)" /> método retorna <see langword="true" /> em todos os casos. Classes que derivam de <see cref="T:System.Web.UI.WebControls.ControlIDConverter" /> substituir esse método para fornecer sua próprias de filtragem de mecanismo. Por exemplo, o <see cref="T:System.Web.UI.WebControls.AssociatedControlConverter" /> substituições de classe a <see cref="M:System.Web.UI.WebControls.ControlIDConverter.FilterControl(System.Web.UI.Control)" /> método e retorna <see langword="true" /> somente se o controle é um controle de servidor Web.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato que pode ser usado para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <summary>Retorna uma coleção de IDs do contêiner dentro de controlar o <see cref="T:System.ComponentModel.Design.IDesignerHost" /> quando fornecido com um contexto de formato.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que contém um conjunto de cadeias de caracteres que representa o controle IDs dos controles no contêiner atual. Se nenhum controle está contido no momento, uma coleção vazia será retornada. Se o contexto for <see langword="null" /> ou nenhum contêiner atual, em seguida, há <see langword="null" /> é retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ControlIDConverter.FilterControl%2A> método é chamado em cada controle localizado no contêiner. O controle de identificação é adicionada apenas ao <xref:System.ComponentModel.TypeConverter.StandardValuesCollection> se o método retornar `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlIDConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <summary>Retorna um valor que indica se a coleção de valores padrão retornada pelo <see cref="M:System.Web.UI.WebControls.ControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> método é uma lista exclusiva de valores possíveis, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="false" /> em todos os casos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, esse método sempre retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter dá suporte a valores padrão.  
+  
+ Use o <paramref name="context" /> parâmetro para extrair informações adicionais sobre o ambiente do qual este conversor é invocado. Esse parâmetro pode ser <see langword="null" />, e podem retornar propriedades no objeto de contexto <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ControlIDConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <summary>Retorna um valor que indica se esse objeto oferece suporte a um conjunto padrão de valores de ID de controle que podem ser escolhidos em uma lista, usando o contexto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="M:System.Web.UI.WebControls.ControlIDConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" /> deve ser chamado para localizar valores de ID de objeto oferece suporte de um conjunto comum de controle; caso contrário, <see langword="false" />. Essa implementação retorna <see langword="true" /> se o contexto não é <see langword="null" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Substitua este método se o tipo que você deseja converter dá suporte a valores padrão.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

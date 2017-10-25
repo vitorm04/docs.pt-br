@@ -1,0 +1,91 @@
+<Type Name="WorkflowIdentityFilter" FullName="System.Activities.WorkflowIdentityFilter">
+  <TypeSignature Language="C#" Value="public enum WorkflowIdentityFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WorkflowIdentityFilter extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowIdentityFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o filtro de identidade do fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao controle de versão e à funcionalidade de atualização dinâmica do Windows Workflow Foundation. versão do fluxo de trabalho [!INCLUDE[crabout](~/includes/crabout-md.md)], identidade do fluxo de trabalho e atualização dinâmica, consulte os tópicos a seguir.  
+  
+ [Controle de versão de fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=271561)  
+ Descreve a funcionalidade do controle de versão do fluxo de trabalho introduzida no [!INCLUDE[net_v45](~/includes/net-v45-md.md)].  
+  
+ [Atualização dinâmica](http://go.microsoft.com/fwlink/?LinkId=271563)  
+ Descreve como atualizar a definição de fluxo de trabalho de uma instância de fluxo de trabalho persistente usando a atualização dinâmica.  
+  
+ [Usando WorkflowApplication identidade e controle de versão](http://go.microsoft.com/fwlink/?LinkId=271564)  
+ Descreve como usar <xref:System.Activities.WorkflowIdentity> para hospedar várias versões de um fluxo de trabalho lado a lado.  
+  
+ [Controle de versão lado a lado no WorkflowServiceHost](http://go.microsoft.com/fwlink/?LinkId=271565)  
+ Descreve como hospedar várias versões de um fluxo de trabalho em um único ponto de extremidade.  
+  
+ [Como hospedar várias versões de um fluxo de trabalho lado a lado](http://go.microsoft.com/fwlink/?LinkId=271566)  
+ Essa etapa de [Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkId=271570) demonstra como atualizar uma definição de fluxo de trabalho e hospedagem de fluxos de trabalho usando a definição antiga e nova ao mesmo tempo.  
+  
+ [Como atualizar a definição de uma instância de fluxo de trabalho em execução](http://go.microsoft.com/fwlink/?LinkId=271567)  
+ Essa etapa de [Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkId=271570) demonstra a atualização de instâncias de fluxo de trabalho persistentes para usar uma nova definição de fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Any">
+      <MemberSignature Language="C#" Value="Any" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.WorkflowIdentityFilter Any = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.WorkflowIdentityFilter.Any" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.WorkflowIdentityFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica qualquer filtro de identidade do fluxo de trabalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AnyRevision">
+      <MemberSignature Language="C#" Value="AnyRevision" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.WorkflowIdentityFilter AnyRevision = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.WorkflowIdentityFilter.AnyRevision" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.WorkflowIdentityFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica qualquer revisão do filtro de identidade do fluxo de trabalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Exact">
+      <MemberSignature Language="C#" Value="Exact" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.WorkflowIdentityFilter Exact = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.WorkflowIdentityFilter.Exact" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.WorkflowIdentityFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O filtro de identidade exata do fluxo de trabalho.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,231 @@
+<Type Name="ConsumerConnectionPoint" FullName="System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint">
+  <TypeSignature Language="C#" Value="public class ConsumerConnectionPoint : System.Web.UI.WebControls.WebParts.ConnectionPoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ConsumerConnectionPoint extends System.Web.UI.WebControls.WebParts.ConnectionPoint" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.ConnectionPoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um objeto de ponto de conexão que permite que um controle de servidor que funciona como consumidor forme uma conexão com um provedor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em cada conexão de Web Parts entre dois controles de servidor, cada controle deve ter (entre outros requisitos de) um objeto de ponto de conexão associado que permite que ele se conectar a outro controle e fornecer ou consumir dados, dependendo se o controle é designado como o provedor ou o consumidor para a conexão. Um <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> objeto em geral contém os detalhes de como um controle pode se conectar a outro controle e o tipo de dados pode compartilhar. Para um controle que atua como o consumidor em uma conexão, o seu ponto de conexão deve ser um <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto. Para obter detalhes sobre pontos de conexão e conexões de Web Parts, leia os tópicos listados na seção Consulte também abaixo.  
+  
+ Para criar um <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> do objeto, várias etapas são necessárias:  
+  
+1.  Ativar um controle de consumidor fazer referência a uma instância da interface. Um <xref:System.Web.UI.WebControls.WebParts.WebPart> ou outro controle de servidor (qualquer tipo de controle de servidor que será adicionado a um <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zona pode ser usada) deve ser capaz de consumir dados de uma instância de interface específica. O controle não precisa implementar a interface; somente o provedor deve implementá-la. O consumidor pode trabalhar tanto com o tipo de interface exata atendido por um provedor ou, se não, uma <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> objeto pode ser usado para transformar dados de tipo de interface do provedor para um tipo entendido pelo consumidor. É uma maneira comum para habilitar um consumidor declarar um campo particular para conter uma referência para o tipo de interface desejado.  
+  
+2.  Identificar um método de retorno de chamada. Um método no consumidor deve ser identificado como o método de retorno de chamada para estabelecer uma conexão com o provedor. Esse método recupera uma instância da interface que o provedor implementa e atribui-lo (por exemplo) no campo particular criado na primeira etapa. A abordagem de Web Parts para identificar um método de retorno de chamada no consumidor é adicionar um `ConnectionConsumer` atributo de metadados (definido pelo <xref:System.Web.UI.WebControls.WebParts.ConnectionConsumerAttribute> classe) para o método que recebe a instância da interface. Quando o atributo é adicionado, o único parâmetro necessário é um nome de exibição a ser usado para o ponto de conexão do consumidor. Parâmetros opcionais também podem ser adicionados como uma ID.  
+  
+3.  Processo e os dados da instância de interface de saída. Executar qualquer processamento interno conforme necessário nos dados e, em seguida, normalmente um controle de consumidor processará os dados para a página. Uma maneira comum de fazer isso é substituir o controle <xref:System.Web.UI.Control.OnPreRender%2A> método.  
+  
+    > [!NOTE]
+    >  Durante uma solicitação síncrona, um consumidor deve solicitar dados diretamente do provedor durante ou imediatamente após o <xref:System.Web.UI.Control.PreRender> evento. Durante uma solicitação assíncrona, se o método de retorno de chamada do provedor não é chamado a qualquer momento durante o processamento, o desenvolvedor pode assumir que nenhum dado foi enviado para o consumidor.  
+  
+ Depois que um controle foi equipado para atuar como um consumidor, o controle pode participar de conexões (supondo que um controle de provedor também está equipado e disponível). Para criar uma conexão estática, declarativa na marcação de uma página da Web, os desenvolvedores podem usar o `<asp:webpartconnection>` elemento. Se o `ConnectionConsumer` atributo no código-fonte consumidor que identifica o método de retorno de chamada especifica uma ID para o ponto de conexão e, em seguida, esse valor deve ser atribuído ao `ConsumerConnectionPointID` atributo o `<asp:webpartconnection>` elemento em uma página. Um motivo que um desenvolvedor pode especificar uma ID para um ponto de conexão do consumidor é se houver vários pontos de conexão definidos no controle do consumidor. Se uma ID não é especificada para o ponto de conexão do consumidor no controle do consumidor, um valor não precisa ser atribuído ao `ConsumerConnectionPointID` atributo na página, porque a conexão será criada usando um valor padrão obtido o <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.DefaultID> campo.  
+  
+ Para criar uma conexão no código, os desenvolvedores devem criar um novo <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto chamando o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetConsumerConnectionPoints%2A> método e transmitindo a ele a identificação do controle consumidor, juntamente com a ID ou o índice do definidos <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto no controle do consumidor. Retornado <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> do objeto, juntamente com uma referência para o controle de consumidor, uma referência para o controle de provedor e um correspondente <xref:System.Web.UI.WebControls.WebParts.ProviderConnectionPoint> de objeto, são todos passado para o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectWebParts%2A> método para criar um novo <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> objeto.  
+  
+ Embora os desenvolvedores podem usar pontos de conexão do consumidor como parte do estabelecimento de conexões declarativamente ou por meio de programação, os usuários também podem interagir com pontos de conexão do consumidor para estabelecer conexões por meio da interface do usuário (IU). Se os desenvolvedores declarar um <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> controle em uma página da Web, ele fornece uma interface de usuário em tempo de execução para que os usuários criem conexões. Se os usuários optarem o controle provedor como o ponto de partida para estabelecer a conexão clicando em seu conectar verbo (eles também podem escolher o consumidor; não há nenhuma diferença na conexão resultante), a interface do usuário, eles verão um controle de lista suspensa com nomes para exibição disponível consumidor conexão ponto (ou pontos se houver várias) que o provedor pode enviar os dados. Os usuários devem selecionar um ponto de conexão do consumidor para estabelecer uma conexão.  
+  
+ Um <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto associa diretamente em um controle específico de consumidor e armazena os detalhes sobre uma conexão nas propriedades da qual ela herda da base de <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> classe. Por exemplo, no herdadas <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.InterfaceType%2A> propriedade, um ponto de conexão do consumidor mantém o tipo de interface, ele usa. Se o provedor e consumidor em uma conexão ambos entendem o tipo de interface, os controles são compatíveis e é capaz de formar uma conexão direta. Se o provedor e consumidor não podem funcionar com o mesmo tipo de interface, elas são incompatíveis e deve usar um <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> objeto para converter o ponto de conexão de provedor <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.InterfaceType%2A> propriedade em um tipo que o consumidor pode trabalhar com. Outra propriedade herdada importante é o <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.DisplayName%2A> durante a criação de conexões do ponto de propriedade, que fornece um nome amigável para exibir na interface de usuário, os usuários podem escolher uma conexão do consumidor. O nome de exibição é o parâmetro necessário quando os desenvolvedores de adicionar um `ConnectionConsumer` de atributo para o método de retorno de chamada em um controle de consumidor. O herdadas <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.ID%2A> propriedade também é útil, conforme indicado acima, porque ele fornece um identificador exclusivo para um ponto de conexão do consumidor que um consumidor tiver vários pontos de conexão. Um consumidor pode ter vários <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objetos definidos nela e nesse caso, quando os desenvolvedores de adicionar o `ConnectionConsumer` atributo para um método, eles devem especificar um valor de ID para distinguir cada ponto de conexão. Uma outra propriedade herdada notável é o <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint.AllowsMultipleConnections%2A> propriedade, que indica se um ponto de conexão do consumidor pode se conectar simultaneamente a vários provedores. O valor da propriedade é `false` por padrão para pontos de conexão do consumidor (enquanto o padrão é `true` para pontos de conexão do provedor).  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> classe adiciona vários métodos exclusivos para os membros da qual ela herda o <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> classe. O <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.SetObject%2A> método invoca o método de retorno de chamada do consumidor próprio definido para recuperar a instância da interface do provedor. O <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.SupportsConnection%2A> método retorna um valor booliano que indica se o ponto de conexão é capaz de estabelecer conexões, com base no estado atual do controle associado do consumidor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra as formas simples para criar uma conexão de forma declarativa, programaticamente ou por meio da interface do usuário, em cada caso fazer uso de um ponto de conexão do consumidor.  
+  
+ O exemplo tem quatro partes:  
+  
+-   Modo de exibição de um controle de usuário que permite que você altere as Web Parts em uma página.  
+  
+-   Fonte de código para uma interface e dois <xref:System.Web.UI.WebControls.WebParts.WebPart> controla atuar como o provedor e consumidor para uma conexão.  
+  
+-   Uma página da Web para hospedar todos os controles e executar o exemplo de código.  
+  
+-   Uma explicação de como executar o exemplo de página.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Salve o seguinte código-fonte para um arquivo. ascx, dando a ele o nome do arquivo que é atribuído para o `Src` atributo da `Register` diretiva para este controle de usuário, que está na parte superior da página da Web de hospedagem. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_ConnectionPoint_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/CS/displaymodemenucs.ascx#6)]
+ [!code-aspx-vb[WebParts_ConnectionPoint_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/VB/DisplayModeMenuVB.ascx#6)]  
+  
+ A segunda parte do exemplo de código é o código-fonte para a interface e controles. O arquivo de origem contém uma interface simples chamada `IZipCode`. Também há um <xref:System.Web.UI.WebControls.WebParts.WebPart> classe denominada `ZipCodeWebPart` que implementa a interface e atua como o provedor de controle. O outro <xref:System.Web.UI.WebControls.WebParts.WebPart> classe é chamada `WeatherWebPart`, e ele atua como o consumidor para a conexão. Essa classe tem um método chamado `GetZipCode` que obtém uma instância do `IZipCode` interface do controle de provedor. Observe que esse método está marcado como método de ponto de conexão do consumidor com uma `ConnectionConsumer` atributo em seus metadados. Esse é o mecanismo para identificar o método de ponto de conexão no controle do consumidor.  
+  
+ Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_ConnectionPoint_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/CS/ZipCodeComponent.cs#2)]
+ [!code-vb[WebParts_ConnectionPoint_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/VB/ZipCodeComponent.vb#2)]  
+  
+ A terceira parte do exemplo de código é a página da Web. Na parte superior estão `Register` diretivas para registrar os controles personalizados que formam a conexão e o controle de usuário que permite aos usuários alterar modos de exibição na página. A conexão em si é criado declarativamente dentro de `<staticconnections>` elemento na página. Isso demonstra uma maneira de criar uma conexão-Observação a `ConsumerConnectionPointID` atributo o `<asp:webpartconnection>` elemento. Você também pode criar a conexão por meio de programação; o código para fazer o que está no `Button1_Click` método. Nesse caso, um <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto é criado e, em seguida, passado para um método que cria a conexão atual. Se a conexão é criada declarativamente ou por meio de programação, os pontos de conexão sempre devem ser especificados para o provedor e consumidor. O `Button2_Click` método acessa o <xref:System.Web.UI.WebControls.WebParts.ConnectionPoint> objetos para o provedor e consumidor e grava alguns de seus valores de propriedade para um rótulo na página.  
+  
+ [!code-aspx-csharp[WebParts_ConnectionPoint_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/CS/connectionPointCS.aspx#1)]
+ [!code-aspx-vb[WebParts_ConnectionPoint_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_ConnectionPoint_Overview/VB/connectionPointVB.aspx#1)]  
+  
+ Depois de carregar a página em um navegador, clique o **detalhes de ponto de Conexão** botão. Informações sobre os pontos de conexão de provedor e consumidor estabelecidos na conexão a declarativa é exibida. Em seguida, use o **modo de exibição** controle de lista suspensa para alternar a página para o modo de conexão. No menu de verbos de **provedor de código postal** <xref:System.Web.UI.WebControls.WebParts.WebPart> controle (representado por uma seta para baixo na barra de título), clique no verbo de conectar-se. A conexão de interface do usuário for exibida, criados automaticamente pelo `<asp:connectionszone>` controle declarado na página. Essa é outra maneira de criar uma conexão (por meio da interface do usuário), juntamente com os métodos programáticos e declarativos discutidos anteriormente. Clique o **Disconnect** botão para encerrar a conexão estático existente. Clique o **criar uma Conexão com um consumidor** link. Agora, a interface do usuário exibe um controle de lista suspensa que lista o nome de exibição do ponto de conexão do consumidor. Selecione o ponto de conexão na lista suspensa e, em seguida, clique em **conectar** para concluir a conexão. Em seguida, clique em **Disconnect** novamente. Clique o **Conexão dinâmica** botão para criar uma conexão por meio de programação. Use o **modo de exibição** controle para retornar a página para o modo de procura. Clique o **detalhes de ponto de Conexão** botão novamente, para indicar detalhes sobre o objeto de ponto de conexão do consumidor uma vez mais.  
+  
+ O exemplo demonstrou estabelecendo uma conexão e usando um ponto de conexão do consumidor de três maneiras: uma conexão estática declarada na marcação da página da Web; uma conexão criada no código que é usado um <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto; e uma conexão criada por um usuário por meio de conexão da interface do usuário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsumerConnectionPoint (System.Reflection.MethodInfo callbackMethod, Type interfaceType, Type controlType, string displayName, string id, bool allowsMultipleConnections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Reflection.MethodInfo callbackMethod, class System.Type interfaceType, class System.Type controlType, string displayName, string id, bool allowsMultipleConnections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.#ctor(System.Reflection.MethodInfo,System.Type,System.Type,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callbackMethod" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="interfaceType" Type="System.Type" />
+        <Parameter Name="controlType" Type="System.Type" />
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="allowsMultipleConnections" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="callbackMethod">O método no controle do consumidor que retorna uma instância da interface para os consumidores para estabelecer uma conexão.</param>
+        <param name="interfaceType">O <see cref="T:System.Type" /> da interface que o consumidor recebe de um provedor.</param>
+        <param name="controlType">O <see cref="T:System.Type" /> do controle consumidor ao qual o ponto de conexão do consumidor está associado.</param>
+        <param name="displayName">Um nome para exibição amigável para o ponto de conexão do consumidor que aparece aos usuários na interface do usuário de conexão (IU).</param>
+        <param name="id">Um identificador exclusivo para o ponto de conexão do consumidor.</param>
+        <param name="allowsMultipleConnections">Um valor booliano que indica se o ponto de conexão do consumidor pode ter várias conexões simultâneas com provedores.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.%23ctor%2A> construtor para o <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> classe simplesmente chama o construtor base, transmitindo a ele os vários parâmetros e inicializar a classe base.  
+  
+ O construtor de classe base verifica um número de parâmetros para um ponto de conexão e pode gerar várias exceções. Para obter uma lista de exceções possíveis, consulte a seção de exceções.  
+  
+ Você pode chamar o <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.%23ctor%2A> construtor para criar sua própria instância do <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> classe. No entanto, nos casos em que você simplesmente estabelecer uma conexão e não estende a classe, você deve chamar o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.GetConsumerConnectionPoints%2A> método para retornar um objeto de ponto de conexão de um provedor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como derivar o <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> classe para criar um ponto de conexão do provedor personalizado.  
+  
+ O exemplo de código tem três partes:  
+  
+-   Um arquivo de origem que contém um provedor <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar, um consumidor <xref:System.Web.UI.WebControls.WebParts.WebPart> controle e um personalizado <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto.  
+  
+-   Uma página da Web que hospeda os controles em uma conexão estática.  
+  
+-   Obter uma explicação de como executar o código de exemplo.  
+  
+ A primeira parte do exemplo de código é a origem para o provedor e consumidor <xref:System.Web.UI.WebControls.WebParts.WebPart> controles e um personalizado <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> classe, denominada `TableConsumerConnectionPoint`. Observe que o construtor do `TableConsumerConnectionPoint` classe chama o construtor base, passando os parâmetros necessários conforme indicado na seção de parâmetros. Também Observe que no `TableConsumer` classe, o `SetConnectionInterface` método é especificado como o método de retorno de chamada para conexões e o `ConnectionConsumer` atributo declara personalizado `TableConsumerConnectionPoint` como um parâmetro. Isso demonstra como criar um ponto de conexão do consumidor personalizado e, em seguida, associá-lo a um controle de consumidor. Este exemplo presume que o código-fonte é compilado dinamicamente, portanto você deve colocar o arquivo de código fonte em uma subpasta de App_Code do seu aplicativo Web.  
+  
+ [!code-csharp[UI.WebControls.WebParts.ProviderConnectionPoint#1](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.ProviderConnectionPoint/CS/connectionControls.cs#1)]  
+  
+ A segunda parte do exemplo de código é a página da Web que hospeda os controles personalizados em uma conexão de partes da Web estático. Na parte superior da página é uma `Register` diretiva para declarar um prefixo e o namespace para os controles personalizados. A conexão é declarado usando um `<asp:webpartconnection>` controles de elemento e o provedor e consumidor são declarados dentro de um `<asp:webpartzone>` elemento.  
+  
+ [!code-aspx-csharp[UI.WebControls.WebParts.ProviderConnectionPoint#3](~/samples/snippets/csharp/VS_Snippets_WebNet/UI.WebControls.WebParts.ProviderConnectionPoint/CS/defaultcs.aspx#3)]  
+  
+ Carregar a página em um navegador. A conexão entre os controles já existe e o consumidor exibe os dados do provedor, porque a conexão foi declarada como uma conexão estático na página.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callbackMethod" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="interfaceType" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="controlType" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="displayName" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="controlType" />não é o mesmo tipo que o controle de consumidor (ou uma classe válida derivada).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetObject">
+      <MemberSignature Language="C#" Value="public virtual void SetObject (System.Web.UI.Control control, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetObject(class System.Web.UI.Control control, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.SetObject(System.Web.UI.Control,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle de consumidor associado a um ponto de conexão do consumidor.</param>
+        <param name="data">A instância da interface retornado de um controle de provedor.</param>
+        <summary>Invoca o método de retorno de chamada em um controle de consumidor e recupera a instância da interface de um controle de provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método recebe uma instância da interface de um provedor que contém dados para o controle de consumidor.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.SetObject%2A> método é chamado pelo <xref:System.Web.UI.WebControls.WebParts.WebPartConnection> objetos quando uma conexão está sendo ativado. Essa é uma etapa crítica que faz parte de iniciar uma conexão e permitindo que dois controles para compartilhar dados.  
+  
+ O controle de consumidor em uma conexão deve ser capaz de trabalhar com o mesmo tipo de interface como o provedor. Se isso não acontecer, os controles são incompatíveis e um <xref:System.Web.UI.WebControls.WebParts.WebPartTransformer> objeto deve ser usado para estabelecer uma conexão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="control" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsConnection">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsConnection (System.Web.UI.Control control, System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection secondaryInterfaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SupportsConnection(class System.Web.UI.Control control, class System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection secondaryInterfaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.SupportsConnection(System.Web.UI.Control,System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="secondaryInterfaces" Type="System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle de consumidor associado a <see cref="T:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint" />.</param>
+        <param name="secondaryInterfaces">Um <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionInterfaceCollection" /> de quaisquer interfaces secundárias que participam de uma conexão.</param>
+        <summary>Determina se um ponto de conexão do consumidor é atualmente capaz de estabelecer uma conexão.</summary>
+        <returns>
+          <see langword="true" />Se um ponto de conexão no momento pode estabelecer uma conexão; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.SupportsConnection%2A> método conforme implementado sempre retorna `true` em todos os casos para o <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> classe. O objetivo deste método é para que ele verifique o estado da `control` e `secondaryInterfaces` em determinados pontos críticos para determinar se um <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> objeto está atualmente capaz de criar uma conexão.  
+  
+ Pode haver situações em que `control` está em um estado que seria tornar impossível formar uma conexão, ou onde `secondaryInterfaces` devem existir antes que uma conexão pode ser formada. Nesses casos, os desenvolvedores podem herdar do <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint> classe e substituir o <xref:System.Web.UI.WebControls.WebParts.ConsumerConnectionPoint.SupportsConnection%2A> método, fornecendo uma implementação personalizada para determinar quando o ponto de conexão está pronto para dar suporte a conexões.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

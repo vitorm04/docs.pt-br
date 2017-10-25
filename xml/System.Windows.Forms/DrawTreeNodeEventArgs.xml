@@ -1,0 +1,273 @@
+<Type Name="DrawTreeNodeEventArgs" FullName="System.Windows.Forms.DrawTreeNodeEventArgs">
+  <TypeSignature Language="C#" Value="public class DrawTreeNodeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DrawTreeNodeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DrawTreeNodeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.TreeView.DrawNode" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.TreeView.DrawNode> evento para personalizar a aparência de nós em um <xref:System.Windows.Forms.TreeView> controle usando o desenho do proprietário.  
+  
+ O <xref:System.Windows.Forms.TreeView.DrawNode> é gerado por uma <xref:System.Windows.Forms.TreeView> controlar quando seu <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> está definida como <xref:System.Windows.Forms.TreeViewDrawMode?displayProperty=nameWithType> ou <xref:System.Windows.Forms.TreeViewDrawMode?displayProperty=nameWithType> e um nó é exibido ou atualizado. O <xref:System.Windows.Forms.DrawTreeNodeEventArgs> passado para o evento manipulador contém informações sobre o nó para desenhar, bem como o fornecimento de métodos para ajudá-lo a desenhar o nó.  
+  
+ Use o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.State%2A> ou <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Node%2A> propriedades para recuperar informações sobre o nó para desenhar. Use o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Graphics%2A> fazer o desenho real dentro da área especificada pela propriedade de <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds%2A> propriedade. Para fazer com que o sistema operacional desenhar um nó que não precisa ser desenhados pelo proprietário, defina o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> propriedade `true`.  
+  
+ Quando o <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> está definida como <xref:System.Windows.Forms.TreeViewDrawMode?displayProperty=nameWithType>, a área indicado pelo <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds%2A> propriedade inclui a parte do rótulo do nó somente. Quando o <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> está definida como <xref:System.Windows.Forms.TreeViewDrawMode?displayProperty=nameWithType>, o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds%2A> área inclui o nó inteiro, incluindo a área usada normalmente para ícones, caixas de seleção, adição e subtração sinais e linhas que conectam os nós.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como personalizar um <xref:System.Windows.Forms.TreeView> controle usando o desenho do proprietário. O <xref:System.Windows.Forms.TreeView> controle no exemplo exibe marcas de nó opcional junto com os rótulos de nó padrão. Marcas de nó são especificadas usando o <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> propriedade. O <xref:System.Windows.Forms.TreeView> controle também usa cores personalizadas, incluindo uma cor de realce personalizadas.  
+  
+ Você pode personalizar a maioria do <xref:System.Windows.Forms.TreeView> cores definindo propriedades de cores, mas a cor de realce de seleção não está disponível como uma propriedade. Além disso, o retângulo de realce de seleção padrão estende-se apenas ao redor de um rótulo de nó. Desenho proprietário deve ser usado para desenhar as marcas de nó e desenhar um retângulo de realce personalizada grande o suficiente para incluir uma marca de nó.  
+  
+ No exemplo, um manipulador para o <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> desenhos de evento, as marcas de nó e a seleção personalizada realçar manualmente. Nós não selecionados não é necessário para personalização. Para isso, o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> está definida como `true` para que eles serão desenhados pelo sistema operacional.  
+  
+ Além disso, um manipulador para o <xref:System.Windows.Forms.Control.MouseDown?displayProperty=nameWithType> evento fornece o teste de clique. Por padrão, um nó pode ser selecionado apenas clicando-se a região em torno de seu rótulo. O <xref:System.Windows.Forms.Control.MouseDown?displayProperty=nameWithType> manipulador seleciona um nó é clicado em qualquer lugar nesta região ou dentro da região em torno de uma marca de nó, se presente.  
+  
+ [!code-cpp[TreeViewOwnerDraw#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#1)]
+ [!code-csharp[TreeViewOwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#1)]
+ [!code-vb[TreeViewOwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DrawTreeNodeEventArgs (System.Drawing.Graphics graphics, System.Windows.Forms.TreeNode node, System.Drawing.Rectangle bounds, System.Windows.Forms.TreeNodeStates state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Graphics graphics, class System.Windows.Forms.TreeNode node, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.TreeNodeStates state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DrawTreeNodeEventArgs.#ctor(System.Drawing.Graphics,System.Windows.Forms.TreeNode,System.Drawing.Rectangle,System.Windows.Forms.TreeNodeStates)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.TreeNodeStates" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O <see cref="T:System.Drawing.Graphics" /> superfície na qual desenhar.</param>
+        <param name="node">O <see cref="T:System.Windows.Forms.TreeNode" /> a ser desenhado.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> no qual desenhar.</param>
+        <param name="state">Uma combinação bit a bit do <see cref="T:System.Windows.Forms.TreeNodeStates" /> valores que indica o estado atual do <see cref="T:System.Windows.Forms.TreeNode" /> para desenhar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DrawTreeNodeEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho e o local do <see cref="T:System.Windows.Forms.TreeNode" /> para desenhar.</summary>
+        <value>Um <see cref="T:System.Drawing.Rectangle" /> que representa os limites do <see cref="T:System.Windows.Forms.TreeNode" /> para desenhar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O local especificado por essa propriedade é em relação ao canto superior esquerdo do <xref:System.Windows.Forms.TreeView> controle.  
+  
+ Quando o <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> está definida como <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText>, a área especificada pelo <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds%2A> propriedade é a região em que um nó pode ser clicado para selecioná-lo. Se você desenhar esta região de teste de clique, você deve fornecer seu próprio código para selecionar um nó quando a área visível é clicada. Também convém fornecer seu próprio teste de clique de código quando a <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> está definida como <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll>. Nesse modo, o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Bounds%2A> propriedade engloba todo nó em toda a largura do <xref:System.Windows.Forms.TreeView> controlar, em vez de região de teste de clique apenas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como personalizar um <xref:System.Windows.Forms.TreeView> controle usando o desenho do proprietário. O <xref:System.Windows.Forms.TreeView> controle no exemplo exibe marcas de nó opcional junto com os rótulos de nó padrão. Marcas de nó são especificadas usando o <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> propriedade. O <xref:System.Windows.Forms.TreeView> controle também usa cores personalizadas, incluindo uma cor de realce personalizadas.  
+  
+ Você pode personalizar a maioria do <xref:System.Windows.Forms.TreeView> cores definindo propriedades de cores, mas a cor de realce de seleção não está disponível como uma propriedade. Além disso, o retângulo de realce de seleção padrão estende-se apenas ao redor de um rótulo de nó. Desenho proprietário deve ser usado para desenhar as marcas de nó e desenhar um retângulo de realce personalizada grande o suficiente para incluir uma marca de nó.  
+  
+ No exemplo, um manipulador para o <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> desenhos de evento, as marcas de nó e a seleção personalizada realçar manualmente. Nós não selecionados não é necessário para personalização. Para isso, o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> está definida como `true` para que eles serão desenhados pelo sistema operacional.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawTreeNodeEventArgs> tópico de referência de visão geral.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawDefault">
+      <MemberSignature Language="C#" Value="public bool DrawDefault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DrawDefault" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.TreeNode" /> devem ser desenhadas pelo sistema operacional em vez de ser desenhados pelo proprietário.</summary>
+        <value>
+          <see langword="true" />Se o nó deve ser desenhado pelo sistema operacional; <see langword="false" /> se o nó será desenhado no manipulador de eventos. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina essa propriedade como `true` para nós que não deseja personalizar ao manipular o <xref:System.Windows.Forms.TreeView.DrawNode> evento. Por exemplo, isso é útil quando você deseja personalizar somente nós que estão em um estado específico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso dessa propriedade. No exemplo, um manipulador para o <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> evento desenha a marca de nó e um personalizado realçar cor manualmente para o nó selecionado. Nós não selecionados não é necessário para personalização. Para nós não selecionados, o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> está definida como `true` para que eles serão desenhados pelo sistema operacional e não terá uma aparência personalizada.  
+  
+> [!NOTE]
+>  Se você desenhar um nó manualmente e também definir o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> propriedade `true`, alguns ou todos os quais você desenhar podem ser substituídos pelo sistema operacional.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawTreeNodeEventArgs> tópico de referência de visão geral.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Graphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics Graphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics Graphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawTreeNodeEventArgs.Graphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Drawing.Graphics" /> usado para desenhar o <see cref="T:System.Windows.Forms.TreeNode" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Graphics" /> usado para desenhar o <see cref="T:System.Windows.Forms.TreeNode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Graphics> classe fornece propriedades e métodos úteis para o dispositivo de vídeo de desenho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como personalizar um <xref:System.Windows.Forms.TreeView> controle usando o desenho do proprietário. O <xref:System.Windows.Forms.TreeView> controle no exemplo exibe marcas de nó opcional junto com os rótulos de nó padrão. Marcas de nó são especificadas usando o <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> propriedade. O <xref:System.Windows.Forms.TreeView> controle também usa cores personalizadas, incluindo uma cor de realce personalizadas.  
+  
+ Você pode personalizar a maioria do <xref:System.Windows.Forms.TreeView> cores definindo propriedades de cores, mas a cor de realce de seleção não está disponível como uma propriedade. Além disso, o retângulo de realce de seleção padrão estende-se apenas ao redor de um rótulo de nó. Desenho proprietário deve ser usado para desenhar as marcas de nó e desenhar um retângulo de realce personalizada grande o suficiente para incluir uma marca de nó.  
+  
+ No exemplo, um manipulador para o <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> desenhos de evento, as marcas de nó e a seleção personalizada realçar manualmente. Nós não selecionados não é necessário para personalização. Para isso, o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> está definida como `true` para que eles serão desenhados pelo sistema operacional.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawTreeNodeEventArgs> tópico de referência de visão geral.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Node" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawTreeNodeEventArgs.Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.TreeNode" /> para desenhar.</summary>
+        <value>O <see cref="T:System.Windows.Forms.TreeNode" /> a ser desenhado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para acessar o <xref:System.Windows.Forms.TreeNode> objeto ao desenhar. Isso é útil quando o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.State%2A> propriedade não fornece informações suficientes para atender às suas necessidades. O <xref:System.Windows.Forms.DrawTreeNodeEventArgs.State%2A> propriedade fornece somente as informações de estado básica que você pode usar, por exemplo, para determinar se um nó é selecionado, marcado ou focalizado. O <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Node%2A> propriedade, por outro lado, permite acessar todos os membros de <xref:System.Windows.Forms.TreeNode> objeto. Você deve acessar o nó diretamente, por exemplo, quando você quiser determinar o estado de expansão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como personalizar um <xref:System.Windows.Forms.TreeView> controle usando o desenho do proprietário. O <xref:System.Windows.Forms.TreeView> controle no exemplo exibe marcas de nó opcional junto com os rótulos de nó padrão. Marcas de nó são especificadas usando o <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> propriedade. O <xref:System.Windows.Forms.TreeView> controle também usa cores personalizadas, incluindo uma cor de realce personalizadas.  
+  
+ Você pode personalizar a maioria do <xref:System.Windows.Forms.TreeView> cores definindo propriedades de cores, mas a cor de realce de seleção não está disponível como uma propriedade. Além disso, o retângulo de realce de seleção padrão estende-se apenas ao redor de um rótulo de nó. Desenho proprietário deve ser usado para desenhar as marcas de nó e desenhar um retângulo de realce personalizada grande o suficiente para incluir uma marca de nó.  
+  
+ No exemplo, um manipulador para o <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> desenhos de evento, as marcas de nó e a seleção personalizada realçar manualmente. Nós não selecionados não é necessário para personalização. Para isso, o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> está definida como `true` para que eles serão desenhados pelo sistema operacional.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawTreeNodeEventArgs> tópico de referência de visão geral.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNodeStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.TreeNodeStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DrawTreeNodeEventArgs.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNodeStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual do <see cref="T:System.Windows.Forms.TreeNode" /> para desenhar.</summary>
+        <value>Uma combinação bit a bit do <see cref="T:System.Windows.Forms.TreeNodeStates" /> valores que indica o estado atual do <see cref="T:System.Windows.Forms.TreeNode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para verificar se o <xref:System.Windows.Forms.TreeNode> objeto ao desenhar está em um estado específico. Esta propriedade fornece somente as informações de estado básica sobre o nó. Você pode usar essa propriedade, por exemplo, para determinar se um nó é selecionado, marcado ou focalizado. Se você precisa saber mais, recuperar o nó por meio de <xref:System.Windows.Forms.DrawTreeNodeEventArgs.Node%2A> propriedade. Por exemplo, para determinar se o nó é expandido, você deve recuperar o nó e verifique o <xref:System.Windows.Forms.TreeNode.IsExpanded%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como personalizar um <xref:System.Windows.Forms.TreeView> controle usando o desenho do proprietário. O <xref:System.Windows.Forms.TreeView> controle no exemplo exibe marcas de nó opcional junto com os rótulos de nó padrão. Marcas de nó são especificadas usando o <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> propriedade. O <xref:System.Windows.Forms.TreeView> controle também usa cores personalizadas, incluindo uma cor de realce personalizadas.  
+  
+ Você pode personalizar a maioria do <xref:System.Windows.Forms.TreeView> cores definindo propriedades de cores, mas a cor de realce de seleção não está disponível como uma propriedade. Além disso, o retângulo de realce de seleção padrão estende-se apenas ao redor de um rótulo de nó. Desenho proprietário deve ser usado para desenhar as marcas de nó e desenhar um retângulo de realce personalizada grande o suficiente para incluir uma marca de nó.  
+  
+ No exemplo, um manipulador para o <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> desenhos de evento, as marcas de nó e a seleção personalizada realçar manualmente. Nós não selecionados não é necessário para personalização. Para isso, o <xref:System.Windows.Forms.DrawTreeNodeEventArgs.DrawDefault%2A> está definida como `true` para que eles serão desenhados pelo sistema operacional.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.DrawTreeNodeEventArgs> tópico de referência de visão geral.  
+  
+ [!code-cpp[TreeViewOwnerDraw#3](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#3)]
+ [!code-csharp[TreeViewOwnerDraw#3](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#3)]
+ [!code-vb[TreeViewOwnerDraw#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

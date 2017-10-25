@@ -1,0 +1,288 @@
+<Type Name="UdpStatistics" FullName="System.Net.NetworkInformation.UdpStatistics">
+  <TypeSignature Language="C#" Value="public abstract class UdpStatistics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UdpStatistics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.UdpStatistics" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados de estatísticas de protocolo UDP (User Datagram).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As instâncias dessa classe são retornadas pelo <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUdpIPv4Statistics%2A> e <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUdpIPv6Statistics%2A> informações de tráfego de métodos para dar acesso de aplicativos ao UDP.  
+  
+ As informações desta classe se correlaciona com os objetos de informações de gerenciamento descritos no [http://www.ietf.org/rfc/rfc2013.txt](http://www.ietf.org/rfc/rfc2013.txt).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as estatísticas UDP para a família de endereços especificado.  
+  
+ [!code-cpp[NCLNetInfoReport#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#3)]
+ [!code-csharp[NCLNetInfoReport#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UdpStatistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.UdpStatistics.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.UdpStatistics" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser chamado somente por classes que derivam de <xref:System.Net.NetworkInformation.UdpStatistics>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DatagramsReceived">
+      <MemberSignature Language="C#" Value="public abstract long DatagramsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 DatagramsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.UdpStatistics.DatagramsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de datagramas de protocolo UDP (User Datagram) que foram recebidos.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de datagramas que foram entregues a usuários UDP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número retornado por essa propriedade não inclui datagramas que foram recebidos, mas não foi entregue.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as estatísticas UDP para a família de endereços especificado.  
+  
+ [!code-cpp[NCLNetInfoReport#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#3)]
+ [!code-csharp[NCLNetInfoReport#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DatagramsSent">
+      <MemberSignature Language="C#" Value="public abstract long DatagramsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 DatagramsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.UdpStatistics.DatagramsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de datagramas de protocolo UDP (User Datagram) que foram enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de datagramas que foram enviadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe as estatísticas UDP para a versão especificada do protocolo de Internet.  
+  
+ [!code-cpp[NCLNetInfoReport#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#3)]
+ [!code-csharp[NCLNetInfoReport#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingDatagramsDiscarded">
+      <MemberSignature Language="C#" Value="public abstract long IncomingDatagramsDiscarded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 IncomingDatagramsDiscarded" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.UdpStatistics.IncomingDatagramsDiscarded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de datagramas de protocolo UDP (User Datagram) que foram recebidos e descartados devido a erros de porta.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de recebido datagramas UDP que foram descartadas porque não havia nenhum aplicativo de escuta na porta de destino.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para localizar o número total de datagramas que não podem ser entregue, adicione os valores que foram retornados por essa propriedade e o <xref:System.Net.NetworkInformation.UdpStatistics.IncomingDatagramsWithErrors%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as estatísticas UDP para a versão especificada do protocolo de Internet.  
+  
+ [!code-cpp[NCLNetInfoReport#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#3)]
+ [!code-csharp[NCLNetInfoReport#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingDatagramsWithErrors">
+      <MemberSignature Language="C#" Value="public abstract long IncomingDatagramsWithErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 IncomingDatagramsWithErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.UdpStatistics.IncomingDatagramsWithErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de datagramas de protocolo UDP (User Datagram) que foram recebidos e descartados devido a erros diferentes de informações de porta incorreto.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de recebido datagramas UDP que não podem ser entregue por razões diferentes de falta de um aplicativo na porta de destino.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para localizar o número total de datagramas que não podem ser entregue, adicione os valores que foram retornados por essa propriedade e o <xref:System.Net.NetworkInformation.UdpStatistics.IncomingDatagramsDiscarded%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as estatísticas UDP para a versão especificada do protocolo de Internet.  
+  
+ [!code-cpp[NCLNetInfoReport#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#3)]
+ [!code-csharp[NCLNetInfoReport#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UdpListeners">
+      <MemberSignature Language="C#" Value="public abstract int UdpListeners { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 UdpListeners" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.UdpStatistics.UdpListeners" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pontos de extremidade locais que estão ouvindo datagramas de protocolo UDP (User Datagram).</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de soquetes que estão ouvindo datagramas UDP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Net.Sockets.UdpClient> e <xref:System.Net.Sockets.Socket> classes para criar aplicativos de ouvinte UDP.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as estatísticas UDP para a versão especificada do protocolo de Internet.  
+  
+ [!code-cpp[NCLNetInfoReport#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#3)]
+ [!code-csharp[NCLNetInfoReport#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

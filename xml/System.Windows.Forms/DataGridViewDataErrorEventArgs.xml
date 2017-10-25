@@ -1,0 +1,167 @@
+<Type Name="DataGridViewDataErrorEventArgs" FullName="System.Windows.Forms.DataGridViewDataErrorEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewDataErrorEventArgs : System.Windows.Forms.DataGridViewCellCancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewDataErrorEventArgs extends System.Windows.Forms.DataGridViewCellCancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewDataErrorEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewCellCancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.DataGridView.DataError" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipulando o <xref:System.Windows.Forms.DataGridView.DataError> evento permite manipular exceções lançadas por código fora de seu controle (por exemplo, por uma fonte de dados externa). Use o <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.Context%2A> propriedade para determinar o estado da <xref:System.Windows.Forms.DataGridView> no momento da exceção. Use o <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.Exception%2A> propriedade para recuperar os dados de exceção. Se você desejar tratar a exceção por manipuladores de eventos adicionais, defina o <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.ThrowException%2A> propriedade `true`.  
+  
+ O <xref:System.Windows.Forms.DataGridViewCellCancelEventArgs.ColumnIndex%2A> e <xref:System.Windows.Forms.DataGridViewCellCancelEventArgs.RowIndex%2A> propriedades normalmente indicam a célula na qual ocorreu o erro de dados. Quando o erro ocorre em uma fonte de dados externa, no entanto, a fonte de dados pode não fornecer a coluna na qual ocorreu o erro. Nesse caso, o <xref:System.Windows.Forms.DataGridViewCellCancelEventArgs.ColumnIndex%2A> propriedade geralmente indica a coluna da célula atual no momento do erro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como responder às informações fornecidas pelo <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs> classe. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#50)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#50)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#50)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewDataErrorEventArgs (Exception exception, int columnIndex, int rowIndex, System.Windows.Forms.DataGridViewDataErrorContexts context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception exception, int32 columnIndex, int32 rowIndex, valuetype System.Windows.Forms.DataGridViewDataErrorContexts context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewDataErrorEventArgs.#ctor(System.Exception,System.Int32,System.Int32,System.Windows.Forms.DataGridViewDataErrorContexts)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="context" Type="System.Windows.Forms.DataGridViewDataErrorContexts" />
+      </Parameters>
+      <Docs>
+        <param name="exception">A exceção que ocorreu.</param>
+        <param name="columnIndex">O índice da coluna da célula que gerou o <see cref="E:System.Windows.Forms.DataGridView.DataError" />.</param>
+        <param name="rowIndex">O índice de linha da célula que gerou o <see cref="E:System.Windows.Forms.DataGridView.DataError" />.</param>
+        <param name="context">Uma combinação bit a bit de <see cref="T:System.Windows.Forms.DataGridViewDataErrorContexts" /> valores indicando o contexto no qual ocorreu o erro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewDataErrorEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewDataErrorContexts Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewDataErrorContexts Context" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewDataErrorEventArgs.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewDataErrorContexts</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém detalhes sobre o estado do <see cref="T:System.Windows.Forms.DataGridView" /> quando o erro ocorreu.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.DataGridViewDataErrorContexts" /> que especifica o contexto no qual ocorreu o erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Membros de <xref:System.Windows.Forms.DataGridViewDataErrorContexts> enumeração pode ser combinada com o bit a bit `OR` operador para representar o estado de uma associação de dados <xref:System.Windows.Forms.DataGridView> quando ocorreu um erro de dados. Por exemplo, se um usuário inserir um valor de célula inválida (como inserir um nome em uma célula que requer uma data) e, em seguida, seleciona uma célula diferente, o <xref:System.Windows.Forms.DataGridView> tenta confirmar o valor de célula inválida. Quando a confirmação falha, o <xref:System.Windows.Forms.DataGridView> gerará um <xref:System.Windows.Forms.DataGridView.DataError> evento cujo <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.Context%2A> propriedade terá um valor de <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> e <xref:System.Windows.Forms.DataGridViewDataErrorContexts.CurrentCellChange>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como investigar o contexto do erro. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#50)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#50)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewDataErrorEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a exceção que representa o erro.</summary>
+        <value>Um <see cref="T:System.Exception" /> que representa o erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para lidar com a exceção por mais de um <xref:System.Windows.Forms.DataGridViewDataErrorEventHandler>, lançar a exceção novamente no final de um manipulador, definindo o <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.ThrowException%2A> propriedade `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como verificar o <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.Exception%2A> propriedade. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#50)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#50)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowException">
+      <MemberSignature Language="C#" Value="public bool ThrowException { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowException" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewDataErrorEventArgs.ThrowException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve lançar uma exceção após o <see cref="T:System.Windows.Forms.DataGridViewDataErrorEventHandler" /> delegado for concluído com ele.</summary>
+        <value>
+          <see langword="true" />Se a exceção deve ser gerada; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina essa propriedade como `false` se o <xref:System.Windows.Forms.DataGridViewDataErrorEventHandler> tratou com a exceção representada pelo <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.Exception%2A> propriedade e você não quiser propagar a exceção para outro <xref:System.Windows.Forms.DataGridViewDataErrorEventHandler> que pode lidar com o <xref:System.Windows.Forms.DataGridView.DataError> evento.  
+  
+ Para fins de depuração, ele pode ser útil propagar a exceção e inspecione o rastreamento de pilha para obter informações sobre o contexto do erro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DataGridViewDataErrorEventArgs.ThrowException%2A> propriedade para indicar que a exceção não deve ser gerada. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tópico de visão geral da classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CPP/employees.cpp#50)]
+ [!code-csharp[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/CS/employees.cs#50)]
+ [!code-vb[System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewColumn_AllColumns_Bound_Employees/VB/employees.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ao definir essa propriedade como <see langword="true" />, o <see cref="P:System.Windows.Forms.DataGridViewDataErrorEventArgs.Exception" /> é o valor da propriedade <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

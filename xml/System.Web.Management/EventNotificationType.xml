@@ -1,0 +1,97 @@
+<Type Name="EventNotificationType" FullName="System.Web.Management.EventNotificationType">
+  <TypeSignature Language="C#" Value="public enum EventNotificationType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EventNotificationType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.EventNotificationType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de notificação de eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.EventNotificationType> enumeração fornece quatro tipos de notificação que especificam como a notificação deve ocorrer. Os tipos de quatro notificação são da seguinte maneira:  
+  
+-   Liberação  
+  
+-   Normal  
+  
+-   Sem buffer  
+  
+-   Urgente  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="Flush" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Management.EventNotificationType Flush = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.EventNotificationType.Flush" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.EventNotificationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A notificação de um evento é disparada por uma liberação solicitada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Regular">
+      <MemberSignature Language="C#" Value="Regular" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Management.EventNotificationType Regular = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.EventNotificationType.Regular" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.EventNotificationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A notificação de um evento é acionada em um intervalo agendado regularmente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unbuffered">
+      <MemberSignature Language="C#" Value="Unbuffered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Management.EventNotificationType Unbuffered = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.EventNotificationType.Unbuffered" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.EventNotificationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada evento é tratado como se ocorreu uma liberação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Urgent">
+      <MemberSignature Language="C#" Value="Urgent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Management.EventNotificationType Urgent = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Management.EventNotificationType.Urgent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Management.EventNotificationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Notificação disparada por exceder o limite do evento urgente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

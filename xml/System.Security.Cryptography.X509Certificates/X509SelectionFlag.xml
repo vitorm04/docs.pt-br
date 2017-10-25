@@ -1,0 +1,66 @@
+<Type Name="X509SelectionFlag" FullName="System.Security.Cryptography.X509Certificates.X509SelectionFlag">
+  <TypeSignature Language="C#" Value="public enum X509SelectionFlag" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed X509SelectionFlag extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509SelectionFlag" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de seleção solicitada usando o método <see cref="Overload:System.Security.Cryptography.X509Certificates.X509Certificate2UI.SelectFromCollection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse sinalizador representa um único ou vários seleção de certificado usando o <xref:System.Security.Cryptography.X509Certificates.X509Certificate2UI.SelectFromCollection%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o sinalizador de seleção com o <xref:System.Security.Cryptography.X509Certificates.X509Certificate2UI.SelectFromCollection%2A?displayProperty=nameWithType> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.X509Certificates.X509Store> classe. O exemplo maior abre o repositório de certificados pessoais do usuário atual, permite que o usuário selecione um certificado, em seguida, grava o certificado e as informações de cadeia de certificado para o console. A saída depende do certificado que o usuário seleciona.  
+  
+ [!code-cpp[x509chaintest#2](~/samples/snippets/cpp/VS_Snippets_CLR/x509chaintest/CPP/x509chaintest.cpp#2)]
+ [!code-csharp[x509chaintest#2](~/samples/snippets/csharp/VS_Snippets_CLR/x509chaintest/CS/x509chaintest.cs#2)]
+ [!code-vb[x509chaintest#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/x509chaintest/vb/x509chaintest.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MultiSelection">
+      <MemberSignature Language="C#" Value="MultiSelection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509SelectionFlag MultiSelection = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509SelectionFlag.MultiSelection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509SelectionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma seleção múltipla. O usuário pode usar as teclas SHIFT ou CTRL para selecionar mais de um certificado X.509.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleSelection">
+      <MemberSignature Language="C#" Value="SingleSelection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.X509Certificates.X509SelectionFlag SingleSelection = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.X509Certificates.X509SelectionFlag.SingleSelection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509SelectionFlag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma única seleção. A interface do usuário permite selecionar um certificado X.509.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

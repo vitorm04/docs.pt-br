@@ -1,0 +1,375 @@
+<Type Name="DispatcherTimer" FullName="System.Windows.Threading.DispatcherTimer">
+  <TypeSignature Language="C#" Value="public class DispatcherTimer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DispatcherTimer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Threading.DispatcherTimer" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um temporizador que é integrado à fila <see cref="T:System.Windows.Threading.Dispatcher" /> que é processada em um intervalo de tempo especificado e com uma prioridade especificada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Threading.DispatcherTimer> será reavaliada na parte superior de cada <xref:System.Windows.Threading.Dispatcher> loop.  
+  
+ Não há garantia de temporizadores para executar exatamente quando ocorre o intervalo de tempo, mas eles têm garantia de não executar antes que ocorra o intervalo de tempo.  Isso ocorre porque <xref:System.Windows.Threading.DispatcherTimer> operações são colocadas no <xref:System.Windows.Threading.Dispatcher> fila como outras operações.  Quando o <xref:System.Windows.Threading.DispatcherTimer> operação executa depende de outros trabalhos na fila e suas prioridades.  
+  
+ Se um <xref:System.Timers.Timer?displayProperty=nameWithType> é usado em uma [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] aplicativo, é importante observar que o <xref:System.Timers.Timer?displayProperty=nameWithType> é executado em um thread diferente, o [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] thread.  Para acessar os objetos no [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] thread, é necessário após a operação para o <xref:System.Windows.Threading.Dispatcher> do [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] thread usando <xref:System.Windows.Threading.Dispatcher.Invoke%2A> ou <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Motivos para usar um <xref:System.Windows.Threading.DispatcherTimer> contrário uma <xref:System.Timers.Timer?displayProperty=nameWithType> são que o <xref:System.Windows.Threading.DispatcherTimer> é executado no mesmo thread que o <xref:System.Windows.Threading.Dispatcher> e um <xref:System.Windows.Threading.DispatcherPriority> podem ser definidas no <xref:System.Windows.Threading.DispatcherTimer>.  
+  
+ Um <xref:System.Windows.Threading.DispatcherTimer> irá manter um objeto sempre que os métodos do objeto estão associados ao timer.  
+  
+<a name="xamlTextUsage_DispatcherTimer"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Threading.DispatcherTimer> que atualiza o conteúdo de um <xref:System.Windows.Controls.Label> e chama o <xref:System.Windows.Input.CommandManager.InvalidateRequerySuggested%2A> método o <xref:System.Windows.Input.CommandManager>.  
+  
+ Um <xref:System.Windows.Threading.DispatcherTimer> objeto chamado `dispatcherTimer` é criado.  O manipulador de eventos `dispatcherTimer_Tick` é adicionada para o <xref:System.Windows.Threading.DispatcherTimer.Tick> eventos de `dispatcherTimer`.  O <xref:System.Windows.Threading.DispatcherTimer.Interval%2A> é definido como 1 segundo usando um <xref:System.Windows.Duration.TimeSpan%2A> objeto e o temporizador é iniciado.  
+  
+ [!code-csharp[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimerInit](~/samples/snippets/csharp/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/CSharp/Window1.xaml.cs#invalidatesampledispatchertimerinit)]
+ [!code-vb[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimerInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/visualbasic/window1.xaml.vb#invalidatesampledispatchertimerinit)]  
+  
+ O <xref:System.Windows.Threading.DispatcherTimer.Tick> atualizações do manipulador de eventos uma <xref:System.Windows.Controls.Label> que exibe a atual em segundo lugar, e chama <xref:System.Windows.Input.CommandManager.InvalidateRequerySuggested%2A> no <xref:System.Windows.Input.CommandManager>.  
+  
+ [!code-csharp[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimer](~/samples/snippets/csharp/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/CSharp/Window1.xaml.cs#invalidatesampledispatchertimer)]
+ [!code-vb[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/visualbasic/window1.xaml.vb#invalidatesampledispatchertimer)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DispatcherTimer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherTimer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Threading.DispatcherTimer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Threading.DispatcherTimer>é executado no <xref:System.Windows.Threading.Dispatcher> do thread atual em <xref:System.Windows.Threading.DispatcherPriority.Background> prioridade.  Para especificar outro <xref:System.Windows.Threading.Dispatcher>, use o seguinte construtor: <xref:System.Windows.Threading.DispatcherTimer.%23ctor%28System.Windows.Threading.DispatcherPriority%2CSystem.Windows.Threading.Dispatcher%29?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DispatcherTimer (System.Windows.Threading.DispatcherPriority priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Threading.DispatcherPriority priority) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherTimer.#ctor(System.Windows.Threading.DispatcherPriority)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+      </Parameters>
+      <Docs>
+        <param name="priority">A prioridade na qual o temporizador deve ser invocado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Threading.DispatcherTimer" /> que processa eventos de temporizador na prioridade especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Threading.DispatcherTimer>é executado no <xref:System.Windows.Threading.Dispatcher> do thread atual.  Para especificar outro <xref:System.Windows.Threading.Dispatcher>, use o seguinte construtor: <xref:System.Windows.Threading.DispatcherTimer.%23ctor%28System.Windows.Threading.DispatcherPriority%2CSystem.Windows.Threading.Dispatcher%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DispatcherTimer (System.Windows.Threading.DispatcherPriority priority, System.Windows.Threading.Dispatcher dispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Threading.DispatcherPriority priority, class System.Windows.Threading.Dispatcher dispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherTimer.#ctor(System.Windows.Threading.DispatcherPriority,System.Windows.Threading.Dispatcher)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="dispatcher" Type="System.Windows.Threading.Dispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="priority">A prioridade na qual o temporizador deve ser invocado.</param>
+        <param name="dispatcher">O dispatcher o timer está associado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Threading.DispatcherTimer" /> executada no <see cref="T:System.Windows.Threading.Dispatcher" /> especificado na prioridade especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dispatcher" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DispatcherTimer (TimeSpan interval, System.Windows.Threading.DispatcherPriority priority, EventHandler callback, System.Windows.Threading.Dispatcher dispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.TimeSpan interval, valuetype System.Windows.Threading.DispatcherPriority priority, class System.EventHandler callback, class System.Windows.Threading.Dispatcher dispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherTimer.#ctor(System.TimeSpan,System.Windows.Threading.DispatcherPriority,System.EventHandler,System.Windows.Threading.Dispatcher)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="interval" Type="System.TimeSpan" />
+        <Parameter Name="priority" Type="System.Windows.Threading.DispatcherPriority" />
+        <Parameter Name="callback" Type="System.EventHandler" />
+        <Parameter Name="dispatcher" Type="System.Windows.Threading.Dispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="interval">O período entre os tiques.</param>
+        <param name="priority">A prioridade na qual o temporizador deve ser invocado.</param>
+        <param name="callback">O manipulador de eventos para chamar quando o <see cref="E:System.Windows.Threading.DispatcherTimer.Tick" /> evento ocorre.</param>
+        <param name="dispatcher">O dispatcher o timer está associado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Threading.DispatcherTimer" /> que usa o intervalo de tempo, a prioridade, o manipulador de eventos e o <see cref="T:System.Windows.Threading.Dispatcher" /> especificados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="interval" /> é menor que 0 ou maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispatcher">
+      <MemberSignature Language="C#" Value="public System.Windows.Threading.Dispatcher Dispatcher { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Threading.Dispatcher Dispatcher" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.DispatcherTimer.Dispatcher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Threading.Dispatcher</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Threading.Dispatcher" /> associado a este <see cref="T:System.Windows.Threading.DispatcherTimer" />.</summary>
+        <value>O dispatcher.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Threading.DispatcherTimer.Dispatcher%2A> propriedade é determinada na criação do <xref:System.Windows.Threading.DispatcherTimer> objeto.  O <xref:System.Windows.Threading.Dispatcher> está definida como atual <xref:System.Windows.Threading.Dispatcher> no momento da criação, a menos que outro <xref:System.Windows.Threading.Dispatcher> for especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interval">
+      <MemberSignature Language="C#" Value="public TimeSpan Interval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Interval" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.DispatcherTimer.Interval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período entre os tiques do temporizador.</summary>
+        <value>O período entre os tiques. O padrão é 00:00:00.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há garantia de temporizadores para executar exatamente quando ocorre o intervalo de tempo, mas eles têm garantia de não executar antes que ocorra o intervalo de tempo.  Isso ocorre porque <xref:System.Windows.Threading.DispatcherTimer> operações são colocadas no <xref:System.Windows.Threading.Dispatcher> fila como outras operações.  Quando o <xref:System.Windows.Threading.DispatcherTimer> operação executa depende de outros trabalhos na fila e suas prioridades.  
+  
+<a name="XAMLTextUsage_Interval"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Threading.DispatcherTimer>.  Um novo <xref:System.Windows.Threading.DispatcherTimer> objeto chamado `dispatcherTimer` é criado.  O manipulador de eventos `dispatcherTimer_Tick` é adicionada para o <xref:System.Windows.Threading.DispatcherTimer.Tick> evento.  O <xref:System.Windows.Threading.DispatcherTimer.Interval%2A> é definido como 1 segundo usando um <xref:System.TimeSpan> objeto.  
+  
+ [!code-csharp[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimerInit](~/samples/snippets/csharp/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/CSharp/Window1.xaml.cs#invalidatesampledispatchertimerinit)]
+ [!code-vb[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimerInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/visualbasic/window1.xaml.vb#invalidatesampledispatchertimerinit)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="interval" /> é menor que 0 ou maior ou igual a <see cref="F:System.Int32.MaxValue" /> milissegundos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.DispatcherTimer.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o temporizador está em execução.</summary>
+        <value>
+          <see langword="true" /> se o temporizador estiver habilitado; caso contrário, <see langword="false" />.  O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Threading.DispatcherTimer.IsEnabled%2A>deve ser definido como `true` para o <xref:System.Windows.Threading.DispatcherTimer.Tick> evento ser gerado.  
+  
+ Chamando <xref:System.Windows.Threading.DispatcherTimer.Start%2A> define <xref:System.Windows.Threading.DispatcherTimer.IsEnabled%2A> para `true`.  
+  
+ Chamando <xref:System.Windows.Threading.DispatcherTimer.Stop%2A> define <xref:System.Windows.Threading.DispatcherTimer.IsEnabled%2A> para `false`.  
+  
+<a name="XAMLTextUsage_IsEnabled"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Threading.DispatcherTimer>.  Um novo <xref:System.Windows.Threading.DispatcherTimer> objeto chamado `dispatcherTimer` é criado.  O manipulador de eventos `dispatcherTimer_Tick` é adicionada para o <xref:System.Windows.Threading.DispatcherTimer.Tick> evento.  O <xref:System.Windows.Threading.DispatcherTimer.Interval%2A> é definido como 1 segundo usando um <xref:System.TimeSpan> objeto.  
+  
+ [!code-csharp[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimerInit](~/samples/snippets/csharp/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/CSharp/Window1.xaml.cs#invalidatesampledispatchertimerinit)]
+ [!code-vb[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimerInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/visualbasic/window1.xaml.vb#invalidatesampledispatchertimerinit)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherTimer.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia o <see cref="T:System.Windows.Threading.DispatcherTimer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configuração <xref:System.Windows.Threading.DispatcherTimer.IsEnabled%2A> para `false` quando o temporizador é iniciado interrompe o timer.  
+  
+ Configuração <xref:System.Windows.Threading.DispatcherTimer.IsEnabled%2A> para `true` quando o timer é interrompido inicia o temporizador.  
+  
+ <xref:System.Windows.Threading.DispatcherTimer.Start%2A>sets <xref:System.Windows.Threading.DispatcherTimer.IsEnabled%2A> to `true`.  
+  
+ <xref:System.Windows.Threading.DispatcherTimer.Start%2A>Redefine o timer de <xref:System.Windows.Threading.DispatcherTimer.Interval%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Threading.DispatcherTimer>.  Um novo <xref:System.Windows.Threading.DispatcherTimer> objeto chamado `dispatcherTimer` é criado.  O manipulador de eventos `dispatcherTimer_Tick` é adicionada para o <xref:System.Windows.Threading.DispatcherTimer.Tick> evento.  O <xref:System.Windows.Threading.DispatcherTimer.Interval%2A> é definido como 1 segundo usando um <xref:System.Windows.Duration.TimeSpan%2A> objeto.  
+  
+ [!code-csharp[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimerInit](~/samples/snippets/csharp/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/CSharp/Window1.xaml.cs#invalidatesampledispatchertimerinit)]
+ [!code-vb[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimerInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/visualbasic/window1.xaml.vb#invalidatesampledispatchertimerinit)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Threading.DispatcherTimer.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe o <see cref="T:System.Windows.Threading.DispatcherTimer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configuração <xref:System.Windows.Threading.DispatcherTimer.IsEnabled%2A> para `false` quando o temporizador é iniciado interrompe o timer.  
+  
+ Configuração <xref:System.Windows.Threading.DispatcherTimer.IsEnabled%2A> para `true` quando o timer é interrompido inicia o temporizador.  
+  
+ Chamando <xref:System.Windows.Threading.DispatcherTimer.Stop%2A> define <xref:System.Windows.Threading.DispatcherTimer.IsEnabled%2A> para `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Threading.DispatcherTimer.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto de dados definido pelo usuário.</summary>
+        <value>Os dados definidos pelo usuário.  O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="XAMLTextUsage_Tag"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tick">
+      <MemberSignature Language="C#" Value="public event EventHandler Tick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Tick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Threading.DispatcherTimer.Tick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando termina o intervalo do temporizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_Tick"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Threading.DispatcherTimer.Tick> manipulador de eventos.  As atualizações do manipulador de eventos uma <xref:System.Windows.Controls.Label> que exibe a atual em segundo lugar, e chama <xref:System.Windows.Input.CommandManager.InvalidateRequerySuggested%2A> sobre o <xref:System.Windows.Input.CommandManager>.  
+  
+ [!code-csharp[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimer](~/samples/snippets/csharp/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/CSharp/Window1.xaml.cs#invalidatesampledispatchertimer)]
+ [!code-vb[invalidaterequerywithdispatchertimer#InvalidateSampleDispatcherTimer](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InvalidateRequeryWithDispatcherTimer/visualbasic/window1.xaml.vb#invalidatesampledispatchertimer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

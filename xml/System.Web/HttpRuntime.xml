@@ -1,0 +1,494 @@
+<Type Name="HttpRuntime" FullName="System.Web.HttpRuntime">
+  <TypeSignature Language="C#" Value="public sealed class HttpRuntime" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpRuntime extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpRuntime" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de serviços de tempo de execução do ASP.NET para o aplicativo atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpRuntime> objeto é usado no início do modelo de pipeline do ASP.NET que processa solicitações HTTP. O <xref:System.Web.HttpRuntime.ProcessRequest%2A> método unidades de processamento da Web do ASP.NET subsequentes.  
+  
+ Os desenvolvedores de página podem usar o <xref:System.Web.HttpRuntime> classe propriedades para obter informações sobre o domínio de aplicativo atual para fins de diagnóstico, por exemplo. Os desenvolvedores que criam o pipeline de processo personalizado ou um ambiente de hospedagem personalizado devem chamar o <xref:System.Web.HttpRuntime.ProcessRequest%2A> método de uma classe derivada do <xref:System.Web.HttpWorkerRequest> ou <xref:System.Web.Hosting.SimpleWorkerRequest> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como obter propriedades da <xref:System.Web.HttpRuntime> classe que representa o domínio de aplicativo atual e exibi-los para o navegador.  
+  
+ [!code-aspx-csharp[SystemWebHttpRuntime#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebHttpRuntime/CS/systemwebhttpruntime.cs.aspx#1)]
+ [!code-aspx-vb[SystemWebHttpRuntime#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebHttpRuntime/VB/systemwebhttpruntime.vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpRuntime ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRuntime.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.HttpRuntime" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppDomainAppId">
+      <MemberSignature Language="C#" Value="public static string AppDomainAppId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AppDomainAppId" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.AppDomainAppId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a identificação do aplicativo do domínio do aplicativo no qual o <see cref="T:System.Web.HttpRuntime" /> está localizado.</summary>
+        <value>A identificação do aplicativo do domínio do aplicativo no qual o <see cref="T:System.Web.HttpRuntime" /> está localizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `AppDomainAppID`identifica exclusivamente o aplicativo. Não é alterado depois que o aplicativo é reiniciado e um novo domínio de aplicativo é criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppDomainAppPath">
+      <MemberSignature Language="C#" Value="public static string AppDomainAppPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AppDomainAppPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.AppDomainAppPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho do disco físico do diretório do aplicativo para o aplicativo hospedado no domínio de aplicativo atual.</summary>
+        <value>O caminho do disco físico do diretório do aplicativo para o aplicativo hospedado no domínio de aplicativo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppDomainAppVirtualPath">
+      <MemberSignature Language="C#" Value="public static string AppDomainAppVirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AppDomainAppVirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.AppDomainAppVirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual do diretório que contém o aplicativo hospedado no domínio do aplicativo atual.</summary>
+        <value>O caminho virtual do diretório que contém o aplicativo hospedado no domínio do aplicativo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppDomainId">
+      <MemberSignature Language="C#" Value="public static string AppDomainId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AppDomainId" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.AppDomainId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a identificação de domínio do domínio do aplicativo onde o <see cref="T:System.Web.HttpRuntime" /> instância existe.</summary>
+        <value>O identificador de domínio de aplicativo único.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `AppDomainID`alterada sempre que o aplicativo é reiniciado e um novo domínio de aplicativo é criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AspClientScriptPhysicalPath">
+      <MemberSignature Language="C#" Value="public static string AspClientScriptPhysicalPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AspClientScriptPhysicalPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.AspClientScriptPhysicalPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho da pasta para os arquivos de script de cliente do ASP.NET.</summary>
+        <value>O caminho da pasta para os arquivos de script de cliente do ASP.NET.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">O ASP.NET não está instalado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AspClientScriptVirtualPath">
+      <MemberSignature Language="C#" Value="public static string AspClientScriptVirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AspClientScriptVirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.AspClientScriptVirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual para o cliente do ASP.NET em arquivos de script.</summary>
+        <value>O caminho virtual para os arquivos de script de cliente do ASP.NET.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AspInstallDirectory">
+      <MemberSignature Language="C#" Value="public static string AspInstallDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AspInstallDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.AspInstallDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho físico do diretório onde os arquivos executáveis do ASP.NET estão instalados.</summary>
+        <value>O caminho físico para os arquivos executáveis do ASP.NET.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpException">ASP.NET não está instalado neste computador.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinDirectory">
+      <MemberSignature Language="C#" Value="public static string BinDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string BinDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.BinDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho físico para o diretório /bin do aplicativo atual.</summary>
+        <value>O caminho para o diretório /bin do aplicativo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cache">
+      <MemberSignature Language="C#" Value="public static System.Web.Caching.Cache Cache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Caching.Cache Cache" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.Cache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.Cache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Caching.Cache" /> para o aplicativo atual.</summary>
+        <value>O <see cref="T:System.Web.Caching.Cache" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a classe <xref:System.Web.Caching.Cache?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O ASP.NET não está instalado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public static void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRuntime.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desliga o <see cref="T:System.Web.HttpRuntime" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para uso quando seu código implementa seu próprio ambiente de hospedagem. Não é necessário para chamar esse método no decorrer de processamento de solicitação normal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClrInstallDirectory">
+      <MemberSignature Language="C#" Value="public static string ClrInstallDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ClrInstallDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.ClrInstallDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho físico para o diretório onde os arquivos executáveis do common language runtime estão instalados.</summary>
+        <value>O caminho físico para os arquivos executáveis do common language runtime.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodegenDir">
+      <MemberSignature Language="C#" Value="public static string CodegenDir { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string CodegenDir" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.CodegenDir" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho físico para o diretório em que o ASP.NET armazena arquivos temporários (fontes geradas, assemblies compilados e assim por diante) do aplicativo atual.</summary>
+        <value>O caminho físico para o diretório de armazenamento de arquivos temporários do aplicativo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamedPermissionSet">
+      <MemberSignature Language="C#" Value="public static System.Security.NamedPermissionSet GetNamedPermissionSet ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.NamedPermissionSet GetNamedPermissionSet() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRuntime.GetNamedPermissionSet" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.NamedPermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o conjunto de permissões associadas a grupos de código.</summary>
+        <returns>Um <see cref="T:System.Security.NamedPermissionSet" /> objeto que contém os nomes e descrições de permissões, ou <see langword="null" /> se não houver nenhum.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.HttpRuntime.GetNamedPermissionSet%2A>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IISVersion">
+      <MemberSignature Language="C#" Value="public static Version IISVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Version IISVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.IISVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do IIS que hospeda esse aplicativo.</summary>
+        <value>A versão do IIS que hospeda esse aplicativo, ou <see langword="null" /> se este aplicativo não é hospedado pelo IIS.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A versão inclui a versão principal e versão secundária; Por exemplo, 7.0, 7.5, 8.0, etc.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOnUNCShare">
+      <MemberSignature Language="C#" Value="public static bool IsOnUNCShare { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsOnUNCShare" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.IsOnUNCShare" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o aplicativo é mapeado para um compartilhamento UNC (convenção) de nomenclatura universal.</summary>
+        <value>
+          <see langword="true" />Se o aplicativo é mapeado para um compartilhamento UNC; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineConfigurationDirectory">
+      <MemberSignature Language="C#" Value="public static string MachineConfigurationDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string MachineConfigurationDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.MachineConfigurationDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho físico para o diretório onde se encontra o arquivo Machine. config para o aplicativo atual.</summary>
+        <value>O caminho físico para o arquivo Machine. config para o aplicativo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequest">
+      <MemberSignature Language="C#" Value="public static void ProcessRequest (System.Web.HttpWorkerRequest wr);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ProcessRequest(class System.Web.HttpWorkerRequest wr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRuntime.ProcessRequest(System.Web.HttpWorkerRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wr" Type="System.Web.HttpWorkerRequest" />
+      </Parameters>
+      <Docs>
+        <param name="wr">Um <see cref="T:System.Web.HttpWorkerRequest" /> para o aplicativo atual.</param>
+        <summary>Conduz toda a execução de processamento da Web do ASP.NET.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é fornecido para uso quando seu código implementa seu próprio ambiente de hospedagem. Ele também pode ser usado para executar solicitações de filho quando seu código implementa seu próprio <xref:System.Web.HttpWorkerRequest>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="wr" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O aplicativo Web está em execução no IIS 7 no modo integrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFramework">
+      <MemberSignature Language="C#" Value="public static Version TargetFramework { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Version TargetFramework" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.TargetFramework" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do .NET Framework que o aplicativo Web atual visa.</summary>
+        <value>A versão do .NET Framework que o aplicativo Web atual visa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade normalmente é definida usando o `targetFramework` atributo o `httpRuntime` elemento no arquivo Web. config.  
+  
+ Essa propriedade não é garantida para retornar um valor correto, se o domínio currentapplication não é um domínio de aplicativo do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnloadAppDomain">
+      <MemberSignature Language="C#" Value="public static void UnloadAppDomain ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void UnloadAppDomain() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpRuntime.UnloadAppDomain" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Encerra o aplicativo atual. O aplicativo será reiniciado na próxima vez em que uma solicitação for recebida para ele.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `UnloadAppDomain`é útil para servidores que têm um grande número de aplicativos que raramente receber solicitações. Em vez de manter recursos de aplicativo ativo para o tempo de vida do processo, `UnloadAppDomain` permite o encerramento de programação de aplicativos não utilizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsingIntegratedPipeline">
+      <MemberSignature Language="C#" Value="public static bool UsingIntegratedPipeline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool UsingIntegratedPipeline" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpRuntime.UsingIntegratedPipeline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o aplicativo atual está sendo executado no modo de pipeline integrado do [!INCLUDE[iisver](~/includes/iisver-md.md)].</summary>
+        <value>
+          <see langword="true" /> se o aplicativo está sendo executado no modo de pipeline integrado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Modo de pipeline integrado não está disponível em versões anteriores do IIS que [!INCLUDE[iisver](~/includes/iisver-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

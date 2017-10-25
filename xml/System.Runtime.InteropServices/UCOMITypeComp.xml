@@ -1,0 +1,109 @@
+<Type Name="UCOMITypeComp" FullName="System.Runtime.InteropServices.UCOMITypeComp">
+  <TypeSignature Language="C#" Value="public interface UCOMITypeComp" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract UCOMITypeComp" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.UCOMITypeComp" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("00020403-0000-0000-c000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Use <see cref="T:System.Runtime.InteropServices.ComTypes.ITypeComp" /> em seu lugar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o `ITypeComp` interface, consulte a biblioteca MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bind">
+      <MemberSignature Language="C#" Value="public void Bind (string szName, int lHashVal, short wFlags, out System.Runtime.InteropServices.UCOMITypeInfo ppTInfo, out System.Runtime.InteropServices.DESCKIND pDescKind, out System.Runtime.InteropServices.BINDPTR pBindPtr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Bind(string szName, int32 lHashVal, int16 wFlags, [out] class System.Runtime.InteropServices.UCOMITypeInfo&amp; ppTInfo, [out] valuetype System.Runtime.InteropServices.DESCKIND&amp; pDescKind, [out] valuetype System.Runtime.InteropServices.BINDPTR&amp; pBindPtr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeComp.Bind(System.String,System.Int32,System.Int16,System.Runtime.InteropServices.UCOMITypeInfo@,System.Runtime.InteropServices.DESCKIND@,System.Runtime.InteropServices.BINDPTR@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="szName" Type="System.String" />
+        <Parameter Name="lHashVal" Type="System.Int32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="ppTInfo" Type="System.Runtime.InteropServices.UCOMITypeInfo&amp;" RefType="out" />
+        <Parameter Name="pDescKind" Type="System.Runtime.InteropServices.DESCKIND&amp;" RefType="out" />
+        <Parameter Name="pBindPtr" Type="System.Runtime.InteropServices.BINDPTR&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="szName">O nome para associar.</param>
+        <param name="lHashVal">Um valor de hash <c>szName</c> computado pelo <see langword="LHashValOfNameSys" />.</param>
+        <param name="wFlags">Uma palavra de sinalizadores que contém um ou mais dos sinalizadores invoke definidos no <see langword="INVOKEKIND" /> enumeração.</param>
+        <param name="ppTInfo">No retorno bem-sucedido, uma referência para a descrição do tipo que contém o item ao qual ele está associado, se um <see langword="FUNCDESC" /> ou <see langword="VARDESC" /> foi retornado.</param>
+        <param name="pDescKind">Uma referência a um <see langword="DESCKIND" /> é de enumerador que indica se o nome associado a um <see langword="VARDESC" />, <see langword="FUNCDESC" />, ou <see langword="TYPECOMP" />.</param>
+        <param name="pBindPtr">Uma referência para o limite para <see langword="VARDESC" />, <see langword="FUNCDESC" />, ou <see langword="ITypeComp" /> interface.</param>
+        <summary>Mapeia um nome de um membro de um tipo ou associa contidas em uma biblioteca de tipos de funções e variáveis globais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `ITypeComp::Bind` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindType">
+      <MemberSignature Language="C#" Value="public void BindType (string szName, int lHashVal, out System.Runtime.InteropServices.UCOMITypeInfo ppTInfo, out System.Runtime.InteropServices.UCOMITypeComp ppTComp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BindType(string szName, int32 lHashVal, [out] class System.Runtime.InteropServices.UCOMITypeInfo&amp; ppTInfo, [out] class System.Runtime.InteropServices.UCOMITypeComp&amp; ppTComp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMITypeComp.BindType(System.String,System.Int32,System.Runtime.InteropServices.UCOMITypeInfo@,System.Runtime.InteropServices.UCOMITypeComp@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="szName" Type="System.String" />
+        <Parameter Name="lHashVal" Type="System.Int32" />
+        <Parameter Name="ppTInfo" Type="System.Runtime.InteropServices.UCOMITypeInfo&amp;" RefType="out" />
+        <Parameter Name="ppTComp" Type="System.Runtime.InteropServices.UCOMITypeComp&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="szName">O nome para associar.</param>
+        <param name="lHashVal">Um valor de hash <c>szName</c> determinado pelo <see langword="LHashValOfNameSys" />.</param>
+        <param name="ppTInfo">No retorno bem-sucedido, uma referência a um <see langword="ITypeInfo" /> de tipo para o qual <c>szName</c> foi vinculado.</param>
+        <param name="ppTComp">No retorno bem-sucedido, uma referência a um <see langword="ITypeComp" /> variável.</param>
+        <summary>Associa as descrições do tipo contido em uma biblioteca de tipos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `ITypeComp::BindType` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,125 @@
+<Type Name="DependencyPropertyKey" FullName="System.Windows.DependencyPropertyKey">
+  <TypeSignature Language="C#" Value="public sealed class DependencyPropertyKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DependencyPropertyKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DependencyPropertyKey" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um identificador de propriedade de dependência para acesso de gravação limitado a uma propriedade de dependência somente leitura.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DependencyPropertyKey>instâncias são obtidas como o valor de retorno de uma chamada de registro de propriedade de dependência usando os métodos <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> ou <xref:System.Windows.DependencyProperty.RegisterAttachedReadOnly%2A>.  
+  
+ Os tipos que registrar uma propriedade de dependência podem usar o <xref:System.Windows.DependencyPropertyKey> em chamadas para <xref:System.Windows.DependencyObject.SetValue%2A> e <xref:System.Windows.DependencyObject.ClearValue%2A> que ajustar o valor da propriedade como parte da lógica de classe. Se permitido pelo nível de acesso da chave, classes relacionadas também podem usar a chave e a propriedade de dependência. Por exemplo, você pode declarar a chave como internos e outros tipos de dentro do mesmo assembly também podem definir a propriedade de dependência.  
+  
+ O <xref:System.Windows.DependencyPropertyKey> retornado pela dependência de somente leitura registro da propriedade não deve ser feito público, como expor a chave torna a propriedade configurável, invalidando, assim, o ponto de registro-la como uma propriedade de dependência somente leitura. Além disso, expondo a chave causa uma incompatibilidade entre a dependência disponível comportamentos de propriedade e seu [!INCLUDE[TLA#tla_clr](~/includes/tlasharptla-clr-md.md)] implementações de wrapper de propriedade, que é o design de classe inválido.  
+  
+ Em vez de expor a chave em si, em vez disso, você deve expor o <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A> valor o <xref:System.Windows.DependencyPropertyKey> como um `public static readonly` <xref:System.Windows.DependencyProperty> em sua classe. Isso permite que a propriedade retornar um identificador de propriedade de dependência válido para determinadas operações de sistema de propriedades como a numeração de valores definidos localmente. No entanto, o identificador obtido, portanto, não tem recursos completos de um <xref:System.Windows.DependencyProperty> para várias operações de sistema de propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir registra uma propriedade de dependência somente leitura e também usa a chave para dois propósitos em outros membros de classe: Implementando get "wrapper" e como o identificador para uma operação de determinação protegido que define o valor com base nos cálculos outros valores de propriedade.  
+  
+ [!code-csharp[WPFAquariumSln#RODP](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#rodp)]
+ [!code-vb[WPFAquariumSln#RODP](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#rodp)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DependencyProperty">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyProperty DependencyProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyProperty DependencyProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyPropertyKey.DependencyProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de propriedade de dependência associado com este identificador de propriedade de dependência especializadas de somente leitura.</summary>
+        <value>O identificador de propriedade de dependência relevantes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A> valor permite que o identificador de uma propriedade somente leitura do participar de operações do sistema de propriedades usando algumas das mesmas interfaces usadas para propriedades de dependência de leitura / gravação em comum.  
+  
+ Para implementar o acessador de propriedade get para uma propriedade de dependência somente leitura, você deve criar e expor um <xref:System.Windows.DependencyProperty> identificador em sua classe. Isso serve para duas finalidades:  
+  
+-   Suas necessidades de classe a <xref:System.Windows.DependencyProperty> identificador para implementar o acessador get para o wrapper de propriedade. Você usa o <xref:System.Windows.DependencyProperty> como um parâmetro para o <xref:System.Windows.DependencyObject.GetValue%2A> chamada que implementa o acessador get.  
+  
+-   <xref:System.Windows.DependencyProperty>identificadores de expõem sua propriedade de dependência para o sistema de propriedade, de modo que outros métodos que se baseiam nos metadados podem acessá-lo em um formato padrão. Por exemplo, se você chamou <xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A> em alguns <xref:System.Windows.DependencyObject> e obter uma enumeração de localmente conjunto de propriedades (valores e identificadores) o identificador retornado para uma propriedade de dependência somente leitura seria o <xref:System.Windows.DependencyProperty> valor em vez da chave. Não expor um <xref:System.Windows.DependencyProperty> identificador não aumenta a segurança de sua propriedade de dependência somente leitura de qualquer forma, isso facilita as operações que envolvem a mais complicado para classes derivadas subsequentes e instâncias de classe de propriedade.  
+  
+ Para expor o <xref:System.Windows.DependencyProperty> identificador em sua classe, chame <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A> diretamente em sua chave. Use esse valor para criar um `public static readonly` <xref:System.Windows.DependencyProperty> identificador na classe, comparável ao <xref:System.Windows.DependencyPropertyKey>.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Windows.DependencyPropertyKey.DependencyProperty%2A> para expor o <xref:System.Windows.DependencyProperty> identificador (`AquariumGraphicProperty`) para o `AquariumGraphic` propriedade de dependência somente leitura em uma classe. O exemplo também mostra o <xref:System.Windows.DependencyPropertyKey> criação (como um membro interno) e o acessador get para `AquariumGraphic`.  
+  
+ [!code-csharp[WPFAquariumSln#RODP](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#rodp)]
+ [!code-vb[WPFAquariumSln#RODP](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#rodp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverrideMetadata">
+      <MemberSignature Language="C#" Value="public void OverrideMetadata (Type forType, System.Windows.PropertyMetadata typeMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OverrideMetadata(class System.Type forType, class System.Windows.PropertyMetadata typeMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyPropertyKey.OverrideMetadata(System.Type,System.Windows.PropertyMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forType" Type="System.Type" />
+        <Parameter Name="typeMetadata" Type="System.Windows.PropertyMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="forType">O tipo no qual essa propriedade de dependência existe e metadados devem ser substituído.</param>
+        <param name="typeMetadata">Metadados fornecidos para esse tipo.</param>
+        <summary>Substitui os metadados de uma propriedade de dependência somente leitura que é representado por esse identificador de propriedade de dependência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir os metadados em uma propriedade de dependência somente leitura é feita por motivos semelhantes como substituir os metadados em uma propriedade de dependência de leitura / gravação e é restrito a acesso no nível de chave porque comportamentos especificados nos metadados podem alterar o comportamento do conjunto (o valor padrão, por exemplo).  
+  
+ Como com as propriedades de dependência de leitura / gravação, substituir os metadados em uma propriedade de dependência somente leitura só deve ser feito antes da propriedade que está sendo colocada em uso pelo sistema de propriedade (Isso é igual ao tempo que são criadas instâncias de instâncias específicas de objetos que registra a propriedade). Chamadas para <xref:System.Windows.DependencyPropertyKey.OverrideMetadata%2A> só deve ser executada dentro de construtores estáticos do tipo que fornece a próprio como o `forType` parâmetro deste método ou inicialização equivalente para essa classe.  
+  
+ Esse método efetivamente encaminha para o <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> método, passando o <xref:System.Windows.DependencyPropertyKey> instância como o parâmetro de chave.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir substitui os metadados para uma propriedade de dependência somente leitura existente que herda de uma classe. Nesse caso, a meta de cenário foi adicionar um retorno de chamada do valor de forçados não tinha os metadados da propriedade base. Você também pode substituir os metadados em qualquer um dos outros motivos que substituir os metadados é normalmente apropriados (alterando o valor padrão, adicionando <xref:System.Windows.FrameworkPropertyMetadataOptions> valores, etc.)  
+  
+ [!code-csharp[WPFAquariumSln#RODPOverride](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#rodpoverride)]
+ [!code-vb[WPFAquariumSln#RODPOverride](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#rodpoverride)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Substituição de tentativa de metadados em uma propriedade de dependência de leitura / gravação (não pode ser feita usando essa assinatura).</exception>
+        <exception cref="T:System.ArgumentException">Metadados já foi estabelecido para a propriedade conforme ela existe no tipo fornecido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

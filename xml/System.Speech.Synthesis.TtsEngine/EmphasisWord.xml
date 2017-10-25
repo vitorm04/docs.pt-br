@@ -1,0 +1,111 @@
+<Type Name="EmphasisWord" FullName="System.Speech.Synthesis.TtsEngine.EmphasisWord">
+  <TypeSignature Language="C#" Value="public enum EmphasisWord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EmphasisWord extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.EmphasisWord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera os valores de <see langword="EmphasisWord" /> para um determinado <see langword="TextFragment" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ênfase word está definida para <xref:System.Speech.Synthesis.TtsEngine.TextFragment> instâncias por meio do <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Emphasis%2A> propriedade o <xref:System.Speech.Synthesis.TtsEngine.FragmentState> objeto retornado pelo <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> propriedade em uma instância do <xref:System.Speech.Synthesis.TtsEngine.TextFragment>.  
+  
+ Cada mecanismo de fala sintético é livre para determinar como processar ênfase; a natureza da ênfase difere entre idiomas, dialetos, gêneros ou vozes.  
+  
+ Ambos <xref:System.Speech.Synthesis.TtsEngine.EmphasisWord> e <xref:System.Speech.Synthesis.TtsEngine.EmphasisBreak> pode ser usado ao definir ou obter o <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Emphasis%2A> em um <xref:System.Speech.Synthesis.TtsEngine.FragmentState> instância.  
+  
+ Os dois valores podem ser diferenciados pelo fato de que os valores reais do <xref:System.Speech.Synthesis.TtsEngine.EmphasisWord> são maiores que ou igual a zero e os valores de <xref:System.Speech.Synthesis.TtsEngine.EmphasisBreak> são todos os menores do que zero; e usando o valor de <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction> retornado pelo <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Action%2A> propriedade no <xref:System.Speech.Synthesis.TtsEngine.FragmentState> objeto retornado pelo <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> propriedade em uma instância. Para mais informações, consulte <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Action%2A>, e <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Emphasis%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisWord Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisWord.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisWord</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica um nível específico de mecanismo padrão de ênfase.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Moderate">
+      <MemberSignature Language="C#" Value="Moderate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisWord Moderate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisWord.Moderate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisWord</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a ênfase moderada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisWord None = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisWord.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisWord</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não indica que nenhuma ênfase especificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Reduced">
+      <MemberSignature Language="C#" Value="Reduced" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisWord Reduced = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisWord.Reduced" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisWord</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a ênfase reduzida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strong">
+      <MemberSignature Language="C#" Value="Strong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.EmphasisWord Strong = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.EmphasisWord.Strong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.EmphasisWord</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a forte ênfase.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

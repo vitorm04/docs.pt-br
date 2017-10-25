@@ -1,0 +1,189 @@
+<Type Name="PreparingEnlistment" FullName="System.Transactions.PreparingEnlistment">
+  <TypeSignature Language="C#" Value="public class PreparingEnlistment : System.Transactions.Enlistment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PreparingEnlistment extends System.Transactions.Enlistment" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.PreparingEnlistment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Transactions.Enlistment</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Facilita a comunicação entre um participante da transação inscrita e o Gerenciador de transações durante a fase de preparação da transação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a inicial (preparar) fase da transação, o Gerenciador de transações passa esse tipo para o Gerenciador de recursos ao chamar o <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> método para obter o voto de um recurso na transação. Dependendo se votos para confirmar ou reverter, sua implementação do Gerenciador de recursos deve chamar o <xref:System.Transactions.PreparingEnlistment.Prepared%2A> ou <xref:System.Transactions.PreparingEnlistment.ForceRollback%2A> métodos deste tipo.  
+  
+ O Gerenciador de recursos também pode chamar o <xref:System.Transactions.Enlistment.Done%2A> método em qualquer momento antes que ela é chamada de <xref:System.Transactions.PreparingEnlistment.Prepared%2A> método. Ao fazer isso, a inscrição é converter um voto de somente leitura, que significa que ele votos de confirmação da transação, mas não precisam receber o resultado final.  
+  
+ Gerenciadores de recursos duráveis podem recuperar as informações que são necessários pelo Gerenciador de transações para nova inscrição do <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> propriedade. Para obter mais informações sobre a recuperação, consulte [executar recuperação](http://msdn.microsoft.com/en-us/d342c5c7-da64-4a4c-8e63-b52f4fbf2691).  
+  
+   
+  
+## Examples  
+ [!code-csharp[Tx_Enlist#2](~/samples/snippets/csharp/VS_Snippets_CFX/tx_enlist/cs/enlist.cs#2)]
+ [!code-vb[Tx_Enlist#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_enlist/vb/enlist.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="ForceRollback">
+      <MemberSignature Language="C#" Value="public void ForceRollback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ForceRollback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.PreparingEnlistment.ForceRollback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica que a transação deve ser revertida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma implementação do <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> método o <xref:System.Transactions.IEnlistmentNotification> interface chama esse método para indicar que a transação deve ser revertida.  
+  
+   
+  
+## Examples  
+ [!code-csharp[Tx_Enlist#2](~/samples/snippets/csharp/VS_Snippets_CFX/tx_enlist/cs/enlist.cs#2)]
+ [!code-vb[Tx_Enlist#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_enlist/vb/enlist.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceRollback">
+      <MemberSignature Language="C#" Value="public void ForceRollback (Exception ex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ForceRollback(class System.Exception ex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.PreparingEnlistment.ForceRollback(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="ex">To be added.</param>
+        <summary>Indica que a transação deve ser revertida.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prepared">
+      <MemberSignature Language="C#" Value="public void Prepared ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Prepared() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.PreparingEnlistment.Prepared" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica que a transação pode ser confirmada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na primeira (preparar) fase de uma confirmação de duas fases, um Gerenciador de recursos de implementar o <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> método do <xref:System.Transactions.IEnlistmentNotification> interface, que chama esse método para indicar que a transação pode ser confirmada.  
+  
+ O Gerenciador de recursos pode chamar o <xref:System.Transactions.Enlistment.Done%2A> método em qualquer momento antes de ele chamou esse método.  Ao fazer isso, a inscrição é converter um voto de somente leitura, que significa que ele votos de confirmação da transação, mas não precisam receber o resultado final.  
+  
+ Quando este método é chamado por uma inscrição e antes de retornar, é possível que outro thread ou esse mesmo thread pode fazer uma chamada para o mesmo método de inscrição, como <xref:System.Transactions.IEnlistmentNotification.Rollback%2A> para executar uma reversão. Isso pode resultar em uma situação de deadlock se a implementação do Gerenciador de recursos não liberar bloqueios de recursos até depois que este método retorna.  
+  
+   
+  
+## Examples  
+ [!code-csharp[Tx_Enlist#2](~/samples/snippets/csharp/VS_Snippets_CFX/tx_enlist/cs/enlist.cs#2)]
+ [!code-vb[Tx_Enlist#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_enlist/vb/enlist.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecoveryInformation">
+      <MemberSignature Language="C#" Value="public byte[] RecoveryInformation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] RecoveryInformation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.PreparingEnlistment.RecoveryInformation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém as informações de recuperação de uma inscrição.</summary>
+        <returns>As informações de recuperação de uma inscrição.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Uma tentativa de obter informações de recuperação dentro de uma inscrição voláteis, o que não geram informações de recuperação.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

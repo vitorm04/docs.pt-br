@@ -1,0 +1,1477 @@
+<Type Name="LegendItem" FullName="System.Web.UI.DataVisualization.Charting.LegendItem">
+  <TypeSignature Language="C#" Value="public class LegendItem : System.Web.UI.DataVisualization.Charting.ChartNamedElement, System.Web.UI.DataVisualization.Charting.IChartMapArea" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LegendItem extends System.Web.UI.DataVisualization.Charting.ChartNamedElement implements class System.Web.UI.DataVisualization.Charting.IChartMapArea" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.LegendItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartNamedElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.DataVisualization.Charting.IChartMapArea</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Name")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um item de legenda, que é armazenado na classe <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItemsCollection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.LegendItem> classe representa um item de legenda, que pode ser um padrão ou o item personalizado:  
+  
+-   Itens de legenda padrão são inseridos automaticamente na legenda para a série de dados ou pontos de dados. As entradas padrão para gráficos de pizza e rosca representam os pontos de dados plotados, enquanto as entradas para todos os outros tipos de gráfico representam a série plotada. Por padrão, essas entradas de legenda usam a cor de ponto ou série de dados para a cor de símbolo e o nome do ponto de dados ou de série para o texto do item de legenda. Itens de legenda padrão podem ser personalizados ou excluídos no tempo de execução usando o <xref:System.Web.UI.DataVisualization.Charting.Chart.CustomizeLegend> evento o <xref:System.Web.UI.DataVisualization.Charting.Chart> controle.  
+  
+-   Itens de legenda personalizado tem texto definido pelo usuário, cor de símbolo e assim por diante. Ao contrário das entradas padrão, eles não estão conectados com os dados plotados. Itens de legenda personalizados podem ser adicionados no tempo de design ou em tempo de execução, usando o <xref:System.Web.UI.DataVisualization.Charting.Legend.CustomItems%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Legend> objeto.  
+  
+ Símbolos de legenda podem ser retângulos, linhas ou marcadores, dependendo do <xref:System.Web.UI.DataVisualization.Charting.LegendItem.ImageStyle%2A> configuração da propriedade de um <xref:System.Web.UI.DataVisualization.Charting.LegendItem> objeto.  
+  
+ O texto de um item de legenda personalizado é determinado pelo <xref:System.Web.UI.DataVisualization.Charting.LegendItem.Name%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LegendItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.DataVisualization.Charting.LegendItem> classe.  
+  
+ Observe que você também pode adicionar itens de legenda personalizado usando o `Add` e `Insert` métodos associados a <xref:System.Web.UI.DataVisualization.Charting.Legend.CustomItems%2A> propriedade de coleção do <xref:System.Web.UI.DataVisualization.Charting.Legend> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LegendItem (string name, System.Drawing.Color color, string image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Drawing.Color color, string image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendItem.#ctor(System.String,System.Drawing.Color,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+        <Parameter Name="image" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do item da legenda.</param>
+        <param name="color">A cor do item da legenda.</param>
+        <param name="image">O caminho da imagem a ser exibida para o item de legenda.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" /> classe com o caminho especificado do nome, cor e imagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente o `image` ou `color` parâmetro precisa ser especificado. Se ambos forem especificados, o `image` parâmetro tem precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackGradientStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.GradientStyle BackGradientStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.GradientStyle BackGradientStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.BackGradientStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.GradientEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.GradientStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a orientação do gradiente do plano de fundo de um item de legenda. Também determina se um gradiente é usado.</summary>
+        <value>Uma enumeração <see cref="T:System.Web.UI.DataVisualization.Charting.GradientStyle" />. O valor padrão é <see cref="F:System.Web.UI.DataVisualization.Charting.GradientStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BackGradientStyle%2A> propriedade para determinar se um título exibirá um gradiente e é usado determinar a orientação do gradiente se houver um.  
+  
+ Essa propriedade é implementada somente se o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.ImageStyle%2A> está definida como <xref:System.Web.UI.DataVisualization.Charting.LegendImageStyle.Rectangle>.  
+  
+ Para obter uma lista de padrões disponíveis, consulte o <xref:System.Web.UI.DataVisualization.Charting.GradientStyle> enumeração.  
+  
+ Para usar cores de gradiente:  
+  
+-   Use o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.Color%2A> propriedade para definir a cor primária.  
+  
+-   Use o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BackGradientStyle%2A> propriedade para definir a cor secundária.  
+  
+-   Use este <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BackGradientStyle%2A> propriedade para definir o estilo de gradiente desejado.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackHatchStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartHatchStyle BackHatchStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartHatchStyle BackHatchStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.BackHatchStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.HatchStyleEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartHatchStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de hachura de um item de legenda.</summary>
+        <value>Uma enumeração <see cref="T:System.Web.UI.DataVisualization.Charting.ChartHatchStyle" />. O valor padrão é <see cref="F:System.Web.UI.DataVisualization.Charting.ChartHatchStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.ChartHatchStyle> enumeração Especifica o padrão de hachura usado por um pincel de tipo <xref:System.Drawing.Drawing2D.HatchBrush>. O padrão de hachura consiste em uma cor de plano de fundo sólida e as linhas desenhadas no plano de fundo.  
+  
+ Para obter uma lista de estilos de hachurado disponíveis, consulte o <xref:System.Web.UI.DataVisualization.Charting.ChartHatchStyle> enumeração.  
+  
+> [!NOTE]
+>  A cor das linhas de hachura é determinada pelo <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BackSecondaryColor%2A> propriedade.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageTransparentColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackImageTransparentColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackImageTransparentColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.BackImageTransparentColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cor que será substituída por uma cor transparente quando a imagem de plano de fundo é desenhada.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que será exibido como transparente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackSecondaryColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackSecondaryColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackSecondaryColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.BackSecondaryColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor secundária de um item de legenda.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor usado para a cor secundária do plano de fundo com preenchimento de gradiente ou hachura. O valor padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BackSecondaryColor%2A> propriedade é uma das várias propriedades relacionadas que determinam a cor de plano de fundo secundária de muitos <xref:System.Web.UI.DataVisualization.Charting.Chart> objetos; ele é usado ao aplicar cores de gradiente.  
+  
+ Essa propriedade é implementada somente se o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.ImageStyle%2A> está definida como <xref:System.Web.UI.DataVisualization.Charting.LegendImageStyle.Rectangle>.  
+  
+ Você pode definir <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BackSecondaryColor%2A> para qualquer valor ARGB (alfa, vermelho, verde, azul) válido.  
+  
+ Se a hachura for usada, o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BackSecondaryColor%2A> propriedade determina a cor das linhas de hachura do item de legenda.  
+  
+ Para usar cores de gradiente do plano de fundo de uma célula legenda:  
+  
+ Para usar cores de gradiente:  
+  
+-   Use o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.Color%2A> propriedade para definir a cor primária.  
+  
+-   Use o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BackGradientStyle%2A> propriedade para definir a cor secundária.  
+  
+-   Use o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BackGradientStyle%2A> propriedade para definir o estilo de gradiente desejado.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.BorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da borda de um item de legenda.</summary>
+        <value>Um valor <see cref="T:System.Drawing.Color" />. A cor padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir essa propriedade para qualquer valor ARGB (alfa, vermelho, verde, azul) válido.  
+  
+> [!NOTE]
+>  Se você usar um marcador para um item de legenda personalizado. Esta propriedade definirá a cor da borda do marcador. No entanto, se o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerBorderColor%2A> propriedade também for definida, seu valor tem precedência.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderDashStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartDashStyle BorderDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartDashStyle BorderDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.BorderDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da borda de um item de legenda.</summary>
+        <value>Um <see cref="T:System.Web.UI.DataVisualization.Charting.ChartDashStyle" /> valor de enumeração que determina o estilo de borda do item da legenda.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina o estilo de linha usado para uma borda. A linha pode ser sólida, pontilhada e assim por diante.  
+  
+ Para outros estilos de borda, consulte o <xref:System.Web.UI.DataVisualization.Charting.ChartDashStyle> tópico de enumeração.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderWidth">
+      <MemberSignature Language="C#" Value="public int BorderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.BorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da borda de um item de legenda.</summary>
+        <value>Um <see langword="integer" /> valor que determina a largura, em pixels, da borda de item de legenda.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BorderWidth%2A> propriedade também pode ser usada para definir a largura das linhas quando, por exemplo, os itens de legenda personalizado são exibidos com um <xref:System.Web.UI.DataVisualization.Charting.LegendImageStyle.Line> estilo.  
+  
+ **Observação** essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cells">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.LegendCellCollection Cells { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.LegendCellCollection Cells" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.Cells" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.LegendCellCollectionEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LegendCellCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de células no item de legenda.</summary>
+        <value>Um objeto <see cref="T:System.Web.UI.DataVisualization.Charting.LegendCellCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um item de legenda consiste em uma ou mais células de legenda, cada um representado por um <xref:System.Web.UI.DataVisualization.Charting.LegendCell> do objeto e armazenados em um <xref:System.Web.UI.DataVisualization.Charting.LegendCellCollection>.  
+  
+> [!NOTE]
+>  Essa propriedade se aplica a todo o <xref:System.Web.UI.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color Color" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de um item de legenda.</summary>
+        <value>Um valor <see cref="T:System.Drawing.Color" />. A cor padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.Web.UI.DataVisualization.Charting.LegendItem.Color%2A> propriedade é um várias propriedades que obtenham ou definir a cor de muitos elementos de gráfico relacionadas ao; ela pode ser definida como qualquer valor ARGB (alfa, vermelho, verde, azul).  
+  
+ Se essa propriedade for definida para um ponto de dados e sua série, a cor do ponto de dados terá precedência. A cor da série será usada apenas para pontos de dados que não pode definir suas próprias cores.  
+  
+ Se um item de legenda personalizado usa um marcador, essa propriedade determina a cor do marcador. No entanto, se o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerColor%2A> for definida, seu valor de propriedade e tem precedência.  
+  
+ Essa propriedade será ignorada se o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.Image%2A> propriedade especifica uma imagem a ser usado para o símbolo de item de legenda.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendItem.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pela classe <see cref="T:System.Web.UI.DataVisualization.Charting.LegendItem" /> e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que indica se o item de legenda está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o item de legenda estiver habilitado; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade se aplica a todo o <xref:System.Web.UI.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public string Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Image" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ImageValueEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem que será exibida para um símbolo de item de legenda.</summary>
+        <value>Um valor <see langword="string" /> que representa a URL de um arquivo de imagem. O valor padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina o arquivo de imagem a ser usado para o <xref:System.Web.UI.DataVisualization.Charting.LegendItem> símbolo.  
+  
+ O caminho pode ser um absoluto ou uma URL relativa.  
+  
+ Se você definir uma imagem de plano de fundo, essa imagem será exibida independentemente do <xref:System.Web.UI.DataVisualization.Charting.LegendItem.ImageStyle%2A> configuração de propriedade.  
+  
+ Definir o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BackImageTransparentColor%2A> propriedade para habilitar uma cor usada pela imagem apareçam transparentes.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.LegendImageStyle ImageStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.LegendImageStyle ImageStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.ImageStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.DataVisualization.Charting.LegendImageStyle), "Rectangle")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LegendImageStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de exibição da imagem de item de legenda.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Web.UI.DataVisualization.Charting.LegendImageStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses estilos determinam como o símbolo correspondente do item será exibido.  
+  
+ Um <xref:System.Web.UI.DataVisualization.Charting.LegendImageStyle.Line> estilo pode ser combinado com um <xref:System.Web.UI.DataVisualization.Charting.LegendImageStyle.Marker> estilo. Para fazer isso, primeiro defina a <xref:System.Web.UI.DataVisualization.Charting.LegendItem.ImageStyle%2A> propriedade <xref:System.Web.UI.DataVisualization.Charting.LegendImageStyle.Line>. Em seguida, use o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerImage%2A> propriedade para especificar uma imagem do marcador, ou o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerStyle%2A> propriedade para especificar um estilo de marcador. O símbolo resultante será uma combinação de uma linha e uma imagem ou um marcador.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Legend">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.Legend Legend { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Legend Legend" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.Legend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Legend</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.UI.DataVisualization.Charting.Legend" /> objeto associado a este item de legenda.</summary>
+        <value>Um objeto <see cref="T:System.Web.UI.DataVisualization.Charting.Legend" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapAreaAttributes">
+      <MemberSignature Language="C#" Value="public string MapAreaAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MapAreaAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.MapAreaAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o mapa de atributos da área de um item de legenda.</summary>
+        <value>Um <see langword="string" /> valor que representa os atributos da área do mapa correspondente para o item de legenda.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MapAreaAttributes%2A> , um mapa de imagem do lado do cliente será automaticamente criado. Uma área do mapa também será criada, com sua cadeia de caracteres do atributo anexada ao \<mapa > marca que corresponde ao objeto de gráfico para o qual essa propriedade é definida.  
+  
+ Por exemplo, definindo o atributo de destino usando essa propriedade e o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.Url%2A> propriedade do primeiro ponto de dados resultará no código HTML que é semelhante ao seguinte código:  
+  
+ \<img id = "Chart1" usemap = "#Chart1ImageMap" src = "ChartPic_000002.jpg? 6735e83b-f0cd-4225-8be4-047695a61040" border = "0" / >... \<mapear nome = "Chart1ImageMap" >\<forma da área = "rect" href = "http://www.SomeDomain.ca" COORDS = "69,120,106,309" target\=blank > \< /mapear >  
+  
+ Porque a cadeia de caracteres inteira será acrescentada ao \<mapa > marca, vários atributos devem ser separados por um espaço.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MapAreaAttributes%2A> propriedade pode ser usada em conjunto com o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.Url%2A> propriedade para especificar a área do mapa de atributos, por exemplo, target = blank, bem como manipuladores de eventos do lado do cliente, por exemplo, OnClick="MyEvent()".  
+  
+ A definição dessa propriedade não terá efeito se a <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> está definida como `false`. O valor padrão é `true`.  
+  
+ **Importante** para criar um mapa de imagem dessa maneira, o <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto deve ser definido como <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. É possível criar um mapa de imagem ao usar fluxo binário, mas outra técnica deve ser usada. Para obter mais informações, consulte [renderização de imagem de gráfico](http://msdn.microsoft.com/library/82ff568d-838c-408b-bd85-62e424ae0505).  
+  
+ Palavras-chave podem ser usadas ao definir essa propriedade; cada palavra-chave será substituída com algum tipo de dados do elemento gráfico aplicável. Consulte a tabela a seguir para obter uma lista de todas as palavras-chave disponíveis:  
+  
+|Palavra-chave|Substituído por|  
+|-------------|-----------------|  
+|#VALX|Valor X do ponto de dados.|  
+|#VAL, #VALY, VALY2 DE #, #VALY3...|Valores de Y do ponto de dados.|  
+|#SER|Nome da série.|  
+|#LABEL|Rótulo de ponto de dados.|  
+|#INDEX|Índice de ponto de dados.|  
+|#PERCENT|Porcentagem do valor de Y dados ponto.|  
+|#TOTAL|Total de todos os valores Y na série.|  
+|#LEGENDTEXT|Texto da legenda.|  
+  
+ Para criar mapas de imagem que têm coordenadas definidas pelo usuário, use o <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> propriedade da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto. Para obter mais informações, consulte [renderização de imagem de gráfico](http://msdn.microsoft.com/library/82ff568d-838c-408b-bd85-62e424ae0505).  
+  
+> [!NOTE]
+>  Essa propriedade se aplica a todo o <xref:System.Web.UI.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerBorderColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color MarkerBorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MarkerBorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerBorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da borda dos marcadores, se usado.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa a cor ARGB (alfa, vermelho, verde, azul) de uma borda do marcador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para usar marcadores, defina o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerStyle%2A> propriedade com um valor diferente de <xref:System.Web.UI.DataVisualization.Charting.MarkerStyle.None>.  
+  
+ Observe que os marcadores não serão aplicados pizza, rosca e qualquer empilhadas tipos de gráfico.  
+  
+ As legendas personalizado, o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BorderColor%2A> propriedade também definirá a cor da borda dos marcadores. O <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerBorderColor%2A> configuração de propriedade tem precedência sobre o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.BorderColor%2A> configuração de propriedade.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerBorderWidth">
+      <MemberSignature Language="C#" Value="public int MarkerBorderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MarkerBorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerBorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da borda dos marcadores, se usado. Medida em pixels.</summary>
+        <value>Um valor <see langword="integer" />. O valor padrão é o pixel um (1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color MarkerColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MarkerColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor dos marcadores, se usado.</summary>
+        <value>Um valor <see cref="T:System.Drawing.Color" />. A cor padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerImage">
+      <MemberSignature Language="C#" Value="public string MarkerImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MarkerImage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ImageValueEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma imagem do marcador.</summary>
+        <value>Um valor <see langword="string" /> que representa a URL de um arquivo de imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa um caminho para um arquivo de imagem, que pode ser uma URL absoluta ou relativa.  
+  
+ Para usar marcadores, defina o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerStyle%2A> propriedade com um valor diferente de <xref:System.Web.UI.DataVisualization.Charting.MarkerStyle.None>.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerImage%2A> propriedade tem precedência sobre o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerColor%2A> propriedade.  
+  
+ Uma imagem do marcador pode ser qualquer arquivo de gráficos válido com suporte pelo .NET Framework, incluindo ícones.  
+  
+ Para definir uma cor da imagem do marcador para ser transparente, use o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerImageTransparentColor%2A> propriedade.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerImageTransparentColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color MarkerImageTransparentColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color MarkerImageTransparentColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerImageTransparentColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cor que será substituída por uma cor transparente quando a imagem do marcador é desenhada.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa uma cor ARGB (alfa, vermelho, verde, azul).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerImageTransparentColor%2A> propriedade é usada para selecionar uma cor em uma imagem do marcador que será exibida como transparente.  
+  
+ Você pode definir essa propriedade para qualquer valor ARGB (alfa, vermelho, verde, azul) válido.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerSize">
+      <MemberSignature Language="C#" Value="public int MarkerSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MarkerSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(5)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho dos marcadores de item de legenda, se usados.</summary>
+        <value>Uma expressão <see langword="integer" /> que representa a altura e a largura da área de plotagem de marcadores, em pixels. O valor padrão é 5 pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para usar marcadores, defina o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerStyle%2A> propriedade com um valor diferente de <xref:System.Web.UI.DataVisualization.Charting.MarkerStyle.None>.  
+  
+ Observe que os marcadores não serão aplicados a pontos de dados de pizza, rosca e quaisquer tipos de gráfico empilhado.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkerStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.MarkerStyle MarkerStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.MarkerStyle MarkerStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.MarkerStyleEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.MarkerStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um estilo de marcador do item de legenda. Também usado para habilitar ou desabilitar a exibição de marcadores.</summary>
+        <value>Uma enumeração do inteiro <see cref="P:System.Web.UI.DataVisualization.Charting.LegendItem.MarkerStyle" />. O valor padrão é <see cref="F:System.Web.UI.DataVisualization.Charting.MarkerStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para desativar marcadores, defina essa propriedade como <xref:System.Web.UI.DataVisualization.Charting.MarkerStyle.None>.  
+  
+> [!NOTE]
+>  Essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do item da legenda.</summary>
+        <value>Um <see langword="string" /> valor que representa o nome do item da legenda.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostBackValue">
+      <MemberSignature Language="C#" Value="public string PostBackValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PostBackValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.PostBackValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de postback que pode ser processado em um <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> eventos.</summary>
+        <value>Um <see langword="string" /> valor que representa o valor de postback passado para um <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> eventos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color SeparatorColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color SeparatorColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.SeparatorColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor do separador de item de legenda.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor usado para desenhar a cor do separador de item de legenda. O valor padrão é <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade se aplica a todo o <xref:System.Web.UI.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle SeparatorType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle SeparatorType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.SeparatorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle), "None")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo do separador de item de legenda.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Web.UI.DataVisualization.Charting.LegendSeparatorStyle" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeriesName">
+      <MemberSignature Language="C#" Value="public string SeriesName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SeriesName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.SeriesName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do <see cref="T:System.Web.UI.DataVisualization.Charting.Series" /> associado a um item de legenda padrão.</summary>
+        <value>Um <see langword="string" /> valor que determina o nome da série associada a um item de legenda padrão. O valor padrão é uma cadeia de comprimento zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade só deve ser usada no <xref:System.Web.UI.DataVisualization.Charting.Chart.CustomizeLegend> evento para determinar quais séries de dados representa uma entrada de legenda padrão.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.LegendItem.SeriesName%2A> propriedade se aplica a todos os gráficos exceto gráficos de pizza e esfera; seus itens de legenda padrão correspondem plotados pontos de dados e não plotados série. Ao lidar com gráficos de pizza e esfera, use o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.SeriesPointIndex%2A> propriedade em vez disso.  
+  
+ Essa propriedade não deve ser definida pelo desenvolvedor.  
+  
+> [!NOTE]
+>  Essa propriedade se aplica a todo o <xref:System.Web.UI.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeriesPointIndex">
+      <MemberSignature Language="C#" Value="public int SeriesPointIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SeriesPointIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.SeriesPointIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice de um <see cref="T:System.Web.UI.DataVisualization.Charting.DataPoint" /> objeto associado a um item de legenda padrão.</summary>
+        <value>Um <see langword="integer" /> valor que representa o local da legenda padrão associada do ponto de dados em um índice com base em zero. Todos os tipos com exceção de pizza de gráficos e gráficos de rosca retornará um resultado negativo um (-1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade só deve ser usada no <xref:System.Web.UI.DataVisualization.Charting.Chart.CustomizeLegend> evento para determinar a <xref:System.Web.UI.DataVisualization.Charting.DataPoint> objeto que é representado pela entrada de legenda do gráfico padrão pizza ou esfera.  
+  
+ Tipos de gráfico diferente de pizza ou gráficos esfera retornará um resultado negativo um (-1), porque os itens de legenda padrão correspondem aos plotado série e não plotado pontos de dados. Use o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.SeriesName%2A> propriedade para esses tipos de gráfico.  
+  
+ Essa propriedade não deve ser definida pelo desenvolvedor.  
+  
+> [!NOTE]
+>  Essa propriedade se aplica a todo o <xref:System.Web.UI.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ShadowColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ShadowColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.ShadowColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "128,0,0,0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da sombra de um item de legenda.</summary>
+        <value>Um valor <see cref="T:System.Drawing.Color" />. A cor padrão é <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obtém ou define a cor da sombra de vários elementos do gráfico e pode ser definida como qualquer valor ARGB (alfa, vermelho, verde, azul) válido.  
+  
+ O valor alfa pode ser usado para obter um efeito de sombreamento "real"; Tente usar uma cor de "128,0,0,0" de sombras.  
+  
+ Para implementar uma sombra, defina o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.ShadowOffset%2A> propriedade para um valor diferente de zero (0).  
+  
+ **Observação** essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowOffset">
+      <MemberSignature Language="C#" Value="public int ShadowOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ShadowOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.ShadowOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o deslocamento de sombra, em pixels, de um item de legenda.</summary>
+        <value>Um <see langword="integer" /> valor que representa o deslocamento de sombra, em pixels, do elemento do gráfico relevantes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para implementar o sombreamento, use um valor diferente de zero (0). Um valor positivo resulta em uma sombra que muda para baixo e para a direita. Um valor negativo resulta em uma sombra que muda para cima e para a esquerda.  
+  
+ **Observação** essa propriedade é aplicável somente a <xref:System.Web.UI.DataVisualization.Charting.LegendCell> objetos com um <xref:System.Web.UI.DataVisualization.Charting.LegendCellType> do <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.SeriesSymbol> ou <xref:System.Web.UI.DataVisualization.Charting.LegendCellType.Image>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a dica de ferramenta do item da legenda.</summary>
+        <value>Um <see langword="string" /> valor que representa a dica de ferramenta para o item de legenda.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.ToolTip%2A> , um mapa de imagem do lado do cliente será automaticamente criado. Uma área do mapa também será criada com sua `Title` atributo definido como a cadeia de caracteres especificada de dica de ferramenta. A área do mapa usará as dimensões que correspondem ao título. Por exemplo, se o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.ToolTip%2A> propriedade está definida para um ponto de dados e o código HTML semelhante à seguinte será gerado em tempo de execução:  
+  
+ \<NOME do mapa = "Chart1ImageMap" >\<forma da área = "rect" Title = "primeiro valor de dados = 19" COORDS = "69,120,106,309" > \< /MAPEAR >  
+  
+ A definição dessa propriedade não terá efeito se a <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> está definida como `false`. O valor padrão é `true`.  
+  
+ **Importante** para criar um mapa de imagem dessa maneira, o <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto deve ser definido como <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. É possível criar um mapa de imagem ao usar fluxo binário, mas outra técnica deve ser usada. Para obter mais informações, consulte [renderização de imagem de gráfico](http://msdn.microsoft.com/library/82ff568d-838c-408b-bd85-62e424ae0505).  
+  
+ Essa propriedade permite que você defina as palavras-chave especiais para exibir diferentes tipos de dados relacionados ao gráfico. Para obter mais informações, consulte [palavras-chave](http://msdn.microsoft.com/library/8a19d422-4eee-45ff-a5c3-feff7b76fa8c).  
+  
+ Para criar mapas de imagem que têm coordenadas definidas pelo usuário, use o <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> propriedade da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto.  
+  
+> [!NOTE]
+>  Essa propriedade se aplica a todo o <xref:System.Web.UI.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendItem.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.UrlValueEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL de destino de um item de legenda.</summary>
+        <value>Um <see langword="string" /> valor que representa a URL de destino de um item de legenda. Para usar uma URL absoluta, inicie a expressão de cadeia de caracteres com "http://" ou "www". Se a cadeia de caracteres não começa com um destes prefixos, ele será tratado como uma URL relativa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir essa propriedade, um mapa de imagem do lado do cliente será criado automaticamente. Uma área do mapa também será criada com o atributo HREF definido como a âncora especificado ou a URL. Essa área do mapa usará também as dimensões que correspondem ao elemento gráfico relevantes. Por exemplo, se o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.Url%2A> propriedade está definida para um ponto de dados e o código HTML semelhante à seguinte será gerado em tempo de execução:  
+  
+ \<img id = "Chart1" USEMAP = "#Chart1ImageMap" src = "ChartPic_000002.jpg? 6735e83b-f0cd-4225-8be4-047695a61040" border = "0" / >... \<Mapa NAME = "Chart1ImageMap" >\<forma da área = "rect" HREF = "http://www.healthquotes.ca" COORDS = "69,120,106,309" > \< /MAPEAR >  
+  
+ A definição dessa propriedade não terá efeito se a <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> está definida como `false`. O valor padrão é `true`.  
+  
+ **Importante** para criar um mapa de imagem dessa maneira, o <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto deve ser definido como <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. É possível criar um mapa de imagem ao usar fluxo binário, mas outra técnica deve ser usada.  
+  
+ Atributos de area(s) mapa, por exemplo, destino = blank, podem ser especificados usando o <xref:System.Web.UI.DataVisualization.Charting.LegendItem.MapAreaAttributes%2A> propriedade.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.LegendItem.Url%2A> propriedade permite que você defina as palavras-chave especiais para exibir diferentes tipos de dados relacionados ao gráfico. Para obter mais informações, consulte as palavras-chave (controles de gráfico).  
+  
+ Para criar mapas de imagem que têm coordenadas definidas pelo usuário, use o <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> propriedade da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto. Para obter mais informações, consulte [renderização de imagem de gráfico](http://msdn.microsoft.com/library/82ff568d-838c-408b-bd85-62e424ae0505).  
+  
+> [!NOTE]
+>  Essa propriedade se aplica a todo o <xref:System.Web.UI.DataVisualization.Charting.LegendItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

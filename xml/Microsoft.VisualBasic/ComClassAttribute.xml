@@ -1,0 +1,247 @@
+<Type Name="ComClassAttribute" FullName="Microsoft.VisualBasic.ComClassAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComClassAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ComClassAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.ComClassAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O atributo <see langword="ComClassAttribute" /> instrui o compilador a adicionar metadados que permitem que uma classe seja exposta como um objeto COM.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use `ComClassAttribute` para simplificar o processo de expor componentes COM do Visual Basic. Objetos COM são muito diferentes dos assemblies do .NET Framework; sem o `ComClassAttribute`, você precisa seguir uma série de etapas para gerar um objeto COM do Visual Basic. Para classes marcadas com `ComClassAttribute`, o compilador executa muitos desses passos automaticamente.  
+  
+> [!NOTE]
+>  Este atributo simplifica a criação de objetos COM. Para expor uma classe como um objeto COM, você deve compilar o projeto com o **registrar para interoperabilidade COM** opção selecionada no **criar** seção o **propriedades de configuração** caixa de diálogo.  
+  
+> [!NOTE]
+>  Embora você também pode expor uma classe criada com o Visual Basic como um objeto COM para código não gerenciado usar, ele não é um objeto COM true. Para obter detalhes, consulte [interoperabilidade COM em aplicativos do .NET Framework](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+  
+   
+  
+## Examples  
+ Para executar este exemplo, crie um novo **biblioteca de classes** aplicativo e adicione o seguinte código para um módulo de classe.  
+  
+ [!code-vb[VbCnAttributes#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbCnAttributes/VB/Class2.vb#21)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComClassAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ComClassAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see langword="ComClassAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o construtor para o `ComClassAttribute` classe para definir o `ClassID`, `InterfaceID`, ou `EventID` propriedades ao aplicar o `ComClassAttribute` a uma classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComClassAttribute (string _ClassID);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string _ClassID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ComClassAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="_ClassID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="_ClassID">Inicializa o valor de <see langword="ClassID" /> propriedade que é usada para identificar exclusivamente uma classe.</param>
+        <summary>Inicializa uma nova instância da classe <see langword="ComClassAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o construtor para o `ComClassAttribute` classe para definir o `ClassID`, `InterfaceID`, ou `EventID` propriedades ao aplicar o `ComClassAttribute` a uma classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComClassAttribute (string _ClassID, string _InterfaceID);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string _ClassID, string _InterfaceID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ComClassAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="_ClassID" Type="System.String" />
+        <Parameter Name="_InterfaceID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="_ClassID">Inicializa o valor de <see langword="ClassID" /> propriedade que é usada para identificar exclusivamente uma classe.</param>
+        <param name="_InterfaceID">Inicializa o valor de <see langword="InterfaceID" /> propriedade que é usada para identificar exclusivamente uma interface.</param>
+        <summary>Inicializa uma nova instância da classe <see langword="ComClassAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o construtor para o `ComClassAttribute` classe para definir o `ClassID`, `InterfaceID`, ou `EventID` propriedades ao aplicar o `ComClassAttribute` a uma classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComClassAttribute (string _ClassID, string _InterfaceID, string _EventId);" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor(string _ClassID, string _InterfaceID, string _EventId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.ComClassAttribute.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="_ClassID" Type="System.String" />
+        <Parameter Name="_InterfaceID" Type="System.String" />
+        <Parameter Name="_EventId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="_ClassID">Inicializa o valor de <see langword="ClassID" /> propriedade que é usada para identificar exclusivamente uma classe.</param>
+        <param name="_InterfaceID">Inicializa o valor de <see langword="InterfaceID" /> propriedade que é usada para identificar exclusivamente uma interface.</param>
+        <param name="_EventId">Inicializa o valor de <see langword="EventID" /> propriedade que é usada para identificar exclusivamente um evento.</param>
+        <summary>Inicializa uma nova instância da classe <see langword="ComClassAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o construtor para o `ComClassAttribute` classe para definir o `ClassID`, `InterfaceID`, ou `EventID` propriedades ao aplicar o `ComClassAttribute` a uma classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassID">
+      <MemberSignature Language="C#" Value="public string ClassID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClassID" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ComClassAttribute.ClassID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma identificação de classe usada para identificar exclusivamente uma classe.</summary>
+        <value>Somente leitura. Uma cadeia de caracteres que pode ser usada pelo compilador para identificar exclusivamente a classe quando um objeto COM é criado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor define essa propriedade quando o `ComClassAttribute` é aplicado a uma classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventID">
+      <MemberSignature Language="C#" Value="public string EventID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EventID" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ComClassAttribute.EventID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um evento ID usada para identificar exclusivamente um evento.</summary>
+        <value>Somente leitura. Uma cadeia de caracteres que pode ser usada pelo compilador para identificar exclusivamente um evento para a classe quando um objeto COM é criado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor define essa propriedade quando o `ComClassAttribute` é aplicado a uma classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterfaceID">
+      <MemberSignature Language="C#" Value="public string InterfaceID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InterfaceID" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ComClassAttribute.InterfaceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma interface usada para identificar exclusivamente uma interface.</summary>
+        <value>Somente leitura. Uma cadeia de caracteres que pode ser usada pelo compilador para identificar exclusivamente uma interface para a classe quando um objeto COM é criado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor define essa propriedade quando o `ComClassAttribute` é aplicado a uma classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterfaceShadows">
+      <MemberSignature Language="C#" Value="public bool InterfaceShadows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InterfaceShadows" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.ComClassAttribute.InterfaceShadows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o nome da interface COM sombreia outro membro da classe ou da classe base.</summary>
+        <value>Um <see langword="Boolean" /> valor que indica que o nome da interface COM sombreia outro membro da classe ou da classe base.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sombreamento é quando um membro usa o mesmo nome como outro membro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,956 @@
+<Type Name="StateManagedCollection" FullName="System.Web.UI.StateManagedCollection">
+  <TypeSignature Language="C#" Value="public abstract class StateManagedCollection : System.Collections.IList, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit StateManagedCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.StateManagedCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma classe base para todas as coleções fortemente tipadas que gerenciam objetos <see cref="T:System.Web.UI.IStateManager" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection> classe é a classe base para todas as coleções fortemente tipadas que armazenam <xref:System.Web.UI.IStateManager> elementos, incluindo <xref:System.Web.UI.WebControls.DataControlFieldCollection>, <xref:System.Web.UI.WebControls.ParameterCollection>, <xref:System.Web.UI.WebControls.StyleCollection>, <xref:System.Web.UI.WebControls.TreeNodeBindingCollection>e outros. O <xref:System.Web.UI.StateManagedCollection> coleção gerencia seu próprio estado, bem como o estado dos elementos que ele contém. Portanto, uma chamada para <xref:System.Web.UI.StateManagedCollection.System%23Web%23UI%23IStateManager%23SaveViewState%2A> salva o estado da coleção e o estado de todos os elementos contidos no momento pela coleção.  
+  
+ Os métodos mais importantes a considerar ao derivar do <xref:System.Web.UI.StateManagedCollection> classe <xref:System.Web.UI.StateManagedCollection.CreateKnownType%2A>, <xref:System.Web.UI.StateManagedCollection.GetKnownTypes%2A>, <xref:System.Web.UI.StateManagedCollection.OnValidate%2A>, <xref:System.Web.UI.StateManagedCollection.SetDirty%2A>, e <xref:System.Web.UI.StateManagedCollection.SetDirtyObject%2A>. O <xref:System.Web.UI.StateManagedCollection.CreateKnownType%2A> e <xref:System.Web.UI.StateManagedCollection.GetKnownTypes%2A> métodos são usados para armazenar um índice em estado de exibição para o tipo de um elemento contido. Armazenar um índice em vez de um nome de tipo totalmente qualificado melhora o desempenho. O <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método é chamado sempre que os elementos da coleção são manipulados e valida os elementos de acordo com as regras de negócio. Atualmente, a implementação do <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método proíbe `null` objetos sejam armazenados na coleção; no entanto, você pode substituir esse método para definir seu próprio comportamento de validação em um tipo derivado. O <xref:System.Web.UI.StateManagedCollection.SetDirty%2A> método força toda a coleção a ser serializado para estado de exibição, em vez de serializar apenas as alterações feitas ao estado desde a última vez que foi carregado. O <xref:System.Web.UI.StateManagedCollection.SetDirtyObject%2A> método é um método abstrato, você pode implementar para executar esse mesmo comportamento no nível do elemento.  
+  
+> [!IMPORTANT]
+>  <xref:System.Web.UI.StateManagedCollection>repositórios de qualificado de assembly digite os nomes dos itens da coleção em estado de exibição. Um visitante do site foi possível decodificar o estado de exibição e recuperar o nome do tipo. Se esse cenário cria uma preocupação de segurança no seu site da Web, você pode criptografar manualmente o nome do tipo antes de colocá-lo no estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como derivar uma classe de coleção com rigidez de tipos de <xref:System.Web.UI.StateManagedCollection> para conter <xref:System.Web.UI.IStateManager> objetos. Neste exemplo, o `CycleCollection` é derivada para conter instâncias do resumo `Cycle` classe, que pode ser `Bicycle` ou `Tricycle` objetos. O `Cycle` classe implementa o <xref:System.Web.UI.IStateManager> interface porque ele armazena o valor da `CycleColor` em estado de exibição da propriedade.  
+  
+ [!code-csharp[Samples.AspNet.CycleCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.CycleCollection/CS/statemanagedcollectionsample.cs#1)]
+ [!code-vb[Samples.AspNet.CycleCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.CycleCollection/VB/statemanagedcollectionsample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StateManagedCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.StateManagedCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas podem substituir o construtor para fornecer a implementação personalizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens do <see cref="T:System.Web.UI.StateManagedCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnClear%2A> método é chamado antes do <xref:System.Web.UI.StateManagedCollection.Clear%2A> método é chamado e o <xref:System.Web.UI.StateManagedCollection.OnClearComplete%2A> método é chamado após <xref:System.Web.UI.StateManagedCollection.Clear%2A> terminou a remoção de elementos da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados do <see cref="T:System.Web.UI.StateManagedCollection" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos de <see cref="T:System.Web.UI.StateManagedCollection" /> coleção para uma matriz, começando em um índice de matriz específico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz especificada deve ser de um tipo compatível.  
+  
+ Os elementos são copiados para o <xref:System.Array> na mesma ordem em que o enumerador que itera por meio de <xref:System.Web.UI.StateManagedCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ \- ou -  
+  
+ <paramref name="index" />é maior que ou igual ao comprimento da <paramref name="array" />.  
+  
+ \- ou -  
+  
+ O número de elementos na origem <see cref="T:System.Web.UI.StateManagedCollection" /> é maior que o espaço disponível do <paramref name="index" /> até o final do destino <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateManagedCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos contidos no <see cref="T:System.Web.UI.StateManagedCollection" /> coleção.</summary>
+        <value>O número de elementos contidos no <see cref="T:System.Web.UI.StateManagedCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKnownType">
+      <MemberSignature Language="C#" Value="protected virtual object CreateKnownType (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object CreateKnownType(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.CreateKnownType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice, na lista ordenada de tipos retornados por <see cref="M:System.Web.UI.StateManagedCollection.GetKnownTypes" />, do tipo de <see cref="T:System.Web.UI.IStateManager" /> para criar.</param>
+        <summary>Quando substituído em uma classe derivada, cria uma instância de uma classe que implementa <see cref="T:System.Web.UI.IStateManager" />. O tipo de objeto criado se baseia o membro especificado da coleção retornada pelo <see cref="M:System.Web.UI.StateManagedCollection.GetKnownTypes" /> método.</summary>
+        <returns>Uma instância de uma classe derivada de <see cref="T:System.Web.UI.IStateManager" />, acordo para o <paramref name="index" /> fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.CreateKnownType%2A> método é chamado internamente pelo <xref:System.Web.UI.StateManagedCollection> coleção em sua implementação do <xref:System.Web.UI.StateManagedCollection.System%23Web%23UI%23IStateManager%23LoadViewState%2A?displayProperty=nameWithType> método. Coleções derivadas substituem o <xref:System.Web.UI.StateManagedCollection.CreateKnownType%2A> método para retornar uma instância padrão do <xref:System.Web.UI.IStateManager> tipo identificado pela fornecido `index`, que é mapeado para um dos tipos retornados pelo <xref:System.Web.UI.StateManagedCollection.GetKnownTypes%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como fortemente tipada <xref:System.Web.UI.StateManagedCollection> classe implementa o <xref:System.Web.UI.StateManagedCollection.CreateKnownType%2A> método. O `CycleCollection` implementação de <xref:System.Web.UI.StateManagedCollection.CreateKnownType%2A> retorna a instância padrão de um `Bicycle` ou `Tricycle` objeto, dependendo do índice passado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.StateManagedCollection> classe.  
+  
+ [!code-csharp[Samples.AspNet.CycleCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.CycleCollection/CS/statemanagedcollectionsample.cs#2)]
+ [!code-vb[Samples.AspNet.CycleCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.CycleCollection/VB/statemanagedcollectionsample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Em todos os casos quando não substituídas em uma classe derivada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um iterador que itera por meio de <see cref="T:System.Web.UI.StateManagedCollection" /> coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar por meio de <see cref="T:System.Web.UI.StateManagedCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKnownTypes">
+      <MemberSignature Language="C#" Value="protected virtual Type[] GetKnownTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Type[] GetKnownTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.GetKnownTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém uma matriz de <see cref="T:System.Web.UI.IStateManager" /> tipos que o <see cref="T:System.Web.UI.StateManagedCollection" /> coleção pode conter.</summary>
+        <returns>Uma matriz ordenada de <see cref="T:System.Type" /> que identificam os tipos de objetos <see cref="T:System.Web.UI.IStateManager" /> objetos a coleção pode conter. A implementação padrão retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.GetKnownTypes%2A> método é chamado internamente pelo <xref:System.Web.UI.StateManagedCollection> coleção em sua implementação do <xref:System.Web.UI.StateManagedCollection.System%23Web%23UI%23IStateManager%23SaveViewState%2A> método. Coleções derivadas substituem o <xref:System.Web.UI.StateManagedCollection.GetKnownTypes%2A> método para retornar uma matriz de <xref:System.Type> objetos que representam os tipos de coleção pode conter.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como fortemente tipada <xref:System.Web.UI.StateManagedCollection> classe implementa o <xref:System.Web.UI.StateManagedCollection.GetKnownTypes%2A> método. O `CycleCollection` implementação de <xref:System.Web.UI.StateManagedCollection.GetKnownTypes%2A> retorna um <xref:System.Type> matriz de tipos conhecidos, incluindo `Bicycle` e `Tricycle` tipos. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.StateManagedCollection> classe.  
+  
+ [!code-csharp[Samples.AspNet.CycleCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.CycleCollection/CS/statemanagedcollectionsample.cs#2)]
+ [!code-vb[Samples.AspNet.CycleCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.CycleCollection/VB/statemanagedcollectionsample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected virtual void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, executa o trabalho adicional antes do <see cref="M:System.Web.UI.StateManagedCollection.Clear" /> método Remove todos os itens da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coleções derivadas do <xref:System.Web.UI.StateManagedCollection> pode substituir o <xref:System.Web.UI.StateManagedCollection.OnClear%2A> método para executar qualquer trabalho adicional antes de todos os itens são removidos da coleção usando o <xref:System.Web.UI.StateManagedCollection.Clear%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClearComplete">
+      <MemberSignature Language="C#" Value="protected virtual void OnClearComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClearComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.OnClearComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, executa o trabalho adicional após o <see cref="M:System.Web.UI.StateManagedCollection.Clear" /> método terminar a remoção de todos os itens da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coleções derivadas do <xref:System.Web.UI.StateManagedCollection> pode substituir o <xref:System.Web.UI.StateManagedCollection.OnClearComplete%2A> método para executar qualquer trabalho adicional depois que todos os itens são removidos da coleção usando o <xref:System.Web.UI.StateManagedCollection.Clear%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected virtual void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> devem ser inseridos pelo <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Insert(System.Int32,System.Object)" /> método.</param>
+        <param name="value">O objeto a ser inserido no <see cref="T:System.Web.UI.StateManagedCollection" />.</param>
+        <summary>Quando substituído em uma classe derivada, executa o trabalho adicional antes do <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Insert(System.Int32,System.Object)" /> ou <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Add(System.Object)" /> método adiciona um item à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coleções derivadas do <xref:System.Web.UI.StateManagedCollection> pode substituir o <xref:System.Web.UI.StateManagedCollection.OnInsert%2A> método para executar qualquer trabalho adicional antes de um item é adicionado à coleção usando o <xref:System.Web.UI.StateManagedCollection.System%23Collections%23IList%23Add%2A> ou <xref:System.Web.UI.StateManagedCollection.System%23Collections%23IList%23Insert%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsertComplete">
+      <MemberSignature Language="C#" Value="protected virtual void OnInsertComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInsertComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.OnInsertComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> é inserido o <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Insert(System.Int32,System.Object)" /> método.</param>
+        <param name="value">O objeto inserido o <see cref="T:System.Web.UI.StateManagedCollection" />.</param>
+        <summary>Quando substituído em uma classe derivada, executa o trabalho adicional após o <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Insert(System.Int32,System.Object)" /> ou <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Add(System.Object)" /> método adiciona um item à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coleções derivadas do <xref:System.Web.UI.StateManagedCollection> pode substituir o <xref:System.Web.UI.StateManagedCollection.OnInsertComplete%2A> método para executar qualquer trabalho adicional depois que um item é adicionado à coleção usando o <xref:System.Web.UI.StateManagedCollection.System%23Collections%23IList%23Add%2A> ou <xref:System.Web.UI.StateManagedCollection.System%23Collections%23IList%23Insert%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="protected virtual void OnRemove (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRemove(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.OnRemove(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do item a ser removido, que é usado quando <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#RemoveAt(System.Int32)" /> é chamado.</param>
+        <param name="value">O objeto a ser removido do <see cref="T:System.Web.UI.StateManagedCollection" />, que é usado quando <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Remove(System.Object)" /> é chamado.</param>
+        <summary>Quando substituído em uma classe derivada, executa o trabalho adicional antes do <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Remove(System.Object)" /> ou <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#RemoveAt(System.Int32)" /> método Remove o item especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coleções derivadas do <xref:System.Web.UI.StateManagedCollection> pode substituir o <xref:System.Web.UI.StateManagedCollection.OnRemove%2A> método para executar qualquer trabalho adicional antes de um item é removido da coleção usando o <xref:System.Web.UI.StateManagedCollection.System%23Collections%23IList%23Remove%2A> ou <xref:System.Web.UI.StateManagedCollection.System%23Collections%23IList%23RemoveAt%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemoveComplete">
+      <MemberSignature Language="C#" Value="protected virtual void OnRemoveComplete (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRemoveComplete(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.OnRemoveComplete(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do item a ser removido, que é usado quando <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#RemoveAt(System.Int32)" /> é chamado.</param>
+        <param name="value">O objeto removido o <see cref="T:System.Web.UI.StateManagedCollection" />, que é usado quando <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Remove(System.Object)" /> é chamado.</param>
+        <summary>Quando substituído em uma classe derivada, executa o trabalho adicional após o <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Remove(System.Object)" /> ou <see cref="M:System.Web.UI.StateManagedCollection.System#Collections#IList#RemoveAt(System.Int32)" /> método Remove o item especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coleções derivadas do <xref:System.Web.UI.StateManagedCollection> pode substituir o <xref:System.Web.UI.StateManagedCollection.OnRemoveComplete%2A> método para executar qualquer trabalho adicional depois que um item é removido da coleção usando o <xref:System.Web.UI.StateManagedCollection.System%23Collections%23IList%23Remove%2A> ou <xref:System.Web.UI.StateManagedCollection.System%23Collections%23IList%23RemoveAt%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected virtual void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Web.UI.IStateManager" /> a ser validado.</param>
+        <summary>Quando substituído em uma classe derivada, valida um elemento de <see cref="T:System.Web.UI.StateManagedCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método é chamado para validar o objeto manipulado por meio de <xref:System.Web.UI.StateManagedCollection> implementação do <xref:System.Collections.IList> métodos de interface. A implementação padrão é verificar se o objeto manipulado pela coleção não está `null`; no entanto, coleções derivadas do <xref:System.Web.UI.StateManagedCollection> substituir o <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método para executar qualquer validação adicional, como verificação de tipo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirty">
+      <MemberSignature Language="C#" Value="public void SetDirty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDirty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.SetDirty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Força a todo o <see cref="T:System.Web.UI.StateManagedCollection" /> coleção a ser serializado em estado de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.SetDirty%2A> método força a <xref:System.Web.UI.StateManagedCollection> coleção a ser serializada completamente (enquanto o <xref:System.Web.UI.StateManagedCollection.System%23Web%23UI%23IStateManager%23SaveViewState%2A> método salva as informações de alteração). Isso é útil quando uma coleção foi alterada de forma significativa e informações de alteração são suficientes para recriar o objeto na memória do estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirtyObject">
+      <MemberSignature Language="C#" Value="protected abstract void SetDirtyObject (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetDirtyObject(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.SetDirtyObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.Web.UI.IStateManager" /> que deve serializar ele mesmo completamente.</param>
+        <summary>Quando substituído em uma classe derivada, instrui um <see langword="object" /> contidas na coleção para registrar seu estado inteiro para o estado de exibição, em vez de gravação apenas alterar informações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.SetDirtyObject%2A> método é chamado internamente pelo <xref:System.Web.UI.StateManagedCollection.System%23Web%23UI%23IStateManager%23SaveViewState%2A>, <xref:System.Web.UI.StateManagedCollection.System%23Collections%23IList%23Add%2A>, e <xref:System.Web.UI.StateManagedCollection.System%23Collections%23IList%23Insert%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como fortemente tipada <xref:System.Web.UI.StateManagedCollection> classe implementa abstrata <xref:System.Web.UI.StateManagedCollection.SetDirtyObject%2A> método. O `CycleCollection` usa um <xref:System.Web.UI.StateBag> objeto para armazenar suas informações de estado de exibição e, em seguida, simplesmente delega a chamada para o <xref:System.Web.UI.StateBag.SetDirty%2A> método o <xref:System.Web.UI.StateBag> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.StateManagedCollection> classe.  
+  
+ [!code-csharp[Samples.AspNet.CycleCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.CycleCollection/CS/statemanagedcollectionsample.cs#2)]
+ [!code-vb[Samples.AspNet.CycleCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.CycleCollection/VB/statemanagedcollectionsample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateManagedCollection.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos contidos no <see cref="T:System.Web.UI.StateManagedCollection" /> coleção.</summary>
+        <value>O número de elementos em <see cref="T:System.Web.UI.StateManagedCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateManagedCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.StateManagedCollection" /> coleção é sincronizada (thread-safe). Este método retorna <see langword="false" /> em todos os casos.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateManagedCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso a <see cref="T:System.Web.UI.StateManagedCollection" /> coleção. Este método retorna <see langword="null" /> em todos os casos.</summary>
+        <value>
+          <see langword="null" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um iterador que itera por meio de <see cref="T:System.Web.UI.StateManagedCollection" /> coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar por meio de <see cref="T:System.Web.UI.StateManagedCollection" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see langword="object" /> para adicionar ao <see cref="T:System.Web.UI.StateManagedCollection" />.</param>
+        <summary>Adiciona um item para o <see cref="T:System.Web.UI.StateManagedCollection" /> coleção.</summary>
+        <returns>A posição na qual o novo elemento foi inserido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> e <xref:System.Web.UI.StateManagedCollection.OnInsert%2A> métodos forem chamados antes que o elemento é adicionado à coleção e o <xref:System.Web.UI.StateManagedCollection.OnInsertComplete%2A> método é chamado depois que o elemento é adicionado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="value" /> especificado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Clear">
+      <MemberSignature Language="C#" Value="void IList.Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens do <see cref="T:System.Web.UI.StateManagedCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnClear%2A> método é chamado antes do <xref:System.Web.UI.StateManagedCollection.Clear%2A> método é chamado e o <xref:System.Web.UI.StateManagedCollection.OnClearComplete%2A> método é chamado após <xref:System.Web.UI.StateManagedCollection.Clear%2A> terminou a remoção de elementos da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see langword="object" /> a ser localizado no <see cref="T:System.Web.UI.StateManagedCollection" />.</param>
+        <summary>Determina se o <see cref="T:System.Web.UI.StateManagedCollection" /> coleção contém um valor específico.</summary>
+        <returns>
+          <see langword="true" /> se o objeto for encontrado no <see cref="T:System.Web.UI.StateManagedCollection" />; caso contrário, <see langword="false" />. Se <see langword="null" /> é passado para o parâmetro de valor, <see langword="false" /> será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método é chamado para validar `value` antes da coleção é verificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser localizado no <see cref="T:System.Web.UI.StateManagedCollection" />.</param>
+        <summary>Determina o índice de um item especificado no <see cref="T:System.Web.UI.StateManagedCollection" /> coleção.</summary>
+        <returns>O índice do <paramref name="value" />, se ele está localizado na lista; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método é chamado para validar `value` antes que o índice seja retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> devem ser inseridos.</param>
+        <param name="value">O objeto a ser inserido no <see cref="T:System.Web.UI.StateManagedCollection" />.</param>
+        <summary>Insere um item no <see cref="T:System.Web.UI.StateManagedCollection" /> coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `index` é -1, `value` é anexado ao início do <xref:System.Web.UI.StateManagedCollection> coleção. Se `index` é igual ao número de itens na coleção, `value` é acrescentado ao final da coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Especificado <paramref name="index" /> está fora do intervalo da coleção.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Web.UI.StateManagedCollection" /> é somente leitura.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="value" /> especificado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateManagedCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.StateManagedCollection" /> coleção tem um tamanho fixo. Este método retorna <see langword="false" /> em todos os casos.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateManagedCollection.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.StateManagedCollection" /> coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Web.UI.StateManagedCollection" /> for somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateManagedCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do elemento a ser obtido.</param>
+        <summary>Obtém o <see cref="T:System.Web.UI.IStateManager" /> elemento no índice especificado.</summary>
+        <value>O elemento no índice especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Especificado <paramref name="index" /> está fora do intervalo da coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a remover do <see cref="T:System.Web.UI.StateManagedCollection" />.</param>
+        <summary>Remove a primeira ocorrência do objeto especificado por meio de <see cref="T:System.Web.UI.StateManagedCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método é chamado para validar `value` antes que o valor é removido da coleção. O <xref:System.Web.UI.StateManagedCollection.OnRemove%2A> método é chamado antes do objeto é removido e o <xref:System.Web.UI.StateManagedCollection.OnRemoveComplete%2A> método é chamado depois que o objeto é removido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Web.UI.StateManagedCollection" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.RemoveAt">
+      <MemberSignature Language="C#" Value="void IList.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.System#Collections#IList#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do item a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Web.UI.IStateManager" /> elemento no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método é chamado para validar `value` antes que o valor é removido da coleção. O <xref:System.Web.UI.StateManagedCollection.OnRemove%2A> método é chamado antes do objeto é removido e o <xref:System.Web.UI.StateManagedCollection.OnRemoveComplete%2A> método é chamado depois que o objeto é removido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Web.UI.StateManagedCollection" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateManagedCollection.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.StateManagedCollection" /> coleção está salvando alterações ao seu estado de exibição.</summary>
+        <value>
+          <see langword="true" />Se a coleção está marcada para salvar seu próprio estado e o estado de todos os <see cref="T:System.Web.UI.IStateManager" /> itens que ele contém; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um objeto que representa a coleção e o estado de elementos da coleção para restaurar.</param>
+        <summary>Restaura o estado de exibição salvo anteriormente do <see cref="T:System.Web.UI.StateManagedCollection" /> coleção e o <see cref="T:System.Web.UI.IStateManager" /> itens que ele contém.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método restaura as informações de estado de exibição que foi salvo pelo <xref:System.Web.UI.StateManagedCollection.System%23Web%23UI%23IStateManager%23SaveViewState%2A> método.  
+  
+ Estado de exibição é o acúmulo dos valores de propriedades de um controle de servidor. Esses valores são colocados automaticamente no controle do servidor <xref:System.Web.UI.Control.ViewState%2A> propriedade, que é uma ocorrência da <xref:System.Web.UI.StateBag> classe. Valor desta propriedade é mantido, em seguida, para um objeto de cadeia de caracteres depois de salvar o estágio do ciclo de vida de controle do servidor de estado. Para obter mais informações, consulte [NIB: ASP.NET Web Server Controls](http://msdn.microsoft.com/en-us/e18eb2f2-cf00-47ae-b1a1-dfc188a6dea1).  
+  
+ Esse método é usado principalmente por desenvolvedores de controle. Você pode substituir este método para especificar como um controle de servidor personalizado restaura o estado de exibição. Para obter mais informações, consulte [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações para o <see cref="T:System.Web.UI.StateManagedCollection" /> coleta e cada <see cref="T:System.Web.UI.IStateManager" /> objeto contém desde a hora a página foi postado no servidor.</summary>
+        <returns>O objeto que contém as alterações para o estado de exibição da <see cref="T:System.Web.UI.StateManagedCollection" /> e os itens que ele contém. Se nenhum estado de exibição é associado a coleção e seus elementos, este método retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente por desenvolvedores de controle.  
+  
+ Estado de exibição é o acúmulo dos valores de propriedades de um controle de servidor. Esses valores são colocados automaticamente no controle do servidor <xref:System.Web.UI.Control.ViewState%2A> propriedade, que é uma ocorrência da <xref:System.Web.UI.StateBag> classe. Valor desta propriedade é mantido, em seguida, para um objeto de cadeia de caracteres depois de salvar o estágio do ciclo de vida de controle do servidor de estado. Para obter mais informações, consulte [NIB: ASP.NET Web Server Controls](http://msdn.microsoft.com/en-us/e18eb2f2-cf00-47ae-b1a1-dfc188a6dea1).  
+  
+ Quando o estado de exibição for salvo, esse objeto de cadeia de caracteres é retornado ao cliente como uma variável que é armazenada em um elemento oculto HTML (`<input type="hidden">`). Quando você criar controles de servidor personalizado, você pode melhorar a eficiência ao substituir esse método e modificar seu controle de servidor <xref:System.Web.UI.Control.ViewState%2A> propriedade. Para obter mais informações, consulte [NIB: ASP.NET Web Server Controls](http://msdn.microsoft.com/en-us/e18eb2f2-cf00-47ae-b1a1-dfc188a6dea1) e[visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StateManagedCollection.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que o <see cref="T:System.Web.UI.StateManagedCollection" /> coleta e cada a <see cref="T:System.Web.UI.IStateManager" /> objetos que ela contém para controlar as alterações para o estado de exibição para que eles podem ser persistentes entre solicitações para a mesma página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estado de exibição é o acúmulo dos valores de propriedades de um controle de servidor. Esses valores são colocados automaticamente no controle do servidor <xref:System.Web.UI.Control.ViewState%2A> propriedade, que é uma ocorrência da <xref:System.Web.UI.StateBag> classe. Valor desta propriedade é mantido, em seguida, para um objeto de cadeia de caracteres depois de salvar o estágio do ciclo de vida de controle do servidor de estado. Para obter mais informações, consulte [NIB: ASP.NET Web Server Controls](http://msdn.microsoft.com/en-us/e18eb2f2-cf00-47ae-b1a1-dfc188a6dea1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

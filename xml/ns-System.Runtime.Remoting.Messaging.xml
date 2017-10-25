@@ -1,0 +1,17 @@
+<Namespace Name="System.Runtime.Remoting.Messaging">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting.Messaging" /> namespace contém classes usadas para criar e transmitir mensagens. A infraestrutura de comunicação remota usa mensagens para se comunicar com os objetos remotos. As mensagens são usadas para transmitir chamadas de método remoto, para ativar objetos remotos e para comunicar informações. Um objeto de mensagem executa um conjunto de propriedades nomeadas, inclusive os identificadores de ação, parâmetros e informações de envoy. Algumas das classes mais importantes do <see cref="N:System.Runtime.Remoting.Messaging" /> namespace são o <see cref="T:System.Runtime.Remoting.Messaging.AsyncResult" /> classe, o <see cref="T:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector" /> classe e o <see cref="T:System.Runtime.Remoting.Messaging.ReturnMessage" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Messaging.AsyncResult> classe armazena e retorna os resultados de uma chamada de método assíncrono. <xref:System.Runtime.Remoting.Messaging.AsyncResult>as instâncias contêm o `return` valor, status de chamada, o representante usado para a chamada e outras informações sobre a chamada de método assíncrono.  
+  
+ O <xref:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector> classe pode ser usada para controlar a serialização de objetos que estendem a <xref:System.MarshalByRefObject>. Um <xref:System.Runtime.Remoting.Messaging.RemotingSurrogateSelector> seleciona o substituto usado na serialização e desserialização de tais objetos. Um substituto é um objeto que pode controlar a serialização ou desserialização de um objeto.  
+  
+ O <xref:System.Runtime.Remoting.Messaging.ReturnMessage> classe contém informações retornadas após uma chamada de método remoto. Um <xref:System.Runtime.Remoting.Messaging.ReturnMessage> mantém o `return` valor e qualquer `out` ou `ref` parâmetros resultante da chamada de método remoto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

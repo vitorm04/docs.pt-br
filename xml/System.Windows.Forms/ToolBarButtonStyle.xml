@@ -1,0 +1,100 @@
+<Type Name="ToolBarButtonStyle" FullName="System.Windows.Forms.ToolBarButtonStyle">
+  <TypeSignature Language="C#" Value="public enum ToolBarButtonStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolBarButtonStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolBarButtonStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o estilo do botão em uma barra de ferramentas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por membros como <xref:System.Windows.Forms.ToolBarButton.Style%2A?displayProperty=nameWithType>.  
+  
+ A aparência do botão da barra de ferramentas é determinada pelo <xref:System.Windows.Forms.ToolBar.Appearance%2A> propriedade da barra de ferramentas. Definindo o <xref:System.Windows.Forms.ToolBar.Appearance%2A> propriedade `Flat` dará a barra de ferramentas e seus botões uma aparência plana. Conforme o ponteiro do mouse se move sobre os botões, eles assumem uma aparência tridimensional. Além disso, quando a barra de ferramentas tem uma aparência plana, separadores de botão aparecem como uma linha em vez de um espaço entre os botões.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Forms.ToolBar> e três <xref:System.Windows.Forms.ToolBarButton> controla, atribui os botões na barra de ferramentas e define algumas propriedades comuns dos botões. Esse código supõe um <xref:System.Windows.Forms.MenuItem>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolTip> e um <xref:System.Windows.Forms.Form> foram criadas e <xref:System.Windows.Forms.ImageList> tem pelo menos um <xref:System.Drawing.Image> atribuído a ele.  
+  
+ [!code-cpp[Classic ToolBarButton.Style Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ToolBarButton.Style Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/CS/source.cs#1)]
+ [!code-vb[Classic ToolBarButton.Style Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ToolBarButton.Style Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DropDownButton">
+      <MemberSignature Language="C#" Value="DropDownButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolBarButtonStyle DropDownButton = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolBarButtonStyle.DropDownButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarButtonStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um controle de lista suspensa que exibe um menu ou em outra janela quando clicado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PushButton">
+      <MemberSignature Language="C#" Value="PushButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolBarButtonStyle PushButton = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolBarButtonStyle.PushButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarButtonStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um botão padrão e tridimensional.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Separator">
+      <MemberSignature Language="C#" Value="Separator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolBarButtonStyle Separator = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolBarButtonStyle.Separator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarButtonStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um espaço ou uma linha entre os botões da barra de ferramentas. A aparência depende do valor da <see cref="P:System.Windows.Forms.ToolBar.Appearance" /> propriedade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleButton">
+      <MemberSignature Language="C#" Value="ToggleButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolBarButtonStyle ToggleButton = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolBarButtonStyle.ToggleButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolBarButtonStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um botão de alternância que aparece em baixo-relevo quando clicado e mantém a aparência em baixo-relevo até clicado novamente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

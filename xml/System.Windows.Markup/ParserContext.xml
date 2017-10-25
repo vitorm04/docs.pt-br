@@ -1,0 +1,247 @@
+<Type Name="ParserContext" FullName="System.Windows.Markup.ParserContext">
+  <TypeSignature Language="C#" Value="public class ParserContext : System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParserContext extends System.Object implements class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.ParserContext" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece informações de contexto necessárias para um analisador XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O analisador de XAML neste contexto refere-se para o [!INCLUDE[net_v35_short](~/includes/net-v35-short-md.md)] era API do analisador XAML que é específico para a implementação do WPF, como exposto em <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> e <xref:System.Windows.Markup.XamlWriter?displayProperty=nameWithType>.  
+  
+ O sistema XAML no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] usa um sistema de tipo XAML mais sofisticado e, portanto, também usa um tipo diferente de contexto para operações de processamento de XAML. Para obter mais informações, consulte <xref:System.Xaml.XamlSchemaContext>.  
+  
+ Um <xref:System.Windows.Markup.ParserContext> normalmente é usado como entrada para uma chamada para um <xref:System.Windows.Markup.XamlReader> operação. Nesses casos, você está usando sobrecargas de <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType> ou <xref:System.Windows.Markup.XamlReader.LoadAsync%2A?displayProperty=nameWithType> onde fornecendo o <xref:System.Windows.Markup.ParserContext> proporciona maior controle sobre fatores como o tipo de mapeamento em XAML ou alterando os padrões de processamento XML. Usando um <xref:System.Windows.Markup.ParserContext> em vez de usar <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> comportamento padrão é um cenário avançado.  
+  
+ `xml:lang`e `xml:space` comportamento é um dos aspectos de um contexto que você pode substituir. Por padrão, usa o contexto de analisador `en-us` com base em valores. Para obter mais informações sobre por que usa o contexto de nível de linguagem para XAML `en-us` em vez de um valor de cultura invariável, consulte [visão de geral de localização e globalização de WPF](~/docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+  
+<a name="xamlTextUsage_ParserContext"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParserContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ParserContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.ParserContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParserContext (System.Xml.XmlParserContext xmlParserContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlParserContext xmlParserContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ParserContext.#ctor(System.Xml.XmlParserContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlParserContext" Type="System.Xml.XmlParserContext" />
+      </Parameters>
+      <Docs>
+        <param name="xmlParserContext">O contexto de processamento de XML para basear a nova <see cref="T:System.Windows.Markup.ParserContext" /> em.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.ParserContext" /> classe usando especificado <see cref="T:System.Xml.XmlParserContext" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlParserContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public Uri BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ParserContext.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o URI de base para este contexto.</summary>
+        <value>O URI de base, como uma cadeia de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Markup.ParserContext.BaseUri%2A> é usado para resolver os recursos externos que são referenciados em XAML.  
+  
+<a name="xamlTextUsage_BaseUri"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Xml.XmlParserContext (System.Windows.Markup.ParserContext parserContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class System.Xml.XmlParserContext op_Implicit(class System.Windows.Markup.ParserContext parserContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ParserContext.op_Implicit(System.Windows.Markup.ParserContext)~System.Xml.XmlParserContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlParserContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parserContext" Type="System.Windows.Markup.ParserContext" />
+      </Parameters>
+      <Docs>
+        <param name="parserContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlParserContext">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlParserContext ToXmlParserContext (System.Windows.Markup.ParserContext parserContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlParserContext ToXmlParserContext(class System.Windows.Markup.ParserContext parserContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ParserContext.ToXmlParserContext(System.Windows.Markup.ParserContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlParserContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parserContext" Type="System.Windows.Markup.ParserContext" />
+      </Parameters>
+      <Docs>
+        <param name="parserContext">O contexto para converter um <see cref="T:System.Xml.XmlParserContext" />.</param>
+        <summary>Converte um <see cref="T:System.Windows.Markup.ParserContext" /> em um <see cref="T:System.Xml.XmlParserContext" />.</summary>
+        <returns>O contexto do analisador XML.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="parserContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="XamlTypeMapper">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.XamlTypeMapper XamlTypeMapper { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.XamlTypeMapper XamlTypeMapper" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ParserContext.XamlTypeMapper" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.XamlTypeMapper</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Markup.XamlTypeMapper" /> para usar com esse <see cref="T:System.Windows.Markup.ParserContext" />.</summary>
+        <value>O mapeador de tipo para usar ao mapear elementos XAML para tipos CLR.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlLang">
+      <MemberSignature Language="C#" Value="public string XmlLang { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlLang" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ParserContext.XmlLang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see langword="xml:lang" /> cadeia de caracteres para este contexto.</summary>
+        <value>O <see langword="xml:lang" /> valor de cadeia de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade equivale a <xref:System.Xml.XmlReader.XmlLang%2A?displayProperty=nameWithType>.  
+  
+<a name="xamlTextUsage_XmlLang"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlnsDictionary">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.XmlnsDictionary XmlnsDictionary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.XmlnsDictionary XmlnsDictionary" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ParserContext.XmlnsDictionary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.XmlnsDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o dicionário de namespace do XAML para este contexto de analisador XAML.</summary>
+        <value>O dicionário do namespace XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O dicionário padrão é inicialmente vazio <xref:System.Windows.Markup.XmlnsDictionary>.  
+  
+ O <xref:System.Windows.Markup.XmlnsDictionary> usa prefixos de namespace XAML como chaves e o identificador do namespace XAML concluído (normalmente um URI no formato de cadeia de caracteres) como valores.  
+  
+<a name="xamlTextUsage_XmlnsDictionary"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSpace">
+      <MemberSignature Language="C#" Value="public string XmlSpace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlSpace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ParserContext.XmlSpace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caractere para <see langword="xml:space" /> ou neste contexto.</summary>
+        <value>O caractere de <see langword="xml:space" /> ou neste contexto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade equivale a <xref:System.Xml.XmlReader.XmlSpace%2A?displayProperty=nameWithType>.  
+  
+<a name="xamlTextUsage_XmlSpace"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,89 @@
+<Type Name="SessionStateBehavior" FullName="System.Web.SessionState.SessionStateBehavior">
+  <TypeSignature Language="C#" Value="public enum SessionStateBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SessionStateBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.SessionStateBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de suporte de sessão que é necessário para lidar com uma solicitação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateBehavior> enumeração é usada com o <xref:System.Web.HttpContext.SetSessionStateBehavior%2A> método. Você pode chamar esse método para indicar que o suporte do estado de sessão é necessária para lidar com uma solicitação e passar uma <xref:System.Web.SessionState.SessionStateBehavior> valor de enumeração para especificar o tipo de comportamento de estado de sessão se aplica à solicitação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.SessionState.SessionStateBehavior Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.SessionState.SessionStateBehavior.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A lógica do ASP.NET padrão é usada para determinar o comportamento de estado de sessão para a solicitação. A lógica padrão procura a existência de interfaces de estado de sessão do marcador no <see cref="T:System.Web.IHttpHandler" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="Disabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.SessionState.SessionStateBehavior Disabled = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.SessionState.SessionStateBehavior.Disabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estado de sessão não está habilitado para processar a solicitação. Essa configuração substitui qualquer comportamento de sessão que teria sido determinada inspecionando o manipulador para a solicitação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="ReadOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.SessionState.SessionStateBehavior ReadOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.SessionState.SessionStateBehavior.ReadOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O estado de sessão somente leitura está habilitado para a solicitação. Isso significa que o estado da sessão não pode ser atualizado. Essa configuração substitui qualquer comportamento de estado de sessão que teria sido determinado inspecionando o manipulador para a solicitação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="Required" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.SessionState.SessionStateBehavior Required = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.SessionState.SessionStateBehavior.Required" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SessionState.SessionStateBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O comportamento de estado de sessão de leitura/gravação completo está habilitado para a solicitação. Essa configuração substitui qualquer comportamento de sessão que teria sido determinada inspecionando o manipulador para a solicitação.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

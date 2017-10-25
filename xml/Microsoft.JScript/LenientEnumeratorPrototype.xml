@@ -1,0 +1,110 @@
+<Type Name="LenientEnumeratorPrototype" FullName="Microsoft.JScript.LenientEnumeratorPrototype">
+  <TypeSignature Language="C#" Value="public sealed class LenientEnumeratorPrototype : Microsoft.JScript.EnumeratorPrototype" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LenientEnumeratorPrototype extends Microsoft.JScript.EnumeratorPrototype" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.LenientEnumeratorPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.EnumeratorPrototype</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena objetos que representam os métodos estáticos do <see cref="T:Microsoft.JScript.EnumeratorPrototype" /> classe. O <see cref="T:Microsoft.JScript.LenientEnumeratorPrototype" /> classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="atEnd">
+      <MemberSignature Language="C#" Value="public object atEnd;" />
+      <MemberSignature Language="ILAsm" Value=".field public object atEnd" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientEnumeratorPrototype.atEnd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.EnumeratorPrototype.atEnd(System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.EnumeratorPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public object constructor;" />
+      <MemberSignature Language="ILAsm" Value=".field public object constructor" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientEnumeratorPrototype.constructor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena uma referência a um <see cref="T:Microsoft.JScript.EnumeratorConstructor" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="item">
+      <MemberSignature Language="C#" Value="public object item;" />
+      <MemberSignature Language="ILAsm" Value=".field public object item" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientEnumeratorPrototype.item" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.EnumeratorPrototype.item(System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.EnumeratorPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="moveFirst">
+      <MemberSignature Language="C#" Value="public object moveFirst;" />
+      <MemberSignature Language="ILAsm" Value=".field public object moveFirst" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientEnumeratorPrototype.moveFirst" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.EnumeratorPrototype.moveFirst(System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.EnumeratorPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="moveNext">
+      <MemberSignature Language="C#" Value="public object moveNext;" />
+      <MemberSignature Language="ILAsm" Value=".field public object moveNext" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientEnumeratorPrototype.moveNext" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.EnumeratorPrototype.moveNext(System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.EnumeratorPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

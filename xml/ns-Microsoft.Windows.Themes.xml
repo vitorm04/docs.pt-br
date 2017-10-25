@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Windows.Themes">
+  <Docs>
+    <summary>Fornece a exposição ao conjunto de temas definido pelo Windows Presentation Foundation. No WPF, um tema é um conjunto de recursos, definidos no nível do sistema, que fornecem a aparência padrão para controles e outros elementos visuais de um aplicativo. Temas WPF são criados usando estilos e incluem Luna, Aero, Royale e clássico. Somente a área cliente de um aplicativo WPF usa esses temas; a aparência da borda da janela e botões que formam o chrome janela é controlada pelo serviço de tema do Win32.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

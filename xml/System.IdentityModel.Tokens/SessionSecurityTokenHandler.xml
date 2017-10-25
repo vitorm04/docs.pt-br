@@ -1,0 +1,880 @@
+<Type Name="SessionSecurityTokenHandler" FullName="System.IdentityModel.Tokens.SessionSecurityTokenHandler">
+  <TypeSignature Language="C#" Value="public class SessionSecurityTokenHandler : System.IdentityModel.Tokens.SecurityTokenHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionSecurityTokenHandler extends System.IdentityModel.Tokens.SecurityTokenHandler" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SessionSecurityTokenHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityTokenHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um <see cref="T:System.IdentityModel.Tokens.SecurityTokenHandler" /> que processa tokens de segurança do tipo <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> classe serializa desserializa e valida os tokens de sessão. Os tokens de sessão são tokens de tipo <xref:System.IdentityModel.Tokens.SessionSecurityToken>. O <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> classe serializa os tokens para e do formato de cookie. Por padrão, a classe serializa tokens em WS-Secure Conversation Feb2005 ou WS-Secure Conversation 1.3 `<wsc:SecurityContextToken>` elementos. Tokens de sessão são usados pelo <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) para armazenar informações sobre uma sessão, isso é basicamente o <xref:System.Security.Claims.ClaimsPrincipal> associado com o usuário autenticado e os horários de início e vencimento de sessão.  
+  
+ Em cenários de passivos, o <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> chama o <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) do pipeline para criar um token de sessão de autenticação a <xref:System.Security.Claims.ClaimsPrincipal> que representa o usuário autenticado. O SAM usa configurado <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> para criar o token e para serializá-lo em um cookie (e para desserializar o token de um cookie em solicitações subsequentes). O SAM usa uma instância do seu configurado <xref:System.IdentityModel.Services.CookieHandler> classe para gravar o cookie de volta para a resposta HTTP. Esse cookie é retornado ao cliente e em solicitações subsequentes de cliente pode apresentar o cookie em vez de fazer uma viagem de ida e volta para o provedor de identidade novamente obter um token de segurança. Para obter mais informações sobre como as sessões operam com WIF, consulte [gerenciamento de sessão do WIF](~/docs/framework/security/wif-session-management.md).  
+  
+> [!NOTE]
+>  O \<securityTokenHandlers > elemento de configuração pode ser usado para especificar um <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> que tem a responsabilidade de proteger as sessões do aplicativo. Os desenvolvedores devem ter cuidado ao alterar esta configuração, como um sistema configurado incorretamente pode resultar em comprometimento do aplicativo. Por exemplo, especificando um derivado HYPERLINK "http://msdn.microsoft.com/en-us/library/hh193426%28v=vs.110%29.aspx" \t blank" <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> e passando uma coleção de transformações (CookieTransform) vazia para a base, resultaria na identidade de usuários que está sendo serializada em um cookie que não foram protegido. Isso pode permitir que um invasor modificar a identidade e, portanto, alterar os privilégios de acesso.  
+  
+ Se o token de sessão estiver em modo de referência, isto é, seu <xref:System.IdentityModel.Tokens.SessionSecurityToken.IsReferenceMode%2A?displayProperty=nameWithType> é de propriedade `true`, a sessão de manipulador de token apenas serializa propriedades do token da sessão que são necessários para regenerar a chave no <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>. No caso padrão, o <xref:System.IdentityModel.Tokens.SessionSecurityTokenCacheKey> classe é usada para representar as chaves de cache e o manipulador de token grava o <xref:System.IdentityModel.Tokens.SessionSecurityToken.ContextId%2A?displayProperty=nameWithType> e <xref:System.IdentityModel.Tokens.SessionSecurityToken.KeyGeneration%2A?displayProperty=nameWithType> propriedades do token. Se o token de sessão é não estiver no modo de referência, ou seja, o <xref:System.IdentityModel.Tokens.SessionSecurityToken.IsReferenceMode%2A?displayProperty=nameWithType> é de propriedade `false`, em seguida, além das propriedades mencionadas anteriormente, o manipulador invoca o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms%2A> método em uma matriz de bytes serializados do token e armazena o valor resultante no cookie também. Para obter mais detalhes sobre como o token é serializado, consulte o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.WriteToken%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29?displayProperty=nameWithType> método.  
+  
+ O <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.Transforms%2A> propriedade obtém a lista de transformações que são aplicadas à sessão do token no <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms%2A> método. Todas as transformações derivam de <xref:System.IdentityModel.CookieTransform> classe. No caso de padrão de <xref:System.IdentityModel.DeflateCookieTransform> e <xref:System.IdentityModel.ProtectedDataCookieTransform> são aplicadas. O <xref:System.IdentityModel.ProtectedDataCookieTransform> usa a API de proteção de dados (DPAPI) para proteger o material de cookie. A DPAPI usa uma chave que é específica para o computador no qual ele está em execução em seus algoritmos de proteção. Por esse motivo, o manipulador de token de sessão padrão não é utilizável em cenários de Web farm porque, nesses cenários, tokens gravados em um computador talvez precise ser lido em outro computador. Você pode usar muitas estratégias para contornar esse problema. Por exemplo, você pode:  
+  
+-   Substitua o padrão <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> com o <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>. O <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> permite que você especifique as chaves de assinatura e criptografia em ASP.NET `<machineKey>` elemento no arquivo de configuração.  
+  
+-   Fornecer um manipulador para o <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> manipulador com uma instância do evento no arquivo global.asax.cs e substituir a sessão padrão do token <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> que tem uma lista de transformações que inclui o <xref:System.IdentityModel.RsaSignatureCookieTransform> e <xref:System.IdentityModel.RsaEncryptionCookieTransform>. Você pode criar a nova instância, chamando um dos construtores que usa uma lista de transformações.  
+  
+-   Derivar uma transformação personalizada do <xref:System.IdentityModel.CookieTransform> classe base e usar o método acima para incluí-lo na lista de transformações a serem aplicadas.  
+  
+-   Derivar um manipulador de token personalizado de <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> e implementar seu próprio mecanismo.  
+  
+ Para obter mais informações sobre como usar sessões em cenários de farm da Web, consulte [WIF e Web Farms](~/docs/framework/security/wif-and-web-farms.md).  
+  
+ O <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> está incluído na coleção de manipulador de token padrão; no entanto, você pode substituí-lo com um manipulador de token de sessão personalizadas especificando primeiro um [ &lt;remover&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md) elemento sob o [ &lt;securityTokenHandlers&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md) elemento para remover o manipulador padrão de coleção e, em seguida, adicionar o manipulador de token personalizado usando o [ &lt;adicionar&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md) elemento. Por padrão, você pode especificar o tempo de vida de token padrão, incluindo o [ &lt;sessionTokenRequirement&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md) elemento sob o `<add>` elemento. Você pode criar um manipulador de token personalizado entrem em elementos de configuração personalizada sob o `<add>` elemento, substituindo o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.LoadCustomConfiguration%2A> método para fornecer a lógica para processá-los.  
+  
+   
+  
+## Examples  
+ O XML a seguir mostra como substituir o manipulador de token de segurança de sessão de padrão em uma coleção de manipulador de token com uma instância do <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> classe na configuração.  
+  
+```xml  
+<securityTokenHandlers>  
+  <remove type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
+  <add type="System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
+</securityTokenHandlers>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionSecurityTokenHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SessionSecurityTokenHandler" /> classe que usa as transformações de cookie padrão e a vida útil do token.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.TokenLifetime%2A> e <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.Transforms%2A> propriedades são inicializadas para <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.DefaultLifetime> e <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.DefaultCookieTransforms>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionSecurityTokenHandler (System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.CookieTransform&gt; transforms);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.CookieTransform&gt; transforms) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.#ctor(System.Collections.ObjectModel.ReadOnlyCollection{System.IdentityModel.CookieTransform})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transforms" Type="System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.CookieTransform&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="transforms">As transformações para aplicar ao codificação ou decodificação de cookie. Define a propriedade <see cref="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.Transforms" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SessionSecurityTokenHandler" /> transforma de classe que usa o cookie especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.TokenLifetime%2A> é inicializada com <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.DefaultLifetime>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="transforms" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionSecurityTokenHandler (System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.CookieTransform&gt; transforms, TimeSpan tokenLifetime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.CookieTransform&gt; transforms, valuetype System.TimeSpan tokenLifetime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.#ctor(System.Collections.ObjectModel.ReadOnlyCollection{System.IdentityModel.CookieTransform},System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transforms" Type="System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.CookieTransform&gt;" />
+        <Parameter Name="tokenLifetime" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="transforms">As transformações para aplicar ao codificação ou decodificação de cookie. Define a propriedade <see cref="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.Transforms" />.</param>
+        <param name="tokenLifetime">O tempo de vida padrão para um token. Define a propriedade <see cref="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.TokenLifetime" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SessionSecurityTokenHandler" /> classe que usa as transformações de cookie especificado e a vida útil do token.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="transforms" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="tokenLifetime" />é menor ou igual a <see cref="F:System.TimeSpan.Zero" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyTransforms">
+      <MemberSignature Language="C#" Value="protected virtual byte[] ApplyTransforms (byte[] cookie, bool outbound);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] ApplyTransforms(unsigned int8[] cookie, bool outbound) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(System.Byte[],System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cookie" Type="System.Byte[]" />
+        <Parameter Name="outbound" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cookie">O cookie que será transformado.</param>
+        <param name="outbound">
+          <see langword="true" />Se o cookie deve ser codificado; <see langword="false" /> se o cookie deve ser decodificado.</param>
+        <summary>Aplica as transformações especificadas pelo <see cref="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.Transforms" /> propriedade para codificar ou decodificar o cookie especificado.</summary>
+        <returns>O cookie codificado ou decodificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um cookie de codificação transformações são aplicadas na ordem em que aparecem no <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.Transforms%2A> propriedade. Ao decodificar um cookie, elas são aplicadas na ordem inversa.  
+  
+ Chamado a partir de <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.WriteToken%2A> e? qualifyHint = False & no upgrade automático = verdadeiro, os métodos para codificar e decodificar o material de cookie.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.Transforms" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReadToken">
+      <MemberSignature Language="C#" Value="public override bool CanReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.CanReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlReader" /> pela entrada <see cref="T:System.IdentityModel.Tokens.SecurityToken" />. O leitor deve ser posicionado em um <see langword="&lt;wsc:SecurityContextToken&gt;" /> elemento.</param>
+        <summary>Retorna um valor que indica se o leitor está posicionado em um <see langword="&lt;wsc:SecurityContextToken&gt;" /> elemento.</summary>
+        <returns>
+          <see langword="true" />Se o leitor aponta para um <see langword="&lt;wsc:SecurityContextToken&gt;" /> elemento; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidateToken">
+      <MemberSignature Language="C#" Value="public override bool CanValidateToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanValidateToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.CanValidateToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este manipulador oferece suporte à validação dos tokens do tipo <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</summary>
+        <value>
+          <see langword="true" />Se o manipulador oferece suporte à validação dos tokens do tipo <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />; caso contrário, <see langword="false" />. Sempre <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWriteToken">
+      <MemberSignature Language="C#" Value="public override bool CanWriteToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWriteToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.CanWriteToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este manipulador pode gravar tokens do tipo <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</summary>
+        <value>
+          <see langword="true" />Se o manipulador pode gravar tokens do tipo <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />; caso contrário, <see langword="false" />. Sempre <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieElementName">
+      <MemberSignature Language="C#" Value="public virtual string CookieElementName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CookieElementName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.CookieElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome para o elemento cookie.</summary>
+        <value>O nome para o elemento cookie. O nome do elemento padrão é "Cookie".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada a <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.WriteToken%2A> e <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken%2A> métodos para determinar o elemento sob a qual o material de token codificado deve ser gravado ou lidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieNamespace">
+      <MemberSignature Language="C#" Value="public virtual string CookieNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CookieNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.CookieNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o namespace para o elemento cookie.</summary>
+        <value>O namespace para o elemento cookie. O namespace padrão é "http://schemas.microsoft.com/ws/2006/05/security".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada a <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.WriteToken%2A> e <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken%2A> métodos para determinar o namespace do elemento sob a qual o material de token codificado deve ser gravado ou lidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSessionSecurityToken">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SessionSecurityToken CreateSessionSecurityToken (System.Security.Claims.ClaimsPrincipal principal, string context, string endpointId, DateTime validFrom, DateTime validTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SessionSecurityToken CreateSessionSecurityToken(class System.Security.Claims.ClaimsPrincipal principal, string context, string endpointId, valuetype System.DateTime validFrom, valuetype System.DateTime validTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.CreateSessionSecurityToken(System.Security.Claims.ClaimsPrincipal,System.String,System.String,System.DateTime,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SessionSecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="principal" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="context" Type="System.String" />
+        <Parameter Name="endpointId" Type="System.String" />
+        <Parameter Name="validFrom" Type="System.DateTime" />
+        <Parameter Name="validTo" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="principal">A entidade de declarações.</param>
+        <param name="context">Uma cadeia de caracteres de contexto definido pelo chamador.</param>
+        <param name="endpointId">O identificador do ponto de extremidade ao qual o token está no escopo.</param>
+        <param name="validFrom">O tempo de instantâneo no qual o token é validado.</param>
+        <param name="validTo">O instantâneo de tempo após o qual o token não é mais válido.</param>
+        <summary>Cria um <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" /> com base em declarações especificadas principal e tempo intervalo durante o qual o token é válido.</summary>
+        <returns>O token de segurança de sessão que foi criado. As propriedades no token de nova sessão estão definidas de acordo com os parâmetros especificados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="principal" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateToken">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityToken CreateToken (System.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Tokens.SecurityToken CreateToken(class System.IdentityModel.Tokens.SecurityTokenDescriptor tokenDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.CreateToken(System.IdentityModel.Tokens.SecurityTokenDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenDescriptor" Type="System.IdentityModel.Tokens.SecurityTokenDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="tokenDescriptor">O descritor de token do qual criar o token.</param>
+        <summary>Cria um token de segurança com base no descritor de token especificado.</summary>
+        <returns>O token de segurança que foi criado. Isso será uma instância de <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria e retorna um token de segurança de sessão usando as seguintes propriedades no descritor de token: <xref:System.IdentityModel.Tokens.SecurityTokenDescriptor.Subject%2A?displayProperty=nameWithType>, e <xref:System.IdentityModel.Tokens.SecurityTokenDescriptor.Lifetime%2A?displayProperty=nameWithType>. Se o <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration.SaveBootstrapContext%2A?displayProperty=nameWithType> está definida `true` na configuração do manipulador de token especificada pelo <xref:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration%2A> propriedade, o contexto de inicialização é criado a partir de <xref:System.IdentityModel.Tokens.SecurityTokenDescriptor.Token%2A?displayProperty=nameWithType> propriedade e é salvo no token de sessão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="tokenDescriptor" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCookieTransforms">
+      <MemberSignature Language="C#" Value="public static readonly System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.CookieTransform&gt; DefaultCookieTransforms;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.CookieTransform&gt; DefaultCookieTransforms" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SessionSecurityTokenHandler.DefaultCookieTransforms" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.CookieTransform&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A leitura apenas a coleção que contém a lista de transformações padrão a ser aplicado a cookies, o <see cref="T:System.IdentityModel.DeflateCookieTransform" /> e <see cref="T:System.IdentityModel.ProtectedDataCookieTransform" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultLifetime">
+      <MemberSignature Language="C#" Value="public static readonly TimeSpan DefaultLifetime;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan DefaultLifetime" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SessionSecurityTokenHandler.DefaultLifetime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma constante que especifica o tempo de vida padrão de cookies, dez horas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTokenLifetime">
+      <MemberSignature Language="C#" Value="public static TimeSpan DefaultTokenLifetime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.TimeSpan DefaultTokenLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.DefaultTokenLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tempo de vida de token padrão.</summary>
+        <value>O padrão vida útil do token. Sempre <see cref="F:System.IdentityModel.Tokens.SessionSecurityTokenHandler.DefaultLifetime" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenTypeIdentifiers">
+      <MemberSignature Language="C#" Value="public override string[] GetTokenTypeIdentifiers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetTokenTypeIdentifiers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.GetTokenTypeIdentifiers" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o tipo de token URIs para os tipos de token que podem ser processados por esse manipulador.</summary>
+        <returns>O identificador de tipo de token URIs para os tipos de token que podem ser processados por esse manipulador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O seguinte tipo de URIs são suportados: "http://schemas.microsoft.com/ws/2006/05/servicemodel/tokens/SecureConversation", "http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/sct" e "http://schemas.xmlsoap.org/ws/2005/02/sc/sct".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public override void LoadCustomConfiguration (System.Xml.XmlNodeList customConfigElements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList customConfigElements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customConfigElements" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="customConfigElements">Os elementos de configuração personalizados.</param>
+        <summary>Configuração personalizada de cargas de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamado pela infraestrutura de configuração para inicializar o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> instância. Inicializa o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.TokenLifetime%2A> propriedade o `lifetime` atributo do [ &lt;sessionTokenRequirement&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md) elemento no arquivo de configuração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="customConfigElements" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A configuração especificada pelo <paramref name="customConfigElements" /> não é válido. Por exemplo, ele não contém um <see langword="&lt;sessionTokenRequirement&gt;" /> elemento, ele contém mais de uma <see langword="&lt;sessionTokenRequirement&gt;" /> elemento, válido <see cref="T:System.TimeSpan" /> não é possível ler o valor da <see langword="lifetime" /> atributo, ou o <see langword="lifetime" /> atributo especifica um valor que é menor que <see cref="F:System.TimeSpan.Zero" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ReadToken">
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Lê um <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desserializa o token de um WS-Secure Conversation Feb2005 ou WS-Secure Conversation 1.3 `<wsc:SecurityContextToken>` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Tokens.SecurityToken ReadToken(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlReader" /> pela entrada <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</param>
+        <summary>Lê o <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" /> usando o leitor XML especificado.</summary>
+        <returns>O token de segurança de sessão que foi lido, uma instância de <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O leitor deve ser posicionado em um Feb2005 de conversa WS-Secure ou um 1.3 de conversa WS-Secure `<wsc:SecurityContextToken>` elemento.  
+  
+ A implementação padrão chama o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29?displayProperty=nameWithType> método usando um resolvedor de token padrão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">O leitor não está posicionado em uma <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" /> ou <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" /> não pode ser lido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SecurityToken ReadToken (byte[] token, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityToken ReadToken(unsigned int8[] token, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(System.Byte[],System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.Byte[]" />
+        <Parameter Name="tokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="token">O fluxo de bytes que contém o token.</param>
+        <param name="tokenResolver">O resolvedor de token para usar.</param>
+        <summary>Lê o <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" /> de um fluxo de bytes usando o resolvedor de token especificado.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" /> que foi lido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão cria um <xref:System.Xml.XmlDictionaryReader> sobre o token e invoca o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadToken">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityToken ReadToken (System.Xml.XmlReader reader, System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IdentityModel.Tokens.SecurityToken ReadToken(class System.Xml.XmlReader reader, class System.IdentityModel.Selectors.SecurityTokenResolver tokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(System.Xml.XmlReader,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="tokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlReader" /> pela entrada <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</param>
+        <param name="tokenResolver">Um <see cref="T:System.IdentityModel.Selectors.SecurityTokenResolver" /> que podem ser usadas para resolver o <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</param>
+        <summary>Lê o <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" /> usando o resolvedor de leitor e o token XML especificado.</summary>
+        <returns>O token de segurança de sessão que foi lido, uma instância de <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O leitor deve ser posicionado em um Feb2005 de conversa WS-Secure ou um 1.3 de conversa WS-Secure `<wsc:SecurityContextToken>` elemento.  
+  
+ Se o material de token é armazenado em cache, ele será lida do cache de token, que é uma instância do <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> classe. Caso contrário, o material de token é lido do elemento filho do `<wsc:SecurityContextToken>` que é especificado pelo elemento o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.CookieElementName%2A> e <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.CookieNamespace%2A> propriedades e o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms%2A> método é invocado para decodificar o cookie.  
+  
+ Para obter mais informações sobre como os tokens de sessão são serializados em um `<SecurityContextToken` elemento, consulte o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.WriteToken%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="tokenResolver" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">O leitor não está posicionado em uma <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" /> ou <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" /> não pode ser lido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTransforms">
+      <MemberSignature Language="C#" Value="protected void SetTransforms (System.Collections.Generic.IEnumerable&lt;System.IdentityModel.CookieTransform&gt; transforms);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetTransforms(class System.Collections.Generic.IEnumerable`1&lt;class System.IdentityModel.CookieTransform&gt; transforms) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.SetTransforms(System.Collections.Generic.IEnumerable{System.IdentityModel.CookieTransform})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transforms" Type="System.Collections.Generic.IEnumerable&lt;System.IdentityModel.CookieTransform&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="transforms">As transformações que serão usadas.</param>
+        <summary>Define as transformações que serão aplicadas a cookies.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Define a lista de transformações retornado pelo <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.Transforms%2A> propriedade. As transformações serão aplicadas na ordem em que aparecem na lista ao codificar um cookie e na ordem inversa ao decodificar um cookie.  
+  
+> [!WARNING]
+>  Se o `transforms` parâmetro é `null`, uma exceção será lançada do <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms%2A> método quando ele é chamado para codificar ou decodificar o cookie.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenLifetime">
+      <MemberSignature Language="C#" Value="public virtual TimeSpan TokenLifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TokenLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.TokenLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a vida útil do token.</summary>
+        <value>A vida útil do token. O padrão é <see cref="F:System.IdentityModel.Tokens.SessionSecurityTokenHandler.DefaultLifetime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, se o [ &lt;sessionTokenRequirement&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md) elemento for especificado no arquivo de configuração, o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.TokenLifetime%2A> propriedade é inicializada com o valor da `lifetime` atributo com o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.LoadCustomConfiguration%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Ocorre uma tentativa de definir um período de tempo é menor que ou igual a zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenType">
+      <MemberSignature Language="C#" Value="public override Type TokenType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TokenType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.TokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo dos tokens que este manipulador processa.</summary>
+        <value>O <see cref="T:System.Type" /> de <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transforms">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.CookieTransform&gt; Transforms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.CookieTransform&gt; Transforms" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SessionSecurityTokenHandler.Transforms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.CookieTransform&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as transformações que serão aplicadas ao cookie.</summary>
+        <value>A lista de transformações que serão aplicadas ao cookie.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As transformações são aplicadas no <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateSession">
+      <MemberSignature Language="C#" Value="protected virtual void ValidateSession (System.IdentityModel.Tokens.SessionSecurityToken securityToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ValidateSession(class System.IdentityModel.Tokens.SessionSecurityToken securityToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ValidateSession(System.IdentityModel.Tokens.SessionSecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityToken" Type="System.IdentityModel.Tokens.SessionSecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="securityToken">O token a ser verificada.</param>
+        <summary>Determina se a sessão associada ao token especificado ainda é válida. Validade é determinada verificando o <see cref="P:System.IdentityModel.Tokens.SecurityToken.ValidFrom" /> e <see cref="P:System.IdentityModel.Tokens.SecurityToken.ValidTo" /> propriedades do token especificado. Uma exceção é gerada se a sessão não é mais válida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token não é válido se seu <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> propriedade é definida como um valor que acontece depois que <xref:System.DateTime.UtcNow%2A>, ou se seu <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> propriedade é definida como um valor que ocorre anteriores <xref:System.DateTime.UtcNow%2A>.  
+  
+ Chamado a partir de <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ValidateToken%2A> métodos para validar a sessão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityToken" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.IdentityModel.Tokens.SecurityTokenHandler.Configuration" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenNotYetValidException">O <see cref="P:System.IdentityModel.Tokens.SecurityToken.ValidFrom" /> propriedade do token é posterior <see cref="P:System.DateTime.UtcNow" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenExpiredException">O <see cref="P:System.IdentityModel.Tokens.SecurityToken.ValidTo" /> propriedade do token é anterior à <see cref="P:System.DateTime.UtcNow" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateToken">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt; ValidateToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Security.Claims.ClaimsIdentity&gt; ValidateToken(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ValidateToken(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">O token a ser validado. Deve ser atribuível do <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</param>
+        <summary>Valida o token especificado e retorna suas declarações.</summary>
+        <returns>As identidades contidas no token.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Invoca o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ValidateSession%2A> método para validar o token.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" />
+          <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="token" />não é atribuível da <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateToken">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt; ValidateToken (System.IdentityModel.Tokens.SessionSecurityToken token, string endpointId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Security.Claims.ClaimsIdentity&gt; ValidateToken(class System.IdentityModel.Tokens.SessionSecurityToken token, string endpointId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ValidateToken(System.IdentityModel.Tokens.SessionSecurityToken,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Security.Claims.ClaimsIdentity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SessionSecurityToken" />
+        <Parameter Name="endpointId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="token">O token a ser validado. Deve ser atribuível do <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</param>
+        <param name="endpointId">O identificador do ponto de extremidade ao qual o token está no escopo.</param>
+        <summary>Valida o token de sessão especificada e retorna suas declarações.</summary>
+        <returns>As identidades contidas no token.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Executa uma verificação para certificar-se de que o token especificado tem seu escopo definido para a ID do ponto de extremidade especificado e, nesse caso, invoca o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ValidateToken%28System.IdentityModel.Tokens.SecurityToken%29?displayProperty=nameWithType> método; caso contrário, gera um <xref:System.IdentityModel.Tokens.SecurityTokenException>.  
+  
+> [!IMPORTANT]
+>  Tokens de sessão que têm um <xref:System.IdentityModel.Tokens.SessionSecurityToken.EndpointId%2A> propriedade `null` ou vazios são considerados para ser seu escopo definido globalmente. Isso apresenta um risco à segurança. Por esse motivo você deve garantir que o <xref:System.IdentityModel.Tokens.SessionSecurityToken.EndpointId%2A> estiver definida em seus tokens de sessão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="endpointId" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="token" />não é atribuível da <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">O <see cref="P:System.IdentityModel.Tokens.SessionSecurityToken.EndpointId" /> propriedade do token especificado não é <see langword="null" /> ou vazio e seu valor é diferente daquele especificado pelo <paramref name="endpointId" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="WriteToken">
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Serializa um token.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão serializa o token em um WS-Secure Conversation Feb2005 ou WS-Secure Conversation 1.3 `<wsc:SecurityContextToken>` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="WriteToken">
+      <MemberSignature Language="C#" Value="public virtual byte[] WriteToken (System.IdentityModel.Tokens.SessionSecurityToken sessionToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] WriteToken(class System.IdentityModel.Tokens.SessionSecurityToken sessionToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.WriteToken(System.IdentityModel.Tokens.SessionSecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sessionToken" Type="System.IdentityModel.Tokens.SessionSecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="sessionToken">O token a ser gravado.</param>
+        <summary>Serializa o token especificado em uma matriz de bytes.</summary>
+        <returns>Uma matriz de bytes codificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serializa o token especificado com a criação e o gravador de XML em uma <xref:System.IO.MemoryStream> e chamar o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.WriteToken%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29?displayProperty=nameWithType> método. Consulte essa sobrecarga para obter mais detalhes.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sessiontoken" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToken">
+      <MemberSignature Language="C#" Value="public override void WriteToken (System.Xml.XmlWriter writer, System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteToken(class System.Xml.XmlWriter writer, class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SessionSecurityTokenHandler.WriteToken(System.Xml.XmlWriter,System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador de XML com o qual serializar o token.</param>
+        <param name="token">O token a ser serializado. Uma instância de <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.</param>
+        <summary>Serializa o token especificado usando o gravador XML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão serializa o token especificado como WS-Secure Conversation Feb2005 ou WS-Secure Conversation 1.3 `<wsc:SecurityContextToken>` elemento, dependendo do valor da <xref:System.IdentityModel.Tokens.SessionSecurityToken.SecureConversationVersion%2A?displayProperty=nameWithType> propriedade. O <xref:System.IdentityModel.Tokens.SessionSecurityToken.Id%2A?displayProperty=nameWithType> propriedade é serializada como o `Id` atributo. O <xref:System.IdentityModel.Tokens.SessionSecurityToken.ContextId%2A?displayProperty=nameWithType> propriedade é serializada como o `<Identifier>` elemento filho. Se não `null` o <xref:System.IdentityModel.Tokens.SessionSecurityToken.KeyGeneration%2A?displayProperty=nameWithType> propriedade é serializada como um `<Instance>` elemento. Por fim, se o <xref:System.IdentityModel.Tokens.SessionSecurityToken.IsReferenceMode%2A?displayProperty=nameWithType> é de propriedade `false`, o token inteiro é serializado em uma matriz binária que é passada para o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms%2A> método a ser decodificado. O token codificado é gravado como um valor codificado na base64 para o elemento e o namespace especificado pelo <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.CookieElementName%2A> e <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler.CookieNamespace%2A> propriedades. Se o <xref:System.IdentityModel.Tokens.SessionSecurityToken.IsReferenceMode%2A?displayProperty=nameWithType> é de propriedade `true`, o token não é serializado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="token" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="token" />não é atribuível da <see cref="T:System.IdentityModel.Tokens.SessionSecurityToken" />.  
+  
+ -ou-  
+  
+ O <see cref="P:System.IdentityModel.Tokens.SessionSecurityToken.SecureConversationVersion" /> do token Especifica uma versão do WS-Secure Conversation não é suportada pelo manipulador.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,35 @@
+<Type Name="ICollectionViewFactory" FullName="System.ComponentModel.ICollectionViewFactory">
+  <TypeSignature Language="C#" Value="public interface ICollectionViewFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICollectionViewFactory" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ICollectionViewFactory" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Uma interface que permite que as coleções de implementação criar uma exibição de dados. Normalmente, o código do usuário não chamar métodos na interface em questão.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateView">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ICollectionView CreateView ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.ICollectionView CreateView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICollectionViewFactory.CreateView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ICollectionView</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova exibição na coleção que implementa essa interface. Normalmente, o código do usuário não chame este método.</summary>
+        <returns>O modo de exibição criado recentemente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

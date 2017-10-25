@@ -1,0 +1,115 @@
+<Type Name="DataGridViewEditMode" FullName="System.Windows.Forms.DataGridViewEditMode">
+  <TypeSignature Language="C#" Value="public enum DataGridViewEditMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewEditMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewEditMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como um usuário inicia a edição de célula no controle <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelo <xref:System.Windows.Forms.DataGridView.EditMode%2A> propriedade o <xref:System.Windows.Forms.DataGridView> controle.  
+  
+ Todos os <xref:System.Windows.Forms.DataGridViewEditMode> valores, exceto EditProgrammatically permite que um usuário clique duas vezes em uma célula para começar a editá-lo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso desse tipo. Para obter mais informações, consulte [como: especificar o modo de edição para o controle DataGridView do Windows Forms](~/docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EditOnEnter">
+      <MemberSignature Language="C#" Value="EditOnEnter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewEditMode EditOnEnter = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewEditMode.EditOnEnter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewEditMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A edição começa quando a célula recebe o foco. Esse modo é útil ao pressionar a tecla TAB para inserir valores na próxima linha ou ao pressionar a tecla ENTER para inserir valores na coluna de baixo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EditOnF2">
+      <MemberSignature Language="C#" Value="EditOnF2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewEditMode EditOnF2 = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewEditMode.EditOnF2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewEditMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A edição começa quando F2 é pressionado enquanto o foco está na célula. Esse modo coloca o ponto de seleção no final do conteúdo da célula.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EditOnKeystroke">
+      <MemberSignature Language="C#" Value="EditOnKeystroke" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewEditMode EditOnKeystroke = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewEditMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A edição começa quando qualquer tecla alfanumérica é pressionada enquanto o foco está na célula.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EditOnKeystrokeOrF2">
+      <MemberSignature Language="C#" Value="EditOnKeystrokeOrF2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewEditMode EditOnKeystrokeOrF2 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewEditMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A edição começa quando qualquer tecla alfanumérica ou F2 é pressionado enquanto o foco está na célula.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EditProgrammatically">
+      <MemberSignature Language="C#" Value="EditProgrammatically" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewEditMode EditProgrammatically = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewEditMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A edição começa somente quando o método <see cref="M:System.Windows.Forms.DataGridView.BeginEdit(System.Boolean)" /> é chamado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

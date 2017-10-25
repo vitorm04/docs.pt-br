@@ -1,0 +1,42 @@
+<Type Name="ValidateValueCallback" FullName="System.Windows.ValidateValueCallback">
+  <TypeSignature Language="C#" Value="public delegate bool ValidateValueCallback(object value);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ValidateValueCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ValidateValueCallback" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="value" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="value">O valor a ser validado.</param>
+    <summary>Representa um método usado como um retorno de chamada que valida o valor efetivo de uma propriedade de dependência.</summary>
+    <returns>
+      <see langword="true" /> se o valor foi validado; <see langword="false" /> se o valor enviado era inválido.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com base neste delegado de retornos de chamada são usados por determinados assinaturas de <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType> e relacionados métodos, como <xref:System.Windows.DependencyProperty.RegisterAttached%2A> e equivalentes de somente leitura. Você deve usar assinaturas que usam o `validateValueCallback` parâmetro se desejar validação específica do valor da propriedade sempre que seu efetivo está definido. Em seguida, você deve implementar esse retorno de chamada, de modo que ele executa a validação real do valor proposto. O retorno de chamada deve retornar `true` se o valor enviado para o retorno de chamada for válido, e `false` caso contrário. Um `false` valor irá gerar uma exceção na parte específica do sistema de propriedades em que o conjunto de propriedade inválido foi tentado, para que seu aplicativo deve estar preparado para tratar essas exceções.  
+  
+ Retornos de chamada de validação são armazenados em identificadores de propriedade de dependência, em vez de metadados de propriedade de dependência. O retorno de chamada de validação não tem acesso a uma instância específica de um <xref:System.Windows.DependencyObject> no qual a propriedade é definida e somente pode influenciar quais valores são aceitas em geral para a propriedade. Se você precisar de um retorno de chamada que pode alterar os valores de propriedade com base em uma instância específica, você deve usar uma combinação de um <xref:System.Windows.CoerceValueCallback> e <xref:System.Windows.PropertyChangedCallback> retornos de chamada como aplicadas aos metadados da propriedade de sua propriedade. Você também pode aplicar esses retornos de chamada para propriedades relacionadas que devem influenciar o valor da propriedade. Para obter detalhes, consulte [retornos de chamada de propriedade de dependência e validação](~/docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inclui uma implementação desse retorno de chamada para validar um intervalo de valores para uma propriedade de dependência personalizada. Nesse caso, o valor da propriedade espera uma enumeração, e a validação garante que o valor fornecido é avaliada como um membro de enumeração.  
+  
+ [!code-csharp[DPCustom#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCustom/CSharp/default.xaml.cs#validatevaluecallback)]
+ [!code-vb[DPCustom#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCustom/visualbasic/default.xaml.vb#validatevaluecallback)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

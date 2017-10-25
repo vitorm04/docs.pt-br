@@ -1,0 +1,145 @@
+<Type Name="ServerValidateEventArgs" FullName="System.Web.UI.WebControls.ServerValidateEventArgs">
+  <TypeSignature Language="C#" Value="public class ServerValidateEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServerValidateEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ServerValidateEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Web.UI.WebControls.CustomValidator.ServerValidate" /> do controle <see cref="T:System.Web.UI.WebControls.CustomValidator" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.ServerValidateEventArgs> é passado para o <xref:System.Web.UI.WebControls.CustomValidator.ServerValidate> manipulador de eventos para fornecer dados de evento para o manipulador. O <xref:System.Web.UI.WebControls.CustomValidator.ServerValidate> evento é gerado quando a validação é executada no servidor. Isso permite que você execute uma rotina de validação personalizada do lado do servidor no valor de um controle de entrada (com um <xref:System.Web.UI.WebControls.CustomValidator> controle associado a ele) no manipulador de eventos.  
+  
+ Para validar o valor é determinado por meio de <xref:System.Web.UI.WebControls.ServerValidateEventArgs.Value%2A> propriedade. Depois que seu código tiver determinado se o valor é válido, armazenar os resultados da validação no <xref:System.Web.UI.WebControls.ServerValidateEventArgs.IsValid%2A> propriedade.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ServerValidateEventArgs>, consulte o <xref:System.Web.UI.WebControls.ServerValidateEventArgs.%23ctor%2A> construtor.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ServerValidateEventArgs> para passar dados de evento para um manipulador de eventos personalizados para o <xref:System.Web.UI.WebControls.CustomValidator.ServerValidate> evento. Observe que o <xref:System.Web.UI.WebControls.ServerValidateEventArgs.Value%2A> propriedade o <xref:System.Web.UI.WebControls.ServerValidateEventArgs> é usada para determinar o valor a ser validado, enquanto o <xref:System.Web.UI.WebControls.ServerValidateEventArgs.IsValid%2A> propriedade é usada para armazenar os resultados da validação.  
+  
+ [!code-aspx-csharp[CustomValidatorServerValidate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidatorServerValidate/CS/customvalidatorservervalidatecs.aspx#1)]
+ [!code-aspx-vb[CustomValidatorServerValidate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidatorServerValidate/VB/customvalidatorservervalidatevb.aspx#1)]  
+  
+ [!code-aspx-csharp[CustomValidatorServerValidate2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidatorServerValidate2/CS/customvalidatorservervalidate2cs.aspx#1)]
+ [!code-aspx-vb[CustomValidatorServerValidate2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidatorServerValidate2/VB/customvalidatorservervalidate2vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServerValidateEventArgs (string value, bool isValid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value, bool isValid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ServerValidateEventArgs.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="isValid" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser validado.</param>
+        <param name="isValid">
+          <see langword="true" />para indicar que o valor passa a validação; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ServerValidateEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.ServerValidateEventArgs> classe.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ServerValidateEventArgs>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Value`|O valor de `value` parâmetro.|  
+|`IsValid`|O valor de `isValid` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public bool IsValid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsValid" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ServerValidateEventArgs.IsValid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o valor especificado pela propriedade <see cref="P:System.Web.UI.WebControls.ServerValidateEventArgs.Value" /> passou na validação.</summary>
+        <value>
+          <see langword="true" /> para indicar que o valor especificado pela propriedade <see cref="P:System.Web.UI.WebControls.ServerValidateEventArgs.Value" /> passou na validação; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Após a conclusão da sua rotina de validação, use o <xref:System.Web.UI.WebControls.ServerValidateEventArgs.IsValid%2A> propriedade para indicar se o valor especificado com o <xref:System.Web.UI.WebControls.ServerValidateEventArgs.Value%2A> passada na validação de propriedade. Esse valor determina se o controle de entrada associada a <xref:System.Web.UI.WebControls.CustomValidator> controle passada na validação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.ServerValidateEventArgs.IsValid%2A> propriedade para armazenar os resultados da validação.  
+  
+ [!code-aspx-csharp[CustomValidatorServerValidate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidatorServerValidate/CS/customvalidatorservervalidatecs.aspx#1)]
+ [!code-aspx-vb[CustomValidatorServerValidate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidatorServerValidate/VB/customvalidatorservervalidatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ServerValidateEventArgs.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor a ser validado no manipulador de eventos personalizados para o <see cref="E:System.Web.UI.WebControls.CustomValidator.ServerValidate" /> evento.</summary>
+        <value>O valor a ser validado no manipulador de eventos personalizados para o <see cref="E:System.Web.UI.WebControls.CustomValidator.ServerValidate" /> evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ServerValidateEventArgs.Value%2A> propriedade determinar o valor a ser validado no manipulador de eventos personalizados para o <xref:System.Web.UI.WebControls.CustomValidator.ServerValidate> evento. Observe que você programaticamente não pode alterar esse valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.ServerValidateEventArgs.Value%2A> para determinar o valor a ser validado.  
+  
+ [!code-aspx-csharp[CustomValidatorServerValidate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidatorServerValidate/CS/customvalidatorservervalidatecs.aspx#1)]
+ [!code-aspx-vb[CustomValidatorServerValidate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidatorServerValidate/VB/customvalidatorservervalidatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

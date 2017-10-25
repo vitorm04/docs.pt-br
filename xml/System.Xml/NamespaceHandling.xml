@@ -1,0 +1,98 @@
+<Type Name="NamespaceHandling" FullName="System.Xml.NamespaceHandling">
+  <TypeSignature Language="C#" Value="public enum NamespaceHandling" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NamespaceHandling extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.NamespaceHandling" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se as declarações de namespace duplicados no <see cref="T:System.Xml.XmlWriter" /> devem ser removidas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.NamespaceHandling> enumeração tem um <xref:System.FlagsAttribute> atributo que permite uma combinação bit a bit de seus valores de membro.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.NamespaceHandling Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.NamespaceHandling.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.NamespaceHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as declarações de namespace duplicadas não serão removidas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OmitDuplicates">
+      <MemberSignature Language="C#" Value="OmitDuplicates" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.NamespaceHandling OmitDuplicates = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.NamespaceHandling.OmitDuplicates" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.NamespaceHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as declarações de namespace duplicadas serão removidas. Para o namespace duplicado a ser removido, o prefixo e o namespace devem corresponder.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

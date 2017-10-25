@@ -1,0 +1,89 @@
+<Type Name="ItemBoundsPortion" FullName="System.Windows.Forms.ItemBoundsPortion">
+  <TypeSignature Language="C#" Value="public enum ItemBoundsPortion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ItemBoundsPortion extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ItemBoundsPortion" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica uma parte do item de exibição de lista da qual recuperar o retângulo delimitador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os membros dessa enumeração ao chamar o <xref:System.Windows.Forms.ListView.GetItemRect%2A> método o <xref:System.Windows.Forms.ListView> controle. Esta enumeração também é usada ao chamar o <xref:System.Windows.Forms.ListViewItem.GetBounds%2A> método o <xref:System.Windows.Forms.ListViewItem> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Entire">
+      <MemberSignature Language="C#" Value="Entire" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ItemBoundsPortion Entire = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ItemBoundsPortion.Entire" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ItemBoundsPortion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O retângulo delimitador do item inteiro, incluindo o ícone, o texto do item e o texto do subitem (se for exibido), deve ser recuperado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Icon">
+      <MemberSignature Language="C#" Value="Icon" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ItemBoundsPortion Icon = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ItemBoundsPortion.Icon" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ItemBoundsPortion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O retângulo delimitador do ícone ou ícone pequeno deve ser recuperado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemOnly">
+      <MemberSignature Language="C#" Value="ItemOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ItemBoundsPortion ItemOnly = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ItemBoundsPortion.ItemOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ItemBoundsPortion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O retângulo delimitador de ícone ou ícone pequeno e o texto do item deve ser recuperado. Em todas as exibições, exceto os detalhes do modo de exibição da <see cref="T:System.Windows.Forms.ListView" />, esse valor Especifica o retângulo delimitador mesmo como o <see langword="Entire" /> valor. Na exibição de detalhes, esse valor Especifica o retângulo delimitador especificado pelo <see langword="Entire" /> valor sem subitems. Se o <see cref="P:System.Windows.Forms.ListView.CheckBoxes" /> está definida como <see langword="true" />, essa propriedade não inclui a área das caixas de seleção no retângulo delimitador. Para incluir o item inteiro, inclusive as caixas de seleção, use o <see langword="Entire" /> valor ao chamar o <see cref="M:System.Windows.Forms.ListView.GetItemRect(System.Int32)" /> método.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="Label" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ItemBoundsPortion Label = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ItemBoundsPortion.Label" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ItemBoundsPortion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O retângulo delimitador de texto do item deve ser recuperado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

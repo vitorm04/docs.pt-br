@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.UI.WebControls.Expressions">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.WebControls.Expressions" /> namespace fornece classes que permitem filtrar dados em uma página da Web usando o <see cref="T:System.Web.UI.WebControls.QueryExtender" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este namespace contém expressões que são usadas com o <xref:System.Web.UI.WebControls.QueryExtender> controle para filtrar dados em uma página da Web usando a sintaxe declarativa. As classes nesse namespace incluem <xref:System.Web.UI.WebControls.Expressions.SearchExpression?displayProperty=nameWithType>, <xref:System.Web.UI.WebControls.Expressions.RangeExpression?displayProperty=nameWithType>, <xref:System.Web.UI.WebControls.Expressions.PropertyExpression?displayProperty=nameWithType>, <xref:System.Web.UI.WebControls.Expressions.OrderByExpression?displayProperty=nameWithType> e <xref:System.Web.UI.WebControls.Expressions.CustomExpression?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

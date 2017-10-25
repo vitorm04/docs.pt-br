@@ -1,0 +1,57 @@
+<Type Name="PeerApplicationRegistrationType" FullName="System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType">
+  <TypeSignature Language="C#" Value="public enum PeerApplicationRegistrationType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PeerApplicationRegistrationType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de registro para executar para uma <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> ou <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> registro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Registrando um <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> permite que ele receba <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> solicitações de convite. O serviço ou aplicativo que executa o registro deve ter permissão para fazer isso, como ele requer acesso para o <xref:System.Net.PeerToPeer.Collaboration.ContactManager> e outros recursos, como usuários, aplicativos e serviços no computador remoto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllUsers">
+      <MemberSignature Language="C#" Value="AllUsers" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType AllUsers = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType.AllUsers" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> ou <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> está sendo registrado para todos os pares de host do aplicativo</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentUser">
+      <MemberSignature Language="C#" Value="CurrentUser" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType CurrentUser = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType.CurrentUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerApplicationRegistrationType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O aplicativo ou o objeto está sendo registrado apenas para o usuário associado com o par de chamada</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

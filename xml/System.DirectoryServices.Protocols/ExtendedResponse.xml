@@ -1,0 +1,59 @@
+<Type Name="ExtendedResponse" FullName="System.DirectoryServices.Protocols.ExtendedResponse">
+  <TypeSignature Language="C#" Value="public class ExtendedResponse : System.DirectoryServices.Protocols.DirectoryResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExtendedResponse extends System.DirectoryServices.Protocols.DirectoryResponse" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.ExtendedResponse" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryResponse</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.Protocols.ExtendedResponse" /> classe é retornada por <see cref="M:System.DirectoryServices.Protocols.DirectoryConnection.SendRequest(System.DirectoryServices.Protocols.DirectoryRequest)" /> como uma resposta para <see cref="T:System.DirectoryServices.Protocols.ExtendedRequest" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ResponseName">
+      <MemberSignature Language="C#" Value="public string ResponseName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResponseName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.ExtendedResponse.ResponseName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.ExtendedResponse.ResponseName" /> propriedade contém o nome da resposta retornada pelo servidor.</summary>
+        <value>O nome da resposta retornada pelo servidor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseValue">
+      <MemberSignature Language="C#" Value="public byte[] ResponseValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] ResponseValue" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.ExtendedResponse.ResponseValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.ExtendedResponse.ResponseValue" /> propriedade contém o valor opcional retornado pelo servidor.</summary>
+        <value>O valor de resposta opcional retornado pelo servidor.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.Protocols.DsmlInvalidDocumentException">O servidor retornou um valor inválido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

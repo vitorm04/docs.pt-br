@@ -1,0 +1,118 @@
+<Type Name="ContentPropertyAttribute" FullName="System.Windows.Markup.ContentPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ContentPropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContentPropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.ContentPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica qual propriedade de um tipo é a propriedade de conteúdo XAML. Um processador XAML usa essas informações durante o processamento de elementos filho XAML de representações XAML do tipo atribuído.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a propriedade associada de uma <xref:System.Windows.Markup.ContentPropertyAttribute> não é do tipo `string` ou `object`, um processador XAML tenta identificar uma técnica de conversão do valor. É a primeira verificação para conversão de tipo nativo, os primitivos de linguagem XAML ou de específicos conversões nativo habilitadas por essa implementação específica de gravador XAML. A próxima etapa é procurar um conversor de tipo. As implementações do .NET, um conversor de tipo é identificado com base em <xref:System.ComponentModel.TypeConverterAttribute> em qualquer membro nível ou tipo de nível na definição de que se aplica. Se nenhuma conversão de valor pode ser identificada, um gravador de objeto XAML normalmente gera uma exceção.  
+  
+ Para aceitar mais de um elemento único objeto, como conteúdo, o tipo da propriedade de conteúdo XAML deve ser com suporte como um tipo de coleção.  
+  
+ Devido a `Inherited=true` declaração do atributo, um valor para um <xref:System.Windows.Markup.ContentPropertyAttribute> normalmente se aplica a designação de uma propriedade de conteúdo para todas as classes derivadas. Aplicando vazio <xref:System.Windows.Markup.ContentPropertyAttribute> permite que uma classe derivada para remover uma declaração de um atributo de propriedade de conteúdo por uma classe base (e observe que a classe não tem nenhuma propriedade de conteúdo). Aplicação de um modo diferente nomeada <xref:System.Windows.Markup.ContentPropertyAttribute> substitui o herdadas <xref:System.Windows.Markup.ContentPropertyAttribute> com um novo.  
+  
+ Nas versões anteriores do .NET Framework, essa classe existiam no assembly específicos de WPF WindowsBase e também tinha uma implementação paralela em [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)]. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.ContentPropertyAttribute> está no assembly System. XAML. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="wpf-usage-notes"></a>Observações de uso do WPF  
+ Um exemplo de uma classe em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] que usa o <xref:System.Windows.Markup.ContentPropertyAttribute> é <xref:System.Windows.Controls.ContentControl>, que o <xref:System.Windows.Controls.Button> classe herda.  A propriedade <xref:System.Windows.Controls.ContentControl.Content%2A> no <xref:System.Windows.Controls.ContentControl> é a propriedade de conteúdo definida pelo <xref:System.Windows.Markup.ContentPropertyAttribute>.  Se um <xref:System.Windows.Controls.Button> é criar uma instância em XAML <xref:System.Windows.Controls.ContentControl.Content%2A> do <xref:System.Windows.Controls.Button> será definido para o elemento que está entre as marcas de botão de início e término.  
+  
+<a name="xamlTextUsage_ContentPropertyAttribute"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma classe denominada `Film` que tem um <xref:System.Windows.Markup.ContentPropertyAttribute> aplicado.  A propriedade chamada `Title` é indicado como a propriedade de conteúdo.  
+  
+ [!code-csharp[MarkupSnippets#MarkupContentPropertyAttribute](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml.cs#markupcontentpropertyattribute)]
+ [!code-vb[MarkupSnippets#MarkupContentPropertyAttribute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MarkupSnippets/visualbasic/window1.xaml.vb#markupcontentpropertyattribute)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentPropertyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ContentPropertyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.ContentPropertyAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Devido a `Inherited=true` declaração do atributo, um valor para um <xref:System.Windows.Markup.ContentPropertyAttribute> normalmente se aplica a designação de uma propriedade de conteúdo para todas as classes derivadas. Usando essa assinatura ou aplicar vazio <xref:System.Windows.Markup.ContentPropertyAttribute>, permite que uma classe derivada para remover uma declaração de um atributo de propriedade de conteúdo por uma classe base (e observe que a classe não tem nenhuma propriedade de conteúdo).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentPropertyAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.ContentPropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade para a propriedade que é a propriedade de conteúdo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Markup.ContentPropertyAttribute" /> classe usando o nome especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Supondo que fazendo de CLR, fornecido `name` deve corresponder a <xref:System.Reflection.MemberInfo.Name%2A?displayProperty=nameWithType> sistema de tipo da propriedade relevante no CLR.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.ContentPropertyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade que é a propriedade de conteúdo.</summary>
+        <value>O nome da propriedade que é a propriedade de conteúdo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

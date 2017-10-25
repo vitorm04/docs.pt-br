@@ -1,0 +1,81 @@
+<Type Name="RuleInvokeAttribute" FullName="System.Workflow.Activities.Rules.RuleInvokeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class RuleInvokeAttribute : System.Workflow.Activities.Rules.RuleAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RuleInvokeAttribute extends System.Workflow.Activities.Rules.RuleAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleInvokeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Activities.Rules.RuleAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method | System.AttributeTargets.Property, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que um método é invocado por uma condição. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este atributo é usado para suporte a um modelo de encadeamento de encaminhamento que causará a reavaliação de regras com base na alteração de estado. O <xref:System.Workflow.Activities.Rules.RuleReadAttribute>, <xref:System.Workflow.Activities.Rules.RuleInvokeAttribute>, e <xref:System.Workflow.Activities.Rules.RuleWriteAttribute> classes cada indicam as propriedades usadas para ler uma condição, uma ação de gravação e invocar um método. Esses atributos permitem o fluxo de trabalho reavaliar apenas regras que irá alterar a saída final.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso correto do <xref:System.Workflow.Activities.Rules.RuleInvokeAttribute>.  
+  
+```csharp  
+[RuleInvokeAttribute("UpdateAttributeValue")]  
+  
+bool DoSomething()  
+{  
+    return attributevalue();  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleInvokeAttribute (string methodInvoked);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string methodInvoked) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleInvokeAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="methodInvoked" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="methodInvoked">O método invocado pela regra.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.Rules.RuleInvokeAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodInvoked">
+      <MemberSignature Language="C#" Value="public string MethodInvoked { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodInvoked" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleInvokeAttribute.MethodInvoked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o método invocado pela condição.</summary>
+        <value>O método invocado pela condição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

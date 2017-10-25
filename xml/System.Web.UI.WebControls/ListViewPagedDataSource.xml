@@ -1,0 +1,443 @@
+<Type Name="ListViewPagedDataSource" FullName="System.Web.UI.WebControls.ListViewPagedDataSource">
+  <TypeSignature Language="C#" Value="public class ListViewPagedDataSource : System.Collections.ICollection, System.ComponentModel.ITypedList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewPagedDataSource extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.ComponentModel.ITypedList" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewPagedDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ITypedList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Encapsula as propriedades relacionadas a paginação de uma <see cref="T:System.Web.UI.WebControls.ListView" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListViewPagedDataSource> classe encapsula as propriedades que habilitam o <xref:System.Web.UI.WebControls.ListView> control realizar a paginação.  
+  
+ Essa classe usa o método melhor para enumerar os dados associados. Se a fonte de dados subjacente oferece suporte ao acesso indexado (como <xref:System.Array?displayProperty=nameWithType> e <xref:System.Collections.IList?displayProperty=nameWithType> objetos), a classe usa esse acesso. Caso contrário, a classe usa o enumerador que é criado pelo <xref:System.Collections.IEnumerable.GetEnumerator%2A> método.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListViewPagedDataSource> de classe, consulte o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.%23ctor%2A> construtor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewPagedDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewPagedDataSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListViewPagedDataSource" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.ListViewPagedDataSource> classe.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListViewPagedDataSource> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewPagedDataSource.AllowServerPaging%2A>|`false`|  
+|<xref:System.Web.UI.WebControls.ListViewPagedDataSource.TotalRowCount%2A>|0|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowServerPaging">
+      <MemberSignature Language="C#" Value="public bool AllowServerPaging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowServerPaging" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewPagedDataSource.AllowServerPaging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a paginação baseada em servidor está habilitada.</summary>
+        <value>
+          <see langword="true" />Se a paginação baseada em servidor estiver habilitada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.AllowServerPaging%2A> propriedade para especificar se a paginação baseada em servidor está habilitada. Se essa propriedade é definida como `true`, o objeto de fonte de dados executa paginação baseada em servidor. Caso contrário, o <xref:System.Windows.Forms.ListView> controle faz com base em interface do usuário de paginação. Com base em interface do usuário de paginação, do <xref:System.Windows.Forms.ListView> controle solicita todos os registros da fonte de dados e usa apenas aqueles para a página atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewPagedDataSource.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma base zero <see cref="T:System.Array" /> objeto que recebe os itens copiados da fonte de dados.</param>
+        <param name="index">A primeira posição especificada <see cref="T:System.Array" /> objeto para receber o conteúdo copiado.</param>
+        <summary>Copia todos os itens da fonte de dados especificado <see cref="T:System.Array" /> objeto, começando no índice especificado na <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para copiar o conteúdo da fonte de dados especificado <xref:System.Array?displayProperty=nameWithType> objeto, iniciando no índice especificado. O <xref:System.Array?displayProperty=nameWithType> objeto geralmente é usado para percorrer os itens na fonte de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewPagedDataSource.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens que serão usados da fonte de dados para a página atual.</summary>
+        <value>O número de itens que serão usados da fonte de dados para a página atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.Count%2A> para determinar o número de itens que serão usados da fonte de dados. O valor retornado é determinado pelos seguintes critérios:  
+  
+-   Se a página atual não é a última página e o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.MaximumRows%2A> propriedade é definida como um valor que é maior que ou igual a 0, o valor da <xref:System.Web.UI.WebControls.ListViewPagedDataSource.MaximumRows%2A> propriedade é retornada.  
+  
+-   Se a página atual não é a última página e o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.MaximumRows%2A> propriedade é definida como um valor menor que 0, o valor da <xref:System.Web.UI.WebControls.ListViewPagedDataSource.DataSourceCount%2A> propriedade é subtraída do valor da <xref:System.Web.UI.WebControls.ListViewPagedDataSource.StartRowIndex%2A> propriedade antes de ser retornado.  
+  
+-   Se a página atual for a última página, o valor de <xref:System.Web.UI.WebControls.ListViewPagedDataSource.DataSourceCount%2A> propriedade é subtraída do valor da <xref:System.Web.UI.WebControls.ListViewPagedDataSource.StartRowIndex%2A> propriedade antes de ser retornado.  
+  
+-   Se o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.DataSource%2A> é de propriedade `null`, será retornado 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewPagedDataSource.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte de dados.</summary>
+        <value>Um objeto que implementa <see cref="T:System.Collections.IEnumerable" /> que representa a fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.DataSource%2A> propriedade para obter ou definir a fonte de dados que está sendo enviada via pager.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceCount">
+      <MemberSignature Language="C#" Value="public int DataSourceCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DataSourceCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewPagedDataSource.DataSourceCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na fonte de dados.</summary>
+        <value>O número de itens na fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.DataSourceCount%2A> propriedade para determinar o número de itens que estão na fonte de dados. Se a paginação baseada em servidor é usada, o valor da <xref:System.Web.UI.WebControls.ListViewPagedDataSource.TotalRowCount%2A> propriedade é retornada; caso contrário, o número total de itens na fonte de dados é retornado.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.DataSource%2A> é de propriedade `null`, será retornado 0.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O objeto de fonte de dados não implementa o <see cref="T:System.Collections.ICollection" /> interface.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewPagedDataSource.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto que implementa <see cref="T:System.Collections.IEnumerator" /> e que contém todos os itens na fonte de dados.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> objeto que contém todos os itens na fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para obter um <xref:System.Collections.IEnumerator?displayProperty=nameWithType> que você pode usar para acessar itens individuais na fonte de dados do objeto. Para acessar o item na posição atual do enumerador, use o <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> propriedade. Use o <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método para mover para o próximo item na coleção. Para mover o enumerador como sua posição original, use o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método.  
+  
+> [!NOTE]
+>  Quando você primeiro obter o enumerador ou quando você chama o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método para mover o enumerador para o primeiro item na coleção, você deve chamar o <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método. Caso contrário, o item que é representado pelo <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> propriedade está definida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection GetItemProperties (System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetItemProperties(class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewPagedDataSource.GetItemProperties(System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="listAccessors">Uma matriz de objetos <see cref="T:System.ComponentModel.PropertyDescriptor" /> a serem encontrados na coleção como associáveis. Ele pode ser <see langword="null" />.</param>
+        <summary>Retorna um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> objeto que representa as propriedades que são usadas para associar dados.</summary>
+        <returns>O <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> objeto que representa as propriedades que são usadas para associar dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.GetItemProperties%2A> método para obter um <xref:System.ComponentModel.PropertyDescriptorCollection?displayProperty=nameWithType> objeto que representa as propriedades que são usadas para associar dados. O <xref:System.Web.UI.WebControls.ListViewPagedDataSource.GetItemProperties%2A> chamadas de método de <xref:System.ComponentModel.ITypedList.GetItemProperties%2A?displayProperty=nameWithType> método do objeto de fonte de dados subjacente. Se o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.DataSource%2A> é de propriedade `null` ou não implementa o <xref:System.ComponentModel.ITypedList?displayProperty=nameWithType> interface `null` é retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListName">
+      <MemberSignature Language="C#" Value="public string GetListName (System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetListName(class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewPagedDataSource.GetListName(System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="listAccessors">Uma matriz de <see cref="T:System.ComponentModel.PropertyDescriptor" /> objetos retornado para este nome de lista.</param>
+        <summary>Retorna o nome da lista. Esse método não se aplica a essa classe.</summary>
+        <returns>Uma cadeia de caracteres vazia em todos os casos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é herdado do <xref:System.ComponentModel.ITypedList?displayProperty=nameWithType> de interface e não se aplica a essa classe. Ela foi implementada para que ele retorna <xref:System.String.Empty?displayProperty=nameWithType> para todos os casos. Para obter mais informações sobre o método <xref:System.Web.UI.WebControls.ListViewPagedDataSource.GetListName%2A>, consulte <xref:System.ComponentModel.ITypedList.GetListName%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewPagedDataSource.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto <see cref="T:System.Web.UI.WebControls.ListViewPagedDataSource" /> é somente leitura.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsServerPagingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsServerPagingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsServerPagingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewPagedDataSource.IsServerPagingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a paginação baseada em servidor está habilitada.</summary>
+        <value>
+          <see langword="true" />Se a paginação baseada em servidor é indicada por meio de <see cref="P:System.Web.UI.WebControls.ListViewPagedDataSource.AllowServerPaging" /> propriedade; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewPagedDataSource.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à fonte de dados for sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é derivada de <xref:System.Collections.ICollection?displayProperty=nameWithType> interface e é substituído para sempre retornar `false` , que indica que essa classe não é thread-safe.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.IsSynchronized%2A> propriedade, consulte o <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumRows">
+      <MemberSignature Language="C#" Value="public int MaximumRows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewPagedDataSource.MaximumRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de itens a serem exibidos em uma única página.</summary>
+        <value>O número máximo de itens a serem exibidos em uma única página.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartRowIndex">
+      <MemberSignature Language="C#" Value="public int StartRowIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartRowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewPagedDataSource.StartRowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice do primeiro registro exibido na página.</summary>
+        <value>O índice do primeiro registro exibido na página.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewPagedDataSource.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto retornado nesta implementação é o <xref:System.Web.UI.WebControls.ListViewPagedDataSource> objeto propriamente dito.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.ListViewPagedDataSource.SyncRoot%2A> propriedade, consulte o <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalRowCount">
+      <MemberSignature Language="C#" Value="public int TotalRowCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TotalRowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewPagedDataSource.TotalRowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número total de itens na fonte de dados quando a paginação baseada em servidor que está sendo usada.</summary>
+        <value>O número total de itens na fonte de dados quando a paginação baseada em servidor que está sendo usada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

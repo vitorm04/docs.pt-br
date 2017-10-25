@@ -1,0 +1,183 @@
+<Type Name="IWebProxy" FullName="System.Net.IWebProxy">
+  <TypeSignature Language="C#" Value="public interface IWebProxy" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebProxy" />
+  <TypeSignature Language="DocId" Value="T:System.Net.IWebProxy" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a interface base para a implementação do acesso a proxy para a classe <see cref="T:System.Net.WebRequest" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.IWebProxy> interface fornece os métodos e propriedades que são exigidas pelo <xref:System.Net.WebRequest> classe para os servidores de proxy de acesso.  
+  
+ O <xref:System.Net.WebProxy> classe é a implementação base do <xref:System.Net.IWebProxy> interface.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>O <see cref="M:System.Net.IWebProxy.GetProxy(System.Uri)" /> método pode ser usado para controlar o uso de proxy com base no URI de destino. Use o <see cref="M:System.Net.IWebProxy.IsBypassed(System.Uri)" /> método para indicar que o proxy não deve ser usado para acessar o servidor de destino.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public System.Net.ICredentials Credentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IWebProxy.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As credenciais a serem enviadas para o servidor proxy para autenticação.</summary>
+        <value>Uma instância de <see cref="T:System.Net.ICredentials" /> que contém as credenciais necessárias para autenticar uma solicitação no servidor proxy.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.IWebProxy.Credentials%2A> propriedade é um <xref:System.Net.ICredentials> instância que contém as credenciais de autorização para enviar para o servidor proxy em resposta a um código de status HTTP 407 (autorização de proxy).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.WebProxy.Credentials%2A> propriedade para definir as credenciais que serão enviadas para o servidor proxy para autenticação.  
+  
+ [!code-cpp[IWebProxy_Interface#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IWebProxy_Interface/CPP/iwebproxy_interface.cpp#1)]
+ [!code-csharp[IWebProxy_Interface#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IWebProxy_Interface/CS/iwebproxy_interface.cs#1)]
+ [!code-vb[IWebProxy_Interface#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IWebProxy_Interface/VB/iwebproxy_interface.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProxy">
+      <MemberSignature Language="C#" Value="public Uri GetProxy (Uri destination);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Uri GetProxy(class System.Uri destination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IWebProxy.GetProxy(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="destination">Um <see cref="T:System.Uri" /> que especifica o recurso solicitado da Internet.</param>
+        <summary>Retorna o URI de um proxy.</summary>
+        <returns>Uma instância <see cref="T:System.Uri" /> que contém o URI do proxy usado para contatar <paramref name="destination" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.IWebProxy.GetProxy%2A> método retorna o URI do servidor proxy que lida com solicitações para o recurso de Internet que é especificado no `destination` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.WebProxy.GetProxy%2A> método para retornar o URI que o <xref:System.Net.WebRequest> usa para acessar o recurso de Internet.  
+  
+ [!code-cpp[IWebProxy_Interface#4](~/samples/snippets/cpp/VS_Snippets_Remoting/IWebProxy_Interface/CPP/iwebproxy_interface.cpp#4)]
+ [!code-csharp[IWebProxy_Interface#4](~/samples/snippets/csharp/VS_Snippets_Remoting/IWebProxy_Interface/CS/iwebproxy_interface.cs#4)]
+ [!code-vb[IWebProxy_Interface#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IWebProxy_Interface/VB/iwebproxy_interface.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBypassed">
+      <MemberSignature Language="C#" Value="public bool IsBypassed (Uri host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsBypassed(class System.Uri host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IWebProxy.IsBypassed(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="host">O <see cref="T:System.Uri" /> do host a ser verificado quanto ao uso do proxy.</param>
+        <summary>Indica que o proxy não deve ser usado para o host especificado.</summary>
+        <returns>
+          <see langword="true" /> caso o servidor proxy não deva ser usado para <paramref name="host" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.IWebProxy.IsBypassed%2A> método indica se deve usar o servidor proxy para acessar o host especificado no `host` parâmetro. Se <xref:System.Net.IWebProxy.IsBypassed%2A> é `true`, o proxy não é usado para entrar em contato com o host e a solicitação é passada diretamente para o servidor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.WebProxy.IsBypassed%2A> propriedade para determinar se o servidor proxy deve ser usado para o host especificado.  
+  
+ [!code-cpp[IWebProxy_Interface#4](~/samples/snippets/cpp/VS_Snippets_Remoting/IWebProxy_Interface/CPP/iwebproxy_interface.cpp#4)]
+ [!code-csharp[IWebProxy_Interface#4](~/samples/snippets/csharp/VS_Snippets_Remoting/IWebProxy_Interface/CS/iwebproxy_interface.cs#4)]
+ [!code-vb[IWebProxy_Interface#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IWebProxy_Interface/VB/iwebproxy_interface.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

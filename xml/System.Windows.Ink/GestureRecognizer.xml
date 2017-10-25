@@ -1,0 +1,268 @@
+<Type Name="GestureRecognizer" FullName="System.Windows.Ink.GestureRecognizer">
+  <TypeSignature Language="C#" Value="public sealed class GestureRecognizer : System.Windows.DependencyObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GestureRecognizer extends System.Windows.DependencyObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Ink.GestureRecognizer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DependencyObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Reconhece gestos de tinta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Ink.GestureRecognizer> identifica um gesto de tinta. Você pode definir o <xref:System.Windows.Ink.GestureRecognizer> reconhecer todos ou um subconjunto de gestos de aplicativos. Para definir o <xref:System.Windows.Ink.GestureRecognizer> para reconhecer um subconjunto de gestos do disponíveis, passar um <xref:System.Windows.Ink.ApplicationGesture> matriz para o construtor ou use o <xref:System.Windows.Ink.GestureRecognizer.SetEnabledGestures%2A> método. Para determinar se um <xref:System.Windows.Ink.StrokeCollection> contém um gesto, chamada de <xref:System.Windows.Ink.GestureRecognizer.Recognize%2A> método.  
+  
+<a name="xamlTextUsage_GestureRecognizer"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Você não pode usar essa classe em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como determinar se um <xref:System.Windows.Ink.Stroke> é um <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> gesto.  
+  
+ [!code-csharp[GestureControl#8](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureControl/CSharp/Gesture.cs#8)]
+ [!code-vb[GestureControl#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureControl/VisualBasic/Gesture.vb#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GestureRecognizer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.GestureRecognizer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Ink.GestureRecognizer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando ele é criado com esse construtor o <xref:System.Windows.Ink.GestureRecognizer> reconhece todos os gestos do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GestureRecognizer (System.Collections.Generic.IEnumerable&lt;System.Windows.Ink.ApplicationGesture&gt; enabledApplicationGestures);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Ink.ApplicationGesture&gt; enabledApplicationGestures) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.GestureRecognizer.#ctor(System.Collections.Generic.IEnumerable{System.Windows.Ink.ApplicationGesture})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enabledApplicationGestures" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Ink.ApplicationGesture&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="enabledApplicationGestures">Uma matriz do tipo <see cref="T:System.Windows.Ink.ApplicationGesture" /> que especifica os gestos de aplicativo a <see cref="T:System.Windows.Ink.GestureRecognizer" /> reconheça.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Ink.GestureRecognizer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Ink.GestureRecognizer.%23ctor%2A> construtor para criar um <xref:System.Windows.Ink.GestureRecognizer> que reconhece um subconjunto de gestos do aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.Windows.Ink.GestureRecognizer> que reconhece somente o <xref:System.Windows.Ink.ApplicationGesture.Down>, <xref:System.Windows.Ink.ApplicationGesture.Right>, e <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> gestos.  
+  
+ [!code-csharp[GestureControl#4](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureControl/CSharp/Gesture.cs#4)]
+ [!code-vb[GestureControl#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureControl/VisualBasic/Gesture.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.GestureRecognizer.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Windows.Ink.GestureRecognizer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Windows.Ink.GestureRecognizer.Dispose%2A> quando você terminar de usar o <xref:System.Windows.Ink.GestureRecognizer>. O <xref:System.Windows.Ink.GestureRecognizer.Dispose%2A> método deixa o <xref:System.Windows.Ink.GestureRecognizer> em um estado inutilizável. Portanto, depois de chamar <xref:System.Windows.Ink.GestureRecognizer.Dispose%2A>, você deve liberar todas as referências para o <xref:System.Windows.Ink.GestureRecognizer> para o coletor de lixo possa recuperar a memória que o <xref:System.Windows.Ink.GestureRecognizer> estava ocupando.  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Windows.Ink.GestureRecognizer.Dispose%2A> antes de liberar sua última referência para o <xref:System.Windows.Ink.GestureRecognizer>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Windows.Ink.GestureRecognizer> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnabledGestures">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Ink.ApplicationGesture&gt; GetEnabledGestures ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;valuetype System.Windows.Ink.ApplicationGesture&gt; GetEnabledGestures() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.GestureRecognizer.GetEnabledGestures" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Ink.ApplicationGesture&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os gestos do que o <see cref="T:System.Windows.Ink.GestureRecognizer" /> reconhece.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.Windows.Ink.ApplicationGesture" /> que contém gestos de <see cref="T:System.Windows.Ink.GestureRecognizer" /> é definido como reconhecer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como obter o aplicativo gestos que um <xref:System.Windows.Ink.GestureRecognizer> reconhece.  
+  
+ [!code-csharp[GestureControl#6](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureControl/CSharp/Gesture.cs#6)]
+ [!code-vb[GestureControl#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureControl/VisualBasic/Gesture.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRecognizerAvailable">
+      <MemberSignature Language="C#" Value="public bool IsRecognizerAvailable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRecognizerAvailable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Ink.GestureRecognizer.IsRecognizerAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booleano que indica se o reconhecedor de gestos está disponível no sistema do usuário.</summary>
+        <value>
+          <see langword="true" />Se o componente de reconhecimento está disponível. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como determinar se o reconhecedor de gestos está disponível antes de chamar o <xref:System.Windows.Ink.GestureRecognizer.Recognize%2A> método.  
+  
+ [!code-csharp[GestureControl#8](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureControl/CSharp/Gesture.cs#8)]
+ [!code-vb[GestureControl#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureControl/VisualBasic/Gesture.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recognize">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Ink.GestureRecognitionResult&gt; Recognize (System.Windows.Ink.StrokeCollection strokes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Ink.GestureRecognitionResult&gt; Recognize(class System.Windows.Ink.StrokeCollection strokes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.GestureRecognizer.Recognize(System.Windows.Ink.StrokeCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Ink.GestureRecognitionResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="strokes" Type="System.Windows.Ink.StrokeCollection" />
+      </Parameters>
+      <Docs>
+        <param name="strokes">O <see cref="T:System.Windows.Ink.StrokeCollection" /> para pesquisar gestos.</param>
+        <summary>Procura gestos do <see cref="T:System.Windows.Ink.StrokeCollection" />.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.Windows.Ink.GestureRecognitionResult" /> que contém o aplicativo gestos que o <see cref="T:System.Windows.Ink.GestureRecognizer" /> reconhecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz retornada pelo <xref:System.Windows.Ink.GestureRecognizer.Recognize%2A> método é classificado pelo <xref:System.Windows.Ink.GestureRecognitionResult.RecognitionConfidence%2A?displayProperty=nameWithType> propriedade. Por exemplo, <xref:System.Windows.Ink.GestureRecognizer.Recognize%2A> pode retornar um <xref:System.Windows.Ink.GestureRecognitionResult> matriz com os seguintes valores:  
+  
+|Índice|ApplicationGesture|RecognitionConfidence|  
+|-----------|------------------------|---------------------------|  
+|0|<xref:System.Windows.Ink.ApplicationGesture.Check>|<xref:System.Windows.Ink.RecognitionConfidence.Strong>|  
+|1|<xref:System.Windows.Ink.ApplicationGesture.NoGesture>|<xref:System.Windows.Ink.RecognitionConfidence.Intermediate>|  
+|2|<xref:System.Windows.Ink.ApplicationGesture.Curlicue>|<xref:System.Windows.Ink.RecognitionConfidence.Poor>|  
+|3|<xref:System.Windows.Ink.ApplicationGesture.DoubleCurlicue>|<xref:System.Windows.Ink.RecognitionConfidence.Poor>|  
+  
+ Isso significa que o <xref:System.Windows.Ink.GestureRecognizer> reconhece que é muito provável que o <xref:System.Windows.Ink.Stroke> é uma marca de seleção, provavelmente relativamente que o <xref:System.Windows.Ink.Stroke> não um gesto e provavelmente não que o <xref:System.Windows.Ink.Stroke> é um curlicue ou um curlicue duplo.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Ink.GestureRecognizer.Recognize%2A> método pode retornar uma matriz com <xref:System.Windows.Ink.ApplicationGesture.NoGesture> em uma posição superior <xref:System.Windows.Ink.RecognitionConfidence> que outros gestos de aplicativo. Isso significa que é mais provável que o <xref:System.Windows.Ink.Stroke> não é um gesto, em vez de um gesto que tenha menos <xref:System.Windows.Ink.RecognitionConfidence>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como determinar se um <xref:System.Windows.Ink.Stroke> é um <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> gesto.  
+  
+ [!code-csharp[GestureControl#8](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureControl/CSharp/Gesture.cs#8)]
+ [!code-vb[GestureControl#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureControl/VisualBasic/Gesture.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEnabledGestures">
+      <MemberSignature Language="C#" Value="public void SetEnabledGestures (System.Collections.Generic.IEnumerable&lt;System.Windows.Ink.ApplicationGesture&gt; applicationGestures);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEnabledGestures(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Windows.Ink.ApplicationGesture&gt; applicationGestures) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Ink.GestureRecognizer.SetEnabledGestures(System.Collections.Generic.IEnumerable{System.Windows.Ink.ApplicationGesture})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationGestures" Type="System.Collections.Generic.IEnumerable&lt;System.Windows.Ink.ApplicationGesture&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="applicationGestures">Uma matriz do tipo <see cref="T:System.Windows.Ink.ApplicationGesture" /> que especifica os gestos de aplicativo que você deseja o <see cref="T:System.Windows.Ink.GestureRecognizer" /> reconhecer.</param>
+        <summary>Define os gestos do aplicativo que o <see cref="T:System.Windows.Ink.GestureRecognizer" /> reconhece.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.Windows.Ink.GestureRecognizer> que reconhece somente o <xref:System.Windows.Ink.ApplicationGesture.Down>, <xref:System.Windows.Ink.ApplicationGesture.Right>, e <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> gestos.  
+  
+ [!code-csharp[GestureControl#5](~/samples/snippets/csharp/VS_Snippets_Wpf/GestureControl/CSharp/Gesture.cs#5)]
+ [!code-vb[GestureControl#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GestureControl/VisualBasic/Gesture.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

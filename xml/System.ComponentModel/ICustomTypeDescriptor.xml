@@ -1,0 +1,490 @@
+<Type Name="ICustomTypeDescriptor" FullName="System.ComponentModel.ICustomTypeDescriptor">
+  <TypeSignature Language="C#" Value="public interface ICustomTypeDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICustomTypeDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ICustomTypeDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface que concede informações de tipo personalizado dinâmico para um objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.ICustomTypeDescriptor> interface permite que um objeto fornecer informações sobre o próprio tipo. Normalmente, essa interface é usada quando um objeto precisa de informações de tipo dinâmico. Por outro lado, a <xref:System.ComponentModel.TypeDescriptor> classe fornece informações de tipo estático que são obtidas de metadados.  
+  
+ Por exemplo, <xref:System.ComponentModel.ICustomTypeDescriptor> é usado no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para fornecer informações de tipo para objetos COM. Objetos COM não dão suporte a propriedades ou atributos. Portanto, o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa <xref:System.ComponentModel.ICustomTypeDescriptor> implementar propriedades e atributos para objetos COM.  
+  
+ Para fornecer informações de tipo personalizado dinâmico, uma classe pode implementar <xref:System.ComponentModel.ICustomTypeDescriptor> ou derivam de <xref:System.ComponentModel.CustomTypeDescriptor> classe, que fornece uma implementação simples desta interface.  
+  
+> [!NOTE]
+>  Não há suporte de tempo de design para associação de dados para objetos que implementam o <xref:System.ComponentModel.ICustomTypeDescriptor> interface. Além disso, ao associar a uma instância de tempo de execução de <xref:System.ComponentModel.ICustomTypeDescriptor>, as propriedades públicas do tipo subjacente são ignoradas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAttributes">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.AttributeCollection GetAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.AttributeCollection GetAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AttributeCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de atributos personalizados para esta instância de um componente.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.AttributeCollection" /> que contém os atributos para este objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno é nunca `null`.  
+  
+ Os implementadores podem retornar vazio <xref:System.ComponentModel.AttributeCollection> se nenhum atributo personalizado for especificado para um objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassName">
+      <MemberSignature Language="C#" Value="public string GetClassName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetClassName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetClassName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome da classe desta instância de um componente.</summary>
+        <returns>O nome da classe do objeto, ou <see langword="null" /> se a classe não tem um nome.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `null` é retornado, use o nome de tipo do <xref:System.ComponentModel.ICustomTypeDescriptor.GetComponentName%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetComponentName">
+      <MemberSignature Language="C#" Value="public string GetComponentName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetComponentName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetComponentName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome desta instância de um componente.</summary>
+        <returns>O nome do objeto ou <see langword="null" /> se o objeto não tiver um nome.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `null` for retornado, use o nome padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConverter">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.TypeConverter GetConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.TypeConverter GetConverter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetConverter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um conversor de tipo para esta instância de um componente.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter" /> que é o conversor para esse objeto, ou <see langword="null" /> se não houver nenhum <see cref="T:System.ComponentModel.TypeConverter" /> para este objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `null` é retornado, use o padrão <xref:System.ComponentModel.TypeConverter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultEvent">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.EventDescriptor GetDefaultEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptor GetDefaultEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetDefaultEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o evento padrão para esta instância de um componente.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.EventDescriptor" /> que representa o evento padrão para esse objeto, ou <see langword="null" /> se este objeto não tem eventos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultProperty">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptor GetDefaultProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptor GetDefaultProperty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetDefaultProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a propriedade padrão para esta instância de um componente.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> que representa a propriedade padrão para esse objeto, ou <see langword="null" /> se este objeto não tem propriedades.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditor">
+      <MemberSignature Language="C#" Value="public object GetEditor (Type editorBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetEditor(class System.Type editorBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetEditor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="editorBaseType">Um <see cref="T:System.Type" /> que representa o editor desse objeto.</param>
+        <summary>Retorna um editor do tipo especificado para esta instância de um componente.</summary>
+        <returns>Um <see cref="T:System.Object" /> do tipo especificado que é o editor para esse objeto, ou <see langword="null" /> se o editor não pode ser encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do `editorBaseType` parâmetro geralmente é <xref:System.Drawing.Design.UITypeEditor>, mas você também pode usar outros tipos (por exemplo, <xref:System.ComponentModel.ComponentEditor> e <xref:System.ComponentModel.InstanceCreationEditor>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvents">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.EventDescriptorCollection GetEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection GetEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna os eventos desta instância de um componente.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.EventDescriptorCollection" /> que representa os eventos para esta instância do componente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os eventos para essa instância podem ser diferente do conjunto de eventos que fornece a classe. Por exemplo, se o componente é baseado no site, o site pode adicionar ou remover eventos adicionais.  
+  
+ Implementações podem retornar <xref:System.ComponentModel.EventDescriptorCollection?displayProperty=nameWithType> se nenhuma propriedade está especificada. Esse método deve retornar nunca `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvents">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.EventDescriptorCollection GetEvents (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptorCollection GetEvents(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetEvents(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Uma matriz do tipo <see cref="T:System.Attribute" /> que é usado como um filtro.</param>
+        <summary>Retorna os eventos para essa instância de um componente usando a matriz de atributo especificado como um filtro.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.EventDescriptorCollection" /> que representa os eventos filtrados para esta instância do componente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os eventos para essa instância podem ser diferente do conjunto de eventos que fornece a classe. Por exemplo, se o componente é baseado no site, o site pode adicionar ou remover eventos adicionais.  
+  
+ Se um <xref:System.Attribute> é especificado no `attributes` matriz e o evento não tem uma instância da classe para o atributo, a matriz retornada inclui o evento, se o <xref:System.Attribute> é o evento padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection GetProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna as propriedades desta instância de um componente.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que representa as propriedades da instância deste componente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades para esta instância podem ser diferente do conjunto de propriedades que fornece a classe. Por exemplo, se o componente está localizado, o site pode adicionar ou remover propriedades adicionais.  
+  
+ Os implementadores podem retornar <xref:System.ComponentModel.PropertyDescriptorCollection?displayProperty=nameWithType> se nenhuma propriedade está especificada. Esse método deve retornar nunca `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection GetProperties (Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetProperties(class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetProperties(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Uma matriz do tipo <see cref="T:System.Attribute" /> que é usado como um filtro.</param>
+        <summary>Retorna as propriedades para esta instância de um componente usando a matriz de atributos como um filtro.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que representa as propriedades filtradas para esta instância do componente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades para esta instância podem ser diferente do conjunto de propriedades que fornece a classe. Por exemplo, se o componente está localizado, o site pode adicionar ou remover propriedades adicionais.  
+  
+ Se um <xref:System.Attribute> é especificado no `attributes` matriz e a propriedade não tem uma instância da classe para o atributo, a coleção retornada incluirá a propriedade se o <xref:System.Attribute> é a propriedade padrão.  
+  
+ Para regras de filtragem, consulte <xref:System.ComponentModel.TypeDescriptor.GetProperties%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyOwner">
+      <MemberSignature Language="C#" Value="public object GetPropertyOwner (System.ComponentModel.PropertyDescriptor pd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetPropertyOwner(class System.ComponentModel.PropertyDescriptor pd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pd" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="pd">Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> que representa a propriedade cujo proprietário deve ser encontrado.</param>
+        <summary>Retorna um objeto que contém a propriedade descrita pelo descritor de propriedade especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o proprietário da propriedade especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.ICustomTypeDescriptor.GetPropertyOwner%2A> método recupera o objeto que contém o membro de propriedade que é descrito por <xref:System.ComponentModel.PropertyDescriptor> parâmetro. Normalmente, esse objeto é necessário para o <xref:System.ComponentModel.PropertyDescriptor.GetValue%2A?displayProperty=nameWithType> e <xref:System.ComponentModel.PropertyDescriptor.SetValue%2A?displayProperty=nameWithType> métodos.  
+  
+ Esse método deve retornar um objeto que pode ser usado da seguinte maneira:  
+  
+```  
+pd.GetValue(GetPropertyOwner(myPd));  
+```  
+  
+ Se `myPd` é `null`, sua implementação do <xref:System.ComponentModel.ICustomTypeDescriptor> interface deve retornar o objeto padrão (normalmente, o objeto base que expõe as propriedades e atributos).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

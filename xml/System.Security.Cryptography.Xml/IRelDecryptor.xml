@@ -1,0 +1,73 @@
+<Type Name="IRelDecryptor" FullName="System.Security.Cryptography.Xml.IRelDecryptor">
+  <TypeSignature Language="C#" Value="public interface IRelDecryptor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRelDecryptor" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.IRelDecryptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define métodos que descriptografar um XrML <see langword="&lt;encryptedGrant&gt;" /> elemento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.Xml.IRelDecryptor> interface com o <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> classe para descriptografar um XrML `<encryptedGrant>` elemento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como validar uma assinatura digital XML usando o <xref:System.Security.Cryptography.Xml.IRelDecryptor> interface e o <xref:System.Security.Cryptography.Xml.XmlLicenseTransform> classe.  
+  
+ [!code-cpp[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/cpp/sample.cpp#2)]
+ [!code-csharp[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/CS/sample.cs#2)]
+ [!code-vb[Cryptography.XML.XmlLicenseTransform#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XmlLicenseTransform/VB/sample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Decrypt">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Decrypt (System.Security.Cryptography.Xml.EncryptionMethod encryptionMethod, System.Security.Cryptography.Xml.KeyInfo keyInfo, System.IO.Stream toDecrypt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream Decrypt(class System.Security.Cryptography.Xml.EncryptionMethod encryptionMethod, class System.Security.Cryptography.Xml.KeyInfo keyInfo, class System.IO.Stream toDecrypt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.IRelDecryptor.Decrypt(System.Security.Cryptography.Xml.EncryptionMethod,System.Security.Cryptography.Xml.KeyInfo,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptionMethod" Type="System.Security.Cryptography.Xml.EncryptionMethod" />
+        <Parameter Name="keyInfo" Type="System.Security.Cryptography.Xml.KeyInfo" />
+        <Parameter Name="toDecrypt" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="encryptionMethod">Um <see cref="T:System.Security.Cryptography.Xml.EncryptionMethod" /> objeto que encapsula o algoritmo usado para criptografia de XML.</param>
+        <param name="keyInfo">Um <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> objeto que contém uma chave assimétrica a ser usado para descriptografia.</param>
+        <param name="toDecrypt">Um objeto de fluxo que contém um <see langword="&lt;encryptedGrant&gt;" /> elemento para descriptografar.</param>
+        <summary>Descriptografa uma XrML <see langword="&lt;encryptedGrant&gt;" /> elemento que está contido dentro de uma <see cref="T:System.IO.Stream" /> objeto.</summary>
+        <returns>Um <see cref="T:System.IO.Stream" /> objeto que contém um descriptografado <see langword="&lt;encryptedGrant&gt;" /> elemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.IRelDecryptor.Decrypt%2A> método descriptografa uma XrML `<encryptedGrant>` elemento e retorna um fluxo de texto sem formatação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

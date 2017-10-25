@@ -1,0 +1,1163 @@
+<Type Name="Metafile" FullName="System.Drawing.Imaging.Metafile">
+  <TypeSignature Language="C#" Value="public sealed class Metafile : System.Drawing.Image" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit Metafile extends System.Drawing.Image" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.Metafile" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Image</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Drawing.Design.MetafileEditor, System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um metarquivo gráfico. Um metarquivo contém registros que descrevem uma sequência de operações de gráficos que pode ser registrada (construída) e reproduzida (exibida). Essa classe não é herdável.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usa o <xref:System.Drawing.Image.Save%2A> método para salvar uma imagem como um arquivo de formato Windows Metafile (WMF) ou formato EMF (metarquivo avançado), o arquivo resultante é salvo como um arquivo de elementos gráficos PNG (Portable Network). Esse comportamento ocorre porque o [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] componente do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] não tem um codificador que você pode usar para salvar arquivos como arquivos. wmf ou. emf.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Drawing.Imaging.Metafile> e usar o <xref:System.Drawing.Imaging.Metafile.PlayRecord%2A> método.  
+  
+ [!code-csharp[System.Drawing.Graphics.EnumerateMetafile#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.EnumerateMetafile/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.Graphics.EnumerateMetafile#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.EnumerateMetafile/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O <see cref="T:System.IO.Stream" /> por meio do qual o novo <see cref="T:System.Drawing.Imaging.Metafile" /> será criado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Imaging.Metafile" /> do fluxo de dados especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">Um <see cref="T:System.String" /> que representa o nome do arquivo do qual criar o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Imaging.Metafile" /> do nome do arquivo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar e usar um <xref:System.Drawing.Imaging.Metafile>.  
+  
+ [!code-csharp[System.Drawing.Graphics.EnumerateMetafile#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.EnumerateMetafile/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.Graphics.EnumerateMetafile#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.EnumerateMetafile/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr henhmetafile, bool deleteEmf);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int henhmetafile, bool deleteEmf) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="henhmetafile" Type="System.IntPtr" />
+        <Parameter Name="deleteEmf" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="henhmetafile">Um identificador para um metarquivo avançado.</param>
+        <param name="deleteEmf">
+          <see langword="true" />Para excluir o metarquivo aprimorado controlar quando o <see cref="T:System.Drawing.Imaging.Metafile" /> for excluído; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do identificador especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr referenceHdc, System.Drawing.Imaging.EmfType emfType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int referenceHdc, valuetype System.Drawing.Imaging.EmfType emfType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.Imaging.EmfType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="emfType" Type="System.Drawing.Imaging.EmfType" />
+      </Parameters>
+      <Docs>
+        <param name="referenceHdc">O identificador para um contexto de dispositivo.</param>
+        <param name="emfType">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do identificador especificado em um contexto de dispositivo e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr hmetafile, System.Drawing.Imaging.WmfPlaceableFileHeader wmfHeader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int hmetafile, class System.Drawing.Imaging.WmfPlaceableFileHeader wmfHeader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.Imaging.WmfPlaceableFileHeader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="hmetafile" Type="System.IntPtr" />
+        <Parameter Name="wmfHeader" Type="System.Drawing.Imaging.WmfPlaceableFileHeader" />
+      </Parameters>
+      <Docs>
+        <param name="hmetafile">Um identificador do windows para um <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="wmfHeader">Um <see cref="T:System.Drawing.Imaging.WmfPlaceableFileHeader" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do identificador especificado e um <see cref="T:System.Drawing.Imaging.WmfPlaceableFileHeader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr referenceHdc, System.Drawing.Rectangle frameRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int referenceHdc, valuetype System.Drawing.Rectangle frameRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.Rectangle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="referenceHdc">O identificador para um contexto de dispositivo.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe a partir do contexto de dispositivo especificado, limitado pelo retângulo especificado.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr referenceHdc, System.Drawing.RectangleF frameRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int referenceHdc, valuetype System.Drawing.RectangleF frameRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.RectangleF)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="referenceHdc">O identificador para um contexto de dispositivo.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe a partir do contexto de dispositivo especificado, limitado pelo retângulo especificado.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream, IntPtr referenceHdc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, native int referenceHdc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream,System.IntPtr)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém os dados para este <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Imaging.Metafile" /> do fluxo de dados especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr referenceHdc, System.Drawing.Imaging.EmfType emfType, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int referenceHdc, valuetype System.Drawing.Imaging.EmfType emfType, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.Imaging.EmfType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="emfType" Type="System.Drawing.Imaging.EmfType" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="referenceHdc">O identificador para um contexto de dispositivo.</param>
+        <param name="emfType">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="description">Um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do identificador especificado em um contexto de dispositivo e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />. Uma cadeia de caracteres pode ser fornecida para nomear o arquivo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr hmetafile, System.Drawing.Imaging.WmfPlaceableFileHeader wmfHeader, bool deleteWmf);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int hmetafile, class System.Drawing.Imaging.WmfPlaceableFileHeader wmfHeader, bool deleteWmf) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.Imaging.WmfPlaceableFileHeader,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="hmetafile" Type="System.IntPtr" />
+        <Parameter Name="wmfHeader" Type="System.Drawing.Imaging.WmfPlaceableFileHeader" />
+        <Parameter Name="deleteWmf" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="hmetafile">Um identificador do windows para um <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="wmfHeader">Um <see cref="T:System.Drawing.Imaging.WmfPlaceableFileHeader" />.</param>
+        <param name="deleteWmf">
+          <see langword="true" />Para excluir o identificador para o novo <see cref="T:System.Drawing.Imaging.Metafile" /> quando o <see cref="T:System.Drawing.Imaging.Metafile" /> for excluído; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do identificador especificado e um <see cref="T:System.Drawing.Imaging.WmfPlaceableFileHeader" />. Além disso, o <paramref name="deleteWmf" /> parâmetro pode ser usado para excluir o identificador quando o meta-arquivo é excluído.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr referenceHdc, System.Drawing.Rectangle frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int referenceHdc, valuetype System.Drawing.Rectangle frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.Rectangle,System.Drawing.Imaging.MetafileFrameUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+      </Parameters>
+      <Docs>
+        <param name="referenceHdc">O identificador para um contexto de dispositivo.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe a partir do contexto de dispositivo especificado, limitado pelo retângulo especificado que usa a unidade de medida fornecida.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr referenceHdc, System.Drawing.RectangleF frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int referenceHdc, valuetype System.Drawing.RectangleF frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.RectangleF,System.Drawing.Imaging.MetafileFrameUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+      </Parameters>
+      <Docs>
+        <param name="referenceHdc">O identificador para um contexto de dispositivo.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe a partir do contexto de dispositivo especificado, limitado pelo retângulo especificado que usa a unidade de medida fornecida.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream, IntPtr referenceHdc, System.Drawing.Imaging.EmfType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, native int referenceHdc, valuetype System.Drawing.Imaging.EmfType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream,System.IntPtr,System.Drawing.Imaging.EmfType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém os dados para este <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do fluxo de dados especificado, um identificador do Windows em um contexto de dispositivo e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream, IntPtr referenceHdc, System.Drawing.Rectangle frameRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, native int referenceHdc, valuetype System.Drawing.Rectangle frameRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream,System.IntPtr,System.Drawing.Rectangle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém os dados para este <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do fluxo de dados especificado, um identificador do Windows em um contexto de dispositivo e um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda a nova estrutura <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream, IntPtr referenceHdc, System.Drawing.RectangleF frameRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, native int referenceHdc, valuetype System.Drawing.RectangleF frameRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream,System.IntPtr,System.Drawing.RectangleF)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém os dados para este <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do fluxo de dados especificado, um identificador do Windows em um contexto de dispositivo e um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda a nova estrutura <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.Imaging.EmfType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.Imaging.EmfType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.Imaging.EmfType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.Rectangle frameRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.Rectangle frameRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.Rectangle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo e um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda a nova estrutura <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.RectangleF frameRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.RectangleF frameRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.RectangleF)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo e um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda a nova estrutura <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr referenceHdc, System.Drawing.Rectangle frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int referenceHdc, valuetype System.Drawing.Rectangle frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.Rectangle,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+      </Parameters>
+      <Docs>
+        <param name="referenceHdc">O identificador para um contexto de dispositivo.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe a partir do contexto de dispositivo especificado, limitado pelo retângulo especificado que usa fornecida unidade de medida, e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr referenceHdc, System.Drawing.RectangleF frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int referenceHdc, valuetype System.Drawing.RectangleF frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.RectangleF,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+      </Parameters>
+      <Docs>
+        <param name="referenceHdc">O identificador para um contexto de dispositivo.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe a partir do contexto de dispositivo especificado, limitado pelo retângulo especificado que usa fornecida unidade de medida, e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream, IntPtr referenceHdc, System.Drawing.Imaging.EmfType type, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, native int referenceHdc, valuetype System.Drawing.Imaging.EmfType type, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream,System.IntPtr,System.Drawing.Imaging.EmfType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém os dados para este <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="description">Um <see cref="T:System.String" /> que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do fluxo de dados especificado, um identificador do Windows em um contexto de dispositivo e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />. Além disso, uma cadeia de caracteres que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" /> podem ser adicionados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream, IntPtr referenceHdc, System.Drawing.Rectangle frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, native int referenceHdc, valuetype System.Drawing.Rectangle frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream,System.IntPtr,System.Drawing.Rectangle,System.Drawing.Imaging.MetafileFrameUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém os dados para este <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do fluxo de dados especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.Rectangle" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />e a unidade de medida fornecida.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream, IntPtr referenceHdc, System.Drawing.RectangleF frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, native int referenceHdc, valuetype System.Drawing.RectangleF frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream,System.IntPtr,System.Drawing.RectangleF,System.Drawing.Imaging.MetafileFrameUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém os dados para este <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do fluxo de dados especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.RectangleF" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />e a unidade de medida fornecida.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.Imaging.EmfType type, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.Imaging.EmfType type, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.Imaging.EmfType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="description">Um <see cref="T:System.String" /> que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />. Bem, uma cadeia de caracteres descritiva pode ser adicionada.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.Rectangle frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.Rectangle frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.Rectangle,System.Drawing.Imaging.MetafileFrameUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda a nova estrutura <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.Rectangle" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />e a unidade de medida fornecida.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.RectangleF frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.RectangleF frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.RectangleF,System.Drawing.Imaging.MetafileFrameUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.RectangleF" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />e a unidade de medida fornecida.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr referenceHdc, System.Drawing.Rectangle frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type, string desc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int referenceHdc, valuetype System.Drawing.Rectangle frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type, string desc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.Rectangle,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+        <Parameter Name="desc" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="referenceHdc">O identificador para um contexto de dispositivo.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="desc">Um <see cref="T:System.String" /> que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe a partir do contexto de dispositivo especificado, limitado pelo retângulo especificado que usa fornecida unidade de medida, e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />. Uma cadeia de caracteres pode ser fornecida para nomear o arquivo.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (IntPtr referenceHdc, System.Drawing.RectangleF frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int referenceHdc, valuetype System.Drawing.RectangleF frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IntPtr,System.Drawing.RectangleF,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="referenceHdc">O identificador para um contexto de dispositivo.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="description">Um <see cref="T:System.String" /> que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe a partir do contexto de dispositivo especificado, limitado pelo retângulo especificado que usa fornecida unidade de medida, e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />. Uma cadeia de caracteres pode ser fornecida para nomear o arquivo.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream, IntPtr referenceHdc, System.Drawing.Rectangle frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, native int referenceHdc, valuetype System.Drawing.Rectangle frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream,System.IntPtr,System.Drawing.Rectangle,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém os dados para este <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do fluxo de dados especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.Rectangle" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />, fornecida unidade de medida e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream, IntPtr referenceHdc, System.Drawing.RectangleF frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, native int referenceHdc, valuetype System.Drawing.RectangleF frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream,System.IntPtr,System.Drawing.RectangleF,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém os dados para este <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do fluxo de dados especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.RectangleF" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />, fornecida unidade de medida e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.Rectangle frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.Rectangle frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.Rectangle,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.Rectangle" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />, fornecida unidade de medida e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.Rectangle frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.Rectangle frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.Rectangle,System.Drawing.Imaging.MetafileFrameUnit,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="description">Um <see cref="T:System.String" /> que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.Rectangle" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />e a unidade de medida fornecida. Também pode ser adicionada a uma cadeia de caracteres descritiva.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.RectangleF frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.RectangleF frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.RectangleF,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.RectangleF" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />, fornecida unidade de medida e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.RectangleF frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, string desc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.RectangleF frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, string desc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.RectangleF,System.Drawing.Imaging.MetafileFrameUnit,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="desc" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="desc">Um <see cref="T:System.String" /> que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.RectangleF" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />e a unidade de medida fornecida. Também pode ser adicionada a uma cadeia de caracteres descritiva.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream, IntPtr referenceHdc, System.Drawing.Rectangle frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, native int referenceHdc, valuetype System.Drawing.Rectangle frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream,System.IntPtr,System.Drawing.Rectangle,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém os dados para este <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="description">Um <see cref="T:System.String" /> que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do fluxo de dados especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.Rectangle" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />, fornecida unidade de medida e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />. Uma cadeia de caracteres que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" /> podem ser adicionados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (System.IO.Stream stream, IntPtr referenceHdc, System.Drawing.RectangleF frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, native int referenceHdc, valuetype System.Drawing.RectangleF frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.IO.Stream,System.IntPtr,System.Drawing.RectangleF,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém os dados para este <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="description">Um <see cref="T:System.String" /> que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe do fluxo de dados especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.RectangleF" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />, fornecida unidade de medida e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />. Uma cadeia de caracteres que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" /> podem ser adicionados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.Rectangle frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.Rectangle frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.Rectangle,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="description">Um <see cref="T:System.String" /> que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.Rectangle" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />, fornecida unidade de medida e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />. Também pode ser adicionada a uma cadeia de caracteres descritiva.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Metafile (string fileName, IntPtr referenceHdc, System.Drawing.RectangleF frameRect, System.Drawing.Imaging.MetafileFrameUnit frameUnit, System.Drawing.Imaging.EmfType type, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, native int referenceHdc, valuetype System.Drawing.RectangleF frameRect, valuetype System.Drawing.Imaging.MetafileFrameUnit frameUnit, valuetype System.Drawing.Imaging.EmfType type, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.#ctor(System.String,System.IntPtr,System.Drawing.RectangleF,System.Drawing.Imaging.MetafileFrameUnit,System.Drawing.Imaging.EmfType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="referenceHdc" Type="System.IntPtr" />
+        <Parameter Name="frameRect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="frameUnit" Type="System.Drawing.Imaging.MetafileFrameUnit" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.EmfType" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que representa o nome do arquivo do novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="referenceHdc">Um identificador para um contexto de dispositivo do Windows.</param>
+        <param name="frameRect">Um <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="frameUnit">Um <see cref="T:System.Drawing.Imaging.MetafileFrameUnit" /> que especifica a unidade de medida para <c>frameRect</c>.</param>
+        <param name="type">Um <see cref="T:System.Drawing.Imaging.EmfType" /> que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <param name="description">Um <see cref="T:System.String" /> que contém um nome descritivo para o novo <see cref="T:System.Drawing.Imaging.Metafile" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Imaging.Metafile" /> classe com o nome de arquivo especificado, um identificador do Windows em um contexto de dispositivo, uma <see cref="T:System.Drawing.RectangleF" /> estrutura que representa o retângulo que circunda o novo <see cref="T:System.Drawing.Imaging.Metafile" />, fornecida unidade de medida e um <see cref="T:System.Drawing.Imaging.EmfType" /> enumeração que especifica o formato da <see cref="T:System.Drawing.Imaging.Metafile" />. Também pode ser adicionada a uma cadeia de caracteres descritiva.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">acesso de leitura para o arquivo especificado por <paramref name="filename" />. Enumeração relacionada:<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHenhmetafile">
+      <MemberSignature Language="C#" Value="public IntPtr GetHenhmetafile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance native int GetHenhmetafile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.GetHenhmetafile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um identificador para um avançado <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <returns>Um identificador do Windows para essa funcionalidade <see cref="T:System.Drawing.Imaging.Metafile" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetafileHeader">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.MetafileHeader GetMetafileHeader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Imaging.MetafileHeader GetMetafileHeader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.GetMetafileHeader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.MetafileHeader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see cref="T:System.Drawing.Imaging.MetafileHeader" /> associado a este <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Imaging.MetafileHeader" /> associado a este <see cref="T:System.Drawing.Imaging.Metafile" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetafileHeader">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.MetafileHeader GetMetafileHeader (IntPtr henhmetafile);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Imaging.MetafileHeader GetMetafileHeader(native int henhmetafile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.GetMetafileHeader(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.MetafileHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="henhmetafile" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="henhmetafile">O identificador para aprimorada <see cref="T:System.Drawing.Imaging.Metafile" /> para a qual um cabeçalho é retornado.</param>
+        <summary>Retorna o <see cref="T:System.Drawing.Imaging.MetafileHeader" /> associado ao <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Imaging.MetafileHeader" /> associado ao <see cref="T:System.Drawing.Imaging.Metafile" /> especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetafileHeader">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.MetafileHeader GetMetafileHeader (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Imaging.MetafileHeader GetMetafileHeader(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.GetMetafileHeader(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.MetafileHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém o <see cref="T:System.Drawing.Imaging.Metafile" /> para que um cabeçalho é recuperado.</param>
+        <summary>Retorna o <see cref="T:System.Drawing.Imaging.MetafileHeader" /> associado ao <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Imaging.MetafileHeader" /> associado ao <see cref="T:System.Drawing.Imaging.Metafile" /> especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetafileHeader">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.MetafileHeader GetMetafileHeader (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Imaging.MetafileHeader GetMetafileHeader(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.GetMetafileHeader(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.MetafileHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que contém o nome do <see cref="T:System.Drawing.Imaging.Metafile" /> para que um cabeçalho é recuperado.</param>
+        <summary>Retorna o <see cref="T:System.Drawing.Imaging.MetafileHeader" /> associado ao <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Imaging.MetafileHeader" /> associado ao <see cref="T:System.Drawing.Imaging.Metafile" /> especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetafileHeader">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Imaging.MetafileHeader GetMetafileHeader (IntPtr hmetafile, System.Drawing.Imaging.WmfPlaceableFileHeader wmfHeader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Imaging.MetafileHeader GetMetafileHeader(native int hmetafile, class System.Drawing.Imaging.WmfPlaceableFileHeader wmfHeader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.GetMetafileHeader(System.IntPtr,System.Drawing.Imaging.WmfPlaceableFileHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.MetafileHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hmetafile" Type="System.IntPtr" />
+        <Parameter Name="wmfHeader" Type="System.Drawing.Imaging.WmfPlaceableFileHeader" />
+      </Parameters>
+      <Docs>
+        <param name="hmetafile">O identificador para o <see cref="T:System.Drawing.Imaging.Metafile" /> para o qual retornar um cabeçalho.</param>
+        <param name="wmfHeader">Um <see cref="T:System.Drawing.Imaging.WmfPlaceableFileHeader" />.</param>
+        <summary>Retorna o <see cref="T:System.Drawing.Imaging.MetafileHeader" /> associado ao <see cref="T:System.Drawing.Imaging.Metafile" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Imaging.MetafileHeader" /> associado ao <see cref="T:System.Drawing.Imaging.Metafile" /> especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlayRecord">
+      <MemberSignature Language="C#" Value="public void PlayRecord (System.Drawing.Imaging.EmfPlusRecordType recordType, int flags, int dataSize, byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PlayRecord(valuetype System.Drawing.Imaging.EmfPlusRecordType recordType, int32 flags, int32 dataSize, unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.Metafile.PlayRecord(System.Drawing.Imaging.EmfPlusRecordType,System.Int32,System.Int32,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="recordType" Type="System.Drawing.Imaging.EmfPlusRecordType" />
+        <Parameter Name="flags" Type="System.Int32" />
+        <Parameter Name="dataSize" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="recordType">Elemento do <see cref="T:System.Drawing.Imaging.EmfPlusRecordType" /> que especifica o tipo de registro de metarquivo sendo executado.</param>
+        <param name="flags">Um conjunto de sinalizadores que especifica os atributos do registro.</param>
+        <param name="dataSize">O número de bytes nos dados de registro.</param>
+        <param name="data">Uma matriz de bytes que contém os dados de registro.</param>
+        <summary>Executa um registro de metarquivo individual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Imaging.Metafile.PlayRecord%2A> método.  
+  
+ [!code-csharp[System.Drawing.Graphics.EnumerateMetafile#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.EnumerateMetafile/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.Graphics.EnumerateMetafile#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.EnumerateMetafile/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

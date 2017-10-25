@@ -1,0 +1,169 @@
+<Type Name="UrlPropertyAttribute" FullName="System.Web.UI.UrlPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class UrlPropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UrlPropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.UrlPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o atributo que controla o uso para identificar as propriedades de cadeia de caracteres que contém os valores da URL. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.UrlPropertyAttribute> é um atributo aplicado a uma propriedade de controle que representa uma URL. Além de marcação de uma propriedade de cadeia de caracteres como que representa uma URL, o <xref:System.Web.UI.UrlPropertyAttribute> atributo define o <xref:System.Web.UI.UrlPropertyAttribute.Filter%2A> que identifica os tipos de arquivo específicos que podem ser usados para filtrar em relação à propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma classe que implementa uma propriedade específica do URL. Neste exemplo de código, um <xref:System.Web.UI.UrlPropertyAttribute> atributo é aplicado ao `TargetUrl` propriedade o `CustomHyperLinkControl` classe. O atributo define um filtro de arquivo específico para arquivos ASP.NET.  
+  
+ [!code-csharp[System.Web.UI.UrlPropertyAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.UrlPropertyAttribute/CS/CustomHyperLinkControl.cs#2)]
+ [!code-vb[System.Web.UI.UrlPropertyAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.UrlPropertyAttribute/VB/CustomHyperLinkControl.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UrlPropertyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UrlPropertyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.Web.UI.UrlPropertyAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância padrão do <xref:System.Web.UI.UrlPropertyAttribute> classe é inicializada com o <xref:System.Web.UI.UrlPropertyAttribute.Filter%2A> propriedade definida como o valor "*.\*".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma classe que implementa uma propriedade específica do URL. Neste exemplo de código, um padrão <xref:System.Web.UI.UrlPropertyAttribute> atributo é aplicado ao `TargetUrl` propriedade o `CustomHyperLinkControl` classe. O atributo indica suporte para a URL de todos os tipos e especifica um conjunto de filtros de arquivo padrão para "*. \*".  
+  
+ [!code-csharp[System.Web.UI.UrlPropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.UrlPropertyAttribute/CS/CustomHyperLinkControl.cs#1)]
+ [!code-vb[System.Web.UI.UrlPropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.UrlPropertyAttribute/VB/CustomHyperLinkControl.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UrlPropertyAttribute (string filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UrlPropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Um filtro de arquivo associado com a propriedade URL específica.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.UrlPropertyAttribute" /> classe, definindo o <see cref="P:System.Web.UI.UrlPropertyAttribute.Filter" /> propriedade de cadeia de caracteres especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância de um <xref:System.Web.UI.UrlPropertyAttribute> classe criada com esse construtor é inicializada com o <xref:System.Web.UI.UrlPropertyAttribute.Filter%2A> propriedade definida como `filter`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma classe que implementa uma propriedade específica do URL. Neste exemplo de código, um <xref:System.Web.UI.UrlPropertyAttribute> atributo é aplicado ao `TargetUrl` propriedade o `CustomHyperLinkControl` classe. O atributo define um filtro de arquivo específico para arquivos ASP.NET.  
+  
+ [!code-csharp[System.Web.UI.UrlPropertyAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.UrlPropertyAttribute/CS/CustomHyperLinkControl.cs#2)]
+ [!code-vb[System.Web.UI.UrlPropertyAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.UrlPropertyAttribute/VB/CustomHyperLinkControl.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UrlPropertyAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> a ser comparado com esta instância ou uma referência nula (<see langword="Nothing" /> no Visual Basic).</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UrlPropertyAttribute.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um filtro de arquivo associado com a propriedade URL específica.</summary>
+        <value>Um filtro de arquivo associado com a propriedade URL específica. O padrão é "*. \*".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um designer fornece um filtro nos seletores de arquivo com base no <xref:System.Web.UI.UrlPropertyAttribute> atributo. Por padrão, ele é inicializado como "*. \*", que especifica todos os arquivos com uma extensão de arquivo. Você pode definir o filtro para tipos de arquivo mais específicos. Por exemplo, o filtro "\*. aspx" indica que somente arquivos do ASP.NET são representados pela propriedade URL específica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UrlPropertyAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

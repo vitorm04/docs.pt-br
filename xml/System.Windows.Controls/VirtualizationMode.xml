@@ -1,0 +1,75 @@
+<Type Name="VirtualizationMode" FullName="System.Windows.Controls.VirtualizationMode">
+  <TypeSignature Language="C#" Value="public enum VirtualizationMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VirtualizationMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.VirtualizationMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o método que <see cref="T:System.Windows.Controls.VirtualizingStackPanel" /> usa para gerenciar a virtualização de seus itens filho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, um <xref:System.Windows.Controls.VirtualizingStackPanel> cria um contêiner de itens para cada item visível e descarta quando ele não for mais necessário (por exemplo, quando o item é rolado para fora da exibição). Quando um <xref:System.Windows.Controls.ItemsControl> contém muitos itens, o processo de criação e descartando contêineres de itens pode afetar negativamente o desempenho. Quando <xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A> é definido como reciclagem, o <xref:System.Windows.Controls.VirtualizingStackPanel> reutiliza contêineres de itens em vez disso, da criação de um novo cada vez.  
+  
+ Quando <xref:System.Windows.Controls.VirtualizingStackPanel> não é possível reciclar contêineres de item, ele usa o modo padrão de virtualização, que é criar e descartar os contêineres de itens para cada item. A lista a seguir descreve os casos quando o <xref:System.Windows.Controls.VirtualizingStackPanel> não é possível reciclar contêineres de itens:  
+  
+-   O <xref:System.Windows.Controls.ItemsControl> contém contêineres de itens de tipos diferentes.  Por exemplo, um <xref:System.Windows.Controls.Menu> pode ter itens que usam <xref:System.Windows.Controls.MenuItem> e <xref:System.Windows.Controls.Separator> objetos que os contêineres de item.  
+  
+-   Os contêineres de item para você cria explicitamente o <xref:System.Windows.Controls.ItemsControl>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ListBox> e define o <xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A> propriedade anexada a reciclagem.  
+  
+ [!code-xaml[RecycleItemContainerShippets#VirtualizationMode](~/samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml#virtualizationmode)]  
+  
+ O exemplo a seguir mostra os dados usados no exemplo anterior.  
+  
+ [!code-csharp[RecycleItemContainerShippets#ListBoxData](~/samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml.cs#listboxdata)]
+ [!code-vb[RecycleItemContainerShippets#ListBoxData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RecycleItemContainerShippets/visualbasic/window1.xaml.vb#listboxdata)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Recycling">
+      <MemberSignature Language="C#" Value="Recycling" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.VirtualizationMode Recycling = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizationMode.Recycling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.VirtualizationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Reutiliza os contêineres de item.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Standard">
+      <MemberSignature Language="C#" Value="Standard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.VirtualizationMode Standard = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.VirtualizationMode.Standard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.VirtualizationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Criar e descarta os contêineres de item.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

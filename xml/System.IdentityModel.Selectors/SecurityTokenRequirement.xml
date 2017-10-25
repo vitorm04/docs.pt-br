@@ -1,0 +1,449 @@
+<Type Name="SecurityTokenRequirement" FullName="System.IdentityModel.Selectors.SecurityTokenRequirement">
+  <TypeSignature Language="C#" Value="public class SecurityTokenRequirement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityTokenRequirement extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.SecurityTokenRequirement" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os requisitos de token de segurança.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código do aplicativo normalmente não precisa usar o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> de classe, a menos que o token de segurança de um token de segurança personalizados, Gerenciador, provedor de token de segurança ou segurança autenticador de token são criados. O <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> por um Gerenciador de token de segurança, a classe é usada para especificar o que é necessário um token de segurança, como a chave de tamanho, tipo de chave e como a chave pode ser usada. Quando um token de segurança pode ser identificado que corresponde aos critérios especificados, um <xref:System.IdentityModel.Selectors.SecurityTokenProvider> e <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> pode ser obtido para fornecer tokens de segurança SOAP para mensagens de saída e para autenticar tokens de segurança para mensagens SOAP de entrada, respectivamente. Por exemplo, o Gerenciador de token de segurança padrão para enviar mensagens de SOAP tem o <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> método que utiliza um <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parâmetro que pode ser chamado para obter um provedor de token de segurança que corresponda aos critérios especificados no requisito de token de segurança.  
+  
+   
+  
+## Examples  
+ <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>  
+  
+ <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>  
+  
+ <xref:System.IdentityModel.Selectors.SecurityTokenProvider>  
+  
+ <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>  
+  
+ <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29>  
+  
+ <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>  
+  
+ <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29>  
+  
+ <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenRequirement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenRequirement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Selectors.SecurityTokenRequirement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;TValue&gt;">
+      <MemberSignature Language="C#" Value="public TValue GetProperty&lt;TValue&gt; (string property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TValue GetProperty&lt;TValue&gt;(string property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenRequirement.GetProperty``1(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TValue">O tipo de propriedade a ser obtida.</typeparam>
+        <param name="property">To be added.</param>
+        <summary>Obtém a propriedade especificada para a atual <see cref="T:System.IdentityModel.Selectors.SecurityTokenRequirement" /> instância.</summary>
+        <returns>O valor da propriedade a ser obtida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.GetProperty%2A> método primeiro chama o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.TryGetProperty%60%601%28System.String%2C%60%600%40%29> método para determinar se a propriedade especificada a `propertyName` parâmetro foi definido. Em segundo lugar, o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.GetProperty%2A> método verifica que, quando um valor de propriedade é retornado, que pode ser definido para o tipo especificado no `TValue` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="property" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOptionalTokenProperty">
+      <MemberSignature Language="C#" Value="public static string IsOptionalTokenProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string IsOptionalTokenProperty" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.IsOptionalTokenProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor da propriedade token se ele é opcional.</summary>
+        <value>Um valor da propriedade de token.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public int KeySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho necessário da chave associada com um token de segurança.</summary>
+        <value>O tamanho da chave em bits, associado a um token de segurança. O valor padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeySize%2A> propriedade também pode ser acessada obtendo o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties%2A> propriedade, que é uma coleção de valores de propriedade. O valor de <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeySize%2A> propriedade é armazenada no índice de correspondência do valor da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeySizeProperty%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeySize" /> é definida com um valor menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySizeProperty">
+      <MemberSignature Language="C#" Value="public static string KeySizeProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string KeySizeProperty" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeySizeProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica o nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeySize" /> propriedade.</summary>
+        <value>O nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeySize" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir o tamanho de chave necessário, use o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeySize%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyType">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyType KeyType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IdentityModel.Tokens.SecurityKeyType KeyType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de chave (simétrica ou assimétrica) associado com um token de segurança.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyType" /> que especifica o tipo de chave (simétrica ou assimétrica) associada a um token de segurança. O valor padrão é <see langword="SymmetricKey" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType%2A> propriedade também pode ser acessada obtendo o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties%2A> propriedade, que é uma coleção de valores de propriedade. O valor de <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType%2A> propriedade é armazenada no índice de correspondência do valor da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyTypeProperty%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyTypeProperty">
+      <MemberSignature Language="C#" Value="public static string KeyTypeProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string KeyTypeProperty" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyTypeProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica o nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType" /> propriedade.</summary>
+        <value>O nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir o tipo de chave necessário, use o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyType%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUsage">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyUsage KeyUsage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IdentityModel.Tokens.SecurityKeyUsage KeyUsage" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyUsage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyUsage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica como a chave associada com um token de segurança pode ser usada.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyUsage" /> que especifica como a chave associada com um token de segurança pode ser usada. O valor padrão é <see cref="F:System.IdentityModel.Tokens.SecurityKeyUsage.Signature" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyUsage%2A> propriedade também pode ser acessada obtendo o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties%2A> propriedade, que é uma coleção de valores de propriedade. O valor de <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyUsage%2A> propriedade é armazenada no índice de correspondência do valor da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyUsageProperty%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUsageProperty">
+      <MemberSignature Language="C#" Value="public static string KeyUsageProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string KeyUsageProperty" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyUsageProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica o nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyUsage" /> propriedade.</summary>
+        <value>O nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyUsage" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir o requisito de uso de chave, use o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyUsage%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerAuthenticationMode">
+      <MemberSignature Language="C#" Value="public static string PeerAuthenticationMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string PeerAuthenticationMode" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.PeerAuthenticationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleção para uma propriedade que especifica o método de autenticação de ponto a ponto.</summary>
+        <value>O nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleção para uma propriedade que especifica o método de autenticação de ponto a ponto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para adicionar a capacidade de definir o par de modo de autenticação, derive uma classe de <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> e expõe uma propriedade ou o construtor. No construtor ou propriedade adicionar o modo de autenticação de ponto a ponto para o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties%2A> coleção usando o valor da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.PeerAuthenticationMode%2A> a propriedade como um índice na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de propriedades não-estático atual <see cref="T:System.IdentityModel.Selectors.SecurityTokenRequirement" /> instância.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IDictionary`2" /> que contém uma coleção de propriedades não-estático atual <see cref="T:System.IdentityModel.Selectors.SecurityTokenRequirement" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os valores da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeySizeProperty%2A>, <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyTypeProperty%2A>, <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.KeyUsageProperty%2A>, <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenTypeProperty%2A> propriedades como índices para a coleção para obter um valor de propriedade específica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireCryptographicToken">
+      <MemberSignature Language="C#" Value="public bool RequireCryptographicToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireCryptographicToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o token de segurança deve ser capaz de executar operações de criptografia, como a criptografia.</summary>
+        <value>
+          <see langword="true" />Se o token de segurança deve ser capaz de executar operações de criptografia; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns de tokens de segurança, como o <xref:System.IdentityModel.Tokens.UserNameSecurityToken>, são não seguro o suficiente para executar operações de criptografia e só deve ser usado para autenticação.  
+  
+ O valor da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicToken%2A> propriedade também pode ser acessada obtendo o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties%2A> propriedade, que é uma coleção de valores de propriedade. O valor de <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicToken%2A> propriedade é armazenada no índice de correspondência do valor da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicTokenProperty%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireCryptographicTokenProperty">
+      <MemberSignature Language="C#" Value="public static string RequireCryptographicTokenProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string RequireCryptographicTokenProperty" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicTokenProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicToken" /> propriedade.</summary>
+        <value>O nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.RequireCryptographicToken" /> propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenType">
+      <MemberSignature Language="C#" Value="public string TokenType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TokenType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de token de segurança necessárias.</summary>
+        <value>O tipo de token de segurança necessárias.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use uma das propriedades estáticas do <xref:System.IdentityModel.Tokens.SecurityTokenTypes> classe para definir essa propriedade.  
+  
+ O valor da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenType%2A> propriedade também pode ser acessada obtendo o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties%2A> propriedade, que é uma coleção de valores de propriedade. O valor de <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenType%2A> propriedade é armazenada no índice de correspondência do valor da <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenTypeProperty%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenTypeProperty">
+      <MemberSignature Language="C#" Value="public static string TokenTypeProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string TokenTypeProperty" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenTypeProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica o nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenType" /> propriedade.</summary>
+        <value>O nome do índice a <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> coleta para o <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenType" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir o tipo de token de segurança necessários, use o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.TokenType%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetProperty&lt;TValue&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetProperty&lt;TValue&gt; (string property, out TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetProperty&lt;TValue&gt;(string property, [out] !!TValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.SecurityTokenRequirement.TryGetProperty``1(System.String,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TValue" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="result" Type="TValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TValue">O tipo de propriedade para retornar o <c>resultados</c> parâmetro.</typeparam>
+        <param name="property">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>Obtém a propriedade especificada para a atual <see cref="T:System.IdentityModel.Selectors.SecurityTokenRequirement" /> instância.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.IdentityModel.Selectors.SecurityTokenRequirement.Properties" /> propriedade contém um valor de propriedade para a propriedade especificada no <paramref name="propertyName" /> propriedade; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter o valor da propriedade da propriedade especificada e verifique se essa propriedade de valor pode ser definido para o tipo especificado no `TValue` parâmetro, chame o <xref:System.IdentityModel.Selectors.SecurityTokenRequirement.GetProperty%60%601%28System.String%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Existe uma propriedade com o nome especificado no <paramref name="propertyName" /> parâmetro, mas não é do mesmo tipo que é especificado no <paramref name="TValue" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,369 @@
+<Type Name="MemberAttributes" FullName="System.CodeDom.MemberAttributes">
+  <TypeSignature Language="C#" Value="public enum MemberAttributes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MemberAttributes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.MemberAttributes" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define os identificadores de atributo de membro para membros de classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os identificadores definidos no <xref:System.CodeDom.MemberAttributes> enumeração pode ser usada para indicar os atributos de escopo e o acesso de um membro de classe.  
+  
+> [!NOTE]
+>  Não há nenhum `Virtual` atributo de membro. Um membro é declarado virtual definindo o acesso de membro para o público (`property1.Attributes = MemberAttributes.Public`) sem especificá-la como Final. A ausência do sinalizador Final faz com que um membro `virtual` em c# (`public virtual`), `overrideable` no Visual Basic (`Public Overrideable`). Para evitar a declaração de membro como `virtual` ou `overrideable`, defina ambos público e de sinalizadores no Final do <xref:System.CodeDom.CodeTypeMember.Attributes%2A> propriedade. Consulte o <xref:System.CodeDom.CodeTypeMember.Attributes%2A> propriedade para obter mais informações sobre como definir atributos de membro.  
+  
+> [!NOTE]
+>  O padrão para definir os sinalizadores de acesso (que contém os termos de sinalizadores `Public`, `Private`, `Assembly`, ou `Family`) é a máscara de todos os sinalizadores de acesso usando a máscara de AccessMask e, em seguida, defina o sinalizador de acesso desejado. Por exemplo, a instrução de código para identificar um construtor (denominado `constructor1`) como público é `constructor1.Attributes = (constructor1.Attributes & ~MemberAttributes.AccessMask) | MemberAttributes.Public;`. Definindo o <xref:System.CodeDom.CodeTypeMember.Attributes%2A> propriedade diretamente a um sinalizador de acesso (por exemplo, `constructor1.Attributes = MemberAttributes.Public;`) apaga todos os outros sinalizadores que podem ser definidos. Esse padrão também deve ser usado para definir os sinalizadores de escopo (Abstract, Final, estático, substituição ou Const) usando a máscara ScopeMask.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.CodeDom.CodeMemberProperty> para definir um `string` propriedade com `get` e `set` acessadores.  
+  
+ [!code-cpp[CodeMemberPropertyExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeMemberPropertyExample/CPP/codememberpropertyexample.cpp#3)]
+ [!code-csharp[CodeMemberPropertyExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeMemberPropertyExample/CS/codememberpropertyexample.cs#3)]
+ [!code-vb[CodeMemberPropertyExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeMemberPropertyExample/VB/codememberpropertyexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abstract">
+      <MemberSignature Language="C#" Value="Abstract" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes Abstract = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.Abstract" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro abstrato.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessMask">
+      <MemberSignature Language="C#" Value="AccessMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes AccessMask = int32(61440)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.AccessMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma máscara de acesso.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="Assembly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes Assembly = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.Assembly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro que é acessível a qualquer classe dentro do mesmo assembly.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Const">
+      <MemberSignature Language="C#" Value="Const" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes Const = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.Const" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro constante.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Family">
+      <MemberSignature Language="C#" Value="Family" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes Family = int32(12288)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.Family" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro que é acessível dentro da família de sua classe e classes derivadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FamilyAndAssembly">
+      <MemberSignature Language="C#" Value="FamilyAndAssembly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes FamilyAndAssembly = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.FamilyAndAssembly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro que é acessível dentro de sua classe e classes derivadas no mesmo assembly.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FamilyOrAssembly">
+      <MemberSignature Language="C#" Value="FamilyOrAssembly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes FamilyOrAssembly = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.FamilyOrAssembly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro que é acessível dentro de sua classe, suas classes derivadas em qualquer assembly e qualquer classe no mesmo assembly.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Final">
+      <MemberSignature Language="C#" Value="Final" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes Final = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.Final" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro que não pode ser substituído em uma classe derivada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="New" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes New = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.New" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um novo membro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Overloaded">
+      <MemberSignature Language="C#" Value="Overloaded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes Overloaded = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.Overloaded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro sobrecarregado. Algumas linguagens, como Visual Basic, exigem que os membros sobrecarregados sejam indicados explicitamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Override">
+      <MemberSignature Language="C#" Value="Override" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes Override = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.Override" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro que substitui um membro da classe base.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Private">
+      <MemberSignature Language="C#" Value="Private" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes Private = int32(20480)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.Private" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro privado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Public">
+      <MemberSignature Language="C#" Value="Public" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes Public = int32(24576)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.Public" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro público.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeMask">
+      <MemberSignature Language="C#" Value="ScopeMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes ScopeMask = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.ScopeMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma máscara de escopo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Static">
+      <MemberSignature Language="C#" Value="Static" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes Static = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.Static" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um membro estático. No Visual Basic, isso é equivalente à palavra-chave <see langword="Shared" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VTableMask">
+      <MemberSignature Language="C#" Value="VTableMask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.CodeDom.MemberAttributes VTableMask = int32(240)" />
+      <MemberSignature Language="DocId" Value="F:System.CodeDom.MemberAttributes.VTableMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.MemberAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma máscara VTable.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

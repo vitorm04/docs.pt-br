@@ -1,0 +1,16 @@
+<Namespace Name="System.Drawing.Design">
+  <Docs>
+    <summary>O <see cref="N:System.Drawing.Design" /> namespace contém classes que estendem a lógica de interface de usuário em tempo de design e desenho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes nesse namespace podem ser usadas para criar itens de caixa de ferramentas personalizado, editores de valor de tipo específico que podem editar e representar graficamente os valores de tipos com suporte e conversores de tipo podem converter valores entre determinados tipos. Este namespace fornece as estruturas de basic para desenvolver extensões para a interface do usuário em tempo de design.  
+  
+> [!CAUTION]
+>  Classes de dentro do <xref:System.Drawing.Design> namespace não têm suporte para uso em um serviço do Windows ou do ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

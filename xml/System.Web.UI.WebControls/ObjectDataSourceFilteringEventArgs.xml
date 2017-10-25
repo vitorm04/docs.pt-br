@@ -1,0 +1,103 @@
+<Type Name="ObjectDataSourceFilteringEventArgs" FullName="System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectDataSourceFilteringEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectDataSourceFilteringEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Filtering" /> do controle <see cref="T:System.Web.UI.WebControls.ObjectDataSource" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs> classe é usada para passar dados para o <xref:System.Web.UI.WebControls.ObjectDataSource.Filtering> manipulador de eventos do <xref:System.Web.UI.WebControls.ObjectDataSource> controle. O <xref:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs.ParameterValues%2A> propriedade fornece acesso para os valores de parâmetro de filtro antes da operação de filtragem é executada. Você pode cancelar o <xref:System.Web.UI.WebControls.ObjectDataSource.Select%2A> método definindo o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade o <xref:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs> para `true`.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como exibir os dados filtrados usando um <xref:System.Web.UI.WebControls.ObjectDataSource> controlar para recuperar dados de um objeto comercial de camada intermediária e, em seguida, usando um <xref:System.Web.UI.WebControls.GridView> controle para exibir os resultados. O segundo exemplo de código fornece um exemplo de um objeto comercial de camada intermediária que é usado pelo primeiro exemplo de código.  
+  
+ O exemplo de código a seguir demonstra como exibir os dados filtrados usando um <xref:System.Web.UI.WebControls.ObjectDataSource> controlar para recuperar dados de um objeto comercial de camada intermediária e, em seguida, usando um <xref:System.Web.UI.WebControls.GridView> controle para exibir os resultados. O <xref:System.Web.UI.WebControls.ObjectDataSource> controle pode filtrar dados somente quando o método que recupera os dados recupera-lo como um <xref:System.Data.DataSet> ou <xref:System.Data.DataTable> objeto. Por esse motivo, o <xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod%2A> propriedade identifica um método do objeto comercial que recupera os dados como um <xref:System.Data.DataSet> ou <xref:System.Data.DataTable> objeto.  
+  
+ O exemplo de código consiste em uma <xref:System.Web.UI.WebControls.TextBox> controle, uma <xref:System.Web.UI.WebControls.GridView> controle, o <xref:System.Web.UI.WebControls.ObjectDataSource> controle e um **enviar** botão. Por padrão, o <xref:System.Web.UI.WebControls.TextBox> controle é preenchido com o nome de um dos funcionários da Northwind Traders. O <xref:System.Web.UI.WebControls.GridView> controle exibe informações sobre o funcionário que é identificado pelo nome no <xref:System.Web.UI.WebControls.TextBox>. Para recuperar dados de outro funcionário, no <xref:System.Web.UI.WebControls.TextBox> de controle, digite o nome completo do funcionário e, em seguida, clique no **enviar** botão.  
+  
+ O <xref:System.Web.UI.WebControls.ObjectDataSource.FilterExpression%2A> propriedade especifica uma expressão que é usada para filtrar os dados recuperados com o método especificado pelo <xref:System.Web.UI.WebControls.ObjectDataSource.SelectMethod%2A> propriedade. Ele usa espaços reservados de parâmetros que são avaliados para os parâmetros que estão contidos no <xref:System.Web.UI.WebControls.ObjectDataSource.FilterParameters%2A> coleção. Neste exemplo, o espaço reservado do parâmetro é delimitado por aspas simples (') porque o tipo do parâmetro é um tipo de cadeia de caracteres que pode conter espaços. Se o tipo do parâmetro for numérico ou data, as aspas não são necessárias. O <xref:System.Web.UI.WebControls.ObjectDataSource.FilterParameters%2A> coleção contém um parâmetro, uma <xref:System.Web.UI.WebControls.FormParameter> que está associado ao objeto de <xref:System.Web.UI.WebControls.TextBox> controle.  
+  
+ Se nenhum nome for especificado no <xref:System.Web.UI.WebControls.TextBox> controle, um novo parâmetro é adicionado para o <xref:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs.ParameterValues%2A> coleção para que a pesquisa seja bem-sucedida.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_9#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_9/CS/objds9cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_9#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_9/VB/objds9vb.aspx#1)]  
+  
+ O exemplo de código a seguir fornece um exemplo de um objeto comercial de camada intermediária que usa o exemplo de código anterior. O exemplo de código consiste em duas classes básicas: `EmployeeLogic` e `NorthwindEmployee`. O `EmployeeLogic` classe encapsula a lógica de negócios e o `NorthwindEmployee` é uma classe de modelo que contém apenas a funcionalidade básica que é necessário para carregar e manter os dados da camada de dados. Para simplificar, o `EmployeeLogic` classe cria um conjunto estático de dados, em vez de recuperar os dados de uma camada de dados. Para um exemplo completo de trabalho, você deve compilar e usar essas classes com os exemplos de código de formulários da Web que são fornecidos.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_9#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_9/CS/northwindemployee9.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_9#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_9/VB/northwindemployee9.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDataSourceFilteringEventArgs (System.Collections.Specialized.IOrderedDictionary parameterValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.IOrderedDictionary parameterValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs.#ctor(System.Collections.Specialized.IOrderedDictionary)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameterValues" Type="System.Collections.Specialized.IOrderedDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="parameterValues">Um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> de <see cref="T:System.Web.UI.WebControls.Parameter" /> objetos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs" /> classe usando o objeto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os parâmetros no `parameterValues` coleção estão associados com os parâmetros que são especificados no <xref:System.Web.UI.WebControls.ObjectDataSource.FilterExpression%2A> propriedade quando o <xref:System.Web.UI.WebControls.ObjectDataSource.Select%2A> execuções do método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary ParameterValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary ParameterValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs.ParameterValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> interface que fornece acesso para o <see cref="T:System.Web.UI.WebControls.Parameter" /> objetos do <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> classe.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> de <see cref="T:System.Web.UI.WebControls.Parameter" /> objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs> classe é usada para passar dados para o <xref:System.Web.UI.WebControls.ObjectDataSource.Filtering> manipulador de eventos do <xref:System.Web.UI.WebControls.ObjectDataSource> objeto. O <xref:System.Web.UI.WebControls.ObjectDataSourceFilteringEventArgs.ParameterValues%2A> propriedade fornece acesso para os valores de parâmetro de filtro antes da operação de filtragem é executada.  
+  
+> [!IMPORTANT]
+>  Você deve validar qualquer valor de parâmetro de filtro que você recebe do cliente. O tempo de execução simplesmente substitui o valor do parâmetro na expressão de filtro e aplica-se para o <xref:System.Data.DataView> objeto que é retornado pelo <xref:System.Web.UI.WebControls.ObjectDataSource.Select%2A> método. Se você estiver usando o <xref:System.Web.UI.WebControls.ObjectDataSource.FilterExpression%2A> a propriedade como uma medida de segurança para limitar o número de itens que são retornados, você deve validar os valores de parâmetro antes da filtragem ocorre.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

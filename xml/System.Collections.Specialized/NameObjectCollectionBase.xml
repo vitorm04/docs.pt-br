@@ -1,0 +1,1428 @@
+<Type Name="NameObjectCollectionBase" FullName="System.Collections.Specialized.NameObjectCollectionBase">
+  <TypeSignature Language="C#" Value="public abstract class NameObjectCollectionBase : System.Collections.ICollection, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit NameObjectCollectionBase extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Runtime.Serialization.IDeserializationCallback, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Specialized.NameObjectCollectionBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Specialized</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IDeserializationCallback</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma classe base de <see langword="abstract" /> para uma coleção de chaves <see cref="T:System.String" /> e valores <see cref="T:System.Object" /> associados que podem ser acessados com a chave ou com o índice.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A estrutura subjacente para essa classe é uma tabela de hash.  
+  
+ Cada elemento é um par chave/valor.  
+  
+ A capacidade de um <xref:System.Collections.Specialized.NameObjectCollectionBase> é o número de elementos de <xref:System.Collections.Specialized.NameObjectCollectionBase> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Specialized.NameObjectCollectionBase>, a capacidade é aumentada automaticamente conforme necessário por meio de realocação.  
+  
+ O provedor de código hash dispensa códigos hash para chaves de <xref:System.Collections.Specialized.NameObjectCollectionBase> instância. O provedor de código de hash padrão é o <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ O comparador determina se duas chaves são iguais. O comparador padrão é o <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ Na versão 1.0 do .NET Framework, essa classe usa comparações de cadeia de caracteres sensíveis à cultura. No entanto, no .NET Framework versão 1.1 ou posterior, essa classe usa <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ao comparar cadeias de caracteres. Para obter mais informações sobre como a cultura afeta as comparações e a classificação, consulte [executando operações de cadeia de caracteres de cultura](~/docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md).  
+  
+ `null`é permitido como uma chave ou um valor.  
+  
+> [!CAUTION]
+>  O <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGet%2A> método não faz distinção entre `null` que é retornado porque a chave especificada não foi encontrada e `null` que é retornado porque o valor associado com a chave é `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como implementar e usar o <xref:System.Collections.Specialized.NameObjectCollectionBase> classe.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase/CPP/nameobjectcollectionbase.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase/CS/nameobjectcollectionbase.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase/VB/nameobjectcollectionbase.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Esta implementação não oferece um sincronizado wrapper (thread-safe) para um <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />, mas as classes derivadas podem criar suas próprias versões sincronizadas do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> usando o <see cref="P:System.Collections.ICollection.SyncRoot" /> propriedade.  
+  
+ Enumerar através de uma coleção intrinsecamente não é um procedimento de segurança do thread. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NameObjectCollectionBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> que está vazia.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Specialized.NameObjectCollectionBase> é o número de elementos que o <xref:System.Collections.Specialized.NameObjectCollectionBase> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Specialized.NameObjectCollectionBase>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Specialized.NameObjectCollectionBase>.  
+  
+ O provedor de código hash dispensa códigos hash para chaves de <xref:System.Collections.Specialized.NameObjectCollectionBase> instância. O provedor de código de hash padrão é o <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ O comparador determina se duas chaves são iguais. O comparador padrão é o <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ Este construtor é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NameObjectCollectionBase (System.Collections.IEqualityComparer equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Collections.IEqualityComparer equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.#ctor(System.Collections.IEqualityComparer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="equalityComparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="equalityComparer">O <see cref="T:System.Collections.IEqualityComparer" /> objeto a ser usado para determinar se duas chaves são iguais e gerar códigos de hash para as chaves na coleção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> classe está vazio, tem a capacidade inicial padrão e utiliza especificado <see cref="T:System.Collections.IEqualityComparer" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Specialized.NameObjectCollectionBase> objeto é o número de elementos que o <xref:System.Collections.Specialized.NameObjectCollectionBase> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Specialized.NameObjectCollectionBase>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Specialized.NameObjectCollectionBase>.  
+  
+ O <xref:System.Collections.IEqualityComparer> objeto combina o comparador e o provedor de código de hash.  O provedor de código hash dispensa códigos hash para chaves de <xref:System.Collections.Specialized.NameObjectCollectionBase>.  O comparador determina se duas chaves são iguais.  
+  
+ Este construtor é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NameObjectCollectionBase (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">O número aproximado de entradas que o <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância inicialmente pode conter.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> classe está vazio, tem a capacidade inicial especificada e usa o provedor de código de hash padrão e o comparador padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Specialized.NameObjectCollectionBase> é o número de elementos que o <xref:System.Collections.Specialized.NameObjectCollectionBase> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Specialized.NameObjectCollectionBase>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Specialized.NameObjectCollectionBase>.  
+  
+ O provedor de código hash dispensa códigos hash para chaves de <xref:System.Collections.Specialized.NameObjectCollectionBase> instância. O provedor de código de hash padrão é o <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ O comparador determina se duas chaves são iguais. O comparador padrão é o <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é `capacity`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NameObjectCollectionBase (System.Collections.IHashCodeProvider hashProvider, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Collections.IHashCodeProvider hashProvider, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.#ctor(System.Collections.IHashCodeProvider,System.Collections.IComparer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Please use NameObjectCollectionBase(IEqualityComparer) instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="hashProvider" Type="System.Collections.IHashCodeProvider" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="hashProvider">O <see cref="T:System.Collections.IHashCodeProvider" /> que fornecerá os códigos de hash para todas as chaves de <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</param>
+        <param name="comparer">O <see cref="T:System.Collections.IComparer" /> a ser usado para determinar se duas chaves são iguais.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> classe está vazio, tem a capacidade inicial padrão e usa o provedor de código de hash especificado e o comparador especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Specialized.NameObjectCollectionBase> é o número de elementos que o <xref:System.Collections.Specialized.NameObjectCollectionBase> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Specialized.NameObjectCollectionBase>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Specialized.NameObjectCollectionBase>.  
+  
+ O provedor de código hash dispensa códigos hash para chaves de <xref:System.Collections.Specialized.NameObjectCollectionBase> instância. O provedor de código de hash padrão é o <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ O comparador determina se duas chaves são iguais. O comparador padrão é o <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ Este construtor é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NameObjectCollectionBase (int capacity, System.Collections.IEqualityComparer equalityComparer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(int32 capacity, class System.Collections.IEqualityComparer equalityComparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.#ctor(System.Int32,System.Collections.IEqualityComparer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+        <Parameter Name="equalityComparer" Type="System.Collections.IEqualityComparer" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">O número aproximado de entradas que o <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> objeto pode conter inicialmente.</param>
+        <param name="equalityComparer">O <see cref="T:System.Collections.IEqualityComparer" /> objeto a ser usado para determinar se duas chaves são iguais e gerar códigos de hash para as chaves na coleção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> classe está vazio, tem a capacidade inicial especificada e usa especificado <see cref="T:System.Collections.IEqualityComparer" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Specialized.NameObjectCollectionBase> objeto é o número de elementos que o <xref:System.Collections.Specialized.NameObjectCollectionBase> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Specialized.NameObjectCollectionBase>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Specialized.NameObjectCollectionBase>.  
+  
+ O <xref:System.Collections.IEqualityComparer> objeto combina o comparador e o provedor de código de hash.  O provedor de código hash dispensa códigos hash para chaves de <xref:System.Collections.Specialized.NameObjectCollectionBase>.  O comparador determina se duas chaves são iguais.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é o `capacity` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NameObjectCollectionBase (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto que contém as informações necessárias para serializar o novo <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> objeto que contém a origem e destino do fluxo serializado associado com o novo <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> classe serializável e usa especificado <see cref="T:System.Runtime.Serialization.SerializationInfo" /> e <see cref="T:System.Runtime.Serialization.StreamingContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NameObjectCollectionBase (int capacity, System.Collections.IHashCodeProvider hashProvider, System.Collections.IComparer comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(int32 capacity, class System.Collections.IHashCodeProvider hashProvider, class System.Collections.IComparer comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.#ctor(System.Int32,System.Collections.IHashCodeProvider,System.Collections.IComparer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Please use NameObjectCollectionBase(Int32, IEqualityComparer) instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+        <Parameter Name="hashProvider" Type="System.Collections.IHashCodeProvider" />
+        <Parameter Name="comparer" Type="System.Collections.IComparer" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">O número aproximado de entradas que o <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância inicialmente pode conter.</param>
+        <param name="hashProvider">O <see cref="T:System.Collections.IHashCodeProvider" /> que fornecerá os códigos de hash para todas as chaves de <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</param>
+        <param name="comparer">O <see cref="T:System.Collections.IComparer" /> a ser usado para determinar se duas chaves são iguais.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> classe está vazio, tem a capacidade inicial especificada e usa o provedor de código de hash especificado e o comparador especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Specialized.NameObjectCollectionBase> é o número de elementos que o <xref:System.Collections.Specialized.NameObjectCollectionBase> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Specialized.NameObjectCollectionBase>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Specialized.NameObjectCollectionBase>.  
+  
+ O provedor de código hash dispensa códigos hash para chaves de <xref:System.Collections.Specialized.NameObjectCollectionBase> instância. O provedor de código de hash padrão é o <xref:System.Collections.CaseInsensitiveHashCodeProvider>.  
+  
+ O comparador determina se duas chaves são iguais. O comparador padrão é o <xref:System.Collections.CaseInsensitiveComparer>.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é `capacity`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseAdd">
+      <MemberSignature Language="C#" Value="protected void BaseAdd (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void BaseAdd(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseAdd(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">A chave de <see cref="T:System.String" /> da entrada a ser adicionada. A chave pode ser <see langword="null" />.</param>
+        <param name="value">O valor de <see cref="T:System.Object" /> da entrada a ser adicionada. O valor pode ser <see langword="null" />.</param>
+        <summary>Adiciona uma entrada com a chave e o valor especificados à instância <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A> já for igual à capacidade, a capacidade do <xref:System.Collections.Specialized.NameObjectCollectionBase> é aumentado, automaticamente realocando matriz interna, e os elementos existentes são copiados para a nova matriz antes de adicionar o novo elemento.  
+  
+ Se <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A> é menor que a capacidade, esse método é uma operação de (1). Se a capacidade precisa ser aumentado para acomodar o novo elemento, esse método se torna um O (`n`) operação, onde `n` é <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseAdd%2A> para criar um novo <xref:System.Collections.Specialized.NameObjectCollectionBase> com elementos de um <xref:System.Collections.IDictionary>.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseAdd#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseAdd/CPP/nocb_baseadd.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseAdd#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseAdd/CS/nocb_baseadd.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseAdd#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseAdd/VB/nocb_baseadd.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseClear">
+      <MemberSignature Language="C#" Value="protected void BaseClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void BaseClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as entradas da <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>é definido como zero, e referências a outros objetos de elementos da coleção também são liberadas.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseClear%2A> para remover todos os elementos de um <xref:System.Collections.Specialized.NameObjectCollectionBase>.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseClear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseClear/CPP/nocb_baseclear.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseClear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseClear/CS/nocb_baseclear.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseClear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseClear/VB/nocb_baseclear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGet">
+      <MemberSignature Language="C#" Value="protected object BaseGet (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object BaseGet(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseGet(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do valor a ser obtido.</param>
+        <summary>Obtém o valor da entrada no índice especificado do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor da entrada no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGetKey%2A> e <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGet%2A> obter valores e chaves específicas.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGet/CPP/nocb_baseget.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGet/CS/nocb_baseget.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGet/VB/nocb_baseget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> está fora do intervalo válido de índices para a coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGet">
+      <MemberSignature Language="C#" Value="protected object BaseGet (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object BaseGet(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseGet(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">A chave <see cref="T:System.String" /> da entrada a ser obtida. A chave pode ser <see langword="null" />.</param>
+        <summary>Obtém o valor da primeira entrada com a chave especificada da instância de <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor da primeira entrada com a chave especificada, se encontrada, caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a coleção contém várias entradas com a chave especificada, esse método retorna apenas a primeira entrada. Para obter os valores das entradas subsequentes com a mesma chave, use o enumerador para iterar na coleção e comparar as chaves.  
+  
+> [!CAUTION]
+>  Este método retorna `null` nos seguintes casos: 1) se a chave especificada não for encontrada. e 2) se a chave especificada for encontrada e seu valor associado `null`. Esse método não faz distinção entre os dois casos.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGetKey%2A> e <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGet%2A> obter valores e chaves específicas.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGet/CPP/nocb_baseget.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGet/CS/nocb_baseget.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGet/VB/nocb_baseget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGetAllKeys">
+      <MemberSignature Language="C#" Value="protected string[] BaseGetAllKeys ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string[] BaseGetAllKeys() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseGetAllKeys" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> matriz que contém todas as chaves na <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</summary>
+        <returns>Um <see cref="T:System.String" /> matriz que contém todas as chaves na <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGetAllKeys%2A> e <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGetAllValues%2A> para obter uma matriz de chaves ou uma matriz de valores.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseGetAll#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGetAll/CPP/nocb_basegetall.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseGetAll#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGetAll/CS/nocb_basegetall.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseGetAll#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGetAll/VB/nocb_basegetall.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGetAllValues">
+      <MemberSignature Language="C#" Value="protected object[] BaseGetAllValues ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object[] BaseGetAllValues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseGetAllValues" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Object" /> matriz que contém todos os valores de <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</summary>
+        <returns>Um <see cref="T:System.Object" /> matriz que contém todos os valores de <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGetAllKeys%2A> e <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGetAllValues%2A> para obter uma matriz de chaves ou uma matriz de valores.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseGetAll#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGetAll/CPP/nocb_basegetall.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseGetAll#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGetAll/CS/nocb_basegetall.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseGetAll#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGetAll/VB/nocb_basegetall.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGetAllValues">
+      <MemberSignature Language="C#" Value="protected object[] BaseGetAllValues (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object[] BaseGetAllValues(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseGetAllValues(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Type" /> que representa o tipo de matriz para retornar.</param>
+        <summary>Retorna uma matriz do tipo especificado que contém todos os valores de <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</summary>
+        <returns>Uma matriz do tipo especificado que contém todos os valores de <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="type" /> não é um <see cref="T:System.Type" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseGetKey">
+      <MemberSignature Language="C#" Value="protected string BaseGetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string BaseGetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseGetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero da chave a ser obtida.</param>
+        <summary>Obtém a chave da entrada no índice especificado do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa a chave da entrada no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGetKey%2A> e <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseGet%2A> obter valores e chaves específicas.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGet/CPP/nocb_baseget.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGet/CS/nocb_baseget.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseGet/VB/nocb_baseget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> está fora do intervalo válido de índices para a coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseHasKeys">
+      <MemberSignature Language="C#" Value="protected bool BaseHasKeys ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool BaseHasKeys() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseHasKeys" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância contém entradas cujas chaves não são <see langword="null" />.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância contém entradas cujas chaves não são <see langword="null" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseHasKeys%2A> para determinar se a coleção contém chaves que não são `null`.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseHasKeys#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseHasKeys/CPP/nocb_basehaskeys.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseHasKeys#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseHasKeys/CS/nocb_basehaskeys.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseHasKeys#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseHasKeys/VB/nocb_basehaskeys.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseRemove">
+      <MemberSignature Language="C#" Value="protected void BaseRemove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void BaseRemove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseRemove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="T:System.String" /> chave das entradas para remover. A chave pode ser <see langword="null" />.</param>
+        <summary>Remove as entradas com a chave especificada da instância de <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Collections.Specialized.NameObjectCollectionBase> não contém um elemento com a chave especificada, o <xref:System.Collections.Specialized.NameObjectCollectionBase> permanece inalterado. Nenhuma exceção é lançada.  
+  
+ Em coleções de elementos contíguos, como listas, os elementos que seguem o elemento removido sobem para ocupar o ponto vazio. Caso a coleção seja indexada, os índices dos elementos que são movidos também são atualizados. Este comportamento não se aplica às coleções em que elementos sejam agrupados conceitualmente em buckets, como uma tabela de hash.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseRemove%2A> e <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseRemoveAt%2A> para remover os elementos de um <xref:System.Collections.Specialized.NameObjectCollectionBase>.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseRemove#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseRemove/CPP/nocb_baseremove.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseRemove#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseRemove/CS/nocb_baseremove.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseRemove#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseRemove/VB/nocb_baseremove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseRemoveAt">
+      <MemberSignature Language="C#" Value="protected void BaseRemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void BaseRemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseRemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero da entrada a ser removido.</param>
+        <summary>Remove a entrada no índice especificado do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em coleções de elementos contíguos, como listas, os elementos que seguem o elemento removido sobem para ocupar o ponto vazio. Caso a coleção seja indexada, os índices dos elementos que são movidos também são atualizados. Este comportamento não se aplica às coleções em que elementos sejam agrupados conceitualmente em buckets, como uma tabela de hash.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseRemove%2A> e <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseRemoveAt%2A> para remover os elementos de um <xref:System.Collections.Specialized.NameObjectCollectionBase>.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseRemove#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseRemove/CPP/nocb_baseremove.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseRemove#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseRemove/CS/nocb_baseremove.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseRemove#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseRemove/VB/nocb_baseremove.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> está fora do intervalo válido de índices para a coleção.</exception>
+        <exception cref="T:System.NotSupportedException">A coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseSet">
+      <MemberSignature Language="C#" Value="protected void BaseSet (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void BaseSet(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseSet(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero da entrada a ser definida.</param>
+        <param name="value">O <see cref="T:System.Object" /> que representa o novo valor da entrada a ser definida. O valor pode ser <see langword="null" />.</param>
+        <summary>Define o valor da entrada no índice especificado do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseSet%2A> para definir o valor de um elemento específico.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseSet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseSet/CPP/nocb_baseset.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseSet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseSet/CS/nocb_baseset.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseSet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseSet/VB/nocb_baseset.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A coleção é somente leitura.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> está fora do intervalo válido de índices para a coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseSet">
+      <MemberSignature Language="C#" Value="protected void BaseSet (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void BaseSet(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.BaseSet(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="T:System.String" /> chave da entrada a ser definido. A chave pode ser <see langword="null" />.</param>
+        <param name="value">O <see cref="T:System.Object" /> que representa o novo valor da entrada a ser definida. O valor pode ser <see langword="null" />.</param>
+        <summary>Define o valor da primeira entrada com a chave especificada no <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância, se encontrado; caso contrário, adiciona uma entrada com a chave especificada e o valor para a <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a coleção contém várias entradas com a chave especificada, esse método define apenas a primeira entrada. Para definir os valores das entradas subsequentes com a mesma chave, use o enumerador para iterar na coleção e comparar as chaves.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Collections.Specialized.NameObjectCollectionBase.BaseSet%2A> para definir o valor de um elemento específico.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.BaseSet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseSet/CPP/nocb_baseset.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.BaseSet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseSet/CS/nocb_baseset.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.BaseSet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.BaseSet/VB/nocb_baseset.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NameObjectCollectionBase.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pares chave-valor contidos na instância <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />.</summary>
+        <value>O número de pares chave-valor contidos na instância <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade é o número de elementos que o <xref:System.Collections.Specialized.NameObjectCollectionBase> pode armazenar. <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>é o número de elementos que estão realmente no <xref:System.Collections.Specialized.NameObjectCollectionBase>.  
+  
+ A capacidade é sempre maior que ou igual a <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>. Se <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A> excede a capacidade durante a adição de elementos, a capacidade é aumentada automaticamente realocando a matriz interna antes de copiar os elementos antigos e adição de novos elementos.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para a instância <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este enumerador retorna as chaves da coleção como cadeias de caracteres.  
+  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; Portanto, enumerando através de uma coleção intrinsecamente não é um procedimento de segurança do thread.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um objeto <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contém as informações necessárias para serializar a instância <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> objeto que contém a origem e destino do fluxo serializado associado a <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância.</param>
+        <summary>Implementa a interface <see cref="T:System.Runtime.Serialization.ISerializable" /> e retorna os dados necessários para serializar a instância <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para fornecer serviços de serialização. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /> ação de segurança:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="protected bool IsReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NameObjectCollectionBase.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a instância de <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se a instância de <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> for somente leitura, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção que seja somente leitura não permite a adição, a remoção ou a modificação de elementos após a coleção ser criada.  
+  
+ Uma coleção somente leitura é apenas uma coleção com um wrapper que impede a modificação da coleção; por isso, caso as alterações sejam feitas na coleção subjacente, a coleção somente leitura reflete as alterações.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma coleção somente leitura.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase.IsReadOnly#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.IsReadOnly/CPP/nocb_isreadonly.cpp#1)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase.IsReadOnly#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.IsReadOnly/CS/nocb_isreadonly.cs#1)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase.IsReadOnly#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase.IsReadOnly/VB/nocb_isreadonly.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Specialized.NameObjectCollectionBase.KeysCollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameObjectCollectionBase/KeysCollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NameObjectCollectionBase.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameObjectCollectionBase+KeysCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma instância do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase.KeysCollection" /> que contém todas as chaves na instância <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />.</summary>
+        <value>Uma instância do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase.KeysCollection" /> que contém todas as chaves na instância <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserialization">
+      <MemberSignature Language="C#" Value="public virtual void OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento de desserialização.</param>
+        <summary>Implementa o <see cref="T:System.Runtime.Serialization.ISerializable" /> interface e gera o evento de desserialização quando a desserialização foi concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enquanto o <xref:System.Collections.Specialized.NameObjectCollectionBase.OnDeserialization%2A> método não é visível para clientes COM por padrão, herdando a <xref:System.Collections.Specialized.NameObjectCollectionBase> classe pode expô-lo e pode causar um comportamento indesejado em clientes COM.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto associado atual <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> instância é inválida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Specialized.NameObjectCollectionBase.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia todo o <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> em um <see cref="T:System.Array" /> unidimensional compatível, começando no índice especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz especificada deve ser de um tipo compatível.  
+  
+ Este método usa <xref:System.Array.Copy%2A?displayProperty=nameWithType> para copiar os elementos.  
+  
+ Enquanto o <xref:System.Collections.Specialized.NameObjectCollectionBase.System%23Collections%23ICollection%23CopyTo%2A> método não é visível para clientes COM por padrão, herdando a <xref:System.Collections.Specialized.NameObjectCollectionBase> classe pode expô-lo e pode causar um comportamento indesejado em clientes COM.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Specialized.NameObjectCollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ - ou -  
+  
+ O número de elementos na origem <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" /> de destino.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NameObjectCollectionBase.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso para o <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> objeto for sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" />Se acessar para o <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> objeto for sincronizado (thread-safe); caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Collections.Specialized.NameObjectCollectionBase> objeto não está sincronizado. Classes derivadas podem fornecer uma versão sincronizada do <xref:System.Collections.Specialized.NameObjectCollectionBase> usando o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade durante toda a enumeração.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase/CPP/remarks.cpp#2)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase/CS/remarks.cs#2)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase/VB/remarks.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Specialized.NameObjectCollectionBase.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Specialized</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso a <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> objeto.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso a <see cref="T:System.Collections.Specialized.NameObjectCollectionBase" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas podem fornecer sua própria versão sincronizada de <xref:System.Collections.Specialized.NameObjectCollectionBase> classe usando o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade. O código de sincronização necessário realizar operações no <xref:System.Collections.ICollection.SyncRoot%2A> propriedade o <xref:System.Collections.Specialized.NameObjectCollectionBase> objeto, não diretamente no <xref:System.Collections.Specialized.NameObjectCollectionBase> objeto. Isso garante a operação apropriada das coleções que são derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando o <xref:System.Collections.Specialized.NameObjectCollectionBase> objeto.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ICollection.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[System.Collections.Specialized.NameObjectCollectionBase#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase/CPP/remarks.cpp#2)]
+ [!code-csharp[System.Collections.Specialized.NameObjectCollectionBase#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase/CS/remarks.cs#2)]
+ [!code-vb[System.Collections.Specialized.NameObjectCollectionBase#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Specialized.NameObjectCollectionBase/VB/remarks.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

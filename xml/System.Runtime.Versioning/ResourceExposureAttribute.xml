@@ -1,0 +1,102 @@
+<Type Name="ResourceExposureAttribute" FullName="System.Runtime.Versioning.ResourceExposureAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ResourceExposureAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ResourceExposureAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Versioning.ResourceExposureAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.Conditional("RESOURCE_ANNOTATION_WORK")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a exposição de recursos para um membro de uma classe. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Versioning.ResourceConsumptionAttribute> atributo deve ser aplicado a um membro que chamar um membro que tem o <xref:System.Runtime.Versioning.ResourceExposureAttribute> atributo aplicado. `Public`membros não podem expor <xref:System.Runtime.Versioning.ResourceScope.Assembly> ou <xref:System.Runtime.Versioning.ResourceScope.Private> recursos.  Membros com <xref:System.Runtime.Versioning.ResourceScope.Assembly> escopo não pode expor <xref:System.Runtime.Versioning.ResourceScope.Private> recursos.  
+  
+ O gráfico de métodos termina quando um <xref:System.Runtime.Versioning.ResourceExposureAttribute> atributo com um escopo de recursos de <xref:System.Runtime.Versioning.ResourceScope.None> é aplicado a um método.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceExposureAttribute (System.Runtime.Versioning.ResourceScope exposureLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.Versioning.ResourceScope exposureLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.ResourceExposureAttribute.#ctor(System.Runtime.Versioning.ResourceScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="exposureLevel" Type="System.Runtime.Versioning.ResourceScope" />
+      </Parameters>
+      <Docs>
+        <param name="exposureLevel">O escopo do recurso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Versioning.ResourceExposureAttribute" /> classe com o nível de exposição especificado.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceExposureLevel">
+      <MemberSignature Language="C#" Value="public System.Runtime.Versioning.ResourceScope ResourceExposureLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Versioning.ResourceScope ResourceExposureLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Versioning.ResourceExposureAttribute.ResourceExposureLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o escopo de exposição de recursos.</summary>
+        <value>Um objeto <see cref="T:System.Runtime.Versioning.ResourceScope" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

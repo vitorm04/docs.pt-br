@@ -1,0 +1,65 @@
+<Type Name="NotCondition" FullName="System.Windows.Automation.NotCondition">
+  <TypeSignature Language="C#" Value="public class NotCondition : System.Windows.Automation.Condition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NotCondition extends System.Windows.Automation.Condition" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.NotCondition" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Condition</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um <see cref="T:System.Windows.Automation.Condition" /> que é o negativo do especificada <see cref="T:System.Windows.Automation.Condition" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotCondition (System.Windows.Automation.Condition condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Automation.Condition condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.NotCondition.#ctor(System.Windows.Automation.Condition)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Windows.Automation.Condition" />
+      </Parameters>
+      <Docs>
+        <param name="condition">A condição para negar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Automation.NotCondition" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.NotCondition> é usado para recuperar todos os elementos que não foram recuperados usando outro <xref:System.Windows.Automation.Condition>.  
+  
+ [!code-csharp[UIAClient_snip#177](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ConditionSnips.cs#177)]
+ [!code-vb[UIAClient_snip#177](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ConditionSnips.vb#177)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Condition Condition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Condition Condition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.NotCondition.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Condition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Automation.Condition" /> que este <see cref="T:System.Windows.Automation.NotCondition" /> nega.</summary>
+        <value>O <see cref="T:System.Windows.Automation.Condition" /> que este <see cref="T:System.Windows.Automation.NotCondition" /> nega.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

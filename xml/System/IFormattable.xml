@@ -1,0 +1,171 @@
+<Type Name="IFormattable" FullName="System.IFormattable">
+  <TypeSignature Language="C#" Value="public interface IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.IFormattable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece funcionalidade para formatar o valor de um objeto em uma representação de cadeia de caracteres.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IFormattable> interface converte um objeto em sua representação de cadeia de caracteres com base em uma cadeia de caracteres de formato e um provedor de formato.  
+  
+ Normalmente, uma cadeia de caracteres de formato define a aparência geral de um objeto. Por exemplo, o .NET Framework suporta o seguinte:  
+  
+-   Cadeias de caracteres de formato padrão para a formatação de valores de enumeração (consulte [cadeias de caracteres de formato de enumeração](~/docs/standard/base-types/enumeration-format-strings.md)).  
+  
+-   Cadeias de caracteres de formato padrão e personalizados para a formatação de valores numéricos (consulte [cadeias de caracteres de formato numérico padrão](~/docs/standard/base-types/standard-numeric-format-strings.md) e [cadeias de caracteres de formato numérico personalizadas](~/docs/standard/base-types/custom-numeric-format-strings.md)).  
+  
+-   Cadeias de caracteres de formato padrão e personalizados para formatar valores de data e hora (consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md) e [personalizado de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md)).  
+  
+-   Cadeias de caracteres de formato padrão e personalizados para formatar os intervalos de tempo (consulte [cadeias de caracteres de formato TimeSpan padrão](~/docs/standard/base-types/standard-timespan-format-strings.md) e [cadeias de caracteres de formato TimeSpan personalizadas](~/docs/standard/base-types/custom-timespan-format-strings.md)).  
+  
+ Você também pode definir suas próprias cadeias de caracteres de formato para dar suporte à formatação de seus tipos definidos pelo aplicativo.  
+  
+ Um provedor de formato retorna um objeto de formatação que normalmente define os símbolos utilizados na conversão de um objeto em sua representação de cadeia de caracteres. Por exemplo, quando você converter um número para um valor de moeda, um provedor de formato define o símbolo de moeda que aparece na cadeia de caracteres de resultado. O .NET Framework define três provedores de formato:  
+  
+-   O <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> classe, que retorna um uma <xref:System.Globalization.NumberFormatInfo> objeto para a formatação de valores numéricos, ou um <xref:System.Globalization.DateTimeFormatInfo> objeto para a formatação de valores de data e hora.  
+  
+-   O <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType> classe, que retorna uma instância de si mesmo para valores numéricos da formatação.  
+  
+-   O <xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType> classe, que retorna uma instância de si mesmo para a formatação de valores de data e hora.  
+  
+ Além disso, você pode definir seus próprios provedores de formato personalizado para fornecer específicos de cultura, profissão específicos, ou informações específicas da indústria usada na formatação. Para obter mais informações sobre como implementar a formatação personalizada usando um provedor de formato personalizado, consulte <xref:System.ICustomFormatter>.  
+  
+ O <xref:System.IFormattable> interface define um único método, <xref:System.IFormattable.ToString%2A>, que fornece serviços de formatação para o tipo de implementação. O <xref:System.IFormattable.ToString%2A> método pode ser chamado diretamente. Além disso, ele é chamado automaticamente pelo <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> e <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> métodos e por métodos que usam o [recurso de formatação composta](~/docs/standard/base-types/composite-formatting.md) no .NET Framework. Esses métodos incluem <xref:System.Console.WriteLine%28System.String%2CSystem.Object%29?displayProperty=nameWithType>, <xref:System.String.Format%2A?displayProperty=nameWithType>, e <xref:System.Text.StringBuilder.AppendFormat%28System.String%2CSystem.Object%29?displayProperty=nameWithType>, entre outros. O <xref:System.IFormattable.ToString%2A> método é chamado para cada item de formato de cadeia de caracteres de formato do método.  
+  
+ O <xref:System.IFormattable> interface é implementada pelos tipos de dados base.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma `Temperature` classe que implementa o <xref:System.IFormattable> interface. A classe oferece suporte a quatro especificadores de formato: "G" e "C", que indicam que a temperatura deve ser exibido em Celsius; "F", que indica que a temperatura está para ser exibido em Fahrenheit; e "K", que indica que a temperatura é a ser exibido em Kelvin. Além disso, o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementação também pode lidar com uma cadeia de caracteres de formato é `null` ou vazio. Os outros dois `ToString` métodos definidos pelo `Temperature` classe simplesmente encapsular uma chamada para o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementação.  
+  
+ [!code-csharp[System.IFormattable#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.iformattable/cs/example1.cs#1)]
+ [!code-vb[System.IFormattable#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.iformattable/vb/example1.vb#1)]  
+  
+ O exemplo a seguir, em seguida, chama o <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementação diretamente ou usando uma cadeia de caracteres de formato composto.  
+  
+ [!code-csharp[System.IFormattable#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.iformattable/cs/example1.cs#2)]
+ [!code-vb[System.IFormattable#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.iformattable/vb/example1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Classes que exigem mais controle sobre a formatação de cadeias de caracteres que <see cref="M:System.Object.ToString" /> fornece deve implementar <see cref="T:System.IFormattable" />.  
+  
+ Uma classe que implementa <see cref="T:System.IFormattable" /> devem oferecer suporte para o especificador de formato (geral) "G". Além de especificador "G", a classe pode definir a lista de especificadores de formato que oferece suporte a ele. Além disso, a classe deve estar preparada para lidar com um especificador de formato é <see langword="null" />. Para obter mais informações sobre formatação e códigos de formatação, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md)</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (string format, IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ToString(string format, class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato a ser usado.  
+  
+ -ou-  
+  
+ Uma referência nula (<see langword="Nothing" /> no Visual Basic) para usar o formato padrão definido para o tipo do <see cref="T:System.IFormattable" /> implementação.</param>
+        <param name="formatProvider">O provedor a ser usado para formatar o valor.  
+  
+ -ou-  
+  
+ Uma referência nula (<see langword="Nothing" /> no Visual Basic) para obter as informações de formato numérico da configuração de localidade atual do sistema operacional.</param>
+        <summary>Formata o valor da instância atual usando o formato especificado.</summary>
+        <returns>O valor da instância atual no formato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IFormattable.ToString%2A> método converte um valor em uma representação de cadeia de caracteres que pode ser expresso de várias maneiras. O formato exato depende de símbolos específicos ou uma ordem especificada definidos por culturas específicas, profissões ou setores. Você pode chamar o método diretamente. Ele também é chamado automaticamente pelo <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> e <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> métodos e por métodos que usam a formatação composta de recursos do .NET Framework, como <xref:System.String.Format%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Console.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, e <xref:System.Text.StringBuilder.AppendFormat%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. (Para obter mais informações, consulte [formatação composta](~/docs/standard/base-types/composite-formatting.md).)  
+  
+ Chamada de métodos de formatação composta de <xref:System.IFormattable.ToString%2A> método uma vez para cada item de formato em uma cadeia de caracteres de formato. Os parâmetros passados para o método dependem o método de formatação específico que é chamado e o conteúdo do item de formato, da seguinte maneira:  
+  
+-   Se o item de formato não inclui uma cadeia de caracteres de formato (por exemplo, se o item de formato é simplesmente `{0}`), ele é passado `null` como o valor da <xref:System.String?displayProperty=nameWithType> parâmetro.  
+  
+-   Se o item de formato inclui uma cadeia de caracteres de formato (por exemplo, `{0:G}`), se a cadeia de caracteres de formato é passada como o valor da <xref:System.String?displayProperty=nameWithType> parâmetro.  
+  
+-   Se a chamada do método original não incluir um <xref:System.IFormatProvider?displayProperty=nameWithType> parâmetro <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> é passado como o valor da <xref:System.IFormatProvider?displayProperty=nameWithType> parâmetro.  
+  
+-   Se a chamada do método original inclui um <xref:System.IFormatProvider?displayProperty=nameWithType> parâmetro, o provedor que é fornecido na chamada do método é passado como o valor de <xref:System.IFormatProvider?displayProperty=nameWithType> parâmetro.  
+  
+> [!NOTE]
+>  Um objeto <xref:System.IFormattable.ToString%2A> implementação é chamada pelos métodos de formatação compostos somente se eles não forem passados um <xref:System.ICustomFormatter> provedor de formato, ou se o <xref:System.ICustomFormatter.Format%2A> método do provedor de formato personalizado retorna `null`.  
+  
+ O .NET Framework inclui três provedores de formato, que implementa o <xref:System.IFormatProvider> interface:  
+  
+-   <xref:System.Globalization.NumberFormatInfo>Fornece numérico formatar as informações, como os caracteres a ser usado para decimal e separadores de grupo e a ortografia e o posicionamento de símbolos de moeda em valores monetários.  
+  
+-   <xref:System.Globalization.DateTimeFormatInfo>Forneça relacionadas à hora e data de informações de formatação, como a posição do mês, dia e ano em um padrão de data.  
+  
+-   <xref:System.Globalization.CultureInfo>contém as informações em uma cultura específica, incluindo as informações de formato numérico e informações de formatação relacionadas à hora e data de formatação padrão.  
+  
+ Além disso, você pode definir seu próprio provedor de formato personalizado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um `Temperature` classe que implementa o <xref:System.IFormattable.ToString%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IFormattable> classe.  
+  
+ [!code-csharp[System.IFormattable#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.iformattable/cs/example1.cs#1)]
+ [!code-vb[System.IFormattable#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.iformattable/vb/example1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" /> método deve oferecer suporte para o especificador de formato (geral) "G". Além de especificador "G", a classe pode definir a lista de especificadores de formato que oferece suporte a ele. Além disso, a classe deve estar preparada para lidar com um especificador de formato é <see langword="null" />. Para obter mais informações sobre formatação e códigos de formatação, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

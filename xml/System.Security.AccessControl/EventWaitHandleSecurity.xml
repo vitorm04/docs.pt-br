@@ -1,0 +1,805 @@
+<Type Name="EventWaitHandleSecurity" FullName="System.Security.AccessControl.EventWaitHandleSecurity">
+  <TypeSignature Language="C#" Value="public sealed class EventWaitHandleSecurity : System.Security.AccessControl.NativeObjectSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventWaitHandleSecurity extends System.Security.AccessControl.NativeObjectSecurity" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.EventWaitHandleSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.NativeObjectSecurity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a segurança de controle de acesso do Windows aplicada a um identificador de espera do sistema nomeado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto Especifica direitos para um sistema nomeado aguardar o identificador de acesso e também especifica a maneira como as tentativas de acesso são auditadas. Direitos de acesso para o identificador de espera são expressos como regras, com cada regra de acesso representado por um <xref:System.Security.AccessControl.EventWaitHandleAccessRule> objeto. Cada regra de auditoria é representada por um <xref:System.Security.AccessControl.EventWaitHandleAuditRule> objeto.  
+  
+ Isso reflete o sistema de segurança de Windows subjacente, em que cada objeto protegível tem no máximo um controle lista de acesso discricionário (DACL) que controla o acesso para o objeto protegido e no máximo um sistema controle lista de acesso (SACL) que especifica que as tentativas de acesso são auditadas. A DACL e SACL são ordenados listas de entradas de controle de acesso (ACE) que especificam o acesso e auditoria para usuários e grupos. Um <xref:System.Security.AccessControl.EventWaitHandleAccessRule> ou <xref:System.Security.AccessControl.EventWaitHandleAuditRule> objeto pode representar mais de uma ACE.  
+  
+> [!NOTE]
+>  Um <xref:System.Threading.EventWaitHandle> objeto pode representar um identificador de espera local ou identificador de espera de um sistema nomeado. Segurança de controle de acesso do Windows é significativa apenas para os identificadores de espera do sistema nomeado.  
+  
+ O <xref:System.Security.AccessControl.EventWaitHandleSecurity>, <xref:System.Security.AccessControl.EventWaitHandleAccessRule>, e <xref:System.Security.AccessControl.EventWaitHandleAuditRule> classes ocultar os detalhes de implementação de ACEs e ACLs. Elas permitem que você ignore os diferentes tipos ACE dezessete e a complexidade de manter corretamente herança e propagação de direitos de acesso. Esses objetos também foram projetados para impedir que os seguintes erros comuns de controle de acesso:  
+  
+-   Criando um descritor de segurança com uma DACL null. Uma referência nula para uma DACL permite que qualquer usuário adicionar regras de acesso a um objeto, potencialmente, criando um ataque de negação de serviço. Um novo <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto sempre começa com uma DACL vazia, o que nega todo o acesso para todos os usuários.  
+  
+-   Violando a ordem canônica de ACEs. Se a lista ACE na DACL não é mantida na ordem canônica, os usuários podem inadvertidamente receberá acesso para o objeto protegido. Por exemplo, os direitos de acesso negado sempre devem aparecer antes de direitos de acesso permitido. <xref:System.Security.AccessControl.EventWaitHandleSecurity>objetos de mantém a ordem correta internamente.  
+  
+-   Manipulando os sinalizadores de descritor de segurança, que devem estar sob controle do Gerenciador de recursos somente.  
+  
+-   Criando combinações inválidas de sinalizadores ACE.  
+  
+-   Manipulação de ACEs herdadas. Herança e propagação são manipulados pelo Gerenciador de recursos, em resposta a alterações feitas às regras de acesso e auditoria.  
+  
+-   Inserindo ACEs sentidas ACLs.  
+  
+ Os recursos somente os objetos de segurança do .NET não oferece suportados são perigosas atividades que devem ser evitadas, a maioria dos desenvolvedores de aplicativos, como o seguinte:  
+  
+-   Tarefas de nível inferior que são normalmente executadas pelo Gerenciador de recursos.  
+  
+-   Adicionar ou remover entradas de controle de acesso de maneiras que não precisam manter a ordem canônica.  
+  
+ Para modificar a segurança de controle de acesso do Windows para um identificador de espera nomeado, use o <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> método para obter o <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto. Modificar o objeto de segurança, adicionando e removendo regras e, em seguida, usar o <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType> método para recolocá-la.  
+  
+> [!IMPORTANT]
+>  Alterações feitas em um <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto não afetam os níveis de acesso do identificador nomeada espera até que você chamar o <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType> método para atribuir o objeto de segurança alterado para o identificador de espera nomeada.  
+  
+ Para copiar a segurança de controle de acesso do identificador de espera de um para outro, use o <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> método para obter um <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto que representa as regras de acesso e auditoria para o identificador de espera primeiro e, em seguida, use o <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType> método ou um construtor que aceite um <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto atribuir essas regras para o segundo identificador de espera.  
+  
+ Os usuários com um investimento em linguagem de definição de descritor de segurança (SDDL) podem usar o <xref:System.Security.AccessControl.ObjectSecurity.SetSecurityDescriptorSddlForm%2A> método para definir regras de acesso para um identificador de espera nomeada e o <xref:System.Security.AccessControl.ObjectSecurity.GetSecurityDescriptorSddlForm%2A> método para obter uma cadeia de caracteres que representa as regras de acesso no formato SDDL. Isso não é recomendado para novo desenvolvimento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a separação entre <xref:System.Security.AccessControl.AccessControlType.Allow> regras e <xref:System.Security.AccessControl.AccessControlType.Deny> regras e exibe a combinação de direitos em regras compatíveis. O exemplo cria um <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto adiciona regras de permissão e negação vários direitos para o usuário atual e exibe o par resultante de regras. O exemplo permite que novos direitos para o usuário atual e exibe o resultado mostra que novos direitos são mesclados com a existente <xref:System.Security.AccessControl.AccessControlType.Allow> regra.  
+  
+> [!NOTE]
+>  Este exemplo não anexa o objeto de segurança para um <xref:System.Threading.EventWaitHandle> objeto. Exemplos que anexa os objetos de segurança podem ser encontrados em <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> e <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventWaitHandleSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.AccessControl.EventWaitHandleSecurity" /> com valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um novo <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto sempre começa com uma lista vazia de acesso discricionário (DACL), que nega todo o acesso para todos os usuários.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Essa classe não tem suporte no Windows 98 ou Windows Millennium Edition.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRightType">
+      <MemberSignature Language="C#" Value="public override Type AccessRightType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRightType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.EventWaitHandleSecurity.AccessRightType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de enumeração que o <see cref="T:System.Security.AccessControl.EventWaitHandleSecurity" /> classe usa para representar os direitos de acesso.</summary>
+        <value>Um objeto <see cref="T:System.Type" /> que representa a enumeração <see cref="T:System.Security.AccessControl.EventWaitHandleRights" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.Security.AccessControl.ObjectSecurity> classe substituição de <xref:System.Security.AccessControl.ObjectSecurity.AccessRightType%2A> propriedade e retornar o tipo que eles usam para representar os direitos de acesso. Quando você trabalha com matrizes ou coleções que contêm vários tipos de objetos de segurança, use essa propriedade para determinar o tipo de enumeração correto a ser usado com cada objeto de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleFactory">
+      <MemberSignature Language="C#" Value="public override System.Security.AccessControl.AccessRule AccessRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AccessRule AccessRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.AccessRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AccessRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">Um <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o usuário ou grupo a regra se aplica a.</param>
+        <param name="accessMask">Uma combinação bit a bit de <see cref="T:System.Security.AccessControl.EventWaitHandleRights" /> valores que especificam os direitos de acesso para permitir ou negar, convertido em um número inteiro.</param>
+        <param name="isInherited">Sentido de identificadores de espera nomeada, porque eles têm nenhuma hierarquia.</param>
+        <param name="inheritanceFlags">Sentido de identificadores de espera nomeada, porque eles têm nenhuma hierarquia.</param>
+        <param name="propagationFlags">Sentido de identificadores de espera nomeada, porque eles têm nenhuma hierarquia.</param>
+        <param name="type">Uma da <see cref="T:System.Security.AccessControl.AccessControlType" /> valores que especificam se os direitos são permitidos ou negados.</param>
+        <summary>Cria uma nova regra de controle de acesso para o usuário especificado, com direitos de acesso especificado, o controle de acesso e os sinalizadores.</summary>
+        <returns>Um <see cref="T:System.Security.AccessControl.EventWaitHandleAccessRule" /> objeto que representa os direitos especificados para o usuário especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maneira recomendada para criação de regras de controle de acesso é usar os construtores de <xref:System.Security.AccessControl.EventWaitHandleAccessRule> classe.  
+  
+> [!NOTE]
+>  Embora os sinalizadores de herança e propagação fazem sentidos para eventos nomeados, ele ainda é possível especificá-los. Isso não é recomendável, pois ela desnecessariamente complica a manutenção de regras, por exemplo por interferir com a combinação de regras que seriam compatíveis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="accessMask" />, <paramref name="inheritanceFlags" />, <paramref name="propagationFlags" />, ou <paramref name="type" /> Especifica um valor inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identityReference" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="accessMask" /> é zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identityReference" /> não e do tipo <see cref="T:System.Security.Principal.SecurityIdentifier" /> nem de um tipo como <see cref="T:System.Security.Principal.NTAccount" /> que pode ser convertido para o tipo <see cref="T:System.Security.Principal.SecurityIdentifier" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleType">
+      <MemberSignature Language="C#" Value="public override Type AccessRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.EventWaitHandleSecurity.AccessRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo que o <see cref="T:System.Security.AccessControl.EventWaitHandleSecurity" /> classe usa para representar as regras de acesso.</summary>
+        <value>Um objeto <see cref="T:System.Type" /> que representa a classe <see cref="T:System.Security.AccessControl.EventWaitHandleAccessRule" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.Security.AccessControl.ObjectSecurity> classe substituição a <xref:System.Security.AccessControl.ObjectSecurity.AccessRuleType%2A> propriedade e retornar o tipo que eles usam para representar as regras de acesso. Quando você trabalha com matrizes ou coleções que contêm vários tipos de objetos de segurança, use essa propriedade para determinar o tipo de regra de acesso corretas para usar com cada objeto de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAccessRule">
+      <MemberSignature Language="C#" Value="public void AddAccessRule (System.Security.AccessControl.EventWaitHandleAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAccessRule(class System.Security.AccessControl.EventWaitHandleAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule(System.Security.AccessControl.EventWaitHandleAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.EventWaitHandleAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de controle de acesso a ser adicionada.</param>
+        <summary>Procura por uma regra de controle de acesso correspondente com a qual a nova regra pode ser mesclada. Se nenhum erro for encontrado, adiciona a nova regra.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule%2A> método procura regras com o mesmo usuário ou grupo e o mesmo <xref:System.Security.AccessControl.AccessControlType> como `rule`. Se nenhum for encontrado, `rule` é adicionado. Se uma regra de correspondência for encontrada, os direitos no `rule` são mescladas com a regra existente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a separação entre <xref:System.Security.AccessControl.AccessControlType.Allow> regras e <xref:System.Security.AccessControl.AccessControlType.Deny> regras e exibe a combinação de direitos em regras compatíveis. O exemplo cria um <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto adiciona regras de permissão e negação vários direitos para o usuário atual e exibe o par resultante de regras. O exemplo permite que novos direitos para o usuário atual e exibe o resultado mostra que novos direitos são mesclados com a existente <xref:System.Security.AccessControl.AccessControlType.Allow> regra.  
+  
+> [!NOTE]
+>  Este exemplo não anexa o objeto de segurança para um <xref:System.Threading.EventWaitHandle> objeto. Exemplos que anexa os objetos de segurança podem ser encontrados em <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> e <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.AddAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAuditRule">
+      <MemberSignature Language="C#" Value="public void AddAuditRule (System.Security.AccessControl.EventWaitHandleAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAuditRule(class System.Security.AccessControl.EventWaitHandleAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.AddAuditRule(System.Security.AccessControl.EventWaitHandleAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.EventWaitHandleAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para adicionar. O usuário especificado por essa regra determina a pesquisa.</param>
+        <summary>Procura por uma regra de auditoria com a qual a nova regra pode ser mesclada. Se nenhum erro for encontrado, adiciona a nova regra.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.AccessControl.EventWaitHandleSecurity.AddAuditRule%2A> método procura regras com o mesmo usuário ou grupo como `rule`. Se nenhum for encontrado, `rule` é adicionado. Se uma regra de correspondência for encontrada, os sinalizadores no `rule` são mesclados para a regra existente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleFactory">
+      <MemberSignature Language="C#" Value="public override System.Security.AccessControl.AuditRule AuditRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AuditRule AuditRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.AuditRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AuditRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">Um <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o usuário ou grupo a regra se aplica a.</param>
+        <param name="accessMask">Uma combinação bit a bit de <see cref="T:System.Security.AccessControl.EventWaitHandleRights" /> valores que especificam os direitos de acesso para auditoria, convertido em um número inteiro.</param>
+        <param name="isInherited">Sentido de identificadores de espera nomeada, porque eles têm nenhuma hierarquia.</param>
+        <param name="inheritanceFlags">Sentido de identificadores de espera nomeada, porque eles têm nenhuma hierarquia.</param>
+        <param name="propagationFlags">Sentido de identificadores de espera nomeada, porque eles têm nenhuma hierarquia.</param>
+        <param name="flags">Uma combinação bit a bit de <see cref="T:System.Security.AccessControl.AuditFlags" /> valores que especificam se a auditoria de acesso com êxito, falhas de acesso ou ambos.</param>
+        <summary>Cria uma nova regra de auditoria, especificando o usuário que a regra se aplica, os direitos de acesso para auditoria e o resultado que dispara a regra de auditoria.</summary>
+        <returns>Um <see cref="T:System.Security.AccessControl.EventWaitHandleAuditRule" /> objeto que representa a regra de auditoria para o usuário especificado. O tipo de retorno do método é a classe base, <see cref="T:System.Security.AccessControl.AuditRule" />, mas o valor de retorno pode ser convertido com segurança para a classe derivada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maneira recomendada para criar regras de auditoria é usar os construtores de <xref:System.Security.AccessControl.EventWaitHandleAuditRule> classe.  
+  
+> [!NOTE]
+>  Embora os sinalizadores de herança e propagação fazem sentidos para eventos nomeados, ele ainda é possível especificá-los. Isso não é recomendável, pois ela desnecessariamente complica a manutenção de regras, por exemplo por interferir com a combinação de regras que seriam compatíveis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="accessMask" />, <paramref name="inheritanceFlags" />, <paramref name="propagationFlags" />, ou <paramref name="flags" /> Especifica um valor inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identityReference" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="accessMask" /> é zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identityReference" /> não e do tipo <see cref="T:System.Security.Principal.SecurityIdentifier" /> nem de um tipo como <see cref="T:System.Security.Principal.NTAccount" /> que pode ser convertido para o tipo <see cref="T:System.Security.Principal.SecurityIdentifier" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleType">
+      <MemberSignature Language="C#" Value="public override Type AuditRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AuditRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.EventWaitHandleSecurity.AuditRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo que o <see cref="T:System.Security.AccessControl.EventWaitHandleSecurity" /> classe usa para representar as regras de auditoria.</summary>
+        <value>Um objeto <see cref="T:System.Type" /> que representa a classe <see cref="T:System.Security.AccessControl.EventWaitHandleAuditRule" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.Security.AccessControl.ObjectSecurity> classe substituição a <xref:System.Security.AccessControl.ObjectSecurity.AuditRuleType%2A> propriedade e retornar o tipo que eles usam para representar os direitos de auditoria. Quando você trabalha com matrizes ou coleções que contêm vários tipos de objetos de segurança, use essa propriedade para determinar o tipo de regra de auditoria correto a ser usado com cada objeto de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRule">
+      <MemberSignature Language="C#" Value="public bool RemoveAccessRule (System.Security.AccessControl.EventWaitHandleAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAccessRule(class System.Security.AccessControl.EventWaitHandleAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRule(System.Security.AccessControl.EventWaitHandleAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.EventWaitHandleAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Um <see cref="T:System.Security.AccessControl.EventWaitHandleAccessRule" /> que especifica o usuário e <see cref="T:System.Security.AccessControl.AccessControlType" /> para pesquisa e um conjunto de sinalizadores de herança e propagação que a correspondência de uma regra, se encontrado, deve ser compatível com. Especifica os direitos para remover a regra compatíveis, se encontrado.</param>
+        <summary>Procura uma regra de controle de acesso com o mesmo usuário e <see cref="T:System.Security.AccessControl.AccessControlType" /> (permitir ou negar) como a regra de acesso especificado e com herança compatível e sinalizadores de propagação; se tal uma regra for encontrada, os direitos contidos na regra de acesso especificado serão removidos dele.</summary>
+        <returns>
+          <see langword="true" />Se for encontrada uma regra compatível; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atual <xref:System.Security.AccessControl.EventWaitHandleSecurity> é pesquisada para uma regra que tem o mesmo usuário e o mesmo <xref:System.Security.AccessControl.AccessControlType> valor como `rule`. Se nenhuma regra for encontrada, nenhuma ação é executada e o método retornará `false`. Se as regras de correspondência for encontradas, seus sinalizadores de herança e compatibilidade são verificados quanto à compatibilidade com os sinalizadores especificados na `rule`. Se nenhuma regra compatível foi encontrada, nenhuma ação é executada e o método retornará `false`. Se uma regra com sinalizadores compatíveis for encontrada, os direitos especificados em `rule` são removidos da regra compatível, e o método retornará `true`. Se `rule` Especifica direitos não contidos na regra compatível, nenhuma ação será tomada em relação a esses direitos. Se todos os direitos são removidos da regra compatível, toda a regra será removida do atual <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto.  
+  
+> [!IMPORTANT]
+>  Embora você possa especificar sinalizadores de herança e propagação para regras de acesso de eventos, criando-as com o <xref:System.Security.AccessControl.EventWaitHandleSecurity.AccessRuleFactory%2A> método, isso não é recomendado. Herança e propagação não têm significado para eventos nomeados e façam a manutenção de regras de acesso mais complicado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRule%2A> método para remover direitos de um <xref:System.Security.AccessControl.AccessControlType.Allow> regra em um <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto. Ele também mostra que outros direitos no `rule` são ignorados.  
+  
+ O exemplo cria um <xref:System.Security.AccessControl.EventWaitHandleSecurity> e o adiciona regras que permitirem e negar vários direitos para o usuário atual. Os direitos de permissão incluem <xref:System.Security.AccessControl.EventWaitHandleRights.Modify>, <xref:System.Security.AccessControl.EventWaitHandleRights.ReadPermissions>, e <xref:System.Security.AccessControl.EventWaitHandleRights.Synchronize>. O exemplo cria uma nova regra para o usuário atual, incluindo <xref:System.Security.AccessControl.EventWaitHandleRights.ReadPermissions> e <xref:System.Security.AccessControl.EventWaitHandleRights.TakeOwnership> direitos e usa a regra com o <xref:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRule%2A> método para remover <xref:System.Security.AccessControl.EventWaitHandleRights.ReadPermissions> do <xref:System.Security.AccessControl.AccessControlType.Allow> regra no <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto. O <xref:System.Security.AccessControl.EventWaitHandleRights.TakeOwnership> diretamente no `rule` será ignorado.  
+  
+> [!NOTE]
+>  Este exemplo não anexa o objeto de segurança para um <xref:System.Threading.EventWaitHandle> objeto. Exemplos que anexa os objetos de segurança podem ser encontrados em <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> e <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleAll">
+      <MemberSignature Language="C#" Value="public void RemoveAccessRuleAll (System.Security.AccessControl.EventWaitHandleAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccessRuleAll(class System.Security.AccessControl.EventWaitHandleAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleAll(System.Security.AccessControl.EventWaitHandleAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.EventWaitHandleAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Um <see cref="T:System.Security.AccessControl.EventWaitHandleAccessRule" /> que especifica o usuário e <see cref="T:System.Security.AccessControl.AccessControlType" /> para pesquisar. Quaisquer direitos especificados por essa regra são ignorados.</param>
+        <summary>Pesquisas para todas as regras de controle com o mesmo usuário de acesso e <see cref="T:System.Security.AccessControl.AccessControlType" /> (permitir ou negar) conforme o especificado regra e, se encontrado, remove-los.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atual <xref:System.Security.AccessControl.EventWaitHandleSecurity> é pesquisada para regras que têm o mesmo usuário e o mesmo <xref:System.Security.AccessControl.AccessControlType> valor como `rule`. Quaisquer direitos especificados pelo `rule` são ignorados quando executar esta pesquisa. Todas as regras correspondentes são removidas. Se nenhuma regra de correspondência for encontrada, nenhuma ação é executada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra que o <xref:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleAll%2A> método Remove todas as regras de correspondam de usuário e <xref:System.Security.AccessControl.AccessControlType>, ignorando direitos.  
+  
+ O exemplo cria um <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto, adiciona regras de permissão e negação vários direitos para o usuário atual e, em seguida, mescla direitos adicionais para o <xref:System.Security.AccessControl.AccessControlType.Allow> regra. O exemplo cria uma nova regra que permite que o usuário atual assumir a propriedade e usa a regra para remover o <xref:System.Security.AccessControl.AccessControlType.Allow> regra do <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto.  
+  
+> [!NOTE]
+>  Este exemplo não anexa o objeto de segurança para um <xref:System.Threading.EventWaitHandle> objeto. Exemplos que anexa os objetos de segurança podem ser encontrados em <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> e <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleAll#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleAll/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleAll#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleAll/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAccessRuleSpecific (System.Security.AccessControl.EventWaitHandleAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccessRuleSpecific(class System.Security.AccessControl.EventWaitHandleAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleSpecific(System.Security.AccessControl.EventWaitHandleAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.EventWaitHandleAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">O <see cref="T:System.Security.AccessControl.EventWaitHandleAccessRule" /> a ser removido.</param>
+        <summary>Procura por uma regra de controle de acesso que corresponda exatamente ao especificado regra e, se encontrado, remove-lo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A regra será removida somente se ele corresponde exatamente `rule` em todos os detalhes, incluindo sinalizadores. Outras regras com o mesmo usuário e <xref:System.Security.AccessControl.AccessControlType> não são afetados.  
+  
+> [!IMPORTANT]
+>  Uma regra representa um ou mais subjacente entradas controle de acesso (ACE) e essas entradas são divididos ou combinados conforme necessário, quando você modificar as regras de segurança de acesso para um usuário. Portanto, uma regra não existe mais no formulário específico que tinha quando foi adicionado e nesse caso o <xref:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleSpecific%2A> método não pode removê-lo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra que o <xref:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleSpecific%2A> método requer uma correspondência exata para remover uma regra e regras para permitir e negar direitos são independentes umas das outras.  
+  
+ O exemplo cria um <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto, adiciona regras de permissão e negação vários direitos para o usuário atual e, em seguida, mescla direitos adicionais para o <xref:System.Security.AccessControl.AccessControlType.Allow> regra de acesso. O exemplo, em seguida, passa o original <xref:System.Security.AccessControl.AccessControlType.Allow> regra para o <xref:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleSpecific%2A> método e exibe os resultados, mostrando que nada é excluído. O exemplo constrói uma regra que corresponda a <xref:System.Security.AccessControl.AccessControlType.Allow> regra no <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto e, com êxito, usa o <xref:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleSpecific%2A> método para remover a regra.  
+  
+> [!NOTE]
+>  Este exemplo não anexa o objeto de segurança para um <xref:System.Threading.EventWaitHandle> objeto. Exemplos que anexa os objetos de segurança podem ser encontrados em <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> e <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleSpecific#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleSpecific/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleSpecific#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.RemoveAccessRuleSpecific/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRule">
+      <MemberSignature Language="C#" Value="public bool RemoveAuditRule (System.Security.AccessControl.EventWaitHandleAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAuditRule(class System.Security.AccessControl.EventWaitHandleAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAuditRule(System.Security.AccessControl.EventWaitHandleAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.EventWaitHandleAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Um <see cref="T:System.Security.AccessControl.EventWaitHandleAuditRule" /> que especifica o usuário para procurar e um conjunto de sinalizadores de herança e propagação de uma correspondência de regra, se encontrado, deve ser compatível com. Especifica os direitos para remover a regra compatíveis, se encontrado.</param>
+        <summary>Procura uma regra de auditoria com o mesmo usuário conforme a regra especificada e com herança compatível e sinalizadores de propagação; Se uma regra compatível for encontrada, os direitos contidos na regra especificada são removidos dele.</summary>
+        <returns>
+          <see langword="true" />Se for encontrada uma regra compatível; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atual <xref:System.Security.AccessControl.EventWaitHandleSecurity> é pesquisada para uma regra de auditoria que tenha o mesmo usuário conforme `rule`. Se nenhuma regra for encontrada, nenhuma ação é executada e o método retornará `false`. Se as regras de correspondência for encontradas, seus sinalizadores de herança e compatibilidade são verificados quanto à compatibilidade com os sinalizadores especificados na `rule`. Se nenhuma regra compatível foi encontrada, nenhuma ação é executada e o método retornará `false`. Se uma regra com sinalizadores compatíveis for encontrada, os direitos especificados em `rule` são removidos da regra compatível, e o método retornará `true`. Se `rule` Especifica direitos não contidos na regra compatível, nenhuma ação será tomada em relação a esses direitos. Se todos os direitos são removidos da regra compatível, toda a regra será removida do atual <xref:System.Security.AccessControl.EventWaitHandleSecurity> objeto.  
+  
+> [!IMPORTANT]
+>  Embora você possa especificar sinalizadores de herança e propagação para regras de auditoria de eventos, criando-as com o <xref:System.Security.AccessControl.EventWaitHandleSecurity.AuditRuleFactory%2A> método, isso não é recomendado. Herança e propagação não têm significado para eventos nomeados e façam a manutenção de regras de auditoria mais complicado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleAll">
+      <MemberSignature Language="C#" Value="public void RemoveAuditRuleAll (System.Security.AccessControl.EventWaitHandleAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAuditRuleAll(class System.Security.AccessControl.EventWaitHandleAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAuditRuleAll(System.Security.AccessControl.EventWaitHandleAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.EventWaitHandleAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">Um <see cref="T:System.Security.AccessControl.EventWaitHandleAuditRule" /> que especifica o usuário a ser pesquisado. Quaisquer direitos especificados por essa regra são ignorados.</param>
+        <summary>Pesquisa para todas as regras com o mesmo usuário conforme a regra especificada de auditoria e, se encontrado, remove-los.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atual <xref:System.Security.AccessControl.EventWaitHandleSecurity> é pesquisada para regras de auditoria que têm o mesmo usuário conforme `rule`. Quaisquer direitos especificados pelo `rule` são ignorados quando executar esta pesquisa. Todas as regras correspondentes são removidas. Se nenhuma regra de correspondência for encontrada, nenhuma ação é executada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAuditRuleSpecific (System.Security.AccessControl.EventWaitHandleAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAuditRuleSpecific(class System.Security.AccessControl.EventWaitHandleAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAuditRuleSpecific(System.Security.AccessControl.EventWaitHandleAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.EventWaitHandleAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">O <see cref="T:System.Security.AccessControl.EventWaitHandleAuditRule" /> a ser removido.</param>
+        <summary>Procura por uma regra de auditoria que corresponda exatamente ao especificado regra e, se encontrado, remove-lo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A regra será removida somente se ele corresponde exatamente `rule` em todos os detalhes, incluindo sinalizadores. Outras regras de auditoria para o mesmo usuário não são afetadas.  
+  
+> [!IMPORTANT]
+>  Uma regra representa um ou mais subjacente entradas controle de acesso (ACE) e essas entradas são divididos ou combinados conforme necessário, quando você modificar as regras de segurança de auditoria para um usuário. Portanto, uma regra não existe mais no formulário específico que tinha quando foi adicionado e nesse caso o <xref:System.Security.AccessControl.EventWaitHandleSecurity.RemoveAuditRuleSpecific%2A> método não pode removê-lo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetAccessRule">
+      <MemberSignature Language="C#" Value="public void ResetAccessRule (System.Security.AccessControl.EventWaitHandleAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetAccessRule(class System.Security.AccessControl.EventWaitHandleAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.ResetAccessRule(System.Security.AccessControl.EventWaitHandleAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.EventWaitHandleAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">O <see cref="T:System.Security.AccessControl.EventWaitHandleAccessRule" /> a ser adicionado. O usuário especificado por essa regra determina as regras para remover antes de é adicionada a essa regra.</param>
+        <summary>Remove todas as regras de controle de acesso com o mesmo usuário conforme a regra especificada, independentemente de <see cref="T:System.Security.AccessControl.AccessControlType" />e, em seguida, adiciona a regra especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhuma regra de acesso cujo usuário corresponder a regra especificada, `rule` é adicionado.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra como o <xref:System.Security.AccessControl.EventWaitHandleSecurity.ResetAccessRule%2A> método substitui todas as regras para o usuário correspondente com a regra especificada para a correspondência.  
+  
+ O exemplo cria um <xref:System.Security.AccessControl.EventWaitHandleSecurity> e o adiciona regras que permitirem e negar vários direitos para o usuário atual. O exemplo cria uma nova regra que permite o controle total do usuário atual e usa o <xref:System.Security.AccessControl.EventWaitHandleSecurity.ResetAccessRule%2A> método para substituir as regras existentes com a nova regra.  
+  
+> [!NOTE]
+>  Este exemplo não anexa o objeto de segurança para um <xref:System.Threading.EventWaitHandle> objeto. Exemplos que anexa os objetos de segurança podem ser encontrados em <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> e <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.EventWaitHandleSecurity.ResetAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.ResetAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.EventWaitHandleSecurity.ResetAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.ResetAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessRule">
+      <MemberSignature Language="C#" Value="public void SetAccessRule (System.Security.AccessControl.EventWaitHandleAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessRule(class System.Security.AccessControl.EventWaitHandleAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.SetAccessRule(System.Security.AccessControl.EventWaitHandleAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.EventWaitHandleAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">O <see cref="T:System.Security.AccessControl.EventWaitHandleAccessRule" /> a ser adicionado. O usuário e <see cref="T:System.Security.AccessControl.AccessControlType" /> desta regra determinam as regras para remover antes de é adicionada a essa regra.</param>
+        <summary>Remove todas as regras de controle de acesso com o mesmo usuário e <see cref="T:System.Security.AccessControl.AccessControlType" /> (permitir ou negar) como a regra especificada e, em seguida, adiciona a regra especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a regra especificada tem <xref:System.Security.AccessControl.AccessControlType.Allow>, é o efeito desse método para remover todos os <xref:System.Security.AccessControl.AccessControlType.Allow> regras para o usuário especificado, substituindo-os com a regra especificada. Se a regra especificada tem <xref:System.Security.AccessControl.AccessControlType.Deny>, todos os <xref:System.Security.AccessControl.AccessControlType.Deny> regras para o usuário especificado são substituídas com a regra especificada.  
+  
+ Se não houver nenhuma regra cujo usuário e <xref:System.Security.AccessControl.AccessControlType> correspondem à regra especificada, `rule` é adicionado.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra como o <xref:System.Security.AccessControl.EventWaitHandleSecurity.SetAccessRule%2A> método Remove todas as regras que correspondem o usuário e o <xref:System.Security.AccessControl.AccessControlType> de `rule`, substituí-las com `rule`.  
+  
+ O exemplo cria um <xref:System.Security.AccessControl.EventWaitHandleSecurity> e o adiciona regras que permitirem e negar vários direitos para o usuário atual. O exemplo cria uma nova regra que permite o controle total do usuário atual e usa o <xref:System.Security.AccessControl.EventWaitHandleSecurity.SetAccessRule%2A> método para substituir o <xref:System.Security.AccessControl.AccessControlType.Allow> regra com a nova regra. A regra que nega o acesso não é afetada.  
+  
+> [!NOTE]
+>  Este exemplo não anexa o objeto de segurança para um <xref:System.Threading.EventWaitHandle> objeto. Exemplos que anexa os objetos de segurança podem ser encontrados em <xref:System.Threading.EventWaitHandle.GetAccessControl%2A?displayProperty=nameWithType> e <xref:System.Threading.EventWaitHandle.SetAccessControl%2A?displayProperty=nameWithType>.  
+  
+ [!code-csharp[System.Security.AccessControl.EventWaitHandleSecurity.SetAccessRule#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.SetAccessRule/CS/source.cs#1)]
+ [!code-vb[System.Security.AccessControl.EventWaitHandleSecurity.SetAccessRule#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.AccessControl.EventWaitHandleSecurity.SetAccessRule/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAuditRule">
+      <MemberSignature Language="C#" Value="public void SetAuditRule (System.Security.AccessControl.EventWaitHandleAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAuditRule(class System.Security.AccessControl.EventWaitHandleAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.EventWaitHandleSecurity.SetAuditRule(System.Security.AccessControl.EventWaitHandleAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.EventWaitHandleAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">O <see cref="T:System.Security.AccessControl.EventWaitHandleAuditRule" /> a ser adicionado. O usuário especificado por essa regra determina as regras para remover antes de é adicionada a essa regra.</param>
+        <summary>Remove todas as regras com o mesmo usuário conforme a regra especificada, de auditoria independentemente do <see cref="T:System.Security.AccessControl.AuditFlags" /> valor e, em seguida, adiciona a regra especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhuma regra de auditoria cujo usuário corresponder a regra especificada, `rule` é adicionado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

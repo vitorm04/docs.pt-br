@@ -1,0 +1,175 @@
+<Type Name="MemoryFailPoint" FullName="System.Runtime.MemoryFailPoint">
+  <TypeSignature Language="C#" Value="public sealed class MemoryFailPoint : System.Runtime.ConstrainedExecution.CriticalFinalizerObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MemoryFailPoint extends System.Runtime.ConstrainedExecution.CriticalFinalizerObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.MemoryFailPoint" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.ConstrainedExecution.CriticalFinalizerObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Verifica se há recursos suficientes de memória antes de executar uma operação. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Essa classe é destinada para uso em desenvolvimento avançado.  
+  
+ Criar uma instância do <xref:System.Runtime.MemoryFailPoint> classe cria um portão de memória. Verifica um portão de memória para recursos suficientes antes de iniciar uma atividade que requer uma grande quantidade de memória. Falha na verificação resulta em um <xref:System.InsufficientMemoryException> exceção sendo lançada. Essa exceção impede que uma operação seja iniciado e reduz a possibilidade de falha devido à falta de recursos. Isso permite que você diminuir o desempenho para evitar um <xref:System.OutOfMemoryException> exceção e qualquer dano de estado que pode resultar de tratamento inadequado de exceção arbitrários locais no seu código.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ Lançando um <xref:System.InsufficientMemoryException> exceção, um aplicativo pode distinguir entre uma previsão que uma operação não poderá concluir e uma operação concluída parcialmente que pode ter corrompido o estado do aplicativo. Isso permite que um aplicativo reduzir a frequência de uma política de escalação pessimista, que pode exigir a descarregar atual <xref:System.AppDomain> ou reciclar o processo.  
+  
+ <xref:System.Runtime.MemoryFailPoint>verifica se há memória suficiente e espaço de endereço virtual consecutivas estão disponíveis na coleta de lixo todos os heaps e podem aumentar o tamanho do arquivo de permuta.  <xref:System.Runtime.MemoryFailPoint>nenhuma garantia em relação à disponibilidade de longo prazo da memória durante o tempo de vida da porta, mas os chamadores deve sempre utiliza o <xref:System.Runtime.MemoryFailPoint.Dispose%2A> método para garantir que os recursos associados com <xref:System.Runtime.MemoryFailPoint> são liberados.  
+  
+ Para usar um portão de memória, você deve criar um <xref:System.Runtime.MemoryFailPoint> do objeto e especifique o número de megabytes (MB) de memória que a próxima operação espera usar. Se há memória suficiente não estiver disponível, um <xref:System.InsufficientMemoryException> exceção será lançada.  
+  
+ O parâmetro do construtor deve ser um inteiro positivo. Um valor negativo gera um <xref:System.ArgumentOutOfRangeException> exceção.  
+  
+ <xref:System.Runtime.MemoryFailPoint>opera em uma granularidade de 16 MB. Valores menores do que 16 MB são tratados como 16 MB e outros valores são tratados como o próximo múltiplo maior de 16 MB.  
+  
+   
+  
+## Examples  
+ <xref:System.Runtime.MemoryFailPoint>permite que um aplicativo lenta para evitar a falta de memória de maneira corrompida.  Ele deve ser usado em um escopo léxico.  O exemplo a seguir inicia threads para processar os itens em uma fila de trabalho.  Antes de cada thread é iniciado, os recursos de memória disponíveis são verificados usando <xref:System.Runtime.MemoryFailPoint>.  Se uma exceção for lançada, o método principal aguarda até que a memória está disponível antes de iniciar o próximo segmento.  
+  
+ [!code-csharp[MemoryFailPoint#1](~/samples/snippets/csharp/VS_Snippets_CLR/MemoryFailPoint/CS/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />. Ação de segurança:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryFailPoint (int sizeInMegabytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 sizeInMegabytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.MemoryFailPoint.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sizeInMegabytes" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sizeInMegabytes">O tamanho da memória necessária, em megabytes. Isso deve ser um valor positivo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.MemoryFailPoint" />, especificando a quantidade de memória necessária para uma execução bem-sucedida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A quantidade de memória usada pelo seu aplicativo para processar um item de trabalho pode ser determinada empiricamente.  Para estimar a quantidade de memória que seu aplicativo precisa para processar uma solicitação, considere o uso de <xref:System.GC.GetTotalMemory%2A?displayProperty=nameWithType> método para determinar a quantidade de memória disponível antes e depois de chamar o método que processa o item de trabalho. Consulte o <xref:System.Runtime.MemoryFailPoint> classe para um exemplo de código que determina dinamicamente o valor para o `sizeInMegabytes` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como determinar a quantidade de memória que um método exige durante a execução. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.MemoryFailPoint> classe.  
+  
+ [!code-csharp[MemoryFailPoint#2](~/samples/snippets/csharp/VS_Snippets_CLR/MemoryFailPoint/CS/program.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tamanho de memória especificado é negativo.</exception>
+        <exception cref="T:System.InsufficientMemoryException">Não há memória suficiente para iniciar a execução do código protegido pelo portão.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.MemoryFailPoint.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Runtime.MemoryFailPoint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Runtime.MemoryFailPoint.Dispose%2A> quando tiver terminado de usar o <xref:System.Runtime.MemoryFailPoint>. O <xref:System.Runtime.MemoryFailPoint.Dispose%2A> método deixa o <xref:System.Runtime.MemoryFailPoint> em um estado inutilizável. Depois de chamar <xref:System.Runtime.MemoryFailPoint>, você deve liberar todas as referências para o <xref:System.Runtime.MemoryFailPoint> para o coletor de lixo possa recuperar a memória que o <xref:System.Runtime.MemoryFailPoint> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Runtime.MemoryFailPoint.Dispose%2A> antes de liberar sua última referência para o <xref:System.Runtime.MemoryFailPoint>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Runtime.MemoryFailPoint> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~MemoryFailPoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.MemoryFailPoint.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Garante que os recursos são liberados e outras operações de limpeza são executadas quando o coletor de lixo recupera o objeto <see cref="T:System.Runtime.MemoryFailPoint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O coletor de lixo chama o <xref:System.Runtime.MemoryFailPoint.Finalize%2A> método quando o objeto atual está pronto para ser finalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

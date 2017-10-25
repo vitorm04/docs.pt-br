@@ -1,0 +1,117 @@
+<Type Name="SortKey" FullName="System.DirectoryServices.Protocols.SortKey">
+  <TypeSignature Language="C#" Value="public class SortKey" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential beforefieldinit SortKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.SortKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.Protocols.SortKey" /> classe armazena os critérios de classificação para uso por controles de classificação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.SortKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.SortKey.#ctor" /> construtor cria e inicializa uma nova instância do <see cref="T:System.DirectoryServices.Protocols.SortKey" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SortKey (string attributeName, string matchingRule, bool reverseOrder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string attributeName, string matchingRule, bool reverseOrder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.SortKey.#ctor(System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+        <Parameter Name="matchingRule" Type="System.String" />
+        <Parameter Name="reverseOrder" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">O nome do atributo a ser usado como uma chave de classificação.</param>
+        <param name="matchingRule">O identificador de objeto (OID) da regra de correspondência para a classificação.</param>
+        <param name="reverseOrder">
+          <see langword="true" />Se a classificação é ordenada do menor para o maior ou <see langword="false" /> se a ordem de classificação é do mais alto ao mais baixa.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.SortKey.#ctor(System.String,System.String,System.Boolean)" /> construtor cria e inicializa uma nova instância do <see cref="T:System.DirectoryServices.Protocols.SortKey" /> classe usando o nome do atributo especificado, a correspondência de regra e a ordem de classificação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeName">
+      <MemberSignature Language="C#" Value="public string AttributeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AttributeName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SortKey.AttributeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.SortKey.AttributeName" /> propriedade especifica o nome do atributo a ser usado como uma chave de classificação.</summary>
+        <value>O nome do atributo a ser usado como uma chave de classificação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchingRule">
+      <MemberSignature Language="C#" Value="public string MatchingRule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MatchingRule" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SortKey.MatchingRule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.SortKey.MatchingRule" /> propriedade especifica o identificador de objeto (OID) da regra de correspondência para a classificação.</summary>
+        <value>O OID da regra de correspondência para a classificação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReverseOrder">
+      <MemberSignature Language="C#" Value="public bool ReverseOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReverseOrder" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SortKey.ReverseOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.SortKey.ReverseOrder" /> propriedade especifica se a classificação deve ser retornada na ordem inversa.</summary>
+        <value>Esta propriedade é <see langword="true" /> se a classificação é ordenada do menor para o maior ou <see langword="false" /> se a classificação é ordenada do mais alto ao mais baixo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

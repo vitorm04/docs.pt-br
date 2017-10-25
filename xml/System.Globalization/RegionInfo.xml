@@ -1,0 +1,1132 @@
+<Type Name="RegionInfo" FullName="System.Globalization.RegionInfo">
+  <TypeSignature Language="C#" Value="public class RegionInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable beforefieldinit RegionInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.RegionInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém informações sobre o país/região.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de <xref:System.Globalization.CultureInfo> classe, o <xref:System.Globalization.RegionInfo> classe não representa as preferências do usuário e não é dependente de idioma ou a cultura do usuário.  
+  
+## <a name="names-associated-with-a-regioninfo-object"></a>Nomes associados a um objeto RegionInfo  
+ O nome de uma <xref:System.Globalization.RegionInfo> objeto é um dos códigos de duas letras definidos no ISO 3166 de país/região. Caso não é significativo. O <xref:System.Globalization.RegionInfo.Name%2A>, <xref:System.Globalization.RegionInfo.TwoLetterISORegionName%2A>, e <xref:System.Globalization.RegionInfo.ThreeLetterISORegionName%2A> propriedades retornam os códigos apropriados em letras maiusculas. Para obter a lista atual de <xref:System.Globalization.RegionInfo> nomes, consulte [inglês nomes de país e elementos de código](http://go.microsoft.com/fwlink/?LinkId=190591) no site da ISO.  
+  
+## <a name="instantiating-a-regioninfo-object"></a>Criando uma instância de um objeto RegionInfo  
+ Para criar uma instância de um <xref:System.Globalization.RegionInfo> do objeto, você passa o <xref:System.Globalization.RegionInfo.%23ctor%28System.String%29> construtor ou um nome de região de duas letras, como "US" para os Estados Unidos, ou o nome de uma cultura específica, como "en-US" para inglês (Estados Unidos). No entanto, é recomendável que você use um nome de cultura específica em vez de um nome de região de duas letras, como um <xref:System.Globalization.RegionInfo> o objeto não é completamente independente de linguagem. Vários <xref:System.Globalization.RegionInfo> propriedades, incluindo <xref:System.Globalization.RegionInfo.DisplayName%2A>, <xref:System.Globalization.RegionInfo.NativeName%2A>, e <xref:System.Globalization.RegionInfo.CurrencyNativeName%2A>, dependem de nomes de cultura.  
+  
+ O exemplo a seguir ilustra a diferença em <xref:System.Globalization.RegionInfo> valores de propriedade para três objetos que representam Bélgica. A primeira é instanciada a partir de um nome de região (BE), enquanto a segunda e terceira são instanciados com nomes de cultura (fr-BE para francês (Bélgica) e e nl-BE para Holandês (Bélgica), respectivamente). O exemplo usa reflexão para recuperar os valores de propriedade de cada <xref:System.Globalization.RegionInfo> objeto.  
+  
+ [!code-csharp[System.Globalization.RegionInfo#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo/CS/propertyvalues1.cs#2)]
+ [!code-vb[System.Globalization.RegionInfo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo/VB/propertyvalues1.vb#2)]  
+  
+ Em cenários como a seguir, use nomes de cultura em vez de nomes de país/região ao instanciar um <xref:System.Globalization.RegionInfo> objeto:  
+  
+-   Quando o nome do idioma é de importância fundamental. Por exemplo, para o nome de cultura es-US, você provavelmente desejará seu aplicativo para exibir "Estados Unidos" em vez de "EUA". Usando o nome de país/região (US) produz apenas "EUA", independentemente da linguagem, portanto você deve trabalhar com o nome de cultura em vez disso.  
+  
+-   Quando as diferenças de script devem ser consideradas. Por exemplo, o país/região AZ lida com culturas do Azerbaijão que têm nomes az-Latn-AZ e az-Cyrl-AZ e o latino e cirílicos scripts podem ser muito diferentes para esse país/região.  
+  
+-   Quando a manutenção de detalhes é importante. Os valores retornados por <xref:System.Globalization.RegionInfo> membros podem diferir dependendo se o <xref:System.Globalization.RegionInfo> objeto foi instanciado usando um nome de cultura ou um nome de região. Por exemplo, a tabela a seguir lista as diferenças valores de retorno quando um <xref:System.Globalization.RegionInfo> objeto é instanciado usando a região de "US", a cultura "en-US" e a cultura "es-US".  
+  
+    |Membro|"US"|"en-US"|"es-US"|  
+    |------------|----------|--------------|--------------|  
+    |<xref:System.Globalization.RegionInfo.CurrencyNativeName%2A>|Dólar americano|Dólar americano|Dólar de EE. UU.|  
+    |<xref:System.Globalization.RegionInfo.Name%2A>|US|pt-BR|es-US|  
+    |<xref:System.Globalization.RegionInfo.NativeName%2A>|Estados Unidos|Estados Unidos|Estados Unidos|  
+    |<xref:System.Globalization.RegionInfo.ToString%2A>|US|pt-BR|es-US|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra vários membros do <xref:System.Globalization.RegionInfo> classe.  
+  
+ [!code-cpp[System.Globalization.RegionInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo/CPP/regioninfo.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo/CS/regioninfo.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo/VB/regioninfo.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegionInfo (int culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.RegionInfo.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Um identificador de cultura.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Globalization.RegionInfo" /> com base no país/região associados ao identificador de cultura especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Globalization.RegionInfo.%23ctor%28System.String%29>é o recomendado construtor para instanciar um <xref:System.Globalization.RegionInfo> objeto. Ao contrário de <xref:System.Globalization.RegionInfo.%23ctor%28System.Int32%29> construtor que exige um identificador de cultura numérico como um parâmetro, o parâmetro é mais legível código de país ou nome de cultura.  
+  
+ O identificador de cultura é mapeado para o identificador de localidade de suporte de idioma nacional (NLS) correspondente. Informações de cultura detalhadas são exibidas no [suporte ao idioma nacional (NLS) API referência](http://go.microsoft.com/fwlink/?LinkId=200048) no Go Global Developer Center.  
+  
+ O valor de <xref:System.Globalization.RegionInfo.Name%2A> propriedade do novo <xref:System.Globalization.RegionInfo> objeto instanciado chamando este construtor é o código ISO 3166 2 letras para país/região, não o idioma combinado e o código de país/região. Por exemplo, se um <xref:System.Globalization.RegionInfo> objeto é instanciado com o identificador de cultura 0x0409 para a cultura do inglês (Estados Unidos), o valor da <xref:System.Globalization.RegionInfo.Name%2A> propriedade é "US". Por outro lado, se um <xref:System.Globalization.RegionInfo> objeto é instanciado com a linguagem combinada e en-US de código de país/região para a cultura do inglês (Estados Unidos), o valor da <xref:System.Globalization.RegionInfo.Name%2A> propriedade é "en-US".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir compara duas instâncias do <xref:System.Globalization.RegionInfo> que foram criados de forma diferente.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Equals#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Equals/CPP/regioninfo_equals.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Equals#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Equals/CS/regioninfo_equals.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Equals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Equals/VB/regioninfo_equals.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="culture" /> especifica uma cultura invariável, personalizada ou neutra.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegionInfo (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.RegionInfo.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uma cadeia de caracteres que contém um código de duas letras definido na norma ISO 3166 para o país/região.  
+  
+ -ou-  
+  
+ Uma cadeia de caracteres que contém o nome da cultura para uma cultura específica, cultura personalizada ou cultura somente do Windows. Se o nome da cultura não estiver no formato RFC 4646, o aplicativo deverá especificar o nome inteiro da cultura em vez de apenas o país/região.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Globalization.RegionInfo" /> com base no país/região ou cultura específica, especificada por nome.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `name` parâmetro for qualquer um dos códigos definidos para o país/região ou um nome de cultura específico, personalizados ou somente do Windows. Caso não é significativo. No entanto, o <xref:System.Globalization.RegionInfo.Name%2A>, o <xref:System.Globalization.RegionInfo.TwoLetterISORegionName%2A>e o <xref:System.Globalization.RegionInfo.ThreeLetterISORegionName%2A> propriedades retornam o nome de cultura ou de código especificado em letras maiusculas.  
+  
+ Predefinida <xref:System.Globalization.RegionInfo> nomes são listados na [nomes de país e elementos de código](http://go.microsoft.com/fwlink/?LinkId=190591) no site da ISO.  
+  
+ Você deve fornecer o nome de uma cultura específica em vez de apenas um nome de país/região no `name` parâmetro. Por exemplo, en-US para inglês (Estados Unidos) ou es-US para Espanhol (Estados Unidos) é preferível para EUA como propriedades, como <xref:System.Globalization.RegionInfo.NativeName%2A> e <xref:System.Globalization.RegionInfo.CurrencyNativeName%2A> refletir um idioma específico. AZ-Latn-AZ ou az-Cyrl-AZ é preferível AZ como propriedades, como <xref:System.Globalization.RegionInfo.NativeName%2A>, <xref:System.Globalization.RegionInfo.CurrencyNativeName%2A>, e <xref:System.Globalization.RegionInfo.CurrencySymbol%2A> refletir um script específico.  Os nomes de cultura predefinidos são listados no [suporte ao idioma nacional (NLS) API referência](http://go.microsoft.com/fwlink/?LinkId=200048) no Go Global Developer Center. Observe que uma chamada para o construtor lançará um <xref:System.ArgumentException> se `name` é uma cultura neutra (como en para inglês).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir compara duas instâncias do <xref:System.Globalization.RegionInfo> que foram criados de forma diferente.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Equals#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Equals/CPP/regioninfo_equals.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Equals#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Equals/CS/regioninfo_equals.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Equals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Equals/VB/regioninfo_equals.vb#1)]  
+  
+ O exemplo de código a seguir cria instâncias de <xref:System.Globalization.RegionInfo> usando nomes de cultura.  
+  
+ [!code-cpp[System.Globalization.RegionInfo.ctorCultureName#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo.ctorCultureName/CPP/regioninfo_ctorculturename.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo.ctorCultureName#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo.ctorCultureName/CS/regioninfo_ctorculturename.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo.ctorCultureName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo.ctorCultureName/VB/regioninfo_ctorculturename.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> não é um nome válido de país/região ou cultura específica.</exception>
+        <block subset="none" type="usage">
+          <para>Este construtor aceita somente culturas específicas ou códigos de país/região. No entanto, alguns nomes de cultura neutra são os mesmos códigos de país/região. Nesse caso, <paramref name="name" /> é interpretado como um código de país/região, em vez de um nome de cultura neutra e este construtor não gerará um <see cref="T:System.ArgumentException" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrencyEnglishName">
+      <MemberSignature Language="C#" Value="public virtual string CurrencyEnglishName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrencyEnglishName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.CurrencyEnglishName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome, em inglês, da moeda usada no país/região.</summary>
+        <value>O nome, em inglês, da moeda usada no país/região.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Globalization.RegionInfo.CurrencyEnglishName%2A> propriedade.  
+  
+ [!code-cpp[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/cpp/rgn5props.cpp#1)]
+ [!code-csharp[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/CS/rgn5props.cs#1)]
+ [!code-vb[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/VB/rgn5props.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrencyNativeName">
+      <MemberSignature Language="C#" Value="public virtual string CurrencyNativeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrencyNativeName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.CurrencyNativeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da moeda usado no país/região, formatada em linguagem nativa do país/região.</summary>
+        <value>O nome nativo da moeda usado no país/região, formatado no idioma associado com o código de país/região ISO 3166.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o atual <xref:System.Globalization.RegionInfo> objeto é criado com uma cultura específica e mais de um idioma é usado no país/região correspondente, o <xref:System.Globalization.RegionInfo.CurrencyNativeName%2A> propriedade recupera o nome da moeda associado com a cultura específica.  
+  
+ O valor dessa propriedade depende do idioma que está associado um determinado país/região. Portanto, se você pretende usar o <xref:System.Globalization.RegionInfo.CurrencyNativeName%2A> propriedade, você deve criar uma instância de <xref:System.Globalization.RegionInfo> objeto passando o <xref:System.Globalization.RegionInfo.%23ctor%28System.String%29> construtor um código de país/região e idioma combinado. Por exemplo, se um <xref:System.Globalization.RegionInfo> objeto é instanciado com um código de país/região e idioma combinado de "en-CA" para inglês (Canadá), o valor de seu <xref:System.Globalization.RegionInfo.CurrencyNativeName%2A> propriedade é "Dólar canadense". Se ele é instanciado com um código de país/região e idioma combinado de "fr-CA" para francês (Canadá), o valor de seu <xref:System.Globalization.RegionInfo.CurrencyNativeName%2A> propriedade é "Dólar canadien". Portanto, criar o `RegionInfo` objeto com apenas um nome de país/região ("CA" neste caso) não é específico o suficiente para distinguir o nome da moeda nativo apropriado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Globalization.RegionInfo.CurrencyNativeName%2A> propriedade.  
+  
+ [!code-cpp[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/cpp/rgn5props.cpp#1)]
+ [!code-csharp[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/CS/rgn5props.cs#1)]
+ [!code-vb[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/VB/rgn5props.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrencySymbol">
+      <MemberSignature Language="C#" Value="public virtual string CurrencySymbol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrencySymbol" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.CurrencySymbol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o símbolo de moeda associado ao país/região.</summary>
+        <value>O símbolo de moeda associado ao país/região.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, o símbolo de moeda para os Estados Unidos é "$".  
+  
+ Se o atual <xref:System.Globalization.RegionInfo> objeto é criado com uma cultura específica e mais de um idioma é usado no país/região correspondente, o <xref:System.Globalization.RegionInfo.CurrencySymbol%2A> propriedade retorna o símbolo de moeda associado a cultura específica.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as propriedades da <xref:System.Globalization.RegionInfo> classe.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CPP/regioninfo_properties.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CS/regioninfo_properties.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/VB/regioninfo_properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentRegion">
+      <MemberSignature Language="C#" Value="public static System.Globalization.RegionInfo CurrentRegion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Globalization.RegionInfo CurrentRegion" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.CurrentRegion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.RegionInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém <see cref="T:System.Globalization.RegionInfo" /> que representa o país/região usado pelo thread atual.</summary>
+        <value>O <see cref="T:System.Globalization.RegionInfo" /> que representa o país/região usado pelo thread atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade é com base na cultura selecionada na parte de opções regionais e idioma do painel de controle. No entanto, essas informações podem alterar durante a vida do <xref:System.AppDomain>. O <xref:System.Globalization.RegionInfo> classe não detecta automaticamente as alterações nas configurações do sistema, mas o <xref:System.Globalization.RegionInfo.CurrentRegion%2A> propriedade é atualizada quando você chamar o <xref:System.Globalization.CultureInfo.ClearCachedData%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public virtual string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome completo do país/região no idioma da versão localizada do .NET Framework.</summary>
+        <value>O nome completo do país/região no idioma da versão localizada do .NET Framework.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Globalization.RegionInfo.DisplayName%2A> propriedade exibe o nome de país/região no idioma da versão localizada do .NET Framework. Por exemplo, o <xref:System.Globalization.RegionInfo.DisplayName%2A> propriedade exibe o país/região em inglês na versão em inglês do .NET Framework e em espanhol na versão espanhola do .NET Framework.  
+  
+ O valor de <xref:System.Globalization.RegionInfo.DisplayName%2A> propriedade fica dos arquivos de recursos no idioma da cultura de interface de usuário atual, representado pelo <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>. Regiões personalizadas ou aquelas sintetizadas do sistema operacional talvez não tenham informações sobre recursos, caso, o valor para <xref:System.Globalization.RegionInfo.DisplayName%2A> é o mesmo que o valor de <xref:System.Globalization.RegionInfo.NativeName%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as propriedades da <xref:System.Globalization.RegionInfo> classe.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CPP/regioninfo_properties.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CS/regioninfo_properties.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/VB/regioninfo_properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnglishName">
+      <MemberSignature Language="C#" Value="public virtual string EnglishName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EnglishName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.EnglishName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome completo do país/região em inglês.</summary>
+        <value>O nome completo do país/região em inglês.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, um <xref:System.Globalization.RegionInfo> objeto criado para a cultura do inglês (Estados Unidos) exibe "EUA".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as propriedades da <xref:System.Globalization.RegionInfo> classe.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CPP/regioninfo_properties.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CS/regioninfo_properties.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/VB/regioninfo_properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.RegionInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser comparado com o <see cref="T:System.Globalization.RegionInfo" /> atual.</param>
+        <summary>Determina se o objeto especificado é a mesma instância atual do <see cref="T:System.Globalization.RegionInfo" />.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="value" /> parâmetro é um <see cref="T:System.Globalization.RegionInfo" /> objeto e seu <see cref="P:System.Globalization.RegionInfo.Name" /> propriedade é igual a <see cref="P:System.Globalization.RegionInfo.Name" /> propriedade <see cref="T:System.Globalization.RegionInfo" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.Equals%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir compara duas instâncias do <xref:System.Globalization.RegionInfo> que foram criados de forma diferente.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Equals#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Equals/CPP/regioninfo_equals.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Equals#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Equals/CS/regioninfo_equals.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Equals#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Equals/VB/regioninfo_equals.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeoId">
+      <MemberSignature Language="C#" Value="public virtual int GeoId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 GeoId" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.GeoId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um número de identificação exclusivo para uma região geográfica, país, cidade ou local.</summary>
+        <value>Um número assinado de 32 bits que identifica exclusivamente uma localização geográfica.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O aplicativo deve usar o <xref:System.Globalization.RegionInfo.GeoId%2A> propriedade para fornecer serviços específicos de cultura aos clientes. Por exemplo, o <xref:System.Globalization.RegionInfo.GeoId%2A> propriedade pode ser usada como uma chave para acessar um registro de banco de dados que contém informações específicas sobre um país/região.  
+  
+ O valor da propriedade corresponde do Windows `GetUserGeoID` função. Para obter uma lista de identificadores geográficas, consulte [tabela de localizações geográficas](http://go.microsoft.com/fwlink/?LinkId=191287) na biblioteca MSDN.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Globalization.RegionInfo.GeoId%2A> propriedade.  
+  
+ [!code-cpp[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/cpp/rgn5props.cpp#1)]
+ [!code-csharp[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/CS/rgn5props.cs#1)]
+ [!code-vb[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/VB/rgn5props.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.RegionInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash atual <see cref="T:System.Globalization.RegionInfo" />, adequado para o hash de algoritmos e estruturas de dados, como uma tabela de hash.</summary>
+        <returns>Um código hash do <see cref="T:System.Globalization.RegionInfo" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>.  
+  
+ Este método gera o mesmo código de hash de dois objetos são iguais de acordo com o <xref:System.Globalization.RegionInfo.Equals%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMetric">
+      <MemberSignature Language="C#" Value="public virtual bool IsMetric { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMetric" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.IsMetric" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o país ou a região usa o sistema métrico para medidas.</summary>
+        <value>
+          <see langword="true" /> se o país ou a região usar o sistema métrico para medidas; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe as propriedades da <xref:System.Globalization.RegionInfo> classe.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CPP/regioninfo_properties.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CS/regioninfo_properties.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/VB/regioninfo_properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ISOCurrencySymbol">
+      <MemberSignature Language="C#" Value="public virtual string ISOCurrencySymbol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ISOCurrencySymbol" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.ISOCurrencySymbol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o símbolo de moeda de três caracteres ISO 4217 associado ao país/região.</summary>
+        <value>O símbolo de moeda de três caracteres ISO 4217 associado ao país/região.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir lista alguns dos símbolos de moeda ISO 4217 retornados pelo <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> propriedade.  
+  
+|País/região|Nome da moeda|Símbolo de moeda ISO 4217|  
+|---------------------|-------------------|------------------------------|  
+|Albânia|Albanês Lek|ALL|  
+|Argélia|Dinar argelino|DZD|  
+|Argentina|Peso Argentina|ARS|  
+|Armênia|Dram armênia|AMD|  
+|Austrália|Dólar (Austrália)|AUD|  
+|Áustria|Euro|EUR|  
+|Azerbaijão|Manat Azerbaidjano|AZN|  
+|Bahrein|Dinar do Bahrein|BHD|  
+|Belarus|Rublo bielo-russo|BYR|  
+|Bélgica|Euro|EUR|  
+|Belize|Dólar de Belize|BZD|  
+|República Bolivariana da Venezuela|Bolívar Venezuelano|VEF|  
+|Bolívia|Boliviano|BOB|  
+|Brasil|Real|R $|  
+|Brunei|Dólar Brunei|BND|  
+|Bulgária|Lev búlgaro|BGN|  
+|Canadá|Dólar canadense|CAD|  
+|Caribe|Dólar americano|USD|  
+|Chile|Peso Chilean|CLP|  
+|Colômbia|Peso (Colômbia)|COP|  
+|Costa Rica|Colon da Costa Rica|CRC|  
+|Croácia|Kuna croata|HRK|  
+|República Tcheca|Tcheco Koruna|CZK|  
+|Dinamarca|Dinamarquesa|DKK|  
+|República Dominicana|Peso Dominicana|DOP|  
+|Equador|Dólar americano|USD|  
+|Egito|Libra egípcia|EGP|  
+|El Salvador|DOS EUA Dólar|USD|  
+|Estônia|Estoniano Kroon|EEK|  
+|Etiópia|Birr da Etiópia|ETB|  
+|Ilhas Faroés|Dinamarquesa|DKK|  
+|Finlândia|Euro|EUR|  
+|França|Euro|EUR|  
+|Geórgia|Lari|GEL|  
+|Alemanha|Euro|EUR|  
+|Grécia|Euro|EUR|  
+|Guatemala|Quetzal Guatemalan|GTQ|  
+|Honduras|Lempira hondurenha|HNL|  
+|RAE de Hong Kong|Dólar de Hong Kong|HKD|  
+|Hungria|Húngaro Forint|HUF|  
+|Islândia|Islandesa|PEÇAS|  
+|Índia|Rúpia (Índia)|INR|  
+|Indonésia|Indonésio Rupiah|IDR|  
+|Irã|Rial iraniano|IRR|  
+|Iraque|Dinar iraquiano|IQD|  
+|Irlanda|Euro|EUR|  
+|República Islâmica do Paquistão|Rúpia Paquistão|PKR|  
+|Israel|Shekel israelense novo|ILS|  
+|Itália|Euro|EUR|  
+|Jamaica|Dólar jamaicano|JMD|  
+|Japão|Iene japonês|JPY|  
+|Jordânia|Dinar jordaniano|JOD|  
+|Cazaquistão|Tenge|KZT|  
+|Quênia|Xelim queniano|KES|  
+|Coréia|Coreana ganha|KRW|  
+|Kuaite|Dinar do Kuwait|KWD|  
+|Quirguistão|som|KG|  
+|Letônia|Lats letão|NÍVEL|  
+|Líbano|Libra libanesa|LBP|  
+|Líbia|Dinar Líbia|LYD|  
+|Liechtenstein|Franco suíço|CHF|  
+|Lituânia|Lituano Litas|LTL|  
+|Luxemburgo|Euro|EUR|  
+|RAE de MACAU|Macau Pataca|LAVAR|  
+|Macedônia (FYROM)|Macedônio Denar|MKD|  
+|Malásia|Malásio na Malásia|MYR|  
+|Maldivas|Rufiyaa|MVR|  
+|México|Peso mexicana|MXN|  
+|Mongólia|Tugrik|MANUTENÇÃO|  
+|Marrocos|Dirham marroquino|MAD|  
+|Países Baixos|Euro|EUR|  
+|Nova Zelândia|Dólar de Nova Zelândia|NZD|  
+|Nicarágua|Nicaraguense Oro de Cordoba|NIO|  
+|Noruega|Norueguês Krone|NOK|  
+|Omã|Rial de Omã|OMR|  
+|Panamá|Dezembro de panamenho|CPE|  
+|Paraguai|Paraguai Guarani|PYG|  
+|República Popular da China|República Popular da China Renminbi|CNY|  
+|Peru|Sol de Nuevo Peruvian|CANETA|  
+|Filipinas|Peso Filipina|PHP|  
+|Polônia|Zloty (Polônia)|PLN|  
+|Portugal|Euro|EUR|  
+|Principado de Mônaco|Euro|EUR|  
+|Porto Rico|Dólar americano|USD|  
+|Catar|Rial de|QAR|  
+|Romênia|Leu romeno|DIOGO|  
+|Rússia|Rublo russo|FICARÁ|  
+|Arábia Saudita|Rial Saudita|SAR|  
+|Sérvia e Montenegro|Dinar Sérvio|RSD|  
+|Cingapura|Dólar de Cingapura|SGD|  
+|Eslováquia|Euro|EUR|  
+|Eslovênia|Euro|EUR|  
+|África do Sul|Rand África do Sul|ZAR|  
+|Espanha|Euro|EUR|  
+|Suécia|Sueca suecas|SEK|  
+|Suíça|Franco suíço|CHF|  
+|Síria|Libra síria|SYP|  
+|Taiwan|Novo dólar de Taiwan|TWD|  
+|Tailândia|Baht tailandês|THB|  
+|Trinidad e Tobago|Dólar de Trinidad|TTD|  
+|Tunísia|Dinar da Tunísia|TND|  
+|Turquia|Lira (Turquia)|TRY|  
+|Ucrânia|Ucraniana Hryvinia|UAH|  
+|Emirados Árabes Unidos|Dirham Emirados Árabes Unidos|AED|  
+|Reino Unido|Libra esterlina do Reino Unido|GBP|  
+|Estados Unidos|Dólar americano|USD|  
+|Uruguai|Peso Uruguayo|UYU|  
+|Uzbequistão|Som Uzbequistão|UZS|  
+|Vietnã|Vietnamita Dong|VND|  
+|Iêmen|Rial iemenita|YER|  
+|Zimbábue|Dólar de Zimbábue|ZWL|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as propriedades da <xref:System.Globalization.RegionInfo> classe.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CPP/regioninfo_properties.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CS/regioninfo_properties.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/VB/regioninfo_properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome ou o código de país/região de duas letras ISO 3166 atual <see cref="T:System.Globalization.RegionInfo" /> objeto.</summary>
+        <value>O valor especificado pelo <paramref name="name" /> parâmetro o <see cref="M:System.Globalization.RegionInfo.#ctor(System.String)" /> construtor. O valor de retorno é em letras maiusculas.  
+  
+ -ou-  
+  
+ O código de duas letras definido no ISO 3166 de país/região especificado pelo <paramref name="culture" /> parâmetro o <see cref="M:System.Globalization.RegionInfo.#ctor(System.Int32)" /> construtor. O valor de retorno é em letras maiusculas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se atual <xref:System.Globalization.RegionInfo> objeto é criado com o <xref:System.Globalization.RegionInfo.%23ctor%28System.Int32%29?displayProperty=nameWithType> construtor que usa um parâmetro do identificador de cultura, o <xref:System.Globalization.RegionInfo.Name%2A> o valor da propriedade é um dos códigos de duas letras definidos no ISO 3166 de país/região e é formatado em letras maiusculas. Por exemplo, o código de duas letras para os Estados Unidos é "US".  
+  
+ Se atual <xref:System.Globalization.RegionInfo> objeto é criado com o <xref:System.Globalization.RegionInfo.%23ctor%28System.String%29?displayProperty=nameWithType> construtor e é passado um nome de cultura completo, como "en-US", o <xref:System.Globalization.RegionInfo.Name%2A> o valor da propriedade é um nome de cultura completa e não apenas o nome da região.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as propriedades da <xref:System.Globalization.RegionInfo> classe.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CPP/regioninfo_properties.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CS/regioninfo_properties.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/VB/regioninfo_properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NativeName">
+      <MemberSignature Language="C#" Value="public virtual string NativeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NativeName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.NativeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de um país ou uma região formatado na linguagem nativa do país/região.</summary>
+        <value>O nome nativo do país e da região formatado no idioma associado ao código de país/região ISO 3166.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Globalization.RegionInfo.NativeName%2A> propriedade recupera um nome de cultura completo se o `RegionInfo` objeto é construído usando um nome de cultura completo.  
+  
+ Recomendamos que você use o nome de cultura — por exemplo, "en-US" para inglês (Estados Unidos) — para acessar o <xref:System.Globalization.RegionInfo.NativeName%2A> propriedade. A cadeia de caracteres usada para esta propriedade depende do idioma associado ao país/região. Por exemplo, nomes cultura en-US para inglês (Estados Unidos) e es-US para Espanhol (Estados Unidos) podem recuperar valores diferentes no Windows Vista. Portanto, criar o `RegionInfo` objeto com apenas um nome de país/região dos EUA não é específico o suficiente para distinguir a cadeia de caracteres apropriada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Globalization.RegionInfo.NativeName%2A> propriedade.  
+  
+ [!code-cpp[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/cpp/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/cpp/rgn5props.cpp#1)]
+ [!code-csharp[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/csharp/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/CS/rgn5props.cs#1)]
+ [!code-vb[sys.glob.regioninfo.rgn5props#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/sys.glob.regioninfo.rgn5props/VB/rgn5props.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreeLetterISORegionName">
+      <MemberSignature Language="C#" Value="public virtual string ThreeLetterISORegionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThreeLetterISORegionName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.ThreeLetterISORegionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o código de três letras definido na ISO 3166 para o país/região.</summary>
+        <value>O código de três letras definido na ISO 3166 para o país/região.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Globalization.RegionInfo.ThreeLetterISORegionName%2A> propriedade contém o código de três letras definido na ISO 3166 para esse país/região. Por exemplo, o código de três letras para Estados Unidos é "EUA".  
+  
+ Caso não é significativo. No entanto, o <xref:System.Globalization.RegionInfo.Name%2A>, o <xref:System.Globalization.RegionInfo.TwoLetterISORegionName%2A>e o <xref:System.Globalization.RegionInfo.ThreeLetterISORegionName%2A> propriedades retornam o código apropriado em letras maiusculas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as propriedades da <xref:System.Globalization.RegionInfo> classe.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CPP/regioninfo_properties.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CS/regioninfo_properties.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/VB/regioninfo_properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreeLetterWindowsRegionName">
+      <MemberSignature Language="C#" Value="public virtual string ThreeLetterWindowsRegionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThreeLetterWindowsRegionName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.ThreeLetterWindowsRegionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o código de três letras atribuído pelo Windows para o país/região representado por esse <see cref="T:System.Globalization.RegionInfo" />.</summary>
+        <value>O código de três letras atribuído pelo Windows para o país/região representado por esse <see cref="T:System.Globalization.RegionInfo" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, o código de três letras para Estados Unidos é "EUA".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as propriedades da <xref:System.Globalization.RegionInfo> classe.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CPP/regioninfo_properties.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CS/regioninfo_properties.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/VB/regioninfo_properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.RegionInfo.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que contém o nome de cultura ou códigos de país/região de duas letras ISO 3166 especificados para a <see cref="T:System.Globalization.RegionInfo" />.</summary>
+        <returns>Uma cadeia de caracteres que contém o nome de cultura ou códigos de país/região de duas letras ISO 3166 definido para a atual <see cref="T:System.Globalization.RegionInfo" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
+  
+ Esse método retorna o valor da <xref:System.Globalization.RegionInfo.Name%2A> propriedade.  
+  
+ Caso não é significativo. No entanto, o <xref:System.Globalization.RegionInfo.Name%2A>, o <xref:System.Globalization.RegionInfo.TwoLetterISORegionName%2A>e o <xref:System.Globalization.RegionInfo.ThreeLetterISORegionName%2A> propriedades retornam o código apropriado em letras maiusculas.  
+  
+ Predefinida <xref:System.Globalization.RegionInfo> nomes estão listados no <xref:System.Globalization.RegionInfo> tópico sobre a classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoLetterISORegionName">
+      <MemberSignature Language="C#" Value="public virtual string TwoLetterISORegionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TwoLetterISORegionName" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.RegionInfo.TwoLetterISORegionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o código de duas letras definido na ISO 3166 para o país/região.</summary>
+        <value>O código de duas letras definido na ISO 3166 para o país/região.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Globalization.RegionInfo> nome é um dos códigos de duas letras definidos no ISO 3166 de país/região. Por exemplo, o código de duas letras para Estados Unidos é "US".  
+  
+> [!IMPORTANT]
+>  Em alguns casos, o <xref:System.Globalization.RegionInfo.TwoLetterISORegionName%2A> propriedade pode ter mais de dois caracteres. Por exemplo, o valor de <xref:System.Globalization.RegionInfo.TwoLetterISORegionName%2A> é de propriedade para a região Caribe "029".  
+  
+ Caso não é significativo. No entanto, o <xref:System.Globalization.RegionInfo.Name%2A>, o <xref:System.Globalization.RegionInfo.TwoLetterISORegionName%2A>e o <xref:System.Globalization.RegionInfo.ThreeLetterISORegionName%2A> propriedades retornam o código apropriado em letras maiusculas.  
+  
+> [!WARNING]
+>  Se você quiser manter uma <xref:System.Globalization.RegionInfo> objeto ou comunicar-se entre processos, você deve instanciá-la usando um nome de cultura completa em vez de um código de região ISO de duas letras. Porque <xref:System.Globalization.RegionInfo> propriedades dependem de script e de idioma, criando uma <xref:System.Globalization.RegionInfo> objeto usando um código de região perde o contexto e os dados.  
+  
+ Predefinida <xref:System.Globalization.RegionInfo> nomes são listados na [inglês nomes de país e elementos de código](http://go.microsoft.com/fwlink/?LinkId=190591) no site da ISO.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as propriedades da <xref:System.Globalization.RegionInfo> classe.  
+  
+ [!code-cpp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CPP/regioninfo_properties.cpp#1)]
+ [!code-csharp[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/CS/regioninfo_properties.cs#1)]
+ [!code-vb[System.Globalization.RegionInfo_Properties#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.RegionInfo_Properties/VB/regioninfo_properties.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

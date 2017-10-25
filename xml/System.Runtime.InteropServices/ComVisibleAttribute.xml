@@ -1,0 +1,135 @@
+<Type Name="ComVisibleAttribute" FullName="System.Runtime.InteropServices.ComVisibleAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComVisibleAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComVisibleAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComVisibleAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Enum | System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Interface | System.AttributeTargets.Delegate, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Controla a acessibilidade de um tipo gerenciado individual ou membro, ou então de todos os tipos em um assembly, ao COM.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para assemblies, interfaces, classes, estruturas, representantes, enumerações, campos, métodos ou propriedades.  
+  
+ O padrão é `true`, que indica que o tipo gerenciado é visível para COM. Esse atributo não é necessária para tornar visíveis; os tipos e assemblies gerenciados públicos eles são visíveis no COM, por padrão. Somente `public` tipos podem ficar visíveis. O atributo não pode ser usado para fazer uma `internal` ou `protected` tipo visível para COM ou tornar visível a membros de um tipo invisível.  
+  
+ Definindo o atributo para `false` no assembly oculta todos `public` tipos no assembly. Você pode fazer seletivamente tipos no assembly visível definindo tipos individuais, como `true`. Definindo o atributo para `false` em um tipo específico oculta o tipo e seus membros. No entanto, os membros de um tipo não é possível tornar visível se o tipo é invisível. Definindo o atributo para `false` em um tipo impede que esse tipo que está sendo exportado para uma biblioteca de tipos, classes não são registradas; interfaces nunca estão respondendo gerenciado para `QueryInterface` chamadas.  
+  
+ A menos que você definir explicitamente uma classe e seus membros para `false`, herdados classes podem expor a membros de classe base COM invisíveis na classe original. Por exemplo, se você definir ClassA como `false` e não aplica o atributo a seus membros, a classe e seus membros são visíveis para COM. No entanto, se você deriva ClassB ClassA e exporta ClassB ao COM, ClassA membros se tornam membros visíveis de classe base ClassB.  
+  
+ Para obter uma descrição detalhada do processo de exportação, consulte [Assembly para o resumo da conversão do tipo de biblioteca](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como você pode controlar a visibilidade de COM de uma classe para que seus membros estão invisíveis. Definindo `ComVisibleAttribute` para `false` na `MyClass`(`SampleClass` o exemplo do Visual Basic), e `false` na `MyMethod` e `MyProperty`, você pode evitar inadvertidamente expor os membros COM através de herança.  
+  
+ [!code-cpp[Classic ComVisibleAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ComVisibleAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ComVisibleAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ComVisibleAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic ComVisibleAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ComVisibleAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComVisibleAttribute (bool visibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool visibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComVisibleAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visibility" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="visibility">
+          <see langword="true" /> para indicar que o tipo está visível para o COM; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</param>
+        <summary>Inicializa uma nova instância da classe <see langword="ComVisibleAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para tornar os tipos visíveis no COM, defina o atributo como `true`. Para ocultar os tipos de COM, defina o atributo como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public bool Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComVisibleAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o tipo COM está visível.</summary>
+        <value>
+          <see langword="true" />Se o tipo estiver visível; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

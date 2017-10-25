@@ -1,0 +1,237 @@
+<Type Name="ServiceAuthorizationManager" FullName="System.ServiceModel.ServiceAuthorizationManager">
+  <TypeSignature Language="C#" Value="public class ServiceAuthorizationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceAuthorizationManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ServiceAuthorizationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece verificação de acesso de autorização para operações de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é responsável por avaliar todas as políticas (regras que definem o que um usuário pode fazer), comparando as políticas a serem feitas por uma configuração de cliente, resultante de declarações <xref:System.IdentityModel.Policy.AuthorizationContext> para o <xref:System.ServiceModel.ServiceSecurityContext>e fornecer a decisão de autorização para permitir ou negar o acesso de uma operação de serviço fornecido para um chamador.  
+  
+ O <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método é chamado pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] infra-estrutura cada vez que uma tentativa de acessar um recurso é feita. O método retorna `true` ou `false` para permitir ou negar o acesso, respectivamente.  
+  
+ O <xref:System.ServiceModel.ServiceAuthorizationManager> faz parte do [!INCLUDE[indigo2](~/includes/indigo2-md.md)] *modelo de identidade* infraestrutura. O modelo de identidade permite criar diretivas de autorização personalizada e esquemas de autorização personalizada. [!INCLUDE[crabout](~/includes/crabout-md.md)]como funciona o modelo de identidade, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](~/docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+  
+## <a name="custom-authorization"></a>Autorização personalizada  
+ Essa classe não executa qualquer autorização e permite que os usuários acessem todas as operações de serviço. Para fornecer autorização mais restritiva, você deve criar uma autorização personalizada manager que verifica as políticas personalizadas. Para fazer isso, herdar desta classe e substituir o <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método. Especifique a instância da classe derivada por meio de <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationManager%2A> propriedade.  
+  
+ Em <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>, o aplicativo pode usar o <xref:System.ServiceModel.OperationContext> objeto para acessar a identidade do chamador (<xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A>).  
+  
+ Obtendo o <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> propriedade, que retorna um <xref:System.ServiceModel.Channels.MessageHeaders> do objeto, o aplicativo pode acessar o serviço (<xref:System.ServiceModel.Channels.MessageHeaders.To%2A>) e a operação (<xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>).  
+  
+ Obtendo o <xref:System.ServiceModel.OperationContext.RequestContext%2A> propriedade, que retorna um <xref:System.ServiceModel.Channels.RequestContext> do objeto, o aplicativo pode acessar a mensagem de solicitação inteira (<xref:System.ServiceModel.Channels.RequestContext.RequestMessage%2A>) e executar a decisão de autorização adequadamente.  
+  
+ Para obter um exemplo, consulte [como: criar um Gerenciador de autorização personalizada para um serviço](~/docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
+  
+ Para criar diretivas de autorização personalizada, implementar a <xref:System.IdentityModel.Policy.IAuthorizationPolicy> classe.  Para obter um exemplo, consulte [como: criar uma política de autorização personalizada](~/docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md).  
+  
+ Para criar uma declaração personalizada, use o <xref:System.IdentityModel.Claims.Claim> classe.  Para obter um exemplo, consulte [como: criar uma declaração personalizada](~/docs/framework/wcf/extending/how-to-create-a-custom-claim.md). Para comparar declarações personalizadas, você deve comparar declarações, conforme mostrado no [como: comparar declarações](~/docs/framework/wcf/extending/how-to-compare-claims.md).  
+  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Autorização personalizada](~/docs/framework/wcf/extending/custom-authorization.md).  
+  
+ Você pode definir o tipo de um Gerenciador de autorização personalizada usando o [ &lt;serviceAuthorization&gt; ](~/docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) em um arquivo de configuração do aplicativo cliente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma classe chamada `MyServiceAuthorizationManager` que herde o <xref:System.ServiceModel.ServiceAuthorizationManager> e substitui o <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método.  
+  
+ [!code-csharp[c_CustomAuthMgr#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
+ [!code-vb[c_CustomAuthMgr#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceAuthorizationManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceAuthorizationManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.ServiceAuthorizationManager" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAccess">
+      <MemberSignature Language="C#" Value="public virtual bool CheckAccess (System.ServiceModel.OperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CheckAccess(class System.ServiceModel.OperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceAuthorizationManager.CheckAccess(System.ServiceModel.OperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationContext" Type="System.ServiceModel.OperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="operationContext">O <see cref="T:System.ServiceModel.OperationContext" />.</param>
+        <summary>Verificações de autorização para o contexto da operação especificada.</summary>
+        <returns>
+          <see langword="true" />Se o acesso é concedido; Caso contrário; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em geral, os aplicativos devem substituir <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> em vez desse método.  
+  
+ Substituir <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> se o aplicativo associa ou apresenta um conjunto diferente de políticas para resultante <xref:System.ServiceModel.ServiceSecurityContext> ou forneça um modelo de avaliação (cadeia) de diretiva diferente.  
+  
+ Esse método é responsável por chamar <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como substituir este método para aplicar os requisitos de controle de acesso personalizado.  
+  
+ [!code-csharp[c_Federation#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#1)]
+ [!code-vb[c_Federation#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAccess">
+      <MemberSignature Language="C#" Value="public virtual bool CheckAccess (System.ServiceModel.OperationContext operationContext, ref System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CheckAccess(class System.ServiceModel.OperationContext operationContext, class System.ServiceModel.Channels.Message&amp; message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceAuthorizationManager.CheckAccess(System.ServiceModel.OperationContext,System.ServiceModel.Channels.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationContext" Type="System.ServiceModel.OperationContext" />
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="operationContext">O <see cref="T:System.ServiceModel.OperationContext" />.</param>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> a ser examinado para determinar a autorização.</param>
+        <summary>Verifica a autorização para o contexto da operação especificada quando é necessário ter acesso a uma mensagem.</summary>
+        <returns>
+          <see langword="true" />Se o acesso é concedido; Caso contrário; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em geral, os aplicativos devem substituir <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> em vez desse método, que só deve ser usado se a decisão de autorização depende do corpo da mensagem. Devido a problemas de desempenho, se possível você deve recriar seu aplicativo para que a decisão de autorização não requer acesso ao corpo da mensagem.  
+  
+ Substitua este método se o aplicativo associa ou apresenta um conjunto diferente de políticas para resultante <xref:System.ServiceModel.ServiceSecurityContext> e <xref:System.ServiceModel.Channels.Message> ou forneça um modelo de avaliação (cadeia) de diretiva diferente.  
+  
+ Esse método é responsável por chamar <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como substituir este método para aplicar os requisitos de controle de acesso personalizado que requerem acesso ao corpo da mensagem.  
+  
+ [!code-csharp[c_Federation#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#6)]
+ [!code-vb[c_Federation#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckAccessCore">
+      <MemberSignature Language="C#" Value="protected virtual bool CheckAccessCore (System.ServiceModel.OperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CheckAccessCore(class System.ServiceModel.OperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore(System.ServiceModel.OperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationContext" Type="System.ServiceModel.OperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="operationContext">O <see cref="T:System.ServiceModel.OperationContext" /> para a solicitação de autorização atual.</param>
+        <summary>Verifica a autorização para um determinado contexto de operação com base na avaliação de política padrão.</summary>
+        <returns>
+          <see langword="true" />Se o acesso é concedido; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A>geralmente é o resultado da avaliação da política padrão.  
+  
+ Substitua este método para fornecer as decisões de autorização personalizadas.  
+  
+ Esse método pode ser usado para fazer a autorização decisões com base em conjuntos de declarações que são inferidos com base nos tokens de entrada ou pode ser adicionado por meio de políticas de autorização externa. Ele também pode tomar decisões de autorização com base nas propriedades da mensagem de entrada: por exemplo, o cabeçalho de ação.  
+  
+ Nesse método, o aplicativo pode usar o `operationContext` parâmetro para acessar a identidade do chamador (<xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A>). Retornando o <xref:System.ServiceModel.Channels.RequestContext> de objeto o <xref:System.ServiceModel.OperationContext.RequestContext%2A> propriedade, o aplicativo pode acessar a mensagem de solicitação inteira (<xref:System.ServiceModel.Channels.RequestContext.RequestMessage%2A>). Retornando o <xref:System.ServiceModel.Channels.MessageHeaders> de objeto o <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> propriedade, o aplicativo pode acessar a URL do serviço (<xref:System.ServiceModel.Channels.MessageHeaders.To%2A>) e a operação (<xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>). Com essas informações, o aplicativo pode executar a decisão de autorização adequadamente.  
+  
+ As declarações feitas por um usuário são encontradas no <xref:System.IdentityModel.Claims.ClaimSet> retornado pelo <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> propriedade o `AuthorizationContext`. Atual `AuthorizationContext` é retornado pelo <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> propriedade o <xref:System.ServiceModel.OperationContext> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma substituição do <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método.  
+  
+ [!code-csharp[c_CustomAuthMgr#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#6)]
+ [!code-vb[c_CustomAuthMgr#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#6)]  
+  
+ Outro exemplo, consulte [como: criar um Gerenciador de autorização personalizada para um serviço](~/docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAuthorizationPolicies">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; GetAuthorizationPolicies (System.ServiceModel.OperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; GetAuthorizationPolicies(class System.ServiceModel.OperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.ServiceAuthorizationManager.GetAuthorizationPolicies(System.ServiceModel.OperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationContext" Type="System.ServiceModel.OperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="operationContext">O <see cref="T:System.ServiceModel.OperationContext" /> da atual solicitação de autorização.</param>
+        <summary>Obtém o conjunto de políticas que participam de avaliações de políticas.</summary>
+        <returns>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[indigo1](~/includes/indigo1-md.md)] implementação fornece um conjunto padrão de diretivas de autorização. Esses incluem o token primário que contém as credenciais do solicitante e suporte todos os tokens, tokens de transporte e políticas externas se especificado.  
+  
+ Você pode substituir essa implementação e fornecer um conjunto diferente de políticas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

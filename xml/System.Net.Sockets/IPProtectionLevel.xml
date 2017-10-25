@@ -1,0 +1,139 @@
+<Type Name="IPProtectionLevel" FullName="System.Net.Sockets.IPProtectionLevel">
+  <TypeSignature Language="C#" Value="public enum IPProtectionLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IPProtectionLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.IPProtectionLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Um valor que permite que a restrição de um soquete do IPv6 a um escopo especificado, como endereços com o mesmo local de link ou o prefixo do site local.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa opção permite que os aplicativos colocar as restrições de acesso em soquetes IPv6. Essas restrições permitem que um aplicativo em execução em uma LAN privada proteja-se de modo simples e robusto contra ataques externos. Essa opção de soquete amplia ou reduz o escopo de um soquete de escuta, permitindo acesso irrestrito de usuários públicos e privados, quando apropriado, ou restringindo o acesso somente ao mesmo site, conforme necessário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EdgeRestricted">
+      <MemberSignature Language="C#" Value="EdgeRestricted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IPProtectionLevel EdgeRestricted = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IPProtectionLevel.EdgeRestricted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IPProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nível de proteção de IP é restringida de borda. Esse valor seria usado por aplicativos projetados para operar com a Internet. Essa configuração não permite a passagem de conversão de endereço de rede (NAT) com a implementação do Windows Teredo. Esses aplicativos podem ignorar IPv4 firewalls, para que aplicativos devem ser protegidos contra ataques de Internet direcionados para a porta aberta. No Windows Server 2003 e Windows XP, o valor padrão para o nível de proteção de IP em um soquete é restringida de borda.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Restricted">
+      <MemberSignature Language="C#" Value="Restricted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IPProtectionLevel Restricted = int32(30)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IPProtectionLevel.Restricted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IPProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nível de proteção de IP é restrito. Esse valor será usado por aplicativos de intranet que não implementam cenários de Internet. Esses aplicativos geralmente não são testados ou protegidos contra ataques de estilo da Internet. Essa configuração limitará o tráfego recebido para link-local apenas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unrestricted">
+      <MemberSignature Language="C#" Value="Unrestricted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IPProtectionLevel Unrestricted = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IPProtectionLevel.Unrestricted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IPProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nível de proteção de IP é irrestrito. Esse valor seria usado por aplicativos projetados para operar com a Internet, incluindo os aplicativos que aproveitam os recursos de passagem NAT IPv6 internos no Windows (Teredo, por exemplo). Esses aplicativos podem ignorar IPv4 firewalls, para que aplicativos devem ser protegidos contra ataques de Internet direcionados para a porta aberta. No Windows Server 2008 R2 e Windows Vista, o valor padrão para o nível de proteção de IP em um soquete é irrestrito.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.IPProtectionLevel Unspecified = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.IPProtectionLevel.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.IPProtectionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nível de proteção de IP não está especificado. No Windows 7 e Windows Server 2008 R2, o valor padrão para o nível de proteção de IP em um soquete é não especificado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

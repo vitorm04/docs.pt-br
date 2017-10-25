@@ -1,0 +1,125 @@
+<Type Name="UnhandledExceptionAction" FullName="System.Activities.UnhandledExceptionAction">
+  <TypeSignature Language="C#" Value="public enum UnhandledExceptionAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UnhandledExceptionAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.UnhandledExceptionAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a ação que ocorre quando uma exceção ignora a raiz de um fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> função é chamada se uma exceção ignora a raiz do fluxo de trabalho. O <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> fornece acesso a exceção, bem como um ponteiro para o <xref:System.Activities.Activity> que gerou a exceção. Finalizar é a ação padrão se nenhuma <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> manipulador está especificado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama um fluxo de trabalho que gerencia uma exceção. A exceção é não tratados pelo fluxo de trabalho e o manipulador de <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> é chamado. <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> é inspecionado para fornecer informações sobre a exceção, e fluxo de trabalho é encerrado.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="Abort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.UnhandledExceptionAction Abort = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.UnhandledExceptionAction.Abort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.UnhandledExceptionAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o <see cref="T:System.Activities.WorkflowApplication" /> deve anular o fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso resulta em <xref:System.Activities.WorkflowApplication.Aborted%2A> está sendo chamado quando o processo de anulação for concluído. Exceção sem tratamento é usada como o motivo de anulação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama um fluxo de trabalho que gerencia uma exceção. A exceção é não tratados pelo fluxo de trabalho e o manipulador de <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> é chamado. O <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> são inspecionados para fornecer informações sobre a exceção, e o fluxo de trabalho foi anulado.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="Cancel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.UnhandledExceptionAction Cancel = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.UnhandledExceptionAction.Cancel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.UnhandledExceptionAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o <see cref="T:System.Activities.WorkflowApplication" /> deve agendar o cancelamento da atividade raiz e retomar a execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso resulta em <xref:System.Activities.WorkflowApplication.Completed%2A> que está sendo chamado quando o processo de cancelamento é concluído.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama um fluxo de trabalho que gerencia uma exceção. A exceção é não tratados pelo fluxo de trabalho e o manipulador de <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> é chamado. O <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> são inspecionados para fornecer informações sobre a exceção, e o fluxo de trabalho foi cancelado.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#8](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminate">
+      <MemberSignature Language="C#" Value="Terminate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.UnhandledExceptionAction Terminate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.UnhandledExceptionAction.Terminate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.UnhandledExceptionAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o <see cref="T:System.Activities.WorkflowApplication" /> deve agendar o término da atividade raiz e retomar a execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso resulta em <xref:System.Activities.WorkflowApplication.Completed%2A> que está sendo chamado quando o processo de encerramento estiver concluído. Exceção sem tratamento é usada como o motivo do encerramento. Finalizar é a ação padrão se nenhuma <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> manipulador está especificado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir chama um fluxo de trabalho que gerencia uma exceção. A exceção é não tratados pelo fluxo de trabalho e o manipulador de <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> é chamado. <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> é inspecionado para fornecer informações sobre a exceção, e fluxo de trabalho é encerrado.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

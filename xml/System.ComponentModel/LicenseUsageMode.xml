@@ -1,0 +1,86 @@
+<Type Name="LicenseUsageMode" FullName="System.ComponentModel.LicenseUsageMode">
+  <TypeSignature Language="C#" Value="public enum LicenseUsageMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LicenseUsageMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.LicenseUsageMode" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica quando o <see cref="T:System.ComponentModel.License" /> pode ser usado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.LicenseManager> e <xref:System.ComponentModel.LicenseContext> classes usam esta enumeração. Ele é usado para definir um componente <xref:System.ComponentModel.LicenseManager.CurrentContext%2A>. Consulte o <xref:System.ComponentModel.LicenseManager> classe para obter detalhes.  
+  
+ Para obter mais informações sobre licenciamento, consulte [como: controles e componentes de licença](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Designtime">
+      <MemberSignature Language="C#" Value="Designtime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.LicenseUsageMode Designtime = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.LicenseUsageMode.Designtime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.LicenseUsageMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usado durante o tempo de design por um designer visual ou o compilador.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Runtime">
+      <MemberSignature Language="C#" Value="Runtime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.LicenseUsageMode Runtime = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.LicenseUsageMode.Runtime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.LicenseUsageMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usado durante o tempo de execução.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

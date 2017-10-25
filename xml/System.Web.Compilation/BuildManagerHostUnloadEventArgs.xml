@@ -1,0 +1,76 @@
+<Type Name="BuildManagerHostUnloadEventArgs" FullName="System.Web.Compilation.BuildManagerHostUnloadEventArgs">
+  <TypeSignature Language="C#" Value="public class BuildManagerHostUnloadEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BuildManagerHostUnloadEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.BuildManagerHostUnloadEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém dados de evento para o <see cref="E:System.Web.Compilation.ClientBuildManager.AppDomainShutdown" /> evento e o <see cref="E:System.Web.Compilation.ClientBuildManager.AppDomainUnloaded" /> evento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.AppDomain> instância for desligada ou descarregada, um <xref:System.Web.Compilation.ClientBuildManager.AppDomainShutdown> evento ou um <xref:System.Web.Compilation.ClientBuildManager.AppDomainUnloaded> é gerado, respectivamente. O <xref:System.Web.Compilation.BuildManagerHostUnloadEventArgs> objeto armazena o motivo para o desligamento ou unload e é passado para o manipulador de eventos como um de seus parâmetros.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildManagerHostUnloadEventArgs (System.Web.ApplicationShutdownReason reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.ApplicationShutdownReason reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildManagerHostUnloadEventArgs.#ctor(System.Web.ApplicationShutdownReason)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reason" Type="System.Web.ApplicationShutdownReason" />
+      </Parameters>
+      <Docs>
+        <param name="reason">O motivo do desligamento do domínio de aplicativo hospedado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Compilation.BuildManagerHostUnloadEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma nova instância da <xref:System.Web.Compilation.BuildManagerHostUnloadEventArgs> com o <xref:System.Web.Compilation.BuildManagerHostUnloadEventArgs.Reason%2A> propriedade definida como `reason`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public System.Web.ApplicationShutdownReason Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.ApplicationShutdownReason Reason" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.BuildManagerHostUnloadEventArgs.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ApplicationShutdownReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o motivo pelo qual que o domínio de aplicativo hospedado foi desligado.</summary>
+        <value>Um dos valores enumerados <see cref="T:System.Web.ApplicationShutdownReason" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.BuildManagerHostUnloadEventArgs.Reason%2A> repositórios de propriedades uma <xref:System.Web.ApplicationShutdownReason> objeto como seu valor que descreve por que o <xref:System.AppDomain> instância foi desligada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

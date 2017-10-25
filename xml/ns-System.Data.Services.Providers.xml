@@ -1,0 +1,13 @@
+<Namespace Name="System.Data.Services.Providers">
+  <Docs>
+    <summary>Fornece uma série de interfaces implementadas para definir um provedor de serviços de dados personalizado para WCF Data Services.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [provedores de serviços de dados](~/docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

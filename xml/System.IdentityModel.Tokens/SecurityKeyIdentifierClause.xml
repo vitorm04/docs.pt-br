@@ -1,0 +1,251 @@
+<Type Name="SecurityKeyIdentifierClause" FullName="System.IdentityModel.Tokens.SecurityKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public abstract class SecurityKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SecurityKeyIdentifierClause extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma classe base abstrata para uma cláusula de identificador de chave.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> não precisa ser usada, diferente de quando um serviço de token de segurança personalizada é criado. Quando um serviço de token de segurança retorna um token de segurança, o token de segurança emitido contém referências aos tokens de segurança anexados ou não. Consultem referências associadas aos tokens de segurança que estão contidos dentro do cabeçalho de segurança de uma mensagem SOAP e referências não referenciam tokens de segurança que não estão incluídas no cabeçalho de segurança de uma mensagem SOAP. Normalmente, essas referências confirmar a autenticidade do token de segurança emitido.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityKeyIdentifierClause (string clauseType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string clauseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="clauseType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="clauseType">O tipo de cláusula de identificador de chave. Define o valor da propriedade <see cref="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.ClauseType" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> classe usando o tipo de cláusula de identificador de chave especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o identificador de chave de segurança é serializado em XML, o `clauseType` parâmetro é serializado como o `ValueType` atributo o `<SecurityTokenReference>` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SecurityKeyIdentifierClause (string clauseType, byte[] derivationNonce, int derivationLength);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string clauseType, unsigned int8[] derivationNonce, int32 derivationLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.#ctor(System.String,System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="clauseType" Type="System.String" />
+        <Parameter Name="nonce" Type="System.Byte[]" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="clauseType">O tipo de cláusula de identificador de chave. Define o valor da propriedade <see cref="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.ClauseType" />.</param>
+        <param name="derivationNonce">To be added.</param>
+        <param name="derivationLength">To be added.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> classe usando o tipo de cláusula de identificador de chave especificado, nonce e o comprimento da chave derivado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)]não oferece suporte à criação de identificadores de chave derivadas implícitas. No entanto, [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] processa mensagens SOAP de entrada que contém o identificador de chave implícita.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateKey">
+      <MemberSignature Language="C#" Value="public virtual bool CanCreateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanCreateKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CanCreateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma chave pode ser criada.</summary>
+        <value>
+          <see langword="true" />Se uma chave pode ser criada; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma chave pode ser criada usando os parâmetros passados para um construtor, substitua o <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CanCreateKey%2A> método para retornar `true` e implementar o <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CreateKey%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClauseType">
+      <MemberSignature Language="C#" Value="public string ClauseType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClauseType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.ClauseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de cláusula de identificador de chave.</summary>
+        <value>O tipo de cláusula de identificador de chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKey">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.Tokens.SecurityKey CreateKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.Tokens.SecurityKey CreateKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CreateKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKey</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma chave com base nos parâmetros passados para o construtor.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityKey" /> que contém a chave criada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma chave pode ser criada usando os parâmetros passados para um construtor, substitua o <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CanCreateKey%2A> método para retornar `true` e implementar o <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.CreateKey%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DerivationLength">
+      <MemberSignature Language="C#" Value="public int DerivationLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DerivationLength" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.DerivationLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho da chave derivada.</summary>
+        <value>O tamanho da chave derivada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)]não oferece suporte à criação de identificadores de chave derivadas implícitas. No entanto, [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] processa mensagens SOAP de entrada que contém o identificador de chave implícita.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDerivationNonce">
+      <MemberSignature Language="C#" Value="public byte[] GetDerivationNonce ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetDerivationNonce() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.GetDerivationNonce" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o valor de uso único que foi usado para gerar a chave derivada.</summary>
+        <returns>Uma matriz de <see cref="T:System.Byte" /> que contém o valor de uso único que foi usado para gerar a chave derivada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)]não oferece suporte à criação de identificadores de chave derivadas implícitas. No entanto, [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] processa mensagens SOAP de entrada que contém o identificador de chave implícita.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ID da cláusula de identificador de chave.</summary>
+        <value>A ID da cláusula de identificador de chave. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o identificador de chave de segurança é serializado em XML, o <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.Id%2A> propriedade é serializada como o `Id` atributo o `<SecurityTokenReference>` elemento. Se a propriedade for `null`, uma `Id` atributo não está incluído no `<SecurityTokenReference>` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public virtual bool Matches (System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Matches(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.Matches(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="clause">To be added.</param>
+        <summary>Retorna um valor que indica se o identificador de chave para essa instância é equivalente à cláusula do identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="clause" /> tem a mesma instância que a instância atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="clause" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

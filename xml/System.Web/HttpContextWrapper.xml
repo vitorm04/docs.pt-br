@@ -1,0 +1,1072 @@
+<Type Name="HttpContextWrapper" FullName="System.Web.HttpContextWrapper">
+  <TypeSignature Language="C#" Value="public class HttpContextWrapper : System.Web.HttpContextBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpContextWrapper extends System.Web.HttpContextBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpContextWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.HttpContextBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Abstractions, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula o objeto intrínseco de HTTP que contêm informações específicas de HTTP sobre uma solicitação HTTP individual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpContextWrapper> classe deriva o <xref:System.Web.HttpContextBase> classe e serve como um wrapper para o <xref:System.Web.HttpContext> classe. Essa classe expõe a funcionalidade do <xref:System.Web.HttpContext> classe e também expõe a <xref:System.Web.HttpContextBase> tipo. O <xref:System.Web.HttpContextBase> classe permite que você substitua a implementação original do <xref:System.Web.HttpContext> em seu aplicativo com uma implementação personalizada, como quando você executa fora o pipeline do ASP.NET de teste de unidade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpContextWrapper (System.Web.HttpContext httpContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.HttpContext httpContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.#ctor(System.Web.HttpContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="httpContext" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="httpContext">O objeto a que essa classe wrapper fornece acesso.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.HttpContextWrapper" /> usando o objeto de contexto especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="httpContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptWebSocketRequest">
+      <MemberSignature Language="C#" Value="public override void AcceptWebSocketRequest (Func&lt;System.Web.WebSockets.AspNetWebSocketContext,System.Threading.Tasks.Task&gt; userFunc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AcceptWebSocketRequest(class System.Func`2&lt;class System.Web.WebSockets.AspNetWebSocketContext, class System.Threading.Tasks.Task&gt; userFunc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.AcceptWebSocketRequest(System.Func{System.Web.WebSockets.AspNetWebSocketContext,System.Threading.Tasks.Task})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userFunc" Type="System.Func&lt;System.Web.WebSockets.AspNetWebSocketContext,System.Threading.Tasks.Task&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="userFunc">A função de usuário.</param>
+        <summary>Aceita uma solicitação <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> usando a função de usuário especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="userFunc" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">A solicitação não é uma solicitação <see cref="T:System.Web.WebSockets.AspNetWebSocket" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptWebSocketRequest">
+      <MemberSignature Language="C#" Value="public override void AcceptWebSocketRequest (Func&lt;System.Web.WebSockets.AspNetWebSocketContext,System.Threading.Tasks.Task&gt; userFunc, System.Web.WebSockets.AspNetWebSocketOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AcceptWebSocketRequest(class System.Func`2&lt;class System.Web.WebSockets.AspNetWebSocketContext, class System.Threading.Tasks.Task&gt; userFunc, class System.Web.WebSockets.AspNetWebSocketOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.AcceptWebSocketRequest(System.Func{System.Web.WebSockets.AspNetWebSocketContext,System.Threading.Tasks.Task},System.Web.WebSockets.AspNetWebSocketOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userFunc" Type="System.Func&lt;System.Web.WebSockets.AspNetWebSocketContext,System.Threading.Tasks.Task&gt;" />
+        <Parameter Name="options" Type="System.Web.WebSockets.AspNetWebSocketOptions" />
+      </Parameters>
+      <Docs>
+        <param name="userFunc">A função de usuário.</param>
+        <param name="options">O objeto de opções.</param>
+        <summary>Aceita uma solicitação <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> usando a função de usuário e o objeto de opções especificados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="userFunc" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">A solicitação não é uma solicitação <see cref="T:System.Web.WebSockets.AspNetWebSocket" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddError">
+      <MemberSignature Language="C#" Value="public override void AddError (Exception errorInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddError(class System.Exception errorInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.AddError(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorInfo" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="errorInfo">A exceção para adicionar à coleção de exceção.</param>
+        <summary>Adiciona uma exceção à coleção de exceções da solicitação HTTP atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOnRequestCompleted">
+      <MemberSignature Language="C#" Value="public override System.Web.ISubscriptionToken AddOnRequestCompleted (Action&lt;System.Web.HttpContextBase&gt; callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.ISubscriptionToken AddOnRequestCompleted(class System.Action`1&lt;class System.Web.HttpContextBase&gt; callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.AddOnRequestCompleted(System.Action{System.Web.HttpContextBase})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ISubscriptionToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action&lt;System.Web.HttpContextBase&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O objeto de contexto HTTP.</param>
+        <summary>Gera um evento virtual que ocorre quando a parte HTTP da solicitação está terminando.</summary>
+        <returns>O token de assinatura.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre antes do <xref:System.Web.WebSockets.AspNetWebSocket> começa a conexão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="callback" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllErrors">
+      <MemberSignature Language="C#" Value="public override Exception[] AllErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception[] AllErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.AllErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de erros (se houver) que foram acumulados ao processar uma solicitação HTTP.</summary>
+        <value>Uma matriz de <see cref="T:System.Exception" /> objetos para a solicitação HTTP atual, ou <see langword="null" /> se nenhum erro acumulados durante o processamento de solicitação HTTP.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowAsyncDuringSyncStages">
+      <MemberSignature Language="C#" Value="public override bool AllowAsyncDuringSyncStages { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowAsyncDuringSyncStages" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.AllowAsyncDuringSyncStages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as operações assíncronas é permitida durante partes do processamento da solicitação ASP.NET quando eles não são esperados.</summary>
+        <value>
+          <see langword="false" />Se o ASP.NET gera uma exceção quando a API assíncrona é usada em um tempo quando não é esperado; Caso contrário, <see langword="true" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte <xref:System.Web.HttpContext.AllowAsyncDuringSyncStages%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpApplicationStateBase Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpApplicationStateBase Application" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Application" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpApplicationStateBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Web.HttpApplicationState" /> para a solicitação HTTP atual.</summary>
+        <value>O objeto de estado para a solicitação HTTP atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationInstance">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpApplication ApplicationInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpApplication ApplicationInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.ApplicationInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpApplication</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto <see cref="T:System.Web.HttpApplication" /> para a atual solicitação HTTP.</summary>
+        <value>O objeto para a solicitação HTTP atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncPreloadMode">
+      <MemberSignature Language="C#" Value="public override System.Web.Configuration.AsyncPreloadModeFlags AsyncPreloadMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.AsyncPreloadModeFlags AsyncPreloadMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.AsyncPreloadMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.AsyncPreloadModeFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que contém os sinalizadores que pertencem ao modo de pré-carregamento assíncrono.</summary>
+        <value>Um objeto que contém os sinalizadores que pertencem ao modo de pré-carregamento assíncrono.  
+  
+ Embora essa propriedade pode ser definida por meio de programação, alterar o valor da propriedade só tem efeito se a propriedade é definida antes do <see langword="ExecuteRequestHandler" /> etapa no pipeline de solicitação do ASP.NET.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cache">
+      <MemberSignature Language="C#" Value="public override System.Web.Caching.Cache Cache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Caching.Cache Cache" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Cache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.Cache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Web.Caching.Cache" /> para o domínio do aplicativo atual.</summary>
+        <value>O objeto de cache para o domínio de aplicativo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearError">
+      <MemberSignature Language="C#" Value="public override void ClearError ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ClearError() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.ClearError" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os erros para a solicitação HTTP atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentHandler">
+      <MemberSignature Language="C#" Value="public override System.Web.IHttpHandler CurrentHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.IHttpHandler CurrentHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.CurrentHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.IHttpHandler" /> objeto que representa o manipulador que está sendo executado.</summary>
+        <value>Um objeto que representa o manipulador que está sendo executado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentNotification">
+      <MemberSignature Language="C#" Value="public override System.Web.RequestNotification CurrentNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.RequestNotification CurrentNotification" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.CurrentNotification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.RequestNotification</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor <see cref="T:System.Web.RequestNotification" /> que indica o evento <see cref="T:System.Web.HttpApplication" /> atual que está sendo processado.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.RequestNotification" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisposeOnPipelineCompleted">
+      <MemberSignature Language="C#" Value="public override System.Web.ISubscriptionToken DisposeOnPipelineCompleted (IDisposable target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.ISubscriptionToken DisposeOnPipelineCompleted(class System.IDisposable target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.DisposeOnPipelineCompleted(System.IDisposable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ISubscriptionToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.IDisposable" />
+      </Parameters>
+      <Docs>
+        <param name="target">O objeto cujo <see cref="M:System.IDisposable.Dispose" /> método deve ser chamado quando o <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> uma parte da solicitação de conexão é concluída.</param>
+        <summary>Permite que um objeto <see cref="M:System.IDisposable.Dispose" /> método a ser chamado quando o <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> parte de conexão dessa solicitação é concluída.</summary>
+        <returns>O token de assinatura.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public override Exception Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Error" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o primeiro erro (se houver) que foram acumulados ao processar uma solicitação HTTP.</summary>
+        <value>A primeira exceção para a solicitação HTTP atual, ou <see langword="null" /> se nenhum erro acumulados quando a solicitação HTTP estava sendo processada. O padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlobalResourceObject">
+      <MemberSignature Language="C#" Value="public override object GetGlobalResourceObject (string classKey, string resourceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetGlobalResourceObject(string classKey, string resourceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.GetGlobalResourceObject(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="classKey" Type="System.String" />
+        <Parameter Name="resourceKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="classKey">Uma cadeia de caracteres que representa a propriedade <see cref="P:System.Web.Compilation.ResourceExpressionFields.ClassKey" /> do objeto de recurso solicitado.</param>
+        <param name="resourceKey">Uma cadeia de caracteres que representa a propriedade <see cref="P:System.Web.Compilation.ResourceExpressionFields.ResourceKey" /> do objeto de recurso solicitado.</param>
+        <summary>Obtém um objeto de recurso no nível de aplicativo baseado nas propriedades <see cref="P:System.Web.Compilation.ResourceExpressionFields.ClassKey" /> e <see cref="P:System.Web.Compilation.ResourceExpressionFields.ResourceKey" /> especificadas.</summary>
+        <returns>O objeto de recurso de nível do aplicativo solicitado, ou <see langword="null" /> se nenhum objeto de recurso correspondente foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlobalResourceObject">
+      <MemberSignature Language="C#" Value="public override object GetGlobalResourceObject (string classKey, string resourceKey, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetGlobalResourceObject(string classKey, string resourceKey, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.GetGlobalResourceObject(System.String,System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="classKey" Type="System.String" />
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="classKey">Uma cadeia de caracteres que representa a propriedade <see cref="P:System.Web.Compilation.ResourceExpressionFields.ClassKey" /> do objeto de recurso solicitado.</param>
+        <param name="resourceKey">Uma cadeia de caracteres que representa a propriedade <see cref="P:System.Web.Compilation.ResourceExpressionFields.ResourceKey" /> do objeto de recurso solicitado.</param>
+        <param name="culture">Uma cadeia de caracteres que representa o objeto <see cref="T:System.Globalization.CultureInfo" /> do recurso solicitado.</param>
+        <summary>Obtém um objeto de recurso no nível do aplicativo baseado nas propriedades <see cref="P:System.Web.Compilation.ResourceExpressionFields.ClassKey" /> e <see cref="P:System.Web.Compilation.ResourceExpressionFields.ResourceKey" /> especificadas e no objeto <see cref="T:System.Globalization.CultureInfo" />.</summary>
+        <returns>O objeto de recurso solicitado do nível do aplicativo, que é localizado para a cultura especificada, ou <see langword="null" /> se nenhum objeto de recurso correspondente foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalResourceObject">
+      <MemberSignature Language="C#" Value="public override object GetLocalResourceObject (string virtualPath, string resourceKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetLocalResourceObject(string virtualPath, string resourceKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.GetLocalResourceObject(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="resourceKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Uma cadeia de caracteres que representa o <see cref="P:System.Web.Compilation.ExpressionBuilderContext.VirtualPath" /> propriedade do objeto de recurso local.</param>
+        <param name="resourceKey">Uma cadeia de caracteres que representa a propriedade <see cref="P:System.Web.Compilation.ResourceExpressionFields.ResourceKey" /> do objeto de recurso solicitado.</param>
+        <summary>Obtém um objeto de recurso de nível de página com base nas propriedades <see cref="P:System.Web.Compilation.ExpressionBuilderContext.VirtualPath" /> e <see cref="P:System.Web.Compilation.ResourceExpressionFields.ResourceKey" /> especificadas.</summary>
+        <returns>O objeto de recurso de nível de página solicitado, ou <see langword="null" /> se nenhum objeto de recurso correspondente foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalResourceObject">
+      <MemberSignature Language="C#" Value="public override object GetLocalResourceObject (string virtualPath, string resourceKey, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetLocalResourceObject(string virtualPath, string resourceKey, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.GetLocalResourceObject(System.String,System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">Uma cadeia de caracteres que representa o <see cref="P:System.Web.Compilation.ExpressionBuilderContext.VirtualPath" /> propriedade do objeto de recurso local.</param>
+        <param name="resourceKey">Uma cadeia de caracteres que representa a propriedade <see cref="P:System.Web.Compilation.ResourceExpressionFields.ResourceKey" /> do objeto de recurso solicitado.</param>
+        <param name="culture">Uma cadeia de caracteres que representa o objeto <see cref="T:System.Globalization.CultureInfo" /> do objeto de recurso solicitado.</param>
+        <summary>Obtém um objeto de recurso no nível da página com base nas propriedades <see cref="P:System.Web.Compilation.ExpressionBuilderContext.VirtualPath" /> e <see cref="P:System.Web.Compilation.ResourceExpressionFields.ResourceKey" /> especificadas e no objeto <see cref="T:System.Globalization.CultureInfo" />.</summary>
+        <returns>O objeto de recurso local solicitado, que é localizado para a cultura especificada, ou <see langword="null" /> se nenhum objeto de recurso correspondente foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSection">
+      <MemberSignature Language="C#" Value="public override object GetSection (string sectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetSection(string sectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.GetSection(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sectionName">O caminho da seção de configuração (no formato XPath) e o nome do elemento de configuração.</param>
+        <summary>Obtém a seção de configuração especificado da configuração de padrão do aplicativo atual.</summary>
+        <returns>A seção especificada, ou <see langword="null" /> se a seção não existe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public override object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço para obter.</param>
+        <summary>Retorna um objeto para o tipo de serviço atual.</summary>
+        <returns>O tipo de serviço atual, ou <see langword="null" /> se nenhum serviço foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handler">
+      <MemberSignature Language="C#" Value="public override System.Web.IHttpHandler Handler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.IHttpHandler Handler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Handler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.IHttpHandler" /> objeto que é responsável por processar a solicitação HTTP.</summary>
+        <value>O objeto que é responsável por processar a solicitação HTTP.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCustomErrorEnabled">
+      <MemberSignature Language="C#" Value="public override bool IsCustomErrorEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCustomErrorEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.IsCustomErrorEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os erros personalizados estão habilitados para a solicitação HTTP atual.</summary>
+        <value>
+          <see langword="true" /> se os erros personalizados estiverem habilitados; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDebuggingEnabled">
+      <MemberSignature Language="C#" Value="public override bool IsDebuggingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDebuggingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.IsDebuggingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a solicitação HTTP atual está no modo de depuração.</summary>
+        <value>
+          <see langword="true" /> se a solicitação está no modo de depuração, caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPostNotification">
+      <MemberSignature Language="C#" Value="public override bool IsPostNotification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPostNotification" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.IsPostNotification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um <see cref="T:System.Web.HttpApplication" /> evento concluiu o processamento.</summary>
+        <value>
+          <see langword="true" />Se o evento concluiu o processamento; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWebSocketRequest">
+      <MemberSignature Language="C#" Value="public override bool IsWebSocketRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWebSocketRequest" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.IsWebSocketRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a solicitação é uma solicitação <see cref="T:System.Web.WebSockets.AspNetWebSocket" />.</summary>
+        <value>
+          <see langword="true" /> se a solicitação for uma solicitação <see cref="T:System.Web.WebSockets.AspNetWebSocket" />; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWebSocketRequestUpgrading">
+      <MemberSignature Language="C#" Value="public override bool IsWebSocketRequestUpgrading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWebSocketRequestUpgrading" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.IsWebSocketRequestUpgrading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a conexão está atualizando de uma conexão HTTP para um <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> conexão.</summary>
+        <value>
+          <see langword="true" />Se a conexão está sendo atualizado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public override System.Collections.IDictionary Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Items" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de chave/valor que pode ser usada para organizar e compartilhar dados entre um módulo e um manipulador durante uma solicitação HTTP.</summary>
+        <value>Uma coleção de chave/valor que fornece acesso a um valor individual na coleção pelo uso de uma chave especificada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageInstrumentation">
+      <MemberSignature Language="C#" Value="public override System.Web.Instrumentation.PageInstrumentationService PageInstrumentation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Instrumentation.PageInstrumentationService PageInstrumentation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.PageInstrumentation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Instrumentation.PageInstrumentationService</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência à instância do serviço de instrumentação de página para esta solicitação.</summary>
+        <value>A instância do serviço de instrumentação de página para esta solicitação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousHandler">
+      <MemberSignature Language="C#" Value="public override System.Web.IHttpHandler PreviousHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.IHttpHandler PreviousHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.PreviousHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.IHttpHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.IHttpHandler" /> objeto para o manipulador de pai.</summary>
+        <value>Um <see cref="T:System.Web.IHttpHandler" /> objeto que representa o manipulador de pai, ou <see langword="null" /> se nenhum manipulador pai foi encontrado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Profile">
+      <MemberSignature Language="C#" Value="public override System.Web.Profile.ProfileBase Profile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Profile.ProfileBase Profile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Profile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Web.Profile.ProfileBase" /> para o perfil do usuário atual.</summary>
+        <value>Se as propriedades de perfil são definidas no arquivo de configuração do aplicativo e perfis estão habilitados para o aplicativo, um objeto que representa o perfil do usuário atual; Caso contrário, <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemapHandler">
+      <MemberSignature Language="C#" Value="public override void RemapHandler (System.Web.IHttpHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemapHandler(class System.Web.IHttpHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.RemapHandler(System.Web.IHttpHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Web.IHttpHandler" />
+      </Parameters>
+      <Docs>
+        <param name="handler">O objeto que deve processar a solicitação.</param>
+        <summary>Permite que você especifique um manipulador para a solicitação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir `handler` para `null`, o manipulador padrão é usado para processar a solicitação. Você pode definir `handler` para um manipulador de assíncrono ou para um manipulador síncrono. O manipulador deve implementar o <xref:System.Web.IHttpHandler> interface.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="M:System.Web.HttpContextWrapper.RemapHandler(System.Web.IHttpHandler)" /> foi chamado depois que o evento <see cref="E:System.Web.HttpApplication.MapRequestHandler" /> ocorreu.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpRequestBase Request { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpRequestBase Request" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Request" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpRequestBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Web.HttpRequestBase" /> para a solicitação HTTP atual.</summary>
+        <value>A solicitação HTTP atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Response">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpResponseBase Response { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpResponseBase Response" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Response" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpResponseBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Web.HttpResponseBase" /> para a resposta HTTP atual.</summary>
+        <value>A resposta HTTP atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RewritePath">
+      <MemberSignature Language="C#" Value="public override void RewritePath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RewritePath(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.RewritePath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho de substituição.</param>
+        <summary>Reconfigure a URL usando o caminho especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="path" />não está no diretório raiz do aplicativo atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RewritePath">
+      <MemberSignature Language="C#" Value="public override void RewritePath (string path, bool rebaseClientPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RewritePath(string path, bool rebaseClientPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.RewritePath(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="rebaseClientPath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para reescrever a.</param>
+        <param name="rebaseClientPath">
+          <see langword="true" /> para redefinir o caminho virtual; <see langword="false" /> para manter o caminho virtual inalterado.</param>
+        <summary>Reconfigure a URL usando o caminho especificado e um valor que especifica se o caminho virtual para recursos do servidor é modificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="path" />não está no diretório raiz do aplicativo atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RewritePath">
+      <MemberSignature Language="C#" Value="public override void RewritePath (string filePath, string pathInfo, string queryString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RewritePath(string filePath, string pathInfo, string queryString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.RewritePath(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="pathInfo" Type="System.String" />
+        <Parameter Name="queryString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">O caminho de substituição.</param>
+        <param name="pathInfo">Informações adicionais de caminho para um recurso.</param>
+        <param name="queryString">A cadeia de caracteres de consulta da solicitação.</param>
+        <summary>Reconfigure a URL usando o caminho especificado, as informações de caminho e informações de cadeia de caracteres de consulta.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="filePath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">O parâmetro <paramref name="filePath" /> não está no diretório raiz do aplicativo atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RewritePath">
+      <MemberSignature Language="C#" Value="public override void RewritePath (string filePath, string pathInfo, string queryString, bool setClientFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RewritePath(string filePath, string pathInfo, string queryString, bool setClientFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.RewritePath(System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+        <Parameter Name="pathInfo" Type="System.String" />
+        <Parameter Name="queryString" Type="System.String" />
+        <Parameter Name="setClientFilePath" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">O caminho de substituição.</param>
+        <param name="pathInfo">Informações adicionais de caminho para um recurso.</param>
+        <param name="queryString">A cadeia de caracteres de consulta da solicitação.</param>
+        <param name="setClientFilePath">
+          <see langword="true" />Para definir o caminho do arquivo usado para recursos de cliente para o valor da <c>filePath</c> parâmetro; caso contrário, <see langword="false" />.</param>
+        <summary>Reconfigure a URL usando o caminho especificado, as informações de caminho, informações de cadeia de caracteres de consulta e um valor que especifica se o caminho do arquivo de cliente é definido como o caminho de regravação.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filePath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">
+          <paramref name="filePath" />não está no diretório raiz do aplicativo atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpServerUtilityBase Server { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpServerUtilityBase Server" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Server" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpServerUtilityBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.HttpServerUtilityBase" /> objeto que fornece métodos que são usados quando as solicitações da Web estão sendo processada.</summary>
+        <value>O objeto do utilitário de servidor para a solicitação HTTP atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpSessionStateBase Session { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpSessionStateBase Session" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Session" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpSessionStateBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Web.HttpSessionStateBase" /> para a solicitação HTTP atual.</summary>
+        <value>O objeto de estado da sessão para a solicitação HTTP atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSessionStateBehavior">
+      <MemberSignature Language="C#" Value="public override void SetSessionStateBehavior (System.Web.SessionState.SessionStateBehavior sessionStateBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetSessionStateBehavior(valuetype System.Web.SessionState.SessionStateBehavior sessionStateBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpContextWrapper.SetSessionStateBehavior(System.Web.SessionState.SessionStateBehavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sessionStateBehavior" Type="System.Web.SessionState.SessionStateBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="sessionStateBehavior">Um dos valores de enumeração que especifica qual o tipo de comportamento de estado de sessão necessário.</param>
+        <summary>Define o tipo de comportamento de estado de sessão que é necessário para dar suporte a uma solicitação HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpContextWrapper.SetSessionStateBehavior%2A> método substitui a base de <xref:System.Web.HttpContextBase.SetSessionStateBehavior%2A> método. Para implementar o método base, o <xref:System.Web.HttpContextWrapper.SetSessionStateBehavior%2A> chamadas de método a <xref:System.Web.HttpContext.SetSessionStateBehavior%2A> método o <xref:System.Web.HttpContext> classe e passa o `sessionStateBehavior` configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipAuthorization">
+      <MemberSignature Language="C#" Value="public override bool SkipAuthorization { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipAuthorization" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.SkipAuthorization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o objeto <see cref="T:System.Web.Security.UrlAuthorizationModule" /> deve ignorar a verificação de autorização da solicitação atual.</summary>
+        <value>
+          <see langword="true" /> se <see cref="T:System.Web.Security.UrlAuthorizationModule" /> precisar ignorar a verificação de autorização; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadAbortOnTimeout">
+      <MemberSignature Language="C#" Value="public override bool ThreadAbortOnTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThreadAbortOnTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.ThreadAbortOnTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o tempo de execução do ASP.NET deve chamar <see cref="M:System.Threading.Thread.Abort" /> no thread que está atendendo a essa solicitação quando a solicitação expira.</summary>
+        <value>
+          <see langword="true" /> se <see cref="M:System.Threading.Thread.Abort" /> for chamado quando a thread expirar; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte <xref:System.Web.HttpContext.ThreadAbortOnTimeout%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timestamp">
+      <MemberSignature Language="C#" Value="public override DateTime Timestamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Timestamp" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Timestamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o carimbo de data/hora inicial da solicitação HTTP atual.</summary>
+        <value>O carimbo de data/hora da solicitação HTTP atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trace">
+      <MemberSignature Language="C#" Value="public override System.Web.TraceContext Trace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.TraceContext Trace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.Trace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.TraceContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Web.TraceContext" /> para a resposta HTTP atual.</summary>
+        <value>O objeto de rastreamento para a resposta HTTP atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public override System.Security.Principal.IPrincipal User { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal User" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações de segurança para a solicitação HTTP atual.</summary>
+        <value>Um objeto que contém informações de segurança para a solicitação HTTP atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebSocketNegotiatedProtocol">
+      <MemberSignature Language="C#" Value="public override string WebSocketNegotiatedProtocol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WebSocketNegotiatedProtocol" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.WebSocketNegotiatedProtocol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o protocolo negociado que foi enviado do servidor para o cliente para um <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> solicitação.</summary>
+        <value>O protocolo negociado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebSocketRequestedProtocols">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;string&gt; WebSocketRequestedProtocols { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;string&gt; WebSocketRequestedProtocols" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpContextWrapper.WebSocketRequestedProtocols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista ordenada de protocolos solicitados pelo cliente.</summary>
+        <value>Os protocolos solicitados, ou <see langword="null" /> se não for um <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> solicitação ou se nenhuma lista está presente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

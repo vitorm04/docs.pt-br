@@ -1,0 +1,471 @@
+<Type Name="Html32TextWriter" FullName="System.Web.UI.Html32TextWriter">
+  <TypeSignature Language="C#" Value="public class Html32TextWriter : System.Web.UI.HtmlTextWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Html32TextWriter extends System.Web.UI.HtmlTextWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Html32TextWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlTextWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Grava uma série de caracteres do HTML 3.2 específico e o texto para o fluxo de saída para um controle de servidor ASP.NET. O <see cref="T:System.Web.UI.Html32TextWriter" /> classe fornece recursos de formatação que controles de servidor ASP.NET usam ao processar conteúdo HTML 3.2 aos clientes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Html32TextWriter> classe é uma alternativa para o <xref:System.Web.UI.HtmlTextWriter> classe. Converte os atributos de estilo HTML 4.0 nos atributos e marcas de HTML 3.2 equivalente. Ele padroniza a propagação de atributos, como cores e fontes, usar tabelas HTML. ASP.NET usa automaticamente essa classe para HTML 3.2 e navegadores anteriores, verificando o <xref:System.Web.Configuration.HttpCapabilitiesBase.TagWriter%2A> propriedade o <xref:System.Web.HttpBrowserCapabilities> classe. A menos que você crie uma página personalizada ou um adaptador de controle que tem como alvo os dispositivos que usam a marcação HTML 3.2, você não precisa criar uma instância do <xref:System.Web.UI.Html32TextWriter> classe explicitamente.  
+  
+ Para obter mais informações sobre como personalizar a página e renderização de controle, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar uma classe denominada `CustomHtml32TextWriter`, que deriva de <xref:System.Web.UI.Html32TextWriter> classe. `CustomHtml32TextWriter`cria dois construtores que seguem o padrão é estabelecido pelo <xref:System.Web.UI.HtmlTextWriter> classe e substituições de <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A>, <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A>, <xref:System.Web.UI.Html32TextWriter.RenderBeforeTag%2A>, e <xref:System.Web.UI.Html32TextWriter.RenderAfterTag%2A> métodos.  
+  
+ [!code-csharp[System.Web.UI.Html32TextWriter_Samples1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/cs/html32textwritersamps.cs#1)]
+ [!code-vb[System.Web.UI.Html32TextWriter_Samples1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/VB/html32textwritersamps.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Html32TextWriter (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Html32TextWriter.#ctor(System.IO.TextWriter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> que renderiza o HTML conteúdo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Html32TextWriter" /> classe que usa o recuo de linha especificado no <see cref="F:System.Web.UI.HtmlTextWriter.DefaultTabString" /> campo quando o navegador solicitante requer recuo de linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Html32TextWriter.%23ctor%2A> construtor passa o <xref:System.Web.UI.HtmlTextWriter.DefaultTabString> campo valor para uma segunda versão que tem dois parâmetros a seguir:  
+  
+-   `writer`, que usa uma instância do <xref:System.IO.TextWriter> classe.  
+  
+-   `tabString`, que usa uma cadeia de caracteres que define o recuo de linha.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar uma classe personalizada que deriva de <xref:System.Web.UI.Html32TextWriter> classe. Ele tem dois construtores, que é o padrão para todas as classes que derivam direta ou indiretamente a <xref:System.Web.UI.HtmlTextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.Html32TextWriter_Samples1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/cs/html32textwritersamps.cs#1)]
+ [!code-vb[System.Web.UI.Html32TextWriter_Samples1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/VB/html32textwritersamps.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Html32TextWriter (System.IO.TextWriter writer, string tabString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.TextWriter writer, string tabString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Html32TextWriter.#ctor(System.IO.TextWriter,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="tabString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> que renderiza o HTML 3.2 conteúdo.</param>
+        <param name="tabString">Uma cadeia de caracteres que representa o número de espaços definida pelo <see cref="P:System.Web.UI.HtmlTextWriter.Indent" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Html32TextWriter" /> classe que usa o recuo de linha especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar uma classe personalizada que deriva de <xref:System.Web.UI.Html32TextWriter> classe. Ele tem dois construtores, que é o padrão para todas as classes que derivam direta ou indiretamente a <xref:System.Web.UI.HtmlTextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.Html32TextWriter_Samples1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/cs/html32textwritersamps.cs#1)]
+ [!code-vb[System.Web.UI.Html32TextWriter_Samples1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/VB/html32textwritersamps.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontStack">
+      <MemberSignature Language="C#" Value="protected System.Collections.Stack FontStack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Stack FontStack" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Html32TextWriter.FontStack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Stack</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de informações de fonte para o HTML renderizar.</summary>
+        <value>A coleção de informações de fonte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTagName">
+      <MemberSignature Language="C#" Value="protected override string GetTagName (System.Web.UI.HtmlTextWriterTag tagKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetTagName(valuetype System.Web.UI.HtmlTextWriterTag tagKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Html32TextWriter.GetTagName(System.Web.UI.HtmlTextWriterTag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagKey" Type="System.Web.UI.HtmlTextWriterTag" />
+      </Parameters>
+      <Docs>
+        <param name="tagKey">O <see cref="T:System.Web.UI.HtmlTextWriterTag" /> para obter o elemento HTML para o valor da enumeração.</param>
+        <summary>Retorna o elemento HTML associado especificado <see cref="T:System.Web.UI.HtmlTextWriterTag" /> valor de enumeração.</summary>
+        <returns>O elemento HTML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.HtmlTextWriterTag?displayProperty=nameWithType> campo é passado no `tagKey` e <xref:System.Web.UI.Html32TextWriter.ShouldPerformDivTableSubstitution%2A> é de propriedade `true`, o <xref:System.Web.UI.Html32TextWriter.GetTagName%2A> método retorna o `table` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStyleAttributeRender">
+      <MemberSignature Language="C#" Value="protected override bool OnStyleAttributeRender (string name, string value, System.Web.UI.HtmlTextWriterStyle key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnStyleAttributeRender(string name, string value, valuetype System.Web.UI.HtmlTextWriterStyle key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Html32TextWriter.OnStyleAttributeRender(System.String,System.String,System.Web.UI.HtmlTextWriterStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterStyle" />
+      </Parameters>
+      <Docs>
+        <param name="name">O atributo de estilo HTML para gravar o fluxo de saída.</param>
+        <param name="value">O valor associado com o atributo de estilo HTML.</param>
+        <param name="key">O <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> associado ao atributo de estilo HTML do valor de enumeração.</param>
+        <summary>Determina se deve gravar o atributo de estilo HTML especificado e seu valor para o fluxo de saída.</summary>
+        <returns>
+          <see langword="true" />Se o atributo de estilo HTML e seu valor serão renderizados para o fluxo de saída; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Html32TextWriter.OnStyleAttributeRender%2A> método dá suporte a um número menor de atributos de estilo HTML que o <xref:System.Web.UI.Html32TextWriter.OnStyleAttributeRender%2A> método que ele substitui.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTagRender">
+      <MemberSignature Language="C#" Value="protected override bool OnTagRender (string name, System.Web.UI.HtmlTextWriterTag key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnTagRender(string name, valuetype System.Web.UI.HtmlTextWriterTag key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Html32TextWriter.OnTagRender(System.String,System.Web.UI.HtmlTextWriterTag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterTag" />
+      </Parameters>
+      <Docs>
+        <param name="name">O elemento HTML para gravar o fluxo de saída.</param>
+        <param name="key">O <see cref="T:System.Web.UI.HtmlTextWriterTag" /> associado ao elemento HTML do valor de enumeração.</param>
+        <summary>Determina se deve gravar o elemento HTML especificado no fluxo de saída.</summary>
+        <returns>
+          <see langword="true" />Se o elemento HTML é gravado para o fluxo de saída; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.Html32TextWriter.ShouldPerformDivTableSubstitution%2A> é de propriedade `true`, o <xref:System.Web.UI.Html32TextWriter.OnTagRender%2A> método substitui qualquer `div` elementos que são processados por um controle com `table` elementos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAfterContent">
+      <MemberSignature Language="C#" Value="protected override string RenderAfterContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string RenderAfterContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Html32TextWriter.RenderAfterContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava a qualquer texto ou espaçamento que aparece depois do conteúdo do elemento HTML.</summary>
+        <returns>O espaçamento ou o texto a ser gravado após o conteúdo do elemento HTML; Caso contrário, se não houver nenhum essas informações para processar, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A> método. Cada substituído o método primeiro verifica se um `th` elemento está sendo processado e, em seguida, usa o <xref:System.Web.UI.Html32TextWriter.SupportsBold%2A> método para verificar se o dispositivo solicitante pode exibir a formatação em negrito. Se o dispositivo dá suporte à formatação em negrito, o <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A> método grava a marca de fechamento de um `b` elemento. Se o dispositivo não oferece suporte a formatação em negrito, o <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A> método grava a marca de fechamento de um `font` elemento.  
+  
+ Em seguida, o código verifica se um `h4` elemento está sendo processado e, em seguida, usa o <xref:System.Web.UI.Html32TextWriter.SupportsItalic%2A> propriedade para verificar se o dispositivo solicitante pode exibir itálico. Se o dispositivo dá suporte à formatação em itálico, o <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A> método grava a marca de fechamento de um `i` elemento. Se o dispositivo não oferece suporte a formatação em itálico, o <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A> método grava a marca de fechamento de um `font` elemento.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.Html32TextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.Html32TextWriter_Samples1#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/cs/html32textwritersamps.cs#4)]
+ [!code-vb[System.Web.UI.Html32TextWriter_Samples1#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/VB/html32textwritersamps.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAfterTag">
+      <MemberSignature Language="C#" Value="protected override string RenderAfterTag ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string RenderAfterTag() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Html32TextWriter.RenderAfterTag" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava o espaçamento ou texto que ocorre após a marca de fechamento de um elemento HTML.</summary>
+        <returns>O espaçamento ou o texto a ser gravado após a marca de fechamento do elemento HTML; Caso contrário, se não houver nenhum essas informações para processar, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Html32TextWriter.RenderAfterTag%2A> método. O código verifica se um `a` elemento está sendo processado. Nesse caso, o <xref:System.Web.UI.Html32TextWriter.RenderAfterTag%2A> método grava a marca de fechamento de um `small` elemento. O exemplo para o <xref:System.Web.UI.Html32TextWriter.RenderBeforeTag%2A> método executa a mesma verificação para o `a` elemento e, em seguida, grava a marca de abertura do `small` elemento.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.Html32TextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.Html32TextWriter_Samples1#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/cs/html32textwritersamps.cs#5)]
+ [!code-vb[System.Web.UI.Html32TextWriter_Samples1#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/VB/html32textwritersamps.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeforeContent">
+      <MemberSignature Language="C#" Value="protected override string RenderBeforeContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string RenderBeforeContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Html32TextWriter.RenderBeforeContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava o espaçamento de guia ou informações de fonte que aparece antes do conteúdo que está contido em um elemento HTML.</summary>
+        <returns>As informações de fonte ou espaçamento para gravar antes de renderizar o conteúdo do elemento HTML; Caso contrário, se não houver nenhum essas informações para processar, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A> método. O código verifica se um `th` elemento está sendo processado e, em seguida, usa o <xref:System.Web.UI.Html32TextWriter.SupportsBold%2A> método para verificar se o dispositivo solicitante pode exibir a formatação em negrito. Se o dispositivo dá suporte à formatação em negrito, o <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A> método grava a marca de abertura de um `b` elemento. Se o dispositivo não oferece suporte a formatação em negrito, o <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A> método grava a marca de abertura de um `font` elemento com um `color` atributo definido como o valor hexadecimal para vermelho.  
+  
+ Em seguida, cada método verifica se um `h4` elemento está sendo processado e, em seguida, usa o <xref:System.Web.UI.Html32TextWriter.SupportsItalic%2A> propriedade para verificar se o dispositivo solicitante pode exibir itálico. Se o dispositivo dá suporte à formatação em itálico, o <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A> método grava a marca de abertura de um `i` elemento. Se o dispositivo não oferece suporte a formatação em itálico, o <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A> método grava a marca de abertura de um `font` elemento com um `color` atributo definido como o valor hexadecimal do azul marinho.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.Html32TextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.Html32TextWriter_Samples1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/cs/html32textwritersamps.cs#2)]
+ [!code-vb[System.Web.UI.Html32TextWriter_Samples1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/VB/html32textwritersamps.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeforeTag">
+      <MemberSignature Language="C#" Value="protected override string RenderBeforeTag ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string RenderBeforeTag() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Html32TextWriter.RenderBeforeTag" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava texto ou espaçamento de guia que ocorre antes da marca de abertura de um elemento HTML para o fluxo de saída HTML 3.2.</summary>
+        <returns>Fonte HTML e informações de espaçamento para renderizar antes da marca; Caso contrário, se não houver nenhum essas informações para processar, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Html32TextWriter.RenderBeforeTag%2A> método. O código verifica se um `a` elemento está sendo processado. Nesse caso, substituído <xref:System.Web.UI.Html32TextWriter.RenderBeforeTag%2A> método grava a marca de abertura de um `small` elemento. O exemplo para o <xref:System.Web.UI.Html32TextWriter.RenderAfterTag%2A> executa a mesma verificação para o `a` elemento e, em seguida, grava a marca de fechamento do `small` elemento.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.Html32TextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.Html32TextWriter_Samples1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/cs/html32textwritersamps.cs#3)]
+ [!code-vb[System.Web.UI.Html32TextWriter_Samples1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/VB/html32textwritersamps.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginTag">
+      <MemberSignature Language="C#" Value="public override void RenderBeginTag (System.Web.UI.HtmlTextWriterTag tagKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RenderBeginTag(valuetype System.Web.UI.HtmlTextWriterTag tagKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Html32TextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagKey" Type="System.Web.UI.HtmlTextWriterTag" />
+      </Parameters>
+      <Docs>
+        <param name="tagKey">O <see cref="T:System.Web.UI.HtmlTextWriterTag" /> valor de enumeração que indica qual elemento HTML para gravação.</param>
+        <summary>Grava a marca de abertura do elemento especificado para o fluxo de saída HTML 3.2.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um `div` elemento for especificado e o <xref:System.Web.UI.Html32TextWriter.ShouldPerformDivTableSubstitution%2A> é o valor da propriedade `true`, o <xref:System.Web.UI.Html32TextWriter.RenderBeginTag%2A> método executa básico `table` elemento formatação para apresentar o conteúdo que está contido no `div` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndTag">
+      <MemberSignature Language="C#" Value="public override void RenderEndTag ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RenderEndTag() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Html32TextWriter.RenderEndTag" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava a marca de fim de um elemento HTML para o <see cref="T:System.Web.UI.Html32TextWriter" /> fluxo de saída, juntamente com qualquer informação de fonte que está associado com o elemento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldPerformDivTableSubstitution">
+      <MemberSignature Language="C#" Value="public bool ShouldPerformDivTableSubstitution { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldPerformDivTableSubstitution" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Html32TextWriter.ShouldPerformDivTableSubstitution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se é substituir um <see langword="Table" /> elemento com um <see langword="Div" /> elemento para reduzir o tempo que leva para processar um bloco de HTML.</summary>
+        <value>
+          <see langword="true" />para substituir <see langword="Table" /> com <see langword="Div" />; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsBold">
+      <MemberSignature Language="C#" Value="public bool SupportsBold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsBold" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Html32TextWriter.SupportsBold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se a solicitação do dispositivo oferece suporte a texto em negrito em HTML. Use o <see cref="P:System.Web.UI.Html32TextWriter.SupportsBold" /> propriedade condicionalmente renderizar texto em negrito para o <see cref="T:System.Web.UI.Html32TextWriter" /> fluxo de saída.</summary>
+        <value>
+          <see langword="true" />Se a solicitação do dispositivo der suporte a texto em negrito; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A> e <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A> métodos. Cada substituição verifica se um `Label` elemento está sendo processado e, em seguida, usa o <xref:System.Web.UI.Html32TextWriter.SupportsBold%2A> método para verificar se o dispositivo solicitante pode exibir a formatação em negrito. Se o dispositivo dá suporte à formatação em negrito, o <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A> método grava a marca de abertura de um `b` elemento e o <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A> método grava a marca de fechamento. Se o dispositivo não oferece suporte a formatação em negrito, o <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A> método grava a marca de abertura de um `Font` elemento com um `color` atributo definido como o valor hexadecimal para vermelho e o <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A> método grava a marca de fechamento.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.Html32TextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.Html32TextWriter_Samples1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/cs/html32textwritersamps.cs#2)]
+ [!code-vb[System.Web.UI.Html32TextWriter_Samples1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/VB/html32textwritersamps.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsItalic">
+      <MemberSignature Language="C#" Value="public bool SupportsItalic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsItalic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Html32TextWriter.SupportsItalic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se a solicitação do dispositivo oferece suporte a texto em itálico do HTML. Use o <see cref="P:System.Web.UI.Html32TextWriter.SupportsItalic" /> propriedade condicionalmente renderizar texto em itálico para o <see cref="T:System.Web.UI.Html32TextWriter" /> fluxo de saída.</summary>
+        <value>
+          <see langword="true" />Se a solicitação do dispositivo der suporte a texto em itálico; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A> e <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A> métodos. Cada substituição verifica se um `span` elemento está sendo processado e, em seguida, usa o <xref:System.Web.UI.Html32TextWriter.SupportsItalic%2A> propriedade para verificar se o dispositivo solicitante pode exibir itálico. Se o dispositivo dá suporte à formatação em itálico, o <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A> método grava a marca de abertura de um `i` elemento e o <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A> método grava a marca de fechamento. Se o dispositivo não oferece suporte a formatação em itálico, o <xref:System.Web.UI.Html32TextWriter.RenderBeforeContent%2A> método grava a marca de abertura de um `Font` elemento com um `color` atributo definido como o valor hexadecimal do azul marinho e o <xref:System.Web.UI.Html32TextWriter.RenderAfterContent%2A> método grava a marca de fechamento.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.Html32TextWriter> classe.  
+  
+ [!code-csharp[System.Web.UI.Html32TextWriter_Samples1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/cs/html32textwritersamps.cs#2)]
+ [!code-vb[System.Web.UI.Html32TextWriter_Samples1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Html32TextWriter_Samples1/VB/html32textwritersamps.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

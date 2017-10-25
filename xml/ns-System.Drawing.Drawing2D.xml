@@ -1,0 +1,24 @@
+<Namespace Name="System.Drawing.Drawing2D">
+  <Docs>
+    <summary>O <see cref="N:System.Drawing.Drawing2D" /> namespace fornece avançadas bidimensional e funcionalidade de elementos gráficos de vetor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir lista algumas das classes importantes e enumerações no <xref:System.Drawing.Drawing2D> namespace, agrupado em categorias.  
+  
+|Categoria de classe|Detalhes|  
+|--------------------|-------------|  
+|-Gráficos e caminhos de gráficos|O <xref:System.Drawing.Drawing2D.GraphicsState> e <xref:System.Drawing.Drawing2D.GraphicsContainer> classes relatam informações sobre o atual `Graphics` objeto. <xref:System.Drawing.Drawing2D.GraphicsPath>as classes representam uma série de linhas e curvas. O <xref:System.Drawing.Drawing2D.GraphicsPathIterator> e <xref:System.Drawing.Drawing2D.PathData> classes fornecem informações detalhadas sobre o conteúdo de um <xref:System.Drawing.Drawing2D.GraphicsPath> objeto.|  
+|-A matriz e a transformação de tipos relacionados|O <xref:System.Drawing.Drawing2D.Matrix> classe representa uma matriz para transformações geométricas. O <xref:System.Drawing.Drawing2D.MatrixOrder> enumeração Especifica a ordem para transformações de matriz.|  
+|-Classes de pincel|O <xref:System.Drawing.Drawing2D.PathGradientBrush> e <xref:System.Drawing.Drawing2D.HatchBrush> classes permitem que você preencher formas com um gradiente ou padrão de hachura, respectivamente.|  
+|-Enumeração relacionado às linhas|O <xref:System.Drawing.Drawing2D.LineCap> e <xref:System.Drawing.Drawing2D.CustomLineCap> enumerações permitem especificar os estilos de extremidade para uma linha. <xref:System.Drawing.Drawing2D.LineJoin> Habilita enumeração especificar como duas linhas é unidas em um caminho. O <xref:System.Drawing.Drawing2D.PenAlignment> habilita de enumeração, especifique o alinhamento da ponta do desenho, quando você desenhar uma linha. O <xref:System.Drawing.Drawing2D.PenType> enumeração Especifica o padrão de uma linha deve ser preenchida com.|  
+|-Enumerações relacionadas para preencher formas e demarcadores|O <xref:System.Drawing.Drawing2D.HatchStyle> enumeração Especifica os estilos de preenchimento para um <xref:System.Drawing.Drawing2D.HatchBrush>. O <xref:System.Drawing.Drawing2D.Blend> classe especifica um padrão de mesclagem para um <xref:System.Drawing.Drawing2D.LinearGradientBrush>. O <xref:System.Drawing.Drawing2D.FillMode> enumeração Especifica o estilo de preenchimento para um <xref:System.Drawing.Drawing2D.GraphicsPath>.|  
+  
+> [!CAUTION]
+>  Classes de <xref:System.Drawing.Drawing2D> não há suporte para o namespace para uso em um Windows ou [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] serviço. Tentativa de usar essas classes em um destes tipos de aplicativo pode gerar problemas inesperados, como exceções de desempenho e tempo de execução do serviço reduzidas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

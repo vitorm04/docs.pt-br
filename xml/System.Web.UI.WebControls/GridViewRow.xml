@@ -1,0 +1,402 @@
+<Type Name="GridViewRow" FullName="System.Web.UI.WebControls.GridViewRow">
+  <TypeSignature Language="C#" Value="public class GridViewRow : System.Web.UI.WebControls.TableRow, System.Web.UI.IDataItemContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewRow extends System.Web.UI.WebControls.TableRow implements class System.Web.UI.IDataItemContainer, class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewRow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.TableRow</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IDataItemContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma linha individual em um controle <see cref="T:System.Web.UI.WebControls.GridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.GridViewRow> classe é usada representar uma linha individual em um <xref:System.Web.UI.WebControls.GridView> controle. Cada linha de <xref:System.Web.UI.WebControls.GridView> controle tem um tipo de linha designada usando o <xref:System.Web.UI.WebControls.DataControlRowType> enumeração. A tabela a seguir lista os tipos de linha diferente.  
+  
+|Tipo de linha|Descrição|  
+|--------------|-----------------|  
+|`DataRow`|Uma linha de dados no <xref:System.Web.UI.WebControls.GridView> controle.|  
+|`EmptyDataRow`|Na linha vazia a <xref:System.Web.UI.WebControls.GridView> controle. A linha vazia é exibida quando o <xref:System.Web.UI.WebControls.GridView> controle tem registros a serem exibidos e o <xref:System.Web.UI.WebControls.GridView.EmptyDataTemplate%2A?displayProperty=nameWithType> modelo não é `null`.|  
+|`Footer`|A linha de rodapé no <xref:System.Web.UI.WebControls.GridView> controle.|  
+|`Header`|Linha de cabeçalho no <xref:System.Web.UI.WebControls.GridView> controle.|  
+|`Pager`|Uma linha de pager no <xref:System.Web.UI.WebControls.GridView> controle.|  
+|`Separator`|Uma linha de separador a <xref:System.Web.UI.WebControls.GridView> controle.|  
+  
+ Para determinar o tipo de linha de um <xref:System.Web.UI.WebControls.GridViewRow> de objeto, use o <xref:System.Web.UI.WebControls.GridViewRow.RowType%2A> propriedade. Um <xref:System.Web.UI.WebControls.GridViewRow> objeto também tem um estado associado a ele. O estado pode ser uma combinação bit a bit dos valores na tabela a seguir.  
+  
+|Valor de estado|Descrição|  
+|-----------------|-----------------|  
+|`Alternate`|O <xref:System.Web.UI.WebControls.GridViewRow> objeto está em uma linha alternativa o <xref:System.Web.UI.WebControls.GridView> controle.|  
+|`Edit`|O <xref:System.Web.UI.WebControls.GridViewRow> objeto está no modo de edição.|  
+|`Normal`|O <xref:System.Web.UI.WebControls.GridViewRow> objeto estiver no estado normal (padrão).|  
+|`Selected`|O <xref:System.Web.UI.WebControls.GridViewRow> objeto é selecionado.|  
+  
+ Para determinar o estado de um <xref:System.Web.UI.WebControls.GridViewRow> de objeto, use o <xref:System.Web.UI.WebControls.GridViewRow.RowState%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.GridView> controle armazena todas as suas linhas de dados no <xref:System.Web.UI.WebControls.GridView.Rows%2A> coleção. Para determinar o índice de um <xref:System.Web.UI.WebControls.GridViewRow> objeto o <xref:System.Web.UI.WebControls.GridView.Rows%2A> coleção, use o <xref:System.Web.UI.WebControls.GridViewRow.RowIndex%2A> propriedade.  
+  
+ Você pode acessar as propriedades do objeto de dados subjacente que está associado ao <xref:System.Web.UI.WebControls.GridViewRow> objeto usando o <xref:System.Web.UI.WebControls.GridViewRow.DataItem%2A> propriedade.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.GridViewRow.DataItem%2A> propriedade está disponível somente durante e após o <xref:System.Web.UI.WebControls.GridView.RowDataBound> eventos de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ Para determinar o índice do objeto de dados na fonte de dados subjacente, use o <xref:System.Web.UI.WebControls.GridViewRow.DataItemIndex%2A> propriedade.  
+  
+ Você pode acessar as células individuais do <xref:System.Web.UI.WebControls.GridViewRow> objeto usando o <xref:System.Web.UI.WebControls.TableRow.Cells%2A> propriedade. Se uma célula contiver outros controles, você pode recuperar um controle de célula usando o <xref:System.Web.UI.Control.Controls%2A> coleção da célula. Você também pode usar o <xref:System.Web.UI.Control.FindControl%2A> método da célula para localizar o controle, se o controle tiver um <xref:System.Web.UI.Control.ID%2A> especificado.  
+  
+ Para recuperar um valor de campo de um <xref:System.Web.UI.WebControls.BoundField> campo coluna ou um campo gerado automaticamente, use o <xref:System.Web.UI.WebControls.TableCell.Text%2A> propriedade da célula. Para recuperar um valor de campo de outros tipos de coluna do campo em que o valor do campo está associado a um controle, recuperar o controle de célula apropriada e, em seguida, a propriedade apropriada do controle de acesso.  
+  
+> [!NOTE]
+>  É possível usar uma expressão de associação de dados diretamente em um <xref:System.Web.UI.WebControls.TemplateField> coluna campo sem associação o valor a uma propriedade de um controle. Nesse caso, o valor do campo é automaticamente colocado em um <xref:System.Web.UI.DataBoundLiteralControl> controle. Para recuperar o valor do campo, você deve recuperar o <xref:System.Web.UI.DataBoundLiteralControl> controle de célula apropriada e, em seguida, use seu <xref:System.Web.UI.DataBoundLiteralControl.Text%2A> propriedade.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.GridViewRow>, consulte o <xref:System.Web.UI.WebControls.GridViewRow.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.Web.UI.WebControls.GridViewRow> objeto para recuperar um valor de campo de uma célula a <xref:System.Web.UI.WebControls.GridView> de controle e, em seguida, exibir o valor na página.  
+  
+ [!code-aspx-csharp[GridViewRow#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRow/CS/gridviewrowcs.aspx#1)]
+ [!code-aspx-vb[GridViewRow#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRow/VB/gridviewrowvb.aspx#1)]  
+  
+ O exemplo a seguir demonstra como usar um <xref:System.Web.UI.WebControls.GridViewRow> objeto para recuperar um <xref:System.Web.UI.WebControls.TextBox> controle declarado em um <xref:System.Web.UI.WebControls.TemplateField> coluna do campo Editar modelo de item. O valor da caixa de texto é então passado para um <xref:System.Web.UI.WebControls.SqlDataSource> controle para atualizar a fonte de dados.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[GridViewRowFindControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowFindControl/CS/gridviewrowfindcontrolcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowFindControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowFindControl/VB/gridviewrowfindcontrolvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewRow (int rowIndex, int dataItemIndex, System.Web.UI.WebControls.DataControlRowType rowType, System.Web.UI.WebControls.DataControlRowState rowState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex, int32 dataItemIndex, valuetype System.Web.UI.WebControls.DataControlRowType rowType, valuetype System.Web.UI.WebControls.DataControlRowState rowState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewRow.#ctor(System.Int32,System.Int32,System.Web.UI.WebControls.DataControlRowType,System.Web.UI.WebControls.DataControlRowState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="dataItemIndex" Type="System.Int32" />
+        <Parameter Name="rowType" Type="System.Web.UI.WebControls.DataControlRowType" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice do objeto <see cref="T:System.Web.UI.WebControls.GridViewRow" /> na coleção <see cref="P:System.Web.UI.WebControls.GridView.Rows" /> de um controle <see cref="T:System.Web.UI.WebControls.GridView" />.</param>
+        <param name="dataItemIndex">O índice do <see cref="P:System.Web.UI.WebControls.GridViewRow.DataItem" /> no <see cref="T:System.Data.DataSet" /> subjacente.</param>
+        <param name="rowType">Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.DataControlRowType" />.</param>
+        <param name="rowState">Uma combinação bit a bit dos valores de enumeração <see cref="T:System.Web.UI.WebControls.DataControlRowState" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.GridViewRow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância de um <xref:System.Web.UI.WebControls.GridViewRow> objeto.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.GridViewRow>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewRow.DataItemIndex%2A>|O valor de `dataItemIndex` parâmetro.|  
+|<xref:System.Web.UI.WebControls.GridViewRow.RowIndex%2A>|O valor de `rowIndex` parâmetro.|  
+|<xref:System.Web.UI.WebControls.GridViewRow.RowState%2A>|O valor de `rowState` parâmetro.|  
+|<xref:System.Web.UI.WebControls.GridViewRow.RowType%2A>|O valor de `rowType` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public virtual object DataItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRow.DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de dados subjacente ao qual o objeto <see cref="T:System.Web.UI.WebControls.GridViewRow" /> está associado.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o objeto de dados subjacente ao qual o objeto <see cref="T:System.Web.UI.WebControls.GridViewRow" /> está associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.GridViewRow.DataItem%2A> propriedade para acessar as propriedades do objeto de dados subjacente à qual o <xref:System.Web.UI.WebControls.GridViewRow> objeto está associado. O <xref:System.Web.UI.WebControls.GridViewRow.DataItem%2A> propriedade só está disponível durante e após o <xref:System.Web.UI.WebControls.GridView.RowDataBound> eventos de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+> [!NOTE]
+>  Essa propriedade se aplica somente às linhas de dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewRow.DataItem%2A> propriedade para recuperar um valor de campo. O valor é usado para pre-selecionar um item em uma <xref:System.Web.UI.WebControls.DropDownList> controle exibido quando uma linha está no modo de edição.  
+  
+ [!code-aspx-csharp[GridViewRowDataItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowDataItem/CS/gridviewrowdataitemcs.aspx#1)]
+ [!code-aspx-vb[GridViewRowDataItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowDataItem/VB/gridviewrowdataitemvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItemIndex">
+      <MemberSignature Language="C#" Value="public virtual int DataItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DataItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRow.DataItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do <see cref="P:System.Web.UI.WebControls.GridViewRow.DataItem" /> no <see cref="T:System.Data.DataSet" /> subjacente.</summary>
+        <value>O índice do <see cref="P:System.Web.UI.WebControls.GridViewRow.DataItem" /> na fonte de dados subjacente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.GridViewRow.DataItemIndex%2A> propriedade para determinar o índice do <xref:System.Web.UI.WebControls.GridViewRow.DataItem%2A> em subjacente <xref:System.Data.DataSet>.  
+  
+> [!NOTE]
+>  Essa propriedade se aplica somente às linhas de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Determina se deve transmitir um evento a hierarquia de controle de servidor ASP.NET da página.</summary>
+        <returns>
+          <see langword="true" />Se o evento foi cancelado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public virtual int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRow.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do objeto <see cref="T:System.Web.UI.WebControls.GridViewRow" /> na coleção <see cref="P:System.Web.UI.WebControls.GridView.Rows" /> de um controle <see cref="T:System.Web.UI.WebControls.GridView" />.</summary>
+        <value>O índice do objeto <see cref="T:System.Web.UI.WebControls.GridViewRow" /> na coleção <see cref="P:System.Web.UI.WebControls.GridView.Rows" /> de um controle <see cref="T:System.Web.UI.WebControls.GridView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.GridViewRow.RowIndex%2A> propriedade para determinar o índice do <xref:System.Web.UI.WebControls.GridViewRow> objeto o <xref:System.Web.UI.WebControls.GridView.Rows%2A> coleção de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+> [!NOTE]
+>  Essa propriedade se aplica somente às linhas de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowState">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.DataControlRowState RowState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataControlRowState RowState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRow.RowState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do objeto <see cref="T:System.Web.UI.WebControls.GridViewRow" />.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Web.UI.WebControls.DataControlRowState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.GridViewRow.RowType%2A> propriedade para determinar o estado do <xref:System.Web.UI.WebControls.GridViewRow> objeto. O estado pode ser uma combinação bit a bit dos valores na tabela a seguir:  
+  
+|Valor de status|Descrição|  
+|------------------|-----------------|  
+|`DataControlRowState.Alternate`|O <xref:System.Web.UI.WebControls.GridViewRow> objeto está em uma linha alternativa o <xref:System.Web.UI.WebControls.GridView> controle.|  
+|`DataControlRowState.Edit`|O <xref:System.Web.UI.WebControls.GridViewRow> objeto está no modo de edição.|  
+|`DataControlRowState.Normal`|O <xref:System.Web.UI.WebControls.GridViewRow> objeto estiver no estado normal (padrão).|  
+|`DataControlRowState.Selected`|O <xref:System.Web.UI.WebControls.GridViewRow> objeto é selecionado.|  
+  
+ Essa propriedade normalmente é usada para determinar o estado de uma linha antes de executar uma operação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewRow.RowState%2A> propriedade para determinar se uma linha está em modo de edição ou está selecionada. Se o usuário seleciona uma linha diferente enquanto o <xref:System.Web.UI.WebControls.GridView> controle está no modo de edição, o <xref:System.Web.UI.WebControls.GridView> controle sai do modo de edição.  
+  
+ [!code-aspx-csharp[GridViewRowRowState#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowRowState/CS/gridviewrowrowstatecs.aspx#1)]
+ [!code-aspx-vb[GridViewRowRowState#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowRowState/VB/gridviewrowrowstatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.DataControlRowType RowType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataControlRowType RowType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRow.RowType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de linha do objeto <see cref="T:System.Web.UI.WebControls.GridViewRow" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.DataControlRowType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.GridViewRow.RowType%2A> propriedade para determinar o tipo de linha que o <xref:System.Web.UI.WebControls.GridViewRow> objeto representa. A tabela a seguir lista os valores de tipo de linha diferente usando o <xref:System.Web.UI.WebControls.DataControlRowType> enumeração.  
+  
+|Tipo de linha|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.DataRow>|Uma linha de dados no <xref:System.Web.UI.WebControls.GridView> controle.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.Footer>|A linha de rodapé no <xref:System.Web.UI.WebControls.GridView> controle.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.Header>|Linha de cabeçalho no <xref:System.Web.UI.WebControls.GridView> controle.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.EmptyDataRow>|Na linha vazia a <xref:System.Web.UI.WebControls.GridView> controle. Na linha vazia é exibida quando <xref:System.Web.UI.WebControls.GridView> controle não tem registros a serem exibidos.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.Pager>|Uma linha de pager no <xref:System.Web.UI.WebControls.GridView> controle.|  
+|<xref:System.Web.UI.WebControls.DataControlRowType.Separator>|Uma linha de separador a <xref:System.Web.UI.WebControls.GridView> controle.|  
+  
+ Essa propriedade normalmente é usada para determinar o tipo da linha antes de executar uma operação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.GridViewRow.RowType%2A> propriedade para determinar se uma linha que está sendo criada é uma linha de rodapé. Se a linha é uma linha de rodapé, o valor para a soma da coluna é atualizado para a linha de rodapé.  
+  
+ [!code-aspx-csharp[GridViewRowRowType#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowRowType/CS/gridviewrowrowtypecs.aspx#1)]
+ [!code-aspx-vb[GridViewRowRowType#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowRowType/VB/gridviewrowrowtypevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DataItem">
+      <MemberSignature Language="C#" Value="object System.Web.UI.IDataItemContainer.DataItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Web.UI.IDataItemContainer.DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRow.System#Web#UI#IDataItemContainer#DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IDataItemContainer.DataItem" />.</summary>
+        <value>Retorna <see cref="P:System.Web.UI.WebControls.GridViewRow.DataItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.GridViewRow> instância é convertida para o <xref:System.Web.UI.IDataItemContainer> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DataItemIndex">
+      <MemberSignature Language="C#" Value="int System.Web.UI.IDataItemContainer.DataItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Web.UI.IDataItemContainer.DataItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRow.System#Web#UI#IDataItemContainer#DataItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IDataItemContainer.DataItemIndex" />.</summary>
+        <value>Retorna <see cref="P:System.Web.UI.WebControls.GridViewRow.DataItemIndex" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.GridViewRow> instância é convertida para o <xref:System.Web.UI.IDataItemContainer> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IDataItemContainer.DisplayIndex">
+      <MemberSignature Language="C#" Value="int System.Web.UI.IDataItemContainer.DisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Web.UI.IDataItemContainer.DisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewRow.System#Web#UI#IDataItemContainer#DisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Web.UI.IDataItemContainer.DisplayIndex" />.</summary>
+        <value>Retorna <see cref="P:System.Web.UI.WebControls.GridViewRow.RowIndex" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.GridViewRow> instância é convertida para o <xref:System.Web.UI.IDataItemContainer> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

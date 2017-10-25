@@ -1,0 +1,311 @@
+<Type Name="TypeConverter+SimplePropertyDescriptor" FullName="System.ComponentModel.TypeConverter+SimplePropertyDescriptor">
+  <TypeSignature Language="C#" Value="protected abstract class TypeConverter.SimplePropertyDescriptor : System.ComponentModel.PropertyDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi abstract beforefieldinit TypeConverter/SimplePropertyDescriptor extends System.ComponentModel.PropertyDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.TypeConverter.SimplePropertyDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.PropertyDescriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma classe <see langword="abstract" /> que fornece propriedades para objetos que não têm propriedades.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo em sua classe, consulte o exemplo em <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.ComponentModel.TypeConverter.SimplePropertyDescriptor" />, você deve substituir o <see cref="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)" /> e <see cref="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)" /> métodos.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SimplePropertyDescriptor (Type componentType, string name, Type propertyType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Type componentType, string name, class System.Type propertyType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.SimplePropertyDescriptor.#ctor(System.Type,System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="componentType" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="componentType">Um <see cref="T:System.Type" /> que representa o tipo de componente para o qual associa esse descritor de propriedade.</param>
+        <param name="name">O nome da propriedade.</param>
+        <param name="propertyType">Um <see cref="T:System.Type" /> que representa o tipo de dados para essa propriedade.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.TypeConverter.SimplePropertyDescriptor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SimplePropertyDescriptor (Type componentType, string name, Type propertyType, Attribute[] attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Type componentType, string name, class System.Type propertyType, class System.Attribute[] attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.SimplePropertyDescriptor.#ctor(System.Type,System.String,System.Type,System.Attribute[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="componentType" Type="System.Type" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="attributes" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="componentType">Um <see cref="T:System.Type" /> que representa o tipo de componente para o qual associa esse descritor de propriedade.</param>
+        <param name="name">O nome da propriedade.</param>
+        <param name="propertyType">Um <see cref="T:System.Type" /> que representa o tipo de dados para essa propriedade.</param>
+        <param name="attributes">Um <see cref="T:System.Attribute" /> matriz com os atributos para associar à propriedade.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.TypeConverter.SimplePropertyDescriptor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanResetValue">
+      <MemberSignature Language="C#" Value="public override bool CanResetValue (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanResetValue(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.SimplePropertyDescriptor.CanResetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente para testar a funcionalidade de redefinição.</param>
+        <summary>Retorna se a redefinição do componente altera o valor do componente.</summary>
+        <returns>
+          <see langword="true" />Se a redefinição do componente altera o valor do componente. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método procura um <xref:System.ComponentModel.DefaultValueAttribute>. Se ele encontrar um, ele compara o valor do atributo com o valor atual da propriedade. Ele retorna `true` quando o valor padrão não coincide com o valor atual da propriedade. Se esse método não é possível encontrar um <xref:System.ComponentModel.DefaultValueAttribute>, ele procura um `ShouldSerializeMyProperty` método. Se encontrar um `ShouldSerializeMyProperty` método, ele retorna o que `ShouldSerializeMyProperty` retorna. Se esse método não é possível encontrar um `ShouldSerializeMyProperty` método, ele procura um `ResetMyProperty` método. Se encontrar um `ResetMyProperty` método, ele retorna `true`. Se esse método não é possível encontrar um <xref:System.ComponentModel.DefaultValueAttribute>, um `ShouldSerializeMyProperty` método, ou uma `ResetMyProperty` método, ele retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentType">
+      <MemberSignature Language="C#" Value="public override Type ComponentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ComponentType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.TypeConverter.SimplePropertyDescriptor.ComponentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de componente para o qual associa essa descrição de propriedade.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo de componente para o qual associa essa propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public override bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.TypeConverter.SimplePropertyDescriptor.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta propriedade é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se a propriedade é somente leitura; <see langword="false" /> se a propriedade é leitura/gravação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public override Type PropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.TypeConverter.SimplePropertyDescriptor.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo da propriedade.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo da propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetValue">
+      <MemberSignature Language="C#" Value="public override void ResetValue (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResetValue(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.SimplePropertyDescriptor.ResetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente com o valor da propriedade a ser redefinido.</param>
+        <summary>Redefine o valor para essa propriedade do componente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método procura um <xref:System.ComponentModel.DefaultValueAttribute>. Se ele encontrar um, ele define o valor da propriedade para o valor especificado no atributo. Se esse método não é possível encontrar um <xref:System.ComponentModel.DefaultValueAttribute>, ele procura um `ResetMyProperty` método. Se encontrar um `ResetMyProperty` método, ele chama. Se esse método não é possível encontrar um <xref:System.ComponentModel.DefaultValueAttribute> ou um `ResetMyProperty` método, ele não executa uma operação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeValue">
+      <MemberSignature Language="C#" Value="public override bool ShouldSerializeValue (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ShouldSerializeValue(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.TypeConverter.SimplePropertyDescriptor.ShouldSerializeValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente com a propriedade a ser examinada para persistência.</param>
+        <summary>Retorna se o valor dessa propriedade pode persistir.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade pode persistir; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe, este método retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando substituído em uma classe derivada, esse método retorna <see langword="true" /> se o valor atual da propriedade é diferente do valor padrão. Ele procura por um valor padrão, procurando primeiro um <see cref="T:System.ComponentModel.DefaultValueAttribute" />. Se o método encontra esse atributo, ele compara o valor do atributo com o valor atual da propriedade. Se esse método não é possível encontrar um <see cref="T:System.ComponentModel.DefaultValueAttribute" />, ele procura um <c>ShouldSerializeMyProperty</c> método. Se esse método localiza uma <c>ShouldSerializeMyProperty</c> método, ele chama. Se esse método não é possível encontrar um <see cref="T:System.ComponentModel.DefaultValueAttribute" /> ou um <c>ShouldSerializeMyProperty</c> método, ele não pode criar otimizações e retornará <see langword="true" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,95 @@
+<Type Name="ContentDefinition" FullName="System.Web.UI.Design.ContentDefinition">
+  <TypeSignature Language="C#" Value="public class ContentDefinition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContentDefinition extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ContentDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma estrutura de propriedade que define o conteúdo da Web em tempo de design.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContentDefinition (string id, string content, string designTimeHtml);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string id, string content, string designTimeHtml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ContentDefinition.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+        <Parameter Name="content" Type="System.String" />
+        <Parameter Name="designTimeHtml" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">Um identificador de cadeia de caracteres para o conteúdo.</param>
+        <param name="content">O conteúdo de marcação HTML padrão.</param>
+        <param name="designTimeHtml">O conteúdo de marcação do tempo de design HTML.</param>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.UI.Design.ContentDefinition" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentPlaceHolderID">
+      <MemberSignature Language="C#" Value="public string ContentPlaceHolderID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentPlaceHolderID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ContentDefinition.ContentPlaceHolderID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID do <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" /> controle que está associado com o conteúdo atual.</summary>
+        <value>A ID do <see cref="T:System.Web.UI.WebControls.ContentPlaceHolder" /> associado com o conteúdo atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultContent">
+      <MemberSignature Language="C#" Value="public string DefaultContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultContent" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ContentDefinition.DefaultContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a marcação HTML padrão para o conteúdo.</summary>
+        <value>Uma cadeia de caracteres que contém uma marcação HTML.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public string DefaultDesignTimeHtml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultDesignTimeHtml" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ContentDefinition.DefaultDesignTimeHtml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a marcação HTML para representar o conteúdo em tempo de design.</summary>
+        <value>Uma cadeia de caracteres que contém uma marcação HTML.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

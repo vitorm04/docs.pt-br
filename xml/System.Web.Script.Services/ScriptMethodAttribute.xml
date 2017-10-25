@@ -1,0 +1,183 @@
+<Type Name="ScriptMethodAttribute" FullName="System.Web.Script.Services.ScriptMethodAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ScriptMethodAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ScriptMethodAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Script.Services.ScriptMethodAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o verbo HTTP usado para invocar um método e o formato da resposta. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este atributo é usado para especificar informações de métodos que podem ser chamados de script de cliente. O atributo permite que você especifique quais verbo HTTP (GET ou POST) pode ser usado para invocar um método. Ele também permite especificar se a resposta é formatada usando a notação JSON (JavaScript Object) ou XML.  
+  
+ O atributo <xref:System.Web.Script.Services.ScriptMethodAttribute> é opcional. (No entanto, os métodos que podem ser chamados de script de cliente devem ter o <xref:System.Web.Services.WebMethodAttribute?displayProperty=nameWithType> atributo aplicado.). Se um método não está marcado com <xref:System.Web.Script.Services.ScriptMethodAttribute>, o método será chamado usando o comando HTTP POST e a resposta será serializada como JSON. Você não pode substituir essa configuração de script.  
+  
+ <xref:System.Web.Script.Services.ScriptMethodAttribute>usa apenas os parâmetros nomeados. A seguir estão as propriedades da <xref:System.Web.Script.Services.ScriptMethodAttribute> classe que pode ser usado como parâmetros nomeados:  
+  
+-   <xref:System.Web.Script.Services.ScriptMethodAttribute.UseHttpGet%2A>  
+  
+     Especifica se o método será chamado usando o comando HTTP GET. O padrão é `false`.  
+  
+    > [!IMPORTANT]
+    >  Definindo o <xref:System.Web.Script.Services.ScriptMethodAttribute.UseHttpGet%2A> propriedade `true` pode representar um risco de segurança para seu aplicativo, se você estiver trabalhando com dados confidenciais ou transações. Em solicitações GET, a mensagem é codificada pelo navegador para a URL e, portanto, é um alvo fácil para violação. Para solicitações GET e POST, você deve seguir as diretrizes de segurança para proteger dados confidenciais.  
+  
+-   <xref:System.Web.Script.Services.ScriptMethodAttribute.ResponseFormat%2A>  
+  
+     Especifica se a resposta será serializada como JSON ou XML. O padrão é `Json`. O <xref:System.Web.Script.Services.ScriptMethodAttribute.ResponseFormat%2A> propriedade é útil para especificar o XML como o tipo de retorno quando o método retorna um <xref:System.Xml.XmlDocument> ou um <xref:System.Xml.XmlElement> objeto.  
+  
+-   <xref:System.Web.Script.Services.ScriptMethodAttribute.XmlSerializeString%2A>  
+  
+     Especifica se todos os tipos de retorno, incluindo tipos de cadeia de caracteres, são serializados como XML. O valor de <xref:System.Web.Script.Services.ScriptMethodAttribute.XmlSerializeString%2A> propriedade será ignorada quando a resposta é serializada como JSON.  
+  
+ Para obter mais informações sobre como usar atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como aplicar <xref:System.Web.Script.Services.ScriptMethodAttribute> para o `GetXmlDocument` e `EchoStringAndDate` métodos para especificar o verbo HTTP a ser usado e especificar o formato de resposta.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScriptMethodAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Script.Services.ScriptMethodAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Script.Services.ScriptMethodAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseFormat">
+      <MemberSignature Language="C#" Value="public System.Web.Script.Services.ResponseFormat ResponseFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Script.Services.ResponseFormat ResponseFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Script.Services.ScriptMethodAttribute.ResponseFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Script.Services.ResponseFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o formato da resposta do método.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Script.Services.ResponseFormat" />. O padrão é <see langword="Json" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.Script.Services.ScriptMethodAttribute.ResponseFormat%2A> propriedade quando você deseja especificar o XML como o formato para o tipo de retorno. Isso é útil quando o método retorna um <xref:System.Xml.XmlDocument> ou um <xref:System.Xml.XmlElement> objeto.  
+  
+ Quando o <xref:System.Web.Script.Services.ScriptMethodAttribute.ResponseFormat%2A> está definida como `Xml`, os campos públicos e as propriedades do tipo de retorno que têm o <xref:System.Web.Script.Serialization.ScriptIgnoreAttribute> atributo aplicado não será ignorado. Isso ocorre porque serão serializados usando o <xref:System.Xml.Serialization.XmlSerializer> do objeto, em vez do <xref:System.Web.Script.Serialization.JavaScriptSerializer> objeto. Você deve aplicar o <xref:System.Xml.Serialization.XmlIgnoreAttribute> atributo fazer <xref:System.Xml.Serialization.XmlSerializer> ignorar ou ignorar, esses campos públicos e as propriedades do tipo de retorno.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como aplicar o <xref:System.Web.Script.Services.ScriptMethodAttribute> de atributo para um método Web com o <xref:System.Web.Script.Services.ScriptMethodAttribute.ResponseFormat%2A> propriedade definida como `Xml`. O valor de retorno do método que será serializado como XML e enviado para a função de retorno de chamada bem-sucedida como um objeto do tipo <xref:System.Xml.XmlDocument>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Script.Services.ScriptMethodAttribute> classe.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseHttpGet">
+      <MemberSignature Language="C#" Value="public bool UseHttpGet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseHttpGet" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Script.Services.ScriptMethodAttribute.UseHttpGet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o método deve ser invocado usando HTTP GET.</summary>
+        <value>
+          <see langword="true" /> se o método é invocado usando o comando HTTP GET; <see langword="false" /> se o método é invocado usando o comando HTTP POST. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não pode substituir essa propriedade do ECMAScript (JavaScript) no cliente. Se essa propriedade é definida como `true`, chamar o método de script sempre usará HTTP GET.  
+  
+ Quando essa propriedade é definida como `true`, o código de proxy do cliente usa HTTP GET para chamar o serviço Web. Cada parâmetro de entrada para o método aparece como um parâmetro de consulta na URL que é usado para chamar o método da Web. O valor do parâmetro é obtido por meio de serialização (JSON JavaScript Object Notation) e a codificação de URL do valor do parâmetro.  
+  
+ O uso de HTTP GET para chamar o método de serviço Web segue as mesmas diretrizes de qualquer interação do Web. HTTP GET deve ser usado apenas para operações em que não há dados confidenciais são expostos e quando a ação do servidor não tem efeitos colaterais.  
+  
+> [!IMPORTANT]
+>  Definindo o <xref:System.Web.Script.Services.ScriptMethodAttribute.UseHttpGet%2A> propriedade `true` pode representar um risco de segurança para seu aplicativo, se você estiver trabalhando com dados confidenciais ou transações. Em solicitações GET, a mensagem é codificada pelo navegador para a URL e, portanto, é um alvo fácil para violação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como aplicar <xref:System.Web.Script.Services.ScriptMethodAttribute> para um método Web com o <xref:System.Web.Script.Services.ScriptMethodAttribute.UseHttpGet%2A> propriedade definida como `true`. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Script.Services.ScriptMethodAttribute> classe.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSerializeString">
+      <MemberSignature Language="C#" Value="public bool XmlSerializeString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool XmlSerializeString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Script.Services.ScriptMethodAttribute.XmlSerializeString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se todos os tipos de retorno são serializados como XML, que inclui os tipos de cadeia de caracteres.</summary>
+        <value>
+          <see langword="true" /> se todos os tipos de retornos forem serializados como XML; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `false`, todos retornam tipos são serializados como XML, exceto a cadeia de caracteres, que é interpretada como marcação XML. Se o valor for `false`, e se o tipo de retorno é uma cadeia de caracteres, e se a cadeia de caracteres não contém marcação XML que corresponde a um documento XML bem formado, a função de retorno de chamada bem-sucedida será invocada mas resultante será uma cadeia de caracteres serializada `null`.  
+  
+ O valor de <xref:System.Web.Script.Services.ScriptMethodAttribute.XmlSerializeString%2A> é ignorado quando o <xref:System.Web.Script.Services.ScriptMethodAttribute.ResponseFormat%2A> está definida como `Json`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como aplicar <xref:System.Web.Script.Services.ScriptMethodAttribute> para um método Web com o <xref:System.Web.Script.Services.ScriptMethodAttribute.XmlSerializeString%2A> propriedade definida como `true`. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Script.Services.ScriptMethodAttribute> classe.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,19 @@
+<Namespace Name="System.Collections.Specialized">
+  <Docs>
+    <summary>O <see cref="N:System.Collections.Specialized" /> namespace contém coleções especializadas e fortemente tipadas; por exemplo, um dicionário de lista vinculada, um vetor de bits e coleções que contêm somente cadeias de caracteres.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coleções especializadas são coleções com finalidades altamente específicas. <xref:System.Collections.Specialized.NameValueCollection>é baseado no <xref:System.Collections.Specialized.NameObjectCollectionBase>; no entanto, <xref:System.Collections.Specialized.NameValueCollection> aceita vários valores por chave, enquanto <xref:System.Collections.Specialized.NameObjectCollectionBase> aceita apenas um valor por chave.  
+  
+ Algumas coleções fortemente tipadas no <xref:System.Collections.Specialized> namespace são <xref:System.Collections.Specialized.StringCollection> e <xref:System.Collections.Specialized.StringDictionary>, que contêm valores que são exclusivamente cadeias de caracteres.  
+  
+ O <xref:System.Collections.Specialized.CollectionsUtil> classe cria instâncias de coleções de maiusculas e minúsculas.  
+  
+ Algumas coleções de transformação.  Por exemplo, o <xref:System.Collections.Specialized.HybridDictionary> classe inicia como um <xref:System.Collections.Specialized.ListDictionary> e se torna um <xref:System.Collections.Hashtable> quando ele se torna grande.  O <xref:System.Collections.ObjectModel.KeyedCollection%602> é uma lista, mas ele também cria um dicionário de pesquisa quando o número de elementos atinge um limite especificado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

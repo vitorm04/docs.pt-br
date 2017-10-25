@@ -1,0 +1,2865 @@
+<Type Name="XmlNode" FullName="System.Xml.XmlNode">
+  <TypeSignature Language="C#" Value="public abstract class XmlNode : ICloneable, System.Collections.IEnumerable, System.Xml.XPath.IXPathNavigable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlNode extends System.Object implements class System.Collections.IEnumerable, class System.ICloneable, class System.Xml.XPath.IXPathNavigable" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlNode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Xml.XPath.IXPathNavigable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{debuggerDisplayProxy}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um único nó no mapa do documento XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe implementa o núcleo do modelo de objeto de documento (DOM) W3C nível 1 e o nível de DOM principal 2. O DOM é uma representação de árvore na memória (em cache) de um documento XML. `XmlNode`é a classe base na implementação do .NET do DOM. Ele dá suporte ao XPath seleções e fornece recursos de edição. O <xref:System.Xml.XmlDocument> estende a classe `XmlNode` e representa um documento XML. Você pode usar `XmlDocument` para carregar e salvar dados XML. Ele também inclui métodos para criação de nó. Consulte [modelo de objeto de documento (DOM) XML](~/docs/standard/data/xml/xml-document-object-model-dom.md) para obter mais informações.  
+  
+> [!IMPORTANT]
+>  Exceções geradas como resultado do uso de <xref:System.Xml.XmlNode> classe, como o <xref:System.Xml.XmlException> classe pode conter informações confidenciais que não devem ser expostas em cenários não confiáveis. Exceções devem ser tratadas corretamente para que informações confidenciais não são expostas em cenários não confiáveis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppendChild">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode AppendChild (System.Xml.XmlNode newChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode AppendChild(class System.Xml.XmlNode newChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="newChild">O nó a ser adicionado. Todo o conteúdo do nó a ser adicionado é movido para o local especificado.</param>
+        <summary>Adiciona o nó especificado ao final da lista de nós filho desse nó.</summary>
+        <returns>O nó adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `newChild` é já está na árvore, é removido de sua posição original e adicionado à sua posição de destino. Para obter mais informações sobre a inserção de nós, consulte [inserindo nós em um documento XML](~/docs/standard/data/xml/inserting-nodes-into-an-xml-document.md).  
+  
+ Se o nó que está sendo inserido foi criado em outro documento, você pode usar <xref:System.Xml.XmlDocument.ImportNode%2A?displayProperty=nameWithType> para importar o nó no documento atual. O nó importado, em seguida, pode ser inserido no documento atual.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um novo nó no documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.AppendChild Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.AppendChild Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.AppendChild Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.AppendChild Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.AppendChild Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.AppendChild Example/VB/source.vb#1)]  
+  
+ **Saída:**  
+  
+```  
+Display the modified XML...  
+<?xml version="1.0" encoding="IBM437"?>  
+<book genre="novel" ISBN="1-861001-57-5">  
+  <title>Pride And Prejudice</title>  
+  <price>19.95</price>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Esse nó é de um tipo que não permite nós filho do tipo do nó <paramref name="newChild" />.  
+  
+ O <paramref name="newChild" /> é um ancestral desse nó.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="newChild" /> foi criado com base em um documento diferente daquele que criou esse nó.  
+  
+ Este nó é somente leitura.</exception>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see langword="AppendChild" /> em uma classe derivada, em ordem de eventos a serem gerados corretamente, você deve chamar o <see langword="AppendChild" /> método da classe base.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlAttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlAttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlAttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Xml.XmlAttributeCollection" /> que contém os atributos desse nó.</summary>
+        <value>Um <see langword="XmlAttributeCollection" /> que contém os atributos do nó.  
+  
+ Se o nó for do tipo XmlNodeType, os atributos do nó são retornados. Caso contrário, essa propriedade retornará <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir adiciona um novo atributo para o documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.GetNamespaceOfPrefix Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.GetNamespaceOfPrefix Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.GetNamespaceOfPrefix Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.GetNamespaceOfPrefix Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.GetNamespaceOfPrefix Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.GetNamespaceOfPrefix Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseURI">
+      <MemberSignature Language="C#" Value="public virtual string BaseURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.BaseURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o URI base do nó atual.</summary>
+        <value>O local do qual o nó foi carregado ou String.Empty se o nó não tiver nenhum URI de base.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um documento XML em rede é composto de partes de dados agregados usando vários mecanismos de inclusão padrão do W3C e, portanto, contém nós que vêm de diferentes locais. O `BaseURI` informa onde veio esses nós.  
+  
+ O valor dessa propriedade varia dependendo do tipo de nó. Por exemplo, nós do documento retornaram o local do <xref:System.Xml.XmlDocument> objeto. Nós que são nós filho de nós de EntityReference externos retornaram o local da entidade em si. Por exemplo, considere o seguinte documento XML:  
+  
+```  
+<!DOCTYPE item [  
+<!ENTITY xyz SYSTEM "a/b.xml">  
+]>  
+<item num='123'>&xyz;</item>  
+```  
+  
+ em que a entidade externa `a/b.xml` contém o texto XML: `<test>123</test>`.  
+  
+ Se o documento é carregado do http://server/mydata.xml, `BaseURI` retorna o seguinte:  
+  
+|NodeType|Nome|BaseURI|  
+|--------------|----------|-------------|  
+|Atributo|num|http://Server/MyData.XML|  
+|Documento|#document|http://Server/MyData.XML|  
+|DocumentType|item|http://Server/MyData.XML|  
+|Entidade|XYZ|http://Server/MyData.XML|  
+|Elemento|item|http://Server/MyData.XML|  
+|EntityReference|XYZ|http://Server/MyData.XML|  
+|Elemento|testar|http://Server/a/b.XML|  
+|Texto|#text|http://Server/a/b.XML|  
+  
+ `BaseURI`procura a entidade referência limites, portanto, se a entidades são expandidas essas informações não são preservadas e essa propriedade retorna o local do `XmlDocument` objeto em todos os casos.  
+  
+ Como um segundo exemplo, considerando o seguinte documento XML:  
+  
+```  
+<!DOCTYPE Mydata SYSTEM "http://localhost/doctype.dtd">  
+<baa>&xyz;</baa>  
+```  
+  
+ onde o arquivo DTD contém o seguinte:  
+  
+```  
+<!ENTITY xyz <E1>My Data</E1>  
+<!ELEMENT baa #PCDATA>  
+<!ATTLIST baa attr1 "woof">  
+```  
+  
+ Se o documento XML é carregado de http://localhost/mydata.xml, `BaseURI` retorna o seguinte para cada um de nós:  
+  
+|NodeType|Nome|BaseURI|  
+|--------------|----------|-------------|  
+|Documento|#document|http://localhost/MyData.XML|  
+|DocumentType|MyData|http://localhost/MyData.XML<br /><br /> O <xref:System.Xml.XmlDocumentType.SystemId%2A?displayProperty=nameWithType> ou <xref:System.Xml.XmlDocumentType.PublicId%2A?displayProperty=nameWithType> propriedades podem ser usadas para identificar onde o arquivo DTD foi carregado do.|  
+|Elemento|baa|http://localhost/MyData.XML|  
+|Entidade|XYZ|http://localhost/DOCTYPE.DTD|  
+|EntityReference|XYZ|http://localhost/MyData.XML|  
+|Atributo|woof|http://localhost/MyData.XML|  
+  
+> [!NOTE]
+>  O URI de base de um atributo padrão é o mesmo que o URI de base do elemento ao qual pertencem.  
+  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChildNodes">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNodeList ChildNodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNodeList ChildNodes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.ChildNodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todos os nós filho do nó.</summary>
+        <value>Um objeto que contém todos os nós filho do nó.  
+  
+ Se não houver nenhum nó filho, essa propriedade retornará um <see cref="T:System.Xml.XmlNodeList" /> vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre nós filho, consulte o [especificação de nível 1 do DOM do W3C (Core)](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html)  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe todos os nós filho do elemento raiz.  
+  
+ [!code-cpp[Classic WebData XmlNode.HasChildNodes Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.HasChildNodes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.HasChildNodes Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.HasChildNodes Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.HasChildNodes Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.HasChildNodes Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma duplicação deste nó.</summary>
+        <returns>O nó clonado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Clonar um <xref:System.Xml.XmlElement> copia todos os atributos e seus valores, inclusive os gerados pelo processador de XML para representar os atributos padrão. Este método recursivamente clona o nó e a subárvore abaixo dele.  
+  
+ `Clone`é equivalente a chamar `CloneNode(true)`.  
+  
+ A tabela a seguir descreve o comportamento específico para cada <xref:System.Xml.XmlNodeType>.  
+  
+|XmlNodeType|Clone|  
+|-----------------|-----------|  
+|Atributo|Clona o nó de atributo, incluindo nós filho.|  
+|CData|Clona o nó de CData, incluindo seu conteúdo de dados.|  
+|Comentário|Clona o nó de comentário, incluindo o conteúdo de texto.|  
+|Documento|Clona o nó de documento, incluindo todos os nós filho.|  
+|DocumentFragment|Clona o nó de fragmento de documento, incluindo todos os nós filho.|  
+|DocumentType|Clona o nó de tipo de documento.|  
+|Elemento|Clona o nó de elemento, seus atributos e nós filho.|  
+|Entidade|Não não possível clonar nós de entidade.|  
+|EntityReference|Clona o nó de referência de entidade. O texto de substituição não é incluído.|  
+|Notation|Não não possível clonar nós de notação.|  
+|ProcessingInstruction|Clona o nó de instrução de processamento, incluindo o destino e os dados.|  
+|SignificantWhitespace|Clona o nó de espaço em branco significativo, incluindo seu valor de dados.|  
+|Texto|Clona o nó de texto, incluindo seu valor de dados.|  
+|Whitespace|Clona o nó de espaço em branco, incluindo seu valor de dados.|  
+|XmlDeclaration|Clona o nó XmlDeclaration, incluindo seu valor de dados.|  
+|Todos os outros tipos de nó.|Esses tipos de nó não podem ser clonados.|  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir clona o nó raiz do documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.Clone Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.Clone Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.Clone Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.Clone Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.Clone Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.Clone Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneNode">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XmlNode CloneNode (bool deep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode CloneNode(bool deep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.CloneNode(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deep" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="deep">
+          <see langword="true" /> para recursivamente clonar a subárvore abaixo do nó especificado; <see langword="false" /> para clonar apenas o próprio nó.</param>
+        <summary>Cria uma duplicata do nó quando substituído em uma classe derivada.</summary>
+        <returns>O nó clonado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método funciona como um construtor de cópia para nós. O nó duplicado não tem nenhum pai (<xref:System.Xml.XmlNode.ParentNode%2A> retorna `null`).  
+  
+ A tabela a seguir descreve o comportamento específico para cada <xref:System.Xml.XmlNodeType>.  
+  
+|XmlNodeType|CloneNode(true)|CloneNode(false)|  
+|-----------------|-----------------------|------------------------|  
+|Atributo|Clona o nó de atributo, incluindo nós filho.|Clona o nó de atributo, incluindo nós filho.|  
+|CData|Clona o nó de CData, incluindo seu conteúdo de dados.|Clona o nó de CData, incluindo seu conteúdo de dados.|  
+|Comentário|Clona o nó de comentário, incluindo o conteúdo de texto.|Clona o nó de comentário, incluindo o conteúdo de texto.|  
+|Documento|Clona o nó de documento, incluindo todos os nós filho.|Clona o nó de documento.|  
+|DocumentFragment|Clona o nó de fragmento de documento, incluindo todos os nós filho.|Clona o nó de fragmento de documento.|  
+|DocumentType|Clona o nó de tipo de documento.|Clona o nó de tipo de documento.|  
+|Elemento|Clona o nó de elemento, seus atributos e nós filho.|Clona o nó de elemento e seus atributos, incluindo os atributos padrão.|  
+|Entidade|Não não possível clonar nós de entidade.|Não não possível clonar nós de entidade.|  
+|EntityReference|Clona o nó de referência de entidade. O texto de substituição não é incluído.|Clona o nó de referência de entidade. O texto de substituição não é incluído.|  
+|Notation|Não não possível clonar nós de notação.|Não não possível clonar nós de notação.|  
+|ProcessingInstruction|Clona o nó de instrução de processamento, incluindo o destino e os dados.|Clona o nó de instrução de processamento, incluindo o destino e os dados.|  
+|SignificantWhitespace|Clona o nó de espaço em branco significativo, incluindo seu valor de dados.|Clona o nó de espaço em branco significativo, incluindo seu valor de dados.|  
+|Texto|Clona o nó de texto, incluindo seu valor de dados.|Clona o nó de texto, incluindo seu valor de dados.|  
+|Whitespace|Clona o nó de espaço em branco, incluindo seu valor de dados.|Clona o nó de espaço em branco, incluindo seu valor de dados.|  
+|XmlDeclaration|Clona o nó XmlDeclaration, incluindo seu valor de dados.|Clona o nó XmlDeclaration, incluindo seu valor de dados.|  
+|Todos os outros tipos de nó.|Esses tipos de nó não podem ser clonados.|Esses tipos de nó não podem ser clonados.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a diferença entre um clone profundo e superficial.  
+  
+ [!code-cpp[Classic WebData XmlNode.CloneNode Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.CloneNode Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.CloneNode Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.CloneNode Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.CloneNode Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.CloneNode Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Chamando esse método em um tipo de nó que não pode ser clonado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNavigator">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XPath.XPathNavigator CreateNavigator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNavigator CreateNavigator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.CreateNavigator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Xml.XPath.XPathNavigator" /> para navegar esse objeto.</summary>
+        <returns>Um objeto <see langword="XPathNavigator" /> usado para navegar o nó. O <see langword="XPathNavigator" /> é posicionado no nó do qual o método foi chamado. Ele não está posicionado na raiz do documento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `XPathNavigator` fornece acesso aleatório, somente leitura aos dados. Porque ele é otimizado para transformações XSLT, ele oferece benefícios de desempenho quando usado como um mecanismo de entrada para o <xref:System.Xml.Xsl.XslTransform.Transform%2A?displayProperty=nameWithType> método.  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir carrega e edita um documento XML antes de executar uma transformação XSLT.  
+  
+ [!code-cpp[XslTransform.Transform2#1](~/samples/snippets/cpp/VS_Snippets_Data/XslTransform.Transform2/CPP/trans_snip.cpp#1)]
+ [!code-csharp[XslTransform.Transform2#1](~/samples/snippets/csharp/VS_Snippets_Data/XslTransform.Transform2/CS/trans_snip.cs#1)]
+ [!code-vb[XslTransform.Transform2#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XslTransform.Transform2/VB/trans_snip.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstChild">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode FirstChild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode FirstChild" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.FirstChild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o primeiro filho do nó.</summary>
+        <value>O primeiro filho do nó. Se não houver nenhum nó, <see langword="null" /> será retornado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre nós filho, consulte o [especificação de nível 1 do DOM do W3C (Core)](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html)  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o elemento de título.  
+  
+ [!code-cpp[Classic WebData XmlNode.FirstChild Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.FirstChild Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.FirstChild Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.FirstChild Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.FirstChild Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.FirstChild Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtenha um enumerador que itera pelos nós filho do nó atual.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar pelos nós filho do nó atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornece suporte para o estilo "for each" iteração sobre nós o `XmlNode`.  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe todos os livros no documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.GetEnumerator Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.GetEnumerator Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.GetEnumerator Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.GetEnumerator Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.GetEnumerator Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.GetEnumerator Example/VB/source.vb#1)]  
+  
+ O exemplo usa o arquivo de `books.xml`, como entrada.  
+  
+ [!code-xml[Classic WebData XmlNode.GetEnumerator Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlNode.GetEnumerator Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamespaceOfPrefix">
+      <MemberSignature Language="C#" Value="public virtual string GetNamespaceOfPrefix (string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetNamespaceOfPrefix(string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">O prefixo cujo URI de namespace você deseja localizar.</param>
+        <summary>Procura pela declaração **xmlns** mais próxima para o prefixo especificado no escopo para o nó atual e retorna o URI de namespace na declaração.</summary>
+        <returns>O URI do namespace do prefixo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um novo atributo para o documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.GetNamespaceOfPrefix Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.GetNamespaceOfPrefix Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.GetNamespaceOfPrefix Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.GetNamespaceOfPrefix Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.GetNamespaceOfPrefix Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.GetNamespaceOfPrefix Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrefixOfNamespace">
+      <MemberSignature Language="C#" Value="public virtual string GetPrefixOfNamespace (string namespaceURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetPrefixOfNamespace(string namespaceURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.GetPrefixOfNamespace(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceURI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceURI">O URI de namespace cujo prefixo você deseja localizar.</param>
+        <summary>Procura pela declaração **xmlns** mais próxima para o URI do namespace determinado que esteja no escopo para o nó atual e retorna o prefixo definido nessa declaração.</summary>
+        <returns>O prefixo para o URI do namespace especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um novo elemento no documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.GetPrefixOfNamespace Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.GetPrefixOfNamespace Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.GetPrefixOfNamespace Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.GetPrefixOfNamespace Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.GetPrefixOfNamespace Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.GetPrefixOfNamespace Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChildNodes">
+      <MemberSignature Language="C#" Value="public virtual bool HasChildNodes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasChildNodes" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.HasChildNodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este nó tem nós filho.</summary>
+        <value>
+          <see langword="true" /> se o nó tem nós filho; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre nós filho, consulte o [especificação de nível 1 do DOM do W3C (Core)](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html)  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe todos os nós filho do elemento raiz.  
+  
+ [!code-cpp[Classic WebData XmlNode.HasChildNodes Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.HasChildNodes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.HasChildNodes Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.HasChildNodes Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.HasChildNodes Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.HasChildNodes Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerText">
+      <MemberSignature Language="C#" Value="public virtual string InnerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os valores concatenados do nó e todos os seus nós filho.</summary>
+        <value>Os valores concatenados do nó e todos os seus nós filho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade substitui todos os nós filho com o conteúdo analisado da cadeia de caracteres especificada.  
+  
+ Para nós folha, `InnerText` retorna o mesmo conteúdo a <xref:System.Xml.XmlNode.Value%2A> propriedade.  
+  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir compara o `InnerText` e <xref:System.Xml.XmlNode.InnerXml%2A> propriedades.  
+  
+ [!code-cpp[Classic WebData XmlNode.InnerText Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.InnerText Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.InnerText Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.InnerText Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.InnerText Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.InnerText Example/VB/source.vb#1)]  
+  
+ **Saída:**  
+  
+```  
+Display the InnerText of the element...  
+some textmore text  
+Display the InnerXml of the element...  
+some text<child />more text  
+<elem>Text containing &lt;markup/&gt; will have char(&lt;) and char(&gt;) escape  
+d.</elem>  
+<elem>Text containing <markup />.</elem>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerXml">
+      <MemberSignature Language="C#" Value="public virtual string InnerXml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerXml" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.InnerXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a marcação que representa apenas os nós filho deste nó.</summary>
+        <value>A marcação dos nós filho deste nó.  
+  
+ <block subset="none" type="note"><para><see langword="InnerXml" />não retorna atributos padrão.  
+  
+</para></block></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tentativa de definir esta propriedade de um nó que não pode ter nós filho, por exemplo um nó de texto, gera uma exceção. Caso contrário, a configuração `InnerXml` substitui os nós filho, do nó, com o conteúdo analisado da cadeia de caracteres especificada. A análise é feita no contexto do namespace atual.  
+  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento).  
+  
+> [!NOTE]
+>  `InnerXml`não é uma maneira eficiente para modificar o DOM. Pode haver problemas de desempenho durante a substituição de nós complexos. É mais eficiente para construir nós e usar métodos como `InsertBefore`, `InsertAfter`, `AppendChild`, e `RemoveChild` modifique o documento Xml.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir compara o <xref:System.Xml.XmlNode.InnerText%2A> e `InnerXml` propriedades.  
+  
+ [!code-cpp[Classic WebData XmlNode.InnerText Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.InnerText Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.InnerText Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.InnerText Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.InnerText Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.InnerText Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A definição dessa propriedade em um nó que não pode ter nós filho.</exception>
+        <exception cref="T:System.Xml.XmlException">O XML especificado ao definir essa propriedade não está bem formado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertAfter">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode InsertAfter (System.Xml.XmlNode newChild, System.Xml.XmlNode refChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode InsertAfter(class System.Xml.XmlNode newChild, class System.Xml.XmlNode refChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newChild" Type="System.Xml.XmlNode" />
+        <Parameter Name="refChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="newChild">O <see langword="XmlNode" /> a ser inserido.</param>
+        <param name="refChild">O <see langword="XmlNode" /> que é o nó de referência. O <c>newNode</c> é posicionada após o <c>refNode</c>.</param>
+        <summary>Insere o nó especificado imediatamente após o nó de referência especificado.</summary>
+        <returns>O nó que está sendo inserido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `refChild` é `null`, inserir `newChild` no início da lista de nós filho. Todo o conteúdo do `newChild` são inseridas, na mesma ordem, após `refChild`. Se o `newChild` é já está na árvore, é removido de sua posição original e adicionado à sua posição de destino. Para obter mais informações sobre a inserção de nós, consulte [inserindo nós em um documento XML](~/docs/standard/data/xml/inserting-nodes-into-an-xml-document.md).  
+  
+ Se o nó que está sendo inserido foi criado em outro documento, você pode usar <xref:System.Xml.XmlDocument.ImportNode%2A?displayProperty=nameWithType> para importar o nó no documento atual. O nó importado, em seguida, pode ser inserido no documento atual.  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um novo nó no documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.InsertAfter Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.InsertAfter Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.InsertAfter Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.InsertAfter Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.InsertAfter Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.InsertAfter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Esse nó é de um tipo que não permite nós filho do tipo do nó <paramref name="newChild" />.  
+  
+ O <paramref name="newChild" /> é um ancestral desse nó.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="newChild" /> foi criado com base em um documento diferente daquele que criou esse nó.  
+  
+ O <paramref name="refChild" /> não é filho desse nó.  
+  
+ Este nó é somente leitura.</exception>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see langword="InsertAfter" /> em uma classe derivada, em ordem de eventos a serem gerados corretamente, você deve chamar o <see langword="InsertAfter" /> método da classe base.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertBefore">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode InsertBefore (System.Xml.XmlNode newChild, System.Xml.XmlNode refChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode InsertBefore(class System.Xml.XmlNode newChild, class System.Xml.XmlNode refChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newChild" Type="System.Xml.XmlNode" />
+        <Parameter Name="refChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="newChild">O <see langword="XmlNode" /> a ser inserido.</param>
+        <param name="refChild">O <see langword="XmlNode" /> que é o nó de referência. O <c>newChild</c> é colocado antes que este nó.</param>
+        <summary>Insere o nó especificado imediatamente antes do nó de referência especificado.</summary>
+        <returns>O nó que está sendo inserido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `refChild` é `null`, inserir `newChild` no final da lista de nós filho. Todo o conteúdo do `newChild` forem inseridas, na mesma ordem, antes `refChild`. Se o `newChild` é já está na árvore, é removido de sua posição original e adicionado à sua posição de destino. Para obter mais informações sobre a inserção de nós, consulte [inserindo nós em um documento XML](~/docs/standard/data/xml/inserting-nodes-into-an-xml-document.md).  
+  
+ Se o nó que está sendo inserido foi criado em outro documento, você pode usar <xref:System.Xml.XmlDocument.ImportNode%2A?displayProperty=nameWithType> para importar o nó no documento atual. O nó importado, em seguida, pode ser inserido no documento atual.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um novo nó no documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.InsertBefore Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.InsertBefore Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.InsertBefore Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.InsertBefore Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.InsertBefore Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.InsertBefore Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O nó atual é de um tipo que não permite nós filho do tipo do nó <paramref name="newChild" />.  
+  
+ O <paramref name="newChild" /> é um ancestral desse nó.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="newChild" /> foi criado com base em um documento diferente daquele que criou esse nó.  
+  
+ O <paramref name="refChild" /> não é filho desse nó.  
+  
+ Este nó é somente leitura.</exception>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see langword="InsertBefore" /> em uma classe derivada, em ordem de eventos a serem gerados corretamente, você deve chamar o <see langword="InsertBefore" /> método da classe base.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o nó é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o nó for somente leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nó somente leitura é um cujos nós filho, atributos ou propriedades não podem ser alterados. Você pode remover um nó somente leitura da árvore e inseri-lo em outro lugar. Por exemplo, nós de entidade são sempre somente leitura.  
+  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlElement this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome qualificado do elemento a ser recuperado.</param>
+        <summary>Obtém o primeiro elemento filho com o <see cref="P:System.Xml.XmlNode.Name" /> especificado.</summary>
+        <value>O primeiro <see cref="T:System.Xml.XmlElement" /> que corresponde ao nome especificado. Retorna uma referência nula (<see langword="Nothing" /> no Visual Basic) se não houver uma correspondência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o elemento de título.  
+  
+ [!code-cpp[Classic WebData XmlNode.this Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.this Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.this Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.this Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlElement this[string localname, string ns] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement Item(string, string)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.Item(System.String,System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localname" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localname">O nome local do elemento.</param>
+        <param name="ns">O URI do namespace do elemento.</param>
+        <summary>Obtém o primeiro elemento filho com o <see cref="P:System.Xml.XmlNode.LocalName" /> e o <see cref="P:System.Xml.XmlNode.NamespaceURI" /> especificados.</summary>
+        <value>O primeiro <see cref="T:System.Xml.XmlElement" /> com <paramref name="localname" /> e <paramref name="ns" /> correspondentes. . Retorna uma referência nula (<see langword="Nothing" /> no Visual Basic) se não houver uma correspondência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastChild">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode LastChild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode LastChild" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.LastChild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o último filho do nó.</summary>
+        <value>O último filho do nó. Se não houver nenhum nó, <see langword="null" /> será retornado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe o elemento de preço.  
+  
+ [!code-cpp[Classic WebData XmlNode.LastChild Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.LastChild Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.LastChild Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.LastChild Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.LastChild Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.LastChild Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalName">
+      <MemberSignature Language="C#" Value="public abstract string LocalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.LocalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do local do nó, quando substituído em uma classe derivada.</summary>
+        <value>O nome do nó com o prefixo removido. Por exemplo, <see langword="LocalName" /> é o catálogo para o elemento &lt;bk:book&gt;.  
+  
+ O nome retornado depende do <see cref="P:System.Xml.XmlNode.NodeType" /> do nó:  
+  
+ <list type="table"><listheader><term>Tipo de  
+  
+ </term><description>Nome  
+  
+ </description></listheader><item><term>Atributo  
+  
+ </term><description>O nome local do atributo.  
+  
+ </description></item><item><term>CDATA  
+  
+ </term><description>#cdata-section  
+  
+ </description></item><item><term>Comentário  
+  
+ </term><description>#comment  
+  
+ </description></item><item><term>Documento  
+  
+ </term><description>#document  
+  
+ </description></item><item><term>DocumentFragment  
+  
+ </term><description>fragmento de documento #  
+  
+ </description></item><item><term>DocumentType  
+  
+ </term><description>O nome do tipo de documento.  
+  
+ </description></item><item><term>Elemento  
+  
+ </term><description>O nome local do elemento.  
+  
+ </description></item><item><term>Entidade  
+  
+ </term><description>O nome da entidade.  
+  
+ </description></item><item><term>EntityReference  
+  
+ </term><description>O nome da entidade referenciada.  
+  
+ </description></item><item><term>Notação  
+  
+ </term><description>O nome da notação.  
+  
+ </description></item><item><term>Instrução de processamento  
+  
+ </term><description>O destino da instrução de processamento.  
+  
+ </description></item><item><term>Texto  
+  
+ </term><description>#text  
+  
+ </description></item><item><term>Espaço em branco  
+  
+ </term><description>#whitespace  
+  
+ </description></item><item><term>SignificantWhitespace  
+  
+ </term><description>#significant espaço em branco  
+  
+ </description></item><item><term>XmlDeclaration  
+  
+ </term><description>declaração xml #  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o nó não tem um prefixo, LocalName é o mesmo que <xref:System.Xml.XmlNode.Name%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome qualificado do nó quando substituído em uma classe derivada.</summary>
+        <value>O nome qualificado do nó. O nome retornado depende do <see cref="P:System.Xml.XmlNode.NodeType" /> do nó:  
+  
+ <list type="table"><listheader><term>Tipo de  
+  
+ </term><description>Nome  
+  
+ </description></listheader><item><term>Atributo  
+  
+ </term><description>O nome qualificado do atributo.  
+  
+ </description></item><item><term>CDATA  
+  
+ </term><description>#cdata-section  
+  
+ </description></item><item><term>Comentário  
+  
+ </term><description>#comment  
+  
+ </description></item><item><term>Documento  
+  
+ </term><description>#document  
+  
+ </description></item><item><term>DocumentFragment  
+  
+ </term><description>fragmento de documento #  
+  
+ </description></item><item><term>DocumentType  
+  
+ </term><description>O nome do tipo de documento.  
+  
+ </description></item><item><term>Elemento  
+  
+ </term><description>O nome qualificado do elemento.  
+  
+ </description></item><item><term>Entidade  
+  
+ </term><description>O nome da entidade.  
+  
+ </description></item><item><term>EntityReference  
+  
+ </term><description>O nome da entidade referenciada.  
+  
+ </description></item><item><term>Notação  
+  
+ </term><description>O nome da notação.  
+  
+ </description></item><item><term>Instrução de processamento  
+  
+ </term><description>O destino da instrução de processamento.  
+  
+ </description></item><item><term>Texto  
+  
+ </term><description>#text  
+  
+ </description></item><item><term>Espaço em branco  
+  
+ </term><description>#whitespace  
+  
+ </description></item><item><term>SignificantWhitespace  
+  
+ </term><description>#significant espaço em branco  
+  
+ </description></item><item><term>XmlDeclaration  
+  
+ </term><description>declaração xml #  
+  
+ </description></item></list></value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceURI">
+      <MemberSignature Language="C#" Value="public virtual string NamespaceURI { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceURI" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.NamespaceURI" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o URI do namespace deste nó.</summary>
+        <value>O URI do namespace deste nó. Se não houver um URI do namespace, a propriedade retorna a String.Empty.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o namespace que URI especificado no momento da criação. Por exemplo, `NamespaceURI` é urn: exemplos do elemento \<bk:book xmlns:bk = "urn: exemplos" >  
+  
+ Um atributo não herda seu namespace do elemento que está anexado ao. Se um atributo não for especificado explicitamente um namespace, ele simplesmente não tem nenhum namespace.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextSibling">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode NextSibling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode NextSibling" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.NextSibling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó imediatamente posterior a este nó.</summary>
+        <value>O próximo <see langword="XmlNode" />. Se não houver nenhum próximo nó, <see langword="null" /> será retornado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe todos os livros no documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.NextSibling Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.NextSibling Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.NextSibling Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.NextSibling Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.NextSibling Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.NextSibling Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do nó atual, quando substituído em uma classe derivada.</summary>
+        <value>Um dos valores de <see cref="T:System.Xml.XmlNodeType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade nunca retorna o `XmlNodeType` EndElement, EndEntity ou None.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normalize">
+      <MemberSignature Language="C#" Value="public virtual void Normalize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Normalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.Normalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Coloca todos os nós XmlText em toda a profundidade da subárvore sob esse XmlNode em uma forma "normal" em que somente a marcação (isto é, marcas, comentários, instruções de processamento, seções CDATA e referências de entidade) separa os nós XmlText, isto é, não existem nós XmlText adjacentes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para garantir que o modo de exibição de um documento DOM é o mesmo como se fosse salvos e carregado novamente e é útil para operações que dependem de uma estrutura de árvore do documento específico (como pesquisas XPointer) devem ser usados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OuterXml">
+      <MemberSignature Language="C#" Value="public virtual string OuterXml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OuterXml" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.OuterXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a marcação que contém esse nó e todos os nós filho.</summary>
+        <value>A marcação que contém esse nó e todos os nós filho.  
+  
+ <block subset="none" type="note"><para><see langword="OuterXml" />não retorna atributos padrão.  
+  
+</para></block></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é uma extensão da Microsoft do DOM (Modelo de Objeto do Documento).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir compara a saída de <xref:System.Xml.XmlNode.InnerXml%2A> e `OuterXml` propriedades.  
+  
+ [!code-cpp[Classic WebData XmlNode.OuterXml Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.OuterXml Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.OuterXml Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.OuterXml Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.OuterXml Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.OuterXml Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDocument">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlDocument OwnerDocument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlDocument OwnerDocument" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.OwnerDocument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xml.XmlDocument" /> ao qual esse nó pertence.</summary>
+        <value>O <see cref="T:System.Xml.XmlDocument" /> ao qual pertence esse nó.  
+  
+ Se o nó for um <see cref="T:System.Xml.XmlDocument" /> (NodeType igual a XmlNodeType.Document), essa propriedade retornará <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao adicionar nós ao nó atual, use o <xref:System.Xml.XmlDocument> retornado pelo <xref:System.Xml.XmlNode.OwnerDocument%2A> propriedade para criar o nó.  
+  
+   
+  
+## Examples  
+ Consulte <xref:System.Xml.XmlElement.OwnerDocument%2A> (na classe XmlElement) para obter um exemplo usando essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentNode">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode ParentNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode ParentNode" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.ParentNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai deste nó (para os nós que podem ter pais).</summary>
+        <value>O <see langword="XmlNode" /> que é o pai do nó atual. Se um nó tiver acabado de ser criado e ainda não foram adicionados à árvore, ou se ele tiver sido removido da árvore, o pai é <see langword="null" />. Para todos os outros nós, o valor retornado depende do <see cref="P:System.Xml.XmlNode.NodeType" /> do nó. A tabela a seguir descreve os possíveis valores retornados para a propriedade <see langword="ParentNode" />.  
+  
+ <list type="table"><listheader><term>NodeType  
+  
+ </term><description>Valor de retorno de ParentNode  
+  
+ </description></listheader><item><term>Atributo, documento, DocumentFragment, entidade, notação  
+  
+ </term><description>Retorna <see langword="null" />; esses nós não possui pais.  
+  
+ </description></item><item><term>CDATA  
+  
+ </term><description>Retorna a elemento ou referência de entidade que contém a seção CDATA.  
+  
+ </description></item><item><term>Comentário  
+  
+ </term><description>Retorna o elemento, referência de entidade, tipo de documento ou documento que contém o comentário.  
+  
+ </description></item><item><term>DocumentType  
+  
+ </term><description>Retorna o nó de documento.  
+  
+ </description></item><item><term>Elemento  
+  
+ </term><description>Retorna o nó pai do elemento. Se o elemento é o nó raiz da árvore, o pai é o nó de documento.  
+  
+ </description></item><item><term>EntityReference  
+  
+ </term><description>Retorna a referência de entidade, atributo ou elemento que contém a referência de entidade.  
+  
+ </description></item><item><term>Instrução de processamento  
+  
+ </term><description>Retorna o documento, o elemento, o tipo de documento ou a referência de entidade que contém a instrução de processamento.  
+  
+ </description></item><item><term>Texto  
+  
+ </term><description>Retorna o pai de referência de entidade, atributo ou elemento que contém o nó de texto.  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre nós pai e filho, consulte o [especificação de nível 1 do DOM do W3C (Core)](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public virtual string Prefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o prefixo de namespace desse nó.</summary>
+        <value>O prefixo de namespace desse nó. Por exemplo, <see langword="Prefix" /> é bk para o elemento &lt;bk:book&gt;. Se não houver nenhum prefixo, essa propriedade retorna Empty.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir essa propriedade, quando permitido, altera o <xref:System.Xml.XmlNode.Name%2A> propriedade, que contém o nome qualificado, em nós de elemento e atributo. Definir essa propriedade em tipos de nós que não podem ter um prefixo (como texto, comentário, EntityReference, CDATA, instrução de processamento, documentos e DocumentFragment) não tem nenhum efeito. Alterando o prefixo de um atributo que é conhecido por ter um valor padrão, faça um novo atributo com o valor padrão e o prefixo original aparecer, desde que o URI de namespace e o nome local não são alterados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Este nó é somente leitura.</exception>
+        <exception cref="T:System.Xml.XmlException">O prefixo especificado contém um caractere inválido.  
+  
+ O prefixo especificado está incorreto.  
+  
+ O prefixo especificado é "xml" e o namespaceURI deste nó é diferente de "http://www.w3.org/XML/1998/namespace".  
+  
+ Este nó é um atributo e o prefixo especificado é "xmlns" e o namespaceURI deste nó é diferente de "http://www.w3.org/2000/xmlns/".  
+  
+ Esse nó é um atributo e o qualifiedName dele é "xmlns".</exception>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see langword="Prefix" /> em uma classe derivada, essa propriedade não pode ser definida.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PrependChild">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode PrependChild (System.Xml.XmlNode newChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode PrependChild(class System.Xml.XmlNode newChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="newChild">O nó a ser adicionado. Todo o conteúdo do nó a ser adicionado é movido para o local especificado.</param>
+        <summary>Adiciona o nó especificado ao início da lista de nós filho desse nó.</summary>
+        <returns>O nó adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `newChild` é já está na árvore, é removido de sua posição original e adicionado à sua posição de destino. Para obter mais informações sobre a inserção de nós, consulte [inserindo nós em um documento XML](~/docs/standard/data/xml/inserting-nodes-into-an-xml-document.md).  
+  
+ Se o nó que está sendo inserido foi criado em outro documento, você pode usar <xref:System.Xml.XmlDocument.ImportNode%2A?displayProperty=nameWithType> para importar o nó no documento atual. O nó importado, em seguida, pode ser inserido no documento atual.  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um novo nó no documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.PrependChild Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.PrependChild Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.PrependChild Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.PrependChild Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.PrependChild Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.PrependChild Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Esse nó é de um tipo que não permite nós filho do tipo do nó <paramref name="newChild" />.  
+  
+ O <paramref name="newChild" /> é um ancestral desse nó.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="newChild" /> foi criado com base em um documento diferente daquele que criou esse nó.  
+  
+ Este nó é somente leitura.</exception>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see langword="PrependChild" /> em uma classe derivada, em ordem de eventos a serem gerados corretamente, você deve chamar o <see langword="PrependChild" /> método da classe base.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousSibling">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode PreviousSibling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode PreviousSibling" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.PreviousSibling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó imediatamente anterior a este nó.</summary>
+        <value>Anterior <see langword="XmlNode" />. Se não houver um nó anterior, <see langword="null" /> será retornado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe todos os livros no documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.PreviousSibling Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.PreviousSibling Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.PreviousSibling Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.PreviousSibling Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.PreviousSibling Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.PreviousSibling Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousText">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode PreviousText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNode PreviousText" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.PreviousText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó de texto que precede a este nó.</summary>
+        <value>Retorna <see cref="T:System.Xml.XmlNode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade tem um desempenho mais rápido que o <xref:System.Xml.XmlNode.PreviousSibling%2A> propriedade, mas você pode usá-lo somente para obter um nó do tipo <xref:System.Xml.XmlNodeType.Text>. Para obter qualquer outro tipo de nó que precede a esse nó, use o <xref:System.Xml.XmlNode.PreviousSibling%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.RemoveAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os nós filho e/ou atributos do nó atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um atributo removido é conhecido por ter um valor padrão, um atributo aparece imediatamente que contém o valor padrão e, se aplicável, o URI de namespace correspondente, o nome local e o prefixo.  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir remove todos os nós filho e o atributo do nó raiz.  
+  
+ [!code-cpp[Classic WebData XmlNode.RemoveAll Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.RemoveAll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.RemoveAll Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.RemoveAll Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.RemoveAll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.RemoveAll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see langword="RemoveAll" /> em uma classe derivada, em ordem de eventos a serem gerados corretamente, você deve chamar o <see langword="RemoveAll" /> método da classe base.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveChild">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode RemoveChild (System.Xml.XmlNode oldChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode RemoveChild(class System.Xml.XmlNode oldChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="oldChild">O nó que está sendo removido.</param>
+        <summary>Remove o nó filho especificado.</summary>
+        <returns>O nó removido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir remove um nó do documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.RemoveChild Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.RemoveChild Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.RemoveChild Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.RemoveChild Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.RemoveChild Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.RemoveChild Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="oldChild" /> não é filho desse nó. Ou esse nó é somente leitura.</exception>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see langword="RemoveChild" /> em uma classe derivada, em ordem de eventos a serem gerados corretamente, você deve chamar o <see langword="RemoveChild" /> método da classe base.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceChild">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNode ReplaceChild (System.Xml.XmlNode newChild, System.Xml.XmlNode oldChild);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlNode ReplaceChild(class System.Xml.XmlNode newChild, class System.Xml.XmlNode oldChild) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newChild" Type="System.Xml.XmlNode" />
+        <Parameter Name="oldChild" Type="System.Xml.XmlNode" />
+      </Parameters>
+      <Docs>
+        <param name="newChild">O novo nó a ser colocado na lista de filhos.</param>
+        <param name="oldChild">O nó que está sendo substituído na lista.</param>
+        <summary>Substitui o nó filho <paramref name="oldChild" /> pelo nó <paramref name="newChild" />.</summary>
+        <returns>O nó substituído.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `newChild` é já na árvore, ele é primeiro removido.  
+  
+ Se o `newChild` foi criado a partir de outro documento, você pode usar <xref:System.Xml.XmlDocument.ImportNode%2A?displayProperty=nameWithType> para importar o nó no documento atual. O nó importado, em seguida, pode ser passado para o `ReplaceChild` método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir substitui o elemento de título do documento XML.  
+  
+ [!code-cpp[Classic WebData XmlNode.ReplaceChild Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.ReplaceChild Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.ReplaceChild Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.ReplaceChild Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.ReplaceChild Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.ReplaceChild Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Esse nó é de um tipo que não permite nós filho do tipo do nó <paramref name="newChild" />.  
+  
+ O <paramref name="newChild" /> é um ancestral desse nó.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="newChild" /> foi criado com base em um documento diferente daquele que criou esse nó.  
+  
+ Este nó é somente leitura.  
+  
+ O <paramref name="oldChild" /> não é filho desse nó.</exception>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see langword="ReplaceChild" /> em uma classe derivada, em ordem de eventos a serem gerados corretamente, você deve chamar o <see langword="ReplaceChild" /> método da classe base.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaInfo">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.Schema.IXmlSchemaInfo SchemaInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.IXmlSchemaInfo SchemaInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.SchemaInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.IXmlSchemaInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o infoset de validação de esquema de postagem que foi atribuído a esse nó como resultado da validação de esquema.</summary>
+        <value>Um objeto <see cref="T:System.Xml.Schema.IXmlSchemaInfo" /> contendo o infoset de validação de esquema de postagem desse nó.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.XmlNode.SchemaInfo%2A> propriedade é definida quando este nó é validatied.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SelectNodes">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Seleciona uma lista de nós que correspondem à expressão XPath.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As expressões XPath podem incluir namespaces A resolução de namespace tem suporte com o uso do `XmlNamespaceManager`. Se a expressão XPath inclui um prefixo, o par de prefixo e namespace URI deve ser adicionado para o `XmlNamespaceManager`.  
+  
+> [!NOTE]
+>  Se a expressão XPath não incluir um prefixo, presume-se que o URI de namespace é o namespace vazio. Se o XML inclui um namespace padrão, você ainda deverá adicionar um prefixo e URI de namespace para o `XmlNamespaceManager`; caso contrário, você não terá todos os nós selecionados.  
+  
+ Para obter mais informações, consulte [selecionar nós usando navegação XPath](~/docs/standard/data/xml/select-nodes-using-xpath-navigation.md). Para obter exemplos de código, escolha uma sobrecarga de lista de sobrecargas na seção anterior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SelectNodes">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNodeList SelectNodes (string xpath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlNodeList SelectNodes(string xpath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.SelectNodes(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xpath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xpath">A expressão XPath.</param>
+        <summary>Seleciona uma lista de nós que correspondem à expressão XPath.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlNodeList" /> que contém uma coleção de nós que correspondem a consulta XPath.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a expressão XPath requer que a resolução de namespace, você deve usar o `SelectNodes` sobrecarga que usa um <xref:System.Xml.XmlNamespaceManager> como seu argumento. O `XmlNamespaceManager` é usado para resolver os namespaces.  
+  
+> [!NOTE]
+>  Se a expressão XPath não incluir um prefixo, presume-se que o URI de namespace é o namespace vazio. Se o XML inclui um namespace padrão, você ainda deve usar o `XmlNamespaceManager` e adicionar um prefixo e URI de namespace para ele; caso contrário, você não terá todos os nós selecionados. Para obter mais informações, consulte [selecionar nós usando navegação XPath](~/docs/standard/data/xml/select-nodes-using-xpath-navigation.md).  
+  
+> [!NOTE]
+>  Um problema comum ao formular expressões XPath é como incluir uma aspa simples (') ou aspas duplas (") na expressão. Se você tiver que procurar um valor que inclui uma aspa simples, você deve colocar a cadeia de caracteres entre aspas duplas. Se você precisa procurar um valor que inclui aspas duplas, você deve colocar a cadeia de caracteres entre aspas simples.  
+  
+ Por exemplo, suponha que você tem o seguinte XML:  
+  
+```  
+<bookstore>  
+  <book>  
+    <title>&apos;Emma&apos;</title>  
+  </book>  
+</bookstore>  
+```  
+  
+ O seguinte código do Visual Basic seleciona um elemento que contém aspas simples:  
+  
+```  
+nodeList = root.SelectNodes("//book[contains(title,""'Emma'"")]")  
+```  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+ O <xref:System.Xml.XmlNodeList> objeto retornado por este método será válido enquanto o documento subjacente permanece inalterado. Se o documento subjacente for alterado, resultados inesperados podem ser retornados (nenhuma exceção será lançada).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir seleciona todos os livros onde sobrenome do autor é Austen e, em seguida, altera o preço desses catálogos.  
+  
+ [!code-cpp[Classic WebData XmlNode.SelectNodes Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.SelectNodes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.SelectNodes Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.SelectNodes Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.SelectNodes Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.SelectNodes Example/VB/source.vb#1)]  
+  
+ Este exemplo usa o XML a seguir:  
+  
+ [!code-xml[Classic WebData XmlNode.SelectNodes Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlNode.SelectNodes Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XPath.XPathException">A expressão XPath contém um prefixo. Consulte [Exemplos de XPath](http://msdn.microsoft.com/en-us/1431789e-c545-4765-8c09-3057e07d3041).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectNodes">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNodeList SelectNodes (string xpath, System.Xml.XmlNamespaceManager nsmgr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlNodeList SelectNodes(string xpath, class System.Xml.XmlNamespaceManager nsmgr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.SelectNodes(System.String,System.Xml.XmlNamespaceManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeList</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xpath" Type="System.String" />
+        <Parameter Name="nsmgr" Type="System.Xml.XmlNamespaceManager" />
+      </Parameters>
+      <Docs>
+        <param name="xpath">A expressão XPath. Consulte [Exemplos de XPath](http://msdn.microsoft.com/en-us/1431789e-c545-4765-8c09-3057e07d3041).</param>
+        <param name="nsmgr">Um <see cref="T:System.Xml.XmlNamespaceManager" /> a ser usado para resolução de namespaces para prefixos na expressão XPath.</param>
+        <summary>Seleciona uma lista de nós que correspondem à expressão XPath. Todos os prefixos encontrados na expressão XPath são resolvidos usando o <see cref="T:System.Xml.XmlNamespaceManager" /> fornecido.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlNodeList" /> que contém uma coleção de nós que correspondem a consulta XPath.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As expressões XPath podem incluir namespaces A resolução de namespace tem suporte com o uso do `XmlNamespaceManager`. Se a expressão XPath inclui um prefixo, o par de prefixo e namespace URI deve ser adicionado para o `XmlNamespaceManager`.  
+  
+> [!NOTE]
+>  Se a expressão XPath não incluir um prefixo, presume-se que o URI de namespace é o namespace vazio. Se o XML inclui um namespace padrão, você ainda deverá adicionar um prefixo e URI de namespace para o `XmlNamespaceManager`; caso contrário, você não terá todos os nós selecionados. Para obter mais informações, consulte [selecionar nós usando navegação XPath](~/docs/standard/data/xml/select-nodes-using-xpath-navigation.md).  
+  
+ Por exemplo, se você tiver o XML a seguir:  
+  
+```  
+<bookstore xmlns="http://www.lucernepublishing.com">  
+ <book>  
+   <title>Pride And Prejudice</title>  
+ </book>  
+</bookstore>  
+```  
+  
+ O código c# a seguir seleciona todos os nós de catálogo:  
+  
+```  
+XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);  
+nsmgr.AddNamespace("ab", "http://www.lucernepublishing.com");  
+XmlNodeList nodelist = doc.SelectNodes("//ab:book", nsmgr);  
+```  
+  
+> [!NOTE]
+>  Um problema comum ao formular expressões XPath é como incluir uma aspa simples (') ou aspas duplas (") na expressão. Se você tiver que procurar um valor que inclui uma aspa simples, você deve colocar a cadeia de caracteres entre aspas duplas. Se você precisa procurar um valor que inclui aspas duplas, você deve colocar a cadeia de caracteres entre aspas simples.  
+  
+ Por exemplo, suponha que você tem o seguinte XML:  
+  
+```  
+<bookstore xmlns="http://www.lucernepublishing.com">  
+  <book>  
+    <title>&apos;Emma&apos;</title>  
+  </book>  
+</bookstore>  
+```  
+  
+ O seguinte código do Visual Basic seleciona um elemento que contém aspas simples:  
+  
+```  
+Dim nsmgr As XmlNamespaceManager = New XmlNamespaceManager(doc.NameTable)  
+nsmgr.AddNamespace("ab", "http://www.lucernepublishing.com")  
+nodeList = root.SelectNodes("//ab:book[contains(ab:title,""'Emma'"")]", nsmgr)  
+```  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+ O <xref:System.Xml.XmlNodeList> objeto retornado por este método será válido enquanto o documento subjacente permanece inalterado. Se o documento subjacente for alterado, resultados inesperados podem ser retornados (nenhuma exceção será lançada).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe os valores de cada um dos atributos ISBN. Este exemplo usa um <xref:System.Xml.XmlElement> objeto, que herda de <xref:System.Xml.XmlNode> classe.  
+  
+ [!code-cpp[XmlNode.SelectNodes1#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlNode.SelectNodes1/CPP/selectnodes1.cpp#1)]
+ [!code-csharp[XmlNode.SelectNodes1#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlNode.SelectNodes1/CS/selectnodes1.cs#1)]
+ [!code-vb[XmlNode.SelectNodes1#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlNode.SelectNodes1/VB/selectnodes1.vb#1)]  
+  
+ O exemplo usa o arquivo de `booksort.xml`, como entrada.  
+  
+ [!code-xml[Classic WebData XmlNode.SelectNodes Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlNode.SelectNodes Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XPath.XPathException">A expressão XPath contém um prefixo que não está definido no <see langword="XmlNamespaceManager" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SelectSingleNode">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Seleciona o primeiro <see langword="XmlNode" /> que corresponde à expressão XPath.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As expressões XPath podem incluir namespaces A resolução de namespace tem suporte com o uso do `XmlNamespaceManager`. Se a expressão XPath inclui um prefixo, o par de prefixo e namespace URI deve ser adicionado para o `XmlNamespaceManager`.  
+  
+> [!NOTE]
+>  Se a expressão XPath não incluir um prefixo, presume-se que o URI de namespace é o namespace vazio. Se o XML inclui um namespace padrão, você ainda deverá adicionar um prefixo e URI de namespace para o `XmlNamespaceManager`; caso contrário, você não terá todos os nós selecionados. Para obter mais informações, consulte [selecionar nós usando navegação XPath](~/docs/standard/data/xml/select-nodes-using-xpath-navigation.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir retorna o primeiro registro com o nome do autor correspondente. O `XmlNamespaceManager` resolve o namespace padrão na expressão XPath.  
+  
+ [!code-cpp[XmlNode.SelectSingleNode2#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlNode.SelectSingleNode2/CPP/XmlNode.SelectSingleNode2.cpp#1)]
+ [!code-csharp[XmlNode.SelectSingleNode2#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlNode.SelectSingleNode2/CS/selectsingnode2.cs#1)]
+ [!code-vb[XmlNode.SelectSingleNode2#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlNode.SelectSingleNode2/VB/selectsingnode2.vb#1)]  
+  
+ O exemplo usa o arquivo de `newbooks.xml`, como entrada.  
+  
+ [!code-xml[XmlNode.SelectSingleNode2#2](~/samples/snippets/xml/VS_Snippets_Data/XmlNode.SelectSingleNode2/XML/newbooks.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SelectSingleNode">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNode SelectSingleNode (string xpath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlNode SelectSingleNode(string xpath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.SelectSingleNode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xpath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xpath">A expressão XPath. Consulte [Exemplos de XPath](http://msdn.microsoft.com/en-us/1431789e-c545-4765-8c09-3057e07d3041).</param>
+        <summary>Seleciona o primeiro <see langword="XmlNode" /> que corresponde à expressão XPath.</summary>
+        <returns>A primeira <see langword="XmlNode" /> que corresponde à consulta do XPath ou <see langword="null" /> se nenhum nó correspondente for encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a expressão XPath requer que a resolução de namespace, você deve usar o `SelectSingleNode` sobrecarga que usa um <xref:System.Xml.XmlNamespaceManager> como seu argumento. O `XmlNamespaceManager` é usado para resolver os namespaces.  
+  
+> [!NOTE]
+>  Se a expressão XPath não incluir um prefixo, presume-se que o URI de namespace é o namespace vazio. Se o XML inclui um namespace padrão, você ainda deve usar o `XmlNamespaceManager` e adicionar um prefixo e URI de namespace para ele; caso contrário, você não terá um nó selecionado. Para obter mais informações, consulte [selecionar nós usando navegação XPath](~/docs/standard/data/xml/select-nodes-using-xpath-navigation.md).  
+  
+> [!NOTE]
+>  Um problema comum ao formular expressões XPath é como incluir uma aspa simples (') ou aspas duplas (") na expressão. Se você tiver que procurar um valor que inclui uma aspa simples, você deve colocar a cadeia de caracteres entre aspas duplas. Se você precisa procurar um valor que inclui aspas duplas, você deve colocar a cadeia de caracteres entre aspas simples.  
+  
+ Por exemplo, suponha que você tem o seguinte XML:  
+  
+```  
+<bookstore>  
+  <book>  
+    <title>&apos;Emma&apos;</title>  
+  </book>  
+</bookstore>  
+```  
+  
+ O seguinte código do Visual Basic seleciona um elemento que contém aspas simples:  
+  
+```  
+book = root.SelectSingleNode("descendant::book[title=""'Emma'""]")  
+```  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir altera o preço do livro Jane Austen primeiro.  
+  
+ [!code-cpp[Classic WebData XmlNode.SelectSingleNode Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.SelectSingleNode Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.SelectSingleNode Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.SelectSingleNode Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.SelectSingleNode Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.SelectSingleNode Example/VB/source.vb#1)]  
+  
+ O exemplo usa o arquivo de `booksort.xml`, como entrada.  
+  
+ [!code-xml[Classic WebData XmlNode.SelectSingleNode Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlNode.SelectSingleNode Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XPath.XPathException">A expressão XPath contém um prefixo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectSingleNode">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlNode SelectSingleNode (string xpath, System.Xml.XmlNamespaceManager nsmgr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlNode SelectSingleNode(string xpath, class System.Xml.XmlNamespaceManager nsmgr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.SelectSingleNode(System.String,System.Xml.XmlNamespaceManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xpath" Type="System.String" />
+        <Parameter Name="nsmgr" Type="System.Xml.XmlNamespaceManager" />
+      </Parameters>
+      <Docs>
+        <param name="xpath">A expressão XPath. Consulte [Exemplos de XPath](http://msdn.microsoft.com/en-us/1431789e-c545-4765-8c09-3057e07d3041).</param>
+        <param name="nsmgr">Um <see cref="T:System.Xml.XmlNamespaceManager" /> a ser usado para resolução de namespaces para prefixos na expressão XPath.</param>
+        <summary>Seleciona o primeiro <see langword="XmlNode" /> que corresponde à expressão XPath. Todos os prefixos encontrados na expressão XPath são resolvidos usando o <see cref="T:System.Xml.XmlNamespaceManager" /> fornecido.</summary>
+        <returns>A primeira <see langword="XmlNode" /> que corresponde à consulta do XPath ou <see langword="null" /> se nenhum nó correspondente for encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As expressões XPath podem incluir namespaces A resolução de namespace tem suporte com o uso do `XmlNamespaceManager`. Se a expressão XPath inclui um prefixo, o par de prefixo e namespace URI deve ser adicionado para o `XmlNamespaceManager`.  
+  
+> [!NOTE]
+>  Se a expressão XPath não incluir um prefixo, presume-se que o URI de namespace é o namespace vazio. Se o XML inclui um namespace padrão, você ainda deverá adicionar um prefixo e URI de namespace para o `XmlNamespaceManager`; caso contrário, você não terá um nó selecionado. Para obter mais informações, consulte [selecionar nós usando navegação XPath](~/docs/standard/data/xml/select-nodes-using-xpath-navigation.md).  
+  
+ Por exemplo, se você tiver o XML a seguir:  
+  
+```  
+<bookstore xmlns="http://www.lucernepublishing.com">  
+ <book>  
+   <title>Pride And Prejudice</title>  
+ </book>  
+</bookstore>  
+```  
+  
+ O código c# a seguir seleciona o primeiro nó de catálogo:  
+  
+```  
+XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);  
+nsmgr.AddNamespace("ab", "http://www.lucernepublishing.com");  
+XmlNode book = doc.SelectSingleNode("//ab:book", nsmgr);  
+```  
+  
+> [!NOTE]
+>  Um problema comum ao formular expressões XPath é como incluir uma aspa simples (') ou aspas duplas (") na expressão. Se você tiver que procurar um valor que inclui uma aspa simples, você deve colocar a cadeia de caracteres entre aspas duplas. Se você precisa procurar um valor que inclui aspas duplas, você deve colocar a cadeia de caracteres entre aspas simples.  
+  
+ Por exemplo, suponha que você tem o seguinte XML:  
+  
+```  
+<bookstore xmlns="http://www.lucernepublishing.com">  
+  <book>  
+    <title>&apos;Emma&apos;</title>  
+  </book>  
+</bookstore>  
+```  
+  
+ O seguinte código do Visual Basic seleciona um elemento que contém aspas simples:  
+  
+```  
+Dim nsmgr As XmlNamespaceManager = New XmlNamespaceManager(doc.NameTable)  
+nsmgr.AddNamespace("ab", "http://www.lucernepublishing.com")  
+book = root.SelectSingleNode("descendant::ab:book[ab:title=""'Emma'""]", nsmgr)  
+```  
+  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir seleciona o catálogo com o valor correspondente de ISBN.  
+  
+ [!code-cpp[XmlNode.SelectSingleNode1#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlNode.SelectSingleNode1/CPP/selectsingnode.cpp#1)]
+ [!code-csharp[XmlNode.SelectSingleNode1#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlNode.SelectSingleNode1/CS/selectsingnode.cs#1)]
+ [!code-vb[XmlNode.SelectSingleNode1#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlNode.SelectSingleNode1/VB/selectsingnode.vb#1)]  
+  
+ O exemplo usa o arquivo de `booksort.xml`, como entrada.  
+  
+ [!code-xml[Classic WebData XmlNode.SelectNodes Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlNode.SelectNodes Example/XML/source.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xml.XPath.XPathException">A expressão XPath contém um prefixo que não está definido no <see langword="XmlNamespaceManager" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Supports">
+      <MemberSignature Language="C#" Value="public virtual bool Supports (string feature, string version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Supports(string feature, string version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.Supports(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feature" Type="System.String" />
+        <Parameter Name="version" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="feature">O nome do pacote do recurso para teste. Esse nome não diferencia maiusculas de minúsculas.</param>
+        <param name="version">O número de versão do nome do pacote para testar. Se a versão não for especificado (null), dando suporte a qualquer versão do recurso faz com que o método retornar true.</param>
+        <summary>Testa se a implementação do DOM implementa um recurso específico.</summary>
+        <returns>
+          <see langword="true" />Se o recurso é implementado na versão especificada; Caso contrário, <see langword="false" />. A tabela a seguir descreve as combinações que retornam <see langword="true" />.  
+  
+ <list type="table"><listheader><term>Recurso  
+  
+ </term><description>Versão  
+  
+ </description></listheader><item><term>XML  
+  
+ </term><description> 1.0  
+  
+ </description></item><item><term>XML  
+  
+ </term><description> 2.0  
+  
+ </description></item></list></returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.XmlNode.GetEnumerator" />.</summary>
+        <returns>Retorna um enumerador para a coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.XmlNode> é convertida em uma interface de <xref:System.Collections.IEnumerable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Xml.XmlNode.Clone" />.</summary>
+        <returns>Uma cópia do nó do qual ele é chamado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Xml.XmlNode> é convertida em uma interface de <xref:System.ICloneable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public virtual string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlNode.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do nó.</summary>
+        <value>O valor retornado depende do <see cref="P:System.Xml.XmlNode.NodeType" /> do nó:  
+  
+ <list type="table"><listheader><term>Tipo de  
+  
+ </term><description>Valor  
+  
+ </description></listheader><item><term>Atributo  
+  
+ </term><description>O valor do atributo.  
+  
+ </description></item><item><term>CDATASection  
+  
+ </term><description>O conteúdo da seção CDATA.  
+  
+ </description></item><item><term>Comentário  
+  
+ </term><description>O conteúdo do comentário.  
+  
+ </description></item><item><term>Documento  
+  
+ </term><description><see langword="null" />.  
+  
+ </description></item><item><term>DocumentFragment  
+  
+ </term><description><see langword="null" />.  
+  
+ </description></item><item><term>DocumentType  
+  
+ </term><description><see langword="null" />.  
+  
+ </description></item><item><term>Elemento  
+  
+ </term><description><see langword="null" />. Você pode usar o <see cref="P:System.Xml.XmlElement.InnerText" /> ou <see cref="P:System.Xml.XmlElement.InnerXml" /> propriedades para acessar o valor do nó de elemento.  
+  
+ </description></item><item><term>Entidade  
+  
+ </term><description><see langword="null" />.  
+  
+ </description></item><item><term>EntityReference  
+  
+ </term><description><see langword="null" />.  
+  
+ </description></item><item><term>Notação  
+  
+ </term><description><see langword="null" />.  
+  
+ </description></item><item><term>Instrução de processamento  
+  
+ </term><description>Todo o conteúdo exceto o destino.  
+  
+ </description></item><item><term>Texto  
+  
+ </term><description>O conteúdo do nó de texto.  
+  
+ </description></item><item><term>SignificantWhitespace  
+  
+ </term><description>Os caracteres de espaço em branco. Espaço em branco pode consistir em um ou mais caracteres de espaço, retornos de carro, alimentações de linha ou guias.  
+  
+ </description></item><item><term>Espaço em branco  
+  
+ </term><description>Os caracteres de espaço em branco. Espaço em branco pode consistir em um ou mais caracteres de espaço, retornos de carro, alimentações de linha ou guias.  
+  
+ </description></item><item><term>XmlDeclaration  
+  
+ </term><description>O conteúdo da declaração (ou seja, tudo entre &lt;? xml e?&gt;).  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir adiciona um novo atributo para o documento XML e conjuntos de <xref:System.Xml.XmlNode.Value%2A> propriedade do novo atributo.  
+  
+ [!code-cpp[Classic WebData XmlNode.GetNamespaceOfPrefix Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.GetNamespaceOfPrefix Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.GetNamespaceOfPrefix Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.GetNamespaceOfPrefix Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.GetNamespaceOfPrefix Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.GetNamespaceOfPrefix Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Definindo o valor de um nó que é somente leitura.</exception>
+        <exception cref="T:System.InvalidOperationException">Definindo o valor de um nó que não deveria ter um valor (por exemplo, um nó de elemento).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteContentTo">
+      <MemberSignature Language="C#" Value="public abstract void WriteContentTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteContentTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">O <see langword="XmlWriter" /> no qual você deseja salvar.</param>
+        <summary>Salva todos os nós filho do nó do <see cref="T:System.Xml.XmlWriter" /> especificado, quando substituído em uma classe derivada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM). É funcionalmente equivalente ao <xref:System.Xml.XmlNode.InnerXml%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o conteúdo do nó raiz para o console.  
+  
+ [!code-cpp[Classic WebData XmlNode.WriteContentTo Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.WriteContentTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.WriteContentTo Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.WriteContentTo Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.WriteContentTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.WriteContentTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public abstract void WriteTo (System.Xml.XmlWriter w);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteTo(class System.Xml.XmlWriter w) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlDocument</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="w">O <see langword="XmlWriter" /> no qual você deseja salvar.</param>
+        <summary>Salva o nó atual especificado <see cref="T:System.Xml.XmlWriter" />, quando substituído em uma classe derivada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma extensão da Microsoft para modelo de objeto de documento (DOM). É funcionalmente equivalente ao <xref:System.Xml.XmlNode.OuterXml%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o nó raiz do console.  
+  
+ [!code-cpp[Classic WebData XmlNode.WriteTo Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlNode.WriteTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlNode.WriteTo Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlNode.WriteTo Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlNode.WriteTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlNode.WriteTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

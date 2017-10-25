@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Mapping">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Mapping" /> namespace fornece acesso para o <see cref="T:System.Data.Mapping.MappingItemCollection" /> e <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> classes.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

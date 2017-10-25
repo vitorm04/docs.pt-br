@@ -1,0 +1,232 @@
+<Type Name="GetFrameworkPath" FullName="Microsoft.Build.Tasks.GetFrameworkPath">
+  <TypeSignature Language="C#" Value="public class GetFrameworkPath : Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GetFrameworkPath extends Microsoft.Build.Tasks.TaskExtension" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.GetFrameworkPath" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.TaskExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa o <c>GetFrameworkPath</c> tarefa. Use o <c>GetFrameworkPath</c> elemento no arquivo de projeto para criar e executar essa tarefa. Para obter informações de uso e de parâmetro, consulte [tarefa GetFrameworkPath](http://msdn.microsoft.com/library/5b7bcdd7-d4a0-442d-af29-8aadb3b10598).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GetFrameworkPath ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GetFrameworkPath.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Tasks.GetFrameworkPath" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.GetFrameworkPath.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna <see langword="true" /> em todos os casos.</summary>
+        <returns>
+          <see langword="true" /> em todos os casos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há nenhuma execução que ocorre para o `GetFrameworkPath` tarefa, em vez disso, a tarefa dá suporte somente obtenção e definição de propriedades.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkVersion11Path">
+      <MemberSignature Language="C#" Value="public string FrameworkVersion11Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkVersion11Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion11Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho da pasta que contém o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 1.1 assemblies.</summary>
+        <value>O caminho da pasta que contém o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 1.1 assemblies.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkVersion20Path">
+      <MemberSignature Language="C#" Value="public string FrameworkVersion20Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkVersion20Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion20Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho da pasta que contém o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 assemblies.</summary>
+        <value>O caminho da pasta que contém o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 assemblies.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkVersion30Path">
+      <MemberSignature Language="C#" Value="public string FrameworkVersion30Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkVersion30Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion30Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho da pasta que contém o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.0 assemblies.</summary>
+        <value>O caminho da pasta que contém o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.0 assemblies.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkVersion35Path">
+      <MemberSignature Language="C#" Value="public string FrameworkVersion35Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkVersion35Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion35Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho da pasta que contém o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 assemblies.</summary>
+        <value>O caminho da pasta que contém o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 assemblies.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkVersion40Path">
+      <MemberSignature Language="C#" Value="public string FrameworkVersion40Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkVersion40Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion40Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caminho para o framework v 4.0, se disponível</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameworkVersion45Path">
+      <MemberSignature Language="C#" Value="public string FrameworkVersion45Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameworkVersion45Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkPath.FrameworkVersion45Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caminho para o framework versão 4.5, se disponível</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.GetFrameworkPath.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho da pasta que contém a versão mais recente do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblies.</summary>
+        <value>O caminho da pasta que contém a versão mais recente do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblies.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

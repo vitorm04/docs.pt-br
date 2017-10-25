@@ -1,0 +1,417 @@
+<Type Name="SubMenuStyleCollection" FullName="System.Web.UI.WebControls.SubMenuStyleCollection">
+  <TypeSignature Language="C#" Value="public class SubMenuStyleCollection : System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SubMenuStyleCollection extends System.Web.UI.StateManagedCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SubMenuStyleCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.StateManagedCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> em um controle <see cref="T:System.Web.UI.WebControls.Menu" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SubMenuStyleCollection> classe é usada para armazenar e gerenciar uma coleção de <xref:System.Web.UI.WebControls.SubMenuStyle> objetos em um <xref:System.Web.UI.WebControls.Menu> controle. O <xref:System.Web.UI.WebControls.Menu> controlar usa o <xref:System.Web.UI.WebControls.SubMenuStyleCollection> classe como o tipo de dados subjacente a <xref:System.Web.UI.WebControls.Menu.LevelSubMenuStyles%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.Menu.LevelSubMenuStyles%2A> propriedade fornece opções de estilo adicionais além do <xref:System.Web.UI.WebControls.Menu.StaticMenuStyle%2A> e <xref:System.Web.UI.WebControls.Menu.DynamicMenuStyle%2A> propriedades. O primeiro estilo no <xref:System.Web.UI.WebControls.SubMenuStyleCollection> coleção corresponde ao estilo submenu para o primeiro nível do menu. O segundo estilo na coleção corresponde ao estilo submenu para o segundo nível do menu e assim por diante. O <xref:System.Web.UI.WebControls.Menu.LevelSubMenuStyles%2A> propriedade geralmente é usada para gerar um menu de navegação, como um mapa de site da Web, onde os itens de menu em um determinado nível devem ter a mesma aparência, independentemente de terem submenus.  
+  
+ O <xref:System.Web.UI.WebControls.SubMenuStyleCollection> maioria de seus membros de classe é herdada de <xref:System.Web.UI.StateManagedCollection> classe. Para obter mais informações sobre os membros herdados, consulte o <xref:System.Web.UI.StateManagedCollection> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.SubMenuStyleCollection> classe para especificar as configurações de estilo dos submenus em um <xref:System.Web.UI.WebControls.Menu> controle com base no nível do submenu. Neste exemplo, o <xref:System.Web.UI.WebControls.Menu.LevelSubMenuStyles%2A> propriedade retorna um <xref:System.Web.UI.WebControls.SubMenuStyleCollection> objeto.  
+  
+ [!code-aspx-csharp[MenuLevelSubMenuStyles#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuLevelSubMenuStyles/CS/menulevelsubmenustylescs.aspx#1)]
+ [!code-aspx-vb[MenuLevelSubMenuStyles#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuLevelSubMenuStyles/VB/menulevelsubmenustylesvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.UI.WebControls.SubMenuStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.UI.WebControls.SubMenuStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyleCollection.Add(System.Web.UI.WebControls.SubMenuStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.WebControls.SubMenuStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">O <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> instância a ser adicionada à coleção.</param>
+        <summary>Adiciona um estilo de submenu a <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção.</summary>
+        <returns>A posição na coleção na qual o <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> instância foi inserida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SubMenuStyleCollection.OnInsert%2A> e <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> métodos são chamados antes do <xref:System.Web.UI.WebControls.SubMenuStyle> instância é adicionada à coleção e o <xref:System.Web.UI.StateManagedCollection.OnInsertComplete%2A> método é chamado após o <xref:System.Web.UI.WebControls.SubMenuStyle> instância é adicionada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.SubMenuStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.SubMenuStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyleCollection.Contains(System.Web.UI.WebControls.SubMenuStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.WebControls.SubMenuStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">O <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> instância a ser localizado no <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção.</param>
+        <summary>Determina se um <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção contém um determinado <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> instância.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> instância for encontrada no <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção; caso contrário, <see langword="false" />. Se <see langword="null" /> é passado como o <paramref name="style" /> parâmetro <see langword="false" /> é retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método é chamado para validar o `style` parâmetro antes do <xref:System.Web.UI.WebControls.SubMenuStyleCollection> coleção é verificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.SubMenuStyle[] styleArray, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.SubMenuStyle[] styleArray, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyleCollection.CopyTo(System.Web.UI.WebControls.SubMenuStyle[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="styleArray" Type="System.Web.UI.WebControls.SubMenuStyle[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="styleArray">A matriz unidimensional que é o destino do <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objetos copiados do <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção. O <c>matriz</c> devem ter a indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia o conteúdo de um <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção para uma matriz, começando em um índice de matriz especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SubMenuStyle> objetos forem copiados para a matriz de destino na mesma ordem em que o enumerador que itera por meio de <xref:System.Web.UI.WebControls.SubMenuStyleCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" />é multidimensional  
+  
+ \- ou -  
+  
+ <paramref name="index" />é maior que ou igual ao comprimento da <paramref name="array" />.  
+  
+ \- ou -  
+  
+ O número de <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objetos na fonte de <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção é maior que o espaço disponível do <paramref name="index" /> até o final do destino <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKnownType">
+      <MemberSignature Language="C#" Value="protected override object CreateKnownType (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object CreateKnownType(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyleCollection.CreateKnownType(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do tipo de dados para criar. Esse parâmetro não for usado nesta implementação do método; Portanto, você sempre deve passar em <see langword="null" />.</param>
+        <summary>Cria um <see cref="T:System.Object" /> do tipo de dados que corresponde ao índice especificado.</summary>
+        <returns>Sempre retorna vazio <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SubMenuStyleCollection.CreateKnownType%2A> método é uma função auxiliar que é usada para criar um <xref:System.Object> do tipo de dados que corresponde ao índice especificado. Geralmente, o índice é determinado por meio de <xref:System.Web.UI.WebControls.SubMenuStyleCollection.GetKnownTypes%2A> método para criar uma matriz de tipos de dados com suporte e, em seguida, pesquisa de matriz para o tipo de dados desejado.  
+  
+ O `index` parâmetro não é usado nesta implementação do método e será ignorado. Você sempre deve passar em `null` para esse parâmetro. Essa implementação do método sempre retornará um elemento <xref:System.Web.UI.WebControls.SubMenuStyle> objeto.  
+  
+> [!NOTE]
+>  Esse método é usado somente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKnownTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] GetKnownTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] GetKnownTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyleCollection.GetKnownTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma matriz de <see cref="T:System.Type" /> objetos que contém os tipos de dados com suporte do <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> classe.</summary>
+        <returns>Uma matriz de <see cref="T:System.Type" /> objetos que contém os tipos de dados com suporte a <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> classe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SubMenuStyleCollection.GetKnownTypes%2A> método é uma função auxiliar que é usada para criar uma matriz de tipos de dados compatíveis com o <xref:System.Web.UI.WebControls.SubMenuStyleCollection> classe. A matriz geralmente é pesquisada para determinar o índice de um tipo de dados desejado. O índice é então passado para o <xref:System.Web.UI.WebControls.SubMenuStyleCollection.CreateKnownType%2A> método para criar um <xref:System.Object?displayProperty=nameWithType> do tipo de dados correspondente.  
+  
+> [!NOTE]
+>  Esse método é usado somente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.SubMenuStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.SubMenuStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyleCollection.IndexOf(System.Web.UI.WebControls.SubMenuStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.WebControls.SubMenuStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">O <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto a ser localizado no <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção.</param>
+        <summary>Determina o local de um especificado <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto o <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção.</summary>
+        <returns>O índice especificado <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto se ele for encontrado na lista; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método é chamado para validar o `style` parâmetro antes do índice é retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.SubMenuStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.SubMenuStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyleCollection.Insert(System.Int32,System.Web.UI.WebControls.SubMenuStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="style" Type="System.Web.UI.WebControls.SubMenuStyle" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual o <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto deve ser inserido.</param>
+        <param name="style">O <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto para inserir o <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção.</param>
+        <summary>Insere um <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto para o <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o índice é -1, `style` é inserido no início de <xref:System.Web.UI.WebControls.SubMenuStyleCollection> coleção. Se o índice é igual ao número de itens na coleção, `style` é acrescentado ao final do <xref:System.Web.UI.WebControls.SubMenuStyleCollection> coleção.  
+  
+ O <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método é chamado para validar o parâmetro de estilo antes de ser adicionado à coleção. O <xref:System.Web.UI.WebControls.SubMenuStyleCollection.OnInsert%2A> método é chamado antes do <xref:System.Web.UI.WebControls.SubMenuStyle> objeto será inserido na coleção e o <xref:System.Web.UI.StateManagedCollection.OnInsertComplete%2A> método é chamado depois que o objeto é inserido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Especificado <paramref name="index" /> está fora do intervalo da coleção.</exception>
+        <exception cref="T:System.NotSupportedException">A coleção <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> é somente leitura.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="style" /> especificado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.SubMenuStyle this[int i] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.SubMenuStyle Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SubMenuStyleCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.SubMenuStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">O local do <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto o <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção.</param>
+        <summary>Obtém uma referência para o <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto no índice especificado no <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> objeto da coleção.</summary>
+        <value>Uma referência ao objeto <see cref="T:System.Web.UI.WebControls.SubMenuStyle" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro de índice é menor que zero ou maior que ou igual a <see cref="P:System.Web.UI.StateManagedCollection.Count" /> o valor da propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected override void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyleCollection.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> devem ser inseridos.</param>
+        <param name="value">O objeto para inserir o <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção.</param>
+        <summary>Chamado antes do <see cref="M:System.Web.UI.WebControls.SubMenuStyleCollection.Add(System.Web.UI.WebControls.SubMenuStyle)" /> e <see cref="M:System.Web.UI.WebControls.SubMenuStyleCollection.Insert(System.Int32,System.Web.UI.WebControls.SubMenuStyle)" /> métodos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SubMenuStyleCollection.OnInsert%2A> método é chamado antes do <xref:System.Web.UI.WebControls.SubMenuStyleCollection.Add%2A> e <xref:System.Web.UI.WebControls.SubMenuStyleCollection.Insert%2A> métodos. Você pode substituir o <xref:System.Web.UI.WebControls.SubMenuStyleCollection.OnInsert%2A> método personalizado <xref:System.Web.UI.WebControls.SubMenuStyleCollection> classes para executar processamento personalizado de <xref:System.Web.UI.WebControls.SubMenuStyle> objetos antes de serem adicionados para o <xref:System.Web.UI.WebControls.SubMenuStyleCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não é do tipo <see cref="T:System.Web.UI.WebControls.SubMenuStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.SubMenuStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.SubMenuStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyleCollection.Remove(System.Web.UI.WebControls.SubMenuStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Web.UI.WebControls.SubMenuStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">O <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto a ser removido da coleção.</param>
+        <summary>Remove a primeira ocorrência do <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> de objeto o <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnValidate%2A> método é chamado para validar o parâmetro de estilo antes que ele é usado para localizar o <xref:System.Web.UI.WebControls.SubMenuStyle> objeto ser removido do <xref:System.Web.UI.WebControls.SubMenuStyleCollection> coleção.  
+  
+ O <xref:System.Web.UI.StateManagedCollection.OnRemove%2A> método é chamado antes do <xref:System.Web.UI.WebControls.SubMenuStyle> objeto for removido e o <xref:System.Web.UI.StateManagedCollection.OnRemoveComplete%2A> método é chamado depois que o objeto é removido do <xref:System.Web.UI.WebControls.SubMenuStyleCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A coleção <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyleCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição do índice com base em zero a <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto a ser removido da coleção.</param>
+        <summary>Remove o <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto no local especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StateManagedCollection.OnRemove%2A> método é chamado antes do <xref:System.Web.UI.WebControls.SubMenuStyle> objeto é removido da coleção e o <xref:System.Web.UI.StateManagedCollection.OnRemoveComplete%2A> método é chamado depois que o objeto é removido do <xref:System.Web.UI.WebControls.SubMenuStyleCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A coleção <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> é somente leitura.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ \- ou -  
+  
+ <paramref name="index" /> é igual a ou maior que <see cref="P:System.Web.UI.StateManagedCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDirtyObject">
+      <MemberSignature Language="C#" Value="protected override void SetDirtyObject (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDirtyObject(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SubMenuStyleCollection.SetDirtyObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto em si deve serializar completamente.</param>
+        <summary>Instrui um <see cref="T:System.Web.UI.WebControls.SubMenuStyle" /> objeto contido pelo <see cref="T:System.Web.UI.WebControls.SubMenuStyleCollection" /> coleção para registrar seu estado inteiro para o estado de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SubMenuStyleCollection.SetDirtyObject%2A> método é chamado internamente pelo <xref:System.Web.UI.IStateManager.SaveViewState%2A>, <xref:System.Web.UI.WebControls.SubMenuStyleCollection.Add%2A>, e <xref:System.Web.UI.WebControls.SubMenuStyleCollection.Insert%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

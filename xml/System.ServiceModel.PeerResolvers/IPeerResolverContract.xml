@@ -1,0 +1,219 @@
+<Type Name="IPeerResolverContract" FullName="System.ServiceModel.PeerResolvers.IPeerResolverContract">
+  <TypeSignature Language="C#" Value="public interface IPeerResolverContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPeerResolverContract" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.IPeerResolverContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.ServiceContract(Name="IPeerResolverContract", Namespace="http://schemas.microsoft.com/net/2006/05/peer/resolver", SessionMode=System.ServiceModel.SessionMode.Allowed)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um contrato para as operações básicas de um serviço resolvedor de pares.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações de serviços do resolvedor de pares personalizado devem considerar a derivação de base<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
+  
+ tipo e substituindo os métodos virtuais definidos nele.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetServiceSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo GetServiceSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo GetServiceSettings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.IPeerResolverContract.GetServiceSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Action="http://schemas.microsoft.com/net/2006/05/peer/resolver/GetServiceSettings", IsOneWay=false, Name="GetServiceInfo", ReplyAction="http://schemas.microsoft.com/net/2006/05/peer/resolver/GetServiceSettingsResponse")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém as configurações para um serviço resolvedor de pares.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.PeerResolvers.ServiceSettingsResponseInfo" />que contém informações sobre o serviço resolvedor de pares.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerResolvers.RefreshResponseInfo Refresh (System.ServiceModel.PeerResolvers.RefreshInfo refreshInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolvers.RefreshResponseInfo Refresh(class System.ServiceModel.PeerResolvers.RefreshInfo refreshInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.IPeerResolverContract.Refresh(System.ServiceModel.PeerResolvers.RefreshInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Action="http://schemas.microsoft.com/net/2006/05/peer/resolver/Refresh", IsOneWay=false, Name="Refresh", ReplyAction="http://schemas.microsoft.com/net/2006/05/peer/resolver/RefreshResponse")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.RefreshResponseInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refreshInfo" Type="System.ServiceModel.PeerResolvers.RefreshInfo" />
+      </Parameters>
+      <Docs>
+        <param name="refreshInfo">
+          <see cref="T:System.ServiceModel.PeerResolvers.RefreshInfo" />objeto que contém a ID de malha e a ID da entrada do registro para atualização na tabela de pesquisa de registro do serviço resolvedor peer.</param>
+        <summary>Atualiza a expiração de uma entrada na tabela de pesquisa de registro do serviço resolvedor peer.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.PeerResolvers.RefreshResponseInfo" />que contém a entrada de registro atualizado recentemente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ "Atualizar" de uma entrada é implementada pela atualização de carimbo de hora de expiração da entrada fornecida. Todas as informações usadas para identificar exclusivamente a entrada devem ser fornecidas no <xref:System.ServiceModel.PeerResolvers.RefreshInfo> objeto fornecido a este método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerResolvers.RegisterResponseInfo Register (System.ServiceModel.PeerResolvers.RegisterInfo registerInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolvers.RegisterResponseInfo Register(class System.ServiceModel.PeerResolvers.RegisterInfo registerInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.IPeerResolverContract.Register(System.ServiceModel.PeerResolvers.RegisterInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Action="http://schemas.microsoft.com/net/2006/05/peer/resolver/Register", IsOneWay=false, Name="Register", ReplyAction="http://schemas.microsoft.com/net/2006/05/peer/resolver/RegisterResponse")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.RegisterResponseInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registerInfo" Type="System.ServiceModel.PeerResolvers.RegisterInfo" />
+      </Parameters>
+      <Docs>
+        <param name="registerInfo">
+          <see cref="T:System.ServiceModel.PeerResolvers.RegisterInfo" />que contém informações sobre o nó par para registrar com o serviço resolvedor de pares.</param>
+        <summary>Registra um nó ponto a ponto com o serviço resolvedor de pares personalizado.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.PeerResolvers.RegisterResponseInfo" />que contém uma cópia da entrada adicionada à tabela de pesquisa de registro do serviço resolvedor peer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para adicionar informações de registro do nó par para a tabela de pesquisa usada pelo serviço resolvedor peer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerResolvers.ResolveResponseInfo Resolve (System.ServiceModel.PeerResolvers.ResolveInfo resolveInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolvers.ResolveResponseInfo Resolve(class System.ServiceModel.PeerResolvers.ResolveInfo resolveInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.IPeerResolverContract.Resolve(System.ServiceModel.PeerResolvers.ResolveInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Action="http://schemas.microsoft.com/net/2006/05/peer/resolver/Resolve", IsOneWay=false, Name="Resolve", ReplyAction="http://schemas.microsoft.com/net/2006/05/peer/resolver/ResolveResponse")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.ResolveResponseInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resolveInfo" Type="System.ServiceModel.PeerResolvers.ResolveInfo" />
+      </Parameters>
+      <Docs>
+        <param name="resolveInfo">
+          <see cref="T:System.ServiceModel.PeerResolvers.ResolveInfo" />que contém informações sobre o nó par para que os pontos de extremidade, se conhecido, devem ser pesquisado com o serviço resolvedor de pares.</param>
+        <summary>Retorna uma lista de pontos de extremidade conhecidos para uma entrada de registro.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.PeerResolvers.ResolveResponseInfo" />que contém os pontos de extremidade para a entrada de registro na tabela de pesquisa que corresponda às informações fornecidas no <paramref name="resolveInfo" /> parâmetro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public void Unregister (System.ServiceModel.PeerResolvers.UnregisterInfo unregisterInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Unregister(class System.ServiceModel.PeerResolvers.UnregisterInfo unregisterInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.IPeerResolverContract.Unregister(System.ServiceModel.PeerResolvers.UnregisterInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Action="http://schemas.microsoft.com/net/2006/05/peer/resolver/Unregister", IsOneWay=false, Name="Unregister")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unregisterInfo" Type="System.ServiceModel.PeerResolvers.UnregisterInfo" />
+      </Parameters>
+      <Docs>
+        <param name="unregisterInfo">
+          <see cref="T:System.ServiceModel.PeerResolvers.UnregisterInfo" />que contém as informações usadas para identificar exclusivamente o nó par para remover a registro da tabela de pesquisa.</param>
+        <summary>Remove um registro da tabela de pesquisa para um serviço resolvedor de pares.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhum valor é retornado por essa operação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerResolvers.RegisterResponseInfo Update (System.ServiceModel.PeerResolvers.UpdateInfo updateInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolvers.RegisterResponseInfo Update(class System.ServiceModel.PeerResolvers.UpdateInfo updateInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.IPeerResolverContract.Update(System.ServiceModel.PeerResolvers.UpdateInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract(Action="http://schemas.microsoft.com/net/2006/05/peer/resolver/Update", IsOneWay=false, Name="Update", ReplyAction="http://schemas.microsoft.com/net/2006/05/peer/resolver/UpdateResponse")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.RegisterResponseInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="updateInfo" Type="System.ServiceModel.PeerResolvers.UpdateInfo" />
+      </Parameters>
+      <Docs>
+        <param name="updateInfo">
+          <see cref="T:System.ServiceModel.PeerResolvers.UpdateInfo" />exclusivamente que identifica um nó ponto a ponto específico e fornece informações atualizadas sobre ele.</param>
+        <summary>Atualiza a entrada de um nó ponto a ponto específico na tabela de pesquisa do serviço resolvedor peer.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.PeerResolvers.UpdateInfo" />que contém uma cópia da entrada do nó par atualizado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,8 @@
+<Namespace Name="System.ServiceModel.Activation.Configuration">
+  <Docs>
+    <summary>Representa as definições de configuração para a ferramenta SMSvcHost.exe.  
+  
+ Esse namespace representa os elementos de configuração que podem ser configurados no arquivo de SMSvcHost.exe. Especificamente, ele inclui todas as configurações de máquina que precisam ser configurados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

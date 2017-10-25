@@ -1,0 +1,45 @@
+<Type Name="IsolatedStorageSecurityOptions" FullName="System.IO.IsolatedStorage.IsolatedStorageSecurityOptions">
+  <TypeSignature Language="C#" Value="public enum IsolatedStorageSecurityOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IsolatedStorageSecurityOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.IsolatedStorage.IsolatedStorageSecurityOptions" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica as opções que afetam a segurança no armazenamento isolado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.IsolatedStorage.IsolatedStorageSecurityState.Options%2A?displayProperty=nameWithType> propriedade obtém esta enumeração para determinar quais operações podem ser executadas no armazenamento isolado.  
+  
+ Um aplicativo host pode substituir o <xref:System.AppDomainManager.CheckSecuritySettings%2A?displayProperty=nameWithType> método para executar as decisões de diretiva com base em um <xref:System.IO.IsolatedStorage.IsolatedStorageSecurityState> do objeto e, em seguida, permitir ou impedir o aumento do tamanho da cota de armazenamento isolado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IncreaseQuotaForApplication">
+      <MemberSignature Language="C#" Value="IncreaseQuotaForApplication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.IsolatedStorage.IsolatedStorageSecurityOptions IncreaseQuotaForApplication = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.IsolatedStorage.IsolatedStorageSecurityOptions.IncreaseQuotaForApplication" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.IsolatedStorage.IsolatedStorageSecurityOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cota pode ser aumentada para o armazenamento isolado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

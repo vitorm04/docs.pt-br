@@ -1,0 +1,418 @@
+<Type Name="TableStyle" FullName="System.Web.UI.WebControls.TableStyle">
+  <TypeSignature Language="C#" Value="public class TableStyle : System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableStyle extends System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TableStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Style</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o estilo para o controle <see cref="T:System.Web.UI.WebControls.Table" /> e alguns Web Parts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TableStyle> classe é usada para representar o estilo de um controle de tabela. Ele encapsula as propriedades que controlam a aparência de uma tabela e podem ser aplicadas a vários controles de tabela para fornecer uma aparência comum.  
+  
+ Você pode especificar uma imagem a ser exibida no plano de fundo da tabela definindo a <xref:System.Web.UI.WebControls.TableStyle.BackImageUrl%2A> propriedade. A quantidade de espaçamento entre as células de uma tabela é controlada pelo <xref:System.Web.UI.WebControls.TableStyle.CellSpacing%2A> propriedade. O espaçamento entre a borda da célula e o conteúdo de uma célula é especificado usando o <xref:System.Web.UI.WebControls.TableStyle.CellPadding%2A> propriedade. Você pode especificar se as bordas de célula são exibidas, definindo o <xref:System.Web.UI.WebControls.TableStyle.GridLines%2A> propriedade. O alinhamento horizontal da tabela em relação a outros elementos na página de Web Forms é indicado pelo <xref:System.Web.UI.WebControls.TableStyle.HorizontalAlign%2A> propriedade.  
+  
+> [!NOTE]
+>  Essa classe é usada principalmente por desenvolvedores de controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Web.UI.WebControls.TableStyle> objeto e, em seguida, usa o <xref:System.Web.UI.WebControls.WebControl.ApplyStyle%2A> método a ser aplicado a uma gerada <xref:System.Web.UI.WebControls.Table> objeto.  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.TableStyle" /> usando valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.TableStyle> classe usando valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableStyle (System.Web.UI.StateBag bag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.StateBag bag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableStyle.#ctor(System.Web.UI.StateBag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bag" Type="System.Web.UI.StateBag" />
+      </Parameters>
+      <Docs>
+        <param name="bag">Um <see cref="T:System.Web.UI.StateBag" /> que representa o recipiente de estado para armazenar informações de estilo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.TableStyle" /> classe com as informações de recipiente de estado especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.TableStyle> classe usando especificado <xref:System.Web.UI.StateBag?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="public override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer, System.Web.UI.WebControls.WebControl owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer, class System.Web.UI.WebControls.WebControl owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableStyle.AddAttributesToRender(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.WebControl" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O fluxo de saída que renderiza o conteúdo HTML para o cliente.</param>
+        <param name="owner">O controle associado com o estilo.</param>
+        <summary>Adiciona informações sobre a imagem de plano de fundo, espaçamento da célula, preenchimento de células, linhas de grade e o alinhamento à lista de atributos a serem renderizados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente por desenvolvedores de controles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string BackImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableStyle.BackImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL de uma imagem para exibir no plano de fundo de um controle de tabela.</summary>
+        <value>A URL de uma imagem para exibir no plano de fundo de um controle de tabela. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableStyle.BackImageUrl%2A> propriedade para especificar a URL de uma imagem para exibir no plano de fundo do controle de tabela.  
+  
+> [!NOTE]
+>  A imagem ficará lado a lado se for menor do que a tabela. Da mesma forma, a imagem é recortada se for maior do que a tabela.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A URL da imagem de plano de fundo foi definida como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CellPadding">
+      <MemberSignature Language="C#" Value="public virtual int CellPadding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CellPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableStyle.CellPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de espaço entre a borda da célula e o conteúdo da célula.</summary>
+        <value>A distância (em pixels) entre a borda da célula e o conteúdo de uma célula. O padrão é <see langword="-1" />, que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableStyle.CellPadding%2A> propriedade para controlar o espaçamento entre o conteúdo de uma célula e a borda da célula. A quantidade de preenchimento especificada é adicionada a todos os quatro lados de uma célula.  
+  
+ Todas as células na mesma coluna de uma lista de controle de dados compartilham a mesma largura da célula. Portanto, se o conteúdo de uma célula é maior que o conteúdo de outras células na mesma coluna, a quantidade de preenchimento é aplicada para a célula mais larga. Todas as outras células na coluna também são definidas com a largura da célula.  
+  
+ Da mesma forma, todas as células na mesma linha compartilham a mesma altura. A quantidade de preenchimento é aplicada para a altura da célula na linha mais alta. Todas as outras células na mesma linha são definidas com a altura da célula. Tamanhos de célula individual não podem ser especificados.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A distância especificada é definida como um valor menor que <see langword="-1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CellSpacing">
+      <MemberSignature Language="C#" Value="public virtual int CellSpacing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CellSpacing" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableStyle.CellSpacing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância entre as células de tabela.</summary>
+        <value>A distância (em pixels) entre as células de tabela. O padrão é <see langword="-1" />, que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableStyle.CellSpacing%2A> propriedade para controlar o espaçamento entre as células adjacentes em uma lista de controle de dados. É aplicado a este espaçamento vertical e horizontalmente. O espaçamento da célula é uniforme para o controle de lista de dados inteiro. Espaçamento da célula individuais entre cada linha ou coluna não pode ser especificado.  
+  
+> [!NOTE]
+>  Se você definir essa propriedade como um valor maior que `0` e defina o <xref:System.Web.UI.WebControls.TableStyle.GridLines%2A> propriedade para um valor que exibe as bordas da célula, um espaço é exibido entre as bordas das células adjacentes. Nessa situação, o <xref:System.Web.UI.WebControls.TableStyle.CellSpacing%2A> propriedade controla o tamanho do espaço.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A distância especificada é definida como um valor menor que <see langword="-1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableStyle.CopyFrom(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">O estilo a copiar.</param>
+        <summary>Elementos de linha em branco cópias do estilo especificado, substituindo os elementos de estilo existentes, se necessário.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillStyleAttributes">
+      <MemberSignature Language="C#" Value="protected override void FillStyleAttributes (System.Web.UI.CssStyleCollection attributes, System.Web.UI.IUrlResolutionService urlResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void FillStyleAttributes(class System.Web.UI.CssStyleCollection attributes, class System.Web.UI.IUrlResolutionService urlResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableStyle.FillStyleAttributes(System.Web.UI.CssStyleCollection,System.Web.UI.IUrlResolutionService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Web.UI.CssStyleCollection" />
+        <Parameter Name="urlResolver" Type="System.Web.UI.IUrlResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">O <see cref="T:System.Web.UI.CssStyleCollection" /> ao qual adicionar as propriedades de estilo.</param>
+        <param name="urlResolver">Um objeto implementado pelo <see cref="T:System.Web.UI.IUrlResolutionService" /> que contém as informações de contexto para o local atual (URL).</param>
+        <summary>Adiciona as propriedades de estilo de <see cref="T:System.Web.UI.WebControls.TableStyle" /> objeto especificado <see cref="T:System.Web.UI.CssStyleCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableStyle.FillStyleAttributes%2A> método para adicionar as propriedades de estilo de <xref:System.Web.UI.WebControls.TableStyle> objeto especificado <xref:System.Web.UI.CssStyleCollection?displayProperty=nameWithType> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridLines">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.GridLines GridLines { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.GridLines GridLines" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableStyle.GridLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.GridLines</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se a borda entre as células do controle de tabela é exibida.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.GridLines" />. O padrão é <see langword="Both" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableStyle.GridLines%2A> propriedade para especificar se a borda entre as células do controle de lista de dados é exibida. Essa propriedade é definida com uma da <xref:System.Web.UI.WebControls.GridLines> valores de enumeração. A tabela a seguir lista os valores possíveis.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|<xref:System.Web.UI.WebControls.GridLines.None>|Nenhuma borda é exibida.|  
+|<xref:System.Web.UI.WebControls.GridLines.Horizontal>|Apenas as bordas superiores e inferiores das células no controle de lista de dados são exibidas.|  
+|<xref:System.Web.UI.WebControls.GridLines.Vertical>|Apenas as bordas esquerdas e direita das células no controle de lista de dados são exibidas.|  
+|<xref:System.Web.UI.WebControls.GridLines.Both>|Todas as bordas das células no controle de lista de dados são exibidas.|  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor especificado não é um dos valores de enumeração de <see cref="T:System.Web.UI.WebControls.GridLines" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.HorizontalAlign HorizontalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.HorizontalAlign HorizontalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableStyle.HorizontalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HorizontalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento horizontal da tabela dentro do respectivo contêiner.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.HorizontalAlign" />. O padrão é <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableStyle.HorizontalAlign%2A> propriedade para especificar o alinhamento horizontal do controle de lista de dados dentro do respectivo contêiner. Essa propriedade é definida com uma da <xref:System.Web.UI.WebControls.HorizontalAlign> valores de enumeração. A tabela a seguir lista os valores possíveis.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.NotSet>|O alinhamento horizontal não foi definido.|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.Left>|A tabela é justificado à esquerda do respectivo contêiner.|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.Center>|A tabela é centralizada dentro do respectivo contêiner.|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.Right>|A tabela é justificado à direita do respectivo contêiner.|  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O alinhamento horizontal especificado não é um do <see cref="T:System.Web.UI.WebControls.HorizontalAlign" /> valores de enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeWith">
+      <MemberSignature Language="C#" Value="public override void MergeWith (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MergeWith(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableStyle.MergeWith(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">O estilo a copiar.</param>
+        <summary>Elementos de linha em branco de cópias do estilo especificado, mas será não substituição os elementos de estilo existentes.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableStyle.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa os elementos de estilo definidas do estilo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Limpa os elementos de estilo definidas e deixa o estilo no estado padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

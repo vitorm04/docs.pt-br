@@ -1,0 +1,993 @@
+<Type Name="OpenTypeMethods" FullName="System.Data.Services.Providers.OpenTypeMethods">
+  <TypeSignature Language="C#" Value="public static class OpenTypeMethods" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit OpenTypeMethods extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Providers.OpenTypeMethods" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado para executar operações de associação tardia em abrir as propriedades.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada quando você implementar um provedor de serviços de dados personalizados para [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static object Add (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Add(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Add(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">Primeiro valor a ser adicionado.</param>
+        <param name="right">Segundo valor a ser adicionado.</param>
+        <summary>Adiciona dois valores.</summary>
+        <returns>O resultado da operação aritmética.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.OpenTypeMethods.Add%2A> método adiciona dois valores sem verificação de estouro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AndAlso">
+      <MemberSignature Language="C#" Value="public static object AndAlso (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object AndAlso(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.AndAlso(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">Valor à esquerda.</param>
+        <param name="right">Valor à direita.</param>
+        <summary>Executa uma operação lógica <see langword="and" /> operação entre duas expressões.</summary>
+        <returns>O resultado da lógica <see langword="and" /> operação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ceiling">
+      <MemberSignature Language="C#" Value="public static object Ceiling (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Ceiling(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Ceiling(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Decimal" /> ou <see cref="T:System.Double" /> objeto.</param>
+        <summary>Retorna o teto do valor especificado.</summary>
+        <returns>O valor de limite para o valor especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Concat">
+      <MemberSignature Language="C#" Value="public static object Concat (object first, object second);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Concat(object first, object second) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Concat(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="first" Type="System.Object" />
+        <Parameter Name="second" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="first">A primeira cadeia de caracteres.</param>
+        <param name="second">A segunda cadeia de caracteres.</param>
+        <summary>Concatena dois valores de cadeia de caracteres.</summary>
+        <returns>Uma nova instância que é a cadeia de caracteres concatenada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public static object Convert (object value, System.Data.Services.Providers.ResourceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Convert(object value, class System.Data.Services.Providers.ResourceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Convert(System.Object,System.Data.Services.Providers.ResourceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Data.Services.Providers.ResourceType" />
+      </Parameters>
+      <Docs>
+        <param name="value">Valor a ser convertido.</param>
+        <param name="type">Tipo de recurso para a conversão.</param>
+        <summary>Converte um valor para o tipo especificado.</summary>
+        <returns>O valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.OpenTypeMethods.Convert%2A> método é usado para executar um tipo de conversão em especificado `value`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Day">
+      <MemberSignature Language="C#" Value="public static object Day (object dateTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Day(object dateTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Day(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dateTime" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dateTime">Um objeto <see cref="T:System.DateTime" />.</param>
+        <summary>Retorna o valor de dia da determinado <see cref="T:System.DateTime" /> instância.</summary>
+        <returns>O valor de dia da determinado <see cref="T:System.DateTime" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Divide">
+      <MemberSignature Language="C#" Value="public static object Divide (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Divide(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Divide(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro valor (dividendo).</param>
+        <param name="right">O segundo valor (divisor).</param>
+        <summary>Divide dois valores.</summary>
+        <returns>O valor dividido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndsWith">
+      <MemberSignature Language="C#" Value="public static object EndsWith (object targetString, object substring);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object EndsWith(object targetString, object substring) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.EndsWith(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetString" Type="System.Object" />
+        <Parameter Name="substring" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetString">A cadeia de caracteres que estão sendo comparada.</param>
+        <param name="substring">A cadeia de caracteres com a qual comparar.</param>
+        <summary>Determina se o final de uma cadeia de caracteres corresponde a outra cadeia de caracteres.</summary>
+        <returns>Retorna <see langword="true" /> quando <paramref name="targetString" /> termina com <paramref name="substring" />; caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um erro é gerado quando os parâmetros não são cadeias de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equal">
+      <MemberSignature Language="C#" Value="public static object Equal (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Equal(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Equal(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro objeto a ser comparado.</param>
+        <param name="right">O segundo objeto a ser comparado.</param>
+        <summary>Determina se os objetos especificados são considerados iguais.</summary>
+        <returns>Um <see cref="T:System.Boolean" /> valor <see langword="true" /> quando os dois objetos forem iguais; caso contrário <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Floor">
+      <MemberSignature Language="C#" Value="public static object Floor (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Floor(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Floor(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Decimal" /> ou <see cref="T:System.Double" /> objeto para avaliar.</param>
+        <summary>Retorna a base do valor especificado.</summary>
+        <returns>Retorna o valor de base para o objeto fornecido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public static object GetValue (object value, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetValue(object value, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.GetValue(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto do qual obter o valor da propriedade.</param>
+        <param name="propertyName">Nome da propriedade da qual obter o valor.</param>
+        <summary>Obtém um valor da propriedade especificada de um objeto especificado.</summary>
+        <returns>O valor solicitado; <see langword="null" /> se o valor não pode ser determinado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThan">
+      <MemberSignature Language="C#" Value="public static object GreaterThan (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GreaterThan(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.GreaterThan(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro valor.</param>
+        <param name="right">O segundo valor.</param>
+        <summary>Determina se o valor de um objeto é maior que o outro objeto.</summary>
+        <returns>Retorna <see langword="true" /> quando o valor do primeiro objeto é maior do que o segundo objeto; caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GreaterThanOrEqual">
+      <MemberSignature Language="C#" Value="public static object GreaterThanOrEqual (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GreaterThanOrEqual(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.GreaterThanOrEqual(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro valor.</param>
+        <param name="right">O segundo valor.</param>
+        <summary>Determina se o valor de um objeto é maior que ou igual a outro objeto.</summary>
+        <returns>Retorna <see langword="true" /> quando o valor do primeiro objeto é maior que ou igual do segundo objeto; caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hour">
+      <MemberSignature Language="C#" Value="public static object Hour (object dateTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Hour(object dateTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Hour(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dateTime" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dateTime">Um objeto <see cref="T:System.DateTime" />.</param>
+        <summary>Retorna o valor de hora a determinado <see cref="T:System.DateTime" /> instância.</summary>
+        <returns>O valor de hora a determinado <see cref="T:System.DateTime" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public static object IndexOf (object targetString, object substring);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object IndexOf(object targetString, object substring) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.IndexOf(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetString" Type="System.Object" />
+        <Parameter Name="substring" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetString">A cadeia de caracteres de destino.</param>
+        <param name="substring">A subcadeia de caracteres para localizar.</param>
+        <summary>Retorna o índice de uma subcadeia de caracteres na cadeia de caracteres de destino.</summary>
+        <returns>Retorna o índice do local de <paramref name="substring" /> no <paramref name="targetString" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.OpenTypeMethods.IndexOf%2A> método retorna um valor nulo quando `substring` não foi encontrado no `targetString`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public static object Length (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Length(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Length(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser verificada.</param>
+        <summary>Obtém o número de caracteres no objeto de cadeia de caracteres fornecida.</summary>
+        <returns>O comprimento do valor de cadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um erro é gerado quando fornecido `value` não é do tipo <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThan">
+      <MemberSignature Language="C#" Value="public static object LessThan (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object LessThan(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.LessThan(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro valor.</param>
+        <param name="right">O segundo valor.</param>
+        <summary>Determina se o valor de um objeto é menor que outro objeto.</summary>
+        <returns>Retorna <see langword="true" /> quando o valor do primeiro objeto é menor do que o segundo objeto; caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LessThanOrEqual">
+      <MemberSignature Language="C#" Value="public static object LessThanOrEqual (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object LessThanOrEqual(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.LessThanOrEqual(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro valor.</param>
+        <param name="right">O segundo valor.</param>
+        <summary>Determina se o valor de um objeto é menor ou igual a outro objeto.</summary>
+        <returns>Retorna <see langword="true" /> quando o valor do primeiro objeto é menor ou igual a que o segundo objeto; caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minute">
+      <MemberSignature Language="C#" Value="public static object Minute (object dateTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Minute(object dateTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Minute(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dateTime" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dateTime">Um objeto <see cref="T:System.DateTime" />.</param>
+        <summary>Retorna o valor de minuto do determinado <see cref="T:System.DateTime" /> instância.</summary>
+        <returns>O valor de minuto do determinado <see cref="T:System.DateTime" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modulo">
+      <MemberSignature Language="C#" Value="public static object Modulo (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Modulo(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Modulo(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro valor (dividendo).</param>
+        <param name="right">O segundo valor (divisor).</param>
+        <summary>Calcula o restante aritmético de dividir um valor por um segundo valor.</summary>
+        <returns>O valor restante.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Month">
+      <MemberSignature Language="C#" Value="public static object Month (object dateTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Month(object dateTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Month(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dateTime" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dateTime">Um objeto <see cref="T:System.DateTime" />.</param>
+        <summary>Retorna o valor de mês da determinado <see cref="T:System.DateTime" /> instância.</summary>
+        <returns>O valor de mês da determinado <see cref="T:System.DateTime" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public static object Multiply (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Multiply(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Multiply(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro valor.</param>
+        <param name="right">O segundo valor.</param>
+        <summary>Multiplica dois valores.</summary>
+        <returns>O produto dos dois valores.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.OpenTypeMethods.Multiply%2A> método multiplica dois valores sem verificação de estouro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Negate">
+      <MemberSignature Language="C#" Value="public static object Negate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Negate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Negate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser negado.</param>
+        <summary>Retorna o resultado da multiplicação do valor especificado por um negativo.</summary>
+        <returns>O produto de <paramref name="value" /> multiplicado por um negativo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Not">
+      <MemberSignature Language="C#" Value="public static object Not (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Not(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Not(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Valor para complementar logicamente.</param>
+        <summary>Executa uma operação de complemento bit a bit de (lógicos) em que o valor fornecido.</summary>
+        <returns>Um complemento bit a bit do valor fornecido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotEqual">
+      <MemberSignature Language="C#" Value="public static object NotEqual (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object NotEqual(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.NotEqual(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro valor.</param>
+        <param name="right">O segundo valor.</param>
+        <summary>Executa uma comparação lógica entre dois valores para determinar se elas não forem iguais.</summary>
+        <returns>Um <see cref="T:System.Boolean" /> valor <see langword="true" /> quando ambos os objetos não forem iguais; caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrElse">
+      <MemberSignature Language="C#" Value="public static object OrElse (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object OrElse(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.OrElse(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro valor.</param>
+        <param name="right">O segundo valor.</param>
+        <summary>Executa uma operação lógica <see langword="OR" /> operação dois valores.</summary>
+        <returns>O resultado da lógica <see langword="OR" /> operação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="public static object Replace (object targetString, object substring, object newString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Replace(object targetString, object substring, object newString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Replace(System.Object,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetString" Type="System.Object" />
+        <Parameter Name="substring" Type="System.Object" />
+        <Parameter Name="newString" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetString">A cadeia de caracteres com a subcadeia de caracteres para substituir.</param>
+        <param name="substring">A subcadeia de caracteres a ser substituído.</param>
+        <param name="newString">A subcadeia de caracteres de novo.</param>
+        <summary>Substitui uma subcadeia de caracteres com uma segunda subcadeia de caracteres em uma cadeia de caracteres de destino.</summary>
+        <returns>Uma nova cadeia de caracteres com a subcadeia de caracteres que substituirá a subcadeia de caracteres de novo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Round">
+      <MemberSignature Language="C#" Value="public static object Round (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Round(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Round(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Decimal" /> ou <see cref="T:System.Double" /> para arredondar.</param>
+        <summary>Arredonda o valor fornecido.</summary>
+        <returns>O valor arredondado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Second">
+      <MemberSignature Language="C#" Value="public static object Second (object dateTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Second(object dateTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Second(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dateTime" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dateTime">Um objeto <see cref="T:System.DateTime" />.</param>
+        <summary>Retorna o segundo valor da determinado <see cref="T:System.DateTime" /> instância.</summary>
+        <returns>O segundo valor da determinado <see cref="T:System.DateTime" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartsWith">
+      <MemberSignature Language="C#" Value="public static object StartsWith (object targetString, object substring);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object StartsWith(object targetString, object substring) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.StartsWith(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetString" Type="System.Object" />
+        <Parameter Name="substring" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetString">A cadeia de caracteres que estão sendo comparada.</param>
+        <param name="substring">A subcadeia de caracteres que o <c>targetString</c> pode iniciar.</param>
+        <summary>Verifica se a cadeia de caracteres de destino começa com a subcadeia de caracteres.</summary>
+        <returns>Retorna <see langword="true" /> se a cadeia de caracteres de destino começa com a subcadeia de caracteres especificada, caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Substring">
+      <MemberSignature Language="C#" Value="public static object Substring (object targetString, object startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Substring(object targetString, object startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Substring(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetString" Type="System.Object" />
+        <Parameter Name="startIndex" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetString">A cadeia de caracteres da qual a subcadeia de caracteres de retorno.</param>
+        <param name="startIndex">O índice inicial para a subcadeia de caracteres.</param>
+        <summary>Retorna a subcadeia de caracteres após o local de índice inicial especificado.</summary>
+        <returns>A subcadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.OpenTypeMethods.Substring%2A> método retorna todos os caracteres de `startIndex` até o término do `targetString`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Substring">
+      <MemberSignature Language="C#" Value="public static object Substring (object targetString, object startIndex, object length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Substring(object targetString, object startIndex, object length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Substring(System.Object,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetString" Type="System.Object" />
+        <Parameter Name="startIndex" Type="System.Object" />
+        <Parameter Name="length" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetString">A cadeia de caracteres da qual a subcadeia de caracteres de retorno.</param>
+        <param name="startIndex">O índice inicial para a subcadeia de caracteres.</param>
+        <param name="length">O tamanho da subcadeia.</param>
+        <summary>Retorna a subcadeia de caracteres de um determinado período após o local de índice inicial especificado.</summary>
+        <returns>A subcadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.OpenTypeMethods.Substring%2A> método retorna o `length` número de caracteres de `startIndex` até o término do `targetString`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubstringOf">
+      <MemberSignature Language="C#" Value="public static object SubstringOf (object substring, object targetString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object SubstringOf(object substring, object targetString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.SubstringOf(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="substring" Type="System.Object" />
+        <Parameter Name="targetString" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="substring">A subcadeia de caracteres a ser localizado.</param>
+        <param name="targetString">A cadeia de caracteres a ser pesquisada.</param>
+        <summary>Determina se uma subcadeia de caracteres ocorre em outra cadeia de caracteres.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="substring" /> ocorre em <paramref name="targetString" />, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static object Subtract (object left, object right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Subtract(object left, object right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Subtract(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Object" />
+        <Parameter Name="right" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="left">Primeiro valor de subtração.</param>
+        <param name="right">O segundo valor na subtração.</param>
+        <summary>Subtrai dois valores.</summary>
+        <returns>O resultado da operação aritmética.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToLower">
+      <MemberSignature Language="C#" Value="public static object ToLower (object targetString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToLower(object targetString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.ToLower(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetString" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetString">A cadeia de caracteres a ser convertida.</param>
+        <summary>Retorna uma cópia de uma cadeia de caracteres convertida em minúsculas.</summary>
+        <returns>Um novo valor de cadeia de caracteres com letras minúsculas apenas.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUpper">
+      <MemberSignature Language="C#" Value="public static object ToUpper (object targetString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ToUpper(object targetString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.ToUpper(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetString" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetString">A cadeia de caracteres a ser convertida.</param>
+        <summary>Retorna uma cópia de uma cadeia de caracteres convertida em maiusculas.</summary>
+        <returns>Um novo valor de cadeia de caracteres com somente caracteres maiusculos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trim">
+      <MemberSignature Language="C#" Value="public static object Trim (object targetString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Trim(object targetString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Trim(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetString" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targetString">A cadeia de caracteres para cortar.</param>
+        <summary>Remove todos os caracteres de espaço em branco à esquerda e à direita de uma cadeia de caracteres.</summary>
+        <returns>A cadeia de caracteres cortada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeIs">
+      <MemberSignature Language="C#" Value="public static object TypeIs (object value, System.Data.Services.Providers.ResourceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object TypeIs(object value, class System.Data.Services.Providers.ResourceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.TypeIs(System.Object,System.Data.Services.Providers.ResourceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Data.Services.Providers.ResourceType" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor para verificar.</param>
+        <param name="type">Tipo de recurso para o qual verificar.</param>
+        <summary>Verifica se o tipo de um valor especificado.</summary>
+        <returns>Um <see cref="T:System.Boolean" /> valor que é <see langword="true" /> quando o valor é do tipo de recurso especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Year">
+      <MemberSignature Language="C#" Value="public static object Year (object dateTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Year(object dateTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.OpenTypeMethods.Year(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dateTime" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dateTime">Um objeto <see cref="T:System.DateTime" />.</param>
+        <summary>Retorna o valor de ano da determinado <see cref="T:System.DateTime" /> instância.</summary>
+        <returns>O valor de ano da determinado <see cref="T:System.DateTime" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

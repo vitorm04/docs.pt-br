@@ -1,0 +1,87 @@
+<Type Name="SqlAuthenticationMethod" FullName="System.Data.SqlClient.SqlAuthenticationMethod">
+  <TypeSignature Language="C#" Value="public enum SqlAuthenticationMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SqlAuthenticationMethod extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlAuthenticationMethod" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve os diferentes métodos de autenticação SQL que podem ser usados por um cliente que se conecta ao Banco de Dados SQL do Azure. Para obter detalhes, consulte [se conectar ao SQL banco de dados, usando o Azure Active Directory Authentication](/azure/sql-database/sql-database-aad-authentication).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActiveDirectoryIntegrated">
+      <MemberSignature Language="C#" Value="ActiveDirectoryIntegrated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlAuthenticationMethod ActiveDirectoryIntegrated = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryIntegrated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlAuthenticationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O método de autenticação usa o Active Directory Integrated. Use o Active Directory Integrated para se conectar ao Banco de Dados SQL usando a autenticação integrada do Windows.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveDirectoryPassword">
+      <MemberSignature Language="C#" Value="ActiveDirectoryPassword" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlAuthenticationMethod ActiveDirectoryPassword = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryPassword" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlAuthenticationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O método de autenticação usa a Senha do Active Directory. Use a Senha do Active Directory para se conectar ao Banco de Dados SQL usando um nome de entidade de segurança e uma senha do Azure AD.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSpecified">
+      <MemberSignature Language="C#" Value="NotSpecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlAuthenticationMethod NotSpecified = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlAuthenticationMethod.NotSpecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlAuthenticationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O método de autenticação não foi especificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlPassword">
+      <MemberSignature Language="C#" Value="SqlPassword" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.SqlClient.SqlAuthenticationMethod SqlPassword = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlAuthenticationMethod.SqlPassword" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.SqlAuthenticationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O método de autenticação é a Senha do SQL.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

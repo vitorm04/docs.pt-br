@@ -1,0 +1,169 @@
+<Type Name="IisTraceWebEventProvider" FullName="System.Web.Management.IisTraceWebEventProvider">
+  <TypeSignature Language="C#" Value="public sealed class IisTraceWebEventProvider : System.Web.Management.WebEventProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IisTraceWebEventProvider extends System.Web.Management.WebEventProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.IisTraceWebEventProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.WebEventProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um provedor de eventos que roteia eventos de rastreamento do ASP.NET para a infraestrutura do IIS 7.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permite que os administradores gerenciem de monitoramento de integridade ASP.NET implantado aplicativos da Web. O <xref:System.Web.Management> namespace contém os tipos de evento que obtêm dados de status de integridade e os tipos de provedor que processam dados. Ele também contém suporte a tipos que ajudam você gerenciam eventos de integridade.  
+  
+ O <xref:System.Web.Management.IisTraceWebEventProvider> classe é um provedor de evento de integridade personalizado que processa eventos de rastreamento do ASP.NET, roteá-los por meio de [!INCLUDE[iisver](~/includes/iisver-md.md)] infra-estrutura de rastreamento. Este roteamento ocorre somente quando o rastreamento está habilitado no ASP.NET.  
+  
+ <xref:System.Web.Management.IisTraceWebEventProvider>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+> [!NOTE]
+>  Essa classe não encaminhar [!INCLUDE[iisver](~/includes/iisver-md.md)] eventos da página de eventos de rastreamento em ASP.NET.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IisTraceWebEventProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.IisTraceWebEventProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Management.IisTraceWebEventProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.IisTraceWebEventProvider.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo ASP.NET.  
+  
+ <xref:System.Web.Management.IisTraceWebEventProvider.%23ctor%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.IisTraceWebEventProvider.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Move os eventos de buffer do provedor para o log de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando este método é chamado, todos os eventos no buffer imediatamente são movidos do buffer para o log de eventos. Isso ocorre independentemente de quanto tempo decorrido desde o último evento foi gravado ou quantos eventos no buffer. A hora do último evento gravado é redefinida para o tempo da ação de liberação.  
+  
+ <xref:System.Web.Management.IisTraceWebEventProvider.Flush%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.IisTraceWebEventProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do provedor conforme especificado no sistema de configuração.</param>
+        <param name="config">Uma coleção que contém os valores de inicialização que são especificados no sistema de configuração.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Management.IisTraceWebEventProvider" /> com os dados que é necessários para processar eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.IisTraceWebEventProvider.Initialize%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessEvent">
+      <MemberSignature Language="C#" Value="public override void ProcessEvent (System.Web.Management.WebBaseEvent eventRaised);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ProcessEvent(class System.Web.Management.WebBaseEvent eventRaised) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.IisTraceWebEventProvider.ProcessEvent(System.Web.Management.WebBaseEvent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventRaised" Type="System.Web.Management.WebBaseEvent" />
+      </Parameters>
+      <Docs>
+        <param name="eventRaised">O objeto para processar.</param>
+        <summary>Processa o evento que foi passado para o provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Management.IisTraceWebEventProvider.ProcessEvent%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public override void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.IisTraceWebEventProvider.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa as tarefas que estão associadas com o desligamento do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método realiza tarefas que permitem que o aplicativo terminar normalmente. Um exemplo de uma tarefa está fechando recursos.  
+  
+ <xref:System.Web.Management.IisTraceWebEventProvider.Shutdown%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

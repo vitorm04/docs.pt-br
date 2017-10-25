@@ -1,0 +1,76 @@
+<Type Name="MediaEntryAttribute" FullName="System.Data.Services.Client.MediaEntryAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MediaEntryAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MediaEntryAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.MediaEntryAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Significa que a classe especificada é tratado como uma mídia de entrada do link.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe é tratada como entrada, que é um protocolo de AtomPub para lidar com dados binários e os metadados sobre os dados binários de link de uma mídia.  
+  
+ Um tipo marcado com esse atributo tiver alterado o comportamento quando <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> é chamado. A propriedade de mídia também é chamada de um recurso de mídia. Em Salvar, a propriedade de mídia do tipo indicado pelo <xref:System.Data.Services.Client.MediaEntryAttribute.MediaMemberName%2A> propriedade, será inserido por uma solicitação POST para o URI `/<EntitySet>/$value`.  
+  
+ Após o `POST`, um `PUT` solicitação com todas as propriedades do tipo que o <xref:System.Data.Services.Client.MediaEntryAttribute.MediaMemberName%2A> propriedade, que é o conteúdo binário, são enviados para o URI `/<EntitySet>(<key>)`.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaEntryAttribute (string mediaMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string mediaMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.MediaEntryAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mediaMemberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mediaMemberName">Um valor de cadeia de caracteres que identifica a propriedade que contém os dados de mídia.</param>
+        <summary>Cria uma nova instância de <see cref="T:System.Data.Services.Client.MediaEntryAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaMemberName">
+      <MemberSignature Language="C#" Value="public string MediaMemberName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MediaMemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.MediaEntryAttribute.MediaMemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome da propriedade na classe que contém a mídia, os dados binários normalmente.</summary>
+        <value>Um valor de cadeia de caracteres que identifica a propriedade que contém os dados de mídia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

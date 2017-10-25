@@ -1,0 +1,86 @@
+<Type Name="TreeViewDrawMode" FullName="System.Windows.Forms.TreeViewDrawMode">
+  <TypeSignature Language="C#" Value="public enum TreeViewDrawMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TreeViewDrawMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeViewDrawMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define constantes que representam as possíveis formas de desenhar um <see cref="T:System.Windows.Forms.TreeView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelo <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType> propriedade para indicar se os nós ou rótulos do nó de um <xref:System.Windows.Forms.TreeView> são desenhados pelo proprietário. Para obter mais informações, consulte o <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como personalizar um <xref:System.Windows.Forms.TreeView> controlar usando a capacidade de desenho do proprietário. O <xref:System.Windows.Forms.TreeView> controle no exemplo exibe marcas de nó opcional junto com os rótulos de nó padrão. Marcas de nó são especificadas usando o <xref:System.Windows.Forms.TreeNode.Tag%2A?displayProperty=nameWithType> propriedade. O <xref:System.Windows.Forms.TreeView> controle também usa cores personalizadas, incluindo uma cor de realce personalizadas.  
+  
+ Você pode personalizar a maioria do <xref:System.Windows.Forms.TreeView> cores definindo propriedades de cores, mas a cor de realce de seleção não está disponível como uma propriedade. Além disso, o retângulo de realce de seleção padrão estende-se apenas ao redor de um rótulo de nó. Desenho proprietário deve ser usado para desenhar as marcas de nó e desenhar um retângulo de realce personalizada grande o suficiente para incluir uma marca de nó.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType> tópico de referência.  
+  
+ [!code-cpp[TreeViewOwnerDraw#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewOwnerDraw/CPP/treeviewownerdraw.cpp#2)]
+ [!code-csharp[TreeViewOwnerDraw#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewOwnerDraw/CS/treeviewownerdraw.cs#2)]
+ [!code-vb[TreeViewOwnerDraw#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewOwnerDraw/VB/treeviewownerdraw.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeViewDrawMode Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeViewDrawMode.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeViewDrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Forms.TreeView" /> é desenhado pelo sistema operacional.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDrawAll">
+      <MemberSignature Language="C#" Value="OwnerDrawAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeViewDrawMode OwnerDrawAll = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeViewDrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todos os elementos de um nó <see cref="T:System.Windows.Forms.TreeView" /> são desenhados manualmente, incluindo ícones, caixas de seleção, sinais de adição e subtração e linhas que conectam os nós.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDrawText">
+      <MemberSignature Language="C#" Value="OwnerDrawText" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TreeViewDrawMode OwnerDrawText = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeViewDrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A parte do rótulo dos nós <see cref="T:System.Windows.Forms.TreeView" /> são desenhados manualmente. Outros elementos de nó são desenhados pelo sistema operacional, incluindo ícones, caixas de seleção, sinais de adição e subtração e linhas que conectam os nós.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

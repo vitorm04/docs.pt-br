@@ -1,0 +1,97 @@
+<Type Name="IObjectReference" FullName="System.Runtime.Serialization.IObjectReference">
+  <TypeSignature Language="C#" Value="public interface IObjectReference" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IObjectReference" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.IObjectReference" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que o implementador da interface atual é uma referência a outro objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[IObjectReference Interface Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IObjectReference Interface Example/CPP/iobjectreference.cpp#1)]
+ [!code-csharp[IObjectReference Interface Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IObjectReference Interface Example/CS/iobjectreference.cs#1)]
+ [!code-vb[IObjectReference Interface Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IObjectReference Interface Example/VB/iobjectreference.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Implemente essa interface em objetos que fazem referências a um objeto diferente, que não pode ser resolvida até que o objeto atual seja completamente restaurado. Durante a fase de correção, qualquer objeto que implementa <see cref="T:System.Runtime.Serialization.IObjectReference" /> é consultado para seu real desse objeto e é inserido no gráfico. Correção refere-se ao processo de finalização referências que ainda não foi concluídas durante o processo de desserialização do objeto.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="GetRealObject">
+      <MemberSignature Language="C#" Value="public object GetRealObject (System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetRealObject(valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.IObjectReference.GetRealObject(System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> do qual o objeto atual é desserializado.</param>
+        <summary>Retorna o objeto real que deve ser desserializado, em vez do objeto que especifica o fluxo serializado.</summary>
+        <returns>Retorna o objeto real que é colocado no gráfico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é útil em uma situação de comunicação remota onde você serializar um objeto do criador de proxy, não é um objeto real. Quando o objeto de proxy de criador é desserializado, chamadas de desserialização seu <xref:System.Runtime.Serialization.IObjectReference.GetRealObject%2A> método. Neste ponto, o objeto de proxy criador cria uma nova instância do objeto proxy que faz referência a objeto real original, talvez em um computador remoto. Por fim, o objeto de proxy de criador é descartado e posteriormente recuperado pela coleta de lixo.  
+  
+ Por exemplo, considere como <xref:System.Type> objetos são serializados. Em vez de transmitir os dados a partir de <xref:System.Type> do objeto, o sistema transmite um objeto reservado com o nome do objeto do tipo e informações sobre o assembly em que ele é encontrado em um objeto que implementa <xref:System.Runtime.Serialization.IObjectReference>. Quando o nome do tipo e o nome do assembly estão disponíveis, a infraestrutura de desserialização chama <xref:System.Runtime.Serialization.IObjectReference.GetRealObject%2A> no objeto proprietário que foram transmitido. Esse suporte para retornar o <xref:System.Type> objeto que é inserido no gráfico.  
+  
+ Esse método é protegido por um <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> para o <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> especificado.  
+  
+   
+  
+## Examples  
+ [!code-cpp[IObjectReference Interface Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IObjectReference Interface Example/CPP/iobjectreference.cpp#1)]
+ [!code-csharp[IObjectReference Interface Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IObjectReference Interface Example/CS/iobjectreference.cs#1)]
+ [!code-vb[IObjectReference Interface Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IObjectReference Interface Example/VB/iobjectreference.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária. A chamada não funcionará em um servidor de confiança médio.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

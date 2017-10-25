@@ -1,0 +1,99 @@
+<Type Name="WebPartHelpMode" FullName="System.Web.UI.WebControls.WebParts.WebPartHelpMode">
+  <TypeSignature Language="C#" Value="public enum WebPartHelpMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebPartHelpMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartHelpMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os tipos disponíveis de interfaces do usuário (UIs) para exibir o conteúdo de ajuda para um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpMode%2A> propriedade é usada para determinar como um navegador exibirá o conteúdo de ajuda para um controle. O <xref:System.Web.UI.WebControls.WebParts.WebPartHelpMode> enumeração contém valores que podem ser aplicados para o <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpMode%2A> propriedade. O valor padrão para o <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpMode%2A> propriedade é restrita.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpMode%2A> propriedade para exibir a Ajuda para um controle na mesma janela do navegador. A primeira parte deste exemplo supõe que o uso de um controle personalizado, `TextDisplayWebPart`, que se encontra na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpMode%2A> visão geral da classe.  
+  
+ O exemplo de código também inclui uma página HTML que contém o conteúdo da Ajuda fictício para o `TextDisplayWebPart` controle. Para esse exemplo funcione, você deve salvar o código a seguir em um arquivo chamado Textwebparthelp.htm e coloque-o no mesmo diretório do seu site como a página. aspx.  
+  
+```  
+<html>  
+<head runat="server">  
+    <title>Text Content WebPart Help</title>  
+</head>  
+<body>  
+  <div>  
+  <h1>Text Content WebPart Help</h1>  
+  To make the WebPart control work...  
+  </div>  
+</body>  
+</html>  
+```  
+  
+ A parte final do exemplo é uma página da Web que mostra como referenciar o `TextDisplayWebPart` controle. Observe que na marcação declarativa, o <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpMode%2A> o valor da propriedade é definido como navegar e o código também define o valor da <xref:System.Web.UI.WebControls.WebParts.WebPart.HelpUrl%2A> propriedade para o nome do arquivo HTML que contém o conteúdo da Ajuda. Carregar a página em um navegador e, em seguida, clique no verbo de Ajuda no menu de verbos de <xref:System.Web.UI.WebControls.WebParts.WebPartHelpMode.Navigate> controle.  
+  
+ [!code-aspx-csharp[WebParts_WebPart_HelpMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPart_HelpMode/CS/helpmodecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPart_HelpMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPart_HelpMode/VB/helpmodevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Modal">
+      <MemberSignature Language="C#" Value="Modal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.WebPartHelpMode Modal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartHelpMode.Modal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartHelpMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abre uma janela de navegador separada, se o navegador tiver esse recurso. Um usuário deve fechar a janela antes de retornar para a página de Web Parts.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Modeless">
+      <MemberSignature Language="C#" Value="Modeless" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.WebPartHelpMode Modeless = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartHelpMode.Modeless" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartHelpMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Abre uma janela de navegador separada, se o navegador tiver esse recurso. Um usuário não precisa fechar a janela antes de retornar à página da Web.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="Navigate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.WebParts.WebPartHelpMode Navigate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebPartHelpMode.Navigate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartHelpMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui a página de Web Parts na janela do navegador.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

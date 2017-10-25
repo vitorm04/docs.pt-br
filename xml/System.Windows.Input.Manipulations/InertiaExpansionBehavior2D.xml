@@ -1,0 +1,220 @@
+<Type Name="InertiaExpansionBehavior2D" FullName="System.Windows.Input.Manipulations.InertiaExpansionBehavior2D">
+  <TypeSignature Language="C#" Value="public sealed class InertiaExpansionBehavior2D : System.Windows.Input.Manipulations.InertiaParameters2D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InertiaExpansionBehavior2D extends System.Windows.Input.Manipulations.InertiaParameters2D" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.Manipulations.InertiaParameters2D</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve o comportamento desejado de expansão de um processador de inércia.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InertiaExpansionBehavior2D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredDeceleration">
+      <MemberSignature Language="C#" Value="public float DesiredDeceleration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 DesiredDeceleration" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o desaceleração expansão desejado, em unidades de coordenadas por milissegundo quadrado.</summary>
+        <value>Desaceleração expansão desejado, em unidades de coordenadas por milissegundo quadrado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da propriedade é mutuamente exclusivo com o <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX%2A> e <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY%2A> propriedades; a configuração dessa propriedade será definida <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX%2A> e <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY%2A> para `NaN`.  
+  
+ O valor padrão dessa propriedade é `NaN`.  
+  
+ Essa propriedade não é possível definir o processador de inércia está em execução; Caso contrário, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredExpansionX">
+      <MemberSignature Language="C#" Value="public float DesiredExpansionX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 DesiredExpansionX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expansão desejada ao longo do eixo x, em unidades de coordenadas.</summary>
+        <value>A expansão desejada ao longo do eixo x, em unidades de coordenadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Expansão deve ser proporcional. O valor dessa propriedade deve ser o valor igual a <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY%2A> propriedade quando o processador de inércia iniciado; caso contrário, uma exceção será lançada.  
+  
+ O valor da propriedade é mutuamente exclusivo com o <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration%2A> propriedade; a configuração dessa propriedade será definida <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration%2A> para `NaN`.  
+  
+ O valor padrão dessa propriedade é `NaN`.  
+  
+ <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX%2A>deve ser um número finito e positivo. A taxa de expansão é determinada pelo <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX%2A> propriedade.  
+  
+ Essa propriedade não é possível definir o processador de inércia está em execução; Caso contrário, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredExpansionY">
+      <MemberSignature Language="C#" Value="public float DesiredExpansionY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 DesiredExpansionY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expansão desejada ao longo do eixo y, em unidades de coordenadas.</summary>
+        <value>A expansão desejada ao longo do eixo y, em unidades de coordenadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Expansão deve ser proporcional. O valor dessa propriedade deve ser o valor igual a <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionX%2A> propriedade quando o processador de inércia iniciado; caso contrário, uma exceção será lançada.  
+  
+ O valor da propriedade é mutuamente exclusivo com o <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration%2A> propriedade; a configuração dessa propriedade será definida <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredDeceleration%2A> para `NaN`.  
+  
+ O valor padrão dessa propriedade é `NaN`.  
+  
+ <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.DesiredExpansionY%2A>deve ser um número finito e positivo. A taxa de expansão é determinada pelo <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY%2A> propriedade.  
+  
+ Essa propriedade não é possível definir o processador de inércia está em execução; Caso contrário, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialRadius">
+      <MemberSignature Language="C#" Value="public float InitialRadius { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 InitialRadius" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialRadius" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o raio média inicial, em unidades de coordenadas.</summary>
+        <value>O inicial médio radius, em unidades de coordenadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada pelo processador de inércia para calcular o fator de escala para um elemento que está sendo expandido.  
+  
+ Por exemplo, se o <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX%2A> e <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY%2A> propriedades são definidas como 3,75, isso informa que o processador de inércia a velocidade de expansão inicial é 3,75 unidades coordenadas por milissegundo em ambos os eixos (expansão deve ser proporcional).  
+  
+ O fator de escala associado com essa taxa de expansão depende do tamanho do elemento que está sendo expandido. Para um elemento pequeno, a velocidade de expansão representa um fator de escala maior do que para um elemento grande. Informar o processador de inércia do tamanho do elemento, definindo o <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialRadius%2A> propriedade.  
+  
+ O valor padrão para o <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialRadius%2A> propriedade é 1.0.  
+  
+ Os valores válidos são qualquer número finito maior ou igual a 1.0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialVelocityX">
+      <MemberSignature Language="C#" Value="public float InitialVelocityX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 InitialVelocityX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a velocidade de expansão inicial ao longo do eixo x, em unidades de coordenadas por milissegundo.</summary>
+        <value>A velocidade de expansão inicial ao longo do eixo x, em unidades de coordenadas por milissegundo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Expansão deve ser proporcional. O valor dessa propriedade deve ser o valor igual a <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY%2A> propriedade quando o processador de inércia iniciado; caso contrário, uma exceção será lançada.  
+  
+ O valor padrão dessa propriedade é `NaN`. Deixar essa propriedade e <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY%2A> inalterado desde o padrão ou definir esta propriedade e <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY%2A> como zero (0) desabilitará inércia de expansão.  
+  
+ Essa propriedade não é possível definir o processador de inércia está em execução; Caso contrário, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialVelocityY">
+      <MemberSignature Language="C#" Value="public float InitialVelocityY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 InitialVelocityY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a velocidade de expansão inicial ao longo do eixo y, em unidades de coordenadas por milissegundo.</summary>
+        <value>A velocidade de expansão inicial ao longo do eixo y, em unidades de coordenadas por milissegundo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Expansão deve ser proporcional. O valor dessa propriedade deve ser o valor igual a <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX%2A> propriedade quando o processador de inércia iniciado; caso contrário, uma exceção será lançada.  
+  
+ O valor padrão dessa propriedade é `NaN`. Deixar essa propriedade e <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX%2A> inalterado desde o padrão ou definir esta propriedade e <xref:System.Windows.Input.Manipulations.InertiaExpansionBehavior2D.InitialVelocityX%2A> como zero (0) desabilitará inércia de expansão.  
+  
+ Essa propriedade não é possível definir o processador de inércia está em execução; Caso contrário, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

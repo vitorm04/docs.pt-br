@@ -1,0 +1,508 @@
+<Type Name="EventProviderTraceListener" FullName="System.Diagnostics.Eventing.EventProviderTraceListener">
+  <TypeSignature Language="C#" Value="public class EventProviderTraceListener : System.Diagnostics.TraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventProviderTraceListener extends System.Diagnostics.TraceListener" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.EventProviderTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um ouvinte para <see cref="T:System.Diagnostics.TraceSource" /> que grava eventos no subsistema ETW.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os dados de evento (rastreamento ou depuração) a partir do evento de origem são gravados no subsistema ETW como uma cadeia de caracteres. Os elementos de dados são delimitados por vírgula. Para especificar um delimitador diferente, use o <xref:System.Diagnostics.Eventing.EventProviderTraceListener.Delimiter%2A> propriedade.  
+  
+ A adição do ouvinte para <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> registra o provedor com o subsistema ETW. Você deve criar uma sessão de rastreamento ETW usando o programa executável Logman.exe (ou algo semelhante) para gravar os eventos em um arquivo de log.  
+  
+ Não é necessário um manifesto para consumir eventos do ouvinte, porque os dados de evento são uma única cadeia de caracteres.  
+  
+ Quando você chama o <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> métodos para gravar eventos, você passa uma <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType> valor de enumeração. A enumeração contém valores nível e a palavra-chave. Quando você habilita um provedor de ouvinte de rastreamento de uma sessão do ETW, o valor do nível que você especificar pode ser o valor associado a um dos seguintes <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType> valores de enumeração:  
+  
+-   Crítico (o valor é 1)  
+  
+-   Erro (o valor é 2)  
+  
+-   Informações (o valor é 8)  
+  
+-   Detalhado (o valor é 16)  
+  
+-   Aviso (o valor é 4)  
+  
+ O valor de palavra-chave que você especificar para a sessão pode ser o valor associado a um dos seguintes <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType> valores de enumeração:  
+  
+-   Retomar (o valor é de 2.048)  
+  
+-   Iniciar (o valor é 256)  
+  
+-   Parar (o valor é 512)  
+  
+-   Suspender (o valor é 1.024)  
+  
+-   Transferir (o valor é 4.096)  
+  
+   
+  
+## Examples  
+  
+```  
+private static Guid providerId = new Guid("{B3F0C8FC-E8A8-4868-8901-1465E8A2F41B}");  
+  
+    EventProviderTraceListener listener = new EventProviderTraceListener(providerId.ToString(), "Test Listener", "::");  
+  
+    // You should use the All default level and control the level using the  
+    // ETW session; otherwise, you may not log all the events requested by the  
+    // session.  
+    TraceSource source = new TraceSource("MyProvider", SourceLevels.All);  
+  
+    source.Listeners.Add(listener);  
+  
+    source.TraceData(TraceEventType.Warning | TraceEventType.Start, 2, new object[] { "abc", "def", true, 123 });  
+  
+    source.TraceEvent(TraceEventType.Warning, 12, "Provider guid: {0}", new object[] { providerId });  
+  
+    source.TraceInformation("string {0}, bool {1}, int {2}, ushort {3}", new object[] { "abc", false, 123, (UInt32)5 });  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventProviderTraceListener (string providerId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerId">Uma cadeia de caracteres exclusiva <see cref="T:System.Guid" /> que identifica o provedor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Eventing.EventProviderTraceListener" /> classe usando o identificador do provedor especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventProviderTraceListener (string providerId, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerId, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerId" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerId">Uma cadeia de caracteres exclusiva <see cref="T:System.Guid" /> que identifica o provedor.</param>
+        <param name="name">Nome do ouvinte.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Eventing.EventProviderTraceListener" /> classe usando o identificador do provedor especificado e o nome do ouvinte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventProviderTraceListener (string providerId, string name, string delimiter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerId, string name, string delimiter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerId" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="delimiter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerId">Uma cadeia de caracteres exclusiva <see cref="T:System.Guid" /> que identifica o provedor.</param>
+        <param name="name">Nome do ouvinte.</param>
+        <param name="delimiter">Delimitador usado para delimitar os dados do evento. (Para obter mais detalhes, consulte o <see cref="P:System.Diagnostics.Eventing.EventProviderTraceListener.Delimiter" /> propriedade.)</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Eventing.EventProviderTraceListener" /> classe usando o identificador de provedor especificado, o nome do ouvinte e delimitador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o fluxo de saída para que ele não recebe a saída de rastreamento ou de depuração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delimiter">
+      <MemberSignature Language="C#" Value="public string Delimiter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Delimiter" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.EventProviderTraceListener.Delimiter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o delimitador usado para delimitar os dados de evento que são gravados no subsistema ETW.</summary>
+        <value>O delimitador usado para delimitar os dados do evento. O delimitador padrão é uma vírgula.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ouvinte converte os elementos de dados em cadeias de caracteres e, em seguida, concatena as cadeias de caracteres, usando o delimitador especificado para delimitar a cada elemento de dados na cadeia de caracteres. A cadeia de caracteres é gravada como os dados de evento no subsistema ETW.  
+  
+ Para analisar com êxito a cadeia de caracteres, o consumidor deve saber o delimitador que foi usado.  
+  
+ Se os dados contêm uma cadeia de caracteres que pode conter uma vírgula, especifique um delimitador apropriado, para que os dados de evento podem ser analisados corretamente.  
+  
+ Não é necessário um manifesto para consumir eventos do ouvinte, porque os dados de evento são uma única cadeia de caracteres.  
+  
+ O delimitador aplica-se aos dados de evento escritos usando o <xref:System.Diagnostics.TraceSource.TraceData%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fail">
+      <MemberSignature Language="C#" Value="public override void Fail (string message, string detailMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Fail(string message, string detailMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.Fail(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="detailMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser emitida.</param>
+        <param name="detailMessage">Uma mensagem detalhada de emissão.</param>
+        <summary>Emite um erro de mensagem e uma mensagem de erro detalhada para o ouvinte criar quando você implementa o <see cref="T:System.Diagnostics.TraceListener" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override sealed void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera o buffer de saída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedAttributes">
+      <MemberSignature Language="C#" Value="protected override string[] GetSupportedAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string[] GetSupportedAttributes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.GetSupportedAttributes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os atributos personalizados com suporte no ouvinte de rastreamento.</summary>
+        <returns>Uma matriz de cadeia de caracteres que nomeia os atributos personalizados com suporte no ouvinte de rastreamento ou <see langword="null" /> se não houver nenhum atributo personalizado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsThreadSafe">
+      <MemberSignature Language="C#" Value="public override sealed bool IsThreadSafe { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsThreadSafe" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.EventProviderTraceListener.IsThreadSafe" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o ouvinte de rastreamento é thread-safe.</summary>
+        <value>
+          <see langword="true" /> se o ouvinte de rastreamento for thread-safe; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override sealed void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um dos valores <see cref="T:System.Diagnostics.TraceEventType" /> que especifica o tipo do evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="data">Os dados de rastreamento a serem emitidos.</param>
+        <summary>Grava as informações de rastreamento, um objeto de dados e informações de evento para a saída específica do ouvinte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override sealed void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, params object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um dos valores <see cref="T:System.Diagnostics.TraceEventType" /> que especifica o tipo do evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="data">Uma matriz de objetos para a emissão de dados.</param>
+        <summary>Grava as informações de rastreamento, um objeto de dados e informações de evento para a saída específica do ouvinte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override sealed void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um dos valores <see cref="T:System.Diagnostics.TraceEventType" /> que especifica o tipo do evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <summary>Grava as informações de rastreamento e evento para a saída específica do ouvinte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override sealed void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um dos valores <see cref="T:System.Diagnostics.TraceEventType" /> que especifica o tipo do evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Grava informações de uma mensagem e informações de evento para a saída específica do ouvinte de rastreamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override sealed void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um dos valores <see cref="T:System.Diagnostics.TraceEventType" /> que especifica o tipo do evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="format">Uma cadeia de caracteres de formato que contém zero ou mais itens de formato, que correspondem aos objetos no <c>args</c> matriz.</param>
+        <param name="args">Uma matriz <see langword="object" /> que contém zero ou mais objetos a serem formatados.</param>
+        <summary>Grava informações de rastreamento, uma matriz formatada de objetos e informações de evento para a saída específica do ouvinte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceTransfer">
+      <MemberSignature Language="C#" Value="public override sealed void TraceTransfer (System.Diagnostics.TraceEventCache eventCache, string source, int id, string message, Guid relatedActivityId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceTransfer(class System.Diagnostics.TraceEventCache eventCache, string source, int32 id, string message, valuetype System.Guid relatedActivityId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.TraceTransfer(System.Diagnostics.TraceEventCache,System.String,System.Int32,System.String,System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="relatedActivityId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome usado para identificar a saída, geralmente o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <param name="relatedActivityId">Um <see cref="T:System.Guid" /> objeto identificando uma atividade relacionada.</param>
+        <summary>Grava informações de rastreamento, uma mensagem, informações de identidade e eventos de atividade relacionada para a saída específica do ouvinte.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override sealed void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Quando substituído em uma classe derivada, grava a mensagem especificada no ouvinte criado na classe derivada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override sealed void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.EventProviderTraceListener.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Quando substituído em uma classe derivada, grava uma mensagem para o ouvinte que você criar na classe derivada, seguido por um terminador de linha.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

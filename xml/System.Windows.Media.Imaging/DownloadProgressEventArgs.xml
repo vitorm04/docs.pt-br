@@ -1,0 +1,37 @@
+<Type Name="DownloadProgressEventArgs" FullName="System.Windows.Media.Imaging.DownloadProgressEventArgs">
+  <TypeSignature Language="C#" Value="public class DownloadProgressEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DownloadProgressEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.DownloadProgressEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos de <see cref="E:System.Windows.Media.Imaging.BitmapSource.DownloadProgress" /> e de <see cref="E:System.Windows.Media.Imaging.BitmapDecoder.DownloadProgress" /> .</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Progress">
+      <MemberSignature Language="C#" Value="public int Progress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Progress" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.DownloadProgressEventArgs.Progress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o progresso do download de um bitmap, expressado como uma porcentagem.</summary>
+        <value>O progresso, expressado como uma porcentagem, para o qual um bitmap foi baixado. O valor retornado será entre 1 e 100.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

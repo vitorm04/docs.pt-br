@@ -1,0 +1,65 @@
+<Type Name="ApplicationScopedSettingAttribute" FullName="System.Configuration.ApplicationScopedSettingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationScopedSettingAttribute : System.Configuration.SettingAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationScopedSettingAttribute extends System.Configuration.SettingAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ApplicationScopedSettingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.SettingAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que uma propriedade de configurações do aplicativo tem um valor comum para todos os usuários de um aplicativo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades de configurações do aplicativo tem um escopo que é baseado no aplicativo ou no nível do usuário. Como as categorias implicam, propriedades de configurações no escopo do aplicativo apresentam valores uniformes para todos os usuários do aplicativo, enquanto as propriedades do escopo do usuário têm dedicados valores para cada usuário do aplicativo.  
+  
+ O <xref:System.Configuration.ApplicationScopedSettingAttribute> indica que uma propriedade deve ser considerada uma configuração de nível de aplicativo e que as decisões de armazenamento apropriado devem ser feitas adequadamente pelo provedor de configurações.  
+  
+ Um atributo de escopo é necessário para cada propriedade de configurações. Se uma propriedade não é aplicada com o um <xref:System.Configuration.ApplicationScopedSettingAttribute> ou <xref:System.Configuration.UserScopedSettingAttribute>, a propriedade não é reconhecida pelo provedor de configurações — não é serializado. No entanto, é inválido, se aplicam a ambos os atributos para a mesma propriedade. Uma tentativa de fazer isso fará com que um <xref:System.Configuration.ConfigurationErrorsException> seja gerada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationScopedSettingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ApplicationScopedSettingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.ApplicationScopedSettingAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada propriedade de configurações do aplicativo deve ser aplicada com um único atributo de escopo para que ele seja reconhecido e serializado pelo provedor de configurações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

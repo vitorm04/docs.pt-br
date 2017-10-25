@@ -1,0 +1,50 @@
+<Type Name="BuildResultCode" FullName="Microsoft.Build.Execution.BuildResultCode">
+  <TypeSignature Language="C#" Value="public enum BuildResultCode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BuildResultCode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.BuildResultCode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Dados enumerado que indica o resultado da compilação de um destino ou uma solicitação de compilação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Failure">
+      <MemberSignature Language="C#" Value="Failure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Execution.BuildResultCode Failure = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Execution.BuildResultCode.Failure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildResultCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O destino ou a solicitação falha de alguma forma.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Build.Execution.BuildResultCode Success = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Execution.BuildResultCode.Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.BuildResultCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O destino ou a solicitação tiver êxito completo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

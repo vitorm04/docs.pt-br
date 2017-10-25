@@ -1,0 +1,125 @@
+<Type Name="PropertyTabChangedEventArgs" FullName="System.Windows.Forms.PropertyTabChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class PropertyTabChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyTabChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.PropertyTabChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Windows.Forms.PropertyGrid.PropertyTabChanged" /> de um <see cref="T:System.Windows.Forms.PropertyGrid" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged> evento ocorre quando o usuário seleciona uma nova guia de propriedade no <xref:System.Windows.Forms.PropertyGrid>.  
+  
+ A <xref:System.Windows.Forms.PropertyTabChangedEventArgs> fornece dados na guia antigo e novo guia está sendo selecionada.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse tipo. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.PropertyGrid> chamado `PropertyGrid1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#531](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#531)]
+ [!code-vb[System.Windows.Forms.EventExamples#531](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#531)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabChangedEventArgs (System.Windows.Forms.Design.PropertyTab oldTab, System.Windows.Forms.Design.PropertyTab newTab);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Design.PropertyTab oldTab, class System.Windows.Forms.Design.PropertyTab newTab) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PropertyTabChangedEventArgs.#ctor(System.Windows.Forms.Design.PropertyTab,System.Windows.Forms.Design.PropertyTab)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oldTab" Type="System.Windows.Forms.Design.PropertyTab" />
+        <Parameter Name="newTab" Type="System.Windows.Forms.Design.PropertyTab" />
+      </Parameters>
+      <Docs>
+        <param name="oldTab">A guia propriedade selecionado anteriormente.</param>
+        <param name="newTab">A guia propriedade recentemente selecionada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.PropertyTabChangedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewTab">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.PropertyTab NewTab { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Design.PropertyTab NewTab" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PropertyTabChangedEventArgs.NewTab" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.PropertyTab</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o novo <see cref="T:System.Windows.Forms.Design.PropertyTab" /> selecionado.</summary>
+        <value>O recém-selecionada <see cref="T:System.Windows.Forms.Design.PropertyTab" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.PropertyGrid> chamado `PropertyGrid1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#531](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#531)]
+ [!code-vb[System.Windows.Forms.EventExamples#531](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#531)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldTab">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.PropertyTab OldTab { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Design.PropertyTab OldTab" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PropertyTabChangedEventArgs.OldTab" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.PropertyTab</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o antigo <see cref="T:System.Windows.Forms.Design.PropertyTab" /> selecionado.</summary>
+        <value>O antigo <see cref="T:System.Windows.Forms.Design.PropertyTab" /> que foi selecionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.PropertyGrid> chamado `PropertyGrid1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.PropertyGrid.PropertyTabChanged?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#531](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#531)]
+ [!code-vb[System.Windows.Forms.EventExamples#531](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#531)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

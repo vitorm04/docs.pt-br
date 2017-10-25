@@ -1,0 +1,129 @@
+<Type Name="Underline" FullName="System.Windows.Documents.Underline">
+  <TypeSignature Language="C#" Value="public class Underline : System.Windows.Documents.Span" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Underline extends System.Windows.Documents.Span" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Underline" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Span</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um elemento de conteúdo de nível interno que faz com que o conteúdo a processar com uma decoração de texto sublinhado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Underline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Underline.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância vazia do <see cref="T:System.Windows.Documents.Underline" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Underline (System.Windows.Documents.Inline childInline);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Inline childInline) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Underline.#ctor(System.Windows.Documents.Inline)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="childInline" Type="System.Windows.Documents.Inline" />
+      </Parameters>
+      <Docs>
+        <param name="childInline">Um <see cref="T:System.Windows.Documents.Inline" /> objeto especificando o conteúdo inicial do novo <see cref="T:System.Windows.Documents.Underline" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Documents.Underline" /> classe, levando a especificada <see cref="T:System.Windows.Documents.Inline" /> objeto como o conteúdo inicial do novo <see cref="T:System.Windows.Documents.Underline" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor.  
+  
+ [!code-csharp[SpanSnippets#_Underline_Const1](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_underline_const1)]
+ [!code-vb[SpanSnippets#_Underline_Const1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_underline_const1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Underline (System.Windows.Documents.Inline childInline, System.Windows.Documents.TextPointer insertionPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Inline childInline, class System.Windows.Documents.TextPointer insertionPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Underline.#ctor(System.Windows.Documents.Inline,System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="childInline" Type="System.Windows.Documents.Inline" />
+        <Parameter Name="insertionPosition" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="childInline">Um <see cref="T:System.Windows.Documents.Inline" /> objeto especificando o conteúdo inicial do novo <see cref="T:System.Windows.Documents.Underline" />.  Esse parâmetro pode ser <see langword="null" />, caso em que nenhum <see cref="T:System.Windows.Documents.Inline" /> é inserido.</param>
+        <param name="insertionPosition">Um <see cref="T:System.Windows.Documents.TextPointer" /> especificando uma posição de inserção no qual inserir o <see cref="T:System.Windows.Documents.Underline" /> elemento depois que ele é criado, ou <see langword="null" /> para nenhuma inserção automática.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Documents.Underline" /> classe, levando a especificada <see cref="T:System.Windows.Documents.Inline" /> objeto como o conteúdo inicial do novo <see cref="T:System.Windows.Documents.Underline" />e um <see cref="T:System.Windows.Documents.TextPointer" /> especificando uma posição de inserção para o novo <see cref="T:System.Windows.Documents.Inline" /> elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor.  
+  
+ [!code-csharp[SpanSnippets#_Underline_Const2](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_underline_const2)]
+ [!code-vb[SpanSnippets#_Underline_Const2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_underline_const2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Underline (System.Windows.Documents.TextPointer start, System.Windows.Documents.TextPointer end);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.TextPointer start, class System.Windows.Documents.TextPointer end) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Underline.#ctor(System.Windows.Documents.TextPointer,System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="System.Windows.Documents.TextPointer" />
+        <Parameter Name="end" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="start">Um <see cref="T:System.Windows.Documents.TextPointer" /> indicando o início de uma seleção de conteúdo a ser contido pelo novo <see cref="T:System.Windows.Documents.Underline" />.</param>
+        <param name="end">Um <see cref="T:System.Windows.Documents.TextPointer" /> que indicam o final de uma seleção de conteúdo a ser contido pelo novo <see cref="T:System.Windows.Documents.Underline" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Documents.Underline" /> classe, levando duas <see cref="T:System.Windows.Documents.TextPointer" /> objetos que indicam o início e fim de uma seleção de conteúdo a ser contido pelo novo <see cref="T:System.Windows.Documents.Underline" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor destina-se ao inicializar um novo <xref:System.Windows.Documents.Underline> elemento tal que envolva uma seleção de pré-existente de conteúdo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso desse construtor.  
+  
+ [!code-csharp[SpanSnippets#_Underline_Const3](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_underline_const3)]
+ [!code-vb[SpanSnippets#_Underline_Const3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_underline_const3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Gerado quando <paramref name="start" /> ou <paramref name="end" /> é **nulo**.</exception>
+        <exception cref="T:System.ArgumentException">Gerado quando <paramref name="start" /> e <paramref name="end" /> não resolver para uma variedade de conteúdo adequado para o compartimento por um <see cref="T:System.Windows.Documents.Underline" /> elemento, por exemplo, se <paramref name="start" /> e <paramref name="end" /> indicar posições em parágrafos diferentes.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

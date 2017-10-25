@@ -1,0 +1,240 @@
+<Type Name="IRangeValueProvider" FullName="System.Windows.Automation.Provider.IRangeValueProvider">
+  <TypeSignature Language="C#" Value="public interface IRangeValueProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRangeValueProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IRangeValueProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("36dc7aef-33e6-4691-afe1-2be7274b3d33")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe métodos e propriedades para oferecer suporte ao acesso de cliente de automação de interface do usuário para controles que pode ser definido como um valor dentro do intervalo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementado em um provedor de automação de interface do usuário que deve dar suporte a <xref:System.Windows.Automation.RangeValuePattern> padrão de controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o valor de um controle é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o valor é somente leitura; <see langword="false" /> se ele pode ser modificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle que não é somente leitura.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#IsReadOnly](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#isreadonly)]
+ [!code-vb[UIAIRangeValueProvider_snip#IsReadOnly](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#isreadonly)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeChange">
+      <MemberSignature Language="C#" Value="public double LargeChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LargeChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.LargeChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que é adicionado ou subtraído do <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Value" /> quando uma grande alteração é feita, como com PAGE DOWN da chave de propriedade.</summary>
+        <value>O valor de grandes alterações com suporte de controle ou nulo (<see langword="Nothing" /> na [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) se o controle não oferece suporte <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.LargeChange" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle que possui um valor grande alteração 5.0.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#LargeChange](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#largechange)]
+ [!code-vb[UIAIRangeValueProvider_snip#LargeChange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#largechange)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Maximum">
+      <MemberSignature Language="C#" Value="public double Maximum { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Maximum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.Maximum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de intervalo máximo com suporte pelo controle.</summary>
+        <value>O valor máximo com suporte de controle ou nulo (<see langword="Nothing" /> na [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) se o controle não oferece suporte <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Maximum" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle que tem um valor máximo de 255.0.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#Maximum](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#maximum)]
+ [!code-vb[UIAIRangeValueProvider_snip#Maximum](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#maximum)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimum">
+      <MemberSignature Language="C#" Value="public double Minimum { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Minimum" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.Minimum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de intervalo mínimo com suporte pelo controle.</summary>
+        <value>O valor mínimo com suporte de controle ou nulo (<see langword="Nothing" /> na [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) se o controle não oferece suporte <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Minimum" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle que tem um valor mínimo de 0,0.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#Minimum](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#minimum)]
+ [!code-vb[UIAIRangeValueProvider_snip#Minimum](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#minimum)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IRangeValueProvider.SetValue(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser definido.</param>
+        <summary>Define o valor do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conjunto de valor real depende da implementação do controle. O controle pode arredondar o pedido `value` para cima ou para baixo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma possível implementação desse método para um controle personalizado. O controle personalizado exibe seu valor de intervalo por meio do valor alfa da sua cor base.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#SetValue](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#setvalue)]
+ [!code-vb[UIAIRangeValueProvider_snip#SetValue](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#setvalue)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Quando <paramref name="value" /> é menor que o mínimo ou maior que o valor máximo do controle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallChange">
+      <MemberSignature Language="C#" Value="public double SmallChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SmallChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que é adicionado ou subtraído do <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Value" /> propriedade quando uma pequena alteração é feita, tal como acontece com uma tecla de seta.</summary>
+        <value>O valor de pequena alteração ou nulo (<see langword="Nothing" /> na [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) se o controle não oferece suporte <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle que tem o valor pequena alteração 1.0.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#SmallChange](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#smallchange)]
+ [!code-vb[UIAIRangeValueProvider_snip#SmallChange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#smallchange)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IRangeValueProvider.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do controle.</summary>
+        <value>O valor do controle ou null (<see langword="Nothing" /> na [!INCLUDE[TLA#tla_visualbnet](~/includes/tlasharptla-visualbnet-md.md)]) se o controle não oferece suporte <see cref="P:System.Windows.Automation.Provider.IRangeValueProvider.Value" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle personalizado. Para os fins deste exemplo, o controle personalizado exibe o valor por meio da configuração alfa da sua cor base.  
+  
+ [!code-csharp[UIAIRangeValueProvider_snip#Value](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/CSharp/RangeValueFragment.cs#value)]
+ [!code-vb[UIAIRangeValueProvider_snip#Value](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIRangeValueProvider_snip/visualbasic/rangevaluefragment.vb#value)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

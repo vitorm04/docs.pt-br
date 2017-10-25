@@ -1,0 +1,1212 @@
+<Type Name="UnmanagedType" FullName="System.Runtime.InteropServices.UnmanagedType">
+  <TypeSignature Language="C#" Value="public enum UnmanagedType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed UnmanagedType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.UnmanagedType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica como realizar marshaling de parâmetros ou campos para código não gerenciado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.InteropServices.UnmanagedType> enumeração com o <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> atributo para especificar como os tipos são empacotados durante a interoperação com código não gerenciado.  Você pode usar essa enumeração para empacotar o uso de tipos de tipos (I1, I2, I4, I8, R4, R8, U2, U4 e U8), não gerenciados de valor simples que não estão disponíveis no .NET Framework e diversos tipos de código.  
+  
+ Para obter mais informações, consulte [interoperação com código não gerenciado](http://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258).  
+  
+   
+  
+## Examples  
+ O fragmento de código a seguir demonstra como declarar, em código gerenciado, uma interface não gerenciada implementada por um componente COM. O <xref:System.Runtime.InteropServices.ComImportAttribute?displayProperty=nameWithType> atributo impede que o `IMyStorage` interface seja exportado para uso por COM. (COM os clientes devem usar o componente COM existente diretamente.) Neste exemplo, <xref:System.Runtime.InteropServices.MarshalAsAttribute> especifica vários <xref:System.Runtime.InteropServices.UnmanagedType> membros que representam os tipos usados pela interface COM original.  
+  
+ [!code-cpp[ImprovedInteropSnippets#2](~/samples/snippets/cpp/VS_Snippets_CLR/ImprovedInteropSnippets/CPP/codefile2.cpp#2)]
+ [!code-csharp[ImprovedInteropSnippets#2](~/samples/snippets/csharp/VS_Snippets_CLR/ImprovedInteropSnippets/CS/codefile2.cs#2)]
+ [!code-vb[ImprovedInteropSnippets#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/ImprovedInteropSnippets/VB/codefile2.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AnsiBStr">
+      <MemberSignature Language="C#" Value="AnsiBStr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType AnsiBStr = int32(35)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.AnsiBStr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cadeia de caracteres ANSI que é um byte único com tamanho prefixado. Use esse membro no tipo de dados <see cref="T:System.String" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AsAny">
+      <MemberSignature Language="C#" Value="AsAny" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType AsAny = int32(40)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.AsAny" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo dinâmico que determina o tipo de um objeto em tempo de execução e realiza marshaling do objeto como esse tipo. Esse membro é válido apenas para métodos de invocação de plataforma.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bool">
+      <MemberSignature Language="C#" Value="Bool" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType Bool = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.Bool" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um valor booliano de quatro bytes (<see langword="true" /> != 0, <see langword="false" /> = 0). Esse é o tipo BOOL Win32.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BStr">
+      <MemberSignature Language="C#" Value="BStr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType BStr = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.BStr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cadeia de caracteres Unicode que é um byte duplo com tamanho prefixado. Use esse membro, que é a cadeia de caracteres padrão em COM, no tipo de dados <see cref="T:System.String" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ByValArray">
+      <MemberSignature Language="C#" Value="ByValArray" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType ByValArray = int32(30)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.ByValArray" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando a propriedade <see cref="P:System.Runtime.InteropServices.MarshalAsAttribute.Value" /> estiver definida como <see langword="ByValArray" />, o campo <see cref="F:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst" /> deve ser definido para indicar o número de elementos na matriz. O campo <see cref="F:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType" /> pode conter, opcionalmente, o <see cref="T:System.Runtime.InteropServices.UnmanagedType" /> dos elementos da matriz quando for necessário diferenciar entre os tipos de cadeia de caracteres. Use esse <see cref="T:System.Runtime.InteropServices.UnmanagedType" /> somente em uma matriz cujos elementos aparecem como campos em uma estrutura.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ByValTStr">
+      <MemberSignature Language="C#" Value="ByValTStr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType ByValTStr = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.ByValTStr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usado para matrizes de caracteres em linha e de comprimento fixo que aparecem em uma estrutura. O tipo de caractere usado com <see cref="F:System.Runtime.InteropServices.UnmanagedType.ByValTStr" /> é determinado pelo argumento <see cref="T:System.Runtime.InteropServices.CharSet" /> do atributo <see cref="T:System.Runtime.InteropServices.StructLayoutAttribute" /> aplicado à estrutura contida. Sempre use o campo <see cref="F:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst" /> para indicar o tamanho da matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos do .NET framework ByValTStr se comportam como cadeias de caracteres de estilo C, de tamanho fixo dentro de uma estrutura (por exemplo, `char s[5]`). O comportamento em código gerenciado é diferente do comportamento, que não seja nulo terminado o Microsoft Visual Basic 6.0 (por exemplo, `MyString As String * 5`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Currency">
+      <MemberSignature Language="C#" Value="Currency" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType Currency = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.Currency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo de moeda. Usado em um <see cref="T:System.Decimal" /> para realizar marshaling do valor decimal como um tipo de moeda COM em vez de como um <see langword="Decimal" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomMarshaler">
+      <MemberSignature Language="C#" Value="CustomMarshaler" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType CustomMarshaler = int32(44)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.CustomMarshaler" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a classe do realizador de marshaling personalizado quando usado com o campo <see cref="F:System.Runtime.InteropServices.MarshalAsAttribute.MarshalType" /> ou <see cref="F:System.Runtime.InteropServices.MarshalAsAttribute.MarshalTypeRef" />. O campo <see cref="F:System.Runtime.InteropServices.MarshalAsAttribute.MarshalCookie" /> pode ser usado para passar informações adicionais para o realizador de marshaling personalizado. Você pode usar esse membro em qualquer tipo de referência. Esse membro é válido para parâmetros e valores de retorno somente. Ele não pode ser usado em campos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType Error = int32(45)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo nativo associado a um <see cref="F:System.Runtime.InteropServices.UnmanagedType.I4" /> ou a um <see cref="F:System.Runtime.InteropServices.UnmanagedType.U4" />, e que faz com que o parâmetro seja exportado como um HRESULT na biblioteca de tipos exportada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FunctionPtr">
+      <MemberSignature Language="C#" Value="FunctionPtr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType FunctionPtr = int32(38)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.FunctionPtr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um inteiro que pode ser usado como um ponteiro de função de estilo C. Use esse membro em um tipo de dados <see cref="T:System.Delegate" /> ou em um tipo que herda de um <see cref="T:System.Delegate" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HString">
+      <MemberSignature Language="C#" Value="HString" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType HString = int32(47)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.HString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cadeia de caracteres [!INCLUDE[wrt](~/includes/wrt-md.md)]. Use esse membro no tipo de dados <see cref="T:System.String" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="I1">
+      <MemberSignature Language="C#" Value="I1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType I1 = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.I1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um inteiro de um byte com sinal. Use esse membro para transformar um valor booliano em um byte, estilo C <see langword="bool" /> (<see langword="true" /> = 1, <see langword="false" /> = 0).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="I2">
+      <MemberSignature Language="C#" Value="I2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType I2 = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.I2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um inteiro de dois bytes com sinal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="I4">
+      <MemberSignature Language="C#" Value="I4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType I4 = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.I4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um inteiro de quatro bytes com sinal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="I8">
+      <MemberSignature Language="C#" Value="I8" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType I8 = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.I8" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um inteiro de oito bytes com sinal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IDispatch">
+      <MemberSignature Language="C#" Value="IDispatch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType IDispatch = int32(26)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.IDispatch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ponteiro COM <see langword="IDispatch" /> (<see langword="Object" /> no Microsoft Visual Basic 6.0).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IInspectable">
+      <MemberSignature Language="C#" Value="IInspectable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType IInspectable = int32(46)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.IInspectable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ponteiro de interface [!INCLUDE[wrt](~/includes/wrt-md.md)]. Use esse membro no tipo de dados <see cref="T:System.Object" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Interface">
+      <MemberSignature Language="C#" Value="Interface" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType Interface = int32(28)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.Interface" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ponteiro de interface COM. O <see cref="T:System.Guid" /> da interface é obtido dos metadados da classe. Use este membro para especificar o tipo exato de interface ou o tipo de interface padrão se você aplicá-lo a uma classe. Esse membro produz o mesmo comportamento que <see cref="F:System.Runtime.InteropServices.UnmanagedType.IUnknown" /> quando você o aplica ao tipo de dados <see cref="T:System.Object" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IUnknown">
+      <MemberSignature Language="C#" Value="IUnknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType IUnknown = int32(25)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.IUnknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ponteiro COM <see langword="IUnknown" />. Use esse membro no tipo de dados <see cref="T:System.Object" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LPArray">
+      <MemberSignature Language="C#" Value="LPArray" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType LPArray = int32(42)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.LPArray" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ponteiro para o primeiro elemento da matriz de estilo C. Ao realizar marshaling do código gerenciado para código não gerenciado, o comprimento da matriz é determinado pelo comprimento da matriz gerenciado. Ao realizar o marshaling do código não gerenciado para o código gerenciado, o tamanho da matriz é determinado pelos campos <see cref="F:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst" /> e <see cref="F:System.Runtime.InteropServices.MarshalAsAttribute.SizeParamIndex" />, seguidos opcionalmente pelo tipo não gerenciado dos elementos dentro da matriz quando é necessário diferenciar entre os tipos de cadeia de caracteres.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LPStr">
+      <MemberSignature Language="C#" Value="LPStr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType LPStr = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.LPStr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cadeia de caracteres ANSI terminada em nulo e byte único. Use esse membro nos tipos de dados <see cref="T:System.String" /> e <see cref="T:System.Text.StringBuilder" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LPStruct">
+      <MemberSignature Language="C#" Value="LPStruct" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType LPStruct = int32(43)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.LPStruct" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ponteiro para uma estrutura de estilo C que você usa para realizar marshaling de classes formatadas gerenciadas. Esse membro é válido apenas para métodos de invocação de plataforma.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LPTStr">
+      <MemberSignature Language="C#" Value="LPTStr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType LPTStr = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.LPTStr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cadeia de caracteres dependente de plataforma: ANSI no Windows 98 e Unicode no Windows NT e Windows XP. Esse valor tem suporte apenas para invocação de plataforma e não para interoperabilidade COM, pois não há suporte para a exportação de uma cadeia de caracteres do tipo <see langword="LPTStr" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LPUTF8Str">
+      <MemberSignature Language="C#" Value="LPUTF8Str" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType LPUTF8Str = int32(48)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ponteiro para uma cadeia de caracteres codificada em UTF-8.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LPWStr">
+      <MemberSignature Language="C#" Value="LPWStr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType LPWStr = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.LPWStr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cadeia de caracteres ANSI terminada em nulo e dois bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que você não pode usar o valor LPWStr com uma cadeia de caracteres não gerenciada, a menos que a cadeia de caracteres foi criada por meio de não gerenciado `CoTaskMemAlloc` função.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="R4">
+      <MemberSignature Language="C#" Value="R4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType R4 = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.R4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um número de ponto flutuante de quatro bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="R8">
+      <MemberSignature Language="C#" Value="R8" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType R8 = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.R8" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um número de ponto flutuante de oito bytes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SafeArray">
+      <MemberSignature Language="C#" Value="SafeArray" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType SafeArray = int32(29)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.SafeArray" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see langword="SafeArray" />, que é uma matriz autodescritiva que leva o tipo, a classificação e os limites dos dados de matriz associada. Usar esse membro com o campo <see cref="F:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType" /> para substituir o tipo de elemento padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Struct">
+      <MemberSignature Language="C#" Value="Struct" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType Struct = int32(27)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.Struct" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma VARIANTE, que é usada para realizar marshaling em classes formatadas gerenciadas e tipos de valor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SysInt">
+      <MemberSignature Language="C#" Value="SysInt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType SysInt = int32(31)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.SysInt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um inteiro assinado dependente de plataforma: quatro bytes no Windows de 32 bits, oito bytes no Windows de 64 bits.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SysUInt">
+      <MemberSignature Language="C#" Value="SysUInt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType SysUInt = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.SysUInt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um inteiro não assinado dependente de plataforma: quatro bytes no Windows de 32 bits, oito bytes no Windows de 64 bits.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TBStr">
+      <MemberSignature Language="C#" Value="TBStr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType TBStr = int32(36)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.TBStr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cadeia de caracteres dependente de plataforma e de tamanho prefixado, <see langword="char" />: ANSI no Windows 98, Unicode no Windows NT. Você usa raramente esse membro semelhante a BSTR.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="U1">
+      <MemberSignature Language="C#" Value="U1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType U1 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.U1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um inteiro de um byte sem sinal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="U2">
+      <MemberSignature Language="C#" Value="U2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType U2 = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.U2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um inteiro de dois bytes sem sinal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="U4">
+      <MemberSignature Language="C#" Value="U4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType U4 = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.U4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um inteiro de quatro bytes sem sinal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="U8">
+      <MemberSignature Language="C#" Value="U8" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType U8 = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.U8" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um inteiro de oito bytes sem sinal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VariantBool">
+      <MemberSignature Language="C#" Value="VariantBool" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType VariantBool = int32(37)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.VariantBool" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tipo VARIANT_BOOL de dois bytes e definido por OLE (<see langword="true" /> = -1, <see langword="false" /> = 0).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VBByRefStr">
+      <MemberSignature Language="C#" Value="VBByRefStr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.UnmanagedType VBByRefStr = int32(34)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.UnmanagedType.VBByRefStr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.UnmanagedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um valor que permite que o Visual Basic altere uma cadeia de caracteres no código não gerenciado e reflita os resultados no código gerenciado. Esse valor só tem suporte para invocação de plataforma.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

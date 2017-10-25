@@ -1,0 +1,563 @@
+<Type Name="BitmapDecoder" FullName="System.Windows.Media.Imaging.BitmapDecoder">
+  <TypeSignature Language="C#" Value="public abstract class BitmapDecoder : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract BitmapDecoder extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.BitmapDecoder" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um contêiner para os quadros de bitmap. Cada quadro de bitmap é um <see cref="T:System.Windows.Media.Imaging.BitmapSource" />. Essa classe abstrata fornece um conjunto básico de funcionalidades para todos os objetos do decodificador derivados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.BitmapDecoder>não é um <xref:System.Windows.Media.Imaging.BitmapFrame> ; em vez disso, ele é um contêiner para <xref:System.Windows.Media.Imaging.BitmapFrame> objetos. Cada <xref:System.Windows.Media.Imaging.BitmapFrame> no contêiner pode ter atributos diferentes, incluindo paletas, resoluções ou tamanhos diferentes.  
+  
+ A menos que um codec específico é selecionado, [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] usa a descoberta automática do tempo de execução para identificar o formato de uma imagem e associe-o codec apropriado. Esse processo de descoberta permite que um codec desenvolvido por um [!INCLUDE[TLA#tla_isv](~/includes/tlasharptla-isv-md.md)] para ser descoberto automaticamente pelo sistema. Para selecionar um codec específico, derivado <xref:System.Windows.Media.Imaging.BitmapDecoder> ou <xref:System.Windows.Media.Imaging.BitmapEncoder>, como o <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> da classe, deve ser usado.  
+  
+ [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)]e [!INCLUDE[TLA#tla_gif](~/includes/tlasharptla-gif-md.md)] são os únicos implementado formatos de imagem que oferecem suporte a várias estruturas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Windows.Media.Imaging.BitmapDecoder.Create%28System.Uri%2CSystem.Windows.Media.Imaging.BitmapCreateOptions%2CSystem.Windows.Media.Imaging.BitmapCacheOption%29> método para criar um decodificador para uma determinada imagem. A primeira <xref:System.Windows.Media.Imaging.BitmapFrame> da imagem é usada como a fonte de um <xref:System.Windows.Controls.Image> controle.  
+  
+ [!code-csharp[imagingsnippetgallery_procedural_snip#BitmapDecoderCreate](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/BitmapDecoderExample.cs#bitmapdecodercreate)]
+ [!code-vb[imagingsnippetgallery_procedural_snip#BitmapDecoderCreate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/BitmapDecoderExample.vb#bitmapdecodercreate)]  
+  
+ O exemplo de código a seguir demonstra como usar a interna em <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> para abrir e decodificar um [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] bitmap. Resultante <xref:System.Windows.Media.Imaging.BitmapSource> é usado como o <xref:System.Windows.Controls.Image.Source%2A> de um <xref:System.Windows.Controls.Image> elemento.  
+  
+ [!code-csharp[bitmapframeexample#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#4)]
+ [!code-vb[bitmapframeexample#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BitmapDecoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapDecoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodecInfo">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.BitmapCodecInfo CodecInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapCodecInfo CodecInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapDecoder.CodecInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapCodecInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações que descrevem esse codec.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.Media.Imaging.BitmapCodecInfo" />. Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Media.Imaging.BitmapCodecInfo> implementação é necessária para cada codec.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como ler as informações de um <xref:System.Windows.Media.Imaging.BitmapCodecInfo> de objeto e enviá-lo para uma cadeia de caracteres.  
+  
+ [!code-csharp[bitmapframeexample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[bitmapframeexample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorContexts">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Media.ColorContext&gt; ColorContexts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Media.ColorContext&gt; ColorContexts" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapDecoder.ColorContexts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Media.ColorContext&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o perfil associado a um bitmap, se um for definido.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.Media.ColorContext" /> que representa o perfil de cor incorporado do bitmap. Se nenhum perfil de cor tiver sido definida, essa propriedade retornará <see langword="null" />. Esta propriedade não tem valor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapDecoder Create (System.IO.Stream bitmapStream, System.Windows.Media.Imaging.BitmapCreateOptions createOptions, System.Windows.Media.Imaging.BitmapCacheOption cacheOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Imaging.BitmapDecoder Create(class System.IO.Stream bitmapStream, valuetype System.Windows.Media.Imaging.BitmapCreateOptions createOptions, valuetype System.Windows.Media.Imaging.BitmapCacheOption cacheOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapDecoder.Create(System.IO.Stream,System.Windows.Media.Imaging.BitmapCreateOptions,System.Windows.Media.Imaging.BitmapCacheOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapDecoder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bitmapStream" Type="System.IO.Stream" />
+        <Parameter Name="createOptions" Type="System.Windows.Media.Imaging.BitmapCreateOptions" />
+        <Parameter Name="cacheOption" Type="System.Windows.Media.Imaging.BitmapCacheOption" />
+      </Parameters>
+      <Docs>
+        <param name="bitmapStream">O fluxo de arquivos que identifica o bitmap a ser decodificado.</param>
+        <param name="createOptions">Identifica o <see cref="T:System.Windows.Media.Imaging.BitmapCreateOptions" /> para o decodificador.</param>
+        <param name="cacheOption">Identifica o <see cref="T:System.Windows.Media.Imaging.BitmapCacheOption" /> para o decodificador.</param>
+        <summary>Cria um <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> de um <see cref="T:System.IO.Stream" /> usando o <see cref="T:System.Windows.Media.Imaging.BitmapCreateOptions" /> e o <see cref="T:System.Windows.Media.Imaging.BitmapCacheOption" /> especificados.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> de um <see cref="T:System.IO.Stream" /> usando o <see cref="T:System.Windows.Media.Imaging.BitmapCreateOptions" /> e o <see cref="T:System.Windows.Media.Imaging.BitmapCacheOption" /> especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Media.Imaging.BitmapCacheOption.OnLoad> opção de cache, se você deseja fechar o `bitmapStream` depois que o decodificador é criado. O padrão <xref:System.Windows.Media.Imaging.BitmapCacheOption.OnDemand> opção de cache mantém o acesso ao fluxo de até que o bitmap é necessária e a limpeza é tratada pelo coletor de lixo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Windows.Media.Imaging.BitmapDecoder.Create%2A> método para criar um decodificador para uma determinada imagem. A primeira <xref:System.Windows.Media.Imaging.BitmapFrame> da imagem é usada como a fonte de um <xref:System.Windows.Controls.Image> controle.  
+  
+ [!code-csharp[imagingsnippetgallery_procedural_snip#BitmapDecoderCreateStream](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/BitmapDecoderExample.cs#bitmapdecodercreatestream)]
+ [!code-vb[imagingsnippetgallery_procedural_snip#BitmapDecoderCreateStream](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/BitmapDecoderExample.vb#bitmapdecodercreatestream)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapDecoder Create (Uri bitmapUri, System.Windows.Media.Imaging.BitmapCreateOptions createOptions, System.Windows.Media.Imaging.BitmapCacheOption cacheOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Imaging.BitmapDecoder Create(class System.Uri bitmapUri, valuetype System.Windows.Media.Imaging.BitmapCreateOptions createOptions, valuetype System.Windows.Media.Imaging.BitmapCacheOption cacheOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapDecoder.Create(System.Uri,System.Windows.Media.Imaging.BitmapCreateOptions,System.Windows.Media.Imaging.BitmapCacheOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapDecoder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bitmapUri" Type="System.Uri" />
+        <Parameter Name="createOptions" Type="System.Windows.Media.Imaging.BitmapCreateOptions" />
+        <Parameter Name="cacheOption" Type="System.Windows.Media.Imaging.BitmapCacheOption" />
+      </Parameters>
+      <Docs>
+        <param name="bitmapUri">O <see cref="T:System.Uri" /> do bitmap para decodificar.</param>
+        <param name="createOptions">Identifica o <see cref="T:System.Windows.Media.Imaging.BitmapCreateOptions" /> para o decodificador.</param>
+        <param name="cacheOption">Identifica o <see cref="T:System.Windows.Media.Imaging.BitmapCacheOption" /> para o decodificador.</param>
+        <summary>Cria um <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> de um <see cref="T:System.Uri" /> usando o <see cref="T:System.Windows.Media.Imaging.BitmapCreateOptions" /> e o <see cref="T:System.Windows.Media.Imaging.BitmapCacheOption" /> especificados.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> de um <see cref="T:System.Uri" /> usando o <see cref="T:System.Windows.Media.Imaging.BitmapCreateOptions" /> e o <see cref="T:System.Windows.Media.Imaging.BitmapCacheOption" /> especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Windows.Media.Imaging.BitmapDecoder.Create%28System.Uri%2CSystem.Windows.Media.Imaging.BitmapCreateOptions%2CSystem.Windows.Media.Imaging.BitmapCacheOption%29> método para criar um decodificador para uma determinada imagem. A primeira <xref:System.Windows.Media.Imaging.BitmapFrame> da imagem é usada como a fonte de um <xref:System.Windows.Controls.Image> controle.  
+  
+ [!code-csharp[imagingsnippetgallery_procedural_snip#BitmapDecoderCreate](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/BitmapDecoderExample.cs#bitmapdecodercreate)]
+ [!code-vb[imagingsnippetgallery_procedural_snip#BitmapDecoderCreate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/BitmapDecoderExample.vb#bitmapdecodercreate)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="bitmapUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileFormatException">O <paramref name="bitmapUri" /> especifica uma ID de classe de um tipo de formato sem suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapDecoder Create (Uri bitmapUri, System.Windows.Media.Imaging.BitmapCreateOptions createOptions, System.Windows.Media.Imaging.BitmapCacheOption cacheOption, System.Net.Cache.RequestCachePolicy uriCachePolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Imaging.BitmapDecoder Create(class System.Uri bitmapUri, valuetype System.Windows.Media.Imaging.BitmapCreateOptions createOptions, valuetype System.Windows.Media.Imaging.BitmapCacheOption cacheOption, class System.Net.Cache.RequestCachePolicy uriCachePolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapDecoder.Create(System.Uri,System.Windows.Media.Imaging.BitmapCreateOptions,System.Windows.Media.Imaging.BitmapCacheOption,System.Net.Cache.RequestCachePolicy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapDecoder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bitmapUri" Type="System.Uri" />
+        <Parameter Name="createOptions" Type="System.Windows.Media.Imaging.BitmapCreateOptions" />
+        <Parameter Name="cacheOption" Type="System.Windows.Media.Imaging.BitmapCacheOption" />
+        <Parameter Name="uriCachePolicy" Type="System.Net.Cache.RequestCachePolicy" />
+      </Parameters>
+      <Docs>
+        <param name="bitmapUri">O local do bitmap do qual o <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> é criado.</param>
+        <param name="createOptions">As opções que são usadas para criar este <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" />.</param>
+        <param name="cacheOption">A opção de cache que é usada para criar esse <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" />.</param>
+        <param name="uriCachePolicy">Os requisitos de cache para este <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" />.</param>
+        <summary>Cria um <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> de um <see cref="T:System.Uri" /> usando especificado <see cref="T:System.Windows.Media.Imaging.BitmapCreateOptions" />, <see cref="T:System.Windows.Media.Imaging.BitmapCacheOption" /> e <see cref="T:System.Net.Cache.RequestCachePolicy" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> de um <see cref="T:System.Uri" /> usando especificado <see cref="T:System.Windows.Media.Imaging.BitmapCreateOptions" />, <see cref="T:System.Windows.Media.Imaging.BitmapCacheOption" /> e <see cref="T:System.Net.Cache.RequestCachePolicy" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.BitmapDecoder.Create%28System.Uri%2CSystem.Windows.Media.Imaging.BitmapCreateOptions%2CSystem.Windows.Media.Imaging.BitmapCacheOption%2CSystem.Net.Cache.RequestCachePolicy%29>é introduzido no .NET Framework versão 3.5.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInPlaceBitmapMetadataWriter">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter CreateInPlaceBitmapMetadataWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter CreateInPlaceBitmapMetadataWriter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapDecoder.CreateInPlaceBitmapMetadataWriter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter" />, que pode ser usado para atualizar os metadados de um bitmap.</summary>
+        <returns>Uma instância de <see cref="T:System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Media.Imaging.InPlaceBitmapMetadataWriter> para atualizar os metadados associados a uma imagem de bitmap.  
+  
+ [!code-cpp[bitmapmetadata#SetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
+ [!code-csharp[bitmapmetadata#SetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
+ [!code-vb[bitmapmetadata#SetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O fluxo de imagem original do arquivo é somente leitura.</exception>
+        <exception cref="T:System.NotImplementedException">O decodificador não é um decodificador interno.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadCompleted">
+      <MemberSignature Language="C#" Value="public virtual event EventHandler DownloadCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DownloadCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Imaging.BitmapDecoder.DownloadCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> conclui o download do conteúdo do bitmap.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não pode ser gerado para todos os tipos de conteúdo do bitmap.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadFailed">
+      <MemberSignature Language="C#" Value="public virtual event EventHandler&lt;System.Windows.Media.ExceptionEventArgs&gt; DownloadFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Media.ExceptionEventArgs&gt; DownloadFailed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Imaging.BitmapDecoder.DownloadFailed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Media.ExceptionEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a falha no download do conteúdo do bitmap.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_DownloadFailed"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ \<*objeto* DownloadFailed = "*EventHandler*"... / >  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadProgress">
+      <MemberSignature Language="C#" Value="public virtual event EventHandler&lt;System.Windows.Media.Imaging.DownloadProgressEventArgs&gt; DownloadProgress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Media.Imaging.DownloadProgressEventArgs&gt; DownloadProgress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Imaging.BitmapDecoder.DownloadProgress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Media.Imaging.DownloadProgressEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> progride no download do conteúdo do bitmap.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não pode ser gerado para todos os tipos de conteúdo do bitmap.  
+  
+<a name="xamlTextUsage_DownloadProgress"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ \<*objeto* DownloadProgress = "*EventHandler*"... / >  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~BitmapDecoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapDecoder.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera recursos e executa outras operações de limpeza antes do <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> é recuperada pela coleta de lixo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.Finalize%2A>. O código do aplicativo não deve chamar este método; o método `Finalize` de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A>.  
+  
+ Para obter mais informações, consulte [métodos Finalize e destruidores](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md), e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar os recursos não gerenciados. Ação de segurança:<see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Frames">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Media.Imaging.BitmapFrame&gt; Frames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Media.Imaging.BitmapFrame&gt; Frames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapDecoder.Frames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Media.Imaging.BitmapFrame&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conteúdo de um quadro individual dentro de um bitmap.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.Media.Imaging.BitmapFrame" />. Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] e [!INCLUDE[TLA#tla_gif](~/includes/tlasharptla-gif-md.md)] imagens oferecem suporte a mais de um quadro.  
+  
+ Qualquer <xref:System.Windows.Media.Imaging.BitmapFrame> congelados objetos retornados por essa propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Windows.Media.Imaging.BitmapFrame> como um <xref:System.Windows.Media.Imaging.BitmapSource>.  
+  
+ [!code-csharp[bitmapframeexample#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#4)]
+ [!code-vb[bitmapframeexample#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDownloading">
+      <MemberSignature Language="C#" Value="public virtual bool IsDownloading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDownloading" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapDecoder.IsDownloading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o decodificador está fazendo download de conteúdo.</summary>
+        <value>
+          <see langword="true" />Se o decodificador está baixando conteúdo; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.BitmapMetadata Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapMetadata Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapDecoder.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma instância de <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> que representa os metadados globais associados a esse bitmap se os metadados estão definidos.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.Media.Imaging.BitmapMetadata" /> que representa os metadados globais associados a um bitmap. Se nenhum metadado for definido, essa propriedade retornará <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhum dos internos derivado <xref:System.Windows.Media.Imaging.BitmapDecoder> classes de suportam a metadados globais. Metadados devem ser adicionados aos quadros individuais de uma imagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Palette">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.BitmapPalette Palette { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapPalette Palette" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapDecoder.Palette" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapPalette</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Media.Imaging.BitmapPalette" /> associado com o decodificador.</summary>
+        <value>O <see cref="T:System.Windows.Media.Imaging.BitmapPalette" /> associado com o decodificador. Não se tiver nenhuma paleta <see langword="null" /> é retornado. Esta propriedade não tem valor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Preview">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.BitmapSource Preview { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapSource Preview" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapDecoder.Preview" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa a visualização global de bitmap, se um for definido.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa a visualização global do bitmap. Se nenhuma visualização for definida, essa propriedade retornará <see langword="null" />. Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Imaging.BitmapSource> retornados por essa propriedade está congelada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thumbnail">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.BitmapSource Thumbnail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapSource Thumbnail" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapDecoder.Thumbnail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa a miniatura de bitmap, se um for definido.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa uma miniatura do bitmap. Se nenhuma miniatura é definida, essa propriedade retornará <see langword="null" />. Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhum dos formatos nativo suporte a miniaturas globais. [!INCLUDE[TLA#tla_jpegorg](~/includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)], e [!INCLUDE[TLA#tla_wdp](~/includes/tlasharptla-wdp-md.md)] suporte a miniaturas de nível de quadro que podem ser acessadas usando o <xref:System.Windows.Media.Imaging.BitmapFrame.Thumbnail%2A> propriedade.  
+  
+ O <xref:System.Windows.Media.Imaging.BitmapSource> retornados por essa propriedade está congelada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapDecoder.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte o valor atual de um <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> para um <see cref="T:System.String" />.</summary>
+        <returns>Uma representação da cadeia de caracteres do <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

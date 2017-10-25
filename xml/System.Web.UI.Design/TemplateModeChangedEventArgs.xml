@@ -1,0 +1,86 @@
+<Type Name="TemplateModeChangedEventArgs" FullName="System.Web.UI.Design.TemplateModeChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class TemplateModeChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TemplateModeChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TemplateModeChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para um <see cref="E:System.Web.UI.Design.IControlDesignerView.ViewEvent" /> evento que é gerado quando o modo de modelo é alterado para um controle na superfície de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> é gerado por um host designer, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], para determinadas ações em um controle na superfície de design. Por exemplo, um evento é gerado quando você entrar ou sair do modo de um controle de edição de modelo.  
+  
+ O <xref:System.Web.UI.Design.ControlDesigner> classe fornece um delegado de padrão para manipular o <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> evento. Quando você sair ou inserir o modo de edição de modelo, o designer host inicializa um <xref:System.Web.UI.Design.ViewEventArgs> de objeto para um <xref:System.Web.UI.Design.ViewEvent.TemplateModeChanged> tipo de evento e, em seguida, define o <xref:System.Web.UI.Design.ViewEventArgs.EventArgs%2A> propriedade com um <xref:System.Web.UI.Design.TemplateModeChangedEventArgs> objeto.  
+  
+ Quando o <xref:System.Web.UI.Design.ViewEventArgs> objeto indica que o modo de modelo foi alterado, o delegado padrão no <xref:System.Web.UI.Design.ControlDesigner> classe atualiza o valor para o <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A> propriedade.  
+  
+ Designers personalizados que são derivados do <xref:System.Web.UI.Design.TemplatedControlDesigner> classe pode substituir o <xref:System.Web.UI.Design.TemplatedControlDesigner.OnTemplateModeChanged%2A> método para executar processamento adicional quando as alterações para um controle na superfície de design do modo de edição de modelo.  
+  
+ Para obter mais informações sobre eventos e delegados, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TemplateModeChangedEventArgs (System.Web.UI.Design.TemplateGroup newTemplateGroup);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.TemplateGroup newTemplateGroup) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TemplateModeChangedEventArgs.#ctor(System.Web.UI.Design.TemplateGroup)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="newTemplateGroup" Type="System.Web.UI.Design.TemplateGroup" />
+      </Parameters>
+      <Docs>
+        <param name="newTemplateGroup">Um novo grupo de modelo que é usado para inicializar o <see cref="P:System.Web.UI.Design.TemplateModeChangedEventArgs.NewTemplateGroup" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Design.TemplateModeChangedEventArgs" /> classe com o grupo de modelo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.Design.IControlDesignerView.ViewEvent> Delegar método usa o <xref:System.Web.UI.Design.TemplateModeChangedEventArgs.%23ctor%2A> construtor para inicializar um <xref:System.Web.UI.Design.TemplateModeChangedEventArgs> objeto para uso com um <xref:System.Web.UI.Design.ViewEventArgs> objeto.  
+  
+ Quando você sair ou inserir o modo de edição de modelo, o designer host inicializa um <xref:System.Web.UI.Design.ViewEventArgs> de objeto para um <xref:System.Web.UI.Design.ViewEvent.TemplateModeChanged> tipo de evento e, em seguida, define o <xref:System.Web.UI.Design.ViewEventArgs.EventArgs%2A> propriedade com um <xref:System.Web.UI.Design.TemplateModeChangedEventArgs> objeto. O `newTemplateGroup` parâmetro especifica um novo grupo de modelo quando você insere o modo de edição de modelo. O `newTemplateGroup` parâmetro normalmente é `null` para sair do modo de edição de modelo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewTemplateGroup">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.TemplateGroup NewTemplateGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroup NewTemplateGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.TemplateModeChangedEventArgs.NewTemplateGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o grupo de modelo que foi criado quando você inseriu o modo de edição de modelo.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.TemplateGroup" /> se você inseriu o modelo de edição com um novo modelo; caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.TemplateModeChangedEventArgs.NewTemplateGroup%2A> propriedade especifica um novo grupo de modelo quando você insere o modo de edição de modelo. <xref:System.Web.UI.Design.TemplateModeChangedEventArgs.NewTemplateGroup%2A>é `null` para eventos que são criados quando você sair do modo de edição de modelo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

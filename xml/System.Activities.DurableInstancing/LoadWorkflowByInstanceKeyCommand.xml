@@ -1,0 +1,164 @@
+<Type Name="LoadWorkflowByInstanceKeyCommand" FullName="System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand">
+  <TypeSignature Language="C#" Value="public sealed class LoadWorkflowByInstanceKeyCommand : System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LoadWorkflowByInstanceKeyCommand extends System.Runtime.DurableInstancing.InstancePersistenceCommand" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.DurableInstancing.InstancePersistenceCommand</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um comando de persistência que carrega uma instância de fluxo de trabalho usando a chave de instância associada à instância.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoadWorkflowByInstanceKeyCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptUninitializedInstance">
+      <MemberSignature Language="C#" Value="public bool AcceptUninitializedInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AcceptUninitializedInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.AcceptUninitializedInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se deve permitir o carregamento de uma instância de fluxo de trabalho que está em um estado não inicializado.</summary>
+        <value>
+          <see langword="true" />Se a instância de fluxo de trabalho pode ser carregado quando em um estado não inicializado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssociateInstanceKeyToInstanceId">
+      <MemberSignature Language="C#" Value="public Guid AssociateInstanceKeyToInstanceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid AssociateInstanceKeyToInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.AssociateInstanceKeyToInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de instância associado com uma chave de instância.</summary>
+        <value>O identificador de instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticallyAcquiringLock">
+      <MemberSignature Language="C#" Value="protected override bool AutomaticallyAcquiringLock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutomaticallyAcquiringLock" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.AutomaticallyAcquiringLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceKeysToAssociate">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;Guid,System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;&gt; InstanceKeysToAssociate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;valuetype System.Guid, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, class System.Runtime.DurableInstancing.InstanceValue&gt;&gt; InstanceKeysToAssociate" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.InstanceKeysToAssociate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Guid,System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Runtime.DurableInstancing.InstanceValue&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as chaves de instância a ser associado uma instância no armazenamento de persistência.</summary>
+        <value>As chaves da instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTransactionEnlistmentOptional">
+      <MemberSignature Language="C#" Value="protected override bool IsTransactionEnlistmentOptional { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTransactionEnlistmentOptional" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.IsTransactionEnlistmentOptional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LookupInstanceKey">
+      <MemberSignature Language="C#" Value="public Guid LookupInstanceKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid LookupInstanceKey" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de instância usada para identificar a instância a ser carregado.</summary>
+        <value>A chave de instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="protected override void Validate (System.Runtime.DurableInstancing.InstanceView view);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Validate(class System.Runtime.DurableInstancing.InstanceView view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.Validate(System.Runtime.DurableInstancing.InstanceView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.Runtime.DurableInstancing.InstanceView" />
+      </Parameters>
+      <Docs>
+        <param name="view">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

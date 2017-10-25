@@ -1,0 +1,98 @@
+<Type Name="ReferralChasingOption" FullName="System.DirectoryServices.ReferralChasingOption">
+  <TypeSignature Language="C#" Value="public enum ReferralChasingOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReferralChasingOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ReferralChasingOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>A enumeração <see cref="T:System.DirectoryServices.ReferralChasingOption" /> especifica se e como a procura de referências é tratada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um servidor determina que outros servidores mantém informações relevantes no servidor pode referir-se o cliente para outro servidor para obter o resultado. Busca de referência é o processo pelo qual um cliente contata o servidor referenciado para continuar a pesquisa de diretório.  
+  
+ Use as constantes dessa enumeração para definir as preferências de pesquisa para busca de referência. A ação envolve a atribuição de campos apropriados de <xref:System.DirectoryServices.DirectorySearcher> para elementos do <xref:System.DirectoryServices.ReferralChasingOption> enumeração.  
+  
+ O provedor LDAP ADSI oferece suporte a referências externas para pesquisas pagináveis, mas não oferece suporte a referências subordinadas durante a paginação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ReferralChasingOption All = int32(96)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ReferralChasingOption.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ReferralChasingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Procurar referências do tipo externo ou subordinado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="External">
+      <MemberSignature Language="C#" Value="External" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ReferralChasingOption External = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ReferralChasingOption.External" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ReferralChasingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Procurar referências externas.  Se não for especificada nenhuma opção de procura de referência para uma pesquisa de diretório, o tipo de procura de referência executado será <see cref="F:System.DirectoryServices.ReferralChasingOption.External" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ReferralChasingOption None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ReferralChasingOption.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ReferralChasingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nunca procure o servidor mencionado. A configuração dessa opção impede que um cliente entre em contato com outros servidores em um processo de referência.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Subordinate">
+      <MemberSignature Language="C#" Value="Subordinate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ReferralChasingOption Subordinate = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ReferralChasingOption.Subordinate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ReferralChasingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Procurar apenas referências que são um contexto de nomenclatura subordinado em uma árvore de diretório. O provedor LDAP ADSI sempre desativa esse sinalizador para pesquisas paginadas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

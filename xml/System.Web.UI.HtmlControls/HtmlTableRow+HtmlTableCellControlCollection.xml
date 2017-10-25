@@ -1,0 +1,88 @@
+<Type Name="HtmlTableRow+HtmlTableCellControlCollection" FullName="System.Web.UI.HtmlControls.HtmlTableRow+HtmlTableCellControlCollection">
+  <TypeSignature Language="C#" Value="protected class HtmlTableRow.HtmlTableCellControlCollection : System.Web.UI.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit HtmlTableRow/HtmlTableCellControlCollection extends System.Web.UI.ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlTableRow.HtmlTableCellControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" /> objetos que são as células de uma <see cref="T:System.Web.UI.HtmlControls.HtmlTableRow" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlTableRow.HtmlTableCellControlCollection> classe representa uma coleção de <xref:System.Web.UI.HtmlControls.HtmlTableCell> objetos para um <xref:System.Web.UI.HtmlControls.HtmlTableRow> controle. Controles podem ser adicionados ao final de uma coleção com o <xref:System.Web.UI.HtmlControls.HtmlTableRow.HtmlTableCellControlCollection.Add%2A> método ou em um local de índice especificado na coleção com o <xref:System.Web.UI.HtmlControls.HtmlTableRow.HtmlTableCellControlCollection.AddAt%2A> método.  
+  
+ Somente controles do tipo <xref:System.Web.UI.HtmlControls.HtmlTableCell> podem ser adicionados para o <xref:System.Web.UI.HtmlControls.HtmlTableRow.HtmlTableCellControlCollection> coleção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableRow.HtmlTableCellControlCollection.Add(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="child">O <see cref="T:System.Web.UI.Control" /> a adicionar à coleção.</param>
+        <summary>Adiciona o objeto <see cref="T:System.Web.UI.Control" /> especificado à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle adicionado só pode ser um <xref:System.Web.UI.HtmlControls.HtmlTableCell> controle; caso contrário, um <xref:System.ArgumentException> exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O controle adicionado deve ser do tipo <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public override void AddAt (int index, System.Web.UI.Control child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddAt(int32 index, class System.Web.UI.Control child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlTableRow.HtmlTableCellControlCollection.AddAt(System.Int32,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="child" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local na matriz à qual você deseja adicionar o controle filho.</param>
+        <param name="child">O <see cref="T:System.Web.UI.Control" /> a adicionar à coleção.</param>
+        <summary>Adiciona o objeto <see cref="T:System.Web.UI.Control" /> especificado à coleção no local de índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle adicionado só pode ser um <xref:System.Web.UI.HtmlControls.HtmlTableCell> controle; caso contrário, um <xref:System.ArgumentException> exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O controle adicionado deve ser do tipo <see cref="T:System.Web.UI.HtmlControls.HtmlTableCell" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

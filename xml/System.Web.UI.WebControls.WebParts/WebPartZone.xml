@@ -1,0 +1,205 @@
+<Type Name="WebPartZone" FullName="System.Web.UI.WebControls.WebParts.WebPartZone">
+  <TypeSignature Language="C#" Value="public class WebPartZone : System.Web.UI.WebControls.WebParts.WebPartZoneBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartZone extends System.Web.UI.WebControls.WebParts.WebPartZoneBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartZone" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.WebPartZoneBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.WebPartZoneDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como o controle principal no conjunto de controles de Web Parts para hospedar controles <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> em uma página da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No recurso de Web Parts, uma zona é uma região definida em uma página da Web que contém os controles de Web Parts. As funções principais de uma zona são para dispor os controles que ele contém e para fornecer uma interface de usuário (UI) comum para esses controles. Para obter informações gerais sobre zonas e como eles são usados em aplicativos Web Parts, consulte a documentação de referência para a base de <xref:System.Web.UI.WebControls.WebParts.WebZone> e <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> classes e o tópico intitulado [Web Parts Control Set Overview](http://msdn.microsoft.com/library/ff0149e4-695a-401a-8cda-53df6d7d2668).  
+  
+ A função especial do <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle é conter <xref:System.Web.UI.WebControls.WebParts.WebPart> controles que formam os aplicativos de interface do usuário da Web Parts principais. Um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle pode ser declarado no formato de persistência em uma página da Web, permitindo que os desenvolvedores para usá-lo como um modelo e adicionar outros controles de servidor dentro de `<asp:webpartzone>` elemento. Qualquer tipo de controle de servidor, se tiver adicionado a um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zona, pode funcionar como um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle em tempo de execução. Isso é verdadeiro independentemente se o controle adicionado é um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, um controle de usuário, um controle personalizado ou um controle do ASP.NET. Para obter mais informações, consulte o tópico para o <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> classe.  
+  
+ Além de conter <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle também fornece uma interface comum para os controles que ele contém. Essa interface do usuário comum, conhecida como chrome, consiste nos elementos da interface do usuário periféricos em todos os controles, como a borda, título, cabeçalho e rodapé, características de estilo e verbos (ações de interface do usuário que um usuário pode executar em um controle, como fechar ou minimizar).  
+  
+> [!NOTE]
+>  Internet Explorer pode renderizar a altura de um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> ou seus controles contidos de forma inesperada, dependendo da orientação da zona. Para obter mais detalhes, consulte a documentação para o <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.LayoutOrientation%2A> ou <xref:System.Web.UI.WebControls.WebParts.WebPart.Height%2A> propriedades.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZone> classe derivada a maioria de seu comportamento de base de <xref:System.Web.UI.WebControls.WebParts.WebZone> e <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> classes; ele adiciona somente um membro exclusivo, o <xref:System.Web.UI.WebControls.WebParts.WebPartZone.ZoneTemplate%2A> propriedade. Essa propriedade faz referência a um <xref:System.Web.UI.ITemplate> objeto, que é um modelo que permite aos desenvolvedores de página Definir os controles em uma zona estaticamente usando um `<zonetemplate>` elemento na marcação declarativa de uma página. aspx.  
+  
+## <a name="accessibility"></a>Acessibilidade  
+ A marcação processada por padrão para este controle pode não estar de acordo com os padrões de acessibilidade, como as diretrizes de prioridade 1 conteúdo WCAG Web Accessibility Guidelines 1.0 (). Para obter detalhes sobre o suporte de acessibilidade para este controle, consulte [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle em uma página de Web Parts. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ A primeira parte do exemplo mostra uma classe personalizada que herda de <xref:System.Web.UI.WebControls.WebParts.WebPartZone> classe e que define duas propriedades base zona no construtor.  
+  
+ [!code-csharp[WebParts_WebPartZone_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/CS/mywebpartzone.cs#3)]
+ [!code-vb[WebParts_WebPartZone_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/VB/mywebpartzone.vb#3)]  
+  
+ A segunda parte do exemplo mostra uma página que contém a custom <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle. Observe que a página requer um especial `Register` diretiva na parte superior da página para fazer referência ao assembly que contém a zona personalizada. A página também contém um `<asp:webpartmanager>` elemento, que é necessário em cada página de Web Parts. O `<cc1:MyWebPartZone>` elemento, que representa o personalizado <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controlar, contém um padrão ASP.NET <xref:System.Web.UI.WebControls.Calendar> controle. Como ele está contido em um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zona, o <xref:System.Web.UI.WebControls.Calendar> controle será ajustado com um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controle em tempo de execução, o que permite que ele atue como um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ [!code-aspx-csharp[WebParts_WebPartZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/CS/webpartzonecs.aspx#1)]
+ [!code-aspx-vb[WebParts_WebPartZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/VB/webpartzonevb.aspx#1)]  
+  
+ Examine a marcação declarativa para personalizado <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle. Observe que você pode definir várias propriedades de nível de zona na marcação, como mostrado no exemplo de código a seguir.  
+  
+> [!NOTE]
+>  É muito importante a observar o uso do `<zonetemplate>` elemento. Esse elemento, conforme descrito na seção comentários, é necessário em uma <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zona para encapsular estático <xref:System.Web.UI.WebControls.WebParts.WebPart> controles que são declarados em uma página.  
+  
+ [!code-aspx-csharp[WebParts_WebPartZone_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/CS/webpartzonecs.aspx#2)]
+ [!code-aspx-vb[WebParts_WebPartZone_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/VB/webpartzonevb.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartZone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartZone.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZone" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZone.%23ctor%2A> método é um construtor padrão e não definir qualquer valor. No entanto, classes derivadas podem usar o construtor para definir propriedades de zona de base, para criar os comportamentos padrão e a aparência de um controle personalizado de zona.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um construtor em um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPartZone> classe para definir várias propriedades de base para a zona. Essa abordagem pode ser útil se você deseja criar um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle com comportamentos específicos e aparência. O código completo para o exemplo, incluindo a classe personalizada e uma página. aspx para hospedar o controle é encontrado na seção de exemplo do <xref:System.Web.UI.WebControls.WebParts.WebPartZone> tópico de visão geral da classe.  
+  
+ [!code-csharp[WebParts_WebPartZone_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/CS/mywebpartzone.cs#3)]
+ [!code-vb[WebParts_WebPartZone_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/VB/mywebpartzone.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInitialWebParts">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.WebParts.WebPartCollection GetInitialWebParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Web.UI.WebControls.WebParts.WebPartCollection GetInitialWebParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartZone.GetInitialWebParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o método base abstrato e obtém o conjunto inicial de estático <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles contidos no modelo da zona.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartCollection" /> que contém todos os <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> ou outros controles de servidor contidas no modelo da zona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZone.GetInitialWebParts%2A> método fornece uma implementação de base abstrata <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.GetInitialWebParts%2A> método. O método base não fornece nenhuma implementação, mas declara o método para que as classes derivadas podem personalizar como elas receberão o conjunto inicial de controles que pertencem em uma região, sem levar em conta as alterações de personalização.  
+  
+ Para cada controle de servidor encontrado na zona, o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateWebPart%2A> método é chamado. Se um controle herda diretamente do <xref:System.Web.UI.WebControls.WebParts.WebPart> classe, simplesmente, ele é adicionado à zona de <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.WebParts%2A> coleção (e à coleção de semelhante a <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle). Se um controle não herda diretamente da <xref:System.Web.UI.WebControls.WebParts.WebPart>, o conjunto de controles de Web Parts envolve o controle com um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> objeto, que permite que o controle se comportam como um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle em tempo de execução.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZone> classe implementa o método base, retornando o conjunto de controles (se houver) que são declarados estaticamente dentro de um conjunto de `<zonetemplate>` marcas na marcação de uma página de Web Parts. Se um <xref:System.Web.UI.WebControls.PlaceHolder> controle é declarado em uma zona, controla o filho do controle são adicionados, em vez de controle em si. Essa implementação permite que você, por exemplo, crie um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zona em uma página mestre e, em seguida, declare individuais <xref:System.Web.UI.WebControls.WebParts.WebPart> ou controles de servidor em uma página de conteúdo. Se você declarar <xref:System.Web.UI.WebControls.Literal> controles em um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zona, elas serão ignoradas.  
+  
+> [!NOTE]
+>  A coleção inicial de controles retornado pelo <xref:System.Web.UI.WebControls.WebParts.WebPartZone.GetInitialWebParts%2A> método pode ser diferente da coleção de tempo de execução real de controles em uma zona, depois de personalização realizada. Por exemplo, suponha que você tem uma página da Web com dois <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controles e o primeiro contém o controle de usuário chamado `User1` estaticamente declarado dentro de `<zonetemplate>` marcas. Se um usuário carrega a página e arrastos `User1` na segunda zona, em seguida, `User1` ainda é parte da coleção que é retornada ao chamar o <xref:System.Web.UI.WebControls.WebParts.WebPartZone.GetInitialWebParts%2A> método para a primeira zona, porque é declarado na zona. Mas em tempo de execução quando o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle carrega os dados de personalização, `User1` será exibida na segunda zona em que o usuário arrastado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartZone.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Substitui o método base para indicar que a zona foi registrada com êxito com o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoneTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate ZoneTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ZoneTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartZone.ZoneTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateInstance(System.Web.UI.TemplateInstance.Single)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência para uma instância de <see cref="T:System.Web.UI.ITemplate" /> que contém os controles declarados na marcação de uma página da Web.</summary>
+        <value>Um <see cref="T:System.Web.UI.ITemplate" /> que contém os controles <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> em uma zona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartZone.ZoneTemplate%2A> propriedade se refere a um <xref:System.Web.UI.ITemplate> instância dentro de um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle. O modelo contém controles de servidor estático que você pode declarar dentro de um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controlar, incluindo <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, controles de usuário, controles personalizados e controles do ASP.NET.  
+  
+ Quando você adiciona estático <xref:System.Web.UI.WebControls.WebParts.WebPart> ou outros controles de servidor para um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> na marcação declarativa de uma página da Web, você deve colocar as marcas para os controles em um par de `<zonetemplate>` marcas. Se você não declarar os controles dentro `<zonetemplate>` marcas, uma exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.WebPartZone.ZoneTemplate%2A> propriedade na marcação declarativa de uma página de Web Parts. O código completo para o exemplo, incluindo uma classe personalizada e uma página. aspx para hospedar o controle é encontrado na seção de exemplo do <xref:System.Web.UI.WebControls.WebParts.WebPartZone> tópico de visão geral da classe.  
+  
+ Observe que, na marcação para o <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controlar, há um `<zonetemplate>` elemento que contém uma referência para o controle de calendário. Se você quiser adicionar adicionais <xref:System.Web.UI.WebControls.WebParts.WebPart> controles ou outros controles de servidor para a zona, você também pode adicioná-los dentro de `<zonetemplate>` marcas.  
+  
+ [!code-aspx-csharp[WebParts_WebPartZone_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/CS/webpartzonecs.aspx#2)]
+ [!code-aspx-vb[WebParts_WebPartZone_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartZone_Overview/VB/webpartzonevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Registro da <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles na zona já foi concluída.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

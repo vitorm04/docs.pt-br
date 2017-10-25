@@ -1,0 +1,311 @@
+<Type Name="ComContractElement" FullName="System.ServiceModel.Configuration.ComContractElement">
+  <TypeSignature Language="C#" Value="public sealed class ComContractElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComContractElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ComContractElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica um contrato de serviço de integração COM+. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contratos de serviço COM+ integration estão restritos atualmente para o namespace "http://tempuri.org" e o nome do contrato é derivado da interface COM suporte. No entanto, você pode especificar alternativas usando o `comContracts` seção no arquivo de configuração.  
+  
+   
+  
+## Examples  
+ Você pode usar a configuração a seguir para especificar o namespace, nome do contrato e tipos definidos pelo usuário a ser incluído. Você também pode especificar outras configurações para um contrato de serviço  
+  
+ [!code-xml[S_UEComContractElement#100](~/samples/snippets/csharp/VS_Snippets_CFX/s_uecomcontractelement/common/app.config#100)]   
+  
+ Quando o serviço é inicializado, os namespaces especificados e os nomes de contrato são aplicados as descrições de serviço gerado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComContractElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ComContractElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.ComContractElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComContractElement (string contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ComContractElement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contractType">Uma cadeia de caracteres que contém o tipo de contrato.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.ComContractElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contract">
+      <MemberSignature Language="C#" Value="public string Contract { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Contract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComContractElement.Contract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("contract", Options=System.Configuration.ConfigurationPropertyOptions.IsRequired | System.Configuration.ConfigurationPropertyOptions.IsKey)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de contrato.</summary>
+        <value>O tipo de contrato.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExposedMethods">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ComMethodElementCollection ExposedMethods { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ComMethodElementCollection ExposedMethods" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComContractElement.ExposedMethods" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("exposedMethods", Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ComMethodElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de métodos COM+ que são expostas quando a interface em um componente COM+ é exposta como um serviço Web.</summary>
+        <value>A coleção de métodos COM+ expostos quando a interface em um componente COM+ é exposta como um serviço Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ COM+ integration ferramenta de configuração (ComSvcConfig.exe) pode ser usada para adicionar métodos específicos de uma interface COM apareçam no contrato de serviço gerado.  
+  
+ Por exemplo, você pode usar o comando a seguir para adicionar três métodos nomeados no `IFinances` interface COM o `ItemOrders.Financial` componente, o contrato de serviço gerado.  
+  
+```  
+ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus  
+```  
+  
+ Quando você executa a ferramenta de ComSvcConfig.exe, em seguida, gera o seguinte contrato de serviço listando os métodos mencionados anteriormente como `exposedMethod` elementos.  
+  
+ [!code-xml[S_UEComContractElement#101](~/samples/snippets/csharp/VS_Snippets_CFX/s_uecomcontractelement/common/app2.config#101)]   
+  
+ No momento da inicialização de serviço, o tempo de execução tenta gerar um contrato de serviço refletir sobre e adicionando apenas os métodos incluídos na lista de `exposedMethod` elementos. Um rastreamento é produzido para cada método de interface não está incluído no contrato de serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComContractElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do contrato.</summary>
+        <value>O nome do contrato.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComContractElement.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("namespace", DefaultValue=Mono.Cecil.CustomAttributeArgument, Options=System.Configuration.ConfigurationPropertyOptions.None)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace do contrato.</summary>
+        <value>O namespace do contrato.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistableTypes">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ComPersistableTypeElementCollection PersistableTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ComPersistableTypeElementCollection PersistableTypes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComContractElement.PersistableTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("persistableTypes")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ComPersistableTypeElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todos os tipos persistentes.</summary>
+        <value>Os tipos persistentes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComContractElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresSession">
+      <MemberSignature Language="C#" Value="public bool RequiresSession { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresSession" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComContractElement.RequiresSession" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requiresSession", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que especifica se o contrato só pode ser usado em associações de sessão.</summary>
+        <value>
+          <see langword="true" />Se o contrato só pode ser usado em associações de sessão; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o serviço é inicializado, o tempo de execução de integração garante que essa configuração é consistente com o tipo de associação a ser usada. Uma exceção será gerada se um ou mais associações para o contrato estão em conflito. Se essa propriedade for `false`, um canal unidirecional está em uso e houver [parâmetros out], também será gerada uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserDefinedTypes">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ComUdtElementCollection UserDefinedTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ComUdtElementCollection UserDefinedTypes" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("userDefinedTypes")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ComUdtElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de usuário definidos UDTS (tipos) que deve ser incluído no contrato de serviço. Essa classe não pode ser herdada.</summary>
+        <value>A coleção de tipos de definida pelo usuário (UDT).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tempo de execução de integração COM+ cria serviços inspecionando a biblioteca de tipos. Quando um componente COM+ contém métodos que passam um tipo VARIANT, o sistema não pode determinar os tipos reais a serem passados antes do tempo de execução. Portanto, quando você tentar passar um usuário definido pelo tipo (UDT) dentro de um tipo VARIANT, ele falha porque não é um tipo conhecido para serialização.  
+  
+ Para contornar esse problema, você pode adicionar os UDTs para o arquivo de configuração para que eles podem ser incluídos como tipos conhecidos no contrato de serviço apropriado. Para fazer isso, você precisa identificar exclusivamente o UDT e o contrato (s), ou seja, as COM interfaces originais que utiliza.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar dois UDTs específicos para o <`userDefinedTypes`> seção do arquivo de configuração para essa finalidade.  
+  
+ [!code-xml[S_UEComContractElement#102](~/samples/snippets/csharp/VS_Snippets_CFX/s_uecomcontractelement/common/app3.config#102)]   
+  
+ Os atributos de <`userDefinedType`> elemento são definidas da seguinte maneira:  
+  
+-   `typeName`: Um atributo opcional que fornece o nome de tipo legível. Isso não é usado pelo tempo de execução, mas ajuda a um leitor para distinguir os tipos.  
+  
+-   `typeLibID`: Uma cadeia de caracteres GUID que especifica a biblioteca de tipos registrada que define o tipo.  
+  
+-   `typeLibVersion`: Uma cadeia de caracteres que especifica a versão da biblioteca de tipo que define o tipo.  
+  
+-   `typeDefID`: Uma cadeia de caracteres GUID que especifica o tipo UDT específico dentro da biblioteca de tipos registrada.  
+  
+ Quando o serviço é inicializado, o tempo de execução de integração procura os tipos especificados e os adiciona à coleção de tipos conhecidos para contratos especificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

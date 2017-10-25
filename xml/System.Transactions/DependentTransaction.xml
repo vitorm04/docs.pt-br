@@ -1,0 +1,117 @@
+<Type Name="DependentTransaction" FullName="System.Transactions.DependentTransaction">
+  <TypeSignature Language="C#" Value="public sealed class DependentTransaction : System.Transactions.Transaction, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DependentTransaction extends System.Transactions.Transaction implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.DependentTransaction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Transactions.Transaction</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Descreve um clone de uma transação, fornecendo a garantia de que a transação não pode ser confirmada até que o aplicativo é fornecido para o rest sobre o trabalho na transação. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Transactions.DependentTransaction> é um clone de um <xref:System.Transactions.Transaction> objeto criado usando o <xref:System.Transactions.Transaction.DependentClone%2A> método.  Sua única finalidade é permitir que o aplicativo fique rest e garantir que a transação não pode ser confirmada enquanto o trabalho ainda está sendo executado na transação (por exemplo, em um thread de trabalho).  
+  
+ Quando o trabalho feito na transação clonada finalmente é concluído e pronto para ser confirmada, ele pode informar o criador da transação usando o <xref:System.Transactions.DependentTransaction.Complete%2A> método. Portanto, você pode preservar a consistência e a exatidão dos dados.  
+  
+ O <xref:System.Transactions.DependentCloneOption> enumeração é usada para determinar o comportamento de confirmação.  Este controle do comportamento permite que um aplicativo parar, bem como fornece suporte à simultaneidade. Para obter mais informações sobre como essa enumeração é usada, consulte [gerenciamento de simultaneidade com DependentTransaction](http://msdn.microsoft.com/en-us/bdad8468-2a90-4b81-8375-278067120cab).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma transação dependente.  
+  
+ [!code-csharp[Tx_DependentTx#1](~/samples/snippets/csharp/VS_Snippets_CFX/tx_dependenttx/cs/dependenttx.cs#1)]
+ [!code-vb[Tx_DependentTx#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/tx_dependenttx/vb/dependenttx.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public void Complete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Complete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.DependentTransaction.Complete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Tenta concluir a transação dependente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame este método quando quiser que o clone dependente informar o criador da transação que concluiu seu trabalho e a transação pode ser confirmada se o pai também está pronto.  
+  
+ Depois que essa chamada é invocada, não tente qualquer trabalho adicional na transação, ou uma exceção será lançada.  
+  
+ Se o domínio do aplicativo falhar depois que este método é chamado e antes que a transação seja concluída, a transação pode anular.  
+  
+ **Observação** esse método deve ser chamado apenas uma vez durante o tempo de vida da transação dependente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Transactions.TransactionException">Qualquer tentativa de trabalho adicional na transação depois que este método é chamado. Isso inclui chamar métodos como <see cref="Overload:System.Transactions.Transaction.EnlistVolatile" />, <see cref="Overload:System.Transactions.Transaction.EnlistDurable" />, <see cref="M:System.Transactions.Transaction.Clone" />, <see cref="M:System.Transactions.Transaction.DependentClone(System.Transactions.DependentCloneOption)" /> , ou todas as operações na transação de serialização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.DependentTransaction.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">To be added.</param>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

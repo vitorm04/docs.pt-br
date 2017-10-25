@@ -1,0 +1,1008 @@
+<Type Name="FileSystemInfo" FullName="System.IO.FileSystemInfo">
+  <TypeSignature Language="C#" Value="public abstract class FileSystemInfo : MarshalByRefObject, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit FileSystemInfo extends System.MarshalByRefObject implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.FileSystemInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a classe base para os objetos <see cref="T:System.IO.FileInfo" /> e <see cref="T:System.IO.DirectoryInfo" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.FileSystemInfo> classe contém métodos que são comuns a manipulação de arquivos e diretórios. Um <xref:System.IO.FileSystemInfo> objeto pode representar um arquivo ou um diretório, assim, que serve como base para <xref:System.IO.FileInfo> ou <xref:System.IO.DirectoryInfo> objetos. Use essa classe de base ao analisar um lote de arquivos e diretórios.  
+  
+ Uma classe derivada pode herdar de <xref:System.IO.FileSystemInfo> somente se a classe derivada tem a permissão de AllAccess do <xref:System.Security.Permissions.FileIOPermissionAccess> enumeração.  
+  
+ Membros que aceitam um caminho, o caminho pode se referir a um arquivo ou apenas um diretório. O caminho especificado também pode se referir a um caminho relativo ou um caminho de convenção de nomenclatura Universal (UNC) para um nome de compartilhamento e servidor. Por exemplo, todos os seguintes são aceitáveis caminhos:  
+  
+-   "c:\\\MyDir\\\MyFile.txt" em c# ou "c:\MyDir\MyFile.txt" no Visual Basic.  
+  
+-   "c:\\\MyDir" em c# ou "c:\MyDir" no Visual Basic.  
+  
+-   "MyDir\\\MySubdir" em c# ou "MyDir\MySubDir" no Visual Basic.  
+  
+-   "\\\\\\\MyServer\\\MyShare" em c#, ou "\\\MyServer\MyShare" no Visual Basic.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um loop através de todos os arquivos e diretórios, consultando algumas informações sobre cada entrada.  
+  
+ [!code-cpp[FileSystemInfo#1](~/samples/snippets/cpp/VS_Snippets_CLR/FileSystemInfo/cpp/program.cpp#1)]
+ [!code-csharp[FileSystemInfo#1](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemInfo/CS/program.cs#1)]
+ [!code-vb[FileSystemInfo#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemInfo/VB/FileSystemInfo.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.FileIOPermission">permissão herdar desta classe. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />  
+  
+ Ação de segurança: Demanda de herança</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FileSystemInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileSystemInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.FileSystemInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FileSystemInfo (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileSystemInfo.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.FileSystemInfo" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Especificado <see cref="T:System.Runtime.Serialization.SerializationInfo" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.IO.FileAttributes Attributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.FileAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemInfo.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.FileAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os atributos para o arquivo ou diretório atual.</summary>
+        <value>
+          O <see cref="T:System.IO.FileAttributes" /> do <see cref="T:System.IO.FileSystemInfo" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.IO.FileSystemInfo.Attributes%2A> propriedade será previamente em cache se a instância atual do <xref:System.IO.FileSystemInfo> objeto foi retornado de qualquer um dos seguintes <xref:System.IO.DirectoryInfo> métodos:  
+  
+-   <xref:System.IO.DirectoryInfo.GetDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>  
+  
+ O valor pode ser armazenado em cache quando o valor em si ou outros <xref:System.IO.FileSystemInfo> propriedades são acessadas. Para obter o valor mais recente, chame o <xref:System.IO.FileSystemInfo.Refresh%2A> método.
+
+ Se o caminho não existe desde o último estado armazenado em cache, o valor de retorno é `(FileAttributes)(-1)`. <xref:System.IO.FileNotFoundException>ou <xref:System.IO.DirectoryNotFoundException> só pode ser gerada ao definir o valor.
+  
+ O valor dessa propriedade é uma combinação do arquivamento, compactado, directory, ocultada, offline, somente leitura, sistema e sinalizadores de atributo de arquivo temporário.  
+  
+ Quando você definir esse valor, use o operador OR bit a bit (`|` em c# ou `Or` no Visual Basic) para aplicar mais de um valor. Para reter todos os valores existentes no <xref:System.IO.FileSystemInfo.Attributes%2A> propriedade, inclua o valor da <xref:System.IO.FileSystemInfo.Attributes%2A> propriedade na sua atribuição. Por exemplo:  
+  
+ `exampleFile.Attributes = exampleFile.Attributes | FileAttributes.ReadOnly;`  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.IO.FileSystemInfo.Attributes%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.FileSystemInfo> classe.  
+  
+ [!code-cpp[FileSystemInfo#2](~/samples/snippets/cpp/VS_Snippets_CLR/FileSystemInfo/cpp/program.cpp#2)]
+ [!code-csharp[FileSystemInfo#2](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemInfo/CS/program.cs#2)]
+ [!code-vb[FileSystemInfo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemInfo/VB/FileSystemInfo.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo especificado não existe. Somente acionada ao definir o valor da propriedade.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">O caminho especificado é inválido. Por exemplo, é uma unidade não mapeada. Somente acionada ao definir o valor da propriedade.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <exception cref="T:System.ArgumentException">O chamador tenta definir um atributo de arquivo inválido.  
+  
+ -ou-  
+  
+ O usuário tenta definir um valor de atributo, mas não tem permissão de gravação.</exception>
+        <exception cref="T:System.IO.IOException">
+          <see cref="M:System.IO.FileSystemInfo.Refresh" /> não pode inicializar os dados.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para gravar arquivos e diretórios. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /> ação de segurança:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreationTime">
+      <MemberSignature Language="C#" Value="public DateTime CreationTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime CreationTime" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemInfo.CreationTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a hora de criação do arquivo ou diretório atual.</summary>
+        <value>A data e hora de criação do objeto <see cref="T:System.IO.FileSystemInfo" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** esse método pode retornar um valor, pois ela usa funções nativas cujos valores não podem ser atualizados continuamente pelo sistema operacional.  
+  
+ O valor da <xref:System.IO.FileSystemInfo.CreationTime%2A> propriedade será previamente em cache se a instância atual do <xref:System.IO.FileSystemInfo> objeto foi retornado de qualquer um dos seguintes <xref:System.IO.DirectoryInfo> métodos:  
+  
+-   <xref:System.IO.DirectoryInfo.GetDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>  
+  
+ Para obter o valor mais recente, chame o <xref:System.IO.FileSystemInfo.Refresh%2A> método.  
+  
+ Se o arquivo descrito no <xref:System.IO.FileSystemInfo> objeto não existe, essa propriedade retornará 12:00 meia-noite de 1º de janeiro de 1601 D.C. (C.E.) Tempo Universal Coordenado (UTC), ajustado para horário local.  
+  
+ Unidades formatadas como NTFS podem armazenar em cache informações-metadados do arquivo, como a hora de criação do arquivo, por um curto período de tempo. Esse processo é conhecido como arquivo túnel. Como resultado, pode ser necessário definir explicitamente a hora de criação de um arquivo, se você estiver substituindo ou substituir um arquivo existente.  
+  
+ O valor da propriedade é `null` se o sistema de arquivo que contém o <xref:System.IO.FileSystemInfo> objeto não oferece suporte a essas informações.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.IO.FileSystemInfo.CreationTime%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.FileSystemInfo> classe.  
+  
+ [!code-cpp[FileSystemInfo#2](~/samples/snippets/cpp/VS_Snippets_CLR/FileSystemInfo/cpp/program.cpp#2)]
+ [!code-csharp[FileSystemInfo#2](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemInfo/CS/program.cs#2)]
+ [!code-vb[FileSystemInfo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemInfo/VB/FileSystemInfo.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">
+          <see cref="M:System.IO.FileSystemInfo.Refresh" /> não pode inicializar os dados.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">O caminho especificado é inválido, por exemplo, ele está em uma unidade não mapeada.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional atual não é o Windows NT ou posterior.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O chamador tenta definir um tempo de criação inválido.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para definir a hora de criação. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreationTimeUtc">
+      <MemberSignature Language="C#" Value="public DateTime CreationTimeUtc { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime CreationTimeUtc" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemInfo.CreationTimeUtc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a hora de criação, em UTC (tempo universal coordenado), do arquivo ou diretório atual.</summary>
+        <value>A data e hora de criação no formato UTC do objeto <see cref="T:System.IO.FileSystemInfo" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** esse método pode retornar um valor, pois ela usa funções nativas cujos valores não podem ser atualizados continuamente pelo sistema operacional.  
+  
+ O valor da <xref:System.IO.FileSystemInfo.CreationTimeUtc%2A> propriedade será previamente em cache se a instância atual do <xref:System.IO.FileSystemInfo> objeto foi retornado de qualquer um dos seguintes <xref:System.IO.DirectoryInfo> métodos:  
+  
+-   <xref:System.IO.DirectoryInfo.GetDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>  
+  
+ Para obter o valor mais recente, chame o <xref:System.IO.FileSystemInfo.Refresh%2A> método.  
+  
+ Se o arquivo descrito no <xref:System.IO.FileSystemInfo> objeto não existe, essa propriedade retornará 12:00 meia-noite de 1º de janeiro de 1601 D.C. (C.E.) Tempo Universal Coordenado (UTC).  
+  
+ Unidades formatadas como NTFS podem armazenar em cache informações-metadados do arquivo, como a hora de criação do arquivo, por um curto período de tempo. Esse processo é conhecido como arquivo túnel. Como resultado, pode ser necessário definir explicitamente a hora de criação de um arquivo, se você estiver substituindo ou substituir um arquivo existente.  
+  
+ O valor da propriedade é `null` se o sistema de arquivo que contém o <xref:System.IO.FileSystemInfo> objeto não oferece suporte a essas informações.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">
+          <see cref="M:System.IO.FileSystemInfo.Refresh" /> não pode inicializar os dados.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">O caminho especificado é inválido, por exemplo, ele está em uma unidade não mapeada.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional atual não é o Windows NT ou posterior.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O chamador tenta definir um tempo de acesso inválido.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para definir a hora de criação. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public abstract void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileSystemInfo.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exclui um arquivo ou diretório.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.DirectoryNotFoundException">O caminho especificado é inválido, por exemplo, ele está em uma unidade não mapeada.</exception>
+        <exception cref="T:System.IO.IOException">Há um identificador aberto no arquivo ou no diretório e o sistema operacional é o Windows XP ou anterior. Esse identificador aberto pode resultar da enumeração de diretórios e arquivos. Para obter mais informações, consulte [como: enumerar diretórios e arquivos](~/docs/standard/io/how-to-enumerate-directories-and-files.md).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public abstract bool Exists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Exists" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemInfo.Exists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o arquivo ou o diretório existe.</summary>
+        <value>
+          <see langword="true" /> se o arquivo ou o diretório existir; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public string Extension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Extension" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemInfo.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres que representa a parte da extensão do arquivo.</summary>
+        <value>Uma cadeia de caracteres que contém a extensão <see cref="T:System.IO.FileSystemInfo" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Extension` propriedade retorna o <xref:System.IO.FileSystemInfo> extensão, incluindo o ponto (.). Por exemplo, para um arquivo c:\NewFile.txt, essa propriedade retorna ". txt".  
+  
+ A tabela a seguir lista exemplos de outras tarefas de e/s comuns ou relacionados.  
+  
+|Para fazer isso...|Veja o exemplo neste tópico...|  
+|-------------------|--------------------------------------|  
+|Crie um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Grave em um arquivo de texto.|[Como gravar texto em um arquivo](~/docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Ler um arquivo de texto.|[Como ler texto de um arquivo](~/docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Recupere o caminho totalmente qualificado de um arquivo.|<xref:System.IO.Path.GetFullPath%2A>|  
+|Recupere apenas o nome do arquivo um caminho.|<xref:System.IO.Path.GetFileNameWithoutExtension%2A>|  
+|Recupere apenas o nome do diretório de um caminho.|<xref:System.IO.Path.GetDirectoryName%2A>|  
+|Altere a extensão de um arquivo.|<xref:System.IO.Path.ChangeExtension%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public virtual string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemInfo.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho completo do diretório ou arquivo.</summary>
+        <value>Uma cadeia de caracteres que contém o caminho completo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, para um arquivo c:\NewFile.txt, essa propriedade retorna "c:\NewFile.txt".  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.IO.FileSystemInfo.FullName%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.FileSystemInfo> classe.  
+  
+ [!code-cpp[FileSystemInfo#2](~/samples/snippets/cpp/VS_Snippets_CLR/FileSystemInfo/cpp/program.cpp#2)]
+ [!code-csharp[FileSystemInfo#2](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemInfo/CS/program.cs#2)]
+ [!code-vb[FileSystemInfo#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemInfo/VB/FileSystemInfo.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.PathTooLongException">O nome de arquivo e caminho totalmente qualificado tem 260 caracteres ou mais.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para acessar o caminho. Enumeração associada: <see cref="T:System.Security.Permissions.FileIOPermissionAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FullPath">
+      <MemberSignature Language="C#" Value="protected string FullPath;" />
+      <MemberSignature Language="ILAsm" Value=".field family string FullPath" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileSystemInfo.FullPath" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o caminho totalmente qualificado do diretório ou arquivo.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.PathTooLongException">O caminho totalmente qualificado tem 260 caracteres ou mais.</exception>
+        <block subset="none" type="overrides">
+          <para>Classes derivadas de <see cref="T:System.IO.FileSystemInfo" /> pode usar o <see langword="FullPath" /> campo para determinar o caminho completo do objeto sendo manipulado.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileSystemInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Define o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com o nome de arquivo e informações adicionais de exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">permissão acessar informações sobre o caminho descrito pela instância atual. Enumeração associada: <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />  
+  
+ Ação de segurança: demanda</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">permissão Vincular a essa classe. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />  
+  
+ Ação de segurança: demanda de Link</permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LastAccessTime">
+      <MemberSignature Language="C#" Value="public DateTime LastAccessTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastAccessTime" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemInfo.LastAccessTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a hora em que o arquivo ou o diretório atual foi acessado pela última vez.</summary>
+        <value>A hora em que o arquivo ou o diretório atual foi acessado pela última vez.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** esse método pode retornar um valor, pois ela usa funções nativas cujos valores não podem ser atualizados continuamente pelo sistema operacional.  
+  
+ Se o arquivo descrito no <xref:System.IO.FileSystemInfo> objeto não existe, essa propriedade retornará 12:00 meia-noite de 1º de janeiro de 1601 D.C. (C.E.) Tempo Universal Coordenado (UTC), ajustado para horário local.  
+  
+ O valor da <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A> propriedade será previamente em cache se a instância atual do <xref:System.IO.FileSystemInfo> objeto foi retornado de qualquer um dos seguintes <xref:System.IO.DirectoryInfo> métodos:  
+  
+-   <xref:System.IO.DirectoryInfo.GetDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>  
+  
+ Para obter o valor mais recente, chame o <xref:System.IO.FileSystemInfo.Refresh%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a atualização da <xref:System.IO.FileSystemInfo.LastAccessTime%2A> propriedade por meio de uma operação de "toque". Neste exemplo, o arquivo é "tocado", atualizando o <xref:System.IO.FileSystemInfo.CreationTime%2A>, <xref:System.IO.FileSystemInfo.LastAccessTime%2A> e <xref:System.IO.FileSystemInfo.LastWriteTime%2A> propriedades para a data e hora atuais.  
+  
+ [!code-csharp[System.IO.FileSystemInfo_touch#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.FileSystemInfo_touch/cs/touch.cs#00)]
+ [!code-vb[System.IO.FileSystemInfo_touch#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.FileSystemInfo_touch/vb/touch.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">
+          <see cref="M:System.IO.FileSystemInfo.Refresh" /> não pode inicializar os dados.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional atual não é o Windows NT ou posterior.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O chamador tenta definir um tempo de acesso inválido</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para definir a hora do último acesso. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LastAccessTimeUtc">
+      <MemberSignature Language="C#" Value="public DateTime LastAccessTimeUtc { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastAccessTimeUtc" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemInfo.LastAccessTimeUtc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a hora, no UTC (Tempo Universal Coordenado), em que o arquivo ou diretório atual foi acessado pela última vez.</summary>
+        <value>A hora UTC em que o arquivo ou o diretório atual foi acessado pela última vez.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** esse método pode retornar um valor, pois ela usa funções nativas cujos valores não podem ser atualizados continuamente pelo sistema operacional.  
+  
+ O valor da <xref:System.IO.FileSystemInfo.LastAccessTimeUtc%2A> propriedade será previamente em cache se a instância atual do <xref:System.IO.FileSystemInfo> objeto foi retornado de qualquer um dos seguintes <xref:System.IO.DirectoryInfo> métodos:  
+  
+-   <xref:System.IO.DirectoryInfo.GetDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>  
+  
+ Para obter o valor mais recente, chame o <xref:System.IO.FileSystemInfo.Refresh%2A> método.  
+  
+ Se o arquivo descrito no <xref:System.IO.FileSystemInfo> objeto não existe, essa propriedade retornará 12:00 meia-noite de 1º de janeiro de 1601 D.C. (C.E.) Tempo Universal Coordenado (UTC).  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">
+          <see cref="M:System.IO.FileSystemInfo.Refresh" /> não pode inicializar os dados.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional atual não é o Windows NT ou posterior.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O chamador tenta definir um tempo de acesso inválido.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para definir a hora do último acesso. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LastWriteTime">
+      <MemberSignature Language="C#" Value="public DateTime LastWriteTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastWriteTime" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemInfo.LastWriteTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a hora em que o arquivo ou o diretório atual foi usado para gravação pela última vez.</summary>
+        <value>A hora em que o arquivo atual foi gravado pela última vez.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** esse método pode retornar um valor, pois ela usa funções nativas cujos valores não podem ser atualizados continuamente pelo sistema operacional.  
+  
+ O valor da <xref:System.IO.FileSystemInfo.LastWriteTime%2A> propriedade será previamente em cache se a instância atual do <xref:System.IO.FileSystemInfo> objeto foi retornado de qualquer um dos seguintes <xref:System.IO.DirectoryInfo> métodos:  
+  
+-   <xref:System.IO.DirectoryInfo.GetDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>  
+  
+ Para obter o valor mais recente, chame o <xref:System.IO.FileSystemInfo.Refresh%2A> método.  
+  
+ Se o arquivo descrito no <xref:System.IO.FileSystemInfo> objeto não existe, essa propriedade retornará 12:00 meia-noite de 1º de janeiro de 1601 D.C. (C.E.) Tempo Universal Coordenado (UTC), ajustado para horário local.  
+  
+ O valor da propriedade é `null` se o sistema de arquivos que contém o arquivo não dá suporte a essas informações.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a atualização da <xref:System.IO.FileSystemInfo.LastWriteTime%2A> propriedade por meio de uma operação de "toque". Neste exemplo, o arquivo é "tocado", atualizando o <xref:System.IO.FileSystemInfo.CreationTime%2A>, <xref:System.IO.FileSystemInfo.LastAccessTime%2A> e <xref:System.IO.FileSystemInfo.LastWriteTime%2A> propriedades para a data e hora atuais.  
+  
+ [!code-csharp[System.IO.FileSystemInfo_touch#00](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.FileSystemInfo_touch/cs/touch.cs#00)]
+ [!code-vb[System.IO.FileSystemInfo_touch#00](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.FileSystemInfo_touch/vb/touch.vb#00)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">
+          <see cref="M:System.IO.FileSystemInfo.Refresh" /> não pode inicializar os dados.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional atual não é o Windows NT ou posterior.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O chamador tenta definir um tempo de gravação inválido.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para a configuração a última hora de gravação. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LastWriteTimeUtc">
+      <MemberSignature Language="C#" Value="public DateTime LastWriteTimeUtc { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastWriteTimeUtc" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemInfo.LastWriteTimeUtc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a hora, em UTC (Tempo Universal Coordenado), em que o arquivo ou diretório atual foi gravado pela última vez.</summary>
+        <value>A hora em UTC em que o arquivo atual foi gravado pela última vez.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** esse método pode retornar um valor, pois ela usa funções nativas cujos valores não podem ser atualizados continuamente pelo sistema operacional.  
+  
+ O valor da <xref:System.IO.FileSystemInfo.LastWriteTimeUtc%2A> propriedade será previamente em cache se a instância atual do <xref:System.IO.FileSystemInfo> objeto foi retornado de qualquer um dos seguintes <xref:System.IO.DirectoryInfo> métodos:  
+  
+-   <xref:System.IO.DirectoryInfo.GetDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.GetFileSystemInfos%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>  
+  
+-   <xref:System.IO.DirectoryInfo.EnumerateFileSystemInfos%2A>  
+  
+ Para obter o valor mais recente, chame o <xref:System.IO.FileSystemInfo.Refresh%2A> método.  
+  
+ Se o arquivo descrito no <xref:System.IO.FileSystemInfo> objeto não existe, essa propriedade retornará 12:00 meia-noite de 1º de janeiro de 1601 D.C. (C.E.) Tempo Universal Coordenado (UTC).  
+  
+ O valor da propriedade é `null` se o sistema de arquivos que contém o arquivo não dá suporte a essas informações.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">
+          <see cref="M:System.IO.FileSystemInfo.Refresh" /> não pode inicializar os dados.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional atual não é o Windows NT ou posterior.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O chamador tenta definir um tempo de gravação inválido.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para a configuração a última hora de gravação. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IO.FileSystemInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para arquivos, obtém o nome do arquivo. Para diretórios, obtém o nome do último diretório na hierarquia, se uma existir. Caso contrário, a propriedade <see langword="Name" /> obtém o nome do diretório.</summary>
+        <value>Uma cadeia de caracteres que é o nome do diretório pai, o nome do último diretório na hierarquia ou o nome de um arquivo, incluindo a extensão de nome de arquivo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para um diretório, `Name` retorna somente o nome do diretório pai, como Dir, não c:\Dir. Para um subdiretório, `Name` retorna somente o nome do subdiretório, como Sub1, não c:\Dir\Sub1.  
+  
+ Para um arquivo, `Name` retorna somente o nome de arquivo e extensão de nome de arquivo, como MyFile.txt, não c:\Dir\Myfile.txt.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalPath">
+      <MemberSignature Language="C#" Value="protected string OriginalPath;" />
+      <MemberSignature Language="ILAsm" Value=".field family string OriginalPath" />
+      <MemberSignature Language="DocId" Value="F:System.IO.FileSystemInfo.OriginalPath" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O caminho originalmente especificado pelo usuário, relativo ou absoluto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.FileSystemInfo.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza o estado do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `FileSystemInfo.Refresh`tira um instantâneo do arquivo do sistema de arquivos atual. `Refresh`não é possível corrigir o sistema de arquivos subjacente mesmo se o sistema de arquivos retorna informações incorretas ou desatualizadas. Isso pode acontecer em plataformas, como Windows 98.  
+  
+ Chamadas devem ser feitas para `Refresh` antes que a tentativa de obter as informações de atributo, ou as informações desatualizada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Um dispositivo como uma unidade de disco não está pronto.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

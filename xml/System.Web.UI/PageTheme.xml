@@ -1,0 +1,441 @@
+<Type Name="PageTheme" FullName="System.Web.UI.PageTheme">
+  <TypeSignature Language="C#" Value="public abstract class PageTheme" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PageTheme extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PageTheme" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base para um tema de página, que é uma coleção de recursos que são usadas para definir uma aparência consistente em páginas e controles em um site da Web. O tema da página pode ser definido por meio de configuração ou a diretiva de página.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os desenvolvedores de página e o controle não usar o <xref:System.Web.UI.ControlSkinDelegate>, <xref:System.Web.UI.ControlSkin>, ou <xref:System.Web.UI.PageTheme> classes diretamente. Essas classes são usadas pelo analisador do ASP.NET e do tempo de execução para aplicar a elementos de folha de estilo que são definidos em arquivos de capas de controle para páginas e tipos específicos de controles e temas do ASP.NET.  
+  
+ Os desenvolvedores de página Ativar (ou desativar) temas de página usando o <xref:System.Web.UI.Page.Theme%2A> e <xref:System.Web.UI.Control.EnableTheming%2A> propriedades. Para obter mais informações sobre os temas de página, consulte [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PageTheme ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.PageTheme" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppRelativeTemplateSourceDirectory">
+      <MemberSignature Language="C#" Value="protected abstract string AppRelativeTemplateSourceDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AppRelativeTemplateSourceDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageTheme.AppRelativeTemplateSourceDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído uma classe derivada, obtém a URL relativa do diretório para o <see cref="T:System.Web.UI.PageTheme" /> objeto.</summary>
+        <value>Um valor de cadeia de caracteres que contém a URL relativa do <see cref="T:System.Web.UI.PageTheme" /> directory.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.AppRelativeTemplateSourceDirectory%2A> propriedade é abstrata. Quando compilado, um tema irá gerar o código que substitui o <xref:System.Web.UI.PageTheme.AppRelativeTemplateSourceDirectory%2A> propriedade. O <xref:System.Web.UI.Control.ResolveUrl%2A> método usa o <xref:System.Web.UI.PageTheme.AppRelativeTemplateSourceDirectory%2A> propriedade resolve uma URL relativa para uma URL absoluta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlSkins">
+      <MemberSignature Language="C#" Value="protected abstract System.Collections.IDictionary ControlSkins { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary ControlSkins" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageTheme.ControlSkins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um <see cref="T:System.Collections.IDictionary" /> interface dos nomes de todas as capas padrão que estão disponíveis para o tema da página atual, indexado pelo tipo de controle.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> que representa as capas de controle associadas com o tema da página atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.ControlSkins%2A> propriedade é abstrata. Quando compilado, um tema irá gerar o código que substitui essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSkinKey">
+      <MemberSignature Language="C#" Value="public static object CreateSkinKey (Type controlType, string skinID);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CreateSkinKey(class System.Type controlType, string skinID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.CreateSkinKey(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlType" Type="System.Type" />
+        <Parameter Name="skinID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="controlType">O <see cref="T:System.Type" /> do controle ao qual se aplica uma capa de controle, que é passado normalmente do <see cref="P:System.Web.UI.ControlBuilder.ControlType" />.</param>
+        <param name="skinID">O nome da capa do controle para o qual criar uma chave.</param>
+        <summary>Cria um objeto de chave de pesquisa para uma ID. o tipo e a capa do controle específico</summary>
+        <returns>Um objeto que pode ser usado como uma chave de pesquisa em uma coleção de estilo de dicionário que contém as informações de identificação de tipo e capa de controle.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="controlType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="protected object Eval (string expression);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object Eval(string expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.Eval(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O caminho de navegação do contêiner para o valor da propriedade pública. Para obter detalhes, consulte <see cref="T:System.Web.UI.DataBinder" />.</param>
+        <summary>Usa o <see cref="M:System.Web.UI.DataBinder.Eval(System.Object,System.String)" /> método o <see cref="P:System.Web.UI.PageTheme.Page" /> propriedade que a instância do <see cref="T:System.Web.UI.PageTheme" /> classe está associada ao avaliar uma expressão de associação de dados.</summary>
+        <returns>Um objeto que resulta da avaliação da expressão de associação de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.Eval%2A> método usa o <xref:System.Web.UI.Page.GetDataItem%2A> método para resolver o contêiner do item de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="protected string Eval (string expression, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string Eval(string expression, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.Eval(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O caminho de navegação do contêiner para o valor da propriedade pública. Para obter detalhes, consulte <see cref="T:System.Web.UI.DataBinder" />.</param>
+        <param name="format">Uma cadeia de caracteres de formato do .NET Framework. Para obter detalhes, consulte <see cref="T:System.Web.UI.DataBinder" />.</param>
+        <summary>Usa o <see cref="M:System.Web.UI.DataBinder.Eval(System.Object,System.String,System.String)" /> método o <see cref="P:System.Web.UI.PageTheme.Page" /> propriedade que a instância do <see cref="T:System.Web.UI.PageTheme" /> classe está associada ao avaliar uma expressão de associação de dados.</summary>
+        <returns>Uma cadeia de caracteres que resulta da avaliação da expressão e conversão da associação de dados em um tipo de cadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.Eval%2A> método usa o <xref:System.Web.UI.Page.GetDataItem%2A> método para resolver o contêiner do item de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkedStyleSheets">
+      <MemberSignature Language="C#" Value="protected abstract string[] LinkedStyleSheets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] LinkedStyleSheets" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageTheme.LinkedStyleSheets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém uma matriz de folhas de estilo que são vinculados a esta página.</summary>
+        <value>Uma matriz de cadeia de caracteres de folhas de estilo vinculados a esta página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.LinkedStyleSheets%2A> propriedade é abstrata e deve ser implementada em uma classe derivada. Quando compilado, um tema irá gerar o código que substitui essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.Page Page { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Page Page" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PageTheme.Page" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Page</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.Page" /> que está associado com a instância do objeto de <see cref="T:System.Web.UI.PageTheme" /> classe.</summary>
+        <value>O <see cref="T:System.Web.UI.Page" /> associado ao <see cref="T:System.Web.UI.PageTheme" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.Page%2A> propriedade é somente leitura e é atribuída internamente quando uma instância do <xref:System.Web.UI.PageTheme> classe é criada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TestDeviceFilter">
+      <MemberSignature Language="C#" Value="public bool TestDeviceFilter (string deviceFilterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TestDeviceFilter(string deviceFilterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.TestDeviceFilter(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deviceFilterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="deviceFilterName">O nome da cadeia de caracteres do filtro de dispositivo para verificar.</param>
+        <summary>Testa se aplica um filtro de dispositivo para o <see cref="T:System.Web.UI.Page" /> de controle que a instância do <see cref="T:System.Web.UI.PageTheme" /> classe está associada.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="deviceFilterName" /> aplica-se à página; caso contrário; <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="protected object XPath (string xPathExpression);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object XPath(string xPathExpression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPath(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">A expressão XPath a ser avaliada. Para obter detalhes, consulte <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <summary>Avalia as expressões de associação de dados XPath.</summary>
+        <returns>Um objeto que resulta da avaliação de associação de dados <paramref name="xPathExpression" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.XPath%2A> método usa o <xref:System.Web.UI.Page.GetDataItem%2A> método para resolver o <xref:System.Xml.XPath.IXPathNavigable> referência de objeto usada para avaliar a expressão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="protected string XPath (string xPathExpression, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string XPath(string xPathExpression, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">A expressão XPath a ser avaliada. Para obter detalhes, consulte <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <param name="format">Uma cadeia de formato do .NET Framework para aplicar ao resultado.</param>
+        <summary>Avalia uma expressão de associação de dados XPath usando a cadeia de caracteres de formato especificado para exibir o resultado.</summary>
+        <returns>Uma cadeia de caracteres que resulta da avaliação da expressão e conversão da associação de dados em um tipo de cadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.XPath%2A> método usa o <xref:System.Web.UI.Page.GetDataItem%2A> método para resolver o <xref:System.Xml.XPath.IXPathNavigable> referência de objeto usada para avaliar a expressão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="protected object XPath (string xPathExpression, System.Xml.IXmlNamespaceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object XPath(string xPathExpression, class System.Xml.IXmlNamespaceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPath(System.String,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+        <Parameter Name="resolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">A expressão XPath a ser avaliada. Para obter detalhes, consulte <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <param name="resolver">Um conjunto de mapeamentos de prefixo e namespace usado para resolução de namespace.</param>
+        <summary>Avalia uma expressão de associação de dados XPath usando os mapeamentos de namespace e um prefixo especificado para a resolução de namespace.</summary>
+        <returns>Um objeto que resulta da avaliação de associação de dados <paramref name="xPathExpression" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.XPath%2A> método usa o <xref:System.Web.UI.Page.GetDataItem%2A> método para resolver o <xref:System.Xml.XPath.IXPathNavigable> referência de objeto usada para avaliar a expressão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="protected string XPath (string xPathExpression, string format, System.Xml.IXmlNamespaceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string XPath(string xPathExpression, string format, class System.Xml.IXmlNamespaceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPath(System.String,System.String,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="resolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">A expressão XPath a ser avaliada. Para obter detalhes, consulte <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <param name="format">Uma cadeia de formato do .NET Framework para aplicar ao resultado.</param>
+        <param name="resolver">Um conjunto de mapeamentos de prefixo e namespace usado para resolução de namespace.</param>
+        <summary>Usa o <see cref="M:System.Web.UI.TemplateControl.XPath(System.String,System.String,System.Xml.IXmlNamespaceResolver)" /> método o <see cref="P:System.Web.UI.PageTheme.Page" /> controle que a instância do <see cref="T:System.Web.UI.PageTheme" /> classe está associada ao avaliar uma expressão de associação de dados XPath.</summary>
+        <returns>Uma cadeia de caracteres que resulta da avaliação da expressão e conversão da associação de dados em um tipo de cadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.XPath%2A> método usa o <xref:System.Web.UI.Page.GetDataItem%2A> método para resolver o <xref:System.Xml.XPath.IXPathNavigable> referência de objeto usada para avaliar a expressão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPathSelect">
+      <MemberSignature Language="C#" Value="protected System.Collections.IEnumerable XPathSelect (string xPathExpression);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.IEnumerable XPathSelect(string xPathExpression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPathSelect(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">A expressão XPath a ser avaliada. Para obter detalhes, consulte <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <summary>Avalia uma expressão de associação de dados XPath e retorna uma coleção de nós que implementa o <see cref="T:System.Collections.IEnumerable" /> interface.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerable" /> lista de nós.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.XPathSelect%2A> método usa o <xref:System.Web.UI.Page.GetDataItem%2A> método para resolver o <xref:System.Xml.XPath.IXPathNavigable> referência de objeto usada para avaliar a expressão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPathSelect">
+      <MemberSignature Language="C#" Value="protected System.Collections.IEnumerable XPathSelect (string xPathExpression, System.Xml.IXmlNamespaceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.IEnumerable XPathSelect(string xPathExpression, class System.Xml.IXmlNamespaceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PageTheme.XPathSelect(System.String,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xPathExpression" Type="System.String" />
+        <Parameter Name="resolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="xPathExpression">A expressão XPath a ser avaliada. Para obter detalhes, consulte <see cref="T:System.Web.UI.XPathBinder" />.</param>
+        <param name="resolver">Um conjunto de mapeamentos de prefixo e namespace usado para resolução de namespace.</param>
+        <summary>Avalia uma expressão de associação de dados XPath usando os mapeamentos de prefixo e namespace especificados para a resolução de namespace e retorna uma coleção de nós que implementa o <see cref="T:System.Collections.IEnumerable" /> interface.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerable" /> lista de nós.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PageTheme.XPathSelect%2A> método usa o <xref:System.Web.UI.Page.GetDataItem%2A> método para resolver o <xref:System.Xml.XPath.IXPathNavigable> referência de objeto usada para avaliar a expressão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

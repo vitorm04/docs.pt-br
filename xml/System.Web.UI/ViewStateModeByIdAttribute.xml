@@ -1,0 +1,63 @@
+<Type Name="ViewStateModeByIdAttribute" FullName="System.Web.UI.ViewStateModeByIdAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ViewStateModeByIdAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ViewStateModeByIdAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ViewStateModeByIdAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o atributo de metadados que os controles de servidor ASP.NET usam para especificar se participam do carregamento de informações de estado de exibição por <see cref="P:System.Web.UI.Control.ID" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ViewStateModeByIdAttribute> classe é usada para especificar um controle que requer o carregamento do estado de exibição por <xref:System.Web.UI.Control.ID%2A>. É o comportamento de carregamento do estado de exibição padrão do ASP.NET carregar as informações de estado de exibição para um controle por seu índice na árvore de controle da página. Há um custo de desempenho de carregamento de informações de estado de exibição por <xref:System.Web.UI.Control.ID%2A> como a árvore de controle de página deve ser pesquisada para o controle especificamente antes de carregar suas informações de estado de exibição.  
+  
+ Se o <xref:System.Web.UI.ViewStateModeByIdAttribute> classe é usada como um atributo de metadados de uma classe de controle personalizado,  
+  
+ o <xref:System.Web.UI.Control.LoadViewStateByID%2A> retorna a propriedade do controle `true`. Se o <xref:System.Web.UI.ViewStateModeByIdAttribute> classe não for usada, o <xref:System.Web.UI.Control.LoadViewStateByID%2A> propriedade do controle retorna o valor padrão de `false`, o que significa que o controle não carregar suas informações de estado de exibição por <xref:System.Web.UI.Control.ID%2A>.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+ O <xref:System.Web.UI.ViewStateModeByIdAttribute> classe não é aplicável ao salvar as informações de estado de exibição para um controle.  
+  
+ O <xref:System.Web.UI.ViewStateModeByIdAttribute> atributo de metadados de classe só é válido em declarações de classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ViewStateModeByIdAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ViewStateModeByIdAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ViewStateModeByIdAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicar o <xref:System.Web.UI.ViewStateModeByIdAttribute> para um controle de classe significa que o controle terá suas informações de estado de exibição carregadas pelo <xref:System.Web.UI.Control.ID%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

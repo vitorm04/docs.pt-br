@@ -1,0 +1,436 @@
+<Type Name="XamlDataDrivenToolTask" FullName="Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask">
+  <TypeSignature Language="C#" Value="public abstract class XamlDataDrivenToolTask : Microsoft.Build.Utilities.ToolTask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XamlDataDrivenToolTask extends Microsoft.Build.Utilities.ToolTask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Utilities.ToolTask</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa tarefas geradas pela fábrica de tarefa Xaml.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XamlDataDrivenToolTask (string[] switchOrderList, System.Resources.ResourceManager taskResources);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string[] switchOrderList, class System.Resources.ResourceManager taskResources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.#ctor(System.String[],System.Resources.ResourceManager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="switchOrderList" Type="System.String[]" />
+        <Parameter Name="taskResources" Type="System.Resources.ResourceManager" />
+      </Parameters>
+      <Docs>
+        <param name="switchOrderList">A lista de opções na ordem em que devem ser exibidos.</param>
+        <param name="taskResources">Os recursos da tarefa.</param>
+        <summary>Inicializa uma instância de um <see cref="T:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptableNonZeroExitCodes">
+      <MemberSignature Language="C#" Value="public virtual string[] AcceptableNonZeroExitCodes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AcceptableNonZeroExitCodes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.AcceptableNonZeroExitCodes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma matriz de códigos diferente de zero que não provocam um erro.</summary>
+        <value>Uma matriz de códigos diferente de zero</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveToolSwitches">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.Dictionary&lt;string,Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch&gt; ActiveToolSwitches { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch&gt; ActiveToolSwitches" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ActiveToolSwitches" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um conjunto de opções da ferramenta ativa.</summary>
+        <value>O conjunto de opções da ferramenta ativa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveToolSwitchesValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch&gt; ActiveToolSwitchesValues { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, class Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch&gt; ActiveToolSwitchesValues" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ActiveToolSwitchesValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os valores das opções de ferramenta ativas.</summary>
+        <value>Define os valores das opções de ferramenta ativas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddActiveSwitchToolValue">
+      <MemberSignature Language="C#" Value="public void AddActiveSwitchToolValue (Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch switchToAdd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddActiveSwitchToolValue(class Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch switchToAdd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.AddActiveSwitchToolValue(Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchToAdd" Type="Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch" />
+      </Parameters>
+      <Docs>
+        <param name="switchToAdd">A opção para adicionar.</param>
+        <summary>Adiciona o valor de um comutador para a lista de valores de ativos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalOptions">
+      <MemberSignature Language="C#" Value="public string AdditionalOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AdditionalOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.AdditionalOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as opções adicionais especificadas no arquivo de projeto.</summary>
+        <value>Uma cadeia de caracteres que lista as opções.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandLineTemplate">
+      <MemberSignature Language="C#" Value="public string CommandLineTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandLineTemplate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.CommandLineTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo de linha de comando.</summary>
+        <value>O modelo de linha de comando.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSwitchValue">
+      <MemberSignature Language="C#" Value="public string CreateSwitchValue (string propertyName, string baseSwitch, string separator, Tuple&lt;string,bool&gt;[] arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string CreateSwitchValue(string propertyName, string baseSwitch, string separator, class System.Tuple`2&lt;string, bool&gt;[] arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.CreateSwitchValue(System.String,System.String,System.String,System.Tuple{System.String,System.Boolean}[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="baseSwitch" Type="System.String" />
+        <Parameter Name="separator" Type="System.String" />
+        <Parameter Name="arguments" Type="System.Tuple&lt;System.String,System.Boolean&gt;[]" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade.</param>
+        <param name="baseSwitch">A opção de base.</param>
+        <param name="separator">O separador.</param>
+        <param name="arguments">Os argumentos.</param>
+        <summary>Cria um valor de chave para o <see cref="T:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask" />.</summary>
+        <returns>O valor da opção criado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a tarefa, em seguida, fecha o identificador de eventos criado.</summary>
+        <returns>O resultado da execução.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCommandLineCommands">
+      <MemberSignature Language="C#" Value="protected override string GenerateCommandLineCommands ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateCommandLineCommands() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.GenerateCommandLineCommands" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera a linha de comando se ele for menor que 32k.</summary>
+        <returns>Os comandos gerados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFullPathToTool">
+      <MemberSignature Language="C#" Value="protected override string GenerateFullPathToTool ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateFullPathToTool() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.GenerateFullPathToTool" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Localiza a ferramenta se ToolPath não foi especificado.</summary>
+        <returns>O caminho completo gerado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateResponseFileCommands">
+      <MemberSignature Language="C#" Value="protected override string GenerateResponseFileCommands ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateResponseFileCommands() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.GenerateResponseFileCommands" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria o comando de arquivo de resposta.</summary>
+        <returns>O comando de arquivo de resposta gerada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleTaskExecutionErrors">
+      <MemberSignature Language="C#" Value="protected override bool HandleTaskExecutionErrors ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HandleTaskExecutionErrors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.HandleTaskExecutionErrors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Manipula o código de retorno da ferramenta.</summary>
+        <returns>Os códigos de retorno.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPropertySet">
+      <MemberSignature Language="C#" Value="public bool IsPropertySet (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPropertySet(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.IsPropertySet(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade.</param>
+        <summary>Indica se a propriedade é definida.</summary>
+        <returns>
+          <see langword="true" />Se a propriedade é definida.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSwitchMap">
+      <MemberSignature Language="C#" Value="public string ReadSwitchMap (string propertyName, string[][] switchMap, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ReadSwitchMap(string propertyName, string[][] switchMap, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ReadSwitchMap(System.String,System.String[][],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="switchMap" Type="System.String[][]" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade para verificar.</param>
+        <param name="switchMap">O mapa de comutador.</param>
+        <param name="value">O valor da propriedade.</param>
+        <summary>Verifica o valor de uma propriedade é definida como e localiza a chave correspondente.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSwitchMap2">
+      <MemberSignature Language="C#" Value="public int ReadSwitchMap2 (string propertyName, Tuple&lt;string,string,Tuple&lt;string,bool&gt;[]&gt;[] switchMap, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ReadSwitchMap2(string propertyName, class System.Tuple`3&lt;string, string, class System.Tuple`2&lt;string, bool&gt;[]&gt;[] switchMap, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ReadSwitchMap2(System.String,System.Tuple{System.String,System.String,System.Tuple{System.String,System.Boolean}[]}[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="switchMap" Type="System.Tuple&lt;System.String,System.String,System.Tuple&lt;System.String,System.Boolean&gt;[]&gt;[]" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade para verificar.</param>
+        <param name="switchMap">O mapa de comutador.</param>
+        <param name="value">O valor da propriedade.</param>
+        <summary>Verifica o valor de uma propriedade é definido como e localiza a chave correspondente.</summary>
+        <returns>O valor marcado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceToolSwitch">
+      <MemberSignature Language="C#" Value="public void ReplaceToolSwitch (Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch switchToAdd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReplaceToolSwitch(class Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch switchToAdd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ReplaceToolSwitch(Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchToAdd" Type="Microsoft.Build.Tasks.Xaml.CommandLineToolSwitch" />
+      </Parameters>
+      <Docs>
+        <param name="switchToAdd">O nome de opção.</param>
+        <summary>Substitui um comutador existente com o mesmo nome especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseFileEncoding">
+      <MemberSignature Language="C#" Value="protected override System.Text.Encoding ResponseFileEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding ResponseFileEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ResponseFileEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a codificação do arquivo de resposta.</summary>
+        <value>A codificação de arquivo de resposta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateInteger">
+      <MemberSignature Language="C#" Value="public bool ValidateInteger (string switchName, int min, int max, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ValidateInteger(string switchName, int32 min, int32 max, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ValidateInteger(System.String,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="switchName" Type="System.String" />
+        <Parameter Name="min" Type="System.Int32" />
+        <Parameter Name="max" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="switchName">O nome do comutador para verificar.</param>
+        <param name="min">O valor mínimo.</param>
+        <param name="max">O valor máximo.</param>
+        <param name="value">O valor da propriedade.</param>
+        <summary>Verifica uma propriedade de inteiro para ver se ele está dentro do intervalo especificado.</summary>
+        <returns>
+          <see langword="true" />Se o valor está dentro do intervalo especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateParameters">
+      <MemberSignature Language="C#" Value="protected override bool ValidateParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ValidateParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Xaml.XamlDataDrivenToolTask.ValidateParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Valida os parâmetros.</summary>
+        <returns>
+          <see langword="true" />Se os parâmetros são válidos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

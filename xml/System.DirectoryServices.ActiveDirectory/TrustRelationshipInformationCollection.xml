@@ -1,0 +1,125 @@
+<Type Name="TrustRelationshipInformationCollection" FullName="System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection">
+  <TypeSignature Language="C#" Value="public class TrustRelationshipInformationCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrustRelationshipInformationCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection" /> classe contém uma coleção de <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> objetos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation information);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation information) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection.Contains(System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="information" Type="System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" />
+      </Parameters>
+      <Docs>
+        <param name="information">O <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Determina se o especificado <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> objeto está contido na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado está na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="information" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection.CopyTo(System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz de <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> objetos que recebe os elementos desta coleção.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> onde esse método inicia a cópia desta coleção.</param>
+        <summary>Copia todos os <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> objetos na coleção para a matriz especificada, iniciando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentException">A matriz de destino não é grande o suficiente, com base no tamanho da coleção de origem e o <paramref name="index" /> especificado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> especificado está fora do intervalo da matriz de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation information);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation information) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection.IndexOf(System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="information" Type="System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" />
+      </Parameters>
+      <Docs>
+        <param name="information">O <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> objeto a ser pesquisado na coleção.</param>
+        <summary>Retorna o índice da primeira ocorrência do <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> objeto na coleção.</summary>
+        <returns>O índice de base zero do primeiro objeto correspondente. Retornará -1 se nenhum membro dessa coleção é idêntico de <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="information" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> objeto a ser obtido.</param>
+        <summary>Obtém um <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> objeto na coleção.</summary>
+        <value>O objeto <see cref="T:System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation" /> no índice especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> especificado está fora do intervalo da coleção.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,154 @@
+<Type Name="ObjectListCommand" FullName="System.Web.UI.MobileControls.ObjectListCommand">
+  <TypeSignature Language="C#" Value="public class ObjectListCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectListCommand extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ObjectListCommand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.PersistName("Command")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um comando em um <see cref="T:System.Web.UI.MobileControls.ObjectList" /> controle móvel do ASP.NET. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.MobileControls.ObjectListCommand> objeto pode ser declarado como um `<command>` elemento dentro da declaração de um <xref:System.Web.UI.MobileControls.ObjectList>.  
+  
+ Um <xref:System.Web.UI.MobileControls.ObjectListCommand> objeto pode ser também construído e adicionado por meio de programação para uma <xref:System.Web.UI.MobileControls.ObjectList>, adicionando-o para o controle <xref:System.Web.UI.MobileControls.ObjectList.Commands%2A> coleção de membro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Web.UI.MobileControls.ObjectListCommand> objeto. Este exemplo é parte de um exemplo maior e mais completo para o <xref:System.Web.UI.MobileControls.ObjectList> visão geral.  
+  
+ [!code-aspx-csharp[MobileObjectListSample#10](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileObjectListSample/cs/Default3.aspx#10)]
+ [!code-aspx-vb[MobileObjectListSample#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileObjectListSample/vb/Default3.aspx#10)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectListCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListCommand.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.MobileControls.ObjectListCommand" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão inicializa todas as propriedades para `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectListCommand (string name, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectListCommand.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Inicializa o <see cref="P:System.Web.UI.MobileControls.ObjectListCommand.Name" /> propriedade.</param>
+        <param name="text">Inicializa o <see cref="P:System.Web.UI.MobileControls.ObjectListCommand.Text" /> propriedade.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.MobileControls.ObjectListCommand" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O segundo construtor usa os parâmetros de nome e o texto para inicializar o <xref:System.Web.UI.MobileControls.ObjectListCommand.Name%2A> e <xref:System.Web.UI.MobileControls.ObjectListCommand.Text%2A> propriedades, respectivamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectListCommand.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do comando. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O nome do comando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome for fornecido, que é gerado quando o usuário seleciona um comando.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectListCommand.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto que deve aparecer no comando. O padrão é uma cadeia de caracteres vazia. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O texto que deve aparecer no comando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.ObjectListCommand.Text%2A> propriedade pode ser especificada usando o `Text` atributo, ou como texto interno. Se o <xref:System.Web.UI.MobileControls.ObjectListCommand.Text%2A> propriedade for especificada em ambos os modos, o texto interno sempre terá precedência. No entanto, se o <xref:System.Web.UI.MobileControls.ObjectListCommand.Text%2A> propriedade é definida por meio de programação, o texto interno é removido automaticamente e recentemente defina propriedade terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

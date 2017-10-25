@@ -1,0 +1,122 @@
+<Type Name="CancelRequestedRecord" FullName="System.Activities.Tracking.CancelRequestedRecord">
+  <TypeSignature Language="C#" Value="public sealed class CancelRequestedRecord : System.Activities.Tracking.TrackingRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CancelRequestedRecord extends System.Activities.Tracking.TrackingRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.CancelRequestedRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Tracking.TrackingRecord</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa os dados enviados pelo tempo de execução de fluxo de trabalho para os participantes de rastreamento quando <see cref="M:System.Activities.ActivityExecutionContext.CancelChild" /> ou <see cref="M:System.Activities.ActivityExecutionContext.CancelChildren" /> é chamado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CancelRequestedRecord (Guid instanceId, long recordNumber, System.Activities.Tracking.ActivityInfo activity, System.Activities.Tracking.ActivityInfo child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, int64 recordNumber, class System.Activities.Tracking.ActivityInfo activity, class System.Activities.Tracking.ActivityInfo child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.CancelRequestedRecord.#ctor(System.Guid,System.Int64,System.Activities.Tracking.ActivityInfo,System.Activities.Tracking.ActivityInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="recordNumber" Type="System.Int64" />
+        <Parameter Name="activity" Type="System.Activities.Tracking.ActivityInfo" />
+        <Parameter Name="child" Type="System.Activities.Tracking.ActivityInfo" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">A ID de instância da atividade que gerou o evento.</param>
+        <param name="recordNumber">Uma sequência que define a ordem de eventos de rastreamento gerado.</param>
+        <param name="activity">A atividade de emitir a solicitação de cancelamento.</param>
+        <param name="child">A atividade a ser cancelada.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Tracking.CancelRequestedRecord" /> classe usando a ID de instância especificada, o número de registro, a atividade e a atividade filho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activity">
+      <MemberSignature Language="C#" Value="public System.Activities.Tracking.ActivityInfo Activity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Tracking.ActivityInfo Activity" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.CancelRequestedRecord.Activity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.ActivityInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Activities.Tracking.ActivityInfo" /> da atividade de solicitação de cancelamento.</summary>
+        <value>As informações de atividade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Child">
+      <MemberSignature Language="C#" Value="public System.Activities.Tracking.ActivityInfo Child { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Tracking.ActivityInfo Child" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.CancelRequestedRecord.Child" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.ActivityInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Activities.Tracking.ActivityInfo" /> da atividade a ser cancelada.</summary>
+        <value>As informações de atividade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="protected override System.Activities.Tracking.TrackingRecord Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Activities.Tracking.TrackingRecord Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.CancelRequestedRecord.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.TrackingRecord</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.CancelRequestedRecord.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o objeto <see cref="T:System.Activities.Tracking.CancelRequestedRecord" /> atual.</summary>
+        <returns>Os dados de rastreamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,60 @@
+<Type Name="WizardStep" FullName="System.Web.UI.WebControls.WizardStep">
+  <TypeSignature Language="C#" Value="public sealed class WizardStep : System.Web.UI.WebControls.WizardStepBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WizardStep extends System.Web.UI.WebControls.WizardStepBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WizardStep" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WizardStepBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.WizardStepControlBuilder))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma etapa básica que é exibida em um <see cref="T:System.Web.UI.WebControls.Wizard" /> controle. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.Wizard> controle é composto de uma coleção de <xref:System.Web.UI.WebControls.WizardStep> objetos que representam etapas únicas de um assistente. O <xref:System.Web.UI.WebControls.Wizard> controle exibe um único <xref:System.Web.UI.WebControls.WizardStep> objeto ao mesmo tempo. Você pode usar um <xref:System.Web.UI.WebControls.Wizard> controle e seus associados <xref:System.Web.UI.WebControls.WizardStep> objetos para coletar dados relacionados de forma linear ou não linear.  
+  
+> [!NOTE]
+>  Se você inserir o <xref:System.Web.UI.WebControls.Login> controlar um <xref:System.Web.UI.WebControls.WizardStep>, defina explicitamente o <xref:System.Web.UI.WebControls.Wizard.ActiveStepIndex%2A> em um `Page_Load` manipulador de eventos se o usuário é autenticado. O <xref:System.Web.UI.WebControls.Wizard> controle não Avançar automaticamente para o próximo <xref:System.Web.UI.WebControls.WizardStep> neste cenário.  
+  
+ Não é possível aplicar um tema para <xref:System.Web.UI.WebControls.WizardStep> , mas você pode aplicar um tema para <xref:System.Web.UI.WebControls.TemplatedWizardStep>.  
+  
+> [!NOTE]
+>  Se você adicionar programaticamente uma <xref:System.Web.UI.WebControls.WizardStep> no `Page_Load` manipulador de eventos, você deve adicionar a navegação para essa etapa antes da carregamento da página.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WizardStep ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WizardStep.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WizardStep" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

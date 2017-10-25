@@ -1,0 +1,311 @@
+<Type Name="HttpListenerTimeoutManager" FullName="System.Net.HttpListenerTimeoutManager">
+  <TypeSignature Language="C#" Value="public class HttpListenerTimeoutManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpListenerTimeoutManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.HttpListenerTimeoutManager" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.HttpListener</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O gerenciador de tempo limite a ser usado para um objeto <see cref="T:System.Net.HttpListener" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Gerenciador de tempo limite define os limites de tempo limite de conexão para um <xref:System.Net.HttpListener> instância.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpListenerTimeoutManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerTimeoutManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrainEntityBody">
+      <MemberSignature Language="C#" Value="public TimeSpan DrainEntityBody { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DrainEntityBody" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.DrainEntityBody" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo, em segundos, permitidos para o <see cref="T:System.Net.HttpListener" /> para descarregar o corpo da entidade em uma conexão Keep-Alive.</summary>
+        <value>Retorna <see cref="T:System.TimeSpan" />.  
+  
+ O tempo, em segundos, permitido para o <see cref="T:System.Net.HttpListener" /> para descarregar o corpo da entidade em uma conexão Keep-Alive.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão desta propriedade é 2 minutos.  
+  
+ Em uma conexão Keep-Alive, depois que o aplicativo enviou uma resposta para uma solicitação e antes da solicitação de corpo de entidade completamente foi recebido, o <xref:System.Net.HttpListener> inicia esgotar o restante do corpo da entidade para acessar outro potencialmente redirecionasse solicitação do cliente. Se o tempo para que o corpo da entidade restantes exceder o período permitido a conexão se esgota.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityBody">
+      <MemberSignature Language="C#" Value="public TimeSpan EntityBody { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan EntityBody" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.EntityBody" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo, em segundos, permitidos para o corpo da entidade de solicitação chegar.</summary>
+        <value>Retorna <see cref="T:System.TimeSpan" />.  
+  
+ O tempo, em segundos, permitido para o corpo da entidade de solicitação chegar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão desta propriedade é 2 minutos.  
+  
+ O <xref:System.Net.HttpListener> ativa o temporizador quando a solicitação tem um corpo de entidade. Inicialmente, a expiração do temporizador é definida como o valor configurado. Quando o <xref:System.Net.HttpListener> recebe indicações de dados adicionais na solicitação, ele redefine o timer para dar a conexão outro intervalo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderWait">
+      <MemberSignature Language="C#" Value="public TimeSpan HeaderWait { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan HeaderWait" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.HeaderWait" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo, em segundos, permitidos para o <see cref="T:System.Net.HttpListener" /> ao analisar o cabeçalho de solicitação.</summary>
+        <value>Retorna <see cref="T:System.TimeSpan" />.  
+  
+ O tempo, em segundos, permitido para o <see cref="T:System.Net.HttpListener" /> ao analisar o cabeçalho de solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão desta propriedade é 2 minutos.  
+  
+ Esse tempo limite é aplicada apenas depois que a primeira solicitação em que a conexão é roteada para o <xref:System.Net.HttpListener>.  
+  
+ O sistema não pode determinar a fila de solicitação ou o grupo de URL associada com a solicitação até que os cabeçalhos foram analisados. Portanto, o <xref:System.Net.HttpListener> impõe o padrão <xref:System.Net.HttpListenerTimeoutManager.HeaderWait%2A> timer para a primeira solicitação em uma conexão. As solicitações subsequentes em uma conexão Keep-Alive usará o valor definido nesta propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdleConnection">
+      <MemberSignature Language="C#" Value="public TimeSpan IdleConnection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan IdleConnection" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.IdleConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo, em segundos, permitidos para uma conexão ociosa.</summary>
+        <value>Retorna <see cref="T:System.TimeSpan" />.  
+  
+ O tempo, em segundos, permitido para uma conexão ociosa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão desta propriedade é 2 minutos.  
+  
+ Esse tempo limite é aplicada apenas depois que a primeira solicitação em que a conexão é roteada para o <xref:System.Net.HttpListener>.  
+  
+ O sistema não pode determinar a fila de solicitação ou o grupo de URL associada com a solicitação até que os cabeçalhos foram analisados. Portanto, o <xref:System.Net.HttpListener> impõe o padrão <xref:System.Net.HttpListenerTimeoutManager.IdleConnection%2A> timer para a primeira solicitação em uma conexão. As solicitações subsequentes em uma conexão Keep-Alive usará o valor definido nesta propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinSendBytesPerSecond">
+      <MemberSignature Language="C#" Value="public long MinSendBytesPerSecond { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MinSendBytesPerSecond" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.MinSendBytesPerSecond" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a taxa mínima de envio, em bytes por segundo para a resposta.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ A taxa mínima de envio, em bytes por segundo para a resposta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A taxa de envio de resposta padrão é 150 bytes por segundo.  
+  
+ Para desabilitar o temporizador, defina <xref:System.Net.HttpListenerTimeoutManager.MinSendBytesPerSecond%2A> para MAXULONG.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestQueue">
+      <MemberSignature Language="C#" Value="public TimeSpan RequestQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RequestQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerTimeoutManager.RequestQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo, em segundos, permitidos para a solicitação permanecem na fila de solicitação antes do <see cref="T:System.Net.HttpListener" /> coleta.</summary>
+        <value>Retorna <see cref="T:System.TimeSpan" />.  
+  
+ O tempo, em segundos, permitido para que a solicitação permaneça na fila de solicitação antes do <see cref="T:System.Net.HttpListener" /> coletá-la.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão desta propriedade é 2 minutos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

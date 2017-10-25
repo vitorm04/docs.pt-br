@@ -1,0 +1,158 @@
+<Type Name="BamlLocalizabilityResolver" FullName="System.Windows.Markup.Localizer.BamlLocalizabilityResolver">
+  <TypeSignature Language="C#" Value="public abstract class BamlLocalizabilityResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BamlLocalizabilityResolver extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Localizer.BamlLocalizabilityResolver" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Resolve configurações localizáveis para classes e propriedades no binário XAML (BAML).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.Localizer.BamlLocalizabilityResolver>é usado pelo <xref:System.Windows.Markup.Localizer.BamlLocalizer> para resolver as configurações de localização de classes e propriedades no [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)]. O resolvedor é chamado em tempo de extração de recursos, bem como quando localizado [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] é atualizada.  
+  
+ No momento da extração de recurso (<xref:System.Windows.Markup.Localizer.BamlLocalizer.ExtractResources%2A>), o resolvedor:  
+  
+-   Fornece <xref:System.Windows.LocalizabilityAttribute> para classes e propriedades em [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] quando o <xref:System.Windows.Markup.Localizer.BamlLocalizer> está construindo recursos localizáveis.  
+  
+-   Fornece as preferências de formatação de elementos no [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] para elementos são formatados como marcas embutidas.  
+  
+ AT localizada a hora em que [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] é atualizado (<xref:System.Windows.Markup.Localizer.BamlLocalizer.UpdateBaml%2A>), o resolvedor:  
+  
+-   Resolve marcas de formatação de volta em classes.  
+  
+-   Resolve o nome do assembly que contém a definição de classe.  
+  
+-   <xref:System.Windows.Markup.Localizer.BamlLocalizabilityResolver>em uma classe interna que executa os aspectos práticos das funções de classe para uma subclasse <xref:System.Windows.Markup.Localizer.BamlLocalizer>.  
+  
+<a name="xamlTextUsage_BamlLocalizabilityResolver"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BamlLocalizabilityResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizabilityResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.Localizer.BamlLocalizabilityResolver" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementLocalizability">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Markup.Localizer.ElementLocalizability GetElementLocalizability (string assembly, string className);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Markup.Localizer.ElementLocalizability GetElementLocalizability(string assembly, string className) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizabilityResolver.GetElementLocalizability(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Localizer.ElementLocalizability</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.String" />
+        <Parameter Name="className" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O nome completo do assembly que contém [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] a ser localizada.</param>
+        <param name="className">O nome completo da classe do elemento que você deseja recuperar informações de localização para.</param>
+        <summary>Retorna um valor que indica se um tipo de elemento especificado pode ser localizado e, nesse caso, se ele pode ser embutido formatado.</summary>
+        <returns>Um objeto que contém as informações de localização para o assembly especificado e o elemento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyLocalizability">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.LocalizabilityAttribute GetPropertyLocalizability (string assembly, string className, string property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.LocalizabilityAttribute GetPropertyLocalizability(string assembly, string className, string property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizabilityResolver.GetPropertyLocalizability(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalizabilityAttribute</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.String" />
+        <Parameter Name="className" Type="System.String" />
+        <Parameter Name="property" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O nome completo do assembly que contém [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)] a ser localizada.</param>
+        <param name="className">O nome completo da classe do elemento que você deseja recuperar informações de localização para.</param>
+        <param name="property">O nome da propriedade que você deseja recuperar informações de localização para.</param>
+        <summary>Retorna um valor que indica se uma propriedade especificada de um tipo de elemento especificado pode ser localizada.</summary>
+        <returns>Um objeto que especifica se e como a propriedade pode ser localizada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAssemblyFromClass">
+      <MemberSignature Language="C#" Value="public abstract string ResolveAssemblyFromClass (string className);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveAssemblyFromClass(string className) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizabilityResolver.ResolveAssemblyFromClass(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="className" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="className">O nome completo da classe.</param>
+        <summary>Retorna o nome completo do assembly que contém a classe especificada.</summary>
+        <returns>O nome completo do assembly que contém a classe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveFormattingTagToClass">
+      <MemberSignature Language="C#" Value="public abstract string ResolveFormattingTagToClass (string formattingTag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveFormattingTagToClass(string formattingTag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Localizer.BamlLocalizabilityResolver.ResolveFormattingTagToClass(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formattingTag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formattingTag">O nome da marca.</param>
+        <summary>Retorna o nome completo da classe de um [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] marca que não foi encontrada em [!INCLUDE[TLA2#tla_baml](~/includes/tla2sharptla-baml-md.md)].</summary>
+        <returns>O nome completo da classe associado com a marca.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado quando um <xref:System.Windows.Markup.Localizer.BamlLocalizer> ou equivalente é aplicar substituições para recursos localizáveis. Se uma marca de formatação é encontrada nas substituições, esse método é chamado para resolver a marca de formatação para um nome de classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

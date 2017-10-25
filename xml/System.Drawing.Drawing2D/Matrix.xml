@@ -1,0 +1,1088 @@
+<Type Name="Matrix" FullName="System.Drawing.Drawing2D.Matrix">
+  <TypeSignature Language="C#" Value="public sealed class Matrix : MarshalByRefObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Matrix extends System.MarshalByRefObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.Matrix" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Encapsula uma matriz afim 3 por 3 que representa uma transformação geométrica. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] , você pode armazenar uma transformação afim de um <xref:System.Drawing.Drawing2D.Matrix> objeto. Como a terceira coluna de uma matriz que representa uma transformação afim sempre é (0, 0, 1), você especificar apenas os seis números nas duas primeiras colunas quando você construir um <xref:System.Drawing.Drawing2D.Matrix> objeto. A instrução `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` constrói a matriz mostrada na figura a seguir.  
+  
+ ![Transformações](~/add/media/aboutgdip05-art10.gif "transformações")  
+  
+## <a name="composite-transformations"></a>Transformações de composição  
+ Uma transformação de composição é uma sequência de transformações, uma seguida da outra. Considere as matrizes e transformações na lista a seguir:  
+  
+|||  
+|-|-|  
+|Matriz A|Girar 90 graus|  
+|Matriz B|Dimensionar por um fator de 2 na direção x|  
+|Matriz C|Mover 3 unidades na direção y|  
+  
+ Se começar com o ponto (2, 1) — representado pela matriz [2 1 1] — e multiplicar por A, em seguida, B e C, o ponto (2, 1) passará as três transformações na ordem listada.  
+  
+ [2 1 1]ABC = [-2 5 1]  
+  
+ Em vez de armazenar as três partes da transformação de composição em três matrizes separadas, você pode multiplicar A, B e C juntos para obter uma única matriz 3 × 3 que armazena a transformação de composição inteira. Suponha que a ABC = D. Em seguida, um ponto multiplicado por D fornece o mesmo resultado que um ponto multiplicado por A, B e, em seguida, C.  
+  
+ [2 1 1]D = [-2 5 1]  
+  
+ A ilustração a seguir mostra as matrizes A, B, C e D.  
+  
+ ![Transformações](~/add/media/aboutgdip05-art12.gif "transformações")  
+  
+ O fato de que a matriz de uma transformação composta pode ser formada pela multiplicação de matrizes de transformação individuais significa que qualquer sequência de transformações afins pode ser armazenada em uma única <xref:System.Drawing.Drawing2D.Matrix> objeto.  
+  
+> [!CAUTION]
+>  A ordem de uma transformação de composição é importante. Em geral, girar, dimensionar e converter não é o mesmo que dimensionar, girar e converter. Da mesma forma, a ordem de multiplicação de matriz é importante. Em geral, ABC não é o mesmo que BAC.  
+  
+ O <xref:System.Drawing.Drawing2D.Matrix> classe fornece vários métodos para criar uma transformação composta: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, e <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>. O exemplo a seguir cria a matriz de uma transformação de composição que primeiro gira 30 graus e, então, é dimensionada por um fator de 2 na direção y e movida em 5 unidades na direção x:  
+  
+ [!code-csharp[System.Drawing.CoordinateSystems#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.CoordinateSystems#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Matrix ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Drawing2D.Matrix" /> como a matriz de identidade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Matrix (System.Drawing.Rectangle rect, System.Drawing.Point[] plgpts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Rectangle rect, valuetype System.Drawing.Point[] plgpts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.#ctor(System.Drawing.Rectangle,System.Drawing.Point[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="plgpts" Type="System.Drawing.Point[]" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Uma estrutura <see cref="T:System.Drawing.Rectangle" /> que representa o retângulo a ser transformado.</param>
+        <param name="plgpts">Uma matriz de três <see cref="T:System.Drawing.Point" /> estruturas que representa os pontos de um paralelogramo, do qual os cantos superior esquerdo, superior direito e inferior esquerdo do retângulo serão transformados. O canto inferior direito do paralelogramo é indicado pelos três primeiros cantos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Drawing2D.Matrix" /> para a transformação geométrica definida pelo retângulo e matriz de pontos especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método inicializa a nova matriz, de modo que ele representa a transformação geométrica que mapeia o retângulo especificado pelo `rect` parâmetro paralelogramo definido por três pontos no `plgpts` parâmetro. O canto superior esquerdo do retângulo é mapeado para o primeiro ponto na `plgpts` matriz, no canto superior direito é mapeado para o segundo ponto e o canto inferior esquerdo é mapeado para o terceiro ponto. O ponto inferior direito do paralelogramo indicado pelas três primeiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Matrix (System.Drawing.RectangleF rect, System.Drawing.PointF[] plgpts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.RectangleF rect, valuetype System.Drawing.PointF[] plgpts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.#ctor(System.Drawing.RectangleF,System.Drawing.PointF[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+        <Parameter Name="plgpts" Type="System.Drawing.PointF[]" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Uma estrutura <see cref="T:System.Drawing.RectangleF" /> que representa o retângulo a ser transformado.</param>
+        <param name="plgpts">Uma matriz de três <see cref="T:System.Drawing.PointF" /> estruturas que representa os pontos de um paralelogramo, do qual os cantos superior esquerdo, superior direito e inferior esquerdo do retângulo serão transformados. O canto inferior direito do paralelogramo é indicado pelos três primeiros cantos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Drawing2D.Matrix" /> para a transformação geométrica definida pelo retângulo e matriz de pontos especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método inicializa a nova <xref:System.Drawing.Drawing2D.Matrix> , de modo que ele representa a transformação geométrica que mapeia o retângulo especificado pelo `rect` parâmetro paralelogramo definido por três pontos no `plgpts` parâmetro. O canto superior esquerdo do retângulo é mapeado para o primeiro ponto na `plgpts` matriz, no canto superior direito é mapeado para o segundo ponto e o canto inferior esquerdo é mapeado para o terceiro ponto. O ponto inferior direito do paralelogramo indicado pelas três primeiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Matrix (float m11, float m12, float m21, float m22, float dx, float dy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 m11, float32 m12, float32 m21, float32 m22, float32 dx, float32 dy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m11" Type="System.Single" />
+        <Parameter Name="m12" Type="System.Single" />
+        <Parameter Name="m21" Type="System.Single" />
+        <Parameter Name="m22" Type="System.Single" />
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="m11">O valor na primeira linha e na primeira coluna do novo <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <param name="m12">O valor na primeira linha e na segunda coluna do novo <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <param name="m21">O valor na segunda linha e na primeira coluna do novo <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <param name="m22">O valor na segunda linha e na segunda coluna do novo <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <param name="dx">O valor na terceira linha e na primeira coluna do novo <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <param name="dy">O valor na terceira linha e na segunda coluna do novo <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Drawing2D.Matrix" /> com os elementos especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.Matrix Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Drawing2D.Matrix Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.Matrix</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata deste <see cref="T:System.Drawing.Drawing2D.Matrix" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Drawing2D.Matrix" /> criado por esse método.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados por este <see cref="T:System.Drawing.Drawing2D.Matrix" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando `Dispose` permite que os recursos usados por este <xref:System.Drawing.Drawing2D.Matrix> objeto a ser realocada para outros fins.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Elements">
+      <MemberSignature Language="C#" Value="public float[] Elements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32[] Elements" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.Matrix.Elements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de valores de ponto flutuante que representa os elementos deste <see cref="T:System.Drawing.Drawing2D.Matrix" />.</summary>
+        <value>Uma matriz de valores de ponto flutuante que representa os elementos deste <see cref="T:System.Drawing.Drawing2D.Matrix" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos m11, m12, m21, m22, dx e dy do <xref:System.Drawing.Drawing2D.Matrix> são representados pelos valores na matriz na ordem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser testado.</param>
+        <summary>Testa se o objeto especificado for um <see cref="T:System.Drawing.Drawing2D.Matrix" /> e é idêntico a este <see cref="T:System.Drawing.Drawing2D.Matrix" />.</summary>
+        <returns>Este método retorna <see langword="true" /> se <paramref name="obj" /> é especificado <see cref="T:System.Drawing.Drawing2D.Matrix" /> idênticos a este <see cref="T:System.Drawing.Drawing2D.Matrix" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~Matrix ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que um objeto tente liberar recursos e executar outras operações de limpeza antes de ser recuperado pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um código hash.</summary>
+        <returns>O código hash para este <see cref="T:System.Drawing.Drawing2D.Matrix" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invert">
+      <MemberSignature Language="C#" Value="public void Invert ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invert() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Invert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inverte isso <see cref="T:System.Drawing.Drawing2D.Matrix" />, se ele é invertível.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria uma matriz e inverte a ela:  
+  
+```csharp  
+Matrix myMatrix = new Matrix(3, 5, 1, 2, 2, 4);  
+ myMatrix.Invert();  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIdentity">
+      <MemberSignature Language="C#" Value="public bool IsIdentity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIdentity" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.Matrix.IsIdentity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Drawing.Drawing2D.Matrix" /> é a matriz de identidade.</summary>
+        <value>Esta propriedade é <see langword="true" /> se este <see cref="T:System.Drawing.Drawing2D.Matrix" /> é identidade; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInvertible">
+      <MemberSignature Language="C#" Value="public bool IsInvertible { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInvertible" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.Matrix.IsInvertible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Drawing.Drawing2D.Matrix" /> pode ser invertida.</summary>
+        <value>Esta propriedade é <see langword="true" /> se este <see cref="T:System.Drawing.Drawing2D.Matrix" /> invertível; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public void Multiply (System.Drawing.Drawing2D.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Multiply(class System.Drawing.Drawing2D.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Multiply(System.Drawing.Drawing2D.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">O <see cref="T:System.Drawing.Drawing2D.Matrix" /> pelo qual este <see cref="T:System.Drawing.Drawing2D.Matrix" /> deve ser multiplicado.</param>
+        <summary>Multiplica esse <see cref="T:System.Drawing.Drawing2D.Matrix" /> pela matriz especificada no parâmetro <paramref name="matrix" />, acrescentando o <see cref="T:System.Drawing.Drawing2D.Matrix" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="public void Multiply (System.Drawing.Drawing2D.Matrix matrix, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Multiply(class System.Drawing.Drawing2D.Matrix matrix, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Multiply(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">O <see cref="T:System.Drawing.Drawing2D.Matrix" /> pelo qual este <see cref="T:System.Drawing.Drawing2D.Matrix" /> deve ser multiplicado.</param>
+        <param name="order">O <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que representa a ordem da multiplicação.</param>
+        <summary>Multiplica este <see cref="T:System.Drawing.Drawing2D.Matrix" /> pela matriz especificada no parâmetro <paramref name="matrix" /> e na ordem especificada no parâmetro <paramref name="order" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a ordem especificada for <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>, este <xref:System.Drawing.Drawing2D.Matrix> é multiplicada por matriz especificada em uma ordem antecedendo. Se a ordem especificada for <xref:System.Drawing.Drawing2D.MatrixOrder.Append>, este <xref:System.Drawing.Drawing2D.Matrix> é multiplicada por matriz especificada em uma ordem anexada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.Paint> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria três matrizes.  
+  
+-   Lista o conteúdo da matriz de 1 para a tela.  
+  
+-   Multiplica matriz 1 por matriz 2 e armazena o resultado na matriz de 1.  
+  
+-   Lista o conteúdo da matriz de 1 para a tela.  
+  
+-   Multiplica o resultado armazenado na matriz 1 por matriz 3 e novamente armazena o resultado na matriz de 1.  
+  
+-   Lista o conteúdo da matriz de 1 para a tela.  
+  
+-   Desenha um retângulo para a tela antes de aplicar a transformação de matriz de 1 (o retângulo azul).  
+  
+-   Aplica a transformação ao retângulo.  
+  
+-   Desenha um retângulo transformado na tela (retângulo vermelho), usando as mesmas coordenadas do retângulo anterior.  
+  
+ Observe que o retângulo vermelho ter sido ajustado por um fator de dois na direção horizontal, girado 90 graus e, em seguida, movidos (traduzidos) 250 pontos na direção x e 50 pontos na direção y.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMatrixExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMatrixExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMatrixExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetX">
+      <MemberSignature Language="C#" Value="public float OffsetX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 OffsetX" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.Matrix.OffsetX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de tradução x (o valor de dx ou o elemento na terceira linha e primeira coluna) deste <see cref="T:System.Drawing.Drawing2D.Matrix" />.</summary>
+        <value>O valor de tradução x deste <see cref="T:System.Drawing.Drawing2D.Matrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetY">
+      <MemberSignature Language="C#" Value="public float OffsetY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 OffsetY" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.Matrix.OffsetY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de tradução y (o valor dy, ou o elemento na terceira linha e a segunda coluna) deste <see cref="T:System.Drawing.Drawing2D.Matrix" />.</summary>
+        <value>O valor de tradução y deste <see cref="T:System.Drawing.Drawing2D.Matrix" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine este <see cref="T:System.Drawing.Drawing2D.Matrix" /> para ter os elementos da matriz de identidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos na principal diagonal da matriz de identidade são 1. Todos os outros elementos da matriz de identidade são de 0.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.Paint> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria uma matriz de escala.  
+  
+-   Lista os elementos de matriz para a tela.  
+  
+-   Redefine a matriz de identidade.  
+  
+-   Lista os elementos na tela.  
+  
+-   Converte a matriz em 50 pontos no eixo x e 40 pontos no eixo y.  
+  
+-   Lista os elementos da matriz traduzida para a tela.  
+  
+-   Desenha que um retângulo é desenhado na tela antes de aplicar a transformação de matriz (um retângulo azul).  
+  
+-   Aplica a transformação ao retângulo.  
+  
+-   Desenha que o retângulo transformados na tela (retângulo vermelho), usando as mesmas coordenadas do retângulo anterior.  
+  
+ Observe que o retângulo vermelho não foi dimensionado (devido a reinicialização), mas foi traduzido para o eixo x e y.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMatrixExamples#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMatrixExamples#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMatrixExamples#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotate">
+      <MemberSignature Language="C#" Value="public void Rotate (float angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Rotate(float32 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Rotate(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="angle">O ângulo de rotação, em graus.</param>
+        <summary>Preceda a isso <see cref="T:System.Drawing.Drawing2D.Matrix" /> uma rotação no sentido horário ao redor da origem e pelo ângulo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.Matrix.Rotate%28System.Single%2CSystem.Drawing.Drawing2D.MatrixOrder%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotate">
+      <MemberSignature Language="C#" Value="public void Rotate (float angle, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Rotate(float32 angle, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Rotate(System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="angle">O ângulo (extensão) de rotação, em graus.</param>
+        <param name="order">Um <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que especifica a ordem (suceder ou preceder) em que a rotação é aplicada a este <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <summary>Aplica uma rotação no sentido horário de um valor especificado no parâmetro <paramref name="angle" />, em torno da origem (coordenadas x e y zero) para esse <see cref="T:System.Drawing.Drawing2D.Matrix" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.Paint> objeto de evento. O código executa as seguintes ações:  
+  
+-   Desenha um retângulo para a tela antes de aplicar uma transformação de rotação (o retângulo azul).  
+  
+-   Cria uma matriz e gira 45 graus.  
+  
+-   Aplica-se essa transformação de matriz para o retângulo.  
+  
+-   Desenha um retângulo transformado na tela (retângulo vermelho).  
+  
+ Observe que o retângulo vermelho foi girado em torno de 0, 0 coordenadas de tela.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMatrixExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMatrixExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMatrixExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateAt">
+      <MemberSignature Language="C#" Value="public void RotateAt (float angle, System.Drawing.PointF point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateAt(float32 angle, valuetype System.Drawing.PointF point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.RotateAt(System.Single,System.Drawing.PointF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+        <Parameter Name="point" Type="System.Drawing.PointF" />
+      </Parameters>
+      <Docs>
+        <param name="angle">O ângulo (extensão) de rotação, em graus.</param>
+        <param name="point">Um <see cref="T:System.Drawing.PointF" /> que representa o centro da rotação.</param>
+        <summary>Aplica uma rotação horária a esta <see cref="T:System.Drawing.Drawing2D.Matrix" /> em torno do ponto especificado no parâmetro <paramref name="point" /> e pela precedência da rotação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Drawing.Drawing2D.Matrix> e <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> método para girar uma cadeia de caracteres. Este exemplo é projetado para ser usado com o Windows Forms. Criar um formulário e cole o seguinte código para ele. Chamar o `DrawVerticalStringFromBottomUp` método no formulário de <xref:System.Windows.Forms.Control.Paint> manipulador de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.MiscExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.MiscExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateAt">
+      <MemberSignature Language="C#" Value="public void RotateAt (float angle, System.Drawing.PointF point, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateAt(float32 angle, valuetype System.Drawing.PointF point, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.RotateAt(System.Single,System.Drawing.PointF,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+        <Parameter Name="point" Type="System.Drawing.PointF" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="angle">O ângulo de rotação, em graus.</param>
+        <param name="point">Um <see cref="T:System.Drawing.PointF" /> que representa o centro da rotação.</param>
+        <param name="order">Um <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que especifica a ordem (suceder ou preceder) em que a rotação é aplicada.</param>
+        <summary>Aplica uma rotação horária em torno do ponto especificado para este <see cref="T:System.Drawing.Drawing2D.Matrix" /> na ordem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.Paint> objeto de evento. O código executa as seguintes ações:  
+  
+-   Desenha um retângulo para a tela antes de aplicar uma transformação de rotação (o retângulo azul).  
+  
+-   Cria uma matriz e gira 45 graus em torno de um ponto especificado.  
+  
+-   Aplica-se a esta matriz de transformação é para o retângulo.  
+  
+-   Desenha um retângulo transformado na tela (retângulo vermelho).  
+  
+ Observe que o retângulo vermelho foi girado em torno do canto superior esquerdo do retângulo (o ponto de rotação especificado o <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A> método).  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMatrixExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMatrixExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMatrixExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public void Scale (float scaleX, float scaleY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Scale(float32 scaleX, float32 scaleY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Scale(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scaleX" Type="System.Single" />
+        <Parameter Name="scaleY" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="scaleX">O valor segundo o qual este <see cref="T:System.Drawing.Drawing2D.Matrix" /> deve ser dimensionado na direção do eixo x.</param>
+        <param name="scaleY">O valor segundo o qual este <see cref="T:System.Drawing.Drawing2D.Matrix" /> deve ser dimensionado na direção do eixo y.</param>
+        <summary>Aplica o vetor de escala especificado a este <see cref="T:System.Drawing.Drawing2D.Matrix" /> acrescentando o vetor de escala.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.Matrix.Scale%28System.Single%2CSystem.Single%2CSystem.Drawing.Drawing2D.MatrixOrder%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public void Scale (float scaleX, float scaleY, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Scale(float32 scaleX, float32 scaleY, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Scale(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scaleX" Type="System.Single" />
+        <Parameter Name="scaleY" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="scaleX">O valor segundo o qual este <see cref="T:System.Drawing.Drawing2D.Matrix" /> deve ser dimensionado na direção do eixo x.</param>
+        <param name="scaleY">O valor segundo o qual este <see cref="T:System.Drawing.Drawing2D.Matrix" /> deve ser dimensionado na direção do eixo y.</param>
+        <param name="order">Um <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que especifica a ordem (suceder ou preceder) em que o vetor de escala é aplicado a este <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <summary>Aplica o vetor de escala especificado (<paramref name="scaleX" /> e <paramref name="scaleY" />) a esta <see cref="T:System.Drawing.Drawing2D.Matrix" /> usando a ordem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.Paint> objeto de evento. O código executa as seguintes ações:  
+  
+-   Desenha um retângulo para a tela antes de aplicar uma transformação de escala (o retângulo azul).  
+  
+-   Cria uma matriz e pode ser dimensionado por 3 no eixo x e 2 no eixo y.  
+  
+-   Aplica-se essa transformação de matriz para o retângulo.  
+  
+-   Desenha um retângulo transformado na tela (retângulo vermelho).  
+  
+ Observe que o retângulo vermelho foi dimensionado por um fator de 3 no eixo x e 2 no eixo y, incluindo o canto superior esquerdo do retângulo (o ponto de início do retângulo).  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMatrixExamples#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMatrixExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMatrixExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shear">
+      <MemberSignature Language="C#" Value="public void Shear (float shearX, float shearY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Shear(float32 shearX, float32 shearY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Shear(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shearX" Type="System.Single" />
+        <Parameter Name="shearY" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="shearX">O fator de distorção horizontal.</param>
+        <param name="shearY">O fator de distorção vertical.</param>
+        <summary>Aplica o vetor de distorção especificado a este <see cref="T:System.Drawing.Drawing2D.Matrix" /> acrescentando a transformação de distorção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação aplicada nesse método é uma distorção pura somente se um dos parâmetros é 0. Aplicado a um retângulo na origem, quando o `shearY` fator é 0, a transformação move a extremidade inferior horizontalmente por `shearX` vezes a altura do retângulo. Quando o `shearX` fator é 0, ele move a borda direita verticalmente pelo `shearY` vezes a largura do retângulo. Cuidado está em ordem, quando ambos os parâmetros forem diferentes de zero, porque os resultados são difíceis de prever. Por exemplo, se os dois fatores forem 1, a transformação for singular (portanto, noninvertible), apertando todo o plano para uma única linha.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.Paint> objeto de evento. O código executa a ação a seguir:  
+  
+-   Desenha um retângulo para a tela, usando uma caneta verde, antes de aplicar uma transformação de escala.  
+  
+-   Cria um <xref:System.Drawing.Drawing2D.Matrix> e usa para definir uma transformação de coordenadas do mundo para o <xref:System.Drawing.Graphics>.  
+  
+-   Desenha um retângulo outra usando uma caneta vermelha.  
+  
+-   Desenha uma elipse usando uma caneta azul.  
+  
+ O resultado é um retângulo verde, um paralelogramo vermelho e uma elipse transformada, azul. Observe que o retângulo verde (desenhado antes de configurar a transformação) usa diretamente as coordenadas fornecidas no <xref:System.Drawing.Graphics.DrawRectangle%2A> chamar. As duas figuras são transformadas antes do desenho. O retângulo é transformado em um paralelogramo (vermelho) e a elipse (azul) é transformada para se ajustar à paralelogramo transformado. Observe a que parte inferior do retângulo é movido no eixo x por um fator de duas vezes a altura do retângulo, assim, formando paralelogramo (distorcidos).  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMatrixExamples#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMatrixExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMatrixExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shear">
+      <MemberSignature Language="C#" Value="public void Shear (float shearX, float shearY, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Shear(float32 shearX, float32 shearY, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Shear(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shearX" Type="System.Single" />
+        <Parameter Name="shearY" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="shearX">O fator de distorção horizontal.</param>
+        <param name="shearY">O fator de distorção vertical.</param>
+        <param name="order">Um <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que especifica a ordem (acrescentam ou precedem) no qual a distorção é aplicada.</param>
+        <summary>Aplica-se do vetor de distorção especificado a este <see cref="T:System.Drawing.Drawing2D.Matrix" /> na ordem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A transformação aplicada nesse método é uma distorção pura somente se um dos parâmetros é 0. Aplicado a um retângulo na origem, quando o `shearY` fator é 0, a transformação move a extremidade inferior horizontalmente por `shearX` vezes a altura do retângulo. Quando o `shearX` fator é 0, ele move a borda direita verticalmente pelo `shearY` vezes a largura do retângulo. Cuidado está em ordem, quando ambos os parâmetros forem diferentes de zero, porque os resultados são difíceis de prever. Por exemplo, se os dois fatores forem 1, a transformação for singular (portanto, noninvertible), apertando todo o plano para uma única linha.  
+  
+   
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.Matrix.Shear%28System.Single%2CSystem.Single%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformPoints">
+      <MemberSignature Language="C#" Value="public void TransformPoints (System.Drawing.Point[] pts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TransformPoints(valuetype System.Drawing.Point[] pts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.TransformPoints(System.Drawing.Point[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pts" Type="System.Drawing.Point[]" />
+      </Parameters>
+      <Docs>
+        <param name="pts">Uma matriz de estruturas <see cref="T:System.Drawing.Point" /> que representa os pontos a serem transformados.</param>
+        <summary>Aplica a transformação geométrica representada por este <see cref="T:System.Drawing.Drawing2D.Matrix" /> a uma matriz especificada de pontos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.Paint> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria uma matriz de pontos que formam um retângulo.  
+  
+-   Desenha a esta matriz de pontos (para a tela antes de aplicar uma transformação de escala (o retângulo azul).  
+  
+-   Cria uma matriz e pode ser dimensionado por 3 no eixo x e 2 no eixo y.  
+  
+-   Aplica-se essa transformação de matriz para a matriz de pontos.  
+  
+-   Desenha a matriz transformada na tela (retângulo vermelho).  
+  
+ Observe que o retângulo vermelho foi dimensionado por um fator de 3 no eixo x e 2 no eixo y, incluindo o canto superior esquerdo do retângulo (o ponto de início do retângulo).  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMatrixExamples#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMatrixExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMatrixExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformPoints">
+      <MemberSignature Language="C#" Value="public void TransformPoints (System.Drawing.PointF[] pts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TransformPoints(valuetype System.Drawing.PointF[] pts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.TransformPoints(System.Drawing.PointF[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pts" Type="System.Drawing.PointF[]" />
+      </Parameters>
+      <Docs>
+        <param name="pts">Uma matriz de estruturas <see cref="T:System.Drawing.PointF" /> que representa os pontos a serem transformados.</param>
+        <summary>Aplica a transformação geométrica representada por este <see cref="T:System.Drawing.Drawing2D.Matrix" /> a uma matriz especificada de pontos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.Matrix.TransformPoints%28System.Drawing.Point%5B%5D%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformVectors">
+      <MemberSignature Language="C#" Value="public void TransformVectors (System.Drawing.Point[] pts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TransformVectors(valuetype System.Drawing.Point[] pts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.TransformVectors(System.Drawing.Point[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pts" Type="System.Drawing.Point[]" />
+      </Parameters>
+      <Docs>
+        <param name="pts">Uma matriz de estruturas <see cref="T:System.Drawing.Point" /> que representa os pontos a serem transformados.</param>
+        <summary>Aplica-se somente a escala e rotação componentes deste <see cref="T:System.Drawing.Drawing2D.Matrix" /> na matriz especificada de pontos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.Paint> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria uma matriz de pontos que formam um retângulo.  
+  
+-   Desenha essa matriz de pontos na tela antes de aplicar uma transformação de escala (o retângulo azul).  
+  
+-   Cria uma matriz e pode ser dimensionado por 3 no eixo x e 2 no eixo y e converte-o por 100 em ambos os eixos.  
+  
+-   Lista os elementos de matriz para a tela.  
+  
+-   Aplica-se essa transformação de matriz para a matriz de pontos.  
+  
+-   Desenha a matriz transformada na tela (retângulo vermelho).  
+  
+ Observe que o retângulo vermelho ter sido ajustado por um fator de 3 no eixo x e 2 no eixo y, incluindo o canto superior esquerdo do retângulo (o ponto de início do retângulo), mas o vetor de conversão (os dois últimos elementos da matriz) é ignorado.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMatrixExamples#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CPP/form1.cpp#8)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMatrixExamples#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CS/form1.cs#8)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMatrixExamples#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformVectors">
+      <MemberSignature Language="C#" Value="public void TransformVectors (System.Drawing.PointF[] pts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TransformVectors(valuetype System.Drawing.PointF[] pts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.TransformVectors(System.Drawing.PointF[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pts" Type="System.Drawing.PointF[]" />
+      </Parameters>
+      <Docs>
+        <param name="pts">Uma matriz de estruturas <see cref="T:System.Drawing.Point" /> que representa os pontos a serem transformados.</param>
+        <summary>Multiplica cada vetor em uma matriz para a matriz. Os elementos de tradução da matriz (terceira linha) são ignorados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.Matrix.TransformVectors%28System.Drawing.Point%5B%5D%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate">
+      <MemberSignature Language="C#" Value="public void Translate (float offsetX, float offsetY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Translate(float32 offsetX, float32 offsetY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Translate(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetX" Type="System.Single" />
+        <Parameter Name="offsetY" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="offsetX">O valor de x pelo qual converter esse <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <param name="offsetY">O valor de y pelo qual converter esse <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <summary>Aplica-se do vetor de conversão especificado (<paramref name="offsetX" /> e <paramref name="offsetY" />) a este <see cref="T:System.Drawing.Drawing2D.Matrix" /> acrescentando o vetor de conversão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.Matrix.Translate%28System.Single%2CSystem.Single%2CSystem.Drawing.Drawing2D.MatrixOrder%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate">
+      <MemberSignature Language="C#" Value="public void Translate (float offsetX, float offsetY, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Translate(float32 offsetX, float32 offsetY, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.Translate(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetX" Type="System.Single" />
+        <Parameter Name="offsetY" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="offsetX">O valor de x pelo qual converter esse <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <param name="offsetY">O valor de y pelo qual converter esse <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <param name="order">Um <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que especifica a ordem (suceder ou preceder) em que a translação é aplicada a este <see cref="T:System.Drawing.Drawing2D.Matrix" />.</param>
+        <summary>Aplica-se o vetor de conversão especificada a este <see cref="T:System.Drawing.Drawing2D.Matrix" /> na ordem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Control.Paint> objeto de evento. O código executa as seguintes ações:  
+  
+-   Desenha um retângulo para a tela antes de aplicar uma transformação de translação (o retângulo azul).  
+  
+-   Cria uma matriz e converte-o por 100 em ambos os eixos.  
+  
+-   Aplica-se essa transformação de matriz para o retângulo  
+  
+-   Desenha um retângulo transformado na tela (retângulo vermelho).  
+  
+ Observe que o início do retângulo vermelho é localizados 100 pontos em ambos os eixos desde o início do triângulo azul.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicMatrixExamples#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CPP/form1.cpp#9)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicMatrixExamples#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/CS/form1.cs#9)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicMatrixExamples#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicMatrixExamples/VB/form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VectorTransformPoints">
+      <MemberSignature Language="C#" Value="public void VectorTransformPoints (System.Drawing.Point[] pts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void VectorTransformPoints(valuetype System.Drawing.Point[] pts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.Matrix.VectorTransformPoints(System.Drawing.Point[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pts" Type="System.Drawing.Point[]" />
+      </Parameters>
+      <Docs>
+        <param name="pts">Uma matriz de estruturas <see cref="T:System.Drawing.Point" /> que representa os pontos a serem transformados.</param>
+        <summary>Multiplica cada vetor em uma matriz para a matriz. Os elementos de tradução da matriz (terceira linha) são ignorados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

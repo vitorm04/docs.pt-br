@@ -1,0 +1,223 @@
+<Type Name="SecurityUtilities" FullName="Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities">
+  <TypeSignature Language="C#" Value="public static class SecurityUtilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit SecurityUtilities extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um conjunto de funções de utilitário para manipulação de conjuntos de permision de segurança e assinatura.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ComputeZonePermissionSet">
+      <MemberSignature Language="C#" Value="public static System.Security.PermissionSet ComputeZonePermissionSet (string targetZone, System.Security.PermissionSet includedPermissionSet, string[] excludedPermissions);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.PermissionSet ComputeZonePermissionSet(string targetZone, class System.Security.PermissionSet includedPermissionSet, string[] excludedPermissions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.ComputeZonePermissionSet(System.String,System.Security.PermissionSet,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetZone" Type="System.String" />
+        <Parameter Name="includedPermissionSet" Type="System.Security.PermissionSet" />
+        <Parameter Name="excludedPermissions" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="targetZone">Especifica um conjunto de permissões padrão de zona, que é obtido da política do computador. Os valores válidos são <see langword="Internet" />, <see langword="LocalIntranet" />, ou <see langword="Custom" />. Se <see langword="Custom" /> for especificado, o conjunto de permissões gerado baseia-se somente a <c>includedPermissionSet</c> parâmetro.</param>
+        <param name="includedPermissionSet">Um <see cref="P:Microsoft.Build.Tasks.Deployment.ManifestUtilities.TrustInfo.PermissionSet" /> objeto que contém o conjunto de permissões a serem incluídos explicitamente no conjunto de permissões gerado. As permissões especificadas nesse parâmetro serão incluídas literalmente no conjunto de permissões gerado, independentemente de <c>targetZone</c> ou <c>excludedPermissions</c> parâmetros.</param>
+        <param name="excludedPermissions">Uma matriz de cadeias de caracteres de identidade de permissão a ser excluído da permissão zona padrão definido. Cadeias de caracteres de identidade de permissão podem ser calculadas usando o <see cref="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.PermissionSetToIdentityList(System.Security.PermissionSet)" /> método. Esse parâmetro é ignorado se <c>targetZone</c> não é <see langword="Internet" /> ou <see langword="LocalIntranet" />.</param>
+        <summary>Gera um conjunto de permissões pelo conjunto de permissões padrão da zona de computação, remover todas as permissões excluídas e adição de todas as permissões incluídas.</summary>
+        <returns>Retorna o conjunto de permissões gerado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdentityListToPermissionSet">
+      <MemberSignature Language="C#" Value="public static System.Security.PermissionSet IdentityListToPermissionSet (string[] ids);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.PermissionSet IdentityListToPermissionSet(string[] ids) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.IdentityListToPermissionSet(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ids" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="ids">Uma matriz de cadeias de caracteres de identidade de permissão.</param>
+        <summary>Converte uma matriz de cadeias de caracteres de identidade de permissão para uma permissão de objeto do conjunto.</summary>
+        <returns>Retorna o conjunto de permissões convertido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionSetToIdentityList">
+      <MemberSignature Language="C#" Value="public static string[] PermissionSetToIdentityList (System.Security.PermissionSet permissionSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] PermissionSetToIdentityList(class System.Security.PermissionSet permissionSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.PermissionSetToIdentityList(System.Security.PermissionSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="permissionSet" Type="System.Security.PermissionSet" />
+      </Parameters>
+      <Docs>
+        <param name="permissionSet">A permissão de entrada definida para ser convertido.</param>
+        <summary>Converte um conjunto de permissões objeto para uma matriz de permissão cadeias de caracteres de identidade.</summary>
+        <returns>Retorna uma matriz de permissão cadeias de caracteres de identidade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignFile">
+      <MemberSignature Language="C#" Value="public static void SignFile (System.Security.Cryptography.X509Certificates.X509Certificate2 cert, Uri timestampUrl, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SignFile(class System.Security.Cryptography.X509Certificates.X509Certificate2 cert, class System.Uri timestampUrl, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cert" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+        <Parameter Name="timestampUrl" Type="System.Uri" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cert">O certificado a ser usado para assinar o arquivo.</param>
+        <param name="timestampUrl">Indica que o arquivo deve ser marca pelo servidor de carimbo de hora no endereço HTTP especificado. Esse parâmetro pode ser NULL se não desejar um carimbo de hora.</param>
+        <param name="path">O nome do arquivo para entrar.</param>
+        <summary>Assina um manifesto ClickOnce ou um arquivo PE.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa função só pode assinar um arquivo PE se o parâmetro X509Certificate2 representa um certificado no repositório de certificados pessoais do usuário atual.  
+  
+ Esta sobrecarga do método chama SignTool.exe e, portanto, requer o [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] para ser instalado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignFile">
+      <MemberSignature Language="C#" Value="public static void SignFile (string certThumbprint, Uri timestampUrl, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SignFile(string certThumbprint, class System.Uri timestampUrl, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certThumbprint" Type="System.String" />
+        <Parameter Name="timestampUrl" Type="System.Uri" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="certThumbprint">Especifica a impressão digital, que é o hash SHA1 do certificado de autenticação, que é mantido no repositório de certificados pessoais.</param>
+        <param name="timestampUrl">Indica que o arquivo deve ser marca pelo servidor de carimbo de hora no endereço HTTP especificado. Esse parâmetro pode ser NULL se não desejar um carimbo de hora.</param>
+        <param name="path">O nome do arquivo para entrar.</param>
+        <summary>Assina um manifesto ClickOnce ou um arquivo PE.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do método chama SignTool.exe e, portanto, requer o [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] para ser instalado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignFile">
+      <MemberSignature Language="C#" Value="public static void SignFile (string certPath, System.Security.SecureString certPassword, Uri timestampUrl, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SignFile(string certPath, class System.Security.SecureString certPassword, class System.Uri timestampUrl, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.SignFile(System.String,System.Security.SecureString,System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certPath" Type="System.String" />
+        <Parameter Name="certPassword" Type="System.Security.SecureString" />
+        <Parameter Name="timestampUrl" Type="System.Uri" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="certPath">O certificado a ser usado para assinar o arquivo. O certificado deve conter uma chave privada. O <see langword="KeyUsage" /> extensão é opcional, mas se ele estiver presente, <see langword="DigitalSignature" /> deve ser definido como <see langword="True" />. O <see langword="EnhancedKeyUsage" /> extensão também é opcional, mas se ele estiver presente, o certificado deve conter o suporte OID (identificador) do objeto.</param>
+        <param name="certPassword">A senha do certificado.</param>
+        <param name="timestampUrl">Indica que o arquivo deve ser marca pelo servidor de carimbo de hora no endereço HTTP especificado. Esse parâmetro pode ser NULL se não desejar um carimbo de hora.</param>
+        <param name="path">O nome do arquivo para entrar.</param>
+        <summary>Assina um manifesto do ClickOnce.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa função é apenas para assinar um manifesto, não é um arquivo PE.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlToPermissionSet">
+      <MemberSignature Language="C#" Value="public static System.Security.PermissionSet XmlToPermissionSet (System.Xml.XmlElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.PermissionSet XmlToPermissionSet(class System.Xml.XmlElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Deployment.ManifestUtilities.SecurityUtilities.XmlToPermissionSet(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Uma representação XML do conjunto de permissões.</param>
+        <summary>Converte um elemento XML para uma permissão de objeto do conjunto.</summary>
+        <returns>Objeto do conjunto de permissão convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Converte um <xref:System.Xml.XmlElement> o objeto para um <xref:System.Security.PermissionSet> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

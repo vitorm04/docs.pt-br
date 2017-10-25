@@ -1,0 +1,214 @@
+<Type Name="ChartHttpHandlerSettings" FullName="System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings">
+  <TypeSignature Language="C#" Value="public class ChartHttpHandlerSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChartHttpHandlerSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece os atributos que podem ser usados para gravar um manipulador HTTP personalizado para armazenar arquivos de imagem temporária.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CustomHandlerName">
+      <MemberSignature Language="C#" Value="public string CustomHandlerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomHandlerName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.CustomHandlerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do manipulador personalizado.</summary>
+        <value>Um <see langword="string" /> valor que representa o nome do manipulador personalizado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Directory">
+      <MemberSignature Language="C#" Value="public string Directory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Directory" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.Directory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o diretório do manipulador personalizado de onde os arquivos de imagem temporários serão armazenados.</summary>
+        <value>Um <see langword="string" /> valor que representa o diretório.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FolderName">
+      <MemberSignature Language="C#" Value="public string FolderName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FolderName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.FolderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a pasta que será usada para armazenar imagens no diretório especificado.</summary>
+        <value>Um <see langword="string" /> que representa o nome da pasta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlerType">
+      <MemberSignature Language="C#" Value="public Type HandlerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type HandlerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.HandlerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de manipulador do manipulador personalizado.</summary>
+        <value>O <see cref="T:System.Type" /> do manipulador personalizado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Nome do parâmetro para obter.</param>
+        <summary>Obtém um parâmetro de configurações com o nome especificado foi registrado no arquivo Web. config sob o <c>ChartHttpHandler</c> chave.</summary>
+        <value>Valor do parâmetro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para acessar qualquer parâmetro no arquivo Web. config sob o `ChartHttpHandler` chave.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateImages">
+      <MemberSignature Language="C#" Value="public bool PrivateImages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrivateImages" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.PrivateImages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um sinalizador que indica se o manipulador utiliza imagens privadas.</summary>
+        <value>
+          <see langword="True" />Se o manipulador utiliza imagens privadas, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.PrivateImages%2A> estiver definida, o manipulador não retornará imagens fora do escopo de sessão. Além disso, o cliente não poderá fazer o download de imagens de outro usuário. Este é o comportamento padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StorageType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType StorageType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType StorageType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.StorageType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de armazenamento de imagem do gráfico.</summary>
+        <value>Um <see cref="T:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerStorageType" /> valor de enumeração que representa o tipo de armazenamento de imagem do gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Imagens de gráfico podem ser armazenadas como arquivos ou na memória.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public TimeSpan Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo limite do manipulador personalizado.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> valor de enumeração que representa o tempo de vida das imagens de gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o tempo limite expirar, a imagem do gráfico armazenado é substituída por uma nova imagem de gráfico ou descartada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ChartHttpHandlerSettings.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL que corresponde ao caminho HTTP onde os arquivos de imagem temporários são armazenados.</summary>
+        <value>Um <see langword="string" /> valor que representa a URL.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

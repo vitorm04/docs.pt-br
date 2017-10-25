@@ -1,0 +1,75 @@
+<Type Name="CompilationRelaxations" FullName="System.Runtime.CompilerServices.CompilationRelaxations">
+  <TypeSignature Language="C#" Value="public enum CompilationRelaxations" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CompilationRelaxations extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.CompilationRelaxations" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os parâmetros que controlam a rigidez do código gerado pelo compilador JIT (Just-In-Time) do Common Language Runtime.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.CompilerServices.CompilationRelaxations> enumeração com o atributo ttribute.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NoStringInterning">
+      <MemberSignature Language="C#" Value="NoStringInterning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.CompilerServices.CompilationRelaxations NoStringInterning = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.CompilerServices.CompilationRelaxations.NoStringInterning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.CompilationRelaxations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Marca um assembly como não exigindo centralização da cadeia de caracteres literal.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um domínio de aplicativo, o common language runtime cria o objeto de uma cadeia de caracteres para cada literal de cadeia de caracteres exclusiva, em vez de fazer várias cópias. Esse comportamento, chamado de cadeia de caracteres como internos, internamente requer a criação de tabelas auxiliares que consomem recursos de memória.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

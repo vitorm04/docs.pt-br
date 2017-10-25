@@ -1,0 +1,149 @@
+<Type Name="AsyncOperationManager" FullName="System.ComponentModel.AsyncOperationManager">
+  <TypeSignature Language="C#" Value="public static class AsyncOperationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AsyncOperationManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.AsyncOperationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece gerenciamento de simultaneidade para classes que oferecem suporte a chamadas de método assíncrono. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se sua classe precisa fornecer o comportamento assíncrono de acordo com o [baseado em evento visão geral do padrão assíncrono](~/docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md), você encontrará um número de problemas de gerenciamento de simultaneidade. Entre eles é o requisito para garantir que os manipuladores de eventos são chamados em um contexto que é apropriado para o modelo de aplicativo ou thread (por exemplo, aplicativos de Windows Forms, [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] aplicativos, aplicativos de console e assim por diante). O <xref:System.ComponentModel.AsyncOperationManager> fornece uma maneira conveniente de criar uma classe que é executado corretamente em todos os modelos de aplicativo com suporte a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ O <xref:System.ComponentModel.AsyncOperationManager> classe tem um método, <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, que retorna um <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> que pode ser usado para controlar a duração de uma tarefa assíncrona específica. O <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> para uma tarefa pode ser usado para clientes de alerta quando uma tarefa é concluída. Ele também pode ser usado para lançar atualizações de andamento e o resultado incremental sem finalizar a operação.  
+  
+ Para obter mais informações sobre como implementar classes assíncronas, consulte [Implementando o padrão assíncrono baseado em evento](~/docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.AsyncOperationManager> classe para criar uma classe que dá suporte a operações assíncronas para qualquer modelo de aplicativo. Ele mostra como implementar uma classe que testa um número para determinar se ele é o principal. Esse cálculo pode ser demorado, portanto, isso é feito em um thread separado. Relatórios de andamento, os resultados de incrementais e notificações de conclusão são manipuladas pelo <xref:System.ComponentModel.AsyncOperation> classe, que garante que os manipuladores de eventos do cliente são chamados no contexto ou adequada da thread.  
+  
+ Para obter uma listagem de código completo, consulte [como: implementar um componente compatível com o padrão assíncrono baseado em evento](http://msdn.microsoft.com/library/3c1aa4d4-da87-4a03-b812-3d167b8c57cf). Para uma listagem de código completo de um formulário de cliente, consulte [como: implementar um cliente do padrão assíncrono baseado em evento](~/docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+  
+ [!code-csharp[System.ComponentModel.AsyncOperationManager#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#3)]
+ [!code-vb[System.ComponentModel.AsyncOperationManager#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateOperation">
+      <MemberSignature Language="C#" Value="public static System.ComponentModel.AsyncOperation CreateOperation (object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ComponentModel.AsyncOperation CreateOperation(object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AsyncOperationManager.CreateOperation(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.AsyncOperation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userSuppliedState">Um objeto usado para associar uma parte do estado do cliente, como uma ID de tarefa, com uma operação assíncrona específica.</param>
+        <summary>Retorna um <see cref="T:System.ComponentModel.AsyncOperation" /> para acompanhar a duração de uma operação assíncrona específica.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.AsyncOperation" /> que pode ser usado para acompanhar a duração de uma invocação de método assíncrono.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> método retorna um <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> que você pode usar para controlar a duração de uma operação assíncrona específica e para o modelo de aplicativo de alerta quando a operação for concluída. Você também pode usar isso para lançar atualizações de andamento e o resultado incremental sem finalizar a operação. O <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> controlará corretamente essas chamadas para o contexto para o modelo de aplicativo ou thread apropriado.  
+  
+ Se você implementar uma classe que suporta o padrão assíncrono baseado em evento, sua classe deve chamar <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> cada vez que seu *MethodName* `Async` método é chamado. O aplicativo cliente que faz chamadas ao método pode usar o `userSuppliedState` parâmetro para identificar exclusivamente cada invocação, para distinguir os eventos gerados durante a execução da operação assíncrona.  
+  
+> [!CAUTION]
+>  Código do cliente deve fornecer um valor exclusivo para o `userSuppliedState` parâmetro. IDs de tarefa não exclusivos pode causar sua implementação relatar o andamento e outros eventos incorretamente. Seu código deve verificar se há uma ID de tarefa não exclusivos e lançar um <xref:System.ArgumentException?displayProperty=nameWithType> se um for detectado.  
+  
+ Seu código deve controlar cada <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> retornado por <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> e usar o objeto na operação assíncrona Base correspondente para postar atualizações e encerrar a operação. Este controle pode ser tão simple quanto passando o <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> como um parâmetro entre delegados. Em projetos mais sofisticados, sua classe pode manter uma coleção de <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> objetos, adicionando objetos quando a tarefa é iniciada e removê-los quando as tarefas sejam concluídas ou canceladas. Essa abordagem permite que você procure exclusivo `userSuppliedState` parâmetro valores e é o método que você deve usar ao trabalhar com classes que oferecem suporte a várias chamadas simultâneas.  
+  
+ Para obter mais informações sobre como implementar classes assíncronas, consulte [Implementando o padrão assíncrono baseado em evento](~/docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> método para criar um <xref:System.ComponentModel.AsyncOperation?displayProperty=nameWithType> para controlar a duração de operações assíncronas. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ComponentModel.AsyncOperationManager> classe.  
+  
+ [!code-csharp[System.ComponentModel.AsyncOperationManager#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#3)]
+ [!code-vb[System.ComponentModel.AsyncOperationManager#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronizationContext">
+      <MemberSignature Language="C#" Value="public static System.Threading.SynchronizationContext SynchronizationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Threading.SynchronizationContext SynchronizationContext" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.AsyncOperationManager.SynchronizationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.SynchronizationContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contexto de sincronização para a operação assíncrona.</summary>
+        <value>O contexto de sincronização para a operação assíncrona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão é a implementação de free-thread.  
+  
+ Um thread deve definir o <xref:System.ComponentModel.AsyncOperationManager.SynchronizationContext%2A> propriedade `null` para liberar a fábrica free-thread quando tiver terminado, caso contrário, sua fábrica nunca será descartada.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.NamedPermissionSet">Para definir o contexto de sincronização. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Estados associados:</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

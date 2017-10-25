@@ -1,0 +1,51 @@
+<Type Name="CodeExporter" FullName="System.Xml.Serialization.CodeExporter">
+  <TypeSignature Language="C#" Value="public abstract class CodeExporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CodeExporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.CodeExporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma classe que pode gerar o código de proxy de uma representação XML de uma estrutura de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações concretas dessa classe incluem <xref:System.Xml.Serialization.XmlCodeExporter> e <xref:System.Xml.Serialization.SoapCodeExporter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IncludeMetadata">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeAttributeDeclarationCollection IncludeMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeAttributeDeclarationCollection IncludeMetadata" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.CodeExporter.IncludeMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeAttributeDeclarationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de metadados de atributo de código que está incluído quando o código é exportado.</summary>
+        <value>Uma coleção de <see cref="T:System.CodeDom.CodeAttributeDeclaration" /> objetos que representam os metadados que são incluídos quando o código é exportado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando essa propriedade, você pode adicionar atributos dinamicamente para o código de proxy exportado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

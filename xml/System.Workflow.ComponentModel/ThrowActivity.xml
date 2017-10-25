@@ -1,0 +1,391 @@
+<Type Name="ThrowActivity" FullName="System.Workflow.ComponentModel.ThrowActivity">
+  <TypeSignature Language="C#" Value="public sealed class ThrowActivity : System.Workflow.ComponentModel.Activity, System.Workflow.ComponentModel.Design.ITypeFilterProvider, System.Workflow.ComponentModel.IDynamicPropertyTypeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ThrowActivity extends System.Workflow.ComponentModel.Activity implements class System.Workflow.ComponentModel.Design.ITypeFilterProvider, class System.Workflow.ComponentModel.IDynamicPropertyTypeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.ThrowActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Activity</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Workflow.ComponentModel.Design.ITypeFilterProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Workflow.ComponentModel.IDynamicPropertyTypeProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Workflow.ComponentModel.Design.ThrowDesigner), typeof(System.ComponentModel.Design.IDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(typeof(System.Workflow.ComponentModel.Design.ActivityToolboxItem))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Workflow.ComponentModel.ThrowActivity), "Resources.Throw.png")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Modelos de lançar uma exceção. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ A finalidade de <xref:System.Workflow.ComponentModel.ThrowActivity> é permitir que a modelagem declarativa de lançar uma exceção. O <xref:System.Workflow.ComponentModel.ThrowActivity> é funcionalmente equivalente a um <xref:System.Workflow.Activities.CodeActivity> atividade cujo manipulador ao lado do código lança a exceção indicada.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra o uso de uma atividade única throw em um fluxo de trabalho para implementar o tratamento de exceção. Este exemplo de código é parte do exemplo Throw SDK e do arquivo de ThrowWorkflow.cs. Para obter mais informações, consulte [usando Throw](http://msdn.microsoft.com/en-us/aa5b9546-ec95-4e43-8337-20e26f8d71cc).  
+  
+ [!code-csharp[WF_Samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
+ [!code-vb[WF_Samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThrowActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ThrowActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.ThrowActivity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra o uso de uma atividade única throw em um fluxo de trabalho para implementar o tratamento de exceção. Este exemplo inclui chamando o construtor. Este exemplo de código é parte do exemplo Throw SDK e do arquivo de ThrowWorkflow.cs. Para obter mais informações, consulte [usando Throw](http://msdn.microsoft.com/en-us/aa5b9546-ec95-4e43-8337-20e26f8d71cc).  
+  
+ [!code-csharp[WF_Samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
+ [!code-vb[WF_Samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThrowActivity (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ThrowActivity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome definido pelo usuário da atividade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.ThrowActivity" /> classe e inicializa o seu nome.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identifier" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override sealed System.Workflow.ComponentModel.ActivityExecutionStatus Execute (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Execute(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ThrowActivity.Execute(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fault">
+      <MemberSignature Language="C#" Value="public Exception Fault { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Fault" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ThrowActivity.Fault" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.ThrowActivity/FaultConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de exceção que deve ser gerado pelo <see cref="T:System.Workflow.ComponentModel.ThrowActivity" />.</summary>
+        <value>O <see cref="T:System.Exception" /> associado a esta instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você acessa indiretamente cada evento e propriedade pública deste tipo pela resolução de uma propriedade de dependência correspondente. Essa propriedade de dependência é o campo estático público chamado `XProperty` ou `XEvent`, onde X é a propriedade correspondente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty FaultProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty FaultProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ThrowActivity.FaultProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que representa o <see cref="P:System.Workflow.ComponentModel.ThrowActivity.Fault" /> propriedade para essa instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultType">
+      <MemberSignature Language="C#" Value="public Type FaultType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type FaultType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ThrowActivity.FaultType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.TypeBrowserEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.ThrowActivity/FaultTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de exceção que deve ser gerada pelo <see cref="T:System.Workflow.ComponentModel.ThrowActivity" />.</summary>
+        <value>O tipo que representa a falha associada a essa instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra o uso de uma atividade única throw dentro de um fluxo de trabalho para implementar o tratamento de exceção. Este exemplo mostra a configuração de <xref:System.Workflow.ComponentModel.ThrowActivity.FaultType%2A> para `null`. Este exemplo de código é parte do exemplo Throw SDK e do arquivo de ThrowWorkflow.cs. Para obter mais informações, consulte [usando Throw](http://msdn.microsoft.com/en-us/aa5b9546-ec95-4e43-8337-20e26f8d71cc).  
+  
+ [!code-csharp[WF_Samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
+ [!code-vb[WF_Samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FaultTypeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty FaultTypeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty FaultTypeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.ThrowActivity.FaultTypeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que representa o <see cref="P:System.Workflow.ComponentModel.ThrowActivity.FaultType" /> propriedade para essa instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você acessa indiretamente cada evento e propriedade pública deste tipo pela resolução de uma propriedade de dependência correspondente. Essa propriedade de dependência é o campo estático público chamado `XProperty` ou `XEvent`, onde X é a propriedade correspondente.  
+  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Initialize(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ThrowActivity.Initialize(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.ComponentModel.Design.ITypeFilterProvider.CanFilterType">
+      <MemberSignature Language="C#" Value="bool ITypeFilterProvider.CanFilterType (Type type, bool throwOnError);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Workflow.ComponentModel.Design.ITypeFilterProvider.CanFilterType(class System.Type type, bool throwOnError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ThrowActivity.System#Workflow#ComponentModel#Design#ITypeFilterProvider#CanFilterType(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="throwOnError" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> para verificar se há filtragem</param>
+        <param name="throwOnError">
+          <see langword="true" />para lançar uma exceção quando o <see cref="M:System.Workflow.ComponentModel.Design.ITypeFilterProvider.CanFilterType(System.Type,System.Boolean)" /> for processada; caso contrário, <see langword="false" />.</param>
+        <summary>Retorna um valor que indica se o especificado <see cref="T:System.Type" /> podem ser filtrados.</summary>
+        <returns>
+          <see langword="true" />Se o tipo especificado pode ser filtrado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.ComponentModel.Design.ITypeFilterProvider.FilterDescription">
+      <MemberSignature Language="C#" Value="string System.Workflow.ComponentModel.Design.ITypeFilterProvider.FilterDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.Workflow.ComponentModel.Design.ITypeFilterProvider.FilterDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ThrowActivity.System#Workflow#ComponentModel#Design#ITypeFilterProvider#FilterDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição para o filtro a ser exibido na caixa de diálogo de navegador de classe.</summary>
+        <value>Um <see cref="T:System.String" /> que contém a descrição do filtro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetAccessType">
+      <MemberSignature Language="C#" Value="System.Workflow.ComponentModel.Compiler.AccessTypes IDynamicPropertyTypeProvider.GetAccessType (IServiceProvider serviceProvider, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.Workflow.ComponentModel.Compiler.AccessTypes System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetAccessType(class System.IServiceProvider serviceProvider, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ThrowActivity.System#Workflow#ComponentModel#IDynamicPropertyTypeProvider#GetAccessType(System.IServiceProvider,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.AccessTypes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um objeto que implementa <see cref="T:System.IServiceProvider" /> para fornecer acesso aos serviços de tempo de design se eles forem necessários.</param>
+        <param name="propertyName">O nome da propriedade.</param>
+        <summary>Retorna o tipo de acesso para a propriedade especificada.</summary>
+        <returns>Um valor de enumeração <see cref="T:System.Workflow.ComponentModel.Compiler.AccessTypes" /> que indica o nível de acesso da propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado em tempo de compilação para validar se as propriedades corretamente estiverem associadas a um do outro. Sem essa interface essas informações são inferidas diretamente do getter/setters de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetPropertyType">
+      <MemberSignature Language="C#" Value="Type IDynamicPropertyTypeProvider.GetPropertyType (IServiceProvider serviceProvider, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Type System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetPropertyType(class System.IServiceProvider serviceProvider, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ThrowActivity.System#Workflow#ComponentModel#IDynamicPropertyTypeProvider#GetPropertyType(System.IServiceProvider,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um objeto que implementa <see cref="T:System.IServiceProvider" /> para fornecer acesso aos serviços de tempo de design se eles forem necessários.</param>
+        <param name="propertyName">O nome da propriedade.</param>
+        <summary>Retorna o <see cref="T:System.Type" /> do da propriedade especificada.</summary>
+        <returns>O <see cref="T:System.Type" /> para a propriedade cujo nome é passado como o <paramref name="propertyName" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado em tempo de compilação para validar se as propriedades corretamente estiverem associadas a um do outro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

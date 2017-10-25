@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Tasks.Windows">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.Build.Tasks.Windows" /> espaço para nome contém a implementação de todas as tarefas de envio com o MSBuild. Os tipos neste namespace dá suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usado diretamente no seu código.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

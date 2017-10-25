@@ -1,0 +1,81 @@
+<Type Name="PermissionState" FullName="System.Security.Permissions.PermissionState">
+  <TypeSignature Language="C#" Value="public enum PermissionState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PermissionState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.PermissionState" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se uma permissão deve ter todos ou nenhum acesso aos recursos no momento da criação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As permissões podem ser criadas em um estado totalmente restritivo ou totalmente grande parte. Um estado totalmente restritivo não permite acesso aos recursos; um estado totalmente unrestricted permite que todo o acesso a um recurso específico. Por exemplo, o construtor de permissão de arquivo pode criar um objeto que representa nenhum acesso a todos os arquivos ou todo o acesso a todos os arquivos.  
+  
+ Cada tipo de permissão claramente define estados extremos representando todas ou nenhuma das permissões pode ser expressadas dentro do tipo. Assim, é possível criar uma permissão genérica em um estado completamente restrito ou irrestrito sem o conhecimento da permissão específica; No entanto, estados intermediários podem apenas ser definidos de acordo com a semântica de permissão específico.  
+  
+ Todas as permissões de acesso do código implementadas no .NET Framework podem levar uma <xref:System.Security.Permissions.PermissionState> valor como um argumento para seu construtor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.PermissionState None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.PermissionState.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.PermissionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum acesso ao recurso protegido pela permissão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unrestricted">
+      <MemberSignature Language="C#" Value="Unrestricted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.PermissionState Unrestricted = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.PermissionState.Unrestricted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.PermissionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Acesso completo ao recurso protegido pela permissão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

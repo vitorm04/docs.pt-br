@@ -1,0 +1,105 @@
+<Type Name="IRemoteDispatch" FullName="System.EnterpriseServices.IRemoteDispatch">
+  <TypeSignature Language="C#" Value="public interface IRemoteDispatch" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemoteDispatch" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.IRemoteDispatch" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("6619a740-8154-43be-a186-0319578e02db")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementado pelo <see cref="T:System.EnterpriseServices.ServicedComponent" /> classe para determinar se o <see cref="T:System.EnterpriseServices.AutoCompleteAttribute" /> classe de atributo é definida como <see langword="true" /> ou <see langword="false" /> para uma invocação de método remoto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.EnterpriseServices.IRemoteDispatch> interface não precisam ser implementados diretamente no seu código. Ele é usado internamente pela infraestrutura do .NET Framework.  
+  
+ O <xref:System.EnterpriseServices.AutoCompleteAttribute> atributo class garante que, no contexto COM+, concluído bit do objeto é definido automaticamente `true` depois que o método retorna. O objeto, em seguida, pode ser desativado.  
+  
+ O <xref:System.EnterpriseServices.IRemoteDispatch> métodos de interface não aparecem no <xref:System.EnterpriseServices.ServicedComponent> interface de classe. Em vez disso, <xref:System.EnterpriseServices.ServicedComponent> explicitamente implementa <xref:System.EnterpriseServices.IRemoteDispatch>.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+    <altmember cref="T:System.EnterpriseServices.ServicedComponent" />
+    <altmember cref="T:System.EnterpriseServices.AutoCompleteAttribute" />
+  </Docs>
+  <Members>
+    <Member MemberName="RemoteDispatchAutoDone">
+      <MemberSignature Language="C#" Value="public string RemoteDispatchAutoDone (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string RemoteDispatchAutoDone(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IRemoteDispatch.RemoteDispatchAutoDone(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.EnterpriseServices.AutoComplete(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Uma cadeia de caracteres a ser convertido em um objeto de solicitação que implementa o <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> interface.</param>
+        <summary>Garante que, no contexto COM+, o <see cref="T:System.EnterpriseServices.ServicedComponent" /> bit concluído do objeto de classe é definido como <see langword="true" /> depois de uma invocação de método remoto.</summary>
+        <returns>Uma cadeia de caracteres convertida de um objeto de resposta que implementa o <see cref="T:System.Runtime.Remoting.Messaging.IMethodReturnMessage" /> interface.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.EnterpriseServices.IRemoteDispatch.RemoteDispatchAutoDone%2A> método não pertence à interface publicada do <xref:System.EnterpriseServices.ServicedComponent> de classe e não precisa ser implementado em outro lugar.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteDispatchNotAutoDone">
+      <MemberSignature Language="C#" Value="public string RemoteDispatchNotAutoDone (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string RemoteDispatchNotAutoDone(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IRemoteDispatch.RemoteDispatchNotAutoDone(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.EnterpriseServices.AutoComplete(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Uma cadeia de caracteres a ser convertido em um objeto de solicitação que implementa o <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> interface.</param>
+        <summary>Não garante que, no contexto COM+, o <see cref="T:System.EnterpriseServices.ServicedComponent" /> bit concluído do objeto de classe é definido como <see langword="true" /> depois de uma invocação de método remoto.</summary>
+        <returns>Uma cadeia de caracteres convertida de um objeto de resposta que implementa o <see cref="T:System.Runtime.Remoting.Messaging.IMethodReturnMessage" /> interface.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.EnterpriseServices.IRemoteDispatch.RemoteDispatchNotAutoDone%2A> método não pertence à interface publicada do <xref:System.EnterpriseServices.ServicedComponent> de classe e não precisa ser implementado em outro lugar.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

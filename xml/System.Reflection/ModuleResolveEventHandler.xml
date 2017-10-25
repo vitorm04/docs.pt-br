@@ -1,0 +1,76 @@
+<Type Name="ModuleResolveEventHandler" FullName="System.Reflection.ModuleResolveEventHandler">
+  <TypeSignature Language="C#" Value="public delegate System.Reflection.Module ModuleResolveEventHandler(object sender, ResolveEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ModuleResolveEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ModuleResolveEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.ResolveEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Reflection.Module</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O assembly que foi a origem do evento.</param>
+    <param name="e">Os argumentos fornecidos pelo objeto que descreve o evento.</param>
+    <summary>Representa o método que manipulará o evento <see cref="E:System.Reflection.Assembly.ModuleResolve" /> de um <see cref="T:System.Reflection.Assembly" />.</summary>
+    <returns>O módulo que satisfaz a solicitação.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o comuns carregadores de classe de tempo de execução de linguagem não é possível resolver uma referência a um módulo interno de um assembly por meios normais, esse evento é gerado. O manipulador de eventos para este delegado deve localizar e retornar um módulo que satisfaz a solicitação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a sequência de execução em que um manipulador de eventos é chamado. Neste exemplo, servidor1 é um módulo externo da classe MySampleApplication.  
+  
+### <a name="to-compile-and-run-the-example"></a>Para compilar e executar o exemplo  
+  
+1.  Abra uma janela de Prompt de comando e navegue até o diretório que contém MySample.cs.  
+  
+2.  Compilar Server1 usando o seguinte comando:  
+  
+    ```  
+    csc /out:subfolder\Server1.netmodule /t:module Server1.cs  
+    ```  
+  
+3.  Compile MySampleApplication usando o seguinte comando:  
+  
+    ```  
+    csc /out:MySample.exe /t:exe /addmodule:subfolder\Server1.netmodule MySample.cs  
+    ```  
+  
+4.  Execute MySample.exe.  
+  
+> [!NOTE]
+>  O arquivo de módulo Server1.netmodule deve ser em um subdiretório chamado "subpasta" para esse exemplo funcione corretamente.  
+  
+ [!code-csharp[System.Reflection.ModuleResolveEventHandler#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.moduleresolveeventhandler/cs/mysample.cs#1)]  
+[!code-csharp[System.Reflection.ModuleResolveEventHandler#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.moduleresolveeventhandler/cs/server1.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

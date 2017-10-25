@@ -1,0 +1,148 @@
+<Type Name="IDesignerLoaderService" FullName="System.ComponentModel.Design.Serialization.IDesignerLoaderService">
+  <TypeSignature Language="C#" Value="public interface IDesignerLoaderService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerLoaderService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.IDesignerLoaderService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface que pode estender um carregador de designer para dar suporte a carregamento assíncrono de componentes externos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ComponentModel.Design.Serialization.DesignerLoader> pode implementar essa interface para gerenciar o carregamento de designer que envolve componentes externos. Essa interface também permite que componentes externos iniciar um recarregamento da superfície de design chamando <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.Reload%2A>. Um carregador de designer não tem que implementar essa interface se ele não requer suporte para o carregamento assíncrono.  
+  
+ Designer de carregamento usando uma implementação personalizada do <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> pode ocorrer em uma variedade de maneiras. Componentes externos, às vezes, estão envolvidos no processo de carregamento. Para facilitar o carregamento com dependências externas, a interface de serviço de carregador de designer fornece um mecanismo que determina quando o carregamento for concluído e permite que cada parte da carga de trabalho para sinalizar que foi concluída. O <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService> normalmente determina quando ela estiver concluída, testando um contador que controla o número de dependências de carga restante. Quando cada parte da carga for concluído, <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A> é chamado e o serviço diminui o contador. Para definir o número de processos de carregamento dependentes, chame <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency%2A> uma vez para cada processo de carregamento que chama <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A> quando o carregamento for concluído. Quando o carregamento final é concluído, as chamadas de serviço <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderHost.EndLoad%2A> no host do carregador.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddLoadDependency">
+      <MemberSignature Language="C#" Value="public void AddLoadDependency ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddLoadDependency() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Registra um componente externo como parte do processo de carga gerenciado por esta interface.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency%2A> uma vez para cada objeto externo que participam do processo de carregamento. <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A>é chamado quando o trabalho do processo de carregamento é feito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependentLoadComplete">
+      <MemberSignature Language="C#" Value="public void DependentLoadComplete (bool successful, System.Collections.ICollection errorCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DependentLoadComplete(bool successful, class System.Collections.ICollection errorCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete(System.Boolean,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="successful" Type="System.Boolean" />
+        <Parameter Name="errorCollection" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="successful">
+          <see langword="true" />Se a carga do designer for bem-sucedida; <see langword="false" /> se erros impediram a carga de conclusão.</param>
+        <param name="errorCollection">Uma coleção de erros que ocorreram durante o carregamento, se houver. Se não ocorreu nenhum erro, passe em uma coleção vazia ou <see langword="null" />.</param>
+        <summary>Indica que uma carga dependente foi concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado para indicar que uma operação de carregamento dependente foi concluída. Chamar <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.DependentLoadComplete%2A> uma vez para cada processo que foi registrado por meio da chamada <xref:System.ComponentModel.Design.Serialization.IDesignerLoaderService.AddLoadDependency%2A>, que já foi concluída.  
+  
+ Se a carga dependente for bem-sucedida, os conjuntos de chamador de `successful` parâmetro `true` e passa em uma coleção vazia ou `null` para o `errorCollection` parâmetro. Se a carga dependente encontrar erros, o chamador define o `successful` parâmetro `false` e passa uma coleção de exceções que indicam o motivo ou os motivos da falha para o `errorCollection` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reload">
+      <MemberSignature Language="C#" Value="public bool Reload ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Reload() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerLoaderService.Reload" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recarrega o documento de design.</summary>
+        <returns>
+          <see langword="true" />Se a solicitação de recarregamento for aceita, ou <see langword="false" /> se o carregador não permitir a recarga.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer objeto pode chamar esse método para solicitar que a recarga de carregador o documento de design. Se o carregador dá suporte ao recarregar e está em conformidade com o recarregamento, o carregador de designer pode retornar `true`. Caso contrário, retornará `false`, indicando que a recarga não ocorrerá. Chamadores não podem contar com a recarga acontecendo imediatamente. o carregador de designer pode agendá-la para outro momento, ou ele pode tentar recarregar uma vez.  
+  
+ O chamador pode exibir uma mensagem para o usuário se o designer não pode ser recarregado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

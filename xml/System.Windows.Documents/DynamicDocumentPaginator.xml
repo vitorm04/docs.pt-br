@@ -1,0 +1,364 @@
+<Type Name="DynamicDocumentPaginator" FullName="System.Windows.Documents.DynamicDocumentPaginator">
+  <TypeSignature Language="C#" Value="public abstract class DynamicDocumentPaginator : System.Windows.Documents.DocumentPaginator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DynamicDocumentPaginator extends System.Windows.Documents.DocumentPaginator" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.DynamicDocumentPaginator" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.DocumentPaginator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base abstrata que dá suporte às posições de conteúdo de acompanhamento e paginação em segundo plano automática nas repaginações além dos métodos e propriedades de sua própria classe base.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, um <xref:System.Windows.Documents.DynamicDocumentPaginator> será automaticamente paginar previamente conteúdo em segundo plano (este processo começa quando <xref:System.Windows.Documents.DynamicDocumentPaginator.IsBackgroundPaginationEnabled%2A> é `true`, que é a configuração padrão).  
+  
+ Quando <xref:System.Windows.Documents.DynamicDocumentPaginator.IsBackgroundPaginationEnabled%2A> é `true`, o layout também será possível repaginated devido a alterações no conteúdo ou alterações na <xref:System.Windows.Documents.DocumentPaginator.PageSize%2A>.  
+  
+ O <xref:System.Windows.Documents.DynamicDocumentPaginator.PaginationProgress> evento ocorre após a conclusão da paginação (ou repaginação) de uma ou mais páginas, tal como nas seguintes situações:  
+  
+-   <xref:System.Windows.Documents.DynamicDocumentPaginator.PaginationProgress>os eventos ocorrem como o conteúdo é paginado em segundo plano. Dependendo da implementação, o evento pode ocorrer durante a paginação de uma ou várias páginas (<xref:System.Windows.Documents.PaginationProgressEventArgs> Especifica quais páginas têm sido paginadas).  
+  
+-   Chamadas para <xref:System.Windows.Documents.DocumentPaginator.GetPage%2A> ou <xref:System.Windows.Documents.DocumentPaginator.GetPageAsync%2A> pode causar um <xref:System.Windows.Documents.DynamicDocumentPaginator.PaginationProgress> evento ocorra se a página especificada não tem sido paginada. Por exemplo, se a paginação em segundo plano está habilitada (<xref:System.Windows.Documents.DynamicDocumentPaginator.IsBackgroundPaginationEnabled%2A> = `true`), mas a paginação apenas foi concluída até a terceira página, uma chamada de <xref:System.Windows.Documents.DocumentPaginator.GetPage%2A> com um argumento de 6 será causa páginas quatro, cinco, seis e sete para ser paginada. Após a conclusão, uma <xref:System.Windows.Documents.DynamicDocumentPaginator.PaginationProgress> evento será gerado com <xref:System.Windows.Documents.PaginationProgressEventArgs> configurações de <xref:System.Windows.Documents.PaginationProgressEventArgs.Start%2A> = 4 e <xref:System.Windows.Documents.PaginationProgressEventArgs.Count%2A> = 4.  
+  
+-   Com a paginação do plano de fundo habilitada (<xref:System.Windows.Documents.DynamicDocumentPaginator.IsBackgroundPaginationEnabled%2A> = `true`), uma alteração na <xref:System.Windows.Documents.DocumentPaginator.PageSize%2A> no conteúdo do formato de fluxo, como um <xref:System.Windows.Documents.FlowDocument>, pode causar repaginação e associados <xref:System.Windows.Documents.DynamicDocumentPaginator.PaginationProgress> eventos. Observe que <xref:System.Windows.Documents.DocumentPaginator.PageSize%2A> não tem nenhum efeito em repaginação no formato fixo de conteúdo, como <xref:System.Windows.Documents.FixedDocument>, onde o tamanho da página visual não afeta o layout.  
+  
+ Um <xref:System.Windows.Documents.DynamicDocumentPaginator.PaginationCompleted> evento também ocorre quando a paginação em segundo plano está desabilitada. Por exemplo, se houver apenas uma página de conteúdo e <xref:System.Windows.Documents.DynamicDocumentPaginator.IsBackgroundPaginationEnabled%2A>  =  `false`), chamar <xref:System.Windows.Documents.DocumentPaginator.GetPage%2A> com um argumento de 0 resultará em dois eventos:  
+  
+1.  Um <xref:System.Windows.Documents.DynamicDocumentPaginator.PaginationProgress> evento com <xref:System.Windows.Documents.PaginationProgressEventArgs> configurações de <xref:System.Windows.Documents.PaginationProgressEventArgs.Start%2A> = 0 e <xref:System.Windows.Documents.PaginationProgressEventArgs.Count%2A> = 1.  
+  
+2.  Um <xref:System.Windows.Documents.DynamicDocumentPaginator.PaginationCompleted> eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DynamicDocumentPaginator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DynamicDocumentPaginator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.DynamicDocumentPaginator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectPosition">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Documents.ContentPosition GetObjectPosition (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Documents.ContentPosition GetObjectPosition(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DynamicDocumentPaginator.GetObjectPosition(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.ContentPosition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto para retornar o <see cref="T:System.Windows.Documents.ContentPosition" /> de.</param>
+        <summary>Quando substituído em uma classe derivada, retorna um <see cref="T:System.Windows.Documents.ContentPosition" /> especificado <see cref="T:System.Object" />.</summary>
+        <returns>O <see cref="T:System.Windows.Documents.ContentPosition" /> do objeto especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageNumber">
+      <MemberSignature Language="C#" Value="public abstract int GetPageNumber (System.Windows.Documents.ContentPosition contentPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetPageNumber(class System.Windows.Documents.ContentPosition contentPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumber(System.Windows.Documents.ContentPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentPosition" Type="System.Windows.Documents.ContentPosition" />
+      </Parameters>
+      <Docs>
+        <param name="contentPosition">A posição do conteúdo cujo número de página é necessária.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o número da página com base em zero do <see cref="T:System.Windows.Documents.ContentPosition" />.</summary>
+        <returns>Um <see cref="T:System.Int32" /> que representa o número da página de base zero onde especificado <paramref name="contentPosition" /> é exibida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se páginas antes do `contentPosition` não foram formatados, eles serão ser paginados síncrona antes de retornar o número da página solicitada.  
+  
+ <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync%2A>fornece funcionalidade semelhante ao <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumber%2A>, mas com operação assíncrona.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageNumberAsync">
+      <MemberSignature Language="C#" Value="public virtual void GetPageNumberAsync (System.Windows.Documents.ContentPosition contentPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetPageNumberAsync(class System.Windows.Documents.ContentPosition contentPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync(System.Windows.Documents.ContentPosition)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentPosition" Type="System.Windows.Documents.ContentPosition" />
+      </Parameters>
+      <Docs>
+        <param name="contentPosition">A posição do conteúdo cujo número de página é necessária.</param>
+        <summary>Retorna de maneira assíncrona, (por meio do método gera o <see cref="E:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberCompleted" /> evento) o número de página com base em zero do <see cref="T:System.Windows.Documents.ContentPosition" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É a única maneira de cancelar a operação assíncrona do método Cancelar todas as operações assíncronas. Compare isso com a outra sobrecarga desse método: <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync%28System.Windows.Documents.ContentPosition%2CSystem.Object%29>.  
+  
+ Este método gera o <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberCompleted> evento. O número da página é passado para o evento como um dos argumentos do evento. Consulte <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync%28System.Windows.Documents.ContentPosition%2CSystem.Object%29> para saber como usar esse método para obter o número da página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageNumberAsync">
+      <MemberSignature Language="C#" Value="public virtual void GetPageNumberAsync (System.Windows.Documents.ContentPosition contentPosition, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetPageNumberAsync(class System.Windows.Documents.ContentPosition contentPosition, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync(System.Windows.Documents.ContentPosition,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentPosition" Type="System.Windows.Documents.ContentPosition" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contentPosition">O elemento da posição do conteúdo para retornar o número da página.</param>
+        <param name="userState">Um identificador exclusivo para a tarefa assíncrona.</param>
+        <summary>Retorna de maneira assíncrona, (por meio do método gera o <see cref="E:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberCompleted" /> evento) o número de página com base em zero do <see cref="T:System.Windows.Documents.ContentPosition" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do método torna possível cancelar essa operação assíncrona sem cancelar todas as operações assíncronas.  
+  
+ Este método gera o <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberCompleted> evento.  
+  
+ As etapas a seguir ilustram como recuperar o número de página de um determinado `contentPosition` assincronamente.  
+  
+1.  Criar um <xref:System.Windows.Documents.GetPageNumberCompletedEventHandler> delegar e adicioná-lo para ser notificado sobre <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberCompleted> eventos.  
+  
+2.  Chamar <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync%28System.Windows.Documents.ContentPosition%2CSystem.Object%29> especificando o `contentPosition` desejado e um exclusivo `userState` objeto que será usado para identificar a tarefa assíncrona.  
+  
+3.  Quando o evento ocorre e o representante é chamado, compare o evento <xref:System.Windows.Documents.GetPageNumberCompletedEventArgs>.<xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade com o original <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync%2A> `userState` parâmetro.  
+  
+4.  Quando o <xref:System.Windows.Documents.GetPageNumberCompletedEventArgs>.<xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade corresponde ao original <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync%28System.Windows.Documents.ContentPosition%2CSystem.Object%29> `userState`, a operação for concluída e o número da página está pronto.  (O <xref:System.Windows.Documents.GetPageNumberCompletedEventArgs>.<xref:System.Windows.Documents.GetPageNumberCompletedEventArgs.ContentPosition%2A> propriedade também serão compatíveis com o original <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync%28System.Windows.Documents.ContentPosition%2CSystem.Object%29> `contentPosition` parâmetro.)  
+  
+5.  O <xref:System.Windows.Documents.GetPageNumberCompletedEventArgs>.<xref:System.Windows.Documents.GetPageNumberCompletedEventArgs.PageNumber%2A> propriedade contém o número da página com base em zero do `contentPosition`.  
+  
+ <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumber%2A>fornece funcionalidade semelhante ao <xref:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync%2A>, mas para operação síncrona.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageNumberCompleted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Documents.GetPageNumberCompletedEventHandler GetPageNumberCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.GetPageNumberCompletedEventHandler GetPageNumberCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.GetPageNumberCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando <see cref="Overload:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberAsync" /> é concluído.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPagePosition">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Documents.ContentPosition GetPagePosition (System.Windows.Documents.DocumentPage page);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Documents.ContentPosition GetPagePosition(class System.Windows.Documents.DocumentPage page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DynamicDocumentPaginator.GetPagePosition(System.Windows.Documents.DocumentPage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.ContentPosition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="page" Type="System.Windows.Documents.DocumentPage" />
+      </Parameters>
+      <Docs>
+        <param name="page">A página cuja posição é necessária.</param>
+        <summary>Quando substituído em uma classe derivada, obtém a posição da página especificada no conteúdo do documento.</summary>
+        <returns>Um <see cref="T:System.Windows.Documents.ContentPosition" /> representando a posição do <paramref name="page" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBackgroundPaginationEnabled">
+      <MemberSignature Language="C#" Value="public virtual bool IsBackgroundPaginationEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBackgroundPaginationEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.DynamicDocumentPaginator.IsBackgroundPaginationEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a paginação é executada automaticamente em segundo plano em resposta a determinados eventos, como uma alteração no tamanho da página.</summary>
+        <value>
+          <see langword="true" />Se a paginação em segundo plano estiver habilitada; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando `true`, a paginação é executada em segundo plano, gerando <xref:System.Windows.Documents.DynamicDocumentPaginator.PaginationProgress> e <xref:System.Windows.Documents.DynamicDocumentPaginator.PaginationCompleted> eventos conforme apropriado.  
+  
+ Paginação de <xref:System.Windows.Documents.FixedDocument> conteúdo, como distinct de uma <xref:System.Windows.Documents.FlowDocument> não é afetada pelas alterações para o visual <xref:System.Windows.Documents.DocumentPaginator.PageSize%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetPageNumberCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnGetPageNumberCompleted (System.Windows.Documents.GetPageNumberCompletedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnGetPageNumberCompleted(class System.Windows.Documents.GetPageNumberCompletedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DynamicDocumentPaginator.OnGetPageNumberCompleted(System.Windows.Documents.GetPageNumberCompletedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Documents.GetPageNumberCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Documents.GetPageNumberCompletedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Documents.DynamicDocumentPaginator.GetPageNumberCompleted" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaginationCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnPaginationCompleted (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPaginationCompleted(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DynamicDocumentPaginator.OnPaginationCompleted(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Documents.DynamicDocumentPaginator.PaginationCompleted" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaginationProgress">
+      <MemberSignature Language="C#" Value="protected virtual void OnPaginationProgress (System.Windows.Documents.PaginationProgressEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPaginationProgress(class System.Windows.Documents.PaginationProgressEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.DynamicDocumentPaginator.OnPaginationProgress(System.Windows.Documents.PaginationProgressEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Documents.PaginationProgressEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Documents.PaginationProgressEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Documents.DynamicDocumentPaginator.PaginationProgress" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaginationCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler PaginationCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaginationCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.DynamicDocumentPaginator.PaginationCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando todo o conteúdo de documento foi paginado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Documents.DynamicDocumentPaginator.PaginationCompleted> ocorre, <xref:System.Windows.Documents.DocumentPaginator.IsPageCountValid%2A> é `true` até que um novo paginação é iniciada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaginationProgress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Documents.PaginationProgressEventHandler PaginationProgress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.PaginationProgressEventHandler PaginationProgress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.DynamicDocumentPaginator.PaginationProgress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.PaginationProgressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma ou mais páginas de conteúdo tiveram sido paginadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.PaginationProgressEventArgs>propriedades <xref:System.Windows.Documents.PaginationProgressEventArgs.Start%2A> e <xref:System.Windows.Documents.PaginationProgressEventArgs.Count%2A> identificar o intervalo de páginas paginados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

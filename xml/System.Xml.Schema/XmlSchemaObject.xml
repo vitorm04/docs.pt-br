@@ -1,0 +1,289 @@
+<Type Name="XmlSchemaObject" FullName="System.Xml.Schema.XmlSchemaObject">
+  <TypeSignature Language="C#" Value="public abstract class XmlSchemaObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlSchemaObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a classe raiz para a hierarquia de modelo de objeto de esquema XML e serve como uma classe base para classes, como a classe <see cref="T:System.Xml.Schema.XmlSchema" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe cada objeto de esquema.  
+  
+ [!code-cpp[Classic WebData XmlSchemaObject Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlSchemaObject Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaObject Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlSchemaObject Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaObject Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlSchemaObject Example/VB/source.vb#1)]  
+  
+ O exemplo usa o arquivo `example.xsd` como entrada.  
+  
+ [!code-xml[Classic WebData XmlSchemaObject Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlSchemaObject Example/XML/example.xsd#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlSchemaObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado pelos construtores de classe derivada para inicializar o estado nesse tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaObject.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da linha no arquivo para o qual o <see langword="schema" /> elemento se refere.</summary>
+        <value>O número da linha.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `LineNumber`é usado para armazenar o número da linha quando um esquema é lido de um arquivo. Isso é indicado na <xref:System.Xml.Schema.XmlSchemaException> para tratamento de erros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinePosition">
+      <MemberSignature Language="C#" Value="public int LinePosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaObject.LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição da linha no arquivo ao qual o <see langword="schema" /> elemento se refere.</summary>
+        <value>A posição da linha.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é usado para armazenar a posição da linha quando um esquema é lido de um arquivo. Isso é indicado na <xref:System.Xml.Schema.XmlSchemaException> para tratamento de erros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespaces">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSerializerNamespaces Namespaces { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSerializerNamespaces Namespaces" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaObject.Namespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlNamespaceDeclarations</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializerNamespaces</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> a ser usado com esse objeto de esquema.</summary>
+        <value>A propriedade <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> do objeto de esquema.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Assim, o modelo de objeto de esquema (SOM) a capacidade de adicionar declarações xmlns. Isso é útil quando você deseja declarar um prefixo para qualificar as declarações de um esquema importado ou usar no atributo do elemento xs:selector xpath.  
+  
+ Você também pode usar o <xref:System.Xml.Schema.XmlSchemaObject.Namespaces%2A> propriedade para alterar os prefixos de namespace em um esquema. Por exemplo, você pode alterar o prefixo usado por um esquema para o namespace do esquema de XML da W3C de xs em xsd, conforme ilustrado no exemplo a seguir.  
+  
+```vb  
+Dim namespaces As XmlSerializerNamespaces = New XmlSerializerNamespaces()  
+namespaces.Add("myChangedPrefix", "myImportNamespace");  
+s.Namespaces = namespaces;  
+```  
+  
+```csharp  
+XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();  
+namespaces.Add("myChangedPrefix", "myImportNamespace");  
+s.Namespaces = namespaces;  
+```  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, o prefixo myImpPrefix é adicionado no nível de elemento do esquema. O prefixo é então usado para qualificar as definições que são importadas do myImportNamespace.  
+  
+ [!code-cpp[Classic WebData XmlSchemaObject.Namespaces Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlSchemaObject.Namespaces Example/CPP/namespaces.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaObject.Namespaces Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlSchemaObject.Namespaces Example/CS/namespaces.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaObject.Namespaces Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlSchemaObject.Namespaces Example/VB/namespaces.vb#1)]  
+  
+ O exemplo produz o XML a seguir.  
+  
+ [!code-xml[Classic WebData XmlSchemaObject.Namespaces Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlSchemaObject.Namespaces Example/XML/example.xml#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaObject Parent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaObject Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaObject.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pai desta <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</summary>
+        <value>O pai <see cref="T:System.Xml.Schema.XmlSchemaObject" /> desse <see cref="T:System.Xml.Schema.XmlSchemaObject" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceUri">
+      <MemberSignature Language="C#" Value="public string SourceUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceUri" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaObject.SourceUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local de origem para o arquivo carregado o esquema.</summary>
+        <value>O local de origem (URI) para o arquivo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornece informações para tratamento de exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

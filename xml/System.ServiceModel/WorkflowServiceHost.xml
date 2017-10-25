@@ -1,0 +1,469 @@
+<Type Name="WorkflowServiceHost" FullName="System.ServiceModel.WorkflowServiceHost">
+  <TypeSignature Language="C#" Value="public class WorkflowServiceHost : System.ServiceModel.ServiceHostBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowServiceHost extends System.ServiceModel.ServiceHostBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.WorkflowServiceHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.WorkflowServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.ServiceHostBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The WF3 types are deprecated.  Instead, please use the new WF4 types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece o host para serviços baseados em fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementa o host usado pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] modelo de programação do modelo de serviço.  
+  
+ Use o <xref:System.ServiceModel.WorkflowServiceHost> classe para configurar e expor um fluxo de trabalho como um serviço para uso por aplicativos cliente, quando você não estiver usando o Internet Information Services (IIS) ou serviços de ativação do Windows (WAS) para expor um serviço. IIS e WAS interagem com um <xref:System.ServiceModel.WorkflowServiceHost> objeto em seu nome.  
+  
+ Para expor um fluxo de trabalho como um serviço para uso por chamadores, WCF requer uma descrição de serviço concluída (representado pela <xref:System.ServiceModel.Description.ServiceDescription> classe). O <xref:System.ServiceModel.WorkflowServiceHost> classe cria um <xref:System.ServiceModel.Description.ServiceDescription> das informações de tipo e a configuração de serviço do fluxo de trabalho e, em seguida, usa essa descrição ao criar <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> objetos para cada ponto de extremidade na descrição.  
+  
+ Use um <xref:System.ServiceModel.WorkflowServiceHost> objeto para carregar um serviço de fluxo de trabalho, configurar pontos de extremidade, aplicar configurações de segurança e Iniciar ouvintes para manipular solicitações de entrada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowServiceHost ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.WorkflowServiceHost" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHost (System.IO.Stream workflowDefinition, params Uri[] baseAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream workflowDefinition, class System.Uri[] baseAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.#ctor(System.IO.Stream,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflowDefinition" Type="System.IO.Stream" />
+        <Parameter Name="baseAddress" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinition">
+          <see cref="T:System.IO.Stream" />que contém a definição de fluxo de trabalho.</param>
+        <param name="baseAddress">Uma matriz do tipo <see cref="T:System.Uri" /> que contém os endereços de base para o serviço hospedado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.WorkflowServiceHost" /> classe usando um fluxo de bytes que contém a definição de fluxo de trabalho e os endereços base do serviço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga se a definição de fluxo de trabalho é armazenada no armazenamento protegido, como um banco de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHost (string workflowDefinitionPath, params Uri[] baseAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string workflowDefinitionPath, class System.Uri[] baseAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.#ctor(System.String,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflowDefinitionPath" Type="System.String" />
+        <Parameter Name="baseAddress" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinitionPath">Uma cadeia de caracteres que contém o caminho para o arquivo de definição de fluxo de trabalho.</param>
+        <param name="baseAddress">Uma matriz do tipo <see cref="T:System.Uri" /> que contém os endereços de base para o serviço hospedado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.WorkflowServiceHost" /> classe usando um caminho para a definição de fluxo de trabalho e os endereços base do serviço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga quando a definição de fluxo de trabalho está no formato de arquivo do windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHost (Type workflowType, params Uri[] baseAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type workflowType, class System.Uri[] baseAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.#ctor(System.Type,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+        <Parameter Name="baseAddress" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="workflowType">O <see cref="T:System.Type" /> da instância do fluxo de trabalho.</param>
+        <param name="baseAddress">Uma matriz do tipo <see cref="T:System.Uri" /> que contém os endereços de base para o serviço hospedado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.WorkflowServiceHost" /> classe usando um tipo de fluxo de trabalho e os endereços base do serviço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga quando o fluxo de trabalho é definido como tipo compilado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHost (System.IO.Stream workflowDefinition, System.IO.Stream ruleDefinition, params Uri[] baseAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream workflowDefinition, class System.IO.Stream ruleDefinition, class System.Uri[] baseAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.#ctor(System.IO.Stream,System.IO.Stream,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflowDefinition" Type="System.IO.Stream" />
+        <Parameter Name="ruleDefinition" Type="System.IO.Stream" />
+        <Parameter Name="baseAddress" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinition">
+          <see cref="T:System.IO.Stream" />que contém a definição de fluxo de trabalho.</param>
+        <param name="ruleDefinition">
+          <see cref="T:System.IO.Stream" />que contém a definição de regras de fluxo de trabalho.</param>
+        <param name="baseAddress">Uma matriz do tipo <see cref="T:System.Uri" /> que contém os endereços de base para o serviço hospedado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.WorkflowServiceHost" /> classe usando um fluxo de bytes que contém a definição de fluxo de trabalho, um fluxo de bytes que contém o fluxo de trabalho de regras de definição e os endereços base do serviço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga quando a definição de fluxo de trabalho e a definição de regras são armazenados no armazenamento protegido, como um banco de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHost (string workflowDefinitionPath, string ruleDefinitionPath, params Uri[] baseAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string workflowDefinitionPath, string ruleDefinitionPath, class System.Uri[] baseAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.#ctor(System.String,System.String,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflowDefinitionPath" Type="System.String" />
+        <Parameter Name="ruleDefinitionPath" Type="System.String" />
+        <Parameter Name="baseAddress" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinitionPath">Uma cadeia de caracteres que contém o caminho para o arquivo de definição de fluxo de trabalho.</param>
+        <param name="ruleDefinitionPath">Uma cadeia de caracteres que contém o caminho para o arquivo de definição de regras de fluxo de trabalho.</param>
+        <param name="baseAddress">Uma matriz do tipo <see cref="T:System.Uri" /> que contém os endereços de base para o serviço hospedado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.WorkflowServiceHost" /> classe usando um caminho para a definição de fluxo de trabalho, um caminho para a definição de regras de fluxo de trabalho e os endereços base do serviço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga quando a definição de fluxo de trabalho e a definição de regras estão na forma de arquivos do windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHost (System.IO.Stream workflowDefinition, System.IO.Stream ruleDefinition, System.Workflow.ComponentModel.Compiler.ITypeProvider typeProvider, params Uri[] baseAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream workflowDefinition, class System.IO.Stream ruleDefinition, class System.Workflow.ComponentModel.Compiler.ITypeProvider typeProvider, class System.Uri[] baseAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.#ctor(System.IO.Stream,System.IO.Stream,System.Workflow.ComponentModel.Compiler.ITypeProvider,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflowDefinition" Type="System.IO.Stream" />
+        <Parameter Name="ruleDefinition" Type="System.IO.Stream" />
+        <Parameter Name="typeProvider" Type="System.Workflow.ComponentModel.Compiler.ITypeProvider" />
+        <Parameter Name="baseAddress" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinition">
+          <see cref="T:System.IO.Stream" />que contém a definição de fluxo de trabalho.</param>
+        <param name="ruleDefinition">
+          <see cref="T:System.IO.Stream" />que contém a definição de regras de fluxo de trabalho.</param>
+        <param name="typeProvider">Um provedor de tipo que implementa o <see cref="T:System.Workflow.ComponentModel.Compiler.ITypeProvider" /> interface.</param>
+        <param name="baseAddress">Uma matriz do tipo <see cref="T:System.Uri" /> que contém os endereços de base para o serviço hospedado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.WorkflowServiceHost" /> classe usando um fluxo de bytes que contém a definição de fluxo de trabalho, um fluxo de bytes que contém o fluxo de trabalho de regras de definição, um provedor de tipo para tipos de atividade personalizada e os endereços base do serviço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga quando o fluxo de trabalho compilado faz referência a tipos personalizados definidos em um assembly separado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHost (string workflowDefinitionPath, string ruleDefinitionPath, System.Workflow.ComponentModel.Compiler.ITypeProvider typeProvider, params Uri[] baseAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string workflowDefinitionPath, string ruleDefinitionPath, class System.Workflow.ComponentModel.Compiler.ITypeProvider typeProvider, class System.Uri[] baseAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.#ctor(System.String,System.String,System.Workflow.ComponentModel.Compiler.ITypeProvider,System.Uri[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="workflowDefinitionPath" Type="System.String" />
+        <Parameter Name="ruleDefinitionPath" Type="System.String" />
+        <Parameter Name="typeProvider" Type="System.Workflow.ComponentModel.Compiler.ITypeProvider" />
+        <Parameter Name="baseAddress" Type="System.Uri[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinitionPath">Uma cadeia de caracteres que contém o caminho para o arquivo de definição de fluxo de trabalho.</param>
+        <param name="ruleDefinitionPath">Uma cadeia de caracteres que contém o caminho para o arquivo de definição de regras de fluxo de trabalho.</param>
+        <param name="typeProvider">Um provedor de tipo que implementa o <see cref="T:System.Workflow.ComponentModel.Compiler.ITypeProvider" /> interface.</param>
+        <param name="baseAddress">Uma matriz do tipo <see cref="T:System.Uri" /> que contém os endereços de base para o serviço hospedado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.WorkflowServiceHost" /> classe usando um caminho para a definição de fluxo de trabalho, um caminho para a definição de regras de fluxo de trabalho, um provedor de tipo para tipos de atividade personalizada e os endereços base do serviço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga quando o fluxo de trabalho definido em um arquivo de marcação de fluxo de trabalho (. xoml) e faz referência a tipos personalizados definidos em um assembly separado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (Type implementedContract, System.ServiceModel.Channels.Binding binding, string address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(class System.Type implementedContract, class System.ServiceModel.Channels.Binding binding, string address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.Type" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O <see cref="T:System.Type" /> do contrato para o ponto de extremidade adicionado.</param>
+        <param name="binding">O <see cref="T:System.ServiceModel.Channels.Binding" /> para o ponto de extremidade adicionado.</param>
+        <param name="address">O endereço do ponto de extremidade adicionado.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o serviço de fluxo de trabalho usando o contrato especificado, a associação e o endereço do ponto de extremidade.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> adicionado ao serviço de fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O serviço de fluxo de trabalho não implementa <paramref name="implementedContract" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (Type implementedContract, System.ServiceModel.Channels.Binding binding, Uri address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(class System.Type implementedContract, class System.ServiceModel.Channels.Binding binding, class System.Uri address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.Type" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O <see cref="T:System.Type" /> do contrato para o ponto de extremidade adicionado.</param>
+        <param name="binding">O <see cref="T:System.ServiceModel.Channels.Binding" /> para o ponto de extremidade adicionado.</param>
+        <param name="address">O <see cref="T:System.Uri" /> que contém o endereço do ponto de extremidade adicionado.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o serviço de fluxo de trabalho com um contrato especificado, a associação e o URI que contém o endereço do ponto de extremidade.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> adicionado ao serviço de fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O serviço de fluxo de trabalho não implementa <paramref name="implementedContract" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (Type implementedContract, System.ServiceModel.Channels.Binding binding, string address, Uri listenUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(class System.Type implementedContract, class System.ServiceModel.Channels.Binding binding, string address, class System.Uri listenUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.String,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.Type" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.String" />
+        <Parameter Name="listenUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O <see cref="T:System.Type" /> do contrato para o ponto de extremidade adicionado.</param>
+        <param name="binding">O <see cref="T:System.ServiceModel.Channels.Binding" /> para o ponto de extremidade adicionado.</param>
+        <param name="address">O endereço de ponto de extremidade para o serviço.</param>
+        <param name="listenUri">O <see cref="T:System.Uri" /> no qual os pontos de extremidade de serviço podem escutar.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o serviço de fluxo de trabalho com um contrato especificado, uma associação, um endereço de ponto de extremidade e um URI no qual o serviço de escuta.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> adicionado ao serviço de fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="T:System.ServiceModel.ServiceContractAttribute" />não foi especificado para <paramref name="implementedContract" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceEndpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint (Type implementedContract, System.ServiceModel.Channels.Binding binding, Uri address, Uri listenUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Description.ServiceEndpoint AddServiceEndpoint(class System.Type implementedContract, class System.ServiceModel.Channels.Binding binding, class System.Uri address, class System.Uri listenUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.AddServiceEndpoint(System.Type,System.ServiceModel.Channels.Binding,System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceEndpoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContract" Type="System.Type" />
+        <Parameter Name="binding" Type="System.ServiceModel.Channels.Binding" />
+        <Parameter Name="address" Type="System.Uri" />
+        <Parameter Name="listenUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContract">O <see cref="T:System.Type" /> do contrato para o ponto de extremidade adicionado.</param>
+        <param name="binding">O <see cref="T:System.ServiceModel.Channels.Binding" /> para o ponto de extremidade adicionado.</param>
+        <param name="address">O <see cref="T:System.Uri" /> que contém o endereço do ponto de extremidade adicionado.</param>
+        <param name="listenUri">O <see cref="T:System.Uri" /> no qual os pontos de extremidade de serviço podem escutar.</param>
+        <summary>Adiciona um ponto de extremidade de serviço para o serviço de fluxo de trabalho com um contrato especificado, uma associação, um URI que contém o endereço do ponto de extremidade e um URI no qual o serviço de escuta.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Description.ServiceEndpoint" /> adicionado ao serviço de fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="T:System.ServiceModel.ServiceContractAttribute" />não foi especificado para <paramref name="implementedContract" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDescription">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Description.ServiceDescription CreateDescription (out System.Collections.Generic.IDictionary&lt;string,System.ServiceModel.Description.ContractDescription&gt; implementedContracts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.Description.ServiceDescription CreateDescription([out] class System.Collections.Generic.IDictionary`2&lt;string, class System.ServiceModel.Description.ContractDescription&gt;&amp; implementedContracts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.CreateDescription(System.Collections.Generic.IDictionary{System.String,System.ServiceModel.Description.ContractDescription}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="implementedContracts" Type="System.Collections.Generic.IDictionary&lt;System.String,System.ServiceModel.Description.ContractDescription&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="implementedContracts">Quando este método retorna, o <see cref="T:System.Collections.Generic.IDictionary`2" /> objeto contém os chaveado-contratos de serviço hospedado que foram implementados.</param>
+        <summary>Cria uma descrição do serviço de fluxo de trabalho.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Description.ServiceDescription" /> do serviço de fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosing">
+      <MemberSignature Language="C#" Value="protected override void OnClosing ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClosing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WorkflowServiceHost.OnClosing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.WorkflowServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este método é chamado antes do <see cref="T:System.ServiceModel.WorkflowServiceHost" /> é colocado em um estado de fechamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na implementação do padrão, <xref:System.ServiceModel.WorkflowServiceHost> chamadas <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A> antes de chamar <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType>. Isso significa que o tempo de execução do fluxo de trabalho será encerrado antes de fecha o host de serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

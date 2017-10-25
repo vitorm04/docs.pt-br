@@ -1,0 +1,72 @@
+<Type Name="AspNetWebSocketOptions" FullName="System.Web.WebSockets.AspNetWebSocketOptions">
+  <TypeSignature Language="C#" Value="public sealed class AspNetWebSocketOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AspNetWebSocketOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.WebSockets.AspNetWebSocketOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica as configurações para um <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> conexão.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AspNetWebSocketOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.WebSockets.AspNetWebSocketOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.WebSockets.AspNetWebSocketOptions" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireSameOrigin">
+      <MemberSignature Language="C#" Value="public bool RequireSameOrigin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireSameOrigin" />
+      <MemberSignature Language="DocId" Value="P:System.Web.WebSockets.AspNetWebSocketOptions.RequireSameOrigin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se a URL que initiatedthe conexão WebSocket corresponde ao servidor atual.</summary>
+        <value>
+          <see langword="true" />Se a URL que initiatedthe conexão WebSocket corresponde para o servidor atual. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubProtocol">
+      <MemberSignature Language="C#" Value="public string SubProtocol { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SubProtocol" />
+      <MemberSignature Language="DocId" Value="P:System.Web.WebSockets.AspNetWebSocketOptions.SubProtocol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de um protocolo específico do aplicativo que um cliente remoto e um servidor podem usar para trocar dados por um <see cref="T:System.Web.WebSockets.AspNetWebSocket" /> conexão.</summary>
+        <value>O nome do protocolo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O nome do protocolo atribuído à propriedade contém caracteres inválidos.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

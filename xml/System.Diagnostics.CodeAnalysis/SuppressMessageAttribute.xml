@@ -1,0 +1,332 @@
+<Type Name="SuppressMessageAttribute" FullName="System.Diagnostics.CodeAnalysis.SuppressMessageAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SuppressMessageAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SuppressMessageAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.Conditional("CODE_ANALYSIS")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Suprime a geração de relatórios de uma violação de regra de ferramenta específica de análise estática, permitindo múltiplas supressões em um único artefato de código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo pode ser aplicado a qualquer elemento de aplicativo. Para obter uma lista completa das violações que podem ser suprimidos, consulte [análise de código para avisos de código gerenciado](http://msdn.microsoft.com/library/3c2741ff-0d3a-42e6-acd5-d42310bd03c4).  
+  
+> [!NOTE]
+>  O <xref:System.Diagnostics.ConditionalAttribute> é aplicado a esta classe, especificando o símbolo de pré-processamento "CODE_ANALYSIS" como o símbolo condicional que determina se a chamada de atributo é incluída ou omitida. Se o símbolo for definido, a chamada de atributo está incluída; Caso contrário, a chamada é omitida.  
+>   
+>  Quando você clica um aviso de análise de código no Visual Studio **lista de erros** e, em seguida, clique em **suprimir mensagem (NS)**, um **SuppressMessage** atributo é adicionado no seu código ou para o arquivo do projeto supressões globais. Para obter mais informações sobre o **SuppressMessage** atributo e seu uso no Visual Studio, consulte [na fonte de visão geral de supressão](http://msdn.microsoft.com/library/f1a2dc6a-a9eb-408c-9078-2571e57d207d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atributo para suprimir mensagens de aviso de desempenho.  
+  
+ [!code-csharp[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.CodeAnalysis.SuppressMessageAttribute/CS/program.cs#1)]
+ [!code-vb[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.CodeAnalysis.SuppressMessageAttribute/VB/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SuppressMessageAttribute (string category, string checkId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string category, string checkId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="checkId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="category">A categoria para o atributo.</param>
+        <param name="checkId">O identificador da regra de ferramenta de análise à qual atributo se aplica.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" />, especificando a categoria da ferramenta de análise estática e o identificador para uma regra de análise.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `category` o valor do parâmetro é específico para a ferramenta de análise e categoriza a regra identificada pelo `checkId` parâmetro. Os dois parâmetros concatenados formulário um identificador exclusivo para a regra.  
+  
+> [!NOTE]
+>  O símbolo do pré-processador "CODE_ANALYSIS" deve ser definido para esse atributo seja efetivo. A ausência do símbolo pré-processador resulta no atributo não está sendo aplicado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atributo para suprimir avisos para o `Microsoft.Performance` categoria e o `CA1801` e `CA1804` verificar identificadores. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> classe.  
+  
+ [!code-csharp[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.CodeAnalysis.SuppressMessageAttribute/CS/program.cs#2)]
+ [!code-vb[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.CodeAnalysis.SuppressMessageAttribute/VB/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public string Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Category" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a categoria de identificar a classificação do atributo.</summary>
+        <value>A categoria que identifica o atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Category%2A> propriedade descreve a ferramenta ou a categoria de análise de ferramenta para o qual se aplica a um atributo de supressão de mensagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atributo para suprimir avisos para o `Microsoft.Performance` categoria e o `CA1801` e `CA1804` verificar identificadores. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> classe.  
+  
+ [!code-csharp[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.CodeAnalysis.SuppressMessageAttribute/CS/program.cs#2)]
+ [!code-vb[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.CodeAnalysis.SuppressMessageAttribute/VB/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckId">
+      <MemberSignature Language="C#" Value="public string CheckId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CheckId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.CheckId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador da regra de ferramenta de análise estática para ser suprimida.</summary>
+        <value>O identificador da regra de ferramenta de análise estática para ser suprimida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Concatenados, o <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Category%2A> e <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.CheckId%2A> propriedades formam um identificador exclusivo de seleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atributo para suprimir avisos para o `Microsoft.Performance` categoria e o `CA1801` e `CA1804` verificar identificadores. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> classe.  
+  
+ [!code-csharp[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.CodeAnalysis.SuppressMessageAttribute/CS/program.cs#2)]
+ [!code-vb[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.CodeAnalysis.SuppressMessageAttribute/VB/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Justification">
+      <MemberSignature Language="C#" Value="public string Justification { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Justification" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Justification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a justificativa para suprimir a mensagem de análise de código.</summary>
+        <value>A justificativa para suprimir a mensagem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageId">
+      <MemberSignature Language="C#" Value="public string MessageId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MessageId" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.MessageId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um argumento opcional que expande os critérios de exclusão.</summary>
+        <value>Uma cadeia de caracteres que contém os critérios de exclusão expandidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.MessageId%2A> propriedade é um argumento opcional que especifica a exclusão adicionais em que o destino de literal de metadados não é suficientemente preciso. Por exemplo, o <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> não pode ser aplicada em um método, e pode ser desejável para suprimir uma violação em relação a uma instrução no método que fornecerá uma violação de regra, mas não em todas as instruções no método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> atributo para suprimir avisos para um parâmetro específico em uma declaração de método e um campo específico no método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> classe.  
+  
+ [!code-csharp[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.CodeAnalysis.SuppressMessageAttribute/CS/program.cs#2)]
+ [!code-vb[System.Diagnostics.CodeAnalysis.SuppressMessageAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.CodeAnalysis.SuppressMessageAttribute/VB/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public string Scope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scope" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o escopo do código relevante para o atributo.</summary>
+        <value>O escopo do código relevante para o atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Scope%2A> propriedade é um argumento opcional que especifica o escopo de metadados para o qual o atributo é relevante. Os valores possíveis para metadados gerenciados incluem "member", "recurso", "módulo", "type", "method" ou "namespace".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public string Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Target" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tools</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um caminho totalmente qualificado que representa o destino do atributo.</summary>
+        <value>Um caminho totalmente qualificado que representa o destino do atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.Target%2A> propriedade é um argumento opcional que identifica o destino da análise do atributo. Um valor de exemplo é "System.IO.Stream.ctor ():System.Void". Como ele é totalmente qualificado, pode ser longo, particularmente para destinos como parâmetros. A interface de usuário da ferramenta de análise deve ser capaz de formatação automaticamente o parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,180 @@
+<Type Name="SettingsProvider" FullName="System.Configuration.SettingsProvider">
+  <TypeSignature Language="C#" Value="public abstract class SettingsProvider : System.Configuration.Provider.ProviderBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SettingsProvider extends System.Configuration.Provider.ProviderBase" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Provider.ProviderBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Atua como uma classe base para derivação de provedores de configurações personalizados na arquitetura de configurações do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor de configurações define o mecanismo para armazenar dados de configuração usados na arquitetura de configurações do aplicativo. O .NET Framework contém um provedor de configurações padrão único, <xref:System.Configuration.LocalFileSettingsProvider>, que armazena dados de configuração para o sistema de arquivos local. No entanto, você pode criar mecanismos de armazenamento alternativo derivando abstrata <xref:System.Configuration.SettingsProvider> classe. O provedor que usa uma classe wrapper é determinado decorando a classe de invólucro com o <xref:System.Configuration.SettingsProviderAttribute>. Se esse atributo não for fornecido, o padrão, <xref:System.Configuration.LocalFileSettingsProvider>, é usado.  
+  
+ Quando você cria um provedor de configurações personalizadas, no mínimo, você deve fornecer implementações para três métodos dessa classe: <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A>, <xref:System.Configuration.SettingsProvider.SetPropertyValues%2A> e <xref:System.Configuration.SettingsProvider.ApplicationName%2A>.  
+  
+ Para aplicativos cliente, você pode adicionar mais funcionalidade padronizada para um provedor personalizado também Implementando o <xref:System.Configuration.IApplicationSettingsProvider> interface. Essa interface espelha os métodos encontrados no <xref:System.Configuration.ApplicationSettingsBase> classe, que permite principalmente o controle de versão.  
+  
+ Normalmente, você deve criar provedores de configurações para ser a única instância para evitar contenção de recursos de armazenamento. Provedores também devem ser thread-safe porque eles podem ser chamados simultaneamente a partir de várias instâncias de wrapper em um domínio de aplicativo único ou vários aplicativos em domínios diferentes.  
+  
+ No mínimo, um provedor de configurações deve reconhecer os três atributos —<xref:System.Configuration.ApplicationScopedSettingAttribute>, <xref:System.Configuration.UserScopedSettingAttribute>, e <xref:System.Configuration.DefaultSettingValueAttribute>. Para obter uma lista completa de atributos que podem ser aplicadas às configurações de aplicativo, consulte [atributos de configurações do aplicativo](~/docs/framework/winforms/advanced/application-settings-attributes.md). Um provedor de configuração personalizada deve resolver atributos aplicados às propriedades de configurações da seguinte maneira:  
+  
+1.  Se o provedor pode atender à solicitação indicada pelo atributo, obviamente, ele deve fazer isso.  
+  
+2.  Se o provedor não pode atender à solicitação, ele deve ignorá-lo silenciosamente.  
+  
+3.  Se duas ou mais propriedades em conflito; Por exemplo, uma propriedade que está sendo decorada com ambos <xref:System.Configuration.ApplicationScopedSettingAttribute> e <xref:System.Configuration.UserScopedSettingAttribute>; o provedor deve lançar um <xref:System.Configuration.ConfigurationException>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SettingsProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Configuration.SettingsProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é este construtor protegido padrão para essa classe abstrata. Provedores de configurações personalizada derivada não são necessários para fornecer um construtor explícito porque o <xref:System.Configuration.Provider.ProviderBase.Initialize%2A> método normalmente executa todas as inicializações.  
+  
+ Código do cliente normalmente não instanciar diretamente um provedor de configurações; em vez disso, você deve usar o procedimento a seguir para localizar um provedor de configurações para uma propriedade de configurações específicas:  
+  
+1.  Chamar o <xref:System.ComponentModel.Component.GetService%2A> método no atual <xref:System.ComponentModel.Component> ou <xref:System.ComponentModel.ISite> para retornar uma referência ao atual <xref:System.Configuration.ISettingsProviderService>.  
+  
+2.  Chamar o <xref:System.Configuration.ISettingsProviderService.GetSettingsProvider%2A> método o <xref:System.Configuration.ISettingsProviderService> recuperado na primeira etapa para retornar o provedor de configurações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public abstract string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProvider.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do aplicativo em execução no momento.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome abreviado do aplicativo, que não contém um caminho completo ou a extensão, por exemplo, <c>SimpleAppSettings</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SettingsProvider.ApplicationName%2A> e <xref:System.Configuration.Provider.ProviderBase.Name%2A> propriedades ajudam para resolver a ambiguidade, da mesma forma, as propriedades de configuração nomeado em diferentes aplicativos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValues">
+      <MemberSignature Language="C#" Value="public abstract System.Configuration.SettingsPropertyValueCollection GetPropertyValues (System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyCollection collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Configuration.SettingsPropertyValueCollection GetPropertyValues(class System.Configuration.SettingsContext context, class System.Configuration.SettingsPropertyCollection collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProvider.GetPropertyValues(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="collection" Type="System.Configuration.SettingsPropertyCollection" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Configuration.SettingsContext" /> que descreve o uso do aplicativo atual.</param>
+        <param name="collection">Um <see cref="T:System.Configuration.SettingsPropertyCollection" /> que contém o grupo de propriedade de configurações cujos valores devem ser recuperados.</param>
+        <summary>Retorna a coleção de valores da propriedade de configurações para a instância do aplicativo e o grupo de propriedades de configurações especificados.</summary>
+        <returns>Um <see cref="T:System.Configuration.SettingsPropertyValueCollection" /> que contém os valores para o grupo de propriedades de configurações especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SettingsProvider.GetPropertyValues%2A> método deve ser implementado para lidar com as configurações especiais, aqueles marcados com <xref:System.Configuration.SpecialSettingAttribute>, bem como reconciliar as configurações de aplicativo e usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPropertyValues">
+      <MemberSignature Language="C#" Value="public abstract void SetPropertyValues (System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyValueCollection collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetPropertyValues(class System.Configuration.SettingsContext context, class System.Configuration.SettingsPropertyValueCollection collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProvider.SetPropertyValues(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="collection" Type="System.Configuration.SettingsPropertyValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Configuration.SettingsContext" /> que descreve o uso do aplicativo atual.</param>
+        <param name="collection">Um <see cref="T:System.Configuration.SettingsPropertyValueCollection" /> que representa o grupo de configurações de propriedade a ser definido.</param>
+        <summary>Define os valores do grupo especificado de configurações de propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Configuration.ApplicationSettingsBase>contém o <xref:System.Configuration.ApplicationSettingsBase.Save%2A> método, que é chamado para manter os valores de todas as suas propriedades de configurações. Esse método enumera por todas as configurações de provedores com suas propriedades de configurações e chama o <xref:System.Configuration.SettingsProvider.SetPropertyValues%2A> método para cada <xref:System.Configuration.SettingsProvider> para executar a operação de serialização real.  
+  
+ O <xref:System.Configuration.SettingsProvider.SetPropertyValues%2A> método deve ser implementado com segurança em mente:  
+  
+-   Somente o código totalmente confiável deve ter permissão para atualizar as configurações do aplicativo. Código parcialmente confiável deve ter permissão para atualizar apenas as configurações de aplicativo do usuário. Código não confiável normalmente não é permitido ao atualizar configurações de aplicativo.  
+  
+-   As cotas de uso devem ser consideradas para se proteger contra ataques de recursos por aplicativos parcialmente confiáveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

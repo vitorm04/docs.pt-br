@@ -1,0 +1,211 @@
+<Type Name="MouseButtonEventArgs" FullName="System.Windows.Input.MouseButtonEventArgs">
+  <TypeSignature Language="C#" Value="public class MouseButtonEventArgs : System.Windows.Input.MouseEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MouseButtonEventArgs extends System.Windows.Input.MouseEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.MouseButtonEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.MouseEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para eventos relacionados ao botão do mouse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Input.MouseButtonEventArgs>é usado com os seguintes eventos: <xref:System.Windows.Input.Mouse.MouseDown>, <xref:System.Windows.Input.Mouse.MouseUp>, <xref:System.Windows.UIElement.MouseLeftButtonDown>, <xref:System.Windows.UIElement.MouseLeftButtonUp>, <xref:System.Windows.UIElement.MouseRightButtonDown>, <xref:System.Windows.UIElement.MouseRightButtonUp>e o túnel de eventos correspondente.  
+  
+ O <xref:System.Windows.Input.Mouse> classe fornece métodos e propriedades adicionais para determinar o estado do mouse.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um manipulador de eventos de botão do mouse que muda a cor do objeto que gerou o evento.  A cor escolhida depende do botão do mouse que foi pressionado.  O <xref:System.Windows.Input.MouseButtonEventArgs.ChangedButton%2A> propriedade é verificada para determinar qual botão foi pressionado.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsChangedButton](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargschangedbutton)]
+ [!code-vb[mousesnippetsample#MouseEventArgsChangedButton](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargschangedbutton)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MouseButtonEventArgs (System.Windows.Input.MouseDevice mouse, int timestamp, System.Windows.Input.MouseButton button);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.MouseDevice mouse, int32 timestamp, valuetype System.Windows.Input.MouseButton button) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseButtonEventArgs.#ctor(System.Windows.Input.MouseDevice,System.Int32,System.Windows.Input.MouseButton)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mouse" Type="System.Windows.Input.MouseDevice" />
+        <Parameter Name="timestamp" Type="System.Int32" />
+        <Parameter Name="button" Type="System.Windows.Input.MouseButton" />
+      </Parameters>
+      <Docs>
+        <param name="mouse">O dispositivo de Mouse lógico associado ao evento.</param>
+        <param name="timestamp">A hora em que ocorreu a entrada.</param>
+        <param name="button">O botão do mouse cujo estado está sendo descrito.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Input.MouseButtonEventArgs" /> classe usando especificado <see cref="T:System.Windows.Input.MouseDevice" />, carimbo de hora e <see cref="T:System.Windows.Input.MouseButton" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MouseButtonEventArgs (System.Windows.Input.MouseDevice mouse, int timestamp, System.Windows.Input.MouseButton button, System.Windows.Input.StylusDevice stylusDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.MouseDevice mouse, int32 timestamp, valuetype System.Windows.Input.MouseButton button, class System.Windows.Input.StylusDevice stylusDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseButtonEventArgs.#ctor(System.Windows.Input.MouseDevice,System.Int32,System.Windows.Input.MouseButton,System.Windows.Input.StylusDevice)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mouse" Type="System.Windows.Input.MouseDevice" />
+        <Parameter Name="timestamp" Type="System.Int32" />
+        <Parameter Name="button" Type="System.Windows.Input.MouseButton" />
+        <Parameter Name="stylusDevice" Type="System.Windows.Input.StylusDevice" />
+      </Parameters>
+      <Docs>
+        <param name="mouse">O dispositivo de mouse lógico associado ao evento.</param>
+        <param name="timestamp">A hora em que o evento ocorreu.</param>
+        <param name="button">O botão associado ao evento.</param>
+        <param name="stylusDevice">O dispositivo de caneta associado ao evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Input.MouseButtonEventArgs" /> classe usando especificado <see cref="T:System.Windows.Input.MouseDevice" />, timestamp, <see cref="T:System.Windows.Input.MouseButton" />, e <see cref="T:System.Windows.Input.StylusDevice" />.  .</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonState">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.MouseButtonState ButtonState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.MouseButtonState ButtonState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseButtonEventArgs.ButtonState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do botão associado ao evento.</summary>
+        <value>O estado em que o botão está.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Mouse> classe fornece métodos e propriedades adicionais para determinar o estado do mouse.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um manipulador de eventos de botão do mouse que muda a cor do objeto que manipula o evento.  A cor que é escolhida depende se o botão do mouse foi pressionado ou liberado.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsButtonStatePressed](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargsbuttonstatepressed)]
+ [!code-vb[mousesnippetsample#MouseEventArgsButtonStatePressed](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargsbuttonstatepressed)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangedButton">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.MouseButton ChangedButton { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.MouseButton ChangedButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseButtonEventArgs.ChangedButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButton</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o botão associado ao evento.</summary>
+        <value>O botão que foi pressionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.Mouse> classe fornece métodos e propriedades adicionais para determinar o estado do mouse.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um manipulador de eventos de botão do mouse que muda a cor de um objeto dependendo de qual foi pressionado o botão do mouse.  O <xref:System.Windows.Input.MouseButtonEventArgs.ChangedButton%2A> propriedade é verificada para determinar qual botão foi pressionado.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsChangedButton](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargschangedbutton)]
+ [!code-vb[mousesnippetsample#MouseEventArgsChangedButton](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargschangedbutton)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClickCount">
+      <MemberSignature Language="C#" Value="public int ClickCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ClickCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseButtonEventArgs.ClickCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de vezes que o botão recebeu um clique.</summary>
+        <value>O número de vezes que o botão do mouse recebeu um clique.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um uso de <xref:System.Windows.Input.MouseButtonEventArgs.ClickCount%2A> é determinar se um clique duplo ocorreu.  Algumas classes expõem eventos de um clique duplo, como o <xref:System.Windows.Controls.Control.MouseDoubleClick> evento no <xref:System.Windows.Controls.Control> classe. Quando um evento de clique duplo não é exposto em uma classe, um clique duplo pode ser detectado usando o <xref:System.Windows.Input.MouseButtonEventArgs.ClickCount%2A> propriedade nos dados de evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Input.MouseButtonEventHandler> que determina se um clique único, duplo ou triplo ocorreu.  <xref:System.Windows.Input.MouseButtonEventArgs.ClickCount%2A>propriedade é usada para determinar o número de cliques.  
+  
+ [!code-csharp[mousesnippetsample#MouseClickCountDoubleClick](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseclickcountdoubleclick)]
+ [!code-vb[mousesnippetsample#MouseClickCountDoubleClick](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseclickcountdoubleclick)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">O manipulador genérico para chamar em uma forma de um tipo específico.</param>
+        <param name="genericTarget">O destino para chamar o manipulador no.</param>
+        <summary>Invoca manipuladores de eventos de uma maneira de um tipo específico, que pode aumentar a eficiência do sistema de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação converte o manipulador genérico como um <xref:System.Windows.Input.MouseEventHandler> e, em seguida, invoca. Para obter detalhes sobre esse padrão de implementação e os motivos para ele, consulte <xref:System.Windows.RoutedEventArgs.InvokeEventHandler%2A> e [visão geral sobre eventos roteados](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

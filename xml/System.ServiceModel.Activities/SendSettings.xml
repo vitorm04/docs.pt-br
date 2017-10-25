@@ -1,0 +1,180 @@
+<Type Name="SendSettings" FullName="System.ServiceModel.Activities.SendSettings">
+  <TypeSignature Language="C#" Value="public sealed class SendSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SendSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.SendSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as configurações para uma atividade que envia uma mensagem.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.SendSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activities.SendSettings" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Endpoint Endpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Endpoint Endpoint" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendSettings.Endpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Endpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ponto de extremidade para enviar mensagens.</summary>
+        <value>O ponto de extremidade para enviar mensagens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointAddress">
+      <MemberSignature Language="C#" Value="public Uri EndpointAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri EndpointAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendSettings.EndpointAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço do ponto de extremidade para enviar mensagens.</summary>
+        <value>O endereço do ponto de extremidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointConfigurationName">
+      <MemberSignature Language="C#" Value="public string EndpointConfigurationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndpointConfigurationName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendSettings.EndpointConfigurationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da configuração do ponto de extremidade.</summary>
+        <value>O nome da configuração de ponto de extremidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOneWay">
+      <MemberSignature Language="C#" Value="public bool IsOneWay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOneWay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendSettings.IsOneWay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a comunicação é unidirecional.</summary>
+        <value>
+          <see langword="true" />Se a comunicação é unidirecional; <see langword="false" /> se a comunicação é bidirecional.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDisplayName">
+      <MemberSignature Language="C#" Value="public string OwnerDisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerDisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendSettings.OwnerDisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de exibição do proprietário.</summary>
+        <value>O nome de exibição do proprietário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectionLevel">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Net.Security.ProtectionLevel&gt; ProtectionLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Net.Security.ProtectionLevel&gt; ProtectionLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendSettings.ProtectionLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Net.Security.ProtectionLevel&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o nível de proteção para a mensagem.</summary>
+        <value>Um dos valores de enumeração de <see cref="T:System.Net.Security.ProtectionLevel" /> enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequirePersistBeforeSend">
+      <MemberSignature Language="C#" Value="public bool RequirePersistBeforeSend { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequirePersistBeforeSend" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendSettings.RequirePersistBeforeSend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a instância do serviço de fluxo de trabalho deve ser persistente antes de enviar a mensagem.</summary>
+        <value>
+          <see langword="true" />Se o serviço de fluxo de trabalho deve ser persistente antes de enviar a mensagem. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenImpersonationLevel">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.TokenImpersonationLevel TokenImpersonationLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Principal.TokenImpersonationLevel TokenImpersonationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.SendSettings.TokenImpersonationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.TokenImpersonationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o nível de representação de token é permitido para o destinatário da mensagem.</summary>
+        <value>Um dos valores de enumeração de <see cref="T:System.Security.Principal.TokenImpersonationLevel" /> enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

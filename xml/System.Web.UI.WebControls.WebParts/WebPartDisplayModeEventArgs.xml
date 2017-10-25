@@ -1,0 +1,62 @@
+<Type Name="WebPartDisplayModeEventArgs" FullName="System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs">
+  <TypeSignature Language="C#" Value="public class WebPartDisplayModeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartDisplayModeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs> classe contém informações para o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanged> evento. O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs> classe fornece acesso para o modo de exibição que foi aplicado ao controle de Web Parts antes do <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanged> evento. O modo de exibição anterior é acessado por meio de <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs.OldDisplayMode%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartDisplayModeEventArgs (System.Web.UI.WebControls.WebParts.WebPartDisplayMode oldDisplayMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPartDisplayMode oldDisplayMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs.#ctor(System.Web.UI.WebControls.WebParts.WebPartDisplayMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oldDisplayMode" Type="System.Web.UI.WebControls.WebParts.WebPartDisplayMode" />
+      </Parameters>
+      <Docs>
+        <param name="oldDisplayMode">O <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> aplicada ao controle de Web Parts antes que o modo de exibição é alterado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldDisplayMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartDisplayMode OldDisplayMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartDisplayMode OldDisplayMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventArgs.OldDisplayMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDisplayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de exibição anterior para um controle de Web Part.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> aplicado a um controle de Web Parts antes do <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModeChanged" /> evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

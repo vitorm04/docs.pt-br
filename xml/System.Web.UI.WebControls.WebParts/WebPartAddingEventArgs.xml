@@ -1,0 +1,96 @@
+<Type Name="WebPartAddingEventArgs" FullName="System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs">
+  <TypeSignature Language="C#" Value="public class WebPartAddingEventArgs : System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebPartAddingEventArgs extends System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.WebPartCancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartAdding" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartAdding> é gerado pelo <xref:System.Web.UI.WebControls.WebParts.WebPartManager.OnWebPartAdding%2A> método antes de adicionar um controle a uma zona de Web Parts. Esse evento fornece uma oportunidade de cancelar o processo antes de ser concluída. O <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartAdded> evento é chamado depois que um controle foi adicionado a uma zona de Web Parts.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs> classe contém informações que podem ser usadas dentro de um <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartAdding> eventos. Ele fornece acesso para o controle de Web Parts que está sendo adicionado e a zona que está sendo adicionado ao.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartAddingEventArgs (System.Web.UI.WebControls.WebParts.WebPart webPart, System.Web.UI.WebControls.WebParts.WebPartZoneBase zone, int zoneIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.WebParts.WebPart webPart, class System.Web.UI.WebControls.WebParts.WebPartZoneBase zone, int32 zoneIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs.#ctor(System.Web.UI.WebControls.WebParts.WebPart,System.Web.UI.WebControls.WebParts.WebPartZoneBase,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webPart" Type="System.Web.UI.WebControls.WebParts.WebPart" />
+        <Parameter Name="zone" Type="System.Web.UI.WebControls.WebParts.WebPartZoneBase" />
+        <Parameter Name="zoneIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="webPart">O <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> (ou o controle de servidor ou usuário) a ser adicionado a uma página da Web ou aberto em uma página.</param>
+        <param name="zone">O <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> que <c>webPart</c> está sendo adicionado ao.</param>
+        <param name="zoneIndex">Um inteiro que representa o ordinal de posição que <c>webPart</c> ocupa no <c>zona</c>, relativo a outros controles em <c>zona</c>.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zone">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartZoneBase Zone { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartZoneBase Zone" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs.Zone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartZoneBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a zona de Web Parts que o controle de Web Parts está sendo adicionado ao.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> que o controle de Web Parts está sendo adicionado ao.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoneIndex">
+      <MemberSignature Language="C#" Value="public int ZoneIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ZoneIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs.ZoneIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição do índice de um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle dentro da zona.</summary>
+        <value>A ordem numérica de um controle dentro da zona. O primeiro controle em uma zona tem um valor de índice de zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs.ZoneIndex%2A> propriedade indica a ordem numérica (ou a posição ordinal) dentro da zona para o controle de Web Parts que está sendo adicionado no <xref:System.Web.UI.WebControls.WebParts.WebPartManager.WebPartAdded> evento. O <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle usa essa propriedade para controlar e gerenciar a sua coleção de controles de Web Parts em uma página da Web.  
+  
+> [!IMPORTANT]
+>  O valor da <xref:System.Web.UI.WebControls.WebParts.WebPartAddingEventArgs.ZoneIndex%2A> propriedade para um controle não é igual ao valor de índice para o mesmo controle dentro de <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase.WebParts%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

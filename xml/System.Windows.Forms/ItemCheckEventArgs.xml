@@ -1,0 +1,176 @@
+<Type Name="ItemCheckEventArgs" FullName="System.Windows.Forms.ItemCheckEventArgs">
+  <TypeSignature Language="C#" Value="public class ItemCheckEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ItemCheckEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ItemCheckEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Windows.Forms.CheckedListBox.ItemCheck" /> dos controles <see cref="T:System.Windows.Forms.CheckedListBox" /> e <see cref="T:System.Windows.Forms.ListView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.CheckedListBox.ItemCheck> evento ocorre quando o estado de ativação de um item em uma caixa de lista selecionados é alterado. O <xref:System.Windows.Forms.ItemCheckEventArgs> classe especifica o índice do item para alterar o valor atual da caixa de seleção para o item e o novo valor a ser definido para a caixa de seleção.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um check- <xref:System.Windows.Forms.ListView> controle que trata o <xref:System.Windows.Forms.ListView.ItemCheck?displayProperty=nameWithType> evento. O método usa o <xref:System.Windows.Forms.ItemCheckEventArgs.CurrentValue%2A> e <xref:System.Windows.Forms.ItemCheckEventArgs.Index%2A> propriedades do <xref:System.Windows.Forms.ItemCheckEventArgs> objeto para recuperar e calcular o preço dos itens de menu selecionado. Para executar este exemplo colar o código a seguir em um formulário que contém um <xref:System.Windows.Forms.ListView> chamado `ListView1` e um <xref:System.Windows.Forms.TextBox> chamado `Textbox1`. Chamar o `InititalizeListView` método de construtor do formulário ou `Load` método. Certifique-se de que todos os eventos estão associados com os métodos de manipulação de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ListView2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView2/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.ListView2#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CPP/form1.cpp#2)]
+[!code-csharp[System.Windows.Forms.ListView2#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CS/form1.cs#2)]
+[!code-vb[System.Windows.Forms.ListView2#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView2/VB/form1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ItemCheckEventArgs (int index, System.Windows.Forms.CheckState newCheckValue, System.Windows.Forms.CheckState currentValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 index, valuetype System.Windows.Forms.CheckState newCheckValue, valuetype System.Windows.Forms.CheckState currentValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ItemCheckEventArgs.#ctor(System.Int32,System.Windows.Forms.CheckState,System.Windows.Forms.CheckState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="newCheckValue" Type="System.Windows.Forms.CheckState" />
+        <Parameter Name="currentValue" Type="System.Windows.Forms.CheckState" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do item a ser alterado.</param>
+        <param name="newCheckValue">Uma da <see cref="T:System.Windows.Forms.CheckState" /> valores que indica se deve alterar a caixa de seleção para o item a ser marcada, não verificado ou indeterminado.</param>
+        <param name="currentValue">Uma da <see cref="T:System.Windows.Forms.CheckState" /> valores que indica se a caixa de seleção para o item está marcada, não verificado ou indeterminado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ItemCheckEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.CheckState CurrentValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.CheckState CurrentValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ItemCheckEventArgs.CurrentValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CheckState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o estado atual da caixa de seleção do item.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.CheckState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite determinar o estado de seleção do item especificado no <xref:System.Windows.Forms.CheckedListBox> antes de verificar a alteração de estado a ser aplicada é feita.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um check- <xref:System.Windows.Forms.ListView> controle que trata o <xref:System.Windows.Forms.ListView.ItemChecked?displayProperty=nameWithType> evento. O método usa o <xref:System.Windows.Forms.ItemCheckEventArgs.CurrentValue%2A> e <xref:System.Windows.Forms.ItemCheckEventArgs.Index%2A> propriedades do <xref:System.Windows.Forms.ItemCheckEventArgs> objeto para recuperar e calcular o preço dos itens de menu selecionado. Para executar este exemplo colar o código a seguir em um formulário que contém um <xref:System.Windows.Forms.ListView> chamado `ListView1` e um <xref:System.Windows.Forms.TextBox> chamado `Textbox1`. Chamar o `InititalizeListView` método de construtor do formulário ou `Load` método. Certifique-se de que todos os eventos estão associados com os métodos de manipulação de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ListView2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView2/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.ListView2#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CPP/form1.cpp#2)]
+[!code-csharp[System.Windows.Forms.ListView2#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CS/form1.cs#2)]
+[!code-vb[System.Windows.Forms.ListView2#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView2/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ItemCheckEventArgs.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice com base em zero do item a ser alterado.</summary>
+        <value>O índice com base em zero do item a ser alterado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para determinar a caixa de seleção do item que no <xref:System.Windows.Forms.CheckedListBox> está sendo alterado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um check- <xref:System.Windows.Forms.ListView> controle que trata o <xref:System.Windows.Forms.ListView.ItemChecked?displayProperty=nameWithType> evento. O método usa o <xref:System.Windows.Forms.ItemCheckEventArgs.CurrentValue%2A> e <xref:System.Windows.Forms.ItemCheckEventArgs.Index%2A> propriedades do <xref:System.Windows.Forms.ItemCheckEventArgs> objeto para recuperar e calcular o preço dos itens de menu selecionado. Para executar este exemplo colar o código a seguir em um formulário que contém um <xref:System.Windows.Forms.ListView> chamado `ListView1` e um <xref:System.Windows.Forms.TextBox> chamado `Textbox1`. Chamar o `InititalizeListView` método de construtor do formulário ou `Load` método. Certifique-se de que todos os eventos estão associados com os métodos de manipulação de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ListView2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView2/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.ListView2#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CPP/form1.cpp#2)]
+[!code-csharp[System.Windows.Forms.ListView2#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView2/CS/form1.cs#2)]
+[!code-vb[System.Windows.Forms.ListView2#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView2/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.CheckState NewValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.CheckState NewValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ItemCheckEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CheckState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se é necessário marcar, desmarcar ou deixar indeterminada a caixa de seleção para o item.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.CheckState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você determine o novo estado de seleção para o item especificado antes do estado de seleção é alterado de <xref:System.Windows.Forms.CheckedListBox> controle. Além de determinar o novo estado de seleção, você pode usar essa propriedade em um manipulador de eventos para o <xref:System.Windows.Forms.CheckedListBox.ItemCheck> eventos de alteração do estado para um estado de verificação diferente daquele especificado. Por exemplo, se o usuário atribuído a uma marca de seleção ao lado de um item no <xref:System.Windows.Forms.CheckedListBox> que você determinou não deve ser verificado com base no estado do seu aplicativo, você pode substituir a alteração no estado de marca de seleção definindo essa propriedade para sua configuração anterior ou a um estado de verificação diferente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.CheckedListBox.ItemCheck?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.CheckedListBox> chamado `CheckedListBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.CheckedListBox.ItemCheck?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#156](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#156)]
+ [!code-vb[System.Windows.Forms.EventExamples#156](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#156)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,183 @@
+<Type Name="IPHostEntry" FullName="System.Net.IPHostEntry">
+  <TypeSignature Language="C#" Value="public class IPHostEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IPHostEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.IPHostEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NameResolution</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe de contêiner para informações de endereço de host da Internet.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.IPHostEntry> classe associa um nome de host do sistema de nome de domínio (DNS) com uma matriz de aliases e uma matriz de endereços IP de correspondência.  
+  
+ O <xref:System.Net.IPHostEntry> classe é usada como uma classe auxiliar com o <xref:System.Net.Dns> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir consulta o banco de dados do DNS para obter informações sobre o host www.contoso.com e retorna as informações em um <xref:System.Net.IPHostEntry> instância.  
+  
+ [!code-cpp[Classic Dns Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic Dns Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Dns Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic Dns Example/CS/source.cs#1)]
+ [!code-vb[Classic Dns Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic Dns Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IPHostEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.IPHostEntry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.IPHostEntry" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressList">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress[] AddressList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress[] AddressList" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPHostEntry.AddressList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista de endereços IP associados a um host.</summary>
+        <value>Uma matriz do tipo <see cref="T:System.Net.IPAddress" /> que contém os endereços IP que são resolvidos para os nomes de host contidos na propriedade <see cref="P:System.Net.IPHostEntry.Aliases" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.IPHostEntry.AddressList%2A> propriedade para acessar os endereços IP que estão associados a <xref:System.Net.IPHostEntry>.  
+  
+ [!code-cpp[IPHostEntry_AddressList#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IPHostEntry_AddressList/CPP/iphostentry_addresslist.cpp#1)]
+ [!code-csharp[IPHostEntry_AddressList#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IPHostEntry_AddressList/CS/iphostentry_addresslist.cs#1)]
+ [!code-vb[IPHostEntry_AddressList#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPHostEntry_AddressList/VB/iphostentry_addresslist.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Aliases">
+      <MemberSignature Language="C#" Value="public string[] Aliases { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Aliases" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPHostEntry.Aliases" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista de aliases associados a um host.</summary>
+        <value>Uma matriz de cadeias de caracteres que contêm nomes DNS que são resolvidos nos endereços IP na propriedade <see cref="P:System.Net.IPHostEntry.AddressList" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostName">
+      <MemberSignature Language="C#" Value="public string HostName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.IPHostEntry.HostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome DNS do host.</summary>
+        <value>Uma cadeia de caracteres que contém o nome do host primário para o servidor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.IPHostEntry.HostName%2A> propriedade contém o nome de host primário para um servidor. Se a entrada DNS para o servidor define alias adicionais, eles estarão disponíveis na <xref:System.Net.IPHostEntry.Aliases%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.IPHostEntry.HostName%2A> propriedade para recuperar o nome do host primário.  
+  
+ [!code-cpp[IPHostEntry_AddressList#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IPHostEntry_AddressList/CPP/iphostentry_addresslist.cpp#1)]
+ [!code-csharp[IPHostEntry_AddressList#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IPHostEntry_AddressList/CS/iphostentry_addresslist.cs#1)]
+ [!code-vb[IPHostEntry_AddressList#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IPHostEntry_AddressList/VB/iphostentry_addresslist.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

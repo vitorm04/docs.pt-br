@@ -1,0 +1,129 @@
+<Type Name="SoapOperationBinding" FullName="System.Web.Services.Description.SoapOperationBinding">
+  <TypeSignature Language="C#" Value="public class SoapOperationBinding : System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapOperationBinding extends System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.SoapOperationBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.ServiceDescriptionFormatExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtension("operation", "http://schemas.xmlsoap.org/wsdl/soap/", typeof(System.Web.Services.Description.OperationBinding))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma extensão adicionada a uma <see cref="T:System.Web.Services.Description.OperationBinding" /> dentro de um serviço Web XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe especifica que a transmissão de mensagens irá usar o SOAP e fornece detalhes sobre como a mensagem SOAP será formatada.  
+  
+ Para obter mais informações sobre como especificar protocolos para XML Web services, consulte [&#91;\< Topic://cpconbuildingaspnetwebservices > &#93; ](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c). Para obter mais informações sobre WSDL Web Services Description Language (), consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapOperationBinding#2](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapOperationBinding/CPP/soapoperationbinding.cpp#2)]
+ [!code-csharp[SoapOperationBinding#2](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapOperationBinding/CS/soapoperationbinding.cs#2)]
+ [!code-vb[SoapOperationBinding#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapOperationBinding/VB/soapoperationbinding.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapOperationBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapOperationBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.SoapOperationBinding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoapAction">
+      <MemberSignature Language="C#" Value="public string SoapAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SoapAction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapOperationBinding.SoapAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("soapAction")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o URI para o cabeçalho SOAP.</summary>
+        <value>Uma cadeia de caracteres que contém o URI para o cabeçalho SOAP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é necessária para a associação de protocolo HTTP do SOAP. O valor padrão é uma cadeia de caracteres vazia ("").  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapBinding_SoapOperationBinding#6](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapBinding_SoapOperationBinding/CPP/soapprotocol.cpp#6)]
+ [!code-csharp[SoapBinding_SoapOperationBinding#6](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapBinding_SoapOperationBinding/CS/soapprotocol.cs#6)]
+ [!code-vb[SoapBinding_SoapOperationBinding#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapBinding_SoapOperationBinding/VB/soapprotocol.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.SoapBindingStyle Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.SoapBindingStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapOperationBinding.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("style")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.SoapBindingStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de associação SOAP usada pelo <see cref="T:System.Web.Services.Description.SoapOperationBinding" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Services.Description.SoapBindingStyle" />. O padrão é <see langword="Document" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ SoapBinding_SoapOperationBinding #7  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

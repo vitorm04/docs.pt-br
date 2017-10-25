@@ -1,0 +1,1264 @@
+<Type Name="PropertyDescriptor" FullName="System.ComponentModel.PropertyDescriptor">
+  <TypeSignature Language="C#" Value="public abstract class PropertyDescriptor : System.ComponentModel.MemberDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PropertyDescriptor extends System.ComponentModel.MemberDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.PropertyDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.MemberDescriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma abstração de uma propriedade em uma classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma descrição de uma propriedade consiste em um nome, seus atributos, a classe do componente que a propriedade está associada e o tipo da propriedade.  
+  
+ <xref:System.ComponentModel.PropertyDescriptor>Fornece as propriedades e métodos a seguir:  
+  
+-   <xref:System.ComponentModel.PropertyDescriptor.Converter%2A>contém o <xref:System.ComponentModel.TypeConverter> para essa propriedade.  
+  
+-   <xref:System.ComponentModel.PropertyDescriptor.IsLocalizable%2A>Indica se esta propriedade deve ser localizada.  
+  
+-   <xref:System.ComponentModel.PropertyDescriptor.GetEditor%2A>Retorna um editor do tipo especificado.  
+  
+ <xref:System.ComponentModel.PropertyDescriptor>também fornece o seguinte `abstract` propriedades e métodos:  
+  
+-   <xref:System.ComponentModel.PropertyDescriptor.ComponentType%2A>contém o tipo de componente, que essa propriedade está vinculada.  
+  
+-   <xref:System.ComponentModel.PropertyDescriptor.IsReadOnly%2A>Indica se esta propriedade é somente leitura.  
+  
+-   <xref:System.ComponentModel.PropertyDescriptor.PropertyType%2A>Obtém o tipo da propriedade.  
+  
+-   <xref:System.ComponentModel.PropertyDescriptor.CanResetValue%2A>Indica se a redefinição do componente altera o valor do componente.  
+  
+-   <xref:System.ComponentModel.PropertyDescriptor.GetValue%2A>Retorna o valor atual da propriedade em um componente.  
+  
+-   <xref:System.ComponentModel.PropertyDescriptor.ResetValue%2A>Redefine o valor para essa propriedade do componente.  
+  
+-   <xref:System.ComponentModel.PropertyDescriptor.SetValue%2A>Define o valor do componente para um valor diferente.  
+  
+-   <xref:System.ComponentModel.PropertyDescriptor.ShouldSerializeValue%2A>Indica se o valor dessa propriedade deve ser persistente.  
+  
+ Normalmente, o `abstract` membros são implementados por meio de reflexão. Para obter mais informações sobre reflexão, consulte os tópicos [reflexão](~/docs/framework/reflection-and-codedom/reflection.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir se baseia o exemplo de <xref:System.ComponentModel.PropertyDescriptorCollection> classe. Imprime as informações (categoria, descrição, nome de exibição) do texto de um botão em uma caixa de texto. Ele pressupõe que `button1` e `textbox1` tenham sido criadas em um formulário.  
+  
+ [!code-cpp[PropertyDescriptor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PropertyDescriptor/CPP/propertydescriptor.cpp#1)]
+ [!code-csharp[PropertyDescriptor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PropertyDescriptor/CS/propertydescriptor.cs#1)]
+ [!code-vb[PropertyDescriptor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PropertyDescriptor/VB/propertydescriptor.vb#1)]  
+  
+ O exemplo de código a seguir mostra como implementar um descritor de propriedade personalizada que fornece um wrapper somente leitura em torno de uma propriedade. O `SerializeReadOnlyPropertyDescriptor` é usado em um designer personalizado para fornecer um descritor de propriedade somente leitura para o controle <xref:System.Windows.Forms.Control.Size%2A> propriedade.  
+  
+ [!code-csharp[System.ComponentModel.PropertyDescriptor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.PropertyDescriptor/CS/SerializeReadOnlyPropertyDescriptor.cs#1)]
+ [!code-vb[System.ComponentModel.PropertyDescriptor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.PropertyDescriptor/VB/SerializeReadOnlyPropertyDescriptor.vb#1)]  
+  
+ Os exemplos de código a seguir mostram como usar o o `SerializeReadOnlyPropertyDescriptor` em um designer personalizado.  
+  
+ [!code-csharp[System.ComponentModel.PropertyDescriptor#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.PropertyDescriptor/CS/DemoControlDesigner.cs#10)]
+ [!code-vb[System.ComponentModel.PropertyDescriptor#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.PropertyDescriptor/VB/DemoControlDesigner.vb#10)]  
+[!code-csharp[System.ComponentModel.PropertyDescriptor#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.PropertyDescriptor/CS/DemoControl.cs#100)]
+[!code-vb[System.ComponentModel.PropertyDescriptor#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.PropertyDescriptor/VB/DemoControl.vb#100)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PropertyDescriptor (System.ComponentModel.MemberDescriptor descr);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.MemberDescriptor descr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.#ctor(System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="descr" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="descr">Um <see cref="T:System.ComponentModel.MemberDescriptor" /> que contém o nome da propriedade e seus atributos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.PropertyDescriptor" /> classe com o nome e os atributos do <see cref="T:System.ComponentModel.MemberDescriptor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PropertyDescriptor (System.ComponentModel.MemberDescriptor descr, Attribute[] attrs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.MemberDescriptor descr, class System.Attribute[] attrs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.#ctor(System.ComponentModel.MemberDescriptor,System.Attribute[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="descr" Type="System.ComponentModel.MemberDescriptor" />
+        <Parameter Name="attrs" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="descr">Um <see cref="T:System.ComponentModel.MemberDescriptor" /> que contém o nome do membro e seus atributos.</param>
+        <param name="attrs">Um <see cref="T:System.Attribute" /> matriz que contém os atributos que você deseja associar à propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.PropertyDescriptor" /> classe com o nome especificado na <see cref="T:System.ComponentModel.MemberDescriptor" /> e os atributos em ambos os <see cref="T:System.ComponentModel.MemberDescriptor" /> e o <see cref="T:System.Attribute" /> matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor acrescenta os atributos no <xref:System.Attribute> matriz aos atributos a <xref:System.ComponentModel.MemberDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PropertyDescriptor (string name, Attribute[] attrs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name, class System.Attribute[] attrs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.#ctor(System.String,System.Attribute[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attrs" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade.</param>
+        <param name="attrs">Uma matriz do tipo <see cref="T:System.Attribute" /> que contém os atributos de propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.PropertyDescriptor" /> classe com o nome especificado e os atributos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValueChanged">
+      <MemberSignature Language="C#" Value="public virtual void AddValueChanged (object component, EventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddValueChanged(object component, class System.EventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.AddValueChanged(System.Object,System.EventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="handler" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente ao qual adicionar o manipulador.</param>
+        <param name="handler">O delegado a ser adicionado como um ouvinte.</param>
+        <summary>Permite que outros objetos sejam notificados quando essa propriedade muda.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> ou <paramref name="handler" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanResetValue">
+      <MemberSignature Language="C#" Value="public abstract bool CanResetValue (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanResetValue(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.CanResetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente para testar a funcionalidade de redefinição.</param>
+        <summary>Quando substituído em uma classe derivada, retorna se a redefinição de um objeto altera seu valor.</summary>
+        <returns>
+          <see langword="true" />Se a redefinição do componente altera seu valor; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é implementado por meio de reflexão.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando substituído em uma classe derivada, esse método procura um <see cref="T:System.ComponentModel.DefaultValueAttribute" />. Se ele encontrar um, ele compara o valor do atributo com o valor da propriedade atual. Ele retorna <see langword="true" /> quando o valor padrão não coincide com o valor da propriedade atual. Se esse método não é possível encontrar um <see cref="T:System.ComponentModel.DefaultValueAttribute" />, ele procura por um método "ShouldPersistMyProperty" que você precisa implementar por conta própria. Se isso for encontrado, <see cref="M:System.ComponentModel.PropertyDescriptor.CanResetValue(System.Object)" /> retorna o que retorna "ShouldPersistMyProperty". Caso contrário, ele procura por um método "ResetMyProperty" que você precisa implementar por conta própria. Se isso for encontrado, <see cref="M:System.ComponentModel.PropertyDescriptor.CanResetValue(System.Object)" /> retorna <see langword="true" />. Se não conseguir encontrar uma <see cref="T:System.ComponentModel.DefaultValueAttribute" />, um método "ShouldPersistMyProperty", ou um método "ResetMyProperty", em seguida, ele retorna <see langword="false" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentType">
+      <MemberSignature Language="C#" Value="public abstract Type ComponentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ComponentType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyDescriptor.ComponentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo do componente, que essa propriedade é associada ao.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo de componente, essa propriedade está vinculada. Quando o <see cref="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)" /> ou <see cref="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)" /> métodos são chamados, o objeto especificado pode ser uma instância desse tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esta propriedade é implementada por meio de reflexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Converter">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.TypeConverter Converter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.TypeConverter Converter" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyDescriptor.Converter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conversor de tipo dessa propriedade.</summary>
+        <value>Um <see cref="T:System.ComponentModel.TypeConverter" /> que é usado para converter o <see cref="T:System.Type" /> dessa propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected object CreateInstance (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object CreateInstance(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.CreateInstance(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Type" /> que representa o tipo a ser criado.</param>
+        <summary>Cria uma instância do tipo especificado.</summary>
+        <returns>Uma nova instância do tipo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.PropertyDescriptor.CreateInstance%2A>procura um construtor que usa o tipo especificado. Se ele encontrar um construtor, o tipo da propriedade é passado.  
+  
+ Conversores e editores de usam esse método para criar versões de um componente. Esse método permite que um único componente ser reutilizado por mais de um tipo.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">para acessar membros de classe privada e metadados. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado a este <see cref="T:System.ComponentModel.PropertyDescriptor" />.</param>
+        <summary>Compara a outro objeto para ver se eles são equivalentes.</summary>
+        <returns>
+          <see langword="true" />Se os valores forem equivalentes; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillAttributes">
+      <MemberSignature Language="C#" Value="protected override void FillAttributes (System.Collections.IList attributeList);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void FillAttributes(class System.Collections.IList attributeList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.FillAttributes(System.Collections.IList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeList" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="attributeList">Um <see cref="T:System.Collections.IList" /> que lista os atributos na classe pai. Inicialmente, essa propriedade estiver vazia.</param>
+        <summary>Adiciona os atributos do <see cref="T:System.ComponentModel.PropertyDescriptor" /> para a lista de atributos na classe pai especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para atributos duplicados, o último deles adicionados à lista será mantido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection GetChildProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.PropertyDescriptorCollection GetChildProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.GetChildProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o padrão <see cref="T:System.ComponentModel.PropertyDescriptorCollection" />.</summary>
+        <returns>Uma coleção de descritor de propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método passa `null` para ambos os `instance` parâmetro e o `filter` parâmetro.  
+  
+ As propriedades para o `instance` parâmetro pode ser diferentes das propriedades de uma classe, pois o contêiner pode adicionar ou remover propriedades, se o `instance` parâmetro é localizado.  
+  
+ O parâmetro `filter` pode combinar objetos <xref:System.Type> e <xref:System.Attribute>. A filtragem é definida pelas seguintes regras:  
+  
+-   Um objeto <xref:System.Type> é tratado como uma curinga; ele corresponde a qualquer propriedade que tenha o <xref:System.Type> em seu conjunto de atributos.  
+  
+-   Se uma propriedade não tiver <xref:System.Attribute> da mesma classe, a propriedade não será incluída na matriz retornada.  
+  
+-   Caso o atributo seja uma instância de <xref:System.Attribute>, a propriedade deve ser uma correspondência exata para ser incluída na matriz retornada.  
+  
+-   Se você especificar um <xref:System.Attribute> e é a propriedade padrão, ele será incluído na matriz retornada, mesmo se não houver nenhuma instância de <xref:System.Attribute> na propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection GetChildProperties (Attribute[] filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.PropertyDescriptorCollection GetChildProperties(class System.Attribute[] filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.GetChildProperties(System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Uma matriz do tipo <see cref="T:System.Attribute" /> a ser usada como um filtro.</param>
+        <summary>Retorna um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> usando uma matriz de atributos especificada como um filtro.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> com as propriedades que correspondem aos atributos especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método passa `null` para o `instance` parâmetro.  
+  
+ As propriedades para o `instance` parâmetro pode ser diferentes das propriedades de uma classe, porque o site pode adicionar ou remover propriedades, se o `instance` parâmetro é localizado.  
+  
+ O parâmetro `filter` pode combinar objetos <xref:System.Type> e <xref:System.Attribute>. A filtragem é definida pelas seguintes regras:  
+  
+-   Um objeto <xref:System.Type> é tratado como uma curinga; ele corresponde a qualquer propriedade que tenha o <xref:System.Type> em seu conjunto de atributos.  
+  
+-   Se uma propriedade não tiver <xref:System.Attribute> da mesma classe, a propriedade não será incluída na matriz retornada.  
+  
+-   Caso o atributo seja uma instância de <xref:System.Attribute>, a propriedade deve ser uma correspondência exata para ser incluída na matriz retornada.  
+  
+-   Se você especificar um <xref:System.Attribute> instância e é a propriedade padrão, ele será incluído na matriz retornada mesmo se não houver nenhuma instância do <xref:System.Attribute> na propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection GetChildProperties (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.PropertyDescriptorCollection GetChildProperties(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.GetChildProperties(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Um componente cujas propriedades serão obtidas.</param>
+        <summary>Retorna um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> para um determinado objeto.</summary>
+        <returns>Uma <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> com as propriedades do componente especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método passa `null` para o `filter` parâmetro.  
+  
+ As propriedades para o `instance` parâmetro pode ser diferentes das propriedades de uma classe, porque o site pode adicionar ou remover propriedades, se o `instance` parâmetro é localizado.  
+  
+ O parâmetro `filter` pode combinar objetos <xref:System.Type> e <xref:System.Attribute>. A filtragem é definida pelas seguintes regras:  
+  
+-   Um objeto <xref:System.Type> é tratado como uma curinga; ele corresponde a qualquer propriedade que tenha o <xref:System.Type> em seu conjunto de atributos.  
+  
+-   Se uma propriedade não tiver <xref:System.Attribute> da mesma classe, a propriedade não será incluída na matriz retornada.  
+  
+-   Caso o atributo seja uma instância de <xref:System.Attribute>, a propriedade deve ser uma correspondência exata para ser incluída na matriz retornada.  
+  
+-   Se você especificar um <xref:System.Attribute> instância e é a propriedade padrão, ele será incluído na matriz retornada mesmo se não houver nenhuma instância do <xref:System.Attribute> na propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildProperties">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.PropertyDescriptorCollection GetChildProperties (object instance, Attribute[] filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetChildProperties(object instance, class System.Attribute[] filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.GetChildProperties(System.Object,System.Attribute[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="filter" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Um componente cujas propriedades serão obtidas.</param>
+        <param name="filter">Uma matriz do tipo <see cref="T:System.Attribute" /> a ser usada como um filtro.</param>
+        <summary>Retorna um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> para um determinado objeto usando uma matriz de atributos especificada como um filtro.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> com as propriedades que correspondem aos atributos especificados para o componente especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades para o `instance` parâmetro pode ser diferentes das propriedades de uma classe, porque o site pode adicionar ou remover propriedades, se o `instance` parâmetro é localizado.  
+  
+ O parâmetro `filter` pode combinar objetos <xref:System.Type> e <xref:System.Attribute>. A filtragem é definida pelas seguintes regras:  
+  
+-   Um objeto <xref:System.Type> é tratado como uma curinga; ele corresponde a qualquer propriedade que tenha o <xref:System.Type> em seu conjunto de atributos.  
+  
+-   Se uma propriedade não tiver <xref:System.Attribute> da mesma classe, a propriedade não será incluída na matriz retornada.  
+  
+-   Caso o atributo seja uma instância de <xref:System.Attribute>, a propriedade deve ser uma correspondência exata para ser incluída na matriz retornada.  
+  
+-   Se você especificar um <xref:System.Attribute> instância e é a propriedade padrão, ele será incluído na matriz retornada mesmo se não houver nenhuma instância do <xref:System.Attribute> na propriedade.  
+  
+ Em geral, as propriedades filho devem ser retornadas Implementando o <xref:System.ComponentModel.TypeConverter.GetProperties%2A> membro do <xref:System.ComponentModel.TypeConverter> retornado dessa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditor">
+      <MemberSignature Language="C#" Value="public virtual object GetEditor (Type editorBaseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetEditor(class System.Type editorBaseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.GetEditor(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editorBaseType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="editorBaseType">O tipo base do editor, que é usada para diferenciar entre os vários editores que oferece suporte a uma propriedade.</param>
+        <summary>Obtém um editor do tipo especificado.</summary>
+        <returns>Uma instância do tipo solicitado de editor, ou <see langword="null" /> se um editor não pode ser encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este objeto.</summary>
+        <returns>O código hash para este objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInvocationTarget">
+      <MemberSignature Language="C#" Value="protected override object GetInvocationTarget (Type type, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetInvocationTarget(class System.Type type, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.GetInvocationTarget(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do destino da invocação.</param>
+        <param name="instance">O destino potencial de invocação.</param>
+        <summary>Esse método retorna o objeto que deve ser usado durante a invocação de membros.</summary>
+        <returns>O <see cref="T:System.Object" /> que deve ser usado durante a invocação de membros.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o valor de retorno será o mesmo que o `instance` passado. Se alguém associado a outro objeto com esta instância, ou se a instância é um descritor de tipo personalizado, o <xref:System.ComponentModel.PropertyDescriptor.GetInvocationTarget%2A> método pode retornar um valor diferente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeFromName">
+      <MemberSignature Language="C#" Value="protected Type GetTypeFromName (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Type GetTypeFromName(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.GetTypeFromName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome qualificado do assembly do tipo para recuperar.</param>
+        <summary>Retorna um tipo usando seu nome.</summary>
+        <returns>Um <see cref="T:System.Type" /> que corresponde ao nome de tipo em questão, ou <see langword="null" /> se não for encontrada uma correspondência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para localizar o tipo apropriado, esse método verifica primeiro o assembly do tipo que este <xref:System.ComponentModel.PropertyDescriptor> referências. Se ele não encontrar o tipo no assembly, ele chama <xref:System.Type.GetType%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public abstract object GetValue (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetValue(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.GetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente com a propriedade cujo valor deve ser recuperado.</param>
+        <summary>Quando substituído em uma classe derivada, obtém o valor atual da propriedade em um componente.</summary>
+        <returns>O valor de uma propriedade para um determinado componente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é implementado por meio de reflexão.  
+  
+ Este método chama automaticamente o método de pré-alteração de <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanging%2A>e após alterar o método, <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A>, do <xref:System.ComponentModel.Design.IComponentChangeService>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando você substituir esse método, ele obtém o valor atual da propriedade invocando um método "GetMyProperty" que você precisa implementar. Uma exceção no método deve passar.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueChangedHandler">
+      <MemberSignature Language="C#" Value="protected EventHandler GetValueChangedHandler (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.EventHandler GetValueChangedHandler(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.GetValueChangedHandler(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente para o qual recuperar os manipuladores de eventos.</param>
+        <summary>Recupera o conjunto atual de <c>ValueChanged</c> manipuladores de eventos para um componente específico</summary>
+        <returns>Combinado de um manipulador de eventos multicast, ou <see langword="null" /> se não há manipuladores de eventos atualmente estão atribuídos ao <paramref name="component" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocalizable">
+      <MemberSignature Language="C#" Value="public virtual bool IsLocalizable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLocalizable" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyDescriptor.IsLocalizable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta propriedade deve ser localizada, conforme especificado no <see cref="T:System.ComponentModel.LocalizableAttribute" />.</summary>
+        <value>
+          <see langword="true" />Se o membro está marcado com o <see cref="T:System.ComponentModel.LocalizableAttribute" /> definida como <see langword="true" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma propriedade é marcada com o <xref:System.ComponentModel.LocalizableAttribute> definido como `true` e usado em um designer visual, seus valores são salvos em um arquivo de recurso. Se você marca uma propriedade com o atributo e, em seguida, defina a propriedade no código, os arquivos de recursos não são usados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public abstract bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyDescriptor.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se esta propriedade é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se a propriedade é somente leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValueChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnValueChanged (object component, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnValueChanged(object component, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.OnValueChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="component">O objeto que gera o evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <c>ValueChanged</c> evento que é implementado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método deve ser chamado pela sua implementação do descritor de propriedade quando o valor da propriedade é alterada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public abstract Type PropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyDescriptor.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo da propriedade.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo da propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esta propriedade é implementada por meio de reflexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveValueChanged">
+      <MemberSignature Language="C#" Value="public virtual void RemoveValueChanged (object component, EventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveValueChanged(object component, class System.EventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.RemoveValueChanged(System.Object,System.EventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="handler" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente para remover o manipulador para.</param>
+        <param name="handler">O delegado a ser removido como um ouvinte.</param>
+        <summary>Permite que outros objetos sejam notificados quando essa propriedade muda.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="component" /> ou <paramref name="handler" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetValue">
+      <MemberSignature Language="C#" Value="public abstract void ResetValue (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetValue(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.ResetValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente com o valor da propriedade que devem ser redefinidos para o valor padrão.</param>
+        <summary>Quando substituído em uma classe derivada, redefine o valor para essa propriedade do componente para o valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é implementado por meio de reflexão.  
+  
+ Este método determina o valor para redefinir a propriedade como na seguinte ordem de precedência:  
+  
+1.  Há uma propriedade sombreada para essa propriedade.  
+  
+2.  Há um <xref:System.ComponentModel.DefaultValueAttribute> para essa propriedade.  
+  
+3.  Há um método "ResetMyProperty" que você implementou, onde "MyProperty" é o nome da propriedade que você passa para ele.  
+  
+ Esse método cria um <xref:System.ComponentModel.Design.DesignerTransaction> automaticamente na seguinte ordem:  
+  
+1.  O método chama o <xref:System.ComponentModel.Design.IDesignerHost.CreateTransaction%2A?displayProperty=nameWithType> método para criar um novo <xref:System.ComponentModel.Design.DesignerTransaction> para representar as alterações.  
+  
+2.  O método chama o <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanging%2A?displayProperty=nameWithType> método para indicar que a transação foi iniciada e as alterações estão prestes a ocorrer.  
+  
+3.  O método redefine a propriedade para o valor determinado pela ordem de verificação desse método.  
+  
+4.  O método chama o <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A?displayProperty=nameWithType> método para indicar que as alterações ocorreram.  
+  
+5.  As chamadas de método <xref:System.ComponentModel.Design.DesignerTransaction.Commit%2A?displayProperty=nameWithType> para indicar que a transação é concluída.  
+  
+ A finalidade da transação é oferecer suporte a `Undo` e `Redo` funcionalidade.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando substituído em uma classe derivada, esse método procura um <see cref="T:System.ComponentModel.DefaultValueAttribute" />. Se ele encontrar um, ele define o valor da propriedade para o <see cref="T:System.ComponentModel.DefaultValueAttribute" /> -encontrado. Se esse método não é possível encontrar um <see cref="T:System.ComponentModel.DefaultValueAttribute" />, ele procura por um método "ResetMyProperty" que você precisa implementar. Se isso for encontrado, o <see cref="M:System.ComponentModel.PropertyDescriptor.ResetValue(System.Object)" /> método invoca a ele. Se <see cref="M:System.ComponentModel.PropertyDescriptor.ResetValue(System.Object)" /> não é possível encontrar um <see cref="T:System.ComponentModel.DefaultValueAttribute" /> ou um método "ResetMyProperty" que você implementou, ele não executa uma operação.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializationVisibility">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.DesignerSerializationVisibility SerializationVisibility { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.DesignerSerializationVisibility SerializationVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyDescriptor.SerializationVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DesignerSerializationVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta propriedade deve ser serializada, conforme especificado no <see cref="T:System.ComponentModel.DesignerSerializationVisibilityAttribute" />.</summary>
+        <value>Uma da <see cref="T:System.ComponentModel.DesignerSerializationVisibility" /> valores de enumeração que especifica se essa propriedade deve ser serializada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public abstract void SetValue (object component, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(object component, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.SetValue(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente com o valor da propriedade que deve ser definida.</param>
+        <param name="value">O novo valor.</param>
+        <summary>Quando substituído em uma classe derivada, define o valor do componente para um valor diferente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é implementado por meio de reflexão.  
+  
+ Esse método cria um <xref:System.ComponentModel.Design.DesignerTransaction> automaticamente na seguinte ordem:  
+  
+1.  O método chama o <xref:System.ComponentModel.Design.IDesignerHost.CreateTransaction%2A?displayProperty=nameWithType> método para criar um novo <xref:System.ComponentModel.Design.DesignerTransaction> para representar as alterações.  
+  
+2.  O método chama o <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanging%2A?displayProperty=nameWithType> método para indicar que a transação foi iniciada e as alterações estão prestes a ocorrer.  
+  
+3.  O método redefine a propriedade para o valor determinado pela ordem de verificação desse método.  
+  
+4.  O método chama o <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A?displayProperty=nameWithType> método para indicar que as alterações ocorreram.  
+  
+5.  As chamadas de método <xref:System.ComponentModel.Design.DesignerTransaction.Commit%2A?displayProperty=nameWithType> para indicar que a transação seja concluída.  
+  
+ A finalidade da transação é oferecer suporte a `Undo` e `Redo` funcionalidade.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando você substituir esse método, ele deve definir o valor da propriedade invocando o método "SetMyProperty" apropriado que você precisa implementar. Se o valor especificado não é válido, o componente deve lançar uma exceção, que é passada. Você deve criar a propriedade para que um método de "GetMyProperty" (que você implementou) de um método "SetMyProperty" a seguir retorna o valor passado durante o método "SetMyProperty" não gerará uma exceção.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeValue">
+      <MemberSignature Language="C#" Value="public abstract bool ShouldSerializeValue (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldSerializeValue(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyDescriptor.ShouldSerializeValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente com a propriedade a ser examinado para persistência.</param>
+        <summary>Quando substituído em uma classe derivada, determina um valor que indica se o valor dessa propriedade deve ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se a propriedade deve ser persistente; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é implementado por meio de reflexão.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando substituído em uma classe derivada, esse método retorna <see langword="true" /> se o valor atual da propriedade é diferente do valor padrão. Ele procura por um valor padrão, procurando primeiro um <see cref="T:System.ComponentModel.DefaultValueAttribute" />. Se o método encontra esse atributo, ele compara o valor do atributo com o valor da propriedade atual. Se esse método não é possível encontrar um <see cref="T:System.ComponentModel.DefaultValueAttribute" />, ele procura por um método "ShouldSerializeMyProperty" que você precisa implementar. Se for encontrado, <see cref="M:System.ComponentModel.PropertyDescriptor.ShouldSerializeValue(System.Object)" /> invoca. Se esse método não é possível encontrar um <see cref="T:System.ComponentModel.DefaultValueAttribute" /> ou um método "ShouldSerializeMyProperty", ele não pode criar otimizações e retornará <see langword="true" />.
+ <block subset="none" type="note"><para>  
+ O <see cref="T:System.ComponentModel.Design.ComponentDesigner" /> classe implementa a lógica de serialização especiais para os componentes herdados. Para obter mais informações, consulte <see cref="T:System.ComponentModel.Design.ComponentDesigner" />.  
+</para></block></para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsChangeEvents">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsChangeEvents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsChangeEvents" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyDescriptor.SupportsChangeEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as notificações de alteração de valor para essa propriedade podem ser obtidos fora o descritor de propriedade.</summary>
+        <value>
+          <see langword="true" />Se as notificações de alteração de valor podem ser obtidos fora o descritor de propriedade; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.PropertyDescriptor.SupportsChangeEvents%2A> propriedade indica se as notificações de alteração de valor para essa propriedade podem originam fora o descritor de propriedade, como do componente em si, ou se as notificações só serão proveniente de chamadas diretas feitas a <xref:System.ComponentModel.PropertyDescriptor.SetValue%2A> método. Por exemplo, o componente pode implementar o <xref:System.ComponentModel.INotifyPropertyChanged> interface, ou pode ter uma explícita `name.Changed` eventos para essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

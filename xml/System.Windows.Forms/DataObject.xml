@@ -1,0 +1,1600 @@
+<Type Name="DataObject" FullName="System.Windows.Forms.DataObject">
+  <TypeSignature Language="C#" Value="public class DataObject : System.Runtime.InteropServices.ComTypes.IDataObject, System.Windows.Forms.IDataObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataObject extends System.Object implements class System.Runtime.InteropServices.ComTypes.IDataObject, class System.Windows.Forms.IDataObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices.ComTypes.IDataObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IDataObject</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa um mecanismo de transferência de dados básicos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.DataObject>implementa o <xref:System.Windows.Forms.IDataObject> interface, cujos métodos fornecem um mecanismo independente de formato para transferência de dados.  
+  
+ Um <xref:System.Windows.Forms.DataObject> normalmente é usado com o <xref:System.Windows.Forms.Clipboard> e nas operações de arrastar e soltar. O <xref:System.Windows.Forms.DataObject> classe fornece a implementação recomendada o <xref:System.Windows.Forms.IDataObject> interface. É recomendável que você use o <xref:System.Windows.Forms.DataObject> classe em vez de implementar <xref:System.Windows.Forms.IDataObject> por conta própria.  
+  
+ Várias partes de dados em formatos diferentes podem ser armazenados em um <xref:System.Windows.Forms.DataObject>. Os dados são recuperados de um <xref:System.Windows.Forms.DataObject> por seu formato associado. Porque o aplicativo de destino não pode ser conhecido, você pode aumentar a probabilidade de que os dados serão no formato apropriado para um aplicativo, colocando os dados em um <xref:System.Windows.Forms.DataObject> em vários formatos. Consulte <xref:System.Windows.Forms.DataFormats> para formatos predefinidos. Você pode implementar seu próprio formato, criando uma instância do <xref:System.Windows.Forms.DataFormats.Format> classe.  
+  
+ Para armazenar dados em um <xref:System.Windows.Forms.DataObject>, passar os dados para o construtor ou chamada <xref:System.Windows.Forms.DataObject.SetData%2A>. Você pode adicionar dados em vários formatos para o mesmo <xref:System.Windows.Forms.DataObject>. Se você deseja que os dados que você adicionar para ser recuperado na chamada de apenas, seu formato nativo <xref:System.Windows.Forms.DataObject.SetData%28System.String%2CSystem.Boolean%2CSystem.Object%29> com o `autoConvert` parâmetro definido como `false`.  
+  
+ Dados podem ser recuperados de um <xref:System.Windows.Forms.DataObject> em qualquer formato que é compatível com <xref:System.Windows.Forms.DataObject.GetData%2A>. Por exemplo, o texto pode ser convertido em Unicode. Para recuperar dados no formato em que foi armazenado, chame <xref:System.Windows.Forms.DataObject.GetData%2A> com o `autoConvert` parâmetro definido como `false`.  
+  
+ Para determinar quais formatos de dados são armazenados em, chame <xref:System.Windows.Forms.DataObject.GetFormats%2A>. Para determinar se há um formato, chame <xref:System.Windows.Forms.DataObject.GetDataPresent%2A> com o formato desejado.  
+  
+ Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], o <xref:System.Windows.Forms.DataObject> classe fornece métodos adicionais que tornam mais fácil trabalham com dados em comum formatos. Para adicionar dados de um formato específico para o <xref:System.Windows.Forms.DataObject>, use apropriada `Set` *formato* método, como <xref:System.Windows.Forms.DataObject.SetText%2A>. Para recuperar dados de um determinado formato do <xref:System.Windows.Forms.DataObject>, primeiro chamar o `Contains` *formato* método (como <xref:System.Windows.Forms.DataObject.ContainsText%2A>) para determinar se o <xref:System.Windows.Forms.DataObject> contém dados nesse formato, em seguida, chamar o `Get` *formato* método (como <xref:System.Windows.Forms.DataObject.GetText%2A>) para recuperar os dados, se o <xref:System.Windows.Forms.DataObject> contém.  
+  
+> [!NOTE]
+>  Considerações especiais podem ser necessárias ao usar o formato de metarquivo com a área de transferência. Devido a uma limitação na implementação atual de <xref:System.Windows.Forms.DataObject> classe, o formato de metarquivo usado pelo .NET Framework pode não ser reconhecido por aplicativos que usam um formato de metarquivo anterior. Nesse caso, você deve interoperar com as interfaces de programação de aplicativo (APIs) da área de transferência do Win32. Para obter mais informações, consulte o artigo 323530, "Metarquivos na área de transferência são não visível para todos os aplicativos," na Base de dados de Conhecimento Microsoft em http://support.microsoft.com.  
+>   
+>  Um objeto deve ser serializável para que seja colocado na Área de Transferência. Consulte <xref:System.Runtime.Serialization> para obter mais informações sobre serialização. Se seu aplicativo de destino requer um formato de dados muito específica, os cabeçalhos adicionados aos dados no processo de serialização podem impedir que o aplicativo de reconhecimento de seus dados. Para preservar o formato de dados, adicionar os dados como um <xref:System.Byte> de matriz para um <xref:System.IO.MemoryStream> e passar o <xref:System.IO.MemoryStream> para o <xref:System.Windows.Forms.DataObject.SetData%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona dados em um <xref:System.Windows.Forms.DataObject>. Primeiro, um novo <xref:System.Windows.Forms.DataObject> é criado e um componente é armazenado nela. Em seguida, ele verifica se houver dados no tipo apropriado no <xref:System.Windows.Forms.DataObject>. O resultado é exibido em uma caixa de texto. Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject Example/VB/source.vb#1)]  
+  
+ O exemplo a seguir recupera os dados armazenados em um <xref:System.Windows.Forms.DataObject>. Primeiro, um novo <xref:System.Windows.Forms.DataObject> é criado com dados de texto. Em seguida, os dados são recuperados, especificando seu formato como uma cadeia de caracteres e exibidos em uma caixa de texto. O formato de dados é convertido automaticamente de texto à cadeia de caracteres. Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic DataObject Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject Example/CS/source.cs#2)]
+ [!code-vb[Classic DataObject Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject Example/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.DataObject> e adiciona dados a ele. O exemplo, em seguida, recupera e exibe os dados. Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.DataObject2 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.DataObject2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.DataObject2 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.DataObject2 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.DataObject2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.DataObject2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObject (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Os dados a serem armazenados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataObject" /> classe e adiciona o objeto especificado para ele.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar dados em qualquer formato para o <xref:System.Windows.Forms.DataObject> quando você usar esse construtor, ou você pode adicionar dados como um <xref:System.Windows.Forms.IDataObject> para fornecer vários formatos de uma vez. Se você estiver familiarizado com a programação COM, você também pode adicionar um objeto de dados que implementa o COM `IDataObject` interface. Para obter mais informações, consulte `IDataObject` na biblioteca MSDN em http://msdn.microsoft.com/library.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.DataObject> que contém uma cadeia de caracteres. Os dados são recuperados usando o formato de dados. Os resultados são exibidos em uma caixa de texto. Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.DataObject3 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.DataObject3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.DataObject3 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.DataObject3 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.DataObject3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.DataObject3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataObject (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato de dados especificado. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <param name="data">Os dados a serem armazenados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataObject" /> classe e adiciona o objeto especificado no formato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.DataObject> classe usando uma cadeia de caracteres que é especificada como o tipo de cadeia de caracteres. Os dados são recuperados a partir de <xref:System.Windows.Forms.DataObject> especificando seu formato como texto. Os resultados são exibidos em uma caixa de texto. Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.DataObject4 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.DataObject4 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.DataObject4 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.DataObject4 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.DataObject4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.DataObject4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsAudio">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsAudio ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsAudio() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.ContainsAudio" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o objeto de dados contém dados de <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" /> formato.</summary>
+        <returns>
+          <see langword="true" />Se o objeto de dados contém dados de áudio; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar se o objeto de dados contém dados de áudio antes de recuperá-lo com o <xref:System.Windows.Forms.DataObject.GetAudioStream%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsFileDropList">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.ContainsFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o objeto de dados contém dados que estão na <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> formatar ou podem ser convertidos para aquele formato.</summary>
+        <returns>
+          <see langword="true" />Se o objeto de dados contém uma lista de arquivos; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma lista de arquivos é uma coleção de cadeias de caracteres que contém informações de caminho para arquivos.  
+  
+ Use esse método para determinar se o objeto de dados contém uma lista de arquivos antes de recuperá-lo com o <xref:System.Windows.Forms.DataObject.GetFileDropList%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsImage">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.ContainsImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o objeto de dados contém dados que estão na <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> formatar ou podem ser convertidos para aquele formato.</summary>
+        <returns>
+          <see langword="true" />Se o objeto de dados contém dados de imagem. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar se o objeto de dados contém dados de imagem antes de recuperá-lo com o <xref:System.Windows.Forms.DataObject.GetImage%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.ContainsText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o objeto de dados contém dados de <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" /> formato.</summary>
+        <returns>
+          <see langword="true" />Se o objeto de dados contém dados de texto; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar se o objeto de dados contém dados de texto antes de recuperá-lo com o <xref:System.Windows.Forms.DataObject.GetText%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsText (System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsText(valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.ContainsText(System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um dos valores de <see cref="T:System.Windows.Forms.TextDataFormat" />.</param>
+        <summary>Indica se o objeto de dados contém dados de texto no formato indicado pelo especificado <see cref="T:System.Windows.Forms.TextDataFormat" /> valor.</summary>
+        <returns>
+          <see langword="true" />Se o objeto de dados contém dados de texto no formato especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar se o objeto de dados contém dados de texto antes de recuperá-lo com o <xref:System.Windows.Forms.DataObject.GetText%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" /> não é um valor <see cref="T:System.Windows.Forms.TextDataFormat" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAudioStream">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Stream GetAudioStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetAudioStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetAudioStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um fluxo de áudio do objeto de dados.</summary>
+        <returns>Um <see cref="T:System.IO.Stream" /> que contém dados de áudio ou <see langword="null" /> se o objeto de dados não contém nenhum dado no <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" /> formato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.DataObject.ContainsAudio%2A> método para determinar se o objeto de dados contém dados de áudio antes de recuperá-lo com este método.  
+  
+ Use o <xref:System.Windows.Forms.DataObject.SetAudio%2A> método para adicionar dados de áudio para o objeto de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public virtual object GetData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato dos dados a serem recuperados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <summary>Retorna os dados associados ao formato de dados especificado.</summary>
+        <returns>Os dados associados ao formato especificado ou <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse método não pode localizar os dados no formato especificado, ele tentará converter os dados no formato. Se os dados não podem ser convertidos no formato especificado, ou se os dados foram armazenados com conversão automática definido como `false`, esse método retornará `null`.  
+  
+ Para determinar se a dados estão associados, ou podem ser convertidos em um formato, chame <xref:System.Windows.Forms.DataObject.GetDataPresent%2A> antes de chamar <xref:System.Windows.Forms.DataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.DataObject.GetFormats%2A> para obter uma lista de formatos válidos para os dados armazenados na <xref:System.Windows.Forms.DataObject>.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+>   
+>  Quando `format` é <xref:System.Windows.Forms.DataFormats.Html>, esse método retorna uma cadeia de caracteres codificada em UTF-8 em aplicativos direcionados ao .NET 4.5 ou posterior e ANSI codificado a cadeia de caracteres em aplicativos voltados para o .NET 4.0 ou inferior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir recupera os dados armazenados em um <xref:System.Windows.Forms.DataObject>. Primeiro, um novo <xref:System.Windows.Forms.DataObject> é criado com dados de texto. Em seguida, os dados são recuperados, especificando seu formato como uma cadeia de caracteres e exibidos em uma caixa de texto.  
+  
+ Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[classic dataobject example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject Example/CPP/source.cpp#1)]
+ [!code-csharp[classic dataobject example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject Example/CS/source.cs#1)]
+ [!code-vb[classic dataobject example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public virtual object GetData (Type format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(class System.Type format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetData(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um <see cref="T:System.Type" /> que representa o formato dos dados a serem recuperados.</param>
+        <summary>Retorna os dados associados ao formato do tipo de classe especificado.</summary>
+        <returns>Os dados associados ao formato especificado ou <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse método não pode localizar os dados no formato especificado, ele tentará converter os dados no formato. Se os dados não podem ser convertidos no formato especificado, ou se os dados foram armazenados com conversão automática definido como `false`, esse método retornará `null`.  
+  
+ Para determinar se a dados estão associados, ou podem ser convertidos em um formato, chame <xref:System.Windows.Forms.DataObject.GetDataPresent%2A> antes de chamar <xref:System.Windows.Forms.DataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.DataObject.GetFormats%2A> para obter uma lista de formatos válidos para os dados armazenados na <xref:System.Windows.Forms.DataObject>.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir recupera os dados armazenados em um <xref:System.Windows.Forms.DataObject>. Primeiro, um novo <xref:System.Windows.Forms.DataObject> é criado com um componente. Em seguida, os dados são recuperados, especificando seu tipo. O tipo dos dados recuperados é exibido na caixa de texto.  
+  
+ Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.GetData2 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.GetData2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.GetData2 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.GetData2 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.GetData2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.GetData2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public virtual object GetData (string format, bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(string format, bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetData(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato dos dados a serem recuperados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <param name="autoConvert">
+          <see langword="true" />Para converter dados para o formato especificado; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna os dados associados com o formato de dados especificado, usando um parâmetro de conversão automatizado para determinar se os dados devem ou não ser convertidos para o formato.</summary>
+        <returns>Os dados associados ao formato especificado ou <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `autoConvert` parâmetro é `true` e esse método não é possível localizar os dados no formato especificado, ele tenta converter os dados no formato. Se os dados não podem ser convertidos no formato especificado, ou se os dados foram armazenados com a conversão automática definida como `false`, esse método retornará `null`.  
+  
+ Se o `autoConvert` parâmetro é `false`, esse método retorna dados no formato especificado, ou `null` se nenhum dado neste formato pode ser encontrado.  
+  
+ Para determinar se a dados estão associados, ou podem ser convertidos em um formato, chame <xref:System.Windows.Forms.DataObject.GetDataPresent%2A> antes de chamar <xref:System.Windows.Forms.DataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.DataObject.GetFormats%2A> para obter uma lista de formatos válidos para os dados armazenados na <xref:System.Windows.Forms.DataObject>.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+>   
+>  Quando `format` é <xref:System.Windows.Forms.DataFormats.Html>, esse método retorna uma cadeia de caracteres codificada em UTF-8 em aplicativos direcionados ao .NET 4.5 ou posterior e ANSI codificado a cadeia de caracteres em aplicativos voltados para o .NET 4.0 ou inferior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir recupera os dados armazenados em um <xref:System.Windows.Forms.DataObject>, usando o `autoConvert` parâmetro para especificar se deseja converter o formato de dados.  
+  
+ Primeiro, um novo <xref:System.Windows.Forms.DataObject> é criado com dados de texto. Em seguida, o exemplo tenta recuperar os dados, especificando seu formato como uma cadeia de caracteres e nenhuma conversão de formato, ou seja, o `autoConvert` parâmetro é `false`. A operação falhará porque não há nenhum dado de cadeia de caracteres no <xref:System.Windows.Forms.DataObject>.  
+  
+ Em seguida, o exemplo tenta recuperar os dados novamente, com o `autoConvert` parâmetro definido como `true`. Essa operação for bem-sucedida e os resultados são exibidos em um <xref:System.Windows.Forms.MessageBox>.  
+  
+ Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.GetData Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.GetData Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.GetData Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.GetData Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.GetData Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.GetData Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public virtual bool GetDataPresent (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetDataPresent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato para verificar. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <summary>Determina se os dados armazenados nesse <see cref="T:System.Windows.Forms.DataObject" /> está associado, ou podem ser convertidos para o formato especificado.</summary>
+        <returns>
+          <see langword="true" />Se os dados armazenados na <see cref="T:System.Windows.Forms.DataObject" /> está associado, ou podem ser convertidos para o formato especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para determinar se um formato existe antes de chamar <xref:System.Windows.Forms.DataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.DataObject.GetFormats%2A> para os formatos disponíveis neste <xref:System.Windows.Forms.DataObject>.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+> [!NOTE]
+>  Se nenhum dado pode ser recuperado, nenhuma exceção será lançada. Em vez disso, `false` será retornado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se os dados armazenados no momento neste <xref:System.Windows.Forms.DataObject> está associado, ou pode ser convertido em um formato especificado. Um novo <xref:System.Windows.Forms.DataObject> é inicializada com uma cadeia de caracteres e seu formato associado especificado como texto.  
+  
+ Em seguida, os exemplos imprime se houver dados de texto no <xref:System.Windows.Forms.DataObject>. Esse código requer que `textBox1` foi criado.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public virtual bool GetDataPresent (Type format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(class System.Type format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetDataPresent(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um <see cref="T:System.Type" /> que representa o formato para verificar.</param>
+        <summary>Determina se os dados armazenados nesse <see cref="T:System.Windows.Forms.DataObject" /> está associado, ou podem ser convertidos para o formato especificado.</summary>
+        <returns>
+          <see langword="true" />Se os dados armazenados na <see cref="T:System.Windows.Forms.DataObject" /> está associado, ou podem ser convertidos para o formato especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para determinar se um formato existe antes de chamar <xref:System.Windows.Forms.DataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.DataObject.GetFormats%2A> para os formatos disponíveis neste <xref:System.Windows.Forms.DataObject>.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+> [!NOTE]
+>  Se nenhum dado pode ser recuperado, nenhuma exceção será lançada. Em vez disso, `false` será retornado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se os dados do tipo especificado existem em um <xref:System.Windows.Forms.DataObject>, ou se os dados podem ser convertidos para o tipo especificado. O resultado é exibido em uma caixa de texto. O código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.GetDataPresent Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.GetDataPresent Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.GetDataPresent Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.GetDataPresent Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.GetDataPresent Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.GetDataPresent Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public virtual bool GetDataPresent (string format, bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(string format, bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetDataPresent(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato para verificar. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <param name="autoConvert">
+          <see langword="true" />para determinar se os dados armazenados nesse <see cref="T:System.Windows.Forms.DataObject" /> pode ser convertido no formato especificado; <see langword="false" /> para verificar se os dados estão no formato especificado.</param>
+        <summary>Determina se este <see cref="T:System.Windows.Forms.DataObject" /> contém dados no formato especificado ou, opcionalmente, contém dados que podem ser convertidos no formato especificado.</summary>
+        <returns>
+          <see langword="true" /> se os dados estiverem no formato especificado ou puderem ser convertidos nele; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para determinar se um formato existe antes de chamar <xref:System.Windows.Forms.DataObject.GetData%2A>. Chamar <xref:System.Windows.Forms.DataObject.GetFormats%2A> para os formatos disponíveis neste <xref:System.Windows.Forms.DataObject>.  
+  
+ Este método retorna `true` quando:  
+  
+-   O `autoConvert` parâmetro é `true` e os dados estão em um formato que pode ser convertido para o formato apropriado.  
+  
+-   O `autoConvert` parâmetro é `false` e os dados estão no formato apropriado.  
+  
+ Este método retorna `false` quando:  
+  
+-   O `autoConvert` parâmetro é `true` e esse método não é possível localizar os dados no formato especificado e não pode converter dados para o formato especificado, ou os dados foram armazenados com conversão automática definido como `false`.  
+  
+-   O `autoConvert` parâmetro é `false` e dados não existe neste <xref:System.Windows.Forms.DataObject> no formato especificado.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos em outro formato, se ele foi armazenado especificando que a conversão é permitida e se o formato solicitado é compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+> [!NOTE]
+>  Se nenhum dado pode ser recuperado, nenhuma exceção será lançada. Em vez disso, `false` será retornado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se os dados atualmente armazenados no <xref:System.Windows.Forms.DataObject> está associado um formato especificado. Primeiro, um novo <xref:System.Windows.Forms.DataObject> é inicializada com uma cadeia de caracteres especificando seu formato como texto.  
+  
+ Em seguida, o <xref:System.Windows.Forms.DataObject> é consultada para os dados associados com o formato de texto, especificando o `autoConvert` parâmetro como `false`. O resultado dessa consulta é impresso na caixa de texto.  
+  
+ Em seguida, o <xref:System.Windows.Forms.DataObject> é consultada para os dados associados com o formato de cadeia de caracteres especificando o `autoConvert` parâmetro como `true`. Os resultados são impressos na caixa de texto. Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.GetDataPresent1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.GetDataPresent1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.GetDataPresent1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.GetDataPresent1 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.GetDataPresent1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.GetDataPresent1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDropList">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Specialized.StringCollection GetFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Specialized.StringCollection GetFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma coleção de nomes de arquivo do objeto de dados.</summary>
+        <returns>Um <see cref="T:System.Collections.Specialized.StringCollection" /> que contém nomes de arquivo ou <see langword="null" /> se o objeto de dados não contém todos os dados que estão no <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> formatar ou podem ser convertidos para aquele formato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma lista de arquivos é uma coleção de cadeias de caracteres que contém informações de caminho para arquivos.  
+  
+ Uma lista de arquivos é armazenada em um objeto de dados como um <xref:System.String> matriz. Este método converte desta matriz a um <xref:System.Collections.Specialized.StringCollection> e retorna a coleção.  
+  
+ Use o <xref:System.Windows.Forms.DataObject.ContainsFileDropList%2A> método para determinar se o objeto de dados contém uma lista de arquivos antes de recuperá-lo com este método.  
+  
+ Use o <xref:System.Windows.Forms.DataObject.SetFileDropList%2A> método para adicionar uma lista de arquivos para o objeto de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormats">
+      <MemberSignature Language="C#" Value="public virtual string[] GetFormats ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetFormats() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetFormats" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma lista de todos os formatos que os dados armazenados nesse <see cref="T:System.Windows.Forms.DataObject" /> está associada ou pode ser convertido em.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.String" />, que contém uma lista de todos os formatos com suporte nos dados armazenados nesse objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para obter os formatos de dados com suporte antes de chamar <xref:System.Windows.Forms.DataObject.GetData%2A>. Consulte <xref:System.Windows.Forms.DataFormats> para formatos predefinidos.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos em outro formato, se ele foi armazenado especificando que a conversão é permitida e se o formato solicitado é compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+   
+  
+## Examples  
+ Consultas de exemplo de código a seguir um <xref:System.Windows.Forms.DataObject> para os formatos associados aos seus dados e os formatos de dados podem ser convertidos em. A lista resultante é exibida na caixa de texto. Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.GetFormats1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.GetFormats1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.GetFormats1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.GetFormats1 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.GetFormats1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.GetFormats1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormats">
+      <MemberSignature Language="C#" Value="public virtual string[] GetFormats (bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetFormats(bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetFormats(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="autoConvert">
+          <see langword="true" /> para recuperar todos os formatos aos quais os dados armazenados neste <see cref="T:System.Windows.Forms.DataObject" /> estão associados ou nos quais podem ser convertidos; <see langword="false" /> para recuperar somente os formatos de dados nativos.</param>
+        <summary>Retorna uma lista de todos os formatos aos quais os dados armazenados neste <see cref="T:System.Windows.Forms.DataObject" /> estão associados ou nos quais eles podem ser convertidos, usando um parâmetro de conversão automática para determinar se é necessário recuperar somente os formatos de dados nativos ou todos os formatos nos quais os dados podem ser convertidos.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.String" />, que contém uma lista de todos os formatos com suporte nos dados armazenados nesse objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para obter os formatos de dados com suporte antes de chamar <xref:System.Windows.Forms.DataObject.GetData%2A>. Consulte <xref:System.Windows.Forms.DataFormats> para formatos predefinidos.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos em outro formato, se ele foi armazenado especificando que a conversão é permitida e se o formato solicitado é compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+  
+   
+  
+## Examples  
+ Consultas de exemplo de código a seguir um <xref:System.Windows.Forms.DataObject> para os formatos associados aos seus dados. Especifica a primeira consulta o `autoConvert` parâmetro como `false`, somente o formato nativo dos dados é retornado. A segunda consulta Especifica o `autoConvert` parâmetro como `true`, portanto, a lista de formatos inclui os formatos de dados podem ser convertidos em.  
+  
+ Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.GetFormats Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.GetFormats Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.GetFormats Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.GetFormats Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.GetFormats Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.GetFormats Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Image GetImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Image GetImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma imagem do objeto de dados.</summary>
+        <returns>Um <see cref="T:System.Drawing.Image" /> que representa os dados de imagem do objeto de dados ou <see langword="null" /> se o objeto de dados não contiver dados que estão no formato <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> ou que podem ser convertidos nesse formato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.DataObject.ContainsImage%2A> método para determinar se o objeto de dados contém dados de imagem antes de recuperá-lo com este método.  
+  
+ Use o <xref:System.Windows.Forms.DataObject.SetImage%2A> método para adicionar dados de imagem para o objeto de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public virtual string GetText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera dados de texto do objeto de dados no formato <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" />.</summary>
+        <returns>Os dados de texto no objeto de dados ou <see cref="F:System.String.Empty" /> se o objeto de dados não contiver dados no formato <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.DataObject.ContainsText%2A> método para determinar se o objeto de dados contém dados de texto antes de recuperá-lo com este método.  
+  
+ Use o <xref:System.Windows.Forms.DataObject.SetText%2A> método para adicionar dados de texto para o objeto de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public virtual string GetText (System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetText(valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.GetText(System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um dos valores de <see cref="T:System.Windows.Forms.TextDataFormat" />.</param>
+        <summary>Recupera dados de texto do objeto de dados no formato indicado pelo valor <see cref="T:System.Windows.Forms.TextDataFormat" /> especificado.</summary>
+        <returns>Os dados de texto no objeto de dados ou <see cref="F:System.String.Empty" /> se o objeto de dados não contém dados no formato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.DataObject.ContainsText%2A> método para determinar se o objeto de dados contém dados de texto antes de recuperá-lo com este método.  
+  
+ Use o <xref:System.Windows.Forms.DataObject.SetText%2A> método para adicionar dados de texto para o objeto de dados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" /> não é um valor <see cref="T:System.Windows.Forms.TextDataFormat" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public virtual void SetAudio (byte[] audioBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetAudio(unsigned int8[] audioBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.SetAudio(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioBytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="audioBytes">A <see cref="T:System.Byte" /> matriz que contém os dados de áudio.</param>
+        <summary>Adiciona um <see cref="T:System.Byte" /> matriz para o objeto de dados no <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" /> formato após convertê-la para um <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para recuperar dados de áudio do objeto de dados, primeiro use o <xref:System.Windows.Forms.DataObject.ContainsAudio%2A> método para determinar se o objeto de dados contém dados de áudio antes de recuperá-lo com o <xref:System.Windows.Forms.DataObject.GetAudioStream%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioBytes" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public virtual void SetAudio (System.IO.Stream audioStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetAudio(class System.IO.Stream audioStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.SetAudio(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="audioStream">Um <see cref="T:System.IO.Stream" /> que contém os dados de áudio.</param>
+        <summary>Adiciona um <see cref="T:System.IO.Stream" /> para o objeto de dados no <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" /> formato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para recuperar dados de áudio do objeto de dados, primeiro use o <xref:System.Windows.Forms.DataObject.ContainsAudio%2A> método para determinar se o objeto de dados contém dados de áudio antes de recuperá-lo com o <xref:System.Windows.Forms.DataObject.GetAudioStream%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioStream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public virtual void SetData (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.SetData(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Os dados a serem armazenados.</param>
+        <summary>Adiciona o objeto especificado ao <see cref="T:System.Windows.Forms.DataObject" /> usando o tipo de objeto como o formato de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não souber o formato do aplicativo de destino, você pode armazenar dados em vários formatos, usando esse método. Dados armazenados usando esse método podem ser convertidos em um formato compatível quando ele é recuperado.  
+  
+ O <xref:System.Windows.Forms.DataObject.SetData%28System.Object%29> repositórios de sobrecarga de `data` valor em um formato que determina chamando o <xref:System.Object.GetType%2A?displayProperty=nameWithType> método. Se `data` implementa o <xref:System.Runtime.Serialization.ISerializable> interface, essa sobrecarga também armazena o valor de <xref:System.Windows.DataFormats.Serializable> formato.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir armazena dados em um <xref:System.Windows.Forms.DataObject>. Primeiro, um novo <xref:System.Windows.Forms.DataObject> é criado e um componente é armazenado nela. Em seguida, os dados são recuperados, especificando a classe. O resultado é exibido em uma caixa de texto.  
+  
+ Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.SetData3 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.SetData3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.SetData3 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.SetData3 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.SetData3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.SetData3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public virtual void SetData (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.SetData(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato associado a esses dados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <param name="data">Os dados a serem armazenados.</param>
+        <summary>Adiciona o objeto especificado ao <see cref="T:System.Windows.Forms.DataObject" /> usando o formato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não souber o formato do aplicativo de destino, você pode armazenar dados em vários formatos, usando esse método.  
+  
+ Dados armazenados usando esse método podem ser convertidos em um formato compatível quando ele é recuperado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir armazena dados em um <xref:System.Windows.Forms.DataObject>, especificando seu formato como Unicode.  
+  
+ Em seguida, os dados são recuperados, especificando o formato de texto, como o padrão é converter os dados quando o formato final é compatível. O resultado é exibido em uma caixa de texto.  
+  
+ Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.SetData1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.SetData1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.SetData1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.SetData1 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.SetData1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.SetData1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public virtual void SetData (Type format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(class System.Type format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.SetData(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um <see cref="T:System.Type" /> que representa o formato associado aos dados.</param>
+        <param name="data">Os dados a serem armazenados.</param>
+        <summary>Adiciona o objeto especificado para o <see cref="T:System.Windows.Forms.DataObject" /> usando o tipo especificado como o formato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não souber o formato do aplicativo de destino, você pode armazenar dados em vários formatos, usando esse método.  
+  
+ Dados armazenados usando esse método podem ser convertidos em um formato compatível quando ele é recuperado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir armazena dados em um <xref:System.Windows.Forms.DataObject> usando um <xref:System.Type> como formato de dados. Os dados são recuperados, em seguida, chamando <xref:System.Windows.Forms.DataObject.GetData%2A> usando o <xref:System.Type> para especificar o formato de dados. O resultado é exibido em uma caixa de texto.  
+  
+ Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.SetData2 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.SetData2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.SetData2 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.SetData2 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.SetData2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.SetData2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public virtual void SetData (string format, bool autoConvert, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(string format, bool autoConvert, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.SetData(System.String,System.Boolean,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato associado a esses dados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <param name="autoConvert">
+          <see langword="true" />para permitir que os dados a ser convertido em outro formato; Caso contrário, <see langword="false" />.</param>
+        <param name="data">Os dados a serem armazenados.</param>
+        <summary>Adiciona o objeto especificado para o <see cref="T:System.Windows.Forms.DataObject" /> usando o formato especificado e que indica se os dados podem ser convertidos para outro formato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não souber o formato do aplicativo de destino, você pode armazenar dados em vários formatos, usando esse método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir armazena dados em um <xref:System.Windows.Forms.DataObject> e especifica que os dados só podem ser recuperados em seu formato nativo.  
+  
+ Primeiro, um novo <xref:System.Windows.Forms.DataObject> é criado. Dados no formato Unicode são armazenados no <xref:System.Windows.Forms.DataObject>, com `autoConvert` definido como `false`.  
+  
+ Em seguida, o <xref:System.Windows.Forms.DataObject> é consultada para obter a lista de formatos de dados disponíveis. Somente o formato Unicode é retornado, embora os dados Unicode podem ser convertidos em texto e outros formatos.  
+  
+ Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataObject.SetData Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataObject.SetData Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataObject.SetData Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataObject.SetData Example/CS/source.cs#1)]
+ [!code-vb[Classic DataObject.SetData Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataObject.SetData Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFileDropList">
+      <MemberSignature Language="C#" Value="public virtual void SetFileDropList (System.Collections.Specialized.StringCollection filePaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetFileDropList(class System.Collections.Specialized.StringCollection filePaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.SetFileDropList(System.Collections.Specialized.StringCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePaths" Type="System.Collections.Specialized.StringCollection" />
+      </Parameters>
+      <Docs>
+        <param name="filePaths">Um <see cref="T:System.Collections.Specialized.StringCollection" /> que contém os nomes de arquivo.</param>
+        <summary>Adiciona uma coleção de nomes de arquivo para o objeto de dados no <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> formato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma lista de arquivos é uma coleção de cadeias de caracteres que contém informações de caminho para arquivos.  
+  
+ Uma lista de arquivos é armazenada em um objeto de dados como um <xref:System.String> matriz. Este método converte `filePaths` para um <xref:System.String> matriz antes de adicioná-lo ao objeto de dados.  
+  
+ Para recuperar uma lista de arquivos do objeto de dados, primeiro use o <xref:System.Windows.Forms.DataObject.ContainsFileDropList%2A> método para determinar se o objeto de dados contém dados nesse formato antes de recuperá-lo com o <xref:System.Windows.Forms.DataObject.GetFileDropList%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filePaths" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImage">
+      <MemberSignature Language="C#" Value="public virtual void SetImage (System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetImage(class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.SetImage(System.Drawing.Image)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> para adicionar ao objeto de dados.</param>
+        <summary>Adiciona um <see cref="T:System.Drawing.Image" /> para o objeto de dados no <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> formato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para recuperar dados de imagem do objeto de dados, primeiro use o <xref:System.Windows.Forms.DataObject.ContainsImage%2A> método para determinar se o objeto de dados contém dados de imagem antes de recuperá-lo com o <xref:System.Windows.Forms.DataObject.GetImage%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="image" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public virtual void SetText (string textData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetText(string textData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.SetText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textData" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textData">O texto a ser adicionado ao objeto de dados.</param>
+        <summary>Adiciona dados de texto ao objeto de dados no formato <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para recuperar dados de texto do objeto de dados, primeiro use o <xref:System.Windows.Forms.DataObject.ContainsText%2A> método para determinar se o objeto de dados contém dados de imagem antes de recuperá-lo com o <xref:System.Windows.Forms.DataObject.GetText%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textData" /> é <see langword="null" /> ou <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public virtual void SetText (string textData, System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetText(string textData, valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.SetText(System.String,System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textData" Type="System.String" />
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="textData">O texto a ser adicionado ao objeto de dados.</param>
+        <param name="format">Um dos valores de <see cref="T:System.Windows.Forms.TextDataFormat" />.</param>
+        <summary>Adiciona dados de texto ao objeto de dados no formato indicado pelo valor <see cref="T:System.Windows.Forms.TextDataFormat" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para recuperar dados de texto do objeto de dados, primeiro use o <xref:System.Windows.Forms.DataObject.ContainsText%2A> método para determinar se o objeto de dados contém dados de imagem antes de recuperá-lo com o <xref:System.Windows.Forms.DataObject.GetText%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="textData" /> é <see langword="null" /> ou <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" /> não é um valor <see cref="T:System.Windows.Forms.TextDataFormat" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise">
+      <MemberSignature Language="C#" Value="int IDataObject.DAdvise (ref System.Runtime.InteropServices.ComTypes.FORMATETC pFormatetc, System.Runtime.InteropServices.ComTypes.ADVF advf, System.Runtime.InteropServices.ComTypes.IAdviseSink pAdvSink, out int pdwConnection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; pFormatetc, valuetype System.Runtime.InteropServices.ComTypes.ADVF advf, class System.Runtime.InteropServices.ComTypes.IAdviseSink pAdvSink, [out] int32&amp; pdwConnection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#DAdvise(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.ADVF,System.Runtime.InteropServices.ComTypes.IAdviseSink,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pFormatetc" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="advf" Type="System.Runtime.InteropServices.ComTypes.ADVF" />
+        <Parameter Name="pAdvSink" Type="System.Runtime.InteropServices.ComTypes.IAdviseSink" />
+        <Parameter Name="pdwConnection" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pFormatetc">Um <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estrutura, passada por referência, que define o formato, o dispositivo de destino, o aspecto e a mídia que será usada para notificações futuras.</param>
+        <param name="advf">Uma da <see cref="T:System.Runtime.InteropServices.ComTypes.ADVF" /> valores que especifica um grupo de sinalizadores para controlar o comunicado de conexão.</param>
+        <param name="pAdvSink">Um ponteiro para o <see cref="T:System.Runtime.InteropServices.ComTypes.IAdviseSink" /> interface no coletor de aviso que receberão a notificação de alteração.</param>
+        <param name="pdwConnection">Quando este método retorna, contém um ponteiro para um token DWORD que identifica essa conexão. Você pode usar esse token posteriormente para excluir a conexão de consultoria, passando-o para <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise(System.Int32)" />. Se esse valor for zero, a conexão não foi estabelecida. Este parâmetro é passado não inicializado.</param>
+        <summary>Cria uma conexão entre um objeto de dados e um coletor de aviso. Este método é chamado por um objeto que oferece suporte a um coletor de aviso e permite que o coletor de consultoria ser notificado sobre alterações nos dados do objeto.</summary>
+        <returns>Este método oferece suporte os valores de retorno padrão E_INVALIDARG, E_UNEXPECTED e E_OUTOFMEMORY, bem como o seguinte:  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>A conexão comunicado foi criado.  
+  
+ </description></item><item><term>E_NOTIMPL  
+  
+ </term><description>Este método não está implementado no objeto de dados.  
+  
+ </description></item><item><term>DV_E_LINDEX  
+  
+ </term><description>Há um valor inválido para <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; atualmente, somente a -1 é suportado.  
+  
+ </description></item><item><term>DV_E_FORMATETC  
+  
+ </term><description>Há um valor inválido para o <paramref name="pFormatetc" /> parâmetro.  
+  
+ </description></item><item><term>OLE_E_ADVISENOTSUPPORTED  
+  
+ </term><description>O objeto de dados não oferece suporte a notificação de alteração.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Windows.Forms.DataObject> é convertido em um <xref:System.Runtime.InteropServices.ComTypes.IDataObject> interface.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise">
+      <MemberSignature Language="C#" Value="void IDataObject.DUnadvise (int dwConnection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise(int32 dwConnection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#DUnadvise(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dwConnection" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dwConnection">Um token DWORD que especifica a conexão a ser removido. Usar o valor retornado por <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.DAdvise(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.ADVF,System.Runtime.InteropServices.ComTypes.IAdviseSink,System.Int32@)" /> quando a conexão foi originalmente estabelecido.</param>
+        <summary>Destrói um conexão de notificação que tinha sido estabelecida anteriormente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Windows.Forms.DataObject> é convertido em um <xref:System.Runtime.InteropServices.ComTypes.IDataObject> interface.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.EnumDAdvise">
+      <MemberSignature Language="C#" Value="int IDataObject.EnumDAdvise (out System.Runtime.InteropServices.ComTypes.IEnumSTATDATA enumAdvise);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Runtime.InteropServices.ComTypes.IDataObject.EnumDAdvise([out] class System.Runtime.InteropServices.ComTypes.IEnumSTATDATA&amp; enumAdvise) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#EnumDAdvise(System.Runtime.InteropServices.ComTypes.IEnumSTATDATA@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumAdvise" Type="System.Runtime.InteropServices.ComTypes.IEnumSTATDATA&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="enumAdvise">Quando este método retorna, contém um <see cref="T:System.Runtime.InteropServices.ComTypes.IEnumSTATDATA" /> que recebe o ponteiro de interface para o novo objeto de enumerador. Se a implementação define <c>enumAdvise</c> para <see langword="null" />, não existem conexões para coletores comunicados neste momento. Este parâmetro é passado não inicializado.</param>
+        <summary>Cria um objeto que pode ser usado para enumerar as conexões de consultoria atuais.</summary>
+        <returns>Dá suporte a esse método, o valor de retorno padrão E_OUTOFMEMORY, bem como o seguinte:  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>O objeto de enumerador é instanciado com êxito ou não existem conexões.  
+  
+ </description></item><item><term>OLE_E_ADVISENOTSUPPORTED  
+  
+ </term><description>Este objeto não dá suporte a notificações comunicadas.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Windows.Forms.DataObject> é convertido em um <xref:System.Runtime.InteropServices.ComTypes.IDataObject> interface.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.EnumFormatEtc">
+      <MemberSignature Language="C#" Value="System.Runtime.InteropServices.ComTypes.IEnumFORMATETC IDataObject.EnumFormatEtc (System.Runtime.InteropServices.ComTypes.DATADIR dwDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Runtime.InteropServices.ComTypes.IEnumFORMATETC System.Runtime.InteropServices.ComTypes.IDataObject.EnumFormatEtc(valuetype System.Runtime.InteropServices.ComTypes.DATADIR dwDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#EnumFormatEtc(System.Runtime.InteropServices.ComTypes.DATADIR)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.ComTypes.IEnumFORMATETC</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dwDirection" Type="System.Runtime.InteropServices.ComTypes.DATADIR" />
+      </Parameters>
+      <Docs>
+        <param name="dwDirection">Uma da <see cref="T:System.Runtime.InteropServices.ComTypes.DATADIR" /> valores que especifica a direção dos dados.</param>
+        <summary>Cria um objeto para enumerar o <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estruturas para um objeto de dados. Essas estruturas são usadas em chamadas para <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> ou <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean)" />.</summary>
+        <returns>Este método oferece suporte ao padrão retornam valores E_INVALIDARG e E_OUTOFMEMORY, bem como o seguinte:  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>O objeto de enumerador foi criado com êxito.  
+  
+ </description></item><item><term>E_NOTIMPL  
+  
+ </term><description>A direção especificada pelo <paramref name="direction" /> parâmetro não é suportado.  
+  
+ </description></item><item><term>OLE_S_USEREG  
+  
+ </term><description>Solicitações OLE enumerar os formatos do registro.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Windows.Forms.DataObject> é convertido em um <xref:System.Runtime.InteropServices.ComTypes.IDataObject> interface.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc">
+      <MemberSignature Language="C#" Value="int IDataObject.GetCanonicalFormatEtc (ref System.Runtime.InteropServices.ComTypes.FORMATETC pformatetcIn, out System.Runtime.InteropServices.ComTypes.FORMATETC pformatetcOut);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; pformatetcIn, [out] valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; pformatetcOut) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#GetCanonicalFormatEtc(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.FORMATETC@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pformatetcIn" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="pformatetcOut" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pformatetcIn">Um ponteiro para um <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estrutura, passada por referência, que define o formato, a média e o dispositivo de destino que o chamador deseja usar para recuperar dados em uma chamada subsequente, como <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />. O <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" /> membro nesse caso não é significativo e deve ser ignorado.</param>
+        <param name="pformatetcOut">Quando este método retorna, contém um ponteiro para um <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estrutura que contém as informações mais gerais possíveis para uma renderização específica, tornando-a canonicamente equivalente para <c>formatetIn</c>. O chamador deve alocar essa estrutura e o <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.FORMATETC@)" /> método deve preencher os dados. Para recuperar dados em uma chamada subsequente como <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />, o chamador usa o valor fornecido de <c>formatOut</c>, a menos que o valor fornecido é <see langword="null" />. Esse valor é <see langword="null" /> se o método retornar <see langword="DATA_S_SAMEFORMATETC" />. O <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" /> membro nesse caso não é significativo e deve ser ignorado. Este parâmetro é passado não inicializado.</param>
+        <summary>Fornece um padrão de <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estrutura é logicamente equivalente a uma estrutura mais complexa. Use esse método para determinar se duas diferentes <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estruturas retornaria os mesmos dados, eliminando a necessidade de processamento duplicado.</summary>
+        <returns>Este método oferece suporte os valores de retorno padrão E_INVALIDARG, E_UNEXPECTED e E_OUTOFMEMORY, bem como o seguinte:  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>Retornado <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estrutura é diferente daquele que foi passado.  
+  
+ </description></item><item><term>DATA_S_SAMEFORMATETC  
+  
+ </term><description>O <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estruturas são os mesmos e <see langword="null" /> é retornado no <paramref name="formatOut" /> parâmetro.  
+  
+ </description></item><item><term>DV_E_LINDEX  
+  
+ </term><description>Há um valor inválido para <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; atualmente, somente a -1 é suportado.  
+  
+ </description></item><item><term>DV_E_FORMATETC  
+  
+ </term><description>Há um valor inválido para o <paramref name="pFormatetc" /> parâmetro.  
+  
+ </description></item><item><term>OLE_E_NOTRUNNING  
+  
+ </term><description>O aplicativo não está em execução.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Windows.Forms.DataObject> é convertido em um <xref:System.Runtime.InteropServices.ComTypes.IDataObject> interface.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.GetData">
+      <MemberSignature Language="C#" Value="void IDataObject.GetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC formatetc, out System.Runtime.InteropServices.ComTypes.STGMEDIUM medium);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices.ComTypes.IDataObject.GetData(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; formatetc, [out] valuetype System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp; medium) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatetc" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="medium" Type="System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="formatetc">Um ponteiro para uma estrutura <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" />, passado por referência, que define o formato, meio e dispositivo de destino a serem usados ao passar os dados. É possível especificar mais de uma mídia usando o operador booleano ou, permitindo que o método escolher o melhor meio entre aquelas especificadas.</param>
+        <param name="medium">Quando este método retorna, contém um ponteiro para o <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> estrutura que indica a mídia de armazenamento que contém os dados retornados por meio de seu <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.tymed" /> membro e responsabilidade para liberar o meio e o valor de seu <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" />membro. Se <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> é <see langword="null" />, o receptor da mídia é responsável pela liberação; caso contrário, <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> aponta para o <see langword="IUnknown" /> interface no objeto apropriado para seu <see langword="Release" /> método pode ser chamado. A mídia deve ser alocada e preenchida pelo <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />. Este parâmetro é passado não inicializado.</param>
+        <summary>Obtém dados de um objeto de dados de origem. O <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> método, que é chamado por um consumidor de dados, renderiza os dados descritos na especificado <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estrutura e transfere-a por meio de especificado <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> estrutura. Em seguida, o chamador assume a responsabilidade por liberar a estrutura <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Windows.Forms.DataObject> é convertido em um <xref:System.Runtime.InteropServices.ComTypes.IDataObject> interface.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para executar esta operação.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere">
+      <MemberSignature Language="C#" Value="void IDataObject.GetDataHere (ref System.Runtime.InteropServices.ComTypes.FORMATETC formatetc, ref System.Runtime.InteropServices.ComTypes.STGMEDIUM medium);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; formatetc, valuetype System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp; medium) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#GetDataHere(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatetc" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="medium" Type="System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="formatetc">Um ponteiro para uma estrutura <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" />, passado por referência, que define o formato, meio e dispositivo de destino a serem usados ao passar os dados. Pode ser especificada somente uma mídia em <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" />e somente os seguintes <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" /> valores são válidos: <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTORAGE" />, <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_ISTREAM" />, <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_HGLOBAL" />, ou <see cref="F:System.Runtime.InteropServices.ComTypes.TYMED.TYMED_FILE" />.</param>
+        <param name="medium">Um <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" />, passado por referência, que define a mídia de armazenamento que contém os dados que estão sendo transferidos. A mídia deve ser alocada pelo chamador e preenchida pelo <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetDataHere(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />. O chamador também deve liberar a mídia. A implementação deste método sempre deve fornecer um valor de <see langword="null" /> para o <see cref="F:System.Runtime.InteropServices.ComTypes.STGMEDIUM.pUnkForRelease" /> membro o <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> estrutura que esse parâmetro aponta para.</param>
+        <summary>Obtém dados de um objeto de dados de origem. Esse método, o que é chamado por um consumidor de dados, difere do <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> método em que o chamador deve alocar e liberar a mídia de armazenamento especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Windows.Forms.DataObject> é convertido em um <xref:System.Runtime.InteropServices.ComTypes.IDataObject> interface.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.QueryGetData">
+      <MemberSignature Language="C#" Value="int IDataObject.QueryGetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC formatetc);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Runtime.InteropServices.ComTypes.IDataObject.QueryGetData(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; formatetc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#QueryGetData(System.Runtime.InteropServices.ComTypes.FORMATETC@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatetc" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="formatetc">Um ponteiro para um <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estrutura, passada por referência, que define o formato, a média e o dispositivo de destino a ser usado para a consulta.</param>
+        <summary>Determina se o objeto de dados é capaz de renderizar os dados descritos o <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estrutura. Objetos de tentativa de uma operação de colar ou drop pode chamar esse método antes de chamar <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> para obter uma indicação de se a operação pode ser bem-sucedida.</summary>
+        <returns>Este método oferece suporte os valores de retorno padrão E_INVALIDARG, E_UNEXPECTED e E_OUTOFMEMORY, bem como o seguinte:  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>S_OK  
+  
+ </term><description>Uma chamada subsequente para <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> provavelmente será bem-sucedida.  
+  
+ </description></item><item><term>DV_E_LINDEX  
+  
+ </term><description>Um valor inválido para <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; atualmente, somente a -1 é suportado.  
+  
+ </description></item><item><term>DV_E_FORMATETC  
+  
+ </term><description>Um valor inválido para o <paramref name="pFormatetc" /> parâmetro.  
+  
+ </description></item><item><term>DV_E_TYMED  
+  
+ </term><description>Inválido <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.tymed" /> valor.  
+  
+ </description></item><item><term>DV_E_DVASPECT  
+  
+ </term><description>Inválido <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.dwAspect" /> valor.  
+  
+ </description></item><item><term>OLE_E_NOTRUNNING  
+  
+ </term><description>O aplicativo não está em execução.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Windows.Forms.DataObject> é convertido em um <xref:System.Runtime.InteropServices.ComTypes.IDataObject> interface.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices.ComTypes.IDataObject.SetData">
+      <MemberSignature Language="C#" Value="void IDataObject.SetData (ref System.Runtime.InteropServices.ComTypes.FORMATETC pFormatetcIn, ref System.Runtime.InteropServices.ComTypes.STGMEDIUM pmedium, bool fRelease);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices.ComTypes.IDataObject.SetData(valuetype System.Runtime.InteropServices.ComTypes.FORMATETC&amp; pFormatetcIn, valuetype System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp; pmedium, bool fRelease) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataObject.System#Runtime#InteropServices#ComTypes#IDataObject#SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pFormatetcIn" Type="System.Runtime.InteropServices.ComTypes.FORMATETC&amp;" RefType="ref" />
+        <Parameter Name="pmedium" Type="System.Runtime.InteropServices.ComTypes.STGMEDIUM&amp;" RefType="ref" />
+        <Parameter Name="fRelease" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pFormatetcIn">Um <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> estrutura, passada por referência, que define o formato usado pelo objeto de dados ao interpretar os dados contidos na mídia de armazenamento.</param>
+        <param name="pmedium">Um <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> estrutura, passada por referência, que define a mídia de armazenamento no qual os dados são passados.</param>
+        <param name="fRelease">
+          <see langword="true" />para especificar que o objeto de dados chamado, que implementa <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean)" />, possui a mídia de armazenamento após a chamada retorna. Isso significa que o objeto de dados deve liberar o meio após ele ter sido usado chamando o <see langword="ReleaseStgMedium" /> função. <see langword="false" />para especificar que o chamador reterá a propriedade da mídia de armazenamento e o objeto de dados chamado usa a mídia de armazenamento para a duração da chamada somente.</param>
+        <summary>Transfere dados ao objeto que implementa este método. Este método é chamado por um objeto que contém uma fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Windows.Forms.DataObject> é convertido em um <xref:System.Runtime.InteropServices.ComTypes.IDataObject> interface.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Este método não oferece suporte para o tipo do objeto de dados subjacente.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

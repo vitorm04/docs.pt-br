@@ -1,0 +1,226 @@
+<Type Name="SystemWebCachingSectionGroup" FullName="System.Web.Configuration.SystemWebCachingSectionGroup">
+  <TypeSignature Language="C#" Value="public sealed class SystemWebCachingSectionGroup : System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SystemWebCachingSectionGroup extends System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.SystemWebCachingSectionGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSectionGroup</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura o <see langword="caching" /> grupo dentro de um arquivo de configuração. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SystemWebCachingSectionGroup> classe fornece uma maneira de acessar e modificar programaticamente o `caching` seção de um arquivo de configuração.  
+  
+ O <xref:System.Web.Configuration.SystemWebCachingSectionGroup> classe e o `caching` seção fornece controle centralizado do mecanismo de cache para um site ou aplicativo. Isso torna possível para o cache para ser implantado, modificado e desabilitado sem modificar páginas individuais no aplicativo.  
+  
+ O mecanismo de cache do ASP.NET é implementado pela <xref:System.Web.Caching.Cache> classe. Para obter mais informações, consulte [visão geral de cache do ASP.NET](http://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d)  
+  
+ A lista a seguir descreve os dois tipos de cache ASP.NET fornece.  
+  
+-   A primeira é chamada de cache de saída, que permite que você armazene página dinâmica e respostas de controle de usuário. Em solicitações subsequentes, o código de controle de página ou o usuário não seja executado; a saída do cache é usada para atender à solicitação. Você pode acessar as configurações de cache de saída usando o <xref:System.Web.Configuration.SystemWebCachingSectionGroup.OutputCache%2A> e <xref:System.Web.Configuration.SystemWebCachingSectionGroup.OutputCacheSettings%2A> propriedades.  
+  
+-   O segundo tipo de armazenamento em cache é um aplicativo tradicional cache de dados, que pode ser usado para armazenar programaticamente objetos arbitrários à memória do servidor para que seu aplicativo pode economizar o tempo e recursos que leva para recriá-los. Você pode acessar essas configurações de cache usando o <xref:System.Web.Configuration.SystemWebCachingSectionGroup.Cache%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.SystemWebCachingSectionGroup> objeto do arquivo de configuração associado a um aplicativo Web existente. Você pode usar esse objeto para acessar as seções contidas o `caching` grupo.  
+  
+ [!code-csharp[System.Web.Configuration.SystemWebCachingSectionGroup#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SystemWebCachingSectionGroup/CS/SystemWebCachingSectionGroup.cs#1)]
+ [!code-vb[System.Web.Configuration.SystemWebCachingSectionGroup#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SystemWebCachingSectionGroup/VB/SystemWebCachingSectionGroup.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SystemWebCachingSectionGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.SystemWebCachingSectionGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de <see cref="T:System.Web.Configuration.SystemWebCachingSectionGroup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SystemWebCachingSectionGroup.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.SystemWebCachingSectionGroup> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cache">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.CacheSection Cache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.CacheSection Cache" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SystemWebCachingSectionGroup.Cache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cache")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.CacheSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see langword="cache" /> seção contida dentro da configuração.</summary>
+        <value>O objeto <see cref="T:System.Web.Configuration.CacheSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.CacheSection> objeto se refere a `cache` seção do arquivo de configuração. Você pode usar o <xref:System.Web.Configuration.CacheSection> classe para modificar o `cache` seção programaticamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.CacheSection> objeto do arquivo de configuração de um aplicativo Web existente.  
+  
+ [!code-csharp[System.Web.Configuration.SystemWebCachingSectionGroup#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SystemWebCachingSectionGroup/CS/SystemWebCachingSectionGroup.cs#2)]
+ [!code-vb[System.Web.Configuration.SystemWebCachingSectionGroup#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SystemWebCachingSectionGroup/VB/SystemWebCachingSectionGroup.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputCache">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.OutputCacheSection OutputCache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.OutputCacheSection OutputCache" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SystemWebCachingSectionGroup.OutputCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("outputCache")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.OutputCacheSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see langword="outputCache" /> seção contida dentro da configuração.</summary>
+        <value>O objeto <see cref="T:System.Web.Configuration.OutputCacheSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.OutputCacheSection> objeto se refere a `outputCache` seção do arquivo de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.OutputCacheSection> objeto do arquivo de configuração de um aplicativo Web existente.  
+  
+ [!code-csharp[System.Web.Configuration.SystemWebCachingSectionGroup#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SystemWebCachingSectionGroup/CS/SystemWebCachingSectionGroup.cs#3)]
+ [!code-vb[System.Web.Configuration.SystemWebCachingSectionGroup#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SystemWebCachingSectionGroup/VB/SystemWebCachingSectionGroup.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputCacheSettings">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.OutputCacheSettingsSection OutputCacheSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.OutputCacheSettingsSection OutputCacheSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SystemWebCachingSectionGroup.OutputCacheSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("outputCacheSettings")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.OutputCacheSettingsSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see langword="outputCacheSettings" /> seção contida dentro da configuração.</summary>
+        <value>O objeto <see cref="T:System.Web.Configuration.OutputCacheSettingsSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.OutputCacheSettingsSection> objeto se refere a `outputCacheSettings` seção do arquivo de configuração.  
+  
+ As configurações de cache de saída habilitar ou desabilitar o cache de saída persistente baseada em disco, definem o local para persistir os dados sejam armazenados em cache e especifique o tamanho máximo do cache por aplicativo.  
+  
+ O ASP.NET permite armazenar em cache várias versões de uma resposta de página declarativamente usando atributos da diretiva e programaticamente usando as propriedades e métodos do <xref:System.Web.HttpCachePolicy> classe.  
+  
+ Você pode obter os mesmos resultados por meio da configuração do aplicativo usando o <xref:System.Web.Configuration.OutputCacheSettingsSection> ou <xref:System.Web.Configuration.OutputCacheProfile> tipo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.OutputCacheSettingsSection> objeto do arquivo de configuração de um aplicativo Web existente.  
+  
+ [!code-csharp[System.Web.Configuration.SystemWebCachingSectionGroup#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SystemWebCachingSectionGroup/CS/SystemWebCachingSectionGroup.cs#4)]
+ [!code-vb[System.Web.Configuration.SystemWebCachingSectionGroup#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SystemWebCachingSectionGroup/VB/SystemWebCachingSectionGroup.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SqlCacheDependency">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.SqlCacheDependencySection SqlCacheDependency { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.SqlCacheDependencySection SqlCacheDependency" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.SystemWebCachingSectionGroup.SqlCacheDependency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("sqlCacheDependency")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.SqlCacheDependencySection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see langword="sqlCacheDependency" /> seção contida dentro da configuração.</summary>
+        <value>O objeto <see cref="T:System.Web.Configuration.SqlCacheDependencySection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.SqlCacheDependencySection> objeto se refere a `sqlCacheDependency` seção do arquivo de configuração.  
+  
+ A dependência de cache SQL estabelece uma relação entre um item armazenado em cache de um aplicativo ASP.NET e uma tabela de banco de dados específica do SQL Server. Uma instância do <xref:System.Web.Caching.SqlCacheDependency> classe deve monitorar a tabela para que quando a tabela altera o item será removido automaticamente do cache.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.SqlCacheDependencySection> objeto do arquivo de configuração de um aplicativo Web existente.  
+  
+ [!code-csharp[System.Web.Configuration.SystemWebCachingSectionGroup#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.SystemWebCachingSectionGroup/CS/SystemWebCachingSectionGroup.cs#5)]
+ [!code-vb[System.Web.Configuration.SystemWebCachingSectionGroup#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.SystemWebCachingSectionGroup/VB/SystemWebCachingSectionGroup.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

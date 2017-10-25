@@ -1,0 +1,146 @@
+<Type Name="IXsltContextVariable" FullName="System.Xml.Xsl.IXsltContextVariable">
+  <TypeSignature Language="C#" Value="public interface IXsltContextVariable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXsltContextVariable" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.IXsltContextVariable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface para uma variável que é definida na folha de estilos durante a execução de tempo de execução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como usar <xref:System.Xml.Xsl.IXsltContextVariable> , consulte o artigo Q324899, "Como implementar e usar personalizado funções quando você executar XPath consultas em Visual Basic .NET" na Base de dados de Conhecimento Microsoft em http://support.microsoft.com.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="public object Evaluate (System.Xml.Xsl.XsltContext xsltContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Evaluate(class System.Xml.Xsl.XsltContext xsltContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.IXsltContextVariable.Evaluate(System.Xml.Xsl.XsltContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xsltContext" Type="System.Xml.Xsl.XsltContext" />
+      </Parameters>
+      <Docs>
+        <param name="xsltContext">Um <see cref="T:System.Xml.Xsl.XsltContext" /> que representa o contexto de execução da variável.</param>
+        <summary>Avalia a variável no tempo de execução e retorna um objeto que representa o valor da variável.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor da variável. Tipos de retorno possíveis incluem a cadeia de caracteres, número, booliano, fragmento de documento ou conjunto de nós.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocal">
+      <MemberSignature Language="C#" Value="public bool IsLocal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLocal" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.IXsltContextVariable.IsLocal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a variável local.</summary>
+        <value>
+          <see langword="true" />Se a variável é uma variável local no contexto atual; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsParam">
+      <MemberSignature Language="C#" Value="public bool IsParam { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsParam" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.IXsltContextVariable.IsParam" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a variável é um parâmetro de transformações de linguagem de folha de estilos extensível (XSLT). Isso pode ser um parâmetro para um modelo ou uma folha de estilos.</summary>
+        <value>
+          <see langword="true" />Se a variável é um parâmetro XSLT; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VariableType">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathResultType VariableType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XPath.XPathResultType VariableType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.IXsltContextVariable.VariableType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathResultType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xml.XPath.XPathResultType" /> que representa o tipo de XML Path Language (XPath) da variável.</summary>
+        <value>O <see cref="T:System.Xml.XPath.XPathResultType" /> que representa o tipo de XPath da variável.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

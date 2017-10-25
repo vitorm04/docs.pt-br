@@ -1,0 +1,143 @@
+<Type Name="License" FullName="System.ComponentModel.License">
+  <TypeSignature Language="C#" Value="public abstract class License : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit License extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.License" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a classe base <see langword="abstract" /> para todas as licenças. Uma licença é concedida a uma instância específica de um componente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os componentes devem chamar <xref:System.ComponentModel.License.Dispose%2A> para as licenças eles conceder quando o componente é descartado ou finalizado.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.ComponentModel.License" />, você deve substituir os seguintes membros: <see cref="P:System.ComponentModel.License.LicenseKey" /> e <see cref="M:System.ComponentModel.License.Dispose" />.  
+  
+ Para obter mais informações sobre licenciamento, consulte [como: controles e componentes de licença](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected License ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.License.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.License" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public abstract void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.License.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, libera os recursos usados pela licença.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os componentes devem chamar <xref:System.ComponentModel.License.Dispose%2A> das licenças que eles conceder quando o componente é descartado ou finalizado.  
+  
+ Um <xref:System.ComponentModel.LicenseProvider> pode usar as licenças concede para acompanhar o seu uso.  
+  
+ Chamar <xref:System.ComponentModel.License.Dispose%2A> quando tiver terminado de usar o <xref:System.ComponentModel.License>. O <xref:System.ComponentModel.License.Dispose%2A> método deixa o <xref:System.ComponentModel.License> em um estado inutilizável. Depois de chamar <xref:System.ComponentModel.License.Dispose%2A>, você deve liberar todas as referências para o <xref:System.ComponentModel.License> para a memória estava ocupando pode ser recuperada pela coleta de lixo.  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.ComponentModel.License.Dispose%2A> antes de liberar sua última referência para o <xref:System.ComponentModel.License>. Caso contrário, os recursos de <xref:System.ComponentModel.License> está usando não será liberada até que as chamadas de coleta de lixo a <xref:System.ComponentModel.License> destruidor do objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LicenseKey">
+      <MemberSignature Language="C#" Value="public abstract string LicenseKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LicenseKey" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.License.LicenseKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a chave de licença concedida a esse componente.</summary>
+        <value>Uma chave de licença concedida a esse componente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ComponentModel.LicenseProvider> pode usar qualquer cadeia de caracteres Unicode como uma chave de licença. O <xref:System.ComponentModel.License.LicenseKey%2A> deve ser tratado como um cookie opaco, ou seja, um cookie com uma estrutura interna deliberadamente oculto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

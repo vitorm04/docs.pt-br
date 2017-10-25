@@ -1,0 +1,49 @@
+<Type Name="ExitEventArgs" FullName="System.Windows.ExitEventArgs">
+  <TypeSignature Language="C#" Value="public class ExitEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExitEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ExitEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Argumentos de evento para o evento <see cref="E:System.Windows.Application.Exit" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationExitCode">
+      <MemberSignature Language="C#" Value="public int ApplicationExitCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ApplicationExitCode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ExitEventArgs.ApplicationExitCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o código de saída que um aplicativo retorna para o sistema operacional quando é encerrado.</summary>
+        <value>Obtém ou define o código de saída que um aplicativo retorna para o sistema operacional quando é encerrado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo normalmente retorna um código de saída para o sistema operacional para indicar se um aplicativo foi encerrado com êxito ou não. Um valor de código de saída do aplicativo de **0** (o padrão) é comumente usado para indicar êxito. No entanto, você é livre para retornar valores de código de saída que são apropriados para seu aplicativo.  
+  
+ Você pode especificar um código de saída manipulando o <xref:System.Windows.Application.Exit> evento e configuração <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> com um valor apropriado.  
+  
+> [!NOTE]
+>  Você também pode especificar um código de saída chamando <xref:System.Windows.Application.Shutdown%2A> método. Nesse caso, o valor de <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> é o valor do código de saída que você passa para <xref:System.Windows.Application.Shutdown%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

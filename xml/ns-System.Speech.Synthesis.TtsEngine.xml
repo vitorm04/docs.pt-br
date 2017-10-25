@@ -1,0 +1,31 @@
+<Namespace Name="System.Speech.Synthesis.TtsEngine">
+  <Docs>
+    <summary>Suporta a criação de fala síntese Markup Language (SSML) com base em mecanismos personalizados para a renderização de texto em fala (TTS).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os membros do <xref:System.Speech.Synthesis.TtsEngine> namespace tornar disponível tecnologia de fala de área de trabalho do Windows oferecem suporte para fala síntese Markup Language (SSML) com base em linguagem de marcação e a construção de mecanismos de fala sintético.  
+  
+ A linguagem de marcação SSML é o padrão da indústria para fornecer uma linguagem rica, com base em XML para ajudar os mecanismos de fala sintético. Ele é aprovado pela Microsoft e de nossos concorrentes. Para obter mais informações sobre SSML, consulte [especificação de linguagem de marcação de síntese de fala](http://go.microsoft.com/fwlink/?LinkId=15144).  
+  
+ Criação de um novo do mecanismo de fala sintética usando <xref:System.Speech.Synthesis.TtsEngine> requer a implementação e o registro de um objeto derivado da classe base abstrata <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml>.  
+  
+ <xref:System.Speech.Synthesis.TtsEngine>mecanismos de fala sintético com base são acessados por meio de infraestrutura de tecnologia de voz de área de trabalho do Windows, usando as ferramentas no <xref:System.Speech.Synthesis> namespace, em particular <xref:System.Speech.Synthesis.SpeechSynthesizer> objeto e, em seguida, nunca diretamente são usados por aplicativos.  
+  
+ As infraestruturas de tecnologia de voz de área de trabalho do Windows garante que todos os parâmetros passados para um mecanismo de fala sintéticos são validados e sincronização de thread.  
+  
+ A do mecanismo de fala sintético implementado usando <xref:System.Speech.Synthesis.TtsEngine> tecnologia pode:  
+  
+-   Receber entrada, (consulte <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A>,.<xref:System.Speech.Synthesis.TtsEngine.TextFragment>, <xref:System.Speech.Synthesis.TtsEngine.FragmentState>, e <xref:System.Speech.Synthesis.TtsEngine.SkipInfo> )  
+  
+-   Fila de eventos e especifique as ações (consulte <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction>, <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite>, <xref:System.Speech.Synthesis.TtsEngine.EventParameterType>, <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo>).  
+  
+-   Controlar o controle de tom, falando taxa e o volume da saída de fala (consulte <xref:System.Speech.Synthesis.TtsEngine.ContourPoint>, <xref:System.Speech.Synthesis.TtsEngine.ContourPointChangeType>, <xref:System.Speech.Synthesis.TtsEngine.EmphasisBreak>, <xref:System.Speech.Synthesis.TtsEngine.EmphasisWord>, <xref:System.Speech.Synthesis.TtsEngine.Prosody>, <xref:System.Speech.Synthesis.TtsEngine.ProsodyNumber>, <xref:System.Speech.Synthesis.TtsEngine.ProsodyPitch>, <xref:System.Speech.Synthesis.TtsEngine.ProsodyRange>, <xref:System.Speech.Synthesis.TtsEngine.ProsodyRate>, <xref:System.Speech.Synthesis.TtsEngine.ProsodyUnit>, e <xref:System.Speech.Synthesis.TtsEngine.ProsodyVolume>)  
+  
+-   Determinar o destino de saída e uso de síntese de fala (consulte <xref:System.Speech.Synthesis.TtsEngine.SayAs>, <xref:System.Speech.Synthesis.TtsEngine.SpeakOutputFormat>)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

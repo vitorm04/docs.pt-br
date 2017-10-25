@@ -1,0 +1,630 @@
+<Type Name="Tuple" FullName="System.Tuple">
+  <TypeSignature Language="C#" Value="public static class Tuple" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Tuple extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Tuple" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos estáticos para criar objetos de tupla.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para exibir o código-fonte do .NET Framework para este tipo, consulte o [fonte de referência](http://referencesource.microsoft.com/#mscorlib/system/tuple.cs#9124c4bea9ab0199). Percorra o código-fonte online, baixe a referência para exibição offline e percorrer as fontes (incluindo atualizações e patches) durante a depuração; consulte [instruções](http://referencesource.microsoft.com/).  
+  
+ Uma tupla é uma estrutura de dados que tem um número específico e a sequência de elementos. Um exemplo de uma tupla é uma estrutura de dados com três elementos (conhecido como uma tupla de 3 ou tripla) que é usada para armazenar um identificador, como o nome de uma pessoa em um ano no segundo elemento e renda da pessoa para esse ano no terceiro elemento, o primeiro elemento. O .NET Framework oferece suporte diretamente a tuplas com os elementos de um a sete. Além disso, você pode criar tuplas de oito ou mais elementos de aninhamento de objetos de tupla no <xref:System.Tuple%608.Rest%2A> propriedade de um <xref:System.Tuple%608> objeto.  
+  
+ Tuplas são comumente usadas em quatro maneiras:  
+  
+-   Para representar um único conjunto de dados. Por exemplo, uma tupla pode representar um registro de banco de dados, e seus componentes podem representar campos individuais do registro.  
+  
+-   Para fornecer acesso fácil a, e a manipulação de um conjunto de dados.  
+  
+-   Para retornar vários valores de um método sem usar `out` parâmetros (c#) ou `ByRef` parâmetros (Visual Basic).  
+  
+-   Para passar vários valores para um método por meio de um parâmetro único. Por exemplo, o <xref:System.Threading.Thread.Start%28System.Object%29?displayProperty=nameWithType> método tem um único parâmetro que permite que você forneça um valor para o método que o thread é executado no momento da inicialização. Se você fornecer uma <xref:System.Tuple%603> objeto como o argumento de método, você pode fornecer a rotina de inicialização do thread com três itens de dados.  
+  
+ O <xref:System.Tuple> classe não se representa uma tupla. Em vez disso, é uma classe que fornece métodos estáticos para criar instâncias dos tipos de coleção de itens que são suportados pelo .NET Framework. Fornece métodos auxiliares que você pode chamar para instanciar objetos de tupla sem a necessidade de especificar explicitamente o tipo de cada componente de tupla.  
+  
+ Embora você possa criar uma instância de uma classe de tupla chamando o construtor de classe, o código para fazer isso pode ser trabalhoso. O exemplo a seguir usa um construtor de classe para criar uma tupla de 7 ou sétupla que contém dados de população cidade de Nova York, para cada censo de 1950 até 2000.  
+  
+ [!code-csharp[System.Tuple.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.class/cs/example1.cs#1)]
+ [!code-vb[System.Tuple.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.class/vb/example1.vb#1)]  
+  
+ Criando o mesmo objeto de tupla usando um método auxiliar é mais simples, como mostra o exemplo a seguir.  
+  
+ [!code-csharp[System.Tuple.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.class/cs/example1.cs#2)]
+ [!code-vb[System.Tuple.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.class/vb/example1.vb#2)]  
+  
+ O <xref:System.Tuple.Create%2A> métodos auxiliares diretamente suportam à criação de objetos de tupla ter de uma a oito componentes (ou seja, singletons por meio de octuples). Embora não haja nenhum limite prático para o número de componentes pode ter uma tupla, métodos auxiliares não estão disponíveis para criar uma tupla com nove ou mais componentes. Para criar uma coleção de itens, você deve chamar o <xref:System.Tuple%608.%23ctor%2A?displayProperty=nameWithType> construtor.  
+  
+> [!NOTE]
+>  Para obter informações adicionais e exemplos que usam tuplas, consulte a documentação para os tipos de coleção de itens individuais no .NET Framework. Eles estão listados na seção Consulte também no final deste tópico.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma 8 tuplas (octuple) que contém os números primos que são menos de 20.  
+  
+ [!code-csharp[System.Tuple.Create#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/createntuple.cs#17)]
+ [!code-vb[System.Tuple.Create#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/createntuple.vb#17)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create&lt;T1&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1&gt; Create&lt;T1&gt; (T1 item1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`1&lt;!!T1&gt; Create&lt;T1&gt;(!!T1 item1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">O tipo do único componente da tupla.</typeparam>
+        <param name="item1">O valor do único componente da tupla.</param>
+        <summary>Cria uma nova tupla de 1 ou singleton.</summary>
+        <returns>Uma tupla cujo valor é (<paramref name="item1" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>é um método auxiliar que você pode chamar para instanciar um objeto de tupla de 1 sem a necessidade de especificar explicitamente o tipo do seu componente. O exemplo a seguir usa o <xref:System.Tuple.Create%2A> método para instanciar uma tupla de 1 cujo componente é do tipo <xref:System.Int32>.  
+  
+ [!code-csharp[System.Tuple.Create#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#1)]
+ [!code-vb[System.Tuple.Create#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#1)]  
+  
+ Esse código é equivalente à seguinte chamada para o <xref:System.Tuple%601.%23ctor%2A> construtor de classe.  
+  
+ [!code-csharp[System.Tuple.Create#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#2)]
+ [!code-vb[System.Tuple.Create#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2&gt; Create&lt;T1,T2&gt; (T1 item1, T2 item2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`2&lt;!!T1, !!T2&gt; Create&lt;T1, T2&gt;(!!T1 item1, !!T2 item2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``2(``0,``1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">O tipo do primeiro componente da tupla.</typeparam>
+        <typeparam name="T2">O tipo do segundo componente da tupla.</typeparam>
+        <param name="item1">O valor do primeiro componente da tupla.</param>
+        <param name="item2">O valor do segundo componente da tupla.</param>
+        <summary>Cria uma nova tupla de 2 ou par.</summary>
+        <returns>Uma tupla de 2 cujo valor é (<paramref name="item1" />, <paramref name="item2" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>é um método auxiliar que você pode chamar para instanciar um objeto de tupla de 2 sem ter que especificar explicitamente os tipos de seus componentes. O exemplo a seguir usa o <xref:System.Tuple.Create%2A> método para instanciar uma tupla de 2.  
+  
+ [!code-csharp[System.Tuple.Create#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#3)]
+ [!code-vb[System.Tuple.Create#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#3)]  
+  
+ Esse código é equivalente à seguinte chamada para o <xref:System.Tuple%602.%23ctor%2A> construtor de classe.  
+  
+ [!code-csharp[System.Tuple.Create#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#4)]
+ [!code-vb[System.Tuple.Create#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3&gt; Create&lt;T1,T2,T3&gt; (T1 item1, T2 item2, T3 item3);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`3&lt;!!T1, !!T2, !!T3&gt; Create&lt;T1, T2, T3&gt;(!!T1 item1, !!T2 item2, !!T3 item3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``3(``0,``1,``2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">O tipo do primeiro componente da tupla.</typeparam>
+        <typeparam name="T2">O tipo do segundo componente da tupla.</typeparam>
+        <typeparam name="T3">O tipo do terceiro componente da tupla.</typeparam>
+        <param name="item1">O valor do primeiro componente da tupla.</param>
+        <param name="item2">O valor do segundo componente da tupla.</param>
+        <param name="item3">O valor do terceiro componente da tupla.</param>
+        <summary>Cria uma nova tupla de 3 ou um triplo.</summary>
+        <returns>Uma tupla de 3 cujo valor é (<paramref name="item1" />, <paramref name="item2" /> e <paramref name="item3" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>é um método auxiliar que você pode chamar para instanciar um objeto de tupla de 3 sem a necessidade de especificar explicitamente os tipos de seus componentes. O exemplo a seguir usa o <xref:System.Tuple.Create%2A> método para instanciar uma tupla de 3.  
+  
+ [!code-csharp[System.Tuple.Create#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#5)]
+ [!code-vb[System.Tuple.Create#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#5)]  
+  
+ Esse código é equivalente à seguinte chamada para o <xref:System.Tuple%603.%23ctor%2A?displayProperty=nameWithType> construtor de classe.  
+  
+ [!code-csharp[System.Tuple.Create#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#6)]
+ [!code-vb[System.Tuple.Create#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3,T4&gt; Create&lt;T1,T2,T3,T4&gt; (T1 item1, T2 item2, T3 item3, T4 item4);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`4&lt;!!T1, !!T2, !!T3, !!T4&gt; Create&lt;T1, T2, T3, T4&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``4(``0,``1,``2,``3)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3,T4&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">O tipo do primeiro componente da tupla.</typeparam>
+        <typeparam name="T2">O tipo do segundo componente da tupla.</typeparam>
+        <typeparam name="T3">O tipo do terceiro componente da tupla.</typeparam>
+        <typeparam name="T4">O tipo do quarto tipo componente da tupla.</typeparam>
+        <param name="item1">O valor do primeiro componente da tupla.</param>
+        <param name="item2">O valor do segundo componente da tupla.</param>
+        <param name="item3">O valor do terceiro componente da tupla.</param>
+        <param name="item4">O valor do quarto componente da tupla.</param>
+        <summary>Cria uma nova tupla de 4 ou quádrupla.</summary>
+        <returns>Uma tupla de 4 cujo valor é (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>é um método auxiliar que você pode chamar para instanciar um objeto de tupla de 4 sem a necessidade de especificar explicitamente os tipos de seus componentes. O exemplo a seguir usa o <xref:System.Tuple.Create%2A> método para instanciar uma tupla de 4.  
+  
+ [!code-csharp[System.Tuple.Create#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#7)]
+ [!code-vb[System.Tuple.Create#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#7)]  
+  
+ Esse código é equivalente à seguinte chamada para o <xref:System.Tuple%604.%23ctor%2A?displayProperty=nameWithType> construtor de classe.  
+  
+ [!code-csharp[System.Tuple.Create#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#8)]
+ [!code-vb[System.Tuple.Create#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3,T4,T5&gt; Create&lt;T1,T2,T3,T4,T5&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`5&lt;!!T1, !!T2, !!T3, !!T4, !!T5&gt; Create&lt;T1, T2, T3, T4, T5&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``5(``0,``1,``2,``3,``4)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3,T4,T5&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">O tipo do primeiro componente da tupla.</typeparam>
+        <typeparam name="T2">O tipo do segundo componente da tupla.</typeparam>
+        <typeparam name="T3">O tipo do terceiro componente da tupla.</typeparam>
+        <typeparam name="T4">O tipo do quarto tipo componente da tupla.</typeparam>
+        <typeparam name="T5">O tipo do quinto componente da tupla.</typeparam>
+        <param name="item1">O valor do primeiro componente da tupla.</param>
+        <param name="item2">O valor do segundo componente da tupla.</param>
+        <param name="item3">O valor do terceiro componente da tupla.</param>
+        <param name="item4">O valor do quarto componente da tupla.</param>
+        <param name="item5">O valor do quinto componente da tupla.</param>
+        <summary>Cria uma nova tupla de 5 ou quíntuplo.</summary>
+        <returns>Uma tupla de 5 cujo valor é (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" /> e <paramref name="item5" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>é um método auxiliar que você pode chamar para instanciar um objeto de 5 tuplas sem ter que especificar explicitamente os tipos de seus componentes. O exemplo a seguir usa o <xref:System.Tuple.Create%2A> método para instanciar uma tupla 5.  
+  
+ [!code-csharp[System.Tuple.Create#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#9)]
+ [!code-vb[System.Tuple.Create#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#9)]  
+  
+ Esse código é equivalente à seguinte chamada para o <xref:System.Tuple%605.%23ctor%2A> construtor de classe.  
+  
+ [!code-csharp[System.Tuple.Create#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#10)]
+ [!code-vb[System.Tuple.Create#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5,T6&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3,T4,T5,T6&gt; Create&lt;T1,T2,T3,T4,T5,T6&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`6&lt;!!T1, !!T2, !!T3, !!T4, !!T5, !!T6&gt; Create&lt;T1, T2, T3, T4, T5, T6&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5, !!T6 item6) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``6(``0,``1,``2,``3,``4,``5)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3,T4,T5,T6&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+        <TypeParameter Name="T6" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+        <Parameter Name="item6" Type="T6" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">O tipo do primeiro componente da tupla.</typeparam>
+        <typeparam name="T2">O tipo do segundo componente da tupla.</typeparam>
+        <typeparam name="T3">O tipo do terceiro componente da tupla.</typeparam>
+        <typeparam name="T4">O tipo do quarto tipo componente da tupla.</typeparam>
+        <typeparam name="T5">O tipo do quinto componente da tupla.</typeparam>
+        <typeparam name="T6">O tipo do sexto componente da tupla.</typeparam>
+        <param name="item1">O valor do primeiro componente da tupla.</param>
+        <param name="item2">O valor do segundo componente da tupla.</param>
+        <param name="item3">O valor do terceiro componente da tupla.</param>
+        <param name="item4">O valor do quarto componente da tupla.</param>
+        <param name="item5">O valor do quinto componente da tupla.</param>
+        <param name="item6">O valor do sexto componente da tupla.</param>
+        <summary>Cria uma nova tupla de 6 ou sêxtupla.</summary>
+        <returns>Uma tupla de 6 cujo valor é (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />, <paramref name="item5" />, <paramref name="item6" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>é um método auxiliar que você pode chamar para instanciar um objeto de tupla de 6 sem ter que especificar explicitamente os tipos de seus componentes. O exemplo a seguir usa o <xref:System.Tuple.Create%2A> método para instanciar uma tupla de 6.  
+  
+ [!code-csharp[System.Tuple.Create#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#11)]
+ [!code-vb[System.Tuple.Create#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#11)]  
+  
+ Esse código é equivalente à seguinte chamada para o <xref:System.Tuple%606.%23ctor%2A> construtor de classe.  
+  
+ [!code-csharp[System.Tuple.Create#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#12)]
+ [!code-vb[System.Tuple.Create#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5,T6,T7&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3,T4,T5,T6,T7&gt; Create&lt;T1,T2,T3,T4,T5,T6,T7&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`7&lt;!!T1, !!T2, !!T3, !!T4, !!T5, !!T6, !!T7&gt; Create&lt;T1, T2, T3, T4, T5, T6, T7&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5, !!T6 item6, !!T7 item7) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``7(``0,``1,``2,``3,``4,``5,``6)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3,T4,T5,T6,T7&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+        <TypeParameter Name="T6" />
+        <TypeParameter Name="T7" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+        <Parameter Name="item6" Type="T6" />
+        <Parameter Name="item7" Type="T7" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">O tipo do primeiro componente da tupla.</typeparam>
+        <typeparam name="T2">O tipo do segundo componente da tupla.</typeparam>
+        <typeparam name="T3">O tipo do terceiro componente da tupla.</typeparam>
+        <typeparam name="T4">O tipo do quarto tipo componente da tupla.</typeparam>
+        <typeparam name="T5">O tipo do quinto componente da tupla.</typeparam>
+        <typeparam name="T6">O tipo do sexto componente da tupla.</typeparam>
+        <typeparam name="T7">O tipo do sétimo componente da tupla.</typeparam>
+        <param name="item1">O valor do primeiro componente da tupla.</param>
+        <param name="item2">O valor do segundo componente da tupla.</param>
+        <param name="item3">O valor do terceiro componente da tupla.</param>
+        <param name="item4">O valor do quarto componente da tupla.</param>
+        <param name="item5">O valor do quinto componente da tupla.</param>
+        <param name="item6">O valor do sexto componente da tupla.</param>
+        <param name="item7">O valor do sétimo componente da tupla.</param>
+        <summary>Cria uma nova tupla de 7 ou um sétuplo.</summary>
+        <returns>Uma tupla de 7 cujo valor é (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />, <paramref name="item5" />, <paramref name="item6" /> e <paramref name="item7" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>é um método auxiliar que você pode chamar para instanciar um objeto de tupla de 7 sem ter que especificar explicitamente os tipos de seus componentes. O exemplo a seguir usa o <xref:System.Tuple.Create%2A> método para instanciar uma tupla de 7.  
+  
+ [!code-csharp[System.Tuple.Create#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#13)]
+ [!code-vb[System.Tuple.Create#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#13)]  
+  
+ Esse código é equivalente à seguinte chamada para o <xref:System.Tuple%607.%23ctor%2A> construtor de classe.  
+  
+ [!code-csharp[System.Tuple.Create#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/create1.cs#14)]
+ [!code-vb[System.Tuple.Create#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/create1.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T1,T2,T3,T4,T5,T6,T7,T8&gt;">
+      <MemberSignature Language="C#" Value="public static Tuple&lt;T1,T2,T3,T4,T5,T6,T7,Tuple&lt;T8&gt;&gt; Create&lt;T1,T2,T3,T4,T5,T6,T7,T8&gt; (T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Tuple`8&lt;!!T1, !!T2, !!T3, !!T4, !!T5, !!T6, !!T7, class System.Tuple`1&lt;!!T8&gt;&gt; Create&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(!!T1 item1, !!T2 item2, !!T3 item3, !!T4 item4, !!T5 item5, !!T6 item6, !!T7 item7, !!T8 item8) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Tuple.Create``8(``0,``1,``2,``3,``4,``5,``6,``7)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;T1,T2,T3,T4,T5,T6,T7,System.Tuple&lt;T8&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T1" />
+        <TypeParameter Name="T2" />
+        <TypeParameter Name="T3" />
+        <TypeParameter Name="T4" />
+        <TypeParameter Name="T5" />
+        <TypeParameter Name="T6" />
+        <TypeParameter Name="T7" />
+        <TypeParameter Name="T8" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T1" />
+        <Parameter Name="item2" Type="T2" />
+        <Parameter Name="item3" Type="T3" />
+        <Parameter Name="item4" Type="T4" />
+        <Parameter Name="item5" Type="T5" />
+        <Parameter Name="item6" Type="T6" />
+        <Parameter Name="item7" Type="T7" />
+        <Parameter Name="item8" Type="T8" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T1">O tipo do primeiro componente da tupla.</typeparam>
+        <typeparam name="T2">O tipo do segundo componente da tupla.</typeparam>
+        <typeparam name="T3">O tipo do terceiro componente da tupla.</typeparam>
+        <typeparam name="T4">O tipo do quarto tipo componente da tupla.</typeparam>
+        <typeparam name="T5">O tipo do quinto componente da tupla.</typeparam>
+        <typeparam name="T6">O tipo do sexto componente da tupla.</typeparam>
+        <typeparam name="T7">O tipo do sétimo componente da tupla.</typeparam>
+        <typeparam name="T8">O tipo do oitavo componente da tupla.</typeparam>
+        <param name="item1">O valor do primeiro componente da tupla.</param>
+        <param name="item2">O valor do segundo componente da tupla.</param>
+        <param name="item3">O valor do terceiro componente da tupla.</param>
+        <param name="item4">O valor do quarto componente da tupla.</param>
+        <param name="item5">O valor do quinto componente da tupla.</param>
+        <param name="item6">O valor do sexto componente da tupla.</param>
+        <param name="item7">O valor do sétimo componente da tupla.</param>
+        <param name="item8">O valor do oitavo componente da tupla.</param>
+        <summary>Cria uma nova tupla de 8 ou octupla.</summary>
+        <returns>Uma tupla de 8 (octupla) cujo valor é (<paramref name="item1" />, <paramref name="item2" />, <paramref name="item3" />, <paramref name="item4" />, <paramref name="item5" />, <paramref name="item6" />, <paramref name="item7" /> e <paramref name="item8" />).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Tuple.Create%2A>é um método auxiliar que você pode chamar para instanciar uma tupla de 8 sem ter que especificar explicitamente os tipos de seus componentes.  
+  
+> [!NOTE]
+>  Você deve chamar o <xref:System.Tuple%608.%23ctor%2A?displayProperty=nameWithType> construtor para criar uma tupla com nove ou mais componentes, a menos que o idioma fornece uma sintaxe especial para essa finalidade. Estático (`Shared` no Visual Basic) métodos de <xref:System.Tuple> classe não pode ser usada para criar uma tupla com nove ou mais componentes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma tupla de 8 cujos componentes são números primos que são menos de 20.  
+  
+ [!code-csharp[System.Tuple.Create#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/createntuple.cs#17)]
+ [!code-vb[System.Tuple.Create#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/createntuple.vb#17)]  
+  
+ Isso é equivalente ao exemplo a seguir, que usa o <xref:System.Tuple%608> construtor da classe em vez do <xref:System.Tuple.Create%2A> método de criação de fábrica. Observe que criar uma instância uma <xref:System.Tuple%608> objeto dessa maneira envolve consideravelmente mais código, porque você deve declarar um aninhada <xref:System.Tuple%601> de objeto como o <xref:System.Tuple%608> componente oitavo de objeto para produzir um octuple.  
+  
+ [!code-csharp[System.Tuple.Create#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.tuple.create/cs/ctor8.cs#20)]
+ [!code-vb[System.Tuple.Create#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.tuple.create/vb/ctor8.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

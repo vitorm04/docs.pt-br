@@ -1,0 +1,97 @@
+<Type Name="IActivityTemplateFactory" FullName="System.Activities.Presentation.IActivityTemplateFactory">
+  <TypeSignature Language="C#" Value="public interface IActivityTemplateFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IActivityTemplateFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.IActivityTemplateFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define o método de fábrica implementado por uma classe para criar um modelo que encapsula objetos <see cref="T:System.Activities.Activity" /> de “espaço reservado”.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Modelos personalizados de atividade devem implementar <xref:System.Activities.Presentation.IActivityTemplateFactory>. Modelos de atividade personalizados são usados para personalizar a configuração de atividades, incluindo atividades compostas personalizadas, para que os usuários não precisam criar cada uma das atividades individualmente e configurar todas as suas propriedades e outras configurações manualmente.  
+  
+   
+  
+## Examples  
+  
+```  
+  
+public sealed class MyDelayActivity : IActivityTemplateFactory  
+  
+{  
+     public Activity Create(DependencyObject target)  
+     {  
+         return new System.Activities.Statements.Delay  
+         {  
+             DisplayName = "DelayActivityTemplate",  
+             Duration = new TimeSpan(0,0,10)  
+  
+         };  
+     }  
+ }  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Create (System.Windows.DependencyObject target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Activity Create(class System.Windows.DependencyObject target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.IActivityTemplateFactory.Create(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="target">O objeto de dependência usado por esta instância de um <see cref="T:System.Activities.Presentation.IActivityTemplateFactory" />.</param>
+        <summary>Cria uma instância de <see cref="T:System.Activities.Activity" /> classe que representa um padrão de design predefinidos para o objeto de destino especificado.</summary>
+        <returns>Um fluxo de trabalho <see cref="T:System.Activities.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use isto para criar e configurar as instâncias de atividade usadas em um modelo de atividade personalizada.  
+  
+   
+  
+## Examples  
+ Crie um modelo que configura uma atividade de atraso com uma duração de dez segundos.  
+  
+```  
+  
+public sealed class MyDelayActivity : IActivityTemplateFactory  
+  
+{  
+     public Activity Create(DependencyObject target)  
+     {  
+         return new System.Activities.Statements.Delay  
+         {  
+             DisplayName = "DelayActivityTemplate",  
+             Duration = new TimeSpan(0,0,10)  
+  
+         };  
+     }  
+ }  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

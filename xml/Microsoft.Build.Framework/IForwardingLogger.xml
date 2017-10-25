@@ -1,0 +1,56 @@
+<Type Name="IForwardingLogger" FullName="Microsoft.Build.Framework.IForwardingLogger">
+  <TypeSignature Language="C#" Value="public interface IForwardingLogger : Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IForwardingLogger implements class Microsoft.Build.Framework.ILogger, class Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.IForwardingLogger" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.INodeLogger</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Estende o <see cref="T:Microsoft.Build.Framework.ILogger" /> interface fornece propriedades para encaminhar eventos para um agente em execução em um processo diferente. Ele também pode ser usado criar registradores de filtragem.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuildEventRedirector">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.IEventRedirector BuildEventRedirector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.IEventRedirector BuildEventRedirector" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IForwardingLogger.BuildEventRedirector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.IEventRedirector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtenha ou defina pelo mecanismo de compilação para permitir que os agentes de nó encaminhar mensagens para o agente de log central.</summary>
+        <value>Um <see cref="T:Microsoft.Build.Framework.IEventRedirector" /> que representa o redirecionador do evento para encaminhar mensagens para.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeId">
+      <MemberSignature Language="C#" Value="public int NodeId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NodeId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.IForwardingLogger.NodeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o mecanismo de compilação ou nó para informar o agente de log de encaminhamento em qual nó está em execução.</summary>
+        <value>Um inteiro que representa a ID do nó no qual o mecanismo de compilação está em execução.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

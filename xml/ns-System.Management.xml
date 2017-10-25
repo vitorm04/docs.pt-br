@@ -1,0 +1,6 @@
+<Namespace Name="System.Management">
+  <Docs>
+    <summary>Fornece acesso a um conjunto avançado de gerenciamento de eventos de gerenciamento e informações sobre o sistema, dispositivos e aplicativos ligados à infraestrutura do Windows Management Instrumentation (WMI). Aplicativos e serviços podem consultar informações interessantes de gerenciamento (como a quantidade de espaço livre restante no disco, o que é a utilização da CPU atual, que um determinado aplicativo de banco de dados está conectado e muito mais), usando classes derivadas de <see cref="T:System.Management.ManagementObjectSearcher" /> e <see cref="T:System.Management.ManagementQuery" />, ou se inscrever para uma variedade de eventos de gerenciamento usando o <see cref="T:System.Management.ManagementEventWatcher" /> classe. Os dados acessíveis podem ser de componentes gerenciados e no ambiente distribuído.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

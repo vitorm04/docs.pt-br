@@ -1,0 +1,270 @@
+<Type Name="IColumnMappingCollection" FullName="System.Data.IColumnMappingCollection">
+  <TypeSignature Language="C#" Value="public interface IColumnMappingCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IColumnMappingCollection implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Data.IColumnMappingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Contém uma coleção de objetos DataColumnMapping e é implementado pelo <see cref="T:System.Data.Common.DataColumnMappingCollection" />, que é usado em comum por provedores de dados do .NET Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.IColumnMappingCollection> interface permite que uma classe implementar uma coleção de ColumnMapping de herança. Para obter mais informações, consulte [DataAdapter DataTable e DataColumn mapeamentos](~/docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md).  
+  
+ Um aplicativo não cria uma instância do <xref:System.Data.IColumnMappingCollection> interface diretamente, mas cria uma instância de uma classe que herda <xref:System.Data.IColumnMappingCollection>.  
+  
+ As classes que herdam <xref:System.Data.IColumnMappingCollection> deve implementar membros herdados todas as e geralmente definem membros adicionais para adicionar funcionalidade específica do provedor. Por exemplo, o <xref:System.Data.IColumnMappingCollection> interface define o <xref:System.Data.IColumnMappingCollection.RemoveAt%2A> método. Por sua vez, o <xref:System.Data.Common.DataTableMappingCollection> classe herda esse método e define duas sobrecargas adicionais do <xref:System.Data.Common.DataTableMappingCollection.RemoveAt%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa uma instância da classe derivada, <xref:System.Data.Common.DataTableMapping>, <xref:System.Data.Common.DataColumnMappingCollection.Add%2A> vários <xref:System.Data.Common.DataColumnMapping> objetos em seu <xref:System.Data.Common.DataTableMapping.ColumnMappings%2A> tabelas de origem de coleção e, em seguida, exibe uma lista dessas mapeado. Este exemplo supõe que um <xref:System.Data.Common.DataTableMapping> já foi criado.  
+  
+ [!code-csharp[Classic WebData DataColumnMappingCollection Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnMappingCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnMappingCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnMappingCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você herda o <see cref="T:System.Data.IColumnMappingCollection" /> interface, você deve implementar o seguinte construtor:  
+  
+ <list type="table"><listheader><term>Item  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>ColumnMappingCollection()  
+  
+ </term><description>Cria uma classe ColumnMappingCollection vazia.  
+  
+ </description></item></list></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Data.IColumnMapping Add (string sourceColumnName, string dataSetColumnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IColumnMapping Add(string sourceColumnName, string dataSetColumnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IColumnMappingCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IColumnMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceColumnName" Type="System.String" />
+        <Parameter Name="dataSetColumnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumnName">O nome diferencia maiusculas de minúsculas da coluna de origem.</param>
+        <param name="dataSetColumnName">O nome do <see cref="T:System.Data.DataSet" /> coluna.</param>
+        <summary>Adiciona um objeto de ColumnMapping à coleção ColumnMapping usando a coluna de origem e <see cref="T:System.Data.DataSet" /> nomes de coluna.</summary>
+        <returns>O objeto de ColumnMapping que foi adicionado à coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string sourceColumnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(string sourceColumnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IColumnMappingCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceColumnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumnName">O nome diferencia maiusculas de minúsculas da coluna de origem.</param>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.Common.DataColumnMappingCollection" /> contém um <see cref="T:System.Data.Common.DataColumnMapping" /> objeto com o nome da coluna de origem especificado.</summary>
+        <returns>
+          <see langword="true" />Se um <see cref="T:System.Data.Common.DataColumnMapping" /> objeto com o nome da coluna de origem especificado existir, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByDataSetColumn">
+      <MemberSignature Language="C#" Value="public System.Data.IColumnMapping GetByDataSetColumn (string dataSetColumnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IColumnMapping GetByDataSetColumn(string dataSetColumnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IColumnMappingCollection.GetByDataSetColumn(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IColumnMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSetColumnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dataSetColumnName">O nome do <see cref="T:System.Data.DataSet" /> coluna dentro da coleção.</param>
+        <summary>Obtém o objeto de ColumnMapping com especificado <see cref="T:System.Data.DataSet" /> nome da coluna.</summary>
+        <returns>O objeto de ColumnMapping com especificado <see langword="DataSet" /> nome da coluna.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (string sourceColumnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(string sourceColumnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IColumnMappingCollection.IndexOf(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceColumnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumnName">O nome diferencia maiusculas de minúsculas da coluna de origem.</param>
+        <summary>Obtém o local do <see cref="T:System.Data.Common.DataColumnMapping" /> objeto com o nome da coluna de origem especificado. O nome diferencia maiusculas de minúsculas.</summary>
+        <returns>O local com base em zero do <see langword="DataColumnMapping" /> objeto com o nome da coluna de origem especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir procura por uma instância da classe derivada, <xref:System.Data.Common.DataColumnMapping>, com o nome da coluna de origem especificado dentro de um <xref:System.Data.Common.DataColumnMappingCollection> coleção. Se o <xref:System.Data.Common.DataColumnMapping> existir, o exemplo exibe o nome e o índice do mapeamento. Se o mapeamento não existir, o exemplo exibe um erro. Este exemplo supõe que um <xref:System.Data.Common.DataColumnMappingCollection> coleção foi criada.  
+  
+ [!code-csharp[Classic WebData DataColumnMappingCollection.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnMappingCollection.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnMappingCollection.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnMappingCollection.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IColumnMappingCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">O <see langword="SourceColumn" /> nome do <see langword="IColumnMapping" /> objeto a ser encontrado.</param>
+        <summary>Obtém ou define o <see cref="T:System.Data.IColumnMapping" /> objeto com especificado <see langword="SourceColumn" /> nome.</summary>
+        <value>O <see langword="IColumnMapping" /> objeto com especificado <see langword="SourceColumn" /> nome.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (string sourceColumnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(string sourceColumnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IColumnMappingCollection.RemoveAt(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceColumnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumnName">O diferencia maiusculas de minúsculas <see langword="SourceColumn" /> nome.</param>
+        <summary>Remove o <see cref="T:System.Data.IColumnMapping" /> objeto com especificado <see cref="P:System.Data.IColumnMapping.SourceColumn" /> nome da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir procura por uma instância da classe derivada, <xref:System.Data.Common.DataColumnMapping>, com o determinado `SourceColumn` nome dentro de um <xref:System.Data.Common.DataColumnMappingCollection> coleção. Se o <xref:System.Data.Common.DataColumnMapping> existir, o mapeamento é removido. Este exemplo supõe que um <xref:System.Data.Common.DataColumnMappingCollection> coleção foi criada.  
+  
+ [!code-csharp[Classic WebData DataColumnMappingCollection.RemoveAt1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataColumnMappingCollection.RemoveAt1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataColumnMappingCollection.RemoveAt1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataColumnMappingCollection.RemoveAt1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Um <see cref="T:System.Data.Common.DataColumnMapping" /> o objeto não existe com especificado <see langword="SourceColumn" /> nome.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

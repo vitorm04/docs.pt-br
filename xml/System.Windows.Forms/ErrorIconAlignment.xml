@@ -1,0 +1,130 @@
+<Type Name="ErrorIconAlignment" FullName="System.Windows.Forms.ErrorIconAlignment">
+  <TypeSignature Language="C#" Value="public enum ErrorIconAlignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ErrorIconAlignment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ErrorIconAlignment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica constantes indicando os locais de um ícone de erro pode aparecer em relação ao controle com um erro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por <xref:System.Windows.Forms.ErrorProvider>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Windows.Forms.ErrorProvider> classe para notificar o usuário de um erro de entrada de dados. O exemplo cria um <xref:System.Windows.Forms.Form> que contém um <xref:System.Windows.Forms.TextBox> controle, uma <xref:System.Windows.Forms.NumericUpDown> controle e um <xref:System.Windows.Forms.ComboBox> controlar cada validando seu conteúdo e um <xref:System.Windows.Forms.ErrorProvider> para cada controle. O exemplo define o erro opções de ícone usando o <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A> e <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> propriedades e o <xref:System.Windows.Forms.ErrorProvider.SetIconAlignment%2A> e <xref:System.Windows.Forms.ErrorProvider.SetIconPadding%2A> métodos. O <xref:System.Windows.Forms.ErrorProvider.SetError%2A> método é chamado com ou sem o texto de erro apropriado durante um controle <xref:System.Windows.Forms.Control.Validated> eventos, dependendo do conteúdo no controle.  
+  
+ [!code-cpp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CPP/errorproviderexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CS/errorproviderexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/VB/errorproviderexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BottomLeft">
+      <MemberSignature Language="C#" Value="BottomLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment BottomLeft = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.BottomLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ícone é exibido alinhado com a parte inferior do controle e à esquerda do controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="BottomRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment BottomRight = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.BottomRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ícone é exibido alinhado com a parte inferior do controle e à direita do controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleLeft">
+      <MemberSignature Language="C#" Value="MiddleLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment MiddleLeft = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.MiddleLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ícone é exibido alinhado com o meio do controle e à esquerda do controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleRight">
+      <MemberSignature Language="C#" Value="MiddleRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment MiddleRight = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.MiddleRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ícone é exibido alinhado com o meio do controle e à direita do controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="TopLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment TopLeft = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.TopLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ícone é exibido alinhado com a parte superior do controle e à esquerda do controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopRight">
+      <MemberSignature Language="C#" Value="TopRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorIconAlignment TopRight = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorIconAlignment.TopRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorIconAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ícone é exibido alinhado com a parte superior do controle e à direita do controle.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

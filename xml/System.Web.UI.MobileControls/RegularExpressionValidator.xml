@@ -1,0 +1,150 @@
+<Type Name="RegularExpressionValidator" FullName="System.Web.UI.MobileControls.RegularExpressionValidator">
+  <TypeSignature Language="C#" Value="public class RegularExpressionValidator : System.Web.UI.MobileControls.BaseValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RegularExpressionValidator extends System.Web.UI.MobileControls.BaseValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.RegularExpressionValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.BaseValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:RegularExpressionValidator runat="server" ErrorMessage="RegularExpressionValidator"&gt;&lt;/{0}:RegularExpressionValidator&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece o recurso de controle para validar o valor do controle de outro que corresponde a uma expressão regular fornecida. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe se comporta de forma idêntica para o ASP.NET <xref:System.Web.UI.WebControls.RegularExpressionValidator?displayProperty=nameWithType> controle.  
+  
+ Por padrão, <xref:System.Web.UI.MobileControls.Command> controles em um formulário geram controles de validação no formulário para executar a validação quando o formulário é enviado ao servidor. Para desabilitar a validação automática, defina o <xref:System.Web.UI.MobileControls.Command.CausesValidation%2A> propriedade o <xref:System.Web.UI.MobileControls.Command> para `false`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como você pode adicionar propriedades de expressão regular, como o <xref:System.Web.UI.MobileControls.RegularExpressionValidator.ValidationExpression%2A> e <xref:System.Web.UI.MobileControls.TextControl.Text%2A> propriedades programaticamente durante o carregamento de página.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[MobileRegExprValidatorSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileRegExprValidatorSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileRegExprValidatorSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileRegExprValidatorSample/vb/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegularExpressionValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.RegularExpressionValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.MobileControls.RegularExpressionValidator" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWebValidator">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.BaseValidator CreateWebValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.BaseValidator CreateWebValidator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.RegularExpressionValidator.CreateWebValidator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.BaseValidator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Método virtual de classe derivada para criar seu próprio validados Web agregados. O validador de Web destina-se a obtenção e a configuração das propriedades comuns de validador de base da Web. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>Um validador de Web agregado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateIsValid">
+      <MemberSignature Language="C#" Value="protected override bool EvaluateIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool EvaluateIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.RegularExpressionValidator.EvaluateIsValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado durante o estágio de validação quando o ASP.NET processa uma página da Web. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>
+          <see langword="true" />Se o validador for válido, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationExpression">
+      <MemberSignature Language="C#" Value="public string ValidationExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.RegularExpressionValidator.ValidationExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.RegexTypeEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expressão regular atribuída para ser os critérios de validação. O valor padrão é uma cadeia de caracteres vazia (""). Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A expressão regular atribuída para ser os critérios de validação.  
+  
+ O <see cref="T:System.Web.UI.MobileControls.RegularExpressionValidator" /> não executa a validação em uma cadeia de caracteres vazia. Para testar uma cadeia de caracteres vazia, use os controles <see cref="T:System.Web.UI.MobileControls.RequiredFieldValidator" /> e <see cref="T:System.Web.UI.MobileControls.RegularExpressionValidator" /> juntos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra alguns exemplos de expressões de validação:  
+  
+|Tipo de validação|Expressão de validação|  
+|------------------------|---------------------------|  
+|Email|\w+([-+.] \w+)*@\w+([-.] \w+)\*\\.\w+([-.] \w+)|  
+|Número de telefone|((\\(\d{3}\\) ?) &#124;(\d{3}-))? \d\ {3\}-\d\ {4\}|  
+|URL|http://([\w-]+\\.) +[\w-]+(/[\w-./?%&=]*)?|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A expressão regular atribuída foi formada incorretamente.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

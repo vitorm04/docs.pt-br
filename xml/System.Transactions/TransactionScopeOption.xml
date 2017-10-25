@@ -1,0 +1,109 @@
+<Type Name="TransactionScopeOption" FullName="System.Transactions.TransactionScopeOption">
+  <TypeSignature Language="C#" Value="public enum TransactionScopeOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransactionScopeOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.TransactionScopeOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Fornece opções adicionais para criar um escopo de transação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Transactions.TransactionScopeOption> enumeração é passada para os vários construtores de <xref:System.Transactions.TransactionScope> classe para definir o comportamento transacional do escopo. Para obter mais informações sobre como essa enumeração é usada, consulte a seção "Gerenciando transações fluxo usando TransactionScopeOption" [implementando um implícita transação usando o escopo da transação](~/docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="Required" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.TransactionScopeOption Required = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.TransactionScopeOption.Required" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.TransactionScopeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma transação é necessária para o escopo. Se já existir, ele usa uma transação de ambiente. Caso contrário, ele cria uma nova transação antes de inserir o escopo. Este é o valor padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresNew">
+      <MemberSignature Language="C#" Value="RequiresNew" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.TransactionScopeOption RequiresNew = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.TransactionScopeOption.RequiresNew" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.TransactionScopeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma nova transação é sempre criada para o escopo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Suppress">
+      <MemberSignature Language="C#" Value="Suppress" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.TransactionScopeOption Suppress = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.TransactionScopeOption.Suppress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.TransactionScopeOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O contexto de transação de ambiente será suprimido ao criar o escopo. Todas as operações no escopo são executadas sem um contexto de transação de ambiente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

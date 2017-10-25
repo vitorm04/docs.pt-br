@@ -1,0 +1,189 @@
+<Type Name="DashStyles" FullName="System.Windows.Media.DashStyles">
+  <TypeSignature Language="C#" Value="public static class DashStyles" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit DashStyles extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.DashStyles" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa um conjunto de objetos <see cref="T:System.Windows.Media.DashStyle" /> predefinidos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ilustração a seguir mostra exemplos de estilos de traços aplicados a um sublinhado.  
+  
+ ![Mostra vários estilos de traços. ] (~/add/media/graphicsdashstyles.gif "Mostra vários estilos de traços.")  
+  
+<a name="xamlTextUsage_DashStyles"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Você não pode declarar esta classe gerenciada no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], mas você pode usar suas propriedades estáticas para atribuir valores em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dash">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.DashStyle Dash { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.DashStyle Dash" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DashStyles.Dash" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.DashStyle" /> com um <see cref="P:System.Windows.Media.DashStyle.Dashes" /> propriedade igual a <c>2</c>, <c>2</c>.</summary>
+        <value>Uma sequência de traço de 2,2, que descreve uma sequência composta por um traço que é duas vezes, contanto que a caneta <see cref="P:System.Windows.Media.Pen.Thickness" /> seguido por um espaço que é duas vezes, contanto que o <see cref="P:System.Windows.Media.Pen.Thickness" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ilustração a seguir mostra exemplos de estilos de traços aplicados a um sublinhado.  
+  
+ ![Mostra vários estilos de traços. ] (~/add/media/graphicsdashstyles.gif "Mostra vários estilos de traços.")  
+  
+<a name="xamlAttributeUsage_Dash"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*object* *property* ="{ `DashStyles.Dash`}"/>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DashDot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.DashStyle DashDot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.DashStyle DashDot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DashStyles.DashDot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.DashStyle" /> com um <see cref="P:System.Windows.Media.DashStyle.Dashes" /> propriedade igual a <c>2</c>, <c>2</c>, <c>0</c>, <c>2</c>.</summary>
+        <value>Uma sequência de traço de <c>2</c>, <c>2</c>, <c>0</c>, <c>2</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ilustração a seguir mostra exemplos de estilos de traços aplicados a um sublinhado.  
+  
+ ![Mostra vários estilos de traços. ] (~/add/media/graphicsdashstyles.gif "Mostra vários estilos de traços.")  
+  
+<a name="xamlAttributeUsage_DashDot"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*object* *property* ="{ `DashStyles.DashDot`}"/>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DashDotDot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.DashStyle DashDotDot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.DashStyle DashDotDot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DashStyles.DashDotDot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.DashStyle" /> com um <see cref="P:System.Windows.Media.DashStyle.Dashes" /> propriedade igual a <c>2</c>, <c>2</c>, <c>0</c>, <c>2</c>, <c>0</c>, <c>2</c>.</summary>
+        <value>Uma sequência de traço de <c>2</c>, <c>2</c>, <c>0</c>, <c>2</c>, <c>0</c>, <c>2</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ilustração a seguir mostra exemplos de estilos de traços aplicados a um sublinhado.  
+  
+ ![Mostra vários estilos de traços. ] (~/add/media/graphicsdashstyles.gif "Mostra vários estilos de traços.")  
+  
+<a name="xamlAttributeUsage_DashDotDot"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*object* *property* ="{ `DashStyles.DashDotDot`}"/>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dot">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.DashStyle Dot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.DashStyle Dot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DashStyles.Dot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.DashStyle" /> com um <see cref="P:System.Windows.Media.DashStyle.Dashes" /> propriedade igual a <c>0</c>, <c>2</c>.</summary>
+        <value>Uma sequência de traço de <c>0</c>, <c>2</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ilustração a seguir mostra exemplos de estilos de traços aplicados a um sublinhado.  
+  
+ ![Mostra vários estilos de traços. ] (~/add/media/graphicsdashstyles.gif "Mostra vários estilos de traços.")  
+  
+<a name="xamlAttributeUsage_Dot"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*object* *property* ="{ `DashStyles.Dot`}"/>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Solid">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.DashStyle Solid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.DashStyle Solid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.DashStyles.Solid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.DashStyle" /> com vazio <see cref="P:System.Windows.Media.DashStyle.Dashes" /> propriedade.</summary>
+        <value>Uma sequência de traço sem traços.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade gera uma linha sólida e é equivalente ao não definir uma sequência de traço.  
+  
+ A ilustração a seguir mostra exemplos de estilos de traços aplicados a um sublinhado.  
+  
+ ![Mostra vários estilos de traços. ] (~/add/media/graphicsdashstyles.gif "Mostra vários estilos de traços.")  
+  
+<a name="xamlAttributeUsage_Solid"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*object* *property* ="{ `DashStyles.Solid`}"/>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

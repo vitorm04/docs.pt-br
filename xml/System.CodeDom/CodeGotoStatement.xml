@@ -1,0 +1,134 @@
+<Type Name="CodeGotoStatement" FullName="System.CodeDom.CodeGotoStatement">
+  <TypeSignature Language="C#" Value="public class CodeGotoStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeGotoStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeGotoStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um <see langword="goto" /> instrução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeGotoStatement>pode ser usado para representar um `goto` instrução, que é usada em alguns idiomas para redirecionar o fluxo do programa para um rótulo especificado.  
+  
+ O <xref:System.CodeDom.CodeGotoStatement.Label%2A> propriedade indica o nome do rótulo em que deseja continuar a execução do programa.  
+  
+> [!NOTE]
+>  Nem todos os idiomas oferecem suporte a `goto` instruções. Chamar o <xref:System.CodeDom.Compiler.ICodeGenerator.Supports%2A> método com o <xref:System.CodeDom.Compiler.GeneratorSupport.GotoStatements> sinalizador para determinar se um gerador de código oferece suporte a `goto` instruções.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.CodeDom.CodeGotoStatement> e um <xref:System.CodeDom.CodeLabeledStatement> para redirecionar o fluxo do programa.  
+  
+ [!code-cpp[CodeGotoStatementExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeGotoStatementExample/CPP/codegotostatementexample.cpp#2)]
+ [!code-csharp[CodeGotoStatementExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeGotoStatementExample/CS/codegotostatementexample.cs#2)]
+ [!code-vb[CodeGotoStatementExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeGotoStatementExample/VB/codegotostatementexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeGotoStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeGotoStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeGotoStatement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você usar esse construtor você também deve definir o <xref:System.CodeDom.CodeGotoStatement.Label%2A> propriedade para indicar o nome do rótulo em que deseja continuar a execução do programa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeGotoStatement (string label);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string label) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeGotoStatement.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="label" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="label">O nome do rótulo em que deseja continuar a execução do programa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeGotoStatement" /> classe usando o nome de rótulo especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Label" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeGotoStatement.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do rótulo em que deseja continuar a execução do programa.</summary>
+        <value>Uma cadeia de caracteres que indica o nome do rótulo em que deseja continuar a execução do programa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica o nome do rótulo em que deseja continuar a execução do programa.  
+  
+ Um rótulo pode ser representado por um <xref:System.CodeDom.CodeLabeledStatement>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O rótulo não pode ser definido porque <paramref name="value" /> é <see langword="null" /> ou uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

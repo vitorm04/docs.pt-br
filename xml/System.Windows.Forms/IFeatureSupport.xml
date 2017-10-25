@@ -1,0 +1,142 @@
+<Type Name="IFeatureSupport" FullName="System.Windows.Forms.IFeatureSupport">
+  <TypeSignature Language="C#" Value="public interface IFeatureSupport" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFeatureSupport" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.IFeatureSupport" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica uma interface padrão para recuperar informações de recurso do sistema atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando implementado em uma classe, <xref:System.Windows.Forms.IFeatureSupport> fornece métodos que você pode usar para determinar se um recurso está atualmente instalado no sistema e obter o número de versão de um recurso. Chamar <xref:System.Windows.Forms.IFeatureSupport.IsPresent%2A> para determinar se um recurso ou uma versão específica de um recurso, está instalada no momento. Chamar <xref:System.Windows.Forms.IFeatureSupport.GetVersionPresent%2A> para determinar o número de versão de um recurso instalado.  
+  
+ Consulte o <xref:System.Windows.Forms.FeatureSupport> e <xref:System.Windows.Forms.OSFeature> classes para implementações dessa interface.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Windows.Forms.OSFeature> implementação de <xref:System.Windows.Forms.IFeatureSupport> e consultas para o <xref:System.Windows.Forms.OSFeature.LayeredWindows> recurso. A versão é verificada para ver se ele está `null`, para determinar se o recurso está presente. O resultado é exibido em uma caixa de texto. Esse código supõe `textBox1` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic OSFeature Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetVersionPresent">
+      <MemberSignature Language="C#" Value="public Version GetVersionPresent (object feature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Version GetVersionPresent(object feature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IFeatureSupport.GetVersionPresent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feature" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="feature">O recurso cuja versão é solicitado.</param>
+        <summary>Recupera a versão do recurso especificado.</summary>
+        <returns>Um <see cref="T:System.Version" /> que representa o número de versão do recurso especificado; ou <see langword="null" /> se o recurso não está instalado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.Forms.OSFeature.GetVersionPresent%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Windows.Forms.OSFeature> implementação de <xref:System.Windows.Forms.IFeatureSupport> e consultas para o <xref:System.Windows.Forms.OSFeature.LayeredWindows> recurso. A versão é verificada para ver se ele está `null`, para determinar se o recurso está presente. O resultado é exibido em uma caixa de texto. Esse código supõe `textBox1` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic OSFeature Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPresent">
+      <MemberSignature Language="C#" Value="public bool IsPresent (object feature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsPresent(object feature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IFeatureSupport.IsPresent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feature" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="feature">O recurso a ser pesquisada.</param>
+        <summary>Determina se qualquer versão do recurso especificado está disponível atualmente no sistema.</summary>
+        <returns>
+          <see langword="true" />Se o recurso está presente; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Windows.Forms.OSFeature> implementação de <xref:System.Windows.Forms.IFeatureSupport> e consultas para o <xref:System.Windows.Forms.OSFeature.LayeredWindows> recurso. A versão é verificada para ver se ele está `null`, para determinar se o recurso está presente. O resultado é exibido em uma caixa de texto. Esse código supõe `textBox1` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic OSFeature Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPresent">
+      <MemberSignature Language="C#" Value="public bool IsPresent (object feature, Version minimumVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsPresent(object feature, class System.Version minimumVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IFeatureSupport.IsPresent(System.Object,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feature" Type="System.Object" />
+        <Parameter Name="minimumVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="feature">O recurso a ser pesquisada.</param>
+        <param name="minimumVersion">Um <see cref="T:System.Version" /> que representa o número de versão mínima do recurso a ser pesquisada.</param>
+        <summary>Determina se a versão especificada ou mais recente do recurso especificado está disponível atualmente no sistema.</summary>
+        <returns>
+          <see langword="true" />Se a versão solicitada do recurso está presente; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Windows.Forms.OSFeature> implementação de <xref:System.Windows.Forms.IFeatureSupport> e consultas para o <xref:System.Windows.Forms.OSFeature.LayeredWindows> recurso. A versão é verificada para ver se ele está `null`, para determinar se o recurso está presente. O resultado é exibido em uma caixa de texto. Esse código supõe `textBox1` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic OSFeature Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

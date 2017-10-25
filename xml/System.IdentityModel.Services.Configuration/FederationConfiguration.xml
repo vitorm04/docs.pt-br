@@ -1,0 +1,414 @@
+<Type Name="FederationConfiguration" FullName="System.IdentityModel.Services.Configuration.FederationConfiguration">
+  <TypeSignature Language="C#" Value="public class FederationConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FederationConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.Configuration.FederationConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Expõe propriedades que contêm configurações de federação que controlam o comportamento do Módulo de Autenticação do Web Services Federation (<see cref="T:System.IdentityModel.Services.WSFederationAuthenticationModule" />) e o Módulo de Autenticação de Sessão (<see cref="T:System.IdentityModel.Services.SessionAuthenticationModule" />) em aplicativos Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, aplicativos web têm um único <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto que é acessado por meio de <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration?displayProperty=nameWithType> propriedade. Na primeira vez em que a propriedade for acessada uma nova <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> instância será inicializada de configurações no arquivo de configuração e o <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> é gerado. Você pode usar as propriedades e métodos expostos pelo <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> classe para modificar ou substituir o objeto inicializado de configuração em um manipulador de eventos. Este objeto está disponível por meio de <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> propriedade dentro do manipulador de eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Services.Configuration.FederationConfiguration" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Antes que a nova <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> instância é usada por qualquer um dos módulos HTTP configurados, chame o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.Initialize%2A> método para garantir que a instância foi inicializada corretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FederationConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.Configuration.FederationConfiguration.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Services.Configuration.FederationConfiguration" /> classe carregando configurações do <see langword="system.identityModel.services" /> seção do arquivo de configuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades na nova instância são inicializadas carregando configurações do `<system.identityModel.services>` seção de configuração. Este construtor chama o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.%23ctor%28System.Boolean%29?displayProperty=nameWithType> construtor com a `loadConfig` parâmetro `true`.  
+  
+> [!WARNING]
+>  Antes que a nova <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> instância é usada por qualquer um dos módulos HTTP configurados, chame o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.Initialize%2A> método para garantir que a instância foi inicializada corretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FederationConfiguration (bool loadConfig);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool loadConfig) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.Configuration.FederationConfiguration.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="loadConfig" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="loadConfig">
+          <see langword="true" />para inicializar com configurações carregado do arquivo de configuração; <see langword="false" /> ao inicializar com valores padrão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Services.Configuration.FederationConfiguration" /> classe opcionalmente carregando configurações do <see langword="system.identityModel.services" /> seção do arquivo de configuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!WARNING]
+>  Antes que a nova <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> instância é usada por qualquer um dos módulos HTTP configurados, chame o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.Initialize%2A> método para garantir que a instância foi inicializada corretamente.  
+  
+ O `system.identityModel` seção deve ser especificada em uma `<section>` elemento sob o `<configSections>` elemento no arquivo de configuração ou uma exceção é gerado.  
+  
+```  
+<configSections>  
+  <section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />  
+</configSections>  
+```  
+  
+ Se `loadConfig` é `true` e um único `<federationConfiguration>` elemento for especificado, as configurações são carregadas usando esse elemento. Se vários `<federationConfiguration>` elementos são especificados, o método tenta carregar configurações do elemento sem nome que tem o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.DefaultFederationConfigurationName>. Se esse elemento não existir, o método retornará sem carregar as configurações. Isso resulta em uma exceção quando o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.Initialize%2A> método é chamado.  
+  
+> [!WARNING]
+>  A Microsoft recomenda que, se você especificar vários `<federationConfiguration>` elementos de `system.identityModel.services` configuração seção que pelo menos um deles foi nomeada ou tem um nome definido como uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see langword="system.identityModel" /> seção de configuração não está definida no arquivo de configuração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FederationConfiguration (string federationConfigurationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string federationConfigurationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.Configuration.FederationConfiguration.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="federationConfigurationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="federationConfigurationName">O nome do <see langword="&lt;federationConfiguration&gt;" /> elemento do qual carregar a configuração.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Services.Configuration.FederationConfiguration" /> classe o [ &lt;federationConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) elemento com o nome especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!WARNING]
+>  Antes que a nova <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> instância é usada por qualquer um dos módulos HTTP configurados, chame o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.Initialize%2A> método para garantir que a instância foi inicializada corretamente.  
+  
+ Se este construtor é chamado, um `<system.identityModel.services>` seção de configuração com um `<federationConfiguration>` elemento que tem o nome especificado deve existir no arquivo de configuração.  
+  
+ Ambos os o `system.identityModel` seção e o `system.identityModel.services` deve ser especificado em uma `<section>` elementos sob o `<configSections>` elemento no arquivo de configuração ou uma exceção é gerado.  
+  
+```  
+<configSections>  
+  <section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />  
+  <section name="system.identityModel.services" type="System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />  
+</configSections>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há nenhum <see langword="system.identityModel.services" /> seção definidos no arquivo de configuração.  
+  
+ -ou-  
+  
+ Não há nenhum <see langword="system.identityModel" /> seção definidos no arquivo de configuração.  
+  
+ -ou-  
+  
+ Não há nenhum <see langword="&lt;federationConfiguration&gt;" /> elemento com o nome especificado no <see langword="system.identityModel.services" /> seção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieHandler">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.CookieHandler CookieHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Services.CookieHandler CookieHandler" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.CookieHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o manipulador de cookie a ser usada pelo módulo de autenticação de sessão (<see cref="T:System.IdentityModel.Services.SessionAuthenticationModule" />).</summary>
+        <value>O manipulador de cookie a ser usada pelo módulo de autenticação de sessão (SAM).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifica o manipulador de cookie é usado para ler e gravar cookies de sessão por SAM.  
+  
+ Quando inicializado a partir de um arquivo de configuração, essa propriedade é definida pelo [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Uma tentativa de definir a propriedade como <see langword="null" /> ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomElement">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement CustomElement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement CustomElement" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfiguration.CustomElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento XML personalizado, se houver, nessa configuração.</summary>
+        <value>O elemento XML personalizado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultFederationConfigurationName">
+      <MemberSignature Language="C#" Value="public static readonly string DefaultFederationConfigurationName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string DefaultFederationConfigurationName" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Services.Configuration.FederationConfiguration.DefaultFederationConfigurationName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o nome do padrão [ &lt;federationConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) elemento do qual as configurações devem ser carregadas. Isso é uma cadeia de caracteres vazia como o padrão é sem nome.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdentityConfiguration">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Configuration.IdentityConfiguration IdentityConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Configuration.IdentityConfiguration IdentityConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfiguration.IdentityConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Configuration.IdentityConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.IdentityModel.Configuration.IdentityConfiguration" /> objeto associado a esta instância.</summary>
+        <value>O objeto de configuração de identidade associado a essa instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando inicializado a partir de um arquivo de configuração, essa propriedade é definida pelo [ &lt;identityConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Uma tentativa de definir a propriedade como <see langword="null" /> ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.Configuration.FederationConfiguration.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a instância atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método garante que a instância atual é inicializada corretamente antes de ser usada pelos módulos HTTP para processar solicitações de entrada. Ele deve ser chamado uma vez. Verifique o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.IsInitialized%2A> propriedade antes de chamar o método. Esse método define o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.IsInitialized%2A> está definida `true`.  
+  
+ A implementação padrão cria um manipulador de cookie padrão se não houver uma já configurada por meio do <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> propriedade e chamadas a <xref:System.IdentityModel.Configuration.IdentityConfiguration.Initialize%2A?displayProperty=nameWithType> método no objeto de configuração de identidade que é configurado por meio de <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.IdentityConfiguration%2A> propriedade. Você pode substituir esse método para modificar esse comportamento ou para fornecer a inicialização adicional em classes derivadas.  
+  
+ Esse método deve ser chamado antes que a classe é usada pelos módulos HTTP para processar solicitações de entrada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A instância atual já foi inicializada (o <see cref="P:System.IdentityModel.Services.Configuration.FederationConfiguration.IsInitialized" /> é de propriedade <see langword="true" />.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitialized">
+      <MemberSignature Language="C#" Value="public virtual bool IsInitialized { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInitialized" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfiguration.IsInitialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="M:System.IdentityModel.Services.Configuration.FederationConfiguration.Initialize" /> método foi chamado.</summary>
+        <value>
+          <see langword="true" />Se o objeto de configuração tiver sido configurado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para verificar se o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto já foi inicializado. O <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.Initialize%2A> método deve ser chamado apenas uma vez.  
+  
+ O `set` operação `protected`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadConfiguration">
+      <MemberSignature Language="C#" Value="protected void LoadConfiguration (System.IdentityModel.Services.Configuration.FederationConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void LoadConfiguration(class System.IdentityModel.Services.Configuration.FederationConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.Configuration.FederationConfiguration.LoadConfiguration(System.IdentityModel.Services.Configuration.FederationConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.IdentityModel.Services.Configuration.FederationConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see langword="&lt;federationConfiguration&gt;" /> elemento para carregar as configurações do. Pode ser <see langword="null" /> para carregar os valores padrão.</param>
+        <summary>Carrega as propriedades para a instância atual do arquivo de configuração. Este método é chamado por construtores que inicializar recém-criado <see cref="T:System.IdentityModel.Services.Configuration.FederationConfiguration" /> das definições de configuração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.LoadConfiguration%2A> método é chamado pelos construtores para definir as propriedades de recém-criado <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto especificado `<federationConfiguration>` elemento.  
+  
+ Se `element` é `null`, a instância está carregada com valores padrão.  
+  
+ Se o não há nenhum arquivo de configuração ou, se a seção nomeada não existir, nenhuma exceção é lançada, em vez disso, a instância é carregada com valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfiguration.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome associado a esta instância.</summary>
+        <value>O nome associado a esta instância de configuração de Federação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Corresponde do `name` atributo de um [ &lt;federationConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 ServiceCertificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 ServiceCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfiguration.ServiceCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o certificado x. 509 usado para assinar mensagens de protocolo WS-Federation.</summary>
+        <value>O certificado x. 509 usado para assinar mensagens de protocolo WS-Federation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando inicializado a partir de um arquivo de configuração, essa propriedade é definida pelo [ &lt;serviceCertificate&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WsFederationConfiguration">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Services.Configuration.WsFederationConfiguration WsFederationConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Services.Configuration.WsFederationConfiguration WsFederationConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.Configuration.FederationConfiguration.WsFederationConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Services.Configuration.WsFederationConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os parâmetros de configuração para o módulo de autenticação do WS-Federation (<see cref="T:System.IdentityModel.Services.WSFederationAuthenticationModule" />).</summary>
+        <value>As definições de configuração para o módulo de autenticação do WS-Federation.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando inicializado a partir de um arquivo de configuração, essa propriedade é definida pelo [ &lt;wsFederation&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Uma tentativa de definir a propriedade como <see langword="null" /> ocorre.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

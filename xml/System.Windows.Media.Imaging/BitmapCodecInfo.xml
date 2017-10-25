@@ -1,0 +1,430 @@
+<Type Name="BitmapCodecInfo" FullName="System.Windows.Media.Imaging.BitmapCodecInfo">
+  <TypeSignature Language="C#" Value="public abstract class BitmapCodecInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BitmapCodecInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.BitmapCodecInfo" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre um codec de geração de imagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Media.Imaging.BitmapCodecInfo> é possível obter a cada codec em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] usando o <xref:System.Windows.Media.Imaging.BitmapDecoder.CodecInfo%2A> ou <xref:System.Windows.Media.Imaging.BitmapEncoder.CodecInfo%2A> propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o <xref:System.Windows.Media.Imaging.BitmapCodecInfo.Author%2A> propriedade de um determinado <xref:System.Windows.Media.Imaging.BitmapEncoder>.  
+  
+ [!code-csharp[BitmapFrameExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BitmapFrameExample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BitmapCodecInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapCodecInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Windows.Media.Imaging.BitmapCodecInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Author">
+      <MemberSignature Language="C#" Value="public virtual string Author { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Author" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.Author" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica o autor do codec.</summary>
+        <value>O autor do codec.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o <xref:System.Windows.Media.Imaging.BitmapCodecInfo.Author%2A> propriedade de um determinado <xref:System.Windows.Media.Imaging.BitmapEncoder>.  
+  
+ [!code-csharp[BitmapFrameExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BitmapFrameExample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerFormat">
+      <MemberSignature Language="C#" Value="public virtual Guid ContainerFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ContainerFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.ContainerFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica o formato de contêiner para o codec.</summary>
+        <value>O formato de contêiner do codec.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o <xref:System.Windows.Media.Imaging.BitmapCodecInfo.Author%2A> propriedade de um determinado <xref:System.Windows.Media.Imaging.BitmapEncoder>. Você pode usar a mesma abordagem para recuperar outros <xref:System.Windows.Media.Imaging.BitmapCodecInfo>.  
+  
+ [!code-csharp[BitmapFrameExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BitmapFrameExample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceManufacturer">
+      <MemberSignature Language="C#" Value="public virtual string DeviceManufacturer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceManufacturer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.DeviceManufacturer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica o fabricante do dispositivo do codec.</summary>
+        <value>O fabricante do dispositivo do codec.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o <xref:System.Windows.Media.Imaging.BitmapCodecInfo.Author%2A> propriedade de um determinado <xref:System.Windows.Media.Imaging.BitmapEncoder>. Você pode usar a mesma abordagem para recuperar outros <xref:System.Windows.Media.Imaging.BitmapCodecInfo>.  
+  
+ [!code-csharp[BitmapFrameExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BitmapFrameExample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceModels">
+      <MemberSignature Language="C#" Value="public virtual string DeviceModels { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceModels" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.DeviceModels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica os modelos de dispositivo do codec.</summary>
+        <value>O modelo do dispositivo do codec.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o <xref:System.Windows.Media.Imaging.BitmapCodecInfo.Author%2A> propriedade de um determinado <xref:System.Windows.Media.Imaging.BitmapEncoder>. Você pode usar a mesma abordagem para recuperar outros <xref:System.Windows.Media.Imaging.BitmapCodecInfo>.  
+  
+ [!code-csharp[BitmapFrameExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BitmapFrameExample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FileExtensions">
+      <MemberSignature Language="C#" Value="public virtual string FileExtensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileExtensions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.FileExtensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica as extensões de arquivo associadas com o codec.</summary>
+        <value>As extensões de arquivo associadas com o codec.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o <xref:System.Windows.Media.Imaging.BitmapCodecInfo.Author%2A> propriedade de um determinado <xref:System.Windows.Media.Imaging.BitmapEncoder>. Você pode usar a mesma abordagem para recuperar outros <xref:System.Windows.Media.Imaging.BitmapCodecInfo>.  
+  
+ [!code-csharp[BitmapFrameExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BitmapFrameExample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FriendlyName">
+      <MemberSignature Language="C#" Value="public virtual string FriendlyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FriendlyName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.FriendlyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o nome amigável do codec.</summary>
+        <value>O nome amigável do codec.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o <xref:System.Windows.Media.Imaging.BitmapCodecInfo.Author%2A> propriedade de um determinado <xref:System.Windows.Media.Imaging.BitmapEncoder>. Você pode usar a mesma abordagem para recuperar outros <xref:System.Windows.Media.Imaging.BitmapCodecInfo>.  
+  
+ [!code-csharp[BitmapFrameExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BitmapFrameExample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MimeTypes">
+      <MemberSignature Language="C#" Value="public virtual string MimeTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MimeTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.MimeTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica o [!INCLUDE[TLA#tla_mime](~/includes/tlasharptla-mime-md.md)] associado com o codec.</summary>
+        <value>O [!INCLUDE[TLA#tla_mime](~/includes/tlasharptla-mime-md.md)] tipos associados com o codec.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o <xref:System.Windows.Media.Imaging.BitmapCodecInfo.Author%2A> propriedade de um determinado <xref:System.Windows.Media.Imaging.BitmapEncoder>. Você pode usar a mesma abordagem para recuperar outros <xref:System.Windows.Media.Imaging.BitmapCodecInfo>.  
+  
+ [!code-csharp[BitmapFrameExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BitmapFrameExample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecificationVersion">
+      <MemberSignature Language="C#" Value="public virtual Version SpecificationVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version SpecificationVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.SpecificationVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica a versão de especificação do codec.</summary>
+        <value>A versão de especificação do codec.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o <xref:System.Windows.Media.Imaging.BitmapCodecInfo.Author%2A> propriedade de um determinado <xref:System.Windows.Media.Imaging.BitmapEncoder>. Você pode usar a mesma abordagem para recuperar outros <xref:System.Windows.Media.Imaging.BitmapCodecInfo>.  
+  
+ [!code-csharp[BitmapFrameExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BitmapFrameExample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsAnimation">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsAnimation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsAnimation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.SupportsAnimation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o codec dá suporte a animação.</summary>
+        <value>
+          <see langword="true" />Se o codec dá suporte a animação; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsLossless">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsLossless { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsLossless" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.SupportsLossless" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o codec suporta sem perda de imagens.</summary>
+        <value>
+          <see langword="true" />Se o codec suporta sem perda de imagens; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsMultipleFrames">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsMultipleFrames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsMultipleFrames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.SupportsMultipleFrames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o codec dá suporte a várias estruturas.</summary>
+        <value>
+          <see langword="true" />Se o codec dá suporte a várias estruturas; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public virtual Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapCodecInfo.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica a versão do codec.</summary>
+        <value>A versão do codec.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o <xref:System.Windows.Media.Imaging.BitmapCodecInfo.Author%2A> propriedade de um determinado <xref:System.Windows.Media.Imaging.BitmapEncoder>. Você pode usar a mesma abordagem para recuperar outros <xref:System.Windows.Media.Imaging.BitmapCodecInfo>.  
+  
+ [!code-csharp[BitmapFrameExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BitmapFrameExample#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> permissão de registro para recuperar dados do registro.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

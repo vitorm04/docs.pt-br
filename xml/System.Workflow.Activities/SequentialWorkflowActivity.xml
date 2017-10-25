@@ -1,0 +1,252 @@
+<Type Name="SequentialWorkflowActivity" FullName="System.Workflow.Activities.SequentialWorkflowActivity">
+  <TypeSignature Language="C#" Value="public class SequentialWorkflowActivity : System.Workflow.Activities.SequenceActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SequentialWorkflowActivity extends System.Workflow.Activities.SequenceActivity" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.SequentialWorkflowActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Activities.SequenceActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Workflow.Activities.SequentialWorkflowDesigner), typeof(System.ComponentModel.Design.IRootDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Workflow.Activities.SequentialWorkflowDesigner), typeof(System.ComponentModel.Design.IDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Workflow.Activities.SequentialWorkflowActivity), "Resources.SequentialWorkflow.bmp")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um fluxo de trabalho que executa atividades sequencialmente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ O <xref:System.Workflow.Activities.SequentialWorkflowActivity> é um <xref:System.Workflow.Activities.SequenceActivity> com `Initialized` e `Completed` eventos para processamento opcional de parâmetros. Isso torna particularmente útil como uma atividade de nível superior ao criar fluxos de trabalho de estilo sequencial.  
+  
+ O <xref:System.Workflow.Activities.SequentialWorkflowActivity> é um <xref:System.Workflow.ComponentModel.CompositeActivity>, que significa que o <xref:System.Workflow.Activities.SequentialWorkflowActivity> pode conter outras atividades.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SequentialWorkflowActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.SequentialWorkflowActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.SequentialWorkflowActivity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SequentialWorkflowActivity (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.SequentialWorkflowActivity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome definido pelo usuário da atividade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.SequentialWorkflowActivity" /> classe usando o nome da atividade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Completed">
+      <MemberSignature Language="C#" Value="public event EventHandler Completed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Completed" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.SequentialWorkflowActivity.Completed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o fluxo de trabalho foi concluído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um novo <xref:System.Workflow.Activities.SequentialWorkflowActivity> classe e definir o manipulador de eventos para o <xref:System.Workflow.Activities.SequentialWorkflowActivity.Completed> evento. Este exemplo de código é parte do SDK política de exemplo do arquivo DiscountPolicyWorkflow.Designer.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Avançado de política](http://msdn.microsoft.com/en-us/1ad079ee-b50b-4af4-9575-597eafc97742).  
+  
+ [!code-csharp[wf_samples#1](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#1)]
+ [!code-vb[wf_samples#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty CompletedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty CompletedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.SequentialWorkflowActivity.CompletedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que tem como destino o <see cref="E:System.Workflow.Activities.SequentialWorkflowActivity.Completed" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicUpdateCondition">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.ActivityCondition DynamicUpdateCondition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.ActivityCondition DynamicUpdateCondition" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.SequentialWorkflowActivity.DynamicUpdateCondition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Workflow.ComponentModel.ActivityCondition" /> em que as atualizações dinâmicas podem ser feitas no fluxo de trabalho, quando substituído em uma classe derivada.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.ActivityCondition" /> que identifica quando podem ser feitas atualizações dinâmicas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.ActivityExecutionStatus Execute (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Execute(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.SequentialWorkflowActivity.Execute(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> associado ao <see cref="T:System.Workflow.ComponentModel.Activity" />.</param>
+        <summary>Executa o fluxo de trabalho.</summary>
+        <returns>O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" /> no <see cref="T:System.Workflow.Activities.SequentialWorkflowActivity" /> no final da operação solicitada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialized">
+      <MemberSignature Language="C#" Value="public event EventHandler Initialized;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Initialized" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.SequentialWorkflowActivity.Initialized" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o fluxo de trabalho é inicializado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty InitializedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty InitializedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.SequentialWorkflowActivity.InitializedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que tem como destino o <see cref="E:System.Workflow.Activities.SequentialWorkflowActivity.Initialized" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSequenceComplete">
+      <MemberSignature Language="C#" Value="protected override sealed void OnSequenceComplete (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSequenceComplete(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.SequentialWorkflowActivity.OnSequenceComplete(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> associado ao <see cref="T:System.Workflow.ComponentModel.Activity" />.</param>
+        <summary>Gera o <see cref="F:System.Workflow.Activities.SequentialWorkflowActivity.CompletedEvent" /> para o <see cref="T:System.Workflow.Activities.SequentialWorkflowActivity" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="executionContext" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,176 @@
+<Type Name="DuplicateAddressDetectionState" FullName="System.Net.NetworkInformation.DuplicateAddressDetectionState">
+  <TypeSignature Language="C#" Value="public enum DuplicateAddressDetectionState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DuplicateAddressDetectionState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.DuplicateAddressDetectionState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o estado atual de um endereço IP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para ajudar a garantir que todas as interfaces de rede tem um endereço exclusivo, o host de interface é responsável pela execução de um algoritmo de "endereço detecção de duplicidades" no endereço de unicast. A finalidade desse algoritmo é tentar evitar endereços não exclusivo na rede. Esse processo é definido em IETF RFC 1971.  
+  
+ Essa enumeração é usada pelo <xref:System.Net.NetworkInformation.UnicastIPAddressInformation> e <xref:System.Net.NetworkInformation.MulticastIPAddressInformation> classes. As instâncias dessa classe são retornadas ao recuperar as informações de endereço de unicast para uma <xref:System.Net.NetworkInformation.NetworkInterface> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina as informações de endereço de unicast.  
+  
+ [!code-cpp[NclNetInfo2#45](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#45)]
+ [!code-csharp[NclNetInfo2#45](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#45)]
+ [!code-vb[NclNetInfo2#45](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#45)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Deprecated">
+      <MemberSignature Language="C#" Value="Deprecated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.DuplicateAddressDetectionState Deprecated = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.DuplicateAddressDetectionState.Deprecated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.DuplicateAddressDetectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O endereço é válido, mas ele está se aproximando do seu tempo de vida de concessão e não deve ser usado por aplicativos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Duplicate">
+      <MemberSignature Language="C#" Value="Duplicate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.DuplicateAddressDetectionState Duplicate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.DuplicateAddressDetectionState.Duplicate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.DuplicateAddressDetectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O endereço não é exclusivo. Esse endereço não deve ser atribuído à interface de rede.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalid">
+      <MemberSignature Language="C#" Value="Invalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.DuplicateAddressDetectionState Invalid = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.DuplicateAddressDetectionState.Invalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.DuplicateAddressDetectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O endereço não é válido. Um endereço inválido está expirado e não está mais atribuído a uma interface; aplicativos não devem enviar pacotes de dados a ele.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Preferred">
+      <MemberSignature Language="C#" Value="Preferred" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.DuplicateAddressDetectionState Preferred = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.DuplicateAddressDetectionState.Preferred" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.DuplicateAddressDetectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O endereço é válido e seu uso é irrestrito.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tentative">
+      <MemberSignature Language="C#" Value="Tentative" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.DuplicateAddressDetectionState Tentative = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.DuplicateAddressDetectionState.Tentative" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.DuplicateAddressDetectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Avaliação do procedimento de detecção de endereço duplicado do endereço não foi concluída com êxito. Aplicativos não devem usar o endereço, porque ele ainda não é válido e pacotes enviados a ele são descartados.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

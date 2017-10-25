@@ -1,0 +1,379 @@
+<Type Name="UCOMIStream" FullName="System.Runtime.InteropServices.UCOMIStream">
+  <TypeSignature Language="C#" Value="public interface UCOMIStream" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract UCOMIStream" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.UCOMIStream" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("0000000c-0000-0000-c000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Use <see cref="T:System.Runtime.InteropServices.ComTypes.IStream" /> em seu lugar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IStream` e `ISequentialStream` na subpasta da biblioteca MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public void Clone (out System.Runtime.InteropServices.UCOMIStream ppstm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clone([out] class System.Runtime.InteropServices.UCOMIStream&amp; ppstm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIStream.Clone(System.Runtime.InteropServices.UCOMIStream@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ppstm" Type="System.Runtime.InteropServices.UCOMIStream&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ppstm">No retorno bem-sucedido, contém o novo objeto de fluxo.</param>
+        <summary>Cria um novo objeto de fluxo com seu próprio ponteiro de busca que referencia os mesmos bytes como o fluxo original.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IStream::Clone` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit (int grfCommitFlags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit(int32 grfCommitFlags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIStream.Commit(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="grfCommitFlags" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="grfCommitFlags">Controla como as alterações no objeto de fluxo são confirmadas.</param>
+        <summary>Garante que todas as alterações feitas em um objeto de fluxo abertas no modo de transação sejam refletidas no armazenamento pai.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IStream::Commit` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Runtime.InteropServices.UCOMIStream pstm, long cb, IntPtr pcbRead, IntPtr pcbWritten);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Runtime.InteropServices.UCOMIStream pstm, int64 cb, native int pcbRead, native int pcbWritten) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIStream.CopyTo(System.Runtime.InteropServices.UCOMIStream,System.Int64,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pstm" Type="System.Runtime.InteropServices.UCOMIStream" />
+        <Parameter Name="cb" Type="System.Int64" />
+        <Parameter Name="pcbRead" Type="System.IntPtr" />
+        <Parameter Name="pcbWritten" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pstm">Referência para o fluxo de destino.</param>
+        <param name="cb">O número de bytes a serem copiados do fluxo de origem.</param>
+        <param name="pcbRead">No retorno bem-sucedido, contém o número real de bytes lidos da origem.</param>
+        <param name="pcbWritten">No retorno bem-sucedido, contém o número real de bytes gravados no destino.</param>
+        <summary>Copia um número especificado de bytes do atual ponteiro de busca no fluxo para atual ponteiro de busca em outro fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IStream::CopyTo` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LockRegion">
+      <MemberSignature Language="C#" Value="public void LockRegion (long libOffset, long cb, int dwLockType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LockRegion(int64 libOffset, int64 cb, int32 dwLockType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIStream.LockRegion(System.Int64,System.Int64,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="libOffset" Type="System.Int64" />
+        <Parameter Name="cb" Type="System.Int64" />
+        <Parameter Name="dwLockType" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="libOffset">O deslocamento de byte para o início do intervalo.</param>
+        <param name="cb">O comprimento do intervalo, em bytes, para restringir.</param>
+        <param name="dwLockType">As restrições solicitadas no acesso ao intervalo.</param>
+        <summary>Restringe o acesso a um intervalo especificado de bytes no fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IStream::LockRegion` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public void Read (byte[] pv, int cb, IntPtr pcbRead);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Read([out] unsigned int8[] pv, int32 cb, native int pcbRead) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIStream.Read(System.Byte[],System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pv" Type="System.Byte[]" />
+        <Parameter Name="cb" Type="System.Int32" />
+        <Parameter Name="pcbRead" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pv">No retorno bem-sucedido, contém o frtom de leitura de dados no fluxo.</param>
+        <param name="cb">O número de bytes a serem lidos do objeto de fluxo.</param>
+        <param name="pcbRead">Ponteiro para um <see langword="ULONG" /> variável que recebe o número real de bytes lidos do objeto de fluxo.</param>
+        <summary>Lê um número especificado de bytes do objeto de fluxo na memória, iniciando no ponteiro de busca atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `ISequentialStream::Read` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Revert">
+      <MemberSignature Language="C#" Value="public void Revert ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Revert() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIStream.Revert" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarta todas as alterações que foram feitas em um fluxo transacionado desde a última <see cref="M:System.Runtime.InteropServices.UCOMIStream.Commit(System.Int32)" /> chamar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IStream::Revert` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public void Seek (long dlibMove, int dwOrigin, IntPtr plibNewPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Seek(int64 dlibMove, int32 dwOrigin, native int plibNewPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIStream.Seek(System.Int64,System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dlibMove" Type="System.Int64" />
+        <Parameter Name="dwOrigin" Type="System.Int32" />
+        <Parameter Name="plibNewPosition" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dlibMove">Deslocamento para adicionar a <c>dwOrigin</c>.</param>
+        <param name="dwOrigin">Especifica a origem da busca. A origem pode ser o início do arquivo, ponteiro, ou até o fim do arquivo de busca atual.</param>
+        <param name="plibNewPosition">No retorno bem-sucedido, contém o deslocamento do ponteiro de busca do início do fluxo.</param>
+        <summary>Altera o ponteiro de busca para um novo local relativo ao início do fluxo, ao final do fluxo ou ao ponteiro de busca atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IStream::Seek` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSize">
+      <MemberSignature Language="C#" Value="public void SetSize (long libNewSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSize(int64 libNewSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIStream.SetSize(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="libNewSize" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="libNewSize">Especifica o novo tamanho do fluxo como um número de bytes.</param>
+        <summary>Altera o tamanho do objeto de fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IStream::SetSize` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stat">
+      <MemberSignature Language="C#" Value="public void Stat (out System.Runtime.InteropServices.STATSTG pstatstg, int grfStatFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Stat([out] valuetype System.Runtime.InteropServices.STATSTG&amp; pstatstg, int32 grfStatFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIStream.Stat(System.Runtime.InteropServices.STATSTG@,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pstatstg" Type="System.Runtime.InteropServices.STATSTG&amp;" RefType="out" />
+        <Parameter Name="grfStatFlag" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pstatstg">No retorno bem-sucedido, contém um <see langword="STATSTG" /> estrutura que descreve este objeto de fluxo.</param>
+        <param name="grfStatFlag">Especifica alguns dos membros a <see langword="STATSTG" /> estrutura que este método retorna, economizando assim operações de alocação de memória.</param>
+        <summary>Recupera o <see cref="T:System.Runtime.InteropServices.STATSTG" /> estrutura para esse fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IStream::Stat` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnlockRegion">
+      <MemberSignature Language="C#" Value="public void UnlockRegion (long libOffset, long cb, int dwLockType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnlockRegion(int64 libOffset, int64 cb, int32 dwLockType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIStream.UnlockRegion(System.Int64,System.Int64,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="libOffset" Type="System.Int64" />
+        <Parameter Name="cb" Type="System.Int64" />
+        <Parameter Name="dwLockType" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="libOffset">O deslocamento de byte para o início do intervalo.</param>
+        <param name="cb">O comprimento, em bytes, do intervalo para restringir.</param>
+        <param name="dwLockType">As restrições de acesso previamente colocadas no intervalo.</param>
+        <summary>Remove a restrição de acesso em um intervalo de bytes anteriormente restringido com <see cref="M:System.Runtime.InteropServices.UCOMIStream.LockRegion(System.Int64,System.Int64,System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `IStream::UnlockRegion` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (byte[] pv, int cb, IntPtr pcbWritten);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(unsigned int8[] pv, int32 cb, native int pcbWritten) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.UCOMIStream.Write(System.Byte[],System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pv" Type="System.Byte[]" />
+        <Parameter Name="cb" Type="System.Int32" />
+        <Parameter Name="pcbWritten" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="pv">Buffer para gravar o fluxo.</param>
+        <param name="cb">O número de bytes a serem gravados no fluxo.</param>
+        <param name="pcbWritten">No retorno bem-sucedido, contém o número real de bytes gravados no objeto de fluxo. O chamador pode definir o ponteiro para <see langword="null" />, caso em que esse método não fornece o número real de bytes gravados.</param>
+        <summary>Grava um número especificado de bytes no objeto de fluxo, iniciando no ponteiro de busca atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação existente para `ISequentialStream::Write` na biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

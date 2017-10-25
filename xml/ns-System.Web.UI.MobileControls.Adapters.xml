@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.UI.MobileControls.Adapters">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.MobileControls.Adapters" /> namespace contém classes que você pode usar para substituir os estágios do ciclo de vida de um controle móvel para modificar sua marcação HTML, CHTML ou WML do padrão ou o comportamento para novos padrões de marcação ou para dispositivos móveis e navegadores específicos.  As APIs no namespace são obsoletas. Para obter informações sobre como desenvolver aplicativos móveis, consulte o <see href="http://go.microsoft.com/fwlink/?LinkID=182900">www.asp.net/mobile</see> site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.MobileControls.Adapters.ControlAdapter>classe é direta ou indiretamente herdada por todas as outras classes de adaptador neste namespace, como <xref:System.Web.UI.MobileControls.Adapters.HtmlControlAdapter> e <xref:System.Web.UI.MobileControls.Adapters.WmlControlAdapter>, bem como <xref:System.Web.UI.MobileControls.Adapters.HtmlPageAdapter>, <xref:System.Web.UI.MobileControls.Adapters.ChtmlPageAdapter>, e <xref:System.Web.UI.MobileControls.Adapters.WmlPageAdapter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,217 @@
+<Type Name="ClientChannelSinkStack" FullName="System.Runtime.Remoting.Channels.ClientChannelSinkStack">
+  <TypeSignature Language="C#" Value="public class ClientChannelSinkStack : System.Runtime.Remoting.Channels.IClientChannelSinkStack" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClientChannelSinkStack extends System.Object implements class System.Runtime.Remoting.Channels.IClientChannelSinkStack, class System.Runtime.Remoting.Channels.IClientResponseChannelSinkStack" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.ClientChannelSinkStack" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IClientChannelSinkStack</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém a pilha do cliente de Coletores de canal que devem ser invocados durante uma decodificação de resposta de mensagens assíncronas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe faz uma demanda de link. Uma exceção de segurança é gerada se o chamador imediato não tem permissão de infraestrutura. Consulte [demandas de Link](~/docs/framework/misc/link-demands.md) para obter mais informações.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientChannelSinkStack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ClientChannelSinkStack.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.Channels.ClientChannelSinkStack" /> com valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientChannelSinkStack (System.Runtime.Remoting.Messaging.IMessageSink replySink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Remoting.Messaging.IMessageSink replySink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ClientChannelSinkStack.#ctor(System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="replySink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="replySink">O <see cref="T:System.Runtime.Remoting.Messaging.IMessageSink" /> que a pilha atual pode usar para responder a mensagens.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.Channels.ClientChannelSinkStack" /> classe com o coletor de resposta especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncProcessResponse">
+      <MemberSignature Language="C#" Value="public void AsyncProcessResponse (System.Runtime.Remoting.Channels.ITransportHeaders headers, System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AsyncProcessResponse(class System.Runtime.Remoting.Channels.ITransportHeaders headers, class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ClientChannelSinkStack.AsyncProcessResponse(System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Channels.ITransportHeaders" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="headers">Os cabeçalhos que são recuperados do fluxo de resposta do servidor.</param>
+        <param name="stream">O fluxo que está retornando do coletor de transporte.</param>
+        <summary>Solicitações assíncronas de processamento de um método de chamar os coletores que estão na pilha do coletor atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Channels.ClientChannelSinkStack.AsyncProcessResponse%2A> método inicializa o processamento assíncrono no coletor superior na pilha do coletor atual. Para obter mais informações, consulte: <xref:System.Runtime.Remoting.Channels.IClientChannelSink.AsyncProcessResponse%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">A pilha de coletor atual está vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DispatchException">
+      <MemberSignature Language="C#" Value="public void DispatchException (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DispatchException(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ClientChannelSinkStack.DispatchException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">A exceção para enviar ao servidor.</param>
+        <summary>Envia a exceção especificada no coletor de resposta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Channels.ClientChannelSinkStack.DispatchException%2A> método expede a exceção especificada com o servidor usando o coletor de resposta especificado no construtor de pilha do coletor atual. Se a pilha do coletor atual foi criada sem um coletor de resposta, a exceção não é transmitida e nenhuma nova exceção é lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DispatchReplyMessage">
+      <MemberSignature Language="C#" Value="public void DispatchReplyMessage (System.Runtime.Remoting.Messaging.IMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DispatchReplyMessage(class System.Runtime.Remoting.Messaging.IMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ClientChannelSinkStack.DispatchReplyMessage(System.Runtime.Remoting.Messaging.IMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">O <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> para expedição.</param>
+        <summary>Envia a mensagem de resposta especificado no coletor de resposta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Channels.ClientChannelSinkStack.DispatchReplyMessage%2A> método envia a mensagem especificada com o servidor usando o coletor de resposta especificado no construtor de pilha do coletor atual. Se a pilha do coletor atual foi criada sem um coletor de resposta, a mensagem não é transmitida e nenhuma nova exceção é lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pop">
+      <MemberSignature Language="C#" Value="public object Pop (System.Runtime.Remoting.Channels.IClientChannelSink sink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Pop(class System.Runtime.Remoting.Channels.IClientChannelSink sink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ClientChannelSinkStack.Pop(System.Runtime.Remoting.Channels.IClientChannelSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sink" Type="System.Runtime.Remoting.Channels.IClientChannelSink" />
+      </Parameters>
+      <Docs>
+        <param name="sink">O coletor remover e retornar da pilha de coletor.</param>
+        <summary>Exibe as informações que está associadas a todos os coletores de pilha do coletor até e incluindo o coletor especificado.</summary>
+        <returns>Informações geradas no lado de solicitação e associado com o coletor especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Runtime.Remoting.RemotingException">A pilha de coletor atual está vazia ou o coletor especificado nunca foi inserido na pilha atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Push">
+      <MemberSignature Language="C#" Value="public void Push (System.Runtime.Remoting.Channels.IClientChannelSink sink, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Push(class System.Runtime.Remoting.Channels.IClientChannelSink sink, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.ClientChannelSinkStack.Push(System.Runtime.Remoting.Channels.IClientChannelSink,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sink" Type="System.Runtime.Remoting.Channels.IClientChannelSink" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sink">O coletor para enviar por push para a pilha de coletor.</param>
+        <param name="state">Informações geradas no lado de solicitação que é necessária no lado de resposta.</param>
+        <summary>Envia as informações que está associadas a ele para a pilha de coletor e o coletor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações geradas no lado de solicitação e especificado no `state` parâmetro é retornado no `state` parâmetro do <xref:System.Runtime.Remoting.Channels.IClientChannelSink.AsyncProcessResponse%2A> método no coletor correspondente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

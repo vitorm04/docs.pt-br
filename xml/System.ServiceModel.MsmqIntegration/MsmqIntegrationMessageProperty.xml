@@ -1,0 +1,549 @@
+<Type Name="MsmqIntegrationMessageProperty" FullName="System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty">
+  <TypeSignature Language="C#" Value="public sealed class MsmqIntegrationMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MsmqIntegrationMessageProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as propriedades de integração de enfileiramento de mensagens (MSMQ) para uma mensagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty> classe expõe todas as propriedades de mensagem de enfileiramento de mensagens que podem ser definidas quando você envia uma mensagem ou ler uma mensagem recebida usando o canal de integração.  
+  
+ O <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> classe também permite que você defina propriedades de mensagens do enfileiramento de mensagens e é a maneira recomendada para definir propriedades de mensagens do enfileiramento de mensagens.  
+  
+ Quando você usar a infraestrutura de canais e mensagens para criar uma mensagem e enviá-lo por um canal de integração, você pode usar o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty> classe como uma propriedade da mensagem para que o canal de integração pode recuperar as propriedades de mensagem e formata a mensagem como uma mensagem do serviço de enfileiramento de mensagens e enviá-lo na conexão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MsmqIntegrationMessageProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcknowledgeType">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Messaging.AcknowledgeTypes&gt; AcknowledgeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Messaging.AcknowledgeTypes&gt; AcknowledgeType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.AcknowledgeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Messaging.AcknowledgeTypes&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de confirmação para retornar para o aplicativo de envio.</summary>
+        <value>O tipo de confirmação para retornar para o aplicativo de envio.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Acknowledgment">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Messaging.Acknowledgment&gt; Acknowledgment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Messaging.Acknowledgment&gt; Acknowledgment" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Acknowledgment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Messaging.Acknowledgment&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem de confirmação que gera de enfileiramento de mensagens (MSMQ).</summary>
+        <value>A mensagem de confirmação que gera enfileiramento de mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores possíveis que essa propriedade pode ser definida como são definidos por <xref:System.Messaging.Acknowledgment>. O valor pode ser usado para verificar o status da mensagem original quando você recebe uma mensagem de uma fila de administração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdministrationQueue">
+      <MemberSignature Language="C#" Value="public Uri AdministrationQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri AdministrationQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.AdministrationQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fila que recebe as mensagens de confirmação que gera de enfileiramento de mensagens (MSMQ).</summary>
+        <value>A fila que recebe as mensagens de confirmação que gera enfileiramento de mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As mensagens de confirmação enviadas para a fila de administração podem indicar se a mensagem original alcançou sua fila de destino e se ela foi removida da fila.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppSpecific">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; AppSpecific { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; AppSpecific" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.AppSpecific" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica informações adicionais.</summary>
+        <value>Um <see langword="integer" /> valor que representa informações específicas do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contém informações específicas de aplicativo que você pode usar para organizar os diferentes tipos de mensagens. Por exemplo, você pode usar índices específicos do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrivedTime">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; ArrivedTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; ArrivedTime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.ArrivedTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a hora em que a mensagem chegou na fila de destino.</summary>
+        <value>A hora em que a mensagem chegou na fila de destino.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticated">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; Authenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; Authenticated" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Authenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se a mensagem foi autenticada.</summary>
+        <value>
+          <see langword="true" />Se a mensagem foi autenticada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obtém um valor que indica se a mensagem foi autenticada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="public object Body { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Body" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Body" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo da mensagem.</summary>
+        <value>O conteúdo do corpo da mensagem do MSMQ.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyType">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; BodyType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; BodyType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.BodyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de dados que o corpo da mensagem contém.</summary>
+        <value>O tipo de dados que contém o corpo da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serviço de enfileiramento de mensagens (MSMQ) reconhece os conteúdos do corpo como um objeto ou como um fluxo serializado. O tipo de corpo indica o tipo de objeto dentro do corpo da mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationId">
+      <MemberSignature Language="C#" Value="public string CorrelationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CorrelationId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.CorrelationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de mensagem usado por mensagens de confirmação, relatório e resposta para fazer referência à mensagem original.</summary>
+        <value>O identificador de mensagem usado por mensagens de confirmação, relatório e resposta para fazer referência a mensagem original.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o serviço de enfileiramento de mensagens (MSMQ) gera uma mensagem de confirmação ou de relatório, ele usa o identificador de correlação para especificar o identificador da mensagem da mensagem original. Dessa maneira, o identificador de correlação vincula a mensagem de confirmação ou de relatório à mensagem original.  
+  
+ O aplicativo de envio, em seguida, pode corresponder a confirmação ou relatório com a mensagem original usando o identificador de correlação para verificar a identidade da mensagem original.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationQueue">
+      <MemberSignature Language="C#" Value="public Uri DestinationQueue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri DestinationQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.DestinationQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fila de destino pretendido para a mensagem.</summary>
+        <value>A fila de destino pretendido para a mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mais comumente usado para determinar o destino original de uma mensagem que chegaram em um diário ou fila de mensagens mortas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public byte[] Extension { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Extension" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações adicionais, definido pelo aplicativo associadas à mensagem.</summary>
+        <value>Uma matriz de bytes que contém informações adicionais, definido pelo aplicativo associadas à mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornece para informações definidas pelo aplicativo, como um objeto binário grande, que está associado com a mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty Get (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty Get(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Get(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem para a qual as propriedades de mensagem de integração de enfileiramento de mensagens (MSMQ) devem ser recuperados.</param>
+        <summary>Obtém o <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty" /> para uma determinada mensagem.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty" /> objeto que contém propriedades de integração do serviço de enfileiramento de mensagens para a mensagem especificada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">A coleção de propriedades na mensagem é nula.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador da mensagem.</summary>
+        <value>Identificador da mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serviço de enfileiramento de mensagens (MSMQ) gera um identificador de mensagem quando a mensagem é enviada. O identificador é composto de 20 bytes e inclui dois itens: a máquina GUID do computador de envio e um identificador exclusivo para a mensagem no computador. A combinação dos dois itens produz um identificador de mensagem que é exclusivo na rede.  
+  
+ O Message Queuing gera identificadores de mensagem para todas as mensagens, incluindo mensagens de confirmação e relatório. Geralmente, uma mensagem de confirmação é enviada pelo enfileiramento de mensagens em resposta à chegada ou falha de uma mensagem enviada original.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres Unicode definida pelo aplicativo que descreve a mensagem.</summary>
+        <value>Uma aplicativo definido cadeia de caracteres Unicode que descreve a mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar um rótulo de mensagem para várias finalidades. Por exemplo, você pode usar isso para fins de exibição ou seletivamente processar mensagens com base no valor do rótulo. Não é necessário tornar o rótulo exclusivo entre as mensagens.  
+  
+ Fila de mensagens e mensagem rótulos representam um valor definido pelo aplicativo que pode ajudar a identificam a fila ou a mensagem em termos legível. É responsabilidade do aplicativo para interpretar o conteúdo de rótulo, que não têm nenhum significado intrínseco para enfileiramento de mensagens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageType">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Messaging.MessageType&gt; MessageType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Messaging.MessageType&gt; MessageType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.MessageType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Messaging.MessageType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de mensagem: <see langword="Normal" />, <see langword="Acknowledgment" /> ou <see langword="Report" />.</summary>
+        <value>O tipo de mensagem: <see langword="Normal" />, <see langword="Acknowledgment" />, ou <see langword="Report" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o enfileiramento de mensagens (MSMQ) define essa propriedade quando ele envia a mensagem. Uma mensagem de enfileiramento de mensagens pode ser um dos seguintes tipos:  
+  
+-   Normal, que é uma mensagem típica enviada de um aplicativo a uma fila ou uma mensagem de resposta retornados para o aplicativo de envio.  
+  
+-   Confirmação enfileiramento gera sempre que o aplicativo de envio solicita um. Por exemplo, enfileiramento de mensagens pode gerar mensagens positivas ou negativas para indicar que a mensagem original chegou ou foi lido. O Message Queuing retorna a mensagem de confirmação apropriada para a fila de administração especificada pelo aplicativo de envio.  
+  
+-   Relatório, que é gerado sempre que uma fila de relatórios está definida na fonte de Gerenciador de fila. Quando o rastreamento estiver habilitado, enfileiramento de mensagens envia uma mensagem de relatório para a fila de enfileiramento de mensagens de relatório sempre que a mensagem original entra ou sai de um servidor de enfileiramento de mensagens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public const string Name;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Name" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor da constante "MsmqIntegrationMessageProperty".</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public Nullable&lt;System.Messaging.MessagePriority&gt; Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Messaging.MessagePriority&gt; Priority" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Messaging.MessagePriority&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade da mensagem, que determina o local na fila em que a mensagem foi colocada.</summary>
+        <value>A prioridade da mensagem. Os valores são definidos por <see cref="T:System.Messaging.MessagePriority" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A prioridade afeta como o enfileiramento de mensagens (MSMQ) trata a mensagem enquanto ele estiver em trânsito e depois de atingir o destino. Mensagens de prioridade mais alta são recebem preferência durante o roteamento e inseridas em direção à frente da fila de destino. Mensagens com a mesma prioridade são colocadas na fila de acordo com a hora de chegada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor não for null e não está dentro do intervalo de <see cref="T:System.Messaging.MessagePriority" /> valores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseQueue">
+      <MemberSignature Language="C#" Value="public Uri ResponseQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ResponseQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.ResponseQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fila que recebe mensagens de resposta geradas por aplicativo.</summary>
+        <value>O URI da fila que recebe mensagens de resposta geradas por aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Identifica a fila que recebe mensagens de resposta geradas por aplicativo, que retorna o aplicativo de recebimento para o aplicativo de envio. O aplicativo de envio Especifica filas de resposta quando o aplicativo envia suas mensagens. Qualquer fila disponível pode ser especificada como uma fila de resposta.  
+  
+ As mensagens retornadas para a fila de resposta são específicas do aplicativo. O aplicativo deve definir o conteúdo de mensagens, bem como a ação seja após o recebimento de uma mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderId">
+      <MemberSignature Language="C#" Value="public byte[] SenderId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SenderId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.SenderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador do usuário remetente.</summary>
+        <value>O identificador do usuário envio.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SentTime">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; SentTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; SentTime" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.SentTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e hora no computador de envio que a mensagem foi enviada pelo Gerenciador de fila de origem.</summary>
+        <value>A data e hora no computador de envio que a mensagem foi enviada pelo Gerenciador de fila de origem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A hora de envio é ajustada à hora local do computador no qual a mensagem foi criada. Este fuso horário pode ser diferente das filas de origem e destino.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToReachQueue">
+      <MemberSignature Language="C#" Value="public Nullable&lt;TimeSpan&gt; TimeToReachQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; TimeToReachQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.TimeToReachQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade máxima de tempo para a mensagem chegar à fila.</summary>
+        <value>A quantidade máxima de tempo para a mensagem chegar à fila.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o intervalo especificado pelo <xref:System.Messaging.Message.TimeToReachQueue%2A> propriedade expira antes que a mensagem chega ao seu destino, MSMQ descartará a mensagem dependendo do comportamento indicado pelo `DeadLetterQueue` propriedade na associação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não é infinito e é maior que Int32. MaxValue milissegundos.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,230 @@
+<Type Name="EnvelopedSignatureReader" FullName="System.IdentityModel.EnvelopedSignatureReader">
+  <TypeSignature Language="C#" Value="public sealed class EnvelopedSignatureReader : System.IdentityModel.DelegatingXmlDictionaryReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EnvelopedSignatureReader extends System.IdentityModel.DelegatingXmlDictionaryReader" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.EnvelopedSignatureReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.DelegatingXmlDictionaryReader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula um leitor que está apontando para o XML assinado envelopado para fornecer um leitor que pode ser usado para ler o conteúdo sem a necessidade de processar a assinatura. A assinatura é validada automaticamente quando o último elemento do envelope é lida. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnvelopedSignatureReader (System.Xml.XmlReader reader, System.IdentityModel.Selectors.SecurityTokenSerializer securityTokenSerializer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader reader, class System.IdentityModel.Selectors.SecurityTokenSerializer securityTokenSerializer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureReader.#ctor(System.Xml.XmlReader,System.IdentityModel.Selectors.SecurityTokenSerializer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="securityTokenSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um leitor que está apontando para o envelopado assinado XML.</param>
+        <param name="securityTokenSerializer">O serializador de token a ser usado para desserializar o <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> da assinatura.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.EnvelopedSignatureReader" /> classe usando o leitor especificado e o serializador de token de segurança.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.EnvelopedSignatureReader.%23ctor%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType> construtor é invocada com os seguintes parâmetros adicionais:  
+  
+|Nome do Parâmetro|Valor|  
+|--------------------|-----------|  
+|`signingTokenResolver`|`null`|  
+|`requireSignature`|`true`|  
+|`automaticallyReadSignature`|`true`|  
+|`resolveIntrinsicSigningKeys`|`true`|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="securityTokenSerializer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnvelopedSignatureReader (System.Xml.XmlReader reader, System.IdentityModel.Selectors.SecurityTokenSerializer securityTokenSerializer, System.IdentityModel.Selectors.SecurityTokenResolver signingTokenResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader reader, class System.IdentityModel.Selectors.SecurityTokenSerializer securityTokenSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver signingTokenResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureReader.#ctor(System.Xml.XmlReader,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="securityTokenSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="signingTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um leitor que está apontando para o envelopado assinado XML.</param>
+        <param name="securityTokenSerializer">O serializador de token a ser usado para desserializar o <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> da assinatura.</param>
+        <param name="signingTokenResolver">O resolvedor de token a ser usado para resolver o token de assinatura. <see langword="null" />Especifica que um resolvedor de token de segurança padrão deve ser usado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.EnvelopedSignatureReader" /> classe usando o leitor especificado, o serializador de token de segurança e o resolvedor de token.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.EnvelopedSignatureReader.%23ctor%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenSerializer%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType> construtor é invocada com os seguintes parâmetros adicionais:  
+  
+|Nome do Parâmetro|Valor|  
+|--------------------|-----------|  
+|`requireSignature`|`true`|  
+|`automaticallyReadSignature`|`true`|  
+|`resolveIntrinsicSigningKeys`|`true`|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="securityTokenSerializer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnvelopedSignatureReader (System.Xml.XmlReader reader, System.IdentityModel.Selectors.SecurityTokenSerializer securityTokenSerializer, System.IdentityModel.Selectors.SecurityTokenResolver signingTokenResolver, bool requireSignature, bool automaticallyReadSignature, bool resolveIntrinsicSigningKeys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlReader reader, class System.IdentityModel.Selectors.SecurityTokenSerializer securityTokenSerializer, class System.IdentityModel.Selectors.SecurityTokenResolver signingTokenResolver, bool requireSignature, bool automaticallyReadSignature, bool resolveIntrinsicSigningKeys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureReader.#ctor(System.Xml.XmlReader,System.IdentityModel.Selectors.SecurityTokenSerializer,System.IdentityModel.Selectors.SecurityTokenResolver,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="securityTokenSerializer" Type="System.IdentityModel.Selectors.SecurityTokenSerializer" />
+        <Parameter Name="signingTokenResolver" Type="System.IdentityModel.Selectors.SecurityTokenResolver" />
+        <Parameter Name="requireSignature" Type="System.Boolean" />
+        <Parameter Name="automaticallyReadSignature" Type="System.Boolean" />
+        <Parameter Name="resolveIntrinsicSigningKeys" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um leitor que está apontando para o envelopado assinado XML.</param>
+        <param name="securityTokenSerializer">O serializador de token a ser usado para desserializar o <see cref="T:System.Security.Cryptography.Xml.KeyInfo" /> da assinatura.</param>
+        <param name="signingTokenResolver">O resolvedor de token a ser usado para resolver o token de assinatura. <see langword="null" />Especifica que um resolvedor de token de segurança padrão deve ser usado.</param>
+        <param name="requireSignature">
+          <see langword="true" />Se a assinatura é obrigatória. Caso contrário, <see langword="false" />.</param>
+        <param name="automaticallyReadSignature">
+          <see langword="true" />Se a assinatura deve ser lida; Caso contrário, <see langword="false" />.</param>
+        <param name="resolveIntrinsicSigningKeys">
+          <see langword="true" />Se as chaves de assinatura intrínsecas devem ser resolvidas; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.EnvelopedSignatureReader" /> classe usando o leitor especificado, o serializador de token de segurança, o resolvedor de token e o comportamento.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="securityTokenSerializer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureReader.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureReader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê o próximo nó do fluxo.</summary>
+        <returns>
+          <see langword="true" />Se o próximo nó foi lido com êxito; <see langword="false" /> se não houver nenhuma mais nós.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Verifica se o final do envelope for atingido e valida a assinatura se o `requireSignature` parâmetro foi especificado `true` no construtor. Se o leitor é posicionado em uma `<Signature>` elemento, a assinatura inteira é lido em se o `automaticallyReadSignature` parâmetro foi especificado `true` no construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningCredentials">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SigningCredentials SigningCredentials { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SigningCredentials SigningCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.EnvelopedSignatureReader.SigningCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SigningCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as credenciais de autenticação que são usadas na assinatura, depois que o envelope é consumido e quando a assinatura é validada.</summary>
+        <value>As credenciais de assinatura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadSignature">
+      <MemberSignature Language="C#" Value="public bool TryReadSignature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadSignature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.EnvelopedSignatureReader.TryReadSignature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê a assinatura se o leitor está atualmente posicionado em um <see langword="&lt;Signature&gt;" /> elemento.</summary>
+        <returns>
+          <see langword="true" />Se a assinatura foi lido com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o leitor está atualmente posicionado em uma `<Signature>` elemento, invoca o <xref:System.IdentityModel.EnvelopedSignatureReader.Read%2A> método para ler a assinatura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

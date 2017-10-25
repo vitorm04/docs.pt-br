@@ -1,0 +1,495 @@
+<Type Name="ProjectTargetInstance" FullName="Microsoft.Build.Execution.ProjectTargetInstance">
+  <TypeSignature Language="C#" Value="public sealed class ProjectTargetInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProjectTargetInstance extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.ProjectTargetInstance" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Name={name} Count={children.Count} Condition={condition} Inputs={inputs} Outputs={outputs} DependsOnTargets={dependsOnTargets}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula um [(MSBuild) do elemento de destino](http://msdn.microsoft.com/library/350f6fc2-86b3-45f2-a31e-ece0e6bd4dca).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma classe imutável.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AfterTargetsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation AfterTargetsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation AfterTargetsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.AfterTargetsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do atributo AfterTargets.</summary>
+        <value>Retorna o local de atributo AfterTargets.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeforeTargetsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation BeforeTargetsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation BeforeTargetsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.BeforeTargetsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do atributo BeforeTargets.</summary>
+        <value>Retorna o local de atributo BeforeTargets.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectTargetInstanceChild&gt; Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Execution.ProjectTargetInstanceChild&gt; Children" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectTargetInstanceChild&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de filhos desse destino. A compilação itera esta opção para obter cada tarefa ser executada.</summary>
+        <value>Retorna uma lista de filhos desse destino.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é uma coleção ordenada. Esta é uma lista somente leitura; a classe ProjectTargetInstance é imutável. Esta coleção não contém a referência de destino OnError.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public string Condition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o atributo de condição não avaliado deste elemento de destino.</summary>
+        <value>Retorna o valor do atributo Condition. Retorna uma cadeia de caracteres vazia caso o atributo não esteja presente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ConditionLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.ConditionLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do atributo Condition.</summary>
+        <value>Retorna o local do atributo Condition.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependsOnTargets">
+      <MemberSignature Language="C#" Value="public string DependsOnTargets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DependsOnTargets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.DependsOnTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista separada por ponto-e-vírgula não avaliada de destinos que esse destino depende.</summary>
+        <value>Retorna uma lista separada por ponto-e-vírgula não avaliada de destinos que esse destino depende. Retorna uma cadeia de caracteres vazia se esse destino depende de nenhum outro destino.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DependsOnTargetsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation DependsOnTargetsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation DependsOnTargetsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.DependsOnTargetsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do atributo DependsOnTargets.</summary>
+        <value>Retorna o local de atributo DependsOnTargets.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullPath">
+      <MemberSignature Language="C#" Value="public string FullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.FullPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho completo para o arquivo que originou este destino.</summary>
+        <value>Retorna o caminho completo para o arquivo que originou este destino. Retorna uma cadeia de caracteres vazia se esse foi originado em um projeto de destino que não foi carregada e nunca recebeu um caminho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inputs">
+      <MemberSignature Language="C#" Value="public string Inputs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Inputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Inputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as entradas não avaliadas neste elemento de destino.</summary>
+        <value>Retorna as entradas não avaliadas neste elemento de destino. Retorna uma cadeia de caracteres vazia se esse destino não tem entradas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation InputsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation InputsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.InputsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do atributo entradas.</summary>
+        <value>Retorna o local de atributo de entradas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepDuplicateOutputs">
+      <MemberSignature Language="C#" Value="public string KeepDuplicateOutputs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeepDuplicateOutputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.KeepDuplicateOutputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma condição não avaliada que é usada para excluir saídas duplicadas desse destino.</summary>
+        <value>Retorna uma condição não avaliada que é usada para excluir saídas duplicadas desse destino. Retorna uma cadeia de caracteres vazia se não houver nenhuma condição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeepDuplicateOutputsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation KeepDuplicateOutputsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation KeepDuplicateOutputsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.KeepDuplicateOutputsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do atributo KeepDuplicateOutputs.</summary>
+        <value>Retorna o local de atributo KeepDuplicateOutputs.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation Location" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do próprio elemento.</summary>
+        <value>Retorna o local do elemento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do destino.</summary>
+        <value>Retorna o nome do destino.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnErrorChildren">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectOnErrorInstance&gt; OnErrorChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Execution.ProjectOnErrorInstance&gt; OnErrorChildren" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.OnErrorChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectOnErrorInstance&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista dos filhos deste destino que se referem aos destinos OnError.</summary>
+        <value>Obtém uma lista dos filhos deste destino que se referem aos destinos OnError.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é uma coleção ordenada. Esta é uma lista somente leitura; a classe ProjectTargetInstance é imutável.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Outputs">
+      <MemberSignature Language="C#" Value="public string Outputs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Outputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Outputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as saídas não avaliadas neste elemento de destino pode ser uma cadeia de caracteres vazia.</summary>
+        <value>As saídas não avaliadas neste elemento de destino retorna uma cadeia de caracteres vazia se não houver nenhuma saída.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation OutputsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation OutputsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.OutputsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do atributo saídas.</summary>
+        <value>Retorna o local de atributo de saídas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Returns">
+      <MemberSignature Language="C#" Value="public string Returns { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Returns" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Returns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o não avaliado retorna valores no elemento de destino como uma cadeia de caracteres.</summary>
+        <value>Retorna que o não avaliado retorna valores de elemento de destino como uma cadeia de caracteres. Retorna uma cadeia de caracteres vazia ou null, se nenhum valor de retorno for especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ReturnsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ReturnsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.ReturnsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local do atributo retorna.</summary>
+        <value>Retorna o local de atributo retorna.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tasks">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Build.Execution.ProjectTaskInstance&gt; Tasks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Build.Execution.ProjectTaskInstance&gt; Tasks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTargetInstance.Tasks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Build.Execution.ProjectTaskInstance&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todas as tarefas que são filhos imediatos desse destino.</summary>
+        <value>Retorna todas as tarefas que são filhos imediatos desse destino.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

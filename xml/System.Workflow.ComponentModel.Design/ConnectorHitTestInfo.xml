@@ -1,0 +1,170 @@
+<Type Name="ConnectorHitTestInfo" FullName="System.Workflow.ComponentModel.Design.ConnectorHitTestInfo">
+  <TypeSignature Language="C#" Value="public class ConnectorHitTestInfo : System.Workflow.ComponentModel.Design.HitTestInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectorHitTestInfo extends System.Workflow.ComponentModel.Design.HitTestInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Design.HitTestInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém informações sobre um conector em uma coordenada especificado em <see cref="T:System.Workflow.ComponentModel.Design.StructuredCompositeActivityDesigner" /> e todas as classes que herdam a ele.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectorHitTestInfo (System.Workflow.ComponentModel.Design.CompositeActivityDesigner compositeActivityDesigner, System.Workflow.ComponentModel.Design.HitTestLocations flags, int connector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.ComponentModel.Design.CompositeActivityDesigner compositeActivityDesigner, valuetype System.Workflow.ComponentModel.Design.HitTestLocations flags, int32 connector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo.#ctor(System.Workflow.ComponentModel.Design.CompositeActivityDesigner,System.Workflow.ComponentModel.Design.HitTestLocations,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="compositeActivityDesigner" Type="System.Workflow.ComponentModel.Design.CompositeActivityDesigner" />
+        <Parameter Name="flags" Type="System.Workflow.ComponentModel.Design.HitTestLocations" />
+        <Parameter Name="connector" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="compositeActivityDesigner">O <see cref="T:System.Workflow.ComponentModel.Design.CompositeActivityDesigner" /> que contém o conector.</param>
+        <param name="flags">Um <see cref="T:System.Workflow.ComponentModel.Design.HitTestLocations" /> que define o local no conector que o usuário clicou.</param>
+        <param name="connector">O identificador do índice do conector que foi clicado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra a adição de uma nova ramificação de usando um designer com base no logoff de <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner> classe.  Se <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner.CanInsertActivities%2A> retorna `true`, uma nova ramificação é criada usando o <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner.InsertActivities%2A> método. Um <xref:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo> será criado como um parâmetro para o <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner.InsertActivities%2A> método. Quando isso for concluído, o <xref:System.Workflow.ComponentModel.Design.CompositeActivityDesigner.EnsureVisibleContainedDesigner%2A> método é usado para garantir que a ramificação recém-adicionado é exibida no designer de fluxo de trabalho.  
+  
+ [!code-csharp[wf_Samples#29](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#29)]
+ [!code-vb[wf_Samples#29](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#29)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Antes da chamada de construtor que o índice do conector foi definido como menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o retângulo delimitador para o conector que foi clicado.</summary>
+        <value>O <see cref="T:System.Drawing.Rectangle" /> que circunda o conector que foi clicado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo" />.</param>
+        <summary>Determina se o <see cref="T:System.Object" /> especificado é igual ao <see cref="T:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo" /> atual.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Object" /> especificado for igual ao <see cref="T:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo" /> atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para a atual <see cref="T:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo" />.</summary>
+        <returns>O código hash para a atual <see cref="T:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapToIndex">
+      <MemberSignature Language="C#" Value="public override int MapToIndex ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 MapToIndex() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo.MapToIndex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o índice do conector que o usuário clicou.</summary>
+        <returns>O índice do conector que o usuário clicou.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectableObject">
+      <MemberSignature Language="C#" Value="public override object SelectableObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SelectableObject" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo.SelectableObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto selecionável associado com a área de ocorrência.</summary>
+        <value>Um selecionável <see cref="T:System.Object" /> associados com a área onde o usuário clicou.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo.SelectableObject%2A>sempre retorna atual <xref:System.Workflow.ComponentModel.Design.ConnectorHitTestInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

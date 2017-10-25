@@ -1,0 +1,90 @@
+<Type Name="IBindableTemplate" FullName="System.Web.UI.IBindableTemplate">
+  <TypeSignature Language="C#" Value="public interface IBindableTemplate : System.Web.UI.ITemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBindableTemplate implements class System.Web.UI.ITemplate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IBindableTemplate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITemplate</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma maneira para os controles associados a dados do ASP.NET, como <see cref="T:System.Web.UI.WebControls.DetailsView" /> e <see cref="T:System.Web.UI.WebControls.FormView" />, se associarem automaticamente a um controle de fonte de dados do ASP.NET dentro das seções de conteúdo de modelo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IBindableTemplate> interface fornece uma maneira de controles de associação de dados do ASP.NET, como <xref:System.Web.UI.WebControls.DetailsView>, <xref:System.Web.UI.WebControls.GridView>, e <xref:System.Web.UI.WebControls.FormView>, para associar aos dados fornecidos por um controle de fonte de dados do ASP.NET, como <xref:System.Web.UI.WebControls.ObjectDataSource> ou <xref:System.Web.UI.WebControls.SqlDataSource>, quando o controle de associação de dados inclui o conteúdo do modelo.  
+  
+> [!NOTE]
+>  Os desenvolvedores de páginas não implementam a <xref:System.Web.UI.IBindableTemplate> interface. Os desenvolvedores de criação de controles associados a dados personalizados podem manipular <xref:System.Web.UI.IBindableTemplate> objetos em implementações do <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A> e <xref:System.Web.UI.WebControls.GridView.ExtractRowValues%2A> métodos, mas não implementam seus próprios <xref:System.Web.UI.IBindableTemplate> objetos.  
+  
+ Controles associados a dados, como <xref:System.Web.UI.WebControls.GridView> normalmente esteja ciente das suas árvores de controle filho e pode, portanto, associar valores a elas, extrair valores de-los e passar esses valores entre o controle associado a dados e um controle de fonte de dados sempre que a associação de dados ocorre. No entanto, quando um desenvolvedor de página define o conteúdo do modelo para um controle associado a dados, os controles filho dentro do modelo não são visíveis para o controle de associação de dados pai: o pai pode renderizar o filho de conteúdo (como controles efetivamente são processados), mas ele não é possível extrair os valores desses controles filho para passar para a operação de exclusão, inserção ou atualização de um controle fonte de dados associados. Em cenários de associação de dados, o conteúdo do modelo é opaco para um controle de associação de dados pai. O `Bind` sintaxe possibilita o controle associado a dados extrair os valores de um controle associado a dados dentro de um <xref:System.Web.UI.IBindableTemplate> instância.  
+  
+ A associação de dados pode ser unidirecional ou bidirecional. (Essas instruções de associação são definidas pelo <xref:System.ComponentModel.BindingDirection> enumeração.) Associação de dados unidirecional é que qualquer associação de dados realizadas em uma direção de saída do controle de fonte de dados para controle de associação de dados. Por exemplo, qualquer cenário de leitura de dados envolve a associação de dados unidirecional. Para associação de dados unidirecional, você pode usar a sintaxe de associação de dados unidirecional (`<%# Eval("fieldname") %>`) dentro do conteúdo do modelo e não precisa usar a sintaxe de associação de dados bidirecional do ASP.NET. Associação de dados bidirecional descreve a associação de dados em direção de entrada do controle de associação de dados para o controle de fonte de dados. Editar automática, insert e delete cenários usando ASP.NET associadom a dados e controles da fonte de dados são cenários de associação de dados bidirecionais. Esses cenários usam expressões de associação de dados bidirecionais (`<%# Bind("fieldname") %>`). O <xref:System.Web.UI.IBindableTemplate> interface e a infraestrutura ASP.NET oferecem suporte à associação de dados automática, declarativa bidirecional entre controles de fonte de dados do ASP.NET e o conteúdo do modelo. Para obter mais informações sobre expressões de associação de dados do ASP.NET e a sintaxe, consulte [para bancos de dados de associação](http://msdn.microsoft.com/en-us/ab7b2846-975b-4057-a948-45527497c742) e [visão geral de expressões de associação de dados](http://msdn.microsoft.com/library/14cdd57d-0f82-4667-b503-73e1a96f136a).  
+  
+ Conteúdo de modelo para controles associados a dados geralmente é definido declarativamente. A tabela a seguir descreve os processos mais comumente usados para associar dados do modelo para controles associados a dados.  
+  
+|Controle associado a dados|Processo|  
+|-------------------------|-------------|  
+|<xref:System.Web.UI.WebControls.DetailsView>|O controle associado a dados está associado a dados usando o `DataSourceID` propriedade do controle de fonte de dados e o conteúdo do modelo é definida em um <xref:System.Web.UI.WebControls.TemplateField.ItemTemplate%2A>, <xref:System.Web.UI.WebControls.TemplateField.EditItemTemplate%2A> ou <xref:System.Web.UI.WebControls.TemplateField.InsertItemTemplate%2A> propriedade.|  
+|<xref:System.Web.UI.WebControls.GridView>|O controle associado a dados está associado a dados usando o `DataSourceID` propriedade do controle de fonte de dados e o conteúdo do modelo é definida em um <xref:System.Web.UI.WebControls.TemplateField.ItemTemplate%2A> ou <xref:System.Web.UI.WebControls.TemplateField.EditItemTemplate%2A> propriedade. O <xref:System.Web.UI.WebControls.GridView> controle não dá suporte a uma operação de inserção.|  
+|<xref:System.Web.UI.WebControls.FormView>|O controle associado a dados está associado a dados usando o `DataSourceID` propriedade e o conteúdo do modelo é definido em um <xref:System.Web.UI.WebControls.FormView.ItemTemplate%2A>, <xref:System.Web.UI.WebControls.FormView.InsertItemTemplate%2A>, ou <xref:System.Web.UI.WebControls.FormView.EditItemTemplate%2A> propriedade, ou em um <xref:System.Web.UI.WebControls.TemplateField> objeto.|  
+  
+ O <xref:System.Web.UI.WebControls.DataList> e <xref:System.Web.UI.WebControls.Repeater> controles não oferecem suporte a cenários de associação de dados bidirecionais automática.  
+  
+ O ASP.NET cria implicitamente um <xref:System.Web.UI.IBindableTemplate> objeto quando o conteúdo de modelo que associa a um controle de fonte de dados do ASP.NET dentro do modelo é analisado. Especificamente, o analisador do ASP.NET cria uma instância de <xref:System.Web.UI.CompiledBindableTemplateBuilder> classe quando ele analisa o conteúdo do modelo que usa a sintaxe de associação de dados do ASP.NET e contém controles de servidor Web do ASP.NET que oferecem suporte à associação de dados. Controles de servidor esses ASP.NET são marcados pelo <xref:System.ComponentModel.BindableAttribute> atributo.  
+  
+ O <xref:System.Web.UI.IBindableTemplate> interface define um método, <xref:System.Web.UI.IBindableTemplate.ExtractValues%2A>. Esse método é definido para associação de dados bidirecional, para que um controle associado a dados pode extrair os pares nome/valor do conteúdo do modelo e passar os pares a um controle de fonte de dados em tempo de execução automaticamente. Para associação automática de dados seja bem-sucedida, os nomes de campo extraídos do conteúdo do modelo, o <xref:System.Web.UI.IBindableTemplate.ExtractValues%2A> método deve corresponder aos nomes de parâmetro em um controle de fonte de dados associada. Controlar os desenvolvedores chamada a <xref:System.Web.UI.IBindableTemplate.ExtractValues%2A> método explicitamente somente dentro de suas implementações de <xref:System.Web.UI.WebControls.FormView.ExtractRowValues%2A> ou algum outro método de um controle personalizado de associação de dados semelhante.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como um <xref:System.Web.UI.WebControls.FormView> controle declarativamente pode definir o conteúdo do modelo, associar aos dados fornecidos por um <xref:System.Web.UI.WebControls.SqlDataSource> controlar e exibir e editar os registros existentes. O analisador ASP.NET analisa o conteúdo do modelo e cria um <xref:System.Web.UI.IBindableTemplate> objeto em tempo de execução que é possível associar valores da <xref:System.Web.UI.WebControls.SqlDataSource> controle para as áreas de associação de dados definidos no modelo por ambos os unidirecional sintaxe de associação de dados do ASP.NET (`<%# Eval("fieldname") %>`) e a sintaxe de associação de dados bidirecional (`<%# Bind("fieldname") %>`).  
+  
+> [!IMPORTANT]
+>  Este controle tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[FormView#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormView/CS/formvieweditcs.aspx#1)]
+ [!code-aspx-vb[FormView#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormView/VB/formvieweditvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExtractValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary ExtractValues (System.Web.UI.Control container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Specialized.IOrderedDictionary ExtractValues(class System.Web.UI.Control container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IBindableTemplate.ExtractValues(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="container">O <see cref="T:System.Web.UI.Control" /> do qual extrair pares nome/valor, que são passados pelo controle associado a dados a um controle de fonte de dados associados em cenários de associação de dados bidirecionais.</param>
+        <summary>Quando implementado por uma classe, recupera um conjunto de pares de nome/valor para valores associados usando a sintaxe de associação de dados bidirecional do ASP.NET dentro do conteúdo do modelo.</summary>
+        <returns>Um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> de pares nome/valor. O nome representa o nome de um controle dentro do conteúdo do modelo e o valor é o valor atual de um valor de propriedade associado usando a sintaxe de associação de dados bidirecional do ASP.NET.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Um <see cref="M:System.Web.UI.IBindableTemplate.ExtractValues(System.Web.UI.Control)" /> método deve estar de acordo com as regras a seguir:  
+  
+-   Se houver mais de uma associação para um determinado campo, a última associação encontrada é usada.  
+  
+-   Para referenciar o identificador do controle no <see cref="M:System.Web.UI.IBindableTemplate.ExtractValues(System.Web.UI.Control)" /> método, o controle também deve ter uma propriedade de ID definida pelo usuário no momento da análise. Se não existe uma ID, isso resulta em um erro de análise.  
+  
+-   Sintaxe de associação de dados bidirecional ASP.NET só é válido em uma <see cref="T:System.Web.UI.ITemplate" /> ou <see cref="T:System.Web.UI.IBindableTemplate" /> propriedade de um controle associado a dados.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

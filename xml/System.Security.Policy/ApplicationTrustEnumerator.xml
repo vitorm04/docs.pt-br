@@ -1,0 +1,180 @@
+<Type Name="ApplicationTrustEnumerator" FullName="System.Security.Policy.ApplicationTrustEnumerator">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationTrustEnumerator : System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationTrustEnumerator extends System.Object implements class System.Collections.IEnumerator" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.ApplicationTrustEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o enumerador para <see cref="T:System.Security.Policy.ApplicationTrust" /> objetos no <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> coleção.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enumeradores permitem apenas ler os dados na coleção. Enumeradores não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. O método <xref:System.Security.Policy.ApplicationTrustEnumerator.Reset%2A> também retorna o enumerador a essa posição. AT isso posicionar, chamando o <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A> propriedade gera uma exceção. Portanto, você deve chamar o <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> método para avançar o enumerador para o primeiro elemento da coleção antes de ler o valor da <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A> propriedade.  
+  
+ <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> ou <xref:System.Security.Policy.ApplicationTrustEnumerator.Reset%2A> ser chamado. <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> define <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A> como o próximo elemento.  
+  
+ Após o final da coleção for passado, o enumerador está posicionado após o último elemento da coleção e chamada <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> retorna `false`. Se a última chamada <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> retornou `false`, chamar <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A> lança uma exceção. Para redefinir <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A> para o primeiro elemento da coleção, chame <xref:System.Security.Policy.ApplicationTrustEnumerator.Reset%2A> seguido por uma chamada para <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar, ou excluir elementos, o enumerador é invalidado invalidado e a próxima chamada para <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> ou <xref:System.Security.Policy.ApplicationTrustEnumerator.Reset%2A> lança um <xref:System.InvalidOperationException> exceção. Se a coleção é modificada entre chamar <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> e <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A>, <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A> retorna o elemento ao qual ela está definida, mesmo se o enumerador já é invalidado.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.ApplicationTrust Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.ApplicationTrust Current" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationTrustEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.ApplicationTrust</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual <see cref="T:System.Security.Policy.ApplicationTrust" /> objeto o <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> coleção.</summary>
+        <value>Atual <see cref="T:System.Security.Policy.ApplicationTrust" /> no <see cref="T:System.Security.Policy.ApplicationTrustCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o enumerador é criado, ele não aponta para um objeto, então o <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A> propriedade não é válida e lançará uma exceção se ele for acessado. Você deve primeiro chamar o <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> método para posicionar o cursor no primeiro objeto na coleção.  
+  
+ Diversas chamadas para <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A> com nenhuma intervenção chamadas para <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> retornará o mesmo <xref:System.Security.Policy.ApplicationTrust> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Move para o próximo elemento o <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> coleção.</summary>
+        <returns>
+          <see langword="true" /> se o enumerador foi avançado com êxito para o próximo elemento; <see langword="false" /> se o enumerador passou o final da coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> método retorna imediatamente `false` se não existem objetos na coleção.  
+  
+ <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A>retornará `true` até que ele tenha atingido o final da coleção. Em seguida, ele retornará `false` para cada chamada sucessiva. No entanto, após <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> retornou `false`, acessando o <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A> propriedade gerará uma exceção.  
+  
+ Após a criação, um enumerador está posicionado antes da primeira <xref:System.Security.Policy.ApplicationTrust> objeto na coleção e a primeira chamada para <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> posiciona o enumerador no primeiro objeto na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationTrustEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o enumerador para o início do <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um enumerador move em uma direção de somente avanço. Use esse método para retornar o enumerador para o início da coleção de <xref:System.Security.Policy.ApplicationTrust> objetos.  
+  
+ O <xref:System.Security.Policy.ApplicationTrustEnumerator.Reset%2A> método posiciona o cursor no primeiro objeto na coleção. Depois de chamar <xref:System.Security.Policy.ApplicationTrustEnumerator.Reset%2A>, você não precisa chamar o <xref:System.Security.Policy.ApplicationTrustEnumerator.MoveNext%2A> método para mover o cursor para frente para o primeiro objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationTrustEnumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual <see cref="T:System.Object" /> no <see cref="T:System.Security.Policy.ApplicationTrustCollection" /> coleção.</summary>
+        <value>Atual <see cref="T:System.Object" /> no <see cref="T:System.Security.Policy.ApplicationTrustCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não chame este método; Use o <xref:System.Security.Policy.ApplicationTrustEnumerator.Current%2A> propriedade em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

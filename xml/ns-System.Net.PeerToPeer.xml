@@ -1,0 +1,25 @@
+<Namespace Name="System.Net.PeerToPeer">
+  <Docs>
+    <summary>O <see cref="N:System.Net.PeerToPeer" /> namespace fornece acesso para o recurso de rede ponto a ponto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como pares de descobrem uns aos outros e resolver os identificadores é complicado devido a falta de acesso a registros de endereços como sistema de nome de domínio (DNS) e de conectividade transitória.  A infraestrutura de ponto a ponto do Windows resolve esse problema com um nome correspondente e resolução descoberta esquema chamado PNRP.  
+  
+ Resolução de protocolo PNRP (Peer Name) fornece um mecanismo de resolução de nome para redes ponto a ponto.  O PNRP foi projetado para resolver um nome para uma rede <xref:System.Net.IPEndPoint> de maneira completamente ponto a ponto.  
+  
+ A funcionalidade básica do protocolo PNRP é fornecida no <xref:System.Net.PeerToPeer> classes do namespace.  Eles fornecem a capacidade de criar um par e registrá-lo em um <xref:System.Net.PeerToPeer.Cloud> de pares. Eles também fornecem a capacidade de resolver um <xref:System.Net.PeerToPeer.PeerName> para seu ponto de extremidade de rede, porta TCP, nuvem ou outros identificadores de endereço.  
+  
+ Recursos avançados para rede ponto a ponto é fornecido no <xref:System.Net.PeerToPeer.Collaboration> namespace.  
+  
+ No Windows Vista, PNRP é fornecido como um serviço que é iniciado sob demanda por aplicativos. Além disso, há um serviço de registro de máquina PNRP que pode ser habilitado manualmente por aplicativos ou usuários se deseja publicar os nomes de computador para conexões remotas e comunicações.  
+  
+ O PNRP versão 1 foi incluído no Windows XP com Service Pack 1 (SP1) e o pacote de rede avançado para o Windows XP, Windows XP Professional x64 Edition e Windows XP Service Pack 2 (SP2).  
+  
+ Além disso, há um serviço de registro de máquina PNRP que pode ser habilitado manualmente por usuários/aplicativos se houver interesse em publicação nomes de computador para comunicação e conexão remota.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,142 @@
+<Type Name="ModelChangeInfo" FullName="System.Activities.Presentation.Services.ModelChangeInfo">
+  <TypeSignature Language="C#" Value="public abstract class ModelChangeInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ModelChangeInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Services.ModelChangeInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém dados para obter informações detalhadas do modelo de alterações.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ModelChangeInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Services.ModelChangeInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Presentation.Services.ModelChangeInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.ModelItem Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelItem Key" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Services.ModelChangeInfo.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item de modelo da chave se ela é uma alteração de dicionário.</summary>
+        <value>O item de modelo da chave se ela é uma alteração de dicionário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelChangeType">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Services.ModelChangeType ModelChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.Presentation.Services.ModelChangeType ModelChangeType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Services.ModelChangeInfo.ModelChangeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Services.ModelChangeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de alteração do modelo.</summary>
+        <value>O tipo de alteração do modelo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValue">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.ModelItem OldValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelItem OldValue" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Services.ModelChangeInfo.OldValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor antigo se for uma alteração de propriedade ou uma alteração de valor do dicionário.</summary>
+        <value>O valor antigo se for uma alteração de propriedade ou uma alteração de valor do dicionário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public abstract string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Services.ModelChangeInfo.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade, se for uma alteração de propriedade.</summary>
+        <value>O nome da propriedade se ela é uma alteração de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.ModelItem Subject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelItem Subject" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Services.ModelChangeInfo.Subject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item de modelo em que ocorre uma alteração de modelo.</summary>
+        <value>O item de modelo em que ocorre uma alteração de modelo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public abstract System.Activities.Presentation.Model.ModelItem Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelItem Value" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Services.ModelChangeInfo.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto foi adicionado/removido ou o novo valor, se for uma alteração de propriedade.</summary>
+        <value>O objeto foi adicionado/removido ou o novo valor se for uma alteração de propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

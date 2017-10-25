@@ -1,0 +1,118 @@
+<Type Name="MetadataExchangeBindings" FullName="System.ServiceModel.Description.MetadataExchangeBindings">
+  <TypeSignature Language="C#" Value="public static class MetadataExchangeBindings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit MetadataExchangeBindings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.MetadataExchangeBindings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado para criar associações fornecidas pelo sistema para troca de metadados de WS-Transfer usando o contrato <see cref="T:System.ServiceModel.Description.IMetadataExchange" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.MetadataExchangeBindings> métodos e propriedades ao criar associações fornecidas pelo sistema para dar suporte à transferência WS obter trocas de metadados. Para obter mais informações e exemplos, consulte [como: publicar metadados para um serviço usando um arquivo de configuração](~/docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
+  
+ Consulte os membros individuais para obter detalhes sobre a composição de associação que elas retornam.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateMexHttpBinding">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Binding CreateMexHttpBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Binding CreateMexHttpBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.ServiceModel.WSHttpBinding" /> com segurança desativada.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.WSHttpBinding" /> com segurança desativada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A> método para retornar uma associação que dá suporte à maioria das solicitações de metadados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMexHttpsBinding">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Binding CreateMexHttpsBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Binding CreateMexHttpsBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpsBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.ServiceModel.WSHttpBinding" /> que dá suporte à segurança de nível de transporte.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.WSHttpBinding" /> que dá suporte à segurança de nível de transporte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpsBinding%2A> método para retornar uma associação que pode ser protegida no nível do transporte usando certificados. Para obter mais informações sobre como configurar e usar esse um ponto de extremidade de metadados, consulte [como: configurar uma associação de personalizado WS-Metadata Exchange](~/docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [como: recuperar metadados sobre uma associação não MEX](~/docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)e o exemplo [personalizado proteger metadados de ponto de extremidade](~/docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMexNamedPipeBinding">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Binding CreateMexNamedPipeBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Binding CreateMexNamedPipeBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexNamedPipeBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.ServiceModel.Channels.CustomBinding" /> com um <see cref="T:System.ServiceModel.Channels.NamedPipeTransportBindingElement" />.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.CustomBinding" /> com um <see cref="T:System.ServiceModel.Channels.NamedPipeTransportBindingElement" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMexTcpBinding">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Binding CreateMexTcpBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Binding CreateMexTcpBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexTcpBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.ServiceModel.Channels.CustomBinding" /> com um <see cref="T:System.ServiceModel.Channels.TcpTransportBindingElement" />.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.CustomBinding" /> com um <see cref="T:System.ServiceModel.Channels.TcpTransportBindingElement" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

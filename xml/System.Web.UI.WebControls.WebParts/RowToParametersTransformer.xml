@@ -1,0 +1,290 @@
+<Type Name="RowToParametersTransformer" FullName="System.Web.UI.WebControls.WebParts.RowToParametersTransformer">
+  <TypeSignature Language="C#" Value="public sealed class RowToParametersTransformer : System.Web.UI.WebControls.WebParts.WebPartTransformer, System.Web.UI.WebControls.WebParts.IWebPartParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RowToParametersTransformer extends System.Web.UI.WebControls.WebParts.WebPartTransformer implements class System.Web.UI.WebControls.WebParts.IWebPartParameters" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.RowToParametersTransformer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.WebPartTransformer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.WebParts.IWebPartParameters</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.WebControls.WebParts.WebPartTransformer(typeof(System.Web.UI.WebControls.WebParts.IWebPartRow), typeof(System.Web.UI.WebControls.WebParts.IWebPartParameters))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Transforma os dados em uma conexão de Web Parts de um provedor que implementa o <see cref="T:System.Web.UI.WebControls.WebParts.IWebPartRow" /> interface com um consumidor esperando receber dados de um provedor que implementa o <see cref="T:System.Web.UI.WebControls.WebParts.IWebPartParameters" /> interface.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Transformadores são usados em uma conexão de Web Parts para converter dados entre dois controles de Web Parts com pontos de conexão incompatível. O <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer> classe transforma os dados de um provedor de implementar o <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> interface com um consumidor esperando receber dados de um provedor que implementa o <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters> interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RowToParametersTransformer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.RowToParametersTransformer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumerFieldNames">
+      <MemberSignature Language="C#" Value="public string[] ConsumerFieldNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ConsumerFieldNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.ConsumerFieldNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.StringArrayConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista de nomes no consumidor que recebe os valores do provedor.</summary>
+        <value>Uma matriz de <see cref="T:System.String" /> valores que representam os campos de consumidor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.ConsumerFieldNames%2A> propriedade representa os campos no consumidor que recebe os dados transformados do provedor. O <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.ConsumerFieldNames%2A> propriedade pode ser definida pelo usuário através do <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer> controle de configuração ou conjunto de forma declarativa no `<asp:RowToParametersTransformer />` elemento, onde os nomes de campo do consumidor tantos conforme necessário são atribuídos ao `ConsumerFieldNames` atributo, no formato `ConsumerFieldNames="fieldA,fieldB"`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateConfigurationControl">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Control CreateConfigurationControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Control CreateConfigurationControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.CreateConfigurationControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um controle do ASP.NET que permite que o usuário configure um <see cref="T:System.Web.UI.WebControls.WebParts.RowToParametersTransformer" /> transformador no <see cref="T:System.Web.UI.WebControls.WebParts.ConnectionsZone" /> zona.</summary>
+        <returns>Um controle ASP.NET que exibe uma interface do usuário (UI) que permite que o usuário configure um <see cref="T:System.Web.UI.WebControls.WebParts.RowToParametersTransformer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pode ser estabelecida uma conexão de Web Parts estática ou dinamicamente. Uma conexão estático é definido dentro do `<StaticConnections>` elemento. Um usuário pode definir uma conexão dinâmica quando uma zona de conexões é incluída em uma página da Web e o usuário está no modo de conexão. Ao estabelecer uma conexão dinâmica, o usuário define a conexão por meio de um controle de configuração. O <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.CreateConfigurationControl%2A> método retorna o controle que o usuário interage com para definir a conexão.  
+  
+ O controle de configuração exibe uma interface do usuário que permite que o usuário para se conectar ou desconectar um provedor e consumidor e selecionar o campo do provedor de dados de linha conectar-se com os dados do campo do consumidor. O controle é exibido na <xref:System.Web.UI.WebControls.WebParts.ConnectionsZone> zona.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadConfigurationState">
+      <MemberSignature Language="C#" Value="protected override void LoadConfigurationState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void LoadConfigurationState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.LoadConfigurationState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderFieldNames">
+      <MemberSignature Language="C#" Value="public string[] ProviderFieldNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ProviderFieldNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.ProviderFieldNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.StringArrayConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista de nomes de campo do provedor.</summary>
+        <value>Uma matriz de <see cref="T:System.String" /> valores que representam os campos de provedor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.ProviderFieldNames%2A> propriedade representa os campos no provedor que o transformador passará para o consumidor. O <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.ProviderFieldNames%2A> propriedade pode ser definida pelo usuário através do <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer> controle de configuração ou conjunto de forma declarativa no `<asp:RowToParametersTransformer />` elemento, onde os nomes de campo do provedor tantos conforme necessário são atribuídos ao `ProviderFieldNames` atributo, no formato `ProviderFieldNames="fieldA,fieldB"`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveConfigurationState">
+      <MemberSignature Language="C#" Value="protected override object SaveConfigurationState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object SaveConfigurationState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.SaveConfigurationState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.IWebPartParameters.GetParametersData">
+      <MemberSignature Language="C#" Value="void IWebPartParameters.GetParametersData (System.Web.UI.WebControls.WebParts.ParametersCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.WebParts.IWebPartParameters.GetParametersData(class System.Web.UI.WebControls.WebParts.ParametersCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.System#Web#UI#WebControls#WebParts#IWebPartParameters#GetParametersData(System.Web.UI.WebControls.WebParts.ParametersCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Web.UI.WebControls.WebParts.ParametersCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">A instância delegada a ser usada ao recuperar um valor.</param>
+        <summary>Obtém o valor dos dados do provedor de conexão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer> é convertida em uma interface de <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> é igual a <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.IWebPartParameters.Schema">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection System.Web.UI.WebControls.WebParts.IWebPartParameters.Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptorCollection System.Web.UI.WebControls.WebParts.IWebPartParameters.Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.System#Web#UI#WebControls#WebParts#IWebPartParameters#Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de esquema para um campo de dados que é usado para compartilhar dados entre dois controles de Web Parts.</summary>
+        <value>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que contém o esquema de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer> é convertida em uma interface de <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.IWebPartParameters.SetConsumerSchema">
+      <MemberSignature Language="C#" Value="void IWebPartParameters.SetConsumerSchema (System.ComponentModel.PropertyDescriptorCollection schema);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.WebParts.IWebPartParameters.SetConsumerSchema(class System.ComponentModel.PropertyDescriptorCollection schema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.System#Web#UI#WebControls#WebParts#IWebPartParameters#SetConsumerSchema(System.ComponentModel.PropertyDescriptorCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schema" Type="System.ComponentModel.PropertyDescriptorCollection" />
+      </Parameters>
+      <Docs>
+        <param name="schema">O <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> objeto retornado por <see cref="P:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.System#Web#UI#WebControls#WebParts#IWebPartParameters#Schema" />.</param>
+        <summary>Define o descritor de propriedade para as propriedades que o consumidor recebe quando o <see cref="M:System.Web.UI.WebControls.WebParts.IWebPartParameters.GetParametersData(System.Web.UI.WebControls.WebParts.ParametersCallback)" /> método é chamado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer> é convertida em uma interface de <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public override object Transform (object providerData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Transform(object providerData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.Transform(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="providerData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="providerData">Os dados do provedor a ser transformado.</param>
+        <summary>Fornece um objeto para transformar os dados.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa os dados a ser transformado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.RowToParametersTransformer.Transform%2A> método fornece um objeto para transformar os dados do provedor do tipo <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> para o tipo <xref:System.Web.UI.WebControls.WebParts.IWebPartParameters> para que possam ser usados pelo consumidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

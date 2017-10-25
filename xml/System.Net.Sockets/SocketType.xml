@@ -1,0 +1,203 @@
+<Type Name="SocketType" FullName="System.Net.Sockets.SocketType">
+  <TypeSignature Language="C#" Value="public enum SocketType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SocketType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.SocketType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de soquete que uma instância da classe <see cref="T:System.Net.Sockets.Socket" /> representa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de um <xref:System.Net.Sockets.Socket> pode enviar e receber dados, ele deve ser criado usando um <xref:System.Net.Sockets.AddressFamily>, um <xref:System.Net.Sockets.SocketType>e um <xref:System.Net.Sockets.ProtocolType>. O <xref:System.Net.Sockets.SocketType> enumeração fornece várias opções para definir o tipo de <xref:System.Net.Sockets.Socket> que você pretende abrir.  
+  
+> [!NOTE]
+>  <xref:System.Net.Sockets.SocketType>indica que, às vezes, implicitamente <xref:System.Net.Sockets.ProtocolType> é usada dentro de um <xref:System.Net.Sockets.AddressFamily>. Por exemplo, quando o <xref:System.Net.Sockets.SocketType?displayProperty=nameWithType> é <xref:System.Net.Sockets.SocketType.Dgram?displayProperty=nameWithType>, o <xref:System.Net.Sockets.ProtocolType?displayProperty=nameWithType> é sempre <xref:System.Net.Sockets.ProtocolType.Udp?displayProperty=nameWithType>. Quando o <xref:System.Net.Sockets.SocketType?displayProperty=nameWithType> é <xref:System.Net.Sockets.SocketType.Stream?displayProperty=nameWithType>, o <xref:System.Net.Sockets.ProtocolType?displayProperty=nameWithType> é sempre <xref:System.Net.Sockets.ProtocolType.Tcp?displayProperty=nameWithType>. Se você tentar criar um <xref:System.Net.Sockets.Socket> com uma combinação incompatível, <xref:System.Net.Sockets.Socket> lança um <xref:System.Net.Sockets.SocketException>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Net.Sockets.SocketType.Stream?displayProperty=nameWithType> como um parâmetro para o <xref:System.Net.Sockets.Socket> construtor.  
+  
+ [!code-cpp[SelectModeExample#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SelectModeExample/CPP/source.cpp#1)]
+ [!code-csharp[SelectModeExample#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SelectModeExample/CS/source.cs#1)]
+ [!code-vb[SelectModeExample#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SelectModeExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dgram">
+      <MemberSignature Language="C#" Value="Dgram" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketType Dgram = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketType.Dgram" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dá suporte a datagramas, mensagens sem conexão e não confiáveis de um comprimento máximo fixo (normalmente pequeno). As mensagens podem ser perdidas ou duplicadas e podem chegar fora de ordem. Um <see cref="T:System.Net.Sockets.Socket" /> do tipo <see cref="F:System.Net.Sockets.SocketType.Dgram" /> não exige nenhuma conexão antes de enviar e receber dados e pode se comunicar com vários pares. <see cref="F:System.Net.Sockets.SocketType.Dgram" />usa o protocolo de datagrama (<see langword="ProtocolType" />.<see cref="F:System.Net.Sockets.ProtocolType.Udp" />) e o <see langword="AddressFamily" />.<see cref="F:System.Net.Sockets.AddressFamily.InterNetwork" /> família de endereços.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Raw">
+      <MemberSignature Language="C#" Value="Raw" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketType Raw = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketType.Raw" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dá suporte ao acesso ao protocolo de transporte subjacente. Usando <see cref="F:System.Net.Sockets.SocketType.Raw" />, você pode se comunicar usando protocolos como Internet Control Message Protocol (<see langword="ProtocolType" />.<see cref="F:System.Net.Sockets.ProtocolType.Icmp" />) e Internet Group Management Protocol (<see langword="ProtocolType" />.<see cref="F:System.Net.Sockets.ProtocolType.Igmp" />). Seu aplicativo deve fornecer um cabeçalho IP completo no envio. Datagramas recebidos retornam com o cabeçalho IP e opções intactas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Rdm">
+      <MemberSignature Language="C#" Value="Rdm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketType Rdm = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketType.Rdm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dá suporte a mensagens entregues com confiança, sem conexão e orientadas a mensagens e preserva os limites das mensagens em dados. Mensagens RDM (Mensagens Entregues com Confiança) chegam não duplicadas e em ordem. Além disso, o remetente será notificado se as mensagens forem perdidas. Se você inicializar um <see cref="T:System.Net.Sockets.Socket" /> usando <see cref="F:System.Net.Sockets.SocketType.Rdm" />, não será necessária uma conexão de host remoto antes de enviar e receber dados. Com <see cref="F:System.Net.Sockets.SocketType.Rdm" />, é possível se comunicar com vários pares.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Seqpacket">
+      <MemberSignature Language="C#" Value="Seqpacket" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketType Seqpacket = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketType.Seqpacket" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece a transferência bidirecional confiável e orientada a conexões de fluxos de bytes ordenados em uma rede. <see cref="F:System.Net.Sockets.SocketType.Seqpacket" /> não duplica dados e preserva limites dentro do fluxo de dados. Um <see cref="T:System.Net.Sockets.Socket" /> de tipo <see cref="F:System.Net.Sockets.SocketType.Seqpacket" /> se comunica com um par único e requer uma conexão de host remoto antes de a comunicação começar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stream">
+      <MemberSignature Language="C#" Value="Stream" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketType Stream = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketType.Stream" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dá suporte a fluxos de bytes bidirecionais, confiáveis e baseados em conexão sem a duplicação de dados e sem a preservação de limites. Um <see cref="T:System.Net.Sockets.Socket" /> desse tipo se comunica com um par único e requer uma conexão de host remoto antes de a comunicação começar. <see cref="F:System.Net.Sockets.SocketType.Stream" />usa o protocolo de controle de transmissão (<see langword="ProtocolType" />.<see cref="F:System.Net.Sockets.ProtocolType.Tcp" />) e o <see langword="AddressFamily" />.<see cref="F:System.Net.Sockets.AddressFamily.InterNetwork" /> família de endereços.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketType Unknown = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um tipo <see cref="Socket" /> desconhecido.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

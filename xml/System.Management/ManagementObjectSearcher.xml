@@ -1,0 +1,438 @@
+<Type Name="ManagementObjectSearcher" FullName="System.Management.ManagementObjectSearcher">
+  <TypeSignature Language="C#" Value="public class ManagementObjectSearcher : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ManagementObjectSearcher extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ManagementObjectSearcher" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Recupera uma coleção de objetos de gerenciamento baseada em uma consulta especificada. Essa classe é um dos pontos de entrada mais usados para recuperar informações de gerenciamento. Por exemplo, ela pode ser usada para enumerar todas as unidades de disco, adaptadores de rede, processos e muitos outros objetos de gerenciamento de um sistema, ou para consultar todas as conexões de rede que estão em funcionamento, serviços que estão em pausa e assim por diante.  Quando instanciada, uma instância dessa classe usa como entrada uma consulta WMI representada em um <see cref="T:System.Management.ObjectQuery" /> ou seus derivativos e, opcionalmente, um <see cref="T:System.Management.ManagementScope" /> que representa o namespace WMI no qual a consulta será executada. Ela também pode usar opções avançadas adicionais em um <see cref="T:System.Management.EnumerationOptions" />. Quando o método <see cref="M:System.Management.ManagementObjectSearcher.Get" /> desse objeto é invocado, o <see cref="T:System.Management.ManagementObjectSearcher" /> executa a consulta em questão no escopo especificado e retorna uma coleção de objetos de gerenciamento correspondentes à consulta em um <see cref="T:System.Management.ManagementObjectCollection" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObjectSearcher ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObjectSearcher.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementObjectSearcher" />. Após a definição de algumas propriedades desse objeto, o objeto poderá ser usado para invocar uma consulta para obter informações de gerenciamento. Esse é o construtor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObjectSearcher (System.Management.ObjectQuery query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.ObjectQuery query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObjectSearcher.#ctor(System.Management.ObjectQuery)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="query" Type="System.Management.ObjectQuery" />
+      </Parameters>
+      <Docs>
+        <param name="query">Um <see cref="T:System.Management.ObjectQuery" /> que representa a consulta a ser invocada pelo pesquisador.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementObjectSearcher" /> usada para invocar a consulta especificada de informações de gerenciamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObjectSearcher> classe com uma consulta específica.  
+  
+ [!code-csharp[wminet_ManagementObjectSearcher-O#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-O/cs/ManagementObjectSearcher-O.cs#1)]
+ [!code-vb[wminet_ManagementObjectSearcher-O#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-O/vb/ManagementObjectSearcher-O.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObjectSearcher (string queryString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string queryString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObjectSearcher.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="queryString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="queryString">A consulta WMI a ser invocada pelo objeto.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementObjectSearcher" /> usada para invocar a consulta especificada de informações de gerenciamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObjectSearcher> classe com uma consulta específica.  
+  
+ [!code-csharp[wminet_ManagementObjectSearcher-S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-S/cs/ManagementObjectSearcher-S.cs#1)]
+ [!code-vb[wminet_ManagementObjectSearcher-S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-S/vb/ManagementObjectSearcher-S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObjectSearcher (System.Management.ManagementScope scope, System.Management.ObjectQuery query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.ManagementScope scope, class System.Management.ObjectQuery query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObjectSearcher.#ctor(System.Management.ManagementScope,System.Management.ObjectQuery)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Management.ManagementScope" />
+        <Parameter Name="query" Type="System.Management.ObjectQuery" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Um <see cref="T:System.Management.ManagementScope" /> que representa o escopo no qual invocar a consulta.</param>
+        <param name="query">Um <see cref="T:System.Management.ObjectQuery" /> que representa a consulta a ser invocada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementObjectSearcher" /> usada para invocar a consulta especificada no escopo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum escopo for especificado, o escopo padrão (<xref:System.Management.ManagementPath.DefaultPath%2A>) é usado.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObjectSearcher> classe com uma consulta específica e escopo.  
+  
+ [!code-csharp[wminet_ManagementObjectSearcher-M_O#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-M_O/cs/ManagementObjectSearcher-M_O.cs#1)]
+ [!code-vb[wminet_ManagementObjectSearcher-M_O#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-M_O/vb/ManagementObjectSearcher-M_O.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObjectSearcher (string scope, string queryString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scope, string queryString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObjectSearcher.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scope" Type="System.String" />
+        <Parameter Name="queryString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scope">O escopo no qual consultar.</param>
+        <param name="queryString">A consulta a ser invocada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementObjectSearcher" /> usada para invocar a consulta especificada no escopo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum escopo for especificado, o escopo padrão (<xref:System.Management.ManagementPath.DefaultPath%2A>) é usado.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObjectSearcher> classe com uma consulta específica e escopo.  
+  
+ [!code-csharp[wminet_ManagementObjectSearcher-S_S#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-S_S/cs/ManagementObjectSearcher-S_S.cs#1)]
+ [!code-vb[wminet_ManagementObjectSearcher-S_S#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-S_S/vb/ManagementObjectSearcher-S_S.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObjectSearcher (System.Management.ManagementScope scope, System.Management.ObjectQuery query, System.Management.EnumerationOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.ManagementScope scope, class System.Management.ObjectQuery query, class System.Management.EnumerationOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObjectSearcher.#ctor(System.Management.ManagementScope,System.Management.ObjectQuery,System.Management.EnumerationOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scope" Type="System.Management.ManagementScope" />
+        <Parameter Name="query" Type="System.Management.ObjectQuery" />
+        <Parameter Name="options" Type="System.Management.EnumerationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="scope">Um <see cref="T:System.Management.ManagementScope" /> especificando o escopo da consulta.</param>
+        <param name="query">Um <see cref="T:System.Management.ObjectQuery" /> especificando a consulta a ser chamada.</param>
+        <param name="options">Um <see cref="T:System.Management.EnumerationOptions" /> especificando as opções adicionais a serem usadas para a consulta.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementObjectSearcher" /> a ser usada para invocar a consulta especificada no escopo especificado, com as opções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObjectSearcher> classe com um opções específicas de consulta, o escopo e a enumeração.  
+  
+ [!code-csharp[wminet_ManagementObjectSearcher-M_O_E#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-M_O_E/cs/ManagementObjectSearcher-M_O_E.cs#1)]
+ [!code-vb[wminet_ManagementObjectSearcher-M_O_E#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-M_O_E/vb/ManagementObjectSearcher-M_O_E.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementObjectSearcher (string scope, string queryString, System.Management.EnumerationOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scope, string queryString, class System.Management.EnumerationOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObjectSearcher.#ctor(System.String,System.String,System.Management.EnumerationOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scope" Type="System.String" />
+        <Parameter Name="queryString" Type="System.String" />
+        <Parameter Name="options" Type="System.Management.EnumerationOptions" />
+      </Parameters>
+      <Docs>
+        <param name="scope">O escopo no qual a consulta deve ser invocada.</param>
+        <param name="queryString">A consulta a ser invocada.</param>
+        <param name="options">Um <see cref="T:System.Management.EnumerationOptions" /> que especifica opções adicionais para a consulta.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementObjectSearcher" /> usada para invocar a consulta especificada, no escopo especificado e com as opções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObjectSearcher> classe com um opções específicas de consulta, o escopo e a enumeração.  
+  
+ [!code-csharp[wminet_ManagementObjectSearcher-S_S_E#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-S_S_E/cs/ManagementObjectSearcher-S_S_E.cs#1)]
+ [!code-vb[wminet_ManagementObjectSearcher-S_S_E#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher-S_S_E/vb/ManagementObjectSearcher-S_S_E.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementObjectCollection Get ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Management.ManagementObjectCollection Get() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObjectSearcher.Get" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invoca a consulta WMI especificada e retorna a coleção resultante.</summary>
+        <returns>Um <see cref="T:System.Management.ManagementObjectCollection" /> que contém os objetos que correspondem à consulta especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObjectSearcher> classe com um opções específicas de consulta, o escopo e a enumeração.  
+  
+ [!code-csharp[wminet_ManagementObjectSearcher_Get#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher_Get/cs/ManagementObjectSearcher_Get.cs#1)]
+ [!code-vb[wminet_ManagementObjectSearcher_Get#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher_Get/vb/ManagementObjectSearcher_Get.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public void Get (System.Management.ManagementOperationObserver watcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Get(class System.Management.ManagementOperationObserver watcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementObjectSearcher.Get(System.Management.ManagementOperationObserver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="watcher" Type="System.Management.ManagementOperationObserver" />
+      </Parameters>
+      <Docs>
+        <param name="watcher">O inspetor que gera eventos disparados pela operação.</param>
+        <summary>Invoca a consulta WMI de maneira assíncrona e associa a um inspetor para entregar os resultados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.Management.EnumerationOptions Options { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.EnumerationOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementObjectSearcher.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.EnumerationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as opções de pesquisa para objetos.</summary>
+        <value>Retorna um <see cref="T:System.Management.EnumerationOptions" /> que contém as opções para pesquisar objetos WMI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ As opções de pesquisa para objetos.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Query">
+      <MemberSignature Language="C#" Value="public System.Management.ObjectQuery Query { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ObjectQuery Query" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementObjectSearcher.Query" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ObjectQuery</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a consulta a ser invocada na ferramenta de pesquisa (ou seja, o critério a ser aplicado à pesquisa de objetos de gerenciamento).</summary>
+        <value>Retorna um <see cref="T:System.Management.ObjectQuery" /> que contém a consulta a ser invocada na ferramenta de pesquisa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o valor dessa propriedade é alterado, o <xref:System.Management.ManagementObjectSearcher> é redefinido para usar a nova consulta.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Os critérios para aplicar à consulta.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scope">
+      <MemberSignature Language="C#" Value="public System.Management.ManagementScope Scope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Management.ManagementScope Scope" />
+      <MemberSignature Language="DocId" Value="P:System.Management.ManagementObjectSearcher.Scope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ManagementScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o escopo no qual procurar objetos (o escopo representa um namespace WMI).</summary>
+        <value>Retorna um <see cref="T:System.Management.ManagementScope" /> que contém o escopo (namespace) no qual procurar os objetos WMI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o valor dessa propriedade é alterado, o <xref:System.Management.ManagementObjectSearcher> for associado novamente para o novo escopo.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ O escopo (namespace) no qual procurar objetos.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Management.ManagementObjectSearcher> classe com uma consulta específica e, em seguida, altera o escopo da instância.  
+  
+ [!code-csharp[wminet_ManagementObjectSearcher_Scope#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher_Scope/cs/ManagementObjectSearcher_Scope.cs#1)]
+ [!code-vb[wminet_ManagementObjectSearcher_Scope#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementObjectSearcher_Scope/vb/ManagementObjectSearcher_Scope.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

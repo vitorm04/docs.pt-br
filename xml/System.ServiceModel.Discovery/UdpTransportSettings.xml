@@ -1,0 +1,237 @@
+<Type Name="UdpTransportSettings" FullName="System.ServiceModel.Discovery.UdpTransportSettings">
+  <TypeSignature Language="C#" Value="public class UdpTransportSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UdpTransportSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.UdpTransportSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que você defina as configurações de transporte UDP.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DuplicateMessageHistoryLength">
+      <MemberSignature Language="C#" Value="public int DuplicateMessageHistoryLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DuplicateMessageHistoryLength" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.DuplicateMessageHistoryLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o número máximo de mensagens de hash usado pelo transporte para identificar mensagens duplicadas.</summary>
+        <value>O número máximo de mensagens de hash a ser usado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece a desenvolvedores e administradores de sistema uma maneira para desativar os algoritmos de detecção de mensagens duplicadas. Definir esse valor como 0 desabilita a detecção de mensagens duplicadas. O valor padrão é 4112.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBufferPoolSize">
+      <MemberSignature Language="C#" Value="public long MaxBufferPoolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxBufferPoolSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MaxBufferPoolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo, em bytes, de qualquer pool de buffer usado pelo transporte.</summary>
+        <value>O tamanho máximo do buffer do pool.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxMulticastRetransmitCount">
+      <MemberSignature Language="C#" Value="public int MaxMulticastRetransmitCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxMulticastRetransmitCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MaxMulticastRetransmitCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o número máximo de vezes que uma mensagem de multicast deve ser retransmitida (além do primeiro envio).</summary>
+        <value>O número máximo de vezes que uma mensagem de multicast é retransmitida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é 2.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPendingMessageCount">
+      <MemberSignature Language="C#" Value="public int MaxPendingMessageCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPendingMessageCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MaxPendingMessageCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o número máximo de mensagens que foram recebidos, mas ainda não foram removidas da fila de entrada para uma instância de canal individual.</summary>
+        <value>O número de mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a fila de entrada atingiu seu limite de contagem de mensagens pendentes, a mensagem será descartada. O valor padrão é 32.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReceivedMessageSize">
+      <MemberSignature Language="C#" Value="public long MaxReceivedMessageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxReceivedMessageSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MaxReceivedMessageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo, em bytes, de uma mensagem que podem ser processadas por meio da associação.</summary>
+        <value>O tamanho máximo de uma mensagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é 65507.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxUnicastRetransmitCount">
+      <MemberSignature Language="C#" Value="public int MaxUnicastRetransmitCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxUnicastRetransmitCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MaxUnicastRetransmitCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o número máximo de vezes que uma mensagem de unicast deve ser retransmitida (além do primeiro envio).</summary>
+        <value>O número máximo de vezes que uma mensagem de unicast é retransmitida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastInterfaceId">
+      <MemberSignature Language="C#" Value="public string MulticastInterfaceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MulticastInterfaceId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.MulticastInterfaceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que identifica exclusivamente o adaptador de rede que é usado ao enviar e receber mensagens de multicast.</summary>
+        <value>O identificador do adaptador de rede.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em tempo de execução, o transporte usa esse valor para pesquisar o índice de interface, que é usado para definir o `IP_MULTICAST_IF` e `IPV6_MULTICAST_IF` opções de soquete. O mesmo índice de interface é usado ao unir um grupo de multicast. O valor padrão é `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SocketReceiveBufferSize">
+      <MemberSignature Language="C#" Value="public int SocketReceiveBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SocketReceiveBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.SocketReceiveBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho do buffer de recebimento no soquete WinSock subjacente.</summary>
+        <value>O tamanho do buffer de recepção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um usuário de um canal de recebimento pode usar esse valor na associação para controlar como o sistema se comporta quando ele recebe dados. Por exemplo, dada a um aplicativo que está acessando entrada [!INCLUDE[indigo2](~/includes/indigo2-md.md)] mensagens com o limite máximo, usando um valor mais alto deve permitir que as mensagens empilhar no buffer de WinSock enquanto aguarda o aplicativo para processá-las. Usar um valor mais baixo na mesma situação pode resultar em mensagens sendo descartadas. Essa propriedade expõe o WinSock subjacente `SO_RCVBUF` configuração de soquete. O valor da propriedade deve ser pelo menos o tamanho do <xref:System.ServiceModel.Discovery.UdpTransportSettings.MaxReceivedMessageSize%2A>. Configurá-lo como um valor menor do que o <xref:System.ServiceModel.Discovery.UdpTransportSettings.MaxReceivedMessageSize%2A> resulta em uma exceção de tempo de execução. O valor padrão é 65536.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToLive">
+      <MemberSignature Language="C#" Value="public int TimeToLive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TimeToLive" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpTransportSettings.TimeToLive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o número de saltos de segmento de rede que um pacote de multicast pode percorrer.</summary>
+        <value>O número de saltos de segmento de rede.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade expõe a funcionalidade associada a `IP_MULTICAST_TTL` e `IP_TTL` opções de soquete. O valor padrão é 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

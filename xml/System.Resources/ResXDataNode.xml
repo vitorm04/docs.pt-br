@@ -1,0 +1,376 @@
+<Type Name="ResXDataNode" FullName="System.Resources.ResXDataNode">
+  <TypeSignature Language="C#" Value="public sealed class ResXDataNode : System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ResXDataNode extends System.Object implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.ResXDataNode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um elemento em um arquivo de recurso XML (.resx).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResXDataNode> classe oferece suporte a representação de tipos de dados avançados dentro de um arquivo de recurso. Ela pode suportar o armazenamento de qualquer objeto em um arquivo de recurso, desde que o objeto oferece suporte a serialização e tipo de editores.  
+  
+ Você pode criar um <xref:System.Resources.ResXDataNode> objeto chamando um dos seus construtores de classe sobrecarregados. Em seguida, você pode adicionar o item de recurso ou um elemento em um arquivo de recurso chamando o <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> método.  
+  
+ Para recuperar um existente <xref:System.Resources.ResXDataNode> do objeto, você deve enumerar o <xref:System.Resources.ResXDataNode> objetos em um arquivo de recurso XML instanciando um <xref:System.Resources.ResXResourceReader> objeto, definindo o <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A?displayProperty=nameWithType> propriedade para `true`e chamar o <xref:System.Resources.ResXResourceReader.GetEnumerator%2A?displayProperty=nameWithType> método para obter um enumerador. O exemplo fornece uma ilustração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResXResourceReader.GetEnumerator%2A?displayProperty=nameWithType> método para obter um <xref:System.Collections.IDictionaryEnumerator> objeto que é usado para enumerar o <xref:System.Resources.ResXDataNode> objetos em um arquivo. resx. O exemplo inclui um `CreateResourceFile` rotina que cria o arquivo de recurso XML necessário.  
+  
+ [!code-csharp[System.Resources.ResXDataNode.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resxdatanode.class/cs/resxresourcereader2.cs#1)]
+ [!code-vb[System.Resources.ResXDataNode.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resxdatanode.class/vb/resxresourcereader2.vb#1)]  
+  
+ Porque o <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A> é de propriedade `true`, o valor da <xref:System.Collections.IDictionaryEnumerator.Value%2A?displayProperty=nameWithType> propriedade é um <xref:System.Resources.ResXDataNode> em vez do valor do recurso do objeto. Isso torna o comentário do item de um recurso disponível no <xref:System.Resources.ResXDataNode.Comment%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esse tipo não pode ser usado por código parcialmente confiável.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXDataNode (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXDataNode.#ctor(System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso.</param>
+        <param name="value">O recurso para armazenar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.ResXDataNode" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O recurso nomeado no <paramref name="value" /> não oferece suporte à serialização.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />é uma cadeia de caracteres de comprimento zero.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXDataNode (string name, System.Resources.ResXFileRef fileRef);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Resources.ResXFileRef fileRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXDataNode.#ctor(System.String,System.Resources.ResXFileRef)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="fileRef" Type="System.Resources.ResXFileRef" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso.</param>
+        <param name="fileRef">A referência de arquivo a ser usado como o recurso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResXDataNode" /> classe com uma referência a um arquivo de recurso.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          O <paramref name="name" /> é <see langword="null" /> ou o <paramref name="fileRef" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />é uma cadeia de caracteres de comprimento zero.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXDataNode (string name, object value, Func&lt;Type,string&gt; typeNameConverter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, object value, class System.Func`2&lt;class System.Type, string&gt; typeNameConverter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXDataNode.#ctor(System.String,System.Object,System.Func{System.Type,System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="typeNameConverter" Type="System.Func&lt;System.Type,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso.</param>
+        <param name="value">O recurso para armazenar.</param>
+        <param name="typeNameConverter">Uma referência a um método que utiliza um <see cref="T:System.Type" /> e retorna uma cadeia de caracteres que contém o <see cref="T:System.Type" /> nome.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Resources.ResXDataNode" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O recurso nomeado no <paramref name="value" /> não oferece suporte à serialização.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />é uma cadeia de caracteres de comprimento zero.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResXDataNode (string name, System.Resources.ResXFileRef fileRef, Func&lt;Type,string&gt; typeNameConverter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Resources.ResXFileRef fileRef, class System.Func`2&lt;class System.Type, string&gt; typeNameConverter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXDataNode.#ctor(System.String,System.Resources.ResXFileRef,System.Func{System.Type,System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="fileRef" Type="System.Resources.ResXFileRef" />
+        <Parameter Name="typeNameConverter" Type="System.Func&lt;System.Type,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso.</param>
+        <param name="fileRef">A referência de arquivo a ser usado como o recurso.</param>
+        <param name="typeNameConverter">Uma referência a um método que utiliza um <see cref="T:System.Type" /> e retorna uma cadeia de caracteres que contém o <see cref="T:System.Type" /> nome.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResXDataNode" /> classe com uma referência a um arquivo de recurso.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          O <paramref name="name" /> é <see langword="null" /> ou o <paramref name="fileRef" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />é uma cadeia de caracteres de comprimento zero.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Comment">
+      <MemberSignature Language="C#" Value="public string Comment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comment" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResXDataNode.Comment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um comentário arbitrário com relação a esse recurso.</summary>
+        <value>Uma cadeia de caracteres que representa o comentário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um comentário não foi atribuído ao recurso do item, o valor de <xref:System.Resources.ResXDataNode.Comment%2A> é de propriedade <xref:System.String?displayProperty=nameWithType>.  
+  
+ Você acessar o <xref:System.Resources.ResXDataNode.Comment%2A> propriedade de um nó de dados em um arquivo de recurso XML existente instanciando um <xref:System.Resources.ResXResourceReader> objeto, definindo o <xref:System.Resources.ResXResourceReader.UseResXDataNodes%2A?displayProperty=nameWithType> propriedade para `true`e chamar o <xref:System.Resources.ResXResourceReader.GetEnumerator%2A?displayProperty=nameWithType> método para recuperar um <xref:System.Collections.IDictionaryEnumerator> que você use para enumerar os itens no arquivo de recurso XML do objeto. O <xref:System.Collections.IDictionaryEnumerator.Value%2A?displayProperty=nameWithType> propriedade retorna o <xref:System.Resources.ResXDataNode> objeto.  
+  
+   
+  
+## Examples  
+ Consulte o exemplo para o <xref:System.Resources.ResXDataNode> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FileRef">
+      <MemberSignature Language="C#" Value="public System.Resources.ResXFileRef FileRef { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Resources.ResXFileRef FileRef" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResXDataNode.FileRef" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Resources.ResXFileRef</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a referência de arquivo para esse recurso.</summary>
+        <value>A referência de arquivo, se esse recurso usa um. Se esse recurso armazena seu valor como um <see cref="T:System.Object" />, esta propriedade retornará <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNodePosition">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point GetNodePosition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Point GetNodePosition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXDataNode.GetNodePosition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a posição do recurso no arquivo de recurso.</summary>
+        <returns>Uma estrutura que especifica o local deste recurso no arquivo de recurso como uma posição de linha (<see cref="P:System.Drawing.Point.X" />) e uma posição de coluna (<see cref="P:System.Drawing.Point.Y" />). Se esse recurso não é parte de um arquivo de recurso, esse método retorna uma estrutura que tem um <see cref="P:System.Drawing.Point.X" /> 0 e um <see cref="P:System.Drawing.Point.Y" /> de 0.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (System.ComponentModel.Design.ITypeResolutionService typeResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(class System.ComponentModel.Design.ITypeResolutionService typeResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXDataNode.GetValue(System.ComponentModel.Design.ITypeResolutionService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeResolver" Type="System.ComponentModel.Design.ITypeResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="typeResolver">O serviço de resolução de tipo a ser usado ao procurar um conversor de tipo.</param>
+        <summary>Recupera o objeto que é armazenado por esse nó usando o serviço de resolução de tipo especificado.</summary>
+        <returns>O objeto que corresponde ao valor armazenado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor armazenado atualmente existe na memória, ele é retornado diretamente. Se ela é armazenada no arquivo de recursos e não é uma referência de arquivo, <xref:System.Resources.ResXDataNode.GetValue%2A> procura um <xref:System.ComponentModel.TypeConverter> usando o serviço de resolução de tipo especificado que pode converter de uma cadeia de caracteres para o objeto apropriado. Se o recurso for uma referência de arquivo, <xref:System.Resources.ResXDataNode.GetValue%2A> tenta desserializá-lo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.TypeLoadException">O tipo correspondente não pôde ser encontrado ou um conversor de tipo apropriado não está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (System.Reflection.AssemblyName[] names);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(class System.Reflection.AssemblyName[] names) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXDataNode.GetValue(System.Reflection.AssemblyName[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="names" Type="System.Reflection.AssemblyName[]" />
+      </Parameters>
+      <Docs>
+        <param name="names">A lista de assemblies para pesquisar o tipo do objeto.</param>
+        <summary>Recupera o objeto que é armazenado por este nó pesquisando os assemblies especificados.</summary>
+        <returns>O objeto que corresponde ao valor armazenado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor armazenado atualmente existe na memória, ele é retornado diretamente. Se ela é armazenada no arquivo de recursos e não é uma referência de arquivo, <xref:System.Resources.ResXDataNode.GetValue%2A> examina os assemblies identificados por nomes para localizar o tipo de objeto correspondente e, em seguida, procura um <xref:System.ComponentModel.TypeConverter> que pode converter de uma cadeia de caracteres para o objeto apropriado. Se o recurso for uma referência de arquivo, <xref:System.Resources.ResXDataNode.GetValue%2A> tenta desserializá-la.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.TypeLoadException">O tipo correspondente não pôde ser encontrado ou um conversor de tipo apropriado não está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueTypeName">
+      <MemberSignature Language="C#" Value="public string GetValueTypeName (System.ComponentModel.Design.ITypeResolutionService typeResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetValueTypeName(class System.ComponentModel.Design.ITypeResolutionService typeResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXDataNode.GetValueTypeName(System.ComponentModel.Design.ITypeResolutionService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeResolver" Type="System.ComponentModel.Design.ITypeResolutionService" />
+      </Parameters>
+      <Docs>
+        <param name="typeResolver">O serviço de resolução de tipo a ser usado para localizar um conversor para esse tipo.</param>
+        <summary>Recupera o nome do tipo para o valor usando o serviço de resolução de tipo especificado.</summary>
+        <returns>Uma cadeia de caracteres que representa o nome totalmente qualificado do tipo.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TypeLoadException">O tipo correspondente não pôde ser encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueTypeName">
+      <MemberSignature Language="C#" Value="public string GetValueTypeName (System.Reflection.AssemblyName[] names);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetValueTypeName(class System.Reflection.AssemblyName[] names) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXDataNode.GetValueTypeName(System.Reflection.AssemblyName[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="names" Type="System.Reflection.AssemblyName[]" />
+      </Parameters>
+      <Docs>
+        <param name="names">Os assemblies para examinar para o tipo.</param>
+        <summary>Recupera o nome do tipo do valor examinando os assemblies especificados.</summary>
+        <returns>Uma cadeia de caracteres que representa o nome totalmente qualificado do tipo.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TypeLoadException">O tipo correspondente não pôde ser encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResXDataNode.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome deste recurso.</summary>
+        <value>Uma cadeia de caracteres que corresponde ao nome do recurso. Se nenhum nome for atribuído, essa propriedade retorna uma cadeia de caracteres de comprimento zero.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">A propriedade name é definida como <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A propriedade name é definida como uma cadeia de caracteres de comprimento zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResXDataNode.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">Um objeto para popular com dados.</param>
+        <param name="context">O destino dessa serialização.</param>
+        <summary>Preenche uma <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com os dados necessários para serializar o objeto de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Resources.ResXDataNode> é convertida em uma interface de <xref:System.Runtime.Serialization.ISerializable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

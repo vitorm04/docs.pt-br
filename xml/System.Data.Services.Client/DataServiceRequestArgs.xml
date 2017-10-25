@@ -1,0 +1,142 @@
+<Type Name="DataServiceRequestArgs" FullName="System.Data.Services.Client.DataServiceRequestArgs">
+  <TypeSignature Language="C#" Value="public class DataServiceRequestArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataServiceRequestArgs extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.DataServiceRequestArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa metadados adicionais que está incluído em uma mensagem de solicitação para o WCF Data Services.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataServiceRequestArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceRequestArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Data.Services.Client.DataServiceRequestArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptContentType">
+      <MemberSignature Language="C#" Value="public string AcceptContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AcceptContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceRequestArgs.AcceptContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o cabeçalho Accept da mensagem de solicitação.</summary>
+        <value>O valor do cabeçalho Accept.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma validação é executada no valor da <xref:System.Data.Services.Client.DataServiceRequestArgs.AcceptContentType%2A> propriedade. Portanto, certifique-se de que o valor fornecido é um valor válido para um cabeçalho aceitar HTTP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceRequestArgs.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o cabeçalho Content-Type da mensagem de solicitação.</summary>
+        <value>O valor do cabeçalho Content-Type.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma validação é executada no valor da <xref:System.Data.Services.Client.DataServiceRequestArgs.ContentType%2A> propriedade. Portanto, certifique-se de que o valor fornecido é um valor válido para um cabeçalho de tipo de conteúdo HTTP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,string&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceRequestArgs.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os cabeçalhos na mensagem de solicitação.</summary>
+        <value>Os cabeçalhos na mensagem de solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A resposta é um <xref:System.Collections.Generic.Dictionary%602> objeto que contém pares chave-valor de cadeias de caracteres para cada cabeçalho na solicitação.  
+  
+ Nenhuma validação é executada em cabeçalhos no <xref:System.Data.Services.Client.DataServiceRequestArgs.Headers%2A> propriedade. Portanto, certifique-se de que você não altere um cabeçalho HTTP de forma que altera o significado da solicitação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Slug">
+      <MemberSignature Language="C#" Value="public string Slug { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Slug" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceRequestArgs.Slug" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do cabeçalho Slug da mensagem de solicitação.</summary>
+        <value>Um valor que é o o cabeçalho da solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma validação é executada no valor da <xref:System.Data.Services.Client.DataServiceRequestArgs.Slug%2A> propriedade. Portanto, certifique-se de que o valor fornecido é um valor válido para um cabeçalho HTTP espaçador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

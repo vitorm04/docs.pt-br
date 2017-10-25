@@ -1,0 +1,455 @@
+<Type Name="CodeCommentStatementCollection" FullName="System.CodeDom.CodeCommentStatementCollection">
+  <TypeSignature Language="C#" Value="public class CodeCommentStatementCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeCommentStatementCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeCommentStatementCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.CodeDom.CodeCommentStatement" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe de <xref:System.CodeDom.CodeCommentStatementCollection> fornece um objeto simples de coleção que pode ser usado para armazenar um conjunto de objetos de <xref:System.CodeDom.CodeCommentStatement> .  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do <xref:System.CodeDom.CodeCommentStatementCollection> métodos de classe. O exemplo cria uma nova instância da classe e usa os métodos para adicionar instruções à coleção, retornar seu índice e adicionar ou remover atributos em um ponto de índice específico.  
+  
+ [!code-cpp[CodeCommentStatementCollectionExample#1](~/samples/snippets/cpp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CPP/class1.cpp#1)]
+ [!code-csharp[CodeCommentStatementCollectionExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CS/class1.cs#1)]
+ [!code-vb[CodeCommentStatementCollectionExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeCommentStatementCollectionExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeCommentStatementCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCommentStatementCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeCommentStatementCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeCommentStatementCollection (System.CodeDom.CodeCommentStatement[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeCommentStatement[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCommentStatementCollection.#ctor(System.CodeDom.CodeCommentStatement[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeCommentStatement[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de <see cref="T:System.CodeDom.CodeCommentStatement" /> objetos com a qual inicializar a coleção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeCommentStatementCollection" /> classe que contém a matriz especificada de <see cref="T:System.CodeDom.CodeCommentStatement" /> objetos.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">um ou mais objetos na matriz são <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeCommentStatementCollection (System.CodeDom.CodeCommentStatementCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeCommentStatementCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCommentStatementCollection.#ctor(System.CodeDom.CodeCommentStatementCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeCommentStatementCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.CodeDom.CodeCommentStatementCollection" /> com a qual inicializar a coleção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeCommentStatementCollection" /> classe que contém os elementos da coleção de origem especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.CodeDom.CodeCommentStatement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.CodeDom.CodeCommentStatement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCommentStatementCollection.Add(System.CodeDom.CodeCommentStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeCommentStatement" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto <see cref="T:System.CodeDom.CodeCommentStatement" /> a ser adicionado.</param>
+        <summary>Adiciona o objeto <see cref="T:System.CodeDom.CodeCommentStatement" /> especificado à coleção.</summary>
+        <returns>O índice no qual o novo elemento foi inserido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar um <xref:System.CodeDom.CodeCommentStatement> o objeto para um <xref:System.CodeDom.CodeCommentStatementCollection> instância.  
+  
+ [!code-cpp[CodeCommentStatementCollectionExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CPP/class1.cpp#3)]
+ [!code-csharp[CodeCommentStatementCollectionExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CS/class1.cs#3)]
+ [!code-vb[CodeCommentStatementCollectionExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeCommentStatementCollectionExample/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.CodeDom.CodeCommentStatement[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.CodeDom.CodeCommentStatement[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCommentStatementCollection.AddRange(System.CodeDom.CodeCommentStatement[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeCommentStatement[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz do tipo <see cref="T:System.CodeDom.CodeCommentStatement" /> que contém os objetos para adicionar à coleção.</param>
+        <summary>Copia os elementos da matriz <see cref="T:System.CodeDom.CodeCommentStatement" /> especificada para o fim da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.CodeDom.CodeCommentStatementCollection.AddRange%28System.CodeDom.CodeCommentStatement%5B%5D%29> sobrecarga do método para adicionar os membros de um <xref:System.CodeDom.CodeCommentStatement> de matriz para o <xref:System.CodeDom.CodeCommentStatementCollection>.  
+  
+ [!code-cpp[CodeCommentStatementCollectionExample#4](~/samples/snippets/cpp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CPP/class1.cpp#4)]
+ [!code-csharp[CodeCommentStatementCollectionExample#4](~/samples/snippets/csharp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CS/class1.cs#4)]
+ [!code-vb[CodeCommentStatementCollectionExample#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeCommentStatementCollectionExample/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.CodeDom.CodeCommentStatementCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.CodeDom.CodeCommentStatementCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCommentStatementCollection.AddRange(System.CodeDom.CodeCommentStatementCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeCommentStatementCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.CodeDom.CodeCommentStatementCollection" /> que contém os objetos para adicionar à coleção.</param>
+        <summary>Copia o conteúdo de outro <see cref="T:System.CodeDom.CodeCommentStatementCollection" /> objeto ao final da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.CodeDom.CodeCommentStatementCollection.AddRange%28System.CodeDom.CodeCommentStatementCollection%29> sobrecarga do método para adicionar os membros de um <xref:System.CodeDom.CodeCommentStatementCollection> para outro.  
+  
+ [!code-cpp[CodeCommentStatementCollectionExample#4](~/samples/snippets/cpp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CPP/class1.cpp#4)]
+ [!code-csharp[CodeCommentStatementCollectionExample#4](~/samples/snippets/csharp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CS/class1.cs#4)]
+ [!code-vb[CodeCommentStatementCollectionExample#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeCommentStatementCollectionExample/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.CodeDom.CodeCommentStatement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.CodeDom.CodeCommentStatement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCommentStatementCollection.Contains(System.CodeDom.CodeCommentStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeCommentStatement" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.CodeDom.CodeCommentStatement" /> a ser pesquisado na coleção.</param>
+        <summary>Obtém um valor que indica se a coleção contém especificado <see cref="T:System.CodeDom.CodeCommentStatement" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se a coleção contém o objeto especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.CodeDom.CodeCommentStatementCollection.Contains%2A> método para procurar a presença de um determinado <xref:System.CodeDom.CodeCommentStatement> do objeto e obtém o valor de índice no qual ele foi encontrado.  
+  
+ [!code-cpp[CodeCommentStatementCollectionExample#5](~/samples/snippets/cpp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CPP/class1.cpp#5)]
+ [!code-csharp[CodeCommentStatementCollectionExample#5](~/samples/snippets/csharp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CS/class1.cs#5)]
+ [!code-vb[CodeCommentStatementCollectionExample#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeCommentStatementCollectionExample/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.CodeDom.CodeCommentStatement[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.CodeDom.CodeCommentStatement[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCommentStatementCollection.CopyTo(System.CodeDom.CodeCommentStatement[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.CodeDom.CodeCommentStatement[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O unidimensional <see cref="T:System.Array" /> que é o destino dos valores copiados da coleção.</param>
+        <param name="index">O índice de matriz no qual começar a inserir.</param>
+        <summary>Copia os objetos da coleção especificado unidimensionais <see cref="T:System.Array" /> começando no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como copiar o conteúdo de um <xref:System.CodeDom.CodeCommentStatementCollection> em uma matriz a partir do índice de valor 0.  
+  
+ [!code-cpp[CodeCommentStatementCollectionExample#6](~/samples/snippets/cpp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CPP/class1.cpp#6)]
+ [!code-csharp[CodeCommentStatementCollectionExample#6](~/samples/snippets/csharp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CS/class1.cs#6)]
+ [!code-vb[CodeCommentStatementCollectionExample#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeCommentStatementCollectionExample/VB/class1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A matriz de destino é multidimensional.  
+  
+ -ou-  
+  
+ O número de elementos no <see cref="T:System.CodeDom.CodeCommentStatementCollection" /> é maior que o espaço disponível entre o índice da matriz de destino especificado pelo <paramref name="index" /> parâmetro e o fim da matriz de destino.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="index" /> é menor do que o índice mínimo da matriz de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.CodeDom.CodeCommentStatement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.CodeDom.CodeCommentStatement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCommentStatementCollection.IndexOf(System.CodeDom.CodeCommentStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeCommentStatement" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto <see cref="T:System.CodeDom.CodeCommentStatement" /> a ser localizado.</param>
+        <summary>Obtém o índice do <see cref="T:System.CodeDom.CodeCommentStatement" /> do objeto na coleção, se ele existe na coleção.</summary>
+        <returns>O índice do objeto especificado, se encontrado na coleção; Caso contrário, retornará -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir procura a presença de um determinado <xref:System.CodeDom.CodeCommentStatement> objeto e usa o <xref:System.CodeDom.CodeCommentStatementCollection.IndexOf%2A> método para obter o valor de índice no qual ele foi encontrado.  
+  
+ [!code-cpp[CodeCommentStatementCollectionExample#5](~/samples/snippets/cpp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CPP/class1.cpp#5)]
+ [!code-csharp[CodeCommentStatementCollectionExample#5](~/samples/snippets/csharp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CS/class1.cs#5)]
+ [!code-vb[CodeCommentStatementCollectionExample#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeCommentStatementCollectionExample/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.CodeDom.CodeCommentStatement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.CodeDom.CodeCommentStatement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCommentStatementCollection.Insert(System.Int32,System.CodeDom.CodeCommentStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.CodeDom.CodeCommentStatement" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero onde o item deve ser inserido.</param>
+        <param name="value">O <see cref="T:System.CodeDom.CodeCommentStatement" /> objeto a ser inserido.</param>
+        <summary>Insere um <see cref="T:System.CodeDom.CodeCommentStatement" /> objeto na coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.CodeDom.CodeCommentStatementCollection.Insert%2A> método para adicionar um <xref:System.CodeDom.CodeCommentStatement> o objeto para o <xref:System.CodeDom.CodeCommentStatementCollection>.  
+  
+ [!code-cpp[CodeCommentStatementCollectionExample#8](~/samples/snippets/cpp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CPP/class1.cpp#8)]
+ [!code-csharp[CodeCommentStatementCollectionExample#8](~/samples/snippets/csharp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CS/class1.cs#8)]
+ [!code-vb[CodeCommentStatementCollectionExample#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeCommentStatementCollectionExample/VB/class1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeCommentStatement this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeCommentStatement Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeCommentStatementCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCommentStatement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice da coleção para acessar.</param>
+        <summary>Obtém ou define o <see cref="T:System.CodeDom.CodeCommentStatement" /> objeto no índice especificado na coleção.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeCommentStatement" /> objeto em cada índice válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é um indexador que pode ser usado para acessar a coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> parâmetro está fora do intervalo válido de índices para a coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.CodeDom.CodeCommentStatement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.CodeDom.CodeCommentStatement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCommentStatementCollection.Remove(System.CodeDom.CodeCommentStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeCommentStatement" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.CodeDom.CodeCommentStatement" /> objeto a ser removido da coleção.</param>
+        <summary>Remove o objeto <see cref="T:System.CodeDom.CodeCommentStatement" /> especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.CodeDom.CodeCommentStatementCollection.Remove%2A> método para excluir um <xref:System.CodeDom.CodeCommentStatement> de objeto o <xref:System.CodeDom.CodeCommentStatementCollection>.  
+  
+ [!code-cpp[CodeCommentStatementCollectionExample#9](~/samples/snippets/cpp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CPP/class1.cpp#9)]
+ [!code-csharp[CodeCommentStatementCollectionExample#9](~/samples/snippets/csharp/VS_Snippets_CLR/CodeCommentStatementCollectionExample/CS/class1.cs#9)]
+ [!code-vb[CodeCommentStatementCollectionExample#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeCommentStatementCollectionExample/VB/class1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O objeto especificado não foi encontrado na coleção.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

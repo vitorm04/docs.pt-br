@@ -1,0 +1,537 @@
+<Type Name="SecurityTokenServiceConfiguration" FullName="System.IdentityModel.Configuration.SecurityTokenServiceConfiguration">
+  <TypeSignature Language="C#" Value="public class SecurityTokenServiceConfiguration : System.IdentityModel.Configuration.IdentityConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityTokenServiceConfiguration extends System.IdentityModel.Configuration.IdentityConfiguration" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Configuration.IdentityConfiguration</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define a configuração de um STS (serviço de token de segurança). As classes que implementam STSs derivam da classe <see cref="T:System.IdentityModel.SecurityTokenService" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Os exemplos de código que são usados no <xref:System.IdentityModel.SecurityTokenService> tópicos são tirados de `Custom Token` exemplo. Este exemplo fornece classes personalizadas que permitem que o processamento do Simple Web Tokens (SWT) e inclui uma implementação de um STS passivo é capaz de atender a um token SWT. Para obter um exemplo de como implementar um STS ativo, você pode ver o `Federation Metadata` exemplo. Para obter informações sobre esses exemplos e outros exemplos disponíveis para o WIF e onde baixá-las, consulte [índice de exemplo de código do WIF](~/docs/framework/security/wif-code-sample-index.md). O código a seguir mostra uma implementação personalizada do <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration> classe para dar suporte a um STS passivo que processa os tokens SWT. A configuração é inicializada e armazenados no estado do aplicativo HTTP na primeira vez estático `Current` propriedade for acessada. O construtor inicializa as propriedades da configuração personalizada com o tipo de STS personalizado, um resolvedor de token do emissor personalizado e o tipo de token padrão (o URI do tipo de token SWT). Ele também adiciona um manipulador de token SWT para a coleção de manipulador padrão.  
+  
+ [!code-csharp[WIFCustomTokenSTS#2](~/samples/snippets/csharp/VS_Snippets_Misc/wifcustomtokensts/cs/passivests/customsecuritytokenserviceconfiguration.cs#2)]  
+  
+ O código a seguir mostra como chamar um STS personalizado passivo para processar uma solicitação do WS-Federation chamando o <xref:System.IdentityModel.Services.FederatedPassiveSecurityTokenServiceOperations.ProcessRequest%28System.Web.HttpRequest%2CSystem.Security.Claims.ClaimsPrincipal%2CSystem.IdentityModel.SecurityTokenService%2CSystem.Web.HttpResponse%29?displayProperty=nameWithType> método no código por trás de `default.aspx.cs` arquivo. O <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.CreateSecurityTokenService%2A> método inicializa uma instância do `PassiveSTS.CustomSecurityTokenService` classe usando as propriedades definidas no `CustomSecurityTokenServiceConfiguration` classe mostrada no exemplo anterior.  
+  
+ [!code-csharp[WIFCustomTokenSTS#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifcustomtokensts/cs/passivests/default.aspx.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenServiceConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName%2A> propriedade deve ser definida antes que o serviço de token de segurança é usado para criar um token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenServiceConfiguration (bool loadConfig);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool loadConfig) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="loadConfig" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="loadConfig">
+          <see langword="true" />para carregar as configurações do arquivo de configuração; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration" />. Opcionalmente, carrega configurações da configuração atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName%2A> propriedade deve ser definida antes que o serviço de token de segurança é usado para criar um token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenServiceConfiguration (string issuerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string issuerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="issuerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="issuerName">O nome do emissor. Define a propriedade <see cref="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration" /> classe que tem o nome do emissor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `issuerName` é `null`, o <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName%2A> propriedade deve ser definida antes que o serviço de token de segurança é usado para criar um token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenServiceConfiguration (string issuerName, bool loadConfig);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string issuerName, bool loadConfig) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="issuerName" Type="System.String" />
+        <Parameter Name="loadConfig" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="issuerName">O nome do emissor. Define a propriedade <see cref="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName" />.</param>
+        <param name="loadConfig">
+          <see langword="true" />para carregar as configurações do arquivo de configuração; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration" /> classe que tem o nome do emissor especificado. Opcionalmente, carrega configurações da configuração atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `issuerName` é `null`, o <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName%2A> propriedade deve ser definida antes que o serviço de token de segurança é usado para criar um token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenServiceConfiguration (string issuerName, System.IdentityModel.Tokens.SigningCredentials signingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string issuerName, class System.IdentityModel.Tokens.SigningCredentials signingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.#ctor(System.String,System.IdentityModel.Tokens.SigningCredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="issuerName" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="System.IdentityModel.Tokens.SigningCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="issuerName">O nome do emissor. Define a propriedade <see cref="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName" />.</param>
+        <param name="signingCredentials">As credenciais de autenticação para o STS. Define a propriedade <see cref="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SigningCredentials" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration" /> classe que tem o nome do emissor especificado e as credenciais de assinatura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `issuerName` é `null`, o <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName%2A> propriedade deve ser definida antes que o serviço de token de segurança é usado para criar um token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenServiceConfiguration (string issuerName, System.IdentityModel.Tokens.SigningCredentials signingCredentials, bool loadConfig);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string issuerName, class System.IdentityModel.Tokens.SigningCredentials signingCredentials, bool loadConfig) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.#ctor(System.String,System.IdentityModel.Tokens.SigningCredentials,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="issuerName" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="System.IdentityModel.Tokens.SigningCredentials" />
+        <Parameter Name="loadConfig" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="issuerName">O nome do emissor. Define a propriedade <see cref="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName" />.</param>
+        <param name="signingCredentials">As credenciais de autenticação para o STS. Define a propriedade <see cref="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SigningCredentials" />.</param>
+        <param name="loadConfig">
+          <see langword="true" />para carregar as configurações do arquivo de configuração; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration" /> classe que tem o nome do emissor especificado e as credenciais de assinatura. Opcionalmente, carrega configurações da configuração atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `issuerName` é `null`, o <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName%2A> propriedade deve ser definida antes que o serviço de token de segurança é usado para criar um token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenServiceConfiguration (string issuerName, System.IdentityModel.Tokens.SigningCredentials signingCredentials, string serviceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string issuerName, class System.IdentityModel.Tokens.SigningCredentials signingCredentials, string serviceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.#ctor(System.String,System.IdentityModel.Tokens.SigningCredentials,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="issuerName" Type="System.String" />
+        <Parameter Name="signingCredentials" Type="System.IdentityModel.Tokens.SigningCredentials" />
+        <Parameter Name="serviceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="issuerName">O nome do emissor. Define a propriedade <see cref="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName" />.</param>
+        <param name="signingCredentials">As credenciais de autenticação para o STS. Define a propriedade <see cref="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SigningCredentials" />.</param>
+        <param name="serviceName">O nome do <see langword="&lt;identityConfiguration&gt;" /> elemento do qual a configuração é ser carregado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration" /> classe que tem o nome do emissor especificado e as credenciais de assinatura. As configurações são carregadas da configuração nomeada especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `issuerName` é `null`, o <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName%2A> propriedade deve ser definida antes que o serviço de token de segurança é usado para criar um token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSecurityTokenService">
+      <MemberSignature Language="C#" Value="public virtual System.IdentityModel.SecurityTokenService CreateSecurityTokenService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IdentityModel.SecurityTokenService CreateSecurityTokenService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.CreateSecurityTokenService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.SecurityTokenService</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância do serviço de token (STS) de segurança do <see cref="T:System.Type" /> especificado no <see cref="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SecurityTokenService" /> propriedade.</summary>
+        <returns>Uma instância do <see cref="T:System.Type" /> especificado no <see cref="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SecurityTokenService" /> propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe especificada no <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SecurityTokenService%2A> propriedade deve implementar um construtor que aceita um parâmetro do tipo <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration>.  
+  
+   
+  
+## Examples  
+ Os exemplos de código que são usados no <xref:System.IdentityModel.SecurityTokenService> tópicos são tirados de `Custom Token` exemplo. Este exemplo fornece classes personalizadas que permitem que o processamento do Simple Web Tokens (SWT) e inclui uma implementação de um STS passivo é capaz de atender a um token SWT. Para obter um exemplo de como implementar um STS ativo, você pode ver o `Federation Metadata` exemplo. Para obter informações sobre esses exemplos e outros exemplos disponíveis para o WIF e onde baixá-las, consulte [índice de exemplo de código do WIF](~/docs/framework/security/wif-code-sample-index.md). O código a seguir mostra uma implementação personalizada do <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration> classe para dar suporte a um STS passivo que processa os tokens SWT. A configuração é inicializada e armazenados no estado do aplicativo HTTP na primeira vez estático `Current` propriedade for acessada. O construtor inicializa as propriedades da configuração personalizada com o tipo de STS personalizado, um resolvedor de token do emissor personalizado e o tipo de token padrão (o URI do tipo de token SWT). Ele também adiciona um manipulador de token SWT para a coleção de manipulador padrão.  
+  
+ O código a seguir mostra como chamar um STS personalizado passivo para processar uma solicitação do WS-Federation chamando o <xref:System.IdentityModel.Services.FederatedPassiveSecurityTokenServiceOperations.ProcessRequest%28System.Web.HttpRequest%2CSystem.Security.Claims.ClaimsPrincipal%2CSystem.IdentityModel.SecurityTokenService%2CSystem.Web.HttpResponse%29?displayProperty=nameWithType> método no código por trás de `default.aspx.cs` arquivo. O <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.CreateSecurityTokenService%2A> método inicializa uma instância do `PassiveSTS.CustomSecurityTokenService` classe usando as propriedades definidas no atual `CustomSecurityTokenServiceConfiguration` objeto. O `CustomSecurityTokenServiceConfiguration.Current` propriedade é implementada pelo `CustomSecurityTokenServiceConfiguration` classe e retorna a instância da classe que é salvo no estado do aplicativo HTTP.  
+  
+ [!code-csharp[WIFCustomTokenSTS#1](~/samples/snippets/csharp/VS_Snippets_Misc/wifcustomtokensts/cs/passivests/default.aspx.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMaxSymmetricKeySizeInBits">
+      <MemberSignature Language="C#" Value="public int DefaultMaxSymmetricKeySizeInBits { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultMaxSymmetricKeySizeInBits" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultMaxSymmetricKeySizeInBits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o limite de tamanho de chave padrão no bits usados, verifique se o KeySize especificado na solicitação estiver dentro desse limite.</summary>
+        <value>O limite de tamanho de chave padrão, em bits. O padrão é 1024.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso se aplica apenas ao caso da chave simétrico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSymmetricKeySizeInBits">
+      <MemberSignature Language="C#" Value="public int DefaultSymmetricKeySizeInBits { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultSymmetricKeySizeInBits" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultSymmetricKeySizeInBits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho padrão da chave em bits usados no token emitido.</summary>
+        <value>O tamanho da chave usado no token emitido, em bits. O padrão é 256.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso se aplica apenas ao caso da chave simétrico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTokenLifetime">
+      <MemberSignature Language="C#" Value="public TimeSpan DefaultTokenLifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultTokenLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultTokenLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo de vida padrão usado nos tokens emitidos.</summary>
+        <value>O tempo de vida padrão para usar em tokens emitidos. O padrão é 1 dia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTokenType">
+      <MemberSignature Language="C#" Value="public string DefaultTokenType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultTokenType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DefaultTokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de token padrão usado na emissão de tokens.</summary>
+        <value>Retorna uma cadeia de caracteres que contém o tipo de token padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especificar os valores de cadeia de caracteres no formato URI; Por exemplo, para o tipo de token SAML 1.1, o seguinte é o valor de cadeia de caracteres: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+  
+ O tipo de token padrão é definido como SAML 1.1.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor especificado é <see langword="null" /> ou vazio.</exception>
+        <exception cref="T:System.ArgumentException">O valor especificado não está definido nos manipuladores de token.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableWsdl">
+      <MemberSignature Language="C#" Value="public bool DisableWsdl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableWsdl" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.DisableWsdl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se a geração de WSDL deve ser habilitada para o serviço de token de segurança (STS).</summary>
+        <value>
+          <see langword="true" />Para habilitar a geração de WSDL para o STS; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumTokenLifetime">
+      <MemberSignature Language="C#" Value="public TimeSpan MaximumTokenLifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaximumTokenLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.MaximumTokenLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo de vida máximo token para tokens emitidos.</summary>
+        <value>O token de tempo de vida máximo para tokens emitidos. O padrão é 1 dia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenService">
+      <MemberSignature Language="C#" Value="public Type SecurityTokenService { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type SecurityTokenService" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SecurityTokenService" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Type" /> do serviço de token de segurança (STS).</summary>
+        <value>O tipo de serviço de token de segurança. O tipo deve derivar do <see cref="T:System.IdentityModel.SecurityTokenService" /> classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe especificada no <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SecurityTokenService%2A> propriedade deve implementar um construtor que aceita um parâmetro do tipo <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado não é atribuível como <see cref="T:System.IdentityModel.SecurityTokenService" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor especificado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningCredentials">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SigningCredentials SigningCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SigningCredentials SigningCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SigningCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SigningCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as credenciais de assinatura.</summary>
+        <value>As credenciais de assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  O <xref:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.SigningCredentials%2A> propriedade será ignorada durante a implementação de um serviço de token de segurança ativas (STS). Em vez disso, você deve definir o certificado de serviço por meio de <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> propriedade no host de serviço que está hospedando o seu STS. O host de serviço usado para um STS ativo é representado pela <xref:System.ServiceModel.Security.WSTrustServiceHost> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenIssuerName">
+      <MemberSignature Language="C#" Value="public string TokenIssuerName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TokenIssuerName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.TokenIssuerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do emissor para que ele pode ser definido no token emitido.</summary>
+        <value>O nome do emissor.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Uma tentativa de definir a propriedade como <see langword="null" /> ou uma cadeia de caracteres vazia ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WSTrust13RequestSerializer">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer WSTrust13RequestSerializer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer WSTrust13RequestSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrust13RequestSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.WSTrust13RequestSerializer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o serializador de solicitação de 1.3 do WS-Trust (primeira).</summary>
+        <value>O serializador de solicitação de 1.3 do WS-Trust (primeira).</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O valor especificado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WSTrust13ResponseSerializer">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.WSTrust13ResponseSerializer WSTrust13ResponseSerializer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.WSTrust13ResponseSerializer WSTrust13ResponseSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrust13ResponseSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.WSTrust13ResponseSerializer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o serializador de WS-Trust 1.3 RSTR (resposta).</summary>
+        <value>O serializador de WS-Trust 1.3 RSTR (resposta).</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O valor especificado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WSTrustFeb2005RequestSerializer">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.WSTrustFeb2005RequestSerializer WSTrustFeb2005RequestSerializer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.WSTrustFeb2005RequestSerializer WSTrustFeb2005RequestSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrustFeb2005RequestSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.WSTrustFeb2005RequestSerializer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o WS-Trust fevereiro de 2005 serializador de solicitação (primeira).</summary>
+        <value>O WS-Trust fevereiro de 2005 serializador de solicitação (primeira).</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O valor especificado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WSTrustFeb2005ResponseSerializer">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.WSTrustFeb2005ResponseSerializer WSTrustFeb2005ResponseSerializer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.WSTrustFeb2005ResponseSerializer WSTrustFeb2005ResponseSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Configuration.SecurityTokenServiceConfiguration.WSTrustFeb2005ResponseSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.WSTrustFeb2005ResponseSerializer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o WS-Trust fevereiro de 2005 serializador RSTR (resposta).</summary>
+        <value>O WS-Trust fevereiro de 2005 serializador RSTR (resposta).</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O valor especificado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

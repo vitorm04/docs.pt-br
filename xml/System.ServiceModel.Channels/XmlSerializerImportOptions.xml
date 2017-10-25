@@ -1,0 +1,133 @@
+<Type Name="XmlSerializerImportOptions" FullName="System.ServiceModel.Channels.XmlSerializerImportOptions">
+  <TypeSignature Language="C#" Value="public class XmlSerializerImportOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSerializerImportOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.XmlSerializerImportOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações necessárias para executar a importação de esquema usando o <see cref="T:System.Xml.Serialization.XmlSerializer" /> e <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> infraestrutura.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.XmlSerializerImportOptions> é usado pelo <xref:System.ServiceModel.Description.XmlSerializerMessageContractImporter>. Ele também é usado com o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) com o `/useXmlSerializer` (`/uxs)` alternar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializerImportOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.XmlSerializerImportOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.XmlSerializerImportOptions" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializerImportOptions (System.CodeDom.CodeCompileUnit codeCompileUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeCompileUnit codeCompileUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.XmlSerializerImportOptions.#ctor(System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="codeCompileUnit">Um objeto que fornece um contêiner para o <see cref="N:System.CodeDom" /> gráfico do programa.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.XmlSerializerImportOptions" /> com o <see cref="T:System.CodeDom.CodeCompileUnit" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClrNamespace">
+      <MemberSignature Language="C#" Value="public string ClrNamespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClrNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.XmlSerializerImportOptions.ClrNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="P:System.ServiceModel.Channels.XmlSerializerImportOptions.ClrNamespace" /> propriedade que contém os tipos que está sendo mapeados para o namespace XML.</summary>
+        <value>Um objeto que contém tipos que está sendo mapeados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeCompileUnit">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeCompileUnit CodeCompileUnit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeCompileUnit CodeCompileUnit" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.XmlSerializerImportOptions.CodeCompileUnit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.CodeDom.CodeCompileUnit" /> objeto que fornece um contêiner para o <see cref="N:System.CodeDom" /> gráfico do programa.</summary>
+        <value>Um objeto que fornece um contêiner para um gráfico do programa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeProvider">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CodeDomProvider CodeProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.Compiler.CodeDomProvider CodeProvider" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.XmlSerializerImportOptions.CodeProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CodeDomProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> objeto que verifica se as opções específicas para um idioma de destino têm suporte.</summary>
+        <value>Um objeto que verifica as opções de idioma de destino.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebReferenceOptions">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.WebReferenceOptions WebReferenceOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.WebReferenceOptions WebReferenceOptions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.XmlSerializerImportOptions.WebReferenceOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.WebReferenceOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.Services.Description.WebReferenceOptions" /> objeto que contém as opções de geração de código especificadas no arquivo de texto XML.</summary>
+        <value>Um objeto que contém opções de geração de código.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,142 @@
+<Type Name="NavigationEventArgs" FullName="System.Windows.Navigation.NavigationEventArgs">
+  <TypeSignature Language="C#" Value="public class NavigationEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NavigationEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.NavigationEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para eventos de navegação não canceláveis, incluindo <see cref="E:System.Windows.Navigation.NavigationWindow.LoadCompleted" />, <see cref="E:System.Windows.Navigation.NavigationWindow.Navigated" /> e <see cref="E:System.Windows.Navigation.NavigationWindow.NavigationStopped" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public object Content { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Content" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationEventArgs.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó raiz de conteúdo da página de destino.</summary>
+        <value>O elemento raiz de conteúdo da página de destino.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraData">
+      <MemberSignature Language="C#" Value="public object ExtraData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ExtraData" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationEventArgs.ExtraData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto de dados opcionais definidas pelo usuário.</summary>
+        <value>O objeto de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> para navegar para uma nova página, você tem a opção de passar o método de um objeto de dados definido pelo usuário. Esse objeto é então atribuído a essa propriedade para que você tenha acesso fácil aos dados quando você processa o <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNavigationInitiator">
+      <MemberSignature Language="C#" Value="public bool IsNavigationInitiator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNavigationInitiator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationEventArgs.IsNavigationInitiator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o navegador atual iniciou a navegação.</summary>
+        <value>
+          <see langword="true" /> se a navegação foi iniciada no quadro atual; <see langword="false" /> se o navegador pai também estiver navegando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica se o navegador atual está iniciando a navegação ou se está sendo deixado para um navegador pai. Por exemplo, o navegador atual pode ser um quadro em uma página que está sendo navegado dentro de um navegador pai. Você pode usar essa propriedade para determinar se a rotação do mundo em um `Navigating` evento ou para interromper o globo girando em um `LoadCompleted` eventos. Se essa propriedade for `false`, o navegador do pai do navegador também está navegando e todo o mundo já está girando. Se essa propriedade for `true`, a navegação foi iniciada dentro do quadro atual e você deve girar o globo (ou interromper a rotação do globo, dependendo de qual evento está sendo tratado).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigator">
+      <MemberSignature Language="C#" Value="public object Navigator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Navigator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationEventArgs.Navigator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o navegador que gerou o evento</summary>
+        <value>O navegador que gerou o evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationEventArgs.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] da página de destino.</summary>
+        <value>O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] da página de destino.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebResponse">
+      <MemberSignature Language="C#" Value="public System.Net.WebResponse WebResponse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebResponse WebResponse" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationEventArgs.WebResponse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a resposta da Web para permitir o acesso a cabeçalhos HTTP e outras propriedades.</summary>
+        <value>A resposta da Web.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

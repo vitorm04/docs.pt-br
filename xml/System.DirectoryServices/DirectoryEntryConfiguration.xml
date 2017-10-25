@@ -1,0 +1,188 @@
+<Type Name="DirectoryEntryConfiguration" FullName="System.DirectoryServices.DirectoryEntryConfiguration">
+  <TypeSignature Language="C#" Value="public class DirectoryEntryConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DirectoryEntryConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.DirectoryEntryConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.DirectoryEntryConfiguration" /> fornece uma maneira direta de especificar e obter opções específicas do provedor para manipular um objeto de diretório. Normalmente, as opções se aplicam a operações de pesquisa do repositório de diretórios subjacente. As opções com suporte são específicas do provedor.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">
+      <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />
+    </permission>
+  </Docs>
+  <Members>
+    <Member MemberName="GetCurrentServerName">
+      <MemberSignature Language="C#" Value="public string GetCurrentServerName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetCurrentServerName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryEntryConfiguration.GetCurrentServerName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o nome do host do servidor para a associação atual para esse objeto de diretório.</summary>
+        <returns>O nome do servidor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMutuallyAuthenticated">
+      <MemberSignature Language="C#" Value="public bool IsMutuallyAuthenticated ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsMutuallyAuthenticated() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryEntryConfiguration.IsMutuallyAuthenticated" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se a autenticação mútua é realizada pela camada de SSPI.</summary>
+        <returns>
+          <see langword="true" />Se a autenticação mútua tiver sido executada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageSize">
+      <MemberSignature Language="C#" Value="public int PageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageSize" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectoryEntryConfiguration.PageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho da página em uma pesquisa paginada.</summary>
+        <value>O número de entradas em uma página.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PasswordEncoding">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.PasswordEncodingMethod PasswordEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.PasswordEncodingMethod PasswordEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectoryEntryConfiguration.PasswordEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.PasswordEncodingMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a método de codificação de senha.</summary>
+        <value>Uma da <see cref="T:System.DirectoryServices.PasswordEncodingMethod" /> membros de enumeração que indica o tipo de codificação de senha.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PasswordPort">
+      <MemberSignature Language="C#" Value="public int PasswordPort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PasswordPort" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectoryEntryConfiguration.PasswordPort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da porta a ser usado para estabelecer uma conexão SSL quando a senha é definida ou alterada.</summary>
+        <value>O número da porta a ser usado para estabelecer uma conexão SSL quando a senha é definida ou alterada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a porta 636 é usada para estabelecer uma conexão SSL ao definir ou alterar uma senha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Referral">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ReferralChasingOption Referral { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ReferralChasingOption Referral" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectoryEntryConfiguration.Referral" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ReferralChasingOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se e como a busca de referência é tratada.</summary>
+        <value>Uma combinação de um ou mais do <see cref="T:System.DirectoryServices.ReferralChasingOption" /> membros de enumeração que especifica se e como a busca de referência é tratada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityMasks">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.SecurityMasks SecurityMasks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.SecurityMasks SecurityMasks" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.DirectoryEntryConfiguration.SecurityMasks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.SecurityMasks</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma máscara de segurança para usar com <see cref="T:System.DirectoryServices.DirectoryEntryConfiguration" />.</summary>
+        <value>Uma combinação de um ou mais do <see cref="T:System.DirectoryServices.SecurityMasks" /> membros de enumeração que especifica a máscara de segurança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUserNameQueryQuota">
+      <MemberSignature Language="C#" Value="public void SetUserNameQueryQuota (string accountName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetUserNameQueryQuota(string accountName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.DirectoryEntryConfiguration.SetUserNameQueryQuota(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accountName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="accountName">O nome da conta que está sendo definido para permitir que as consultas em seu nome de entidade.</param>
+        <summary>Define o nome de uma entidade de segurança para que quando o objeto é acessado, suas informações de cota também serão retornadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

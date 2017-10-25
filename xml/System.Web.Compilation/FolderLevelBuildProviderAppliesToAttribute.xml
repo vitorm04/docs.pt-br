@@ -1,0 +1,71 @@
+<Type Name="FolderLevelBuildProviderAppliesToAttribute" FullName="System.Web.Compilation.FolderLevelBuildProviderAppliesToAttribute">
+  <TypeSignature Language="C#" Value="public sealed class FolderLevelBuildProviderAppliesToAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FolderLevelBuildProviderAppliesToAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.FolderLevelBuildProviderAppliesToAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um atributo que especifica o escopo em que um <see cref="T:System.Web.Configuration.FolderLevelBuildProvider" /> objeto deve ser aplicado quando um recurso está localizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.FolderLevelBuildProvider> classe analisa e gera o código durante a compilação de um recurso que tem um arquivo específico. O <xref:System.Web.Compilation.FolderLevelBuildProviderAppliesToAttribute> atributo define o escopo de local para o qual o <xref:System.Web.Configuration.FolderLevelBuildProvider> objeto será chamado.  
+  
+ Definindo o <xref:System.Web.Compilation.FolderLevelBuildProviderAppliesToAttribute> atributo, você pode limitar um <xref:System.Web.Configuration.FolderLevelBuildProvider> do objeto a determinados [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] diretórios, como App_Code.  
+  
+ Se você não aplicar uma <xref:System.Web.Compilation.FolderLevelBuildProviderAppliesToAttribute> de atributo para um <xref:System.Web.Configuration.FolderLevelBuildProvider> classe, por padrão, o atributo tem como alvo todos os diretórios.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FolderLevelBuildProviderAppliesToAttribute (System.Web.Compilation.FolderLevelBuildProviderAppliesTo appliesTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.Compilation.FolderLevelBuildProviderAppliesTo appliesTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.FolderLevelBuildProviderAppliesToAttribute.#ctor(System.Web.Compilation.FolderLevelBuildProviderAppliesTo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="appliesTo" Type="System.Web.Compilation.FolderLevelBuildProviderAppliesTo" />
+      </Parameters>
+      <Docs>
+        <param name="appliesTo">O diretório de destino que um <see cref="T:System.Web.Configuration.FolderLevelBuildProvider" /> objeto se aplica.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Compilation.FolderLevelBuildProviderAppliesToAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppliesTo">
+      <MemberSignature Language="C#" Value="public System.Web.Compilation.FolderLevelBuildProviderAppliesTo AppliesTo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Compilation.FolderLevelBuildProviderAppliesTo AppliesTo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.FolderLevelBuildProviderAppliesToAttribute.AppliesTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.FolderLevelBuildProviderAppliesTo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o diretório de destino que um <see cref="T:System.Web.Configuration.FolderLevelBuildProvider" /> objeto se aplica.</summary>
+        <value>O diretório que uma <see cref="T:System.Web.Configuration.FolderLevelBuildProvider" /> objeto se aplica.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

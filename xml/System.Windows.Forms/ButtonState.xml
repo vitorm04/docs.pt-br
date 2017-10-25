@@ -1,0 +1,135 @@
+<Type Name="ButtonState" FullName="System.Windows.Forms.ButtonState">
+  <TypeSignature Language="C#" Value="public enum ButtonState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ButtonState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ButtonState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a aparência de um botão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração representa os diferentes estados de um botão. O estado padrão é `Normal`.  
+  
+   
+  
+## Examples  
+ Neste exemplo, você deve usar o `ButtonState` enumeração como um parâmetro para o método <xref:System.Windows.Forms.ControlPaint.DrawButton%2A> para especificar o estado de `button1`. Para executar o exemplo, crie dois botões, `button1` e `button2`. Em seguida, substitua o `button2_Click` método com o código de exemplo. Clique em `button2` redesenhar `button1` e mudará seu estado para `Flat`.  
+  
+ [!code-cpp[ButtonState#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ButtonState/CPP/buttonstate1.cpp#1)]
+ [!code-csharp[ButtonState#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ButtonState/CS/buttonstate1.cs#1)]
+ [!code-vb[ButtonState#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ButtonState/VB/buttonstate1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState All = int32(18176)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todos os sinalizadores exceto <see langword="Normal" /> estão definidos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="Checked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState Checked = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.Checked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O botão tem uma aparência marcada ou travada. Use essa aparência para mostrar que um botão de alternância foi pressionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Flat">
+      <MemberSignature Language="C#" Value="Flat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState Flat = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.Flat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O botão tem uma aparência plana e bidimensional.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inactive">
+      <MemberSignature Language="C#" Value="Inactive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState Inactive = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.Inactive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O botão está inativo (esmaecido).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O botão tem sua aparência normal (tridimensional).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pushed">
+      <MemberSignature Language="C#" Value="Pushed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ButtonState Pushed = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ButtonState.Pushed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O botão parece ter sido pressionado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,221 @@
+<Type Name="MailAddressCollection" FullName="System.Net.Mail.MailAddressCollection">
+  <TypeSignature Language="C#" Value="public class MailAddressCollection : System.Collections.ObjectModel.Collection&lt;System.Net.Mail.MailAddress&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MailAddressCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.Net.Mail.MailAddress&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mail.MailAddressCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Mail</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.Net.Mail.MailAddress&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Net.Mail.MailAddress</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena endereços de email que estão associados a uma mensagem de email.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Mail.MailMessage.To%2A?displayProperty=nameWithType>, <xref:System.Net.Mail.MailMessage.CC%2A?displayProperty=nameWithType>, e <xref:System.Net.Mail.MailMessage.Bcc%2A?displayProperty=nameWithType> propriedades retornam as instâncias dessa classe que são usadas para manter os endereços de email do respectivos.  
+  
+ Para obter detalhes sobre os formatos de endereço de email com suporte a <xref:System.Net.Mail.MailAddressCollection> de classe, consulte o <xref:System.Net.Mail.MailAddress> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona um endereço de email para o <xref:System.Net.Mail.MailAddressCollection> que é retornado pelo <xref:System.Net.Mail.MailMessage.Bcc%2A> propriedade.  
+  
+ [!code-cpp[NclMailSync#9](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#9)]
+ [!code-csharp[NclMailSync#9](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MailAddressCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.MailAddressCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância vazia da classe <see cref="T:System.Net.Mail.MailAddressCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string addresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string addresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.MailAddressCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addresses" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="addresses">Os endereços de email a serem adicionados ao <see cref="T:System.Net.Mail.MailAddressCollection" />. Vários endereços de email devem ser separados por uma vírgula (",").</param>
+        <summary>Adicionar uma lista de endereços de email à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se vários endereços de email separados por um caractere de ponto e vírgula (";") são transmitidos a `addresses` parâmetro. um <xref:System.FormatException> exceção será gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="addresses" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="addresses" /> parâmetro é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.FormatException">O <paramref name="addresses" /> parâmetro contém um endereço de email é inválido ou não tem suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.Net.Mail.MailAddress item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.Net.Mail.MailAddress item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.MailAddressCollection.InsertItem(System.Int32,System.Net.Mail.MailAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Net.Mail.MailAddress" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local no qual inserir o endereço de email que é especificado pelo <c>item</c>.</param>
+        <param name="item">O endereço de email a ser inserido na coleção.</param>
+        <summary>Insere um endereço de email para o <see cref="T:System.Net.Mail.MailAddressCollection" />, no local especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="item" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.Net.Mail.MailAddress item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.Net.Mail.MailAddress item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.MailAddressCollection.SetItem(System.Int32,System.Net.Mail.MailAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Net.Mail.MailAddress" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do elemento de endereço de email a ser substituído.</param>
+        <param name="item">Um endereço de email que irá substituir o elemento na coleção.</param>
+        <summary>Substitui o elemento no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="item" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.MailAddressCollection.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres dos endereços de email nesse objeto <see cref="T:System.Net.Mail.MailAddressCollection" />.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém os endereços de email nessa coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa coleção contém vários endereços, eles serão separados por um caractere de vírgula (",").  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe os endereços de email no <xref:System.Net.Mail.MailAddressCollection> que são retornados pelo <xref:System.Net.Mail.MailMessage.Bcc%2A> propriedade.  
+  
+ [!code-cpp[NclMailSync#9](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#9)]
+ [!code-csharp[NclMailSync#9](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

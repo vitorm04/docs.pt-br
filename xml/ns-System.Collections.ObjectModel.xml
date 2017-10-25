@@ -1,0 +1,6 @@
+<Namespace Name="System.Collections.ObjectModel">
+  <Docs>
+    <summary>O <see cref="N:System.Collections.ObjectModel" /> namespace contém classes que podem ser usadas como coleções no modelo de objeto de uma biblioteca reutilizável. Use essas classes quando as propriedades ou os métodos retornarem coleções.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

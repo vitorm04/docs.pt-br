@@ -1,0 +1,43 @@
+<Type Name="HtmlElementEventHandler" FullName="System.Windows.Forms.HtmlElementEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void HtmlElementEventHandler(object sender, HtmlElementEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HtmlElementEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HtmlElementEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.HtmlElementEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Forms.HtmlElementEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará <see langword="Click" />, <see langword="MouseDown" /> e os eventos relacionados em <see cref="T:System.Windows.Forms.HtmlDocument" />, <see cref="T:System.Windows.Forms.HtmlElement" /> e <see cref="T:System.Windows.Forms.HtmlWindow" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Windows.Forms.HtmlElementEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ Você deve aguardar até que um documento HTML terminou de carregar para anexar um manipulador de eventos para o documento. Se você tentar anexar um manipulador para que o carregamento for concluído, a operação de anexação pode falhar. É o melhor lugar para anexar manipuladores de eventos em um novo documento no <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> manipulador de eventos para o <xref:System.Windows.Forms.WebBrowser> controle.  
+  
+   
+  
+## Examples  
+ O código a seguir anexa manipuladores de eventos para o <xref:System.Windows.Forms.HtmlDocument.MouseDown>, <xref:System.Windows.Forms.HtmlDocument.MouseMove>, e <xref:System.Windows.Forms.HtmlDocument.MouseUp> eventos em <xref:System.Windows.Forms.HtmlDocument>. Este exemplo de código pressupõe que o projeto tiver uma instância do <xref:System.Windows.Forms.WebBrowser> controle chamado `WebBrowser1`.  
+  
+ [!code-cpp[HtmlElementEventHandler#1](~/samples/snippets/cpp/VS_Snippets_Winforms/HtmlElementEventHandler/CPP/form1.cpp#1)]
+ [!code-csharp[HtmlElementEventHandler#1](~/samples/snippets/csharp/VS_Snippets_Winforms/HtmlElementEventHandler/CS/form1.cs#1)]
+ [!code-vb[HtmlElementEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/HtmlElementEventHandler/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

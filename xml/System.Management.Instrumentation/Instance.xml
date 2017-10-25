@@ -1,0 +1,90 @@
+<Type Name="Instance" FullName="System.Management.Instrumentation.Instance">
+  <TypeSignature Language="C#" Value="public abstract class Instance : System.Management.Instrumentation.IInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Instance extends System.Object implements class System.Management.Instrumentation.IInstance" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.Instance" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Management.Instrumentation.IInstance</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Management.Instrumentation.InstrumentationClass(System.Management.Instrumentation.InstrumentationType.Instance)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa as classes derivadas conhecidas como classes de instância de instrumentação de gerenciamento. Essas classes derivadas herdam uma implementação de <see cref="T:System.Management.Instrumentation.IInstance" /> que permite que instâncias sejam publicadas por meio da propriedade <see cref="P:System.Management.Instrumentation.IInstance.Published" />.  
+  
+ Observação: as bibliotecas do .NET no WMI agora são consideradas em estado final e nenhum desenvolvimento, melhorias ou atualizações adicionais estarão disponíveis para problemas não relacionados à segurança que afetarem essas bibliotecas. O [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) deve ser usado para todos os novos desenvolvimentos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Instance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.Instance.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.Instrumentation.Instance" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado pelos construtores de classe derivada para inicializar o estado nesse tipo.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Published">
+      <MemberSignature Language="C#" Value="public bool Published { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Published" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.Instance.Published" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Management.Instrumentation.IgnoreMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as instâncias de classes que implementam esta interface são visíveis por meio da instrumentação de gerenciamento.</summary>
+        <value>Retorna um <see cref="T:System.Boolean" /> valor que indica se as instâncias de classes que implementam esta interface são visíveis por meio da instrumentação de gerenciamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ `true`, se a instância é visível por meio da instrumentação de gerenciamento; Caso contrário,`false`  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,335 @@
+<Type Name="CacheSection" FullName="System.Web.Configuration.CacheSection">
+  <TypeSignature Language="C#" Value="public sealed class CacheSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CacheSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.CacheSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define as configurações de cache global para um aplicativo ASP.NET. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.CacheSection> classe fornece uma maneira de acessar e modificar programaticamente o `<cache>` seção de um arquivo de configuração.  
+  
+ O recurso de cache do ASP.NET é implementado pela <xref:System.Web.Caching.Cache> classe. Para obter mais informações, consulte [cache](http://msdn.microsoft.com/library/ac11c8ea-df5d-4de8-b315-9ccf1048b0ce).  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.CacheSection> pode gravar informações para a seção correspondente do arquivo de configuração de acordo com as restrições definidas pela propriedade seção <xref:System.Configuration.SectionInformation.AllowDefinition%2A> cujo valor é <xref:System.Configuration.ConfigurationAllowDefinition.MachineToApplication>. Qualquer tentativa de gravar em um arquivo de configuração em um nível não é permitido na hierarquia resulta em uma mensagem de erro gerada pelo analisador. No entanto, você pode usar essa classe para ler informações de configuração em qualquer nível na hierarquia.  
+  
+ Um cache é uma tabela de hash específicos do aplicativo usada para dados acessado com frequência do repositório. Estado da sessão e aplicativo são semelhantes ao cache, o estado do aplicativo que está sendo o mais semelhante, devido a seu escopo em todo o aplicativo. Uma das maiores diferenças entre o cache e o mecanismo de estado do aplicativo é que o cache oferece suporte a dependências que essas dependências possibilitam a compilar aplicativos que remove automaticamente os itens em cache quando ocorrem determinados eventos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma página e o arquivo de código relacionadas usado para acessar o <xref:System.Web.Configuration.CacheSection> atributos de seção.  
+  
+ [!code-aspx-csharp[System.Web.Configuration.CacheSection#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/CS/readwritecache.aspx#11)]
+ [!code-aspx-vb[System.Web.Configuration.CacheSection#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/VB/readwritecache.aspx#11)]
+  
+ [!code-csharp[System.Web.Configuration.CacheSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/CS/readwritecache.aspx.cs#1)]
+ [!code-vb[System.Web.Configuration.CacheSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/VB/readwritecache.aspx.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CacheSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CacheSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.CacheSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.CacheSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.CacheSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Web.Configuration.CacheSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/CS/readwritecache.aspx.cs#2)]
+ [!code-vb[System.Web.Configuration.CacheSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/VB/readwritecache.aspx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultProvider">
+      <MemberSignature Language="C#" Value="public string DefaultProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CacheSection.DefaultProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultProvider", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o provedor padrão.</summary>
+        <value>O provedor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableExpiration">
+      <MemberSignature Language="C#" Value="public bool DisableExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableExpiration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CacheSection.DisableExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("disableExpiration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a expiração de cache está desabilitada.</summary>
+        <value>
+          <see langword="true" />Se a expiração do cache é desabilitada; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.Configuration.CacheSection.DisableExpiration%2A> está definida como `true`, os itens em cache nunca expirarem. Essa configuração destina-se para ajudar a depurar o comportamento do cache no código do aplicativo. Tenha cuidado ao desabilitar a expiração do cache, pois isso pode resultar em itens que estão sendo armazenados em cache mais do que eles são válidos.  
+  
+> [!NOTE]
+>  Para adicionar uma página no cache de saída, você deve estabelecer uma política de expiração para a página. Você pode fazer isso declarativamente com o [@ OutputCache](http://msdn.microsoft.com/en-us/28a9e101-fb44-4198-9cb6-b8a52312fec2) diretiva ou programaticamente usando o <xref:System.Web.HttpCachePolicy.SetExpires%2A> método. Para obter mais informações, consulte [como: definir valores de expiração para o cache de página ASP.NET](http://msdn.microsoft.com/library/c8931600-b167-477d-bd5a-0186ac908646).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.CacheSection.DisableExpiration%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.CacheSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/CS/readwritecache.aspx.cs#4)]
+ [!code-vb[System.Web.Configuration.CacheSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/VB/readwritecache.aspx.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableMemoryCollection">
+      <MemberSignature Language="C#" Value="public bool DisableMemoryCollection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableMemoryCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CacheSection.DisableMemoryCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("disableMemoryCollection", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a coleta de memória cache está desabilitada.</summary>
+        <value>
+          <see langword="true" /> se a coleta de memória cache estiver desabilitada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.Configuration.CacheSection.DisableMemoryCollection%2A> está definida como `true`, chamadas para a API de cache não terá efeito.  
+  
+ Se o <xref:System.Web.Configuration.CacheSection.DisableMemoryCollection%2A> está definida como `true`, o cache não tenta coletar itens não usados. Tenha cuidado ao usar essa configuração, como coleta de memória desabilitar rapidamente pode conduzir a condições de falta de memória para o aplicativo.  
+  
+ Essa configuração não tem efeito sobre o cache interno do ASP.NET ou no cache de saída. Para obter mais informações sobre os diferentes tipos de cache, consulte [cache](http://msdn.microsoft.com/library/ac11c8ea-df5d-4de8-b315-9ccf1048b0ce).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.CacheSection.DisableMemoryCollection%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.CacheSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/CS/readwritecache.aspx.cs#3)]
+ [!code-vb[System.Web.Configuration.CacheSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/VB/readwritecache.aspx.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentagePhysicalMemoryUsedLimit">
+      <MemberSignature Language="C#" Value="public int PercentagePhysicalMemoryUsedLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PercentagePhysicalMemoryUsedLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CacheSection.PercentagePhysicalMemoryUsedLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("percentagePhysicalMemoryUsedLimit", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.IntegerValidator(MaxValue=100, MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o percentual máximo de uso de memória virtual.</summary>
+        <value>O percentual máximo de uso de memória virtual. O valor padrão é 90%.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.CacheSection.PercentagePhysicalMemoryUsedLimit%2A> propriedade especifica o limite para condições de alta pressão. Como esse limite for atingido, o sistema de cache começa gradualmente medidas limpeza mais agressivas.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Web.Configuration.CacheSection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/CS/readwritecache.aspx.cs#7)]
+ [!code-vb[System.Web.Configuration.CacheSection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/VB/readwritecache.aspx.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateBytesLimit">
+      <MemberSignature Language="C#" Value="public long PrivateBytesLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 PrivateBytesLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CacheSection.PrivateBytesLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("privateBytesLimit", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.LongValidator(MinValue=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o tamanho máximo do espaço privado de processo de trabalho.</summary>
+        <value>O número máximo, em bytes, do espaço privado alocado para o processo de trabalho. O valor padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.CacheSection.PrivateBytesLimit%2A> propriedade especifica o limite para condições de alta pressão. Como esse limite for atingido, o sistema de cache começa gradualmente medidas limpeza mais agressivas.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Web.Configuration.CacheSection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/CS/readwritecache.aspx.cs#6)]
+ [!code-vb[System.Web.Configuration.CacheSection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CacheSection/VB/readwritecache.aspx.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateBytesPollTime">
+      <MemberSignature Language="C#" Value="public TimeSpan PrivateBytesPollTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan PrivateBytesPollTime" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CacheSection.PrivateBytesPollTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.InfiniteTimeSpanConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("privateBytesPollTime", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o intervalo de tempo entre as sondagens para o uso de memória do processo de trabalho.</summary>
+        <value>O intervalo de tempo entre as sondagens para o uso de memória do processo de trabalho. O valor padrão é 2 minutos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa chamada é cara e talvez precise ser ajustado como um equilíbrio entre a velocidade de reação do algoritmo de remoção de cache e o número de chamadas de sondagem feitas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CacheSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public System.Configuration.ProviderSettingsCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ProviderSettingsCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CacheSection.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("providers")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ProviderSettingsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conjunto de configurações do provedor.</summary>
+        <value>A coleção de configurações do provedor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,66 @@
+<Type Name="SeriesCollection" FullName="System.Windows.Forms.DataVisualization.Charting.SeriesCollection">
+  <TypeSignature Language="C#" Value="public class SeriesCollection : System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.Series&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SeriesCollection extends System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection`1&lt;class System.Windows.Forms.DataVisualization.Charting.Series&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.SeriesCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartNamedElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.Series&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Windows.Forms.DataVisualization.Charting.Series</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.SeriesCollection> classe representa uma coleção de <xref:System.Windows.Forms.DataVisualization.Charting.Series> objetos, que por sua vez, representam um agrupamento de atributos para a série e pontos de dados relacionados. Essa classe de coleção é implementado como o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.Series%2A> propriedade de coleção da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto.  
+  
+ Objetos de série podem ser anexados, inseridos ou removidos da coleção em tempo de design e tempo de execução.  
+  
+ Quando uma série é adicionada à coleção, ele é atribuído automaticamente para o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> objeto chamado "Padrão" ou, se "Padrão" não existe, para a primeira área de gráfico disponíveis na coleção da área do gráfico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.Series Add (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.DataVisualization.Charting.Series Add(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Series</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> a ser adicionado.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> objeto ao final da coleção.</summary>
+        <returns>O novo <see cref="T:System.Windows.Forms.DataVisualization.Charting.Series" /> objeto acrescentado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Itens sempre são adicionados como o último item na coleção.  
+  
+ O `name` argumento refere-se a `Name` propriedade do objeto que está sendo adicionado.  
+  
+ **Observação** se você usar esse método para adicionar <xref:System.Windows.Forms.DataVisualization.Charting.Series> objetos para o <xref:System.Windows.Forms.DataVisualization.Charting.SeriesCollection> classe associado <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objetos recém-adicionado <xref:System.Windows.Forms.DataVisualization.Charting.Series> objeto não pode ter mais de um valor de Y por ponto de dados. Para adicionar uma série que pode lidar com vários valores de Y por ponto de dados, use o <xref:System.Windows.Forms.DataVisualization.Charting.SeriesCollection.Add%2A> System.Int32)?qualifyHint=False & no upgrade automático = True definição desse método sobrecarregado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

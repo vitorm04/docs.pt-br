@@ -1,0 +1,720 @@
+<Type Name="PointF" FullName="System.Drawing.PointF">
+  <TypeSignature Language="C#" Value="public struct PointF" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit PointF extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.PointF" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um par ordenado de coordenadas x e y de ponto flutuante inteiros que define um ponto em um plano bidimensional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para converter um <xref:System.Drawing.PointF> para um <xref:System.Drawing.Point>, use <xref:System.Drawing.Point.Round%2A?displayProperty=nameWithType> ou <xref:System.Drawing.Point.Truncate%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PointF (float x, float y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 x, float32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.#ctor(System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">A posição horizontal do ponto.</param>
+        <param name="y">A posição vertical do ponto.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.PointF" /> com as coordenadas especificadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Drawing.PointF Add (System.Drawing.PointF pt, System.Drawing.Size sz);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.PointF Add(valuetype System.Drawing.PointF pt, valuetype System.Drawing.Size sz) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.Add(System.Drawing.PointF,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.PointF" />
+        <Parameter Name="sz" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O <see cref="T:System.Drawing.PointF" /> a ser movido.</param>
+        <param name="sz">O <see cref="T:System.Drawing.Size" /> que especifica os números para adicionar às coordenadas do <c>pt</c>.</param>
+        <summary>Move um <see cref="T:System.Drawing.PointF" /> especificado pelo <see cref="T:System.Drawing.Size" /> especificado.</summary>
+        <returns>O <see cref="T:System.Drawing.PointF" /> movido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.PointF.Add%2A> método adiciona o <xref:System.Drawing.Size.Width%2A> do tamanho especificado para a coordenada x do <xref:System.Drawing.PointF> e <xref:System.Drawing.Size.Height%2A> para a coordenada y do <xref:System.Drawing.PointF>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public static System.Drawing.PointF Add (System.Drawing.PointF pt, System.Drawing.SizeF sz);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.PointF Add(valuetype System.Drawing.PointF pt, valuetype System.Drawing.SizeF sz) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.Add(System.Drawing.PointF,System.Drawing.SizeF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.PointF" />
+        <Parameter Name="sz" Type="System.Drawing.SizeF" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O <see cref="T:System.Drawing.PointF" /> a ser movido.</param>
+        <param name="sz">O <see cref="T:System.Drawing.SizeF" /> que especifica os números para adicionar às coordenadas do <c>pt</c>.</param>
+        <summary>Move um determinado <see cref="T:System.Drawing.PointF" /> por um <see cref="T:System.Drawing.SizeF" /> especificado.</summary>
+        <returns>O <see cref="T:System.Drawing.PointF" /> movido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.PointF.Add%2A> método adiciona o <xref:System.Drawing.SizeF.Width%2A> do tamanho especificado para a coordenada x do <xref:System.Drawing.PointF> e <xref:System.Drawing.SizeF.Height%2A> para a coordenada y do <xref:System.Drawing.PointF>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.PointF.Add%2A> método. Para executar este exemplo, cole o código a seguir em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas `AddExample`, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.Misc3#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#6)]
+ [!code-vb[System.Drawing.Misc3#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Drawing.PointF Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Drawing.PointF Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.PointF.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma nova instância do <see cref="T:System.Drawing.PointF" /> classe com dados de membro à esquerda não inicializados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Drawing.PointF other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Drawing.PointF other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.Equals(System.Drawing.PointF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Drawing.PointF" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> a ser testado.</param>
+        <summary>Especifica se este <see cref="T:System.Drawing.PointF" /> contém as mesmas coordenadas conforme o especificado <see cref="T:System.Object" />.</summary>
+        <returns>Este método retorna <see langword="true" /> se <paramref name="obj" /> é um <see cref="T:System.Drawing.PointF" /> e tem as mesmas coordenadas este <see cref="T:System.Drawing.Point" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash desta estrutura <see cref="T:System.Drawing.PointF" />.</summary>
+        <returns>Um valor inteiro que especifica um valor de hash para este <see cref="T:System.Drawing.PointF" /> estrutura.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.PointF.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Drawing.PointF" /> está vazio.</summary>
+        <value>
+          <see langword="true" /> se tanto <see cref="P:System.Drawing.PointF.X" /> quanto <see cref="P:System.Drawing.PointF.Y" /> forem 0; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Drawing.PointF operator + (System.Drawing.PointF pt, System.Drawing.Size sz);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Drawing.PointF op_Addition(valuetype System.Drawing.PointF pt, valuetype System.Drawing.Size sz) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.op_Addition(System.Drawing.PointF,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.PointF" />
+        <Parameter Name="sz" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O <see cref="T:System.Drawing.PointF" /> a ser movido.</param>
+        <param name="sz">Um <see cref="T:System.Drawing.Size" /> que especifica o par de números para adicionar às coordenadas do <c>pt</c>.</param>
+        <summary>Move um <see cref="T:System.Drawing.PointF" /> por um <see cref="T:System.Drawing.Size" /> determinado.</summary>
+        <returns>Retorna o traduzido <see cref="T:System.Drawing.PointF" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+  
+-   O exemplo de código a seguir adiciona uma sombra em um <xref:System.Windows.Forms.ListBox> usando o <xref:System.Drawing.PointF.op_Addition%2A> operador. Este exemplo é projetado para ser usado com um Windows Form. Para executar este exemplo, cole este código em um formulário e a chamada a `AddShadow` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> eventos. Verifique se o formulário contém um <xref:System.Windows.Forms.ListBox> chamado `listBox1`.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.MiscExamples#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.MiscExamples#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Addition">
+      <MemberSignature Language="C#" Value="public static System.Drawing.PointF operator + (System.Drawing.PointF pt, System.Drawing.SizeF sz);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Drawing.PointF op_Addition(valuetype System.Drawing.PointF pt, valuetype System.Drawing.SizeF sz) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.op_Addition(System.Drawing.PointF,System.Drawing.SizeF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.PointF" />
+        <Parameter Name="sz" Type="System.Drawing.SizeF" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O <see cref="T:System.Drawing.PointF" /> a ser movido.</param>
+        <param name="sz">O <see cref="T:System.Drawing.SizeF" /> que especifica os números para adicionar a coordenadas x e y do <see cref="T:System.Drawing.PointF" />.</param>
+        <summary>Converte o <see cref="T:System.Drawing.PointF" /> pelo <see cref="T:System.Drawing.SizeF" />.</summary>
+        <returns>O <see cref="T:System.Drawing.PointF" /> movido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.PointF.op_Addition%2A> operador adiciona o <xref:System.Drawing.SizeF.Width%2A> do tamanho especificado para a coordenada x do <xref:System.Drawing.PointF> e <xref:System.Drawing.SizeF.Height%2A> para a coordenada y do <xref:System.Drawing.PointF>.  
+  
+ O método equivalente para esse operador é<xref:System.Drawing.PointF.Add%28System.Drawing.PointF%2CSystem.Drawing.SizeF%29?displayProperty=nameWithType>  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.PointF.op_Addition%2A> operador. Para executar este exemplo, cole o código a seguir em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas `opAdditionExample`, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.Misc3#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#5)]
+ [!code-vb[System.Drawing.Misc3#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Drawing.PointF left, System.Drawing.PointF right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Drawing.PointF left, valuetype System.Drawing.PointF right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.op_Equality(System.Drawing.PointF,System.Drawing.PointF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Drawing.PointF" />
+        <Parameter Name="right" Type="System.Drawing.PointF" />
+      </Parameters>
+      <Docs>
+        <param name="left">Um <see cref="T:System.Drawing.PointF" /> para comparar.</param>
+        <param name="right">Um <see cref="T:System.Drawing.PointF" /> para comparar.</param>
+        <summary>Compara dois <see cref="T:System.Drawing.PointF" /> estruturas. Especifica o resultado se os valores de <see cref="P:System.Drawing.PointF.X" /> e <see cref="P:System.Drawing.PointF.Y" /> propriedades dos dois <see cref="T:System.Drawing.PointF" /> estruturas são iguais.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Drawing.PointF.X" /> e <see cref="P:System.Drawing.PointF.Y" /> valores à esquerda e à direita <see cref="T:System.Drawing.PointF" /> estruturas forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.PointF.op_Equality%2A> operador. Para executar este exemplo, cole o código a seguir em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas `opAdditionExample`, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.Misc3#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#5)]
+ [!code-vb[System.Drawing.Misc3#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Drawing.PointF left, System.Drawing.PointF right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Drawing.PointF left, valuetype System.Drawing.PointF right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.op_Inequality(System.Drawing.PointF,System.Drawing.PointF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Drawing.PointF" />
+        <Parameter Name="right" Type="System.Drawing.PointF" />
+      </Parameters>
+      <Docs>
+        <param name="left">Um <see cref="T:System.Drawing.PointF" /> para comparar.</param>
+        <param name="right">Um <see cref="T:System.Drawing.PointF" /> para comparar.</param>
+        <summary>Determina se as coordenadas dos pontos especificados não são iguais.</summary>
+        <returns>
+          <see langword="true" />para indicar o <see cref="P:System.Drawing.PointF.X" /> e <see cref="P:System.Drawing.PointF.Y" /> valores de <paramref name="left" /> e <paramref name="right" /> não forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.PointF.op_Inequality%2A> operador. Para executar este exemplo, cole o código a seguir em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas `AddExample`, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.Misc3#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#6)]
+ [!code-vb[System.Drawing.Misc3#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Drawing.PointF operator - (System.Drawing.PointF pt, System.Drawing.Size sz);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Drawing.PointF op_Subtraction(valuetype System.Drawing.PointF pt, valuetype System.Drawing.Size sz) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.op_Subtraction(System.Drawing.PointF,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.PointF" />
+        <Parameter Name="sz" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O <see cref="T:System.Drawing.PointF" /> a ser movido.</param>
+        <param name="sz">O <see cref="T:System.Drawing.Size" /> que especifica os números para subtrair de coordenadas de <c>pt</c>.</param>
+        <summary>Converte um <see cref="T:System.Drawing.PointF" /> pelo negativo de um <see cref="T:System.Drawing.Size" /> fornecido.</summary>
+        <returns>O <see cref="T:System.Drawing.PointF" /> movido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Subtraction">
+      <MemberSignature Language="C#" Value="public static System.Drawing.PointF operator - (System.Drawing.PointF pt, System.Drawing.SizeF sz);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Drawing.PointF op_Subtraction(valuetype System.Drawing.PointF pt, valuetype System.Drawing.SizeF sz) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.op_Subtraction(System.Drawing.PointF,System.Drawing.SizeF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.PointF" />
+        <Parameter Name="sz" Type="System.Drawing.SizeF" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O <see cref="T:System.Drawing.PointF" /> a ser movido.</param>
+        <param name="sz">O <see cref="T:System.Drawing.SizeF" /> que especifica os números para subtrair de coordenadas de <c>pt</c>.</param>
+        <summary>Converte um <see cref="T:System.Drawing.PointF" /> por negativo de determinado <see cref="T:System.Drawing.SizeF" />.</summary>
+        <returns>O <see cref="T:System.Drawing.PointF" /> movido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.PointF.op_Subtraction%2A> operador subtrai o <xref:System.Drawing.SizeF.Width%2A> do tamanho especificado da coordenada x do <xref:System.Drawing.PointF> e <xref:System.Drawing.SizeF.Height%2A> da coordenada y do <xref:System.Drawing.PointF>.  
+  
+ O método equivalente para esse operador é<xref:System.Drawing.PointF.Subtract%28System.Drawing.PointF%2CSystem.Drawing.SizeF%29?displayProperty=nameWithType>  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.PointF.op_Subtraction%2A> operador. Para executar este exemplo, cole o código a seguir em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas `opSubtractionExample`, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.Misc3#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#8)]
+ [!code-vb[System.Drawing.Misc3#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Drawing.PointF Subtract (System.Drawing.PointF pt, System.Drawing.Size sz);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.PointF Subtract(valuetype System.Drawing.PointF pt, valuetype System.Drawing.Size sz) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.Subtract(System.Drawing.PointF,System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.PointF" />
+        <Parameter Name="sz" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O <see cref="T:System.Drawing.PointF" /> a ser movido.</param>
+        <param name="sz">O <see cref="T:System.Drawing.Size" /> que especifica os números para subtrair de coordenadas de <c>pt</c>.</param>
+        <summary>Converte um <see cref="T:System.Drawing.PointF" /> por negativo de um tamanho especificado.</summary>
+        <returns>O <see cref="T:System.Drawing.PointF" /> movido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.PointF.Subtract%2A> método subtrai o <xref:System.Drawing.Size.Width%2A> do tamanho especificado da coordenada x do <xref:System.Drawing.PointF> e <xref:System.Drawing.Size.Height%2A> da coordenada y do <xref:System.Drawing.PointF>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="public static System.Drawing.PointF Subtract (System.Drawing.PointF pt, System.Drawing.SizeF sz);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.PointF Subtract(valuetype System.Drawing.PointF pt, valuetype System.Drawing.SizeF sz) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.Subtract(System.Drawing.PointF,System.Drawing.SizeF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="System.Drawing.PointF" />
+        <Parameter Name="sz" Type="System.Drawing.SizeF" />
+      </Parameters>
+      <Docs>
+        <param name="pt">O <see cref="T:System.Drawing.PointF" /> a ser movido.</param>
+        <param name="sz">O <see cref="T:System.Drawing.SizeF" /> que especifica os números para subtrair de coordenadas de <c>pt</c>.</param>
+        <summary>Converte um <see cref="T:System.Drawing.PointF" /> por negativo de um tamanho especificado.</summary>
+        <returns>O <see cref="T:System.Drawing.PointF" /> movido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.PointF.Subtract%2A> método subtrai o <xref:System.Drawing.SizeF.Width%2A> do tamanho especificado da coordenada x do <xref:System.Drawing.PointF> e <xref:System.Drawing.SizeF.Height%2A> da coordenada y do <xref:System.Drawing.PointF>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.PointF.Subtract%2A> operador. Para executar este exemplo, cole o código a seguir em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas `SubtractExample`, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.Misc3#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#7)]
+ [!code-vb[System.Drawing.Misc3#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.PointF.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte essa <see cref="T:System.Drawing.PointF" /> para uma cadeia de caracteres legível humana.</summary>
+        <returns>Uma cadeia de caracteres que representa este <see cref="T:System.Drawing.PointF" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public float X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.PointF.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada X este <see cref="T:System.Drawing.PointF" />.</summary>
+        <value>A coordenada X deste <see cref="T:System.Drawing.PointF" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public float Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.PointF.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada Y deste <see cref="T:System.Drawing.PointF" />.</summary>
+        <value>A coordenada Y deste <see cref="T:System.Drawing.PointF" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

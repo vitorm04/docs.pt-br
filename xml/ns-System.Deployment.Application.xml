@@ -1,0 +1,15 @@
+<Namespace Name="System.Deployment.Application">
+  <Docs>
+    <summary>Com o <see cref="N:System.Deployment.Application" /> namespace, você pode programar o comportamento de atualização personalizado em um aplicativo ClickOnce.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe de chave nesse namespace é <xref:System.Deployment.Application.ApplicationDeployment>. Você pode testar se sua implantação tiver uma atualização disponível usando o <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdate%2A> ou <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdateAsync%2A> métodos, a último método gera o <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdateCompleted> evento quando ele for concluído com êxito. <xref:System.Deployment.Application.ApplicationDeployment.CheckForDetailedUpdate%2A>Retorna informações importantes sobre a atualização, como seu número de versão e se é uma atualização necessária para os usuários atuais. Se uma atualização estiver disponível, você pode instalá-lo usando <xref:System.Deployment.Application.ApplicationDeployment.Update%2A> ou <xref:System.Deployment.Application.ApplicationDeployment.UpdateAsync%2A>; o último método gera o <xref:System.Deployment.Application.ApplicationDeployment.UpdateCompleted> evento após a instalação da atualização for concluída. Para grandes atualizações, você pode receber notificações de andamento por meio de <xref:System.Deployment.Application.ApplicationDeployment.CheckForUpdateProgressChanged> e <xref:System.Deployment.Application.ApplicationDeployment.UpdateProgressChanged> eventos e use as informações em <xref:System.ComponentModel.ProgressChangedEventArgs> para notificar o usuário sobre o status do download.  
+  
+ Você também pode usar <xref:System.Deployment.Application.ApplicationDeployment> para baixar arquivos grandes e assemblies por demanda. Esses arquivos devem ser marcados como "opcionais" no manifesto de aplicativo da implantação, para que eles não são baixados durante a instalação. Você pode baixar os arquivos em qualquer momento durante a duração do aplicativo usando o <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> ou <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync%2A> métodos. Você pode baixar assemblies antes que eles sejam carregados na memória, fornecendo um manipulador de eventos para o <xref:System.AppDomain.AssemblyResolve> evento no <xref:System.AppDomain> classe. Para obter mais informações, consulte [Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API Using the Designer](http://msdn.microsoft.com/library/59a0dd5f-1cab-4f2f-b780-0ab7399905d5) (Instruções passo a passo: baixando assemblies sob demanda com a API de implantação do ClickOnce usando o designer).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

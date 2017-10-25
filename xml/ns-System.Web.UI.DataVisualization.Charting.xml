@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.DataVisualization.Charting">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.DataVisualization.Charting" /> namespace contém métodos e propriedades para o controle de servidor Web do gráfico.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

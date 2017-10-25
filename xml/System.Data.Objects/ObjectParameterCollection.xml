@@ -1,0 +1,374 @@
+<Type Name="ObjectParameterCollection" FullName="System.Data.Objects.ObjectParameterCollection">
+  <TypeSignature Language="C#" Value="public sealed class ObjectParameterCollection : System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;, System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectParameter&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectParameterCollection extends System.Object implements class System.Collections.Generic.ICollection`1&lt;class System.Data.Objects.ObjectParameter&gt;, class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Objects.ObjectParameter&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.ObjectParameterCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectParameter&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa os parâmetros de consulta como <see cref="T:System.Data.Objects.ObjectParameter" /> objetos que são definidos em um <see cref="T:System.Data.Objects.ObjectQuery`1" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa os parâmetros de consulta como <xref:System.Data.Objects.ObjectParameter> objetos definidos em um <xref:System.Data.Objects.ObjectQuery%601>.  
+  
+ Essa classe não pode ser herdada.  
+  
+ Os parâmetros que são passados para os métodos de construtor de consulta são agregados por instâncias sucessivas de um <xref:System.Data.Objects.ObjectQuery%601> na sequência. Eles podem ser acessados usando o <xref:System.Data.Objects.ObjectQuery.Parameters%2A> propriedade, que retorna o <xref:System.Data.Objects.ObjectParameterCollection>. Depois de adicionar parâmetros, eles podem ser removidos da coleção e a coleção pode ser limpa, desde que a consulta não foi compilada ou executada. Nomes de parâmetro não podem ser alterados, mas valores podem ser alterados a qualquer momento.  
+  
+ Os parâmetros devem ser exclusivos no <xref:System.Data.Objects.ObjectParameterCollection>. Não é possível haver dois parâmetros na coleção com o mesmo nome.  
+  
+ Ao usar os métodos de composição como <xref:System.Data.Objects.ObjectQuery%601.Union%2A>, <xref:System.Data.Objects.ObjectQuery%601.UnionAll%2A>, <xref:System.Data.Objects.ObjectQuery%601.Intersect%2A> e <xref:System.Data.Objects.ObjectQuery%601.Except%2A>, os parâmetros são mesclados. Uma exceção é lançada quando os conjuntos de parâmetros são incompatíveis ou estão incompletas. Para obter mais informações, consulte [métodos do construtor de consulta](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo adiciona novos parâmetros para a coleção e obtém a contagem dos parâmetros na coleção. Em seguida, ele itera por meio de <xref:System.Data.Objects.ObjectParameterCollection> e exibe o nome, tipo e valor de cada parâmetro na coleção.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_count_add_indexer)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_count_add_indexer)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Data.Objects.ObjectParameter parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Data.Objects.ObjectParameter parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Add(System.Data.Objects.ObjectParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Data.Objects.ObjectParameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">O parâmetro para adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Data.Objects.ObjectParameter" /> especificado à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de adicionar parâmetros, eles podem ser removidos da coleção e a coleção pode ser limpa, desde que a consulta não foi compilada ou executada. Nomes de parâmetro não podem ser alterados, mas valores podem ser alterados a qualquer momento.  
+  
+ Os parâmetros devem ser exclusivos no <xref:System.Data.Objects.ObjectParameterCollection>. Não é possível haver dois parâmetros na coleção com o mesmo nome. Para obter mais informações, consulte [métodos do construtor de consulta](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo adiciona novos parâmetros para a coleção. Ele itera por meio de <xref:System.Data.Objects.ObjectParameterCollection> e exibe o nome, tipo e valor de cada parâmetro na coleção.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_count_add_indexer)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_count_add_indexer)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="parameter" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="parameter" /> argumento já existe na coleção. Esse comportamento é diferente da maioria das coleções que permitem que as entradas duplicadas.  
+  
+ -ou-  
+  
+ Outro parâmetro com o mesmo nome que o <paramref name="parameter" /> argumento já existe na coleção. Observe que a pesquisa diferencia maiusculas de minúsculas. Esse comportamento é diferente da maioria das coleções e é mais semelhante de um <see cref="T:System.Collections.Generic.Dictionary" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tipo do <paramref name="parameter" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exclui todos os <see cref="T:System.Data.Objects.ObjectParameter" /> instâncias da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Data.Objects.ObjectParameter parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.Data.Objects.ObjectParameter parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Contains(System.Data.Objects.ObjectParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Data.Objects.ObjectParameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">O <see cref="T:System.Data.Objects.ObjectParameter" /> localizar na coleção.</param>
+        <summary>Verifica a existência de um especificado <see cref="T:System.Data.Objects.ObjectParameter" /> na coleção por referência.</summary>
+        <returns>Retorna <see langword="true" /> se o objeto de parâmetro foi encontrado na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é uma verificação de referência. Ou seja, se um <xref:System.Data.Objects.ObjectParameter> for especificado que contém o mesmo nome que um objeto de parâmetro na coleção, esse método retornará apenas `true` se ele for o mesmo objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="parameter" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro a ser pesquisada na coleção. Esse nome não deve incluir o marcador de parâmetro "@" que é usado em instruções [!INCLUDE[esql](~/includes/esql-md.md)], apenas o nome real.</param>
+        <summary>Determina se um <see cref="T:System.Data.Objects.ObjectParameter" /> com o nome especificado está na coleção.</summary>
+        <returns>Retorna <see langword="true" /> se um parâmetro com o nome especificado foi encontrado na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo usa o <xref:System.Data.Objects.ObjectParameterCollection.Contains%2A> método para determinar se o parâmetro especificado está na coleção.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_StringArg](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_stringarg)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_StringArg](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_stringarg)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Data.Objects.ObjectParameter[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Data.Objects.ObjectParameter[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.CopyTo(System.Data.Objects.ObjectParameter[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Data.Objects.ObjectParameter[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz na qual copiar os parâmetros.</param>
+        <param name="index">O índice na matriz na qual começar a copiar os parâmetros.</param>
+        <summary>Permite que os parâmetros na coleção a ser copiado em uma matriz fornecida, começando com o objeto no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo copia os parâmetros na matriz especificada.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_CopyTo](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_copyto)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_CopyTo](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_copyto)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameterCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de parâmetros no momento na coleção.</summary>
+        <value>O número de <see cref="T:System.Data.Objects.ObjectParameter" /> objetos que estão atualmente na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo adiciona novos parâmetros para a coleção e obtém a contagem dos parâmetros na coleção. Em seguida, ele itera por meio de <xref:System.Data.Objects.ObjectParameterCollection> e exibe o nome, tipo e valor de cada parâmetro na coleção.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_count_add_indexer)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Count_Add_Indexer](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_count_add_indexer)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectParameter this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Objects.ObjectParameter Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameterCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro para localizar. Esse nome não deve incluir o marcador de parâmetro "@" que é usado em instruções [!INCLUDE[esql](~/includes/esql-md.md)], apenas o nome real.</param>
+        <summary>Fornece um indexador que permite que os chamadores recuperar os parâmetros por nome.</summary>
+        <value>A instância <see cref="T:System.Data.Objects.ObjectParameter" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Nenhum parâmetro com o nome especificado é encontrado na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Data.Objects.ObjectParameter parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.Data.Objects.ObjectParameter parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.Remove(System.Data.Objects.ObjectParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Data.Objects.ObjectParameter" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">Um objeto a ser removido da coleção.</param>
+        <summary>Remove uma instância de um <see cref="T:System.Data.Objects.ObjectParameter" /> da coleção por referência, se ele existe na coleção.</summary>
+        <returns>Retorna <see langword="true" /> se o objeto de parâmetro foi encontrado e removido da coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma comparação de referência com base em. Ou seja, se um objeto de parâmetro de consulta é especificado que contém o mesmo nome que um objeto de parâmetro na coleção, o parâmetro na coleção será removido apenas se ele for o mesmo objeto. Para remover um objeto pelo nome, primeiro use o indexador para recuperar a instância de parâmetro e removê-lo usando esse método.  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo adiciona dois parâmetros à coleção e, em seguida, remove os parâmetros.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectParameterCollection_Remove](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectparametercollection_remove)]
+ [!code-vb[DP ObjectServices Concepts#ObjectParameterCollection_Remove](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectparametercollection_remove)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="parameter" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;System.Data.Objects.ObjectParameter&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectParameterCollection.System#Collections#Generic#ICollection&lt;System#Data#Objects#ObjectParameter&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura ou pode ser modificada.</summary>
+        <value>Um valor booliano que é <see langword="true" /> se a coleção é somente leitura e <see langword="false" /> da coleção pode ser modificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa coleção é sempre somente leitura; parâmetros podem ser adicionados, removidos e modificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectParameter&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;System.Data.Objects.ObjectParameter&gt; IEnumerable&lt;ObjectParameter&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Data.Objects.ObjectParameter&gt; System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectParameter&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.System#Collections#Generic#IEnumerable&lt;System#Data#Objects#ObjectParameter&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Data.Objects.ObjectParameter&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador de tipo na coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerator`1" /> do tipo <see cref="T:System.Data.Objects.ObjectParameter" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna um <xref:System.Collections.Generic.IEnumerator%601> instância. Isso permite que a coleção de iteração e percorridos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectParameterCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador não tipado pela coleção.</summary>
+        <returns>Uma instância <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna um enumerador não tipado pela coleção. Isso permite que a coleção de iteração e percorridos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

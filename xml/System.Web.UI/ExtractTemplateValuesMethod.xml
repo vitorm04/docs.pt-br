@@ -1,0 +1,34 @@
+<Type Name="ExtractTemplateValuesMethod" FullName="System.Web.UI.ExtractTemplateValuesMethod">
+  <TypeSignature Language="C#" Value="public delegate System.Collections.Specialized.IOrderedDictionary ExtractTemplateValuesMethod(Control control);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ExtractTemplateValuesMethod extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ExtractTemplateValuesMethod" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="control" Type="System.Web.UI.Control" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="control">O <see cref="T:System.Web.UI.Control" /> do qual extrair pares nome/valor, que são passados pelo controle associado a dados a um controle de fonte de dados associados em cenários de associação de dados bidirecionais. Esse parâmetro corresponde do <c>controle</c> parâmetro passado <see cref="M:System.Web.UI.IBindableTemplate.ExtractValues(System.Web.UI.Control)" /> método.</param>
+    <summary>Fornece um delegado com que o ASP.NET extrai um conjunto de pares de nome/valor de uma <see cref="T:System.Web.UI.IBindableTemplate" /> objeto em tempo de execução. Essa classe não pode ser herdada.</summary>
+    <returns>Um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> de pares de nome/valor usados em cenários de associação de dados modelo e bidirecionais entre controles de associação de dados do ASP.NET e controles de fonte de dados.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ExtractTemplateValuesMethod> delegado é usado pelo ASP.NET e não se destina a ser usado diretamente no seu código.  
+  
+ Este delegado é usado pelo <xref:System.Web.UI.CompiledBindableTemplateBuilder> classe, que é a implementação padrão da <xref:System.Web.UI.IBindableTemplate> interface ASP.NET gera quando o analisador ASP.NET encontra a associação de dados bidirecional no conteúdo do modelo.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

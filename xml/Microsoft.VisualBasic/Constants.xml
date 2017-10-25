@@ -1,0 +1,2681 @@
+<Type Name="Constants" FullName="Microsoft.VisualBasic.Constants">
+  <TypeSignature Language="C#" Value="public sealed class Constants" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Constants extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Constants" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.VisualBasic.CompilerServices.StandardModule</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O módulo <see langword="Constants" /> contém constantes diversas. Essas constantes podem ser usadas em qualquer lugar no seu código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este módulo oferece suporte as constantes de linguagem do Visual Basic que correspondem aos membros de muitos enumerações do Visual Basic:  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="vbAbort">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxResult vbAbort = 3;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxResult vbAbort = (3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbAbort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>Indica que o botão <see langword="Abort" /> foi clicado em uma caixa de mensagem. Retornado pela função <see langword="MsgBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxResult` no código em lugar dos valores reais.  
+  
+ A função `MsgBox` retorna um valor de enumeração `MsgBoxResult`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbAbortRetryIgnore">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbAbortRetryIgnore = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbAbortRetryIgnore = (2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbAbortRetryIgnore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Indica se os botões <see langword="Abort" />, <see langword="Retry" /> e <see langword="Ignore" /> serão exibidos quando a função <see langword="MsgBox" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbApplicationModal">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbApplicationModal = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbApplicationModal = (0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbApplicationModal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Indica que a caixa de mensagem será exibida como uma caixa de diálogo modal quando a função <see langword="MsgBox" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbArchive">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FileAttribute vbArchive = 32;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FileAttribute vbArchive = (32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbArchive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FileAttribute</ReturnType>
+      </ReturnValue>
+      <MemberValue>32</MemberValue>
+      <Docs>
+        <summary>Indica que o arquivo foi alterado desde a última operação de backup para as funções de acesso a arquivos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `Dir`, `GetAttr`, ou `SetAttr` funções, você pode usar o `FileAttribute` enumeração em seu código no lugar dos valores reais.  
+  
+ O `Attributes` argumento leva o `FileAttribute` membros de enumeração.  
+  
+ Ao executar operações de e/s de arquivo, o `My.Computer.FileSystem` objeto fornece maior desempenho e a facilidade de uso de arquivo herdado métodos de e/s. Para obter mais informações, consulte o objeto <xref:Microsoft.VisualBasic.FileSystem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbArray">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbArray = 8192;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbArray = (8192)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbArray" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>8192</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é uma matriz. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbBack">
+      <MemberSignature Language="C#" Value="public const string vbBack;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string vbBack" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbBack" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um caractere de backspace para funções de impressão e exibição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbBinaryCompare">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.CompareMethod vbBinaryCompare = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.CompareMethod vbBinaryCompare = (0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbBinaryCompare" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.CompareMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Especifica que uma comparação binária deve ser realizada quando funções de comparação são chamadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções de comparação, você pode usar o <xref:Microsoft.VisualBasic.CompareMethod> enumeração em seu código no lugar dos valores reais. O `Compare` argumento leva o `CompareMethod` membros de enumeração.  
+  
+ Para comparações de cadeias de texto e binários, consulte [Option Compare Statement](~/docs/visual-basic/language-reference/statements/option-compare-statement.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbBoolean">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbBoolean = 11;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbBoolean = (11)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbBoolean" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>11</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Boolean" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbByte">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbByte = 17;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbByte = (17)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbByte" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>17</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Byte" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbCancel">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxResult vbCancel = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxResult vbCancel = (2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbCancel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Indica que o botão <see langword="Cancel" /> foi clicado em uma caixa de mensagem. Retornado pela função <see langword="MsgBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxResult` no código em lugar dos valores reais.  
+  
+ A função `MsgBox` retorna um valor de enumeração `MsgBoxResult`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbCr">
+      <MemberSignature Language="C#" Value="public const string vbCr;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string vbCr" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbCr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um caractere de retorno de carro para funções de impressão e exibição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbCritical">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbCritical = 16;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbCritical = (16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbCritical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>Indica que o ícone de mensagem crítica será exibido quando a função <see langword="MsgBox" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbCrLf">
+      <MemberSignature Language="C#" Value="public const string vbCrLf;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string vbCrLf" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbCrLf" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um caractere de retorno de carro, combinado com um caractere de avanço de linha para funções de impressão e exibição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbCurrency">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbCurrency = 6;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbCurrency = (6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbCurrency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Currency" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbDate">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbDate = 7;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbDate = (7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbDate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Date" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbDecimal">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbDecimal = 14;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbDecimal = (14)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbDecimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>14</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Decimal" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbDefaultButton1">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbDefaultButton1 = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbDefaultButton1 = (0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbDefaultButton1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Indica que o botão mais à esquerda é selecionado como o botão padrão quando a caixa de mensagem é exibida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+   
+  
+## Examples  
+ [!code-vb[VbVbalrConstants#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbDefaultButton2">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbDefaultButton2 = 256;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbDefaultButton2 = (256)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbDefaultButton2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>256</MemberValue>
+      <Docs>
+        <summary>Indica que o segundo botão da esquerda é selecionado como o botão padrão quando a caixa de mensagem é exibida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+   
+  
+## Examples  
+ [!code-vb[VbVbalrConstants#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbDefaultButton3">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbDefaultButton3 = 512;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbDefaultButton3 = (512)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbDefaultButton3" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>512</MemberValue>
+      <Docs>
+        <summary>Indica que o terceiro botão da esquerda é selecionado como o botão padrão quando a caixa de mensagem é exibida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+   
+  
+## Examples  
+ [!code-vb[VbVbalrConstants#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbDirectory">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FileAttribute vbDirectory = 16;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FileAttribute vbDirectory = (16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbDirectory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FileAttribute</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>Indica que o arquivo é um diretório ou pasta para funções de acesso a arquivos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `Dir`, `GetAttr`, ou `SetAttr` funções, você pode usar o `FileAttribute` enumeração em seu código no lugar dos valores reais.  
+  
+ O `Attributes` argumento leva o `FileAttribute` membros de enumeração.  
+  
+ Ao executar operações de e/s de arquivo, o `My.Computer.FileSystem` objeto fornece maior desempenho e a facilidade de uso de arquivo herdado métodos de e/s. Para obter mais informações, consulte o objeto <xref:Microsoft.VisualBasic.FileSystem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbDouble">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbDouble = 5;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbDouble = (5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbDouble" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Double" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbEmpty">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbEmpty = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbEmpty = (0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbEmpty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Empty" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbExclamation">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbExclamation = 48;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbExclamation = (48)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbExclamation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>48</MemberValue>
+      <Docs>
+        <summary>Indica que o ícone de exclamação será exibido quando a função <see langword="MsgBox" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbFalse">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.TriState vbFalse = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.TriState vbFalse = (0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbFalse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.TriState</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Indica que um valor <see langword="Boolean" /> igual a <see langword="False" /> deve ser usado quando funções de formatação de número são chamadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você funções de formatação de número de chamadas, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbFirstFourDays">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstWeekOfYear vbFirstFourDays = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstWeekOfYear vbFirstFourDays = (2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbFirstFourDays" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstWeekOfYear</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Indica que a primeira semana do ano que tenha pelo menos quatro dias deve ser usada quando funções relacionadas a datas forem usadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstWeekOfYear` enumeração Especifica os valores válidos para o `WeekOfYear` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `WeekOfYear` argumento leva o `FirstWeekOfYear` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbFirstFullWeek">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstWeekOfYear vbFirstFullWeek = 3;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstWeekOfYear vbFirstFullWeek = (3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbFirstFullWeek" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstWeekOfYear</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>Indica que a primeira semana completa do ano deve ser usada quando são chamadas de funções relacionadas a data.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstWeekOfYear` enumeração Especifica os valores válidos para o `WeekOfYear` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `WeekOfYear` argumento leva o `FirstWeekOfYear` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbFirstJan1">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstWeekOfYear vbFirstJan1 = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstWeekOfYear vbFirstJan1 = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbFirstJan1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstWeekOfYear</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Indica que a semana do ano no qual 1º de janeiro ocorre deve ser usado quando são chamadas de funções relacionadas a data.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstWeekOfYear` enumeração Especifica os valores válidos para o `WeekOfYear` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `WeekOfYear` argumento leva o `FirstWeekOfYear` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbFormFeed">
+      <MemberSignature Language="C#" Value="public const string vbFormFeed;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string vbFormFeed" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbFormFeed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um caractere de avanço de página para funções de impressão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbFriday">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstDayOfWeek vbFriday = 6;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstDayOfWeek vbFriday = (6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbFriday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>Especifica que a sexta-feira deve ser usada como o primeiro dia da semana em que são chamadas de funções relacionadas a data.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstDayOfWeek` enumeração Especifica os valores válidos para o `DayOfWeek` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `DayOfWeek` argumento leva o `FirstDayOfWeek` membros de enumeração.  
+  
+ Funções relacionadas à data também retornam valores `FirstDayOfWeek` (exceto `System`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbGeneralDate">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.DateFormat vbGeneralDate = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DateFormat vbGeneralDate = (0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbGeneralDate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DateFormat</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Indica que o formato de data geral para a cultura atual deve ser usado quando a função <see langword="FormatDateTime" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `FormatDateTime` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+> [!NOTE]
+>  Você pode acessar as configurações regionais do computador clicando duas vezes o **opções regionais** ícone, encontrado em **painel de controle**.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbGet">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.CallType vbGet = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.CallType vbGet = (2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbGet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.CallType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Especifica que um valor de propriedade deve ser recuperado quando a <see langword="CallByName" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `CallByName` função, você pode usar o seguinte `CallType` membros de enumeração em seu código no lugar dos valores reais. O `UseCallType` argumento leva o `CallType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbHidden">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FileAttribute vbHidden = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FileAttribute vbHidden = (2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbHidden" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FileAttribute</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Indica que o arquivo é um arquivo oculto para funções de acesso a arquivos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `Dir`, `GetAttr`, ou `SetAttr` funções, você pode usar o `FileAttribute` enumeração em seu código no lugar dos valores reais.  
+  
+ O `Attributes` argumento leva o `FileAttribute` membros de enumeração.  
+  
+ Ao executar operações de e/s de arquivo, o `My.Computer.FileSystem` objeto fornece maior desempenho e a facilidade de uso de arquivo herdado métodos de e/s. Para obter mais informações, consulte o objeto <xref:Microsoft.VisualBasic.FileSystem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbHide">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.AppWinStyle vbHide = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle vbHide = (0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbHide" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Indica que o estilo da janela fica oculto para o programa invocado quando a função <see langword="Shell" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você emitir `Shell` comandos, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ O `Style` argumento leva o `AppWinStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbHiragana">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VbStrConv vbHiragana = 32;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv vbHiragana = (32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbHiragana" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <MemberValue>32</MemberValue>
+      <Docs>
+        <summary>Indica que caracteres Hiragana devem ser convertidas em Katakana caracteres quando o <see langword="StrConv" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `StrConv` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais. O `Conversion` argumento leva o `VbStrConv` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbIgnore">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxResult vbIgnore = 5;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxResult vbIgnore = (5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbIgnore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>Indica que o botão <see langword="Ignore" /> foi clicado em uma caixa de mensagem. Retornado pela função <see langword="MsgBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxResult` no código em lugar dos valores reais.  
+  
+ A função `MsgBox` retorna um valor de enumeração `MsgBoxResult`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbInformation">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbInformation = 64;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbInformation = (64)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbInformation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>64</MemberValue>
+      <Docs>
+        <summary>Indica que o ícone de informações será exibido quando a função <see langword="MsgBox" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbInteger">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbInteger = 3;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbInteger = (3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbInteger" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Integer" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbKatakana">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VbStrConv vbKatakana = 16;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv vbKatakana = (16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbKatakana" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>Indica que o Katakana para caracteres devem ser convertidos em Hiragana caracteres quando o <see langword="StrConv" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `StrConv` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais. O `Conversion` argumento leva o `VbStrConv` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbLet">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.CallType vbLet = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.CallType vbLet = (4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbLet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.CallType</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Indica que um valor de propriedade deve ser definido para um objeto de instância quando o <see langword="CallByName" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `CallByName` função, você pode usar o seguinte `CallType` membros de enumeração em seu código no lugar dos valores reais. O `UseCallType` argumento leva o `CallType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbLf">
+      <MemberSignature Language="C#" Value="public const string vbLf;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string vbLf" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbLf" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um caractere de avanço de linha para funções de impressão e exibição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbLinguisticCasing">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VbStrConv vbLinguisticCasing = 1024;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv vbLinguisticCasing = (1024)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbLinguisticCasing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <MemberValue>1024</MemberValue>
+      <Docs>
+        <summary>Indica que os caracteres devem ser convertidos para usar regras linguísticas de maiusculas e minúsculas em vez de regras do sistema de arquivos de maiusculas e minúsculas quando o <see langword="StrConv" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `StrConv` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais. O `Conversion` argumento leva o `VbStrConv` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbLong">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbLong = 20;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbLong = (20)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbLong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>20</MemberValue>
+      <Docs>
+        <summary>Indica o tipo de um objeto variante é <see langword="Long" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbLongDate">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.DateFormat vbLongDate = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DateFormat vbLongDate = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbLongDate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DateFormat</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Indica que o formato de data completa da cultura atual deve ser usado quando a função <see langword="FormatDateTime" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `FormatDateTime` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+> [!NOTE]
+>  Você pode acessar as configurações regionais do computador clicando duas vezes o **opções regionais** ícone, encontrado em **painel de controle**.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbLongTime">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.DateFormat vbLongTime = 3;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DateFormat vbLongTime = (3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbLongTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DateFormat</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>Indica que o formato de hora longo para a cultura atual deve ser usado quando o <see langword="FormatDateTime" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `FormatDateTime` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+> [!NOTE]
+>  Você pode acessar as configurações regionais do computador clicando duas vezes o **opções regionais** ícone, encontrado em **painel de controle**.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbLowerCase">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VbStrConv vbLowerCase = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv vbLowerCase = (2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbLowerCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Indica que os caracteres devem ser convertidos para minúsculas quando o <see langword="StrConv" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `StrConv` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais. O `Conversion` argumento leva o `VbStrConv` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbMaximizedFocus">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.AppWinStyle vbMaximizedFocus = 3;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle vbMaximizedFocus = (3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbMaximizedFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>Indica que o estilo da janela é maximizado com foco para o programa invocado quando a função <see langword="Shell" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você emitir `Shell` comandos, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ O `Style` argumento leva o `AppWinStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbMethod">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.CallType vbMethod = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.CallType vbMethod = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbMethod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.CallType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Especifica que um método deve ser chamado que quando o <see langword="CallByName" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `CallByName` função, você pode usar o seguinte `CallType` membros de enumeração em seu código no lugar dos valores reais. O `UseCallType` argumento leva o `CallType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbMinimizedFocus">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.AppWinStyle vbMinimizedFocus = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle vbMinimizedFocus = (2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbMinimizedFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Indica que o estilo de janela é minimizado com foco para chamada de programa quando o <see langword="Shell" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você emitir `Shell` comandos, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ O `Style` argumento leva o `AppWinStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbMinimizedNoFocus">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.AppWinStyle vbMinimizedNoFocus = 6;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle vbMinimizedNoFocus = (6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbMinimizedNoFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>Indica que o estilo da janela é minimizado sem foco para o programa invocado quando a função <see langword="Shell" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você emitir `Shell` comandos, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ O `Style` argumento leva o `AppWinStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbMonday">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstDayOfWeek vbMonday = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstDayOfWeek vbMonday = (2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbMonday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Especifica que a segunda-feira deve ser usada como o primeiro dia da semana quando as funções relacionadas a data são chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstDayOfWeek` enumeração Especifica os valores válidos para o `DayOfWeek` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `DayOfWeek` argumento leva o `FirstDayOfWeek` membros de enumeração.  
+  
+ Funções relacionadas à data também retornam valores `FirstDayOfWeek` (exceto `System`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbMsgBoxHelp">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbMsgBoxHelp = 16384;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbMsgBoxHelp = (16384)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbMsgBoxHelp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>16384</MemberValue>
+      <Docs>
+        <summary>Indica que o <see langword="Help" /> botão será exibido quando o <see langword="MsgBox" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbMsgBoxRight">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbMsgBoxRight = 524288;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbMsgBoxRight = (524288)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbMsgBoxRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>524288</MemberValue>
+      <Docs>
+        <summary>Indica que texto será alinhado à direita quando a função <see langword="MsgBox" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbMsgBoxRtlReading">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbMsgBoxRtlReading = 1048576;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbMsgBoxRtlReading = (1048576)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbMsgBoxRtlReading" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>1048576</MemberValue>
+      <Docs>
+        <summary>Indica que a leitura de texto direita para esquerda (sistemas hebraico e árabe) será exibido quando o <see langword="MsgBox" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbMsgBoxSetForeground">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbMsgBoxSetForeground = 65536;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbMsgBoxSetForeground = (65536)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbMsgBoxSetForeground" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>65536</MemberValue>
+      <Docs>
+        <summary>Indica que a caixa de mensagem será exibida em primeiro plano quando a função <see langword="MsgBox" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbNarrow">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VbStrConv vbNarrow = 8;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv vbNarrow = (8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbNarrow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>Indica que os caracteres largos (dois bytes) devem ser convertidos restringir (byte único), caracteres quando o <see langword="StrConv" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `StrConv` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais. O `Conversion` argumento leva o `VbStrConv` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbNewLine">
+      <MemberSignature Language="C#" Value="public const string vbNewLine;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string vbNewLine" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbNewLine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um caractere newline para funções de impressão e exibição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbNo">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxResult vbNo = 7;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxResult vbNo = (7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbNo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>Indica que o botão <see langword="No" /> foi clicado em uma caixa de mensagem. Retornado pela função <see langword="MsgBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxResult` no código em lugar dos valores reais.  
+  
+ A função `MsgBox` retorna um valor de enumeração `MsgBoxResult`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbNormal">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FileAttribute vbNormal = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FileAttribute vbNormal = (0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbNormal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FileAttribute</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Indica que o arquivo é um arquivo normal para funções de acesso a arquivos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `Dir`, `GetAttr`, ou `SetAttr` funções, você pode usar o `FileAttribute` enumeração em seu código no lugar dos valores reais.  
+  
+ O `Attributes` argumento leva o `FileAttribute` membros de enumeração.  
+  
+ Ao executar operações de e/s de arquivo, o `My.Computer.FileSystem` objeto fornece maior desempenho e a facilidade de uso de arquivo herdado métodos de e/s. Para obter mais informações, consulte o objeto <xref:Microsoft.VisualBasic.FileSystem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbNormalFocus">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.AppWinStyle vbNormalFocus = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle vbNormalFocus = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbNormalFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Indica que o estilo da janela é normal com foco no programa invocado quando a função <see langword="Shell" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você emitir `Shell` comandos, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ O `Style` argumento leva o `AppWinStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbNormalNoFocus">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.AppWinStyle vbNormalNoFocus = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AppWinStyle vbNormalNoFocus = (4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbNormalNoFocus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AppWinStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Indica que o estilo da janela é normal sem foco no programa invocado quando a função <see langword="Shell" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você emitir `Shell` comandos, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ O `Style` argumento leva o `AppWinStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbNull">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbNull = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbNull = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbNull" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Nothing" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbNullChar">
+      <MemberSignature Language="C#" Value="public const string vbNullChar;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string vbNullChar" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbNullChar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um caractere nulo para funções de impressão e exibição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbNullString">
+      <MemberSignature Language="C#" Value="public const string vbNullString = null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string vbNullString = null" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbNullString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <MemberValue>null</MemberValue>
+      <Docs>
+        <summary>Representa uma cadeia de comprimento zero para funções de impressão e exibição e para chamar procedimentos externos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbObject">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbObject = 9;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbObject = (9)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbObject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Object" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbObjectError">
+      <MemberSignature Language="C#" Value="public const int vbObjectError = -2147221504;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 vbObjectError = (-2147221504)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbObjectError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-2147221504</MemberValue>
+      <Docs>
+        <summary>Representa o número do erro do objeto. Os números de erro definidos pelo usuário devem ser maiores que esse valor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbOK">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxResult vbOK = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxResult vbOK = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbOK" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Indica que o botão <see langword="OK" /> foi clicado em uma caixa de mensagem. Retornado pela função <see langword="MsgBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxResult` no código em lugar dos valores reais.  
+  
+ A função `MsgBox` retorna um valor de enumeração `MsgBoxResult`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbOKCancel">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbOKCancel = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbOKCancel = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbOKCancel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Indica que os botões <see langword="OK" /> e <see langword="Cancel" /> serão exibidos quando a função <see langword="MsgBox" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbOKOnly">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbOKOnly = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbOKOnly = (0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbOKOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Indica que somente o botão <see langword="OK" /> será exibido quando a função <see langword="MsgBox" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbProperCase">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VbStrConv vbProperCase = 3;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv vbProperCase = (3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbProperCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>Indica que a primeira letra de cada palavra em uma cadeia de caracteres deve ser convertida em maiúscula e demais caracteres em minúsculo quando a função <see langword="StrConv" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `StrConv` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais. O `Conversion` argumento leva o `VbStrConv` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbQuestion">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbQuestion = 32;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbQuestion = (32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbQuestion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>32</MemberValue>
+      <Docs>
+        <summary>Indica que o ícone de interrogação será exibido quando a função <see langword="MsgBox" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbReadOnly">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FileAttribute vbReadOnly = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FileAttribute vbReadOnly = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbReadOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FileAttribute</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Indica que o arquivo é um arquivo somente leitura para funções de acesso a arquivos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `Dir`, `GetAttr`, ou `SetAttr` funções, você pode usar o `FileAttribute` enumeração em seu código no lugar dos valores reais.  
+  
+ O `Attributes` argumento leva o `FileAttribute` membros de enumeração.  
+  
+ Ao executar operações de e/s de arquivo, o `My.Computer.FileSystem` objeto fornece maior desempenho e a facilidade de uso de arquivo herdado métodos de e/s. Para obter mais informações, consulte o objeto <xref:Microsoft.VisualBasic.FileSystem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbRetry">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxResult vbRetry = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxResult vbRetry = (4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbRetry" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Indica que o botão <see langword="Retry" /> foi clicado em uma caixa de mensagem. Retornado pela função <see langword="MsgBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxResult` no código em lugar dos valores reais.  
+  
+ A função `MsgBox` retorna um valor de enumeração `MsgBoxResult`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbRetryCancel">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbRetryCancel = 5;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbRetryCancel = (5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbRetryCancel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>Indica que os botões <see langword="Retry" /> e <see langword="Cancel" /> serão exibidos quando a função <see langword="MsgBox" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbSaturday">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstDayOfWeek vbSaturday = 7;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstDayOfWeek vbSaturday = (7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbSaturday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>Especifica que o sábado deve ser usado como o primeiro dia da semana em que são chamadas de funções relacionadas a data.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstDayOfWeek` enumeração Especifica os valores válidos para o `DayOfWeek` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `DayOfWeek` argumento leva o `FirstDayOfWeek` membros de enumeração.  
+  
+ Funções relacionadas à data também retornam valores `FirstDayOfWeek` (exceto `System`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbSet">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.CallType vbSet = 8;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.CallType vbSet = (8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.CallType</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>Indica que um valor de propriedade deve ser definido que quando o <see langword="CallByName" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `CallByName` função, você pode usar o seguinte `CallType` membros de enumeração em seu código no lugar dos valores reais. O `UseCallType` argumento leva o `CallType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbShortDate">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.DateFormat vbShortDate = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DateFormat vbShortDate = (2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbShortDate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DateFormat</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Indica que o formato de data abreviada para a cultura atual deve ser usado quando a função <see langword="FormatDateTime" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `FormatDateTime` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+> [!NOTE]
+>  Você pode acessar as configurações regionais do computador clicando duas vezes o **opções regionais** ícone, encontrado em **painel de controle**.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbShortTime">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.DateFormat vbShortTime = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.DateFormat vbShortTime = (4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbShortTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.DateFormat</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Indica que o formato de data abreviada para a cultura atual deve ser usada quando a função <see langword="FormatDateTime" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `FormatDateTime` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+> [!NOTE]
+>  Você pode acessar as configurações regionais do computador clicando duas vezes o **opções regionais** ícone, encontrado em **painel de controle**.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbSimplifiedChinese">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VbStrConv vbSimplifiedChinese = 256;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv vbSimplifiedChinese = (256)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbSimplifiedChinese" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <MemberValue>256</MemberValue>
+      <Docs>
+        <summary>Indica que os caracteres devem ser convertidos em chinês simplificado quando o <see langword="StrConv" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `StrConv` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais. O `Conversion` argumento leva o `VbStrConv` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbSingle">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbSingle = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbSingle = (4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbSingle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Single" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbString">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbString = 8;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbString = (8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="String" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbSunday">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstDayOfWeek vbSunday = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstDayOfWeek vbSunday = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbSunday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Especifica que o domingo deve ser usado como o primeiro dia da semana quando as funções relacionadas à data são chamadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstDayOfWeek` enumeração Especifica os valores válidos para o `DayOfWeek` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `DayOfWeek` argumento leva o `FirstDayOfWeek` membros de enumeração.  
+  
+ Funções relacionadas à data também retornam valores `FirstDayOfWeek` (exceto `System`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbSystem">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FileAttribute vbSystem = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FileAttribute vbSystem = (4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbSystem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FileAttribute</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Indica que o arquivo é um arquivo de sistema para as funções de acesso a arquivos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `Dir`, `GetAttr`, ou `SetAttr` funções, você pode usar o `FileAttribute` enumeração em seu código no lugar dos valores reais.  
+  
+ O `Attributes` argumento leva o `FileAttribute` membros de enumeração.  
+  
+ Ao executar operações de e/s de arquivo, o `My.Computer.FileSystem` objeto fornece maior desempenho e a facilidade de uso de arquivo herdado métodos de e/s. Para obter mais informações, consulte o objeto <xref:Microsoft.VisualBasic.FileSystem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbSystemModal">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbSystemModal = 4096;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbSystemModal = (4096)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbSystemModal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>4096</MemberValue>
+      <Docs>
+        <summary>Indica que a caixa de mensagem será exibida como uma caixa de diálogo modal quando a função <see langword="MsgBox" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbTab">
+      <MemberSignature Language="C#" Value="public const string vbTab;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string vbTab" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbTab" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um caractere de tabulação para funções de impressão e exibição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbTextCompare">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.CompareMethod vbTextCompare = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.CompareMethod vbTextCompare = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbTextCompare" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.CompareMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Indica que uma comparação de texto deve ser realizada quando funções de comparação são chamadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções de comparação, você pode usar o <xref:Microsoft.VisualBasic.CompareMethod> enumeração em seu código no lugar dos valores reais. O `Compare` argumento leva o `CompareMethod` membros de enumeração.  
+  
+ Para obter mais informações sobre como obter mais informações sobre as comparações de texto e binários, consulte [Option Compare Statement](~/docs/visual-basic/language-reference/statements/option-compare-statement.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbThursday">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstDayOfWeek vbThursday = 5;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstDayOfWeek vbThursday = (5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbThursday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>Especifica que a quinta-feira deve ser usada como o primeiro dia da semana em que são chamadas de funções relacionadas a data.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstDayOfWeek` enumeração Especifica os valores válidos para o `DayOfWeek` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `DayOfWeek` argumento leva o `FirstDayOfWeek` membros de enumeração.  
+  
+ Funções relacionadas à data também retornam valores `FirstDayOfWeek` (exceto `System`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbTraditionalChinese">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VbStrConv vbTraditionalChinese = 512;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv vbTraditionalChinese = (512)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbTraditionalChinese" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <MemberValue>512</MemberValue>
+      <Docs>
+        <summary>Indica que os caracteres devem ser convertidos em quando chinês tradicional de <see langword="StrConv" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `StrConv` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais. O `Conversion` argumento leva o `VbStrConv` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbTrue">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.TriState vbTrue = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.TriState vbTrue = (-1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbTrue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.TriState</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>Indica que um valor <see langword="Boolean" /> igual a <see langword="True" /> deve ser usado quando funções de formatação de número são chamadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você funções de formatação de número de chamadas, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbTuesday">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstDayOfWeek vbTuesday = 3;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstDayOfWeek vbTuesday = (3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbTuesday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>Especifica que a terça-feira deve ser usada como o primeiro dia da semana em que são chamadas de funções relacionadas a data.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstDayOfWeek` enumeração Especifica os valores válidos para o `DayOfWeek` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `DayOfWeek` argumento leva o `FirstDayOfWeek` membros de enumeração.  
+  
+ Funções relacionadas à data também retornam valores `FirstDayOfWeek` (exceto `System`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbUpperCase">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VbStrConv vbUpperCase = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv vbUpperCase = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbUpperCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Indica que os caracteres devem ser convertidos em maiúsculas quando a função <see langword="StrConv" /> é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `StrConv` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais. O `Conversion` argumento leva o `VbStrConv` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbUseDefault">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.TriState vbUseDefault = -2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.TriState vbUseDefault = (-2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbUseDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.TriState</ReturnType>
+      </ReturnValue>
+      <MemberValue>-2</MemberValue>
+      <Docs>
+        <summary>Indica que o padrão <see langword="Boolean" /> valor deve ser usado quando são chamadas de funções de formatação numérica.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você funções de formatação de número de chamadas, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbUserDefinedType">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbUserDefinedType = 36;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbUserDefinedType = (36)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbUserDefinedType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>36</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é um tipo definido pelo usuário. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbUseSystem">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstWeekOfYear vbUseSystem = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstWeekOfYear vbUseSystem = (0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbUseSystem" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstWeekOfYear</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Indica que a semana especificado pelo seu sistema como a primeira semana do ano deve ser usada quando são chamadas de funções relacionadas a data.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstWeekOfYear` enumeração Especifica os valores válidos para o `WeekOfYear` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `WeekOfYear` argumento leva o `FirstWeekOfYear` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbUseSystemDayOfWeek">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstDayOfWeek vbUseSystemDayOfWeek = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstDayOfWeek vbUseSystemDayOfWeek = (0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbUseSystemDayOfWeek" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Indica que o dia especificado por seu sistema como o primeiro dia da semana deve ser usado quando as funções relacionadas à data forem chamadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstDayOfWeek` enumeração Especifica os valores válidos para o `DayOfWeek` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `DayOfWeek` argumento leva o `FirstDayOfWeek` membros de enumeração.  
+  
+ Funções relacionadas à data também retornam valores `FirstDayOfWeek` (exceto `System`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbVariant">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VariantType vbVariant = 12;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VariantType vbVariant = (12)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbVariant" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VariantType</ReturnType>
+      </ReturnValue>
+      <MemberValue>12</MemberValue>
+      <Docs>
+        <summary>Indica que o tipo de um objeto variante é <see langword="Variant" />. Retornado pela função <see langword="VarType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `VarType`, você pode usar membros de enumeração no código em lugar dos valores reais.  
+  
+ A enumeração `VariantType` define constantes usadas para identificar tipos `Variant` possíveis. A seguinte tabela lista o `VariantType` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbVerticalTab">
+      <MemberSignature Language="C#" Value="public const string vbVerticalTab;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string vbVerticalTab" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbVerticalTab" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um caractere de retorno de carro para funções de impressão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbVolume">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FileAttribute vbVolume = 8;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FileAttribute vbVolume = (8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbVolume" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FileAttribute</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>Indica que o atributo de arquivo de rótulo de volume para funções de acesso a arquivos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse atributo não é válido para o `SetAttr` função.  
+  
+ Quando você chama o `Dir`, `GetAttr`, ou `SetAttr` funções, você pode usar o `FileAttribute` enumeração em seu código no lugar dos valores reais.  
+  
+ O `Attributes` argumento leva o `FileAttribute` membros de enumeração.  
+  
+ Ao executar operações de e/s de arquivo, o `My.Computer.FileSystem` objeto fornece maior desempenho e a facilidade de uso de arquivo herdado métodos de e/s. Para obter mais informações, consulte o objeto <xref:Microsoft.VisualBasic.FileSystem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbWednesday">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.FirstDayOfWeek vbWednesday = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FirstDayOfWeek vbWednesday = (4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbWednesday" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FirstDayOfWeek</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Especifica que a quarta-feira deve ser usada como o primeiro dia da semana em que são chamadas de funções relacionadas a data.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções relacionadas a data, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais.  
+  
+ Algumas funções relacionados a datas levam um `DayOfWeek` argumento, uma `WeekOfYear` argumento ou ambos. O `FirstDayOfWeek` enumeração Especifica os valores válidos para o `DayOfWeek` argumentos, bem como os possíveis valores de retorno das funções.  
+  
+ O `DayOfWeek` argumento leva o `FirstDayOfWeek` membros de enumeração.  
+  
+ Funções relacionadas à data também retornam valores `FirstDayOfWeek` (exceto `System`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbWide">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.VbStrConv vbWide = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.VbStrConv vbWide = (4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbWide" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.VbStrConv</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Indica que os caracteres de estreitos (byte) devem ser convertidos em caracteres largos (dois bytes) de quando o <see langword="StrConv" /> função é chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `StrConv` função, você pode usar os seguintes membros de enumeração em seu código no lugar dos valores reais. O `Conversion` argumento leva o `VbStrConv` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbYes">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxResult vbYes = 6;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxResult vbYes = (6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbYes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxResult</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>Indica que o botão <see langword="Yes" /> foi clicado em uma caixa de mensagem. Retornado pela função <see langword="MsgBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxResult` no código em lugar dos valores reais.  
+  
+ A função `MsgBox` retorna um valor de enumeração `MsgBoxResult`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbYesNo">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbYesNo = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbYesNo = (4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbYesNo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Indica que os botões <see langword="Yes" /> e <see langword="No" /> serão exibidos quando a função <see langword="MsgBox" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="vbYesNoCancel">
+      <MemberSignature Language="C#" Value="public const Microsoft.VisualBasic.MsgBoxStyle vbYesNoCancel = 3;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.MsgBoxStyle vbYesNoCancel = (3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Constants.vbYesNoCancel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxStyle</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>Indica se os botões <see langword="Yes" />, <see langword="No" /> e <see langword="Cancel" /> serão exibidos quando a função <see langword="MsgBox" /> for chamada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao chamar a função `MsgBox`, você pode usar a enumeração `MsgBoxStyle` no código em lugar dos valores reais. O `Buttons` argumento leva o `MsgBoxStyle` membros de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

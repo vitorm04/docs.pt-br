@@ -1,0 +1,1166 @@
+<Type Name="Clipboard" FullName="System.Windows.Forms.Clipboard">
+  <TypeSignature Language="C#" Value="public sealed class Clipboard" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Clipboard extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Clipboard" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para colocar dados e recuperar dados da área de transferência do sistema. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de formatos predefinidos para uso com o <xref:System.Windows.Forms.Clipboard> de classe, consulte o <xref:System.Windows.Forms.DataFormats> classe.  
+  
+ Chamar <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> para colocar dados na área de transferência, substituindo o conteúdo atual. Para colocar uma cópia persistente dos dados na área de transferência, defina o `copy` parâmetro `true`.  
+  
+> [!NOTE]
+>  Para inserir dados na área de transferência em vários formatos, use o <xref:System.Windows.Forms.DataObject> classe ou um <xref:System.Windows.Forms.IDataObject> implementação. Colocar dados na área de transferência em vários formatos para maximizar a possibilidade de que um aplicativo de destino, cujos requisitos de formato você talvez não saiba, pode recuperar com êxito os dados.  
+  
+ Chamar <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> para recuperar dados da área de transferência. Os dados são retornados como um objeto que implementa o <xref:System.Windows.Forms.IDataObject> interface. Use os métodos especificados por <xref:System.Windows.Forms.IDataObject> e campos <xref:System.Windows.Forms.DataFormats> para extrair os dados do objeto. Se você não souber o formato dos dados é recuperado, chame o <xref:System.Windows.Forms.IDataObject.GetFormats%2A> método o <xref:System.Windows.Forms.IDataObject> interface para obter uma lista de todos os formatos de dados é armazenado no. Em seguida, chame o <xref:System.Windows.Forms.IDataObject.GetData%2A> método do <xref:System.Windows.Forms.IDataObject> de interface e especificar um formato que o aplicativo pode usar.  
+  
+ Em [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], o <xref:System.Windows.Forms.Clipboard> classe fornece métodos adicionais que o tornam mais fácil trabalhar com a área de transferência do sistema. Chamar o <xref:System.Windows.Forms.Clipboard.Clear%2A> método para remover todos os dados da área de transferência. Para adicionar dados de um formato específico para a área de transferência, substituindo os dados existentes, chamar o `Set` *formato* método, como <xref:System.Windows.Forms.Clipboard.SetText%2A>, ou chamar o <xref:System.Windows.Forms.Clipboard.SetData%2A> método para especificar o formato. Para recuperar dados de um formato específico da área de transferência, primeiro chamar o `Contains` *formato* método (como <xref:System.Windows.Forms.Clipboard.ContainsText%2A>) método para determinar se a área de transferência contém dados em formato e, em seguida, chamar o `Get` *formato* método (como <xref:System.Windows.Forms.Clipboard.GetText%2A>) para recuperar os dados se a área de transferência contém. Para especificar o formato nessas operações, chame o <xref:System.Windows.Forms.Clipboard.ContainsData%2A> e <xref:System.Windows.Forms.Clipboard.GetData%2A> métodos em vez disso.  
+  
+> [!NOTE]
+>  Todos os aplicativos baseados em Windows compartilham o área de transferência do sistema para que o conteúdo está sujeitos a alterações quando você alternar para outro aplicativo.  
+>   
+>  Um objeto deve ser serializável para que seja colocado na Área de Transferência. Se você passar um objeto não serializável para um método de Área de Transferência, o método falhará sem lançar uma exceção. Consulte <xref:System.Runtime.Serialization> para obter mais informações sobre serialização. Se seu aplicativo de destino requer um formato de dados muito específica, os cabeçalhos adicionados aos dados no processo de serialização podem impedir que o aplicativo de reconhecimento de seus dados. Para preservar o formato de dados, adicionar os dados como um <xref:System.Byte> de matriz para um <xref:System.IO.MemoryStream> e passar o <xref:System.IO.MemoryStream> para o <xref:System.Windows.Forms.DataObject.SetData%2A> método.  
+>   
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+>   
+>  Considerações especiais podem ser necessárias ao usar o formato de metarquivo com a área de transferência. Devido a uma limitação na implementação atual de <xref:System.Windows.Forms.DataObject> classe, o formato de metarquivo usado pelo .NET Framework pode não ser reconhecido por aplicativos que usam um formato de metarquivo anterior. Nesse caso, você deve interoperar com as interfaces de programação de aplicativo (APIs) da área de transferência do Win32. Para obter mais informações, consulte o artigo 323530, "Metarquivos na área de transferência são não visível para todos os aplicativos," na Base de dados de Conhecimento Microsoft em http://support.microsoft.com.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Windows.Forms.Clipboard> métodos para colocar os dados e recuperá-lo de transferência do sistema. Esse código supõe `button1`, `button2`, `textBox1`, e `textBox2` foi criado e colocado no formulário.  
+  
+ O `button1_Click` chamadas de método <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> para colocar o texto selecionado na caixa de texto e coloque-o na área de transferência da sistema.  
+  
+ O `button2_Click` chamadas de método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> para recuperar dados da área de transferência da sistema. O código usa <xref:System.Windows.Forms.IDataObject> e <xref:System.Windows.Forms.DataFormats> para extrair os dados retornados e exibe os dados em `textBox2`.  
+  
+ [!code-cpp[Classic Clipboard Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Clipboard Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Clipboard Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Clipboard Example/CS/source.cs#1)]
+ [!code-vb[Classic Clipboard Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Clipboard Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public static void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os dados da área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como a área de transferência é compartilhada por vários processos, chamar esse método pode ter um impacto sobre esses processos.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.Clipboard#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para limpar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.OwnClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsAudio">
+      <MemberSignature Language="C#" Value="public static bool ContainsAudio ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsAudio() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsAudio" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se há dados na área de transferência no <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" /> formato.</summary>
+        <returns>
+          <see langword="true" />Se não houver dados de áudio na área de transferência; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar se a área de transferência contém dados de áudio antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.Clipboard#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsData">
+      <MemberSignature Language="C#" Value="public static bool ContainsData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato dos dados a serem procurados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <summary>Indica se há dados na área de transferência que estão no formato especificado ou que podem ser convertidos nesse formato.</summary>
+        <returns>
+          <see langword="true" /> se houver dados na área de transferência que estejam no <paramref name="format" /> especificado ou que possam ser convertido nesse formato. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataFormats> classe contém nomes de formato predefinidos que você pode usar com esse método.  
+  
+ Use esse método para determinar se a área de transferência contém dados no formato especificado ou em um formato compatível antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetData%2A> método.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+>   
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.Clipboard#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsFileDropList">
+      <MemberSignature Language="C#" Value="public static bool ContainsFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se há dados na Área de Transferência que estão no formato <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> ou que podem ser convertidos para esse formato.</summary>
+        <returns>
+          <see langword="true" /> se houver uma lista de destino do arquivo na Área de Transferência; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma lista de arquivos é uma coleção de cadeias de caracteres que contém informações de caminho para arquivos.  
+  
+ Use esse método para determinar se a área de transferência contém uma lista de arquivos antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#30)]
+ [!code-vb[System.Windows.Forms.Clipboard#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsImage">
+      <MemberSignature Language="C#" Value="public static bool ContainsImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se há dados na Área de Transferência que estão no formato <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> ou que podem ser convertidos para esse formato.</summary>
+        <returns>
+          <see langword="true" /> se houver dados de imagem na Área de Transferência; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar se a área de transferência contém dados de imagem antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetImage%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#40)]
+ [!code-vb[System.Windows.Forms.Clipboard#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public static bool ContainsText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se há dados na Área de Transferência no formato <see cref="F:System.Windows.Forms.TextDataFormat.Text" /> ou <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" />, dependendo do sistema operacional.</summary>
+        <returns>
+          <see langword="true" /> se houver dados de texto na Área de Transferência; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método verifica a presença de dados de <xref:System.Windows.Forms.TextDataFormat.UnicodeText> formatar em [!INCLUDE[WinXpFamily](~/includes/winxpfamily-md.md)] e [!INCLUDE[Win2kFamily](~/includes/win2kfamily-md.md)]. Caso contrário, esse método verifica a presença de dados a <xref:System.Windows.Forms.TextDataFormat.Text> formato.  
+  
+ Use esse método para determinar se a área de transferência contém dados de texto antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetText%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma sobrecarga de <xref:System.Windows.Forms.Clipboard.ContainsText%2A> que é semelhante a essa sobrecarga de método.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public static bool ContainsText (System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsText(valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.ContainsText(System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um dos valores de <see cref="T:System.Windows.Forms.TextDataFormat" />.</param>
+        <summary>Indica se há dados de texto da Área de Transferência no formato indicado pelo valor <see cref="T:System.Windows.Forms.TextDataFormat" /> especificado.</summary>
+        <returns>
+          <see langword="true" /> se houver dados de texto na Área de Transferência no valor especificado para <paramref name="format" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar se a área de transferência contém dados de texto antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetText%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" /> não é um valor <see cref="T:System.Windows.Forms.TextDataFormat" /> válido.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAudioStream">
+      <MemberSignature Language="C#" Value="public static System.IO.Stream GetAudioStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Stream GetAudioStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetAudioStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um fluxo de áudio da área de transferência.</summary>
+        <returns>Um <see cref="T:System.IO.Stream" /> que contém dados de áudio ou <see langword="null" /> se a área de transferência não contém nenhum dado no formato <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.Clipboard.ContainsAudio%2A> método para determinar se a área de transferência contém dados de áudio antes de recuperá-lo com este método.  
+  
+ Use o <xref:System.Windows.Forms.Clipboard.SetAudio%2A> método para adicionar dados de áudio na área de transferência.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.Clipboard#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public static object GetData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato dos dados a serem recuperados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <summary>Recupera dados da Área de Transferência no formato especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa os dados da Área de Transferência, ou <see langword="null" />, se a Área de Transferência não contiver dados que estejam no <paramref name="format" /> especificado ou que possam ser convertidos nesse formato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.Clipboard.ContainsData%2A> método para determinar se a área de transferência contém dados no formato especificado ou em um formato compatível antes de recuperá-lo com este método.  
+  
+ Se esse método não pode localizar os dados no formato especificado, ele tentará converter os dados no formato. Se os dados não podem ser convertidos no formato especificado, ou se os dados foram armazenados com conversão automática definido como `false`, esse método retornará `null`.  
+  
+> [!NOTE]
+>  Dados podem ser convertidos para outro formato, se ele foi armazenado especificando que a conversão é permitida, e se o formato solicitado for compatível com o formato armazenado. Por exemplo, dados armazenados como Unicode pode ser convertido em texto.  
+>   
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+ Use o <xref:System.Windows.Forms.Clipboard.SetData%2A> para adicionar dados à área de transferência em um formato específico.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.Clipboard#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataObject">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.IDataObject GetDataObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Forms.IDataObject GetDataObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetDataObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IDataObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera os dados que atualmente estão na Área de Transferência do sistema.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.IDataObject" /> que representa os dados que estão, no momento, na Área de Transferência, ou <see langword="null" />, se não houver dados na Área de Transferência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como o tipo de dados do objeto retornado da área de transferência pode variar, esse método retorna os dados em um <xref:System.Windows.Forms.IDataObject>. Em seguida, você pode usar métodos do <xref:System.Windows.Forms.IDataObject> interface para extrair os dados em seu tipo de dados apropriado.  
+  
+ Esse método tenta obter os dados de dez vezes em intervalos de 100 milissegundos e lança um <xref:System.Runtime.InteropServices.ExternalException> se todas as tentativas não forem bem-sucedidas.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Windows.Forms.Clipboard> métodos para colocar os dados e recuperá-lo de transferência do sistema. Esse código supõe `button1`, `button2`, `textBox1`, e `textBox2` foram colocados no formulário.  
+  
+ O `button1_Click` chamadas de método <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> para colocar o texto selecionado na caixa de texto e coloque-o na área de transferência da sistema.  
+  
+ O `button2_Click` chamadas de método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> para recuperar dados da área de transferência da sistema. O código usa <xref:System.Windows.Forms.IDataObject> e <xref:System.Windows.Forms.DataFormats> para extrair os dados retornados. Os dados são exibidos em `textBox2`.  
+  
+ [!code-cpp[Classic Clipboard Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Clipboard Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Clipboard Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Clipboard Example/CS/source.cs#1)]
+ [!code-vb[Classic Clipboard Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Clipboard Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível recuperar dados da Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment) e o valor da propriedade <see cref="P:System.Windows.Forms.Application.MessageLoop" /> é <see langword="true" />. Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDropList">
+      <MemberSignature Language="C#" Value="public static System.Collections.Specialized.StringCollection GetFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Specialized.StringCollection GetFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma coleção de nomes de arquivo da Área de Transferência.</summary>
+        <returns>Um <see cref="T:System.Collections.Specialized.StringCollection" /> que contém nomes de arquivo ou <see langword="null" /> se a Área de Transferência não contiver dados que estejam no formato <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> ou que possam ser convertidos nesse formato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma lista de arquivos é uma coleção de cadeias de caracteres que contém informações de caminho para arquivos.  
+  
+ Uma lista de arquivos é armazenada na área de transferência como uma <xref:System.String> matriz. Este método converte desta matriz a um <xref:System.Collections.Specialized.StringCollection> e retorna a coleção.  
+  
+ Use o <xref:System.Windows.Forms.Clipboard.ContainsFileDropList%2A> método para determinar se a área de transferência contém uma lista de arquivos antes de recuperá-lo com este método.  
+  
+ Use o <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A> método para adicionar uma lista de arquivos para a área de transferência.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#30)]
+ [!code-vb[System.Windows.Forms.Clipboard#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image GetImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Image GetImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma imagem da área de transferência.</summary>
+        <returns>Um <see cref="T:System.Drawing.Image" /> que representa os dados de imagem da área de transferência ou <see langword="null" /> se a área de transferência não contiver dados que estejam no formato <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> ou que possam ser convertidos nesse formato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.Clipboard.ContainsImage%2A> método para determinar se a área de transferência contém dados de imagem antes de recuperá-lo com este método.  
+  
+ Use o <xref:System.Windows.Forms.Clipboard.SetImage%2A> método para adicionar dados de imagem na área de transferência.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#40)]
+ [!code-vb[System.Windows.Forms.Clipboard#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public static string GetText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera dados de texto da Área de Transferência no formato <see cref="F:System.Windows.Forms.TextDataFormat.Text" /> ou <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" />, dependendo do sistema operacional.</summary>
+        <returns>Os dados de texto da Área de Transferência ou <see cref="F:System.String.Empty" /> se a Área de Transferência não contiver dados no formato <see cref="F:System.Windows.Forms.TextDataFormat.Text" /> ou <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" />, dependendo do sistema operacional.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna dados de texto no <xref:System.Windows.Forms.TextDataFormat.UnicodeText> formatar em [!INCLUDE[WinXpFamily](~/includes/winxpfamily-md.md)] e [!INCLUDE[Win2kFamily](~/includes/win2kfamily-md.md)]. Caso contrário, esse método retorna dados de texto no <xref:System.Windows.Forms.TextDataFormat.Text> formato.  
+  
+ Use o <xref:System.Windows.Forms.Clipboard.ContainsText%2A> método para determinar se a área de transferência contém dados de texto antes de recuperá-lo com este método.  
+  
+ Use o <xref:System.Windows.Forms.Clipboard.SetText%2A> método para adicionar dados de texto na área de transferência.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma sobrecarga de <xref:System.Windows.Forms.Clipboard.GetText%2A> que é semelhante a essa sobrecarga de método.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public static string GetText (System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetText(valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.GetText(System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um dos valores de <see cref="T:System.Windows.Forms.TextDataFormat" />.</param>
+        <summary>Recupera os dados de texto da Área de Transferência no formato indicado pelo valor <see cref="T:System.Windows.Forms.TextDataFormat" /> especificado.</summary>
+        <returns>Os dados de texto da Área de Transferência ou <see cref="F:System.String.Empty" /> se a Área de Transferência não contiver dados no formato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.Clipboard.ContainsText%2A> método para determinar se a área de transferência contém dados de texto antes de recuperá-lo com este método.  
+  
+ Use o <xref:System.Windows.Forms.Clipboard.SetText%2A> método para adicionar dados de texto na área de transferência.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" /> não é um valor <see cref="T:System.Windows.Forms.TextDataFormat" /> válido.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">para acessar a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public static void SetAudio (byte[] audioBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAudio(unsigned int8[] audioBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetAudio(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioBytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="audioBytes">A <see cref="T:System.Byte" /> matriz que contém os dados de áudio.</param>
+        <summary>Limpa a área de transferência e, em seguida, adiciona um <see cref="T:System.Byte" /> de matriz na <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" /> formato após convertê-la para um <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para recuperar dados de áudio da área de transferência, primeiro use o <xref:System.Windows.Forms.Clipboard.ContainsAudio%2A> método para determinar se a área de transferência contém dados de áudio antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma sobrecarga de <xref:System.Windows.Forms.Clipboard.SetAudio%2A> que é semelhante a essa sobrecarga de método.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.Clipboard#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioBytes" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar dados de áudio para a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public static void SetAudio (System.IO.Stream audioStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAudio(class System.IO.Stream audioStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetAudio(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="audioStream">Um <see cref="T:System.IO.Stream" /> que contém os dados de áudio.</param>
+        <summary>Limpa a área de transferência e, em seguida, adiciona um <see cref="T:System.IO.Stream" /> no <see cref="F:System.Windows.Forms.DataFormats.WaveAudio" /> formato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para recuperar dados de áudio da área de transferência, primeiro use o <xref:System.Windows.Forms.Clipboard.ContainsAudio%2A> método para determinar se a área de transferência contém dados de áudio antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#20)]
+ [!code-vb[System.Windows.Forms.Clipboard#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioStream" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar dados de áudio para a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public static void SetData (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetData(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetData(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato dos dados a serem configurados. Consulte <see cref="T:System.Windows.Forms.DataFormats" /> para obter os formatos predefinidos.</param>
+        <param name="data">Um <see cref="T:System.Object" /> que representa os dados a serem adicionados.</param>
+        <summary>Limpa a Área de Transferência e adiciona dados no formato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não souber o formato do aplicativo de destino, você pode armazenar dados em vários formatos, usando esse método.  
+  
+ Dados armazenados usando esse método podem ser convertidos em um formato compatível quando ele é recuperado.  
+  
+ Para recuperar dados da área de transferência em um formato específico, primeiro use o <xref:System.Windows.Forms.Clipboard.ContainsData%2A> método para determinar se a área de transferência contém dados nesse formato antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetData%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#10)]
+ [!code-vb[System.Windows.Forms.Clipboard#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar dados de qualquer tipo ou formato para a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public static void SetDataObject (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetDataObject(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetDataObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Os dados a serem colocados na área de transferência.</param>
+        <summary>Limpa a Área de Transferência e, em seguida, coloca os dados não persistentes nela.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados serão excluídos de transferência do sistema quando o aplicativo termina.  
+  
+ Esse método tentará definir os dados dez vezes em intervalos de 100 milissegundos e lança um <xref:System.Runtime.InteropServices.ExternalException> se todas as tentativas não forem bem-sucedidas.  
+  
+> [!NOTE]
+>  Um objeto deve ser serializável para que seja colocado na Área de Transferência. Se você passar um objeto não serializável para esse método, ele falhará sem lançar uma exceção. Consulte <xref:System.Runtime.Serialization> para obter mais informações sobre serialização.  
+>   
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> para colocar os dados de texto não persistente para a área de transferência do sistema. No `button1_Click` método, o texto selecionado é copiado da `textBox1` e colados na área de transferência. No `button2_Click` método, as informações é recuperado da área de transferência e exibido em `textBox2`. Esse código supõe `button1`, `button2`, `textBox1`, e `textBox2` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic Clipboard Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Clipboard Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Clipboard Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Clipboard Example/CS/source.cs#1)]
+ [!code-vb[Classic Clipboard Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Clipboard Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível colocar os dados na área de transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="data" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar dados de qualquer tipo ou formato para a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public static void SetDataObject (object data, bool copy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetDataObject(object data, bool copy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetDataObject(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+        <Parameter Name="copy" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="data">Os dados a serem colocados na área de transferência.</param>
+        <param name="copy">
+          <see langword="true" /> se desejar que os dados permaneçam na área de transferência depois que esse aplicativo for encerrado, caso contrário, <see langword="false" />.</param>
+        <summary>Limpa a área de transferência e, em seguida, coloca os dados nela e especifica se eles devem permanecer após o encerramento do aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `copy` parâmetro é `false`, os dados serão excluídos de transferência do sistema quando o aplicativo termina.  
+  
+ Esse método tentará definir os dados dez vezes em intervalos de 100 milissegundos e lança um <xref:System.Runtime.InteropServices.ExternalException> se todas as tentativas não forem bem-sucedidas.  
+  
+> [!NOTE]
+>  Um objeto deve ser serializável para que seja colocado na Área de Transferência. Se você passar um objeto não serializável para esse método, ele falhará sem lançar uma exceção. Consulte <xref:System.Runtime.Serialization> para obter mais informações sobre serialização.  
+>   
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O método a seguir é executado em um aplicativo. Coloca uma cópia persistente dos dados do texto selecionado na caixa de texto na área de transferência da sistema. Esse código supõe `button1`, `textBox1`, e `textBox2` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic Clipboard.SetDataObject1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Clipboard.SetDataObject1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Clipboard.SetDataObject1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/VB/source.vb#1)]  
+  
+ Em um aplicativo diferente, o método a seguir recupera o texto do sistema de área de transferência e cola o texto em `textBox2`. Esse código supõe `button2` e `textBox2` foram criados e colocados em um formulário.  
+  
+ [!code-cpp[Classic Clipboard.SetDataObject1 Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic Clipboard.SetDataObject1 Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/CS/source.cs#2)]
+ [!code-vb[Classic Clipboard.SetDataObject1 Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Clipboard.SetDataObject1 Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível colocar os dados na área de transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="data" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar dados de qualquer tipo ou formato para a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public static void SetDataObject (object data, bool copy, int retryTimes, int retryDelay);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetDataObject(object data, bool copy, int32 retryTimes, int32 retryDelay) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetDataObject(System.Object,System.Boolean,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+        <Parameter Name="copy" Type="System.Boolean" />
+        <Parameter Name="retryTimes" Type="System.Int32" />
+        <Parameter Name="retryDelay" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">Os dados a serem colocados na área de transferência.</param>
+        <param name="copy">
+          <see langword="true" /> se desejar que os dados permaneçam na área de transferência depois que esse aplicativo for encerrado, caso contrário, <see langword="false" />.</param>
+        <param name="retryTimes">O número de tentativas para tentar colocar os dados na Área de Transferência.</param>
+        <param name="retryDelay">O número de milissegundos para pausar entre as tentativas.</param>
+        <summary>Limpa a Área de Transferência e, em seguida, tenta colocar os dados nela pelo número especificado de vezes e com o atraso especificado entre as tentativas, opcionalmente, deixando os dados na Área de Transferência depois de sair do aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adicionando dados à área de transferência, ocasionalmente pode falhar se a área de transferência está ocupada com outro aplicativo ou thread. Esse método é útil para solucionar esse problema em ambientes com uso intenso de área de transferência.  
+  
+ Se o `copy` parâmetro é `false`, os dados serão excluídos de transferência do sistema quando o aplicativo termina.  
+  
+> [!NOTE]
+>  Um objeto deve ser serializável para que seja colocado na Área de Transferência. Se você passar um objeto não serializável para esse método, ele falhará sem lançar uma exceção. Consulte <xref:System.Runtime.Serialization> para obter mais informações sobre serialização.  
+>   
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="retryTimes" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="retryDelay" /> é menor que zero.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível colocar os dados na área de transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar dados de qualquer tipo ou formato para a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFileDropList">
+      <MemberSignature Language="C#" Value="public static void SetFileDropList (System.Collections.Specialized.StringCollection filePaths);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFileDropList(class System.Collections.Specialized.StringCollection filePaths) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetFileDropList(System.Collections.Specialized.StringCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePaths" Type="System.Collections.Specialized.StringCollection" />
+      </Parameters>
+      <Docs>
+        <param name="filePaths">Um <see cref="T:System.Collections.Specialized.StringCollection" /> que contém os nomes de arquivo.</param>
+        <summary>Limpa a Área de Transferência e, em seguida, adiciona uma coleção de nomes de arquivos no formato <see cref="F:System.Windows.Forms.DataFormats.FileDrop" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma lista de arquivos é uma coleção de cadeias de caracteres que contém informações de caminho para arquivos.  
+  
+ Uma lista de arquivos é armazenada na área de transferência como uma <xref:System.String> matriz. Este método converte `filePaths` para um <xref:System.String> matriz antes de adicioná-la na área de transferência.  
+  
+ Para recuperar uma lista de arquivos da área de transferência, primeiro use o <xref:System.Windows.Forms.Clipboard.ContainsFileDropList%2A> método para determinar se a área de transferência contém dados nesse formato antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#30)]
+ [!code-vb[System.Windows.Forms.Clipboard#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filePaths" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="filePaths" /> não contém nenhuma cadeia de caracteres.  
+  
+ -ou-  
+  
+ Pelo menos uma das cadeias de caracteres no <paramref name="filePaths" /> é <see cref="F:System.String.Empty" />, contém somente espaços em branco, contém um ou mais caracteres inválidos conforme definido por <see cref="F:System.IO.Path.InvalidPathChars" />, é <see langword="null" />, contém dois-pontos (:) ou excede o comprimento máximo definido pelo sistema.  
+  
+ Consulte a propriedade <see cref="P:System.Exception.InnerException" /> de <see cref="T:System.ArgumentException" /> para obter mais informações.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar dados a <see cref="F:System.Windows.Forms.DataFormats.FileDrop" /> formato para a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para acessar o sistema de arquivos. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImage">
+      <MemberSignature Language="C#" Value="public static void SetImage (System.Drawing.Image image);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetImage(class System.Drawing.Image image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetImage(System.Drawing.Image)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> a ser adicionado à Área de Transferência.</param>
+        <summary>Limpa a Área de Transferência e adiciona um <see cref="T:System.Drawing.Image" /> no formato <see cref="F:System.Windows.Forms.DataFormats.Bitmap" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para recuperar dados de imagem da área de transferência, primeiro use o <xref:System.Windows.Forms.Clipboard.ContainsImage%2A> método para determinar se a área de transferência contém dados de imagem antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetImage%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#40)]
+ [!code-vb[System.Windows.Forms.Clipboard#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="image" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar dados a <see cref="F:System.Windows.Forms.DataFormats.Bitmap" /> formato para a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public static void SetText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser adicionado à Área de Transferência.</param>
+        <summary>Limpa a área de transferência e, em seguida, adiciona dados de texto no formato <see cref="F:System.Windows.Forms.TextDataFormat.Text" /> ou <see cref="F:System.Windows.Forms.TextDataFormat.UnicodeText" />, dependendo do sistema operacional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona dados de texto no <xref:System.Windows.Forms.TextDataFormat.UnicodeText> formatar em [!INCLUDE[WinXpFamily](~/includes/winxpfamily-md.md)] e [!INCLUDE[Win2kFamily](~/includes/win2kfamily-md.md)]. Caso contrário, este método adiciona dados de texto no <xref:System.Windows.Forms.TextDataFormat.Text> formato.  
+  
+ Para recuperar dados de texto da área de transferência, primeiro use o <xref:System.Windows.Forms.Clipboard.ContainsText%2A> método para determinar se a área de transferência contém dados de texto antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetText%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma sobrecarga de <xref:System.Windows.Forms.Clipboard.SetText%2A> que é semelhante a essa sobrecarga de método.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> é <see langword="null" /> ou <see cref="F:System.String.Empty" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar dados de texto para a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.OwnClipboard" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public static void SetText (string text, System.Windows.Forms.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetText(string text, valuetype System.Windows.Forms.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Clipboard.SetText(System.String,System.Windows.Forms.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="format" Type="System.Windows.Forms.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser adicionado à Área de Transferência.</param>
+        <param name="format">Um dos valores de <see cref="T:System.Windows.Forms.TextDataFormat" />.</param>
+        <summary>Limpa a Área de Transferência e adiciona dados de texto no formato indicado pelo valor <see cref="T:System.Windows.Forms.TextDataFormat" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para recuperar dados de texto da área de transferência, primeiro use o <xref:System.Windows.Forms.Clipboard.ContainsText%2A> método para determinar se a área de transferência contém dados de texto antes de recuperá-lo com o <xref:System.Windows.Forms.Clipboard.GetText%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Clipboard> classe só pode ser usada em threads configurados para o modo single thread apartment (STA). Para usar essa classe, certifique-se de que seu `Main` método está marcado com o <xref:System.STAThreadAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse membro.  
+  
+ [!code-csharp[System.Windows.Forms.Clipboard#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#50)]
+ [!code-vb[System.Windows.Forms.Clipboard#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Não foi possível limpar a Área de Transferência. Isso geralmente ocorre quando a Área de Transferência está sendo usada por outro processo.</exception>
+        <exception cref="T:System.Threading.ThreadStateException">O thread atual não está no modo STA (Single-Threaded Apartment). Adicione o <see cref="T:System.STAThreadAttribute" /> ao método <see langword="Main" /> do aplicativo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> é <see langword="null" /> ou <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" /> não é um valor <see cref="T:System.Windows.Forms.TextDataFormat" /> válido.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para adicionar dados de texto para a área de transferência do sistema. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionClipboard.OwnClipboard" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

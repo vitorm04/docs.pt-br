@@ -1,0 +1,109 @@
+<Type Name="SynchronizationOption" FullName="System.EnterpriseServices.SynchronizationOption">
+  <TypeSignature Language="C#" Value="public enum SynchronizationOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed SynchronizationOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.SynchronizationOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de sincronização automática solicitada pelo componente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.EnterpriseServices.SynchronizationOption> tipo.  
+  
+ [!code-cpp[EnterpriseServicesSynchronizationOption#0](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServicesSynchronizationOption/cpp/class1.cpp#0)]
+ [!code-csharp[EnterpriseServicesSynchronizationOption#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesSynchronizationOption/CS/class1.cs#0)]
+ [!code-vb[EnterpriseServicesSynchronizationOption#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesSynchronizationOption/VB/class1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="Disabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.SynchronizationOption Disabled = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.SynchronizationOption.Disabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.SynchronizationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>COM+ ignora os requisitos de sincronização do componente ao determinar o contexto para o objeto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSupported">
+      <MemberSignature Language="C#" Value="NotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.SynchronizationOption NotSupported = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.SynchronizationOption.NotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.SynchronizationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto com esse valor nunca participa da sincronização, independentemente do status do seu chamador. Essa configuração só está disponível para os componentes que não são transacionais e não use a ativação just-in-time (JIT).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Required">
+      <MemberSignature Language="C#" Value="Required" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.SynchronizationOption Required = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.SynchronizationOption.Required" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.SynchronizationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Garante que todos os objetos criados a partir do componente estão sincronizados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresNew">
+      <MemberSignature Language="C#" Value="RequiresNew" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.SynchronizationOption RequiresNew = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.SynchronizationOption.RequiresNew" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.SynchronizationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto com esse valor deve participar de uma nova sincronização onde COM+ gerencia apartments e contextos em nome de todos os componentes envolvidos na chamada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Supported">
+      <MemberSignature Language="C#" Value="Supported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.SynchronizationOption Supported = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.SynchronizationOption.Supported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.SynchronizationOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto com esse valor participa da sincronização, se ele existir.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

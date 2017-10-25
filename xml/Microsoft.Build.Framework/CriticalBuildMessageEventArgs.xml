@@ -1,0 +1,154 @@
+<Type Name="CriticalBuildMessageEventArgs" FullName="Microsoft.Build.Framework.CriticalBuildMessageEventArgs">
+  <TypeSignature Language="C#" Value="public class CriticalBuildMessageEventArgs : Microsoft.Build.Framework.BuildMessageEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CriticalBuildMessageEventArgs extends Microsoft.Build.Framework.BuildMessageEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.CriticalBuildMessageEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Framework.BuildMessageEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém os argumentos para eventos de mensagem crítica. Eles sempre tem alta prioridade.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CriticalBuildMessageEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.CriticalBuildMessageEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Construtor padrão</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CriticalBuildMessageEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string subcategory, string code, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, string helpKeyword, string senderName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.CriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="subcategory" Type="System.String" />
+        <Parameter Name="code" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="subcategory">subcategoria de evento</param>
+        <param name="code">código de evento</param>
+        <param name="file">arquivo associado ao evento</param>
+        <param name="lineNumber">número da linha (0 se não aplicável)</param>
+        <param name="columnNumber">número da coluna (0 se não aplicável)</param>
+        <param name="endLineNumber">número da linha final (0 se não aplicável)</param>
+        <param name="endColumnNumber">número da coluna de extremidade (0 se não aplicável)</param>
+        <param name="message">mensagem de texto</param>
+        <param name="helpKeyword">palavra-chave de ajuda</param>
+        <param name="senderName">nome do remetente do evento</param>
+        <summary>Este construtor permite que todos os dados de evento a ser inicializado</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CriticalBuildMessageEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, DateTime eventTimestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string subcategory, string code, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, string helpKeyword, string senderName, valuetype System.DateTime eventTimestamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.CriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="subcategory" Type="System.String" />
+        <Parameter Name="code" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="subcategory">subcategoria de evento</param>
+        <param name="code">código de evento</param>
+        <param name="file">arquivo associado ao evento</param>
+        <param name="lineNumber">número da linha (0 se não aplicável)</param>
+        <param name="columnNumber">número da coluna (0 se não aplicável)</param>
+        <param name="endLineNumber">número da linha final (0 se não aplicável)</param>
+        <param name="endColumnNumber">número da coluna de extremidade (0 se não aplicável)</param>
+        <param name="message">mensagem de texto</param>
+        <param name="helpKeyword">palavra-chave de ajuda</param>
+        <param name="senderName">nome do remetente do evento</param>
+        <param name="eventTimestamp">carimbo de data/hora personalizado para o evento</param>
+        <summary>Este construtor permite que o carimbo de data/hora seja definido</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CriticalBuildMessageEventArgs (string subcategory, string code, string file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string helpKeyword, string senderName, DateTime eventTimestamp, params object[] messageArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string subcategory, string code, string file, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, string helpKeyword, string senderName, valuetype System.DateTime eventTimestamp, object[] messageArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.CriticalBuildMessageEventArgs.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.DateTime,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="subcategory" Type="System.String" />
+        <Parameter Name="code" Type="System.String" />
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+        <Parameter Name="senderName" Type="System.String" />
+        <Parameter Name="eventTimestamp" Type="System.DateTime" />
+        <Parameter Name="messageArgs" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="subcategory">subcategoria de evento</param>
+        <param name="code">código de evento</param>
+        <param name="file">arquivo associado ao evento</param>
+        <param name="lineNumber">número da linha (0 se não aplicável)</param>
+        <param name="columnNumber">número da coluna (0 se não aplicável)</param>
+        <param name="endLineNumber">número da linha final (0 se não aplicável)</param>
+        <param name="endColumnNumber">número da coluna de extremidade (0 se não aplicável)</param>
+        <param name="message">mensagem de texto</param>
+        <param name="helpKeyword">palavra-chave de ajuda</param>
+        <param name="senderName">nome do remetente do evento</param>
+        <param name="eventTimestamp">carimbo de data/hora personalizado para o evento</param>
+        <param name="messageArgs">argumentos de mensagem</param>
+        <summary>Este construtor permite que o carimbo de data/hora seja definido</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

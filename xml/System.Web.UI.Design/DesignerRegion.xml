@@ -1,0 +1,339 @@
+<Type Name="DesignerRegion" FullName="System.Web.UI.Design.DesignerRegion">
+  <TypeSignature Language="C#" Value="public class DesignerRegion : System.Web.UI.Design.DesignerObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerRegion extends System.Web.UI.Design.DesignerObject" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DesignerRegion" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DesignerObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma região de conteúdo dentro a marcação de tempo de design para o controle associado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DesignerRegion> objeto representa uma região de conteúdo dentro a marcação de tempo de design que é gerado por um <xref:System.Web.UI.Design.ControlDesigner> implementação. Um desenvolvedor do controle usa regiões de designer em um personalizado <xref:System.Web.UI.Design.ControlDesigner> implementação para definir as áreas separadas na marcação de tempo de design para o controle associado e para fornecer edição e manipulação de eventos para a área. Um visual designer, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], pode usar regiões de designer para exibir as áreas separadas de um controle na superfície de design e para gerar eventos de usuário para a região para o designer de controle. Regiões de designer podem simplificar uma implementação de designer do controle porque muitos recursos com base em região são fornecidos pelo designers classes base e o designer visual.  
+  
+ O <xref:System.Web.UI.Design.DesignerRegion> classe fornece a funcionalidade básica para regiões de designer, como a capacidade de clicar em, selecione e realçar uma região na superfície de design. Use um <xref:System.Web.UI.Design.DesignerRegion> objeto em uma implementação de controle de designer para definir uma região que não exigem a edição. Use derivada <xref:System.Web.UI.Design.EditableDesignerRegion> classe em uma implementação de controle de designer para definir uma região com conteúdo editável em tempo de design. Use derivada <xref:System.Web.UI.Design.TemplatedEditableDesignerRegion> classe em uma implementação de controle de designer para definir uma área editável que representa um modelo em um controle.  
+  
+ Para dar suporte a regiões dentro de uma classe que deriva o <xref:System.Web.UI.Design.ControlDesigner>, substituir o <xref:System.Web.UI.Design.ControlDesigner.GetDesignTimeHtml%2A> método e adicione um ou mais inicializado <xref:System.Web.UI.Design.DesignerRegion> objetos para o <xref:System.Web.UI.Design.DesignerRegionCollection> coleção. Opcionalmente, você pode manipular cliques do mouse nas regiões na superfície de design, substituindo o <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> método.  
+  
+ Use as propriedades de um <xref:System.Web.UI.Design.DesignerRegion> objeto para determinar como a região é exibida pelo designer visual. Substituir o <xref:System.Web.UI.Design.DesignerRegion.Selectable%2A> propriedade para indicar que a região pode ser selecionada pelo usuário na superfície de design. Use o <xref:System.Web.UI.Design.DesignerRegion.Highlight%2A> propriedade para realçar a região designer no visual designer; por exemplo, você pode realçar uma região depois que um usuário tenha clicado para selecioná-lo. Use o <xref:System.Web.UI.Design.DesignerRegion.DisplayName%2A> e <xref:System.Web.UI.Design.DesignerRegion.Description%2A> propriedades para armazenar ou recuperar detalhes adicionais sobre a região. Em particular, o <xref:System.Web.UI.Design.DesignerRegion.Description%2A> propriedade é usada pelo designer visual para exibir informações de dica de ferramenta quando o usuário move o ponteiro do mouse sobre a região de designer. Use o <xref:System.Web.UI.Design.DesignerObject.Designer%2A> propriedade para acessar os métodos e propriedades do objeto designer controle que contém a região de designer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerRegion (System.Web.UI.Design.ControlDesigner designer, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.ControlDesigner designer, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerRegion.#ctor(System.Web.UI.Design.ControlDesigner,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Web.UI.Design.ControlDesigner" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="designer">O designer de controle que contém esta região designer.</param>
+        <param name="name">O nome da região neste designer.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Design.DesignerRegion" /> classe com o nome especificado para um controle de designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de <xref:System.Web.UI.Design.DesignerRegion> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.Design.DesignerRegion.Description%2A>|Uma cadeia de caracteres vazia ("").|  
+|<xref:System.Web.UI.Design.DesignerObject.Designer%2A>|A entrada `designer` objeto.|  
+|<xref:System.Web.UI.Design.DesignerRegion.DisplayName%2A>|Uma cadeia de caracteres vazia ("").|  
+|<xref:System.Web.UI.Design.DesignerRegion.EnsureSize%2A>|`false`.|  
+|<xref:System.Web.UI.Design.DesignerRegion.Highlight%2A>|`false`.|  
+|<xref:System.Web.UI.Design.DesignerObject.Name%2A>|A entrada `name` objeto.|  
+|<xref:System.Web.UI.Design.DesignerObject.Properties%2A>|Vazio <xref:System.Collections.Specialized.HybridDictionary> objeto.|  
+|<xref:System.Web.UI.Design.DesignerRegion.Selectable%2A>|`false`.|  
+|<xref:System.Web.UI.Design.DesignerRegion.Selected%2A>|`false`.|  
+|<xref:System.Web.UI.Design.DesignerRegion.UserData%2A>|`null`.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="designer" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="designer" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="name" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="name" /> é uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerRegion (System.Web.UI.Design.ControlDesigner designer, string name, bool selectable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.ControlDesigner designer, string name, bool selectable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerRegion.#ctor(System.Web.UI.Design.ControlDesigner,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Web.UI.Design.ControlDesigner" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="selectable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="designer">O designer de controle que contém esta região designer.</param>
+        <param name="name">O nome da região neste designer.</param>
+        <param name="selectable">
+          <see langword="true" />para selecionar a região; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Design.DesignerRegion" /> classe com o nome especificado para um designer de controle, opcionalmente, definir a instância como uma região selecionável no designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de <xref:System.Web.UI.Design.DesignerRegion> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.Design.DesignerRegion.Description%2A>|Uma cadeia de caracteres vazia ("").|  
+|<xref:System.Web.UI.Design.DesignerObject.Designer%2A>|A entrada `designer` objeto.|  
+|<xref:System.Web.UI.Design.DesignerRegion.DisplayName%2A>|Uma cadeia de caracteres vazia ("").|  
+|<xref:System.Web.UI.Design.DesignerRegion.EnsureSize%2A>|`false`.|  
+|<xref:System.Web.UI.Design.DesignerRegion.Highlight%2A>|`false`.|  
+|<xref:System.Web.UI.Design.DesignerObject.Name%2A>|A entrada `name` objeto.|  
+|<xref:System.Web.UI.Design.DesignerObject.Properties%2A>|Vazio <xref:System.Collections.Specialized.HybridDictionary> objeto.|  
+|<xref:System.Web.UI.Design.DesignerRegion.Selectable%2A>|A entrada `selectable` valor.|  
+|<xref:System.Web.UI.Design.DesignerRegion.Selected%2A>|`false`.|  
+|<xref:System.Web.UI.Design.DesignerRegion.UserData%2A>|`null`.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="designer" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="designer" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="name" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="name" /> é uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public virtual string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerRegion.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição de uma região de designer.</summary>
+        <value>Uma descrição de texto da região de designer. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DesignerRegion.Description%2A> pelo host de design, a propriedade é usada para exibir informações de dica de ferramenta quando o usuário move o ponteiro do mouse sobre a região de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerRegionAttributeName">
+      <MemberSignature Language="C#" Value="public static readonly string DesignerRegionAttributeName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string DesignerRegionAttributeName" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.Design.DesignerRegion.DesignerRegionAttributeName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o nome do atributo HTML para uma região de designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome de atributo para uma região de designer é `_designerRegion`. O <xref:System.Web.UI.Design.DesignerRegion.DesignerRegionAttributeName> campo é usado para identificar as regiões dentro a marcação HTML de tempo de design do designer de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public virtual string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerRegion.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome para exibição amigável para uma região de designer.</summary>
+        <value>Um nome de exibição de texto para a região de designer. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureSize">
+      <MemberSignature Language="C#" Value="public bool EnsureSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnsureSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerRegion.EnsureSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o tamanho da região a ser definido explicitamente na região de designer do host de design.</summary>
+        <value>
+          <see langword="true" />, se o host de design deve definir o tamanho na região de designer; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBounds">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle GetBounds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Rectangle GetBounds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerRegion.GetBounds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o tamanho da região de designer na superfície de design.</summary>
+        <returns>Um <see cref="T:System.Drawing.Rectangle" /> que representa o tamanho do designer de região na superfície de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DesignerRegion.GetBounds%2A> método retorna um valor que é equivalente a chamar o <xref:System.Web.UI.Design.IControlDesignerView.GetBounds%2A> método o <xref:System.Web.UI.Design.DesignerObject.Designer%2A> objeto com esta região designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Highlight">
+      <MemberSignature Language="C#" Value="public virtual bool Highlight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Highlight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerRegion.Highlight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se é para realçar o designer região na superfície de design.</summary>
+        <value>
+          <see langword="true" />, se o designer visual deve realçar o designer região na superfície de design; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selectable">
+      <MemberSignature Language="C#" Value="public virtual bool Selectable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Selectable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerRegion.Selectable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a região designer pode ser selecionada pelo usuário na superfície de design.</summary>
+        <value>
+          <see langword="true" />, se a região designer pode ser selecionada pelo usuário na superfície de design; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public virtual bool Selected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Selected" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerRegion.Selected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a região designer atualmente selecionada na superfície de design.</summary>
+        <value>
+          <see langword="true" />, se a região de designer está selecionada atualmente na superfície de design; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserData">
+      <MemberSignature Language="C#" Value="public object UserData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object UserData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerRegion.UserData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os dados de usuário opcionais para associar com a região de designer.</summary>
+        <value>Um objeto que contém dados de usuário armazenados para a região de designer. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dentro de uma implementação de designer de controle, use o <xref:System.Web.UI.Design.DesignerRegion.UserData%2A> para armazenar ou recuperar informações adicionais para a região de designer.  
+  
+ Por exemplo, se a implementação do designer de controle dá suporte a seleção de várias regiões de designer, você pode usar o <xref:System.Web.UI.Design.DesignerRegion.UserData%2A> propriedade em um designer de controle para armazenar um índice exclusivo para cada região. Você pode usar o <xref:System.Web.UI.Design.DesignerRegion.UserData%2A> propriedade para a região que é passada para o <xref:System.Web.UI.Design.ControlDesigner.OnClick%2A> método para armazenar o índice para a região atualmente selecionada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

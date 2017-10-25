@@ -1,0 +1,287 @@
+<Type Name="RuleEvaluationIncompatibleTypesException" FullName="System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException">
+  <TypeSignature Language="C#" Value="public class RuleEvaluationIncompatibleTypesException : System.Workflow.Activities.Rules.RuleException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RuleEvaluationIncompatibleTypesException extends System.Workflow.Activities.Rules.RuleException implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Activities.Rules.RuleException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção que é lançada durante a tentativa de aplicar um operador de operandos incompatíveis ao avaliar uma regra.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleEvaluationIncompatibleTypesException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleEvaluationIncompatibleTypesException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Um <see langword="string" /> que contém a mensagem de erro para associar a esta instância.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" /> com uma mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.ArgumentException.Message%2A> propriedade da nova instância usando o parâmetro de mensagem.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância da exceção.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Uma referência nula (`Nothing` no Visual Basic).|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RuleEvaluationIncompatibleTypesException (System.Runtime.Serialization.SerializationInfo serializeInfo, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo serializeInfo, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializeInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializeInfo">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção transmitido em um fluxo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serializeInfo" />é uma referência nula (Visual Basic <see langword="Nothing" />).</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">O nome da classe é uma referência nula (Visual Basic <see langword="Nothing" />) ou o <see cref="P:System.Exception.HResult" /> é zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleEvaluationIncompatibleTypesException (string message, Exception ex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception ex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="ex" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que descreve a exceção atual.</param>
+        <param name="ex">O <see cref="T:System.Exception" /> instância que causou a exceção atual.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" /> classe com uma mensagem de erro especificada e uma referência a interna <see cref="T:System.Exception" /> que é a causa deste <see cref="T:System.Exception" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Exception> que é gerada como um resultado direto de anterior <xref:System.Exception> deve incluir uma referência à exceção anterior no <xref:System.Exception.InnerException%2A> propriedade. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor ou uma referência nula (`Nothing` no Visual Basic) caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interna para o construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleEvaluationIncompatibleTypesException (string message, Type left, System.CodeDom.CodeBinaryOperatorType op, Type right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Type left, valuetype System.CodeDom.CodeBinaryOperatorType op, class System.Type right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor(System.String,System.Type,System.CodeDom.CodeBinaryOperatorType,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="left" Type="System.Type" />
+        <Parameter Name="op" Type="System.CodeDom.CodeBinaryOperatorType" />
+        <Parameter Name="right" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que descreve o atual <see cref="T:System.Exception" /> .</param>
+        <param name="left">O <see cref="T:System.Type" /> que aparecem no lado esquerdo do operador.</param>
+        <param name="op">O <see cref="T:System.CodeDom.CodeBinaryOperatorType" /> representar o operador cuja compatibilidade for violada.</param>
+        <param name="right">O <see cref="T:System.Type" /> que aparece à direita do operador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" /> classe com os detalhes da violação de compatibilidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de exceção representada por essa classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Uma referência nula (`Nothing` no Visual Basic).|  
+|<xref:System.Exception.Message%2A>|O valor do argumento`message`|  
+|<xref:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Left%2A>|O valor do argumento`left.`|  
+|<xref:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Operator%2A>|O valor do argumento`op.`|  
+|<xref:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Right%2A>|O valor do argumento`right.`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleEvaluationIncompatibleTypesException (string message, Type left, System.CodeDom.CodeBinaryOperatorType op, Type right, Exception ex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Type left, valuetype System.CodeDom.CodeBinaryOperatorType op, class System.Type right, class System.Exception ex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.#ctor(System.String,System.Type,System.CodeDom.CodeBinaryOperatorType,System.Type,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="left" Type="System.Type" />
+        <Parameter Name="op" Type="System.CodeDom.CodeBinaryOperatorType" />
+        <Parameter Name="right" Type="System.Type" />
+        <Parameter Name="ex" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que descreve o atual <see cref="T:System.Exception" /> .</param>
+        <param name="left">O <see cref="T:System.Type" /> que aparecem no lado esquerdo do operador.</param>
+        <param name="op">O <see cref="T:System.CodeDom.CodeBinaryOperatorType" /> representar o operador cuja compatibilidade for violada.</param>
+        <param name="right">O <see cref="T:System.Type" /> que aparece à direita do operador.</param>
+        <param name="ex">O <see cref="T:System.Exception" /> instância que causou a exceção atual.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException" /> classe com os detalhes da violação de compatibilidade. Isso inclui o <see cref="P:System.Exception.InnerException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de exceção representada por essa classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|O valor do argumento`ex.`|  
+|<xref:System.Exception.Message%2A>|O valor do argumento`message`|  
+|<xref:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Left%2A>|O valor do argumento`left.`|  
+|<xref:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Operator%2A>|O valor do argumento`op.`|  
+|<xref:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Right%2A>|O valor do argumento`right.`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Define o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com informações sobre a exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.GetObjectData%2A>define um <xref:System.Runtime.Serialization.SerializationInfo> com todos os <xref:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException> destinados para a serialização de dados do objeto. Durante a desserialização, essa exceção é reconstituída do <xref:System.Runtime.Serialization.SerializationInfo> transmitido no fluxo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public Type Left { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Left" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Type" /> do argumento da esquerda da expressão que causou a exceção.</summary>
+        <value>O <see cref="T:System.Type" /> do argumento da esquerda da expressão que causou a exceção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operator">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeBinaryOperatorType Operator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.CodeDom.CodeBinaryOperatorType Operator" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Operator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeBinaryOperatorType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.CodeDom.CodeBinaryOperatorType" /> representar o operador que causou a exceção.</summary>
+        <value>O <see cref="T:System.CodeDom.CodeBinaryOperatorType" /> representar o operador que causou a exceção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public Type Right { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Right" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleEvaluationIncompatibleTypesException.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Type" /> do argumento da direita da expressão que causou a exceção.</summary>
+        <value>O <see cref="T:System.Type" /> do argumento da direita da expressão que causou a exceção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

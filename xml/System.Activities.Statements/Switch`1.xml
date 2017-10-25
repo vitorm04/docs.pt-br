@@ -1,0 +1,299 @@
+<Type Name="Switch&lt;T&gt;" FullName="System.Activities.Statements.Switch&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class Switch&lt;T&gt; : System.Activities.NativeActivity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Switch`1&lt;T&gt; extends System.Activities.NativeActivity" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.Switch`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Activities.NativeActivity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Cases")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">O tipo dos valores fornecidos na coleção <see cref="P:System.Activities.Statements.Switch`1.Cases" />.</typeparam>
+    <summary>Seleciona uma opção entre um número de atividades a serem executadas, com base no valor de uma determinada expressão do tipo especificado no especificador do tipo de objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada caso o <xref:System.Activities.Statements.Switch%601.Cases%2A> dicionário consiste em um valor (que serve como a chave para dicionário) e uma atividade (atuando como o valor para o dicionário). O <xref:System.Activities.Statements.Switch`1.Expression%2A> é avaliada e comparada com as chaves de <xref:System.Activities.Statements.Switch%601.Cases%2A> dicionário. Se uma correspondência for encontrada, a atividade correspondente é executada. Cada chave no <xref:System.Activities.Statements.Switch%601.Cases%2A> dicionário deve ser exclusivo de acordo com o comparador de igualdade do dicionário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.Switch%601> atividade. Este exemplo é proveniente do [usando atividades procedurais](~/docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md) exemplo.  
+  
+ [!code-csharp[wfs_Procedurals#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_procedurals/cs/program.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Statements.Switch`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.Switch%601> atividade. Este exemplo é proveniente do [usando atividades procedurais](~/docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md) exemplo.  
+  
+ [!code-csharp[wfs_Procedurals#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_procedurals/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Switch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Switch`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Statements.Switch`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.Switch%601> atividade. Este exemplo é proveniente do [usando atividades procedurais](~/docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md) exemplo.  
+  
+ [!code-csharp[wfs_Procedurals#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_procedurals/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Switch (System.Activities.Activity&lt;T&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Activity`1&lt;!T&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Switch`1.#ctor(System.Activities.Activity{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Activities.Activity&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expression">A expressão para avaliar e comparar os valores de <see cref="P:System.Activities.Statements.Switch`1.Cases" /> dicionário.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Statements.Switch`1" /> classe com a expressão especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Switch (System.Activities.InArgument&lt;T&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.InArgument`1&lt;!T&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Switch`1.#ctor(System.Activities.InArgument{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Activities.InArgument&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expression">A expressão para avaliar e comparar os valores de <see cref="P:System.Activities.Statements.Switch`1.Cases" /> dicionário.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Statements.Switch`1" /> classe com a expressão especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Switch (System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,T&gt;&gt; expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, !T&gt;&gt; expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Switch`1.#ctor(System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,`0}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,T&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="expression">A expressão para avaliar e comparar os valores de <see cref="P:System.Activities.Statements.Switch`1.Cases" /> dicionário.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Statements.Switch`1" /> classe com a expressão especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.NativeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.NativeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Switch`1.CacheMetadata(System.Activities.NativeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.NativeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cases">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;T,System.Activities.Activity&gt; Cases { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;!T, class System.Activities.Activity&gt; Cases" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Switch`1.Cases" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;T,System.Activities.Activity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o dicionário de caminhos de execução possíveis. Cada entrada contém uma chave e uma atividade que é executada quando o resultado da expressão correspondente à chave.</summary>
+        <value>Os caminhos de execução.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a atividade é executada, o caso em que é executado é o primeiro caso cuja chave corresponde a <xref:System.Activities.Statements.Switch`1.Expression%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a definição da propriedade de casos de um <xref:System.Activities.Statements.Switch%601> atividade. Este exemplo é proveniente do [usando atividades procedurais](~/docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md) exemplo.  
+  
+ [!code-csharp[wfs_Procedurals#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_procedurals/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Default { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Default" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Switch`1.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a atividade que é executada se nenhuma chave de entradas na <see cref="P:System.Activities.Statements.Switch`1.Cases" /> correspondência de coleção de <see cref="P:System.Activities.Statements.Switch`1.Expression" /> propriedade.</summary>
+        <value>A atividade padrão para executar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override void Execute (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Execute(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Switch`1.Execute(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument&lt;T&gt; Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument`1&lt;!T&gt; Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Switch`1.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Activities.RequiredArgument</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto a ser comparado com as chaves de <see cref="P:System.Activities.Statements.Switch`1.Cases" /> coleção.</summary>
+        <value>O objeto a ser comparado com as chaves de <see cref="P:System.Activities.Statements.Switch`1.Cases" /> coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A comparação ocorre depois que a expressão é avaliada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a definição da propriedade de expressão de uma <xref:System.Activities.Statements.Switch%601> atividade. Este exemplo é proveniente do [usando atividades procedurais](~/docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md) exemplo.  
+  
+ [!code-csharp[wfs_Procedurals#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_procedurals/cs/program.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateDynamicUpdateMap">
+      <MemberSignature Language="C#" Value="protected override void OnCreateDynamicUpdateMap (System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata metadata, System.Activities.Activity originalActivity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCreateDynamicUpdateMap(class System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata metadata, class System.Activities.Activity originalActivity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.Switch`1.OnCreateDynamicUpdateMap(System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata,System.Activities.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata" />
+        <Parameter Name="originalActivity" Type="System.Activities.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <param name="originalActivity">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

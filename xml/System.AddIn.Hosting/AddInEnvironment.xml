@@ -1,0 +1,97 @@
+<Type Name="AddInEnvironment" FullName="System.AddIn.Hosting.AddInEnvironment">
+  <TypeSignature Language="C#" Value="public sealed class AddInEnvironment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AddInEnvironment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.AddInEnvironment" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso ao domínio de aplicativo e o processo de um suplemento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta classe para carregar os suplementos em um ambiente desejado, que pode ser um dos seguintes:  
+  
+-   Um domínio de aplicativo existente para o qual você tem o <xref:System.AppDomain> objeto.  
+  
+-   Um domínio de aplicativo que foi gerado automaticamente para ativar um suplemento.  
+  
+-   Um processo externo existente.  
+  
+ Para obter o <xref:System.AddIn.Hosting.AddInEnvironment> de objeto para um suplemento, passar domínio de aplicativo do suplemento para o <xref:System.AddIn.Hosting.AddInEnvironment> construtor de classe. Como alternativa, você pode usar o <xref:System.AddIn.Hosting.AddInController.AddInEnvironment%2A> propriedade o <xref:System.AddIn.Hosting.AddInController> classe para obter o suplemento <xref:System.AddIn.Hosting.AddInEnvironment> objeto.  
+  
+ Depois de obter o <xref:System.AddIn.Hosting.AddInEnvironment> do objeto, você pode fazer o seguinte:  
+  
+-   Passar que <xref:System.AddIn.Hosting.AddInEnvironment> objeto apropriado <xref:System.AddIn.Hosting.AddInToken.Activate%2A> sobrecarga do método. O suplemento será ativado no domínio de aplicativo e do processo que é representado pelo <xref:System.AddIn.Hosting.AddInEnvironment> objeto.  
+  
+-   Use o <xref:System.AddIn.Hosting.AddInEnvironment.Process%2A> propriedade para obter um <xref:System.AddIn.Hosting.AddInProcess> objeto. Em seguida, passa o objeto ao apropriado <xref:System.AddIn.Hosting.AddInToken.Activate%2A> sobrecarga do método. O suplemento será ativado no processo que é representado pelo <xref:System.AddIn.Hosting.AddInProcess> objeto, mas em um novo domínio de aplicativo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AddInEnvironment (AppDomain appDomain);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.AppDomain appDomain) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Hosting.AddInEnvironment.#ctor(System.AppDomain)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="appDomain" Type="System.AppDomain" />
+      </Parameters>
+      <Docs>
+        <param name="appDomain">O domínio de aplicativo que contém o suplemento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.AddIn.Hosting.AddInEnvironment" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tiver acesso ao domínio do aplicativo que contém o suplemento que você precisa, você pode usar esse construtor para obter o suplemento <xref:System.AddIn.Hosting.AddInEnvironment> objeto. Caso contrário, você pode usar o <xref:System.AddIn.Hosting.AddInController.AddInEnvironment%2A> propriedade o <xref:System.AddIn.Hosting.AddInController> classe para obter o <xref:System.AddIn.Hosting.AddInEnvironment> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="appDomain" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Permissão de confiança total é exigida. Um chamador na cadeia de chamada não tem permissão suficiente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Process">
+      <MemberSignature Language="C#" Value="public System.AddIn.Hosting.AddInProcess Process { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.AddIn.Hosting.AddInProcess Process" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Hosting.AddInEnvironment.Process" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInProcess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.AddIn.Hosting.AddInProcess" /> objeto que representa o processo no qual o suplemento está sendo executado.</summary>
+        <value>O processo no qual o suplemento está sendo executado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para ativar vários suplementos no mesmo processo, mas em domínios diferentes.  
+  
+ Passar o <xref:System.AddIn.Hosting.AddInProcess> objeto obtido com essa propriedade ao apropriado <xref:System.AddIn.Hosting.AddInToken.Activate%2A> sobrecarga do método.  
+  
+ Se você deseja ativá-los no mesmo domínio em um processo externo deve passar o <xref:System.AddIn.Hosting.AddInEnvironment> objeto diretamente para o <xref:System.AddIn.Hosting.AddInToken.Activate%60%601%28System.AddIn.Hosting.AddInEnvironment%29?displayProperty=nameWithType> sobrecarga do método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

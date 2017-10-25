@@ -1,0 +1,175 @@
+<Type Name="UpdatePanelTriggerCollection" FullName="System.Web.UI.UpdatePanelTriggerCollection">
+  <TypeSignature Language="C#" Value="public class UpdatePanelTriggerCollection : System.Collections.ObjectModel.Collection&lt;System.Web.UI.UpdatePanelTrigger&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UpdatePanelTriggerCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.Web.UI.UpdatePanelTrigger&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.UpdatePanelTriggerCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.Web.UI.UpdatePanelTrigger&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Web.UI.UpdatePanelTrigger</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de <see cref="T:System.Web.UI.UpdatePanelTrigger" /> objetos para um <see cref="T:System.Web.UI.UpdatePanel" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gatilhos no <xref:System.Web.UI.UpdatePanelTrigger> coleção são especificados usando o **Coleção UpdatePanelTrigger** no designer ou adicionando-declarativamente como `<Triggers>` elementos dentro a <xref:System.Web.UI.UpdatePanel> controle. Você pode adicionar dois tipos de gatilhos:  
+  
+-   Um <xref:System.Web.UI.AsyncPostBackTrigger> objeto que pode ser usado para especificar que um controle pode causar um postback assíncrono e atualizar o conteúdo do painel de atualização. O <xref:System.Web.UI.AsyncPostBackTrigger> objeto é usado para controles fora de um painel de atualização ou que não são controles filho imediato de um <xref:System.Web.UI.UpdatePanel> controle.  
+  
+-   Um <xref:System.Web.UI.PostBackTrigger> objeto que pode ser usado para especificar que um controle de postagem dentro de um <xref:System.Web.UI.UpdatePanel> controle pode causar um postback síncrono e uma atualização de página inteira.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpdatePanelTriggerCollection (System.Web.UI.UpdatePanel owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.UpdatePanel owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanelTriggerCollection.#ctor(System.Web.UI.UpdatePanel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.UpdatePanel" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Web.UI.UpdatePanel" /> de controle que o <see cref="T:System.Web.UI.UpdatePanelTriggerCollection" /> pertence.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.UpdatePanelTrigger" /> classe de coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geralmente você adiciona gatilhos para um <xref:System.Web.UI.UpdatePanel> controle usando o **Coleção UpdatePanelTrigger** no designer ou adicionando-declarativamente como `<Triggers>` elementos dentro de <xref:System.Web.UI.UpdatePanel> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItems">
+      <MemberSignature Language="C#" Value="protected override void ClearItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanelTriggerCollection.ClearItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os elementos do <see cref="T:System.Web.UI.UpdatePanelTriggerCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.Web.UI.UpdatePanelTrigger item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.Web.UI.UpdatePanelTrigger item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanelTriggerCollection.InsertItem(System.Int32,System.Web.UI.UpdatePanelTrigger)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Web.UI.UpdatePanelTrigger" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual o gatilho deve ser inserido.</param>
+        <param name="item">O gatilho insert. O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Insere um <see cref="T:System.Web.UI.UpdatePanelTrigger" /> objeto para o <see cref="T:System.Web.UI.UpdatePanelTriggerCollection" /> objeto no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar <xref:System.Web.UI.AsyncPostBackTrigger> objetos, <xref:System.Web.UI.PostBackTrigger> objetos ou qualquer gatilho personalizado que deriva de <xref:System.Web.UI.UpdatePanelTrigger>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Web.UI.UpdatePanel Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.UpdatePanel Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanelTriggerCollection.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.UpdatePanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o <see cref="T:System.Web.UI.UpdatePanel" /> de controle que o <see cref="T:System.Web.UI.UpdatePanelTriggerCollection" /> pertence.</summary>
+        <value>Um <see cref="T:System.Web.UI.UpdatePanel" /> controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanelTriggerCollection.RemoveItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do elemento a ser removido.</param>
+        <summary>Remove o elemento no índice especificado do <see cref="T:System.Web.UI.UpdatePanelTriggerCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.Web.UI.UpdatePanelTrigger item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.Web.UI.UpdatePanelTrigger item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanelTriggerCollection.SetItem(System.Int32,System.Web.UI.UpdatePanelTrigger)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Web.UI.UpdatePanelTrigger" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do gatilho para substituir.</param>
+        <param name="item">O novo valor para o gatilho no índice especificado. O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Substitui o gatilho no índice especificado no <see cref="T:System.Web.UI.UpdatePanelTriggerCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode substituir um elemento o <xref:System.Web.UI.UpdatePanelTriggerCollection> do objeto com um <xref:System.Web.UI.AsyncPostBackTrigger> objeto, um <xref:System.Web.UI.PostBackTrigger> objeto ou qualquer gatilho personalizado que deriva de <xref:System.Web.UI.UpdatePanelTrigger>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

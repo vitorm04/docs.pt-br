@@ -1,0 +1,106 @@
+<Type Name="SerializationSectionGroup" FullName="System.Runtime.Serialization.Configuration.SerializationSectionGroup">
+  <TypeSignature Language="C#" Value="public sealed class SerializationSectionGroup : System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SerializationSectionGroup extends System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.Configuration.SerializationSectionGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSectionGroup</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Manipula os elementos XML usados para configurar a serialização pelo <see cref="T:System.Runtime.Serialization.DataContractSerializer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada para manipular o [ &lt;dataContractSerializer&gt; ](~/docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) grupo, que contém o [ &lt;dataContractSerializer&gt; ](~/docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) elemento Especificamente, para permitir a adição de tipos para a coleção de tipos conhecidos. Para obter mais informações sobre tipos conhecidos de contrato de dados, consulte [tipos conhecidos de contrato de dados](~/docs/framework/wcf/feature-details/data-contract-known-types.md).  
+  
+ Para obter um exemplo de como usar o elemento para adicionar à coleção de tipos conhecidos, consulte [ &lt;declaredTypes&gt;](~/docs/framework/configure-apps/file-schema/wcf/declaredtypes.md).  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerializationSectionGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Configuration.SerializationSectionGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Serialization.Configuration.SerializationSectionGroup" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DataContractSerializer">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Configuration.DataContractSerializerSection DataContractSerializer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.Configuration.DataContractSerializerSection DataContractSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Configuration.SerializationSectionGroup.DataContractSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Configuration.DataContractSerializerSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Runtime.Serialization.Configuration.DataContractSerializerSection" /> usado para configurar a coleção de tipos conhecidos.</summary>
+        <value>O <see cref="T:System.Runtime.Serialization.Configuration.DataContractSerializerSection" /> usado para a seção de configuração de serialização.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetSectionGroup">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Serialization.Configuration.SerializationSectionGroup GetSectionGroup (System.Configuration.Configuration config);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Serialization.Configuration.SerializationSectionGroup GetSectionGroup(class System.Configuration.Configuration config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.Configuration.SerializationSectionGroup.GetSectionGroup(System.Configuration.Configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Configuration.SerializationSectionGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="config" Type="System.Configuration.Configuration" />
+      </Parameters>
+      <Docs>
+        <param name="config">Um <see cref="T:System.Configuration.Configuration" /> que representa a configuração para recuperar.</param>
+        <summary>Obtém a seção de configuração de serialização para a configuração especificada.</summary>
+        <returns>Um <see cref="T:System.Runtime.Serialization.Configuration.SerializationSectionGroup" /> que representa a seção de configuração.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NetDataContractSerializer">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.Configuration.NetDataContractSerializerSection NetDataContractSerializer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.Configuration.NetDataContractSerializerSection NetDataContractSerializer" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.Configuration.SerializationSectionGroup.NetDataContractSerializer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.Configuration.NetDataContractSerializerSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Runtime.Serialization.Configuration.NetDataContractSerializerSection" /> usado para configurar a coleção de tipos conhecidos.</summary>
+        <value>O objeto <see cref="T:System.Runtime.Serialization.Configuration.NetDataContractSerializerSection" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

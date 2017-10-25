@@ -1,0 +1,154 @@
+<Type Name="CodeIndexerExpression" FullName="System.CodeDom.CodeIndexerExpression">
+  <TypeSignature Language="C#" Value="public class CodeIndexerExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeIndexerExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeIndexerExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma referência a uma propriedade do indexador de um objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeIndexerExpression>pode ser usado para representar uma referência a um indexador de código ou o indexador de matriz não. Use <xref:System.CodeDom.CodeArrayIndexerExpression> representar uma referência a indexadores de matriz.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso de um <xref:System.CodeDom.CodeIndexerExpression> para fazer referência a um indexador de tipo para o objeto atual.  
+  
+ [!code-cpp[CodeMultiExample#3](~/samples/snippets/cpp/VS_Snippets_CLR/CodeMultiExample/CPP/codemultiexample.cpp#3)]
+ [!code-csharp[CodeMultiExample#3](~/samples/snippets/csharp/VS_Snippets_CLR/CodeMultiExample/CS/codemultiexample.cs#3)]
+ [!code-vb[CodeMultiExample#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeMultiExample/VB/codemultiexample.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeIndexerExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeIndexerExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeIndexerExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeIndexerExpression (System.CodeDom.CodeExpression targetObject, params System.CodeDom.CodeExpression[] indices);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression targetObject, class System.CodeDom.CodeExpression[] indices) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeIndexerExpression.#ctor(System.CodeDom.CodeExpression,System.CodeDom.CodeExpression[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetObject" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="indices" Type="System.CodeDom.CodeExpression[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="targetObject">O objeto de destino.</param>
+        <param name="indices">O índice ou índices da expressão indexador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeIndexerExpression" /> classe usando o objeto de destino especificado e o índice.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Indices">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpressionCollection Indices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpressionCollection Indices" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeIndexerExpression.Indices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpressionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de índices da expressão indexador.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeExpressionCollection" /> que indica o índice ou índices da expressão indexador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.CodeDom.CodeExpressionCollection> pode conter um <xref:System.CodeDom.CodeExpression> que especifica um único índice dentro do indexador de destino ou vários <xref:System.CodeDom.CodeExpression> objetos que juntas especificam uma interseção específica de índices nas dimensões do indexador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetObject">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression TargetObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression TargetObject" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeIndexerExpression.TargetObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de destino que pode ser indexado.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeExpression" /> que indica o objeto do indexador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa expressão deve indicar um objeto que tem uma propriedade do indexador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

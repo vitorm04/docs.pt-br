@@ -1,0 +1,87 @@
+<Type Name="ClientSettings" FullName="System.Windows.Automation.ClientSettings">
+  <TypeSignature Language="C#" Value="public static class ClientSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ClientSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ClientSettings" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém métodos que disponibilizam provedores do lado do cliente para o cliente.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RegisterClientSideProviderAssembly">
+      <MemberSignature Language="C#" Value="public static void RegisterClientSideProviderAssembly (System.Reflection.AssemblyName assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterClientSideProviderAssembly(class System.Reflection.AssemblyName assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly(System.Reflection.AssemblyName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assemblyName" Type="System.Reflection.AssemblyName" />
+      </Parameters>
+      <Docs>
+        <param name="assemblyName">Nome do assembly.</param>
+        <summary>Registra um assembly que contém os provedores do lado do cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado na inicialização por clientes de automação de interface do usuário que usam provedores de automação de interface do usuário do lado do cliente carregados a partir de um assembly. Os aplicativos que usam provedores implementados em seu próprio assembly devem chamar <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>.  
+  
+   
+  
+## Examples  
+ Por exemplo de código, consulte [registrar um Assembly do provedor do lado do cliente](~/docs/framework/ui-automation/register-a-client-side-provider-assembly.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Windows.Automation.ProxyAssemblyNotLoadedException">Não foi possível carregar o assembly.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterClientSideProviders">
+      <MemberSignature Language="C#" Value="public static void RegisterClientSideProviders (System.Windows.Automation.ClientSideProviderDescription[] clientSideProviderDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterClientSideProviders(valuetype System.Windows.Automation.ClientSideProviderDescription[] clientSideProviderDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.ClientSettings.RegisterClientSideProviders(System.Windows.Automation.ClientSideProviderDescription[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientSideProviderDescription" Type="System.Windows.Automation.ClientSideProviderDescription[]" />
+      </Parameters>
+      <Docs>
+        <param name="clientSideProviderDescription">Uma matriz de descrições de provedor.</param>
+        <summary>Registra os provedores do lado do cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado na inicialização por clientes que implementam seus próprios provedores do lado do cliente. Os clientes que usam provedores de um assembly separado devem chamar <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A>.  
+  
+   
+  
+## Examples  
+ Por exemplo de código, consulte [implementar provedores de automação de interface do usuário em um aplicativo cliente](~/docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Windows.Automation.ProxyAssemblyNotLoadedException">Não foi possível carregar o assembly.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

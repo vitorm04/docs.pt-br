@@ -1,0 +1,677 @@
+<Type Name="Peer" FullName="System.Net.PeerToPeer.Collaboration.Peer">
+  <TypeSignature Language="C#" Value="public abstract class Peer : IDisposable, IEquatable&lt;System.Net.PeerToPeer.Collaboration.Peer&gt;, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit Peer extends System.Object implements class System.IDisposable, class System.IEquatable`1&lt;class System.Net.PeerToPeer.Collaboration.Peer&gt;, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.Collaboration.Peer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Net.PeerToPeer.Collaboration.Peer&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Essa classe representa um par remoto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A finalidade do resumo <xref:System.Net.PeerToPeer.Collaboration.Peer> classe é fornecer uma definição de classe base comum que pode ser compartilhada por classes derivadas como <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> e <xref:System.Net.PeerToPeer.Collaboration.PeerContact>. Ele não pode ser diretamente construído, pois ela é abstrata. Em vez disso, os desenvolvedores devem usar as subclasses PeerNearMe ou PeerContact.  
+  
+ Ponto de contato, correspondente remoto, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>, <xref:System.Net.PeerToPeer.Collaboration.ContactManager.LocalContact%2A>, e <xref:System.Net.PeerToPeer.Collaboration.PeerContact> termos sinônimos, com base no contexto.  
+  
+ "Chamar itens par" e "remoto" são sinônimos normalmente.  Chamada ponto a ponto não se refere ao aplicativo chamando um método específico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Peer (System.Runtime.Serialization.SerializationInfo serializationInfo, System.Runtime.Serialization.StreamingContext streamingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo serializationInfo, valuetype System.Runtime.Serialization.StreamingContext streamingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializationInfo" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="streamingContext" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="serializationInfo">Referência para o objeto que contém os dados necessários para desserializar a essa instância.</param>
+        <param name="streamingContext">Contexto que fornece os meios para desserializar os dados. Também conhecido como a fonte de dados serializados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> tipo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna um tipo <xref:System.Net.PeerToPeer.Collaboration.Peer> objeto, uma subclasse em <xref:System.Net.PeerToPeer.Collaboration.PeerContact> ou <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>. O PeerContact <xref:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName%2A> ou o PeerNearMe <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.Nickname%2A> contêm referências exclusivas para o nome do novo objeto de ponto a ponto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo objeto <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Definido como <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> de objeto e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Net.PeerToPeer.Collaboration.Peer other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Net.PeerToPeer.Collaboration.Peer other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.Equals(System.Net.PeerToPeer.Collaboration.Peer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Net.PeerToPeer.Collaboration.Peer" />
+      </Parameters>
+      <Docs>
+        <param name="other">Um <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> instância a ser comparado com esta instância.</param>
+        <summary>Executa uma comparação diferencia maiusculas e minúsculas do atual <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> e o ponto especificado.</summary>
+        <returns>Retorna <see langword="true" /> se fornecido <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> instância tem o mesmo <see cref="P:System.Net.PeerToPeer.Collaboration.Peer.PeerEndPoints" /> que esta instância de ponto a ponto, caso contrário <see langword="false" />. Esse método também retorna <see langword="false" /> se o parâmetro de ponto a ponto é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois pontos são considerados iguais se eles tiverem a mesma coleção de ponto de extremidade, independentemente dos valores no seu <xref:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName%2A> propriedades. Cenários de uso não envolvem essa classe diretamente, mas em vez disso, derivada <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> ou <xref:System.Net.PeerToPeer.Collaboration.PeerContact> classes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O destino dessa serialização.</param>
+        <summary>Popula um objeto <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados necessários para serializar o <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetObjects">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém a coleção de objetos de dados que foram registrados por par de um cache local.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa funcionalidade é exposta somente no <xref:System.Net.PeerToPeer.Collaboration.PeerContact> classe.  Essa funcionalidade não é exposta em qualquer outro tipo de ponto a ponto por motivos de segurança.  
+  
+ Se nenhum objeto foi localizado para o ponto de extremidade, uma coleção de tamanho zero (0) será retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetObjects">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerObjectCollection GetObjects ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerObjectCollection GetObjects() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.GetObjects" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a coleção de objetos de dados de um cache local.</summary>
+        <returns>O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> coleta para o ponto a ponto ou ponto de extremidade especificado por essa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa funcionalidade é exposta somente no <xref:System.Net.PeerToPeer.Collaboration.PeerContact> classe.  Essa funcionalidade não é exposta em qualquer outro tipo de ponto a ponto por motivos de segurança.  
+  
+ Se a sessão de colaboração ponto a ponto não criar uma instância com um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>, esse método não pode acessar objetos no computador local.  O mesmo é verdadeiro para os aplicativos registrados para a sessão de colaboração.  
+  
+ A coleção de objetos pares consiste em aplicativo, o objeto de dados e informações de presença para o ponto a ponto ou ponto de extremidade especificado por essa instância. Se nenhum objeto foi localizado para o ponto de extremidade, uma coleção de tamanho zero (0) será retornado. Se o par de chamada está inscrito para este ponto de extremidade, o cache é atualizado automaticamente; Caso contrário, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> deve ser chamado antes de chamar esse método.  
+  
+ O chamador não é necessário para ser assinado da infraestrutura de colaboração para esse método seja concluída com êxito.  Uma chamada bem-sucedida para <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> ou uma da <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> métodos devem ser concluídos quando o chamador foi conectado antes de chamar esse método.  
+  
+ Observação: As sobrecargas adicionais são definidas no <xref:System.Net.PeerToPeer.Collaboration.Peer> classe em vez de subclasses <xref:System.Net.PeerToPeer.Collaboration.PeerContact> e <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O chamador não está inscrito para o ponto de extremidade ou ainda não foi chamado <see cref="M:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData" />.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">O método não conseguiu concluir devido a um erro na infraestrutura de colaboração ponto subjacente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjects">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerObjectCollection GetObjects (Guid objectId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerObjectCollection GetObjects(valuetype System.Guid objectId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.GetObjects(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerObjectCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="objectId">O <see cref="T:System.Guid" /> do <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> objeto a ser recuperado da coleção</param>
+        <summary>Obtém o <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> objeto associado fornecido <see cref="T:System.Guid" /> do <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObjectCollection" />.</summary>
+        <returns>
+          <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" />objeto associado fornecido <see cref="T:System.Guid" />. Se um objeto não for encontrado, uma coleção de tamanho zero (0) será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa funcionalidade é exposta somente no <xref:System.Net.PeerToPeer.Collaboration.PeerContact> classe. Essa funcionalidade não é exposta em qualquer outro tipo de ponto a ponto por motivos de segurança.  
+  
+ A coleção de objetos pares consiste em aplicativo, o objeto de dados e informações de presença para o ponto a ponto ou ponto de extremidade especificado por essa instância. Se nenhum objeto foi localizado para o ponto de extremidade, uma coleção de tamanho zero (0) será retornado. Quando o ponto de chamada está inscrito para este ponto de extremidade, o cache é atualizado automaticamente; Caso contrário, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> deve ser chamado antes de chamar esse método.  
+  
+ O chamador não é necessário para ser assinado da infraestrutura de colaboração para esse método seja concluída com êxito.  Uma chamada bem-sucedida para <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData%2A> ou uma da <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Subscribe%2A> métodos devem ser concluídos quando o chamador foi conectado antes de chamar esse método. Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando a sessão de colaboração é iniciada.  
+  
+ Observação: As sobrecargas adicionais são definidas no <xref:System.Net.PeerToPeer.Collaboration.Peer> classe em vez de classes derivadas <xref:System.Net.PeerToPeer.Collaboration.PeerContact> e <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O objeto ID é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O chamador não está inscrito para o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> ou ainda não foi chamado <see cref="M:System.Net.PeerToPeer.Collaboration.PeerNearMe.RefreshData" /> em relação a ela.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Ocorreu um erro ao obter informações sobre o objeto do par.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPresenceInfo">
+      <MemberSignature Language="C#" Value="public System.Net.PeerToPeer.Collaboration.PeerPresenceInfo GetPresenceInfo (System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.PeerToPeer.Collaboration.PeerPresenceInfo GetPresenceInfo(class System.Net.PeerToPeer.Collaboration.PeerEndPoint peerEndPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.GetPresenceInfo(System.Net.PeerToPeer.Collaboration.PeerEndPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerPresenceInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerEndPoint" Type="System.Net.PeerToPeer.Collaboration.PeerEndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="peerEndPoint">O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" /> para o qual recuperar informações de presença.</param>
+        <summary>Obtém as informações de presença disponíveis para um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPoint" />.</summary>
+        <returns>Retorna um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerPresenceInfo" /> o objeto que contém informações de presença de um ponto de extremidade disponível, se ele estiver disponível; caso contrário, ele é <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informações de presença incluem descritores de status como ausente online e offline.  
+  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="peerEndPoint" />não contém um ponto de extremidade válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="peerEndPoint" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">Este objeto foi descartado e não pode ser usado em operações de ponto a ponto atual.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Ocorreu um erro ao recuperar informações de presença do par.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invite">
+      <MemberSignature Language="C#" Value="public abstract System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.Invite" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerInvitationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Envia um convite para um <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> para iniciar um determinado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />.</summary>
+        <returns>Um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> do par que recebeu o convite.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando inicia a sessão de colaboração ponto a ponto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   Ocorreu um erro durante o processo de convite.  
+  
+-   O aplicativo em execução no momento não está registrado com a infraestrutura de colaboração ponto a ponto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Invite">
+      <MemberSignature Language="C#" Value="public abstract System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite (System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, string message, byte[] invitationData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.PeerToPeer.Collaboration.PeerInvitationResponse Invite(class System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, string message, unsigned int8[] invitationData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.Invite(System.Net.PeerToPeer.Collaboration.PeerApplication,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerInvitationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationToInvite" Type="System.Net.PeerToPeer.Collaboration.PeerApplication" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="invitationData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="applicationToInvite">O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> para que o convite é enviado.</param>
+        <param name="message">Uma mensagem para enviar para o par remoto juntamente com o convite do aplicativo.  A mensagem pode ser não mais que 255 caracteres Unicode.</param>
+        <param name="invitationData">Um usuário definido o blob de dados para associar o convite.  O tamanho pode ser não mais de 16.384 bytes.</param>
+        <summary>Envia um convite para um <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> para iniciar um determinado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />.</summary>
+        <returns>Um <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> do par que recebeu o convite.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O aplicativo não está registrado para colaboração.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="invitationData" />é maior que 16.384 bytes.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   Ocorreu um erro durante o processo de convite.  
+  
+-   O aplicativo em execução no momento não está registrado com a infraestrutura de colaboração ponto a ponto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InviteAsync">
+      <MemberSignature Language="C#" Value="public abstract void InviteAsync (object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InviteAsync(object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.InviteAsync(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userToken">Objeto definido pelo usuário para passar para o retorno de chamada da operação assíncrona para identificação. Isso necessário o parâmetro deve ser exclusivo entre todas as operações de convite assíncrona em andamento.</param>
+        <summary>Inicia uma operação assíncrona de convite que envia um convite para um <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> para iniciar um determinado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="userToken" /> é <see langword="null." /></exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   Ocorreu um erro durante o processo de convite.  
+  
+-   O aplicativo em execução no momento não está registrado com a infraestrutura de colaboração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InviteAsync">
+      <MemberSignature Language="C#" Value="public abstract void InviteAsync (System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, string message, byte[] invitationData, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InviteAsync(class System.Net.PeerToPeer.Collaboration.PeerApplication applicationToInvite, string message, unsigned int8[] invitationData, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.InviteAsync(System.Net.PeerToPeer.Collaboration.PeerApplication,System.String,System.Byte[],System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationToInvite" Type="System.Net.PeerToPeer.Collaboration.PeerApplication" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="invitationData" Type="System.Byte[]" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="applicationToInvite">O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" /> para que o convite é enviado.</param>
+        <param name="message">Uma mensagem para enviar para o par remoto juntamente com o convite do aplicativo. O tamanho máximo da mensagem é de 255 caracteres de Unicode.</param>
+        <param name="invitationData">Um usuário definido o blob de dados para associar o convite.  O tamanho pode ser não mais de 16.384 bytes.</param>
+        <param name="userToken">Objeto definido pelo usuário para passar para o retorno de chamada da operação assíncrona para identificação. Isso necessário o parâmetro deve ser exclusivo entre todas as operações de convite assíncrona em andamento.</param>
+        <summary>Inicia uma operação assíncrona de convite que envia um convite para um <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> para iniciar um determinado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerApplication" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>. Esse estado é criado quando a sessão de colaboração ponto a ponto é iniciada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O aplicativo não está registrado com a infraestrutura de colaboração.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="userToken" /> é <see langword="null." /></exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="invitationData" />é maior que 16.384 bytes.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   Ocorreu um erro durante o processo de convite.  
+  
+-   O aplicativo em execução no momento não está registrado com a infraestrutura de colaboração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InviteAsyncCancel">
+      <MemberSignature Language="C#" Value="public void InviteAsyncCancel (object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InviteAsyncCancel(object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.InviteAsyncCancel(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userToken">Objeto para passar para o retorno de chamada do definido pelo usuário a <see cref="M:System.Net.PeerToPeer.Collaboration.Peer.InviteAsync(System.Net.PeerToPeer.Collaboration.PeerApplication,System.String,System.Byte[],System.Object)" /> operação para identificação. Isso necessário o parâmetro deve ser exclusivo entre todas as operações de convite assíncrona em andamento.</param>
+        <summary>Cancela o convite foi enviado com o <see cref="M:System.Net.PeerToPeer.Collaboration.Peer.InviteAsync(System.Net.PeerToPeer.Collaboration.PeerApplication,System.String,System.Byte[],System.Object)" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método garante que o sistema será interrompida aguardar um <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> do par associado à solicitação InviteAsync.  
+  
+ Vários convites podem ser pendentes em um determinado momento.  Se o <xref:System.Net.PeerToPeer.Collaboration.Peer.InviteAsyncCancel%2A> método é chamado quando uma operação assíncrona é identificado pelo `userToken` é não na existência, uma exceção será lançada. O `userToken` objeto deve ser fornecido, pois ele é usado para rastrear uma chamada assíncrona específica. Objeto fornecido pelo aplicativo host é exclusivo para cada solicitação de convite.  
+  
+ Quando esse método é usado, o <xref:System.Net.PeerToPeer.Collaboration.Peer.InviteCompleted> pode ainda ser gerado, mas a propriedade de cancelamento em associado <xref:System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs> objeto será definido como`true.`  
+  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="userToken" /> parâmetro não pode ser<see langword="null." /></exception>
+        <exception cref="T:System.InvalidOperationException">Um convite assíncrono não estiver pendente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InviteCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs&gt; InviteCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs&gt; InviteCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Net.PeerToPeer.Collaboration.Peer.InviteCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gerado quando o processo de convite para um par remoto foi concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse> Especifica o resultado da operação de convite.  
+  
+ Chamar esse método exige um <xref:System.Security.Permissions.PermissionState> de <xref:System.Security.Permissions.PermissionState.Unrestricted>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOnline">
+      <MemberSignature Language="C#" Value="public bool IsOnline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOnline" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.Peer.IsOnline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> está 'online' no momento.</summary>
+        <value>Retorna <see langword="true" /> se o <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> está online em qualquer um dos pontos de extremidade associados a ele; caso contrário <see langword="false" />.  
+  
+ A menos que especificado, o valor padrão dessa propriedade é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInviteCompleted">
+      <MemberSignature Language="C#" Value="protected virtual void OnInviteCompleted (System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInviteCompleted(class System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.OnInviteCompleted(System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Net.PeerToPeer.Collaboration.InviteCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerInvitationResponse" /> objeto que contém os dados de eventos a serem passados para delegados associados a <see cref="E:System.Net.PeerToPeer.Collaboration.Peer.InviteCompleted" /> eventos.</param>
+        <summary>Aciona o evento <see cref="E:System.Net.PeerToPeer.Collaboration.Peer.InviteCompleted" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que herdam desta classe podem substituir esse método para executar mais tarefas quando a <xref:System.Net.PeerToPeer.Collaboration.Peer.InviteCompleted> é gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerEndPoints">
+      <MemberSignature Language="C#" Value="public virtual System.Net.PeerToPeer.Collaboration.PeerEndPointCollection PeerEndPoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.PeerToPeer.Collaboration.PeerEndPointCollection PeerEndPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.Peer.PeerEndPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.Collaboration.PeerEndPointCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPointCollection" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" />.</summary>
+        <value>O <see cref="T:System.Net.PeerToPeer.Collaboration.PeerEndPointCollection" /> associado ao <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um par remoto é um intermediário para um par de host, o <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> objetos contidos no <xref:System.Net.PeerToPeer.Collaboration.PeerEndPointCollection> associado com o contata o local para o outro computador remoto na rede.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" /> foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronizingObject">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ISynchronizeInvoke SynchronizingObject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.ISynchronizeInvoke SynchronizingObject" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.Collaboration.Peer.SynchronizingObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Description("SynchronizingObject")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ISynchronizeInvoke</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando o valor da propriedade é definido, todos os eventos não são acionados como resultado de uma operação assíncrona terá os manipuladores de eventos associados retorno de chamada no thread que criou o específico <see cref="P:System.Net.PeerToPeer.Collaboration.PeerEndPoint.SynchronizingObject" />.</summary>
+        <value>Objeto que implementa o <see cref="T:System.ComponentModel.ISynchronizeInvoke" /> interface e é usado por instâncias desse tipo de sincronização do manipulador de eventos no thread que criou.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor do conjunto de padrão para essa propriedade é `null`, indicando que todos os manipuladores de eventos são chamados em um pool de threads de sistema.  
+  
+ Essa propriedade normalmente é definida para um elemento de interface do usuário, como um <xref:System.Windows.Forms.Form> instância.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto de chamada foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O destino para a serialização.</param>
+        <summary>Preenche uma <see cref="T:System.Runtime.Serialization.SerializationInfo" /> instância da classe com os dados necessários para serializar especificado <see cref="T:System.Net.PeerToPeer.Collaboration.PeerObject" /> instância. Um tipo derivado deve chamar o tipo base <see cref="M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" /> método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.Collaboration.Peer.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> que representa o <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" /> associado a <see cref="T:System.Net.PeerToPeer.Collaboration.Peer" />.</summary>
+        <returns>
+          <see cref="T:System.String" />que representa o <see cref="P:System.Net.PeerToPeer.Collaboration.PeerContact.PeerName" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

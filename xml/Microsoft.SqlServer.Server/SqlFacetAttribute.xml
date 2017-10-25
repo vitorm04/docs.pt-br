@@ -1,0 +1,223 @@
+<Type Name="SqlFacetAttribute" FullName="Microsoft.SqlServer.Server.SqlFacetAttribute">
+  <TypeSignature Language="C#" Value="public class SqlFacetAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlFacetAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlFacetAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.ReturnValue, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Anota o resultado retornado de um UDT (tipo definido pelo usuário) com informações adicionais que podem ser usadas no Transact-SQL.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.SqlServer.Server.SqlFacetAttribute>só pode ser especificado em valores de retorno não void.  
+  
+ <xref:Microsoft.SqlServer.Server.SqlFacetAttribute>é usado somente para derivar as informações sobre o tipo de retorno e não pretende ser uma especificação de restrição sobre o que pode ser armazenado no tipo. Portanto, se um campo possuir um <xref:Microsoft.SqlServer.Server.SqlFacetAttribute> indicando seu tamanho para 2 caracteres, em seguida, o tipo do SQL Server da expressão de acesso de campo é de tamanho de 2, mas as atribuições para o campo não estão restrito por esta faceta.  
+  
+ A tabela a seguir captura a matriz de valores válidos para as várias propriedades de tipos de campo específicos. Nessa tabela, "Y" indica que a propriedade é válida e "N" indica que a propriedade não é válida.  
+  
+ Especificado <xref:Microsoft.SqlServer.Server.SqlFacetAttribute> devem ser compatíveis com o tipo de campo. Se a propriedade não for válida, o registro do tipo relatará um erro se o usuário Especifica um valor não padrão para a propriedade. Os valores máximos para <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision%2A> e <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale%2A> propriedades são 38. Para o <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.MaxSize%2A> propriedade, o valor deve estar no intervalo de 1 a 8000 para dados binários e não Unicode, 1 a 4000 para dados Unicode, ou -1. Todos os outros valores não são válidos.  
+  
+|Tipo|IsFixedLength|MaxSize|Precisão|Dimensionar|IsNullable|  
+|----------|-------------------|-------------|---------------|-----------|----------------|  
+|<xref:System.Data.SqlTypes.SqlBoolean>|N|N|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlByte>|N|N|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlInt16>|N|N|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlInt32>|N|N|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlInt64>|N|N|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlSingle>|N|N|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlDouble>|N|N|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlDateTime>|N|N|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlMoney>|N|N|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlGuid>|N|N|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlDecimal>|N|N|S|S|S|  
+|<xref:System.Data.SqlTypes.SqlString>|S|S|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlBinary>|S|S|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlXml>|N|N|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlBytes>|S|S|N|N|S|  
+|<xref:System.Data.SqlTypes.SqlChars>|S|S|N|N|S|  
+|UDTs incorporados|N|N|N|N|S|  
+|<xref:System.String>|S|S|N|N|S|  
+|Byte[]|S|S|N|N|S|  
+|Char[]|S|S|N|N|S|  
+|<xref:System.DateTime>|N|N|N|Y<sup>1</sup>|N|  
+|<xref:System.Decimal>|N|N|S|S|S|  
+  
+ (1) Especifica a escala em um tipo de DateTime fará com que o valor a ser retornado para o Transact-SQL como um tipo DateTime2 com escala especificada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlFacetAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlFacetAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Um atributo opcional em um tipo definido pelo usuário (UDT) retornar tipo, usado para anotar o resultado retornado com informações adicionais que podem ser usadas no Transact-SQL.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedLength">
+      <MemberSignature Language="C#" Value="public bool IsFixedLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedLength" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlFacetAttribute.IsFixedLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o tipo de retorno do tipo definido pelo usuário é de comprimento fixo.</summary>
+        <value>
+          <see langword="true" />Se o tipo de retorno é de comprimento fixo; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade deve ser definida como `false` se o <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.MaxSize%2A> propriedade é definida como 1.  
+  
+ O valor padrão é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNullable">
+      <MemberSignature Language="C#" Value="public bool IsNullable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsNullable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlFacetAttribute.IsNullable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o tipo de retorno do tipo definido pelo usuário pode ser <see langword="null" />.</summary>
+        <value>
+          <see langword="true" />Se o tipo de retorno do tipo definido pelo usuário pode ser <see langword="null" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSize">
+      <MemberSignature Language="C#" Value="public int MaxSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxSize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlFacetAttribute.MaxSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho máximo, em unidades lógicas, a base do tipo de campo do tipo definido pelo usuário.</summary>
+        <value>Um <see cref="T:System.Int32" /> que representa o tamanho máximo, em unidades lógicas, do tipo de campo subjacente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Unidade lógica é bytes (com um tamanho máximo de 8000) para o binário e tipos de dados não Unicode e o número de caracteres Unicode (com um tamanho máximo de 4.000) para os tipos de campo de caractere.  
+  
+ O valor -1 é reservado para caractere grande e tipos binários.  
+  
+ O valor padrão é 4000 para tipos de caracteres Unicode e 8000 para tipos binários e não Unicode.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Precision">
+      <MemberSignature Language="C#" Value="public int Precision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Precision" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A precisão do tipo de retorno do tipo definido pelo usuário.</summary>
+        <value>Um <see cref="T:System.Int32" /> que representa a precisão do tipo de retorno.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision%2A> propriedade é válida apenas para tipos numéricos. O <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale%2A> propriedade também deve ser especificada ao definir o <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision%2A> propriedade.  
+  
+ O valor máximo de <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision%2A> propriedade 38; o valor padrão é 38.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scale">
+      <MemberSignature Language="C#" Value="public int Scale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Scale" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A escala do tipo de retorno do tipo definido pelo usuário.</summary>
+        <value>Um <see cref="T:System.Int32" /> que representa a escala do tipo de retorno.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale%2A> propriedade é válida apenas para tipos decimais. O <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Precision%2A> propriedade também deve ser especificada ao definir o <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale%2A> propriedade.  
+  
+ O valor máximo de <xref:Microsoft.SqlServer.Server.SqlFacetAttribute.Scale%2A> propriedade é 38; o valor padrão é 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

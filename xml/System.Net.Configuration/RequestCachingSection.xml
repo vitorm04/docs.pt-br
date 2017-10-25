@@ -1,0 +1,282 @@
+<Type Name="RequestCachingSection" FullName="System.Net.Configuration.RequestCachingSection">
+  <TypeSignature Language="C#" Value="public sealed class RequestCachingSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RequestCachingSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.RequestCachingSection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a seção de configuração para o comportamento do cache. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe corresponde do [ &lt;requestCaching&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) elemento de configuração.  
+  
+ Essa classe é usada para acessar informações sobre o comportamento para recursos solicitados por meio de cache padrão de <xref:System.Net.WebRequest> e <xref:System.Net.WebClient> classes.  
+  
+ Essa classe fornece acesso programático a informações que podem ser armazenados em arquivos de configuração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestCachingSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.RequestCachingSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Configuration.RequestCachingSection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultFtpCachePolicy">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.FtpCachePolicyElement DefaultFtpCachePolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.FtpCachePolicyElement DefaultFtpCachePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.RequestCachingSection.DefaultFtpCachePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultFtpCachePolicy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.FtpCachePolicyElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o padrão FTP comportamento para o computador local do cache.</summary>
+        <value>Um <see cref="T:System.Net.Configuration.FtpCachePolicyElement" /> que define a política de cache padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultHttpCachePolicy">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.HttpCachePolicyElement DefaultHttpCachePolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.HttpCachePolicyElement DefaultHttpCachePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.RequestCachingSection.DefaultHttpCachePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultHttpCachePolicy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.HttpCachePolicyElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o padrão comportamento para o computador local do cache.</summary>
+        <value>Um <see cref="T:System.Net.Configuration.HttpCachePolicyElement" /> que define a política de cache padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que o <xref:System.Net.Configuration.RequestCachingSection.DisableAllCaching%2A> está definida como `true`, a política retornada por essa propriedade substitui a diretiva definida no <xref:System.Net.Configuration.RequestCachingSection.DefaultPolicyLevel%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPolicyLevel">
+      <MemberSignature Language="C#" Value="public System.Net.Cache.RequestCacheLevel DefaultPolicyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Cache.RequestCacheLevel DefaultPolicyLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.RequestCachingSection.DefaultPolicyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultPolicyLevel", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.RequestCacheLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de política de cache padrão.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Net.Cache.RequestCacheLevel" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeserializeElement">
+      <MemberSignature Language="C#" Value="protected override void DeserializeElement (System.Xml.XmlReader reader, bool serializeCollectionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void DeserializeElement(class System.Xml.XmlReader reader, bool serializeCollectionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.RequestCachingSection.DeserializeElement(System.Xml.XmlReader,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="serializeCollectionKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="reader">To be added.</param>
+        <param name="serializeCollectionKey">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAllCaching">
+      <MemberSignature Language="C#" Value="public bool DisableAllCaching { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableAllCaching" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.RequestCachingSection.DisableAllCaching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("disableAllCaching", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que habilita o cache no computador local.</summary>
+        <value>
+          <see langword="true" />Se o cache está desabilitado no computador local. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse atributo de configuração é definido como `true` no arquivo de configuração, o cache é desabilitado globalmente e todos os outros cache relacionadas a configurações serão ignoradas. Além disso, o cache não pode ser habilitado por meio de programação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrivateCache">
+      <MemberSignature Language="C#" Value="public bool IsPrivateCache { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrivateCache" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.RequestCachingSection.IsPrivateCache" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("isPrivateCache", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o cache do computador local é privado.</summary>
+        <value>
+          <see langword="true" />Se o cache fornece isolamento de usuário. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em computadores cliente, esse valor é normalmente definido como `true` indicando que um usuário não pode usar os recursos armazenados em cache por outro usuário. Para aplicativos de camada intermediária, esse valor é normalmente definido como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostDeserialize">
+      <MemberSignature Language="C#" Value="protected override void PostDeserialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostDeserialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.RequestCachingSection.PostDeserialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.RequestCachingSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnspecifiedMaximumAge">
+      <MemberSignature Language="C#" Value="public TimeSpan UnspecifiedMaximumAge { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan UnspecifiedMaximumAge" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.RequestCachingSection.UnspecifiedMaximumAge" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("unspecifiedMaximumAge", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor usado como a duração máxima de recursos armazenados em cache que não têm informações de expiração.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> que fornece um período máximo padrão para recursos armazenados em cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade garante que um recurso que não tem informações de cabeçalho de expiração não atualizado no cache indefinidamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,169 @@
+<Type Name="DataGridViewAutoSizeColumnMode" FullName="System.Windows.Forms.DataGridViewAutoSizeColumnMode">
+  <TypeSignature Language="C#" Value="public enum DataGridViewAutoSizeColumnMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewAutoSizeColumnMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewAutoSizeColumnMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os valores para especificar como a largura de uma coluna é ajustada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView> controle pode redimensionar as colunas para torná-los a preencher a largura horizontal disponível do controle ou torná-los a exibir o conteúdo completo de todas as células ou de células especificadas.  
+  
+ Com o modo de preenchimento, a largura preferencial de uma coluna é determinada pelo redimensionamento todas as colunas em que o modo de modo que todas as colunas visíveis no controle exatamente preencher a largura horizontal da área de exibição disponíveis. Com outros modos, a largura da coluna preferencial é a largura mínima necessária para exibir o maior valor de célula de todas as células ou um subconjunto de células na coluna, como o subconjunto de células em linhas exibidas no momento. Usando um subconjunto de células para determinar a nova largura é útil para evitar uma penalidade de desempenho ao trabalhar com muitas linhas de dados.  
+  
+ Redimensionamento automático com base em conteúdo impede que os usuários ajuste as larguras das colunas com o mouse. Redimensionamento de usuário está habilitado no modo de preenchimento, no entanto.  
+  
+ Essa enumeração é usada pelo <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> e <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> propriedades das colunas e o <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A?displayProperty=nameWithType> método.  
+  
+ Para obter mais informações sobre modos de dimensionamento, consulte [opções de dimensionamento no controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md). Para obter mais informações sobre o modo de preenchimento de coluna em particular, consulte [modo de preenchimento de coluna no controle DataGridView de formulários do Windows](~/docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso dessa enumeração para definir uma coluna de largura fixa. Este exemplo é parte de um exemplo maior disponível em [como: definir os modos de dimensionamento do controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md).  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllCells">
+      <MemberSignature Language="C#" Value="AllCells" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode AllCells = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura da coluna é ajustada para ajustar o conteúdo de todas as células na coluna, incluindo a célula de cabeçalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllCellsExceptHeader">
+      <MemberSignature Language="C#" Value="AllCellsExceptHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode AllCellsExceptHeader = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura da coluna é ajustada para ajustar o conteúdo de todas as células na coluna, exceto a célula de cabeçalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnHeader">
+      <MemberSignature Language="C#" Value="ColumnHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode ColumnHeader = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura da coluna é ajustada para ajustar o conteúdo da célula de cabeçalho da coluna.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayedCells">
+      <MemberSignature Language="C#" Value="DisplayedCells" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode DisplayedCells = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura da coluna é ajustada para ajustar o conteúdo de todas as células na coluna que estão nas linhas exibidas na tela no momento, incluindo a célula de cabeçalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayedCellsExceptHeader">
+      <MemberSignature Language="C#" Value="DisplayedCellsExceptHeader" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode DisplayedCellsExceptHeader = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura da coluna é ajustada para ajustar o conteúdo de todas as células na coluna que estão nas linhas exibidas na tela no momento, exceto a célula de cabeçalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="Fill" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode Fill = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura da coluna é ajustada para que as larguras de todas as colunas preencham exatamente a área de exibição do controle, exigindo a rolagem horizontal apenas para manter as larguras da coluna acima dos valores da propriedade <see cref="P:System.Windows.Forms.DataGridViewColumn.MinimumWidth" />. As larguras da coluna relativas são determinadas pelos valores de propriedade <see cref="P:System.Windows.Forms.DataGridViewColumn.FillWeight" /> relativos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode None = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura da coluna não é ajustada automaticamente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataGridViewAutoSizeColumnMode NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewAutoSizeColumnMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O comportamento de dimensionamento da coluna é herdado da propriedade <see cref="P:System.Windows.Forms.DataGridView.AutoSizeColumnsMode" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

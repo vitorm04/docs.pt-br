@@ -1,0 +1,534 @@
+<Type Name="OleDbLiteral" FullName="System.Data.OleDb.OleDbLiteral">
+  <TypeSignature Language="C#" Value="public enum OleDbLiteral" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OleDbLiteral extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbLiteral" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Retorna informações sobre literais usados em comandos de texto, valores de dados e objetos de banco de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.OleDb.OleDbLiteral> enumeração retorna as seguintes categorias de informações de literal.  
+  
+|Categoria|Retorna|  
+|--------------|-------------|  
+|Um caractere especial ou caracteres usados pelos comandos de texto, como o caractere usado para citar identificadores.|Um ou mais caracteres.|  
+|Um valor de dados literal, como um caractere literal em uma instrução SQL.|O comprimento máximo do literal de caracteres, uma lista dos caracteres que não pode ser usado no literal e uma lista dos caracteres que não pode ser usado como o primeiro caractere do literal.|  
+|O nome de um objeto de banco de dados como uma coluna ou tabela.|O comprimento máximo do nome em caracteres, uma lista dos caracteres que não pode ser usado no nome e uma lista dos caracteres que não pode ser usado como o primeiro caractere do nome.|  
+|Colunas de restrição multidimensional.|Valores de restrição que retornam informações sobre cubos, dimensões, hierarquias, níveis e membros disponíveis de uma fonte de dados; e são tratados como literais, em vez de como padrões de pesquisa.|  
+  
+ A maioria dos membros do <xref:System.Data.OleDb.OleDbLiteral> enumeração mapeia para um dos valores DBLITERAL do OLE DB que são retornados na estrutura DBLITERALINFO.  
+  
+ Colunas de restrição multidimensionais são membros dos objetos de esquema e mapa para OLE DB para OLAP usado pela interface IDBSchemaRowset.  
+  
+ Um <xref:System.NotSupportedException> será gerado se as informações de literal especificadas não são suportadas e não podem ser retornadas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Binary_Literal">
+      <MemberSignature Language="C#" Value="Binary_Literal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Binary_Literal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Binary_Literal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um literal binário em um comando de texto. Mapeia para DBLITERAL_BINARY_LITERAL.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Catalog_Name">
+      <MemberSignature Language="C#" Value="Catalog_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Catalog_Name = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Catalog_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nome de catálogo em um comando de texto. Mapeia para DBLITERAL_CATALOG_NAME.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Catalog_Separator">
+      <MemberSignature Language="C#" Value="Catalog_Separator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Catalog_Separator = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Catalog_Separator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O caractere que separa o nome do catálogo do resto do identificador em um comando de texto. Mapeia para DBLITERAL_CATALOG_SEPARATOR.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Char_Literal">
+      <MemberSignature Language="C#" Value="Char_Literal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Char_Literal = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Char_Literal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um literal de caractere em um comando de texto. Mapeia para DBLITERAL_CHAR_LITERAL.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Column_Alias">
+      <MemberSignature Language="C#" Value="Column_Alias" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Column_Alias = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Column_Alias" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um alias de coluna em um comando de texto. Mapeia para DBLITERAL_COLUMN_ALIAS.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Column_Name">
+      <MemberSignature Language="C#" Value="Column_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Column_Name = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Column_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nome de coluna usado em um comando de texto ou em uma interface de definição de dados. Mapeia para DBLITERAL_COLUMN_NAME.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Correlation_Name">
+      <MemberSignature Language="C#" Value="Correlation_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Correlation_Name = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Correlation_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nome de correlação (alias de tabela) em um comando de texto. Mapeia para DBLITERAL_CORRELATION_NAME.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Cube_Name">
+      <MemberSignature Language="C#" Value="Cube_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Cube_Name = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Cube_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome de um cubo em um esquema (ou o catálogo se o provedor não der suporte a esquemas).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Cursor_Name">
+      <MemberSignature Language="C#" Value="Cursor_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Cursor_Name = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Cursor_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nome de cursor em um comando de texto. Mapeia para DBLITERAL_CURSOR_NAME.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Dimension_Name">
+      <MemberSignature Language="C#" Value="Dimension_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Dimension_Name = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Dimension_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome da dimensão. Se uma dimensão fizer parte de mais de um cubo, haverá uma linha para cada combinação de dimensão/cubo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Escape_Percent_Prefix">
+      <MemberSignature Language="C#" Value="Escape_Percent_Prefix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Escape_Percent_Prefix = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Escape_Percent_Prefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O caractere usado em uma cláusula LIKE para escapar do caractere retornado para o literal DBLITERAL_LIKE_PERCENT. Por exemplo, se um sinal de porcentagem (%) é usado para corresponder a zero ou mais caracteres e isso é uma barra invertida (\\), os caracteres "abc\\% %" corresponde a todos os valores de caractere que começam com "abc %". Alguns dialetos SQL dão suporte a uma cláusula (a cláusula ESCAPE) que pode ser usada para substituir esse valor. Mapeia para DBLITERAL_ESCAPE_PERCENT_PREFIX.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Escape_Percent_Suffix">
+      <MemberSignature Language="C#" Value="Escape_Percent_Suffix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Escape_Percent_Suffix = int32(29)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Escape_Percent_Suffix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O caractere de escape, se houver, usado como sufixo para o caractere retornado para literal DBLITERAL_LIKE_PERCENT. Por exemplo, se um sinal de porcentagem (%) é usado para corresponder a zero ou caracteres e mais sinais de porcentagem são ignorados ao serem colocados entre colchetes de abertura e fechamento, DBLITERAL_ESCAPE_PERCENT_PREFIX é "[", DBLITERAL_ESCAPE_PERCENT_SUFFIX é "]" e os caracteres "abc [%] %" correspondem a todos os valores de caractere que começam com "abc %". Provedores que não usam um caractere de sufixo para escapar do caractere DBLITERAL_ESCAPE_PERCENT não retornam esse valor literal e podem definir o membro lt da estrutura DBLITERAL como DBLITERAL_INVALID se solicitado. Mapeia para DBLITERAL_ESCAPE_PERCENT_SUFFIX.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Escape_Underscore_Prefix">
+      <MemberSignature Language="C#" Value="Escape_Underscore_Prefix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Escape_Underscore_Prefix = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Escape_Underscore_Prefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O caractere usado em uma cláusula LIKE para escapar do caractere retornado para o literal DBLITERAL_LIKE_UNDERSCORE. Por exemplo, se um caractere de sublinhado (_) é usado para corresponder exatamente um caractere e isso é uma barra invertida (\\), os caracteres "abc\\ \_ _" corresponde a todos os valores de caractere cinco caracteres longa e começarem com "abc\_". Alguns dialetos SQL dão suporte a uma cláusula (a cláusula ESCAPE) que pode ser usada para substituir esse valor. Mapeia para DBLITERAL_ESCAPE_UNDERSCORE_PREFIX.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Escape_Underscore_Suffix">
+      <MemberSignature Language="C#" Value="Escape_Underscore_Suffix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Escape_Underscore_Suffix = int32(30)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Escape_Underscore_Suffix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O caractere usado em uma cláusula LIKE para escapar do caractere retornado para o literal DBLITERAL_LIKE_UNDERSCORE. Por exemplo, se um caractere de sublinhado (_) é usado para corresponder exatamente um caractere e isso é uma barra invertida (\\), os caracteres "abc\\ \_ _" corresponde a todos os valores de caractere cinco caracteres longa e começarem com "abc\_". Alguns dialetos SQL dão suporte a uma cláusula (a cláusula ESCAPE) que pode ser usada para substituir esse valor. Mapeia para DBLITERAL_ESCAPE_UNDERSCORE_SUFFIX.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hierarchy_Name">
+      <MemberSignature Language="C#" Value="Hierarchy_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Hierarchy_Name = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Hierarchy_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome da hierarquia. Se a dimensão não contiver uma hierarquia ou tiver somente uma hierarquia, a coluna atual conterá um valor null.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Index_Name">
+      <MemberSignature Language="C#" Value="Index_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Index_Name = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Index_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nome de índice usado em um comando de texto ou em uma interface de definição de dados. Mapeia para DBLITERAL_INDEX_NAME.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalid">
+      <MemberSignature Language="C#" Value="Invalid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Invalid = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Invalid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um valor inválido. Mapeia para DBLITERAL_INVALID.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Level_Name">
+      <MemberSignature Language="C#" Value="Level_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Level_Name = int32(24)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Level_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nome do cubo ao qual pertence o nível atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Like_Percent">
+      <MemberSignature Language="C#" Value="Like_Percent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Like_Percent = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Like_Percent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O caractere usado em uma cláusula LIKE para corresponder a zero ou mais caracteres. Por exemplo, se esse for um sinal de porcentagem (%), os caracteres "abc %" correspondem a todos os valores de caractere que começam com "abc". Mapeia para DBLITERAL_LIKE_PERCENT.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Like_Underscore">
+      <MemberSignature Language="C#" Value="Like_Underscore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Like_Underscore = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Like_Underscore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O caractere usado em uma cláusula LIKE para corresponder a exatamente um caractere. Por exemplo, se esse for um caractere de sublinhado (_), os caracteres "abc\_" corresponde a todos os valores de caractere que quatro caracteres e começam com "abc". Mapeia para DBLITERAL_LIKE_UNDERSCORE.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Member_Name">
+      <MemberSignature Language="C#" Value="Member_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Member_Name = int32(25)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Member_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do membro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Procedure_Name">
+      <MemberSignature Language="C#" Value="Procedure_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Procedure_Name = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Procedure_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nome de procedimento em um comando de texto. Mapeia para DBLITERAL_PROCEDURE_NAME.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Property_Name">
+      <MemberSignature Language="C#" Value="Property_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Property_Name = int32(26)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Property_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome da propriedade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Quote_Prefix">
+      <MemberSignature Language="C#" Value="Quote_Prefix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Quote_Prefix = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Quote_Prefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O caractere usado em um comando de texto como aspas de abertura para delimitar identificadores que contêm caracteres especiais. Mapeia para DBLITERAL_QUOTE_PREFIX.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Quote_Suffix">
+      <MemberSignature Language="C#" Value="Quote_Suffix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Quote_Suffix = int32(28)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Quote_Suffix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O caractere usado em um comando de texto como aspas de fechamento para delimitar identificadores que contêm caracteres especiais. Provedores 1.x que usam o mesmo caractere como o prefixo e o sufixo podem não retornar o valor literal e podem definir o membro da estrutura DBLITERAL como DBLITERAL_INVALID se solicitado. Mapeia para DBLITERAL_QUOTE_SUFFIX.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema_Name">
+      <MemberSignature Language="C#" Value="Schema_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Schema_Name = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Schema_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nome de esquema em um comando de texto. Mapeia para DBLITERAL_SCHEMA_NAME.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema_Separator">
+      <MemberSignature Language="C#" Value="Schema_Separator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Schema_Separator = int32(27)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Schema_Separator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O caractere que separa o nome do esquema do resto do identificador em um comando de texto. Mapeia para DBLITERAL_SCHEMA_SEPARATOR.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Table_Name">
+      <MemberSignature Language="C#" Value="Table_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Table_Name = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Table_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nome de tabela usado em um comando de texto ou em uma interface de definição de dados. Mapeia para DBLITERAL_TABLE_NAME.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text_Command">
+      <MemberSignature Language="C#" Value="Text_Command" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral Text_Command = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.Text_Command" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um comando de texto, como uma instrução SQL. Mapeia para DBLITERAL_TEXT_COMMAND.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="User_Name">
+      <MemberSignature Language="C#" Value="User_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral User_Name = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.User_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nome de usuário em um comando de texto. Mapeia para DBLITERAL_USER_NAME.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="View_Name">
+      <MemberSignature Language="C#" Value="View_Name" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.OleDb.OleDbLiteral View_Name = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.OleDb.OleDbLiteral.View_Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbLiteral</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um nome de exibição em um comando de texto. Mapeia para DBLITERAL_VIEW_NAME.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

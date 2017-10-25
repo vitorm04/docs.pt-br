@@ -1,0 +1,407 @@
+<Type Name="UrlMappingCollection" FullName="System.Web.Configuration.UrlMappingCollection">
+  <TypeSignature Language="C#" Value="public sealed class UrlMappingCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UrlMappingCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.UrlMappingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.UrlMapping))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.Configuration.UrlMapping" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.UrlMappingCollection> tipo permite o acesso para o <xref:System.Web.Configuration.UrlMappingsSection.UrlMappings%2A> elementos do <xref:System.Web.Configuration.UrlMappingsSection> seção coleção de elementos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.UrlMappingCollection> objeto do arquivo de configuração de um aplicativo Web existente. Também é mostrado é um trecho do arquivo de configuração.  
+  
+```  
+<urlMappings enabled="true">  
+  <add url= "~/home.aspx"  
+    mappedUrl="~/default.aspx?parm1=1"/>  
+  <add url= "~/products.aspx"  
+    mappedUrl="~/default.aspx?parm1=2"/>  
+</urlMappings>  
+```  
+  
+ [!code-csharp[System.Web.Configuration.UrlMapping#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/CS/urlmapping.cs#1)]
+ [!code-vb[System.Web.Configuration.UrlMapping#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/VB/urlmapping.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UrlMappingCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UrlMappingCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.UrlMappingCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.UrlMappingCollection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.UrlMappingCollection> classe usando <xref:System.Web.Configuration.UrlMappingsSection.UrlMappings%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.UrlMapping urlMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.UrlMapping urlMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UrlMappingCollection.Add(System.Web.Configuration.UrlMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="urlMapping" Type="System.Web.Configuration.UrlMapping" />
+      </Parameters>
+      <Docs>
+        <param name="urlMapping">O objeto <see cref="T:System.Web.Configuration.UrlMapping" /> a ser adicionado à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Web.Configuration.UrlMapping" /> especificado à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir adiciona uma <xref:System.Web.Configuration.UrlMapping> o objeto para o <xref:System.Web.Configuration.UrlMappingCollection>.  
+  
+ Consulte o exemplo de código a <xref:System.Web.Configuration.UrlMappingCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.UrlMapping#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/CS/urlmapping.cs#3)]
+ [!code-vb[System.Web.Configuration.UrlMapping#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/VB/urlmapping.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.UrlMappingCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz das chaves para todos os elementos de configuração contidos no <see cref="T:System.Web.Configuration.UrlMappingCollection" />.</summary>
+        <value>Uma matriz das chaves de todos os <see cref="T:System.Web.Configuration.UrlMapping" /> objetos contidos no <see cref="T:System.Web.Configuration.UrlMappingCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UrlMappingCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Web.Configuration.UrlMapping" /> objetos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você salvar o arquivo de configuração depois de chamar o <xref:System.Web.Configuration.UrlMappingCollection.Clear%2A> método, o resultado será dependente escolhido <xref:System.Configuration.ConfigurationSaveMode>.  
+  
+ A lista a seguir descreve as condições que se aplicam se você usar o <xref:System.Configuration.Configuration.Save%2A> método para salvar o arquivo:  
+  
+-   Se você passar <xref:System.Configuration.ConfigurationSaveMode.Full> ou <xref:System.Configuration.ConfigurationSaveMode?displayProperty=nameWithType> como o valor do parâmetro, um `clear` elemento é inserido no `urlMappings` seção do arquivo de configuração no nível de hierarquia atual.  
+  
+-   Se você passar <xref:System.Configuration.ConfigurationSaveMode.Minimal> como o valor do parâmetro, uma série de `remove` elementos são adicionados para a `urlMappings` do arquivo de configuração no nível de hierarquia atual. Essas `remove` elementos Remova todas as referências a `add` elementos definidos nos arquivos de configuração pai em níveis mais altos na hierarquia. Com o <xref:System.Configuration.ConfigurationSaveMode.Minimal> valor de enumeração, há uma propriedade adicional na coleção que afeta o que é serializado para o arquivo de configuração. A propriedade é <xref:System.Configuration.ConfigurationElementCollection.EmitClear%2A> e é `false` por padrão. Uma das seguintes condições se aplicar:  
+  
+    -   <xref:System.Configuration.ConfigurationElementCollection.EmitClear%2A>definido como `true`. Um `clear` elemento é inserido no `urlMappings` seção do arquivo de configuração no nível de hierarquia atual. Isso removerá todas as referências para o `add` elementos definidos nos arquivos de configuração pai em níveis mais altos na hierarquia.  
+  
+    -   <xref:System.Configuration.ConfigurationElementCollection.EmitClear%2A>sinalizador é definido como `false`. Isso tem o efeito de remover o `clear` elemento a partir de `urlMappings` seção do arquivo de configuração no nível de hierarquia atual, se ele existir.  
+  
+ O <xref:System.Web.Configuration.UrlMappingCollection.Clear%2A> método realmente excluirá o `add` elementos definidos a `urlMappings` seção do arquivo de configuração no nível de hierarquia atual. Ele também remove todas as referências para o `add` elementos definidos na configuração do pai em níveis mais altos na hierarquia de arquivos, mas não excluí-los.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir remove todos os <xref:System.Web.Configuration.UrlMapping> de objetos a partir de <xref:System.Web.Configuration.UrlMappingCollection>.  
+  
+ Consulte o exemplo de código a <xref:System.Web.Configuration.UrlMappingCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.UrlMapping#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/CS/urlmapping.cs#4)]
+ [!code-vb[System.Web.Configuration.UrlMapping#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/VB/urlmapping.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UrlMappingCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UrlMappingCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UrlMappingCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de coleção do elemento a ser obtido.</param>
+        <summary>Obtém a chave da coleção do elemento especificado.</summary>
+        <returns>Uma cadeia de caracteres que representa o valor da chave.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.UrlMapping this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.UrlMapping Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.UrlMappingCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.UrlMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do objeto a ser obtido.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.UrlMapping" /> objeto no índice especificado.</summary>
+        <value>O objeto no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.UrlMapping this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.UrlMapping Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.UrlMappingCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.UrlMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto da coleção.</param>
+        <summary>Obtém o objeto <see cref="T:System.Web.Configuration.UrlMapping" /> com o nome especificado.</summary>
+        <value>O objeto de coleção que tem o nome especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.UrlMappingCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UrlMappingCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Web.Configuration.UrlMapping" /> objeto a ser removido da coleção.</param>
+        <summary>Remove o <see cref="T:System.Web.Configuration.UrlMapping" /> objeto com o nome especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.UrlMappingCollection.Remove%2A> método exclusões a `add` elemento o `urlMappings` seção no nível de hierarquia atual e insere um `remove` elemento. O elemento remover efetivamente remove a referência para o `add` definido na configuração do pai do elemento em níveis mais altos na hierarquia de arquivos, mas não a exclui.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo remove o <xref:System.Web.Configuration.UrlMapping> de objeto o <xref:System.Web.Configuration.UrlMappingCollection>.  
+  
+ Consulte o exemplo de código a <xref:System.Web.Configuration.UrlMappingCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.UrlMapping#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/CS/urlmapping.cs#6)]
+ [!code-vb[System.Web.Configuration.UrlMapping#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/VB/urlmapping.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Configuration.UrlMapping urlMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Configuration.UrlMapping urlMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UrlMappingCollection.Remove(System.Web.Configuration.UrlMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="urlMapping" Type="System.Web.Configuration.UrlMapping" />
+      </Parameters>
+      <Docs>
+        <param name="urlMapping">O <see cref="T:System.Web.Configuration.UrlMapping" /> objeto a ser removido da coleção.</param>
+        <summary>Remove o objeto <see cref="T:System.Web.Configuration.UrlMapping" /> especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.UrlMappingCollection.Remove%2A> método exclusões a `add` elemento o `urlMappings` seção no nível de hierarquia atual e insere um `remove` elemento. O elemento remover efetivamente remove a referência para o `add` definido na configuração do pai do elemento em níveis mais altos na hierarquia de arquivos, mas não a exclui.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo remove o <xref:System.Web.Configuration.UrlMapping> de objeto o <xref:System.Web.Configuration.UrlMappingCollection>.  
+  
+ Consulte o exemplo de código a <xref:System.Web.Configuration.UrlMappingCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.UrlMapping#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/CS/urlmapping.cs#5)]
+ [!code-vb[System.Web.Configuration.UrlMapping#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/VB/urlmapping.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.UrlMappingCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de coleção de <see cref="T:System.Web.Configuration.UrlMapping" /> objeto a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Web.Configuration.UrlMapping" /> objeto com o índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.UrlMappingCollection.RemoveAt%2A> método exclusões a `add` elemento o `urlMappings` seção no nível de hierarquia atual e insere um `remove` elemento. O elemento remover efetivamente remove a referência para o `add` definido na configuração do pai do elemento em níveis mais altos na hierarquia de arquivos, mas não a exclui.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo remove o <xref:System.Web.Configuration.UrlMapping> de objeto o <xref:System.Web.Configuration.UrlMappingCollection>.  
+  
+ Consulte o exemplo de código a <xref:System.Web.Configuration.UrlMappingCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.UrlMapping#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/CS/urlmapping.cs#7)]
+ [!code-vb[System.Web.Configuration.UrlMapping#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.UrlMapping/VB/urlmapping.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

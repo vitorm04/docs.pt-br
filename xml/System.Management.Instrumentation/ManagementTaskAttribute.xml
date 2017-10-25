@@ -1,0 +1,93 @@
+<Type Name="ManagementTaskAttribute" FullName="System.Management.Instrumentation.ManagementTaskAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ManagementTaskAttribute : System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagementTaskAttribute extends System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementTaskAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Instrumentation.ManagementMemberAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O atributo ManagementTask indica que o método de destino implementa um método WMI.  
+  
+ Observação: as bibliotecas do .NET no WMI agora são consideradas em estado final e nenhum desenvolvimento, melhorias ou atualizações adicionais estarão disponíveis para problemas não relacionados à segurança que afetarem essas bibliotecas. O [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) deve ser usado para todos os novos desenvolvimentos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o nome do método WMI será o nome do método de destino. A classe pai deste atributo <xref:System.Management.Instrumentation.ManagementMemberAttribute>, inclui um parâmetro de nome. Você pode usar esse parâmetro para alterar o nome do método que é exposto por meio do WMI sem alterar seu nome de método interno.  
+  
+ O método deve ser público e pode ser estático. Ele pode incluir qualquer combinação de [in], [out], [entrada/saída], parâmetros de referência de objeto ou matriz. Parâmetros de matriz não podem ser multidimensionais ou denteadas devido a limitações impostas pelo WMI.  
+  
+ O tipo de retorno do método pode ser: void, escalar, string, datetime ou do objeto. Ele não pode ser uma matriz.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como marcar um método com o atributo ManagementTask para expor o método WMI. O método aparecerão no WMI como ResetCounters.  
+  
+```csharp  
+// Use the ManagementTask attribute to specify that a method  
+// is exposed to WMI through this provider. Consumers will be  
+// able to execute this method through WMI.  
+[ManagementTask]  
+public void ResetCounters()  
+{  
+    counter.Reset();  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementTaskAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.ManagementTaskAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementTaskAttribute" />. Esse é o construtor padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public Type Schema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.ManagementTaskAttribute.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que define o tipo de saída do método está marcado com o atributo ManagementTask de saída.</summary>
+        <value>Um <see cref="T:System.Type" /> valor que indica o tipo de saída do método está marcado com o atributo ManagementTask de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tipo retornado é <xref:System.Object?displayProperty=nameWithType>, em seguida, a saída deve ser tratada como um valor do tipo <xref:System.Object?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

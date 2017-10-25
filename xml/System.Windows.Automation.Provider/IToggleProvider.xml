@@ -1,0 +1,100 @@
+<Type Name="IToggleProvider" FullName="System.Windows.Automation.Provider.IToggleProvider">
+  <TypeSignature Language="C#" Value="public interface IToggleProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IToggleProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IToggleProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("56d00bd0-c4f4-433c-a836-1a52a57e0892")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe métodos e propriedades para oferecer suporte ao acesso de cliente de automação de interface do usuário para controles que podem alternar entre um conjunto de estados e manter que um estado definido uma vez.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementado em um provedor de automação de interface do usuário que deve dar suporte a <xref:System.Windows.Automation.TogglePattern> padrão de controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Toggle">
+      <MemberSignature Language="C#" Value="public void Toggle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Toggle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IToggleProvider.Toggle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Alterna entre os estados de alternância de um controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle deve percorrer seus estados de alternância nesta ordem: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off>e (se houver suporte) <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma possível implementação desse método para um controle personalizado que pode ser alternado.  
+  
+ [!code-csharp[UIAIToggleProvider_snip#Toggle](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIToggleProvider_snip/CSharp/ToggleFragment.cs#toggle)]
+ [!code-vb[UIAIToggleProvider_snip#Toggle](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIToggleProvider_snip/visualbasic/togglefragment.vb#toggle)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleState">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.ToggleState ToggleState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.ToggleState ToggleState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IToggleProvider.ToggleState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ToggleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do controle.</summary>
+        <value>O <see cref="T:System.Windows.Automation.ToggleState" /> do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle deve percorrer seu <xref:System.Windows.Automation.ToggleState> nesta ordem: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off>e (se houver suporte) <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle que pode ser alternado. O ToggleState retornada baseia-se a cor do controle; Isso é semelhante a do <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> propriedade de um controle de caixa de seleção.  
+  
+ [!code-csharp[UIAIToggleProvider_snip#ToggleState](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIToggleProvider_snip/CSharp/ToggleFragment.cs#togglestate)]
+ [!code-vb[UIAIToggleProvider_snip#ToggleState](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIToggleProvider_snip/visualbasic/togglefragment.vb#togglestate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

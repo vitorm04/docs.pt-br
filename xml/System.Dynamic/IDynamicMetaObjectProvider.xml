@@ -1,0 +1,73 @@
+<Type Name="IDynamicMetaObjectProvider" FullName="System.Dynamic.IDynamicMetaObjectProvider">
+  <TypeSignature Language="C#" Value="public interface IDynamicMetaObjectProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDynamicMetaObjectProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Dynamic.IDynamicMetaObjectProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto dinâmico, que pode ter suas operações associadas no tempo de execução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos que deseja participar do processo de associação devem implementar uma interface IDynamicMetaObjectProvider e implementar <xref:System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject%2A> para retornar um <xref:System.Dynamic.DynamicMetaObject>.  
+  
+ Para obter mais informações, consulte a documentação sobre o [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) site da Web e o artigo do MSDN [implementando Interfaces dinâmico](http://go.microsoft.com/fwlink/?LinkID=198161).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetMetaObject">
+      <MemberSignature Language="C#" Value="public System.Dynamic.DynamicMetaObject GetMetaObject (System.Linq.Expressions.Expression parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Dynamic.DynamicMetaObject GetMetaObject(class System.Linq.Expressions.Expression parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Dynamic.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Dynamic.DynamicMetaObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">A representação em árvore de expressão do valor do tempo de execução.</param>
+        <summary>Retorna o <see cref="T:System.Dynamic.DynamicMetaObject" /> responsável pelas operações de associação executadas neste objeto.</summary>
+        <returns>O <see cref="T:System.Dynamic.DynamicMetaObject" /> para associar a este objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

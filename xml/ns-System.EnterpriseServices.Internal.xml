@@ -1,0 +1,6 @@
+<Namespace Name="System.EnterpriseServices.Internal">
+  <Docs>
+    <summary>O <see cref="N:System.EnterpriseServices.Internal" /> namespace fornece suporte de infraestrutura de serviços COM+. As classes e interfaces neste namespace foram desenvolvidas especificamente para dar suporte a chamadas para <see cref="N:System.EnterpriseServices" /> das classes COM+ não gerenciadas.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

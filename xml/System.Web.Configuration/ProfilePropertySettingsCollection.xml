@@ -1,0 +1,535 @@
+<Type Name="ProfilePropertySettingsCollection" FullName="System.Web.Configuration.ProfilePropertySettingsCollection">
+  <TypeSignature Language="C#" Value="public class ProfilePropertySettingsCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ProfilePropertySettingsCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ProfilePropertySettingsCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.ProfilePropertySettings))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém um conjunto de objetos <see cref="T:System.Web.Configuration.ProfilePropertySettingsCollection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `profile` seção do arquivo de configuração especifica um esquema para perfis de usuário. Em tempo de execução, o sistema de compilação do ASP.NET usa as informações especificadas no `profile` seção para gerar uma classe chamada `ProfileCommon`, que é derivada de <xref:System.Web.Profile.ProfileBase>. O `ProfileCommon` definição de classe baseia-se as propriedades definidas no `properties` subseção do `profile` seção do arquivo de configuração. Uma instância dessa classe é criada para cada perfil de usuário, e você pode acessar os valores de perfil individual no seu código por meio de <xref:System.Web.HttpContext.Profile%2A> propriedade. Para obter mais informações sobre propriedades de perfil, consulte [visão geral de propriedades de perfil ASP.NET](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d). Para obter mais informações sobre os recursos de perfil adicionada ao [!INCLUDE[vstecasplong](~/includes/vstecasplong-md.md)], consulte [visão geral de propriedades de perfil ASP.NET](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.ProfileGroupSettings.PropertySettings%2A> propriedade, que é uma ocorrência da <xref:System.Web.Configuration.ProfilePropertySettingsCollection> classe. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.ProfileSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#12)]
+ [!code-vb[System.Web.Configuration.ProfileSection#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfilePropertySettingsCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.Configuration.ProfilePropertySettingsCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.ProfilePropertySettings propertySettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.ProfilePropertySettings propertySettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.Add(System.Web.Configuration.ProfilePropertySettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertySettings" Type="System.Web.Configuration.ProfilePropertySettings" />
+      </Parameters>
+      <Docs>
+        <param name="propertySettings">Um <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto a ser adicionado à coleção.</param>
+        <summary>Adiciona um objeto de <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção já não deve conter um <xref:System.Web.Configuration.ProfilePropertySettings> objeto com o mesmo nome.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.ProfilePropertySettingsCollection.Add%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.ProfileSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#22](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#22)]
+ [!code-vb[System.Web.Configuration.ProfileSection#22](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">O <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto a ser adicionado já existe na coleção ou a coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettingsCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma matriz que contém os nomes de todos os <see cref="T:System.Web.Configuration.ProfileSection" /> objetos contidos na coleção.</summary>
+        <value>Uma matriz que contém os nomes de todos os <see cref="T:System.Web.Configuration.ProfileSection" /> objetos contidos na coleção ou uma matriz vazia se a coleção está vazia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowClear">
+      <MemberSignature Language="C#" Value="protected virtual bool AllowClear { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowClear" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettingsCollection.AllowClear" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o &lt;limpar&gt; elemento é válido como um <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objetos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método insere um `clear` diretiva na seção apropriada do arquivo de configuração para limpar todas as referências a elementos definidos em um arquivo de configuração de nível superior. Todos os elementos definidos na seção apropriada do arquivo de configuração atual são removidos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.ProfilePropertySettingsCollection.Clear%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.ProfileSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#2)]
+ [!code-vb[System.Web.Configuration.ProfileSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, cria um novo <see cref="T:System.Configuration.ConfigurationElement" />.</summary>
+        <returns>Um novo <see cref="T:System.Configuration.ConfigurationElement" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfilePropertySettings Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.ProfilePropertySettings Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfilePropertySettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.Configuration.ProfileSection" /> obter.</param>
+        <summary>Retorna o <see cref="T:System.Web.Configuration.ProfileSection" /> objeto no índice especificado.</summary>
+        <returns>O <see cref="T:System.Web.Configuration.ProfileSection" /> objeto no índice especificado, ou <see langword="null" /> se não houver nenhum objeto no índice.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfilePropertySettings Get (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.ProfilePropertySettings Get(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfilePropertySettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Web.Configuration.ProfileSection" /> obter.</param>
+        <summary>Retorna o <see cref="T:System.Web.Configuration.ProfileSection" /> objeto com o nome especificado.</summary>
+        <returns>O <see cref="T:System.Web.Configuration.ProfileSection" /> objeto com o nome especificado, ou <see langword="null" /> se o nome não existe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um <see cref="T:System.Configuration.ConfigurationElement" /> na coleção.</param>
+        <summary>Obtém a chave para o elemento de configuração especificado.</summary>
+        <returns>O nome do elemento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de um <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> na coleção.</param>
+        <summary>Obtém o nome do <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> no local do índice especificado.</summary>
+        <returns>O nome do <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> no local do índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto no índice deve existir na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.Configuration.ProfilePropertySettings propertySettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.Configuration.ProfilePropertySettings propertySettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.IndexOf(System.Web.Configuration.ProfilePropertySettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertySettings" Type="System.Web.Configuration.ProfilePropertySettings" />
+      </Parameters>
+      <Docs>
+        <param name="propertySettings">Um <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto na coleção.</param>
+        <summary>Retorna o índice do objeto <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> especificado.</summary>
+        <returns>O índice especificado <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto ou -1 se o objeto não for encontrado na coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfilePropertySettings this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ProfilePropertySettings Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettingsCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfilePropertySettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de um <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto na coleção.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto no local do índice especificado.</summary>
+        <value>O <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto no local do índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ProfilePropertySettings this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ProfilePropertySettings Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettingsCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ProfilePropertySettings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de um objeto <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> na coleção.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto com o nome especificado.</summary>
+        <value>O <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto com o nome especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserializeUnrecognizedElement">
+      <MemberSignature Language="C#" Value="protected override bool OnDeserializeUnrecognizedElement (string elementName, System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnDeserializeUnrecognizedElement(string elementName, class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.OnDeserializeUnrecognizedElement(System.String,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O nome do elemento não reconhecido.</param>
+        <param name="reader">Um fluxo de entrada que lê o XML do arquivo de configuração.</param>
+        <summary>Lida com a leitura de elementos de configuração não reconhecida de um arquivo de configuração e faz com que o sistema de configuração lançar uma exceção se o elemento não pode ser manipulado.</summary>
+        <returns>
+          <see langword="true" />Se o elemento não reconhecido foi desserializado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação de <xref:System.Web.Configuration.ProfilePropertySettingsCollection.OnDeserializeUnrecognizedElement%2A> gera erros especializados se o nome do elemento é "claro" ou "grupo".  Depois que a verificação para essas condições, o método explicitamente chama sua implementação de base, o <xref:System.Configuration.ConfigurationElementCollection.OnDeserializeUnrecognizedElement%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">
+          <paramref name="elementName" />é igual a "Limpar"  
+  
+ \- ou -  
+  
+ <paramref name="elementName" />é igual a "grupo".</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettingsCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de propriedades de configuração.</summary>
+        <value>Uma coleção de propriedades de configuração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de uma <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto a ser removido da coleção.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método insere um `remove` elemento na seção apropriada do arquivo de configuração para todos os elementos definidos em um arquivo de configuração de nível mais alto. Se o elemento está definido na seção apropriada do arquivo de configuração atual, sua entrada será removida do arquivo de configuração. O objeto a ser removido deve existir na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.ProfilePropertySettingsCollection.Remove%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.ProfileSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#1)]
+ [!code-vb[System.Web.Configuration.ProfileSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">Não há nenhum <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto com a chave especificada na coleção.  
+  
+ \- ou -  
+  
+ O elemento já foi removido.  
+  
+ \- ou -  
+  
+ A coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de um <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto na coleção.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto no local do índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método insere um `remove` elemento na seção apropriada do arquivo de configuração para todos os elementos definidos em um arquivo de configuração de nível mais alto. Se o elemento está definido na seção apropriada do arquivo de configuração atual, sua entrada será removida do arquivo de configuração. O objeto a ser removido deve existir na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.ProfilePropertySettingsCollection.RemoveAt%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.ProfileSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.ProfileSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/CS/profilesection.cs#1)]
+ [!code-vb[System.Web.Configuration.ProfileSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ProfileSection/VB/profilesection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">Não há nenhum <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto no índice especificado na coleção.  
+  
+ \- ou -  
+  
+ O elemento já foi removido.  
+  
+ \- ou -  
+  
+ A coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (System.Web.Configuration.ProfilePropertySettings propertySettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(class System.Web.Configuration.ProfilePropertySettings propertySettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ProfilePropertySettingsCollection.Set(System.Web.Configuration.ProfilePropertySettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertySettings" Type="System.Web.Configuration.ProfilePropertySettings" />
+      </Parameters>
+      <Docs>
+        <param name="propertySettings">Um objeto <see cref="T:System.Web.Configuration.ProfilePropertySettings" />.</param>
+        <summary>Adiciona o objeto <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> especificado à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método tem o mesmo efeito que chamar o <xref:System.Web.Configuration.ProfilePropertySettingsCollection.Add%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">O <see cref="T:System.Web.Configuration.ProfilePropertySettings" /> objeto a ser adicionado já existe na coleção, ou a coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnDuplicate">
+      <MemberSignature Language="C#" Value="protected override bool ThrowOnDuplicate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowOnDuplicate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ProfilePropertySettingsCollection.ThrowOnDuplicate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um erro deve ser gerado se for feita uma tentativa de criar um objeto duplicado.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

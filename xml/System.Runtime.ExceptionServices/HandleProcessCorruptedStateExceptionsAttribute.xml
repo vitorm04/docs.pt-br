@@ -1,0 +1,70 @@
+<Type Name="HandleProcessCorruptedStateExceptionsAttribute" FullName="System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute">
+  <TypeSignature Language="C#" Value="public sealed class HandleProcessCorruptedStateExceptionsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HandleProcessCorruptedStateExceptionsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Habilita o código gerenciado para tratar exceções que indicam um estado de processo corrompido.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exceções de estado de processo corrompido são exceções que indicam que o estado de um processo foi corrompido. Não é recomendável executar o aplicativo nesse estado.  
+  
+ Por padrão, o common language runtime (CLR) não fornecem essas exceções em código gerenciado e o `try` / `catch` blocos (e outras cláusulas de tratamento de exceção) não são invocadas para eles. Se tiver certeza de que deseja manter sua manipulação dessas exceções, você deve aplicar o <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> atributo ao método cujas cláusulas de tratamento de exceção que você deseja executar. O CLR oferece a exceção de estado de processo corrompido para cláusulas de exceção aplicável apenas em métodos que têm ambos o <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> e <xref:System.Security.SecurityCriticalAttribute> atributos.  
+  
+ Você também pode adicionar o arquivo de configuração do aplicativo. Isso irá garantir que o estado corrompido exceções sejam entregues para seus manipuladores de exceção sem o <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> ou <xref:System.Security.SecurityCriticalAttribute> atributo. Este elemento de configuração não tem nenhum efeito em aplicativos que foram compiladas em versões anteriores ao [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] mas estão sendo executados [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] ou posterior; estado corrompido exceções continuará a ser entregue para esses aplicativos. O <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> atributo é ignorado quando ela for encontrada no código parcialmente confiável ou transparente, porque um host confiável não deve permitir que um suplemento não confiável capturar e ignorar essas exceções grave.  
+  
+ Para obter mais informações sobre exceções de estado de processo corrompido, consulte a entrada [tratamento de exceções de estado corrompido](http://go.microsoft.com/fwlink/?LinkID=179681) no blog o CLR.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HandleProcessCorruptedStateExceptionsAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

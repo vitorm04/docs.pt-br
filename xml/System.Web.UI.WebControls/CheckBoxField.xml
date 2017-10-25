@@ -1,0 +1,648 @@
+<Type Name="CheckBoxField" FullName="System.Web.UI.WebControls.CheckBoxField">
+  <TypeSignature Language="C#" Value="public class CheckBoxField : System.Web.UI.WebControls.BoundField" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CheckBoxField extends System.Web.UI.WebControls.BoundField" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CheckBoxField" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.BoundField</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um campo booliano exibido como uma caixa de seleção em um controle com limite de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField> classe é usada por controles de associação de dados (como <xref:System.Web.UI.WebControls.GridView> e <xref:System.Web.UI.WebControls.DetailsView>) para exibir o valor de um campo de dados booliano em uma caixa de seleção. O <xref:System.Web.UI.WebControls.CheckBoxField> objeto é exibido de modo diferente dependendo do controle associado a dados no qual ele é usado. Por exemplo, o <xref:System.Web.UI.WebControls.GridView> controle exibe um <xref:System.Web.UI.WebControls.CheckBoxField> objeto como uma coluna, enquanto o <xref:System.Web.UI.WebControls.DetailsView> controle exibe como uma linha.  
+  
+> [!NOTE]
+>  Uma caixa de seleção está desabilitada (somente leitura) até que o controle associado a dados exibe um registro que contém a caixa de seleção no modo de edição. Para obter mais informações sobre como colocar um registro em modo de edição, consulte a documentação para o controle pai que contém o <xref:System.Web.UI.WebControls.CheckBoxField> objeto.  
+  
+ Para especificar o campo a ser exibido em uma <xref:System.Web.UI.WebControls.CheckBoxField> do objeto, defina o <xref:System.Web.UI.WebControls.BoundField.DataField%2A> propriedade com o nome do campo.  
+  
+> [!NOTE]
+>  Como uma caixa de seleção pode exibir apenas um selecionado ou um estado desmarcado, uma <xref:System.Web.UI.WebControls.CheckBoxField> objeto pode ser associado somente a um campo com um tipo de dados Boolean ou uma cadeia de caracteres que pode ser analisada por <xref:System.Boolean.Parse%2A>.  
+  
+ Você pode exibir uma legenda ao lado de cada caixa de seleção, definindo a <xref:System.Web.UI.WebControls.CheckBoxField.Text%2A> propriedade. Um <xref:System.Web.UI.WebControls.CheckBoxField> objeto é oculto em uma associação de dados controlar quando o <xref:System.Web.UI.WebControls.DataControlField.Visible%2A> está definida como `false`. Para evitar que o valor de um campo que está sendo modificado no modo de edição, defina a <xref:System.Web.UI.WebControls.BoundField.ReadOnly%2A> propriedade `true`. Na associação de dados controles que suportam inserindo registros (como o <xref:System.Web.UI.WebControls.DetailsView> controle), você pode ocultar uma <xref:System.Web.UI.WebControls.CheckBoxField> objeto no modo de inserção, definindo o <xref:System.Web.UI.WebControls.DataControlField.InsertVisible%2A> propriedade `false`.  
+  
+ Você pode personalizar as seções de cabeçalho e rodapé de um <xref:System.Web.UI.WebControls.CheckBoxField> objeto. Para exibir uma legenda nas seções de cabeçalho ou rodapé de página, defina o <xref:System.Web.UI.WebControls.DataControlField.HeaderText%2A> ou <xref:System.Web.UI.WebControls.DataControlField.FooterText%2A> propriedades, respectivamente. Em vez de exibir o texto na seção de cabeçalho, você pode exibir uma imagem, definindo o <xref:System.Web.UI.WebControls.DataControlField.HeaderImageUrl%2A> propriedade. A seção de cabeçalho pode estar ocultos no <xref:System.Web.UI.WebControls.CheckBoxField> objeto definindo o <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A> propriedade `false`.  
+  
+> [!NOTE]
+>  Alguns controles associados a dados (como o <xref:System.Web.UI.WebControls.GridView> controle) pode mostrar ou ocultar apenas a seção de cabeçalho inteiro do controle. Esses controles associados a dados não oferecem suporte a <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A> propriedade para um campo associado individual. Para mostrar ou ocultar a seção de cabeçalho inteiro de um controle associado a dados (se disponível), use o controle `ShowHeader` propriedade.  
+  
+ Você também pode personalizar a aparência do <xref:System.Web.UI.WebControls.CheckBoxField> objeto (cor da fonte, cor do plano de fundo e assim por diante), definindo as propriedades de estilo para as diferentes partes do campo. A tabela a seguir lista as propriedades de estilo diferente.  
+  
+|Propriedade de estilo|Descrição|  
+|--------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A>|As configurações de estilo para controles de servidor Web filho do <xref:System.Web.UI.WebControls.CheckBoxField> objeto.|  
+|<xref:System.Web.UI.WebControls.DataControlField.FooterStyle%2A>|As configurações de estilo para a seção de rodapé de <xref:System.Web.UI.WebControls.CheckBoxField> objeto.|  
+|<xref:System.Web.UI.WebControls.DataControlField.HeaderStyle%2A>|As configurações de estilo para a seção de cabeçalho de <xref:System.Web.UI.WebControls.CheckBoxField> objeto.|  
+|<xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A>|As configurações de estilo dos itens de dados no <xref:System.Web.UI.WebControls.CheckBoxField> objeto.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.CheckBoxField> do objeto em um <xref:System.Web.UI.WebControls.GridView> controle para exibir um campo de uma fonte de dados do Microsoft SQL Server com um tipo de dados booleano.  
+  
+ [!code-aspx-csharp[CheckBoxField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxField/CS/checkboxfieldcs.aspx#1)]
+ [!code-aspx-vb[CheckBoxField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxField/VB/checkboxfieldvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CheckBoxField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxField.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.CheckBoxField" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.CheckBoxField> classe. Este construtor é comumente usado ao adicionar campos a um controle de associação de dados criado dinamicamente.  
+  
+ Adicionar dinamicamente um <xref:System.Web.UI.WebControls.CheckBoxField> de objeto para um controle associado a dados, crie um novo <xref:System.Web.UI.WebControls.CheckBoxField> do objeto, defina suas propriedades e, em seguida, adicioná-lo à coleção de campos do controle associado a dados. Por exemplo, se você estiver usando o <xref:System.Web.UI.WebControls.GridView> de controle, adicione o <xref:System.Web.UI.WebControls.CheckBoxField> o objeto para o <xref:System.Web.UI.WebControls.GridView.Columns%2A> coleção.  
+  
+> [!NOTE]
+>  Embora dinamicamente, você pode adicionar campos a um controle associado a dados, é altamente recomendável que todos os campos ser estaticamente declarados e, em seguida, mostrado ou oculto, conforme apropriado. Declarar estaticamente todos os seus campos reduz o tamanho do estado de exibição para o controle de associação de dados pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o construtor de adicionar dinamicamente um <xref:System.Web.UI.WebControls.CheckBoxField> o objeto para um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CheckBoxFieldCtor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxFieldCtor/CS/checkboxfieldctorcs.aspx#1)]
+ [!code-aspx-vb[CheckBoxFieldCtor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxFieldCtor/VB/checkboxfieldctorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyFormatInEditMode">
+      <MemberSignature Language="C#" Value="public override bool ApplyFormatInEditMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ApplyFormatInEditMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxField.ApplyFormatInEditMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui a propriedade <see cref="P:System.Web.UI.WebControls.BoundField.ApplyFormatInEditMode" />. Essa propriedade não tem suporte a <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> classe.</summary>
+        <value>
+          <see langword="false" /> em todos os casos. Essa propriedade não é suportada e gerará um <see cref="T:System.NotSupportedException" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.ApplyFormatInEditMode%2A> propriedade é herdada do <xref:System.Web.UI.WebControls.BoundField> de classe, mas não é aplicável para o <xref:System.Web.UI.WebControls.CheckBoxField> classe. Qualquer tentativa de acessar o valor dessa propriedade gera uma <xref:System.NotSupportedException?displayProperty=nameWithType> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">É feita uma tentativa para ler ou definir o valor dessa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertEmptyStringToNull">
+      <MemberSignature Language="C#" Value="public override bool ConvertEmptyStringToNull { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConvertEmptyStringToNull" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxField.ConvertEmptyStringToNull" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui a propriedade <see cref="P:System.Web.UI.WebControls.BoundField.ConvertEmptyStringToNull" />. Essa propriedade não tem suporte a <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> classe.</summary>
+        <value>
+          <see langword="false" /> em todos os casos. Essa propriedade não é suportada e gerará um <see cref="T:System.NotSupportedException" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.ConvertEmptyStringToNull%2A> propriedade é herdada do <xref:System.Web.UI.WebControls.BoundField> de classe, mas não é aplicável para o <xref:System.Web.UI.WebControls.CheckBoxField> classe. Qualquer tentativa de acessar o valor dessa propriedade gera uma <xref:System.NotSupportedException?displayProperty=nameWithType> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">É feita uma tentativa para ler ou definir o valor dessa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected override void CopyProperties (System.Web.UI.WebControls.DataControlField newField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CopyProperties(class System.Web.UI.WebControls.DataControlField newField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxField.CopyProperties(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="newField">O <see cref="T:System.Web.UI.WebControls.DataControlField" /> para copiar as propriedades do atual <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> para.</param>
+        <summary>Copia as propriedades do atual <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> objeto especificado <see cref="T:System.Web.UI.WebControls.DataControlField" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.CopyProperties%2A> é um método auxiliar usado pelo <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> método para copiar as propriedades do atual <xref:System.Web.UI.WebControls.CheckBoxField> o objeto para o <xref:System.Web.UI.WebControls.DataControlField> objeto criado pelo <xref:System.Web.UI.WebControls.CheckBoxField.CopyProperties%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.CheckBoxField.CopyProperties(System.Web.UI.WebControls.DataControlField)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.BoundField.CopyProperties(System.Web.UI.WebControls.DataControlField)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.DataControlField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.DataControlField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxField.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um vazio <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> vazio.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.CreateField%2A> é um método auxiliar usado pelo <xref:System.Web.UI.WebControls.DataControlField.CloneField%2A?displayProperty=nameWithType> método para criar um vazio <xref:System.Web.UI.WebControls.CheckBoxField> objeto ao qual as propriedades do atual <xref:System.Web.UI.WebControls.CheckBoxField> objeto pode ser copiado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.CheckBoxField.CreateField" /> em uma classe derivada, certifique-se criar uma nova instância do seu tipo e não chamar o método base.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DataField">
+      <MemberSignature Language="C#" Value="public override string DataField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxField.DataField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Web.UI.Design.DataSourceBooleanViewSchemaConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo de dados a ser associado ao objeto <see cref="T:System.Web.UI.WebControls.CheckBoxField" />.</summary>
+        <value>O nome do campo de dados a ser associado ao <see cref="T:System.Web.UI.WebControls.CheckBoxField" />. O padrão é uma cadeia de caracteres vazia (""), que indica que essa propriedade não está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CheckBoxField.DataField%2A> propriedade para especificar o nome do campo de dados para associar o <xref:System.Web.UI.WebControls.CheckBoxField> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataFormatString">
+      <MemberSignature Language="C#" Value="public override string DataFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxField.DataFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres que especifica o formato de exibição do valor do campo. Essa propriedade não tem suporte a <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> classe.</summary>
+        <value>Uma cadeia de formatação que especifica o formato de exibição para o valor do campo. Essa propriedade não é suportada e gerará um <see cref="T:System.NotSupportedException" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.DataFormatString%2A> propriedade é herdada do <xref:System.Web.UI.WebControls.BoundField> de classe, mas não é aplicável para o <xref:System.Web.UI.WebControls.CheckBoxField> classe. Qualquer tentativa de acessar o valor dessa propriedade gera uma <xref:System.NotSupportedException?displayProperty=nameWithType> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">É feita uma tentativa para ler ou definir o valor dessa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractValuesFromCell">
+      <MemberSignature Language="C#" Value="public override void ExtractValuesFromCell (System.Collections.Specialized.IOrderedDictionary dictionary, System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlRowState rowState, bool includeReadOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ExtractValuesFromCell(class System.Collections.Specialized.IOrderedDictionary dictionary, class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlRowState rowState, bool includeReadOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxField.ExtractValuesFromCell(System.Collections.Specialized.IOrderedDictionary,System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlRowState,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.Specialized.IOrderedDictionary" />
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+        <Parameter Name="includeReadOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Um <see cref="T:System.Collections.IDictionary" /> usado para armazenar os valores da célula especificada.</param>
+        <param name="cell">O <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> que contém os valores a serem recuperados.</param>
+        <param name="rowState">Um dos valores de <see cref="T:System.Web.UI.WebControls.DataControlRowState" />.</param>
+        <param name="includeReadOnly">
+          <see langword="true" />para incluir os valores dos campos somente leitura; Caso contrário, <see langword="false" />.</param>
+        <summary>Preenche especificado <see cref="T:System.Collections.IDictionary" /> objeto com os valores da especificado <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.ExtractValuesFromCell%2A> método é fornecido como uma maneira conveniente para recuperar os valores dos campos especificado <xref:System.Web.UI.WebControls.DataControlFieldCell> do objeto em um <xref:System.Web.UI.WebControls.CheckBoxField> objeto.  
+  
+> [!NOTE]
+>  Esse método é usado principalmente por desenvolvedores de controle.  
+  
+ Este método não tem um valor de retorno. Em vez disso, os valores de campo são retornados por referência por meio de <xref:System.Collections.IDictionary?displayProperty=nameWithType> objeto passado para o `dictionary` parâmetro. Depois que o método é chamado, percorrer o <xref:System.Collections.IDictionary?displayProperty=nameWithType> objeto para acessar os valores de campo.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.DataControlFieldCell> objeto contém os valores do campo somente leitura, você deverá passar `true` para o `includeReadOnly` parâmetro para incluir os valores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeValue">
+      <MemberSignature Language="C#" Value="protected override object GetDesignTimeValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetDesignTimeValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxField.GetDesignTimeValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o valor usado para o valor do campo ao renderizar o <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> objeto em um designer.</summary>
+        <returns>Sempre retorna <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.GetDesignTimeValue%2A> é um método auxiliar usado para determinar o valor a ser exibida para um campo ao renderizar o <xref:System.Web.UI.WebControls.CheckBoxField> objeto em um designer. Se os dados reais não podem ser recuperados da fonte de dados em tempo de design, o valor retornado por esse método é exibido em vez disso.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao estender o <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> classe, você pode substituir este método para retornar um valor diferente a ser exibida para o campo em um designer.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public override bool HtmlEncode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HtmlEncode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxField.HtmlEncode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui a propriedade <see cref="P:System.Web.UI.WebControls.BoundField.HtmlEncode" />. Essa propriedade não tem suporte a <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> classe.</summary>
+        <value>
+          <see langword="false" /> em todos os casos. Essa propriedade não é suportada e gerará um <see cref="T:System.NotSupportedException" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.HtmlEncode%2A> propriedade é herdada do <xref:System.Web.UI.WebControls.BoundField> de classe, mas não é aplicável para o <xref:System.Web.UI.WebControls.CheckBoxField> classe. Qualquer tentativa de acessar o valor dessa propriedade gera uma <xref:System.NotSupportedException?displayProperty=nameWithType> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">É feita uma tentativa para ler ou definir o valor dessa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncodeFormatString">
+      <MemberSignature Language="C#" Value="public override bool HtmlEncodeFormatString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HtmlEncodeFormatString" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxField.HtmlEncodeFormatString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o texto formatado deve ser codificada antes de ser exibido em HTML.</summary>
+        <value>
+          <see langword="true" />Se o texto deve ser codificada; em HTML Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores de codificação HTML podem ajudar a evitar ataques de script entre sites e conteúdo mal-intencionado seja exibida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDataCell">
+      <MemberSignature Language="C#" Value="protected override void InitializeDataCell (System.Web.UI.WebControls.DataControlFieldCell cell, System.Web.UI.WebControls.DataControlRowState rowState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitializeDataCell(class System.Web.UI.WebControls.DataControlFieldCell cell, valuetype System.Web.UI.WebControls.DataControlRowState rowState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxField.InitializeDataCell(System.Web.UI.WebControls.DataControlFieldCell,System.Web.UI.WebControls.DataControlRowState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Web.UI.WebControls.DataControlFieldCell" />
+        <Parameter Name="rowState" Type="System.Web.UI.WebControls.DataControlRowState" />
+      </Parameters>
+      <Docs>
+        <param name="cell">O <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> a ser inicializado.</param>
+        <param name="rowState">Um dos valores de <see cref="T:System.Web.UI.WebControls.DataControlRowState" />.</param>
+        <summary>Inicializa especificado <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> objeto para o estado de linha especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.InitializeDataCell%2A> é um método auxiliar usado para inicializar em uma célula a <xref:System.Web.UI.WebControls.CheckBoxField> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullDisplayText">
+      <MemberSignature Language="C#" Value="public override string NullDisplayText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NullDisplayText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxField.NullDisplayText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto exibido para um campo quando o valor do campo é <see langword="null" />. Essa propriedade não tem suporte a <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> classe.</summary>
+        <value>O texto exibido para um campo com um valor de <see langword="null" />. Essa propriedade não é suportada e gerará um <see cref="T:System.NotSupportedException" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.NullDisplayText%2A> propriedade é herdada do <xref:System.Web.UI.WebControls.BoundField> de classe, mas não é aplicável para o <xref:System.Web.UI.WebControls.CheckBoxField> classe. Qualquer tentativa de acessar o valor dessa propriedade gera uma <xref:System.NotSupportedException?displayProperty=nameWithType> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">É feita uma tentativa para ler ou definir o valor dessa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataBindField">
+      <MemberSignature Language="C#" Value="protected override void OnDataBindField (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataBindField(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxField.OnDataBindField(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Associa o valor de um campo para uma caixa de seleção de <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.OnDataBindField%2A> é um método auxiliar usado para associar o valor de um campo na fonte de dados a uma caixa de seleção correspondente no <xref:System.Web.UI.WebControls.CheckBoxField> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O controle ao qual o valor do campo está vinculado não é um <see cref="T:System.Web.UI.WebControls.CheckBox" /> controle.  
+  
+ \- ou -  
+  
+ O valor do campo não pode ser convertido em um valor booleano.</exception>
+        <block subset="none" type="overrides">
+          <para>Ao estender o <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> classe, você pode substituir este método para executar uma rotina de associação personalizada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsHtmlEncode">
+      <MemberSignature Language="C#" Value="protected override bool SupportsHtmlEncode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsHtmlEncode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxField.SupportsHtmlEncode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se o controle suporta codificação HTML.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há suporte para a codificação HTML para este controle, e essa propriedade sempre retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CheckBoxField.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a legenda a ser exibida ao lado de cada caixa de seleção em um <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> objeto.</summary>
+        <value>A legenda exibida ao lado de cada caixa de seleção de <see cref="T:System.Web.UI.WebControls.CheckBoxField" />. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.Text%2A> propriedade é usada para exibir uma legenda ao lado de cada caixa de seleção em um <xref:System.Web.UI.WebControls.CheckBoxField> objeto. Se o <xref:System.Web.UI.WebControls.CheckBoxField.Text%2A> estiver definida como uma cadeia de caracteres vazia, nenhuma legenda será exibida.  
+  
+> [!NOTE]
+>  Todas as caixas de seleção no <xref:System.Web.UI.WebControls.CheckBoxField> objeto compartilhem a mesma legenda.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CheckBoxField.Text%2A> propriedade para especificar uma legenda personalizada para as caixas de seleção em uma <xref:System.Web.UI.WebControls.CheckBoxField> do objeto em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[CheckBoxField#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CheckBoxField/CS/checkboxfieldcs.aspx#1)]
+ [!code-aspx-vb[CheckBoxField#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CheckBoxField/VB/checkboxfieldvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateSupportsCallback">
+      <MemberSignature Language="C#" Value="public override void ValidateSupportsCallback ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ValidateSupportsCallback() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CheckBoxField.ValidateSupportsCallback" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se os controles contidos em um <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> retornos de chamada do suporte do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CheckBoxField.ValidateSupportsCallback%2A> é um método auxiliar usado para determinar se os controles contidos em um <xref:System.Web.UI.WebControls.CheckBoxField> retornos de chamada do suporte do objeto. Esse método foi implementado como um método vazio (um método que não contém nenhum código) para indicar que os retornos de chamada são suportados.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Classes que derivam de <see cref="T:System.Web.UI.WebControls.CheckBoxField" /> classe pode substituir este método para indicar se os controles contidos pelos retornos de chamada de suporte de campo. Para indicar que os retornos de chamada são suportados, implementam este método como um método vazio que não lançam uma exceção; Caso contrário, lance uma exceção com uma mensagem útil que descreve por que não há suporte para retornos de chamada.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

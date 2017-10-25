@@ -1,0 +1,388 @@
+<Type Name="IisTraceListener" FullName="System.Web.IisTraceListener">
+  <TypeSignature Language="C#" Value="public sealed class IisTraceListener : System.Diagnostics.TraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IisTraceListener extends System.Diagnostics.TraceListener" />
+  <TypeSignature Language="DocId" Value="T:System.Web.IisTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um ouvinte que roteia todas as saídas de rastreamento e depuração para a infraestrutura do IIS 7.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.IisTraceListener> classe conecta o mecanismo de rastreamento de [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] para [!INCLUDE[iisver](~/includes/iisver-md.md)]. Essa classe de ouvinte permite que os desenvolvedores que criam [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] aplicativos e que implementem o <xref:System.Web.IHttpModule> e <xref:System.Web.IHttpHandler> interfaces para gerar eventos de nível de página, nível de módulo ou manipulador de nível para o [!INCLUDE[iisver](~/includes/iisver-md.md)] infraestrutura quando o rastreamento está habilitada.  
+  
+> [!NOTE]
+>  Essa classe de ouvinte não encaminhar [!INCLUDE[iisver](~/includes/iisver-md.md)] eventos para classes do ASP.NET. Isso inclui o <xref:System.Web.UI.Page> classe e classes que implementam o <xref:System.Web.IHttpModule> ou <xref:System.Web.IHttpHandler> interface.  
+  
+ <xref:System.Web.IisTraceListener>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IisTraceListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IisTraceListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.IisTraceListener" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.IisTraceListener.%23ctor%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="TraceData">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Grava a saída de dados de rastreamento de <see cref="T:System.Web.IisTraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.IisTraceListener.TraceData%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IisTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome que identifica a saída. Isso normalmente é o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um <see cref="T:System.Diagnostics.TraceEventType" /> valor que especifica o tipo de evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="data">Os dados de rastreamento para gravar.</param>
+        <summary>Grava a saída de informações de rastreamento, um objeto de dados e informações de evento de <see cref="T:System.Web.IisTraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado diretamente pelo código do aplicativo. Os membros de <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> classes usam esse método para gravar dados de rastreamento.  
+  
+ <xref:System.Web.IisTraceListener.TraceData%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceData">
+      <MemberSignature Language="C#" Value="public override void TraceData (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType eventType, int id, params object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceData(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IisTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome que identifica a saída. Isso normalmente é o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="eventType">Um <see cref="T:System.Diagnostics.TraceEventType" /> valor que especifica o tipo de evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="data">Uma matriz de objetos para gravar dados.</param>
+        <summary>Grava a saída de informações de rastreamento, uma matriz de objetos de dados e informações de evento de <see cref="T:System.Web.IisTraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado diretamente pelo código do aplicativo. Os membros de <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> classes usam esse método para gravar dados de rastreamento.  
+  
+ <xref:System.Web.IisTraceListener.TraceData%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="TraceEvent">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Grava a saída de informações de rastreamento e eventos de <see cref="T:System.Web.IisTraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.IisTraceListener.TraceEvent%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType severity, int id, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType severity, int32 id, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IisTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome que identifica a saída. Isso normalmente é o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="severity">Um <see cref="T:System.Diagnostics.TraceEventType" /> valor que especifica o tipo de evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Grava a saída de informações de rastreamento e eventos de <see cref="T:System.Web.IisTraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado diretamente pelo código do aplicativo. Os membros de <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> classes usam esse método para gravar dados de rastreamento.  
+  
+ <xref:System.Web.IisTraceListener.TraceEvent%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceEvent">
+      <MemberSignature Language="C#" Value="public override void TraceEvent (System.Diagnostics.TraceEventCache eventCache, string source, System.Diagnostics.TraceEventType severity, int id, string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void TraceEvent(class System.Diagnostics.TraceEventCache eventCache, string source, valuetype System.Diagnostics.TraceEventType severity, int32 id, string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IisTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventCache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="severity" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="eventCache">Um objeto <see cref="T:System.Diagnostics.TraceEventCache" /> que contém as informações atuais de ID de processo, ID de thread e rastreamento de pilha.</param>
+        <param name="source">Um nome que identifica a saída. Isso normalmente é o nome do aplicativo que gerou o evento de rastreamento.</param>
+        <param name="severity">Um <see cref="T:System.Diagnostics.TraceEventType" /> valor que especifica o tipo de evento que causou o rastreamento.</param>
+        <param name="id">Um identificador numérico do evento.</param>
+        <param name="format">Uma cadeia de caracteres de formato que contém zero ou mais itens de formato que correspondem aos objetos de <c>args</c> matriz.</param>
+        <param name="args">Uma matriz de objetos que contém zero ou mais objetos a serem formatados.</param>
+        <summary>Grava a saída de informações de rastreamento, uma matriz formatada de objetos e informações de evento de <see cref="T:System.Web.IisTraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não se destina a ser chamado diretamente pelo código do aplicativo. Os membros de <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> classes usam esse método para gravar dados de rastreamento.  
+  
+ <xref:System.Web.IisTraceListener.TraceEvent%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Write">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Grava uma mensagem, um nome de categoria ou o valor de um objeto <see cref="M:System.Object.ToString" /> método para a saída de <see cref="T:System.Web.IisTraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.IisTraceListener.Write%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IisTraceListener.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser gravada.</param>
+        <summary>Grava a mensagem especificada para a saída de <see cref="T:System.Web.IisTraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.IisTraceListener.Write%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IisTraceListener.Write(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser gravada.</param>
+        <param name="category">Ignorado. O <see cref="T:System.Web.IisTraceListener" /> implementação o <see cref="T:System.Diagnostics.TraceListener" /> classe ignora o <c>categoria</c> parâmetro.</param>
+        <summary>Grava a mensagem especificada e o nome da categoria especificada para a saída de <see cref="T:System.Web.IisTraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do <xref:System.Web.IisTraceListener.Write%2A> método é fornecido para compatibilidade. Esse método não usa valores passados a `category` parâmetro.  
+  
+ <xref:System.Web.IisTraceListener.Write%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IisTraceListener.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser gravada.</param>
+        <summary>Grava a mensagem especificada para a saída de <see cref="T:System.Web.IisTraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.IisTraceListener.WriteLine%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public override void WriteLine (string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteLine(string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IisTraceListener.WriteLine(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser gravada.</param>
+        <param name="category">Ignorado. O <see cref="T:System.Web.Iis7TraceListener" /> implementação de <see cref="T:System.Diagnostics.TraceListener" /> classe ignora o <c>categoria</c> parâmetro.</param>
+        <summary>Grava a saída do nome especificado da mensagem e a categoria de <see cref="T:System.Web.IisTraceListener" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.IisTraceListener.WriteLine%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

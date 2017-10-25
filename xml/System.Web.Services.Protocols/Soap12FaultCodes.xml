@@ -1,0 +1,265 @@
+<Type Name="Soap12FaultCodes" FullName="System.Web.Services.Protocols.Soap12FaultCodes">
+  <TypeSignature Language="C#" Value="public sealed class Soap12FaultCodes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Soap12FaultCodes extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.Soap12FaultCodes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define os códigos de falha de SOAP exibidos em uma mensagem SOAP quando ocorre um erro durante a comunicação com os serviços Web XML usando o protocolo SOAP versão 1.2.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma falha SOAP na versão 1.2 da especificação de SOAP contém um `Code` elemento e, dentre outras coisas um opcional `Subcode` elemento. 
+
+O `Code` elemento é parte de um conjunto predefinido de códigos que informa a um destinatário que a causa do erro ficou em cinco categorias de erro grandes. Esses códigos de falha de cinco são representados pelo <xref:System.Web.Services.Protocols.Soap12FaultCodes.ReceiverFaultCode?displayProperty=nameWithType>, <xref:System.Web.Services.Protocols.Soap12FaultCodes.SenderFaultCode?displayProperty=nameWithType>, <xref:System.Web.Services.Protocols.Soap12FaultCodes.VersionMismatchFaultCode?displayProperty=nameWithType>, <xref:System.Web.Services.Protocols.Soap12FaultCodes.MustUnderstandFaultCode?displayProperty=nameWithType>, e <xref:System.Web.Services.Protocols.Soap12FaultCodes.DataEncodingUnknownFaultCode?displayProperty=nameWithType> campos. 
+
+O `Subcode` elemento permite que o remetente da falha de SOAP fornecer um código de erro específico do aplicativo. ASP.NET define quatro esses códigos que são representados pelo <xref:System.Web.Services.Protocols.Soap12FaultCodes.RpcProcedureNotPresentFaultCode?displayProperty=nameWithType>, <xref:System.Web.Services.Protocols.Soap12FaultCodes.RpcBadArgumentsFaultCode?displayProperty=nameWithType>, <xref:System.Web.Services.Protocols.Soap12FaultCodes.EncodingMissingIdFaultCode?displayProperty=nameWithType>, e <xref:System.Web.Services.Protocols.Soap12FaultCodes.EncodingUntypedValueFaultCode?displayProperty=nameWithType> campos.  
+  
+ Um serviço Web XML lançar uma exceção conjuntos de <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade, que representa o `Code` elemento, quando uma nova instância do <xref:System.Web.Services.Protocols.SoapException> ou <xref:System.Web.Services.Protocols.SoapHeaderException> classe é criada. Que erros sejam transmitidos eletronicamente como uma falha de SOAP, um cliente do .NET Framework pode capturar como uma <xref:System.Web.Services.Protocols.SoapException> ou <xref:System.Web.Services.Protocols.SoapHeaderException>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataEncodingUnknownFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName DataEncodingUnknownFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName DataEncodingUnknownFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.Soap12FaultCodes.DataEncodingUnknownFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o SOAP versão 1.2 <see langword="DataEncodingUnknown" /> código de falha, indicando que a mensagem SOAP é codificado em um formato não reconhecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET não gera automaticamente um <xref:System.Web.Services.Protocols.SoapException> com o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade definida como <xref:System.Web.Services.Protocols.Soap12FaultCodes.DataEncodingUnknownFaultCode>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodingMissingIdFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName EncodingMissingIdFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName EncodingMissingIdFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.Soap12FaultCodes.EncodingMissingIdFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o código de falha de ID ausente nos dados de codificação de SOAP.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodingUntypedValueFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName EncodingUntypedValueFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName EncodingUntypedValueFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.Soap12FaultCodes.EncodingUntypedValueFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o SOAP versão 1.2 <see langword="enc:UntypedValue" /> subcódigo indicando que a mensagem SOAP que foi codificado RPC e a propriedade de nome de tipo de um nó do gráfico codificado não foi especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  ASP.NET não gera automaticamente um <xref:System.Web.Services.Protocols.SoapException> com o <xref:System.Web.Services.Protocols.SoapFaultSubCode.Code%2A?displayProperty=nameWithType> propriedade definida como <xref:System.Web.Services.Protocols.Soap12FaultCodes.EncodingUntypedValueFaultCode?displayProperty=nameWithType>.  
+  
+ O <xref:System.Web.Services.Protocols.SoapException> classe tiver um <xref:System.Web.Services.Protocols.SoapException.SubCode%2A> propriedade do tipo <xref:System.Web.Services.Protocols.SoapFaultSubCode> que representa o subcódigo de falhas SOAP. O <xref:System.Web.Services.Protocols.SoapFaultSubCode.Code%2A?displayProperty=nameWithType> propriedade representa o URI para o subcódigo de falhas SOAP real. Ao definir o <xref:System.Web.Services.Protocols.SoapFaultSubCode.Code%2A?displayProperty=nameWithType> propriedade <xref:System.Web.Services.Protocols.Soap12FaultCodes.EncodingUntypedValueFaultCode?displayProperty=nameWithType>, defina o <xref:System.Web.Services.Protocols.SoapException.Code%2A?displayProperty=nameWithType> propriedade <xref:System.Web.Services.Protocols.Soap12FaultCodes.SenderFaultCode?displayProperty=nameWithType>.  
+    
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MustUnderstandFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName MustUnderstandFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName MustUnderstandFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.Soap12FaultCodes.MustUnderstandFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o SOAP versão 1.2 <see langword="MustUnderstand" /> código de falha que indica um cabeçalho SOAP marcado com o <see langword="MustUnderstand" /> atributo não foi processado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nem todos os cabeçalhos SOAP não exigem processamento pelo destinatário. No entanto, se um cabeçalho SOAP é marcado com o `MustUnderstand` atributo igual ao processamento de "true", é necessário. Falha ao processar o cabeçalho quando ele estiver dentro de uma solicitação SOAP 1.2 gera um <xref:System.Web.Services.Protocols.SoapHeaderException> com o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade definida como <xref:System.Web.Services.Protocols.Soap12FaultCodes.MustUnderstandFaultCode?displayProperty=nameWithType>. Se a solicitação SOAP residia dentro de uma solicitação SOAP 1.1, o <xref:System.Web.Services.Protocols.SoapException.Code%2A> está definida como <xref:System.Web.Services.Protocols.SoapException.MustUnderstandFaultCode?displayProperty=nameWithType>.  
+  
+ Definem SOAP 1.1 e 1.2 `MustUnderstand` códigos de falha SOAP difere somente pela versão do protocolo SOAP usada para enviar a mensagem SOAP. Este campo representa a versão do SOAP 1.2 e a versão do SOAP 1.1 é representada por <xref:System.Web.Services.Protocols.SoapException.MustUnderstandFaultCode?displayProperty=nameWithType>. Os dois campos mapeiam para nomes qualificados diferentes, mas você pode verificar se o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade é um dos códigos de falha ao chamar o <xref:System.Web.Services.Protocols.SoapException.IsMustUnderstandFaultCode%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiverFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName ReceiverFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName ReceiverFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.Soap12FaultCodes.ReceiverFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o SOAP versão 1.2 <see langword="Receiver" /> código de falha que indica um erro ocorreu durante o processamento de uma chamada de cliente no servidor devido a um problema com o destinatário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Services.Protocols.SoapException> será lançada com o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade definida como <xref:System.Web.Services.Protocols.Soap12FaultCodes.ReceiverFaultCode> quando um servidor é chamado e ele não pode responder a uma solicitação devido a problemas de rede. Normalmente, esse tipo de exceção, a chamada do cliente poderá ser bem-sucedida mais tarde.  
+  
+ O `Receiver` código de falha SOAP é semelhante de `Server` falhas de código, que é representado pelo <xref:System.Web.Services.Protocols.SoapException.ServerFaultCode> campo, mas o `Server` código de falha é usado quando a solicitação SOAP é enviada usando SOAP 1.1. Para verificar se o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade é o `Receiver` ou `Server` códigos de falha SOAP, chame o <xref:System.Web.Services.Protocols.SoapException.IsServerFaultCode%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RpcBadArgumentsFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName RpcBadArgumentsFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName RpcBadArgumentsFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.Soap12FaultCodes.RpcBadArgumentsFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o SOAP versão 1.2 <see langword="rpc:BadArguments" /> subcódigo indicando que os argumentos enviados para o método de serviço Web XML estavam incorretos ou não podem ser analisados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET não gera automaticamente um <xref:System.Web.Services.Protocols.SoapException> com o <xref:System.Web.Services.Protocols.SoapFaultSubCode.Code%2A?displayProperty=nameWithType> propriedade definida como <xref:System.Web.Services.Protocols.Soap12FaultCodes.RpcBadArgumentsFaultCode>.  
+  
+ O <xref:System.Web.Services.Protocols.SoapException> classe tiver um <xref:System.Web.Services.Protocols.SoapException.SubCode%2A> propriedade do tipo <xref:System.Web.Services.Protocols.SoapFaultSubCode> que representa o subcódigo de falhas SOAP. O <xref:System.Web.Services.Protocols.SoapFaultSubCode.Code%2A?displayProperty=nameWithType> propriedade representa o URI para o subcódigo de falhas SOAP real. Ao definir o <xref:System.Web.Services.Protocols.SoapFaultSubCode.Code%2A?displayProperty=nameWithType> propriedade <xref:System.Web.Services.Protocols.Soap12FaultCodes.RpcBadArgumentsFaultCode>, defina o <xref:System.Web.Services.Protocols.SoapException.Code%2A?displayProperty=nameWithType> propriedade <xref:System.Web.Services.Protocols.Soap12FaultCodes.SenderFaultCode>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RpcProcedureNotPresentFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName RpcProcedureNotPresentFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName RpcProcedureNotPresentFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.Soap12FaultCodes.RpcProcedureNotPresentFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o SOAP versão 1.2 <see langword="rpc:ProcedureNotPresent" /> subcódigo falha indicando que o serviço Web XML não oferece suporte para o método de serviço Web XML solicitado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET não gera automaticamente um <xref:System.Web.Services.Protocols.SoapException> com o <xref:System.Web.Services.Protocols.SoapFaultSubCode.Code%2A?displayProperty=nameWithType> propriedade definida como <xref:System.Web.Services.Protocols.Soap12FaultCodes.RpcProcedureNotPresentFaultCode>.  
+  
+ O <xref:System.Web.Services.Protocols.SoapException> classe tiver um <xref:System.Web.Services.Protocols.SoapException.SubCode%2A> propriedade do tipo <xref:System.Web.Services.Protocols.SoapFaultSubCode> que representa o subcódigo de falhas SOAP. O <xref:System.Web.Services.Protocols.SoapFaultSubCode.Code%2A?displayProperty=nameWithType> propriedade representa o URI para o subcódigo de falhas SOAP real. Ao definir o <xref:System.Web.Services.Protocols.SoapFaultSubCode.Code%2A?displayProperty=nameWithType> propriedade <xref:System.Web.Services.Protocols.Soap12FaultCodes.RpcProcedureNotPresentFaultCode>, defina o <xref:System.Web.Services.Protocols.SoapException.Code%2A?displayProperty=nameWithType> propriedade <xref:System.Web.Services.Protocols.Soap12FaultCodes.SenderFaultCode>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SenderFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName SenderFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName SenderFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.Soap12FaultCodes.SenderFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o SOAP versão 1.2 <see langword="Sender" /> código de falha, indicando uma chamada de cliente não foi formatado corretamente ou não contém as informações apropriadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Services.Protocols.SoapException> será lançada com o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade definida como <xref:System.Web.Services.Protocols.Soap12FaultCodes.SenderFaultCode> quando uma solicitação de SOAP 1.2 está mal formada ou um parâmetro está ausente.  
+  
+ O `Sender` código de falha SOAP é semelhante de `Client` falhas de código, que é representado pelo <xref:System.Web.Services.Protocols.SoapException.ClientFaultCode> campo, mas o `Client` código de falha é usado quando a solicitação SOAP é enviada usando SOAP 1.1. Para verificar se o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade é o `Sender` ou `Client` códigos de falha SOAP, chame o <xref:System.Web.Services.Protocols.SoapException.IsClientFaultCode%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VersionMismatchFaultCode">
+      <MemberSignature Language="C#" Value="public static readonly System.Xml.XmlQualifiedName VersionMismatchFaultCode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Xml.XmlQualifiedName VersionMismatchFaultCode" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Protocols.Soap12FaultCodes.VersionMismatchFaultCode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o SOAP versão 1.2 <see langword="VersionMismatch" /> código de falha, indicando que o serviço Web XML esperado mensagens SOAP em conformidade com a especificação de SOAP 1.2, mas recebido um em conformidade com o SOAP 1.1.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Services.Protocols.SoapException> será lançada com o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade definida como <xref:System.Web.Services.Protocols.Soap12FaultCodes.VersionMismatchFaultCode?displayProperty=nameWithType> quando um serviço Web XML está configurado para aceitar somente solicitações de SOAP 1.2 e receber uma mensagem SOAP 1.1. Da mesma forma, se um serviço Web XML estiver configurado aceitar somente SOAP 1.1 mensagens e receber uma mensagem SOAP 1.2, um <xref:System.Web.Services.Protocols.SoapException> será lançada com o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade definida como <xref:System.Web.Services.Protocols.SoapException.VersionMismatchFaultCode?displayProperty=nameWithType>. Para obter detalhes sobre como configurar os XML Web services, consulte [&#91;\< Topic://cpconConfigurationOptionsForASPNETWebServices > &#93; ](http://msdn.microsoft.com/en-us/1f0d71bc-8faa-4730-b500-2a6c7b5d4f6b).  
+  
+ Definem SOAP 1.1 e 1.2 `VersionMismatch` códigos de falha SOAP que diferem na versão do protocolo SOAP esperado. Este campo representa a versão do SOAP 1.2, enquanto a versão SOAP 1.1 é representada por <xref:System.Web.Services.Protocols.SoapException.VersionMismatchFaultCode>. Os dois campos mapeiam para nomes qualificados diferentes, mas você pode verificar se o <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade é um dos códigos de falha ao chamar o <xref:System.Web.Services.Protocols.SoapException.IsVersionMismatchFaultCode%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

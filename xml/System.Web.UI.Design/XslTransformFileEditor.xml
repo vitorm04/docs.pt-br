@@ -1,0 +1,117 @@
+<Type Name="XslTransformFileEditor" FullName="System.Web.UI.Design.XslTransformFileEditor">
+  <TypeSignature Language="C#" Value="public class XslTransformFileEditor : System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XslTransformFileEditor extends System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.XslTransformFileEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.UrlEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface de usuário em tempo de design para selecionar um arquivo de transformação XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.Design.XslTransformFileEditor> objeto é usado em tempo de design para selecionar e editar uma URL para um arquivo de transformação XML (. xsl) e atribua o URL para uma propriedade de controle. Por exemplo, o <xref:System.Web.UI.WebControls.XmlDataSource> controlar usa o <xref:System.Web.UI.Design.XslTransformFileEditor> classe em tempo de design para definir o valor da <xref:System.Web.UI.WebControls.XmlDataSource.TransformFile%2A> propriedade.  
+  
+ Use o <xref:System.ComponentModel.EditorAttribute> atributo para associar o <xref:System.Web.UI.Design.XslTransformFileEditor> com uma propriedade. Quando a propriedade associada é editada na superfície de design, o host de designer chama o <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> método. O <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> método usa o <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> método, que por sua vez exibe uma interface do usuário para selecionar a URL e, em seguida, retorna a URL selecionada pelo usuário. O <xref:System.Web.UI.Design.UrlEditor.GetEditStyle%2A> método indica o estilo de exibição da interface do usuário.  
+  
+ Derivar uma classe a partir de <xref:System.Web.UI.Design.XslTransformFileEditor> para definir um editor personalizado para uma propriedade de URL do arquivo de transformação XML. Por exemplo, uma classe derivada pode substituir o <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> método e, em seguida, chame o <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> método com um personalizado <xref:System.Web.UI.Design.XslTransformFileEditor.Filter%2A> ou <xref:System.Web.UI.Design.XslTransformFileEditor.Caption%2A> valor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como associar uma instância do <xref:System.Web.UI.Design.XslTransformFileEditor> classe com uma propriedade que está dentro de um controle personalizado. Quando a propriedade de controle é editada na superfície de design, o <xref:System.Web.UI.Design.XslTransformFileEditor> classe permite que a interface do usuário selecionar e editar um nome de arquivo de transformação XML para o valor da propriedade.  
+  
+ [!code-csharp[WebDesigner.XslTransformFileEditor#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebDesigner.XslTransformFileEditor/cs/simplecontrolwithfilename.cs#1)]
+ [!code-vb[WebDesigner.XslTransformFileEditor#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebDesigner.XslTransformFileEditor/vb/simplecontrolwithfilename.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XslTransformFileEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.XslTransformFileEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.XslTransformFileEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="protected override string Caption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.XslTransformFileEditor.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a legenda a ser exibida na caixa de diálogo de seleção.</summary>
+        <value>O texto da legenda para exibir a caixa de diálogo de seleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.XslTransformFileEditor.Caption%2A> propriedade é usada pelo <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> método ao chamar o <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> método, que exibe a caixa de diálogo de seleção de URL para o usuário em tempo de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="protected override string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.XslTransformFileEditor.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as opções de filtro de URL para o editor, que é usado para filtrar os itens que aparecem na caixa de diálogo de seleção de URL.</summary>
+        <value>Uma cadeia de caracteres que representa uma ou mais opções de filtro de URL para a caixa de diálogo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.XslTransformFileEditor.Filter%2A> propriedade é usada pelo <xref:System.Web.UI.Design.UrlEditor.EditValue%2A> método ao chamar o <xref:System.Web.UI.Design.UrlBuilder.BuildUrl%2A> método, que exibe a caixa de diálogo de seleção de URL para o usuário em tempo de design.  
+  
+ O <xref:System.Web.UI.Design.XslTransformFileEditor.Filter%2A> valor padrão da propriedade indica dois filtros de URL para a caixa de diálogo: um para os arquivos de transformação XML (*.xsl) e outro para todos os arquivos (\*.\*).  
+  
+ Para especificar uma cadeia de caracteres de filtro personalizado, derive uma classe do <xref:System.Web.UI.Design.XslTransformFileEditor> classe e, em seguida, substituir o <xref:System.Web.UI.Design.XslTransformFileEditor.Filter%2A> propriedade para retornar a cadeia de caracteres de filtro personalizado.  
+  
+ Uma cadeia de caracteres de filtro contém uma ou mais opções de filtro. Cada opção de filtro contém uma descrição do filtro, seguida pela barra vertical (&#124;) e o padrão de filtro. As cadeias de caracteres para diferentes opções de filtragem são separadas por barra vertical.  
+  
+ A seguir está um exemplo de uma cadeia de caracteres de filtro que contém duas opções de filtro:  
+  
+ "`XML Transform Files (*.xsl)|*.xsl|All Files (*.*)|*.*`".  
+  
+ Você pode especificar vários padrões de filtro em uma opção de filtro, separando os padrões de filtro com ponto e vírgula. A seguir está um exemplo de uma cadeia de caracteres de filtro no qual a primeira opção de filtro especifica dois padrões de filtro:  
+  
+ "`Custom XML Transform Files (*.xs1; *.xs2)|*.xs1;*.xs2|All Files (*.*)|*.*`".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

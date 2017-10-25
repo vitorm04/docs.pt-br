@@ -1,0 +1,380 @@
+<Type Name="DateTimeStyles" FullName="System.Globalization.DateTimeStyles">
+  <TypeSignature Language="C#" Value="public enum DateTimeStyles" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed DateTimeStyles extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.DateTimeStyles" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define as opções de formatação que personalizam a análise para de cadeia de caracteres de alguns métodos de data e hora.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Globalization.DateTimeStyles>valores podem ser usados com qualquer um dos seguintes data e hora métodos que incluem um `styles` parâmetro para definir a interpretação dos elementos de estilo que podem estar presentes na cadeia de caracteres a ser analisada:  
+  
+-   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.DateTimeOffset.TryParse%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>  
+  
+ O `ParseExact` e `TryParseExact` métodos podem usar qualquer uma da <xref:System.Globalization.DateTimeStyles> valores. No entanto, se nenhuma a `Allow*` valores for selecionada, a cadeia de caracteres de entrada deve ter exatamente os mesmos caracteres de espaço em branco como a cadeia de caracteres de formato.  
+  
+ Se a cadeia de caracteres de entrada não contém nenhuma indicação do fuso horário, a data e hora métodos interpretam o valor da cadeia de data e hora com base na configuração de fuso horário para o sistema operacional. Para converter a data e hora para o tempo Universal ou a hora de Greenwich (GMT), o aplicativo deve usar o valor AdjustToUniversal. O mesmo efeito que pode ser obtido chamando o <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> método. No entanto, usando o valor de AdjustToUniversal com a data e hora para análise do método é mais eficiente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdjustToUniversal">
+      <MemberSignature Language="C#" Value="AdjustToUniversal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DateTimeStyles AdjustToUniversal = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DateTimeStyles.AdjustToUniversal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DateTimeStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Data e hora são retornados como UTC (Tempo Universal Coordenado). Se a cadeia de caracteres de entrada denotar uma hora local, por meio de um especificador de fuso horário ou <see cref="F:System.Globalization.DateTimeStyles.AssumeLocal" />, a data e hora serão convertidas da hora local para UTC. Se a cadeia de caracteres de entrada denotar uma hora em UTC, por meio de um especificador de fuso horário ou <see cref="F:System.Globalization.DateTimeStyles.AssumeUniversal" />, não ocorrerá nenhuma conversão. Se a cadeia de caracteres de entrada não denotar uma hora local ou em UTC, nenhuma conversão ocorrerá e a propriedade <see cref="P:System.DateTime.Kind" /> resultante será <see cref="F:System.DateTimeKind.Unspecified" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor não pode ser usado com RoundtripKind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowInnerWhite">
+      <MemberSignature Language="C#" Value="AllowInnerWhite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DateTimeStyles AllowInnerWhite = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DateTimeStyles.AllowInnerWhite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DateTimeStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caracteres de espaço em branco extra no meio da cadeia de caracteres deverão ser ignorados durante a análise, exceto se ocorrerem nos padrões de formatação <see cref="T:System.Globalization.DateTimeFormatInfo" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowLeadingWhite">
+      <MemberSignature Language="C#" Value="AllowLeadingWhite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DateTimeStyles AllowLeadingWhite = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DateTimeStyles.AllowLeadingWhite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DateTimeStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os caracteres de espaço em branco à esquerda deverão ser ignorados durante a análise, exceto se ocorrerem nos padrões de formatação <see cref="T:System.Globalization.DateTimeFormatInfo" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowTrailingWhite">
+      <MemberSignature Language="C#" Value="AllowTrailingWhite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DateTimeStyles AllowTrailingWhite = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DateTimeStyles.AllowTrailingWhite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DateTimeStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os caracteres de espaço em branco à direita deverão ser ignorados durante a análise, exceto se ocorrerem nos padrões de formatação <see cref="T:System.Globalization.DateTimeFormatInfo" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowWhiteSpaces">
+      <MemberSignature Language="C#" Value="AllowWhiteSpaces" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DateTimeStyles AllowWhiteSpaces = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DateTimeStyles.AllowWhiteSpaces" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DateTimeStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caracteres de espaço em branco extra em qualquer parte da cadeia de caracteres deverão ser ignorados durante a análise, exceto se ocorrerem nos padrões de formatação <see cref="T:System.Globalization.DateTimeFormatInfo" />. Esse valor é uma combinação dos valores <see cref="F:System.Globalization.DateTimeStyles.AllowLeadingWhite" />, <see cref="F:System.Globalization.DateTimeStyles.AllowTrailingWhite" /> e <see cref="F:System.Globalization.DateTimeStyles.AllowInnerWhite" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AssumeLocal">
+      <MemberSignature Language="C#" Value="AssumeLocal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DateTimeStyles AssumeLocal = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DateTimeStyles.AssumeLocal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DateTimeStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se não for especificado nenhum fuso horário na cadeia de caracteres analisada, será considerado que a cadeia de caracteres denota uma hora local.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor não pode ser usado com AssumeUniversal e RoundtripKind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssumeUniversal">
+      <MemberSignature Language="C#" Value="AssumeUniversal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DateTimeStyles AssumeUniversal = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DateTimeStyles.AssumeUniversal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DateTimeStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se não for especificado nenhum fuso horário na cadeia de caracteres analisada, será considerado que a cadeia de caracteres denota uma hora em UTC.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor não pode ser usado com AssumeLocal ou RoundtripKind.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoCurrentDateDefault">
+      <MemberSignature Language="C#" Value="NoCurrentDateDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DateTimeStyles NoCurrentDateDefault = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DateTimeStyles.NoCurrentDateDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DateTimeStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se a cadeia de caracteres analisada contiver apenas a hora e não a data, os métodos de análise utilizarão a data no calendário gregoriano, com ano = 1, mês = 1 e dia = 1. Se esse valor não for usado, a data atual será presumida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DateTimeStyles None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DateTimeStyles.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DateTimeStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Opções de formatação padrão devem ser usadas. Esse valor representa o estilo padrão dos métodos <see cref="M:System.DateTime.Parse(System.String)" />, <see cref="M:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)" /> e <see cref="M:System.DateTime.TryParse(System.String,System.DateTime@)" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RoundtripKind">
+      <MemberSignature Language="C#" Value="RoundtripKind" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.DateTimeStyles RoundtripKind = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.DateTimeStyles.RoundtripKind" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.DateTimeStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O campo <see cref="T:System.DateTimeKind" /> de uma data é preservado quando um objeto <see cref="T:System.DateTime" /> é convertido em uma cadeia de caracteres usando o especificador de formato padrão "o" ou "r", e a cadeia de caracteres é convertida de volta em um objeto <see cref="T:System.DateTime" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,95 @@
+<Type Name="ContractArgumentValidatorAttribute" FullName="System.Diagnostics.Contracts.ContractArgumentValidatorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ContractArgumentValidatorAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ContractArgumentValidatorAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Contracts.ContractArgumentValidatorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.Conditional("CONTRACTS_FULL")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite a fatoração do código <see langword="if-then-throw" /> herdado em métodos separados para reutilização e fornece controle total sobre as exceções lançadas e os argumentos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se seu código usa explícita `if-then-throw` o código para validar parâmetros, você pode aplicar métodos auxiliares que executam verificações e geram exceções específicas em caso de falha, conforme mostrado no exemplo a seguir.  
+  
+ [!code-csharp[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/cs/ifthenthrow1.cs#1)]
+ [!code-vb[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/vb/ifthenthrow1.vb#1)]  
+  
+ Neste exemplo, `Execute` tem uma pré-condição opcional especificando que o valor do parâmetro não deve ser `null`. Para habilitar as ferramentas de contrato para reconhecer que a chamada para `ValidationHelper.NotNull` representa um contrato, você pode marcar o método chamado com o <xref:System.Diagnostics.Contracts.ContractArgumentValidatorAttribute> atributo. O <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType> chamada de método deve ser usada para habilitar as ferramentas extrair as especificações adequadas para geração de documento e a verificação estático, da seguinte maneira.  
+  
+ [!code-csharp[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/cs/ifthenthrow2.cs#2)]
+ [!code-vb[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/vb/ifthenthrow2.vb#2)]  
+  
+ Além `if-then-throw` instruções, a seção de contrato de métodos de validador do contrato podem conter chamadas para outros métodos de validador de contrato. No entanto, nenhum outro contrato (como <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>, ou <xref:System.Diagnostics.Contracts.Contract.Ensures%2A?displayProperty=nameWithType>) são permitidos. Código que segue o <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType> chamada é ignorada por todas as ferramentas de contrato.  
+  
+ O exemplo a seguir mostra um validador de argumento de intervalo gravado em termos de um existente `NotNull` método validador.  
+  
+ [!code-csharp[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/cs/ifthenthrow3.cs#3)]
+ [!code-vb[System.Diagnostics.Contracts.ContractArgumentValidatorAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.diagnostics.contracts.contractargumentvalidatorattribute/vb/ifthenthrow3.vb#3)]  
+  
+ Do ponto de vista da especificação, a `Execute` método tem os seguintes três contratos:  
+  
+```  
+Contract.Requires<ArgumentNullException>(data != null);  
+Contract.Requires<ArgumentOutOfRangeException>(position >= 0);  
+Contract.Requires<ArgumentOutOfRangeException>(position < data.Length);  
+  
+```  
+  
+ Em métodos padrão, chamadas para métodos de validador de contrato podem ser livremente combinadas com outros contratos como <xref:System.Diagnostics.Contracts.Contract.Ensures%2A?displayProperty=nameWithType> ou <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContractArgumentValidatorAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Contracts.ContractArgumentValidatorAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Contracts</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.Contracts.ContractArgumentValidatorAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,150 @@
+<Type Name="EnumeratorPrototype" FullName="Microsoft.JScript.EnumeratorPrototype">
+  <TypeSignature Language="C#" Value="public class EnumeratorPrototype : Microsoft.JScript.JSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EnumeratorPrototype extends Microsoft.JScript.JSObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.EnumeratorPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.JSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades e métodos estáticos <see cref="T:Microsoft.JScript.EnumeratorObject" /> objetos. Todos os métodos dessa classe são chamados pela passagem de uma referência ao objeto que está solicitando acesso ao método. Essa classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="atEnd">
+      <MemberSignature Language="C#" Value="public static bool atEnd (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool atEnd(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.EnumeratorPrototype.atEnd(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Enumerator_atEnd)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <summary>Determina se o enumerador tiver ultrapassado o último item da coleção.</summary>
+        <returns>
+          <see langword="true" />Se o enumerador tiver ultrapassado o último item da coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public static Microsoft.JScript.EnumeratorConstructor constructor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.JScript.EnumeratorConstructor constructor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.EnumeratorPrototype.constructor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.EnumeratorConstructor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a um objeto com base no protótipo que está usando esse protótipo.</summary>
+        <value>Uma referência a um objeto de protótipo.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="item">
+      <MemberSignature Language="C#" Value="public static object item (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object item(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.EnumeratorPrototype.item(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Enumerator_item)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <summary>Obtém o elemento atual na coleção.</summary>
+        <returns>O elemento atual na coleção.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="moveFirst">
+      <MemberSignature Language="C#" Value="public static void moveFirst (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void moveFirst(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.EnumeratorPrototype.moveFirst(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Enumerator_moveFirst)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <summary>Move o enumerador como sua posição inicial, que é antes do primeiro elemento na coleção.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="moveNext">
+      <MemberSignature Language="C#" Value="public static void moveNext (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void moveNext(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.EnumeratorPrototype.moveNext(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Enumerator_moveNext)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <summary>Avança o enumerador para o próximo elemento da coleção.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

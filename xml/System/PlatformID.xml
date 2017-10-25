@@ -1,0 +1,235 @@
+<Type Name="PlatformID" FullName="System.PlatformID">
+  <TypeSignature Language="C#" Value="public enum PlatformID" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PlatformID extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.PlatformID" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica o sistema operacional ou a plataforma com suporte em um assembly.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Environment.OSVersion%2A?displayProperty=nameWithType> e <xref:System.OperatingSystem.Platform%2A?displayProperty=nameWithType> propriedades para obter o <xref:System.PlatformID> enumeração para a plataforma de desenvolvimento ou de sistema operacional em execução no momento. Use o <xref:System.PlatformID> enumeração para ajudar a determinar se o sistema operacional atual ou a plataforma de desenvolvimento oferece suporte a seu aplicativo.  
+  
+ Você pode usar o valor de inteiro subjacente de cada <xref:System.PlatformID> membro de enumeração, como mostrado na tabela, como o `PlatformId` argumento para o [SignTool.exe (ferramenta de assinatura)](~/docs/framework/tools/signtool-exe.md) utilitário.  
+  
+|Membro|Valor de base|  
+|------------|----------------------|  
+|Win32S|0|  
+|Win32Windows|1|  
+|Win32NT|2|  
+|WinCE|3|  
+|UNIX|4|  
+|Xbox|5|  
+|MacOSX|6|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.PlatformID.Win32S> classe para identificar o sistema operacional em execução no momento.  
+  
+ [!code-cpp[PlatformID.class#1](~/samples/snippets/cpp/VS_Snippets_CLR/platformID.class/CPP/pid.cpp#1)]
+ [!code-csharp[PlatformID.class#1](~/samples/snippets/csharp/VS_Snippets_CLR/platformID.class/CS/pid.cs#1)]
+ [!code-vb[PlatformID.class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/platformID.class/VB/pid.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MacOSX">
+      <MemberSignature Language="C#" Value="MacOSX" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.PlatformID MacOSX = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.PlatformID.MacOSX" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.PlatformID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sistema operacional é Macintosh.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unix">
+      <MemberSignature Language="C#" Value="Unix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.PlatformID Unix = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.PlatformID.Unix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.PlatformID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sistema operacional é Unix.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Win32NT">
+      <MemberSignature Language="C#" Value="Win32NT" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.PlatformID Win32NT = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.PlatformID.Win32NT" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.PlatformID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sistema operacional é o Windows NT ou posterior.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Win32S">
+      <MemberSignature Language="C#" Value="Win32S" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.PlatformID Win32S = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.PlatformID.Win32S" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.PlatformID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sistema operacional é Win32s. O Win32s é uma camada executada em versões de 16 bits do Windows para fornecer acesso a aplicativos de 32 bits.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Win32Windows">
+      <MemberSignature Language="C#" Value="Win32Windows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.PlatformID Win32Windows = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.PlatformID.Win32Windows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.PlatformID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sistema operacional é Windows 95 ou Windows 98.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WinCE">
+      <MemberSignature Language="C#" Value="WinCE" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.PlatformID WinCE = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.PlatformID.WinCE" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.PlatformID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sistema operacional é Windows CE.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Xbox">
+      <MemberSignature Language="C#" Value="Xbox" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.PlatformID Xbox = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.PlatformID.Xbox" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.PlatformID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A plataforma de desenvolvimento é o Xbox 360.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

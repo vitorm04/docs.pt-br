@@ -1,0 +1,43 @@
+<Type Name="TemplateControlParser" FullName="System.Web.UI.TemplateControlParser">
+  <TypeSignature Language="C#" Value="public abstract class TemplateControlParser : System.Web.UI.BaseTemplateParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TemplateControlParser extends System.Web.UI.BaseTemplateParser" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.TemplateControlParser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.BaseTemplateParser</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa a análise de modelo ASP.NET para controle de modelo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.TemplateControlParser> classe fornece funcionalidade de analisador para o <xref:System.Web.UI.TemplateControl> classe.  Classes que herdam de <xref:System.Web.UI.TemplateControl> classe inclui o <xref:System.Web.UI.UserControl> e <xref:System.Web.UI.Page> classes. Porque o <xref:System.Web.UI.TemplateControlParser> classe é abstrata, uma instância dessa classe não é criada diretamente.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TemplateControlParser ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.TemplateControlParser.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.TemplateControlParser" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,53 @@
+<Type Name="IApplicationIdentifier" FullName="System.Runtime.Caching.Hosting.IApplicationIdentifier">
+  <TypeSignature Language="C#" Value="public interface IApplicationIdentifier" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IApplicationIdentifier" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.Hosting.IApplicationIdentifier" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um identificador para domínios de aplicativo que pode usar uma implementação de cache para interagir com um ambiente de host.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ambiente de host, como o ASP.NET pode usar o <xref:System.Runtime.Caching.Hosting.IApplicationIdentifier> interface defina cadeias de caracteres que identificam os domínios de aplicativo individual. O ambiente de host implementa o <xref:System.Runtime.Caching.Hosting.IApplicationIdentifier> interface. Essa interface estará disponível para <xref:System.Runtime.Caching.ObjectCache> implementações por meio de <xref:System.Runtime.Caching.ObjectCache.Host%2A> propriedade.  
+  
+ Uma implementação de cache usa essa referência para obter um identificador para o domínio de aplicativo. No ASP.NET, implementações de cache usam o identificador do aplicativo para construir identificadores para contadores de desempenho do cache. Isso fornece nomes para desempenho instâncias de contadores que podem ser distinguidas entre domínios de aplicativos quando vários domínios de aplicativo estão em execução.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetApplicationId">
+      <MemberSignature Language="C#" Value="public string GetApplicationId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetApplicationId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Hosting.IApplicationIdentifier.GetApplicationId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um identificador para um domínio de aplicativo.</summary>
+        <returns>Um identificador exclusivo para o domínio de aplicativo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.Hosting.IApplicationIdentifier.GetApplicationId%2A> método costuma ser implementado por um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ambiente de host para construir um identificador de aplicativo para um <xref:System.Runtime.Caching.ObjectCache> implementação. Um <xref:System.Runtime.Caching.ObjectCache> implementação usa essas informações para identificar o domínio de aplicativo que está sendo executado.  
+  
+ Por exemplo, no ASP.NET, o cache usa um identificador de aplicativo para construir identificadores para contadores de desempenho do cache. As chamadas de cache de <xref:System.Runtime.Caching.Hosting.IApplicationIdentifier.GetApplicationId%2A> método é implementado pelo ambiente de host e o host retorna o identificador. Isso fornece nomes para desempenho instâncias de contadores que podem ser distinguidas entre domínios de aplicativos quando vários domínios de aplicativo estão em execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

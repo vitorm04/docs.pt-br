@@ -1,0 +1,73 @@
+<Type Name="TabSizeMode" FullName="System.Windows.Forms.TabSizeMode">
+  <TypeSignature Language="C#" Value="public enum TabSizeMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TabSizeMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TabSizeMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como as guias em um controle guia são dimensionadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por membros como <xref:System.Windows.Forms.TabControl.SizeMode%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FillToRight">
+      <MemberSignature Language="C#" Value="FillToRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TabSizeMode FillToRight = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TabSizeMode.FillToRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura de cada guia é dimensionada de forma que cada linha de guias preenche toda a largura do controle de contêiner. Isso é aplicável somente a controles de guia com mais de uma linha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fixed">
+      <MemberSignature Language="C#" Value="Fixed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TabSizeMode Fixed = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TabSizeMode.Fixed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todas as guias em um controle têm a mesma largura.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TabSizeMode Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TabSizeMode.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura de cada guia é dimensionada para acomodar o que é exibido na guia e o tamanho das guias em uma linha não é ajustado para preencher toda a largura do controle de contêiner.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

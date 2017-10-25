@@ -1,0 +1,1792 @@
+<Type Name="Label" FullName="System.Windows.Forms.Label">
+  <TypeSignature Language="C#" Value="public class Label : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Label extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Label" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultBindingProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.LabelDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Windows.Forms.Design.AutoSizeToolboxItem,System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um rótulo padrão do Windows.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Label>Normalmente, os controles são usados para fornecer um texto descritivo para um controle. Por exemplo, você pode usar um <xref:System.Windows.Forms.Label> para adicionar texto descritivo para uma <xref:System.Windows.Forms.TextBox> controle para informar ao usuário sobre o tipo de dados esperado no controle. <xref:System.Windows.Forms.Label>controles também podem ser usados para adicionar texto descritivo para uma <xref:System.Windows.Forms.Form> para fornecer ao usuário informações úteis. Por exemplo, você pode adicionar uma <xref:System.Windows.Forms.Label> para a parte superior de um <xref:System.Windows.Forms.Form> que fornece instruções para o usuário sobre como inserir dados em controles no formulário. <xref:System.Windows.Forms.Label>controles podem ser usados também para informações de tempo de exibição para executar o status de um aplicativo. Por exemplo, você pode adicionar um <xref:System.Windows.Forms.Label> a um formulário para exibir o status de cada arquivo, como uma lista de arquivos é processada.  
+  
+ Um <xref:System.Windows.Forms.Label> participa na ordem de tabulação de um formulário, mas não recebe o foco (próximo controle na ordem de tabulação recebe foco). Por exemplo, se o <xref:System.Windows.Forms.Label.UseMnemonic%2A> está definida como `true`e um caractere mnemônico — o primeiro caractere depois de um e comercial (&) — é especificado no <xref:System.Windows.Forms.Control.Text%2A> propriedade do controle, quando o usuário pressionar ALT + tecla mnemônica, foco é movido para o próximo controle na ordem de tabulação. Este recurso fornece navegação de teclado para um formulário. Além de exibir o texto, o <xref:System.Windows.Forms.Label> controle também pode exibir uma imagem usando o <xref:System.Windows.Forms.Label.Image%2A> propriedade ou uma combinação da <xref:System.Windows.Forms.Label.ImageIndex%2A> e <xref:System.Windows.Forms.Label.ImageList%2A> propriedades.  
+  
+> [!NOTE]
+>  Um <xref:System.Windows.Forms.Label> pode ser transparentes definindo seu <xref:System.Windows.Forms.Control.BackColor%2A> propriedade `Color.Transparent`. Quando você usar um rótulo transparente, use apenas o atual sistema de coordenadas de dispositivo no qual desenhar o contêiner, ou o <xref:System.Windows.Forms.Label> em segundo plano pode pintar incorretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.Label> controle que tem uma borda tridimensional e contém uma imagem. A imagem é exibida usando o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades. O controle também tem uma legenda com um caractere mnemônico especificado. O código de exemplo usa o <xref:System.Windows.Forms.Label.PreferredHeight%2A> e <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedades para dimensionar corretamente o <xref:System.Windows.Forms.Label> controle. Este exemplo requer que um <xref:System.Windows.Forms.Label.ImageList%2A> foi criada e nomeada imageList1 e que ele carregou duas imagens. O exemplo também requer que o código está dentro de um formulário que tenha o <xref:System.Drawing> namespace adicionada ao seu código.  
+  
+ [!code-cpp[Classic Label Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Label Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Label Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Label Example/CS/source.cs#1)]
+ [!code-vb[Classic Label Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Label Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Label ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Label" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, um rótulo é exibido com seu <xref:System.Windows.Forms.Label.AutoSize%2A> propriedade definida como `false` e com seus <xref:System.Windows.Forms.Label.BorderStyle%2A> propriedade definida como `BorderStyle.None`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.Label> controle que tem uma borda tridimensional e uma imagem exibida usando o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades. O controle também tem uma legenda com um caractere mnemônico especificado. O código de exemplo usa o <xref:System.Windows.Forms.Label.PreferredHeight%2A> e <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedades para dimensionar corretamente o <xref:System.Windows.Forms.Label> controle no formulário no qual ela é exibida. Este exemplo requer que um <xref:System.Windows.Forms.ImageList> foi criada e nomeada imageList1 e que ele carregou duas imagens. O exemplo também requer que o código está dentro de um formulário que tenha o <xref:System.Drawing?displayProperty=nameWithType> namespace adicionada ao seu código.  
+  
+ [!code-cpp[Classic Label Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Label Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Label Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Label Example/CS/source.cs#1)]
+ [!code-vb[Classic Label Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Label Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoEllipsis">
+      <MemberSignature Language="C#" Value="public bool AutoEllipsis { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoEllipsis" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.AutoEllipsis" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o caractere de reticências (...) aparece na borda direita do <see cref="T:System.Windows.Forms.Label" />, indicando que o texto <see cref="T:System.Windows.Forms.Label" /> ultrapassa o tamanho especificado de <see cref="T:System.Windows.Forms.Label" />.</summary>
+        <value>
+          <see langword="true" /> se o texto do rótulo adicional deve ser indicado por reticências; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir <xref:System.Windows.Forms.Label.AutoEllipsis%2A> para `true` para exibir o texto que ultrapassa a largura do <xref:System.Windows.Forms.Label> quando o usuário passa sobre o controle com o mouse. Se <xref:System.Windows.Forms.Label.AutoSize%2A> é `true`, o rótulo crescerá para acomodar o texto e não aparecerá uma elipse.  
+  
+> [!IMPORTANT]
+>  Se a fonte é maior que a altura do <xref:System.Windows.Forms.Label> e <xref:System.Windows.Forms.Label.AutoEllipsis%2A> é `true`, você deve definir <xref:System.Windows.Forms.Label.AutoSize%2A> para `false` para o texto a ser desenhado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle é redimensionado automaticamente para exibir todo o seu conteúdo.</summary>
+        <value>
+          <see langword="true" /> se o controle se ajusta à sua largura para que o conteúdo caiba; caso contrário, <see langword="false" />.  
+  
+ <block subset="none" type="note"><para>  
+ Quando adicionada a um formulário usando o designer, o valor padrão é <see langword="true" />. Quando uma instância for criada por meio do código, o valor padrão será <see langword="false" />.  
+  
+</para></block></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `true`, o <xref:System.Windows.Forms.Label> ajusta sua largura para exibir todo o seu conteúdo. Essa propriedade normalmente é definida como `true` quando você usa um <xref:System.Windows.Forms.Label> controle para exibir vários comprimentos de texto, como o status de um processo do aplicativo. Você também pode usar essa propriedade quando o aplicativo exibirá o texto em vários idiomas e o tamanho do texto pode aumentar ou diminuir com base nas configurações de idioma do Windows.  
+  
+> [!IMPORTANT]
+>  Se a fonte é maior que a altura do <xref:System.Windows.Forms.Label> e <xref:System.Windows.Forms.Label.AutoEllipsis%2A> é `true`, você deve definir <xref:System.Windows.Forms.Label.AutoSize%2A> para `false` para o texto a ser desenhado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.Label.AutoSize%2A> propriedade. Para executar este exemplo, cole o seguinte código em um formulário e a chamada a `InitializeLabel` método de construtor do formulário ou `Load` método.  
+  
+ [!code-cpp[System.Windows.Forms.LabelAutoSize#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LabelAutoSize/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LabelAutoSize#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LabelAutoSize/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.LabelAutoSize#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LabelAutoSize/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Label.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Label.AutoSize" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Label.AutoSizeChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.Label> denominado Label1. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Label.AutoSizeChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#458](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#458)]
+ [!code-vb[System.Windows.Forms.EventExamples#458](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#458)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem renderizada na tela de fundo do controle.</summary>
+        <value>Um <see cref="T:System.Drawing.Image" /> que representa a imagem da tela de fundo do controle. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Label.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.Label.BackgroundImage" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é relevante para essa classe.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.ImageLayout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Label.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.Label.BackgroundImageLayout" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.BorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-504)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da borda do controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.BorderStyle" />. O padrão é <see langword="BorderStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para adicionar uma borda ao controle. Essa propriedade normalmente é usada para diferenciar um <xref:System.Windows.Forms.Label> que rótulos outro controle de um <xref:System.Windows.Forms.Label> que exibe o status de um processo em um aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.Label> controle que tem uma borda tridimensional e uma imagem exibida usando o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades. O controle também tem uma legenda com um caractere mnemônico especificado. O código de exemplo usa o <xref:System.Windows.Forms.Label.PreferredHeight%2A> e <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedades para dimensionar corretamente o <xref:System.Windows.Forms.Label> controle no formulário no qual ela é exibida. Este exemplo requer que um <xref:System.Windows.Forms.ImageList> foi criada e nomeada imageList1 e que ele carregou duas imagens. O exemplo também requer que o código está dentro de um formulário que tenha o <xref:System.Drawing?displayProperty=nameWithType> namespace adicionada ao seu código.  
+  
+ [!code-cpp[Classic Label Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Label Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Label Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Label Example/CS/source.cs#1)]
+ [!code-vb[Classic Label Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Label Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.BorderStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CalcImageRenderBounds">
+      <MemberSignature Language="C#" Value="protected System.Drawing.Rectangle CalcImageRenderBounds (System.Drawing.Image image, System.Drawing.Rectangle r, System.Drawing.ContentAlignment align);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype System.Drawing.Rectangle CalcImageRenderBounds(class System.Drawing.Image image, valuetype System.Drawing.Rectangle r, valuetype System.Drawing.ContentAlignment align) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.CalcImageRenderBounds(System.Drawing.Image,System.Drawing.Rectangle,System.Drawing.ContentAlignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="r" Type="System.Drawing.Rectangle" />
+        <Parameter Name="align" Type="System.Drawing.ContentAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> usado para determinar o tamanho e local quando desenhada dentro do controle.</param>
+        <param name="r">Um <see cref="T:System.Drawing.Rectangle" /> que representa a área para desenhar a imagem.</param>
+        <param name="align">O alinhamento do conteúdo dentro do controle.</param>
+        <summary>Determina o tamanho e o local de uma imagem desenhada dentro de <see cref="T:System.Windows.Forms.Label" /> controle com base no alinhamento do controle.</summary>
+        <returns>Um <see cref="T:System.Drawing.Rectangle" /> que representa o tamanho e o local da imagem especificada dentro do controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método em uma classe derivada de <xref:System.Windows.Forms.Label>, para determinar o tamanho e o local de uma imagem a ser desenhada dentro de <xref:System.Windows.Forms.Label> controle com base em seu local dentro do controle. O local da imagem é baseado no valor do controle do <xref:System.Windows.Forms.Label.ImageAlign%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAccessibilityInstance">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.AccessibleObject CreateAccessibilityInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Forms.AccessibleObject CreateAccessibilityInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.CreateAccessibilityInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto de acessibilidade para o controle.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Forms.AccessibleObject" /> para o controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de criação necessários quando a alça de controle é criada.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.CreateParams" /> que contém os parâmetros de criação necessários quando a alça de controle é criada.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultImeMode">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.ImeMode DefaultImeMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode DefaultImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.DefaultImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo do Editor de método de entrada (IME) padrão suportado por este controle.</summary>
+        <value>Uma da <see cref="T:System.Windows.Forms.ImeMode" /> suportado por este controle. O padrão é <see cref="F:System.Windows.Forms.ImeMode.Disable" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMargin">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Padding DefaultMargin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding DefaultMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.DefaultMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o espaço, em pixels, que é especificado pelo padrão entre os controles.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Padding" /> valor que representa o espaçamento padrão entre controles.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho padrão do controle.</summary>
+        <value>O <see cref="T:System.Drawing.Size" /> padrão do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.Label" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose` e pelo método <xref:System.Object.Finalize%2A>. `Dispose` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro for true, este método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Windows.Forms.Label> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawImage">
+      <MemberSignature Language="C#" Value="protected void DrawImage (System.Drawing.Graphics g, System.Drawing.Image image, System.Drawing.Rectangle r, System.Drawing.ContentAlignment align);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void DrawImage(class System.Drawing.Graphics g, class System.Drawing.Image image, valuetype System.Drawing.Rectangle r, valuetype System.Drawing.ContentAlignment align) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.DrawImage(System.Drawing.Graphics,System.Drawing.Image,System.Drawing.Rectangle,System.Drawing.ContentAlignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="r" Type="System.Drawing.Rectangle" />
+        <Parameter Name="align" Type="System.Drawing.ContentAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> superfície na qual desenhar.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> a ser desenhado.</param>
+        <param name="r">O <see cref="T:System.Drawing.Rectangle" /> limites para desenhar dentro.</param>
+        <param name="align">O alinhamento da imagem a ser desenhado no <see cref="T:System.Windows.Forms.Label" />.</param>
+        <summary>Desenha um <see cref="T:System.Drawing.Image" /> dentro dos limites especificados.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao criar seu próprio controle que deriva de <see cref="T:System.Windows.Forms.Label" />, você pode usar esse método para desenhar imagens para a superfície do controle.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FlatStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FlatStyle FlatStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FlatStyle FlatStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.FlatStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a aparência de estilo plano do controle de rótulo.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.FlatStyle" />. O valor padrão é <see langword="Standard" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.Label.FlatStyle%2A> está definida como `FlatStyle.System`, quaisquer valores atribuídos para a <xref:System.Windows.Forms.Label.ImageList%2A>, <xref:System.Windows.Forms.Label.Image%2A>, <xref:System.Windows.Forms.Label.ImageIndex%2A>, e <xref:System.Windows.Forms.Label.ImageAlign%2A> propriedades são ignoradas. Além disso, o <xref:System.Windows.Forms.Label.TextAlign%2A> propriedade ignora quaisquer valores de propriedade que não são as configurações de propriedade vertical. Alinhados horizontalmente configurações o <xref:System.Windows.Forms.Label.TextAlign%2A> propriedade são alinhados com a parte superior do controle. Por exemplo, se você definir o <xref:System.Windows.Forms.Label.TextAlign%2A> propriedade `ContentAlignment.TopCenter`, `ContentAlignment.MiddleCenter`, ou `ContentAlignment.BottomCenter`, quando o <xref:System.Windows.Forms.Label.FlatStyle%2A> está definida como `FlatStyle.System`, o texto no <xref:System.Windows.Forms.Label> controle será alinhado para os locais de centro e superior dentro dos limites do controle.  
+  
+> [!NOTE]
+>  No .NET Framework versão 1.1, definindo o <xref:System.Windows.Forms.Label.FlatStyle%2A> propriedade `FlatStyle.System` não faz com que o valor da <xref:System.Windows.Forms.Label.TextAlign%2A> propriedade seja ignorada. Além disso, a propriedade não tem efeito na classe derivada, <xref:System.Windows.Forms.LinkLabel>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.FlatStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size GetPreferredSize (System.Drawing.Size proposedSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Size GetPreferredSize(valuetype System.Drawing.Size proposedSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.GetPreferredSize(System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="proposedSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="proposedSize">A área tamanho personalizado para um controle.</param>
+        <summary>Recupera o tamanho de uma área retangular na qual um controle pode ser ajustado.</summary>
+        <returns>Um par ordenado de tipo <see cref="T:System.Drawing.Size" /> que representa a largura e a altura de um retângulo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Drawing.Image Image { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image Image" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem exibida em um <see cref="T:System.Windows.Forms.Label" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Image" /> exibido no <see cref="T:System.Windows.Forms.Label" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Label.Image%2A> propriedade não pode ser usada ao mesmo tempo como o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades. Quando o <xref:System.Windows.Forms.Label.Image%2A> propriedade é usada para exibir uma imagem, o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades são definidas automaticamente as configurações padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.Label> e, em seguida, para exibir um <xref:System.Drawing.Image> por trás de <xref:System.Windows.Forms.Label>. Primeiro, o exemplo cria um <xref:System.Windows.Forms.Label> e, em seguida, cria um <xref:System.Drawing.Image> com base em um arquivo de disco. Em seguida, o <xref:System.Windows.Forms.Control.Size%2A> propriedade é inicializada para conter o <xref:System.Drawing.Image>. Por fim, o <xref:System.Windows.Forms.Label.Image%2A> propriedade é inicializada com o <xref:System.Drawing.Image>.  
+  
+ [!code-cpp[Label_Image#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Label_Image/CPP/form1.cpp#1)]
+ [!code-csharp[Label_Image#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Label_Image/CS/form1.cs#1)]
+ [!code-vb[Label_Image#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Label_Image/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageAlign">
+      <MemberSignature Language="C#" Value="public System.Drawing.ContentAlignment ImageAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment ImageAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.ImageAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento de uma imagem que é exibida no controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Drawing.ContentAlignment" />. O padrão é <see langword="ContentAlignment.MiddleCenter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você alinhe uma imagem dentro dos limites do <xref:System.Windows.Forms.Label> controle para garantir que a imagem é exibida corretamente. Você pode adicionar uma imagem a um <xref:System.Windows.Forms.Label> usando o <xref:System.Windows.Forms.Label.Image%2A> propriedade ou o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades. Imagens exibidas no controle não podem ser ampliadas ou reduzidas para preencher o controle se o controle é maior ou menor que a imagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.Label> controle que tem uma borda tridimensional e uma imagem exibida usando o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades. O controle também tem uma legenda com um caractere mnemônico especificado. O código de exemplo usa o <xref:System.Windows.Forms.Label.PreferredHeight%2A> e <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedades para dimensionar corretamente o <xref:System.Windows.Forms.Label> controle no formulário no qual ela é exibida. Este exemplo requer que um <xref:System.Windows.Forms.ImageList> foi criada e nomeada imageList1 e que ele carregou duas imagens. O exemplo também requer que o código está dentro de um formulário que tenha o <xref:System.Drawing?displayProperty=nameWithType> namespace adicionada ao seu código.  
+  
+ [!code-cpp[Classic Label Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Label Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Label Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Label Example/CS/source.cs#1)]
+ [!code-vb[Classic Label Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Label Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Drawing.ContentAlignment" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageIndex">
+      <MemberSignature Language="C#" Value="public int ImageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ImageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.ImageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageIndexConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de índice da imagem exibida no <see cref="T:System.Windows.Forms.Label" />.</summary>
+        <value>Um índice baseado em zero que representa a posição no controle <see cref="T:System.Windows.Forms.ImageList" /> (atribuído à propriedade <see cref="P:System.Windows.Forms.Label.ImageList" />) em que a imagem está localizada. O padrão é -1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Label.ImageIndex%2A> e <xref:System.Windows.Forms.Label.ImageList%2A> propriedades não podem ser usadas ao mesmo tempo como o <xref:System.Windows.Forms.Label.Image%2A> propriedade. Quando o <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedade e <xref:System.Windows.Forms.Label.ImageList%2A> propriedades são usadas para exibir uma imagem, o <xref:System.Windows.Forms.Label.Image%2A> propriedade é definida automaticamente como `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.Label> controle que tem uma borda tridimensional e uma imagem exibida usando o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades. O controle também tem uma legenda com um caractere mnemônico especificado. O código de exemplo usa o <xref:System.Windows.Forms.Label.PreferredHeight%2A> e <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedades para dimensionar corretamente o <xref:System.Windows.Forms.Label> controle no formulário no qual ela é exibida. Este exemplo requer que um <xref:System.Windows.Forms.ImageList> foi criada e nomeada imageList1 e que ele carregou duas imagens. O exemplo também requer que o código está dentro de um formulário que tenha o <xref:System.Drawing?displayProperty=nameWithType> namespace adicionada ao seu código.  
+  
+ [!code-cpp[Classic Label Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Label Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Label Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Label Example/CS/source.cs#1)]
+ [!code-vb[Classic Label Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Label Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor atribuído é menor que os limites inferiores da propriedade <see cref="P:System.Windows.Forms.Label.ImageIndex" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageKey">
+      <MemberSignature Language="C#" Value="public string ImageKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImageKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.ImageKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ImageIndexEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ImageKeyConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o acessador de chave para a imagem no <see cref="P:System.Windows.Forms.Label.ImageList" />.</summary>
+        <value>Uma cadeia de caracteres que representa a chave da imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Label.ImageKey%2A> propriedade especifica a imagem da lista de imagens para exibir o <xref:System.Windows.Forms.Label>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImageList">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImageList ImageList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ImageList ImageList" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.ImageList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.ImageList" /> que contém as imagens a serem exibidas no controle <see cref="T:System.Windows.Forms.Label" />.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.ImageList" /> que armazena a coleção de objetos <see cref="T:System.Drawing.Image" />. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Label.ImageIndex%2A> e <xref:System.Windows.Forms.Label.ImageList%2A> propriedades não podem ser usadas ao mesmo tempo como o <xref:System.Windows.Forms.Label.Image%2A> propriedade. Quando o <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedade e <xref:System.Windows.Forms.Label.ImageList%2A> propriedades são usadas para exibir uma imagem, o <xref:System.Windows.Forms.Label.Image%2A> está definida como `null`.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.Label> não será lixo coletado se seu <xref:System.Windows.Forms.Label.ImageList%2A> ainda é referenciada em outro lugar. Definir o <xref:System.Windows.Forms.Label.ImageList%2A> propriedade o <xref:System.Windows.Forms.Label> para `null` para habilitar a coleta de lixo eficiente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.Label> controle que tem uma borda tridimensional e uma imagem exibida usando o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades. O controle também tem uma legenda com um caractere mnemônico especificado. O código de exemplo usa o <xref:System.Windows.Forms.Label.PreferredHeight%2A> e <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedades para dimensionar corretamente o <xref:System.Windows.Forms.Label> controle no formulário no qual ela é exibida. Este exemplo requer que um <xref:System.Windows.Forms.ImageList> foi criada e nomeada imageList1 e que ele carregou duas imagens. O exemplo também requer que o código está dentro de um formulário que tenha o <xref:System.Drawing?displayProperty=nameWithType> namespace adicionada ao seu código.  
+  
+ [!code-cpp[Classic Label Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Label Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Label Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Label Example/CS/source.cs#1)]
+ [!code-vb[Classic Label Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Label Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ImeMode ImeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImeMode ImeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.ImeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo do Editor de método de entrada (IME) com suporte deste controle.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImeMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído a essa propriedade não está dentro do intervalo de valores válidos especificado na enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImeModeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ImeModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ImeModeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Label.ImeModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.Label.ImeMode" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Label.KeyDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário pressiona uma tecla enquanto o rótulo tem o foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyPressEventHandler KeyPress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyPressEventHandler KeyPress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Label.KeyPress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyPressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário pressiona uma tecla enquanto o rótulo tem o foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.KeyEventHandler KeyUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.KeyEventHandler KeyUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Label.KeyUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário solta uma tecla enquanto o rótulo tem foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnabledChanged">
+      <MemberSignature Language="C#" Value="protected override void OnEnabledChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnabledChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnEnabledChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.EnabledChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.FontChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleDestroyed">
+      <MemberSignature Language="C#" Value="protected override void OnHandleDestroyed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleDestroyed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnHandleDestroyed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.HandleDestroyed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.Label.OnHandleDestroyed%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Label.OnHandleDestroyed(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Label.OnHandleDestroyed(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="protected override void OnMouseEnter (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseEnter(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnMouseEnter(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.MouseEnter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnMouseLeave(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.MouseLeave" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaddingChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPaddingChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaddingChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnPaddingChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.PaddingChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.PaintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.Paint" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnParentChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnParentChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnParentChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.ParentChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRightToLeftChanged">
+      <MemberSignature Language="C#" Value="protected override void OnRightToLeftChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRightToLeftChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnRightToLeftChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.RightToLeftChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.Label.OnRightToLeftChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Label.OnRightToLeftChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Label.OnRightToLeftChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextAlignChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnTextAlignChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTextAlignChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnTextAlignChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Label.TextAlignChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.Label.OnTextAlignChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.Label.OnTextAlignChanged(System.EventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextChanged">
+      <MemberSignature Language="C#" Value="protected override void OnTextChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnTextChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnTextChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.TextChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisibleChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisibleChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnVisibleChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.OnVisibleChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.VisibleChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredHeight">
+      <MemberSignature Language="C#" Value="public virtual int PreferredHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PreferredHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.PreferredHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura preferencial do controle.</summary>
+        <value>A altura do controle (em pixels), supondo que uma única linha de texto é exibida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna a altura deve ser o controle para exibir corretamente o texto, com base na fonte do atribuído ao controle. Você pode usar essa propriedade juntamente com o <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedade para garantir que o texto de <xref:System.Windows.Forms.Label> controle é exibido corretamente. Você pode usar o <xref:System.Windows.Forms.Label.AutoSize%2A> propriedade para ajustar automaticamente a altura e a largura do <xref:System.Windows.Forms.Label> controle, com base no tamanho de fonte e de texto.  
+  
+> [!NOTE]
+>  Se o <xref:System.Windows.Forms.Label.BorderStyle%2A> propriedade o <xref:System.Windows.Forms.Label> controle é definido como `BorderStyle.None`, o valor retornado por <xref:System.Windows.Forms.Label.PreferredHeight%2A> propriedade será maior devido à falta de bordas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.Label> controle que tem uma borda tridimensional e uma imagem exibida usando o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades. O controle também tem uma legenda com um caractere mnemônico especificado. O código de exemplo usa o <xref:System.Windows.Forms.Label.PreferredHeight%2A> e <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedades para dimensionar corretamente o <xref:System.Windows.Forms.Label> controle no formulário no qual ela é exibida. Este exemplo requer que um <xref:System.Windows.Forms.ImageList> foi criada e nomeada imageList1 e que ele carregou duas imagens. O exemplo também requer que o código está dentro de um formulário que tenha o <xref:System.Drawing?displayProperty=nameWithType> namespace adicionada ao seu código.  
+  
+ [!code-cpp[Classic Label Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Label Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Label Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Label Example/CS/source.cs#1)]
+ [!code-vb[Classic Label Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Label Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredWidth">
+      <MemberSignature Language="C#" Value="public virtual int PreferredWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PreferredWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.PreferredWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura preferencial do controle.</summary>
+        <value>A largura do controle (em pixels), supondo que uma única linha de texto é exibida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna o comprimento da cadeia de caracteres de texto, mas não leva em consideração de disposição de linha. Por exemplo, uma cadeia de caracteres de texto que mede 300 pixels de largura pode ser exibida como três linhas em um <xref:System.Windows.Forms.Label> que só é 100 pixels de largura. O <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedade ainda retorna 300 pixels. Você pode usar essa propriedade, junto com o <xref:System.Windows.Forms.Label.PreferredHeight%2A> para garantir que o texto na propriedade de <xref:System.Windows.Forms.Label> controle é exibido corretamente. Você pode usar o <xref:System.Windows.Forms.Label.AutoSize%2A> propriedade para ajustar automaticamente a altura e a largura do <xref:System.Windows.Forms.Label> controle com base no tamanho de fonte e de texto.  
+  
+> [!NOTE]
+>  Se o <xref:System.Windows.Forms.Label.BorderStyle%2A> propriedade o <xref:System.Windows.Forms.Label> controle é definido como `BorderStyle.None`, o valor retornado por <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedade será maior devido à falta de bordas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.Label> controle que tem uma borda tridimensional e uma imagem exibida usando o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades. O controle também tem uma legenda com um caractere mnemônico especificado. O código de exemplo usa o <xref:System.Windows.Forms.Label.PreferredHeight%2A> e <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedades para dimensionar corretamente o <xref:System.Windows.Forms.Label> controle no formulário no qual ela é exibida. Este exemplo requer que um <xref:System.Windows.Forms.ImageList> foi criada e nomeada imageList1 e que ele carregou duas imagens. O exemplo também requer que o código está dentro de um formulário que tenha o <xref:System.Drawing?displayProperty=nameWithType> namespace adicionada ao seu código.  
+  
+ [!code-cpp[Classic Label Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Label Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Label Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Label Example/CS/source.cs#1)]
+ [!code-vb[Classic Label Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Label Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMnemonic">
+      <MemberSignature Language="C#" Value="protected override bool ProcessMnemonic (char charCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ProcessMnemonic(char charCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.ProcessMnemonic(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charCode" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="charCode">O caractere a ser processado.</param>
+        <summary>Processa um caractere mnemônico.</summary>
+        <returns>
+          <see langword="true" /> se o caractere tiver sido processado como mnemônico pelo controle; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermissionWindow">para acessar todas as janelas e eventos de entrada do usuário. Membro associado:<see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderTransparent">
+      <MemberSignature Language="C#" Value="protected virtual bool RenderTransparent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RenderTransparent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.RenderTransparent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property has been deprecated. Use BackColor instead.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o plano de fundo do controle de contêiner é renderizado no <see cref="T:System.Windows.Forms.Label" />.</summary>
+        <value>
+          <see langword="true" />Se o plano de fundo do <see cref="T:System.Windows.Forms.Label" /> contêiner do controle é processado no <see cref="T:System.Windows.Forms.Label" />; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que herdam de `Label` pode substituir este método para determinar se o plano de fundo do controle derivado será renderizado transparente no formulário no qual o controle é desenhado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBoundsCore">
+      <MemberSignature Language="C#" Value="protected override void SetBoundsCore (int x, int y, int width, int height, System.Windows.Forms.BoundsSpecified specified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetBoundsCore(int32 x, int32 y, int32 width, int32 height, valuetype System.Windows.Forms.BoundsSpecified specified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="specified" Type="System.Windows.Forms.BoundsSpecified" />
+      </Parameters>
+      <Docs>
+        <param name="x">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Left" /> do controle.</param>
+        <param name="y">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Top" /> do controle.</param>
+        <param name="width">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Width" /> do controle.</param>
+        <param name="height">O novo valor da propriedade <see cref="P:System.Windows.Forms.Control.Height" /> do controle.</param>
+        <param name="specified">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.BoundsSpecified" />. Para qualquer parâmetro não especificado, o valor atual será usado.</param>
+        <summary>Define os limites especificados do rótulo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir o <xref:System.Windows.Forms.Label.AutoSize%2A> propriedade `true`, o rótulo será dimensionado para ajustar o conteúdo do rótulo. Se você definir <xref:System.Windows.Forms.Label.AutoSize%2A> para `false` depois de chamar o <xref:System.Windows.Forms.Label.SetBoundsCore%2A> método, o rótulo receberá as dimensões especificadas na chamada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStop">
+      <MemberSignature Language="C#" Value="public bool TabStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TabStop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.TabStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário pode usar a tecla tab para ir para o <see cref="T:System.Windows.Forms.Label" />. Essa propriedade não é usada por essa classe.</summary>
+        <value>Essa propriedade não é usada por essa classe. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Label.TabStop%2A> propriedade não é relevante para o <xref:System.Windows.Forms.Label> classe, portanto, a definição <xref:System.Windows.Forms.Label.TabStop%2A> para `true` não tem nenhum efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabStopChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TabStopChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TabStopChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Label.TabStopChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.Label.TabStop" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.MultilineStringEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto associado a esse controle.</summary>
+        <value>O texto associado a esse controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.ContentAlignment TextAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment TextAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.TextAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento do texto em um rótulo.</summary>
+        <value>Um dos valores de <see cref="T:System.Drawing.ContentAlignment" />. O padrão é <see cref="F:System.Drawing.ContentAlignment.TopLeft" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para alinhar o texto dentro de um rótulo para coincidir com o layout dos controles do formulário. Por exemplo, se os controles estão localizados para a borda direita dos rótulos, você pode definir o <xref:System.Windows.Forms.Label.TextAlign%2A> propriedade para um o alinhamento horizontal alinhado à direita (<xref:System.Drawing.ContentAlignment.TopRight>, <xref:System.Drawing.ContentAlignment.MiddleRight>, <xref:System.Drawing.ContentAlignment.BottomRight>) e o texto será alinhado com a borda direita dos rótulos para se alinhar com os controles.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Drawing.ContentAlignment" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextAlignChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextAlignChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Label.TextAlignChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.Label.TextAlign" /> foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Label.TextAlignChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.Label> denominado Label1. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Label.TextAlignChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#459](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#459)]
+ [!code-vb[System.Windows.Forms.EventExamples#459](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#459)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.Label" /> atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.Label" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCompatibleTextRendering">
+      <MemberSignature Language="C#" Value="public bool UseCompatibleTextRendering { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseCompatibleTextRendering" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.UseCompatibleTextRendering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se as classes <see cref="T:System.Drawing.Graphics" /> ([!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]) ou <see cref="T:System.Windows.Forms.TextRenderer" /> ([!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)]) devem ser usadas para renderizar o texto.</summary>
+        <value>
+          <see langword="true" /> se a classe <see cref="T:System.Drawing.Graphics" /> for usada para executar a renderização de texto para compatibilidade com versões as 1.0 e 1.1. do .NET Framework; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `UseCompatibleTextRendering` propriedade destina-se para fornecer compatibilidade visual entre os controles de formulários do Windows que renderizam texto usando o <xref:System.Windows.Forms.TextRenderer> classe e [!INCLUDE[net_v10_short](~/includes/net-v10-short-md.md)] e [!INCLUDE[net_v11_short](~/includes/net-v11-short-md.md)] aplicativos que executam a renderização de texto personalizado usando o <xref:System.Drawing.Graphics> classe. Na maioria dos casos, se seu aplicativo não está sendo atualizado do [!INCLUDE[net_v10_short](~/includes/net-v10-short-md.md)] ou [!INCLUDE[net_v11_short](~/includes/net-v11-short-md.md)], é recomendável que você deixe `UseCompatibleTextRendering` definido como o valor padrão de `false`.  
+  
+ O [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)] com base em <xref:System.Windows.Forms.TextRenderer> classe foi introduzida no [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] para melhorar o desempenho, verifique o texto aparência e melhorar o suporte para fontes internacionais. Em versões anteriores do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], o [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)] com base em <xref:System.Drawing.Graphics> classe foi usada para executar todo o processamento de texto. [!INCLUDE[ndptecgdi](~/includes/ndptecgdi-md.md)]calcula o espaçamento entre caracteres e a quebra automática de forma diferente de [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]. Em um aplicativo Windows Forms que usa o <xref:System.Drawing.Graphics> de classe para renderizar texto, isso pode causar o texto para controles que usam <xref:System.Windows.Forms.TextRenderer> apareça diferente do texto no aplicativo. Para resolver essa incompatibilidade, você pode definir o `UseCompatibleTextRendering` propriedade `true` para um controle específico. Para definir `UseCompatibleTextRendering` para `true` para todos os controles com suporte no aplicativo, chame o <xref:System.Windows.Forms.Application.SetCompatibleTextRenderingDefault%2A?displayProperty=nameWithType> método com um parâmetro de `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseMnemonic">
+      <MemberSignature Language="C#" Value="public bool UseMnemonic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseMnemonic" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Label.UseMnemonic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle interpreta um caractere e comercial (&amp;) no controle do <see cref="P:System.Windows.Forms.Control.Text" /> propriedade para ser um caractere de prefixo da chave de acesso.</summary>
+        <value>
+          <see langword="true" /> se o rótulo não exibir o caractere E comercial, sublinhar o caractere após o E comercial em seu texto exibido e tratar o caractere sublinhado como uma chave de acesso. Caso contrário, <see langword="false" /> se o caractere E comercial for exibido no texto do controle. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.Label.UseMnemonic%2A> está definida como `true` e um caractere mnemônico (um caractere precedido pelo e comercial) é definido no <xref:System.Windows.Forms.Control.Text%2A> propriedade do <xref:System.Windows.Forms.Label>, pressionar ALT + o caractere mnemônico define o foco para o controle que segue o <xref:System.Windows.Forms.Label> na ordem de tabulação. Você pode usar essa propriedade para fornecer uma navegação de teclado apropriadas para os controles no formulário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Forms.Label> controle que tem uma borda tridimensional e uma imagem exibida usando o <xref:System.Windows.Forms.Label.ImageList%2A> e <xref:System.Windows.Forms.Label.ImageIndex%2A> propriedades. O controle também tem uma legenda com um caractere mnemônico especificado. O código de exemplo usa o <xref:System.Windows.Forms.Label.PreferredHeight%2A> e <xref:System.Windows.Forms.Label.PreferredWidth%2A> propriedades para dimensionar corretamente o <xref:System.Windows.Forms.Label> controle no formulário no qual ela é exibida. Este exemplo requer que um <xref:System.Windows.Forms.Label.ImageList%2A> foi criada e nomeada imageList1 e que ele carregou duas imagens. O exemplo também requer que o código está dentro de um formulário que tenha o <xref:System.Drawing> namespace adicionada ao seu código.  
+  
+ [!code-cpp[Classic Label Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Label Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Label Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Label Example/CS/source.cs#1)]
+ [!code-vb[Classic Label Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Label Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Label.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">O <see cref="T:System.Windows.Forms.Message" /> do Windows a ser processado.</param>
+        <summary>Processa mensagens do Windows.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,71 @@
+<Type Name="IWeakEventListener" FullName="System.Windows.IWeakEventListener">
+  <TypeSignature Language="C#" Value="public interface IWeakEventListener" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWeakEventListener" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.IWeakEventListener" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de escuta de eventos para as classes que esperam receber eventos por meio do padrão WeakEvent e um <see cref="T:System.Windows.WeakEventManager" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.WeakEventManager> (um distribuidor) encaminha a um evento chamando o <xref:System.Windows.IWeakEventListener.ReceiveWeakEvent%2A> método em classes que implementam esta interface e que foram adicionados como ouvintes chamando <xref:System.Windows.WeakEventManager> métodos com antecedência.  
+  
+ A principal razão para seguir o padrão WeakEvent ocorre quando a origem do evento tem um tempo de vida do objeto que é potencialmente independente de ouvintes de eventos. Usando a central de eventos de distribuição de um <xref:System.Windows.WeakEventManager> permite que os manipuladores para ouvintes para ser lixo coletado (ou limpos manualmente) mesmo se o tempo de vida do objeto de origem, ultrapassa os ouvintes. Por outro lado, uma conexão de evento normal usando `+=` ou evento específico do idioma equivalente sintaxe faz com que a fonte potencialmente conectado ainda manter uma referência forte para os manipuladores. Isso impede que as referências de ouvinte sejam limpos regularmente.  
+  
+ Uma situação comum em que as relações entre as origens e os ouvintes sugere o uso desse padrão é a manipulação de eventos de atualização provenientes de fontes para associações de dados.  
+  
+ Você pode usar o padrão WeakEvent para escutar eventos que são externos ao seu aplicativo. Você só precisa definir um <xref:System.Windows.WeakEventManager> , fornecer um comportamento de escutando em <xref:System.Windows.IWeakEventListener.ReceiveWeakEvent%2A>e usar o <xref:System.Windows.WeakEventManager> anexar o manipulador faz referência em vez de `+=`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReceiveWeakEvent">
+      <MemberSignature Language="C#" Value="public bool ReceiveWeakEvent (Type managerType, object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ReceiveWeakEvent(class System.Type managerType, object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IWeakEventListener.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="managerType" Type="System.Type" />
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="managerType">O tipo do <see cref="T:System.Windows.WeakEventManager" /> que chama esse método.</param>
+        <param name="sender">Objeto que originou o evento.</param>
+        <param name="e">Dados do evento.</param>
+        <summary>Recebe eventos do gerenciador de eventos centralizado.</summary>
+        <returns>
+          <see langword="true" /> se o ouvinte tratou o evento. Ele é considerado um erro pelo <see cref="T:System.Windows.WeakEventManager" /> tratamento em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] para registrar um ouvinte para um evento que o ouvinte não processa. De qualquer forma, o método deverá retornar <see langword="false" /> se receber um evento que não reconhece ou trata.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir implementa <xref:System.Windows.IWeakEventListener.ReceiveWeakEvent%2A> para fornecer suporte a padrão WeakEvent para dois eventos hipotéticos `ClockwiseSpin` e `CounterclockwiseSpin` com cada uma dedicada <xref:System.Windows.WeakEventManager> (não mostrado). Essa implementação chama stubs de manipuladores de classe para cada evento com suporte, a conversão dos dados de evento (nesse caso, os dois eventos compartilham um tipo de dados de evento `SpinEventArgs`). A implementação retorna `false` se o evento recebido não é um que é esperado.  
+  
+ [!code-csharp[CorePseudocode#IWeakEventListener](~/samples/snippets/csharp/VS_Snippets_Wpf/CorePseudocode/CSharp/corepseudocode.cs#iweakeventlistener)]
+ [!code-vb[CorePseudocode#IWeakEventListener](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CorePseudocode/visualbasic/corepseudocode.vb#iweakeventlistener)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Este método destina-se para receber todos os possíveis eventos em que o destinatário está em uma lista de escuta. Especialmente se a implementação de uma classe que está escutando para mais de um evento, você deve verificar o tipo de entrada <paramref name="managerType" /> parâmetro para saber a chamada de evento que corresponde à. Isso é porque cada evento que deve ser parte do padrão deve ter um dedicado <see cref="T:System.Windows.WeakEventManager" />. Além disso, o <paramref name="e" /> parâmetro seja tipado como gerais <see cref="T:System.EventArgs" />. Portanto, em ordem, obtenha as propriedades específicas sem os dados do evento, sua implementação precisa converter para o tipo de dados de evento específico.  
+  
+ Normalmente, depois de verificar a identidade de evento com base no <see cref="T:System.Windows.WeakEventManager" /> tipo, sua implementação deve chamar um manipulador de classe particular. O manipulador de classe perfeitamente pode ser o mesmo manipulador da classe que é usado para manipular o evento para ouvintes que são adicionados através do padrão de evento convencional de adição de <see langword="+=" /> o evento no remetente. A seção de exemplo a seguir fornece um modelo de implementação aproximada.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

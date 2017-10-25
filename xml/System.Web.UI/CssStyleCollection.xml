@@ -1,0 +1,347 @@
+<Type Name="CssStyleCollection" FullName="System.Web.UI.CssStyleCollection">
+  <TypeSignature Language="C#" Value="public sealed class CssStyleCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CssStyleCollection extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.CssStyleCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém os atributos de estilo HTML folhas de estilo em cascata (CSS) embutido para um controle de servidor HTML especificado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer estilo declarado para um determinado controle de servidor HTML é adicionado à coleção quando o conteúdo da página Web Forms é analisado. Ele analisa e expõe as propriedades CSS por meio de um padrão de dicionário API automaticamente. Você pode manipular qualquer propriedade CSS em um controle de servidor por meio de <xref:System.Web.UI.HtmlControls.HtmlControl.Style%2A> propriedade. Simplesmente use chave e o valor da propriedade CSS na coleção indexada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir itera por meio de <xref:System.Web.UI.CssStyleCollection> de objeto para um <xref:System.Web.UI.HtmlControls.HtmlInputText> controle de servidor. O <xref:System.Web.UI.CssStyleCollection.Keys%2A> propriedade é usada para determinar quais atributos de estilo foram declarados no controle de servidor e associa o atributo nomes e valores para uma <xref:System.Web.UI.WebControls.DataList> objeto na página de Web Forms.  
+  
+ [!code-aspx-csharp[System.Web.UI.CssStyleCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.CssStyleCollection/CS/css1.cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.CssStyleCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.CssStyleCollection/VB/css1.vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CssStyleCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do novo atributo de estilo a ser adicionado à coleção.</param>
+        <param name="value">O valor do atributo de estilo a ser adicionado à coleção.</param>
+        <summary>Adiciona um item de estilo do <see cref="T:System.Web.UI.CssStyleCollection" /> de um controle usando o par nome/valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o item de estilo para adicionar existir no <xref:System.Web.UI.HtmlTextWriterStyle> enumeração, use a sobrecarga do <xref:System.Web.UI.CssStyleCollection.Add%2A> método que utiliza um <xref:System.Web.UI.HtmlTextWriterStyle> parâmetro porque ele é fortemente tipado. Isso significa que os itens adicionados será incluídos quando você exibir itens com o acessador get do <xref:System.Web.UI.CssStyleCollection.Item%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar ambas as sobrecargas do <xref:System.Web.UI.CssStyleCollection.Add%2A> método para adicionar uma folha de estilos em cascata a um <xref:System.Web.UI.HtmlControls.HtmlSelect>, <xref:System.Web.UI.HtmlControls.HtmlInputSubmit>e um <xref:System.Web.UI.WebControls.Label> controlar programaticamente.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.HtmlTextWriterStyle key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(valuetype System.Web.UI.HtmlTextWriterStyle key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CssStyleCollection.Add(System.Web.UI.HtmlTextWriterStyle,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterStyle" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O valor de enumeração <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> a ser adicionado à coleção.</param>
+        <param name="value">O valor do atributo de estilo a ser adicionado à coleção.</param>
+        <summary>Adiciona um item de estilo à coleção <see cref="T:System.Web.UI.CssStyleCollection" /> de um controle usando o valor de enumeração <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> especificado e o valor correspondente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o item de estilo para adicionar existir no <xref:System.Web.UI.HtmlTextWriterStyle> enumeração, use <xref:System.Web.UI.CssStyleCollection.Add%2A> sobrecarga do <xref:System.Web.UI.CssStyleCollection.Add%2A> método em vez da sobrecarga que não tem um <xref:System.Web.UI.HtmlTextWriterStyle> parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar ambas as sobrecargas do <xref:System.Web.UI.CssStyleCollection.Add%2A> método para adicionar uma folha de estilos em cascata a um <xref:System.Web.UI.HtmlControls.HtmlSelect>, <xref:System.Web.UI.HtmlControls.HtmlInputSubmit>e um <xref:System.Web.UI.WebControls.Label> controlar programaticamente.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CssStyleCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens de estilo do <see cref="T:System.Web.UI.CssStyleCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.CssStyleCollection.Clear%2A> método para excluir programaticamente CSS todos os estilos de um <xref:System.Web.UI.HtmlControls.HtmlSelect> controle.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.Clear Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.Clear Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.CssStyleCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens no objeto <see cref="T:System.Web.UI.CssStyleCollection" />.</summary>
+        <value>O número de itens no objeto <see cref="T:System.Web.UI.CssStyleCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um `CountStyleFunc` função que obtém o valor atual do <xref:System.Web.UI.CssStyleCollection.Count%2A> propriedade para um <xref:System.Web.UI.HtmlControls.HtmlInputText> controle de servidor e o exibe em uma página ASP.NET.  
+  
+ [!code-aspx-csharp[CssStyleCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CssStyleCollection/CS/cssstylecollection_4.cs.aspx#1)]
+ [!code-aspx-vb[CssStyleCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CssStyleCollection/VB/cssstylecollection_4.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.CssStyleCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O índice para o atributo CSS.</param>
+        <summary>Obtém ou define o valor CSS especificado para o controle de servidor HTML.</summary>
+        <value>O valor de <paramref name="key" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.CssStyleCollection.Item%2A> propriedade para retornar o valor de um estilo que é definido em um <xref:System.Web.UI.HtmlControls.HtmlInputText> controle.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.this Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.this Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[System.Web.UI.HtmlTextWriterStyle key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(valuetype System.Web.UI.HtmlTextWriterStyle)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.CssStyleCollection.Item(System.Web.UI.HtmlTextWriterStyle)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterStyle" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um <see cref="T:System.Web.UI.HtmlTextWriterStyle" />.</param>
+        <summary>Obtém ou define o valor <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> especificado para o controle de servidor HTML.</summary>
+        <value>O valor <paramref name="key" />, caso contrário, <see langword="null" />, se <paramref name="key" /> não estiver na coleção de controle do servidor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Itens que são adicionados por meio de programação para definir o estilo um <xref:System.Web.UI.CssStyleCollection> coleção para um controle com o <xref:System.Web.UI.CssStyleCollection.Item%2A> propriedade ou o <xref:System.Web.UI.CssStyleCollection.Add%2A> método levar uma <xref:System.Web.UI.HtmlTextWriterStyle> valor de enumeração como uma entrada são incluídas na contagem de itens de estilo que são retornadas com o <xref:System.Web.UI.CssStyleCollection.Count%2A> propriedade e são incluídos com a cadeia de caracteres literal que é retornada com o <xref:System.Web.UI.CssStyleCollection.Value%2A> propriedade. Esses atributos são fortemente tipados. Se o atributo de folha de estilos em cascata que você deseja adicionar a um controle de servidor existe no <xref:System.Web.UI.HtmlTextWriterStyle> enumeração, usar esses métodos com rigidez de tipos. Se o atributo que você deseja adicionar não existe no <xref:System.Web.UI.HtmlTextWriterStyle> enumeração, use o <xref:System.Web.UI.CssStyleCollection.Item%2A> propriedade ou o <xref:System.Web.UI.CssStyleCollection.Add%2A> método.  
+  
+ Tentativa de acesso um <xref:System.Web.UI.HtmlTextWriterStyle> valor de enumeração no <xref:System.Web.UI.CssStyleCollection> de um controle que não foram adicionado ou acessar um atributo CSS que foi adicionado com o <xref:System.Web.UI.CssStyleCollection.Item%2A> propriedade ou o <xref:System.Web.UI.CssStyleCollection.Add%2A> método retorna `null` usando o <xref:System.Web.UI.CssStyleCollection.Item%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.CssStyleCollection.Item%2A> propriedade para retornar o valor de um estilo que é definido em um <xref:System.Web.UI.HtmlControls.HtmlInputText> controle.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.this Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.this Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.CssStyleCollection.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de chaves para todos os estilos no objeto <see cref="T:System.Web.UI.CssStyleCollection" /> de um controle de servidor HTML específico.</summary>
+        <value>Uma coleção de chaves contidas no <see cref="T:System.Web.UI.CssStyleCollection" /> para o controle de servidor HTML especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como percorrer o <xref:System.Web.UI.CssStyleCollection> coleção para um <xref:System.Web.UI.HtmlControls.HtmlInputText> controle de servidor. O <xref:System.Web.UI.CssStyleCollection.Keys%2A> propriedade é usada para determinar qual atributo de estilo foi declarado no controle de servidor e associa os nomes de atributos e valores para uma <xref:System.Web.UI.WebControls.DataList> objeto na página de Web Forms.  
+  
+ [!code-aspx-csharp[System.Web.UI.CssStyleCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.CssStyleCollection/CS/css1.cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.CssStyleCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.CssStyleCollection/VB/css1.vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CssStyleCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O literal de cadeia de caracteres do item de estilo a ser removido.</param>
+        <summary>Remove um item de estilo do <see cref="T:System.Web.UI.CssStyleCollection" /> de um controle usando a chave de estilo especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.CssStyleCollection.Remove%2A> método para excluir programaticamente uma CSS de estilo de um <xref:System.Web.UI.HtmlControls.HtmlSelect> controle.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.Remove Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.Remove Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.HtmlTextWriterStyle key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(valuetype System.Web.UI.HtmlTextWriterStyle key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.CssStyleCollection.Remove(System.Web.UI.HtmlTextWriterStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Web.UI.HtmlTextWriterStyle" />
+      </Parameters>
+      <Docs>
+        <param name="key">O <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> valor de enumeração para remover.</param>
+        <summary>Remove um item de estilo do <see cref="T:System.Web.UI.CssStyleCollection" /> coleção de um controle usando especificado <see cref="T:System.Web.UI.HtmlTextWriterStyle" /> valor de enumeração.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.CssStyleCollection.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de <see langword="style" /> atributo do controle do servidor HTML.</summary>
+        <value>A estilo cadeia de caracteres literal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.CssStyleCollection.Value%2A> propriedade para listar o atributo de estilo de um <xref:System.Web.UI.HtmlControls.HtmlSelect> controlar quando o usuário clica no botão Enviar.  
+  
+ [!code-aspx-csharp[Classic CssStyleCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CssStyleCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CssStyleCollection.Add Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

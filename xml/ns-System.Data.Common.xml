@@ -1,0 +1,15 @@
+<Namespace Name="System.Data.Common">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Common" /> namespace contém classes compartilhadas pelos provedores de dados do .NET Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor de dados .NET Framework descreve uma coleção de classes usadas para acessar uma fonte de dados, como um banco de dados, no espaço gerenciado. Provedores com suporte incluem o .NET Framework Data Provider para ODBC, o provedor de dados .NET Framework para OLEDB, o provedor de dados .NET Framework para Oracle e o .NET Framework Data Provider para SQL Server. As classes no <xref:System.Data.Common> destinam-se para dar aos desenvolvedores uma maneira de escrever código ADO.NET que funciona em todos os provedores de dados do .NET Framework.  
+  
+ Para obter informações conceituais sobre como usar esse namespace na programação com o.NET Framework, consulte [escrevendo código independente do provedor com o ADO.NET](http://msdn.microsoft.com/en-us/6db08c56-eafe-4d2f-986b-6e4d8522cb9e).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

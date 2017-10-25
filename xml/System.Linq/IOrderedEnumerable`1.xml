@@ -1,0 +1,109 @@
+<Type Name="IOrderedEnumerable&lt;TElement&gt;" FullName="System.Linq.IOrderedEnumerable&lt;TElement&gt;">
+  <TypeSignature Language="C#" Value="public interface IOrderedEnumerable&lt;TElement&gt; : System.Collections.Generic.IEnumerable&lt;TElement&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOrderedEnumerable`1&lt;TElement&gt; implements class System.Collections.Generic.IEnumerable`1&lt;!TElement&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.IOrderedEnumerable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TElement" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;TElement&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TElement">O tipo dos elementos da sequência.</typeparam>
+    <summary>Representa uma sequência classificada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo é enumerável porque ele herda de <xref:System.Collections.Generic.IEnumerable%601>.  
+  
+ Os métodos de extensão <xref:System.Linq.Enumerable.ThenBy%2A> e <xref:System.Linq.Enumerable.ThenByDescending%2A> operar em objetos do tipo <xref:System.Linq.IOrderedEnumerable%601>. Um objeto do tipo <xref:System.Linq.IOrderedEnumerable%601> pode ser obtida chamando um dos métodos de classificação principal, <xref:System.Linq.Enumerable.OrderBy%2A> ou <xref:System.Linq.Enumerable.OrderByDescending%2A>, que retornam um <xref:System.Linq.IOrderedEnumerable%601>. <xref:System.Linq.Enumerable.ThenBy%2A>e <xref:System.Linq.Enumerable.ThenByDescending%2A>, os métodos de classificação subordinada, por sua vez também retornam um objeto do tipo <xref:System.Linq.IOrderedEnumerable%601>. Esse design permite qualquer número de chamadas consecutivas para <xref:System.Linq.Enumerable.ThenBy%2A> ou <xref:System.Linq.Enumerable.ThenByDescending%2A>, onde cada chamada executa uma ordenação subordinada os dados classificados retornados da chamada anterior.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como executar uma ordenação primários e secundários em uma matriz de cadeias de caracteres. Ele também demonstra que resultante <xref:System.Linq.IOrderedEnumerable%601> é enumerável.  
+  
+ [!code-csharp[System.Linq.IOrderedEnumerable#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.IOrderedEnumerable/CS/IOrderedEnumerable.cs#1)]
+ [!code-vb[System.Linq.IOrderedEnumerable#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.IOrderedEnumerable/VB/IOrderedEnumerable.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateOrderedEnumerable&lt;TKey&gt;">
+      <MemberSignature Language="C#" Value="public System.Linq.IOrderedEnumerable&lt;TElement&gt; CreateOrderedEnumerable&lt;TKey&gt; (Func&lt;TElement,TKey&gt; keySelector, System.Collections.Generic.IComparer&lt;TKey&gt; comparer, bool descending);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Linq.IOrderedEnumerable`1&lt;!TElement&gt; CreateOrderedEnumerable&lt;TKey&gt;(class System.Func`2&lt;!TElement, !!TKey&gt; keySelector, class System.Collections.Generic.IComparer`1&lt;!!TKey&gt; comparer, bool descending) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.IOrderedEnumerable`1.CreateOrderedEnumerable``1(System.Func{`0,``0},System.Collections.Generic.IComparer{``0},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IOrderedEnumerable&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="keySelector" Type="System.Func&lt;TElement,TKey&gt;" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;TKey&gt;" />
+        <Parameter Name="descending" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">O tipo de chave produzido por <c>keySelector</c>.</typeparam>
+        <param name="keySelector">O <see cref="T:System.Func`2" /> usado para extrair a chave de cada elemento.</param>
+        <param name="comparer">O <see cref="T:System.Collections.Generic.IComparer`1" /> usado para comparar chaves para posicionamento na sequência retornada.</param>
+        <param name="descending">
+          <see langword="true" /> para classificar os elementos em ordem decrescente; <see langword="false" /> para classificar os elementos em ordem crescente.</param>
+        <summary>Executa uma ordenação subsequente nos elementos de uma <see cref="T:System.Linq.IOrderedEnumerable`1" /> de acordo com uma chave.</summary>
+        <returns>Um <see cref="T:System.Linq.IOrderedEnumerable`1" /> cujos elementos são classificados de acordo com uma chave.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A funcionalidade fornecida por este método é como o fornecido pelo <xref:System.Linq.Enumerable.ThenBy%2A> ou <xref:System.Linq.Enumerable.ThenByDescending%2A>, dependendo se `descending` é `true` ou `false`. Ambos executarem uma ordenação subordinada de uma sequência classificada já do tipo <xref:System.Linq.IOrderedEnumerable%601>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Linq.IOrderedEnumerable`1.CreateOrderedEnumerable*> para executar uma ordenação secundária em um <xref:System.Linq.IOrderedEnumerable%601>.  
+  
+ [!code-csharp[System.Linq.IOrderedEnumerable#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Linq.IOrderedEnumerable/CS/IOrderedEnumerable.cs#2)]
+ [!code-vb[System.Linq.IOrderedEnumerable#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Linq.IOrderedEnumerable/VB/IOrderedEnumerable.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

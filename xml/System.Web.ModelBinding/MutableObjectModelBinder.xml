@@ -1,0 +1,192 @@
+<Type Name="MutableObjectModelBinder" FullName="System.Web.ModelBinding.MutableObjectModelBinder">
+  <TypeSignature Language="C#" Value="public class MutableObjectModelBinder : System.Web.ModelBinding.IModelBinder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MutableObjectModelBinder extends System.Object implements class System.Web.ModelBinding.IModelBinder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.MutableObjectModelBinder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.ModelBinding.IModelBinder</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Mapeia uma solicitação do navegador para um objeto de dados mutável.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MutableObjectModelBinder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.MutableObjectModelBinder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.ModelBinding.MutableObjectModelBinder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindModel">
+      <MemberSignature Language="C#" Value="public virtual bool BindModel (System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, System.Web.ModelBinding.ModelBindingContext bindingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool BindModel(class System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, class System.Web.ModelBinding.ModelBindingContext bindingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.MutableObjectModelBinder.BindModel(System.Web.ModelBinding.ModelBindingExecutionContext,System.Web.ModelBinding.ModelBindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelBindingExecutionContext" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+        <Parameter Name="bindingContext" Type="System.Web.ModelBinding.ModelBindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="modelBindingExecutionContext">o contexto de execução.</param>
+        <param name="bindingContext">O contexto de associação.</param>
+        <summary>Associa o modelo usando o contexto de execução especificado e o contexto de associação.</summary>
+        <returns>
+          <see langword="true" /> em todos os casos.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O modelo não pôde ser associado porque uma ou mais propriedades obrigatórias estão ausentes. (A mensagem especifica a primeira propriedade ausente.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanUpdateProperty">
+      <MemberSignature Language="C#" Value="protected virtual bool CanUpdateProperty (System.Web.ModelBinding.ModelMetadata propertyMetadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanUpdateProperty(class System.Web.ModelBinding.ModelMetadata propertyMetadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.MutableObjectModelBinder.CanUpdateProperty(System.Web.ModelBinding.ModelMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyMetadata" Type="System.Web.ModelBinding.ModelMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="propertyMetadata">Metadados para a propriedade a ser avaliada.</param>
+        <summary>Retorna um valor que indica se uma propriedade pode ser atualizada.</summary>
+        <returns>
+          <see langword="true" />Se a propriedade pode ser atualizada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma propriedade pode ser atualizada se seu <xref:System.Web.ModelBinding.ModelMetadata.IsReadOnly%2A?displayProperty=nameWithType> é o valor da propriedade `false`. Se uma propriedade <xref:System.Web.ModelBinding.ModelMetadata.IsReadOnly%2A?displayProperty=nameWithType> é o valor da propriedade `true`, a propriedade pode ser atualizada se não for um tipo de valor, uma cadeia de caracteres ou uma matriz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateModel">
+      <MemberSignature Language="C#" Value="protected virtual object CreateModel (System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, System.Web.ModelBinding.ModelBindingContext bindingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object CreateModel(class System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, class System.Web.ModelBinding.ModelBindingContext bindingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.MutableObjectModelBinder.CreateModel(System.Web.ModelBinding.ModelBindingExecutionContext,System.Web.ModelBinding.ModelBindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelBindingExecutionContext" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+        <Parameter Name="bindingContext" Type="System.Web.ModelBinding.ModelBindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="modelBindingExecutionContext">o contexto de execução.</param>
+        <param name="bindingContext">O contexto de associação.</param>
+        <summary>Cria uma instância do modelo.</summary>
+        <returns>O objeto de modelo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureModel">
+      <MemberSignature Language="C#" Value="protected virtual void EnsureModel (System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, System.Web.ModelBinding.ModelBindingContext bindingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EnsureModel(class System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, class System.Web.ModelBinding.ModelBindingContext bindingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.MutableObjectModelBinder.EnsureModel(System.Web.ModelBinding.ModelBindingExecutionContext,System.Web.ModelBinding.ModelBindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelBindingExecutionContext" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+        <Parameter Name="bindingContext" Type="System.Web.ModelBinding.ModelBindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="modelBindingExecutionContext">o contexto de execução.</param>
+        <param name="bindingContext">O contexto de associação.</param>
+        <summary>Cria uma instância de modelo se uma instância ainda não existir no contexto de associação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataForProperties">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelMetadata&gt; GetMetadataForProperties (System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, System.Web.ModelBinding.ModelBindingContext bindingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.ModelBinding.ModelMetadata&gt; GetMetadataForProperties(class System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, class System.Web.ModelBinding.ModelBindingContext bindingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.MutableObjectModelBinder.GetMetadataForProperties(System.Web.ModelBinding.ModelBindingExecutionContext,System.Web.ModelBinding.ModelBindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelMetadata&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelBindingExecutionContext" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+        <Parameter Name="bindingContext" Type="System.Web.ModelBinding.ModelBindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="modelBindingExecutionContext">o contexto de execução.</param>
+        <param name="bindingContext">O contexto de associação.</param>
+        <summary>Retorna metadados para propriedades do modelo.</summary>
+        <returns>Metadados de propriedades do modelo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="protected virtual void SetProperty (System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, System.Web.ModelBinding.ModelBindingContext bindingContext, System.Web.ModelBinding.ModelMetadata propertyMetadata, System.Web.ModelBinding.ComplexModelResult complexModelResult);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetProperty(class System.Web.ModelBinding.ModelBindingExecutionContext modelBindingExecutionContext, class System.Web.ModelBinding.ModelBindingContext bindingContext, class System.Web.ModelBinding.ModelMetadata propertyMetadata, class System.Web.ModelBinding.ComplexModelResult complexModelResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.MutableObjectModelBinder.SetProperty(System.Web.ModelBinding.ModelBindingExecutionContext,System.Web.ModelBinding.ModelBindingContext,System.Web.ModelBinding.ModelMetadata,System.Web.ModelBinding.ComplexModelResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelBindingExecutionContext" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+        <Parameter Name="bindingContext" Type="System.Web.ModelBinding.ModelBindingContext" />
+        <Parameter Name="propertyMetadata" Type="System.Web.ModelBinding.ModelMetadata" />
+        <Parameter Name="complexModelResult" Type="System.Web.ModelBinding.ComplexModelResult" />
+      </Parameters>
+      <Docs>
+        <param name="modelBindingExecutionContext">o contexto de execução.</param>
+        <param name="bindingContext">O contexto de associação.</param>
+        <param name="propertyMetadata">Metadados para a propriedade definida.</param>
+        <param name="complexModelResult">Informações de validação sobre a propriedade.</param>
+        <summary>Define o valor de uma propriedade especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

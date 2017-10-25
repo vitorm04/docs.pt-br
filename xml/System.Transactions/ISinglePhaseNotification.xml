@@ -1,0 +1,85 @@
+<Type Name="ISinglePhaseNotification" FullName="System.Transactions.ISinglePhaseNotification">
+  <TypeSignature Language="C#" Value="public interface ISinglePhaseNotification : System.Transactions.IEnlistmentNotification" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISinglePhaseNotification implements class System.Transactions.IEnlistmentNotification" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.ISinglePhaseNotification" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Transactions.IEnlistmentNotification</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Descreve um objeto de recurso que oferece suporte a otimização de confirmação de fase única para participar em uma transação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que mesmo quando o Gerenciador de recursos implemente essa interface para oferecer suporte a otimização de confirmação de fase única, não há garantia de que ele recebe uma confirmação de fase única. O Gerenciador de transações ainda pode enviar duas notificações de confirmação de fase em vez disso.  
+  
+ Para inscrever seu Gerenciador de recursos como um participante em uma transação, chame o <xref:System.Transactions.Transaction.EnlistVolatile%2A> método ou o <xref:System.Transactions.Transaction.EnlistDurable%2A> método o <xref:System.Transactions.Transaction> classe. Especificamente, o `EnlistmentOptions` deve ser igual ao parâmetro <xref:System.Transactions.EnlistmentOptions.None> para garantir que uma única confirmação de fase é executada. Se for definido incorretamente como <xref:System.Transactions.EnlistmentOptions.EnlistDuringPrepareRequired>, nenhum única fase de confirmação ocorre.  
+  
+ Como o <xref:System.Transactions.ISinglePhaseNotification> interface deriva o <xref:System.Transactions.IEnlistmentNotification> interface, o Gerenciador de recursos também deve implementar todos os métodos do último para duas notificações de confirmação de fase.  É a opção do Gerenciador de transações quanto se duas fases confirmação ou a otimização de confirmação de fase única é usada com esse gerenciador de recursos.  No entanto, implementar essa interface a oportunidade de Gerenciador de recursos para tirar proveito da otimização de quando ele estiver disponível.  
+  
+ Se a otimização será usada e chama o Gerenciador de transações de <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> método do recurso inscrito, o Gerenciador de recursos deve responder a essa chamada usando vários métodos para o <xref:System.Transactions.SinglePhaseEnlistment> classe para informar o Gerenciador de transações, se a transação for confirmada ou revertida.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SinglePhaseCommit">
+      <MemberSignature Language="C#" Value="public void SinglePhaseCommit (System.Transactions.SinglePhaseEnlistment enlistment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SinglePhaseCommit(class System.Transactions.SinglePhaseEnlistment enlistment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit(System.Transactions.SinglePhaseEnlistment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="singlePhaseEnlistment" Type="System.Transactions.SinglePhaseEnlistment" />
+      </Parameters>
+      <Docs>
+        <param name="enlistment">To be added.</param>
+        <summary>Representa a implementação do Gerenciador de recursos de retorno de chamada para a otimização de confirmação de fase única.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É a opção do Gerenciador de transações quanto se duas fases confirmação ou a otimização de confirmação de fase única é usada com esse gerenciador de recursos.  Para obter mais informações sobre a fase única e confirmação de duas fases, consulte [confirmar A transação em Single-Phase e multifase](http://msdn.microsoft.com/en-us/74b3cfe1-d33a-45b8-91f4-dfd6f6598c4d).  
+  
+ Portanto, nesta inscrição do Gerenciador de recursos, ou o <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> método é chamado, ou os dois métodos de confirmação definidos lá da fase <xref:System.Transactions.IEnlistmentNotification> são chamados de interface.  
+  
+ A implementação desse método deve chamar tanto o <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A> método ou o <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A> método do `singlePhaseEnlistment` parâmetro para indicar se a transação deve ser confirmada ou revertida.  
+  
+ O Gerenciador de transações chama este método quando há apenas uma inscrição voláteis que dá suporte à confirmação de fase única ou quando há zero ou mais volátil inscrições e uma distribuição durável. No último caso, as inscrições voláteis recebem <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> notificações para duas multifase confirmação e a única inscrição durável recebe uma notificação de confirmação de fase única.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

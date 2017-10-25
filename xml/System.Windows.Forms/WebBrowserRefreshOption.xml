@@ -1,0 +1,94 @@
+<Type Name="WebBrowserRefreshOption" FullName="System.Windows.Forms.WebBrowserRefreshOption">
+  <TypeSignature Language="C#" Value="public enum WebBrowserRefreshOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WebBrowserRefreshOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.WebBrowserRefreshOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica as constantes que definem como o controle <see cref="T:System.Windows.Forms.WebBrowser" /> pode atualizar seu conteúdo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada com a <xref:System.Windows.Forms.WebBrowser.Refresh%2A?displayProperty=nameWithType> método para especificar como o <xref:System.Windows.Forms.WebBrowser> controle solicita uma versão atualizada da página da Web atual do servidor.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Completely">
+      <MemberSignature Language="C#" Value="Completely" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserRefreshOption Completely = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserRefreshOption.Completely" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserRefreshOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma atualização que solicita a versão mais recente da página da Web atual.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Continue">
+      <MemberSignature Language="C#" Value="Continue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserRefreshOption Continue = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserRefreshOption.Continue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserRefreshOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Somente para uso interno. Não use.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IfExpired">
+      <MemberSignature Language="C#" Value="IfExpired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserRefreshOption IfExpired = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserRefreshOption.IfExpired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserRefreshOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma atualização que solicita uma atualização apenas se a página da Web atual tiver expirado.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.WebBrowserRefreshOption Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.WebBrowserRefreshOption.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.WebBrowserRefreshOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma atualização que solicita uma cópia da página da Web atual que foi armazenada em cache no servidor.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

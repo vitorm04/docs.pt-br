@@ -1,0 +1,182 @@
+<Type Name="ISourceBlock&lt;TOutput&gt;" FullName="System.Threading.Tasks.Dataflow.ISourceBlock&lt;TOutput&gt;">
+  <TypeSignature Language="C#" Value="public interface ISourceBlock&lt;out TOutput&gt; : System.Threading.Tasks.Dataflow.IDataflowBlock" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISourceBlock`1&lt;+ TOutput&gt; implements class System.Threading.Tasks.Dataflow.IDataflowBlock" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TOutput">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Threading.Tasks.Dataflow.IDataflowBlock</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TOutput">Especifica o tipo de dados fornecidos pelo <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" />.</typeparam>
+    <summary>Representa um bloco de fluxo de dados que é uma origem de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  A biblioteca de fluxo de dados TPL (<xref:System.Threading.Tasks.Dataflow> namespace) não é distribuído com o net_v45. Para instalar o <xref:System.Threading.Tasks.Dataflow> namespace, abra seu projeto no vs_dev11_long, escolha gerenciar pacotes NuGet no menu projeto e pesquise online o `Microsoft.Tpl.Dataflow` pacote.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConsumeMessage">
+      <MemberSignature Language="C#" Value="public TOutput ConsumeMessage (System.Threading.Tasks.Dataflow.DataflowMessageHeader messageHeader, System.Threading.Tasks.Dataflow.ITargetBlock&lt;out TOutput&gt; target, out bool messageConsumed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TOutput ConsumeMessage(valuetype System.Threading.Tasks.Dataflow.DataflowMessageHeader messageHeader, class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!TOutput&gt; target, [out] bool&amp; messageConsumed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ISourceBlock`1.ConsumeMessage(System.Threading.Tasks.Dataflow.DataflowMessageHeader,System.Threading.Tasks.Dataflow.ITargetBlock{`0},System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TOutput</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageHeader" Type="System.Threading.Tasks.Dataflow.DataflowMessageHeader" />
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TOutput&gt;" />
+        <Parameter Name="messageConsumed" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="messageHeader">O <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> da mensagem que está sendo consumida.</param>
+        <param name="target">O <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> consumindo a mensagem.</param>
+        <param name="messageConsumed">
+          <see langword="true" />Se a mensagem foi consumida com êxito; Caso contrário, <see langword="false" />.</param>
+        <summary>Chamado pelo vinculado <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> para aceitar e consumir um T:System.Threading.Tasks.Dataflow.DataflowMessageHeader anteriormente oferecidos por este <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" />.</summary>
+        <returns>O valor da mensagem consumido. Isso pode corresponder a outro <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> instância que foi reservado anteriormente e passado como o <paramref name="messageHeader" /> para <see cref="M:System.Threading.Tasks.Dataflow.ISourceBlock`1.ConsumeMessage(System.Threading.Tasks.Dataflow.DataflowMessageHeader,System.Threading.Tasks.Dataflow.ITargetBlock{`0},System.Boolean@)" />. O consumo <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> devem usar o valor retornado em vez do valor passado como <paramref name="messageValue" /> por meio de <see cref="M:System.Threading.Tasks.Dataflow.ITargetBlock`1.OfferMessage(System.Threading.Tasks.Dataflow.DataflowMessageHeader,`0,System.Threading.Tasks.Dataflow.ISourceBlock{`0},System.Boolean)" />.  
+  
+ Se a mensagem solicitada não está disponível, o valor de retorno será nulo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> instâncias vinculados a este <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> instância pode usar <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A>, e ele só deve ser usado para consumir <xref:System.Threading.Tasks.Dataflow.DataflowMessageHeader> instâncias anteriormente oferecidos por essa fonte para o destino.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O messageHeader não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">O destino é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkTo">
+      <MemberSignature Language="C#" Value="public IDisposable LinkTo (System.Threading.Tasks.Dataflow.ITargetBlock&lt;out TOutput&gt; target, System.Threading.Tasks.Dataflow.DataflowLinkOptions linkOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IDisposable LinkTo(class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!TOutput&gt; target, class System.Threading.Tasks.Dataflow.DataflowLinkOptions linkOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ISourceBlock`1.LinkTo(System.Threading.Tasks.Dataflow.ITargetBlock{`0},System.Threading.Tasks.Dataflow.DataflowLinkOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TOutput&gt;" />
+        <Parameter Name="linkOptions" Type="System.Threading.Tasks.Dataflow.DataflowLinkOptions" />
+      </Parameters>
+      <Docs>
+        <param name="target">O <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> ao qual se conectar a essa fonte.</param>
+        <param name="linkOptions">Um <see cref="T:System.Threading.Tasks.Dataflow.DataflowLinkOptions" /> instância que configura o link.</param>
+        <summary>Links de <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" /> especificado <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" />.</summary>
+        <returns>Um IDisposable que, após chamar Dispose, será desvincular a origem do destino.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" />é nulo (Nothing no Visual Basic) ou <paramref name="linkOptions" /> é nulo (Nothing no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseReservation">
+      <MemberSignature Language="C#" Value="public void ReleaseReservation (System.Threading.Tasks.Dataflow.DataflowMessageHeader messageHeader, System.Threading.Tasks.Dataflow.ITargetBlock&lt;out TOutput&gt; target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleaseReservation(valuetype System.Threading.Tasks.Dataflow.DataflowMessageHeader messageHeader, class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!TOutput&gt; target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ISourceBlock`1.ReleaseReservation(System.Threading.Tasks.Dataflow.DataflowMessageHeader,System.Threading.Tasks.Dataflow.ITargetBlock{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageHeader" Type="System.Threading.Tasks.Dataflow.DataflowMessageHeader" />
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TOutput&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="messageHeader">O <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> da mensagem reservada sendo lançada.</param>
+        <param name="target">O <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> liberar a mensagem que reservado anteriormente.</param>
+        <summary>Chamado pelo vinculado <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> para liberar reservado anteriormente <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> por este <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> instâncias vinculados a este <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> instância pode usar `ReleaseReservation`, e só deve ser usada para liberar <xref:System.Threading.Tasks.Dataflow.DataflowMessageHeader> instâncias anteriormente e com êxito são reservadas pelo destino.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="messageHeader" /> não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="target" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="target" /> não tinha a mensagem reservada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReserveMessage">
+      <MemberSignature Language="C#" Value="public bool ReserveMessage (System.Threading.Tasks.Dataflow.DataflowMessageHeader messageHeader, System.Threading.Tasks.Dataflow.ITargetBlock&lt;out TOutput&gt; target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ReserveMessage(valuetype System.Threading.Tasks.Dataflow.DataflowMessageHeader messageHeader, class System.Threading.Tasks.Dataflow.ITargetBlock`1&lt;!TOutput&gt; target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ISourceBlock`1.ReserveMessage(System.Threading.Tasks.Dataflow.DataflowMessageHeader,System.Threading.Tasks.Dataflow.ITargetBlock{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageHeader" Type="System.Threading.Tasks.Dataflow.DataflowMessageHeader" />
+        <Parameter Name="target" Type="System.Threading.Tasks.Dataflow.ITargetBlock&lt;TOutput&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="messageHeader">O <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> da mensagem que está sendo reservada.</param>
+        <param name="target">O <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> reservar a mensagem.</param>
+        <summary>Chamado pelo vinculado <see cref="T:System.Threading.Tasks.Dataflow.ITargetBlock`1" /> para reservar um anteriormente oferecidos <see cref="T:System.Threading.Tasks.Dataflow.DataflowMessageHeader" /> por este <see cref="T:System.Threading.Tasks.Dataflow.ISourceBlock`1" />.</summary>
+        <returns>
+          <see langword="true" />Se a mensagem foi reservada com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> instâncias vinculados a este <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> instância pode usar <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A>, e só deve ser usado para reservar <xref:System.Threading.Tasks.Dataflow.DataflowMessageHeader> instâncias anteriormente oferecidos por essa fonte para o destino.  
+  
+ Se `true` for retornado, o <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> subsequentemente deve chamar <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A> ou <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> para esta mensagem. Falha ao fazer isso pode resultar na fonte sendo não é possível propagar mensagens adicionais para este ou outros destinos.  
+  
+ <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A>não deve ser chamado enquanto o destino está mantendo todos os bloqueios internos. Isso violará a hierarquia de bloqueio necessária para evitar deadlocks em uma rede de fluxo de dados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="messageHeader" /> não é válido.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="target" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

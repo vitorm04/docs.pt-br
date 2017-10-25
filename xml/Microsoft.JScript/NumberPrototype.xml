@@ -1,0 +1,215 @@
+<Type Name="NumberPrototype" FullName="Microsoft.JScript.NumberPrototype">
+  <TypeSignature Language="C#" Value="public class NumberPrototype : Microsoft.JScript.NumberObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NumberPrototype extends Microsoft.JScript.NumberObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.NumberPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.NumberObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades e métodos estáticos <see cref="T:Microsoft.JScript.NumberObject" /> objetos. Todos os métodos dessa classe são chamados pela passagem de uma referência ao objeto que está solicitando acesso ao método. Essa classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public static Microsoft.JScript.NumberConstructor constructor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.JScript.NumberConstructor constructor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.NumberPrototype.constructor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.NumberConstructor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a um objeto com base no protótipo que está usando esse protótipo.</summary>
+        <value>Uma referência a um objeto de protótipo.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toExponential">
+      <MemberSignature Language="C#" Value="public static string toExponential (object thisob, object fractionDigits);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toExponential(object thisob, object fractionDigits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.NumberPrototype.toExponential(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Number_toExponential)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="fractionDigits" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <param name="fractionDigits">Um número entre 0 e 20 que representa o número de casas decimais a serem exibidas. O padrão é 16.</param>
+        <summary>Cria uma representação de cadeia de caracteres especificada <see cref="T:Microsoft.JScript.NumberObject" /> que usa notação científica de (E).</summary>
+        <returns>Uma representação da cadeia de caracteres de <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toFixed">
+      <MemberSignature Language="C#" Value="public static string toFixed (object thisob, double fractionDigits);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toFixed(object thisob, float64 fractionDigits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.NumberPrototype.toFixed(System.Object,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Number_toFixed)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="fractionDigits" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <param name="fractionDigits">Um número entre 0 e 20 que representa o número de casas decimais a serem exibidas. O padrão é 0.</param>
+        <summary>Cria uma representação de cadeia de caracteres especificada <see cref="T:Microsoft.JScript.NumberObject" /> que exibe o número especificado de casas decimais.</summary>
+        <returns>Uma representação da cadeia de caracteres de <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toLocaleString">
+      <MemberSignature Language="C#" Value="public static string toLocaleString (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toLocaleString(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.NumberPrototype.toLocaleString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Number_toLocaleString)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <summary>Cria uma representação de cadeia de caracteres do objeto especificado se baseia em <see cref="P:System.Globalization.NumberFormatInfo.CurrentInfo" /> e <see cref="T:System.Globalization.CultureInfo" />.</summary>
+        <returns>Uma representação da cadeia de caracteres de <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toPrecision">
+      <MemberSignature Language="C#" Value="public static string toPrecision (object thisob, object precision);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toPrecision(object thisob, object precision) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.NumberPrototype.toPrecision(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Number_toPrecision)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="precision" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <param name="precision">Um número entre 0 e 21 que representa o número de dígitos de precisão para exibir. <c>Dígitos de precisão</c> os dígitos de decimal e o expoente combinados.</param>
+        <summary>Cria uma representação de cadeia de caracteres especificada <see cref="T:Microsoft.JScript.NumberObject" /> que exibe o número especificado de dígitos de precisão.</summary>
+        <returns>Uma representação da cadeia de caracteres de <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toString">
+      <MemberSignature Language="C#" Value="public static string toString (object thisob, object radix);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toString(object thisob, object radix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.NumberPrototype.toString(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Number_toString)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="radix" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <param name="radix">Um número entre 2 e 36 que representa a base do sistema número <c>thisob</c> é expresso em. O padrão é 10.</param>
+        <summary>Cria uma representação de cadeia de caracteres do objeto especificado.</summary>
+        <returns>Uma representação da cadeia de caracteres de <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="valueOf">
+      <MemberSignature Language="C#" Value="public static object valueOf (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object valueOf(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.NumberPrototype.valueOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Number_valueOf)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <summary>Retorna o valor do <see cref="T:Microsoft.JScript.NumberObject" />.</summary>
+        <returns>O valor de <paramref name="thisob" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Activities.Tracking.Configuration">
+  <Docs>
+    <summary>O namespace System.ServiceModel.Activities.Tracking.Configuration contém classes usadas para configurar o controle para fluxos de trabalho do serviço hospedado. Essas classes permitem que você especifique as informações de rastreamento que você deseja gerar o serviço de fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

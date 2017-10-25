@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.UI.WebControls">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.WebControls" /> namespace contém classes que permitem a criação de controles de servidor Web em uma página da Web. Controles de servidor Web executam no servidor e incluem controles de formulário, como botões e caixas de texto. Eles também incluem controles com finalidade especial, como um calendário. Como controles de servidor Web são executados no servidor, você pode controlar programaticamente esses elementos. Embora os controles de servidor Web são renderizados como HTML, o seu modelo de objeto não reflete necessariamente sintaxe HTML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls> namespace contém classes que são renderizados como marcas HTML, como o <xref:System.Web.UI.WebControls.TextBox> controle e o <xref:System.Web.UI.WebControls.ListBox> controle. O namespace também contém classes que não são processados na página da Web, mas oferece suporte a operações de dados, como o <xref:System.Web.UI.WebControls.SqlDataSource> e <xref:System.Web.UI.WebControls.ObjectDataSource> classes. Outros controles, como o <xref:System.Web.UI.WebControls.GridView> e <xref:System.Web.UI.WebControls.DetailsView> controles, exibição de dados de suporte e edição. O <xref:System.Web.UI.WebControls.WebControl> classe serve como a classe base para muitas das classes no <xref:System.Web.UI.WebControls> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

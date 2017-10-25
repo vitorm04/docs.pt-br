@@ -1,0 +1,160 @@
+<Type Name="StreamUpgradeInitiator" FullName="System.ServiceModel.Channels.StreamUpgradeInitiator">
+  <TypeSignature Language="C#" Value="public abstract class StreamUpgradeInitiator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit StreamUpgradeInitiator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.StreamUpgradeInitiator" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Para implementar um iniciador de atualização personalizado, herdam isso <see langword="abstract" /> classe base.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um exemplo de uma atualização de fluxo é criar um fluxo de compactação diretamente sobre o fluxo de transporte. Essa classe é usada com <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor> e <xref:System.ServiceModel.Channels.StreamUpgradeProvider> para implementar uma atualização de fluxo personalizados.  
+  
+ Para obter uma descrição detalhada do processo de atualização, consulte <xref:System.ServiceModel.Channels.StreamUpgradeProvider>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StreamUpgradeInitiator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeInitiator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.StreamUpgradeInitiator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInitiateUpgrade">
+      <MemberSignature Language="C#" Value="public abstract IAsyncResult BeginInitiateUpgrade (System.IO.Stream stream, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginInitiateUpgrade(class System.IO.Stream stream, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeInitiator.BeginInitiateUpgrade(System.IO.Stream,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo a ser atualizado.</param>
+        <param name="callback">O método a ser chamado quando o <see cref="M:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade(System.IO.Stream)" /> foi concluída.</param>
+        <param name="state">Informações de estado sobre o status da chamada assíncrona.</param>
+        <summary>Isso <see langword="abstract" /> método pode ser implementado para fazer o processamento assíncrono que inicia uma atualização.</summary>
+        <returns>Retorna um <see cref="T:System.IAsyncResult" /> a serem passados para o <see cref="M:System.ServiceModel.Channels.StreamUpgradeInitiator.EndInitiateUpgrade(System.IAsyncResult)" /> método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> e retorna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInitiateUpgrade">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Stream EndInitiateUpgrade (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream EndInitiateUpgrade(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeInitiator.EndInitiateUpgrade(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see langword="IAsyncResult" /> retornado do método <see cref="M:System.ServiceModel.Channels.StreamUpgradeInitiator.BeginInitiateUpgrade(System.IO.Stream,System.AsyncCallback,System.Object)" />.</param>
+        <summary>Esse método é o método de retorno de chamada assíncrono é chamado após <see cref="M:System.ServiceModel.Channels.StreamUpgradeInitiator.BeginInitiateUpgrade(System.IO.Stream,System.AsyncCallback,System.Object)" /> foi concluída.</summary>
+        <returns>Retorna o fluxo atualizado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como usar esse método, consulte os comentários na <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextUpgrade">
+      <MemberSignature Language="C#" Value="public abstract string GetNextUpgrade ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetNextUpgrade() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o tipo de conteúdo da próxima atualização a ser executada.</summary>
+        <returns>Retorna o tipo de conteúdo da próxima atualização.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna um conjunto de tipos de conteúdo de atualização com suporte pelo provedor de atualização na ordem em que eles são esperados. Os provedores de atualização que oferece suporte a uma única atualização retornar apenas um único valor. Provedores de atualização que oferecem suporte a várias atualizações de retornam os valores na ordem (por exemplo, a compactação tipo de conteúdo seguido pelo tipo de conteúdo de segurança).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitiateUpgrade">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Stream InitiateUpgrade (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream InitiateUpgrade(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo a ser atualizado.</param>
+        <summary>Inicia a atualização do fluxo solicitando a outra extremidade da sua conexão para atualizar a camada de transporte de canal.</summary>
+        <returns>Retorna o fluxo atualizado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser chamado várias vezes para cada atualização com suporte pelo provedor de atualização. Por exemplo, um provedor de atualização com suporte para compactação e segurança poderia chamar esse método duas vezes: primeiro para atualizar o transporte padrão para compactação e depois atualizar a segurança. As chamadas subsequentes para este método devem passar no fluxo de atualização da chamada anterior.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

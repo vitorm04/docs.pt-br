@@ -1,0 +1,679 @@
+<Type Name="SslStreamSecurityBindingElement" FullName="System.ServiceModel.Channels.SslStreamSecurityBindingElement">
+  <TypeSignature Language="C#" Value="public class SslStreamSecurityBindingElement : System.ServiceModel.Channels.BindingElement, System.ServiceModel.Channels.ITransportTokenAssertionProvider, System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SslStreamSecurityBindingElement extends System.ServiceModel.Channels.BindingElement implements class System.ServiceModel.Channels.ITransportTokenAssertionProvider, class System.ServiceModel.Description.IPolicyExportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.SslStreamSecurityBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.StreamUpgradeBindingElement</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="xamarinandroid-7.1">System.ServiceModel.Channels.BindingElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.ITransportTokenAssertionProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyExportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um elemento de associação personalizado que suporta segurança de canal usando um fluxo SSL.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Transportes que usam um protocolo orientado por fluxo como TCP e pipes nomeados oferecem suporte a atualizações com base em fluxo de transporte. Especificamente, [!INCLUDE[indigo1](~/includes/indigo1-md.md)] fornece atualizações de segurança. A configuração de segurança de transporte é encapsulada por essa classe, bem como por <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, que pode ser configurado e adicionado a uma associação personalizada. Além disso, um terceiro pode escrever seu próprios personalizado `StreamSecurityBindingElement`. Esses elementos de associação estendem o <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> classe é chamado para criar o fluxo de cliente e servidor de atualização de provedores.  
+  
+ Uma associação personalizada contém uma coleção de elementos organizados em uma ordem específica de associação: o elemento que representa a parte superior da pilha de associação é adicionado pela primeira vez, o próximo elemento para baixo na pilha de associação é adicionado em segundo lugar, e assim por diante.  
+  
+### <a name="to-add-this-class-to-a-binding"></a>Para adicionar essa classe para uma associação  
+  
+1.  Criará um <xref:System.ServiceModel.Channels.BindingElementCollection>.  
+  
+2.  Criar elementos de associação personalizada que estão acima deste elemento de associação da pilha de associação, como opcional <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> e <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>.  
+  
+3.  Adicione os elementos criados na ordem descrita anteriormente para o <xref:System.ServiceModel.Channels.BindingElementCollection> usando o <xref:System.ServiceModel.Channels.BindingElementCollection.InsertItem%2A> método.  
+  
+4.  Criar uma instância de <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> e adicioná-lo à coleção.  
+  
+5.  Adicione todos os elementos adicionais associação personalizada à coleção, como <xref:System.ServiceModel.Channels.TcpTransportBindingElement>.  
+  
+ Há três cenários em que você deve manualmente especificar o UPN/SPN correto no ponto de extremidade do cliente após a importação WSDL, ou especificar um personalizado <xref:System.ServiceModel.Security.IdentityVerifier> sobre o cliente <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>.  
+  
+1.  Nenhuma identidade de serviço é publicada em WSDL. <xref:System.ServiceModel.Configuration.AuthenticationMode.SspiNegotiatedOverTransport>e HTTPS é usado (por exemplo, um <xref:System.ServiceModel.WSHttpBinding> com SecurityMode = <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>). Se o serviço não está em execução com a identidade da máquina, você deve especificar manualmente o UPN/SPN correto no ponto de extremidade do cliente após a importação WSDL.  
+  
+2.  Identidade DNSservice é publicada em WSDL. <xref:System.ServiceModel.Configuration.AuthenticationMode.SspiNegotiatedOverTransport>e <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> são usados (por exemplo, <xref:System.ServiceModel.NetTcpBinding> com SecurityMode = <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>) em vez de um UPN/SPN. Se o serviço não está em execução com a identidade da máquina, ou a identidade do DNS não é de identidade do computador, você deve especificar manualmente o UPN/SPN correto no ponto de extremidade do cliente após a importação WSDL.  
+  
+3.  Identidade do DNS é publicada em WSDL. Se <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> é substituído no cliente, você deve especificar um personalizado <xref:System.ServiceModel.Security.IdentityVerifier> sobre o cliente <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>.  
+  
+ O código a seguir mostra como especificar manualmente o UPN/SPN correto no ponto de extremidade do cliente, bem como especificar um personalizado <xref:System.ServiceModel.Security.IdentityVerifier> sobre o cliente <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>.  
+  
+```  
+  
+using System;  
+using System.Collections.Generic;  
+using System.Linq;  
+using System.Net;  
+using System.IdentityModel.Claims;  
+using System.IdentityModel.Policy;  
+using System.Security.Cryptography.X509Certificates;  
+using System.ServiceModel;  
+using System.ServiceModel.Channels;  
+using System.ServiceModel.Description;  
+using System.ServiceModel.Security;  
+using System.Xml;  
+  
+namespace ServiceNamespace  
+{  
+    [ServiceContract]  
+    interface IService  
+    {  
+        [OperationContract]  
+        void DoSomething();  
+    }  
+  
+    class DnsIdentityVerifier : IdentityVerifier  
+    {  
+        DnsEndpointIdentity _expectedIdentity;  
+  
+        public DnsIdentityVerifier(EndpointAddress serviceEndpoint)  
+        {  
+            _expectedIdentity = new DnsEndpointIdentity(serviceEndpoint.Uri.DnsSafeHost);  
+        }  
+  
+        public override bool CheckAccess(EndpointIdentity identity, AuthorizationContext authContext)  
+        {  
+            Claim dnsClaim = authContext.Claims().Single(claim => claim.ClaimType == ClaimTypes.Dns);  
+            return String.Equals(_expectedIdentity.IdentityClaim.Resource, dnsClaim.Resource);  
+        }  
+  
+        public override bool TryGetIdentity(EndpointAddress reference, out EndpointIdentity identity)  
+        {  
+            identity = _expectedIdentity;  
+            return true;  
+        }  
+    }  
+  
+    static class LinqExtensionForClaims  
+    {  
+        public static IEnumerable<Claim> Claims(this AuthorizationContext authContext)  
+        {  
+            if (null != authContext.ClaimSets)  
+            {  
+                foreach (ClaimSet claimSet in authContext.ClaimSets)  
+                {  
+                    if (null != claimSet)  
+                    {  
+                        foreach (Claim claim in claimSet)  
+                        {  
+                            yield return claim;  
+                        }  
+                    }  
+                }  
+            }  
+        }  
+    }  
+  
+    class Service : IService  
+    {  
+        public void DoSomething()  
+        {  
+            Console.WriteLine("Service called.");  
+        }  
+    }  
+  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            string hostname = Dns.GetHostEntry(String.Empty).HostName;  
+            NetTcpBinding serviceBinding = new NetTcpBinding(SecurityMode.TransportWithMessageCredential);  
+  
+            ServiceHost serviceHost = new ServiceHost(typeof(Service), new Uri(String.Format("net.tcp://{0}:8080/Service", hostname)));  
+            serviceHost.Credentials.ServiceCertificate.SetCertificate(StoreLocation.LocalMachine, StoreName.My, X509FindType.FindByThumbprint, "8a 42 1b eb cf 8a 14 b1 de 83 d9 a5 70 88 0a 62 f9 bf 69 06");  
+            ServiceEndpoint serviceEndpoint = serviceHost.AddServiceEndpoint(typeof(IService), serviceBinding, "Endpoint");  
+            serviceHost.Open();  
+  
+            CustomBinding clientBinding = new CustomBinding(serviceBinding.CreateBindingElements());  
+            SslStreamSecurityBindingElement sslStream = clientBinding.Elements.Find<SslStreamSecurityBindingElement>();  
+            sslStream.IdentityVerifier = new DnsIdentityVerifier(serviceEndpoint.Address);  
+  
+            ChannelFactory<IService> channelFactory = new ChannelFactory<IService>(clientBinding, new EndpointAddress(serviceEndpoint.Address.Uri, UpnEndpointIdentity.CreateUpnIdentity("username@domain")));  
+            channelFactory.Credentials.Windows.AllowNtlm = false;  
+            IService channel = channelFactory.CreateChannel();  
+            channel.DoSomething();  
+        }  
+    }  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SslStreamSecurityBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.SslStreamSecurityBindingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SslStreamSecurityBindingElement (System.ServiceModel.Channels.SslStreamSecurityBindingElement elementToBeCloned);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.SslStreamSecurityBindingElement elementToBeCloned) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.#ctor(System.ServiceModel.Channels.SslStreamSecurityBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementToBeCloned" Type="System.ServiceModel.Channels.SslStreamSecurityBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="elementToBeCloned">O <see cref="T:System.ServiceModel.Channels.SslStreamSecurityBindingElement" /> para clonar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.SslStreamSecurityBindingElement" /> classe usando os valores de outro <see cref="T:System.ServiceModel.Channels.SslStreamSecurityBindingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.BuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Tipo de fábrica de canais.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Cria uma fábrica de canais de um tipo especificado.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelFactory" /> objeto que representa a fábrica de canais do tipo <paramref name="TChannel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria uma fábrica de canais, que é usada para criar um canal que processa mensagens de saída para esta associação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.BuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Tipo de ouvinte de canal.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Cria um ouvinte de canal de um tipo especificado.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelListener" /> objeto que representa uma escuta de canal do tipo <paramref name="TChannel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um ouvinte de canal, que é usado para criar um canal que processa mensagens de entrada para essa associação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildClientStreamUpgradeProvider">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.StreamUpgradeProvider BuildClientStreamUpgradeProvider (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.StreamUpgradeProvider BuildClientStreamUpgradeProvider(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.BuildClientStreamUpgradeProvider(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.StreamUpgradeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> para a pilha de canais inteira.</param>
+        <summary>Cria uma instância no cliente de <see cref="T:System.ServiceModel.Channels.StreamUpgradeProvider" /> com base no contexto do canal fornecido.</summary>
+        <returns>Uma instância do <see cref="T:System.ServiceModel.Channels.StreamUpgradeProvider" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado quando abrir a fábrica de canais do cliente e fornece uma implementação personalizada do <xref:System.ServiceModel.Channels.StreamUpgradeProvider> classe abstrata.  
+  
+ O <xref:System.ServiceModel.Channels.BindingContext> parâmetro permite reagir aos outros elementos da pilha de canais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildServerStreamUpgradeProvider">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.StreamUpgradeProvider BuildServerStreamUpgradeProvider (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.StreamUpgradeProvider BuildServerStreamUpgradeProvider(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.BuildServerStreamUpgradeProvider(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.StreamUpgradeProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" /> para a pilha de canais inteira.</param>
+        <summary>Cria uma instância no servidor do <see cref="T:System.ServiceModel.Channels.StreamUpgradeProvider" /> com base no contexto do canal fornecido.</summary>
+        <returns>Uma instância do <see cref="T:System.ServiceModel.Channels.StreamUpgradeProvider" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado quando abrir o serviço e fornece uma implementação personalizada do <xref:System.ServiceModel.Channels.StreamUpgradeProvider> classe abstrata.  
+  
+ O <xref:System.ServiceModel.Channels.BindingContext> parâmetro permite reagir aos outros elementos da pilha de canais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Tipo de fábrica de canais.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Obtém um valor que indica se uma fábrica de canais do tipo especificado pode ser criada.</summary>
+        <returns>
+          <see langword="true" />Se uma fábrica de canais do tipo especificado pode ser criada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar esse método antes de tentar criar uma fábrica de canais.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingContext context) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Tipo de ouvinte de canal.</typeparam>
+        <param name="context">O <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Obtém um valor que indica se um ouvinte de canal do tipo especificado pode ser criado.</summary>
+        <returns>
+          <see langword="true" />Se um ouvinte de canal do tipo especificado pode ser criado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar esse método antes de tentar criar um ouvinte de canal.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.Channels.BindingElement Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.Channels.BindingElement Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância que é uma cópia da instância atual.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.SslStreamSecurityBindingElement" /> instância é uma cópia da instância atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingContext context) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.GetProperty``1(System.ServiceModel.Channels.BindingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Channels.BindingContext" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de objeto a obter.</typeparam>
+        <param name="context">Um <see cref="T:System.ServiceModel.Channels.BindingContext" />.</param>
+        <summary>Obtém um objeto especificado a partir de <see cref="T:System.ServiceModel.Channels.BindingContext" />.</summary>
+        <returns>O objeto do tipo <paramref name="T" /> do <see cref="T:System.ServiceModel.Channels.BindingContext" />, ou <see langword="null" /> se o objeto não foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método obtém o objeto especificado da classe base ou de um dos ancestrais dessa classe. O objeto retornado normalmente é uma coleção de propriedades, por exemplo, um objeto que implementa <xref:System.ServiceModel.Channels.ISecurityCapabilities>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTransportTokenAssertion">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement GetTransportTokenAssertion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XmlElement GetTransportTokenAssertion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.GetTransportTokenAssertion" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xml.XmlElement" /> que representa o token de transporte usado na associação de segurança.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlElement" /> que representa o token de transporte usado na associação de segurança.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para gerar WSDL para o serviço associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IdentityVerifier">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.IdentityVerifier IdentityVerifier { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.IdentityVerifier IdentityVerifier" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SslStreamSecurityBindingElement.IdentityVerifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.IdentityVerifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o verificador de identidade para essa associação.</summary>
+        <value>Um objeto <see cref="T:System.ServiceModel.Security.IdentityVerifier" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Para definir o valor é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireClientCertificate">
+      <MemberSignature Language="C#" Value="public bool RequireClientCertificate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireClientCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SslStreamSecurityBindingElement.RequireClientCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se um certificado de cliente é necessário para esta associação.</summary>
+        <value>
+          <see langword="true" />Se um certificado de cliente é necessário para esta associação; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeIdentityVerifier">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeIdentityVerifier ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeIdentityVerifier() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.ShouldSerializeIdentityVerifier" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o verificador de identidade deve ser serializado.</summary>
+        <returns>
+          <see langword="true" />Se o verificador de identidade deve ser serializado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SslProtocols">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.SslProtocols SslProtocols { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Authentication.SslProtocols SslProtocols" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.SslProtocols</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a lista de protocolos SSL/TLS a serem negociados ao usar um tipo de credencial do cliente TcpClientCredentialType.Certificate. O valor pode ser uma combinação de um ou mais dos seguintes membros de enumeração: Ssl3, Tls, Tls11 e Tls12.</summary>
+        <value>Retorna <see cref="T:System.Security.Authentication.SslProtocols" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é Ssl3 &#124; TLS &#124; Tls11 &#124; Tls12. Versões do framework antes 4.6 apenas dá suporte a Ssl3 e Tls. Se eles não forem incluídos, comunicação com versões anteriores do framework, não será possível. Especificar Tls11 e/ou Tls12 desabilitará o uso de Ssl3, mesmo que ele foi incluído.  
+  
+   
+  
+## Examples  
+  
+```  
+NetTcpBinding netTcpBinding = new NetTcpBinding(SecurityMode.Transport);  
+netTcpBinding.Security.Transport.ClientCredentialType = TcpClientCredentialType.Certificate;  
+CustomBinding b = new CustomBinding(netTcpBinding);  
+SslStreamSecurityBindingElement sslStream = b.Elements.Find<SslStreamSecurityBindingElement>();  
+sslStream.SslProtocols = SslProtocols.Tls11 | SslProtocols.Tls12;  
+EndpointAddress a = new EndpointAddress("net.tcp://contoso.com/TcpAddress");  
+ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(b, a);  
+cf.Credentials.ClientCertificate.SetCertificate(  
+    StoreLocation.LocalMachine,  
+    StoreName.My,  
+    X509FindType.FindByThumbprint,  
+    "0000000000000000000000000000000000000000");  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyExportExtension.ExportPolicy (System.ServiceModel.Description.MetadataExporter exporter, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy(class System.ServiceModel.Description.MetadataExporter exporter, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SslStreamSecurityBindingElement.System#ServiceModel#Description#IPolicyExportExtension#ExportPolicy(System.ServiceModel.Description.MetadataExporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exporter" Type="System.ServiceModel.Description.MetadataExporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="exporter">O <see cref="T:System.ServiceModel.Description.MetadataExporter" /> que você pode usar para modificar o processo de exportação.</param>
+        <param name="context">O <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> que você pode usar para inserir a declaração de política personalizada.</param>
+        <summary>Exporta uma declaração de política personalizadas sobre associações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método grava instruções relacionadas à associação para as informações de WSDL expostas por um contrato específico e é usado pelo [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para se comunicar com clientes a existência desse elemento de associação personalizada na pilha de associação.  
+  
+ Esse método usa dois parâmetros: o <xref:System.ServiceModel.Description.MetadataExporter> e <xref:System.ServiceModel.Description.PolicyConversionContext> objetos. Use o <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A>, e <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A> métodos de obter conjuntos de declarações de política que já foram exportados em vários escopos. Use esse método para adicionar suas próprias declarações de política para a coleção apropriada.  
+  
+ O <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A> propriedade expõe o <xref:System.ServiceModel.Description.ContractDescription> para o ponto de extremidade que está sendo exportado. Isso permite que esse método definir o escopo de suas declarações de política exportados corretamente. Por exemplo, os atributos de segurança no código podem adicionar comportamentos para o <xref:System.ServiceModel.Description.ContractDescription> que indicam onde as declarações de política de segurança devem ser adicionadas.  
+  
+ Depois que as declarações de política personalizadas são anexadas às informações WSDL, clientes podem detectar e importar as asserções de associação personalizada implementando um <xref:System.ServiceModel.Description.IPolicyImportExtension> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

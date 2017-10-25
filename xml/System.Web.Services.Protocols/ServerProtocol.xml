@@ -1,0 +1,155 @@
+<Type Name="ServerProtocol" FullName="System.Web.Services.Protocols.ServerProtocol">
+  <TypeSignature Language="C#" Value="public abstract class ServerProtocol" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServerProtocol extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.ServerProtocol" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O .NET Framework usa classes que derivam de <see cref="T:System.Web.Services.Protocols.ServerProtocol" /> classe para processar solicitações de serviço da Web em XML.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServerProtocol ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.ServerProtocol.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O construtor para <see cref="T:System.Web.Services.Protocols.ServerProtocol" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddToCache">
+      <MemberSignature Language="C#" Value="protected void AddToCache (Type protocolType, Type serverType, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddToCache(class System.Type protocolType, class System.Type serverType, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.ServerProtocol.AddToCache(System.Type,System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="protocolType" Type="System.Type" />
+        <Parameter Name="serverType" Type="System.Type" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="protocolType">Um <see cref="T:System.Type" /> que é usado para criar a chave para armazenar <c>valor</c> no cache.</param>
+        <param name="serverType">Um <see cref="T:System.Type" /> que é usado para criar a chave para armazenar <c>valor</c> no cache.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser armazenado em cache.</param>
+        <summary>Armazena um <see cref="T:System.Object" /> no cache usando uma chave que é criada a partir do tipo de protocolo especificado e o tipo de servidor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="protected System.Web.HttpContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.ServerProtocol.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.HttpContext" /> objeto para a classe derivada.</summary>
+        <value>Um objeto <see cref="T:System.Web.HttpContext" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFromCache">
+      <MemberSignature Language="C#" Value="protected object GetFromCache (Type protocolType, Type serverType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object GetFromCache(class System.Type protocolType, class System.Type serverType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.ServerProtocol.GetFromCache(System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="protocolType" Type="System.Type" />
+        <Parameter Name="serverType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="protocolType">Um <see cref="T:System.Type" /> que é usado para criar a chave para recuperar <c>valor</c> do cache.</param>
+        <param name="serverType">Um <see cref="T:System.Type" /> que é usado para criar a chave para recuperar <c>valor</c> do cache.</param>
+        <summary>Recupera o <see cref="T:System.Object" /> que é armazenado em cache usando a chave que foi criada a partir do tipo de protocolo especificado e o tipo de servidor.</summary>
+        <returns>O <see cref="T:System.Object" /> que é armazenado no cache que foi criado usando a chave <paramref name="protocolType" /> e <paramref name="serverType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="protected System.Web.HttpRequest Request { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpRequest Request" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.ServerProtocol.Request" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpRequest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.HttpRequest" /> objeto para a classe derivada.</summary>
+        <value>Um objeto <see cref="T:System.Web.HttpRequest" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Response">
+      <MemberSignature Language="C#" Value="protected System.Web.HttpResponse Response { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpResponse Response" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.ServerProtocol.Response" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.HttpResponse" /> objeto para a classe derivada.</summary>
+        <value>Um objeto <see cref="T:System.Web.HttpResponse" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="protected virtual object Target { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Target" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.ServerProtocol.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de serviço que é invocado.</summary>
+        <value>O objeto de serviço que é invocado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

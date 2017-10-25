@@ -1,0 +1,19 @@
+<Namespace Name="System.Media">
+  <Docs>
+    <summary>O <see cref="N:System.Media" /> namespace contém classes para reproduzir arquivos de som e acessar sons fornecida pelo sistema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes a seguir estão incluídas neste namespace:  
+  
+-   Um <xref:System.Media.SoundPlayer> classe para carregar e reprodução de sons em vários formatos de arquivo.  
+  
+-   Um <xref:System.Media.SystemSound> classe para representar e executando um sistema de som.  
+  
+-   Um <xref:System.Media.SystemSounds> classe que recupera sons associados a um conjunto de tipos de eventos de som de sistema operacional Windows.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

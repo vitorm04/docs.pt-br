@@ -1,0 +1,409 @@
+<Type Name="EncoderValue" FullName="System.Drawing.Imaging.EncoderValue">
+  <TypeSignature Language="C#" Value="public enum EncoderValue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EncoderValue extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.EncoderValue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Usado para especificar o valor do parâmetro passado a um codificador de imagem JPEG ou TIFF ao usar os métodos <see cref="M:System.Drawing.Image.Save(System.String,System.Drawing.Imaging.ImageCodecInfo,System.Drawing.Imaging.EncoderParameters)" /> ou <see cref="M:System.Drawing.Image.SaveAdd(System.Drawing.Imaging.EncoderParameters)" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o <xref:System.Drawing.Image.Save%2A> ou <xref:System.Drawing.Image.SaveAdd%2A> método de um <xref:System.Drawing.Image> do objeto, você pode passar parâmetros para o codificador de imagem, passando um <xref:System.Drawing.Imaging.EncoderParameters> o objeto para o <xref:System.Drawing.Image.Save%2A> ou <xref:System.Drawing.Image.SaveAdd%2A> método. Um <xref:System.Drawing.Imaging.EncoderParameters> objeto contém uma matriz de <xref:System.Drawing.Imaging.EncoderParameter> objetos. Cada <xref:System.Drawing.Imaging.EncoderParameter> objeto tem uma matriz de valores e um <xref:System.Drawing.Imaging.Encoder> propriedade que especifica a categoria de parâmetro. O <xref:System.Drawing.Imaging.EncoderValue> enumeração fornece nomes para alguns dos valores que podem ser passados para o JPEG e TIFF codificadores de imagem.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColorTypeCMYK">
+      <MemberSignature Language="C#" Value="ColorTypeCMYK" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue ColorTypeCMYK = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.ColorTypeCMYK" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é usado no GDI+ versão 1.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorTypeYCCK">
+      <MemberSignature Language="C#" Value="ColorTypeYCCK" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue ColorTypeYCCK = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.ColorTypeYCCK" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é usado no GDI+ versão 1.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionCCITT3">
+      <MemberSignature Language="C#" Value="CompressionCCITT3" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue CompressionCCITT3 = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.CompressionCCITT3" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o esquema de compactação CCITT3. Pode ser passado ao codificador de TIFF como um parâmetro que pertence à categoria de compactação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionCCITT4">
+      <MemberSignature Language="C#" Value="CompressionCCITT4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue CompressionCCITT4 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.CompressionCCITT4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o esquema de compactação CCITT4. Pode ser passado ao codificador de TIFF como um parâmetro que pertence à categoria de compactação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionLZW">
+      <MemberSignature Language="C#" Value="CompressionLZW" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue CompressionLZW = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.CompressionLZW" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o esquema de compactação LZW. Pode ser passado ao codificador de TIFF como um parâmetro que pertence à categoria de Compactação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionNone">
+      <MemberSignature Language="C#" Value="CompressionNone" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue CompressionNone = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.CompressionNone" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não especifica nenhuma compactação. Pode ser passado ao codificador de TIFF como um parâmetro que pertence à categoria de compactação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressionRle">
+      <MemberSignature Language="C#" Value="CompressionRle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue CompressionRle = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.CompressionRle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o esquema de compactação RLE. Pode ser passado ao codificador de TIFF como um parâmetro que pertence à categoria de compactação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="Flush" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue Flush = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.Flush" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um arquivo ou fluxo de vários quadros deve ser fechado. Pode ser passado ao codificador de TIFF como um parâmetro que pertence à categoria de sinalizador de salvamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameDimensionPage">
+      <MemberSignature Language="C#" Value="FrameDimensionPage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue FrameDimensionPage = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.FrameDimensionPage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um quadro deve ser adicionado à dimensão de página de uma imagem. Pode ser passado ao codificador de TIFF como um parâmetro que pertence à categoria de sinalizador de salvamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameDimensionResolution">
+      <MemberSignature Language="C#" Value="FrameDimensionResolution" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue FrameDimensionResolution = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.FrameDimensionResolution" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é usado no GDI+ versão 1.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameDimensionTime">
+      <MemberSignature Language="C#" Value="FrameDimensionTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue FrameDimensionTime = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.FrameDimensionTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é usado no GDI+ versão 1.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LastFrame">
+      <MemberSignature Language="C#" Value="LastFrame" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue LastFrame = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.LastFrame" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o último quadro em uma imagem de vários quadros. Pode ser passado ao codificador de TIFF como um parâmetro que pertence à categoria de sinalizador de salvamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiFrame">
+      <MemberSignature Language="C#" Value="MultiFrame" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue MultiFrame = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.MultiFrame" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a imagem tem mais de um quadro (página). Pode ser passado ao codificador de TIFF como um parâmetro que pertence à categoria de sinalizador de salvamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderNonProgressive">
+      <MemberSignature Language="C#" Value="RenderNonProgressive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue RenderNonProgressive = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.RenderNonProgressive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é usado no GDI+ versão 1.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderProgressive">
+      <MemberSignature Language="C#" Value="RenderProgressive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue RenderProgressive = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.RenderProgressive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é usado no GDI+ versão 1.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ScanMethodInterlaced">
+      <MemberSignature Language="C#" Value="ScanMethodInterlaced" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue ScanMethodInterlaced = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.ScanMethodInterlaced" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é usado no GDI+ versão 1.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ScanMethodNonInterlaced">
+      <MemberSignature Language="C#" Value="ScanMethodNonInterlaced" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue ScanMethodNonInterlaced = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.ScanMethodNonInterlaced" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é usado no GDI+ versão 1.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformFlipHorizontal">
+      <MemberSignature Language="C#" Value="TransformFlipHorizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue TransformFlipHorizontal = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.TransformFlipHorizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a imagem deve ser invertida horizontalmente (sobre o eixo vertical). Pode ser passado ao codificador de JPEG como um parâmetro que pertence à categoria de transformação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformFlipVertical">
+      <MemberSignature Language="C#" Value="TransformFlipVertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue TransformFlipVertical = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.TransformFlipVertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a imagem deve ser invertida verticalmente (sobre o eixo horizontal). Pode ser passado ao codificador de JPEG como um parâmetro que pertence à categoria de transformação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformRotate180">
+      <MemberSignature Language="C#" Value="TransformRotate180" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue TransformRotate180 = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.TransformRotate180" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a imagem deve ser girada 180 graus sobre seu centro. Pode ser passado ao codificador de JPEG como um parâmetro que pertence à categoria de transformação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformRotate270">
+      <MemberSignature Language="C#" Value="TransformRotate270" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue TransformRotate270 = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.TransformRotate270" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a imagem deve ser girada 270 graus no sentido horário sobre seu centro. Pode ser passado ao codificador de JPEG como um parâmetro que pertence à categoria de transformação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformRotate90">
+      <MemberSignature Language="C#" Value="TransformRotate90" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue TransformRotate90 = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.TransformRotate90" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a imagem deve ser girada 90 graus no sentido horário sobre seu centro. Pode ser passado ao codificador de JPEG como um parâmetro que pertence à categoria de transformação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VersionGif87">
+      <MemberSignature Language="C#" Value="VersionGif87" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue VersionGif87 = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.VersionGif87" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é usado no GDI+ versão 1.0.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VersionGif89">
+      <MemberSignature Language="C#" Value="VersionGif89" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderValue VersionGif89 = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderValue.VersionGif89" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é usado no GDI+ versão 1.0.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,69 @@
+<Type Name="IReceiveContextSettings" FullName="System.ServiceModel.Channels.IReceiveContextSettings">
+  <TypeSignature Language="C#" Value="public interface IReceiveContextSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IReceiveContextSettings" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IReceiveContextSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Uma interface que permite que você defina receber configurações de contexto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Receber contexto permite confirmação controlada ao usar um canal de mensagem unidirecional e leituras não destrutiva ao usar um canal em fila.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IReceiveContextSettings.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se receber contexto está habilitado.</summary>
+        <value>
+          <see langword="true" />Se receber contexto estiver habilitado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidityDuration">
+      <MemberSignature Language="C#" Value="public TimeSpan ValidityDuration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ValidityDuration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IReceiveContextSettings.ValidityDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica um tempo limite de conexão quando usado com canais diretos e duração de bloqueio de mensagem quando usado com canais na fila.</summary>
+        <value>Um valor de tempo limite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Se <xref:System.ServiceModel.Channels.IReceiveContextSettings.ValidityDuration%2A> expirar para uma mensagem, qualquer transação que pode ser usada para o seu processamento, será anulada juntamente com a instância de fluxo de trabalho se a expiração ocorrer durante a transação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

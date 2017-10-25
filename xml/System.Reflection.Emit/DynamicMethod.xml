@@ -1,0 +1,1894 @@
+<Type Name="DynamicMethod" FullName="System.Reflection.Emit.DynamicMethod">
+  <TypeSignature Language="C#" Value="public sealed class DynamicMethod : System.Reflection.MethodInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit DynamicMethod extends System.Reflection.MethodInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.DynamicMethod" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.MethodInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define e representa um método dinâmico que pode ser compilado, executado e descartado. Os métodos descartados estão disponíveis para coleta de lixo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Reflection.Emit.DynamicMethod> classe para gerar e executar um método em tempo de execução, sem precisar gerar um assembly dinâmico e um tipo dinâmico para conter o método. O código executável criado pelo compilador just-in-time (JIT) é recuperado quando o <xref:System.Reflection.Emit.DynamicMethod> objeto é recuperado. Métodos dinâmicos são a maneira mais eficiente para gerar e executar pequenas quantidades de código.  
+  
+ Um método dinâmico pode ser hospedado anonimamente ou pode belogically associada com um tipo ou um módulo.  
+  
+-   Se o método dinâmico é hospedado anonimamente, ele está localizado em um assembly fornecido pelo sistema e, portanto, é isolado de outro código. Por padrão, ele não tem acesso a dados não públicos. Um método dinâmico hospedado anonimamente pode ter restringido a capacidade de ignorar verificações de visibilidade do compilador JIT, se ela foi concedida <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador. O nível de confiança do assembly cujos membros públicos não são acessados pelo método dinâmico deve ser igual a ou um subconjunto de nível de confiança da pilha de chamadas que emitiu o método dinâmico. Para obter mais informações sobre métodos dinâmicos hospedados anonimamente, consulte [passo a passo: emitindo código em cenários de confiança parcial](~/docs/framework/reflection-and-codedom/walkthrough-emitting-code-in-partial-trust-scenarios.md).  
+  
+-   Se o método dinâmico estiver associado um módulo que você especificar, o método dinâmico é efetivamente global para que o módulo. Ele pode acessar todos os tipos no módulo e todas as `internal` (`Friend` no Visual Basic) membros dos tipos. Você pode associar um dinâmico método com qualquer módulo, independentemente se você criou o módulo, contanto que uma solicitação de <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> sinalizador pode ser atendido pela pilha de chamada que inclui seu código. Se o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador é incluído na concessão, o método dinâmico pode ignorar verificações de visibilidade do compilador JIT e acessar os dados privados de todos os tipos declarados no módulo ou em qualquer outro módulo em qualquer assembly.  
+  
+    > [!NOTE]
+    >  Quando você especificar o módulo ao qual um método dinâmico está associado, que o módulo não deve ser no assembly fornecido pelo sistema que é usado para hospedar anônimo.  
+  
+-   Se o método dinâmico estiver associado um tipo que você especificar, ele tem acesso a todos os membros do tipo, independentemente do nível de acesso. Além disso, as verificações de visibilidade JIT podem ser ignoradas. Isso fornece o acesso de método dinâmico para os dados privados de outros tipos declarados no mesmo módulo ou em qualquer outro módulo em qualquer assembly. Você pode associar um método dinâmico com qualquer tipo, mas seu código deve ser concedido <xref:System.Security.Permissions.ReflectionPermission> com ambos os <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> e <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess> sinalizadores.  
+  
+ A tabela a seguir mostra os tipos e membros estão acessíveis para um método dinâmico hospedado anonimamente, com e sem verificações de visibilidade JIT, dependendo se <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> sinalizador é concedido.  
+  
+||Sem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>|Com<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>|  
+|-|-|-|  
+|Sem ignorar verificações de visibilidade JIT|Membros públicos de tipos públicos em qualquer assembly.|Membros públicos de tipos públicos em qualquer assembly.|  
+|Ignorando JIT visibilidade verifica, com restrições|Membros públicos de tipos públicos em qualquer assembly.|Todos os membros de todos os tipos, apenas em assemblies cujos níveis de confiança são igual ou menor que o nível de confiança do assembly que emitiu o método dinâmico.|  
+  
+> [!NOTE]
+>  Antes do [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], emitindo código necessário <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador. Essa permissão é incluída por padrão no FullTrust e LocalIntranet conjuntos de permissão nomeada, mas não a Internet conjunto de permissões. Portanto, em versões anteriores do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uma biblioteca pode ser usada com permissões de Internet somente se ele tiver o <xref:System.Security.SecurityCriticalAttribute> de atributos e também executa uma <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tais bibliotecas exigem uma análise atenta da segurança, pois erros de código poderiam resultar em falhas de segurança. O [!INCLUDE[net_v20SP1_short](~/includes/net-v20sp1-short-md.md)] permite que o código seja emitido em cenários de confiança parcial sem emitir qualquer demanda de segurança, pois a geração de código não é uma operação inerentemente privilegiada. Ou seja, o código gerado não tem mais permissões que o assembly que o emite. Isso permite que as bibliotecas que emitem código tenham a segurança transparente e remove a necessidade de declarar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, o que simplifica a tarefa de escrever uma biblioteca de segurança. Para usar esse recurso, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ A tabela a seguir mostra os tipos e membros são acessíveis para um método dinâmico que é associado a um módulo ou com um tipo em um módulo.  
+  
+||Associados com o módulo|Associados com tipo|  
+|-|-|-|  
+|Sem ignorar verificações de visibilidade JIT|Membros públicos e internos de tipos públicos, particulares e internos no módulo.<br /><br /> Membros públicos de tipos públicos em qualquer assembly.|Todos os membros do tipo associado. Membros públicos e internos de todos os outros tipos de módulo.<br /><br /> Membros públicos de tipos públicos em qualquer assembly.|  
+|Ignorar verificações de visibilidade JIT|Todos os membros de todos os tipos em qualquer assembly.|Todos os membros de todos os tipos em qualquer assembly.|  
+  
+ Um método dinâmico que está associado um módulo tem as permissões de que o módulo. Um método dinâmico que está associado um tipo tem as permissões do módulo que contém esse tipo.  
+  
+ Métodos dinâmicos e seus parâmetros não precisa ser nomeado, mas você pode especificar nomes para auxiliar na depuração. Não há suporte para os atributos personalizados em métodos dinâmicos ou seus parâmetros.  
+  
+ Embora sejam métodos dinâmicos `static` métodos (`Shared` métodos no Visual Basic), o relaxada regras de associação de delegado introduzidos na [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] permitir um método dinâmico a ser associado a um objeto, para que ele atue como um método de instância quando chamado usando essa instância do delegado. Um exemplo que demonstra isso é fornecido para o <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> sobrecarga do método.  
+  
+> [!NOTE]
+>  No [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], métodos dinâmicos não dão suporte a informações de símbolo, que é, nomes de variáveis locais e mapeamento de número de linha. Essa limitação pode ser removida em uma versão futura. Você pode usar <xref:System.Reflection.Emit.AssemblyBuilder> durante o desenvolvimento para simplificar a depuração de linguagem intermediária Microsoft (MSIL) gerada e, em seguida, alternar para métodos dinâmicos durante a implantação final, porque o <xref:System.Reflection.Emit.ILGenerator> chamadas são os mesmos em ambos os casos.  
+  
+## <a name="verification"></a>Verificação  
+ A lista a seguir resume as condições sob as quais métodos dinâmicos podem conter código não verificado. (Por exemplo, um método dinâmico é não verificado se seu <xref:System.Reflection.Emit.DynamicMethod.InitLocals%2A> está definida como `false`.)  
+  
+-   Um método dinâmico que está associado um assembly críticas de segurança também é crítico de segurança e pode ignorar a verificação. Por exemplo, um assembly sem atributos de segurança que é executado como um aplicativo de área de trabalho é tratado como críticas de segurança em tempo de execução. Se você associar um método dinâmico com o assembly, o método dinâmico pode conter código não verificado.  
+  
+-   Se um método dinâmico que contém o código não verificado estiver associado um assembly com transparência de nível 1, o compilador just-in-time (JIT) injeta uma exigência de segurança. A solicitação será bem-sucedida apenas se o método dinâmico é executado por código totalmente confiável. Consulte [código transparente de segurança, nível 1](~/docs/framework/misc/security-transparent-code-level-1.md).  
+  
+-   Se um método dinâmico que contém o código não verificado estiver associado um assembly com transparência de nível 2 (como mscorlib), ele gerará uma exceção (inserida pelo compilador JIT) em vez de fazer uma exigência de segurança. Consulte [código transparente de segurança, nível 2](~/docs/framework/misc/security-transparent-code-level-2.md).  
+  
+-   Um método dinâmico hospedado anonimamente que contém o código não verificado sempre gera uma exceção. Ele nunca pode ignorar a verificação, mesmo se ele é criado e executado por código totalmente confiável.  
+  
+ A exceção que é lançada para código não verificado varia dependendo do modo que de método dinâmico é invocado. Se você invocar um método dinâmico, usando um representante retornado do <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> método, uma <xref:System.Security.VerificationException> é gerada. Se você invocar o método dinâmico usando o <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> método, uma <xref:System.Reflection.TargetInvocationException> é lançada com uma interna <xref:System.Security.VerificationException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um método dinâmico que usa dois parâmetros. O exemplo emite um corpo de função simples que imprime o primeiro parâmetro para o console e o exemplo usa o segundo parâmetro como o valor de retorno do método. O exemplo conclui o método criando um representante, invoca o delegado com parâmetros diferentes e, por fim, chama o método dinâmico usando o <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> método.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#1](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#1)]
+ [!code-csharp[Reflection.DynamicMethod.All#1](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#1)]
+ [!code-vb[Reflection.DynamicMethod.All#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do método dinâmico. Isso pode ser uma cadeia de comprimento zero, mas não pode ser <see langword="null" />.</param>
+        <param name="returnType">Um objeto <see cref="T:System.Type" /> que especifica o tipo de retorno do método dinâmico ou <see langword="null" /> se o método não tiver nenhum tipo de retorno.</param>
+        <param name="parameterTypes">Uma matriz de objetos <see cref="T:System.Type" /> que especifica os tipos dos parâmetros do método dinâmico ou <see langword="null" />, se o método não tiver nenhum parâmetro.</param>
+        <summary>Inicializa um método dinâmico hospedado anonimamente, especificando o nome do método, o tipo de retorno e os tipos de parâmetro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método dinâmico criado por este construtor é associado um assembly anônimo em vez de um módulo ou um tipo existente. O assembly anônimo existe somente para fornecer um ambiente de área restrita para métodos dinâmicos, ou seja, para isolá-los de outro código. Esse ambiente torna segura para o método dinâmico a ser emitido e executados pelo código parcialmente confiável.  
+  
+ Este construtor Especifica que visibilidade do just-in-time (JIT) verifica será imposta para o Microsoft intermediate language (MSIL) do método dinâmico. Ou seja, o código no método dinâmico tem acesso aos métodos públicos de classes públicas. Se o método tentar acessar tipos ou membros que são as exceções são geradas `private`, `protected`, ou `internal` (`Friend` no Visual Basic). Para criar um método dinâmico que restringiu a capacidade de ignorar verificações de visibilidade JIT, use o <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> construtor.  
+  
+ Quando um método dinâmico hospedado anonimamente é construído, a pilha de chamadas do assembly emissão está incluída. Quando o método é chamado, as permissões do assembly emissão são usadas em vez de permissões do chamador real. Portanto, o método dinâmico não pode executar em um nível mais alto de privilégio do que o assembly que é emitido, mesmo se ele é passado para e executado por um assembly que tem um nível mais alto de confiança.  
+  
+ Este construtor Especifica os atributos de método <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> e <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType>e a convenção de chamada <xref:System.Reflection.CallingConventions?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Este construtor foi introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um elemento de <paramref name="parameterTypes" /> é <see langword="null" /> ou <see cref="T:System.Void" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="returnType" /> é um tipo para o qual <see cref="P:System.Type.IsByRef" /> retorna <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, bool restrictedSkipVisibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes, bool restrictedSkipVisibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+        <Parameter Name="restrictedSkipVisibility" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do método dinâmico. Isso pode ser uma cadeia de comprimento zero, mas não pode ser <see langword="null" />.</param>
+        <param name="returnType">Um objeto <see cref="T:System.Type" /> que especifica o tipo de retorno do método dinâmico ou <see langword="null" /> se o método não tiver nenhum tipo de retorno.</param>
+        <param name="parameterTypes">Uma matriz de objetos <see cref="T:System.Type" /> que especifica os tipos dos parâmetros do método dinâmico ou <see langword="null" />, se o método não tiver nenhum parâmetro.</param>
+        <param name="restrictedSkipVisibility">
+          <see langword="true" /> para ignorar as verificações de visibilidade JIT nos tipos e membros acessados pelo MSIL do método dinâmico, com essa restrição: o nível de confiança dos assemblies que contêm esses tipos e membros deve ser igual ou menor do que o nível de confiança da pilha de chamadas que emite o método dinâmico, caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa um método dinâmico hospedado anonimamente, especificando o nome do método, o tipo de retorno, os tipos de parâmetro e se as verificações de visibilidade JIT (Just-In-Time) devem ser ignoradas para os tipos e membros acessados pelo MSIL (Microsoft Intermediate Language) do método dinâmico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método dinâmico criado por este construtor é associado um assembly anônimo em vez de um módulo ou um tipo existente. O assembly anônimo existe somente para fornecer um ambiente de área restrita para métodos dinâmicos, ou seja, para isolá-los de outro código. Esse ambiente torna segura para o método dinâmico a ser emitido e executados pelo código parcialmente confiável.  
+  
+ Métodos dinâmicos hospedados anonimamente não têm acesso automático a qualquer tipos ou membros que são `private`, `protected`, ou `internal` (`Friend` no Visual Basic). Isso é diferente de métodos dinâmicos que estão associados um tipo existente ou um módulo, que têm acesso a membros ocultos no escopo de seus associado.  
+  
+ Especifique `true` para `restrictedSkipVisibility` se o método dinâmico tiver que acessar tipos ou membros que são `private`, `protected`, ou `internal`. Isso fornece o acesso de método dinâmico restringido a esses membros. Ou seja, os membros podem ser acessados apenas se as seguintes condições forem atendidas:  
+  
+-   Os membros de destino pertencem a um assembly que tem um nível de confiança igual ou menor do que a pilha de chamadas que emite o método dinâmico.  
+  
+-   A pilha de chamadas que emite o método dinâmico é concedida <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador. Isso é sempre verdadeiro quando o código é executado com confiança total. Para código parcialmente confiável, ele é true somente se o host explicitamente concede a permissão.  
+  
+    > [!IMPORTANT]
+    >  Se a permissão não foi concedida, uma exceção de segurança é lançada quando <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> é chamado ou quando o método dinâmico é invocado, não quando este construtor é chamado. Nenhuma permissão especial é necessária para emitir o método dinâmico.  
+  
+ Por exemplo, um método dinâmico é criado com `restrictedSkipVisibility` definida como `true` pode acessar um membro privado de qualquer módulo na pilha de chamadas do caso a pilha de chamadas tenha sido concedida acesso de membro restrito. Se o método dinâmico é criado com código parcialmente confiável na pilha de chamadas, ele não pode acessar um membro privado de um tipo em um [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assembly, pois esses assemblies são totalmente confiáveis.  
+  
+ Se `restrictedSkipVisibility` é `false`, visibilidade JIT verifica são impostas. O código no método dinâmico tem acesso a métodos públicos de classes públicas, e se tentar acessar tipos ou membros que são as exceções são geradas `private`, `protected`, ou `internal`.  
+  
+ Quando um método dinâmico hospedado anonimamente é construído, a pilha de chamadas do assembly emissão está incluída. Quando o método é chamado, as permissões da pilha de chamada de emissão são usadas em vez de permissões do chamador real. Portanto, o método dinâmico não pode executar em um nível mais alto de privilégio do que o assembly que é emitido, mesmo se ele é passado para e executado por um assembly que tem um nível mais alto de confiança.  
+  
+ Este construtor Especifica os atributos de método <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> e <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType>e a convenção de chamada <xref:System.Reflection.CallingConventions?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Este construtor foi introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um elemento de <paramref name="parameterTypes" /> é <see langword="null" /> ou <see cref="T:System.Void" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="returnType" /> é um tipo para o qual <see cref="P:System.Type.IsByRef" /> retorna <see langword="true" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, System.Reflection.Module m);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes, class System.Reflection.Module m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Reflection.Module)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+        <Parameter Name="m" Type="System.Reflection.Module" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do método dinâmico. Isso pode ser uma cadeia de comprimento zero, mas não pode ser <see langword="null" />.</param>
+        <param name="returnType">Um objeto <see cref="T:System.Type" /> que especifica o tipo de retorno do método dinâmico ou <see langword="null" /> se o método não tiver nenhum tipo de retorno.</param>
+        <param name="parameterTypes">Uma matriz de objetos <see cref="T:System.Type" /> que especifica os tipos dos parâmetros do método dinâmico ou <see langword="null" />, se o método não tiver nenhum parâmetro.</param>
+        <param name="m">Um <see cref="T:System.Reflection.Module" /> que representa o módulo com o qual o método dinâmico deve ser logicamente associado.</param>
+        <summary>Cria um método dinâmico é global para um módulo, especificando o nome do método, o tipo de retorno, a tipos de parâmetro e o módulo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor Especifica atributos de método <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> e <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType>, convenção de chamada <xref:System.Reflection.CallingConventions?displayProperty=nameWithType>e não ignorar verificações de visibilidade just-in-time (JIT).  
+  
+ O método dinâmico criado com esse construtor tem acesso ao público e `internal` (`Friend` no Visual Basic) membros de todos os tipos contidos no módulo `m`.  
+  
+> [!NOTE]
+>  Para compatibilidade com versões anteriores, este construtor demandas <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> sinalizador se as seguintes condições forem true: `m` é um módulo diferente do módulo chamador e a demanda por <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador falhou. Se a demanda por <xref:System.Security.Permissions.SecurityPermission> for bem-sucedida, a operação é permitida.  
+  
+> [!NOTE]
+>  Começando com o [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse membro não requer mais <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador. (Consulte [problemas de segurança em reflexão emitir](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um método dinâmico que usa dois parâmetros. O exemplo emite um corpo de função simples que imprime o primeiro parâmetro para o console e o exemplo usa o segundo parâmetro como o valor de retorno do método. O exemplo conclui o método criando um representante, invoca o delegado com parâmetros diferentes e, por fim, chama o método dinâmico usando o <xref:System.Reflection.Emit.DynamicMethod.Invoke%28System.Object%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%29> método.  
+  
+ [!code-cpp[Reflection.DynamicMethod.ctor1#1](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/cpp/source.cpp#1)]
+ [!code-csharp[Reflection.DynamicMethod.ctor1#1](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/CS/source.cs#1)]
+ [!code-vb[Reflection.DynamicMethod.ctor1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um elemento de <paramref name="parameterTypes" /> é <see langword="null" /> ou <see cref="T:System.Void" />.  
+  
+ - ou -  
+  
+ <paramref name="m" /> é um módulo que fornece hospedagem anônima para métodos dinâmicos.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="m" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="returnType" /> é um tipo para o qual <see cref="P:System.Type.IsByRef" /> retorna <see langword="true" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">para associar a um módulo diferente do módulo chamador do método dinâmico. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, Type owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes, class System.Type owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+        <Parameter Name="owner" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do método dinâmico. Isso pode ser uma cadeia de comprimento zero, mas não pode ser <see langword="null" />.</param>
+        <param name="returnType">Um objeto <see cref="T:System.Type" /> que especifica o tipo de retorno do método dinâmico ou <see langword="null" /> se o método não tiver nenhum tipo de retorno.</param>
+        <param name="parameterTypes">Uma matriz de objetos <see cref="T:System.Type" /> que especifica os tipos dos parâmetros do método dinâmico ou <see langword="null" />, se o método não tiver nenhum parâmetro.</param>
+        <param name="owner">Um <see cref="T:System.Type" /> ao qual o método dinâmico está logicamente associado. O método dinâmico tem acesso a todos os membros do tipo.</param>
+        <summary>Cria um método dinâmico, especificando o nome do método, o tipo de retorno, os tipos de parâmetro e o tipo ao qual o método dinâmico está logicamente associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método dinâmico criado com esse construtor tem acesso a todos os membros do tipo `owner`e ao público e `internal` (`Friend` no Visual Basic) membros de todos os outros tipos de módulo que contém `owner`.  
+  
+ Este construtor Especifica atributos de método <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> e <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType>, convenção de chamada <xref:System.Reflection.CallingConventions?displayProperty=nameWithType>e não ignorar verificações de visibilidade just-in-time (JIT).  
+  
+> [!NOTE]
+>  Para compatibilidade com versões anteriores, este construtor demandas <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> sinalizador se as seguintes condições forem true: `owner` está em um módulo diferente do módulo chamador e a demanda por <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador falhou. Se a demanda por <xref:System.Security.Permissions.SecurityPermission> for bem-sucedida, a operação é permitida.  
+  
+> [!NOTE]
+>  Começando com o [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse membro não requer mais <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador. (Consulte [problemas de segurança em reflexão emitir](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Reflection.Emit.DynamicMethod> logicamente associado a um tipo. Essa associação fornece acesso para os membros particulares desse tipo.  
+  
+ O exemplo de código define uma classe denominada `Example` com um campo particular, uma classe denominada `DerivedFromxample` que deriva de primeira classe, um tipo de representante chamado `UseLikeStatic` que retorna <xref:System.Int32> e tem parâmetros de tipo `Example` e <xref:System.Int32>e um tipo de representante chamado `UseLikeInstance` que retorna <xref:System.Int32> e tem um parâmetro de tipo <xref:System.Int32>.  
+  
+ O exemplo de código cria um <xref:System.Reflection.Emit.DynamicMethod> que altera o campo privado de uma instância de `Example` e retorna o valor anterior.  
+  
+> [!NOTE]
+>  Em geral, alterar os campos internos de classes não é boa prática de codificação orientada a objeto.  
+  
+ O exemplo de código cria uma instância de `Example` e, em seguida, cria dois delegados. A primeira é do tipo `UseLikeStatic`, que tem os mesmos parâmetros de método dinâmico. O segundo é do tipo `UseLikeInstance`, que não tem o primeiro parâmetro (do tipo `Example`). Este delegado é criado usando o <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> sobrecarga de método; o segundo parâmetro dessa sobrecarga de método é uma instância de `Example`, nesse caso a instância que acabou de criar, que está associada ao representante recém-criado. Sempre que esse delegado é invocado, o método dinâmico atua na instância associada do `Example`.  
+  
+> [!NOTE]
+>  Este é um exemplo das regras reduzidas delegado associação introduzidos no [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], juntamente com novas sobrecargas do <xref:System.Delegate.CreateDelegate%2A?displayProperty=nameWithType> método. Para obter mais informações, consulte a classe <xref:System.Delegate>.  
+  
+ O `UseLikeStatic` delegado é invocado, passando na instância do `Example` que é associado ao `UseLikeInstance` delegate. Em seguida, o `UseLikeInstance` delegado é invocado, para que ambos os delegados agir na mesma instância de `Example`. As alterações nos valores do campo interno são exibidas após cada chamada. Por fim, um `UseLikeInstance` representante está associado a uma instância de `DerivedFromxample`, e as chamadas de delegado são repetidas.  
+  
+ [!code-csharp[Reflection.DynamicMethod.ClosedOver#1](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.ClosedOver/cs/source.cs#1)]
+ [!code-vb[Reflection.DynamicMethod.ClosedOver#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.ClosedOver/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um elemento de <paramref name="parameterTypes" /> é <see langword="null" /> ou <see cref="T:System.Void" />.  
+  
+ - ou -  
+  
+ <paramref name="owner" /> é uma interface, uma matriz, um tipo genérico aberto ou um parâmetro de tipo de um método ou tipo genérico.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="owner" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="returnType" /> é <see langword="null" /> ou é um tipo para o qual <see cref="P:System.Type.IsByRef" /> retorna <see langword="true" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">para associar a um tipo em um módulo diferente do módulo chamador do método dinâmico. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, System.Reflection.Module m, bool skipVisibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes, class System.Reflection.Module m, bool skipVisibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Reflection.Module,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+        <Parameter Name="m" Type="System.Reflection.Module" />
+        <Parameter Name="skipVisibility" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do método dinâmico. Isso pode ser uma cadeia de comprimento zero, mas não pode ser <see langword="null" />.</param>
+        <param name="returnType">Um objeto <see cref="T:System.Type" /> que especifica o tipo de retorno do método dinâmico ou <see langword="null" /> se o método não tiver nenhum tipo de retorno.</param>
+        <param name="parameterTypes">Uma matriz de objetos <see cref="T:System.Type" /> que especifica os tipos dos parâmetros do método dinâmico ou <see langword="null" />, se o método não tiver nenhum parâmetro.</param>
+        <param name="m">Um <see cref="T:System.Reflection.Module" /> que representa o módulo com o qual o método dinâmico deve ser logicamente associado.</param>
+        <param name="skipVisibility">
+          <see langword="true" />para ignorar JIT visibilidade verifica em tipos e membros acessados pelo MSIL do método dinâmico.</param>
+        <summary>Cria um método dinâmico é global para um módulo, especificando o nome do método, o tipo de retorno, a tipos de parâmetro, o módulo, e se as verificações de visibilidade do just-in-time (JIT) devem ser ignoradas para tipos e membros acessados pelo Microsoft intermediate language (MSIL) do método dinâmico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor Especifica atributos de método <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> e <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType>e a convenção de chamada <xref:System.Reflection.CallingConventions?displayProperty=nameWithType>.  
+  
+ O método dinâmico criado com esse construtor tem acesso ao público e `internal` (`Friend` no Visual Basic) membros de todos os tipos no módulo independente `m`. Ignorando o JIT verificações de visibilidade do compilador permite que o método dinâmico acessar membros particulares e protegidos de todos os outros tipos. Isso é útil, por exemplo, ao escrever código para serializar objetos.  
+  
+> [!NOTE]
+>  Para compatibilidade com versões anteriores, este construtor demandas <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> sinalizador se as seguintes condições forem true: `m` é um módulo diferente do módulo chamador e a demanda por <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador falhou. Se a demanda por <xref:System.Security.Permissions.SecurityPermission> for bem-sucedida, a operação é permitida.  
+  
+> [!NOTE]
+>  Começando com o [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse membro não requer mais <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador. (Consulte [problemas de segurança em reflexão emitir](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um elemento de <paramref name="parameterTypes" /> é <see langword="null" /> ou <see cref="T:System.Void" />.  
+  
+ - ou -  
+  
+ <paramref name="m" /> é um módulo que fornece hospedagem anônima para métodos dinâmicos.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="m" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="returnType" /> é um tipo para o qual <see cref="P:System.Type.IsByRef" /> retorna <see langword="true" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">para associar a um módulo diferente do módulo chamador do método dinâmico. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, Type returnType, Type[] parameterTypes, Type owner, bool skipVisibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type returnType, class System.Type[] parameterTypes, class System.Type owner, bool skipVisibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Type,System.Type[],System.Type,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+        <Parameter Name="owner" Type="System.Type" />
+        <Parameter Name="skipVisibility" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do método dinâmico. Isso pode ser uma cadeia de comprimento zero, mas não pode ser <see langword="null" />.</param>
+        <param name="returnType">Um objeto <see cref="T:System.Type" /> que especifica o tipo de retorno do método dinâmico ou <see langword="null" /> se o método não tiver nenhum tipo de retorno.</param>
+        <param name="parameterTypes">Uma matriz de objetos <see cref="T:System.Type" /> que especifica os tipos dos parâmetros do método dinâmico ou <see langword="null" />, se o método não tiver nenhum parâmetro.</param>
+        <param name="owner">Um <see cref="T:System.Type" /> ao qual o método dinâmico está logicamente associado. O método dinâmico tem acesso a todos os membros do tipo.</param>
+        <param name="skipVisibility">
+          <see langword="true" /> para ignorar as verificações de visibilidade JIT nos tipos e membros acessados pelo MSIL do método dinâmico, caso contrário, <see langword="false" />.</param>
+        <summary>Cria um método dinâmico, especificando o nome do método, tipo de retorno, tipos de parâmetro, o tipo com que o método dinâmico é logicamente associado, e se as verificações de visibilidade just-in-time (JIT) devem ser ignoradas para tipos e membros acessados pelo Microsoft intermediate language (MSIL) do método dinâmico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método dinâmico criado com esse construtor tem acesso a todos os membros do tipo `owner`e ao público e `internal` (`Friend` no Visual Basic) membros de todos os outros tipos de módulo que contém `owner`. Ignorando o JIT verificações de visibilidade do compilador permite que o método dinâmico acessar membros particulares e protegidos de todos os outros tipos. Isso é útil, por exemplo, ao escrever código para serializar objetos.  
+  
+ Este construtor Especifica atributos de método <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType> e <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType>e a convenção de chamada <xref:System.Reflection.CallingConventions?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Para compatibilidade com versões anteriores, este construtor demandas <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> sinalizador se as seguintes condições forem true: `owner` está em um módulo diferente do módulo chamador e a demanda por <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador falhou. Se a demanda por <xref:System.Security.Permissions.SecurityPermission> for bem-sucedida, a operação é permitida.  
+  
+> [!NOTE]
+>  Começando com o [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse membro não requer mais <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador. (Consulte [problemas de segurança em reflexão emitir](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um elemento de <paramref name="parameterTypes" /> é <see langword="null" /> ou <see cref="T:System.Void" />.  
+  
+ - ou -  
+  
+ <paramref name="owner" /> é uma interface, uma matriz, um tipo genérico aberto ou um parâmetro de tipo de um método ou tipo genérico.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="owner" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="returnType" /> é <see langword="null" /> ou é um tipo para o qual <see cref="P:System.Type.IsByRef" /> retorna <see langword="true" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">para associar a um tipo em um módulo diferente do módulo chamador do método dinâmico. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, System.Reflection.MethodAttributes attributes, System.Reflection.CallingConventions callingConvention, Type returnType, Type[] parameterTypes, System.Reflection.Module m, bool skipVisibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Reflection.MethodAttributes attributes, valuetype System.Reflection.CallingConventions callingConvention, class System.Type returnType, class System.Type[] parameterTypes, class System.Reflection.Module m, bool skipVisibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Reflection.MethodAttributes,System.Reflection.CallingConventions,System.Type,System.Type[],System.Reflection.Module,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Reflection.MethodAttributes" />
+        <Parameter Name="callingConvention" Type="System.Reflection.CallingConventions" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+        <Parameter Name="m" Type="System.Reflection.Module" />
+        <Parameter Name="skipVisibility" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do método dinâmico. Isso pode ser uma cadeia de caracteres de comprimento zero, mas não pode ser <see langword="null" />.</param>
+        <param name="attributes">Uma combinação bit a bit de valores <see cref="T:System.Reflection.MethodAttributes" /> que especifica os atributos do método dinâmico. A única combinação permitida é <see cref="F:System.Reflection.MethodAttributes.Public" /> e <see cref="F:System.Reflection.MethodAttributes.Static" />.</param>
+        <param name="callingConvention">A convenção de chamada para o método dinâmico. Deve ser <see cref="F:System.Reflection.CallingConventions.Standard" />.</param>
+        <param name="returnType">Um objeto <see cref="T:System.Type" /> que especifica o tipo de retorno do método dinâmico ou <see langword="null" />, se o método não tiver nenhum tipo de retorno.</param>
+        <param name="parameterTypes">Uma matriz de objetos <see cref="T:System.Type" /> que especifica os tipos dos parâmetros do método dinâmico ou <see langword="null" />, se o método não tiver nenhum parâmetro.</param>
+        <param name="m">To be added.</param>
+        <param name="skipVisibility">
+          <see langword="true" /> para ignorar as verificações de visibilidade JIT nos tipos e membros acessados pelo MSIL do método dinâmico, caso contrário, <see langword="false" />.</param>
+        <summary>Cria um método dinâmico que é global para um módulo, especificando o nome do método, os atributos, a convenção de chamada, o tipo de retorno, os tipos de parâmetro, o módulo e se as verificações de visibilidade JIT (just-in-time) devem ser ignoradas para os tipos e membros acessados pelo MSIL (Microsoft Intermediate Language) do método dinâmico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método dinâmico criado com esse construtor tem acesso ao público e `internal` (`Friend` no Visual Basic) membros de todos os tipos de públicos e internos contidos no módulo `m`.  
+  
+ Ignorando o JIT verificações de visibilidade do compilador permite que o método dinâmico acessar membros particulares e protegidos de todos os outros tipos de módulo e em todos os outros assemblies. Isso é útil, por exemplo, ao escrever código para serializar objetos.  
+  
+> [!NOTE]
+>  Para compatibilidade com versões anteriores, este construtor demandas <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> sinalizador se as seguintes condições forem true: `m` é um módulo diferente do módulo chamador e a demanda por <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador falhou. Se a demanda por <xref:System.Security.Permissions.SecurityPermission> for bem-sucedida, a operação é permitida.  
+  
+> [!NOTE]
+>  Começando com o [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse membro não requer mais <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador. (Consulte [problemas de segurança em reflexão emitir](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um elemento de <paramref name="parameterTypes" /> é <see langword="null" /> ou <see cref="T:System.Void" />.  
+  
+ - ou -  
+  
+ <paramref name="m" /> é um módulo que fornece hospedagem anônima para métodos dinâmicos.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="m" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="attributes" /> é uma combinação de sinalizadores diferente de <see cref="F:System.Reflection.MethodAttributes.Public" /> e <see cref="F:System.Reflection.MethodAttributes.Static" />.  
+  
+ -ou-  
+  
+ <paramref name="callingConvention" /> não é <see cref="F:System.Reflection.CallingConventions.Standard" />.  
+  
+ - ou -  
+  
+ <paramref name="returnType" /> é um tipo para o qual <see cref="P:System.Type.IsByRef" /> retorna <see langword="true" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">para associar a um módulo diferente do módulo chamador do método dinâmico. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicMethod (string name, System.Reflection.MethodAttributes attributes, System.Reflection.CallingConventions callingConvention, Type returnType, Type[] parameterTypes, Type owner, bool skipVisibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Reflection.MethodAttributes attributes, valuetype System.Reflection.CallingConventions callingConvention, class System.Type returnType, class System.Type[] parameterTypes, class System.Type owner, bool skipVisibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.#ctor(System.String,System.Reflection.MethodAttributes,System.Reflection.CallingConventions,System.Type,System.Type[],System.Type,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Reflection.MethodAttributes" />
+        <Parameter Name="callingConvention" Type="System.Reflection.CallingConventions" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="parameterTypes" Type="System.Type[]" />
+        <Parameter Name="owner" Type="System.Type" />
+        <Parameter Name="skipVisibility" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do método dinâmico. Isso pode ser uma cadeia de caracteres de comprimento zero, mas não pode ser <see langword="null" />.</param>
+        <param name="attributes">Uma combinação bit a bit de valores <see cref="T:System.Reflection.MethodAttributes" /> que especifica os atributos do método dinâmico. A única combinação permitida é <see cref="F:System.Reflection.MethodAttributes.Public" /> e <see cref="F:System.Reflection.MethodAttributes.Static" />.</param>
+        <param name="callingConvention">A convenção de chamada para o método dinâmico. Deve ser <see cref="F:System.Reflection.CallingConventions.Standard" />.</param>
+        <param name="returnType">Um objeto <see cref="T:System.Type" /> que especifica o tipo de retorno do método dinâmico ou <see langword="null" />, se o método não tiver nenhum tipo de retorno.</param>
+        <param name="parameterTypes">Uma matriz de objetos <see cref="T:System.Type" /> que especifica os tipos dos parâmetros do método dinâmico ou <see langword="null" />, se o método não tiver nenhum parâmetro.</param>
+        <param name="owner">Um <see cref="T:System.Type" /> ao qual o método dinâmico está logicamente associado. O método dinâmico tem acesso a todos os membros do tipo.</param>
+        <param name="skipVisibility">
+          <see langword="true" /> para ignorar as verificações de visibilidade JIT nos tipos e membros acessados pelo MSIL do método dinâmico, caso contrário, <see langword="false" />.</param>
+        <summary>Cria um método dinâmico, especificando o nome do método, atributos, chamando convenção, retornam o tipo, tipos de parâmetro, o tipo com o qual o método dinâmico é logicamente associado, e se visibilidade do just-in-time (JIT) verifica deve ser ignorado para tipos e membros acessados de linguagem intermediária Microsoft (MSIL) do método dinâmico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método dinâmico é global para o módulo que contém o tipo `owner`. Ele tem acesso a todos os membros do tipo `owner`.  
+  
+ O método dinâmico criado com esse construtor tem acesso a todos os membros do tipo `owner`e ao público e `internal` (`Friend` no Visual Basic) membros de todos os tipos contidos no módulo que contém `owner`. Ignorando o JIT verificações de visibilidade do compilador permite que o método dinâmico acessar membros particulares e protegidos de todos os outros tipos. Isso é útil, por exemplo, ao escrever código para serializar objetos.  
+  
+> [!NOTE]
+>  Para compatibilidade com versões anteriores, este construtor demandas <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> sinalizador se as seguintes condições forem true: `owner` está em um módulo diferente do módulo chamador e a demanda por <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador falhou. Se a demanda por <xref:System.Security.Permissions.SecurityPermission> for bem-sucedida, a operação é permitida.  
+  
+> [!NOTE]
+>  Começando com o [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse membro não requer mais <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador. (Consulte [problemas de segurança em reflexão emitir](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).) Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um elemento de <paramref name="parameterTypes" /> é <see langword="null" /> ou <see cref="T:System.Void" />.  
+  
+ - ou -  
+  
+ <paramref name="owner" /> é uma interface, uma matriz, um tipo genérico aberto ou um parâmetro de tipo de um método ou tipo genérico.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="owner" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="attributes" /> é uma combinação de sinalizadores diferente de <see cref="F:System.Reflection.MethodAttributes.Public" /> e <see cref="F:System.Reflection.MethodAttributes.Static" />.  
+  
+ -ou-  
+  
+ <paramref name="callingConvention" /> não é <see cref="F:System.Reflection.CallingConventions.Standard" />.  
+  
+ - ou -  
+  
+ <paramref name="returnType" /> é um tipo para o qual <see cref="P:System.Type.IsByRef" /> retorna <see langword="true" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">para associar a um tipo em um módulo diferente do módulo chamador do método dinâmico. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodAttributes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MethodAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos especificados quando o método dinâmico foi criado.</summary>
+        <value>Uma combinação bit a bit do <see cref="T:System.Reflection.MethodAttributes" /> valores que representam os atributos para o método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atualmente, os atributos de método para um método dinâmico estão sempre <xref:System.Reflection.MethodAttributes.Public> e <xref:System.Reflection.MethodAttributes.Static>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os atributos de método de um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#21](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#21)]
+ [!code-csharp[Reflection.DynamicMethod.All#21](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#21)]
+ [!code-vb[Reflection.DynamicMethod.All#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallingConvention">
+      <MemberSignature Language="C#" Value="public override System.Reflection.CallingConventions CallingConvention { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.CallingConventions CallingConvention" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.CallingConvention" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.CallingConventions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a convenção de chamada especificada quando o método dinâmico foi criado.</summary>
+        <value>Uma da <see cref="T:System.Reflection.CallingConventions" /> valores que indicam a convenção de chamada do método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atualmente, a convenção de chamada para um método dinâmico é sempre <xref:System.Reflection.CallingConventions.Standard>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe a convenção de chamada de um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#22](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#22)]
+ [!code-csharp[Reflection.DynamicMethod.All#22](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#22)]
+ [!code-vb[Reflection.DynamicMethod.All#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public override sealed Delegate CreateDelegate (Type delegateType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Delegate CreateDelegate(class System.Type delegateType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegateType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="delegateType">Um tipo de delegado cuja assinatura corresponde à do método dinâmico.</param>
+        <summary>Conclui o método dinâmico e cria um delegado que pode ser usado para executá-lo.</summary>
+        <returns>Um delegado do tipo especificado, que pode ser usado para executar o método dinâmico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> método ou o <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> método conclui o método dinâmico. Qualquer tentativa de alterar o método dinâmico, como a modificação de definições de parâmetro mais ou emitem mais linguagem intermediária Microsoft (MSIL) é ignorada; nenhuma exceção é lançada.  
+  
+ Para criar um corpo de método para um método dinâmico quando você tem seu próprio gerador MSIL, chame o <xref:System.Reflection.Emit.DynamicMethod.GetDynamicILInfo%2A> método para obter um <xref:System.Reflection.Emit.DynamicILInfo> objeto. Se você não tiver seu próprio gerador MSIL, chame o <xref:System.Reflection.Emit.DynamicMethod.GetILGenerator%2A> método para obter um <xref:System.Reflection.Emit.ILGenerator> objeto que pode ser usado para gerar o corpo do método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um método dinâmico que usa dois parâmetros. O exemplo emite um corpo de função simples que imprime o primeiro parâmetro para o console e o exemplo usa o segundo parâmetro como o valor de retorno do método. O exemplo conclui o método criando um representante, invoca o delegado com parâmetros diferentes e, por fim, chama o método dinâmico usando o <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> método.  
+  
+ [!code-cpp[Reflection.DynamicMethod.ctor1#1](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/cpp/source.cpp#1)]
+ [!code-csharp[Reflection.DynamicMethod.ctor1#1](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/CS/source.cs#1)]
+ [!code-vb[Reflection.DynamicMethod.ctor1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método dinâmico não tem nenhum corpo de método.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="delegateType" /> tem o número de parâmetros incorreto ou tipos de parâmetro incorretos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDelegate">
+      <MemberSignature Language="C#" Value="public override sealed Delegate CreateDelegate (Type delegateType, object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Delegate CreateDelegate(class System.Type delegateType, object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.CreateDelegate(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegateType" Type="System.Type" />
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="delegateType">Um tipo de delegado cuja assinatura corresponde à do método dinâmico, menos o primeiro parâmetro.</param>
+        <param name="target">Um objeto ao qual o delegado está associado. Deve ser do mesmo tipo que o primeiro parâmetro do método dinâmico.</param>
+        <summary>Conclui o método dinâmico e cria um delegado que pode ser usado para executá-lo, especificando o tipo de delegado e um objeto ao qual o delegado está associado.</summary>
+        <returns>Um delegado do tipo especificado, que pode ser usado para executar o método dinâmico com o objeto de destino especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga de método cria um delegado associado a um objeto específico. Tal um delegado deve ser fechada em seu primeiro argumento. Embora o método é estático, ele atua como se fosse um método de instância; a instância é `target`.  
+  
+ Essa sobrecarga de método requer `target` para ser do mesmo tipo, como o primeiro parâmetro do método dinâmico ou ser atribuído a esse tipo (por exemplo, uma classe derivada).  A assinatura de `delegateType` tem todos os parâmetros de método dinâmico, exceto o primeiro. Por exemplo, se o método dinâmico tem os parâmetros <xref:System.String>, <xref:System.Int32>, e <xref:System.Byte>, em seguida, `delegateType` os parâmetros <xref:System.Int32> e <xref:System.Byte>; `target` is of type <xref:System.String>.  
+  
+ Chamando o <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> método ou o <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> método conclui o método dinâmico. Qualquer tentativa de alterar o método dinâmico, como a modificação de definições de parâmetro mais ou emitem mais linguagem intermediária Microsoft (MSIL) é ignorada; nenhuma exceção é lançada.  
+  
+ Para criar um corpo de método para um método dinâmico quando você tem seu próprio gerador MSIL, chame o <xref:System.Reflection.Emit.DynamicMethod.GetDynamicILInfo%2A> método para obter um <xref:System.Reflection.Emit.DynamicILInfo> objeto. Se você não tiver seu próprio gerador MSIL, chame o <xref:System.Reflection.Emit.DynamicMethod.GetILGenerator%2A> método para obter um <xref:System.Reflection.Emit.ILGenerator> objeto que pode ser usado para gerar o corpo do método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria o delegado que associa um <xref:System.Reflection.Emit.DynamicMethod> a uma instância de um tipo, para que o método atua na mesma instância de cada vez que ele é invocado.  
+  
+ O exemplo de código define uma classe denominada `Example` com um campo particular, uma classe denominada `DerivedFromxample` que deriva de primeira classe, um tipo de representante chamado `UseLikeStatic` que retorna <xref:System.Int32> e tem parâmetros de tipo `Example` e <xref:System.Int32>e um tipo de representante chamado `UseLikeInstance` que retorna <xref:System.Int32> e tem um parâmetro de tipo <xref:System.Int32>.  
+  
+ O exemplo de código cria um <xref:System.Reflection.Emit.DynamicMethod> que altera o campo privado de uma instância de `Example` e retorna o valor anterior.  
+  
+> [!NOTE]
+>  Em geral, alterar os campos internos de classes não é boa prática de codificação orientada a objeto.  
+  
+ O exemplo de código cria uma instância de `Example` e, em seguida, cria dois delegados. A primeira é do tipo `UseLikeStatic`, que tem os mesmos parâmetros de método dinâmico. O segundo é do tipo `UseLikeInstance`, que não tem o primeiro parâmetro (do tipo `Example`). Este delegado é criado usando o <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> sobrecarga de método; o segundo parâmetro dessa sobrecarga de método é uma instância de `Example`, nesse caso a instância que acabou de criar, que está associada ao representante recém-criado. Sempre que esse delegado é invocado, o método dinâmico atua na instância associada do `Example`.  
+  
+> [!NOTE]
+>  Este é um exemplo das regras reduzidas delegado associação introduzidos no [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], juntamente com novas sobrecargas do <xref:System.Delegate.CreateDelegate%2A?displayProperty=nameWithType> método. Para obter mais informações, consulte a classe <xref:System.Delegate>.  
+  
+ O `UseLikeStatic` delegado é invocado, passando na instância do `Example` que é associado ao `UseLikeInstance` delegate. Em seguida, o `UseLikeInstance` delegado é invocado, para que ambos os delegados agir na mesma instância de `Example`. As alterações nos valores do campo interno são exibidas após cada chamada. Por fim, um `UseLikeInstance` representante está associado a uma instância de `DerivedFromxample`, e as chamadas de delegado são repetidas.  
+  
+ [!code-csharp[Reflection.DynamicMethod.ClosedOver#1](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.ClosedOver/cs/source.cs#1)]
+ [!code-vb[Reflection.DynamicMethod.ClosedOver#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.ClosedOver/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método dinâmico não tem nenhum corpo de método.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" /> não é do mesmo tipo que o primeiro parâmetro do método dinâmico e não é atribuível a esse tipo.  
+  
+ -ou-  
+  
+ <paramref name="delegateType" /> tem o número de parâmetros incorreto ou tipos de parâmetro incorretos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public override Type DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo que declara o método, que é sempre <see langword="null" /> para métodos dinâmicos.</summary>
+        <value>Sempre <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna `null` para métodos dinâmicos. Mesmo quando um método dinâmico é logicamente associado um tipo, ele não é declarado pelo tipo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o tipo de declaração de um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#23](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#23)]
+ [!code-csharp[Reflection.DynamicMethod.All#23](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#23)]
+ [!code-vb[Reflection.DynamicMethod.All#23](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefineParameter">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ParameterBuilder DefineParameter (int position, System.Reflection.ParameterAttributes attributes, string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ParameterBuilder DefineParameter(int32 position, valuetype System.Reflection.ParameterAttributes attributes, string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.DefineParameter(System.Int32,System.Reflection.ParameterAttributes,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ParameterBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" />
+        <Parameter Name="attributes" Type="System.Reflection.ParameterAttributes" />
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="position">A posição do parâmetro na lista de parâmetros. Parâmetros são indexados com o número 1 para o primeiro parâmetro.</param>
+        <param name="attributes">Uma combinação bit a bit de <see cref="T:System.Reflection.ParameterAttributes" /> valores que especifica os atributos do parâmetro.</param>
+        <param name="parameterName">O nome do parâmetro. O nome pode ser uma cadeia de caracteres de comprimento zero.</param>
+        <summary>Define um parâmetro de método dinâmico.</summary>
+        <returns>Sempre retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `position` é 0, o <xref:System.Reflection.Emit.DynamicMethod.DefineParameter%2A> método refere-se ao valor de retorno. Informações de parâmetro de configuração não tem efeito sobre o valor de retorno.  
+  
+ Se o método dinâmico já foi concluído, chamando o <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> ou <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> método, o <xref:System.Reflection.Emit.DynamicMethod.DefineParameter%2A> método não tem nenhum efeito. Nenhuma exceção é lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir informações de parâmetro para um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#33](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#33)]
+ [!code-csharp[Reflection.DynamicMethod.All#33](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#33)]
+ [!code-vb[Reflection.DynamicMethod.All#33](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O método não tem parâmetros.  
+  
+ -ou-  
+  
+ <paramref name="position" /> é menor que 0.  
+  
+ -ou-  
+  
+ <paramref name="position" />é maior que o número de parâmetros do método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBaseDefinition">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodInfo GetBaseDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MethodInfo GetBaseDefinition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.GetBaseDefinition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a implementação base para o método.</summary>
+        <returns>A implementação base do método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método sempre retorna atual `DynamicMethod` objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">
+          <see langword="true" />para pesquisar a cadeia de herança do método para localizar os atributos personalizados; <see langword="false" /> para verificar se apenas o método atual.</param>
+        <summary>Retorna todos os atributos personalizados definidos para o método.</summary>
+        <returns>Uma matriz de objetos que representam todos os atributos personalizados do método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para métodos dinâmicos, especificando `true` para `inherit` não tem nenhum efeito, pois o método não está declarado em um tipo.  
+  
+> [!NOTE]
+>  Atributos personalizados não têm suporte no momento em métodos dinâmicos. O único atributo retornado é <xref:System.Runtime.CompilerServices.MethodImplAttribute>; você pode obter o método sinalizadores de implementação mais facilmente usando o <xref:System.Reflection.Emit.DynamicMethod.GetMethodImplementationFlags%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Um <see cref="T:System.Type" /> que representa o tipo de atributo personalizado a ser retornado.</param>
+        <param name="inherit">
+          <see langword="true" />para pesquisar a cadeia de herança do método para localizar os atributos personalizados; <see langword="false" /> para verificar se apenas o método atual.</param>
+        <summary>Retorna os atributos personalizados do tipo especificado que foram aplicados ao método.</summary>
+        <returns>Uma matriz de objetos que representam os atributos do método do tipo <paramref name="attributeType" /> ou derivar do tipo <paramref name="attributeType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para métodos dinâmicos, especificando `true` para `inherit` não tem nenhum efeito, pois o método não está declarado em um tipo.  
+  
+> [!NOTE]
+>  Atributos personalizados não têm suporte no momento em métodos dinâmicos. O único atributo retornado é <xref:System.Runtime.CompilerServices.MethodImplAttribute>; você pode obter o método sinalizadores de implementação mais facilmente usando o <xref:System.Reflection.Emit.DynamicMethod.GetMethodImplementationFlags%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="attributeType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDynamicILInfo">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.DynamicILInfo GetDynamicILInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.DynamicILInfo GetDynamicILInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.GetDynamicILInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.DynamicILInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Reflection.Emit.DynamicILInfo" /> objeto que pode ser usado para gerar um corpo de método de tokens de metadados, escopos e fluxos do Microsoft intermediate language (MSIL).</summary>
+        <returns>Um <see cref="T:System.Reflection.Emit.DynamicILInfo" /> objeto que pode ser usado para gerar um corpo de método de tokens de metadados, escopos e fluxos MSIL.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.Emit.DynamicILInfo> classe é fornecida para oferecer suporte à geração de código não gerenciado.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para executar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetILGenerator">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ILGenerator GetILGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ILGenerator GetILGenerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.GetILGenerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ILGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um gerador de MSIL (Microsoft Intermediate Language) para o método com um tamanho de fluxo MSIL padrão de 64 bytes.</summary>
+        <returns>Um objeto <see cref="T:System.Reflection.Emit.ILGenerator" /> para o método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que um método dinâmico foi concluído, chamando o <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> ou <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> método, qualquer mais tentar adicionar MSIL é ignorado. Nenhuma exceção é lançada.  
+  
+> [!NOTE]
+>  Há restrições em código não verificado em métodos dinâmicos, mesmo em alguns cenários de confiança total. Consulte a seção “Verificação” em Comentários de <xref:System.Reflection.Emit.DynamicMethod>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um método dinâmico que usa dois parâmetros. O exemplo emite um corpo de função simples que imprime o primeiro parâmetro para o console e o exemplo usa o segundo parâmetro como o valor de retorno do método. O exemplo conclui o método criando um representante, invoca o delegado com parâmetros diferentes e, por fim, chama o método dinâmico usando o <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> método.  
+  
+ [!code-cpp[Reflection.DynamicMethod.ctor1#1](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/cpp/source.cpp#1)]
+ [!code-csharp[Reflection.DynamicMethod.ctor1#1](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/CS/source.cs#1)]
+ [!code-vb[Reflection.DynamicMethod.ctor1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.ctor1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetILGenerator">
+      <MemberSignature Language="C#" Value="public System.Reflection.Emit.ILGenerator GetILGenerator (int streamSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Reflection.Emit.ILGenerator GetILGenerator(int32 streamSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.GetILGenerator(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.ILGenerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="streamSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="streamSize">O tamanho do fluxo MSIL, em bytes.</param>
+        <summary>Retorna um gerador de intermediate language (MSIL) da Microsoft para o método com o tamanho do fluxo MSIL especificado.</summary>
+        <returns>Um <see cref="T:System.Reflection.Emit.ILGenerator" /> objeto para o método, com o tamanho do fluxo MSIL especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que um método dinâmico foi concluído, chamando o <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> ou <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> método, qualquer mais tentar adicionar MSIL é ignorado. Nenhuma exceção é lançada.  
+  
+> [!NOTE]
+>  Há restrições em código não verificado em métodos dinâmicos, mesmo em alguns cenários de confiança total. Consulte a seção “Verificação” em Comentários de <xref:System.Reflection.Emit.DynamicMethod>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra essa sobrecarga de método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#2](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#2)]
+ [!code-csharp[Reflection.DynamicMethod.All#2](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#2)]
+ [!code-vb[Reflection.DynamicMethod.All#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodImplementationFlags">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodImplAttributes GetMethodImplementationFlags ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Reflection.MethodImplAttributes GetMethodImplementationFlags() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.GetMethodImplementationFlags" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodImplAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna os sinalizadores de implementação para o método.</summary>
+        <returns>Uma combinação bit a bit de <see cref="T:System.Reflection.MethodImplAttributes" /> valores que representam os sinalizadores de implementação para o método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atualmente, os atributos de implementação de método para métodos dinâmicos são sempre <xref:System.Reflection.MethodImplAttributes.IL> e <xref:System.Reflection.MethodImplAttributes.NoInlining>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameters">
+      <MemberSignature Language="C#" Value="public override System.Reflection.ParameterInfo[] GetParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.ParameterInfo[] GetParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.GetParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ParameterInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna os parâmetros de método dinâmico.</summary>
+        <returns>Uma matriz de <see cref="T:System.Reflection.ParameterInfo" /> objetos que representam os parâmetros de método dinâmico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.ParameterInfo> objetos retornados por este método são apenas para fins informativos. Use o <xref:System.Reflection.Emit.DynamicMethod.DefineParameter%2A> método para definir ou alterar as características dos parâmetros.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os parâmetros de um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#34](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#34)]
+ [!code-csharp[Reflection.DynamicMethod.All#34](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#34)]
+ [!code-vb[Reflection.DynamicMethod.All#34](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitLocals">
+      <MemberSignature Language="C#" Value="public bool InitLocals { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InitLocals" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.InitLocals" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as variáveis locais no método são inicializada do zero.</summary>
+        <value>
+          <see langword="true" />Se as variáveis locais no método inicializada do zero; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade é definida como `true`, o emitido Microsoft intermediate language (MSIL) inclui a inicialização de variáveis locais. Se for definido como `false`, variáveis locais não foram inicializadas e o código gerado não é verificável.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo exibe o <xref:System.Reflection.Emit.DynamicMethod.InitLocals%2A> propriedade de um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#24](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#24)]
+ [!code-csharp[Reflection.DynamicMethod.All#24](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#24)]
+ [!code-vb[Reflection.DynamicMethod.All#24](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public override object Invoke (object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Invoke(object obj, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] parameters, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Esse parâmetro é ignorado para métodos dinâmicos, pois é estático. Especifique <see langword="null" />.</param>
+        <param name="invokeAttr">Uma combinação bit a bit dos valores <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <param name="binder">Um objeto <see cref="T:System.Reflection.Binder" /> que permite a associação, coerção de tipos de argumento, invocação de membros e recuperação de objetos <see cref="T:System.Reflection.MemberInfo" /> por meio da reflexão. Se <c>associador</c> é <see langword="null" />, o associador padrão é usado. Para obter mais detalhes, consulte <see cref="T:System.Reflection.Binder" />.</param>
+        <param name="parameters">Uma lista de argumentos. Essa é uma matriz de argumentos com o mesmo número, ordem e tipo que os parâmetros do método a ser invocado. Se não houver nenhum parâmetro, esse parâmetro deverá ser <see langword="null" />.</param>
+        <param name="culture">Uma instância de <see cref="T:System.Globalization.CultureInfo" /> usada para determinar a coerção de tipos. Se isso for <see langword="null" />, será usado o <see cref="T:System.Globalization.CultureInfo" /> para o thread atual. Por exemplo, essas informações são necessárias para converter corretamente um <see cref="T:System.String" /> que representa 1000 em um valor <see cref="T:System.Double" />, pois 1000 é representado de forma diferente por diferentes culturas.</param>
+        <summary>Invoca o método dinâmico usando os parâmetros especificados, sob as restrições do associador especificado e com as informações de cultura especificadas.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém o valor retornado do método invocado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Além das exceções listadas, o código de chamada deve estar preparado para capturar todas as exceções geradas pelo método dinâmico.  
+  
+ Executar um método dinâmico com um delegado criado pelo <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> método é mais eficiente do que executá-lo com o <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> método.  
+  
+ Chamando o <xref:System.Reflection.Emit.DynamicMethod.Invoke%2A> método ou o <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> método conclui o método dinâmico. Qualquer tentativa de alterar o método dinâmico, como a modificação de definições de parâmetro mais ou emitem mais linguagem intermediária Microsoft (MSIL) é ignorada; nenhuma exceção é lançada.  
+  
+ Todos os métodos dinâmicos são estáticos, portanto, o `obj` parâmetro é sempre ignorado. Para tratar um método dinâmico como se fosse um método de instância, use o <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> sobrecarga que usa uma instância do objeto.  
+  
+ Se o método dinâmico não tem parâmetros, o valor de `parameters` devem ser `null`. Caso contrário, o número, tipo e ordem de elementos na matriz de parâmetros devem ser idênticos de número, tipo e ordem de parâmetros de método dinâmico.  
+  
+> [!NOTE]
+>  Essa sobrecarga de método é chamada pelo <xref:System.Reflection.MethodBase.Invoke%28System.Object%2CSystem.Object%5B%5D%29> sobrecarga do método herdado da <xref:System.Reflection.MethodBase> classe, para que os comentários acima se aplicam a ambas as sobrecargas.  
+  
+ Esse método não exigem permissões diretamente, mas invocar o método dinâmico pode resultar em exigências de segurança, dependendo do método. Por exemplo, nenhum demandas são feitas para métodos dinâmicos hospedados anonimamente que são criados com o `restrictedSkipVisibility` parâmetro definido como `false`. Por outro lado, se você criar um método com `restrictedSkipVisibility` definida como `true` para que ele possa acessar ocultado membro de um assembly de destino, o método fará com que uma solicitação das permissões do assembly de destino mais <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> sinalizador.  
+  
+> [!NOTE]
+>  Antes do [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], esse método necessário <xref:System.Security.Permissions.ReflectionPermission> com o <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess> sinalizador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir invoca um método dinâmico com associação exata, usando a cultura do idioma inglês. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#4](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#4)]
+ [!code-csharp[Reflection.DynamicMethod.All#4](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#4)]
+ [!code-vb[Reflection.DynamicMethod.All#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para a convenção de chamada <see cref="F:System.Reflection.CallingConventions.VarArgs" />.</exception>
+        <exception cref="T:System.Reflection.TargetParameterCountException">O número de elementos em <paramref name="parameters" /> não corresponde ao número de parâmetros no método dinâmico.</exception>
+        <exception cref="T:System.ArgumentException">O tipo de um ou mais elementos de <paramref name="parameters" /> não corresponde ao tipo do parâmetro correspondente do método dinâmico.</exception>
+        <exception cref="T:System.Reflection.TargetInvocationException">O método dinâmico está associado a um módulo, não é hospedado anonimamente e foi construído com <paramref name="skipVisibility" /> definido como <see langword="false" />, mas acessa membros que não são <see langword="public" /> nem <see langword="internal" /> (<see langword="Friend" /> no Visual Basic).  
+  
+ - ou -  
+  
+ O método dinâmico é hospedado anonimamente e foi construído com <paramref name="skipVisibility" /> definido como <see langword="false" />, mas acessa membros que não são <see langword="public" />.  
+  
+ -ou-  
+  
+ O método dinâmico contém um código não verificável. Consulte a seção “Verificação” em Comentários de <see cref="T:System.Reflection.Emit.DynamicMethod" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public override bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Um <see cref="T:System.Type" /> que representa o tipo de atributo personalizado para pesquisar.</param>
+        <param name="inherit">
+          <see langword="true" />para pesquisar a cadeia de herança do método para localizar os atributos personalizados; <see langword="false" /> para verificar se apenas o método atual.</param>
+        <summary>Indica se o tipo de atributo personalizado especificado é definido.</summary>
+        <returns>
+          <see langword="true" />Se o tipo de atributo personalizado especificado é definido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para métodos dinâmicos, especificando `true` para `inherit` não tem nenhum efeito. Métodos dinâmicos não tem nenhuma cadeia de herança.  
+  
+> [!NOTE]
+>  Atributos personalizados não têm suporte no momento em métodos dinâmicos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecurityCritical">
+      <MemberSignature Language="C#" Value="public override bool IsSecurityCritical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecurityCritical" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.IsSecurityCritical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o método dinâmico atual é crítico de segurança ou segurança crítica segura e, portanto, pode realizar operações críticas.</summary>
+        <value>
+          <see langword="true" />Se o método dinâmico atual é crítico de segurança ou segurança-crítico para segurança; <see langword="false" /> se é transparente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.Emit.DynamicMethod.IsSecurityCritical%2A>, <xref:System.Reflection.Emit.DynamicMethod.IsSecuritySafeCritical%2A>, e <xref:System.Reflection.Emit.DynamicMethod.IsSecurityTransparent%2A> o nível de transparência de método dinâmico, conforme determinado pelo common language runtime (CLR) de propriedades do relatam. As combinações destas propriedades são mostradas na seguinte tabela:  
+  
+|Nível de segurança|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
+|--------------------|------------------------|----------------------------|---------------------------|  
+|Crítico|`true`|`false`|`false`|  
+|Segurança crítica|`true`|`true`|`false`|  
+|Transparente|`false`|`false`|`true`|  
+  
+ Usar essas propriedade é muito mais simples que examinar as anotações de segurança de um assembly e seus tipos, verificando o nível de confiança atual e tentando duplicar as regras do tempo de execução.  
+  
+ A transparência de um método dinâmico depende do módulo que está associado. Se o método dinâmico estiver associado um tipo em vez de um módulo, a transparência depende do módulo que contém o tipo. Métodos dinâmicos não têm anotações de segurança, portanto, eles recebem a transparência de padrão para o módulo associado.  
+  
+-   Métodos dinâmicos hospedados anonimamente sempre são transparentes, porque o módulo fornecido pelo sistema que os contém é transparente.  
+  
+-   A transparência de um método dinâmico que está associado um assembly confiável (isto é, um assembly de nome forte que é instalado no cache de assembly global) é descrita na tabela a seguir.  
+  
+    |Anotação de assembly|Transparência de nível 1|Transparência de nível 2|  
+    |-------------------------|--------------------------|--------------------------|  
+    |Totalmente transparente|Transparente|Transparente|  
+    |Totalmente crítica|Crítico|Crítico|  
+    |Transparência mista|Transparente|Transparente|  
+    |Independente de segurança|Crítico para segurança|Crítico|  
+  
+     Por exemplo, se você associar um método dinâmico com um tipo que está no mscorlib. dll, que tem o nível 2 transparência misto, o método dinâmico é transparente e não é possível executar o código crítico. Para obter informações sobre os níveis de transparência, consulte [código transparente de segurança, nível 1](~/docs/framework/misc/security-transparent-code-level-1.md) e [código transparente de segurança, nível 2](~/docs/framework/misc/security-transparent-code-level-2.md).  
+  
+    > [!NOTE]
+    >  Associar um método dinâmico com um módulo em um assembly confiável nível 1 que é independente de segurança, como System.dll, não permitir a elevação de confiança. Se o conjunto de concessão do código que chama o método dinâmico não incluem o conjunto de concessão de DLL (ou seja, confiança total), <xref:System.Security.SecurityException> é lançada quando é chamado de método dinâmico.  
+  
+-   A transparência de um método dinâmico que está associado um assembly parcialmente confiável depende de como o assembly é carregado. Se o assembly é carregado com confiança parcial (por exemplo, para um domínio de aplicativo na área restrita), o tempo de execução ignora as anotações de segurança do assembly. O assembly e todos os seus tipos e membros, incluindo métodos dinâmicos, são tratados como transparente. O tempo de execução presta atenção para anotações de segurança somente se o assembly de confiança parcial foi carregado com confiança total (por exemplo, no domínio de aplicativo padrão de um aplicativo de área de trabalho). Nesse caso, o tempo de execução atribui o método dinâmico a transparência de padrão de métodos de acordo com as anotações do assembly.  
+  
+ Para obter mais informações sobre reflexão emitir e transparência, consulte [problemas de segurança na emissão de reflexão](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md). Para obter informações sobre a transparência, consulte [alterações de segurança](~/docs/framework/security/security-changes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método dinâmico não tem um corpo de método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecuritySafeCritical">
+      <MemberSignature Language="C#" Value="public override bool IsSecuritySafeCritical { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecuritySafeCritical" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.IsSecuritySafeCritical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o método dinâmico atual é safe-crítico de segurança no nível de confiança atual; ou seja, se ele pode realizar operações críticas e pode ser acessado pelo código de transparência.</summary>
+        <value>
+          <see langword="true" />Se o método dinâmico é safe-crítico de segurança no nível de confiança atual; <see langword="false" /> se ele é crítico de segurança ou transparente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.Emit.DynamicMethod.IsSecurityCritical%2A>, <xref:System.Reflection.Emit.DynamicMethod.IsSecuritySafeCritical%2A>, e <xref:System.Reflection.Emit.DynamicMethod.IsSecurityTransparent%2A> o nível de transparência de método dinâmico, conforme determinado pelo common language runtime (CLR) de propriedades do relatam. As combinações destas propriedades são mostradas na seguinte tabela:  
+  
+|Nível de segurança|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
+|--------------------|------------------------|----------------------------|---------------------------|  
+|Crítico|`true`|`false`|`false`|  
+|Segurança crítica|`true`|`true`|`false`|  
+|Transparente|`false`|`false`|`true`|  
+  
+ Usar essas propriedade é muito mais simples que examinar as anotações de segurança de um assembly e seus tipos, verificando o nível de confiança atual e tentando duplicar as regras do tempo de execução.  
+  
+ A transparência de um método dinâmico depende do módulo que está associado. Se o método dinâmico estiver associado um tipo em vez de um módulo, a transparência depende do módulo que contém o tipo. Métodos dinâmicos não têm anotações de segurança, portanto, eles recebem a transparência de padrão para o módulo associado.  
+  
+-   Métodos dinâmicos hospedados anonimamente sempre são transparentes, porque o módulo fornecido pelo sistema que os contém é transparente.  
+  
+-   A transparência de um método dinâmico que está associado um assembly confiável (isto é, um assembly de nome forte que é instalado no cache de assembly global) é descrita na tabela a seguir.  
+  
+    |Anotação de assembly|Transparência de nível 1|Transparência de nível 2|  
+    |-------------------------|--------------------------|--------------------------|  
+    |Totalmente transparente|Transparente|Transparente|  
+    |Totalmente crítica|Crítico|Crítico|  
+    |Transparência mista|Transparente|Transparente|  
+    |Independente de segurança|Crítico para segurança|Crítico|  
+  
+     Por exemplo, se você associar um método dinâmico com um tipo que está no mscorlib. dll, que tem o nível 2 transparência misto, o método dinâmico é transparente e não é possível executar o código crítico. Para obter informações sobre os níveis de transparência, consulte [código transparente de segurança, nível 1](~/docs/framework/misc/security-transparent-code-level-1.md) e [código transparente de segurança, nível 2](~/docs/framework/misc/security-transparent-code-level-2.md).  
+  
+    > [!NOTE]
+    >  Associar um método dinâmico com um módulo em um assembly confiável nível 1 que é independente de segurança, como System.dll, não permitir a elevação de confiança. Se o conjunto de concessão do código que chama o método dinâmico não incluem o conjunto de concessão de DLL (ou seja, confiança total), <xref:System.Security.SecurityException> é lançada quando é chamado de método dinâmico.  
+  
+-   A transparência de um método dinâmico que está associado um assembly parcialmente confiável depende de como o assembly é carregado. Se o assembly é carregado com confiança parcial (por exemplo, para um domínio de aplicativo na área restrita), o tempo de execução ignora as anotações de segurança do assembly. O assembly e todos os seus tipos e membros, incluindo métodos dinâmicos, são tratados como transparente. O tempo de execução presta atenção para anotações de segurança somente se o assembly de confiança parcial foi carregado com confiança total (por exemplo, no domínio de aplicativo padrão de um aplicativo de área de trabalho). Nesse caso, o tempo de execução atribui o método dinâmico a transparência de padrão de métodos de acordo com as anotações do assembly.  
+  
+ Para obter mais informações sobre reflexão emitir e transparência, consulte [problemas de segurança na emissão de reflexão](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md). Para obter informações sobre a transparência, consulte [alterações de segurança](~/docs/framework/security/security-changes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método dinâmico não tem um corpo de método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecurityTransparent">
+      <MemberSignature Language="C#" Value="public override bool IsSecurityTransparent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecurityTransparent" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.IsSecurityTransparent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o método dinâmico atual é transparente no nível de confiança atual e, portanto, não é possível realizar operações críticas.</summary>
+        <value>
+          <see langword="true" />Se o método dinâmico é transparente de segurança no nível de confiança atual; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.Emit.DynamicMethod.IsSecurityCritical%2A>, <xref:System.Reflection.Emit.DynamicMethod.IsSecuritySafeCritical%2A>, e <xref:System.Reflection.Emit.DynamicMethod.IsSecurityTransparent%2A> o nível de transparência de método dinâmico, conforme determinado pelo common language runtime (CLR) de propriedades do relatam. As combinações destas propriedades são mostradas na seguinte tabela:  
+  
+|Nível de segurança|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
+|--------------------|------------------------|----------------------------|---------------------------|  
+|Crítico|`true`|`false`|`false`|  
+|Segurança crítica|`true`|`true`|`false`|  
+|Transparente|`false`|`false`|`true`|  
+  
+ Usar essas propriedade é muito mais simples que examinar as anotações de segurança de um assembly e seus tipos, verificando o nível de confiança atual e tentando duplicar as regras do tempo de execução.  
+  
+ A transparência de um método dinâmico depende do módulo que está associado. Se o método dinâmico estiver associado um tipo em vez de um módulo, a transparência depende do módulo que contém o tipo. Métodos dinâmicos não têm anotações de segurança, portanto, eles recebem a transparência de padrão para o módulo associado.  
+  
+-   Métodos dinâmicos hospedados anonimamente sempre são transparentes, porque o módulo fornecido pelo sistema que os contém é transparente.  
+  
+-   A transparência de um método dinâmico que está associado um assembly confiável (isto é, um assembly de nome forte que é instalado no cache de assembly global) é descrita na tabela a seguir.  
+  
+    |Anotação de assembly|Transparência de nível 1|Transparência de nível 2|  
+    |-------------------------|--------------------------|--------------------------|  
+    |Totalmente transparente|Transparente|Transparente|  
+    |Totalmente crítica|Crítico|Crítico|  
+    |Transparência mista|Transparente|Transparente|  
+    |Independente de segurança|Crítico para segurança|Crítico|  
+  
+     Por exemplo, se você associar um método dinâmico com um tipo que está no mscorlib. dll, que tem o nível 2 transparência misto, o método dinâmico é transparente e não é possível executar o código crítico. Para obter informações sobre os níveis de transparência, consulte [código transparente de segurança, nível 1](~/docs/framework/misc/security-transparent-code-level-1.md) e [código transparente de segurança, nível 2](~/docs/framework/misc/security-transparent-code-level-2.md).  
+  
+    > [!NOTE]
+    >  Associar um método dinâmico com um módulo em um assembly confiável nível 1 que é independente de segurança, como System.dll, não permitir a elevação de confiança. Se o conjunto de concessão do código que chama o método dinâmico não incluem o conjunto de concessão de DLL (ou seja, confiança total), <xref:System.Security.SecurityException> é lançada quando é chamado de método dinâmico.  
+  
+-   A transparência de um método dinâmico que está associado um assembly parcialmente confiável depende de como o assembly é carregado. Se o assembly é carregado com confiança parcial (por exemplo, para um domínio de aplicativo na área restrita), o tempo de execução ignora as anotações de segurança do assembly. O assembly e todos os seus tipos e membros, incluindo métodos dinâmicos, são tratados como transparente. O tempo de execução presta atenção para anotações de segurança somente se o assembly de confiança parcial foi carregado com confiança total (por exemplo, no domínio de aplicativo padrão de um aplicativo de área de trabalho). Nesse caso, o tempo de execução atribui o método dinâmico a transparência de padrão de métodos de acordo com as anotações do assembly.  
+  
+ Para obter mais informações sobre reflexão emitir e transparência, consulte [problemas de segurança na emissão de reflexão](~/docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md). Para obter informações sobre a transparência, consulte [alterações de segurança](~/docs/framework/security/security-changes.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método dinâmico não tem um corpo de método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodHandle">
+      <MemberSignature Language="C#" Value="public override RuntimeMethodHandle MethodHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.RuntimeMethodHandle MethodHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.MethodHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeMethodHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não tem suporte para métodos dinâmicos.</summary>
+        <value>Não tem suporte para métodos dinâmicos.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Não é permitido para métodos dinâmicos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodImplementationFlags">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodImplAttributes MethodImplementationFlags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MethodImplAttributes MethodImplementationFlags" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.MethodImplementationFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodImplAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Module Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Module Module" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o módulo com a qual o método dinâmico é logicamente associado.</summary>
+        <value>O <see cref="T:System.Reflection.Module" /> à qual o método dinâmico atual está associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um módulo foi especificado quando o método dinâmico foi criado, essa propriedade retornará esse módulo. Se um tipo foi especificado como o proprietário, quando o método dinâmico foi criado, essa propriedade retorna o módulo que contém esse tipo.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo exibe o <xref:System.Reflection.Emit.DynamicMethod.Module%2A> propriedade de um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#26](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#26)]
+ [!code-csharp[Reflection.DynamicMethod.All#26](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#26)]
+ [!code-vb[Reflection.DynamicMethod.All#26](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#26)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do método dinâmico.</summary>
+        <value>O nome simples do método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Não é necessário para métodos dinâmicos de nome.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o nome de um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#27](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#27)]
+ [!code-csharp[Reflection.DynamicMethod.All#27](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#27)]
+ [!code-vb[Reflection.DynamicMethod.All#27](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#27)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectedType">
+      <MemberSignature Language="C#" Value="public override Type ReflectedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReflectedType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.ReflectedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a classe que foi usada em reflexão para obter o método.</summary>
+        <value>Sempre <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna `null` para métodos dinâmicos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o tipo refletido de um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#28](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#28)]
+ [!code-csharp[Reflection.DynamicMethod.All#28](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#28)]
+ [!code-vb[Reflection.DynamicMethod.All#28](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnParameter">
+      <MemberSignature Language="C#" Value="public override System.Reflection.ParameterInfo ReturnParameter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.ParameterInfo ReturnParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.ReturnParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ParameterInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o parâmetro de retorno do método dinâmico.</summary>
+        <value>Sempre <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna `null` para métodos dinâmicos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public override Type ReturnType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de valor de retorno do método dinâmico.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo do valor de retorno do método atual; <see cref="T:System.Void" /> se o método não tem nenhum tipo de retorno.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `null` foi especificado para o tipo de retorno quando o método dinâmico foi criado, essa propriedade retornará <xref:System.Void?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o tipo de retorno de um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#30](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#30)]
+ [!code-csharp[Reflection.DynamicMethod.All#30](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#30)]
+ [!code-vb[Reflection.DynamicMethod.All#30](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnTypeCustomAttributes">
+      <MemberSignature Language="C#" Value="public override System.Reflection.ICustomAttributeProvider ReturnTypeCustomAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.ICustomAttributeProvider ReturnTypeCustomAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.Emit.DynamicMethod.ReturnTypeCustomAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ICustomAttributeProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos personalizados do tipo de retorno para o método dinâmico.</summary>
+        <value>Um <see cref="T:System.Reflection.ICustomAttributeProvider" /> que representa os atributos personalizados do tipo de retorno do método dinâmico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atributos personalizados não têm suporte no tipo de retorno de um método dinâmico, a matriz de atributos personalizados retornada pelo <xref:System.Reflection.ICustomAttributeProvider.GetCustomAttributes%2A> método sempre está vazio.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como exibir os atributos personalizados do tipo de retorno de um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#31](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#31)]
+ [!code-csharp[Reflection.DynamicMethod.All#31](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#31)]
+ [!code-vb[Reflection.DynamicMethod.All#31](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.Emit.DynamicMethod.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Emit.Lightweight</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a assinatura do método, representado como uma cadeia de caracteres.</summary>
+        <returns>Uma cadeia de caracteres que representa a assinatura do método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A assinatura inclui somente os tipos e o nome do método, se houver. Nomes de parâmetros não são incluídos.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo exibe o <xref:System.Reflection.Emit.DynamicMethod.ToString%2A> método de um método dinâmico. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Reflection.Emit.DynamicMethod> classe.  
+  
+ [!code-cpp[Reflection.DynamicMethod.All#32](~/samples/snippets/cpp/VS_Snippets_CLR/Reflection.DynamicMethod.All/cpp/source.cpp#32)]
+ [!code-csharp[Reflection.DynamicMethod.All#32](~/samples/snippets/csharp/VS_Snippets_CLR/Reflection.DynamicMethod.All/CS/source.cs#32)]
+ [!code-vb[Reflection.DynamicMethod.All#32](~/samples/snippets/visualbasic/VS_Snippets_CLR/Reflection.DynamicMethod.All/VB/source.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

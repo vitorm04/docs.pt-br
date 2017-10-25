@@ -1,0 +1,460 @@
+<Type Name="ConfigurationSectionGroup" FullName="System.Configuration.ConfigurationSectionGroup">
+  <TypeSignature Language="C#" Value="public class ConfigurationSectionGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConfigurationSectionGroup extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationSectionGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um grupo de seções relacionadas dentro de um arquivo de configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As configurações nos arquivos de configuração (como o arquivo Web. config) são organizadas em seções. Como algumas seções estão relacionadas, geralmente é conveniente para agrupá-los em um grupo de seção. O <xref:System.Configuration.ConfigurationSectionGroup> classe representa o `sectionGroup` elemento XML que é usada para as seções de grupo quando eles são definidos no `configSections` elemento de um arquivo de configuração. Grupos de seções podem ser aninhados (um grupo de seção pode conter outros grupos de seções, bem como seções). A exemplo a seguir mostra um `configSections` elemento que define três grupos de seção aninhados:  
+  
+```  
+<configSections>  
+  <sectionGroup name="system.web.extensions"...>  
+    <sectionGroup name="scripting" ...>  
+      <section name="scriptResourceHandler".../>  
+      <sectionGroup name="webServices"...>  
+        <section name="jsonSerialization" .../>  
+        <section name="profileService" ... />        <section name="authenticationService" .../>  
+        <section name="roleService" .../>  
+      </sectionGroup>  
+    </sectionGroup>  
+  </sectionGroup>  
+</configSections>  
+```  
+  
+ O sistema de configuração carrega configurações de arquivos de configuração para <xref:System.Configuration.ConfigurationSectionGroup> objetos. Você pode usar o <xref:System.Configuration.ConfigurationSectionGroup.Sections%2A> e <xref:System.Configuration.ConfigurationSectionGroup.SectionGroups%2A> propriedades para acessar as seções e grupos de seções que estão contidos em um <xref:System.Configuration.ConfigurationSectionGroup> objeto.  
+  
+ Para obter mais informações sobre como acessar informações dos arquivos de configuração, consulte o <xref:System.Configuration.ConfigurationManager> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Configuration.ConfigurationSectionGroup> classe para recuperar as definições de configuração. O exemplo é um aplicativo de console que lê as definições de configuração e grava informações sobre cada grupo de seção de configuração e as seções-lo no console.  
+  
+ O `Main` método carrega as definições de configuração em um <xref:System.Configuration.Configuration> objeto, recupera o <xref:System.Configuration.Configuration.SectionGroups%2A> coleção do <xref:System.Configuration.Configuration> objeto e, em seguida, chama o `ShowSectionGroupCollectionInfo` método para exibir os valores de propriedade de seção.  
+  
+ O `ShowSectionGroupCollectionInfo` método itera por meio de chamadas e grupos de seções de `ShowSectionGroupInfo` método para cada um.  
+  
+ O `ShowSectionGroupInfo` método exibe o nome do grupo de seção, alguns valores de propriedade e os nomes das seções que ele contém. Se o grupo de seção contém grupos de seção, este método chama `ShowSectionGroupCollectionInfo` recursivamente para exibir os grupos de seção.  
+  
+ O `indentLevel` campo é usado para adicionar os espaços à esquerda de linhas exibidas para mostrar agrupamentos lógicos. Todas as linhas são limitadas a 79 caracteres de texto para evitar a quebra automática de linha, o que seria tornar mais difícil distinguir os agrupamentos lógicos.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSectionGroup#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs#1)]
+ [!code-vb[System.Configuration.ConfigurationSectionGroup#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationSectionGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSectionGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.ConfigurationSectionGroup" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceDeclaration">
+      <MemberSignature Language="C#" Value="public void ForceDeclaration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ForceDeclaration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSectionGroup.ForceDeclaration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Força a declaração para este <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> método pode forçar uma <xref:System.Configuration.ConfigurationSectionGroup> objeto a ser gravado em um arquivo de configuração, mesmo se não for necessária, porque ele já está declarado em um arquivo pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> método.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSectionGroup#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs#12)]
+ [!code-vb[System.Configuration.ConfigurationSectionGroup#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceDeclaration">
+      <MemberSignature Language="C#" Value="public void ForceDeclaration (bool require);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ForceDeclaration(bool require) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSectionGroup.ForceDeclaration(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="force" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="require">To be added.</param>
+        <summary>Força a declaração para este <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> método força isso <xref:System.Configuration.ConfigurationSectionGroup> declaração a ser gravado no arquivo se `force` é `true`. Se `force` é `false`, essa ação pode ser ignorada se o <xref:System.Configuration.ConfigurationSectionGroup> objeto é exigido pelo sistema.  
+  
+ O <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> método pode forçar uma <xref:System.Configuration.ConfigurationSectionGroup> objeto a ser gravado em um arquivo de configuração, mesmo se não for necessária, porque ele já está declarado em um arquivo pai. Além disso, ele pode remover um grupo de um arquivo de configuração, se o grupo não é necessário.  
+  
+ Talvez você queira usar o <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> método para fazer com que uma configuração de arquivo mais portáteis de um computador para outro, sem se preocupar se a declaração de grupo já existe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationSectionGroup.ForceDeclaration%2A> método.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSectionGroup#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs#13)]
+ [!code-vb[System.Configuration.ConfigurationSectionGroup#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto é o grupo de seção de raiz.  
+  
+ \- ou -  
+  
+ O <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto tem um local.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeclarationRequired">
+      <MemberSignature Language="C#" Value="public bool IsDeclarationRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDeclarationRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationSectionGroup.IsDeclarationRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Configuration.ConfigurationSectionGroup" /> declaração de objeto é necessária.</summary>
+        <value>
+          <see langword="true" />Se este <see cref="T:System.Configuration.ConfigurationSectionGroup" /> declaração for necessário; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir determina se esta instância do <xref:System.Configuration.ConfigurationSectionGroup> declaração é necessária.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSectionGroup#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs#5)]
+ [!code-vb[System.Configuration.ConfigurationSectionGroup#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeclared">
+      <MemberSignature Language="C#" Value="public bool IsDeclared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDeclared" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationSectionGroup.IsDeclared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto for declarado.</summary>
+        <value>
+          <see langword="true" />Se este <see cref="T:System.Configuration.ConfigurationSectionGroup" /> declarado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o grupo de seção é declarado no arquivo de configuração, o <xref:System.Configuration.ConfigurationSectionGroup.IsDeclared%2A> propriedade retorna `true`.  
+  
+ O <xref:System.Configuration.ConfigurationSectionGroup.IsDeclared%2A> propriedade retorna `false` se esta seção é herdada de Machine. config ou um arquivo de configuração pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se esta instância do <xref:System.Configuration.ConfigurationSectionGroup> é declarada. Isso faz parte de um exemplo maior fornecido na visão geral para o <xref:System.Configuration.ConfigurationSectionGroup> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSectionGroup#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs#6)]
+ [!code-vb[System.Configuration.ConfigurationSectionGroup#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationSectionGroup.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a propriedade de nome deste <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto.</summary>
+        <value>A propriedade de nome deste <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationSectionGroup.Name%2A> o valor da propriedade é o nome do grupo de seções que não contém grupos de seção pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como exibir o nome desta instância do <xref:System.Configuration.ConfigurationSectionGroup> classe. Isso faz parte de um exemplo maior fornecido na visão geral para o <xref:System.Configuration.ConfigurationSectionGroup> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSectionGroup#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs#3)]
+ [!code-vb[System.Configuration.ConfigurationSectionGroup#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SectionGroupName">
+      <MemberSignature Language="C#" Value="public string SectionGroupName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SectionGroupName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationSectionGroup.SectionGroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do grupo de seção associado a esta <see cref="T:System.Configuration.ConfigurationSectionGroup" />.</summary>
+        <value>O nome do grupo de seção deste <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationSectionGroup.SectionGroupName%2A> o valor da propriedade é o nome de caminho completo do grupo de seção, inclusive os grupos de seção pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como exibir o nome desta instância do <xref:System.Configuration.ConfigurationSectionGroup> classe. Isso faz parte de um exemplo maior fornecido na visão geral para o <xref:System.Configuration.ConfigurationSectionGroup> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSectionGroup#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs#11)]
+ [!code-vb[System.Configuration.ConfigurationSectionGroup#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SectionGroups">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationSectionGroupCollection SectionGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationSectionGroupCollection SectionGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationSectionGroup.SectionGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSectionGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Configuration.ConfigurationSectionGroupCollection" /> que contém todos os objetos <see cref="T:System.Configuration.ConfigurationSectionGroup" /> que são filhos deste objeto <see cref="T:System.Configuration.ConfigurationSectionGroup" />.</summary>
+        <value>Um objeto <see cref="T:System.Configuration.ConfigurationSectionGroupCollection" /> que contém todos os objetos <see cref="T:System.Configuration.ConfigurationSectionGroup" /> que são filhos deste objeto <see cref="T:System.Configuration.ConfigurationSectionGroup" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Configuration.ConfigurationSectionGroup.SectionGroups%2A> propriedade. Isso faz parte de um exemplo maior fornecido na visão geral para o <xref:System.Configuration.ConfigurationSectionGroup> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSectionGroup#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs#8)]
+ [!code-vb[System.Configuration.ConfigurationSectionGroup#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sections">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationSectionCollection Sections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationSectionCollection Sections" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationSectionGroup.Sections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSectionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Configuration.ConfigurationSectionCollection" /> que contém todos os objetos <see cref="T:System.Configuration.ConfigurationSection" /> dentro desse objeto <see cref="T:System.Configuration.ConfigurationSectionGroup" />.</summary>
+        <value>Um objeto <see cref="T:System.Configuration.ConfigurationSectionCollection" /> que contém todos os objetos <see cref="T:System.Configuration.ConfigurationSection" /> dentro desse objeto <see cref="T:System.Configuration.ConfigurationSectionGroup" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Configuration.ConfigurationSectionGroup.Sections%2A> propriedade. Isso faz parte de um exemplo maior fornecido na visão geral para o <xref:System.Configuration.ConfigurationSectionGroup> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSectionGroup#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs#7)]
+ [!code-vb[System.Configuration.ConfigurationSectionGroup#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSectionGroupInTargetVersion">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeSectionGroupInTargetVersion (System.Runtime.Versioning.FrameworkName targetFramework);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ShouldSerializeSectionGroupInTargetVersion(class System.Runtime.Versioning.FrameworkName targetFramework) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationSectionGroup.ShouldSerializeSectionGroupInTargetVersion(System.Runtime.Versioning.FrameworkName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetFramework" Type="System.Runtime.Versioning.FrameworkName" />
+      </Parameters>
+      <Docs>
+        <param name="targetFramework">A versão de destino do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</param>
+        <summary>Indica se o atual <see cref="T:System.Configuration.ConfigurationSectionGroup" /> instância deve ser serializada quando a hierarquia de objetos de configuração é serializada para a versão de destino especificado do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</summary>
+        <returns>
+          <see langword="true" />Se o grupo de seções atual deve ser serializado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada grupo de seção de configuração que é criado para o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] e versões posteriores explicitamente devem substituir este método e retornar `true`, mas somente se o grupo de seção é válido para a versão especificada do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Grupos de seção de configuração existentes que foram criados para versões anteriores do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] não precisa ser alterado.  
+  
+ O tipo de base contém uma implementação padrão desse método que sempre retorna `true`. Em outras palavras, se um implementador de grupo de seção de configuração não substitui esse método, por padrão o grupo de seções de configuração será serializado para todas as versões do framework.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationSectionGroup.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo para este <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto.</summary>
+        <value>O tipo deste <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esta instância do <xref:System.Configuration.ConfigurationSectionGroup> classe é um tipo derivado, o <xref:System.Configuration.ConfigurationSectionGroup.Type%2A> propriedade retornará o nome do tipo derivado que estende o <xref:System.Configuration.ConfigurationSectionGroup> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationSectionGroup.Type%2A> propriedade. Isso faz parte de um exemplo maior fornecido na visão geral para o <xref:System.Configuration.ConfigurationSectionGroup> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationSectionGroup#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/CS/ConfigurationSectionGroup.cs#4)]
+ [!code-vb[System.Configuration.ConfigurationSectionGroup#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationSectionGroup/VB/ConfigurationSectionGroup.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto é o grupo de seção de raiz.  
+  
+ \- ou -  
+  
+ O <see cref="T:System.Configuration.ConfigurationSectionGroup" /> objeto tem um local.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">A seção ou grupo já está definido em outro nível.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

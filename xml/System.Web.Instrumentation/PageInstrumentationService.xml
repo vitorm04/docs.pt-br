@@ -1,0 +1,85 @@
+<Type Name="PageInstrumentationService" FullName="System.Web.Instrumentation.PageInstrumentationService">
+  <TypeSignature Language="C#" Value="public sealed class PageInstrumentationService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PageInstrumentationService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Instrumentation.PageInstrumentationService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre ouvintes de execução da página e da instrumentação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageInstrumentationService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Instrumentation.PageInstrumentationService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Instrumentation.PageInstrumentationService" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionListeners">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Web.Instrumentation.PageExecutionListener&gt; ExecutionListeners { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Web.Instrumentation.PageExecutionListener&gt; ExecutionListeners" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Instrumentation.PageInstrumentationService.ExecutionListeners" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Web.Instrumentation.PageExecutionListener&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de ouvintes que assinou o processo de execução da página.</summary>
+        <value>A lista de ouvintes que assinou o processo de execução da página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno é garantia de não ser `null`, mas pode estar vazio.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public static bool IsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Instrumentation.PageInstrumentationService.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o WMI está ativo para o aplicativo inteiro.</summary>
+        <value>
+          <see langword="true" />para indicar que a instrumentação está ativa para o aplicativo inteiro; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instrumentação de página é um serviço por solicitação, e pode não estar ativa em uma determinada solicitação. Esse sinalizador deve ser definido como `true` para que todas as solicitações para usar a instrumentação de página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

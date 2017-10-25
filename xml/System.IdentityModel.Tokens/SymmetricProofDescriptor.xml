@@ -1,0 +1,387 @@
+<Type Name="SymmetricProofDescriptor" FullName="System.IdentityModel.Tokens.SymmetricProofDescriptor">
+  <TypeSignature Language="C#" Value="public class SymmetricProofDescriptor : System.IdentityModel.Tokens.ProofDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SymmetricProofDescriptor extends System.IdentityModel.Tokens.ProofDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SymmetricProofDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.ProofDescriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe pode ser usada para emitir o token de baseada em chave simétrico.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymmetricProofDescriptor (System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricProofDescriptor.#ctor(System.IdentityModel.Tokens.EncryptingCredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetWrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="targetWrappingCredentials">O <see cref="T:System.IdentityModel.Tokens.EncryptingCredentials" /> a ser usado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SymmetricProofDescriptor" /> classe com as credenciais de criptografia especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor, se você quiser que o STS usar especificado <xref:System.IdentityModel.Tokens.EncryptingCredentials>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymmetricProofDescriptor (byte[] key, System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] key, class System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricProofDescriptor.#ctor(System.Byte[],System.IdentityModel.Tokens.EncryptingCredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Byte[]" />
+        <Parameter Name="targetWrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave simétrica que é usada dentro do token emitido.</param>
+        <param name="targetWrappingCredentials">A chave de criptografia de credenciais para a terceira parte confiável.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SymmetricProofDescriptor" /> classe com o material da chave especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor, se você quiser que o STS para usar os bytes de chave especificados. Isso ocorre quando o cliente envia a entropia e o STS seria simplesmente usá-la como a chave para o token emitido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymmetricProofDescriptor (int keySizeInBits, System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 keySizeInBits, class System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricProofDescriptor.#ctor(System.Int32,System.IdentityModel.Tokens.EncryptingCredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keySizeInBits" Type="System.Int32" />
+        <Parameter Name="targetWrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="keySizeInBits">O tamanho da chave simétrica.</param>
+        <param name="targetWrappingCredentials">A chave de criptografia de credenciais para o destino da solicitação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SymmetricProofDescriptor" /> classe com uma chave gerada automaticamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você quiser que o STS para gerar automaticamente a chave usando um gerador de número aleatório e enviá-lo no token de prova como um segredo binário, use este construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymmetricProofDescriptor (int keySizeInBits, System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials, System.IdentityModel.Tokens.EncryptingCredentials requestorWrappingCredentials);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 keySizeInBits, class System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials, class System.IdentityModel.Tokens.EncryptingCredentials requestorWrappingCredentials) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricProofDescriptor.#ctor(System.Int32,System.IdentityModel.Tokens.EncryptingCredentials,System.IdentityModel.Tokens.EncryptingCredentials)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keySizeInBits" Type="System.Int32" />
+        <Parameter Name="targetWrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="requestorWrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+      </Parameters>
+      <Docs>
+        <param name="keySizeInBits">O tamanho da chave simétrica.</param>
+        <param name="targetWrappingCredentials">A chave de criptografia de credenciais para o destino da solicitação.</param>
+        <param name="requestorWrappingCredentials">A chave de criptografia de credenciais para o solicitante.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SymmetricProofDescriptor" /> classe com uma chave gerada automaticamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor, se você quiser que o STS para gerar automaticamente a chave e enviá-lo no token de prova como chave criptografada. Dois casos podem ser abrangidos usando este construtor:  
+  
+1.  O cliente envia a entropia, mas o servidor rejeita-lo.  
+  
+2.  O cliente não envia a entropia, a entropia do servidor é usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="keySizeInBits" /> é menor que ou igual a zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymmetricProofDescriptor (int keySizeInBits, System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials, System.IdentityModel.Tokens.EncryptingCredentials requestorWrappingCredentials, byte[] sourceEntropy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 keySizeInBits, class System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials, class System.IdentityModel.Tokens.EncryptingCredentials requestorWrappingCredentials, unsigned int8[] sourceEntropy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricProofDescriptor.#ctor(System.Int32,System.IdentityModel.Tokens.EncryptingCredentials,System.IdentityModel.Tokens.EncryptingCredentials,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keySizeInBits" Type="System.Int32" />
+        <Parameter Name="targetWrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="requestorWrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="sourceEntropy" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="keySizeInBits">O tamanho da chave simétrica.</param>
+        <param name="targetWrappingCredentials">A chave de criptografia de credenciais para o destino da solicitação.</param>
+        <param name="requestorWrappingCredentials">As credenciais de criptografia para o solicitante usado para criptografar a entropia ou o token de prova.</param>
+        <param name="sourceEntropy">Entropia do solicitante.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SymmetricProofDescriptor" /> combinado de classe a ser usada para o envio de entropia.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor, se você quiser enviar uma entropia combinada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sourceEntropy" />é <see langword="null" /> ou uma matriz vazia.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="keySize" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymmetricProofDescriptor (int keySizeInBits, System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials, System.IdentityModel.Tokens.EncryptingCredentials requestorWrappingCredentials, string encryptWith);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 keySizeInBits, class System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials, class System.IdentityModel.Tokens.EncryptingCredentials requestorWrappingCredentials, string encryptWith) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricProofDescriptor.#ctor(System.Int32,System.IdentityModel.Tokens.EncryptingCredentials,System.IdentityModel.Tokens.EncryptingCredentials,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keySizeInBits" Type="System.Int32" />
+        <Parameter Name="targetWrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="requestorWrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="encryptWith" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keySizeInBits">O tamanho da chave simétrica.</param>
+        <param name="targetWrappingCredentials">A chave de criptografia de credenciais para a terceira parte confiável.</param>
+        <param name="requestorWrappingCredentials">A chave de criptografia de credenciais para o solicitante.</param>
+        <param name="encryptWith">O algoritmo (URI) especificado no <see langword="&lt;EncryptWith&gt;" /> elemento a primeira.</param>
+        <summary>Use este construtor tem uma chave de gerar o STS e enviá-lo no token de prova como chave criptografada. Dois casos são cobertas 1 aqui. o cliente envia a entropia, mas o servidor rejeita-2. cliente não enviar uma entropia, portanto, basta usar a entropia do servidor</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `encryptWith` é um algoritmo DES, a chave é garantida não deve ser uma chave DES fraca.  
+  
+ Use este construtor, se você quiser que o STS para gerar automaticamente a chave e enviá-lo no token de prova como chave criptografada. Dois casos podem ser abrangidos usando este construtor:  
+  
+1.  O cliente envia a entropia, mas o servidor rejeita-lo.  
+  
+2.  O cliente não envia a entropia, a entropia do servidor é usado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="keySizeInBits" /> é menor que ou igual a zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SymmetricProofDescriptor (int keySizeInBits, System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials, System.IdentityModel.Tokens.EncryptingCredentials requestorWrappingCredentials, byte[] sourceEntropy, string encryptWith);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 keySizeInBits, class System.IdentityModel.Tokens.EncryptingCredentials targetWrappingCredentials, class System.IdentityModel.Tokens.EncryptingCredentials requestorWrappingCredentials, unsigned int8[] sourceEntropy, string encryptWith) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricProofDescriptor.#ctor(System.Int32,System.IdentityModel.Tokens.EncryptingCredentials,System.IdentityModel.Tokens.EncryptingCredentials,System.Byte[],System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="keySizeInBits" Type="System.Int32" />
+        <Parameter Name="targetWrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="requestorWrappingCredentials" Type="System.IdentityModel.Tokens.EncryptingCredentials" />
+        <Parameter Name="sourceEntropy" Type="System.Byte[]" />
+        <Parameter Name="encryptWith" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keySizeInBits">O tamanho da chave simétrica.</param>
+        <param name="targetWrappingCredentials">As credenciais de criptografia para a terceira parte confiável usado para criptografar a chave na propriedade SecurityKeyIdentifier.</param>
+        <param name="requestorWrappingCredentials">As credenciais de criptografia para o solicitante usado para criptografar a entropia ou o token de prova.</param>
+        <param name="sourceEntropy">Entropia do solicitante.</param>
+        <param name="encryptWith">O URI do algoritmo a ser usado para criptografar a chave de prova.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SymmetricProofDescriptor" /> combinado de classe a ser usada para o envio de entropia.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para enviar entropia combinada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="keySizeInBits" /> é menor que ou igual a zero.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="sourceEntropy" />é <see langword="null" /> ou uma matriz vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyTo">
+      <MemberSignature Language="C#" Value="public override void ApplyTo (System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse response);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ApplyTo(class System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse response) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricProofDescriptor.ApplyTo(System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="response" Type="System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse" />
+      </Parameters>
+      <Docs>
+        <param name="response">O RSTR ao qual aplicar o descritor de prova.</param>
+        <summary>Modifica o RSTR especificado com base nas configurações desse descritor de prova.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Define os artefatos apropriados, como o token de prova solicitado no RSTR com base no que é dentro da instância do descritor de prova.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="response" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeyBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetKeyBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetKeyBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricProofDescriptor.GetKeyBytes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o material da chave.</summary>
+        <returns>Uma matriz de bytes que contém o material da chave.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSourceEntropy">
+      <MemberSignature Language="C#" Value="protected byte[] GetSourceEntropy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8[] GetSourceEntropy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricProofDescriptor.GetSourceEntropy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a entropia de origem em bytes simples.</summary>
+        <returns>Uma matriz de bytes que contém a entropia de origem.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTargetEntropy">
+      <MemberSignature Language="C#" Value="protected byte[] GetTargetEntropy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8[] GetTargetEntropy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SymmetricProofDescriptor.GetTargetEntropy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a entropia de destino em bytes simples</summary>
+        <returns>Uma matriz de bytes que contém a entropia de destino.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyIdentifier">
+      <MemberSignature Language="C#" Value="public override System.IdentityModel.Tokens.SecurityKeyIdentifier KeyIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityKeyIdentifier KeyIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SymmetricProofDescriptor.KeyIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de chave que pode ser usado dentro do token emitido para definir a chave. Ele geralmente é o segredo binário ou a chave criptografada;</summary>
+        <value>O identificador de chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestorEncryptingCredentials">
+      <MemberSignature Language="C#" Value="protected System.IdentityModel.Tokens.EncryptingCredentials RequestorEncryptingCredentials { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.EncryptingCredentials RequestorEncryptingCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SymmetricProofDescriptor.RequestorEncryptingCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.EncryptingCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o solicitante criptografar credenciais, que podem ser usadas para criptografar o token de prova solicitado ou a entropia na resposta.</summary>
+        <value>As credenciais do solicitante com criptografia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetEncryptingCredentials">
+      <MemberSignature Language="C#" Value="protected System.IdentityModel.Tokens.EncryptingCredentials TargetEncryptingCredentials { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.EncryptingCredentials TargetEncryptingCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SymmetricProofDescriptor.TargetEncryptingCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.EncryptingCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a terceira parte confiável criptografar credenciais, que podem ser usadas para criptografar a segurança solicitada token na resposta.</summary>
+        <value>A terceira parte confiável criptografar credenciais.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

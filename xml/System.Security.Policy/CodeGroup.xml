@@ -1,0 +1,798 @@
+<Type Name="CodeGroup" FullName="System.Security.Policy.CodeGroup">
+  <TypeSignature Language="C#" Value="public abstract class CodeGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit CodeGroup extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.CodeGroup" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base abstrata da qual todas as implementações de código grupos devem derivar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Grupos de código são blocos de construção de política de segurança de acesso do código. Cada nível de política consiste em um grupo de códigos de raiz que pode ter grupos de códigos filho. Cada grupo de códigos filho pode ter seus próprios grupos de códigos filho; Esse comportamento se estende para qualquer número de níveis, formando uma árvore. Cada grupo de código tem uma condição de associação que determina se um determinado assembly pertence a ele com base na evidência de assembly.  
+  
+ Somente os grupos de código cujas condições de associação correspondem a evidência de um determinado assembly serão aplicados. Se um grupo de código correspondente tiver grupos de códigos filho, os filhos cujas condições de associação também correspondem a evidência fornecida da mesma forma serão aplicados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CodeGroup (System.Security.Policy.IMembershipCondition membershipCondition, System.Security.Policy.PolicyStatement policy);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Security.Policy.IMembershipCondition membershipCondition, class System.Security.Policy.PolicyStatement policy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.#ctor(System.Security.Policy.IMembershipCondition,System.Security.Policy.PolicyStatement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="membershipCondition" Type="System.Security.Policy.IMembershipCondition" />
+        <Parameter Name="policy" Type="System.Security.Policy.PolicyStatement" />
+      </Parameters>
+      <Docs>
+        <param name="membershipCondition">Uma condição de associação que testa a evidência para determinar se este grupo de códigos se aplica a política.</param>
+        <param name="policy">A declaração de política para o grupo de códigos na forma de um conjunto de permissões e os atributos conceder ao código que corresponde à condição de associação.</param>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Security.Policy.CodeGroup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um grupo de código básico e deve ser chamado a partir de construtores de grupos de código personalizado. Você pode adicionar grupos de códigos filho usando o <xref:System.Security.Policy.CodeGroup.AddChild%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="membershipCondition" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O tipo do <paramref name="membershipCondition" /> parâmetro não é válido.  
+  
+ -ou-  
+  
+ O tipo do <paramref name="policy" /> parâmetro não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddChild">
+      <MemberSignature Language="C#" Value="public void AddChild (System.Security.Policy.CodeGroup group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddChild(class System.Security.Policy.CodeGroup group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.AddChild(System.Security.Policy.CodeGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.Security.Policy.CodeGroup" />
+      </Parameters>
+      <Docs>
+        <param name="group">O grupo de código a ser adicionado como um filho. Esse novo grupo de códigos filho é adicionado ao final da lista.</param>
+        <summary>Adiciona um grupo de códigos filho para o grupo de código atual.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="group" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="group" /> parâmetro não é um grupo de código válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeString">
+      <MemberSignature Language="C#" Value="public virtual string AttributeString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AttributeString" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.CodeGroup.AttributeString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma representação de cadeia de caracteres dos atributos da declaração de política para o grupo de códigos.</summary>
+        <value>Uma representação de cadeia de caracteres dos atributos da declaração de política para o grupo de códigos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de cadeia de caracteres não está localizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Children { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList Children" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.CodeGroup.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista ordenada de grupos de código filho de um grupo de códigos.</summary>
+        <value>Uma lista de grupos de códigos filho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos grupos de códigos filho é significativa para determinados grupos de código.  
+  
+> [!NOTE]
+>  O valor de retorno é uma cópia da lista de código de filhos. Não use a lista retornada para adicionar um grupo de códigos filho; em vez disso, use o <xref:System.Security.Policy.CodeGroup.AddChild%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">É feita uma tentativa de definir essa propriedade como <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">É feita uma tentativa de definir essa propriedade com uma lista de filhos que não são <see cref="T:System.Security.Policy.CodeGroup" /> objetos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Policy.CodeGroup Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Policy.CodeGroup Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.CodeGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, faz uma cópia em profundidade do grupo de código atual.</summary>
+        <returns>Uma cópia equivalente do grupo de código atual, incluindo suas condições de associação e os grupos de códigos filho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz uma cópia em profundidade do grupo de código, para que também são feitas cópias de todos os objetos que contém o grupo de códigos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateXml">
+      <MemberSignature Language="C#" Value="protected virtual void CreateXml (System.Security.SecurityElement element, System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CreateXml(class System.Security.SecurityElement element, class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.CreateXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Security.SecurityElement" />
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="element">A codificação XML ao qual adicionar a serialização.</param>
+        <param name="level">O nível de política no qual existe o grupo de códigos.</param>
+        <summary>Quando substituído em uma classe derivada, serializa as propriedades e o estado interno específico a um grupo de código derivado e adiciona a serialização especificado <see cref="T:System.Security.SecurityElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Policy.CodeGroup.ToXml%2A>não pode ser substituído. Se você precisa serializar membros específicos a uma implementação específica de <xref:System.Security.Policy.CodeGroup>, você deve substituir <xref:System.Security.Policy.CodeGroup.CreateXml%2A> e serializar seus membros existe. Quando o grupo de códigos é serializado, <xref:System.Security.Policy.CodeGroup.ToXml%2A> chamadas <xref:System.Security.Policy.CodeGroup.CreateXml%2A> e adiciona a serialização para o <xref:System.Security.SecurityElement> criado por <xref:System.Security.Policy.CodeGroup.ToXml%2A>.  
+  
+ O XML criado usando esse método é desserializado o <xref:System.Security.Policy.CodeGroup.ParseXml%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você implementar esse método, você deve implementar o <see cref="M:System.Security.Policy.CodeGroup.ParseXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" /> método também.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.CodeGroup.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição do grupo de códigos.</summary>
+        <value>A descrição do grupo de códigos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O grupo de códigos para comparar com o grupo de código atual.</param>
+        <summary>Determina se o grupo de código especificado é equivalente ao grupo de código atual.</summary>
+        <returns>
+          <see langword="true" />Se o grupo de código especificada for equivalente ao grupo de código atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois grupos de código são equivalentes, se eles tiverem o mesmo <xref:System.Security.Policy.CodeGroup.Name%2A>, <xref:System.Security.Policy.CodeGroup.Description%2A>, e <xref:System.Security.Policy.CodeGroup.MembershipCondition%2A>.  
+  
+ Este método testa o grupo de códigos de nível superior, não seus grupos de códigos filho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Security.Policy.CodeGroup cg, bool compareChildren);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class System.Security.Policy.CodeGroup cg, bool compareChildren) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.Equals(System.Security.Policy.CodeGroup,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cg" Type="System.Security.Policy.CodeGroup" />
+        <Parameter Name="compareChildren" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cg">O grupo de códigos para comparar com o grupo de código atual.</param>
+        <param name="compareChildren">
+          <see langword="true" />para comparar os grupos de códigos filho, Caso contrário, <see langword="false" />.</param>
+        <summary>Determina se o grupo de código especificado é equivalente ao grupo de código atual, verificando os grupos de códigos filho, se especificado.</summary>
+        <returns>
+          <see langword="true" />Se o grupo de código especificada for equivalente ao grupo de código atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois grupos de código são equivalentes, se eles tiverem o mesmo <xref:System.Security.Policy.CodeGroup.Name%2A>, <xref:System.Security.Policy.CodeGroup.Description%2A>, e <xref:System.Security.Policy.CodeGroup.MembershipCondition%2A>.  
+  
+ Se o `compareChildren` parâmetro é `true`, esse método retornará apenas `true` se o grupo de código atual e todos os seus grupos de código filho são equivalentes ao grupo de código especificada e todos os seus grupos de código filho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public void FromXml (System.Security.SecurityElement e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FromXml(class System.Security.SecurityElement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="e">O XML de codificação a ser usada para reconstruir o objeto de segurança.</param>
+        <summary>Reconstrói um objeto de segurança com um determinado estado de uma codificação de XML.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="e" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.Security.Policy.CodeGroup.FromXml(System.Security.SecurityElement)" />e <see cref="M:System.Security.Policy.CodeGroup.ToXml" /> não pode ser substituído. Se você precisar alterar a maneira na qual sua implementação do grupo de código trata o XML, substitua o <see cref="M:System.Security.Policy.CodeGroup.ParseXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" /> e <see cref="M:System.Security.Policy.CodeGroup.CreateXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" /> métodos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public void FromXml (System.Security.SecurityElement e, System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FromXml(class System.Security.SecurityElement e, class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.FromXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="e">O XML de codificação a ser usada para reconstruir o objeto de segurança.</param>
+        <param name="level">O nível de política no qual existe o grupo de códigos.</param>
+        <summary>Reconstrói um objeto de segurança com um determinado estado e o nível de política de uma codificação de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto do nível de política é fornecido para resolução de conjuntos de permissões nomeadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="e" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.Security.Policy.CodeGroup.FromXml(System.Security.SecurityElement)" />e <see cref="M:System.Security.Policy.CodeGroup.ToXml" /> não pode ser substituído. Se você precisar alterar a maneira na qual sua implementação do grupo de código trata o XML, substitua o <see cref="M:System.Security.Policy.CodeGroup.ParseXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" /> e <see cref="M:System.Security.Policy.CodeGroup.CreateXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" /> métodos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o código hash do grupo de código atual.</summary>
+        <returns>O código hash do grupo de código atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MembershipCondition">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.IMembershipCondition MembershipCondition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.IMembershipCondition MembershipCondition" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.CodeGroup.MembershipCondition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.IMembershipCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a condição de associação do grupo de códigos.</summary>
+        <value>A condição de associação que determina a evidência de que o grupo de códigos é aplicável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma condição de associação testa evidência e retorna um valor booliano que indica se há uma correspondência.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">É feita uma tentativa de definir esse parâmetro como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeLogic">
+      <MemberSignature Language="C#" Value="public abstract string MergeLogic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MergeLogic" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.CodeGroup.MergeLogic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a lógica de mesclagem para o grupo de códigos.</summary>
+        <value>Uma descrição da lógica de mesclagem para o grupo de códigos.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Esta propriedade é uma descrição de cadeia de caracteres da lógica de mesclagem usada pelo grupo de código para resolver as permissões concedidas por seus grupos de códigos filho. Ele destina-se a ajudar os administradores usando o grupo de códigos, mas não é usado pelo sistema de política.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.CodeGroup.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do grupo de códigos.</summary>
+        <value>O nome do grupo de códigos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseXml">
+      <MemberSignature Language="C#" Value="protected virtual void ParseXml (System.Security.SecurityElement e, System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ParseXml(class System.Security.SecurityElement e, class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.ParseXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="e">O XML de codificação a ser usada para reconstruir o objeto de segurança.</param>
+        <param name="level">O nível de política no qual existe o grupo de códigos.</param>
+        <summary>Quando substituído em uma classe derivada, reconstrói propriedades e o estado interno específico a um grupo de código derivado especificado <see cref="T:System.Security.SecurityElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Policy.CodeGroup.FromXml%2A>não pode ser substituído. Se você precisa desserializar membros específicos a uma implementação específica de <xref:System.Security.Policy.CodeGroup>, você deve substituir <xref:System.Security.Policy.CodeGroup.ParseXml%2A> e desserializar os membros existe. Quando o grupo de códigos é desserializado, <xref:System.Security.Policy.CodeGroup.FromXml%2A> chamadas <xref:System.Security.Policy.CodeGroup.ParseXml%2A> e reconstrói os membros do <xref:System.Security.SecurityElement>.  
+  
+ Esse método desserializa XML criado usando <xref:System.Security.Policy.CodeGroup.CreateXml%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você implementar esse método, você deve implementar o <see cref="M:System.Security.Policy.CodeGroup.CreateXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" /> método também.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionSetName">
+      <MemberSignature Language="C#" Value="public virtual string PermissionSetName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PermissionSetName" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.CodeGroup.PermissionSetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do conjunto de permissões nomeadas para o grupo de códigos.</summary>
+        <value>O nome de um conjunto de permissões nomeadas de nível de política.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser `null` se o grupo de códigos contém um conjunto de permissões sem nome.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyStatement">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.PolicyStatement PolicyStatement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.PolicyStatement PolicyStatement" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.CodeGroup.PolicyStatement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a política associada ao grupo de código.</summary>
+        <value>A declaração de política para o grupo de códigos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A declaração de política se aplica ao código em assemblies quando evidência corresponde a condição de associação.  
+  
+ Essa propriedade também pode ser definida passando uma declaração de diretiva para o construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o <xref:System.Security.Policy.PolicyStatement> para um grupo de códigos.  
+  
+ [!code-cpp[Classic CodeGroup.PolicyStatement Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic CodeGroup.PolicyStatement Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic CodeGroup.PolicyStatement Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic CodeGroup.PolicyStatement Example/CS/source.cs#1)]
+ [!code-vb[Classic CodeGroup.PolicyStatement Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic CodeGroup.PolicyStatement Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveChild">
+      <MemberSignature Language="C#" Value="public void RemoveChild (System.Security.Policy.CodeGroup group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveChild(class System.Security.Policy.CodeGroup group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.RemoveChild(System.Security.Policy.CodeGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.Security.Policy.CodeGroup" />
+      </Parameters>
+      <Docs>
+        <param name="group">O grupo de código a ser removido como um filho.</param>
+        <summary>Remove o grupo de códigos filho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente os grupos de códigos filho imediato podem ser removidos com esse método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="group" /> parâmetro não é um grupo de códigos filho imediato do grupo de código atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Policy.PolicyStatement Resolve (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Policy.PolicyStatement Resolve(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.Resolve(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">A evidência do assembly.</param>
+        <summary>Quando substituído em uma classe derivada, resolve a política para o grupo de códigos e seus descendentes de um conjunto de evidência.</summary>
+        <returns>Uma instrução de política que consiste nas permissões concedidas pelo grupo de código com atributos opcionais, ou <see langword="null" /> se o grupo de códigos não se aplica (a condição de associação não corresponde a evidência especificada).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dada a evidência para um assembly a ser carregado, esse método avalia o grupo de códigos, verificando a condição de associação em relação a evidência especificada. Se houver uma correspondência, esse método retorna uma instrução de política para o grupo de código, incluindo avaliação do filho de grupos de código.  
+  
+ Para um <xref:System.Security.Policy.UnionCodeGroup>, todos os grupos de códigos filho cuja condição corresponde a evidência especificada são também resolvidos e todas as instruções de políticas resultante são combinadas com a declaração de política de grupo de códigos de união pai. Cada tipo de grupo de códigos filho determina como todos os grupos filho abaixo dele são aplicados, dependendo de como a <xref:System.Security.Policy.CodeGroup.Resolve%2A> métodos desses grupos filho de trabalho.  
+  
+ O sistema de segurança do .NET Framework usa <xref:System.Security.Policy.CodeGroup.Resolve%2A> nos níveis de política para determinar quais permissões conceder ao código carregado das instruções de políticas resultante e o código de solicitação no assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveMatchingCodeGroups">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Policy.CodeGroup ResolveMatchingCodeGroups (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Policy.CodeGroup ResolveMatchingCodeGroups(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.ResolveMatchingCodeGroups(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.CodeGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">A evidência do assembly.</param>
+        <summary>Quando substituído em uma classe derivada, resolve os grupos de código correspondentes.</summary>
+        <returns>Um <see cref="T:System.Security.Policy.CodeGroup" /> que é a raiz da árvore de grupos de código correspondentes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método tem as mesmas características de avaliação de <xref:System.Security.Policy.CodeGroup.Resolve%2A>. O grupo de códigos que é retornado contém grupos de códigos filho, que por sua vez, podem ter grupos de códigos filho conforme necessário para refletir o conjunto completo de grupos de códigos que corresponderam a evidência fornecida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML do objeto de segurança e seu estado atual.</summary>
+        <returns>Uma codificação de XML do objeto de segurança, incluindo quaisquer informações de estado.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.Security.Policy.CodeGroup.FromXml(System.Security.SecurityElement)" />e <see cref="M:System.Security.Policy.CodeGroup.ToXml" /> não pode ser substituído. Se você precisar alterar a maneira na qual sua implementação do grupo de código trata o XML, substitua o <see cref="M:System.Security.Policy.CodeGroup.ParseXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" /> e <see cref="M:System.Security.Policy.CodeGroup.CreateXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" /> métodos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityElement ToXml (System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.SecurityElement ToXml(class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.CodeGroup.ToXml(System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="level">O nível de política no qual existe o grupo de códigos.</param>
+        <summary>Cria uma codificação de XML do objeto de segurança, seu estado atual e o nível de política na qual o código existente.</summary>
+        <returns>Uma codificação de XML do objeto de segurança, incluindo quaisquer informações de estado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto do nível de política é fornecido para resolução de conjuntos de permissões nomeadas.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.Security.Policy.CodeGroup.FromXml(System.Security.SecurityElement)" />e <see cref="M:System.Security.Policy.CodeGroup.ToXml" /> não pode ser substituído. Se você precisar alterar a maneira na qual sua implementação do grupo de código trata o XML, substitua o <see cref="M:System.Security.Policy.CodeGroup.ParseXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" /> e <see cref="M:System.Security.Policy.CodeGroup.CreateXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" /> métodos.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

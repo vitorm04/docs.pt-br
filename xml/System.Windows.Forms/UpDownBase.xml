@@ -1,0 +1,1719 @@
+<Type Name="UpDownBase" FullName="System.Windows.Forms.UpDownBase">
+  <TypeSignature Language="C#" Value="public abstract class UpDownBase : System.Windows.Forms.ContainerControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UpDownBase extends System.Windows.Forms.ContainerControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.UpDownBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ContainerControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.UpDownBaseDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa a funcionalidade básica necessária para uma caixa de rotação (também conhecida como um controle superior/inferior).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma caixa de rotação consiste em uma caixa de texto e uma barra de rolagem vertical pequeno, conhecido como um controle de botão de rotação. O <xref:System.Windows.Forms.UpDownBase> classe vincula os dois controles e permite que o usuário altere a exibição na caixa de texto, clicando em cima ou para baixo de botões ou digitando o tipo apropriado de valor diretamente na caixa de texto. Use a caixa de rotação em casos onde você deseja limitar a lista de valores de um usuário pode selecionar, semelhante a uma caixa de listagem ou caixa de combinação. Dependendo do tipo de lista que você deseja exibir, a vantagem de usar uma caixa de rotação é que ele permite que você definir um intervalo de valores válidos, em vez de adicionar itens rapidamente por vez. Implementar uma caixa de rotação requer menos validação de dados de uma caixa de texto, como você pode limitar o tipo de dados quando você derivar uma classe de <xref:System.Windows.Forms.UpDownBase>. Um exemplo disso é o <xref:System.Windows.Forms.NumericUpDown> classe, que limita os valores para o tipo numérico e usa um <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> e <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> propriedade para validar os dados.  
+  
+ Para permitir que o usuário a usar as teclas de direção para alterar o conteúdo de uma caixa de rotação, defina o <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys%2A> propriedade `true`. Para impedir que o usuário para valores que você especificar, defina o <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> propriedade `true`. Para controlar o alinhamento do texto na caixa de rotação, defina o <xref:System.Windows.Forms.UpDownBase.TextAlign%2A> propriedade. Para definir o alinhamento de cima e para baixo botões em relação a parte da caixa de texto do controle, defina a <xref:System.Windows.Forms.UpDownBase.UpDownAlign%2A> propriedade como <xref:System.Windows.Forms.LeftRightAlignment.Left> ou <xref:System.Windows.Forms.LeftRightAlignment.Right>.  
+  
+ O <xref:System.Windows.Forms.UpDownBase.UpButton%2A> e <xref:System.Windows.Forms.UpDownBase.DownButton%2A> métodos, quando for substituído, tratar o clicando em cima ou para baixo de botões. Quando substituído, o <xref:System.Windows.Forms.UpDownBase.ValidateEditText%2A> e <xref:System.Windows.Forms.UpDownBase.UpdateEditText%2A> métodos validar o valor (seja selecionada ou inserida) e atualizar o texto exibido na caixa de rotação. Se o valor de falha na validação, use o <xref:System.Windows.Forms.UpDownBase.Select%2A> método para selecionar o texto que não é válido. Isso permite que o usuário corrigir o texto rapidamente, simplesmente digitando um novo valor, sem ter que selecionar manualmente ou exclua o texto existente.  
+  
+ Começando com o [!INCLUDE[net_2015](~/includes/net-2015-md.md)], o <xref:System.Windows.Forms.UpDownBase> controle será redimensionado com base na configuração de DPI do sistema quando o arquivo App. config contém a seguinte entrada:  
+  
+```  
+<appSettings>  
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />  
+</appSettings>  
+  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.NumericUpDown> e define algumas de suas propriedades derivadas de <xref:System.Windows.Forms.UpDownBase>. Esse código requer que você tenha um <xref:System.Windows.Forms.NumericUpDown> controle chamado `numericUpDown1`, dois <xref:System.Windows.Forms.ComboBox> controles denominados `comboBox1` e `comboBox2`e três <xref:System.Windows.Forms.CheckBox> controles denominados `checkBox1`, `checkBox2`, e `checkBox2` criado em um formulário. Adicionar itens a seguir para `comboBox1`: `None`, `Fixed3D`, e `FixedSingle`. Adicionar itens a seguir para `comboBox2`: `Left`, `Right`, e `Center`.  
+  
+ O código permite que você altere os valores de propriedade em tempo de execução e ver como cada afeta a aparência e o comportamento da caixa de rotação.  
+  
+ [!code-cpp[Classic UpDownBase Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UpDownBase Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic UpDownBase Example/CS/source.cs#1)]
+ [!code-vb[Classic UpDownBase Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.Windows.Forms.UpDownBase" />, você deve substituir os seguintes membros: <see cref="M:System.Windows.Forms.UpDownBase.DownButton" />, <see cref="M:System.Windows.Forms.UpDownBase.UpButton" />, <see cref="M:System.Windows.Forms.UpDownBase.UpdateEditText" />, e <see cref="M:System.Windows.Forms.UpDownBase.ValidateEditText" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UpDownBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.UpDownBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScroll">
+      <MemberSignature Language="C#" Value="public override bool AutoScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.AutoScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o contêiner permitirá que o usuário role até os controles posicionados fora dos limites visíveis.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownBase> controle não usa o <xref:System.Windows.Forms.UpDownBase.AutoScroll%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollMargin">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size AutoScrollMargin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size AutoScrollMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.AutoScrollMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho da margem de rolagem automática.</summary>
+        <value>O <see cref="T:System.Drawing.Size" /> que representa a altura e largura, em pixels, da margem de rolagem automática.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownBase> controle não usa o <xref:System.Windows.Forms.UpDownBase.AutoScrollMargin%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Drawing.Size.Height" /> ou <see cref="P:System.Drawing.Size.Width" /> é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScrollMinSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size AutoScrollMinSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size AutoScrollMinSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.AutoScrollMinSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho mínimo da área de rolagem automática.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> que representa a altura mínima e a largura, em pixels, das barras de rolagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownBase> controle não usa o <xref:System.Windows.Forms.UpDownBase.AutoScrollMinSize%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSize">
+      <MemberSignature Language="C#" Value="public override bool AutoSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.AutoSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Visible)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle deve ser redimensionada automaticamente com base em seu conteúdo.</summary>
+        <value>
+          <see langword="true" />para indicar que o controle deve ser redimensionada automaticamente com base em seu conteúdo. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSizeChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoSizeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoSizeChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.UpDownBase.AutoSizeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.UpDownBase.AutoSize" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.UpDownBase.AutoSizeChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.UpDownBase>, como um <xref:System.Windows.Forms.NumericUpDown> ou <xref:System.Windows.Forms.DomainUpDown>. Em seguida, nomear a instância `UpDownBase1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.UpDownBase.AutoSizeChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#380](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#380)]
+ [!code-vb[System.Windows.Forms.EventExamples#380](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#380)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de plano de fundo para a parte da caixa de texto da caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de plano de fundo da parte de caixa de texto da caixa de rotação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem da tela de fundo do <see cref="T:System.Windows.Forms.UpDownBase" />.</summary>
+        <value>Uma imagem de tela de fundo para o <see cref="T:System.Windows.Forms.UpDownBase" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownBase.BackgroundImage%2A> propriedade não tem nenhum efeito na aparência do <xref:System.Windows.Forms.UpDownBase> controlar; portanto, ele está oculto no designer e do IntelliSense.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.UpDownBase.BackgroundImageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.UpDownBase.BackgroundImage" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o layout do <see cref="P:System.Windows.Forms.UpDownBase.BackgroundImage" /> do <see cref="T:System.Windows.Forms.UpDownBase" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImageLayout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownBase.BackgroundImageLayout%2A> propriedade não tem nenhum efeito na aparência do <xref:System.Windows.Forms.UpDownBase> controlar; portanto, ele está oculto no designer e do IntelliSense.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayoutChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackgroundImageLayoutChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackgroundImageLayoutChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.UpDownBase.BackgroundImageLayoutChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.UpDownBase.BackgroundImageLayout" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.BorderStyle BorderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.BorderStyle BorderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.BorderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(-504)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BorderStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de borda para a caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.BorderStyle" />. O valor padrão é <see cref="F:System.Windows.Forms.BorderStyle.Fixed3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Windows.Forms.TextBoxBase.BorderStyle%2A> propriedade criar simples e sem borda controla além de controle padrão tridimensional.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.NumericUpDown> e define algumas de suas propriedades derivadas de <xref:System.Windows.Forms.UpDownBase>. Esse código requer que você tenha um <xref:System.Windows.Forms.NumericUpDown> controle chamado `numericUpDown1`, dois <xref:System.Windows.Forms.ComboBox> controles denominados `comboBox1` e `comboBox2`e três <xref:System.Windows.Forms.CheckBox> controles denominados `checkBox1`, `checkBox2`, e `checkBox2` criado em um formulário. Adicionar itens a seguir para `comboBox1`: `None`, `Fixed3D`, e `FixedSingle`. Adicionar itens a seguir para `comboBox2`: `Left`, `Right`, e `Center`.  
+  
+ O código permite que você altere os valores de propriedade em tempo de execução e ver como cada afeta a aparência e o comportamento da caixa de rotação.  
+  
+ [!code-cpp[Classic UpDownBase Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UpDownBase Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic UpDownBase Example/CS/source.cs#1)]
+ [!code-vb[Classic UpDownBase Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.BorderStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangingText">
+      <MemberSignature Language="C#" Value="protected bool ChangingText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ChangingText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.ChangingText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a propriedade de texto está sendo alterada internamente por sua classe pai.</summary>
+        <value>
+          <see langword="true" /> se a propriedade <see cref="P:System.Windows.Forms.UpDownBase.Text" /> estiver sendo alterada internamente pela classe <see cref="T:System.Windows.Forms.UpDownBase" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownBase.ChangingText%2A> propriedade atua como um sinalizador para o <xref:System.Windows.Forms.UpDownBase> classe. Esta propriedade é usada por classes derivadas para indicar quando a classe está mudando atual <xref:System.Windows.Forms.UpDownBase.Text%2A> propriedade internamente. Se essa propriedade é definida como `false`, o controle requer que o usuário está mudando o <xref:System.Windows.Forms.UpDownBase.Text%2A> propriedade e definirá o <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenu">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ContextMenu ContextMenu { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenu ContextMenu" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.ContextMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o menu de atalho associada à caixa de rotação (também conhecida como controle para cima/para baixo).</summary>
+        <value>O <see cref="T:System.Windows.Forms.ContextMenu" /> associado à caixa de rotação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É a melhor maneira de associar um menu de atalho um nó de árvore com o <xref:System.Windows.Forms.UpDownBase.ContextMenuStrip%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStrip">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ContextMenuStrip ContextMenuStrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenuStrip ContextMenuStrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.ContextMenuStrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o menu de atalho para a caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <value>O <see cref="T:System.Windows.Forms.ContextMenuStrip" /> associado ao controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de atalho aparece quando o usuário clica a caixa de rotação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de criação necessários quando a alça de controle é criada.</summary>
+        <value>Os parâmetros de criação.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração associada <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho padrão do controle.</summary>
+        <value>O <see cref="T:System.Drawing.Size" /> padrão do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DockPadding">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ScrollableControl.DockPaddingEdges DockPadding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ScrollableControl/DockPaddingEdges DockPadding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.DockPadding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollableControl+DockPaddingEdges</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as configurações de preenchimento para todas as bordas de encaixe a <see cref="T:System.Windows.Forms.UpDownBase" /> controle.</summary>
+        <value>As configurações de preenchimentos de encaixe para este controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownBase> controle não usa o <xref:System.Windows.Forms.UpDownBase.DockPadding%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DownButton">
+      <MemberSignature Language="C#" Value="public abstract void DownButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DownButton() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.DownButton" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, manipula clicando no botão para baixo na caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir esse método em uma classe derivada, certifique-se de chamar o <see cref="M:System.Windows.Forms.UpDownBase.UpdateEditText" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Focused">
+      <MemberSignature Language="C#" Value="public override bool Focused { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Focused" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.Focused" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle tem foco de entrada.</summary>
+        <value>
+          <see langword="true" /> se o controle tiver o foco; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano da caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <value>O primeiro plano <see cref="T:System.Drawing.Color" /> da caixa de rotação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownBase.ForeColor%2A> propriedade irá alterar a cor do texto na parte de caixa de texto da caixa de rotação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterceptArrowKeys">
+      <MemberSignature Language="C#" Value="public bool InterceptArrowKeys { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InterceptArrowKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.InterceptArrowKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário pode usar as teclas de SETA PARA CIMA e SETA PARA BAIXO para selecionar valores.</summary>
+        <value>
+          <see langword="true" /> se o controle permitir o uso das teclas de SETA PARA CIMA e SETA PARA BAIXO para selecionar valores; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys%2A> está definida como `true` e a caixa de rotação (também conhecido como um controle acima-abaixo) tem foco, o usuário pode usar as teclas de seta para cima e seta para baixo para selecionar valores.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.NumericUpDown> e define algumas de suas propriedades derivadas de <xref:System.Windows.Forms.UpDownBase>. Esse código requer que você tenha um <xref:System.Windows.Forms.NumericUpDown> controle chamado `numericUpDown1`, dois <xref:System.Windows.Forms.ComboBox> controles denominados `comboBox1` e `comboBox2`e três <xref:System.Windows.Forms.CheckBox> controles denominados `checkBox1`, `checkBox2`, e `checkBox2` criado em um formulário. Adicionar itens a seguir para `comboBox1`: `None`, `Fixed3D`, e `FixedSingle`. Adicionar itens a seguir para `comboBox2`: `Left`, `Right`, e `Center`.  
+  
+ O código permite que você altere os valores de propriedade em tempo de execução e ver como cada afeta a aparência e o comportamento da caixa de rotação.  
+  
+ [!code-cpp[Classic UpDownBase Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UpDownBase Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic UpDownBase Example/CS/source.cs#1)]
+ [!code-vb[Classic UpDownBase Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size MaximumSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size MaximumSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.MaximumSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo da caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <value>O <see cref="T:System.Drawing.Size" />, que é o tamanho máximo da caixa de rotação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Independentemente do valor especificado, o <xref:System.Drawing.Size.Height%2A> do tamanho máximo será sempre 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size MinimumSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size MinimumSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.MinimumSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho mínimo da caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <value>O <see cref="T:System.Drawing.Size" />, que é o tamanho mínimo da caixa de rotação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseEnter">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseEnter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseEnter" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.UpDownBase.MouseEnter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o ponteiro do mouse entra o <see cref="T:System.Windows.Forms.UpDownBase" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseHover">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseHover;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseHover" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.UpDownBase.MouseHover" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o ponteiro do mouse focaliza o <see cref="T:System.Windows.Forms.UpDownBase" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseLeave">
+      <MemberSignature Language="C#" Value="public event EventHandler MouseLeave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MouseLeave" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.UpDownBase.MouseLeave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o ponteiro do mouse sai de <see cref="T:System.Windows.Forms.UpDownBase" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.MouseEventHandler MouseMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.MouseEventHandler MouseMove" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.UpDownBase.MouseMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário move o ponteiro do mouse sobre o <see cref="T:System.Windows.Forms.UpDownBase" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnChanged (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnChanged(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Quando substituído em uma classe derivada, gera o evento Changed.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.FontChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnFontChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnFontChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnFontChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleCreated">
+      <MemberSignature Language="C#" Value="protected override void OnHandleCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnHandleCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.HandleCreated" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnHandleCreated%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnHandleCreated(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnHandleCreated(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHandleDestroyed">
+      <MemberSignature Language="C#" Value="protected override void OnHandleDestroyed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnHandleDestroyed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnHandleDestroyed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.HandleDestroyed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnHandleDestroyed%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnHandleDestroyed(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnHandleDestroyed(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayout">
+      <MemberSignature Language="C#" Value="protected override void OnLayout (System.Windows.Forms.LayoutEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLayout(class System.Windows.Forms.LayoutEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnLayout(System.Windows.Forms.LayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.LayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.LayoutEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.Layout" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnLayout%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnLayout(System.Windows.Forms.LayoutEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnLayout(System.Windows.Forms.LayoutEventArgs)" /> método para que registrado delegados receber o evento.  
+  
+ Exemplo</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnMouseDown(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.MouseDown" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnMouseDown%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.MouseEventArgs mevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.MouseEventArgs mevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mevent" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="mevent">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.MouseUp" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se ocorrer um clique duplo, o <xref:System.Windows.Forms.UpDownBase.OnMouseUp%2A> método irá disparar o <xref:System.Windows.Forms.Control.DoubleClick> evento.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnMouseUp%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnMouseUp(System.Windows.Forms.MouseEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnMouseWheel (System.Windows.Forms.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseWheel(class System.Windows.Forms.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.MouseEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.MouseWheel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a caixa de rotação (também conhecido como um controle acima-abaixo) tiver o foco quando esse evento ocorre, a direção do usuário rolado o mouse roda é determinada e o <xref:System.Windows.Forms.UpDownBase.UpButton%2A> ou <xref:System.Windows.Forms.UpDownBase.DownButton%2A> método é chamado.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnMouseWheel%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnMouseWheel(System.Windows.Forms.MouseEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.PaintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.Paint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnPaint%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnPaint(System.Windows.Forms.PaintEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnPaint(System.Windows.Forms.PaintEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextBoxKeyDown">
+      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxKeyDown (object source, System.Windows.Forms.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTextBoxKeyDown(object source, class System.Windows.Forms.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnTextBoxKeyDown(System.Object,System.Windows.Forms.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.Windows.Forms.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.Windows.Forms.KeyEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.KeyDown" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys%2A> está definida como `true` e o usuário pressiona a tecla de seta para cima, o <xref:System.Windows.Forms.UpDownBase.UpButton%2A> método é chamado. Da mesma forma, se o usuário pressiona a tecla de seta para baixo, o <xref:System.Windows.Forms.UpDownBase.DownButton%2A> método é chamado.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnTextBoxKeyDown%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnTextBoxKeyDown(System.Object,System.Windows.Forms.KeyEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnTextBoxKeyDown(System.Object,System.Windows.Forms.KeyEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextBoxKeyPress">
+      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxKeyPress (object source, System.Windows.Forms.KeyPressEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTextBoxKeyPress(object source, class System.Windows.Forms.KeyPressEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnTextBoxKeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.Windows.Forms.KeyPressEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.Windows.Forms.KeyPressEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.KeyPress" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnTextBoxKeyPress%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnTextBoxKeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnTextBoxKeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextBoxLostFocus">
+      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxLostFocus (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTextBoxLostFocus(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnTextBoxLostFocus(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.LostFocus" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método valida o texto na parte da caixa de texto do controle quando a caixa de rotação (também conhecido como um controle acima-abaixo) perde o foco.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnTextBoxLostFocus%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnTextBoxLostFocus(System.Object,System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnTextBoxLostFocus(System.Object,System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextBoxResize">
+      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxResize (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTextBoxResize(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnTextBoxResize(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.Resize" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método ajusta o tamanho da caixa de rotação (também conhecido como um controle acima-abaixo) quando a parte da caixa de texto do controle é redimensionado.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnTextBoxResize%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnTextBoxResize(System.Object,System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnTextBoxResize(System.Object,System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextBoxTextChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnTextBoxTextChanged (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTextBoxTextChanged(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.OnTextBoxTextChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.TextChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.UpDownBase.OnTextBoxTextChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.UpDownBase.OnTextBoxTextChanged(System.Object,System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.UpDownBase.OnTextBoxTextChanged(System.Object,System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredHeight">
+      <MemberSignature Language="C#" Value="public int PreferredHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PreferredHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.PreferredHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura da caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <value>A altura, em pixels, da caixa de rotação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownBase.PreferredHeight%2A> o valor da propriedade se baseia o <xref:System.Windows.Forms.TextBoxBase.PreferredHeight%2A> propriedade da parte de caixa de texto do controle e é ajustado para o estilo da borda.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.NumericUpDown> e define algumas de suas propriedades derivadas de <xref:System.Windows.Forms.UpDownBase>. Esse código requer que você tenha um <xref:System.Windows.Forms.NumericUpDown> controlar, dois <xref:System.Windows.Forms.ComboBox> controles e três <xref:System.Windows.Forms.CheckBox> controles criados em um formulário. Rótulo de <xref:System.Windows.Forms.ComboBox> controles <xref:System.Windows.Forms.UpDownBase.BorderStyle%2A> e <xref:System.Windows.Forms.UpDownBase.TextAlign%2A>. Rótulo de <xref:System.Windows.Forms.CheckBox> controles <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, e <xref:System.Windows.Forms.UpDownBase.UpDownAlign%2A>. O código permite que você altere os valores de propriedade em tempo de execução e ver como cada afeta a aparência e o comportamento da caixa de rotação. Adicionar os itens a seguir para a caixa de combinação BorderStyle: `None`, `Fixed3D`, e `FixedSingle`. Adicionar os itens a seguir para a caixa de combinação TextAlign: `Left`, `Right`, e `Center`.  
+  
+ [!code-cpp[Classic UpDownBase.BorderStyle Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase.BorderStyle Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UpDownBase.BorderStyle Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic UpDownBase.BorderStyle Example/CS/source.cs#1)]
+ [!code-vb[Classic UpDownBase.BorderStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase.BorderStyle Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o texto pode ser alterado pelo uso dos botões para cima e para baixo apenas.</summary>
+        <value>
+          <see langword="true" /> se o texto puder ser alterado pelo uso dos botões para cima ou para baixo apenas; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> propriedade `true`, você elimina a necessidade de muita validação do <xref:System.Windows.Forms.UpDownBase.Text%2A> propriedade. O usuário será restrito para o uso de cima e para baixo de botões para alterar o <xref:System.Windows.Forms.UpDownBase.Text%2A> valores. Ele só permitirá a seleção de valores que você especificar.  
+  
+> [!NOTE]
+>  Na classe derivada <xref:System.Windows.Forms.DomainUpDown>, o comportamento descrito é ligeiramente diferente. Quando <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> é definido como `true` e uma tecla é pressionada, o controle seleciona o primeiro item na coleção em que o primeiro caractere corresponde a tecla pressionada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.NumericUpDown> e define algumas de suas propriedades derivadas de <xref:System.Windows.Forms.UpDownBase>. Esse código requer que você tenha um <xref:System.Windows.Forms.NumericUpDown> controlar, dois <xref:System.Windows.Forms.ComboBox> controles e três <xref:System.Windows.Forms.CheckBox> controles criados em um formulário. Rótulo de <xref:System.Windows.Forms.ComboBox> controles <xref:System.Windows.Forms.UpDownBase.BorderStyle%2A> e <xref:System.Windows.Forms.UpDownBase.TextAlign%2A>. Rótulo de <xref:System.Windows.Forms.CheckBox> controles <xref:System.Windows.Forms.UpDownBase.InterceptArrowKeys%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, e <xref:System.Windows.Forms.UpDownBase.UpDownAlign%2A>. O código permite que você altere os valores de propriedade em tempo de execução e ver como cada afeta a aparência e o comportamento da caixa de rotação. Adicionar os itens a seguir para a caixa de combinação BorderStyle: `None`, `Fixed3D`, e `FixedSingle`. Adicionar os itens a seguir para a caixa de combinação TextAlign: `Left`, `Right`, e `Center`.  
+  
+ [!code-cpp[Classic UpDownBase Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UpDownBase Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic UpDownBase Example/CS/source.cs#1)]
+ [!code-vb[Classic UpDownBase Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RescaleConstantsForDpi">
+      <MemberSignature Language="C#" Value="protected override void RescaleConstantsForDpi (int deviceDpiOld, int deviceDpiNew);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RescaleConstantsForDpi(int32 deviceDpiOld, int32 deviceDpiNew) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.RescaleConstantsForDpi(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deviceDpiOld" Type="System.Int32" />
+        <Parameter Name="deviceDpiNew" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="deviceDpiOld">O valor de DPI antes da alteração.</param>
+        <param name="deviceDpiNew">O valor de DPI após a alteração.</param>
+        <summary>Fornece constantes para redimensionamento de controle quando ocorre uma alteração de DPI.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public void Select (int start, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Select(int32 start, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.Select(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="start">A posição do primeiro caractere a ser selecionado.</param>
+        <param name="length">O número total de caracteres a ser selecionado.</param>
+        <summary>Seleciona um intervalo de texto na caixa de rotação (também conhecido como um controle acima-abaixo) que especifica a posição inicial e o número de caracteres a selecionar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownBase.Select%2A> método pode ser usado quando a caixa de rotação obtém foco, ou quando o <xref:System.Windows.Forms.UpDownBase.Text%2A> Falha na validação de dados de propriedade. Ao adicionar o código de validação para o <xref:System.Windows.Forms.UpDownBase.ValidateEditText%2A> método em uma classe derivada, chamada de <xref:System.Windows.Forms.UpDownBase.Select%2A> método quando a validação falha.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.NumericUpDown>. Esse código requer que um <xref:System.Windows.Forms.NumericUpDown> controle e um <xref:System.Windows.Forms.Button> foram criadas em um formulário e o <xref:System.Drawing> namespace foi adicionado como uma referência. No <xref:System.Windows.Forms.Control.Click> eventos para o botão, o tamanho do ponto do texto no <xref:System.Windows.Forms.NumericUpDown> controlar aumenta. Isso solicita que o controle para ajustar seu <xref:System.Windows.Forms.UpDownBase.PreferredHeight%2A> propriedade para que todo o texto está visível no controle. Depois que o usuário insere um novo valor e deixa o <xref:System.Windows.Forms.NumericUpDown> controle, o texto é convertido em um valor numérico de um valor de cadeia de caracteres e validado para ficar entre o <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> e <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> valores. Se o valor não for válido, um <xref:System.Windows.Forms.MessageBox> é exibido com o erro e o <xref:System.Windows.Forms.UpDownBase.Select%2A> método seleciona o texto para que o usuário pode inserir um novo valor.  
+  
+ [!code-cpp[Classic UpDownBase.Text Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase.Text Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UpDownBase.Text Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic UpDownBase.Text Example/CS/source.cs#1)]
+ [!code-vb[Classic UpDownBase.Text Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase.Text Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto exibido na caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <value>O valor de cadeia de caracteres exibido na caixa de rotação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.UpDownBase.UpdateEditText%2A> método é chamado se o <xref:System.Windows.Forms.UpDownBase.Text%2A> está definida enquanto o <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> está definida como `true`. O <xref:System.Windows.Forms.UpDownBase.ValidateEditText%2A> método é chamado se o <xref:System.Windows.Forms.UpDownBase.Text%2A> está definida enquanto o <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> está definida como `false`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.NumericUpDown>. Esse código requer que um <xref:System.Windows.Forms.NumericUpDown> controle e um <xref:System.Windows.Forms.Button> foram criadas em um formulário e o <xref:System.Drawing> namespace foi adicionado como uma referência. No <xref:System.Windows.Forms.Control.Click> eventos para o botão, o tamanho do ponto do texto no <xref:System.Windows.Forms.NumericUpDown> controlar aumenta. Isso solicita que o controle para ajustar seu <xref:System.Windows.Forms.UpDownBase.PreferredHeight%2A> propriedade para todo o texto está visível no controle. Depois que o usuário insere um novo valor e deixa o <xref:System.Windows.Forms.NumericUpDown> controle, o texto é convertido em um valor numérico de um valor de cadeia de caracteres e validado para ficar entre o <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> e <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> valores. Se o valor não for válido, um <xref:System.Windows.Forms.MessageBox> é exibido com o erro e o <xref:System.Windows.Forms.UpDownBase.Select%2A> método seleciona o texto para que o usuário pode inserir um novo valor.  
+  
+ [!code-cpp[Classic UpDownBase.Text Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase.Text Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UpDownBase.Text Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic UpDownBase.Text Example/CS/source.cs#1)]
+ [!code-vb[Classic UpDownBase.Text Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase.Text Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlign">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HorizontalAlignment TextAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.HorizontalAlignment TextAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.TextAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento do texto na caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.HorizontalAlignment" />. O valor padrão é <see cref="F:System.Windows.Forms.HorizontalAlignment.Left" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.NumericUpDown> e define algumas de suas propriedades derivadas de <xref:System.Windows.Forms.UpDownBase>. Esse código requer que você tenha um <xref:System.Windows.Forms.NumericUpDown> controle chamado `numericUpDown1`, dois <xref:System.Windows.Forms.ComboBox> controles denominados `comboBox1` e `comboBox2`e três <xref:System.Windows.Forms.CheckBox> controles denominados `checkBox1`, `checkBox2`, e `checkBox2` criado em um formulário. Adicionar itens a seguir para `comboBox1`: `None`, `Fixed3D`, e `FixedSingle`. Adicionar itens a seguir para `comboBox2`: `Left`, `Right`, e `Center`.  
+  
+ O código permite que você altere os valores de propriedade em tempo de execução e ver como cada afeta a aparência e o comportamento da caixa de rotação.  
+  
+ [!code-cpp[Classic UpDownBase Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UpDownBase Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic UpDownBase Example/CS/source.cs#1)]
+ [!code-vb[Classic UpDownBase Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.HorizontalAlignment" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UpButton">
+      <MemberSignature Language="C#" Value="public abstract void UpButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpButton() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.UpButton" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, manipula clicando no botão se a caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir esse método em uma classe derivada, certifique-se de chamar o <see cref="M:System.Windows.Forms.UpDownBase.UpdateEditText" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateEditText">
+      <MemberSignature Language="C#" Value="protected abstract void UpdateEditText ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void UpdateEditText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.UpdateEditText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, atualiza o texto exibido na caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir esse método em uma classe derivada, certifique-se de atualizar o <see cref="P:System.Windows.Forms.UpDownBase.Text" /> propriedade da caixa de rotação.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UpDownAlign">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.LeftRightAlignment UpDownAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.LeftRightAlignment UpDownAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.UpDownAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LeftRightAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento de cima e para baixo de botões na caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.LeftRightAlignment" />. O valor padrão é <see cref="F:System.Windows.Forms.LeftRightAlignment.Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.NumericUpDown> e define algumas de suas propriedades derivadas de <xref:System.Windows.Forms.UpDownBase>. Esse código requer que você tenha um <xref:System.Windows.Forms.NumericUpDown> controle chamado `numericUpDown1`, dois <xref:System.Windows.Forms.ComboBox> controles denominados `comboBox1` e `comboBox2`e três <xref:System.Windows.Forms.CheckBox> controles denominados `checkBox1`, `checkBox2`, e `checkBox2` criado em um formulário. Adicionar itens a seguir para `comboBox1`: `None`, `Fixed3D`, e `FixedSingle`. Adicionar itens a seguir para `comboBox2`: `Left`, `Right`, e `Center`.  
+  
+ O código permite que você altere os valores de propriedade em tempo de execução e ver como cada afeta a aparência e o comportamento da caixa de rotação.  
+  
+ [!code-cpp[Classic UpDownBase Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic UpDownBase Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic UpDownBase Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic UpDownBase Example/CS/source.cs#1)]
+ [!code-vb[Classic UpDownBase Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic UpDownBase Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor atribuído não é um dos valores <see cref="T:System.Windows.Forms.LeftRightAlignment" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserEdit">
+      <MemberSignature Language="C#" Value="protected bool UserEdit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UserEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.UpDownBase.UserEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um valor foi inserido pelo usuário.</summary>
+        <value>
+          <see langword="true" /> se o usuário tiver alterado a propriedade <see cref="P:System.Windows.Forms.UpDownBase.Text" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.UpDownBase.Text%2A> está definida enquanto o <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> está definida como `true`, o <xref:System.Windows.Forms.UpDownBase.UpdateEditText%2A> método é chamado. Se o <xref:System.Windows.Forms.UpDownBase.Text%2A> está definida enquanto o <xref:System.Windows.Forms.UpDownBase.UserEdit%2A> está definida como `false`, o <xref:System.Windows.Forms.UpDownBase.ValidateEditText%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateEditText">
+      <MemberSignature Language="C#" Value="protected virtual void ValidateEditText ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ValidateEditText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.ValidateEditText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, valida o texto exibido na caixa de rotação (também conhecido como um controle acima-abaixo).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns exemplos de validação comparando o texto inserido para o tipo de dados definido em sua classe derivada, comparando o texto a uma lista de valores ou verificar o texto dentro de um intervalo de valores.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir esse método em uma classe derivada, certifique-se de adicionar o código nesse método para validar o texto da caixa de rotação. Esse método será chamado se o <see cref="P:System.Windows.Forms.UpDownBase.UserEdit" /> está definida como <see langword="false" /> quando o <see cref="P:System.Windows.Forms.UpDownBase.Text" /> está definida.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.UpDownBase.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">O <see cref="T:System.Windows.Forms.Message" /> do Windows a ser processado.</param>
+        <summary>Processa mensagens do Windows.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para chamar código não gerenciado. Enumeração relacionada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

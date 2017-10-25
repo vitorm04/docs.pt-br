@@ -1,0 +1,19 @@
+<Namespace Name="System.Numerics">
+  <Docs>
+    <summary>O <see cref="N:System.Numerics" /> namespace contém tipos numéricos que complementam os primitivos numéricos, como <see cref="T:System.Byte" />, <see cref="T:System.Double" />, e <see cref="T:System.Int32" />, que são definidos pelo .NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este namespace inclui os seguintes tipos:  
+  
+-   O <xref:System.Numerics.BigInteger> estrutura, que é um tipo integral não-primitivo que dá suporte a inteiros arbitrariamente grandes. Um primitivo integral como <xref:System.Byte> ou <xref:System.Int32> inclui um `MinValue` e um `MaxValue` propriedade, que define o limite inferior e o limite superior suportada por este tipo de dados. Em contraste, o <xref:System.Numerics.BigInteger> estrutura não tem nenhum limite superior ou inferior e pode conter o valor de inteiro.  
+  
+-   O <xref:System.Numerics.Complex> estrutura, que representa um número complexo. Um número complexo é um número no formato *um* + *b*i, onde *um* é a parte real, e *b* é a parte imaginária.  
+  
+-   Os tipos de vetor SIMD habilitado, que incluem <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3>, <xref:System.Numerics.Vector4>, <xref:System.Numerics.Matrix3x2>, <xref:System.Numerics.Matrix4x4>, <xref:System.Numerics.Plane>, e <xref:System.Numerics.Quaternion>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

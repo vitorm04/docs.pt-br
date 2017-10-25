@@ -1,0 +1,44 @@
+<Type Name="ADODC+WillMoveDelegate" FullName="Microsoft.VisualBasic.Compatibility.VB6.ADODC+WillMoveDelegate">
+  <TypeSignature Language="C#" Value="public delegate void ADODC.WillMoveDelegate(EventReasonEnum adReason, ref EventStatusEnum adStatus, Recordset pRecordset);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ADODC/WillMoveDelegate extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Compatibility.VB6.ADODC.WillMoveDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic.Compatibility.Data</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Microsoft.VisualBasic.Compatibility.* classes are obsolete and supported within 32 bit processes only. http://go.microsoft.com/fwlink/?linkid=160862")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="adReason" Type="ADODB.EventReasonEnum" />
+    <Parameter Name="adStatus" Type="ADODB.EventStatusEnum&amp;" RefType="ref" />
+    <Parameter Name="pRecordset" Type="ADODB.Recordset" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="adReason">Um <see langword="ADODB.EventReasonEnum" />.</param>
+    <param name="adStatus">Um <see langword="ADODB.EventStatusEnum" />.</param>
+    <param name="pRecordset">Um objeto <see langword="ADODB.Recordset" />.</param>
+    <summary>Representa o método que irá manipular um evento de <see langword="WillMove" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Funções e os objetos no namespace <xref:Microsoft.VisualBasic.Compatibility.VB6> são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Eles só são necessários quando o modelo de código do Visual Basic 6.0 é muito diferente da implementação de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,126 @@
+<Type Name="VisualState" FullName="System.Windows.VisualState">
+  <TypeSignature Language="C#" Value="public class VisualState : System.Windows.DependencyObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VisualState extends System.Windows.DependencyObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.VisualState" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DependencyObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Storyboard")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.RuntimeNameProperty("Name")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a aparência visual do controle quando ele está em um estado específico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.VisualState> Especifica a aparência do controle quando ele está em um determinado estado. Por exemplo, quando um <xref:System.Windows.Controls.Button> é pressionado, sua borda pode ser uma cor diferente do que o normal.  O <xref:System.Windows.VisualState> classe tiver um <xref:System.Windows.VisualState.Storyboard%2A> que muda a aparência do controle. Quando o controle entra no estado especificado pelo <xref:System.Windows.VisualState.Name%2A?displayProperty=nameWithType> propriedade, o <xref:System.Windows.VisualState.Storyboard%2A> começa. Quando o controle sai do estado, o <xref:System.Windows.VisualState.Storyboard%2A> para.  
+  
+ O <xref:System.Windows.VisualStateGroup.States%2A?displayProperty=nameWithType> propriedade contém <xref:System.Windows.VisualState> objetos. <xref:System.Windows.VisualStateGroup>objetos são adicionados ao <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> anexado a propriedade, que é definida no em um <xref:System.Windows.FrameworkElement>. Você pode adicionar <xref:System.Windows.VisualState> objetos a qualquer <xref:System.Windows.FrameworkElement>, mas eles são geralmente são usados em uma <xref:System.Windows.Controls.ControlTemplate> de um <xref:System.Windows.Controls.Control>. Para obter informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate> e <xref:System.Windows.VisualState> objetos para controles existentes, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md). Para obter um exemplo do uso de <xref:System.Windows.VisualState> objetos fora de um <xref:System.Windows.Controls.ControlTemplate>, consulte o <xref:System.Windows.VisualStateManager> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.VisualStateGroup> no <xref:System.Windows.Controls.ControlTemplate> de um <xref:System.Windows.Controls.Button> chamado `CommonStates` e adiciona <xref:System.Windows.VisualState> objetos para os estados, `Normal`, `Pressed`, e `MouseOver`. O <xref:System.Windows.Controls.Button> também define um estado chamado `Disabled` no `CommonStates` <xref:System.Windows.VisualStateGroup>, mas o exemplo omiti-lo para fins de brevidade. Para o exemplo completo, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+ [!code-xaml[VSMButtonTemplate#10](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VisualState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.VisualState.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.VisualState" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.VisualState.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de <see cref="T:System.Windows.VisualState" />.</summary>
+        <value>O nome do <see cref="T:System.Windows.VisualState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você especifica qual estado visual de um elemento deve inserir passando o <xref:System.Windows.VisualState.Name%2A> do <xref:System.Windows.VisualState> para o <xref:System.Windows.VisualStateManager>.  
+  
+ Quando um <xref:System.Windows.Controls.Control> usa o <xref:System.Windows.VisualStateManager> em uma <xref:System.Windows.Controls.ControlTemplate>, o autor do controle deve especificar qual <xref:System.Windows.VisualState> objetos controle espera encontrar no seu <xref:System.Windows.Controls.ControlTemplate> colocando o <xref:System.Windows.TemplateVisualStateAttribute> em sua assinatura de classe. <xref:System.Windows.Controls.ControlTemplate>autores definem novos <xref:System.Windows.VisualState> objetos e defina o <xref:System.Windows.VisualState.Name%2A> o valor especificado pela propriedade o <xref:System.Windows.TemplateVisualStateAttribute.Name%2A?displayProperty=nameWithType> propriedade.  
+  
+ Para localizar os nomes dos estados visuais para os controles que estão incluídos com [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)], consulte [modelos e estilos de controle](~/docs/framework/wpf/controls/control-styles-and-templates.md). Para obter informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate> e <xref:System.Windows.VisualState> objetos para controles existentes, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.VisualStateGroup> no <xref:System.Windows.Controls.ControlTemplate> de um <xref:System.Windows.Controls.Button> chamado `CommonStates` e adiciona <xref:System.Windows.VisualState> objetos para os estados, `Normal`, `Pressed`, e `MouseOver`. O <xref:System.Windows.Controls.Button> também define um estado chamado `Disabled` no `CommonStates` <xref:System.Windows.VisualStateGroup>, mas o exemplo omiti-lo para fins de brevidade. Para o exemplo completo, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+ [!code-xaml[VSMButtonTemplate#10](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Storyboard">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Storyboard Storyboard { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.Storyboard Storyboard" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.VisualState.Storyboard" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Storyboard</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Media.Animation.Storyboard" /> que determina a aparência do controle quando ele está no estado representado pelo <see cref="T:System.Windows.VisualState" />.</summary>
+        <value>Um storyboard que determina a aparência do controle quando ele está no estado representado pelo <see cref="T:System.Windows.VisualState" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o controle entra no estado especificado pelo <xref:System.Windows.VisualState.Name%2A?displayProperty=nameWithType> propriedade, o <xref:System.Windows.VisualState.Storyboard%2A> começa. Quando o controle sai do estado, o <xref:System.Windows.VisualState.Storyboard%2A> para.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um simples <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.Button> que contém um <xref:System.Windows.Controls.Grid>.  O <xref:System.Windows.VisualState> chamado `MouseOver` tem um Storyboard que muda a cor do <xref:System.Windows.Controls.Grid> de verde para vermelho quando o usuário coloca o mouse o <xref:System.Windows.Controls.Button>.  O <xref:System.Windows.VisualState> chamado `Normal` está incluída para que quando o usuário move o mouse fora do botão, o <xref:System.Windows.Controls.Grid> retorna para verde.  
+  
+ [!code-xaml[VSMButtonTemplate#11](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

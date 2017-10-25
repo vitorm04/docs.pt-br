@@ -1,0 +1,70 @@
+<Type Name="IJSVsaGlobalItem" FullName="Microsoft.JScript.Vsa.IJSVsaGlobalItem">
+  <TypeSignature Language="C#" Value="public interface IJSVsaGlobalItem : Microsoft.JScript.Vsa.IJSVsaItem" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IJSVsaGlobalItem implements class Microsoft.JScript.Vsa.IJSVsaItem" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.Vsa.IJSVsaGlobalItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.JScript.Vsa.IJSVsaItem</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use of this type is not recommended because it is being deprecated in Visual Studio 2005; there will be no replacement for this feature. Please see the ICodeCompiler documentation for additional help.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("15B2CCE5-D1EA-4EB9-9E06-8729C72D631B")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve objetos globais adicionados para o mecanismo de script.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExposeMembers">
+      <MemberSignature Language="C#" Value="public bool ExposeMembers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExposeMembers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaGlobalItem.ExposeMembers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define um valor que indica se os membros do objeto global devem ser disponibilizados para o mecanismo de script. [Não há suporte atualmente.]</summary>
+        <value>Membros de retorna TRUE se o público do objeto global estão disponíveis para o mecanismo de script sem qualificação, como se eles fazem parte do namespace global. Retorna FALSE se um membro do objeto global deve ser qualificada com o nome do objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeString">
+      <MemberSignature Language="C#" Value="public string TypeString { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.Vsa.IJSVsaGlobalItem.TypeString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo do item global.</summary>
+        <value>Retorna o tipo de item do item global.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,83 @@
+<Type Name="IVbHost" FullName="Microsoft.VisualBasic.CompilerServices.IVbHost">
+  <TypeSignature Language="C#" Value="public interface IVbHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IVbHost" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompilerServices.IVbHost" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma janela do host do Visual Basic.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetParentWindow">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.IWin32Window GetParentWindow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance class System.Windows.Forms.IWin32Window GetParentWindow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.IVbHost.GetParentWindow" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IWin32Window</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a janela do host para o ambiente atual do Visual Basic.</summary>
+        <returns>A janela do host para o ambiente atual do Visual Basic.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetWindowTitle">
+      <MemberSignature Language="C#" Value="public string GetWindowTitle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public newslot virtual instance string GetWindowTitle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.IVbHost.GetWindowTitle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o título da janela do host para o ambiente atual do Visual Basic.</summary>
+        <returns>O título da janela do host para o ambiente atual do Visual Basic.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

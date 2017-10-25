@@ -1,0 +1,127 @@
+<Type Name="BrowserCapabilitiesCodeGenerator" FullName="System.Web.Configuration.BrowserCapabilitiesCodeGenerator">
+  <TypeSignature Language="C#" Value="public class BrowserCapabilitiesCodeGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi BrowserCapabilitiesCodeGenerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.BrowserCapabilitiesCodeGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.Web.Configuration.BrowserCapabilitiesCodeGenerator" /> classe é usada internamente pelo <see langword="aspnet_regbrowsers" /> ferramenta analisar os arquivos de definição de navegador. browser e adicionar navegadores à coleção de navegadores conhecidos contidos em tempo de execução de <see cref="T:System.Web.Configuration.BrowserCapabilitiesFactory" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe gera o código-fonte para um assembly para o <xref:System.Web.Configuration.BrowserCapabilitiesFactory> classe, que, em tempo de execução produz específicos de solicitação <xref:System.Web.Configuration.HttpCapabilitiesBase> objetos publicamente seja acessada por meio do ASP.NET intrínseco `Request.Browser` propriedade.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BrowserCapabilitiesCodeGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.BrowserCapabilitiesCodeGenerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Usada internamente para criar uma nova instância de <see cref="T:System.Web.Configuration.BrowserCapabilitiesCodeGenerator" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public virtual void Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.BrowserCapabilitiesCodeGenerator.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Usada internamente para coordenar o comportamento dessa classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método primeiro itera através da pasta "Navegadores". Depois, ele chama <xref:System.Web.Configuration.BrowserCapabilitiesCodeGenerator.ProcessBrowserFiles%2A>, que carrega e analisa o XML contido em uma coleção de definição de navegador de arquivos e insere as informações nela contidos em uma coleção interna de navegadores. Em seguida, ele chama um método interno que gera as compilações de código fonte e registra-o como um assembly no global assembly cache para o <xref:System.Web.Configuration.BrowserCapabilitiesFactory> objeto. Se necessário, este método chama um método interno que reinicia o servidor Web.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessBrowserFiles">
+      <MemberSignature Language="C#" Value="protected void ProcessBrowserFiles (bool useVirtualPath, string virtualDir);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ProcessBrowserFiles(bool useVirtualPath, string virtualDir) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.BrowserCapabilitiesCodeGenerator.ProcessBrowserFiles(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useVirtualPath" Type="System.Boolean" />
+        <Parameter Name="virtualDir" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="useVirtualPath">
+          <see langword="true" />Para usar um caminho virtual. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</param>
+        <param name="virtualDir">O caminho para o diretório virtual que contém os arquivos de definição do navegador. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <summary>Carrega e analisa o XML contido em uma coleção de arquivos de definição de navegador e insere as informações nela contidos em uma coleção interna de navegadores.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Web.HttpParseException">Um dos arquivos de definição de navegador não tem um elemento raiz chamado "navegadores".  
+  
+ \- ou -  
+  
+ Um dos arquivos de definição de navegador não é carregado.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public bool Uninstall ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Uninstall() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.BrowserCapabilitiesCodeGenerator.Uninstall" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove a fábrica de recursos do navegador do cache de assembly global e exclui o arquivo de token de chave pública da nome forte.</summary>
+        <returns>
+          <see langword="true" />Se a fábrica de recursos do navegador foi desinstalada do cache de assembly global; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método reinicia o serviço Web. A fábrica de recursos do navegador, em seguida, é removida do cache de assembly global, e seu arquivo de token de chave pública da nome forte é excluído. O serviço Web é reiniciado novamente se a desinstalação for bem-sucedida.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

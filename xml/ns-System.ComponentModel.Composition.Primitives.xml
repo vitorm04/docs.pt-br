@@ -1,0 +1,6 @@
+<Namespace Name="System.ComponentModel.Composition.Primitives">
+  <Docs>
+    <summary>Este namespace fornece os tipos primitivos subjacente o modelo de programação de MEF.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

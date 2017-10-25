@@ -1,0 +1,58 @@
+<Type Name="ContentPosition" FullName="System.Windows.Documents.ContentPosition">
+  <TypeSignature Language="C#" Value="public abstract class ContentPosition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ContentPosition extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.ContentPosition" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Classe abstrata que representa a posição do conteúdo. Essa posição é específico de conteúdo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Herde desta classe para descrever a posição do conteúdo associado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ContentPosition ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.ContentPosition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Chame o construtor como o inicializador de construtor de uma classe derivada, para inicializar corretamente uma classe derivada de <see cref="T:System.Windows.Documents.ContentPosition" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Missing">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Documents.ContentPosition Missing;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Documents.ContentPosition Missing" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.ContentPosition.Missing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.ContentPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representação estática de um ContentPosition não existe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

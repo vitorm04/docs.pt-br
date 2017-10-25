@@ -1,0 +1,319 @@
+<Type Name="DsmlResponseDocument" FullName="System.DirectoryServices.Protocols.DsmlResponseDocument">
+  <TypeSignature Language="C#" Value="public class DsmlResponseDocument : System.DirectoryServices.Protocols.DsmlDocument, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DsmlResponseDocument extends System.DirectoryServices.Protocols.DsmlDocument implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.DsmlResponseDocument" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DsmlDocument</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" /> classe é uma coleção somente leitura gerada como uma resposta a uma <see cref="T:System.DirectoryServices.Protocols.DsmlRequestDocument" /> objeto que contém zero ou mais objetos derivados da <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.DirectoryServices.Protocols.DirectoryResponse[] value, int i);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.DirectoryServices.Protocols.DirectoryResponse[] value, int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DsmlResponseDocument.CopyTo(System.DirectoryServices.Protocols.DirectoryResponse[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.DirectoryServices.Protocols.DirectoryResponse[]" />
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz unidimensional que é o destino dos elementos copiados a partir de <see cref="T:System.DirectoryServices.Protocols.DsmlRequestDocument" /> objeto.</param>
+        <param name="i">O índice com base em zero do <c>valor</c> onde a cópia começa.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.DsmlResponseDocument.CopyTo(System.DirectoryServices.Protocols.DirectoryResponse[],System.Int32)" /> método copia toda a coleção para uma matriz unidimensional, começando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="i" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />é multidimensional  
+  
+ -ou-  
+  
+ O número de elementos na origem <see cref="T:System.DirectoryServices.Protocols.DsmlRequestDocument" /> é maior que o espaço disponível do *,* até o final do destino <paramref name="value" />.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.DirectoryServices.Protocols.DsmlRequestDocument" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="value" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlResponseDocument.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DsmlResponseDocument.Count" /> propriedade contém o número de <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> objetos nesta coleção.</summary>
+        <value>O número de <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> objetos nesta coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DsmlResponseDocument.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.DsmlResponseDocument.GetEnumerator" /> método retorna um enumerador para todo o <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" /> coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> objeto para a coleção inteira.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsErrorResponse">
+      <MemberSignature Language="C#" Value="public bool IsErrorResponse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsErrorResponse" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlResponseDocument.IsErrorResponse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DsmlResponseDocument.IsErrorResponse" /> propriedade especifica se uma resposta de erro ocorreu.</summary>
+        <value>Esta propriedade é <see langword="true" /> se uma resposta de erro tiver ocorrido; <see langword="false" />, caso contrário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOperationError">
+      <MemberSignature Language="C#" Value="public bool IsOperationError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOperationError" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlResponseDocument.IsOperationError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DsmlResponseDocument.IsOperationError" /> propriedade especifica se uma resposta de erro de operação ocorreu.</summary>
+        <value>Esta propriedade é <see langword="true" /> se tiver ocorrido um erro de operação; <see langword="false" />, caso contrário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="protected bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlResponseDocument.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DsmlResponseDocument.IsSynchronized" /> propriedade contém um valor que indica se o acesso a <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" />Se acessar para o <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" /> for sincronizado (thread-safe); caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.DirectoryResponse this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.Protocols.DirectoryResponse Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlResponseDocument.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O valor de índice baseado em zero no qual o objeto <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> é encontrado.</param>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DsmlResponseDocument.Item(System.Int32)" /> propriedade contém o <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> objeto no índice especificado.</summary>
+        <value>O objeto <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestId">
+      <MemberSignature Language="C#" Value="public string RequestId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestId" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlResponseDocument.RequestId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DsmlResponseDocument.RequestId" /> propriedade contém a ID de solicitação associada ao documento.</summary>
+        <value>A ID de solicitação associada ao documento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é somente leitura e lança uma exceção se você tentar definir o valor da propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Você tentou definir o valor da propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="protected object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlResponseDocument.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DsmlResponseDocument.SyncRoot" /> propriedade contém um objeto que pode ser usado para sincronizar o acesso a <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas podem fornecer versões sincronizadas do <xref:System.DirectoryServices.Protocols.DsmlResponseDocument> usando o <xref:System.DirectoryServices.Protocols.DsmlResponseDocument.SyncRoot%2A> propriedade. O código de sincronização necessário realizar operações no <xref:System.DirectoryServices.Protocols.DsmlResponseDocument.SyncRoot%2A> do <xref:System.DirectoryServices.Protocols.DsmlResponseDocument>, não diretamente no <xref:System.DirectoryServices.Protocols.DsmlResponseDocument>. Isso garante que a operação correta de coleções derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando o <xref:System.DirectoryServices.Protocols.DsmlResponseDocument> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array value, int i);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array value, int32 i) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DsmlResponseDocument.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Array" />
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz unidimensional que é o destino dos elementos copiados a partir de <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" /> objeto.</param>
+        <param name="i">O índice com base em zero do <c>valor</c> onde a cópia começa.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.DsmlResponseDocument.System.Collections.ICollection.CopyTo(System.Array,System.Int32)" /> método copia todo o <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" /> coleção para uma matriz unidimensional, começando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.Count">
+      <MemberSignature Language="C#" Value="int System.Collections.ICollection.Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Collections.ICollection.Count" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlResponseDocument.System#Collections#ICollection#Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DsmlResponseDocument.System.Collections.ICollection.Count" /> propriedade obtém o número de <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> objetos nesta coleção.</summary>
+        <value>O número de <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlResponseDocument.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DsmlResponseDocument.System.Collections.ICollection.IsSynchronized" /> propriedade obtém um valor que indica se o acesso a <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" />Se acessar para o <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" /> for sincronizado (thread-safe); caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DsmlResponseDocument.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DsmlResponseDocument.System.Collections.ICollection.SyncRoot" /> propriedade obtém um objeto que pode ser usado para sincronizar o acesso a <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso <see cref="T:System.DirectoryServices.Protocols.DsmlResponseDocument" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlDocument ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlDocument ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DsmlResponseDocument.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDocument</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.DsmlResponseDocument.ToXml" /> método transforma cada <see cref="T:System.DirectoryServices.Protocols.DirectoryResponse" /> objeto na coleção em uma <see cref="T:System.Xml.XmlDocument" /> objeto.</summary>
+        <returns>Transformado <see cref="T:System.Xml.XmlDocument" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

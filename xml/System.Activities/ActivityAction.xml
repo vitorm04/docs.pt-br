@@ -1,0 +1,43 @@
+<Type Name="ActivityAction" FullName="System.Activities.ActivityAction">
+  <TypeSignature Language="C#" Value="public sealed class ActivityAction : System.Activities.ActivityDelegate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityAction extends System.Activities.ActivityDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ActivityAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.ActivityDelegate</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um delegado de atividade que não tem argumentos de entrada e não retorna um valor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um representante de atividade executa uma atividade que tem uma assinatura necessária, como o <xref:System.Activities.Statements.ForEach%601> atividade que requer uma variável de iteração ou <xref:System.Activities.Statements.Catch%601> atividade que requer um <xref:System.Exception>.  
+  
+ Há várias versões desse tipo genéricas que levar de 1 a 16 argumentos da atividade que é chamado.  Também há <xref:System.Activities.ActivityFunc%601> tipos para delegados que retornam valores.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityAction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.ActivityAction" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

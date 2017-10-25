@@ -1,0 +1,355 @@
+<Type Name="LogExtentCollection" FullName="System.IO.Log.LogExtentCollection">
+  <TypeSignature Language="C#" Value="public sealed class LogExtentCollection : System.Collections.Generic.IEnumerable&lt;System.IO.Log.LogExtent&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LogExtentCollection extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;class System.IO.Log.LogExtent&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.LogExtentCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.IO.Log.LogExtent&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a coleção de <see cref="T:System.IO.Log.LogExtent" /> objetos associados a um <see cref="T:System.IO.Log.LogStore" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe contém uma coleção de <xref:System.IO.Log.LogExtent> objetos associados a um <xref:System.IO.Log.LogStore>. Um <xref:System.IO.Log.LogStore> instância armazena seus dados em uma coleção de extensões do disco, representado pelo <xref:System.IO.Log.LogExtent> instâncias. Um determinado <xref:System.IO.Log.LogExtent> é associado a um <xref:System.IO.Log.LogStore>, e <xref:System.IO.Log.LogExtent> objetos na mesma <xref:System.IO.Log.LogStore> são de tamanho idêntico. Espaço é adicionado a e removido de um <xref:System.IO.Log.LogStore> instância em incrementos de extensão.  
+  
+ Embora <xref:System.IO.Log.LogExtent> objetos são representados no disco como arquivos, eles não devem ser movidos ou excluídos como arquivos normais. Em vez disso, você deve usar os métodos fornecidos por esta classe para adicionar e excluir <xref:System.IO.Log.LogExtent> instâncias diretamente. Extensões geralmente são removidas quando eles não contêm todos os dados ativos. No entanto, se o `force` parâmetro o <xref:System.IO.Log.LogExtentCollection.Remove%2A> método é `true`, uma exceção será lançada se elas não podem ser removidas imediatamente.  
+  
+ Não é possível remover a última extensão no <xref:System.IO.Log.LogExtentCollection>, o que significa que o <xref:System.IO.Log.LogExtentCollection.Count%2A> propriedade não pode ser zero depois que uma extensão é adicionada.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogExtent> e <xref:System.IO.Log.LogExtentCollection> classes para adicionar e emular extensões em uma sequência de log.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para a extensão de log a ser adicionado.</param>
+        <summary>Adiciona um <see cref="T:System.IO.Log.LogExtent" /> instância à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho de recém-adicionado <xref:System.IO.Log.LogExtent> instância é igual ao tamanho de existentes <xref:System.IO.Log.LogExtent> instâncias na coleção.  
+  
+> [!NOTE]
+>  Não use esse método para adicionar o primeiro <xref:System.IO.Log.LogExtent> à coleção.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogExtent> e <xref:System.IO.Log.LogExtentCollection> classes para adicionar e emular extensões em uma sequência de log.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O nome do arquivo de armazenamento de log especificado pelo <paramref name="path" /> não é válido.</exception>
+        <exception cref="T:System.InvalidOperationException">Um tamanho deve ser especificado para a primeira extensão.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ O arquivo especificado por <paramref name="path" /> não pode ser criado porque o arquivo ou diretório já existe.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.  
+  
+ -ou-  
+  
+ O disco de armazenamento ou a mídia está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string path, long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string path, int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.Add(System.String,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para a extensão de log.</param>
+        <param name="size">O tamanho da extensão de log.</param>
+        <summary>Cria um novo <see cref="T:System.IO.Log.LogExtent" /> com o tamanho especificado e o adiciona à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a coleção não estiver vazia, o tamanho especificado deve ser pelo menos tão grande quanto o tamanho de outras extensões na coleção. Nesse caso, o `size` parâmetro é ignorado e a extensão é criada com o mesmo tamanho que outras extensões na coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ou <paramref name="size" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="archiveTail" />não está dentro do intervalo válido.</exception>
+        <exception cref="T:System.ArgumentException">O nome do arquivo de armazenamento de log especificado pelo <paramref name="path" /> não é válido.  
+  
+ <paramref name="size" />é menor que o tamanho de outras extensões no armazenamento.</exception>
+        <exception cref="T:System.InvalidOperationException">Um tamanho deve ser especificado para a primeira extensão.  
+  
+ -ou-  
+  
+ Um nome de extensão duplicado não pode ser usado.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ O arquivo especificado por <paramref name="path" /> não pode ser criado porque o arquivo ou diretório já existe.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.  
+  
+ -ou-  
+  
+ O disco de armazenamento ou a mídia está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogExtentCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de extensões de log na coleção.</summary>
+        <value>O número de extensões de log na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogExtent> e <xref:System.IO.Log.LogExtentCollection> classes para adicionar e emular extensões em uma sequência de log.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O armazenamento de log foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FreeCount">
+      <MemberSignature Language="C#" Value="public int FreeCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FreeCount" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogExtentCollection.FreeCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de livre <see cref="T:System.IO.Log.LogExtent" /> instâncias na coleção, ou seja, o número de <see cref="T:System.IO.Log.LogExtent" /> instâncias que não contêm nenhum dado.</summary>
+        <value>O número de livre <see cref="T:System.IO.Log.LogExtent" /> instâncias na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogExtent> e <xref:System.IO.Log.LogExtentCollection> classes para adicionar e emular extensões em uma sequência de log.  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O armazenamento de log foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.IO.Log.LogExtent&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.IO.Log.LogExtent&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.IO.Log.LogExtent&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um enumerador para o <see cref="T:System.IO.Log.LogExtent" /> instâncias na coleção. Esse método não pode ser herdado.</summary>
+        <returns>Um enumerador para o <see cref="T:System.IO.Log.LogExtent" /> instâncias na coleção.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.</exception>
+        <exception cref="T:System.InvalidOperationException">A operação é inválida para um dos seguintes motivos:  
+  
+-   A enumeração terminou.  
+  
+-   A coleção foi modificada.  
+  
+-   A enumeração não foi iniciada. Uma chamada para <see cref="M:System.Collections.IEnumerator.MoveNext" /> devem ser feitas.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.IO.Log.LogExtent extent, bool force);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.IO.Log.LogExtent extent, bool force) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.Remove(System.IO.Log.LogExtent,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extent" Type="System.IO.Log.LogExtent" />
+        <Parameter Name="force" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="extent">O <see cref="T:System.IO.Log.LogExtent" /> instância a ser removida.</param>
+        <param name="force">
+          <see langword="true" />Se a extensão deve ser removida imediatamente. Caso contrário, <see langword="false" />.</param>
+        <summary>Remove o <see cref="T:System.IO.Log.LogExtent" /> instância da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IO.Log.LogExtent> instância pode ser removida da coleção somente se ele não é parte da região ativa da <xref:System.IO.Log.LogStore>. Se o `force` parâmetro é `true` e a extensão não pode ser removida imediatamente, uma exceção será lançada. Se o `force` parâmetro é `false` e a extensão não pode ser removida imediatamente, a remoção é adiada até que não faz parte da região ativa.  
+  
+ Não é possível remover a última extensão no <xref:System.IO.Log.LogExtentCollection>, o que significa que o <xref:System.IO.Log.LogExtentCollection.Count%2A> propriedade não pode ser zero após a adição de uma extensão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="extent" /> ou <paramref name="force" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="extent" />não foi encontrado na coleção.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="extent" />não pode ser removido. Ele ainda é parte da região ativa ou o acesso foi negado.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ <paramref name="extent" />não pode ser excluído.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string path, bool force);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string path, bool force) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.Remove(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="force" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho da <see cref="T:System.IO.Log.LogExtent" /> instância a ser removida.</param>
+        <param name="force">
+          <see langword="true" />Se a extensão deve ser removida imediatamente. Caso contrário, <see langword="false" />.</param>
+        <summary>Remove o <see cref="T:System.IO.Log.LogExtent" /> instância com o caminho especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IO.Log.LogExtent> instância pode ser removida da coleção somente se ele não é parte da região ativa da <xref:System.IO.Log.LogStore>. Se o `force` parâmetro é `true` e a extensão não pode ser removida imediatamente, uma exceção será lançada. Se o `force` parâmetro é `false` e a extensão não pode ser removida imediatamente, a remoção é adiada até que não faz parte da região ativa.  
+  
+ Não é possível remover a última extensão no <xref:System.IO.Log.LogExtentCollection>, o que significa que o <xref:System.IO.Log.LogExtentCollection.Count%2A> propriedade não pode ser zero após a adição de uma extensão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ou <paramref name="force" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O ponto especificado pelo <paramref name="path" /> não pode ser encontrado na coleção.</exception>
+        <exception cref="T:System.InvalidOperationException">O ponto especificado pelo <paramref name="path" /> não pode ser removido. Ele ainda é parte da região ativa ou o acesso foi negado.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ O ponto especificado pelo <paramref name="path" /> não pode ser excluído.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogExtentCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um enumerador para o <see cref="T:System.IO.Log.LogExtent" /> instâncias na coleção. Esse método não pode ser herdado.</summary>
+        <returns>Um enumerador para o <see cref="T:System.IO.Log.LogExtent" /> instâncias na coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

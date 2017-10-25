@@ -1,0 +1,92 @@
+<Type Name="EnumerableRowCollection&lt;TRow&gt;" FullName="System.Data.EnumerableRowCollection&lt;TRow&gt;">
+  <TypeSignature Language="C#" Value="public class EnumerableRowCollection&lt;TRow&gt; : System.Data.EnumerableRowCollection, System.Collections.Generic.IEnumerable&lt;TRow&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EnumerableRowCollection`1&lt;TRow&gt; extends System.Data.EnumerableRowCollection implements class System.Collections.Generic.IEnumerable`1&lt;!TRow&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.EnumerableRowCollection`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TRow" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Data.EnumerableRowCollection</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;TRow&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TRow">O tipo de objetos na sequência de origem, normalmente <see cref="T:System.Data.DataRow" />.</typeparam>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Data.DataRow" /> retornada por uma consulta. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.EnumerableRowCollection%601>é usado para conter os resultados de uma consulta LINQ to DataSet.  
+  
+ Um <xref:System.Data.EnumerableRowCollection%601> não pode ser instanciado diretamente porque não há nenhum construtor público para esta classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;TRow&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!TRow&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollection`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;TRow&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador para a coleção de objetos de linha independente. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Fortemente tipado <see cref="T:System.Collections.Generic.IEnumerator`1" /> que pode ser usado para percorrer a coleção de <paramref name="TRow" /> objetos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando usado com [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] consultas, `Trow` será do tipo <xref:System.Data.DataRow>.  
+  
+ Este método não pode ser substituído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.EnumerableRowCollection`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.DataSetExtensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador para a coleção de <see cref="T:System.Data.DataRow" /> objetos. Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para percorrer a coleção de <see cref="T:System.Data.DataRow" /> objetos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.Data.EnumerableRowCollection%601.GetEnumerator%2A> método.  
+  
+ Este método não pode ser substituído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

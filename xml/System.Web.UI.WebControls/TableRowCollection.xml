@@ -1,0 +1,737 @@
+<Type Name="TableRowCollection" FullName="System.Web.UI.WebControls.TableRowCollection">
+  <TypeSignature Language="C#" Value="public sealed class TableRowCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TableRowCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TableRowCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.TableRowsCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula uma coleção de <see cref="T:System.Web.UI.WebControls.TableRow" /> objetos que representam uma única linha em um <see cref="T:System.Web.UI.WebControls.Table" /> controle. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta classe para gerenciar programaticamente uma coleção de <xref:System.Web.UI.WebControls.TableRow> objetos. Normalmente, essa classe é usada para adicionar ou remover linhas de uma <xref:System.Web.UI.WebControls.Table> controle.  
+  
+> [!NOTE]
+>  Um <xref:System.Web.UI.WebControls.Table> controle contém um <xref:System.Web.UI.WebControls.Table.Rows%2A> coleção que representa uma coleção de <xref:System.Web.UI.WebControls.TableRow> objetos. Cada <xref:System.Web.UI.WebControls.TableRow> representa uma linha individual na tabela e contém um <xref:System.Web.UI.WebControls.TableRow.Cells%2A> coleção que representa uma coleção de <xref:System.Web.UI.WebControls.TableCell> objetos. Essas <xref:System.Web.UI.WebControls.TableCell> objetos representam as células individuais na tabela. Para obter uma célula individual, você deve primeiro obter um <xref:System.Web.UI.WebControls.TableRow> do <xref:System.Web.UI.WebControls.Table.Rows%2A> coleção de um <xref:System.Web.UI.WebControls.Table> controle. Em seguida, você pode obter um <xref:System.Web.UI.WebControls.TableCell> do <xref:System.Web.UI.WebControls.TableRow.Cells%2A> coleção do <xref:System.Web.UI.WebControls.TableRow>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar linhas a uma tabela programaticamente adicionando <xref:System.Web.UI.WebControls.TableRow> objetos que representam as linhas da tabela, como o <xref:System.Web.UI.WebControls.Table> controlar por meio de <xref:System.Web.UI.WebControls.Table.Rows%2A> propriedade.  
+  
+ [!code-aspx-csharp[Classic TableRowCollection Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TableRowCollection Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic TableRowCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TableRowCollection Example/VB/sourcevb.aspx#1)]
+ [!code-xml[Classic TableRowCollection Example#1](~/samples/snippets/common/VS_Snippets_WebNet/Classic TableRowCollection Example/Common/source.xml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.UI.WebControls.TableRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.UI.WebControls.TableRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.Add(System.Web.UI.WebControls.TableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Web.UI.WebControls.TableRow" />
+      </Parameters>
+      <Docs>
+        <param name="row">O objeto <see cref="T:System.Web.UI.WebControls.TableRow" /> a ser adicionado ao <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</param>
+        <summary>Acrescenta especificado <see cref="T:System.Web.UI.WebControls.TableRow" /> objeto ao final do <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</summary>
+        <returns>O índice do <see cref="T:System.Web.UI.WebControls.TableRow" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para adicionar um <xref:System.Web.UI.WebControls.TableRow> objeto ao final de um <xref:System.Web.UI.WebControls.TableRowCollection>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.TableRowCollection.Add%2A> método para adicionar um <xref:System.Web.UI.WebControls.TableRow> o objeto para um <xref:System.Web.UI.WebControls.TableRowCollection>. Observe que no exemplo, o <xref:System.Web.UI.WebControls.Table.Rows%2A> propriedade o <xref:System.Web.UI.WebControls.Table> é uma instância do <xref:System.Web.UI.WebControls.TableRowCollection> classe.  
+  
+ [!code-aspx-csharp[Classic TableRowCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TableRowCollection.Add Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic TableRowCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TableRowCollection.Add Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public void AddAt (int index, System.Web.UI.WebControls.TableRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAt(int32 index, class System.Web.UI.WebControls.TableRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.AddAt(System.Int32,System.Web.UI.WebControls.TableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="row" Type="System.Web.UI.WebControls.TableRow" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local no <see cref="T:System.Web.UI.WebControls.TableRowCollection" /> no qual o <see cref="T:System.Web.UI.WebControls.TableRow" /> será adicionado.</param>
+        <param name="row">O objeto <see cref="T:System.Web.UI.WebControls.TableRow" /> a ser adicionado ao <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</param>
+        <summary>Adiciona o objeto <see cref="T:System.Web.UI.WebControls.TableRow" /> especificado ao <see cref="T:System.Web.UI.WebControls.TableRowCollection" /> no local de índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para inserir especificado <xref:System.Web.UI.WebControls.TableRow> em um <xref:System.Web.UI.WebControls.TableRowCollection> no índice especificado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar um <xref:System.Web.UI.WebControls.TableRow> objeto no meio de um <xref:System.Web.UI.WebControls.TableRowCollection>. Observe que no exemplo, o <xref:System.Web.UI.WebControls.Table.Rows%2A> propriedade o <xref:System.Web.UI.WebControls.Table> é uma instância do <xref:System.Web.UI.WebControls.TableRowCollection> classe.  
+  
+ [!code-aspx-csharp[Classic TableRowCollection.AddAt Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TableRowCollection.AddAt Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic TableRowCollection.AddAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TableRowCollection.AddAt Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Web.UI.WebControls.TableRow[] rows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Web.UI.WebControls.TableRow[] rows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.AddRange(System.Web.UI.WebControls.TableRow[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rows" Type="System.Web.UI.WebControls.TableRow[]" />
+      </Parameters>
+      <Docs>
+        <param name="rows">A matriz que contém os objetos <see cref="T:System.Web.UI.WebControls.TableRow" /> a serem adicionados à coleção.</param>
+        <summary>Acrescenta os objetos <see cref="T:System.Web.UI.WebControls.TableRow" /> da matriz especificada ao final da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableRowCollection.AddRange%2A> método acrescentar o <xref:System.Web.UI.WebControls.TableRow> objetos da matriz especificada à coleção. Esse método é geralmente usado quando você está construindo uma tabela. Para construir uma tabela, primeiro crie uma matriz de <xref:System.Web.UI.WebControls.TableRow> objetos para representar as linhas da tabela. Em seguida, use o <xref:System.Web.UI.WebControls.TableRowCollection.AddRange%2A> método, passando a matriz como um argumento, para adicionar o <xref:System.Web.UI.WebControls.TableRow> objetos na coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor do parâmetro <paramref name="rows" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os controles <see cref="T:System.Web.UI.WebControls.TableRow" /> de <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover todos os <xref:System.Web.UI.WebControls.TableRow> de objetos a partir de <xref:System.Web.UI.WebControls.TableRowCollection> e defina o <xref:System.Web.UI.WebControls.TableRowCollection.Count%2A> propriedade como 0.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.TableRowCollection.Clear%2A> método para remover todos os <xref:System.Web.UI.WebControls.TableRow> objetos do <xref:System.Web.UI.WebControls.TableRowCollection> da tabela e substituí-los com novos <xref:System.Web.UI.WebControls.TableRow> objetos.  
+  
+ [!code-aspx-csharp[Classic TableRowCollection.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TableRowCollection.Clear Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic TableRowCollection.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TableRowCollection.Clear Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Array" /> de base zero que recebe os itens copiados do <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</param>
+        <param name="index">A primeira posição no <see cref="T:System.Array" /> especificado para receber o conteúdo copiado.</param>
+        <summary>Copia os itens do <see cref="T:System.Web.UI.WebControls.TableRowCollection" /> para o <see cref="T:System.Array" /> especificado, começando no índice especificado no <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para copiar o conteúdo do <xref:System.Web.UI.WebControls.TableRowCollection> especificado <xref:System.Array?displayProperty=nameWithType>, começando no índice especificado.  
+  
+> [!NOTE]
+>  O `array` parâmetro deve ser um com base em zero <xref:System.Array?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.TableRowCollection.CopyTo%2A> método para copiar os itens do <xref:System.Web.UI.WebControls.TableRowCollection> na matriz especificada.  
+  
+ [!code-aspx-csharp[Classic TableRowCollection.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TableRowCollection.CopyTo Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic TableRowCollection.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TableRowCollection.CopyTo Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRowCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de <see cref="T:System.Web.UI.WebControls.TableRow" /> objetos no <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</summary>
+        <value>O número de <see cref="T:System.Web.UI.WebControls.TableRow" /> objetos no <see cref="T:System.Web.UI.WebControls.TableRowCollection" />. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para determinar o número de linhas de <xref:System.Web.UI.WebControls.TableRowCollection>. O <xref:System.Web.UI.WebControls.TableRowCollection.Count%2A> propriedade geralmente é usada quando a iteração na coleção para determinar o superior associado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.TableRowCollection.Count%2A> propriedade para determinar o número de linhas no <xref:System.Web.UI.WebControls.TableRowCollection>. Observe que no exemplo, o <xref:System.Web.UI.WebControls.Table.Rows%2A> propriedade o <xref:System.Web.UI.WebControls.Table> é uma instância do <xref:System.Web.UI.WebControls.TableRowCollection> classe.  
+  
+ [!code-csharp[Classic TableRowCollection.Count Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TableRowCollection.Count Example/CS/source.cs#1)]
+ [!code-vb[Classic TableRowCollection.Count Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TableRowCollection.Count Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IEnumerator" /> implementado o objeto que contém todos os <see cref="T:System.Web.UI.WebControls.TableRow" /> objetos dentro do <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> implementado o objeto que contém todos os <see cref="T:System.Web.UI.WebControls.TableRow" /> objetos dentro do <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar um <xref:System.Collections.IEnumerator?displayProperty=nameWithType> implementado um objeto que pode ser iterado por meio de facilmente para obter cada item no <xref:System.Web.UI.WebControls.TableRowCollection>.  
+  
+ Use o <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> apontada propriedade para obter o item atualmente na coleção.  
+  
+ Use o <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método para mover para o próximo item na coleção.  
+  
+ Use o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método para mover o enumerador de volta para a posição inicial.  
+  
+> [!NOTE]
+>  O <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método deve ser chamado depois de criar um <xref:System.Collections.IEnumerator?displayProperty=nameWithType> implementou o objeto ou usando o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método para mover o enumerador para o primeiro item na coleção. Caso contrário, o item é representado pelo <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> propriedade está definida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.TableRowCollection.GetEnumerator%2A> método para criar um <xref:System.Collections.IEnumerator?displayProperty=nameWithType> implementado objeto iteração para exibir os itens na tabela.  
+  
+ [!code-aspx-csharp[Classic TableRowCollection.GetEnumerator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TableRowCollection.GetEnumerator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic TableRowCollection.GetEnumerator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TableRowCollection.GetEnumerator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRowIndex">
+      <MemberSignature Language="C#" Value="public int GetRowIndex (System.Web.UI.WebControls.TableRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetRowIndex(class System.Web.UI.WebControls.TableRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.GetRowIndex(System.Web.UI.WebControls.TableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Web.UI.WebControls.TableRow" />
+      </Parameters>
+      <Docs>
+        <param name="row">O objeto <see cref="T:System.Web.UI.WebControls.TableRow" /> a ser pesquisado no <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</param>
+        <summary>Retorna um valor que representa o índice do <see cref="T:System.Web.UI.WebControls.TableRow" /> especificado do <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</summary>
+        <returns>A posição de índice ordinal especificado <see cref="T:System.Web.UI.WebControls.TableRow" /> dentro da coleção. O padrão é -1, que indica que o <see cref="T:System.Web.UI.WebControls.TableRow" /> especificado não foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar o índice especificado <xref:System.Web.UI.WebControls.TableRow> no <xref:System.Web.UI.WebControls.TableRowCollection>. Se especificado <xref:System.Web.UI.WebControls.TableRow> não é encontrado, um índice de -1 será retornado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.TableRowCollection.GetRowIndex%2A> propriedade para exibir o índice da linha da célula selecionada.  
+  
+ [!code-aspx-csharp[Classic TableRowCollection.GetRowIndex Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TableRowCollection.GetRowIndex Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic TableRowCollection.GetRowIndex Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TableRowCollection.GetRowIndex Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRowCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.TableRowCollection" /> é somente leitura.</summary>
+        <value>
+          <see langword="false" />para todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna `false` para indicar que o <xref:System.Web.UI.WebControls.TableRowCollection> podem ser gravados em todos os casos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRowCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso para o <see cref="T:System.Web.UI.WebControls.TableRowCollection" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="false" />para todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é derivada de <xref:System.Collections.ICollection?displayProperty=nameWithType> e é substituído para retornar sempre `false`.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.TableCellCollection.IsSynchronized%2A> propriedade, consulte o <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TableRow this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TableRow Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRowCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TableRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um valor de índice ordinal que especifica qual <see cref="T:System.Web.UI.WebControls.TableRow" /> objeto a ser retornado. Esse índice é baseado em zero.</param>
+        <summary>Obtém um <see cref="T:System.Web.UI.WebControls.TableRow" /> do <see cref="T:System.Web.UI.WebControls.TableRowCollection" /> no índice especificado.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.TableRow" /> que representa um elemento de <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este indexador para obter um indivíduo <xref:System.Web.UI.WebControls.TableRow> do <xref:System.Web.UI.WebControls.TableRowCollection> no índice especificado usando a notação de matriz simples.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o indexador para obter um <xref:System.Web.UI.WebControls.TableRow> de um <xref:System.Web.UI.WebControls.TableRowCollection>. Observe que no exemplo, o <xref:System.Web.UI.WebControls.Table.Rows%2A> propriedade o <xref:System.Web.UI.WebControls.Table> é uma instância do <xref:System.Web.UI.WebControls.TableRowCollection> classe.  
+  
+ [!code-aspx-csharp[Classic TableRowCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TableRowCollection.this Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic TableRowCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TableRowCollection.this Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.TableRow row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.TableRow row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.Remove(System.Web.UI.WebControls.TableRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Web.UI.WebControls.TableRow" />
+      </Parameters>
+      <Docs>
+        <param name="row">O objeto <see cref="T:System.Web.UI.WebControls.TableRow" /> a ser removido do <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</param>
+        <summary>Remove o <see cref="T:System.Web.UI.WebControls.TableRow" /> especificado do <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover especificado <xref:System.Web.UI.WebControls.TableRow> de um <xref:System.Web.UI.WebControls.TableRowCollection>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.TableRowCollection.Remove%2A> método para remover uma linha da tabela. Observe que no exemplo, o <xref:System.Web.UI.WebControls.Table.Rows%2A> propriedade o <xref:System.Web.UI.WebControls.Table> é uma instância do <xref:System.Web.UI.WebControls.TableRowCollection> classe.  
+  
+ [!code-aspx-csharp[Classic TableRowCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TableRowCollection.Remove Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic TableRowCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TableRowCollection.Remove Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.UI.WebControls.TableRow" /> objeto ser removido do <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</param>
+        <summary>Remove um <see cref="T:System.Web.UI.WebControls.TableRow" /> do <see cref="T:System.Web.UI.WebControls.TableRowCollection" /> no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover um <xref:System.Web.UI.WebControls.TableRow> do <xref:System.Web.UI.WebControls.TableRowCollection> no índice especificado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.TableRowCollection.RemoveAt%2A> método para remover uma linha da tabela. Observe que no exemplo, o <xref:System.Web.UI.WebControls.Table.Rows%2A> propriedade o <xref:System.Web.UI.WebControls.Table> é uma instância do <xref:System.Web.UI.WebControls.TableRowCollection> classe. Observe também que o índice do <xref:System.Web.UI.WebControls.Table.Rows%2A> coleta é baseado em zero.  
+  
+ [!code-aspx-csharp[Classic TableRowCollection.RemoveAt Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic TableRowCollection.RemoveAt Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic TableRowCollection.RemoveAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic TableRowCollection.RemoveAt Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRowCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que pode ser usado para sincronizar o acesso a <see cref="T:System.Web.UI.WebControls.TableRowCollection" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto retornado nesta implementação é o <xref:System.Web.UI.WebControls.TableRowCollection> em si.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.TableCellCollection.SyncRoot%2A> propriedade, consulte o <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser adicionado à coleção.</param>
+        <summary>Adiciona um objeto à coleção.</summary>
+        <returns>O índice no qual o objeto foi adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você deve usar o <xref:System.Web.UI.WebControls.TableRowCollection.Add%2A?displayProperty=nameWithType> método para adicionar um elemento para uma <xref:System.Web.UI.WebControls.TableRowCollection> objeto.  
+  
+ O <xref:System.Web.UI.WebControls.TableRowCollection.System%23Collections%23IList%23Add%2A> método é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser localizado na coleção.</param>
+        <summary>Determina se o objeto especificado está contido dentro da coleção.</summary>
+        <returns>
+          <see langword="true" />Se o objeto estiver na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TableRowCollection.System%23Collections%23IList%23Contains%2A> método é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser localizado na coleção.</param>
+        <summary>Pesquisa o objeto especificado e retorna o índice baseado em zero da primeira ocorrência na coleção.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência do objeto na coleção; Caso contrário, retornará -1 se o objeto não está na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você deve usar o <xref:System.Web.UI.WebControls.TableRowCollection.GetRowIndex%2A> método para obter o índice de um elemento em um <xref:System.Web.UI.WebControls.TableRowCollection> objeto.  
+  
+ O <xref:System.Web.UI.WebControls.TableRowCollection.System%23Collections%23IList%23IndexOf%2A> método é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object o);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero na coleção na qual inserir o objeto.</param>
+        <param name="o">O objeto a ser inserido na coleção.</param>
+        <summary>Insere um objeto na coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você deve usar o <xref:System.Web.UI.WebControls.TableRowCollection.AddAt%2A> método para adicionar um elemento para uma <xref:System.Web.UI.WebControls.TableRowCollection> objeto.  
+  
+ O <xref:System.Web.UI.WebControls.TableRowCollection.System%23Collections%23IList%23Insert%2A> método é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRowCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IList.IsFixedSize" />.</summary>
+        <value>
+          <see langword="true" />Se a lista tem um tamanho fixo; Caso contrário,<see langword="false" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.TableRowCollection> instância é convertida para o <xref:System.Collections.IList> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableRowCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do elemento a ser obtido ou definido.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IList.Item(System.Int32)" />.</summary>
+        <value>O elemento no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.TableRowCollection> instância é convertida para o <xref:System.Collections.IList> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableRowCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser removido da coleção.</param>
+        <summary>Remove um objeto da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você deve usar o <xref:System.Web.UI.WebControls.TableRowCollection.Remove%2A?displayProperty=nameWithType> método para remover um elemento de uma <xref:System.Web.UI.WebControls.TableRowCollection> objeto.  
+  
+ O <xref:System.Web.UI.WebControls.TableRowCollection.System%23Collections%23IList%23Remove%2A> método é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.TableRowCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

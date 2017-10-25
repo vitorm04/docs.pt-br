@@ -1,0 +1,351 @@
+<Type Name="IEventBindingService" FullName="System.ComponentModel.Design.IEventBindingService">
+  <TypeSignature Language="C#" Value="public interface IEventBindingService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEventBindingService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IEventBindingService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um serviço para o registro de manipuladores de eventos para eventos do componente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O serviço de associação de evento fornece uma maneira para vincular um manipulador de eventos com um evento de componente de código de designer.  
+  
+ Para vincular um manipulador de eventos com um evento de componente usando o <xref:System.ComponentModel.Design.IEventBindingService>, você deve primeiro obter um <xref:System.ComponentModel.EventDescriptor> para o evento do componente que deseja vincular. O <xref:System.ComponentModel.Design.IEventBindingService> fornece métodos que podem converter uma <xref:System.ComponentModel.EventDescriptor> para um <xref:System.ComponentModel.PropertyDescriptor> que você pode usar para configurar o evento com um nome de método do manipulador de eventos.  
+  
+ O <xref:System.ComponentModel.TypeDescriptor> objeto fornece um <xref:System.ComponentModel.TypeDescriptor.GetEvents%2A> método que você pode usar para obter um <xref:System.ComponentModel.EventDescriptorCollection> contendo <xref:System.ComponentModel.EventDescriptor> objetos para cada evento de um componente. O <xref:System.ComponentModel.Design.IEventBindingService.GetEventProperty%2A> e <xref:System.ComponentModel.Design.IEventBindingService.GetEventProperties%2A> métodos do <xref:System.ComponentModel.Design.IEventBindingService> retornar um <xref:System.ComponentModel.PropertyDescriptor> para cada <xref:System.ComponentModel.EventDescriptor> passado para o método. Cada <xref:System.ComponentModel.PropertyDescriptor> retornado de <xref:System.ComponentModel.Design.IEventBindingService.GetEventProperty%2A> ou <xref:System.ComponentModel.Design.IEventBindingService.GetEventProperties%2A> tem um tipo de propriedade de cadeia de caracteres. Você pode definir essa cadeia de caracteres para um valor que indica o nome do método manipulador de eventos para vincular o evento usando o <xref:System.ComponentModel.PropertyDescriptor.SetValue%2A> método o <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um designer que usa o <xref:System.ComponentModel.Design.IEventBindingService> para vincular o evento de um componente com um manipulador de eventos em tempo de design quando o comando de menu de atalho personalizado que adiciona o designer para o componente é chamado. Para usar o exemplo, compilá-lo em uma biblioteca de classe, adicione uma referência de um projeto do Windows Forms, adicionar o componente na biblioteca de classes para a caixa de ferramentas, clicando duas vezes a caixa de ferramentas e selecionando Personalizar caixa de ferramentas..., em seguida, escolher a biblioteca de classes e clicando em Okey, e Adicione uma instância do EventControl a um formulário. Em seguida, clique o EventControl e clique no comando de menu de atalho de testEvent conectar. Um método de manipulador de eventos em branco é criado e o método de testEvent do EventControl é inicializado para este manipulador de eventos no código de inicialização para o formulário.  
+  
+ [!code-cpp[IEventBindingServiceExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IEventBindingServiceExample/CPP/source.cpp#1)]
+ [!code-csharp[IEventBindingServiceExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IEventBindingServiceExample/CS/source.cs#1)]
+ [!code-vb[IEventBindingServiceExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IEventBindingServiceExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateUniqueMethodName">
+      <MemberSignature Language="C#" Value="public string CreateUniqueMethodName (System.ComponentModel.IComponent component, System.ComponentModel.EventDescriptor e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateUniqueMethodName(class System.ComponentModel.IComponent component, class System.ComponentModel.EventDescriptor e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IEventBindingService.CreateUniqueMethodName(System.ComponentModel.IComponent,System.ComponentModel.EventDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="e" Type="System.ComponentModel.EventDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="component">O evento da instância do componente está conectada a.</param>
+        <param name="e">O evento para criar um nome para.</param>
+        <summary>Cria um nome exclusivo para um método de manipulador de eventos para o componente especificado e o evento.</summary>
+        <returns>O nome recomendado para o método de manipulador de eventos para esse evento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna um nome exclusivo de qualquer outro nome de método no código-fonte do usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCompatibleMethods">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection GetCompatibleMethods (System.ComponentModel.EventDescriptor e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetCompatibleMethods(class System.ComponentModel.EventDescriptor e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IEventBindingService.GetCompatibleMethods(System.ComponentModel.EventDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.EventDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="e">O evento para obter os métodos do manipulador de eventos compatível para.</param>
+        <summary>Obtém uma coleção de métodos de manipulador de eventos que têm uma assinatura de método compatível com o evento especificado.</summary>
+        <returns>Uma coleção de cadeias de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada cadeia de caracteres na coleção é o nome de um método que tem uma assinatura de método compatível com o evento especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvent">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.EventDescriptor GetEvent (System.ComponentModel.PropertyDescriptor property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.EventDescriptor GetEvent(class System.ComponentModel.PropertyDescriptor property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IEventBindingService.GetEvent(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EventDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="property">A propriedade que representa um evento.</param>
+        <summary>Obtém um <see cref="T:System.ComponentModel.EventDescriptor" /> para o evento que representa o descritor de propriedade especificado, se ele representa um evento.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.EventDescriptor" /> para o evento que representa a propriedade, ou <see langword="null" /> se a propriedade não representa um evento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEventProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection GetEventProperties (System.ComponentModel.EventDescriptorCollection events);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetEventProperties(class System.ComponentModel.EventDescriptorCollection events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IEventBindingService.GetEventProperties(System.ComponentModel.EventDescriptorCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.ComponentModel.EventDescriptorCollection" />
+      </Parameters>
+      <Docs>
+        <param name="events">Os eventos para converter em Propriedades.</param>
+        <summary>Converte um conjunto de descritores de eventos em um conjunto de descritores de propriedade.</summary>
+        <returns>Uma matriz de <see cref="T:System.ComponentModel.PropertyDescriptor" /> objetos que descrevem o conjunto de eventos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada retornado <xref:System.ComponentModel.PropertyDescriptor> tem um <xref:System.ComponentModel.PropertyDescriptor.PropertyType%2A> de cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEventProperty">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptor GetEventProperty (System.ComponentModel.EventDescriptor e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptor GetEventProperty(class System.ComponentModel.EventDescriptor e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IEventBindingService.GetEventProperty(System.ComponentModel.EventDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.EventDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="e">O evento para converter.</param>
+        <summary>Converte um descritor de evento único em um descritor de propriedade.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> que descreve o evento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retornado <xref:System.ComponentModel.PropertyDescriptor> tem um <xref:System.ComponentModel.PropertyDescriptor.PropertyType%2A> de cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCode">
+      <MemberSignature Language="C#" Value="public bool ShowCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShowCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IEventBindingService.ShowCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exibe o código de usuário para o designer.</summary>
+        <returns>
+          <see langword="true" />Se o código é exibido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método exibe o editor de código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCode">
+      <MemberSignature Language="C#" Value="public bool ShowCode (int lineNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShowCode(int32 lineNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IEventBindingService.ShowCode(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lineNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="lineNumber">O número de linha para colocar o cursor sobre.</param>
+        <summary>Exibe o código de usuário para o designer na linha especificada.</summary>
+        <returns>
+          <see langword="true" />Se o código é exibido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método exibe o editor de códigos e posiciona o cursor na linha especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCode">
+      <MemberSignature Language="C#" Value="public bool ShowCode (System.ComponentModel.IComponent component, System.ComponentModel.EventDescriptor e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShowCode(class System.ComponentModel.IComponent component, class System.ComponentModel.EventDescriptor e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IEventBindingService.ShowCode(System.ComponentModel.IComponent,System.ComponentModel.EventDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="e" Type="System.ComponentModel.EventDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente que o evento está conectado.</param>
+        <param name="e">O evento para exibir.</param>
+        <summary>Exibe o código de usuário para o evento especificado.</summary>
+        <returns>
+          <see langword="true" />Se o código é exibido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método exibe o editor de códigos e posiciona o cursor na linha que o evento especificado é declarado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,113 @@
+<Type Name="BulletedListDesigner" FullName="System.Web.UI.Design.WebControls.BulletedListDesigner">
+  <TypeSignature Language="C#" Value="public class BulletedListDesigner : System.Web.UI.Design.WebControls.ListControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BulletedListDesigner extends System.Web.UI.Design.WebControls.ListControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.BulletedListDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.ListControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado para fornecer suporte em tempo de design em um designer visual para o <see cref="T:System.Web.UI.WebControls.BulletedList" /> controle de servidor Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um designer visual, quando você alternar de origem para o modo de Design, o código-fonte marcação que descreve o <xref:System.Web.UI.WebControls.BulletedList> controle é analisado e uma versão de tempo de design do controle é criada na superfície de design. Quando você alternar de volta à exibição da fonte, o controle de tempo de design é persistente para o código-fonte marcação e editado na marcação da página da Web.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BulletedListDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BulletedListDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.BulletedListDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.Design.WebControls.BulletedListDesigner> classe quando ele cria associado <xref:System.Web.UI.WebControls.BulletedList> controle ou uma cópia desse controle na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostFilterEvents">
+      <MemberSignature Language="C#" Value="protected override void PostFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BulletedListDesigner.PostFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">O <see cref="T:System.Collections.IDictionary" /> que contém o <see cref="T:System.ComponentModel.EventDescriptor" /> objetos que representam os eventos do controle. As chaves de <see cref="T:System.Collections.IDictionary" /> são nomes de evento.</param>
+        <summary>Permite que o designer filtrar o conjunto de eventos que o controle associado irá expor em tempo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Designers de controle usam métodos que são derivados do <xref:System.ComponentModel.Design.ComponentDesigner.PostFilterEvents%2A?displayProperty=nameWithType> método para filtrar o conjunto de eventos que o controle é projetar vai expor por meio de <xref:System.ComponentModel.TypeDescriptor> objeto.  
+  
+ Para o <xref:System.Web.UI.WebControls.BulletedList> controle, o <xref:System.Web.UI.Design.WebControls.BulletedListDesigner.PostFilterEvents%2A> método Remove o <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> evento na lista que é exposto pelo designer.  
+  
+ As chaves de <xref:System.Collections.IDictionary> interface são os nomes dos eventos. Os valores de <xref:System.Collections.IDictionary> são objetos do tipo <xref:System.ComponentModel.EventDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituindo o <see cref="M:System.Web.UI.Design.WebControls.BulletedListDesigner.PostFilterEvents(System.Collections.IDictionary)" /> método fornece uma maneira de alterar ou remover itens no dicionário de eventos que são expostos pelo designer para este controle.  
+  
+ Diretamente, você pode filtrar o dicionário que pode ser acessado por meio de <paramref name="events" /> parâmetro, ou você pode deixá-la inalterada. Se você está substituindo o <see cref="M:System.Web.UI.Design.WebControls.BulletedListDesigner.PostFilterEvents(System.Collections.IDictionary)" /> método, chame a implementação base depois de executar seus próprios recursos de filtragem.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.BulletedListDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o designer deve usar uma cópia temporária em vez do controle real que está associado com o designer para gerar a marcação de tempo de design.</summary>
+        <value>Sempre <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.Design.WebControls.BulletedListDesigner.UsePreviewControl%2A> propriedade é sempre `true`, o designer usa um <xref:System.Web.UI.WebControls.View> controle que contém uma cópia temporária do associado <xref:System.Web.UI.WebControls.BulletedList> controle para gerar a marcação de tempo de design. O <xref:System.Web.UI.WebControls.View> controle não afeta qualquer persistência para o <xref:System.Web.UI.WebControls.BulletedList>. Se o <xref:System.Web.UI.Design.WebControls.BulletedListDesigner.UsePreviewControl%2A> propriedade fosse retornar `false`, o designer usaria associado <xref:System.Web.UI.WebControls.BulletedList> para gerar a marcação de tempo de design.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.UsePreviewControl" /> propriedade para retornar <see langword="false" /> ou para determinar seu valor com base em se o controle está marcado com um nível de classe <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> objeto. Se o <see cref="P:System.Web.UI.Design.WebControls.DetailsViewDesigner.UsePreviewControl" /> propriedade não for substituída, o <see cref="T:System.Web.UI.Design.WebControls.BulletedListDesigner" /> objeto ignora o <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

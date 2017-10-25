@@ -1,0 +1,240 @@
+<Type Name="ITransformProvider" FullName="System.Windows.Automation.Provider.ITransformProvider">
+  <TypeSignature Language="C#" Value="public interface ITransformProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITransformProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.ITransformProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("6829ddc4-4f91-4ffa-b86f-bd3e2987cb4c")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe métodos e propriedades para oferecer suporte ao acesso de cliente de automação de interface do usuário para controles que podem ser movidos, redimensionada ou girada em um espaço bidimensional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementado em um provedor de automação de interface do usuário que deve dar suporte a <xref:System.Windows.Automation.TransformPattern> padrão de controle.  
+  
+ Suporte para esse padrão de controle não está limitado a objetos na área de trabalho. Esse padrão de controle também deve ser implementado pelos filhos de um objeto de contêiner, como os filhos podem ser movidos, redimensionados ou girados livremente dentro dos limites do contêiner.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanMove">
+      <MemberSignature Language="C#" Value="public bool CanMove { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanMove" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITransformProvider.CanMove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o controle pode ser movido.</summary>
+        <value>
+          <see langword="true" />Se o elemento pode ser movido; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle que pode ser movido.  
+  
+ [!code-csharp[UIAITransformProvider_snip#CanMove](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#canmove)]
+ [!code-vb[UIAITransformProvider_snip#CanMove](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#canmove)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanResize">
+      <MemberSignature Language="C#" Value="public bool CanResize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanResize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITransformProvider.CanResize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] elemento pode ser redimensionado.</summary>
+        <value>
+          <see langword="true" />Se o elemento pode ser redimensionado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle que pode ser redimensionado.  
+  
+ [!code-csharp[UIAITransformProvider_snip#CanResize](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#canresize)]
+ [!code-vb[UIAITransformProvider_snip#CanResize](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#canresize)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRotate">
+      <MemberSignature Language="C#" Value="public bool CanRotate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRotate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.ITransformProvider.CanRotate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o controle pode ser girado.</summary>
+        <value>
+          <see langword="true" />Se o elemento pode ser girado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle que não pode ser girado.  
+  
+ [!code-csharp[UIAITransformProvider_snip#CanRotate](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#canrotate)]
+ [!code-vb[UIAITransformProvider_snip#CanRotate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#canrotate)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="public void Move (double x, double y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Move(float64 x, float64 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITransformProvider.Move(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Coordenadas da tela absoluto do lado esquerdo do controle.</param>
+        <param name="y">Coordenadas da tela absoluto da parte superior do controle.</param>
+        <summary>Move o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto não pode ser movido, redimensionado ou girado, de modo que o local da tela resultante seria completamente fora das coordenadas de seu contêiner e está inacessível para teclado ou mouse. Por exemplo, quando uma janela de nível superior é movida completamente fora da tela ou um objeto filho é movido para fora dos limites do visor do contêiner. Nesses casos, o objeto será colocado mais próximo das coordenadas de tela solicitada possível com as coordenadas superior ou esquerdas substituídas para ser dentro dos limites do contêiner.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma possível implementação desse método para um controle personalizado que pode ser movido.  
+  
+ [!code-csharp[UIAITransformProvider_snip#Move](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#move)]
+ [!code-vb[UIAITransformProvider_snip#Move](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#move)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Se o <see cref="P:System.Windows.Automation.Provider.ITransformProvider.CanMove" /> propriedade é false.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public void Resize (double width, double height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Resize(float64 width, float64 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITransformProvider.Resize(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Double" />
+        <Parameter Name="height" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="width">A nova largura da janela, em pixels.</param>
+        <param name="height">A nova altura da janela, em pixels.</param>
+        <summary>Redimensiona o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando chamado em um controle que dá suporte a painéis de divisão, esse método pode ter o efeito colateral de redimensionamento outros painéis contíguos.  
+  
+ Um objeto não pode ser movido, redimensionado ou girado, de modo que o local da tela resultante seria completamente fora das coordenadas de seu contêiner e está inacessível para teclado ou mouse. Por exemplo, quando uma janela de nível superior é movida completamente fora da tela ou um objeto filho é movido para fora dos limites do visor do contêiner. Nesses casos, o objeto será colocado mais próximo das coordenadas de tela solicitada possível com as coordenadas superior ou esquerdas substituídas para ser dentro dos limites do contêiner.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma possível implementação desse método para um controle personalizado que pode ser redimensionado.  
+  
+ [!code-csharp[UIAITransformProvider_snip#Resize](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#resize)]
+ [!code-vb[UIAITransformProvider_snip#Resize](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#resize)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Se o <see cref="P:System.Windows.Automation.Provider.ITransformProvider.CanResize" /> propriedade é false.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Rotate">
+      <MemberSignature Language="C#" Value="public void Rotate (double degrees);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Rotate(float64 degrees) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.ITransformProvider.Rotate(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="degrees" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="degrees">O número de graus para girar o controle. Um número positivo gira em sentido anti-horário. um número negativo gira no sentido anti-horário.</param>
+        <summary>Gira o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto não pode ser movido, redimensionado ou girado, de modo que o local da tela resultante seria completamente fora das coordenadas de seu contêiner e está inacessível para teclado ou mouse. Por exemplo, quando uma janela de nível superior é movida completamente fora da tela ou um objeto filho é movido para fora dos limites do visor do contêiner. Nesses casos, o objeto será colocado mais próximo das coordenadas de tela solicitada possível com as coordenadas superior ou esquerdas substituídas para ser dentro dos limites do contêiner.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma possível implementação desse método para um controle personalizado que não pode ser girado.  
+  
+ [!code-csharp[UIAITransformProvider_snip#Rotate](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAITransformProvider_snip/CSharp/TransformFragment.cs#rotate)]
+ [!code-vb[UIAITransformProvider_snip#Rotate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAITransformProvider_snip/visualbasic/transformfragment.vb#rotate)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Se o <see cref="P:System.Windows.Automation.Provider.ITransformProvider.CanRotate" /> propriedade é false.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

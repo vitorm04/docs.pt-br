@@ -1,0 +1,266 @@
+<Type Name="AspNetHostingPermission" FullName="System.Web.AspNetHostingPermission">
+  <TypeSignature Language="C#" Value="public sealed class AspNetHostingPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit AspNetHostingPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Web.AspNetHostingPermission" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Controla o acesso permissões em ambientes de ASP.NET hospedado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.AspNetHostingPermission> classe é usada em conjunto com a segurança de acesso do código para ajudar a proteger os tipos públicos nos namespaces System. Web. Código deve ser atribuído pelo menos o <xref:System.Web.AspNetHostingPermissionLevel.Minimal> relação de confiança de nível de acesso protegido classes ASP.NET.  
+  
+ O <xref:System.Web.AspNetHostingPermission> da classe <xref:System.Web.AspNetHostingPermission.Level%2A> propriedade é definida ao configurar o nível de confiança apropriado no elemento de configuração. Por padrão, o `level` atributo o `trust` elemento de configuração é definido como `Full`. Isto é, por padrão, os aplicativos ASP.NET executados sob o <xref:System.Web.AspNetHostingPermissionLevel.Unrestricted> nível. Quando é criado um domínio de aplicativo do ASP.NET, ASP.NET lê o valor especificado para o `level` atributo do `trust` elemento de configuração, cria uma instância do <xref:System.Web.AspNetHostingPermission> classe com especificado <xref:System.Web.AspNetHostingPermission.Level%2A> atributo e, em seguida, adiciona a classe para o conjunto de permissões para o domínio de aplicativo. Para obter mais informações, consulte [níveis de confiança do ASP.NET e arquivos de política](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1).  
+  
+ É recomendável que você defina o `level` atributo o `trust` elemento de configuração para `High` para sites que são confiáveis. Para sites que não são confiáveis, como um servidor Web que hospeda sites que executa o código de um cliente externo, é recomendável que você defina o `level` atributo o `trust` elemento de configuração para `Medium`.  
+  
+ Os conjuntos de permissões que são definidos por padrão para o .NET Framework (por exemplo, LocalIntranet, Internet e assim por diante) não incluem o <xref:System.Web.AspNetHostingPermission> permissão. Ou seja, o <xref:System.Web.AspNetHostingPermission> permissão só é atribuída por padrão, para aplicativos que estejam executando sob `Full` confiança.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma classe protegida usando o <xref:System.Web.AspNetHostingPermission> permissão. Código deve estar em execução pelo menos <xref:System.Web.AspNetHostingPermissionLevel.Minimal> <xref:System.Web.AspNetHostingPermission> permissão <xref:System.Web.AspNetHostingPermission.Level%2A> para criar uma instância da classe.  
+  
+ [!code-csharp[System.Web.AspNetHostingPermission#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.AspNetHostingPermission/CS/CustomAspNetClass.cs#1)]
+ [!code-vb[System.Web.AspNetHostingPermission#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.AspNetHostingPermission/VB/CustomAspNetClass.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AspNetHostingPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.AspNetHostingPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um valor de enumeração <see cref="T:System.Security.Permissions.PermissionState" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.AspNetHostingPermission" /> classe com especificado <see cref="T:System.Security.Permissions.PermissionState" /> valor de enumeração.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="state" />não é definido como um do <see cref="T:System.Security.Permissions.PermissionState" /> valores de enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AspNetHostingPermission (System.Web.AspNetHostingPermissionLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.AspNetHostingPermissionLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.AspNetHostingPermission.#ctor(System.Web.AspNetHostingPermissionLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="level" Type="System.Web.AspNetHostingPermissionLevel" />
+      </Parameters>
+      <Docs>
+        <param name="level">Um valor de enumeração <see cref="T:System.Web.AspNetHostingPermissionLevel" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.AspNetHostingPermission" /> classe com o nível de permissão especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.AspNetHostingPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementado por uma classe derivada, cria e retorna uma cópia idêntica do objeto de permissão atual.</summary>
+        <returns>Uma cópia do objeto de permissão atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement securityElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement securityElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.AspNetHostingPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityElement" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="securityElement">O <see cref="T:System.Security.SecurityElement" /> que contém o XML de codificação a ser usada para reconstruir o objeto de permissão.</param>
+        <summary>Reconstrói um objeto de permissão com um estado especificado de uma codificação de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter detalhes sobre como formatar a representação XML do estado do objeto de permissão, consulte [implementando uma permissão personalizada](http://msdn.microsoft.com/en-us/e3d0416b-7a3d-4074-9263-c7d6cd815585).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="securityElement" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Security.SecurityElement.Tag" /> propriedade <paramref name="securityElement" /> não é igual a "IPermission".  
+  
+ <see langword="-" />ou -  
+  
+ A classe <see cref="M:System.Security.SecurityElement.Attribute(System.String)" /> de <paramref name="securityElement" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.AspNetHostingPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão para combinar com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Quando implementado por uma classe derivada, cria e retorna uma permissão que é a interseção de permissão atual e a permissão especificada.</summary>
+        <returns>Um <see cref="T:System.Security.IPermission" /> que representa a interseção de permissão atual e a permissão especificada; caso contrário, <see langword="null" /> se a interseção está vazia.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" /> não é um <see cref="T:System.Web.AspNetHostingPermission" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.AspNetHostingPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">O <see cref="T:System.Security.IPermission" /> para combinar com a permissão atual. Ele deve ser do mesmo tipo do atual <see cref="T:System.Security.IPermission" />.</param>
+        <summary>Retorna um valor que indica se a permissão atual é um subconjunto de permissão especificada.</summary>
+        <returns>
+          <see langword="true" />Se o atual <see cref="T:System.Security.IPermission" /> é um subconjunto do <see cref="T:System.Security.IPermission" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" /> não é um <see cref="T:System.Web.AspNetHostingPermission" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.AspNetHostingPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o acesso irrestrito ao recurso protegido pela permissão atual é permitido.</summary>
+        <returns>
+          <see langword="true" />Se irrestrito o uso do recurso protegido pela permissão é permitida. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public System.Web.AspNetHostingPermissionLevel Level { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.AspNetHostingPermissionLevel Level" />
+      <MemberSignature Language="DocId" Value="P:System.Web.AspNetHostingPermission.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.AspNetHostingPermissionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de permissão de hospedagem atual para um aplicativo ASP.NET.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.AspNetHostingPermissionLevel" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.AspNetHostingPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML do objeto permission e seu estado atual.</summary>
+        <returns>Um <see cref="T:System.Security.SecurityElement" /> que contém a codificação XML do objeto de permissão, incluindo quaisquer informações de estado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.AspNetHostingPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão para combinar com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria uma permissão que é a união de permissão atual e a permissão especificada.</summary>
+        <returns>Um <see cref="T:System.Security.IPermission" /> que representa a união de permissão atual e a permissão especificada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" /> não é um <see cref="T:System.Web.AspNetHostingPermission" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

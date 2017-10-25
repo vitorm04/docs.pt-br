@@ -1,0 +1,233 @@
+<Type Name="MonthCalendar+HitArea" FullName="System.Windows.Forms.MonthCalendar+HitArea">
+  <TypeSignature Language="C#" Value="public enum MonthCalendar.HitArea" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed MonthCalendar/HitArea extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MonthCalendar.HitArea" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define constantes que representam áreas em um controle <see cref="T:System.Windows.Forms.MonthCalendar" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração inclui áreas específicas do <xref:System.Windows.Forms.MonthCalendar> controle como seus valores enumerados. O <xref:System.Windows.Forms.MonthCalendar.HitTestInfo.HitArea%2A> membro <xref:System.Windows.Forms.MonthCalendar.HitTestInfo> é uma destas opções enumerados valores e indica qual parte de um calendário de mês está em um ponto especificado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CalendarBackground">
+      <MemberSignature Language="C#" Value="CalendarBackground" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea CalendarBackground = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.CalendarBackground" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado faz parte da tela de fundo do calendário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Date">
+      <MemberSignature Language="C#" Value="Date" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea Date = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.Date" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado está em uma data no calendário. A propriedade <see cref="P:System.Windows.Forms.MonthCalendar.HitTestInfo.Time" /> de <see cref="T:System.Windows.Forms.MonthCalendar.HitTestInfo" /> é definida como a data no ponto especificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DayOfWeek">
+      <MemberSignature Language="C#" Value="DayOfWeek" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea DayOfWeek = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.DayOfWeek" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado está sobre uma abreviação do dia ("sex.", por exemplo). A propriedade <see cref="P:System.Windows.Forms.MonthCalendar.HitTestInfo.Time" /> de <see cref="T:System.Windows.Forms.MonthCalendar.HitTestInfo" /> está definida como 1º de janeiro de 0001.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NextMonthButton">
+      <MemberSignature Language="C#" Value="NextMonthButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea NextMonthButton = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.NextMonthButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado está sobre o botão no canto superior direito do controle. Se o usuário clicar aqui, o calendário mensal rolará sua exibição para o próximo mês ou conjunto de meses.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NextMonthDate">
+      <MemberSignature Language="C#" Value="NextMonthDate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea NextMonthDate = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.NextMonthDate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado está sobre uma data do próximo mês (parcialmente exibido na parte superior do mês exibido no momento). Se o usuário clicar aqui, o calendário mensal rolará sua exibição para o próximo mês ou conjunto de meses.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Nowhere">
+      <MemberSignature Language="C#" Value="Nowhere" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea Nowhere = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.Nowhere" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado não está no controle de calendário mensal ou está em uma parte inativa do controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrevMonthButton">
+      <MemberSignature Language="C#" Value="PrevMonthButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea PrevMonthButton = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.PrevMonthButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado está sobre o botão no canto superior esquerdo do controle. Se o usuário clicar aqui, o calendário mensal rolará sua exibição para o mês ou conjunto de meses anterior.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrevMonthDate">
+      <MemberSignature Language="C#" Value="PrevMonthDate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea PrevMonthDate = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.PrevMonthDate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado está sobre uma data do mês anterior (parcialmente exibido na parte superior do mês exibido no momento). Se o usuário clicar aqui, o calendário mensal rolará sua exibição para o mês ou conjunto de meses anterior.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleBackground">
+      <MemberSignature Language="C#" Value="TitleBackground" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea TitleBackground = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.TitleBackground" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado está acima da tela de fundo do título do mês.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleMonth">
+      <MemberSignature Language="C#" Value="TitleMonth" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea TitleMonth = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.TitleMonth" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado na barra de título do mês, sobre o nome do mês.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleYear">
+      <MemberSignature Language="C#" Value="TitleYear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea TitleYear = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.TitleYear" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado na barra de título do mês, sobre o valor do ano.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TodayLink">
+      <MemberSignature Language="C#" Value="TodayLink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea TodayLink = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.TodayLink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado no link do dia atual na parte inferior do controle de calendário mensal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WeekNumbers">
+      <MemberSignature Language="C#" Value="WeekNumbers" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.MonthCalendar/HitArea WeekNumbers = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.MonthCalendar.HitArea.WeekNumbers" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MonthCalendar+HitArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O ponto especificado está sobre um número de semana. Isso ocorre apenas se o <see cref="P:System.Windows.Forms.MonthCalendar.ShowWeekNumbers" /> propriedade <see cref="T:System.Windows.Forms.MonthCalendar" /> está habilitada. A propriedade <see cref="P:System.Windows.Forms.MonthCalendar.HitTestInfo.Time" /> de <see cref="T:System.Windows.Forms.MonthCalendar.HitTestInfo" /> está definida como a data correspondente na coluna mais à esquerda.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

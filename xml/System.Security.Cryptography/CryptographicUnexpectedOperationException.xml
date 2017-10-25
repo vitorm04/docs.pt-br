@@ -1,0 +1,277 @@
+<Type Name="CryptographicUnexpectedOperationException" FullName="System.Security.Cryptography.CryptographicUnexpectedOperationException">
+  <TypeSignature Language="C#" Value="public class CryptographicUnexpectedOperationException : System.Security.Cryptography.CryptographicException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CryptographicUnexpectedOperationException extends System.Security.Cryptography.CryptographicException" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CryptographicUnexpectedOperationException" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.CryptographicException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção lançada quando ocorre uma operação inesperada durante uma operação criptográfica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException>usa o HRESULT CORSEC_E_CRYPTO_UNEX_OPER, que tem o valor 0x80131431.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância de <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException>, consulte o construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar membros de <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.CryptographicUnexpectedOperationException#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicUnexpectedOperationException/CS/members.cs#2)]
+ [!code-vb[System.Security.Cryptography.CryptographicUnexpectedOperationException#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicUnexpectedOperationException/VB/members.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographicUnexpectedOperationException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicUnexpectedOperationException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException" /> com propriedades padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro localizada.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como construir um <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException> sem parâmetros. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.CryptographicUnexpectedOperationException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicUnexpectedOperationException/CS/members.cs#1)]
+ [!code-vb[System.Security.Cryptography.CryptographicUnexpectedOperationException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicUnexpectedOperationException/VB/members.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographicUnexpectedOperationException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicUnexpectedOperationException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException" /> com uma mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como construir um <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException> usando uma mensagem de erro personalizada. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.CryptographicUnexpectedOperationException#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicUnexpectedOperationException/CS/members.cs#3)]
+ [!code-vb[System.Security.Cryptography.CryptographicUnexpectedOperationException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicUnexpectedOperationException/VB/members.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CryptographicUnexpectedOperationException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicUnexpectedOperationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção transmitido por um fluxo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographicUnexpectedOperationException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicUnexpectedOperationException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="inner">A exceção que é a causa da exceção atual. Se o <c>interna</c> parâmetro não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor, ou `null` caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interno para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|A referência de exceção interna.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como construir um <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException> usando uma mensagem de erro personalizada e uma exceção interna. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.CryptographicUnexpectedOperationException#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicUnexpectedOperationException/CS/members.cs#4)]
+ [!code-vb[System.Security.Cryptography.CryptographicUnexpectedOperationException#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicUnexpectedOperationException/VB/members.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CryptographicUnexpectedOperationException (string format, string insert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string format, string insert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.CryptographicUnexpectedOperationException.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="insert" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato usado para gerar a mensagem de erro.</param>
+        <param name="insert">A mensagem de erro que explica a razão da exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException" /> classe com uma mensagem de erro especificado no formato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como construir um <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException> usando um formato de hora e a data atual. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.CryptographicUnexpectedOperationException#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicUnexpectedOperationException/CS/members.cs#5)]
+ [!code-vb[System.Security.Cryptography.CryptographicUnexpectedOperationException#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.CryptographicUnexpectedOperationException/VB/members.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

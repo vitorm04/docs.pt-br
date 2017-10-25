@@ -1,0 +1,820 @@
+<Type Name="StatusBar+StatusBarPanelCollection" FullName="System.Windows.Forms.StatusBar+StatusBarPanelCollection">
+  <TypeSignature Language="C#" Value="public class StatusBar.StatusBarPanelCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit StatusBar/StatusBarPanelCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.StatusBar.StatusBarPanelCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a coleção de painéis em uma <see cref="T:System.Windows.Forms.StatusBar" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> classe armazena os painéis exibidos no <xref:System.Windows.Forms.StatusBar>. Cada objeto na coleção é uma instância do <xref:System.Windows.Forms.StatusBarPanel> classe que define as características de exibição e os comportamentos de um painel exibido em um <xref:System.Windows.Forms.StatusBar>.  
+  
+ Há várias maneiras de adicionar painéis à coleção. O <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método fornece a capacidade de adicionar um painel simples à coleção. Para adicionar um número de painéis à coleção, você pode criar uma matriz de <xref:System.Windows.Forms.StatusBarPanel> objetos e atribuí-la para o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.AddRange%2A> método. Se você quiser inserir um painel em um local específico na coleção, você pode usar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Insert%2A> método. Para remover painéis, você pode usar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Remove%2A> método ou o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.RemoveAt%2A> método se você souber qual painel está localizado dentro da coleção. O <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Clear%2A> método permite que você remova todos os painéis da coleção em vez de usar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Remove%2A> método para remover um único painel de cada vez.  
+  
+ Além dos métodos e propriedades para adicionar e remover painéis, o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> também fornece métodos para localizar painéis dentro da coleção. O <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Contains%2A> método permite que você determine se um painel é um membro da coleção. Quando você souber que o painel está localizado dentro da coleção, você pode usar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.IndexOf%2A> método para determinar qual painel está localizado dentro da coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.StatusBar> control em um formulário e adiciona dois <xref:System.Windows.Forms.StatusBarPanel> objetos. Uma da <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel1`, exibe o texto de status para um aplicativo. A segunda <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel2`, exibe a data atual e usa o <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> propriedade o <xref:System.Windows.Forms.StatusBarPanel> classe para exibir a hora atual. O exemplo usa o <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriedade para garantir que os painéis são exibidos em vez de um painel padrão e utiliza e <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade para acessar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> para adicionar os painéis para o <xref:System.Windows.Forms.StatusBar>. O exemplo também usa o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>, <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Text%2A> propriedades para inicializar o <xref:System.Windows.Forms.StatusBarPanel> objetos. Este exemplo pressupõe que o método definido no exemplo é definido e chamado a partir do construtor de uma <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CS/form1.cs#1)]
+ [!code-vb[StatusBar and StatusBarPanel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StatusBarPanelCollection (System.Windows.Forms.StatusBar owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.StatusBar owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.#ctor(System.Windows.Forms.StatusBar)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.StatusBar" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.StatusBar" /> controle que contém essa coleção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.StatusBar.StatusBarPanelCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância dessa classe sem associá-lo com um <xref:System.Windows.Forms.StatusBar> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.StatusBarPanel Add (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.StatusBarPanel Add(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto para o <see cref="T:System.Windows.Forms.StatusBarPanel" /> que está sendo adicionado.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Forms.StatusBarPanel" /> com o texto especificado na coleção.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.StatusBarPanel" /> que representa o painel que foi adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar painéis para um <xref:System.Windows.Forms.StatusBar> controle para exibir mais de um tipo de informação. Esta versão do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método cria um novo <xref:System.Windows.Forms.StatusBarPanel> com o texto especificado no `text` parâmetro e o adiciona à coleção. A ordem na qual os painéis estão localizados no <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> representa a ordem de painéis são exibidos dentro do <xref:System.Windows.Forms.StatusBar> controle. Painéis são exibidos da esquerda para direita a partir do primeiro painel na coleção. O <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade o <xref:System.Windows.Forms.StatusBar> controle não altera a ordem na qual os painéis são exibidos no <xref:System.Windows.Forms.StatusBar>. Para inserir um painel em uma posição específica na coleção, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Insert%2A> método. Para adicionar um conjunto de painéis para a coleção em uma única operação, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.AddRange%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual int Add (System.Windows.Forms.StatusBarPanel value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(class System.Windows.Forms.StatusBarPanel value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add(System.Windows.Forms.StatusBarPanel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.StatusBarPanel" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Windows.Forms.StatusBarPanel" /> que representa o painel para adicionar à coleção.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Forms.StatusBarPanel" /> à coleção.</summary>
+        <returns>O índice baseado em zero do item na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar painéis para um <xref:System.Windows.Forms.StatusBar> controle para exibir mais de um tipo de informação. Esta versão do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método adiciona o <xref:System.Windows.Forms.StatusBarPanel> especificado no `value` parâmetro à coleção. A ordem na qual os painéis estão localizados no <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> representa a ordem de painéis são exibidos dentro do <xref:System.Windows.Forms.StatusBar> controle. Painéis são exibidos da esquerda para direita a partir do primeiro painel na coleção. O <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade o <xref:System.Windows.Forms.StatusBar> controle não altera a ordem na qual os painéis são exibidos no <xref:System.Windows.Forms.StatusBar>. Para inserir um painel em uma posição específica na coleção, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Insert%2A> método. Para adicionar um conjunto de painéis para a coleção em uma única operação, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.AddRange%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.StatusBar> control em um formulário e adiciona dois <xref:System.Windows.Forms.StatusBarPanel> objetos. Uma da <xref:System.Windows.Forms.StatusBarPanel> objetos, denominados `panel1`, exibe o texto de status para um aplicativo. A segunda <xref:System.Windows.Forms.StatusBarPanel>, denominado `panel2`, exibe a data atual e usa o <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A> propriedade o <xref:System.Windows.Forms.StatusBarPanel> classe para exibir a hora atual. O exemplo usa o <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriedade para garantir que os painéis são exibidos em vez de um painel padrão e utiliza e <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade para acessar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> para adicionar os painéis para o <xref:System.Windows.Forms.StatusBar>. O exemplo também usa o <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.BorderStyle%2A>, <xref:System.Windows.Forms.StatusBarPanel.ToolTipText%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Text%2A> propriedades para inicializar o <xref:System.Windows.Forms.StatusBarPanel> objetos. Este exemplo pressupõe que o método definido no exemplo é definido e chamado a partir do construtor de uma <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CPP/form1.cpp#1)]
+ [!code-csharp[StatusBar and StatusBarPanel Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/CS/form1.cs#1)]
+ [!code-vb[StatusBar and StatusBarPanel Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/StatusBar and StatusBarPanel Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <see cref="T:System.Windows.Forms.StatusBarPanel" /> que está sendo adicionado à coleção foi <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O pai do <see cref="T:System.Windows.Forms.StatusBarPanel" /> especificado no <paramref name="value" /> parâmetro não é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public virtual void AddRange (System.Windows.Forms.StatusBarPanel[] panels);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddRange(class System.Windows.Forms.StatusBarPanel[] panels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.AddRange(System.Windows.Forms.StatusBarPanel[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="panels" Type="System.Windows.Forms.StatusBarPanel[]" />
+      </Parameters>
+      <Docs>
+        <param name="panels">Uma matriz de <see cref="T:System.Windows.Forms.StatusBarPanel" /> objetos para adicionar.</param>
+        <summary>Adiciona uma matriz de objetos <see cref="T:System.Windows.Forms.StatusBarPanel" /> à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar painéis para um <xref:System.Windows.Forms.StatusBar> controle para exibir mais de um tipo de informação. O <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.AddRange%2A> método adiciona uma matriz de <xref:System.Windows.Forms.StatusBarPanel> objetos especificados no `panels` parâmetro à coleção. Todos os painéis existentes na coleção são removidos da coleção antes de inserir novos painéis. A ordem na qual os painéis estão localizados no <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> representa a ordem de painéis são exibidos dentro do <xref:System.Windows.Forms.StatusBar> controle. Painéis são exibidos da esquerda para direita a partir do primeiro painel na coleção. O <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade o <xref:System.Windows.Forms.StatusBar> controle não altera a ordem na qual os painéis são exibidos no <xref:System.Windows.Forms.StatusBar>. Para adicionar um único <xref:System.Windows.Forms.StatusBarPanel> à coleção, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método. Para inserir um painel em uma posição específica a <xref:System.Windows.Forms.StatusBar> controle (e na coleção), use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Insert%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A matriz de <see cref="T:System.Windows.Forms.StatusBarPanel" /> que está sendo adicionados à coleção de objetos foi <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você remover painéis da coleção, todas as informações sobre os painéis excluídos são perdidas. Para remover um único painel do <xref:System.Windows.Forms.StatusBar>, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Remove%2A> ou <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.RemoveAt%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.StatusBarPanel panel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.StatusBarPanel panel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Contains(System.Windows.Forms.StatusBarPanel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="panel" Type="System.Windows.Forms.StatusBarPanel" />
+      </Parameters>
+      <Docs>
+        <param name="panel">O <see cref="T:System.Windows.Forms.StatusBarPanel" /> a ser localizado na coleção.</param>
+        <summary>Determina se o painel especificado está localizado dentro da coleção.</summary>
+        <returns>
+          <see langword="true" />Se o painel está localizado na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Contains%2A> método permite que você determine se um painel é um membro da coleção. Quando você souber que o item está localizado dentro da coleção, você pode usar o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.IndexOf%2A> método para determinar qual painel está localizado dentro da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do item a ser localizado na coleção.</param>
+        <summary>Determina se a coleção contém um <see cref="T:System.Windows.Forms.StatusBarPanel" /> com a chave especificada.</summary>
+        <returns>
+          <see langword="true" /> para indicar que a coleção contém um <see cref="T:System.Windows.Forms.StatusBarPanel" /> com a chave especificada. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.StatusBarPanel.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.StatusBarPanel> no <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.ContainsKey%2A> retorna`false.`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na coleção.</summary>
+        <value>O número de <see cref="T:System.Windows.Forms.StatusBarPanel" /> objetos na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você determine o número de painéis de <xref:System.Windows.Forms.StatusBar>. Você pode usar esse valor quando são percorrer os valores da coleção e é necessário fornecer um número de iterações para executar o loop.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador a ser usado para iterar pela coleção de itens.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que representa a coleção de itens.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Forms.StatusBarPanel panel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Forms.StatusBarPanel panel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.IndexOf(System.Windows.Forms.StatusBarPanel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="panel" Type="System.Windows.Forms.StatusBarPanel" />
+      </Parameters>
+      <Docs>
+        <param name="panel">O <see cref="T:System.Windows.Forms.StatusBarPanel" /> a ser localizado na coleção.</param>
+        <summary>Retorna o índice dentro da coleção do painel de dados especificado.</summary>
+        <returns>O índice de base zero onde o painel está localizado na coleção; Caso contrário, um negativo (-1).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.IndexOf%2A> método permite que você determine onde um painel está localizado dentro da coleção. Para determinar se um item está localizado dentro da coleção antes de chamar esse método, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Contains%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOfKey">
+      <MemberSignature Language="C#" Value="public virtual int IndexOfKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOfKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.IndexOfKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do <see cref="T:System.Windows.Forms.StatusBarPanel" /> localizar na coleção.</param>
+        <summary>Retorna o índice da primeira ocorrência de um <see cref="T:System.Windows.Forms.StatusBarPanel" /> com a chave especificada.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência da <see cref="T:System.Windows.Forms.StatusBarPanel" /> com a chave especificada, se encontrado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.IndexOfKey%2A> é chamado sucessivamente, a última retornou o índice será verificado para uma correspondência de chave pela primeira vez e se não houver nenhuma correspondência, a pesquisa começa no início da coleção.  
+  
+ O <xref:System.Windows.Forms.StatusBarPanel.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.StatusBarPanel> no <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. A chave comparação não diferencia maiusculas de minúsculas.  
+  
+ Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.IndexOfKey%2A> retornará -1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual void Insert (int index, System.Windows.Forms.StatusBarPanel value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, class System.Windows.Forms.StatusBarPanel value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Insert(System.Int32,System.Windows.Forms.StatusBarPanel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Windows.Forms.StatusBarPanel" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local do índice de base zero onde o painel é inserido.</param>
+        <param name="value">Um <see cref="T:System.Windows.Forms.StatusBarPanel" /> que representa o painel para inserir.</param>
+        <summary>Insere especificado <see cref="T:System.Windows.Forms.StatusBarPanel" /> na coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar painéis para um <xref:System.Windows.Forms.StatusBar> controle para exibir mais de um tipo de informação. O <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Insert%2A> método permite que você crie um novo <xref:System.Windows.Forms.StatusBarPanel> e inseri-lo em um local específico na coleção. A ordem na qual os painéis estão localizados no <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> representa a ordem de painéis são exibidos dentro do <xref:System.Windows.Forms.StatusBar> controle. Painéis são exibidos da esquerda para direita a partir do primeiro painel na coleção. O <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade o <xref:System.Windows.Forms.StatusBar> controle não altera a ordem na qual os painéis são exibidos no <xref:System.Windows.Forms.StatusBar>. Para adicionar um painel ao final da coleção, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método. Para adicionar um conjunto de painéis para a coleção em uma única operação, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.AddRange%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="value" /> pai do parâmetro não é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> parâmetro é menor que zero ou maior que o valor da <see cref="P:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Count" /> propriedade o <see cref="T:System.Windows.Forms.StatusBar.StatusBarPanelCollection" /> classe.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O <see cref="P:System.Windows.Forms.StatusBarPanel.AutoSize" /> propriedade o <paramref name="value" /> painel do parâmetro não é válido <see cref="T:System.Windows.Forms.StatusBarPanelAutoSize" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.StatusBarPanelCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se esta coleção é somente leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é sempre `false` para esta coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.StatusBarPanel this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.StatusBarPanel Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do painel na coleção a ser obtido ou definido.</param>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.StatusBarPanel" /> no índice especificado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.StatusBarPanel" /> que representa o painel localizado no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para obter o <xref:System.Windows.Forms.StatusBarPanel> armazenados em um local específico na coleção. Para determinar o índice de um painel específico dentro da coleção, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.IndexOf%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="index" /> é menor que zero ou maior ou igual ao valor da propriedade <see cref="P:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Count" /> da classe <see cref="T:System.Windows.Forms.StatusBar.StatusBarPanelCollection" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O <see cref="T:System.Windows.Forms.StatusBarPanel" /> atribuídas à coleção foi <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.StatusBarPanel this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.StatusBarPanel Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do item a ser recuperado da coleção.</param>
+        <summary>Obtém um item com a chave especificada da coleção.</summary>
+        <value>O <see cref="T:System.Windows.Forms.StatusBarPanel" /> com a chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.StatusBarPanel.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.StatusBarPanel> no <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Item%2A> retorna`null.`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (System.Windows.Forms.StatusBarPanel value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(class System.Windows.Forms.StatusBarPanel value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Remove(System.Windows.Forms.StatusBarPanel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.StatusBarPanel" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.StatusBarPanel" /> que representa o painel para remover da coleção.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.StatusBarPanel" /> especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você remove um painel da lista, os índices alterar subsequentes itens na coleção. Todas as informações sobre o painel removido são excluídas. Você pode usar esse método para remover um painel específico do <xref:System.Windows.Forms.StatusBar> especificando real <xref:System.Windows.Forms.StatusBarPanel> a ser removido da coleção. Para especificar o índice do painel para remover, em vez do próprio painel, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.RemoveAt%2A> método. Para remover todos os painéis da coleção, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Clear%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <see cref="T:System.Windows.Forms.StatusBarPanel" /> atribuído ao parâmetro <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do item a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.StatusBarPanel" /> localizado no índice especificado na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você remover um painel da coleção, os índices de alterar para painéis subsequentes na coleção. Todas as informações sobre o painel removido são excluídas. Você pode usar esse método para remover um painel específico da lista especificando o índice do painel para remover da coleção. Para especificar o painel para remover, em vez do índice para o painel, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Remove%2A> método. Para remover todos os painéis do <xref:System.Windows.Forms.StatusBar> controlar, use o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Clear%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="index" /> é menor que zero ou maior ou igual ao valor da propriedade <see cref="P:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Count" /> da classe <see cref="T:System.Windows.Forms.StatusBar.StatusBarPanelCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveByKey">
+      <MemberSignature Language="C#" Value="public virtual void RemoveByKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveByKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.RemoveByKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do <see cref="T:System.Windows.Forms.StatusBarPanel" /> para remover da coleção.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.StatusBarPanel" /> com a chave especificada da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.StatusBarPanel.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.StatusBarPanel> no <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">A matriz unidimensional que é o destino dos elementos copiados da coleção. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero na matriz em que a cópia começa.</param>
+        <summary>Copia o <see cref="T:System.Windows.Forms.StatusBar.StatusBarPanelCollection" /> para uma matriz unidimensional compatível, iniciando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ O número de elementos de <see cref="T:System.Windows.Forms.StatusBar.StatusBarPanelCollection" /> é maior que o espaço disponível do índice até o final da <paramref name="array" />.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo da coleção não pode ser convertido automaticamente para o tipo de <paramref name="array" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.StatusBarPanelCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.StatusBarPanelCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção.</summary>
+        <value>O objeto usado para sincronizar o acesso à coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Windows.Forms.StatusBarPanel" /> que representa o painel para adicionar à coleção.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Forms.StatusBarPanel" /> à coleção.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não é um <see cref="T:System.Windows.Forms.StatusBarPanel" />.  
+  
+ -ou-  
+  
+ O pai do valor não é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object panel);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object panel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="panel" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="panel">O <see cref="T:System.Windows.Forms.StatusBarPanel" /> a ser localizado na coleção.</param>
+        <summary>Determina se o painel especificado está localizado dentro da coleção.</summary>
+        <returns>
+          <see langword="true" />Se o painel é um <see cref="T:System.Windows.Forms.StatusBarPanel" /> localizado na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object panel);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object panel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="panel" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="panel">O <see cref="T:System.Windows.Forms.StatusBarPanel" /> a ser localizado na coleção.</param>
+        <summary>Retorna o índice do painel especificado dentro da coleção.</summary>
+        <returns>O índice de base zero do painel, se encontrado na coleção inteira; Caso contrário, retornará -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local do índice de base zero onde o painel é inserido.</param>
+        <param name="value">Um <see cref="T:System.Windows.Forms.StatusBarPanel" /> que representa o painel para inserir.</param>
+        <summary>Insere especificado <see cref="T:System.Windows.Forms.StatusBarPanel" /> na coleção no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro de índice é menor que zero ou maior que o valor da <see langword="Count" /> propriedade.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não é um <see cref="T:System.Windows.Forms.StatusBarPanel" />.  
+  
+ -ou-  
+  
+ O pai do valor não é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.StatusBarPanelCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção tem um tamanho fixo.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.StatusBar.StatusBarPanelCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do elemento a ser obtido ou definido.</param>
+        <summary>Obtém ou define o elemento no índice especificado.</summary>
+        <value>O elemento no índice especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não é um <see cref="T:System.Windows.Forms.StatusBarPanel" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.StatusBar.StatusBarPanelCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.StatusBarPanel" /> que representa o painel para remover da coleção.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.StatusBarPanel" /> especificado da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

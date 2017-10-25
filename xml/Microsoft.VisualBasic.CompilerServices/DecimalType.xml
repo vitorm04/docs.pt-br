@@ -1,0 +1,252 @@
+<Type Name="DecimalType" FullName="Microsoft.VisualBasic.CompilerServices.DecimalType">
+  <TypeSignature Language="C#" Value="public sealed class DecimalType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DecimalType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompilerServices.DecimalType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Essa classe foi preterida a partir do Visual Basic 2005.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece métodos para manipular dados potencialmente representa um `Decimal` valor.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="FromBoolean">
+      <MemberSignature Language="C#" Value="public static decimal FromBoolean (bool Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.Decimal FromBoolean(bool Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DecimalType.FromBoolean(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Boolean" />valor a ser convertido para um <see langword="Decimal" /> valor.</param>
+        <summary>Retorna um <see langword="Decimal" /> valor que corresponde à especificada <see langword="Boolean" /> valor.</summary>
+        <returns>O <see langword="Decimal" /> valor que corresponde à <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="FromObject">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um <see langword="Decimal" /> valor que corresponde à especificada <see langword="Boolean" /> informações de formato de valor e o número opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="FromObject">
+      <MemberSignature Language="C#" Value="public static decimal FromObject (object Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.Decimal FromObject(object Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DecimalType.FromObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. Objeto para converter para um <see langword="Decimal" /> valor.</param>
+        <summary>Retorna um <see langword="Decimal" /> valor que corresponde ao objeto especificado.</summary>
+        <returns>O <see langword="Decimal" /> valor que corresponde à <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromObject">
+      <MemberSignature Language="C#" Value="public static decimal FromObject (object Value, System.Globalization.NumberFormatInfo NumberFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.Decimal FromObject(object Value, class System.Globalization.NumberFormatInfo NumberFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DecimalType.FromObject(System.Object,System.Globalization.NumberFormatInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Object" />
+        <Parameter Name="NumberFormat" Type="System.Globalization.NumberFormatInfo" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. Objeto para converter para um <see langword="Decimal" /> valor.</param>
+        <param name="NumberFormat">Um <see cref="T:System.Globalization.NumberFormatInfo" /> objeto que define como os valores numéricos são formatados e exibidos, dependendo da cultura.</param>
+        <summary>Retorna um <see langword="Decimal" /> valor que corresponde ao objeto especificado e informações de formato de número.</summary>
+        <returns>O <see langword="Decimal" /> valor que corresponde à <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="FromString">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um <see langword="Decimal" /> valor que corresponde à cadeia de caracteres especificada e informações de formato de número opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="FromString">
+      <MemberSignature Language="C#" Value="public static decimal FromString (string Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.Decimal FromString(string Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DecimalType.FromString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. Cadeia de caracteres para converter um <see langword="Decimal" /> valor.</param>
+        <summary>Retorna um <see langword="Decimal" /> valor que corresponde à cadeia de caracteres especificada.</summary>
+        <returns>O <see langword="Decimal" /> valor que corresponde à <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromString">
+      <MemberSignature Language="C#" Value="public static decimal FromString (string Value, System.Globalization.NumberFormatInfo NumberFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.Decimal FromString(string Value, class System.Globalization.NumberFormatInfo NumberFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DecimalType.FromString(System.String,System.Globalization.NumberFormatInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.String" />
+        <Parameter Name="NumberFormat" Type="System.Globalization.NumberFormatInfo" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. Cadeia de caracteres para converter um <see langword="Decimal" /> valor.</param>
+        <param name="NumberFormat">Um <see cref="T:System.Globalization.NumberFormatInfo" /> objeto que define como os valores numéricos são formatados e exibidos, dependendo da cultura.</param>
+        <summary>Retorna um <see langword="Decimal" /> valor que corresponde à cadeia de caracteres especificada e informações de formato de número.</summary>
+        <returns>O <see langword="Decimal" /> valor que corresponde à <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static decimal Parse (string Value, System.Globalization.NumberFormatInfo NumberFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.Decimal Parse(string Value, class System.Globalization.NumberFormatInfo NumberFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.DecimalType.Parse(System.String,System.Globalization.NumberFormatInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.String" />
+        <Parameter Name="NumberFormat" Type="System.Globalization.NumberFormatInfo" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. Cadeia de caracteres para converter um <see langword="Decimal" /> valor.</param>
+        <param name="NumberFormat">Um <see cref="T:System.Globalization.NumberFormatInfo" /> objeto que define como os valores numéricos são formatados e exibidos, dependendo da cultura.</param>
+        <summary>Retorna um <see langword="Decimal" /> valor que corresponde à cadeia de caracteres especificada e informações de formato de número.</summary>
+        <returns>O <see langword="Decimal" /> valor que corresponde à <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,181 @@
+<Type Name="BitmapData" FullName="System.Drawing.Imaging.BitmapData">
+  <TypeSignature Language="C#" Value="public sealed class BitmapData" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit BitmapData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.BitmapData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os atributos de uma imagem em bitmap. A classe <see cref="T:System.Drawing.Imaging.BitmapData" /> é usada pelos métodos <see cref="Overload:System.Drawing.Bitmap.LockBits" /> e <see cref="M:System.Drawing.Bitmap.UnlockBits(System.Drawing.Imaging.BitmapData)" /> da classe <see cref="T:System.Drawing.Bitmap" />. Não herdável.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Imaging.BitmapData> classe com o <xref:System.Drawing.Bitmap.LockBits%2A> e <xref:System.Drawing.Bitmap.UnlockBits%2A> métodos. Este exemplo é projetado para ser usado com o Windows Forms. Para executar este exemplo, cole-o em um formulário e controlar o formulário <xref:System.Windows.Forms.Control.Paint> evento chamando o `LockUnlockBitsExample` método, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.BitmapMembers#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.BitmapMembers#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.BitmapMembers#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BitmapMembers/VB/form1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.BitmapData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Imaging.BitmapData" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.BitmapData.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura de pixel do <see cref="T:System.Drawing.Bitmap" /> objeto. Também, às vezes, conhecido como o número de linhas de varredura.</summary>
+        <value>A altura em pixels do <see cref="T:System.Drawing.Bitmap" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelFormat">
+      <MemberSignature Language="C#" Value="public System.Drawing.Imaging.PixelFormat PixelFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Imaging.PixelFormat PixelFormat" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.BitmapData.PixelFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o formato das informações de pixel no objeto <see cref="T:System.Drawing.Bitmap" /> que retornou este objeto <see cref="T:System.Drawing.Imaging.BitmapData" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Imaging.PixelFormat" /> que especifica o formato das informações de pixel no objeto <see cref="T:System.Drawing.Bitmap" /> associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formato define quantos bits de memória são necessários para armazenar as informações de cor de um único pixel.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reserved">
+      <MemberSignature Language="C#" Value="public int Reserved { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Reserved" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.BitmapData.Reserved" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Reservado. Não use.</summary>
+        <value>Reservado. Não use.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scan0">
+      <MemberSignature Language="C#" Value="public IntPtr Scan0 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Scan0" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.BitmapData.Scan0" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço dos primeiros dados de pixel no bitmap. Também é possível considerar isso como a primeira linha de verificação no bitmap.</summary>
+        <value>O endereço dos primeiros dados de pixel no bitmap.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Image.PixelFormat%2A>, <xref:System.Drawing.Image.Height%2A>, <xref:System.Drawing.Image.Width%2A>, e <xref:System.Drawing.Imaging.BitmapData.Scan0%2A> propriedades; o <xref:System.Drawing.Bitmap.LockBits%2A> e <xref:System.Drawing.Bitmap.UnlockBits%2A> métodos; e o <xref:System.Drawing.Imaging.ImageLockMode> enumeração. Este exemplo é projetado para ser usado com o Windows Forms. Para executar este exemplo, cole-o em um formulário e manipular o evento de pintura do formulário chamando o `LockUnlockBitsExample` método, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir foi criado para uso com uma imagem com o <xref:System.Drawing.Imaging.PixelFormat.Format24bppRgb> formato.  
+  
+ [!code-cpp[System.Drawing.BitmapMembers#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.BitmapMembers#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.BitmapMembers#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BitmapMembers/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stride">
+      <MemberSignature Language="C#" Value="public int Stride { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Stride" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.BitmapData.Stride" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da distância (também chamada de largura de verificação) do objeto <see cref="T:System.Drawing.Bitmap" />.</summary>
+        <value>A largura da distância, em bytes, do objeto <see cref="T:System.Drawing.Bitmap" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stride é a largura de uma única linha de pixels (uma linha de verificação), arredondada para um limite de quatro bytes. Se a distância for positiva, o bitmap é de cima para baixo. Se a distância for negativa, o bitmap é baixo para cima.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Imaging.BitmapData.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura de pixels a <see cref="T:System.Drawing.Bitmap" /> objeto. Isso também pode ser considerado como o número de pixels em uma linha de verificação.</summary>
+        <value>A largura de pixels a <see cref="T:System.Drawing.Bitmap" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

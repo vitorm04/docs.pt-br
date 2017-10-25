@@ -1,0 +1,124 @@
+<Type Name="IExtension&lt;T&gt;" FullName="System.ServiceModel.IExtension&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IExtension&lt;T&gt; where T : IExtensibleObject&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExtension`1&lt;(class System.ServiceModel.IExtensibleObject`1&lt;!T&gt;) T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.IExtension`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <InterfaceName>System.ServiceModel.IExtensibleObject&lt;T&gt;</InterfaceName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">O objeto que participa do comportamento personalizado.</typeparam>
+    <summary>Permite que um objeto estenda-se a outro objeto por meio de agregação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[indigo2](~/includes/indigo2-md.md)]permite que você estenda <xref:System.ServiceModel.IExtensibleObject%601?displayProperty=nameWithType> objetos (o <xref:System.ServiceModel.IContextChannel?displayProperty=nameWithType>, <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>, <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>, e <xref:System.ServiceModel.OperationContext?displayProperty=nameWithType> classes) adicionando um novo estado ou comportamento usando o padrão de objeto extensível. O padrão de objeto extensível é usado em [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar novos recursos de estado para um objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (T owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Attach(!T owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.IExtension`1.Attach(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O objeto extensível que agrega essa extensão.</param>
+        <summary>Permite que um objeto de extensão saber quando foram agregado. Chamado quando a extensão é adicionada para o <see cref="P:System.ServiceModel.IExtensibleObject`1.Extensions" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para controlar o <xref:System.ServiceModel.IExtensibleObject%601> do objeto ao qual pertence a instância atual da extensão. Essa chamada fornece extensões a oportunidade de lidar com eventos ou Inspecione as propriedades de seu proprietário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como esse método pode ser usado para controlar o <xref:System.ServiceModel.IExtensibleObject%601> do objeto ao qual pertence a instância atual da extensão.  
+  
+```csharp  
+InstanceContext owner;  
+  
+public void Attach(InstanceContext owner)  
+{  
+  this.owner = owner;   
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detach">
+      <MemberSignature Language="C#" Value="public void Detach (T owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Detach(!T owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.IExtension`1.Detach(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O objeto extensível que agrega essa extensão.</param>
+        <summary>Permite que um objeto descobrir quando ele não é agregado. Chamado quando uma extensão é removida do <see cref="P:System.ServiceModel.IExtensibleObject`1.Extensions" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.IExtension%601.Detach%2A> método para descobrir quando a extensão foi removida. Uma extensão pode usar isso para soltar eventos no objeto extensível. Uma extensão também pode gerar <xref:System.InvalidOperationException?displayProperty=nameWithType> desse método indica que, quando adicionado, a extensão não pode ser removida.  
+  
+ Observe que esse método não é chamado quando o objeto proprietário é descartado ou fechado. Se necessário, cabe a extensão ou o código de adicionar a extensão para conectar as <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> eventos ou implemente as interfaces apropriadas (para <xref:System.ServiceModel.OperationContext?displayProperty=nameWithType>) para observar o ciclo de vida do proprietário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

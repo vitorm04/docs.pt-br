@@ -1,0 +1,48 @@
+<Type Name="IControlBuilderAccessor" FullName="System.Web.UI.IControlBuilderAccessor">
+  <TypeSignature Language="C#" Value="public interface IControlBuilderAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IControlBuilderAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IControlBuilderAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que o serializador de controle obter o construtor para um controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IControlBuilderAccessor> interface define a propriedade de um controle deve implementar para permitir que um serializador de controle acessar o construtor do controle. <xref:System.Web.UI.Control>implementa essa interface, então todos os controles derivados de <xref:System.Web.UI.Control> tiver uma implementação dessa propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ControlBuilder">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ControlBuilder ControlBuilder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlBuilder ControlBuilder" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IControlBuilderAccessor.ControlBuilder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlBuilder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o construtor de controle para este controle.</summary>
+        <value>O <see cref="T:System.Web.UI.ControlBuilder" /> que tiver criado o controle; caso contrário, <see langword="null" /> se nenhum construtor foi usado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IControlBuilderAccessor.ControlBuilder%2A> propriedade permite que um serializador de controle acessar o construtor que criou o controle que implementa <xref:System.Web.UI.IControlBuilderAccessor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

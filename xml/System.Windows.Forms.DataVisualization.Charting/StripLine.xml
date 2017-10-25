@@ -1,0 +1,1038 @@
+<Type Name="StripLine" FullName="System.Windows.Forms.DataVisualization.Charting.StripLine">
+  <TypeSignature Language="C#" Value="public class StripLine : System.Windows.Forms.DataVisualization.Charting.ChartElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StripLine extends System.Windows.Forms.DataVisualization.Charting.ChartElement" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.StripLine" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("IntervalOffset")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa as faixas em um gráfico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Faixas, as faixas são intervalos horizontais ou verticais que sombreiam o plano de fundo de um gráfico em intervalos regulares ou personalizados. Você pode usar faixas para:  
+  
+-   Melhore a legibilidade para buscar valores individuais no gráfico.  
+  
+-   Ao ler o gráfico de pontos de dados separados.  
+  
+-   Realçar datas que ocorrem em intervalos regulares, por exemplo identificar a data de fim de semana aponta.  
+  
+-   Realçar um intervalo de chave específico de dados.  
+  
+-   Adicione uma linha de limite em um valor constante específico.  
+  
+ Um único <xref:System.Windows.Forms.DataVisualization.Charting.StripLine> objeto seja possível estabelecer uma vez ou repetidamente, para um determinado intervalo. Essa ação é controlada pelo <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.Interval%2A> propriedade. Quando um valor de zero é atribuído para o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.Interval%2A> propriedade, faixa de uma linha será desenhada. Quando um valor diferente de zero é atribuído para o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.Interval%2A> propriedade, uma faixa será desenhada repetidamente em cada intervalo determinado. O local onde uma faixa é desenhada também é afetado pelo <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.IntervalOffset%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.IntervalOffsetType%2A> propriedades da faixa.  
+  
+ As faixas são sempre associadas a um <xref:System.Windows.Forms.DataVisualization.Charting.Axis> objeto. Eles podem ser adicionados em tempo de design e tempo de execução.  
+  
+ Para adicionar uma linha horizontal ou vertical para exibir um limite, defina o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> propriedade para um valor de 0,0. Isso resulta em uma linha desenhada. Você pode usar o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderColor%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderDashStyle%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderWidth%2A> propriedades para a cor, a largura e o estilo da linha. Nenhuma propriedade de plano de fundo do gráfico (`Back*`) são usados quando o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> estiver definida como 0,0.  
+  
+ Use o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.Text%2A> propriedade da faixa para associar a uma faixa de texto. O posicionamento e a orientação do texto podem ser controlados pelo <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.TextAlignment%2A> propriedade.  
+  
+ Quando várias faixas são definidas para o mesmo eixo, é possível que as faixas serão sobrepostas. A ordem Z do <xref:System.Windows.Forms.DataVisualization.Charting.StripLine> objetos é determinado pela sua ordem de ocorrência no <xref:System.Windows.Forms.DataVisualization.Charting.StripLinesCollection> objeto. Isso significa que a primeira ocorrência é desenhada primeiro; a segunda ocorrência é desenhada em segundo lugar, e assim por diante.  
+  
+ Não há suporte para as faixas para os seguintes tipos de gráfico: pizza, rosca, funil, pirâmide, Kagi, ThreeLineBreak, PointAndFigure, Polar e Radar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StripLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StripLine.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataVisualization.Charting.StripLine" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de plano de fundo da faixa.</summary>
+        <value>Uma estrutura <see cref="T:System.Drawing.Color" />. A cor padrão é <see cref="P:System.Drawing.Color.White" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir essa propriedade para qualquer valor ARGB (alfa, vermelho, verde, azul) válido.  
+  
+ Para definir um gradiente para a faixa, defina o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackColor%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackSecondaryColor%2A> propriedades.  
+  
+ Se você definir essa cor como "transparente" — em outras palavras, defina o valor alfa para 0, nenhuma cor será atribuído ao plano de fundo do elemento. Como resultado, o plano de fundo será transparente.  
+  
+ Se o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> está definida como 0,0, uma linha será desenhada e <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderColor%2A> propriedade determina a cor da linha, não essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackGradientStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.GradientStyle BackGradientStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.GradientStyle BackGradientStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.BackGradientStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.GradientEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.GradientStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de gradiente da faixa.</summary>
+        <value>Uma enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.GradientStyle" />. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.GradientStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackGradientStyle%2A> propriedade determina se um elemento de gráfico exibirá um gradiente, bem como a orientação do gradiente, se usado.  
+  
+ Para usar cores de gradiente:  
+  
+-   Use o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackColor%2A> propriedade para definir a cor primária.  
+  
+-   Use o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackSecondaryColor%2A> propriedade para definir a cor secundária.  
+  
+-   Defina <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackGradientStyle%2A> propriedade do elemento do gráfico para o estilo de gradiente desejado.  
+  
+ Essa propriedade não é aplicável se o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> propriedade é definida como um valor de 0,0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackHatchStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle BackHatchStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle BackHatchStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.BackHatchStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.HatchStyleEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de hachura da faixa.</summary>
+        <value>Uma enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle" />. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão de hachura consiste em uma cor de plano de fundo sólida e as linhas desenhadas no plano de fundo. Duas cores usadas no estilo de hachura são definidas pelo <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackColor%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackSecondaryColor%2A> propriedades. Essa propriedade não é aplicável se o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> propriedade é definida como um valor de 0,0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImage">
+      <MemberSignature Language="C#" Value="public string BackImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.BackImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ImageValueEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a imagem de plano de fundo da faixa.</summary>
+        <value>Um <see langword="string" /> valor que representa a URL do arquivo de imagem. O padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackImage%2A> propriedade define um caminho para uma imagem de plano de fundo para muitos elementos de gráfico e uma URL absoluta ou relativa.  
+  
+ Para posicionar essa imagem, use o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackImageAlignment%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackImageWrapMode%2A> propriedades.  
+  
+ Você também pode especificar que uma cor será exibida para a imagem como "transparente" definindo o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackImageTransparentColor%2A> propriedade.  
+  
+ Uma imagem pode ser qualquer arquivo de gráficos válido com suporte pelo .NET Framework, incluindo ícones.  
+  
+ Essa propriedade não é aplicável se o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> propriedade é definida como um valor de 0,0.  
+  
+ Imagens de plano de fundo têm precedência sobre outras propriedades do plano de fundo, como cores de gradiente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle BackImageAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle BackImageAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.BackImageAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento da imagem de plano de fundo.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle" />. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.TopLeft" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina o alinhamento da imagem do plano de fundo para faixas; ele só será aplicado quando o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackImageWrapMode%2A> está definida como <xref:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Unscaled>.  
+  
+ Para obter mais informações sobre alinhamentos disponíveis, consulte o <xref:System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle> tópico de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageTransparentColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackImageTransparentColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackImageTransparentColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.BackImageTransparentColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cor que será substituída por uma cor transparente quando a imagem de plano de fundo é desenhada.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que será exibido como transparente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é aplicável se o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> propriedade é definida como um valor de 0,0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackImageWrapMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode BackImageWrapMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode BackImageWrapMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.BackImageWrapMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de desenho da imagem de plano de fundo da faixa.</summary>
+        <value>Uma enumeração do inteiro <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode" />. O padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Tile" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina como a imagem é exibida; ou seja, lado a lado, escala e assim por diante.  
+  
+ Se uma imagem é dimensionada, ela será estendida para se ajustarem a faixa delimitadora. Se a imagem é colocada lado a lado, ele é repetidamente desenhado, a partir do canto superior esquerdo.  
+  
+ Para obter mais informações sobre os modos de encapsulamento disponíveis, consulte o <xref:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode> tópico de enumeração.  
+  
+ Se o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackImageWrapMode%2A> está definida como <xref:System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Unscaled>, o local onde a imagem é desenhada será determinado pelo <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackImageAlignment%2A> configuração de propriedade.  
+  
+ Essa propriedade não é aplicável se <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> é definido como um valor de 0,0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackSecondaryColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackSecondaryColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackSecondaryColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.BackSecondaryColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor secundária do plano de fundo de linha distribuída.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor usado para a cor secundária do plano de fundo com preenchimento de gradiente ou hachura. A cor padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina a cor do plano de fundo secundária de vários objetos de gráfico e é usada quando as cores de gradiente estão sendo aplicadas.  
+  
+ Você pode definir a cor do plano de fundo secundária para qualquer valor ARGB (alfa, vermelho, verde, azul) válido.  
+  
+ Se a hachura for usada, o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackSecondaryColor%2A> propriedade determina a cor das linhas de hachura.  
+  
+ Para usar cores de gradiente do plano de fundo de um elemento de gráfico:  
+  
+-   Use o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackColor%2A> propriedade para definir a cor primária.  
+  
+-   Use este <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackSecondaryColor%2A> propriedade para definir a cor secundária.  
+  
+-   Definir o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackGradientStyle%2A> propriedade para o estilo de gradiente desejado.  
+  
+ Essa propriedade não é aplicável se o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> propriedade é definida como um valor de 0,0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BorderColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BorderColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da borda de uma faixa.</summary>
+        <value>Um valor <see cref="T:System.Drawing.Color" />. A cor padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir essa propriedade para qualquer valor ARGB (alfa, vermelho, verde, azul) válido.  
+  
+ Se o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> propriedade de um <xref:System.Windows.Forms.DataVisualization.Charting.StripLine> objeto é definido como 0.0, uma linha será desenhada e é essa propriedade e não o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BackColor%2A> propriedade de configuração que determina a cor da linha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderDashStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartDashStyle BorderDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartDashStyle BorderDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da borda da faixa.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartDashStyle" /> valor de enumeração que determina o estilo de borda da faixa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica o estilo de linha usado para uma borda. A linha pode ter uma base sólida, pontilhada ou algumas variações de sólida e pontilhada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderWidth">
+      <MemberSignature Language="C#" Value="public int BorderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BorderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da borda da faixa.</summary>
+        <value>Um <see langword="integer" /> valor que determina a largura da borda da faixa, em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é medida em pixels.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.StripLine.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="True" /> para liberar recursos gerenciados e não gerenciados; <see langword="False" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.DataVisualization.Charting.StripLine" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Font), "Microsoft Sans Serif, 8pt")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte usada para o texto da linha distribuída.</summary>
+        <value>Um <see cref="T:System.Drawing.Font" /> valor que representa a fonte do texto de linha distribuída.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor do texto de linha distribuída.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que representa a cor do texto de uma faixa. O valor padrão é <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar qualquer cor ARGB válido para essa propriedade. Essa propriedade é aplicável somente quando for especificado um valor de texto para a faixa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interval">
+      <MemberSignature Language="C#" Value="public double Interval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Interval" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.Interval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo para uma faixa e determina se a faixa é desenhada uma vez ou repetidamente.</summary>
+        <value>Um <see langword="double" /> valor que representa o intervalo entre as faixas. O valor padrão é zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.Interval%2A> propriedade para um valor de zero, uma faixa será exibida, com uma largura especificada pelo <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> propriedade. Quando você define <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.Interval%2A> para um valor de diferente de zero, várias faixas serão mostradas. A unidade que é usada para o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.Interval%2A> propriedade é definida pelo <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.IntervalType%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalOffset">
+      <MemberSignature Language="C#" Value="public double IntervalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 IntervalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.IntervalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.AxisLabelDateValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o deslocamento de linhas de grade, marcas de escala, faixas e rótulos de eixo.</summary>
+        <value>Um valor <see langword="double" /> que representa o deslocamento do intervalo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O deslocamento do intervalo de linhas de grade e marcas de escala secundárias nunca é afetado pelo valor da <xref:System.Windows.Forms.DataVisualization.Charting.Axis.IntervalOffset%2A> propriedade o <xref:System.Windows.Forms.DataVisualization.Charting.Axis> objeto.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.IntervalOffset%2A> configuração de propriedade define as unidades de medida do deslocamento.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.Interval%2A> pode ser um valor negativo.  
+  
+ O valor padrão é `Auto` (`0`).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalOffsetType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalOffsetType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalOffsetType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.IntervalOffsetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de deslocamento de intervalo da faixa.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType" /> que indica o tipo de intervalo. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, essa propriedade é definida como <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto>; o valor real dessa propriedade é determinado pelo <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.IntervalType%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType IntervalType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.IntervalType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de intervalo de um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.StripLine" />.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType" /> que indica o tipo de intervalo. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos de intervalo podem ser definidos como <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto>, caso em que o tipo depende: os tipos de valor de X ou Y-valor da plotada <xref:System.Windows.Forms.DataVisualization.Charting.DataPoint> objetos — dependendo de qual eixo o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine> objetos pertencem a — e a escala do eixo.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.Interval%2A> propriedade determina quantas vezes uma faixa ou linha é desenhada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("StripLine")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da faixa.</summary>
+        <value>Um <see langword="string" /> valor que representa o nome da faixa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StripWidth">
+      <MemberSignature Language="C#" Value="public double StripWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 StripWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura de uma faixa.</summary>
+        <value>Um valor <see langword="double" /> que determina se uma faixa ou linha é desenhada. O valor padrão é 0.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não pode ser definida com um valor menor que zero, caso contrário, uma exceção será lançada.  
+  
+ Uma configuração de 0.0 resultará em uma linha desenhada; Essa linha usará o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderColor%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderDashStyle%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderWidth%2A> as configurações de propriedade de cor, largura e estilo. Nenhum do `Back*` propriedades dessa classe são usadas quando o valor de <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> é 0.0.  
+  
+ Se você definir o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> para um valor maior que zero, uma faixa será criada. O <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderColor%2A>, <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderDashStyle%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.BorderWidth%2A> propriedades se aplicam somente à borda da faixa; todos os `Back*` propriedades, em seguida, são usadas para as propriedades do plano de fundo da faixa de.  
+  
+ Se o valor de <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> é maior que 0,0, as unidades são determinadas pela escala de eixo relevantes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StripWidthType">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType StripWidthType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType StripWidthType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidthType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a unidade de medida para o <see cref="P:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth" /> propriedade.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType" /> valor de enumeração que indica o tipo de largura. O valor padrão é <see cref="F:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina as unidades usadas para o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> propriedade. Por exemplo, para definir uma faixa para representar "uma semana", você pode definir essa propriedade <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Weeks> e defina o <xref:System.Windows.Forms.DataVisualization.Charting.StripLine.StripWidth%2A> propriedade com um (1.0).  
+  
+ Você pode alterar o valor dessa propriedade de <xref:System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto> para um <xref:System.DateTime> valor quando a escala do eixo relevantes usa um <xref:System.DateTime> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto da faixa.</summary>
+        <value>Um valor <see langword="string" /> que representa o texto de uma faixa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para adicionar texto a uma faixa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAlignment">
+      <MemberSignature Language="C#" Value="public System.Drawing.StringAlignment TextAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.StringAlignment TextAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.TextAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.StringAlignment), "Far")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento do texto da faixa.</summary>
+        <value>Um <see cref="T:System.Drawing.StringAlignment" /> valor que representa o alinhamento do texto de linha distribuída.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextLineAlignment">
+      <MemberSignature Language="C#" Value="public System.Drawing.StringAlignment TextLineAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.StringAlignment TextLineAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.TextLineAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.StringAlignment), "Near")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento da linha de texto da faixa.</summary>
+        <value>Um <see cref="T:System.Drawing.StringAlignment" /> valor que representa o alinhamento da linha do texto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextOrientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.TextOrientation TextOrientation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.TextOrientation TextOrientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.TextOrientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.TextOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a orientação do texto.</summary>
+        <value>Um <see cref="P:System.Windows.Forms.DataVisualization.Charting.StripLine.TextOrientation" /> valor que representa o alinhamento da orientação do texto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como um valor de <xref:System.Windows.Forms.DataVisualization.Charting.TextOrientation.Auto>, o texto é orientado com base no tipo de gráfico. Para todos os X-Y tipos de gráfico em vez de barras, faixa de eixo x, o texto é orientado horizontal da esquerda para a direita na parte inferior da faixa. Para gráficos de barras, o texto da linha do eixo x faixa é orientado verticalmente de cima para baixo à direita da faixa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.StripLine.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a dica de ferramenta da linha distribuída.</summary>
+        <value>Um <see langword="string" /> valor que representa a dica de ferramenta da faixa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

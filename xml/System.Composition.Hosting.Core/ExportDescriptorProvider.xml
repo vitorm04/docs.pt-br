@@ -1,0 +1,133 @@
+<Type Name="ExportDescriptorProvider" FullName="System.Composition.Hosting.Core.ExportDescriptorProvider">
+  <TypeSignature Language="C#" Value="public abstract class ExportDescriptorProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ExportDescriptorProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Composition.Hosting.Core.ExportDescriptorProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Composition.Hosting</AssemblyName>
+    <AssemblyVersion>1.0.31.0</AssemblyVersion>
+    <AssemblyVersion>1.0.32.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a descrição de uma exportação de uma parte conhecida para o mecanismo de composição.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExportDescriptorProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.ExportDescriptorProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Composition.Hosting.Core.ExportDescriptorProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um construtor protegido que só pode ser chamado de classes derivadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExportDescriptors">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.ExportDescriptorPromise&gt; GetExportDescriptors (System.Composition.Hosting.Core.CompositionContract contract, System.Composition.Hosting.Core.DependencyAccessor descriptorAccessor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Composition.Hosting.Core.ExportDescriptorPromise&gt; GetExportDescriptors(class System.Composition.Hosting.Core.CompositionContract contract, class System.Composition.Hosting.Core.DependencyAccessor descriptorAccessor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Composition.Hosting.Core.ExportDescriptorProvider.GetExportDescriptors(System.Composition.Hosting.Core.CompositionContract,System.Composition.Hosting.Core.DependencyAccessor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.ExportDescriptorPromise&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.Composition.Hosting.Core.CompositionContract" />
+        <Parameter Name="descriptorAccessor" Type="System.Composition.Hosting.Core.DependencyAccessor" />
+      </Parameters>
+      <Docs>
+        <param name="contract">A chave de exportação necessária por outro componente.</param>
+        <param name="descriptorAccessor">Um acessador para os outros descritores na composição.</param>
+        <summary>Recupera promise descritores de exportação da chave de exportação especificado.</summary>
+        <returns>Uma coleção de promessas para novos descritores de exportação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um provedor só poderão ser consultado uma vez para cada chave exclusiva de exportação. O acessador do descritor só pode ser consultado imediatamente se o descritor sendo prometido é um adaptador como <see cref="Lazy{T}"/>; caso contrário, dependências só devem ser consultadas na execução da função fornecida para o <xref:System.Composition.Hosting.Core.ExportDescriptorPromise>. Os descritores de reais fornecidos por esse método, não deve fechar ou fazer referência a qualquer aspecto da estrutura de dependência/promessa, pois isso impediria a estrutura de ser coletado como lixo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoDependencies">
+      <MemberSignature Language="C#" Value="protected static readonly Func&lt;System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.CompositionDependency&gt;&gt; NoDependencies;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly class System.Func`1&lt;class System.Collections.Generic.IEnumerable`1&lt;class System.Composition.Hosting.Core.CompositionDependency&gt;&gt; NoDependencies" />
+      <MemberSignature Language="DocId" Value="F:System.Composition.Hosting.Core.ExportDescriptorProvider.NoDependencies" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.CompositionDependency&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica uma falta de dependências.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoExportDescriptors">
+      <MemberSignature Language="C#" Value="protected static readonly System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.ExportDescriptorPromise&gt; NoExportDescriptors;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly class System.Collections.Generic.IEnumerable`1&lt;class System.Composition.Hosting.Core.ExportDescriptorPromise&gt; NoExportDescriptors" />
+      <MemberSignature Language="DocId" Value="F:System.Composition.Hosting.Core.ExportDescriptorProvider.NoExportDescriptors" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Composition.Hosting.Core.ExportDescriptorPromise&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica uma falta de descritores de exportação.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoMetadata">
+      <MemberSignature Language="C#" Value="protected static readonly System.Collections.Generic.IDictionary&lt;string,object&gt; NoMetadata;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly class System.Collections.Generic.IDictionary`2&lt;string, object&gt; NoMetadata" />
+      <MemberSignature Language="DocId" Value="F:System.Composition.Hosting.Core.ExportDescriptorProvider.NoMetadata" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Composition.Hosting</AssemblyName>
+        <AssemblyVersion>1.0.31.0</AssemblyVersion>
+        <AssemblyVersion>1.0.32.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica uma falta de metadados.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

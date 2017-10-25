@@ -1,0 +1,88 @@
+<Type Name="DownloadProgressChangedEventArgs" FullName="System.Deployment.Application.DownloadProgressChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class DownloadProgressChangedEventArgs : System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DownloadProgressChangedEventArgs extends System.ComponentModel.ProgressChangedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Deployment.Application.DownloadProgressChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Deployment</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.ProgressChangedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Deployment.Application.InPlaceHostingManager.DownloadProgressChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um aplicativo de console, como eventos são atribuídos a threads fora de um pool de threads, você pode receber os eventos do progresso de atualização fora de ordem, com um evento subsequente mostrando uma redução em comparação comparada um evento anterior. Você não verá esse comportamento em um aplicativo do Windows Forms, porque eventos em formulários do Windows são processados sequencialmente fora da fila de mensagens do thread da interface do usuário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Deployment.Application.DownloadProgressChangedEventArgs> no contexto de um aplicativo que usa <xref:System.Deployment.Application.InPlaceHostingManager> para baixar e instalar um aplicativo ClickOnce programaticamente.  
+  
+ [!code-csharp[System.Deployment.Application.InPlaceHostingManager#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Deployment.Application.InPlaceHostingManager/CS/Form1.cs#1)]
+ [!code-vb[System.Deployment.Application.InPlaceHostingManager#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Deployment.Application.InPlaceHostingManager/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BytesDownloaded">
+      <MemberSignature Language="C#" Value="public long BytesDownloaded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 BytesDownloaded" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.DownloadProgressChangedEventArgs.BytesDownloaded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de bytes baixados para o computador local.</summary>
+        <value>Um <see cref="T:System.Int64" /> representando o número de bytes de download.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Deployment.Application.DeploymentProgressState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Deployment.Application.DeploymentProgressState State" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.DownloadProgressChangedEventArgs.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Deployment.Application.DeploymentProgressState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado de progresso do download.</summary>
+        <value>Um <see cref="T:System.Deployment.Application.DeploymentProgressState" /> valor que descreve qual parte do aplicativo ClickOnce está sendo descarregado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalBytesToDownload">
+      <MemberSignature Language="C#" Value="public long TotalBytesToDownload { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TotalBytesToDownload" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.DownloadProgressChangedEventArgs.TotalBytesToDownload" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de bytes para a operação de download.</summary>
+        <value>Um <see cref="T:System.Int64" /> que representa o tamanho total do download, em bytes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,545 @@
+<Type Name="SqlDependency" FullName="System.Data.SqlClient.SqlDependency">
+  <TypeSignature Language="C#" Value="public sealed class SqlDependency" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlDependency extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlDependency" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O objeto <see cref="T:System.Data.SqlClient.SqlDependency" /> representa uma dependência de notificação de consulta entre um aplicativo e uma instância do SQL Server. Um aplicativo pode criar um objeto <see cref="T:System.Data.SqlClient.SqlDependency" /> e registrar-se para receber notificações por meio do manipulador de eventos <see cref="T:System.Data.SqlClient.OnChangeEventHandler" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.SqlClient.SqlDependency>é ideal para cenários, em que seu aplicativo ASP.NET ou um serviço de camada intermediária precisa manter certas informações armazenadas em cache na memória de cache. <xref:System.Data.SqlClient.SqlDependency>permite que você receba notificações quando os dados originais no banco de dados é alterado para que o cache pode ser atualizado.  
+  
+ Para configurar uma dependência, você precisa associar um <xref:System.Data.SqlClient.SqlDependency> objeto a um ou mais <xref:System.Data.SqlClient.SqlCommand> objetos. Para receber notificações, você precisa inscrever-se a <xref:System.Data.SqlClient.SqlDependency.OnChange> eventos. Para obter mais informações sobre os requisitos para a criação de consultas para notificações, consulte "Criando uma consulta para notificação" nos Manuais Online do SQL Server.  
+  
+> [!NOTE]
+>  <xref:System.Data.SqlClient.SqlDependency>foi projetado para ser usado em ASP.NET ou serviços de camada intermediária em que há um número relativamente pequeno de servidores com dependências ativas em relação ao banco de dados. Não foi projetado para uso em aplicativos cliente, onde centenas ou milhares de computadores cliente teria <xref:System.Data.SqlClient.SqlDependency> objetos configurados para um servidor de banco de dados único. Se você estiver desenvolvendo um aplicativo em que você precisa notificações de subsegundos confiável quando dados são alterados, examine as seções **Planejando uma estratégia de notificações de consulta eficiente** e **alternativas para notificações de consulta** no [planejando notificações](http://go.microsoft.com/fwlink/?LinkId=211984) tópico nos Manuais Online do SQL Server.  
+  
+ Para obter mais informações, consulte [notificações de consulta no SQL Server](~/docs/framework/data/adonet/sql/query-notifications-in-sql-server.md) e "Criando soluções de notificação" nos Manuais Online do SQL Server.  
+  
+> [!NOTE]
+>  O <xref:System.Data.SqlClient.SqlDependency.OnChange> evento pode ser gerado em um thread diferente do thread que iniciou a execução do comando.  
+  
+ As notificações de consulta têm suporte apenas para as instruções SELECT que atendem uma lista de requisitos específicos. A tabela a seguir fornece links para a documentação sobre Service Broker e Notificações de Consulta nos Manuais Online do SQL Server.  
+  
+ **SQL Server Books Online** (Guias online do SQL Server)  
+  
+-   [Criando uma consulta para notificação](http://msdn.microsoft.com/library/ms181122.aspx)  
+  
+-   [Considerações de segurança para o Service Broker](http://msdn.microsoft.com/library/ms166059.aspx)  
+  
+-   [Segurança e proteção (Service Broker)](http://msdn.microsoft.com/library/bb522911.aspx)  
+  
+-   [Considerações de segurança para serviços de notificações](http://msdn.microsoft.com/library/ms172604.aspx)  
+  
+-   [Permissões de notificação de consulta](http://msdn.microsoft.com/library/ms188311.aspx)  
+  
+-   [Considerações internacionais para o Service Broker](http://msdn.microsoft.com/library/ms166028.aspx)  
+  
+-   [Considerações de Design de solução (Service Broker)](http://msdn.microsoft.com/library/bb522899.aspx)  
+  
+-   [InfoCenter do desenvolvedor do Service Broker](http://msdn.microsoft.com/library/ms166100.aspx)  
+  
+-   [Guia do desenvolvedor (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlDependency ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDependency.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Data.SqlClient.SqlDependency" /> com as configurações padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor inicializa o <xref:System.Data.SqlClient.SqlDependency> usando o nome de serviço do Service Broker padrão e o tempo limite do objeto. Em algum momento após a construção, você deve usar o <xref:System.Data.SqlClient.SqlDependency.AddCommandDependency%2A> método de associar um ou mais comandos para este <xref:System.Data.SqlClient.SqlDependency> objeto.  
+  
+ As notificações de consulta têm suporte apenas para as instruções SELECT que atendem uma lista de requisitos específicos. A tabela a seguir fornece links para a documentação sobre Service Broker e Notificações de Consulta nos Manuais Online do SQL Server.  
+  
+ **SQL Server Books Online** (Guias online do SQL Server)  
+  
+-   [Criando uma consulta para notificação](http://msdn.microsoft.com/library/ms181122.aspx)  
+  
+-   [Considerações de segurança para o Service Broker](http://msdn.microsoft.com/library/ms166059.aspx)  
+  
+-   [Segurança e proteção (Service Broker)](http://msdn.microsoft.com/library/bb522911.aspx)  
+  
+-   [Considerações de segurança para serviços de notificações](http://msdn.microsoft.com/library/ms172604.aspx)  
+  
+-   [Permissões de notificação de consulta](http://msdn.microsoft.com/library/ms188311.aspx)  
+  
+-   [Considerações internacionais para o Service Broker](http://msdn.microsoft.com/library/ms166028.aspx)  
+  
+-   [Considerações de Design de solução (Service Broker)](http://msdn.microsoft.com/library/bb522899.aspx)  
+  
+-   [InfoCenter do desenvolvedor do Service Broker](http://msdn.microsoft.com/library/ms166100.aspx)  
+  
+-   [Guia do desenvolvedor (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlDependency (System.Data.SqlClient.SqlCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.SqlClient.SqlCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDependency.#ctor(System.Data.SqlClient.SqlCommand)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.Data.SqlClient.SqlCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">O objeto <see cref="T:System.Data.SqlClient.SqlCommand" /> a ser associado a este objeto <see cref="T:System.Data.SqlClient.SqlDependency" />. O construtor configurará um objeto <see cref="T:System.Data.Sql.SqlNotificationRequest" /> e o associará ao comando.</param>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Data.SqlClient.SqlDependency" /> e a associa-a ao parâmetro <see cref="T:System.Data.SqlClient.SqlCommand" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Internamente, este construtor cria uma instância do <xref:System.Data.Sql.SqlNotificationRequest> classe e associa um <xref:System.Data.SqlClient.SqlCommand> objeto.  
+  
+ As notificações de consulta têm suporte apenas para as instruções SELECT que atendem uma lista de requisitos específicos. A tabela a seguir fornece links para a documentação sobre Service Broker e Notificações de Consulta nos Manuais Online do SQL Server.  
+  
+ **SQL Server Books Online** (Guias online do SQL Server)  
+  
+-   [Criando uma consulta para notificação](http://msdn.microsoft.com/library/ms181122.aspx)  
+  
+-   [Considerações de segurança para o Service Broker](http://msdn.microsoft.com/library/ms166059.aspx)  
+  
+-   [Segurança e proteção (Service Broker)](http://msdn.microsoft.com/library/bb522911.aspx)  
+  
+-   [Considerações de segurança para serviços de notificações](http://msdn.microsoft.com/library/ms172604.aspx)  
+  
+-   [Permissões de notificação de consulta](http://msdn.microsoft.com/library/ms188311.aspx)  
+  
+-   [Considerações internacionais para o Service Broker](http://msdn.microsoft.com/library/ms166028.aspx)  
+  
+-   [Considerações de Design de solução (Service Broker)](http://msdn.microsoft.com/library/bb522899.aspx)  
+  
+-   [InfoCenter do desenvolvedor do Service Broker](http://msdn.microsoft.com/library/ms166100.aspx)  
+  
+-   [Guia do desenvolvedor (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="command" /> é NULL.</exception>
+        <exception cref="T:System.InvalidOperationException">O objeto <see cref="T:System.Data.SqlClient.SqlCommand" /> já tem um objeto <see cref="T:System.Data.Sql.SqlNotificationRequest" /> atribuído à sua propriedade <see cref="P:System.Data.SqlClient.SqlCommand.Notification" /> e esse <see cref="T:System.Data.Sql.SqlNotificationRequest" /> não está associado a essa dependência.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlDependency (System.Data.SqlClient.SqlCommand command, string options, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.SqlClient.SqlCommand command, string options, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDependency.#ctor(System.Data.SqlClient.SqlCommand,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.Data.SqlClient.SqlCommand" />
+        <Parameter Name="options" Type="System.String" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="command">O objeto <see cref="T:System.Data.SqlClient.SqlCommand" /> a ser associado a este objeto <see cref="T:System.Data.SqlClient.SqlDependency" />. O construtor configura um objeto <see cref="T:System.Data.Sql.SqlNotificationRequest" /> e o associa ao comando.</param>
+        <param name="options">As opções de solicitação de notificação a serem usadas por essa dependência.  <c>nulo</c> para usar o serviço padrão.</param>
+        <param name="timeout">O tempo limite para essa notificação em segundos. O padrão é 0, indicando que o tempo limite do servidor deve ser usado.</param>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Data.SqlClient.SqlDependency" />, a associa ao parâmetro <see cref="T:System.Data.SqlClient.SqlCommand" /> e especifica opções de notificação e um valor de tempo limite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As notificações de consulta têm suporte apenas para as instruções SELECT que atendem uma lista de requisitos específicos. A tabela a seguir fornece links para a documentação sobre Service Broker e Notificações de Consulta nos Manuais Online do SQL Server.  
+  
+ **SQL Server Books Online** (Guias online do SQL Server)  
+  
+-   [Criando uma consulta para notificação](http://msdn.microsoft.com/library/ms181122.aspx)  
+  
+-   [Considerações de segurança para o Service Broker](http://msdn.microsoft.com/library/ms166059.aspx)  
+  
+-   [Segurança e proteção (Service Broker)](http://msdn.microsoft.com/library/bb522911.aspx)  
+  
+-   [Considerações de segurança para serviços de notificações](http://msdn.microsoft.com/library/ms172604.aspx)  
+  
+-   [Permissões de notificação de consulta](http://msdn.microsoft.com/library/ms188311.aspx)  
+  
+-   [Considerações internacionais para o Service Broker](http://msdn.microsoft.com/library/ms166028.aspx)  
+  
+-   [Considerações de Design de solução (Service Broker)](http://msdn.microsoft.com/library/bb522899.aspx)  
+  
+-   [InfoCenter do desenvolvedor do Service Broker](http://msdn.microsoft.com/library/ms166100.aspx)  
+  
+-   [Guia do desenvolvedor (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="command" /> é NULL.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor de tempo limite é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">O objeto <see cref="T:System.Data.SqlClient.SqlCommand" /> já tem um objeto <see cref="T:System.Data.Sql.SqlNotificationRequest" /> atribuído à sua propriedade <see cref="P:System.Data.SqlClient.SqlCommand.Notification" /> e esse <see cref="T:System.Data.Sql.SqlNotificationRequest" /> não está associado a essa dependência.  
+  
+ Foi feita uma tentativa para criar uma instância **SqlDependency** de dentro de SQLCLR.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCommandDependency">
+      <MemberSignature Language="C#" Value="public void AddCommandDependency (System.Data.SqlClient.SqlCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCommandDependency(class System.Data.SqlClient.SqlCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDependency.AddCommandDependency(System.Data.SqlClient.SqlCommand)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Data.SqlClient.SqlCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">Um objeto <see cref="T:System.Data.SqlClient.SqlCommand" /> que contém uma instrução válida para notificações.</param>
+        <summary>Associa um objeto <see cref="T:System.Data.SqlClient.SqlCommand" /> a esta instância <see cref="T:System.Data.SqlClient.SqlDependency" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As notificações de consulta têm suporte apenas para as instruções SELECT que atendem uma lista de requisitos específicos. A tabela a seguir fornece links para a documentação sobre Service Broker e Notificações de Consulta nos Manuais Online do SQL Server.  
+  
+ **SQL Server Books Online** (Guias online do SQL Server)  
+  
+-   [Criando uma consulta para notificação](http://msdn.microsoft.com/library/ms181122.aspx)  
+  
+-   [Considerações de segurança para o Service Broker](http://msdn.microsoft.com/library/ms166059.aspx)  
+  
+-   [Segurança e proteção (Service Broker)](http://msdn.microsoft.com/library/bb522911.aspx)  
+  
+-   [Considerações de segurança para serviços de notificações](http://msdn.microsoft.com/library/ms172604.aspx)  
+  
+-   [Permissões de notificação de consulta](http://msdn.microsoft.com/library/ms188311.aspx)  
+  
+-   [Considerações internacionais para o Service Broker](http://msdn.microsoft.com/library/ms166028.aspx)  
+  
+-   [Considerações de Design de solução (Service Broker)](http://msdn.microsoft.com/library/bb522899.aspx)  
+  
+-   [InfoCenter do desenvolvedor do Service Broker](http://msdn.microsoft.com/library/ms166100.aspx)  
+  
+-   [Guia do desenvolvedor (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="command" /> é nulo.</exception>
+        <exception cref="T:System.InvalidOperationException">O objeto <see cref="T:System.Data.SqlClient.SqlCommand" /> já tem um objeto <see cref="T:System.Data.Sql.SqlNotificationRequest" /> atribuído à sua propriedade <see cref="P:System.Data.SqlClient.SqlCommand.Notification" /> e esse <see cref="T:System.Data.Sql.SqlNotificationRequest" /> não está associado a essa dependência.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasChanges">
+      <MemberSignature Language="C#" Value="public bool HasChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasChanges" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlDependency.HasChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um dos conjuntos de resultados associados à dependência foi alterado.</summary>
+        <value>Um valor booliano que indica se um dos conjuntos de resultados foi alterado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não estiver usando o <xref:System.Data.SqlClient.SqlDependency.OnChange> eventos, você pode verificar o <xref:System.Data.SqlClient.SqlDependency.HasChanges%2A> propriedade para determinar se os resultados da consulta foram alterados.  
+  
+ O <xref:System.Data.SqlClient.SqlDependency.HasChanges%2A> propriedade não implica necessariamente uma alteração nos dados. Outras circunstâncias, como tempo limite expiraram e Falha ao definir a solicitação de notificação, gerar um evento de alteração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlDependency.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica exclusivamente essa instância do <see cref="T:System.Data.SqlClient.SqlDependency" /> classe.</summary>
+        <value>Uma representação de cadeia de caracteres de um GUID que é gerado para cada instância do <see cref="T:System.Data.SqlClient.SqlDependency" /> classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlDependency.Id%2A> propriedade é usada para identificar exclusivamente um determinado <xref:System.Data.SqlClient.SqlDependency> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChange">
+      <MemberSignature Language="C#" Value="public event System.Data.SqlClient.OnChangeEventHandler OnChange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Data.SqlClient.OnChangeEventHandler OnChange" />
+      <MemberSignature Language="DocId" Value="E:System.Data.SqlClient.SqlDependency.OnChange" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.SqlClient.OnChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma notificação é recebida para um dos comandos associados a este objeto <see cref="T:System.Data.SqlClient.SqlDependency" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.SqlClient.SqlDependency.OnChange>ocorre quando os resultados para o comando associado são alterados. Se você não estiver usando <xref:System.Data.SqlClient.SqlDependency.OnChange>, você pode verificar o <xref:System.Data.SqlClient.SqlDependency.HasChanges%2A> propriedade para determinar se os resultados da consulta foi alterado.  
+  
+ O <xref:System.Data.SqlClient.SqlDependency.OnChange> evento não implica necessariamente uma alteração nos dados. Outras circunstâncias, como tempo limite expirou e também gerar uma falha ao definir a solicitação de notificação, <xref:System.Data.SqlClient.SqlDependency.OnChange>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Start">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicia a escuta para receber notificações de alteração de dependência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlDependency> ouvinte será reiniciado quando ocorre um erro no [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] conexão.  
+  
+ Diversas chamadas para o <xref:System.Data.SqlClient.SqlDependency.Start%2A> método pode ser feito, sujeito às seguintes restrições:  
+  
+-   Várias chamadas com parâmetros idênticos (a mesma cadeia de caracteres de conexão e credenciais do Windows no thread de chamada) são válidas.  
+  
+-   Várias chamadas com cadeias de caracteres de conexão diferentes são válidas desde que:  
+  
+    -   Cada cadeia de caracteres de conexão Especifica um banco de dados diferente, ou  
+  
+    -   Cada cadeia de caracteres de conexão Especifica um usuário diferente, ou  
+  
+    -   As chamadas provenientes de diferentes domínios de aplicativo.  
+  
+ Você pode fazer o <xref:System.Data.SqlClient.SqlDependency> corretamente para aplicativos que usam vários threads para representar as credenciais de usuário diferente sem conceder a função dbo ao grupo, como usuários diferentes podem se inscrever e escutar (usando <xref:System.Web.Caching.SqlCacheDependency> ou <xref:System.Data.SqlClient.SqlCommand>) para uma fila de notificação criada por um administrador. Quando o domínio do aplicativo relevante é iniciado, chame Start com as credenciais (Windows) de um usuário que tenha permissão para inicializar uma serviço/fila (as permissões CREATE QUEUE e criação de serviço para o banco de dados). Certifique-se de início é chamado apenas depois por AppDomain, caso contrário ambiguidade será gerada uma exceção.  O thread de usuário deve ter permissão para assinar a notificação (a permissão de ASSINAR notificações de consulta para o banco de dados). <xref:System.Data.SqlClient.SqlDependency>associará a solicitação de assinatura de um usuário não administrador à fila de serviço/criado pelo administrador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public static bool Start (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Start(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDependency.Start(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">A cadeia de conexão para a instância do [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] da qual obter notificações de alteração.</param>
+        <summary>Inicia o ouvinte para receber notificações de alteração de dependência da instância do SQL Server especificada pela cadeia de conexão.</summary>
+        <returns>**True** se o ouvinte tiver sido inicializado com êxito; **false** se já existir um ouvinte compatível.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método inicia o ouvinte para o <xref:System.AppDomain> para receber notificações de dependência da instância do [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] especificado pelo `connectionString` parâmetro. Esse método pode ser chamado mais de uma vez com cadeias de caracteres de conexão diferentes para vários servidores.  
+  
+ Para obter comentários adicionais, consulte <xref:System.Data.SqlClient.SqlDependency.Start%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="connectionString" /> é NULL.</exception>
+        <exception cref="T:System.InvalidOperationException">O parâmetro <paramref name="connectionString" /> é o mesmo que uma chamada anterior a esse método, mas os parâmetros são diferentes.  
+  
+ O método foi chamado de dentro do CLR.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão de CAS (segurança de acesso do código) <see cref="T:System.Data.SqlClient.SqlClientPermission" /> necessária.</exception>
+        <exception cref="T:System.Data.SqlClient.SqlException">Foi feita uma chamada subsequente para o método com um parâmetro <paramref name="connectionString" /> equivalente com um usuário diferente ou um usuário que não é o padrão para o mesmo esquema.  
+  
+ Além disso, todas as exceções **SqlClient** subjacentes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public static bool Start (string connectionString, string queue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Start(string connectionString, string queue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDependency.Start(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="queue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">A cadeia de conexão para a instância do SQL Server da qual as notificações de alteração serão obtidas.</param>
+        <param name="queue">Uma fila existente do SQL Server Service Broker a ser usada. Se for <see langword="null" />, a fila padrão será usada.</param>
+        <summary>Inicia o ouvinte para receber notificações de alteração de dependência da instância do SQL Server especificada pela cadeia de conexão usando a fila especificada do SQL Server Service Broker.</summary>
+        <returns>**True** se o ouvinte tiver sido inicializado com êxito; **false** se já existir um ouvinte compatível.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método inicia o ouvinte para o <xref:System.AppDomain> para receber notificações de dependência da instância do SQL Server especificada pelo `connectionString` parâmetro. Esse método pode ser chamado mais de uma vez com cadeias de caracteres de conexão diferentes para vários servidores.  
+  
+ Se nenhum nome de fila é especificado, <xref:System.Data.SqlClient.SqlDependency> cria uma fila temporária e o serviço do servidor que é usado para o processo inteiro, mesmo se o processo envolve mais de um <xref:System.AppDomain>. O serviço e fila serão removidos automaticamente durante o desligamento do aplicativo.  
+  
+ Para obter comentários adicionais, consulte <xref:System.Data.SqlClient.SqlDependency.Start%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="connectionString" /> é NULL.</exception>
+        <exception cref="T:System.InvalidOperationException">O parâmetro <paramref name="connectionString" /> é o mesmo que uma chamada anterior a esse método, mas os parâmetros são diferentes.  
+  
+ O método foi chamado de dentro do CLR.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão de CAS (segurança de acesso do código) <see cref="T:System.Data.SqlClient.SqlClientPermission" /> necessária.</exception>
+        <exception cref="T:System.Data.SqlClient.SqlException">Foi feita uma chamada posterior ao método com um parâmetro <paramref name="connectionString" /> equivalente, mas com um usuário diferente ou um usuário que não usa como padrão o mesmo esquema.  
+  
+ Além disso, todas as exceções **SqlClient** subjacentes.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Stop">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Interrompe um ouvinte para uma conexão especificada no anterior <see cref="Overload:System.Data.SqlClient.SqlDependency.Start" /> chamar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlDependency> ouvinte será reiniciado quando ocorrer um erro de conexão do SQL Server.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public static bool Stop (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Stop(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDependency.Stop(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Cadeia de caracteres de Conexão para a instância do SQL Server que foi usado no anterior <see cref="M:System.Data.SqlClient.SqlDependency.Start(System.String)" /> chamar.</param>
+        <summary>Interrompe um ouvinte para uma conexão especificada no anterior <see cref="Overload:System.Data.SqlClient.SqlDependency.Start" /> chamar.</summary>
+        <returns>**True** se o ouvinte foi interrompido completamente; **false** se o <see cref="T:System.AppDomain" /> foi desassociado do ouvinte, mas há é pelo menos um outro <see cref="T:System.AppDomain" /> usando o mesmo ouvinte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlDependency.Stop%2A> método deve ser chamado para cada <xref:System.Data.SqlClient.SqlDependency.Start%2A> chamar. Um ouvinte determinado desliga apenas totalmente quando ele recebe o mesmo número de <xref:System.Data.SqlClient.SqlDependency.Stop%2A> solicitações como <xref:System.Data.SqlClient.SqlDependency.Start%2A> solicitações.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="connectionString" /> é NULL.</exception>
+        <exception cref="T:System.InvalidOperationException">O método foi chamado no SQLCLR.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão de CAS (segurança de acesso do código) <see cref="T:System.Data.SqlClient.SqlClientPermission" /> necessária.</exception>
+        <exception cref="T:System.Data.SqlClient.SqlException">Uma base **SqlClient** ocorreu uma exceção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public static bool Stop (string connectionString, string queue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Stop(string connectionString, string queue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlDependency.Stop(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="queue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Cadeia de caracteres de Conexão para a instância do SQL Server que foi usado no anterior <see cref="M:System.Data.SqlClient.SqlDependency.Start(System.String,System.String)" /> chamar.</param>
+        <param name="queue">A fila do SQL Server Service Broker que foi usada no anterior <see cref="M:System.Data.SqlClient.SqlDependency.Start(System.String,System.String)" /> chamar.</param>
+        <summary>Interrompe um ouvinte para uma conexão especificada no anterior <see cref="Overload:System.Data.SqlClient.SqlDependency.Start" /> chamar.</summary>
+        <returns>**True** se o ouvinte foi interrompido completamente; **false** se o <see cref="T:System.AppDomain" /> foi desassociado do ouvinte, mas há pelo menos um outro <see cref="T:System.AppDomain" /> usando o mesmo ouvinte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlDependency.Stop%2A> método deve ser chamado para cada <xref:System.Data.SqlClient.SqlDependency.Start%2A> chamar. Um ouvinte determinado desliga apenas totalmente quando ele recebe o mesmo número de <xref:System.Data.SqlClient.SqlDependency.Stop%2A> solicitações como <xref:System.Data.SqlClient.SqlDependency.Start%2A> solicitações.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="connectionString" /> é NULL.</exception>
+        <exception cref="T:System.InvalidOperationException">O método foi chamado no SQLCLR.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão de CAS (segurança de acesso do código) <see cref="T:System.Data.SqlClient.SqlClientPermission" /> necessária.</exception>
+        <exception cref="T:System.Data.SqlClient.SqlException">E subjacente **SqlClient** ocorreu uma exceção.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

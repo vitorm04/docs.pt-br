@@ -1,0 +1,84 @@
+<Type Name="XmlDocumentSchema" FullName="System.Web.UI.Design.XmlDocumentSchema">
+  <TypeSignature Language="C#" Value="public sealed class XmlDocumentSchema : System.Web.UI.Design.IDataSourceSchema" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlDocumentSchema extends System.Object implements class System.Web.UI.Design.IDataSourceSchema" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.XmlDocumentSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.Design.IDataSourceSchema</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a estrutura ou o esquema, de um <see cref="T:System.Xml.XmlDocument" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.XmlDocumentSchema> classe é usada por componentes do designer de controle personalizado para listar os elementos estruturais de um documento XML em tempo de design. Use a classe XmlDocumentSchema para preencher a lista de elementos de documento para permitir que usuários selecionar os elementos de documento em recursos de interface do usuário em tempo de design.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.Web.UI.Design.XmlDocumentSchema> objeto para exibir a estrutura de um documento XML em um <xref:System.Web.UI.WebControls.TreeView> controle.  
+  
+ [!code-csharp[XmlDocumentSchemaSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/XmlDocumentSchemaSample/CS/XmlDocumentSchemaSample.cs#1)]
+ [!code-vb[XmlDocumentSchemaSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/XmlDocumentSchemaSample/VB/XmlDocumentSchemaSample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDocumentSchema (System.Xml.XmlDocument xmlDocument, string xPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlDocument xmlDocument, string xPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.XmlDocumentSchema.#ctor(System.Xml.XmlDocument,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlDocument" Type="System.Xml.XmlDocument" />
+        <Parameter Name="xPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlDocument">Uma instância de um <see cref="T:System.Xml.XmlDocument" /> objeto.</param>
+        <param name="xPath">Uma cadeia de caracteres XPath que identifica os nós filho da raiz do documento.</param>
+        <summary>Cria uma instância do <see cref="T:System.Web.UI.Design.XmlDocumentSchema" /> classe usando um <see cref="T:System.Xml.XmlDocument" /> e uma cadeia de caracteres XPath.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `xPath` para especificar um nó específico dentro do documento XML para examinar ou especifique a cadeia de caracteres vazia ("") para examinar o documento completo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViews">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceViewSchema[] GetViews ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDataSourceViewSchema[] GetViews() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.XmlDocumentSchema.GetViews" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz que contém informações sobre cada nó filho começando no nó identificado pelo <paramref name="xPath" /> parâmetro no construtor, ou cada nó filho iniciando na raiz do documento, se o <paramref name="xPath" /> parâmetro está vazio.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
